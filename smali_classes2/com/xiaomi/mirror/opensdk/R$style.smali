@@ -15,7 +15,7 @@
 
 
 # static fields
-.field public static final MiuiDragShadowStyle:I = 0x7f1100d7
+.field public static final MiuiDragShadowStyle:I = 0x7f1100d8
 
 
 # direct methods

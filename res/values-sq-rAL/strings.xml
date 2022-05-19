@@ -26,7 +26,7 @@
     <string name="activity_not_unlocked">Prit derisa pajijsa jote të jetë plotësisht e rinisur përpara se të hapësh aplikacionet</string>
     <string name="add_custom_category">Përshtatje</string>
     <string name="add_screen">Shto ekranin</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">Shtoje në ekranin bazë</string>
     <string name="added_all_category">Të gjithë aplikacionet u shtuan me sukses</string>
     <string name="afternoon">Pasdite</string>
     <string name="agree_button">Pajtohem</string>
@@ -349,6 +349,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">Shtypni dhe mbani shtypur per te shtuare te ekrani baze</string>
+    <string name="fold_pair_installed_shortcut_launcher">Kjo shkurtore ekziston tashmë</string>
     <string name="folder_name">Dosje</string>
     <string name="frame_load_failed">Nuk mund të garkohet korniza</string>
     <string name="free_style_apps_title">Zgjidh aplikacionin</string>
@@ -628,6 +630,7 @@
     <string name="night">Mbrëmje</string>
     <string name="no_detail_page">Asnjë detaj për faqen</string>
     <string name="no_space_toast">Nuk ka hapësirë të mjaftueshme</string>
+    <string name="no_space_toast_fold">Nuk ka hapësirë të mjaftueshme ketu</string>
     <string name="no_space_toast_when_click_widget">Nuk ka hapësirë të mjaftueshme në këtë faqe. Provo të terheqësh këtë artikull në një faqe të ndryshme.</string>
     <string name="noon">Mesditë</string>
     <string name="normal_wallpaper">Imazhi i sfondit</string>
@@ -636,7 +639,7 @@
     <string name="notification_reset_title">Ikonat u rregulluan me sukses</string>
     <string name="one_key_call_title">Kliko për të parë</string>
     <string name="online_wallpaper">Në linjë</string>
-    <string name="open_pad_personal_assistant_settings">Home screen widgets</string>
+    <string name="open_pad_personal_assistant_settings">Veglat e Ekranit baze</string>
     <string name="open_personal_assistant_dialog_btn_cancel">Anulo</string>
     <string name="open_personal_assistant_dialog_btn_confirm">Fik</string>
     <string name="open_personal_assistant_dialog_desc">Pasi të fikni kasafortën e aplikacionit, nuk do të jeni në gjendje të shihni ose përdorni veglat e kasafortës së aplikacionit. Versionet e tyre të përditësuara nuk do të jenë në dispozicion për ju gjithashtu. Të fiket gjithsesi?</string>
@@ -648,7 +651,7 @@
     <string name="ota_layout_adjustment_content">Paraqitjet e brendshme dhe të jashtme të ekranit bazë u sinkronizuan në versionin e ri.</string>
     <string name="ota_layout_adjustment_title">Paraqitja e ekranit bazë</string>
     <string name="out_of_space">Nuk ka më hapësirë në këtë Ekran kryesor</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">Jep animacione në ikonat e aplikacionit të palëve të treta</string>
     <string name="perfect_icons_switch_title">Animime globale ikonash</string>
     <string name="permdesc_install_shortcut">Lejo një aplikacion të shtojë shkrurtore pa ndërhyrjen e përdoruesit.</string>

@@ -53,7 +53,7 @@
     <string name="activity_not_unlocked">Да таго як адкрываць праграмы, дачакайцеся поўнага завяршэння перазагрузкі вашай прылады</string>
     <string name="add_custom_category">Карыстальніцкая</string>
     <string name="add_screen">Дадаць экран</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">Дадаць на працоўны стол</string>
     <string name="added_all_category">Усе праграмы паспяхова дададзены</string>
     <string name="afternoon">Поўдзень</string>
     <string name="agree_button">Згадзіцца</string>
@@ -379,6 +379,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">Націсніце і ўтрымлівайце, каб дадаць на Працоўны стол</string>
+    <string name="fold_pair_installed_shortcut_launcher">Ярлык ўжо існуе</string>
     <string name="folder_name">Папка</string>
     <string name="frame_load_failed">Не атрымалася загрузіць фотарамку</string>
     <string name="free_style_apps_title">Выберыце праграму</string>
@@ -658,6 +660,7 @@
     <string name="night">Вечар</string>
     <string name="no_detail_page">Няма старонкі з інфармацыяй</string>
     <string name="no_space_toast">Недастаткова месца</string>
+    <string name="no_space_toast_fold">Тут недастаткова месца</string>
     <string name="no_space_toast_when_click_widget">"Недастаткова месца на гэтай старонцы. Паспрабуйце перацягнуць гэты аб'ект на іншую старонку."</string>
     <string name="noon">Сярэдзіна дня</string>
     <string name="normal_wallpaper">Шпалеры</string>
@@ -679,7 +682,7 @@
     <string name="ota_layout_adjustment_content">У новай версіі былі сінхранізаваныя ўнутраны і знешні макеты галоўнага экрана.</string>
     <string name="ota_layout_adjustment_title">Макеты галоўнага экрана</string>
     <string name="out_of_space">На гэтым экране няма вольнага месца</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">Выконваць рэндэрынг анімацыі значкоў пабочных праграм.</string>
     <string name="perfect_icons_switch_title">Глабальныя анімацыі значкоў</string>
     <string name="permdesc_install_shortcut">Дазваляе праграме дадаваць ярлыкі без удзелу карыстальніка.</string>

@@ -201,7 +201,7 @@
 
     const/4 v0, 0x0
 
-    .line 274
+    .line 275
     :goto_0
     iget-object v1, p0, Lcom/miui/home/launcher/hotseats/HotSeatsList;->mAdapterItems:Ljava/util/ArrayList;
 
@@ -211,7 +211,7 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 275
+    .line 276
     iget-object v1, p0, Lcom/miui/home/launcher/hotseats/HotSeatsList;->mAdapterItems:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -220,12 +220,12 @@
 
     check-cast v1, Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;
 
-    .line 276
+    .line 277
     iget-object v1, v1, Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;->itemInfo:Lcom/miui/home/launcher/ItemInfo;
 
     if-ne v1, p1, :cond_0
 
-    .line 277
+    .line 278
     iget-object p1, p0, Lcom/miui/home/launcher/hotseats/HotSeatsList;->mAdapter:Lcom/miui/home/launcher/hotseats/HotSeatsListContentAdapter;
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/hotseats/HotSeatsListContentAdapter;->notifyItemChanged(I)V
@@ -351,12 +351,12 @@
 .method public clear()V
     .locals 1
 
-    .line 250
+    .line 251
     iget-object v0, p0, Lcom/miui/home/launcher/hotseats/HotSeatsList;->mItemInfoList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 251
+    .line 252
     invoke-virtual {p0}, Lcom/miui/home/launcher/hotseats/HotSeatsList;->refillAdapterItems()V
 
     return-void
@@ -365,7 +365,7 @@
 .method getDraggingItem()Lcom/miui/home/launcher/ItemInfo;
     .locals 1
 
-    .line 259
+    .line 260
     iget-object v0, p0, Lcom/miui/home/launcher/hotseats/HotSeatsList;->mDraggingItem:Lcom/miui/home/launcher/ItemInfo;
 
     return-object v0
@@ -496,7 +496,7 @@
 .method public isFull()Z
     .locals 2
 
-    .line 255
+    .line 256
     iget-object v0, p0, Lcom/miui/home/launcher/hotseats/HotSeatsList;->mItemInfoList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -523,7 +523,7 @@
 .method public onRecommendUpdate()V
     .locals 0
 
-    .line 285
+    .line 286
     invoke-virtual {p0}, Lcom/miui/home/launcher/hotseats/HotSeatsList;->refillAdapterItems()V
 
     return-void
@@ -713,13 +713,22 @@
     iput-wide v4, v3, Lcom/miui/home/launcher/PairShortcutInfo;->container:J
 
     .line 228
+    iget-object v6, p0, Lcom/miui/home/launcher/hotseats/HotSeatsList;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v3, v6}, Lcom/miui/home/launcher/PairShortcutInfo;->getPairName(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v3, v6}, Lcom/miui/home/launcher/PairShortcutInfo;->setTitle(Ljava/lang/CharSequence;)V
+
+    .line 229
     invoke-virtual {v3}, Lcom/miui/home/launcher/PairShortcutInfo;->getShortcutInfo1()Lcom/miui/home/launcher/ShortcutInfo;
 
     move-result-object v6
 
     iput-wide v4, v6, Lcom/miui/home/launcher/ShortcutInfo;->container:J
 
-    .line 229
+    .line 230
     invoke-virtual {v3}, Lcom/miui/home/launcher/PairShortcutInfo;->getShortcutInfo2()Lcom/miui/home/launcher/ShortcutInfo;
 
     move-result-object v3
@@ -728,13 +737,13 @@
 
     goto :goto_1
 
-    .line 231
+    .line 232
     :cond_6
     invoke-virtual {v3}, Lcom/miui/home/launcher/PairShortcutInfo;->getShortcutInfo1()Lcom/miui/home/launcher/ShortcutInfo;
 
     move-result-object v4
 
-    .line 232
+    .line 233
     iget-object v5, p0, Lcom/miui/home/launcher/hotseats/HotSeatsList;->mAdapterItems:Ljava/util/ArrayList;
 
     invoke-static {v4}, Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;->asRecommend(Lcom/miui/home/launcher/ItemInfo;)Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;
@@ -745,10 +754,10 @@
 
     const-wide/16 v5, -0x66
 
-    .line 233
+    .line 234
     iput-wide v5, v3, Lcom/miui/home/launcher/PairShortcutInfo;->container:J
 
-    .line 234
+    .line 235
     iput-wide v5, v4, Lcom/miui/home/launcher/ShortcutInfo;->container:J
 
     :goto_1
@@ -758,7 +767,7 @@
 
     if-lt v2, v3, :cond_5
 
-    .line 242
+    .line 243
     :cond_7
     :goto_2
     iget-object v0, p0, Lcom/miui/home/launcher/hotseats/HotSeatsList;->mAdapterItems:Ljava/util/ArrayList;
@@ -769,7 +778,7 @@
 
     if-ge v1, v0, :cond_8
 
-    .line 243
+    .line 244
     iget-object v0, p0, Lcom/miui/home/launcher/hotseats/HotSeatsList;->mAdapterItems:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -778,14 +787,14 @@
 
     check-cast v0, Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;
 
-    .line 244
+    .line 245
     iput v1, v0, Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;->position:I
 
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
 
-    .line 246
+    .line 247
     :cond_8
     iget-object v0, p0, Lcom/miui/home/launcher/hotseats/HotSeatsList;->mDifferList:Landroidx/recyclerview/widget/AsyncListDiffer;
 
@@ -949,10 +958,10 @@
 .method setDraggingItem(Lcom/miui/home/launcher/ItemInfo;)V
     .locals 1
 
-    .line 263
+    .line 264
     iget-object v0, p0, Lcom/miui/home/launcher/hotseats/HotSeatsList;->mDraggingItem:Lcom/miui/home/launcher/ItemInfo;
 
-    .line 264
+    .line 265
     iput-object p1, p0, Lcom/miui/home/launcher/hotseats/HotSeatsList;->mDraggingItem:Lcom/miui/home/launcher/ItemInfo;
 
     if-eq v0, p1, :cond_1
@@ -964,7 +973,7 @@
     :cond_0
     move-object p1, v0
 
-    .line 269
+    .line 270
     :goto_0
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/hotseats/HotSeatsList;->notifyItemChanged(Lcom/miui/home/launcher/ItemInfo;)V
 

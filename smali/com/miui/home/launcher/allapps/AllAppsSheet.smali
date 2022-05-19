@@ -122,7 +122,7 @@
     invoke-virtual {v0, v1}, Landroidx/fragment/app/FragmentTransaction;->remove(Landroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentTransaction;
 
     .line 116
-    invoke-virtual {v0}, Landroidx/fragment/app/FragmentTransaction;->commit()I
+    invoke-virtual {v0}, Landroidx/fragment/app/FragmentTransaction;->commitAllowingStateLoss()I
 
     const/4 v0, 0x0
 

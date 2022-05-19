@@ -338,6 +338,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">zW T</string>
     <string name="fmt_weekday_timezone">zW</string>
+    <string name="fold_pair_install_shortcut_long_click">سىنبەلگىنى ئۇزۇن بېسىپ تۇرۇپ تېز يول قۇرۇشنى قوللايدۇ</string>
+    <string name="fold_pair_installed_shortcut_launcher">ئېكرانغا تېز يول قۇرۇلدى</string>
     <string name="folder_name">ھۆججەت قىسقۇچ</string>
     <string name="frame_load_failed">رەسىم رامكىسى شەكلى خاتا، ئېچىش مەغلۇپ بولدى</string>
     <string name="free_style_apps_title">ئەپ تاللاڭ</string>
@@ -616,6 +618,7 @@
     <string name="night">كەچ</string>
     <string name="no_detail_page">تەپسىلات بېتى يوق</string>
     <string name="no_space_toast">بوشلۇق يېتىشمىدى</string>
+    <string name="no_space_toast_fold">بۇ يېرىم ئېكران يېتىشمەيدۇ</string>
     <string name="no_space_toast_when_click_widget">نۆۋەتتىكى بەت بوشلۇقى يېتىشمەيدۇ،سۆرەپ باشقا بەتكە قوشسىڭىز بولىدۇ</string>
     <string name="noon">چۈش</string>
     <string name="normal_wallpaper">ئېكران تەگلىكى</string>
@@ -636,6 +639,7 @@
     <string name="ota_layout_adjustment_content">يېڭى نەشىرگە ئۆستۈرگەندىن كېيىن ئېكران ئورۇنلاشتۇرۇلىشىدا ئىچكى سىرتقى ئېكران بىردەك بولىدۇ، سىرتقى ئېكران ئورۇنلاشتۇرۇلىشى ئىچكى ئېكرانغا ماس قەدەملەندى</string>
     <string name="ota_layout_adjustment_title">ئېكران ئورۇنلاشتۇرۇلىشىنى تەڭشەش</string>
     <string name="out_of_space">ئېكراندا يىتەرلىك بوشلۇق يوق.</string>
+    <string name="pair_icon_name">%1$s|%2$s</string>
     <string name="perfect_icons_switch_summary">ئۈچىنچى تەرەپ ئەپ سىنبەلگىسىنى قايتا سىزىپ،چىرايلىق ھەرىكەت ھاسىل قىلىش</string>
     <string name="perfect_icons_switch_title">چىرايلىق سىنبەلگە</string>
     <string name="permdesc_install_shortcut">پىروگراممىنى ئىشلەتكۈچى ئارىلاشمىغان ئەھۋالدا تىزلەتمە ئۇسۇلىنى قوشۇشقا يول قۇيۇش</string>

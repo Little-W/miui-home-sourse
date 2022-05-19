@@ -53,7 +53,7 @@
     <string name="activity_not_unlocked">Prieš paleisdami programas, palaukite, kol jūsų įrenginys persikraus</string>
     <string name="add_custom_category">Pasirinktinė</string>
     <string name="add_screen">Pridėti ekraną</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">Pridėti į pradžios ekraną</string>
     <string name="added_all_category">Visos programos sėkmingai pridėtos</string>
     <string name="afternoon">Popietė</string>
     <string name="agree_button">Sutinku</string>
@@ -379,6 +379,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">Paspauskite ir laikykite, kad pridėtumėte į pradžios ekraną</string>
+    <string name="fold_pair_installed_shortcut_launcher">Ši nuoroda jau egzistuoja</string>
     <string name="folder_name">Aplankas</string>
     <string name="frame_load_failed">Nepavyko įkelti rėmo</string>
     <string name="free_style_apps_title">Pasirinkite programą</string>
@@ -658,6 +660,7 @@
     <string name="night">Vakaras</string>
     <string name="no_detail_page">Nėra išsam. info puslapio</string>
     <string name="no_space_toast">Trūksta vietos</string>
+    <string name="no_space_toast_fold">Čia trūksta laisvos vietos</string>
     <string name="no_space_toast_when_click_widget">Šiame puslapyje nepakanka vietos. Pamėginkite vilkti šį elementą į kitą puslapį.</string>
     <string name="noon">Vidurdienis</string>
     <string name="normal_wallpaper">Fonas</string>
@@ -679,7 +682,7 @@
     <string name="ota_layout_adjustment_content">Vidinis ir išorinis pagrindinio ekrano išdėstymai buvo susinchronizuoti naujoje versijoje.</string>
     <string name="ota_layout_adjustment_title">Pagrindinio ekrano išdėstymas</string>
     <string name="out_of_space">Pagrindiniame ekrane nėra laisvos vietos</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">Generuoti animaciją trečiųjų šalių programos piktogramose</string>
     <string name="perfect_icons_switch_title">Pasaulinės piktogramų animacijos</string>
     <string name="permdesc_install_shortcut">Leidimas programai sukurti nuorodas be naudotojo patvirtinimo.</string>

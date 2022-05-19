@@ -115,6 +115,8 @@
 
 .field static final RESULT_CLIP_DATA:Ljava/lang/String; = "clipData"
 
+.field static final RESULT_DESCRIPTION:Ljava/lang/String; = "description"
+
 .field static final RESULT_ENABLE_BOOLEAN:Ljava/lang/String; = "enable"
 
 .field static final RESULT_FILE_DESCRIPTOR:Ljava/lang/String; = "fileDescriptor"
@@ -130,6 +132,8 @@
 .field static final RESULT_REMOTE_DEVICE:Ljava/lang/String; = "remoteDevice"
 
 .field static final RESULT_REMOTE_DEVICES:Ljava/lang/String; = "remoteDevices"
+
+.field static final RESULT_REMOTE_DEVICE_NAME:Ljava/lang/String; = "remote_device_name"
 
 .field static final RESULT_SEND_APP:Ljava/lang/String; = "sendAppResult"
 

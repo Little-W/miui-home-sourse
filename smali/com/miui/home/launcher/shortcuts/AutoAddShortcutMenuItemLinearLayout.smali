@@ -287,7 +287,7 @@
 
     if-ne v0, v2, :cond_0
 
-    const v0, 0x7f08058a
+    const v0, 0x7f08058b
 
     .line 89
     invoke-direct {p0, v1, v0}, Lcom/miui/home/launcher/shortcuts/AutoAddShortcutMenuItemLinearLayout;->setItemBg(II)V
@@ -329,7 +329,7 @@
     goto :goto_1
 
     :cond_2
-    const v2, 0x7f080586
+    const v2, 0x7f080587
 
     .line 97
     invoke-direct {p0, v1, v2}, Lcom/miui/home/launcher/shortcuts/AutoAddShortcutMenuItemLinearLayout;->setItemBg(II)V
@@ -381,7 +381,7 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    const v2, 0x7f0603ac
+    const v2, 0x7f0603ad
 
     .line 106
     invoke-virtual {p0, v1, v2}, Lcom/miui/home/launcher/shortcuts/AutoAddShortcutMenuItemLinearLayout;->setItemTextColor(II)V

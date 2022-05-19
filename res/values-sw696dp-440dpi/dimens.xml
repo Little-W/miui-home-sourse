@@ -14,11 +14,6 @@
     <dimen name="editing_entry_thumbnail_view_gap">23.199982dip</dimen>
     <dimen name="fastscroll_letter_side_padding_bottom">10.899994dip</dimen>
     <dimen name="fastscroll_letter_side_padding_top">10.899994dip</dimen>
-    <dimen name="fastscroll_popup_margin">20.0dip</dimen>
-    <dimen name="fastscroll_popup_margin_top">-10.899994dip</dimen>
-    <dimen name="fastscroll_popup_padding_right">18.0dip</dimen>
-    <dimen name="fastscroll_popup_size">61.799988dip</dimen>
-    <dimen name="fastscroll_popup_text_size">29.099976sp</dimen>
     <dimen name="folder_background_padding_top">-8.0dip</dimen>
     <dimen name="folder_content_margin_bottom">-35.0dip</dimen>
     <dimen name="folder_content_margin_top">18.0dip</dimen>
@@ -32,7 +27,7 @@
     <dimen name="folder_item_horizontal_spacing_noword">20.0dip</dimen>
     <dimen name="folder_item_vertical_spacing">13.5dip</dimen>
     <dimen name="folder_item_vertical_spacing_noword">18.0dip</dimen>
-    <dimen name="hotseats_height">89.0dip</dimen>
+    <dimen name="hotseats_height">83.0dip</dimen>
     <dimen name="hotseats_height_land">68.0dip</dimen>
     <dimen name="hotseats_height_navigation">76.0dip</dimen>
     <dimen name="hotseats_margin_top">20.0dip</dimen>
@@ -43,6 +38,12 @@
     <dimen name="icon_title_margin_top">-3.0dip</dimen>
     <item type="dimen" name="launcher_miui_widget_density_scale_factor">0.9</item>
     <item type="dimen" name="pa_miui_widget_density_scale_factor">1.0</item>
+    <dimen name="recents_relay_container_max_width">390.0dip</dimen>
+    <dimen name="recents_relay_container_padding_vertical">20.0dip</dimen>
+    <dimen name="recents_task_view_bar_padding_bottom">5.0dip</dimen>
+    <dimen name="recents_task_view_header_height">41.0dip</dimen>
+    <dimen name="recents_task_view_rounded_corners_radius_min">12.0dip</dimen>
+    <dimen name="recents_task_view_sub_header_app_info_spacing">6.0dip</dimen>
     <dimen name="recommend_switch_margin_top">-15.0dip</dimen>
     <dimen name="recommend_switch_summary_padding_left">2.0dip</dimen>
     <dimen name="set_home_screen_gap_middle">32.0dip</dimen>

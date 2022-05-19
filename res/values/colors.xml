@@ -22,7 +22,8 @@
     <color name="all_apps_text_color_light">#80000000</color>
     <color name="allapps_divider_color_dark">@color/alpha20white</color>
     <color name="allapps_divider_color_light">@color/alpha15black</color>
-    <color name="allapps_popup_text_color">#ff0d84ff</color>
+    <color name="allapps_letter_popup_text_color">#ff0d84ff</color>
+    <color name="allapps_popup_text_color">#ffffffff</color>
     <color name="allapps_scroller_text_color_dark">#80ffffff</color>
     <color name="allapps_scroller_text_color_light">#66000000</color>
     <color name="allapps_scroller_thumb_color">#ff5096ed</color>

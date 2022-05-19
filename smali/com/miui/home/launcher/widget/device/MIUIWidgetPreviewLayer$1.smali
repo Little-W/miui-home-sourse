@@ -24,7 +24,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/widget/device/MIUIWidgetPreviewLayer;F)V
     .locals 0
 
-    .line 53
+    .line 60
     iput-object p1, p0, Lcom/miui/home/launcher/widget/device/MIUIWidgetPreviewLayer$1;->this$0:Lcom/miui/home/launcher/widget/device/MIUIWidgetPreviewLayer;
 
     iput p2, p0, Lcom/miui/home/launcher/widget/device/MIUIWidgetPreviewLayer$1;->val$radius:F
@@ -39,7 +39,7 @@
 .method public getOutline(Landroid/view/View;Landroid/graphics/Outline;)V
     .locals 6
 
-    .line 56
+    .line 63
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
     move-result v3

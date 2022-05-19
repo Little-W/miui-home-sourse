@@ -85,7 +85,7 @@
     .line 309
     iget-object p2, p0, Lcom/miui/home/launcher/DragView$CountLabel;->mCountLabelNumPaint:Landroid/graphics/Paint;
 
-    const v1, 0x7f06034f
+    const v1, 0x7f060350
 
     const/4 v2, 0x0
 

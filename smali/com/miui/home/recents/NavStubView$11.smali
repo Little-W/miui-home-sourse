@@ -35,7 +35,7 @@
 .method constructor <init>(Lcom/miui/home/recents/NavStubView;Landroid/graphics/RectF;IILcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;)V
     .locals 0
 
-    .line 2981
+    .line 3020
     iput-object p1, p0, Lcom/miui/home/recents/NavStubView$11;->this$0:Lcom/miui/home/recents/NavStubView;
 
     iput-object p2, p0, Lcom/miui/home/recents/NavStubView$11;->val$startRectF:Landroid/graphics/RectF;
@@ -54,7 +54,7 @@
 .method public static synthetic lambda$onAnimationEnd$2(Lcom/miui/home/recents/NavStubView$11;Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;)V
     .locals 3
 
-    .line 3037
+    .line 3076
     sget-object v0, Lcom/miui/home/recents/NavStubView;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -75,15 +75,15 @@
 
     if-eqz p1, :cond_0
 
-    .line 3039
+    .line 3078
     iget-object v0, p0, Lcom/miui/home/recents/NavStubView$11;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-static {v0, p1}, Lcom/miui/home/recents/NavStubView;->access$5400(Lcom/miui/home/recents/NavStubView;Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;)V
 
-    .line 3040
+    .line 3079
     invoke-interface {p1}, Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;->onEnterHomeAnimFinish()V
 
-    .line 3043
+    .line 3082
     :cond_0
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$11;->this$0:Lcom/miui/home/recents/NavStubView;
 
@@ -91,7 +91,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 3044
+    .line 3083
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$11;->this$0:Lcom/miui/home/recents/NavStubView;
 
     iget-object p1, p1, Lcom/miui/home/recents/NavStubView;->mFloatingIconLayer:Lcom/miui/home/recents/FloatingIconLayer;
@@ -111,10 +111,10 @@
 .method public static synthetic lambda$onAnimationStart$0(Lcom/miui/home/recents/NavStubView$11;Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;)V
     .locals 3
 
-    .line 2996
+    .line 3035
     iget-object v0, p0, Lcom/miui/home/recents/NavStubView$11;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    .line 2997
+    .line 3036
     invoke-static {v0}, Lcom/miui/home/recents/NavStubView;->access$5200(Lcom/miui/home/recents/NavStubView;)Lcom/miui/home/recents/RecentsAnimationListenerImpl;
 
     move-result-object v1
@@ -127,14 +127,14 @@
 
     const/4 v2, 0x0
 
-    .line 2996
+    .line 3035
     invoke-static {v1, p1, v2}, Lcom/miui/home/recents/FloatingIconLayer;->getValidFloatingIconLayer(Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;Z)Lcom/miui/home/recents/FloatingIconLayer;
 
     move-result-object p1
 
     iput-object p1, v0, Lcom/miui/home/recents/NavStubView;->mFloatingIconLayer:Lcom/miui/home/recents/FloatingIconLayer;
 
-    .line 2998
+    .line 3037
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$11;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-static {p1}, Lcom/miui/home/recents/NavStubView;->access$4500(Lcom/miui/home/recents/NavStubView;)Lcom/miui/home/recents/util/RectFSpringAnim;
@@ -157,7 +157,7 @@
 
     const/4 v2, 0x1
 
-    .line 2999
+    .line 3038
     :cond_0
     sget-object p1, Lcom/miui/home/recents/NavStubView;->TAG:Ljava/lang/String;
 
@@ -187,7 +187,7 @@
 
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3001
+    .line 3040
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$11;->this$0:Lcom/miui/home/recents/NavStubView;
 
     iget-object p1, p1, Lcom/miui/home/recents/NavStubView;->mFloatingIconLayer:Lcom/miui/home/recents/FloatingIconLayer;
@@ -196,7 +196,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 3003
+    .line 3042
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$11;->this$0:Lcom/miui/home/recents/NavStubView;
 
     iget-object p1, p1, Lcom/miui/home/recents/NavStubView;->mFloatingIconLayer:Lcom/miui/home/recents/FloatingIconLayer;
@@ -205,7 +205,7 @@
 
     goto :goto_0
 
-    .line 3005
+    .line 3044
     :cond_1
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$11;->this$0:Lcom/miui/home/recents/NavStubView;
 
@@ -221,7 +221,7 @@
 .method static synthetic lambda$onAnimationStart$1(Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;)V
     .locals 3
 
-    .line 3013
+    .line 3052
     sget-object v0, Lcom/miui/home/recents/NavStubView;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -242,7 +242,7 @@
 
     if-eqz p0, :cond_0
 
-    .line 3015
+    .line 3054
     invoke-interface {p0}, Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;->getIconImageView()Landroid/view/View;
 
     move-result-object v0
@@ -251,7 +251,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setAlpha(F)V
 
-    .line 3016
+    .line 3055
     invoke-interface {p0}, Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;->onEnterHomeAnimStart()V
 
     :cond_0
@@ -263,19 +263,19 @@
 .method public onAnimationCancel(Lcom/miui/home/recents/util/RectFSpringAnim;)V
     .locals 2
 
-    .line 3023
+    .line 3062
     sget-object v0, Lcom/miui/home/recents/NavStubView;->TAG:Ljava/lang/String;
 
     const-string v1, "startAppToHomeInGestureThread, mAppToHomeAnim2 cancel"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3024
+    .line 3063
     invoke-virtual {p0, p1}, Lcom/miui/home/recents/NavStubView$11;->onAnimationEnd(Lcom/miui/home/recents/util/RectFSpringAnim;)V
 
     const/4 p1, 0x1
 
-    .line 3025
+    .line 3064
     iput-boolean p1, p0, Lcom/miui/home/recents/NavStubView$11;->isCancel:Z
 
     return-void
@@ -284,14 +284,14 @@
 .method public onAnimationEnd(Lcom/miui/home/recents/util/RectFSpringAnim;)V
     .locals 2
 
-    .line 3030
+    .line 3069
     iget-boolean p1, p0, Lcom/miui/home/recents/NavStubView$11;->isCancel:Z
 
     if-eqz p1, :cond_0
 
     return-void
 
-    .line 3034
+    .line 3073
     :cond_0
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$11;->this$0:Lcom/miui/home/recents/NavStubView;
 
@@ -299,7 +299,7 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/recents/NavStubView;->finishAppToHome(Z)V
 
-    .line 3036
+    .line 3075
     sget-object p1, Lcom/miui/home/recents/TouchInteractionService;->MAIN_THREAD_EXECUTOR:Lcom/miui/home/launcher/MainThreadExecutor;
 
     iget-object v0, p0, Lcom/miui/home/recents/NavStubView$11;->val$icon:Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;
@@ -310,7 +310,7 @@
 
     invoke-virtual {p1, v1}, Lcom/miui/home/launcher/MainThreadExecutor;->execute(Ljava/lang/Runnable;)V
 
-    .line 3050
+    .line 3089
     invoke-static {}, Lcom/miui/home/recents/util/TraceUtils;->endSection()V
 
     return-void
@@ -321,17 +321,17 @@
 
     const-string p1, "appToHomeAnimFromGesture"
 
-    .line 2986
+    .line 3025
     invoke-static {p1}, Lcom/miui/home/recents/util/TraceUtils;->beginSection(Ljava/lang/String;)V
 
-    .line 2987
+    .line 3026
     sget-object p1, Lcom/miui/home/recents/NavStubView;->TAG:Ljava/lang/String;
 
     const-string v0, "startAppToHomeInGestureThread, mAppToHomeAnim2 start"
 
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2988
+    .line 3027
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$11;->val$startRectF:Landroid/graphics/RectF;
 
     iget-object v0, p0, Lcom/miui/home/recents/NavStubView$11;->this$0:Lcom/miui/home/recents/NavStubView;
@@ -348,7 +348,7 @@
 
     move-result-object p1
 
-    .line 2989
+    .line 3028
     iget-object v0, p0, Lcom/miui/home/recents/NavStubView$11;->this$0:Lcom/miui/home/recents/NavStubView;
 
     iget v1, p0, Lcom/miui/home/recents/NavStubView$11;->val$homeRotation:I
@@ -361,7 +361,7 @@
 
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$11;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    .line 2990
+    .line 3029
     invoke-static {p1}, Lcom/miui/home/recents/NavStubView;->access$4600(Lcom/miui/home/recents/NavStubView;)F
 
     move-result v2
@@ -390,10 +390,10 @@
 
     move-result v6
 
-    .line 2989
+    .line 3028
     invoke-static/range {v0 .. v6}, Lcom/miui/home/recents/NavStubView;->access$5000(Lcom/miui/home/recents/NavStubView;Landroid/graphics/RectF;FFFFF)Landroid/graphics/RectF;
 
-    .line 2992
+    .line 3031
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$11;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-static {p1}, Lcom/miui/home/recents/NavStubView;->access$5100(Lcom/miui/home/recents/NavStubView;)Z
@@ -414,7 +414,7 @@
 
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$11;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    .line 2993
+    .line 3032
     invoke-static {p1}, Lcom/miui/home/recents/NavStubView;->access$5200(Lcom/miui/home/recents/NavStubView;)Lcom/miui/home/recents/RecentsAnimationListenerImpl;
 
     move-result-object p1
@@ -423,12 +423,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 2994
+    .line 3033
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$11;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-static {p1, v0}, Lcom/miui/home/recents/NavStubView;->access$5102(Lcom/miui/home/recents/NavStubView;Z)Z
 
-    .line 2995
+    .line 3034
     sget-object p1, Lcom/miui/home/recents/FloatingIconLayer;->FLOATING_ICON_EXECUTOR:Lcom/miui/home/library/utils/LooperExecutor;
 
     iget-object v1, p0, Lcom/miui/home/recents/NavStubView$11;->val$icon:Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;
@@ -439,13 +439,13 @@
 
     invoke-virtual {p1, v2}, Lcom/miui/home/library/utils/LooperExecutor;->execute(Ljava/lang/Runnable;)V
 
-    .line 3011
+    .line 3050
     :cond_0
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$11;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-static {p1, v0}, Lcom/miui/home/recents/NavStubView;->access$5300(Lcom/miui/home/recents/NavStubView;Z)V
 
-    .line 3012
+    .line 3051
     sget-object p1, Lcom/miui/home/recents/TouchInteractionService;->MAIN_THREAD_EXECUTOR:Lcom/miui/home/launcher/MainThreadExecutor;
 
     iget-object v0, p0, Lcom/miui/home/recents/NavStubView$11;->val$icon:Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;

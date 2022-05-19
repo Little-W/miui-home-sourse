@@ -281,7 +281,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0d0143
+    const v1, 0x7f0d0144
 
     const/4 v2, 0x0
 
@@ -329,7 +329,7 @@
     .line 87
     iget-object v0, p0, Lcom/miui/home/launcher/compat/UserPresentLoadingAnimation;->mLoadingAnimation:Lcom/airbnb/lottie/LottieAnimationView;
 
-    const v1, 0x7f0f0008
+    const v1, 0x7f0f000c
 
     invoke-virtual {v0, v1}, Lcom/airbnb/lottie/LottieAnimationView;->setAnimation(I)V
 
@@ -339,7 +339,7 @@
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/compat/UserPresentLoadingAnimation;->mLoadingAnimation:Lcom/airbnb/lottie/LottieAnimationView;
 
-    const v1, 0x7f0f0007
+    const v1, 0x7f0f000b
 
     invoke-virtual {v0, v1}, Lcom/airbnb/lottie/LottieAnimationView;->setAnimation(I)V
 

@@ -22,7 +22,7 @@
 .method private constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 9639
+    .line 9672
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$RecentMessageHandler;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -33,7 +33,7 @@
 .method synthetic constructor <init>(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/Launcher$1;)V
     .locals 0
 
-    .line 9639
+    .line 9672
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/Launcher$RecentMessageHandler;-><init>(Lcom/miui/home/launcher/Launcher;)V
 
     return-void
@@ -47,23 +47,23 @@
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
-    .line 9643
+    .line 9676
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$RecentMessageHandler;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$10200(Lcom/miui/home/launcher/Launcher;)Z
+    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$10300(Lcom/miui/home/launcher/Launcher;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 9644
+    .line 9677
     iget-boolean p1, p1, Lcom/miui/home/recents/messages/ChangeLauncherStateEvent;->mIsToFeedState:Z
 
     if-eqz p1, :cond_2
 
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$RecentMessageHandler;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$10700(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/settings/LauncherGestureController;
+    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$10800(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/settings/LauncherGestureController;
 
     move-result-object p1
 
@@ -73,10 +73,10 @@
 
     if-eqz p1, :cond_2
 
-    .line 9645
+    .line 9678
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$RecentMessageHandler;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$10800(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/overlay/feed/FeedOverlayTransitionController;
+    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$10900(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/overlay/feed/FeedOverlayTransitionController;
 
     move-result-object p1
 
@@ -88,10 +88,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 9646
+    .line 9679
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$RecentMessageHandler;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$4700(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/LauncherStateManager;
+    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$4800(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/LauncherStateManager;
 
     move-result-object p1
 
@@ -101,7 +101,7 @@
 
     goto :goto_0
 
-    .line 9648
+    .line 9681
     :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$RecentMessageHandler;->this$0:Lcom/miui/home/launcher/Launcher;
 
@@ -111,17 +111,17 @@
 
     if-nez p1, :cond_1
 
-    .line 9649
+    .line 9682
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$RecentMessageHandler;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$4000(Lcom/miui/home/launcher/Launcher;)V
+    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$4100(Lcom/miui/home/launcher/Launcher;)V
 
-    .line 9650
+    .line 9683
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$RecentMessageHandler;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->addOrRemoveNewHome()V
 
-    .line 9652
+    .line 9685
     :cond_1
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$RecentMessageHandler;->this$0:Lcom/miui/home/launcher/Launcher;
 
@@ -131,10 +131,10 @@
 
     if-eqz p1, :cond_2
 
-    .line 9653
+    .line 9686
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$RecentMessageHandler;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$4700(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/LauncherStateManager;
+    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$4800(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/LauncherStateManager;
 
     move-result-object p1
 
@@ -153,19 +153,19 @@
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
-    .line 9662
+    .line 9695
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$RecentMessageHandler;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$10900(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/recents/LauncherAppTransitionManager;
+    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$11000(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/recents/LauncherAppTransitionManager;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 9663
+    .line 9696
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$RecentMessageHandler;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$10900(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/recents/LauncherAppTransitionManager;
+    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$11000(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/recents/LauncherAppTransitionManager;
 
     move-result-object p1
 

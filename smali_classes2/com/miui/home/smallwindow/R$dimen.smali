@@ -35,56 +35,56 @@
 
 .field public static final recent_tv_small_window_margin_top:I = 0x7f0703c3
 
-.field public static final recents_tv_small_window_text_size:I = 0x7f0703db
+.field public static final recents_tv_small_window_text_size:I = 0x7f0703e1
 
-.field public static final selected_bottom_padding:I = 0x7f0703fb
+.field public static final selected_bottom_padding:I = 0x7f070401
 
-.field public static final selected_left_padding:I = 0x7f0703fc
+.field public static final selected_left_padding:I = 0x7f070402
 
-.field public static final selected_right_padding:I = 0x7f0703fd
+.field public static final selected_right_padding:I = 0x7f070403
 
-.field public static final selected_top_padding:I = 0x7f0703fe
+.field public static final selected_top_padding:I = 0x7f070404
 
-.field public static final small_window_container_item_image_size:I = 0x7f070417
+.field public static final small_window_container_item_image_size:I = 0x7f070420
 
-.field public static final small_window_container_title_top_margin:I = 0x7f070418
+.field public static final small_window_container_title_top_margin:I = 0x7f070421
 
-.field public static final small_window_edit_head_background_height:I = 0x7f070419
+.field public static final small_window_edit_head_background_height:I = 0x7f070422
 
-.field public static final small_window_edit_header_text_size:I = 0x7f07041a
+.field public static final small_window_edit_header_text_size:I = 0x7f070423
 
-.field public static final small_window_edit_icon_badge_size:I = 0x7f07041b
+.field public static final small_window_edit_icon_badge_size:I = 0x7f070424
 
-.field public static final small_window_edit_icon_height:I = 0x7f07041c
+.field public static final small_window_edit_icon_height:I = 0x7f070425
 
-.field public static final small_window_edit_icon_image_size:I = 0x7f07041d
+.field public static final small_window_edit_icon_image_size:I = 0x7f070426
 
-.field public static final small_window_edit_icon_width:I = 0x7f07041e
+.field public static final small_window_edit_icon_width:I = 0x7f070427
 
-.field public static final small_window_edit_title_text_size:I = 0x7f07041f
+.field public static final small_window_edit_title_text_size:I = 0x7f070428
 
-.field public static final small_window_edit_title_top_margin:I = 0x7f070420
+.field public static final small_window_edit_title_top_margin:I = 0x7f070429
 
-.field public static final small_window_gird_left_padding:I = 0x7f070421
+.field public static final small_window_gird_left_padding:I = 0x7f07042a
 
-.field public static final small_window_gird_right_padding:I = 0x7f070422
+.field public static final small_window_gird_right_padding:I = 0x7f07042b
 
-.field public static final small_window_item_title_margin_top:I = 0x7f070423
+.field public static final small_window_item_title_margin_top:I = 0x7f07042c
 
-.field public static final small_window_item_title_text_size:I = 0x7f070424
+.field public static final small_window_item_title_text_size:I = 0x7f07042d
 
-.field public static final small_window_left_padding:I = 0x7f070425
+.field public static final small_window_left_padding:I = 0x7f07042e
 
-.field public static final small_window_right_padding:I = 0x7f070426
+.field public static final small_window_right_padding:I = 0x7f07042f
 
-.field public static final small_window_selected_icon_badge_size:I = 0x7f070427
+.field public static final small_window_selected_icon_badge_size:I = 0x7f070430
 
-.field public static final small_window_selected_icon_image_size:I = 0x7f070428
+.field public static final small_window_selected_icon_image_size:I = 0x7f070431
 
-.field public static final small_window_selected_icon_size:I = 0x7f070429
+.field public static final small_window_selected_icon_size:I = 0x7f070432
 
-.field public static final small_window_title_text_size:I = 0x7f07042a
+.field public static final small_window_title_text_size:I = 0x7f070433
 
-.field public static final space:I = 0x7f070434
+.field public static final space:I = 0x7f07043d
 
-.field public static final top_padding:I = 0x7f070462
+.field public static final top_padding:I = 0x7f07046b

@@ -26,7 +26,7 @@
     <string name="activity_not_unlocked">एपहरू खोल्न अघि तपाईंको डिभाइस पूर्ण रूपमा रिबुट नहुन्जेलसम्म पर्खनुहोस्</string>
     <string name="add_custom_category">अनुकूलन गर्नुहोस्</string>
     <string name="add_screen">स्क्रिन थप्नुहोस्</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">होम स्क्रिनमा थप्नुहोस्</string>
     <string name="added_all_category">सबै एपहरू सफलतापूर्वक थपियो</string>
     <string name="afternoon">दिउँसो</string>
     <string name="agree_button">समहत छु</string>
@@ -349,6 +349,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">होम स्क्रिनमा थप्न थिचेर राख्नुहोस्</string>
+    <string name="fold_pair_installed_shortcut_launcher">यो शर्टकट पहिले नै अवस्थित छ</string>
     <string name="folder_name">फोल्डर</string>
     <string name="frame_load_failed">फ्रेम लोड गर्न सक्दैन</string>
     <string name="free_style_apps_title">एप छनोट गर्नुहोस्</string>
@@ -628,6 +630,7 @@
     <string name="night">साँझ</string>
     <string name="no_detail_page">विवरण पृष्ठ छैन</string>
     <string name="no_space_toast">पर्याप्त खाली ठाउँ छैन</string>
+    <string name="no_space_toast_fold">यहाँ पर्याप्त ठाउँ छैन</string>
     <string name="no_space_toast_when_click_widget">यस पृष्ठमा पर्याप्त स्थान छैन। यस वस्तुलाई फरक पृष्ठमा तान्नुहोस्।</string>
     <string name="noon">मध्य दिन</string>
     <string name="normal_wallpaper">वालपेपर</string>
@@ -636,7 +639,7 @@
     <string name="notification_reset_title">आइकनहरू सफलतापूर्वक व्यवस्थित गरियो</string>
     <string name="one_key_call_title">डायल गर्न ट्याप गर्नुहोस्</string>
     <string name="online_wallpaper">अनलाइन</string>
-    <string name="open_pad_personal_assistant_settings">Home screen widgets</string>
+    <string name="open_pad_personal_assistant_settings">होम स्क्रिन विजेट</string>
     <string name="open_personal_assistant_dialog_btn_cancel">रद्द गर्नुहोस्</string>
     <string name="open_personal_assistant_dialog_btn_confirm">अफ गर्नुहोस्</string>
     <string name="open_personal_assistant_dialog_desc">तपाईंले एप भल्ट बन्द गरेपछि, तपाईंले एप भल्ट विजेट हरू हेर्न वा प्रयोग गर्न सक्नुहुने छैन। तिनीहरूको अपडेट गरिएको संस्करण पनि उपलब्ध हुने छैन। जे भए पनि बन्द गर्नुहुन्छ?</string>
@@ -648,7 +651,7 @@
     <string name="ota_layout_adjustment_content">बाहिरी र भित्री होम स्क्रिन लेटाउटहरू नयाँ संस्करणसंग सिंक गरियो।</string>
     <string name="ota_layout_adjustment_title">होम स्क्रिन लेटाउट</string>
     <string name="out_of_space">यस होम स्क्रिनमा थप खाली ठाउँ छैन</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">तेस्रो पार्टी एप आइकनहरूमा एनिमेसनहरू प्रस्तुत गर्नुहोस्</string>
     <string name="perfect_icons_switch_title">ग्लोबल आइकन एनिमेसनहरू</string>
     <string name="permdesc_install_shortcut">प्रयोगकर्ता इन्टरभेन्सन बिना एपलाई सर्टकटहरू थप्न अनुमति दिनुहोस्।</string>

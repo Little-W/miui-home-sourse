@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="navigation_bar_type_width">183.0dip</dimen>
+    <dimen name="recents_relay_container_max_width">440.0dip</dimen>
     <dimen name="recents_task_menu_horizontal_margin">7.269989dip</dimen>
     <dimen name="recents_task_menu_vertical_margin">15.0dip</dimen>
 </resources>

@@ -7,7 +7,6 @@
     <dimen name="clear_container_padding_bottom">8.0dip</dimen>
     <dimen name="fastscroll_letter_side_padding_bottom">10.089996dip</dimen>
     <dimen name="fastscroll_letter_side_padding_top">10.089996dip</dimen>
-    <dimen name="fastscroll_popup_margin_top">-10.899994dip</dimen>
     <dimen name="miuix_appcompat_action_bar_default_height">48.669983dip</dimen>
     <dimen name="miuix_appcompat_action_bar_horizontal_padding_end">43.399994dip</dimen>
     <dimen name="miuix_appcompat_action_bar_horizontal_padding_start">43.399994dip</dimen>

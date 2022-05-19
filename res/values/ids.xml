@@ -409,6 +409,7 @@
     <item type="id" name="recent_menu_view" />
     <item type="id" name="recents_container" />
     <item type="id" name="recents_decorations" />
+    <item type="id" name="recents_relay_container" />
     <item type="id" name="recents_smallwindow_background" />
     <item type="id" name="recents_smallwindow_crop" />
     <item type="id" name="recents_smallwindow_drag_text" />
@@ -428,6 +429,9 @@
     <item type="id" name="recommend_title" />
     <item type="id" name="recommend_xout" />
     <item type="id" name="recycler_view" />
+    <item type="id" name="relay_app_info" />
+    <item type="id" name="relay_device_info" />
+    <item type="id" name="relay_icon" />
     <item type="id" name="remove_action_button" />
     <item type="id" name="rename_edit" />
     <item type="id" name="reset_btn" />
@@ -512,6 +516,7 @@
     <item type="id" name="sliding_drawer_handle" />
     <item type="id" name="small_window" />
     <item type="id" name="small_window_alternative_girdview" />
+    <item type="id" name="small_window_and_mem_text_container" />
     <item type="id" name="small_window_button_complete" />
     <item type="id" name="small_window_edit" />
     <item type="id" name="small_window_edit_content" />

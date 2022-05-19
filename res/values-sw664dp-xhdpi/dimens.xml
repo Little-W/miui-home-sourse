@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="config_icon_height">54.0dip</dimen>
+    <dimen name="config_icon_width">54.0dip</dimen>
+    <dimen name="hotseats_height">84.0dip</dimen>
+    <dimen name="workspace_cell_padding_top">8.0dip</dimen>
+    <dimen name="folder_preview_height">39.0dip</dimen>
+    <dimen name="folder_preview_width">39.0dip</dimen>
+</resources>

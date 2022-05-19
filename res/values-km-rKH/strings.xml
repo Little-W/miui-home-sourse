@@ -26,7 +26,7 @@
     <string name="activity_not_unlocked">សូមរងចាំរហូតដល់ឧបករណ៍របស់អ្នកចាប់ផ្ដើមឡើងវិញពេញលេញ មុននឹងបើកកម្មវិធីនានា</string>
     <string name="add_custom_category">តាម​បំណង</string>
     <string name="add_screen">បន្ថែម​អេក្រង់</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">បន្ថែមទៅអេក្រង់ទំព័រដើម</string>
     <string name="added_all_category">កម្មវិធីទាំងអស់បានបន្ថែមដោយជោគជ័យ</string>
     <string name="afternoon">ពេលរសៀល</string>
     <string name="agree_button">យល់ព្រម</string>
@@ -349,6 +349,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">ចុចឱ្យជាប់ ដើម្បីបន្ថែមទៅអេក្រង់ទំព័រដើម</string>
+    <string name="fold_pair_installed_shortcut_launcher">វិធីផ្លូវកាត់នេះមានរួចហើយ</string>
     <string name="folder_name">ថត</string>
     <string name="frame_load_failed">មិន​អាច​ផ្ទុក​ស៊ុម</string>
     <string name="free_style_apps_title">ជ្រើសរើស​កូនកម្មវិធី</string>
@@ -628,6 +630,7 @@
     <string name="night">ល្ងាច</string>
     <string name="no_detail_page">គ្មាន​ទំព័រ​​អំពីព័ត៌មានលម្អិត</string>
     <string name="no_space_toast">គ្មានទំហំគ្រប់គ្រាន់</string>
+    <string name="no_space_toast_fold">មិនមានកន្លែងទំនេរគ្រប់គ្រាន់ទេនៅទីនេះ</string>
     <string name="no_space_toast_when_click_widget">មិនមានទំហំគ្រប់គ្រាន់នៅលើទំព័រនេះទេ។ សូមព្យាយាមអូសធាតុនេះទៅទំព័រផ្សេង។</string>
     <string name="noon">ថ្ងៃត្រង់</string>
     <string name="normal_wallpaper">រូប​ផ្ទៃ​អេក្រង់</string>
@@ -648,7 +651,7 @@
     <string name="ota_layout_adjustment_content">ប្លង់អេក្រង់ដើមខាងក្នុងនិងខាងក្រៅត្រូវបានធ្វើសមកាលកម្មនៅក្នុងកំណែជំនាន់ថ្មី។</string>
     <string name="ota_layout_adjustment_title">ប្លង់អេក្រង់ដើម</string>
     <string name="out_of_space">គ្មាន​ចន្លោះ​នៅសល់​នៅ​លើ​អេក្រង់​ដើម​នេះទេ</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">បង្ហាញចលនានៅលើរូបតំណាងកម្មវិធីភាគីទីបី</string>
     <string name="perfect_icons_switch_title">ចលនារូបតំណាងសកល</string>
     <string name="permdesc_install_shortcut">អនុញ្ញាត​ឱ្យ​កម្មវិធី​បន្ថែម​នូវ​ផ្លូវកាត់​នានា​បាន​ដោយ​មិនចាំបាច់​មាន​អន្តរាគមន៍​របស់​អ្នកប្រើ។</string>

@@ -71,18 +71,18 @@
 
 .field public static final copy:I = 0x7f100142
 
-.field public static final expand_button_title:I = 0x7f1001a7
+.field public static final expand_button_title:I = 0x7f1001ac
 
-.field public static final not_set:I = 0x7f100319
+.field public static final not_set:I = 0x7f100321
 
-.field public static final preference_copied:I = 0x7f10034f
+.field public static final preference_copied:I = 0x7f100357
 
-.field public static final search_menu_title:I = 0x7f1003a9
+.field public static final search_menu_title:I = 0x7f1003b2
 
-.field public static final status_bar_notification_info_overflow:I = 0x7f1003e8
+.field public static final status_bar_notification_info_overflow:I = 0x7f1003f1
 
-.field public static final summary_collapsed_preference_list:I = 0x7f1003f3
+.field public static final summary_collapsed_preference_list:I = 0x7f1003fc
 
-.field public static final v7_preference_off:I = 0x7f100459
+.field public static final v7_preference_off:I = 0x7f100463
 
-.field public static final v7_preference_on:I = 0x7f10045a
+.field public static final v7_preference_on:I = 0x7f100464

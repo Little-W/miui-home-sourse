@@ -26,7 +26,7 @@
     <string name="activity_not_unlocked">ആപ്പുകൾ തുറക്കുന്നതിന് മുമ്പ് നിങ്ങളുടെ ഉപകരണം പൂർണ്ണമായി റീബൂട്ടുചെയ്യപ്പെടുന്നത് വരെ കാത്തിരിക്കുക</string>
     <string name="add_custom_category">ഇഷ്‌ടാനുസൃതം</string>
     <string name="add_screen">സ്ക്രീൻ ചേർക്കുക</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">ഹോം സ്‌ക്രീനിലേക്ക് ചേർക്കുക</string>
     <string name="added_all_category">എല്ലാ ആപ്പുകളും ചേർത്തു</string>
     <string name="afternoon">ഉച്ചകഴിഞ്ഞ്</string>
     <string name="agree_button">അംഗീകരിക്കുക</string>
@@ -349,6 +349,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">ഹോം സ്‌ക്രീനിലേക്ക് ചേർക്കാൻ അമർത്തിപ്പിടിക്കുക</string>
+    <string name="fold_pair_installed_shortcut_launcher">ഈ എളുപ്പവഴി ഇതിനകം നിലവിലുണ്ട്</string>
     <string name="folder_name">ഫോൾഡർ</string>
     <string name="frame_load_failed">ഫ്രെയിം ലോഡുചെയ്യാനാകില്ല</string>
     <string name="free_style_apps_title">ആപ്പ് തിരഞ്ഞെടുക്കുക</string>
@@ -628,6 +630,7 @@
     <string name="night">വൈകുന്നേരം</string>
     <string name="no_detail_page">വിശദാംശങ്ങൾ പേജ് ഇല്ല</string>
     <string name="no_space_toast">മതിയായ ഇടമില്ല</string>
+    <string name="no_space_toast_fold">ഇവിടെ മതിയായ ഇടമില്ല</string>
     <string name="no_space_toast_when_click_widget">ഈ പേജിൽ മതിയായ ഇടമില്ല. ഈ ഇനം മറ്റൊരു പേജിലേക്ക് ഡ്രാഗ് ചെയ്യാൻ ശ്രമിക്കുക.</string>
     <string name="noon">മദ്ധ്യാഹ്നം</string>
     <string name="normal_wallpaper">വാൾപേപ്പർ</string>
@@ -648,7 +651,7 @@
     <string name="ota_layout_adjustment_content">പുതിയ പതിപ്പിൽ ആന്തരികവും ബാഹ്യവുമായ ഹോം സ്ക്രീൻ ലേഔട്ടുകൾ സമന്വയിപ്പിച്ചിരിക്കുന്നു.</string>
     <string name="ota_layout_adjustment_title">ഹോം സ്ക്രീൻ ലേഔട്ടുകൾ</string>
     <string name="out_of_space">ഈ ഹോം സ്ക്രീനിൽ ഇനി സ്ഥലമില്ല</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">മൂന്നാം കക്ഷി ആപ്പ് ഐക്കണുകളിൽ ആനിമേഷനുകൾ റെൻഡർ ചെയ്യുക</string>
     <string name="perfect_icons_switch_title">ആഗോള ഐക്കൺ ആനിമേഷനുകൾ</string>
     <string name="permdesc_install_shortcut">ഉപയോക്താവിന്റെ ഇടപെടൽ കൂടാതെ എളുപ്പവഴികൾ ചേർക്കാൻ ആപ്പിനെ അനുവദിക്കുന്നു.</string>

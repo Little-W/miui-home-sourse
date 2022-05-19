@@ -53,7 +53,7 @@
     <string name="activity_not_unlocked">Vent, indtil din enhed er fuldt ud genstartet, inden du åbner apps</string>
     <string name="add_custom_category">Brugertilpasset</string>
     <string name="add_screen">Tilføj skærm</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">Tilføj til startskærm</string>
     <string name="added_all_category">Alle apper blev tilføjet</string>
     <string name="afternoon">Eftermiddag</string>
     <string name="agree_button">Acceptér</string>
@@ -379,6 +379,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">Tryk og hold for at tilføje til startskærmen</string>
+    <string name="fold_pair_installed_shortcut_launcher">Denne genvej findes allerede</string>
     <string name="folder_name">Mappe</string>
     <string name="frame_load_failed">Kan ikke indlæse ramme</string>
     <string name="free_style_apps_title">Vælg app</string>
@@ -658,6 +660,7 @@
     <string name="night">Aften</string>
     <string name="no_detail_page">Side uden detaljer</string>
     <string name="no_space_toast">Ikke nok plads</string>
+    <string name="no_space_toast_fold">Ikke nok plads her</string>
     <string name="no_space_toast_when_click_widget">Ikke nok plads på denne side. Prøv at trække dette element til en anden side.</string>
     <string name="noon">Middag</string>
     <string name="normal_wallpaper">Baggrundsbillede</string>
@@ -679,7 +682,7 @@
     <string name="ota_layout_adjustment_content">Indre og ydre startskærmslayout blev synkroniseret i den nye version.</string>
     <string name="ota_layout_adjustment_title">Startskærmlayout</string>
     <string name="out_of_space">Ikke mere plads på denne startskærm</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">Gengiv animationer på tredjepartsapps</string>
     <string name="perfect_icons_switch_title">Globale ikonanimationer</string>
     <string name="permdesc_install_shortcut">Gør det muligt for en app at tilføje genveje uden brugerintervention.</string>

@@ -955,7 +955,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0a029e
+    const v0, 0x7f0a02a3
 
     .line 110
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/allapps/category/BaseAllAppsCategoryListContainer;->findViewById(I)Landroid/view/View;

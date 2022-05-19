@@ -35,23 +35,23 @@
 
 .field public static final menu_text_size:I = 0x7f070190
 
-.field public static final text_max_size:I = 0x7f070441
+.field public static final text_max_size:I = 0x7f07044a
 
-.field public static final thumbnail_border_round_oval:I = 0x7f07044d
+.field public static final thumbnail_border_round_oval:I = 0x7f070456
 
-.field public static final thumbnail_border_width:I = 0x7f07044e
+.field public static final thumbnail_border_width:I = 0x7f070457
 
-.field public static final thumbnail_height:I = 0x7f07044f
+.field public static final thumbnail_height:I = 0x7f070458
 
-.field public static final thumbnail_max_width:I = 0x7f070450
+.field public static final thumbnail_max_width:I = 0x7f070459
 
-.field public static final thumbnail_min_width:I = 0x7f070451
+.field public static final thumbnail_min_width:I = 0x7f07045a
 
-.field public static final thumbnail_shadow_layer_radius:I = 0x7f070452
+.field public static final thumbnail_shadow_layer_radius:I = 0x7f07045b
 
-.field public static final thumbnail_shadow_layer_x:I = 0x7f070453
+.field public static final thumbnail_shadow_layer_x:I = 0x7f07045c
 
-.field public static final thumbnail_shadow_layer_y:I = 0x7f070454
+.field public static final thumbnail_shadow_layer_y:I = 0x7f07045d
 
 
 # direct methods

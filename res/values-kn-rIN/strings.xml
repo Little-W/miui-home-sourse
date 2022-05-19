@@ -26,7 +26,7 @@
     <string name="activity_not_unlocked">ಆ್ಯಪ್‌ಗಳನ್ನು ತೆರೆಯುವ ಮುನ್ನ ಡಿವೈಸ್‌ ರಿಬೂಟ್‌ ಆಗುವ ತನಕ ಕಾಯಿರಿ</string>
     <string name="add_custom_category">ಕಸ್ಟಮ್‌</string>
     <string name="add_screen">ಸ್ಕ್ರೀನ್‌ ಸೇರಿಸು</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">ಹೋಮ್‌ ಸ್ಕ್ರೀನ್‌ಗೆ ಸೇರಿಸಿ</string>
     <string name="added_all_category">ಎಲ್ಲಾ ಆ್ಯಪ್‌ಗಳನ್ನು ಸೇರಿಸಲಾಗಿದೆ</string>
     <string name="afternoon">ಅಪರಾಹ್ನ</string>
     <string name="agree_button">ಸಮ್ಮತಿ</string>
@@ -349,6 +349,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">ಹೋಮ್‌ ಸ್ಕ್ರೀನ್‌ಗೆ ಸೇರಿಸಲು ಒತ್ತಿ ಹಿಡಿಯಿರಿ</string>
+    <string name="fold_pair_installed_shortcut_launcher">ಈ ಶಾರ್ಟ್‌ಕಟ್‌‌ ಈಗಾಗಲೇ ಅಸ್ತಿತ್ವದಲ್ಲಿದೆ</string>
     <string name="folder_name">ಫೋಲ್ಡರ್</string>
     <string name="frame_load_failed">ಫ್ರೇಮ್ ಲೋಡ್ ಮಾಡಲು ಆಗುತ್ತಿಲ್ಲ</string>
     <string name="free_style_apps_title">ಆ್ಯಪ್‌ ಆಯ್ಕೆ ಮಾಡಿ</string>
@@ -628,6 +630,7 @@
     <string name="night">ಸಂಜೆ</string>
     <string name="no_detail_page">ವಿವರಗಳ ಪುಟ ಇಲ್ಲ</string>
     <string name="no_space_toast">ಸ್ಥಳ ಸಾಕಷ್ಟಿಲ್ಲ</string>
+    <string name="no_space_toast_fold">ಇಲ್ಲಿ ಸ್ಥಳ ಸಾಕಷ್ಟಿಲ್ಲ</string>
     <string name="no_space_toast_when_click_widget">ಈ ಪುಟದಲ್ಲಿ ಸಾಕಷ್ಟು ಸ್ಥಳಾವಕಾಶವಿಲ್ಲ. ಈ ಐಟಂ ಅನ್ನು ಬೇರೊಂದು ಪುಟಕ್ಕೆ ಎಳೆಯಲು ಪ್ರಯತ್ನಿಸಿ.</string>
     <string name="noon">ಮಧ್ಯಾಹ್ನ</string>
     <string name="normal_wallpaper">ವಾಲ್‌ಪೇಪರ್</string>
@@ -636,7 +639,7 @@
     <string name="notification_reset_title">ಐಕಾನ್‌ಗಳನ್ನು ಕ್ರಮಗೊಳಿಸಲಾಗಿದೆ</string>
     <string name="one_key_call_title">ಡಯಲ್‌ ಮಾಡಲು ಟ್ಯಾಪ್‌ ಮಾಡಿ</string>
     <string name="online_wallpaper">ಆನ್‌ಲೈನ್</string>
-    <string name="open_pad_personal_assistant_settings">Home screen widgets</string>
+    <string name="open_pad_personal_assistant_settings">ಹೋಮ್‌ ಸ್ಕ್ರೀನ್‌ ವಿಜೆಟ್‌ಗಳು</string>
     <string name="open_personal_assistant_dialog_btn_cancel">ರದ್ದು</string>
     <string name="open_personal_assistant_dialog_btn_confirm">ಆಫ್ ಮಾಡಿ</string>
     <string name="open_personal_assistant_dialog_desc">ನೀವು ಆ್ಯಪ್‌ ವೋಲ್ಟ್‌ ಅನ್ನು ಆಫ್‌ ಮಾಡಿದ ಬಳಿಕ, ನೀವು ಆ್ಯಪ್‌ ವೋಲ್ಟ್‌ ವಿಜೆಟ್‌ಗಳನ್ನು ನೋಡಲು ಅಥವಾ ಬಳಸಲು ಸಾಧ್ಯವಾಗುವುದಿಲ್ಲ. ಅವರ ಅಪ್‌ಡೇಟ್‌ ಆದ ಆವೃತ್ತಿ ಕೂಡ ನಿಮಗೆ ಲಭ್ಯವಿರುವುದಿಲ್ಲ. ಆದರೂ ಆಫ್‌ ಮಾಡಬೇಕೇ?</string>
@@ -648,7 +651,7 @@
     <string name="ota_layout_adjustment_content">ಹೊಸ ಆವೃತ್ತಿಯಲ್ಲಿ ಒಳ ಹಾಗೂ ಬಾಹ್ಯ ಹೋಮ್‌ ಸ್ಕ್ರೀನ್‌ ಲೇಔಟ್‌ಗಳನ್ನು ಸಿಂಕ್‌ ಮಾಡಲಾಗುತ್ತದೆ.</string>
     <string name="ota_layout_adjustment_title">ಹೋಮ್‌ ಸ್ಕ್ರೀನ್‌ ಲೇಔಟ್‌ಗಳು</string>
     <string name="out_of_space">ಈ ಹೋಮ್ ಸ್ಕ್ರೀನ್‌ಗೆ ಸ್ಥಳವಿಲ್ಲ</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">ಥರ್ಡ್‌ ಪಾರ್ಟಿ ಆ್ಯಪ್‌ ಐಕಾನ್‌ಗಳ ಮೇಲೆ ಅನಿಮೇಶನ್‌ಗಳನ್ನು ರೆಂಡರ್‌ ಮಾಡಿ</string>
     <string name="perfect_icons_switch_title">ಗ್ಲೋಬಲ್‌ ಐಕಾನ್‌ ಅನಿಮೇಶನ್‌</string>
     <string name="permdesc_install_shortcut">ಬಳಕೆದಾರ ಮಧ್ಯಪ್ರವೇಶ ಇಲ್ಲದೇ ಆ್ಯಪ್‌‌ಗೆ ಶಾರ್ಟ್‌ಕಟ್ ಸೇರಿಸಲು ಅನುಮತಿಸುತ್ತದೆ.</string>

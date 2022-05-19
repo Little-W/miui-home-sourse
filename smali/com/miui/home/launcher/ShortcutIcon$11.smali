@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/ShortcutIcon;)V
     .locals 0
 
-    .line 833
+    .line 839
     iput-object p1, p0, Lcom/miui/home/launcher/ShortcutIcon$11;->this$0:Lcom/miui/home/launcher/ShortcutIcon;
 
     invoke-direct {p0}, Lcom/miui/home/library/mirror/MirrorDragListener;-><init>()V
@@ -35,10 +35,10 @@
 .method public onDragEnd(Landroid/view/View;Landroid/view/DragEvent;)V
     .locals 0
 
-    .line 857
+    .line 863
     iget-object p1, p0, Lcom/miui/home/launcher/ShortcutIcon$11;->this$0:Lcom/miui/home/launcher/ShortcutIcon;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/ShortcutIcon;->access$400(Lcom/miui/home/launcher/ShortcutIcon;)Ljava/lang/Runnable;
+    invoke-static {p1}, Lcom/miui/home/launcher/ShortcutIcon;->access$500(Lcom/miui/home/launcher/ShortcutIcon;)Ljava/lang/Runnable;
 
     move-result-object p2
 
@@ -50,10 +50,10 @@
 .method public onDragEnter(Landroid/view/View;Landroid/view/DragEvent;)V
     .locals 2
 
-    .line 842
+    .line 848
     iget-object p1, p0, Lcom/miui/home/launcher/ShortcutIcon$11;->this$0:Lcom/miui/home/launcher/ShortcutIcon;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/ShortcutIcon;->access$400(Lcom/miui/home/launcher/ShortcutIcon;)Ljava/lang/Runnable;
+    invoke-static {p1}, Lcom/miui/home/launcher/ShortcutIcon;->access$500(Lcom/miui/home/launcher/ShortcutIcon;)Ljava/lang/Runnable;
 
     move-result-object p2
 
@@ -67,10 +67,10 @@
 .method public onDragExit(Landroid/view/View;Landroid/view/DragEvent;)V
     .locals 0
 
-    .line 852
+    .line 858
     iget-object p1, p0, Lcom/miui/home/launcher/ShortcutIcon$11;->this$0:Lcom/miui/home/launcher/ShortcutIcon;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/ShortcutIcon;->access$400(Lcom/miui/home/launcher/ShortcutIcon;)Ljava/lang/Runnable;
+    invoke-static {p1}, Lcom/miui/home/launcher/ShortcutIcon;->access$500(Lcom/miui/home/launcher/ShortcutIcon;)Ljava/lang/Runnable;
 
     move-result-object p2
 
@@ -88,10 +88,10 @@
 .method public onDragStart(Landroid/view/View;Landroid/view/DragEvent;)V
     .locals 0
 
-    .line 837
+    .line 843
     iget-object p1, p0, Lcom/miui/home/launcher/ShortcutIcon$11;->this$0:Lcom/miui/home/launcher/ShortcutIcon;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/ShortcutIcon;->access$400(Lcom/miui/home/launcher/ShortcutIcon;)Ljava/lang/Runnable;
+    invoke-static {p1}, Lcom/miui/home/launcher/ShortcutIcon;->access$500(Lcom/miui/home/launcher/ShortcutIcon;)Ljava/lang/Runnable;
 
     move-result-object p2
 
@@ -103,10 +103,10 @@
 .method public onDrop(Landroid/view/View;Landroid/view/DragEvent;)V
     .locals 0
 
-    .line 862
+    .line 868
     iget-object p1, p0, Lcom/miui/home/launcher/ShortcutIcon$11;->this$0:Lcom/miui/home/launcher/ShortcutIcon;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/ShortcutIcon;->access$400(Lcom/miui/home/launcher/ShortcutIcon;)Ljava/lang/Runnable;
+    invoke-static {p1}, Lcom/miui/home/launcher/ShortcutIcon;->access$500(Lcom/miui/home/launcher/ShortcutIcon;)Ljava/lang/Runnable;
 
     move-result-object p2
 

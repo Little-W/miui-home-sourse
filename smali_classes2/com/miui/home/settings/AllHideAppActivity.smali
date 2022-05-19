@@ -486,7 +486,7 @@
     .line 32
     invoke-virtual {p0, p1}, Lcom/miui/home/settings/AllHideAppActivity;->setContentView(I)V
 
-    const p1, 0x7f100247
+    const p1, 0x7f10024e
 
     .line 33
     invoke-virtual {p0, p1}, Lcom/miui/home/settings/AllHideAppActivity;->setTitle(I)V

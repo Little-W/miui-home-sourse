@@ -80,7 +80,7 @@
 
     if-le v1, v3, :cond_0
 
-    const v1, 0x7f100174
+    const v1, 0x7f100179
 
     .line 407
     new-array v4, v3, [Ljava/lang/Object;
@@ -108,7 +108,7 @@
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f100175
+    const v1, 0x7f10017a
 
     .line 408
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;

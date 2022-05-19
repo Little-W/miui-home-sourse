@@ -183,7 +183,7 @@
 
     :cond_1
     :goto_0
-    const p1, 0x7f0d0123
+    const p1, 0x7f0d0124
 
     .line 153
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendShortcutsAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;

@@ -66,14 +66,14 @@
 
     move-result v1
 
-    const v2, 0x7f0600c3
+    const v2, 0x7f0600c4
 
     .line 38
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v2
 
-    const v3, 0x7f0600c2
+    const v3, 0x7f0600c3
 
     .line 39
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getColor(I)I

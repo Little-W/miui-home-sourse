@@ -53,7 +53,7 @@
     <string name="activity_not_unlocked">デバイスが完全に再起動してからアプリを開いてください</string>
     <string name="add_custom_category">カスタム</string>
     <string name="add_screen">画面を追加</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">ホーム画面に追加</string>
     <string name="added_all_category">すべてのアプリを正常に追加しました</string>
     <string name="afternoon">午後</string>
     <string name="agree_button">同意</string>
@@ -379,6 +379,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">長押しするとホーム画面に追加できます</string>
+    <string name="fold_pair_installed_shortcut_launcher">このショートカットは既に存在します</string>
     <string name="folder_name">フォルダー</string>
     <string name="frame_load_failed">フレームを読み込めません</string>
     <string name="free_style_apps_title">アプリを選択</string>
@@ -658,6 +660,7 @@
     <string name="night">夜</string>
     <string name="no_detail_page">詳細ページはありません</string>
     <string name="no_space_toast">スペースが足りません</string>
+    <string name="no_space_toast_fold">ここはスペースが足りません</string>
     <string name="no_space_toast_when_click_widget">このページには十分なスペースがありません。このアイテムを別のページにドラッグしてください。</string>
     <string name="noon">正午</string>
     <string name="normal_wallpaper">壁紙</string>
@@ -679,7 +682,7 @@
     <string name="ota_layout_adjustment_content">新バージョンでは、ホーム画面の内側と外側のレイアウトが同期されました。</string>
     <string name="ota_layout_adjustment_title">ホーム画面のレイアウト</string>
     <string name="out_of_space">このホーム画面にはこれ以上スペースはありません</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">サードパーティのアプリアイコンにアニメーションをレンダリングする</string>
     <string name="perfect_icons_switch_title">グローバルアイコンアニメーション</string>
     <string name="permdesc_install_shortcut">ユーザーによる手動操作なしに、アプリに ショートカットを追加することを許可します。</string>

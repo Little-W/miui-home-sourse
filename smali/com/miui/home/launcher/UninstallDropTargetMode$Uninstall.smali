@@ -113,7 +113,7 @@
 .method public getLabelResId()I
     .locals 1
 
-    const v0, 0x7f100196
+    const v0, 0x7f10019b
 
     return v0
 .end method

@@ -313,7 +313,7 @@
 
     const-string v1, "com.android.settings.KeyShortcutSettingsFragment"
 
-    const v2, 0x7f100246
+    const v2, 0x7f10024d
 
     .line 111
     invoke-virtual {p0}, Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;->getContext()Landroid/content/Context;
@@ -667,7 +667,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f1002da
+    const v2, 0x7f1002e1
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -851,7 +851,7 @@
     .line 287
     iget-object p1, p0, Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;->mNavigationPosition:Lcom/miui/home/settings/preference/ValuePreference;
 
-    const v0, 0x7f100302
+    const v0, 0x7f100309
 
     invoke-virtual {p1, v0}, Lcom/miui/home/settings/preference/ValuePreference;->setValue(I)V
 
@@ -870,7 +870,7 @@
     .line 289
     iget-object p1, p0, Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;->mNavigationPosition:Lcom/miui/home/settings/preference/ValuePreference;
 
-    const v0, 0x7f100303
+    const v0, 0x7f10030a
 
     invoke-virtual {p1, v0}, Lcom/miui/home/settings/preference/ValuePreference;->setValue(I)V
 
@@ -880,7 +880,7 @@
     :cond_1
     iget-object p1, p0, Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;->mNavigationPosition:Lcom/miui/home/settings/preference/ValuePreference;
 
-    const v0, 0x7f100301
+    const v0, 0x7f100308
 
     invoke-virtual {p1, v0}, Lcom/miui/home/settings/preference/ValuePreference;->setValue(I)V
 
@@ -1046,12 +1046,12 @@
 
     invoke-direct {v0, v1}, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f1002ee
+    const v1, 0x7f1002f5
 
     .line 272
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;->setTitle(I)V
 
-    const v1, 0x7f1002ed
+    const v1, 0x7f1002f4
 
     .line 273
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;->setMessage(I)V
@@ -1080,12 +1080,12 @@
 
     if-eqz p1, :cond_0
 
-    const v1, 0x7f1002cf
+    const v1, 0x7f1002d6
 
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f1002d1
+    const v1, 0x7f1002d8
 
     :goto_0
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setSummary(I)V

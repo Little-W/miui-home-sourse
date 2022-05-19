@@ -24,7 +24,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/upsidescene/SceneScreen;)V
     .locals 0
 
-    .line 5447
+    .line 5438
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$51;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iput-object p2, p0, Lcom/miui/home/launcher/Launcher$51;->val$sceneScreen:Lcom/miui/home/launcher/upsidescene/SceneScreen;
@@ -39,24 +39,24 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 5449
+    .line 5440
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$51;->val$sceneScreen:Lcom/miui/home/launcher/upsidescene/SceneScreen;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->onHideAnimationEnd()V
 
-    .line 5450
+    .line 5441
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$51;->this$0:Lcom/miui/home/launcher/Launcher;
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lcom/miui/home/launcher/Launcher;->access$6702(Lcom/miui/home/launcher/Launcher;Z)Z
+    invoke-static {p1, v0}, Lcom/miui/home/launcher/Launcher;->access$6802(Lcom/miui/home/launcher/Launcher;Z)Z
 
-    .line 5451
+    .line 5442
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$51;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$51;->val$sceneScreen:Lcom/miui/home/launcher/upsidescene/SceneScreen;
 
-    invoke-static {p1, v0}, Lcom/miui/home/launcher/Launcher;->access$7100(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/upsidescene/SceneScreen;)V
+    invoke-static {p1, v0}, Lcom/miui/home/launcher/Launcher;->access$7200(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/upsidescene/SceneScreen;)V
 
     return-void
 .end method

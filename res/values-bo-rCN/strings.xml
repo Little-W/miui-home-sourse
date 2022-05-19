@@ -338,6 +338,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">zW T</string>
     <string name="fmt_weekday_timezone">zW</string>
+    <string name="fold_pair_install_shortcut_long_click">རིས་རྟགས་ཡུན་རིང་དུ་མནན་ཚེ་མྱུར་སྟབས་ཐབས་ལམ་བཟོ་ཐུབ།</string>
+    <string name="fold_pair_installed_shortcut_launcher">ཅོག་ངོས་སུ་མྱུར་སྟབས་ཐབས་ལམ་དེ་བཟོས་ཟིན།</string>
     <string name="folder_name">ཡིག་ཁུག</string>
     <string name="frame_load_failed">པར་སྒྲོམ་རྣམ་པ་ནོར་འཁྲུལ། སྣོན་འཇུག་མི་ཐུབ།</string>
     <string name="free_style_apps_title">ཉེར་སྤྱོད་བྱ་རིམ་འདེམས་པ།</string>
@@ -616,6 +618,7 @@
     <string name="night">དགོང་མོ།</string>
     <string name="no_detail_page">གནས་ཚུལ་ཞིབ་ཕྲའི་ཤོག་ངོས་མི་འདུག</string>
     <string name="no_space_toast">བར་སྟོང་མི་འདང་།</string>
+    <string name="no_space_toast_fold">བར་སྟོང་མི་འདང་།</string>
     <string name="no_space_toast_when_click_widget">མིག་སྔའི་ཤོག་ངོས་ཀྱི་བར་སྟོང་མི་འདང་། འཐེན་ནས་ཤོག་ངོས་གཞན་བསྣན་ཆོག</string>
     <string name="noon">ཉིན་གུང་།</string>
     <string name="normal_wallpaper">ཅོག་ངོས་རྩིག་ཤོག</string>
@@ -624,7 +627,7 @@
     <string name="notification_reset_title">ཅོག་ངོས་པར་རྟགས་སྒྲིག་ཟིན།</string>
     <string name="one_key_call_title">མཐེབ་གཅིག་སྐད་འབོད།</string>
     <string name="online_wallpaper">སྐུད་སྟེང་རྩིག་ཤོག</string>
-    <string name="open_pad_personal_assistant_settings">桌面小部件</string>
+    <string name="open_pad_personal_assistant_settings">ཅོག་ངོས་ལྷུ་ཆས་ཆུང་ངུ་།</string>
     <string name="open_personal_assistant_dialog_btn_cancel">རྩིས་མེད།</string>
     <string name="open_personal_assistant_dialog_btn_confirm">ཁ་རྒྱག</string>
     <string name="open_personal_assistant_dialog_desc">ཁ་བརྒྱབ་རྗེས་ཁྱེད་ཀྱིས་ཅོག་ངོས་ཀྱི་ཆེས་གཡོན་ངོས་ནས་ལྷུ་ཆས་ཆུང་ངུའི་ཆ་འཕྲིན་ལྟ་བཤེར་གནང་མི་ཐུབ་ལ། ལྷུ་ཆས་ཆུང་ངུའི་ཞབས་ཞུ་བེད་སྤྱོད་གནང་མི་ཐུབ། དུས་མཚུངས་སུ་དེའི་རྗེས་ཀྱི་ལེགས་བཅོས་དང་གསར་སྒྱུར་གྱི་སྐོར་མཁྱེན་མི་ཐུབ། ཁ་རྒྱག་རྒྱུར་གཏན་འཁེལ་ལམ།</string>
@@ -636,6 +639,7 @@
     <string name="ota_layout_adjustment_content">པར་གཞི་གསར་པ་རྗེས་ཅོག་ངོས་བཀོད་པའི་ཕྱི་ནང་འཆར་ངོས་གཅིག་མཚུངས་ཡིན་ཞིང་། ཕྱི་ངོས་འཆར་ངོས་ནང་ངོས་སུ་མཉམ་འགྲོས་བྱས་ཟིན།</string>
     <string name="ota_layout_adjustment_title">ཅོག་ངོས་བཀོད་པ་སྙོམ་སྒྲིག</string>
     <string name="out_of_space">བརྙན་ཤེལ་གཙོ་བོ་འདིའི་སྟེང་དུ་བར་སྟོང་མི་འདུག</string>
+    <string name="pair_icon_name">%1$s|%2$s</string>
     <string name="perfect_icons_switch_summary">ཕྱོགས་གསུམ་པའི་ཉེར་སྤྱོད་པར་རིས་བསྐྱར་དུ་བྲིས་ནས། རྫོགས་ལྡན་གྱི་པར་རིས་མངོན་འཆར་བྱེད།</string>
     <string name="perfect_icons_switch_title">རྫོགས་ལྡན་པར་རིས།</string>
     <string name="permdesc_install_shortcut">ཉེར་སྤྱོད་ནི་སྤྱོད་མཁན་གྱིས་ནང་འཇུག་མེད་པའི་རྣམ་པའི་འོག་མགྱོགས་ལམ་སྣོན་པར་མོས་མཐུན་བྱེད་པ།</string>

@@ -713,7 +713,7 @@
     .line 71
     invoke-super {p0}, Landroid/widget/LinearLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a029f
+    const v0, 0x7f0a02a4
 
     .line 72
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/SearchBarTransferLayout;->findViewById(I)Landroid/view/View;
@@ -907,7 +907,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f060398
+    const v1, 0x7f060399
 
     invoke-static {v0, v1}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
@@ -921,7 +921,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f060397
+    const v1, 0x7f060398
 
     invoke-static {v0, v1}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 

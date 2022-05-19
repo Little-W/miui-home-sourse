@@ -231,6 +231,6 @@
 
 .field public static final preference_list_divider_material:I = 0x7f08053c
 
-.field public static final tooltip_frame_dark:I = 0x7f0805a6
+.field public static final tooltip_frame_dark:I = 0x7f0805a7
 
-.field public static final tooltip_frame_light:I = 0x7f0805a7
+.field public static final tooltip_frame_light:I = 0x7f0805a8

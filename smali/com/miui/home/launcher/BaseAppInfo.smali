@@ -154,26 +154,26 @@
 .method static updateRuntimeFlagsForActivityTarget(Lcom/miui/home/launcher/ShortcutInfo;Landroid/content/pm/LauncherActivityInfo;)V
     .locals 3
 
-    .line 89
+    .line 97
     invoke-virtual {p1}, Landroid/content/pm/LauncherActivityInfo;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v0
 
-    .line 90
+    .line 98
     invoke-static {v0}, Lcom/miui/home/launcher/util/PackageManagerHelper;->isAppSuspended(Landroid/content/pm/ApplicationInfo;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 91
+    .line 99
     iget v1, p0, Lcom/miui/home/launcher/ShortcutInfo;->runtimeStatusFlags:I
 
     or-int/lit8 v1, v1, 0x4
 
     iput v1, p0, Lcom/miui/home/launcher/ShortcutInfo;->runtimeStatusFlags:I
 
-    .line 93
+    .line 101
     :cond_0
     iget v1, p0, Lcom/miui/home/launcher/ShortcutInfo;->runtimeStatusFlags:I
 
@@ -193,10 +193,10 @@
     :goto_0
     or-int/2addr v1, v2
 
-    .line 94
+    .line 102
     iput v1, p0, Lcom/miui/home/launcher/ShortcutInfo;->runtimeStatusFlags:I
 
-    .line 96
+    .line 104
     sget-boolean v1, Lcom/miui/home/launcher/common/Utilities;->ATLEAST_OREO:Z
 
     if-eqz v1, :cond_2
@@ -207,7 +207,7 @@
 
     if-lt v0, v1, :cond_2
 
-    .line 98
+    .line 106
     invoke-static {}, Landroid/os/Process;->myUserHandle()Landroid/os/UserHandle;
 
     move-result-object v0
@@ -222,7 +222,7 @@
 
     if-eqz p1, :cond_2
 
-    .line 100
+    .line 108
     iget p1, p0, Lcom/miui/home/launcher/ShortcutInfo;->runtimeStatusFlags:I
 
     or-int/lit16 p1, p1, 0x100
@@ -238,7 +238,7 @@
 .method public addCategory(I)V
     .locals 1
 
-    .line 124
+    .line 132
     iget-object v0, p0, Lcom/miui/home/launcher/BaseAppInfo;->categories:Ljava/util/HashSet;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -253,7 +253,7 @@
 .method public getAppLaunchCount()I
     .locals 1
 
-    .line 160
+    .line 168
     iget v0, p0, Lcom/miui/home/launcher/BaseAppInfo;->mAppLauncherCount:I
 
     return v0
@@ -270,7 +270,7 @@
         }
     .end annotation
 
-    .line 115
+    .line 123
     iget-object v0, p0, Lcom/miui/home/launcher/BaseAppInfo;->categories:Ljava/util/HashSet;
 
     return-object v0
@@ -279,7 +279,7 @@
 .method public getLastTimeUsed()J
     .locals 2
 
-    .line 111
+    .line 119
     iget-wide v0, p0, Lcom/miui/home/launcher/BaseAppInfo;->lastTimeUsed:J
 
     return-wide v0
@@ -288,7 +288,7 @@
 .method public getLoadTime()J
     .locals 2
 
-    .line 143
+    .line 151
     iget-wide v0, p0, Lcom/miui/home/launcher/BaseAppInfo;->mLoadTime:J
 
     return-wide v0
@@ -305,7 +305,7 @@
         }
     .end annotation
 
-    .line 164
+    .line 172
     iget-object v0, p0, Lcom/miui/home/launcher/BaseAppInfo;->mPinyinList:Ljava/util/ArrayList;
 
     return-object v0
@@ -322,7 +322,7 @@
 .method public isNewInstalled()Z
     .locals 2
 
-    .line 132
+    .line 140
     iget v0, p0, Lcom/miui/home/launcher/BaseAppInfo;->itemFlags:I
 
     const/4 v1, 0x4
@@ -342,17 +342,62 @@
     return v0
 .end method
 
+.method public isSecurityHided()Z
+    .locals 1
+
+    .line 86
+    invoke-virtual {p0}, Lcom/miui/home/launcher/BaseAppInfo;->toPackageAndUser()Lcom/miui/home/launcher/LauncherModel$PackageAndUser;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/miui/home/launcher/LauncherModel;->isSecurityHided(Lcom/miui/home/launcher/LauncherModel$PackageAndUser;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    invoke-virtual {p0}, Lcom/miui/home/launcher/BaseAppInfo;->isPairIcon()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lcom/miui/home/launcher/BaseAppInfo;->toPackageAndUser1()Lcom/miui/home/launcher/LauncherModel$PackageAndUser;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/miui/home/launcher/LauncherModel;->isSecurityHided(Lcom/miui/home/launcher/LauncherModel$PackageAndUser;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
+
+    :goto_1
+    return v0
+.end method
+
 .method public makeShortcut()Lcom/miui/home/launcher/ShortcutInfo;
     .locals 3
 
-    .line 82
+    .line 90
     new-instance v0, Lcom/miui/home/launcher/ShortcutInfo;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/ShortcutInfo;-><init>(Lcom/miui/home/launcher/BaseAppInfo;)V
 
     const-wide/16 v1, -0x1
 
-    .line 83
+    .line 91
     iput-wide v1, p0, Lcom/miui/home/launcher/BaseAppInfo;->id:J
 
     return-object v0
@@ -361,10 +406,10 @@
 .method public onLaunch(Lcom/miui/home/launcher/Launcher;)V
     .locals 2
 
-    .line 148
+    .line 156
     invoke-super {p0, p1}, Lcom/miui/home/launcher/ShortcutInfo;->onLaunch(Lcom/miui/home/launcher/Launcher;)V
 
-    .line 149
+    .line 157
     invoke-virtual {p0}, Lcom/miui/home/launcher/BaseAppInfo;->getAppLaunchCount()I
 
     move-result p1
@@ -373,7 +418,7 @@
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/BaseAppInfo;->setAppLaunchCount(I)V
 
-    .line 150
+    .line 158
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -386,7 +431,7 @@
 .method public removeCategory(I)V
     .locals 1
 
-    .line 128
+    .line 136
     iget-object v0, p0, Lcom/miui/home/launcher/BaseAppInfo;->categories:Ljava/util/HashSet;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -519,7 +564,7 @@
 .method setAppLaunchCount(I)V
     .locals 0
 
-    .line 156
+    .line 164
     iput p1, p0, Lcom/miui/home/launcher/BaseAppInfo;->mAppLauncherCount:I
 
     return-void
@@ -536,12 +581,12 @@
         }
     .end annotation
 
-    .line 119
+    .line 127
     iget-object v0, p0, Lcom/miui/home/launcher/BaseAppInfo;->categories:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
 
-    .line 120
+    .line 128
     iget-object v0, p0, Lcom/miui/home/launcher/BaseAppInfo;->categories:Ljava/util/HashSet;
 
     invoke-virtual {v0, p1}, Ljava/util/HashSet;->addAll(Ljava/util/Collection;)Z
@@ -552,7 +597,7 @@
 .method setLastTimeUsed(J)V
     .locals 0
 
-    .line 107
+    .line 115
     iput-wide p1, p0, Lcom/miui/home/launcher/BaseAppInfo;->lastTimeUsed:J
 
     return-void
@@ -561,7 +606,7 @@
 .method setLoadTime(J)V
     .locals 0
 
-    .line 139
+    .line 147
     iput-wide p1, p0, Lcom/miui/home/launcher/BaseAppInfo;->mLoadTime:J
 
     return-void
@@ -585,6 +630,23 @@
     iget-object v1, p0, Lcom/miui/home/launcher/BaseAppInfo;->componentName:Landroid/content/ComponentName;
 
     invoke-virtual {v1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/miui/home/launcher/BaseAppInfo;->user:Landroid/os/UserHandle;
+
+    invoke-direct {v0, v1, v2}, Lcom/miui/home/launcher/LauncherModel$PackageAndUser;-><init>(Ljava/lang/String;Landroid/os/UserHandle;)V
+
+    return-object v0
+.end method
+
+.method toPackageAndUser1()Lcom/miui/home/launcher/LauncherModel$PackageAndUser;
+    .locals 3
+
+    .line 82
+    new-instance v0, Lcom/miui/home/launcher/LauncherModel$PackageAndUser;
+
+    invoke-virtual {p0}, Lcom/miui/home/launcher/BaseAppInfo;->getPackageName1()Ljava/lang/String;
 
     move-result-object v1
 

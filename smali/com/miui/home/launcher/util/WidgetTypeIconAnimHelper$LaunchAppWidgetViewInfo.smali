@@ -34,7 +34,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 152
+    .line 177
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +45,7 @@
 .method public getOptions()Landroid/os/Bundle;
     .locals 1
 
-    .line 193
+    .line 218
     iget-object v0, p0, Lcom/miui/home/launcher/util/WidgetTypeIconAnimHelper$LaunchAppWidgetViewInfo;->mOptions:Landroid/os/Bundle;
 
     return-object v0
@@ -54,7 +54,7 @@
 .method public getScreenId()J
     .locals 2
 
-    .line 173
+    .line 198
     iget-wide v0, p0, Lcom/miui/home/launcher/util/WidgetTypeIconAnimHelper$LaunchAppWidgetViewInfo;->mScreenId:J
 
     return-wide v0
@@ -63,7 +63,7 @@
 .method public getStartActivityWidgetView()Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;
     .locals 1
 
-    .line 189
+    .line 214
     iget-object v0, p0, Lcom/miui/home/launcher/util/WidgetTypeIconAnimHelper$LaunchAppWidgetViewInfo;->mStartActivityWidgetView:Lcom/miui/home/launcher/anim/WidgetTypeAnimTarget;
 
     return-object v0
@@ -72,7 +72,7 @@
 .method public isMatchClosingAppPackage(Ljava/lang/String;)Z
     .locals 2
 
-    .line 197
+    .line 222
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -83,7 +83,7 @@
 
     return v1
 
-    .line 198
+    .line 223
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/util/WidgetTypeIconAnimHelper$LaunchAppWidgetViewInfo;->mAppPackage:Ljava/lang/String;
 
@@ -95,7 +95,7 @@
 
     iget-object v0, p0, Lcom/miui/home/launcher/util/WidgetTypeIconAnimHelper$LaunchAppWidgetViewInfo;->mPendingStartAppPackage:Ljava/lang/String;
 
-    .line 199
+    .line 224
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -104,7 +104,7 @@
 
     iget-object v0, p0, Lcom/miui/home/launcher/util/WidgetTypeIconAnimHelper$LaunchAppWidgetViewInfo;->mAppClass:Ljava/lang/String;
 
-    .line 200
+    .line 225
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -129,7 +129,7 @@
 .method public setPendingStartAppPackage(Ljava/lang/String;)V
     .locals 0
 
-    .line 185
+    .line 210
     iput-object p1, p0, Lcom/miui/home/launcher/util/WidgetTypeIconAnimHelper$LaunchAppWidgetViewInfo;->mPendingStartAppPackage:Ljava/lang/String;
 
     return-void

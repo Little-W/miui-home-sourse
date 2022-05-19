@@ -53,7 +53,7 @@
     <string name="activity_not_unlocked">Chờ cho đến khi thiết bị được khởi động lại hoàn toàn trước khi mở ứng dụng</string>
     <string name="add_custom_category">Tùy chỉnh</string>
     <string name="add_screen">Thêm màn hình</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">Thêm vào Màn hình chính</string>
     <string name="added_all_category">Thêm tất cả các ứng dụng thành công</string>
     <string name="afternoon">Buổi chiều</string>
     <string name="agree_button">Đồng ý</string>
@@ -379,6 +379,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">Bấm và giữ để thêm vào Màn hình chính</string>
+    <string name="fold_pair_installed_shortcut_launcher">Lối tắt này đã tồn tại</string>
     <string name="folder_name">Thư mục</string>
     <string name="frame_load_failed">Không thể tải khung</string>
     <string name="free_style_apps_title">Chọn ứng dụng</string>
@@ -658,6 +660,7 @@
     <string name="night">Buổi tối</string>
     <string name="no_detail_page">Không có trang chi tiết</string>
     <string name="no_space_toast">Không đủ dung lượng</string>
+    <string name="no_space_toast_fold">Không đủ dung lượng trống ở đây</string>
     <string name="no_space_toast_when_click_widget">Không đủ không gian trên trang này. Hãy thử kéo mục này sang trang khác.</string>
     <string name="noon">Buổi trưa</string>
     <string name="normal_wallpaper">Hình nền</string>
@@ -679,7 +682,7 @@
     <string name="ota_layout_adjustment_content">Bố cục Màn hình chính bên trong và bên ngoài đã được đồng bộ hóa trên phiên bản mới.</string>
     <string name="ota_layout_adjustment_title">Bố trí Màn hình chính</string>
     <string name="out_of_space">Không còn chỗ trên Màn hình chính</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">Kết xuất hoạt ảnh cho biểu tượng ứng dụng thứ ba</string>
     <string name="perfect_icons_switch_title">Hoạt ảnh biểu tượng toàn cầu</string>
     <string name="permdesc_install_shortcut">Cho phép ứng dụng thêm lối tắt mà không có sự can thiệp của người dùng.</string>

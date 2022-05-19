@@ -158,19 +158,19 @@
 .method private addViewAndAdjustOrder(Lcom/miui/home/launcher/shortcuts/ShortcutMenuPositionInfo;)V
     .locals 1
 
-    .line 283
+    .line 285
     invoke-virtual {p0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->removeAllViews()V
 
     const/4 v0, 0x2
 
-    .line 284
+    .line 286
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenuPositionInfo;->isDragViewAtMenuPosition(I)Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
-    .line 285
+    .line 287
     iget-object p1, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mAppShortcutMenu:Lcom/miui/home/launcher/shortcuts/AppShortcutMenu;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/shortcuts/AppShortcutMenu;->shouldBeShown()Z
@@ -179,17 +179,17 @@
 
     if-eqz p1, :cond_0
 
-    .line 286
+    .line 288
     iget-object p1, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mAppShortcutMenu:Lcom/miui/home/launcher/shortcuts/AppShortcutMenu;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->addView(Landroid/view/View;)V
 
-    .line 287
+    .line 289
     iget-object p1, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mAppSystemTransparentSpace:Landroid/view/View;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->addView(Landroid/view/View;)V
 
-    .line 289
+    .line 291
     :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mSystemShortcutMenu:Lcom/miui/home/launcher/shortcuts/SystemShortcutMenu;
 
@@ -199,12 +199,12 @@
 
     if-eqz p1, :cond_1
 
-    .line 290
+    .line 292
     iget-object p1, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mSystemShortcutMenu:Lcom/miui/home/launcher/shortcuts/SystemShortcutMenu;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->addView(Landroid/view/View;)V
 
-    .line 292
+    .line 294
     :cond_1
     iget-object p1, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mWidgetShortcutMenu:Lcom/miui/home/launcher/shortcuts/SystemShortcutMenu;
 
@@ -214,25 +214,25 @@
 
     if-eqz p1, :cond_5
 
-    .line 293
+    .line 295
     iget-object p1, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mWidgetSystemTransparentSpace:Landroid/view/View;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->addView(Landroid/view/View;)V
 
-    .line 294
+    .line 296
     iget-object p1, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mWidgetShortcutMenu:Lcom/miui/home/launcher/shortcuts/SystemShortcutMenu;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->addView(Landroid/view/View;)V
 
     goto :goto_0
 
-    .line 297
+    .line 299
     :cond_2
     iget-object p1, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mAppShortcutMenu:Lcom/miui/home/launcher/shortcuts/AppShortcutMenu;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/shortcuts/AppShortcutMenu;->reverseOrder()V
 
-    .line 298
+    .line 300
     iget-object p1, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mSystemShortcutMenu:Lcom/miui/home/launcher/shortcuts/SystemShortcutMenu;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenu;->shouldBeShown()Z
@@ -241,12 +241,12 @@
 
     if-eqz p1, :cond_3
 
-    .line 299
+    .line 301
     iget-object p1, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mSystemShortcutMenu:Lcom/miui/home/launcher/shortcuts/SystemShortcutMenu;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->addView(Landroid/view/View;)V
 
-    .line 302
+    .line 304
     :cond_3
     iget-object p1, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mAppShortcutMenu:Lcom/miui/home/launcher/shortcuts/AppShortcutMenu;
 
@@ -256,17 +256,17 @@
 
     if-eqz p1, :cond_4
 
-    .line 303
+    .line 305
     iget-object p1, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mAppSystemTransparentSpace:Landroid/view/View;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->addView(Landroid/view/View;)V
 
-    .line 304
+    .line 306
     iget-object p1, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mAppShortcutMenu:Lcom/miui/home/launcher/shortcuts/AppShortcutMenu;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->addView(Landroid/view/View;)V
 
-    .line 306
+    .line 308
     :cond_4
     iget-object p1, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mWidgetShortcutMenu:Lcom/miui/home/launcher/shortcuts/SystemShortcutMenu;
 
@@ -276,29 +276,29 @@
 
     if-eqz p1, :cond_5
 
-    .line 307
+    .line 309
     iget-object p1, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mWidgetSystemTransparentSpace:Landroid/view/View;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->addView(Landroid/view/View;)V
 
-    .line 308
+    .line 310
     iget-object p1, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mWidgetShortcutMenu:Lcom/miui/home/launcher/shortcuts/SystemShortcutMenu;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->addView(Landroid/view/View;)V
 
-    .line 311
+    .line 313
     :cond_5
     :goto_0
     iget-object p1, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mAppShortcutMenu:Lcom/miui/home/launcher/shortcuts/AppShortcutMenu;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/shortcuts/AppShortcutMenu;->showPreInflateViews()V
 
-    .line 312
+    .line 314
     iget-object p1, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mSystemShortcutMenu:Lcom/miui/home/launcher/shortcuts/SystemShortcutMenu;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenu;->showPreInflateViews()V
 
-    .line 313
+    .line 315
     iget-object p1, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mWidgetShortcutMenu:Lcom/miui/home/launcher/shortcuts/SystemShortcutMenu;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenu;->showPreInflateViews()V
@@ -333,7 +333,7 @@
 .method private calcPositionInfo([FZ[II)Lcom/miui/home/launcher/shortcuts/ShortcutMenuPositionInfo;
     .locals 6
 
-    .line 319
+    .line 321
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mBindedItemInfo:Lcom/miui/home/launcher/ItemInfo;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/ItemInfo;->isOccupiedCell1x1()Z
@@ -342,20 +342,20 @@
 
     if-eqz v0, :cond_0
 
-    .line 320
+    .line 322
     invoke-direct {p0, p1, p2, p4}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->calcShortcutMenuPositionNearIconImageBorder([FZI)Lcom/miui/home/launcher/shortcuts/ShortcutMenuPositionInfo;
 
     move-result-object p1
 
     return-object p1
 
-    .line 322
+    .line 324
     :cond_0
     iget-object p2, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mBindedItemInfo:Lcom/miui/home/launcher/ItemInfo;
 
     iget v3, p2, Lcom/miui/home/launcher/ItemInfo;->spanX:I
 
-    .line 323
+    .line 325
     iget-object p2, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mBindedItemInfo:Lcom/miui/home/launcher/ItemInfo;
 
     iget v4, p2, Lcom/miui/home/launcher/ItemInfo;->spanY:I
@@ -379,14 +379,14 @@
 
     move v5, p4
 
-    .line 328
+    .line 330
     invoke-direct/range {v0 .. v5}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->calcShortcutMenuPositionNearDragViewBorder([I[FIII)Lcom/miui/home/launcher/shortcuts/ShortcutMenuPositionInfo;
 
     move-result-object p1
 
     return-object p1
 
-    .line 326
+    .line 328
     :cond_2
     :goto_0
     invoke-direct {p0, p3}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->calcShortcutMenuPositionAtPoint([I)Lcom/miui/home/launcher/shortcuts/ShortcutMenuPositionInfo;
@@ -399,12 +399,12 @@
 .method private calcShortcutMenuPositionAtPoint([I)Lcom/miui/home/launcher/shortcuts/ShortcutMenuPositionInfo;
     .locals 5
 
-    .line 334
+    .line 336
     new-instance v0, Lcom/miui/home/launcher/shortcuts/ShortcutMenuPositionInfo;
 
     invoke-direct {v0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenuPositionInfo;-><init>()V
 
-    .line 336
+    .line 338
     iget v1, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mArrowCenterToMenuNearestLeftOrRightBorder:I
 
     iget v2, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mDragIconToArrowGap:I
@@ -413,10 +413,10 @@
 
     const/4 v2, 0x0
 
-    .line 338
+    .line 340
     aget v3, p1, v2
 
-    .line 339
+    .line 341
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getScreenWidth()I
 
     move-result v4
@@ -429,7 +429,7 @@
 
     aput v1, p1, v2
 
-    .line 341
+    .line 343
     aget v1, p1, v2
 
     iget v3, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mArrowCenterToMenuNearestLeftOrRightBorder:I
@@ -450,7 +450,7 @@
 
     if-ge v1, v3, :cond_0
 
-    .line 342
+    .line 344
     aget v1, p1, v2
 
     iget v2, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mArrowCenterToMenuNearestLeftOrRightBorder:I
@@ -465,12 +465,12 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/shortcuts/ShortcutMenuPositionInfo;->setTransX(I)V
 
-    .line 343
+    .line 345
     invoke-virtual {v0, v4}, Lcom/miui/home/launcher/shortcuts/ShortcutMenuPositionInfo;->setDragViewRelativeToMenuPosition(I)V
 
     goto :goto_0
 
-    .line 345
+    .line 347
     :cond_0
     aget v1, p1, v2
 
@@ -494,10 +494,10 @@
 
     const/4 v1, 0x4
 
-    .line 346
+    .line 348
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/shortcuts/ShortcutMenuPositionInfo;->setDragViewRelativeToMenuPosition(I)V
 
-    .line 349
+    .line 351
     :goto_0
     aget v1, p1, v4
 
@@ -515,7 +515,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 350
+    .line 352
     aget p1, p1, v4
 
     invoke-direct {p0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->getVisualHeight()I
@@ -534,12 +534,12 @@
 
     const/16 p1, 0x8
 
-    .line 351
+    .line 353
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/shortcuts/ShortcutMenuPositionInfo;->setDragViewRelativeToMenuPosition(I)V
 
     goto :goto_1
 
-    .line 353
+    .line 355
     :cond_1
     aget p1, p1, v4
 
@@ -553,7 +553,7 @@
 
     const/4 p1, 0x2
 
-    .line 354
+    .line 356
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/shortcuts/ShortcutMenuPositionInfo;->setDragViewRelativeToMenuPosition(I)V
 
     :goto_1
@@ -563,14 +563,14 @@
 .method private calcShortcutMenuPositionNearDragViewBorder([I[FIII)Lcom/miui/home/launcher/shortcuts/ShortcutMenuPositionInfo;
     .locals 3
 
-    .line 361
+    .line 363
     new-instance v0, Lcom/miui/home/launcher/shortcuts/ShortcutMenuPositionInfo;
 
     invoke-direct {v0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenuPositionInfo;-><init>()V
 
     mul-int/2addr p5, p3
 
-    .line 364
+    .line 366
     iget p3, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mMenuVisualWidth:I
 
     const/4 v1, 0x1
@@ -579,7 +579,7 @@
 
     if-le p5, p3, :cond_1
 
-    .line 365
+    .line 367
     aget p1, p1, v2
 
     int-to-float p1, p1
@@ -605,7 +605,7 @@
 
     goto :goto_0
 
-    .line 367
+    .line 369
     :cond_1
     aget p1, p2, v2
 
@@ -633,7 +633,7 @@
     :goto_0
     if-eqz p1, :cond_3
 
-    .line 370
+    .line 372
     aget p1, p2, v2
 
     float-to-int p1, p1
@@ -646,12 +646,12 @@
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/shortcuts/ShortcutMenuPositionInfo;->setTransX(I)V
 
-    .line 371
+    .line 373
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/shortcuts/ShortcutMenuPositionInfo;->setDragViewRelativeToMenuPosition(I)V
 
     goto :goto_1
 
-    .line 373
+    .line 375
     :cond_3
     aget p1, p2, v2
 
@@ -675,10 +675,10 @@
 
     const/4 p1, 0x4
 
-    .line 374
+    .line 376
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/shortcuts/ShortcutMenuPositionInfo;->setDragViewRelativeToMenuPosition(I)V
 
-    .line 376
+    .line 378
     :goto_1
     aget p1, p2, v1
 
@@ -692,7 +692,7 @@
 
     if-eqz p1, :cond_4
 
-    .line 377
+    .line 379
     aget p1, p2, v1
 
     float-to-int p1, p1
@@ -717,12 +717,12 @@
 
     const/16 p1, 0x8
 
-    .line 378
+    .line 380
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/shortcuts/ShortcutMenuPositionInfo;->setDragViewRelativeToMenuPosition(I)V
 
     goto :goto_2
 
-    .line 380
+    .line 382
     :cond_4
     aget p1, p2, v1
 
@@ -750,7 +750,7 @@
 
     const/4 p1, 0x2
 
-    .line 381
+    .line 383
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/shortcuts/ShortcutMenuPositionInfo;->setDragViewRelativeToMenuPosition(I)V
 
     :goto_2
@@ -760,14 +760,14 @@
 .method private calcShortcutMenuPositionNearIconImageBorder([FZI)Lcom/miui/home/launcher/shortcuts/ShortcutMenuPositionInfo;
     .locals 5
 
-    .line 387
+    .line 389
     new-instance v0, Lcom/miui/home/launcher/shortcuts/ShortcutMenuPositionInfo;
 
     invoke-direct {v0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenuPositionInfo;-><init>()V
 
     const/4 v1, 0x0
 
-    .line 388
+    .line 390
     aget v2, p1, v1
 
     invoke-direct {p0, v2}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->isIconCenterMoreThanScreenHalfWidth(F)Z
@@ -780,7 +780,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 389
+    .line 391
     aget v1, p1, v1
 
     float-to-int v1, v1
@@ -793,31 +793,31 @@
 
     add-int/2addr v1, p3
 
-    .line 390
+    .line 392
     invoke-direct {p0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->getShadowPadding()I
 
     move-result p3
 
     add-int/2addr v1, p3
 
-    .line 391
+    .line 393
     invoke-direct {p0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->getIntrinsicWidth()I
 
     move-result p3
 
     sub-int/2addr v1, p3
 
-    .line 389
+    .line 391
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/shortcuts/ShortcutMenuPositionInfo;->setTransX(I)V
 
     const/4 p3, 0x4
 
-    .line 392
+    .line 394
     invoke-virtual {v0, p3}, Lcom/miui/home/launcher/shortcuts/ShortcutMenuPositionInfo;->setDragViewRelativeToMenuPosition(I)V
 
     goto :goto_0
 
-    .line 394
+    .line 396
     :cond_0
     aget v1, p1, v1
 
@@ -831,20 +831,20 @@
 
     sub-int/2addr v1, p3
 
-    .line 395
+    .line 397
     invoke-direct {p0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->getShadowPadding()I
 
     move-result p3
 
     sub-int/2addr v1, p3
 
-    .line 394
+    .line 396
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/shortcuts/ShortcutMenuPositionInfo;->setTransX(I)V
 
-    .line 396
+    .line 398
     invoke-virtual {v0, v4}, Lcom/miui/home/launcher/shortcuts/ShortcutMenuPositionInfo;->setDragViewRelativeToMenuPosition(I)V
 
-    .line 398
+    .line 400
     :goto_0
     aget p3, p1, v4
 
@@ -858,7 +858,7 @@
 
     if-eqz p3, :cond_1
 
-    .line 399
+    .line 401
     aget p1, p1, v4
 
     invoke-direct {p0, p1, p2}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->getShortcutMenuTopYWhenMenuAboveIcon(FZ)F
@@ -867,24 +867,24 @@
 
     float-to-int p1, p1
 
-    .line 400
+    .line 402
     invoke-direct {p0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->getShadowPadding()I
 
     move-result p2
 
     sub-int/2addr p1, p2
 
-    .line 399
+    .line 401
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/shortcuts/ShortcutMenuPositionInfo;->setTransY(I)V
 
     const/16 p1, 0x8
 
-    .line 401
+    .line 403
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/shortcuts/ShortcutMenuPositionInfo;->setDragViewRelativeToMenuPosition(I)V
 
     goto :goto_1
 
-    .line 403
+    .line 405
     :cond_1
     aget p1, p1, v4
 
@@ -904,7 +904,7 @@
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/shortcuts/ShortcutMenuPositionInfo;->setTransY(I)V
 
-    .line 404
+    .line 406
     invoke-virtual {v0, v3}, Lcom/miui/home/launcher/shortcuts/ShortcutMenuPositionInfo;->setDragViewRelativeToMenuPosition(I)V
 
     :goto_1
@@ -993,7 +993,7 @@
 .method private canMenuShowCompleteWhenMenuAboveIcon(F)Z
     .locals 1
 
-    .line 424
+    .line 426
     invoke-virtual {p0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1223,7 +1223,7 @@
 .method private getShortcutMenuTopYWhenMenuAboveIcon(FZ)F
     .locals 1
 
-    .line 428
+    .line 430
     invoke-direct {p0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->getVisualHeight()I
 
     move-result v0
@@ -1238,7 +1238,7 @@
 
     goto :goto_0
 
-    .line 429
+    .line 431
     :cond_0
     iget p2, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mDragIconToArrowGap:I
 
@@ -1274,7 +1274,7 @@
 .method private getShortcutMenuVisualTopYWhenMenuAboveIcon(FZ)F
     .locals 2
 
-    .line 433
+    .line 435
     invoke-direct {p0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->getVisualHeight()I
 
     move-result v0
@@ -1293,7 +1293,7 @@
 
     goto :goto_0
 
-    .line 434
+    .line 436
     :cond_0
     iget p2, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mDragIconToArrowGap:I
 
@@ -1390,7 +1390,7 @@
 .method private isIconCenterMoreThanScreenHalfWidth(F)Z
     .locals 1
 
-    .line 438
+    .line 440
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getIconWidth()I
 
     move-result v0
@@ -1427,7 +1427,7 @@
 .method private move(Lcom/miui/home/launcher/shortcuts/ShortcutMenuPositionInfo;)V
     .locals 1
 
-    .line 278
+    .line 280
     invoke-virtual {p1}, Lcom/miui/home/launcher/shortcuts/ShortcutMenuPositionInfo;->getTransX()I
 
     move-result v0
@@ -1436,7 +1436,7 @@
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->setTranslationX(F)V
 
-    .line 279
+    .line 281
     invoke-virtual {p1}, Lcom/miui/home/launcher/shortcuts/ShortcutMenuPositionInfo;->getTransY()I
 
     move-result p1
@@ -1521,14 +1521,14 @@
 
     const/4 v0, 0x4
 
-    .line 410
+    .line 412
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenuPositionInfo;->isDragViewAtMenuPosition(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 411
+    .line 413
     invoke-direct {p0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->getIntrinsicWidth()I
 
     move-result v0
@@ -1549,7 +1549,7 @@
 
     goto :goto_0
 
-    .line 413
+    .line 415
     :cond_0
     invoke-direct {p0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->getShadowPadding()I
 
@@ -1566,14 +1566,14 @@
     :goto_0
     const/4 v0, 0x2
 
-    .line 416
+    .line 418
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenuPositionInfo;->isDragViewAtMenuPosition(I)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 417
+    .line 419
     invoke-direct {p0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->getShadowPadding()I
 
     move-result p1
@@ -1584,7 +1584,7 @@
 
     goto :goto_1
 
-    .line 419
+    .line 421
     :cond_1
     invoke-direct {p0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->getIntrinsicHeight()I
 
@@ -1607,7 +1607,7 @@
 .method private updateTransparentSpaceVisible()V
     .locals 4
 
-    .line 246
+    .line 248
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mAppSystemTransparentSpace:Landroid/view/View;
 
     iget-object v1, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mAppShortcutMenu:Lcom/miui/home/launcher/shortcuts/AppShortcutMenu;
@@ -1640,7 +1640,7 @@
     :goto_0
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 248
+    .line 250
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mWidgetSystemTransparentSpace:Landroid/view/View;
 
     iget-object v1, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mWidgetShortcutMenu:Lcom/miui/home/launcher/shortcuts/SystemShortcutMenu;
@@ -1680,6 +1680,13 @@
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/shortcuts/AppShortcutMenu;->bindMenu(Ljava/util/List;)V
 
     .line 239
+    invoke-virtual {p2}, Lcom/miui/home/launcher/shortcuts/AllShortcutMenuItems;->getSystemShortcutMenuItems()Ljava/util/List;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    .line 240
     iget-object p1, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mSystemShortcutMenu:Lcom/miui/home/launcher/shortcuts/SystemShortcutMenu;
 
     invoke-virtual {p2}, Lcom/miui/home/launcher/shortcuts/AllShortcutMenuItems;->getSystemShortcutMenuItems()Ljava/util/List;
@@ -1688,14 +1695,15 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenu;->bindMenu(Ljava/util/List;)V
 
-    .line 240
+    .line 242
+    :cond_0
     invoke-virtual {p2}, Lcom/miui/home/launcher/shortcuts/AllShortcutMenuItems;->getWidgetShortcutMenuItems()Ljava/util/List;
 
     move-result-object p1
 
-    if-eqz p1, :cond_0
+    if-eqz p1, :cond_1
 
-    .line 241
+    .line 243
     iget-object p1, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mWidgetShortcutMenu:Lcom/miui/home/launcher/shortcuts/SystemShortcutMenu;
 
     invoke-virtual {p2}, Lcom/miui/home/launcher/shortcuts/AllShortcutMenuItems;->getWidgetShortcutMenuItems()Ljava/util/List;
@@ -1704,7 +1712,7 @@
 
     invoke-virtual {p1, p2}, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenu;->bindMenu(Ljava/util/List;)V
 
-    :cond_0
+    :cond_1
     return-void
 .end method
 
@@ -1759,7 +1767,7 @@
 .method public getBindedItemInfo()Lcom/miui/home/launcher/ItemInfo;
     .locals 1
 
-    .line 256
+    .line 258
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mBindedItemInfo:Lcom/miui/home/launcher/ItemInfo;
 
     return-object v0
@@ -1800,23 +1808,23 @@
 .method public hide(Lcom/miui/home/launcher/EditStateChangeReason;)V
     .locals 4
 
-    .line 454
+    .line 456
     iget-boolean v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mIsWithoutAnimNextHide:Z
 
     if-eqz v0, :cond_0
 
-    .line 455
+    .line 457
     invoke-virtual {p0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->reset()V
 
     goto :goto_0
 
-    .line 457
+    .line 459
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mShowOrHideAnimator:Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;->goToStart()V
 
-    .line 460
+    .line 462
     :goto_0
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mBindedItemInfo:Lcom/miui/home/launcher/ItemInfo;
 
@@ -1824,7 +1832,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 461
+    .line 463
     check-cast v0, Lcom/miui/home/launcher/ShortcutInfo;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/ShortcutInfo;->getPackageName()Ljava/lang/String;
@@ -1833,7 +1841,7 @@
 
     const-string v1, "ShortcutMenu"
 
-    .line 462
+    .line 464
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1856,7 +1864,7 @@
 
     invoke-static {v1, v2}, Lcom/miui/home/launcher/MiuiHomeLog;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 464
+    .line 466
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -1865,7 +1873,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 465
+    .line 467
     invoke-virtual {p1}, Lcom/miui/home/launcher/EditStateChangeReason;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -1879,7 +1887,7 @@
 .method public isVisible()Z
     .locals 1
 
-    .line 442
+    .line 444
     invoke-virtual {p0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->getVisibility()I
 
     move-result v0
@@ -1914,7 +1922,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mAppShortcutMenu:Lcom/miui/home/launcher/shortcuts/AppShortcutMenu;
 
-    const v0, 0x7f0a027a
+    const v0, 0x7f0a027f
 
     .line 65
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->findViewById(I)Landroid/view/View;
@@ -1925,7 +1933,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mSystemShortcutMenu:Lcom/miui/home/launcher/shortcuts/SystemShortcutMenu;
 
-    const v0, 0x7f0a02eb
+    const v0, 0x7f0a02f0
 
     .line 66
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->findViewById(I)Landroid/view/View;
@@ -1936,7 +1944,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mWidgetShortcutMenu:Lcom/miui/home/launcher/shortcuts/SystemShortcutMenu;
 
-    const v0, 0x7f0a02b1
+    const v0, 0x7f0a02b6
 
     .line 67
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->findViewById(I)Landroid/view/View;
@@ -1945,7 +1953,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mAppSystemTransparentSpace:Landroid/view/View;
 
-    const v0, 0x7f0a02b2
+    const v0, 0x7f0a02b7
 
     .line 68
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->findViewById(I)Landroid/view/View;
@@ -1970,7 +1978,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070411
+    const v1, 0x7f07041a
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1983,7 +1991,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f07040e
+    const v1, 0x7f070417
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1996,7 +2004,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f07040d
+    const v1, 0x7f070416
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -2009,7 +2017,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0603a9
+    const v1, 0x7f0603aa
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -2077,7 +2085,7 @@
 .method public requestFocusForTalkBack()V
     .locals 2
 
-    .line 471
+    .line 473
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mSystemShortcutMenu:Lcom/miui/home/launcher/shortcuts/SystemShortcutMenu;
 
     if-eqz v0, :cond_0
@@ -2090,7 +2098,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 472
+    .line 474
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mSystemShortcutMenu:Lcom/miui/home/launcher/shortcuts/SystemShortcutMenu;
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenu;->getChildAt(I)Landroid/view/View;
@@ -2153,7 +2161,7 @@
 .method public setBindedItemInfo(Lcom/miui/home/launcher/ItemInfo;)V
     .locals 0
 
-    .line 252
+    .line 254
     iput-object p1, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mBindedItemInfo:Lcom/miui/home/launcher/ItemInfo;
 
     return-void
@@ -2167,7 +2175,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0603a9
+    const v1, 0x7f0603aa
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -2182,7 +2190,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f08058a
+    const v2, 0x7f08058b
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -2224,7 +2232,7 @@
 
     const/4 v0, 0x1
 
-    .line 450
+    .line 452
     iput-boolean v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mIsWithoutAnimNextHide:Z
 
     return-void
@@ -2233,17 +2241,17 @@
 .method public show([FZ[II)V
     .locals 0
 
-    .line 260
+    .line 262
     invoke-direct {p0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->updateTransparentSpaceVisible()V
 
-    .line 262
+    .line 264
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->calcPositionInfo([FZ[II)Lcom/miui/home/launcher/shortcuts/ShortcutMenuPositionInfo;
 
     move-result-object p1
 
     const-string p2, "ShortcutMenu"
 
-    .line 263
+    .line 265
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -2260,22 +2268,22 @@
 
     invoke-static {p2, p3}, Lcom/miui/home/launcher/MiuiHomeLog;->debug(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 264
+    .line 266
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->move(Lcom/miui/home/launcher/shortcuts/ShortcutMenuPositionInfo;)V
 
-    .line 265
+    .line 267
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->addViewAndAdjustOrder(Lcom/miui/home/launcher/shortcuts/ShortcutMenuPositionInfo;)V
 
-    .line 266
+    .line 268
     invoke-direct {p0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->setMenuItemBg()V
 
-    .line 267
+    .line 269
     invoke-direct {p0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->setMenuItemTextColor()V
 
-    .line 268
+    .line 270
     invoke-virtual {p0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->setMenuBg()V
 
-    .line 269
+    .line 271
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getDeviceType()Lcom/miui/home/launcher/DeviceType;
 
     move-result-object p2
@@ -2284,17 +2292,17 @@
 
     if-eq p2, p3, :cond_0
 
-    .line 270
+    .line 272
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->addArrow(Lcom/miui/home/launcher/shortcuts/ShortcutMenuPositionInfo;)V
 
-    .line 272
+    .line 274
     :cond_0
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->setPivot(Lcom/miui/home/launcher/shortcuts/ShortcutMenuPositionInfo;)V
 
-    .line 273
+    .line 275
     invoke-virtual {p0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->showWithAnim()V
 
-    .line 274
+    .line 276
     invoke-virtual {p0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->requestFocusForTalkBack()V
 
     return-void
@@ -2303,7 +2311,7 @@
 .method public showWithAnim()V
     .locals 1
 
-    .line 446
+    .line 448
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mShowOrHideAnimator:Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;->goToEnd()V

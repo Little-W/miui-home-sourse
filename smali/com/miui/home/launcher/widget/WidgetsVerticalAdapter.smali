@@ -1175,7 +1175,7 @@
 
     move-result-object p1
 
-    const v1, 0x7f10043d
+    const v1, 0x7f100446
 
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1200,7 +1200,7 @@
 
     move-result-object p1
 
-    const v1, 0x7f1003b4
+    const v1, 0x7f1003bd
 
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1534,7 +1534,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f07047f
+    const v1, 0x7f070488
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1564,14 +1564,14 @@
     .line 292
     iget-object v0, p1, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$ViewHolder;->mTitle:Landroid/widget/TextView;
 
-    const v1, 0x7f10046a
+    const v1, 0x7f100474
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
     .line 293
     iget-object v0, p1, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$ViewHolder;->mSmallIcon:Landroid/widget/ImageView;
 
-    const v1, 0x7f0805c4
+    const v1, 0x7f0805c5
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -1685,7 +1685,7 @@
     .line 281
     iget-object p2, p0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->mLayoutInflater:Landroid/view/LayoutInflater;
 
-    const v0, 0x7f0d0140
+    const v0, 0x7f0d0141
 
     const/4 v1, 0x0
 

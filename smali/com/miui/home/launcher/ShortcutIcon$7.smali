@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/ShortcutIcon;)V
     .locals 0
 
-    .line 358
+    .line 364
     iput-object p1, p0, Lcom/miui/home/launcher/ShortcutIcon$7;->this$0:Lcom/miui/home/launcher/ShortcutIcon;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,16 +35,16 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 361
+    .line 367
     iget-object p1, p0, Lcom/miui/home/launcher/ShortcutIcon$7;->this$0:Lcom/miui/home/launcher/ShortcutIcon;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/ShortcutIcon;->access$300(Lcom/miui/home/launcher/ShortcutIcon;)Z
+    invoke-static {p1}, Lcom/miui/home/launcher/ShortcutIcon;->access$400(Lcom/miui/home/launcher/ShortcutIcon;)Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    .line 362
+    .line 368
     iget-object p1, p0, Lcom/miui/home/launcher/ShortcutIcon$7;->this$0:Lcom/miui/home/launcher/ShortcutIcon;
 
     iget-object p1, p1, Lcom/miui/home/launcher/ShortcutIcon;->mEditModeCheckBox:Landroid/widget/CheckBox;
@@ -53,10 +53,10 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/CheckBox;->setVisibility(I)V
 
-    .line 363
+    .line 369
     iget-object p1, p0, Lcom/miui/home/launcher/ShortcutIcon$7;->this$0:Lcom/miui/home/launcher/ShortcutIcon;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/ShortcutIcon;->access$200(Lcom/miui/home/launcher/ShortcutIcon;)V
+    invoke-static {p1}, Lcom/miui/home/launcher/ShortcutIcon;->access$300(Lcom/miui/home/launcher/ShortcutIcon;)V
 
     :cond_0
     return-void

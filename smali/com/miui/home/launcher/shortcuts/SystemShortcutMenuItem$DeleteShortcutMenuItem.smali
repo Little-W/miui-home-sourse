@@ -18,15 +18,15 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 268
+    .line 292
     invoke-direct {p0}, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem;-><init>()V
 
-    .line 269
+    .line 293
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
 
-    const v1, 0x7f100401
+    const v1, 0x7f10040a
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Application;->getString(I)Ljava/lang/String;
 
@@ -34,12 +34,12 @@
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem$DeleteShortcutMenuItem;->setShortTitle(Ljava/lang/CharSequence;)V
 
-    .line 270
+    .line 294
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
 
-    const v1, 0x7f080589
+    const v1, 0x7f08058a
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Application;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -53,7 +53,7 @@
 .method public static synthetic lambda$getOnClickListener$0(Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem$DeleteShortcutMenuItem;Landroid/view/View;)V
     .locals 3
 
-    .line 284
+    .line 308
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object p1
@@ -62,7 +62,7 @@
 
     return-void
 
-    .line 287
+    .line 311
     :cond_0
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getShortcutMenuLayer()Lcom/miui/home/launcher/ShortcutMenuLayer;
 
@@ -76,16 +76,16 @@
 
     return-void
 
-    .line 290
+    .line 314
     :cond_1
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->hideShortcutMenuWithoutAnim()V
 
-    .line 291
+    .line 315
     instance-of v1, v0, Lcom/miui/home/launcher/ShortcutInfo;
 
     if-eqz v1, :cond_2
 
-    .line 292
+    .line 316
     move-object v1, v0
 
     check-cast v1, Lcom/miui/home/launcher/ShortcutInfo;
@@ -98,7 +98,7 @@
 
     goto :goto_0
 
-    .line 293
+    .line 317
     :cond_2
     instance-of v1, v0, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;
 
@@ -114,17 +114,17 @@
 
     const/4 v2, 0x0
 
-    .line 294
+    .line 318
     invoke-static {p1, v1, v2}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackDeleteMiuiWidget(Landroid/content/Context;Lcom/miui/home/launcher/MIUIWidgetBasicInfo;I)V
 
     const/4 v2, 0x0
 
-    .line 295
+    .line 319
     invoke-static {p1, v1, v2}, Lcom/miui/home/launcher/uninstall/UninstallController;->deleteMiuiWidgetWidthBoomAnim(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/MIUIWidgetBasicInfo;[I)V
 
     goto :goto_0
 
-    .line 297
+    .line 321
     :cond_3
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getUninstallController()Lcom/miui/home/launcher/uninstall/UninstallController;
 
@@ -135,15 +135,15 @@
     :goto_0
     const-string v1, "remove"
 
-    .line 299
+    .line 323
     invoke-static {v0, v1}, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem;->access$100(Lcom/miui/home/launcher/ItemInfo;Ljava/lang/String;)V
 
-    .line 300
+    .line 324
     instance-of v1, v0, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;
 
     if-eqz v1, :cond_4
 
-    .line 301
+    .line 325
     check-cast v0, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem$DeleteShortcutMenuItem;->getShortTitle()Ljava/lang/CharSequence;
@@ -165,7 +165,7 @@
 .method public getOnClickListener()Landroid/view/View$OnClickListener;
     .locals 1
 
-    .line 283
+    .line 307
     new-instance v0, Lcom/miui/home/launcher/shortcuts/-$$Lambda$SystemShortcutMenuItem$DeleteShortcutMenuItem$VrmfhC_hic-_z2Ew8dgTqiJEQ7A;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/shortcuts/-$$Lambda$SystemShortcutMenuItem$DeleteShortcutMenuItem$VrmfhC_hic-_z2Ew8dgTqiJEQ7A;-><init>(Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem$DeleteShortcutMenuItem;)V
@@ -176,26 +176,26 @@
 .method public isValid(Lcom/miui/home/launcher/ItemInfo;)Z
     .locals 2
 
-    .line 275
+    .line 299
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
 
-    .line 276
+    .line 300
     invoke-static {p1, v0}, Lcom/miui/home/launcher/uninstall/UninstallController;->isUninstallValid(Lcom/miui/home/launcher/ItemInfo;Lcom/miui/home/launcher/Launcher;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 277
+    .line 301
     invoke-static {p1, v0}, Lcom/miui/home/launcher/uninstall/UninstallController;->isDeleteValid(Lcom/miui/home/launcher/ItemInfo;Lcom/miui/home/launcher/Launcher;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 278
+    .line 302
     invoke-virtual {p1}, Lcom/miui/home/launcher/ItemInfo;->isInHotseatRecommend()Z
 
     move-result p1

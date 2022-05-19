@@ -34,34 +34,34 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 67
+    .line 69
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 68
+    .line 70
     iput v0, p0, Lcom/android/systemui/shared/recents/model/RecentsTaskLoadPlan$Options;->runningTaskId:I
 
     const/4 v0, 0x1
 
-    .line 69
+    .line 71
     iput-boolean v0, p0, Lcom/android/systemui/shared/recents/model/RecentsTaskLoadPlan$Options;->loadIcons:Z
 
-    .line 70
+    .line 72
     iput-boolean v0, p0, Lcom/android/systemui/shared/recents/model/RecentsTaskLoadPlan$Options;->loadThumbnails:Z
 
     const/4 v0, 0x0
 
-    .line 71
+    .line 73
     iput-boolean v0, p0, Lcom/android/systemui/shared/recents/model/RecentsTaskLoadPlan$Options;->onlyLoadForCache:Z
 
-    .line 72
+    .line 74
     iput-boolean v0, p0, Lcom/android/systemui/shared/recents/model/RecentsTaskLoadPlan$Options;->onlyLoadPausedActivities:Z
 
-    .line 73
+    .line 75
     iput v0, p0, Lcom/android/systemui/shared/recents/model/RecentsTaskLoadPlan$Options;->numVisibleTasks:I
 
-    .line 74
+    .line 76
     iput v0, p0, Lcom/android/systemui/shared/recents/model/RecentsTaskLoadPlan$Options;->numVisibleTaskThumbnails:I
 
     return-void

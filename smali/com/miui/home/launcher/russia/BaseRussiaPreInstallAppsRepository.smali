@@ -32,7 +32,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f100171
+    const v1, 0x7f100176
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Application;->getString(I)Ljava/lang/String;
 

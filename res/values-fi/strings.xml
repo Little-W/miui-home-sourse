@@ -53,7 +53,7 @@
     <string name="activity_not_unlocked">Odota ennen sovellusten avaamista, että laite on käynnistynyt uudelleen täysin</string>
     <string name="add_custom_category">Mukautettu</string>
     <string name="add_screen">Lisää näyttö</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">Lisää aloitusnäyttöön</string>
     <string name="added_all_category">Kaikki sovellukset lisätty onnistuneesti</string>
     <string name="afternoon">Iltapäivä</string>
     <string name="agree_button">Hyväksy</string>
@@ -379,6 +379,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">Paina ja pidä painettuna lisätäksesi aloitusnäyttöön</string>
+    <string name="fold_pair_installed_shortcut_launcher">Tämä pikavalinta on jo olemassa</string>
     <string name="folder_name">Kansio</string>
     <string name="frame_load_failed">Raameja ei voi ladata</string>
     <string name="free_style_apps_title">Valitse sovellus</string>
@@ -658,6 +660,7 @@
     <string name="night">Ilta</string>
     <string name="no_detail_page">Ei tietosivua</string>
     <string name="no_space_toast">Tilaa ei ole tarpeeksi</string>
+    <string name="no_space_toast_fold">Täällä ei ole tarpeeksi tilaa</string>
     <string name="no_space_toast_when_click_widget">Ei tarpeeksi tilaa tällä sivulla. Kokeile vetää tämä kohde eri sivulle.</string>
     <string name="noon">Keskipäivä</string>
     <string name="normal_wallpaper">Taustakuva</string>
@@ -679,7 +682,7 @@
     <string name="ota_layout_adjustment_content">Aloitusnäytön ulko- ja sisäasettelut synkronoitiin uudessa versiossa.</string>
     <string name="ota_layout_adjustment_title">Aloitusnäytön ulkoasut</string>
     <string name="out_of_space">Tällä Aloitusnäytöllä ei ole enempää tilaa</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">Animaatioita kolmannen osapuolen sovelluskuvakkeista</string>
     <string name="perfect_icons_switch_title">Globaalit kuvakeanimaatiot</string>
     <string name="permdesc_install_shortcut">Sallii sovelluksen lisätä pikavalintoja ilman käyttäjän erillistä lupaa.</string>

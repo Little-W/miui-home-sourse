@@ -2494,7 +2494,7 @@
         }
     .end annotation
 
-    .line 2881
+    .line 2885
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherProvider;->mOpenHelper:Lcom/miui/home/launcher/LauncherProvider$DatabaseHelper;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/LauncherProvider$DatabaseHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;

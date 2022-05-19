@@ -579,7 +579,7 @@
 
     check-cast v2, Landroid/view/View;
 
-    const v3, 0x7f0a02d3
+    const v3, 0x7f0a02d8
 
     invoke-virtual {v2, v3}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
@@ -1170,7 +1170,7 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f0a02d2
+    const v0, 0x7f0a02d7
 
     invoke-virtual {p1, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
@@ -1240,7 +1240,7 @@
 .method public resetView(Landroid/view/View;)V
     .locals 2
 
-    const v0, 0x7f0a02d3
+    const v0, 0x7f0a02d8
 
     .line 186
     invoke-virtual {p1, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;

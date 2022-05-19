@@ -1464,11 +1464,7 @@
 
     .line 122
     :cond_0
-    invoke-virtual {p1}, Lcom/miui/home/launcher/AppInfo;->toPackageAndUser()Lcom/miui/home/launcher/LauncherModel$PackageAndUser;
-
-    move-result-object p2
-
-    invoke-static {p2}, Lcom/miui/home/launcher/LauncherModel;->isSecurityHided(Lcom/miui/home/launcher/LauncherModel$PackageAndUser;)Z
+    invoke-virtual {p1}, Lcom/miui/home/launcher/AppInfo;->isSecurityHided()Z
 
     move-result p2
 

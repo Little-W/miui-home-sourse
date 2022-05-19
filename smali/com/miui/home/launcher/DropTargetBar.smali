@@ -398,7 +398,7 @@
 .method private searchDropTarget()V
     .locals 1
 
-    const v0, 0x7f0a02cc
+    const v0, 0x7f0a02d1
 
     .line 90
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/DropTargetBar;->findViewById(I)Landroid/view/View;
@@ -965,7 +965,7 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    const v0, 0x7f0a028c
+    const v0, 0x7f0a0291
 
     .line 78
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/DropTargetBar;->findViewById(I)Landroid/view/View;

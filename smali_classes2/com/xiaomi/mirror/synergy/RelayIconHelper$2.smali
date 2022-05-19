@@ -35,7 +35,7 @@
 
 # virtual methods
 .method public onChange(Z)V
-    .locals 2
+    .locals 4
 
     iget-object p1, p0, Lcom/xiaomi/mirror/synergy/RelayIconHelper$2;->this$0:Lcom/xiaomi/mirror/synergy/RelayIconHelper;
 
@@ -57,7 +57,7 @@
 
     iget-object v0, p0, Lcom/xiaomi/mirror/synergy/RelayIconHelper$2;->val$context:Landroid/content/Context;
 
-    invoke-static {p1}, Lcom/xiaomi/mirror/synergy/RelayIconHelper;->access$400(Lcom/xiaomi/mirror/synergy/RelayIconHelper;)Landroid/net/Uri;
+    invoke-static {}, Lcom/xiaomi/mirror/synergy/RelayIconHelper;->access$400()Landroid/net/Uri;
 
     move-result-object v1
 
@@ -79,9 +79,17 @@
 
     invoke-virtual {p1}, Lcom/xiaomi/mirror/synergy/RelayIconHelper$RelayIcon;->getBitmap()Landroid/graphics/Bitmap;
 
+    move-result-object v2
+
+    invoke-virtual {p1}, Lcom/xiaomi/mirror/synergy/RelayIconHelper$RelayIcon;->getDescription()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {p1}, Lcom/xiaomi/mirror/synergy/RelayIconHelper$RelayIcon;->getRemoteDeviceName()Ljava/lang/String;
+
     move-result-object p1
 
-    invoke-interface {v0, v1, p1}, Lcom/xiaomi/mirror/synergy/RelayIconCallback;->onIconUpdate(Ljava/lang/String;Landroid/graphics/Bitmap;)V
+    invoke-interface {v0, v1, v2, v3, p1}, Lcom/xiaomi/mirror/synergy/RelayIconCallback;->onIconUpdate(Ljava/lang/String;Landroid/graphics/Bitmap;Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     return-void

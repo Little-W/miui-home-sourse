@@ -819,9 +819,9 @@
 
     iget-object v1, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mLabel:Landroid/widget/TextView;
 
-    const v2, 0x7f110310
+    const v2, 0x7f110311
 
-    const v3, 0x7f110313
+    const v3, 0x7f110314
 
     invoke-static {v0, v1, v2, v3}, Lcom/miui/home/launcher/common/Utilities;->adaptTitleStyleToWallpaper(Landroid/content/Context;Landroid/widget/TextView;II)V
 

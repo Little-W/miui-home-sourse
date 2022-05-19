@@ -299,7 +299,7 @@
 
     sput-object v0, Lcom/miui/home/launcher/Workspace;->sPrepareNewScreenLock:Ljava/lang/Object;
 
-    .line 3545
+    .line 3556
     new-instance v0, Lcom/miui/home/launcher/Workspace$19;
 
     const-string v1, "translationX"
@@ -525,48 +525,48 @@
 
     iput-object v2, p0, Lcom/miui/home/launcher/Workspace;->mCollectConsumerForFillEmpty:Ljava/util/function/Consumer;
 
-    .line 2826
+    .line 2830
     new-instance v2, Lcom/miui/home/launcher/Workspace$16;
 
     invoke-direct {v2, p0}, Lcom/miui/home/launcher/Workspace$16;-><init>(Lcom/miui/home/launcher/Workspace;)V
 
     iput-object v2, p0, Lcom/miui/home/launcher/Workspace;->mRestoreBlurRunnable:Ljava/lang/Runnable;
 
-    .line 2859
+    .line 2863
     new-array v2, p3, [I
 
     iput-object v2, p0, Lcom/miui/home/launcher/Workspace;->mLocationOnScreen:[I
 
-    .line 2860
+    .line 2864
     new-array p3, p3, [I
 
     iput-object p3, p0, Lcom/miui/home/launcher/Workspace;->mLocationInWindow:[I
 
-    .line 2878
+    .line 2882
     new-instance p3, Lcom/miui/home/launcher/Workspace$17;
 
     invoke-direct {p3, p0}, Lcom/miui/home/launcher/Workspace$17;-><init>(Lcom/miui/home/launcher/Workspace;)V
 
     iput-object p3, p0, Lcom/miui/home/launcher/Workspace;->mResetEditingViewsAfterScreenOrientationChanged:Ljava/lang/Runnable;
 
-    .line 3059
+    .line 3070
     new-instance p3, Landroid/animation/ObjectAnimator;
 
     invoke-direct {p3}, Landroid/animation/ObjectAnimator;-><init>()V
 
     iput-object p3, p0, Lcom/miui/home/launcher/Workspace;->mScreenSeekBarEditAnimation:Landroid/animation/ObjectAnimator;
 
-    .line 3228
+    .line 3239
     iput-boolean p2, p0, Lcom/miui/home/launcher/Workspace;->mIsInsertingNewScreen:Z
 
-    .line 3229
+    .line 3240
     new-instance p3, Ljava/util/ArrayList;
 
     invoke-direct {p3}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p3, p0, Lcom/miui/home/launcher/Workspace;->mCallbacksWhenScreenReady:Ljava/util/ArrayList;
 
-    .line 3559
+    .line 3570
     new-instance p3, Lmiuix/animation/physics/SpringAnimation;
 
     sget-object v2, Lcom/miui/home/launcher/Workspace;->TRANSLATION_X:Lmiuix/animation/property/FloatProperty;
@@ -575,33 +575,33 @@
 
     iput-object p3, p0, Lcom/miui/home/launcher/Workspace;->mScrollFailedTipAnimator:Lmiuix/animation/physics/SpringAnimation;
 
-    .line 3573
+    .line 3584
     new-instance p3, Lcom/miui/home/launcher/-$$Lambda$Workspace$jyORq1dcn0TB98mra-NeDdEMgeo;
 
     invoke-direct {p3, p0}, Lcom/miui/home/launcher/-$$Lambda$Workspace$jyORq1dcn0TB98mra-NeDdEMgeo;-><init>(Lcom/miui/home/launcher/Workspace;)V
 
     iput-object p3, p0, Lcom/miui/home/launcher/Workspace;->mScrollFiledTipAnimatorRunnable:Ljava/lang/Runnable;
 
-    .line 3732
+    .line 3743
     new-instance p3, Lcom/miui/home/launcher/Workspace$20;
 
     invoke-direct {p3, p0}, Lcom/miui/home/launcher/Workspace$20;-><init>(Lcom/miui/home/launcher/Workspace;)V
 
     iput-object p3, p0, Lcom/miui/home/launcher/Workspace;->mLoadingFinishMessageHandler:Lcom/miui/home/launcher/common/messages/LoadingFinishMessageHandler;
 
-    .line 3752
+    .line 3763
     new-instance p3, Lcom/miui/home/launcher/Workspace$21;
 
     invoke-direct {p3, p0}, Lcom/miui/home/launcher/Workspace$21;-><init>(Lcom/miui/home/launcher/Workspace;)V
 
     iput-object p3, p0, Lcom/miui/home/launcher/Workspace;->mEditStateChangedMessageHandler:Lcom/miui/home/launcher/common/messages/EditStateChangedMessageHandler;
 
-    const p3, 0x7f0805c7
+    const p3, 0x7f0805c8
 
-    .line 3824
+    .line 3835
     iput p3, p0, Lcom/miui/home/launcher/Workspace;->mAssistantPointResId:I
 
-    .line 3856
+    .line 3867
     new-instance v2, Landroid/graphics/Rect;
 
     invoke-direct {v2}, Landroid/graphics/Rect;-><init>()V
@@ -616,7 +616,7 @@
     .line 237
     invoke-direct {p0}, Lcom/miui/home/launcher/Workspace;->loadIndicatorMarginBottom()V
 
-    const v3, 0x7f100235
+    const v3, 0x7f10023c
 
     .line 238
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -626,7 +626,7 @@
     .line 239
     new-instance v4, Landroid/widget/FrameLayout$LayoutParams;
 
-    const v5, 0x7f070414
+    const v5, 0x7f07041d
 
     .line 240
     invoke-virtual {v2, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -659,7 +659,7 @@
 
     iput v1, v4, Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
 
-    const v1, 0x7f0805c9
+    const v1, 0x7f0805ca
 
     .line 245
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/Workspace;->setSeekPointResource(I)V
@@ -695,7 +695,7 @@
     .line 251
     iput p3, v4, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
-    const p3, 0x7f070438
+    const p3, 0x7f070441
 
     .line 252
     invoke-virtual {v2, p3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -767,7 +767,7 @@
 
     move-result-object p2
 
-    const p3, 0x7f070498
+    const p3, 0x7f0704a1
 
     invoke-virtual {p2, p3}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -2193,10 +2193,35 @@
     return p1
 .end method
 
+.method private findSlot(IIIIJZ)Lcom/miui/home/launcher/CellLayout$CellInfo;
+    .locals 8
+
+    move-object v0, p0
+
+    move-wide v1, p5
+
+    move v3, p1
+
+    move v4, p2
+
+    move v5, p3
+
+    move v6, p4
+
+    move v7, p7
+
+    .line 4000
+    invoke-virtual/range {v0 .. v7}, Lcom/miui/home/launcher/Workspace;->findSlot(JIIIIZ)Lcom/miui/home/launcher/CellLayout$CellInfo;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
 .method private generateEmptyCellScreen(JI)Lcom/miui/home/launcher/CellScreen;
     .locals 1
 
-    .line 3218
+    .line 3229
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -2205,26 +2230,26 @@
 
     move-result-object v0
 
-    .line 3219
+    .line 3230
     invoke-virtual {v0, p3}, Lcom/miui/home/launcher/CellScreen;->createCellLayout(I)V
 
-    .line 3220
+    .line 3231
     invoke-virtual {v0}, Lcom/miui/home/launcher/CellScreen;->onScreenOrientationChanged()V
 
-    .line 3221
+    .line 3232
     invoke-virtual {v0}, Lcom/miui/home/launcher/CellScreen;->getCellLayout()Lcom/miui/home/launcher/CellLayout;
 
     move-result-object p3
 
-    .line 3222
+    .line 3233
     invoke-virtual {p3, p1, p2}, Lcom/miui/home/launcher/CellLayout;->setScreenId(J)V
 
     const/16 p1, -0x64
 
-    .line 3223
+    .line 3234
     invoke-virtual {p3, p1}, Lcom/miui/home/launcher/CellLayout;->setContainerId(I)V
 
-    .line 3224
+    .line 3235
     iget-object p1, p0, Lcom/miui/home/launcher/Workspace;->mLongClickListener:Landroid/view/View$OnLongClickListener;
 
     invoke-virtual {p3, p1}, Lcom/miui/home/launcher/CellLayout;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
@@ -2518,7 +2543,7 @@
     :goto_0
     move v0, p2
 
-    .line 3003
+    .line 3014
     :goto_1
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Workspace;->getScreen(I)Landroid/view/View;
 
@@ -2613,7 +2638,7 @@
 .method public static getScreenScaleRatio()F
     .locals 1
 
-    .line 3666
+    .line 3677
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sScreenScaleRatio:F
 
     return v0
@@ -2622,7 +2647,7 @@
 .method private hasOddScreen()Z
     .locals 1
 
-    .line 3918
+    .line 3929
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getScreenCount()I
 
     move-result v0
@@ -2673,14 +2698,14 @@
 .method private initScreenSeekBarEditAnimation()V
     .locals 2
 
-    .line 3062
+    .line 3073
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mScreenSeekBarEditAnimation:Landroid/animation/ObjectAnimator;
 
     iget-object v1, p0, Lcom/miui/home/launcher/Workspace;->mScreenSeekBar:Lcom/miui/home/launcher/ScreenView$IndicatorView;
 
     invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->setTarget(Ljava/lang/Object;)V
 
-    .line 3063
+    .line 3074
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mScreenSeekBarEditAnimation:Landroid/animation/ObjectAnimator;
 
     const-string v1, "translationY"
@@ -2712,7 +2737,7 @@
 
     return v0
 
-    .line 3472
+    .line 3483
     :cond_0
     invoke-virtual {p1}, Lcom/miui/home/launcher/FolderInfo;->getContents()Ljava/util/List;
 
@@ -2735,7 +2760,7 @@
 
     check-cast v1, Lcom/miui/home/launcher/ShortcutInfo;
 
-    .line 3473
+    .line 3484
     invoke-virtual {v1}, Lcom/miui/home/launcher/ShortcutInfo;->isChecked()Z
 
     move-result v1
@@ -2753,7 +2778,7 @@
 .method private isLastCellLayoutEmpty()Z
     .locals 2
 
-    .line 3944
+    .line 3955
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getScreenCount()I
 
     move-result v0
@@ -2768,7 +2793,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 3945
+    .line 3956
     invoke-virtual {v0}, Lcom/miui/home/launcher/CellLayout;->isEmpty()Z
 
     move-result v0
@@ -2807,7 +2832,7 @@
 .method private isNeedCorrectIndex()Z
     .locals 2
 
-    .line 3922
+    .line 3933
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getScreenCount()I
 
     move-result v0
@@ -3004,7 +3029,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f100392
+    const v0, 0x7f10039b
 
     invoke-static {p1, v0, v1}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -3064,14 +3089,14 @@
 .method private loadIndicatorMarginBottom()V
     .locals 2
 
-    .line 2919
+    .line 2930
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getWorkspaceIndicatorMarginBottom()I
 
     move-result v0
 
     iput v0, p0, Lcom/miui/home/launcher/Workspace;->mIndicatorMarginBottom:I
 
-    .line 2920
+    .line 2931
     iget v0, p0, Lcom/miui/home/launcher/Workspace;->mIndicatorMarginBottom:I
 
     int-to-float v0, v0
@@ -3084,12 +3109,12 @@
 
     iput v0, p0, Lcom/miui/home/launcher/Workspace;->mIndicatorShrinkBottom:I
 
-    .line 2921
+    .line 2932
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getWorkspaceIndicatorMarginBottom()I
 
     move-result v0
 
-    .line 2922
+    .line 2933
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getWorkspaceIndicatorMarginBottomInEditMode()I
 
     move-result v1
@@ -3098,14 +3123,14 @@
 
     iput v0, p0, Lcom/miui/home/launcher/Workspace;->mIndicatorOffsetBottomPortrait:I
 
-    .line 2923
+    .line 2934
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getScreenIndicator()Landroid/view/View;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 2925
+    .line 2936
     invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
@@ -3294,7 +3319,11 @@
 
     .line 1623
     :pswitch_0
-    invoke-virtual/range {p0 .. p0}, Lcom/miui/home/launcher/Workspace;->getCurrentScreenId()J
+    invoke-virtual/range {p1 .. p1}, Lcom/miui/home/launcher/CellScreen;->getCellLayout()Lcom/miui/home/launcher/CellLayout;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/miui/home/launcher/CellLayout;->getScreenId()J
 
     move-result-wide v4
 
@@ -4081,7 +4110,7 @@
 
     const-string v0, "Launcher.Workspace"
 
-    .line 2787
+    .line 2791
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -4100,7 +4129,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2788
+    .line 2792
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getScreenCount()I
 
     move-result v0
@@ -4109,7 +4138,7 @@
 
     invoke-virtual {p0, v1, v0}, Lcom/miui/home/launcher/Workspace;->removeScreensInLayout(II)V
 
-    .line 2792
+    .line 2796
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mIndexOrderedScreenIds:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -4123,7 +4152,7 @@
     :goto_0
     if-ltz v0, :cond_1
 
-    .line 2793
+    .line 2797
     iget-object v3, p0, Lcom/miui/home/launcher/Workspace;->mIndexOrderedScreenIds:Ljava/util/List;
 
     invoke-interface {v3, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -4138,7 +4167,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 2794
+    .line 2798
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v5
@@ -4154,24 +4183,24 @@
     :cond_0
     move v5, v1
 
-    .line 2795
+    .line 2799
     :goto_1
     invoke-direct {p0, v3, v4, v5}, Lcom/miui/home/launcher/Workspace;->generateEmptyCellScreen(JI)Lcom/miui/home/launcher/CellScreen;
 
     move-result-object v3
 
-    .line 2796
+    .line 2800
     invoke-virtual {p0, v3, v1}, Lcom/miui/home/launcher/Workspace;->addView(Landroid/view/View;I)V
 
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 2798
+    .line 2802
     :cond_1
     invoke-static {p0}, Lcom/miui/home/launcher/Launcher;->performLayoutNow(Landroid/view/View;)V
 
-    .line 2800
+    .line 2804
     iget-object p1, p0, Lcom/miui/home/launcher/Workspace;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getEditingState()I
@@ -4187,7 +4216,7 @@
     :cond_2
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/Workspace;->updateAssistantPoints(Z)V
 
-    .line 2801
+    .line 2805
     invoke-direct {p0}, Lcom/miui/home/launcher/Workspace;->setEditModeIfNeeded()V
 
     return-void
@@ -4229,10 +4258,10 @@
 .method private setClip(Z)V
     .locals 0
 
-    .line 2930
+    .line 2941
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Workspace;->setClipChildren(Z)V
 
-    .line 2931
+    .line 2942
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Workspace;->setClipToPadding(Z)V
 
     return-void
@@ -4241,14 +4270,14 @@
 .method private setEditModeIfNeeded()V
     .locals 3
 
-    .line 3040
+    .line 3051
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->isInNormalEditingMode()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 3041
+    .line 3052
     iget v0, p0, Lcom/miui/home/launcher/Workspace;->mEditingMode:I
 
     const/4 v1, 0x0
@@ -4300,34 +4329,34 @@
 .method private setWorkspaceProperty(Lcom/miui/home/launcher/Workspace$DirectionProperty;F)V
     .locals 2
 
-    .line 3713
+    .line 3724
     invoke-static {p1}, Lcom/miui/home/launcher/Workspace$DirectionProperty;->access$1700(Lcom/miui/home/launcher/Workspace$DirectionProperty;)Landroid/util/Property;
 
     move-result-object p1
 
     const/4 v0, 0x0
 
-    .line 3715
+    .line 3726
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Workspace;->getCellScreen(I)Lcom/miui/home/launcher/CellScreen;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 3717
+    .line 3728
     invoke-static {p2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v1
 
     invoke-virtual {p1, v0, v1}, Landroid/util/Property;->set(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 3720
+    .line 3731
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mScreenSeekBar:Lcom/miui/home/launcher/ScreenView$IndicatorView;
 
     if-eqz v0, :cond_1
 
-    .line 3721
+    .line 3732
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mScreenSeekBar:Lcom/miui/home/launcher/ScreenView$IndicatorView;
 
     invoke-static {p2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -4343,12 +4372,12 @@
 .method private setupCurrentScreen()V
     .locals 4
 
-    .line 2777
+    .line 2781
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCurrentDefaultScreenId()J
 
     move-result-wide v0
 
-    .line 2778
+    .line 2782
     iget-object v2, p0, Lcom/miui/home/launcher/Workspace;->mIndexOrderedScreenIds:Ljava/util/List;
 
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -4361,7 +4390,7 @@
 
     if-nez v2, :cond_0
 
-    .line 2779
+    .line 2783
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mIndexOrderedScreenIds:Ljava/util/List;
 
     const/4 v1, 0x0
@@ -4376,14 +4405,14 @@
 
     move-result-wide v0
 
-    .line 2780
+    .line 2784
     invoke-static {v0, v1}, Lcom/miui/home/launcher/DeviceConfig;->saveCurrentDefaultScreenId(J)V
 
-    .line 2782
+    .line 2786
     :cond_0
     invoke-virtual {p0, v0, v1}, Lcom/miui/home/launcher/Workspace;->setDefaultScreenId(J)V
 
-    .line 2783
+    .line 2787
     invoke-virtual {p0, v0, v1}, Lcom/miui/home/launcher/Workspace;->setCurrentScreenById(J)V
 
     return-void
@@ -4394,23 +4423,23 @@
 
     const/4 p2, 0x1
 
-    .line 3028
+    .line 3039
     iput-boolean p2, p0, Lcom/miui/home/launcher/Workspace;->mEditingScreenChanging:Z
 
     const/4 p2, 0x0
 
     if-eqz p1, :cond_0
 
-    .line 3030
+    .line 3041
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->setScreenScrollRangeByCurrentScreenType()V
 
     goto :goto_0
 
-    .line 3032
+    .line 3043
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->resetScreenScrollRange()V
 
-    .line 3033
+    .line 3044
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getHandler()Landroid/os/Handler;
 
     move-result-object p1
@@ -4419,10 +4448,10 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 3034
+    .line 3045
     iput-boolean p2, p0, Lcom/miui/home/launcher/Workspace;->mShowingTransitionEffectDemo:Z
 
-    .line 3036
+    .line 3047
     :goto_0
     iput-boolean p2, p0, Lcom/miui/home/launcher/Workspace;->mEditingScreenChanging:Z
 
@@ -4432,7 +4461,7 @@
 .method private shouldShowEditModeAnim(I)Z
     .locals 2
 
-    .line 3127
+    .line 3138
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -4443,7 +4472,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 3128
+    .line 3139
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Workspace;->isIndexInCurrentScreen(I)Z
 
     move-result v0
@@ -4477,7 +4506,7 @@
     :goto_0
     return v1
 
-    .line 3130
+    .line 3141
     :cond_2
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Workspace;->isIndexInCurrentScreen(I)Z
 
@@ -4600,7 +4629,7 @@
 .method private startScrollFailedAnimator()V
     .locals 3
 
-    .line 3562
+    .line 3573
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mScrollFailedTipAnimator:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0}, Lmiuix/animation/physics/SpringAnimation;->isRunning()Z
@@ -4611,7 +4640,7 @@
 
     return-void
 
-    .line 3565
+    .line 3576
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mScrollFailedTipAnimator:Lmiuix/animation/physics/SpringAnimation;
 
@@ -4623,14 +4652,14 @@
 
     const v2, 0x3e99999a    # 0.3f
 
-    .line 3566
+    .line 3577
     invoke-virtual {v1, v2}, Lmiuix/animation/physics/SpringForce;->setDampingRatio(F)Lmiuix/animation/physics/SpringForce;
 
     move-result-object v1
 
     const v2, 0x3e6b851f    # 0.23f
 
-    .line 3567
+    .line 3578
     invoke-static {v2}, Lcom/miui/home/launcher/animate/SpringAnimator;->stiffnessConvert(F)F
 
     move-result v2
@@ -4639,13 +4668,13 @@
 
     move-result-object v1
 
-    .line 3565
+    .line 3576
     invoke-virtual {v0, v1}, Lmiuix/animation/physics/SpringAnimation;->setSpring(Lmiuix/animation/physics/SpringForce;)Lmiuix/animation/physics/SpringAnimation;
 
-    .line 3568
+    .line 3579
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mScrollFailedTipAnimator:Lmiuix/animation/physics/SpringAnimation;
 
-    .line 3569
+    .line 3580
     iget v1, p0, Lcom/miui/home/launcher/Workspace;->mCurrentDragingScrollDirection:I
 
     if-nez v1, :cond_1
@@ -4657,11 +4686,11 @@
     :cond_1
     const/high16 v1, -0x3b060000    # -2000.0f
 
-    .line 3568
+    .line 3579
     :goto_0
     invoke-virtual {v0, v1}, Lmiuix/animation/physics/SpringAnimation;->setStartVelocity(F)Lmiuix/animation/physics/DynamicAnimation;
 
-    .line 3570
+    .line 3581
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mScrollFailedTipAnimator:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0}, Lmiuix/animation/physics/SpringAnimation;->start()V
@@ -4868,7 +4897,7 @@
 .method private updateScreenLayoutMode(ZZ)V
     .locals 1
 
-    .line 3135
+    .line 3146
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isFoldDevice()Z
 
     move-result v0
@@ -4879,7 +4908,7 @@
 
     if-eqz p2, :cond_1
 
-    .line 3136
+    .line 3147
     :cond_0
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
@@ -4908,12 +4937,12 @@
 .method private updateSeekBarVisibility()V
     .locals 2
 
-    .line 3373
+    .line 3384
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mScreenSeekBar:Lcom/miui/home/launcher/ScreenView$IndicatorView;
 
     if-eqz v0, :cond_1
 
-    .line 3374
+    .line 3385
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mScreenSeekBar:Lcom/miui/home/launcher/ScreenView$IndicatorView;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/ScreenView$IndicatorView;->getScreenIndicatorPointCount()I
@@ -4934,12 +4963,12 @@
 
     const/4 v0, 0x0
 
-    .line 3375
+    .line 3386
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Workspace;->showSeekBarWithoutAnim(Z)V
 
     goto :goto_0
 
-    .line 3377
+    .line 3388
     :cond_0
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/Workspace;->showSeekBarWithoutAnim(Z)V
 
@@ -5126,7 +5155,7 @@
 .method public abandonGenericScrollEvent(Landroid/view/MotionEvent;)Z
     .locals 1
 
-    .line 3894
+    .line 3905
     invoke-super {p0, p1}, Lcom/miui/home/launcher/DragableScreenView;->abandonGenericScrollEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
@@ -5135,7 +5164,7 @@
 
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    .line 3895
+    .line 3906
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getMinusOneScreenView()Lcom/miui/home/launcher/MinusOneScreenView;
 
     move-result-object v0
@@ -5144,7 +5173,7 @@
 
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    .line 3896
+    .line 3907
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getMinusOneScreenView()Lcom/miui/home/launcher/MinusOneScreenView;
 
     move-result-object v0
@@ -5618,15 +5647,15 @@
 .method public addView(Landroid/view/View;I)V
     .locals 0
 
-    .line 3360
+    .line 3371
     invoke-super {p0, p1, p2}, Lcom/miui/home/launcher/DragableScreenView;->addView(Landroid/view/View;I)V
 
-    .line 3361
+    .line 3372
     instance-of p2, p1, Lcom/miui/home/launcher/WallpaperUtils$WallpaperColorChangedListener;
 
     if-eqz p2, :cond_0
 
-    .line 3362
+    .line 3373
     check-cast p1, Lcom/miui/home/launcher/WallpaperUtils$WallpaperColorChangedListener;
 
     invoke-interface {p1}, Lcom/miui/home/launcher/WallpaperUtils$WallpaperColorChangedListener;->onWallpaperColorChanged()V
@@ -5638,10 +5667,10 @@
 .method public addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
     .locals 0
 
-    .line 3368
+    .line 3379
     invoke-super {p0, p1, p2, p3}, Lcom/miui/home/launcher/DragableScreenView;->addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
 
-    .line 3369
+    .line 3380
     invoke-direct {p0}, Lcom/miui/home/launcher/Workspace;->updateSeekBarVisibility()V
 
     return-void
@@ -5702,7 +5731,7 @@
 
     const/4 v0, 0x0
 
-    .line 3209
+    .line 3220
     :goto_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getScreenCount()I
 
@@ -5710,7 +5739,7 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 3210
+    .line 3221
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Workspace;->getCellLayout(I)Lcom/miui/home/launcher/CellLayout;
 
     move-result-object v1
@@ -5719,7 +5748,7 @@
 
     const/4 v2, 0x1
 
-    .line 3212
+    .line 3223
     invoke-virtual {v1, v2}, Lcom/miui/home/launcher/CellLayout;->alignIconsToTopWithSaveDb(Z)Z
 
     :cond_0
@@ -5910,7 +5939,7 @@
 .method public bindScreenAdded(JII)V
     .locals 2
 
-    .line 3256
+    .line 3267
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mIndexOrderedScreenIds:Ljava/util/List;
 
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -5919,22 +5948,22 @@
 
     invoke-interface {v0, p4, v1}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
-    .line 3257
+    .line 3268
     invoke-direct {p0, p1, p2, p3}, Lcom/miui/home/launcher/Workspace;->generateEmptyCellScreen(JI)Lcom/miui/home/launcher/CellScreen;
 
     move-result-object p1
 
-    .line 3258
+    .line 3269
     invoke-virtual {p0, p1, p4}, Lcom/miui/home/launcher/Workspace;->addView(Landroid/view/View;I)V
 
-    .line 3259
+    .line 3270
     iget p2, p0, Lcom/miui/home/launcher/Workspace;->mCurrentScreenIndex:I
 
     const/4 p3, 0x0
 
     if-gt p4, p2, :cond_0
 
-    .line 3260
+    .line 3271
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getChildCount()I
 
     move-result p2
@@ -5951,14 +5980,14 @@
 
     iput p2, p0, Lcom/miui/home/launcher/Workspace;->mCurrentScreenIndex:I
 
-    .line 3261
+    .line 3272
     iget-object p2, p0, Lcom/miui/home/launcher/Workspace;->mCurrentIndexMediator:Lcom/miui/home/launcher/common/CurrentIndexMediator;
 
     iget p4, p0, Lcom/miui/home/launcher/Workspace;->mCurrentScreenIndex:I
 
     invoke-virtual {p2, p4, p3}, Lcom/miui/home/launcher/common/CurrentIndexMediator;->updateIndex(IZ)V
 
-    .line 3263
+    .line 3274
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->isInNormalEditingMode()Z
 
@@ -5970,20 +5999,20 @@
 
     invoke-virtual {p1, p2, p4, v0}, Lcom/miui/home/launcher/CellScreen;->setEditMode(ZILcom/miui/home/launcher/EditStateChangeReason;)Z
 
-    .line 3264
+    .line 3275
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->isInQuickEditingMode()Z
 
     move-result p2
 
     invoke-virtual {p1, p2, p3}, Lcom/miui/home/launcher/CellScreen;->onQuickEditingModeChanged(ZZ)V
 
-    .line 3265
+    .line 3276
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Workspace;->updateChildStaticTransformation(Landroid/view/View;)V
 
-    .line 3266
+    .line 3277
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->requestLayout()V
 
-    .line 3267
+    .line 3278
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->isInNormalEditingMode()Z
 
     move-result p1
@@ -5996,11 +6025,11 @@
 
     if-eqz p1, :cond_2
 
-    .line 3268
+    .line 3279
     :cond_1
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->setScreenScrollRangeByCurrentScreenType()V
 
-    .line 3270
+    .line 3281
     :cond_2
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
@@ -6012,15 +6041,15 @@
 
     invoke-virtual {p1, p2}, Landroid/view/ViewTreeObserver;->addOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
-    .line 3280
+    .line 3291
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->reorderScreens()V
 
-    .line 3281
+    .line 3292
     iget-object p1, p0, Lcom/miui/home/launcher/Workspace;->mCallbacksWhenScreenReady:Ljava/util/ArrayList;
 
     monitor-enter p1
 
-    .line 3282
+    .line 3293
     :try_start_0
     new-instance p2, Ljava/util/ArrayList;
 
@@ -6028,15 +6057,15 @@
 
     invoke-direct {p2, p4}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 3283
+    .line 3294
     iget-object p4, p0, Lcom/miui/home/launcher/Workspace;->mCallbacksWhenScreenReady:Ljava/util/ArrayList;
 
     invoke-virtual {p4}, Ljava/util/ArrayList;->clear()V
 
-    .line 3284
+    .line 3295
     iput-boolean p3, p0, Lcom/miui/home/launcher/Workspace;->mIsInsertingNewScreen:Z
 
-    .line 3285
+    .line 3296
     invoke-virtual {p2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
@@ -6054,12 +6083,12 @@
 
     check-cast p3, Ljava/lang/Runnable;
 
-    .line 3286
+    .line 3297
     invoke-interface {p3}, Ljava/lang/Runnable;->run()V
 
     goto :goto_0
 
-    .line 3288
+    .line 3299
     :cond_3
     sget-object p2, Lcom/miui/home/launcher/Workspace;->sPrepareNewScreenLock:Ljava/lang/Object;
 
@@ -6067,18 +6096,18 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 3289
+    .line 3300
     :try_start_1
     sget-object p3, Lcom/miui/home/launcher/Workspace;->sPrepareNewScreenLock:Ljava/lang/Object;
 
     invoke-virtual {p3}, Ljava/lang/Object;->notify()V
 
-    .line 3290
+    .line 3301
     monitor-exit p2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 3291
+    .line 3302
     :try_start_2
     monitor-exit p1
     :try_end_2
@@ -6089,7 +6118,7 @@
     :catchall_0
     move-exception p3
 
-    .line 3290
+    .line 3301
     :try_start_3
     monitor-exit p2
     :try_end_3
@@ -6101,7 +6130,7 @@
     :catchall_1
     move-exception p2
 
-    .line 3291
+    .line 3302
     monitor-exit p1
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
@@ -6118,7 +6147,7 @@
 
     if-eqz v0, :cond_3
 
-    .line 3192
+    .line 3203
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mIndexOrderedScreenIds:Ljava/util/List;
 
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -6127,7 +6156,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 3193
+    .line 3204
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mScreenIdToIndexMap:Landroid/util/LongSparseArray;
 
     invoke-virtual {v0, p1, p2}, Landroid/util/LongSparseArray;->get(J)Ljava/lang/Object;
@@ -6138,14 +6167,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 3195
+    .line 3206
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Workspace;->removeScreen(I)V
 
-    .line 3198
+    .line 3209
     :cond_0
     iget-wide v0, p0, Lcom/miui/home/launcher/Workspace;->mDefaultScreenId:J
 
@@ -6153,10 +6182,10 @@
 
     if-nez p1, :cond_1
 
-    .line 3199
+    .line 3210
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->onDefaultScreenDelete()V
 
-    .line 3201
+    .line 3212
     :cond_1
     iget-object p1, p0, Lcom/miui/home/launcher/Workspace;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -6166,7 +6195,7 @@
 
     if-eqz p1, :cond_2
 
-    .line 3202
+    .line 3213
     iget-object p1, p0, Lcom/miui/home/launcher/Workspace;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getWorkspacePreview()Lcom/miui/home/launcher/WorkspaceThumbnailView;
@@ -6177,7 +6206,7 @@
 
     invoke-virtual {p1, p2}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->loadThumbnails(Z)V
 
-    .line 3204
+    .line 3215
     :cond_2
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->reorderScreens()V
 
@@ -6188,21 +6217,21 @@
 .method protected calcSnapGap()I
     .locals 3
 
-    .line 3636
+    .line 3647
     invoke-direct {p0}, Lcom/miui/home/launcher/Workspace;->hasOddScreen()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 3637
+    .line 3648
     invoke-direct {p0}, Lcom/miui/home/launcher/Workspace;->isNeedCorrectIndex()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 3638
+    .line 3649
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -6219,7 +6248,7 @@
 
     add-int/2addr v0, v1
 
-    .line 3639
+    .line 3650
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getScreenCount()I
 
     move-result v2
@@ -6230,7 +6259,7 @@
 
     return v1
 
-    .line 3642
+    .line 3653
     :cond_0
     invoke-super {p0}, Lcom/miui/home/launcher/DragableScreenView;->calcSnapGap()I
 
@@ -6242,7 +6271,7 @@
 .method public calculateFoldScreenSide(I)I
     .locals 3
 
-    .line 3973
+    .line 3984
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -6257,7 +6286,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 3974
+    .line 3985
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getCurrentScreenIndex()I
 
     move-result v0
@@ -6269,7 +6298,7 @@
     :cond_0
     return v1
 
-    .line 3976
+    .line 3987
     :cond_1
     invoke-virtual {p0, p1, v2}, Lcom/miui/home/launcher/Workspace;->calibrateFoldCurrentScreenIndex(IZ)I
 
@@ -6286,7 +6315,7 @@
 .method protected calibrateCurrentScreenIndex(I)I
     .locals 3
 
-    .line 3928
+    .line 3939
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -6297,7 +6326,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 3929
+    .line 3940
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mFoldScreenModeObserver:Lcom/miui/home/launcher/common/FoldScreenModeObserver;
 
     const/4 v1, 0x1
@@ -6322,14 +6351,14 @@
     :goto_0
     xor-int/2addr v0, v1
 
-    .line 3930
+    .line 3941
     invoke-virtual {p0, p1, v0}, Lcom/miui/home/launcher/Workspace;->calibrateFoldCurrentScreenIndex(IZ)I
 
     move-result p1
 
     goto :goto_1
 
-    .line 3932
+    .line 3943
     :cond_1
     invoke-super {p0, p1}, Lcom/miui/home/launcher/DragableScreenView;->calibrateCurrentScreenIndex(I)I
 
@@ -6342,7 +6371,7 @@
 .method public calibrateFoldCurrentScreenIndex(IZ)I
     .locals 6
 
-    .line 3938
+    .line 3949
     sget-object v0, Lcom/miui/home/launcher/util/FoldScreenIndexCalculator;->INSTANCE:Lcom/miui/home/launcher/util/FoldScreenIndexCalculator;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getScreenCount()I
@@ -6351,7 +6380,7 @@
 
     iget v3, p0, Lcom/miui/home/launcher/Workspace;->mCurrentScreenIndex:I
 
-    .line 3939
+    .line 3950
     invoke-direct {p0}, Lcom/miui/home/launcher/Workspace;->isLastCellLayoutEmpty()Z
 
     move-result v4
@@ -6360,12 +6389,12 @@
 
     move v5, p2
 
-    .line 3938
+    .line 3949
     invoke-virtual/range {v0 .. v5}, Lcom/miui/home/launcher/util/FoldScreenIndexCalculator;->obtainValidCurrentScreenIndex(IIIZZ)I
 
     move-result p1
 
-    .line 3940
+    .line 3951
     iget p2, p0, Lcom/miui/home/launcher/Workspace;->mScreenScrollLeftBound:I
 
     iget v0, p0, Lcom/miui/home/launcher/Workspace;->mScreenScrollRightBound:I
@@ -6407,7 +6436,7 @@
 
     move v1, v0
 
-    .line 3429
+    .line 3440
     :goto_0
     invoke-virtual {p1}, Lcom/miui/home/launcher/CellLayout;->getChildCount()I
 
@@ -6415,7 +6444,7 @@
 
     if-ge v1, v2, :cond_2
 
-    .line 3430
+    .line 3441
     invoke-virtual {p1, v1}, Lcom/miui/home/launcher/CellLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
@@ -6426,7 +6455,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 3431
+    .line 3442
     invoke-virtual {p1, v1}, Lcom/miui/home/launcher/CellLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
@@ -6437,7 +6466,7 @@
 
     check-cast v2, Lcom/miui/home/launcher/ShortcutInfo;
 
-    .line 3432
+    .line 3443
     invoke-virtual {v2}, Lcom/miui/home/launcher/ShortcutInfo;->isChecked()Z
 
     move-result v2
@@ -6446,7 +6475,7 @@
 
     return v3
 
-    .line 3435
+    .line 3446
     :cond_0
     invoke-virtual {p1, v1}, Lcom/miui/home/launcher/CellLayout;->getChildAt(I)Landroid/view/View;
 
@@ -6456,7 +6485,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 3436
+    .line 3447
     invoke-virtual {p1, v1}, Lcom/miui/home/launcher/CellLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
@@ -6487,22 +6516,22 @@
 .method public canScreenMakeRom()Z
     .locals 5
 
-    .line 3444
+    .line 3455
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 3445
+    .line 3456
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getCurrentCellLayout()Lcom/miui/home/launcher/CellLayout;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    .line 3447
+    .line 3458
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 3449
+    .line 3460
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->isTwoScreen()Z
 
@@ -6512,7 +6541,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 3450
+    .line 3461
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getCurrentScreenIndex()I
 
     move-result v1
@@ -6525,7 +6554,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 3452
+    .line 3463
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_1
@@ -6533,7 +6562,7 @@
 
     move v3, v1
 
-    .line 3455
+    .line 3466
     :goto_0
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -6541,7 +6570,7 @@
 
     if-ge v3, v4, :cond_3
 
-    .line 3456
+    .line 3467
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -6564,7 +6593,7 @@
     :cond_3
     move v3, v1
 
-    .line 3460
+    .line 3471
     :goto_1
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -6572,7 +6601,7 @@
 
     if-ge v3, v4, :cond_5
 
-    .line 3461
+    .line 3472
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -6599,7 +6628,7 @@
 .method public canShowSearchEffect()Z
     .locals 3
 
-    .line 3765
+    .line 3776
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getTouchState()I
 
     move-result v0
@@ -6608,7 +6637,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 3766
+    .line 3777
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getTouchState()I
 
     move-result v0
@@ -6617,7 +6646,7 @@
 
     if-eq v0, v2, :cond_1
 
-    .line 3767
+    .line 3778
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getTouchState()I
 
     move-result v0
@@ -6637,18 +6666,18 @@
 .method public cancelDragScroll()V
     .locals 3
 
-    .line 3523
+    .line 3534
     iget-boolean v0, p0, Lcom/miui/home/launcher/Workspace;->mIsSnaping:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 3526
+    .line 3537
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->cancelScroll()V
 
-    .line 3527
+    .line 3538
     iget v0, p0, Lcom/miui/home/launcher/Workspace;->mCurrentScreenIndex:I
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Workspace;->getScreenScrollX(I)I
@@ -6663,7 +6692,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 3529
+    .line 3540
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getScrollX()I
 
     move-result v1
@@ -6672,7 +6701,7 @@
 
     invoke-virtual {p0, v1, v0, v2}, Lcom/miui/home/launcher/Workspace;->startScroll(III)V
 
-    .line 3530
+    .line 3541
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->invalidate()V
 
     :cond_1
@@ -6682,27 +6711,27 @@
 .method public changeTargetScreenOrder(II)V
     .locals 6
 
-    .line 2736
+    .line 2740
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Workspace;->getScreen(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 2737
+    .line 2741
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getCurrentScreenId()J
 
     move-result-wide v1
 
-    .line 2738
+    .line 2742
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Workspace;->removeScreen(I)V
 
-    .line 2739
+    .line 2743
     invoke-virtual {p0, v0, p2}, Lcom/miui/home/launcher/Workspace;->addView(Landroid/view/View;I)V
 
     const/4 v0, 0x0
 
     move v3, v0
 
-    .line 2740
+    .line 2744
     :goto_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getScreenCount()I
 
@@ -6710,7 +6739,7 @@
 
     if-ge v3, v4, :cond_1
 
-    .line 2741
+    .line 2745
     invoke-virtual {p0, v3}, Lcom/miui/home/launcher/Workspace;->getCellLayout(I)Lcom/miui/home/launcher/CellLayout;
 
     move-result-object v4
@@ -6723,10 +6752,10 @@
 
     if-nez v4, :cond_0
 
-    .line 2742
+    .line 2746
     iput v3, p0, Lcom/miui/home/launcher/Workspace;->mCurrentScreenIndex:I
 
-    .line 2743
+    .line 2747
     iget-object v4, p0, Lcom/miui/home/launcher/Workspace;->mCurrentIndexMediator:Lcom/miui/home/launcher/common/CurrentIndexMediator;
 
     invoke-virtual {v4, v3, v0}, Lcom/miui/home/launcher/common/CurrentIndexMediator;->updateIndex(IZ)V
@@ -6736,7 +6765,7 @@
 
     goto :goto_0
 
-    .line 2746
+    .line 2750
     :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mIndexOrderedScreenIds:Ljava/util/List;
 
@@ -6746,12 +6775,12 @@
 
     check-cast p1, Ljava/lang/Long;
 
-    .line 2747
+    .line 2751
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mIndexOrderedScreenIds:Ljava/util/List;
 
     invoke-interface {v0, p2, p1}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
-    .line 2748
+    .line 2752
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->setScreenScrollRangeByCurrentScreenType()V
 
     return-void
@@ -6762,7 +6791,7 @@
 
     const/4 v0, 0x0
 
-    .line 3607
+    .line 3618
     :goto_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getScreenCount()I
 
@@ -6770,7 +6799,7 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 3608
+    .line 3619
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Workspace;->getCellLayout(I)Lcom/miui/home/launcher/CellLayout;
 
     move-result-object v1
@@ -6790,7 +6819,7 @@
 
     const/4 v0, 0x0
 
-    .line 3613
+    .line 3624
     :goto_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getScreenCount()I
 
@@ -6798,12 +6827,12 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 3614
+    .line 3625
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Workspace;->getCellLayout(I)Lcom/miui/home/launcher/CellLayout;
 
     move-result-object v1
 
-    .line 3615
+    .line 3626
     invoke-virtual {v1}, Lcom/miui/home/launcher/CellLayout;->clearToasted()V
 
     add-int/lit8 v0, v0, 0x1
@@ -6821,20 +6850,20 @@
 
     const-string v1, "clearScreens"
 
-    .line 2752
+    .line 2756
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2753
+    .line 2757
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mIndexOrderedScreenIds:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 2754
+    .line 2758
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mScreenIdToIndexMap:Landroid/util/LongSparseArray;
 
     invoke-virtual {v0}, Landroid/util/LongSparseArray;->clear()V
 
-    .line 2755
+    .line 2759
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->removeAllScreens()V
 
     return-void
@@ -6903,7 +6932,7 @@
 .method protected createIndicatorView()Lcom/miui/home/launcher/ScreenView$IndicatorView;
     .locals 2
 
-    .line 3817
+    .line 3828
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->supportAssistant()Z
 
     move-result v0
@@ -6914,7 +6943,7 @@
 
     if-nez v0, :cond_0
 
-    .line 3818
+    .line 3829
     new-instance v0, Lcom/miui/home/launcher/pageindicators/MultiSeekBarIndicator;
 
     iget-object v1, p0, Lcom/miui/home/launcher/Workspace;->mContext:Landroid/content/Context;
@@ -6923,7 +6952,7 @@
 
     return-object v0
 
-    .line 3820
+    .line 3831
     :cond_0
     new-instance v0, Lcom/miui/home/launcher/pageindicators/AllAppsIndicator;
 
@@ -7155,7 +7184,7 @@
 .method deleteScreen(J)V
     .locals 3
 
-    .line 3174
+    .line 3185
     invoke-virtual {p0, p1, p2}, Lcom/miui/home/launcher/Workspace;->getScreenIndexById(J)I
 
     move-result v0
@@ -7166,7 +7195,7 @@
 
     const-string v0, "Launcher.Workspace"
 
-    .line 3176
+    .line 3187
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -7185,7 +7214,7 @@
 
     return-void
 
-    .line 3179
+    .line 3190
     :cond_0
     invoke-virtual {p0, p1, p2}, Lcom/miui/home/launcher/Workspace;->isDeleteableScreen(J)Z
 
@@ -7195,7 +7224,7 @@
 
     return-void
 
-    .line 3182
+    .line 3193
     :cond_1
     invoke-virtual {p0, p1, p2}, Lcom/miui/home/launcher/Workspace;->getScreenIndexById(J)I
 
@@ -7205,7 +7234,7 @@
 
     move-result-object v0
 
-    .line 3183
+    .line 3194
     invoke-virtual {v0}, Lcom/miui/home/launcher/CellScreen;->getCellLayout()Lcom/miui/home/launcher/CellLayout;
 
     move-result-object v0
@@ -7218,7 +7247,7 @@
 
     return-void
 
-    .line 3185
+    .line 3196
     :cond_2
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
@@ -7232,7 +7261,7 @@
 
     invoke-virtual {v0, v1}, Lorg/greenrobot/eventbus/EventBus;->post(Ljava/lang/Object;)V
 
-    .line 3187
+    .line 3198
     invoke-static {p1, p2}, Lcom/miui/home/launcher/ScreenUtils;->deleteScreen(J)V
 
     return-void
@@ -7433,12 +7462,12 @@
 
     const-string v0, " Workspace Items:\n"
 
-    .line 3882
+    .line 3893
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
-    .line 3883
+    .line 3894
     :goto_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getScreenCount()I
 
@@ -7446,14 +7475,14 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 3884
+    .line 3895
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Workspace;->getCellLayout(I)Lcom/miui/home/launcher/CellLayout;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    .line 3886
+    .line 3897
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -7480,7 +7509,7 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 3887
+    .line 3898
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
     :cond_0
@@ -7714,7 +7743,7 @@
 .method public findScreenFirstVacantArea(IILcom/miui/home/launcher/CellScreen;)[I
     .locals 0
 
-    .line 3646
+    .line 3657
     invoke-virtual {p3}, Lcom/miui/home/launcher/CellScreen;->getCellLayout()Lcom/miui/home/launcher/CellLayout;
 
     move-result-object p3
@@ -7725,13 +7754,132 @@
 
     return-object p1
 
-    .line 3650
+    .line 3661
     :cond_0
     invoke-virtual {p3, p1, p2}, Lcom/miui/home/launcher/CellLayout;->findFirstVacantArea(II)[I
 
     move-result-object p1
 
     return-object p1
+.end method
+
+.method findSingleSlot(IIJZ)Lcom/miui/home/launcher/CellLayout$CellInfo;
+    .locals 8
+
+    const/4 v3, 0x1
+
+    const/4 v4, 0x1
+
+    move-object v0, p0
+
+    move v1, p1
+
+    move v2, p2
+
+    move-wide v5, p3
+
+    move v7, p5
+
+    .line 3996
+    invoke-direct/range {v0 .. v7}, Lcom/miui/home/launcher/Workspace;->findSlot(IIIIJZ)Lcom/miui/home/launcher/CellLayout$CellInfo;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method findSlot(JIIIIZ)Lcom/miui/home/launcher/CellLayout$CellInfo;
+    .locals 2
+
+    const-wide/16 v0, -0x1
+
+    cmp-long v0, p1, v0
+
+    if-nez v0, :cond_0
+
+    .line 4004
+    invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getCurrentCellLayout()Lcom/miui/home/launcher/CellLayout;
+
+    move-result-object p1
+
+    goto :goto_0
+
+    .line 4005
+    :cond_0
+    invoke-virtual {p0, p1, p2}, Lcom/miui/home/launcher/Workspace;->getScreenIndexById(J)I
+
+    move-result p1
+
+    invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Workspace;->getCellLayout(I)Lcom/miui/home/launcher/CellLayout;
+
+    move-result-object p1
+
+    :goto_0
+    const/4 p2, 0x0
+
+    if-nez p1, :cond_1
+
+    return-object p2
+
+    .line 4010
+    :cond_1
+    invoke-virtual {p1, p3, p4, p5, p6}, Lcom/miui/home/launcher/CellLayout;->findNearestVacantAreaByCellPos(IIII)[I
+
+    move-result-object p1
+
+    if-nez p1, :cond_3
+
+    if-eqz p7, :cond_2
+
+    .line 4013
+    iget-object p1, p0, Lcom/miui/home/launcher/Workspace;->mLauncher:Lcom/miui/home/launcher/Launcher;
+
+    const p3, 0x7f100334
+
+    invoke-virtual {p1, p3}, Lcom/miui/home/launcher/Launcher;->showError(I)V
+
+    :cond_2
+    return-object p2
+
+    .line 4018
+    :cond_3
+    new-instance p2, Lcom/miui/home/launcher/CellLayout$CellInfo;
+
+    invoke-direct {p2}, Lcom/miui/home/launcher/CellLayout$CellInfo;-><init>()V
+
+    const/4 p3, 0x0
+
+    .line 4019
+    aget p3, p1, p3
+
+    iput p3, p2, Lcom/miui/home/launcher/CellLayout$CellInfo;->cellX:I
+
+    const/4 p3, 0x1
+
+    .line 4020
+    aget p1, p1, p3
+
+    iput p1, p2, Lcom/miui/home/launcher/CellLayout$CellInfo;->cellY:I
+
+    .line 4021
+    iput p5, p2, Lcom/miui/home/launcher/CellLayout$CellInfo;->spanX:I
+
+    .line 4022
+    iput p6, p2, Lcom/miui/home/launcher/CellLayout$CellInfo;->spanY:I
+
+    const/16 p1, -0x64
+
+    .line 4023
+    iput p1, p2, Lcom/miui/home/launcher/CellLayout$CellInfo;->container:I
+
+    .line 4024
+    invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getCurrentScreenId()J
+
+    move-result-wide p3
+
+    iput-wide p3, p2, Lcom/miui/home/launcher/CellLayout$CellInfo;->screenId:J
+
+    return-object p2
 .end method
 
 .method public finishCurrentGesture()V
@@ -7758,7 +7906,7 @@
 
     return-void
 
-    .line 2760
+    .line 2764
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mIndexOrderedScreenIds:Ljava/util/List;
 
@@ -7768,14 +7916,14 @@
 
     if-gtz v0, :cond_2
 
-    .line 2764
+    .line 2768
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     const/4 v1, 0x0
 
-    .line 2765
+    .line 2769
     :goto_0
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
@@ -7783,14 +7931,14 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 2766
+    .line 2770
     invoke-virtual {p1, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/miui/home/launcher/ScreenUtils$ScreenInfo;
 
-    .line 2767
+    .line 2771
     iget-object v3, p0, Lcom/miui/home/launcher/Workspace;->mIndexOrderedScreenIds:Ljava/util/List;
 
     iget-wide v4, v2, Lcom/miui/home/launcher/ScreenUtils$ScreenInfo;->screenId:J
@@ -7801,7 +7949,7 @@
 
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2768
+    .line 2772
     iget-object v3, p0, Lcom/miui/home/launcher/Workspace;->mScreenIdToIndexMap:Landroid/util/LongSparseArray;
 
     iget-wide v4, v2, Lcom/miui/home/launcher/ScreenUtils$ScreenInfo;->screenId:J
@@ -7814,7 +7962,7 @@
 
     invoke-virtual {v3, v4, v5, v6}, Landroid/util/LongSparseArray;->put(JLjava/lang/Object;)V
 
-    .line 2769
+    .line 2773
     iget v2, v2, Lcom/miui/home/launcher/ScreenUtils$ScreenInfo;->screenType:I
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -7827,16 +7975,16 @@
 
     goto :goto_0
 
-    .line 2771
+    .line 2775
     :cond_1
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/Workspace;->reloadScreens(Ljava/util/ArrayList;)V
 
-    .line 2772
+    .line 2776
     invoke-direct {p0}, Lcom/miui/home/launcher/Workspace;->setupCurrentScreen()V
 
     return-void
 
-    .line 2761
+    .line 2765
     :cond_2
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -7874,7 +8022,7 @@
 
     iget-object v1, p0, Lcom/miui/home/launcher/Workspace;->mScreenIdToIndexMap:Landroid/util/LongSparseArray;
 
-    .line 2762
+    .line 2766
     invoke-virtual {v1}, Landroid/util/LongSparseArray;->size()I
 
     move-result v1
@@ -7905,14 +8053,14 @@
 .method public getAllAppsIndicator()Lcom/miui/home/launcher/pageindicators/AllAppsIndicator;
     .locals 1
 
-    .line 3327
+    .line 3338
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mScreenSeekBar:Lcom/miui/home/launcher/ScreenView$IndicatorView;
 
     instance-of v0, v0, Lcom/miui/home/launcher/pageindicators/AllAppsIndicator;
 
     if-eqz v0, :cond_0
 
-    .line 3328
+    .line 3339
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mScreenSeekBar:Lcom/miui/home/launcher/ScreenView$IndicatorView;
 
     check-cast v0, Lcom/miui/home/launcher/pageindicators/AllAppsIndicator;
@@ -8073,6 +8221,21 @@
     return-object v0
 .end method
 
+.method public getCurrentRightCellLayout()Lcom/miui/home/launcher/CellLayout;
+    .locals 1
+
+    .line 2662
+    iget v0, p0, Lcom/miui/home/launcher/Workspace;->mCurrentScreenIndex:I
+
+    add-int/lit8 v0, v0, 0x1
+
+    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Workspace;->getCellLayout(I)Lcom/miui/home/launcher/CellLayout;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public getCurrentScreenId()J
     .locals 2
 
@@ -8138,7 +8301,7 @@
         }
     .end annotation
 
-    .line 3812
+    .line 3823
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getCurrentCellLayout()Lcom/miui/home/launcher/CellLayout;
 
     move-result-object v0
@@ -8411,7 +8574,7 @@
 
     move v1, v0
 
-    .line 2725
+    .line 2729
     :goto_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getScreenCount()I
 
@@ -8421,19 +8584,19 @@
 
     if-gt v1, v2, :cond_1
 
-    .line 2726
+    .line 2730
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/Workspace;->getCellScreen(I)Lcom/miui/home/launcher/CellScreen;
 
     move-result-object v2
 
-    .line 2727
+    .line 2731
     invoke-virtual {v2}, Lcom/miui/home/launcher/CellScreen;->getCellLayout()Lcom/miui/home/launcher/CellLayout;
 
     move-result-object v3
 
     if-eqz v3, :cond_0
 
-    .line 2728
+    .line 2732
     invoke-virtual {v3}, Lcom/miui/home/launcher/CellLayout;->isEmpty()Z
 
     move-result v3
@@ -8447,7 +8610,7 @@
 
     goto :goto_0
 
-    .line 2732
+    .line 2736
     :cond_1
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Workspace;->getCellScreen(I)Lcom/miui/home/launcher/CellScreen;
 
@@ -8513,7 +8676,7 @@
 .method public getLastCellScreen()Lcom/miui/home/launcher/CellScreen;
     .locals 1
 
-    .line 2667
+    .line 2671
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getScreenCount()I
 
     move-result v0
@@ -8532,7 +8695,7 @@
 
     const/4 v0, 0x1
 
-    .line 2714
+    .line 2718
     :goto_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getScreenCount()I
 
@@ -8540,7 +8703,7 @@
 
     if-gt v0, v1, :cond_1
 
-    .line 2715
+    .line 2719
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getScreenCount()I
 
     move-result v1
@@ -8551,14 +8714,14 @@
 
     move-result-object v1
 
-    .line 2716
+    .line 2720
     invoke-virtual {v1}, Lcom/miui/home/launcher/CellScreen;->getCellLayout()Lcom/miui/home/launcher/CellLayout;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    .line 2717
+    .line 2721
     invoke-virtual {v2}, Lcom/miui/home/launcher/CellLayout;->isEmpty()Z
 
     move-result v2
@@ -8575,7 +8738,7 @@
     :cond_1
     const/4 v0, 0x0
 
-    .line 2721
+    .line 2725
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Workspace;->getCellScreen(I)Lcom/miui/home/launcher/CellScreen;
 
     move-result-object v0
@@ -8592,7 +8755,7 @@
 .method public getPreviousScreenTransitionType()I
     .locals 1
 
-    .line 2990
+    .line 3001
     iget v0, p0, Lcom/miui/home/launcher/Workspace;->mOldTransitionType:I
 
     return v0
@@ -8666,17 +8829,17 @@
 .method public getScreenIndicator()Landroid/view/View;
     .locals 1
 
-    .line 3319
+    .line 3330
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mScreenSeekBar:Lcom/miui/home/launcher/ScreenView$IndicatorView;
 
     if-eqz v0, :cond_0
 
-    .line 3320
+    .line 3331
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mScreenSeekBar:Lcom/miui/home/launcher/ScreenView$IndicatorView;
 
     return-object v0
 
-    .line 3322
+    .line 3333
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mSlideBar:Lcom/miui/home/launcher/ScreenView$SlideBar;
 
@@ -8701,7 +8864,7 @@
 .method public getScrollZone()I
     .locals 1
 
-    .line 3399
+    .line 3410
     iget v0, p0, Lcom/miui/home/launcher/Workspace;->mScrollZone:I
 
     return v0
@@ -8718,7 +8881,7 @@
 .method protected getSnapOverScroll()I
     .locals 3
 
-    .line 3594
+    .line 3605
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -8739,13 +8902,13 @@
 
     return v1
 
-    .line 3597
+    .line 3608
     :cond_0
     iget v0, p0, Lcom/miui/home/launcher/Workspace;->mCurrentDragingScrollDirection:I
 
     if-nez v0, :cond_1
 
-    .line 3598
+    .line 3609
     iget v0, p0, Lcom/miui/home/launcher/Workspace;->mDragScrollAnimationDistance:I
 
     neg-int v0, v0
@@ -8757,7 +8920,7 @@
 
     if-ne v0, v2, :cond_2
 
-    .line 3601
+    .line 3612
     iget v0, p0, Lcom/miui/home/launcher/Workspace;->mDragScrollAnimationDistance:I
 
     return v0
@@ -8769,19 +8932,19 @@
 .method protected getSnapUnitIndex(I)I
     .locals 1
 
-    .line 3586
+    .line 3597
     invoke-direct {p0}, Lcom/miui/home/launcher/Workspace;->isNeedCorrectIndex()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 3587
+    .line 3598
     iget p1, p0, Lcom/miui/home/launcher/Workspace;->mCurrentScreenIndex:I
 
     return p1
 
-    .line 3589
+    .line 3600
     :cond_0
     invoke-super {p0, p1}, Lcom/miui/home/launcher/DragableScreenView;->getSnapUnitIndex(I)I
 
@@ -8823,7 +8986,7 @@
 
     move v1, v0
 
-    .line 3046
+    .line 3057
     :goto_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getScreenCount()I
 
@@ -8831,14 +8994,14 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 3047
+    .line 3058
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/Workspace;->getCellScreen(I)Lcom/miui/home/launcher/CellScreen;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    .line 3048
+    .line 3059
     invoke-virtual {v2}, Lcom/miui/home/launcher/CellScreen;->isAnimating()Z
 
     move-result v2
@@ -8863,7 +9026,7 @@
 
     const/4 v0, 0x0
 
-    .line 3232
+    .line 3243
     invoke-virtual {p0, p1, v0}, Lcom/miui/home/launcher/Workspace;->insertNewScreen(ILcom/miui/home/launcher/Launcher$WaitForAddScreenReadyTask;)V
 
     return-void
@@ -8878,7 +9041,7 @@
 
     if-ne p1, v1, :cond_0
 
-    .line 3239
+    .line 3250
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getCurrentScreenIndex()I
 
     move-result p1
@@ -8890,17 +9053,17 @@
     :cond_0
     const/4 v1, 0x1
 
-    .line 3243
+    .line 3254
     iput-boolean v1, p0, Lcom/miui/home/launcher/Workspace;->mIsInsertingNewScreen:Z
 
     if-eqz p2, :cond_2
 
-    .line 3246
+    .line 3257
     iget-object v1, p0, Lcom/miui/home/launcher/Workspace;->mCallbacksWhenScreenReady:Ljava/util/ArrayList;
 
     monitor-enter v1
 
-    .line 3247
+    .line 3258
     :try_start_0
     invoke-direct {p0, p2}, Lcom/miui/home/launcher/Workspace;->checkIsDupTask(Lcom/miui/home/launcher/Launcher$WaitForAddScreenReadyTask;)Z
 
@@ -8908,12 +9071,12 @@
 
     if-nez v2, :cond_1
 
-    .line 3248
+    .line 3259
     iget-object v2, p0, Lcom/miui/home/launcher/Workspace;->mCallbacksWhenScreenReady:Ljava/util/ArrayList;
 
     invoke-virtual {v2, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 3250
+    .line 3261
     :cond_1
     monitor-exit v1
 
@@ -8928,7 +9091,7 @@
 
     throw p1
 
-    .line 3252
+    .line 3263
     :cond_2
     :goto_0
     invoke-static {v0, v0, p1}, Lcom/miui/home/launcher/ScreenUtils;->insertNewScreen(III)V
@@ -8939,7 +9102,7 @@
 .method public isAllItemsCheckedInLastNoEmtpyScreen()Z
     .locals 5
 
-    .line 3403
+    .line 3414
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getScreenCount()I
 
     move-result v0
@@ -8952,7 +9115,7 @@
 
     move-result-object v0
 
-    .line 3404
+    .line 3415
     invoke-virtual {v0}, Lcom/miui/home/launcher/CellLayout;->isEmpty()Z
 
     move-result v2
@@ -8965,7 +9128,7 @@
 
     if-le v2, v1, :cond_0
 
-    .line 3405
+    .line 3416
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getScreenCount()I
 
     move-result v0
@@ -8981,7 +9144,7 @@
 
     move v3, v2
 
-    .line 3408
+    .line 3419
     :goto_0
     invoke-virtual {v0}, Lcom/miui/home/launcher/CellLayout;->getChildCount()I
 
@@ -8989,7 +9152,7 @@
 
     if-ge v3, v4, :cond_4
 
-    .line 3409
+    .line 3420
     invoke-virtual {v0, v3}, Lcom/miui/home/launcher/CellLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v4
@@ -8998,7 +9161,7 @@
 
     if-eqz v4, :cond_1
 
-    .line 3410
+    .line 3421
     invoke-virtual {v0, v3}, Lcom/miui/home/launcher/CellLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v4
@@ -9009,14 +9172,14 @@
 
     check-cast v4, Lcom/miui/home/launcher/ShortcutInfo;
 
-    .line 3411
+    .line 3422
     invoke-virtual {v4}, Lcom/miui/home/launcher/ShortcutInfo;->isChecked()Z
 
     move-result v4
 
     goto :goto_1
 
-    .line 3412
+    .line 3423
     :cond_1
     invoke-virtual {v0, v3}, Lcom/miui/home/launcher/CellLayout;->getChildAt(I)Landroid/view/View;
 
@@ -9026,7 +9189,7 @@
 
     if-eqz v4, :cond_3
 
-    .line 3413
+    .line 3424
     invoke-virtual {v0, v3}, Lcom/miui/home/launcher/CellLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v4
@@ -9061,14 +9224,14 @@
 .method public isCurrentScreenNeedAlignIconsToTop()Z
     .locals 1
 
-    .line 2662
+    .line 2666
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getCurrentCellLayout()Lcom/miui/home/launcher/CellLayout;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 2663
+    .line 2667
     invoke-virtual {v0}, Lcom/miui/home/launcher/CellLayout;->needAlignIconsToTop()Z
 
     move-result v0
@@ -9140,7 +9303,7 @@
 .method isDeleteableScreen(J)Z
     .locals 4
 
-    .line 3142
+    .line 3153
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getScreenCount()I
 
     move-result v0
@@ -9153,7 +9316,7 @@
 
     return v1
 
-    .line 3145
+    .line 3156
     :cond_0
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isRotatable()Z
 
@@ -9161,19 +9324,19 @@
 
     if-eqz v0, :cond_3
 
-    .line 3146
+    .line 3157
     invoke-virtual {p0, p1, p2}, Lcom/miui/home/launcher/Workspace;->getScreenIndexById(J)I
 
     move-result p1
 
-    .line 3147
+    .line 3158
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Workspace;->getScreenType(I)I
 
     move-result p2
 
     move v0, v1
 
-    .line 3148
+    .line 3159
     :goto_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getScreenCount()I
 
@@ -9183,7 +9346,7 @@
 
     if-eq p1, v0, :cond_1
 
-    .line 3150
+    .line 3161
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Workspace;->getCellLayout(I)Lcom/miui/home/launcher/CellLayout;
 
     move-result-object v3
@@ -9529,7 +9692,7 @@
 .method public isShowScreenSeekBar()Z
     .locals 1
 
-    .line 3807
+    .line 3818
     iget-boolean v0, p0, Lcom/miui/home/launcher/Workspace;->mShowEditingIndicator:Z
 
     if-eqz v0, :cond_0
@@ -9602,7 +9765,7 @@
 .method public isTwoScreen()Z
     .locals 2
 
-    .line 3425
+    .line 3436
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -9729,7 +9892,7 @@
 .method public onAlertGadget(Lcom/miui/home/launcher/ItemInfo;)V
     .locals 4
 
-    .line 3313
+    .line 3324
     instance-of v0, p1, Lcom/miui/home/launcher/gadget/GadgetInfo;
 
     if-eqz v0, :cond_0
@@ -9742,7 +9905,7 @@
 
     if-nez p1, :cond_0
 
-    .line 3314
+    .line 3325
     iget-object p1, p0, Lcom/miui/home/launcher/Workspace;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->updateStatusBarClock()V
@@ -9799,12 +9962,12 @@
 .method public onDeviceProfileChanged(Lcom/miui/home/launcher/DeviceProfile;)V
     .locals 1
 
-    .line 3901
+    .line 3912
     invoke-direct {p0}, Lcom/miui/home/launcher/Workspace;->loadIndicatorMarginBottom()V
 
     const/4 p1, 0x0
 
-    .line 3902
+    .line 3913
     :goto_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getScreenCount()I
 
@@ -9812,14 +9975,14 @@
 
     if-ge p1, v0, :cond_1
 
-    .line 3903
+    .line 3914
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Workspace;->getCellScreen(I)Lcom/miui/home/launcher/CellScreen;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 3905
+    .line 3916
     invoke-virtual {v0}, Lcom/miui/home/launcher/CellScreen;->onScreenOrientationChanged()V
 
     :cond_0
@@ -9827,7 +9990,7 @@
 
     goto :goto_0
 
-    .line 3908
+    .line 3919
     :cond_1
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->isInNormalEditingMode()Z
 
@@ -9835,12 +9998,12 @@
 
     if-eqz p1, :cond_2
 
-    .line 3909
+    .line 3920
     iget-object p1, p0, Lcom/miui/home/launcher/Workspace;->mResetEditingViewsAfterScreenOrientationChanged:Ljava/lang/Runnable;
 
     iput-object p1, p0, Lcom/miui/home/launcher/Workspace;->mCallbackAfterNextLayout:Ljava/lang/Runnable;
 
-    .line 3910
+    .line 3921
     iget-boolean p1, p0, Lcom/miui/home/launcher/Workspace;->mShowEditingIndicator:Z
 
     if-eqz p1, :cond_2
@@ -9849,7 +10012,7 @@
 
     if-eqz p1, :cond_2
 
-    .line 3911
+    .line 3922
     iget-object p1, p0, Lcom/miui/home/launcher/Workspace;->mScreenSeekBar:Lcom/miui/home/launcher/ScreenView$IndicatorView;
 
     iget v0, p0, Lcom/miui/home/launcher/Workspace;->mIndicatorOffsetBottomPortrait:I
@@ -9858,7 +10021,7 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/ScreenView$IndicatorView;->setTranslationY(F)V
 
-    .line 3914
+    .line 3925
     :cond_2
     iget-object p1, p0, Lcom/miui/home/launcher/Workspace;->mTransitionEffect:Lcom/miui/home/launcher/transitioneffects/TransitionEffectSwitcher;
 
@@ -10620,7 +10783,7 @@
 
     const/4 v3, 0x0
 
-    const v4, 0x7f100315
+    const v4, 0x7f10031c
 
     invoke-static {v2, v4, v3}, Lcom/miui/home/launcher/common/Utilities;->showImprovedToast(Landroid/content/Context;II)V
 
@@ -10676,7 +10839,7 @@
 
     :cond_14
     :goto_6
-    const v4, 0x7f100315
+    const v4, 0x7f10031c
 
     .line 1236
     invoke-virtual/range {p0 .. p0}, Lcom/miui/home/launcher/Workspace;->getContext()Landroid/content/Context;
@@ -10690,7 +10853,7 @@
 
     if-eqz v1, :cond_15
 
-    const v4, 0x7f100316
+    const v4, 0x7f10031e
 
     :cond_15
     const/4 v1, 0x0
@@ -10941,12 +11104,12 @@
 .method onEditingModeEnterEnd()V
     .locals 2
 
-    .line 2953
+    .line 2964
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mScreenSeekBar:Lcom/miui/home/launcher/ScreenView$IndicatorView;
 
     if-eqz v0, :cond_0
 
-    .line 2954
+    .line 2965
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mScreenSeekBar:Lcom/miui/home/launcher/ScreenView$IndicatorView;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/ScreenView$IndicatorView;->invalidate()V
@@ -10954,7 +11117,7 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 2957
+    .line 2968
     :goto_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getScreenCount()I
 
@@ -10962,14 +11125,14 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 2958
+    .line 2969
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Workspace;->getCellScreen(I)Lcom/miui/home/launcher/CellScreen;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
-    .line 2960
+    .line 2971
     invoke-virtual {v1}, Lcom/miui/home/launcher/CellScreen;->onEditingAnimationEnterEnd()V
 
     :cond_1
@@ -10984,22 +11147,22 @@
 .method onEditingModeExitEnd()V
     .locals 3
 
-    .line 2972
+    .line 2983
     iget v0, p0, Lcom/miui/home/launcher/Workspace;->mOldTransitionType:I
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Workspace;->setScreenTransitionType(I)I
 
-    .line 2973
+    .line 2984
     invoke-direct {p0}, Lcom/miui/home/launcher/Workspace;->updateHotseatPosition()V
 
-    .line 2974
+    .line 2985
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->invalidate()V
 
     const/4 v0, 0x0
 
     move v1, v0
 
-    .line 2976
+    .line 2987
     :goto_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getScreenCount()I
 
@@ -11007,17 +11170,17 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 2977
+    .line 2988
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/Workspace;->getCellScreen(I)Lcom/miui/home/launcher/CellScreen;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    .line 2979
+    .line 2990
     invoke-virtual {v2}, Lcom/miui/home/launcher/CellScreen;->onEditingAnimationExitEnd()V
 
-    .line 2980
+    .line 2991
     invoke-virtual {v2, v0}, Lcom/miui/home/launcher/CellScreen;->setVisibility(I)V
 
     :cond_0
@@ -11025,18 +11188,18 @@
 
     goto :goto_0
 
-    .line 2983
+    .line 2994
     :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mEditAnimateFinishRunnable:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_2
 
-    .line 2984
+    .line 2995
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
     const/4 v0, 0x0
 
-    .line 2985
+    .line 2996
     iput-object v0, p0, Lcom/miui/home/launcher/Workspace;->mEditAnimateFinishRunnable:Ljava/lang/Runnable;
 
     :cond_2
@@ -11046,29 +11209,29 @@
 .method public onEnterScrollArea(IIILandroid/view/MotionEvent;)Z
     .locals 3
 
-    .line 3536
+    .line 3547
     iput p3, p0, Lcom/miui/home/launcher/Workspace;->mCurrentDragingScrollDirection:I
 
-    .line 3537
+    .line 3548
     invoke-virtual {p0, p3, p4}, Lcom/miui/home/launcher/Workspace;->startDragScrollAnimator(ILandroid/view/MotionEvent;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 3539
+    .line 3550
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mScrollFiledTipAnimatorRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Workspace;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 3540
+    .line 3551
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mScrollFiledTipAnimatorRunnable:Ljava/lang/Runnable;
 
     const-wide/16 v1, 0x15e
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/miui/home/launcher/Workspace;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 3542
+    .line 3553
     :cond_0
     invoke-super {p0, p1, p2, p3, p4}, Lcom/miui/home/launcher/DragableScreenView;->onEnterScrollArea(IIILandroid/view/MotionEvent;)Z
 
@@ -11082,23 +11245,23 @@
 
     const/4 v0, -0x1
 
-    .line 3577
+    .line 3588
     iput v0, p0, Lcom/miui/home/launcher/Workspace;->mCurrentDragingScrollDirection:I
 
-    .line 3578
+    .line 3589
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mDragToNextScreenRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Workspace;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 3579
+    .line 3590
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mScrollFiledTipAnimatorRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Workspace;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 3580
+    .line 3591
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->cancelDragScroll()V
 
-    .line 3581
+    .line 3592
     invoke-super {p0}, Lcom/miui/home/launcher/DragableScreenView;->onExitScrollArea()Z
 
     move-result v0
@@ -11337,42 +11500,42 @@
 .method protected onLayout(ZIIII)V
     .locals 2
 
-    .line 2864
+    .line 2868
     invoke-super/range {p0 .. p5}, Lcom/miui/home/launcher/DragableScreenView;->onLayout(ZIIII)V
 
-    .line 2865
+    .line 2869
     iget-object p1, p0, Lcom/miui/home/launcher/Workspace;->mCallbackAfterNextLayout:Ljava/lang/Runnable;
 
     if-eqz p1, :cond_0
 
-    .line 2866
+    .line 2870
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Workspace;->post(Ljava/lang/Runnable;)Z
 
     const/4 p1, 0x0
 
-    .line 2867
+    .line 2871
     iput-object p1, p0, Lcom/miui/home/launcher/Workspace;->mCallbackAfterNextLayout:Ljava/lang/Runnable;
 
-    .line 2869
+    .line 2873
     :cond_0
     invoke-direct {p0}, Lcom/miui/home/launcher/Workspace;->updateHotseatPosition()V
 
-    .line 2870
+    .line 2874
     iget-object p1, p0, Lcom/miui/home/launcher/Workspace;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     if-eqz p1, :cond_3
 
-    .line 2871
+    .line 2875
     iget-object p1, p0, Lcom/miui/home/launcher/Workspace;->mLocationOnScreen:[I
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Workspace;->getLocationOnScreen([I)V
 
-    .line 2872
+    .line 2876
     iget-object p1, p0, Lcom/miui/home/launcher/Workspace;->mLocationInWindow:[I
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Workspace;->getLocationInWindow([I)V
 
-    .line 2873
+    .line 2877
     iget-object p1, p0, Lcom/miui/home/launcher/Workspace;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     iget-object p2, p0, Lcom/miui/home/launcher/Workspace;->mLocationOnScreen:[I
@@ -11408,22 +11571,12 @@
 .method public onMultiWindowModeChanged(Z)V
     .locals 2
 
-    .line 2908
-    invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/miui/home/launcher/DeviceConfig;->getWorkspacePaddingTop(Landroid/content/Context;)F
-
-    move-result v0
-
-    float-to-int v0, v0
-
-    invoke-static {p0, v0}, Lcom/miui/home/launcher/common/ViewFunctions;->setViewPaddingTop(Landroid/view/View;I)V
+    .line 2919
+    invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->updateWorkspacePaddingTop()V
 
     const/4 v0, 0x0
 
-    .line 2910
+    .line 2921
     :goto_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getScreenCount()I
 
@@ -11431,14 +11584,14 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 2911
+    .line 2922
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Workspace;->getCellScreen(I)Lcom/miui/home/launcher/CellScreen;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    .line 2913
+    .line 2924
     invoke-virtual {v1, p1}, Lcom/miui/home/launcher/CellScreen;->onMultiWindowModeChanged(Z)V
 
     :cond_0
@@ -11453,7 +11606,7 @@
 .method public onOverlayAnimPause()V
     .locals 1
 
-    .line 3965
+    .line 3976
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mCurrentIndexMediator:Lcom/miui/home/launcher/common/CurrentIndexMediator;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/common/CurrentIndexMediator;->onPause()V
@@ -11464,7 +11617,7 @@
 .method public onOverlayAnimResume()V
     .locals 1
 
-    .line 3961
+    .line 3972
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mCurrentIndexMediator:Lcom/miui/home/launcher/common/CurrentIndexMediator;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/common/CurrentIndexMediator;->onResume()V
@@ -11477,7 +11630,7 @@
 
     const/4 v0, 0x0
 
-    .line 3683
+    .line 3694
     invoke-static {p1, v0}, Ljava/lang/Math;->max(FF)F
 
     move-result p1
@@ -11488,7 +11641,7 @@
 
     move-result p1
 
-    .line 3684
+    .line 3695
     iget-object v2, p0, Lcom/miui/home/launcher/Workspace;->mAlphaInterpolator:Landroid/view/animation/Interpolator;
 
     invoke-interface {v2, p1}, Landroid/view/animation/Interpolator;->getInterpolation(F)F
@@ -11497,7 +11650,7 @@
 
     sub-float v2, v1, v2
 
-    .line 3685
+    .line 3696
     iget-object v3, p0, Lcom/miui/home/launcher/Workspace;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v3}, Lcom/miui/home/launcher/Launcher;->getDragLayer()Lcom/miui/home/launcher/DragLayer;
@@ -11512,7 +11665,7 @@
 
     mul-float/2addr v3, p1
 
-    .line 3686
+    .line 3697
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isLayoutRtl()Z
 
     move-result p1
@@ -11521,23 +11674,23 @@
 
     neg-float v3, v3
 
-    .line 3689
+    .line 3700
     :cond_0
     sget-object p1, Lcom/miui/home/launcher/Workspace$DirectionProperty;->X:Lcom/miui/home/launcher/Workspace$DirectionProperty;
 
     invoke-direct {p0, p1, v3}, Lcom/miui/home/launcher/Workspace;->setWorkspaceProperty(Lcom/miui/home/launcher/Workspace$DirectionProperty;F)V
 
-    .line 3690
+    .line 3701
     sget-object p1, Lcom/miui/home/launcher/Workspace$DirectionProperty;->ALPHA:Lcom/miui/home/launcher/Workspace$DirectionProperty;
 
     invoke-direct {p0, p1, v2}, Lcom/miui/home/launcher/Workspace;->setWorkspaceProperty(Lcom/miui/home/launcher/Workspace$DirectionProperty;F)V
 
-    .line 3691
+    .line 3702
     sget-object p1, Lcom/miui/home/launcher/Workspace$DirectionProperty;->X:Lcom/miui/home/launcher/Workspace$DirectionProperty;
 
     invoke-virtual {p0, p1, v3}, Lcom/miui/home/launcher/Workspace;->setHotseatAndSearchBarProperty(Lcom/miui/home/launcher/Workspace$DirectionProperty;F)V
 
-    .line 3692
+    .line 3703
     sget-object p1, Lcom/miui/home/launcher/Workspace$DirectionProperty;->ALPHA:Lcom/miui/home/launcher/Workspace$DirectionProperty;
 
     invoke-virtual {p0, p1, v2}, Lcom/miui/home/launcher/Workspace;->setHotseatAndSearchBarProperty(Lcom/miui/home/launcher/Workspace$DirectionProperty;F)V
@@ -11546,7 +11699,7 @@
 
     if-nez p1, :cond_1
 
-    .line 3694
+    .line 3705
     iget-object p1, p0, Lcom/miui/home/launcher/Workspace;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/Launcher;->setLauncherWindowAlpha(F)V
@@ -11556,7 +11709,7 @@
     :cond_1
     if-lez p1, :cond_2
 
-    .line 3696
+    .line 3707
     iget-object p1, p0, Lcom/miui/home/launcher/Workspace;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1, v1}, Lcom/miui/home/launcher/Launcher;->setLauncherWindowAlpha(F)V
@@ -11571,15 +11724,15 @@
 
     const/4 v0, 0x1
 
-    .line 2835
+    .line 2839
     iput-boolean v0, p0, Lcom/miui/home/launcher/Workspace;->mOnlyDrawCurrentScreen:Z
 
-    .line 2836
+    .line 2840
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mCurrentIndexMediator:Lcom/miui/home/launcher/common/CurrentIndexMediator;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/common/CurrentIndexMediator;->onPause()V
 
-    .line 2837
+    .line 2841
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mRestoreBlurRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Workspace;->removeCallbacks(Ljava/lang/Runnable;)Z
@@ -11831,12 +11984,12 @@
 .method onQuickModeExitEnd()V
     .locals 1
 
-    .line 2966
+    .line 2977
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mAddResizeFrameRunnable:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_0
 
-    .line 2967
+    .line 2978
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
     :cond_0
@@ -11908,17 +12061,17 @@
 .method public onResume()V
     .locals 1
 
-    .line 2842
+    .line 2846
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mCurrentIndexMediator:Lcom/miui/home/launcher/common/CurrentIndexMediator;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/common/CurrentIndexMediator;->onCreate()V
 
     const/4 v0, 0x0
 
-    .line 2843
+    .line 2847
     iput-boolean v0, p0, Lcom/miui/home/launcher/Workspace;->mOnlyDrawCurrentScreen:Z
 
-    .line 2844
+    .line 2848
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mRestoreBlurRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Workspace;->post(Ljava/lang/Runnable;)Z
@@ -11963,14 +12116,14 @@
 .method public onScreenSizeChanged()V
     .locals 2
 
-    .line 2892
+    .line 2900
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isHasNavigationBar()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2893
+    .line 2901
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -11993,19 +12146,19 @@
     :goto_0
     iput v0, p0, Lcom/miui/home/launcher/Workspace;->mVerticalFlingInvalidateBottomAreaHeight:F
 
-    .line 2894
+    .line 2902
     invoke-static {}, Lcom/miui/home/launcher/Workspace;->getScreenScaleRatio()F
 
     move-result v0
 
     iput v0, p0, Lcom/miui/home/launcher/Workspace;->mFoldEditScreenScaleRatio:F
 
-    .line 2895
+    .line 2903
     invoke-direct {p0}, Lcom/miui/home/launcher/Workspace;->loadIndicatorMarginBottom()V
 
     const/4 v0, 0x0
 
-    .line 2896
+    .line 2904
     :goto_1
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getScreenCount()I
 
@@ -12013,14 +12166,14 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 2897
+    .line 2905
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Workspace;->getCellScreen(I)Lcom/miui/home/launcher/CellScreen;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
-    .line 2899
+    .line 2907
     invoke-virtual {v1}, Lcom/miui/home/launcher/CellScreen;->onScreenSizeChanged()V
 
     :cond_1
@@ -12028,18 +12181,31 @@
 
     goto :goto_1
 
-    .line 2902
+    .line 2910
     :cond_2
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mScreenSeekBar:Lcom/miui/home/launcher/ScreenView$IndicatorView;
 
     if-eqz v0, :cond_3
 
-    .line 2903
+    .line 2911
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mScreenSeekBar:Lcom/miui/home/launcher/ScreenView$IndicatorView;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/ScreenView$IndicatorView;->onScreenSizeChanged()V
 
+    .line 2913
     :cond_3
+    iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mLauncher:Lcom/miui/home/launcher/Launcher;
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->isInMultiWindowMode()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    .line 2914
+    invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->updateWorkspacePaddingTop()V
+
+    :cond_4
     return-void
 .end method
 
@@ -12137,7 +12303,7 @@
 .method public onStop()V
     .locals 0
 
-    .line 2821
+    .line 2825
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->clearAllScreensToast()V
 
     return-void
@@ -12146,12 +12312,12 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 1
 
-    .line 3852
+    .line 3863
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mScrollingClickDetector:Landroid/view/GestureDetector;
 
     invoke-virtual {v0, p1}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    .line 3853
+    .line 3864
     invoke-super {p0, p1}, Lcom/miui/home/launcher/DragableScreenView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result p1
@@ -12304,12 +12470,12 @@
 
     if-eqz v0, :cond_0
 
-    const v1, 0x7f0805ca
+    const v1, 0x7f0805cb
 
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f0805c9
+    const v1, 0x7f0805ca
 
     .line 1803
     :goto_0
@@ -12317,12 +12483,12 @@
 
     if-eqz v0, :cond_1
 
-    const v0, 0x7f0805c8
+    const v0, 0x7f0805c9
 
     goto :goto_1
 
     :cond_1
-    const v0, 0x7f0805c7
+    const v0, 0x7f0805c8
 
     .line 1804
     :goto_1
@@ -12378,7 +12544,7 @@
 .method public removeAllEmptyFoldersInCurrentScreen()V
     .locals 5
 
-    .line 3654
+    .line 3665
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getCurrentCellLayout()Lcom/miui/home/launcher/CellLayout;
 
     move-result-object v0
@@ -12387,7 +12553,7 @@
 
     move v2, v1
 
-    .line 3655
+    .line 3666
     :goto_0
     invoke-virtual {v0}, Lcom/miui/home/launcher/CellLayout;->getChildCount()I
 
@@ -12395,7 +12561,7 @@
 
     if-ge v2, v3, :cond_1
 
-    .line 3656
+    .line 3667
     invoke-virtual {v0, v2}, Lcom/miui/home/launcher/CellLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v3
@@ -12404,7 +12570,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 3657
+    .line 3668
     invoke-virtual {v0, v2}, Lcom/miui/home/launcher/CellLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v3
@@ -12413,13 +12579,13 @@
 
     const/4 v4, 0x1
 
-    .line 3658
+    .line 3669
     invoke-virtual {v3, v4}, Lcom/miui/home/launcher/FolderIcon;->setFastDelete(Z)V
 
-    .line 3659
+    .line 3670
     invoke-virtual {v3}, Lcom/miui/home/launcher/FolderIcon;->finishPendingAll()V
 
-    .line 3660
+    .line 3671
     invoke-virtual {v3, v1}, Lcom/miui/home/launcher/FolderIcon;->setFastDelete(Z)V
 
     :cond_0
@@ -12498,17 +12664,17 @@
 .method public removeScreen(I)V
     .locals 2
 
-    .line 3161
+    .line 3172
     invoke-super {p0, p1}, Lcom/miui/home/launcher/DragableScreenView;->removeScreen(I)V
 
-    .line 3162
+    .line 3173
     iget v0, p0, Lcom/miui/home/launcher/Workspace;->mCurrentScreenIndex:I
 
     const/4 v1, 0x0
 
     if-ge p1, v0, :cond_0
 
-    .line 3163
+    .line 3174
     iget p1, p0, Lcom/miui/home/launcher/Workspace;->mCurrentScreenIndex:I
 
     add-int/lit8 p1, p1, -0x1
@@ -12519,14 +12685,14 @@
 
     iput p1, p0, Lcom/miui/home/launcher/Workspace;->mCurrentScreenIndex:I
 
-    .line 3164
+    .line 3175
     iget-object p1, p0, Lcom/miui/home/launcher/Workspace;->mCurrentIndexMediator:Lcom/miui/home/launcher/common/CurrentIndexMediator;
 
     iget v0, p0, Lcom/miui/home/launcher/Workspace;->mCurrentScreenIndex:I
 
     invoke-virtual {p1, v0, v1}, Lcom/miui/home/launcher/common/CurrentIndexMediator;->updateIndex(IZ)V
 
-    .line 3166
+    .line 3177
     :cond_0
     iget p1, p0, Lcom/miui/home/launcher/Workspace;->mCurrentScreenIndex:I
 
@@ -12546,17 +12712,17 @@
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Workspace;->setCurrentScreenInner(I)V
 
-    .line 3167
+    .line 3178
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->isInNormalEditingMode()Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 3168
+    .line 3179
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->setScreenScrollRangeByCurrentScreenType()V
 
-    .line 3170
+    .line 3181
     :cond_1
     invoke-direct {p0}, Lcom/miui/home/launcher/Workspace;->updateSeekBarVisibility()V
 
@@ -12626,10 +12792,10 @@
 .method public removeViewsInLayout(II)V
     .locals 0
 
-    .line 3393
+    .line 3404
     invoke-super {p0, p1, p2}, Lcom/miui/home/launcher/DragableScreenView;->removeViewsInLayout(II)V
 
-    .line 3394
+    .line 3405
     invoke-direct {p0}, Lcom/miui/home/launcher/Workspace;->updateSeekBarVisibility()V
 
     return-void
@@ -12701,7 +12867,7 @@
 
     const-string v0, "Launcher.Workspace"
 
-    .line 2805
+    .line 2809
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -12720,14 +12886,14 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2807
+    .line 2811
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mIndexOrderedScreenIds:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v0
 
-    .line 2808
+    .line 2812
     iget-object v1, p0, Lcom/miui/home/launcher/Workspace;->mScreenIdToIndexMap:Landroid/util/LongSparseArray;
 
     invoke-virtual {v1}, Landroid/util/LongSparseArray;->clear()V
@@ -12737,7 +12903,7 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 2810
+    .line 2814
     iget-object v2, p0, Lcom/miui/home/launcher/Workspace;->mScreenIdToIndexMap:Landroid/util/LongSparseArray;
 
     iget-object v3, p0, Lcom/miui/home/launcher/Workspace;->mIndexOrderedScreenIds:Ljava/util/List;
@@ -12762,7 +12928,7 @@
 
     goto :goto_0
 
-    .line 2813
+    .line 2817
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -12894,7 +13060,7 @@
 .method public setAssistPointResource(I)V
     .locals 2
 
-    .line 3827
+    .line 3838
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mScreenSeekBar:Lcom/miui/home/launcher/ScreenView$IndicatorView;
 
     instance-of v0, v0, Lcom/miui/home/launcher/pageindicators/MultiSeekBarIndicator;
@@ -12905,22 +13071,22 @@
 
     if-eq v0, p1, :cond_0
 
-    .line 3828
+    .line 3839
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mScreenSeekBar:Lcom/miui/home/launcher/ScreenView$IndicatorView;
 
     check-cast v0, Lcom/miui/home/launcher/pageindicators/MultiSeekBarIndicator;
 
-    .line 3829
+    .line 3840
     invoke-virtual {v0}, Lcom/miui/home/launcher/pageindicators/MultiSeekBarIndicator;->isAssistantPointExist()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 3830
+    .line 3841
     iput p1, p0, Lcom/miui/home/launcher/Workspace;->mAssistantPointResId:I
 
-    .line 3831
+    .line 3842
     invoke-virtual {v0}, Lcom/miui/home/launcher/pageindicators/MultiSeekBarIndicator;->getAssistantPoint()Landroid/widget/ImageView;
 
     move-result-object p1
@@ -12929,7 +13095,7 @@
 
     invoke-virtual {p1, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 3832
+    .line 3843
     invoke-virtual {v0}, Lcom/miui/home/launcher/pageindicators/MultiSeekBarIndicator;->getAssistantPoint()Landroid/widget/ImageView;
 
     move-result-object p1
@@ -13032,15 +13198,15 @@
 .method public setEditMode(IZLcom/miui/home/launcher/EditStateChangeReason;)V
     .locals 9
 
-    .line 3067
+    .line 3078
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->isInNormalEditingMode()Z
 
     move-result v0
 
-    .line 3068
+    .line 3079
     iput p1, p0, Lcom/miui/home/launcher/Workspace;->mEditingMode:I
 
-    .line 3069
+    .line 3080
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->isInNormalEditingMode()Z
 
     move-result v1
@@ -13077,15 +13243,15 @@
 
     if-nez p2, :cond_9
 
-    .line 3073
+    .line 3084
     invoke-direct {p0, v4, v0}, Lcom/miui/home/launcher/Workspace;->updateScreenLayoutMode(ZZ)V
 
-    .line 3074
+    .line 3085
     invoke-direct {p0, v1, v4}, Lcom/miui/home/launcher/Workspace;->setupEditingScreen(ZZ)V
 
     if-nez v0, :cond_c
 
-    .line 3076
+    .line 3087
     iget-boolean p2, p0, Lcom/miui/home/launcher/Workspace;->mShowEditingIndicator:Z
 
     if-eqz p2, :cond_3
@@ -13094,14 +13260,14 @@
 
     if-eqz p2, :cond_3
 
-    .line 3077
+    .line 3088
     iget-object p2, p0, Lcom/miui/home/launcher/Workspace;->mScreenSeekBarEditAnimation:Landroid/animation/ObjectAnimator;
 
     new-array v6, v2, [F
 
     if-eqz v1, :cond_2
 
-    .line 3078
+    .line 3089
     iget v7, p0, Lcom/miui/home/launcher/Workspace;->mIndicatorOffsetBottomPortrait:I
 
     int-to-float v7, v7
@@ -13114,17 +13280,17 @@
     :goto_2
     aput v7, v6, v3
 
-    .line 3077
+    .line 3088
     invoke-virtual {p2, v6}, Landroid/animation/ObjectAnimator;->setFloatValues([F)V
 
-    .line 3079
+    .line 3090
     iget-object p2, p0, Lcom/miui/home/launcher/Workspace;->mScreenSeekBarEditAnimation:Landroid/animation/ObjectAnimator;
 
     const-wide/16 v6, 0x172
 
     invoke-virtual {p2, v6, v7}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 3080
+    .line 3091
     iget-object p2, p0, Lcom/miui/home/launcher/Workspace;->mScreenSeekBarEditAnimation:Landroid/animation/ObjectAnimator;
 
     new-instance v6, Landroid/view/animation/AccelerateDecelerateInterpolator;
@@ -13133,7 +13299,7 @@
 
     invoke-virtual {p2, v6}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 3081
+    .line 3092
     iget-object p2, p0, Lcom/miui/home/launcher/Workspace;->mScreenSeekBarEditAnimation:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {p2}, Landroid/animation/ObjectAnimator;->start()V
@@ -13150,16 +13316,16 @@
     :cond_4
     move p2, v3
 
-    .line 3083
+    .line 3094
     :goto_3
     invoke-virtual {p0, p2}, Lcom/miui/home/launcher/Workspace;->setIndicatorBarVisibility(I)V
 
-    .line 3084
+    .line 3095
     iget-object p2, p0, Lcom/miui/home/launcher/Workspace;->mSlideBar:Lcom/miui/home/launcher/ScreenView$SlideBar;
 
     if-eqz p2, :cond_6
 
-    .line 3085
+    .line 3096
     iget-object p2, p0, Lcom/miui/home/launcher/Workspace;->mSlideBar:Lcom/miui/home/launcher/ScreenView$SlideBar;
 
     if-eqz v1, :cond_5
@@ -13174,13 +13340,13 @@
     :goto_4
     invoke-virtual {p2, v6}, Lcom/miui/home/launcher/ScreenView$SlideBar;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 3087
+    .line 3098
     :cond_6
     iget-object p2, p0, Lcom/miui/home/launcher/Workspace;->mScreenSeekBar:Lcom/miui/home/launcher/ScreenView$IndicatorView;
 
     if-eqz p2, :cond_8
 
-    .line 3088
+    .line 3099
     iget-object p2, p0, Lcom/miui/home/launcher/Workspace;->mScreenSeekBar:Lcom/miui/home/launcher/ScreenView$IndicatorView;
 
     if-eqz v1, :cond_7
@@ -13199,7 +13365,7 @@
     :goto_6
     if-eqz v4, :cond_c
 
-    .line 3093
+    .line 3104
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->setTransitionEffectEditingMode()V
 
     goto :goto_8
@@ -13209,16 +13375,16 @@
 
     if-ne p1, p2, :cond_a
 
-    .line 3098
+    .line 3109
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->setScreenScrollRangeByCurrentScreenType()V
 
     goto :goto_8
 
-    .line 3100
+    .line 3111
     :cond_a
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->resetScreenScrollRange()V
 
-    .line 3101
+    .line 3112
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getScreenCount()I
 
     move-result p2
@@ -13226,14 +13392,14 @@
     :goto_7
     if-ltz p2, :cond_c
 
-    .line 3103
+    .line 3114
     invoke-virtual {p0, p2}, Lcom/miui/home/launcher/Workspace;->getCellScreen(I)Lcom/miui/home/launcher/CellScreen;
 
     move-result-object v4
 
     if-eqz v4, :cond_b
 
-    .line 3105
+    .line 3116
     invoke-virtual {v4, v3}, Lcom/miui/home/launcher/CellScreen;->setVisibility(I)V
 
     :cond_b
@@ -13247,7 +13413,7 @@
 
     move v4, p2
 
-    .line 3112
+    .line 3123
     :goto_9
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getScreenCount()I
 
@@ -13255,14 +13421,14 @@
 
     if-ge p2, v6, :cond_11
 
-    .line 3113
+    .line 3124
     invoke-virtual {p0, p2}, Lcom/miui/home/launcher/Workspace;->getCellScreen(I)Lcom/miui/home/launcher/CellScreen;
 
     move-result-object v6
 
     if-eqz v6, :cond_10
 
-    .line 3115
+    .line 3126
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->isInQuickEditingMode()Z
 
     move-result v7
@@ -13273,14 +13439,14 @@
 
     invoke-virtual {v6, v7, v8}, Lcom/miui/home/launcher/CellScreen;->onQuickEditingModeChanged(ZZ)V
 
-    .line 3116
+    .line 3127
     iget-object v7, p0, Lcom/miui/home/launcher/Workspace;->mTransitionEffect:Lcom/miui/home/launcher/transitioneffects/TransitionEffectSwitcher;
 
     invoke-virtual {v7, v6, p0}, Lcom/miui/home/launcher/transitioneffects/TransitionEffectSwitcher;->resetTransformation(Landroid/view/View;Landroid/view/ViewGroup;)V
 
     if-nez v0, :cond_d
 
-    .line 3117
+    .line 3128
     invoke-direct {p0, p2}, Lcom/miui/home/launcher/Workspace;->shouldShowEditModeAnim(I)Z
 
     move-result v7
@@ -13323,7 +13489,7 @@
     :cond_11
     if-nez v4, :cond_13
 
-    .line 3121
+    .line 3132
     iget-object p2, p0, Lcom/miui/home/launcher/Workspace;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p2}, Lcom/miui/home/launcher/Launcher;->isRecentsContainerShowing()Z
@@ -13332,7 +13498,7 @@
 
     if-nez p2, :cond_13
 
-    .line 3122
+    .line 3133
     iget-object p2, p0, Lcom/miui/home/launcher/Workspace;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p2, p1}, Lcom/miui/home/launcher/Launcher;->isShouldBlur(I)Z
@@ -13359,7 +13525,7 @@
 .method public setEditingStateChangeFinishRunnable(Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 3056
+    .line 3067
     iput-object p1, p0, Lcom/miui/home/launcher/Workspace;->mEditAnimateFinishRunnable:Ljava/lang/Runnable;
 
     return-void
@@ -13377,12 +13543,12 @@
 .method public setHotseatAndSearchBarProperty(Lcom/miui/home/launcher/Workspace$DirectionProperty;F)V
     .locals 2
 
-    .line 3726
+    .line 3737
     invoke-static {p1}, Lcom/miui/home/launcher/Workspace$DirectionProperty;->access$1700(Lcom/miui/home/launcher/Workspace$DirectionProperty;)Landroid/util/Property;
 
     move-result-object p1
 
-    .line 3728
+    .line 3739
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getHotSeats()Lcom/miui/home/launcher/hotseats/HotSeats;
@@ -13395,7 +13561,7 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/util/Property;->set(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 3729
+    .line 3740
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getSearchBar()Lcom/miui/home/launcher/SearchBar;
@@ -13502,12 +13668,12 @@
 .method public setLauncherOverlay(Lcom/miui/home/launcher/overlay/LauncherOverlay;)V
     .locals 0
 
-    .line 3677
+    .line 3688
     iput-object p1, p0, Lcom/miui/home/launcher/Workspace;->mLauncherOverlay:Lcom/miui/home/launcher/overlay/LauncherOverlay;
 
     const/4 p1, 0x0
 
-    .line 3679
+    .line 3690
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Workspace;->onOverlayScrollChanged(F)V
 
     return-void
@@ -13516,7 +13682,7 @@
 .method public setScreenScrollRangeByCurrentScreenType()V
     .locals 6
 
-    .line 3010
+    .line 3021
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getCurrentCellLayout()Lcom/miui/home/launcher/CellLayout;
 
     move-result-object v0
@@ -13525,7 +13691,7 @@
 
     return-void
 
-    .line 3012
+    .line 3023
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getCurrentScreenType()I
 
@@ -13541,7 +13707,7 @@
 
     move-result v0
 
-    .line 3013
+    .line 3024
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getCurrentScreenType()I
 
     move-result v1
@@ -13556,7 +13722,7 @@
 
     move-result v1
 
-    .line 3014
+    .line 3025
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v3
@@ -13567,14 +13733,14 @@
 
     if-nez v3, :cond_1
 
-    .line 3015
+    .line 3026
     invoke-virtual {p0, v0, v1}, Lcom/miui/home/launcher/Workspace;->setScreenScrollRange(II)V
 
-    .line 3017
+    .line 3028
     :cond_1
     invoke-virtual {p0, v4}, Lcom/miui/home/launcher/Workspace;->correctCurrentScreen(Z)V
 
-    .line 3018
+    .line 3029
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getScreenCount()I
 
     move-result v3
@@ -13582,7 +13748,7 @@
     :goto_0
     if-ltz v3, :cond_5
 
-    .line 3020
+    .line 3031
     invoke-virtual {p0, v3}, Lcom/miui/home/launcher/Workspace;->getCellScreen(I)Lcom/miui/home/launcher/CellScreen;
 
     move-result-object v4
@@ -13604,7 +13770,7 @@
     :goto_1
     const/4 v5, 0x4
 
-    .line 3022
+    .line 3033
     :goto_2
     invoke-virtual {v4, v5}, Lcom/miui/home/launcher/CellScreen;->setVisibility(I)V
 
@@ -13620,7 +13786,7 @@
 .method public setScrollToNextScreenAnimListener(Lcom/miui/home/launcher/fold/ScrollToNextScreenAnimListener;)V
     .locals 0
 
-    .line 3981
+    .line 3992
     iput-object p1, p0, Lcom/miui/home/launcher/Workspace;->mScrollToNextScreenAnimListener:Lcom/miui/home/launcher/fold/ScrollToNextScreenAnimListener;
 
     return-void
@@ -13629,7 +13795,7 @@
 .method public setState(Lcom/miui/home/launcher/LauncherState;)V
     .locals 1
 
-    .line 3780
+    .line 3791
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mStateTransitionAnimation:Lcom/miui/home/launcher/WorkspaceStateTransitionAnimation;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/WorkspaceStateTransitionAnimation;->setState(Lcom/miui/home/launcher/LauncherState;)V
@@ -13640,17 +13806,17 @@
 .method public setStateWithAnimation(Lcom/miui/home/launcher/LauncherState;Lcom/miui/home/launcher/anim/AnimatorSetBuilder;Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;)V
     .locals 2
 
-    .line 3789
+    .line 3800
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mStateTransitionAnimation:Lcom/miui/home/launcher/WorkspaceStateTransitionAnimation;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/miui/home/launcher/WorkspaceStateTransitionAnimation;->setStateWithAnimation(Lcom/miui/home/launcher/LauncherState;Lcom/miui/home/launcher/anim/AnimatorSetBuilder;Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;)V
 
-    .line 3793
+    .line 3804
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->invalidate()V
 
     const/4 p1, 0x2
 
-    .line 3795
+    .line 3806
     new-array p1, p1, [F
 
     fill-array-data p1, :array_0
@@ -13659,19 +13825,19 @@
 
     move-result-object p1
 
-    .line 3796
+    .line 3807
     iget-wide v0, p3, Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;->duration:J
 
     invoke-virtual {p1, v0, v1}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 3797
+    .line 3808
     new-instance p3, Lcom/miui/home/launcher/Workspace$22;
 
     invoke-direct {p3, p0}, Lcom/miui/home/launcher/Workspace$22;-><init>(Lcom/miui/home/launcher/Workspace;)V
 
     invoke-virtual {p1, p3}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 3803
+    .line 3814
     invoke-virtual {p2, p1}, Lcom/miui/home/launcher/anim/AnimatorSetBuilder;->play(Landroid/animation/Animator;)V
 
     return-void
@@ -13688,7 +13854,7 @@
 .method setThumbnailView(Lcom/miui/home/launcher/WorkspaceThumbnailView;)V
     .locals 0
 
-    .line 2817
+    .line 2821
     iput-object p1, p0, Lcom/miui/home/launcher/Workspace;->mWorkspaceThumbnailView:Lcom/miui/home/launcher/WorkspaceThumbnailView;
 
     return-void
@@ -13699,7 +13865,7 @@
 
     if-eqz p2, :cond_0
 
-    .line 3335
+    .line 3346
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->isFolderShowing()Z
@@ -13708,16 +13874,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 3336
+    .line 3347
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->closeFolder()Z
 
-    .line 3338
+    .line 3349
     :cond_0
     invoke-super {p0, p1, p2}, Lcom/miui/home/launcher/DragableScreenView;->setTouchState(Landroid/view/MotionEvent;I)V
 
-    .line 3339
+    .line 3350
     iget-object p1, p0, Lcom/miui/home/launcher/Workspace;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getAllAppsIndicator()Lcom/miui/home/launcher/pageindicators/AllAppsIndicator;
@@ -13726,7 +13892,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 3340
+    .line 3351
     iget-object p1, p0, Lcom/miui/home/launcher/Workspace;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getAllAppsIndicator()Lcom/miui/home/launcher/pageindicators/AllAppsIndicator;
@@ -13738,7 +13904,7 @@
     :cond_1
     if-eqz p2, :cond_2
 
-    .line 3343
+    .line 3354
     iget-object p1, p0, Lcom/miui/home/launcher/Workspace;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getDragLayer()Lcom/miui/home/launcher/DragLayer;
@@ -13756,14 +13922,14 @@
 .method public setTransitionEffectEditingMode()V
     .locals 1
 
-    .line 2993
+    .line 3004
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getScreenTransitionType()I
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2994
+    .line 3005
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getScreenTransitionType()I
 
     move-result v0
@@ -13772,10 +13938,10 @@
 
     const/4 v0, 0x0
 
-    .line 2995
+    .line 3006
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Workspace;->setScreenTransitionType(I)I
 
-    .line 2996
+    .line 3007
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->invalidate()V
 
     :cond_0
@@ -13809,7 +13975,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 3385
+    .line 3396
     iget-object p1, p0, Lcom/miui/home/launcher/Workspace;->mScreenSeekBar:Lcom/miui/home/launcher/ScreenView$IndicatorView;
 
     const/4 v0, 0x0
@@ -13818,7 +13984,7 @@
 
     goto :goto_0
 
-    .line 3387
+    .line 3398
     :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/Workspace;->mScreenSeekBar:Lcom/miui/home/launcher/ScreenView$IndicatorView;
 
@@ -13835,10 +14001,10 @@
 
     const/4 v0, 0x0
 
-    .line 3630
+    .line 3641
     iput-boolean v0, p0, Lcom/miui/home/launcher/Workspace;->mIsSnapCausedByDragScroll:Z
 
-    .line 3631
+    .line 3642
     invoke-super {p0, p1, p2}, Lcom/miui/home/launcher/DragableScreenView;->snapByVelocity(II)V
 
     return-void
@@ -14018,7 +14184,7 @@
 .method public startDragScrollAnimator(ILandroid/view/MotionEvent;)Z
     .locals 9
 
-    .line 3484
+    .line 3495
     iget-boolean v0, p0, Lcom/miui/home/launcher/Workspace;->mIsSnaping:Z
 
     const/4 v1, 0x1
@@ -14027,7 +14193,7 @@
 
     return v1
 
-    .line 3487
+    .line 3498
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->cancelDragScroll()V
 
@@ -14039,25 +14205,25 @@
 
     goto :goto_0
 
-    .line 3494
+    .line 3505
     :pswitch_0
     iget p1, p0, Lcom/miui/home/launcher/Workspace;->mDragScrollAnimationDistance:I
 
     goto :goto_0
 
-    .line 3491
+    .line 3502
     :pswitch_1
     iget p1, p0, Lcom/miui/home/launcher/Workspace;->mDragScrollAnimationDistance:I
 
     neg-int p1, p1
 
-    .line 3498
+    .line 3509
     :goto_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getSnapBound()[I
 
     move-result-object v2
 
-    .line 3499
+    .line 3510
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getScrollX()I
 
     move-result v3
@@ -14068,14 +14234,14 @@
 
     if-ge v3, v4, :cond_2
 
-    .line 3500
+    .line 3511
     invoke-direct {p0}, Lcom/miui/home/launcher/Workspace;->canDragToPa()Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 3501
+    .line 3512
     iget-object p1, p0, Lcom/miui/home/launcher/Workspace;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getLauncherCallbacks()Lcom/miui/home/launcher/LauncherCallbacks;
@@ -14089,7 +14255,7 @@
     :cond_1
     move p1, v0
 
-    .line 3507
+    .line 3518
     :cond_2
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getScrollX()I
 
@@ -14111,10 +14277,10 @@
     :goto_1
     if-eqz v5, :cond_4
 
-    .line 3511
+    .line 3522
     iput-boolean v1, p0, Lcom/miui/home/launcher/Workspace;->mDragScrollAnimateStarted:Z
 
-    .line 3512
+    .line 3523
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getScrollX()I
 
     move-result v4
@@ -14129,19 +14295,19 @@
 
     invoke-virtual/range {v3 .. v8}, Lcom/miui/home/launcher/Workspace;->startScroll(IIIFF)V
 
-    .line 3513
+    .line 3524
     iget-object p1, p0, Lcom/miui/home/launcher/Workspace;->mDragToNextScreenRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Workspace;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 3514
+    .line 3525
     iget-object p1, p0, Lcom/miui/home/launcher/Workspace;->mDragToNextScreenRunnable:Ljava/lang/Runnable;
 
     const-wide/16 v2, 0x15e
 
     invoke-virtual {p0, p1, v2, v3}, Lcom/miui/home/launcher/Workspace;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 3515
+    .line 3526
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->invalidate()V
 
     return v1
@@ -14159,12 +14325,12 @@
 .method public startFoldEditDragingAnim()V
     .locals 1
 
-    .line 3955
+    .line 3966
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mFoldEditSwitchScreenAnim:Lcom/miui/home/launcher/anim/FoldEditSwitchScreenAnim;
 
     if-eqz v0, :cond_0
 
-    .line 3956
+    .line 3967
     invoke-virtual {v0}, Lcom/miui/home/launcher/anim/FoldEditSwitchScreenAnim;->startFoldEditDragingAnim()V
 
     :cond_0
@@ -14174,12 +14340,12 @@
 .method public startFoldSwitchScreenAnim(ILcom/miui/home/launcher/WorkspaceThumbnailView$FoldSwitchScreenAnimListener;)V
     .locals 1
 
-    .line 3949
+    .line 3960
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mFoldEditSwitchScreenAnim:Lcom/miui/home/launcher/anim/FoldEditSwitchScreenAnim;
 
     if-eqz v0, :cond_0
 
-    .line 3950
+    .line 3961
     invoke-virtual {v0, p1, p2}, Lcom/miui/home/launcher/anim/FoldEditSwitchScreenAnim;->startFoldSwitchScreenAnim(ILcom/miui/home/launcher/WorkspaceThumbnailView$FoldSwitchScreenAnimListener;)V
 
     :cond_0
@@ -14191,16 +14357,16 @@
 
     const-wide/16 v0, -0x1
 
-    .line 3306
+    .line 3317
     iput-wide v0, p0, Lcom/miui/home/launcher/Workspace;->mDefaultScreenId:J
 
-    .line 3307
+    .line 3318
     iput-wide v0, p0, Lcom/miui/home/launcher/Workspace;->mCurrentScreenId:J
 
-    .line 3308
+    .line 3319
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->removeAllScreens()V
 
-    .line 3309
+    .line 3320
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mTrimScreenRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Workspace;->removeCallbacks(Ljava/lang/Runnable;)Z
@@ -14211,19 +14377,19 @@
 .method public updateAssistantPoints(Z)V
     .locals 2
 
-    .line 3838
+    .line 3849
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mScreenSeekBar:Lcom/miui/home/launcher/ScreenView$IndicatorView;
 
     instance-of v0, v0, Lcom/miui/home/launcher/pageindicators/MultiSeekBarIndicator;
 
     if-eqz v0, :cond_2
 
-    .line 3839
+    .line 3850
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mScreenSeekBar:Lcom/miui/home/launcher/ScreenView$IndicatorView;
 
     check-cast v0, Lcom/miui/home/launcher/pageindicators/MultiSeekBarIndicator;
 
-    .line 3840
+    .line 3851
     invoke-virtual {v0}, Lcom/miui/home/launcher/pageindicators/MultiSeekBarIndicator;->isAssistantPointExist()Z
 
     move-result v1
@@ -14232,7 +14398,7 @@
 
     if-nez p1, :cond_0
 
-    .line 3841
+    .line 3852
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v1
@@ -14243,13 +14409,13 @@
 
     if-nez v1, :cond_1
 
-    .line 3842
+    .line 3853
     :cond_0
     invoke-virtual {v0}, Lcom/miui/home/launcher/pageindicators/MultiSeekBarIndicator;->removeAssistantPoint()V
 
     goto :goto_0
 
-    .line 3843
+    .line 3854
     :cond_1
     invoke-virtual {v0}, Lcom/miui/home/launcher/pageindicators/MultiSeekBarIndicator;->isAssistantPointExist()Z
 
@@ -14269,10 +14435,10 @@
 
     if-eqz p1, :cond_2
 
-    .line 3844
+    .line 3855
     invoke-virtual {v0}, Lcom/miui/home/launcher/pageindicators/MultiSeekBarIndicator;->addAssistantPoint()V
 
-    .line 3847
+    .line 3858
     :cond_2
     :goto_0
     invoke-direct {p0}, Lcom/miui/home/launcher/Workspace;->updateSeekBarVisibility()V
@@ -14283,7 +14449,7 @@
 .method protected updateChildStaticTransformation(Landroid/view/View;)V
     .locals 2
 
-    .line 3296
+    .line 3307
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getOverLayoutProgress()F
@@ -14298,7 +14464,7 @@
 
     return-void
 
-    .line 3299
+    .line 3310
     :cond_0
     instance-of v0, p1, Lcom/miui/home/launcher/CellScreen;
 
@@ -14314,7 +14480,7 @@
 
     return-void
 
-    .line 3302
+    .line 3313
     :cond_1
     invoke-super {p0, p1}, Lcom/miui/home/launcher/DragableScreenView;->updateChildStaticTransformation(Landroid/view/View;)V
 
@@ -14324,7 +14490,7 @@
 .method public updateMamlDownloadVisible(I)V
     .locals 2
 
-    .line 2848
+    .line 2852
     invoke-static {}, Lcom/miui/home/launcher/common/CpuLevelUtils;->needMamlDownload()Z
 
     move-result v0
@@ -14336,7 +14502,7 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 2851
+    .line 2855
     :goto_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getScreenCount()I
 
@@ -14344,14 +14510,14 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 2852
+    .line 2856
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Workspace;->getCellLayout(I)Lcom/miui/home/launcher/CellLayout;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
-    .line 2854
+    .line 2858
     invoke-virtual {v1, p1}, Lcom/miui/home/launcher/CellLayout;->updateMamlDownloadVisible(I)V
 
     :cond_1
@@ -14448,5 +14614,24 @@
     invoke-static {p1, v0, v1}, Lcom/miui/home/launcher/common/BlurUtils;->fastBlur(FLandroid/view/Window;Z)Landroid/animation/ValueAnimator;
 
     :cond_1
+    return-void
+.end method
+
+.method public updateWorkspacePaddingTop()V
+    .locals 1
+
+    .line 2895
+    invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/miui/home/launcher/DeviceConfig;->getWorkspacePaddingTop(Landroid/content/Context;)F
+
+    move-result v0
+
+    float-to-int v0, v0
+
+    invoke-static {p0, v0}, Lcom/miui/home/launcher/common/ViewFunctions;->setViewPaddingTop(Landroid/view/View;I)V
+
     return-void
 .end method

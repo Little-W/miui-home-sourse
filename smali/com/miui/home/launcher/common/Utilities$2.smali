@@ -34,7 +34,7 @@
 .method constructor <init>(I)V
     .locals 0
 
-    .line 1394
+    .line 1395
     iput p1, p0, Lcom/miui/home/launcher/common/Utilities$2;->val$resId:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,7 +47,7 @@
 .method public bridge synthetic get()Ljava/lang/Object;
     .locals 1
 
-    .line 1394
+    .line 1395
     invoke-virtual {p0}, Lcom/miui/home/launcher/common/Utilities$2;->get()Ljava/lang/String;
 
     move-result-object v0
@@ -58,7 +58,7 @@
 .method public get()Ljava/lang/String;
     .locals 2
 
-    .line 1397
+    .line 1398
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0

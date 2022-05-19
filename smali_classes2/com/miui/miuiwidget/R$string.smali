@@ -69,9 +69,9 @@
 
 .field public static final abc_toolbar_collapse_description:I = 0x7f10001b
 
-.field public static final search_menu_title:I = 0x7f1003a9
+.field public static final search_menu_title:I = 0x7f1003b2
 
-.field public static final status_bar_notification_info_overflow:I = 0x7f1003e8
+.field public static final status_bar_notification_info_overflow:I = 0x7f1003f1
 
 
 # direct methods

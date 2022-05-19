@@ -53,7 +53,7 @@
     <string name="activity_not_unlocked">Περιμένετε μέχρι η συσκευή σας να επανεκκινηθεί πλήρως πριν ανοίξετε τις εφαρμογές</string>
     <string name="add_custom_category">Προσαρμοσμένη</string>
     <string name="add_screen">Προσθήκη οθόνης</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">Προσθήκη στην Αρχική οθόνη</string>
     <string name="added_all_category">Επιτυχής προσθήκη όλων των εφαρμογών</string>
     <string name="afternoon">Απόγευμα</string>
     <string name="agree_button">Αποδοχή</string>
@@ -379,6 +379,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">Πατήστε παρατεταμένα για προσθήκη στην Αρχική οθόνη</string>
+    <string name="fold_pair_installed_shortcut_launcher">Αυτή η συντόμευση υπάρχει ήδη</string>
     <string name="folder_name">Φάκελος</string>
     <string name="frame_load_failed">Αδυναμία φόρτωσης πλαισίου</string>
     <string name="free_style_apps_title">Επιλογή εφαρμογής</string>
@@ -658,6 +660,7 @@
     <string name="night">Βράδυ</string>
     <string name="no_detail_page">Σελίδα χωρίς λεπτομέρειες</string>
     <string name="no_space_toast">Ανεπαρκής χώρος</string>
+    <string name="no_space_toast_fold">Ανεπαρκής χώρος εδώ</string>
     <string name="no_space_toast_when_click_widget">Δεν υπάρχει αρκετός χώρος σε αυτή τη σελίδα. Προσπαθήστε να σύρετε αυτό το αντικείμενο σε άλλη σελίδα.</string>
     <string name="noon">Μεσημέρι</string>
     <string name="normal_wallpaper">Ταπετσαρία</string>
@@ -679,7 +682,7 @@
     <string name="ota_layout_adjustment_content">Η εσωτερική και η εξωτερική διάταξη Αρχικής οθόνης συγχρονίστηκαν στη νέα έκδοση.</string>
     <string name="ota_layout_adjustment_title">Διάταξη Αρχικής οθόνης</string>
     <string name="out_of_space">Δεν υπάρχει πια χώρος σε αυτήν την Αρχική Οθόνη</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">Απόδοση κινουμένων εικόνων σε εικονίδια εφαρμογής τρίτου</string>
     <string name="perfect_icons_switch_title">Κινούμενα σχέδια παγκοσμίου εικονιδίου</string>
     <string name="permdesc_install_shortcut">Επιτρέπει σε μια εφαρμογή την προσθήκη συντομεύσεων χωρίς την μεσολάβηση του χρήστη.</string>

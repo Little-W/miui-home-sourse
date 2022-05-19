@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <favorites xmlns:launcher="http://schemas.android.com/apk/res-auto">
     <default launcher:screen="2" />
-    <folder launcher:screen="1" launcher:title="com.miui.home:string/default_folder_title_tools" launcher:x="1" launcher:y="3" />
-    <folder launcher:presets_container="true" launcher:screen="1" launcher:title="com.miui.home:string/default_folder_title_recommend" launcher:x="3" launcher:y="3" />
+    <folder launcher:screen="1" launcher:title="@string/default_folder_title_tools_path" launcher:x="1" launcher:y="3" />
+    <folder launcher:presets_container="true" launcher:screen="1" launcher:title="@string/default_folder_title_recommend_path" launcher:x="3" launcher:y="3" />
     <gadget launcher:screen="0" launcher:uri="file:///system/media/theme/default/gadgets/calendar.mtz" launcher:x="0" launcher:y="0" />
     <gadget launcher:screen="0" launcher:uri="file:///system/media/theme/default/gadgets/calculator.mtz" launcher:x="3" launcher:y="0" />
     <gadget launcher:screen="0" launcher:uri="file:///system/media/theme/default/gadgets/clock.mtz" launcher:x="0" launcher:y="3" />

@@ -53,7 +53,7 @@
     <string name="activity_not_unlocked">Pričekajte da se uređaj potpuno ponovno pokrene prije otvaranja aplikacija</string>
     <string name="add_custom_category">Prilagođeno</string>
     <string name="add_screen">Dodaj tipku zaslona</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">Dodaj na Početni zaslon</string>
     <string name="added_all_category">Sve su aplikacije uspješno dodane</string>
     <string name="afternoon">Popodne</string>
     <string name="agree_button">Slažem se</string>
@@ -95,7 +95,7 @@
     <string name="all_apps_slide_up_tips">Pomicanje prema gore rezervirano je za otvaranje ladice aplikacija. Prebacite se na uobičajeni način početnog zaslona i pokušajte ponovo.</string>
     <string name="all_apps_suggestions">Prijedlozi aplikacija</string>
     <string name="am">prijep.</string>
-    <string name="animation_rate_title">Animation speed</string>
+    <string name="animation_rate_title">Brzina animacije</string>
     <string name="announce_for_app_move_in_folder">Prebačeno na položaj %1$d u mapi</string>
     <string name="announce_for_checked">%1$s, provjereno</string>
     <string name="announce_for_choose_default_screen">Postavi zaslon %1$d kao zadani Početni zaslon</string>
@@ -379,6 +379,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">Pritisnite i držite za dodavanje na Početni zaslon</string>
+    <string name="fold_pair_installed_shortcut_launcher">Ova prečica već postoji</string>
     <string name="folder_name">Mapa</string>
     <string name="frame_load_failed">Ne mogu učitati okvir</string>
     <string name="free_style_apps_title">Odaberi aplikaciju</string>
@@ -658,6 +660,7 @@
     <string name="night">Večer</string>
     <string name="no_detail_page">Nema pojedinosti stranice</string>
     <string name="no_space_toast">Nema dovoljno prostora za pohranu</string>
+    <string name="no_space_toast_fold">Nema dovoljno prostora</string>
     <string name="no_space_toast_when_click_widget">Nema dovoljno mjesta na ovoj stranici. Pokušajte povući ovu stavku na drugu stranicu.</string>
     <string name="noon">Podne</string>
     <string name="normal_wallpaper">Slika pozadine</string>
@@ -667,7 +670,7 @@
     <string name="notification_reset_title">Uspješno raspoređene ikone</string>
     <string name="one_key_call_title">Dodirni za poziv</string>
     <string name="online_wallpaper">Online</string>
-    <string name="open_pad_personal_assistant_settings">Home screen widgets</string>
+    <string name="open_pad_personal_assistant_settings">Widgeti početnog zaslona</string>
     <string name="open_personal_assistant_dialog_btn_cancel">Odustani</string>
     <string name="open_personal_assistant_dialog_btn_confirm">Isključi</string>
     <string name="open_personal_assistant_dialog_desc">Nakon što isključite trezor aplikacija, nećete moći vidjeti niti koristiti widgete trezora aplikacija. Njihove ažurirane inačice neće vam biti dostupne. Svejedno isključiti?</string>
@@ -679,7 +682,7 @@
     <string name="ota_layout_adjustment_content">Unutarnji i vanjski rasporedi Početnog zaslona su sinkronizirani s novom verzijom.</string>
     <string name="ota_layout_adjustment_title">Rasporedi Početnog zaslona</string>
     <string name="out_of_space">Na ovom zaslonu više nema mjesta.</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">Prikažite animacije na ikonama aplikacija trećih strana</string>
     <string name="perfect_icons_switch_title">Animacije globalnih ikona</string>
     <string name="permdesc_install_shortcut">Dopušta aplikaciji dodavanje prečica bez intervencije korisnika.</string>

@@ -92,7 +92,7 @@
 
     iget-object v1, p0, Lcom/miui/home/launcher/sound/SoundPoolHelper;->mSoundPool:Landroid/media/SoundPool;
 
-    const v3, 0x7f0f0005
+    const v3, 0x7f0f0009
 
     invoke-virtual {v1, p1, v3, v2}, Landroid/media/SoundPool;->load(Landroid/content/Context;II)I
 
@@ -107,7 +107,7 @@
 
     iget-object v1, p0, Lcom/miui/home/launcher/sound/SoundPoolHelper;->mSoundPool:Landroid/media/SoundPool;
 
-    const v3, 0x7f0f0006
+    const v3, 0x7f0f000a
 
     invoke-virtual {v1, p1, v3, v2}, Landroid/media/SoundPool;->load(Landroid/content/Context;II)I
 

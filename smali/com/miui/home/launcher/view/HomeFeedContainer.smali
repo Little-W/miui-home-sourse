@@ -45,7 +45,7 @@
 
 .field private static final PREF_FORMAT:Ljava/lang/String; = "com.miui.newhome.preferences.%s"
 
-.field public static final STYLES_THEME_PHOTOS:I = 0x7f1101f4
+.field public static final STYLES_THEME_PHOTOS:I = 0x7f1101f5
 
 .field private static final TAG:Ljava/lang/String; = "HomeFeedContainer"
 
@@ -407,7 +407,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070414
+    const v1, 0x7f07041d
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

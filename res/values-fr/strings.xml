@@ -53,7 +53,7 @@
     <string name="activity_not_unlocked">"Attendez que votre appareil soit complètement redémarré avant d'ouvrir les applications"</string>
     <string name="add_custom_category">Personnaliser</string>
     <string name="add_screen">Ajouter un écran</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">"Ajouter à l'Écran d'accueil"</string>
     <string name="added_all_category">Ajout de toutes les applications avec succès</string>
     <string name="afternoon">Après midi</string>
     <string name="agree_button">"J'accepte"</string>
@@ -379,6 +379,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">"Appuyez et maintenez pour ajouter à l'Écran d'accueil"</string>
+    <string name="fold_pair_installed_shortcut_launcher">Ce raccourci existe déjà</string>
     <string name="folder_name">Dossier</string>
     <string name="frame_load_failed">Impossible de charger le cadre photo</string>
     <string name="free_style_apps_title">"Choisir l'application"</string>
@@ -658,6 +660,7 @@
     <string name="night">Soirée</string>
     <string name="no_detail_page">Aucune page de détails</string>
     <string name="no_space_toast">Espace insuffisant</string>
+    <string name="no_space_toast_fold">Espace insuffisant ici</string>
     <string name="no_space_toast_when_click_widget">Espace insuffisant sur cette page. Essayez de placer cet objet sur une page différente.</string>
     <string name="noon">Midi</string>
     <string name="normal_wallpaper">"Fond d'écran"</string>
@@ -679,7 +682,7 @@
     <string name="ota_layout_adjustment_content">"Les dispositions de l'écran d'accueil interne et externe ont été synchronisées dans la nouvelle version."</string>
     <string name="ota_layout_adjustment_title">"Paramètres et disposition de l'écran d'accueil"</string>
     <string name="out_of_space">"Plus d'espace sur cet écran d'accueil"</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">"Rendre des animations sur des icônes d'applications tierces"</string>
     <string name="perfect_icons_switch_title">"Animations d'icônes globales"</string>
     <string name="permdesc_install_shortcut">"Permet à une application d'ajouter des raccourcis sans l'intervention de l'utilisateur."</string>

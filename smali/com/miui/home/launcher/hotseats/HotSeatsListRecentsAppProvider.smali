@@ -355,7 +355,7 @@
 .method private filterSupportLaunchPairApp(Lcom/android/systemui/shared/recents/model/Task;)Z
     .locals 2
 
-    .line 227
+    .line 221
     sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sIsSupportLaunchPairApp:Z
 
     const/4 v1, 0x1
@@ -364,7 +364,7 @@
 
     return v1
 
-    .line 230
+    .line 224
     :cond_0
     invoke-virtual {p1}, Lcom/android/systemui/shared/recents/model/Task;->hasMultipleTasks()Z
 
@@ -455,57 +455,9 @@
 
     const/4 v1, 0x0
 
-    if-eqz v0, :cond_1
-
-    .line 161
-    invoke-virtual {p1}, Lcom/android/systemui/shared/recents/model/Task;->isCti1RightOrBottom()Z
-
-    move-result v0
-
     if-eqz v0, :cond_0
 
-    .line 163
-    iget-object v0, p1, Lcom/android/systemui/shared/recents/model/Task;->cti2Key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
-
-    invoke-virtual {v0}, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->getComponent()Landroid/content/ComponentName;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v2, p1, Lcom/android/systemui/shared/recents/model/Task;->cti2Key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
-
-    iget v2, v2, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->userId:I
-
-    invoke-direct {p0, p2, v0, v2}, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->findAppInfo(Ljava/util/List;Ljava/lang/String;I)Lcom/miui/home/launcher/AppInfo;
-
-    move-result-object v0
-
-    .line 164
-    iget-object v2, p1, Lcom/android/systemui/shared/recents/model/Task;->cti1Key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
-
-    invoke-virtual {v2}, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->getComponent()Landroid/content/ComponentName;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
-
-    move-result-object v2
-
-    iget-object p1, p1, Lcom/android/systemui/shared/recents/model/Task;->cti1Key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
-
-    iget p1, p1, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->userId:I
-
-    invoke-direct {p0, p2, v2, p1}, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->findAppInfo(Ljava/util/List;Ljava/lang/String;I)Lcom/miui/home/launcher/AppInfo;
-
-    move-result-object p1
-
-    goto :goto_0
-
-    .line 166
-    :cond_0
+    .line 161
     iget-object v0, p1, Lcom/android/systemui/shared/recents/model/Task;->cti1Key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
 
     invoke-virtual {v0}, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->getComponent()Landroid/content/ComponentName;
@@ -524,7 +476,7 @@
 
     move-result-object v0
 
-    .line 167
+    .line 162
     iget-object v2, p1, Lcom/android/systemui/shared/recents/model/Task;->cti2Key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
 
     invoke-virtual {v2}, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->getComponent()Landroid/content/ComponentName;
@@ -545,8 +497,8 @@
 
     goto :goto_0
 
-    .line 170
-    :cond_1
+    .line 164
+    :cond_0
     iget-object v0, p1, Lcom/android/systemui/shared/recents/model/Task;->key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
 
     invoke-virtual {v0}, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->getComponent()Landroid/content/ComponentName;
@@ -568,38 +520,38 @@
     move-object p1, v1
 
     :goto_0
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_1
 
-    .line 173
+    .line 167
     invoke-virtual {v0}, Lcom/miui/home/launcher/AppInfo;->makeShortcut()Lcom/miui/home/launcher/ShortcutInfo;
 
     move-result-object p2
 
     goto :goto_1
 
-    :cond_2
+    :cond_1
     move-object p2, v1
 
     :goto_1
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_2
 
-    .line 176
+    .line 170
     invoke-virtual {p1}, Lcom/miui/home/launcher/AppInfo;->makeShortcut()Lcom/miui/home/launcher/ShortcutInfo;
 
     move-result-object p1
 
     goto :goto_2
 
-    :cond_3
+    :cond_2
     move-object p1, v1
 
     :goto_2
-    if-nez p2, :cond_4
+    if-nez p2, :cond_3
 
     return-object v1
 
-    .line 181
-    :cond_4
+    .line 175
+    :cond_3
     new-instance v0, Lcom/miui/home/launcher/PairShortcutInfo;
 
     invoke-direct {v0, p2, p1}, Lcom/miui/home/launcher/PairShortcutInfo;-><init>(Lcom/miui/home/launcher/ShortcutInfo;Lcom/miui/home/launcher/ShortcutInfo;)V
@@ -852,7 +804,7 @@
 .method public static synthetic lambda$onAttachedToWindow$9(Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;)V
     .locals 2
 
-    .line 236
+    .line 230
     invoke-static {}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->getInstance()Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
 
     move-result-object v0
@@ -867,7 +819,7 @@
 .method public static synthetic lambda$onDetachedFromWindow$10(Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;)V
     .locals 2
 
-    .line 242
+    .line 236
     invoke-static {}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->getInstance()Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
 
     move-result-object v0
@@ -882,7 +834,7 @@
 .method static synthetic lambda$removeCache$11(Lcom/miui/home/launcher/ShortcutInfo;Ljava/util/List;)Z
     .locals 0
 
-    .line 249
+    .line 243
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object p0
@@ -897,12 +849,12 @@
 .method private notifyRecommendUpdated()V
     .locals 1
 
-    .line 218
+    .line 212
     iget-object v0, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->mRecommendContainer:Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$RecommendContainer;
 
     if-eqz v0, :cond_0
 
-    .line 219
+    .line 213
     invoke-interface {v0}, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$RecommendContainer;->onRecommendUpdate()V
 
     :cond_0
@@ -952,23 +904,23 @@
         }
     .end annotation
 
-    .line 196
+    .line 190
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0, p1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 197
+    .line 191
     invoke-interface {v0, p2}, Ljava/util/List;->removeAll(Ljava/util/Collection;)Z
 
-    .line 198
+    .line 192
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1, p2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 199
+    .line 193
     invoke-interface {v1, p1}, Ljava/util/List;->removeAll(Ljava/util/Collection;)Z
 
-    .line 202
+    .line 196
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
@@ -987,17 +939,17 @@
 
     check-cast v0, Lcom/miui/home/launcher/PairShortcutInfo;
 
-    .line 203
+    .line 197
     invoke-interface {p1, v0}, Ljava/util/List;->indexOf(Ljava/lang/Object;)I
 
     move-result v0
 
     if-ltz v0, :cond_0
 
-    .line 205
+    .line 199
     invoke-interface {p1, v0}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    .line 207
+    .line 201
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
     move-result v2
@@ -1006,7 +958,7 @@
 
     const/4 v2, 0x0
 
-    .line 208
+    .line 202
     invoke-interface {v1, v2}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -1017,7 +969,7 @@
 
     goto :goto_0
 
-    .line 214
+    .line 208
     :cond_1
     invoke-interface {p1, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
@@ -1089,7 +1041,7 @@
 .method public onAttachedToWindow()V
     .locals 1
 
-    .line 235
+    .line 229
     new-instance v0, Lcom/miui/home/launcher/hotseats/-$$Lambda$HotSeatsListRecentsAppProvider$0eVnNuHB_4yhecDBfHnT2qWgJ7Y;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/hotseats/-$$Lambda$HotSeatsListRecentsAppProvider$0eVnNuHB_4yhecDBfHnT2qWgJ7Y;-><init>(Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;)V
@@ -1102,7 +1054,7 @@
 .method public onDetachedFromWindow()V
     .locals 1
 
-    .line 241
+    .line 235
     new-instance v0, Lcom/miui/home/launcher/hotseats/-$$Lambda$HotSeatsListRecentsAppProvider$8GnDfldPDgy27bzT9zJ-TqzeH2Y;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/hotseats/-$$Lambda$HotSeatsListRecentsAppProvider$8GnDfldPDgy27bzT9zJ-TqzeH2Y;-><init>(Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;)V
@@ -1115,7 +1067,7 @@
 .method public removeCache(Lcom/miui/home/launcher/ShortcutInfo;)V
     .locals 2
 
-    .line 247
+    .line 241
     iget-object v0, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->mRecommendShortcutCache:Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$PairShortcutCache;
 
     iget-object v1, p1, Lcom/miui/home/launcher/ShortcutInfo;->user:Landroid/os/UserHandle;
@@ -1128,7 +1080,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 249
+    .line 243
     invoke-virtual {v0}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
 
     move-result-object v0

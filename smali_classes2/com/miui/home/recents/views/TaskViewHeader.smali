@@ -105,7 +105,7 @@
 
     iput-object p2, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mAppInfoDescFormat:Ljava/lang/String;
 
-    const p2, 0x7f0703d3
+    const p2, 0x7f0703d8
 
     .line 81
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -155,7 +155,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 306
+    .line 311
     invoke-virtual {p1}, Lcom/android/systemui/shared/recents/model/Task;->hasMultipleTasks()Z
 
     move-result p1
@@ -176,7 +176,7 @@
 .method private resetViewState()V
     .locals 5
 
-    .line 277
+    .line 282
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mIconView:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->animate()Landroid/view/ViewPropertyAnimator;
@@ -185,7 +185,7 @@
 
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->cancel()V
 
-    .line 278
+    .line 283
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mSecIconView:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->animate()Landroid/view/ViewPropertyAnimator;
@@ -194,7 +194,7 @@
 
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->cancel()V
 
-    .line 279
+    .line 284
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mTitleView:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->animate()Landroid/view/ViewPropertyAnimator;
@@ -203,7 +203,7 @@
 
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->cancel()V
 
-    .line 280
+    .line 285
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mLockedImageView:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->animate()Landroid/view/ViewPropertyAnimator;
@@ -212,7 +212,7 @@
 
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->cancel()V
 
-    .line 281
+    .line 286
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mDismissView:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->animate()Landroid/view/ViewPropertyAnimator;
@@ -221,19 +221,19 @@
 
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->cancel()V
 
-    .line 283
+    .line 288
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mIconView:Landroid/widget/ImageView;
 
     const/high16 v1, 0x3f800000    # 1.0f
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setAlpha(F)V
 
-    .line 284
+    .line 289
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mSecIconView:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setAlpha(F)V
 
-    .line 285
+    .line 290
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mTask:Lcom/android/systemui/shared/recents/model/Task;
 
     invoke-direct {p0, v0}, Lcom/miui/home/recents/views/TaskViewHeader;->hasMultipleTasks(Lcom/android/systemui/shared/recents/model/Task;)Z
@@ -246,19 +246,19 @@
 
     if-eqz v0, :cond_0
 
-    .line 286
+    .line 291
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mTitleView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 287
+    .line 292
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mTitleView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setAlpha(F)V
 
     goto :goto_0
 
-    .line 289
+    .line 294
     :cond_0
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mTitleView:Landroid/widget/TextView;
 
@@ -266,23 +266,23 @@
 
     invoke-virtual {v0, v4}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 290
+    .line 295
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mTitleView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setAlpha(F)V
 
-    .line 292
+    .line 297
     :goto_0
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mLockedImageView:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setAlpha(F)V
 
-    .line 293
+    .line 298
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mDismissView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setAlpha(F)V
 
-    .line 294
+    .line 299
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mDismissView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
@@ -290,10 +290,39 @@
     return-void
 .end method
 
+.method private setIconViewDescriptionAndListener(Landroid/widget/ImageView;Ljava/lang/String;)V
+    .locals 4
+
+    .line 180
+    iget-object v0, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mAppInfoDescFormat:Ljava/lang/String;
+
+    const/4 v1, 0x1
+
+    new-array v2, v1, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    aput-object p2, v2, v3
+
+    invoke-static {v0, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
+
+    .line 181
+    invoke-virtual {p1, p0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 182
+    invoke-virtual {p1, v1}, Landroid/widget/ImageView;->setClickable(Z)V
+
+    return-void
+.end method
+
 
 # virtual methods
 .method public bindToTask(Lcom/android/systemui/shared/recents/model/Task;ZZ)V
-    .locals 5
+    .locals 3
 
     .line 154
     iput-object p1, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mTask:Lcom/android/systemui/shared/recents/model/Task;
@@ -350,80 +379,42 @@
 
     :cond_1
     :goto_0
-    if-eqz p2, :cond_2
+    if-eqz p2, :cond_3
 
     .line 167
-    iget-object p2, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mIconView:Landroid/widget/ImageView;
+    invoke-direct {p0, p1}, Lcom/miui/home/recents/views/TaskViewHeader;->hasMultipleTasks(Lcom/android/systemui/shared/recents/model/Task;)Z
 
-    iget-object p3, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mAppInfoDescFormat:Ljava/lang/String;
+    move-result p2
 
-    const/4 v2, 0x1
-
-    new-array v3, v2, [Ljava/lang/Object;
-
-    iget-object v4, p1, Lcom/android/systemui/shared/recents/model/Task;->titleDescription:Ljava/lang/String;
-
-    aput-object v4, v3, v1
-
-    invoke-static {p3, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p3
-
-    invoke-virtual {p2, p3}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
+    if-eqz p2, :cond_2
 
     .line 168
     iget-object p2, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mIconView:Landroid/widget/ImageView;
 
-    invoke-virtual {p2, p0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    iget-object p3, p1, Lcom/android/systemui/shared/recents/model/Task;->cti1TitleDescription:Ljava/lang/String;
+
+    invoke-direct {p0, p2, p3}, Lcom/miui/home/recents/views/TaskViewHeader;->setIconViewDescriptionAndListener(Landroid/widget/ImageView;Ljava/lang/String;)V
 
     .line 169
-    iget-object p2, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mIconView:Landroid/widget/ImageView;
-
-    invoke-virtual {p2, v2}, Landroid/widget/ImageView;->setClickable(Z)V
-
-    .line 171
     iget-object p2, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mSecIconView:Landroid/widget/ImageView;
-
-    iget-object p3, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mAppInfoDescFormat:Ljava/lang/String;
-
-    new-array v3, v2, [Ljava/lang/Object;
 
     iget-object p1, p1, Lcom/android/systemui/shared/recents/model/Task;->cti2TitleDescription:Ljava/lang/String;
 
-    aput-object p1, v3, v1
+    invoke-direct {p0, p2, p1}, Lcom/miui/home/recents/views/TaskViewHeader;->setIconViewDescriptionAndListener(Landroid/widget/ImageView;Ljava/lang/String;)V
 
-    invoke-static {p3, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    goto :goto_1
 
-    move-result-object p1
-
-    invoke-virtual {p2, p1}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
-
-    .line 172
-    iget-object p1, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mSecIconView:Landroid/widget/ImageView;
-
-    invoke-virtual {p1, p0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 173
-    iget-object p1, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mSecIconView:Landroid/widget/ImageView;
-
-    invoke-virtual {p1, v2}, Landroid/widget/ImageView;->setClickable(Z)V
-
-    .line 176
+    .line 171
     :cond_2
-    iget-object p1, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mLockedImageView:Landroid/widget/ImageView;
+    iget-object p2, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mIconView:Landroid/widget/ImageView;
 
-    iget-object p2, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mTask:Lcom/android/systemui/shared/recents/model/Task;
+    iget-object p1, p1, Lcom/android/systemui/shared/recents/model/Task;->titleDescription:Ljava/lang/String;
 
-    iget-boolean p2, p2, Lcom/android/systemui/shared/recents/model/Task;->isLocked:Z
+    invoke-direct {p0, p2, p1}, Lcom/miui/home/recents/views/TaskViewHeader;->setIconViewDescriptionAndListener(Landroid/widget/ImageView;Ljava/lang/String;)V
 
-    if-eqz p2, :cond_3
-
-    move v0, v1
-
+    .line 175
     :cond_3
-    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    .line 177
+    :goto_1
     iget-object p1, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mLockedImageView:Landroid/widget/ImageView;
 
     iget-object p2, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mTask:Lcom/android/systemui/shared/recents/model/Task;
@@ -432,14 +423,28 @@
 
     if-eqz p2, :cond_4
 
-    const/high16 p2, 0x3f800000    # 1.0f
-
-    goto :goto_1
+    move v0, v1
 
     :cond_4
+    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    .line 176
+    iget-object p1, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mLockedImageView:Landroid/widget/ImageView;
+
+    iget-object p2, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mTask:Lcom/android/systemui/shared/recents/model/Task;
+
+    iget-boolean p2, p2, Lcom/android/systemui/shared/recents/model/Task;->isLocked:Z
+
+    if-eqz p2, :cond_5
+
+    const/high16 p2, 0x3f800000    # 1.0f
+
+    goto :goto_2
+
+    :cond_5
     const/4 p2, 0x0
 
-    :goto_1
+    :goto_2
     invoke-virtual {p1, p2}, Landroid/widget/ImageView;->setAlpha(F)V
 
     return-void
@@ -457,7 +462,7 @@
 .method public getSpringAnimationImpl()Lcom/miui/home/recents/util/SpringAnimationImpl;
     .locals 1
 
-    .line 298
+    .line 303
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mSpringAnimationImpl:Lcom/miui/home/recents/util/SpringAnimationImpl;
 
     return-object v0
@@ -475,7 +480,7 @@
 .method public onClick(Landroid/view/View;)V
     .locals 2
 
-    .line 225
+    .line 230
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mTask:Lcom/android/systemui/shared/recents/model/Task;
 
     invoke-direct {p0, v0}, Lcom/miui/home/recents/views/TaskViewHeader;->hasMultipleTasks(Lcom/android/systemui/shared/recents/model/Task;)Z
@@ -488,7 +493,7 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 226
+    .line 231
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object p1
@@ -510,7 +515,7 @@
 
     const/4 p1, 0x0
 
-    .line 220
+    .line 225
     new-array p1, p1, [I
 
     return-object p1
@@ -519,7 +524,7 @@
 .method public onDarkModeChange()V
     .locals 3
 
-    .line 302
+    .line 307
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mLockedImageView:Landroid/widget/ImageView;
 
     invoke-virtual {p0}, Lcom/miui/home/recents/views/TaskViewHeader;->getContext()Landroid/content/Context;
@@ -559,7 +564,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
-    const v0, 0x7f0a0271
+    const v0, 0x7f0a0276
 
     .line 106
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/TaskViewHeader;->findViewById(I)Landroid/view/View;
@@ -575,7 +580,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
-    const v0, 0x7f0a029f
+    const v0, 0x7f0a02a4
 
     .line 108
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/TaskViewHeader;->findViewById(I)Landroid/view/View;
@@ -726,93 +731,73 @@
 .method public onTaskDataLoaded()V
     .locals 3
 
-    .line 185
+    .line 190
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mTask:Lcom/android/systemui/shared/recents/model/Task;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 189
+    .line 194
     :cond_0
     invoke-direct {p0, v0}, Lcom/miui/home/recents/views/TaskViewHeader;->hasMultipleTasks(Lcom/android/systemui/shared/recents/model/Task;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_1
 
-    .line 190
+    .line 195
     iget-object v1, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mIconView:Landroid/widget/ImageView;
 
-    iget-boolean v2, v0, Lcom/android/systemui/shared/recents/model/Task;->isCti1RightOrBottom:Z
-
-    if-eqz v2, :cond_1
-
-    iget-object v2, v0, Lcom/android/systemui/shared/recents/model/Task;->cti2Icon:Landroid/graphics/drawable/Drawable;
-
-    goto :goto_0
-
-    :cond_1
     iget-object v2, v0, Lcom/android/systemui/shared/recents/model/Task;->cti1Icon:Landroid/graphics/drawable/Drawable;
 
-    :goto_0
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 191
+    .line 196
     iget-object v1, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mSecIconView:Landroid/widget/ImageView;
 
-    iget-boolean v2, v0, Lcom/android/systemui/shared/recents/model/Task;->isCti1RightOrBottom:Z
-
-    if-eqz v2, :cond_2
-
-    iget-object v0, v0, Lcom/android/systemui/shared/recents/model/Task;->cti1Icon:Landroid/graphics/drawable/Drawable;
-
-    goto :goto_1
-
-    :cond_2
     iget-object v0, v0, Lcom/android/systemui/shared/recents/model/Task;->cti2Icon:Landroid/graphics/drawable/Drawable;
 
-    :goto_1
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 192
+    .line 197
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mSecIconView:Landroid/widget/ImageView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 193
+    .line 198
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mSecIconView:Landroid/widget/ImageView;
 
     const/high16 v1, 0x3f800000    # 1.0f
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setAlpha(F)V
 
-    goto :goto_2
+    goto :goto_0
 
-    .line 195
-    :cond_3
+    .line 200
+    :cond_1
     iget-object v1, v0, Lcom/android/systemui/shared/recents/model/Task;->icon:Landroid/graphics/drawable/Drawable;
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_2
 
-    .line 196
+    .line 201
     iget-object v1, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mIconView:Landroid/widget/ImageView;
 
     iget-object v0, v0, Lcom/android/systemui/shared/recents/model/Task;->icon:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 198
-    :cond_4
+    .line 203
+    :cond_2
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mSecIconView:Landroid/widget/ImageView;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    :goto_2
+    :goto_0
     return-void
 .end method
 
@@ -863,14 +848,14 @@
 .method public showOrHideLockImageView(Z)V
     .locals 3
 
-    .line 236
+    .line 241
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mLockedImageView:Landroid/widget/ImageView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 237
+    .line 242
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mLockedImageView:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->animate()Landroid/view/ViewPropertyAnimator;
@@ -879,14 +864,14 @@
 
     const-wide/16 v1, 0x96
 
-    .line 238
+    .line 243
     invoke-virtual {v0, v1, v2}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
 
     const-wide/16 v1, 0x0
 
-    .line 239
+    .line 244
     invoke-virtual {v0, v1, v2}, Landroid/view/ViewPropertyAnimator;->setStartDelay(J)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
@@ -900,7 +885,7 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 240
+    .line 245
     :goto_0
     invoke-virtual {v0, v1}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
 
@@ -910,12 +895,12 @@
 
     invoke-direct {v1, p0, p1}, Lcom/miui/home/recents/views/TaskViewHeader$1;-><init>(Lcom/miui/home/recents/views/TaskViewHeader;Z)V
 
-    .line 241
+    .line 246
     invoke-virtual {v0, v1}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
 
-    .line 250
+    .line 255
     invoke-virtual {p1}, Landroid/view/ViewPropertyAnimator;->start()V
 
     return-void
@@ -924,7 +909,7 @@
 .method public startDismissTaskAnim()V
     .locals 6
 
-    .line 254
+    .line 259
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mIconView:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->animate()Landroid/view/ViewPropertyAnimator;
@@ -951,7 +936,7 @@
 
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    .line 255
+    .line 260
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mSecIconView:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->animate()Landroid/view/ViewPropertyAnimator;
@@ -972,7 +957,7 @@
 
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    .line 256
+    .line 261
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mTitleView:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->animate()Landroid/view/ViewPropertyAnimator;
@@ -993,7 +978,7 @@
 
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    .line 257
+    .line 262
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mLockedImageView:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->animate()Landroid/view/ViewPropertyAnimator;
@@ -1014,7 +999,7 @@
 
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    .line 258
+    .line 263
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mDismissView:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->animate()Landroid/view/ViewPropertyAnimator;
@@ -1043,7 +1028,7 @@
 
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    .line 259
+    .line 264
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mDismissView:Landroid/widget/TextView;
 
     const/4 v1, 0x0
@@ -1056,7 +1041,7 @@
 .method public startResetTaskAnim()V
     .locals 6
 
-    .line 263
+    .line 268
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mIconView:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->animate()Landroid/view/ViewPropertyAnimator;
@@ -1083,7 +1068,7 @@
 
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    .line 264
+    .line 269
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mSecIconView:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->animate()Landroid/view/ViewPropertyAnimator;
@@ -1104,7 +1089,7 @@
 
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    .line 265
+    .line 270
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mTitleView:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->animate()Landroid/view/ViewPropertyAnimator;
@@ -1125,7 +1110,7 @@
 
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    .line 266
+    .line 271
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mLockedImageView:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->animate()Landroid/view/ViewPropertyAnimator;
@@ -1146,7 +1131,7 @@
 
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    .line 267
+    .line 272
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mDismissView:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->animate()Landroid/view/ViewPropertyAnimator;
@@ -1171,12 +1156,12 @@
 
     invoke-direct {v1, p0}, Lcom/miui/home/recents/views/TaskViewHeader$2;-><init>(Lcom/miui/home/recents/views/TaskViewHeader;)V
 
-    .line 268
+    .line 273
     invoke-virtual {v0, v1}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
 
-    .line 273
+    .line 278
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->start()V
 
     return-void
@@ -1187,29 +1172,29 @@
 
     const/4 v0, 0x0
 
-    .line 206
+    .line 211
     iput-object v0, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mTask:Lcom/android/systemui/shared/recents/model/Task;
 
-    .line 207
+    .line 212
     iget-object v1, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mIconView:Landroid/widget/ImageView;
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 208
+    .line 213
     iget-object v1, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mSecIconView:Landroid/widget/ImageView;
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     if-eqz p1, :cond_0
 
-    .line 210
+    .line 215
     iget-object p1, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mIconView:Landroid/widget/ImageView;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setClickable(Z)V
 
-    .line 211
+    .line 216
     iget-object p1, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mSecIconView:Landroid/widget/ImageView;
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setClickable(Z)V

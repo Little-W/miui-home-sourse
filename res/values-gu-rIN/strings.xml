@@ -26,7 +26,7 @@
     <string name="activity_not_unlocked">એપ્સ ખોલતા પહેલાં તમારું ડિવાઇસ પૂરી રીતે રિબૂટ થઈ જાય ત્યાં સુધી રાહ જુઓ</string>
     <string name="add_custom_category">કસ્ટમ</string>
     <string name="add_screen">સ્ક્રીન ઉમેરો</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">હોમ સ્ક્રીન પર ઉમેરો</string>
     <string name="added_all_category">બધી ઍપ્લિકેશનો સફળતાપૂર્વક ઉમેરી</string>
     <string name="afternoon">બપોર પછી</string>
     <string name="agree_button">સંમત</string>
@@ -349,6 +349,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">હોમ સ્ક્રીન પર ઉમેરવા માટે દબાવો અને પકડી રાખો</string>
+    <string name="fold_pair_installed_shortcut_launcher">આ શૉર્ટકટ પહેલેથી હાજર છે</string>
     <string name="folder_name">ફોલ્ડર</string>
     <string name="frame_load_failed">ફ્રેમ લોડ કરી શકાતી નથી</string>
     <string name="free_style_apps_title">ઍપ્લિકેશન પસંદ કરો</string>
@@ -628,6 +630,7 @@
     <string name="night">સાંજ</string>
     <string name="no_detail_page">કોઈ વિગતો પેજ નથી</string>
     <string name="no_space_toast">પૂરતું સ્થાન નથી</string>
+    <string name="no_space_toast_fold">અહીં પર્યાપ્ત જગ્યા નથી</string>
     <string name="no_space_toast_when_click_widget">આ પેજ પર પૂરતી જગ્યા નથી. બીજા પેજ પર આઇટમ ખેંચીને લઈ જવાનો પ્રયાસ કરો.</string>
     <string name="noon">બપોર</string>
     <string name="normal_wallpaper">વૉલપેપર</string>
@@ -648,7 +651,7 @@
     <string name="ota_layout_adjustment_content">આંતરિક અને બાહ્ય હોમ સ્ક્રીન લેઆઉટ નવા વર્ઝનમાં સિંક્રનાઇઝ કરવામાં આવ્યા હતા.</string>
     <string name="ota_layout_adjustment_title">હોમ સ્ક્રીન લેઆઉટ</string>
     <string name="out_of_space">આ હોમ સ્ક્રીન પર હવે વધુ જગ્યા નથી</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">ત્રાહિત પક્ષના ઍપ આઇકન પર એનિમેશન રેન્ડર કરો</string>
     <string name="perfect_icons_switch_title">બ્લોબલ આઇકન એનિમેશન</string>
     <string name="permdesc_install_shortcut">વપરાશકર્તા હસ્તક્ષેપ વિના ઍપ્લિકેશનને શૉર્ટકટ ઉમેરવા દે છે.</string>

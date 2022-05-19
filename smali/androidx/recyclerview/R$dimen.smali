@@ -29,11 +29,11 @@
 
 .field public static final compat_notification_large_icon_max_width:I = 0x7f070099
 
-.field public static final fastscroll_default_thickness:I = 0x7f07010b
+.field public static final fastscroll_default_thickness:I = 0x7f07010c
 
-.field public static final fastscroll_margin:I = 0x7f070110
+.field public static final fastscroll_margin:I = 0x7f070112
 
-.field public static final fastscroll_minimum_range:I = 0x7f070111
+.field public static final fastscroll_minimum_range:I = 0x7f070113
 
 .field public static final item_touch_helper_max_drag_scroll_per_frame:I = 0x7f070178
 

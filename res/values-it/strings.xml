@@ -53,7 +53,7 @@
     <string name="activity_not_unlocked">Attendi fino al completo riavvio del dispositivo prima di aprire le app</string>
     <string name="add_custom_category">Personalizzata</string>
     <string name="add_screen">Aggiungi schermo</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">Aggiungi alla schermata Home</string>
     <string name="added_all_category">App eliminate correttamente</string>
     <string name="afternoon">Pomeriggio</string>
     <string name="agree_button">Accetta</string>
@@ -379,6 +379,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">Tieni premuto per aggiungere alla schermata Home</string>
+    <string name="fold_pair_installed_shortcut_launcher">Questo collegamento esiste già</string>
     <string name="folder_name">Cartella</string>
     <string name="frame_load_failed">Impossibile caricare la cornice</string>
     <string name="free_style_apps_title">"Seleziona un'app"</string>
@@ -658,6 +660,7 @@
     <string name="night">Sera</string>
     <string name="no_detail_page">Nessuna pagina dettagli</string>
     <string name="no_space_toast">Spazio di archiviazione insufficiente</string>
+    <string name="no_space_toast_fold">Spazio insufficiente</string>
     <string name="no_space_toast_when_click_widget">Spazio insufficiente su questa pagina. Prova a trascinare questo elemento su una pagina diversa.</string>
     <string name="noon">Mezzogiorno</string>
     <string name="normal_wallpaper">Sfondo</string>
@@ -679,7 +682,7 @@
     <string name="ota_layout_adjustment_content">I layout della schermata Home interna ed esterna sono stati sincronizzati nella nuova versione.</string>
     <string name="ota_layout_adjustment_title">Layout della schermata Home</string>
     <string name="out_of_space">Spazio esaurito su questa schermata Home</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">Rendering animazioni sulle icone di app di terze parti</string>
     <string name="perfect_icons_switch_title">Animazioni icone globali</string>
     <string name="permdesc_install_shortcut">"Permette ad un'applicazione di aggiungere collegamenti senza l'intervento dell'utente."</string>

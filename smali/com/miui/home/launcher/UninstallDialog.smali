@@ -695,12 +695,12 @@
 
     if-eqz v0, :cond_0
 
-    const v2, 0x7f10044f
+    const v2, 0x7f100458
 
     goto :goto_0
 
     :cond_0
-    const v2, 0x7f100401
+    const v2, 0x7f10040a
 
     :goto_0
     invoke-virtual {v1, v2}, Landroid/widget/Button;->setText(I)V
@@ -778,11 +778,11 @@
     move-result-object v4
 
     :goto_1
-    const v5, 0x7f100454
+    const v5, 0x7f10045d
 
-    const v6, 0x7f100390
+    const v6, 0x7f100399
 
-    const v7, 0x7f100450
+    const v7, 0x7f100459
 
     const/4 v8, 0x1
 
@@ -894,7 +894,7 @@
 
     iget-object v1, p0, Lcom/miui/home/launcher/UninstallDialog;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f100391
+    const v3, 0x7f10039a
 
     .line 160
     invoke-virtual {v1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -925,7 +925,7 @@
 
     iget-object v3, p0, Lcom/miui/home/launcher/UninstallDialog;->mContext:Landroid/content/Context;
 
-    const v6, 0x7f100451
+    const v6, 0x7f10045a
 
     .line 165
     invoke-virtual {v3, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -985,7 +985,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f100456
+    const v3, 0x7f10045f
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1005,7 +1005,7 @@
     .line 174
     iget-object v0, p0, Lcom/miui/home/launcher/UninstallDialog;->mDescription:Landroid/widget/TextView;
 
-    const v1, 0x7f100455
+    const v1, 0x7f10045e
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -1357,7 +1357,7 @@
     .line 70
     invoke-super {p0}, Lcom/miui/launcher/views/LauncherFrameLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a029f
+    const v0, 0x7f0a02a4
 
     .line 71
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/UninstallDialog;->findViewById(I)Landroid/view/View;
@@ -1474,12 +1474,12 @@
 
     if-eqz v1, :cond_0
 
-    const v1, 0x7f07046f
+    const v1, 0x7f070478
 
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f07046e
+    const v1, 0x7f070477
 
     .line 95
     :goto_0

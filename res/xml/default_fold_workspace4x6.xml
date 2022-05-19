@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <favorites xmlns:launcher="http://schemas.android.com/apk/res-auto">
     <default launcher:screen="1" />
-    <folder launcher:screen="0" launcher:title="com.miui.home:string/default_folder_title_tools" launcher:x="3" launcher:y="5" />
-    <folder launcher:presets_container="true" launcher:screen="1" launcher:title="com.miui.home:string/default_folder_title_hot" launcher:x="2" launcher:y="5" />
-    <folder launcher:presets_container="true" launcher:screen="1" launcher:title="com.miui.home:string/default_folder_title_recommend" launcher:x="3" launcher:y="5" />
-    <command launcher:methodName="checkDevices" launcher:methodParams="ares" launcher:methodResult="false">
-        <clock2x4 launcher:screen="0" launcher:x="0" launcher:y="0" />
-    </command>
-    <command launcher:methodName="checkDevices" launcher:methodParams="ares" launcher:methodResult="true">
-        <clock3x4 launcher:screen="0" launcher:x="0" launcher:y="0" />
-    </command>
+    <folder launcher:screen="0" launcher:title="@string/default_folder_title_tools_path" launcher:x="3" launcher:y="5" />
+    <folder launcher:presets_container="true" launcher:screen="1" launcher:title="@string/default_folder_title_hot_path" launcher:x="2" launcher:y="5" />
+    <folder launcher:presets_container="true" launcher:screen="1" launcher:title="@string/default_folder_title_recommend_path" launcher:x="3" launcher:y="5" />
+    <maml launcher:productId="b8006e83-c497-4642-9815-f674b82842b0" launcher:screen="0" launcher:spanX="4" launcher:spanY="2" launcher:title="时钟" launcher:uri="file:///system/media/theme/default/gadgets/maml_clock_4x2.mtz" launcher:versionCode="12" launcher:x="0" launcher:y="0" />
     <favorite launcher:className="com.miui.weather2.ActivityWeatherMain" launcher:packageName="com.miui.weather2" launcher:screen="0" launcher:x="0" launcher:y="3" />
     <favorite launcher:className="com.miui.gallery.activity.HomePageActivity" launcher:packageName="com.miui.gallery" launcher:screen="0" launcher:x="1" launcher:y="3" />
     <favorite launcher:className="com.miui.video.HomeActivity" launcher:packageName="com.miui.video" launcher:screen="0" launcher:x="2" launcher:y="3" />

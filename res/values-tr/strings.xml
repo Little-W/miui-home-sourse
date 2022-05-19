@@ -53,7 +53,7 @@
     <string name="activity_not_unlocked">Uygulamaları açmadan önce cihazınız tamamen yeniden başlatılana kadar bekleyin</string>
     <string name="add_custom_category">Özel</string>
     <string name="add_screen">Ekran ekle</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">Ana ekrana ekle</string>
     <string name="added_all_category">Tüm uygulamalar başarıyla eklendi</string>
     <string name="afternoon">Öğleden sonra</string>
     <string name="agree_button">Kabul et</string>
@@ -379,6 +379,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">Ana ekrana eklemek için basılı tutun</string>
+    <string name="fold_pair_installed_shortcut_launcher">Bu kısayol zaten mevcut</string>
     <string name="folder_name">Klasör</string>
     <string name="frame_load_failed">Çerçeve yüklenemiyor</string>
     <string name="free_style_apps_title">Uygulama seçin</string>
@@ -658,6 +660,7 @@
     <string name="night">Akşam</string>
     <string name="no_detail_page">Ayrıntı sayfası yok</string>
     <string name="no_space_toast">Yeterli boş alan yok</string>
+    <string name="no_space_toast_fold">Burada yeterli boş alan yok</string>
     <string name="no_space_toast_when_click_widget">Bu sayfada yeterli alan yok. Bu ögeyi farklı bir sayfaya sürüklemeyi deneyin.</string>
     <string name="noon">Gün ortası</string>
     <string name="normal_wallpaper">Duvar kağıdı</string>
@@ -679,7 +682,7 @@
     <string name="ota_layout_adjustment_content">İç ve dış Ana ekran düzeni yeni sürümde senkronize edildi.</string>
     <string name="ota_layout_adjustment_title">Ana ekran düzeni</string>
     <string name="out_of_space">Ana ekranda yeterli boş alan yok</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">Animasyonları üçüncü taraf uygulama simgelerinde oluştur</string>
     <string name="perfect_icons_switch_title">Küresel simge animasyonları</string>
     <string name="permdesc_install_shortcut">Bir uygulamanın kullanıcı izni olmadan kısayol(lar) eklemesine izin verir.</string>

@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/ShortcutInfo;)V
     .locals 0
 
-    .line 8270
+    .line 8303
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$76;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iput-object p2, p0, Lcom/miui/home/launcher/Launcher$76;->val$existItem:Lcom/miui/home/launcher/ShortcutInfo;
@@ -42,12 +42,12 @@
 .method public run()V
     .locals 2
 
-    .line 8272
+    .line 8305
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$76;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$76;->val$existItem:Lcom/miui/home/launcher/ShortcutInfo;
 
-    invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$9000(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/ShortcutInfo;)Z
+    invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$9100(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/ShortcutInfo;)Z
 
     return-void
 .end method

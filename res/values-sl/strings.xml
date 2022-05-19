@@ -53,7 +53,7 @@
     <string name="activity_not_unlocked">Preden odprete aplikacije, počakajte, da se naprava popolnoma ponovno zažene</string>
     <string name="add_custom_category">Prilagojeno</string>
     <string name="add_screen">Dodaj zaslon</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">Dodaj na Začetni zaslon</string>
     <string name="added_all_category">Vse aplikacije so bile uspešno dodane</string>
     <string name="afternoon">Popoldne</string>
     <string name="agree_button">Strinjam se</string>
@@ -379,6 +379,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">Pritisnite in držite, da bi dodali na Začetni zaslon</string>
+    <string name="fold_pair_installed_shortcut_launcher">Ta bližnjica že obstaja</string>
     <string name="folder_name">Mapa</string>
     <string name="frame_load_failed">Ni mogoče naložiti okvirja</string>
     <string name="free_style_apps_title">Izberi aplikacijo</string>
@@ -658,6 +660,7 @@
     <string name="night">Večer</string>
     <string name="no_detail_page">Ni podrobnosti o strani</string>
     <string name="no_space_toast">Ni dovolj prostora</string>
+    <string name="no_space_toast_fold">Ni dovolj prostora</string>
     <string name="no_space_toast_when_click_widget">Na tej strani ni dovolj prostora. Poskusite premakniti ta predmet na drugo stran.</string>
     <string name="noon">Opoldne</string>
     <string name="normal_wallpaper">Slika ozadja</string>
@@ -679,7 +682,7 @@
     <string name="ota_layout_adjustment_content">Razporeditve notranjega in zunanjega Začetnega zaslona so bile v novi različici sinhronizirane.</string>
     <string name="ota_layout_adjustment_title">Razporeditev Začetnega zaslona</string>
     <string name="out_of_space">Na tem Začetnem zaslonu ni več prostora</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">Upodabljanje animacij na ikonah drugih aplikacij</string>
     <string name="perfect_icons_switch_title">Animacije globalnih ikon</string>
     <string name="permdesc_install_shortcut">Dovoli aplikaciji, da doda bližnjice brez posredovanja uporabnika.</string>

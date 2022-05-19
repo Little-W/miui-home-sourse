@@ -45,7 +45,7 @@
 
     iput-object v0, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->mContext:Landroid/content/Context;
 
-    const v0, 0x7f0a01ff
+    const v0, 0x7f0a0203
 
     .line 54
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -56,7 +56,7 @@
 
     iput-object v0, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->container:Landroid/widget/RelativeLayout;
 
-    const v0, 0x7f0a01fb
+    const v0, 0x7f0a01ff
 
     .line 55
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -89,7 +89,7 @@
 
     iput-object v0, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->appIcon:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a02b3
+    const v0, 0x7f0a02b8
 
     .line 58
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -100,7 +100,7 @@
 
     iput-object v0, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->appName:Landroid/widget/TextView;
 
-    const v0, 0x7f0a02b5
+    const v0, 0x7f0a02ba
 
     .line 59
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -111,7 +111,7 @@
 
     iput-object v0, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->appDes:Landroid/widget/TextView;
 
-    const v0, 0x7f0a02b4
+    const v0, 0x7f0a02b9
 
     .line 60
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -122,7 +122,7 @@
 
     iput-object v0, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->appNameCenter:Landroid/widget/TextView;
 
-    const v0, 0x7f0a02b7
+    const v0, 0x7f0a02bc
 
     .line 61
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -243,7 +243,7 @@
 
     if-eqz p5, :cond_0
 
-    const p5, 0x7f060061
+    const p5, 0x7f060062
 
     .line 169
     invoke-static {p6, p5}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
@@ -259,7 +259,7 @@
 
     invoke-virtual {p1, p3}, Landroid/widget/TextView;->setTextColor(I)V
 
-    const p1, 0x7f060050
+    const p1, 0x7f060051
 
     .line 171
     invoke-static {p6, p1}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
@@ -278,7 +278,7 @@
     goto :goto_0
 
     :cond_0
-    const p5, 0x7f060062
+    const p5, 0x7f060063
 
     .line 174
     invoke-static {p6, p5}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
@@ -294,7 +294,7 @@
 
     invoke-virtual {p1, p3}, Landroid/widget/TextView;->setTextColor(I)V
 
-    const p1, 0x7f060051
+    const p1, 0x7f060052
 
     .line 176
     invoke-static {p6, p1}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I

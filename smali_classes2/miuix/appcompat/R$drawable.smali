@@ -1693,10 +1693,10 @@
 
 .field public static final notify_panel_notification_icon_bg:I = 0x7f080537
 
-.field public static final tooltip_frame_dark:I = 0x7f0805a6
+.field public static final tooltip_frame_dark:I = 0x7f0805a7
 
-.field public static final tooltip_frame_light:I = 0x7f0805a7
+.field public static final tooltip_frame_light:I = 0x7f0805a8
 
-.field public static final word_photo_bg_dark:I = 0x7f0805c5
+.field public static final word_photo_bg_dark:I = 0x7f0805c6
 
-.field public static final word_photo_bg_light:I = 0x7f0805c6
+.field public static final word_photo_bg_light:I = 0x7f0805c7

@@ -12,10 +12,6 @@
     <dimen name="editing_entry_thumbnail_view_margin_left_right">0.0dip</dimen>
     <dimen name="fastscroll_letter_side_padding_bottom">10.899994dip</dimen>
     <dimen name="fastscroll_letter_side_padding_top">10.899994dip</dimen>
-    <dimen name="fastscroll_popup_margin">20.0dip</dimen>
-    <dimen name="fastscroll_popup_margin_top">-10.899994dip</dimen>
-    <dimen name="fastscroll_popup_padding_right">18.0dip</dimen>
-    <dimen name="fastscroll_popup_text_size">29.099976sp</dimen>
     <dimen name="folder_content_margin_top">24.0dip</dimen>
     <dimen name="folder_content_padding_left">0.0dip</dimen>
     <dimen name="folder_content_padding_right">0.0dip</dimen>
@@ -33,6 +29,10 @@
     <dimen name="hotseats_padding_top">0.0dip</dimen>
     <dimen name="icon_padding_top">4.0dip</dimen>
     <dimen name="launcher_action_bar_title_size">20.0dip</dimen>
+    <dimen name="recents_task_view_bar_padding_bottom">5.0dip</dimen>
+    <dimen name="recents_task_view_header_height">41.0dip</dimen>
+    <dimen name="recents_task_view_rounded_corners_radius_min">12.0dip</dimen>
+    <dimen name="recents_task_view_sub_header_app_info_spacing">6.0dip</dimen>
     <dimen name="recommend_margin_start">20.0dip</dimen>
     <dimen name="recommend_switch_summary_padding_left">5.0dip</dimen>
     <dimen name="search_bar_margin_bottom">43.0dip</dimen>

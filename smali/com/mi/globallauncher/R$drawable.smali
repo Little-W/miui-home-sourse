@@ -1793,39 +1793,39 @@
 
 .field public static final preference_list_divider_material:I = 0x7f08053c
 
-.field public static final round_white_rectangle:I = 0x7f08055a
+.field public static final round_white_rectangle:I = 0x7f08055b
 
-.field public static final search_guide_checkbox_bg:I = 0x7f080574
+.field public static final search_guide_checkbox_bg:I = 0x7f080575
 
-.field public static final search_guide_checkbox_bg_dark:I = 0x7f080575
+.field public static final search_guide_checkbox_bg_dark:I = 0x7f080576
 
-.field public static final search_guide_checkbox_normal:I = 0x7f080576
+.field public static final search_guide_checkbox_normal:I = 0x7f080577
 
-.field public static final search_guide_checkbox_normal_dark:I = 0x7f080577
+.field public static final search_guide_checkbox_normal_dark:I = 0x7f080578
 
-.field public static final search_guide_checkbox_selected:I = 0x7f080578
+.field public static final search_guide_checkbox_selected:I = 0x7f080579
 
-.field public static final search_guide_checkbox_selected_dark:I = 0x7f080579
+.field public static final search_guide_checkbox_selected_dark:I = 0x7f08057a
 
-.field public static final search_guide_close_btn:I = 0x7f08057a
+.field public static final search_guide_close_btn:I = 0x7f08057b
 
-.field public static final search_guide_close_btn_dark:I = 0x7f08057b
+.field public static final search_guide_close_btn_dark:I = 0x7f08057c
 
-.field public static final search_red_dot:I = 0x7f08057e
+.field public static final search_red_dot:I = 0x7f08057f
 
-.field public static final switch_mode:I = 0x7f080593
+.field public static final switch_mode:I = 0x7f080594
 
-.field public static final tooltip_frame_dark:I = 0x7f0805a6
+.field public static final tooltip_frame_dark:I = 0x7f0805a7
 
-.field public static final tooltip_frame_light:I = 0x7f0805a7
+.field public static final tooltip_frame_light:I = 0x7f0805a8
 
-.field public static final type_four_step_one:I = 0x7f0805b0
+.field public static final type_four_step_one:I = 0x7f0805b1
 
-.field public static final type_four_step_one_dark_mode:I = 0x7f0805b1
+.field public static final type_four_step_one_dark_mode:I = 0x7f0805b2
 
-.field public static final type_four_step_two:I = 0x7f0805b2
+.field public static final type_four_step_two:I = 0x7f0805b3
 
-.field public static final type_four_step_two_dark_mode:I = 0x7f0805b3
+.field public static final type_four_step_two_dark_mode:I = 0x7f0805b4
 
 
 # direct methods

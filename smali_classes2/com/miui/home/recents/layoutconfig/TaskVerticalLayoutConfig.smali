@@ -10,7 +10,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 5
+    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -50,12 +50,21 @@
 
     const p1, 0x3f1eb852    # 0.62f
 
-    goto :goto_0
+    return p1
 
+    .line 20
     :cond_1
+    sget-boolean p1, Lcom/miui/home/launcher/DeviceConfig;->IS_FOLD_DEVICE:Z
+
+    if-eqz p1, :cond_2
+
+    const p1, 0x3ebf7cee    # 0.374f
+
+    return p1
+
+    :cond_2
     const p1, 0x3f0ccccd    # 0.55f
 
-    :goto_0
     return p1
 .end method
 

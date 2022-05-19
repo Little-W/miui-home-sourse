@@ -11,7 +11,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .line 24
+    .line 25
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -34,7 +34,7 @@
 .method public static addToPreInstallFolder(Lcom/miui/home/launcher/AppInfo;Ljava/lang/String;)V
     .locals 4
 
-    .line 58
+    .line 59
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -43,7 +43,7 @@
 
     move-result-object v0
 
-    .line 59
+    .line 60
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -68,12 +68,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 61
+    .line 62
     iput-wide v0, p0, Lcom/miui/home/launcher/AppInfo;->container:J
 
     const/4 p1, 0x0
 
-    .line 62
+    .line 63
     iput p1, p0, Lcom/miui/home/launcher/AppInfo;->cellX:I
 
     :cond_0
@@ -95,14 +95,14 @@
         }
     .end annotation
 
-    .line 27
+    .line 28
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0, p0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
-    .line 28
+    .line 29
     invoke-virtual {p1, v0, p0}, Landroid/content/pm/PackageManager;->queryBroadcastReceivers(Landroid/content/Intent;I)Ljava/util/List;
 
     move-result-object p0
@@ -125,7 +125,7 @@
 
     check-cast v0, Landroid/content/pm/ResolveInfo;
 
-    .line 29
+    .line 30
     iget-object v1, v0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     if-eqz v1, :cond_0
@@ -140,18 +140,18 @@
 
     if-eqz v1, :cond_0
 
-    .line 31
+    .line 32
     iget-object v0, v0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     iget-object v0, v0, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
-    .line 33
+    .line 34
     :try_start_0
     invoke-virtual {p1, v0}, Landroid/content/pm/PackageManager;->getResourcesForApplication(Ljava/lang/String;)Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 34
+    .line 35
     invoke-static {v0, v1}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
     move-result-object p0
@@ -163,7 +163,7 @@
     :catch_0
     move-exception v0
 
-    .line 36
+    .line 37
     invoke-virtual {v0}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
 
     goto :goto_0
@@ -177,12 +177,12 @@
 .method private static getResourceUri(Landroid/content/Context;I)Landroid/net/Uri;
     .locals 2
 
-    .line 49
+    .line 50
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    .line 50
+    .line 51
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -191,7 +191,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 51
+    .line 52
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getResourcePackageName(I)Ljava/lang/String;
 
     move-result-object v1
@@ -202,7 +202,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 52
+    .line 53
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getResourceTypeName(I)Ljava/lang/String;
 
     move-result-object v1
@@ -213,7 +213,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 53
+    .line 54
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getResourceEntryName(I)Ljava/lang/String;
 
     move-result-object p0
@@ -224,7 +224,7 @@
 
     move-result-object p0
 
-    .line 54
+    .line 55
     invoke-static {p0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p0
@@ -235,12 +235,12 @@
 .method static recordProgressInfo(Ljava/lang/String;I)V
     .locals 2
 
-    .line 44
+    .line 45
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
 
-    .line 45
+    .line 46
     invoke-static {v0}, Lcom/miui/home/launcher/progress/ProgressManager;->getManager(Landroid/content/Context;)Lcom/miui/home/launcher/progress/ProgressManager;
 
     move-result-object v0

@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/FolderIcon;)V
     .locals 0
 
-    .line 546
+    .line 547
     iput-object p1, p0, Lcom/miui/home/launcher/FolderIcon$10;->this$0:Lcom/miui/home/launcher/FolderIcon;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,14 +38,14 @@
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 1
 
-    .line 549
+    .line 550
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Ljava/lang/Float;
 
-    .line 550
+    .line 551
     iget-object v0, p0, Lcom/miui/home/launcher/FolderIcon$10;->this$0:Lcom/miui/home/launcher/FolderIcon;
 
     invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F

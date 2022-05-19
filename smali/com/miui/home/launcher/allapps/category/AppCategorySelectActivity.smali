@@ -117,7 +117,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f1101e2
+    const v1, 0x7f1101e3
 
     const/4 v2, 0x1
 
@@ -247,7 +247,7 @@
 
     invoke-direct {v1, p0, p1, p2}, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AppCategorySelectActivity$B2g3zYpwq8o4qh3j54XozsR0y9s;-><init>(Lcom/miui/home/launcher/allapps/category/AppCategorySelectActivity;ILjava/util/Collection;)V
 
-    const p1, 0x7f100164
+    const p1, 0x7f100169
 
     .line 81
     invoke-virtual {v0, p1, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;

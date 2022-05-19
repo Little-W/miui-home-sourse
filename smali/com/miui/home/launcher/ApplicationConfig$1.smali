@@ -21,7 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 144
+    .line 147
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,7 +32,7 @@
 .method public run()V
     .locals 3
 
-    .line 147
+    .line 150
     invoke-static {}, Lcom/miui/home/launcher/ApplicationConfig;->access$000()Z
 
     move-result v0
@@ -41,7 +41,7 @@
 
     const-string v0, "ApplicationConfig_"
 
-    .line 148
+    .line 151
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V

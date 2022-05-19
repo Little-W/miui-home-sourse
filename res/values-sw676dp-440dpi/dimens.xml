@@ -10,7 +10,6 @@
     <dimen name="edit_mode_application_checkbox_margin_end">0.0dip</dimen>
     <dimen name="edit_mode_application_checkbox_margin_top">0.0dip</dimen>
     <dimen name="edit_mode_thumbnail_home_icon_radius">15.269989dip</dimen>
-    <dimen name="fastscroll_popup_size">61.799988dip</dimen>
     <dimen name="fold_edit_cellscreen_translationx_distance">16.449982dip</dimen>
     <dimen name="folder_content_margin_top">68.0dip</dimen>
     <dimen name="folder_content_padding_left">53.0dip</dimen>
@@ -25,6 +24,7 @@
     <dimen name="icon_title_margin_top">-3.0dip</dimen>
     <dimen name="launcher_action_bar_title_size">20.0dip</dimen>
     <item type="dimen" name="launcher_miui_widget_density_scale_factor">0.9</item>
+    <item type="dimen" name="navigation_bar_type_container_ratio">1.2</item>
     <dimen name="navigation_guide_item_icon_height">133.0dip</dimen>
     <dimen name="navigation_guide_item_icon_width">118.0dip</dimen>
     <dimen name="navigation_guide_text_margin_horizontal">21.0dip</dimen>
@@ -34,6 +34,7 @@
     <item type="dimen" name="recents_task_stack_view_ratio">1.1</item>
     <dimen name="recommend_margin_end">20.0dip</dimen>
     <dimen name="recommend_switch_summary_padding_left">2.0dip</dimen>
+    <dimen name="selected_view_corners_radius">18.0dip</dimen>
     <dimen name="set_home_screen_gap_fold">16.699982dip</dimen>
     <dimen name="set_home_screen_gap_middle">32.0dip</dimen>
     <dimen name="workspace_cell_additional_padding_top_notch">20.899994dip</dimen>

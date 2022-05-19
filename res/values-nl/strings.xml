@@ -53,7 +53,7 @@
     <string name="activity_not_unlocked">Wacht totdat uw apparaat volledig opnieuw is opgestart voordat u apps opent</string>
     <string name="add_custom_category">Aangepast</string>
     <string name="add_screen">Scherm toevoegen</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">Toevoegen aan Startscherm</string>
     <string name="added_all_category">Alle apps succesvol toegevoegd</string>
     <string name="afternoon">Middag</string>
     <string name="agree_button">Akkoord</string>
@@ -379,6 +379,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">Houd ingedrukt om toe te voegen aan Startscherm</string>
+    <string name="fold_pair_installed_shortcut_launcher">Deze snelkoppeling bestaat al</string>
     <string name="folder_name">Map</string>
     <string name="frame_load_failed">Kan frame niet laden</string>
     <string name="free_style_apps_title">App selecteren</string>
@@ -658,6 +660,7 @@
     <string name="night">Avond</string>
     <string name="no_detail_page">Geen detailspagina</string>
     <string name="no_space_toast">Niet genoeg ruimte</string>
+    <string name="no_space_toast_fold">Niet genoeg ruimte hier</string>
     <string name="no_space_toast_when_click_widget">Niet genoeg ruimte op deze pagina. Probeer dit item naar een andere pagina te verslepen.</string>
     <string name="noon">Tussen de middag</string>
     <string name="normal_wallpaper">Achtergrond</string>
@@ -679,7 +682,7 @@
     <string name="ota_layout_adjustment_content">In de nieuwe versie zijn de binnen- en buitenkant van het Startscherm lay-out gesynchroniseerd.</string>
     <string name="ota_layout_adjustment_title">Startscherm lay-out</string>
     <string name="out_of_space">Geen ruimte meer op dit Startscherm</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">Render animaties op app-iconen van derden</string>
     <string name="perfect_icons_switch_title">Wereldwijde icoon-animaties</string>
     <string name="permdesc_install_shortcut">Een app toestaan snelkoppelingen toe te voegen zonder actie van de gebruiker.</string>

@@ -42,7 +42,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f100173
+    const v1, 0x7f100178
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -84,7 +84,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f060096
+    const v0, 0x7f060097
 
     .line 84
     invoke-virtual {p1, v0}, Lcom/mi/globallauncher/view/TapTarget;->outerCircleColor(I)Lcom/mi/globallauncher/view/TapTarget;
@@ -112,7 +112,7 @@
 
     move-result-object p1
 
-    const v2, 0x7f0603e8
+    const v2, 0x7f0603e9
 
     .line 88
     invoke-virtual {p1, v2}, Lcom/mi/globallauncher/view/TapTarget;->targetCircleColor(I)Lcom/mi/globallauncher/view/TapTarget;
@@ -150,7 +150,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f060077
+    const v0, 0x7f060078
 
     .line 94
     invoke-virtual {p1, v0}, Lcom/mi/globallauncher/view/TapTarget;->dimColor(I)Lcom/mi/globallauncher/view/TapTarget;

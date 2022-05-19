@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 6252
+    .line 6243
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$55;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,10 +38,10 @@
 .method public onAnimationFinish()V
     .locals 1
 
-    .line 6255
+    .line 6246
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$55;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$7500(Lcom/miui/home/launcher/Launcher;)V
+    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$7600(Lcom/miui/home/launcher/Launcher;)V
 
     return-void
 .end method

@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/ShortcutIcon;)V
     .locals 0
 
-    .line 449
+    .line 455
     iput-object p1, p0, Lcom/miui/home/launcher/ShortcutIcon$8;->this$0:Lcom/miui/home/launcher/ShortcutIcon;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,14 +35,14 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 452
+    .line 458
     invoke-static {}, Lcom/miui/home/launcher/WallpaperUtils;->hasAppliedLightWallpaper()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 453
+    .line 459
     iget-object p1, p0, Lcom/miui/home/launcher/ShortcutIcon$8;->this$0:Lcom/miui/home/launcher/ShortcutIcon;
 
     iget-object p1, p1, Lcom/miui/home/launcher/ShortcutIcon;->mFolderCreationBg:Landroid/widget/ImageView;
@@ -63,7 +63,7 @@
 
     goto :goto_0
 
-    .line 455
+    .line 461
     :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/ShortcutIcon$8;->this$0:Lcom/miui/home/launcher/ShortcutIcon;
 

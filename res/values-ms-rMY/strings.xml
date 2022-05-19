@@ -26,7 +26,7 @@
     <string name="activity_not_unlocked">Tunggu sehingga peranti anda but semula sepenuhnya sebelum membuka aplikasi</string>
     <string name="add_custom_category">Khas</string>
     <string name="add_screen">Tambah skrin</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">Tambah ke Skrin Utama</string>
     <string name="added_all_category">Semua apl berjaya ditambah</string>
     <string name="afternoon">Petang</string>
     <string name="agree_button">Setuju</string>
@@ -68,7 +68,7 @@
     <string name="all_apps_slide_up_tips">Meleret ke atas disediakan untuk membuka Apl menu. Bertukar ke mod Skrin Utama biasa dan cuba lagi.</string>
     <string name="all_apps_suggestions">Saranan apl</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">Animation speed</string>
+    <string name="animation_rate_title">Kelajuan animasi</string>
     <string name="announce_for_app_move_in_folder">Pindah ke posisi %1$d di dalam folder</string>
     <string name="announce_for_checked">%1$s, disemak</string>
     <string name="announce_for_choose_default_screen">Tetapkan skrin %1$d sebagai skrin lalai Laman utama</string>
@@ -349,6 +349,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">Tekan dan tahan untuk menambah pada Skrin Utama</string>
+    <string name="fold_pair_installed_shortcut_launcher">Pintasan ini telah pun wujud</string>
     <string name="folder_name">Folder</string>
     <string name="frame_load_failed">Gagal untuk muatkan bingkai</string>
     <string name="free_style_apps_title">Pilih apl</string>
@@ -628,6 +630,7 @@
     <string name="night">Petang</string>
     <string name="no_detail_page">Tiada butiran halaman</string>
     <string name="no_space_toast">Ruang tidak mencukupi</string>
+    <string name="no_space_toast_fold">Ruang tidak mencukupi di sini</string>
     <string name="no_space_toast_when_click_widget">Ruang tidak cukup pada halaman ini. Cuba seret item ini ke halaman lain.</string>
     <string name="noon">Tengah hari</string>
     <string name="normal_wallpaper">Latar hias</string>
@@ -636,7 +639,7 @@
     <string name="notification_reset_title">Ikon berjaya disusun</string>
     <string name="one_key_call_title">Klik untuk dail</string>
     <string name="online_wallpaper">Dalam talian</string>
-    <string name="open_pad_personal_assistant_settings">Home screen widgets</string>
+    <string name="open_pad_personal_assistant_settings">Widget Skrin Utama</string>
     <string name="open_personal_assistant_dialog_btn_cancel">Batal</string>
     <string name="open_personal_assistant_dialog_btn_confirm">Matikan</string>
     <string name="open_personal_assistant_dialog_desc">Setelah mematikan App vault, anda tidak akan dapat melihat atau menggunakan widget App vault. Versi terbaru mereka tidak akan tersedia untuk anda juga. Matikan juga?</string>
@@ -648,7 +651,7 @@
     <string name="ota_layout_adjustment_content">Susun atur Skrin Utama dalaman dan luaran diselaraskan dalam versi baru.</string>
     <string name="ota_layout_adjustment_title">Susun atur Skrin Utama</string>
     <string name="out_of_space">Tiada lagi ruang di Skrin Utama ini.</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">Render animasi pada ikon aplikasi pihak ketiga</string>
     <string name="perfect_icons_switch_title">Animasi ikon global</string>
     <string name="permdesc_install_shortcut">Benarkan apl untuk tambah pintasan tanpa campur tangan pengguna.</string>

@@ -26,7 +26,7 @@
     <string name="activity_not_unlocked">Tətbiqləri açmazdan əvvəl cihazınızın tamamilə yenidən başladılmasına qədər gözləyin</string>
     <string name="add_custom_category">Xüsusi</string>
     <string name="add_screen">Ekran əlavə et</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">Əsas ekrana əlavə et</string>
     <string name="added_all_category">Bütün tətbiqlər uğurla əlavə edildi</string>
     <string name="afternoon">Günortadan sonra</string>
     <string name="agree_button">Qəbul et</string>
@@ -349,6 +349,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">Əsas ekrana əlavə etmək üçün basıb saxlayın</string>
+    <string name="fold_pair_installed_shortcut_launcher">Bu qısayol artıq mövcuddur</string>
     <string name="folder_name">Qovluq</string>
     <string name="frame_load_failed">Çərçivə yüklənə bilmir</string>
     <string name="free_style_apps_title">Tətbiq seçin</string>
@@ -628,6 +630,7 @@
     <string name="night">Axşam</string>
     <string name="no_detail_page">Detallar səhifəsi yoxdur</string>
     <string name="no_space_toast">Kifayət qədər sahə yoxdur</string>
+    <string name="no_space_toast_fold">Kifayət qədər sahə yoxdur</string>
     <string name="no_space_toast_when_click_widget">Bu səhifədə kifayət qədər yaddaş sahəsi yoxdur. Bu elementi başqa səhifəyə sürüşdürün.</string>
     <string name="noon">Günorta</string>
     <string name="normal_wallpaper">Divar kağızı</string>
@@ -636,7 +639,7 @@
     <string name="notification_reset_title">İkonlar uğurla düzüldü</string>
     <string name="one_key_call_title">Zəng etmək üçün toxunun</string>
     <string name="online_wallpaper">Onlayn</string>
-    <string name="open_pad_personal_assistant_settings">Home screen widgets</string>
+    <string name="open_pad_personal_assistant_settings">Əsas ekran vidjetləri</string>
     <string name="open_personal_assistant_dialog_btn_cancel">Ləğv et</string>
     <string name="open_personal_assistant_dialog_btn_confirm">Bağla</string>
     <string name="open_personal_assistant_dialog_desc">Tətbiq kassasını söndürdükdən sonra Tətbiq kassası vidjetlərini görə və ya istifadə edə bilməyəcəksiniz. Onların yenilənmiş versiyaları da sizin üçün mövcud olmayacaq. Hər halda söndürülsün?</string>
@@ -648,7 +651,7 @@
     <string name="ota_layout_adjustment_content">Daxili və xarici Ev ekranı planları yeni versiyada sinxronizasiya edildi.</string>
     <string name="ota_layout_adjustment_title">Əsas ekran düzülüşləri</string>
     <string name="out_of_space">Bu Əsas ekranda kifayət qədər boş yer yoxdur</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">Üçüncü tərəf tətbiq nişanlarında animasiyalar göstərin</string>
     <string name="perfect_icons_switch_title">Qlobal ikon animasiyalar</string>
     <string name="permdesc_install_shortcut">Bir tətbiqə istifadəçi müdaxiləsi olmadan qısayollar əlavə etməyə icazə verir.</string>

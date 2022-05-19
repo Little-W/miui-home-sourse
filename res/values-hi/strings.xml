@@ -53,7 +53,7 @@
     <string name="activity_not_unlocked">ऐप्स खोलने से पहले, डिवाइस के पूरी तरह से रीबूट हो जाने तक इंतज़ार करें</string>
     <string name="add_custom_category">कस्टम</string>
     <string name="add_screen">स्क्रीन जोड़ें</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">होम स्क्रीन में जोड़ें</string>
     <string name="added_all_category">सभी ऐप्स जोड़ दिए गए हैं</string>
     <string name="afternoon">दोपहर</string>
     <string name="agree_button">सहमत हैं</string>
@@ -379,6 +379,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">होम स्क्रीन में जोड़ने के लिए दबाकर रखें</string>
+    <string name="fold_pair_installed_shortcut_launcher">यह शॉर्टकट पहले से मौजूद है</string>
     <string name="folder_name">फ़ोल्डर</string>
     <string name="frame_load_failed">फ्रेम लोड नहीं हो सका</string>
     <string name="free_style_apps_title">ऐप्प चुनें</string>
@@ -658,6 +660,7 @@
     <string name="night">शाम</string>
     <string name="no_detail_page">विवरण पेज उपलब्ध नहीं</string>
     <string name="no_space_toast">पर्याप्त स्थान नहीं</string>
+    <string name="no_space_toast_fold">यहां पर्याप्त स्थान मौजूद नहीं है</string>
     <string name="no_space_toast_when_click_widget">इस पेज में पर्याप्त खाली जगह नहीं है. इस आइटम को दूसरे पेज पर ले जाकर देखें.</string>
     <string name="noon">मध्याह्न</string>
     <string name="normal_wallpaper">वॉलपेपर</string>
@@ -679,7 +682,7 @@
     <string name="ota_layout_adjustment_content">नए संस्करण में आंतरिक और बाहरी होम स्क्रीन लेआउट को सिंक किया गया है.</string>
     <string name="ota_layout_adjustment_title">होम स्क्रीन लेआउट</string>
     <string name="out_of_space">इस होम स्क्रीन पर और अधिक स्थान नहीं है</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">तृतीय पक्ष के ऐप्प आइकन पर एनिमेशन रेंडर करें</string>
     <string name="perfect_icons_switch_title">ग्लोबल आइकन एनिमेशन</string>
     <string name="permdesc_install_shortcut">इससे ऐप्प, उपयोगकर्ता के हस्तक्षेप के बिना शॉर्टकट जोड़ सकता है.</string>

@@ -22,7 +22,7 @@
 .method private constructor <init>(Lcom/miui/home/recents/NavStubView;)V
     .locals 0
 
-    .line 984
+    .line 992
     iput-object p1, p0, Lcom/miui/home/recents/NavStubView$H;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -33,7 +33,7 @@
 .method synthetic constructor <init>(Lcom/miui/home/recents/NavStubView;Lcom/miui/home/recents/NavStubView$1;)V
     .locals 0
 
-    .line 984
+    .line 992
     invoke-direct {p0, p1}, Lcom/miui/home/recents/NavStubView$H;-><init>(Lcom/miui/home/recents/NavStubView;)V
 
     return-void
@@ -44,14 +44,14 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 12
 
-    .line 987
+    .line 995
     iget-object v0, p0, Lcom/miui/home/recents/NavStubView$H;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-static {v0}, Lcom/miui/home/recents/NavStubView;->access$1800(Lcom/miui/home/recents/NavStubView;)Landroid/view/MotionEvent;
 
     move-result-object v0
 
-    .line 989
+    .line 997
     iget v1, p1, Landroid/os/Message;->what:I
 
     const/4 v2, 0x1
@@ -62,7 +62,7 @@
 
     goto/16 :goto_2
 
-    .line 1048
+    .line 1056
     :pswitch_0
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$H;->this$0:Lcom/miui/home/recents/NavStubView;
 
@@ -76,7 +76,7 @@
 
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$H;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    .line 1049
+    .line 1057
     invoke-static {p1}, Lcom/miui/home/recents/NavStubView;->access$2400(Lcom/miui/home/recents/NavStubView;)I
 
     move-result p1
@@ -85,18 +85,18 @@
 
     goto :goto_0
 
-    .line 1053
+    .line 1061
     :cond_0
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$H;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-static {p1, v3}, Lcom/miui/home/recents/NavStubView;->access$2500(Lcom/miui/home/recents/NavStubView;I)V
 
-    .line 1054
+    .line 1062
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$H;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-static {p1, v2}, Lcom/miui/home/recents/NavStubView;->access$2500(Lcom/miui/home/recents/NavStubView;I)V
 
-    .line 1056
+    .line 1064
     :cond_1
     :goto_0
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$H;->this$0:Lcom/miui/home/recents/NavStubView;
@@ -107,7 +107,7 @@
 
     if-eqz p1, :cond_5
 
-    .line 1057
+    .line 1065
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$H;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-static {p1}, Lcom/miui/home/recents/NavStubView;->access$1800(Lcom/miui/home/recents/NavStubView;)Landroid/view/MotionEvent;
@@ -116,7 +116,7 @@
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->recycle()V
 
-    .line 1058
+    .line 1066
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$H;->this$0:Lcom/miui/home/recents/NavStubView;
 
     const/4 v0, 0x0
@@ -125,7 +125,7 @@
 
     goto/16 :goto_2
 
-    .line 1067
+    .line 1075
     :pswitch_1
     invoke-static {}, Lcom/miui/home/launcher/common/HapticFeedbackCompat;->getInstance()Lcom/miui/home/launcher/common/HapticFeedbackCompat;
 
@@ -135,7 +135,7 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/common/HapticFeedbackCompat;->performEnterRecent(Landroid/view/View;)V
 
-    .line 1068
+    .line 1076
     new-instance v2, Landroid/graphics/RectF;
 
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$H;->this$0:Lcom/miui/home/recents/NavStubView;
@@ -158,7 +158,7 @@
 
     invoke-direct {v2, v1, v1, p1, v0}, Landroid/graphics/RectF;-><init>(FFFF)V
 
-    .line 1069
+    .line 1077
     iget-object v1, p0, Lcom/miui/home/recents/NavStubView$H;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-static {v1}, Lcom/miui/home/recents/NavStubView;->access$2800(Lcom/miui/home/recents/NavStubView;)I
@@ -181,7 +181,7 @@
 
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$H;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    .line 1070
+    .line 1078
     invoke-static {p1}, Lcom/miui/home/recents/NavStubView;->access$3100(Lcom/miui/home/recents/NavStubView;)F
 
     move-result v7
@@ -198,39 +198,39 @@
 
     const/4 v11, 0x1
 
-    .line 1069
+    .line 1077
     invoke-static/range {v1 .. v11}, Lcom/miui/home/recents/NavStubView;->access$3300(Lcom/miui/home/recents/NavStubView;Landroid/graphics/RectF;IFZZFFZLjava/lang/Runnable;Z)V
 
     goto/16 :goto_2
 
-    .line 1062
+    .line 1070
     :pswitch_2
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Landroid/view/MotionEvent;
 
-    .line 1063
+    .line 1071
     iget-object v0, p0, Lcom/miui/home/recents/NavStubView$H;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/recents/NavStubView;->onPointerEvent(Landroid/view/MotionEvent;)Z
 
-    .line 1064
+    .line 1072
     invoke-virtual {p1}, Landroid/view/MotionEvent;->recycle()V
 
     goto/16 :goto_2
 
-    .line 1040
+    .line 1048
     :pswitch_3
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$H;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-static {p1, v3}, Lcom/miui/home/recents/NavStubView;->access$2302(Lcom/miui/home/recents/NavStubView;Z)Z
 
-    .line 1041
+    .line 1049
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$H;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-static {p1, v3}, Lcom/miui/home/recents/NavStubView;->access$2200(Lcom/miui/home/recents/NavStubView;Z)V
 
-    .line 1044
+    .line 1052
     sget-object p1, Lcom/miui/home/recents/NavStubView;->TAG:Ljava/lang/String;
 
     const-string v0, "handleMessage MSG_RESET_GESTURE_STUB_TOUCHABLE"
@@ -242,7 +242,7 @@
     :pswitch_4
     if-eqz v0, :cond_3
 
-    .line 993
+    .line 1001
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$H;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-static {p1}, Lcom/miui/home/recents/NavStubView;->access$000(Lcom/miui/home/recents/NavStubView;)Z
@@ -253,7 +253,7 @@
 
     goto/16 :goto_1
 
-    .line 997
+    .line 1005
     :cond_2
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$H;->this$0:Lcom/miui/home/recents/NavStubView;
 
@@ -267,7 +267,7 @@
 
     sub-float/2addr p1, v1
 
-    .line 998
+    .line 1006
     iget-object v1, p0, Lcom/miui/home/recents/NavStubView$H;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-static {v1}, Lcom/miui/home/recents/NavStubView;->access$2000(Lcom/miui/home/recents/NavStubView;)F
@@ -280,7 +280,7 @@
 
     sub-float/2addr v1, v2
 
-    .line 1001
+    .line 1009
     sget-object v2, Lcom/miui/home/recents/NavStubView;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -303,7 +303,7 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1002
+    .line 1010
     invoke-virtual {v0}, Landroid/view/MotionEvent;->getRawX()F
 
     move-result v4
@@ -314,7 +314,7 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1003
+    .line 1011
     invoke-virtual {v0}, Landroid/view/MotionEvent;->getRawY()F
 
     move-result v0
@@ -325,10 +325,10 @@
 
     move-result-object v0
 
-    .line 1001
+    .line 1009
     invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1007
+    .line 1015
     invoke-static {p1}, Ljava/lang/Math;->abs(F)F
 
     move-result p1
@@ -339,7 +339,7 @@
 
     if-gtz p1, :cond_5
 
-    .line 1008
+    .line 1016
     invoke-static {v1}, Ljava/lang/Math;->abs(F)F
 
     move-result p1
@@ -348,7 +348,7 @@
 
     if-gtz p1, :cond_5
 
-    .line 1009
+    .line 1017
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$H;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-static {p1}, Lcom/miui/home/recents/NavStubView;->access$2100(Lcom/miui/home/recents/NavStubView;)Lcom/miui/home/recents/NavStubView$H;
@@ -359,7 +359,7 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/recents/NavStubView$H;->removeMessages(I)V
 
-    .line 1010
+    .line 1018
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$H;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-static {p1}, Lcom/miui/home/recents/NavStubView;->access$2100(Lcom/miui/home/recents/NavStubView;)Lcom/miui/home/recents/NavStubView$H;
@@ -370,7 +370,7 @@
 
     move-result-object p1
 
-    .line 1012
+    .line 1020
     iget-object v0, p0, Lcom/miui/home/recents/NavStubView$H;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-static {v0}, Lcom/miui/home/recents/NavStubView;->access$2100(Lcom/miui/home/recents/NavStubView;)Lcom/miui/home/recents/NavStubView$H;
@@ -385,7 +385,7 @@
     :goto_1
     return-void
 
-    .line 1018
+    .line 1026
     :pswitch_5
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$H;->this$0:Lcom/miui/home/recents/NavStubView;
 
@@ -397,7 +397,7 @@
 
     return-void
 
-    .line 1023
+    .line 1031
     :cond_4
     sget-object p1, Lcom/miui/home/recents/NavStubView;->TAG:Ljava/lang/String;
 
@@ -405,38 +405,38 @@
 
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1028
+    .line 1036
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$H;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-static {p1, v2}, Lcom/miui/home/recents/NavStubView;->access$2200(Lcom/miui/home/recents/NavStubView;Z)V
 
     const/16 p1, 0x104
 
-    .line 1030
+    .line 1038
     invoke-virtual {p0, p1}, Lcom/miui/home/recents/NavStubView$H;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object p1
 
     const-wide/16 v0, 0x3c
 
-    .line 1031
+    .line 1039
     invoke-virtual {p0, p1, v0, v1}, Lcom/miui/home/recents/NavStubView$H;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 1034
+    .line 1042
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$H;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-static {p1, v2}, Lcom/miui/home/recents/NavStubView;->access$2302(Lcom/miui/home/recents/NavStubView;Z)Z
 
     const/16 p1, 0x101
 
-    .line 1035
+    .line 1043
     invoke-virtual {p0, p1}, Lcom/miui/home/recents/NavStubView$H;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object p1
 
     const-wide/16 v0, 0x190
 
-    .line 1036
+    .line 1044
     invoke-virtual {p0, p1, v0, v1}, Lcom/miui/home/recents/NavStubView$H;->sendMessageDelayed(Landroid/os/Message;J)Z
 
     :cond_5

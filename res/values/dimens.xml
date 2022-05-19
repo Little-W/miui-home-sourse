@@ -267,16 +267,16 @@
     <dimen name="enforced_rounded_corner_max_radius">16.0dip</dimen>
     <item type="dimen" name="exit_recent_overscroll_threshold">0.2</item>
     <dimen name="fake_landscape_screen_minor_size">0.0dip</dimen>
+    <dimen name="fastscroll_default_popup_top_margin">0.0dip</dimen>
     <dimen name="fastscroll_default_thickness">8.0dip</dimen>
-    <dimen name="fastscroll_letter_layout_height">506.1953dip</dimen>
+    <dimen name="fastscroll_letter_layout_height">524.3594dip</dimen>
+    <dimen name="fastscroll_letter_popup_text_size">11.0dip</dimen>
     <dimen name="fastscroll_letter_radius">36.359985dip</dimen>
     <dimen name="fastscroll_letter_side_padding_bottom">10.089996dip</dimen>
     <dimen name="fastscroll_letter_side_padding_top">10.089996dip</dimen>
     <dimen name="fastscroll_margin">0.0dip</dimen>
     <dimen name="fastscroll_minimum_range">50.0dip</dimen>
     <dimen name="fastscroll_popup_margin">24.0dip</dimen>
-    <dimen name="fastscroll_popup_margin_top">-10.899994dip</dimen>
-    <dimen name="fastscroll_popup_padding_right">18.0dip</dimen>
     <dimen name="fastscroll_popup_size">64.0dip</dimen>
     <dimen name="fastscroll_popup_text_size">33.0sp</dimen>
     <dimen name="fastscroll_thumb_height">64.0dip</dimen>
@@ -962,6 +962,10 @@
     <dimen name="recents_empty_text_size">14.0sp</dimen>
     <dimen name="recents_fling_overscroll_distance">24.0dip</dimen>
     <dimen name="recents_horizontal_layout_task_view_gap">10.179993dip</dimen>
+    <dimen name="recents_relay_container_max_width">420.0dip</dimen>
+    <dimen name="recents_relay_container_padding_horizontal">17.0dip</dimen>
+    <dimen name="recents_relay_container_padding_vertical">18.0dip</dimen>
+    <dimen name="recents_relay_icon_dimension">33.0dip</dimen>
     <dimen name="recents_small_window_text_margin_top">5.4499817dip</dimen>
     <dimen name="recents_task_lock_distance">20.0dip</dimen>
     <dimen name="recents_task_menu_horizontal_margin">7.269989dip</dimen>
@@ -969,16 +973,18 @@
     <item type="dimen" name="recents_task_rect_scale">0.434</item>
     <dimen name="recents_task_stack_animation_launched_while_docking_offset">144.0dip</dimen>
     <item type="dimen" name="recents_task_stack_view_ratio">2.17</item>
+    <dimen name="recents_task_view_bar_padding_bottom">0.0dip</dimen>
     <dimen name="recents_task_view_header_app_info_spacing">3.0dip</dimen>
     <dimen name="recents_task_view_header_button_padding">4.0dip</dimen>
     <dimen name="recents_task_view_header_button_padding_tablet_land">6.0dip</dimen>
     <dimen name="recents_task_view_header_height">40.0dip</dimen>
     <dimen name="recents_task_view_header_height_tablet_land">64.0dip</dimen>
     <dimen name="recents_task_view_header_title_margin_end">25.0dip</dimen>
-    <dimen name="recents_task_view_header_title_text_size">0.0sp</dimen>
+    <dimen name="recents_task_view_header_title_text_size">13.0sp</dimen>
     <dimen name="recents_task_view_privacy_protect_icon_marginTop">20.0dip</dimen>
-    <dimen name="recents_task_view_rounded_corners_radius_max">110.0dip</dimen>
-    <dimen name="recents_task_view_rounded_corners_radius_min">30.0dip</dimen>
+    <dimen name="recents_task_view_rounded_corners_radius_max">25.0dip</dimen>
+    <dimen name="recents_task_view_rounded_corners_radius_min">7.0dip</dimen>
+    <dimen name="recents_task_view_sub_header_app_info_spacing">3.0dip</dimen>
     <dimen name="recents_tip_margin_top">20.0dip</dimen>
     <dimen name="recents_tv_small_window_text_size">13.099976sp</dimen>
     <dimen name="recents_view_configuration_touch_slop">5.0dip</dimen>
@@ -1016,6 +1022,9 @@
     <dimen name="selected_left_padding">7.269989dip</dimen>
     <dimen name="selected_right_padding">7.269989dip</dimen>
     <dimen name="selected_top_padding">10.549988dip</dimen>
+    <dimen name="selected_view_corner_padding">7.269989dip</dimen>
+    <dimen name="selected_view_corners_radius">17.449982dip</dimen>
+    <dimen name="selected_view_stroke_width">2.899994dip</dimen>
     <dimen name="selector_item_text_size">12.0sp</dimen>
     <dimen name="selector_item_text_space">12.669983dip</dimen>
     <dimen name="selector_thumb_radius">12.0dip</dimen>

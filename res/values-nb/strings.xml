@@ -53,7 +53,7 @@
     <string name="activity_not_unlocked">Vent til din enhet er fullstendig omstartet før du åpner applikasjoner</string>
     <string name="add_custom_category">Egendefinert</string>
     <string name="add_screen">Legg til skjerm</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">Legg til startskjerm</string>
     <string name="added_all_category">Alle appene er lagt til</string>
     <string name="afternoon">Ettermiddag</string>
     <string name="agree_button">Godta</string>
@@ -379,6 +379,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">Trykk og hold inne for å legge til startskjermen</string>
+    <string name="fold_pair_installed_shortcut_launcher">Denne snarveien finnes allerede</string>
     <string name="folder_name">Mappe</string>
     <string name="frame_load_failed">Kan ikke laste ramme</string>
     <string name="free_style_apps_title">Velg app</string>
@@ -658,6 +660,7 @@
     <string name="night">Kveld</string>
     <string name="no_detail_page">Ingen detaljer side</string>
     <string name="no_space_toast">Ikke nok plass</string>
+    <string name="no_space_toast_fold">Ikke nok lagringsplass her</string>
     <string name="no_space_toast_when_click_widget">Ikke nok ledig plass på siden. Prøv å dra elementet til en annen side.</string>
     <string name="noon">Midt på dagen</string>
     <string name="normal_wallpaper">Bakgrunn</string>
@@ -679,7 +682,7 @@
     <string name="ota_layout_adjustment_content">Indre og ytre startskjemoppsett ble synkronisert i den nye versjonen.</string>
     <string name="ota_layout_adjustment_title">Startskjemoppsett</string>
     <string name="out_of_space">Ikke mer ledig plass på Startskjermen</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">Gjengi animasjoner på ikoner for tredjepartsapper</string>
     <string name="perfect_icons_switch_title">Globale ikonanimasjoner</string>
     <string name="permdesc_install_shortcut">Tillater en app å legge til snarveier uten brukerintervensjon.</string>

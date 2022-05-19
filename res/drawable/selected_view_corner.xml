@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape android:shape="rectangle"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <stroke android:width="2.899994dip" android:color="@color/navigation_bar_type_title_selected_color" />
+    <stroke android:width="@dimen/selected_view_stroke_width" android:color="@color/navigation_bar_type_title_selected_color" />
     <solid android:color="@android:color/transparent" />
-    <corners android:topLeftRadius="17.449982dip" android:topRightRadius="17.449982dip" android:bottomLeftRadius="17.449982dip" android:bottomRightRadius="17.449982dip" />
-    <padding android:left="7.269989dip" android:top="7.269989dip" android:right="7.269989dip" android:bottom="7.269989dip" />
+    <corners android:topLeftRadius="@dimen/selected_view_corners_radius" android:topRightRadius="@dimen/selected_view_corners_radius" android:bottomLeftRadius="@dimen/selected_view_corners_radius" android:bottomRightRadius="@dimen/selected_view_corners_radius" />
+    <padding android:left="@dimen/selected_view_corner_padding" android:top="@dimen/selected_view_corner_padding" android:right="@dimen/selected_view_corner_padding" android:bottom="@dimen/selected_view_corner_padding" />
 </shape>

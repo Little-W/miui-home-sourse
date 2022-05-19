@@ -34,7 +34,7 @@
 
     invoke-virtual {p1, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const p1, 0x7f0a02e6
+    const p1, 0x7f0a02eb
 
     .line 21
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/gadget/GoogleSearch;->findViewById(I)Landroid/view/View;
@@ -115,7 +115,7 @@
 
     if-eq p1, v2, :cond_2
 
-    const v2, 0x7f0a02e6
+    const v2, 0x7f0a02eb
 
     if-eq p1, v2, :cond_1
 

@@ -26,7 +26,7 @@
     <string name="activity_not_unlocked">एप्स उघडण्यापूर्वी तुमचे डिव्हाइस पूर्णपणे रिबूट होईपर्यंत प्रतीक्षा करा</string>
     <string name="add_custom_category">कस्टम</string>
     <string name="add_screen">स्कीन जोडा</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">होम स्क्रीनवर जोडा</string>
     <string name="added_all_category">यशस्वीरित्या सर्व एप्स जोडली</string>
     <string name="afternoon">दुपार</string>
     <string name="agree_button">सहमती</string>
@@ -349,6 +349,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">होम स्क्रीनवर जोडण्यासाठी दाबून धरा</string>
+    <string name="fold_pair_installed_shortcut_launcher">हा शॉर्टकट आधीच अस्तित्वात आहे</string>
     <string name="folder_name">फोल्डर</string>
     <string name="frame_load_failed">फ्रेम लोड करू शकत नाही</string>
     <string name="free_style_apps_title">एप निवडा</string>
@@ -628,6 +630,7 @@
     <string name="night">संध्याकाळ</string>
     <string name="no_detail_page">तपशील पेज नाही</string>
     <string name="no_space_toast">पुरेशी जागा नाही</string>
+    <string name="no_space_toast_fold">इथे पुरेशी जागा नाही</string>
     <string name="no_space_toast_when_click_widget">या पेजवर पुरेशी जागा नाही. हा आयटम वेगळ्या पेजवर ओढण्याचा प्रयत्न करा.</string>
     <string name="noon">दिवसा</string>
     <string name="normal_wallpaper">वॉलपेपर</string>
@@ -648,7 +651,7 @@
     <string name="ota_layout_adjustment_content">नवीन आवृत्तीमध्ये अंतर्गत आणि बाह्य होम स्क्रीन लेआउट सिंक्रोनाइज केले गेले.</string>
     <string name="ota_layout_adjustment_title">होम स्क्रीन लेआऊट</string>
     <string name="out_of_space">या होम स्क्रीनवर अधिक जागा नाही</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">थर्ड पार्टी एप चिन्हांवर अ‍ॅनिमेशन प्रदान करा</string>
     <string name="perfect_icons_switch_title">ग्लोबल आयकॉन अ‍ॅनिमेशन</string>
     <string name="permdesc_install_shortcut">युजरच्या हस्तक्षेपाशिवाय एपला शॉर्टकट्स जोडू देते.</string>

@@ -75,12 +75,12 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f080587
+    const v0, 0x7f080588
 
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f080585
+    const v0, 0x7f080586
 
     :goto_0
     return v0
@@ -161,12 +161,12 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f080585
+    const v0, 0x7f080586
 
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f080587
+    const v0, 0x7f080588
 
     :goto_0
     return v0
@@ -206,7 +206,7 @@
 .method protected getShortcutItemLayoutResId()I
     .locals 1
 
-    const v0, 0x7f0d013c
+    const v0, 0x7f0d013d
 
     return v0
 .end method

@@ -26,7 +26,7 @@
     <string name="activity_not_unlocked">"Dakata har sai na'urarka ta sake kunnawa sosai kafin budewar manhaja"</string>
     <string name="add_custom_category">Tsara da kanka</string>
     <string name="add_screen">Kara allon</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">Kara ma Allon waje</string>
     <string name="added_all_category">An yi nasarar kara manhaja</string>
     <string name="afternoon">Yamma</string>
     <string name="agree_button">Yarda</string>
@@ -349,6 +349,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">Danna ka rike don ka Kara zuwa allon farko</string>
+    <string name="fold_pair_installed_shortcut_launcher">Akwai irin wannan gajeren hanya</string>
     <string name="folder_name">Folda</string>
     <string name="frame_load_failed">An kasa lodin firam</string>
     <string name="free_style_apps_title">Zabi manhajar</string>
@@ -628,6 +630,7 @@
     <string name="night">Maraice</string>
     <string name="no_detail_page">Babu shafin karin bayani</string>
     <string name="no_space_toast">Babu isashen sarari</string>
+    <string name="no_space_toast_fold">Babu isashen wuri a nan</string>
     <string name="no_space_toast_when_click_widget">Babu isashen sarari akan wannan shafin. Yi kokari ka ja wannan abu zuwa wani shafi daban.</string>
     <string name="noon">Da rana</string>
     <string name="normal_wallpaper">Hoton fuskar allon</string>
@@ -648,7 +651,7 @@
     <string name="ota_layout_adjustment_content">An daidaita tsarin allo na ciki da waje a cikin sabon sigar.</string>
     <string name="ota_layout_adjustment_title">Shimfidar Allon waje</string>
     <string name="out_of_space">Babu wuri kuma akan allon farko</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">Wasu wasanni akan tambarin wasu manhaja daban</string>
     <string name="perfect_icons_switch_title">Tambarin global</string>
     <string name="permdesc_install_shortcut">Bada dama ma manhaja ya kara gajeren hanya ba tare da wani aikin mai amfani ba.</string>

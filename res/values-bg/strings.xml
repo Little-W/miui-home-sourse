@@ -53,7 +53,7 @@
     <string name="activity_not_unlocked">Изчакайте устройството ви да се рестартира напълно, преди да отваряте приложения</string>
     <string name="add_custom_category">По избор</string>
     <string name="add_screen">Добави бутон за екрани</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">Добави към Начален екран</string>
     <string name="added_all_category">Всички приложения са добавени успешно</string>
     <string name="afternoon">Следобяд</string>
     <string name="agree_button">Приемам</string>
@@ -379,6 +379,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">Натиснете и задръжте, за да добавите към Начален екран</string>
+    <string name="fold_pair_installed_shortcut_launcher">Този пряк път вече съществува</string>
     <string name="folder_name">Папка</string>
     <string name="frame_load_failed">Зареждането на фоторамката не успя!</string>
     <string name="free_style_apps_title">Изберете приложение</string>
@@ -658,6 +660,7 @@
     <string name="night">Вечер</string>
     <string name="no_detail_page">Няма страница с подробности</string>
     <string name="no_space_toast">Няма достатъчно място</string>
+    <string name="no_space_toast_fold">Недостатъчно място</string>
     <string name="no_space_toast_when_click_widget">Няма достатъчно място на тази страница. Пробвайте да провлачите този елемент на друга страница.</string>
     <string name="noon">Обед</string>
     <string name="normal_wallpaper">Тапет</string>
@@ -679,7 +682,7 @@
     <string name="ota_layout_adjustment_content">Вътрешните и външните оформления на Началния екран са синхронизирани в новата версия.</string>
     <string name="ota_layout_adjustment_title">Оформления на Начален екран</string>
     <string name="out_of_space">На този екран няма свободно място.</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">Създава анимации върху иконки на приложения от трета страна</string>
     <string name="perfect_icons_switch_title">Анимации за глобална иконка</string>
     <string name="permdesc_install_shortcut">Позволява на приложението да добавя преки пътища без намеса от потребителя.</string>

@@ -327,11 +327,11 @@
 
 .field public static final fake_landscape_screen_minor_size:I = 0x7f07010a
 
-.field public static final fastscroll_default_thickness:I = 0x7f07010b
+.field public static final fastscroll_default_thickness:I = 0x7f07010c
 
-.field public static final fastscroll_margin:I = 0x7f070110
+.field public static final fastscroll_margin:I = 0x7f070112
 
-.field public static final fastscroll_minimum_range:I = 0x7f070111
+.field public static final fastscroll_minimum_range:I = 0x7f070113
 
 .field public static final highlight_alpha_material_colored:I = 0x7f07014c
 
@@ -1207,65 +1207,65 @@
 
 .field public static final preference_seekbar_value_minWidth:I = 0x7f0703ac
 
-.field public static final slide_bar_height:I = 0x7f070414
+.field public static final slide_bar_height:I = 0x7f07041d
 
-.field public static final sliding_button_border:I = 0x7f070416
+.field public static final sliding_button_border:I = 0x7f07041f
 
-.field public static final split_action_bar_overlay_height:I = 0x7f070435
+.field public static final split_action_bar_overlay_height:I = 0x7f07043e
 
-.field public static final text_size_sp10:I = 0x7f070442
+.field public static final text_size_sp10:I = 0x7f07044b
 
-.field public static final text_size_sp11:I = 0x7f070443
+.field public static final text_size_sp11:I = 0x7f07044c
 
-.field public static final text_size_sp12:I = 0x7f070444
+.field public static final text_size_sp12:I = 0x7f07044d
 
-.field public static final text_size_sp13:I = 0x7f070445
+.field public static final text_size_sp13:I = 0x7f07044e
 
-.field public static final text_size_sp14:I = 0x7f070446
+.field public static final text_size_sp14:I = 0x7f07044f
 
-.field public static final text_size_sp15:I = 0x7f070447
+.field public static final text_size_sp15:I = 0x7f070450
 
-.field public static final text_size_sp16:I = 0x7f070448
+.field public static final text_size_sp16:I = 0x7f070451
 
-.field public static final text_size_sp17_45:I = 0x7f070449
+.field public static final text_size_sp17_45:I = 0x7f070452
 
-.field public static final text_size_sp19:I = 0x7f07044a
+.field public static final text_size_sp19:I = 0x7f070453
 
-.field public static final text_size_sp20:I = 0x7f07044b
+.field public static final text_size_sp20:I = 0x7f070454
 
-.field public static final text_size_sp26:I = 0x7f07044c
+.field public static final text_size_sp26:I = 0x7f070455
 
-.field public static final tooltip_corner_radius:I = 0x7f07045a
+.field public static final tooltip_corner_radius:I = 0x7f070463
 
-.field public static final tooltip_horizontal_padding:I = 0x7f07045b
+.field public static final tooltip_horizontal_padding:I = 0x7f070464
 
-.field public static final tooltip_margin:I = 0x7f07045c
+.field public static final tooltip_margin:I = 0x7f070465
 
-.field public static final tooltip_precise_anchor_extra_offset:I = 0x7f07045d
+.field public static final tooltip_precise_anchor_extra_offset:I = 0x7f070466
 
-.field public static final tooltip_precise_anchor_threshold:I = 0x7f07045e
+.field public static final tooltip_precise_anchor_threshold:I = 0x7f070467
 
-.field public static final tooltip_vertical_padding:I = 0x7f07045f
+.field public static final tooltip_vertical_padding:I = 0x7f070468
 
-.field public static final tooltip_y_offset_non_touch:I = 0x7f070460
+.field public static final tooltip_y_offset_non_touch:I = 0x7f070469
 
-.field public static final tooltip_y_offset_touch:I = 0x7f070461
+.field public static final tooltip_y_offset_touch:I = 0x7f07046a
 
-.field public static final uni_search_app_icon_size:I = 0x7f070464
+.field public static final uni_search_app_icon_size:I = 0x7f07046d
 
-.field public static final uni_search_deep_link_icon_size:I = 0x7f070465
+.field public static final uni_search_deep_link_icon_size:I = 0x7f07046e
 
-.field public static final uni_search_desc_size:I = 0x7f070466
+.field public static final uni_search_desc_size:I = 0x7f07046f
 
-.field public static final uni_search_permission_text_size:I = 0x7f070467
+.field public static final uni_search_permission_text_size:I = 0x7f070470
 
-.field public static final uni_search_tag_spacing:I = 0x7f070468
+.field public static final uni_search_tag_spacing:I = 0x7f070471
 
-.field public static final uni_search_tag_vertical_padding:I = 0x7f070469
+.field public static final uni_search_tag_vertical_padding:I = 0x7f070472
 
-.field public static final uni_search_text_margin_start:I = 0x7f07046a
+.field public static final uni_search_text_margin_start:I = 0x7f070473
 
-.field public static final uni_search_text_size:I = 0x7f07046b
+.field public static final uni_search_text_size:I = 0x7f070474
 
 
 # direct methods

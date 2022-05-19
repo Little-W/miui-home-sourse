@@ -53,7 +53,7 @@
     <string name="activity_not_unlocked">"Espereu fins que es reiniciï completament el dispositiu abans d'obrir les aplicacions"</string>
     <string name="add_custom_category">Personalitzar</string>
     <string name="add_screen">Afegeix una pantalla</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">"Afegeix a la Pantalla d'Inici"</string>
     <string name="added_all_category">"Totes les aplicacions s'han afegit correctament"</string>
     <string name="afternoon">Tarda</string>
     <string name="agree_button">Accepto</string>
@@ -379,6 +379,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">"Premeu prolongadament per afegir a la Pantalla d'Inici"</string>
+    <string name="fold_pair_installed_shortcut_launcher">Aquesta drecera ja existeix</string>
     <string name="folder_name">Carpeta</string>
     <string name="frame_load_failed">No es pot carregar el marc</string>
     <string name="free_style_apps_title">Tria una aplicació</string>
@@ -658,6 +660,7 @@
     <string name="night">Vespre</string>
     <string name="no_detail_page">No hi ha pàgina de detalls</string>
     <string name="no_space_toast">No hi ha prou espai</string>
+    <string name="no_space_toast_fold">Aquí no hi ha prou espai</string>
     <string name="no_space_toast_when_click_widget">"No hi ha prou espai en aquesta pàgina. Proveu d'arrossegar aquest element a una pàgina diferent."</string>
     <string name="noon">Migdia</string>
     <string name="normal_wallpaper">Fons de pantalla</string>
@@ -679,7 +682,7 @@
     <string name="ota_layout_adjustment_content">"Els dissenys de la Pantalla d'inici i exterior es van sincronitzar amb la nova versió."</string>
     <string name="ota_layout_adjustment_title">"Disposició de la Pantalla d'Inici"</string>
     <string name="out_of_space">"No queda més espai en aquesta Pantalla d'Inici"</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">"Renderitza les animacions de les icones d'aplicacions de tercers"</string>
     <string name="perfect_icons_switch_title">"Animacions d'icones globals"</string>
     <string name="permdesc_install_shortcut">"Permet a una aplicació afegir accessos directes sense intervenció de l'usuari."</string>

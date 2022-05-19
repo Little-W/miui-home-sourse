@@ -26,7 +26,7 @@
     <string name="activity_not_unlocked">ଆପ୍ସ ଖୋଲିବା ପୂର୍ବରୁ ଆପଣଙ୍କ ଡିଭାଇସ ସମ୍ପୂର୍ଣ୍ଣରୂପେ ରିବୁଟ୍ ହେବା ପର୍ଯ୍ୟନ୍ତ ଅପେକ୍ଷା କରନ୍ତୁ</string>
     <string name="add_custom_category">କଷ୍ଟମ୍</string>
     <string name="add_screen">ସ୍କ୍ରିନ୍‌ ଯୋଡ଼ନ୍ତୁ</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">ହୋମ ସ୍କ୍ରିନରେ ଯୋଗ କରନ୍ତୁ</string>
     <string name="added_all_category">ସଫଳତାର ସହିତ ସମସ୍ତ ଆପ୍ସ ଯୋଗ କରାଗଲା</string>
     <string name="afternoon">ମଧ୍ୟାହ୍ନ</string>
     <string name="agree_button">ସହମତ</string>
@@ -349,6 +349,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">ହୋମ ସ୍କ୍ରିନରେ ଯୋଗ କରିବାକୁ ଦବାନ୍ତୁ ଏବଂ ଧରି ରଖନ୍ତୁ</string>
+    <string name="fold_pair_installed_shortcut_launcher">ଏହି ସର୍ଟକଟ୍ ଆଗରୁ ଅଛି</string>
     <string name="folder_name">ଫୋଲ୍ଡର</string>
     <string name="frame_load_failed">ଫ୍ରେମ୍‌ ଲୋଡ୍‌ ହୋଇପାରିବ ନାହିଁ</string>
     <string name="free_style_apps_title">ଆପ୍ ବାଛନ୍ତୁ</string>
@@ -628,6 +630,7 @@
     <string name="night">ସନ୍ଧ୍ୟା</string>
     <string name="no_detail_page">କୌଣସି ବିବରଣୀ ପୃଷ୍ଠା ନାହିଁ</string>
     <string name="no_space_toast">ପର୍ଯ୍ୟାପ୍ତ ସ୍ଥାନ ନାହିଁ</string>
+    <string name="no_space_toast_fold">ଏଠାରେ ଯଥେଷ୍ଟ ସ୍ଥାନ ନାହିଁ</string>
     <string name="no_space_toast_when_click_widget">ଏହି ପୃଷ୍ଠାରେ ଯଥେଷ୍ଟ ଜାଗା ନାହିଁ। ଏହି ଆଇଟମକୁ ଭିନ୍ନ ଏକ ପୃଷ୍ଠାକୁ ଡ୍ରାଗ୍ କରିବାକୁ ଚେଷ୍ଟା କରନ୍ତୁ।</string>
     <string name="noon">ଅପରାହ୍ନ</string>
     <string name="normal_wallpaper">ୱାଲପେପର୍</string>
@@ -648,7 +651,7 @@
     <string name="ota_layout_adjustment_content">ନୂତନ ସଂସ୍କରଣରେ ଭିତର ଏବଂ ବାହାର ହୋମ ସ୍କ୍ରିନ୍ ଲେଆଉଟ୍ ସିଙ୍କ୍ରୋନାଇଜ୍ ହୋଇଛି।</string>
     <string name="ota_layout_adjustment_title">ହୋମ୍‌ ସ୍କ୍ରିନ୍ ଲେଆଉଟ୍‌</string>
     <string name="out_of_space">ଏହି ହୋମ୍‌ସ୍କ୍ରିନ୍‌ରେ ଅଧିକ ସ୍ଥାନ ନାହିଁ</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">ତୃତୀୟପକ୍ଷ ଆପ୍ ଆଇକନଗୁଡ଼ିକ ଉପରେ ଆନିମେସନ୍ ରେଣ୍ଡର୍ କରନ୍ତୁ</string>
     <string name="perfect_icons_switch_title">ଗ୍ଲୋବାଲ ଆଇକନ ଆନିମେସନ୍</string>
     <string name="permdesc_install_shortcut">ଉପଭୋକ୍ତାଙ୍କ ହସ୍ତକ୍ଷେପ ବିନା ସର୍ଟକଟ୍‌ଗୁଡ଼ିକ ଯୋଡ଼ିବା ପାଇଁ ଏକ ଆପ୍ଲିକେସନକୁ ଅନୁମତି ଦେଇଥାଏ।</string>

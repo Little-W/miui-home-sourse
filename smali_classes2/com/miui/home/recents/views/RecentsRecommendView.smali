@@ -198,11 +198,11 @@
 
     if-eq p1, v1, :cond_3
 
-    const v1, 0x7f0a0237
+    const v1, 0x7f0a023b
 
     if-eq p1, v1, :cond_2
 
-    const v1, 0x7f0a0299
+    const v1, 0x7f0a029e
 
     if-eq p1, v1, :cond_0
 
@@ -451,7 +451,7 @@
 
     const v1, 0x7f080549
 
-    const v2, 0x7f10037a
+    const v2, 0x7f100382
 
     .line 65
     invoke-direct {p0, v0, v1, v2}, Lcom/miui/home/recents/views/RecentsRecommendView;->initItem(III)Landroid/widget/LinearLayout;
@@ -460,11 +460,11 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/views/RecentsRecommendView;->mFirstItem:Landroid/widget/LinearLayout;
 
-    const v0, 0x7f0a0237
+    const v0, 0x7f0a023b
 
     const v1, 0x7f08054c
 
-    const v2, 0x7f10037d
+    const v2, 0x7f100385
 
     .line 68
     invoke-direct {p0, v0, v1, v2}, Lcom/miui/home/recents/views/RecentsRecommendView;->initItem(III)Landroid/widget/LinearLayout;
@@ -491,15 +491,15 @@
 
     if-eqz v1, :cond_1
 
-    const v1, 0x7f10037c
+    const v1, 0x7f100384
 
     goto :goto_1
 
     :cond_1
-    const v1, 0x7f10037b
+    const v1, 0x7f100383
 
     :goto_1
-    const v2, 0x7f0a0299
+    const v2, 0x7f0a029e
 
     .line 71
     invoke-direct {p0, v2, v0, v1}, Lcom/miui/home/recents/views/RecentsRecommendView;->initItem(III)Landroid/widget/LinearLayout;
@@ -528,12 +528,12 @@
 
     if-eqz v2, :cond_3
 
-    const v2, 0x7f100379
+    const v2, 0x7f100381
 
     goto :goto_3
 
     :cond_3
-    const v2, 0x7f100378
+    const v2, 0x7f100380
 
     .line 74
     :goto_3
@@ -740,7 +740,7 @@
     .line 137
     iput-boolean v0, p0, Lcom/miui/home/recents/views/RecentsRecommendView;->mIsMarketEnabled:Z
 
-    const v0, 0x7f0a0299
+    const v0, 0x7f0a029e
 
     .line 139
     iget-boolean v1, p0, Lcom/miui/home/recents/views/RecentsRecommendView;->mIsMarketEnabled:Z
@@ -760,12 +760,12 @@
 
     if-eqz v2, :cond_1
 
-    const v2, 0x7f10037c
+    const v2, 0x7f100384
 
     goto :goto_1
 
     :cond_1
-    const v2, 0x7f10037b
+    const v2, 0x7f100383
 
     .line 138
     :goto_1
@@ -824,12 +824,12 @@
 
     if-eqz v1, :cond_4
 
-    const v1, 0x7f100379
+    const v1, 0x7f100381
 
     goto :goto_3
 
     :cond_4
-    const v1, 0x7f100378
+    const v1, 0x7f100380
 
     .line 147
     :goto_3

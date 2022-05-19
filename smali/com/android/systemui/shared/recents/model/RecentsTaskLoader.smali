@@ -699,7 +699,9 @@
     move-result-object p2
 
     .line 631
-    iget-object p3, p2, Lcom/android/systemui/shared/recents/model/ThumbnailData;->thumbnail:Landroid/graphics/Bitmap;
+    invoke-virtual {p2}, Lcom/android/systemui/shared/recents/model/ThumbnailData;->isValidate()Z
+
+    move-result p3
 
     if-eqz p3, :cond_2
 

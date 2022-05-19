@@ -45,7 +45,7 @@
     .line 123
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapter$ViewHolder;->itemView:Landroid/view/View;
 
-    const v0, 0x7f0a029f
+    const v0, 0x7f0a02a4
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

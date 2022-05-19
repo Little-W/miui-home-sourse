@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 1735
+    .line 1752
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$4;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,17 +44,17 @@
 .method public onDisplayChanged(I)V
     .locals 4
 
-    .line 1746
+    .line 1763
     invoke-static {}, Lcom/miui/launcher/utils/DisplayManagerGlobalUtils;->getRotation()I
 
     move-result p1
 
-    .line 1747
+    .line 1764
     invoke-static {p1}, Lcom/miui/home/launcher/DeviceConfig;->setRotation(I)V
 
     const-string v0, "Launcher"
 
-    .line 1748
+    .line 1765
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -71,7 +71,7 @@
 
     iget-object v2, p0, Lcom/miui/home/launcher/Launcher$4;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    .line 1749
+    .line 1766
     invoke-static {v2}, Lcom/miui/home/launcher/Launcher;->access$700(Lcom/miui/home/launcher/Launcher;)I
 
     move-result v2
@@ -82,10 +82,10 @@
 
     move-result-object v1
 
-    .line 1748
+    .line 1765
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1750
+    .line 1767
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$4;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$700(Lcom/miui/home/launcher/Launcher;)I
@@ -94,19 +94,19 @@
 
     if-eq v0, p1, :cond_4
 
-    .line 1751
+    .line 1768
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$4;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v0, p1}, Lcom/miui/home/launcher/Launcher;->access$702(Lcom/miui/home/launcher/Launcher;I)I
 
-    .line 1752
+    .line 1769
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isSupportRecentsAndFsGesture()Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
-    .line 1753
+    .line 1770
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isUseFixedRotationTransform()Z
 
     move-result v0
@@ -128,7 +128,7 @@
     :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$4;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    .line 1754
+    .line 1771
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getWindow()Landroid/view/Window;
 
     move-result-object p1
@@ -145,7 +145,7 @@
 
     if-gez p1, :cond_2
 
-    .line 1755
+    .line 1772
     :cond_1
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$4;->this$0:Lcom/miui/home/launcher/Launcher;
 
@@ -153,7 +153,7 @@
 
     invoke-static {p1, v0}, Lcom/miui/home/launcher/Launcher;->access$802(Lcom/miui/home/launcher/Launcher;Z)Z
 
-    .line 1756
+    .line 1773
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$4;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$900(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/ShortcutMenuLayer;
@@ -164,7 +164,7 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/ShortcutMenuLayer;->setAlpha(F)V
 
-    .line 1757
+    .line 1774
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$4;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getWindow()Landroid/view/Window;
@@ -177,7 +177,7 @@
 
     invoke-virtual {p1, v1}, Landroid/view/View;->setAlpha(F)V
 
-    .line 1758
+    .line 1775
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$4;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$900(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/ShortcutMenuLayer;
@@ -204,10 +204,10 @@
 
     const-string v0, "onDisplayChanged: show views"
 
-    .line 1759
+    .line 1776
     invoke-static {p1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1762
+    .line 1779
     :cond_2
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$4;->this$0:Lcom/miui/home/launcher/Launcher;
 
@@ -217,7 +217,7 @@
 
     if-eqz p1, :cond_3
 
-    .line 1763
+    .line 1780
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$4;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getRecentsContainer()Lcom/miui/home/recents/views/RecentsContainer;
@@ -232,7 +232,7 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/recents/views/RecentsContainer;->onDisplayRotationChanged(I)V
 
-    .line 1765
+    .line 1782
     :cond_3
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$4;->this$0:Lcom/miui/home/launcher/Launcher;
 
@@ -242,7 +242,7 @@
 
     if-eqz p1, :cond_4
 
-    .line 1766
+    .line 1783
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$4;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getShortcutMenuLayer()Lcom/miui/home/launcher/ShortcutMenuLayer;
@@ -257,7 +257,7 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/ShortcutMenuLayer;->onDisplayRotationChanged(I)V
 
-    .line 1771
+    .line 1788
     :cond_4
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$4;->this$0:Lcom/miui/home/launcher/Launcher;
 
@@ -269,7 +269,7 @@
 
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$4;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    .line 1772
+    .line 1789
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/util/MainThreadInitializedObject;->get(Landroid/content/Context;)Ljava/lang/Object;
 
     move-result-object p1
@@ -278,24 +278,24 @@
 
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$4;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    .line 1773
+    .line 1790
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/DeviceConfig;->checkIfIsOrientationChanged(Landroid/content/Context;)Z
 
     move-result p1
 
     if-eqz p1, :cond_7
 
-    .line 1774
+    .line 1791
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountX()I
 
     move-result p1
 
-    .line 1775
+    .line 1792
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountY()I
 
     move-result v0
 
-    .line 1776
+    .line 1793
     sget-object v1, Lcom/miui/home/launcher/DeviceConfig;->INSTANCE:Lcom/miui/home/launcher/util/MainThreadInitializedObject;
 
     iget-object v2, p0, Lcom/miui/home/launcher/Launcher$4;->this$0:Lcom/miui/home/launcher/Launcher;
@@ -320,14 +320,14 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/miui/home/launcher/DeviceConfig;->loadScreenSize(Landroid/content/Context;Landroid/content/res/Resources;)V
 
-    .line 1777
+    .line 1794
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isScreenSizeChanged()Z
 
     move-result v1
 
     if-eqz v1, :cond_7
 
-    .line 1778
+    .line 1795
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountX()I
 
     move-result v1
@@ -342,7 +342,7 @@
 
     goto :goto_0
 
-    .line 1782
+    .line 1799
     :cond_5
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$4;->this$0:Lcom/miui/home/launcher/Launcher;
 
@@ -350,7 +350,7 @@
 
     goto :goto_1
 
-    .line 1779
+    .line 1796
     :cond_6
     :goto_0
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$4;->this$0:Lcom/miui/home/launcher/Launcher;
@@ -359,7 +359,7 @@
 
     return-void
 
-    .line 1786
+    .line 1803
     :cond_7
     :goto_1
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$4;->this$0:Lcom/miui/home/launcher/Launcher;

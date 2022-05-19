@@ -27,18 +27,18 @@
 
 .field public static final content_description_button_remove:I = 0x7f10013e
 
-.field public static final recents_tv_small_window_text:I = 0x7f10037e
+.field public static final recents_tv_small_window_text:I = 0x7f100386
 
-.field public static final small_window_button_complete:I = 0x7f1003c4
+.field public static final small_window_button_complete:I = 0x7f1003cd
 
-.field public static final small_window_edit_content:I = 0x7f1003c5
+.field public static final small_window_edit_content:I = 0x7f1003ce
 
-.field public static final small_window_edit_title:I = 0x7f1003c6
+.field public static final small_window_edit_title:I = 0x7f1003cf
 
-.field public static final small_window_empty:I = 0x7f1003c7
+.field public static final small_window_empty:I = 0x7f1003d0
 
-.field public static final small_window_select_title:I = 0x7f1003c8
+.field public static final small_window_select_title:I = 0x7f1003d1
 
-.field public static final small_window_title_text:I = 0x7f1003c9
+.field public static final small_window_title_text:I = 0x7f1003d2
 
-.field public static final small_window_toast:I = 0x7f1003ca
+.field public static final small_window_toast:I = 0x7f1003d3

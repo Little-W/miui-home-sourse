@@ -1,4 +1,4 @@
-.class Lcom/xiaomi/mirror/widget/ImmersionListPopupWindow$5;
+.class final Lcom/xiaomi/mirror/widget/ImmersionListPopupWindow$5;
 .super Landroid/view/ViewOutlineProvider;
 
 
@@ -8,7 +8,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x8
     name = null
 .end annotation
 
@@ -24,7 +24,7 @@
 
 
 # virtual methods
-.method public getOutline(Landroid/view/View;Landroid/graphics/Outline;)V
+.method public final getOutline(Landroid/view/View;Landroid/graphics/Outline;)V
     .locals 1
 
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I

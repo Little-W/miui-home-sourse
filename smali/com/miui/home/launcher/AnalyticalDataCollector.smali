@@ -3970,7 +3970,7 @@
 
     const-string v1, "version_code"
 
-    const v2, 0x1a0c2a0e
+    const v2, 0x1a0c2a65
 
     .line 605
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3981,7 +3981,7 @@
 
     const-string v1, "version_name"
 
-    const-string v2, "ALPHA-4.37.0.4814-05111435"
+    const-string v2, "ALPHA-4.37.0.4901-05182119"
 
     .line 606
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;

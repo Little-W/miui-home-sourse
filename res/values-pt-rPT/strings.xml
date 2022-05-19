@@ -53,7 +53,7 @@
     <string name="activity_not_unlocked">Espere até o dispositivo reiniciar totalmente antes de abrir aplicações</string>
     <string name="add_custom_category">Personalizado</string>
     <string name="add_screen">Adicionar ecrã</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">Adicionar ao Ecrã inicial</string>
     <string name="added_all_category">Todas as aplicações adicionadas com sucesso</string>
     <string name="afternoon">Tarde</string>
     <string name="agree_button">Aceitar</string>
@@ -379,6 +379,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">Pressione e segure para adicionar ao Ecrã inicial</string>
+    <string name="fold_pair_installed_shortcut_launcher">Este atalho já existe</string>
     <string name="folder_name">Pasta</string>
     <string name="frame_load_failed">Não é possível carregar o fotograma</string>
     <string name="free_style_apps_title">Escolher aplicação</string>
@@ -658,6 +660,7 @@
     <string name="night">Anoitecer</string>
     <string name="no_detail_page">Sem página de detalhes</string>
     <string name="no_space_toast">Sem espaço suficiente</string>
+    <string name="no_space_toast_fold">Sem espaço suficiente aqui</string>
     <string name="no_space_toast_when_click_widget">Sem espaço disponível nesta página. Tente arrastar este item para uma página diferente.</string>
     <string name="noon">Meio-dia</string>
     <string name="normal_wallpaper">Papel de parede</string>
@@ -679,7 +682,7 @@
     <string name="ota_layout_adjustment_content">As disposições do Ecrã inicial internos e externos foram sincronizados na nova versão.</string>
     <string name="ota_layout_adjustment_title">Disposições do Ecrã inicial</string>
     <string name="out_of_space">Não há mais espaço neste Ecrã inicial</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">Renderizar animações em ícones de aplicações de terceiros</string>
     <string name="perfect_icons_switch_title">Animações globais de ícone</string>
     <string name="permdesc_install_shortcut">Permite que uma aplicação adicione atalhos sem intervenção do utilizador.</string>

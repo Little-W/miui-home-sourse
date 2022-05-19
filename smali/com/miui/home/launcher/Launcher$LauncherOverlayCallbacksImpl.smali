@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 8935
+    .line 8968
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$LauncherOverlayCallbacksImpl;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onScrollChanged(F)V
     .locals 3
 
-    .line 8938
+    .line 8971
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$LauncherOverlayCallbacksImpl;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$1400(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/Workspace;
@@ -49,7 +49,7 @@
 
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$LauncherOverlayCallbacksImpl;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$9900(Lcom/miui/home/launcher/Launcher;)F
+    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$10000(Lcom/miui/home/launcher/Launcher;)F
 
     move-result v0
 
@@ -61,7 +61,7 @@
 
     const-string v0, "Launcher"
 
-    .line 8939
+    .line 8972
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -78,7 +78,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8940
+    .line 8973
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$LauncherOverlayCallbacksImpl;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$1400(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/Workspace;
@@ -89,21 +89,21 @@
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 8941
+    .line 8974
     invoke-static {v0, p1}, Ljava/lang/Float;->compare(FF)I
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 8942
+    .line 8975
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$LauncherOverlayCallbacksImpl;->this$0:Lcom/miui/home/launcher/Launcher;
 
     const/4 v1, 0x1
 
-    invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$10002(Lcom/miui/home/launcher/Launcher;Z)Z
+    invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$10102(Lcom/miui/home/launcher/Launcher;Z)Z
 
-    .line 8943
+    .line 8976
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$LauncherOverlayCallbacksImpl;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->onOverlayScrollEnd()V
@@ -113,31 +113,31 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 8944
+    .line 8977
     invoke-static {v0, p1}, Ljava/lang/Float;->compare(FF)I
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 8945
+    .line 8978
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$LauncherOverlayCallbacksImpl;->this$0:Lcom/miui/home/launcher/Launcher;
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$10002(Lcom/miui/home/launcher/Launcher;Z)Z
+    invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$10102(Lcom/miui/home/launcher/Launcher;Z)Z
 
-    .line 8946
+    .line 8979
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$LauncherOverlayCallbacksImpl;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->onOverlayScrollEnd()V
 
-    .line 8948
+    .line 8981
     :cond_1
     :goto_0
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$LauncherOverlayCallbacksImpl;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {v0, p1}, Lcom/miui/home/launcher/Launcher;->access$9902(Lcom/miui/home/launcher/Launcher;F)F
+    invoke-static {v0, p1}, Lcom/miui/home/launcher/Launcher;->access$10002(Lcom/miui/home/launcher/Launcher;F)F
 
     :cond_2
     return-void

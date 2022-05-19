@@ -24,7 +24,7 @@
 
     const/4 v0, 0x3
 
-    .line 34
+    .line 37
     new-array v0, v0, [Lkotlin/Pair;
 
     new-instance v1, Lkotlin/Pair;
@@ -77,7 +77,7 @@
 
     const/4 v0, 0x0
 
-    .line 51
+    .line 65
     :try_start_0
     sget-object v1, Lcom/miui/home/launcher/widget/device/MIUIWidgetDeviceAdapter;->ADAPTERS:Ljava/util/Map;
 
@@ -91,7 +91,7 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 52
+    .line 66
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -100,7 +100,7 @@
 
     return-object v0
 
-    .line 55
+    .line 69
     :cond_0
     invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -112,7 +112,7 @@
 
     check-cast v1, Lcom/miui/home/launcher/widget/device/MIUIWidgetDeviceAdapter;
 
-    .line 56
+    .line 70
     invoke-interface {v1, p0}, Lcom/miui/home/launcher/widget/device/MIUIWidgetDeviceAdapter;->init(Landroid/app/Activity;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -122,7 +122,7 @@
     :catch_0
     move-exception p0
 
-    .line 59
+    .line 73
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     return-object v0
@@ -131,7 +131,7 @@
 .method public static miuiLargeScreenDevice(Landroid/os/Bundle;)V
     .locals 2
 
-    .line 72
+    .line 86
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getDeviceType()Lcom/miui/home/launcher/DeviceType;
 
     move-result-object v0
@@ -152,7 +152,7 @@
 
     const/4 v1, 0x1
 
-    .line 73
+    .line 87
     invoke-virtual {p0, v0, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     :cond_0
@@ -162,7 +162,7 @@
 .method public static updateMIUILargeScreenDeviceOptions(Landroid/content/Context;I)V
     .locals 3
 
-    .line 78
+    .line 92
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isPhone()Z
 
     move-result v0
@@ -171,13 +171,13 @@
 
     return-void
 
-    .line 82
+    .line 96
     :cond_0
     invoke-static {p0}, Landroid/appwidget/AppWidgetManager;->getInstance(Landroid/content/Context;)Landroid/appwidget/AppWidgetManager;
 
     move-result-object p0
 
-    .line 83
+    .line 97
     invoke-virtual {p0, p1}, Landroid/appwidget/AppWidgetManager;->getAppWidgetOptions(I)Landroid/os/Bundle;
 
     move-result-object v0
@@ -186,9 +186,9 @@
 
     const-string v1, "miuiLargeScreenDevice"
 
-    const/4 v2, 0x1
+    const/4 v2, 0x0
 
-    .line 84
+    .line 98
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v1
@@ -200,21 +200,59 @@
     :cond_1
     const-string v1, "miuiLargeScreenDevice"
 
-    .line 87
+    const/4 v2, 0x1
+
+    .line 102
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 88
+    .line 103
     invoke-virtual {p0, p1, v0}, Landroid/appwidget/AppWidgetManager;->updateAppWidgetOptions(ILandroid/os/Bundle;)V
 
     return-void
 
     :cond_2
     :goto_0
+    const-string p0, "MIUIWidgetDeviceAdapter"
+
+    .line 99
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "updateMIUILargeScreenDeviceOptions "
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     return-void
 .end method
 
 
 # virtual methods
+.method public changeMIUIWidgetEditMode(Z)V
+    .locals 1
+
+    .line 57
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 59
+    invoke-virtual {v0, p1}, Lcom/miui/home/launcher/Launcher;->changeMIUIWidgetEditMode(Z)V
+
+    :cond_0
+    return-void
+.end method
+
 .method public getSystemService(Ljava/lang/Object;)V
     .locals 0
 
@@ -228,6 +266,18 @@
 .end method
 
 .method public onDestroy()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onStart()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onStop()V
     .locals 0
 
     return-void

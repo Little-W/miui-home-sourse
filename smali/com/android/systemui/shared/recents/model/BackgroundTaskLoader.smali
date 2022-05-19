@@ -424,6 +424,13 @@
 
     if-eqz v5, :cond_8
 
+    .line 206
+    invoke-virtual {v4}, Lcom/android/systemui/shared/recents/model/ThumbnailData;->isValidate()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_8
+
     .line 207
     iget-object v5, p0, Lcom/android/systemui/shared/recents/model/BackgroundTaskLoader;->mThumbnailCache:Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;
 

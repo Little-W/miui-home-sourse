@@ -120,7 +120,7 @@
 
     if-eqz p1, :cond_1
 
-    const v0, 0x7f0a0238
+    const v0, 0x7f0a023c
 
     .line 28
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;

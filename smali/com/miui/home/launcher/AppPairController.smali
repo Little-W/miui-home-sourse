@@ -262,7 +262,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_1
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -273,37 +273,11 @@
     .line 315
     iget-boolean v2, v1, Lcom/android/systemui/shared/recents/model/Task;->hasMultipleTasks:Z
 
-    if-eqz v2, :cond_1
-
-    invoke-virtual {v1}, Lcom/android/systemui/shared/recents/model/Task;->isCti1RightOrBottom()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
+    if-eqz v2, :cond_0
 
     iget-object v2, v1, Lcom/android/systemui/shared/recents/model/Task;->cti1Key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
 
     .line 316
-    invoke-direct {p0, v2, p3, p4}, Lcom/miui/home/launcher/AppPairController;->isSameTask(Lcom/android/systemui/shared/recents/model/Task$TaskKey;Landroid/content/ComponentName;I)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    iget-object v1, v1, Lcom/android/systemui/shared/recents/model/Task;->cti2Key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
-
-    invoke-direct {p0, v1, p1, p2}, Lcom/miui/home/launcher/AppPairController;->isSameTask(Lcom/android/systemui/shared/recents/model/Task$TaskKey;Landroid/content/ComponentName;I)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    goto :goto_0
-
-    :cond_1
-    iget-object v2, v1, Lcom/android/systemui/shared/recents/model/Task;->cti1Key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
-
-    .line 317
     invoke-direct {p0, v2, p1, p2}, Lcom/miui/home/launcher/AppPairController;->isSameTask(Lcom/android/systemui/shared/recents/model/Task$TaskKey;Landroid/content/ComponentName;I)Z
 
     move-result v2
@@ -320,7 +294,6 @@
 
     if-eqz v1, :cond_0
 
-    :goto_0
     const/4 p1, 0x1
 
     return p1
@@ -332,10 +305,10 @@
 
     const-string p3, "hasPairTaskHistory fail : "
 
-    .line 322
+    .line 321
     invoke-static {p2, p3, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    :cond_2
+    :cond_1
     const/4 p1, 0x0
 
     return p1
@@ -348,7 +321,7 @@
 
     if-eqz p1, :cond_2
 
-    .line 329
+    .line 328
     invoke-virtual {p1}, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v1
@@ -357,7 +330,7 @@
 
     goto :goto_0
 
-    .line 333
+    .line 332
     :cond_0
     invoke-virtual {p1}, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->getComponent()Landroid/content/ComponentName;
 
@@ -849,7 +822,7 @@
 
     move-result-object p2
 
-    const p3, 0x7f100371
+    const p3, 0x7f100379
 
     invoke-virtual {p2, p3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -946,12 +919,12 @@
 
     const-string v0, "app_pair_package_name"
 
-    .line 338
+    .line 337
     invoke-virtual {p1, v0, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string p2, "app_pair_user_id"
 
-    .line 339
+    .line 338
     invoke-virtual {p1, p2, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     :cond_0

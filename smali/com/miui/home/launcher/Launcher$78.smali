@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 8415
+    .line 8448
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$78;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 1
 
-    .line 8418
+    .line 8451
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$78;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->isFolderShowing()Z
@@ -47,7 +47,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 8419
+    .line 8452
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$78;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->closeFolder()Z

@@ -36,8 +36,8 @@
 .method public constructor <init>(Lcom/miui/home/launcher/install/BaseAutoInstallsLayout;)V
     .locals 1
 
-    .line 787
-    invoke-static {p1}, Lcom/miui/home/launcher/install/BaseAutoInstallsLayout;->access$1200(Lcom/miui/home/launcher/install/BaseAutoInstallsLayout;)Ljava/util/HashMap;
+    .line 785
+    invoke-static {p1}, Lcom/miui/home/launcher/install/BaseAutoInstallsLayout;->access$1000(Lcom/miui/home/launcher/install/BaseAutoInstallsLayout;)Ljava/util/HashMap;
 
     move-result-object v0
 
@@ -58,12 +58,12 @@
         }
     .end annotation
 
-    .line 790
+    .line 788
     iput-object p1, p0, Lcom/miui/home/launcher/install/BaseAutoInstallsLayout$ResolveParser;->this$0:Lcom/miui/home/launcher/install/BaseAutoInstallsLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 791
+    .line 789
     iput-object p2, p0, Lcom/miui/home/launcher/install/BaseAutoInstallsLayout$ResolveParser;->mResolveElements:Ljava/util/HashMap;
 
     return-void
@@ -80,7 +80,7 @@
         }
     .end annotation
 
-    .line 796
+    .line 794
     invoke-interface {p1}, Landroid/content/res/XmlResourceParser;->getDepth()I
 
     move-result v0
@@ -89,7 +89,7 @@
 
     move-wide v3, v1
 
-    .line 799
+    .line 797
     :cond_0
     :goto_0
     invoke-interface {p1}, Landroid/content/res/XmlResourceParser;->next()I
@@ -100,7 +100,7 @@
 
     if-ne v5, v6, :cond_2
 
-    .line 800
+    .line 798
     invoke-interface {p1}, Landroid/content/res/XmlResourceParser;->getDepth()I
 
     move-result v6
@@ -124,7 +124,7 @@
 
     goto :goto_0
 
-    .line 804
+    .line 802
     :cond_3
     invoke-interface {p1}, Landroid/content/res/XmlResourceParser;->getName()Ljava/lang/String;
 
@@ -132,7 +132,7 @@
 
     const-string v6, "AutoInstalls"
 
-    .line 805
+    .line 803
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -149,7 +149,7 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 806
+    .line 804
     iget-object v6, p0, Lcom/miui/home/launcher/install/BaseAutoInstallsLayout$ResolveParser;->mResolveElements:Ljava/util/HashMap;
 
     invoke-virtual {v6, v5}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -160,7 +160,7 @@
 
     if-eqz v6, :cond_4
 
-    .line 808
+    .line 806
     invoke-interface {v6, p1, p2, p3}, Lcom/miui/home/launcher/install/BaseAutoInstallsLayout$TagParser;->parseAndAdd(Landroid/content/res/XmlResourceParser;Landroid/database/sqlite/SQLiteDatabase;Landroid/content/ContentValues;)J
 
     move-result-wide v3
@@ -170,7 +170,7 @@
     :cond_4
     const-string v6, "AutoInstalls"
 
-    .line 810
+    .line 808
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V

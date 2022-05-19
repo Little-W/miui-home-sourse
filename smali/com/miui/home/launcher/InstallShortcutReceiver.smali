@@ -6,6 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/miui/home/launcher/InstallShortcutReceiver$InstallShortcutListener;,
         Lcom/miui/home/launcher/InstallShortcutReceiver$Position;,
         Lcom/miui/home/launcher/InstallShortcutReceiver$_lancet;
     }
@@ -59,7 +60,7 @@
 
     const-string v0, "InstallShortcutReceiver-PinShortcutRequestUtils"
 
-    .line 267
+    .line 289
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -78,14 +79,14 @@
 
     const-string v0, "com.miui.securitycore"
 
-    .line 268
+    .line 290
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 269
+    .line 291
     invoke-virtual {p0}, Lcom/miui/launcher/common/PinItemRequestCompat;->accept()Z
 
     :cond_0
@@ -140,12 +141,42 @@
     return-void
 .end method
 
+.method static synthetic access$400(Lcom/miui/home/launcher/InstallShortcutReceiver$InstallShortcutListener;Lcom/miui/home/launcher/InstallShortcutBroadcastUtils$Result;)V
+    .locals 0
+
+    .line 42
+    invoke-static {p0, p1}, Lcom/miui/home/launcher/InstallShortcutReceiver;->installResultCallback(Lcom/miui/home/launcher/InstallShortcutReceiver$InstallShortcutListener;Lcom/miui/home/launcher/InstallShortcutBroadcastUtils$Result;)V
+
+    return-void
+.end method
+
 .method public static checkToAddShortcut(Landroid/content/Context;Lcom/miui/launcher/common/PinItemRequestCompat;Landroid/content/Intent;Ljava/lang/String;I)V
-    .locals 8
+    .locals 6
+
+    const/4 v5, 0x0
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move-object v3, p3
+
+    move v4, p4
+
+    .line 74
+    invoke-static/range {v0 .. v5}, Lcom/miui/home/launcher/InstallShortcutReceiver;->checkToAddShortcut(Landroid/content/Context;Lcom/miui/launcher/common/PinItemRequestCompat;Landroid/content/Intent;Ljava/lang/String;ILcom/miui/home/launcher/InstallShortcutReceiver$InstallShortcutListener;)V
+
+    return-void
+.end method
+
+.method public static checkToAddShortcut(Landroid/content/Context;Lcom/miui/launcher/common/PinItemRequestCompat;Landroid/content/Intent;Ljava/lang/String;ILcom/miui/home/launcher/InstallShortcutReceiver$InstallShortcutListener;)V
+    .locals 9
 
     const-string v0, "InstallShortcutReceiver-PinShortcutRequestUtils"
 
-    .line 74
+    .line 79
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -176,8 +207,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 76
-    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$InstallShortcutReceiver$llOv7Mlfm4orwFA-RNrT2xZSNco;
+    .line 81
+    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$InstallShortcutReceiver$VcV6Cwl0TT9cOETrsENoC8Bh1Y4;
 
     move-object v2, v0
 
@@ -191,7 +222,9 @@
 
     move v7, p4
 
-    invoke-direct/range {v2 .. v7}, Lcom/miui/home/launcher/-$$Lambda$InstallShortcutReceiver$llOv7Mlfm4orwFA-RNrT2xZSNco;-><init>(Ljava/lang/String;Landroid/content/Context;Landroid/content/Intent;Lcom/miui/launcher/common/PinItemRequestCompat;I)V
+    move-object v8, p5
+
+    invoke-direct/range {v2 .. v8}, Lcom/miui/home/launcher/-$$Lambda$InstallShortcutReceiver$VcV6Cwl0TT9cOETrsENoC8Bh1Y4;-><init>(Ljava/lang/String;Landroid/content/Context;Landroid/content/Intent;Lcom/miui/launcher/common/PinItemRequestCompat;ILcom/miui/home/launcher/InstallShortcutReceiver$InstallShortcutListener;)V
 
     invoke-static {v0}, Lcom/miui/home/launcher/common/BackgroundThread;->postAtFrontOfQueue(Ljava/lang/Runnable;)V
 
@@ -207,7 +240,7 @@
 
     return v0
 
-    .line 291
+    .line 313
     :cond_0
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
@@ -282,7 +315,7 @@
 
     const/4 v1, 0x0
 
-    .line 131
+    .line 136
     invoke-virtual {p0, v0, v1}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v0
@@ -291,14 +324,14 @@
 
     const-string v0, "com.android.contacts"
 
-    .line 132
+    .line 137
     invoke-virtual {v0, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 133
+    .line 138
     sget-object p0, Lcom/miui/home/launcher/InstallShortcutReceiver$Position;->QUICK_CALL_SCREEN:Lcom/miui/home/launcher/InstallShortcutReceiver$Position;
 
     return-object p0
@@ -306,17 +339,17 @@
     :cond_0
     const-string p1, "pin_shortcut_extra"
 
-    .line 137
+    .line 142
     invoke-virtual {p0, p1}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object p1
 
-    .line 138
+    .line 143
     instance-of v0, p1, Landroid/os/PersistableBundle;
 
     if-eqz v0, :cond_1
 
-    .line 139
+    .line 144
     check-cast p1, Landroid/os/PersistableBundle;
 
     const-string p0, "folder_position"
@@ -330,7 +363,7 @@
     :cond_1
     const-string p1, "folder_position"
 
-    .line 141
+    .line 146
     invoke-virtual {p0, p1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -343,7 +376,7 @@
     :cond_2
     const/4 p1, -0x1
 
-    .line 147
+    .line 152
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
@@ -389,18 +422,18 @@
     :goto_2
     packed-switch v1, :pswitch_data_0
 
-    .line 153
+    .line 158
     sget-object p0, Lcom/miui/home/launcher/InstallShortcutReceiver$Position;->WORKSPACE:Lcom/miui/home/launcher/InstallShortcutReceiver$Position;
 
     return-object p0
 
-    .line 151
+    .line 156
     :pswitch_0
     sget-object p0, Lcom/miui/home/launcher/InstallShortcutReceiver$Position;->TOOLS_FOLDER:Lcom/miui/home/launcher/InstallShortcutReceiver$Position;
 
     return-object p0
 
-    .line 149
+    .line 154
     :pswitch_1
     sget-object p0, Lcom/miui/home/launcher/InstallShortcutReceiver$Position;->RECOMMEND_FOLDER:Lcom/miui/home/launcher/InstallShortcutReceiver$Position;
 
@@ -415,57 +448,107 @@
     .end packed-switch
 .end method
 
-.method private static installShortcut(Landroid/content/Context;Landroid/content/Intent;Lcom/miui/launcher/common/PinItemRequestCompat;Ljava/lang/String;I)V
-    .locals 10
+.method private static installResultCallback(Lcom/miui/home/launcher/InstallShortcutReceiver$InstallShortcutListener;Lcom/miui/home/launcher/InstallShortcutBroadcastUtils$Result;)V
+    .locals 1
 
-    .line 160
+    if-eqz p0, :cond_0
+
+    .line 269
+    sget-object v0, Lcom/miui/home/launcher/InstallShortcutReceiver$2;->$SwitchMap$com$miui$home$launcher$InstallShortcutBroadcastUtils$Result:[I
+
+    invoke-virtual {p1}, Lcom/miui/home/launcher/InstallShortcutBroadcastUtils$Result;->ordinal()I
+
+    move-result p1
+
+    aget p1, v0, p1
+
+    packed-switch p1, :pswitch_data_0
+
+    .line 277
+    invoke-interface {p0}, Lcom/miui/home/launcher/InstallShortcutReceiver$InstallShortcutListener;->onFail()V
+
+    goto :goto_0
+
+    .line 274
+    :pswitch_0
+    invoke-interface {p0}, Lcom/miui/home/launcher/InstallShortcutReceiver$InstallShortcutListener;->onDuplicate()V
+
+    goto :goto_0
+
+    .line 271
+    :pswitch_1
+    invoke-interface {p0}, Lcom/miui/home/launcher/InstallShortcutReceiver$InstallShortcutListener;->onSuccess()V
+
+    :cond_0
+    :goto_0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method private static installShortcut(Landroid/content/Context;Landroid/content/Intent;Lcom/miui/launcher/common/PinItemRequestCompat;Ljava/lang/String;ILcom/miui/home/launcher/InstallShortcutReceiver$InstallShortcutListener;)V
+    .locals 11
+
+    .line 165
     invoke-static {p0}, Lcom/miui/home/launcher/Application;->getLauncherApplication(Landroid/content/Context;)Lcom/miui/home/launcher/Application;
 
     move-result-object v1
 
-    .line 161
+    .line 166
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
-    move-result-object v8
+    move-result-object v9
 
-    if-nez v8, :cond_0
+    if-nez v9, :cond_0
 
-    const-string p1, "InstallShortcutReceiver-PinShortcutRequestUtils"
+    const-string v0, "InstallShortcutReceiver-PinShortcutRequestUtils"
 
-    const-string p4, "Launcher is not ready,process later"
+    const-string v1, "Launcher is not ready,process later"
 
-    .line 163
-    invoke-static {p1, p4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    .line 168
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 164
+    .line 169
     invoke-static {p2, p3}, Lcom/miui/home/launcher/InstallShortcutReceiver;->acceptRequestIfXspace(Lcom/miui/launcher/common/PinItemRequestCompat;Ljava/lang/String;)V
 
-    .line 165
+    move-object v5, p0
+
+    move-object v4, p3
+
+    .line 170
     invoke-static {p0, p3}, Lcom/miui/home/launcher/InstallShortcutBroadcastUtils;->sendFailedBroadcast(Landroid/content/Context;Ljava/lang/String;)V
 
     return-void
 
-    .line 169
     :cond_0
-    new-instance v9, Lcom/miui/home/launcher/InstallShortcutReceiver$1;
-
-    move-object v0, v9
-
-    move-object v2, v8
-
-    move-object v3, p2
+    move-object v5, p0
 
     move-object v4, p3
 
-    move-object v5, p0
+    .line 174
+    new-instance v10, Lcom/miui/home/launcher/InstallShortcutReceiver$1;
+
+    move-object v0, v10
+
+    move-object v2, v9
+
+    move-object v3, p2
 
     move-object v6, p1
 
     move v7, p4
 
-    invoke-direct/range {v0 .. v7}, Lcom/miui/home/launcher/InstallShortcutReceiver$1;-><init>(Lcom/miui/home/launcher/Application;Lcom/miui/home/launcher/Launcher;Lcom/miui/launcher/common/PinItemRequestCompat;Ljava/lang/String;Landroid/content/Context;Landroid/content/Intent;I)V
+    move-object/from16 v8, p5
 
-    invoke-virtual {v8, v9}, Lcom/miui/home/launcher/Launcher;->runOnUiThread(Ljava/lang/Runnable;)V
+    invoke-direct/range {v0 .. v8}, Lcom/miui/home/launcher/InstallShortcutReceiver$1;-><init>(Lcom/miui/home/launcher/Application;Lcom/miui/home/launcher/Launcher;Lcom/miui/launcher/common/PinItemRequestCompat;Ljava/lang/String;Landroid/content/Context;Landroid/content/Intent;ILcom/miui/home/launcher/InstallShortcutReceiver$InstallShortcutListener;)V
+
+    invoke-virtual {v9, v10}, Lcom/miui/home/launcher/Launcher;->runOnUiThread(Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -475,14 +558,14 @@
 
     const-string v0, "android.intent.extra.shortcut.INTENT"
 
-    .line 274
+    .line 296
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object p1
 
     check-cast p1, Landroid/content/Intent;
 
-    .line 275
+    .line 297
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -495,14 +578,14 @@
 
     if-eq p1, v0, :cond_1
 
-    .line 277
+    .line 299
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Launcher;->alreadyHasGadget(I)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 278
+    .line 300
     invoke-static {p1}, Lcom/miui/home/launcher/gadget/GadgetFactory;->getNoMtzInfo(I)Lcom/miui/home/launcher/gadget/GadgetInfo;
 
     move-result-object v2
@@ -519,7 +602,7 @@
 
     move-object v1, p0
 
-    .line 279
+    .line 301
     invoke-virtual/range {v1 .. v9}, Lcom/miui/home/launcher/Launcher;->addItemToWorkspace(Lcom/miui/home/launcher/ItemInfo;JJIILjava/lang/Runnable;)V
 
     :cond_0
@@ -540,19 +623,19 @@
 
     const/4 v1, 0x0
 
-    .line 102
+    .line 107
     invoke-virtual {p0, v0, v1}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result p0
 
-    .line 103
+    .line 108
     invoke-static {}, Lcom/miui/home/launcher/allapps/LauncherModeController;->isElderlyManMode()Z
 
     move-result v0
 
     const-string v2, "com.android.contacts"
 
-    .line 104
+    .line 109
     invoke-virtual {v2, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result p1
@@ -568,10 +651,10 @@
     return v1
 .end method
 
-.method static synthetic lambda$checkToAddShortcut$0(Ljava/lang/String;Landroid/content/Context;Landroid/content/Intent;Lcom/miui/launcher/common/PinItemRequestCompat;I)V
-    .locals 1
+.method static synthetic lambda$checkToAddShortcut$0(Ljava/lang/String;Landroid/content/Context;Landroid/content/Intent;Lcom/miui/launcher/common/PinItemRequestCompat;ILcom/miui/home/launcher/InstallShortcutReceiver$InstallShortcutListener;)V
+    .locals 6
 
-    .line 77
+    .line 82
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -580,7 +663,7 @@
 
     return-void
 
-    .line 81
+    .line 86
     :cond_0
     invoke-static {p1, p0}, Lcom/miui/home/launcher/common/Utilities;->hasAddShortcutPermission(Landroid/content/Context;Ljava/lang/String;)Z
 
@@ -590,7 +673,7 @@
 
     const-string p1, "InstallShortcutReceiver-PinShortcutRequestUtils"
 
-    .line 82
+    .line 87
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -616,7 +699,7 @@
     :cond_1
     const-string v0, "android.intent.extra.shortcut.INTENT"
 
-    .line 86
+    .line 91
     invoke-virtual {p2, v0}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object v0
@@ -629,12 +712,12 @@
 
     const-string p1, "Failed to add shortcut because the extra shortcut intent is missing"
 
-    .line 88
+    .line 93
     invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 92
+    .line 97
     :cond_2
     invoke-static {p2, p0}, Lcom/miui/home/launcher/InstallShortcutReceiver;->isModeMatch(Landroid/content/Intent;Ljava/lang/String;)Z
 
@@ -646,14 +729,26 @@
 
     const-string p1, "Current mode is not match shortcut type"
 
-    .line 93
+    .line 98
     invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 97
     :cond_3
-    invoke-static {p1, p2, p3, p0, p4}, Lcom/miui/home/launcher/InstallShortcutReceiver;->installShortcut(Landroid/content/Context;Landroid/content/Intent;Lcom/miui/launcher/common/PinItemRequestCompat;Ljava/lang/String;I)V
+    move-object v0, p1
+
+    move-object v1, p2
+
+    move-object v2, p3
+
+    move-object v3, p0
+
+    move v4, p4
+
+    move-object v5, p5
+
+    .line 102
+    invoke-static/range {v0 .. v5}, Lcom/miui/home/launcher/InstallShortcutReceiver;->installShortcut(Landroid/content/Context;Landroid/content/Intent;Lcom/miui/launcher/common/PinItemRequestCompat;Ljava/lang/String;ILcom/miui/home/launcher/InstallShortcutReceiver$InstallShortcutListener;)V
 
     return-void
 .end method
@@ -707,7 +802,7 @@
 .method private static setInfoFolderPosition(Lcom/miui/home/launcher/ShortcutInfo;Lcom/miui/home/launcher/InstallShortcutReceiver$Position;Lcom/miui/home/launcher/Launcher;)V
     .locals 2
 
-    .line 117
+    .line 122
     sget-object v0, Lcom/miui/home/launcher/InstallShortcutReceiver$Position;->TOOLS_FOLDER:Lcom/miui/home/launcher/InstallShortcutReceiver$Position;
 
     const/4 v1, 0x0
@@ -716,14 +811,14 @@
 
     const-string p1, "com.miui.home:string/default_folder_title_tools"
 
-    .line 118
+    .line 123
     invoke-virtual {p2, p1, v1}, Lcom/miui/home/launcher/Launcher;->getFolderInfoByTitle(Ljava/lang/String;Z)Lcom/miui/home/launcher/FolderInfo;
 
     move-result-object p1
 
     goto :goto_0
 
-    .line 119
+    .line 124
     :cond_0
     sget-object v0, Lcom/miui/home/launcher/InstallShortcutReceiver$Position;->RECOMMEND_FOLDER:Lcom/miui/home/launcher/InstallShortcutReceiver$Position;
 
@@ -731,7 +826,7 @@
 
     const-string p1, "com.miui.home:string/default_folder_title_recommend"
 
-    .line 120
+    .line 125
     invoke-virtual {p2, p1, v1}, Lcom/miui/home/launcher/Launcher;->getFolderInfoByTitle(Ljava/lang/String;Z)Lcom/miui/home/launcher/FolderInfo;
 
     move-result-object p1
@@ -744,12 +839,12 @@
     :goto_0
     if-eqz p1, :cond_2
 
-    .line 123
+    .line 128
     iget-wide v0, p1, Lcom/miui/home/launcher/FolderInfo;->id:J
 
     iput-wide v0, p0, Lcom/miui/home/launcher/ShortcutInfo;->container:J
 
-    .line 124
+    .line 129
     invoke-virtual {p1}, Lcom/miui/home/launcher/FolderInfo;->count()I
 
     move-result p1
@@ -761,7 +856,7 @@
     :cond_2
     const-wide/16 p1, -0x64
 
-    .line 126
+    .line 131
     iput-wide p1, p0, Lcom/miui/home/launcher/ShortcutInfo;->container:J
 
     :goto_1

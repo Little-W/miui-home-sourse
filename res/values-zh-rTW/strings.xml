@@ -368,6 +368,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">zW T</string>
     <string name="fmt_weekday_timezone">zW</string>
+    <string name="fold_pair_install_shortcut_long_click">長按圖示支援建立快速啟動方式</string>
+    <string name="fold_pair_installed_shortcut_launcher">桌面已建立該快速啟動方式</string>
     <string name="folder_name">資料夾</string>
     <string name="frame_load_failed">相框格式錯誤，載入失敗。</string>
     <string name="free_style_apps_title">選擇應用程式</string>
@@ -646,6 +648,7 @@
     <string name="night">晚上</string>
     <string name="no_detail_page">沒有詳細頁面</string>
     <string name="no_space_toast">空間不足</string>
+    <string name="no_space_toast_fold">此半螢幕空間不足</string>
     <string name="no_space_toast_when_click_widget">目前頁面空間不足，拖動可增加到其他頁面</string>
     <string name="noon">中午</string>
     <string name="normal_wallpaper">桌面桌布</string>
@@ -667,6 +670,7 @@
     <string name="ota_layout_adjustment_content">升級新版本後桌面佈局內外螢幕將保證一致，已為您同步外螢幕佈局至內螢幕。</string>
     <string name="ota_layout_adjustment_title">桌面佈局調整</string>
     <string name="out_of_space">此主螢幕上已沒有空間。</string>
+    <string name="pair_icon_name">%1$s|%2$s</string>
     <string name="perfect_icons_switch_summary">重繪第三方應用程式圖示，實現完美動畫</string>
     <string name="perfect_icons_switch_title">完美圖示</string>
     <string name="permdesc_install_shortcut">允許應用程式在沒有使用者介入的情況下新增捷徑。</string>

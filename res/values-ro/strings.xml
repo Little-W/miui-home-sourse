@@ -53,7 +53,7 @@
     <string name="activity_not_unlocked">Așteptați până când dispozitivul este repornit complet înainte de a deschide aplicațiile</string>
     <string name="add_custom_category">Personalizat</string>
     <string name="add_screen">Adaugă ecran</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">Adaugă pe Ecranul Principal</string>
     <string name="added_all_category">Adăugat toate aplicațiile cu succes</string>
     <string name="afternoon">După-amiază</string>
     <string name="agree_button">De acord</string>
@@ -379,6 +379,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">Țineți apăsat pentru a adauga pe Ecranul principal</string>
+    <string name="fold_pair_installed_shortcut_launcher">Această comandă rapidă există deja</string>
     <string name="folder_name">Director</string>
     <string name="frame_load_failed">Nu se poate încărca cadrul</string>
     <string name="free_style_apps_title">Alege aplicația</string>
@@ -658,6 +660,7 @@
     <string name="night">Seara</string>
     <string name="no_detail_page">Pagină fără detalii</string>
     <string name="no_space_toast">Spațiu insuficient</string>
+    <string name="no_space_toast_fold">Spațiu insuficient aici</string>
     <string name="no_space_toast_when_click_widget">Nu este suficient spațiu pe această pagină. Încercați să trageți acest element într-o altă pagină.</string>
     <string name="noon">La amiază</string>
     <string name="normal_wallpaper">Imagine de fundal</string>
@@ -667,7 +670,7 @@
     <string name="notification_reset_title">Aranjarea pictogramelor cu succes</string>
     <string name="one_key_call_title">Atingeți pentru a apela</string>
     <string name="online_wallpaper">Online</string>
-    <string name="open_pad_personal_assistant_settings">Home screen widgets</string>
+    <string name="open_pad_personal_assistant_settings">Widget-uri Ecran principal</string>
     <string name="open_personal_assistant_dialog_btn_cancel">Anulează</string>
     <string name="open_personal_assistant_dialog_btn_confirm">Opriți</string>
     <string name="open_personal_assistant_dialog_desc">După ce dezactivați Aplicaţie seif, nu veți mai putea vedea sau utiliza widget-urile pentru Aplicaţie seif. Versiunile lor actualizate nu vor fi disponibile și pentru dvs. Dezactivați oricum?</string>
@@ -679,7 +682,7 @@
     <string name="ota_layout_adjustment_content">Aspectele interioare și exterioare ale Ecranului principal au fost sincronizate în noua versiune.</string>
     <string name="ota_layout_adjustment_title">Aspecte Ecran principal</string>
     <string name="out_of_space">Nu mai aveți loc pe acest Ecran principal</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">Redați animații pe pictogramele aplicației terță parte</string>
     <string name="perfect_icons_switch_title">Animații globale cu pictograme</string>
     <string name="permdesc_install_shortcut">Permite unei aplicații să adauge comenzi rapide, fără intervenția utilizatorului.</string>

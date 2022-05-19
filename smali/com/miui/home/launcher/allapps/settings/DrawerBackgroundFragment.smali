@@ -155,7 +155,7 @@
 
     move-result-object p2
 
-    const v1, 0x7f0600ff
+    const v1, 0x7f060100
 
     .line 143
     invoke-virtual {p1, v1}, Landroid/content/Context;->getColor(I)I
@@ -420,7 +420,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f100176
+    const v0, 0x7f10017b
 
     invoke-virtual {p1, v0}, Landroidx/fragment/app/FragmentActivity;->setTitle(I)V
 

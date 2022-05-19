@@ -69,12 +69,12 @@
 
 .field public static final abc_toolbar_collapse_description:I = 0x7f10001b
 
-.field public static final garbage_count:I = 0x7f100217
+.field public static final garbage_count:I = 0x7f10021e
 
-.field public static final memory_leak:I = 0x7f10026d
+.field public static final memory_leak:I = 0x7f100274
 
-.field public static final notification_channel_alerts:I = 0x7f10031a
+.field public static final notification_channel_alerts:I = 0x7f100322
 
-.field public static final search_menu_title:I = 0x7f1003a9
+.field public static final search_menu_title:I = 0x7f1003b2
 
-.field public static final status_bar_notification_info_overflow:I = 0x7f1003e8
+.field public static final status_bar_notification_info_overflow:I = 0x7f1003f1

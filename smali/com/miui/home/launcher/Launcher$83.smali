@@ -29,7 +29,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;ZLjava/lang/String;)V
     .locals 0
 
-    .line 8837
+    .line 8870
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$83;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iput-boolean p2, p0, Lcom/miui/home/launcher/Launcher$83;->val$enableBackGesture:Z
@@ -46,10 +46,10 @@
 .method public run()V
     .locals 3
 
-    .line 8840
+    .line 8873
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$83;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$9600(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/Application;
+    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$9700(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/Application;
 
     move-result-object v0
 

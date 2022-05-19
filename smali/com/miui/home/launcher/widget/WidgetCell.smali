@@ -310,7 +310,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f07047b
+    const v1, 0x7f070484
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -344,7 +344,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f07047c
+    const p2, 0x7f070485
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -501,7 +501,7 @@
     .line 93
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    const v1, 0x7f07047b
+    const v1, 0x7f070484
 
     .line 96
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -582,7 +582,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/widget/WidgetCell;->mBadge:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a02e8
+    const v0, 0x7f0a02ed
 
     .line 70
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/widget/WidgetCell;->findViewById(I)Landroid/view/View;

@@ -74,9 +74,9 @@
         <item>\#</item>
     </string-array>
     <string-array name="animation_rate_entries">
-        <item>Relaxed</item>
-        <item>Balanced</item>
-        <item>Fast</item>
+        <item>Повільно</item>
+        <item>Збалансовано</item>
+        <item>Швидко</item>
     </string-array>
     <string-array name="cell_layout_size_entries">
         <item>4x4</item>

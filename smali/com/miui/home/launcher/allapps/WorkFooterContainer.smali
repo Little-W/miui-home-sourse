@@ -171,12 +171,12 @@
 
     if-eqz v0, :cond_1
 
-    const v0, 0x7f10046c
+    const v0, 0x7f100476
 
     goto :goto_0
 
     :cond_1
-    const v0, 0x7f10046d
+    const v0, 0x7f100477
 
     .line 69
     :goto_0
@@ -273,7 +273,7 @@
     .line 52
     invoke-super {p0}, Landroid/widget/RelativeLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a02f1
+    const v0, 0x7f0a02f6
 
     .line 53
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/allapps/WorkFooterContainer;->findViewById(I)Landroid/view/View;
@@ -282,7 +282,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/allapps/WorkFooterContainer;->mDivider:Landroid/view/View;
 
-    const v0, 0x7f0a02f2
+    const v0, 0x7f0a02f7
 
     .line 54
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/allapps/WorkFooterContainer;->findViewById(I)Landroid/view/View;

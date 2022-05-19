@@ -25,7 +25,7 @@
 .method protected constructor <init>(Lcom/miui/home/launcher/install/BaseAutoInstallsLayout;)V
     .locals 0
 
-    .line 863
+    .line 861
     iput-object p1, p0, Lcom/miui/home/launcher/install/BaseAutoInstallsLayout$GadgetParser;->this$0:Lcom/miui/home/launcher/install/BaseAutoInstallsLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,19 +46,19 @@
 
     const-string v0, "gadgetName"
 
-    .line 866
+    .line 864
     invoke-static {p1, v0}, Lcom/miui/home/launcher/install/BaseAutoInstallsLayout;->access$300(Landroid/content/res/XmlResourceParser;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 867
+    .line 865
     iget-object v1, p0, Lcom/miui/home/launcher/install/BaseAutoInstallsLayout$GadgetParser;->this$0:Lcom/miui/home/launcher/install/BaseAutoInstallsLayout;
 
-    invoke-static {v1}, Lcom/miui/home/launcher/install/BaseAutoInstallsLayout;->access$700(Lcom/miui/home/launcher/install/BaseAutoInstallsLayout;)Landroid/appwidget/AppWidgetHost;
+    invoke-static {v1}, Lcom/miui/home/launcher/install/BaseAutoInstallsLayout;->access$600(Lcom/miui/home/launcher/install/BaseAutoInstallsLayout;)Landroid/appwidget/AppWidgetHost;
 
     move-result-object v1
 
-    invoke-static {p1, p2, p3, v0, v1}, Lcom/miui/home/launcher/install/BaseAutoInstallsLayout;->access$1300(Landroid/content/res/XmlResourceParser;Landroid/database/sqlite/SQLiteDatabase;Landroid/content/ContentValues;Ljava/lang/String;Landroid/appwidget/AppWidgetHost;)J
+    invoke-static {p1, p2, p3, v0, v1}, Lcom/miui/home/launcher/install/BaseAutoInstallsLayout;->access$1100(Landroid/content/res/XmlResourceParser;Landroid/database/sqlite/SQLiteDatabase;Landroid/content/ContentValues;Ljava/lang/String;Landroid/appwidget/AppWidgetHost;)J
 
     move-result-wide p1
 

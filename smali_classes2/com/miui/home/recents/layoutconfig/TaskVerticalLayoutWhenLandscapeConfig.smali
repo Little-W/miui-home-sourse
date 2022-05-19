@@ -10,7 +10,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 5
+    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,6 +37,37 @@
 .method public getTopRatio(ZI)F
     .locals 0
 
+    .line 15
+    sget-boolean p1, Lcom/miui/home/launcher/ApplicationConfig;->sIsSupportRelayInRecents:Z
+
+    if-eqz p1, :cond_1
+
+    .line 16
+    sget-boolean p1, Lcom/miui/home/launcher/DeviceConfig;->IS_FOLD_DEVICE:Z
+
+    if-eqz p1, :cond_0
+
+    const p1, 0x3eb33333    # 0.35f
+
+    goto :goto_0
+
+    :cond_0
+    const p1, 0x3ea3d70a    # 0.32f
+
+    :goto_0
+    return p1
+
+    .line 18
+    :cond_1
+    sget-boolean p1, Lcom/miui/home/launcher/DeviceConfig;->IS_FOLD_DEVICE:Z
+
+    if-eqz p1, :cond_2
+
+    const p1, -0x435c28f6    # -0.02f
+
+    return p1
+
+    :cond_2
     const p1, 0x3e6147ae    # 0.22f
 
     return p1

@@ -26,7 +26,7 @@
     <string name="activity_not_unlocked">అప్లికేషన్‌లను తెరిచే ముందు మీ పరికరం పూర్తిగా రీబూట్ అయ్యే వరకు వేచి ఉండండి</string>
     <string name="add_custom_category">అనుకూలీకృత</string>
     <string name="add_screen">స్క్రీన్‌ని జోడించు</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">హోమ్ స్క్రీన్‌కు జోడించు</string>
     <string name="added_all_category">అన్ని యాప్‌లు విజయవంతంగా జోడించబడ్డాయి</string>
     <string name="afternoon">మధ్యాహ్నం</string>
     <string name="agree_button">అంగీకరిస్తున్నాను</string>
@@ -349,6 +349,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">హోమ్ స్క్రీన్‌కి జోడించేందుకు నొక్కి పట్టుకోండి</string>
+    <string name="fold_pair_installed_shortcut_launcher">ఈ సత్వరమార్గం ఇప్పటికే ఉంది</string>
     <string name="folder_name">ఫోల్డర్</string>
     <string name="frame_load_failed">ఫ్రేమ్‌ను లోడ్ చేయలేము</string>
     <string name="free_style_apps_title">అప్లికేషన్‌ను ఎంచుకోండి</string>
@@ -628,6 +630,7 @@
     <string name="night">సాయంత్రం</string>
     <string name="no_detail_page">వివరాల పేజీ లేదు</string>
     <string name="no_space_toast">తగినంత ఖాళీ స్థలం లేదు</string>
+    <string name="no_space_toast_fold">ఇక్కడ తగినంత ఖాళీ స్థలం లేదు</string>
     <string name="no_space_toast_when_click_widget">ఈ పేజీపై తగినంత ఖాళీ ప్రదేశం లేదు. ఈ అంశాన్ని మరో పేజీపైకి లాగేందుకు ప్రయత్నించండి.</string>
     <string name="noon">మధ్యాహ్నం</string>
     <string name="normal_wallpaper">వాల్‌పేపర్</string>
@@ -636,7 +639,7 @@
     <string name="notification_reset_title">చిహ్నాలు విజయవంతంగా అమర్చబడ్డాయి</string>
     <string name="one_key_call_title">డయల్ చేసేందుకు ట్యాప్ చేయండి</string>
     <string name="online_wallpaper">ఆన్‌లైన్</string>
-    <string name="open_pad_personal_assistant_settings">Home screen widgets</string>
+    <string name="open_pad_personal_assistant_settings">హోమ్ స్క్రీన్ విడ్జెట్‌లు</string>
     <string name="open_personal_assistant_dialog_btn_cancel">రద్దు చేయి</string>
     <string name="open_personal_assistant_dialog_btn_confirm">ఆఫ్ చేయండి</string>
     <string name="open_personal_assistant_dialog_desc">మీరు యాప్ వాల్ట్‌ని ఆఫ్ చేసిన తరువాత, యాప్ వాల్ట్ విడ్జెట్‌లను చూడలేరు లేదా ఉపయోగించలేరు. వాటి అప్‌డేట్ చేసిన వెర్షన్‌లు కూడా మీకు అందుబాటులో ఉండవు. ఏదేమైనా ఆఫ్ చేయాలా?</string>
@@ -648,7 +651,7 @@
     <string name="ota_layout_adjustment_content">అంతర్గత మరియు బాహ్య హోమ్ స్క్రీన్ లేఅవుట్‌లు కొత్త వెర్షన్‌లో సింక్ చేయబడ్డాయి.</string>
     <string name="ota_layout_adjustment_title">హోమ్ స్క్రీన్ లేఅవుట్‌లు</string>
     <string name="out_of_space">ఈ హోమ్ స్క్రీన్‌లో మరింత ఖాళీ లేదు</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">మూడవ పక్ష యాప్ చిహ్నాలపై యానిమేషన్‌లు అమలు చేస్తుంది</string>
     <string name="perfect_icons_switch_title">గ్లోబల్ ఐకాన్ యానిమేషన్‌లు</string>
     <string name="permdesc_install_shortcut">వినియోగదారు అనుమతి లేకుండా సత్వరమార్గాలను జోడించడానికి అప్లికేషన్‌ను అనుమతిస్తుంది.</string>

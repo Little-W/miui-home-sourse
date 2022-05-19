@@ -209,11 +209,11 @@
 
 .field public static final fake_landscape_screen_minor_size:I = 0x7f07010a
 
-.field public static final fastscroll_default_thickness:I = 0x7f07010b
+.field public static final fastscroll_default_thickness:I = 0x7f07010c
 
-.field public static final fastscroll_margin:I = 0x7f070110
+.field public static final fastscroll_margin:I = 0x7f070112
 
-.field public static final fastscroll_minimum_range:I = 0x7f070111
+.field public static final fastscroll_minimum_range:I = 0x7f070113
 
 .field public static final highlight_alpha_material_colored:I = 0x7f07014c
 
@@ -1251,26 +1251,26 @@
 
 .field public static final preference_seekbar_value_minWidth:I = 0x7f0703ac
 
-.field public static final sliding_button_border:I = 0x7f070416
+.field public static final sliding_button_border:I = 0x7f07041f
 
-.field public static final split_action_bar_overlay_height:I = 0x7f070435
+.field public static final split_action_bar_overlay_height:I = 0x7f07043e
 
-.field public static final tooltip_corner_radius:I = 0x7f07045a
+.field public static final tooltip_corner_radius:I = 0x7f070463
 
-.field public static final tooltip_horizontal_padding:I = 0x7f07045b
+.field public static final tooltip_horizontal_padding:I = 0x7f070464
 
-.field public static final tooltip_margin:I = 0x7f07045c
+.field public static final tooltip_margin:I = 0x7f070465
 
-.field public static final tooltip_precise_anchor_extra_offset:I = 0x7f07045d
+.field public static final tooltip_precise_anchor_extra_offset:I = 0x7f070466
 
-.field public static final tooltip_precise_anchor_threshold:I = 0x7f07045e
+.field public static final tooltip_precise_anchor_threshold:I = 0x7f070467
 
-.field public static final tooltip_vertical_padding:I = 0x7f07045f
+.field public static final tooltip_vertical_padding:I = 0x7f070468
 
-.field public static final tooltip_y_offset_non_touch:I = 0x7f070460
+.field public static final tooltip_y_offset_non_touch:I = 0x7f070469
 
-.field public static final tooltip_y_offset_touch:I = 0x7f070461
+.field public static final tooltip_y_offset_touch:I = 0x7f07046a
 
-.field public static final word_photo_border_size:I = 0x7f070482
+.field public static final word_photo_border_size:I = 0x7f07048b
 
-.field public static final word_photo_size:I = 0x7f070483
+.field public static final word_photo_size:I = 0x7f07048c

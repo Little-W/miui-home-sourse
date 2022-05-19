@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher$48;)V
     .locals 0
 
-    .line 5381
+    .line 5372
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$48$1;->this$1:Lcom/miui/home/launcher/Launcher$48;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 3
 
-    .line 5383
+    .line 5374
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$48$1;->this$1:Lcom/miui/home/launcher/Launcher$48;
 
     iget-object p1, p1, Lcom/miui/home/launcher/Launcher$48;->this$0:Lcom/miui/home/launcher/Launcher;
@@ -44,12 +44,12 @@
 
     move-result-object p1
 
-    .line 5384
+    .line 5375
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$48$1;->this$1:Lcom/miui/home/launcher/Launcher$48;
 
     iget-object v0, v0, Lcom/miui/home/launcher/Launcher$48;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$3100(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/FitSystemWindowView;
+    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$3200(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/FitSystemWindowView;
 
     move-result-object v0
 
@@ -57,27 +57,27 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/FitSystemWindowView;->setVisibility(I)V
 
-    .line 5385
+    .line 5376
     invoke-virtual {p1}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->onShowAnimationEnd()V
 
-    .line 5386
+    .line 5377
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$48$1;->this$1:Lcom/miui/home/launcher/Launcher$48;
 
     iget-object v0, v0, Lcom/miui/home/launcher/Launcher$48;->this$0:Lcom/miui/home/launcher/Launcher;
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v2}, Lcom/miui/home/launcher/Launcher;->access$6702(Lcom/miui/home/launcher/Launcher;Z)Z
+    invoke-static {v0, v2}, Lcom/miui/home/launcher/Launcher;->access$6802(Lcom/miui/home/launcher/Launcher;Z)Z
 
-    .line 5387
+    .line 5378
     invoke-virtual {p1, v1}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->notifyGadgets(I)V
 
-    .line 5388
+    .line 5379
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$48$1;->this$1:Lcom/miui/home/launcher/Launcher$48;
 
     iget-object p1, p1, Lcom/miui/home/launcher/Launcher$48;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {p1, v2}, Lcom/miui/home/launcher/Launcher;->access$6800(Lcom/miui/home/launcher/Launcher;Z)Z
+    invoke-static {p1, v2}, Lcom/miui/home/launcher/Launcher;->access$6900(Lcom/miui/home/launcher/Launcher;Z)Z
 
     return-void
 .end method

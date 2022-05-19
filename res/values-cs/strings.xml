@@ -53,7 +53,7 @@
     <string name="activity_not_unlocked">Před otevřením aplikací vyčkejte, dokud nebude restart zařízení dokončen</string>
     <string name="add_custom_category">Vlastní</string>
     <string name="add_screen">Přidat obrazovku</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">Přidat na Domovskou obrazovku</string>
     <string name="added_all_category">Všechny aplikace úspěšně přidány</string>
     <string name="afternoon">Odpoledne</string>
     <string name="agree_button">Souhlasím</string>
@@ -379,6 +379,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">Stiskněte a přidržte pro přidání na Domovskou obrazovku</string>
+    <string name="fold_pair_installed_shortcut_launcher">Tento zástupce již existuje</string>
     <string name="folder_name">Složka</string>
     <string name="frame_load_failed">Rámeček nelze načíst</string>
     <string name="free_style_apps_title">Vyberte aplikaci</string>
@@ -658,6 +660,7 @@
     <string name="night">Večer</string>
     <string name="no_detail_page">Žádná stránka s podrobnostmi</string>
     <string name="no_space_toast">Nedostatek místa</string>
+    <string name="no_space_toast_fold">Nedostatek místa</string>
     <string name="no_space_toast_when_click_widget">Na této stránce není dostatek volného místa. Zkuste položku přesunout na jinou stránku.</string>
     <string name="noon">Poledne</string>
     <string name="normal_wallpaper">Tapeta</string>
@@ -679,7 +682,7 @@
     <string name="ota_layout_adjustment_content">Rozložení přední a vnější Domovské obrazovky byly v nové verzi synchronizovány.</string>
     <string name="ota_layout_adjustment_title">Rozložení Domovské obrazovky</string>
     <string name="out_of_space">Na ploše není dostatek místa</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">Vykreslovat animace ikon aplikací třetích stran</string>
     <string name="perfect_icons_switch_title">Animace pro globální ikony</string>
     <string name="permdesc_install_shortcut">Povoluje aplikaci přidat zástupce bez zásahu uživatele.</string>

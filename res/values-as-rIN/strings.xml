@@ -26,7 +26,7 @@
     <string name="activity_not_unlocked">এপসমূহ খোলাৰ পূৰ্বে ডিভাইচটো সম্পূৰ্ণকৈ পুনৰাৰম্ভ নোহোৱালৈকে অপেক্ষা কৰক</string>
     <string name="add_custom_category">কাষ্টম</string>
     <string name="add_screen">স্ক্ৰীণ যোগ</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">গৃহ স্ক্ৰীণত যোগ কৰক</string>
     <string name="added_all_category">"সকলো এপ সফলভাৱে যোগ কৰা হ'ল"</string>
     <string name="afternoon">আবেলি</string>
     <string name="agree_button">সন্মত</string>
@@ -349,6 +349,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">গৃহ স্ক্ৰীণত যোগ কৰিবলৈ টিপি ধৰি থাকক</string>
+    <string name="fold_pair_installed_shortcut_launcher">এই চৰ্টকাট ইতিমধ্যে মজুত আছে</string>
     <string name="folder_name">"ফ'ল্ডাৰ"</string>
     <string name="frame_load_failed">ফ্ৰেম লোড কৰিব নোৱাৰি</string>
     <string name="free_style_apps_title">এপ পচন্দ কৰক</string>
@@ -628,6 +630,7 @@
     <string name="night">সন্ধিয়া</string>
     <string name="no_detail_page">কোনো বিৱৰণ পৃষ্ঠা নাই</string>
     <string name="no_space_toast">পৰ্যাপ্ত স্থান নাই</string>
+    <string name="no_space_toast_fold">ইয়াত পৰ্যাপ্ত স্থান নাই</string>
     <string name="no_space_toast_when_click_widget">এই পৃষ্ঠাত পৰ্যাপ্ত স্থান নাই। এই আইটেমটো এটা ভিন্ন পৃষ্ঠালৈ টানিবলৈ চেষ্টা কৰক।</string>
     <string name="noon">মধ্যদিন</string>
     <string name="normal_wallpaper">ৱালপেপাৰ</string>
@@ -648,7 +651,7 @@
     <string name="ota_layout_adjustment_content">"নতুন সংস্কৰণটোত ভিতৰৰ আৰু বাহিৰৰ গৃহ স্ক্ৰীণ লেআউটসমূহ চিংক্ৰ'নাইজ কৰা হৈছে।"</string>
     <string name="ota_layout_adjustment_title">গৃহ স্ক্ৰীণ লেআউট</string>
     <string name="out_of_space">এই গৃহ স্ক্ৰীণত আৰু স্থান নাই</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">তৃতীয় পক্ষৰ এপ আইকনসমূহত এনিমেশ্বন ৰেণ্ডাৰ কৰক</string>
     <string name="perfect_icons_switch_title">"গ্ল'বেল আইকন এনিমেশ্বন"</string>
     <string name="permdesc_install_shortcut">ব্যৱহাৰকাৰীৰ হস্তক্ষেপ অবিহনে এপক চৰ্টকাট যোগ দিবলৈ অনুমতি দিয়ে।</string>

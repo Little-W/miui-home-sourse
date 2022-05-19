@@ -26,7 +26,7 @@
     <string name="activity_not_unlocked">Почекајте дури уредот не се ресетира целосно пред да ги отворите апл.</string>
     <string name="add_custom_category">Прилагоди</string>
     <string name="add_screen">Додадете екран</string>
-    <string name="add_to_workspace">Додади на десктоп</string>
+    <string name="add_to_workspace">Додади на Почетен екран</string>
     <string name="added_all_category">Успешно додадени сите апл.</string>
     <string name="afternoon">Попладне</string>
     <string name="agree_button">Се согласувам</string>
@@ -349,6 +349,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">Притиснете и задржете за да додадете на Почетен екран</string>
+    <string name="fold_pair_installed_shortcut_launcher">Кратенката веќе постои</string>
     <string name="folder_name">Папка</string>
     <string name="frame_load_failed">Не може да се вчита рамката</string>
     <string name="free_style_apps_title">Изберете апликација</string>
@@ -628,6 +630,7 @@
     <string name="night">Вечер</string>
     <string name="no_detail_page">Нема детали на страницата</string>
     <string name="no_space_toast">Нема доволно простор</string>
+    <string name="no_space_toast_fold">Овде нема доволно скл. простор</string>
     <string name="no_space_toast_when_click_widget">Нема доволно простор на оваа страница. Пробајте со лизгање на ставката од друга страна.</string>
     <string name="noon">Пладне</string>
     <string name="normal_wallpaper">Позадина</string>
@@ -636,7 +639,7 @@
     <string name="notification_reset_title">Успешно распоредени апликации</string>
     <string name="one_key_call_title">Притиснете за бирање</string>
     <string name="online_wallpaper">Онлајн</string>
-    <string name="open_pad_personal_assistant_settings">Home screen widgets</string>
+    <string name="open_pad_personal_assistant_settings">Додатоци на Почетен екран</string>
     <string name="open_personal_assistant_dialog_btn_cancel">Откажи</string>
     <string name="open_personal_assistant_dialog_btn_confirm">Исклучи</string>
     <string name="open_personal_assistant_dialog_desc">Нема да може да ги видите или користите Додатоците од App vault откако ќе ја искл. App vault. Нивните ажурирани верзии исто така нема да ви бидат достапни. Исклучи секако?</string>
@@ -648,7 +651,7 @@
     <string name="ota_layout_adjustment_content">Внатрешниот и надворешниот Распоред на Почетен екран беа синхронизирани во новата верзија.</string>
     <string name="ota_layout_adjustment_title">Распореди на почетен екран</string>
     <string name="out_of_space">Нема повеќе простор на овој Почетен екран</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">Прикажи анимации на иконите на апл. од трети страни</string>
     <string name="perfect_icons_switch_title">Анимации на глобални икони</string>
     <string name="permdesc_install_shortcut">Дозволува апликацијата да додаде кратенки без дозвола од корисникот.</string>

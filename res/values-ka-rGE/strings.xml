@@ -26,7 +26,7 @@
     <string name="activity_not_unlocked">აპლიკაციების გახსნამდე დაელოდეთ სანამ თქვენი მოწყობილობა არ განახლდება</string>
     <string name="add_custom_category">სამომხმარებლო</string>
     <string name="add_screen">ეკრანის დამატება</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">მთავარ ეკრანზე დამატება</string>
     <string name="added_all_category">ყველა აპლიკაცია წარმატებით დაემატა</string>
     <string name="afternoon">შუადღე</string>
     <string name="agree_button">ვეთანხმები</string>
@@ -349,6 +349,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">დააჭირეთ და გეკავოთ მთავარ ეკრანზე დასამატებლად</string>
+    <string name="fold_pair_installed_shortcut_launcher">ეს მალსახმობი უკვე არსებობს</string>
     <string name="folder_name">ფოლდერი</string>
     <string name="frame_load_failed">ვერ ვტვირთავ ფრეიმს</string>
     <string name="free_style_apps_title">აირჩიეთ აპლიკაციები</string>
@@ -628,6 +630,7 @@
     <string name="night">საღამო</string>
     <string name="no_detail_page">დეტალების გვერდი არ არის</string>
     <string name="no_space_toast">არ არის საკმარისი სივრცე</string>
+    <string name="no_space_toast_fold">არ არის საკმარისი მეხსიერება</string>
     <string name="no_space_toast_when_click_widget">ამ გვერდზე არ არის საკმარისი სივრცე. სცადეთ ამ ელემენტის სხვა გვერდზე გადატანა.</string>
     <string name="noon">შუადღე</string>
     <string name="normal_wallpaper">ფონი</string>
@@ -648,7 +651,7 @@
     <string name="ota_layout_adjustment_content">შიდა და გარე მთავარი ეკრანის მალსახმობი არ არის სინქრონიზებული ახალ ვერსიასთან.</string>
     <string name="ota_layout_adjustment_title">მთავარი ეკრანის მალსახმობი</string>
     <string name="out_of_space">მთავარ ეკრანზე ადგილი არ არის</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">გადააკეთეთ ანიმაციები მესამე მხარის აპლიკაციების ხატულაზე</string>
     <string name="perfect_icons_switch_title">გლობალური ხატულას ანიმაციები</string>
     <string name="permdesc_install_shortcut">ამატებს აპლიკაციის ხატს მომხმარებლის მოცდენის გარეშე.</string>

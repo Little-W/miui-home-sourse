@@ -26,7 +26,7 @@
     <string name="activity_not_unlocked">ပိတ်ပြီးပြန်ဖွင့်သောအခါ ခဏစောင့်ရပါမည်</string>
     <string name="add_custom_category">စိတ်ကြိုက်</string>
     <string name="add_screen">မျက်နှာပြင်အား ပေါင်းထည့်ပါ</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">ပင်မမျက်နှာပြင်တွင် ထည့်ရန်</string>
     <string name="added_all_category">အက်ပ်အားလုံးကို အောင်မြင်စွာ ပေါင်းထည့်ပြီးပါပြီ</string>
     <string name="afternoon">နေ့လယ်</string>
     <string name="agree_button">သဘောတူပါသည်</string>
@@ -349,6 +349,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">ပင်မမမျက်နှာပြင်တွင်ထည့်ရန် ထိပြီးဖိထားပါ</string>
+    <string name="fold_pair_installed_shortcut_launcher">ဤရှော့ကတ်ရှိပြီးသား ဖြစ်သည်</string>
     <string name="folder_name">ဖိုလ်ဒါ</string>
     <string name="frame_load_failed">ဖရိန်အား ရယူ၍ မရပါ</string>
     <string name="free_style_apps_title">အက်ပ် ရွေးပါ</string>
@@ -628,6 +630,7 @@
     <string name="night">ညနေ</string>
     <string name="no_detail_page">အသေးစိတ် စာမျက်နှာ မရှိပါ</string>
     <string name="no_space_toast">နေရာလွတ် အလုံအလောက် မရှိပါ</string>
+    <string name="no_space_toast_fold">ဤနေရာတွင် နေရာလွတ်မရှိပါ</string>
     <string name="no_space_toast_when_click_widget">ဤစာမျက်နှာပေါ်တွင် နေရာလွတ် အလုံအလောက်မရှိပါ။ ဤပစ္စည်းအား အခြားစာမျက်နှာတစ်ခုသို့ ဆွဲသွင်းရန် ကြိုးစားပါ။</string>
     <string name="noon">မွန်းတည့်</string>
     <string name="normal_wallpaper">နောက်ခံပုံ</string>
@@ -648,7 +651,7 @@
     <string name="ota_layout_adjustment_content">ဗားရှင်းအသစ်တွင် အတွင်းအပြင် ပင်မမျက်နှာပြင် အပြင်အဆင်များကို ဆင့်(ခ်)လုပ်ထားသည်။</string>
     <string name="ota_layout_adjustment_title">ပင်မမျက်နှာပြင် အပြင်အဆင်များ</string>
     <string name="out_of_space">ဤပင်မမျက်နှာပြင်ပေါ်တွင် နေရာလွတ် မရှိတော့ပါ</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">ပြင်ပပါတီအက်(ပ်)သင်္ကေတများတွင် ရုပ်ကြွများထည့်ရန်</string>
     <string name="perfect_icons_switch_title">ကမ္ဘာသုံး ရုပ်ကြွသင်္ကေတများ</string>
     <string name="permdesc_install_shortcut">အက်ပ်တစ်ခုကို သုံးစွဲသူ ကြားဝင် မဆောင်ရွက်ဘဲ ရှော့ကဒ်များအား ပေါင်းထည့်ရန် ခွင့်ပြုပါ။</string>

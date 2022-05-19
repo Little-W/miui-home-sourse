@@ -25,7 +25,7 @@
 .method private constructor <init>(Lcom/miui/home/launcher/install/BaseAutoInstallsLayout;)V
     .locals 0
 
-    .line 329
+    .line 327
     iput-object p1, p0, Lcom/miui/home/launcher/install/BaseAutoInstallsLayout$AutoInstallParser;->this$0:Lcom/miui/home/launcher/install/BaseAutoInstallsLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,7 +36,7 @@
 .method synthetic constructor <init>(Lcom/miui/home/launcher/install/BaseAutoInstallsLayout;Lcom/miui/home/launcher/install/BaseAutoInstallsLayout$1;)V
     .locals 0
 
-    .line 329
+    .line 327
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/install/BaseAutoInstallsLayout$AutoInstallParser;-><init>(Lcom/miui/home/launcher/install/BaseAutoInstallsLayout;)V
 
     return-void
@@ -49,19 +49,19 @@
 
     const-string v0, "packageName"
 
-    .line 333
+    .line 331
     invoke-static {p1, v0}, Lcom/miui/home/launcher/install/BaseAutoInstallsLayout;->access$300(Landroid/content/res/XmlResourceParser;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
     const-string v0, "className"
 
-    .line 334
+    .line 332
     invoke-static {p1, v0}, Lcom/miui/home/launcher/install/BaseAutoInstallsLayout;->access$300(Landroid/content/res/XmlResourceParser;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 335
+    .line 333
     invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p1
@@ -78,7 +78,7 @@
 
     goto/16 :goto_0
 
-    .line 339
+    .line 337
     :cond_0
     :try_start_0
     iget-object p1, p0, Lcom/miui/home/launcher/install/BaseAutoInstallsLayout$AutoInstallParser;->this$0:Lcom/miui/home/launcher/install/BaseAutoInstallsLayout;
@@ -91,7 +91,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 340
+    .line 338
     iget-object v1, p0, Lcom/miui/home/launcher/install/BaseAutoInstallsLayout$AutoInstallParser;->this$0:Lcom/miui/home/launcher/install/BaseAutoInstallsLayout;
 
     const/4 v6, 0x0
@@ -100,13 +100,13 @@
 
     move-object v3, p3
 
-    invoke-static/range {v1 .. v6}, Lcom/miui/home/launcher/install/BaseAutoInstallsLayout;->access$400(Lcom/miui/home/launcher/install/BaseAutoInstallsLayout;Landroid/database/sqlite/SQLiteDatabase;Landroid/content/ContentValues;Ljava/lang/String;Ljava/lang/String;Z)J
+    invoke-virtual/range {v1 .. v6}, Lcom/miui/home/launcher/install/BaseAutoInstallsLayout;->addAppShortcut(Landroid/database/sqlite/SQLiteDatabase;Landroid/content/ContentValues;Ljava/lang/String;Ljava/lang/String;Z)J
 
     move-result-wide p1
 
     return-wide p1
 
-    .line 342
+    .line 340
     :cond_1
     new-instance p1, Landroid/content/Intent;
 
@@ -118,7 +118,7 @@
 
     const-string v0, "android.intent.category.LAUNCHER"
 
-    .line 343
+    .line 341
     invoke-virtual {p1, v0}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object p1
@@ -129,14 +129,14 @@
 
     invoke-direct {v0, v4, v2}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 344
+    .line 342
     invoke-virtual {p1, v0}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
     move-result-object p1
 
     const/high16 v0, 0x10200000
 
-    .line 345
+    .line 343
     invoke-virtual {p1, v0}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
     move-result-object p1
@@ -147,7 +147,7 @@
 
     const/4 v3, 0x0
 
-    .line 347
+    .line 345
     invoke-virtual {p1, v3}, Landroid/content/Intent;->toUri(I)Ljava/lang/String;
 
     move-result-object p1
@@ -156,12 +156,12 @@
 
     const-string p1, "title"
 
-    .line 348
+    .line 346
     invoke-virtual {p3, p1, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p1, "itemType"
 
-    .line 349
+    .line 347
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -170,14 +170,14 @@
 
     const-string p1, "iconPackage"
 
-    .line 350
+    .line 348
     invoke-virtual {p3, p1, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p1, "iconType"
 
     const/4 v2, 0x4
 
-    .line 351
+    .line 349
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -186,7 +186,7 @@
 
     const-string p1, "iconResource"
 
-    .line 352
+    .line 350
     sget-object v2, Lcom/miui/home/launcher/install/PlayAutoInstallHelper;->DEFAULT_ICON:Ljava/lang/String;
 
     invoke-virtual {p3, p1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
@@ -195,7 +195,7 @@
 
     const/4 v2, 0x1
 
-    .line 353
+    .line 351
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -204,19 +204,19 @@
 
     const-string p1, "spanY"
 
-    .line 354
+    .line 352
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
     invoke-virtual {p3, p1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 355
+    .line 353
     invoke-static {v4, v0}, Lcom/miui/home/launcher/install/PlayAutoInstallHelper;->recordProgressInfo(Ljava/lang/String;I)V
 
     const-string p1, "favorites"
 
-    .line 356
+    .line 354
     invoke-static {p2, p1, v1, p3}, Lcom/miui/home/launcher/LauncherProvider;->safelyInsertDatabase(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
 
     move-result-wide p1
@@ -230,7 +230,7 @@
 
     const-string p2, "AutoInstalls"
 
-    .line 358
+    .line 356
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V

@@ -9,17 +9,13 @@
     <dimen name="edit_mode_workspace_thumbnail_view_width">72.69998dip</dimen>
     <dimen name="fastscroll_letter_side_padding_bottom">10.899994dip</dimen>
     <dimen name="fastscroll_letter_side_padding_top">10.899994dip</dimen>
-    <dimen name="fastscroll_popup_margin_top">-10.899994dip</dimen>
-    <dimen name="fastscroll_popup_padding_right">18.0dip</dimen>
-    <dimen name="fastscroll_popup_size">61.799988dip</dimen>
-    <dimen name="fastscroll_popup_text_size">29.099976sp</dimen>
     <dimen name="folder_content_margin_bottom">0.0dip</dimen>
     <dimen name="folder_content_margin_top">-30.199982dip</dimen>
     <dimen name="folder_edit_text_margin_left">57.0dip</dimen>
     <dimen name="folder_edit_text_text_size_noword">32.0dip</dimen>
     <dimen name="folder_item_horizontal_spacing">41.5dip</dimen>
     <dimen name="folder_item_vertical_spacing">10.599976dip</dimen>
-    <dimen name="hotseats_margin_top">0.0dip</dimen>
+    <dimen name="hotseats_margin_top">-5.0dip</dimen>
     <dimen name="hotseats_padding_bottom">0.0dip</dimen>
     <dimen name="icon_padding_side">6.799988dip</dimen>
     <dimen name="icon_padding_top">6.799988dip</dimen>
@@ -27,7 +23,7 @@
     <dimen name="slide_bar_margin_top">0.0dip</dimen>
     <dimen name="workspace_cell_padding_side">35.689972dip</dimen>
     <dimen name="workspace_cell_padding_side_rotatable">35.689972dip</dimen>
-    <dimen name="workspace_cell_padding_top">28.0dip</dimen>
+    <dimen name="workspace_cell_padding_top">15.0dip</dimen>
     <dimen name="folder_preview_height">38.5dip</dimen>
     <dimen name="folder_preview_width">38.5dip</dimen>
 </resources>

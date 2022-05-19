@@ -15,7 +15,7 @@
 
 
 # static fields
-.field public static final number_picker_value_change:I = 0x7f0f0004
+.field public static final number_picker_value_change:I = 0x7f0f0008
 
 
 # direct methods

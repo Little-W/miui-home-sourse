@@ -64,7 +64,7 @@
 
     move-result-object p1
 
-    const v1, 0x7f100276
+    const v1, 0x7f10027d
 
     .line 22
     invoke-virtual {p1, v1, v0}, Lmiuix/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;

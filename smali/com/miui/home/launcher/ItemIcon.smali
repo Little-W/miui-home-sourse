@@ -221,7 +221,7 @@
 
     invoke-virtual {p0, v0, p2}, Lcom/miui/home/launcher/ItemIcon;->setLayerType(ILandroid/graphics/Paint;)V
 
-    const p2, 0x7f0600cf
+    const p2, 0x7f0600d0
 
     .line 98
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getColor(I)I
@@ -501,7 +501,7 @@
 
     sget-object p3, Lcom/miui/home/launcher/ItemIcon;->sTmpRect:Landroid/graphics/Rect;
 
-    const v4, 0x7f060101
+    const v4, 0x7f060102
 
     .line 157
     invoke-virtual {v0, v4}, Landroid/content/res/Resources;->getColor(I)I
@@ -2376,9 +2376,9 @@
 
     iget-object v1, p0, Lcom/miui/home/launcher/ItemIcon;->mTitle:Lcom/miui/home/launcher/TitleTextView;
 
-    const v2, 0x7f110310
+    const v2, 0x7f110311
 
-    const v3, 0x7f110313
+    const v3, 0x7f110314
 
     invoke-static {v0, v1, v2, v3}, Lcom/miui/home/launcher/common/Utilities;->adaptTitleStyleToWallpaper(Landroid/content/Context;Landroid/widget/TextView;II)V
 

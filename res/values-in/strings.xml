@@ -53,7 +53,7 @@
     <string name="activity_not_unlocked">Tunggu sampai perangkat Anda sepenuhnya termulai ulang sebelum membuka aplikasi</string>
     <string name="add_custom_category">Kustom</string>
     <string name="add_screen">Tambah layar</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">Tambah ke Layar utama</string>
     <string name="added_all_category">Berhasil menambahkan semua apl</string>
     <string name="afternoon">Siang</string>
     <string name="agree_button">Setuju</string>
@@ -379,6 +379,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">Tekan lama untuk menambahkan ke Layar utama</string>
+    <string name="fold_pair_installed_shortcut_launcher">Pintasan ini sudah ada</string>
     <string name="folder_name">Folder</string>
     <string name="frame_load_failed">Tidak dapat memuat bingkai</string>
     <string name="free_style_apps_title">Pilih apl</string>
@@ -658,6 +660,7 @@
     <string name="night">Malam</string>
     <string name="no_detail_page">Tak ada halaman rincian</string>
     <string name="no_space_toast">Tidak ada cukup ruang</string>
+    <string name="no_space_toast_fold">Tidak ada cukup ruang di sini</string>
     <string name="no_space_toast_when_click_widget">Tidak cukup ruang pada halaman ini. Coba seret item ke halaman lain.</string>
     <string name="noon">Tengah hari</string>
     <string name="normal_wallpaper">Wallpaper</string>
@@ -667,7 +670,7 @@
     <string name="notification_reset_title">Berhasil atur ikon</string>
     <string name="one_key_call_title">Ketuk untuk panggil</string>
     <string name="online_wallpaper">Online</string>
-    <string name="open_pad_personal_assistant_settings">Home screen widgets</string>
+    <string name="open_pad_personal_assistant_settings">Widget Layar utama</string>
     <string name="open_personal_assistant_dialog_btn_cancel">Batal</string>
     <string name="open_personal_assistant_dialog_btn_confirm">Matikan</string>
     <string name="open_personal_assistant_dialog_desc">Setelah mematikan App vault, Anda tidak akan dapat melihat atau menggunakan widget App vault. Versi terbarunya juga tidak akan tersedia untuk Anda. Tetap matikan?</string>
@@ -679,7 +682,7 @@
     <string name="ota_layout_adjustment_content">Susunan Layar utama dalam dan luar telah disinkronkan di versi baru.</string>
     <string name="ota_layout_adjustment_title">Susunan Layar utama</string>
     <string name="out_of_space">Tak ada ruang di Layar utama</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">Memberikan animasi di ikon aplikasi pihak ketiga</string>
     <string name="perfect_icons_switch_title">Animasi ikon global</string>
     <string name="permdesc_install_shortcut">Izinkan apl utk menambah pintasan tanpa campur tangan pengguna.</string>

@@ -18,7 +18,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nNoWordLauncherElementAdapter.kt\nKotlin\n*S Kotlin\n*F\n+ 1 NoWordLauncherElementAdapter.kt\ncom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter\n*L\n1#1,295:1\n*E\n"
+    value = "SMAP\nNoWordLauncherElementAdapter.kt\nKotlin\n*S Kotlin\n*F\n+ 1 NoWordLauncherElementAdapter.kt\ncom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter\n*L\n1#1,297:1\n*E\n"
 .end annotation
 
 
@@ -109,7 +109,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f070496
+    const v3, 0x7f07049f
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -127,7 +127,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f060102
+    const v2, 0x7f060103
 
     invoke-static {v1, v2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
@@ -787,40 +787,17 @@
 .end method
 
 .method public changeViewAlpha(Z)V
-    .locals 3
+    .locals 1
 
     .line 247
-    invoke-virtual {p0}, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->viewChangeAlphaWhenEditModeChange()Landroid/view/View;
+    new-instance v0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter$changeViewAlpha$1;
 
-    move-result-object v0
+    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter$changeViewAlpha$1;-><init>(Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;Z)V
 
-    if-eqz v0, :cond_1
+    check-cast v0, Ljava/lang/Runnable;
 
-    .line 248
-    invoke-virtual {v0}, Landroid/view/View;->getAlpha()F
+    invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->useLauncherToRunOnUiThread(Ljava/lang/Runnable;)Z
 
-    move-result v1
-
-    const/4 v2, 0x0
-
-    cmpg-float v1, v1, v2
-
-    if-eqz v1, :cond_1
-
-    if-eqz p1, :cond_0
-
-    const p1, 0x3f19999a    # 0.6f
-
-    goto :goto_0
-
-    :cond_0
-    const/high16 p1, 0x3f800000    # 1.0f
-
-    .line 249
-    :goto_0
-    invoke-virtual {v0, p1}, Landroid/view/View;->setAlpha(F)V
-
-    :cond_1
     return-void
 .end method
 

@@ -962,7 +962,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0600d2
+    const v2, 0x7f0600d3
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -982,7 +982,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0600d1
+    const v2, 0x7f0600d2
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -996,9 +996,9 @@
 
     iget-object v1, p0, Lcom/miui/home/launcher/Folder;->mTitleText:Landroid/widget/TextView;
 
-    const v2, 0x7f1100c5
+    const v2, 0x7f1100c6
 
-    const v3, 0x7f1100c6
+    const v3, 0x7f1100c7
 
     invoke-static {v0, v1, v2, v3}, Lcom/miui/home/launcher/common/Utilities;->adaptTitleStyleToWallpaper(Landroid/content/Context;Landroid/widget/TextView;II)V
 
@@ -1014,7 +1014,7 @@
 
     iget-object v1, p0, Lcom/miui/home/launcher/Folder;->mTitleText:Landroid/widget/TextView;
 
-    const v2, 0x7f1100c7
+    const v2, 0x7f1100c8
 
     invoke-static {v0, v1, v2}, Lcom/miui/home/launcher/common/Utilities;->adaptTitleStyleToNoWord(Landroid/content/Context;Landroid/view/View;I)V
 
@@ -1317,7 +1317,7 @@
 
     move-result p1
 
-    const v0, 0x7f0a029f
+    const v0, 0x7f0a02a4
 
     if-eq p1, v0, :cond_0
 
@@ -1679,7 +1679,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/Folder;->mContentBackground:Landroid/graphics/drawable/Drawable;
 
-    const v0, 0x7f0a029f
+    const v0, 0x7f0a02a4
 
     .line 215
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Folder;->findViewById(I)Landroid/view/View;
@@ -1704,7 +1704,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/Folder;->mHeader:Landroid/view/View;
 
-    const v0, 0x7f0a01f2
+    const v0, 0x7f0a01f6
 
     .line 218
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Folder;->findViewById(I)Landroid/view/View;
@@ -1728,7 +1728,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/Folder;->mImm:Landroid/view/inputmethod/InputMethodManager;
 
-    const v0, 0x7f0a01e8
+    const v0, 0x7f0a01e9
 
     .line 220
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Folder;->findViewById(I)Landroid/view/View;
@@ -1776,7 +1776,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f100458
+    const v1, 0x7f100461
 
     .line 229
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;

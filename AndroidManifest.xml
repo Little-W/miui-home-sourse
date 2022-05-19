@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="31" android:compileSdkVersionCodename="12" android:sharedUserId="@string/sharedUserId" package="com.miui.home" platformBuildVersionCode="437004814" platformBuildVersionName="ALPHA-4.37.0.4814-05111435">
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="31" android:compileSdkVersionCodename="12" android:sharedUserId="@string/sharedUserId" package="com.miui.home" platformBuildVersionCode="437004901" platformBuildVersionName="ALPHA-4.37.0.4901-05182119">
+    <uses-permission android:name="android.permission.CHANGE_COMPONENT_ENABLED_STATE"/>
     <permission android:description="@string/permdesc_install_shortcut" android:label="@string/permlab_install_shortcut" android:name="com.android.launcher.permission.INSTALL_SHORTCUT" android:permissionGroup="android.permission-group.SYSTEM_TOOLS" android:protectionLevel="normal"/>
     <permission android:description="@string/permdesc_uninstall_shortcut" android:label="@string/permlab_uninstall_shortcut" android:name="com.miui.home.launcher.permission.UNINSTALL_SHORTCUT" android:permissionGroup="android.permission-group.SYSTEM_TOOLS" android:protectionLevel="normal"/>
     <permission android:description="@string/permdesc_install_widget" android:label="@string/permlab_install_widget" android:name="com.miui.home.launcher.permission.INSTALL_WIDGET" android:permissionGroup="android.permission-group.SYSTEM_TOOLS" android:protectionLevel="normal"/>
@@ -7,7 +8,8 @@
     <permission android:description="@string/permdesc_write_settings" android:label="@string/permlab_write_settings" android:name="com.android.launcher.permission.WRITE_SETTINGS" android:permissionGroup="android.permission-group.SYSTEM_TOOLS" android:protectionLevel="signatureOrSystem"/>
     <permission android:name="com.miui.home.launcher.permission.LOADING_STATUS" android:protectionLevel="normal"/>
     <permission android:name="com.miui.home.launcher.permission.REMOVE_WIDGET" android:protectionLevel="signature"/>
-    <permission android:name="com.miui.home.launcher.permission.PUSH_REFRESH_WIDGET" android:protectionLevel="signatureOrSystem"/> // The MaMl widget runs in home need it to access data in powerkeeper. <uses-permission android:name="miui.permission.powerkeeper.POWER_DATA"/>
+    <permission android:name="com.miui.home.launcher.permission.PUSH_REFRESH_WIDGET" android:protectionLevel="signatureOrSystem"/>
+    <uses-permission android:name="miui.permission.powerkeeper.POWER_DATA"/>
     <uses-permission android:name="miui.permission.powerkeeper.HIDDEN_MODE_PROVIDER"/>
     <uses-permission android:name="android.permission.SET_WALLPAPER_COMPONENT"/>
     <uses-permission android:name="android.permission.BIND_WALLPAPER"/>
@@ -46,7 +48,6 @@
     <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS"/>
     <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
     <uses-permission android:name="com.android.SystemUI.permission.TIGGER_TOGGLE"/>
-    <uses-permission android:name="android.permission.CHANGE_COMPONENT_ENABLED_STATE"/>
     <uses-permission android:name="com.miui.notes.permission.ACCESS_NOTE"/>
     <uses-permission android:name="android.permission.SET_PROCESS_LIMIT"/>
     <uses-permission android:name="miui.permission.SHELL"/>
@@ -135,6 +136,7 @@
         <meta-data android:name="google_analytics_adid_collection_enabled" android:value="false"/>
         <meta-data android:name="google_analytics_ssaid_collection_enabled" android:value="false"/>
         <meta-data android:name="miui.screenInnerOrientation" android:value="unspecified"/>
+        <meta-data android:name="com.xiaomi.mirror.relay_recents" android:value="true"/>
         <activity android:clearTaskOnLaunch="true" android:configChanges="keyboard|keyboardHidden|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:excludeFromRecents="true" android:launchMode="singleTask" android:name="com.miui.home.launcher.Launcher" android:resizeableActivity="true" android:resumeWhilePausing="true" android:screenOrientation="portrait" android:stateNotNeeded="true" android:taskAffinity="" android:theme="@style/LauncherTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

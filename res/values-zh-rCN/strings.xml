@@ -374,6 +374,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">zW T</string>
     <string name="fmt_weekday_timezone">zW</string>
+    <string name="fold_pair_install_shortcut_long_click">长按图标支持创建快捷方式</string>
+    <string name="fold_pair_installed_shortcut_launcher">桌面已创建该快捷方式</string>
     <string name="folder_name">文件夹</string>
     <string name="frame_load_failed">相框格式错误，加载失败。</string>
     <string name="free_style_apps_title">选择应用程序</string>
@@ -657,6 +659,7 @@
     <string name="night">晚上</string>
     <string name="no_detail_page">没有详情页</string>
     <string name="no_space_toast">空间不足</string>
+    <string name="no_space_toast_fold">此半屏空间不足</string>
     <string name="no_space_toast_when_click_widget">当前页面空间不足，拖动可添加到其他页面</string>
     <string name="noon">中午</string>
     <string name="normal_wallpaper">桌面壁纸</string>
@@ -679,6 +682,7 @@
     <string name="ota_layout_adjustment_content">升级新版本后桌面布局内外屏将保证一致，已为您同步外屏布局至内屏。</string>
     <string name="ota_layout_adjustment_title">桌面布局调整</string>
     <string name="out_of_space">此主屏幕上已没有空间。</string>
+    <string name="pair_icon_name">%1$s|%2$s</string>
     <string name="perfect_icons_switch_summary">重绘第三方应用图标，实现完美动画</string>
     <string name="perfect_icons_switch_title">完美图标</string>
     <string name="permdesc_install_shortcut">允许应用程序在没有用户介入的情况下添加快捷方式。</string>
@@ -757,6 +761,7 @@
     <string name="recents_title_security_scan">安全扫描</string>
     <string name="recents_tv_small_window_text">小窗应用</string>
     <string name="recents_worldcirculate_text">松手选择</string>
+    <string name="recnets_relay_device_info">来自%s</string>
     <string name="recnets_worldcirculate_button_text">小米妙享中心</string>
     <string name="recnets_worldcirculate_display_computer_info">正在\"%s\"上运行</string>
     <string name="recnets_worldcirculate_display_default_info">点击回到手机使用</string>
@@ -968,6 +973,7 @@
     <string name="uninstall_xspace_dialog_title_format">卸载双开\"%s\"</string>
     <string name="unknown_artist_name">未知艺术家</string>
     <string name="unnamed_folder_name">文件夹</string>
+    <string name="upgrade_remove_small_window_in_recents">最近任务小窗应用入口已移除，可通过全局侧边栏使用小窗功能</string>
     <string name="v7_preference_off">关闭</string>
     <string name="v7_preference_on">开启</string>
     <string name="wallpaper">壁纸</string>

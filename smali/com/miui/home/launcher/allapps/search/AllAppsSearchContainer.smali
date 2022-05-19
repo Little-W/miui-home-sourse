@@ -282,7 +282,7 @@
 .method protected getSearchAppId()I
     .locals 1
 
-    const v0, 0x7f0a0209
+    const v0, 0x7f0a020d
 
     return v0
 .end method
@@ -290,7 +290,7 @@
 .method protected getSearchCategoryId()I
     .locals 1
 
-    const v0, 0x7f0a0219
+    const v0, 0x7f0a021d
 
     return v0
 .end method
@@ -560,7 +560,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->mCategoryFragment:Lcom/miui/home/launcher/allapps/search/AppCategorySelectSearchFragment;
 
-    const v0, 0x7f0a0231
+    const v0, 0x7f0a0235
 
     .line 82
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->findViewById(I)Landroid/view/View;

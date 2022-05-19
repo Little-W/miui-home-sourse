@@ -309,19 +309,19 @@
 
 .field public static final notify_panel_notification_icon_bg:I = 0x7f080537
 
-.field public static final sliding_panel_visualization_bg:I = 0x7f08058d
+.field public static final sliding_panel_visualization_bg:I = 0x7f08058e
 
-.field public static final sliding_panel_visualization_dot_bar:I = 0x7f08058e
+.field public static final sliding_panel_visualization_dot_bar:I = 0x7f08058f
 
-.field public static final sliding_panel_visualization_shadow_dot_bar:I = 0x7f08058f
+.field public static final sliding_panel_visualization_shadow_dot_bar:I = 0x7f080590
 
-.field public static final tooltip_frame_dark:I = 0x7f0805a6
+.field public static final tooltip_frame_dark:I = 0x7f0805a7
 
-.field public static final tooltip_frame_light:I = 0x7f0805a7
+.field public static final tooltip_frame_light:I = 0x7f0805a8
 
-.field public static final word_photo_bg_dark:I = 0x7f0805c5
+.field public static final word_photo_bg_dark:I = 0x7f0805c6
 
-.field public static final word_photo_bg_light:I = 0x7f0805c6
+.field public static final word_photo_bg_light:I = 0x7f0805c7
 
 
 # direct methods

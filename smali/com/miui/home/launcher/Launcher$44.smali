@@ -36,7 +36,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 4339
+    .line 4330
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$44;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iput-object p2, p0, Lcom/miui/home/launcher/Launcher$44;->val$providerUri:Ljava/lang/String;
@@ -53,7 +53,7 @@
 .method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 4339
+    .line 4330
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Launcher$44;->doInBackground([Ljava/lang/Void;)Ljava/lang/String;
@@ -66,14 +66,14 @@
 .method protected varargs doInBackground([Ljava/lang/Void;)Ljava/lang/String;
     .locals 2
 
-    .line 4342
+    .line 4333
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$44;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$44;->val$providerUri:Ljava/lang/String;
 
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$44;->val$requestJson:Ljava/lang/String;
 
-    invoke-static {p1, v0, v1}, Lcom/miui/home/launcher/Launcher;->access$5600(Lcom/miui/home/launcher/Launcher;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0, v1}, Lcom/miui/home/launcher/Launcher;->access$5700(Lcom/miui/home/launcher/Launcher;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

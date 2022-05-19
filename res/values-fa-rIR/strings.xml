@@ -26,7 +26,7 @@
     <string name="activity_not_unlocked">پیش از باز کردن برنامه‌ها صبر کرده تا دستگاه شما به صورت کامل دوباره راه‌اندازی شود</string>
     <string name="add_custom_category">سفارشی</string>
     <string name="add_screen">افزودن نمایشگر</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">افزودن به صفحه اصلی</string>
     <string name="added_all_category">به همه برنامه‌ها با موفقیت افزوده شد</string>
     <string name="afternoon">بعد از ظهر</string>
     <string name="agree_button">پذیرفتن</string>
@@ -349,6 +349,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">برای افزودن به صفحه اصلی فشرده و نگه دارید</string>
+    <string name="fold_pair_installed_shortcut_launcher">این میان‌بر از پیش وجود دارد</string>
     <string name="folder_name">پوشه</string>
     <string name="frame_load_failed">نمی‌توان قاب را بارگذاری کرد</string>
     <string name="free_style_apps_title">انتخاب برنامه‌</string>
@@ -628,6 +630,7 @@
     <string name="night">شب</string>
     <string name="no_detail_page">صفحه بدون جزئیات</string>
     <string name="no_space_toast">فضای کافی وجود ندارد</string>
+    <string name="no_space_toast_fold">فضای کافی در اینجا وجود ندارد</string>
     <string name="no_space_toast_when_click_widget">در این صفحه فضای کافی وجود ندارد. این مورد را به یک صفحه دیگر بکشید.</string>
     <string name="noon">ظهر</string>
     <string name="normal_wallpaper">تصویر زمینه</string>
@@ -636,7 +639,7 @@
     <string name="notification_reset_title">آیکون‌ها با موفقیت مرتب شدند</string>
     <string name="one_key_call_title">تماس با یک ضربه</string>
     <string name="online_wallpaper">آنلاین</string>
-    <string name="open_pad_personal_assistant_settings">Home screen widgets</string>
+    <string name="open_pad_personal_assistant_settings">ابزارک‌های صفحه اصلی</string>
     <string name="open_personal_assistant_dialog_btn_cancel">لغو</string>
     <string name="open_personal_assistant_dialog_btn_confirm">خاموش کردن</string>
     <string name="open_personal_assistant_dialog_desc">پس از خاموش کردن قفسه برنامه دیگر نمی‌توانید ابزارک‌های قفسه برنامه را دیده و یا از آن‌ها استفاده کنید. نسخه‌های به‌روز شده نیز دیگر برای شما در دسترس نخواهند بود. در هر صورت خاموش شود؟</string>
@@ -648,7 +651,7 @@
     <string name="ota_layout_adjustment_content">چیدمان‌های صفحه اصلی درونی و بیرونی در نسخه جدید همگام‌سازی شده‌اند.</string>
     <string name="ota_layout_adjustment_title">چیدمان‌های صفحه اصلی</string>
     <string name="out_of_space">این صفحه اصلی دیگر فضا ندارد</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">ارائه انیمیشن‌ها در آیکون برنامه‌های سوم شخص</string>
     <string name="perfect_icons_switch_title">آیکون‌های انیمیشنی جهانی</string>
     <string name="permdesc_install_shortcut">به برنامه اجازه می‌دهد بدون دخالت کاربر میانبرها را اضافه کند.</string>

@@ -142,14 +142,14 @@
     const/4 p0, -0x1
 
     :goto_1
-    const v0, 0x7f100231
+    const v0, 0x7f100238
 
     packed-switch p0, :pswitch_data_0
 
     return v0
 
     :pswitch_0
-    const p0, 0x7f100233
+    const p0, 0x7f10023a
 
     return p0
 
@@ -157,7 +157,7 @@
     return v0
 
     :pswitch_2
-    const p0, 0x7f100232
+    const p0, 0x7f100239
 
     return p0
 

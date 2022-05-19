@@ -1694,13 +1694,13 @@
     if-nez p2, :cond_2
 
     .line 114
-    new-instance p1, Lcom/miui/home/recents/views/TaskStackViewStack;
+    new-instance p1, Lcom/miui/home/recents/views/TaskStackView;
 
     invoke-virtual {p0}, Lcom/miui/home/recents/views/RecentsView;->getContext()Landroid/content/Context;
 
     move-result-object p2
 
-    invoke-direct {p1, p2}, Lcom/miui/home/recents/views/TaskStackViewStack;-><init>(Landroid/content/Context;)V
+    invoke-direct {p1, p2}, Lcom/miui/home/recents/views/TaskStackView;-><init>(Landroid/content/Context;)V
 
     iput-object p1, p0, Lcom/miui/home/recents/views/RecentsView;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
 
@@ -2130,11 +2130,11 @@
     if-eqz v0, :cond_1
 
     .line 392
-    invoke-static {}, Lcom/miui/home/recents/ForegroundTaskInfo;->getInstance()Lcom/miui/home/recents/ForegroundTaskInfo;
+    invoke-static {}, Lcom/miui/home/recents/ForegroundTaskHelper;->getInstance()Lcom/miui/home/recents/ForegroundTaskHelper;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/miui/home/recents/ForegroundTaskInfo;->clearForegroundTasks()V
+    invoke-virtual {v0}, Lcom/miui/home/recents/ForegroundTaskHelper;->clearForegroundTasks()V
 
     :cond_1
     return-void
@@ -2266,7 +2266,7 @@
     goto :goto_0
 
     :cond_0
-    const p1, 0x7f10036c
+    const p1, 0x7f100374
 
     .line 159
     invoke-virtual {p0, p1}, Lcom/miui/home/recents/views/RecentsView;->showEmptyView(I)V

@@ -406,3 +406,32 @@
 
     return-void
 .end method
+
+.method protected shouldDisableRecent()Z
+    .locals 2
+
+    .line 124
+    iget-boolean v0, p0, Lcom/miui/home/launcher/widget/device/FoldMIUIWidgetDeviceAdapter;->mStopped:Z
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcom/miui/home/launcher/widget/device/FoldMIUIWidgetDeviceAdapter;->mTouchedView:Landroid/view/View;
+
+    if-eqz v0, :cond_0
+
+    iget v0, p0, Lcom/miui/home/launcher/widget/device/FoldMIUIWidgetDeviceAdapter;->mScreenSize:I
+
+    const/4 v1, 0x3
+
+    if-lt v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+.end method

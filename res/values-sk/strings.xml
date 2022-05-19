@@ -53,7 +53,7 @@
     <string name="activity_not_unlocked">Pred otvorením aplikácií počkajte, kým vaše zariadenie úplne dokončí reštartovanie</string>
     <string name="add_custom_category">Vlastné</string>
     <string name="add_screen">Pridať obrazovku</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">Pridať na Domovskú obrazovku</string>
     <string name="added_all_category">Všetky aplikácie úspešne pridané</string>
     <string name="afternoon">Popoludní</string>
     <string name="agree_button">Súhlasím</string>
@@ -379,6 +379,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">Stlačte a podržte pre pridanie na Domovskú obrazovku</string>
+    <string name="fold_pair_installed_shortcut_launcher">Tento odkaz už existuje</string>
     <string name="folder_name">Priečinok</string>
     <string name="frame_load_failed">Rámik nie je možné nahrať</string>
     <string name="free_style_apps_title">Vyberte aplikáciu</string>
@@ -658,6 +660,7 @@
     <string name="night">Večer</string>
     <string name="no_detail_page">Žiadne podrobnosti</string>
     <string name="no_space_toast">Nedostatok voľného miesta</string>
+    <string name="no_space_toast_fold">Nedostatok úložiska</string>
     <string name="no_space_toast_when_click_widget">Na tejto stránke nie je dostatok miesta. Skúste vložiť túto položku na inú stránku.</string>
     <string name="noon">Poludnie</string>
     <string name="normal_wallpaper">Tapeta</string>
@@ -679,7 +682,7 @@
     <string name="ota_layout_adjustment_content">V novej verzii boli synchronizované vnútorné a vonkajšie rozloženie Domovskej obrazovky.</string>
     <string name="ota_layout_adjustment_title">Rozloženia domovskej obrazovky</string>
     <string name="out_of_space">Žiadne miesto na Domovskej obrazovke</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">Vykresľovať animácie na ikonách aplikácií tretích strán</string>
     <string name="perfect_icons_switch_title">Animácie globálnych ikon</string>
     <string name="permdesc_install_shortcut">Povoľuje aplikácií pridávať odkazy bez zásahu užívateľa.</string>

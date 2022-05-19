@@ -28,7 +28,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 288
+    .line 289
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,14 +37,14 @@
 .method public static asDivLine()Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;
     .locals 2
 
-    .line 345
+    .line 346
     new-instance v0, Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;
 
     invoke-direct {v0}, Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;-><init>()V
 
     const/16 v1, 0x40
 
-    .line 346
+    .line 347
     iput v1, v0, Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;->viewType:I
 
     return-object v0
@@ -53,17 +53,17 @@
 .method public static asFolder(Lcom/miui/home/launcher/ItemInfo;)Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;
     .locals 2
 
-    .line 308
+    .line 309
     new-instance v0, Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;
 
     invoke-direct {v0}, Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;-><init>()V
 
     const/16 v1, 0x8
 
-    .line 309
+    .line 310
     iput v1, v0, Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;->viewType:I
 
-    .line 310
+    .line 311
     iput-object p0, v0, Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;->itemInfo:Lcom/miui/home/launcher/ItemInfo;
 
     return-object v0
@@ -72,20 +72,20 @@
 .method public static asOutline(Landroid/graphics/Bitmap;I)Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;
     .locals 2
 
-    .line 322
+    .line 323
     new-instance v0, Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;
 
     invoke-direct {v0}, Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;-><init>()V
 
     const/16 v1, 0x20
 
-    .line 323
+    .line 324
     iput v1, v0, Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;->viewType:I
 
-    .line 324
+    .line 325
     iput-object p0, v0, Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;->bitmap:Landroid/graphics/Bitmap;
 
-    .line 325
+    .line 326
     iput p1, v0, Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;->position:I
 
     return-object v0
@@ -94,17 +94,17 @@
 .method public static asProgress(Lcom/miui/home/launcher/ItemInfo;)Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;
     .locals 2
 
-    .line 315
+    .line 316
     new-instance v0, Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;
 
     invoke-direct {v0}, Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;-><init>()V
 
     const/16 v1, 0x10
 
-    .line 316
+    .line 317
     iput v1, v0, Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;->viewType:I
 
-    .line 317
+    .line 318
     iput-object p0, v0, Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;->itemInfo:Lcom/miui/home/launcher/ItemInfo;
 
     return-object v0
@@ -113,17 +113,17 @@
 .method public static asRecommend(Lcom/miui/home/launcher/ItemInfo;)Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;
     .locals 2
 
-    .line 351
+    .line 352
     new-instance v0, Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;
 
     invoke-direct {v0}, Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;-><init>()V
 
     const/16 v1, 0x80
 
-    .line 352
+    .line 353
     iput v1, v0, Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;->viewType:I
 
-    .line 353
+    .line 354
     iput-object p0, v0, Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;->itemInfo:Lcom/miui/home/launcher/ItemInfo;
 
     return-object v0
@@ -132,17 +132,17 @@
 .method public static asRecommendPair(Lcom/miui/home/launcher/ItemInfo;)Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;
     .locals 2
 
-    .line 358
+    .line 359
     new-instance v0, Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;
 
     invoke-direct {v0}, Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;-><init>()V
 
     const/16 v1, 0x100
 
-    .line 359
+    .line 360
     iput v1, v0, Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;->viewType:I
 
-    .line 360
+    .line 361
     iput-object p0, v0, Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;->itemInfo:Lcom/miui/home/launcher/ItemInfo;
 
     return-object v0
@@ -151,14 +151,14 @@
 .method public static asSearch()Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;
     .locals 2
 
-    .line 295
+    .line 296
     new-instance v0, Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;
 
     invoke-direct {v0}, Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;-><init>()V
 
     const/4 v1, 0x2
 
-    .line 296
+    .line 297
     iput v1, v0, Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;->viewType:I
 
     return-object v0
@@ -167,17 +167,17 @@
 .method public static asShortcut(Lcom/miui/home/launcher/ItemInfo;)Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;
     .locals 2
 
-    .line 301
+    .line 302
     new-instance v0, Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;
 
     invoke-direct {v0}, Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;-><init>()V
 
     const/4 v1, 0x4
 
-    .line 302
+    .line 303
     iput v1, v0, Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;->viewType:I
 
-    .line 303
+    .line 304
     iput-object p0, v0, Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;->itemInfo:Lcom/miui/home/launcher/ItemInfo;
 
     return-object v0
@@ -188,7 +188,7 @@
 .method public areContentsTheSame(Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;)Z
     .locals 2
 
-    .line 335
+    .line 336
     iget-object v0, p0, Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;->itemInfo:Lcom/miui/home/launcher/ItemInfo;
 
     const/4 v1, 0x0
@@ -199,7 +199,7 @@
 
     if-nez v0, :cond_1
 
-    .line 336
+    .line 337
     iget-object v0, p0, Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;->bitmap:Landroid/graphics/Bitmap;
 
     iget-object p1, p1, Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;->bitmap:Landroid/graphics/Bitmap;
@@ -211,7 +211,7 @@
     :cond_0
     return v1
 
-    .line 338
+    .line 339
     :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;->itemInfo:Lcom/miui/home/launcher/ItemInfo;
 
@@ -221,7 +221,7 @@
 
     if-eqz p1, :cond_2
 
-    .line 339
+    .line 340
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/ItemInfo;->areContentsTheSame(Lcom/miui/home/launcher/ItemInfo;)Z
 
     move-result p1
@@ -235,7 +235,7 @@
 .method public areItemsTheSame(Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;)Z
     .locals 2
 
-    .line 330
+    .line 331
     iget v0, p0, Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;->viewType:I
 
     iget v1, p1, Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;->viewType:I

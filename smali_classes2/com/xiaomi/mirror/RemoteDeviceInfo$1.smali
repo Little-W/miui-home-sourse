@@ -1,4 +1,4 @@
-.class Lcom/xiaomi/mirror/RemoteDeviceInfo$1;
+.class final Lcom/xiaomi/mirror/RemoteDeviceInfo$1;
 .super Ljava/lang/Object;
 
 # interfaces
@@ -11,7 +11,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x8
     name = null
 .end annotation
 
@@ -36,7 +36,7 @@
 
 
 # virtual methods
-.method public createFromParcel(Landroid/os/Parcel;)Lcom/xiaomi/mirror/RemoteDeviceInfo;
+.method public final createFromParcel(Landroid/os/Parcel;)Lcom/xiaomi/mirror/RemoteDeviceInfo;
     .locals 1
 
     new-instance v0, Lcom/xiaomi/mirror/RemoteDeviceInfo;
@@ -46,7 +46,7 @@
     return-object v0
 .end method
 
-.method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+.method public final bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
     invoke-virtual {p0, p1}, Lcom/xiaomi/mirror/RemoteDeviceInfo$1;->createFromParcel(Landroid/os/Parcel;)Lcom/xiaomi/mirror/RemoteDeviceInfo;
@@ -56,7 +56,7 @@
     return-object p1
 .end method
 
-.method public newArray(I)[Lcom/xiaomi/mirror/RemoteDeviceInfo;
+.method public final newArray(I)[Lcom/xiaomi/mirror/RemoteDeviceInfo;
     .locals 0
 
     new-array p1, p1, [Lcom/xiaomi/mirror/RemoteDeviceInfo;
@@ -64,7 +64,7 @@
     return-object p1
 .end method
 
-.method public bridge synthetic newArray(I)[Ljava/lang/Object;
+.method public final bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
     invoke-virtual {p0, p1}, Lcom/xiaomi/mirror/RemoteDeviceInfo$1;->newArray(I)[Lcom/xiaomi/mirror/RemoteDeviceInfo;

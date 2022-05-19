@@ -9,5 +9,5 @@
 .method public abstract onIconShow()V
 .end method
 
-.method public abstract onIconUpdate(Ljava/lang/String;Landroid/graphics/Bitmap;)V
+.method public abstract onIconUpdate(Ljava/lang/String;Landroid/graphics/Bitmap;Ljava/lang/String;Ljava/lang/String;)V
 .end method

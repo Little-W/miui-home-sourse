@@ -26,7 +26,7 @@
     <string name="activity_not_unlocked">Ilovalarni ochishdan oldin qurilmani to‘liq o‘chirib yoqilishini kuting</string>
     <string name="add_custom_category">Maxsus</string>
     <string name="add_screen">Ekran qo‘shish</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">Bosh ekranga qo‘shish</string>
     <string name="added_all_category">Barcha ilovalar muvaffaqiyatli qo‘shildi</string>
     <string name="afternoon">Kunduzi</string>
     <string name="agree_button">Rozi bo‘lish</string>
@@ -349,6 +349,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">Bosh ekranga qo‘shish uchun bosibg turing</string>
+    <string name="fold_pair_installed_shortcut_launcher">Ushbu yorliq allaqachon mavjud</string>
     <string name="folder_name">Papka</string>
     <string name="frame_load_failed">Ramkani yuklab bo‘lmadi</string>
     <string name="free_style_apps_title">Ilovani tanlang</string>
@@ -628,6 +630,7 @@
     <string name="night">Oqshom</string>
     <string name="no_detail_page">Ma’lumotlar sahifasi yo‘q</string>
     <string name="no_space_toast">Joy yetarli emas</string>
+    <string name="no_space_toast_fold">Joy yetarli emas</string>
     <string name="no_space_toast_when_click_widget">Ushbu sahifada joy yetarli emas. Ushbu ob‘ektni boshqa sahifaga ko‘chirib ko‘ring.</string>
     <string name="noon">Peshin</string>
     <string name="normal_wallpaper">Fon rasmi</string>
@@ -648,7 +651,7 @@
     <string name="ota_layout_adjustment_content">Bosh ekran ichki va tashqi ko‘rinishi yangi versiyada sinxronlandi.</string>
     <string name="ota_layout_adjustment_title">Bosh ekran tashqi ko‘rinishi</string>
     <string name="out_of_space">Bosh ekranda bo‘sh joy yo‘q</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">Uchinchi tomon ilovasi belgilarida animatsiyalarni namoyish etish</string>
     <string name="perfect_icons_switch_title">Global belgi animatsiyalari</string>
     <string name="permdesc_install_shortcut">Ilovaga yorliqlarni foydalanuvchi ishtirokisiz qo‘shishga ruxsat beradi.</string>

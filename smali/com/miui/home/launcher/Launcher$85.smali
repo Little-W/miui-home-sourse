@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 9739
+    .line 9772
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$85;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,14 +38,14 @@
 .method public onWidgetTouched(Landroid/view/MotionEvent;Landroid/view/View;)Z
     .locals 1
 
-    .line 9742
+    .line 9775
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$85;->this$0:Lcom/miui/home/launcher/Launcher;
 
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    invoke-static {p1, v0}, Lcom/miui/home/launcher/Launcher;->access$11002(Lcom/miui/home/launcher/Launcher;Ljava/lang/ref/WeakReference;)Ljava/lang/ref/WeakReference;
+    invoke-static {p1, v0}, Lcom/miui/home/launcher/Launcher;->access$11102(Lcom/miui/home/launcher/Launcher;Ljava/lang/ref/WeakReference;)Ljava/lang/ref/WeakReference;
 
     const/4 p1, 0x0
 

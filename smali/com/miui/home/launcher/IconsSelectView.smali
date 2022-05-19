@@ -51,7 +51,7 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/IconsSelectView;->mContainer:Landroid/view/View;
 
-    const p1, 0x7f0a029f
+    const p1, 0x7f0a02a4
 
     .line 84
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/IconsSelectView;->findViewById(I)Landroid/view/View;
@@ -214,7 +214,7 @@
     return-void
 
     :cond_0
-    const v0, 0x7f0a023f
+    const v0, 0x7f0a0243
 
     if-eqz p2, :cond_1
 

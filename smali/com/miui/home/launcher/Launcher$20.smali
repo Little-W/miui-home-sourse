@@ -24,7 +24,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/ItemInfo;JJIIZLjava/lang/Runnable;Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 3423
+    .line 3448
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$20;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iput-object p11, p0, Lcom/miui/home/launcher/Launcher$20;->val$action:Ljava/lang/Runnable;
@@ -39,12 +39,12 @@
 .method public run()V
     .locals 1
 
-    .line 3426
+    .line 3451
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$20;->val$action:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_0
 
-    .line 3427
+    .line 3452
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
     :cond_0

@@ -431,7 +431,7 @@
 .method private resolveVersionAndCheckUpgrade(Landroid/content/Context;)V
     .locals 2
 
-    const v0, 0x1a0c2a0e
+    const v0, 0x1a0c2a65
 
     .line 222
     iput v0, p0, Lcom/miui/home/launcher/Application;->mCurrentVersion:I
@@ -781,11 +781,11 @@
 
     .line 171
     :goto_0
-    invoke-static {}, Lcom/miui/home/recents/ForegroundTaskInfo;->getInstance()Lcom/miui/home/recents/ForegroundTaskInfo;
+    invoke-static {}, Lcom/miui/home/recents/ForegroundTaskHelper;->getInstance()Lcom/miui/home/recents/ForegroundTaskHelper;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Lcom/miui/home/recents/ForegroundTaskInfo;->init(Landroid/content/Context;)V
+    invoke-virtual {v0, p0}, Lcom/miui/home/recents/ForegroundTaskHelper;->init(Landroid/content/Context;)V
 
     .line 172
     invoke-static {p0}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->init(Landroid/content/Context;)V

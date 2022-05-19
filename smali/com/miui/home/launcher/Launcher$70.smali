@@ -34,7 +34,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Ljava/lang/String;Z)V
     .locals 0
 
-    .line 7829
+    .line 7862
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$70;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iput-object p2, p0, Lcom/miui/home/launcher/Launcher$70;->val$packageName:Ljava/lang/String;
@@ -51,10 +51,10 @@
 .method public run()V
     .locals 4
 
-    .line 7832
+    .line 7865
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$70;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$3500(Lcom/miui/home/launcher/Launcher;)Ljava/util/HashSet;
+    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$3600(Lcom/miui/home/launcher/Launcher;)Ljava/util/HashSet;
 
     move-result-object v0
 
@@ -66,16 +66,16 @@
 
     const/4 v0, 0x0
 
-    .line 7833
+    .line 7866
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Launcher$70;->setResult(Ljava/lang/Object;)V
 
     return-void
 
-    .line 7836
+    .line 7869
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$70;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$3500(Lcom/miui/home/launcher/Launcher;)Ljava/util/HashSet;
+    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$3600(Lcom/miui/home/launcher/Launcher;)Ljava/util/HashSet;
 
     move-result-object v0
 
@@ -96,12 +96,12 @@
 
     check-cast v1, Lcom/miui/home/launcher/ShortcutInfo;
 
-    .line 7837
+    .line 7870
     invoke-virtual {v1}, Lcom/miui/home/launcher/ShortcutInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 7838
+    .line 7871
     iget-object v3, p0, Lcom/miui/home/launcher/Launcher$70;->val$packageName:Ljava/lang/String;
 
     invoke-static {v2, v3}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
@@ -118,7 +118,7 @@
 
     if-nez v2, :cond_1
 
-    .line 7840
+    .line 7873
     :cond_2
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/Launcher$70;->setResult(Ljava/lang/Object;)V
 

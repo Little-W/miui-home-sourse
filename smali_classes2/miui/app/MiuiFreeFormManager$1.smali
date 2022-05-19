@@ -26,7 +26,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 26
+    .line 27
     invoke-direct {p0}, Landroid/util/Singleton;-><init>()V
 
     return-void

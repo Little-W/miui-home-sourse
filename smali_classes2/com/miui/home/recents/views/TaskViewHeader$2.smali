@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/recents/views/TaskViewHeader;)V
     .locals 0
 
-    .line 268
+    .line 273
     iput-object p1, p0, Lcom/miui/home/recents/views/TaskViewHeader$2;->this$0:Lcom/miui/home/recents/views/TaskViewHeader;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 271
+    .line 276
     iget-object p1, p0, Lcom/miui/home/recents/views/TaskViewHeader$2;->this$0:Lcom/miui/home/recents/views/TaskViewHeader;
 
     iget-object p1, p1, Lcom/miui/home/recents/views/TaskViewHeader;->mDismissView:Landroid/widget/TextView;

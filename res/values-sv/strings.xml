@@ -53,7 +53,7 @@
     <string name="activity_not_unlocked">Vänta tills enheten är omstartad innan du öppnar appar</string>
     <string name="add_custom_category">Anpassad</string>
     <string name="add_screen">Lägg till skärm</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">Lägg till på Hemskärmen</string>
     <string name="added_all_category">Lade till alla appar med framgång</string>
     <string name="afternoon">Eftermiddag</string>
     <string name="agree_button">Godkänn</string>
@@ -379,6 +379,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">Tryck och håll för att lägga till på Hemskärmen</string>
+    <string name="fold_pair_installed_shortcut_launcher">Denna genväg finns redan</string>
     <string name="folder_name">Mapp</string>
     <string name="frame_load_failed">Kan inte läsa in ram</string>
     <string name="free_style_apps_title">Välj app</string>
@@ -658,6 +660,7 @@
     <string name="night">Kväll</string>
     <string name="no_detail_page">Ingen detaljsida</string>
     <string name="no_space_toast">Inte tillräckligt med utrymme</string>
+    <string name="no_space_toast_fold">Inte tillräckligt med utrymme här</string>
     <string name="no_space_toast_when_click_widget">Inte tillräckligt med utrymme på den här sidan. Försök att dra detta objekt till en annan sida.</string>
     <string name="noon">Middagstid</string>
     <string name="normal_wallpaper">Bakgrund</string>
@@ -679,7 +682,7 @@
     <string name="ota_layout_adjustment_content">Inre och yttre utseenden för hemskärmen har synkroniserats i den nya versionen.</string>
     <string name="ota_layout_adjustment_title">Hemskärmens utseenden</string>
     <string name="out_of_space">Ingen mer plats på Hemskärmen</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">Rendera animeringar på tredjeparts-appikoner</string>
     <string name="perfect_icons_switch_title">Globala ikon-animeringar</string>
     <string name="permdesc_install_shortcut">Tillåt en app att lägga till genvägar utan att åtgärd från användaren.</string>

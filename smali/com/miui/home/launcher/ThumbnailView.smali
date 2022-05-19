@@ -149,7 +149,7 @@
     .line 124
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    const v1, 0x7f0a029f
+    const v1, 0x7f0a02a4
 
     .line 125
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;

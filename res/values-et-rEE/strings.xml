@@ -26,7 +26,7 @@
     <string name="activity_not_unlocked">Enne rakenduste avamist oodake, kuni seade on täielikult käivitunud</string>
     <string name="add_custom_category">Kohandatud</string>
     <string name="add_screen">Lisa ekraan</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">Lisa avakuvale</string>
     <string name="added_all_category">Edukalt kõik rakendused lisatud</string>
     <string name="afternoon">Pärastlõuna</string>
     <string name="agree_button">Nõustu</string>
@@ -349,6 +349,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">Avakuvale lisamiseks vajuta ja hoia</string>
+    <string name="fold_pair_installed_shortcut_launcher">See otsetee on juba olemas</string>
     <string name="folder_name">Kaust</string>
     <string name="frame_load_failed">Raami ei saa laadida</string>
     <string name="free_style_apps_title">Valige rakendus</string>
@@ -628,6 +630,7 @@
     <string name="night">Õhtu</string>
     <string name="no_detail_page">Detailideta leht</string>
     <string name="no_space_toast">Ei ole piisavalt talletusruumi</string>
+    <string name="no_space_toast_fold">Siin pole piisavalt ruumi</string>
     <string name="no_space_toast_when_click_widget">Sellel lehel pole piisavalt ruumi. Proovige see üksus teisele lehele lohistada.</string>
     <string name="noon">Keskpäev</string>
     <string name="normal_wallpaper">Taustapildid</string>
@@ -648,7 +651,7 @@
     <string name="ota_layout_adjustment_content">Koduekraani sisemine ja välimine paigutus sünkrooniti uues versioonis.</string>
     <string name="ota_layout_adjustment_title">Koduekraani asetused</string>
     <string name="out_of_space">Koduekraanil pole rohkem ruumi</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">Renderda animatsioone kolmanda osapoole rakenduste ikoonidel</string>
     <string name="perfect_icons_switch_title">Globaalsed ikoonianimatsioonid</string>
     <string name="permdesc_install_shortcut">Lubab rakendusel lisada otseteid ilma kasutaja sekkumiseta.</string>

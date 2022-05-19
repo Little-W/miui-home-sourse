@@ -16,6 +16,8 @@
 
 .field public static sIsSupportPushAppEnterWorldCirculate:Z
 
+.field public static sIsSupportRelayInRecents:Z
+
 .field private static sNewGlobalAssistantApplicationInfo:Landroid/content/pm/ApplicationInfo;
 
 
@@ -53,6 +55,9 @@
     .line 39
     sput-boolean v0, Lcom/miui/home/launcher/ApplicationConfig;->sIsSupportPushAppEnterWorldCirculate:Z
 
+    .line 40
+    sput-boolean v0, Lcom/miui/home/launcher/ApplicationConfig;->sIsSupportRelayInRecents:Z
+
     return-void
 .end method
 
@@ -70,7 +75,7 @@
 .method private static canTaskPushEnterWorldCirculate()Z
     .locals 5
 
-    .line 125
+    .line 128
     :try_start_0
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
@@ -94,7 +99,7 @@
 
     const-string v1, "result"
 
-    .line 126
+    .line 129
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
     move-result v0
@@ -110,10 +115,10 @@
 
     const-string v2, "canTaskPushEnterWorldCirculate"
 
-    .line 128
+    .line 131
     invoke-static {v1, v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 130
+    .line 133
     sget-object v0, Lcom/miui/home/launcher/ApplicationConfig;->PUSH_WORLD_CIRCULATE_NAME:Landroid/content/ComponentName;
 
     invoke-static {v0}, Lcom/miui/home/launcher/ApplicationConfig;->getWorldCirculateMeta(Landroid/content/ComponentName;)Landroid/os/Bundle;
@@ -124,7 +129,7 @@
 
     const-string v1, "appcirculate_support_recentlist"
 
-    .line 132
+    .line 135
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
     move-result v0
@@ -140,7 +145,7 @@
 .method public static checkAndUpdateWorldCirculateView(Ljava/lang/String;)V
     .locals 2
 
-    .line 138
+    .line 141
     invoke-static {}, Lmiui/os/UserHandle;->myUserId()I
 
     move-result v0
@@ -155,12 +160,12 @@
 
     const-string v0, "no in main space"
 
-    .line 139
+    .line 142
     invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 142
+    .line 145
     :cond_0
     sget-boolean v0, Lcom/miui/home/launcher/common/Utilities;->IS_MIUI_13:Z
 
@@ -168,14 +173,14 @@
 
     const-string v0, "com.milink.service"
 
-    .line 143
+    .line 146
     invoke-static {p0, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result p0
 
     if-eqz p0, :cond_1
 
-    .line 144
+    .line 147
     new-instance p0, Lcom/miui/home/launcher/ApplicationConfig$1;
 
     invoke-direct {p0}, Lcom/miui/home/launcher/ApplicationConfig$1;-><init>()V
@@ -189,7 +194,7 @@
 .method private static getApplicationInfo(Landroid/content/Context;Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
     .locals 1
 
-    .line 58
+    .line 61
     invoke-static {p0}, Lcom/miui/home/library/compat/LauncherAppsCompat;->getInstance(Landroid/content/Context;)Lcom/miui/home/library/compat/LauncherAppsCompat;
 
     move-result-object p0
@@ -208,7 +213,7 @@
 .method private static getWorldCirculateMeta(Landroid/content/ComponentName;)Landroid/os/Bundle;
     .locals 5
 
-    .line 108
+    .line 111
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -217,7 +222,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 111
+    .line 114
     :try_start_0
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
@@ -242,7 +247,7 @@
 
     const-string v2, "ApplicationConfig_getWorldCirculateMeta"
 
-    .line 114
+    .line 117
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -264,7 +269,7 @@
     :goto_0
     if-eqz p0, :cond_0
 
-    .line 117
+    .line 120
     iget-object p0, p0, Landroid/content/pm/ActivityInfo;->metaData:Landroid/os/Bundle;
 
     return-object p0
@@ -274,18 +279,18 @@
 .end method
 
 .method public static init(Landroid/content/Context;)V
-    .locals 2
+    .locals 3
 
-    .line 41
+    .line 43
     sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
+
+    const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
     const-string v0, "com.mi.globalminusscreen"
 
-    const/4 v1, 0x0
-
-    .line 42
+    .line 44
     invoke-static {p0, v0, v1}, Lcom/miui/home/launcher/ApplicationConfig;->getApplicationInfo(Landroid/content/Context;Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
 
     move-result-object p0
@@ -297,10 +302,10 @@
     :cond_0
     const-string v0, "com.miui.newhome"
 
-    const/16 v1, 0x80
+    const/16 v2, 0x80
 
-    .line 44
-    invoke-static {p0, v0, v1}, Lcom/miui/home/launcher/ApplicationConfig;->getApplicationInfo(Landroid/content/Context;Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
+    .line 46
+    invoke-static {p0, v0, v2}, Lcom/miui/home/launcher/ApplicationConfig;->getApplicationInfo(Landroid/content/Context;Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
 
     move-result-object v0
 
@@ -308,33 +313,53 @@
 
     const-string v0, "com.miui.personalassistant"
 
-    .line 45
-    invoke-static {p0, v0, v1}, Lcom/miui/home/launcher/ApplicationConfig;->getApplicationInfo(Landroid/content/Context;Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
+    .line 47
+    invoke-static {p0, v0, v2}, Lcom/miui/home/launcher/ApplicationConfig;->getApplicationInfo(Landroid/content/Context;Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
 
     move-result-object p0
 
     sput-object p0, Lcom/miui/home/launcher/ApplicationConfig;->sAssistantApplicationInfo:Landroid/content/pm/ApplicationInfo;
 
-    .line 47
+    .line 49
     :goto_0
     sget p0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v0, 0x1d
 
+    const/4 v2, 0x1
+
     if-lt p0, v0, :cond_1
 
-    .line 48
+    .line 50
     sget-boolean p0, Lcom/miui/home/launcher/common/Utilities;->ATLEAST_MIUI_12_5:Z
 
-    xor-int/lit8 p0, p0, 0x1
+    xor-int/2addr p0, v2
 
     sput-boolean p0, Lcom/miui/home/launcher/ApplicationConfig;->sIsProtectedDataAppAvailable:Z
 
     :cond_1
     const-string p0, "com.milink.service"
 
-    .line 50
+    .line 52
     invoke-static {p0}, Lcom/miui/home/launcher/ApplicationConfig;->checkAndUpdateWorldCirculateView(Ljava/lang/String;)V
+
+    .line 53
+    invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isPadDevice()Z
+
+    move-result p0
+
+    if-nez p0, :cond_2
+
+    invoke-static {}, Lcom/miui/home/launcher/ApplicationConfig;->isSupportRelayInRecents()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_2
+
+    move v1, v2
+
+    :cond_2
+    sput-boolean v1, Lcom/miui/home/launcher/ApplicationConfig;->sIsSupportRelayInRecents:Z
 
     return-void
 .end method
@@ -346,7 +371,7 @@
 
     const/16 v1, 0x80
 
-    .line 54
+    .line 57
     invoke-static {p0, v0, v1}, Lcom/miui/home/launcher/ApplicationConfig;->getApplicationInfo(Landroid/content/Context;Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
 
     move-result-object p0
@@ -359,7 +384,7 @@
 .method public static isAssistantInstalled()Z
     .locals 1
 
-    .line 83
+    .line 86
     sget-object v0, Lcom/miui/home/launcher/ApplicationConfig;->sAssistantApplicationInfo:Landroid/content/pm/ApplicationInfo;
 
     if-eqz v0, :cond_0
@@ -378,7 +403,7 @@
 .method public static isAssistantSupportOverlay()Z
     .locals 2
 
-    .line 87
+    .line 90
     sget-object v0, Lcom/miui/home/launcher/ApplicationConfig;->sAssistantApplicationInfo:Landroid/content/pm/ApplicationInfo;
 
     if-eqz v0, :cond_0
@@ -393,7 +418,7 @@
 
     const-string v1, "supportOverlay"
 
-    .line 89
+    .line 92
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
     move-result v0
@@ -414,7 +439,7 @@
 .method public static isFeedInstalled()Z
     .locals 1
 
-    .line 62
+    .line 65
     sget-object v0, Lcom/miui/home/launcher/ApplicationConfig;->sFeedApplicationInfo:Landroid/content/pm/ApplicationInfo;
 
     if-eqz v0, :cond_0
@@ -433,7 +458,7 @@
 .method public static isFeedModuleLoaded()Z
     .locals 2
 
-    .line 100
+    .line 103
     invoke-static {}, Lcom/miui/home/launcher/module/ModuleManagerCompat;->getInstance()Lcom/miui/home/launcher/module/ModuleManagerCompat;
 
     move-result-object v0
@@ -450,7 +475,7 @@
 .method public static isFeedSupport()Z
     .locals 1
 
-    .line 66
+    .line 69
     sget-object v0, Lcom/miui/home/launcher/ApplicationConfig;->sFeedApplicationInfo:Landroid/content/pm/ApplicationInfo;
 
     if-eqz v0, :cond_0
@@ -469,7 +494,7 @@
 .method public static isFeedSupportDecouple()Z
     .locals 2
 
-    .line 70
+    .line 73
     sget-object v0, Lcom/miui/home/launcher/ApplicationConfig;->sFeedApplicationInfo:Landroid/content/pm/ApplicationInfo;
 
     if-eqz v0, :cond_0
@@ -484,7 +509,7 @@
 
     const-string v1, "supportSimpleDecouple"
 
-    .line 72
+    .line 75
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
     move-result v0
@@ -511,7 +536,7 @@
 .method public static isFeedSupportOverlay()Z
     .locals 2
 
-    .line 77
+    .line 80
     sget-object v0, Lcom/miui/home/launcher/ApplicationConfig;->sFeedApplicationInfo:Landroid/content/pm/ApplicationInfo;
 
     if-eqz v0, :cond_0
@@ -526,7 +551,7 @@
 
     const-string v1, "supportOverlay"
 
-    .line 79
+    .line 82
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
     move-result v0
@@ -547,7 +572,7 @@
 .method public static isNewGlobalAssistantInstalled()Z
     .locals 1
 
-    .line 96
+    .line 99
     sget-object v0, Lcom/miui/home/launcher/ApplicationConfig;->sNewGlobalAssistantApplicationInfo:Landroid/content/pm/ApplicationInfo;
 
     if-eqz v0, :cond_0
@@ -566,8 +591,63 @@
 .method public static isProtectedDataAppAvailable()Z
     .locals 1
 
-    .line 104
+    .line 107
     sget-boolean v0, Lcom/miui/home/launcher/ApplicationConfig;->sIsProtectedDataAppAvailable:Z
 
     return v0
+.end method
+
+.method private static isSupportRelayInRecents()Z
+    .locals 3
+
+    .line 162
+    :try_start_0
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v0
+
+    const-string v1, "com.xiaomi.mirror"
+
+    const/16 v2, 0x80
+
+    .line 163
+    invoke-virtual {v0, v1, v2}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
+
+    move-result-object v0
+    :try_end_0
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    .line 165
+    invoke-virtual {v0}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
+
+    const/4 v0, 0x0
+
+    :goto_0
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    .line 168
+    iget-object v0, v0, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
+
+    if-eqz v0, :cond_0
+
+    const-string v2, "com.xiaomi.mirror.recent_relay_app"
+
+    .line 170
+    invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v1
+
+    :cond_0
+    return v1
 .end method

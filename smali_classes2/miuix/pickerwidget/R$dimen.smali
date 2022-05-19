@@ -275,18 +275,18 @@
 
 .field public static final notification_top_pad_large_text:I = 0x7f07039e
 
-.field public static final tooltip_corner_radius:I = 0x7f07045a
+.field public static final tooltip_corner_radius:I = 0x7f070463
 
-.field public static final tooltip_horizontal_padding:I = 0x7f07045b
+.field public static final tooltip_horizontal_padding:I = 0x7f070464
 
-.field public static final tooltip_margin:I = 0x7f07045c
+.field public static final tooltip_margin:I = 0x7f070465
 
-.field public static final tooltip_precise_anchor_extra_offset:I = 0x7f07045d
+.field public static final tooltip_precise_anchor_extra_offset:I = 0x7f070466
 
-.field public static final tooltip_precise_anchor_threshold:I = 0x7f07045e
+.field public static final tooltip_precise_anchor_threshold:I = 0x7f070467
 
-.field public static final tooltip_vertical_padding:I = 0x7f07045f
+.field public static final tooltip_vertical_padding:I = 0x7f070468
 
-.field public static final tooltip_y_offset_non_touch:I = 0x7f070460
+.field public static final tooltip_y_offset_non_touch:I = 0x7f070469
 
-.field public static final tooltip_y_offset_touch:I = 0x7f070461
+.field public static final tooltip_y_offset_touch:I = 0x7f07046a

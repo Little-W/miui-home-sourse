@@ -1909,25 +1909,27 @@
 
 .field public static final recent_tv_small_window_background:I = 0x7f080545
 
-.field public static final remove:I = 0x7f080559
+.field public static final recents_relay_background:I = 0x7f08054e
 
-.field public static final sample_footer_loading:I = 0x7f08055b
+.field public static final remove:I = 0x7f08055a
 
-.field public static final sliding_panel_visualization_bg:I = 0x7f08058d
+.field public static final sample_footer_loading:I = 0x7f08055c
 
-.field public static final sliding_panel_visualization_dot_bar:I = 0x7f08058e
+.field public static final sliding_panel_visualization_bg:I = 0x7f08058e
 
-.field public static final sliding_panel_visualization_shadow_dot_bar:I = 0x7f08058f
+.field public static final sliding_panel_visualization_dot_bar:I = 0x7f08058f
 
-.field public static final split:I = 0x7f080592
+.field public static final sliding_panel_visualization_shadow_dot_bar:I = 0x7f080590
 
-.field public static final tooltip_frame_dark:I = 0x7f0805a6
+.field public static final split:I = 0x7f080593
 
-.field public static final tooltip_frame_light:I = 0x7f0805a7
+.field public static final tooltip_frame_dark:I = 0x7f0805a7
 
-.field public static final word_photo_bg_dark:I = 0x7f0805c5
+.field public static final tooltip_frame_light:I = 0x7f0805a8
 
-.field public static final word_photo_bg_light:I = 0x7f0805c6
+.field public static final word_photo_bg_dark:I = 0x7f0805c6
+
+.field public static final word_photo_bg_light:I = 0x7f0805c7
 
 
 # direct methods

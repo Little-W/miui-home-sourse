@@ -53,7 +53,7 @@
     <string name="activity_not_unlocked">Az alkalmazások megnyitása előtt várjon, amíyg eszköze teljesen újrabootol</string>
     <string name="add_custom_category">Egyedi</string>
     <string name="add_screen">Képernyő hozzáadása</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">Hozzáadás a Kezdőképernyőhöz</string>
     <string name="added_all_category">Összes alkalmazás sikeresen hozzáadva</string>
     <string name="afternoon">Délután</string>
     <string name="agree_button">Elfogadom</string>
@@ -379,6 +379,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">Nyomja meg és tartsa lenyomva a Kezdőképernyőhöz való hozzáadáshoz</string>
+    <string name="fold_pair_installed_shortcut_launcher">Ez a parancsikon már létezik</string>
     <string name="folder_name">Mappa</string>
     <string name="frame_load_failed">Képkeret widget betöltése sikertelen!</string>
     <string name="free_style_apps_title">Válasszon alkalmazást</string>
@@ -658,6 +660,7 @@
     <string name="night">Este</string>
     <string name="no_detail_page">Nincs adatoldal</string>
     <string name="no_space_toast">Nincs elég szabad hely</string>
+    <string name="no_space_toast_fold">Itt nincs elég szabad hely</string>
     <string name="no_space_toast_when_click_widget">Nincs elég hely ezen az oldalon. Próbálja másik oldalra húzni ezt a tételt.</string>
     <string name="noon">Dél</string>
     <string name="normal_wallpaper">Háttérkép</string>
@@ -679,7 +682,7 @@
     <string name="ota_layout_adjustment_content">A belső és a külső kezdőképernyő elrendezése szinkronizálva van az új verzióban.</string>
     <string name="ota_layout_adjustment_title">Kezdőképernyő-elrendezések</string>
     <string name="out_of_space">Nincs több hely ezen a képernyőn.</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">Animációk megjelenítése harmadik felek alkalmazásikonjain</string>
     <string name="perfect_icons_switch_title">Globális ikonanimációk</string>
     <string name="permdesc_install_shortcut">Lehetővé teszi az alkalmazás számára a parancsikonok létrehozását a felhasználó beavatkozása nélkül.</string>

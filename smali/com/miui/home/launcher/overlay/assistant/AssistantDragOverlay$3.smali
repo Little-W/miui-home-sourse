@@ -24,7 +24,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;Ljava/lang/String;Lcom/miui/home/launcher/ItemInfo;)V
     .locals 0
 
-    .line 525
+    .line 528
     iput-object p1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay$3;->this$0:Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;
 
     iput-object p3, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay$3;->val$itemInfo:Lcom/miui/home/launcher/ItemInfo;
@@ -37,7 +37,7 @@
 .method public static synthetic lambda$onDragCompleted$0(Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay$3;Lcom/miui/home/launcher/DragObject;)V
     .locals 1
 
-    .line 534
+    .line 537
     iget-object v0, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay$3;->this$0:Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;
 
     invoke-static {v0, p1}, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->access$600(Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;Lcom/miui/home/launcher/DragObject;)V
@@ -50,12 +50,12 @@
 .method public onDragCompleted(Lcom/miui/home/launcher/DropTarget;Lcom/miui/home/launcher/DragObject;)V
     .locals 3
 
-    .line 528
+    .line 531
     invoke-virtual {p2}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object p1
 
-    .line 529
+    .line 532
     iget-object v0, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay$3;->val$itemInfo:Lcom/miui/home/launcher/ItemInfo;
 
     if-eq p1, v0, :cond_0
@@ -65,7 +65,7 @@
     :cond_0
     const-string v0, "AssistantDragOverlay"
 
-    .line 533
+    .line 536
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -86,7 +86,7 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 534
+    .line 537
     iget-object p1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay$3;->this$0:Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;
 
     invoke-static {p1}, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->access$400(Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;)Lcom/miui/home/launcher/DragLayer;

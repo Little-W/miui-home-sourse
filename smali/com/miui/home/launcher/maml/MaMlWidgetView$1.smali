@@ -26,7 +26,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/maml/MaMlWidgetView;Landroid/view/View;Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 196
+    .line 192
     iput-object p1, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView$1;->this$0:Lcom/miui/home/launcher/maml/MaMlWidgetView;
 
     iput-object p2, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView$1;->val$hostView:Landroid/view/View;
@@ -43,7 +43,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;Z)V
     .locals 0
 
-    .line 199
+    .line 195
     iget-object p1, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView$1;->val$hostView:Landroid/view/View;
 
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
@@ -54,18 +54,18 @@
 
     if-eqz p1, :cond_0
 
-    .line 201
+    .line 197
     iget-object p2, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView$1;->val$hostView:Landroid/view/View;
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    .line 203
+    .line 199
     :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView$1;->val$afterRunner:Ljava/lang/Runnable;
 
     if-eqz p1, :cond_1
 
-    .line 204
+    .line 200
     iget-object p2, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView$1;->this$0:Lcom/miui/home/launcher/maml/MaMlWidgetView;
 
     invoke-virtual {p2, p1}, Lcom/miui/home/launcher/maml/MaMlWidgetView;->post(Ljava/lang/Runnable;)Z

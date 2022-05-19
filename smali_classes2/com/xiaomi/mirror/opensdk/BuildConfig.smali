@@ -16,9 +16,9 @@
 
 .field public static final LIBRARY_PACKAGE_NAME:Ljava/lang/String; = "com.xiaomi.mirror.opensdk"
 
-.field public static final VERSION_CODE:I = 0x21
+.field public static final VERSION_CODE:I = 0x23
 
-.field public static final VERSION_NAME:Ljava/lang/String; = "3.3"
+.field public static final VERSION_NAME:Ljava/lang/String; = "3.5.3"
 
 
 # direct methods

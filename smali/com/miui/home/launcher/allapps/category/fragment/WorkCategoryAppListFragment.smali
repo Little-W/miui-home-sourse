@@ -85,11 +85,11 @@
     .line 31
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/category/fragment/WorkCategoryAppListFragment;->mSpringContainer:Lcom/miui/home/launcher/view/SpringRelativeLayout;
 
-    const v0, 0x7f0a02f3
+    const v0, 0x7f0a02f8
 
     invoke-virtual {p2, v0}, Lcom/miui/home/launcher/view/SpringRelativeLayout;->addSpringView(I)V
 
-    const p2, 0x7f0a02f4
+    const p2, 0x7f0a02f9
 
     .line 32
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;

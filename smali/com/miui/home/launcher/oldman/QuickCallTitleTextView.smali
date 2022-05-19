@@ -27,7 +27,7 @@
 
     invoke-virtual {p0, v1, v0}, Lcom/miui/home/launcher/oldman/QuickCallTitleTextView;->setTextSize(IF)V
 
-    const v0, 0x7f10031e
+    const v0, 0x7f100326
 
     .line 18
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -41,7 +41,7 @@
     .line 19
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/oldman/QuickCallTitleTextView;->setGravity(I)V
 
-    const v0, 0x7f060365
+    const v0, 0x7f060366
 
     .line 20
     invoke-virtual {p1, v0}, Landroid/content/Context;->getColor(I)I

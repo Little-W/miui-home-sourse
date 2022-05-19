@@ -128,7 +128,7 @@
 .method public isScrolling()Z
     .locals 1
 
-    .line 121
+    .line 136
     iget-boolean v0, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantOverlayTransitionController;->mScrolling:Z
 
     return v0
@@ -137,7 +137,7 @@
 .method public isShow()Z
     .locals 2
 
-    .line 85
+    .line 100
     iget-object v0, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantOverlayTransitionController;->mCurrentAnimation:Lcom/miui/home/launcher/anim/AnimatorPlaybackController;
 
     if-nez v0, :cond_1
@@ -170,7 +170,7 @@
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 1
 
-    .line 117
+    .line 132
     iget-object v0, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantOverlayTransitionController;->mDeviceAdapter:Lcom/miui/home/launcher/overlay/assistant/AssistantDeviceAdapter;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/overlay/assistant/AssistantDeviceAdapter;->onConfigurationChanged(Landroid/content/res/Configuration;)V
@@ -179,7 +179,7 @@
 .end method
 
 .method public onScrollChanged(F)V
-    .locals 1
+    .locals 4
 
     .line 51
     iget-object v0, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantOverlayTransitionController;->mLauncher:Lcom/miui/home/launcher/Launcher;
@@ -193,43 +193,113 @@
     .line 52
     invoke-super {p0, p1}, Lcom/miui/home/launcher/overlay/OverlayTransitionController;->onScrollChanged(F)V
 
+    return-void
+
+    .line 57
     :cond_0
+    iget-object v0, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantOverlayTransitionController;->mLauncher:Lcom/miui/home/launcher/Launcher;
+
+    sget-object v1, Lcom/miui/home/launcher/LauncherState;->ASSISTANT_OVERLAY_STATE:Lcom/miui/home/launcher/overlay/assistant/AssistantOverlayState;
+
+    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Launcher;->isInState(Lcom/miui/home/launcher/LauncherState;)Z
+
+    move-result v0
+
+    const v1, 0x3dcccccd    # 0.1f
+
+    const/high16 v2, 0x3f000000    # 0.5f
+
+    const/high16 v3, 0x3f800000    # 1.0f
+
+    if-eqz v0, :cond_1
+
+    sub-float/2addr p1, v2
+
+    mul-float/2addr p1, v1
+
+    sub-float p1, v3, p1
+
+    .line 58
+    invoke-static {p1, v3}, Ljava/lang/Math;->min(FF)F
+
+    move-result p1
+
+    goto :goto_0
+
+    :cond_1
+    sub-float/2addr p1, v2
+
+    mul-float/2addr p1, v1
+
+    sub-float p1, v3, p1
+
+    const v0, 0x3f733333    # 0.95f
+
+    .line 60
+    invoke-static {p1, v0}, Ljava/lang/Math;->max(FF)F
+
+    move-result p1
+
+    .line 61
+    invoke-static {p1, v3}, Ljava/lang/Math;->min(FF)F
+
+    move-result p1
+
+    .line 63
+    :goto_0
+    iget-object v0, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantOverlayTransitionController;->mLauncher:Lcom/miui/home/launcher/Launcher;
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Lcom/miui/home/launcher/Workspace;->setScaleX(F)V
+
+    .line 64
+    iget-object v0, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantOverlayTransitionController;->mLauncher:Lcom/miui/home/launcher/Launcher;
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Lcom/miui/home/launcher/Workspace;->setScaleY(F)V
+
     return-void
 .end method
 
 .method public onScrollEnd(F)V
     .locals 3
 
-    .line 58
+    .line 69
     invoke-super {p0, p1}, Lcom/miui/home/launcher/overlay/OverlayTransitionController;->onScrollEnd(F)V
 
     const/4 v0, 0x0
 
-    .line 59
+    .line 70
     iput-boolean v0, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantOverlayTransitionController;->mScrolling:Z
 
     const-string v1, "Launcher.AssistantOverlayTransitionController"
 
     const-string v2, "onScrollEnd"
 
-    .line 60
+    .line 71
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/high16 v1, 0x3f800000    # 1.0f
 
-    .line 62
+    .line 73
     invoke-static {p1, v1}, Ljava/lang/Float;->compare(FF)I
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    .line 63
+    .line 74
     sget-object p1, Lcom/miui/home/launcher/LauncherState;->ASSISTANT_OVERLAY_STATE:Lcom/miui/home/launcher/overlay/assistant/AssistantOverlayState;
 
     goto :goto_0
 
-    .line 64
+    .line 75
     :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantOverlayTransitionController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -241,12 +311,12 @@
 
     if-eqz p1, :cond_1
 
-    .line 65
+    .line 76
     sget-object p1, Lcom/miui/home/launcher/LauncherState;->NORMAL:Lcom/miui/home/launcher/LauncherState;
 
     goto :goto_0
 
-    .line 67
+    .line 78
     :cond_1
     iget-object p1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantOverlayTransitionController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -258,13 +328,13 @@
 
     move-result-object p1
 
-    .line 69
+    .line 80
     :goto_0
     sget-object v1, Lcom/miui/home/launcher/LauncherState;->OVERVIEW:Lcom/miui/home/recents/OverviewState;
 
     if-eq p1, v1, :cond_2
 
-    .line 70
+    .line 81
     iget-object v1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantOverlayTransitionController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/Launcher;->getStateManager()Lcom/miui/home/launcher/LauncherStateManager;
@@ -275,7 +345,7 @@
 
     goto :goto_1
 
-    .line 72
+    .line 83
     :cond_2
     iget-object p1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantOverlayTransitionController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -313,7 +383,7 @@
 .method public reset()V
     .locals 3
 
-    .line 78
+    .line 89
     iget-object v0, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantOverlayTransitionController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     sget-object v1, Lcom/miui/home/launcher/LauncherState;->ASSISTANT_OVERLAY_STATE:Lcom/miui/home/launcher/overlay/assistant/AssistantOverlayState;
@@ -324,7 +394,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 79
+    .line 90
     iget-object v0, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantOverlayTransitionController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getStateManager()Lcom/miui/home/launcher/LauncherStateManager;
@@ -337,21 +407,51 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/miui/home/launcher/LauncherStateManager;->goToState(Lcom/miui/home/launcher/LauncherState;Z)V
 
+    .line 92
     :cond_0
+    iget-object v0, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantOverlayTransitionController;->mLauncher:Lcom/miui/home/launcher/Launcher;
+
+    invoke-static {v0}, Lcom/miui/home/launcher/overlay/assistant/AssistantDeviceAdapter;->inOverlapMode(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 93
+    iget-object v0, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantOverlayTransitionController;->mLauncher:Lcom/miui/home/launcher/Launcher;
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
+
+    move-result-object v0
+
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Workspace;->setScaleX(F)V
+
+    .line 94
+    iget-object v0, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantOverlayTransitionController;->mLauncher:Lcom/miui/home/launcher/Launcher;
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Workspace;->setScaleY(F)V
+
+    :cond_1
     return-void
 .end method
 
 .method public setState(Lcom/miui/home/launcher/LauncherState;)V
     .locals 2
 
-    .line 90
+    .line 105
     iget-object v0, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantOverlayTransitionController;->mLauncherOverlay:Lcom/miui/home/launcher/overlay/LauncherOverlay;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 93
+    .line 108
     :cond_0
     sget-object v0, Lcom/miui/home/launcher/LauncherState;->ASSISTANT_OVERLAY_STATE:Lcom/miui/home/launcher/overlay/assistant/AssistantOverlayState;
 
@@ -359,14 +459,14 @@
 
     if-eq p1, v0, :cond_1
 
-    .line 94
+    .line 109
     iget-object p1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantOverlayTransitionController;->mLauncherOverlay:Lcom/miui/home/launcher/overlay/LauncherOverlay;
 
     invoke-interface {p1, v1}, Lcom/miui/home/launcher/overlay/LauncherOverlay;->hideOverlay(Z)V
 
     goto :goto_0
 
-    .line 96
+    .line 111
     :cond_1
     iget-object p1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantOverlayTransitionController;->mLauncherOverlay:Lcom/miui/home/launcher/overlay/LauncherOverlay;
 
@@ -379,14 +479,14 @@
 .method public setStateWithAnimation(Lcom/miui/home/launcher/LauncherState;Lcom/miui/home/launcher/anim/AnimatorSetBuilder;Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;)V
     .locals 0
 
-    .line 102
+    .line 117
     iget-boolean p2, p3, Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;->userControlled:Z
 
     if-eqz p2, :cond_0
 
     return-void
 
-    .line 105
+    .line 120
     :cond_0
     iget-object p2, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantOverlayTransitionController;->mLauncherOverlay:Lcom/miui/home/launcher/overlay/LauncherOverlay;
 
@@ -394,7 +494,7 @@
 
     return-void
 
-    .line 108
+    .line 123
     :cond_1
     sget-object p2, Lcom/miui/home/launcher/LauncherState;->ASSISTANT_OVERLAY_STATE:Lcom/miui/home/launcher/overlay/assistant/AssistantOverlayState;
 
@@ -402,14 +502,14 @@
 
     if-eq p1, p2, :cond_2
 
-    .line 109
+    .line 124
     iget-object p1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantOverlayTransitionController;->mLauncherOverlay:Lcom/miui/home/launcher/overlay/LauncherOverlay;
 
     invoke-interface {p1, p3}, Lcom/miui/home/launcher/overlay/LauncherOverlay;->hideOverlay(Z)V
 
     goto :goto_0
 
-    .line 111
+    .line 126
     :cond_2
     iget-object p1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantOverlayTransitionController;->mLauncherOverlay:Lcom/miui/home/launcher/overlay/LauncherOverlay;
 

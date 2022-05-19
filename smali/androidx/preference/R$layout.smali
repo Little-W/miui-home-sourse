@@ -121,10 +121,10 @@
 
 .field public static final preference_widget_switch_compat:I = 0x7f0d0114
 
-.field public static final select_dialog_item_material:I = 0x7f0d0126
+.field public static final select_dialog_item_material:I = 0x7f0d0127
 
-.field public static final select_dialog_multichoice_material:I = 0x7f0d0127
+.field public static final select_dialog_multichoice_material:I = 0x7f0d0128
 
-.field public static final select_dialog_singlechoice_material:I = 0x7f0d0128
+.field public static final select_dialog_singlechoice_material:I = 0x7f0d0129
 
-.field public static final support_simple_spinner_dropdown_item:I = 0x7f0d0134
+.field public static final support_simple_spinner_dropdown_item:I = 0x7f0d0135

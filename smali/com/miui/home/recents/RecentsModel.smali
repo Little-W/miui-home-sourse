@@ -66,7 +66,7 @@
     .line 58
     iput-boolean v1, v0, Lcom/miui/home/recents/RecentsModel;->mIgnoreTaskSnapshotChanged:Z
 
-    .line 167
+    .line 168
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
@@ -105,7 +105,7 @@
     .line 81
     iget-object v2, v0, Lcom/miui/home/recents/RecentsModel;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f06037b
+    const v3, 0x7f06037c
 
     .line 82
     invoke-virtual {v2, v3}, Landroid/content/Context;->getColor(I)I
@@ -115,7 +115,7 @@
     .line 83
     iget-object v3, v0, Lcom/miui/home/recents/RecentsModel;->mContext:Landroid/content/Context;
 
-    const v4, 0x7f06037c
+    const v4, 0x7f06037d
 
     .line 84
     invoke-virtual {v3, v4}, Landroid/content/Context;->getColor(I)I
@@ -287,7 +287,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 254
+    .line 255
     iget-object p1, p1, Landroid/app/ActivityManager$RunningTaskInfo;->baseActivity:Landroid/content/ComponentName;
 
     goto :goto_0
@@ -302,7 +302,7 @@
 .method private getRunningTask(II)Landroid/app/ActivityManager$RunningTaskInfo;
     .locals 8
 
-    .line 385
+    .line 386
     invoke-static {}, Lcom/android/systemui/shared/recents/utilities/Utilities;->atLeastAndroidR()Z
 
     move-result v0
@@ -313,7 +313,7 @@
 
     if-eqz v0, :cond_5
 
-    .line 386
+    .line 387
     invoke-static {}, Lcom/android/systemui/shared/recents/utilities/Utilities;->atLeastAndroidS()Z
 
     move-result v0
@@ -322,7 +322,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 389
+    .line 390
     invoke-static {}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->getInstance()Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
 
     move-result-object v4
@@ -333,7 +333,7 @@
 
     if-eqz v4, :cond_0
 
-    .line 390
+    .line 391
     invoke-interface {v4}, Ljava/util/List;->isEmpty()Z
 
     move-result v5
@@ -357,7 +357,7 @@
     :goto_0
     if-nez v5, :cond_2
 
-    .line 394
+    .line 395
     invoke-static {}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->getInstance()Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
 
     move-result-object v4
@@ -369,7 +369,7 @@
     :cond_2
     if-eqz v4, :cond_6
 
-    .line 396
+    .line 397
     invoke-interface {v4}, Ljava/util/List;->size()I
 
     move-result v6
@@ -386,7 +386,7 @@
 
     goto :goto_1
 
-    .line 399
+    .line 400
     :cond_3
     invoke-direct {p0, v4}, Lcom/miui/home/recents/RecentsModel;->getRunningTaskIgnoreSmallWindow(Ljava/util/List;)Z
 
@@ -398,12 +398,12 @@
 
     if-nez v5, :cond_6
 
-    .line 401
+    .line 402
     invoke-direct {p0, v4}, Lcom/miui/home/recents/RecentsModel;->removeInVisibleTask(Ljava/util/List;)V
 
     goto :goto_1
 
-    .line 405
+    .line 406
     :cond_4
     invoke-static {}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->getInstance()Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
 
@@ -413,7 +413,7 @@
 
     goto :goto_1
 
-    .line 412
+    .line 413
     :cond_5
     invoke-static {}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->getInstance()Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
 
@@ -423,17 +423,17 @@
 
     move-result-object v4
 
-    .line 414
+    .line 415
     :cond_6
     :goto_1
     invoke-virtual {p0, v4}, Lcom/miui/home/recents/RecentsModel;->removeOtherDisplayTask(Ljava/util/List;)V
 
-    .line 415
+    .line 416
     invoke-virtual {p0, v4}, Lcom/miui/home/recents/RecentsModel;->removePipTask(Ljava/util/List;)V
 
     if-eqz v4, :cond_8
 
-    .line 416
+    .line 417
     invoke-interface {v4}, Ljava/util/List;->isEmpty()Z
 
     move-result p1
@@ -445,7 +445,7 @@
     :cond_7
     const-string p1, "RecentsModel"
 
-    .line 419
+    .line 420
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -466,7 +466,7 @@
 
     invoke-static {p1, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 420
+    .line 421
     invoke-interface {v4, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p1
@@ -493,19 +493,19 @@
 
     if-eqz p1, :cond_1
 
-    .line 446
+    .line 447
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 447
+    .line 448
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
-    .line 448
+    .line 449
     :cond_0
     :goto_0
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
@@ -514,7 +514,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 449
+    .line 450
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -523,7 +523,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 451
+    .line 452
     invoke-static {}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->getInstance()Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
 
     move-result-object v1
@@ -534,7 +534,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 452
+    .line 453
     invoke-interface {p1}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0
@@ -554,7 +554,7 @@
         }
     .end annotation
 
-    .line 426
+    .line 427
     invoke-static {}, Lcom/miui/home/smallwindow/SmallWindowStateHelper;->getInstance()Lcom/miui/home/smallwindow/SmallWindowStateHelper;
 
     move-result-object v0
@@ -569,19 +569,19 @@
 
     if-eqz p1, :cond_1
 
-    .line 427
+    .line 428
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 428
+    .line 429
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
-    .line 429
+    .line 430
     :cond_0
     :goto_0
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
@@ -590,7 +590,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 430
+    .line 431
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -599,7 +599,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 431
+    .line 432
     invoke-static {}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->getInstance()Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
 
     move-result-object v2
@@ -610,7 +610,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 432
+    .line 433
     invoke-interface {p1}, Ljava/util/Iterator;->remove()V
 
     const/4 v1, 0x1
@@ -632,7 +632,7 @@
         }
     .end annotation
 
-    .line 441
+    .line 442
     invoke-static {}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->getInstance()Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
 
     move-result-object v0
@@ -643,7 +643,7 @@
 
     invoke-virtual {v0, p1, v1, v2}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->filterTasks(Ljava/util/List;II)V
 
-    .line 442
+    .line 443
     invoke-direct {p0, p1}, Lcom/miui/home/recents/RecentsModel;->removeSideMagicWindowTask(Ljava/util/List;)V
 
     return-void
@@ -652,19 +652,19 @@
 .method private isTaskInfoVisible(Landroid/app/ActivityManager$RunningTaskInfo;)Z
     .locals 3
 
-    .line 487
+    .line 488
     const-class v0, Landroid/app/TaskInfo;
 
     const-string v1, "isVisible"
 
     sget-object v2, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
 
-    .line 488
+    .line 489
     invoke-static {v2}, Lcom/miui/launcher/utils/ReflectUtils;->getSignature(Ljava/lang/Class;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 487
+    .line 488
     invoke-static {v0, p1, v1, v2}, Lcom/miui/launcher/utils/ReflectUtils;->getFieldValue(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -695,7 +695,7 @@
 
     const-string v0, "RecentsModel"
 
-    .line 325
+    .line 326
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -729,7 +729,7 @@
 
     const-string p2, "logTasks: tasks is null"
 
-    .line 327
+    .line 328
     invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
@@ -747,12 +747,12 @@
         }
     .end annotation
 
-    .line 476
+    .line 477
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
-    .line 477
+    .line 478
     :cond_0
     :goto_0
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
@@ -761,7 +761,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 478
+    .line 479
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -770,7 +770,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 479
+    .line 480
     invoke-direct {p0, v0}, Lcom/miui/home/recents/RecentsModel;->isTaskInfoVisible(Landroid/app/ActivityManager$RunningTaskInfo;)Z
 
     move-result v1
@@ -779,7 +779,7 @@
 
     const-string v1, "RecentsModel"
 
-    .line 480
+    .line 481
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -798,7 +798,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 481
+    .line 482
     invoke-interface {p1}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0
@@ -820,7 +820,7 @@
 
     if-eqz p1, :cond_2
 
-    .line 459
+    .line 460
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
@@ -829,7 +829,7 @@
 
     if-lt v0, v1, :cond_2
 
-    .line 460
+    .line 461
     invoke-static {}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->getInstance()Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
 
     move-result-object v0
@@ -844,13 +844,13 @@
 
     return-void
 
-    .line 464
+    .line 465
     :cond_0
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
-    .line 465
+    .line 466
     :cond_1
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -858,19 +858,19 @@
 
     if-eqz v1, :cond_2
 
-    .line 466
+    .line 467
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 467
+    .line 468
     iget v1, v1, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
 
     if-ne v1, v0, :cond_1
 
-    .line 468
+    .line 469
     invoke-interface {p1}, Ljava/util/Iterator;->remove()V
 
     return-void
@@ -882,7 +882,7 @@
 .method private restoreIgnoredSnapshot()V
     .locals 6
 
-    .line 188
+    .line 189
     iget-object v0, p0, Lcom/miui/home/recents/RecentsModel;->mIgnoredSnapshots:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -906,14 +906,14 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 189
+    .line 190
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v2
 
     new-instance v3, Lcom/miui/home/recents/messages/TaskSnapshotChangedEvent;
 
-    .line 190
+    .line 191
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v4
@@ -942,12 +942,12 @@
 
     invoke-direct {v3, v4, v5, v1}, Lcom/miui/home/recents/messages/TaskSnapshotChangedEvent;-><init>(ILandroid/graphics/Bitmap;Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;)V
 
-    .line 189
+    .line 190
     invoke-virtual {v2, v3}, Lorg/greenrobot/eventbus/EventBus;->post(Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 192
+    .line 193
     :cond_0
     iget-object v0, p0, Lcom/miui/home/recents/RecentsModel;->mIgnoredSnapshots:Ljava/util/Map;
 
@@ -972,12 +972,12 @@
 .method public getBackgroundLooper()Landroid/os/Looper;
     .locals 3
 
-    .line 212
+    .line 213
     iget-object v0, p0, Lcom/miui/home/recents/RecentsModel;->mHandlerThread:Landroid/os/HandlerThread;
 
     if-nez v0, :cond_0
 
-    .line 213
+    .line 214
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v1, "TaskStackChanged"
@@ -988,12 +988,12 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/RecentsModel;->mHandlerThread:Landroid/os/HandlerThread;
 
-    .line 215
+    .line 216
     iget-object v0, p0, Lcom/miui/home/recents/RecentsModel;->mHandlerThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 217
+    .line 218
     :cond_0
     iget-object v0, p0, Lcom/miui/home/recents/RecentsModel;->mHandlerThread:Landroid/os/HandlerThread;
 
@@ -1016,12 +1016,12 @@
 .method public getHandler()Landroid/os/Handler;
     .locals 4
 
-    .line 221
+    .line 222
     iget-object v0, p0, Lcom/miui/home/recents/RecentsModel;->mHandler:Landroid/os/Handler;
 
     if-nez v0, :cond_0
 
-    .line 222
+    .line 223
     new-instance v0, Landroid/os/Handler;
 
     invoke-virtual {p0}, Lcom/miui/home/recents/RecentsModel;->getBackgroundLooper()Landroid/os/Looper;
@@ -1038,7 +1038,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/RecentsModel;->mHandler:Landroid/os/Handler;
 
-    .line 224
+    .line 225
     :cond_0
     iget-object v0, p0, Lcom/miui/home/recents/RecentsModel;->mHandler:Landroid/os/Handler;
 
@@ -1052,24 +1052,24 @@
 
     const-string v1, "getRunningTask"
 
-    .line 258
+    .line 259
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 259
+    .line 260
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isInMultiWindowMode()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 260
+    .line 261
     invoke-virtual {p0}, Lcom/miui/home/recents/RecentsModel;->getTaskInfoIgnoreHomeAndSplit()Landroid/app/ActivityManager$RunningTaskInfo;
 
     move-result-object v0
 
     return-object v0
 
-    .line 262
+    .line 263
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/recents/RecentsModel;->getTaskInfoIgnoreHomeAndFreeform()Landroid/app/ActivityManager$RunningTaskInfo;
 
@@ -1085,10 +1085,10 @@
 
     const-string v1, "getRunningTaskContainHome"
 
-    .line 266
+    .line 267
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 268
+    .line 269
     invoke-static {}, Lcom/miui/home/smallwindow/SmallWindowStateHelper;->getInstance()Lcom/miui/home/smallwindow/SmallWindowStateHelper;
 
     move-result-object v0
@@ -1114,7 +1114,7 @@
 
     goto :goto_1
 
-    .line 269
+    .line 270
     :cond_1
     :goto_0
     invoke-static {}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->getInstance()Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
@@ -1130,14 +1130,14 @@
     :goto_1
     if-eqz v0, :cond_2
 
-    .line 271
+    .line 272
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
-    .line 272
+    .line 273
     :cond_2
     invoke-static {}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->getInstance()Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
 
@@ -1152,29 +1152,29 @@
     :cond_3
     const-string v2, "type_all"
 
-    .line 274
+    .line 275
     invoke-direct {p0, v0, v2}, Lcom/miui/home/recents/RecentsModel;->logTasks(Ljava/util/List;Ljava/lang/String;)V
 
-    .line 276
+    .line 277
     invoke-direct {p0, v0}, Lcom/miui/home/recents/RecentsModel;->getRunningTaskIgnoreSplitPrimary(Ljava/util/List;)V
 
-    .line 277
+    .line 278
     invoke-direct {p0, v0}, Lcom/miui/home/recents/RecentsModel;->getRunningTaskIgnoreSmallWindow(Ljava/util/List;)Z
 
     const-string v2, "type_ignore_split_and_freefrom"
 
-    .line 278
+    .line 279
     invoke-direct {p0, v0, v2}, Lcom/miui/home/recents/RecentsModel;->logTasks(Ljava/util/List;Ljava/lang/String;)V
 
-    .line 279
+    .line 280
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/RecentsModel;->removeOtherDisplayTask(Ljava/util/List;)V
 
-    .line 280
+    .line 281
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/RecentsModel;->removePipTask(Ljava/util/List;)V
 
     if-eqz v0, :cond_5
 
-    .line 281
+    .line 282
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
     move-result v2
@@ -1186,7 +1186,7 @@
     :cond_4
     const/4 v1, 0x0
 
-    .line 285
+    .line 286
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -1201,14 +1201,14 @@
 
     const-string v2, "getRunningTaskContainHome task is null or empty"
 
-    .line 282
+    .line 283
     invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v1
 .end method
 
 .method public getRunningTaskId()I
-    .locals 1
+    .locals 2
 
     .line 163
     invoke-virtual {p0}, Lcom/miui/home/recents/RecentsModel;->getRunningTask()Landroid/app/ActivityManager$RunningTaskInfo;
@@ -1218,7 +1218,14 @@
     if-eqz v0, :cond_0
 
     .line 164
-    iget v0, v0, Landroid/app/ActivityManager$RunningTaskInfo;->id:I
+    invoke-static {}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->getInstance()Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
+
+    move-result-object v1
+
+    .line 165
+    invoke-virtual {v1, v0}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->getTaskId(Landroid/app/ActivityManager$RunningTaskInfo;)I
+
+    move-result v0
 
     goto :goto_0
 
@@ -1346,14 +1353,14 @@
 
     const/4 v1, 0x5
 
-    .line 353
+    .line 354
     invoke-direct {p0, v0, v1}, Lcom/miui/home/recents/RecentsModel;->getRunningTask(II)Landroid/app/ActivityManager$RunningTaskInfo;
 
     move-result-object v0
 
     const-string v1, "RecentsModel"
 
-    .line 355
+    .line 356
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1384,14 +1391,14 @@
 
     const/4 v1, 0x5
 
-    .line 339
+    .line 340
     invoke-direct {p0, v0, v1}, Lcom/miui/home/recents/RecentsModel;->getRunningTask(II)Landroid/app/ActivityManager$RunningTaskInfo;
 
     move-result-object v0
 
     const-string v1, "RecentsModel"
 
-    .line 341
+    .line 342
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1422,14 +1429,14 @@
 
     const/4 v1, 0x3
 
-    .line 332
+    .line 333
     invoke-direct {p0, v0, v1}, Lcom/miui/home/recents/RecentsModel;->getRunningTask(II)Landroid/app/ActivityManager$RunningTaskInfo;
 
     move-result-object v0
 
     const-string v1, "RecentsModel"
 
-    .line 334
+    .line 335
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1478,10 +1485,10 @@
 
     const-string v1, "getVisibleTaskIgnoreHome"
 
-    .line 307
+    .line 308
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 309
+    .line 310
     invoke-static {}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->getInstance()Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
 
     move-result-object v0
@@ -1496,7 +1503,7 @@
 
     if-eqz v0, :cond_3
 
-    .line 310
+    .line 311
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
     move-result v2
@@ -1505,19 +1512,19 @@
 
     goto :goto_1
 
-    .line 314
+    .line 315
     :cond_0
     invoke-direct {p0, v0}, Lcom/miui/home/recents/RecentsModel;->getRunningTaskIgnoreSplitPrimary(Ljava/util/List;)V
 
-    .line 315
+    .line 316
     invoke-direct {p0, v0}, Lcom/miui/home/recents/RecentsModel;->getRunningTaskIgnoreSmallWindow(Ljava/util/List;)Z
 
-    .line 316
+    .line 317
     invoke-direct {p0, v0}, Lcom/miui/home/recents/RecentsModel;->getRunningTaskIgnoreHome(Ljava/util/List;)V
 
     if-eqz v0, :cond_2
 
-    .line 317
+    .line 318
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
     move-result v2
@@ -1529,7 +1536,7 @@
     :cond_1
     const/4 v1, 0x0
 
-    .line 320
+    .line 321
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -1550,7 +1557,7 @@
 .method public onTaskDisplayChanged()V
     .locals 0
 
-    .line 204
+    .line 205
     invoke-virtual {p0}, Lcom/miui/home/recents/RecentsModel;->clearRecentsTaskLoadPlan()V
 
     return-void
@@ -1559,7 +1566,7 @@
 .method public onTaskSnapshotChanged(ILcom/android/systemui/shared/recents/model/ThumbnailData;)V
     .locals 3
 
-    .line 171
+    .line 172
     invoke-virtual {p0}, Lcom/miui/home/recents/RecentsModel;->getTaskLoader()Lcom/android/systemui/shared/recents/model/RecentsTaskLoader;
 
     move-result-object v0
@@ -1570,12 +1577,12 @@
 
     invoke-virtual {v0, p1, v1}, Lcom/android/systemui/shared/recents/model/RecentsTaskLoader;->updateIfWindowModeModified(II)V
 
-    .line 172
+    .line 173
     iget-boolean v0, p0, Lcom/miui/home/recents/RecentsModel;->mIgnoreTaskSnapshotChanged:Z
 
     if-nez v0, :cond_0
 
-    .line 173
+    .line 174
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -1592,7 +1599,7 @@
 
     goto :goto_0
 
-    .line 176
+    .line 177
     :cond_0
     iget-object v0, p0, Lcom/miui/home/recents/RecentsModel;->mIgnoredSnapshots:Ljava/util/Map;
 
@@ -1613,10 +1620,10 @@
 
     const-string v1, "onTaskStackChangedBackground"
 
-    .line 197
+    .line 198
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 198
+    .line 199
     invoke-virtual {p0}, Lcom/miui/home/recents/RecentsModel;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -1625,7 +1632,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 199
+    .line 200
     invoke-virtual {p0}, Lcom/miui/home/recents/RecentsModel;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -1705,19 +1712,19 @@
 
     if-eqz p1, :cond_1
 
-    .line 360
+    .line 361
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 361
+    .line 362
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
-    .line 362
+    .line 363
     :cond_0
     :goto_0
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
@@ -1726,14 +1733,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 363
+    .line 364
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 364
+    .line 365
     iget-object v1, p0, Lcom/miui/home/recents/RecentsModel;->mDisplay:Landroid/view/Display;
 
     invoke-virtual {v1}, Landroid/view/Display;->getDisplayId()I
@@ -1750,7 +1757,7 @@
 
     if-eq v1, v0, :cond_0
 
-    .line 365
+    .line 366
     invoke-interface {p1}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0
@@ -1772,19 +1779,19 @@
 
     if-eqz p1, :cond_1
 
-    .line 372
+    .line 373
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 373
+    .line 374
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
-    .line 374
+    .line 375
     :cond_0
     :goto_0
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
@@ -1793,14 +1800,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 375
+    .line 376
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 376
+    .line 377
     invoke-static {}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->getInstance()Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
 
     move-result-object v1
@@ -1811,7 +1818,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 377
+    .line 378
     invoke-interface {p1}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0
@@ -1823,15 +1830,15 @@
 .method public setIgnoreTaskSnapshotChanged(Z)V
     .locals 0
 
-    .line 181
+    .line 182
     iput-boolean p1, p0, Lcom/miui/home/recents/RecentsModel;->mIgnoreTaskSnapshotChanged:Z
 
-    .line 182
+    .line 183
     iget-boolean p1, p0, Lcom/miui/home/recents/RecentsModel;->mIgnoreTaskSnapshotChanged:Z
 
     if-nez p1, :cond_0
 
-    .line 183
+    .line 184
     invoke-direct {p0}, Lcom/miui/home/recents/RecentsModel;->restoreIgnoredSnapshot()V
 
     :cond_0

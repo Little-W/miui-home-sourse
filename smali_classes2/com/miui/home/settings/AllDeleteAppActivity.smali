@@ -738,7 +738,7 @@
 .method private final initView()V
     .locals 3
 
-    const v0, 0x7f0a02ca
+    const v0, 0x7f0a02cf
 
     .line 202
     invoke-virtual {p0, v0}, Lcom/miui/home/settings/AllDeleteAppActivity;->findViewById(I)Landroid/view/View;
@@ -1168,7 +1168,7 @@
     .line 46
     invoke-virtual {p0, p1}, Lcom/miui/home/settings/AllDeleteAppActivity;->setContentView(I)V
 
-    const p1, 0x7f100169
+    const p1, 0x7f10016e
 
     .line 47
     invoke-virtual {p0, p1}, Lcom/miui/home/settings/AllDeleteAppActivity;->setTitle(I)V

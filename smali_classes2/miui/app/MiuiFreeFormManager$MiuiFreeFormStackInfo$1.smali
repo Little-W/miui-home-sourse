@@ -30,7 +30,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 158
+    .line 330
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +41,7 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
-    .line 158
+    .line 330
     invoke-virtual {p0, p1}, Lmiui/app/MiuiFreeFormManager$MiuiFreeFormStackInfo$1;->createFromParcel(Landroid/os/Parcel;)Lmiui/app/MiuiFreeFormManager$MiuiFreeFormStackInfo;
 
     move-result-object p1
@@ -52,7 +52,7 @@
 .method public createFromParcel(Landroid/os/Parcel;)Lmiui/app/MiuiFreeFormManager$MiuiFreeFormStackInfo;
     .locals 2
 
-    .line 161
+    .line 333
     new-instance v0, Lmiui/app/MiuiFreeFormManager$MiuiFreeFormStackInfo;
 
     const/4 v1, 0x0
@@ -65,7 +65,7 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 158
+    .line 330
     invoke-virtual {p0, p1}, Lmiui/app/MiuiFreeFormManager$MiuiFreeFormStackInfo$1;->newArray(I)[Lmiui/app/MiuiFreeFormManager$MiuiFreeFormStackInfo;
 
     move-result-object p1
@@ -76,7 +76,7 @@
 .method public newArray(I)[Lmiui/app/MiuiFreeFormManager$MiuiFreeFormStackInfo;
     .locals 0
 
-    .line 166
+    .line 338
     new-array p1, p1, [Lmiui/app/MiuiFreeFormManager$MiuiFreeFormStackInfo;
 
     return-object p1

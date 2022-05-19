@@ -26,7 +26,7 @@
     <string name="activity_not_unlocked">অ্যাপ্স খোলার আগে দেখে নিন আপনার ডিভাইস ঠিকমত রিবুট হয়েছে কিনা</string>
     <string name="add_custom_category">নিজের মতো</string>
     <string name="add_screen">স্ক্রিন যোগ করুন</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">হোম স্ক্রিনে যোগ করুন</string>
     <string name="added_all_category">সব অ্যাপ সফলভাবে যোগ করা হয়েছে</string>
     <string name="afternoon">দুপুর</string>
     <string name="agree_button">রাজি হন</string>
@@ -349,6 +349,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">হোম স্ক্রিনে যোগ করতে প্রেস করে ধরে থাকুন</string>
+    <string name="fold_pair_installed_shortcut_launcher">এই শর্টকাটটি আগে থেকেই আছে।</string>
     <string name="folder_name">ফোল্ডার</string>
     <string name="frame_load_failed">ফ্রেম লোড করা যাবে না</string>
     <string name="free_style_apps_title">অ্যাপ বেছে নিন</string>
@@ -628,6 +630,7 @@
     <string name="night">সন্ধ্যা</string>
     <string name="no_detail_page">কোনো বিবরণ নেই</string>
     <string name="no_space_toast">পর্যাপ্ত জায়গা নেই</string>
+    <string name="no_space_toast_fold">এখানে পর্যাপ্ত জায়গা নেই</string>
     <string name="no_space_toast_when_click_widget">এই পৃষ্ঠাতে পর্যাপ্ত জায়গা নেই।অন্য একটি পৃষ্ঠাতে টেনে নিয়ে যান।</string>
     <string name="noon">মধ্যাহ্ন</string>
     <string name="normal_wallpaper">ওয়ালপেপার</string>
@@ -648,7 +651,7 @@
     <string name="ota_layout_adjustment_content">ভেতরের ও বাইরের হোম স্ক্রিন লেআউট নতুন ভার্সনে সিঙ্ক করা হয়েছে</string>
     <string name="ota_layout_adjustment_title">হোম স্ক্রিন লেআউট</string>
     <string name="out_of_space">এই হোম স্ক্রিনে আর জায়গা নেই</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">তৃতীয় পক্ষের অ্যাপ আইকনে অ্যানিমেশান রেন্ডার করুন</string>
     <string name="perfect_icons_switch_title">গ্লোবাল আইকন অ্যানিমেশন</string>
     <string name="permdesc_install_shortcut">ব্যবহারকারীর হস্তক্ষেপ ছাড়া একটি অ্যাপকে শর্টকাট যোগ করতে দিন।</string>
@@ -725,7 +728,7 @@
     <string name="recents_title_security_scan">নিরাপত্তার স্ক্য়ান</string>
     <string name="recents_tv_small_window_text">ফ্লোটিং উইন্ডো</string>
     <string name="recents_worldcirculate_text">বেছে নিতে ছাড়ুন</string>
-    <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
+    <string name="recnets_worldcirculate_button_text">Mi স্মার্ট হাব</string>
     <string name="recnets_worldcirculate_display_computer_info">%s এ অ্যাপ চলছে।</string>
     <string name="recnets_worldcirculate_display_default_info">ফিরিয়ে আনতে এখানে ট্যাপ করুন।</string>
     <string name="recnets_worldcirculate_display_pad_info">%s এ অ্যাপ চলছে।</string>

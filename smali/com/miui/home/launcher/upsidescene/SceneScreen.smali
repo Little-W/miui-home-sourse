@@ -3216,7 +3216,7 @@
     .line 183
     invoke-super {p0}, Landroid/widget/FrameLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a0200
+    const v0, 0x7f0a0204
 
     .line 185
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->findViewById(I)Landroid/view/View;
@@ -3260,7 +3260,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mBackgroundScreen:Lcom/miui/home/launcher/upsidescene/FixedScreen;
 
-    const v0, 0x7f0a0208
+    const v0, 0x7f0a020c
 
     .line 189
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->findViewById(I)Landroid/view/View;
@@ -3951,7 +3951,7 @@
     .line 973
     iget-object v1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f10039c
+    const v2, 0x7f1003a5
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

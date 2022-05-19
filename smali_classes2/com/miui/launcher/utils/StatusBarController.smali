@@ -151,6 +151,30 @@
     return-void
 .end method
 
+.method public disableRecent(Z)V
+    .locals 3
+
+    .line 73
+    iget-object v0, p0, Lcom/miui/launcher/utils/StatusBarController;->mH:Lcom/miui/launcher/utils/StatusBarController$H;
+
+    const/high16 v1, 0x1000000
+
+    invoke-virtual {v0, v1}, Lcom/miui/launcher/utils/StatusBarController$H;->removeMessages(I)V
+
+    .line 74
+    iget-object v0, p0, Lcom/miui/launcher/utils/StatusBarController;->mH:Lcom/miui/launcher/utils/StatusBarController$H;
+
+    const/4 v2, 0x0
+
+    invoke-static {v0, v1, p1, v2}, Landroid/os/Message;->obtain(Landroid/os/Handler;III)Landroid/os/Message;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
+
+    return-void
+.end method
+
 .method public hideNavBarButton(Z)V
     .locals 3
 

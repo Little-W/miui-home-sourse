@@ -1093,6 +1093,9 @@
         <item name="android:contentInsetLeft">0.0dip</item>
         <item name="android:contentInsetRight">0.0dip</item>
     </style>
+    <style name="CustomWidgetPreferenceIcon" parent="@style/Widget.PreferenceIcon">
+        <item name="android:paddingEnd">@dimen/miuix_preference_item_padding_inner</item>
+    </style>
     <style name="DialogPanelStyle">
         <item name="android:layout_gravity">center</item>
         <item name="android:orientation">vertical</item>

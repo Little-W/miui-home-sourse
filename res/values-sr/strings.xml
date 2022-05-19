@@ -53,7 +53,7 @@
     <string name="activity_not_unlocked">Не отварајте апликације док се урђај потпуно не ресетује</string>
     <string name="add_custom_category">Прилагоди</string>
     <string name="add_screen">Додај екран</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">Додај на Почетни екран</string>
     <string name="added_all_category">Све апликације су додате</string>
     <string name="afternoon">Поподне</string>
     <string name="agree_button">Прихватам</string>
@@ -379,6 +379,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">Притисните и задржите да додате на Почетни екран</string>
+    <string name="fold_pair_installed_shortcut_launcher">Ова пречица већ постоји</string>
     <string name="folder_name">Фолдер</string>
     <string name="frame_load_failed">Оквир се не може учитати</string>
     <string name="free_style_apps_title">Изаберите апликацијy</string>
@@ -658,6 +660,7 @@
     <string name="night">Вече</string>
     <string name="no_detail_page">Нема детаља странице</string>
     <string name="no_space_toast">Нема довољно простора</string>
+    <string name="no_space_toast_fold">Овде нема довољно простора</string>
     <string name="no_space_toast_when_click_widget">Нема довољно простора на овој страници. Превуците ову ставку на другу сраницу.</string>
     <string name="noon">Подне</string>
     <string name="normal_wallpaper">Позадина</string>
@@ -679,7 +682,7 @@
     <string name="ota_layout_adjustment_content">Унутрашњи и спољни распоред Почетног екрана су синхронизовани у новој верзији.</string>
     <string name="ota_layout_adjustment_title">Распоред Почетног екрана</string>
     <string name="out_of_space">Нема више простора на овом Почетном екрану</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">Прикажи анимације на иконама апликација трећих страна</string>
     <string name="perfect_icons_switch_title">Анимације глобалних икона</string>
     <string name="permdesc_install_shortcut">Омогућава апликацији додавање пречица без интервенције корисника.</string>

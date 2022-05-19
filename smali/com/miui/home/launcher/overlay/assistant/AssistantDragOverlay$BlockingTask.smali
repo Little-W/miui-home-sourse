@@ -43,10 +43,10 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 813
+    .line 816
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 814
+    .line 817
     new-instance v0, Ljava/util/concurrent/ArrayBlockingQueue;
 
     const/4 v1, 0x1
@@ -74,7 +74,7 @@
         }
     .end annotation
 
-    .line 823
+    .line 826
     iget-object v0, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay$BlockingTask;->mRectQueue:Ljava/util/concurrent/ArrayBlockingQueue;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ArrayBlockingQueue;->take()Ljava/lang/Object;
@@ -92,7 +92,7 @@
         }
     .end annotation
 
-    .line 818
+    .line 821
     iget-object v0, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay$BlockingTask;->mRectQueue:Ljava/util/concurrent/ArrayBlockingQueue;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/ArrayBlockingQueue;->offer(Ljava/lang/Object;)Z

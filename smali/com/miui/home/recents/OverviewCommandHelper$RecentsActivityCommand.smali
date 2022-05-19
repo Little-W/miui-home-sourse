@@ -333,11 +333,11 @@
     if-eqz v0, :cond_1
 
     .line 127
-    invoke-static {}, Lcom/miui/home/recents/ForegroundTaskInfo;->getInstance()Lcom/miui/home/recents/ForegroundTaskInfo;
+    invoke-static {}, Lcom/miui/home/recents/ForegroundTaskHelper;->getInstance()Lcom/miui/home/recents/ForegroundTaskHelper;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/miui/home/recents/ForegroundTaskInfo;->saveForegroundSmallWinowsAndFullScreen()V
+    invoke-virtual {v0}, Lcom/miui/home/recents/ForegroundTaskHelper;->saveForegroundSmallWinowsAndFullScreen()V
 
     .line 129
     :cond_1

@@ -52,7 +52,7 @@
     .line 55
     iget-object p2, p0, Lcom/miui/home/launcher/view/DefaultRecyclerViewFastScroller;->mTrackPaint:Landroid/graphics/Paint;
 
-    const p3, 0x7f060033
+    const p3, 0x7f060034
 
     invoke-static {p1, p3}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
@@ -84,7 +84,7 @@
     .line 60
     iget-object p2, p0, Lcom/miui/home/launcher/view/DefaultRecyclerViewFastScroller;->mThumbPaint:Landroid/graphics/Paint;
 
-    const p3, 0x7f060031
+    const p3, 0x7f060032
 
     invoke-static {p1, p3}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 

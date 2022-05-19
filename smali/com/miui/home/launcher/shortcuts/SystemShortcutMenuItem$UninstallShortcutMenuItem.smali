@@ -18,15 +18,15 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 240
+    .line 264
     invoke-direct {p0}, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem;-><init>()V
 
-    .line 241
+    .line 265
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
 
-    const v1, 0x7f100196
+    const v1, 0x7f10019b
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Application;->getString(I)Ljava/lang/String;
 
@@ -34,12 +34,12 @@
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem$UninstallShortcutMenuItem;->setShortTitle(Ljava/lang/CharSequence;)V
 
-    .line 242
+    .line 266
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
 
-    const v1, 0x7f08058c
+    const v1, 0x7f08058d
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Application;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -53,7 +53,7 @@
 .method static synthetic lambda$getOnClickListener$0(Landroid/view/View;)V
     .locals 2
 
-    .line 253
+    .line 277
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object p0
@@ -62,7 +62,7 @@
 
     return-void
 
-    .line 256
+    .line 280
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/Launcher;->getShortcutMenuLayer()Lcom/miui/home/launcher/ShortcutMenuLayer;
 
@@ -72,15 +72,15 @@
 
     move-result-object v0
 
-    .line 257
+    .line 281
     instance-of v1, v0, Lcom/miui/home/launcher/ShortcutInfo;
 
     if-eqz v1, :cond_1
 
-    .line 258
+    .line 282
     invoke-virtual {p0}, Lcom/miui/home/launcher/Launcher;->hideShortcutMenuWithoutAnim()V
 
-    .line 259
+    .line 283
     move-object v1, v0
 
     check-cast v1, Lcom/miui/home/launcher/ShortcutInfo;
@@ -93,7 +93,7 @@
 
     const-string p0, "uninstall"
 
-    .line 260
+    .line 284
     invoke-static {v0, p0}, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem;->access$100(Lcom/miui/home/launcher/ItemInfo;Ljava/lang/String;)V
 
     :cond_1
@@ -105,7 +105,7 @@
 .method public getOnClickListener()Landroid/view/View$OnClickListener;
     .locals 1
 
-    .line 252
+    .line 276
     sget-object v0, Lcom/miui/home/launcher/shortcuts/-$$Lambda$SystemShortcutMenuItem$UninstallShortcutMenuItem$_xD9JwZUZJVrf2_qY8H-vSgjpdU;->INSTANCE:Lcom/miui/home/launcher/shortcuts/-$$Lambda$SystemShortcutMenuItem$UninstallShortcutMenuItem$_xD9JwZUZJVrf2_qY8H-vSgjpdU;
 
     return-object v0
@@ -114,7 +114,7 @@
 .method public isValid(Lcom/miui/home/launcher/ItemInfo;)Z
     .locals 1
 
-    .line 247
+    .line 271
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0

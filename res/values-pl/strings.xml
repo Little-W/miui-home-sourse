@@ -53,7 +53,7 @@
     <string name="activity_not_unlocked">Przed otwarciem aplikacji poczekaj, aż urządzenie w pełni się uruchomi ponownie</string>
     <string name="add_custom_category">Własne</string>
     <string name="add_screen">Dodaj ekran</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">Dodaj do Ekranu Głównego</string>
     <string name="added_all_category">Pomyślnie dodano wszystkie aplikacje</string>
     <string name="afternoon">Popołudnie</string>
     <string name="agree_button">Zgadzam się</string>
@@ -379,6 +379,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">Naciśnij i przytrzymaj, aby dodać do Ekranu głównego</string>
+    <string name="fold_pair_installed_shortcut_launcher">Ten skrót już istnieje</string>
     <string name="folder_name">Folder</string>
     <string name="frame_load_failed">Nie można wczytać ramki</string>
     <string name="free_style_apps_title">Wybierz aplikację</string>
@@ -658,6 +660,7 @@
     <string name="night">Wieczór</string>
     <string name="no_detail_page">Brak strony szczegółów</string>
     <string name="no_space_toast">Brak wystarczającej ilości miejsca</string>
+    <string name="no_space_toast_fold">Za mało miejsca</string>
     <string name="no_space_toast_when_click_widget">Niewystarczająca ilość miejsca na tej stronie. Spróbuj przeciągnąć element na inną stronę.</string>
     <string name="noon">Południe</string>
     <string name="normal_wallpaper">Tapeta</string>
@@ -667,7 +670,7 @@
     <string name="notification_reset_title">Pomyślnie zorganizowano ikony</string>
     <string name="one_key_call_title">Dotknij, aby wybrać numer</string>
     <string name="online_wallpaper">Online</string>
-    <string name="open_pad_personal_assistant_settings">Home screen widgets</string>
+    <string name="open_pad_personal_assistant_settings">Widżety Ekranu głównego</string>
     <string name="open_personal_assistant_dialog_btn_cancel">Anuluj</string>
     <string name="open_personal_assistant_dialog_btn_confirm">Wyłącz</string>
     <string name="open_personal_assistant_dialog_desc">Po wyłączeniu Panelu informacyjnego nie będziesz mógł zobaczyć bądź korzystać z jego widżetów. Zaktualizowane wersje także nie będą dla Ciebie dostępne. Wyłączyć mimo to?</string>
@@ -679,7 +682,7 @@
     <string name="ota_layout_adjustment_content">Wewnętrzny i zewnętrzny Układ Ekranu Głównego zostały zsynchronizowane w nowej wersji</string>
     <string name="ota_layout_adjustment_title">Układ Ekranu Głównego</string>
     <string name="out_of_space">Nie ma miejsca na tym Ekranie głównym</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">Renderuj animacje ikon aplikacji innych firm</string>
     <string name="perfect_icons_switch_title">Globalne animacje ikon</string>
     <string name="permdesc_install_shortcut">Zezwala aplikacji na dodawanie skrótów bez informowania użytkownika.</string>

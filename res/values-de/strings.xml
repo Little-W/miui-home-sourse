@@ -53,7 +53,7 @@
     <string name="activity_not_unlocked">Vor dem Ausführen von Apps warten, bis das Gerät vollständig neugestartet ist</string>
     <string name="add_custom_category">Benutzerdefiniert</string>
     <string name="add_screen">Zum Bildschirm hinzufügen</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">Zum Startbildschirm hinzufügen</string>
     <string name="added_all_category">Alle Apps erfolgreich hinzugefügt</string>
     <string name="afternoon">Nachmittag</string>
     <string name="agree_button">Zustimmen</string>
@@ -379,6 +379,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">Drücken und halten um zum Startbildschirm hinzuzufügen</string>
+    <string name="fold_pair_installed_shortcut_launcher">Diese Verknüpfung existiert bereits</string>
     <string name="folder_name">Ordner</string>
     <string name="frame_load_failed">Rahmen kann nicht geladen werden</string>
     <string name="free_style_apps_title">App auswählen</string>
@@ -658,6 +660,7 @@
     <string name="night">Abend</string>
     <string name="no_detail_page">Keine Detailseite</string>
     <string name="no_space_toast">Kein Platz mehr</string>
+    <string name="no_space_toast_fold">Kein Platz mehr</string>
     <string name="no_space_toast_when_click_widget">Nicht genug Platz auf dieser Seite. Versuche, dieses Element auf eine andere Seite zu ziehen.</string>
     <string name="noon">Mittag</string>
     <string name="normal_wallpaper">Hintergrundbild</string>
@@ -679,7 +682,7 @@
     <string name="ota_layout_adjustment_content">Die inneren und äußeren Startbildschirm-Layouts wurden in der neuen Version synchronisiert.</string>
     <string name="ota_layout_adjustment_title">Startbildschirm-Layouts</string>
     <string name="out_of_space">Nicht genügend Platz auf diesem Startbildschirm</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">Rendern von Animationen auf App-Symbolen von Drittanbietern</string>
     <string name="perfect_icons_switch_title">Globale Symbol-Animationen</string>
     <string name="permdesc_install_shortcut">Erlaubt einer App das Hinzufügen von Verknüpfungen ohne Benutzereingriff.</string>

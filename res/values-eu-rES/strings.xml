@@ -26,7 +26,7 @@
     <string name="activity_not_unlocked">Itxaron gailua guztiz berrabiarazita egon arte aplikazioak irekitzeko</string>
     <string name="add_custom_category">Pertsonalizatu</string>
     <string name="add_screen">Pantaila gehitu</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">Hasierako pantailara gehitu</string>
     <string name="added_all_category">Aplikazio guztiak arrakastaz gehituta</string>
     <string name="afternoon">Arratsaldea</string>
     <string name="agree_button">Ados</string>
@@ -349,6 +349,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">Sakatu eta mantendu Hasierako pantailara gehitzeko</string>
+    <string name="fold_pair_installed_shortcut_launcher">Lasterbide hau jadanik existitzen da</string>
     <string name="folder_name">Karpeta</string>
     <string name="frame_load_failed">Ezin da markoa kargatu</string>
     <string name="free_style_apps_title">Aplikazioa aukeratu</string>
@@ -628,6 +630,7 @@
     <string name="night">Eguzki-sarrera</string>
     <string name="no_detail_page">Xehetasunik gabeko orria</string>
     <string name="no_space_toast">Ez dago leku nahikorik</string>
+    <string name="no_space_toast_fold">Ez dago leku nahikorik hemen</string>
     <string name="no_space_toast_when_click_widget">Ez dago leku nahikorik orri honetan. Saiatu elementu hau orri ezberdin batera eramaten.</string>
     <string name="noon">Eguerdia</string>
     <string name="normal_wallpaper">Horma-papera</string>
@@ -648,7 +651,7 @@
     <string name="ota_layout_adjustment_content">Barneko eta kanpoko Hasierako pantailaren diseinuak bertsio berrian sinkronizatu dira.</string>
     <string name="ota_layout_adjustment_title">Hasierako pantailaren diseinuak</string>
     <string name="out_of_space">Ez dago leku gehiago Hasierako pantaila honetan</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">Irudikatu animazioak hirugarrenen aplikazioen ikonoetan</string>
     <string name="perfect_icons_switch_title">Ikono orokorren animazioak</string>
     <string name="permdesc_install_shortcut">Aplikazio bat baimentzen du lasterbideak gehitzeko erabiltzailearen parte-hartzearik gabe.</string>

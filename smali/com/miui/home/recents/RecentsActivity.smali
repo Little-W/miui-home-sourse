@@ -85,7 +85,7 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/views/RecentsContainer;->setVisibility(I)V
 
-    const v0, 0x7f0a01e4
+    const v0, 0x7f0a01e5
 
     .line 49
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/RecentsActivity;->findViewById(I)Landroid/view/View;

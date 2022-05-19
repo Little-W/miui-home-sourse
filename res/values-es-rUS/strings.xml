@@ -53,7 +53,7 @@
     <string name="activity_not_unlocked">Espere hasta que su dispositivo se reinicie completamente para abrir aplicaciones</string>
     <string name="add_custom_category">Personalizar</string>
     <string name="add_screen">Agregar pantalla</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">Agregar a la Pantalla de inicio</string>
     <string name="added_all_category">Todas las aplicaciones agregadas con éxito</string>
     <string name="afternoon">Tarde</string>
     <string name="agree_button">Aceptar</string>
@@ -379,6 +379,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">Mantenga presionado para agregar a la Pantalla de inicio</string>
+    <string name="fold_pair_installed_shortcut_launcher">Este acceso directo ya existe</string>
     <string name="folder_name">Carpeta</string>
     <string name="frame_load_failed">No se pudo cargar el marco</string>
     <string name="free_style_apps_title">Seleccionar aplicación</string>
@@ -658,6 +660,7 @@
     <string name="night">Noche</string>
     <string name="no_detail_page">No hay página de detalles</string>
     <string name="no_space_toast">No hay suficiente espacio</string>
+    <string name="no_space_toast_fold">No hay suficiente espacio</string>
     <string name="no_space_toast_when_click_widget">No hay espacio suficiente en esta página. Pruebe arrastrando el elemento a otra.</string>
     <string name="noon">Mediodía</string>
     <string name="normal_wallpaper">Fondo de pantalla</string>
@@ -679,7 +682,7 @@
     <string name="ota_layout_adjustment_content">Los diseños de la pantalla de inicio interior y exterior se sincronizaron en la nueva versión.</string>
     <string name="ota_layout_adjustment_title">Diseños de la pantalla de inicio</string>
     <string name="out_of_space">No hay espacio en la pantalla de inicio</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">Renderizar animaciones en iconos de aplicaciones de terceros</string>
     <string name="perfect_icons_switch_title">Animaciones de iconos globales</string>
     <string name="permdesc_install_shortcut">Permite que las aplicaciones agreguen accesos directos sin preguntar al usuario.</string>

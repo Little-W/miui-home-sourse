@@ -31,17 +31,17 @@
 
 .field public static final percent:I = 0x7f0a01c3
 
-.field public static final right:I = 0x7f0a01f7
+.field public static final right:I = 0x7f0a01fb
 
-.field public static final spread:I = 0x7f0a0266
+.field public static final spread:I = 0x7f0a026b
 
-.field public static final spread_inside:I = 0x7f0a0267
+.field public static final spread_inside:I = 0x7f0a026c
 
-.field public static final start:I = 0x7f0a026d
+.field public static final start:I = 0x7f0a0272
 
-.field public static final top:I = 0x7f0a02a6
+.field public static final top:I = 0x7f0a02ab
 
-.field public static final wrap:I = 0x7f0a02fb
+.field public static final wrap:I = 0x7f0a0300
 
 
 # direct methods

@@ -131,6 +131,64 @@
     return p0
 .end method
 
+.method public static getAnimResource(Z)I
+    .locals 1
+
+    .line 414
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->isInFoldLargeScreen()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    if-eqz p0, :cond_0
+
+    const p0, 0x7f0f0005
+
+    goto :goto_0
+
+    :cond_0
+    const p0, 0x7f0f0002
+
+    goto :goto_0
+
+    .line 416
+    :cond_1
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isScreenOrientationLandscape()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    if-eqz p0, :cond_2
+
+    const p0, 0x7f0f0007
+
+    goto :goto_0
+
+    :cond_2
+    const p0, 0x7f0f0004
+
+    goto :goto_0
+
+    :cond_3
+    if-eqz p0, :cond_4
+
+    const p0, 0x7f0f0006
+
+    goto :goto_0
+
+    :cond_4
+    const p0, 0x7f0f0003
+
+    :goto_0
+    return p0
+.end method
+
 .method public static getAppConfiguration(Landroid/content/Context;)Landroid/content/res/Configuration;
     .locals 0
 
@@ -243,7 +301,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0703d9
+    const v1, 0x7f0703de
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -256,7 +314,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0703d8
+    const v2, 0x7f0703dd
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -335,7 +393,7 @@
 
     move-result-object p0
 
-    const v1, 0x7f0703cd
+    const v1, 0x7f0703d1
 
     const/4 v2, 0x1
 

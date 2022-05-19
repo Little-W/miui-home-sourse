@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/ItemInfo;)V
     .locals 0
 
-    .line 7091
+    .line 7089
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$64;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iput-object p2, p0, Lcom/miui/home/launcher/Launcher$64;->val$deletedInfo:Lcom/miui/home/launcher/ItemInfo;
@@ -42,10 +42,10 @@
 .method public run()V
     .locals 3
 
-    .line 7094
+    .line 7092
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$64;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$7800(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/DragController;
+    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$7900(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/DragController;
 
     move-result-object v0
 
@@ -57,7 +57,7 @@
 
     const-string v0, "Launcher"
 
-    .line 7095
+    .line 7093
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -68,7 +68,7 @@
 
     iget-object v2, p0, Lcom/miui/home/launcher/Launcher$64;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {v2}, Lcom/miui/home/launcher/Launcher;->access$7800(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/DragController;
+    invoke-static {v2}, Lcom/miui/home/launcher/Launcher;->access$7900(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/DragController;
 
     move-result-object v2
 
@@ -86,15 +86,15 @@
 
     return-void
 
-    .line 7098
+    .line 7096
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$64;->this$0:Lcom/miui/home/launcher/Launcher;
 
     const/4 v1, 0x1
 
-    invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$7902(Lcom/miui/home/launcher/Launcher;Z)Z
+    invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$8002(Lcom/miui/home/launcher/Launcher;Z)Z
 
-    .line 7099
+    .line 7097
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$64;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$1400(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/Workspace;
@@ -105,12 +105,12 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Workspace;->fillEmptyCellAuto(Lcom/miui/home/launcher/ItemInfo;)V
 
-    .line 7100
+    .line 7098
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$64;->this$0:Lcom/miui/home/launcher/Launcher;
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$7902(Lcom/miui/home/launcher/Launcher;Z)Z
+    invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$8002(Lcom/miui/home/launcher/Launcher;Z)Z
 
     return-void
 .end method

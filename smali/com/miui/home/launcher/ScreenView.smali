@@ -287,7 +287,7 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/ScreenView;->TAG:Ljava/lang/String;
 
-    const p1, 0x7f0805c9
+    const p1, 0x7f0805ca
 
     .line 73
     iput p1, p0, Lcom/miui/home/launcher/ScreenView;->mSeekPointResId:I
@@ -549,7 +549,7 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/ScreenView;->TAG:Ljava/lang/String;
 
-    const p1, 0x7f0805c9
+    const p1, 0x7f0805ca
 
     .line 73
     iput p1, p0, Lcom/miui/home/launcher/ScreenView;->mSeekPointResId:I
@@ -1861,7 +1861,9 @@
     .locals 1
 
     .line 1118
-    invoke-virtual {p0}, Lcom/miui/home/launcher/ScreenView;->isScrolling()Z
+    iget-object v0, p0, Lcom/miui/home/launcher/ScreenView;->mScrollXAnimation:Landroidx/dynamicanimation/animation/SpringAnimation;
+
+    invoke-virtual {v0}, Landroidx/dynamicanimation/animation/SpringAnimation;->isRunning()Z
 
     move-result v0
 
@@ -2743,7 +2745,9 @@
     .locals 2
 
     .line 1111
-    invoke-virtual {p0}, Lcom/miui/home/launcher/ScreenView;->isScrolling()Z
+    iget-object v0, p0, Lcom/miui/home/launcher/ScreenView;->mScrollXAnimation:Landroidx/dynamicanimation/animation/SpringAnimation;
+
+    invoke-virtual {v0}, Landroidx/dynamicanimation/animation/SpringAnimation;->isRunning()Z
 
     move-result v0
 
@@ -6651,7 +6655,7 @@
     .line 1037
     iget-object v9, p0, Lcom/miui/home/launcher/ScreenView;->mContext:Landroid/content/Context;
 
-    const v10, 0x7f1003a5
+    const v10, 0x7f1003ae
 
     new-array v11, v6, [Ljava/lang/Object;
 
@@ -8107,9 +8111,9 @@
 .method public setSlideBarPosition(Landroid/widget/FrameLayout$LayoutParams;)V
     .locals 3
 
-    const v0, 0x7f080569
+    const v0, 0x7f08056a
 
-    const v1, 0x7f08056a
+    const v1, 0x7f08056b
 
     const/4 v2, 0x0
 

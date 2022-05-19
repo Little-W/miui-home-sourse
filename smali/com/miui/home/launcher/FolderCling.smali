@@ -1868,7 +1868,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/FolderCling;->mFolder:Lcom/miui/home/launcher/Folder;
 
-    const v0, 0x7f0a01ed
+    const v0, 0x7f0a01ee
 
     .line 98
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/FolderCling;->findViewById(I)Landroid/view/View;
@@ -1879,7 +1879,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/FolderCling;->mSmallIconsRecommendScreen:Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;
 
-    const v0, 0x7f0a0278
+    const v0, 0x7f0a027d
 
     .line 99
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/FolderCling;->findViewById(I)Landroid/view/View;
@@ -1911,7 +1911,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0600ce
+    const v1, 0x7f0600cf
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 

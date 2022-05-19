@@ -29,8 +29,10 @@
 
 .field public static final recent_tv_small_window_background:I = 0x7f080545
 
-.field public static final remove:I = 0x7f080559
+.field public static final recents_relay_background:I = 0x7f08054e
 
-.field public static final sample_footer_loading:I = 0x7f08055b
+.field public static final remove:I = 0x7f08055a
 
-.field public static final split:I = 0x7f080592
+.field public static final sample_footer_loading:I = 0x7f08055c
+
+.field public static final split:I = 0x7f080593

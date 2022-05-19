@@ -71,9 +71,7 @@
 
     iget-object v0, p0, Lcom/xiaomi/mirror/synergy/RelayIconHelper$1;->val$context:Landroid/content/Context;
 
-    iget-object v2, p0, Lcom/xiaomi/mirror/synergy/RelayIconHelper$1;->this$0:Lcom/xiaomi/mirror/synergy/RelayIconHelper;
-
-    invoke-static {v2}, Lcom/xiaomi/mirror/synergy/RelayIconHelper;->access$200(Lcom/xiaomi/mirror/synergy/RelayIconHelper;)Landroid/net/Uri;
+    invoke-static {}, Lcom/xiaomi/mirror/synergy/RelayIconHelper;->access$200()Landroid/net/Uri;
 
     move-result-object v2
 

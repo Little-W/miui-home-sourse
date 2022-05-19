@@ -31,7 +31,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 261
+    .line 255
     invoke-direct {p0}, Ljava/util/HashMap;-><init>()V
 
     return-void
@@ -40,7 +40,7 @@
 .method synthetic constructor <init>(Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$1;)V
     .locals 0
 
-    .line 261
+    .line 255
     invoke-direct {p0}, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$PairShortcutCache;-><init>()V
 
     return-void
@@ -51,25 +51,25 @@
 .method public getGroupShortcutInfo(Lcom/miui/home/launcher/PairShortcutInfo;)Lcom/miui/home/launcher/PairShortcutInfo;
     .locals 5
 
-    .line 264
+    .line 258
     invoke-virtual {p1}, Lcom/miui/home/launcher/PairShortcutInfo;->getShortcutInfo1()Lcom/miui/home/launcher/ShortcutInfo;
 
     move-result-object v0
 
-    .line 265
+    .line 259
     invoke-virtual {p1}, Lcom/miui/home/launcher/PairShortcutInfo;->getShortcutInfo2()Lcom/miui/home/launcher/ShortcutInfo;
 
     move-result-object v1
 
-    .line 266
+    .line 260
     invoke-virtual {p1}, Lcom/miui/home/launcher/PairShortcutInfo;->hasPairApp()Z
 
     move-result p1
 
-    .line 268
+    .line 262
     iget-object v2, v0, Lcom/miui/home/launcher/ShortcutInfo;->user:Landroid/os/UserHandle;
 
-    .line 269
+    .line 263
     invoke-virtual {p0, v2}, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$PairShortcutCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
@@ -78,21 +78,21 @@
 
     if-nez v3, :cond_0
 
-    .line 271
+    .line 265
     new-instance v3, Ljava/util/HashMap;
 
     invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
 
-    .line 272
+    .line 266
     invoke-virtual {p0, v2, v3}, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$PairShortcutCache;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 275
+    .line 269
     :cond_0
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 276
+    .line 270
     invoke-virtual {v0}, Lcom/miui/home/launcher/ShortcutInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object v4
@@ -101,7 +101,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 277
+    .line 271
     invoke-virtual {v1}, Lcom/miui/home/launcher/ShortcutInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object p1
@@ -114,7 +114,7 @@
     :goto_0
     invoke-interface {v2, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 278
+    .line 272
     invoke-virtual {v3, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -123,12 +123,12 @@
 
     if-nez p1, :cond_2
 
-    .line 280
+    .line 274
     new-instance p1, Lcom/miui/home/launcher/PairShortcutInfo;
 
     invoke-direct {p1, v0, v1}, Lcom/miui/home/launcher/PairShortcutInfo;-><init>(Lcom/miui/home/launcher/ShortcutInfo;Lcom/miui/home/launcher/ShortcutInfo;)V
 
-    .line 281
+    .line 275
     invoke-virtual {v3, v2, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_2

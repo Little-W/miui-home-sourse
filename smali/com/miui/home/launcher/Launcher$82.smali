@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 8796
+    .line 8829
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$82;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,29 +38,29 @@
 .method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 1
 
-    .line 8799
+    .line 8832
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$82;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p2}, Lcom/android/systemui/fsgesture/IFsGestureService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/systemui/fsgesture/IFsGestureService;
 
     move-result-object p2
 
-    invoke-static {p1, p2}, Lcom/miui/home/launcher/Launcher;->access$8702(Lcom/miui/home/launcher/Launcher;Lcom/android/systemui/fsgesture/IFsGestureService;)Lcom/android/systemui/fsgesture/IFsGestureService;
+    invoke-static {p1, p2}, Lcom/miui/home/launcher/Launcher;->access$8802(Lcom/miui/home/launcher/Launcher;Lcom/android/systemui/fsgesture/IFsGestureService;)Lcom/android/systemui/fsgesture/IFsGestureService;
 
-    .line 8800
+    .line 8833
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$82;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$8700(Lcom/miui/home/launcher/Launcher;)Lcom/android/systemui/fsgesture/IFsGestureService;
+    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$8800(Lcom/miui/home/launcher/Launcher;)Lcom/android/systemui/fsgesture/IFsGestureService;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 8802
+    .line 8835
     :try_start_0
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$82;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$8700(Lcom/miui/home/launcher/Launcher;)Lcom/android/systemui/fsgesture/IFsGestureService;
+    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$8800(Lcom/miui/home/launcher/Launcher;)Lcom/android/systemui/fsgesture/IFsGestureService;
 
     move-result-object p1
 
@@ -68,13 +68,13 @@
 
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$82;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$9400(Lcom/miui/home/launcher/Launcher;)Lcom/android/systemui/fsgesture/IFsGestureCallback;
+    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$9500(Lcom/miui/home/launcher/Launcher;)Lcom/android/systemui/fsgesture/IFsGestureCallback;
 
     move-result-object v0
 
     invoke-interface {p1, p2, v0}, Lcom/android/systemui/fsgesture/IFsGestureService;->registerCallback(Ljava/lang/String;Lcom/android/systemui/fsgesture/IFsGestureCallback;)V
 
-    .line 8803
+    .line 8836
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$82;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->notifyBackGestureStatus()V
@@ -86,7 +86,7 @@
     :catch_0
     move-exception p1
 
-    .line 8805
+    .line 8838
     invoke-virtual {p1}, Landroid/os/RemoteException;->printStackTrace()V
 
     :cond_0
@@ -95,7 +95,7 @@
 
     const-string p2, "\u8fde\u63a5Service \u6210\u529f"
 
-    .line 8808
+    .line 8841
     invoke-static {p1, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -104,16 +104,16 @@
 .method public onServiceDisconnected(Landroid/content/ComponentName;)V
     .locals 1
 
-    .line 8813
+    .line 8846
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$82;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$9500(Lcom/miui/home/launcher/Launcher;)V
+    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$9600(Lcom/miui/home/launcher/Launcher;)V
 
     const-string p1, "Launcher"
 
     const-string v0, "\u8fde\u63a5Service \u5931\u8d25"
 
-    .line 8814
+    .line 8847
     invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void

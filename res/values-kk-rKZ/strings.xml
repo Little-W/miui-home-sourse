@@ -26,7 +26,7 @@
     <string name="activity_not_unlocked">Қолданбаларды ашпас бұрын құрылғының толықтай қайта жүктелгенін күтіңіз</string>
     <string name="add_custom_category">Арнаулы</string>
     <string name="add_screen">Экранды қосу</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">Басты экранға қосу</string>
     <string name="added_all_category">Барлық қолданбалар сәтті қосылды</string>
     <string name="afternoon">Түстен кейін</string>
     <string name="agree_button">Келісу</string>
@@ -349,6 +349,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">Басты экранға қосу үшін, басып тұрыңыз</string>
+    <string name="fold_pair_installed_shortcut_launcher">Бұл таңбаша әлдеқашан бар</string>
     <string name="folder_name">Бума</string>
     <string name="frame_load_failed">Жиекті жүктеу мүмкін болмады</string>
     <string name="free_style_apps_title">Қолданбаны таңдаңыз</string>
@@ -628,6 +630,7 @@
     <string name="night">Кеш</string>
     <string name="no_detail_page">Толық ақпараты бар бет жоқ</string>
     <string name="no_space_toast">Бос орын жеткіліксіз</string>
+    <string name="no_space_toast_fold">Осында орын жеткіліксіз</string>
     <string name="no_space_toast_when_click_widget">Осы бетте орын жеткіліксіз. Осы элементті басқа бетке сүйреп көріңіз.</string>
     <string name="noon">Күн ортасы</string>
     <string name="normal_wallpaper">Тұсқағазды таңдаңыз</string>
@@ -636,7 +639,7 @@
     <string name="notification_reset_title">Таңбашалар сәтті реттелді</string>
     <string name="one_key_call_title">Теру үшін басыңыз</string>
     <string name="online_wallpaper">Онлайн</string>
-    <string name="open_pad_personal_assistant_settings">Home screen widgets</string>
+    <string name="open_pad_personal_assistant_settings">Басты экран виджеттері</string>
     <string name="open_personal_assistant_dialog_btn_cancel">Болдырмау</string>
     <string name="open_personal_assistant_dialog_btn_confirm">Сөндіру</string>
     <string name="open_personal_assistant_dialog_desc">Қолданба сандығын өшіргеннен кейін сіз қолданба сандығының виджеттерін көре алмайсыз. Олардың жаңартылған нұсқалары сізге қол жетімді болмайды. Бәрібір өшірілсін бе?</string>
@@ -648,7 +651,7 @@
     <string name="ota_layout_adjustment_content">Ішкі және сыртқы Басты экранның сыртқы түрлері жаңа нұсқасында үндестірілген.</string>
     <string name="ota_layout_adjustment_title">Бастапқы экранның сыртқы түрлері</string>
     <string name="out_of_space">Бұл экранда бос орын жоқ</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">Үшінші тарап қолданбаларының белгішелерінде анимацияларды көрсету</string>
     <string name="perfect_icons_switch_title">Ғаламдық белгіше анимациялары</string>
     <string name="permdesc_install_shortcut">Қолданбаға пайдаланушының қатысуынсыз таңбашаларды қосуға мүмкіндік береді.</string>

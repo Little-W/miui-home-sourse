@@ -56,14 +56,14 @@
 
     if-eqz v0, :cond_0
 
-    const v1, 0x7f10017a
+    const v1, 0x7f10017f
 
     goto :goto_0
 
     :cond_0
     if-eqz p1, :cond_1
 
-    const v1, 0x7f100238
+    const v1, 0x7f10023f
 
     goto :goto_0
 

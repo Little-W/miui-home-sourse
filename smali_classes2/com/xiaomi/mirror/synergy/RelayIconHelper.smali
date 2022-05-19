@@ -13,6 +13,12 @@
 .end annotation
 
 
+# static fields
+.field private static final URI_UPDATE:Landroid/net/Uri;
+
+.field private static final URI_VISIBLE:Landroid/net/Uri;
+
+
 # instance fields
 .field private mAliveBinder:Landroid/os/IBinder;
 
@@ -24,16 +30,10 @@
 
 .field private mVisibleObserver:Landroid/database/ContentObserver;
 
-.field private final uriUpdate:Landroid/net/Uri;
-
-.field private final uriVisible:Landroid/net/Uri;
-
 
 # direct methods
-.method public constructor <init>()V
+.method static constructor <clinit>()V
     .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "mirror_relay_icon_visible"
 
@@ -41,7 +41,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/xiaomi/mirror/synergy/RelayIconHelper;->uriVisible:Landroid/net/Uri;
+    sput-object v0, Lcom/xiaomi/mirror/synergy/RelayIconHelper;->URI_VISIBLE:Landroid/net/Uri;
 
     const-string v0, "mirror_relay_icon_update"
 
@@ -49,7 +49,15 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/xiaomi/mirror/synergy/RelayIconHelper;->uriUpdate:Landroid/net/Uri;
+    sput-object v0, Lcom/xiaomi/mirror/synergy/RelayIconHelper;->URI_UPDATE:Landroid/net/Uri;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
@@ -74,12 +82,12 @@
     return-object p0
 .end method
 
-.method static synthetic access$200(Lcom/xiaomi/mirror/synergy/RelayIconHelper;)Landroid/net/Uri;
-    .locals 0
+.method static synthetic access$200()Landroid/net/Uri;
+    .locals 1
 
-    iget-object p0, p0, Lcom/xiaomi/mirror/synergy/RelayIconHelper;->uriVisible:Landroid/net/Uri;
+    sget-object v0, Lcom/xiaomi/mirror/synergy/RelayIconHelper;->URI_VISIBLE:Landroid/net/Uri;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method static synthetic access$300(Lcom/xiaomi/mirror/synergy/RelayIconHelper;Landroid/content/Context;)V
@@ -90,12 +98,12 @@
     return-void
 .end method
 
-.method static synthetic access$400(Lcom/xiaomi/mirror/synergy/RelayIconHelper;)Landroid/net/Uri;
-    .locals 0
+.method static synthetic access$400()Landroid/net/Uri;
+    .locals 1
 
-    iget-object p0, p0, Lcom/xiaomi/mirror/synergy/RelayIconHelper;->uriUpdate:Landroid/net/Uri;
+    sget-object v0, Lcom/xiaomi/mirror/synergy/RelayIconHelper;->URI_UPDATE:Landroid/net/Uri;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method static synthetic access$500(Lcom/xiaomi/mirror/synergy/RelayIconHelper;Landroid/content/Context;Landroid/net/Uri;)Lcom/xiaomi/mirror/synergy/RelayIconHelper$RelayIcon;
@@ -151,7 +159,7 @@
 .end method
 
 .method private getRelayIcon(Landroid/content/Context;Landroid/net/Uri;)Lcom/xiaomi/mirror/synergy/RelayIconHelper$RelayIcon;
-    .locals 2
+    .locals 4
 
     new-instance v0, Landroid/os/Bundle;
 
@@ -189,17 +197,29 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
+    move-result-object v1
+
+    check-cast v1, Landroid/graphics/Bitmap;
+
+    const-string v2, "description"
+
+    invoke-virtual {p1, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "remote_device_name"
+
+    invoke-virtual {p1, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
     move-result-object p1
 
-    check-cast p1, Landroid/graphics/Bitmap;
+    new-instance v3, Lcom/xiaomi/mirror/synergy/RelayIconHelper$RelayIcon;
 
-    new-instance v1, Lcom/xiaomi/mirror/synergy/RelayIconHelper$RelayIcon;
-
-    invoke-direct {v1, v0, p1}, Lcom/xiaomi/mirror/synergy/RelayIconHelper$RelayIcon;-><init>(Ljava/lang/String;Landroid/graphics/Bitmap;)V
+    invoke-direct {v3, v0, v1, v2, p1}, Lcom/xiaomi/mirror/synergy/RelayIconHelper$RelayIcon;-><init>(Ljava/lang/String;Landroid/graphics/Bitmap;Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-object v1
+    return-object v3
 
     :catch_0
     move-exception p1
@@ -308,13 +328,13 @@
 .method public registerCallback(Landroid/content/Context;Lcom/xiaomi/mirror/synergy/RelayIconCallback;Landroid/os/Handler;)V
     .locals 3
 
+    iput-object p2, p0, Lcom/xiaomi/mirror/synergy/RelayIconHelper;->mCallback:Lcom/xiaomi/mirror/synergy/RelayIconCallback;
+
     if-nez p2, :cond_0
 
     return-void
 
     :cond_0
-    iput-object p2, p0, Lcom/xiaomi/mirror/synergy/RelayIconHelper;->mCallback:Lcom/xiaomi/mirror/synergy/RelayIconCallback;
-
     const/4 p2, 0x1
 
     iput-boolean p2, p0, Lcom/xiaomi/mirror/synergy/RelayIconHelper;->mIsRegister:Z
@@ -329,7 +349,7 @@
 
     move-result-object p2
 
-    iget-object v0, p0, Lcom/xiaomi/mirror/synergy/RelayIconHelper;->uriVisible:Landroid/net/Uri;
+    sget-object v0, Lcom/xiaomi/mirror/synergy/RelayIconHelper;->URI_VISIBLE:Landroid/net/Uri;
 
     iget-object v1, p0, Lcom/xiaomi/mirror/synergy/RelayIconHelper;->mVisibleObserver:Landroid/database/ContentObserver;
 
@@ -347,7 +367,7 @@
 
     move-result-object p2
 
-    iget-object p3, p0, Lcom/xiaomi/mirror/synergy/RelayIconHelper;->uriUpdate:Landroid/net/Uri;
+    sget-object p3, Lcom/xiaomi/mirror/synergy/RelayIconHelper;->URI_UPDATE:Landroid/net/Uri;
 
     iget-object v0, p0, Lcom/xiaomi/mirror/synergy/RelayIconHelper;->mUpdateObserver:Landroid/database/ContentObserver;
 
@@ -398,6 +418,10 @@
     if-eqz p1, :cond_2
 
     invoke-interface {p1, p0, v0}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
+
+    const/4 p1, 0x0
+
+    iput-object p1, p0, Lcom/xiaomi/mirror/synergy/RelayIconHelper;->mAliveBinder:Landroid/os/IBinder;
 
     :cond_2
     return-void

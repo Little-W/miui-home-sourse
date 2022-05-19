@@ -342,7 +342,7 @@
     :cond_0
     new-instance v1, Landroid/graphics/drawable/ColorDrawable;
 
-    const v2, 0x7f0600ff
+    const v2, 0x7f060100
 
     invoke-virtual {v0, v2}, Landroid/content/Context;->getColor(I)I
 

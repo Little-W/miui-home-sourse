@@ -225,11 +225,11 @@
 
 .field public static final fake_landscape_screen_minor_size:I = 0x7f07010a
 
-.field public static final fastscroll_default_thickness:I = 0x7f07010b
+.field public static final fastscroll_default_thickness:I = 0x7f07010c
 
-.field public static final fastscroll_margin:I = 0x7f070110
+.field public static final fastscroll_margin:I = 0x7f070112
 
-.field public static final fastscroll_minimum_range:I = 0x7f070111
+.field public static final fastscroll_minimum_range:I = 0x7f070113
 
 .field public static final highlight_alpha_material_colored:I = 0x7f07014c
 
@@ -1297,109 +1297,109 @@
 
 .field public static final recent_tv_small_window_margin_top:I = 0x7f0703c3
 
-.field public static final recents_tv_small_window_text_size:I = 0x7f0703db
+.field public static final recents_tv_small_window_text_size:I = 0x7f0703e1
 
-.field public static final selected_bottom_padding:I = 0x7f0703fb
+.field public static final selected_bottom_padding:I = 0x7f070401
 
-.field public static final selected_left_padding:I = 0x7f0703fc
+.field public static final selected_left_padding:I = 0x7f070402
 
-.field public static final selected_right_padding:I = 0x7f0703fd
+.field public static final selected_right_padding:I = 0x7f070403
 
-.field public static final selected_top_padding:I = 0x7f0703fe
+.field public static final selected_top_padding:I = 0x7f070404
 
-.field public static final sliding_button_border:I = 0x7f070416
+.field public static final sliding_button_border:I = 0x7f07041f
 
-.field public static final small_window_container_item_image_size:I = 0x7f070417
+.field public static final small_window_container_item_image_size:I = 0x7f070420
 
-.field public static final small_window_container_title_top_margin:I = 0x7f070418
+.field public static final small_window_container_title_top_margin:I = 0x7f070421
 
-.field public static final small_window_edit_head_background_height:I = 0x7f070419
+.field public static final small_window_edit_head_background_height:I = 0x7f070422
 
-.field public static final small_window_edit_header_text_size:I = 0x7f07041a
+.field public static final small_window_edit_header_text_size:I = 0x7f070423
 
-.field public static final small_window_edit_icon_badge_size:I = 0x7f07041b
+.field public static final small_window_edit_icon_badge_size:I = 0x7f070424
 
-.field public static final small_window_edit_icon_height:I = 0x7f07041c
+.field public static final small_window_edit_icon_height:I = 0x7f070425
 
-.field public static final small_window_edit_icon_image_size:I = 0x7f07041d
+.field public static final small_window_edit_icon_image_size:I = 0x7f070426
 
-.field public static final small_window_edit_icon_width:I = 0x7f07041e
+.field public static final small_window_edit_icon_width:I = 0x7f070427
 
-.field public static final small_window_edit_title_text_size:I = 0x7f07041f
+.field public static final small_window_edit_title_text_size:I = 0x7f070428
 
-.field public static final small_window_edit_title_top_margin:I = 0x7f070420
+.field public static final small_window_edit_title_top_margin:I = 0x7f070429
 
-.field public static final small_window_gird_left_padding:I = 0x7f070421
+.field public static final small_window_gird_left_padding:I = 0x7f07042a
 
-.field public static final small_window_gird_right_padding:I = 0x7f070422
+.field public static final small_window_gird_right_padding:I = 0x7f07042b
 
-.field public static final small_window_item_title_margin_top:I = 0x7f070423
+.field public static final small_window_item_title_margin_top:I = 0x7f07042c
 
-.field public static final small_window_item_title_text_size:I = 0x7f070424
+.field public static final small_window_item_title_text_size:I = 0x7f07042d
 
-.field public static final small_window_left_padding:I = 0x7f070425
+.field public static final small_window_left_padding:I = 0x7f07042e
 
-.field public static final small_window_right_padding:I = 0x7f070426
+.field public static final small_window_right_padding:I = 0x7f07042f
 
-.field public static final small_window_selected_icon_badge_size:I = 0x7f070427
+.field public static final small_window_selected_icon_badge_size:I = 0x7f070430
 
-.field public static final small_window_selected_icon_image_size:I = 0x7f070428
+.field public static final small_window_selected_icon_image_size:I = 0x7f070431
 
-.field public static final small_window_selected_icon_size:I = 0x7f070429
+.field public static final small_window_selected_icon_size:I = 0x7f070432
 
-.field public static final small_window_title_text_size:I = 0x7f07042a
+.field public static final small_window_title_text_size:I = 0x7f070433
 
-.field public static final space:I = 0x7f070434
+.field public static final space:I = 0x7f07043d
 
-.field public static final split_action_bar_overlay_height:I = 0x7f070435
+.field public static final split_action_bar_overlay_height:I = 0x7f07043e
 
-.field public static final subtitle_corner_radius:I = 0x7f070439
+.field public static final subtitle_corner_radius:I = 0x7f070442
 
-.field public static final subtitle_outline_width:I = 0x7f07043a
+.field public static final subtitle_outline_width:I = 0x7f070443
 
-.field public static final subtitle_shadow_offset:I = 0x7f07043b
+.field public static final subtitle_shadow_offset:I = 0x7f070444
 
-.field public static final subtitle_shadow_radius:I = 0x7f07043c
+.field public static final subtitle_shadow_radius:I = 0x7f070445
 
-.field public static final text_max_size:I = 0x7f070441
+.field public static final text_max_size:I = 0x7f07044a
 
-.field public static final thumbnail_border_round_oval:I = 0x7f07044d
+.field public static final thumbnail_border_round_oval:I = 0x7f070456
 
-.field public static final thumbnail_border_width:I = 0x7f07044e
+.field public static final thumbnail_border_width:I = 0x7f070457
 
-.field public static final thumbnail_height:I = 0x7f07044f
+.field public static final thumbnail_height:I = 0x7f070458
 
-.field public static final thumbnail_max_width:I = 0x7f070450
+.field public static final thumbnail_max_width:I = 0x7f070459
 
-.field public static final thumbnail_min_width:I = 0x7f070451
+.field public static final thumbnail_min_width:I = 0x7f07045a
 
-.field public static final thumbnail_shadow_layer_radius:I = 0x7f070452
+.field public static final thumbnail_shadow_layer_radius:I = 0x7f07045b
 
-.field public static final thumbnail_shadow_layer_x:I = 0x7f070453
+.field public static final thumbnail_shadow_layer_x:I = 0x7f07045c
 
-.field public static final thumbnail_shadow_layer_y:I = 0x7f070454
+.field public static final thumbnail_shadow_layer_y:I = 0x7f07045d
 
-.field public static final tooltip_corner_radius:I = 0x7f07045a
+.field public static final tooltip_corner_radius:I = 0x7f070463
 
-.field public static final tooltip_horizontal_padding:I = 0x7f07045b
+.field public static final tooltip_horizontal_padding:I = 0x7f070464
 
-.field public static final tooltip_margin:I = 0x7f07045c
+.field public static final tooltip_margin:I = 0x7f070465
 
-.field public static final tooltip_precise_anchor_extra_offset:I = 0x7f07045d
+.field public static final tooltip_precise_anchor_extra_offset:I = 0x7f070466
 
-.field public static final tooltip_precise_anchor_threshold:I = 0x7f07045e
+.field public static final tooltip_precise_anchor_threshold:I = 0x7f070467
 
-.field public static final tooltip_vertical_padding:I = 0x7f07045f
+.field public static final tooltip_vertical_padding:I = 0x7f070468
 
-.field public static final tooltip_y_offset_non_touch:I = 0x7f070460
+.field public static final tooltip_y_offset_non_touch:I = 0x7f070469
 
-.field public static final tooltip_y_offset_touch:I = 0x7f070461
+.field public static final tooltip_y_offset_touch:I = 0x7f07046a
 
-.field public static final top_padding:I = 0x7f070462
+.field public static final top_padding:I = 0x7f07046b
 
-.field public static final word_photo_border_size:I = 0x7f070482
+.field public static final word_photo_border_size:I = 0x7f07048b
 
-.field public static final word_photo_size:I = 0x7f070483
+.field public static final word_photo_size:I = 0x7f07048c
 
 
 # direct methods

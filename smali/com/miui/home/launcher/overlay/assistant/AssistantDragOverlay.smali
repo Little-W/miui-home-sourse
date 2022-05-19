@@ -226,11 +226,11 @@
         }
     .end annotation
 
-    .line 781
+    .line 784
     :try_start_0
     iget-object v0, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->mBackgroundExecutor:Ljava/util/concurrent/ExecutorService;
 
-    .line 782
+    .line 785
     invoke-interface {v0, p1}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
 
     move-result-object p1
@@ -239,7 +239,7 @@
 
     sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    .line 783
+    .line 786
     invoke-interface {p1, v0, v1, v2}, Ljava/util/concurrent/Future;->get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
 
     move-result-object p1
@@ -251,7 +251,7 @@
     :catch_0
     move-exception p1
 
-    .line 785
+    .line 788
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
     const/4 p1, 0x0
@@ -262,14 +262,14 @@
 .method private cancelDrag()V
     .locals 2
 
-    .line 446
+    .line 449
     iget-object v0, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->mDragController:Lcom/miui/home/launcher/DragController;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/DragController;->setDraggingFromAssistant(Z)V
 
-    .line 447
+    .line 450
     iget-object v0, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getDragController()Lcom/miui/home/launcher/DragController;
@@ -280,7 +280,7 @@
 
     const/4 v0, 0x0
 
-    .line 448
+    .line 451
     iput-object v0, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->mPaItemInfo:Lcom/miui/home/launcher/ItemInfo;
 
     return-void
@@ -295,16 +295,16 @@
 
     return v0
 
-    .line 734
+    .line 737
     :cond_0
     instance-of v1, p1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;
 
     if-eqz v1, :cond_1
 
-    .line 735
+    .line 738
     check-cast p1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;
 
-    .line 736
+    .line 739
     iget-object v1, p1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->resPath:Ljava/lang/String;
 
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -325,7 +325,7 @@
 
     const-string v1, "resPatch & maMlDownloadUrl should not be null"
 
-    .line 737
+    .line 740
     invoke-static {p1, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
@@ -343,42 +343,42 @@
 
     const/4 v1, -0x1
 
-    .line 617
+    .line 620
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result v0
 
     const-string v2, "widget_origin_id"
 
-    .line 618
+    .line 621
     invoke-virtual {p1, v2, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result v2
 
     const-string v3, "widget_download_uri"
 
-    .line 619
+    .line 622
     invoke-virtual {p1, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
     const-string v4, "widget_span_x"
 
-    .line 620
+    .line 623
     invoke-virtual {p1, v4}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result v4
 
     const-string v5, "widget_span_y"
 
-    .line 621
+    .line 624
     invoke-virtual {p1, v5}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result v5
 
     const-string v6, "widget_type"
 
-    .line 623
+    .line 626
     invoke-virtual {p1, v6}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result v6
@@ -393,7 +393,7 @@
 
     const-string v6, "widget_info"
 
-    .line 625
+    .line 628
     invoke-virtual {p1, v6}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object v6
@@ -402,17 +402,17 @@
 
     if-eqz v6, :cond_1
 
-    .line 627
+    .line 630
     iget-object v1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v1, v6}, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;->fromProviderInfo(Landroid/content/Context;Landroid/appwidget/AppWidgetProviderInfo;)Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;
 
     move-result-object v1
 
-    .line 628
+    .line 631
     invoke-virtual {v1, v0}, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;->setAppWidgetId(I)V
 
-    .line 629
+    .line 632
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountX()I
 
     move-result v3
@@ -425,16 +425,16 @@
 
     if-ne v3, v6, :cond_0
 
-    .line 630
+    .line 633
     iput v5, v1, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;->spanY:I
 
-    .line 631
+    .line 634
     iput v4, v1, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;->spanX:I
 
     :cond_0
     const-string v3, "widgetExtraData"
 
-    .line 633
+    .line 636
     invoke-virtual {p1, v3}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v3
@@ -443,13 +443,13 @@
 
     goto :goto_0
 
-    .line 636
+    .line 639
     :cond_1
     new-instance v6, Lcom/miui/home/launcher/LauncherAppWidgetInfo;
 
     invoke-direct {v6, v1}, Lcom/miui/home/launcher/LauncherAppWidgetInfo;-><init>(I)V
 
-    .line 637
+    .line 640
     new-instance v1, Landroid/content/ComponentName;
 
     const-string v10, "widget_app_package"
@@ -460,19 +460,19 @@
 
     const-string v11, "widget_info_name"
 
-    .line 638
+    .line 641
     invoke-virtual {p1, v11}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v11
 
     invoke-direct {v1, v10, v11}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 639
+    .line 642
     invoke-virtual {v6, v1}, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->setProvider(Landroid/content/ComponentName;)V
 
     const-string v1, "widget_app_icon_preview_url"
 
-    .line 640
+    .line 643
     invoke-virtual {p1, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -481,19 +481,19 @@
 
     const-string v1, "widget_title"
 
-    .line 641
+    .line 644
     invoke-virtual {p1, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v6, v1}, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->setLabel(Ljava/lang/CharSequence;)V
 
-    .line 642
+    .line 645
     iput-object v3, v6, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->downloadUri:Ljava/lang/String;
 
     const-string v1, "preview_light_url"
 
-    .line 643
+    .line 646
     invoke-virtual {p1, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -502,22 +502,22 @@
 
     const-string v1, "preview_dark_url"
 
-    .line 644
+    .line 647
     invoke-virtual {p1, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, v6, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->previewUrlDark:Ljava/lang/String;
 
-    .line 645
+    .line 648
     iput v5, v6, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->spanY:I
 
-    .line 646
+    .line 649
     iput v4, v6, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->spanX:I
 
     const-string v1, "widgetExtraData"
 
-    .line 647
+    .line 650
     invoke-virtual {p1, v1}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v1
@@ -529,7 +529,7 @@
     :goto_0
     const-string v3, "widget_app_version"
 
-    .line 650
+    .line 653
     invoke-virtual {p1, v3}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result v3
@@ -538,7 +538,7 @@
 
     const-string v3, "widget_app_name"
 
-    .line 651
+    .line 654
     invoke-virtual {p1, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
@@ -547,19 +547,19 @@
 
     const-string v3, "widget_title"
 
-    .line 652
+    .line 655
     invoke-virtual {p1, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 653
+    .line 656
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v4
 
     if-nez v4, :cond_8
 
-    .line 654
+    .line 657
     invoke-virtual {v1, v3}, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->setLabel(Ljava/lang/CharSequence;)V
 
     goto/16 :goto_4
@@ -569,12 +569,12 @@
 
     if-ne v6, v1, :cond_7
 
-    .line 657
+    .line 660
     new-instance v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;
 
     invoke-direct {v1, v4, v5}, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;-><init>(II)V
 
-    .line 658
+    .line 661
     invoke-static {}, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->allocMaMlWidgetId()I
 
     move-result v4
@@ -583,7 +583,7 @@
 
     const-string v4, "maml_product_id"
 
-    .line 659
+    .line 662
     invoke-virtual {p1, v4}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
@@ -592,7 +592,7 @@
 
     const-string v4, "maml_tag_category"
 
-    .line 660
+    .line 663
     invoke-virtual {p1, v4}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
@@ -601,7 +601,7 @@
 
     const-string v4, "maml_tag"
 
-    .line 661
+    .line 664
     invoke-virtual {p1, v4}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
@@ -610,7 +610,7 @@
 
     const-string v4, "maml_type"
 
-    .line 662
+    .line 665
     invoke-virtual {p1, v4}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
@@ -619,7 +619,7 @@
 
     const-string v4, "widget_app_name"
 
-    .line 664
+    .line 667
     invoke-virtual {p1, v4}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
@@ -628,7 +628,7 @@
 
     const-string v4, "widget_app_package"
 
-    .line 665
+    .line 668
     invoke-virtual {p1, v4}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
@@ -637,33 +637,33 @@
 
     const-string v4, "widget_app_version"
 
-    .line 666
+    .line 669
     invoke-virtual {p1, v4}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result v4
 
     iput v4, v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->appVersion:I
 
-    .line 667
+    .line 670
     iget-object v4, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v1, v4}, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->refreshAppNameFromPackageManager(Landroid/content/Context;)V
 
     const-string v4, "widget_app_icon_preview_url"
 
-    .line 668
+    .line 671
     invoke-virtual {p1, v4}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
     iput-object v4, v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->appIconPreUrl:Ljava/lang/String;
 
-    .line 669
+    .line 672
     iput-object v3, v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->downloadUri:Ljava/lang/String;
 
     const-string v3, "maml_download_url"
 
-    .line 670
+    .line 673
     invoke-virtual {p1, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
@@ -672,7 +672,7 @@
 
     const-string v3, "preview_light_url"
 
-    .line 671
+    .line 674
     invoke-virtual {p1, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
@@ -681,7 +681,7 @@
 
     const-string v3, "preview_dark_url"
 
-    .line 672
+    .line 675
     invoke-virtual {p1, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
@@ -690,7 +690,7 @@
 
     const-string v3, "maml_mtz_file_size"
 
-    .line 673
+    .line 676
     invoke-virtual {p1, v3}, Landroid/os/Bundle;->getLong(Ljava/lang/String;)J
 
     move-result-wide v3
@@ -699,7 +699,7 @@
 
     const-string v3, "maml_title"
 
-    .line 674
+    .line 677
     invoke-virtual {p1, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
@@ -708,7 +708,7 @@
 
     const-string v3, "maml_version"
 
-    .line 675
+    .line 678
     invoke-virtual {p1, v3}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result v3
@@ -717,26 +717,26 @@
 
     const-string v3, "maml_uri"
 
-    .line 677
+    .line 680
     invoke-virtual {p1, v3}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object v3
 
     check-cast v3, Landroid/net/Uri;
 
-    .line 678
+    .line 681
     iput v8, v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->status:I
 
     if-eqz v3, :cond_6
 
-    .line 681
+    .line 684
     invoke-static {v1, v3}, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->copyRes(Lcom/miui/home/launcher/maml/MaMlWidgetInfo;Landroid/net/Uri;)Ljava/lang/String;
 
     move-result-object v3
 
     iput-object v3, v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->resPath:Ljava/lang/String;
 
-    .line 682
+    .line 685
     iget-object v3, v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->resPath:Ljava/lang/String;
 
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -745,12 +745,12 @@
 
     if-nez v3, :cond_8
 
-    .line 683
+    .line 686
     iput v9, v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->status:I
 
     const-string v3, "maml_config_uri"
 
-    .line 685
+    .line 688
     invoke-virtual {p1, v3}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object v3
@@ -759,7 +759,7 @@
 
     const-string v4, "maml_editable"
 
-    .line 686
+    .line 689
     invoke-virtual {p1, v4}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
     move-result v4
@@ -768,14 +768,14 @@
 
     const-string v4, "maml_custom_edit_uri"
 
-    .line 687
+    .line 690
     invoke-virtual {p1, v4}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
     iput-object v4, v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->customEditUri:Ljava/lang/String;
 
-    .line 688
+    .line 691
     iget-boolean v4, v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->isEditable:Z
 
     if-eqz v3, :cond_3
@@ -816,7 +816,7 @@
 
     if-eqz v3, :cond_8
 
-    .line 693
+    .line 696
     iget v4, v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->gadgetId:I
 
     invoke-static {v4, v3}, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->moveConfig(ILandroid/net/Uri;)Ljava/lang/String;
@@ -827,7 +827,7 @@
 
     goto :goto_4
 
-    .line 698
+    .line 701
     :cond_6
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
@@ -848,16 +848,16 @@
 
     move v2, v0
 
-    .line 704
+    .line 707
     :cond_9
     iput v2, v1, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->originWidgetId:I
 
-    .line 705
+    .line 708
     iput-boolean v9, v1, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->isMIUIWidget:Z
 
     const-string v2, "preview_content"
 
-    .line 706
+    .line 709
     invoke-virtual {p1, v2}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object v2
@@ -868,7 +868,7 @@
 
     const-string v2, "widget_show_warning_toast"
 
-    .line 707
+    .line 710
     invoke-virtual {p1, v2, v8}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
@@ -879,7 +879,7 @@
 
     const-string v3, ""
 
-    .line 708
+    .line 711
     invoke-virtual {p1, v2, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
@@ -888,7 +888,7 @@
 
     const-string v2, "widget_show_add_toast"
 
-    .line 709
+    .line 712
     invoke-virtual {p1, v2, v8}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
@@ -899,7 +899,7 @@
 
     const-string v3, ""
 
-    .line 710
+    .line 713
     invoke-virtual {p1, v2, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
@@ -908,7 +908,7 @@
 
     const-string v2, "widget_can_drag_from_home_to_pa"
 
-    .line 711
+    .line 714
     invoke-virtual {p1, v2, v9}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
@@ -917,7 +917,7 @@
 
     const-string v2, "default_source"
 
-    .line 712
+    .line 715
     invoke-virtual {p1, v2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result v2
@@ -926,7 +926,7 @@
 
     const-string v2, "add_source"
 
-    .line 713
+    .line 716
     invoke-virtual {p1, v2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result v2
@@ -935,7 +935,7 @@
 
     const-string v2, "picker_tip_source"
 
-    .line 714
+    .line 717
     invoke-virtual {p1, v2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result v2
@@ -944,7 +944,7 @@
 
     const-string v2, "picker_id"
 
-    .line 715
+    .line 718
     invoke-virtual {p1, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
@@ -953,14 +953,14 @@
 
     const-string v2, "widget_package_version_name"
 
-    .line 716
+    .line 719
     invoke-virtual {p1, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     iput-object p1, v1, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->appVersionName:Ljava/lang/String;
 
-    .line 719
+    .line 722
     iget-object p1, v1, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->transitionBitmap:Landroid/graphics/Bitmap;
 
     if-eqz p1, :cond_a
@@ -969,14 +969,14 @@
 
     if-eq p1, v9, :cond_a
 
-    .line 720
+    .line 723
     new-instance p1, Lcom/miui/home/launcher/overlay/assistant/-$$Lambda$AssistantDragOverlay$TyQyMHqnt-xXnMPWtb3wmUjPLVQ;
 
     invoke-direct {p1, p0, v1}, Lcom/miui/home/launcher/overlay/assistant/-$$Lambda$AssistantDragOverlay$TyQyMHqnt-xXnMPWtb3wmUjPLVQ;-><init>(Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;Lcom/miui/home/launcher/MIUIWidgetBasicInfo;)V
 
     invoke-static {p1}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
 
-    .line 724
+    .line 727
     :cond_a
     new-instance p1, Lcom/miui/home/launcher/MIUIWidgetBasicInfo$WidgetMovement;
 
@@ -984,17 +984,17 @@
 
     iput-object p1, v1, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->movement:Lcom/miui/home/launcher/MIUIWidgetBasicInfo$WidgetMovement;
 
-    .line 725
+    .line 728
     iget-object p1, v1, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->movement:Lcom/miui/home/launcher/MIUIWidgetBasicInfo$WidgetMovement;
 
     iput v9, p1, Lcom/miui/home/launcher/MIUIWidgetBasicInfo$WidgetMovement;->direction:I
 
-    .line 726
+    .line 729
     iget-object p1, v1, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->movement:Lcom/miui/home/launcher/MIUIWidgetBasicInfo$WidgetMovement;
 
     iput v0, p1, Lcom/miui/home/launcher/MIUIWidgetBasicInfo$WidgetMovement;->paWidgetId:I
 
-    .line 728
+    .line 731
     :cond_b
     invoke-direct {p0, v1}, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->checkParams(Lcom/miui/home/launcher/ItemInfo;)Z
 
@@ -1014,14 +1014,14 @@
 .method private findAvailableScreenPosition(Lcom/miui/home/launcher/ItemInfo;Ljava/lang/Runnable;)V
     .locals 3
 
-    .line 593
+    .line 596
     iget-object v0, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
 
     move-result-object v0
 
-    .line 594
+    .line 597
     iget v1, p1, Lcom/miui/home/launcher/ItemInfo;->spanX:I
 
     iget v2, p1, Lcom/miui/home/launcher/ItemInfo;->spanY:I
@@ -1032,12 +1032,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 595
+    .line 598
     invoke-interface {p2}, Ljava/lang/Runnable;->run()V
 
     return-void
 
-    .line 599
+    .line 602
     :cond_0
     invoke-virtual {v0}, Lcom/miui/home/launcher/Workspace;->getScreenCount()I
 
@@ -1045,10 +1045,10 @@
 
     add-int/lit8 v1, v1, -0x1
 
-    .line 600
+    .line 603
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Workspace;->setCurrentScreen(I)V
 
-    .line 601
+    .line 604
     iget v2, p1, Lcom/miui/home/launcher/ItemInfo;->spanX:I
 
     iget p1, p1, Lcom/miui/home/launcher/ItemInfo;->spanY:I
@@ -1059,18 +1059,18 @@
 
     if-eqz p1, :cond_1
 
-    .line 602
+    .line 605
     invoke-interface {p2}, Ljava/lang/Runnable;->run()V
 
     return-void
 
-    .line 606
+    .line 609
     :cond_1
     invoke-virtual {v0}, Lcom/miui/home/launcher/Workspace;->getScreenCount()I
 
     move-result p1
 
-    .line 607
+    .line 610
     iget-object v1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     new-instance v2, Lcom/miui/home/launcher/overlay/assistant/-$$Lambda$AssistantDragOverlay$Ip3pI2vo8gVKaDpC7rDqV7Pxbvw;
@@ -1085,7 +1085,7 @@
 .method public static synthetic lambda$createItemInfo$19(Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;Lcom/miui/home/launcher/MIUIWidgetBasicInfo;)V
     .locals 2
 
-    .line 720
+    .line 723
     iget-object v0, p1, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->transitionBitmap:Landroid/graphics/Bitmap;
 
     iget-object v1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->mLauncher:Lcom/miui/home/launcher/Launcher;
@@ -1102,13 +1102,13 @@
 .method static synthetic lambda$findAvailableScreenPosition$18(Lcom/miui/home/launcher/Workspace;ILjava/lang/Runnable;)V
     .locals 0
 
-    .line 608
+    .line 611
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->refreshScrollBound()Z
 
-    .line 609
+    .line 612
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Workspace;->setCurrentScreen(I)V
 
-    .line 610
+    .line 613
     invoke-interface {p2}, Ljava/lang/Runnable;->run()V
 
     return-void
@@ -1566,14 +1566,14 @@
 .method public static synthetic lambda$onPickerAddWidget$17(Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;Lcom/miui/home/launcher/ItemInfo;Lcom/miui/home/launcher/Workspace;)V
     .locals 9
 
-    .line 519
+    .line 522
     invoke-virtual {p2}, Lcom/miui/home/launcher/Workspace;->getCurrentScreenId()J
 
     move-result-wide v0
 
     iput-wide v0, p1, Lcom/miui/home/launcher/ItemInfo;->screenId:J
 
-    .line 520
+    .line 523
     new-instance v0, Landroid/graphics/drawable/ColorDrawable;
 
     const/4 v1, 0x0
@@ -1582,10 +1582,10 @@
 
     const/4 v2, 0x1
 
-    .line 521
+    .line 524
     invoke-virtual {v0, v1, v1, v2, v2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 522
+    .line 525
     iget-object v3, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v3}, Lcom/miui/home/launcher/Launcher;->getDragController()Lcom/miui/home/launcher/DragController;
@@ -1596,24 +1596,24 @@
 
     move-result-object v0
 
-    .line 523
+    .line 526
     invoke-virtual {v0, p1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 525
+    .line 528
     new-instance v5, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay$3;
 
     const-string v3, "picker"
 
     invoke-direct {v5, p0, v3, p1}, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay$3;-><init>(Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;Ljava/lang/String;Lcom/miui/home/launcher/ItemInfo;)V
 
-    .line 538
+    .line 541
     invoke-virtual {p2}, Lcom/miui/home/launcher/Workspace;->getCurrentScreenId()J
 
     move-result-wide v3
 
     iput-wide v3, p1, Lcom/miui/home/launcher/ItemInfo;->screenId:J
 
-    .line 539
+    .line 542
     iget-object p1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getDragController()Lcom/miui/home/launcher/DragController;
@@ -1643,12 +1643,12 @@
         }
     .end annotation
 
-    .line 769
+    .line 772
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 770
+    .line 773
     invoke-interface {p0, v0}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
 
     return-object v0
@@ -1720,14 +1720,14 @@
 
     move-object/from16 v1, p1
 
-    .line 750
+    .line 753
     invoke-virtual {v1, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object v0
 
     check-cast v0, Landroid/view/MotionEvent;
 
-    .line 752
+    .line 755
     invoke-virtual {v0}, Landroid/view/MotionEvent;->getDownTime()J
 
     move-result-wide v1
@@ -1742,7 +1742,7 @@
 
     add-long v7, v1, v3
 
-    .line 754
+    .line 757
     invoke-virtual {v0}, Landroid/view/MotionEvent;->getX()F
 
     move-result v1
@@ -1757,7 +1757,7 @@
 
     add-float v11, v1, v2
 
-    .line 755
+    .line 758
     invoke-virtual {v0}, Landroid/view/MotionEvent;->getPressure()F
 
     move-result v12
@@ -1766,7 +1766,7 @@
 
     move-result v13
 
-    .line 756
+    .line 759
     invoke-virtual {v0}, Landroid/view/MotionEvent;->getMetaState()I
 
     move-result v14
@@ -1775,7 +1775,7 @@
 
     move-result v15
 
-    .line 757
+    .line 760
     invoke-virtual {v0}, Landroid/view/MotionEvent;->getYPrecision()F
 
     move-result v16
@@ -1790,7 +1790,7 @@
 
     const/4 v9, 0x2
 
-    .line 752
+    .line 755
     invoke-static/range {v5 .. v18}, Landroid/view/MotionEvent;->obtain(JJIFFFFIFFII)Landroid/view/MotionEvent;
 
     move-result-object v0
@@ -1803,14 +1803,14 @@
 
     const-string v0, "drag_event"
 
-    .line 745
+    .line 748
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object p1
 
     check-cast p1, Landroid/view/MotionEvent;
 
-    .line 746
+    .line 749
     invoke-static {p1}, Landroid/view/MotionEvent;->obtain(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
 
     move-result-object p1
@@ -1821,14 +1821,14 @@
 .method private onDragComplete(Lcom/miui/home/launcher/DragObject;)V
     .locals 6
 
-    .line 548
+    .line 551
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v0
 
     const-string v1, "AssistantDragOverlay"
 
-    .line 549
+    .line 552
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1847,7 +1847,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 550
+    .line 553
     iget-object v1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->mWorkSpace:Lcom/miui/home/launcher/Workspace;
 
     iget-wide v2, v0, Lcom/miui/home/launcher/ItemInfo;->screenId:J
@@ -1858,7 +1858,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 551
+    .line 554
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object p1
@@ -1875,19 +1875,19 @@
     :goto_0
     iput-object p1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->mAddingView:Landroid/view/View;
 
-    .line 552
+    .line 555
     iget-object p1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->mAddingView:Landroid/view/View;
 
     const/4 v1, 0x0
 
     if-nez p1, :cond_2
 
-    .line 553
+    .line 556
     iget-object p1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->mWidgetAddTask:Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay$WidgetAddTask;
 
     if-eqz p1, :cond_1
 
-    .line 554
+    .line 557
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0, v1, v1, v1, v1}, Landroid/graphics/Rect;-><init>(IIII)V
@@ -1897,13 +1897,13 @@
     :cond_1
     return-void
 
-    .line 559
+    .line 562
     :cond_2
     instance-of v2, p1, Lcom/miui/home/launcher/HostViewContainer;
 
     if-eqz v2, :cond_3
 
-    .line 560
+    .line 563
     check-cast p1, Lcom/miui/home/launcher/HostViewContainer;
 
     invoke-interface {p1}, Lcom/miui/home/launcher/HostViewContainer;->getHostView()Landroid/view/View;
@@ -1913,7 +1913,7 @@
     goto :goto_1
 
     :cond_3
-    const v2, 0x7f0a02e7
+    const v2, 0x7f0a02ec
 
     invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1922,18 +1922,18 @@
     :goto_1
     const/4 v2, 0x2
 
-    .line 561
+    .line 564
     new-array v2, v2, [I
 
-    .line 562
+    .line 565
     invoke-virtual {p1, v2}, Landroid/view/View;->getLocationOnScreen([I)V
 
-    .line 564
+    .line 567
     aget v1, v2, v1
 
     int-to-float v3, v1
 
-    .line 565
+    .line 568
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
     move-result v4
@@ -1952,12 +1952,12 @@
 
     const/4 v4, 0x1
 
-    .line 566
+    .line 569
     aget v2, v2, v4
 
     int-to-float v4, v2
 
-    .line 567
+    .line 570
     invoke-virtual {p1}, Landroid/view/View;->getHeight()I
 
     move-result p1
@@ -1974,19 +1974,19 @@
 
     float-to-int p1, v4
 
-    .line 569
+    .line 572
     iget-object v0, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->mWidgetAddTask:Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay$WidgetAddTask;
 
     if-eqz v0, :cond_4
 
-    .line 570
+    .line 573
     new-instance v4, Landroid/graphics/Rect;
 
     invoke-direct {v4, v1, v2, v3, p1}, Landroid/graphics/Rect;-><init>(IIII)V
 
     invoke-virtual {v0, v4}, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay$WidgetAddTask;->setAnimationRect(Landroid/graphics/Rect;)V
 
-    .line 572
+    .line 575
     :cond_4
     iget-object p1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->mAddingView:Landroid/view/View;
 
@@ -1994,7 +1994,7 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 573
+    .line 576
     iget-object p1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->mWorkSpace:Lcom/miui/home/launcher/Workspace;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Workspace;->getPreviousScreenTransitionType()I
@@ -2019,7 +2019,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 454
+    .line 457
     invoke-virtual/range {p2 .. p2}, Landroid/os/Bundle;->isEmpty()Z
 
     move-result v2
@@ -2028,17 +2028,17 @@
 
     goto/16 :goto_1
 
-    .line 459
+    .line 462
     :cond_0
     monitor-enter p0
 
-    .line 460
+    .line 463
     :try_start_0
     iput-object v0, v7, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->mPaItemInfo:Lcom/miui/home/launcher/ItemInfo;
 
     const-string v2, "AssistantDragOverlay"
 
-    .line 461
+    .line 464
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -2061,7 +2061,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 462
+    .line 465
     iget-object v2, v7, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->mDragLayer:Lcom/miui/home/launcher/DragLayer;
 
     invoke-direct {v7, v1}, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->obtainMotionEvent(Landroid/os/Bundle;)Landroid/view/MotionEvent;
@@ -2070,7 +2070,7 @@
 
     invoke-virtual {v2, v3}, Lcom/miui/home/launcher/DragLayer;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
 
-    .line 463
+    .line 466
     iget-object v2, v7, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->mDragLayer:Lcom/miui/home/launcher/DragLayer;
 
     invoke-direct {v7, v1}, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->mockMoveEvent(Landroid/os/Bundle;)Landroid/view/MotionEvent;
@@ -2079,7 +2079,7 @@
 
     invoke-virtual {v2, v3}, Lcom/miui/home/launcher/DragLayer;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    .line 465
+    .line 468
     new-instance v15, Landroid/graphics/drawable/ColorDrawable;
 
     const/4 v2, 0x0
@@ -2088,46 +2088,46 @@
 
     const-string v3, "preview_left"
 
-    .line 466
+    .line 469
     invoke-virtual {v1, v3}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result v12
 
     const-string v3, "preview_top"
 
-    .line 467
+    .line 470
     invoke-virtual {v1, v3}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result v13
 
     const-string v3, "preview_width"
 
-    .line 468
+    .line 471
     invoke-virtual {v1, v3}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result v3
 
     const-string v4, "preview_height"
 
-    .line 469
+    .line 472
     invoke-virtual {v1, v4}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result v4
 
-    .line 470
+    .line 473
     invoke-virtual {v15, v12, v13, v3, v4}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 471
+    .line 474
     invoke-virtual {v15}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v14
 
-    .line 472
+    .line 475
     new-instance v3, Landroid/graphics/RectF;
 
     invoke-direct {v3}, Landroid/graphics/RectF;-><init>()V
 
-    .line 473
+    .line 476
     new-instance v4, Landroid/widget/ImageView;
 
     iget-object v5, v7, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->mLauncher:Lcom/miui/home/launcher/Launcher;
@@ -2144,7 +2144,7 @@
 
     invoke-virtual {v4, v3, v5}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;Landroid/graphics/RectF;)Z
 
-    .line 474
+    .line 477
     invoke-virtual {v3}, Landroid/graphics/RectF;->width()F
 
     move-result v4
@@ -2155,7 +2155,7 @@
 
     float-to-int v4, v4
 
-    .line 475
+    .line 478
     invoke-virtual {v3}, Landroid/graphics/RectF;->height()F
 
     move-result v3
@@ -2164,17 +2164,17 @@
 
     float-to-int v3, v3
 
-    .line 474
+    .line 477
     invoke-virtual {v15, v2, v2, v4, v3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
     const-string v3, "drag_source"
 
-    .line 477
+    .line 480
     invoke-virtual {v1, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 478
+    .line 481
     new-instance v16, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay$2;
 
     iget-boolean v1, v7, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->mPickerDragToAssistantSupported:Z
@@ -2201,7 +2201,7 @@
 
     invoke-direct/range {v1 .. v6}, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay$2;-><init>(Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;Ljava/lang/String;ZLcom/miui/home/launcher/ItemInfo;Ljava/lang/String;)V
 
-    .line 497
+    .line 500
     iget-object v1, v7, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/Launcher;->getDragController()Lcom/miui/home/launcher/DragController;
@@ -2230,10 +2230,10 @@
 
     invoke-virtual/range {v8 .. v16}, Lcom/miui/home/launcher/DragController;->startDrag(Landroid/graphics/drawable/Drawable;ZLcom/miui/home/launcher/ItemInfo;IIFLcom/miui/home/launcher/DragSource;I)Z
 
-    .line 499
+    .line 502
     invoke-virtual {v1, v0}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
-    .line 500
+    .line 503
     monitor-exit p0
 
     return-void
@@ -2251,7 +2251,7 @@
     :goto_1
     const-string v1, "AssistantDragOverlay"
 
-    .line 455
+    .line 458
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2278,7 +2278,7 @@
 
     return-void
 
-    .line 515
+    .line 518
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -2286,10 +2286,10 @@
 
     move-result-object v0
 
-    .line 516
+    .line 519
     iput-object p1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->mPaItemInfo:Lcom/miui/home/launcher/ItemInfo;
 
-    .line 518
+    .line 521
     new-instance v1, Lcom/miui/home/launcher/overlay/assistant/-$$Lambda$AssistantDragOverlay$LHTB-eXFZ3fwr9D6J40MkGYL8ZA;
 
     invoke-direct {v1, p0, p1, v0}, Lcom/miui/home/launcher/overlay/assistant/-$$Lambda$AssistantDragOverlay$LHTB-eXFZ3fwr9D6J40MkGYL8ZA;-><init>(Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;Lcom/miui/home/launcher/ItemInfo;Lcom/miui/home/launcher/Workspace;)V
@@ -2311,7 +2311,7 @@
         }
     .end annotation
 
-    .line 768
+    .line 771
     :try_start_0
     iget-object v0, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->mUIExecutor:Lcom/miui/home/launcher/MainThreadExecutor;
 
@@ -2327,7 +2327,7 @@
 
     sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    .line 772
+    .line 775
     invoke-interface {p1, v0, v1, v2}, Ljava/util/concurrent/Future;->get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
 
     move-result-object p1
@@ -2341,7 +2341,7 @@
     :catch_0
     move-exception p1
 
-    .line 774
+    .line 777
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
     const/4 p1, 0x0
@@ -2375,7 +2375,7 @@
 
     const/4 v0, 0x0
 
-    .line 577
+    .line 580
     :goto_0
     invoke-virtual {p1}, Lcom/miui/home/launcher/CellLayout;->getChildCount()I
 
@@ -2383,12 +2383,12 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 578
+    .line 581
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/CellLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 579
+    .line 582
     invoke-virtual {v1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v2
@@ -2399,7 +2399,7 @@
 
     return-object v1
 
-    .line 583
+    .line 586
     :cond_0
     instance-of v3, v2, Lcom/miui/home/launcher/widget/MIUIAppWidgetInfo;
 
@@ -2409,7 +2409,7 @@
 
     if-eqz v3, :cond_1
 
-    .line 584
+    .line 587
     check-cast v2, Lcom/miui/home/launcher/widget/MIUIAppWidgetInfo;
 
     invoke-virtual {v2}, Lcom/miui/home/launcher/widget/MIUIAppWidgetInfo;->getAppWidgetId()I
@@ -2930,7 +2930,7 @@
 .end method
 
 .method public onOverlayInvoke(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)V
-    .locals 1
+    .locals 2
 
     .line 333
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -2949,6 +2949,8 @@
 
     move-result v0
 
+    const/4 v1, 0x0
+
     sparse-switch v0, :sswitch_data_0
 
     goto/16 :goto_0
@@ -2964,7 +2966,7 @@
 
     const/16 p2, 0x9
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :sswitch_1
     const-string v0, "transfer_start_activity"
@@ -2993,6 +2995,19 @@
     goto :goto_0
 
     :sswitch_3
+    const-string v0, "edit_mode_change"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    const/16 p2, 0xa
+
+    goto :goto_0
+
+    :sswitch_4
     const-string v0, "open_classic_picker"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -3005,7 +3020,7 @@
 
     goto :goto_0
 
-    :sswitch_4
+    :sswitch_5
     const-string v0, "drag_prepare"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -3018,7 +3033,7 @@
 
     goto :goto_0
 
-    :sswitch_5
+    :sswitch_6
     const-string v0, "drag_pointer"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -3031,7 +3046,7 @@
 
     goto :goto_0
 
-    :sswitch_6
+    :sswitch_7
     const-string v0, "dragging"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -3044,7 +3059,7 @@
 
     goto :goto_0
 
-    :sswitch_7
+    :sswitch_8
     const-string v0, "drag_end"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -3057,7 +3072,7 @@
 
     goto :goto_0
 
-    :sswitch_8
+    :sswitch_9
     const-string v0, "drag_start"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -3066,11 +3081,11 @@
 
     if-eqz p1, :cond_1
 
-    const/4 p2, 0x0
+    move p2, v1
 
     goto :goto_0
 
-    :sswitch_9
+    :sswitch_a
     const-string v0, "add_widget"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -3087,14 +3102,28 @@
 
     goto/16 :goto_1
 
-    .line 439
+    .line 442
     :pswitch_0
+    iget-object p1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->mLauncher:Lcom/miui/home/launcher/Launcher;
+
+    const-string p2, "state_open"
+
+    invoke-virtual {p3, p2, v1}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result p2
+
+    invoke-virtual {p1, p2}, Lcom/miui/home/launcher/Launcher;->changeMIUIWidgetEditMode(Z)V
+
+    goto/16 :goto_1
+
+    .line 439
+    :pswitch_1
     invoke-static {p3}, Lcom/miui/home/launcher/overlay/assistant/AssistantInstallCallback;->upgradeMaMls(Landroid/os/Bundle;)V
 
     goto :goto_1
 
     .line 402
-    :pswitch_1
+    :pswitch_2
     iget-object p1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     new-instance p2, Lcom/miui/home/launcher/overlay/assistant/-$$Lambda$AssistantDragOverlay$nipn5_PHB9Ttpl3HpDWLygxaE7g;
@@ -3106,7 +3135,7 @@
     goto :goto_1
 
     .line 399
-    :pswitch_2
+    :pswitch_3
     iget-object p1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     new-instance p2, Lcom/miui/home/launcher/overlay/assistant/-$$Lambda$AssistantDragOverlay$_jihNYuv4sRYyZET2g26pkauTZE;
@@ -3118,7 +3147,7 @@
     goto :goto_1
 
     .line 393
-    :pswitch_3
+    :pswitch_4
     iget-object p1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     new-instance p2, Lcom/miui/home/launcher/overlay/assistant/-$$Lambda$AssistantDragOverlay$ohNwPlgGhw7FfBUnCMZkxUvxSyQ;
@@ -3130,7 +3159,7 @@
     goto :goto_1
 
     .line 390
-    :pswitch_4
+    :pswitch_5
     iget-object p1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     new-instance p2, Lcom/miui/home/launcher/overlay/assistant/-$$Lambda$AssistantDragOverlay$OSUTmw5hhVzZf_Rzfl7rFQ9B49M;
@@ -3141,7 +3170,7 @@
 
     goto :goto_1
 
-    :pswitch_5
+    :pswitch_6
     const-string p1, "assistant_enable"
 
     .line 377
@@ -3160,7 +3189,7 @@
 
     goto :goto_1
 
-    :pswitch_6
+    :pswitch_7
     const/4 p1, 0x0
 
     .line 360
@@ -3178,7 +3207,7 @@
     goto :goto_1
 
     .line 350
-    :pswitch_7
+    :pswitch_8
     iget-object p1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     new-instance p2, Lcom/miui/home/launcher/overlay/assistant/-$$Lambda$AssistantDragOverlay$0F67jETJPcZGAM9TfJhTKccXbOQ;
@@ -3190,7 +3219,7 @@
     goto :goto_1
 
     .line 341
-    :pswitch_8
+    :pswitch_9
     monitor-enter p0
 
     .line 342
@@ -3227,13 +3256,14 @@
 
     :sswitch_data_0
     .sparse-switch
-        -0x7f03e85e -> :sswitch_9
-        -0x3f3b6269 -> :sswitch_8
-        -0x3225d4b0 -> :sswitch_7
-        -0x322222b1 -> :sswitch_6
-        -0x4b861ce -> :sswitch_5
-        0x2e6cfc -> :sswitch_4
-        0x29920f70 -> :sswitch_3
+        -0x7f03e85e -> :sswitch_a
+        -0x3f3b6269 -> :sswitch_9
+        -0x3225d4b0 -> :sswitch_8
+        -0x322222b1 -> :sswitch_7
+        -0x4b861ce -> :sswitch_6
+        0x2e6cfc -> :sswitch_5
+        0x29920f70 -> :sswitch_4
+        0x32965717 -> :sswitch_3
         0x3b7b7be5 -> :sswitch_2
         0x3db5b120 -> :sswitch_1
         0x6f6cb05f -> :sswitch_0
@@ -3241,9 +3271,10 @@
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_9
         :pswitch_8
         :pswitch_7
-        :pswitch_6
+        :pswitch_7
         :pswitch_6
         :pswitch_5
         :pswitch_4

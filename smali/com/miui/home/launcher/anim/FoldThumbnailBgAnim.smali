@@ -103,7 +103,7 @@
 
     if-eqz v1, :cond_0
 
-    const v1, 0x7f0600c7
+    const v1, 0x7f0600c8
 
     .line 69
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
@@ -112,7 +112,7 @@
 
     iput v1, p0, Lcom/miui/home/launcher/anim/FoldThumbnailBgAnim;->mBackgroundNormalColor:I
 
-    const v1, 0x7f0600cb
+    const v1, 0x7f0600cc
 
     .line 70
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
@@ -121,7 +121,7 @@
 
     iput v1, p0, Lcom/miui/home/launcher/anim/FoldThumbnailBgAnim;->mFoldBackgroundSelectColor:I
 
-    const v1, 0x7f0600c9
+    const v1, 0x7f0600ca
 
     .line 71
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
@@ -133,7 +133,7 @@
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f0600c6
+    const v1, 0x7f0600c7
 
     .line 73
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
@@ -142,7 +142,7 @@
 
     iput v1, p0, Lcom/miui/home/launcher/anim/FoldThumbnailBgAnim;->mBackgroundNormalColor:I
 
-    const v1, 0x7f0600ca
+    const v1, 0x7f0600cb
 
     .line 74
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
@@ -151,7 +151,7 @@
 
     iput v1, p0, Lcom/miui/home/launcher/anim/FoldThumbnailBgAnim;->mFoldBackgroundSelectColor:I
 
-    const v1, 0x7f0600c8
+    const v1, 0x7f0600c9
 
     .line 75
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I

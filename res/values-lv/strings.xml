@@ -53,7 +53,7 @@
     <string name="activity_not_unlocked">Pirms programmu atvēršanas pagaidiet, līdz ierīce tiek pilnībā atsāknēta</string>
     <string name="add_custom_category">Personalizēts</string>
     <string name="add_screen">Pievienot ekrānu</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">Pievienot Sākuma ekrānam</string>
     <string name="added_all_category">Visas lietotnes veiksmīgi pievienotas</string>
     <string name="afternoon">Pēcpusdiena</string>
     <string name="agree_button">Piekrist</string>
@@ -379,6 +379,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">Nospiediet un turiet, lai pievienotu Sākuma ekrānam</string>
+    <string name="fold_pair_installed_shortcut_launcher">Šī saīsne jau pastāv</string>
     <string name="folder_name">Mape</string>
     <string name="frame_load_failed">Nevar ielādēt rāmi</string>
     <string name="free_style_apps_title">Izvēlēties lietotni</string>
@@ -658,6 +660,7 @@
     <string name="night">Vakars</string>
     <string name="no_detail_page">Nav informācijas lappuses</string>
     <string name="no_space_toast">Nepietiek atmiņas</string>
+    <string name="no_space_toast_fold">Šeit nepietiek atmiņas</string>
     <string name="no_space_toast_when_click_widget">Šajā lapā nav pietiekami daudz vietas. Mēģiniet vilkt šo vienumu uz citu lapu.</string>
     <string name="noon">Pusdienlaiks</string>
     <string name="normal_wallpaper">Ekrāna tapete</string>
@@ -679,7 +682,7 @@
     <string name="ota_layout_adjustment_content">iekšējā un ārējā Sākuma ekrāna izkārtojumi tika sinhronizēti jaunajā versijā.</string>
     <string name="ota_layout_adjustment_title">Sākuma ekrāna izkārtojumi</string>
     <string name="out_of_space">Šajā Sākuma ekrānā vairs nav vietas</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">Atveidot animācijas trešās puses lietotņu ikonās</string>
     <string name="perfect_icons_switch_title">Globālas ikonu animācijas</string>
     <string name="permdesc_install_shortcut">Atļauj lietotnei pievienot saīsnes bez lietotāja iejaukšanās.</string>

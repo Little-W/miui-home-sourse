@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Landroid/os/Handler;)V
     .locals 0
 
-    .line 3853
+    .line 3844
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$33;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -35,7 +35,7 @@
 .method public onChange(Z)V
     .locals 2
 
-    .line 3856
+    .line 3847
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$33;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getApplicationContext()Landroid/content/Context;
@@ -48,7 +48,7 @@
 
     move-result v0
 
-    invoke-static {p1, v0}, Lcom/miui/home/launcher/Launcher;->access$3702(Lcom/miui/home/launcher/Launcher;Z)Z
+    invoke-static {p1, v0}, Lcom/miui/home/launcher/Launcher;->access$3802(Lcom/miui/home/launcher/Launcher;Z)Z
 
     return-void
 .end method

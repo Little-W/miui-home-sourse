@@ -26,7 +26,7 @@
     <string name="activity_not_unlocked">ລໍຖ້າຈົນກວ່າອຸປະກອນຂອງທ່ານປິດເປີດເຄື່ອງຄືນໃໝ່ສຳເລັດກ່ອນເປີດໃຊ້ແອັບ</string>
     <string name="add_custom_category">​ກຳ​ນົດ​ເອງ</string>
     <string name="add_screen">ເພີ່ມໜ້າຈໍ</string>
-    <string name="add_to_workspace">添加至桌面</string>
+    <string name="add_to_workspace">ເພີ່ມ​ລົງ​ໃນ​ໜ້າ​ຈໍຫຼັກ</string>
     <string name="added_all_category">​ເພີ່ມແອັບທັງໝົດ​ສຳ​ເລັດ​ແລ້ວ</string>
     <string name="afternoon">ຕອນບ່າຍ</string>
     <string name="agree_button">​​ເຫັນ​ດີ</string>
@@ -349,6 +349,8 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
+    <string name="fold_pair_install_shortcut_long_click">ກົດຄ້າງເພື່ອເພີ່ມໄປທີ່ໜ້າ​ຈໍຫຼັກ​</string>
+    <string name="fold_pair_installed_shortcut_launcher">​ມີ​ປຸ່ມລັດນີ້​ຢູ່​ແລ້ວ</string>
     <string name="folder_name">ໂຟລເດີ</string>
     <string name="frame_load_failed">ບໍ່ສາມາດໂຫຼດຂອບພາບໄດ້</string>
     <string name="free_style_apps_title">ເລືອກແອັບ</string>
@@ -628,6 +630,7 @@
     <string name="night">ຕອນຄ່ຳ</string>
     <string name="no_detail_page">ບໍ່ມີໜ້າລາຍລະອຽດ</string>
     <string name="no_space_toast">​ພື້ນ​ທີ່​ບໍ່​ພຽງ​ພໍ</string>
+    <string name="no_space_toast_fold">​ພື້ນ​ທີ່​ບໍ່​ພຽງ​ພໍທີ່ນີ້</string>
     <string name="no_space_toast_when_click_widget">​ພື້ນ​ທີ່​​ບໍ່ພຽງ​ພໍ​ໃນໜ້ານີ້. ລອງລາກລາຍການນີ້ໄປທີ່ໜ້າອື່ນ.</string>
     <string name="noon">ຕອນກາງເວັນ</string>
     <string name="normal_wallpaper">ພາບພື້ນຫຼັງ</string>
@@ -636,7 +639,7 @@
     <string name="notification_reset_title">ຈັດຮຽງໄອຄອນສຳເລັດແລ້ວ</string>
     <string name="one_key_call_title">ແຕະເພື່ອໂທ</string>
     <string name="online_wallpaper">ອອນໄລນ໌</string>
-    <string name="open_pad_personal_assistant_settings">Home screen widgets</string>
+    <string name="open_pad_personal_assistant_settings">Widget ໜ້າຈໍຫຼັກ</string>
     <string name="open_personal_assistant_dialog_btn_cancel">ຍົກເລີກ</string>
     <string name="open_personal_assistant_dialog_btn_confirm">ປິດ</string>
     <string name="open_personal_assistant_dialog_desc">ຫຼັງຈາກທ່ານປິດ App vault, ທ່ານບໍ່ສາມາດເບິ່ງຫຼືໃຊ້ App vault Widget. ທ່ານຈະບໍ່ສາມາດໃຊ້ງານເວີຊັ່ນທີ່ອັບເດດໄດ້ເຊັ່ນກັນ. ປິດຫຼືບໍ?</string>
@@ -648,7 +651,7 @@
     <string name="ota_layout_adjustment_content">ຮູບແບບການຈັດວາງໜ້າຈໍຫຼັກທັງພາຍໃນແລະພາຍນອກໄດ້ຮັບການຊິ້ງຂໍ້ມູນຢູ່ໃນເວີຊັ່ນໃ່ໝ່.</string>
     <string name="ota_layout_adjustment_title">ຮູບແບບການຈັດວາງໜ້າຈໍຫຼັກ</string>
     <string name="out_of_space">ບໍ່ມີພື້ນທີ່ຫວ່າງໃນໜ້າຈໍຫຼັກນີ້</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
+    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">ສະແດງພາບເຄື່ອນໄຫວໃນໄອຄອນແອັບພາກສ່ວນທີສາມ</string>
     <string name="perfect_icons_switch_title">ພາບເຄື່ອນໄຫວໄອຄອນທົ່ວໂລກ</string>
     <string name="permdesc_install_shortcut">ອະນຸຍາດໃຫ້ແອັບເພີ່ມ ປຸ່ມລັດໂດຍບໍ່ມີການແຊກແຊງຈາກຜູ້ໃຊ້.</string>
