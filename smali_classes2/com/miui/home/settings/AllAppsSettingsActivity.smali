@@ -63,7 +63,7 @@
     :cond_0
     if-eqz p1, :cond_1
 
-    const v1, 0x7f10023f
+    const v1, 0x7f100240
 
     goto :goto_0
 

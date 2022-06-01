@@ -30,10 +30,10 @@
 .method private constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 1
 
-    .line 7717
+    .line 7757
     invoke-direct {p0}, Lcom/miui/internal/transition/IMiuiAppTransitionAnimationHelper$Stub;-><init>()V
 
-    .line 7718
+    .line 7758
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -46,7 +46,7 @@
 .method synthetic constructor <init>(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/Launcher$1;)V
     .locals 0
 
-    .line 7714
+    .line 7754
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/Launcher$MiuiAppTransitionCallback;-><init>(Lcom/miui/home/launcher/Launcher;)V
 
     return-void
@@ -57,7 +57,7 @@
 .method public getSpec(Ljava/lang/String;I)Lcom/miui/internal/transition/MiuiAppTransitionAnimationSpec;
     .locals 2
 
-    .line 7723
+    .line 7763
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$MiuiAppTransitionCallback;->mLauncherRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -72,7 +72,7 @@
 
     return-object p1
 
-    .line 7727
+    .line 7767
     :cond_0
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getSearchEdgeLayout()Lcom/miui/home/launcher/search/SearchEdgeLayout;
 
@@ -80,17 +80,17 @@
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/search/SearchEdgeLayout;->finish()V
 
-    .line 7728
+    .line 7768
     new-instance v1, Landroid/graphics/Rect;
 
     invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
 
-    .line 7729
+    .line 7769
     invoke-virtual {v0, p1, p2, v1}, Lcom/miui/home/launcher/Launcher;->getShowingItem(Ljava/lang/String;ILandroid/graphics/Rect;)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
-    .line 7730
+    .line 7770
     new-instance p2, Lcom/miui/internal/transition/MiuiAppTransitionAnimationSpec;
 
     invoke-direct {p2, p1, v1}, Lcom/miui/internal/transition/MiuiAppTransitionAnimationSpec;-><init>(Landroid/graphics/Bitmap;Landroid/graphics/Rect;)V
@@ -101,7 +101,7 @@
 .method public notifyMiuiAnimationEnd()V
     .locals 1
 
-    .line 7744
+    .line 7784
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$MiuiAppTransitionCallback;->mLauncherRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -114,7 +114,7 @@
 
     return-void
 
-    .line 7748
+    .line 7788
     :cond_0
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->notifyMiuiAnimationEnd()V
 
@@ -124,7 +124,7 @@
 .method public notifyMiuiAnimationStart()V
     .locals 1
 
-    .line 7735
+    .line 7775
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$MiuiAppTransitionCallback;->mLauncherRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -137,7 +137,7 @@
 
     return-void
 
-    .line 7739
+    .line 7779
     :cond_0
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->notifyMiuiAnimationStart()V
 

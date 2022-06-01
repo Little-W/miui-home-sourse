@@ -728,9 +728,11 @@
     <string name="recents_title_security_scan">భద్రతా స్కాన్</string>
     <string name="recents_tv_small_window_text">తేలియాడే విండోలు</string>
     <string name="recents_worldcirculate_text">ఎంపిక చేసేందుకు విడుదల చేయండి</string>
+    <string name="recnets_relay_device_info">%s నుండి</string>
     <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
     <string name="recnets_worldcirculate_display_computer_info">యాప్ %sలో పని చేస్తుంది.</string>
     <string name="recnets_worldcirculate_display_default_info">ఇక్కడకు దానిని తిరిగి తీసుకొచ్చేందుకు ట్యాప్ చేయండి</string>
+    <string name="recnets_worldcirculate_display_default_info_pad">ఇక్కడకు దానిని తిరిగి తీసుకొచ్చేందుకు ట్యాప్ చేయండి</string>
     <string name="recnets_worldcirculate_display_pad_info">యాప్ %sలో పని చేస్తుంది.</string>
     <string name="recommend_apk_size_and_desc">%1$dMB | %2$s</string>
     <string name="recommend_app">అప్లికేషన్ సూచనలు</string>
@@ -915,6 +917,7 @@
     <string name="uninstall_xspace_dialog_title_format">డ్యుయల్ \"%s\"ని అన్‌ఇన్‌స్టాల్ చేయాలా?</string>
     <string name="unknown_artist_name">తెలియని కళాకారుడు</string>
     <string name="unnamed_folder_name">ఫోల్డర్</string>
+    <string name="upgrade_remove_small_window_in_recents">మీరు తేలియాడే విండోల్లో యాప్‌లను తెరిచేందుకు సైడ్‌బార్‌ని ఉపయోగించవచ్చు</string>
     <string name="wallpaper">వాల్‌పేపర్</string>
     <string name="wallpaper_auto_change_title">లాక్ స్క్రీన్</string>
     <string name="wallpaper_failed_message">వాల్‌పేపర్‌ను అమర్చలేము</string>

@@ -109,7 +109,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0700ee
+    const v2, 0x7f0700f1
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -142,7 +142,7 @@
     .line 29
     invoke-super {p0}, Lcom/miui/home/launcher/AutoLayoutThumbnailItem;->onFinishInflate()V
 
-    const v0, 0x7f0a029f
+    const v0, 0x7f0a02a1
 
     .line 30
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ThumbnailContainerBorder;->findViewById(I)Landroid/view/View;

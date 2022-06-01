@@ -728,9 +728,11 @@
     <string name="recents_title_security_scan">Segurtasun analisia</string>
     <string name="recents_tv_small_window_text">Leiho flotatzaileak</string>
     <string name="recents_worldcirculate_text">Askatu aukeratzeko</string>
+    <string name="recnets_relay_device_info">%s-tik</string>
     <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
     <string name="recnets_worldcirculate_display_computer_info">Aplikazioa %s-en funtzionatzen ari da.</string>
     <string name="recnets_worldcirculate_display_default_info">Sakatu hona berriz ekartzeko</string>
+    <string name="recnets_worldcirculate_display_default_info_pad">Sakatu hona berriz ekartzeko</string>
     <string name="recnets_worldcirculate_display_pad_info">Aplikazioa %s-en funtzionatzen ari da.</string>
     <string name="recommend_apk_size_and_desc">"%1$dMB | %2$s "</string>
     <string name="recommend_app">Aplikazio iradokizunak</string>
@@ -915,6 +917,7 @@
     <string name="uninstall_xspace_dialog_title_format">\"%s\" bikoitza desinstalatu?</string>
     <string name="unknown_artist_name">Artista ezezaguna</string>
     <string name="unnamed_folder_name">Karpeta</string>
+    <string name="upgrade_remove_small_window_in_recents">Alboko barra erabil dezakezu aplikazioak leiho flotatzaileetan irekitzeko</string>
     <string name="wallpaper">Horma-papera</string>
     <string name="wallpaper_auto_change_title">Blokeo pantaila</string>
     <string name="wallpaper_failed_message">Ezin izan da horma-papera ezarri</string>

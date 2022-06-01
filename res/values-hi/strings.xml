@@ -760,9 +760,11 @@
     <string name="recents_title_security_scan">सुरक्षा स्कैन</string>
     <string name="recents_tv_small_window_text">फ़्लोटिंग विंडोज</string>
     <string name="recents_worldcirculate_text">चुनने के लिए रिलीज़ करें</string>
+    <string name="recnets_relay_device_info">%s से</string>
     <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
     <string name="recnets_worldcirculate_display_computer_info">ऐप्प %s पर काम कर रहा है.</string>
     <string name="recnets_worldcirculate_display_default_info">यहां वापस लाने के लिए टैप करें</string>
+    <string name="recnets_worldcirculate_display_default_info_pad">यहां वापस लाने के लिए टैप करें.</string>
     <string name="recnets_worldcirculate_display_pad_info">ऐप्प %s पर काम कर रहा है.</string>
     <string name="recommend_apk_size_and_desc">%1$dMB | %2$s</string>
     <string name="recommend_app">ऐप्प सुझाव</string>
@@ -950,6 +952,7 @@
     <string name="uninstall_xspace_dialog_title_format">ड्युअल \"%s\" को अनइंस्टॉल करें?</string>
     <string name="unknown_artist_name">अज्ञात कलाकार</string>
     <string name="unnamed_folder_name">फ़ोल्डर</string>
+    <string name="upgrade_remove_small_window_in_recents">आप फ़्लोटिंग विंडो में ऐप्स खोलने के लिए साइडबार का उपयोग कर सकते हैं</string>
     <string name="v7_preference_off">बंद</string>
     <string name="v7_preference_on">चालू</string>
     <string name="wallpaper">वॉलपेपर</string>

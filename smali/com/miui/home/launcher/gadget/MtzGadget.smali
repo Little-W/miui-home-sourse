@@ -75,7 +75,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f0a0101
+    const v0, 0x7f0a0102
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -83,7 +83,7 @@
 
     check-cast p1, Landroid/widget/TextView;
 
-    const v0, 0x7f1002d4
+    const v0, 0x7f1002d5
 
     .line 42
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(I)V

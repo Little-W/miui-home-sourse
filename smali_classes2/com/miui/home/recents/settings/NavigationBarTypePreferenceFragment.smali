@@ -313,7 +313,7 @@
 
     const-string v1, "com.android.settings.KeyShortcutSettingsFragment"
 
-    const v2, 0x7f10024d
+    const v2, 0x7f10024e
 
     .line 111
     invoke-virtual {p0}, Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;->getContext()Landroid/content/Context;
@@ -667,7 +667,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f1002e1
+    const v2, 0x7f1002e2
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -851,7 +851,7 @@
     .line 287
     iget-object p1, p0, Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;->mNavigationPosition:Lcom/miui/home/settings/preference/ValuePreference;
 
-    const v0, 0x7f100309
+    const v0, 0x7f10030a
 
     invoke-virtual {p1, v0}, Lcom/miui/home/settings/preference/ValuePreference;->setValue(I)V
 
@@ -870,7 +870,7 @@
     .line 289
     iget-object p1, p0, Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;->mNavigationPosition:Lcom/miui/home/settings/preference/ValuePreference;
 
-    const v0, 0x7f10030a
+    const v0, 0x7f10030b
 
     invoke-virtual {p1, v0}, Lcom/miui/home/settings/preference/ValuePreference;->setValue(I)V
 
@@ -880,7 +880,7 @@
     :cond_1
     iget-object p1, p0, Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;->mNavigationPosition:Lcom/miui/home/settings/preference/ValuePreference;
 
-    const v0, 0x7f100308
+    const v0, 0x7f100309
 
     invoke-virtual {p1, v0}, Lcom/miui/home/settings/preference/ValuePreference;->setValue(I)V
 
@@ -1046,12 +1046,12 @@
 
     invoke-direct {v0, v1}, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f1002f5
+    const v1, 0x7f1002f6
 
     .line 272
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;->setTitle(I)V
 
-    const v1, 0x7f1002f4
+    const v1, 0x7f1002f5
 
     .line 273
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;->setMessage(I)V
@@ -1080,12 +1080,12 @@
 
     if-eqz p1, :cond_0
 
-    const v1, 0x7f1002d6
+    const v1, 0x7f1002d7
 
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f1002d8
+    const v1, 0x7f1002d9
 
     :goto_0
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setSummary(I)V
@@ -1095,12 +1095,12 @@
 
     if-eqz p1, :cond_1
 
-    const v1, 0x7f080516
+    const v1, 0x7f08051e
 
     goto :goto_1
 
     :cond_1
-    const v1, 0x7f080515
+    const v1, 0x7f08051d
 
     :goto_1
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setIcon(I)V
@@ -1110,12 +1110,12 @@
 
     if-eqz p1, :cond_2
 
-    const v1, 0x7f08051b
+    const v1, 0x7f080523
 
     goto :goto_2
 
     :cond_2
-    const v1, 0x7f08051a
+    const v1, 0x7f080522
 
     :goto_2
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setIcon(I)V
@@ -1125,12 +1125,12 @@
 
     if-eqz p1, :cond_3
 
-    const v1, 0x7f080519
+    const v1, 0x7f080521
 
     goto :goto_3
 
     :cond_3
-    const v1, 0x7f080518
+    const v1, 0x7f080520
 
     :goto_3
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setIcon(I)V
@@ -1140,12 +1140,12 @@
 
     if-eqz p1, :cond_4
 
-    const v1, 0x7f08051d
+    const v1, 0x7f080525
 
     goto :goto_4
 
     :cond_4
-    const v1, 0x7f08051c
+    const v1, 0x7f080524
 
     :goto_4
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setIcon(I)V
@@ -1155,12 +1155,12 @@
 
     if-eqz p1, :cond_5
 
-    const p1, 0x7f080514
+    const p1, 0x7f08051c
 
     goto :goto_5
 
     :cond_5
-    const p1, 0x7f080513
+    const p1, 0x7f08051b
 
     :goto_5
     invoke-virtual {v0, p1}, Landroidx/preference/Preference;->setIcon(I)V
@@ -1425,7 +1425,7 @@
 
     iput-object p1, p0, Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;->mContext:Landroid/content/Context;
 
-    const p1, 0x7f13001f
+    const p1, 0x7f130020
 
     .line 85
     invoke-virtual {p0, p1, p2}, Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;->setPreferencesFromResource(ILjava/lang/String;)V

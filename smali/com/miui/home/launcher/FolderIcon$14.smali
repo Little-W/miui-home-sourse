@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/FolderIcon;Lcom/miui/home/launcher/ItemIcon;)V
     .locals 0
 
-    .line 825
+    .line 827
     iput-object p1, p0, Lcom/miui/home/launcher/FolderIcon$14;->this$0:Lcom/miui/home/launcher/FolderIcon;
 
     invoke-direct {p0, p2}, Lcom/miui/home/launcher/util/noword/NoWordItemIconAdapter;-><init>(Lcom/miui/home/launcher/ItemIcon;)V
@@ -35,7 +35,7 @@
 .method public canDrawForegroundTitle()Z
     .locals 2
 
-    .line 833
+    .line 835
     iget-object v0, p0, Lcom/miui/home/launcher/FolderIcon$14;->this$0:Lcom/miui/home/launcher/FolderIcon;
 
     invoke-static {v0}, Lcom/miui/home/launcher/FolderIcon;->access$1200(Lcom/miui/home/launcher/FolderIcon;)Landroid/view/View;
@@ -66,7 +66,7 @@
 .method public viewChangeAlphaWhenEditModeChange()Landroid/view/View;
     .locals 1
 
-    .line 828
+    .line 830
     iget-object v0, p0, Lcom/miui/home/launcher/FolderIcon$14;->this$0:Lcom/miui/home/launcher/FolderIcon;
 
     invoke-static {v0}, Lcom/miui/home/launcher/FolderIcon;->access$1200(Lcom/miui/home/launcher/FolderIcon;)Landroid/view/View;

@@ -5,6 +5,7 @@
     <dimen name="config_icon_height">53.0dip</dimen>
     <dimen name="config_icon_width">53.0dip</dimen>
     <dimen name="default_screen_preview_padding">71.899994dip</dimen>
+    <dimen name="desktop_mode_padding_right">5.0dip</dimen>
     <dimen name="desktop_mode_subtitle_width">180.0dip</dimen>
     <dimen name="edit_mode_indicator_diff">19.0dip</dimen>
     <dimen name="edit_mode_thumbnail_home_icon_radius">15.269989dip</dimen>

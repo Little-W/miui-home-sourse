@@ -21,7 +21,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 261
+    .line 265
     check-cast p1, Landroid/view/View;
 
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;-><init>(Landroid/view/View;)V
@@ -34,7 +34,7 @@
 .method public iconContainerId()I
     .locals 1
 
-    const v0, 0x7f0a013f
+    const v0, 0x7f0a0141
 
     return v0
 .end method
@@ -42,7 +42,7 @@
 .method public iconView()Landroid/view/View;
     .locals 1
 
-    .line 264
+    .line 268
     invoke-virtual {p0}, Lcom/miui/home/launcher/util/noword/NoWordItemIconAdapter;->getMBindElement()Landroid/view/View;
 
     move-result-object v0
@@ -61,7 +61,7 @@
 .method public titleViewId()I
     .locals 1
 
-    const v0, 0x7f0a0147
+    const v0, 0x7f0a0149
 
     return v0
 .end method

@@ -208,7 +208,7 @@
     const-string v1, "getXmlRoot local inputStream is null"
 
     .line 141
-    invoke-static {p1, v1}, Lcom/miui/maml/util/MamlLog;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lcom/miui/maml/util/MamlLog;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v0
 
@@ -397,7 +397,7 @@
 
     move-result-object p1
 
-    invoke-static {p2, p1}, Lcom/miui/maml/util/MamlLog;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p2, p1}, Lcom/miui/maml/util/MamlLog;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v1
 
@@ -458,7 +458,7 @@
 
     move-result-object p1
 
-    invoke-static {p2, p1}, Lcom/miui/maml/util/MamlLog;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p2, p1}, Lcom/miui/maml/util/MamlLog;->i(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/OutOfMemoryError; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

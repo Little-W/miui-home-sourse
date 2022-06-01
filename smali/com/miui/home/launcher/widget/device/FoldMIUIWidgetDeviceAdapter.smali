@@ -142,7 +142,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070192
+    const v1, 0x7f070195
 
     invoke-static {v0, v1}, Landroidx/core/content/res/ResourcesCompat;->getFloat(Landroid/content/res/Resources;I)F
 

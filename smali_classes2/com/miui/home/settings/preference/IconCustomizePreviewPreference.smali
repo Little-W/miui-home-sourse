@@ -36,7 +36,7 @@
     .line 46
     invoke-direct {p0, p1, p2}, Landroidx/preference/Preference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    const p2, 0x7f0d007a
+    const p2, 0x7f0d007b
 
     .line 47
     invoke-virtual {p0, p2}, Lcom/miui/home/settings/preference/IconCustomizePreviewPreference;->setLayoutResource(I)V
@@ -290,7 +290,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0700a2
+    const v2, 0x7f0700a5
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -537,7 +537,7 @@
     :cond_1
     if-eqz p1, :cond_2
 
-    const v1, 0x7f0a01cf
+    const v1, 0x7f0a01d1
 
     .line 57
     invoke-virtual {p1, v1}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;

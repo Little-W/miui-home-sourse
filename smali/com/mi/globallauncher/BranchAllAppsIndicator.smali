@@ -492,7 +492,7 @@
     :cond_0
     if-eqz p1, :cond_1
 
-    const p1, 0x7f0800ba
+    const p1, 0x7f0800bb
 
     .line 89
     invoke-interface {v0}, Lcom/mi/globallauncher/BranchAllAppsIndicator$IBranchAllAppsIndicatorCallBack;->getHandleContainer()Landroid/widget/LinearLayout;

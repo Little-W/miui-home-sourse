@@ -49,6 +49,33 @@
     return-void
 .end method
 
+.method private getCurrentScreenOrder(I)I
+    .locals 4
+
+    add-int/lit8 p1, p1, 0x1
+
+    int-to-double v0, p1
+
+    .line 130
+    iget-object p1, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorFoldImpl;->mWorkspace:Lcom/miui/home/launcher/Workspace;
+
+    invoke-virtual {p1}, Lcom/miui/home/launcher/Workspace;->getVisibleRange()I
+
+    move-result p1
+
+    int-to-double v2, p1
+
+    div-double/2addr v0, v2
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->ceil(D)D
+
+    move-result-wide v0
+
+    double-to-int p1, v0
+
+    return p1
+.end method
+
 .method public static synthetic lambda$getCurrentRangeScreenID$0(Lcom/miui/home/launcher/common/CurrentIndexMediatorFoldImpl;Ljava/lang/Integer;)Ljava/lang/Long;
     .locals 2
 
@@ -194,6 +221,78 @@
 
     :cond_0
     return v1
+.end method
+
+.method public getAllIndexesOnScreen(I)Ljava/util/List;
+    .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I)",
+            "Ljava/util/List<",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+
+    .line 135
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    const/4 v1, 0x1
+
+    move v2, v1
+
+    .line 136
+    :goto_0
+    iget-object v3, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorFoldImpl;->mWorkspace:Lcom/miui/home/launcher/Workspace;
+
+    invoke-virtual {v3}, Lcom/miui/home/launcher/Workspace;->getVisibleRange()I
+
+    move-result v3
+
+    add-int/2addr v3, v1
+
+    if-ge v2, v3, :cond_1
+
+    .line 137
+    iget-object v3, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorFoldImpl;->mWorkspace:Lcom/miui/home/launcher/Workspace;
+
+    invoke-virtual {v3}, Lcom/miui/home/launcher/Workspace;->getVisibleRange()I
+
+    move-result v3
+
+    invoke-direct {p0, p1}, Lcom/miui/home/launcher/common/CurrentIndexMediatorFoldImpl;->getCurrentScreenOrder(I)I
+
+    move-result v4
+
+    sub-int/2addr v4, v1
+
+    mul-int/2addr v3, v4
+
+    .line 138
+    iget-object v4, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorFoldImpl;->mWorkspace:Lcom/miui/home/launcher/Workspace;
+
+    invoke-virtual {v4, v3}, Lcom/miui/home/launcher/Workspace;->getCellScreen(I)Lcom/miui/home/launcher/CellScreen;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_0
+
+    .line 139
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_0
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return-object v0
 .end method
 
 .method public getCurrentAllScreenID()Ljava/util/List;

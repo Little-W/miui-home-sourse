@@ -41,21 +41,21 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .line 57
+    .line 58
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lcom/miui/home/launcher/progress/ProgressManager;->START_SERVICE_SUPPORTED_SERVER_NAMES:Ljava/util/ArrayList;
 
-    .line 60
+    .line 61
     sget-object v0, Lcom/miui/home/launcher/progress/ProgressManager;->START_SERVICE_SUPPORTED_SERVER_NAMES:Ljava/util/ArrayList;
 
     const-string v1, "com.xiaomi.market"
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 61
+    .line 62
     sget-object v0, Lcom/miui/home/launcher/progress/ProgressManager;->START_SERVICE_SUPPORTED_SERVER_NAMES:Ljava/util/ArrayList;
 
     const-string v1, "com.xiaomi.gamecenter"
@@ -68,22 +68,22 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .line 64
+    .line 65
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     const-wide/16 v0, 0x0
 
-    .line 50
+    .line 51
     iput-wide v0, p0, Lcom/miui/home/launcher/progress/ProgressManager;->mQueryCheckCode:J
 
-    .line 255
+    .line 256
     new-instance v0, Lcom/miui/home/launcher/progress/ProgressManager$1;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/progress/ProgressManager$1;-><init>(Lcom/miui/home/launcher/progress/ProgressManager;)V
 
     iput-object v0, p0, Lcom/miui/home/launcher/progress/ProgressManager;->mCheckProgressTask:Ljava/lang/Runnable;
 
-    .line 65
+    .line 66
     new-instance v0, Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;
 
     invoke-direct {v0, p1}, Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;-><init>(Landroid/content/Context;)V
@@ -96,7 +96,7 @@
 .method static synthetic access$000(Lcom/miui/home/launcher/progress/ProgressManager;)V
     .locals 0
 
-    .line 24
+    .line 25
     invoke-direct {p0}, Lcom/miui/home/launcher/progress/ProgressManager;->checkProgress()V
 
     return-void
@@ -113,7 +113,7 @@
 .method static synthetic access$100()Z
     .locals 1
 
-    .line 24
+    .line 25
     sget-boolean v0, Lcom/miui/home/launcher/progress/ProgressManager;->mObservingUri:Z
 
     return v0
@@ -122,19 +122,19 @@
 .method private checkProgress()V
     .locals 2
 
-    .line 219
+    .line 220
     new-instance v0, Ljava/util/Random;
 
     invoke-direct {v0}, Ljava/util/Random;-><init>()V
 
-    .line 220
+    .line 221
     invoke-virtual {v0}, Ljava/util/Random;->nextLong()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/miui/home/launcher/progress/ProgressManager;->mQueryCheckCode:J
 
-    .line 221
+    .line 222
     iget-object v0, p0, Lcom/miui/home/launcher/progress/ProgressManager;->mApplicationProcessor:Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;
 
     if-eqz v0, :cond_0
@@ -147,21 +147,21 @@
 
     iget-object v0, p0, Lcom/miui/home/launcher/progress/ProgressManager;->mApplicationProcessor:Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;
 
-    .line 222
+    .line 223
     invoke-virtual {v0}, Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;->isStop()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 223
+    .line 224
     iget-object v0, p0, Lcom/miui/home/launcher/progress/ProgressManager;->mApplicationProcessor:Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;
 
     iget-object v1, p0, Lcom/miui/home/launcher/progress/ProgressManager;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;->checkProgress(Landroid/content/Context;)V
 
-    .line 225
+    .line 226
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/progress/ProgressManager;->mApplicationProcessor:Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;
 
@@ -175,7 +175,7 @@
 
     const/4 v0, 0x0
 
-    .line 226
+    .line 227
     sput-boolean v0, Lcom/miui/home/launcher/progress/ProgressManager;->mObservingUri:Z
 
     :cond_1
@@ -228,7 +228,7 @@
 .method public static generateProgressSharedStatusKey(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 180
+    .line 181
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -255,7 +255,7 @@
 .method public static generateProgressSharedStatusKeyWithUser(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 184
+    .line 185
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -286,7 +286,7 @@
 .method public static generateServiceProgressChangedKey(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    .line 176
+    .line 177
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -307,19 +307,19 @@
 .method public static getManager(Landroid/content/Context;)Lcom/miui/home/launcher/progress/ProgressManager;
     .locals 1
 
-    .line 69
+    .line 70
     sget-object v0, Lcom/miui/home/launcher/progress/ProgressManager;->sProgressManager:Lcom/miui/home/launcher/progress/ProgressManager;
 
     if-nez v0, :cond_0
 
-    .line 70
+    .line 71
     new-instance v0, Lcom/miui/home/launcher/progress/ProgressManager;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/progress/ProgressManager;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Lcom/miui/home/launcher/progress/ProgressManager;->sProgressManager:Lcom/miui/home/launcher/progress/ProgressManager;
 
-    .line 72
+    .line 73
     :cond_0
     sget-object p0, Lcom/miui/home/launcher/progress/ProgressManager;->sProgressManager:Lcom/miui/home/launcher/progress/ProgressManager;
 
@@ -331,12 +331,12 @@
 
     const/4 v0, 0x1
 
-    .line 171
+    .line 172
     invoke-static {v0}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 172
+    .line 173
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -359,7 +359,7 @@
 
     move-result-object p0
 
-    .line 171
+    .line 172
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -370,7 +370,7 @@
 .method public static synthetic lambda$onAppInProgressInstalled$2(Lcom/miui/home/launcher/progress/ProgressManager;Ljava/lang/String;)V
     .locals 0
 
-    .line 215
+    .line 216
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/progress/ProgressManager;->removeProgressingInfo(Ljava/lang/String;)V
 
     return-void
@@ -379,7 +379,7 @@
 .method public static synthetic lambda$onReceive$0(Lcom/miui/home/launcher/progress/ProgressManager;)V
     .locals 0
 
-    .line 121
+    .line 122
     invoke-direct {p0}, Lcom/miui/home/launcher/progress/ProgressManager;->startObservingChecked()V
 
     return-void
@@ -388,12 +388,12 @@
 .method public static synthetic lambda$onReceive$1(Lcom/miui/home/launcher/progress/ProgressManager;Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
 
-    .line 120
+    .line 121
     iget-object v0, p0, Lcom/miui/home/launcher/progress/ProgressManager;->mApplicationProcessor:Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;
 
     invoke-virtual {v0, p1, p2}, Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;->handleProgressUpdate(Landroid/content/Context;Landroid/content/Intent;)V
 
-    .line 121
+    .line 122
     new-instance p1, Lcom/miui/home/launcher/progress/-$$Lambda$ProgressManager$0q8qppBQFP8wOT1YJPGg7onFlak;
 
     invoke-direct {p1, p0}, Lcom/miui/home/launcher/progress/-$$Lambda$ProgressManager$0q8qppBQFP8wOT1YJPGg7onFlak;-><init>(Lcom/miui/home/launcher/progress/ProgressManager;)V
@@ -406,7 +406,7 @@
 .method private onReceive$___twin___(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 4
 
-    .line 104
+    .line 105
     iget-object v0, p0, Lcom/miui/home/launcher/progress/ProgressManager;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     if-eqz v0, :cond_3
@@ -419,7 +419,7 @@
 
     goto :goto_1
 
-    .line 108
+    .line 109
     :cond_0
     :try_start_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -428,14 +428,14 @@
 
     const-string v1, "android.intent.extra.update_progress_key"
 
-    .line 110
+    .line 111
     invoke-virtual {p2, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     const-string v2, "com.miui.newhome"
 
-    .line 111
+    .line 112
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -447,7 +447,7 @@
     :cond_1
     const-string v1, "Launcher_ProgressManager"
 
-    .line 114
+    .line 115
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -470,7 +470,7 @@
 
     const-string v1, "miui.intent.action.APPLICATION_PROGRESS_UPDATE"
 
-    .line 117
+    .line 118
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -481,7 +481,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 119
+    .line 120
     new-instance v0, Lcom/miui/home/launcher/progress/-$$Lambda$ProgressManager$cavB2cUrT07f26VEF76DFJ2lnAo;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/miui/home/launcher/progress/-$$Lambda$ProgressManager$cavB2cUrT07f26VEF76DFJ2lnAo;-><init>(Lcom/miui/home/launcher/progress/ProgressManager;Landroid/content/Context;Landroid/content/Intent;)V
@@ -490,7 +490,7 @@
 
     goto :goto_0
 
-    .line 124
+    .line 125
     :cond_2
     invoke-direct {p0}, Lcom/miui/home/launcher/progress/ProgressManager;->startObservingChecked()V
     :try_end_0
@@ -503,7 +503,7 @@
 
     const-string p2, "Launcher_ProgressManager"
 
-    .line 127
+    .line 128
     invoke-virtual {p1}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -521,7 +521,7 @@
 .method public static queryProgressSharedValue(Ljava/lang/String;Ljava/lang/String;)I
     .locals 4
 
-    .line 231
+    .line 232
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -536,7 +536,7 @@
 
     goto :goto_0
 
-    .line 233
+    .line 234
     :cond_0
     invoke-static {p0, p1}, Lcom/miui/home/launcher/progress/ProgressManager;->generateProgressSharedStatusKeyWithUser(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -552,7 +552,7 @@
 
     if-gez v2, :cond_1
 
-    .line 235
+    .line 236
     invoke-static {p0, p1}, Lcom/miui/home/launcher/progress/ProgressManager;->generateProgressSharedStatusKey(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -576,17 +576,17 @@
 .method private startObserving()V
     .locals 1
 
-    .line 164
+    .line 165
     sget-boolean v0, Lcom/miui/home/launcher/progress/ProgressManager;->mObservingUri:Z
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x1
 
-    .line 165
+    .line 166
     sput-boolean v0, Lcom/miui/home/launcher/progress/ProgressManager;->mObservingUri:Z
 
-    .line 166
+    .line 167
     iget-object v0, p0, Lcom/miui/home/launcher/progress/ProgressManager;->mCheckProgressTask:Ljava/lang/Runnable;
 
     invoke-static {v0}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
@@ -598,7 +598,7 @@
 .method private startObservingChecked()V
     .locals 1
 
-    .line 132
+    .line 133
     iget-object v0, p0, Lcom/miui/home/launcher/progress/ProgressManager;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->isWorkspaceLoading()Z
@@ -607,7 +607,7 @@
 
     if-nez v0, :cond_0
 
-    .line 133
+    .line 134
     invoke-direct {p0}, Lcom/miui/home/launcher/progress/ProgressManager;->startObserving()V
 
     :cond_0
@@ -619,7 +619,7 @@
 .method public bindAppProgressItem(Lcom/miui/home/launcher/progress/ProgressShortcutInfo;Z)Z
     .locals 1
 
-    .line 194
+    .line 195
     iget-object v0, p0, Lcom/miui/home/launcher/progress/ProgressManager;->mApplicationProcessor:Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;
 
     if-nez v0, :cond_0
@@ -628,7 +628,7 @@
 
     return p1
 
-    .line 198
+    .line 199
     :cond_0
     invoke-virtual {v0, p1, p2}, Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;->bindProgressItem(Lcom/miui/home/launcher/progress/ProgressShortcutInfo;Z)Z
 
@@ -636,7 +636,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 202
+    .line 203
     invoke-direct {p0}, Lcom/miui/home/launcher/progress/ProgressManager;->startObserving()V
 
     :cond_1
@@ -646,12 +646,12 @@
 .method public clear()V
     .locals 1
 
-    .line 80
+    .line 81
     iget-object v0, p0, Lcom/miui/home/launcher/progress/ProgressManager;->mApplicationProcessor:Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;
 
     if-eqz v0, :cond_0
 
-    .line 81
+    .line 82
     invoke-virtual {v0}, Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;->clear()V
 
     :cond_0
@@ -669,7 +669,7 @@
         }
     .end annotation
 
-    .line 188
+    .line 189
     iget-object v0, p0, Lcom/miui/home/launcher/progress/ProgressManager;->mApplicationProcessor:Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;
 
     if-nez v0, :cond_0
@@ -678,7 +678,7 @@
 
     return-object v0
 
-    .line 190
+    .line 191
     :cond_0
     invoke-virtual {v0}, Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;->getAllProgressKeys()Ljava/util/ArrayList;
 
@@ -690,7 +690,7 @@
 .method public getCheckCode()J
     .locals 2
 
-    .line 241
+    .line 242
     iget-wide v0, p0, Lcom/miui/home/launcher/progress/ProgressManager;->mQueryCheckCode:J
 
     return-wide v0
@@ -699,7 +699,7 @@
 .method public getInfo(Ljava/lang/String;Lcom/miui/home/launcher/progress/ProgressShortcutInfo;)V
     .locals 1
 
-    .line 76
+    .line 77
     iget-object v0, p0, Lcom/miui/home/launcher/progress/ProgressManager;->mApplicationProcessor:Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;
 
     invoke-virtual {v0, p1, p2}, Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;->getInfo(Ljava/lang/String;Lcom/miui/home/launcher/progress/ProgressShortcutInfo;)V
@@ -718,18 +718,18 @@
             "Ljava/lang/String;",
             ">;",
             "Ljava/util/List<",
-            "Ljava/lang/String;",
+            "Landroid/net/Uri;",
             ">;)",
             "Ljava/lang/String;"
         }
     .end annotation
 
-    .line 266
+    .line 267
     iget-object v0, p0, Lcom/miui/home/launcher/progress/ProgressManager;->mApplicationProcessor:Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;
 
     if-eqz v0, :cond_0
 
-    .line 267
+    .line 268
     invoke-virtual {v0, p1, p2, p3, p4}, Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;->loadingProgressFromCloudAppBackup(Landroid/content/Context;Ljava/lang/Runnable;Ljava/util/List;Ljava/util/List;)Ljava/lang/String;
 
     move-result-object p1
@@ -745,7 +745,7 @@
 .method public onAppInProgressInstalled(Ljava/lang/String;)V
     .locals 1
 
-    .line 215
+    .line 216
     new-instance v0, Lcom/miui/home/launcher/progress/-$$Lambda$ProgressManager$Ra5SQOXNFBuurxkOHpZJwwFcro0;
 
     invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/progress/-$$Lambda$ProgressManager$Ra5SQOXNFBuurxkOHpZJwwFcro0;-><init>(Lcom/miui/home/launcher/progress/ProgressManager;Ljava/lang/String;)V
@@ -758,12 +758,12 @@
 .method public onLauncherPaused()V
     .locals 1
 
-    .line 86
+    .line 87
     iget-object v0, p0, Lcom/miui/home/launcher/progress/ProgressManager;->mApplicationProcessor:Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;
 
     if-eqz v0, :cond_0
 
-    .line 87
+    .line 88
     invoke-virtual {v0}, Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;->stop()V
 
     :cond_0
@@ -773,12 +773,12 @@
 .method public onLauncherResume()V
     .locals 1
 
-    .line 92
+    .line 93
     iget-object v0, p0, Lcom/miui/home/launcher/progress/ProgressManager;->mApplicationProcessor:Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;
 
     if-eqz v0, :cond_0
 
-    .line 93
+    .line 94
     invoke-virtual {v0}, Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;->start()V
 
     :cond_0
@@ -788,14 +788,14 @@
 .method public onLoadingFinished()V
     .locals 3
 
-    .line 151
+    .line 152
     iget-object v0, p0, Lcom/miui/home/launcher/progress/ProgressManager;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 153
+    .line 154
     :cond_0
     new-instance v0, Landroid/content/Intent;
 
@@ -805,10 +805,10 @@
 
     const/high16 v1, 0x1000000
 
-    .line 154
+    .line 155
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 155
+    .line 156
     iget-object v1, p0, Lcom/miui/home/launcher/progress/ProgressManager;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     const-string v2, "miui.permission.USE_INTERNAL_GENERAL_API"
@@ -817,18 +817,18 @@
 
     const-wide/16 v0, 0x0
 
-    .line 156
+    .line 157
     iput-wide v0, p0, Lcom/miui/home/launcher/progress/ProgressManager;->mQueryCheckCode:J
 
-    .line 157
+    .line 158
     iget-object v0, p0, Lcom/miui/home/launcher/progress/ProgressManager;->mApplicationProcessor:Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;
 
     if-eqz v0, :cond_1
 
-    .line 158
+    .line 159
     invoke-virtual {v0}, Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;->onLoadingFinished()V
 
-    .line 160
+    .line 161
     :cond_1
     invoke-direct {p0}, Lcom/miui/home/launcher/progress/ProgressManager;->startObserving()V
 
@@ -883,7 +883,7 @@
     :cond_0
     const-string v0, "Launcher_ProgressManager"
 
-    .line 247
+    .line 248
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -908,29 +908,29 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 248
+    .line 249
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "miui.intent.action.APPLICATION_PROGRESS_QUERY"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 249
+    .line 250
     invoke-virtual {v0, p2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v1, "android.intent.extra.update_progress_key"
 
-    .line 250
+    .line 251
     invoke-virtual {v0, v1, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[Ljava/lang/String;)Landroid/content/Intent;
 
     const-string p3, "android.intent.extra.update_progress_check_code"
 
-    .line 251
+    .line 252
     iget-wide v1, p0, Lcom/miui/home/launcher/progress/ProgressManager;->mQueryCheckCode:J
 
     invoke-virtual {v0, p3, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
-    .line 252
+    .line 253
     invoke-static {p2, v0, p1}, Lcom/miui/home/launcher/progress/ProgressManager;->communicateToServer(Ljava/lang/String;Landroid/content/Intent;Landroid/content/Context;)V
 
     return-void
@@ -954,12 +954,12 @@
 .method public removeProgressingInfo(Ljava/lang/String;)V
     .locals 1
 
-    .line 208
+    .line 209
     iget-object v0, p0, Lcom/miui/home/launcher/progress/ProgressManager;->mApplicationProcessor:Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;
 
     if-eqz v0, :cond_0
 
-    .line 209
+    .line 210
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;->removeProgressingInfo(Ljava/lang/String;)V
 
     :cond_0
@@ -969,10 +969,10 @@
 .method public setLauncher(Lcom/miui/home/launcher/Launcher;)V
     .locals 1
 
-    .line 98
+    .line 99
     iput-object p1, p0, Lcom/miui/home/launcher/progress/ProgressManager;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    .line 99
+    .line 100
     iget-object v0, p0, Lcom/miui/home/launcher/progress/ProgressManager;->mApplicationProcessor:Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;->setLauncher(Lcom/miui/home/launcher/Launcher;)V
@@ -980,26 +980,16 @@
     return-void
 .end method
 
-.method public updateProgress([Ljava/lang/String;[Ljava/lang/String;[I[Ljava/lang/String;Ljava/lang/String;)V
-    .locals 6
+.method public updateProgress(Lcom/miui/home/launcher/progress/ProgressUpdateParams;Z)V
+    .locals 1
 
     .line 274
     iget-object v0, p0, Lcom/miui/home/launcher/progress/ProgressManager;->mApplicationProcessor:Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;
 
     if-eqz v0, :cond_0
 
-    move-object v1, p1
-
-    move-object v2, p2
-
-    move-object v3, p3
-
-    move-object v4, p4
-
-    move-object v5, p5
-
     .line 275
-    invoke-virtual/range {v0 .. v5}, Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;->updateProgress([Ljava/lang/String;[Ljava/lang/String;[I[Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, p1, p2}, Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;->updateProgress(Lcom/miui/home/launcher/progress/ProgressUpdateParams;Z)V
 
     :cond_0
     return-void

@@ -760,9 +760,11 @@
     <string name="recents_title_security_scan">Escaneig de seguretat</string>
     <string name="recents_tv_small_window_text">Finestres flotants</string>
     <string name="recents_worldcirculate_text">Deixa anar per seleccionar</string>
+    <string name="recnets_relay_device_info">De %s</string>
     <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
     <string name="recnets_worldcirculate_display_computer_info">"L'aplicació està funcionant a %s."</string>
     <string name="recnets_worldcirculate_display_default_info">Toca per tornar-lo aquí.</string>
+    <string name="recnets_worldcirculate_display_default_info_pad">Toca per tornar-lo aquí.</string>
     <string name="recnets_worldcirculate_display_pad_info">"L'aplicació està funcionant a %s."</string>
     <string name="recommend_apk_size_and_desc">%1$d MB | %2$s</string>
     <string name="recommend_app">"Suggeriments d'aplicacions"</string>
@@ -807,7 +809,7 @@
     <string name="select_frame">Marc</string>
     <string name="select_photo">Foto</string>
     <string name="send">Envia</string>
-    <string name="server_error">"S'ha produït un error al servidor. Espera un parell de minuts i torna-ho a provar."</string>
+    <string name="server_error">"S'ha produït un error al servidor. Espereu un minut o dos i proveu-ho de nou."</string>
     <string name="service_double_attention">Branch Metrics Inc. proporciona una funcionalitat de cerca millorada per fer funcionar aquesta funció. Hem de compartir les vostres sol·licituds de cerca, identificador de Google Ads i adreça IP amb Branch Metrics Inc. Llegiu i accepteu les <a href="http://url1"><font color="#B3000000">"Condicions de detecció d'usuaris finals i Condicions"</font></a> i <a href="http://url2"><font color="#B3000000">Política de privadesa de Branch Discovery</font></a>" abans d'utilitzar aquesta funció."</string>
     <string name="setting_wallpaper_tip">Prem o llisca per ajustar</string>
     <string name="settings">Configuració</string>
@@ -950,6 +952,7 @@
     <string name="uninstall_xspace_dialog_title_format">"Voleu desinstal·lar l'aplicació duplicada \"%s\"?"</string>
     <string name="unknown_artist_name">Artista desconegut</string>
     <string name="unnamed_folder_name">Carpeta</string>
+    <string name="upgrade_remove_small_window_in_recents">Podeu utilitzar la barra lateral per obrir aplicacions en finestres flotants</string>
     <string name="v7_preference_off">DESACTIVAT</string>
     <string name="v7_preference_on">ACTIVAT</string>
     <string name="wallpaper">Fons de pantalla</string>

@@ -135,7 +135,7 @@
 
     const-string v0, "app_category_update_version_code"
 
-    const v1, 0x1a0c2a65
+    const v1, 0x1a2aaf36
 
     .line 45
     invoke-virtual {p0, v0, v1}, Lcom/miui/home/launcher/CategorySettingHelper;->putInt(Ljava/lang/String;I)V

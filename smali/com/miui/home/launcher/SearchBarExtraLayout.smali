@@ -69,7 +69,7 @@
     .line 24
     invoke-super {p0}, Landroid/widget/ViewAnimator;->onFinishInflate()V
 
-    const v0, 0x7f0a021b
+    const v0, 0x7f0a021d
 
     .line 25
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/SearchBarExtraLayout;->findViewById(I)Landroid/view/View;
@@ -80,7 +80,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/SearchBarExtraLayout;->mXiaoaiLayout:Lcom/miui/home/launcher/SearchBarXiaoaiLayout;
 
-    const v0, 0x7f0a021a
+    const v0, 0x7f0a021c
 
     .line 26
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/SearchBarExtraLayout;->findViewById(I)Landroid/view/View;

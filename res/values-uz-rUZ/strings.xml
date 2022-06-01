@@ -728,9 +728,11 @@
     <string name="recents_title_security_scan">Xavfsizlikni tekshirish</string>
     <string name="recents_tv_small_window_text">Suzuvchi oynalar</string>
     <string name="recents_worldcirculate_text">Tanlash uchun bo‘shating</string>
+    <string name="recnets_relay_device_info">%s-dan</string>
     <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
     <string name="recnets_worldcirculate_display_computer_info">Ilova %s qurilmada ishlamoqda.</string>
     <string name="recnets_worldcirculate_display_default_info">Telefonga qaytarish uchun bosing.</string>
+    <string name="recnets_worldcirculate_display_default_info_pad">Telefonga qaytarish uchun bosing.</string>
     <string name="recnets_worldcirculate_display_pad_info">Ilova %s qurilmada ishlamoqda.</string>
     <string name="recommend_apk_size_and_desc">%1$dMB | %2$s</string>
     <string name="recommend_app">Tavsiya etilgan ilovalar</string>
@@ -915,6 +917,7 @@
     <string name="uninstall_xspace_dialog_title_format">Ikkilangan \"%s\" o‘chirilsinmi?</string>
     <string name="unknown_artist_name">Noma’lum ijrochi</string>
     <string name="unnamed_folder_name">Papka</string>
+    <string name="upgrade_remove_small_window_in_recents">Suzuvchi oynalarda ilovalarni ochish uchun yon paneldan foydalanishingiz mumkin</string>
     <string name="wallpaper">Fon rasmi</string>
     <string name="wallpaper_auto_change_title">Ekran qulfi</string>
     <string name="wallpaper_failed_message">Fon rasmini o‘rnatib bo‘lmaydi</string>

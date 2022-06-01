@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Folder;)V
     .locals 0
 
-    .line 311
+    .line 335
     iput-object p1, p0, Lcom/miui/home/launcher/Folder$5;->this$0:Lcom/miui/home/launcher/Folder;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,7 +36,7 @@
 .method private setFolderBorderLineAlpha(F)V
     .locals 2
 
-    .line 342
+    .line 366
     iget-object v0, p0, Lcom/miui/home/launcher/Folder$5;->this$0:Lcom/miui/home/launcher/Folder;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Folder;->access$400(Lcom/miui/home/launcher/Folder;)Landroid/graphics/drawable/Drawable;
@@ -45,7 +45,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 343
+    .line 367
     iget-object v0, p0, Lcom/miui/home/launcher/Folder$5;->this$0:Lcom/miui/home/launcher/Folder;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Folder;->access$400(Lcom/miui/home/launcher/Folder;)Landroid/graphics/drawable/Drawable;
@@ -69,7 +69,7 @@
 .method public onAnimationUpdate(F)V
     .locals 5
 
-    .line 315
+    .line 339
     iget-object v0, p0, Lcom/miui/home/launcher/Folder$5;->this$0:Lcom/miui/home/launcher/Folder;
 
     iget-object v0, v0, Lcom/miui/home/launcher/Folder;->mLauncher:Lcom/miui/home/launcher/Launcher;
@@ -84,7 +84,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 316
+    .line 340
     iget-object v0, p0, Lcom/miui/home/launcher/Folder$5;->this$0:Lcom/miui/home/launcher/Folder;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Folder;->access$1300(Lcom/miui/home/launcher/Folder;)Lcom/miui/home/launcher/FolderInfo;
@@ -101,7 +101,7 @@
 
     invoke-interface {v0, v1}, Lcom/miui/home/launcher/Folder$FolderCallback;->getPreviewPosition(Landroid/graphics/Rect;)F
 
-    .line 318
+    .line 342
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/Folder$5;->this$0:Lcom/miui/home/launcher/Folder;
 
@@ -131,17 +131,17 @@
 
     mul-float/2addr v0, v1
 
-    .line 319
+    .line 343
     iget-object v1, p0, Lcom/miui/home/launcher/Folder$5;->this$0:Lcom/miui/home/launcher/Folder;
 
     invoke-virtual {v1, v0}, Lcom/miui/home/launcher/Folder;->setScaleX(F)V
 
-    .line 320
+    .line 344
     iget-object v1, p0, Lcom/miui/home/launcher/Folder$5;->this$0:Lcom/miui/home/launcher/Folder;
 
     invoke-virtual {v1, v0}, Lcom/miui/home/launcher/Folder;->setScaleY(F)V
 
-    .line 321
+    .line 345
     iget-object v0, p0, Lcom/miui/home/launcher/Folder$5;->this$0:Lcom/miui/home/launcher/Folder;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Folder;->access$1400(Lcom/miui/home/launcher/Folder;)Landroid/graphics/Rect;
@@ -176,7 +176,7 @@
 
     mul-float/2addr v0, v1
 
-    .line 322
+    .line 346
     iget-object v3, p0, Lcom/miui/home/launcher/Folder$5;->this$0:Lcom/miui/home/launcher/Folder;
 
     invoke-static {v3}, Lcom/miui/home/launcher/Folder;->access$1400(Lcom/miui/home/launcher/Folder;)Landroid/graphics/Rect;
@@ -211,7 +211,7 @@
 
     iget-object v4, v4, Lcom/miui/home/launcher/Folder;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    .line 323
+    .line 347
     invoke-virtual {v4}, Lcom/miui/home/launcher/Launcher;->getFolderCling()Lcom/miui/home/launcher/FolderCling;
 
     move-result-object v4
@@ -226,17 +226,17 @@
 
     mul-float/2addr v3, v1
 
-    .line 324
+    .line 348
     iget-object v1, p0, Lcom/miui/home/launcher/Folder$5;->this$0:Lcom/miui/home/launcher/Folder;
 
     invoke-virtual {v1, v0}, Lcom/miui/home/launcher/Folder;->setTranslationX(F)V
 
-    .line 325
+    .line 349
     iget-object v0, p0, Lcom/miui/home/launcher/Folder$5;->this$0:Lcom/miui/home/launcher/Folder;
 
     invoke-virtual {v0, v3}, Lcom/miui/home/launcher/Folder;->setTranslationY(F)V
 
-    .line 326
+    .line 350
     iget-object v0, p0, Lcom/miui/home/launcher/Folder$5;->this$0:Lcom/miui/home/launcher/Folder;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Folder;->access$1000(Lcom/miui/home/launcher/Folder;)Z
@@ -245,7 +245,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 327
+    .line 351
     iget-object v0, p0, Lcom/miui/home/launcher/Folder$5;->this$0:Lcom/miui/home/launcher/Folder;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Folder;->access$1800(Lcom/miui/home/launcher/Folder;)Landroid/view/View;
@@ -254,18 +254,18 @@
 
     invoke-virtual {v0, p1}, Landroid/view/View;->setAlpha(F)V
 
-    .line 328
+    .line 352
     iget-object v0, p0, Lcom/miui/home/launcher/Folder$5;->this$0:Lcom/miui/home/launcher/Folder;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/Folder;->setupOutOfPreviewContent(F)V
 
-    .line 330
+    .line 354
     :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/Folder$5;->this$0:Lcom/miui/home/launcher/Folder;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/Folder;->setBackgroundAlpha(F)V
 
-    .line 331
+    .line 355
     iget-object v0, p0, Lcom/miui/home/launcher/Folder$5;->this$0:Lcom/miui/home/launcher/Folder;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Folder;->access$900(Lcom/miui/home/launcher/Folder;)Z
@@ -290,7 +290,7 @@
 
     const/4 v1, 0x0
 
-    .line 333
+    .line 357
     invoke-static {v0, v1}, Ljava/lang/Math;->max(FF)F
 
     move-result v0
@@ -299,7 +299,7 @@
 
     move-result v0
 
-    .line 332
+    .line 356
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/Folder$5;->setFolderBorderLineAlpha(F)V
 
     :cond_2
@@ -309,7 +309,7 @@
 
     if-gtz p1, :cond_3
 
-    .line 335
+    .line 359
     iget-object p1, p0, Lcom/miui/home/launcher/Folder$5;->this$0:Lcom/miui/home/launcher/Folder;
 
     iget-object p1, p1, Lcom/miui/home/launcher/Folder;->mContent:Lcom/miui/home/launcher/FolderGridView;
@@ -328,7 +328,7 @@
 
     if-eqz p1, :cond_3
 
-    .line 336
+    .line 360
     iget-object p1, p0, Lcom/miui/home/launcher/Folder$5;->this$0:Lcom/miui/home/launcher/Folder;
 
     iget-object p1, p1, Lcom/miui/home/launcher/Folder;->mContent:Lcom/miui/home/launcher/FolderGridView;
@@ -337,7 +337,7 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/FolderGridView;->setVisibility(I)V
 
-    .line 337
+    .line 361
     iget-object p1, p0, Lcom/miui/home/launcher/Folder$5;->this$0:Lcom/miui/home/launcher/Folder;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Folder;->access$700(Lcom/miui/home/launcher/Folder;)Landroid/widget/ImageView;

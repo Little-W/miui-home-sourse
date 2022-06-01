@@ -728,9 +728,11 @@
     <string name="recents_title_security_scan">নিৰাপত্তা স্কেন</string>
     <string name="recents_tv_small_window_text">"ওপঙা উইণ্ড'"</string>
     <string name="recents_worldcirculate_text">চয়ন কৰিবলৈ এৰি দিয়ক</string>
+    <string name="recnets_relay_device_info">%sৰ পৰা</string>
     <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
     <string name="recnets_worldcirculate_display_computer_info">এপটোৱে %sত কাম কৰি আছে।</string>
     <string name="recnets_worldcirculate_display_default_info">সেইটোক ইয়ালৈ আনিবলৈ টেপ কৰক।</string>
+    <string name="recnets_worldcirculate_display_default_info_pad">সেইটোক ইয়ালৈ আনিবলৈ টেপ কৰক।</string>
     <string name="recnets_worldcirculate_display_pad_info">এপটোৱে %sত কাম কৰি আছে।</string>
     <string name="recommend_apk_size_and_desc">%1$dMB | %2$s</string>
     <string name="recommend_app">এপ পৰামৰ্শসমূহ</string>
@@ -915,6 +917,7 @@
     <string name="uninstall_xspace_dialog_title_format">ডুৱেল \"%s\" আনইনষ্টল কৰিবনে?</string>
     <string name="unknown_artist_name">অজ্ঞাত শিল্পী</string>
     <string name="unnamed_folder_name">"ফ'ল্ডাৰ"</string>
+    <string name="upgrade_remove_small_window_in_recents">"এপসমূহ ওপঙা উইণ্ড'ত খুলিবলৈ আপুনি ছাইডবাৰ ব্যৱহাৰ কৰিব পাৰে"</string>
     <string name="wallpaper">ৱালপেপাৰ</string>
     <string name="wallpaper_auto_change_title">লক স্ক্রীণ</string>
     <string name="wallpaper_failed_message">ৱালপেপাৰ ছেট কৰিব নোৱাৰি</string>

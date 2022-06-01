@@ -22,6 +22,16 @@
 
 .field linearLayoutManager:Landroidx/recyclerview/widget/LinearLayoutManager;
 
+.field linksTmp:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Lio/branch/search/BranchLinkResult;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 .field localResultAdapter:Lcom/mi/globallauncher/local/BranchLocalSearchGridAdapter;
 
 .field mContext:Landroid/content/Context;
@@ -35,19 +45,19 @@
 .method constructor <init>(Landroid/view/View;)V
     .locals 2
 
-    .line 52
+    .line 54
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;-><init>(Landroid/view/View;)V
 
-    .line 53
+    .line 55
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->mContext:Landroid/content/Context;
 
-    const v0, 0x7f0a0203
+    const v0, 0x7f0a0205
 
-    .line 54
+    .line 56
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -56,9 +66,9 @@
 
     iput-object v0, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->container:Landroid/widget/RelativeLayout;
 
-    const v0, 0x7f0a01ff
+    const v0, 0x7f0a0201
 
-    .line 55
+    .line 57
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -67,9 +77,9 @@
 
     iput-object v0, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->appTitleContainer:Landroid/widget/RelativeLayout;
 
-    const v0, 0x7f0a012d
+    const v0, 0x7f0a012f
 
-    .line 56
+    .line 58
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -78,9 +88,9 @@
 
     iput-object v0, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->showSearchBranch:Landroidx/recyclerview/widget/RecyclerView;
 
-    const v0, 0x7f0a016c
+    const v0, 0x7f0a016e
 
-    .line 57
+    .line 59
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -89,29 +99,7 @@
 
     iput-object v0, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->appIcon:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a02b8
-
-    .line 58
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->appName:Landroid/widget/TextView;
-
     const v0, 0x7f0a02ba
-
-    .line 59
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->appDes:Landroid/widget/TextView;
-
-    const v0, 0x7f0a02b9
 
     .line 60
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -120,11 +108,33 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->appNameCenter:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->appName:Landroid/widget/TextView;
 
     const v0, 0x7f0a02bc
 
     .line 61
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->appDes:Landroid/widget/TextView;
+
+    const v0, 0x7f0a02bb
+
+    .line 62
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->appNameCenter:Landroid/widget/TextView;
+
+    const v0, 0x7f0a02be
+
+    .line 63
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -133,14 +143,14 @@
 
     iput-object p1, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->installState:Landroid/widget/TextView;
 
-    .line 62
+    .line 64
     iget-object p1, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->showSearchBranch:Landroidx/recyclerview/widget/RecyclerView;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->setVerticalScrollBarEnabled(Z)V
 
-    .line 63
+    .line 65
     new-instance p1, Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter;
 
     iget-object v0, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->mContext:Landroid/content/Context;
@@ -149,7 +159,7 @@
 
     iput-object p1, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->remoteResultAdapter:Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter;
 
-    .line 64
+    .line 66
     new-instance p1, Lcom/mi/globallauncher/local/BranchLocalSearchGridAdapter;
 
     iget-object v0, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->mContext:Landroid/content/Context;
@@ -158,7 +168,7 @@
 
     iput-object p1, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->localResultAdapter:Lcom/mi/globallauncher/local/BranchLocalSearchGridAdapter;
 
-    .line 65
+    .line 67
     new-instance p1, Landroidx/recyclerview/widget/LinearLayoutManager;
 
     iget-object v0, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->mContext:Landroid/content/Context;
@@ -167,14 +177,14 @@
 
     iput-object p1, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->linearLayoutManager:Landroidx/recyclerview/widget/LinearLayoutManager;
 
-    .line 66
+    .line 68
     iget-object p1, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->linearLayoutManager:Landroidx/recyclerview/widget/LinearLayoutManager;
 
     const/4 v0, 0x1
 
     invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/LinearLayoutManager;->setOrientation(I)V
 
-    .line 67
+    .line 69
     new-instance p1, Landroidx/recyclerview/widget/GridLayoutManager;
 
     iget-object v0, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->mContext:Landroid/content/Context;
@@ -185,6 +195,13 @@
 
     iput-object p1, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->gridLayoutManager:Landroidx/recyclerview/widget/GridLayoutManager;
 
+    .line 70
+    new-instance p1, Ljava/util/ArrayList;
+
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object p1, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->linksTmp:Ljava/util/List;
+
     return-void
 .end method
 
@@ -193,7 +210,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 161
+    .line 165
     iget-object p1, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->installState:Landroid/widget/TextView;
 
     const/4 v0, 0x0
@@ -202,7 +219,7 @@
 
     goto :goto_0
 
-    .line 163
+    .line 167
     :cond_0
     iget-object p1, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->installState:Landroid/widget/TextView;
 
@@ -217,20 +234,20 @@
 .method public static synthetic lambda$updateLocalBranchView$0(Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;Ljava/lang/String;Lio/branch/search/BranchLocalAppResult;Landroid/view/View;)V
     .locals 0
 
-    .line 143
+    .line 147
     invoke-static {p1}, Lcom/miui/privacy/track/SensorsAnalyticsCollector;->trackGpOrGetApps(Ljava/lang/String;)V
 
     const/4 p1, 0x3
 
-    .line 144
+    .line 148
     invoke-static {p1}, Lcom/miui/privacy/track/SensorsAnalyticsCollector;->trackLocalAppsClick(I)V
 
     const/4 p1, 0x5
 
-    .line 145
+    .line 149
     invoke-static {p1}, Lcom/miui/privacy/track/SensorsAnalyticsCollector;->trackBranchSearchResultClick(I)V
 
-    .line 146
+    .line 150
     iget-object p1, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->mContext:Landroid/content/Context;
 
     invoke-virtual {p2, p1}, Lio/branch/search/BranchLocalAppResult;->open(Landroid/content/Context;)Lio/branch/search/BranchSearchError;
@@ -245,14 +262,14 @@
 
     const p5, 0x7f060062
 
-    .line 169
+    .line 173
     invoke-static {p6, p5}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result v0
 
     invoke-virtual {p3, v0}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 170
+    .line 174
     invoke-static {p6, p5}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result p3
@@ -261,14 +278,14 @@
 
     const p1, 0x7f060051
 
-    .line 171
+    .line 175
     invoke-static {p6, p1}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result p3
 
     invoke-virtual {p2, p3}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 172
+    .line 176
     invoke-static {p6, p1}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result p1
@@ -280,14 +297,14 @@
     :cond_0
     const p5, 0x7f060063
 
-    .line 174
+    .line 178
     invoke-static {p6, p5}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result v0
 
     invoke-virtual {p3, v0}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 175
+    .line 179
     invoke-static {p6, p5}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result p3
@@ -296,14 +313,14 @@
 
     const p1, 0x7f060052
 
-    .line 176
+    .line 180
     invoke-static {p6, p1}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result p3
 
     invoke-virtual {p2, p3}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 177
+    .line 181
     invoke-static {p6, p1}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result p1
@@ -315,88 +332,99 @@
 .end method
 
 .method private setUpRvAdapterData(Lio/branch/search/BranchAppResult;ZZ)V
-    .locals 7
+    .locals 6
 
-    .line 86
+    .line 89
+    iget-object v0, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->linksTmp:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->clear()V
+
+    .line 90
+    iget-object v0, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->linksTmp:Ljava/util/List;
+
     invoke-virtual {p1}, Lio/branch/search/BranchAppResult;->getLinks()Ljava/util/List;
 
-    move-result-object v0
+    move-result-object v1
 
-    if-eqz v0, :cond_4
+    invoke-interface {v0, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 87
+    .line 91
+    iget-object v0, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->linksTmp:Ljava/util/List;
+
     invoke-interface {v0}, Ljava/util/List;->size()I
 
-    move-result v1
+    move-result v0
 
-    if-lez v1, :cond_4
+    if-lez v0, :cond_4
+
+    .line 92
+    iget-object v0, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->linksTmp:Ljava/util/List;
 
     const/4 v1, 0x0
 
-    .line 88
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lio/branch/search/BranchLinkResult;
+
+    .line 93
+    invoke-virtual {p1}, Lio/branch/search/BranchAppResult;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
 
-    check-cast v2, Lio/branch/search/BranchLinkResult;
+    .line 94
+    iget-object v3, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->appTitleContainer:Landroid/widget/RelativeLayout;
 
-    .line 89
-    invoke-virtual {p1}, Lio/branch/search/BranchAppResult;->getPackageName()Ljava/lang/String;
+    new-instance v4, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder$1;
 
-    move-result-object v3
+    invoke-direct {v4, p0, v2, v0}, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder$1;-><init>(Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;Ljava/lang/String;Lio/branch/search/BranchLinkResult;)V
 
-    .line 90
-    iget-object v4, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->appTitleContainer:Landroid/widget/RelativeLayout;
+    invoke-virtual {v3, v4}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    new-instance v5, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder$1;
-
-    invoke-direct {v5, p0, v3, v2}, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder$1;-><init>(Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;Ljava/lang/String;Lio/branch/search/BranchLinkResult;)V
-
-    invoke-virtual {v4, v5}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    const/16 v4, 0x8
+    const/16 v3, 0x8
 
     if-eqz p2, :cond_1
 
-    .line 99
+    .line 103
     invoke-virtual {p1}, Lio/branch/search/BranchAppResult;->getLinks()Ljava/util/List;
 
-    move-result-object v5
+    move-result-object v4
 
-    invoke-interface {v5}, Ljava/util/List;->size()I
+    invoke-interface {v4}, Ljava/util/List;->size()I
 
-    move-result v5
+    move-result v4
 
-    const/4 v6, 0x1
+    const/4 v5, 0x1
 
-    if-ne v5, v6, :cond_1
+    if-ne v4, v5, :cond_1
 
-    .line 100
+    .line 104
     iget-object p2, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->showSearchBranch:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {p2, v4}, Landroidx/recyclerview/widget/RecyclerView;->setVisibility(I)V
+    invoke-virtual {p2, v3}, Landroidx/recyclerview/widget/RecyclerView;->setVisibility(I)V
 
-    .line 101
+    .line 105
     iget-object p2, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->appNameCenter:Landroid/widget/TextView;
 
-    invoke-virtual {p2, v4}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {p2, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 102
+    .line 106
     iget-object p2, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->appDes:Landroid/widget/TextView;
 
     invoke-virtual {p2, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 103
+    .line 107
     iget-object p2, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->appName:Landroid/widget/TextView;
 
     invoke-virtual {p2, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 104
-    invoke-virtual {v2}, Lio/branch/search/BranchLinkResult;->getDescription()Ljava/lang/String;
+    .line 108
+    invoke-virtual {v0}, Lio/branch/search/BranchLinkResult;->getDescription()Ljava/lang/String;
 
     move-result-object p2
 
-    .line 105
+    .line 109
     iget-object p3, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->appDes:Landroid/widget/TextView;
 
     if-eqz p2, :cond_0
@@ -404,14 +432,14 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v2}, Lio/branch/search/BranchLinkResult;->getName()Ljava/lang/String;
+    invoke-virtual {v0}, Lio/branch/search/BranchLinkResult;->getName()Ljava/lang/String;
 
     move-result-object p2
 
     :goto_0
     invoke-virtual {p3, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 106
+    .line 110
     iget-object p2, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->appName:Landroid/widget/TextView;
 
     invoke-virtual {p1}, Lio/branch/search/BranchAppResult;->getAppName()Ljava/lang/String;
@@ -422,33 +450,33 @@
 
     goto :goto_2
 
-    .line 108
+    .line 112
     :cond_1
-    iget-object v5, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->remoteResultAdapter:Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter;
+    iget-object v4, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->remoteResultAdapter:Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter;
 
-    invoke-virtual {v5, p3}, Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter;->setIsInLightMode(Z)V
+    invoke-virtual {v4, p3}, Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter;->setIsInLightMode(Z)V
 
-    .line 109
+    .line 113
     iget-object p3, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->showSearchBranch:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {p3, v1}, Landroidx/recyclerview/widget/RecyclerView;->setVisibility(I)V
 
-    .line 110
+    .line 114
     iget-object p3, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->appNameCenter:Landroid/widget/TextView;
 
     invoke-virtual {p3, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 111
+    .line 115
     iget-object p3, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->appDes:Landroid/widget/TextView;
 
-    invoke-virtual {p3, v4}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {p3, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 112
+    .line 116
     iget-object p3, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->appName:Landroid/widget/TextView;
 
-    invoke-virtual {p3, v4}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {p3, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 113
+    .line 117
     iget-object p3, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->appNameCenter:Landroid/widget/TextView;
 
     invoke-virtual {p1}, Lio/branch/search/BranchAppResult;->getAppName()Ljava/lang/String;
@@ -459,8 +487,8 @@
 
     const-string p1, "App"
 
-    .line 114
-    invoke-virtual {v2}, Lio/branch/search/BranchLinkResult;->getType()Ljava/lang/String;
+    .line 118
+    invoke-virtual {v0}, Lio/branch/search/BranchLinkResult;->getType()Ljava/lang/String;
 
     move-result-object p3
 
@@ -470,13 +498,15 @@
 
     if-eqz p1, :cond_2
 
-    .line 115
-    invoke-interface {v0, v1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
+    .line 119
+    iget-object p1, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->linksTmp:Ljava/util/List;
+
+    invoke-interface {p1, v1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
     :cond_2
     if-eqz p2, :cond_3
 
-    .line 118
+    .line 122
     iget-object p1, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->showSearchBranch:Landroidx/recyclerview/widget/RecyclerView;
 
     iget-object p3, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->linearLayoutManager:Landroidx/recyclerview/widget/LinearLayoutManager;
@@ -485,7 +515,7 @@
 
     goto :goto_1
 
-    .line 120
+    .line 124
     :cond_3
     iget-object p1, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->showSearchBranch:Landroidx/recyclerview/widget/RecyclerView;
 
@@ -493,29 +523,31 @@
 
     invoke-virtual {p1, p3}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
 
-    .line 122
+    .line 126
     :goto_1
     iget-object p1, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->remoteResultAdapter:Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter;
 
-    const/4 p3, 0x4
+    iget-object p3, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->linksTmp:Ljava/util/List;
+
+    const/4 v0, 0x4
 
     iget-object v1, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->mContext:Landroid/content/Context;
 
-    invoke-static {v1, v3}, Lcom/mi/globallauncher/util/CommercialUtils;->isPackageInstalled(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v1, v2}, Lcom/mi/globallauncher/util/CommercialUtils;->isPackageInstalled(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v1
 
-    invoke-virtual {p1, v0, p3, p2, v1}, Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter;->setList(Ljava/util/List;IZZ)V
+    invoke-virtual {p1, p3, v0, p2, v1}, Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter;->setList(Ljava/util/List;IZZ)V
 
     goto :goto_2
 
-    .line 125
+    .line 129
     :cond_4
     iget-object p1, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->remoteResultAdapter:Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter;
 
     invoke-virtual {p1}, Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter;->setEmptyList()V
 
-    .line 127
+    .line 131
     :goto_2
     iget-object p1, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->showSearchBranch:Landroidx/recyclerview/widget/RecyclerView;
 
@@ -531,12 +563,12 @@
 
     const/high16 v0, 0x41400000    # 12.0f
 
-    .line 182
+    .line 186
     invoke-static {v0, p2}, Lcom/mi/globallauncher/util/DimenUtils;->dp2px(FLandroid/content/Context;)I
 
     move-result v1
 
-    .line 183
+    .line 187
     invoke-static {v0, p2}, Lcom/mi/globallauncher/util/DimenUtils;->dp2px(FLandroid/content/Context;)I
 
     move-result v0
@@ -549,27 +581,27 @@
 
     if-eqz p3, :cond_3
 
-    const p3, 0x7f0800d8
+    const p3, 0x7f0800d9
 
     goto :goto_3
 
     :pswitch_0
     if-eqz p3, :cond_0
 
-    const p3, 0x7f0800d6
+    const p3, 0x7f0800d7
 
     goto :goto_0
 
     :cond_0
-    const p3, 0x7f0800d7
+    const p3, 0x7f0800d8
 
-    .line 200
+    .line 204
     :goto_0
     invoke-static {v3, p2}, Lcom/mi/globallauncher/util/DimenUtils;->dp2px(FLandroid/content/Context;)I
 
     move-result p4
 
-    .line 201
+    .line 205
     invoke-static {v2, p2}, Lcom/mi/globallauncher/util/DimenUtils;->dp2px(FLandroid/content/Context;)I
 
     move-result v2
@@ -579,20 +611,20 @@
     :pswitch_1
     if-eqz p3, :cond_1
 
-    const p3, 0x7f0800d2
+    const p3, 0x7f0800d3
 
     goto :goto_1
 
     :cond_1
-    const p3, 0x7f0800d3
+    const p3, 0x7f0800d4
 
-    .line 195
+    .line 199
     :goto_1
     invoke-static {v2, p2}, Lcom/mi/globallauncher/util/DimenUtils;->dp2px(FLandroid/content/Context;)I
 
     move-result p4
 
-    .line 196
+    .line 200
     invoke-static {v3, p2}, Lcom/mi/globallauncher/util/DimenUtils;->dp2px(FLandroid/content/Context;)I
 
     move-result v2
@@ -602,20 +634,20 @@
     :pswitch_2
     if-eqz p3, :cond_2
 
-    const p3, 0x7f0800d4
+    const p3, 0x7f0800d5
 
     goto :goto_2
 
     :cond_2
-    const p3, 0x7f0800d5
+    const p3, 0x7f0800d6
 
-    .line 190
+    .line 194
     :goto_2
     invoke-static {v2, p2}, Lcom/mi/globallauncher/util/DimenUtils;->dp2px(FLandroid/content/Context;)I
 
     move-result p4
 
-    .line 191
+    .line 195
     invoke-static {v2, p2}, Lcom/mi/globallauncher/util/DimenUtils;->dp2px(FLandroid/content/Context;)I
 
     move-result v2
@@ -623,20 +655,20 @@
     goto :goto_4
 
     :cond_3
-    const p3, 0x7f0800d9
+    const p3, 0x7f0800da
 
-    .line 206
+    .line 210
     :goto_3
     invoke-static {v3, p2}, Lcom/mi/globallauncher/util/DimenUtils;->dp2px(FLandroid/content/Context;)I
 
     move-result p4
 
-    .line 207
+    .line 211
     invoke-static {v3, p2}, Lcom/mi/globallauncher/util/DimenUtils;->dp2px(FLandroid/content/Context;)I
 
     move-result v2
 
-    .line 210
+    .line 214
     :goto_4
     invoke-static {p2, p3}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -644,10 +676,10 @@
 
     invoke-virtual {p1, v3}, Landroid/widget/RelativeLayout;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 211
+    .line 215
     invoke-virtual {p1, v1, p4, v0, v2}, Landroid/widget/RelativeLayout;->setPadding(IIII)V
 
-    .line 212
+    .line 216
     invoke-static {p2, p3}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p2
@@ -669,14 +701,14 @@
 .method public updateLocalBranchView(ZLio/branch/search/BranchLocalAppResult;I)V
     .locals 9
 
-    .line 134
+    .line 138
     iget-object v0, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->installState:Landroid/widget/TextView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 135
+    .line 139
     iget-object v3, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->appName:Landroid/widget/TextView;
 
     iget-object v4, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->appDes:Landroid/widget/TextView;
@@ -693,29 +725,29 @@
 
     invoke-direct/range {v2 .. v8}, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->setTextColor(Landroid/widget/TextView;Landroid/widget/TextView;Landroid/widget/TextView;Landroid/widget/TextView;ZLandroid/content/Context;)V
 
-    .line 136
+    .line 140
     invoke-virtual {p2}, Lio/branch/search/BranchLocalAppResult;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 137
+    .line 141
     iget-object v1, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->mContext:Landroid/content/Context;
 
     invoke-static {v1, v0}, Lcom/mi/globallauncher/util/CommercialUtils;->isPackageInstalled(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v1
 
-    .line 138
+    .line 142
     invoke-direct {p0, v1}, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->installedVisibility(Z)V
 
-    .line 139
+    .line 143
     iget-object v2, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->container:Landroid/widget/RelativeLayout;
 
     iget-object v3, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->mContext:Landroid/content/Context;
 
     invoke-direct {p0, v2, v3, p1, p3}, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->setupContainerBg(Landroid/widget/RelativeLayout;Landroid/content/Context;ZI)V
 
-    .line 140
+    .line 144
     iget-object p3, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->appNameCenter:Landroid/widget/TextView;
 
     invoke-virtual {p2}, Lio/branch/search/BranchLocalAppResult;->getName()Ljava/lang/String;
@@ -724,12 +756,12 @@
 
     invoke-virtual {p3, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 141
+    .line 145
     iget-object p3, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->appIcon:Landroid/widget/ImageView;
 
     invoke-virtual {p2, p3}, Lio/branch/search/BranchLocalAppResult;->loadIconDrawable(Landroid/widget/ImageView;)V
 
-    .line 142
+    .line 146
     iget-object p3, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->appTitleContainer:Landroid/widget/RelativeLayout;
 
     new-instance v2, Lcom/mi/globallauncher/-$$Lambda$LdsBranchSearchResultViewHolder$qHFT3MeGPU574iJofUFRLbb4xHM;
@@ -738,33 +770,33 @@
 
     invoke-virtual {p3, v2}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 148
+    .line 152
     invoke-virtual {p2}, Lio/branch/search/BranchLocalAppResult;->getLinks()Ljava/util/List;
 
     move-result-object p2
 
     if-eqz p2, :cond_0
 
-    .line 149
+    .line 153
     invoke-interface {p2}, Ljava/util/List;->size()I
 
     move-result p3
 
     if-lez p3, :cond_0
 
-    .line 150
+    .line 154
     iget-object p3, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->localResultAdapter:Lcom/mi/globallauncher/local/BranchLocalSearchGridAdapter;
 
     invoke-virtual {p3, p1}, Lcom/mi/globallauncher/local/BranchLocalSearchGridAdapter;->setIsInLightMode(Z)V
 
-    .line 151
+    .line 155
     iget-object p1, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->showSearchBranch:Landroidx/recyclerview/widget/RecyclerView;
 
     iget-object p3, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->gridLayoutManager:Landroidx/recyclerview/widget/GridLayoutManager;
 
     invoke-virtual {p1, p3}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
 
-    .line 152
+    .line 156
     iget-object p1, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->localResultAdapter:Lcom/mi/globallauncher/local/BranchLocalSearchGridAdapter;
 
     const/4 p3, 0x4
@@ -773,13 +805,13 @@
 
     goto :goto_0
 
-    .line 154
+    .line 158
     :cond_0
     iget-object p1, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->localResultAdapter:Lcom/mi/globallauncher/local/BranchLocalSearchGridAdapter;
 
     invoke-virtual {p1}, Lcom/mi/globallauncher/local/BranchLocalSearchGridAdapter;->setEmptyList()V
 
-    .line 156
+    .line 160
     :goto_0
     iget-object p1, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->showSearchBranch:Landroidx/recyclerview/widget/RecyclerView;
 
@@ -793,7 +825,7 @@
 .method public updateView(ZLio/branch/search/BranchAppResult;IZ)V
     .locals 7
 
-    .line 74
+    .line 77
     iget-object v1, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->appName:Landroid/widget/TextView;
 
     iget-object v2, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->appDes:Landroid/widget/TextView;
@@ -810,14 +842,14 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->setTextColor(Landroid/widget/TextView;Landroid/widget/TextView;Landroid/widget/TextView;Landroid/widget/TextView;ZLandroid/content/Context;)V
 
-    .line 75
+    .line 78
     iget-object v0, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->container:Landroid/widget/RelativeLayout;
 
     iget-object v1, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->mContext:Landroid/content/Context;
 
     invoke-direct {p0, v0, v1, p1, p3}, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->setupContainerBg(Landroid/widget/RelativeLayout;Landroid/content/Context;ZI)V
 
-    .line 76
+    .line 79
     iget-object p3, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->mContext:Landroid/content/Context;
 
     invoke-virtual {p2}, Lio/branch/search/BranchAppResult;->getPackageName()Ljava/lang/String;
@@ -830,7 +862,7 @@
 
     invoke-direct {p0, p3}, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->installedVisibility(Z)V
 
-    .line 77
+    .line 80
     invoke-static {}, Lcom/squareup/picasso/Picasso;->get()Lcom/squareup/picasso/Picasso;
 
     move-result-object p3
@@ -843,9 +875,9 @@
 
     move-result-object p3
 
-    const v0, 0x7f08053a
+    const v0, 0x7f080543
 
-    .line 78
+    .line 81
     invoke-virtual {p3, v0}, Lcom/squareup/picasso/RequestCreator;->placeholder(I)Lcom/squareup/picasso/RequestCreator;
 
     move-result-object p3
@@ -854,17 +886,17 @@
 
     invoke-direct {v0}, Lcom/mi/globallauncher/util/RoundTransform;-><init>()V
 
-    .line 79
+    .line 82
     invoke-virtual {p3, v0}, Lcom/squareup/picasso/RequestCreator;->transform(Lcom/squareup/picasso/Transformation;)Lcom/squareup/picasso/RequestCreator;
 
     move-result-object p3
 
     iget-object v0, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->appIcon:Landroid/widget/ImageView;
 
-    .line 80
+    .line 83
     invoke-virtual {p3, v0}, Lcom/squareup/picasso/RequestCreator;->into(Landroid/widget/ImageView;)V
 
-    .line 81
+    .line 84
     invoke-direct {p0, p2, p4, p1}, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->setUpRvAdapterData(Lio/branch/search/BranchAppResult;ZZ)V
 
     return-void

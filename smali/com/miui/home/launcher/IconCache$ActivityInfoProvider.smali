@@ -34,15 +34,15 @@
 .method constructor <init>(Lcom/miui/home/launcher/IconCache;Landroid/content/Intent;Landroid/os/UserHandle;)V
     .locals 0
 
-    .line 284
+    .line 285
     iput-object p1, p0, Lcom/miui/home/launcher/IconCache$ActivityInfoProvider;->this$0:Lcom/miui/home/launcher/IconCache;
 
     invoke-direct {p0}, Lcom/miui/home/launcher/util/Provider;-><init>()V
 
-    .line 285
+    .line 286
     iput-object p2, p0, Lcom/miui/home/launcher/IconCache$ActivityInfoProvider;->mIntent:Landroid/content/Intent;
 
-    .line 286
+    .line 287
     iput-object p3, p0, Lcom/miui/home/launcher/IconCache$ActivityInfoProvider;->mUser:Landroid/os/UserHandle;
 
     return-void
@@ -53,7 +53,7 @@
 .method public get()Landroid/content/pm/LauncherActivityInfo;
     .locals 3
 
-    .line 291
+    .line 292
     iget-object v0, p0, Lcom/miui/home/launcher/IconCache$ActivityInfoProvider;->this$0:Lcom/miui/home/launcher/IconCache;
 
     invoke-static {v0}, Lcom/miui/home/launcher/IconCache;->access$000(Lcom/miui/home/launcher/IconCache;)Lcom/miui/home/library/compat/LauncherAppsCompat;
@@ -74,7 +74,7 @@
 .method public bridge synthetic get()Ljava/lang/Object;
     .locals 1
 
-    .line 279
+    .line 280
     invoke-virtual {p0}, Lcom/miui/home/launcher/IconCache$ActivityInfoProvider;->get()Landroid/content/pm/LauncherActivityInfo;
 
     move-result-object v0

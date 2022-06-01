@@ -498,9 +498,9 @@
     <string name="maml_download_tip_wait_wifi_china">Questo elemento verrà scaricato quando ti connetti al Wi-Fi</string>
     <string name="manager_group_settings">Gestisci le categorie app</string>
     <string name="memory_clear_nothing_result">Nessuna cache da pulire</string>
-    <string name="memory_clear_result">%1$sB puliti</string>
-    <string name="memory_clear_result_giga">%1$s GB puliti</string>
-    <string name="memory_clear_result_mega">%1$s MB puliti</string>
+    <string name="memory_clear_result">%1$s B eliminati</string>
+    <string name="memory_clear_result_giga">%1$s GB eliminati</string>
+    <string name="memory_clear_result_mega">%1$s MB eliminati</string>
     <string name="menu_add">Aggiungi</string>
     <string name="menu_auto_fill_of_uninstall">Riempi gli spazi delle app disinstallate</string>
     <string name="menu_back_desktop">Torna alla schermata Home</string>
@@ -760,9 +760,11 @@
     <string name="recents_title_security_scan">Scansione di sicurezza</string>
     <string name="recents_tv_small_window_text">Finestre a comparsa</string>
     <string name="recents_worldcirculate_text">Rilascia per selezionare</string>
+    <string name="recnets_relay_device_info">Da %s</string>
     <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
     <string name="recnets_worldcirculate_display_computer_info">"L'app è in esecuzione su %s."</string>
     <string name="recnets_worldcirculate_display_default_info">Tocca per riportarla qui.</string>
+    <string name="recnets_worldcirculate_display_default_info_pad">Tocca per riportarlo qui.</string>
     <string name="recnets_worldcirculate_display_pad_info">"L'app è in esecuzione su %s."</string>
     <string name="recommend_apk_size_and_desc">%1$dMB | %2$s</string>
     <string name="recommend_app">App consigliate</string>
@@ -950,6 +952,7 @@
     <string name="uninstall_xspace_dialog_title_format">"Disinstallare l'app clonata \"%s\"?"</string>
     <string name="unknown_artist_name">Artista sconosciuto</string>
     <string name="unnamed_folder_name">Cartella</string>
+    <string name="upgrade_remove_small_window_in_recents">Puoi utilizzare la barra laterale per aprire le app in finestre a comparsa</string>
     <string name="v7_preference_off">OFF</string>
     <string name="v7_preference_on">ON</string>
     <string name="wallpaper">Sfondo</string>

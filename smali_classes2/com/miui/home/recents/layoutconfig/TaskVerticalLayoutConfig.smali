@@ -26,14 +26,6 @@
     return v0
 .end method
 
-.method public getPaddingRatio()F
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
 .method public getTopRatio(ZI)F
     .locals 0
 
@@ -52,7 +44,7 @@
 
     return p1
 
-    .line 20
+    .line 15
     :cond_1
     sget-boolean p1, Lcom/miui/home/launcher/DeviceConfig;->IS_FOLD_DEVICE:Z
 

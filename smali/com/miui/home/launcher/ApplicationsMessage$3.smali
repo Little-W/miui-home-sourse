@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/ApplicationsMessage;)V
     .locals 0
 
-    .line 354
+    .line 356
     iput-object p1, p0, Lcom/miui/home/launcher/ApplicationsMessage$3;->this$0:Lcom/miui/home/launcher/ApplicationsMessage;
 
     invoke-direct {p0}, Lcom/miui/home/launcher/common/messages/LoadingFinishMessageHandler;-><init>()V
@@ -35,14 +35,14 @@
 .method protected onLoadingFinished()V
     .locals 2
 
-    .line 357
+    .line 359
     iget-object v0, p0, Lcom/miui/home/launcher/ApplicationsMessage$3;->this$0:Lcom/miui/home/launcher/ApplicationsMessage;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/ApplicationsMessage;->requestUpdateMessages(Z)V
 
-    .line 358
+    .line 360
     iget-object v0, p0, Lcom/miui/home/launcher/ApplicationsMessage$3;->this$0:Lcom/miui/home/launcher/ApplicationsMessage;
 
     invoke-static {v0}, Lcom/miui/home/launcher/ApplicationsMessage;->access$600(Lcom/miui/home/launcher/ApplicationsMessage;)V

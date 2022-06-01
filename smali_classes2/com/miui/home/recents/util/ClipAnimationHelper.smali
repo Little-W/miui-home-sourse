@@ -168,6 +168,12 @@
     if-eqz v3, :cond_1
 
     .line 254
+    invoke-virtual {v3}, Lcom/miui/home/launcher/Launcher;->getAppPairController()Lcom/miui/home/launcher/AppPairController;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_1
+
     array-length v4, p2
 
     add-int/lit8 v4, v4, -0x1

@@ -30,21 +30,21 @@
 .method constructor <init>(Lcom/miui/home/launcher/CellLayout;IIII)V
     .locals 0
 
-    .line 1476
+    .line 1504
     iput-object p1, p0, Lcom/miui/home/launcher/CellLayout$ItemArea;->this$0:Lcom/miui/home/launcher/CellLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1477
+    .line 1505
     iput p2, p0, Lcom/miui/home/launcher/CellLayout$ItemArea;->mCellX:I
 
-    .line 1478
+    .line 1506
     iput p3, p0, Lcom/miui/home/launcher/CellLayout$ItemArea;->mCellY:I
 
-    .line 1479
+    .line 1507
     iput p4, p0, Lcom/miui/home/launcher/CellLayout$ItemArea;->mSpanX:I
 
-    .line 1480
+    .line 1508
     iput p5, p0, Lcom/miui/home/launcher/CellLayout$ItemArea;->mSpanY:I
 
     return-void
@@ -55,7 +55,7 @@
 .method public getCoveringRect()Landroid/graphics/Rect;
     .locals 5
 
-    .line 1484
+    .line 1512
     new-instance v0, Landroid/graphics/Rect;
 
     iget v1, p0, Lcom/miui/home/launcher/CellLayout$ItemArea;->mCellX:I
@@ -86,7 +86,7 @@
         }
     .end annotation
 
-    .line 1488
+    .line 1516
     iget v0, p0, Lcom/miui/home/launcher/CellLayout$ItemArea;->mCellY:I
 
     :goto_0
@@ -98,7 +98,7 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 1489
+    .line 1517
     iget v1, p0, Lcom/miui/home/launcher/CellLayout$ItemArea;->mCellX:I
 
     :goto_1
@@ -110,7 +110,7 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 1490
+    .line 1518
     iget-object v2, p0, Lcom/miui/home/launcher/CellLayout$ItemArea;->this$0:Lcom/miui/home/launcher/CellLayout;
 
     invoke-static {v2}, Lcom/miui/home/launcher/CellLayout;->access$100(Lcom/miui/home/launcher/CellLayout;)[[Landroid/view/View;
@@ -147,7 +147,7 @@
         }
     .end annotation
 
-    .line 1496
+    .line 1524
     iget v0, p0, Lcom/miui/home/launcher/CellLayout$ItemArea;->mCellY:I
 
     :goto_0
@@ -159,7 +159,7 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 1497
+    .line 1525
     iget v1, p0, Lcom/miui/home/launcher/CellLayout$ItemArea;->mCellX:I
 
     :goto_1
@@ -171,7 +171,7 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 1498
+    .line 1526
     iget-object v2, p0, Lcom/miui/home/launcher/CellLayout$ItemArea;->this$0:Lcom/miui/home/launcher/CellLayout;
 
     invoke-static {v2}, Lcom/miui/home/launcher/CellLayout;->access$100(Lcom/miui/home/launcher/CellLayout;)[[Landroid/view/View;

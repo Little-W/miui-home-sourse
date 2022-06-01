@@ -26,14 +26,6 @@
     return v0
 .end method
 
-.method public getPaddingRatio()F
-    .locals 1
-
-    const v0, 0x3ddb22d1    # 0.107f
-
-    return v0
-.end method
-
 .method public getTopRatio(ZI)F
     .locals 0
 

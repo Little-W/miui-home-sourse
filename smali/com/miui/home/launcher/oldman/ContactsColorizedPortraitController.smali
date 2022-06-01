@@ -36,15 +36,15 @@
 
     :array_0
     .array-data 4
-        0x7f0800f4
-        0x7f0800f5
-        0x7f0800f6
         0x7f0800f7
         0x7f0800f8
         0x7f0800f9
         0x7f0800fa
         0x7f0800fb
         0x7f0800fc
+        0x7f0800fd
+        0x7f0800fe
+        0x7f0800ff
     .end array-data
 .end method
 

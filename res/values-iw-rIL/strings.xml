@@ -728,9 +728,11 @@
     <string name="recents_title_security_scan">סריקת אבטחה</string>
     <string name="recents_tv_small_window_text">חלונות צפים</string>
     <string name="recents_worldcirculate_text">יש לשחרר כדי לבחור</string>
+    <string name="recnets_relay_device_info">מ-%s</string>
     <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
     <string name="recnets_worldcirculate_display_computer_info">יישום זה עובד ב-%s.</string>
     <string name="recnets_worldcirculate_display_default_info">יש להקיש כדי להחזיר אותו לכאן.</string>
+    <string name="recnets_worldcirculate_display_default_info_pad">יש להקיש כדי להחזיר אותו לכאן.</string>
     <string name="recnets_worldcirculate_display_pad_info">יישום זה עובד ב-%s.</string>
     <string name="recommend_apk_size_and_desc">%1$dMB | %2$s</string>
     <string name="recommend_app">הצעות לאפליקציות</string>
@@ -915,6 +917,7 @@
     <string name="uninstall_xspace_dialog_title_format">להסיר התקנה של \"%s\" המשוכפל?</string>
     <string name="unknown_artist_name">אמן לא ידוע</string>
     <string name="unnamed_folder_name">תיקיה</string>
+    <string name="upgrade_remove_small_window_in_recents">ניתן להשתמש בסרגל צד כדי לפתוח יישומים בחלונות צפים</string>
     <string name="wallpaper">טפט</string>
     <string name="wallpaper_auto_change_title">מסך הנעילה</string>
     <string name="wallpaper_failed_message">לא ניתן להגדיר טפט</string>

@@ -760,9 +760,11 @@
     <string name="recents_title_security_scan">Saugumo nuskaitymas</string>
     <string name="recents_tv_small_window_text">Laikinieji langai</string>
     <string name="recents_worldcirculate_text">Paleiskite norėdami pasirinkti</string>
+    <string name="recnets_relay_device_info">Iš %s</string>
     <string name="recnets_worldcirculate_button_text">„Mi Smart Hub“</string>
     <string name="recnets_worldcirculate_display_computer_info">Programa veikia %s.</string>
     <string name="recnets_worldcirculate_display_default_info">Bakstelėkite, kad grąžintumėte čia.</string>
+    <string name="recnets_worldcirculate_display_default_info_pad">Bakstelėkite, kad grąžintumėte čia.</string>
     <string name="recnets_worldcirculate_display_pad_info">Programa veikia %s.</string>
     <string name="recommend_apk_size_and_desc">%1$dMB | %2$s</string>
     <string name="recommend_app">Siūlomos programos</string>
@@ -950,6 +952,7 @@
     <string name="uninstall_xspace_dialog_title_format">Išdiegti dvigubą „%s“?</string>
     <string name="unknown_artist_name">Nežinomas atlikėjas</string>
     <string name="unnamed_folder_name">Aplankas</string>
+    <string name="upgrade_remove_small_window_in_recents">Galite naudoti šoninę juostą norėdami atidaryti programas laikinuosiuose languose</string>
     <string name="v7_preference_off">IŠJUNGTA</string>
     <string name="v7_preference_on">ĮJUNGTA</string>
     <string name="wallpaper">Fono paveikslėlis</string>

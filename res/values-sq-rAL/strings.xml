@@ -728,9 +728,11 @@
     <string name="recents_title_security_scan">Skanimi i sigurisë</string>
     <string name="recents_tv_small_window_text">Dritare lundruese</string>
     <string name="recents_worldcirculate_text">Lëshoje për të zgjedhur</string>
+    <string name="recnets_relay_device_info">Nga %s</string>
     <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
     <string name="recnets_worldcirculate_display_computer_info">Aplikacioni është duke punuar %s.</string>
     <string name="recnets_worldcirculate_display_default_info">Kliko për ta kthyer këtu.</string>
+    <string name="recnets_worldcirculate_display_default_info_pad">Kliko për ta kthyer këtu.</string>
     <string name="recnets_worldcirculate_display_pad_info">Aplikacioni është duke punuar %s.</string>
     <string name="recommend_apk_size_and_desc">%1$dMB | %2$s</string>
     <string name="recommend_app">Sugjerimet e aplikacionit</string>
@@ -915,6 +917,7 @@
     <string name="uninstall_xspace_dialog_title_format">"Ç'instalo \"%s\" e dyfishta?"</string>
     <string name="unknown_artist_name">Artist i panjohur</string>
     <string name="unnamed_folder_name">Dosje</string>
+    <string name="upgrade_remove_small_window_in_recents">Mund të përdorni shiritin anësor për të hapur aplikacionet në dritaret lundruese</string>
     <string name="wallpaper">Imazhi i sfondit</string>
     <string name="wallpaper_auto_change_title">Ekrani kçyës</string>
     <string name="wallpaper_failed_message">Nuk mund të vendoset imazhi i sfondit</string>

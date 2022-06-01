@@ -760,9 +760,11 @@
     <string name="recents_title_security_scan">Turvatarkistus</string>
     <string name="recents_tv_small_window_text">Kelluvat ikkunat</string>
     <string name="recents_worldcirculate_text">Vapauta valitaksesi</string>
+    <string name="recnets_relay_device_info">Laitteelta %s</string>
     <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
     <string name="recnets_worldcirculate_display_computer_info">Sovellus toimii laitteessa %s.</string>
     <string name="recnets_worldcirculate_display_default_info">Tuo se takaisin tänne napauttamalla.</string>
+    <string name="recnets_worldcirculate_display_default_info_pad">Tuo se takaisin tänne napauttamalla.</string>
     <string name="recnets_worldcirculate_display_pad_info">Sovellus toimii laitteessa %s.</string>
     <string name="recommend_apk_size_and_desc">%1$d Mt | %2$s</string>
     <string name="recommend_app">Sovellusehdotukset</string>
@@ -950,6 +952,7 @@
     <string name="uninstall_xspace_dialog_title_format">Poistetaanko kaksois\"%s\"?</string>
     <string name="unknown_artist_name">Tuntematon artisti</string>
     <string name="unnamed_folder_name">Kansio</string>
+    <string name="upgrade_remove_small_window_in_recents">Voit käyttää sivupalkkia sovellusten avaamiseen kelluvissa ikkunoissa</string>
     <string name="v7_preference_off">POIS KÄYTÖSTÄ</string>
     <string name="v7_preference_on">KÄYTÖSSÄ</string>
     <string name="wallpaper">Taustakuva</string>

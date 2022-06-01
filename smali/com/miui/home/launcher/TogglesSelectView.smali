@@ -116,7 +116,7 @@
     move-result-object p2
 
     :goto_0
-    const v0, 0x7f0a02a4
+    const v0, 0x7f0a02a6
 
     .line 44
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -195,7 +195,7 @@
     .line 70
     iget-object v0, p0, Lcom/miui/home/launcher/TogglesSelectView;->mTitle:Landroid/widget/TextView;
 
-    const v1, 0x7f100445
+    const v1, 0x7f100447
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 

@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/ShortcutIcon;)V
     .locals 0
 
-    .line 808
+    .line 860
     iput-object p1, p0, Lcom/miui/home/launcher/ShortcutIcon$10;->this$0:Lcom/miui/home/launcher/ShortcutIcon;
 
     invoke-direct {p0}, Lcom/miui/home/library/mirror/MirrorMenuListener;-><init>()V
@@ -45,7 +45,7 @@
         }
     .end annotation
 
-    .line 811
+    .line 863
     iget-object p1, p0, Lcom/miui/home/launcher/ShortcutIcon$10;->this$0:Lcom/miui/home/launcher/ShortcutIcon;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/ShortcutIcon;->getTag()Ljava/lang/Object;
@@ -56,7 +56,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 812
+    .line 864
     iget-object p1, p0, Lcom/miui/home/launcher/ShortcutIcon$10;->this$0:Lcom/miui/home/launcher/ShortcutIcon;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/ShortcutIcon;->getTag()Ljava/lang/Object;
@@ -65,12 +65,12 @@
 
     check-cast p1, Lcom/miui/home/launcher/ShortcutInfo;
 
-    .line 813
+    .line 865
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 814
+    .line 866
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v1
@@ -85,7 +85,7 @@
 
     move-result-object p1
 
-    .line 815
+    .line 867
     new-instance v1, Lcom/xiaomi/mirror/MirrorMenu$NewDisplayOpenBuilder;
 
     invoke-direct {v1}, Lcom/xiaomi/mirror/MirrorMenu$NewDisplayOpenBuilder;-><init>()V

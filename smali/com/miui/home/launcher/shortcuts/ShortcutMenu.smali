@@ -1922,7 +1922,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mAppShortcutMenu:Lcom/miui/home/launcher/shortcuts/AppShortcutMenu;
 
-    const v0, 0x7f0a027f
+    const v0, 0x7f0a0281
 
     .line 65
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->findViewById(I)Landroid/view/View;
@@ -1933,7 +1933,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mSystemShortcutMenu:Lcom/miui/home/launcher/shortcuts/SystemShortcutMenu;
 
-    const v0, 0x7f0a02f0
+    const v0, 0x7f0a02f2
 
     .line 66
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->findViewById(I)Landroid/view/View;
@@ -1944,7 +1944,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mWidgetShortcutMenu:Lcom/miui/home/launcher/shortcuts/SystemShortcutMenu;
 
-    const v0, 0x7f0a02b6
+    const v0, 0x7f0a02b8
 
     .line 67
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->findViewById(I)Landroid/view/View;
@@ -1953,7 +1953,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mAppSystemTransparentSpace:Landroid/view/View;
 
-    const v0, 0x7f0a02b7
+    const v0, 0x7f0a02b9
 
     .line 68
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->findViewById(I)Landroid/view/View;
@@ -1978,7 +1978,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f07041a
+    const v1, 0x7f07041e
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1991,7 +1991,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070417
+    const v1, 0x7f07041b
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -2004,7 +2004,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070416
+    const v1, 0x7f07041a
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -2052,7 +2052,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f07016f
+    const v1, 0x7f070172
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -2190,7 +2190,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f08058b
+    const v2, 0x7f080594
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

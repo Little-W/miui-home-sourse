@@ -760,9 +760,11 @@
     <string name="recents_title_security_scan">Sikkerhetsskanning</string>
     <string name="recents_tv_small_window_text">Flytende vinduer</string>
     <string name="recents_worldcirculate_text">Slipp for å velge</string>
+    <string name="recnets_relay_device_info">Fra %s</string>
     <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
     <string name="recnets_worldcirculate_display_computer_info">Denne appen fungerer på %s.</string>
     <string name="recnets_worldcirculate_display_default_info">Trykk for å ta den tilbake hit.</string>
+    <string name="recnets_worldcirculate_display_default_info_pad">Trykk for å ta den tilbake hit.</string>
     <string name="recnets_worldcirculate_display_pad_info">Denne appen fungerer på %s.</string>
     <string name="recommend_apk_size_and_desc">%1$dMB | %2$s</string>
     <string name="recommend_app">App-forslag</string>
@@ -950,6 +952,7 @@
     <string name="uninstall_xspace_dialog_title_format">Avinstaller dobbel \"%s\"?</string>
     <string name="unknown_artist_name">Ukjent artist</string>
     <string name="unnamed_folder_name">Mappe</string>
+    <string name="upgrade_remove_small_window_in_recents">Du kan bruke sidelinjene til å åpne apper i flytende vindu</string>
     <string name="v7_preference_off">AV</string>
     <string name="v7_preference_on">PÅ</string>
     <string name="wallpaper">Bakgrunn</string>

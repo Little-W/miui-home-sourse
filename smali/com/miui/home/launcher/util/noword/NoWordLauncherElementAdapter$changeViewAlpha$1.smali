@@ -17,7 +17,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nNoWordLauncherElementAdapter.kt\nKotlin\n*S Kotlin\n*F\n+ 1 NoWordLauncherElementAdapter.kt\ncom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter$changeViewAlpha$1\n*L\n1#1,297:1\n*E\n"
+    value = "SMAP\nNoWordLauncherElementAdapter.kt\nKotlin\n*S Kotlin\n*F\n+ 1 NoWordLauncherElementAdapter.kt\ncom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter$changeViewAlpha$1\n*L\n1#1,301:1\n*E\n"
 .end annotation
 
 
@@ -45,7 +45,7 @@
 .method public final run()V
     .locals 3
 
-    .line 248
+    .line 252
     iget-object v0, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter$changeViewAlpha$1;->this$0:Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->viewChangeAlphaWhenEditModeChange()Landroid/view/View;
@@ -54,7 +54,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 249
+    .line 253
     invoke-virtual {v0}, Landroid/view/View;->getAlpha()F
 
     move-result v1
@@ -65,7 +65,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 250
+    .line 254
     iget-boolean v1, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter$changeViewAlpha$1;->$isChangeAlpha:Z
 
     if-eqz v1, :cond_0

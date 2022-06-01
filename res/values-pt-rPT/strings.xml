@@ -760,9 +760,11 @@
     <string name="recents_title_security_scan">Verificação de segurança</string>
     <string name="recents_tv_small_window_text">Janelas flutuantes</string>
     <string name="recents_worldcirculate_text">Solte para selecionar</string>
+    <string name="recnets_relay_device_info">De %s</string>
     <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
     <string name="recnets_worldcirculate_display_computer_info">A aplicação está a funcionar em %s.</string>
     <string name="recnets_worldcirculate_display_default_info">Toque para trazê-la de volta para cá.</string>
+    <string name="recnets_worldcirculate_display_default_info_pad">Toque para trazê-la de volta para cá.</string>
     <string name="recnets_worldcirculate_display_pad_info">A aplicação está a funcionar em %s.</string>
     <string name="recommend_apk_size_and_desc">%1$dMB | %2$s</string>
     <string name="recommend_app">Sugestões de aplicações</string>
@@ -950,6 +952,7 @@
     <string name="uninstall_xspace_dialog_title_format">Desinstalar aplicação clonada \"%s\"?</string>
     <string name="unknown_artist_name">Artista desconhecido</string>
     <string name="unnamed_folder_name">Pasta</string>
+    <string name="upgrade_remove_small_window_in_recents">Pode utilizar a barra lateral para abrir aplicações em janelas flutuantes</string>
     <string name="v7_preference_off">DESATIVADO</string>
     <string name="v7_preference_on">ATIVADO</string>
     <string name="wallpaper">Papel de parede</string>

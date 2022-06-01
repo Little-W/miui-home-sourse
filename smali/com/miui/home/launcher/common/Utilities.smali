@@ -46,7 +46,7 @@
 
 .field public static final IS_MIUI_13:Z
 
-.field public static LOW_MEMORY_DEVICES:Ljava/util/Set;
+.field public static LOW_MEMORY_DEVICES:Ljava/util/Set; = null
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set<",
@@ -58,7 +58,7 @@
 
 .field public static final MIUI_BIG_VERSION:Ljava/lang/String;
 
-.field public static MIUI_VERSION:F
+.field public static MIUI_VERSION:F = 0.0f
 
 .field public static final MIUI_VERSION_CODE:I
 
@@ -82,7 +82,7 @@
     .end annotation
 .end field
 
-.field public static USE_SIMPLE_ANIMATION_EFFECT_DEVICES:Ljava/util/Set;
+.field public static USE_SIMPLE_ANIMATION_EFFECT_DEVICES:Ljava/util/Set; = null
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set<",
@@ -92,7 +92,7 @@
     .end annotation
 .end field
 
-.field public static USE_SMOOTH_ANIMATION_EFFECT_DEVICES:Ljava/util/Set;
+.field public static USE_SMOOTH_ANIMATION_EFFECT_DEVICES:Ljava/util/Set; = null
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set<",
@@ -102,7 +102,7 @@
     .end annotation
 .end field
 
-.field private static mIncompatibleAppList:Ljava/util/List;
+.field private static mIncompatibleAppList:Ljava/util/List; = null
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -114,23 +114,23 @@
 
 .field private static final mMetrics:Landroid/util/DisplayMetrics;
 
-.field private static sBoostGPUInstance:Ljava/lang/Object;
+.field private static sBoostGPUInstance:Ljava/lang/Object; = null
 
-.field private static sBoostMethod:Ljava/lang/reflect/Method;
+.field private static sBoostMethod:Ljava/lang/reflect/Method; = null
 
 .field private static final sCanvas:Landroid/graphics/Canvas;
 
-.field private static sDefaultAnimatorInterPolator:Landroid/view/animation/Interpolator;
+.field private static sDefaultAnimatorInterPolator:Landroid/view/animation/Interpolator; = null
 
-.field private static sHasShowScreenLockedToast:Z
+.field private static sHasShowScreenLockedToast:Z = false
 
-.field private static sIconDarkShadowPaint:Landroid/graphics/Paint;
+.field private static sIconDarkShadowPaint:Landroid/graphics/Paint; = null
 
-.field private static sIconShadowBlurPaint:Landroid/graphics/Paint;
+.field private static sIconShadowBlurPaint:Landroid/graphics/Paint; = null
 
 .field private static final sInverseMatrix:Landroid/graphics/Matrix;
 
-.field private static sIsStaging:Z
+.field private static sIsStaging:Z = false
 
 .field private static sMQueueField:Ljava/lang/reflect/Field;
 
@@ -3210,7 +3210,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0703b0
+    const v2, 0x7f0703b3
 
     .line 1721
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -3464,7 +3464,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f100404
+    const v1, 0x7f100406
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Application;->getString(I)Ljava/lang/String;
 
@@ -3487,7 +3487,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f100403
+    const v1, 0x7f100405
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Application;->getString(I)Ljava/lang/String;
 
@@ -3501,7 +3501,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f100405
+    const v1, 0x7f100407
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Application;->getString(I)Ljava/lang/String;
 
@@ -3868,7 +3868,7 @@
 
     move-result v5
 
-    const v6, 0x7f0a0205
+    const v6, 0x7f0a0207
 
     if-ne v5, v6, :cond_3
 
@@ -8538,7 +8538,7 @@
 
     move-result-object p0
 
-    const v0, 0x7f080183
+    const v0, 0x7f080187
 
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -8602,7 +8602,7 @@
 
     move-result-object p0
 
-    const v0, 0x7f0805a6
+    const v0, 0x7f0805af
 
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -8734,7 +8734,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f07009d
+    const v3, 0x7f0700a0
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -9646,7 +9646,7 @@
 
     move-result-object p0
 
-    const v0, 0x7f07049e
+    const v0, 0x7f0704a2
 
     .line 1439
     sget-object v1, Lcom/miui/home/launcher/common/Utilities;->sTmpValue:Landroid/util/TypedValue;
@@ -9662,7 +9662,7 @@
 
     move-result v0
 
-    const v1, 0x7f07049c
+    const v1, 0x7f0704a0
 
     .line 1441
     sget-object v3, Lcom/miui/home/launcher/common/Utilities;->sTmpValue:Landroid/util/TypedValue;
@@ -9676,7 +9676,7 @@
 
     move-result v1
 
-    const v3, 0x7f07049d
+    const v3, 0x7f0704a1
 
     .line 1443
     sget-object v4, Lcom/miui/home/launcher/common/Utilities;->sTmpValue:Landroid/util/TypedValue;
@@ -9731,7 +9731,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f1003ad
+    const v1, 0x7f1003af
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/install/PackageInstallerCompatVL;)V
     .locals 0
 
-    .line 95
+    .line 98
     iput-object p1, p0, Lcom/miui/home/launcher/install/PackageInstallerCompatVL$2;->this$0:Lcom/miui/home/launcher/install/PackageInstallerCompatVL;
 
     invoke-direct {p0}, Landroid/content/pm/PackageInstaller$SessionCallback;-><init>()V
@@ -33,7 +33,7 @@
 .method private update(I)V
     .locals 4
 
-    .line 123
+    .line 126
     iget-object v0, p0, Lcom/miui/home/launcher/install/PackageInstallerCompatVL$2;->this$0:Lcom/miui/home/launcher/install/PackageInstallerCompatVL;
 
     invoke-static {v0}, Lcom/miui/home/launcher/install/PackageInstallerCompatVL;->access$100(Lcom/miui/home/launcher/install/PackageInstallerCompatVL;)Landroid/content/pm/PackageInstaller;
@@ -46,7 +46,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 124
+    .line 127
     invoke-virtual {p1}, Landroid/content/pm/PackageInstaller$SessionInfo;->getAppPackageName()Ljava/lang/String;
 
     move-result-object v0
@@ -69,30 +69,30 @@
 
     if-eqz v0, :cond_1
 
-    .line 125
+    .line 128
     invoke-virtual {p1}, Landroid/content/pm/PackageInstaller$SessionInfo;->getAppLabel()Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    .line 126
+    .line 129
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 127
+    .line 130
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
 
-    const v1, 0x7f1003f7
+    const v1, 0x7f1003f9
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Application;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 129
+    .line 132
     :cond_0
     iget-object v1, p0, Lcom/miui/home/launcher/install/PackageInstallerCompatVL$2;->this$0:Lcom/miui/home/launcher/install/PackageInstallerCompatVL;
 
@@ -125,7 +125,7 @@
 .method public onActiveChanged(IZ)V
     .locals 0
 
-    .line 114
+    .line 117
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/install/PackageInstallerCompatVL$2;->update(I)V
 
     return-void
@@ -134,7 +134,7 @@
 .method public onBadgingChanged(I)V
     .locals 0
 
-    .line 119
+    .line 122
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/install/PackageInstallerCompatVL$2;->update(I)V
 
     return-void
@@ -143,7 +143,7 @@
 .method public onCreated(I)V
     .locals 0
 
-    .line 99
+    .line 102
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/install/PackageInstallerCompatVL$2;->update(I)V
 
     return-void
@@ -152,7 +152,7 @@
 .method public onFinished(IZ)V
     .locals 0
 
-    .line 104
+    .line 107
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/install/PackageInstallerCompatVL$2;->update(I)V
 
     return-void
@@ -161,7 +161,7 @@
 .method public onProgressChanged(IF)V
     .locals 0
 
-    .line 109
+    .line 112
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/install/PackageInstallerCompatVL$2;->update(I)V
 
     return-void

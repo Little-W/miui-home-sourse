@@ -728,9 +728,11 @@
     <string name="recents_title_security_scan">ସୁରକ୍ଷା ସ୍କାନ୍</string>
     <string name="recents_tv_small_window_text">ଫ୍ଲୋଟିଂ ୱିଣ୍ଡୋ</string>
     <string name="recents_worldcirculate_text">ଚୟନ କରିବାକୁ ରିଲିଜ କରନ୍ତୁ</string>
+    <string name="recnets_relay_device_info">%sରୁ</string>
     <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
     <string name="recnets_worldcirculate_display_computer_info">ଆପଟି %sରେ କାମ କରୁଛି।</string>
     <string name="recnets_worldcirculate_display_default_info">ତାକୁ ଏଠାକୁ ପୁଣି ଆଣିବାକୁ ଟେପ୍ କରନ୍ତୁ।</string>
+    <string name="recnets_worldcirculate_display_default_info_pad">ତାକୁ ଏଠାକୁ ପୁଣି ଆଣିବାକୁ ଟେପ୍ କରନ୍ତୁ।</string>
     <string name="recnets_worldcirculate_display_pad_info">ଆପଟି %sରେ କାମ କରୁଛି।</string>
     <string name="recommend_apk_size_and_desc">%1$dMB | %2$s</string>
     <string name="recommend_app">ଆପ ମତାମତ</string>
@@ -915,6 +917,7 @@
     <string name="uninstall_xspace_dialog_title_format">ଡୁଆଲ୍‌ \"%s\"ଅଣସଂସ୍ଥାପନ କରିବେ କି?</string>
     <string name="unknown_artist_name">ଅଜଣା କଳାକାର</string>
     <string name="unnamed_folder_name">ଫୋଲଡର</string>
+    <string name="upgrade_remove_small_window_in_recents">ଫ୍ଲୋଟିଂ ୱିଣ୍ଡୋରେ ଆପଗୁଡ଼ିକୁ ଖୋଲିବାକୁ ଆପଣ ସାଇଡବାର୍ ବ୍ୟବହାର କରିପାରିବେ</string>
     <string name="wallpaper">ୱାଲ୍‌ପେପର୍‍</string>
     <string name="wallpaper_auto_change_title">ଲକ୍‌ ସ୍କ୍ରିନ୍‍</string>
     <string name="wallpaper_failed_message">ୱାଲପେପର୍‌ ସେଟ୍‌ କରିପାରିବେ ନାହିଁ</string>

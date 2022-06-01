@@ -446,7 +446,7 @@
     .line 229
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mErrorDisplay:Landroid/view/ViewStub;
 
-    const v1, 0x7f0d0072
+    const v1, 0x7f0d0073
 
     invoke-virtual {v0, v1}, Landroid/view/ViewStub;->setLayoutResource(I)V
 

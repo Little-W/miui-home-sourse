@@ -62,7 +62,7 @@
     .line 210
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRecommendTitle:Landroid/widget/TextView;
 
-    const v1, 0x7f100392
+    const v1, 0x7f100394
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -520,11 +520,11 @@
 
     move-result p1
 
-    const v0, 0x7f0a01ed
+    const v0, 0x7f0a01ef
 
     if-eq p1, v0, :cond_1
 
-    const v0, 0x7f0a01f0
+    const v0, 0x7f0a01f2
 
     if-eq p1, v0, :cond_0
 
@@ -655,7 +655,7 @@
     .line 86
     invoke-super {p0}, Landroid/widget/LinearLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a0117
+    const v0, 0x7f0a0118
 
     .line 87
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->findViewById(I)Landroid/view/View;
@@ -677,7 +677,7 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    const v0, 0x7f0a01ef
+    const v0, 0x7f0a01f1
 
     .line 89
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->findViewById(I)Landroid/view/View;
@@ -709,7 +709,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setGravity(I)V
 
     :cond_0
-    const v0, 0x7f0a01ed
+    const v0, 0x7f0a01ef
 
     .line 93
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->findViewById(I)Landroid/view/View;
@@ -725,7 +725,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0a01f0
+    const v0, 0x7f0a01f2
 
     .line 95
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->findViewById(I)Landroid/view/View;
@@ -741,7 +741,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0a01e8
+    const v0, 0x7f0a01ea
 
     .line 97
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->findViewById(I)Landroid/view/View;
@@ -797,7 +797,7 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f080555
+    const v0, 0x7f08055e
 
     .line 189
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->setHeaderBgRes(I)V
@@ -805,7 +805,7 @@
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f080554
+    const v0, 0x7f08055d
 
     .line 191
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->setHeaderBgRes(I)V

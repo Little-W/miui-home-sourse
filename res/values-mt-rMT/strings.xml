@@ -728,9 +728,11 @@
     <string name="recents_title_security_scan">Skenn tas-sigurtà</string>
     <string name="recents_tv_small_window_text">Twieqi li jitilgħu fil-wiċċ</string>
     <string name="recents_worldcirculate_text">Itlaq biex tagħżel</string>
+    <string name="recnets_relay_device_info">Minn %s</string>
     <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
     <string name="recnets_worldcirculate_display_computer_info">Dil-app qed taħdem fuq %s.</string>
     <string name="recnets_worldcirculate_display_default_info">Agħfas biex turiha hawn.</string>
+    <string name="recnets_worldcirculate_display_default_info_pad">Agħfas biex turiha hawn.</string>
     <string name="recnets_worldcirculate_display_pad_info">Dil-app qed taħdem fuq %s.</string>
     <string name="recommend_apk_size_and_desc">%1$dMB | %2$s</string>
     <string name="recommend_app">Suġġerimenti għall-apps</string>
@@ -915,6 +917,7 @@
     <string name="uninstall_xspace_dialog_title_format">Trid tneħħi l-installazzjoni duwali %s\"?</string>
     <string name="unknown_artist_name">Artist mhux magħruf</string>
     <string name="unnamed_folder_name">Fowlder</string>
+    <string name="upgrade_remove_small_window_in_recents">"Tista' tuża l-faxxa tal-ġenb biex tiftaħ l-apps fi twieqi li jitilgħu fil-wiċċ"</string>
     <string name="wallpaper">Wallpaper</string>
     <string name="wallpaper_auto_change_title">Skrin imsakkar</string>
     <string name="wallpaper_failed_message">Ma jistax jissettja l-wallpaper</string>

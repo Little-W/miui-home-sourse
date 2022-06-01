@@ -760,9 +760,11 @@
     <string name="recents_title_security_scan">Análisis de seguridad</string>
     <string name="recents_tv_small_window_text">Ventanas flotantes</string>
     <string name="recents_worldcirculate_text">Suelte para seleccionar</string>
+    <string name="recnets_relay_device_info">De %s</string>
     <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
     <string name="recnets_worldcirculate_display_computer_info">La aplicación funciona en %s.</string>
     <string name="recnets_worldcirculate_display_default_info">Toque para traerlo de vuelta aquí.</string>
+    <string name="recnets_worldcirculate_display_default_info_pad">Toque para traerlo de vuelta aquí.</string>
     <string name="recnets_worldcirculate_display_pad_info">La aplicación funciona en %s.</string>
     <string name="recommend_apk_size_and_desc">%1$d MB | %2$s</string>
     <string name="recommend_app">Sugerencias de aplicaciones</string>
@@ -950,6 +952,7 @@
     <string name="uninstall_xspace_dialog_title_format">¿Desinstalar aplicación dual de %s?</string>
     <string name="unknown_artist_name">Artista desconocido</string>
     <string name="unnamed_folder_name">Carpeta</string>
+    <string name="upgrade_remove_small_window_in_recents">Puede usar la barra lateral para abrir aplicaciones en ventanas flotantes</string>
     <string name="v7_preference_off">DESACTIVADA</string>
     <string name="v7_preference_on">ACTIVADA</string>
     <string name="wallpaper">Fondo de pantalla</string>

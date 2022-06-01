@@ -32,7 +32,7 @@
     .line 122
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapter$ViewHolder;->itemView:Landroid/view/View;
 
-    const v0, 0x7f0a013e
+    const v0, 0x7f0a0140
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -45,7 +45,7 @@
     .line 123
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapter$ViewHolder;->itemView:Landroid/view/View;
 
-    const v0, 0x7f0a02a4
+    const v0, 0x7f0a02a6
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -58,7 +58,7 @@
     .line 124
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapter$ViewHolder;->itemView:Landroid/view/View;
 
-    const v0, 0x7f0a00e0
+    const v0, 0x7f0a00e1
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

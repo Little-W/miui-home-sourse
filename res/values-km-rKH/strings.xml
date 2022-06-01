@@ -728,9 +728,11 @@
     <string name="recents_title_security_scan">ស្កេនសុវត្ថិភាព</string>
     <string name="recents_tv_small_window_text">បង្អួចអណ្តែត</string>
     <string name="recents_worldcirculate_text">ព្រលែងដើម្បីជ្រើសរើស</string>
+    <string name="recnets_relay_device_info">ពី%s</string>
     <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
     <string name="recnets_worldcirculate_display_computer_info">កម្មវិធីកំពុងដំណើរការលើ %s ។</string>
     <string name="recnets_worldcirculate_display_default_info">ចុចដើម្បីយកវាមកវិញនៅទីនេះ។</string>
+    <string name="recnets_worldcirculate_display_default_info_pad">ចុចដើម្បីយកវាមកវិញនៅទីនេះ។</string>
     <string name="recnets_worldcirculate_display_pad_info">កម្មវិធីកំពុងដំណើរការលើ %s ។</string>
     <string name="recommend_apk_size_and_desc">%1$dMB | %2$s</string>
     <string name="recommend_app">ការផ្ដល់យោបល់សម្រាប់កម្មវិធី</string>
@@ -915,6 +917,7 @@
     <string name="uninstall_xspace_dialog_title_format">លុបទាំងពីរ \"%s\"?</string>
     <string name="unknown_artist_name">សិល្បករដែលមិនស្គាល់</string>
     <string name="unnamed_folder_name">ថត</string>
+    <string name="upgrade_remove_small_window_in_recents">អ្នកអាចប្រើប្រាស់របារចំហៀងដើម្បីបើកកម្មវិធីក្នុងបង្អួចអណ្តែត</string>
     <string name="wallpaper">រូប​ផ្ទៃ​អេក្រង់</string>
     <string name="wallpaper_auto_change_title">អេក្រង់ជាប់សោ</string>
     <string name="wallpaper_failed_message">មិន​អាចកំណត់​រូបភាពផ្ទៃអក្រង់បាន</string>

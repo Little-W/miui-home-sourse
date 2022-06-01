@@ -1,5 +1,5 @@
 .class Lcom/miui/home/launcher/Workspace$20;
-.super Lcom/miui/home/launcher/common/messages/LoadingFinishMessageHandler;
+.super Lmiuix/animation/property/FloatProperty;
 .source "Workspace.java"
 
 
@@ -13,130 +13,67 @@
     name = null
 .end annotation
 
-
-# instance fields
-.field final synthetic this$0:Lcom/miui/home/launcher/Workspace;
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lmiuix/animation/property/FloatProperty<",
+        "Landroid/view/View;",
+        ">;"
+    }
+.end annotation
 
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/Workspace;)V
+.method constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .line 3743
-    iput-object p1, p0, Lcom/miui/home/launcher/Workspace$20;->this$0:Lcom/miui/home/launcher/Workspace;
-
-    invoke-direct {p0}, Lcom/miui/home/launcher/common/messages/LoadingFinishMessageHandler;-><init>()V
+    .line 3586
+    invoke-direct {p0, p1}, Lmiuix/animation/property/FloatProperty;-><init>(Ljava/lang/String;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected onLoadingFinished()V
-    .locals 5
+.method public getValue(Landroid/view/View;)F
+    .locals 0
 
-    .line 3746
-    iget-object v0, p0, Lcom/miui/home/launcher/Workspace$20;->this$0:Lcom/miui/home/launcher/Workspace;
+    .line 3592
+    invoke-virtual {p1}, Landroid/view/View;->getTranslationX()F
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Workspace;->getContext()Landroid/content/Context;
+    move-result p1
 
-    move-result-object v0
+    return p1
+.end method
 
-    invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->getTransformationType(Landroid/content/Context;)Ljava/lang/String;
+.method public bridge synthetic getValue(Ljava/lang/Object;)F
+    .locals 0
 
-    move-result-object v0
+    .line 3586
+    check-cast p1, Landroid/view/View;
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
+    invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Workspace$20;->getValue(Landroid/view/View;)F
 
-    move-result-object v0
+    move-result p1
 
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+    return p1
+.end method
 
-    move-result v0
+.method public setValue(Landroid/view/View;F)V
+    .locals 0
 
-    .line 3747
-    iget-object v1, p0, Lcom/miui/home/launcher/Workspace$20;->this$0:Lcom/miui/home/launcher/Workspace;
+    .line 3588
+    invoke-virtual {p1, p2}, Landroid/view/View;->setTranslationX(F)V
 
-    invoke-virtual {v1}, Lcom/miui/home/launcher/Workspace;->isInNormalEditingMode()Z
+    return-void
+.end method
 
-    move-result v1
+.method public bridge synthetic setValue(Ljava/lang/Object;F)V
+    .locals 0
 
-    if-eqz v1, :cond_0
+    .line 3586
+    check-cast p1, Landroid/view/View;
 
-    .line 3748
-    iget-object v1, p0, Lcom/miui/home/launcher/Workspace$20;->this$0:Lcom/miui/home/launcher/Workspace;
-
-    invoke-static {v1, v0}, Lcom/miui/home/launcher/Workspace;->access$1802(Lcom/miui/home/launcher/Workspace;I)I
-
-    goto :goto_0
-
-    .line 3750
-    :cond_0
-    iget-object v1, p0, Lcom/miui/home/launcher/Workspace$20;->this$0:Lcom/miui/home/launcher/Workspace;
-
-    invoke-virtual {v1, v0}, Lcom/miui/home/launcher/Workspace;->setScreenTransitionType(I)I
-
-    .line 3752
-    :goto_0
-    iget-object v0, p0, Lcom/miui/home/launcher/Workspace$20;->this$0:Lcom/miui/home/launcher/Workspace;
-
-    invoke-static {v0}, Lcom/miui/home/launcher/Workspace;->access$200(Lcom/miui/home/launcher/Workspace;)Lcom/miui/home/launcher/Launcher;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->updateStatusBarClock()V
-
-    const/4 v0, 0x0
-
-    move v1, v0
-
-    .line 3753
-    :goto_1
-    iget-object v2, p0, Lcom/miui/home/launcher/Workspace$20;->this$0:Lcom/miui/home/launcher/Workspace;
-
-    invoke-virtual {v2}, Lcom/miui/home/launcher/Workspace;->getScreenCount()I
-
-    move-result v2
-
-    if-ge v1, v2, :cond_2
-
-    .line 3754
-    iget-object v2, p0, Lcom/miui/home/launcher/Workspace$20;->this$0:Lcom/miui/home/launcher/Workspace;
-
-    invoke-virtual {v2, v1}, Lcom/miui/home/launcher/Workspace;->getScreenIdByIndex(I)J
-
-    move-result-wide v2
-
-    .line 3755
-    iget-object v4, p0, Lcom/miui/home/launcher/Workspace$20;->this$0:Lcom/miui/home/launcher/Workspace;
-
-    invoke-virtual {v4, v2, v3}, Lcom/miui/home/launcher/Workspace;->isDefaultScreen(J)Z
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    .line 3756
-    iget-object v2, p0, Lcom/miui/home/launcher/Workspace$20;->this$0:Lcom/miui/home/launcher/Workspace;
-
-    invoke-virtual {v2, v1}, Lcom/miui/home/launcher/Workspace;->getScreen(I)Landroid/view/View;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_1
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_1
-
-    .line 3759
-    :cond_2
-    iget-object v0, p0, Lcom/miui/home/launcher/Workspace$20;->this$0:Lcom/miui/home/launcher/Workspace;
-
-    iget-object v0, v0, Lcom/miui/home/launcher/Workspace;->mCurrentIndexMediator:Lcom/miui/home/launcher/common/CurrentIndexMediator;
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/common/CurrentIndexMediator;->onCreate()V
+    invoke-virtual {p0, p1, p2}, Lcom/miui/home/launcher/Workspace$20;->setValue(Landroid/view/View;F)V
 
     return-void
 .end method

@@ -116,6 +116,7 @@
     <item type="id" name="branch_item_container" />
     <item type="id" name="branch_url_id" />
     <item type="id" name="branch_web" />
+    <item type="id" name="bring_it_back_text" />
     <item type="id" name="btnCancel" />
     <item type="id" name="btnEdit" />
     <item type="id" name="btnOk" />
@@ -248,6 +249,7 @@
     <item type="id" name="full_screen_gesture" />
     <item type="id" name="full_screen_lottie_view" />
     <item type="id" name="gadget_icon" />
+    <item type="id" name="gadget_search_bar" />
     <item type="id" name="glide_custom_view_target_tag" />
     <item type="id" name="google" />
     <item type="id" name="group_divider" />

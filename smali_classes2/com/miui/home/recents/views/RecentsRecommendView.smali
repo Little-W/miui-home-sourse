@@ -112,7 +112,7 @@
 
     check-cast p1, Landroid/widget/LinearLayout;
 
-    const v0, 0x7f0a0163
+    const v0, 0x7f0a0165
 
     .line 97
     invoke-virtual {p1, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -131,7 +131,7 @@
 
     invoke-virtual {v0, p2}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    const p2, 0x7f0a016a
+    const p2, 0x7f0a016c
 
     .line 98
     invoke-virtual {p1, p2}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -190,19 +190,19 @@
 
     move-result p1
 
-    const v1, 0x7f0a010e
+    const v1, 0x7f0a010f
 
     if-eq p1, v1, :cond_5
 
-    const v1, 0x7f0a011b
+    const v1, 0x7f0a011c
 
     if-eq p1, v1, :cond_3
 
-    const v1, 0x7f0a023b
+    const v1, 0x7f0a023d
 
     if-eq p1, v1, :cond_2
 
-    const v1, 0x7f0a029e
+    const v1, 0x7f0a02a0
 
     if-eq p1, v1, :cond_0
 
@@ -447,11 +447,11 @@
 
     iput-boolean v0, p0, Lcom/miui/home/recents/views/RecentsRecommendView;->mIsGamesEnable:Z
 
-    const v0, 0x7f0a010e
+    const v0, 0x7f0a010f
 
-    const v1, 0x7f080549
+    const v1, 0x7f080552
 
-    const v2, 0x7f100382
+    const v2, 0x7f100383
 
     .line 65
     invoke-direct {p0, v0, v1, v2}, Lcom/miui/home/recents/views/RecentsRecommendView;->initItem(III)Landroid/widget/LinearLayout;
@@ -460,11 +460,11 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/views/RecentsRecommendView;->mFirstItem:Landroid/widget/LinearLayout;
 
-    const v0, 0x7f0a023b
+    const v0, 0x7f0a023d
 
-    const v1, 0x7f08054c
+    const v1, 0x7f080555
 
-    const v2, 0x7f100385
+    const v2, 0x7f100386
 
     .line 68
     invoke-direct {p0, v0, v1, v2}, Lcom/miui/home/recents/views/RecentsRecommendView;->initItem(III)Landroid/widget/LinearLayout;
@@ -478,12 +478,12 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f08054b
+    const v0, 0x7f080554
 
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f08054a
+    const v0, 0x7f080553
 
     .line 73
     :goto_0
@@ -491,15 +491,15 @@
 
     if-eqz v1, :cond_1
 
-    const v1, 0x7f100384
+    const v1, 0x7f100385
 
     goto :goto_1
 
     :cond_1
-    const v1, 0x7f100383
+    const v1, 0x7f100384
 
     :goto_1
-    const v2, 0x7f0a029e
+    const v2, 0x7f0a02a0
 
     .line 71
     invoke-direct {p0, v2, v0, v1}, Lcom/miui/home/recents/views/RecentsRecommendView;->initItem(III)Landroid/widget/LinearLayout;
@@ -508,19 +508,19 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/views/RecentsRecommendView;->mThirdItem:Landroid/widget/LinearLayout;
 
-    const v0, 0x7f0a011b
+    const v0, 0x7f0a011c
 
     .line 75
     iget-boolean v1, p0, Lcom/miui/home/recents/views/RecentsRecommendView;->mIsGamesEnable:Z
 
     if-eqz v1, :cond_2
 
-    const v1, 0x7f080548
+    const v1, 0x7f080551
 
     goto :goto_2
 
     :cond_2
-    const v1, 0x7f080547
+    const v1, 0x7f080550
 
     .line 76
     :goto_2
@@ -528,12 +528,12 @@
 
     if-eqz v2, :cond_3
 
-    const v2, 0x7f100381
+    const v2, 0x7f100382
 
     goto :goto_3
 
     :cond_3
-    const v2, 0x7f100380
+    const v2, 0x7f100381
 
     .line 74
     :goto_3
@@ -740,19 +740,19 @@
     .line 137
     iput-boolean v0, p0, Lcom/miui/home/recents/views/RecentsRecommendView;->mIsMarketEnabled:Z
 
-    const v0, 0x7f0a029e
+    const v0, 0x7f0a02a0
 
     .line 139
     iget-boolean v1, p0, Lcom/miui/home/recents/views/RecentsRecommendView;->mIsMarketEnabled:Z
 
     if-eqz v1, :cond_0
 
-    const v1, 0x7f08054b
+    const v1, 0x7f080554
 
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f08054a
+    const v1, 0x7f080553
 
     .line 140
     :goto_0
@@ -760,12 +760,12 @@
 
     if-eqz v2, :cond_1
 
-    const v2, 0x7f100384
+    const v2, 0x7f100385
 
     goto :goto_1
 
     :cond_1
-    const v2, 0x7f100383
+    const v2, 0x7f100384
 
     .line 138
     :goto_1
@@ -804,19 +804,19 @@
     .line 146
     iput-boolean p1, p0, Lcom/miui/home/recents/views/RecentsRecommendView;->mIsGamesEnable:Z
 
-    const p1, 0x7f0a011b
+    const p1, 0x7f0a011c
 
     .line 148
     iget-boolean v0, p0, Lcom/miui/home/recents/views/RecentsRecommendView;->mIsGamesEnable:Z
 
     if-eqz v0, :cond_3
 
-    const v0, 0x7f080548
+    const v0, 0x7f080551
 
     goto :goto_2
 
     :cond_3
-    const v0, 0x7f080547
+    const v0, 0x7f080550
 
     .line 149
     :goto_2
@@ -824,12 +824,12 @@
 
     if-eqz v1, :cond_4
 
-    const v1, 0x7f100381
+    const v1, 0x7f100382
 
     goto :goto_3
 
     :cond_4
-    const v1, 0x7f100380
+    const v1, 0x7f100381
 
     .line 147
     :goto_3

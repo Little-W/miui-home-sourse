@@ -880,7 +880,7 @@
 
     move-result-object p1
 
-    const v3, 0x7f08053f
+    const v3, 0x7f080548
 
     .line 557
     invoke-virtual {p1, v3}, Lcom/miui/home/launcher/Application;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -1189,12 +1189,12 @@
 
     if-eqz v1, :cond_0
 
-    const v1, 0x7f0800e9
+    const v1, 0x7f0800ea
 
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f0800e8
+    const v1, 0x7f0800e9
 
     :goto_0
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;

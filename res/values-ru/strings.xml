@@ -760,9 +760,11 @@
     <string name="recents_title_security_scan">Антивирус</string>
     <string name="recents_tv_small_window_text">Плавающие окна</string>
     <string name="recents_worldcirculate_text">Отпустите, чтобы выбрать</string>
+    <string name="recnets_relay_device_info">От %s</string>
     <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
     <string name="recnets_worldcirculate_display_computer_info">Приложение запущено на %s.</string>
     <string name="recnets_worldcirculate_display_default_info">Нажмите, чтобы вернуть на телефон.</string>
+    <string name="recnets_worldcirculate_display_default_info_pad">Нажмите, чтобы вернуть обратно.</string>
     <string name="recnets_worldcirculate_display_pad_info">Приложение запущено на %s.</string>
     <string name="recommend_apk_size_and_desc">%1$d МБ | %2$s</string>
     <string name="recommend_app">Недавние приложения</string>
@@ -950,6 +952,7 @@
     <string name="uninstall_xspace_dialog_title_format">Удалить клон \"%s\"?</string>
     <string name="unknown_artist_name">Неизвестный исполнитель</string>
     <string name="unnamed_folder_name">Папка</string>
+    <string name="upgrade_remove_small_window_in_recents">Воспользуйтесь боковой панелью, чтобы открыть приложение в плавающем окне</string>
     <string name="v7_preference_off">ВЫКЛ.</string>
     <string name="v7_preference_on">ВКЛ.</string>
     <string name="wallpaper">Обои</string>

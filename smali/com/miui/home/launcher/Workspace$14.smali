@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/Workspace;->findPosForIcon(Lcom/miui/home/launcher/ItemInfo;Landroid/view/View;)V
+    value = Lcom/miui/home/launcher/Workspace;->addItemToFolder(Lcom/miui/home/launcher/ShortcutInfo;Lcom/miui/home/launcher/FolderInfo;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,21 +20,21 @@
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/launcher/Workspace;
 
-.field final synthetic val$cellInfo:Lcom/miui/home/launcher/Workspace$CellInfo;
+.field final synthetic val$folderInfo:Lcom/miui/home/launcher/FolderInfo;
 
-.field final synthetic val$icon:Landroid/view/View;
+.field final synthetic val$shortcutInfo:Lcom/miui/home/launcher/ShortcutInfo;
 
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/Workspace;Lcom/miui/home/launcher/Workspace$CellInfo;Landroid/view/View;)V
+.method constructor <init>(Lcom/miui/home/launcher/Workspace;Lcom/miui/home/launcher/FolderInfo;Lcom/miui/home/launcher/ShortcutInfo;)V
     .locals 0
 
-    .line 2608
+    .line 2620
     iput-object p1, p0, Lcom/miui/home/launcher/Workspace$14;->this$0:Lcom/miui/home/launcher/Workspace;
 
-    iput-object p2, p0, Lcom/miui/home/launcher/Workspace$14;->val$cellInfo:Lcom/miui/home/launcher/Workspace$CellInfo;
+    iput-object p2, p0, Lcom/miui/home/launcher/Workspace$14;->val$folderInfo:Lcom/miui/home/launcher/FolderInfo;
 
-    iput-object p3, p0, Lcom/miui/home/launcher/Workspace$14;->val$icon:Landroid/view/View;
+    iput-object p3, p0, Lcom/miui/home/launcher/Workspace$14;->val$shortcutInfo:Lcom/miui/home/launcher/ShortcutInfo;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -46,57 +46,47 @@
 .method public run()V
     .locals 4
 
-    .line 2611
+    .line 2623
+    iget-object v0, p0, Lcom/miui/home/launcher/Workspace$14;->val$folderInfo:Lcom/miui/home/launcher/FolderInfo;
+
+    iget-object v1, p0, Lcom/miui/home/launcher/Workspace$14;->val$shortcutInfo:Lcom/miui/home/launcher/ShortcutInfo;
+
+    iget-object v2, p0, Lcom/miui/home/launcher/Workspace$14;->this$0:Lcom/miui/home/launcher/Workspace;
+
+    invoke-static {v2}, Lcom/miui/home/launcher/Workspace;->access$200(Lcom/miui/home/launcher/Workspace;)Lcom/miui/home/launcher/Launcher;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/miui/home/launcher/Launcher;->getLauncherMode()Lcom/miui/home/launcher/allapps/LauncherMode;
+
+    move-result-object v2
+
+    const/4 v3, 0x1
+
+    invoke-virtual {v0, v1, v3, v2}, Lcom/miui/home/launcher/FolderInfo;->add(Lcom/miui/home/launcher/ShortcutInfo;ZLcom/miui/home/launcher/allapps/LauncherMode;)V
+
+    .line 2624
+    iget-object v0, p0, Lcom/miui/home/launcher/Workspace$14;->val$shortcutInfo:Lcom/miui/home/launcher/ShortcutInfo;
+
+    const-wide/16 v1, -0x1
+
+    iput-wide v1, v0, Lcom/miui/home/launcher/ShortcutInfo;->screenId:J
+
+    .line 2625
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace$14;->this$0:Lcom/miui/home/launcher/Workspace;
 
-    iget-object v1, p0, Lcom/miui/home/launcher/Workspace$14;->val$cellInfo:Lcom/miui/home/launcher/Workspace$CellInfo;
-
-    iget-wide v1, v1, Lcom/miui/home/launcher/Workspace$CellInfo;->screenId:J
-
-    invoke-virtual {v0, v1, v2}, Lcom/miui/home/launcher/Workspace;->getCellLayoutById(J)Lcom/miui/home/launcher/CellLayout;
+    invoke-static {v0}, Lcom/miui/home/launcher/Workspace;->access$200(Lcom/miui/home/launcher/Workspace;)Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
 
-    .line 2612
-    iget-object v1, p0, Lcom/miui/home/launcher/Workspace$14;->val$icon:Landroid/view/View;
+    iget-object v1, p0, Lcom/miui/home/launcher/Workspace$14;->val$shortcutInfo:Lcom/miui/home/launcher/ShortcutInfo;
 
-    invoke-virtual {v1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+    invoke-static {v0, v1}, Lcom/miui/home/launcher/LauncherModel;->updateItemInDatabase(Landroid/content/Context;Lcom/miui/home/launcher/ItemInfo;)V
 
-    move-result-object v1
+    .line 2626
+    iget-object v0, p0, Lcom/miui/home/launcher/Workspace$14;->val$folderInfo:Lcom/miui/home/launcher/FolderInfo;
 
-    if-eq v1, v0, :cond_1
+    invoke-virtual {v0}, Lcom/miui/home/launcher/FolderInfo;->notifyDataSetChanged()V
 
-    .line 2613
-    iget-object v1, p0, Lcom/miui/home/launcher/Workspace$14;->val$icon:Landroid/view/View;
-
-    invoke-virtual {v1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v1
-
-    .line 2614
-    instance-of v2, v1, Landroid/view/ViewGroup;
-
-    if-eqz v2, :cond_0
-
-    .line 2615
-    check-cast v1, Landroid/view/ViewGroup;
-
-    iget-object v2, p0, Lcom/miui/home/launcher/Workspace$14;->val$icon:Landroid/view/View;
-
-    invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
-
-    .line 2617
-    :cond_0
-    iget-object v1, p0, Lcom/miui/home/launcher/Workspace$14;->val$icon:Landroid/view/View;
-
-    const/4 v2, -0x1
-
-    new-instance v3, Lcom/miui/home/launcher/CellLayout$LayoutParams;
-
-    invoke-direct {v3}, Lcom/miui/home/launcher/CellLayout$LayoutParams;-><init>()V
-
-    invoke-virtual {v0, v1, v2, v3}, Lcom/miui/home/launcher/CellLayout;->addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
-
-    :cond_1
     return-void
 .end method

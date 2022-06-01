@@ -67,14 +67,14 @@
 .method private getActiveRecyclerView()Landroidx/recyclerview/widget/RecyclerView;
     .locals 1
 
-    .line 218
+    .line 217
     invoke-direct {p0}, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->getCurrentResultView()Lcom/miui/home/launcher/allapps/SearchUiResultView;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 220
+    .line 219
     invoke-interface {v0}, Lcom/miui/home/launcher/allapps/SearchUiResultView;->getActiveRecyclerView()Landroidx/recyclerview/widget/RecyclerView;
 
     move-result-object v0
@@ -90,7 +90,7 @@
 .method private getCurrentResultView()Lcom/miui/home/launcher/allapps/SearchUiResultView;
     .locals 1
 
-    .line 180
+    .line 179
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->mFragmentContainer:Landroid/widget/ViewAnimator;
 
     invoke-virtual {v0}, Landroid/widget/ViewAnimator;->getDisplayedChild()I
@@ -99,12 +99,12 @@
 
     if-nez v0, :cond_0
 
-    .line 181
+    .line 180
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->mAppFragment:Lcom/miui/home/launcher/allapps/search/AppListSearchFragment;
 
     return-object v0
 
-    .line 183
+    .line 182
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->mCategoryFragment:Lcom/miui/home/launcher/allapps/search/AppCategorySelectSearchFragment;
 
@@ -137,7 +137,7 @@
 .method private refreshPadding()V
     .locals 3
 
-    .line 209
+    .line 208
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->mFragmentContainer:Landroid/widget/ViewAnimator;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->getContext()Landroid/content/Context;
@@ -150,7 +150,7 @@
 
     invoke-static {v0, v1}, Lcom/miui/home/launcher/common/ViewFunctions;->setViewPaddingTop(Landroid/view/View;I)V
 
-    .line 210
+    .line 209
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->mFragmentContainer:Landroid/widget/ViewAnimator;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->getContext()Landroid/content/Context;
@@ -163,7 +163,7 @@
 
     invoke-static {v0, v1}, Lcom/miui/home/launcher/common/ViewFunctions;->setViewPaddingBottom(Landroid/view/View;I)V
 
-    .line 211
+    .line 210
     invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isNotch()Z
 
     move-result v0
@@ -185,30 +185,30 @@
 
     move-result-object v0
 
-    const v1, 0x7f0700cb
+    const v1, 0x7f0700ce
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v0
 
-    .line 212
+    .line 211
     :goto_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f0700c5
+    const v2, 0x7f0700c8
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v1
 
-    .line 213
+    .line 212
     iget-object v2, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->mMask:Lcom/mi/globallauncher/search/SearchResultMaskView;
 
     invoke-static {v2, v0}, Lcom/miui/home/launcher/common/ViewFunctions;->setViewPaddingTop(Landroid/view/View;I)V
 
-    .line 214
+    .line 213
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->mMask:Lcom/mi/globallauncher/search/SearchResultMaskView;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->getContext()Landroid/content/Context;
@@ -231,17 +231,17 @@
 .method public getAnimateTarget(Lcom/miui/home/launcher/DragObject;)Landroid/view/View;
     .locals 2
 
-    .line 231
+    .line 230
     invoke-direct {p0}, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->getCurrentResultView()Lcom/miui/home/launcher/allapps/SearchUiResultView;
 
     move-result-object v0
 
-    .line 232
+    .line 231
     instance-of v1, v0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;
 
     if-eqz v1, :cond_0
 
-    .line 233
+    .line 232
     check-cast v0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->getAnimateTarget(Lcom/miui/home/launcher/DragObject;)Landroid/view/View;
@@ -267,7 +267,7 @@
         }
     .end annotation
 
-    .line 240
+    .line 239
     invoke-direct {p0}, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->getActiveRecyclerView()Landroidx/recyclerview/widget/RecyclerView;
 
     move-result-object v0
@@ -282,7 +282,7 @@
 .method protected getSearchAppId()I
     .locals 1
 
-    const v0, 0x7f0a020d
+    const v0, 0x7f0a020f
 
     return v0
 .end method
@@ -290,7 +290,7 @@
 .method protected getSearchCategoryId()I
     .locals 1
 
-    const v0, 0x7f0a021d
+    const v0, 0x7f0a021f
 
     return v0
 .end method
@@ -298,14 +298,14 @@
 .method public final getShowingShortcutIcon(Landroid/content/ComponentName;I)Lcom/miui/home/launcher/ShortcutIcon;
     .locals 1
 
-    .line 188
+    .line 187
     invoke-direct {p0}, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->getCurrentResultView()Lcom/miui/home/launcher/allapps/SearchUiResultView;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 190
+    .line 189
     invoke-interface {v0, p1, p2}, Lcom/miui/home/launcher/allapps/SearchUiResultView;->getShowingShortcutIcon(Landroid/content/ComponentName;I)Lcom/miui/home/launcher/ShortcutIcon;
 
     move-result-object p1
@@ -439,10 +439,10 @@
 .method public onApplyWindowInsets(Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
     .locals 2
 
-    .line 197
+    .line 196
     invoke-direct {p0}, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->refreshPadding()V
 
-    .line 198
+    .line 197
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->getVisibility()I
 
     move-result v0
@@ -457,14 +457,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 199
+    .line 198
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     const/4 v1, 0x7
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Launcher;->setEditingState(I)V
 
-    .line 201
+    .line 200
     :cond_0
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onApplyWindowInsets(Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
 
@@ -476,7 +476,7 @@
 .method public onAutoSuggestResult(Lio/branch/search/BranchAutoSuggestResult;)V
     .locals 1
 
-    .line 260
+    .line 259
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->mAppFragment:Lcom/miui/home/launcher/allapps/search/AppListSearchFragment;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/allapps/search/AppListSearchFragment;->onAutoSuggestResult(Lio/branch/search/BranchAutoSuggestResult;)V
@@ -487,7 +487,7 @@
 .method public onBranchLocalSearchResult(Lio/branch/search/BranchLocalSearchResult;)V
     .locals 1
 
-    .line 256
+    .line 255
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->mAppFragment:Lcom/miui/home/launcher/allapps/search/AppListSearchFragment;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/allapps/search/AppListSearchFragment;->onBranchLocalSearchResult(Lio/branch/search/BranchLocalSearchResult;)V
@@ -498,7 +498,7 @@
 .method public onBranchSearchResult(Lio/branch/search/BranchSearchResult;)V
     .locals 1
 
-    .line 252
+    .line 251
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->mAppFragment:Lcom/miui/home/launcher/allapps/search/AppListSearchFragment;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/allapps/search/AppListSearchFragment;->onBranchSearchResult(Lio/branch/search/BranchSearchResult;)V
@@ -560,7 +560,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->mCategoryFragment:Lcom/miui/home/launcher/allapps/search/AppCategorySelectSearchFragment;
 
-    const v0, 0x7f0a0235
+    const v0, 0x7f0a0237
 
     .line 82
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->findViewById(I)Landroid/view/View;
@@ -582,7 +582,7 @@
 .method public onScreenSizeChanged()V
     .locals 0
 
-    .line 205
+    .line 204
     invoke-direct {p0}, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->refreshPadding()V
 
     return-void
@@ -591,12 +591,12 @@
 .method public resetView()V
     .locals 1
 
-    .line 226
+    .line 225
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->mAppFragment:Lcom/miui/home/launcher/allapps/search/AppListSearchFragment;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/allapps/search/AppListSearchFragment;->resetView()V
 
-    .line 227
+    .line 226
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->mCategoryFragment:Lcom/miui/home/launcher/allapps/search/AppCategorySelectSearchFragment;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/allapps/search/AppCategorySelectSearchFragment;->resetView()V
@@ -607,7 +607,7 @@
 .method public setSearchController(Lcom/miui/home/launcher/allapps/search/AllAppsSearchBarController;)V
     .locals 1
 
-    .line 264
+    .line 263
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->mAppFragment:Lcom/miui/home/launcher/allapps/search/AppListSearchFragment;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/allapps/search/AppListSearchFragment;->setSearchBarController(Lcom/miui/home/launcher/allapps/search/AllAppsSearchBarController;)V
@@ -635,39 +635,39 @@
 
     if-nez p2, :cond_0
 
-    .line 154
+    .line 153
     new-instance p1, Lcom/miui/home/launcher/anim/AnimatorSetBuilder;
 
     invoke-direct {p1}, Lcom/miui/home/launcher/anim/AnimatorSetBuilder;-><init>()V
 
-    .line 155
+    .line 154
     new-instance p2, Lcom/miui/home/launcher/anim/PropertySetter$AnimatedPropertySetter;
 
     invoke-direct {p2, v2, v3, p1}, Lcom/miui/home/launcher/anim/PropertySetter$AnimatedPropertySetter;-><init>(JLcom/miui/home/launcher/anim/AnimatorSetBuilder;)V
 
-    .line 156
+    .line 155
     iget-object v2, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->mFragmentContainer:Landroid/widget/ViewAnimator;
 
     sget-object v3, Lcom/miui/home/launcher/anim/Interpolators;->LINEAR:Landroid/view/animation/Interpolator;
 
     invoke-virtual {p2, v2, v0, v3}, Lcom/miui/home/launcher/anim/PropertySetter$AnimatedPropertySetter;->setViewAlpha(Landroid/view/View;FLandroid/animation/TimeInterpolator;)V
 
-    .line 157
+    .line 156
     invoke-virtual {p1}, Lcom/miui/home/launcher/anim/AnimatorSetBuilder;->build()Landroid/animation/AnimatorSet;
 
     move-result-object p1
 
     invoke-virtual {p1}, Landroid/animation/AnimatorSet;->start()V
 
-    .line 158
+    .line 157
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->resetView()V
 
-    .line 159
+    .line 158
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->mMask:Lcom/mi/globallauncher/search/SearchResultMaskView;
 
     invoke-virtual {p1, v1}, Lcom/mi/globallauncher/search/SearchResultMaskView;->setAlpha(F)V
 
-    .line 160
+    .line 159
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->mMask:Lcom/mi/globallauncher/search/SearchResultMaskView;
 
     const/4 p2, 0x0
@@ -676,51 +676,51 @@
 
     goto :goto_0
 
-    .line 162
+    .line 161
     :cond_0
     new-instance v4, Lcom/miui/home/launcher/anim/AnimatorSetBuilder;
 
     invoke-direct {v4}, Lcom/miui/home/launcher/anim/AnimatorSetBuilder;-><init>()V
 
-    .line 163
+    .line 162
     new-instance v5, Lcom/miui/home/launcher/anim/PropertySetter$AnimatedPropertySetter;
 
     invoke-direct {v5, v2, v3, v4}, Lcom/miui/home/launcher/anim/PropertySetter$AnimatedPropertySetter;-><init>(JLcom/miui/home/launcher/anim/AnimatorSetBuilder;)V
 
-    .line 164
+    .line 163
     iget-object v2, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->mFragmentContainer:Landroid/widget/ViewAnimator;
 
     sget-object v3, Lcom/miui/home/launcher/anim/Interpolators;->LINEAR:Landroid/view/animation/Interpolator;
 
     invoke-virtual {v5, v2, v1, v3}, Lcom/miui/home/launcher/anim/PropertySetter$AnimatedPropertySetter;->setViewAlpha(Landroid/view/View;FLandroid/animation/TimeInterpolator;)V
 
-    .line 165
+    .line 164
     invoke-virtual {v4}, Lcom/miui/home/launcher/anim/AnimatorSetBuilder;->build()Landroid/animation/AnimatorSet;
 
     move-result-object v1
 
     invoke-virtual {v1}, Landroid/animation/AnimatorSet;->start()V
 
-    .line 166
+    .line 165
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->mMask:Lcom/mi/globallauncher/search/SearchResultMaskView;
 
     invoke-virtual {v1, v0}, Lcom/mi/globallauncher/search/SearchResultMaskView;->setAlpha(F)V
 
-    .line 167
+    .line 166
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->mMask:Lcom/mi/globallauncher/search/SearchResultMaskView;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Lcom/mi/globallauncher/search/SearchResultMaskView;->setVisibility(I)V
 
-    .line 168
+    .line 167
     invoke-direct {p0}, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->getCurrentResultView()Lcom/miui/home/launcher/allapps/SearchUiResultView;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    .line 171
+    .line 170
     instance-of v1, v0, Lcom/miui/home/launcher/allapps/search/AppListSearchFragment;
 
     if-eqz v1, :cond_1
@@ -747,10 +747,10 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 172
+    .line 171
     invoke-virtual {p2}, Ljava/util/ArrayList;->clear()V
 
-    .line 174
+    .line 173
     :cond_1
     invoke-interface {v0, p1, p2}, Lcom/miui/home/launcher/allapps/SearchUiResultView;->setSearchResult(Ljava/lang/String;Ljava/util/ArrayList;)V
 
@@ -785,7 +785,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_0
 
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -794,47 +794,36 @@
     check-cast v1, Lcom/miui/home/launcher/AppInfo;
 
     .line 130
-    iget v2, v1, Lcom/miui/home/launcher/AppInfo;->itemFlags:I
+    new-instance v2, Lcom/mi/globallauncher/local/FrequentUsedAppInfo;
 
-    const/4 v3, 0x4
+    iget-object v3, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    if-ne v2, v3, :cond_0
+    invoke-virtual {v1, v3}, Lcom/miui/home/launcher/AppInfo;->getTitleStr(Landroid/content/Context;)Ljava/lang/String;
 
-    const/4 v2, 0x1
-
-    goto :goto_1
-
-    :cond_0
-    const/4 v2, 0x0
-
-    .line 131
-    :goto_1
-    new-instance v3, Lcom/mi/globallauncher/local/FrequentUsedAppInfo;
-
-    iget-object v4, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->mLauncher:Lcom/miui/home/launcher/Launcher;
-
-    invoke-virtual {v1, v4}, Lcom/miui/home/launcher/AppInfo;->getTitleStr(Landroid/content/Context;)Ljava/lang/String;
-
-    move-result-object v4
+    move-result-object v3
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/AppInfo;->getIconDrawable()Landroid/graphics/drawable/Drawable;
 
-    move-result-object v5
+    move-result-object v4
 
-    invoke-direct {v3, v4, v5, v2, v1}, Lcom/mi/globallauncher/local/FrequentUsedAppInfo;-><init>(Ljava/lang/String;Landroid/graphics/drawable/Drawable;ZLjava/lang/Object;)V
+    invoke-virtual {v1}, Lcom/miui/home/launcher/AppInfo;->isNewInstalled()Z
 
-    .line 132
-    invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    move-result v5
+
+    invoke-direct {v2, v3, v4, v5, v1}, Lcom/mi/globallauncher/local/FrequentUsedAppInfo;-><init>(Ljava/lang/String;Landroid/graphics/drawable/Drawable;ZLjava/lang/Object;)V
+
+    .line 131
+    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 134
-    :cond_1
+    .line 133
+    :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->mMask:Lcom/mi/globallauncher/search/SearchResultMaskView;
 
     invoke-virtual {p1, v0}, Lcom/mi/globallauncher/search/SearchResultMaskView;->setFrequentUsedAppList(Ljava/util/List;)V
 
-    .line 135
+    .line 134
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->mMask:Lcom/mi/globallauncher/search/SearchResultMaskView;
 
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountX()I
@@ -843,7 +832,7 @@
 
     invoke-virtual {p1, v0}, Lcom/mi/globallauncher/search/SearchResultMaskView;->setFrequentUsedAppsColumn(I)V
 
-    .line 136
+    .line 135
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->mMask:Lcom/mi/globallauncher/search/SearchResultMaskView;
 
     new-instance v0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer$3;

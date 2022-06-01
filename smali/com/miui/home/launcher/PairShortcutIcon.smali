@@ -61,7 +61,7 @@
 .method private showFirstTipMenuItem()V
     .locals 3
 
-    .line 98
+    .line 99
     invoke-static {}, Lcom/miui/home/launcher/common/PreferenceUtils;->getInstance()Lcom/miui/home/launcher/common/PreferenceUtils;
 
     move-result-object v0
@@ -78,7 +78,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 99
+    .line 100
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
@@ -99,7 +99,7 @@
 
     invoke-virtual {v0, p0, v1}, Lcom/miui/home/launcher/ShortcutMenuLayer;->showShortcutTip(Landroid/view/View;Ljava/lang/String;)V
 
-    .line 100
+    .line 101
     invoke-static {}, Lcom/miui/home/launcher/common/PreferenceUtils;->getInstance()Lcom/miui/home/launcher/common/PreferenceUtils;
 
     move-result-object v0
@@ -113,7 +113,7 @@
 .method private updateIconSize()V
     .locals 3
 
-    .line 52
+    .line 53
     invoke-static {}, Lcom/miui/home/launcher/common/LauncherIconSizeProvider;->getInstance()Lcom/miui/home/launcher/common/LauncherIconSizeProvider;
 
     move-result-object v0
@@ -122,7 +122,7 @@
 
     move-result v0
 
-    .line 53
+    .line 54
     invoke-static {}, Lcom/miui/home/launcher/common/LauncherIconSizeProvider;->getInstance()Lcom/miui/home/launcher/common/LauncherIconSizeProvider;
 
     move-result-object v1
@@ -131,7 +131,7 @@
 
     move-result v1
 
-    .line 54
+    .line 55
     iget v2, p0, Lcom/miui/home/launcher/PairShortcutIcon;->mPairIconContainerWidth:I
 
     if-ne v0, v2, :cond_0
@@ -140,7 +140,7 @@
 
     if-eq v1, v2, :cond_1
 
-    .line 55
+    .line 56
     :cond_0
     iget-object v2, p0, Lcom/miui/home/launcher/PairShortcutIcon;->mPairIconContainer:Landroid/widget/LinearLayout;
 
@@ -150,7 +150,7 @@
 
     iput v0, v2, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 56
+    .line 57
     iget-object v2, p0, Lcom/miui/home/launcher/PairShortcutIcon;->mPairIconContainer:Landroid/widget/LinearLayout;
 
     invoke-virtual {v2}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -159,13 +159,13 @@
 
     iput v1, v2, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 57
+    .line 58
     iput v0, p0, Lcom/miui/home/launcher/PairShortcutIcon;->mPairIconContainerWidth:I
 
-    .line 58
+    .line 59
     iput v1, p0, Lcom/miui/home/launcher/PairShortcutIcon;->mPairIconContainerHeight:I
 
-    .line 60
+    .line 61
     :cond_1
     invoke-static {}, Lcom/miui/home/launcher/common/LauncherIconSizeProvider;->getInstance()Lcom/miui/home/launcher/common/LauncherIconSizeProvider;
 
@@ -175,7 +175,7 @@
 
     move-result v0
 
-    .line 61
+    .line 62
     invoke-static {}, Lcom/miui/home/launcher/common/LauncherIconSizeProvider;->getInstance()Lcom/miui/home/launcher/common/LauncherIconSizeProvider;
 
     move-result-object v1
@@ -184,7 +184,7 @@
 
     move-result v1
 
-    .line 62
+    .line 63
     iget v2, p0, Lcom/miui/home/launcher/PairShortcutIcon;->mPairIconWidth:I
 
     if-ne v0, v2, :cond_2
@@ -193,7 +193,7 @@
 
     if-eq v1, v2, :cond_3
 
-    .line 63
+    .line 64
     :cond_2
     iget-object v2, p0, Lcom/miui/home/launcher/PairShortcutIcon;->mShortcutIcon1:Landroid/widget/ImageView;
 
@@ -203,7 +203,7 @@
 
     iput v0, v2, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 64
+    .line 65
     iget-object v2, p0, Lcom/miui/home/launcher/PairShortcutIcon;->mShortcutIcon1:Landroid/widget/ImageView;
 
     invoke-virtual {v2}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -212,7 +212,7 @@
 
     iput v1, v2, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 65
+    .line 66
     iget-object v2, p0, Lcom/miui/home/launcher/PairShortcutIcon;->mShortcutIcon2:Landroid/widget/ImageView;
 
     invoke-virtual {v2}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -221,7 +221,7 @@
 
     iput v0, v2, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 66
+    .line 67
     iget-object v2, p0, Lcom/miui/home/launcher/PairShortcutIcon;->mShortcutIcon2:Landroid/widget/ImageView;
 
     invoke-virtual {v2}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -230,10 +230,10 @@
 
     iput v1, v2, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 67
+    .line 68
     iput v0, p0, Lcom/miui/home/launcher/PairShortcutIcon;->mPairIconWidth:I
 
-    .line 68
+    .line 69
     iput v1, p0, Lcom/miui/home/launcher/PairShortcutIcon;->mPairIconHeight:I
 
     :cond_3
@@ -243,14 +243,14 @@
 .method private updatePairIconBg()V
     .locals 2
 
-    .line 79
+    .line 80
     invoke-static {}, Lcom/miui/home/launcher/WallpaperUtils;->hasAppliedLightWallpaper()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 80
+    .line 81
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -267,7 +267,7 @@
 
     goto :goto_0
 
-    .line 82
+    .line 83
     :cond_0
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
 
@@ -283,7 +283,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/PairShortcutIcon;->mIconBackground:Landroid/graphics/drawable/Drawable;
 
-    .line 84
+    .line 85
     :goto_0
     iget-object v0, p0, Lcom/miui/home/launcher/PairShortcutIcon;->mIconBackground:Landroid/graphics/drawable/Drawable;
 
@@ -296,7 +296,7 @@
 
 
 # virtual methods
-.method public bindGroupShortcutIcon(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/PairShortcutInfo;Landroid/view/ViewGroup;)V
+.method public bindGroupShortcutInfo(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/PairShortcutInfo;Landroid/view/ViewGroup;)V
     .locals 3
 
     .line 35
@@ -323,13 +323,20 @@
     .line 38
     invoke-virtual {p2, p0, p3}, Lcom/miui/home/launcher/PairShortcutInfo;->setBuddyIconView(Lcom/miui/home/launcher/ShortcutIcon;Landroid/view/ViewGroup;)V
 
+    .line 39
+    invoke-virtual {p2}, Lcom/miui/home/launcher/PairShortcutInfo;->getTitle()Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lcom/miui/home/launcher/PairShortcutIcon;->setTitle(Ljava/lang/CharSequence;)V
+
     return-void
 .end method
 
 .method public getPairIconContainer()Landroid/widget/LinearLayout;
     .locals 1
 
-    .line 88
+    .line 89
     iget-object v0, p0, Lcom/miui/home/launcher/PairShortcutIcon;->mPairIconContainer:Landroid/widget/LinearLayout;
 
     return-object v0
@@ -338,10 +345,10 @@
 .method protected onAttachedToWindow()V
     .locals 1
 
-    .line 93
+    .line 94
     invoke-super {p0}, Lcom/miui/home/launcher/ShortcutIcon;->onAttachedToWindow()V
 
-    .line 94
+    .line 95
     new-instance v0, Lcom/miui/home/launcher/-$$Lambda$PairShortcutIcon$P8bTAZBi8E-rXqFhGn3LNi_5wlc;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/-$$Lambda$PairShortcutIcon$P8bTAZBi8E-rXqFhGn3LNi_5wlc;-><init>(Lcom/miui/home/launcher/PairShortcutIcon;)V
@@ -354,12 +361,12 @@
 .method protected onFinishInflate()V
     .locals 1
 
-    .line 43
+    .line 44
     invoke-super {p0}, Lcom/miui/home/launcher/ShortcutIcon;->onFinishInflate()V
 
-    const v0, 0x7f0a01c0
+    const v0, 0x7f0a01c2
 
-    .line 44
+    .line 45
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/PairShortcutIcon;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -368,18 +375,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/PairShortcutIcon;->mPairIconContainer:Landroid/widget/LinearLayout;
 
-    const v0, 0x7f0a01be
-
-    .line 45
-    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/PairShortcutIcon;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    iput-object v0, p0, Lcom/miui/home/launcher/PairShortcutIcon;->mShortcutIcon1:Landroid/widget/ImageView;
-
-    const v0, 0x7f0a01bf
+    const v0, 0x7f0a01c0
 
     .line 46
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/PairShortcutIcon;->findViewById(I)Landroid/view/View;
@@ -388,12 +384,23 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/miui/home/launcher/PairShortcutIcon;->mShortcutIcon2:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/miui/home/launcher/PairShortcutIcon;->mShortcutIcon1:Landroid/widget/ImageView;
+
+    const v0, 0x7f0a01c1
 
     .line 47
-    invoke-direct {p0}, Lcom/miui/home/launcher/PairShortcutIcon;->updateIconSize()V
+    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/PairShortcutIcon;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    iput-object v0, p0, Lcom/miui/home/launcher/PairShortcutIcon;->mShortcutIcon2:Landroid/widget/ImageView;
 
     .line 48
+    invoke-direct {p0}, Lcom/miui/home/launcher/PairShortcutIcon;->updateIconSize()V
+
+    .line 49
     invoke-direct {p0}, Lcom/miui/home/launcher/PairShortcutIcon;->updatePairIconBg()V
 
     return-void
@@ -402,10 +409,10 @@
 .method public onWallpaperColorChanged()V
     .locals 0
 
-    .line 74
+    .line 75
     invoke-super {p0}, Lcom/miui/home/launcher/ShortcutIcon;->onWallpaperColorChanged()V
 
-    .line 75
+    .line 76
     invoke-direct {p0}, Lcom/miui/home/launcher/PairShortcutIcon;->updatePairIconBg()V
 
     return-void

@@ -588,7 +588,7 @@
 .method public iconContainerId()I
     .locals 1
 
-    const v0, 0x7f0a013f
+    const v0, 0x7f0a0141
 
     return v0
 .end method
@@ -651,7 +651,7 @@
 
     invoke-static {v0, v1, p0}, Lcom/miui/home/launcher/gadget/ClearButton;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    const v0, 0x7f0a00aa
+    const v0, 0x7f0a00ab
 
     .line 61
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/gadget/ClearButton;->findViewById(I)Landroid/view/View;
@@ -660,7 +660,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mContentBody:Landroid/view/View;
 
-    const v0, 0x7f0a0148
+    const v0, 0x7f0a014a
 
     .line 62
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/gadget/ClearButton;->findViewById(I)Landroid/view/View;
@@ -694,7 +694,7 @@
 
     invoke-virtual {v1, v0}, Lcom/miui/home/launcher/LauncherIconImageView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    const v0, 0x7f0a00ab
+    const v0, 0x7f0a00ac
 
     .line 66
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/gadget/ClearButton;->findViewById(I)Landroid/view/View;
@@ -705,7 +705,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mClearIcon:Lcom/miui/home/launcher/common/ClearIconImageView;
 
-    const v0, 0x7f0a0147
+    const v0, 0x7f0a0149
 
     .line 67
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/gadget/ClearButton;->findViewById(I)Landroid/view/View;
@@ -876,7 +876,7 @@
 .method public titleViewId()I
     .locals 1
 
-    const v0, 0x7f0a0147
+    const v0, 0x7f0a0149
 
     return v0
 .end method

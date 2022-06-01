@@ -760,9 +760,11 @@
     <string name="recents_title_security_scan">セキュリティスキャン</string>
     <string name="recents_tv_small_window_text">フローティングウィンドウ</string>
     <string name="recents_worldcirculate_text">指を離して選択</string>
+    <string name="recnets_relay_device_info">%sから</string>
     <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
     <string name="recnets_worldcirculate_display_computer_info">このアプリは %s で動作しています。</string>
     <string name="recnets_worldcirculate_display_default_info">タップしてここに戻します。</string>
+    <string name="recnets_worldcirculate_display_default_info_pad">タップするとここに戻ります。</string>
     <string name="recnets_worldcirculate_display_pad_info">このアプリは %s で動作しています。</string>
     <string name="recommend_apk_size_and_desc">%1$dMB | %2$s</string>
     <string name="recommend_app">アプリの提案</string>
@@ -950,6 +952,7 @@
     <string name="uninstall_xspace_dialog_title_format">デュアル\"%s\"をアンインストールしますか？</string>
     <string name="unknown_artist_name">不明なアーティスト</string>
     <string name="unnamed_folder_name">フォルダー</string>
+    <string name="upgrade_remove_small_window_in_recents">サイドバーを使用して、フローティングウィンドウでアプリを開くことができます</string>
     <string name="v7_preference_off">OFF</string>
     <string name="v7_preference_on">ON</string>
     <string name="wallpaper">壁紙</string>

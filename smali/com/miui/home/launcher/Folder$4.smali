@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Folder;)V
     .locals 0
 
-    .line 284
+    .line 308
     iput-object p1, p0, Lcom/miui/home/launcher/Folder$4;->this$0:Lcom/miui/home/launcher/Folder;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 2
 
-    .line 297
+    .line 321
     iget-object p1, p0, Lcom/miui/home/launcher/Folder$4;->this$0:Lcom/miui/home/launcher/Folder;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Folder;->access$900(Lcom/miui/home/launcher/Folder;)Z
@@ -44,20 +44,20 @@
 
     if-eqz p1, :cond_0
 
-    .line 298
+    .line 322
     iget-object p1, p0, Lcom/miui/home/launcher/Folder$4;->this$0:Lcom/miui/home/launcher/Folder;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Folder;->access$1100(Lcom/miui/home/launcher/Folder;)V
 
     goto :goto_0
 
-    .line 300
+    .line 324
     :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/Folder$4;->this$0:Lcom/miui/home/launcher/Folder;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Folder;->access$1200(Lcom/miui/home/launcher/Folder;)V
 
-    .line 302
+    .line 326
     :goto_0
     iget-object p1, p0, Lcom/miui/home/launcher/Folder$4;->this$0:Lcom/miui/home/launcher/Folder;
 
@@ -67,7 +67,7 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/FolderGridView;->setVisibility(I)V
 
-    .line 303
+    .line 327
     iget-object p1, p0, Lcom/miui/home/launcher/Folder$4;->this$0:Lcom/miui/home/launcher/Folder;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Folder;->access$700(Lcom/miui/home/launcher/Folder;)Landroid/widget/ImageView;
@@ -78,12 +78,12 @@
 
     invoke-virtual {p1, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 304
+    .line 328
     iget-object p1, p0, Lcom/miui/home/launcher/Folder$4;->this$0:Lcom/miui/home/launcher/Folder;
 
     invoke-static {p1, v0}, Lcom/miui/home/launcher/Folder;->access$800(Lcom/miui/home/launcher/Folder;Z)V
 
-    .line 305
+    .line 329
     iget-object p1, p0, Lcom/miui/home/launcher/Folder$4;->this$0:Lcom/miui/home/launcher/Folder;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Folder;->access$1300(Lcom/miui/home/launcher/Folder;)Lcom/miui/home/launcher/FolderInfo;
@@ -96,7 +96,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 306
+    .line 330
     iget-object p1, p0, Lcom/miui/home/launcher/Folder$4;->this$0:Lcom/miui/home/launcher/Folder;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Folder;->getContext()Landroid/content/Context;
@@ -122,7 +122,7 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 287
+    .line 311
     iget-object p1, p0, Lcom/miui/home/launcher/Folder$4;->this$0:Lcom/miui/home/launcher/Folder;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Folder;->access$600(Lcom/miui/home/launcher/Folder;)F
@@ -131,7 +131,7 @@
 
     invoke-static {p1, v0}, Lcom/miui/home/launcher/Folder;->access$502(Lcom/miui/home/launcher/Folder;F)F
 
-    .line 288
+    .line 312
     iget-object p1, p0, Lcom/miui/home/launcher/Folder$4;->this$0:Lcom/miui/home/launcher/Folder;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Folder;->access$700(Lcom/miui/home/launcher/Folder;)Landroid/widget/ImageView;
@@ -142,14 +142,14 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 289
+    .line 313
     iget-object p1, p0, Lcom/miui/home/launcher/Folder$4;->this$0:Lcom/miui/home/launcher/Folder;
 
     const/4 v0, 0x1
 
     invoke-static {p1, v0}, Lcom/miui/home/launcher/Folder;->access$800(Lcom/miui/home/launcher/Folder;Z)V
 
-    .line 290
+    .line 314
     iget-object p1, p0, Lcom/miui/home/launcher/Folder$4;->this$0:Lcom/miui/home/launcher/Folder;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Folder;->access$900(Lcom/miui/home/launcher/Folder;)Z
@@ -166,7 +166,7 @@
 
     if-nez p1, :cond_0
 
-    .line 291
+    .line 315
     iget-object p1, p0, Lcom/miui/home/launcher/Folder$4;->this$0:Lcom/miui/home/launcher/Folder;
 
     const/high16 v0, 0x3f800000    # 1.0f

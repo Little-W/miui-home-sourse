@@ -717,9 +717,11 @@
     <string name="recents_title_security_scan">བདེ་འཇགས་བཤེར་འབེབས།</string>
     <string name="recents_tv_small_window_text">སྒེའུ་ཆུང་ཉེར་སྤྱོད།</string>
     <string name="recents_worldcirculate_text">ལག་པ་སློད་དེ་འདེམས།</string>
+    <string name="recnets_relay_device_info">ཡོང་ཁུངས།%s</string>
     <string name="recnets_worldcirculate_button_text">ཞའོ་མཱི་མཉམ་སྤྱོད་ལྟེ་གནས།</string>
     <string name="recnets_worldcirculate_display_computer_info">\"%s\"སྟེང་འཁོར་བསྐྱོད་བྱེད་བཞིན་འདུག</string>
     <string name="recnets_worldcirculate_display_default_info">མནན་ཏེ་ཁ་པར་སྟེང་ལོག་ནས་བེད་སྤྱོད་བྱ།</string>
+    <string name="recnets_worldcirculate_display_default_info_pad">མནན་ཏེ་སྟབས་བདེའི་གློག་ཀླད་སྟེང་ནས་བེད་སྤྱོད།</string>
     <string name="recnets_worldcirculate_display_pad_info">\"%s\"སྟེང་འཁོར་བསྐྱོད་བྱེད་བཞིན་འདུག</string>
     <string name="recommend_app">ཉེར་སྤྱོད་འོས་སྦྱོར་གཞོང་།</string>
     <string name="recommend_apps_default_title">གནས་སྐབས་གཞི་གྲངས་མི་འདུག</string>
@@ -925,6 +927,7 @@
     <string name="uninstall_xspace_dialog_title_format">ཉིས་འབྱེད་\"%s\"ཕྱིར་ལེན།</string>
     <string name="unknown_artist_name">ངོས་མ་ཟིན་པའི་སྒྱུ་རྩལ་པ།</string>
     <string name="unnamed_folder_name">ཡིག་ཁུག</string>
+    <string name="upgrade_remove_small_window_in_recents">ཉེ་དུས་ལས་འགན་སྒེའུ་ཆུང་ཉེར་སྤྱོད་ཀྱི་འཛུལ་སྒོ་སུབ་ཟིན། ཕྱོགས་ཡོངས་ཀྱི་གཞོགས་ངོས་སྒྲོམ་ནས་སྒེའུ་ཁུང་བྱེད་ནུས་སྤྱད་ཆོག</string>
     <string name="wallpaper">རྩིག་ཤོག</string>
     <string name="wallpaper_auto_change_title">རྩིག་ཤོག་རིམ་གཏོང་།(སོར་འཇོག་བརྙན་ཤེལ་སྒོ་ལྕགས་རྒྱབ་པ་ཁོ་ན)</string>
     <string name="wallpaper_failed_message">རྩིག་ཤོག་སྒྲིག་འགོད་མི་ཐུབ།</string>

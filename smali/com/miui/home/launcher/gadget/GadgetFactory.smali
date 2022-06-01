@@ -25,12 +25,12 @@
 
     const/4 v0, 0x3
 
-    .line 36
+    .line 37
     new-array v0, v0, [Ljava/lang/Integer;
 
     const/16 v1, 0xc
 
-    .line 37
+    .line 38
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -41,7 +41,7 @@
 
     const/4 v2, 0x6
 
-    .line 40
+    .line 41
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -52,7 +52,7 @@
 
     const/16 v2, 0x8
 
-    .line 41
+    .line 42
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -63,7 +63,7 @@
 
     sput-object v0, Lcom/miui/home/launcher/gadget/GadgetFactory;->GADGET_ID_LIST:[Ljava/lang/Integer;
 
-    .line 46
+    .line 47
     new-array v0, v4, [I
 
     aput v1, v0, v3
@@ -80,84 +80,102 @@
 
     if-nez p1, :cond_0
 
-    .line 191
+    .line 195
     check-cast v0, Lcom/miui/home/launcher/gadget/Gadget;
 
     return-object v0
 
-    .line 193
+    .line 197
     :cond_0
     invoke-virtual {p1}, Lcom/miui/home/launcher/gadget/GadgetInfo;->getGadgetId()I
 
     move-result v1
 
+    const/4 v2, 0x4
+
+    if-eq v1, v2, :cond_2
+
+    const/16 v2, 0x15
+
+    if-eq v1, v2, :cond_1
+
     packed-switch v1, :pswitch_data_0
 
-    .line 212
-    :pswitch_0
+    packed-switch v1, :pswitch_data_1
+
+    .line 219
     invoke-virtual {p1}, Lcom/miui/home/launcher/gadget/GadgetInfo;->isMtzGadget()Z
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_3
 
-    .line 213
+    .line 220
     new-instance v0, Lcom/miui/home/launcher/gadget/MtzGadget;
 
     invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/gadget/MtzGadget;-><init>(Landroid/content/Context;Lcom/miui/home/launcher/gadget/GadgetInfo;)V
 
     goto :goto_0
 
-    :pswitch_1
+    :pswitch_0
     const-string v1, "support_power_clean"
 
     const/4 v2, 0x1
 
-    .line 198
+    .line 202
     invoke-static {p0, v1, v2}, Lcom/miui/home/library/utils/MiuiFeatureUtils;->isLocalFeatureSupported(Landroid/content/Context;Ljava/lang/String;Z)Z
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_3
 
-    .line 199
+    .line 203
     new-instance v0, Lcom/miui/home/launcher/gadget/PowerClearButton;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/gadget/PowerClearButton;-><init>(Landroid/content/Context;)V
 
     goto :goto_0
 
-    .line 209
-    :pswitch_2
+    .line 216
+    :pswitch_1
     new-instance v0, Lcom/miui/home/launcher/gadget/GoogleSearch;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/gadget/GoogleSearch;-><init>(Landroid/content/Context;)V
 
     goto :goto_0
 
-    .line 195
-    :pswitch_3
+    .line 199
+    :pswitch_2
     new-instance v0, Lcom/miui/home/launcher/gadget/NormalClearButton;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/gadget/NormalClearButton;-><init>(Landroid/content/Context;)V
 
     goto :goto_0
 
-    .line 206
-    :pswitch_4
+    .line 213
+    :cond_1
+    new-instance v0, Lcom/miui/home/launcher/gadget/CommonGlobalSearch;
+
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/gadget/CommonGlobalSearch;-><init>(Landroid/content/Context;)V
+
+    goto :goto_0
+
+    .line 210
+    :cond_2
+    :pswitch_3
     new-instance v0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;-><init>(Landroid/content/Context;)V
 
-    :cond_1
+    :cond_3
     :goto_0
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_4
 
-    .line 218
+    .line 225
     invoke-virtual {v0, p1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 221
-    :cond_2
+    .line 228
+    :cond_4
     check-cast v0, Lcom/miui/home/launcher/gadget/Gadget;
 
     return-object v0
@@ -165,18 +183,17 @@
     nop
 
     :pswitch_data_0
-    .packed-switch 0x4
-        :pswitch_4
-        :pswitch_0
-        :pswitch_4
-        :pswitch_4
-        :pswitch_4
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
+    .packed-switch 0x6
         :pswitch_3
+        :pswitch_3
+        :pswitch_3
+    .end packed-switch
+
+    :pswitch_data_1
+    .packed-switch 0xc
         :pswitch_2
         :pswitch_1
+        :pswitch_0
     .end packed-switch
 .end method
 
@@ -187,12 +204,12 @@
 
     const/4 p0, 0x0
 
-    .line 228
+    .line 235
     check-cast p0, Lcom/miui/home/launcher/gadget/Gadget;
 
     return-object p0
 
-    .line 230
+    .line 237
     :cond_0
     new-instance v0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;
 
@@ -200,10 +217,10 @@
 
     invoke-direct {v0, p0, v1}, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;-><init>(Landroid/content/Context;Z)V
 
-    .line 233
+    .line 240
     invoke-virtual {v0, p1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 235
+    .line 242
     check-cast v0, Lcom/miui/home/launcher/gadget/Gadget;
 
     return-object v0
@@ -212,19 +229,19 @@
 .method public static getAllGadgetNum()I
     .locals 2
 
-    .line 94
+    .line 95
     sget-object v0, Lcom/miui/home/launcher/gadget/GadgetFactory;->sMtzGadgetList:Ljava/util/ArrayList;
 
     if-nez v0, :cond_0
 
-    .line 95
+    .line 96
     sget-object v0, Lcom/miui/home/launcher/gadget/GadgetFactory;->GADGET_ID_LIST:[Ljava/lang/Integer;
 
     array-length v0, v0
 
     return v0
 
-    .line 97
+    .line 98
     :cond_0
     sget-object v1, Lcom/miui/home/launcher/gadget/GadgetFactory;->GADGET_ID_LIST:[Ljava/lang/Integer;
 
@@ -302,7 +319,7 @@
 
     goto :goto_0
 
-    .line 175
+    .line 179
     :cond_0
     new-instance v9, Lcom/miui/home/launcher/gadget/GadgetInfo;
 
@@ -310,11 +327,38 @@
 
     const/4 v3, 0x3
 
-    const v4, 0x7f100205
+    const v4, 0x7f100206
 
-    const v5, 0x7f080187
+    const v5, 0x7f08018b
 
-    const v6, 0x7f080186
+    const v6, 0x7f08018a
+
+    const/4 v7, 0x2
+
+    move-object v0, v9
+
+    move v1, p0
+
+    invoke-direct/range {v0 .. v7}, Lcom/miui/home/launcher/gadget/GadgetInfo;-><init>(IIIIIII)V
+
+    .line 180
+    invoke-virtual {v9, v8}, Lcom/miui/home/launcher/gadget/GadgetInfo;->setIsDualClock(Z)V
+
+    goto :goto_0
+
+    .line 175
+    :cond_1
+    new-instance v9, Lcom/miui/home/launcher/gadget/GadgetInfo;
+
+    const/4 v2, 0x4
+
+    const/4 v3, 0x2
+
+    const v4, 0x7f100206
+
+    const v5, 0x7f08018b
+
+    const v6, 0x7f08018a
 
     const/4 v7, 0x2
 
@@ -325,33 +369,6 @@
     invoke-direct/range {v0 .. v7}, Lcom/miui/home/launcher/gadget/GadgetInfo;-><init>(IIIIIII)V
 
     .line 176
-    invoke-virtual {v9, v8}, Lcom/miui/home/launcher/gadget/GadgetInfo;->setIsDualClock(Z)V
-
-    goto :goto_0
-
-    .line 171
-    :cond_1
-    new-instance v9, Lcom/miui/home/launcher/gadget/GadgetInfo;
-
-    const/4 v2, 0x4
-
-    const/4 v3, 0x2
-
-    const v4, 0x7f100205
-
-    const v5, 0x7f080187
-
-    const v6, 0x7f080186
-
-    const/4 v7, 0x2
-
-    move-object v0, v9
-
-    move v1, p0
-
-    invoke-direct/range {v0 .. v7}, Lcom/miui/home/launcher/gadget/GadgetInfo;-><init>(IIIIIII)V
-
-    .line 172
     invoke-virtual {v9, v8}, Lcom/miui/home/launcher/gadget/GadgetInfo;->setIsDualClock(Z)V
 
     :goto_0
@@ -365,14 +382,14 @@
 
     if-ne p0, v0, :cond_0
 
-    .line 130
+    .line 131
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 131
+    .line 132
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p0
@@ -386,7 +403,7 @@
     :cond_0
     if-ge p0, v0, :cond_1
 
-    .line 134
+    .line 135
     invoke-static {p0}, Lcom/miui/home/launcher/gadget/GadgetFactory;->getNoMtzInfo(I)Lcom/miui/home/launcher/gadget/GadgetInfo;
 
     move-result-object p0
@@ -404,14 +421,14 @@
 
     const-string v0, "gadget"
 
-    .line 55
+    .line 56
     sget v1, Lcom/miui/home/launcher/DeviceConfig;->TEMP_SHARE_MODE_FOR_WORLD_READABLE:I
 
     invoke-virtual {p0, v0, v1}, Landroid/content/Context;->getDir(Ljava/lang/String;I)Ljava/io/File;
 
     move-result-object p0
 
-    .line 56
+    .line 57
     invoke-virtual {p0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object p0
@@ -424,7 +441,7 @@
 
     if-ltz p0, :cond_2
 
-    .line 119
+    .line 120
     invoke-static {}, Lcom/miui/home/launcher/gadget/GadgetFactory;->getAllGadgetNum()I
 
     move-result v0
@@ -433,7 +450,7 @@
 
     goto :goto_0
 
-    .line 122
+    .line 123
     :cond_0
     sget-object v0, Lcom/miui/home/launcher/gadget/GadgetFactory;->GADGET_ID_LIST:[Ljava/lang/Integer;
 
@@ -441,7 +458,7 @@
 
     if-ge p0, v1, :cond_1
 
-    .line 123
+    .line 124
     aget-object p0, v0, p0
 
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
@@ -454,7 +471,7 @@
 
     return-object p0
 
-    .line 125
+    .line 126
     :cond_1
     sget-object v1, Lcom/miui/home/launcher/gadget/GadgetFactory;->sMtzGadgetList:Ljava/util/ArrayList;
 
@@ -480,12 +497,12 @@
 .method public static getMtzInfo(Landroid/net/Uri;)Lcom/miui/home/launcher/gadget/GadgetInfo;
     .locals 3
 
-    .line 101
+    .line 102
     sget-object v0, Lcom/miui/home/launcher/gadget/GadgetFactory;->sMtzGadgetList:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_1
 
-    .line 102
+    .line 103
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -503,7 +520,7 @@
 
     check-cast v1, Lcom/miui/home/launcher/gadget/GadgetInfo;
 
-    .line 103
+    .line 104
     invoke-virtual {v1}, Lcom/miui/home/launcher/gadget/GadgetInfo;->getMtzUri()Landroid/net/Uri;
 
     move-result-object v2
@@ -514,14 +531,14 @@
 
     if-eqz v2, :cond_0
 
-    .line 104
+    .line 105
     invoke-virtual {v1}, Lcom/miui/home/launcher/gadget/GadgetInfo;->clone()Lcom/miui/home/launcher/gadget/GadgetInfo;
 
     move-result-object p0
 
     return-object p0
 
-    .line 108
+    .line 109
     :cond_1
     new-instance p0, Lcom/miui/home/launcher/gadget/GadgetInfo;
 
@@ -535,7 +552,7 @@
 .method public static final getNoMtzGadgetInfos()[Lcom/miui/home/launcher/gadget/GadgetInfo;
     .locals 4
 
-    .line 86
+    .line 87
     sget-object v0, Lcom/miui/home/launcher/gadget/GadgetFactory;->GADGET_ID_LIST:[Ljava/lang/Integer;
 
     array-length v0, v0
@@ -544,7 +561,7 @@
 
     const/4 v1, 0x0
 
-    .line 87
+    .line 88
     :goto_0
     sget-object v2, Lcom/miui/home/launcher/gadget/GadgetFactory;->GADGET_ID_LIST:[Ljava/lang/Integer;
 
@@ -552,7 +569,7 @@
 
     if-ge v1, v3, :cond_0
 
-    .line 88
+    .line 89
     aget-object v2, v2, v1
 
     invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
@@ -576,24 +593,35 @@
 .method public static getNoMtzInfo(I)Lcom/miui/home/launcher/gadget/GadgetInfo;
     .locals 9
 
+    const/4 v0, 0x4
+
+    if-eq p0, v0, :cond_1
+
+    const/16 v0, 0x15
+
+    if-eq p0, v0, :cond_0
+
     packed-switch p0, :pswitch_data_0
 
-    :pswitch_0
-    const/4 v8, 0x0
+    packed-switch p0, :pswitch_data_1
+
+    const/4 v0, 0x0
+
+    move-object v8, v0
 
     goto/16 :goto_0
 
-    .line 146
-    :pswitch_1
+    .line 147
+    :pswitch_0
     new-instance v8, Lcom/miui/home/launcher/gadget/GadgetInfo;
 
     const/4 v2, 0x1
 
     const/4 v3, 0x1
 
-    const v4, 0x7f10020f
+    const v4, 0x7f100210
 
-    const v5, 0x7f080195
+    const v5, 0x7f08019b
 
     const/4 v6, -0x1
 
@@ -607,19 +635,139 @@
 
     goto/16 :goto_0
 
-    .line 161
-    :pswitch_2
+    .line 165
+    :pswitch_1
     new-instance v8, Lcom/miui/home/launcher/gadget/GadgetInfo;
 
     const/4 v2, 0x4
 
     const/4 v3, 0x1
 
-    const v4, 0x7f100207
+    const v4, 0x7f100208
 
-    const v5, 0x7f080190
+    const v5, 0x7f080196
 
-    const v6, 0x7f080191
+    const v6, 0x7f080197
+
+    const/4 v7, 0x5
+
+    move-object v0, v8
+
+    move v1, p0
+
+    invoke-direct/range {v0 .. v7}, Lcom/miui/home/launcher/gadget/GadgetInfo;-><init>(IIIIIII)V
+
+    goto/16 :goto_0
+
+    .line 144
+    :pswitch_2
+    new-instance v8, Lcom/miui/home/launcher/gadget/GadgetInfo;
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x1
+
+    const v4, 0x7f1001ff
+
+    const v5, 0x7f080186
+
+    const/4 v6, -0x1
+
+    const/4 v7, 0x0
+
+    move-object v0, v8
+
+    move v1, p0
+
+    invoke-direct/range {v0 .. v7}, Lcom/miui/home/launcher/gadget/GadgetInfo;-><init>(IIIIIII)V
+
+    goto/16 :goto_0
+
+    .line 159
+    :pswitch_3
+    new-instance v8, Lcom/miui/home/launcher/gadget/GadgetInfo;
+
+    const/4 v2, 0x4
+
+    const/4 v3, 0x3
+
+    const v4, 0x7f100204
+
+    const v5, 0x7f08018b
+
+    const v6, 0x7f08018d
+
+    const/4 v7, 0x2
+
+    move-object v0, v8
+
+    move v1, p0
+
+    invoke-direct/range {v0 .. v7}, Lcom/miui/home/launcher/gadget/GadgetInfo;-><init>(IIIIIII)V
+
+    goto :goto_0
+
+    .line 153
+    :pswitch_4
+    new-instance v8, Lcom/miui/home/launcher/gadget/GadgetInfo;
+
+    const/4 v2, 0x4
+
+    const/4 v3, 0x1
+
+    const v4, 0x7f100204
+
+    const v5, 0x7f08018b
+
+    const v6, 0x7f08018c
+
+    const/4 v7, 0x2
+
+    move-object v0, v8
+
+    move v1, p0
+
+    invoke-direct/range {v0 .. v7}, Lcom/miui/home/launcher/gadget/GadgetInfo;-><init>(IIIIIII)V
+
+    goto :goto_0
+
+    .line 156
+    :pswitch_5
+    new-instance v8, Lcom/miui/home/launcher/gadget/GadgetInfo;
+
+    const/4 v2, 0x4
+
+    const/4 v3, 0x2
+
+    const v4, 0x7f100204
+
+    const v5, 0x7f08018b
+
+    const v6, 0x7f08018c
+
+    const/4 v7, 0x2
+
+    move-object v0, v8
+
+    move v1, p0
+
+    invoke-direct/range {v0 .. v7}, Lcom/miui/home/launcher/gadget/GadgetInfo;-><init>(IIIIIII)V
+
+    goto :goto_0
+
+    .line 162
+    :cond_0
+    new-instance v8, Lcom/miui/home/launcher/gadget/GadgetInfo;
+
+    const/4 v2, 0x4
+
+    const/4 v3, 0x1
+
+    const v4, 0x7f100205
+
+    const v5, 0x7f08018f
+
+    const v6, 0x7f080190
 
     const/4 v7, 0x5
 
@@ -631,104 +779,8 @@
 
     goto :goto_0
 
-    .line 143
-    :pswitch_3
-    new-instance v8, Lcom/miui/home/launcher/gadget/GadgetInfo;
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x1
-
-    const v4, 0x7f1001ff
-
-    const v5, 0x7f080182
-
-    const/4 v6, -0x1
-
-    const/4 v7, 0x0
-
-    move-object v0, v8
-
-    move v1, p0
-
-    invoke-direct/range {v0 .. v7}, Lcom/miui/home/launcher/gadget/GadgetInfo;-><init>(IIIIIII)V
-
-    goto :goto_0
-
-    .line 158
-    :pswitch_4
-    new-instance v8, Lcom/miui/home/launcher/gadget/GadgetInfo;
-
-    const/4 v2, 0x4
-
-    const/4 v3, 0x3
-
-    const v4, 0x7f100204
-
-    const v5, 0x7f080187
-
-    const v6, 0x7f080189
-
-    const/4 v7, 0x2
-
-    move-object v0, v8
-
-    move v1, p0
-
-    invoke-direct/range {v0 .. v7}, Lcom/miui/home/launcher/gadget/GadgetInfo;-><init>(IIIIIII)V
-
-    goto :goto_0
-
-    .line 152
-    :pswitch_5
-    new-instance v8, Lcom/miui/home/launcher/gadget/GadgetInfo;
-
-    const/4 v2, 0x4
-
-    const/4 v3, 0x1
-
-    const v4, 0x7f100204
-
-    const v5, 0x7f080187
-
-    const v6, 0x7f080188
-
-    const/4 v7, 0x2
-
-    move-object v0, v8
-
-    move v1, p0
-
-    invoke-direct/range {v0 .. v7}, Lcom/miui/home/launcher/gadget/GadgetInfo;-><init>(IIIIIII)V
-
-    goto :goto_0
-
-    .line 155
-    :pswitch_6
-    new-instance v8, Lcom/miui/home/launcher/gadget/GadgetInfo;
-
-    const/4 v2, 0x4
-
-    const/4 v3, 0x2
-
-    const v4, 0x7f100204
-
-    const v5, 0x7f080187
-
-    const v6, 0x7f080188
-
-    const/4 v7, 0x2
-
-    move-object v0, v8
-
-    move v1, p0
-
-    invoke-direct/range {v0 .. v7}, Lcom/miui/home/launcher/gadget/GadgetInfo;-><init>(IIIIIII)V
-
-    goto :goto_0
-
-    .line 149
-    :pswitch_7
+    .line 150
+    :cond_1
     new-instance v8, Lcom/miui/home/launcher/gadget/GadgetInfo;
 
     const/4 v2, 0x2
@@ -737,7 +789,7 @@
 
     const v4, 0x7f100204
 
-    const v5, 0x7f080185
+    const v5, 0x7f080189
 
     const/4 v6, -0x1
 
@@ -752,28 +804,25 @@
     :goto_0
     return-object v8
 
-    nop
-
     :pswitch_data_0
-    .packed-switch 0x4
-        :pswitch_7
-        :pswitch_0
-        :pswitch_6
+    .packed-switch 0x6
         :pswitch_5
         :pswitch_4
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
         :pswitch_3
+    .end packed-switch
+
+    :pswitch_data_1
+    .packed-switch 0xc
         :pswitch_2
         :pswitch_1
+        :pswitch_0
     .end packed-switch
 .end method
 
 .method public static getThemeClockGadgetInfo(Lcom/miui/home/launcher/common/StorageMamlClockHelper$MamlClock_2x4;)Lcom/miui/home/launcher/gadget/ThemeClockGadgetInfo;
     .locals 10
 
-    .line 183
+    .line 187
     new-instance v9, Lcom/miui/home/launcher/gadget/ThemeClockGadgetInfo;
 
     const/4 v1, 0x6
@@ -784,9 +833,9 @@
 
     const v4, 0x7f100202
 
-    const v5, 0x7f080187
+    const v5, 0x7f08018b
 
-    const v6, 0x7f080188
+    const v6, 0x7f08018c
 
     const/4 v7, 0x2
 
@@ -802,38 +851,38 @@
 .method public static loadMtzGadgetList()V
     .locals 6
 
-    .line 60
+    .line 61
     sget-object v0, Lcom/miui/home/launcher/gadget/GadgetFactory;->sMtzGadgetList:Ljava/util/ArrayList;
 
     if-nez v0, :cond_1
 
-    .line 61
+    .line 62
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lcom/miui/home/launcher/gadget/GadgetFactory;->sMtzGadgetList:Ljava/util/ArrayList;
 
-    .line 62
+    .line 63
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/system/media/theme/default/gadgets"
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 63
+    .line 64
     invoke-virtual {v0}, Ljava/io/File;->isDirectory()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 64
+    .line 65
     invoke-virtual {v0}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object v0
 
-    .line 65
+    .line 66
     array-length v1, v0
 
     const/4 v2, 0x0
@@ -843,7 +892,7 @@
 
     aget-object v3, v0, v2
 
-    .line 66
+    .line 67
     invoke-virtual {v3}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v4
@@ -856,14 +905,14 @@
 
     if-eqz v4, :cond_0
 
-    .line 67
+    .line 68
     new-instance v4, Lcom/miui/home/launcher/gadget/GadgetInfo;
 
     const/16 v5, 0x3e8
 
     invoke-direct {v4, v5}, Lcom/miui/home/launcher/gadget/GadgetInfo;-><init>(I)V
 
-    .line 68
+    .line 69
     invoke-static {v3}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
 
     move-result-object v3
@@ -874,7 +923,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 69
+    .line 70
     sget-object v3, Lcom/miui/home/launcher/gadget/GadgetFactory;->sMtzGadgetList:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -893,7 +942,7 @@
 
     const/4 v0, 0x0
 
-    .line 78
+    .line 79
     sput-object v0, Lcom/miui/home/launcher/gadget/GadgetFactory;->sMtzGadgetList:Ljava/util/ArrayList;
 
     return-void
@@ -902,14 +951,14 @@
 .method public static updateGadgetBackup(Landroid/content/Context;)V
     .locals 1
 
-    .line 239
+    .line 246
     invoke-static {p0}, Lcom/miui/home/launcher/gadget/DualClockUtils;->updateBackup(Landroid/content/Context;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 240
+    .line 247
     invoke-static {p0}, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->updateBackup(Landroid/content/Context;)V
 
     :cond_0

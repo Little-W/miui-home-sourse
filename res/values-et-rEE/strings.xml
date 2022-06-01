@@ -728,9 +728,11 @@
     <string name="recents_title_security_scan">Turvaskänn</string>
     <string name="recents_tv_small_window_text">Ujuvad aknad</string>
     <string name="recents_worldcirculate_text">Valimiseks vabastage</string>
+    <string name="recnets_relay_device_info">Seadmest %s</string>
     <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
     <string name="recnets_worldcirculate_display_computer_info">Rakendus töötab aadressil %s.</string>
     <string name="recnets_worldcirculate_display_default_info">Puudutage selle siia tagasi toomiseks.</string>
+    <string name="recnets_worldcirculate_display_default_info_pad">Puudutage selle siia tagasi toomiseks.</string>
     <string name="recnets_worldcirculate_display_pad_info">Rakendus töötab aadressil %s.</string>
     <string name="recommend_apk_size_and_desc">%1$dMB | %2$s</string>
     <string name="recommend_app">Rakenduste soovitused</string>
@@ -915,6 +917,7 @@
     <string name="uninstall_xspace_dialog_title_format">Eemalda duaalsed \"%s\"?</string>
     <string name="unknown_artist_name">Tundmatu artist</string>
     <string name="unnamed_folder_name">Kaust</string>
+    <string name="upgrade_remove_small_window_in_recents">Külgriba abil saate rakendusi avada ujuvates akendes</string>
     <string name="wallpaper">Taustapildid</string>
     <string name="wallpaper_auto_change_title">Lukustusekraan</string>
     <string name="wallpaper_failed_message">Taustapilti ei saa määrata</string>

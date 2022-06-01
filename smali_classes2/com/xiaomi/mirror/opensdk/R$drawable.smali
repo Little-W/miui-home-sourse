@@ -15,13 +15,13 @@
 
 
 # static fields
-.field public static final immersion_window_bg:I = 0x7f0801e5
+.field public static final immersion_window_bg:I = 0x7f0801ed
 
-.field public static final list_item_bg_light:I = 0x7f0801f2
+.field public static final list_item_bg_light:I = 0x7f0801fa
 
-.field public static final list_item_bg_normal:I = 0x7f0801f3
+.field public static final list_item_bg_normal:I = 0x7f0801fb
 
-.field public static final list_item_bg_pressed:I = 0x7f0801f4
+.field public static final list_item_bg_pressed:I = 0x7f0801fc
 
 
 # direct methods

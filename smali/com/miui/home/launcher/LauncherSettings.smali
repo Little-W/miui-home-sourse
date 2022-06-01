@@ -105,33 +105,33 @@
 .method public static deletePackage(Landroid/content/Context;Ljava/lang/String;Landroid/os/UserHandle;)V
     .locals 3
 
-    .line 551
+    .line 562
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 552
+    .line 563
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
     const-string v2, "name"
 
-    .line 553
+    .line 564
     invoke-virtual {v1, v2, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p1, "delete"
 
     const/4 v2, 0x1
 
-    .line 554
+    .line 565
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v2
 
     invoke-virtual {v1, p1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Boolean;)V
 
-    .line 555
+    .line 566
     invoke-static {p0}, Lcom/miui/home/library/compat/UserManagerCompat;->getInstance(Landroid/content/Context;)Lcom/miui/home/library/compat/UserManagerCompat;
 
     move-result-object p0
@@ -140,7 +140,7 @@
 
     goto :goto_0
 
-    .line 556
+    .line 567
     :cond_0
     invoke-static {}, Landroid/os/Process;->myUserHandle()Landroid/os/UserHandle;
 
@@ -153,14 +153,14 @@
 
     const-string p2, "profileId"
 
-    .line 557
+    .line 568
     invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p0
 
     invoke-virtual {v1, p2, p0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 558
+    .line 569
     sget-object p0, Lcom/miui/home/launcher/LauncherSettings$Packages;->CONTENT_URI:Landroid/net/Uri;
 
     const/4 p1, 0x0
@@ -223,7 +223,7 @@
 
     return p0
 
-    .line 571
+    .line 582
     :cond_0
     invoke-virtual {p0}, Landroid/content/ComponentName;->flattenToString()Ljava/lang/String;
 
@@ -243,7 +243,7 @@
 
     const-string v0, "com.android.stk"
 
-    .line 562
+    .line 573
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0

@@ -114,7 +114,7 @@
 
     check-cast p2, Landroid/view/ViewGroup;
 
-    const p3, 0x7f0a02c0
+    const p3, 0x7f0a02c2
 
     .line 75
     invoke-virtual {p2, p3}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -123,7 +123,7 @@
 
     check-cast p3, Landroid/widget/TextView;
 
-    const v0, 0x7f0a014b
+    const v0, 0x7f0a014d
 
     .line 76
     invoke-virtual {p2, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;

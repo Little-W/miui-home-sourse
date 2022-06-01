@@ -15,32 +15,32 @@
 
 
 # static fields
-.field public static final branch_deepview_background:I = 0x7f0800cd
+.field public static final branch_deepview_background:I = 0x7f0800ce
 
-.field public static final branch_deepview_button_background:I = 0x7f0800ce
+.field public static final branch_deepview_button_background:I = 0x7f0800cf
 
-.field public static final branch_deepview_close:I = 0x7f0800cf
+.field public static final branch_deepview_close:I = 0x7f0800d0
 
-.field public static final notification_action_background:I = 0x7f08052a
+.field public static final notification_action_background:I = 0x7f080533
 
-.field public static final notification_bg:I = 0x7f08052c
+.field public static final notification_bg:I = 0x7f080535
 
-.field public static final notification_bg_low:I = 0x7f08052d
+.field public static final notification_bg_low:I = 0x7f080536
 
-.field public static final notification_bg_low_normal:I = 0x7f08052e
+.field public static final notification_bg_low_normal:I = 0x7f080537
 
-.field public static final notification_bg_low_pressed:I = 0x7f08052f
+.field public static final notification_bg_low_pressed:I = 0x7f080538
 
-.field public static final notification_bg_normal:I = 0x7f080530
+.field public static final notification_bg_normal:I = 0x7f080539
 
-.field public static final notification_bg_normal_pressed:I = 0x7f080531
+.field public static final notification_bg_normal_pressed:I = 0x7f08053a
 
-.field public static final notification_icon_background:I = 0x7f080532
+.field public static final notification_icon_background:I = 0x7f08053b
 
-.field public static final notification_template_icon_bg:I = 0x7f080533
+.field public static final notification_template_icon_bg:I = 0x7f08053c
 
-.field public static final notification_template_icon_low_bg:I = 0x7f080534
+.field public static final notification_template_icon_low_bg:I = 0x7f08053d
 
-.field public static final notification_tile_bg:I = 0x7f080535
+.field public static final notification_tile_bg:I = 0x7f08053e
 
-.field public static final notify_panel_notification_icon_bg:I = 0x7f080537
+.field public static final notify_panel_notification_icon_bg:I = 0x7f080540

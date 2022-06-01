@@ -11,11 +11,12 @@
     <dimen name="edit_mode_application_checkbox_margin_top">0.0dip</dimen>
     <dimen name="edit_mode_thumbnail_home_icon_radius">15.269989dip</dimen>
     <dimen name="fold_edit_cellscreen_translationx_distance">16.449982dip</dimen>
-    <dimen name="folder_content_margin_top">68.0dip</dimen>
+    <dimen name="folder_content_margin_top">0.0dip</dimen>
     <dimen name="folder_content_padding_left">53.0dip</dimen>
     <dimen name="folder_content_padding_right">53.0dip</dimen>
     <dimen name="folder_edit_text_margin_left">73.0dip</dimen>
     <dimen name="folder_edit_text_text_size">32.0dip</dimen>
+    <dimen name="folder_item_vertical_spacing">0.0dip</dimen>
     <dimen name="hotseats_height_land">88.0dip</dimen>
     <dimen name="hotseats_height_navigation">80.0dip</dimen>
     <dimen name="hotseats_margin_top">-8.0dip</dimen>
@@ -32,6 +33,7 @@
     <dimen name="recents_horizontal_layout_task_view_gap">21.0dip</dimen>
     <item type="dimen" name="recents_task_rect_scale">0.313</item>
     <item type="dimen" name="recents_task_stack_view_ratio">1.1</item>
+    <item type="dimen" name="recents_task_view_padding_ratio">0.096</item>
     <dimen name="recommend_margin_end">20.0dip</dimen>
     <dimen name="recommend_switch_summary_padding_left">2.0dip</dimen>
     <dimen name="selected_view_corners_radius">18.0dip</dimen>
@@ -40,7 +42,7 @@
     <dimen name="workspace_cell_additional_padding_top_notch">20.899994dip</dimen>
     <dimen name="workspace_cell_padding_side">4.3499756dip</dimen>
     <dimen name="workspace_cell_padding_side_rotatable">4.3499756dip</dimen>
-    <dimen name="workspace_cell_padding_top">17.0dip</dimen>
+    <dimen name="workspace_cell_padding_top">35.0dip</dimen>
     <dimen name="folder_preview_height">41.599976dip</dimen>
     <dimen name="folder_preview_width">41.599976dip</dimen>
 </resources>

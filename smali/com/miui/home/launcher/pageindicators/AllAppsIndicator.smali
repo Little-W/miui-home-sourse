@@ -110,7 +110,7 @@
     .line 44
     iget-object v0, p0, Lcom/miui/home/launcher/pageindicators/AllAppsIndicator;->mHandleContainer:Landroid/widget/LinearLayout;
 
-    const v4, 0x7f0a012e
+    const v4, 0x7f0a0130
 
     invoke-virtual {v0, v4}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 

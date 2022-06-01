@@ -37,17 +37,17 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 1
 
-    .line 193
+    .line 205
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 190
+    .line 202
     new-instance v0, Ljava/util/ArrayDeque;
 
     invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
 
     iput-object v0, p0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;->mTasks:Ljava/util/ArrayDeque;
 
-    .line 194
+    .line 206
     new-instance v0, Lcom/miui/home/library/utils/-$$Lambda$AsyncTaskExecutorHelper$SerialExecutor$s1YDuNxeylT249JniXws4_7Zquo;
 
     invoke-direct {v0, p1}, Lcom/miui/home/library/utils/-$$Lambda$AsyncTaskExecutorHelper$SerialExecutor$s1YDuNxeylT249JniXws4_7Zquo;-><init>(Ljava/lang/String;)V
@@ -64,7 +64,7 @@
 .method static synthetic lambda$new$0(Ljava/lang/String;Ljava/lang/Runnable;)Ljava/lang/Thread;
     .locals 1
 
-    .line 194
+    .line 206
     new-instance v0, Ljava/lang/Thread;
 
     invoke-direct {v0, p1, p0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
@@ -79,7 +79,7 @@
 
     monitor-enter p0
 
-    .line 198
+    .line 210
     :try_start_0
     iget-object v0, p0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;->mTasks:Ljava/util/ArrayDeque;
 
@@ -89,17 +89,17 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayDeque;->offer(Ljava/lang/Object;)Z
 
-    .line 207
+    .line 219
     iget-object p1, p0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;->mActive:Ljava/lang/Runnable;
 
     if-nez p1, :cond_0
 
-    .line 208
+    .line 220
     invoke-virtual {p0}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;->scheduleNext()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 210
+    .line 222
     :cond_0
     monitor-exit p0
 
@@ -118,7 +118,7 @@
 
     monitor-enter p0
 
-    .line 213
+    .line 225
     :try_start_0
     iget-object v0, p0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;->mTasks:Ljava/util/ArrayDeque;
 
@@ -132,7 +132,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 214
+    .line 226
     iget-object v0, p0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;->mSingleThreadExecutor:Ljava/util/concurrent/ExecutorService;
 
     iget-object v1, p0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;->mActive:Ljava/lang/Runnable;
@@ -141,7 +141,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 216
+    .line 228
     :cond_0
     monitor-exit p0
 

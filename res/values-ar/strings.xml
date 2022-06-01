@@ -760,9 +760,11 @@
     <string name="recents_title_security_scan">فحص الحماية</string>
     <string name="recents_tv_small_window_text">النوافذ المنبثقة</string>
     <string name="recents_worldcirculate_text">حرر للتحديد</string>
+    <string name="recnets_relay_device_info">من %s</string>
     <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
     <string name="recnets_worldcirculate_display_computer_info">هذا التطبيق قيد التشغيل على %s.</string>
     <string name="recnets_worldcirculate_display_default_info">انقر للعودة إلى الهاتف.</string>
+    <string name="recnets_worldcirculate_display_default_info_pad">انقر للعودة إلى الهاتف.</string>
     <string name="recnets_worldcirculate_display_pad_info">هذا التطبيق قيد التشغيل على %s.</string>
     <string name="recommend_apk_size_and_desc">%1$d ميجابايت |%2$s</string>
     <string name="recommend_app">اقتراحات التطبيقات</string>
@@ -950,6 +952,7 @@
     <string name="uninstall_xspace_dialog_title_format">إلغاء تثبيت \"%s\" المزدوج؟</string>
     <string name="unknown_artist_name">مغني غير معروف</string>
     <string name="unnamed_folder_name">مجلد</string>
+    <string name="upgrade_remove_small_window_in_recents">يمكنك استخدام الشريط الجانبي لفتح التطبيقات في نوافذ منبثقة</string>
     <string name="v7_preference_off">إيقاف</string>
     <string name="v7_preference_on">تفعيل</string>
     <string name="wallpaper">خلفية الشاشة</string>

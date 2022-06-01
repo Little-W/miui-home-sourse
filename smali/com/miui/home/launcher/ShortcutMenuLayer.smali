@@ -633,7 +633,7 @@
     .line 62
     invoke-super {p0}, Lcom/miui/launcher/views/LauncherFrameLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a024a
+    const v0, 0x7f0a024c
 
     .line 63
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ShortcutMenuLayer;->findViewById(I)Landroid/view/View;

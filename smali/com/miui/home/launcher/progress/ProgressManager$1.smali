@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/progress/ProgressManager;)V
     .locals 0
 
-    .line 255
+    .line 256
     iput-object p1, p0, Lcom/miui/home/launcher/progress/ProgressManager$1;->this$0:Lcom/miui/home/launcher/progress/ProgressManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,12 +38,12 @@
 .method public run()V
     .locals 2
 
-    .line 257
+    .line 258
     iget-object v0, p0, Lcom/miui/home/launcher/progress/ProgressManager$1;->this$0:Lcom/miui/home/launcher/progress/ProgressManager;
 
     invoke-static {v0}, Lcom/miui/home/launcher/progress/ProgressManager;->access$000(Lcom/miui/home/launcher/progress/ProgressManager;)V
 
-    .line 258
+    .line 259
     invoke-static {}, Lcom/miui/home/launcher/progress/ProgressManager;->access$100()Z
 
     move-result v0
@@ -52,7 +52,7 @@
 
     const-wide/16 v0, 0x1f4
 
-    .line 259
+    .line 260
     invoke-static {p0, v0, v1}, Lcom/miui/home/launcher/common/BackgroundThread;->postDelayed(Ljava/lang/Runnable;J)V
 
     :cond_0

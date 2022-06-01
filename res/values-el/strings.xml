@@ -760,9 +760,11 @@
     <string name="recents_title_security_scan">Σάρωση ασφαλείας</string>
     <string name="recents_tv_small_window_text">Αναδυόμενα παράθυρα</string>
     <string name="recents_worldcirculate_text">Αφήστε για επιλογή</string>
+    <string name="recnets_relay_device_info">Από %s</string>
     <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
     <string name="recnets_worldcirculate_display_computer_info">Η εφαρμογή λειτουργεί σε %s.</string>
     <string name="recnets_worldcirculate_display_default_info">Πατήστε για συνέχεια εδώ.</string>
+    <string name="recnets_worldcirculate_display_default_info_pad">Πατήστε για να το επαναφέρετε εδώ.</string>
     <string name="recnets_worldcirculate_display_pad_info">Η εφαρμογή λειτουργεί σε %s.</string>
     <string name="recommend_apk_size_and_desc">%1$dMB | %2$s</string>
     <string name="recommend_app">Προτάσεις εφαρμογών</string>
@@ -950,6 +952,7 @@
     <string name="uninstall_xspace_dialog_title_format">Απεγκατάσταση διπλότυπου \"%s\";</string>
     <string name="unknown_artist_name">Άγνωστος καλλιτέχνης</string>
     <string name="unnamed_folder_name">Φάκελος</string>
+    <string name="upgrade_remove_small_window_in_recents">Μπορείτε να χρησιμοποιήσετε την πλαϊνή γραμμή για να ανοίξετε εφαρμογές σε αναδυόμενα παράθυρα</string>
     <string name="v7_preference_off">ΑΝΕΝΕΡΓΗ</string>
     <string name="v7_preference_on">ΕΝΕΡΓΗ</string>
     <string name="wallpaper">Ταπετσαρία</string>

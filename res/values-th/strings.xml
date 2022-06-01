@@ -760,9 +760,11 @@
     <string name="recents_title_security_scan">สแกนความปลอดภัย</string>
     <string name="recents_tv_small_window_text">หน้าต่างลอย</string>
     <string name="recents_worldcirculate_text">ปล่อยเพื่อเลือก</string>
+    <string name="recnets_relay_device_info">จาก %s</string>
     <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
     <string name="recnets_worldcirculate_display_computer_info">แอปกำลังทำงานบน %s</string>
     <string name="recnets_worldcirculate_display_default_info">แตะเพื่อนำกลับมาที่นี่</string>
+    <string name="recnets_worldcirculate_display_default_info_pad">แตะเพื่อนำกลับมาที่นี่</string>
     <string name="recnets_worldcirculate_display_pad_info">แอปกำลังทำงานบน %s</string>
     <string name="recommend_apk_size_and_desc">%1$dMB | %2$s</string>
     <string name="recommend_app">แอปเสนอแนะ</string>
@@ -950,6 +952,7 @@
     <string name="uninstall_xspace_dialog_title_format">ถอนการติดตั้งคู่ \"%s\"?</string>
     <string name="unknown_artist_name">ศิลปินที่ไม่รู้จัก</string>
     <string name="unnamed_folder_name">โฟลเดอร์</string>
+    <string name="upgrade_remove_small_window_in_recents">คุณสามารถใช้แถบด้านข้างเพื่อเปิดแอปในหน้าต่างลอยได้</string>
     <string name="v7_preference_off">ปิด</string>
     <string name="v7_preference_on">เปิด</string>
     <string name="wallpaper">ภาพพื้นหลัง</string>

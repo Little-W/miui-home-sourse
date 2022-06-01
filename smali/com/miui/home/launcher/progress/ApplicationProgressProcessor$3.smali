@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;Lcom/miui/home/launcher/progress/ProgressShortcutInfo;)V
     .locals 0
 
-    .line 360
+    .line 353
     iput-object p1, p0, Lcom/miui/home/launcher/progress/ApplicationProgressProcessor$3;->this$0:Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;
 
     iput-object p2, p0, Lcom/miui/home/launcher/progress/ApplicationProgressProcessor$3;->val$removedInfo:Lcom/miui/home/launcher/progress/ProgressShortcutInfo;
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 2
 
-    .line 363
+    .line 356
     iget-object v0, p0, Lcom/miui/home/launcher/progress/ApplicationProgressProcessor$3;->val$removedInfo:Lcom/miui/home/launcher/progress/ProgressShortcutInfo;
 
     iget-object v1, p0, Lcom/miui/home/launcher/progress/ApplicationProgressProcessor$3;->this$0:Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;

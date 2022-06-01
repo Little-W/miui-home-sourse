@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/DefaultScreenPreviewView;Landroid/view/View;)V
     .locals 0
 
-    .line 113
+    .line 117
     iput-object p1, p0, Lcom/miui/home/launcher/DefaultScreenPreviewView$1;->this$0:Lcom/miui/home/launcher/DefaultScreenPreviewView;
 
     iput-object p2, p0, Lcom/miui/home/launcher/DefaultScreenPreviewView$1;->val$convertView:Landroid/view/View;
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 1
 
-    .line 116
+    .line 120
     iget-object v0, p0, Lcom/miui/home/launcher/DefaultScreenPreviewView$1;->val$convertView:Landroid/view/View;
 
     invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->focusTalkBackToView(Landroid/view/View;)V

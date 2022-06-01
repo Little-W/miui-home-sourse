@@ -992,7 +992,7 @@
     goto/16 :goto_3
 
     :cond_1
-    const v0, 0x7f0a02e7
+    const v0, 0x7f0a02e9
 
     .line 137
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ProgressShortcutIcon;->findViewById(I)Landroid/view/View;

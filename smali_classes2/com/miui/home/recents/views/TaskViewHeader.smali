@@ -105,7 +105,7 @@
 
     iput-object p2, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mAppInfoDescFormat:Ljava/lang/String;
 
-    const p2, 0x7f0703d8
+    const p2, 0x7f0703db
 
     .line 81
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -531,7 +531,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0801e0
+    const v2, 0x7f0801e8
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -548,7 +548,7 @@
     .line 102
     invoke-super {p0}, Landroid/widget/FrameLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a013e
+    const v0, 0x7f0a0140
 
     .line 104
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/TaskViewHeader;->findViewById(I)Landroid/view/View;
@@ -564,7 +564,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
-    const v0, 0x7f0a0276
+    const v0, 0x7f0a0278
 
     .line 106
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/TaskViewHeader;->findViewById(I)Landroid/view/View;
@@ -580,7 +580,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
-    const v0, 0x7f0a02a4
+    const v0, 0x7f0a02a6
 
     .line 108
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/TaskViewHeader;->findViewById(I)Landroid/view/View;
@@ -591,7 +591,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mTitleView:Landroid/widget/TextView;
 
-    const v0, 0x7f0a017b
+    const v0, 0x7f0a017d
 
     .line 109
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/TaskViewHeader;->findViewById(I)Landroid/view/View;
@@ -602,7 +602,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mLockedImageView:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a00db
+    const v0, 0x7f0a00dc
 
     .line 110
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/TaskViewHeader;->findViewById(I)Landroid/view/View;

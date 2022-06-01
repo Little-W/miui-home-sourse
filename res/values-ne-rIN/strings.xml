@@ -728,9 +728,11 @@
     <string name="recents_title_security_scan">सुरक्षा स्क्यान</string>
     <string name="recents_tv_small_window_text">फ्लोटिंग विन्डोस्</string>
     <string name="recents_worldcirculate_text">चयन गर्न रिलिज गर्नुहोस्</string>
+    <string name="recnets_relay_device_info">%s बाट</string>
     <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
     <string name="recnets_worldcirculate_display_computer_info">एप %s मा चल्दैछ</string>
     <string name="recnets_worldcirculate_display_default_info">यसलाई फेरि प्रयोग गर्न ट्याप गर्नुहोस्।</string>
+    <string name="recnets_worldcirculate_display_default_info_pad">यसलाई फेरि प्रयोग गर्न ट्याप गर्नुहोस्।</string>
     <string name="recnets_worldcirculate_display_pad_info">एप %s मा चल्दैछ</string>
     <string name="recommend_apk_size_and_desc">%1$dMB | %2$s</string>
     <string name="recommend_app">एप सुझावहरू</string>
@@ -915,6 +917,7 @@
     <string name="uninstall_xspace_dialog_title_format">डुअल \"%s\" अनइन्स्टल गर्ने?</string>
     <string name="unknown_artist_name">अज्ञात कलाकार</string>
     <string name="unnamed_folder_name">फोल्डर</string>
+    <string name="upgrade_remove_small_window_in_recents">तपाईं फ्लोटिंग विन्डोहरूमा एपहरू खोल्न साइडबार प्रयोग गर्न सक्नुहुन्छ</string>
     <string name="wallpaper">वालपेपर</string>
     <string name="wallpaper_auto_change_title">लक स्क्रिन</string>
     <string name="wallpaper_failed_message">वालपेपर सेट गर्न सक्दैन</string>

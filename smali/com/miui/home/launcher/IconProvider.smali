@@ -95,21 +95,26 @@
     move-result v0
 
     .line 92
+    move-object v2, p2
+
+    check-cast v2, Landroid/graphics/drawable/AdaptiveIconDrawable;
+
+    .line 93
     invoke-virtual {p2}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
-    move-result v2
+    move-result v3
 
-    if-gt v2, v1, :cond_0
+    if-gt v3, v1, :cond_0
 
     invoke-virtual {p2}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
-    move-result v2
+    move-result v1
 
-    if-le v2, v0, :cond_1
+    if-le v1, v0, :cond_1
 
-    .line 93
+    .line 94
     :cond_0
-    sget-object v2, Lcom/miui/home/launcher/IconProvider;->TAG:Ljava/lang/String;
+    sget-object v1, Lcom/miui/home/launcher/IconProvider;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -121,54 +126,84 @@
 
     invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string p1, "\'s icon too large, enforce to max size"
+    const-string p1, "\'s icon too large, w = "
 
     invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 95
+    invoke-virtual {p2}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+
+    move-result p1
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, " h = "
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
+
+    move-result p1
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-static {v2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 94
-    sget-object p1, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
+    invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-static {v1, v0, p1}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
+    int-to-float p1, v0
 
-    move-result-object p1
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 95
-    new-instance v0, Landroid/graphics/Canvas;
-
-    invoke-direct {v0, p1}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
+    mul-float/2addr p1, v0
 
     .line 96
-    invoke-virtual {v0}, Landroid/graphics/Canvas;->getWidth()I
+    invoke-virtual {p2}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
-    move-result v1
+    move-result v0
 
-    invoke-virtual {v0}, Landroid/graphics/Canvas;->getHeight()I
+    int-to-float v0, v0
 
-    move-result v2
-
-    const/4 v3, 0x0
-
-    invoke-virtual {p2, v3, v3, v1, v2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+    div-float v0, p1, v0
 
     .line 97
-    invoke-virtual {p2, v0}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+    invoke-virtual {p2}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
+
+    move-result p2
+
+    int-to-float p2, p2
+
+    div-float/2addr p1, p2
+
+    .line 96
+    invoke-static {v0, p1}, Ljava/lang/Math;->max(FF)F
+
+    move-result p1
 
     .line 98
-    new-instance p2, Landroid/graphics/drawable/BitmapDrawable;
+    new-instance p2, Landroid/graphics/drawable/AdaptiveIconDrawable;
 
-    iget-object v0, p0, Lcom/miui/home/launcher/IconProvider;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v2}, Landroid/graphics/drawable/AdaptiveIconDrawable;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    invoke-direct {p2, v0, p1}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
+    invoke-direct {p0, v0, p1}, Lcom/miui/home/launcher/IconProvider;->scale(Landroid/graphics/drawable/Drawable;F)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    .line 99
+    invoke-virtual {v2}, Landroid/graphics/drawable/AdaptiveIconDrawable;->getForeground()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    invoke-direct {p0, v1, p1}, Lcom/miui/home/launcher/IconProvider;->scale(Landroid/graphics/drawable/Drawable;F)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    invoke-direct {p2, v0, p1}, Landroid/graphics/drawable/AdaptiveIconDrawable;-><init>(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
     return-object p2
 
@@ -185,7 +220,7 @@
 
     move-object/from16 v2, p2
 
-    .line 115
+    .line 131
     const-class v3, Lmiui/content/res/IconCustomizer;
 
     const-string v5, "getIcon"
@@ -240,7 +275,7 @@
 
     aput-object v2, v8, v11
 
-    .line 117
+    .line 133
     invoke-static/range {p3 .. p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -257,7 +292,7 @@
 
     const/4 v4, 0x0
 
-    .line 115
+    .line 131
     invoke-static/range {v3 .. v8}, Lcom/miui/launcher/utils/ReflectUtils;->invokeObject(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
@@ -268,7 +303,7 @@
 
     const/4 v3, 0x0
 
-    .line 119
+    .line 135
     invoke-static {p0, v1, v2, v3}, Lmiui/content/res/IconCustomizer;->getCustomizedIcon(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/BitmapDrawable;
 
     move-result-object v3
@@ -286,6 +321,82 @@
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/IconProvider;-><init>(Landroid/content/Context;)V
 
     return-object v0
+.end method
+
+.method private scale(Landroid/graphics/drawable/Drawable;F)Landroid/graphics/drawable/Drawable;
+    .locals 4
+
+    if-eqz p1, :cond_0
+
+    .line 107
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    mul-float/2addr v0, p2
+
+    float-to-int v0, v0
+
+    .line 108
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    mul-float/2addr v1, p2
+
+    float-to-int p2, v1
+
+    if-lez v0, :cond_0
+
+    if-lez p2, :cond_0
+
+    .line 110
+    sget-object v1, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
+
+    invoke-static {v0, p2, v1}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
+
+    move-result-object p2
+
+    .line 111
+    new-instance v0, Landroid/graphics/Canvas;
+
+    invoke-direct {v0, p2}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
+
+    .line 112
+    invoke-virtual {v0}, Landroid/graphics/Canvas;->getWidth()I
+
+    move-result v1
+
+    invoke-virtual {v0}, Landroid/graphics/Canvas;->getHeight()I
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    invoke-virtual {p1, v3, v3, v1, v2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+
+    .line 113
+    invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+
+    .line 114
+    new-instance p1, Landroid/graphics/drawable/BitmapDrawable;
+
+    iget-object v0, p0, Lcom/miui/home/launcher/IconProvider;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-direct {p1, v0, p2}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
+
+    return-object p1
+
+    :cond_0
+    return-object p1
 .end method
 
 
@@ -519,7 +630,7 @@
 .method public getDefaultActivityIcon(Landroid/os/UserHandle;)Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    .line 105
+    .line 121
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -546,7 +657,7 @@
 .method public getRawIcon(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
     .locals 0
 
-    .line 110
+    .line 126
     invoke-static {p1}, Lmiui/content/res/IconCustomizer;->getRawIconDrawable(Ljava/lang/String;)Landroid/graphics/drawable/BitmapDrawable;
 
     move-result-object p1

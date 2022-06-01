@@ -713,7 +713,7 @@
     .line 71
     invoke-super {p0}, Landroid/widget/LinearLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a02a4
+    const v0, 0x7f0a02a6
 
     .line 72
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/SearchBarTransferLayout;->findViewById(I)Landroid/view/View;
@@ -724,7 +724,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/SearchBarTransferLayout;->mTitle:Landroid/widget/TextView;
 
-    const v0, 0x7f0a013e
+    const v0, 0x7f0a0140
 
     .line 73
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/SearchBarTransferLayout;->findViewById(I)Landroid/view/View;
@@ -884,12 +884,12 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f0800c5
+    const v0, 0x7f0800c6
 
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f0800c4
+    const v0, 0x7f0800c5
 
     .line 373
     :goto_0

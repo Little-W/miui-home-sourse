@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 5368
+    .line 5400
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$48;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 5
 
-    .line 5370
+    .line 5402
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$48;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getSceneScreen()Lcom/miui/home/launcher/upsidescene/SceneScreen;
@@ -49,7 +49,7 @@
 
     const/4 v2, 0x1
 
-    .line 5371
+    .line 5403
     new-array v2, v2, [F
 
     const/4 v3, 0x0
@@ -62,17 +62,17 @@
 
     move-result-object v0
 
-    .line 5372
+    .line 5404
     new-instance v1, Lcom/miui/home/launcher/Launcher$48$1;
 
     invoke-direct {v1, p0}, Lcom/miui/home/launcher/Launcher$48$1;-><init>(Lcom/miui/home/launcher/Launcher$48;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 5382
+    .line 5414
     invoke-virtual {v0}, Landroid/animation/Animator;->start()V
 
-    .line 5384
+    .line 5416
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$48;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$7000(Lcom/miui/home/launcher/Launcher;)V

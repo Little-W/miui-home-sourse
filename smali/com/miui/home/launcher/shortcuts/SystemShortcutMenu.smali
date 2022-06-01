@@ -75,12 +75,12 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f080588
+    const v0, 0x7f080591
 
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f080586
+    const v0, 0x7f08058f
 
     :goto_0
     return v0
@@ -161,12 +161,12 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f080586
+    const v0, 0x7f08058f
 
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f080588
+    const v0, 0x7f080591
 
     :goto_0
     return v0
@@ -206,7 +206,7 @@
 .method protected getShortcutItemLayoutResId()I
     .locals 1
 
-    const v0, 0x7f0d013d
+    const v0, 0x7f0d013e
 
     return v0
 .end method
@@ -257,7 +257,7 @@
     .line 36
     invoke-super {p0, p1}, Lcom/miui/home/launcher/shortcuts/AutoAddShortcutMenuItemLinearLayout;->initPreInflateViews(Landroid/view/LayoutInflater;)V
 
-    const v0, 0x7f0d0077
+    const v0, 0x7f0d0078
 
     const/4 v1, 0x0
 

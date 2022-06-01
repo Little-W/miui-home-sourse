@@ -37,7 +37,7 @@
 .method constructor <init>(Ljava/util/function/Function;Ljava/lang/Object;Ljava/util/function/Consumer;Ljava/util/function/Consumer;)V
     .locals 0
 
-    .line 123
+    .line 124
     iput-object p1, p0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$3;->val$function:Ljava/util/function/Function;
 
     iput-object p2, p0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$3;->val$param:Ljava/lang/Object;
@@ -56,7 +56,7 @@
 .method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 123
+    .line 124
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$3;->doInBackground([Ljava/lang/Void;)Ljava/lang/Object;
@@ -76,7 +76,7 @@
         }
     .end annotation
 
-    .line 127
+    .line 128
     iget-object p1, p0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$3;->val$function:Ljava/util/function/Function;
 
     if-eqz p1, :cond_0
@@ -87,7 +87,7 @@
 
     if-nez p1, :cond_0
 
-    .line 128
+    .line 129
     iget-object p1, p0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$3;->val$function:Ljava/util/function/Function;
 
     iget-object v0, p0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$3;->val$param:Ljava/lang/Object;
@@ -112,12 +112,12 @@
         }
     .end annotation
 
-    .line 142
+    .line 143
     iget-object v0, p0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$3;->val$onTaskCancel:Ljava/util/function/Consumer;
 
     if-eqz v0, :cond_0
 
-    .line 143
+    .line 144
     invoke-interface {v0, p1}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
 
     :cond_0
@@ -132,12 +132,12 @@
         }
     .end annotation
 
-    .line 135
+    .line 136
     iget-object v0, p0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$3;->val$consumer:Ljava/util/function/Consumer;
 
     if-eqz v0, :cond_0
 
-    .line 136
+    .line 137
     invoke-interface {v0, p1}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
 
     :cond_0

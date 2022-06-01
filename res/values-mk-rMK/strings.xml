@@ -728,9 +728,11 @@
     <string name="recents_title_security_scan">Безбедносно скенирање</string>
     <string name="recents_tv_small_window_text">Лебдечки прозорци</string>
     <string name="recents_worldcirculate_text">Отпуштете за одбирање</string>
+    <string name="recnets_relay_device_info">Од %s</string>
     <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
     <string name="recnets_worldcirculate_display_computer_info">Апл. работи на %s.</string>
     <string name="recnets_worldcirculate_display_default_info">Кликнете за да го донесете овде.</string>
+    <string name="recnets_worldcirculate_display_default_info_pad">Tap to bring it back here.</string>
     <string name="recnets_worldcirculate_display_pad_info">Апл. работи на %s.</string>
     <string name="recommend_apk_size_and_desc">%1$dMB | %2$s</string>
     <string name="recommend_app">Предлози за апликации</string>
@@ -915,6 +917,7 @@
     <string name="uninstall_xspace_dialog_title_format">Да се деинсталира \"%s\"?</string>
     <string name="unknown_artist_name">Непознат изведувач</string>
     <string name="unnamed_folder_name">Папка</string>
+    <string name="upgrade_remove_small_window_in_recents">Може да ја користите статусната лента за да отворите апл. во Лебдечки прозорци</string>
     <string name="wallpaper">Позадина</string>
     <string name="wallpaper_auto_change_title">Заклучен екран</string>
     <string name="wallpaper_failed_message">Не може да се постави позадина</string>

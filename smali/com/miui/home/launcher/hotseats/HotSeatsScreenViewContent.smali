@@ -752,7 +752,7 @@
     .line 420
     iget-object v0, p0, Lcom/miui/home/launcher/hotseats/HotSeatsScreenViewContent;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f0800e8
+    const v1, 0x7f0800e9
 
     invoke-static {v0, v1}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -1634,7 +1634,7 @@
     .line 81
     iget-object v0, p0, Lcom/miui/home/launcher/hotseats/HotSeatsScreenViewContent;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f0801af
+    const v1, 0x7f0801b5
 
     invoke-static {v0, v1}, Lcom/miui/home/launcher/common/Utilities;->loadThemeCompatibleDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 

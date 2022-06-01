@@ -193,7 +193,7 @@
     .line 397
     iget-object p1, p0, Lcom/miui/home/settings/MiuiHomeSettings;->mRecentsShowRecommendCheckBoxPref:Lcom/miui/home/settings/preference/CheckBoxPreference;
 
-    const v0, 0x7f1003c9
+    const v0, 0x7f1003cb
 
     invoke-virtual {p1, v0}, Lcom/miui/home/settings/preference/CheckBoxPreference;->setTitle(I)V
 
@@ -245,7 +245,7 @@
 
     if-eqz v1, :cond_0
 
-    const v0, 0x7f10035a
+    const v0, 0x7f10035b
 
     .line 440
     invoke-virtual {p0, v0}, Lcom/miui/home/settings/MiuiHomeSettings;->getString(I)Ljava/lang/String;
@@ -292,12 +292,12 @@
 
     if-eqz v1, :cond_0
 
-    const v1, 0x7f100311
+    const v1, 0x7f100312
 
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f100317
+    const v1, 0x7f100318
 
     :goto_0
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -443,7 +443,7 @@
     .line 831
     iget-object v0, p0, Lcom/miui/home/settings/MiuiHomeSettings;->mOpenPersonalAssistantSettings:Lcom/miui/home/settings/preference/ValuePreference;
 
-    const v1, 0x7f100328
+    const v1, 0x7f100329
 
     invoke-virtual {v0, v1}, Lcom/miui/home/settings/preference/ValuePreference;->setTitle(I)V
 
@@ -710,7 +710,7 @@
     :cond_0
     const-string p1, "com.android.settings.FullScreenDisplaySettings"
 
-    const v1, 0x7f100312
+    const v1, 0x7f100313
 
     .line 249
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
@@ -1032,14 +1032,14 @@
     .line 770
     iget-object v0, p0, Lcom/miui/home/settings/MiuiHomeSettings;->mIconSizeSetting:Lcom/miui/home/settings/preference/ValuePreference;
 
-    const v1, 0x7f100242
+    const v1, 0x7f100243
 
     invoke-virtual {v0, v1}, Lcom/miui/home/settings/preference/ValuePreference;->setTitle(I)V
 
     .line 771
     iget-object v0, p0, Lcom/miui/home/settings/MiuiHomeSettings;->mIconSizeSetting:Lcom/miui/home/settings/preference/ValuePreference;
 
-    const v1, 0x7f100241
+    const v1, 0x7f100242
 
     invoke-virtual {v0, v1}, Lcom/miui/home/settings/preference/ValuePreference;->setSummary(I)V
 
@@ -1383,7 +1383,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f10032d
+    const v2, 0x7f10032e
 
     invoke-virtual {v1, v2}, Landroidx/fragment/app/FragmentActivity;->getString(I)Ljava/lang/String;
 
@@ -1402,12 +1402,12 @@
 
     if-eqz v2, :cond_0
 
-    const v2, 0x7f10032c
+    const v2, 0x7f10032d
 
     goto :goto_0
 
     :cond_0
-    const v2, 0x7f10032b
+    const v2, 0x7f10032c
 
     :goto_0
     invoke-virtual {v1, v2}, Landroidx/fragment/app/FragmentActivity;->getString(I)Ljava/lang/String;
@@ -1418,7 +1418,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f100329
+    const v1, 0x7f10032a
 
     new-instance v2, Lcom/miui/home/settings/MiuiHomeSettings$14;
 
@@ -1429,7 +1429,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f10032a
+    const v1, 0x7f10032b
 
     new-instance v2, Lcom/miui/home/settings/MiuiHomeSettings$13;
 
@@ -1730,7 +1730,7 @@
 
     iput-object p1, p0, Lcom/miui/home/settings/MiuiHomeSettings;->mPackageManager:Landroid/content/pm/PackageManager;
 
-    const p1, 0x7f130016
+    const p1, 0x7f130017
 
     .line 170
     invoke-virtual {p0, p1, p2}, Lcom/miui/home/settings/MiuiHomeSettings;->setPreferencesFromResource(ILjava/lang/String;)V
@@ -2090,7 +2090,7 @@
     .line 224
     iget-object p2, p0, Lcom/miui/home/settings/MiuiHomeSettings;->mOpenPersonalAssistant:Lcom/miui/home/settings/preference/CheckBoxPreference;
 
-    const v0, 0x7f100404
+    const v0, 0x7f100406
 
     invoke-virtual {p2, v0}, Lcom/miui/home/settings/preference/CheckBoxPreference;->setTitle(I)V
 
@@ -3058,7 +3058,7 @@
 
     invoke-virtual {v1, v0}, Lcom/miui/home/settings/preference/CheckBoxPreference;->setChecked(Z)V
 
-    const v1, 0x7f1003ad
+    const v1, 0x7f1003af
 
     .line 476
     invoke-direct {p0, v0, v1}, Lcom/miui/home/settings/MiuiHomeSettings;->setUpScreenCellsConfig(ZI)V

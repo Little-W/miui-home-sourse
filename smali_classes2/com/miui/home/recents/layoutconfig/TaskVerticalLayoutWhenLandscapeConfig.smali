@@ -26,23 +26,15 @@
     return v0
 .end method
 
-.method public getPaddingRatio()F
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
 .method public getTopRatio(ZI)F
     .locals 0
 
-    .line 15
+    .line 10
     sget-boolean p1, Lcom/miui/home/launcher/ApplicationConfig;->sIsSupportRelayInRecents:Z
 
     if-eqz p1, :cond_1
 
-    .line 16
+    .line 11
     sget-boolean p1, Lcom/miui/home/launcher/DeviceConfig;->IS_FOLD_DEVICE:Z
 
     if-eqz p1, :cond_0
@@ -57,7 +49,7 @@
     :goto_0
     return p1
 
-    .line 18
+    .line 13
     :cond_1
     sget-boolean p1, Lcom/miui/home/launcher/DeviceConfig;->IS_FOLD_DEVICE:Z
 

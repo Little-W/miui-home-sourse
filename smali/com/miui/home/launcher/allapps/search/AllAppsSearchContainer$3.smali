@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;)V
     .locals 0
 
-    .line 136
+    .line 135
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer$3;->this$0:Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,15 +42,15 @@
 
     const-string v1, "onClick: Local_Apps_Click: 2"
 
-    .line 140
+    .line 139
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x2
 
-    .line 141
+    .line 140
     invoke-static {v0}, Lcom/miui/privacy/track/SensorsAnalyticsCollector;->trackLocalAppsClick(I)V
 
-    .line 142
+    .line 141
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer$3;->this$0:Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;
 
     invoke-static {v0}, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->access$000(Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;)Lcom/miui/home/launcher/Launcher;
@@ -65,7 +65,7 @@
 .method public onAppLongClick(Landroid/view/View;)V
     .locals 1
 
-    .line 147
+    .line 146
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer$3;->this$0:Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;
 
     invoke-static {v0}, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->access$000(Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;)Lcom/miui/home/launcher/Launcher;

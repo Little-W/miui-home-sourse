@@ -61,12 +61,12 @@
     .line 34
     invoke-direct {p0}, Lcom/miui/miuiwidget/MIUIWidgetLayoutFactory;-><init>()V
 
-    const v0, 0x7f0a01a2
+    const v0, 0x7f0a01a4
 
     .line 35
     iput v0, p0, Lcom/miui/home/launcher/widget/device/LauncherWidgetLayoutFactory;->mAutoScaleTag:I
 
-    const v0, 0x7f0a01a1
+    const v0, 0x7f0a01a3
 
     .line 36
     iput v0, p0, Lcom/miui/home/launcher/widget/device/LauncherWidgetLayoutFactory;->mAutoScaleFactorTag:I
@@ -228,7 +228,7 @@
     return-void
 
     :cond_1
-    const p2, 0x7f070184
+    const p2, 0x7f070187
 
     .line 62
     invoke-virtual {p3}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
@@ -243,7 +243,7 @@
 
     if-eqz p4, :cond_2
 
-    const p2, 0x7f0703a0
+    const p2, 0x7f0703a3
 
     .line 65
     :cond_2

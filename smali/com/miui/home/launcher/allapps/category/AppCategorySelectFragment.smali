@@ -1000,7 +1000,7 @@
 
     invoke-virtual {p2, v0}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 
-    const p2, 0x7f0a00f4
+    const p2, 0x7f0a00f5
 
     .line 138
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -1011,7 +1011,7 @@
 
     iput-object p2, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mTitleEditor:Landroid/widget/EditText;
 
-    const p2, 0x7f0a008c
+    const p2, 0x7f0a008d
 
     .line 139
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -1031,7 +1031,7 @@
 
     invoke-virtual {p2, v0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const p2, 0x7f0a008a
+    const p2, 0x7f0a008b
 
     .line 142
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -1042,7 +1042,7 @@
 
     iput-object p2, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mBack:Lcom/miui/home/launcher/util/typeface/TypefaceIconView;
 
-    const p2, 0x7f0a008d
+    const p2, 0x7f0a008e
 
     .line 143
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -1083,7 +1083,7 @@
 
     invoke-virtual {p2, v0}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    const p2, 0x7f0a00fa
+    const p2, 0x7f0a00fb
 
     .line 148
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;

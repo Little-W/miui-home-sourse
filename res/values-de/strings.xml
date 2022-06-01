@@ -760,9 +760,11 @@
     <string name="recents_title_security_scan">Sicherheitsscan</string>
     <string name="recents_tv_small_window_text">Schwebende Fenster</string>
     <string name="recents_worldcirculate_text">Zum Auswählen loslassen</string>
+    <string name="recnets_relay_device_info">Von %s</string>
     <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
     <string name="recnets_worldcirculate_display_computer_info">Die App funktioniert auf %s.</string>
     <string name="recnets_worldcirculate_display_default_info">Tippen, um hierher zurückzuholen</string>
+    <string name="recnets_worldcirculate_display_default_info_pad">Tippen, um hierher zurückzuholen</string>
     <string name="recnets_worldcirculate_display_pad_info">Die App funktioniert auf %s.</string>
     <string name="recommend_apk_size_and_desc">%1$dMB / %2$s</string>
     <string name="recommend_app">App-Vorschläge</string>
@@ -950,6 +952,7 @@
     <string name="uninstall_xspace_dialog_title_format">Duale \"%s\" entfernen?</string>
     <string name="unknown_artist_name">Unbekannter Künstler</string>
     <string name="unnamed_folder_name">Ordner</string>
+    <string name="upgrade_remove_small_window_in_recents">Du kannst die Seitenleiste benutzen, um Apps in den schwebenden Fenstern zu öffnen</string>
     <string name="v7_preference_off">AUS</string>
     <string name="v7_preference_on">AN</string>
     <string name="wallpaper">Hintergrund</string>

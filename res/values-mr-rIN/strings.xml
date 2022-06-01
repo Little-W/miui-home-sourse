@@ -728,9 +728,11 @@
     <string name="recents_title_security_scan">सुरक्षा स्कॅन</string>
     <string name="recents_tv_small_window_text">फ्लोटिंग विंडोज</string>
     <string name="recents_worldcirculate_text">निवडण्यासाठी सोडा</string>
+    <string name="recnets_relay_device_info">%s कडून</string>
     <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
     <string name="recnets_worldcirculate_display_computer_info">एप %s वर काम करीत आहे.</string>
     <string name="recnets_worldcirculate_display_default_info">ते परत आणण्यासाठी टॅप करा.</string>
+    <string name="recnets_worldcirculate_display_default_info_pad">ते इथे परत आणण्यासाठी टॅप करा.</string>
     <string name="recnets_worldcirculate_display_pad_info">एप %s वर काम करीत आहे.</string>
     <string name="recommend_apk_size_and_desc">%1$dMB | %2$s</string>
     <string name="recommend_app">एप सूचना</string>
@@ -915,6 +917,7 @@
     <string name="uninstall_xspace_dialog_title_format">दुहेरी \"%s\" अनइनस्टॉल?</string>
     <string name="unknown_artist_name">अज्ञात कलाकार</string>
     <string name="unnamed_folder_name">फोल्डर</string>
+    <string name="upgrade_remove_small_window_in_recents">फ्लोटिंग विंडोजमध्ये एप्स उघडण्यासाठी तुम्ही साईडबार वापरु शकता</string>
     <string name="wallpaper">वॉलपेपर</string>
     <string name="wallpaper_auto_change_title">लॉक स्क्रीन</string>
     <string name="wallpaper_failed_message">वॉलपेपर सेट करु शकत नाही</string>

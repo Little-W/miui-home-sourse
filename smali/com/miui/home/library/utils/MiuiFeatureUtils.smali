@@ -12,9 +12,9 @@
 
 
 # static fields
-.field private static sConfigFilePath:Ljava/lang/String;
+.field private static sConfigFilePath:Ljava/lang/String; = null
 
-.field private static sConfigResult:Ljava/util/HashMap;
+.field private static sConfigResult:Ljava/util/HashMap; = null
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/HashMap<",
@@ -27,9 +27,9 @@
     .end annotation
 .end field
 
-.field private static sIsLiteMode:Z
+.field private static sIsLiteMode:Z = false
 
-.field private static sIsLiteModeSupported:Z
+.field private static sIsLiteModeSupported:Z = false
 
 .field private static sMiuisdkConfigResult:Ljava/util/HashMap;
     .annotation system Ldalvik/annotation/Signature;

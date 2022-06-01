@@ -269,7 +269,7 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f070160
+    const v0, 0x7f070163
 
     .line 98
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -291,14 +291,14 @@
 
     iput v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mHotSeatsCellHeight:I
 
-    const v0, 0x7f07009a
+    const v0, 0x7f07009d
 
     .line 103
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v0
 
-    const v1, 0x7f07016f
+    const v1, 0x7f070172
 
     .line 104
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

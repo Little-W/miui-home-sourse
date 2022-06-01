@@ -28,17 +28,17 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/install/PackageInstallerCompatVL;Ljava/lang/String;Ljava/lang/String;I)V
+.method constructor <init>(Lcom/miui/home/launcher/install/PackageInstallerCompatVL;Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
 
-    .line 81
+    .line 83
     iput-object p1, p0, Lcom/miui/home/launcher/install/PackageInstallerCompatVL$1;->this$0:Lcom/miui/home/launcher/install/PackageInstallerCompatVL;
 
     iput-object p2, p0, Lcom/miui/home/launcher/install/PackageInstallerCompatVL$1;->val$packageName:Ljava/lang/String;
 
-    iput-object p3, p0, Lcom/miui/home/launcher/install/PackageInstallerCompatVL$1;->val$title:Ljava/lang/String;
+    iput p3, p0, Lcom/miui/home/launcher/install/PackageInstallerCompatVL$1;->val$status:I
 
-    iput p4, p0, Lcom/miui/home/launcher/install/PackageInstallerCompatVL$1;->val$status:I
+    iput-object p4, p0, Lcom/miui/home/launcher/install/PackageInstallerCompatVL$1;->val$title:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -48,54 +48,47 @@
 
 # virtual methods
 .method public run()V
-    .locals 7
+    .locals 4
 
-    .line 84
-    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
+    .line 86
+    new-instance v0, Lcom/miui/home/launcher/progress/ProgressUpdateParams;
 
-    move-result-object v0
+    iget-object v1, p0, Lcom/miui/home/launcher/install/PackageInstallerCompatVL$1;->val$packageName:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/progress/ProgressManager;->getManager(Landroid/content/Context;)Lcom/miui/home/launcher/progress/ProgressManager;
+    const-string v2, "com.android.vending"
+
+    iget v3, p0, Lcom/miui/home/launcher/install/PackageInstallerCompatVL$1;->val$status:I
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/miui/home/launcher/progress/ProgressUpdateParams;-><init>(Ljava/lang/String;Ljava/lang/String;I)V
+
+    .line 87
+    iget-object v1, p0, Lcom/miui/home/launcher/install/PackageInstallerCompatVL$1;->val$title:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/progress/ProgressUpdateParams;->setTitle(Ljava/lang/String;)V
+
+    .line 88
+    sget-object v1, Lcom/miui/home/launcher/install/PlayAutoInstallHelper;->DEFAULT_ICON:Ljava/lang/String;
+
+    invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
 
-    const/4 v0, 0x1
+    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/progress/ProgressUpdateParams;->setIconUri(Landroid/net/Uri;)V
 
-    new-array v2, v0, [Ljava/lang/String;
+    .line 89
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
-    iget-object v3, p0, Lcom/miui/home/launcher/install/PackageInstallerCompatVL$1;->val$packageName:Ljava/lang/String;
+    move-result-object v1
 
-    const/4 v4, 0x0
+    invoke-static {v1}, Lcom/miui/home/launcher/progress/ProgressManager;->getManager(Landroid/content/Context;)Lcom/miui/home/launcher/progress/ProgressManager;
 
-    aput-object v3, v2, v4
+    move-result-object v1
 
-    new-array v3, v0, [Ljava/lang/String;
+    const/4 v2, 0x0
 
-    iget-object v5, p0, Lcom/miui/home/launcher/install/PackageInstallerCompatVL$1;->val$title:Ljava/lang/String;
+    invoke-virtual {v1, v0, v2}, Lcom/miui/home/launcher/progress/ProgressManager;->updateProgress(Lcom/miui/home/launcher/progress/ProgressUpdateParams;Z)V
 
-    aput-object v5, v3, v4
-
-    new-array v5, v0, [I
-
-    iget v6, p0, Lcom/miui/home/launcher/install/PackageInstallerCompatVL$1;->val$status:I
-
-    aput v6, v5, v4
-
-    new-array v0, v0, [Ljava/lang/String;
-
-    sget-object v6, Lcom/miui/home/launcher/install/PlayAutoInstallHelper;->DEFAULT_ICON:Ljava/lang/String;
-
-    aput-object v6, v0, v4
-
-    const-string v6, "com.android.vending"
-
-    move-object v4, v5
-
-    move-object v5, v0
-
-    invoke-virtual/range {v1 .. v6}, Lcom/miui/home/launcher/progress/ProgressManager;->updateProgress([Ljava/lang/String;[Ljava/lang/String;[I[Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 87
+    .line 90
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -112,7 +105,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 89
+    .line 92
     iget-object v1, p0, Lcom/miui/home/launcher/install/PackageInstallerCompatVL$1;->val$packageName:Ljava/lang/String;
 
     iget v2, p0, Lcom/miui/home/launcher/install/PackageInstallerCompatVL$1;->val$status:I

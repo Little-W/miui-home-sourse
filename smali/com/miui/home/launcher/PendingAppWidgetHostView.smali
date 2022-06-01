@@ -96,7 +96,7 @@
     .line 48
     iget-object v0, p0, Lcom/miui/home/launcher/PendingAppWidgetHostView;->mDefaultView:Landroid/view/View;
 
-    const v1, 0x7f0a014a
+    const v1, 0x7f0a014c
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -109,7 +109,7 @@
     .line 49
     iget-object v0, p0, Lcom/miui/home/launcher/PendingAppWidgetHostView;->mDefaultView:Landroid/view/View;
 
-    const v1, 0x7f0a00df
+    const v1, 0x7f0a00e0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -122,7 +122,7 @@
     .line 50
     iget-object v0, p0, Lcom/miui/home/launcher/PendingAppWidgetHostView;->mDefaultView:Landroid/view/View;
 
-    const v1, 0x7f0a01d5
+    const v1, 0x7f0a01d7
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -234,7 +234,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f080527
+    const v2, 0x7f08052f
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

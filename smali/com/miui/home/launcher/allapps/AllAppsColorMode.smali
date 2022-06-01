@@ -405,7 +405,7 @@
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f0801b8
+    const p2, 0x7f0801be
 
     .line 267
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
@@ -415,7 +415,7 @@
     return-object p1
 
     :cond_0
-    const p2, 0x7f0801b7
+    const p2, 0x7f0801bd
 
     .line 269
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
@@ -433,11 +433,18 @@
 
     move-result p2
 
-    if-eqz p2, :cond_0
-
-    const p2, 0x7f0801bb
+    if-eqz p2, :cond_1
 
     .line 283
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isLayoutRtl()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_0
+
+    const p2, 0x7f0801c3
+
+    .line 284
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
@@ -445,9 +452,36 @@
     return-object p1
 
     :cond_0
-    const p2, 0x7f0801ba
+    const p2, 0x7f0801c1
 
-    .line 285
+    .line 286
+    invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    return-object p1
+
+    .line 288
+    :cond_1
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isLayoutRtl()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_2
+
+    const p2, 0x7f0801c2
+
+    .line 289
+    invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_2
+    const p2, 0x7f0801c0
+
+    .line 291
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
@@ -465,7 +499,7 @@
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f080118
+    const p2, 0x7f08011c
 
     .line 259
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
@@ -475,7 +509,7 @@
     return-object p1
 
     :cond_0
-    const p2, 0x7f080117
+    const p2, 0x7f08011b
 
     .line 261
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
@@ -503,7 +537,7 @@
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f0805b8
+    const p2, 0x7f0805c1
 
     .line 180
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
@@ -513,7 +547,7 @@
     return-object p1
 
     :cond_0
-    const p2, 0x7f0805b6
+    const p2, 0x7f0805bf
 
     .line 182
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
@@ -530,7 +564,7 @@
 
     if-eqz p2, :cond_2
 
-    const p2, 0x7f0805b7
+    const p2, 0x7f0805c0
 
     .line 186
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
@@ -540,7 +574,7 @@
     return-object p1
 
     :cond_2
-    const p2, 0x7f0805b5
+    const p2, 0x7f0805be
 
     .line 188
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
@@ -620,12 +654,12 @@
 
     if-eqz p1, :cond_0
 
-    const p1, 0x7f0800c8
+    const p1, 0x7f0800c9
 
     return p1
 
     :cond_0
-    const p1, 0x7f0800c7
+    const p1, 0x7f0800c8
 
     return p1
 .end method
@@ -760,7 +794,7 @@
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f08057e
+    const p2, 0x7f080587
 
     .line 171
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
@@ -770,7 +804,7 @@
     return-object p1
 
     :cond_0
-    const p2, 0x7f08057d
+    const p2, 0x7f080586
 
     .line 173
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
@@ -880,12 +914,12 @@
 
     if-eqz p1, :cond_0
 
-    const p1, 0x7f0801c9
+    const p1, 0x7f0801d1
 
     return p1
 
     :cond_0
-    const p1, 0x7f0801c8
+    const p1, 0x7f0801d0
 
     return p1
 .end method

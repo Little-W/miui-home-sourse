@@ -26,7 +26,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;Ljava/lang/String;ZLcom/miui/home/launcher/ItemInfo;Ljava/lang/String;)V
     .locals 0
 
-    .line 481
+    .line 483
     iput-object p1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay$2;->this$0:Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;
 
     iput-object p4, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay$2;->val$itemInfo:Lcom/miui/home/launcher/ItemInfo;
@@ -43,19 +43,19 @@
 .method public onDragCompleted(Lcom/miui/home/launcher/DropTarget;Lcom/miui/home/launcher/DragObject;)V
     .locals 2
 
-    .line 484
+    .line 486
     invoke-virtual {p2}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v0
 
-    .line 485
+    .line 487
     iget-object v1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay$2;->val$itemInfo:Lcom/miui/home/launcher/ItemInfo;
 
     if-eq v0, v1, :cond_0
 
     return-void
 
-    .line 488
+    .line 490
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay$2;->this$0:Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;
 
@@ -65,7 +65,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 489
+    .line 491
     iget-object v0, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay$2;->this$0:Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;
 
     invoke-static {v0}, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->access$100(Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;)Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay$BlockingTask;
@@ -95,13 +95,13 @@
 
     const-string v0, "mDropTask is null"
 
-    .line 491
+    .line 493
     invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_1
     const-string p1, "picker"
 
-    .line 494
+    .line 496
     iget-object v0, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay$2;->val$source:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -110,7 +110,7 @@
 
     if-eqz p1, :cond_3
 
-    .line 495
+    .line 497
     iget-object p1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay$2;->this$0:Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;
 
     invoke-static {p1, p2}, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->access$600(Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;Lcom/miui/home/launcher/DragObject;)V

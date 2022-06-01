@@ -728,9 +728,11 @@
     <string name="recents_title_security_scan">Қауіпсіздік сканері</string>
     <string name="recents_tv_small_window_text">Қалқыма терезелер</string>
     <string name="recents_worldcirculate_text">Таңдау үшін босатыңыз</string>
+    <string name="recnets_relay_device_info">%s -дан</string>
     <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
     <string name="recnets_worldcirculate_display_computer_info">Осы қолданба %s арқылы істейді.</string>
     <string name="recnets_worldcirculate_display_default_info">Қайтарып алу үшін басыңыз.</string>
+    <string name="recnets_worldcirculate_display_default_info_pad">Қайтарып алу үшін басыңыз.</string>
     <string name="recnets_worldcirculate_display_pad_info">Осы қолданба %s арқылы істейді.</string>
     <string name="recommend_apk_size_and_desc">%1$dМБ| %2$s</string>
     <string name="recommend_app">Қолданба ұсыныстары</string>
@@ -915,6 +917,7 @@
     <string name="uninstall_xspace_dialog_title_format">Қосарлы \"%s\" жою керек пе?</string>
     <string name="unknown_artist_name">Белгісіз орындаушы</string>
     <string name="unnamed_folder_name">Бума</string>
+    <string name="upgrade_remove_small_window_in_recents">Қалқыма терезеде қолданбаны ашу үшін, бүйір панелін қолдана аласыз</string>
     <string name="wallpaper">Тұсқағаз</string>
     <string name="wallpaper_auto_change_title">Бұғаттау экраны</string>
     <string name="wallpaper_failed_message">Тұсқағазды орнату мүмкін болмады</string>

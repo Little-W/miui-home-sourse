@@ -553,7 +553,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f070115
+    const v2, 0x7f070118
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -577,7 +577,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f07010b
+    const v2, 0x7f07010e
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -593,12 +593,28 @@
     .line 117
     iget-object v0, p0, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->mPopupView:Landroid/widget/TextView;
 
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isLayoutRtl()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
     invoke-virtual {p0}, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    const v2, 0x7f0800fd
+    const v2, 0x7f080101
 
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p0}, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    const v2, 0x7f080100
+
+    :goto_0
     invoke-virtual {v1, v2}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
@@ -647,7 +663,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f070115
+    const v2, 0x7f070118
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -679,7 +695,7 @@
 
     move-result-object v1
 
-    const v4, 0x7f070119
+    const v4, 0x7f07011c
 
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -692,7 +708,7 @@
 
     move-result-object v1
 
-    const v4, 0x7f070111
+    const v4, 0x7f070114
 
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -727,7 +743,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f07010e
+    const v0, 0x7f070111
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

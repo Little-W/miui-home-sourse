@@ -38,6 +38,17 @@
 
 
 # virtual methods
+.method public abstract getAllIndexesOnScreen(I)Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I)",
+            "Ljava/util/List<",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end method
+
 .method public abstract getCurrentAllScreenID()Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {

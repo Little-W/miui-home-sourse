@@ -728,9 +728,11 @@
     <string name="recents_title_security_scan">ສະແກນດ້ານຄວາມປອດໄພ</string>
     <string name="recents_tv_small_window_text">ໜ້າຕ່າງລອຍ</string>
     <string name="recents_worldcirculate_text">​ປ່ອຍ​ເພື່ອ​ເລືອກ</string>
+    <string name="recnets_relay_device_info">ຈາກ %s</string>
     <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
     <string name="recnets_worldcirculate_display_computer_info">ແອັບກຳລັງເຮັດວຽກໃນ %s.</string>
     <string name="recnets_worldcirculate_display_default_info">ແຕະເພື່ອນຳກັບມາບ່ອນນີ້</string>
+    <string name="recnets_worldcirculate_display_default_info_pad">ແຕະເພື່ອນຳກັບມາບ່ອນນີ້</string>
     <string name="recnets_worldcirculate_display_pad_info">ແອັບກຳລັງເຮັດວຽກໃນ %s.</string>
     <string name="recommend_apk_size_and_desc">%1$dMB | %2$s</string>
     <string name="recommend_app">ການແນະນຳແອັບ</string>
@@ -915,6 +917,7 @@
     <string name="uninstall_xspace_dialog_title_format">ຖອນການຕິດຕັ້ງ \"%s\" ຄູ່ບໍ?</string>
     <string name="unknown_artist_name">ສິນລະປິນທີ່ບໍ່ຮູ້ຈັກ</string>
     <string name="unnamed_folder_name">ໂຟລເດີ</string>
+    <string name="upgrade_remove_small_window_in_recents">ທ່ານສາມາດໃຊ້ແຖບດ້ານຂ້າງເພື່ອເປີດແອັບໃນໜ້າຕ່າງລອຍ</string>
     <string name="wallpaper">ພາບພື້ນຫຼັງ</string>
     <string name="wallpaper_auto_change_title">ໜ້າຈໍລັອກ</string>
     <string name="wallpaper_failed_message">ບໍ່ສາມາດຕັ້ງພາບພື້ນຫຼັງໄດ້</string>

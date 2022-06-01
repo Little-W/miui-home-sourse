@@ -717,9 +717,11 @@
     <string name="recents_title_security_scan">بىخەتەرلىكنى تەكشۈرۈش</string>
     <string name="recents_tv_small_window_text">كىچىك كۆزنەك ئەپى</string>
     <string name="recents_worldcirculate_text">قويىۋېتىپ تاللاش</string>
+    <string name="recnets_relay_device_info">%sدىن كەلگەن</string>
     <string name="recnets_worldcirculate_button_text">شياۋمى ھەمبەھىرلەش مەركىزى</string>
     <string name="recnets_worldcirculate_display_computer_info">\"%s\"دە ئىجرا بولىۋاتىدۇ</string>
     <string name="recnets_worldcirculate_display_default_info">چېكىپ يانفون ئىشلىتىشكە قايتىڭ</string>
+    <string name="recnets_worldcirculate_display_default_info_pad">چېكىپ تاختا كومپىيۇتېرغا قايتىپ ئىشلىتىڭ</string>
     <string name="recnets_worldcirculate_display_pad_info">\"%s\"دە ئىجرا بولىۋاتىدۇ</string>
     <string name="recommend_app">ئەپ تەۋسىيە بالدىقى</string>
     <string name="recommend_apps_default_title">سانلىق مەلۇمات يوق</string>
@@ -925,6 +927,7 @@
     <string name="uninstall_xspace_dialog_title_format">\"%s\"نى قوش ئېچىشنى ئۆچۈرۈش</string>
     <string name="unknown_artist_name">نامەلۇم سەنئەتكار</string>
     <string name="unnamed_folder_name">قىسقۇچ</string>
+    <string name="upgrade_remove_small_window_in_recents">يېقىنقى ۋەزىپە كىچىك كۆزنەك ئەپ ئېغىزى چىقىرىۋېتىلدى، يان تەرەپ سىتونىدىن كىچىك كۆزنەكنى ئىشلەتسىڭىز بولىدۇ</string>
     <string name="wallpaper">تەگلىك</string>
     <string name="wallpaper_auto_change_title">ئېكران قۇلۇپى(پەقەت سۈكۈتتىكى قۇلۇپ ئېكرانىدىلا)</string>
     <string name="wallpaper_failed_message">تەگلىكنى تەڭشەش مەغلۇپ بولدى</string>

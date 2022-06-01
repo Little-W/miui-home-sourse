@@ -20,11 +20,7 @@
     .end annotation
 .end field
 
-.field public static DEFAULT_ANIMATION_RATE_HIGH:I = 0x0
-
-.field public static DEFAULT_ANIMATION_RATE_LOW:I = 0x0
-
-.field public static DEFAULT_ANIMATION_RATE_MIDDLE:I = 0x0
+.field public static final DEFAULT_ANIMATION_RATE:I
 
 .field public static DEVICE_LOW_END_WHITE_LIST:Ljava/util/Set; = null
     .annotation system Ldalvik/annotation/Signature;
@@ -48,11 +44,11 @@
 
 .field public static TAG:Ljava/lang/String; = "DeviceLevelUtils"
 
+.field public static sAnimationRateUpdated:Z
+
 .field public static sChangeTaskViewLayerType:Z
 
 .field public static sCurrentAnimationRate:I
-
-.field private static sDefaultAnimationRate:I
 
 .field public static sDeviceLevel:I
 
@@ -65,260 +61,274 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .line 31
+    .line 32
     invoke-static {}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->getBuildDeviceLowEnd()I
 
     move-result v0
 
     sput v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->BUILD_DEVICE_LOW_END:I
 
-    .line 32
+    .line 33
     invoke-static {}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->getBuildDeviceMiddleEnd()I
 
     move-result v0
 
     sput v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->BUILD_DEVICE_MIDDLE_END:I
 
-    .line 33
+    .line 34
     invoke-static {}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->getBuildDeviceHighEnd()I
 
     move-result v0
 
     sput v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->BUILD_DEVICE_HIGH_END:I
 
-    .line 50
+    .line 51
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
     sput-object v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->DEVICE_LOW_END_WHITE_LIST:Ljava/util/Set;
 
-    .line 53
+    .line 54
     sget-object v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->DEVICE_LOW_END_WHITE_LIST:Ljava/util/Set;
 
     const-string v1, "4bb6777bb903cae3166e826932f7fe94"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 54
+    .line 55
     sget-object v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->DEVICE_LOW_END_WHITE_LIST:Ljava/util/Set;
 
     const-string v1, "be8c477aab1c04b4a9b7640633f62bee"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 55
+    .line 56
     sget-object v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->DEVICE_LOW_END_WHITE_LIST:Ljava/util/Set;
 
     const-string v1, "74c9687238a05332b9c4e1129340f281"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 56
+    .line 57
     sget-object v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->DEVICE_LOW_END_WHITE_LIST:Ljava/util/Set;
 
     const-string v1, "06cfcadd99933d42bf1f7ba542f799b9"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 58
+    .line 59
     sget-object v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->DEVICE_LOW_END_WHITE_LIST:Ljava/util/Set;
 
     const-string v1, "9c6713ee9b81fc23f9c2ed117f44a471"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 59
+    .line 60
     sget-object v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->DEVICE_LOW_END_WHITE_LIST:Ljava/util/Set;
 
     const-string v1, "533c5ba8368075db8f6ef201546bd71a"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 60
+    .line 61
     sget-object v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->DEVICE_LOW_END_WHITE_LIST:Ljava/util/Set;
 
     const-string v1, "cd13b6a6af66fb774faa589a9d18f906"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 66
+    .line 67
     invoke-static {}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->getDeviceLevelOfCpuAndGpu()I
 
     move-result v0
 
     sput v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->sDeviceLevelFromFolme:I
 
-    .line 67
+    .line 68
     invoke-static {}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->getDeviceLevel()I
 
     move-result v0
 
     sput v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->sDeviceLevel:I
 
-    .line 68
+    .line 69
     invoke-static {}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->getDeviceLevelTransitionAnimRatio()F
 
     move-result v0
 
     sput v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->sDeviceLevelTransitionAnimRatio:F
 
-    .line 70
+    .line 71
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
     sput-object v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->CHANGE_TASK_VIEW_LAYER_TYPE_DEVICES:Ljava/util/Set;
 
-    .line 72
+    .line 73
     sget-object v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->CHANGE_TASK_VIEW_LAYER_TYPE_DEVICES:Ljava/util/Set;
 
     const-string v1, "gauguin"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 73
+    .line 74
     sget-object v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->CHANGE_TASK_VIEW_LAYER_TYPE_DEVICES:Ljava/util/Set;
 
     const-string v1, "gauguinpro"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 76
+    .line 77
     sget-object v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->CHANGE_TASK_VIEW_LAYER_TYPE_DEVICES:Ljava/util/Set;
 
     sget-object v1, Lmiui/os/Build;->DEVICE:Ljava/lang/String;
 
-    .line 77
+    .line 78
     invoke-interface {v0, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result v0
 
     sput-boolean v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->sChangeTaskViewLayerType:Z
 
-    .line 106
+    .line 107
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
     sput-object v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->FORCE_USE_COMPLETE_ANIM_DEVICES:Ljava/util/Set;
 
-    .line 108
+    .line 109
     sget-object v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->FORCE_USE_COMPLETE_ANIM_DEVICES:Ljava/util/Set;
 
     const-string v1, "polaris"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 109
+    .line 110
     sget-object v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->FORCE_USE_COMPLETE_ANIM_DEVICES:Ljava/util/Set;
 
     const-string v1, "dipper"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 110
+    .line 111
     sget-object v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->FORCE_USE_COMPLETE_ANIM_DEVICES:Ljava/util/Set;
 
     const-string v1, "equuleus"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 111
+    .line 112
     sget-object v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->FORCE_USE_COMPLETE_ANIM_DEVICES:Ljava/util/Set;
 
     const-string v1, "perseus"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 112
+    .line 113
     sget-object v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->FORCE_USE_COMPLETE_ANIM_DEVICES:Ljava/util/Set;
 
     const-string v1, "ursa"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 113
+    .line 114
     sget-object v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->FORCE_USE_COMPLETE_ANIM_DEVICES:Ljava/util/Set;
 
     const-string v1, "monet"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 114
+    .line 115
     sget-object v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->FORCE_USE_COMPLETE_ANIM_DEVICES:Ljava/util/Set;
 
     const-string v1, "monetin"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 115
+    .line 116
     sget-object v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->FORCE_USE_COMPLETE_ANIM_DEVICES:Ljava/util/Set;
 
     const-string v1, "vangogh"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 117
+    .line 118
     sget-object v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->FORCE_USE_COMPLETE_ANIM_DEVICES:Ljava/util/Set;
 
     const-string v1, "cezanne"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 118
+    .line 119
     sget-object v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->FORCE_USE_COMPLETE_ANIM_DEVICES:Ljava/util/Set;
 
     const-string v1, "atom"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 119
+    .line 120
     sget-object v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->FORCE_USE_COMPLETE_ANIM_DEVICES:Ljava/util/Set;
 
     const-string v1, "bomb"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    const/4 v0, 0x0
-
-    .line 170
-    sput v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->DEFAULT_ANIMATION_RATE_HIGH:I
-
-    const/4 v0, 0x1
-
-    .line 171
-    sput v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->DEFAULT_ANIMATION_RATE_MIDDLE:I
-
-    const/4 v0, 0x2
-
-    .line 172
-    sput v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->DEFAULT_ANIMATION_RATE_LOW:I
-
-    .line 173
+    .line 174
     invoke-static {}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->getDefaultAnimationRate()I
 
     move-result v0
 
-    sput v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->sDefaultAnimationRate:I
+    sput v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->DEFAULT_ANIMATION_RATE:I
 
+    const/4 v0, 0x0
+
+    .line 176
+    sput-boolean v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->sAnimationRateUpdated:Z
+
+    return-void
+.end method
+
+.method private static animationRateUpdated(Landroid/content/Context;)V
+    .locals 1
+
+    .line 208
+    sget-boolean v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->sAnimationRateUpdated:Z
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    .line 209
+    sput-boolean v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->sAnimationRateUpdated:Z
+
+    .line 210
+    new-instance v0, Lcom/miui/home/launcher/common/-$$Lambda$DeviceLevelUtils$kWLR6ghsRH6CvtfBui2e6lfQHr4;
+
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/common/-$$Lambda$DeviceLevelUtils$kWLR6ghsRH6CvtfBui2e6lfQHr4;-><init>(Landroid/content/Context;)V
+
+    invoke-static {v0}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
+
+    :cond_0
     return-void
 .end method
 
 .method public static dump(Ljava/lang/String;Ljava/io/PrintWriter;)V
     .locals 0
 
-    .line 231
+    .line 247
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 232
+    .line 248
     sget-object p0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->TAG:Ljava/lang/String;
 
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string p0, " sDeviceLevel:"
 
-    .line 233
+    .line 249
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     sget p0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->sDeviceLevel:I
@@ -327,7 +337,7 @@
 
     const-string p0, " sDeviceLevelTransitionAnimRatio:"
 
-    .line 234
+    .line 250
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     sget p0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->sDeviceLevelTransitionAnimRatio:F
@@ -336,14 +346,14 @@
 
     const-string p0, " sChangeTaskViewLayerType:"
 
-    .line 235
+    .line 251
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     sget-boolean p0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->sChangeTaskViewLayerType:Z
 
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->print(Z)V
 
-    .line 236
+    .line 252
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
     return-void
@@ -352,7 +362,7 @@
 .method public static getBuildDeviceHighEnd()I
     .locals 3
 
-    .line 46
+    .line 47
     const-class v0, Lmiui/os/Build;
 
     const-string v1, "DEVICE_HIGH_END"
@@ -367,7 +377,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 47
+    .line 48
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
@@ -384,7 +394,7 @@
 .method public static getBuildDeviceLowEnd()I
     .locals 3
 
-    .line 36
+    .line 37
     const-class v0, Lmiui/os/Build;
 
     const-string v1, "DEVICE_LOW_END"
@@ -399,7 +409,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 37
+    .line 38
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
@@ -416,7 +426,7 @@
 .method public static getBuildDeviceMiddleEnd()I
     .locals 3
 
-    .line 41
+    .line 42
     const-class v0, Lmiui/os/Build;
 
     const-string v1, "DEVICE_MIDDLE_END"
@@ -431,7 +441,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 42
+    .line 43
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
@@ -448,19 +458,18 @@
 .method private static getDefaultAnimationRate()I
     .locals 1
 
-    .line 177
+    .line 179
     invoke-static {}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->isLowLevelOrLiteDevice()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 178
-    sget v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->DEFAULT_ANIMATION_RATE_LOW:I
+    const/4 v0, 0x2
 
     return v0
 
-    .line 179
+    .line 181
     :cond_0
     invoke-static {}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->isHighLevelDeviceFromFolme()Z
 
@@ -468,14 +477,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 180
-    sget v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->DEFAULT_ANIMATION_RATE_HIGH:I
+    const/4 v0, 0x0
 
     return v0
 
-    .line 182
     :cond_1
-    sget v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->DEFAULT_ANIMATION_RATE_MIDDLE:I
+    const/4 v0, 0x1
 
     return v0
 .end method
@@ -483,7 +490,7 @@
 .method public static getDeviceLevel()I
     .locals 5
 
-    .line 80
+    .line 81
     sget-object v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->DEVICE_LOW_END_WHITE_LIST:Ljava/util/Set;
 
     sget-object v1, Lmiui/os/Build;->DEVICE:Ljava/lang/String;
@@ -502,12 +509,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 81
+    .line 82
     sget v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->BUILD_DEVICE_LOW_END:I
 
     return v0
 
-    .line 83
+    .line 84
     :cond_0
     const-class v0, Lmiui/os/Build;
 
@@ -529,7 +536,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 85
+    .line 86
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
@@ -546,7 +553,7 @@
 .method private static getDeviceLevelOfCpuAndGpu()I
     .locals 3
 
-    .line 89
+    .line 90
     sget v0, Lmiuix/animation/utils/DeviceUtils;->DEV_STANDARD_VERSION:I
 
     sget v1, Lmiuix/animation/utils/DeviceUtils;->TYPE_CPU:I
@@ -555,7 +562,7 @@
 
     move-result v0
 
-    .line 90
+    .line 91
     sget v1, Lmiuix/animation/utils/DeviceUtils;->DEV_STANDARD_VERSION:I
 
     sget v2, Lmiuix/animation/utils/DeviceUtils;->TYPE_GPU:I
@@ -564,7 +571,7 @@
 
     move-result v1
 
-    .line 91
+    .line 92
     invoke-static {v0, v1}, Ljava/lang/Math;->min(II)I
 
     move-result v0
@@ -575,7 +582,7 @@
 .method public static getDeviceLevelTransitionAnimRatio()F
     .locals 1
 
-    .line 136
+    .line 137
     invoke-static {}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->isLowLevelOrLiteDevice()Z
 
     move-result v0
@@ -595,11 +602,14 @@
 .method public static init(Landroid/content/Context;)V
     .locals 0
 
-    .line 222
+    .line 237
     invoke-static {p0}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->setDefaultAnimationRate(Landroid/content/Context;)V
 
-    .line 223
+    .line 238
     invoke-static {p0}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->updateAnimationRate(Landroid/content/Context;)I
+
+    .line 239
+    invoke-static {p0}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->setAnimationRateUpdatedFromSharedPreference(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -607,7 +617,7 @@
 .method public static isHideStatusBarWhenEnterRecents()Z
     .locals 1
 
-    .line 154
+    .line 155
     sget v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->sDeviceLevelFromFolme:I
 
     if-eqz v0, :cond_0
@@ -624,14 +634,12 @@
 .end method
 
 .method public static isHighAnimationRate()Z
-    .locals 2
+    .locals 1
 
-    .line 210
+    .line 225
     sget v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->sCurrentAnimationRate:I
 
-    sget v1, Lcom/miui/home/launcher/common/DeviceLevelUtils;->DEFAULT_ANIMATION_RATE_HIGH:I
-
-    if-ne v0, v1, :cond_0
+    if-nez v0, :cond_0
 
     const/4 v0, 0x1
 
@@ -647,20 +655,31 @@
 .method public static isHighLevelDeviceFromFolme()Z
     .locals 2
 
-    .line 103
+    .line 104
+    sget v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->sDeviceLevelFromFolme:I
+
+    const/4 v1, 0x2
+
+    if-ne v0, v1, :cond_0
 
     const/4 v0, 0x1
 
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
     return v0
 .end method
 
 .method public static isLowAnimationRate()Z
     .locals 2
 
-    .line 218
+    .line 233
     sget v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->sCurrentAnimationRate:I
 
-    sget v1, Lcom/miui/home/launcher/common/DeviceLevelUtils;->DEFAULT_ANIMATION_RATE_LOW:I
+    const/4 v1, 0x2
 
     if-ne v0, v1, :cond_0
 
@@ -678,45 +697,141 @@
 .method public static isLowLevelDevice()Z
     .locals 2
 
-    .line 128
+    .line 129
+    sget v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->sDeviceLevel:I
+
+    sget v1, Lcom/miui/home/launcher/common/DeviceLevelUtils;->BUILD_DEVICE_LOW_END:I
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
     const/4 v0, 0x0
 
+    :goto_0
     return v0
 .end method
 
 .method public static isLowLevelDeviceFromFolme()Z
     .locals 1
 
+    .line 96
+    sget v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->sDeviceLevelFromFolme:I
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
     const/4 v0, 0x0
 
+    :goto_0
     return v0
 .end method
 
 .method public static isLowLevelOrLiteDevice()Z
     .locals 1
 
+    .line 133
+    invoke-static {}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->isLowLevelDevice()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->IS_MIUI_LITE_DEVICE:Z
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
     const/4 v0, 0x0
 
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
+
+    :goto_1
     return v0
 .end method
 
 .method public static isMiddleLevelDeviceFromFolme()Z
     .locals 2
 
-    .line 99
+    .line 100
+    sget v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->sDeviceLevelFromFolme:I
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
     const/4 v1, 0x0
 
+    :goto_0
     return v1
 .end method
 
 .method public static isUseSimpleAnim()Z
     .locals 2
 
-    .line 123
+    .line 124
+    invoke-static {}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->isLowLevelDeviceFromFolme()Z
 
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-static {}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->isMiddleLevelDeviceFromFolme()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    :cond_0
+    sget-object v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->FORCE_USE_COMPLETE_ANIM_DEVICES:Ljava/util/Set;
+
+    sget-object v1, Lmiui/os/Build;->DEVICE:Ljava/lang/String;
+
+    .line 125
+    invoke-interface {v0, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
     const/4 v0, 0x0
 
+    :goto_0
     return v0
+.end method
+
+.method static synthetic lambda$animationRateUpdated$1(Landroid/content/Context;)V
+    .locals 2
+
+    const-string v0, "animation_rate_updated"
+
+    const/4 v1, 0x1
+
+    .line 210
+    invoke-static {p0, v0, v1}, Lcom/miui/home/launcher/common/PreferenceUtils;->putBoolean(Landroid/content/Context;Ljava/lang/String;Z)V
+
+    return-void
 .end method
 
 .method static synthetic lambda$showStatusBar$0(Lcom/miui/home/launcher/Launcher;JZ)V
@@ -724,7 +839,7 @@
 
     if-eqz p0, :cond_1
 
-    .line 159
+    .line 160
     invoke-static {}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->isHideStatusBarWhenEnterRecents()Z
 
     move-result v0
@@ -737,12 +852,12 @@
 
     if-gtz v0, :cond_0
 
-    .line 161
+    .line 162
     invoke-virtual {p0, p3}, Lcom/miui/home/launcher/Launcher;->showStatusBar(Z)V
 
     goto :goto_0
 
-    .line 163
+    .line 164
     :cond_0
     invoke-virtual {p0, p3, p1, p2}, Lcom/miui/home/launcher/Launcher;->showStatusBarDelay(ZJ)V
 
@@ -752,33 +867,56 @@
 .end method
 
 .method public static setAnimationRate(Landroid/content/Context;I)V
-    .locals 1
+    .locals 2
 
-    .line 196
+    .line 198
     sget v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->sCurrentAnimationRate:I
 
     if-eq v0, p1, :cond_0
 
-    .line 197
+    .line 199
     sput p1, Lcom/miui/home/launcher/common/DeviceLevelUtils;->sCurrentAnimationRate:I
 
-    .line 198
+    .line 200
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    move-result-object p0
+    move-result-object v0
 
-    const-string v0, "miui_home_animation_rate"
+    const-string v1, "miui_home_animation_rate"
 
-    invoke-static {p0, v0, p1}, Lcom/miui/launcher/utils/MiuiSettingsUtils;->putIntToSystem(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
+    invoke-static {v0, v1, p1}, Lcom/miui/launcher/utils/MiuiSettingsUtils;->putIntToSystem(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
+
+    .line 202
+    invoke-static {p1}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackAnimationRate(I)V
+
+    .line 203
+    invoke-static {p0}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->animationRateUpdated(Landroid/content/Context;)V
 
     :cond_0
+    return-void
+.end method
+
+.method private static setAnimationRateUpdatedFromSharedPreference(Landroid/content/Context;)V
+    .locals 2
+
+    const-string v0, "animation_rate_updated"
+
+    const/4 v1, 0x0
+
+    .line 221
+    invoke-static {p0, v0, v1}, Lcom/miui/home/launcher/common/PreferenceUtils;->getBoolean(Landroid/content/Context;Ljava/lang/String;Z)Z
+
+    move-result p0
+
+    sput-boolean p0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->sAnimationRateUpdated:Z
+
     return-void
 .end method
 
 .method private static setDefaultAnimationRate(Landroid/content/Context;)V
     .locals 3
 
-    .line 187
+    .line 189
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -793,14 +931,14 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 190
+    .line 192
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
 
     const-string v0, "miui_home_animation_rate"
 
-    sget v1, Lcom/miui/home/launcher/common/DeviceLevelUtils;->sDefaultAnimationRate:I
+    sget v1, Lcom/miui/home/launcher/common/DeviceLevelUtils;->DEFAULT_ANIMATION_RATE:I
 
     invoke-static {p0, v0, v1}, Lcom/miui/launcher/utils/MiuiSettingsUtils;->putIntToSystem(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
@@ -811,7 +949,7 @@
 .method public static setTaskViewLayerType(Lcom/miui/home/recents/views/TaskView;I)V
     .locals 1
 
-    .line 144
+    .line 145
     sget-boolean v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->sChangeTaskViewLayerType:Z
 
     if-eqz v0, :cond_0
@@ -820,7 +958,7 @@
 
     const/4 v0, 0x0
 
-    .line 145
+    .line 146
     invoke-virtual {p0, p1, v0}, Lcom/miui/home/recents/views/TaskView;->setLayerType(ILandroid/graphics/Paint;)V
 
     :cond_0
@@ -832,7 +970,7 @@
 
     const-wide/16 v0, 0x0
 
-    .line 150
+    .line 151
     invoke-static {p0, p1, v0, v1}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->showStatusBar(Lcom/miui/home/launcher/Launcher;ZJ)V
 
     return-void
@@ -841,7 +979,7 @@
 .method public static showStatusBar(Lcom/miui/home/launcher/Launcher;ZJ)V
     .locals 2
 
-    .line 158
+    .line 159
     sget-object v0, Lcom/miui/home/recents/TouchInteractionService;->MAIN_THREAD_EXECUTOR:Lcom/miui/home/launcher/MainThreadExecutor;
 
     new-instance v1, Lcom/miui/home/launcher/common/-$$Lambda$DeviceLevelUtils$PdIV6JUGx1L_P39as5j40-CGgsQ;
@@ -856,23 +994,41 @@
 .method public static supportSetAnimationRate()Z
     .locals 1
 
-    .line 227
+    .line 243
+    invoke-static {}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->isLowLevelDeviceFromFolme()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-static {}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->isLowLevelOrLiteDevice()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
     const/4 v0, 0x1
 
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
     return v0
 .end method
 
 .method public static updateAnimationRate(Landroid/content/Context;)I
     .locals 2
 
-    .line 204
+    .line 215
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
 
     const-string v0, "miui_home_animation_rate"
 
-    sget v1, Lcom/miui/home/launcher/common/DeviceLevelUtils;->sDefaultAnimationRate:I
+    sget v1, Lcom/miui/home/launcher/common/DeviceLevelUtils;->DEFAULT_ANIMATION_RATE:I
 
     invoke-static {p0, v0, v1}, Lcom/miui/launcher/utils/MiuiSettingsUtils;->getIntFromSystem(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -880,7 +1036,7 @@
 
     sput p0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->sCurrentAnimationRate:I
 
-    .line 206
+    .line 217
     sget p0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->sCurrentAnimationRate:I
 
     return p0

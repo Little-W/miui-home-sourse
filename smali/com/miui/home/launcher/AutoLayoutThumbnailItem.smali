@@ -96,7 +96,7 @@
     .line 35
     invoke-super {p0}, Lcom/miui/home/launcher/OnLongClickWrapper;->onFinishInflate()V
 
-    const v0, 0x7f0a013e
+    const v0, 0x7f0a0140
 
     .line 36
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/AutoLayoutThumbnailItem;->findViewById(I)Landroid/view/View;
@@ -118,7 +118,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/AutoLayoutThumbnailItem;->iconBackground:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a0118
+    const v0, 0x7f0a0119
 
     .line 38
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/AutoLayoutThumbnailItem;->findViewById(I)Landroid/view/View;
@@ -129,7 +129,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/AutoLayoutThumbnailItem;->iconForeground:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a02a4
+    const v0, 0x7f0a02a6
 
     .line 39
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/AutoLayoutThumbnailItem;->findViewById(I)Landroid/view/View;
@@ -140,7 +140,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/AutoLayoutThumbnailItem;->title:Landroid/widget/TextView;
 
-    const v0, 0x7f0a00ba
+    const v0, 0x7f0a00bb
 
     .line 40
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/AutoLayoutThumbnailItem;->findViewById(I)Landroid/view/View;

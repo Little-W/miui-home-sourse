@@ -45,15 +45,27 @@
 
     move-result-object v0
 
+    if-nez v0, :cond_0
+
+    return-void
+
+    .line 585
+    :cond_0
+    iget-object v0, p0, Lcom/miui/maml/NotifierManager$ConfigChangeNotifier$1;->this$0:Lcom/miui/maml/NotifierManager$ConfigChangeNotifier;
+
+    invoke-static {v0}, Lcom/miui/maml/NotifierManager$ConfigChangeNotifier;->access$500(Lcom/miui/maml/NotifierManager$ConfigChangeNotifier;)Landroid/content/res/Configuration;
+
+    move-result-object v0
+
     iget v0, v0, Landroid/content/res/Configuration;->screenWidthDp:I
 
     iget v1, p1, Landroid/content/res/Configuration;->screenWidthDp:I
 
-    if-ne v0, v1, :cond_0
+    if-ne v0, v1, :cond_1
 
     iget-object v0, p0, Lcom/miui/maml/NotifierManager$ConfigChangeNotifier$1;->this$0:Lcom/miui/maml/NotifierManager$ConfigChangeNotifier;
 
-    .line 582
+    .line 586
     invoke-static {v0}, Lcom/miui/maml/NotifierManager$ConfigChangeNotifier;->access$500(Lcom/miui/maml/NotifierManager$ConfigChangeNotifier;)Landroid/content/res/Configuration;
 
     move-result-object v0
@@ -62,11 +74,11 @@
 
     iget v1, p1, Landroid/content/res/Configuration;->screenLayout:I
 
-    if-ne v0, v1, :cond_0
+    if-ne v0, v1, :cond_1
 
     iget-object v0, p0, Lcom/miui/maml/NotifierManager$ConfigChangeNotifier$1;->this$0:Lcom/miui/maml/NotifierManager$ConfigChangeNotifier;
 
-    .line 583
+    .line 587
     invoke-static {v0}, Lcom/miui/maml/NotifierManager$ConfigChangeNotifier;->access$500(Lcom/miui/maml/NotifierManager$ConfigChangeNotifier;)Landroid/content/res/Configuration;
 
     move-result-object v0
@@ -75,11 +87,11 @@
 
     iget v1, p1, Landroid/content/res/Configuration;->smallestScreenWidthDp:I
 
-    if-ne v0, v1, :cond_0
+    if-ne v0, v1, :cond_1
 
     iget-object v0, p0, Lcom/miui/maml/NotifierManager$ConfigChangeNotifier$1;->this$0:Lcom/miui/maml/NotifierManager$ConfigChangeNotifier;
 
-    .line 584
+    .line 588
     invoke-static {v0}, Lcom/miui/maml/NotifierManager$ConfigChangeNotifier;->access$500(Lcom/miui/maml/NotifierManager$ConfigChangeNotifier;)Landroid/content/res/Configuration;
 
     move-result-object v0
@@ -88,16 +100,16 @@
 
     iget v1, p1, Landroid/content/res/Configuration;->densityDpi:I
 
-    if-eq v0, v1, :cond_1
+    if-eq v0, v1, :cond_2
 
-    .line 586
-    :cond_0
+    .line 590
+    :cond_1
     iget-object v0, p0, Lcom/miui/maml/NotifierManager$ConfigChangeNotifier$1;->this$0:Lcom/miui/maml/NotifierManager$ConfigChangeNotifier;
 
     invoke-static {v0, p1}, Lcom/miui/maml/NotifierManager$ConfigChangeNotifier;->access$600(Lcom/miui/maml/NotifierManager$ConfigChangeNotifier;Landroid/content/res/Configuration;)V
 
-    .line 588
-    :cond_1
+    .line 592
+    :cond_2
     iget-object v0, p0, Lcom/miui/maml/NotifierManager$ConfigChangeNotifier$1;->this$0:Lcom/miui/maml/NotifierManager$ConfigChangeNotifier;
 
     invoke-static {v0}, Lcom/miui/maml/NotifierManager$ConfigChangeNotifier;->access$500(Lcom/miui/maml/NotifierManager$ConfigChangeNotifier;)Landroid/content/res/Configuration;

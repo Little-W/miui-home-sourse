@@ -183,7 +183,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f070482
+    const v0, 0x7f070486
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -213,7 +213,7 @@
     .line 62
     iget-object p2, p0, Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter;->mLayoutInflater:Landroid/view/LayoutInflater;
 
-    const v0, 0x7f0d013f
+    const v0, 0x7f0d0140
 
     const/4 v1, 0x0
 

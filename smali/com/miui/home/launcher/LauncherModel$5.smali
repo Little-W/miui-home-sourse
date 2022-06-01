@@ -29,7 +29,7 @@
 .method constructor <init>(Landroid/content/ContentResolver;Lcom/miui/home/launcher/ItemInfo;Landroid/content/Context;)V
     .locals 0
 
-    .line 810
+    .line 813
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherModel$5;->val$cr:Landroid/content/ContentResolver;
 
     iput-object p2, p0, Lcom/miui/home/launcher/LauncherModel$5;->val$item:Lcom/miui/home/launcher/ItemInfo;
@@ -46,7 +46,7 @@
 .method public run()V
     .locals 4
 
-    .line 812
+    .line 815
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$5;->val$cr:Landroid/content/ContentResolver;
 
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherModel$5;->val$item:Lcom/miui/home/launcher/ItemInfo;
@@ -61,17 +61,17 @@
 
     invoke-virtual {v0, v1, v2, v2}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 813
+    .line 816
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$5;->val$item:Lcom/miui/home/launcher/ItemInfo;
 
     instance-of v1, v0, Lcom/miui/home/launcher/ShortcutInfo;
 
     if-eqz v1, :cond_0
 
-    .line 814
+    .line 817
     check-cast v0, Lcom/miui/home/launcher/ShortcutInfo;
 
-    .line 815
+    .line 818
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherModel$5;->val$context:Landroid/content/Context;
 
     invoke-static {v1}, Lcom/miui/home/launcher/Application;->getLauncherApplication(Landroid/content/Context;)Lcom/miui/home/launcher/Application;
@@ -84,14 +84,14 @@
 
     invoke-static {v1, v0}, Lcom/miui/home/launcher/LauncherModel;->access$800(Lcom/miui/home/launcher/LauncherModel;Lcom/miui/home/launcher/ShortcutInfo;)V
 
-    .line 816
+    .line 819
     iget v1, v0, Lcom/miui/home/launcher/ShortcutInfo;->itemType:I
 
     const/16 v2, 0xe
 
     if-ne v1, v2, :cond_0
 
-    .line 817
+    .line 820
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherModel$5;->val$context:Landroid/content/Context;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/ShortcutInfo;->getPackageName()Ljava/lang/String;

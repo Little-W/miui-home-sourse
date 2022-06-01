@@ -765,6 +765,7 @@
     <string name="recnets_worldcirculate_button_text">小米妙享中心</string>
     <string name="recnets_worldcirculate_display_computer_info">正在\"%s\"上运行</string>
     <string name="recnets_worldcirculate_display_default_info">点击回到手机使用</string>
+    <string name="recnets_worldcirculate_display_default_info_pad">点击回到平板使用</string>
     <string name="recnets_worldcirculate_display_pad_info">正在\"%s\"上运行</string>
     <string name="recommend_app">应用建议栏</string>
     <string name="recommend_apps_default_title">暂无数据</string>

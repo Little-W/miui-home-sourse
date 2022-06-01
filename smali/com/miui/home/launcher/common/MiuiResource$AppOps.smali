@@ -22,7 +22,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .line 115
+    .line 118
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x15
@@ -37,7 +37,7 @@
 
     goto :goto_0
 
-    .line 117
+    .line 120
     :cond_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -47,7 +47,7 @@
 
     const/16 v0, 0x2721
 
-    .line 118
+    .line 121
     sput v0, Lcom/miui/home/launcher/common/MiuiResource$AppOps;->OP_INSTALL_SHORTCUT:I
 
     goto :goto_1
@@ -56,7 +56,7 @@
     :goto_0
     const/16 v0, 0x3f
 
-    .line 116
+    .line 119
     sput v0, Lcom/miui/home/launcher/common/MiuiResource$AppOps;->OP_INSTALL_SHORTCUT:I
 
     :cond_2

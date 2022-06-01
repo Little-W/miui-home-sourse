@@ -35,6 +35,8 @@
 
 .field private mSkipNextAutoLayoutAnimation:Z
 
+.field private mTitleTextView:Lcom/miui/home/launcher/TitleTextView;
+
 .field private mWidgetContainer:Lcom/miui/home/launcher/LauncherWidgetContainerView;
 
 
@@ -42,7 +44,7 @@
 .method static constructor <clinit>()V
     .locals 7
 
-    .line 175
+    .line 174
     new-instance v0, Ljava/util/HashSet;
 
     const-string v1, "bc128052-1c50-4da8-b920-0728aa957a98"
@@ -75,17 +77,17 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 71
+    .line 70
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;-><init>(Landroid/content/Context;)V
 
     const/4 p1, 0x0
 
-    .line 63
+    .line 62
     iput-boolean p1, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView;->mSkipNextAutoLayoutAnimation:Z
 
     const/4 p1, 0x1
 
-    .line 64
+    .line 63
     iput-boolean p1, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView;->mIsEnableAutoLayoutAnimation:Z
 
     return-void
@@ -94,17 +96,17 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
-    .line 75
+    .line 74
     invoke-direct {p0, p1, p2}, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const/4 p1, 0x0
 
-    .line 63
+    .line 62
     iput-boolean p1, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView;->mSkipNextAutoLayoutAnimation:Z
 
     const/4 p1, 0x1
 
-    .line 64
+    .line 63
     iput-boolean p1, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView;->mIsEnableAutoLayoutAnimation:Z
 
     return-void
@@ -113,17 +115,17 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
-    .line 79
+    .line 78
     invoke-direct {p0, p1, p2, p3}, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     const/4 p1, 0x0
 
-    .line 63
+    .line 62
     iput-boolean p1, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView;->mSkipNextAutoLayoutAnimation:Z
 
     const/4 p1, 0x1
 
-    .line 64
+    .line 63
     iput-boolean p1, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView;->mIsEnableAutoLayoutAnimation:Z
 
     return-void
@@ -132,7 +134,7 @@
 .method private createMaMlHostView(Landroid/content/Context;Lcom/miui/home/launcher/maml/MaMlWidgetInfo;)Lcom/miui/home/launcher/maml/MaMlHostView;
     .locals 10
 
-    .line 85
+    .line 84
     iget-object v0, p2, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->resPath:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -143,7 +145,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 86
+    .line 85
     new-instance v0, Lcom/miui/home/launcher/gadget/MaMlPendingHostView;
 
     iget-object v2, p2, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->resPath:Ljava/lang/String;
@@ -152,24 +154,24 @@
 
     goto :goto_0
 
-    .line 88
+    .line 87
     :cond_0
     iput v1, p2, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->status:I
 
-    .line 89
+    .line 88
     new-instance v0, Lcom/miui/home/launcher/maml/MaMlHostView;
 
     iget-object v2, p2, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->resPath:Ljava/lang/String;
 
     invoke-direct {v0, p1, v2}, Lcom/miui/home/launcher/maml/MaMlHostView;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 91
+    .line 90
     :goto_0
     iget v2, p2, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->gadgetId:I
 
     invoke-virtual {v0, v2}, Lcom/miui/home/launcher/maml/MaMlHostView;->setWidgetId(I)V
 
-    .line 93
+    .line 92
     iget-object v2, p2, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->movement:Lcom/miui/home/launcher/MIUIWidgetBasicInfo$WidgetMovement;
 
     if-eqz v2, :cond_1
@@ -180,19 +182,19 @@
 
     if-lez v2, :cond_1
 
-    .line 94
+    .line 93
     iget-object v2, p2, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->movement:Lcom/miui/home/launcher/MIUIWidgetBasicInfo$WidgetMovement;
 
     iget v2, v2, Lcom/miui/home/launcher/MIUIWidgetBasicInfo$WidgetMovement;->paWidgetId:I
 
-    .line 95
+    .line 94
     iget-object v3, p2, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->movement:Lcom/miui/home/launcher/MIUIWidgetBasicInfo$WidgetMovement;
 
     iget v4, p2, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->gadgetId:I
 
     iput v4, v3, Lcom/miui/home/launcher/MIUIWidgetBasicInfo$WidgetMovement;->homeWidgetId:I
 
-    .line 99
+    .line 98
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v3
@@ -205,31 +207,31 @@
 
     const/4 v7, 0x0
 
-    .line 101
+    .line 100
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
     aput-object v2, v6, v7
 
-    .line 102
+    .line 101
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
     aput-object v2, v6, v1
 
-    .line 98
+    .line 97
     invoke-static {v3, v5, v6}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 96
+    .line 95
     invoke-static {v0, v1}, Lcom/miui/maml/widget/edit/WidgetEditSave;->setLocalId(Lcom/miui/maml/component/MamlView;Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 106
+    .line 105
     :cond_1
     iget v1, p2, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->gadgetId:I
 
@@ -239,13 +241,13 @@
 
     invoke-static {v0, v1}, Lcom/miui/maml/widget/edit/WidgetEditSave;->setLocalId(Lcom/miui/maml/component/MamlView;Ljava/lang/String;)V
 
-    .line 109
+    .line 108
     :goto_1
     iget-boolean v1, p2, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->isEditable:Z
 
     if-eqz v1, :cond_4
 
-    .line 110
+    .line 109
     iget-object v1, p2, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->customEditUri:Ljava/lang/String;
 
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -254,7 +256,7 @@
 
     if-nez v1, :cond_2
 
-    .line 111
+    .line 110
     iget-object v2, p2, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->productId:Ljava/lang/String;
 
     iget-object v3, p2, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->type:Ljava/lang/String;
@@ -269,12 +271,12 @@
 
     iget-object v8, p2, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->customEditUri:Ljava/lang/String;
 
-    .line 114
+    .line 113
     invoke-static {v0}, Lcom/miui/maml/widget/edit/WidgetEditSave;->getLocalId(Lcom/miui/maml/component/MamlView;)Ljava/lang/String;
 
     move-result-object v9
 
-    .line 111
+    .line 110
     invoke-static/range {v2 .. v9}, Lcom/miui/maml/widget/edit/MamlutilKt;->createLink(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -283,7 +285,7 @@
 
     goto :goto_2
 
-    .line 119
+    .line 118
     :cond_2
     iget-object v1, p2, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->configPath:Ljava/lang/String;
 
@@ -293,7 +295,7 @@
 
     if-eqz v1, :cond_3
 
-    .line 120
+    .line 119
     iget v1, p2, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->gadgetId:I
 
     invoke-static {p1, v1}, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->createConfigPath(Landroid/content/Context;I)Ljava/lang/String;
@@ -302,7 +304,7 @@
 
     iput-object v1, p2, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->configPath:Ljava/lang/String;
 
-    .line 122
+    .line 121
     :cond_3
     iget-object v1, p2, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->configPath:Ljava/lang/String;
 
@@ -320,7 +322,7 @@
 
     if-eqz v1, :cond_4
 
-    .line 126
+    .line 125
     invoke-static {p1, p2}, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->createEditUri(Landroid/content/Context;Lcom/miui/home/launcher/maml/MaMlWidgetInfo;)Ljava/lang/String;
 
     move-result-object p1
@@ -335,17 +337,17 @@
 .method public static from(Lcom/miui/home/launcher/maml/MaMlWidgetInfo;)Lcom/miui/home/launcher/maml/MaMlWidgetView;
     .locals 4
 
-    .line 135
+    .line 134
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
 
-    .line 136
+    .line 135
     invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v1
 
-    const v2, 0x7f0d0086
+    const v2, 0x7f0d0087
 
     const/4 v3, 0x0
 
@@ -355,26 +357,26 @@
 
     check-cast v1, Lcom/miui/home/launcher/maml/MaMlWidgetView;
 
-    .line 138
+    .line 137
     invoke-direct {v1, v0, p0}, Lcom/miui/home/launcher/maml/MaMlWidgetView;->createMaMlHostView(Landroid/content/Context;Lcom/miui/home/launcher/maml/MaMlWidgetInfo;)Lcom/miui/home/launcher/maml/MaMlHostView;
 
     move-result-object v0
 
-    .line 140
+    .line 139
     iput-object v1, p0, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->hostView:Lcom/miui/home/launcher/maml/MaMlWidgetView;
 
-    .line 141
+    .line 140
     invoke-virtual {v1, v0}, Lcom/miui/home/launcher/maml/MaMlWidgetView;->setMaMl(Lcom/miui/home/launcher/maml/MaMlHostView;)V
 
-    .line 142
+    .line 141
     invoke-virtual {v1, p0}, Lcom/miui/home/launcher/maml/MaMlWidgetView;->setTag(Ljava/lang/Object;)V
 
-    .line 143
+    .line 142
     iget v0, p0, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->gadgetId:I
 
     invoke-virtual {v1, v0}, Lcom/miui/home/launcher/maml/MaMlWidgetView;->setWidgetId(I)V
 
-    .line 144
+    .line 143
     invoke-direct {v1, p0}, Lcom/miui/home/launcher/maml/MaMlWidgetView;->updateTitle(Lcom/miui/home/launcher/maml/MaMlWidgetInfo;)V
 
     return-object v1
@@ -383,7 +385,7 @@
 .method public static synthetic lambda$onUpgrade$0(Lcom/miui/home/launcher/maml/MaMlWidgetView;Ljava/lang/String;I)V
     .locals 1
 
-    .line 154
+    .line 153
     invoke-virtual {p0}, Lcom/miui/home/launcher/maml/MaMlWidgetView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -398,7 +400,7 @@
 
     if-eq p1, p2, :cond_0
 
-    .line 154
+    .line 153
     new-instance p2, Lcom/miui/home/launcher/maml/-$$Lambda$MaMlWidgetView$jlqa8he2mFO7ay5Q1LPPMeNdMz0;
 
     invoke-direct {p2, p0, p3, p1}, Lcom/miui/home/launcher/maml/-$$Lambda$MaMlWidgetView$jlqa8he2mFO7ay5Q1LPPMeNdMz0;-><init>(Lcom/miui/home/launcher/maml/MaMlWidgetView;Ljava/lang/String;I)V
@@ -412,7 +414,7 @@
 .method public static synthetic lambda$onUpgrade$2(Lcom/miui/home/launcher/maml/MaMlWidgetView;Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 157
+    .line 156
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/maml/MaMlWidgetView;->reload(Ljava/lang/Runnable;)V
 
     return-void
@@ -421,12 +423,12 @@
 .method public static synthetic lambda$requestUpdate$3(Lcom/miui/home/launcher/maml/MaMlWidgetView;)V
     .locals 1
 
-    .line 311
+    .line 317
     iget-boolean v0, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView;->isResumed:Z
 
     if-nez v0, :cond_0
 
-    .line 312
+    .line 318
     iget-object v0, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView;->mHostView:Lcom/miui/home/launcher/maml/MaMlHostView;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/maml/MaMlHostView;->onPause()V
@@ -438,23 +440,23 @@
 .method private pauseWidget()V
     .locals 2
 
-    .line 336
+    .line 342
     iget-object v0, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView;->mHostView:Lcom/miui/home/launcher/maml/MaMlHostView;
 
     if-eqz v0, :cond_0
 
-    .line 337
+    .line 343
     iget-boolean v1, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView;->isResumed:Z
 
     if-eqz v1, :cond_0
 
-    .line 338
+    .line 344
     invoke-virtual {v0}, Lcom/miui/home/launcher/maml/MaMlHostView;->onPause()V
 
     :cond_0
     const/4 v0, 0x0
 
-    .line 341
+    .line 347
     iput-boolean v0, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView;->isResumed:Z
 
     return-void
@@ -463,14 +465,14 @@
 .method private reload(Ljava/lang/Runnable;)V
     .locals 7
 
-    .line 188
+    .line 192
     invoke-virtual {p0}, Lcom/miui/home/launcher/maml/MaMlWidgetView;->getItemInfoFromTag()Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v0
 
     check-cast v0, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;
 
-    .line 189
+    .line 193
     iget-object v1, v0, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->hostView:Lcom/miui/home/launcher/maml/MaMlWidgetView;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/maml/MaMlWidgetView;->getHostView()Lcom/miui/home/launcher/maml/MaMlHostView;
@@ -481,7 +483,7 @@
 
     const/4 v3, 0x1
 
-    .line 190
+    .line 194
     new-array v3, v3, [F
 
     const/4 v4, 0x0
@@ -496,22 +498,22 @@
 
     const-wide/16 v5, 0xc8
 
-    .line 191
+    .line 195
     invoke-virtual {v2, v5, v6}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
     move-result-object v2
 
-    .line 192
+    .line 196
     new-instance v3, Lcom/miui/home/launcher/maml/MaMlWidgetView$1;
 
     invoke-direct {v3, p0, v1, p1}, Lcom/miui/home/launcher/maml/MaMlWidgetView$1;-><init>(Lcom/miui/home/launcher/maml/MaMlWidgetView;Landroid/view/View;Ljava/lang/Runnable;)V
 
     invoke-virtual {v2, v3}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 204
+    .line 208
     invoke-virtual {v2}, Landroid/animation/ObjectAnimator;->start()V
 
-    .line 206
+    .line 210
     invoke-virtual {p0}, Lcom/miui/home/launcher/maml/MaMlWidgetView;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -520,19 +522,19 @@
 
     move-result-object p1
 
-    .line 207
+    .line 211
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/maml/MaMlHostView;->setTag(Ljava/lang/Object;)V
 
-    .line 208
+    .line 212
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/maml/MaMlWidgetView;->setMaMl(Lcom/miui/home/launcher/maml/MaMlHostView;)V
 
-    .line 209
+    .line 213
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/maml/MaMlWidgetView;->updateTitle(Lcom/miui/home/launcher/maml/MaMlWidgetInfo;)V
 
-    .line 211
+    .line 215
     invoke-virtual {p1, v4}, Lcom/miui/home/launcher/maml/MaMlHostView;->setAlpha(F)V
 
-    .line 212
+    .line 216
     invoke-virtual {p1}, Lcom/miui/home/launcher/maml/MaMlHostView;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
@@ -549,15 +551,15 @@
 
     invoke-virtual {p1}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    .line 214
+    .line 218
     invoke-virtual {p0}, Lcom/miui/home/launcher/maml/MaMlWidgetView;->onWallpaperColorChanged()V
 
-    .line 216
+    .line 220
     iget-boolean p1, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView;->isResumed:Z
 
     if-eqz p1, :cond_0
 
-    .line 217
+    .line 221
     invoke-virtual {p0}, Lcom/miui/home/launcher/maml/MaMlWidgetView;->onResume()V
 
     :cond_0
@@ -567,32 +569,49 @@
 .method private resumeWidget()V
     .locals 2
 
-    .line 327
+    .line 333
     iget-object v0, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView;->mHostView:Lcom/miui/home/launcher/maml/MaMlHostView;
 
     if-eqz v0, :cond_0
 
-    .line 328
+    .line 334
     iget-boolean v1, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView;->isResumed:Z
 
     if-nez v1, :cond_0
 
-    .line 329
+    .line 335
     invoke-virtual {v0}, Lcom/miui/home/launcher/maml/MaMlHostView;->onResume()V
 
     :cond_0
     const/4 v0, 0x1
 
-    .line 332
+    .line 338
     iput-boolean v0, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView;->isResumed:Z
 
     return-void
 .end method
 
+.method private shouldDisplayTitle(Lcom/miui/home/launcher/maml/MaMlWidgetInfo;)Z
+    .locals 1
+
+    .line 185
+    sget-object v0, Lcom/miui/home/launcher/maml/MaMlWidgetView;->sMaMlsWithoutTitle:Ljava/util/HashSet;
+
+    iget-object p1, p1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->productId:Ljava/lang/String;
+
+    invoke-virtual {v0, p1}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    xor-int/lit8 p1, p1, 0x1
+
+    return p1
+.end method
+
 .method private updateTitle(Lcom/miui/home/launcher/maml/MaMlWidgetInfo;)V
     .locals 1
 
-    .line 161
+    .line 160
     iget-object v0, p1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->appPackage:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -601,7 +620,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 162
+    .line 161
     invoke-virtual {p1}, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->getTitle()Ljava/lang/CharSequence;
 
     move-result-object v0
@@ -612,45 +631,45 @@
 
     if-eqz v0, :cond_0
 
-    const-string p1, ""
+    const-string v0, ""
 
     goto :goto_0
 
     :cond_0
     invoke-virtual {p1}, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->getTitle()Ljava/lang/CharSequence;
 
-    move-result-object p1
+    move-result-object v0
 
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    goto :goto_0
-
-    .line 163
-    :cond_1
-    iget-object p1, p1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->appName:Ljava/lang/String;
-
-    .line 164
-    :goto_0
-    invoke-virtual {p0}, Lcom/miui/home/launcher/maml/MaMlWidgetView;->isShowTitle()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    .line 165
-    invoke-virtual {p0}, Lcom/miui/home/launcher/maml/MaMlWidgetView;->getTitleView()Lcom/miui/home/launcher/TitleTextView;
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/miui/home/launcher/TitleTextView;->setText(Ljava/lang/CharSequence;)V
+    goto :goto_0
 
-    .line 167
+    .line 162
+    :cond_1
+    iget-object v0, p1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->appName:Ljava/lang/String;
+
+    .line 163
+    :goto_0
+    invoke-direct {p0, p1}, Lcom/miui/home/launcher/maml/MaMlWidgetView;->shouldDisplayTitle(Lcom/miui/home/launcher/maml/MaMlWidgetInfo;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    .line 164
+    invoke-virtual {p0}, Lcom/miui/home/launcher/maml/MaMlWidgetView;->getTitleView()Lcom/miui/home/launcher/TitleTextView;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v0}, Lcom/miui/home/launcher/TitleTextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 166
     :cond_2
-    iget-object v0, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView;->mHostView:Lcom/miui/home/launcher/maml/MaMlHostView;
+    iget-object p1, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView;->mHostView:Lcom/miui/home/launcher/maml/MaMlHostView;
 
-    invoke-virtual {v0, p1}, Lcom/miui/home/launcher/maml/MaMlHostView;->setContentDescription(Ljava/lang/CharSequence;)V
+    invoke-virtual {p1, v0}, Lcom/miui/home/launcher/maml/MaMlHostView;->setContentDescription(Ljava/lang/CharSequence;)V
 
     return-void
 .end method
@@ -662,34 +681,34 @@
 
     const/4 v0, 0x2
 
-    .line 449
+    .line 448
     new-array v0, v0, [I
 
-    .line 450
+    .line 449
     iget-object v1, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView;->mHostView:Lcom/miui/home/launcher/maml/MaMlHostView;
 
     invoke-virtual {v1, v0}, Lcom/miui/home/launcher/maml/MaMlHostView;->getLocationOnScreen([I)V
 
-    .line 451
+    .line 450
     new-instance v1, Landroid/graphics/Rect;
 
     invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
 
     const/4 v2, 0x0
 
-    .line 452
+    .line 451
     aget v2, v0, v2
 
     iput v2, v1, Landroid/graphics/Rect;->left:I
 
     const/4 v2, 0x1
 
-    .line 453
+    .line 452
     aget v0, v0, v2
 
     iput v0, v1, Landroid/graphics/Rect;->top:I
 
-    .line 454
+    .line 453
     iget v0, v1, Landroid/graphics/Rect;->left:I
 
     iget-object v2, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView;->mHostView:Lcom/miui/home/launcher/maml/MaMlHostView;
@@ -702,7 +721,7 @@
 
     iput v0, v1, Landroid/graphics/Rect;->right:I
 
-    .line 455
+    .line 454
     iget v0, v1, Landroid/graphics/Rect;->top:I
 
     iget-object v2, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView;->mHostView:Lcom/miui/home/launcher/maml/MaMlHostView;
@@ -721,7 +740,7 @@
 .method public getCornerRadius()F
     .locals 1
 
-    .line 471
+    .line 470
     iget-object v0, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView;->mHostView:Lcom/miui/home/launcher/maml/MaMlHostView;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/maml/MaMlHostView;->getCornerRadius()F
@@ -734,14 +753,14 @@
 .method public getEditUri()Ljava/lang/String;
     .locals 2
 
-    .line 391
+    .line 397
     invoke-virtual {p0}, Lcom/miui/home/launcher/maml/MaMlWidgetView;->getItemInfoFromTag()Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v0
 
     check-cast v0, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;
 
-    .line 392
+    .line 398
     iget-boolean v1, v0, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->isEditable:Z
 
     if-eqz v1, :cond_0
@@ -768,7 +787,7 @@
 .method public bridge synthetic getHostView()Landroid/view/View;
     .locals 1
 
-    .line 56
+    .line 54
     invoke-virtual {p0}, Lcom/miui/home/launcher/maml/MaMlWidgetView;->getHostView()Lcom/miui/home/launcher/maml/MaMlHostView;
 
     move-result-object v0
@@ -779,7 +798,7 @@
 .method public getHostView()Lcom/miui/home/launcher/maml/MaMlHostView;
     .locals 1
 
-    .line 231
+    .line 235
     iget-object v0, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView;->mHostView:Lcom/miui/home/launcher/maml/MaMlHostView;
 
     return-object v0
@@ -788,7 +807,7 @@
 .method public getIconImageView()Landroid/view/View;
     .locals 1
 
-    .line 425
+    .line 424
     iget-object v0, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView;->mHostView:Lcom/miui/home/launcher/maml/MaMlHostView;
 
     return-object v0
@@ -797,7 +816,7 @@
 .method public getIconRadius()F
     .locals 2
 
-    .line 430
+    .line 429
     iget v0, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView;->mMaMlCornerSize:F
 
     const/4 v1, 0x0
@@ -806,12 +825,12 @@
 
     if-nez v0, :cond_0
 
-    .line 431
+    .line 430
     invoke-virtual {p0}, Lcom/miui/home/launcher/maml/MaMlWidgetView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f070191
+    const v1, 0x7f070194
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -821,7 +840,7 @@
 
     iput v0, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView;->mMaMlCornerSize:F
 
-    .line 433
+    .line 432
     :cond_0
     iget v0, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView;->mMaMlCornerSize:F
 
@@ -831,22 +850,22 @@
 .method public getItemInfoFromTag()Lcom/miui/home/launcher/ItemInfo;
     .locals 2
 
-    .line 396
+    .line 402
     invoke-virtual {p0}, Lcom/miui/home/launcher/maml/MaMlWidgetView;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 397
+    .line 403
     instance-of v1, v0, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;
 
     if-eqz v1, :cond_0
 
-    .line 400
+    .line 406
     check-cast v0, Lcom/miui/home/launcher/ItemInfo;
 
     return-object v0
 
-    .line 398
+    .line 404
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -860,7 +879,7 @@
 .method public getSkipNextAutoLayoutAnimation()Z
     .locals 1
 
-    .line 363
+    .line 369
     iget-boolean v0, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView;->mSkipNextAutoLayoutAnimation:Z
 
     return v0
@@ -869,10 +888,19 @@
 .method public getTargetRootView()Landroid/view/View;
     .locals 1
 
-    .line 438
+    .line 437
     invoke-virtual {p0}, Lcom/miui/home/launcher/maml/MaMlWidgetView;->getRootView()Landroid/view/View;
 
     move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getTitleView()Lcom/miui/home/launcher/TitleTextView;
+    .locals 1
+
+    .line 411
+    iget-object v0, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView;->mTitleTextView:Lcom/miui/home/launcher/TitleTextView;
 
     return-object v0
 .end method
@@ -888,7 +916,7 @@
 .method public getWidgetId()I
     .locals 1
 
-    .line 248
+    .line 254
     iget-object v0, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView;->mHostView:Lcom/miui/home/launcher/maml/MaMlHostView;
 
     if-eqz v0, :cond_0
@@ -909,62 +937,16 @@
 .method public isEnableAutoLayoutAnimation()Z
     .locals 1
 
-    .line 372
+    .line 378
     iget-boolean v0, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView;->mIsEnableAutoLayoutAnimation:Z
 
     return v0
 .end method
 
-.method public isShowTitle()Z
-    .locals 3
-
-    .line 405
-    invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isPadDevice()Z
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    return v1
-
-    .line 408
-    :cond_0
-    invoke-virtual {p0}, Lcom/miui/home/launcher/maml/MaMlWidgetView;->getTag()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/miui/home/launcher/ItemInfo;
-
-    .line 409
-    instance-of v2, v0, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;
-
-    if-eqz v2, :cond_1
-
-    .line 410
-    sget-object v1, Lcom/miui/home/launcher/maml/MaMlWidgetView;->sMaMlsWithoutTitle:Ljava/util/HashSet;
-
-    check-cast v0, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;
-
-    iget-object v0, v0, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->productId:Ljava/lang/String;
-
-    invoke-virtual {v1, v0}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    xor-int/lit8 v0, v0, 0x1
-
-    return v0
-
-    :cond_1
-    return v1
-.end method
-
 .method public isUseTransitionAnimation()Z
     .locals 1
 
-    .line 444
+    .line 443
     iget-object v0, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView;->mHostView:Lcom/miui/home/launcher/maml/MaMlHostView;
 
     if-eqz v0, :cond_0
@@ -989,12 +971,12 @@
 .method public notifyColorChanged()V
     .locals 1
 
-    .line 293
+    .line 299
     iget-object v0, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView;->mHostView:Lcom/miui/home/launcher/maml/MaMlHostView;
 
     if-eqz v0, :cond_0
 
-    .line 294
+    .line 300
     invoke-virtual {v0}, Lcom/miui/home/launcher/maml/MaMlHostView;->notifyColorChanged()V
 
     :cond_0
@@ -1004,15 +986,15 @@
 .method public onDestroy()V
     .locals 1
 
-    .line 345
+    .line 351
     invoke-super {p0}, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;->onDestroy()V
 
-    .line 346
+    .line 352
     iget-object v0, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView;->mHostView:Lcom/miui/home/launcher/maml/MaMlHostView;
 
     if-eqz v0, :cond_0
 
-    .line 347
+    .line 353
     invoke-virtual {v0}, Lcom/miui/home/launcher/maml/MaMlHostView;->onDestroy()V
 
     :cond_0
@@ -1020,14 +1002,14 @@
 .end method
 
 .method protected onFinishInflate()V
-    .locals 1
+    .locals 2
 
-    .line 236
+    .line 240
     invoke-super {p0}, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;->onFinishInflate()V
 
-    const v0, 0x7f0a02ec
+    const v0, 0x7f0a02ee
 
-    .line 237
+    .line 241
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/maml/MaMlWidgetView;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -1036,16 +1018,34 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView;->mWidgetContainer:Lcom/miui/home/launcher/LauncherWidgetContainerView;
 
+    const v0, 0x7f0a0149
+
+    .line 242
+    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/maml/MaMlWidgetView;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/miui/home/launcher/TitleTextView;
+
+    iput-object v0, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView;->mTitleTextView:Lcom/miui/home/launcher/TitleTextView;
+
+    .line 243
+    iget-object v0, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView;->mTitleTextView:Lcom/miui/home/launcher/TitleTextView;
+
+    const/4 v1, 0x4
+
+    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/TitleTextView;->setImportantForAccessibility(I)V
+
     return-void
 .end method
 
 .method public onInvisible()V
     .locals 0
 
-    .line 281
+    .line 287
     invoke-super {p0}, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;->onInvisible()V
 
-    .line 282
+    .line 288
     invoke-direct {p0}, Lcom/miui/home/launcher/maml/MaMlWidgetView;->pauseWidget()V
 
     return-void
@@ -1054,10 +1054,10 @@
 .method public onPause()V
     .locals 0
 
-    .line 269
+    .line 275
     invoke-super {p0}, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;->onPause()V
 
-    .line 270
+    .line 276
     invoke-direct {p0}, Lcom/miui/home/launcher/maml/MaMlWidgetView;->pauseWidget()V
 
     return-void
@@ -1066,10 +1066,10 @@
 .method public onResume()V
     .locals 0
 
-    .line 264
+    .line 270
     invoke-super {p0}, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;->onResume()V
 
-    .line 265
+    .line 271
     invoke-direct {p0}, Lcom/miui/home/launcher/maml/MaMlWidgetView;->resumeWidget()V
 
     return-void
@@ -1078,22 +1078,22 @@
 .method public onUpgrade(II)V
     .locals 2
 
-    .line 150
+    .line 149
     invoke-virtual {p0}, Lcom/miui/home/launcher/maml/MaMlWidgetView;->getItemInfoFromTag()Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v0
 
     check-cast v0, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;
 
-    .line 151
+    .line 150
     iget-object v0, v0, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->productId:Ljava/lang/String;
 
-    .line 152
+    .line 151
     new-instance v1, Lcom/miui/home/launcher/maml/-$$Lambda$MaMlWidgetView$z9dFA6rN6pqFNXRLUUa6XPPKjn8;
 
     invoke-direct {v1, p0, p1, p2, v0}, Lcom/miui/home/launcher/maml/-$$Lambda$MaMlWidgetView$z9dFA6rN6pqFNXRLUUa6XPPKjn8;-><init>(Lcom/miui/home/launcher/maml/MaMlWidgetView;IILjava/lang/String;)V
 
-    .line 157
+    .line 156
     new-instance p1, Lcom/miui/home/launcher/maml/-$$Lambda$MaMlWidgetView$9j_pilKofEUe_eHkfsL18qy84UI;
 
     invoke-direct {p1, p0, v1}, Lcom/miui/home/launcher/maml/-$$Lambda$MaMlWidgetView$9j_pilKofEUe_eHkfsL18qy84UI;-><init>(Lcom/miui/home/launcher/maml/MaMlWidgetView;Ljava/lang/Runnable;)V
@@ -1106,10 +1106,10 @@
 .method public onVisible()V
     .locals 0
 
-    .line 275
+    .line 281
     invoke-super {p0}, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;->onVisible()V
 
-    .line 276
+    .line 282
     invoke-direct {p0}, Lcom/miui/home/launcher/maml/MaMlWidgetView;->resumeWidget()V
 
     return-void
@@ -1118,10 +1118,10 @@
 .method public onWallpaperColorChanged()V
     .locals 0
 
-    .line 287
+    .line 293
     invoke-super {p0}, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;->onWallpaperColorChanged()V
 
-    .line 288
+    .line 294
     invoke-virtual {p0}, Lcom/miui/home/launcher/maml/MaMlWidgetView;->notifyColorChanged()V
 
     return-void
@@ -1130,22 +1130,22 @@
 .method public requestUpdate(Z)V
     .locals 2
 
-    .line 306
+    .line 312
     iget-object v0, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView;->mHostView:Lcom/miui/home/launcher/maml/MaMlHostView;
 
     if-eqz v0, :cond_1
 
     if-eqz p1, :cond_0
 
-    .line 308
+    .line 314
     invoke-virtual {v0}, Lcom/miui/home/launcher/maml/MaMlHostView;->requestLayout()V
 
-    .line 309
+    .line 315
     iget-object p1, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView;->mHostView:Lcom/miui/home/launcher/maml/MaMlHostView;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/maml/MaMlHostView;->onResume()V
 
-    .line 310
+    .line 316
     new-instance p1, Lcom/miui/home/launcher/maml/-$$Lambda$MaMlWidgetView$DJCg-1JEsOCdv4Eg_jvQi0U4Q3U;
 
     invoke-direct {p1, p0}, Lcom/miui/home/launcher/maml/-$$Lambda$MaMlWidgetView$DJCg-1JEsOCdv4Eg_jvQi0U4Q3U;-><init>(Lcom/miui/home/launcher/maml/MaMlWidgetView;)V
@@ -1156,7 +1156,7 @@
 
     goto :goto_0
 
-    .line 316
+    .line 322
     :cond_0
     invoke-virtual {v0}, Lcom/miui/home/launcher/maml/MaMlHostView;->doRender()V
 
@@ -1168,7 +1168,7 @@
 .method public setEnableAutoLayoutAnimation(Z)V
     .locals 0
 
-    .line 353
+    .line 359
     iput-boolean p1, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView;->mIsEnableAutoLayoutAnimation:Z
 
     return-void
@@ -1177,7 +1177,7 @@
 .method protected setFrame(IIII)Z
     .locals 0
 
-    .line 377
+    .line 383
     invoke-static {p0, p1, p2, p3, p4}, Lcom/miui/home/launcher/AutoLayoutAnimation;->setFrame(Lcom/miui/home/launcher/AutoLayoutAnimation$HostView;IIII)Z
 
     move-result p1
@@ -1194,20 +1194,20 @@
 .method public setMaMl(Lcom/miui/home/launcher/maml/MaMlHostView;)V
     .locals 1
 
-    .line 222
+    .line 226
     iput-object p1, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView;->mHostView:Lcom/miui/home/launcher/maml/MaMlHostView;
 
-    .line 225
+    .line 229
     iget-object v0, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView;->mWidgetContainer:Lcom/miui/home/launcher/LauncherWidgetContainerView;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/LauncherWidgetContainerView;->addView(Landroid/view/View;)V
 
-    .line 226
+    .line 230
     invoke-virtual {p0}, Lcom/miui/home/launcher/maml/MaMlWidgetView;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    const v0, 0x7f070191
+    const v0, 0x7f070194
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1223,7 +1223,7 @@
 .method public setSkipNextAutoLayoutAnimation(Z)V
     .locals 0
 
-    .line 358
+    .line 364
     iput-boolean p1, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView;->mSkipNextAutoLayoutAnimation:Z
 
     return-void
@@ -1232,27 +1232,27 @@
 .method public setTag(Ljava/lang/Object;)V
     .locals 1
 
-    .line 253
+    .line 259
     invoke-super {p0, p1}, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;->setTag(Ljava/lang/Object;)V
 
-    .line 254
+    .line 260
     iget-object v0, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView;->mHostView:Lcom/miui/home/launcher/maml/MaMlHostView;
 
     if-eqz v0, :cond_0
 
-    .line 255
+    .line 261
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/maml/MaMlHostView;->setTag(Ljava/lang/Object;)V
 
-    .line 257
+    .line 263
     :cond_0
     instance-of v0, p1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;
 
     if-eqz v0, :cond_1
 
-    .line 258
+    .line 264
     check-cast p1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;
 
-    .line 259
+    .line 265
     invoke-virtual {p1, p0}, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->setUpgradeListener(Lcom/miui/home/launcher/MIUIWidgetBasicInfo$UpgradeListener;)V
 
     :cond_1
@@ -1262,12 +1262,12 @@
 .method public setWidgetId(I)V
     .locals 1
 
-    .line 241
+    .line 247
     iget-object v0, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView;->mHostView:Lcom/miui/home/launcher/maml/MaMlHostView;
 
     if-eqz v0, :cond_0
 
-    .line 242
+    .line 248
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/maml/MaMlHostView;->setWidgetId(I)V
 
     :cond_0
@@ -1277,7 +1277,7 @@
 .method public superSetFrame(IIII)Z
     .locals 0
 
-    .line 368
+    .line 374
     invoke-super {p0, p1, p2, p3, p4}, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;->setFrame(IIII)Z
 
     move-result p1
@@ -1296,12 +1296,12 @@
 .method public updateColor(I)V
     .locals 1
 
-    .line 300
+    .line 306
     iget-object v0, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView;->mHostView:Lcom/miui/home/launcher/maml/MaMlHostView;
 
     if-eqz v0, :cond_0
 
-    .line 301
+    .line 307
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/maml/MaMlHostView;->updateColor(I)V
 
     :cond_0

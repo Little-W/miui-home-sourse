@@ -373,7 +373,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f070173
+    const v2, 0x7f070176
 
     .line 143
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimension(I)F
@@ -2010,7 +2010,7 @@
 .method protected onFinishInflate()V
     .locals 3
 
-    const v0, 0x7f0a013f
+    const v0, 0x7f0a0141
 
     .line 108
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ItemIcon;->findViewById(I)Landroid/view/View;
@@ -2021,7 +2021,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mIconContainer:Landroid/widget/FrameLayout;
 
-    const v0, 0x7f0a0146
+    const v0, 0x7f0a0148
 
     .line 109
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ItemIcon;->findViewById(I)Landroid/view/View;
@@ -2032,7 +2032,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mIconTile:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a0143
+    const v0, 0x7f0a0145
 
     .line 110
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ItemIcon;->findViewById(I)Landroid/view/View;
@@ -2043,7 +2043,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
-    const v0, 0x7f0a0144
+    const v0, 0x7f0a0146
 
     .line 111
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ItemIcon;->findViewById(I)Landroid/view/View;
@@ -2069,7 +2069,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
     :cond_0
-    const v0, 0x7f0a0147
+    const v0, 0x7f0a0149
 
     .line 114
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ItemIcon;->findViewById(I)Landroid/view/View;
@@ -2080,7 +2080,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mTitle:Lcom/miui/home/launcher/TitleTextView;
 
-    const v0, 0x7f0a0148
+    const v0, 0x7f0a014a
 
     .line 115
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ItemIcon;->findViewById(I)Landroid/view/View;

@@ -26,7 +26,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f10040a
+    const v1, 0x7f10040c
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Application;->getString(I)Ljava/lang/String;
 
@@ -39,7 +39,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f08058a
+    const v1, 0x7f080593
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Application;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

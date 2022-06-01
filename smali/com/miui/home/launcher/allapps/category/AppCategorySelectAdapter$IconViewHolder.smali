@@ -29,7 +29,7 @@
     .line 185
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$ViewHolder;-><init>(Landroid/view/View;)V
 
-    const v0, 0x7f0a0143
+    const v0, 0x7f0a0145
 
     .line 186
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -40,7 +40,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$IconViewHolder;->icon:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a0147
+    const v0, 0x7f0a0149
 
     .line 187
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -51,7 +51,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$IconViewHolder;->title:Landroid/widget/TextView;
 
-    const v0, 0x7f0a00f6
+    const v0, 0x7f0a00f7
 
     .line 188
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;

@@ -268,7 +268,7 @@
 
     check-cast p1, Landroid/view/ViewGroup;
 
-    invoke-virtual {v0, v1, p2, p1}, Lcom/miui/home/launcher/PairShortcutIcon;->bindGroupShortcutIcon(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/PairShortcutInfo;Landroid/view/ViewGroup;)V
+    invoke-virtual {v0, v1, p2, p1}, Lcom/miui/home/launcher/PairShortcutIcon;->bindGroupShortcutInfo(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/PairShortcutInfo;Landroid/view/ViewGroup;)V
 
     goto/16 :goto_1
 
@@ -328,7 +328,7 @@
     :cond_2
     iget-object p1, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListContentAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    const p2, 0x7f0800e8
+    const p2, 0x7f0800e9
 
     .line 182
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
@@ -525,7 +525,7 @@
 
     if-ne p2, v1, :cond_0
 
-    const v1, 0x7f0d0074
+    const v1, 0x7f0d0075
 
     .line 128
     iget-object v2, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListContentAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
@@ -706,14 +706,14 @@
 
     iget-object v1, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListContentAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    const v2, 0x7f0801b6
+    const v2, 0x7f0801bc
 
     goto :goto_0
 
     :cond_8
     iget-object v1, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListContentAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    const v2, 0x7f0801b5
+    const v2, 0x7f0801bb
 
     :goto_0
     invoke-static {v1, v2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
@@ -741,7 +741,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f100210
+    const v2, 0x7f100211
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

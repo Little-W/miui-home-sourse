@@ -104,7 +104,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f070118
+    const p2, 0x7f07011b
 
     .line 64
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -113,7 +113,7 @@
 
     iput p2, p0, Lcom/miui/home/launcher/view/DefaultRecyclerViewFastScroller;->mTrackWidth:I
 
-    const p2, 0x7f070117
+    const p2, 0x7f07011a
 
     .line 66
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

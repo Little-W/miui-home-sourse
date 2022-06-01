@@ -9,6 +9,7 @@
     <dimen name="editing_panel_height">136.0dip</dimen>
     <dimen name="folder_bottom_padding">90.54999dip</dimen>
     <dimen name="folder_content_padding_left">5.0dip</dimen>
+    <dimen name="folder_content_padding_right">0.0dip</dimen>
     <dimen name="folder_content_width">292.0dip</dimen>
     <dimen name="folder_preview_item_padding">0.30000007dip</dimen>
     <dimen name="folder_top_padding">76.369995dip</dimen>

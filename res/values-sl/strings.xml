@@ -760,9 +760,11 @@
     <string name="recents_title_security_scan">Varnostno skeniranje</string>
     <string name="recents_tv_small_window_text">Plavajoča okna</string>
     <string name="recents_worldcirculate_text">Spustite za izbiro</string>
+    <string name="recnets_relay_device_info">Od naprave %s</string>
     <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
     <string name="recnets_worldcirculate_display_computer_info">Aplikacija v uporabi na napravi %s.</string>
     <string name="recnets_worldcirculate_display_default_info">Tapnite za povrnitev.</string>
+    <string name="recnets_worldcirculate_display_default_info_pad">Tapnite za povrnitev.</string>
     <string name="recnets_worldcirculate_display_pad_info">Aplikacija v uporabi na napravi %s.</string>
     <string name="recommend_apk_size_and_desc">%1$dMB | %2$s</string>
     <string name="recommend_app">Priporočila aplikacij</string>
@@ -950,6 +952,7 @@
     <string name="uninstall_xspace_dialog_title_format">Želite odstraniti dvojne \"%s\"?</string>
     <string name="unknown_artist_name">Neznan izvajalec</string>
     <string name="unnamed_folder_name">Mapa</string>
+    <string name="upgrade_remove_small_window_in_recents">Uporabite stransko vrstico, da bi odprli aplikacije v plavajočih oknih</string>
     <string name="v7_preference_off">IZKLOPLJENO</string>
     <string name="v7_preference_on">VKLOPLJENO</string>
     <string name="wallpaper">Slika ozadja</string>

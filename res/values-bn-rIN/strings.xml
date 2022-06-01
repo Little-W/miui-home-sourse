@@ -728,9 +728,11 @@
     <string name="recents_title_security_scan">নিরাপত্তার স্ক্য়ান</string>
     <string name="recents_tv_small_window_text">ফ্লোটিং উইন্ডো</string>
     <string name="recents_worldcirculate_text">বেছে নিতে ছাড়ুন</string>
+    <string name="recnets_relay_device_info">%s থেকে</string>
     <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
     <string name="recnets_worldcirculate_display_computer_info">%s এ অ্যাপ চলছে।</string>
     <string name="recnets_worldcirculate_display_default_info">ফিরিয়ে আনতে এখানে ট্যাপ করুন।</string>
+    <string name="recnets_worldcirculate_display_default_info_pad">ফিরিয়ে আনতে এখানে ট্যাপ করুন।</string>
     <string name="recnets_worldcirculate_display_pad_info">%s এ অ্যাপ চলছে।</string>
     <string name="recommend_apk_size_and_desc">%1$dMB | %2$s</string>
     <string name="recommend_app">অ্যাপ প্রস্তাব</string>
@@ -915,6 +917,7 @@
     <string name="uninstall_xspace_dialog_title_format">\"%s\" ডুয়াল আনইনস্টল?</string>
     <string name="unknown_artist_name">অচেনা শিল্পী</string>
     <string name="unnamed_folder_name">ফোল্ডার</string>
+    <string name="upgrade_remove_small_window_in_recents">আপনি ফ্লোটিং উইন্ডোতে অ্যাপ খুলতে সাইডবার ব্যবহার করতে পারেন</string>
     <string name="wallpaper">ওয়ালপেপার</string>
     <string name="wallpaper_auto_change_title">স্ক্রিন লক করুন</string>
     <string name="wallpaper_failed_message">ওয়ালপেপার সেট করা যাবে না</string>

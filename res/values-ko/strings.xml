@@ -760,9 +760,11 @@
     <string name="recents_title_security_scan">보안 스캔</string>
     <string name="recents_tv_small_window_text">플로팅 창</string>
     <string name="recents_worldcirculate_text">놓아서 선택</string>
+    <string name="recnets_relay_device_info">출처: %s</string>
     <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
     <string name="recnets_worldcirculate_display_computer_info">이 앱은 %s에서 작동합니다.</string>
     <string name="recnets_worldcirculate_display_default_info">탭하여 여기로 돌아갑니다.</string>
+    <string name="recnets_worldcirculate_display_default_info_pad">탭하여 여기로 돌아갑니다.</string>
     <string name="recnets_worldcirculate_display_pad_info">이 앱은 %s에서 작동합니다.</string>
     <string name="recommend_apk_size_and_desc">%1$dMB | %2$s</string>
     <string name="recommend_app">앱 제안</string>
@@ -950,6 +952,7 @@
     <string name="uninstall_xspace_dialog_title_format">듀얼 \"%s\"을(를) 제거하시겠습니까?</string>
     <string name="unknown_artist_name">알 수 없는 아티스트</string>
     <string name="unnamed_folder_name">폴더</string>
+    <string name="upgrade_remove_small_window_in_recents">사이드바를 사용하여 플로팅 창에서 앱 실행 가능</string>
     <string name="v7_preference_off">사용 안함</string>
     <string name="v7_preference_on">사용</string>
     <string name="wallpaper">배경화면</string>

@@ -93,7 +93,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f1003fa
+    const v0, 0x7f1003fc
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -573,15 +573,6 @@
     const/4 p1, 0x1
 
     return p1
-.end method
-
-.method public hasStarted()Z
-    .locals 1
-
-    .line 68
-    iget-boolean v0, p0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->mHasStarted:Z
-
-    return v0
 .end method
 
 .method public needShowProgress()Z

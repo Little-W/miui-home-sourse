@@ -24,7 +24,7 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 598
+    .line 602
     invoke-direct {p0, p1}, Lcom/miui/maml/NotifierManager$BaseNotifier;-><init>(Landroid/content/Context;)V
 
     .line 572
@@ -34,7 +34,7 @@
 
     iput-object v0, p0, Lcom/miui/maml/NotifierManager$ConfigChangeNotifier;->mComponentCallback:Landroid/content/ComponentCallbacks2;
 
-    .line 599
+    .line 603
     new-instance v0, Landroid/content/res/Configuration;
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -75,14 +75,14 @@
 
     const/4 v0, 0x0
 
-    .line 627
+    .line 631
     invoke-virtual {p0, v0, v0, p1}, Lcom/miui/maml/NotifierManager$ConfigChangeNotifier;->onNotify(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/Object;)V
 
     const-string p1, "NotifierManager"
 
     const-string v0, "maml config changed"
 
-    .line 628
+    .line 632
     invoke-static {p1, v0}, Lcom/miui/maml/util/MamlLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -93,7 +93,7 @@
 .method protected onListenerAdded(Lcom/miui/maml/NotifierManager$OnNotifyListener;)V
     .locals 2
 
-    .line 623
+    .line 627
     iget-object v0, p0, Lcom/miui/maml/NotifierManager$ConfigChangeNotifier;->mConfiguration:Landroid/content/res/Configuration;
 
     const/4 v1, 0x0
@@ -106,7 +106,7 @@
 .method protected onRegister()V
     .locals 2
 
-    .line 605
+    .line 609
     :try_start_0
     iget-object v0, p0, Lcom/miui/maml/NotifierManager$ConfigChangeNotifier;->mContext:Landroid/content/Context;
 
@@ -121,10 +121,10 @@
     :catch_0
     move-exception v0
 
-    .line 607
+    .line 611
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 609
+    .line 613
     :goto_0
     iget-object v0, p0, Lcom/miui/maml/NotifierManager$ConfigChangeNotifier;->mConfiguration:Landroid/content/res/Configuration;
 
@@ -136,7 +136,7 @@
 .method protected onUnregister()V
     .locals 2
 
-    .line 615
+    .line 619
     :try_start_0
     iget-object v0, p0, Lcom/miui/maml/NotifierManager$ConfigChangeNotifier;->mContext:Landroid/content/Context;
 
@@ -151,7 +151,7 @@
     :catch_0
     move-exception v0
 
-    .line 617
+    .line 621
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0

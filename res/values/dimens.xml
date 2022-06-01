@@ -146,6 +146,9 @@
     <dimen name="cardview_default_radius">2.0dip</dimen>
     <dimen name="clean_toast_bottom_margin">47.0dip</dimen>
     <dimen name="clear_container_padding_bottom">22.0dip</dimen>
+    <dimen name="common_global_search_bar_g_padding">16.0dip</dimen>
+    <dimen name="common_global_search_corner">36.0dip</dimen>
+    <dimen name="common_global_search_height">44.0dip</dimen>
     <dimen name="common_navigator_height">39.0dip</dimen>
     <dimen name="compat_button_inset_horizontal_material">4.0dip</dimen>
     <dimen name="compat_button_inset_vertical_material">6.0dip</dimen>
@@ -276,7 +279,7 @@
     <dimen name="fastscroll_letter_side_padding_top">10.089996dip</dimen>
     <dimen name="fastscroll_margin">0.0dip</dimen>
     <dimen name="fastscroll_minimum_range">50.0dip</dimen>
-    <dimen name="fastscroll_popup_margin">24.0dip</dimen>
+    <dimen name="fastscroll_popup_margin">20.0dip</dimen>
     <dimen name="fastscroll_popup_size">64.0dip</dimen>
     <dimen name="fastscroll_popup_text_size">33.0sp</dimen>
     <dimen name="fastscroll_thumb_height">64.0dip</dimen>
@@ -980,10 +983,11 @@
     <dimen name="recents_task_view_header_height">40.0dip</dimen>
     <dimen name="recents_task_view_header_height_tablet_land">64.0dip</dimen>
     <dimen name="recents_task_view_header_title_margin_end">25.0dip</dimen>
-    <dimen name="recents_task_view_header_title_text_size">0.0sp</dimen>
+    <dimen name="recents_task_view_header_title_text_size">13.0sp</dimen>
+    <item type="dimen" name="recents_task_view_padding_ratio">0.0</item>
     <dimen name="recents_task_view_privacy_protect_icon_marginTop">20.0dip</dimen>
-    <dimen name="recents_task_view_rounded_corners_radius_max">110.0dip</dimen>
-    <dimen name="recents_task_view_rounded_corners_radius_min">30.0dip</dimen>
+    <dimen name="recents_task_view_rounded_corners_radius_max">25.0dip</dimen>
+    <dimen name="recents_task_view_rounded_corners_radius_min">7.0dip</dimen>
     <dimen name="recents_task_view_sub_header_app_info_spacing">3.0dip</dimen>
     <dimen name="recents_tip_margin_top">20.0dip</dimen>
     <dimen name="recents_tv_small_window_text_size">13.099976sp</dimen>

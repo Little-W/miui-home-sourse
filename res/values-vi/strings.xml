@@ -760,9 +760,11 @@
     <string name="recents_title_security_scan">Quét bảo mật</string>
     <string name="recents_tv_small_window_text">Cửa sổ nổi</string>
     <string name="recents_worldcirculate_text">Thả để chọn</string>
+    <string name="recnets_relay_device_info">Từ %s</string>
     <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
     <string name="recnets_worldcirculate_display_computer_info">Ứng dụng đang hoạt động trên %s.</string>
     <string name="recnets_worldcirculate_display_default_info">Chạm để quay lại đây.</string>
+    <string name="recnets_worldcirculate_display_default_info_pad">Chạm để quay lại đây.</string>
     <string name="recnets_worldcirculate_display_pad_info">Ứng dụng đang hoạt động trên %s.</string>
     <string name="recommend_apk_size_and_desc">%1$dMB | %2$s</string>
     <string name="recommend_app">Đề xuất ứng dụng</string>
@@ -950,6 +952,7 @@
     <string name="uninstall_xspace_dialog_title_format">Gỡ cài đặt ứng dụng kép \"%s\"?</string>
     <string name="unknown_artist_name">Nghệ sĩ không xác định</string>
     <string name="unnamed_folder_name">Thư mục</string>
+    <string name="upgrade_remove_small_window_in_recents">Bạn có thể sử dụng thanh bên để mở ứng dụng trong cửa sổ nổi</string>
     <string name="v7_preference_off">TẮT</string>
     <string name="v7_preference_on">BẬT</string>
     <string name="wallpaper">Hình nền</string>

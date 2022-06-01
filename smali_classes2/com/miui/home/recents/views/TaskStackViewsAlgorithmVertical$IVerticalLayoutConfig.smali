@@ -18,9 +18,6 @@
 .method public abstract getBottomRatio()F
 .end method
 
-.method public abstract getPaddingRatio()F
-.end method
-
 .method public abstract getTopRatio(ZI)F
 .end method
 

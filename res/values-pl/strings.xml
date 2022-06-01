@@ -760,9 +760,11 @@
     <string name="recents_title_security_scan">Skanowanie bezpieczeństwa</string>
     <string name="recents_tv_small_window_text">Pływające okna</string>
     <string name="recents_worldcirculate_text">Zwolnij, aby wybrać</string>
+    <string name="recnets_relay_device_info">Od %s</string>
     <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
     <string name="recnets_worldcirculate_display_computer_info">Aplikacja działa na %s.</string>
     <string name="recnets_worldcirculate_display_default_info">Dotknij, aby przywrócić.</string>
+    <string name="recnets_worldcirculate_display_default_info_pad">Dotknij, aby przywrócić.</string>
     <string name="recnets_worldcirculate_display_pad_info">Aplikacja działa na %s.</string>
     <string name="recommend_apk_size_and_desc">%1$dMB | %2$s</string>
     <string name="recommend_app">Polecane aplikacje</string>
@@ -950,6 +952,7 @@
     <string name="uninstall_xspace_dialog_title_format">Odinstalować sklonowaną \"%s\"?</string>
     <string name="unknown_artist_name">Nieznany wykonawca</string>
     <string name="unnamed_folder_name">Folder</string>
+    <string name="upgrade_remove_small_window_in_recents">Możesz używać panelu bocznego do otwierania aplikacji w pływających oknach</string>
     <string name="v7_preference_off">WYŁ.</string>
     <string name="v7_preference_on">WŁ.</string>
     <string name="wallpaper">Tapeta</string>

@@ -728,9 +728,11 @@
     <string name="recents_title_security_scan">ಭದ್ರತೆ ಸ್ಕ್ಯಾನ್‌</string>
     <string name="recents_tv_small_window_text">ಫ್ಲೋಟಿಂಗ್‌ ವಿಂಡೋ</string>
     <string name="recents_worldcirculate_text">ಆಯ್ಕೆ ಮಾಡಲು ಸಡಿಲಗೊಳಿಸಿ</string>
+    <string name="recnets_relay_device_info">%s ಮೂಲಕ</string>
     <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
     <string name="recnets_worldcirculate_display_computer_info">ಆ್ಯಪ್‌ ಈಗ %s ನಲ್ಲಿ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತಿದೆ.</string>
     <string name="recnets_worldcirculate_display_default_info">ಅದನ್ನು ಇಲ್ಲಿಗೆ ತರಲು ಟ್ಯಾಪ್‌ ಮಾಡಿ.</string>
+    <string name="recnets_worldcirculate_display_default_info_pad">ಅದನ್ನು ಇಲ್ಲಿಗೆ ತರಲು ಟ್ಯಾಪ್‌ ಮಾಡಿ.</string>
     <string name="recnets_worldcirculate_display_pad_info">ಆ್ಯಪ್‌ ಈಗ %s ನಲ್ಲಿ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತಿದೆ.</string>
     <string name="recommend_apk_size_and_desc">%1$dMB | %2$s</string>
     <string name="recommend_app">ಆ್ಯಪ್‌ ಸಲಹೆಗಳು</string>
@@ -915,6 +917,7 @@
     <string name="uninstall_xspace_dialog_title_format">ಡ್ಯುಯಲ್ \"%s\" ಅನ್ನು ಅನ್‌ಇನ್‌ಸ್ಟಾಲ್‌ ಮಾಡುವುದೇ?</string>
     <string name="unknown_artist_name">ಅಪರಿಚಿತ ಕಲಾವಿದ</string>
     <string name="unnamed_folder_name">ಫೋಲ್ಡರ್</string>
+    <string name="upgrade_remove_small_window_in_recents">ಫ್ಲೋಟಿಂಗ್‌ ವಿಂಡೋಗಳಲ್ಲಿ ಆ್ಯಪ್‌ಗಳನ್ನು ತೆರೆಯಲು ನೀವು ಸೈಡ್‌ಬಾರ್‌ ಬಳಸಬಹುದು</string>
     <string name="wallpaper">ವಾಲ್‌ಪೇಪರ್</string>
     <string name="wallpaper_auto_change_title">ಲಾಕ್‌ ಸ್ಕ್ರೀನ್‌</string>
     <string name="wallpaper_failed_message">ವಾಲ್‌ಪೇಪರ್‌‌ ಹೊಂದಿಸಲಾಗುತ್ತಿಲ್ಲ</string>

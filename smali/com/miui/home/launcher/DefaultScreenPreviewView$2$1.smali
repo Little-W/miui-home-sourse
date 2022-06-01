@@ -36,7 +36,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/DefaultScreenPreviewView$2;I)V
     .locals 0
 
-    .line 159
+    .line 163
     iput-object p1, p0, Lcom/miui/home/launcher/DefaultScreenPreviewView$2$1;->this$1:Lcom/miui/home/launcher/DefaultScreenPreviewView$2;
 
     iput p2, p0, Lcom/miui/home/launcher/DefaultScreenPreviewView$2$1;->val$screenIndex:I
@@ -51,7 +51,7 @@
 .method public bridge synthetic get()Ljava/lang/Object;
     .locals 1
 
-    .line 159
+    .line 163
     invoke-virtual {p0}, Lcom/miui/home/launcher/DefaultScreenPreviewView$2$1;->get()Ljava/lang/String;
 
     move-result-object v0
@@ -62,7 +62,7 @@
 .method public get()Ljava/lang/String;
     .locals 4
 
-    .line 162
+    .line 166
     iget-object v0, p0, Lcom/miui/home/launcher/DefaultScreenPreviewView$2$1;->this$1:Lcom/miui/home/launcher/DefaultScreenPreviewView$2;
 
     iget-object v0, v0, Lcom/miui/home/launcher/DefaultScreenPreviewView$2;->this$0:Lcom/miui/home/launcher/DefaultScreenPreviewView;

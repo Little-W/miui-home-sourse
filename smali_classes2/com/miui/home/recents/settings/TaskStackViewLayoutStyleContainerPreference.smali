@@ -31,7 +31,7 @@
     .line 29
     invoke-direct {p0, p1, p2}, Landroidx/preference/Preference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    const p1, 0x7f0d0136
+    const p1, 0x7f0d0137
 
     .line 30
     invoke-virtual {p0, p1}, Lcom/miui/home/recents/settings/TaskStackViewLayoutStyleContainerPreference;->setLayoutResource(I)V
@@ -146,7 +146,7 @@
     .line 38
     iget-object p1, p0, Lcom/miui/home/recents/settings/TaskStackViewLayoutStyleContainerPreference;->mVisualCheckGroup:Lcom/miui/home/recents/settings/MonospacedChildViewVisualCheckGroup;
 
-    const v0, 0x7f0a02da
+    const v0, 0x7f0a02dc
 
     invoke-virtual {p1, v0}, Lcom/miui/home/recents/settings/MonospacedChildViewVisualCheckGroup;->findViewById(I)Landroid/view/View;
 
@@ -159,7 +159,7 @@
     .line 39
     iget-object p1, p0, Lcom/miui/home/recents/settings/TaskStackViewLayoutStyleContainerPreference;->mVisualCheckGroup:Lcom/miui/home/recents/settings/MonospacedChildViewVisualCheckGroup;
 
-    const v0, 0x7f0a0138
+    const v0, 0x7f0a013a
 
     invoke-virtual {p1, v0}, Lcom/miui/home/recents/settings/MonospacedChildViewVisualCheckGroup;->findViewById(I)Landroid/view/View;
 
@@ -178,11 +178,11 @@
 .method public onCheckedChanged(Lmiuix/visual/check/VisualCheckGroup;I)V
     .locals 2
 
-    const p1, 0x7f0a0138
+    const p1, 0x7f0a013a
 
     if-eq p2, p1, :cond_1
 
-    const p1, 0x7f0a02da
+    const p1, 0x7f0a02dc
 
     if-eq p2, p1, :cond_0
 

@@ -33,27 +33,27 @@
 .method private final quitEditMode()V
     .locals 4
 
-    .line 45
+    .line 41
     iget-boolean v0, p0, Lcom/miui/home/launcher/fold/FoldQuitEditModeInterceptor;->mIsInterceptQuitEditMode:Z
 
     if-eqz v0, :cond_0
 
-    .line 46
+    .line 42
     iget-object v0, p0, Lcom/miui/home/launcher/fold/FoldQuitEditModeInterceptor;->launcher:Lcom/miui/home/launcher/Launcher;
 
     const/4 v1, 0x7
 
     const/4 v2, 0x0
 
-    .line 47
+    .line 43
     iget-object v3, p0, Lcom/miui/home/launcher/fold/FoldQuitEditModeInterceptor;->mEditStateChangeReason:Lcom/miui/home/launcher/EditStateChangeReason;
 
-    .line 46
+    .line 42
     invoke-virtual {v0, v1, v2, v3}, Lcom/miui/home/launcher/Launcher;->setEditingState(ILjava/lang/Runnable;Lcom/miui/home/launcher/EditStateChangeReason;)V
 
     const/4 v0, 0x0
 
-    .line 48
+    .line 44
     iput-boolean v0, p0, Lcom/miui/home/launcher/fold/FoldQuitEditModeInterceptor;->mIsInterceptQuitEditMode:Z
 
     :cond_0
@@ -62,53 +62,6 @@
 
 
 # virtual methods
-.method public final isInLastScreenIndex()Z
-    .locals 3
-
-    .line 25
-    iget-object v0, p0, Lcom/miui/home/launcher/fold/FoldQuitEditModeInterceptor;->launcher:Lcom/miui/home/launcher/Launcher;
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
-
-    move-result-object v0
-
-    const-string v1, "launcher.workspace"
-
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Workspace;->getCurrentScreenIndex()I
-
-    move-result v0
-
-    iget-object v1, p0, Lcom/miui/home/launcher/fold/FoldQuitEditModeInterceptor;->launcher:Lcom/miui/home/launcher/Launcher;
-
-    invoke-virtual {v1}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
-
-    move-result-object v1
-
-    const-string v2, "launcher.workspace"
-
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v1}, Lcom/miui/home/launcher/Workspace;->getScreenCount()I
-
-    move-result v1
-
-    add-int/lit8 v1, v1, -0x2
-
-    if-ne v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    return v0
-.end method
-
 .method public final isInterceptQuitEditMode(ILcom/miui/home/launcher/EditStateChangeReason;)Z
     .locals 0
 
@@ -153,8 +106,17 @@
 
     if-eqz p1, :cond_0
 
-    .line 21
-    invoke-virtual {p0}, Lcom/miui/home/launcher/fold/FoldQuitEditModeInterceptor;->isInLastScreenIndex()Z
+    iget-object p1, p0, Lcom/miui/home/launcher/fold/FoldQuitEditModeInterceptor;->launcher:Lcom/miui/home/launcher/Launcher;
+
+    invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
+
+    move-result-object p1
+
+    const-string p2, "launcher.workspace"
+
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {p1}, Lcom/miui/home/launcher/Workspace;->isInLastScreenIndex()Z
 
     move-result p1
 
@@ -174,7 +136,7 @@
 .method public final isLastCellLayoutEmpty()Z
     .locals 3
 
-    .line 29
+    .line 25
     iget-object v0, p0, Lcom/miui/home/launcher/fold/FoldQuitEditModeInterceptor;->launcher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
@@ -205,7 +167,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 30
+    .line 26
     invoke-virtual {v0}, Lcom/miui/home/launcher/CellLayout;->isEmpty()Z
 
     move-result v0
@@ -224,7 +186,7 @@
 .method public onScrollAnimEnd()V
     .locals 0
 
-    .line 41
+    .line 37
     invoke-direct {p0}, Lcom/miui/home/launcher/fold/FoldQuitEditModeInterceptor;->quitEditMode()V
 
     return-void
@@ -233,17 +195,17 @@
 .method public final startScrollToNextScreen()V
     .locals 4
 
-    .line 34
+    .line 30
     iget-boolean v0, p0, Lcom/miui/home/launcher/fold/FoldQuitEditModeInterceptor;->mIsInterceptQuitEditMode:Z
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x1
 
-    .line 35
+    .line 31
     iput-boolean v0, p0, Lcom/miui/home/launcher/fold/FoldQuitEditModeInterceptor;->mIsInterceptQuitEditMode:Z
 
-    .line 36
+    .line 32
     iget-object v1, p0, Lcom/miui/home/launcher/fold/FoldQuitEditModeInterceptor;->launcher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;

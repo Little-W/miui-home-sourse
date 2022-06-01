@@ -685,7 +685,7 @@
     .line 130
     iget-object v1, p0, Lcom/miui/home/launcher/UninstallDialog;->mButtons:Landroid/view/View;
 
-    const v2, 0x7f0a0089
+    const v2, 0x7f0a008a
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -695,12 +695,12 @@
 
     if-eqz v0, :cond_0
 
-    const v2, 0x7f100458
+    const v2, 0x7f10045a
 
     goto :goto_0
 
     :cond_0
-    const v2, 0x7f10040a
+    const v2, 0x7f10040c
 
     :goto_0
     invoke-virtual {v1, v2}, Landroid/widget/Button;->setText(I)V
@@ -778,11 +778,11 @@
     move-result-object v4
 
     :goto_1
-    const v5, 0x7f10045d
+    const v5, 0x7f10045f
 
-    const v6, 0x7f100399
+    const v6, 0x7f10039b
 
-    const v7, 0x7f100459
+    const v7, 0x7f10045b
 
     const/4 v8, 0x1
 
@@ -894,7 +894,7 @@
 
     iget-object v1, p0, Lcom/miui/home/launcher/UninstallDialog;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f10039a
+    const v3, 0x7f10039c
 
     .line 160
     invoke-virtual {v1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -925,7 +925,7 @@
 
     iget-object v3, p0, Lcom/miui/home/launcher/UninstallDialog;->mContext:Landroid/content/Context;
 
-    const v6, 0x7f10045a
+    const v6, 0x7f10045c
 
     .line 165
     invoke-virtual {v3, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -985,7 +985,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f10045f
+    const v3, 0x7f100461
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1005,7 +1005,7 @@
     .line 174
     iget-object v0, p0, Lcom/miui/home/launcher/UninstallDialog;->mDescription:Landroid/widget/TextView;
 
-    const v1, 0x7f10045e
+    const v1, 0x7f100460
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -1357,7 +1357,7 @@
     .line 70
     invoke-super {p0}, Lcom/miui/launcher/views/LauncherFrameLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a02a4
+    const v0, 0x7f0a02a6
 
     .line 71
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/UninstallDialog;->findViewById(I)Landroid/view/View;
@@ -1368,7 +1368,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/UninstallDialog;->mTitle:Landroid/widget/TextView;
 
-    const v0, 0x7f0a00cf
+    const v0, 0x7f0a00d0
 
     .line 72
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/UninstallDialog;->findViewById(I)Landroid/view/View;
@@ -1379,7 +1379,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/UninstallDialog;->mDescription:Landroid/widget/TextView;
 
-    const v0, 0x7f0a00cb
+    const v0, 0x7f0a00cc
 
     .line 73
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/UninstallDialog;->findViewById(I)Landroid/view/View;
@@ -1409,7 +1409,7 @@
 
     iput-object p0, v0, Lcom/miui/home/launcher/UninstallDialog$DeleteIconContainer;->mUninstallDialog:Lcom/miui/home/launcher/UninstallDialog;
 
-    const v0, 0x7f0a019b
+    const v0, 0x7f0a019d
 
     .line 77
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/UninstallDialog;->findViewById(I)Landroid/view/View;
@@ -1418,7 +1418,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/UninstallDialog;->mMessages:Landroid/view/View;
 
-    const v0, 0x7f0a0091
+    const v0, 0x7f0a0092
 
     .line 78
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/UninstallDialog;->findViewById(I)Landroid/view/View;
@@ -1474,12 +1474,12 @@
 
     if-eqz v1, :cond_0
 
-    const v1, 0x7f070478
+    const v1, 0x7f07047c
 
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f070477
+    const v1, 0x7f07047b
 
     .line 95
     :goto_0

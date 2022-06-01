@@ -38,7 +38,7 @@
 
     const/4 v0, -0x1
 
-    .line 2479
+    .line 2507
     invoke-direct {p0, v0, v0}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(II)V
 
     return-void
@@ -47,7 +47,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
-    .line 2471
+    .line 2499
     invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -56,7 +56,7 @@
 .method public constructor <init>(Landroid/view/ViewGroup$LayoutParams;)V
     .locals 0
 
-    .line 2475
+    .line 2503
     invoke-direct {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
 
     return-void
@@ -81,7 +81,7 @@
 
     add-int/2addr v3, v4
 
-    .line 2484
+    .line 2512
     iget v4, v0, Lcom/miui/home/launcher/CellLayout$LayoutParams;->leftMargin:I
 
     sub-int/2addr v3, v4
@@ -100,7 +100,7 @@
 
     add-int/2addr v3, v4
 
-    .line 2486
+    .line 2514
     iget v4, v0, Lcom/miui/home/launcher/CellLayout$LayoutParams;->topMargin:I
 
     sub-int/2addr v3, v4
@@ -115,7 +115,7 @@
 
     move/from16 v4, p9
 
-    .line 2488
+    .line 2516
     invoke-static {p1, v4, p5, v2}, Lcom/miui/home/launcher/CellLayout;->access$1700(IIII)I
 
     move-result v1
@@ -134,7 +134,7 @@
 
     move/from16 v9, p12
 
-    .line 2489
+    .line 2517
     invoke-static/range {v4 .. v9}, Lcom/miui/home/launcher/CellLayout;->access$1800(IIIIII)I
 
     move-result v1

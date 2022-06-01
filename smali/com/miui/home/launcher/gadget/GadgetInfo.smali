@@ -1357,7 +1357,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f07048a
+    const v3, 0x7f07048e
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1554,6 +1554,33 @@
 
     :goto_0
     return-object p1
+.end method
+
+.method public getWidgetCategoryId()I
+    .locals 2
+
+    .line 537
+    iget v0, p0, Lcom/miui/home/launcher/gadget/GadgetInfo;->mCategoryId:I
+
+    const/4 v1, -0x1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-virtual {p0}, Lcom/miui/home/launcher/gadget/GadgetInfo;->isMtzGadget()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/16 v0, 0x3e8
+
+    goto :goto_0
+
+    :cond_0
+    iget v0, p0, Lcom/miui/home/launcher/gadget/GadgetInfo;->mCategoryId:I
+
+    :goto_0
+    return v0
 .end method
 
 .method public is1x1Gadget(II)Z

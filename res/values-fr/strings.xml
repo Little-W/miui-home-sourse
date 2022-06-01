@@ -760,9 +760,11 @@
     <string name="recents_title_security_scan">Analyse de sécurité</string>
     <string name="recents_tv_small_window_text">Fenêtres flottantes</string>
     <string name="recents_worldcirculate_text">Relâcher pour sélectionner</string>
+    <string name="recnets_relay_device_info">Depuis %s</string>
     <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
     <string name="recnets_worldcirculate_display_computer_info">Cette application fonctionne sur %s.</string>
     <string name="recnets_worldcirculate_display_default_info">Appuyer pour revenir ici.</string>
+    <string name="recnets_worldcirculate_display_default_info_pad">Appuyez pour le ramener ici.</string>
     <string name="recnets_worldcirculate_display_pad_info">Cette application fonctionne sur %s.</string>
     <string name="recommend_apk_size_and_desc">%1$d Mo | %2$s</string>
     <string name="recommend_app">"Suggestions d'applications"</string>
@@ -950,6 +952,7 @@
     <string name="uninstall_xspace_dialog_title_format">"Désinstaller l'application clônée \"%s\" ?"</string>
     <string name="unknown_artist_name">Artiste Inconnu</string>
     <string name="unnamed_folder_name">Dossier</string>
+    <string name="upgrade_remove_small_window_in_recents">Vous pouvez utiliser la barre latérale pour ouvrir des applications dans des fenêtres flottantes</string>
     <string name="v7_preference_off">DÉSACTIVÉ</string>
     <string name="v7_preference_on">ACTIVÉ</string>
     <string name="wallpaper">"Fond d'écran"</string>

@@ -760,9 +760,11 @@
     <string name="recents_title_security_scan">Kontrola zabezpečení</string>
     <string name="recents_tv_small_window_text">Plovoucí okna</string>
     <string name="recents_worldcirculate_text">Uvolněte pro výběr</string>
+    <string name="recnets_relay_device_info">Z %s</string>
     <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
     <string name="recnets_worldcirculate_display_computer_info">Tato aplikace je spuštěna na %s.</string>
     <string name="recnets_worldcirculate_display_default_info">Klepněte pro její přenesení sem.</string>
+    <string name="recnets_worldcirculate_display_default_info_pad">Klepněte pro její přenesení sem.</string>
     <string name="recnets_worldcirculate_display_pad_info">Tato aplikace je spuštěna na %s.</string>
     <string name="recommend_apk_size_and_desc">%1$d MB | %2$s</string>
     <string name="recommend_app">Doporučené aplikace</string>
@@ -950,6 +952,7 @@
     <string name="uninstall_xspace_dialog_title_format">Odinstalovat duální \"%s\"?</string>
     <string name="unknown_artist_name">Neznámý interpret</string>
     <string name="unnamed_folder_name">Složka</string>
+    <string name="upgrade_remove_small_window_in_recents">Pomocí postranní lišty můžete aplikace otevřít v plovoucích oknech</string>
     <string name="v7_preference_off">Vypnutí</string>
     <string name="v7_preference_on">ZAP</string>
     <string name="wallpaper">Tapeta</string>

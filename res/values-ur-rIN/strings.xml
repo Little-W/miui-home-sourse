@@ -728,9 +728,11 @@
     <string name="recents_title_security_scan">سیکورٹی اسکین</string>
     <string name="recents_tv_small_window_text">فلوٹنگ ونڈو</string>
     <string name="recents_worldcirculate_text">منتخب کرنے کے لیے چھوڑیں</string>
+    <string name="recnets_relay_device_info">%s سے</string>
     <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
     <string name="recnets_worldcirculate_display_computer_info">یہ ایپ %s پر کام کر رہا ہے۔</string>
     <string name="recnets_worldcirculate_display_default_info">اسے یہاں واپس لانے کے لیے ٹیپ کریں۔</string>
+    <string name="recnets_worldcirculate_display_default_info_pad">اسے یہاں واپس لانے کے لیے ٹیپ کریں۔</string>
     <string name="recnets_worldcirculate_display_pad_info">یہ ایپ %s پر کام کر رہا ہے۔</string>
     <string name="recommend_apk_size_and_desc">%1$dMB | %2$s</string>
     <string name="recommend_app">ایپ تجاویز</string>
@@ -915,6 +917,7 @@
     <string name="uninstall_xspace_dialog_title_format">ڈیول \"%s\" کو ان انسٹال کریں؟</string>
     <string name="unknown_artist_name">نامعلوم فنکار</string>
     <string name="unnamed_folder_name">فولڈر</string>
+    <string name="upgrade_remove_small_window_in_recents">آپ فلوٹنگ ونڈو میں ایپس کھولنے کے لیے سائڈ بار کا استعمال کر سکتے ہیں۔</string>
     <string name="wallpaper">وال پیپر</string>
     <string name="wallpaper_auto_change_title">لاک اسکرین</string>
     <string name="wallpaper_failed_message">وال پیپر سیٹ نہیں کر سکتا</string>

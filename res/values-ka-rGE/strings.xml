@@ -728,9 +728,11 @@
     <string name="recents_title_security_scan">უსაფრთხოების სკანირება</string>
     <string name="recents_tv_small_window_text">მცურავი ფანჯრები</string>
     <string name="recents_worldcirculate_text">გაუშვით მოსანიშნად</string>
+    <string name="recnets_relay_device_info">%s-დან</string>
     <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
     <string name="recnets_worldcirculate_display_computer_info">აპლიკაცია მუშაობს %s.</string>
     <string name="recnets_worldcirculate_display_default_info">შეეხეთ და დაბრუნდით უკან.</string>
+    <string name="recnets_worldcirculate_display_default_info_pad">შეეხეთ და დაბრუნდით უკან.</string>
     <string name="recnets_worldcirculate_display_pad_info">აპლიკაცია მუშაობს %s.</string>
     <string name="recommend_apk_size_and_desc">%1$d მბ | %2$s</string>
     <string name="recommend_app">აპლიკაციის შემოთავაზებები</string>
@@ -915,6 +917,7 @@
     <string name="uninstall_xspace_dialog_title_format">წავშალო კლონები \"%s\"?</string>
     <string name="unknown_artist_name">უცნობი არტისტი</string>
     <string name="unnamed_folder_name">ფოლდერი</string>
+    <string name="upgrade_remove_small_window_in_recents">შეგიძლიათ გამოიყენოთ გვერდითი ზოლი მცურავ ფანჯრებში აპლიკაციების გასახსნელად</string>
     <string name="wallpaper">ფონი</string>
     <string name="wallpaper_auto_change_title">დაბლოკილი ეკრანი</string>
     <string name="wallpaper_failed_message">ვერ ვიყენებ ფონს</string>

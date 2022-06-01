@@ -760,9 +760,11 @@
     <string name="recents_title_security_scan">Beveiligingsscan</string>
     <string name="recents_tv_small_window_text">Zwevende vensters</string>
     <string name="recents_worldcirculate_text">Laat los om te selecteren</string>
+    <string name="recnets_relay_device_info">Van %s</string>
     <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
     <string name="recnets_worldcirculate_display_computer_info">De app werkt op %s.</string>
     <string name="recnets_worldcirculate_display_default_info">Tik om het hier terug te brengen.</string>
+    <string name="recnets_worldcirculate_display_default_info_pad">Tik om het hier terug te brengen.</string>
     <string name="recnets_worldcirculate_display_pad_info">De app werkt op %s.</string>
     <string name="recommend_apk_size_and_desc">%1$dMB | %2$s</string>
     <string name="recommend_app">App-suggesties</string>
@@ -950,6 +952,7 @@
     <string name="uninstall_xspace_dialog_title_format">Dubbele \"%s\" verwijderen?</string>
     <string name="unknown_artist_name">Artiest onbekend</string>
     <string name="unnamed_folder_name">Map</string>
+    <string name="upgrade_remove_small_window_in_recents">U kunt de zijbalk gebruiken om apps in zwevende vensters te openen</string>
     <string name="v7_preference_off">UIT</string>
     <string name="v7_preference_on">AAN</string>
     <string name="wallpaper">Achtergrond</string>

@@ -206,7 +206,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f0700fd
+    const p2, 0x7f070100
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -492,7 +492,7 @@
     .line 164
     iget-object v3, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mInflater:Landroid/view/LayoutInflater;
 
-    const v4, 0x7f0d0145
+    const v4, 0x7f0d0146
 
     invoke-virtual {v3, v4, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -510,7 +510,7 @@
     .line 166
     invoke-virtual {v0, v3}, Landroid/view/View;->setImportantForAccessibility(I)V
 
-    const v3, 0x7f0a029f
+    const v3, 0x7f0a02a1
 
     .line 168
     invoke-virtual {v0, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -1072,7 +1072,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0700ff
+    const v1, 0x7f070102
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1085,7 +1085,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0700fe
+    const v1, 0x7f070101
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

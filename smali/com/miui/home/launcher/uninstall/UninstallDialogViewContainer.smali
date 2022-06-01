@@ -159,9 +159,9 @@
 
     move-result v0
 
-    const v1, 0x7f10045d
+    const v1, 0x7f10045f
 
-    const v2, 0x7f100459
+    const v2, 0x7f10045b
 
     const/4 v3, 0x0
 
@@ -244,7 +244,7 @@
     .line 79
     iget-object v0, p0, Lcom/miui/home/launcher/uninstall/UninstallDialogViewContainer;->mDescription:Landroid/widget/TextView;
 
-    const v1, 0x7f100399
+    const v1, 0x7f10039b
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -369,7 +369,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f10045f
+    const v2, 0x7f100461
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -389,7 +389,7 @@
     .line 102
     iget-object v0, p0, Lcom/miui/home/launcher/uninstall/UninstallDialogViewContainer;->mDescription:Landroid/widget/TextView;
 
-    const v1, 0x7f10045e
+    const v1, 0x7f100460
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -401,7 +401,7 @@
 
     iget-object v7, p0, Lcom/miui/home/launcher/uninstall/UninstallDialogViewContainer;->mContext:Landroid/content/Context;
 
-    const v8, 0x7f10045a
+    const v8, 0x7f10045c
 
     .line 105
     invoke-virtual {v7, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -521,7 +521,7 @@
     .line 42
     invoke-super {p0}, Landroid/widget/LinearLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a02a4
+    const v0, 0x7f0a02a6
 
     .line 43
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/uninstall/UninstallDialogViewContainer;->findViewById(I)Landroid/view/View;
@@ -532,7 +532,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/uninstall/UninstallDialogViewContainer;->mTitle:Landroid/widget/TextView;
 
-    const v0, 0x7f0a00cf
+    const v0, 0x7f0a00d0
 
     .line 44
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/uninstall/UninstallDialogViewContainer;->findViewById(I)Landroid/view/View;
@@ -543,7 +543,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/uninstall/UninstallDialogViewContainer;->mDescription:Landroid/widget/TextView;
 
-    const v0, 0x7f0a02d2
+    const v0, 0x7f0a02d4
 
     .line 45
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/uninstall/UninstallDialogViewContainer;->findViewById(I)Landroid/view/View;

@@ -728,9 +728,11 @@
     <string name="recents_title_security_scan">സുരക്ഷ സ്കാൻ</string>
     <string name="recents_tv_small_window_text">ഫ്ലോട്ടിംഗ് വിൻഡോകൾ</string>
     <string name="recents_worldcirculate_text">തിരഞ്ഞെടുക്കാൻ റിലീസ് ചെയ്യുക</string>
+    <string name="recnets_relay_device_info">%s-ൽ നിന്ന്</string>
     <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
     <string name="recnets_worldcirculate_display_computer_info">ആപ്പ് %s-യിൽ പ്രവർത്തിക്കുന്നു</string>
     <string name="recnets_worldcirculate_display_default_info">അത് ഇവിടെ തിരികെ കൊണ്ടുവരാൻ ടാപ്പുചെയ്യുക.</string>
+    <string name="recnets_worldcirculate_display_default_info_pad">അത് ഇവിടെ തിരികെ കൊണ്ടുവരാൻ ടാപ്പുചെയ്യുക.</string>
     <string name="recnets_worldcirculate_display_pad_info">ആപ്പ് %s-യിൽ പ്രവർത്തിക്കുന്നു</string>
     <string name="recommend_apk_size_and_desc">%1$dMB | %2$s</string>
     <string name="recommend_app">ആപ്പ് നിർദ്ദേശങ്ങൾ</string>
@@ -915,6 +917,7 @@
     <string name="uninstall_xspace_dialog_title_format">ഇരട്ട \"%s\" അൺ‌ഇൻസ്റ്റാൾചെയ്യണോ?</string>
     <string name="unknown_artist_name">അറിയില്ലാത്ത ആർട്ടിസ്റ്റ്</string>
     <string name="unnamed_folder_name">ഫോൾഡർ</string>
+    <string name="upgrade_remove_small_window_in_recents">ഫ്ലോട്ടിംഗ് വിൻഡോകളിൽ ആപ്പുകൾ തുറക്കാൻ നിങ്ങൾക്ക് സൈഡ്ബാർ ഉപയോഗിക്കാം</string>
     <string name="wallpaper">വാൾപേപ്പർ</string>
     <string name="wallpaper_auto_change_title">ലോക്ക് സ്ക്രീൻ</string>
     <string name="wallpaper_failed_message">വാൾപേപ്പർ ക്രമീകരിക്കാനാകുന്നില്ല</string>

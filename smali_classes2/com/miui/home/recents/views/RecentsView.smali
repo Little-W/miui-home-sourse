@@ -98,7 +98,7 @@
 
     move-result-object p1
 
-    const p3, 0x7f0d0118
+    const p3, 0x7f0d0119
 
     .line 92
     invoke-virtual {p1, p3, p0, p2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
@@ -1694,13 +1694,13 @@
     if-nez p2, :cond_2
 
     .line 114
-    new-instance p1, Lcom/miui/home/recents/views/TaskStackViewStack;
+    new-instance p1, Lcom/miui/home/recents/views/TaskStackView;
 
     invoke-virtual {p0}, Lcom/miui/home/recents/views/RecentsView;->getContext()Landroid/content/Context;
 
     move-result-object p2
 
-    invoke-direct {p1, p2}, Lcom/miui/home/recents/views/TaskStackViewStack;-><init>(Landroid/content/Context;)V
+    invoke-direct {p1, p2}, Lcom/miui/home/recents/views/TaskStackView;-><init>(Landroid/content/Context;)V
 
     iput-object p1, p0, Lcom/miui/home/recents/views/RecentsView;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
 
@@ -2266,7 +2266,7 @@
     goto :goto_0
 
     :cond_0
-    const p1, 0x7f100374
+    const p1, 0x7f100375
 
     .line 159
     invoke-virtual {p0, p1}, Lcom/miui/home/recents/views/RecentsView;->showEmptyView(I)V

@@ -28,6 +28,8 @@
 
 .field public static final RECT_EVALUATOR:Landroid/animation/RectEvaluator;
 
+.field private static sTaskViewPaddingRatio:F
+
 .field private static sTaskViewRadius:F
 
 .field private static sTaskViewScale:F
@@ -74,6 +76,9 @@
     sput v0, Lcom/miui/home/recents/util/Utilities;->sTaskViewScale:F
 
     .line 338
+    sput v0, Lcom/miui/home/recents/util/Utilities;->sTaskViewPaddingRatio:F
+
+    .line 352
     sput v0, Lcom/miui/home/recents/util/Utilities;->sTaskViewRadius:F
 
     return-void
@@ -134,7 +139,7 @@
 .method public static getAnimResource(Z)I
     .locals 1
 
-    .line 414
+    .line 428
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -156,7 +161,7 @@
 
     goto :goto_0
 
-    .line 416
+    .line 430
     :cond_1
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isScreenOrientationLandscape()Z
 
@@ -211,7 +216,7 @@
 .method public static getMiddleRect(Landroid/graphics/RectF;Landroid/graphics/RectF;)Landroid/graphics/RectF;
     .locals 5
 
-    .line 372
+    .line 386
     iget v0, p0, Landroid/graphics/RectF;->left:F
 
     iget v1, p1, Landroid/graphics/RectF;->left:F
@@ -222,7 +227,7 @@
 
     div-float/2addr v0, v1
 
-    .line 373
+    .line 387
     iget v2, p0, Landroid/graphics/RectF;->top:F
 
     iget v3, p1, Landroid/graphics/RectF;->top:F
@@ -231,7 +236,7 @@
 
     div-float/2addr v2, v1
 
-    .line 374
+    .line 388
     invoke-virtual {p0}, Landroid/graphics/RectF;->width()F
 
     move-result v3
@@ -244,7 +249,7 @@
 
     div-float/2addr v3, v1
 
-    .line 375
+    .line 389
     invoke-virtual {p0}, Landroid/graphics/RectF;->height()F
 
     move-result p0
@@ -257,7 +262,7 @@
 
     div-float/2addr p0, v1
 
-    .line 376
+    .line 390
     new-instance p1, Landroid/graphics/RectF;
 
     add-float/2addr v3, v0
@@ -276,7 +281,7 @@
 
     if-nez p0, :cond_1
 
-    .line 342
+    .line 356
     sget p0, Lcom/miui/home/recents/util/Utilities;->sTaskViewRadius:F
 
     cmpl-float v0, p0, v0
@@ -288,7 +293,7 @@
     :cond_0
     return p0
 
-    .line 344
+    .line 358
     :cond_1
     sget v1, Lcom/miui/home/recents/util/Utilities;->sTaskViewRadius:F
 
@@ -296,12 +301,12 @@
 
     if-nez v0, :cond_2
 
-    .line 345
+    .line 359
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f0703de
+    const v1, 0x7f0703e2
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -309,12 +314,12 @@
 
     int-to-float v0, v0
 
-    .line 347
+    .line 361
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f0703dd
+    const v2, 0x7f0703e1
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -322,7 +327,7 @@
 
     int-to-float v1, v1
 
-    .line 349
+    .line 363
     invoke-static {p0}, Lcom/miui/home/recents/util/Utilities;->getWindowCornerRadius(Landroid/content/Context;)F
 
     move-result v2
@@ -333,7 +338,7 @@
 
     mul-float/2addr v2, p0
 
-    .line 350
+    .line 364
     invoke-static {v0, v2}, Ljava/lang/Math;->max(FF)F
 
     move-result p0
@@ -344,9 +349,71 @@
 
     sput p0, Lcom/miui/home/recents/util/Utilities;->sTaskViewRadius:F
 
-    .line 352
+    .line 366
     :cond_2
     sget p0, Lcom/miui/home/recents/util/Utilities;->sTaskViewRadius:F
+
+    return p0
+.end method
+
+.method public static getTaskViewPaddingRatio(Landroid/content/Context;)F
+    .locals 3
+
+    const/high16 v0, -0x40800000    # -1.0f
+
+    if-nez p0, :cond_1
+
+    .line 342
+    sget p0, Lcom/miui/home/recents/util/Utilities;->sTaskViewPaddingRatio:F
+
+    cmpl-float v0, p0, v0
+
+    if-nez v0, :cond_0
+
+    const/4 p0, 0x0
+
+    :cond_0
+    return p0
+
+    .line 344
+    :cond_1
+    sget v1, Lcom/miui/home/recents/util/Utilities;->sTaskViewPaddingRatio:F
+
+    cmpl-float v0, v1, v0
+
+    if-eqz v0, :cond_2
+
+    sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->IS_FOLD_DEVICE:Z
+
+    if-eqz v0, :cond_3
+
+    .line 345
+    :cond_2
+    new-instance v0, Landroid/util/TypedValue;
+
+    invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
+
+    .line 346
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p0
+
+    const v1, 0x7f0703df
+
+    const/4 v2, 0x1
+
+    invoke-virtual {p0, v1, v0, v2}, Landroid/content/res/Resources;->getValue(ILandroid/util/TypedValue;Z)V
+
+    .line 347
+    invoke-virtual {v0}, Landroid/util/TypedValue;->getFloat()F
+
+    move-result p0
+
+    sput p0, Lcom/miui/home/recents/util/Utilities;->sTaskViewPaddingRatio:F
+
+    .line 349
+    :cond_3
+    sget p0, Lcom/miui/home/recents/util/Utilities;->sTaskViewPaddingRatio:F
 
     return p0
 .end method
@@ -393,7 +460,7 @@
 
     move-result-object p0
 
-    const v1, 0x7f0703d1
+    const v1, 0x7f0703d4
 
     const/4 v2, 0x1
 
@@ -529,7 +596,7 @@
 
     if-eqz p0, :cond_3
 
-    .line 380
+    .line 394
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -538,13 +605,13 @@
 
     goto :goto_0
 
-    .line 383
+    .line 397
     :cond_0
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p0
 
-    .line 384
+    .line 398
     instance-of v1, p0, Lcom/miui/home/launcher/Launcher;
 
     if-nez v1, :cond_1
@@ -555,7 +622,7 @@
 
     check-cast p0, Landroid/content/ContextWrapper;
 
-    .line 385
+    .line 399
     invoke-virtual {p0}, Landroid/content/ContextWrapper;->getBaseContext()Landroid/content/Context;
 
     move-result-object p0
@@ -635,7 +702,7 @@
 .method public static isForceFSGNavBar(Landroid/content/Context;)Z
     .locals 1
 
-    .line 368
+    .line 382
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -652,7 +719,7 @@
 .method public static isHideGestureLine(Landroid/content/Context;)Z
     .locals 2
 
-    .line 363
+    .line 377
     invoke-static {p0}, Lcom/miui/home/launcher/RecentsAndFSGestureUtils;->isUseGestureVersion3(Landroid/content/Context;)Z
 
     move-result v0
@@ -661,7 +728,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 364
+    .line 378
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -684,21 +751,21 @@
 .method public static isMultiWindowInLargeScreen()Z
     .locals 1
 
-    .line 403
+    .line 417
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 404
+    .line 418
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->isInMultiWindowMode()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 405
+    .line 419
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -725,7 +792,7 @@
 
     if-eqz p0, :cond_0
 
-    .line 409
+    .line 423
     invoke-static {}, Lcom/miui/home/recents/util/Utilities;->isMultiWindowInLargeScreen()Z
 
     move-result p0
@@ -746,7 +813,7 @@
 .method public static isOneHandedModeSupported()Z
     .locals 2
 
-    .line 390
+    .line 404
     invoke-static {}, Lcom/android/systemui/shared/recents/utilities/Utilities;->atLeastAndroidS()Z
 
     move-result v0
@@ -757,7 +824,7 @@
 
     const-string v0, "ro.support_one_handed_mode"
 
-    .line 391
+    .line 405
     invoke-static {v0, v1}, Lmiuix/core/util/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
@@ -810,7 +877,7 @@
 .method public static isUseRemberWindows()Z
     .locals 1
 
-    .line 399
+    .line 413
     sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->IS_FOLD_DEVICE:Z
 
     return v0
@@ -1058,7 +1125,7 @@
 .method public static setFitInsetsTypes(Landroid/view/WindowManager$LayoutParams;I)V
     .locals 8
 
-    .line 356
+    .line 370
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1d
@@ -1067,7 +1134,7 @@
 
     return-void
 
-    .line 359
+    .line 373
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 

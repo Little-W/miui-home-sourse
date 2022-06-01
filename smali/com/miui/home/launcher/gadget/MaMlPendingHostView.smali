@@ -194,12 +194,12 @@
 
     if-eqz v1, :cond_1
 
-    const v1, 0x7f10026d
+    const v1, 0x7f10026e
 
     goto :goto_0
 
     :cond_1
-    const v1, 0x7f10026e
+    const v1, 0x7f10026f
 
     :goto_0
     const/4 v2, 0x0
@@ -304,7 +304,7 @@
     .line 65
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/MaMlPendingHostView;->mDefaultView:Landroid/view/View;
 
-    const v1, 0x7f0a014a
+    const v1, 0x7f0a014c
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -317,7 +317,7 @@
     .line 66
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/MaMlPendingHostView;->mDefaultView:Landroid/view/View;
 
-    const v1, 0x7f0a01d5
+    const v1, 0x7f0a01d7
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -330,7 +330,7 @@
     .line 67
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/MaMlPendingHostView;->mDefaultView:Landroid/view/View;
 
-    const v1, 0x7f0a00df
+    const v1, 0x7f0a00e0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -434,7 +434,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f080527
+    const v2, 0x7f08052f
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

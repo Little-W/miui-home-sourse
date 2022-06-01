@@ -1314,7 +1314,7 @@
 
     if-nez v3, :cond_1
 
-    const v2, 0x7f1003b1
+    const v2, 0x7f1003b3
 
     const/4 v3, 0x2
 

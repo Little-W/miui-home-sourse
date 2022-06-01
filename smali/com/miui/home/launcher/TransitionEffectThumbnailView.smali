@@ -126,7 +126,7 @@
 
     iget-object v0, p0, Lcom/miui/home/launcher/TransitionEffectThumbnailView;->mResources:Landroid/content/res/Resources;
 
-    const v1, 0x7f07041d
+    const v1, 0x7f070421
 
     .line 54
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -152,12 +152,12 @@
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f0805ca
+    const p2, 0x7f0805d3
 
     goto :goto_0
 
     :cond_0
-    const p2, 0x7f080569
+    const p2, 0x7f080572
 
     :goto_0
     invoke-virtual {p0, p2}, Lcom/miui/home/launcher/TransitionEffectThumbnailView;->setSeekPointResource(I)V
@@ -315,7 +315,7 @@
     .line 124
     iget-object v0, p0, Lcom/miui/home/launcher/TransitionEffectThumbnailView;->mInflater:Landroid/view/LayoutInflater;
 
-    const v1, 0x7f0d0139
+    const v1, 0x7f0d013a
 
     const/4 v2, 0x0
 
@@ -368,7 +368,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setTag(Ljava/lang/Object;)V
 
-    const v2, 0x7f0a02a4
+    const v2, 0x7f0a02a6
 
     .line 131
     invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -491,9 +491,9 @@
 
     if-eq v0, p1, :cond_1
 
-    const v1, 0x7f0a013e
+    const v1, 0x7f0a0140
 
-    const v2, 0x7f0a02a4
+    const v2, 0x7f0a02a6
 
     if-eqz v0, :cond_0
 
@@ -620,7 +620,7 @@
 
     move-result v0
 
-    const v1, 0x7f0a013e
+    const v1, 0x7f0a0140
 
     .line 150
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -667,7 +667,7 @@
     .line 216
     invoke-virtual {p1, v0}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    const v1, 0x7f0a013e
+    const v1, 0x7f0a0140
 
     .line 217
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -789,7 +789,7 @@
     .line 86
     iget-object v0, p0, Lcom/miui/home/launcher/TransitionEffectThumbnailView;->mInflater:Landroid/view/LayoutInflater;
 
-    const v1, 0x7f0d013a
+    const v1, 0x7f0d013b
 
     const/4 v2, 0x0
 

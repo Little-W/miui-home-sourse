@@ -38,6 +38,44 @@
     return-object v0
 .end method
 
+.method public static final filter(Lkotlin/sequences/Sequence;Lkotlin/jvm/functions/Function1;)Lkotlin/sequences/Sequence;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Lkotlin/sequences/Sequence<",
+            "+TT;>;",
+            "Lkotlin/jvm/functions/Function1<",
+            "-TT;",
+            "Ljava/lang/Boolean;",
+            ">;)",
+            "Lkotlin/sequences/Sequence<",
+            "TT;>;"
+        }
+    .end annotation
+
+    const-string v0, "$this$filter"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "predicate"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 396
+    new-instance v0, Lkotlin/sequences/FilteringSequence;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, p0, v1, p1}, Lkotlin/sequences/FilteringSequence;-><init>(Lkotlin/sequences/Sequence;ZLkotlin/jvm/functions/Function1;)V
+
+    check-cast v0, Lkotlin/sequences/Sequence;
+
+    return-object v0
+.end method
+
 .method public static final map(Lkotlin/sequences/Sequence;Lkotlin/jvm/functions/Function1;)Lkotlin/sequences/Sequence;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;

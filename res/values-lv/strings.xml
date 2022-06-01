@@ -760,9 +760,11 @@
     <string name="recents_title_security_scan">Drošības skenējums</string>
     <string name="recents_tv_small_window_text">Peldošie logi</string>
     <string name="recents_worldcirculate_text">Atlaidiet, lai izvēlētos</string>
+    <string name="recnets_relay_device_info">No %s</string>
     <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
     <string name="recnets_worldcirculate_display_computer_info">Lietotne strādā uz %s.</string>
     <string name="recnets_worldcirculate_display_default_info">Pieskarieties, lai pārnestu atpakaļ</string>
+    <string name="recnets_worldcirculate_display_default_info_pad">Pieskarieties, lai pārnestu atpakaļ</string>
     <string name="recnets_worldcirculate_display_pad_info">Lietotne strādā uz %s.</string>
     <string name="recommend_apk_size_and_desc">%1$dMB | %2$s</string>
     <string name="recommend_app">Lietotņu ieteikumi</string>
@@ -950,6 +952,7 @@
     <string name="uninstall_xspace_dialog_title_format">Atinstalēt duālo \"%s\"?</string>
     <string name="unknown_artist_name">Nezināms izpildītājs</string>
     <string name="unnamed_folder_name">Mape</string>
+    <string name="upgrade_remove_small_window_in_recents">Jūs varat izmantot sānjoslu, lai avērtu lietotni peldošajos logos</string>
     <string name="v7_preference_off">IZSLĒGTS</string>
     <string name="v7_preference_on">IESLĒGTS</string>
     <string name="wallpaper">Ekrāna tapete</string>

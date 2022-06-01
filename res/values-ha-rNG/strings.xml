@@ -728,9 +728,11 @@
     <string name="recents_title_security_scan">Bincike na tsaro</string>
     <string name="recents_tv_small_window_text">Bambarowar taga</string>
     <string name="recents_worldcirculate_text">Saki ka zaba</string>
+    <string name="recnets_relay_device_info">Daga %s</string>
     <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
     <string name="recnets_worldcirculate_display_computer_info">Manhajar na aiki a %s.</string>
     <string name="recnets_worldcirculate_display_default_info">Taba ka maido da shi a nan</string>
+    <string name="recnets_worldcirculate_display_default_info_pad">Taba ka maido da shi a nan</string>
     <string name="recnets_worldcirculate_display_pad_info">Manhajar na aiki a %s.</string>
     <string name="recommend_apk_size_and_desc">%1$dMB | %2$s</string>
     <string name="recommend_app">Shawararin manhaja</string>
@@ -915,6 +917,7 @@
     <string name="uninstall_xspace_dialog_title_format">A cire manhaja biyu a hade na \"%s\"?</string>
     <string name="unknown_artist_name">Mawaki mara asali</string>
     <string name="unnamed_folder_name">Folda</string>
+    <string name="upgrade_remove_small_window_in_recents">"Za ka iya amfani da ba'a na gefe don buɗe manhaja a cikin bambarowar taga"</string>
     <string name="wallpaper">Hoton fuskar allon</string>
     <string name="wallpaper_auto_change_title">Allon kulle</string>
     <string name="wallpaper_failed_message">Ya kasa setin hoton fuskar allon</string>

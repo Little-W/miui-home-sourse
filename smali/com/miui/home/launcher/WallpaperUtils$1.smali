@@ -27,7 +27,7 @@
 .method constructor <init>(Ljava/lang/String;Z)V
     .locals 0
 
-    .line 707
+    .line 750
     iput-object p1, p0, Lcom/miui/home/launcher/WallpaperUtils$1;->val$src:Ljava/lang/String;
 
     iput-boolean p2, p0, Lcom/miui/home/launcher/WallpaperUtils$1;->val$autoChange:Z
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 2
 
-    .line 709
+    .line 752
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
@@ -51,12 +51,12 @@
 
     const-wide/16 v0, 0x64
 
-    .line 710
+    .line 753
     invoke-static {p0, v0, v1}, Lcom/miui/home/launcher/common/BackgroundThread;->postDelayed(Ljava/lang/Runnable;J)V
 
     return-void
 
-    .line 713
+    .line 756
     :cond_0
     new-instance v0, Ljava/io/File;
 
@@ -64,34 +64,34 @@
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 714
+    .line 757
     invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
 
-    .line 715
+    .line 758
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/data/system/theme/lock_wallpaper"
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 716
+    .line 759
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
-    .line 717
+    .line 760
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1c
 
     if-lt v0, v1, :cond_1
 
-    .line 718
+    .line 761
     iget-object v0, p0, Lcom/miui/home/launcher/WallpaperUtils$1;->val$src:Ljava/lang/String;
 
     const-string v1, "/data/system/theme/lock_wallpaper"
 
     invoke-static {v0, v1}, Lmiui/theme/ThemeFileUtils;->copy(Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 719
+    .line 762
     iget-object v0, p0, Lcom/miui/home/launcher/WallpaperUtils$1;->val$src:Ljava/lang/String;
 
     invoke-static {v0}, Lmiui/theme/ThemeFileUtils;->remove(Ljava/lang/String;)Z
@@ -99,10 +99,10 @@
     :cond_1
     const-string v0, "/data/system/theme/lock_wallpaper"
 
-    .line 722
+    .line 765
     invoke-static {v0}, Lcom/miui/home/launcher/common/ThemeUtils;->updateFilePermissionWithThemeContext(Ljava/lang/String;)Z
 
-    .line 723
+    .line 766
     iget-boolean v0, p0, Lcom/miui/home/launcher/WallpaperUtils$1;->val$autoChange:Z
 
     invoke-static {v0}, Lcom/miui/home/launcher/WallpaperUtils;->access$000(Z)Z

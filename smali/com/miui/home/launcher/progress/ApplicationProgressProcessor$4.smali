@@ -33,7 +33,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;Lcom/miui/home/launcher/progress/ProgressShortcutInfo;ILjava/lang/String;Landroid/net/Uri;)V
     .locals 0
 
-    .line 372
+    .line 365
     iput-object p1, p0, Lcom/miui/home/launcher/progress/ApplicationProgressProcessor$4;->this$0:Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;
 
     iput-object p2, p0, Lcom/miui/home/launcher/progress/ApplicationProgressProcessor$4;->val$info:Lcom/miui/home/launcher/progress/ProgressShortcutInfo;
@@ -54,14 +54,14 @@
 .method public run()V
     .locals 8
 
-    .line 375
+    .line 368
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v7
 
     if-eqz v7, :cond_0
 
-    .line 377
+    .line 370
     iget-object v0, p0, Lcom/miui/home/launcher/progress/ApplicationProgressProcessor$4;->val$info:Lcom/miui/home/launcher/progress/ProgressShortcutInfo;
 
     iget v2, p0, Lcom/miui/home/launcher/progress/ApplicationProgressProcessor$4;->val$status:I
@@ -76,7 +76,7 @@
 
     invoke-virtual/range {v0 .. v6}, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->updateStatus(Lcom/miui/home/launcher/Launcher;ILjava/lang/String;Landroid/net/Uri;J)V
 
-    .line 378
+    .line 371
     iget-object v0, p0, Lcom/miui/home/launcher/progress/ApplicationProgressProcessor$4;->val$info:Lcom/miui/home/launcher/progress/ProgressShortcutInfo;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->getPackageName()Ljava/lang/String;

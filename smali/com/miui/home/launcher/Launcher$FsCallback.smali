@@ -30,10 +30,10 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 1
 
-    .line 8727
+    .line 8767
     invoke-direct {p0}, Lcom/android/systemui/fsgesture/IFsGestureCallback$Stub;-><init>()V
 
-    .line 8728
+    .line 8768
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -55,7 +55,7 @@
 
     move-object v0, p0
 
-    .line 8737
+    .line 8777
     iget-object v1, v0, Lcom/miui/home/launcher/Launcher$FsCallback;->mReference:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -82,7 +82,7 @@
 
     move/from16 v9, p7
 
-    .line 8739
+    .line 8779
     invoke-virtual/range {v2 .. v9}, Lcom/miui/home/launcher/Launcher;->changeAlphaScale(FFIIIIZ)V
 
     :cond_0
@@ -97,7 +97,7 @@
         }
     .end annotation
 
-    .line 8745
+    .line 8785
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$FsCallback;->mReference:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -108,7 +108,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 8747
+    .line 8787
     invoke-virtual {v0, p1, p2}, Lcom/miui/home/launcher/Launcher;->getFsGestureCallbackSpec(Ljava/lang/String;I)Lcom/android/systemui/fsgesture/TransitionAnimationSpec;
 
     move-result-object p1
@@ -129,7 +129,7 @@
         }
     .end annotation
 
-    .line 8770
+    .line 8810
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$FsCallback;->mReference:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -140,7 +140,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 8772
+    .line 8812
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->notifyHomeModeFsGestureStart()V
 
     :cond_0
@@ -155,7 +155,7 @@
         }
     .end annotation
 
-    .line 8762
+    .line 8802
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$FsCallback;->mReference:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -166,7 +166,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 8764
+    .line 8804
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->notifyFsGestureCallbackMiuiAnimationEnd()V
 
     :cond_0
@@ -181,7 +181,7 @@
         }
     .end annotation
 
-    .line 8754
+    .line 8794
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$FsCallback;->mReference:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -192,7 +192,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 8756
+    .line 8796
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->notifyFsGestureCallbackMiuiAnimationStart()V
 
     :cond_0

@@ -392,20 +392,20 @@
 
     const/4 v1, 0x1
 
-    const v2, 0x7f080112
+    const v2, 0x7f080116
 
     aput v2, v0, v1
 
     const/4 v1, 0x0
 
-    const v2, 0x7f080111
+    const v2, 0x7f080115
 
     .line 71
     aput v2, v0, v1
 
     const/4 v1, 0x2
 
-    const v2, 0x7f080110
+    const v2, 0x7f080114
 
     .line 72
     aput v2, v0, v1
@@ -436,7 +436,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070103
+    const v1, 0x7f070106
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -539,7 +539,7 @@
 
     move-result v0
 
-    const v1, 0x7f0a013e
+    const v1, 0x7f0a0140
 
     .line 139
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -853,7 +853,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070103
+    const v1, 0x7f070106
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -965,7 +965,7 @@
     .line 90
     iget-object v3, p0, Lcom/miui/home/launcher/EditingEntryThumbnailView;->mInflater:Landroid/view/LayoutInflater;
 
-    const v4, 0x7f0d0137
+    const v4, 0x7f0d0138
 
     invoke-virtual {v3, v4, p0, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -996,7 +996,7 @@
     .line 93
     invoke-virtual {v3, p0}, Lcom/miui/home/launcher/AutoLayoutThumbnailItem;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v4, 0x7f0a00ba
+    const v4, 0x7f0a00bb
 
     .line 95
     invoke-virtual {v3, v4}, Lcom/miui/home/launcher/AutoLayoutThumbnailItem;->findViewById(I)Landroid/view/View;
@@ -1005,7 +1005,7 @@
 
     check-cast v4, Landroid/widget/TextView;
 
-    const v5, 0x7f0a013e
+    const v5, 0x7f0a0140
 
     const/4 v6, 0x1
 
@@ -1027,7 +1027,7 @@
 
     move-result-object v8
 
-    const v9, 0x7f080113
+    const v9, 0x7f080117
 
     invoke-virtual {v8, v9}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -1057,7 +1057,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f080112
+    const v5, 0x7f080116
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -1176,7 +1176,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f080113
+    const v4, 0x7f080117
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

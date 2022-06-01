@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Landroid/os/Handler;)V
     .locals 0
 
-    .line 3861
+    .line 3893
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$34;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -35,7 +35,7 @@
 .method public onChange(Z)V
     .locals 2
 
-    .line 3864
+    .line 3896
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -60,14 +60,14 @@
 
     move-result-object p1
 
-    .line 3866
+    .line 3898
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$34;->this$0:Lcom/miui/home/launcher/Launcher;
 
     const-string v1, ""
 
     invoke-static {v0, v1, p1}, Lcom/miui/launcher/utils/PortableUtils;->updateCurrentWallpaperInfo(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3867
+    .line 3899
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$34;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/WallpaperUtils;->getLockWallpaperProvider(Landroid/content/Context;)Ljava/lang/String;
@@ -76,7 +76,7 @@
 
     if-nez p1, :cond_0
 
-    .line 3869
+    .line 3901
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$34;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$3900(Lcom/miui/home/launcher/Launcher;)V
@@ -86,26 +86,26 @@
     :cond_0
     const-string v0, "com.miui.home.none_provider"
 
-    .line 3870
+    .line 3902
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-nez p1, :cond_2
 
-    .line 3871
+    .line 3903
     invoke-static {}, Lcom/miui/home/launcher/WallpaperUtils;->isDefaultLockStyle()Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 3872
+    .line 3904
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$34;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/WallpaperUtils;->backupLockScreenSrc(Landroid/content/Context;)V
 
-    .line 3874
+    .line 3906
     :cond_1
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$34;->this$0:Lcom/miui/home/launcher/Launcher;
 

@@ -232,7 +232,7 @@
 
     iget-object v0, p0, Lcom/miui/home/launcher/widget/WidgetCell;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f0801ed
+    const v1, 0x7f0801f5
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -310,7 +310,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070484
+    const v1, 0x7f070488
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -344,7 +344,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f070485
+    const p2, 0x7f070489
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -501,7 +501,7 @@
     .line 93
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    const v1, 0x7f070484
+    const v1, 0x7f070488
 
     .line 96
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -538,7 +538,7 @@
     .line 65
     invoke-super {p0}, Landroid/widget/RelativeLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a016a
+    const v0, 0x7f0a016c
 
     .line 66
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/widget/WidgetCell;->findViewById(I)Landroid/view/View;
@@ -549,7 +549,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/widget/WidgetCell;->mItemTitle:Landroid/widget/TextView;
 
-    const v0, 0x7f0a0167
+    const v0, 0x7f0a0169
 
     .line 67
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/widget/WidgetCell;->findViewById(I)Landroid/view/View;
@@ -560,7 +560,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/widget/WidgetCell;->mItemPreview:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a0169
+    const v0, 0x7f0a016b
 
     .line 68
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/widget/WidgetCell;->findViewById(I)Landroid/view/View;
@@ -571,7 +571,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/widget/WidgetCell;->mSpan:Landroid/widget/TextView;
 
-    const v0, 0x7f0a015f
+    const v0, 0x7f0a0161
 
     .line 69
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/widget/WidgetCell;->findViewById(I)Landroid/view/View;
@@ -582,7 +582,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/widget/WidgetCell;->mBadge:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a02ed
+    const v0, 0x7f0a02ef
 
     .line 70
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/widget/WidgetCell;->findViewById(I)Landroid/view/View;
@@ -593,7 +593,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/widget/WidgetCell;->mWidgetDetailsView:Lcom/miui/home/launcher/widget/WidgetDetailsView;
 
-    const v0, 0x7f0a0164
+    const v0, 0x7f0a0166
 
     .line 71
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/widget/WidgetCell;->findViewById(I)Landroid/view/View;
@@ -604,7 +604,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/widget/WidgetCell;->mLinearLayout:Landroid/widget/LinearLayout;
 
-    const v0, 0x7f0a0165
+    const v0, 0x7f0a0167
 
     .line 72
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/widget/WidgetCell;->findViewById(I)Landroid/view/View;
