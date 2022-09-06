@@ -7,14 +7,14 @@
 .method public static getContentChangeTypes(Landroid/view/accessibility/AccessibilityEvent;)I
     .locals 2
 
-    .line 310
+    .line 343
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x13
 
     if-lt v0, v1, :cond_0
 
-    .line 311
+    .line 344
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityEvent;->getContentChangeTypes()I
 
     move-result p0
@@ -30,14 +30,14 @@
 .method public static setContentChangeTypes(Landroid/view/accessibility/AccessibilityEvent;I)V
     .locals 2
 
-    .line 291
+    .line 322
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x13
 
     if-lt v0, v1, :cond_0
 
-    .line 292
+    .line 323
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityEvent;->setContentChangeTypes(I)V
 
     :cond_0

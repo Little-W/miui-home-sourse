@@ -58,7 +58,7 @@
 
 .field public static final XIAOMI_SDK_VERSION_CODE:I = 0xb
 
-.field private static mIsInited:Z
+.field private static mIsInited:Z = false
 
 .field private static final mLock:Ljava/lang/Object;
 
@@ -67,7 +67,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 83
+    .line 85
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -80,7 +80,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 32
+    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -91,24 +91,24 @@
 
     const-string v0, "activity"
 
-    .line 110
+    .line 112
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Landroid/app/ActivityManager;
 
-    .line 111
+    .line 113
     invoke-virtual {p0}, Landroid/app/ActivityManager;->getDeviceConfigurationInfo()Landroid/content/pm/ConfigurationInfo;
 
     move-result-object p0
 
-    .line 112
+    .line 114
     iget v0, p0, Landroid/content/pm/ConfigurationInfo;->reqTouchScreen:I
 
     sput v0, Lcom/market/sdk/utils/Client;->TOUCH_SCREEN:I
 
-    .line 113
+    .line 115
     invoke-virtual {p0}, Landroid/content/pm/ConfigurationInfo;->getGlEsVersion()Ljava/lang/String;
 
     move-result-object p0
@@ -121,22 +121,22 @@
 .method private static acquireFeature(Landroid/content/Context;)V
     .locals 5
 
-    .line 117
+    .line 119
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
 
-    .line 118
+    .line 120
     invoke-virtual {p0}, Landroid/content/pm/PackageManager;->getSystemAvailableFeatures()[Landroid/content/pm/FeatureInfo;
 
     move-result-object p0
 
-    .line 119
+    .line 121
     sget-object v0, Lcom/market/sdk/utils/Client;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 120
+    .line 122
     :try_start_0
     new-instance v1, Ljava/util/ArrayList;
 
@@ -146,7 +146,7 @@
 
     if-eqz p0, :cond_1
 
-    .line 122
+    .line 124
     array-length v1, p0
 
     const/4 v2, 0x0
@@ -156,7 +156,7 @@
 
     aget-object v3, p0, v2
 
-    .line 123
+    .line 125
     iget-object v4, v3, Landroid/content/pm/FeatureInfo;->name:Ljava/lang/String;
 
     invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -165,7 +165,7 @@
 
     if-nez v4, :cond_0
 
-    .line 124
+    .line 126
     sget-object v4, Lcom/market/sdk/utils/Client;->FEATURE:Ljava/util/ArrayList;
 
     iget-object v3, v3, Landroid/content/pm/FeatureInfo;->name:Ljava/lang/String;
@@ -177,13 +177,13 @@
 
     goto :goto_0
 
-    .line 128
+    .line 130
     :cond_1
     sget-object p0, Lcom/market/sdk/utils/Client;->FEATURE:Ljava/util/ArrayList;
 
     invoke-static {p0}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
-    .line 129
+    .line 131
     monitor-exit v0
 
     return-void
@@ -201,17 +201,17 @@
 .method private static acquireGLExtensions()V
     .locals 6
 
-    .line 149
+    .line 151
     invoke-static {}, Lcom/market/sdk/utils/Client;->getGLExtensions()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 150
+    .line 152
     sget-object v1, Lcom/market/sdk/utils/Client;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 151
+    .line 153
     :try_start_0
     new-instance v2, Ljava/util/ArrayList;
 
@@ -219,7 +219,7 @@
 
     sput-object v2, Lcom/market/sdk/utils/Client;->GL_EXTENSION:Ljava/util/ArrayList;
 
-    .line 152
+    .line 154
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -228,12 +228,12 @@
 
     const-string v2, " "
 
-    .line 153
+    .line 155
     invoke-static {v0, v2}, Landroid/text/TextUtils;->split(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 154
+    .line 156
     array-length v2, v0
 
     const/4 v3, 0x0
@@ -243,14 +243,14 @@
 
     aget-object v4, v0, v3
 
-    .line 155
+    .line 157
     invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v5
 
     if-nez v5, :cond_0
 
-    .line 156
+    .line 158
     sget-object v5, Lcom/market/sdk/utils/Client;->GL_EXTENSION:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -260,13 +260,13 @@
 
     goto :goto_0
 
-    .line 160
+    .line 162
     :cond_1
     sget-object v0, Lcom/market/sdk/utils/Client;->GL_EXTENSION:Ljava/util/ArrayList;
 
     invoke-static {v0}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
-    .line 161
+    .line 163
     monitor-exit v1
 
     return-void
@@ -284,7 +284,7 @@
 .method private static acquireIdentity(Landroid/content/Context;)V
     .locals 1
 
-    .line 242
+    .line 243
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -303,22 +303,22 @@
 .method private static acquireLibrary(Landroid/content/Context;)V
     .locals 5
 
-    .line 133
+    .line 135
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
 
-    .line 134
+    .line 136
     invoke-virtual {p0}, Landroid/content/pm/PackageManager;->getSystemSharedLibraryNames()[Ljava/lang/String;
 
     move-result-object p0
 
-    .line 135
+    .line 137
     sget-object v0, Lcom/market/sdk/utils/Client;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 136
+    .line 138
     :try_start_0
     new-instance v1, Ljava/util/ArrayList;
 
@@ -328,7 +328,7 @@
 
     if-eqz p0, :cond_1
 
-    .line 138
+    .line 140
     array-length v1, p0
 
     const/4 v2, 0x0
@@ -338,14 +338,14 @@
 
     aget-object v3, p0, v2
 
-    .line 139
+    .line 141
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v4
 
     if-nez v4, :cond_0
 
-    .line 140
+    .line 142
     sget-object v4, Lcom/market/sdk/utils/Client;->LIBRARY:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -355,13 +355,13 @@
 
     goto :goto_0
 
-    .line 144
+    .line 146
     :cond_1
     sget-object p0, Lcom/market/sdk/utils/Client;->LIBRARY:Ljava/util/ArrayList;
 
     invoke-static {p0}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
-    .line 145
+    .line 147
     monitor-exit v0
 
     return-void
@@ -379,38 +379,38 @@
 .method private static acquireScreenAttr(Landroid/content/Context;)V
     .locals 2
 
-    .line 100
+    .line 102
     new-instance v0, Landroid/util/DisplayMetrics;
 
     invoke-direct {v0}, Landroid/util/DisplayMetrics;-><init>()V
 
-    const-string v1, "window"
+    const-string/jumbo v1, "window"
 
-    .line 101
+    .line 103
     invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Landroid/view/WindowManager;
 
-    .line 102
+    .line 104
     invoke-interface {p0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
     move-result-object p0
 
     invoke-virtual {p0, v0}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
 
-    .line 103
+    .line 105
     iget p0, v0, Landroid/util/DisplayMetrics;->heightPixels:I
 
     sput p0, Lcom/market/sdk/utils/Client;->DISPLAY_HEIGHT:I
 
-    .line 104
+    .line 106
     iget p0, v0, Landroid/util/DisplayMetrics;->widthPixels:I
 
     sput p0, Lcom/market/sdk/utils/Client;->DISPLAY_WIDTH:I
 
-    .line 105
+    .line 107
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -433,7 +433,7 @@
 
     sput-object p0, Lcom/market/sdk/utils/Client;->DISPLAY_RESOLUTION:Ljava/lang/String;
 
-    .line 106
+    .line 108
     iget p0, v0, Landroid/util/DisplayMetrics;->densityDpi:I
 
     sput p0, Lcom/market/sdk/utils/Client;->DISPLAY_DENSITY:I
@@ -444,17 +444,17 @@
 .method private static acquireSystemInfo(Landroid/content/Context;)V
     .locals 0
 
-    .line 165
+    .line 167
     sget-object p0, Landroid/os/Build$VERSION;->RELEASE:Ljava/lang/String;
 
     sput-object p0, Lcom/market/sdk/utils/Client;->RELEASE:Ljava/lang/String;
 
-    .line 166
+    .line 168
     sget-object p0, Landroid/os/Build$VERSION;->INCREMENTAL:Ljava/lang/String;
 
     sput-object p0, Lcom/market/sdk/utils/Client;->SYSTEM_VERSION:Ljava/lang/String;
 
-    .line 167
+    .line 169
     sget p0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     sput p0, Lcom/market/sdk/utils/Client;->SDK_VERSION:I
@@ -465,7 +465,7 @@
 .method public static getCountry()Ljava/lang/String;
     .locals 1
 
-    .line 171
+    .line 173
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v0
@@ -480,12 +480,12 @@
 .method public static getCpuArch()Ljava/lang/String;
     .locals 3
 
-    .line 227
+    .line 228
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 228
+    .line 229
     invoke-static {}, Lcom/market/sdk/utils/Client;->isLaterThanLollipop()Z
 
     move-result v1
@@ -496,19 +496,19 @@
 
     const-string v2, ""
 
-    .line 229
+    .line 230
     invoke-static {v1, v2}, Lcom/market/sdk/SystemProperties;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 230
+    .line 231
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 231
+    .line 232
     new-instance v0, Ljava/util/ArrayList;
 
     const-string v2, ","
@@ -523,7 +523,7 @@
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 234
+    .line 235
     :cond_0
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
@@ -531,12 +531,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 235
+    .line 236
     sget-object v1, Landroid/os/Build;->CPU_ABI:Ljava/lang/String;
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 236
+    .line 237
     sget-object v1, Landroid/os/Build;->CPU_ABI2:Ljava/lang/String;
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -544,7 +544,7 @@
     :cond_1
     const-string v1, ","
 
-    .line 238
+    .line 239
     invoke-static {v1, v0}, Landroid/text/TextUtils;->join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
 
     move-result-object v0
@@ -555,7 +555,7 @@
 .method public static getDevice()Ljava/lang/String;
     .locals 1
 
-    .line 215
+    .line 216
     sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
 
     return-object v0
@@ -564,7 +564,7 @@
 .method public static getDeviceType()I
     .locals 1
 
-    .line 219
+    .line 220
     invoke-static {}, Lcom/market/sdk/utils/Client;->isTablet()Z
 
     move-result v0
@@ -575,21 +575,21 @@
 .method private static getGLExtensions()Ljava/lang/String;
     .locals 11
 
-    .line 253
+    .line 268
     invoke-static {}, Ljavax/microedition/khronos/egl/EGLContext;->getEGL()Ljavax/microedition/khronos/egl/EGL;
 
     move-result-object v0
 
     check-cast v0, Ljavax/microedition/khronos/egl/EGL10;
 
-    .line 254
+    .line 269
     sget-object v1, Ljavax/microedition/khronos/egl/EGL10;->EGL_DEFAULT_DISPLAY:Ljava/lang/Object;
 
     invoke-interface {v0, v1}, Ljavax/microedition/khronos/egl/EGL10;->eglGetDisplay(Ljava/lang/Object;)Ljavax/microedition/khronos/egl/EGLDisplay;
 
     move-result-object v7
 
-    .line 255
+    .line 270
     sget-object v1, Ljavax/microedition/khronos/egl/EGL10;->EGL_NO_DISPLAY:Ljavax/microedition/khronos/egl/EGLDisplay;
 
     const/4 v8, 0x0
@@ -601,10 +601,10 @@
     :cond_0
     const/4 v1, 0x2
 
-    .line 259
+    .line 274
     new-array v1, v1, [I
 
-    .line 260
+    .line 275
     invoke-interface {v0, v7, v1}, Ljavax/microedition/khronos/egl/EGL10;->eglInitialize(Ljavax/microedition/khronos/egl/EGLDisplay;[I)Z
 
     move-result v1
@@ -616,15 +616,15 @@
     :cond_1
     const/4 v1, 0x1
 
-    .line 263
+    .line 278
     new-array v9, v1, [I
 
-    .line 264
+    .line 279
     new-array v10, v1, [Ljavax/microedition/khronos/egl/EGLConfig;
 
     const/16 v1, 0xb
 
-    .line 265
+    .line 280
     new-array v3, v1, [I
 
     fill-array-data v3, :array_0
@@ -639,7 +639,7 @@
 
     move-object v6, v9
 
-    .line 274
+    .line 289
     invoke-interface/range {v1 .. v6}, Ljavax/microedition/khronos/egl/EGL10;->eglChooseConfig(Ljavax/microedition/khronos/egl/EGLDisplay;[I[Ljavax/microedition/khronos/egl/EGLConfig;I[I)Z
 
     move-result v1
@@ -651,12 +651,12 @@
     :cond_2
     const/4 v1, 0x0
 
-    .line 276
+    .line 291
     aget v2, v9, v1
 
     if-lez v2, :cond_3
 
-    .line 277
+    .line 292
     aget-object v1, v10, v1
 
     goto :goto_0
@@ -664,7 +664,7 @@
     :cond_3
     move-object v1, v8
 
-    .line 280
+    .line 295
     :goto_0
     sget-object v2, Ljavax/microedition/khronos/egl/EGL10;->EGL_NO_CONTEXT:Ljavax/microedition/khronos/egl/EGLContext;
 
@@ -674,30 +674,30 @@
 
     const/4 v3, 0x5
 
-    .line 282
+    .line 297
     new-array v3, v3, [I
 
     fill-array-data v3, :array_1
 
-    .line 287
+    .line 302
     invoke-interface {v0, v7, v1, v3}, Ljavax/microedition/khronos/egl/EGL10;->eglCreatePbufferSurface(Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLConfig;[I)Ljavax/microedition/khronos/egl/EGLSurface;
 
     move-result-object v1
 
     if-eqz v1, :cond_7
 
-    .line 289
+    .line 304
     sget-object v3, Ljavax/microedition/khronos/egl/EGL10;->EGL_NO_SURFACE:Ljavax/microedition/khronos/egl/EGLSurface;
 
     if-ne v1, v3, :cond_4
 
     goto :goto_1
 
-    .line 293
+    .line 308
     :cond_4
     invoke-interface {v0, v7, v1, v1, v2}, Ljavax/microedition/khronos/egl/EGL10;->eglMakeCurrent(Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLSurface;Ljavax/microedition/khronos/egl/EGLSurface;Ljavax/microedition/khronos/egl/EGLContext;)Z
 
-    .line 294
+    .line 309
     invoke-interface {v0, v7, v1, v1, v2}, Ljavax/microedition/khronos/egl/EGL10;->eglMakeCurrent(Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLSurface;Ljavax/microedition/khronos/egl/EGLSurface;Ljavax/microedition/khronos/egl/EGLContext;)Z
 
     move-result v3
@@ -706,7 +706,7 @@
 
     return-object v8
 
-    .line 298
+    .line 313
     :cond_5
     invoke-virtual {v2}, Ljavax/microedition/khronos/egl/EGLContext;->getGL()Ljavax/microedition/khronos/opengles/GL;
 
@@ -716,23 +716,23 @@
 
     const/16 v4, 0x1f03
 
-    .line 300
+    .line 315
     invoke-interface {v3, v4}, Ljavax/microedition/khronos/opengles/GL10;->glGetString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 302
+    .line 317
     invoke-interface {v0, v7, v1}, Ljavax/microedition/khronos/egl/EGL10;->eglDestroySurface(Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLSurface;)Z
 
-    .line 303
+    .line 318
     invoke-interface {v0, v7, v2}, Ljavax/microedition/khronos/egl/EGL10;->eglDestroyContext(Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLContext;)Z
 
-    .line 304
+    .line 319
     invoke-interface {v0, v7}, Ljavax/microedition/khronos/egl/EGL10;->eglTerminate(Ljavax/microedition/khronos/egl/EGLDisplay;)Z
 
     if-eqz v3, :cond_6
 
-    .line 306
+    .line 321
     invoke-virtual {v3}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v8
@@ -774,26 +774,39 @@
 .method public static getImeiMd5()Ljava/lang/String;
     .locals 2
 
-    .line 246
+    .line 247
     invoke-static {}, Lcom/market/sdk/utils/AppGlobal;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     const-string v1, "phone"
 
-    .line 247
+    .line 248
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/telephony/TelephonyManager;
 
-    .line 248
+    .line 249
     invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 249
+    .line 250
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 251
+    invoke-static {}, Lcom/market/sdk/utils/Client;->getUUid()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 254
+    :cond_0
     invoke-static {v0}, Lcom/market/sdk/utils/Coder;->encodeMD5(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -804,7 +817,7 @@
 .method public static getLanguage()Ljava/lang/String;
     .locals 1
 
-    .line 175
+    .line 177
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v0
@@ -823,7 +836,7 @@
 
     const-string v1, "-1"
 
-    .line 183
+    .line 185
     invoke-static {v0, v1}, Lcom/market/sdk/SystemProperties;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -838,10 +851,23 @@
 
     const-string v1, ""
 
-    .line 198
+    .line 197
     invoke-static {v0, v1}, Lcom/market/sdk/SystemProperties;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
+
+    .line 198
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    invoke-static {}, Lcom/market/sdk/utils/Client;->isStableBuild()Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
 
     .line 199
     invoke-static {}, Lcom/market/sdk/utils/Client;->isAlphaBuild()Z
@@ -867,15 +893,8 @@
 
     goto :goto_0
 
-    .line 201
-    :cond_0
-    invoke-static {}, Lcom/market/sdk/utils/Client;->isDevBuild()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
     .line 202
+    :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -898,7 +917,7 @@
 .method public static getModel()Ljava/lang/String;
     .locals 1
 
-    .line 211
+    .line 212
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
     return-object v0
@@ -911,7 +930,7 @@
 
     const-string v1, "CN"
 
-    .line 179
+    .line 181
     invoke-static {v0, v1}, Lcom/market/sdk/SystemProperties;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -922,142 +941,108 @@
 .method public static getSdkVersion()I
     .locals 1
 
-    .line 315
+    .line 330
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     return v0
 .end method
 
+.method public static getUUid()Ljava/lang/String;
+    .locals 4
+
+    const-string/jumbo v0, "uuid"
+
+    const-string v1, ""
+
+    const/4 v2, 0x0
+
+    .line 258
+    new-array v3, v2, [Lcom/market/sdk/utils/PrefUtils$PrefFile;
+
+    invoke-static {v0, v1, v3}, Lcom/market/sdk/utils/PrefUtils;->getString(Ljava/lang/String;Ljava/lang/String;[Lcom/market/sdk/utils/PrefUtils$PrefFile;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 259
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 260
+    invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "uuid"
+
+    .line 261
+    new-array v2, v2, [Lcom/market/sdk/utils/PrefUtils$PrefFile;
+
+    invoke-static {v1, v0, v2}, Lcom/market/sdk/utils/PrefUtils;->setString(Ljava/lang/String;Ljava/lang/String;[Lcom/market/sdk/utils/PrefUtils$PrefFile;)V
+
+    :cond_0
+    return-object v0
+.end method
+
 .method public static init(Landroid/content/Context;)V
     .locals 1
 
-    .line 86
+    .line 88
     sget-boolean v0, Lcom/market/sdk/utils/Client;->mIsInited:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 89
+    .line 91
     :cond_0
     invoke-static {p0}, Lcom/market/sdk/utils/Client;->acquireScreenAttr(Landroid/content/Context;)V
 
-    .line 90
+    .line 92
     invoke-static {p0}, Lcom/market/sdk/utils/Client;->acquireDeviceConfig(Landroid/content/Context;)V
 
-    .line 91
+    .line 93
     invoke-static {p0}, Lcom/market/sdk/utils/Client;->acquireFeature(Landroid/content/Context;)V
 
-    .line 92
+    .line 94
     invoke-static {p0}, Lcom/market/sdk/utils/Client;->acquireLibrary(Landroid/content/Context;)V
 
-    .line 93
+    .line 95
     invoke-static {}, Lcom/market/sdk/utils/Client;->acquireGLExtensions()V
 
-    .line 94
+    .line 96
     invoke-static {p0}, Lcom/market/sdk/utils/Client;->acquireSystemInfo(Landroid/content/Context;)V
 
-    .line 95
+    .line 97
     invoke-static {p0}, Lcom/market/sdk/utils/Client;->acquireIdentity(Landroid/content/Context;)V
 
     const/4 p0, 0x1
 
-    .line 96
+    .line 98
     sput-boolean p0, Lcom/market/sdk/utils/Client;->mIsInited:Z
 
     return-void
 .end method
 
 .method public static isAlphaBuild()Z
-    .locals 2
+    .locals 1
 
-    const-string v0, "ro.product.mod_device"
+    .line 189
+    sget-boolean v0, Lmiui/os/Build;->IS_ALPHA_BUILD:Z
 
-    const-string v1, ""
-
-    .line 187
-    invoke-static {v0, v1}, Lcom/market/sdk/SystemProperties;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "_alpha"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    const-string v0, "ro.product.mod_device"
-
-    const-string v1, ""
-
-    .line 188
-    invoke-static {v0, v1}, Lcom/market/sdk/SystemProperties;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "_alpha_global"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    const/4 v0, 0x1
-
-    :goto_1
-    return v0
-.end method
-
-.method public static isDevBuild()Z
-    .locals 2
-
-    const-string v0, "\\d+.\\d+.\\d+(-internal)?"
-
-    .line 193
-    sget-object v1, Landroid/os/Build$VERSION;->INCREMENTAL:Ljava/lang/String;
-
-    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    sget-object v1, Landroid/os/Build$VERSION;->INCREMENTAL:Ljava/lang/String;
-
-    .line 194
-    invoke-virtual {v1, v0}, Ljava/lang/String;->matches(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
     return v0
 .end method
 
 .method public static isInternationalMiui()Z
     .locals 2
 
-    .line 333
+    .line 348
     invoke-static {}, Lcom/market/sdk/utils/Client;->isMiui()Z
 
     move-result v0
@@ -1094,7 +1079,7 @@
 .method public static isLaterThanHoneycomb()Z
     .locals 2
 
-    .line 311
+    .line 326
     sget v0, Lcom/market/sdk/utils/Client;->SDK_VERSION:I
 
     const/16 v1, 0xb
@@ -1115,7 +1100,7 @@
 .method public static isLaterThanLollipop()Z
     .locals 2
 
-    .line 319
+    .line 334
     invoke-static {}, Lcom/market/sdk/utils/Client;->getSdkVersion()I
 
     move-result v0
@@ -1138,7 +1123,7 @@
 .method public static isLaterThanN()Z
     .locals 2
 
-    .line 324
+    .line 339
     sget v0, Lcom/market/sdk/utils/Client;->SDK_VERSION:I
 
     const/16 v1, 0x18
@@ -1159,7 +1144,7 @@
 .method public static isMiui()Z
     .locals 2
 
-    .line 329
+    .line 344
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/system/app/miui.apk"
@@ -1199,6 +1184,15 @@
     return v0
 .end method
 
+.method public static isStableBuild()Z
+    .locals 1
+
+    .line 193
+    sget-boolean v0, Lmiui/os/Build;->IS_STABLE_VERSION:Z
+
+    return v0
+.end method
+
 .method public static isTablet()Z
     .locals 2
 
@@ -1206,7 +1200,7 @@
 
     const-string v1, ""
 
-    .line 223
+    .line 224
     invoke-static {v0, v1}, Lcom/market/sdk/SystemProperties;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0

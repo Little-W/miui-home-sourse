@@ -33,7 +33,7 @@
     .line 28
     invoke-direct {p0, p1, p2}, Landroidx/preference/Preference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    const p1, 0x7f0d00f2
+    const p1, 0x7f0d0136
 
     .line 29
     invoke-virtual {p0, p1}, Lcom/miui/home/recents/settings/NavigationPositionContainerPreference;->setLayoutResource(I)V
@@ -179,7 +179,7 @@
     .line 37
     iget-object p1, p0, Lcom/miui/home/recents/settings/NavigationPositionContainerPreference;->mVisualCheckGroup:Lmiuix/visual/check/VisualCheckGroup;
 
-    const v0, 0x7f0a01ca
+    const v0, 0x7f0a0279
 
     invoke-virtual {p1, v0}, Lmiuix/visual/check/VisualCheckGroup;->findViewById(I)Landroid/view/View;
 
@@ -192,7 +192,7 @@
     .line 38
     iget-object p1, p0, Lcom/miui/home/recents/settings/NavigationPositionContainerPreference;->mVisualCheckGroup:Lmiuix/visual/check/VisualCheckGroup;
 
-    const v0, 0x7f0a01cb
+    const v0, 0x7f0a027a
 
     invoke-virtual {p1, v0}, Lmiuix/visual/check/VisualCheckGroup;->findViewById(I)Landroid/view/View;
 
@@ -205,7 +205,7 @@
     .line 39
     iget-object p1, p0, Lcom/miui/home/recents/settings/NavigationPositionContainerPreference;->mVisualCheckGroup:Lmiuix/visual/check/VisualCheckGroup;
 
-    const v0, 0x7f0a01cc
+    const v0, 0x7f0a027b
 
     invoke-virtual {p1, v0}, Lmiuix/visual/check/VisualCheckGroup;->findViewById(I)Landroid/view/View;
 
@@ -269,7 +269,7 @@
     return-void
 
     :pswitch_data_0
-    .packed-switch 0x7f0a01ca
+    .packed-switch 0x7f0a0279
         :pswitch_2
         :pswitch_1
         :pswitch_0

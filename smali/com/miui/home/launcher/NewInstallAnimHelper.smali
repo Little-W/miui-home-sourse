@@ -7,9 +7,29 @@
 
 
 # annotations
-.annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nNewInstallAnimHelper.kt\nKotlin\n*S Kotlin\n*F\n+ 1 NewInstallAnimHelper.kt\ncom/miui/home/launcher/NewInstallAnimHelper\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 3 _Sequences.kt\nkotlin/sequences/SequencesKt___SequencesKt\n*L\n1#1,76:1\n1819#2,2:77\n1256#3,2:79\n1256#3,2:81\n*E\n*S KotlinDebug\n*F\n+ 1 NewInstallAnimHelper.kt\ncom/miui/home/launcher/NewInstallAnimHelper\n*L\n35#1,2:77\n58#1,2:79\n71#1,2:81\n*E\n"
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/miui/home/launcher/NewInstallAnimHelper$Companion;
+    }
 .end annotation
+
+.annotation system Ldalvik/annotation/SourceDebugExtension;
+    value = "SMAP\nNewInstallAnimHelper.kt\nKotlin\n*S Kotlin\n*F\n+ 1 NewInstallAnimHelper.kt\ncom/miui/home/launcher/NewInstallAnimHelper\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 3 _Sequences.kt\nkotlin/sequences/SequencesKt___SequencesKt\n*L\n1#1,79:1\n1819#2,2:80\n1256#3,2:82\n1256#3,2:84\n*E\n*S KotlinDebug\n*F\n+ 1 NewInstallAnimHelper.kt\ncom/miui/home/launcher/NewInstallAnimHelper\n*L\n38#1,2:80\n61#1,2:82\n74#1,2:84\n*E\n"
+.end annotation
+
+
+# static fields
+.field public static final Companion:Lcom/miui/home/launcher/NewInstallAnimHelper$Companion;
+
+.field public static final MI_MARKETS:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
@@ -39,6 +59,35 @@
 
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lcom/miui/home/launcher/NewInstallAnimHelper$Companion;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lcom/miui/home/launcher/NewInstallAnimHelper$Companion;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+    sput-object v0, Lcom/miui/home/launcher/NewInstallAnimHelper;->Companion:Lcom/miui/home/launcher/NewInstallAnimHelper$Companion;
+
+    const-string v0, "com.xiaomi.gamecenter"
+
+    const-string v1, "com.xiaomi.market"
+
+    .line 10
+    filled-new-array {v0, v1}, [Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lkotlin/collections/CollectionsKt;->arrayListOf([Ljava/lang/Object;)Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/miui/home/launcher/NewInstallAnimHelper;->MI_MARKETS:Ljava/util/ArrayList;
+
+    return-void
+.end method
+
 .method public constructor <init>(Lcom/miui/home/launcher/NewInstallIconContainer;)V
     .locals 1
 
@@ -46,26 +95,26 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 7
+    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/miui/home/launcher/NewInstallAnimHelper;->mContainer:Lcom/miui/home/launcher/NewInstallIconContainer;
 
-    .line 9
+    .line 12
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p1, p0, Lcom/miui/home/launcher/NewInstallAnimHelper;->mExposeItemList:Ljava/util/ArrayList;
 
-    .line 10
+    .line 13
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p1, p0, Lcom/miui/home/launcher/NewInstallAnimHelper;->mBuffer:Ljava/util/ArrayList;
 
-    .line 14
+    .line 17
     iget-object p1, p0, Lcom/miui/home/launcher/NewInstallAnimHelper;->mContainer:Lcom/miui/home/launcher/NewInstallIconContainer;
 
     move-object v0, p0
@@ -80,7 +129,7 @@
 .method public static final synthetic access$getMBuffer$p(Lcom/miui/home/launcher/NewInstallAnimHelper;)Ljava/util/ArrayList;
     .locals 0
 
-    .line 7
+    .line 6
     iget-object p0, p0, Lcom/miui/home/launcher/NewInstallAnimHelper;->mBuffer:Ljava/util/ArrayList;
 
     return-object p0
@@ -89,7 +138,7 @@
 .method public static final synthetic access$getMExposeItemList$p(Lcom/miui/home/launcher/NewInstallAnimHelper;)Ljava/util/ArrayList;
     .locals 0
 
-    .line 7
+    .line 6
     iget-object p0, p0, Lcom/miui/home/launcher/NewInstallAnimHelper;->mExposeItemList:Ljava/util/ArrayList;
 
     return-object p0
@@ -98,7 +147,7 @@
 .method private final checkExposeAndDoNewInstallAnim()V
     .locals 3
 
-    .line 50
+    .line 53
     iget-boolean v0, p0, Lcom/miui/home/launcher/NewInstallAnimHelper;->isParentVisible:Z
 
     if-eqz v0, :cond_5
@@ -113,7 +162,7 @@
 
     goto/16 :goto_2
 
-    .line 55
+    .line 58
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/NewInstallAnimHelper;->mContainer:Lcom/miui/home/launcher/NewInstallIconContainer;
 
@@ -123,7 +172,7 @@
 
     const-string v1, "current"
 
-    .line 56
+    .line 59
     invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Ljava/lang/Iterable;
@@ -132,7 +181,7 @@
 
     move-result-object v0
 
-    .line 57
+    .line 60
     new-instance v1, Lcom/miui/home/launcher/NewInstallAnimHelper$checkExposeAndDoNewInstallAnim$1;
 
     invoke-direct {v1, p0}, Lcom/miui/home/launcher/NewInstallAnimHelper$checkExposeAndDoNewInstallAnim$1;-><init>(Lcom/miui/home/launcher/NewInstallAnimHelper;)V
@@ -143,7 +192,7 @@
 
     move-result-object v0
 
-    .line 79
+    .line 82
     invoke-interface {v0}, Lkotlin/sequences/Sequence;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -164,7 +213,7 @@
 
     const-string v2, "newInstallAppIcon"
 
-    .line 59
+    .line 62
     invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v1}, Lcom/miui/home/launcher/NewInstallAppIcon;->isNeedNewInstalledAnim()Z
@@ -173,10 +222,10 @@
 
     if-eqz v2, :cond_2
 
-    .line 60
+    .line 63
     invoke-interface {v1}, Lcom/miui/home/launcher/NewInstallAppIcon;->startNewInstallAnim()V
 
-    .line 62
+    .line 65
     :cond_2
     invoke-interface {v1}, Lcom/miui/home/launcher/NewInstallAppIcon;->getShortcutInfo()Lcom/miui/home/launcher/ShortcutInfo;
 
@@ -184,28 +233,28 @@
 
     if-eqz v1, :cond_1
 
-    .line 63
+    .line 66
     iget-object v2, p0, Lcom/miui/home/launcher/NewInstallAnimHelper;->mBuffer:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 64
+    .line 67
     invoke-static {v1}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackShortcutIconExpose(Lcom/miui/home/launcher/ShortcutInfo;)V
 
     goto :goto_0
 
-    .line 68
+    .line 71
     :cond_3
     iget-object v0, p0, Lcom/miui/home/launcher/NewInstallAnimHelper;->mExposeItemList:Ljava/util/ArrayList;
 
     check-cast v0, Ljava/lang/Iterable;
 
-    .line 69
+    .line 72
     invoke-static {v0}, Lkotlin/collections/CollectionsKt;->asSequence(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
-    .line 70
+    .line 73
     new-instance v1, Lcom/miui/home/launcher/NewInstallAnimHelper$checkExposeAndDoNewInstallAnim$3;
 
     invoke-direct {v1, p0}, Lcom/miui/home/launcher/NewInstallAnimHelper$checkExposeAndDoNewInstallAnim$3;-><init>(Lcom/miui/home/launcher/NewInstallAnimHelper;)V
@@ -216,7 +265,7 @@
 
     move-result-object v0
 
-    .line 81
+    .line 84
     invoke-interface {v0}, Lkotlin/sequences/Sequence;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -236,18 +285,18 @@
 
     const-string v2, "static_icon"
 
-    .line 71
+    .line 74
     invoke-virtual {v1, v2}, Lcom/miui/home/launcher/ShortcutInfo;->setTrackMessage(Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 72
+    .line 75
     :cond_4
     iget-object v0, p0, Lcom/miui/home/launcher/NewInstallAnimHelper;->mExposeItemList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 73
+    .line 76
     iget-object v0, p0, Lcom/miui/home/launcher/NewInstallAnimHelper;->mExposeItemList:Ljava/util/ArrayList;
 
     iget-object v1, p0, Lcom/miui/home/launcher/NewInstallAnimHelper;->mBuffer:Ljava/util/ArrayList;
@@ -256,7 +305,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 74
+    .line 77
     iget-object v0, p0, Lcom/miui/home/launcher/NewInstallAnimHelper;->mBuffer:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
@@ -277,18 +326,18 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 40
+    .line 43
     iget-boolean v0, p0, Lcom/miui/home/launcher/NewInstallAnimHelper;->isParentVisible:Z
 
     if-eqz v0, :cond_0
 
-    const-string v0, "com.xiaomi.market"
+    sget-object v0, Lcom/miui/home/launcher/NewInstallAnimHelper;->MI_MARKETS:Ljava/util/ArrayList;
 
     invoke-interface {p1}, Lcom/miui/home/launcher/NewInstallAppIcon;->getInstallerPackageName()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -306,20 +355,20 @@
 
     if-eqz v0, :cond_0
 
-    .line 41
+    .line 44
     invoke-interface {p1}, Lcom/miui/home/launcher/NewInstallAppIcon;->startNewInstallAnim()V
 
-    .line 42
+    .line 45
     invoke-interface {p1}, Lcom/miui/home/launcher/NewInstallAppIcon;->getShortcutInfo()Lcom/miui/home/launcher/ShortcutInfo;
 
     move-result-object p1
 
-    .line 43
+    .line 46
     iget-object v0, p0, Lcom/miui/home/launcher/NewInstallAnimHelper;->mExposeItemList:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 44
+    .line 47
     invoke-static {p1}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackShortcutIconExpose(Lcom/miui/home/launcher/ShortcutInfo;)V
 
     :cond_0
@@ -331,15 +380,15 @@
 
     const/4 v0, 0x0
 
-    .line 34
+    .line 37
     iput-boolean v0, p0, Lcom/miui/home/launcher/NewInstallAnimHelper;->isParentVisible:Z
 
-    .line 35
+    .line 38
     iget-object v0, p0, Lcom/miui/home/launcher/NewInstallAnimHelper;->mExposeItemList:Ljava/util/ArrayList;
 
     check-cast v0, Ljava/lang/Iterable;
 
-    .line 77
+    .line 80
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -359,12 +408,12 @@
 
     const-string v2, "static_icon"
 
-    .line 35
+    .line 38
     invoke-virtual {v1, v2}, Lcom/miui/home/launcher/ShortcutInfo;->setTrackMessage(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 36
+    .line 39
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/NewInstallAnimHelper;->mExposeItemList:Ljava/util/ArrayList;
 
@@ -378,10 +427,10 @@
 
     const/4 v0, 0x1
 
-    .line 29
+    .line 32
     iput-boolean v0, p0, Lcom/miui/home/launcher/NewInstallAnimHelper;->isParentVisible:Z
 
-    .line 30
+    .line 33
     invoke-direct {p0}, Lcom/miui/home/launcher/NewInstallAnimHelper;->checkExposeAndDoNewInstallAnim()V
 
     return-void
@@ -390,7 +439,7 @@
 .method public onScroll(Landroid/widget/AbsListView;III)V
     .locals 0
 
-    const-string p2, "view"
+    const-string/jumbo p2, "view"
 
     invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -400,13 +449,13 @@
 .method public onScrollStateChanged(Landroid/widget/AbsListView;I)V
     .locals 1
 
-    const-string v0, "view"
+    const-string/jumbo v0, "view"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-nez p2, :cond_0
 
-    .line 19
+    .line 22
     invoke-direct {p0}, Lcom/miui/home/launcher/NewInstallAnimHelper;->checkExposeAndDoNewInstallAnim()V
 
     :cond_0

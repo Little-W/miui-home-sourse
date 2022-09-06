@@ -293,6 +293,7 @@
     <string name="eras_bc">ಕ್ರಿಪೂ</string>
     <string name="evening">ಅಪರಾಹ್ನ</string>
     <string name="exit_overview_because_task_stack_changed">ಹಿನ್ನೆಲೆಯ ಬದಲಾವಣೆಗಳಿಂದಾಗಿ ಇತ್ತೀಚಿನವುಗಳನ್ನು ಮುಚ್ಚಲಾಗಿದೆ</string>
+    <string name="external_not_support_split_screen_j18">ಔಟರ್‌ ಸ್ಕ್ರೀನ್‌ನಲ್ಲಿ ಸ್ಪ್ಲಿಟ್‌ ಸ್ಕ್ರೀನ್‌ಗೆ ಬೆಂಬಲವಿರುವುದಿಲ್ಲ</string>
     <string name="failed_to_delete_temporary">ತೆಗೆಯಲು ಸಾಧ್ಯವಿಲ್ಲ</string>
     <string name="failed_to_drop">ಸರಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ</string>
     <string name="failed_to_drop_widget_invalid">ಈ ವಿಜೆಟ್ ಅಮಾನ್ಯವಾಗಿದೆ</string>
@@ -497,6 +498,7 @@
     <string name="midnight">ರಾತ್ರಿ</string>
     <string name="minus_one_screen">ಆ್ಯಪ್‌‌ ವೋಲ್ಟ್‌</string>
     <string name="miui_screen_config_title">ಹೋಮ್‌ ಸ್ಕ್ರೀನ್‌ ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
+    <string name="miui_widget_menu_replace_text">ಬದಲಿಸಿ</string>
     <string name="miuix_access_state_desc">ಆಯ್ಕೆ ಮಾಡಲಾಗಿದೆ</string>
     <string name="miuix_appcompat_action_mode_deselect_all">ಆಯ್ಕೆ ರದ್ದುಮಾಡಿ</string>
     <string name="miuix_appcompat_action_mode_select_all">ಎಲ್ಲಾ ಆಯ್ಕೆಮಾಡು</string>
@@ -523,6 +525,8 @@
     <string name="monday">ಸೋಮವಾರ</string>
     <string name="monday_short">ಸೋಮ</string>
     <string name="monday_shortest">ಸೋಮ</string>
+    <string name="monochrome_summary">ಹೊಂದಾಣಿಕೆಯಾಗುವ ಐಕಾನ್‌ಗಳ ಹಿನ್ನೆಲೆ ಬಣ್ಣ ಬದಲಾಯಿಸಿ</string>
+    <string name="monochrome_title">ಹಿನ್ನೆಲೆ ಬಣ್ಣ</string>
     <string name="month_april">ಏಪ್ರಿಲ್</string>
     <string name="month_april_short">ಏಪ್ರಿ</string>
     <string name="month_april_shortest">ಏಪ್ರಿ</string>

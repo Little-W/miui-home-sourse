@@ -20,7 +20,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 498
+    .line 501
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,7 +31,7 @@
 .method public a(Ljava/lang/String;Ljava/lang/String;)I
     .locals 0
 
-    .line 501
+    .line 504
     invoke-virtual {p1, p2}, Ljava/lang/String;->compareToIgnoreCase(Ljava/lang/String;)I
 
     move-result p1
@@ -42,7 +42,7 @@
 .method public synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    .line 498
+    .line 501
     check-cast p1, Ljava/lang/String;
 
     check-cast p2, Ljava/lang/String;

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="all_apps_scroller_text_size">8.699982sp</dimen>
+    <dimen name="desktop_mode_padding_right">0.0dip</dimen>
+    <dimen name="edit_mode_thumbnail_home_icon_radius">18.179993dip</dimen>
+    <dimen name="edit_mode_thumbnail_item_pk_add_size">36.359985dip</dimen>
+    <dimen name="edit_mode_thumbnail_item_size">53.359985dip</dimen>
+    <dimen name="edit_mode_thumbnail_widget_pick_bg_width">220.72dip</dimen>
+    <item type="dimen" name="edit_mode_thumbnail_workspace_diff_ratio">0.6</item>
+    <dimen name="edit_mode_workspace_indicator_diff_height">30.0dip</dimen>
+    <dimen name="editing_entry_thumbnail_view_margin_left_right">0.0dip</dimen>
+    <dimen name="fastscroll_letter_side_padding_bottom">10.899994dip</dimen>
+    <dimen name="fastscroll_letter_side_padding_top">10.899994dip</dimen>
+    <dimen name="folder_content_margin_top">24.0dip</dimen>
+    <dimen name="folder_content_padding_left">0.0dip</dimen>
+    <dimen name="folder_content_padding_right">0.0dip</dimen>
+    <dimen name="folder_edit_text_margin_left">18.0dip</dimen>
+    <dimen name="folder_edit_text_margin_left_noword">10.0dip</dimen>
+    <dimen name="folder_edit_text_text_size_noword">29.329987dip</dimen>
+    <dimen name="folder_grid_margin_top">17.329987dip</dimen>
+    <dimen name="folder_item_horizontal_spacing_noword">14.0dip</dimen>
+    <dimen name="folder_item_vertical_spacing_noword">-3.0dip</dimen>
+    <dimen name="hotseats_height">96.0dip</dimen>
+    <dimen name="hotseats_margin_top">45.0dip</dimen>
+    <dimen name="hotseats_margin_top_search_bar">37.0dip</dimen>
+    <dimen name="hotseats_padding_bottom">0.0dip</dimen>
+    <dimen name="hotseats_padding_top">0.0dip</dimen>
+    <dimen name="icon_padding_top">4.0dip</dimen>
+    <dimen name="recents_task_view_header_height">41.0dip</dimen>
+    <dimen name="recommend_margin_start">20.0dip</dimen>
+    <dimen name="recommend_switch_summary_padding_left">5.0dip</dimen>
+    <dimen name="search_bar_margin_bottom">43.0dip</dimen>
+    <dimen name="search_bar_margin_top">13.0dip</dimen>
+    <dimen name="set_home_screen_gap_middle">29.099976dip</dimen>
+    <dimen name="slide_bar_margin_top">22.0dip</dimen>
+    <dimen name="workspace_cell_additional_padding_top_notch">0.0dip</dimen>
+    <dimen name="workspace_cell_padding_top">35.0dip</dimen>
+    <dimen name="workspace_cell_vertical_spacing">0.0dip</dimen>
+    <item type="dimen" name="workspace_cell_vertical_spacing_navigation">@dimen/workspace_cell_vertical_spacing</item>
+</resources>

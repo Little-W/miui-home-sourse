@@ -505,6 +505,7 @@
 
     if-ne v5, v0, :cond_8
 
+    .line 1360
     iget v5, p1, Landroidx/viewpager/widget/OriginalViewPager$ItemInfo;->offset:F
 
     iget v7, p1, Landroidx/viewpager/widget/OriginalViewPager$ItemInfo;->widthFactor:F
@@ -1115,7 +1116,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 2022
+    .line 2023
     iget v3, p0, Landroidx/viewpager/widget/OriginalViewPager;->mPageTransformerLayerType:I
 
     goto :goto_1
@@ -4719,7 +4720,7 @@
 
     if-lez v14, :cond_8
 
-    .line 2102
+    .line 2103
     iget v0, v6, Landroidx/viewpager/widget/OriginalViewPager;->mInitialMotionX:F
 
     iget v1, v6, Landroidx/viewpager/widget/OriginalViewPager;->mTouchSlop:I
@@ -6334,6 +6335,7 @@
 
     goto :goto_0
 
+    .line 2235
     :cond_5
     iget v3, p0, Landroidx/viewpager/widget/OriginalViewPager;->mTouchSlop:I
 
@@ -6824,13 +6826,12 @@
 
     goto :goto_4
 
-    .line 1175
+    .line 1176
     :cond_8
     iget v14, v8, Landroidx/viewpager/widget/OriginalViewPager$ItemInfo;->widthFactor:F
 
     sub-float v14, v13, v14
 
-    .line 1176
     invoke-virtual/range {p0 .. p0}, Landroidx/viewpager/widget/OriginalViewPager;->getPaddingLeft()I
 
     move-result v15

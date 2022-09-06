@@ -26,15 +26,15 @@
 .method public constructor <init>(Ljava/lang/String;Lcom/miui/maml/data/Variables;)V
     .locals 3
 
-    .line 2781
+    .line 2786
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2782
+    .line 2787
     iput-object p2, p0, Lcom/miui/maml/ActionCommand$ObjVar;->mVars:Lcom/miui/maml/data/Variables;
 
     const/16 v0, 0x5b
 
-    .line 2784
+    .line 2789
     invoke-virtual {p1, v0}, Ljava/lang/String;->indexOf(I)I
 
     move-result v0
@@ -43,7 +43,7 @@
 
     const/4 v1, 0x0
 
-    .line 2787
+    .line 2792
     :try_start_0
     invoke-virtual {p1, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
@@ -53,7 +53,7 @@
 
     add-int/lit8 v0, v0, 0x1
 
-    .line 2788
+    .line 2793
     :try_start_1
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
@@ -65,7 +65,7 @@
 
     move-result-object p1
 
-    .line 2789
+    .line 2794
     invoke-static {p2, p1}, Lcom/miui/maml/data/Expression;->build(Lcom/miui/maml/data/Variables;Ljava/lang/String;)Lcom/miui/maml/data/Expression;
 
     move-result-object p1
@@ -81,7 +81,7 @@
     :catch_0
     move-object p1, v1
 
-    .line 2793
+    .line 2798
     :catch_1
     :cond_0
     :goto_0
@@ -99,7 +99,7 @@
 .method public get()Ljava/lang/Object;
     .locals 3
 
-    .line 2797
+    .line 2802
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$ObjVar;->mVars:Lcom/miui/maml/data/Variables;
 
     iget v1, p0, Lcom/miui/maml/ActionCommand$ObjVar;->mIndex:I
@@ -110,17 +110,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 2798
+    .line 2803
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$ObjVar;->mIndexArr:Lcom/miui/maml/data/Expression;
 
     if-eqz v1, :cond_0
 
-    .line 2799
+    .line 2804
     instance-of v2, v0, [Ljava/lang/Object;
 
     if-eqz v2, :cond_0
 
-    .line 2801
+    .line 2806
     :try_start_0
     check-cast v0, [Ljava/lang/Object;
 

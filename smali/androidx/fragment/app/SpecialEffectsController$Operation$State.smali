@@ -38,7 +38,7 @@
 .method static constructor <clinit>()V
     .locals 6
 
-    .line 386
+    .line 389
     new-instance v0, Landroidx/fragment/app/SpecialEffectsController$Operation$State;
 
     const-string v1, "REMOVED"
@@ -49,7 +49,7 @@
 
     sput-object v0, Landroidx/fragment/app/SpecialEffectsController$Operation$State;->REMOVED:Landroidx/fragment/app/SpecialEffectsController$Operation$State;
 
-    .line 390
+    .line 393
     new-instance v0, Landroidx/fragment/app/SpecialEffectsController$Operation$State;
 
     const-string v1, "VISIBLE"
@@ -60,7 +60,7 @@
 
     sput-object v0, Landroidx/fragment/app/SpecialEffectsController$Operation$State;->VISIBLE:Landroidx/fragment/app/SpecialEffectsController$Operation$State;
 
-    .line 394
+    .line 397
     new-instance v0, Landroidx/fragment/app/SpecialEffectsController$Operation$State;
 
     const-string v1, "GONE"
@@ -71,7 +71,7 @@
 
     sput-object v0, Landroidx/fragment/app/SpecialEffectsController$Operation$State;->GONE:Landroidx/fragment/app/SpecialEffectsController$Operation$State;
 
-    .line 398
+    .line 401
     new-instance v0, Landroidx/fragment/app/SpecialEffectsController$Operation$State;
 
     const-string v1, "INVISIBLE"
@@ -84,7 +84,7 @@
 
     const/4 v0, 0x4
 
-    .line 382
+    .line 385
     new-array v0, v0, [Landroidx/fragment/app/SpecialEffectsController$Operation$State;
 
     sget-object v1, Landroidx/fragment/app/SpecialEffectsController$Operation$State;->REMOVED:Landroidx/fragment/app/SpecialEffectsController$Operation$State;
@@ -116,7 +116,7 @@
         }
     .end annotation
 
-    .line 382
+    .line 385
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -135,12 +135,12 @@
 
     if-ne p0, v0, :cond_0
 
-    .line 429
+    .line 432
     sget-object p0, Landroidx/fragment/app/SpecialEffectsController$Operation$State;->GONE:Landroidx/fragment/app/SpecialEffectsController$Operation$State;
 
     return-object p0
 
-    .line 431
+    .line 434
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -162,13 +162,13 @@
 
     throw v0
 
-    .line 427
+    .line 430
     :cond_1
     sget-object p0, Landroidx/fragment/app/SpecialEffectsController$Operation$State;->INVISIBLE:Landroidx/fragment/app/SpecialEffectsController$Operation$State;
 
     return-object p0
 
-    .line 425
+    .line 428
     :cond_2
     sget-object p0, Landroidx/fragment/app/SpecialEffectsController$Operation$State;->VISIBLE:Landroidx/fragment/app/SpecialEffectsController$Operation$State;
 
@@ -178,7 +178,7 @@
 .method static from(Landroid/view/View;)Landroidx/fragment/app/SpecialEffectsController$Operation$State;
     .locals 2
 
-    .line 409
+    .line 412
     invoke-virtual {p0}, Landroid/view/View;->getAlpha()F
 
     move-result v0
@@ -195,12 +195,12 @@
 
     if-nez v0, :cond_0
 
-    .line 410
+    .line 413
     sget-object p0, Landroidx/fragment/app/SpecialEffectsController$Operation$State;->INVISIBLE:Landroidx/fragment/app/SpecialEffectsController$Operation$State;
 
     return-object p0
 
-    .line 412
+    .line 415
     :cond_0
     invoke-virtual {p0}, Landroid/view/View;->getVisibility()I
 
@@ -216,7 +216,7 @@
 .method public static valueOf(Ljava/lang/String;)Landroidx/fragment/app/SpecialEffectsController$Operation$State;
     .locals 1
 
-    .line 382
+    .line 385
     const-class v0, Landroidx/fragment/app/SpecialEffectsController$Operation$State;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -231,7 +231,7 @@
 .method public static values()[Landroidx/fragment/app/SpecialEffectsController$Operation$State;
     .locals 1
 
-    .line 382
+    .line 385
     sget-object v0, Landroidx/fragment/app/SpecialEffectsController$Operation$State;->$VALUES:[Landroidx/fragment/app/SpecialEffectsController$Operation$State;
 
     invoke-virtual {v0}, [Landroidx/fragment/app/SpecialEffectsController$Operation$State;->clone()Ljava/lang/Object;
@@ -248,7 +248,7 @@
 .method applyState(Landroid/view/View;)V
     .locals 4
 
-    .line 441
+    .line 444
     sget-object v0, Landroidx/fragment/app/SpecialEffectsController$3;->$SwitchMap$androidx$fragment$app$SpecialEffectsController$Operation$State:[I
 
     invoke-virtual {p0}, Landroidx/fragment/app/SpecialEffectsController$Operation$State;->ordinal()I
@@ -263,7 +263,7 @@
 
     goto/16 :goto_0
 
-    .line 467
+    .line 470
     :pswitch_0
     invoke-static {v1}, Landroidx/fragment/app/FragmentManager;->isLoggingEnabled(I)Z
 
@@ -273,7 +273,7 @@
 
     const-string v0, "FragmentManager"
 
-    .line 468
+    .line 471
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -297,12 +297,12 @@
     :cond_0
     const/4 v0, 0x4
 
-    .line 472
+    .line 475
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
     goto/16 :goto_0
 
-    .line 460
+    .line 463
     :pswitch_1
     invoke-static {v1}, Landroidx/fragment/app/FragmentManager;->isLoggingEnabled(I)Z
 
@@ -312,7 +312,7 @@
 
     const-string v0, "FragmentManager"
 
-    .line 461
+    .line 464
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -336,12 +336,12 @@
     :cond_1
     const/16 v0, 0x8
 
-    .line 464
+    .line 467
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
     goto :goto_0
 
-    .line 453
+    .line 456
     :pswitch_2
     invoke-static {v1}, Landroidx/fragment/app/FragmentManager;->isLoggingEnabled(I)Z
 
@@ -351,7 +351,7 @@
 
     const-string v0, "FragmentManager"
 
-    .line 454
+    .line 457
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -375,12 +375,12 @@
     :cond_2
     const/4 v0, 0x0
 
-    .line 457
+    .line 460
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
     goto :goto_0
 
-    .line 443
+    .line 446
     :pswitch_3
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
@@ -390,7 +390,7 @@
 
     if-eqz v0, :cond_4
 
-    .line 445
+    .line 448
     invoke-static {v1}, Landroidx/fragment/app/FragmentManager;->isLoggingEnabled(I)Z
 
     move-result v1
@@ -399,7 +399,7 @@
 
     const-string v1, "FragmentManager"
 
-    .line 446
+    .line 449
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -422,7 +422,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 449
+    .line 452
     :cond_3
     invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 

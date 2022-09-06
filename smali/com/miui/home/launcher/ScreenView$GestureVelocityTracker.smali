@@ -42,19 +42,19 @@
 .method public constructor <init>(Lcom/miui/home/launcher/ScreenView;)V
     .locals 0
 
-    .line 238
+    .line 232
     iput-object p1, p0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->this$0:Lcom/miui/home/launcher/ScreenView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 252
+    .line 246
     new-instance p1, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker$Tracker;
 
     invoke-direct {p1, p0}, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker$Tracker;-><init>(Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;)V
 
     iput-object p1, p0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->mTx:Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker$Tracker;
 
-    .line 253
+    .line 247
     new-instance p1, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker$Tracker;
 
     invoke-direct {p1, p0}, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker$Tracker;-><init>(Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;)V
@@ -63,10 +63,10 @@
 
     const/4 p1, -0x1
 
-    .line 254
+    .line 248
     iput p1, p0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->mPointerId:I
 
-    .line 255
+    .line 249
     iput p1, p0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->mCounter:I
 
     return-void
@@ -75,27 +75,27 @@
 .method private reset()V
     .locals 1
 
-    .line 342
+    .line 336
     iget-object v0, p0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->mTx:Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker$Tracker;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker$Tracker;->reset()V
 
-    .line 343
+    .line 337
     iget-object v0, p0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->mTy:Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker$Tracker;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker$Tracker;->reset()V
 
     const/4 v0, -0x1
 
-    .line 344
+    .line 338
     iput v0, p0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->mPointerId:I
 
     const/4 v0, 0x0
 
-    .line 345
+    .line 339
     iput v0, p0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->mCounter:I
 
-    .line 346
+    .line 340
     iput-boolean v0, p0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->mVerticalGestureConfirmed:Z
 
     return-void
@@ -104,7 +104,7 @@
 .method private trackPoint(FLcom/miui/home/launcher/ScreenView$GestureVelocityTracker$Tracker;)V
     .locals 3
 
-    .line 314
+    .line 308
     iget v0, p2, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker$Tracker;->start:F
 
     const/4 v1, 0x0
@@ -113,12 +113,12 @@
 
     if-gez v0, :cond_0
 
-    .line 315
+    .line 309
     iput p1, p2, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker$Tracker;->start:F
 
     return-void
 
-    .line 318
+    .line 312
     :cond_0
     iget v0, p2, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker$Tracker;->prev:F
 
@@ -126,12 +126,12 @@
 
     if-gez v0, :cond_1
 
-    .line 319
+    .line 313
     iput p1, p2, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker$Tracker;->prev:F
 
     return-void
 
-    .line 322
+    .line 316
     :cond_1
     iget v0, p2, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker$Tracker;->fold:F
 
@@ -141,7 +141,7 @@
 
     if-gez v0, :cond_4
 
-    .line 323
+    .line 317
     iget v0, p2, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker$Tracker;->prev:F
 
     iget v2, p2, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker$Tracker;->start:F
@@ -171,7 +171,7 @@
 
     if-lez v0, :cond_7
 
-    .line 324
+    .line 318
     :cond_3
     iget v0, p2, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker$Tracker;->start:F
 
@@ -185,14 +185,14 @@
 
     if-lez v0, :cond_7
 
-    .line 325
+    .line 319
     iget v0, p2, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker$Tracker;->prev:F
 
     iput v0, p2, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker$Tracker;->fold:F
 
     goto :goto_0
 
-    .line 329
+    .line 323
     :cond_4
     iget v0, p2, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker$Tracker;->fold:F
 
@@ -202,7 +202,7 @@
 
     if-eqz v0, :cond_7
 
-    .line 330
+    .line 324
     iget v0, p2, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker$Tracker;->prev:F
 
     iget v2, p2, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker$Tracker;->fold:F
@@ -232,7 +232,7 @@
 
     if-lez v0, :cond_7
 
-    .line 331
+    .line 325
     :cond_6
     iget v0, p2, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker$Tracker;->fold:F
 
@@ -246,17 +246,17 @@
 
     if-lez v0, :cond_7
 
-    .line 332
+    .line 326
     iget v0, p2, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker$Tracker;->fold:F
 
     iput v0, p2, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker$Tracker;->start:F
 
-    .line 333
+    .line 327
     iget v0, p2, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker$Tracker;->prev:F
 
     iput v0, p2, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker$Tracker;->fold:F
 
-    .line 338
+    .line 332
     :cond_7
     :goto_0
     iput p1, p2, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker$Tracker;->prev:F
@@ -269,7 +269,7 @@
 .method public addMovement(Landroid/view/MotionEvent;)V
     .locals 4
 
-    .line 279
+    .line 273
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
@@ -286,7 +286,7 @@
 
     goto :goto_1
 
-    .line 283
+    .line 277
     :cond_0
     iget v0, p0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->mCounter:I
 
@@ -294,19 +294,19 @@
 
     iput v0, p0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->mCounter:I
 
-    .line 284
+    .line 278
     iget-object v0, p0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     if-nez v0, :cond_1
 
-    .line 285
+    .line 279
     invoke-static {}, Landroid/view/VelocityTracker;->obtain()Landroid/view/VelocityTracker;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->mVelocityTracker:Landroid/view/VelocityTracker;
 
-    .line 287
+    .line 281
     :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->this$0:Lcom/miui/home/launcher/ScreenView;
 
@@ -322,25 +322,25 @@
 
     if-eqz v0, :cond_3
 
-    .line 288
+    .line 282
     iget-object v0, p0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->mVelocityTrackerOverScroll:Landroid/view/VelocityTracker;
 
     if-nez v0, :cond_2
 
-    .line 289
+    .line 283
     invoke-static {}, Landroid/view/VelocityTracker;->obtain()Landroid/view/VelocityTracker;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->mVelocityTrackerOverScroll:Landroid/view/VelocityTracker;
 
-    .line 291
+    .line 285
     :cond_2
     invoke-static {p1}, Landroid/view/MotionEvent;->obtain(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
 
     move-result-object v0
 
-    .line 292
+    .line 286
     iget-object v1, p0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->this$0:Lcom/miui/home/launcher/ScreenView;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/ScreenView;->getScrollX()I
@@ -355,68 +355,68 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/view/MotionEvent;->setLocation(FF)V
 
-    .line 293
+    .line 287
     iget-object v1, p0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->mVelocityTrackerOverScroll:Landroid/view/VelocityTracker;
 
     invoke-virtual {v1, v0}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
 
-    .line 294
+    .line 288
     invoke-virtual {v0}, Landroid/view/MotionEvent;->recycle()V
 
-    .line 297
+    .line 291
     :cond_3
     iget-object v0, p0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     invoke-virtual {v0, p1}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
 
-    .line 298
+    .line 292
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
 
-    .line 299
+    .line 293
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v1
 
-    .line 300
+    .line 294
     iget v2, p0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->mPointerId:I
 
     const/4 v3, -0x1
 
     if-eq v2, v3, :cond_5
 
-    .line 301
+    .line 295
     invoke-virtual {p1, v2}, Landroid/view/MotionEvent;->findPointerIndex(I)I
 
     move-result v2
 
     if-eq v2, v3, :cond_4
 
-    .line 303
+    .line 297
     invoke-virtual {p1, v2}, Landroid/view/MotionEvent;->getX(I)F
 
     move-result v0
 
-    .line 304
+    .line 298
     invoke-virtual {p1, v2}, Landroid/view/MotionEvent;->getY(I)F
 
     move-result v1
 
     goto :goto_0
 
-    .line 306
+    .line 300
     :cond_4
     iput v3, p0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->mPointerId:I
 
-    .line 309
+    .line 303
     :cond_5
     :goto_0
     iget-object p1, p0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->mTx:Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker$Tracker;
 
     invoke-direct {p0, v0, p1}, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->trackPoint(FLcom/miui/home/launcher/ScreenView$GestureVelocityTracker$Tracker;)V
 
-    .line 310
+    .line 304
     iget-object p1, p0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->mTy:Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker$Tracker;
 
     invoke-direct {p0, v1, p1}, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->trackPoint(FLcom/miui/home/launcher/ScreenView$GestureVelocityTracker$Tracker;)V
@@ -431,7 +431,7 @@
 .method public getCounter()I
     .locals 1
 
-    .line 360
+    .line 354
     iget v0, p0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->mCounter:I
 
     return v0
@@ -440,7 +440,7 @@
 .method public getFlingDirection(Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker$Tracker;F)I
     .locals 4
 
-    .line 402
+    .line 396
     invoke-static {p2}, Ljava/lang/Math;->abs(F)F
 
     move-result p2
@@ -451,7 +451,7 @@
 
     if-lez p2, :cond_6
 
-    .line 403
+    .line 397
     iget p2, p1, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker$Tracker;->fold:F
 
     const/4 v0, 0x0
@@ -464,7 +464,7 @@
 
     if-gez p2, :cond_1
 
-    .line 404
+    .line 398
     iget p2, p1, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker$Tracker;->prev:F
 
     iget p1, p1, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker$Tracker;->start:F
@@ -481,7 +481,7 @@
     :goto_0
     return v0
 
-    .line 406
+    .line 400
     :cond_1
     iget p2, p1, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker$Tracker;->prev:F
 
@@ -493,7 +493,7 @@
 
     if-gez p2, :cond_3
 
-    .line 407
+    .line 401
     iget-object p1, p0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->this$0:Lcom/miui/home/launcher/ScreenView;
 
     invoke-static {p1}, Lcom/miui/home/launcher/ScreenView;->access$300(Lcom/miui/home/launcher/ScreenView;)F
@@ -531,7 +531,7 @@
     :cond_2
     return v1
 
-    .line 412
+    .line 406
     :cond_3
     iget p2, p1, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker$Tracker;->prev:F
 
@@ -541,7 +541,7 @@
 
     if-lez p1, :cond_5
 
-    .line 413
+    .line 407
     iget-object p1, p0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->this$0:Lcom/miui/home/launcher/ScreenView;
 
     invoke-static {p1}, Lcom/miui/home/launcher/ScreenView;->access$300(Lcom/miui/home/launcher/ScreenView;)F
@@ -591,7 +591,7 @@
 .method public getVerticalGesture()I
     .locals 3
 
-    .line 385
+    .line 379
     iget-boolean v0, p0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->mVerticalGestureConfirmed:Z
 
     const/4 v1, 0x0
@@ -611,7 +611,7 @@
     :cond_0
     const/16 v0, 0x3e8
 
-    .line 388
+    .line 382
     iget-object v2, p0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->this$0:Lcom/miui/home/launcher/ScreenView;
 
     invoke-static {v2}, Lcom/miui/home/launcher/ScreenView;->access$200(Lcom/miui/home/launcher/ScreenView;)I
@@ -622,7 +622,7 @@
 
     move-result v0
 
-    .line 389
+    .line 383
     invoke-static {v0}, Ljava/lang/Math;->abs(F)F
 
     move-result v0
@@ -651,7 +651,7 @@
 
     sub-float/2addr v0, v2
 
-    .line 390
+    .line 384
     invoke-static {v0}, Ljava/lang/Math;->abs(F)F
 
     move-result v0
@@ -668,10 +668,10 @@
 
     const/4 v0, 0x1
 
-    .line 391
+    .line 385
     iput-boolean v0, p0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->mVerticalGestureConfirmed:Z
 
-    .line 392
+    .line 386
     iget-object v0, p0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->mTy:Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker$Tracker;
 
     iget v0, v0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker$Tracker;->start:F
@@ -705,7 +705,7 @@
 .method public getXFlingDirection(F)I
     .locals 1
 
-    .line 398
+    .line 392
     iget-object v0, p0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->mTx:Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker$Tracker;
 
     invoke-virtual {p0, v0, p1}, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->getFlingDirection(Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker$Tracker;F)I
@@ -718,12 +718,12 @@
 .method public getXVelocity(III)F
     .locals 2
 
-    .line 364
+    .line 358
     iget-object v0, p0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     if-nez v0, :cond_0
 
-    .line 365
+    .line 359
     iget-object p1, p0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->this$0:Lcom/miui/home/launcher/ScreenView;
 
     invoke-static {p1}, Lcom/miui/home/launcher/ScreenView;->access$200(Lcom/miui/home/launcher/ScreenView;)I
@@ -734,7 +734,7 @@
 
     return p1
 
-    .line 367
+    .line 361
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->this$0:Lcom/miui/home/launcher/ScreenView;
 
@@ -756,10 +756,10 @@
 
     int-to-float p2, p2
 
-    .line 368
+    .line 362
     invoke-virtual {v0, p1, p2}, Landroid/view/VelocityTracker;->computeCurrentVelocity(IF)V
 
-    .line 369
+    .line 363
     iget-object p1, p0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->mVelocityTrackerOverScroll:Landroid/view/VelocityTracker;
 
     invoke-virtual {p1, p3}, Landroid/view/VelocityTracker;->getXVelocity(I)F
@@ -768,7 +768,7 @@
 
     return p1
 
-    .line 371
+    .line 365
     :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->mVelocityTracker:Landroid/view/VelocityTracker;
 
@@ -776,7 +776,7 @@
 
     invoke-virtual {v0, p1, p2}, Landroid/view/VelocityTracker;->computeCurrentVelocity(IF)V
 
-    .line 372
+    .line 366
     iget-object p1, p0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     invoke-virtual {p1, p3}, Landroid/view/VelocityTracker;->getXVelocity(I)F
@@ -789,12 +789,12 @@
 .method public getYVelocity(III)F
     .locals 1
 
-    .line 377
+    .line 371
     iget-object v0, p0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     if-nez v0, :cond_0
 
-    .line 378
+    .line 372
     iget-object p1, p0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->this$0:Lcom/miui/home/launcher/ScreenView;
 
     invoke-static {p1}, Lcom/miui/home/launcher/ScreenView;->access$200(Lcom/miui/home/launcher/ScreenView;)I
@@ -808,10 +808,10 @@
     :cond_0
     int-to-float p2, p2
 
-    .line 380
+    .line 374
     invoke-virtual {v0, p1, p2}, Landroid/view/VelocityTracker;->computeCurrentVelocity(IF)V
 
-    .line 381
+    .line 375
     iget-object p1, p0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     invoke-virtual {p1, p3}, Landroid/view/VelocityTracker;->getYVelocity(I)F
@@ -824,12 +824,12 @@
 .method public init(I)V
     .locals 1
 
-    .line 350
+    .line 344
     iget-object v0, p0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     if-nez v0, :cond_0
 
-    .line 351
+    .line 345
     invoke-static {}, Landroid/view/VelocityTracker;->obtain()Landroid/view/VelocityTracker;
 
     move-result-object v0
@@ -838,15 +838,15 @@
 
     goto :goto_0
 
-    .line 353
+    .line 347
     :cond_0
     invoke-virtual {v0}, Landroid/view/VelocityTracker;->clear()V
 
-    .line 355
+    .line 349
     :goto_0
     invoke-direct {p0}, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->reset()V
 
-    .line 356
+    .line 350
     iput p1, p0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->mPointerId:I
 
     return-void
@@ -855,32 +855,32 @@
 .method public recycle()V
     .locals 2
 
-    .line 267
+    .line 261
     iget-object v0, p0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 268
+    .line 262
     invoke-virtual {v0}, Landroid/view/VelocityTracker;->recycle()V
 
-    .line 269
+    .line 263
     iput-object v1, p0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->mVelocityTracker:Landroid/view/VelocityTracker;
 
-    .line 271
+    .line 265
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->mVelocityTrackerOverScroll:Landroid/view/VelocityTracker;
 
     if-eqz v0, :cond_1
 
-    .line 272
+    .line 266
     invoke-virtual {v0}, Landroid/view/VelocityTracker;->recycle()V
 
-    .line 273
+    .line 267
     iput-object v1, p0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->mVelocityTrackerOverScroll:Landroid/view/VelocityTracker;
 
-    .line 275
+    .line 269
     :cond_1
     invoke-direct {p0}, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;->reset()V
 

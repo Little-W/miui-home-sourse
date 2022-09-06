@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/FolderIcon$11;)V
     .locals 0
 
-    .line 559
+    .line 567
     iput-object p1, p0, Lcom/miui/home/launcher/FolderIcon$11$1;->this$1:Lcom/miui/home/launcher/FolderIcon$11;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 2
 
-    .line 562
+    .line 570
     iget-object v0, p0, Lcom/miui/home/launcher/FolderIcon$11$1;->this$1:Lcom/miui/home/launcher/FolderIcon$11;
 
     iget-object v0, v0, Lcom/miui/home/launcher/FolderIcon$11;->this$0:Lcom/miui/home/launcher/FolderIcon;

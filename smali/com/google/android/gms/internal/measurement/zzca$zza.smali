@@ -226,29 +226,29 @@
 
     const/4 p2, 0x0
 
-    const-string v0, "zzc"
+    const-string/jumbo v0, "zzc"
 
     aput-object v0, p1, p2
 
-    const-string p2, "zzd"
+    const-string/jumbo p2, "zzd"
 
     aput-object p2, p1, p3
 
     const/4 p2, 0x2
 
-    const-string p3, "zze"
+    const-string/jumbo p3, "zze"
 
     aput-object p3, p1, p2
 
     const/4 p2, 0x3
 
-    const-string p3, "zzf"
+    const-string/jumbo p3, "zzf"
 
     aput-object p3, p1, p2
 
     const/4 p2, 0x4
 
-    const-string p3, "zzg"
+    const-string/jumbo p3, "zzg"
 
     aput-object p3, p1, p2
 
@@ -278,8 +278,6 @@
     invoke-direct {p1}, Lcom/google/android/gms/internal/measurement/zzca$zza;-><init>()V
 
     return-object p1
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0x1

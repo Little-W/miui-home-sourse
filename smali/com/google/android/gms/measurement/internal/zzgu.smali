@@ -67,7 +67,7 @@
 
     const-string v24, "topic"
 
-    const-string v25, "update_with_analytics"
+    const-string/jumbo v25, "update_with_analytics"
 
     const-string v26, "previous_first_open_count"
 
@@ -324,7 +324,7 @@
 
     const-string v28, "transaction_id"
 
-    const-string v29, "value"
+    const-string/jumbo v29, "value"
 
     const-string v30, "item_list"
 

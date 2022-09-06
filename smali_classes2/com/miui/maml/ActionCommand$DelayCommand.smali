@@ -26,20 +26,20 @@
 .method public constructor <init>(Lcom/miui/maml/ActionCommand;J)V
     .locals 1
 
-    .line 1244
+    .line 1249
     invoke-virtual {p1}, Lcom/miui/maml/ActionCommand;->getRoot()Lcom/miui/maml/ScreenElementRoot;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Lcom/miui/maml/ActionCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;)V
 
-    .line 1245
+    .line 1250
     iput-object p1, p0, Lcom/miui/maml/ActionCommand$DelayCommand;->mCommand:Lcom/miui/maml/ActionCommand;
 
-    .line 1246
+    .line 1251
     iput-wide p2, p0, Lcom/miui/maml/ActionCommand$DelayCommand;->mDelay:J
 
-    .line 1247
+    .line 1252
     new-instance p1, Lcom/miui/maml/ActionCommand$DelayCommand$1;
 
     invoke-direct {p1, p0}, Lcom/miui/maml/ActionCommand$DelayCommand$1;-><init>(Lcom/miui/maml/ActionCommand$DelayCommand;)V
@@ -52,7 +52,7 @@
 .method static synthetic access$400(Lcom/miui/maml/ActionCommand$DelayCommand;)Lcom/miui/maml/ActionCommand;
     .locals 0
 
-    .line 1238
+    .line 1243
     iget-object p0, p0, Lcom/miui/maml/ActionCommand$DelayCommand;->mCommand:Lcom/miui/maml/ActionCommand;
 
     return-object p0
@@ -63,7 +63,7 @@
 .method protected doPerform()V
     .locals 4
 
-    .line 1266
+    .line 1271
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$DelayCommand;->getRoot()Lcom/miui/maml/ScreenElementRoot;
 
     move-result-object v0
@@ -80,7 +80,7 @@
 .method public finish()V
     .locals 2
 
-    .line 1261
+    .line 1266
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$DelayCommand;->getRoot()Lcom/miui/maml/ScreenElementRoot;
 
     move-result-object v0
@@ -95,7 +95,7 @@
 .method public init()V
     .locals 1
 
-    .line 1256
+    .line 1261
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$DelayCommand;->mCommand:Lcom/miui/maml/ActionCommand;
 
     invoke-virtual {v0}, Lcom/miui/maml/ActionCommand;->init()V

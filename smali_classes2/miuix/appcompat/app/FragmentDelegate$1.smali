@@ -22,7 +22,7 @@
 .method constructor <init>(Lmiuix/appcompat/app/FragmentDelegate;)V
     .locals 0
 
-    .line 60
+    .line 61
     iput-object p1, p0, Lmiuix/appcompat/app/FragmentDelegate$1;->this$0:Lmiuix/appcompat/app/FragmentDelegate;
 
     invoke-direct {p0}, Lmiuix/appcompat/internal/view/SimpleWindowCallback;-><init>()V
@@ -35,7 +35,7 @@
 .method public onActionModeFinished(Landroid/view/ActionMode;)V
     .locals 1
 
-    .line 73
+    .line 74
     iget-object v0, p0, Lmiuix/appcompat/app/FragmentDelegate$1;->this$0:Lmiuix/appcompat/app/FragmentDelegate;
 
     invoke-static {v0}, Lmiuix/appcompat/app/FragmentDelegate;->access$000(Lmiuix/appcompat/app/FragmentDelegate;)Landroidx/fragment/app/Fragment;
@@ -52,7 +52,7 @@
 .method public onActionModeStarted(Landroid/view/ActionMode;)V
     .locals 1
 
-    .line 68
+    .line 69
     iget-object v0, p0, Lmiuix/appcompat/app/FragmentDelegate$1;->this$0:Lmiuix/appcompat/app/FragmentDelegate;
 
     invoke-static {v0}, Lmiuix/appcompat/app/FragmentDelegate;->access$000(Lmiuix/appcompat/app/FragmentDelegate;)Landroidx/fragment/app/Fragment;
@@ -69,7 +69,7 @@
 .method public onMenuItemSelected(ILandroid/view/MenuItem;)Z
     .locals 1
 
-    .line 78
+    .line 79
     iget-object v0, p0, Lmiuix/appcompat/app/FragmentDelegate$1;->this$0:Lmiuix/appcompat/app/FragmentDelegate;
 
     invoke-virtual {v0, p1, p2}, Lmiuix/appcompat/app/FragmentDelegate;->onMenuItemSelected(ILandroid/view/MenuItem;)Z
@@ -82,7 +82,7 @@
 .method public onPanelClosed(ILandroid/view/Menu;)V
     .locals 1
 
-    .line 83
+    .line 84
     iget-object v0, p0, Lmiuix/appcompat/app/FragmentDelegate$1;->this$0:Lmiuix/appcompat/app/FragmentDelegate;
 
     invoke-virtual {v0}, Lmiuix/appcompat/app/FragmentDelegate;->getActivity()Lmiuix/appcompat/app/AppCompatActivity;
@@ -91,7 +91,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 84
+    .line 85
     iget-object v0, p0, Lmiuix/appcompat/app/FragmentDelegate$1;->this$0:Lmiuix/appcompat/app/FragmentDelegate;
 
     invoke-virtual {v0}, Lmiuix/appcompat/app/FragmentDelegate;->getActivity()Lmiuix/appcompat/app/AppCompatActivity;
@@ -107,7 +107,7 @@
 .method public onWindowStartingActionMode(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;
     .locals 1
 
-    .line 63
+    .line 64
     iget-object v0, p0, Lmiuix/appcompat/app/FragmentDelegate$1;->this$0:Lmiuix/appcompat/app/FragmentDelegate;
 
     invoke-virtual {v0, p1}, Lmiuix/appcompat/app/FragmentDelegate;->onWindowStartingActionMode(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;

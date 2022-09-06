@@ -693,6 +693,24 @@
     return-void
 .end method
 
+.method public setContentPadding(IIII)V
+    .locals 1
+
+    .line 226
+    iget-object v0, p0, Landroidx/cardview/widget/CardView;->mContentPadding:Landroid/graphics/Rect;
+
+    invoke-virtual {v0, p1, p2, p3, p4}, Landroid/graphics/Rect;->set(IIII)V
+
+    .line 227
+    sget-object p1, Landroidx/cardview/widget/CardView;->IMPL:Landroidx/cardview/widget/CardViewImpl;
+
+    iget-object p2, p0, Landroidx/cardview/widget/CardView;->mCardViewDelegate:Landroidx/cardview/widget/CardViewDelegate;
+
+    invoke-interface {p1, p2}, Landroidx/cardview/widget/CardViewImpl;->updatePadding(Landroidx/cardview/widget/CardViewDelegate;)V
+
+    return-void
+.end method
+
 .method public setMaxCardElevation(F)V
     .locals 2
 

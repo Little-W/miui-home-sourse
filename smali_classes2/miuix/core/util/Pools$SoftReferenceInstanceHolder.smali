@@ -76,8 +76,6 @@
     .line 180
     new-array p1, p2, [Ljava/lang/ref/SoftReference;
 
-    check-cast p1, [Ljava/lang/ref/SoftReference;
-
     .line 182
     iput-object p1, p0, Lmiuix/core/util/Pools$SoftReferenceInstanceHolder;->mElements:[Ljava/lang/ref/SoftReference;
 
@@ -347,8 +345,6 @@
 
     .line 210
     new-array p1, p1, [Ljava/lang/ref/SoftReference;
-
-    check-cast p1, [Ljava/lang/ref/SoftReference;
 
     const/4 v2, 0x0
 

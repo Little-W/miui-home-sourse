@@ -1,4 +1,4 @@
-.class final Lmiuix/appcompat/app/floatingactivity/FloatingSwitcherAnimHelper$1;
+.class Lmiuix/appcompat/app/floatingactivity/FloatingSwitcherAnimHelper$1;
 .super Lmiuix/animation/listener/TransitionListener;
 .source "FloatingSwitcherAnimHelper.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 

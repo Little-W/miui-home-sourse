@@ -54,23 +54,23 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;Lcom/miui/home/launcher/allapps/AllAppsColorMode;I)V
     .locals 3
 
-    .line 68
+    .line 67
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;-><init>()V
 
-    .line 69
+    .line 68
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->mContext:Landroid/content/Context;
 
-    .line 70
+    .line 69
     iput-object p2, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->mApps:Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;
 
-    .line 71
+    .line 70
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountXDrawerMode()I
 
     move-result p1
 
     iput p1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->mAppsPerRow:I
 
-    .line 72
+    .line 71
     new-instance p1, Landroidx/recyclerview/widget/GridLayoutManager;
 
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->mContext:Landroid/content/Context;
@@ -85,7 +85,7 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->mGridLayoutMgr:Landroidx/recyclerview/widget/GridLayoutManager;
 
-    .line 73
+    .line 72
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->mGridLayoutMgr:Landroidx/recyclerview/widget/GridLayoutManager;
 
     new-instance p2, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$GridSpanSizer;
@@ -94,7 +94,7 @@
 
     invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/GridLayoutManager;->setSpanSizeLookup(Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;)V
 
-    .line 74
+    .line 73
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->mContext:Landroid/content/Context;
 
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
@@ -103,20 +103,20 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->mLayoutInflater:Landroid/view/LayoutInflater;
 
-    .line 75
+    .line 74
     iput-object p3, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->mColorMode:Lcom/miui/home/launcher/allapps/AllAppsColorMode;
 
-    .line 76
+    .line 75
     iput p4, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->mBackgroundAlpha:I
 
-    .line 78
+    .line 77
     new-instance p1, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$AppSelectListUpdateCallback;
 
     invoke-direct {p1, p0, p0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$AppSelectListUpdateCallback;-><init>(Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->mUpdateCallback:Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$AppSelectListUpdateCallback;
 
-    .line 79
+    .line 78
     new-instance p1, Landroidx/recyclerview/widget/AsyncListDiffer;
 
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->mUpdateCallback:Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$AppSelectListUpdateCallback;
@@ -131,7 +131,7 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->mDifferList:Landroidx/recyclerview/widget/AsyncListDiffer;
 
-    .line 81
+    .line 80
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->refreshSpanCount()V
 
     return-void
@@ -140,7 +140,7 @@
 .method static synthetic access$000(Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;)I
     .locals 0
 
-    .line 31
+    .line 30
     iget p0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->mAppsPerRow:I
 
     return p0
@@ -149,10 +149,10 @@
 .method static synthetic lambda$onBindViewHolder$0(Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$IconViewHolder;Landroid/graphics/drawable/Drawable;)V
     .locals 0
 
-    .line 124
+    .line 123
     invoke-static {p1}, Lcom/miui/home/launcher/graphics/drawable/MamlCompat;->onResume(Landroid/graphics/drawable/Drawable;)V
 
-    .line 125
+    .line 124
     iget-object p0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$IconViewHolder;->icon:Landroid/widget/ImageView;
 
     invoke-virtual {p0, p1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
@@ -165,10 +165,10 @@
 
     const/4 p3, 0x1
 
-    .line 132
+    .line 131
     invoke-virtual {p0, p3}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->setAnimEnable(Z)V
 
-    .line 133
+    .line 132
     invoke-virtual {p1}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$IconViewHolder;->isChecked()Z
 
     move-result v0
@@ -177,7 +177,7 @@
 
     invoke-virtual {p1, v0, p3}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$IconViewHolder;->setChecked(ZZ)V
 
-    .line 134
+    .line 133
     iget-object p3, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->mApps:Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$IconViewHolder;->isChecked()Z
@@ -205,7 +205,7 @@
         }
     .end annotation
 
-    .line 216
+    .line 215
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->mApps:Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;
 
     invoke-virtual {v0, p1, p2}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->setChecked(Ljava/util/List;Ljava/util/List;)V
@@ -224,7 +224,7 @@
         }
     .end annotation
 
-    .line 212
+    .line 211
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->mApps:Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->getAddApps()Ljava/util/List;
@@ -237,7 +237,7 @@
 .method public getItem(I)Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$AdapterItem;
     .locals 1
 
-    .line 170
+    .line 169
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->mDifferList:Landroidx/recyclerview/widget/AsyncListDiffer;
 
     invoke-virtual {v0}, Landroidx/recyclerview/widget/AsyncListDiffer;->getCurrentList()Ljava/util/List;
@@ -256,7 +256,7 @@
 .method public getItemCount()I
     .locals 1
 
-    .line 161
+    .line 160
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->mDifferList:Landroidx/recyclerview/widget/AsyncListDiffer;
 
     invoke-virtual {v0}, Landroidx/recyclerview/widget/AsyncListDiffer;->getCurrentList()Ljava/util/List;
@@ -273,7 +273,7 @@
 .method public getItemViewType(I)I
     .locals 0
 
-    .line 166
+    .line 165
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->getItem(I)Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$AdapterItem;
 
     move-result-object p1
@@ -286,7 +286,7 @@
 .method public getLayoutManager()Landroidx/recyclerview/widget/GridLayoutManager;
     .locals 1
 
-    .line 90
+    .line 89
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->mGridLayoutMgr:Landroidx/recyclerview/widget/GridLayoutManager;
 
     return-object v0
@@ -303,7 +303,7 @@
         }
     .end annotation
 
-    .line 208
+    .line 207
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->mApps:Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->getRemoveApps()Ljava/util/List;
@@ -324,7 +324,7 @@
         }
     .end annotation
 
-    .line 204
+    .line 203
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->mApps:Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->getSelectedApps()Ljava/util/Collection;
@@ -337,10 +337,10 @@
 .method public onAttachedToRecyclerView(Landroidx/recyclerview/widget/RecyclerView;)V
     .locals 1
 
-    .line 221
+    .line 220
     invoke-super {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->onAttachedToRecyclerView(Landroidx/recyclerview/widget/RecyclerView;)V
 
-    .line 222
+    .line 221
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->mUpdateCallback:Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$AppSelectListUpdateCallback;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$AppSelectListUpdateCallback;->onAttachedToRecyclerView(Landroidx/recyclerview/widget/RecyclerView;)V
@@ -351,7 +351,7 @@
 .method public bridge synthetic onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
     .locals 0
 
-    .line 31
+    .line 30
     check-cast p1, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$ViewHolder;
 
     invoke-virtual {p0, p1, p2}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->onBindViewHolder(Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$ViewHolder;I)V
@@ -362,7 +362,7 @@
 .method public onBindViewHolder(Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$ViewHolder;I)V
     .locals 5
 
-    .line 112
+    .line 111
     invoke-virtual {p1}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$ViewHolder;->getItemViewType()I
 
     move-result v0
@@ -371,7 +371,7 @@
 
     goto/16 :goto_1
 
-    .line 146
+    .line 145
     :pswitch_0
     iget-object p2, p1, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$ViewHolder;->itemView:Landroid/view/View;
 
@@ -383,17 +383,17 @@
 
     iget v2, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->mBackgroundAlpha:I
 
-    .line 147
+    .line 146
     invoke-virtual {v0, v1, v2}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->getSearchEmptyDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    .line 146
+    .line 145
     invoke-virtual {p2, v1, v0, v1, v1}, Landroid/widget/TextView;->setCompoundDrawablesWithIntrinsicBounds(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    .line 148
+    .line 147
     iget-object p1, p1, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast p1, Landroid/widget/TextView;
@@ -412,13 +412,13 @@
 
     goto/16 :goto_1
 
-    .line 141
+    .line 140
     :pswitch_1
     iget-object p1, p1, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast p1, Landroid/widget/TextView;
 
-    .line 142
+    .line 141
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->mColorMode:Lcom/miui/home/launcher/allapps/AllAppsColorMode;
 
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->mContext:Landroid/content/Context;
@@ -431,7 +431,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 143
+    .line 142
     invoke-virtual {p0, p2}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->getItem(I)Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$AdapterItem;
 
     move-result-object p2
@@ -442,34 +442,34 @@
 
     goto :goto_1
 
-    .line 114
+    .line 113
     :pswitch_2
     invoke-virtual {p0, p2}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->getItem(I)Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$AdapterItem;
 
     move-result-object p2
 
-    .line 115
+    .line 114
     iget-object v0, p2, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$AdapterItem;->app:Lcom/miui/home/launcher/AppInfo;
 
-    .line 116
+    .line 115
     check-cast p1, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$IconViewHolder;
 
-    .line 117
+    .line 116
     invoke-virtual {v0}, Lcom/miui/home/launcher/AppInfo;->getIconDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    .line 118
+    .line 117
     invoke-virtual {v0}, Lcom/miui/home/launcher/AppInfo;->getIconDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
-    .line 119
+    .line 118
     invoke-static {v1}, Lcom/miui/home/launcher/graphics/drawable/MamlCompat;->onResume(Landroid/graphics/drawable/Drawable;)V
 
-    .line 120
+    .line 119
     iget-object v1, p1, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$IconViewHolder;->icon:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/AppInfo;->getIconDrawable()Landroid/graphics/drawable/Drawable;
@@ -480,7 +480,7 @@
 
     goto :goto_0
 
-    .line 122
+    .line 121
     :cond_0
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->mContext:Landroid/content/Context;
 
@@ -502,7 +502,7 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Lcom/miui/home/launcher/AppInfo;->getIconAsync(Landroid/content/Context;Lcom/miui/home/launcher/IconCache;Landroid/graphics/drawable/Drawable;Ljava/util/function/Consumer;)V
 
-    .line 128
+    .line 127
     :goto_0
     iget-object v1, p1, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$IconViewHolder;->title:Landroid/widget/TextView;
 
@@ -518,7 +518,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 129
+    .line 128
     iget-object v1, p1, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$IconViewHolder;->title:Landroid/widget/TextView;
 
     iget-object v2, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->mContext:Landroid/content/Context;
@@ -529,14 +529,14 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 130
+    .line 129
     iget-boolean p2, p2, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$AdapterItem;->selected:Z
 
     const/4 v1, 0x0
 
     invoke-virtual {p1, p2, v1}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$IconViewHolder;->setChecked(ZZ)V
 
-    .line 131
+    .line 130
     iget-object p2, p1, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$IconViewHolder;->itemView:Landroid/view/View;
 
     new-instance v1, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AppCategorySelectAdapter$cQU2JFoletsvvrgenri9S2QoPEc;
@@ -545,7 +545,7 @@
 
     invoke-virtual {p2, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 136
+    .line 135
     iget-object p2, p1, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$IconViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {p2}, Landroid/view/View;->getMeasuredHeight()I
@@ -558,7 +558,7 @@
 
     if-eq p2, v0, :cond_1
 
-    .line 137
+    .line 136
     iget-object p1, p1, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$IconViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -588,7 +588,7 @@
 .method public bridge synthetic onCreateViewHolder(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
     .locals 0
 
-    .line 31
+    .line 30
     invoke-virtual {p0, p1, p2}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$ViewHolder;
 
     move-result-object p1
@@ -603,7 +603,7 @@
 
     packed-switch p2, :pswitch_data_0
 
-    .line 106
+    .line 105
     new-instance p1, Ljava/lang/RuntimeException;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -624,7 +624,7 @@
 
     throw p1
 
-    .line 104
+    .line 103
     :pswitch_0
     new-instance p2, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$ViewHolder;
 
@@ -640,7 +640,7 @@
 
     return-object p2
 
-    .line 102
+    .line 101
     :pswitch_1
     new-instance p2, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$ViewHolder;
 
@@ -656,7 +656,7 @@
 
     return-object p2
 
-    .line 98
+    .line 97
     :pswitch_2
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->mLayoutInflater:Landroid/view/LayoutInflater;
 
@@ -666,7 +666,7 @@
 
     move-result-object p1
 
-    .line 99
+    .line 98
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p2
@@ -677,7 +677,7 @@
 
     iput v0, p2, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 100
+    .line 99
     new-instance p2, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$IconViewHolder;
 
     invoke-direct {p2, p1}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$IconViewHolder;-><init>(Landroid/view/View;)V
@@ -695,10 +695,10 @@
 .method public onDetachedFromRecyclerView(Landroidx/recyclerview/widget/RecyclerView;)V
     .locals 0
 
-    .line 227
+    .line 226
     invoke-super {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->onDetachedFromRecyclerView(Landroidx/recyclerview/widget/RecyclerView;)V
 
-    .line 228
+    .line 227
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->mUpdateCallback:Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$AppSelectListUpdateCallback;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$AppSelectListUpdateCallback;->onDetachedFromRecyclerView()V
@@ -709,14 +709,14 @@
 .method public refreshSpanCount()V
     .locals 2
 
-    .line 85
+    .line 84
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountXDrawerMode()I
 
     move-result v0
 
     iput v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->mAppsPerRow:I
 
-    .line 86
+    .line 85
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->mGridLayoutMgr:Landroidx/recyclerview/widget/GridLayoutManager;
 
     iget v1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->mAppsPerRow:I
@@ -729,7 +729,7 @@
 .method public setAnimEnable(Z)V
     .locals 1
 
-    .line 37
+    .line 36
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->mUpdateCallback:Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$AppSelectListUpdateCallback;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$AppSelectListUpdateCallback;->setAnimEnable(Z)V
@@ -740,13 +740,13 @@
 .method public setColorMode(Lcom/miui/home/launcher/allapps/AllAppsColorMode;I)V
     .locals 0
 
-    .line 41
+    .line 40
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->mColorMode:Lcom/miui/home/launcher/allapps/AllAppsColorMode;
 
-    .line 42
+    .line 41
     iput p2, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->mBackgroundAlpha:I
 
-    .line 43
+    .line 42
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->getItemCount()I
 
     move-result p1
@@ -769,7 +769,7 @@
         }
     .end annotation
 
-    .line 156
+    .line 155
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->mDifferList:Landroidx/recyclerview/widget/AsyncListDiffer;
 
     invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/AsyncListDiffer;->submitList(Ljava/util/List;)V

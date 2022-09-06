@@ -22,10 +22,10 @@
 .method public constructor <init>(Lcom/miui/home/recents/NavStubView;Landroid/os/Looper;)V
     .locals 0
 
-    .line 4736
+    .line 4743
     iput-object p1, p0, Lcom/miui/home/recents/NavStubView$TopWindowCropHandler;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    .line 4737
+    .line 4744
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -36,38 +36,38 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 1
 
-    .line 4742
+    .line 4749
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
     goto :goto_0
 
-    .line 4756
+    .line 4763
     :pswitch_0
-    iget-object p1, p0, Lcom/miui/home/recents/NavStubView$TopWindowCropHandler;->this$0:Lcom/miui/home/recents/NavStubView;
-
-    invoke-static {p1}, Lcom/miui/home/recents/NavStubView;->access$8300(Lcom/miui/home/recents/NavStubView;)V
-
-    goto :goto_0
-
-    .line 4753
-    :pswitch_1
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$TopWindowCropHandler;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-static {p1}, Lcom/miui/home/recents/NavStubView;->access$8200(Lcom/miui/home/recents/NavStubView;)V
 
     goto :goto_0
 
-    .line 4750
-    :pswitch_2
+    .line 4760
+    :pswitch_1
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$TopWindowCropHandler;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-static {p1}, Lcom/miui/home/recents/NavStubView;->access$8100(Lcom/miui/home/recents/NavStubView;)V
 
     goto :goto_0
 
-    .line 4747
+    .line 4757
+    :pswitch_2
+    iget-object p1, p0, Lcom/miui/home/recents/NavStubView$TopWindowCropHandler;->this$0:Lcom/miui/home/recents/NavStubView;
+
+    invoke-static {p1}, Lcom/miui/home/recents/NavStubView;->access$8000(Lcom/miui/home/recents/NavStubView;)V
+
+    goto :goto_0
+
+    .line 4754
     :pswitch_3
     iget-object v0, p0, Lcom/miui/home/recents/NavStubView$TopWindowCropHandler;->this$0:Lcom/miui/home/recents/NavStubView;
 
@@ -75,15 +75,15 @@
 
     check-cast p1, Lcom/miui/home/recents/NavStubView$MotionEventPosition;
 
-    invoke-static {v0, p1}, Lcom/miui/home/recents/NavStubView;->access$8000(Lcom/miui/home/recents/NavStubView;Lcom/miui/home/recents/NavStubView$MotionEventPosition;)V
+    invoke-static {v0, p1}, Lcom/miui/home/recents/NavStubView;->access$7900(Lcom/miui/home/recents/NavStubView;Lcom/miui/home/recents/NavStubView$MotionEventPosition;)V
 
     goto :goto_0
 
-    .line 4744
+    .line 4751
     :pswitch_4
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$TopWindowCropHandler;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    invoke-static {p1}, Lcom/miui/home/recents/NavStubView;->access$7900(Lcom/miui/home/recents/NavStubView;)V
+    invoke-static {p1}, Lcom/miui/home/recents/NavStubView;->access$7800(Lcom/miui/home/recents/NavStubView;)V
 
     :goto_0
     return-void

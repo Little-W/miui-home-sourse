@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/LauncherMenu;)V
     .locals 0
 
-    .line 150
+    .line 147
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherMenu$6;->this$0:Lcom/miui/home/launcher/LauncherMenu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onCheckedChanged(Landroid/widget/CompoundButton;Z)V
     .locals 1
 
-    .line 153
+    .line 150
     iget-object p1, p0, Lcom/miui/home/launcher/LauncherMenu$6;->this$0:Lcom/miui/home/launcher/LauncherMenu;
 
     invoke-static {p1}, Lcom/miui/home/launcher/LauncherMenu;->access$300(Lcom/miui/home/launcher/LauncherMenu;)Landroid/content/Context;
@@ -53,7 +53,7 @@
 
     invoke-static {p1, v0, p2}, Lcom/miui/launcher/utils/MiuiSettingsUtils;->putBooleanToSystem(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
-    .line 156
+    .line 153
     invoke-static {p2}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackHomeSettingSubAutoFill(Z)V
 
     return-void

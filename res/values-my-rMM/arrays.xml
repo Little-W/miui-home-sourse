@@ -49,6 +49,13 @@
         <item>မူလပုံစံ</item>
         <item>ဂန္ထဝင်</item>
     </string-array>
+    <string-array name="monochrome_color_entries">
+        <item>မူရင်း</item>
+        <item>အပြာ</item>
+        <item>အစိမ်း</item>
+        <item>ခရမ်း</item>
+        <item>အညို</item>
+    </string-array>
     <string-array name="transformation_entries">
         <item>ဆလိုက်</item>
         <item>ဝင်ထွက် မှေးမှိန်သော</item>

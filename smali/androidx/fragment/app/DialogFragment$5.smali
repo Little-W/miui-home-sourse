@@ -24,7 +24,7 @@
 .method constructor <init>(Landroidx/fragment/app/DialogFragment;Landroidx/fragment/app/FragmentContainer;)V
     .locals 0
 
-    .line 503
+    .line 506
     iput-object p1, p0, Landroidx/fragment/app/DialogFragment$5;->this$0:Landroidx/fragment/app/DialogFragment;
 
     iput-object p2, p0, Landroidx/fragment/app/DialogFragment$5;->val$fragmentContainer:Landroidx/fragment/app/FragmentContainer;
@@ -39,28 +39,16 @@
 .method public onFindViewById(I)Landroid/view/View;
     .locals 1
 
-    .line 507
-    iget-object v0, p0, Landroidx/fragment/app/DialogFragment$5;->this$0:Landroidx/fragment/app/DialogFragment;
-
-    invoke-virtual {v0, p1}, Landroidx/fragment/app/DialogFragment;->onFindViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    return-object v0
-
-    .line 511
-    :cond_0
+    .line 510
     iget-object v0, p0, Landroidx/fragment/app/DialogFragment$5;->val$fragmentContainer:Landroidx/fragment/app/FragmentContainer;
 
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentContainer;->onHasView()Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
-    .line 512
+    .line 511
     iget-object v0, p0, Landroidx/fragment/app/DialogFragment$5;->val$fragmentContainer:Landroidx/fragment/app/FragmentContainer;
 
     invoke-virtual {v0, p1}, Landroidx/fragment/app/FragmentContainer;->onFindViewById(I)Landroid/view/View;
@@ -69,8 +57,13 @@
 
     return-object p1
 
-    :cond_1
-    const/4 p1, 0x0
+    .line 513
+    :cond_0
+    iget-object v0, p0, Landroidx/fragment/app/DialogFragment$5;->this$0:Landroidx/fragment/app/DialogFragment;
+
+    invoke-virtual {v0, p1}, Landroidx/fragment/app/DialogFragment;->onFindViewById(I)Landroid/view/View;
+
+    move-result-object p1
 
     return-object p1
 .end method
@@ -78,18 +71,18 @@
 .method public onHasView()Z
     .locals 1
 
-    .line 519
-    iget-object v0, p0, Landroidx/fragment/app/DialogFragment$5;->this$0:Landroidx/fragment/app/DialogFragment;
+    .line 518
+    iget-object v0, p0, Landroidx/fragment/app/DialogFragment$5;->val$fragmentContainer:Landroidx/fragment/app/FragmentContainer;
 
-    invoke-virtual {v0}, Landroidx/fragment/app/DialogFragment;->onHasView()Z
+    invoke-virtual {v0}, Landroidx/fragment/app/FragmentContainer;->onHasView()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    iget-object v0, p0, Landroidx/fragment/app/DialogFragment$5;->val$fragmentContainer:Landroidx/fragment/app/FragmentContainer;
+    iget-object v0, p0, Landroidx/fragment/app/DialogFragment$5;->this$0:Landroidx/fragment/app/DialogFragment;
 
-    invoke-virtual {v0}, Landroidx/fragment/app/FragmentContainer;->onHasView()Z
+    invoke-virtual {v0}, Landroidx/fragment/app/DialogFragment;->onHasView()Z
 
     move-result v0
 

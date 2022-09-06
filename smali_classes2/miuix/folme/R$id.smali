@@ -15,18 +15,18 @@
 
 
 # static fields
-.field public static final miuix_animation_tag_foreground_color:I = 0x7f0a01a5
+.field public static final miuix_animation_tag_foreground_color:I = 0x7f0a0223
 
-.field public static final miuix_animation_tag_init_layout:I = 0x7f0a01a6
+.field public static final miuix_animation_tag_init_layout:I = 0x7f0a0224
 
-.field public static final miuix_animation_tag_is_dragging:I = 0x7f0a01a7
+.field public static final miuix_animation_tag_is_dragging:I = 0x7f0a0225
 
-.field public static final miuix_animation_tag_listview_pos:I = 0x7f0a01a8
+.field public static final miuix_animation_tag_listview_pos:I = 0x7f0a0226
 
-.field public static final miuix_animation_tag_set_height:I = 0x7f0a01a9
+.field public static final miuix_animation_tag_set_height:I = 0x7f0a0227
 
-.field public static final miuix_animation_tag_set_width:I = 0x7f0a01aa
+.field public static final miuix_animation_tag_set_width:I = 0x7f0a0228
 
-.field public static final miuix_animation_tag_touch_listener:I = 0x7f0a01ab
+.field public static final miuix_animation_tag_touch_listener:I = 0x7f0a0229
 
-.field public static final miuix_animation_tag_view_corner:I = 0x7f0a01ac
+.field public static final miuix_animation_tag_view_corner:I = 0x7f0a022a

@@ -57,7 +57,26 @@
 
     move-result v0
 
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    if-ge v0, v1, :cond_0
+
+    .line 17
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getAllAppsRecommendCount()I
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v0
+
     .line 18
+    :goto_0
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
@@ -72,12 +91,12 @@
 
     move-result-object p1
 
-    :goto_0
+    :goto_1
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v3
 
-    if-eqz v3, :cond_1
+    if-eqz v3, :cond_2
 
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -90,21 +109,21 @@
 
     move-result v4
 
-    if-eqz v4, :cond_0
+    if-eqz v4, :cond_1
 
     .line 22
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    goto :goto_0
+    goto :goto_1
 
     .line 24
-    :cond_0
+    :cond_1
     invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    goto :goto_0
+    goto :goto_1
 
     .line 28
-    :cond_1
+    :cond_2
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/recommend/RecommendAppProviderImpl;->mLaunchCountComparator:Lcom/miui/home/launcher/allapps/recommend/AppInfoLaunchCountComparator;
 
     invoke-static {v1, p1}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
@@ -114,7 +133,7 @@
 
     move-result p1
 
-    if-nez p1, :cond_2
+    if-nez p1, :cond_3
 
     .line 31
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/recommend/RecommendAppProviderImpl;->mNewInstallComparator:Lcom/miui/home/launcher/allapps/recommend/AppInfoNewInstallComparator;
@@ -136,8 +155,8 @@
 
     move v3, p1
 
-    :goto_1
-    if-ge v3, v0, :cond_2
+    :goto_2
+    if-ge v3, v0, :cond_3
 
     sub-int v4, v3, p1
 
@@ -152,8 +171,8 @@
 
     add-int/lit8 v3, v3, 0x1
 
-    goto :goto_1
+    goto :goto_2
 
-    :cond_2
+    :cond_3
     return-object v1
 .end method

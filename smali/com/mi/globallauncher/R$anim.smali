@@ -79,25 +79,25 @@
 
 .field public static final decelerate_sextic:I = 0x7f010027
 
-.field public static final dialog_enter:I = 0x7f010028
+.field public static final dialog_enter:I = 0x7f01002c
 
-.field public static final dialog_exit:I = 0x7f010029
+.field public static final dialog_exit:I = 0x7f01002d
 
-.field public static final discovery_bounce:I = 0x7f01002a
+.field public static final discovery_bounce:I = 0x7f01002e
 
-.field public static final drop_down_popup_enter:I = 0x7f01002b
+.field public static final drop_down_popup_enter:I = 0x7f01002f
 
-.field public static final drop_down_popup_exit:I = 0x7f01002c
+.field public static final drop_down_popup_exit:I = 0x7f010030
 
-.field public static final fragment_fast_out_extra_slow_in:I = 0x7f010033
+.field public static final fragment_fast_out_extra_slow_in:I = 0x7f010037
 
-.field public static final immersion_menu_enter:I = 0x7f010037
+.field public static final immersion_menu_enter:I = 0x7f01003b
 
-.field public static final immersion_menu_exit:I = 0x7f010038
+.field public static final immersion_menu_exit:I = 0x7f01003c
 
-.field public static final vertical_enter_from_bottom:I = 0x7f01003d
+.field public static final vertical_enter_from_bottom:I = 0x7f01004a
 
-.field public static final vertical_exit_to_bottom:I = 0x7f01003e
+.field public static final vertical_exit_to_bottom:I = 0x7f01004b
 
 
 # direct methods

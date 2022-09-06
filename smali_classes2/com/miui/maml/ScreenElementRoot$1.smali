@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/maml/ScreenElementRoot;J)V
     .locals 0
 
-    .line 346
+    .line 350
     iput-object p1, p0, Lcom/miui/maml/ScreenElementRoot$1;->this$0:Lcom/miui/maml/ScreenElementRoot;
 
     iput-wide p2, p0, Lcom/miui/maml/ScreenElementRoot$1;->val$currentTime:J
@@ -42,14 +42,14 @@
 .method public run()V
     .locals 4
 
-    .line 349
+    .line 353
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot$1;->this$0:Lcom/miui/maml/ScreenElementRoot;
 
     iget-wide v1, p0, Lcom/miui/maml/ScreenElementRoot$1;->val$currentTime:J
 
     invoke-virtual {v0, v1, v2}, Lcom/miui/maml/ScreenElementRoot;->reset(J)V
 
-    .line 350
+    .line 354
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot$1;->this$0:Lcom/miui/maml/ScreenElementRoot;
 
     invoke-static {v0}, Lcom/miui/maml/ScreenElementRoot;->access$000(Lcom/miui/maml/ScreenElementRoot;)Lcom/miui/maml/CommandTriggers;
@@ -58,7 +58,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 352
+    .line 356
     :try_start_0
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot$1;->this$0:Lcom/miui/maml/ScreenElementRoot;
 
@@ -79,7 +79,7 @@
 
     const-string v1, "ScreenElementRoot"
 
-    .line 354
+    .line 358
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V

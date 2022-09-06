@@ -317,9 +317,9 @@
 
     if-eqz v2, :cond_1
 
+    .line 1053
     check-cast v1, Landroid/content/ContextWrapper;
 
-    .line 1053
     invoke-virtual {v1}, Landroid/content/ContextWrapper;->getBaseContext()Landroid/content/Context;
 
     move-result-object v1
@@ -335,19 +335,6 @@
     return-object v0
 .end method
 
-.method public getButton(I)Landroid/widget/Button;
-    .locals 1
-
-    .line 134
-    iget-object v0, p0, Lmiuix/appcompat/app/AlertDialog;->mAlert:Lmiuix/appcompat/app/AlertController;
-
-    invoke-virtual {v0, p1}, Lmiuix/appcompat/app/AlertController;->getButton(I)Landroid/widget/Button;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
 .method public getListView()Landroid/widget/ListView;
     .locals 1
 
@@ -359,19 +346,6 @@
     move-result-object v0
 
     return-object v0
-.end method
-
-.method public isChecked()Z
-    .locals 1
-
-    .line 263
-    iget-object v0, p0, Lmiuix/appcompat/app/AlertDialog;->mAlert:Lmiuix/appcompat/app/AlertController;
-
-    invoke-virtual {v0}, Lmiuix/appcompat/app/AlertController;->isChecked()Z
-
-    move-result v0
-
-    return v0
 .end method
 
 .method public onAttachedToWindow()V

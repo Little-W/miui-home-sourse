@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static sIsRestoring:Z
+.field private static sIsRestoring:Z = false
 
 
 # instance fields
@@ -35,41 +35,10 @@
 .method public static isRestoring()Z
     .locals 1
 
-    .line 53
+    .line 45
     sget-boolean v0, Lcom/miui/home/launcher/backup/LauncherBackupAgent;->sIsRestoring:Z
 
     return v0
-.end method
-
-.method private resetTransformationTypeIfInFoldDevice()V
-    .locals 3
-
-    .line 46
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isFoldDevice()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 47
-    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
-
-    move-result-object v0
-
-    const-string v1, "pref_key_transformation_type"
-
-    const/4 v2, 0x1
-
-    .line 48
-    invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 47
-    invoke-static {v0, v1, v2}, Lcom/miui/home/launcher/common/PreferenceUtils;->putString(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_0
-    return-void
 .end method
 
 
@@ -84,10 +53,10 @@
 
     const/4 v0, 0x1
 
-    .line 81
+    .line 73
     invoke-static {p0, v0}, Lcom/miui/home/launcher/DeviceConfig;->removeInvalidateDatabase(Landroid/content/Context;Z)V
 
-    .line 82
+    .line 74
     invoke-super {p0, p1, p2, p3}, Lmiui/app/backup/FullBackupAgent;->onBackup(Landroid/os/ParcelFileDescriptor;Landroid/app/backup/BackupDataOutput;Landroid/os/ParcelFileDescriptor;)V
 
     return-void
@@ -96,10 +65,10 @@
 .method public onCreate()V
     .locals 1
 
-    .line 87
+    .line 79
     invoke-super {p0}, Lmiui/app/backup/FullBackupAgent;->onCreate()V
 
-    .line 88
+    .line 80
     invoke-static {}, Lcom/miui/home/launcher/backup/BackupSettingHelper;->getInstance()Lcom/miui/home/launcher/backup/BackupSettingHelper;
 
     move-result-object v0
@@ -119,10 +88,10 @@
 
     const/4 v0, 0x1
 
-    .line 60
+    .line 52
     sput-boolean v0, Lcom/miui/home/launcher/backup/LauncherBackupAgent;->sIsRestoring:Z
 
-    .line 61
+    .line 53
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v1
@@ -133,13 +102,13 @@
 
     if-eqz v1, :cond_0
 
-    .line 63
+    .line 55
     invoke-virtual {v1}, Lcom/miui/home/launcher/LauncherModel;->stopLoader()V
 
     :cond_0
     const-string v1, ".db"
 
-    .line 66
+    .line 58
     invoke-virtual {p7, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -152,22 +121,22 @@
 
     const/4 v1, 0x0
 
-    .line 67
+    .line 59
     invoke-static {p0, v1}, Lcom/miui/home/launcher/DeviceConfig;->removeInvalidateDatabase(Landroid/content/Context;Z)V
 
-    .line 68
+    .line 60
     invoke-virtual {p0}, Lcom/miui/home/launcher/backup/LauncherBackupAgent;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
 
     invoke-static {v1}, Lcom/miui/home/launcher/DeviceConfig;->removeDownloadInstallInfo(Landroid/content/Context;)V
 
-    .line 69
+    .line 61
     iput-boolean v0, p0, Lcom/miui/home/launcher/backup/LauncherBackupAgent;->mHasRemovedDB:Z
 
     goto :goto_0
 
-    .line 70
+    .line 62
     :cond_1
     invoke-virtual {p0}, Lcom/miui/home/launcher/backup/LauncherBackupAgent;->getApplicationContext()Landroid/content/Context;
 
@@ -187,12 +156,12 @@
 
     const-string p2, "ignore download install info txt"
 
-    .line 71
+    .line 63
     invoke-static {p1, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 74
+    .line 66
     :cond_2
     :goto_0
     invoke-super/range {p0 .. p11}, Lmiui/app/backup/FullBackupAgent;->onOriginalAttachesRestore(Lmiui/app/backup/BackupMeta;Landroid/os/ParcelFileDescriptor;JILjava/lang/String;Ljava/lang/String;JJ)V
@@ -252,14 +221,11 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/common/PreferenceUtils;->setAddRecommendFolderIfNeed(Z)V
 
-    .line 40
-    invoke-direct {p0}, Lcom/miui/home/launcher/backup/LauncherBackupAgent;->resetTransformationTypeIfInFoldDevice()V
-
     const-string v0, "LauncherBackupAgent"
 
     const-string v1, "onRestoreEnd"
 
-    .line 41
+    .line 40
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return p1

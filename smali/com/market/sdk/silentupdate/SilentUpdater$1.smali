@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/market/sdk/silentupdate/SilentUpdater;)V
     .locals 0
 
-    .line 85
+    .line 87
     iput-object p1, p0, Lcom/market/sdk/silentupdate/SilentUpdater$1;->this$0:Lcom/market/sdk/silentupdate/SilentUpdater;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public binderDied()V
     .locals 2
 
-    .line 88
+    .line 90
     iget-object v0, p0, Lcom/market/sdk/silentupdate/SilentUpdater$1;->this$0:Lcom/market/sdk/silentupdate/SilentUpdater;
 
     const/4 v1, 0x0

@@ -60,13 +60,13 @@
 
     const/4 v3, 0x0
 
-    const v4, 0x7f0800ed
+    const v4, 0x7f0801bc
 
     aput v4, v2, v3
 
     new-array v1, v1, [I
 
-    const v4, 0x7f0800ee
+    const v4, 0x7f0801bd
 
     aput v4, v1, v3
 
@@ -173,7 +173,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f070090
+    const v3, 0x7f070095
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -181,7 +181,7 @@
 
     iput v2, v8, Landroid/view/WindowManager$LayoutParams;->y:I
 
-    const v2, 0x7f11000e
+    const v2, 0x7f120014
 
     .line 167
     iput v2, v8, Landroid/view/WindowManager$LayoutParams;->windowAnimations:I

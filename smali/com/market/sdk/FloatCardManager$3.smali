@@ -29,7 +29,7 @@
 .method constructor <init>(Lcom/market/sdk/FloatCardManager;Lcom/xiaomi/market/IAppDownloadManager;Ljava/lang/String;)V
     .locals 0
 
-    .line 170
+    .line 172
     iput-object p1, p0, Lcom/market/sdk/FloatCardManager$3;->this$0:Lcom/market/sdk/FloatCardManager;
 
     iput-object p2, p0, Lcom/market/sdk/FloatCardManager$3;->val$appDownloadManager:Lcom/xiaomi/market/IAppDownloadManager;
@@ -46,7 +46,7 @@
 .method public run()V
     .locals 4
 
-    .line 174
+    .line 176
     :try_start_0
     iget-object v0, p0, Lcom/market/sdk/FloatCardManager$3;->val$appDownloadManager:Lcom/xiaomi/market/IAppDownloadManager;
 

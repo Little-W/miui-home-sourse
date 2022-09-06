@@ -219,7 +219,7 @@
 
     const/4 v0, 0x4
 
-    .line 180
+    .line 191
     new-array v0, v0, [Ljava/lang/Object;
 
     iget v1, p0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->id:I
@@ -300,7 +300,7 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
 
-    .line 150
+    .line 161
     instance-of v0, p1, Lcom/android/systemui/shared/recents/model/Task$TaskKey;
 
     const/4 v1, 0x0
@@ -309,11 +309,11 @@
 
     return v1
 
-    .line 153
+    .line 164
     :cond_0
     check-cast p1, Lcom/android/systemui/shared/recents/model/Task$TaskKey;
 
-    .line 154
+    .line 165
     iget v0, p0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->id:I
 
     iget v2, p1, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->id:I
@@ -347,7 +347,7 @@
 .method public getComponent()Landroid/content/ComponentName;
     .locals 1
 
-    .line 133
+    .line 137
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->baseIntent:Landroid/content/Intent;
 
     invoke-virtual {v0}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
@@ -357,24 +357,51 @@
     return-object v0
 .end method
 
+.method public getPackageName()Ljava/lang/String;
+    .locals 1
+
+    .line 141
+    invoke-virtual {p0}, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->getComponent()Landroid/content/ComponentName;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 142
+    invoke-virtual {p0}, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->getComponent()Landroid/content/ComponentName;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
 .method public getTopComponentOrBaseComponent()Landroid/content/ComponentName;
     .locals 3
 
-    .line 137
+    .line 148
     invoke-virtual {p0}, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    .line 139
+    .line 150
     invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
     const-string v2, "com.android.settings"
 
-    .line 140
+    .line 151
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -383,14 +410,14 @@
 
     const-string v2, "com.miui.securitycenter"
 
-    .line 141
+    .line 152
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 142
+    .line 153
     :cond_0
     iget-object v1, p0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->topActivity:Landroid/content/ComponentName;
 
@@ -411,10 +438,19 @@
 .method public hashCode()I
     .locals 1
 
-    .line 160
+    .line 171
     iget v0, p0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->mHashCode:I
 
     return v0
+.end method
+
+.method public setLastActiveTime(J)V
+    .locals 0
+
+    .line 133
+    iput-wide p1, p0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->lastActiveTime:J
+
+    return-void
 .end method
 
 .method public setStackId(I)V
@@ -432,7 +468,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 165
+    .line 176
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

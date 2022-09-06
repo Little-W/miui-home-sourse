@@ -219,7 +219,7 @@
 
     move-result-object p1
 
-    const v1, 0x7f070120
+    const v1, 0x7f070158
 
     goto :goto_0
 
@@ -228,7 +228,7 @@
 
     move-result-object p1
 
-    const v1, 0x7f07017a
+    const v1, 0x7f0701b5
 
     :goto_0
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getDimension(I)F
@@ -281,7 +281,7 @@
 
     move-result-object p1
 
-    const v1, 0x7f07011e
+    const v1, 0x7f070156
 
     goto :goto_0
 
@@ -290,7 +290,7 @@
 
     move-result-object p1
 
-    const v1, 0x7f070056
+    const v1, 0x7f07005a
 
     :goto_0
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getDimension(I)F

@@ -136,7 +136,7 @@
 
     move-result-object p0
 
-    const-string v0, "video"
+    const-string/jumbo v0, "video"
 
     invoke-interface {p0, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 

@@ -95,6 +95,7 @@
     <item type="id" name="apps_list_view" />
     <item type="id" name="apps_sheet" />
     <item type="id" name="apps_view" />
+    <item type="id" name="apps_view_stub" />
     <item type="id" name="arrow" />
     <item type="id" name="arrow_right" />
     <item type="id" name="auto_fill_sliding_button" />
@@ -131,6 +132,7 @@
     <item type="id" name="buttons_container" />
     <item type="id" name="cancel" />
     <item type="id" name="cancel_action" />
+    <item type="id" name="cancel_button" />
     <item type="id" name="category_edit_container" />
     <item type="id" name="category_list_container" />
     <item type="id" name="cell_type_1" />
@@ -145,13 +147,21 @@
     <item type="id" name="checkbox_state_checked" />
     <item type="id" name="checkbox_state_normal" />
     <item type="id" name="checked" />
+    <item type="id" name="chip" />
+    <item type="id" name="chip1" />
+    <item type="id" name="chip2" />
+    <item type="id" name="chip3" />
+    <item type="id" name="chip_group" />
     <item type="id" name="chronometer" />
+    <item type="id" name="circle_center" />
     <item type="id" name="clearAnimView" />
     <item type="id" name="clear_action_button" />
     <item type="id" name="clear_content_body" />
     <item type="id" name="clear_icon" />
     <item type="id" name="close" />
     <item type="id" name="color_list" />
+    <item type="id" name="comment" />
+    <item type="id" name="confirm_button" />
     <item type="id" name="container" />
     <item type="id" name="content" />
     <item type="id" name="contentPanel" />
@@ -160,13 +170,14 @@
     <item type="id" name="content_mask_vs" />
     <item type="id" name="content_title" />
     <item type="id" name="content_wrapper" />
+    <item type="id" name="coordinator" />
     <item type="id" name="cover" />
-    <item type="id" name="custom" />
     <item type="id" name="customPanel" />
     <item type="id" name="customize_preview_container" />
     <item type="id" name="datePicker" />
     <item type="id" name="datePickerLunar" />
     <item type="id" name="dateTimePicker" />
+    <item type="id" name="date_picker_actions" />
     <item type="id" name="day" />
     <item type="id" name="decor_content_parent" />
     <item type="id" name="deep_link_icon" />
@@ -180,11 +191,17 @@
     <item type="id" name="desc_all_apps" />
     <item type="id" name="desc_quick_search" />
     <item type="id" name="description_text" />
+    <item type="id" name="design_bottom_sheet" />
+    <item type="id" name="design_menu_item_action_area" />
+    <item type="id" name="design_menu_item_action_area_stub" />
+    <item type="id" name="design_menu_item_text" />
+    <item type="id" name="design_navigation_view" />
     <item type="id" name="desktop" />
     <item type="id" name="dialog_anim_holder" />
     <item type="id" name="dialog_bg" />
     <item type="id" name="dialog_button" />
     <item type="id" name="dialog_dim_bg" />
+    <item type="id" name="dialog_divider" />
     <item type="id" name="dialog_root_view" />
     <item type="id" name="dismiss_task" />
     <item type="id" name="divider_container" />
@@ -200,6 +217,8 @@
     <item type="id" name="drawer_background_alpha_seek_bar" />
     <item type="id" name="drawer_mode_view" />
     <item type="id" name="drop_target_bar" />
+    <item type="id" name="dropdown_editable" />
+    <item type="id" name="dropdown_noneditable" />
     <item type="id" name="editDragSource" />
     <item type="id" name="editModeBottomBar" />
     <item type="id" name="editModeDraggingTip" />
@@ -214,11 +233,15 @@
     <item type="id" name="edit_header" />
     <item type="id" name="edit_mode_checkbox" />
     <item type="id" name="edit_mode_group_container" />
+    <item type="id" name="edit_mode_menu_on_bottom_stub" />
     <item type="id" name="edit_mode_menu_on_top" />
+    <item type="id" name="edit_mode_menu_on_top_stub" />
     <item type="id" name="edit_query" />
     <item type="id" name="edit_text_bottom_line" />
     <item type="id" name="editing_entry_view" />
     <item type="id" name="edittext_container" />
+    <item type="id" name="edittext_dropdown_editable" />
+    <item type="id" name="edittext_dropdown_noneditable" />
     <item type="id" name="empty" />
     <item type="id" name="end_divider" />
     <item type="id" name="end_padder" />
@@ -234,6 +257,7 @@
     <item type="id" name="first_item" />
     <item type="id" name="folder_animation_fake_icon" />
     <item type="id" name="folder_cling" />
+    <item type="id" name="folder_cling_stub" />
     <item type="id" name="folder_content" />
     <item type="id" name="folder_grid" />
     <item type="id" name="folder_header" />
@@ -248,8 +272,11 @@
     <item type="id" name="frequent_apps_grid2" />
     <item type="id" name="full_screen_gesture" />
     <item type="id" name="full_screen_lottie_view" />
+    <item type="id" name="fullscreen_header" />
     <item type="id" name="gadget_icon" />
     <item type="id" name="gadget_search_bar" />
+    <item type="id" name="ghost_view" />
+    <item type="id" name="ghost_view_holder" />
     <item type="id" name="glide_custom_view_target_tag" />
     <item type="id" name="google" />
     <item type="id" name="group_divider" />
@@ -257,9 +284,11 @@
     <item type="id" name="guide_image_all_apps" />
     <item type="id" name="guide_image_quick_search" />
     <item type="id" name="guide_quick_search_container" />
+    <item type="id" name="guideline" />
     <item type="id" name="gv_branch_shortcuts" />
     <item type="id" name="handle_message" />
     <item type="id" name="head" />
+    <item type="id" name="header_title" />
     <item type="id" name="hide_app_recycler" />
     <item type="id" name="hide_split_action_bar" />
     <item type="id" name="hide_switch" />
@@ -328,6 +357,7 @@
     <item type="id" name="lottie_layer_name" />
     <item type="id" name="lottie_loading_animation" />
     <item type="id" name="lunarModePanel" />
+    <item type="id" name="lunarText" />
     <item type="id" name="magic_indicator" />
     <item type="id" name="magic_indicator_container_view" />
     <item type="id" name="maml_download" />
@@ -335,6 +365,26 @@
     <item type="id" name="market_app_icon" />
     <item type="id" name="mask_close_btn" />
     <item type="id" name="mask_list_view" />
+    <item type="id" name="masked" />
+    <item type="id" name="material_clock_display" />
+    <item type="id" name="material_clock_face" />
+    <item type="id" name="material_clock_hand" />
+    <item type="id" name="material_clock_period_am_button" />
+    <item type="id" name="material_clock_period_pm_button" />
+    <item type="id" name="material_clock_period_toggle" />
+    <item type="id" name="material_hour_text_input" />
+    <item type="id" name="material_hour_tv" />
+    <item type="id" name="material_label" />
+    <item type="id" name="material_minute_text_input" />
+    <item type="id" name="material_minute_tv" />
+    <item type="id" name="material_textinput_timepicker" />
+    <item type="id" name="material_timepicker_cancel_button" />
+    <item type="id" name="material_timepicker_container" />
+    <item type="id" name="material_timepicker_edit_text" />
+    <item type="id" name="material_timepicker_mode_button" />
+    <item type="id" name="material_timepicker_ok_button" />
+    <item type="id" name="material_timepicker_view" />
+    <item type="id" name="material_value_index" />
     <item type="id" name="media_actions" />
     <item type="id" name="memoryAndClearContainer" />
     <item type="id" name="menu" />
@@ -371,8 +421,45 @@
     <item type="id" name="miuix_animation_tag_touch_listener" />
     <item type="id" name="miuix_animation_tag_view_corner" />
     <item type="id" name="month" />
+    <item type="id" name="month_grid" />
+    <item type="id" name="month_navigation_bar" />
+    <item type="id" name="month_navigation_fragment_toggle" />
+    <item type="id" name="month_navigation_next" />
+    <item type="id" name="month_navigation_previous" />
+    <item type="id" name="month_title" />
     <item type="id" name="more" />
+    <item type="id" name="motion_base" />
+    <item type="id" name="mtrl_anchor_parent" />
+    <item type="id" name="mtrl_calendar_day_selector_frame" />
+    <item type="id" name="mtrl_calendar_days_of_week" />
+    <item type="id" name="mtrl_calendar_frame" />
+    <item type="id" name="mtrl_calendar_main_pane" />
+    <item type="id" name="mtrl_calendar_months" />
+    <item type="id" name="mtrl_calendar_selection_frame" />
+    <item type="id" name="mtrl_calendar_text_input_frame" />
+    <item type="id" name="mtrl_calendar_year_selector_frame" />
+    <item type="id" name="mtrl_card_checked_layer_id" />
+    <item type="id" name="mtrl_child_content_container" />
+    <item type="id" name="mtrl_internal_children_alpha_tag" />
+    <item type="id" name="mtrl_motion_snapshot_view" />
+    <item type="id" name="mtrl_picker_fullscreen" />
+    <item type="id" name="mtrl_picker_header" />
+    <item type="id" name="mtrl_picker_header_selection_text" />
+    <item type="id" name="mtrl_picker_header_title_and_selection" />
+    <item type="id" name="mtrl_picker_header_toggle" />
+    <item type="id" name="mtrl_picker_text_input_date" />
+    <item type="id" name="mtrl_picker_text_input_range_end" />
+    <item type="id" name="mtrl_picker_text_input_range_start" />
+    <item type="id" name="mtrl_picker_title_text" />
+    <item type="id" name="mtrl_view_tag_bottom_padding" />
     <item type="id" name="name" />
+    <item type="id" name="navigation_bar_item_active_indicator_view" />
+    <item type="id" name="navigation_bar_item_icon_container" />
+    <item type="id" name="navigation_bar_item_icon_view" />
+    <item type="id" name="navigation_bar_item_labels_group" />
+    <item type="id" name="navigation_bar_item_large_label_view" />
+    <item type="id" name="navigation_bar_item_small_label_view" />
+    <item type="id" name="navigation_header_container" />
     <item type="id" name="navigation_type_container" />
     <item type="id" name="no_word_sliding_button" />
     <item type="id" name="notification_background" />
@@ -385,6 +472,7 @@
     <item type="id" name="pair_icon2" />
     <item type="id" name="pair_icon_container" />
     <item type="id" name="parentPanel" />
+    <item type="id" name="parent_matrix" />
     <item type="id" name="permission_guide_content" />
     <item type="id" name="permission_guide_title" />
     <item type="id" name="pickers" />
@@ -441,8 +529,11 @@
     <item type="id" name="right_icon" />
     <item type="id" name="right_side" />
     <item type="id" name="rl_app_container" />
+    <item type="id" name="row_index_key" />
     <item type="id" name="rv_branch_content" />
     <item type="id" name="rvl_branch_container" />
+    <item type="id" name="save_non_transition_alpha" />
+    <item type="id" name="save_overlay_view" />
     <item type="id" name="sceneContent" />
     <item type="id" name="screen_content" />
     <item type="id" name="scrim_view" />
@@ -505,6 +596,7 @@
     <item type="id" name="seekbar_value" />
     <item type="id" name="select" />
     <item type="id" name="select_dialog_listview" />
+    <item type="id" name="selection_type" />
     <item type="id" name="selector" />
     <item type="id" name="separatorForMemoryInfo" />
     <item type="id" name="set_action_button_icon" />
@@ -527,6 +619,8 @@
     <item type="id" name="small_window_selected_girdview" />
     <item type="id" name="smallwindow_content" />
     <item type="id" name="smallwindow_icon" />
+    <item type="id" name="snackbar_action" />
+    <item type="id" name="snackbar_text" />
     <item type="id" name="source_app_container" />
     <item type="id" name="source_app_icon" />
     <item type="id" name="spacer" />
@@ -559,13 +653,18 @@
     <item type="id" name="tag_accessibility_pane_title" />
     <item type="id" name="tag_alphabet_indexer_item" />
     <item type="id" name="tag_mirror_menu_query_listener" />
+    <item type="id" name="tag_on_apply_window_listener" />
+    <item type="id" name="tag_on_receive_content_listener" />
+    <item type="id" name="tag_on_receive_content_mime_types" />
     <item type="id" name="tag_popup_menu_item" />
     <item type="id" name="tag_screen_reader_focusable" />
     <item type="id" name="tag_spinner_dropdown_view" />
     <item type="id" name="tag_spinner_dropdown_view_double_line" />
+    <item type="id" name="tag_state_description" />
     <item type="id" name="tag_transition_group" />
     <item type="id" name="tag_unhandled_key_event_manager" />
     <item type="id" name="tag_unhandled_key_listeners" />
+    <item type="id" name="tag_window_insets_animation_callback" />
     <item type="id" name="target_container" />
     <item type="id" name="task_view_access_lock" />
     <item type="id" name="task_view_header" />
@@ -573,12 +672,26 @@
     <item type="id" name="task_view_privacy_protect_icon" />
     <item type="id" name="task_view_screening" />
     <item type="id" name="task_view_thumbnail" />
+    <item type="id" name="test_checkbox_android_button_tint" />
+    <item type="id" name="test_checkbox_app_button_tint" />
+    <item type="id" name="test_radiobutton_android_button_tint" />
+    <item type="id" name="test_radiobutton_app_button_tint" />
     <item type="id" name="text" />
     <item type="id" name="text2" />
+    <item type="id" name="textAlign" />
     <item type="id" name="textSpacerNoButtons" />
     <item type="id" name="textSpacerNoTitle" />
     <item type="id" name="text_group" />
+    <item type="id" name="text_input_end_icon" />
+    <item type="id" name="text_input_error_icon" />
+    <item type="id" name="text_input_start_icon" />
     <item type="id" name="text_right" />
+    <item type="id" name="textinput_counter" />
+    <item type="id" name="textinput_error" />
+    <item type="id" name="textinput_helper_text" />
+    <item type="id" name="textinput_placeholder" />
+    <item type="id" name="textinput_prefix_text" />
+    <item type="id" name="textinput_suffix_text" />
     <item type="id" name="third_item" />
     <item type="id" name="thumbnail" />
     <item type="id" name="time" />
@@ -594,12 +707,18 @@
     <item type="id" name="title_template" />
     <item type="id" name="topPanel" />
     <item type="id" name="top_menu_container_imageView" />
+    <item type="id" name="touch_outside" />
     <item type="id" name="tracking_progress" />
     <item type="id" name="tracking_progress_label" />
     <item type="id" name="tracking_progress_up" />
     <item type="id" name="tracking_progress_up_container" />
     <item type="id" name="tracking_progress_up_label" />
+    <item type="id" name="transition_current_scene" />
+    <item type="id" name="transition_layout_save" />
+    <item type="id" name="transition_position" />
+    <item type="id" name="transition_scene_layoutid_cache" />
     <item type="id" name="transition_thumbnail_view" />
+    <item type="id" name="transition_transform" />
     <item type="id" name="transparent_space_app_system" />
     <item type="id" name="transparent_space_widget_system" />
     <item type="id" name="tv_app_name" />
@@ -640,6 +759,7 @@
     <item type="id" name="view_animation_translationX" />
     <item type="id" name="view_animation_translationY" />
     <item type="id" name="view_animation_z" />
+    <item type="id" name="view_offset_helper" />
     <item type="id" name="view_pager" />
     <item type="id" name="view_stub_type1" />
     <item type="id" name="view_stub_type4" />
@@ -658,6 +778,7 @@
     <item type="id" name="widgets_cell_list" />
     <item type="id" name="widgets_layout" />
     <item type="id" name="widgets_layout_actionBar" />
+    <item type="id" name="widgets_preview_layout_stub" />
     <item type="id" name="widgets_view" />
     <item type="id" name="work_footer_divider" />
     <item type="id" name="work_mode_toggle" />
@@ -671,5 +792,6 @@
     <item type="id" name="worldcirculate_content" />
     <item type="id" name="xiaoai_button" />
     <item type="id" name="year" />
+    <item type="id" name="zero_corner_chip" />
     <item type="id" name="zero_state_icon" />
 </resources>

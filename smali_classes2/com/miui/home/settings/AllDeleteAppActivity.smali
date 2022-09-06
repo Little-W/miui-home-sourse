@@ -738,7 +738,7 @@
 .method private final initView()V
     .locals 3
 
-    const v0, 0x7f0a02d1
+    const v0, 0x7f0a03be
 
     .line 202
     invoke-virtual {p0, v0}, Lcom/miui/home/settings/AllDeleteAppActivity;->findViewById(I)Landroid/view/View;
@@ -809,7 +809,7 @@
 
     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
-    const v0, 0x7f0a017a
+    const v0, 0x7f0a01e1
 
     .line 206
     invoke-virtual {p0, v0}, Lcom/miui/home/settings/AllDeleteAppActivity;->findViewById(I)Landroid/view/View;
@@ -1168,7 +1168,7 @@
     .line 46
     invoke-virtual {p0, p1}, Lcom/miui/home/settings/AllDeleteAppActivity;->setContentView(I)V
 
-    const p1, 0x7f10016e
+    const p1, 0x7f110177
 
     .line 47
     invoke-virtual {p0, p1}, Lcom/miui/home/settings/AllDeleteAppActivity;->setTitle(I)V

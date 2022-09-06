@@ -175,11 +175,11 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 47
     iget-object v1, p0, Lmiuix/animation/internal/AnimOperationInfo;->propList:Ljava/util/List;
 
     if-eqz v1, :cond_0
 
-    .line 47
     invoke-interface {v1}, Ljava/util/List;->toArray()[Ljava/lang/Object;
 
     move-result-object v1

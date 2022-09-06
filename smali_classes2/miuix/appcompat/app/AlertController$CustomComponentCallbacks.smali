@@ -33,10 +33,10 @@
 .method constructor <init>(Lmiuix/appcompat/app/AlertController;)V
     .locals 1
 
-    .line 1598
+    .line 1689
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1599
+    .line 1690
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -51,7 +51,7 @@
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 1
 
-    .line 1604
+    .line 1695
     iget-object v0, p0, Lmiuix/appcompat/app/AlertController$CustomComponentCallbacks;->mHost:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -60,7 +60,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1605
+    .line 1696
     iget-object v0, p0, Lmiuix/appcompat/app/AlertController$CustomComponentCallbacks;->mHost:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;

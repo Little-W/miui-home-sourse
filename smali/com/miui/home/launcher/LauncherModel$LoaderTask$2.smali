@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/LauncherModel$LoaderTask;Lcom/miui/home/launcher/LauncherModel$Callbacks;)V
     .locals 0
 
-    .line 1287
+    .line 1295
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$2;->this$1:Lcom/miui/home/launcher/LauncherModel$LoaderTask;
 
     iput-object p2, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$2;->val$oldCallbacks:Lcom/miui/home/launcher/LauncherModel$Callbacks;
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 2
 
-    .line 1289
+    .line 1297
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$2;->this$1:Lcom/miui/home/launcher/LauncherModel$LoaderTask;
 
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$2;->val$oldCallbacks:Lcom/miui/home/launcher/LauncherModel$Callbacks;
@@ -53,7 +53,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1290
+    .line 1298
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$2;->val$oldCallbacks:Lcom/miui/home/launcher/LauncherModel$Callbacks;
 
     invoke-interface {v0}, Lcom/miui/home/launcher/LauncherModel$Callbacks;->finishBindingMissingItems()V

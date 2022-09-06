@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/recents/BaseRecentsImpl;Landroid/os/Handler;)V
     .locals 0
 
-    .line 434
+    .line 451
     iput-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$8;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -35,7 +35,7 @@
 .method public onChange(Z)V
     .locals 5
 
-    .line 437
+    .line 454
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$8;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     invoke-static {p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$600(Lcom/miui/home/recents/BaseRecentsImpl;)Z
@@ -44,7 +44,7 @@
 
     if-nez p1, :cond_2
 
-    .line 438
+    .line 455
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$8;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     invoke-static {p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$200(Lcom/miui/home/recents/BaseRecentsImpl;)Landroid/content/Context;
@@ -63,7 +63,7 @@
 
     move-result p1
 
-    .line 439
+    .line 456
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl$8;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     invoke-static {v0}, Lcom/miui/home/recents/BaseRecentsImpl;->access$200(Lcom/miui/home/recents/BaseRecentsImpl;)Landroid/content/Context;
@@ -82,7 +82,7 @@
 
     const-string v2, "RecentsImpl"
 
-    .line 440
+    .line 457
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -109,17 +109,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 445
+    .line 462
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$8;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     invoke-static {p1, v1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$800(Lcom/miui/home/recents/BaseRecentsImpl;Z)V
 
-    .line 446
+    .line 463
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$8;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     invoke-static {p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$700(Lcom/miui/home/recents/BaseRecentsImpl;)V
 
-    .line 449
+    .line 466
     :cond_0
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$8;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
@@ -133,7 +133,7 @@
 
     goto :goto_0
 
-    .line 450
+    .line 467
     :cond_1
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$8;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
@@ -149,7 +149,7 @@
 
     if-eqz p1, :cond_2
 
-    .line 451
+    .line 468
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$8;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     invoke-static {p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$200(Lcom/miui/home/recents/BaseRecentsImpl;)Landroid/content/Context;
@@ -164,7 +164,7 @@
 
     const-string v1, "RecentsImpl"
 
-    .line 452
+    .line 469
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -183,12 +183,12 @@
 
     if-eq v0, p1, :cond_2
 
-    .line 455
+    .line 472
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl$8;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     invoke-static {v0, p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$800(Lcom/miui/home/recents/BaseRecentsImpl;Z)V
 
-    .line 456
+    .line 473
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$8;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     invoke-static {p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$700(Lcom/miui/home/recents/BaseRecentsImpl;)V

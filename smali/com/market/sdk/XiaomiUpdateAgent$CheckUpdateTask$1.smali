@@ -1,4 +1,4 @@
-.class final Lcom/market/sdk/XiaomiUpdateAgent$CheckUpdateTask$1;
+.class Lcom/market/sdk/XiaomiUpdateAgent$CheckUpdateTask$1;
 .super Ljava/lang/Object;
 .source "XiaomiUpdateAgent.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
@@ -21,7 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 470
+    .line 533
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,7 +32,7 @@
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 0
 
-    .line 473
+    .line 536
     invoke-static {}, Lcom/market/sdk/XiaomiUpdateAgent;->openMarketOrArrange()V
 
     return-void

@@ -1,4 +1,4 @@
-.class final Lmiuix/core/util/IOUtils$3;
+.class Lmiuix/core/util/IOUtils$3;
 .super Lmiuix/core/util/Pools$Manager;
 .source "IOUtils.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 

@@ -254,7 +254,7 @@
 
     invoke-virtual {p2, p0}, Lcom/miui/home/launcher/ExtendedEditText;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
 
-    const p2, 0x7f0a0219
+    const p2, 0x7f0a02d5
 
     .line 70
     invoke-virtual {p3, p2}, Lcom/miui/home/launcher/Launcher;->findViewById(I)Landroid/view/View;
@@ -518,7 +518,7 @@
     .line 158
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchBarController;->mInput:Lcom/miui/home/launcher/ExtendedEditText;
 
-    const v0, 0x7f1003b1
+    const v0, 0x7f110413
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/ExtendedEditText;->setHint(I)V
 
@@ -528,7 +528,7 @@
     :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchBarController;->mInput:Lcom/miui/home/launcher/ExtendedEditText;
 
-    const v0, 0x7f10004f
+    const v0, 0x7f11004f
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/ExtendedEditText;->setHint(I)V
 

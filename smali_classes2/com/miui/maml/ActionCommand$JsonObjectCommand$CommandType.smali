@@ -44,7 +44,7 @@
 .method static constructor <clinit>()V
     .locals 9
 
-    .line 2579
+    .line 2584
     new-instance v0, Lcom/miui/maml/ActionCommand$JsonObjectCommand$CommandType;
 
     const-string v1, "INVALID"
@@ -55,7 +55,7 @@
 
     sput-object v0, Lcom/miui/maml/ActionCommand$JsonObjectCommand$CommandType;->INVALID:Lcom/miui/maml/ActionCommand$JsonObjectCommand$CommandType;
 
-    .line 2580
+    .line 2585
     new-instance v0, Lcom/miui/maml/ActionCommand$JsonObjectCommand$CommandType;
 
     const-string v1, "PUT_STRING"
@@ -66,7 +66,7 @@
 
     sput-object v0, Lcom/miui/maml/ActionCommand$JsonObjectCommand$CommandType;->PUT_STRING:Lcom/miui/maml/ActionCommand$JsonObjectCommand$CommandType;
 
-    .line 2581
+    .line 2586
     new-instance v0, Lcom/miui/maml/ActionCommand$JsonObjectCommand$CommandType;
 
     const-string v1, "PUT_BOOLEAN"
@@ -77,7 +77,7 @@
 
     sput-object v0, Lcom/miui/maml/ActionCommand$JsonObjectCommand$CommandType;->PUT_BOOLEAN:Lcom/miui/maml/ActionCommand$JsonObjectCommand$CommandType;
 
-    .line 2582
+    .line 2587
     new-instance v0, Lcom/miui/maml/ActionCommand$JsonObjectCommand$CommandType;
 
     const-string v1, "PUT_INT"
@@ -88,7 +88,7 @@
 
     sput-object v0, Lcom/miui/maml/ActionCommand$JsonObjectCommand$CommandType;->PUT_INT:Lcom/miui/maml/ActionCommand$JsonObjectCommand$CommandType;
 
-    .line 2583
+    .line 2588
     new-instance v0, Lcom/miui/maml/ActionCommand$JsonObjectCommand$CommandType;
 
     const-string v1, "PUT_JSON_OBJECT"
@@ -99,7 +99,7 @@
 
     sput-object v0, Lcom/miui/maml/ActionCommand$JsonObjectCommand$CommandType;->PUT_JSON_OBJECT:Lcom/miui/maml/ActionCommand$JsonObjectCommand$CommandType;
 
-    .line 2584
+    .line 2589
     new-instance v0, Lcom/miui/maml/ActionCommand$JsonObjectCommand$CommandType;
 
     const-string v1, "PUT_JSON_ARRAY"
@@ -110,7 +110,7 @@
 
     sput-object v0, Lcom/miui/maml/ActionCommand$JsonObjectCommand$CommandType;->PUT_JSON_ARRAY:Lcom/miui/maml/ActionCommand$JsonObjectCommand$CommandType;
 
-    .line 2585
+    .line 2590
     new-instance v0, Lcom/miui/maml/ActionCommand$JsonObjectCommand$CommandType;
 
     const-string v1, "REMOVE"
@@ -123,7 +123,7 @@
 
     const/4 v0, 0x7
 
-    .line 2578
+    .line 2583
     new-array v0, v0, [Lcom/miui/maml/ActionCommand$JsonObjectCommand$CommandType;
 
     sget-object v1, Lcom/miui/maml/ActionCommand$JsonObjectCommand$CommandType;->INVALID:Lcom/miui/maml/ActionCommand$JsonObjectCommand$CommandType;
@@ -167,7 +167,7 @@
         }
     .end annotation
 
-    .line 2578
+    .line 2583
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -176,7 +176,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/miui/maml/ActionCommand$JsonObjectCommand$CommandType;
     .locals 1
 
-    .line 2578
+    .line 2583
     const-class v0, Lcom/miui/maml/ActionCommand$JsonObjectCommand$CommandType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -191,7 +191,7 @@
 .method public static values()[Lcom/miui/maml/ActionCommand$JsonObjectCommand$CommandType;
     .locals 1
 
-    .line 2578
+    .line 2583
     sget-object v0, Lcom/miui/maml/ActionCommand$JsonObjectCommand$CommandType;->$VALUES:[Lcom/miui/maml/ActionCommand$JsonObjectCommand$CommandType;
 
     invoke-virtual {v0}, [Lcom/miui/maml/ActionCommand$JsonObjectCommand$CommandType;->clone()Ljava/lang/Object;

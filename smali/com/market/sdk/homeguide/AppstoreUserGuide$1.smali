@@ -29,7 +29,7 @@
 .method constructor <init>(Lcom/market/sdk/homeguide/AppstoreUserGuide;Lcom/market/sdk/homeguide/Interceptor;Lcom/market/sdk/homeguide/HomeUserGuideData;)V
     .locals 0
 
-    .line 158
+    .line 157
     iput-object p1, p0, Lcom/market/sdk/homeguide/AppstoreUserGuide$1;->this$0:Lcom/market/sdk/homeguide/AppstoreUserGuide;
 
     iput-object p2, p0, Lcom/market/sdk/homeguide/AppstoreUserGuide$1;->val$interceptor:Lcom/market/sdk/homeguide/Interceptor;
@@ -46,7 +46,7 @@
 .method public onFinish(Z)V
     .locals 2
 
-    .line 166
+    .line 165
     iget-object v0, p0, Lcom/market/sdk/homeguide/AppstoreUserGuide$1;->val$data:Lcom/market/sdk/homeguide/HomeUserGuideData;
 
     invoke-virtual {v0}, Lcom/market/sdk/homeguide/HomeUserGuideData;->getLocalFilePath()Ljava/lang/String;
@@ -59,7 +59,7 @@
 
     if-nez v0, :cond_0
 
-    .line 167
+    .line 166
     new-instance v0, Ljava/io/File;
 
     iget-object v1, p0, Lcom/market/sdk/homeguide/AppstoreUserGuide$1;->val$data:Lcom/market/sdk/homeguide/HomeUserGuideData;
@@ -79,7 +79,7 @@
 
     const/4 v0, 0x0
 
-    .line 170
+    .line 169
     new-array v1, v0, [Lcom/market/sdk/utils/PrefUtils$PrefFile;
 
     invoke-static {p1, v0, v1}, Lcom/market/sdk/utils/PrefUtils;->setBoolean(Ljava/lang/String;Z[Lcom/market/sdk/utils/PrefUtils$PrefFile;)V
@@ -91,7 +91,7 @@
 .method public onIntercept()Z
     .locals 1
 
-    .line 161
+    .line 160
     iget-object v0, p0, Lcom/market/sdk/homeguide/AppstoreUserGuide$1;->val$interceptor:Lcom/market/sdk/homeguide/Interceptor;
 
     if-eqz v0, :cond_0

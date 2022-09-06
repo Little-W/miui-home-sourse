@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/settings/MiuiHomeSettings;)V
     .locals 0
 
-    .line 637
+    .line 646
     iput-object p1, p0, Lcom/miui/home/settings/MiuiHomeSettings$8;->this$0:Lcom/miui/home/settings/MiuiHomeSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 1
 
-    .line 641
+    .line 650
     iget-object p1, p0, Lcom/miui/home/settings/MiuiHomeSettings$8;->this$0:Lcom/miui/home/settings/MiuiHomeSettings;
 
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
@@ -49,14 +49,14 @@
 
     invoke-static {p1, p2, v0}, Lcom/miui/home/settings/MiuiHomeSettings;->access$200(Lcom/miui/home/settings/MiuiHomeSettings;Landroid/content/Context;Z)V
 
-    .line 642
+    .line 651
     iget-object p1, p0, Lcom/miui/home/settings/MiuiHomeSettings$8;->this$0:Lcom/miui/home/settings/MiuiHomeSettings;
 
-    invoke-static {p1}, Lcom/miui/home/settings/MiuiHomeSettings;->access$300(Lcom/miui/home/settings/MiuiHomeSettings;)Lmiuix/appcompat/app/AlertDialog;
+    invoke-static {p1}, Lcom/miui/home/settings/MiuiHomeSettings;->access$300(Lcom/miui/home/settings/MiuiHomeSettings;)Lmiui/home/lib/dialog/AlertDialog;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lmiuix/appcompat/app/AlertDialog;->dismiss()V
+    invoke-virtual {p1}, Lmiui/home/lib/dialog/AlertDialog;->dismiss()V
 
     return-void
 .end method

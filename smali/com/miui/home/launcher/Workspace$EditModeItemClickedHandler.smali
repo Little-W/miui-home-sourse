@@ -22,7 +22,7 @@
 .method private constructor <init>(Lcom/miui/home/launcher/Workspace;)V
     .locals 0
 
-    .line 1960
+    .line 1996
     iput-object p1, p0, Lcom/miui/home/launcher/Workspace$EditModeItemClickedHandler;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -33,7 +33,7 @@
 .method synthetic constructor <init>(Lcom/miui/home/launcher/Workspace;Lcom/miui/home/launcher/Workspace$1;)V
     .locals 0
 
-    .line 1960
+    .line 1996
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/Workspace$EditModeItemClickedHandler;-><init>(Lcom/miui/home/launcher/Workspace;)V
 
     return-void
@@ -47,7 +47,7 @@
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
-    .line 1963
+    .line 1999
     iget-object p1, p0, Lcom/miui/home/launcher/Workspace$EditModeItemClickedHandler;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Workspace;->access$600(Lcom/miui/home/launcher/Workspace;)Z
@@ -56,7 +56,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 1964
+    .line 2000
     iget-object p1, p0, Lcom/miui/home/launcher/Workspace$EditModeItemClickedHandler;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Workspace;->getScreenCount()I
@@ -67,7 +67,7 @@
 
     goto :goto_0
 
-    .line 1965
+    .line 2001
     :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/Workspace$EditModeItemClickedHandler;->this$0:Lcom/miui/home/launcher/Workspace;
 
@@ -77,7 +77,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 1966
+    .line 2002
     iget-object p1, p0, Lcom/miui/home/launcher/Workspace$EditModeItemClickedHandler;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Workspace;->access$800(Lcom/miui/home/launcher/Workspace;)V

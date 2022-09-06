@@ -159,7 +159,7 @@
 
     iput-object v0, p0, Lcom/google/android/gms/measurement/AppMeasurement$ConditionalUserProperty;->mName:Ljava/lang/String;
 
-    const-string v0, "value"
+    const-string/jumbo v0, "value"
 
     .line 35
     const-class v1, Ljava/lang/Object;

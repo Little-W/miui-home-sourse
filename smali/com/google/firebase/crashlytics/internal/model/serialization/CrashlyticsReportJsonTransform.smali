@@ -184,7 +184,7 @@
     goto :goto_1
 
     :sswitch_2
-    const-string v3, "version"
+    const-string/jumbo v3, "version"
 
     invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -312,8 +312,6 @@
     move-result-object p0
 
     return-object p0
-
-    nop
 
     :sswitch_data_0
     .sparse-switch
@@ -708,7 +706,7 @@
     goto :goto_1
 
     :cond_0
-    const-string v3, "value"
+    const-string/jumbo v3, "value"
 
     invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -770,8 +768,6 @@
     move-result-object p0
 
     return-object p0
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0x0
@@ -1540,7 +1536,7 @@
     goto :goto_1
 
     :cond_1
-    const-string v3, "uuid"
+    const-string/jumbo v3, "uuid"
 
     invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1639,6 +1635,8 @@
     move-result-object p0
 
     return-object p0
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
@@ -3159,7 +3157,7 @@
     goto :goto_1
 
     :cond_1
-    const-string v3, "version"
+    const-string/jumbo v3, "version"
 
     invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -3254,8 +3252,6 @@
     move-result-object p0
 
     return-object p0
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0x0
@@ -3615,7 +3611,7 @@
     goto :goto_1
 
     :sswitch_3
-    const-string v3, "user"
+    const-string/jumbo v3, "user"
 
     invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -3856,6 +3852,8 @@
     move-result-object p0
 
     return-object p0
+
+    nop
 
     :sswitch_data_0
     .sparse-switch

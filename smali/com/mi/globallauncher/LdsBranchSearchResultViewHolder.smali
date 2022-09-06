@@ -55,7 +55,7 @@
 
     iput-object v0, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->mContext:Landroid/content/Context;
 
-    const v0, 0x7f0a0205
+    const v0, 0x7f0a02bb
 
     .line 56
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -66,7 +66,7 @@
 
     iput-object v0, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->container:Landroid/widget/RelativeLayout;
 
-    const v0, 0x7f0a0201
+    const v0, 0x7f0a02b5
 
     .line 57
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -77,7 +77,7 @@
 
     iput-object v0, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->appTitleContainer:Landroid/widget/RelativeLayout;
 
-    const v0, 0x7f0a012f
+    const v0, 0x7f0a018a
 
     .line 58
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -88,7 +88,7 @@
 
     iput-object v0, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->showSearchBranch:Landroidx/recyclerview/widget/RecyclerView;
 
-    const v0, 0x7f0a016e
+    const v0, 0x7f0a01cf
 
     .line 59
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -99,7 +99,7 @@
 
     iput-object v0, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->appIcon:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a02ba
+    const v0, 0x7f0a03a7
 
     .line 60
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -110,7 +110,7 @@
 
     iput-object v0, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->appName:Landroid/widget/TextView;
 
-    const v0, 0x7f0a02bc
+    const v0, 0x7f0a03a9
 
     .line 61
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -121,7 +121,7 @@
 
     iput-object v0, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->appDes:Landroid/widget/TextView;
 
-    const v0, 0x7f0a02bb
+    const v0, 0x7f0a03a8
 
     .line 62
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -132,7 +132,7 @@
 
     iput-object v0, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->appNameCenter:Landroid/widget/TextView;
 
-    const v0, 0x7f0a02be
+    const v0, 0x7f0a03ab
 
     .line 63
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -260,7 +260,7 @@
 
     if-eqz p5, :cond_0
 
-    const p5, 0x7f060062
+    const p5, 0x7f060063
 
     .line 173
     invoke-static {p6, p5}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
@@ -276,7 +276,7 @@
 
     invoke-virtual {p1, p3}, Landroid/widget/TextView;->setTextColor(I)V
 
-    const p1, 0x7f060051
+    const p1, 0x7f060052
 
     .line 175
     invoke-static {p6, p1}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
@@ -295,7 +295,7 @@
     goto :goto_0
 
     :cond_0
-    const p5, 0x7f060063
+    const p5, 0x7f060064
 
     .line 178
     invoke-static {p6, p5}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
@@ -311,7 +311,7 @@
 
     invoke-virtual {p1, p3}, Landroid/widget/TextView;->setTextColor(I)V
 
-    const p1, 0x7f060052
+    const p1, 0x7f060053
 
     .line 180
     invoke-static {p6, p1}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
@@ -581,19 +581,19 @@
 
     if-eqz p3, :cond_3
 
-    const p3, 0x7f0800d9
+    const p3, 0x7f0801a8
 
     goto :goto_3
 
     :pswitch_0
     if-eqz p3, :cond_0
 
-    const p3, 0x7f0800d7
+    const p3, 0x7f0801a6
 
     goto :goto_0
 
     :cond_0
-    const p3, 0x7f0800d8
+    const p3, 0x7f0801a7
 
     .line 204
     :goto_0
@@ -611,12 +611,12 @@
     :pswitch_1
     if-eqz p3, :cond_1
 
-    const p3, 0x7f0800d3
+    const p3, 0x7f0801a2
 
     goto :goto_1
 
     :cond_1
-    const p3, 0x7f0800d4
+    const p3, 0x7f0801a3
 
     .line 199
     :goto_1
@@ -634,12 +634,12 @@
     :pswitch_2
     if-eqz p3, :cond_2
 
-    const p3, 0x7f0800d5
+    const p3, 0x7f0801a4
 
     goto :goto_2
 
     :cond_2
-    const p3, 0x7f0800d6
+    const p3, 0x7f0801a5
 
     .line 194
     :goto_2
@@ -655,7 +655,7 @@
     goto :goto_4
 
     :cond_3
-    const p3, 0x7f0800da
+    const p3, 0x7f0801a9
 
     .line 210
     :goto_3
@@ -875,7 +875,7 @@
 
     move-result-object p3
 
-    const v0, 0x7f080543
+    const v0, 0x7f080640
 
     .line 81
     invoke-virtual {p3, v0}, Lcom/squareup/picasso/RequestCreator;->placeholder(I)Lcom/squareup/picasso/RequestCreator;

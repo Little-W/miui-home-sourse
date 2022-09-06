@@ -3201,21 +3201,21 @@
 
     if-eqz v1, :cond_1
 
-    const-string v1, "utm_campaign"
+    const-string/jumbo v1, "utm_campaign"
 
     .line 38
     invoke-virtual {p1, v1}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    const-string v2, "utm_source"
+    const-string/jumbo v2, "utm_source"
 
     .line 39
     invoke-virtual {p1, v2}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    const-string v3, "utm_medium"
+    const-string/jumbo v3, "utm_medium"
 
     .line 40
     invoke-virtual {p1, v3}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
@@ -3335,7 +3335,7 @@
     invoke-virtual {v0, v1, v4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_7
-    const-string v1, "utm_term"
+    const-string/jumbo v1, "utm_term"
 
     .line 59
     invoke-virtual {p1, v1}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
@@ -3355,7 +3355,7 @@
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_8
-    const-string v1, "utm_content"
+    const-string/jumbo v1, "utm_content"
 
     .line 62
     invoke-virtual {p1, v1}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
@@ -4094,7 +4094,7 @@
     .line 851
     new-array v1, v1, [Ljava/lang/Object;
 
-    const-string v2, "v%s.%s"
+    const-string/jumbo v2, "v%s.%s"
 
     const/4 v3, 0x2
 
@@ -5624,7 +5624,7 @@
 .method final zzb(Ljava/lang/String;)I
     .locals 3
 
-    const-string v0, "user property"
+    const-string/jumbo v0, "user property"
 
     .line 166
     invoke-virtual {p0, v0, p1}, Lcom/google/android/gms/measurement/internal/zzkv;->zzb(Ljava/lang/String;Ljava/lang/String;)Z
@@ -5638,7 +5638,7 @@
     return v1
 
     :cond_0
-    const-string v0, "user property"
+    const-string/jumbo v0, "user property"
 
     .line 168
     sget-object v2, Lcom/google/android/gms/measurement/internal/zzgx;->zza:[Ljava/lang/String;
@@ -5654,7 +5654,7 @@
     return p1
 
     :cond_1
-    const-string v0, "user property"
+    const-string/jumbo v0, "user property"
 
     const/16 v2, 0x18
 
@@ -5685,7 +5685,7 @@
 
     if-eqz v0, :cond_0
 
-    const-string v0, "user property referrer"
+    const-string/jumbo v0, "user property referrer"
 
     .line 526
     invoke-direct {p0, p1}, Lcom/google/android/gms/measurement/internal/zzkv;->zzj(Ljava/lang/String;)I
@@ -5700,7 +5700,7 @@
     goto :goto_0
 
     :cond_0
-    const-string v0, "user property"
+    const-string/jumbo v0, "user property"
 
     .line 529
     invoke-direct {p0, p1}, Lcom/google/android/gms/measurement/internal/zzkv;->zzj(Ljava/lang/String;)I

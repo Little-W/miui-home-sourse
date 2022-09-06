@@ -6,6 +6,8 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroidx/coordinatorlayout/R$styleable;
+        Landroidx/coordinatorlayout/R$styleable;,
+        Landroidx/coordinatorlayout/R$style;,
+        Landroidx/coordinatorlayout/R$attr;
     }
 .end annotation

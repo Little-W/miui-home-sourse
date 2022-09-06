@@ -38,12 +38,12 @@
 .method public constructor <init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
     .locals 2
 
-    .line 1150
+    .line 1155
     invoke-direct {p0, p1}, Lcom/miui/maml/ActionCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;)V
 
     const-string p1, "sound"
 
-    .line 1151
+    .line 1156
     invoke-interface {p2, p1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -52,7 +52,7 @@
 
     const-string p1, "keepCur"
 
-    .line 1152
+    .line 1157
     invoke-interface {p2, p1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -65,7 +65,7 @@
 
     const-string p1, "loop"
 
-    .line 1153
+    .line 1158
     invoke-interface {p2, p1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -78,7 +78,7 @@
 
     const-string p1, "command"
 
-    .line 1154
+    .line 1159
     invoke-interface {p2, p1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -89,7 +89,7 @@
 
     iput-object p1, p0, Lcom/miui/maml/ActionCommand$SoundCommand;->mCommand:Lcom/miui/maml/SoundManager$Command;
 
-    .line 1155
+    .line 1160
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$SoundCommand;->getVariables()Lcom/miui/maml/data/Variables;
 
     move-result-object p1
@@ -106,7 +106,7 @@
 
     iput-object p1, p0, Lcom/miui/maml/ActionCommand$SoundCommand;->mVolumeExp:Lcom/miui/maml/data/Expression;
 
-    .line 1156
+    .line 1161
     iget-object p1, p0, Lcom/miui/maml/ActionCommand$SoundCommand;->mVolumeExp:Lcom/miui/maml/data/Expression;
 
     if-nez p1, :cond_0
@@ -115,10 +115,10 @@
 
     const-string v0, "invalid expression in SoundCommand"
 
-    .line 1157
+    .line 1162
     invoke-static {p1, v0}, Lcom/miui/maml/util/MamlLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1159
+    .line 1164
     :cond_0
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$SoundCommand;->getVariables()Lcom/miui/maml/data/Variables;
 
@@ -138,19 +138,19 @@
 
     const-string p1, "streamIdVar"
 
-    .line 1160
+    .line 1165
     invoke-interface {p2, p1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 1161
+    .line 1166
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p2
 
     if-nez p2, :cond_1
 
-    .line 1162
+    .line 1167
     new-instance p2, Lcom/miui/maml/data/IndexedVariable;
 
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$SoundCommand;->getVariables()Lcom/miui/maml/data/Variables;
@@ -172,7 +172,7 @@
 .method protected doPerform()V
     .locals 6
 
-    .line 1168
+    .line 1173
     sget-object v0, Lcom/miui/maml/ActionCommand$1;->$SwitchMap$com$miui$maml$SoundManager$Command:[I
 
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$SoundCommand;->mCommand:Lcom/miui/maml/SoundManager$Command;
@@ -187,20 +187,20 @@
 
     goto :goto_0
 
-    .line 1183
+    .line 1188
     :pswitch_0
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$SoundCommand;->mStreamIdExp:Lcom/miui/maml/data/Expression;
 
     if-eqz v0, :cond_1
 
-    .line 1184
+    .line 1189
     invoke-virtual {v0}, Lcom/miui/maml/data/Expression;->evaluate()D
 
     move-result-wide v0
 
     double-to-int v0, v0
 
-    .line 1185
+    .line 1190
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$SoundCommand;->getRoot()Lcom/miui/maml/ScreenElementRoot;
 
     move-result-object v1
@@ -214,19 +214,19 @@
     :pswitch_1
     const/4 v0, 0x0
 
-    .line 1171
+    .line 1176
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$SoundCommand;->mVolumeExp:Lcom/miui/maml/data/Expression;
 
     if-eqz v1, :cond_0
 
-    .line 1172
+    .line 1177
     invoke-virtual {v1}, Lcom/miui/maml/data/Expression;->evaluate()D
 
     move-result-wide v0
 
     double-to-float v0, v0
 
-    .line 1174
+    .line 1179
     :cond_0
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$SoundCommand;->getRoot()Lcom/miui/maml/ScreenElementRoot;
 
@@ -246,14 +246,14 @@
 
     move-result v0
 
-    .line 1175
+    .line 1180
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$SoundCommand;->mStreamIdVar:Lcom/miui/maml/data/IndexedVariable;
 
     if-eqz v1, :cond_1
 
     int-to-double v2, v0
 
-    .line 1176
+    .line 1181
     invoke-virtual {v1, v2, v3}, Lcom/miui/maml/data/IndexedVariable;->set(D)V
 
     :cond_1

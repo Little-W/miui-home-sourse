@@ -4416,7 +4416,7 @@
 
     if-ge v6, v12, :cond_2a
 
-    const-string v12, "value"
+    const-string/jumbo v12, "value"
 
     .line 1365
     invoke-interface {v5, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -4523,7 +4523,7 @@
 
     const/16 v5, 0x12
 
-    const-string v6, "value"
+    const-string/jumbo v6, "value"
 
     .line 1378
     invoke-static {v11, v5, v6}, Lcom/google/android/gms/measurement/internal/zzkl;->zza(Lcom/google/android/gms/internal/measurement/zzcd$zzc$zza;ILjava/lang/String;)V
@@ -9775,7 +9775,7 @@
     .line 488
     iget-object v6, v2, Lcom/google/android/gms/measurement/internal/zzaq;->zzb:Lcom/google/android/gms/measurement/internal/zzap;
 
-    const-string v9, "value"
+    const-string/jumbo v9, "value"
 
     invoke-virtual {v6, v9}, Lcom/google/android/gms/measurement/internal/zzap;->zzc(Ljava/lang/String;)Ljava/lang/Double;
 
@@ -9798,7 +9798,7 @@
     .line 490
     iget-object v6, v2, Lcom/google/android/gms/measurement/internal/zzaq;->zzb:Lcom/google/android/gms/measurement/internal/zzap;
 
-    const-string v9, "value"
+    const-string/jumbo v9, "value"
 
     invoke-virtual {v6, v9}, Lcom/google/android/gms/measurement/internal/zzap;->zzb(Ljava/lang/String;)Ljava/lang/Long;
 
@@ -9883,7 +9883,7 @@
     :cond_f
     iget-object v6, v2, Lcom/google/android/gms/measurement/internal/zzaq;->zzb:Lcom/google/android/gms/measurement/internal/zzap;
 
-    const-string v9, "value"
+    const-string/jumbo v9, "value"
 
     invoke-virtual {v6, v9}, Lcom/google/android/gms/measurement/internal/zzap;->zzb(Ljava/lang/String;)Ljava/lang/Long;
 
@@ -15084,7 +15084,7 @@
 
     add-int/2addr v5, v4
 
-    const-string v4, "user_attributes"
+    const-string/jumbo v4, "user_attributes"
 
     const-string v6, "app_id=?"
 
@@ -17168,7 +17168,7 @@
 
     add-int/2addr v9, v13
 
-    const-string v10, "user_attributes"
+    const-string/jumbo v10, "user_attributes"
 
     const-string v11, "app_id=?"
 

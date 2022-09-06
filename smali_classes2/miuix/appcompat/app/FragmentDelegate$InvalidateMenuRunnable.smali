@@ -33,15 +33,15 @@
 .method constructor <init>(Lmiuix/appcompat/app/FragmentDelegate;)V
     .locals 1
 
-    .line 382
+    .line 399
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 380
+    .line 397
     iput-object v0, p0, Lmiuix/appcompat/app/FragmentDelegate$InvalidateMenuRunnable;->mRefs:Ljava/lang/ref/WeakReference;
 
-    .line 383
+    .line 400
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -56,7 +56,7 @@
 .method public run()V
     .locals 5
 
-    .line 389
+    .line 406
     iget-object v0, p0, Lmiuix/appcompat/app/FragmentDelegate$InvalidateMenuRunnable;->mRefs:Ljava/lang/ref/WeakReference;
 
     const/4 v1, 0x0
@@ -79,7 +79,7 @@
 
     return-void
 
-    .line 393
+    .line 410
     :cond_1
     invoke-static {v0}, Lmiuix/appcompat/app/FragmentDelegate;->access$100(Lmiuix/appcompat/app/FragmentDelegate;)B
 
@@ -91,10 +91,10 @@
 
     if-ne v2, v3, :cond_2
 
-    .line 394
+    .line 411
     invoke-static {v0, v1}, Lmiuix/appcompat/app/FragmentDelegate;->access$202(Lmiuix/appcompat/app/FragmentDelegate;Lmiuix/appcompat/internal/view/menu/MenuBuilder;)Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
-    .line 397
+    .line 414
     :cond_2
     invoke-static {v0}, Lmiuix/appcompat/app/FragmentDelegate;->access$200(Lmiuix/appcompat/app/FragmentDelegate;)Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
@@ -104,14 +104,14 @@
 
     if-nez v2, :cond_3
 
-    .line 398
+    .line 415
     invoke-virtual {v0}, Lmiuix/appcompat/app/FragmentDelegate;->createMenu()Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
     move-result-object v2
 
     invoke-static {v0, v2}, Lmiuix/appcompat/app/FragmentDelegate;->access$202(Lmiuix/appcompat/app/FragmentDelegate;Lmiuix/appcompat/internal/view/menu/MenuBuilder;)Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
-    .line 399
+    .line 416
     invoke-static {v0}, Lmiuix/appcompat/app/FragmentDelegate;->access$200(Lmiuix/appcompat/app/FragmentDelegate;)Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
     move-result-object v2
@@ -123,7 +123,7 @@
     :cond_3
     if-eqz v3, :cond_4
 
-    .line 403
+    .line 420
     invoke-static {v0}, Lmiuix/appcompat/app/FragmentDelegate;->access$200(Lmiuix/appcompat/app/FragmentDelegate;)Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
     move-result-object v2
@@ -135,7 +135,7 @@
     :cond_4
     if-eqz v3, :cond_5
 
-    .line 407
+    .line 424
     invoke-static {v0}, Lmiuix/appcompat/app/FragmentDelegate;->access$200(Lmiuix/appcompat/app/FragmentDelegate;)Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
     move-result-object v1
@@ -144,24 +144,18 @@
 
     goto :goto_1
 
-    .line 409
+    .line 426
     :cond_5
     invoke-virtual {v0, v1}, Lmiuix/appcompat/app/FragmentDelegate;->setMenu(Lmiuix/appcompat/internal/view/menu/MenuBuilder;)V
 
-    .line 410
+    .line 427
     invoke-static {v0, v1}, Lmiuix/appcompat/app/FragmentDelegate;->access$202(Lmiuix/appcompat/app/FragmentDelegate;Lmiuix/appcompat/internal/view/menu/MenuBuilder;)Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
-    .line 413
     :goto_1
-    invoke-static {v0}, Lmiuix/appcompat/app/FragmentDelegate;->access$100(Lmiuix/appcompat/app/FragmentDelegate;)B
+    const/16 v1, -0x12
 
-    move-result v1
-
-    and-int/lit8 v1, v1, -0x12
-
-    int-to-byte v1, v1
-
-    invoke-static {v0, v1}, Lmiuix/appcompat/app/FragmentDelegate;->access$102(Lmiuix/appcompat/app/FragmentDelegate;B)B
+    .line 430
+    invoke-static {v0, v1}, Lmiuix/appcompat/app/FragmentDelegate;->access$172(Lmiuix/appcompat/app/FragmentDelegate;I)B
 
     return-void
 .end method

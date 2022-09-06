@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="config_icon_height">50.179993dip</dimen>
+    <dimen name="config_icon_width">50.179993dip</dimen>
+    <dimen name="hotseats_margin_top">50.0dip</dimen>
+    <dimen name="icon_padding_top">4.0dip</dimen>
+    <dimen name="recommend_switch_summary_padding_left">19.0dip</dimen>
+    <dimen name="slide_bar_margin_top">0.0dip</dimen>
+    <dimen name="workspace_cell_additional_padding_top_notch">0.0dip</dimen>
+    <dimen name="workspace_cell_padding_top">35.0dip</dimen>
+    <dimen name="workspace_cell_vertical_spacing">0.0dip</dimen>
+    <item type="dimen" name="workspace_cell_vertical_spacing_navigation">@dimen/workspace_cell_vertical_spacing</item>
+</resources>

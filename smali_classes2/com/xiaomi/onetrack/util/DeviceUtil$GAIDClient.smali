@@ -28,7 +28,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 651
+    .line 654
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,7 +37,7 @@
 .method static a(Landroid/content/Context;)Ljava/lang/String;
     .locals 4
 
-    .line 656
+    .line 659
     invoke-static {p0}, Lcom/xiaomi/onetrack/util/DeviceUtil$GAIDClient;->c(Landroid/content/Context;)Z
 
     move-result v0
@@ -48,14 +48,14 @@
 
     const-string v0, "Google play service is not available"
 
-    .line 657
+    .line 660
     invoke-static {p0, v0}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p0, ""
 
     return-object p0
 
-    .line 661
+    .line 664
     :cond_0
     new-instance v0, Lcom/xiaomi/onetrack/util/DeviceUtil$GAIDClient$AdvertisingConnection;
 
@@ -63,7 +63,7 @@
 
     invoke-direct {v0, v1}, Lcom/xiaomi/onetrack/util/DeviceUtil$GAIDClient$AdvertisingConnection;-><init>(Lcom/xiaomi/onetrack/util/h;)V
 
-    .line 663
+    .line 666
     :try_start_0
     new-instance v1, Landroid/content/Intent;
 
@@ -73,19 +73,19 @@
 
     const-string v2, "com.google.android.gms"
 
-    .line 664
+    .line 667
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     const/4 v2, 0x1
 
-    .line 665
+    .line 668
     invoke-virtual {p0, v1, v0, v2}, Landroid/content/Context;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 666
+    .line 669
     new-instance v1, Lcom/xiaomi/onetrack/util/DeviceUtil$GAIDClient$a;
 
     invoke-virtual {v0}, Lcom/xiaomi/onetrack/util/DeviceUtil$GAIDClient$AdvertisingConnection;->a()Landroid/os/IBinder;
@@ -94,7 +94,7 @@
 
     invoke-direct {v1, v2}, Lcom/xiaomi/onetrack/util/DeviceUtil$GAIDClient$a;-><init>(Landroid/os/IBinder;)V
 
-    .line 667
+    .line 670
     invoke-virtual {v1}, Lcom/xiaomi/onetrack/util/DeviceUtil$GAIDClient$a;->a()Ljava/lang/String;
 
     move-result-object v1
@@ -102,7 +102,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 672
+    .line 675
     invoke-virtual {p0, v0}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
     return-object v1
@@ -120,12 +120,12 @@
 
     const-string v3, "Query Google ADID failed "
 
-    .line 670
+    .line 673
     invoke-static {v2, v3, v1}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 672
+    .line 675
     :cond_1
     invoke-virtual {p0, v0}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
@@ -136,14 +136,14 @@
     :goto_0
     invoke-virtual {p0, v0}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
-    .line 673
+    .line 676
     throw v1
 .end method
 
 .method static b(Landroid/content/Context;)Z
     .locals 5
 
-    .line 678
+    .line 681
     invoke-static {p0}, Lcom/xiaomi/onetrack/util/DeviceUtil$GAIDClient;->c(Landroid/content/Context;)Z
 
     move-result v0
@@ -156,12 +156,12 @@
 
     const-string v0, "Google play service is not available"
 
-    .line 679
+    .line 682
     invoke-static {p0, v0}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return v1
 
-    .line 683
+    .line 686
     :cond_0
     new-instance v0, Lcom/xiaomi/onetrack/util/DeviceUtil$GAIDClient$AdvertisingConnection;
 
@@ -169,7 +169,7 @@
 
     invoke-direct {v0, v2}, Lcom/xiaomi/onetrack/util/DeviceUtil$GAIDClient$AdvertisingConnection;-><init>(Lcom/xiaomi/onetrack/util/h;)V
 
-    .line 685
+    .line 688
     :try_start_0
     new-instance v2, Landroid/content/Intent;
 
@@ -179,19 +179,19 @@
 
     const-string v3, "com.google.android.gms"
 
-    .line 686
+    .line 689
     invoke-virtual {v2, v3}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     const/4 v3, 0x1
 
-    .line 687
+    .line 690
     invoke-virtual {p0, v2, v0, v3}, Landroid/content/Context;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 688
+    .line 691
     new-instance v2, Lcom/xiaomi/onetrack/util/DeviceUtil$GAIDClient$a;
 
     invoke-virtual {v0}, Lcom/xiaomi/onetrack/util/DeviceUtil$GAIDClient$AdvertisingConnection;->a()Landroid/os/IBinder;
@@ -200,7 +200,7 @@
 
     invoke-direct {v2, v4}, Lcom/xiaomi/onetrack/util/DeviceUtil$GAIDClient$a;-><init>(Landroid/os/IBinder;)V
 
-    .line 689
+    .line 692
     invoke-virtual {v2, v3}, Lcom/xiaomi/onetrack/util/DeviceUtil$GAIDClient$a;->a(Z)Z
 
     move-result v1
@@ -208,7 +208,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 694
+    .line 697
     invoke-virtual {p0, v0}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
     return v1
@@ -226,12 +226,12 @@
 
     const-string v4, "Query Google isLimitAdTrackingEnabled failed "
 
-    .line 692
+    .line 695
     invoke-static {v3, v4, v2}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 694
+    .line 697
     :cond_1
     invoke-virtual {p0, v0}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
@@ -240,14 +240,14 @@
     :goto_0
     invoke-virtual {p0, v0}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
-    .line 695
+    .line 698
     throw v1
 .end method
 
 .method private static c(Landroid/content/Context;)Z
     .locals 2
 
-    .line 701
+    .line 704
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -257,7 +257,7 @@
 
     const/16 v1, 0x4000
 
-    .line 702
+    .line 705
     invoke-virtual {p0, v0, v1}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0

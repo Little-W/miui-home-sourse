@@ -25,7 +25,7 @@
 .method private constructor <init>(Lcom/miui/home/launcher/ScreenView;)V
     .locals 0
 
-    .line 2246
+    .line 2240
     iput-object p1, p0, Lcom/miui/home/launcher/ScreenView$SliderTouchListener;->this$0:Lcom/miui/home/launcher/ScreenView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,7 +36,7 @@
 .method synthetic constructor <init>(Lcom/miui/home/launcher/ScreenView;Lcom/miui/home/launcher/ScreenView$1;)V
     .locals 0
 
-    .line 2246
+    .line 2240
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/ScreenView$SliderTouchListener;-><init>(Lcom/miui/home/launcher/ScreenView;)V
 
     return-void
@@ -47,12 +47,12 @@
 .method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 4
 
-    .line 2249
+    .line 2243
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
     move-result p1
 
-    .line 2250
+    .line 2244
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
@@ -71,7 +71,7 @@
 
     move-result v0
 
-    .line 2251
+    .line 2245
     iget-object v1, p0, Lcom/miui/home/launcher/ScreenView$SliderTouchListener;->this$0:Lcom/miui/home/launcher/ScreenView;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/ScreenView;->getScreenCount()I
@@ -88,14 +88,14 @@
 
     float-to-double v2, v2
 
-    .line 2252
+    .line 2246
     invoke-static {v2, v3}, Ljava/lang/Math;->floor(D)D
 
     move-result-wide v2
 
     double-to-int v2, v2
 
-    .line 2254
+    .line 2248
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v3
@@ -104,18 +104,16 @@
 
     goto :goto_0
 
-    .line 2260
+    .line 2254
     :pswitch_0
     iget-object p2, p0, Lcom/miui/home/launcher/ScreenView$SliderTouchListener;->this$0:Lcom/miui/home/launcher/ScreenView;
 
     invoke-virtual {p2, v2}, Lcom/miui/home/launcher/ScreenView;->setCurrentScreenInner(I)V
 
-    .line 2261
+    .line 2255
     iget-object p2, p0, Lcom/miui/home/launcher/ScreenView$SliderTouchListener;->this$0:Lcom/miui/home/launcher/ScreenView;
 
-    invoke-static {p2}, Lcom/miui/home/launcher/ScreenView;->access$500(Lcom/miui/home/launcher/ScreenView;)I
-
-    move-result v2
+    iget v2, p2, Lcom/miui/home/launcher/ScreenView;->mChildScreenMeasureWidth:I
 
     mul-int/2addr v1, v2
 
@@ -127,10 +125,7 @@
 
     iget-object p1, p0, Lcom/miui/home/launcher/ScreenView$SliderTouchListener;->this$0:Lcom/miui/home/launcher/ScreenView;
 
-    .line 2262
-    invoke-static {p1}, Lcom/miui/home/launcher/ScreenView;->access$500(Lcom/miui/home/launcher/ScreenView;)I
-
-    move-result p1
+    iget p1, p1, Lcom/miui/home/launcher/ScreenView;->mChildScreenMeasureWidth:I
 
     div-int/lit8 p1, p1, 0x2
 
@@ -142,33 +137,32 @@
 
     const/4 v0, 0x0
 
-    .line 2261
     invoke-virtual {p2, p1, v0}, Lcom/miui/home/launcher/ScreenView;->scrollTo(II)V
 
     goto :goto_0
 
-    .line 2267
+    .line 2261
     :pswitch_1
     iget-object p1, p0, Lcom/miui/home/launcher/ScreenView$SliderTouchListener;->this$0:Lcom/miui/home/launcher/ScreenView;
 
     invoke-virtual {p1, v2}, Lcom/miui/home/launcher/ScreenView;->snapToScreen(I)I
 
-    .line 2268
+    .line 2262
     iget-object p1, p0, Lcom/miui/home/launcher/ScreenView$SliderTouchListener;->this$0:Lcom/miui/home/launcher/ScreenView;
 
     iget p2, p1, Lcom/miui/home/launcher/ScreenView;->mNextScreenIndex:I
 
-    invoke-static {p1, p2}, Lcom/miui/home/launcher/ScreenView;->access$600(Lcom/miui/home/launcher/ScreenView;I)V
+    invoke-static {p1, p2}, Lcom/miui/home/launcher/ScreenView;->access$500(Lcom/miui/home/launcher/ScreenView;I)V
 
     goto :goto_0
 
-    .line 2256
+    .line 2250
     :pswitch_2
     iget-object p1, p0, Lcom/miui/home/launcher/ScreenView$SliderTouchListener;->this$0:Lcom/miui/home/launcher/ScreenView;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/ScreenView;->cancelScroll()V
 
-    .line 2257
+    .line 2251
     iget-object p1, p0, Lcom/miui/home/launcher/ScreenView$SliderTouchListener;->this$0:Lcom/miui/home/launcher/ScreenView;
 
     const/4 v0, 0x3

@@ -7,7 +7,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 24
+    .line 23
     invoke-direct {p0}, Landroid/content/ContentProvider;-><init>()V
 
     return-void
@@ -16,7 +16,7 @@
 .method private addResource(Landroid/os/Bundle;)V
     .locals 1
 
-    .line 131
+    .line 130
     new-instance v0, Lcom/miui/home/launcher/-$$Lambda$SearchBarStyleDataProvider$Mr-xdRSalXzBjYlio_MDp5kx80k;
 
     invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/-$$Lambda$SearchBarStyleDataProvider$Mr-xdRSalXzBjYlio_MDp5kx80k;-><init>(Lcom/miui/home/launcher/SearchBarStyleDataProvider;Landroid/os/Bundle;)V
@@ -29,7 +29,7 @@
 .method private checkDirectory()Ljava/io/File;
     .locals 3
 
-    .line 109
+    .line 108
     new-instance v0, Ljava/io/File;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -60,7 +60,7 @@
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 110
+    .line 109
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v1
@@ -73,7 +73,7 @@
 
     if-nez v1, :cond_1
 
-    .line 111
+    .line 110
     :cond_0
     invoke-virtual {v0}, Ljava/io/File;->mkdir()Z
 
@@ -84,7 +84,7 @@
 .method private deleteCache(Landroid/os/Bundle;)V
     .locals 1
 
-    .line 166
+    .line 165
     new-instance v0, Lcom/miui/home/launcher/-$$Lambda$SearchBarStyleDataProvider$jBPuz3P_mffoVcWn2gg_7CPe540;
 
     invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/-$$Lambda$SearchBarStyleDataProvider$jBPuz3P_mffoVcWn2gg_7CPe540;-><init>(Lcom/miui/home/launcher/SearchBarStyleDataProvider;Landroid/os/Bundle;)V
@@ -99,7 +99,7 @@
 
     if-eqz p0, :cond_4
 
-    .line 97
+    .line 96
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
     move-result v0
@@ -114,7 +114,7 @@
 
     goto :goto_2
 
-    .line 99
+    .line 98
     :cond_0
     invoke-virtual {p0}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
@@ -129,19 +129,19 @@
 
     aget-object v2, p0, v1
 
-    .line 100
+    .line 99
     invoke-virtual {v2}, Ljava/io/File;->isFile()Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 101
+    .line 100
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
     goto :goto_1
 
-    .line 102
+    .line 101
     :cond_1
     invoke-virtual {v2}, Ljava/io/File;->isDirectory()Z
 
@@ -149,7 +149,7 @@
 
     if-eqz v3, :cond_2
 
-    .line 103
+    .line 102
     invoke-static {v2}, Lcom/miui/home/launcher/SearchBarStyleDataProvider;->deleteDirWihtFile(Ljava/io/File;)V
 
     :cond_2
@@ -169,24 +169,24 @@
 .method private getCacheList()Landroid/os/Bundle;
     .locals 3
 
-    .line 123
+    .line 122
     invoke-direct {p0}, Lcom/miui/home/launcher/SearchBarStyleDataProvider;->checkDirectory()Ljava/io/File;
 
     move-result-object v0
 
-    .line 124
+    .line 123
     invoke-virtual {v0}, Ljava/io/File;->list()[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 125
+    .line 124
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
     const-string v2, "cacheList"
 
-    .line 126
+    .line 125
     invoke-virtual {v1, v2, v0}, Landroid/os/Bundle;->putStringArray(Ljava/lang/String;[Ljava/lang/String;)V
 
     return-object v1
@@ -197,24 +197,24 @@
 
     const-string v0, "key"
 
-    .line 132
+    .line 131
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "data"
 
-    .line 133
+    .line 132
     invoke-virtual {p1, v1}, Landroid/os/Bundle;->getByteArray(Ljava/lang/String;)[B
 
     move-result-object p1
 
-    .line 134
+    .line 133
     invoke-direct {p0}, Lcom/miui/home/launcher/SearchBarStyleDataProvider;->checkDirectory()Ljava/io/File;
 
     move-result-object v1
 
-    .line 135
+    .line 134
     new-instance v2, Ljava/io/File;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -239,7 +239,7 @@
 
     invoke-direct {v2, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 136
+    .line 135
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
     move-result v0
@@ -248,7 +248,7 @@
 
     return-void
 
-    .line 139
+    .line 138
     :cond_0
     invoke-direct {p0, v2, p1}, Lcom/miui/home/launcher/SearchBarStyleDataProvider;->writeFileByIO(Ljava/io/File;[B)V
 
@@ -258,7 +258,7 @@
 .method public static synthetic lambda$call$0(Lcom/miui/home/launcher/SearchBarStyleDataProvider;)V
     .locals 1
 
-    .line 82
+    .line 81
     invoke-direct {p0}, Lcom/miui/home/launcher/SearchBarStyleDataProvider;->checkDirectory()Ljava/io/File;
 
     move-result-object v0
@@ -273,17 +273,17 @@
 
     const-string v0, "key"
 
-    .line 167
+    .line 166
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 168
+    .line 167
     invoke-direct {p0}, Lcom/miui/home/launcher/SearchBarStyleDataProvider;->checkDirectory()Ljava/io/File;
 
     move-result-object v0
 
-    .line 169
+    .line 168
     new-instance v1, Ljava/io/File;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -308,14 +308,14 @@
 
     invoke-direct {v1, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 170
+    .line 169
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 171
+    .line 170
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
     :cond_0
@@ -327,19 +327,19 @@
 
     const-string v0, "data"
 
-    .line 117
+    .line 116
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 118
+    .line 117
     invoke-static {}, Lcom/miui/home/launcher/common/PreferenceUtils;->getInstance()Lcom/miui/home/launcher/common/PreferenceUtils;
 
     move-result-object v0
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/common/PreferenceUtils;->setSearchBarData(Ljava/lang/String;)V
 
-    .line 119
+    .line 118
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object p1
@@ -370,7 +370,7 @@
 
     const/4 v0, 0x0
 
-    .line 147
+    .line 146
     :try_start_0
     new-instance v1, Ljava/io/BufferedOutputStream;
 
@@ -384,7 +384,7 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 148
+    .line 147
     :try_start_1
     invoke-virtual {v1, p2}, Ljava/io/BufferedOutputStream;->write([B)V
     :try_end_1
@@ -392,11 +392,11 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 156
+    .line 155
     :try_start_2
     invoke-virtual {v1}, Ljava/io/BufferedOutputStream;->flush()V
 
-    .line 157
+    .line 156
     invoke-virtual {v1}, Ljava/io/BufferedOutputStream;->close()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_4
@@ -432,7 +432,7 @@
     :catch_2
     move-exception p1
 
-    .line 152
+    .line 151
     :goto_0
     :try_start_3
     invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
@@ -441,11 +441,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 156
+    .line 155
     :try_start_4
     invoke-virtual {v0}, Ljava/io/BufferedOutputStream;->flush()V
 
-    .line 157
+    .line 156
     invoke-virtual {v0}, Ljava/io/BufferedOutputStream;->close()V
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_4
@@ -455,7 +455,7 @@
     :catch_3
     move-exception p1
 
-    .line 150
+    .line 149
     :goto_1
     :try_start_5
     invoke-virtual {p1}, Ljava/io/FileNotFoundException;->printStackTrace()V
@@ -464,11 +464,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 156
+    .line 155
     :try_start_6
     invoke-virtual {v0}, Ljava/io/BufferedOutputStream;->flush()V
 
-    .line 157
+    .line 156
     invoke-virtual {v0}, Ljava/io/BufferedOutputStream;->close()V
     :try_end_6
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_4
@@ -478,7 +478,7 @@
     :catch_4
     move-exception p1
 
-    .line 159
+    .line 158
     invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
 
     :cond_0
@@ -488,11 +488,11 @@
     :goto_3
     if-eqz v0, :cond_1
 
-    .line 156
+    .line 155
     :try_start_7
     invoke-virtual {v0}, Ljava/io/BufferedOutputStream;->flush()V
 
-    .line 157
+    .line 156
     invoke-virtual {v0}, Ljava/io/BufferedOutputStream;->close()V
     :try_end_7
     .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_5
@@ -502,10 +502,10 @@
     :catch_5
     move-exception p2
 
-    .line 159
+    .line 158
     invoke-virtual {p2}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 162
+    .line 161
     :cond_1
     :goto_4
     throw p1
@@ -516,7 +516,7 @@
 .method public call(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
     .locals 0
 
-    .line 69
+    .line 68
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     move-result p2
@@ -599,13 +599,13 @@
 
     goto :goto_2
 
-    .line 86
+    .line 85
     :pswitch_0
     invoke-direct {p0, p3}, Lcom/miui/home/launcher/SearchBarStyleDataProvider;->deleteCache(Landroid/os/Bundle;)V
 
     goto :goto_2
 
-    .line 82
+    .line 81
     :pswitch_1
     new-instance p1, Lcom/miui/home/launcher/-$$Lambda$SearchBarStyleDataProvider$oSK3TjLDBw67mid-tRp5s0EQW9w;
 
@@ -615,13 +615,13 @@
 
     goto :goto_2
 
-    .line 78
+    .line 77
     :pswitch_2
     invoke-direct {p0, p3}, Lcom/miui/home/launcher/SearchBarStyleDataProvider;->addResource(Landroid/os/Bundle;)V
 
     goto :goto_2
 
-    .line 75
+    .line 74
     :pswitch_3
     invoke-direct {p0}, Lcom/miui/home/launcher/SearchBarStyleDataProvider;->getCacheList()Landroid/os/Bundle;
 
@@ -629,11 +629,11 @@
 
     return-object p1
 
-    .line 71
+    .line 70
     :pswitch_4
     invoke-direct {p0, p3}, Lcom/miui/home/launcher/SearchBarStyleDataProvider;->updateConfig(Landroid/os/Bundle;)V
 
-    .line 92
+    .line 91
     :goto_2
     new-instance p1, Landroid/os/Bundle;
 

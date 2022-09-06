@@ -78,18 +78,18 @@
 .method private enqueue(Landroidx/fragment/app/SpecialEffectsController$Operation$State;Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;Landroidx/fragment/app/FragmentStateManager;)V
     .locals 3
 
-    .line 190
+    .line 193
     iget-object v0, p0, Landroidx/fragment/app/SpecialEffectsController;->mPendingOperations:Ljava/util/ArrayList;
 
     monitor-enter v0
 
-    .line 191
+    .line 194
     :try_start_0
     new-instance v1, Landroidx/core/os/CancellationSignal;
 
     invoke-direct {v1}, Landroidx/core/os/CancellationSignal;-><init>()V
 
-    .line 193
+    .line 196
     invoke-virtual {p3}, Landroidx/fragment/app/FragmentStateManager;->getFragment()Landroidx/fragment/app/Fragment;
 
     move-result-object v2
@@ -100,40 +100,40 @@
 
     if-eqz v2, :cond_0
 
-    .line 197
+    .line 200
     invoke-virtual {v2, p1, p2}, Landroidx/fragment/app/SpecialEffectsController$Operation;->mergeWith(Landroidx/fragment/app/SpecialEffectsController$Operation$State;Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;)V
 
-    .line 198
+    .line 201
     monitor-exit v0
 
     return-void
 
-    .line 200
+    .line 203
     :cond_0
     new-instance v2, Landroidx/fragment/app/SpecialEffectsController$FragmentStateManagerOperation;
 
     invoke-direct {v2, p1, p2, p3, v1}, Landroidx/fragment/app/SpecialEffectsController$FragmentStateManagerOperation;-><init>(Landroidx/fragment/app/SpecialEffectsController$Operation$State;Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;Landroidx/fragment/app/FragmentStateManager;Landroidx/core/os/CancellationSignal;)V
 
-    .line 202
+    .line 205
     iget-object p1, p0, Landroidx/fragment/app/SpecialEffectsController;->mPendingOperations:Ljava/util/ArrayList;
 
     invoke-virtual {p1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 204
+    .line 207
     new-instance p1, Landroidx/fragment/app/SpecialEffectsController$1;
 
     invoke-direct {p1, p0, v2}, Landroidx/fragment/app/SpecialEffectsController$1;-><init>(Landroidx/fragment/app/SpecialEffectsController;Landroidx/fragment/app/SpecialEffectsController$FragmentStateManagerOperation;)V
 
     invoke-virtual {v2, p1}, Landroidx/fragment/app/SpecialEffectsController$FragmentStateManagerOperation;->addCompletionListener(Ljava/lang/Runnable;)V
 
-    .line 214
+    .line 217
     new-instance p1, Landroidx/fragment/app/SpecialEffectsController$2;
 
     invoke-direct {p1, p0, v2}, Landroidx/fragment/app/SpecialEffectsController$2;-><init>(Landroidx/fragment/app/SpecialEffectsController;Landroidx/fragment/app/SpecialEffectsController$FragmentStateManagerOperation;)V
 
     invoke-virtual {v2, p1}, Landroidx/fragment/app/SpecialEffectsController$FragmentStateManagerOperation;->addCompletionListener(Ljava/lang/Runnable;)V
 
-    .line 221
+    .line 224
     monitor-exit v0
 
     return-void
@@ -151,7 +151,7 @@
 .method private findPendingOperation(Landroidx/fragment/app/Fragment;)Landroidx/fragment/app/SpecialEffectsController$Operation;
     .locals 3
 
-    .line 132
+    .line 135
     iget-object v0, p0, Landroidx/fragment/app/SpecialEffectsController;->mPendingOperations:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -171,7 +171,7 @@
 
     check-cast v1, Landroidx/fragment/app/SpecialEffectsController$Operation;
 
-    .line 133
+    .line 136
     invoke-virtual {v1}, Landroidx/fragment/app/SpecialEffectsController$Operation;->getFragment()Landroidx/fragment/app/Fragment;
 
     move-result-object v2
@@ -199,7 +199,7 @@
 .method private findRunningOperation(Landroidx/fragment/app/Fragment;)Landroidx/fragment/app/SpecialEffectsController$Operation;
     .locals 3
 
-    .line 142
+    .line 145
     iget-object v0, p0, Landroidx/fragment/app/SpecialEffectsController;->mRunningOperations:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -219,7 +219,7 @@
 
     check-cast v1, Landroidx/fragment/app/SpecialEffectsController$Operation;
 
-    .line 143
+    .line 146
     invoke-virtual {v1}, Landroidx/fragment/app/SpecialEffectsController$Operation;->getFragment()Landroidx/fragment/app/Fragment;
 
     move-result-object v2
@@ -297,7 +297,7 @@
 .method private updateFinalState()V
     .locals 4
 
-    .line 335
+    .line 338
     iget-object v0, p0, Landroidx/fragment/app/SpecialEffectsController;->mPendingOperations:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -318,7 +318,7 @@
 
     check-cast v1, Landroidx/fragment/app/SpecialEffectsController$Operation;
 
-    .line 337
+    .line 340
     invoke-virtual {v1}, Landroidx/fragment/app/SpecialEffectsController$Operation;->getLifecycleImpact()Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;
 
     move-result-object v2
@@ -327,17 +327,17 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 338
+    .line 341
     invoke-virtual {v1}, Landroidx/fragment/app/SpecialEffectsController$Operation;->getFragment()Landroidx/fragment/app/Fragment;
 
     move-result-object v2
 
-    .line 339
+    .line 342
     invoke-virtual {v2}, Landroidx/fragment/app/Fragment;->requireView()Landroid/view/View;
 
     move-result-object v2
 
-    .line 340
+    .line 343
     invoke-virtual {v2}, Landroid/view/View;->getVisibility()I
 
     move-result v2
@@ -346,7 +346,7 @@
 
     move-result-object v2
 
-    .line 341
+    .line 344
     sget-object v3, Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;->NONE:Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;
 
     invoke-virtual {v1, v2, v3}, Landroidx/fragment/app/SpecialEffectsController$Operation;->mergeWith(Landroidx/fragment/app/SpecialEffectsController$Operation$State;Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;)V
@@ -364,7 +364,7 @@
 
     const/4 v0, 0x2
 
-    .line 152
+    .line 155
     invoke-static {v0}, Landroidx/fragment/app/FragmentManager;->isLoggingEnabled(I)Z
 
     move-result v0
@@ -373,7 +373,7 @@
 
     const-string v0, "FragmentManager"
 
-    .line 153
+    .line 156
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -382,7 +382,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 155
+    .line 158
     invoke-virtual {p2}, Landroidx/fragment/app/FragmentStateManager;->getFragment()Landroidx/fragment/app/Fragment;
 
     move-result-object v2
@@ -393,10 +393,10 @@
 
     move-result-object v1
 
-    .line 153
+    .line 156
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 157
+    .line 160
     :cond_0
     sget-object v0, Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;->ADDING:Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;
 
@@ -410,7 +410,7 @@
 
     const/4 v0, 0x2
 
-    .line 170
+    .line 173
     invoke-static {v0}, Landroidx/fragment/app/FragmentManager;->isLoggingEnabled(I)Z
 
     move-result v0
@@ -419,7 +419,7 @@
 
     const-string v0, "FragmentManager"
 
-    .line 171
+    .line 174
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -428,7 +428,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 173
+    .line 176
     invoke-virtual {p1}, Landroidx/fragment/app/FragmentStateManager;->getFragment()Landroidx/fragment/app/Fragment;
 
     move-result-object v2
@@ -439,10 +439,10 @@
 
     move-result-object v1
 
-    .line 171
+    .line 174
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 175
+    .line 178
     :cond_0
     sget-object v0, Landroidx/fragment/app/SpecialEffectsController$Operation$State;->GONE:Landroidx/fragment/app/SpecialEffectsController$Operation$State;
 
@@ -458,7 +458,7 @@
 
     const/4 v0, 0x2
 
-    .line 179
+    .line 182
     invoke-static {v0}, Landroidx/fragment/app/FragmentManager;->isLoggingEnabled(I)Z
 
     move-result v0
@@ -467,7 +467,7 @@
 
     const-string v0, "FragmentManager"
 
-    .line 180
+    .line 183
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -476,7 +476,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 182
+    .line 185
     invoke-virtual {p1}, Landroidx/fragment/app/FragmentStateManager;->getFragment()Landroidx/fragment/app/Fragment;
 
     move-result-object v2
@@ -487,10 +487,10 @@
 
     move-result-object v1
 
-    .line 180
+    .line 183
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 184
+    .line 187
     :cond_0
     sget-object v0, Landroidx/fragment/app/SpecialEffectsController$Operation$State;->REMOVED:Landroidx/fragment/app/SpecialEffectsController$Operation$State;
 
@@ -506,7 +506,7 @@
 
     const/4 v0, 0x2
 
-    .line 161
+    .line 164
     invoke-static {v0}, Landroidx/fragment/app/FragmentManager;->isLoggingEnabled(I)Z
 
     move-result v0
@@ -515,7 +515,7 @@
 
     const-string v0, "FragmentManager"
 
-    .line 162
+    .line 165
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -524,7 +524,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 164
+    .line 167
     invoke-virtual {p1}, Landroidx/fragment/app/FragmentStateManager;->getFragment()Landroidx/fragment/app/Fragment;
 
     move-result-object v2
@@ -535,10 +535,10 @@
 
     move-result-object v1
 
-    .line 162
+    .line 165
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 166
+    .line 169
     :cond_0
     sget-object v0, Landroidx/fragment/app/SpecialEffectsController$Operation$State;->VISIBLE:Landroidx/fragment/app/SpecialEffectsController$Operation$State;
 
@@ -563,14 +563,14 @@
 .method executePendingOperations()V
     .locals 7
 
-    .line 257
+    .line 260
     iget-boolean v0, p0, Landroidx/fragment/app/SpecialEffectsController;->mIsContainerPostponed:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 263
+    .line 266
     :cond_0
     iget-object v0, p0, Landroidx/fragment/app/SpecialEffectsController;->mContainer:Landroid/view/ViewGroup;
 
@@ -582,21 +582,21 @@
 
     if-nez v0, :cond_1
 
-    .line 264
+    .line 267
     invoke-virtual {p0}, Landroidx/fragment/app/SpecialEffectsController;->forceCompleteAllOperations()V
 
-    .line 265
+    .line 268
     iput-boolean v1, p0, Landroidx/fragment/app/SpecialEffectsController;->mOperationDirectionIsPop:Z
 
     return-void
 
-    .line 268
+    .line 271
     :cond_1
     iget-object v0, p0, Landroidx/fragment/app/SpecialEffectsController;->mPendingOperations:Ljava/util/ArrayList;
 
     monitor-enter v0
 
-    .line 269
+    .line 272
     :try_start_0
     iget-object v2, p0, Landroidx/fragment/app/SpecialEffectsController;->mPendingOperations:Ljava/util/ArrayList;
 
@@ -606,19 +606,19 @@
 
     if-nez v2, :cond_6
 
-    .line 270
+    .line 273
     new-instance v2, Ljava/util/ArrayList;
 
     iget-object v3, p0, Landroidx/fragment/app/SpecialEffectsController;->mRunningOperations:Ljava/util/ArrayList;
 
     invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 272
+    .line 275
     iget-object v3, p0, Landroidx/fragment/app/SpecialEffectsController;->mRunningOperations:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->clear()V
 
-    .line 273
+    .line 276
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -639,7 +639,7 @@
 
     const/4 v4, 0x2
 
-    .line 274
+    .line 277
     invoke-static {v4}, Landroidx/fragment/app/FragmentManager;->isLoggingEnabled(I)Z
 
     move-result v4
@@ -648,7 +648,7 @@
 
     const-string v4, "FragmentManager"
 
-    .line 275
+    .line 278
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -665,46 +665,46 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 278
+    .line 281
     :cond_3
     invoke-virtual {v3}, Landroidx/fragment/app/SpecialEffectsController$Operation;->cancel()V
 
-    .line 279
+    .line 282
     invoke-virtual {v3}, Landroidx/fragment/app/SpecialEffectsController$Operation;->isComplete()Z
 
     move-result v4
 
     if-nez v4, :cond_2
 
-    .line 282
+    .line 285
     iget-object v4, p0, Landroidx/fragment/app/SpecialEffectsController;->mRunningOperations:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 286
+    .line 289
     :cond_4
     invoke-direct {p0}, Landroidx/fragment/app/SpecialEffectsController;->updateFinalState()V
 
-    .line 288
+    .line 291
     new-instance v2, Ljava/util/ArrayList;
 
     iget-object v3, p0, Landroidx/fragment/app/SpecialEffectsController;->mPendingOperations:Ljava/util/ArrayList;
 
     invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 289
+    .line 292
     iget-object v3, p0, Landroidx/fragment/app/SpecialEffectsController;->mPendingOperations:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->clear()V
 
-    .line 290
+    .line 293
     iget-object v3, p0, Landroidx/fragment/app/SpecialEffectsController;->mRunningOperations:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 291
+    .line 294
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -722,21 +722,21 @@
 
     check-cast v4, Landroidx/fragment/app/SpecialEffectsController$Operation;
 
-    .line 292
+    .line 295
     invoke-virtual {v4}, Landroidx/fragment/app/SpecialEffectsController$Operation;->onStart()V
 
     goto :goto_1
 
-    .line 294
+    .line 297
     :cond_5
     iget-boolean v3, p0, Landroidx/fragment/app/SpecialEffectsController;->mOperationDirectionIsPop:Z
 
     invoke-virtual {p0, v2, v3}, Landroidx/fragment/app/SpecialEffectsController;->executeOperations(Ljava/util/List;Z)V
 
-    .line 295
+    .line 298
     iput-boolean v1, p0, Landroidx/fragment/app/SpecialEffectsController;->mOperationDirectionIsPop:Z
 
-    .line 297
+    .line 300
     :cond_6
     monitor-exit v0
 
@@ -755,23 +755,23 @@
 .method forceCompleteAllOperations()V
     .locals 9
 
-    .line 301
+    .line 304
     iget-object v0, p0, Landroidx/fragment/app/SpecialEffectsController;->mContainer:Landroid/view/ViewGroup;
 
     invoke-static {v0}, Landroidx/core/view/ViewCompat;->isAttachedToWindow(Landroid/view/View;)Z
 
     move-result v0
 
-    .line 302
+    .line 305
     iget-object v1, p0, Landroidx/fragment/app/SpecialEffectsController;->mPendingOperations:Ljava/util/ArrayList;
 
     monitor-enter v1
 
-    .line 303
+    .line 306
     :try_start_0
     invoke-direct {p0}, Landroidx/fragment/app/SpecialEffectsController;->updateFinalState()V
 
-    .line 304
+    .line 307
     iget-object v2, p0, Landroidx/fragment/app/SpecialEffectsController;->mPendingOperations:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -791,12 +791,12 @@
 
     check-cast v3, Landroidx/fragment/app/SpecialEffectsController$Operation;
 
-    .line 305
+    .line 308
     invoke-virtual {v3}, Landroidx/fragment/app/SpecialEffectsController$Operation;->onStart()V
 
     goto :goto_0
 
-    .line 309
+    .line 312
     :cond_0
     new-instance v2, Ljava/util/ArrayList;
 
@@ -804,7 +804,7 @@
 
     invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 310
+    .line 313
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -824,7 +824,7 @@
 
     check-cast v3, Landroidx/fragment/app/SpecialEffectsController$Operation;
 
-    .line 311
+    .line 314
     invoke-static {v4}, Landroidx/fragment/app/FragmentManager;->isLoggingEnabled(I)Z
 
     move-result v4
@@ -833,7 +833,7 @@
 
     const-string v4, "FragmentManager"
 
-    .line 312
+    .line 315
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -848,7 +848,7 @@
 
     goto :goto_2
 
-    .line 314
+    .line 317
     :cond_1
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -883,16 +883,16 @@
 
     move-result-object v5
 
-    .line 312
+    .line 315
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 317
+    .line 320
     :cond_2
     invoke-virtual {v3}, Landroidx/fragment/app/SpecialEffectsController$Operation;->cancel()V
 
     goto :goto_1
 
-    .line 321
+    .line 324
     :cond_3
     new-instance v2, Ljava/util/ArrayList;
 
@@ -900,7 +900,7 @@
 
     invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 322
+    .line 325
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -918,7 +918,7 @@
 
     check-cast v3, Landroidx/fragment/app/SpecialEffectsController$Operation;
 
-    .line 323
+    .line 326
     invoke-static {v4}, Landroidx/fragment/app/FragmentManager;->isLoggingEnabled(I)Z
 
     move-result v5
@@ -927,7 +927,7 @@
 
     const-string v5, "FragmentManager"
 
-    .line 324
+    .line 327
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -942,7 +942,7 @@
 
     goto :goto_4
 
-    .line 326
+    .line 329
     :cond_4
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -977,16 +977,16 @@
 
     move-result-object v6
 
-    .line 324
+    .line 327
     invoke-static {v5, v6}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 329
+    .line 332
     :cond_5
     invoke-virtual {v3}, Landroidx/fragment/app/SpecialEffectsController$Operation;->cancel()V
 
     goto :goto_3
 
-    .line 331
+    .line 334
     :cond_6
     monitor-exit v1
 
@@ -1005,17 +1005,17 @@
 .method forcePostponedExecutePendingOperations()V
     .locals 1
 
-    .line 250
+    .line 253
     iget-boolean v0, p0, Landroidx/fragment/app/SpecialEffectsController;->mIsContainerPostponed:Z
 
     if-eqz v0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 251
+    .line 254
     iput-boolean v0, p0, Landroidx/fragment/app/SpecialEffectsController;->mIsContainerPostponed:Z
 
-    .line 252
+    .line 255
     invoke-virtual {p0}, Landroidx/fragment/app/SpecialEffectsController;->executePendingOperations()V
 
     :cond_0
@@ -1023,9 +1023,9 @@
 .end method
 
 .method getAwaitingCompletionLifecycleImpact(Landroidx/fragment/app/FragmentStateManager;)Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;
-    .locals 1
+    .locals 2
 
-    .line 118
+    .line 119
     invoke-virtual {p1}, Landroidx/fragment/app/FragmentStateManager;->getFragment()Landroidx/fragment/app/Fragment;
 
     move-result-object v0
@@ -1036,15 +1036,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 120
+    .line 121
     invoke-virtual {v0}, Landroidx/fragment/app/SpecialEffectsController$Operation;->getLifecycleImpact()Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;
 
-    move-result-object p1
+    move-result-object v0
 
-    return-object p1
+    goto :goto_0
 
-    .line 123
     :cond_0
+    const/4 v0, 0x0
+
+    .line 124
+    :goto_0
     invoke-virtual {p1}, Landroidx/fragment/app/FragmentStateManager;->getFragment()Landroidx/fragment/app/Fragment;
 
     move-result-object p1
@@ -1053,19 +1056,25 @@
 
     move-result-object p1
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_2
 
-    .line 125
+    if-eqz v0, :cond_1
+
+    .line 126
+    sget-object v1, Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;->NONE:Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;
+
+    if-ne v0, v1, :cond_2
+
+    .line 128
+    :cond_1
     invoke-virtual {p1}, Landroidx/fragment/app/SpecialEffectsController$Operation;->getLifecycleImpact()Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;
 
     move-result-object p1
 
     return-object p1
 
-    :cond_1
-    const/4 p1, 0x0
-
-    return-object p1
+    :cond_2
+    return-object v0
 .end method
 
 .method public getContainer()Landroid/view/ViewGroup;
@@ -1080,21 +1089,21 @@
 .method markPostponedState()V
     .locals 6
 
-    .line 229
+    .line 232
     iget-object v0, p0, Landroidx/fragment/app/SpecialEffectsController;->mPendingOperations:Ljava/util/ArrayList;
 
     monitor-enter v0
 
-    .line 230
+    .line 233
     :try_start_0
     invoke-direct {p0}, Landroidx/fragment/app/SpecialEffectsController;->updateFinalState()V
 
     const/4 v1, 0x0
 
-    .line 232
+    .line 235
     iput-boolean v1, p0, Landroidx/fragment/app/SpecialEffectsController;->mIsContainerPostponed:Z
 
-    .line 233
+    .line 236
     iget-object v1, p0, Landroidx/fragment/app/SpecialEffectsController;->mPendingOperations:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
@@ -1106,7 +1115,7 @@
     :goto_0
     if-ltz v1, :cond_1
 
-    .line 234
+    .line 237
     iget-object v2, p0, Landroidx/fragment/app/SpecialEffectsController;->mPendingOperations:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1115,7 +1124,7 @@
 
     check-cast v2, Landroidx/fragment/app/SpecialEffectsController$Operation;
 
-    .line 236
+    .line 239
     invoke-virtual {v2}, Landroidx/fragment/app/SpecialEffectsController$Operation;->getFragment()Landroidx/fragment/app/Fragment;
 
     move-result-object v3
@@ -1126,7 +1135,7 @@
 
     move-result-object v3
 
-    .line 237
+    .line 240
     invoke-virtual {v2}, Landroidx/fragment/app/SpecialEffectsController$Operation;->getFinalState()Landroidx/fragment/app/SpecialEffectsController$Operation$State;
 
     move-result-object v4
@@ -1139,12 +1148,12 @@
 
     if-eq v3, v4, :cond_0
 
-    .line 239
+    .line 242
     invoke-virtual {v2}, Landroidx/fragment/app/SpecialEffectsController$Operation;->getFragment()Landroidx/fragment/app/Fragment;
 
     move-result-object v1
 
-    .line 242
+    .line 245
     invoke-virtual {v1}, Landroidx/fragment/app/Fragment;->isPostponed()Z
 
     move-result v1
@@ -1158,7 +1167,7 @@
 
     goto :goto_0
 
-    .line 246
+    .line 249
     :cond_1
     :goto_1
     monitor-exit v0
@@ -1178,7 +1187,7 @@
 .method updateOperationDirection(Z)V
     .locals 0
 
-    .line 225
+    .line 228
     iput-boolean p1, p0, Landroidx/fragment/app/SpecialEffectsController;->mOperationDirectionIsPop:Z
 
     return-void

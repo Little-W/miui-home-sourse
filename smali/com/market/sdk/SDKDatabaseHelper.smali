@@ -17,7 +17,7 @@
 .method private constructor <init>(Landroid/content/Context;)V
     .locals 3
 
-    const-string v0, "xiaomi_market_sdk_update.db"
+    const-string/jumbo v0, "xiaomi_market_sdk_update.db"
 
     const/4 v1, 0x0
 
@@ -137,7 +137,7 @@
 
     invoke-virtual {v0, v3, v1, v2}, Landroid/database/sqlite/SQLiteStatement;->bindLong(IJ)V
 
-    const-string v1, "version_code"
+    const-string/jumbo v1, "version_code"
 
     .line 69
     invoke-virtual {p1, v1}, Landroid/content/ContentValues;->getAsInteger(Ljava/lang/String;)Ljava/lang/Integer;

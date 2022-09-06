@@ -49,6 +49,13 @@
         <item>ძირითადი</item>
         <item>კლასიკური</item>
     </string-array>
+    <string-array name="monochrome_color_entries">
+        <item>ძირითადი</item>
+        <item>ლურჯი</item>
+        <item>მწვანე</item>
+        <item>იასამნისფერი</item>
+        <item>ყავისფერი</item>
+    </string-array>
     <string-array name="transformation_entries">
         <item>Slide-ი</item>
         <item>Crossfade-ი</item>

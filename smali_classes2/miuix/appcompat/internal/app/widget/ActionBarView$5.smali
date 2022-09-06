@@ -3,7 +3,7 @@
 .source "ActionBarView.java"
 
 # interfaces
-.implements Landroid/text/TextWatcher;
+.implements Landroid/view/View$OnClickListener;
 
 
 # annotations
@@ -25,7 +25,7 @@
 .method constructor <init>(Lmiuix/appcompat/internal/app/widget/ActionBarView;)V
     .locals 0
 
-    .line 207
+    .line 222
     iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$5;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -35,29 +35,23 @@
 
 
 # virtual methods
-.method public afterTextChanged(Landroid/text/Editable;)V
+.method public onClick(Landroid/view/View;)V
     .locals 0
 
-    return-void
-.end method
+    .line 225
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$5;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
-.method public beforeTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 0
+    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->access$300(Lmiuix/appcompat/internal/app/widget/ActionBarView;)Lmiuix/appcompat/internal/app/widget/ActionBarView$ExpandedActionViewMenuPresenter;
 
-    return-void
-.end method
+    move-result-object p1
 
-.method public onTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 0
+    iget-object p1, p1, Lmiuix/appcompat/internal/app/widget/ActionBarView$ExpandedActionViewMenuPresenter;->mCurrentExpandedItem:Lmiuix/appcompat/internal/view/menu/MenuItemImpl;
 
-    .line 214
-    iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$5;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    if-eqz p1, :cond_0
 
-    invoke-static {p2}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->access$400(Lmiuix/appcompat/internal/app/widget/ActionBarView;)Lmiuix/appcompat/internal/app/widget/actionbar/ExpandTitle;
+    .line 227
+    invoke-virtual {p1}, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->collapseActionView()Z
 
-    move-result-object p2
-
-    invoke-virtual {p2, p1}, Lmiuix/appcompat/internal/app/widget/actionbar/ExpandTitle;->setTitle(Ljava/lang/CharSequence;)V
-
+    :cond_0
     return-void
 .end method

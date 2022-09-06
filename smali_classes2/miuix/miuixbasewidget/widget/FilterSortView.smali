@@ -41,7 +41,7 @@
 .method public static synthetic lambda$updateFiltered$0(Lmiuix/miuixbasewidget/widget/FilterSortView;Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;)V
     .locals 1
 
-    .line 240
+    .line 238
     iget-object v0, p0, Lmiuix/miuixbasewidget/widget/FilterSortView;->mBackgroundTabView:Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;
 
     invoke-virtual {v0, p1}, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
@@ -54,7 +54,7 @@
 
     const/4 v0, 0x0
 
-    .line 207
+    .line 205
     :goto_0
     invoke-virtual {p0}, Lmiuix/miuixbasewidget/widget/FilterSortView;->getChildCount()I
 
@@ -62,20 +62,20 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 208
+    .line 206
     invoke-virtual {p0, v0}, Lmiuix/miuixbasewidget/widget/FilterSortView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 209
+    .line 207
     instance-of v2, v1, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;
 
     if-eqz v2, :cond_0
 
-    .line 210
+    .line 208
     check-cast v1, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;
 
-    .line 211
+    .line 209
     iget-boolean v2, p0, Lmiuix/miuixbasewidget/widget/FilterSortView;->mEnabled:Z
 
     invoke-virtual {v1, v2}, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;->setEnabled(Z)V
@@ -92,7 +92,7 @@
 .method private updateChildIdsFromXml()V
     .locals 5
 
-    .line 177
+    .line 175
     iget-object v0, p0, Lmiuix/miuixbasewidget/widget/FilterSortView;->mTabViewChildIds:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -101,7 +101,7 @@
 
     if-nez v0, :cond_2
 
-    .line 178
+    .line 176
     invoke-virtual {p0}, Lmiuix/miuixbasewidget/widget/FilterSortView;->getChildCount()I
 
     move-result v0
@@ -111,20 +111,20 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 180
+    .line 178
     invoke-virtual {p0, v1}, Lmiuix/miuixbasewidget/widget/FilterSortView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 181
+    .line 179
     instance-of v3, v2, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;
 
     if-eqz v3, :cond_0
 
-    .line 182
+    .line 180
     check-cast v2, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;
 
-    .line 183
+    .line 181
     invoke-virtual {v2}, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;->getId()I
 
     move-result v3
@@ -137,12 +137,12 @@
 
     if-eq v3, v4, :cond_0
 
-    .line 184
+    .line 182
     iget-object v3, p0, Lmiuix/miuixbasewidget/widget/FilterSortView;->mOnFilteredListener:Lmiuix/miuixbasewidget/widget/FilterSortView$TabView$OnFilteredListener;
 
     invoke-static {v2, v3}, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;->access$200(Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;Lmiuix/miuixbasewidget/widget/FilterSortView$TabView$OnFilteredListener;)V
 
-    .line 185
+    .line 183
     iget-object v3, p0, Lmiuix/miuixbasewidget/widget/FilterSortView;->mTabViewChildIds:Ljava/util/List;
 
     invoke-virtual {v2}, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;->getId()I
@@ -155,7 +155,7 @@
 
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 186
+    .line 184
     iget-object v3, p0, Lmiuix/miuixbasewidget/widget/FilterSortView;->mFilterHoverListener:Lmiuix/miuixbasewidget/widget/FilterSortView$TabView$FilterHoverListener;
 
     invoke-virtual {v2, v3}, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;->setFilterHoverListener(Lmiuix/miuixbasewidget/widget/FilterSortView$TabView$FilterHoverListener;)V
@@ -165,19 +165,19 @@
 
     goto :goto_0
 
-    .line 190
+    .line 188
     :cond_1
     new-instance v0, Landroidx/constraintlayout/widget/ConstraintSet;
 
     invoke-direct {v0}, Landroidx/constraintlayout/widget/ConstraintSet;-><init>()V
 
-    .line 191
+    .line 189
     invoke-virtual {v0, p0}, Landroidx/constraintlayout/widget/ConstraintSet;->clone(Landroidx/constraintlayout/widget/ConstraintLayout;)V
 
-    .line 192
+    .line 190
     invoke-direct {p0, v0}, Lmiuix/miuixbasewidget/widget/FilterSortView;->updateTabViews(Landroidx/constraintlayout/widget/ConstraintSet;)V
 
-    .line 193
+    .line 191
     invoke-virtual {v0, p0}, Landroidx/constraintlayout/widget/ConstraintSet;->applyTo(Landroidx/constraintlayout/widget/ConstraintLayout;)V
 
     :cond_2
@@ -187,7 +187,7 @@
 .method private updateFiltered(Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;)V
     .locals 3
 
-    .line 231
+    .line 229
     iget-object v0, p0, Lmiuix/miuixbasewidget/widget/FilterSortView;->mBackgroundTabView:Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;
 
     invoke-virtual {v0}, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;->getVisibility()I
@@ -196,14 +196,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 232
+    .line 230
     iget-object v0, p0, Lmiuix/miuixbasewidget/widget/FilterSortView;->mBackgroundTabView:Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;->setVisibility(I)V
 
-    .line 234
+    .line 232
     :cond_0
     iget-object v0, p0, Lmiuix/miuixbasewidget/widget/FilterSortView;->mBackgroundTabView:Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;
 
@@ -213,39 +213,45 @@
 
     check-cast v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;
 
-    .line 235
+    .line 233
     invoke-virtual {p1}, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;->getWidth()I
 
     move-result v1
 
     iput v1, v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->width:I
 
-    .line 236
-    invoke-virtual {p1}, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;->getHeight()I
+    .line 234
+    invoke-virtual {p0}, Lmiuix/miuixbasewidget/widget/FilterSortView;->getHeight()I
 
     move-result v1
 
+    iget v2, p0, Lmiuix/miuixbasewidget/widget/FilterSortView;->mPadding:I
+
+    mul-int/lit8 v2, v2, 0x2
+
+    sub-int/2addr v1, v2
+
     iput v1, v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->height:I
 
-    .line 237
+    .line 235
     iget-object v1, p0, Lmiuix/miuixbasewidget/widget/FilterSortView;->mBackgroundTabView:Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;
 
     invoke-virtual {p1}, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;->getX()F
 
-    move-result v2
-
-    invoke-virtual {v1, v2}, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;->setX(F)V
-
-    .line 238
-    iget-object v1, p0, Lmiuix/miuixbasewidget/widget/FilterSortView;->mBackgroundTabView:Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;
-
-    invoke-virtual {p1}, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;->getY()F
-
     move-result p1
 
-    invoke-virtual {v1, p1}, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;->setY(F)V
+    invoke-virtual {v1, p1}, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;->setX(F)V
 
-    .line 240
+    .line 236
+    iget-object p1, p0, Lmiuix/miuixbasewidget/widget/FilterSortView;->mBackgroundTabView:Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;
+
+    iget v1, p0, Lmiuix/miuixbasewidget/widget/FilterSortView;->mPadding:I
+
+    int-to-float v1, v1
+
+    invoke-virtual {p1, v1}, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;->setY(F)V
+
+    .line 238
     new-instance p1, Lmiuix/miuixbasewidget/widget/-$$Lambda$FilterSortView$x5mtRYhEO-Jj3EAe_QQwjvPf610;
 
     invoke-direct {p1, p0, v0}, Lmiuix/miuixbasewidget/widget/-$$Lambda$FilterSortView$x5mtRYhEO-Jj3EAe_QQwjvPf610;-><init>(Lmiuix/miuixbasewidget/widget/FilterSortView;Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;)V
@@ -262,7 +268,7 @@
 
     move v1, v0
 
-    .line 244
+    .line 242
     :goto_0
     iget-object v2, p0, Lmiuix/miuixbasewidget/widget/FilterSortView;->mTabViewChildIds:Ljava/util/List;
 
@@ -272,7 +278,7 @@
 
     if-ge v1, v2, :cond_6
 
-    .line 245
+    .line 243
     iget-object v2, p0, Lmiuix/miuixbasewidget/widget/FilterSortView;->mTabViewChildIds:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -285,17 +291,17 @@
 
     move-result v2
 
-    .line 246
+    .line 244
     invoke-virtual {p1, v2, v0}, Landroidx/constraintlayout/widget/ConstraintSet;->constrainWidth(II)V
 
     const/4 v3, -0x2
 
-    .line 247
+    .line 245
     invoke-virtual {p1, v2, v3}, Landroidx/constraintlayout/widget/ConstraintSet;->constrainHeight(II)V
 
     const/high16 v3, 0x3f800000    # 1.0f
 
-    .line 248
+    .line 246
     invoke-virtual {p1, v2, v3}, Landroidx/constraintlayout/widget/ConstraintSet;->setHorizontalWeight(IF)V
 
     if-nez v1, :cond_0
@@ -304,7 +310,7 @@
 
     goto :goto_1
 
-    .line 250
+    .line 248
     :cond_0
     iget-object v3, p0, Lmiuix/miuixbasewidget/widget/FilterSortView;->mTabViewChildIds:Ljava/util/List;
 
@@ -322,7 +328,7 @@
 
     move v6, v3
 
-    .line 251
+    .line 249
     :goto_1
     iget-object v3, p0, Lmiuix/miuixbasewidget/widget/FilterSortView;->mTabViewChildIds:Ljava/util/List;
 
@@ -355,7 +361,7 @@
 
     move v9, v3
 
-    .line 252
+    .line 250
     :goto_2
     invoke-virtual {p1, v2, v0}, Landroidx/constraintlayout/widget/ConstraintSet;->centerVertically(II)V
 
@@ -377,7 +383,7 @@
     :goto_3
     if-nez v6, :cond_3
 
-    .line 253
+    .line 252
     iget v3, p0, Lmiuix/miuixbasewidget/widget/FilterSortView;->mPadding:I
 
     move v8, v3
@@ -392,6 +398,7 @@
 
     move v4, v2
 
+    .line 251
     invoke-virtual/range {v3 .. v8}, Landroidx/constraintlayout/widget/ConstraintSet;->connect(IIIII)V
 
     const/4 v5, 0x7
@@ -408,7 +415,7 @@
     :goto_5
     if-nez v9, :cond_5
 
-    .line 255
+    .line 254
     iget v3, p0, Lmiuix/miuixbasewidget/widget/FilterSortView;->mPadding:I
 
     move v8, v3
@@ -425,6 +432,7 @@
 
     move v6, v9
 
+    .line 253
     invoke-virtual/range {v3 .. v8}, Landroidx/constraintlayout/widget/ConstraintSet;->connect(IIIII)V
 
     const/4 v5, 0x3
@@ -433,7 +441,7 @@
 
     const/4 v7, 0x3
 
-    .line 258
+    .line 256
     iget v8, p0, Lmiuix/miuixbasewidget/widget/FilterSortView;->mPadding:I
 
     invoke-virtual/range {v3 .. v8}, Landroidx/constraintlayout/widget/ConstraintSet;->connect(IIIII)V
@@ -442,7 +450,7 @@
 
     const/4 v7, 0x4
 
-    .line 259
+    .line 257
     iget v8, p0, Lmiuix/miuixbasewidget/widget/FilterSortView;->mPadding:I
 
     invoke-virtual/range {v3 .. v8}, Landroidx/constraintlayout/widget/ConstraintSet;->connect(IIIII)V
@@ -460,12 +468,12 @@
 .method protected onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 0
 
-    .line 265
+    .line 263
     invoke-super {p0, p1}, Landroidx/constraintlayout/widget/ConstraintLayout;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     const/4 p1, 0x0
 
-    .line 266
+    .line 264
     iput-boolean p1, p0, Lmiuix/miuixbasewidget/widget/FilterSortView;->mFilteredUpdated:Z
 
     return-void
@@ -474,10 +482,10 @@
 .method protected onLayout(ZIIII)V
     .locals 0
 
-    .line 218
+    .line 216
     invoke-super/range {p0 .. p5}, Landroidx/constraintlayout/widget/ConstraintLayout;->onLayout(ZIIII)V
 
-    .line 219
+    .line 217
     iget p1, p0, Lmiuix/miuixbasewidget/widget/FilterSortView;->mFilteredId:I
 
     const/4 p2, -0x1
@@ -488,7 +496,7 @@
 
     if-nez p2, :cond_0
 
-    .line 220
+    .line 218
     invoke-virtual {p0, p1}, Lmiuix/miuixbasewidget/widget/FilterSortView;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -497,10 +505,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 222
+    .line 220
     invoke-direct {p0, p1}, Lmiuix/miuixbasewidget/widget/FilterSortView;->updateFiltered(Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;)V
 
-    .line 223
+    .line 221
     invoke-virtual {p1}, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;->getWidth()I
 
     move-result p1
@@ -509,7 +517,7 @@
 
     const/4 p1, 0x1
 
-    .line 224
+    .line 222
     iput-boolean p1, p0, Lmiuix/miuixbasewidget/widget/FilterSortView;->mFilteredUpdated:Z
 
     :cond_0
@@ -519,18 +527,18 @@
 .method public setEnabled(Z)V
     .locals 1
 
-    .line 199
+    .line 197
     invoke-super {p0, p1}, Landroidx/constraintlayout/widget/ConstraintLayout;->setEnabled(Z)V
 
-    .line 200
+    .line 198
     iget-boolean v0, p0, Lmiuix/miuixbasewidget/widget/FilterSortView;->mEnabled:Z
 
     if-eq v0, p1, :cond_0
 
-    .line 201
+    .line 199
     iput-boolean p1, p0, Lmiuix/miuixbasewidget/widget/FilterSortView;->mEnabled:Z
 
-    .line 202
+    .line 200
     invoke-direct {p0}, Lmiuix/miuixbasewidget/widget/FilterSortView;->refreshTabState()V
 
     :cond_0
@@ -540,24 +548,19 @@
 .method public setFilteredTab(Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;)V
     .locals 1
 
-    .line 170
+    .line 169
     invoke-virtual {p1}, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;->getId()I
 
     move-result v0
 
     iput v0, p0, Lmiuix/miuixbasewidget/widget/FilterSortView;->mFilteredId:I
 
-    const/4 v0, 0x0
-
-    .line 171
-    iput-boolean v0, p0, Lmiuix/miuixbasewidget/widget/FilterSortView;->mFilteredUpdated:Z
-
     const/4 v0, 0x1
 
-    .line 172
+    .line 170
     invoke-static {p1, v0}, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;->access$400(Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;Z)V
 
-    .line 173
+    .line 171
     invoke-direct {p0}, Lmiuix/miuixbasewidget/widget/FilterSortView;->updateChildIdsFromXml()V
 
     return-void
@@ -568,7 +571,7 @@
 
     const/4 v0, 0x0
 
-    .line 155
+    .line 154
     :goto_0
     invoke-virtual {p0}, Lmiuix/miuixbasewidget/widget/FilterSortView;->getChildCount()I
 
@@ -576,20 +579,20 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 156
+    .line 155
     invoke-virtual {p0, v0}, Lmiuix/miuixbasewidget/widget/FilterSortView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 157
+    .line 156
     instance-of v2, v1, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;
 
     if-eqz v2, :cond_0
 
-    .line 158
+    .line 157
     check-cast v1, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;
 
-    .line 159
+    .line 158
     invoke-virtual {v1, p1}, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;->setIndicatorVisibility(I)V
 
     :cond_0

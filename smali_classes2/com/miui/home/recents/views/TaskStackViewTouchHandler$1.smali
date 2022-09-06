@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/recents/views/TaskStackViewTouchHandler;Lcom/miui/home/recents/views/SwipeHelperForRecents$Callback;Landroid/content/Context;)V
     .locals 0
 
-    .line 122
+    .line 124
     iput-object p1, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler$1;->this$0:Lcom/miui/home/recents/views/TaskStackViewTouchHandler;
 
     invoke-direct {p0, p2, p3}, Lcom/miui/home/recents/views/SwipeHelperForRecents;-><init>(Lcom/miui/home/recents/views/SwipeHelperForRecents$Callback;Landroid/content/Context;)V
@@ -35,7 +35,7 @@
 .method protected getSize(Landroid/view/View;)F
     .locals 0
 
-    .line 125
+    .line 127
     iget-object p1, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler$1;->this$0:Lcom/miui/home/recents/views/TaskStackViewTouchHandler;
 
     invoke-virtual {p1}, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->getScaledDismissSize()F
@@ -58,7 +58,7 @@
 
     const-string p1, "SwipeHelperForRecents"
 
-    .line 151
+    .line 153
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -81,7 +81,7 @@
 
     invoke-static {p1, p3}, Lcom/miui/home/launcher/MiuiHomeLog;->debug(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 153
+    .line 155
     iget-object p1, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler$1;->this$0:Lcom/miui/home/recents/views/TaskStackViewTouchHandler;
 
     invoke-static {p1}, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->access$200(Lcom/miui/home/recents/views/TaskStackViewTouchHandler;)Z
@@ -98,7 +98,7 @@
 
     if-eqz p1, :cond_3
 
-    .line 154
+    .line 156
     iget-object p1, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler$1;->this$0:Lcom/miui/home/recents/views/TaskStackViewTouchHandler;
 
     invoke-static {p1}, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->access$300(Lcom/miui/home/recents/views/TaskStackViewTouchHandler;)Lcom/miui/home/recents/views/TaskView;
@@ -109,7 +109,7 @@
 
     move-result p1
 
-    .line 155
+    .line 157
     iget-object p3, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler$1;->this$0:Lcom/miui/home/recents/views/TaskStackViewTouchHandler;
 
     invoke-static {p3}, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->access$300(Lcom/miui/home/recents/views/TaskStackViewTouchHandler;)Lcom/miui/home/recents/views/TaskView;
@@ -178,7 +178,7 @@
 
     div-float/2addr p3, p1
 
-    .line 158
+    .line 160
     invoke-static {p2}, Ljava/lang/Math;->abs(F)F
 
     move-result p1
@@ -189,7 +189,7 @@
 
     add-float/2addr p3, p1
 
-    .line 159
+    .line 161
     iget-object p1, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler$1;->this$0:Lcom/miui/home/recents/views/TaskStackViewTouchHandler;
 
     invoke-static {p1}, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->access$300(Lcom/miui/home/recents/views/TaskStackViewTouchHandler;)Lcom/miui/home/recents/views/TaskView;
@@ -209,7 +209,7 @@
 .method protected prepareDismissAnimation(Landroid/view/View;Ljava/lang/Object;)V
     .locals 1
 
-    .line 130
+    .line 132
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler$1;->this$0:Lcom/miui/home/recents/views/TaskStackViewTouchHandler;
 
     invoke-static {v0}, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->access$000(Lcom/miui/home/recents/views/TaskStackViewTouchHandler;)Landroid/util/ArrayMap;
@@ -224,7 +224,7 @@
 .method protected prepareSnapBackAnimation(Landroid/view/View;Ljava/lang/Object;)V
     .locals 1
 
-    .line 135
+    .line 137
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler$1;->this$0:Lcom/miui/home/recents/views/TaskStackViewTouchHandler;
 
     invoke-static {v0}, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->access$000(Lcom/miui/home/recents/views/TaskStackViewTouchHandler;)Landroid/util/ArrayMap;
@@ -233,7 +233,7 @@
 
     invoke-virtual {v0, p1, p2}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 136
+    .line 138
     iget-object p1, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler$1;->this$0:Lcom/miui/home/recents/views/TaskStackViewTouchHandler;
 
     const/4 p2, 0x1

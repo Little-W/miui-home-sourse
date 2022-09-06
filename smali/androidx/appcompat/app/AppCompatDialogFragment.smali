@@ -7,7 +7,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 38
+    .line 43
     invoke-direct {p0}, Landroidx/fragment/app/DialogFragment;-><init>()V
 
     return-void
@@ -18,7 +18,7 @@
 .method public onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
     .locals 2
 
-    .line 43
+    .line 54
     new-instance p1, Landroidx/appcompat/app/AppCompatDialog;
 
     invoke-virtual {p0}, Landroidx/appcompat/app/AppCompatDialogFragment;->getContext()Landroid/content/Context;
@@ -37,12 +37,12 @@
 .method public setupDialog(Landroid/app/Dialog;I)V
     .locals 1
 
-    .line 50
+    .line 61
     instance-of v0, p1, Landroidx/appcompat/app/AppCompatDialog;
 
     if-eqz v0, :cond_0
 
-    .line 52
+    .line 63
     move-object v0, p1
 
     check-cast v0, Landroidx/appcompat/app/AppCompatDialog;
@@ -51,7 +51,7 @@
 
     goto :goto_0
 
-    .line 55
+    .line 66
     :pswitch_0
     invoke-virtual {p1}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
@@ -64,12 +64,12 @@
     :pswitch_1
     const/4 p1, 0x1
 
-    .line 61
+    .line 72
     invoke-virtual {v0, p1}, Landroidx/appcompat/app/AppCompatDialog;->supportRequestWindowFeature(I)Z
 
     goto :goto_0
 
-    .line 65
+    .line 76
     :cond_0
     invoke-super {p0, p1, p2}, Landroidx/fragment/app/DialogFragment;->setupDialog(Landroid/app/Dialog;I)V
 

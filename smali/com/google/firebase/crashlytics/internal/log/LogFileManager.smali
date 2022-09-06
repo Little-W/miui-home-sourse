@@ -72,7 +72,7 @@
     .line 87
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/log/LogFileManager;->fileStore:Lcom/google/firebase/crashlytics/internal/persistence/FileStore;
 
-    const-string v1, "userlog"
+    const-string/jumbo v1, "userlog"
 
     invoke-virtual {v0, p1, v1}, Lcom/google/firebase/crashlytics/internal/persistence/FileStore;->getSessionFile(Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
 

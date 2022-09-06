@@ -121,7 +121,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f0b0049
+    const v0, 0x7f0b0079
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1050,7 +1050,7 @@
     .line 71
     invoke-super {p0}, Lcom/miui/blur/sdk/backdrop/BackdropBlurRelativeLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a0214
+    const v0, 0x7f0a02d0
 
     .line 72
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/SearchBarDesktopLayout;->findViewById(I)Landroid/view/View;
@@ -1061,7 +1061,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/SearchBarDesktopLayout;->mSearchIconLayout:Lcom/miui/home/launcher/SearchBarLeftIconLayout;
 
-    const v0, 0x7f0a0217
+    const v0, 0x7f0a02d3
 
     .line 73
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/SearchBarDesktopLayout;->findViewById(I)Landroid/view/View;

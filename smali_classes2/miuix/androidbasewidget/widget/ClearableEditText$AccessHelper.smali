@@ -26,20 +26,20 @@
 .method public constructor <init>(Lmiuix/androidbasewidget/widget/ClearableEditText;Landroid/view/View;)V
     .locals 0
 
-    .line 204
+    .line 221
     iput-object p1, p0, Lmiuix/androidbasewidget/widget/ClearableEditText$AccessHelper;->this$0:Lmiuix/androidbasewidget/widget/ClearableEditText;
 
-    .line 205
+    .line 222
     invoke-direct {p0, p2}, Landroidx/customview/widget/ExploreByTouchHelper;-><init>(Landroid/view/View;)V
 
-    .line 201
+    .line 218
     new-instance p1, Landroid/graphics/Rect;
 
     invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
     iput-object p1, p0, Lmiuix/androidbasewidget/widget/ClearableEditText$AccessHelper;->mTempParentBounds:Landroid/graphics/Rect;
 
-    .line 206
+    .line 223
     iput-object p2, p0, Lmiuix/androidbasewidget/widget/ClearableEditText$AccessHelper;->forView:Landroid/view/View;
 
     return-void
@@ -48,14 +48,14 @@
 .method private getChildRect(Landroid/graphics/Rect;)V
     .locals 4
 
-    .line 275
+    .line 292
     iget-object v0, p0, Lmiuix/androidbasewidget/widget/ClearableEditText$AccessHelper;->forView:Landroid/view/View;
 
     iget-object v1, p0, Lmiuix/androidbasewidget/widget/ClearableEditText$AccessHelper;->mTempParentBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->getLocalVisibleRect(Landroid/graphics/Rect;)Z
 
-    .line 276
+    .line 293
     iget-object v0, p0, Lmiuix/androidbasewidget/widget/ClearableEditText$AccessHelper;->this$0:Lmiuix/androidbasewidget/widget/ClearableEditText;
 
     invoke-static {v0}, Lmiuix/androidbasewidget/widget/ClearableEditText;->access$200(Lmiuix/androidbasewidget/widget/ClearableEditText;)Landroid/graphics/drawable/Drawable;
@@ -79,7 +79,7 @@
 
     move-result v0
 
-    .line 277
+    .line 294
     :goto_0
     iget-object v1, p0, Lmiuix/androidbasewidget/widget/ClearableEditText$AccessHelper;->this$0:Lmiuix/androidbasewidget/widget/ClearableEditText;
 
@@ -89,7 +89,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 278
+    .line 295
     iget v1, p1, Landroid/graphics/Rect;->right:I
 
     iget-object v2, p0, Lmiuix/androidbasewidget/widget/ClearableEditText$AccessHelper;->this$0:Lmiuix/androidbasewidget/widget/ClearableEditText;
@@ -116,7 +116,7 @@
 
     goto :goto_1
 
-    .line 280
+    .line 297
     :cond_1
     iget v1, p1, Landroid/graphics/Rect;->left:I
 
@@ -149,7 +149,7 @@
 .method private getDescription()Ljava/lang/CharSequence;
     .locals 2
 
-    .line 271
+    .line 288
     iget-object v0, p0, Lmiuix/androidbasewidget/widget/ClearableEditText$AccessHelper;->this$0:Lmiuix/androidbasewidget/widget/ClearableEditText;
 
     invoke-virtual {v0}, Lmiuix/androidbasewidget/widget/ClearableEditText;->getResources()Landroid/content/res/Resources;
@@ -168,7 +168,7 @@
 .method private isVirtualView(FF)Z
     .locals 4
 
-    .line 285
+    .line 302
     iget-object p2, p0, Lmiuix/androidbasewidget/widget/ClearableEditText$AccessHelper;->this$0:Lmiuix/androidbasewidget/widget/ClearableEditText;
 
     invoke-static {p2}, Lmiuix/androidbasewidget/widget/ClearableEditText;->access$200(Lmiuix/androidbasewidget/widget/ClearableEditText;)Landroid/graphics/drawable/Drawable;
@@ -194,7 +194,7 @@
 
     move-result p2
 
-    .line 286
+    .line 303
     :goto_0
     iget-object v1, p0, Lmiuix/androidbasewidget/widget/ClearableEditText$AccessHelper;->this$0:Lmiuix/androidbasewidget/widget/ClearableEditText;
 
@@ -206,7 +206,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 287
+    .line 304
     iget-object v1, p0, Lmiuix/androidbasewidget/widget/ClearableEditText$AccessHelper;->this$0:Lmiuix/androidbasewidget/widget/ClearableEditText;
 
     invoke-virtual {v1}, Lmiuix/androidbasewidget/widget/ClearableEditText;->getPaddingLeft()I
@@ -228,7 +228,7 @@
     :cond_1
     return v0
 
-    .line 289
+    .line 306
     :cond_2
     iget-object v1, p0, Lmiuix/androidbasewidget/widget/ClearableEditText$AccessHelper;->this$0:Lmiuix/androidbasewidget/widget/ClearableEditText;
 
@@ -265,7 +265,7 @@
 .method protected getVirtualViewAt(FF)I
     .locals 1
 
-    .line 211
+    .line 228
     iget-object v0, p0, Lmiuix/androidbasewidget/widget/ClearableEditText$AccessHelper;->this$0:Lmiuix/androidbasewidget/widget/ClearableEditText;
 
     invoke-static {v0}, Lmiuix/androidbasewidget/widget/ClearableEditText;->access$000(Lmiuix/androidbasewidget/widget/ClearableEditText;)Z
@@ -293,7 +293,7 @@
 .method protected getVisibleVirtualViews(Ljava/util/List;)V
     .locals 1
 
-    .line 236
+    .line 253
     iget-object v0, p0, Lmiuix/androidbasewidget/widget/ClearableEditText$AccessHelper;->this$0:Lmiuix/androidbasewidget/widget/ClearableEditText;
 
     invoke-static {v0}, Lmiuix/androidbasewidget/widget/ClearableEditText;->access$000(Lmiuix/androidbasewidget/widget/ClearableEditText;)Z
@@ -304,7 +304,7 @@
 
     const/4 v0, 0x0
 
-    .line 237
+    .line 254
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -333,7 +333,7 @@
 
     return p3
 
-    .line 264
+    .line 281
     :cond_1
     iget-object p1, p0, Lmiuix/androidbasewidget/widget/ClearableEditText$AccessHelper;->this$0:Lmiuix/androidbasewidget/widget/ClearableEditText;
 
@@ -347,10 +347,10 @@
 .method protected onPopulateEventForHost(Landroid/view/accessibility/AccessibilityEvent;)V
     .locals 1
 
-    .line 219
+    .line 236
     invoke-super {p0, p1}, Landroidx/customview/widget/ExploreByTouchHelper;->onPopulateEventForHost(Landroid/view/accessibility/AccessibilityEvent;)V
 
-    .line 220
+    .line 237
     invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityEvent;->getEventType()I
 
     move-result p1
@@ -361,7 +361,7 @@
 
     iget-object p1, p0, Lmiuix/androidbasewidget/widget/ClearableEditText$AccessHelper;->this$0:Lmiuix/androidbasewidget/widget/ClearableEditText;
 
-    .line 221
+    .line 238
     invoke-static {p1}, Lmiuix/androidbasewidget/widget/ClearableEditText;->access$000(Lmiuix/androidbasewidget/widget/ClearableEditText;)Z
 
     move-result p1
@@ -376,7 +376,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 222
+    .line 239
     iget-object p1, p0, Lmiuix/androidbasewidget/widget/ClearableEditText$AccessHelper;->forView:Landroid/view/View;
 
     const v0, 0x8000
@@ -390,7 +390,7 @@
 .method protected onPopulateEventForVirtualView(ILandroid/view/accessibility/AccessibilityEvent;)V
     .locals 0
 
-    .line 243
+    .line 260
     invoke-direct {p0}, Lmiuix/androidbasewidget/widget/ClearableEditText$AccessHelper;->getDescription()Ljava/lang/CharSequence;
 
     move-result-object p1
@@ -403,10 +403,10 @@
 .method protected onPopulateNodeForHost(Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;)V
     .locals 1
 
-    .line 228
+    .line 245
     invoke-super {p0, p1}, Landroidx/customview/widget/ExploreByTouchHelper;->onPopulateNodeForHost(Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;)V
 
-    .line 229
+    .line 246
     iget-object v0, p0, Lmiuix/androidbasewidget/widget/ClearableEditText$AccessHelper;->this$0:Lmiuix/androidbasewidget/widget/ClearableEditText;
 
     invoke-static {v0}, Lmiuix/androidbasewidget/widget/ClearableEditText;->access$000(Lmiuix/androidbasewidget/widget/ClearableEditText;)Z
@@ -415,7 +415,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 230
+    .line 247
     const-class v0, Lmiuix/androidbasewidget/widget/ClearableEditText;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -431,7 +431,7 @@
 .method protected onPopulateNodeForVirtualView(ILandroidx/core/view/accessibility/AccessibilityNodeInfoCompat;)V
     .locals 0
 
-    .line 248
+    .line 265
     invoke-direct {p0}, Lmiuix/androidbasewidget/widget/ClearableEditText$AccessHelper;->getDescription()Ljava/lang/CharSequence;
 
     move-result-object p1
@@ -440,10 +440,10 @@
 
     const/16 p1, 0x10
 
-    .line 249
+    .line 266
     invoke-virtual {p2, p1}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->addAction(I)V
 
-    .line 250
+    .line 267
     const-class p1, Landroid/widget/Button;
 
     invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -452,19 +452,19 @@
 
     invoke-virtual {p2, p1}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->setClassName(Ljava/lang/CharSequence;)V
 
-    .line 251
+    .line 268
     iget-object p1, p0, Lmiuix/androidbasewidget/widget/ClearableEditText$AccessHelper;->mTempParentBounds:Landroid/graphics/Rect;
 
     invoke-direct {p0, p1}, Lmiuix/androidbasewidget/widget/ClearableEditText$AccessHelper;->getChildRect(Landroid/graphics/Rect;)V
 
-    .line 252
+    .line 269
     iget-object p1, p0, Lmiuix/androidbasewidget/widget/ClearableEditText$AccessHelper;->mTempParentBounds:Landroid/graphics/Rect;
 
     invoke-virtual {p2, p1}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->setBoundsInParent(Landroid/graphics/Rect;)V
 
     const/4 p1, 0x1
 
-    .line 253
+    .line 270
     invoke-virtual {p2, p1}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->setClickable(Z)V
 
     return-void

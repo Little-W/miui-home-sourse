@@ -49,6 +49,13 @@
         <item>Задато</item>
         <item>Класично</item>
     </string-array>
+    <string-array name="monochrome_color_entries">
+        <item>Задато</item>
+        <item>Плаво</item>
+        <item>Зелено</item>
+        <item>Љубичасто</item>
+        <item>Браон</item>
+    </string-array>
     <string-array name="transformation_entries">
         <item>Слајд</item>
         <item>Нестајање</item>

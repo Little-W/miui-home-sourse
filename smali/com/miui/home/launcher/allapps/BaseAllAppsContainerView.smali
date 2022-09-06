@@ -741,7 +741,7 @@
 
     iput-boolean v1, p0, Lcom/miui/home/launcher/allapps/BaseAllAppsContainerView;->mIsLightMode:Z
 
-    const v1, 0x7f0a0051
+    const v1, 0x7f0a005b
 
     .line 98
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/allapps/BaseAllAppsContainerView;->findViewById(I)Landroid/view/View;
@@ -752,7 +752,7 @@
 
     iput-object v1, p0, Lcom/miui/home/launcher/allapps/BaseAllAppsContainerView;->mCategoryContainer:Lcom/miui/home/launcher/allapps/AllAppsCategoryContainer;
 
-    const v1, 0x7f0a0055
+    const v1, 0x7f0a005f
 
     .line 99
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/allapps/BaseAllAppsContainerView;->findViewById(I)Landroid/view/View;
@@ -763,7 +763,7 @@
 
     iput-object v1, p0, Lcom/miui/home/launcher/allapps/BaseAllAppsContainerView;->mSearchContainer:Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;
 
-    const v1, 0x7f0a0054
+    const v1, 0x7f0a005e
 
     .line 100
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/allapps/BaseAllAppsContainerView;->findViewById(I)Landroid/view/View;
@@ -774,7 +774,7 @@
 
     iput-object v1, p0, Lcom/miui/home/launcher/allapps/BaseAllAppsContainerView;->mSearchBarHolder:Lcom/miui/home/launcher/allapps/AllAppsSearchBarHolderView;
 
-    const v1, 0x7f0a0053
+    const v1, 0x7f0a005d
 
     .line 101
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/allapps/BaseAllAppsContainerView;->findViewById(I)Landroid/view/View;
@@ -818,7 +818,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f07011f
+    const v2, 0x7f070157
 
     goto :goto_0
 
@@ -827,7 +827,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f07005e
+    const v2, 0x7f070062
 
     :goto_0
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

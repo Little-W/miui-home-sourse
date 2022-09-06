@@ -165,7 +165,7 @@
 .method public abstract canEnterMiniSmallWindow()Z
 .end method
 
-.method public abstract canEnterSmallWindow()Z
+.method public abstract canEnterSmallWindow(Ljava/lang/String;I)Z
 .end method
 
 .method public abstract getAllSmallWindows()Ljava/util/Set;

@@ -175,6 +175,8 @@
 
     move-result-object v4
 
+    check-cast v4, Landroidx/lifecycle/LifecycleObserver;
+
     invoke-virtual {v3, v4}, Landroidx/arch/core/internal/FastSafeIterableMap;->contains(Ljava/lang/Object;)Z
 
     move-result v3
@@ -416,6 +418,8 @@
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v4
+
+    check-cast v4, Landroidx/lifecycle/LifecycleObserver;
 
     invoke-virtual {v3, v4}, Landroidx/arch/core/internal/FastSafeIterableMap;->contains(Ljava/lang/Object;)Z
 

@@ -52,7 +52,7 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .line 2735
+    .line 2740
     invoke-static {}, Lcom/miui/maml/ActionCommand$VideoCommand$CommandType;->values()[Lcom/miui/maml/ActionCommand$VideoCommand$CommandType;
 
     move-result-object v0
@@ -142,7 +142,7 @@
     :try_end_4
     .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
 
-    .line 2639
+    .line 2644
     :catch_4
     invoke-static {}, Lcom/miui/maml/ActionCommand$JsonObjectCommand$CommandType;->values()[Lcom/miui/maml/ActionCommand$JsonObjectCommand$CommandType;
 
@@ -223,7 +223,7 @@
     :try_end_9
     .catch Ljava/lang/NoSuchFieldError; {:try_start_9 .. :try_end_9} :catch_9
 
-    .line 2480
+    .line 2485
     :catch_9
     invoke-static {}, Lcom/miui/maml/ActionCommand$FolmeCommand$Type;->values()[Lcom/miui/maml/ActionCommand$FolmeCommand$Type;
 
@@ -290,7 +290,7 @@
     :try_end_d
     .catch Ljava/lang/NoSuchFieldError; {:try_start_d .. :try_end_d} :catch_d
 
-    .line 2375
+    .line 2380
     :catch_d
     invoke-static {}, Lcom/miui/maml/ActionCommand$AnimConfigCommand$Type;->values()[Lcom/miui/maml/ActionCommand$AnimConfigCommand$Type;
 
@@ -343,7 +343,7 @@
     :try_end_10
     .catch Ljava/lang/NoSuchFieldError; {:try_start_10 .. :try_end_10} :catch_10
 
-    .line 2278
+    .line 2283
     :catch_10
     invoke-static {}, Lcom/miui/maml/ActionCommand$AnimStateCommand$Type;->values()[Lcom/miui/maml/ActionCommand$AnimStateCommand$Type;
 
@@ -396,7 +396,7 @@
     :try_end_13
     .catch Ljava/lang/NoSuchFieldError; {:try_start_13 .. :try_end_13} :catch_13
 
-    .line 2177
+    .line 2182
     :catch_13
     invoke-static {}, Lcom/miui/maml/ActionCommand$AnimationCommand$CommandType;->values()[Lcom/miui/maml/ActionCommand$AnimationCommand$CommandType;
 
@@ -463,7 +463,7 @@
     :try_end_17
     .catch Ljava/lang/NoSuchFieldError; {:try_start_17 .. :try_end_17} :catch_17
 
-    .line 2100
+    .line 2105
     :catch_17
     invoke-static {}, Lcom/miui/maml/ActionCommand$TickListenerCommand$CommandType;->values()[Lcom/miui/maml/ActionCommand$TickListenerCommand$CommandType;
 
@@ -502,7 +502,7 @@
     :try_end_19
     .catch Ljava/lang/NoSuchFieldError; {:try_start_19 .. :try_end_19} :catch_19
 
-    .line 2017
+    .line 2022
     :catch_19
     invoke-static {}, Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;->values()[Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
@@ -727,7 +727,7 @@
     :try_end_27
     .catch Ljava/lang/NoSuchFieldError; {:try_start_27 .. :try_end_27} :catch_27
 
-    .line 1630
+    .line 1635
     :catch_27
     invoke-static {}, Lcom/miui/maml/ActionCommand$PbrCommand$CommandType;->values()[Lcom/miui/maml/ActionCommand$PbrCommand$CommandType;
 
@@ -752,7 +752,7 @@
     :try_end_28
     .catch Ljava/lang/NoSuchFieldError; {:try_start_28 .. :try_end_28} :catch_28
 
-    .line 1578
+    .line 1583
     :catch_28
     invoke-static {}, Lcom/miui/maml/ActionCommand$SensorBinderCommand$CommandType;->values()[Lcom/miui/maml/ActionCommand$SensorBinderCommand$CommandType;
 
@@ -791,7 +791,7 @@
     :try_end_2a
     .catch Ljava/lang/NoSuchFieldError; {:try_start_2a .. :try_end_2a} :catch_2a
 
-    .line 1459
+    .line 1464
     :catch_2a
     invoke-static {}, Lcom/miui/maml/ActionCommand$TargetCommand$TargetType;->values()[Lcom/miui/maml/ActionCommand$TargetCommand$TargetType;
 
@@ -872,7 +872,7 @@
     :try_end_2f
     .catch Ljava/lang/NoSuchFieldError; {:try_start_2f .. :try_end_2f} :catch_2f
 
-    .line 1380
+    .line 1385
     :catch_2f
     invoke-static {}, Lcom/miui/maml/ActionCommand$AnimationProperty$Type;->values()[Lcom/miui/maml/ActionCommand$AnimationProperty$Type;
 
@@ -939,7 +939,7 @@
     :try_end_33
     .catch Ljava/lang/NoSuchFieldError; {:try_start_33 .. :try_end_33} :catch_33
 
-    .line 1168
+    .line 1173
     :catch_33
     invoke-static {}, Lcom/miui/maml/SoundManager$Command;->values()[Lcom/miui/maml/SoundManager$Command;
 
@@ -1006,7 +1006,7 @@
     :try_end_37
     .catch Ljava/lang/NoSuchFieldError; {:try_start_37 .. :try_end_37} :catch_37
 
-    .line 1087
+    .line 1088
     :catch_37
     invoke-static {}, Lcom/miui/maml/ActionCommand$IntentCommand$IntentType;->values()[Lcom/miui/maml/ActionCommand$IntentCommand$IntentType;
 

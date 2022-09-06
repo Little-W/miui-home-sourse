@@ -301,27 +301,27 @@
     .locals 2
 
     .line 121
-    new-instance p1, Lmiuix/appcompat/app/AlertDialog$Builder;
+    new-instance p1, Lmiui/home/lib/dialog/AlertDialog$Builder;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    const v1, 0x7f110005
+    const v1, 0x7f120007
 
-    invoke-direct {p1, v0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;I)V
+    invoke-direct {p1, v0, v1}, Lmiui/home/lib/dialog/AlertDialog$Builder;-><init>(Landroid/content/Context;I)V
 
-    const v0, 0x7f1003a3
+    const v0, 0x7f110405
 
     .line 122
-    invoke-virtual {p1, v0}, Lmiuix/appcompat/app/AlertDialog$Builder;->setTitle(I)Lmiuix/appcompat/app/AlertDialog$Builder;
+    invoke-virtual {p1, v0}, Lmiui/home/lib/dialog/AlertDialog$Builder;->setTitle(I)Lmiui/home/lib/dialog/AlertDialog$Builder;
 
     move-result-object p1
 
-    const v0, 0x7f1003a2
+    const v0, 0x7f110404
 
     .line 123
-    invoke-virtual {p1, v0}, Lmiuix/appcompat/app/AlertDialog$Builder;->setMessage(I)Lmiuix/appcompat/app/AlertDialog$Builder;
+    invoke-virtual {p1, v0}, Lmiui/home/lib/dialog/AlertDialog$Builder;->setMessage(I)Lmiui/home/lib/dialog/AlertDialog$Builder;
 
     move-result-object p1
 
@@ -332,7 +332,7 @@
     const v1, 0x104000a
 
     .line 124
-    invoke-virtual {p1, v1, v0}, Lmiuix/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
+    invoke-virtual {p1, v1, v0}, Lmiui/home/lib/dialog/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiui/home/lib/dialog/AlertDialog$Builder;
 
     move-result-object p1
 
@@ -341,17 +341,17 @@
     const/4 v1, 0x0
 
     .line 136
-    invoke-virtual {p1, v0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
+    invoke-virtual {p1, v0, v1}, Lmiui/home/lib/dialog/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiui/home/lib/dialog/AlertDialog$Builder;
 
     move-result-object p1
 
     .line 137
-    invoke-virtual {p1}, Lmiuix/appcompat/app/AlertDialog$Builder;->create()Lmiuix/appcompat/app/AlertDialog;
+    invoke-virtual {p1}, Lmiui/home/lib/dialog/AlertDialog$Builder;->create()Lmiui/home/lib/dialog/AlertDialog;
 
     move-result-object p1
 
     .line 138
-    invoke-virtual {p1}, Lmiuix/appcompat/app/AlertDialog;->show()V
+    invoke-virtual {p1}, Lmiui/home/lib/dialog/AlertDialog;->show()V
 
     return-void
 .end method
@@ -374,7 +374,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f100270
+    const v0, 0x7f110291
 
     invoke-virtual {p1, v0}, Landroidx/fragment/app/FragmentActivity;->setTitle(I)V
 
@@ -501,7 +501,7 @@
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 1
 
-    const p3, 0x7f0d0063
+    const p3, 0x7f0d0073
 
     const/4 v0, 0x0
 
@@ -627,7 +627,7 @@
     .line 84
     invoke-super {p0, p1, p2}, Landroidx/fragment/app/Fragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
-    const p2, 0x7f0a0060
+    const p2, 0x7f0a006c
 
     .line 86
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -647,7 +647,7 @@
 
     invoke-virtual {p2, v0}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const p2, 0x7f0a005f
+    const p2, 0x7f0a006b
 
     .line 90
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -676,7 +676,7 @@
 
     invoke-virtual {p2, p0}, Lmiuix/slidingwidget/widget/SlidingButton;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
-    const p2, 0x7f0a0097
+    const p2, 0x7f0a00ac
 
     .line 94
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -706,7 +706,7 @@
     :goto_0
     invoke-virtual {p2, v0}, Landroid/view/View;->setVisibility(I)V
 
-    const p2, 0x7f0a0065
+    const p2, 0x7f0a0071
 
     .line 97
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -744,7 +744,7 @@
 
     invoke-virtual {p2, v0}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
-    const p2, 0x7f0a01fa
+    const p2, 0x7f0a02ac
 
     .line 102
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -761,27 +761,27 @@
     .locals 3
 
     .line 178
-    new-instance v0, Lmiuix/appcompat/app/AlertDialog$Builder;
+    new-instance v0, Lmiui/home/lib/dialog/AlertDialog$Builder;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    const v2, 0x7f110005
+    const v2, 0x7f120007
 
-    invoke-direct {v0, v1, v2}, Lmiuix/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v0, v1, v2}, Lmiui/home/lib/dialog/AlertDialog$Builder;-><init>(Landroid/content/Context;I)V
 
-    const v1, 0x7f10016b
+    const v1, 0x7f110174
 
     .line 179
-    invoke-virtual {v0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setTitle(I)Lmiuix/appcompat/app/AlertDialog$Builder;
+    invoke-virtual {v0, v1}, Lmiui/home/lib/dialog/AlertDialog$Builder;->setTitle(I)Lmiui/home/lib/dialog/AlertDialog$Builder;
 
     move-result-object v0
 
-    const v1, 0x7f10016a
+    const v1, 0x7f110173
 
     .line 180
-    invoke-virtual {v0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setMessage(I)Lmiuix/appcompat/app/AlertDialog$Builder;
+    invoke-virtual {v0, v1}, Lmiui/home/lib/dialog/AlertDialog$Builder;->setMessage(I)Lmiui/home/lib/dialog/AlertDialog$Builder;
 
     move-result-object v0
 
@@ -789,10 +789,10 @@
 
     invoke-direct {v1, p0, p1}, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$CategorySettingFragment$xTsy2jZ8LlQrea_S5VYzM8Q26Lk;-><init>(Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;I)V
 
-    const p1, 0x7f100169
+    const p1, 0x7f110172
 
     .line 181
-    invoke-virtual {v0, p1, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
+    invoke-virtual {v0, p1, v1}, Lmiui/home/lib/dialog/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiui/home/lib/dialog/AlertDialog$Builder;
 
     move-result-object p1
 
@@ -801,17 +801,17 @@
     const/4 v1, 0x0
 
     .line 186
-    invoke-virtual {p1, v0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
+    invoke-virtual {p1, v0, v1}, Lmiui/home/lib/dialog/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiui/home/lib/dialog/AlertDialog$Builder;
 
     move-result-object p1
 
     .line 187
-    invoke-virtual {p1}, Lmiuix/appcompat/app/AlertDialog$Builder;->create()Lmiuix/appcompat/app/AlertDialog;
+    invoke-virtual {p1}, Lmiui/home/lib/dialog/AlertDialog$Builder;->create()Lmiui/home/lib/dialog/AlertDialog;
 
     move-result-object p1
 
     .line 188
-    invoke-virtual {p1}, Lmiuix/appcompat/app/AlertDialog;->show()V
+    invoke-virtual {p1}, Lmiui/home/lib/dialog/AlertDialog;->show()V
 
     return-void
 .end method

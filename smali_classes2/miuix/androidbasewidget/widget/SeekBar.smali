@@ -82,7 +82,7 @@
     .line 75
     invoke-direct {p0, p1, p2, p3}, Landroidx/appcompat/widget/AppCompatSeekBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 306
+    .line 307
     new-instance v0, Lmiuix/androidbasewidget/widget/SeekBar$1;
 
     invoke-direct {v0, p0}, Lmiuix/androidbasewidget/widget/SeekBar$1;-><init>(Lmiuix/androidbasewidget/widget/SeekBar;)V
@@ -559,14 +559,14 @@
 .method private getMinWrapper()I
     .locals 2
 
-    .line 291
+    .line 292
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1a
 
     if-lt v0, v1, :cond_0
 
-    .line 292
+    .line 293
     invoke-super {p0}, Landroidx/appcompat/widget/AppCompatSeekBar;->getMin()I
 
     move-result v0
@@ -682,7 +682,7 @@
 
     if-lez p1, :cond_0
 
-    .line 299
+    .line 300
     invoke-direct {p0}, Lmiuix/androidbasewidget/widget/SeekBar;->getMinWrapper()I
 
     move-result v0
@@ -700,7 +700,7 @@
     :cond_0
     const/4 p2, 0x0
 
-    .line 300
+    .line 301
     :goto_0
     iget p1, p0, Lmiuix/androidbasewidget/widget/SeekBar;->mMinMiddle:F
 
@@ -887,24 +887,27 @@
     invoke-direct {v3, v2, v4}, Landroid/content/res/ColorStateList;-><init>([[I[I)V
 
     .line 266
+    iput-object v3, p0, Lmiuix/androidbasewidget/widget/SeekBar;->mProgressColorStateList:Landroid/content/res/ColorStateList;
+
+    .line 267
     invoke-virtual {v1, v3}, Landroid/graphics/drawable/GradientDrawable;->setColor(Landroid/content/res/ColorStateList;)V
 
     :cond_3
     const v1, 0x1020006
 
-    .line 272
+    .line 273
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/LayerDrawable;->findDrawableByLayerId(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     if-eqz v0, :cond_5
 
-    .line 273
+    .line 274
     instance-of v1, v0, Landroid/graphics/drawable/GradientDrawable;
 
     if-eqz v1, :cond_5
 
-    .line 274
+    .line 275
     iget-boolean v1, p0, Lmiuix/androidbasewidget/widget/SeekBar;->mMiddleEnabled:Z
 
     if-eqz v1, :cond_4
@@ -930,20 +933,20 @@
 .method protected drawableStateChanged()V
     .locals 3
 
-    .line 282
+    .line 283
     invoke-super {p0}, Landroidx/appcompat/widget/AppCompatSeekBar;->drawableStateChanged()V
 
-    .line 283
+    .line 284
     invoke-direct {p0}, Lmiuix/androidbasewidget/widget/SeekBar;->updatePrimaryColor()V
 
-    .line 284
+    .line 285
     invoke-virtual {p0}, Lmiuix/androidbasewidget/widget/SeekBar;->getProgressDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 286
+    .line 287
     invoke-virtual {p0}, Lmiuix/androidbasewidget/widget/SeekBar;->isEnabled()Z
 
     move-result v1

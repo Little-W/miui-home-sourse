@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/recents/NavStubView;)V
     .locals 0
 
-    .line 1936
+    .line 1929
     iput-object p1, p0, Lcom/miui/home/recents/NavStubView$5;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 2
 
-    .line 1939
+    .line 1932
     sget-object v0, Lcom/miui/home/recents/SystemUiProxyWrapper;->INSTANCE:Lcom/miui/home/recents/util/MainThreadInitializedObject;
 
     invoke-virtual {v0}, Lcom/miui/home/recents/util/MainThreadInitializedObject;->getNoCreate()Ljava/lang/Object;
@@ -49,7 +49,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1941
+    .line 1934
     iget-object v1, p0, Lcom/miui/home/recents/NavStubView$5;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-static {v1}, Lcom/miui/home/recents/NavStubView;->access$3400(Lcom/miui/home/recents/NavStubView;)F

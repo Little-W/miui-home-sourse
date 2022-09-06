@@ -293,6 +293,7 @@
     <string name="eras_bc">K.a.</string>
     <string name="evening">Arratsaldea</string>
     <string name="exit_overview_because_task_stack_changed">Orain dela gutxi erabiliak itxita atzeko planoan izandako aldaketak direla eta</string>
+    <string name="external_not_support_split_screen_j18">Pantaila zatitua ez da onartzen kanpoko pantailan</string>
     <string name="failed_to_delete_temporary">Ezin da kendu</string>
     <string name="failed_to_drop">Ezin da mugitu</string>
     <string name="failed_to_drop_widget_invalid">Erreminta hau baliogabekoa da</string>
@@ -497,6 +498,7 @@
     <string name="midnight">Gaua</string>
     <string name="minus_one_screen">Aplikazio kaxa</string>
     <string name="miui_screen_config_title">Hasierako pantailaren ezarpenak</string>
+    <string name="miui_widget_menu_replace_text">Aldatu</string>
     <string name="miuix_access_state_desc">Aukeratuta</string>
     <string name="miuix_appcompat_action_mode_deselect_all">Desaukeratu</string>
     <string name="miuix_appcompat_action_mode_select_all">Denak aukeratu</string>
@@ -523,6 +525,8 @@
     <string name="monday">Astelehena</string>
     <string name="monday_short">Al.</string>
     <string name="monday_shortest">Al.</string>
+    <string name="monochrome_summary">Change background color for compatible icons</string>
+    <string name="monochrome_title">Background color</string>
     <string name="month_april">Apirila</string>
     <string name="month_april_short">Api.</string>
     <string name="month_april_shortest">Api.</string>

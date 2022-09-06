@@ -80,6 +80,8 @@
 
 .field public static final VAR_INTECEPT_SYS_TOUCH:Ljava/lang/String; = "intercept_sys_touch"
 
+.field public static final VAR_IS_TABLET:Ljava/lang/String; = "__is_tablet"
+
 .field public static final VAR_MINUTE:Ljava/lang/String; = "minute"
 
 .field public static final VAR_MIUI_VERSION_CODE:Ljava/lang/String; = "__miui_version_code"

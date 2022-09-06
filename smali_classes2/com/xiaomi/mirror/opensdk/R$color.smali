@@ -15,17 +15,17 @@
 
 
 # static fields
-.field public static final dropdown_popup_backgroud_color:I = 0x7f0600b6
+.field public static final dropdown_popup_backgroud_color:I = 0x7f0600de
 
-.field public static final list_item_bg_color:I = 0x7f06010f
+.field public static final list_item_bg_color:I = 0x7f060137
 
-.field public static final list_item_bg_color_pressed:I = 0x7f060110
+.field public static final list_item_bg_color_pressed:I = 0x7f060138
 
-.field public static final list_item_text_color:I = 0x7f060111
+.field public static final list_item_text_color:I = 0x7f060139
 
-.field public static final thumbnail_border_color:I = 0x7f0603c3
+.field public static final thumbnail_border_color:I = 0x7f0605c2
 
-.field public static final thumbnail_count_color:I = 0x7f0603c4
+.field public static final thumbnail_count_color:I = 0x7f0605c3
 
 
 # direct methods

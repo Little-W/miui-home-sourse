@@ -38,19 +38,19 @@
 .method public constructor <init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
     .locals 4
 
-    .line 2138
+    .line 2143
     invoke-direct {p0, p1, p2}, Lcom/miui/maml/ActionCommand$TargetCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
 
     const-string p1, "command"
 
-    .line 2139
+    .line 2144
     invoke-interface {p2, p1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     const-string v0, "play"
 
-    .line 2140
+    .line 2145
     invoke-virtual {p1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
@@ -59,7 +59,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 2141
+    .line 2146
     sget-object p1, Lcom/miui/maml/ActionCommand$AnimationCommand$CommandType;->PLAY:Lcom/miui/maml/ActionCommand$AnimationCommand$CommandType;
 
     iput-object p1, p0, Lcom/miui/maml/ActionCommand$AnimationCommand;->mCommand:Lcom/miui/maml/ActionCommand$AnimationCommand$CommandType;
@@ -69,14 +69,14 @@
     :cond_0
     const-string v0, "pause"
 
-    .line 2142
+    .line 2147
     invoke-virtual {p1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 2143
+    .line 2148
     sget-object p1, Lcom/miui/maml/ActionCommand$AnimationCommand$CommandType;->PAUSE:Lcom/miui/maml/ActionCommand$AnimationCommand$CommandType;
 
     iput-object p1, p0, Lcom/miui/maml/ActionCommand$AnimationCommand;->mCommand:Lcom/miui/maml/ActionCommand$AnimationCommand$CommandType;
@@ -86,21 +86,21 @@
     :cond_1
     const-string v0, "resume"
 
-    .line 2144
+    .line 2149
     invoke-virtual {p1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 2145
+    .line 2150
     sget-object p1, Lcom/miui/maml/ActionCommand$AnimationCommand$CommandType;->RESUME:Lcom/miui/maml/ActionCommand$AnimationCommand$CommandType;
 
     iput-object p1, p0, Lcom/miui/maml/ActionCommand$AnimationCommand;->mCommand:Lcom/miui/maml/ActionCommand$AnimationCommand$CommandType;
 
     goto :goto_0
 
-    .line 2146
+    .line 2151
     :cond_2
     invoke-virtual {p1}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
@@ -122,12 +122,12 @@
 
     if-eqz v0, :cond_3
 
-    .line 2147
+    .line 2152
     sget-object v0, Lcom/miui/maml/ActionCommand$AnimationCommand$CommandType;->PLAY_WITH_PARAMS:Lcom/miui/maml/ActionCommand$AnimationCommand$CommandType;
 
     iput-object v0, p0, Lcom/miui/maml/ActionCommand$AnimationCommand;->mCommand:Lcom/miui/maml/ActionCommand$AnimationCommand$CommandType;
 
-    .line 2148
+    .line 2153
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$AnimationCommand;->getVariables()Lcom/miui/maml/data/Variables;
 
     move-result-object v0
@@ -150,7 +150,7 @@
 
     iput-object p1, p0, Lcom/miui/maml/ActionCommand$AnimationCommand;->mPlayParams:[Lcom/miui/maml/data/Expression;
 
-    .line 2149
+    .line 2154
     iget-object p1, p0, Lcom/miui/maml/ActionCommand$AnimationCommand;->mPlayParams:[Lcom/miui/maml/data/Expression;
 
     if-eqz p1, :cond_4
@@ -171,12 +171,12 @@
 
     const-string v0, "bad expression format"
 
-    .line 2150
+    .line 2155
     invoke-static {p1, v0}, Lcom/miui/maml/util/MamlLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 2153
+    .line 2158
     :cond_3
     sget-object p1, Lcom/miui/maml/ActionCommand$AnimationCommand$CommandType;->INVALID:Lcom/miui/maml/ActionCommand$AnimationCommand$CommandType;
 
@@ -186,26 +186,26 @@
     :goto_0
     const-string p1, "tags"
 
-    .line 2155
+    .line 2160
     invoke-interface {p2, p1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     const-string p2, "."
 
-    .line 2156
+    .line 2161
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
 
     if-eqz p2, :cond_5
 
-    .line 2157
+    .line 2162
     iput-boolean v1, p0, Lcom/miui/maml/ActionCommand$AnimationCommand;->mAllAni:Z
 
     goto :goto_1
 
-    .line 2158
+    .line 2163
     :cond_5
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -215,7 +215,7 @@
 
     const-string p2, ","
 
-    .line 2159
+    .line 2164
     invoke-virtual {p1, p2}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p1
@@ -232,7 +232,7 @@
 .method public doPerform()V
     .locals 13
 
-    .line 2165
+    .line 2170
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$AnimationCommand;->getTarget()Ljava/lang/Object;
 
     move-result-object v0
@@ -245,7 +245,7 @@
 
     return-void
 
-    .line 2171
+    .line 2176
     :cond_0
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$AnimationCommand;->mCommand:Lcom/miui/maml/ActionCommand$AnimationCommand$CommandType;
 
@@ -259,7 +259,7 @@
 
     if-ne v0, v2, :cond_3
 
-    .line 2172
+    .line 2177
     :cond_1
     iget-boolean v0, p0, Lcom/miui/maml/ActionCommand$AnimationCommand;->mAllAni:Z
 
@@ -269,13 +269,13 @@
 
     if-eqz v0, :cond_3
 
-    .line 2173
+    .line 2178
     :cond_2
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$AnimationCommand;->mAniTags:[Ljava/lang/String;
 
     invoke-virtual {v1, v0}, Lcom/miui/maml/elements/ScreenElement;->setAnim([Ljava/lang/String;)V
 
-    .line 2177
+    .line 2182
     :cond_3
     sget-object v0, Lcom/miui/maml/ActionCommand$1;->$SwitchMap$com$miui$maml$ActionCommand$AnimationCommand$CommandType:[I
 
@@ -296,7 +296,7 @@
 
     const-wide/16 v4, -0x1
 
-    .line 2192
+    .line 2197
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$AnimationCommand;->mPlayParams:[Lcom/miui/maml/data/Expression;
 
     array-length v6, v0
@@ -307,7 +307,7 @@
 
     if-lez v6, :cond_5
 
-    .line 2193
+    .line 2198
     aget-object v2, v0, v9
 
     if-nez v2, :cond_4
@@ -326,7 +326,7 @@
     :goto_0
     double-to-long v2, v2
 
-    .line 2195
+    .line 2200
     :cond_5
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$AnimationCommand;->mPlayParams:[Lcom/miui/maml/data/Expression;
 
@@ -336,7 +336,7 @@
 
     if-le v6, v10, :cond_7
 
-    .line 2196
+    .line 2201
     aget-object v4, v0, v10
 
     if-nez v4, :cond_6
@@ -345,7 +345,7 @@
 
     goto :goto_1
 
-    .line 2197
+    .line 2202
     :cond_6
     aget-object v0, v0, v10
 
@@ -356,7 +356,7 @@
     :goto_1
     double-to-long v4, v4
 
-    .line 2199
+    .line 2204
     :cond_7
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$AnimationCommand;->mPlayParams:[Lcom/miui/maml/data/Expression;
 
@@ -366,7 +366,7 @@
 
     if-le v6, v11, :cond_a
 
-    .line 2200
+    .line 2205
     aget-object v6, v0, v11
 
     if-nez v6, :cond_9
@@ -397,7 +397,7 @@
     :cond_a
     move v6, v9
 
-    .line 2202
+    .line 2207
     :goto_3
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$AnimationCommand;->mPlayParams:[Lcom/miui/maml/data/Expression;
 
@@ -407,7 +407,7 @@
 
     if-le v11, v12, :cond_d
 
-    .line 2203
+    .line 2208
     aget-object v11, v0, v12
 
     if-nez v11, :cond_b
@@ -436,25 +436,25 @@
     :cond_d
     move v7, v9
 
-    .line 2205
+    .line 2210
     :goto_5
     invoke-virtual/range {v1 .. v7}, Lcom/miui/maml/elements/ScreenElement;->playAnim(JJZZ)V
 
     goto :goto_6
 
-    .line 2185
+    .line 2190
     :pswitch_1
     invoke-virtual {v1}, Lcom/miui/maml/elements/ScreenElement;->resumeAnim()V
 
     goto :goto_6
 
-    .line 2182
+    .line 2187
     :pswitch_2
     invoke-virtual {v1}, Lcom/miui/maml/elements/ScreenElement;->pauseAnim()V
 
     goto :goto_6
 
-    .line 2179
+    .line 2184
     :pswitch_3
     invoke-virtual {v1}, Lcom/miui/maml/elements/ScreenElement;->playAnim()V
 

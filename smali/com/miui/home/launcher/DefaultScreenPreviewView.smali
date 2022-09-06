@@ -207,7 +207,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v1, 0x7f0a02a1
+    const v1, 0x7f0a0384
 
     .line 103
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -223,7 +223,7 @@
 
     invoke-virtual {v1, p1, v2, v3, v0}, Lcom/miui/home/launcher/ThumbnailContainer;->setCellLayoutThumbnail(Lcom/miui/home/launcher/CellScreen;IILandroid/view/View;)V
 
-    const p1, 0x7f0a0138
+    const p1, 0x7f0a0195
 
     .line 105
     invoke-virtual {v0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -282,7 +282,7 @@
 
     aput-object v5, v3, v6
 
-    const v5, 0x7f100141
+    const v5, 0x7f11014a
 
     invoke-virtual {p1, v5, v3}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -497,7 +497,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0700aa
+    const v1, 0x7f0700b2
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -505,7 +505,7 @@
 
     iput v0, p0, Lcom/miui/home/launcher/DefaultScreenPreviewView;->mHomeIconLayoutHeight:I
 
-    const v0, 0x7f0a01cf
+    const v0, 0x7f0a027f
 
     .line 55
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/DefaultScreenPreviewView;->findViewById(I)Landroid/view/View;
@@ -521,7 +521,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0703b1
+    const v1, 0x7f070584
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -529,7 +529,7 @@
 
     iput v0, p0, Lcom/miui/home/launcher/DefaultScreenPreviewView;->mPreviewPaddingTop:I
 
-    const v0, 0x7f0a00ca
+    const v0, 0x7f0a00f5
 
     .line 57
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/DefaultScreenPreviewView;->findViewById(I)Landroid/view/View;
@@ -543,11 +543,11 @@
     .line 58
     iget-object v0, p0, Lcom/miui/home/launcher/DefaultScreenPreviewView;->mDefaultScreenPreviewActionBar:Lcom/miui/home/launcher/view/LauncherActionBar;
 
-    const v1, 0x7f100166
+    const v1, 0x7f11016f
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/view/LauncherActionBar;->setTitle(I)V
 
-    const v0, 0x7f0a00cb
+    const v0, 0x7f0a00f6
 
     .line 59
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/DefaultScreenPreviewView;->findViewById(I)Landroid/view/View;
@@ -624,7 +624,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070411
+    const v1, 0x7f0705e4
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -635,7 +635,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f070410
+    const v2, 0x7f0705e3
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -646,7 +646,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0700ab
+    const v3, 0x7f0700b3
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -710,7 +710,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f0700ac
+    const v5, 0x7f0700b4
 
     invoke-static {v4, v5}, Landroidx/core/content/res/ResourcesCompat;->getFloat(Landroid/content/res/Resources;I)F
 

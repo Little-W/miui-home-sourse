@@ -58,7 +58,7 @@
 
     iput-object p1, p0, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->mOnClickListener:Landroid/view/View$OnClickListener;
 
-    const p1, 0x7f0d00ef
+    const p1, 0x7f0d0133
 
     .line 43
     invoke-virtual {p0, p1}, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->setLayoutResource(I)V
@@ -415,14 +415,14 @@
     .line 119
     iget-object v0, p0, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->mGestureLearnAlertDialog:Lcom/miui/home/recents/settings/GestureLearnAlertDialog;
 
-    const v1, 0x7f1002ee
+    const v1, 0x7f11034b
 
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;->setTitle(I)V
 
     .line 120
     iget-object v0, p0, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->mGestureLearnAlertDialog:Lcom/miui/home/recents/settings/GestureLearnAlertDialog;
 
-    const v1, 0x7f1002ed
+    const v1, 0x7f11034a
 
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;->setMessage(I)V
 
@@ -461,67 +461,67 @@
     .locals 3
 
     .line 99
-    new-instance v0, Lmiuix/appcompat/app/AlertDialog$Builder;
+    new-instance v0, Lmiui/home/lib/dialog/AlertDialog$Builder;
 
     .line 100
     invoke-virtual {p0}, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lmiui/home/lib/dialog/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
     new-instance v1, Lcom/miui/home/recents/settings/-$$Lambda$NavBarTypeContainerPreference$xRC8XKr4JwAzzOwGzEOecvusUBk;
 
     invoke-direct {v1, p0}, Lcom/miui/home/recents/settings/-$$Lambda$NavBarTypeContainerPreference$xRC8XKr4JwAzzOwGzEOecvusUBk;-><init>(Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;)V
 
-    const v2, 0x7f100310
+    const v2, 0x7f11036d
 
     .line 101
-    invoke-virtual {v0, v2, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
+    invoke-virtual {v0, v2, v1}, Lmiui/home/lib/dialog/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiui/home/lib/dialog/AlertDialog$Builder;
 
     move-result-object v0
 
-    const v1, 0x7f10030e
+    const v1, 0x7f11036b
 
     const/4 v2, 0x0
 
     .line 109
-    invoke-virtual {v0, v1, v2}, Lmiuix/appcompat/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
+    invoke-virtual {v0, v1, v2}, Lmiui/home/lib/dialog/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiui/home/lib/dialog/AlertDialog$Builder;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
     .line 110
-    invoke-virtual {v0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setCancelable(Z)Lmiuix/appcompat/app/AlertDialog$Builder;
+    invoke-virtual {v0, v1}, Lmiui/home/lib/dialog/AlertDialog$Builder;->setCancelable(Z)Lmiui/home/lib/dialog/AlertDialog$Builder;
 
     move-result-object v0
 
     .line 111
-    invoke-virtual {v0}, Lmiuix/appcompat/app/AlertDialog$Builder;->create()Lmiuix/appcompat/app/AlertDialog;
+    invoke-virtual {v0}, Lmiui/home/lib/dialog/AlertDialog$Builder;->create()Lmiui/home/lib/dialog/AlertDialog;
 
     move-result-object v0
 
-    const v1, 0x7f100311
+    const v1, 0x7f11036e
 
     .line 112
-    invoke-virtual {v0, v1}, Lmiuix/appcompat/app/AlertDialog;->setTitle(I)V
+    invoke-virtual {v0, v1}, Lmiui/home/lib/dialog/AlertDialog;->setTitle(I)V
 
     .line 113
     invoke-virtual {p0}, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    const v2, 0x7f10030f
+    const v2, 0x7f11036c
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lmiuix/appcompat/app/AlertDialog;->setMessage(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v1}, Lmiui/home/lib/dialog/AlertDialog;->setMessage(Ljava/lang/CharSequence;)V
 
     .line 114
-    invoke-virtual {v0}, Lmiuix/appcompat/app/AlertDialog;->show()V
+    invoke-virtual {v0}, Lmiui/home/lib/dialog/AlertDialog;->show()V
 
     return-void
 .end method
@@ -583,7 +583,7 @@
     .line 50
     iget-object p1, p1, Landroidx/preference/PreferenceViewHolder;->itemView:Landroid/view/View;
 
-    const v0, 0x7f0a02ea
+    const v0, 0x7f0a03d9
 
     .line 51
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -608,7 +608,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    const v0, 0x7f0a0122
+    const v0, 0x7f0a0177
 
     .line 55
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -619,7 +619,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->mFullScreenGestureView:Lcom/miui/home/recents/settings/NavigationBarTypeView;
 
-    const v0, 0x7f0a0123
+    const v0, 0x7f0a0178
 
     .line 56
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;

@@ -9,6 +9,7 @@
         Lcom/miui/miuiwidget/R$styleable;,
         Lcom/miui/miuiwidget/R$style;,
         Lcom/miui/miuiwidget/R$string;,
+        Lcom/miui/miuiwidget/R$menu;,
         Lcom/miui/miuiwidget/R$layout;,
         Lcom/miui/miuiwidget/R$interpolator;,
         Lcom/miui/miuiwidget/R$integer;,

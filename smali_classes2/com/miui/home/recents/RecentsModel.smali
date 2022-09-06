@@ -105,7 +105,7 @@
     .line 81
     iget-object v2, v0, Lcom/miui/home/recents/RecentsModel;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f06037c
+    const v3, 0x7f060577
 
     .line 82
     invoke-virtual {v2, v3}, Landroid/content/Context;->getColor(I)I
@@ -115,7 +115,7 @@
     .line 83
     iget-object v3, v0, Lcom/miui/home/recents/RecentsModel;->mContext:Landroid/content/Context;
 
-    const v4, 0x7f06037d
+    const v4, 0x7f060578
 
     .line 84
     invoke-virtual {v3, v4}, Landroid/content/Context;->getColor(I)I
@@ -125,7 +125,7 @@
     .line 85
     sget-boolean v4, Lcom/miui/home/launcher/DeviceConfig;->IS_MIUI_LITE_DEVICE:Z
 
-    const v5, 0x7f0b0041
+    const v5, 0x7f0b0070
 
     if-eqz v4, :cond_0
 
@@ -134,14 +134,14 @@
 
     iget-object v7, v0, Lcom/miui/home/recents/RecentsModel;->mContext:Landroid/content/Context;
 
-    const v6, 0x7f0b002b
+    const v6, 0x7f0b002d
 
     .line 87
     invoke-virtual {v1, v6}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v8
 
-    const v6, 0x7f0b002a
+    const v6, 0x7f0b002c
 
     .line 88
     invoke-virtual {v1, v6}, Landroid/content/res/Resources;->getInteger(I)I
@@ -169,14 +169,14 @@
 
     iget-object v13, v0, Lcom/miui/home/recents/RecentsModel;->mContext:Landroid/content/Context;
 
-    const v6, 0x7f0b002d
+    const v6, 0x7f0b002f
 
     .line 92
     invoke-virtual {v1, v6}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v14
 
-    const v6, 0x7f0b002c
+    const v6, 0x7f0b002e
 
     .line 93
     invoke-virtual {v1, v6}, Landroid/content/res/Resources;->getInteger(I)I
@@ -1571,11 +1571,7 @@
 
     move-result-object v0
 
-    iget-object v1, p2, Lcom/android/systemui/shared/recents/model/ThumbnailData;->thumbnailInfo:Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;
-
-    iget v1, v1, Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;->mWindowMod:I
-
-    invoke-virtual {v0, p1, v1}, Lcom/android/systemui/shared/recents/model/RecentsTaskLoader;->updateIfWindowModeModified(II)V
+    invoke-virtual {v0, p1}, Lcom/android/systemui/shared/recents/model/RecentsTaskLoader;->removeThumbnailCache(I)V
 
     .line 173
     iget-boolean v0, p0, Lcom/miui/home/recents/RecentsModel;->mIgnoreTaskSnapshotChanged:Z

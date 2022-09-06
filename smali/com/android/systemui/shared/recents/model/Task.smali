@@ -164,10 +164,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 267
+    .line 278
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 260
+    .line 271
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -182,10 +182,10 @@
 
     move-object v0, p0
 
-    .line 283
+    .line 294
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 260
+    .line 271
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
@@ -194,40 +194,40 @@
 
     move-object v1, p1
 
-    .line 284
+    .line 295
     iput-object v1, v0, Lcom/android/systemui/shared/recents/model/Task;->key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
 
     move-object v1, p2
 
-    .line 285
+    .line 296
     iput-object v1, v0, Lcom/android/systemui/shared/recents/model/Task;->icon:Landroid/graphics/drawable/Drawable;
 
     move-object v1, p3
 
-    .line 286
+    .line 297
     invoke-virtual {p0, p3}, Lcom/android/systemui/shared/recents/model/Task;->setThumbnail(Landroid/graphics/Bitmap;)V
 
     move-object v1, p4
 
-    .line 287
+    .line 298
     iput-object v1, v0, Lcom/android/systemui/shared/recents/model/Task;->title:Ljava/lang/String;
 
     move-object v1, p5
 
-    .line 288
+    .line 299
     iput-object v1, v0, Lcom/android/systemui/shared/recents/model/Task;->titleDescription:Ljava/lang/String;
 
     move v1, p6
 
-    .line 289
+    .line 300
     iput v1, v0, Lcom/android/systemui/shared/recents/model/Task;->colorPrimary:I
 
     move v1, p7
 
-    .line 290
+    .line 301
     iput v1, v0, Lcom/android/systemui/shared/recents/model/Task;->colorBackground:I
 
-    .line 291
+    .line 302
     iget v1, v0, Lcom/android/systemui/shared/recents/model/Task;->colorPrimary:I
 
     const/4 v2, -0x1
@@ -254,112 +254,112 @@
 
     move-object v1, p12
 
-    .line 293
+    .line 304
     iput-object v1, v0, Lcom/android/systemui/shared/recents/model/Task;->bounds:Landroid/graphics/Rect;
 
     move-object/from16 v1, p13
 
-    .line 294
+    .line 305
     iput-object v1, v0, Lcom/android/systemui/shared/recents/model/Task;->taskDescription:Landroid/app/ActivityManager$TaskDescription;
 
     move v1, p8
 
-    .line 295
+    .line 306
     iput-boolean v1, v0, Lcom/android/systemui/shared/recents/model/Task;->isLaunchTarget:Z
 
     move v1, p9
 
-    .line 296
+    .line 307
     iput-boolean v1, v0, Lcom/android/systemui/shared/recents/model/Task;->isStackTask:Z
 
     move v1, p10
 
-    .line 297
+    .line 308
     iput-boolean v1, v0, Lcom/android/systemui/shared/recents/model/Task;->isSystemApp:Z
 
     move v1, p11
 
-    .line 298
+    .line 309
     iput-boolean v1, v0, Lcom/android/systemui/shared/recents/model/Task;->isDockable:Z
 
     move/from16 v1, p14
 
-    .line 299
+    .line 310
     iput v1, v0, Lcom/android/systemui/shared/recents/model/Task;->resizeMode:I
 
     move-object/from16 v1, p15
 
-    .line 300
+    .line 311
     iput-object v1, v0, Lcom/android/systemui/shared/recents/model/Task;->topActivity:Landroid/content/ComponentName;
 
     move-object/from16 v1, p16
 
-    .line 301
+    .line 312
     iput-object v1, v0, Lcom/android/systemui/shared/recents/model/Task;->baseActivity:Landroid/content/ComponentName;
 
     move/from16 v1, p17
 
-    .line 302
+    .line 313
     iput-boolean v1, v0, Lcom/android/systemui/shared/recents/model/Task;->isLocked:Z
 
     move/from16 v1, p18
 
-    .line 303
+    .line 314
     iput-boolean v1, v0, Lcom/android/systemui/shared/recents/model/Task;->isAccessLocked:Z
 
     move/from16 v1, p19
 
-    .line 304
+    .line 315
     iput-boolean v1, v0, Lcom/android/systemui/shared/recents/model/Task;->hasMultipleTasks:Z
 
     move-object/from16 v1, p20
 
-    .line 307
+    .line 318
     iput-object v1, v0, Lcom/android/systemui/shared/recents/model/Task;->cti1Key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
 
     move-object/from16 v1, p21
 
-    .line 308
+    .line 319
     iput-object v1, v0, Lcom/android/systemui/shared/recents/model/Task;->cti1Icon:Landroid/graphics/drawable/Drawable;
 
     move-object/from16 v1, p22
 
-    .line 309
+    .line 320
     iput-object v1, v0, Lcom/android/systemui/shared/recents/model/Task;->cti1TitleDescription:Ljava/lang/String;
 
     move-object/from16 v1, p23
 
-    .line 310
+    .line 321
     iput-object v1, v0, Lcom/android/systemui/shared/recents/model/Task;->cti1TaskDescription:Landroid/app/ActivityManager$TaskDescription;
 
     move-object/from16 v1, p24
 
-    .line 311
+    .line 322
     iput-object v1, v0, Lcom/android/systemui/shared/recents/model/Task;->cti1Bounds:Landroid/graphics/Rect;
 
     move-object/from16 v1, p25
 
-    .line 314
+    .line 325
     iput-object v1, v0, Lcom/android/systemui/shared/recents/model/Task;->cti2Key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
 
     move-object/from16 v1, p26
 
-    .line 315
+    .line 326
     iput-object v1, v0, Lcom/android/systemui/shared/recents/model/Task;->cti2Icon:Landroid/graphics/drawable/Drawable;
 
     move-object/from16 v1, p27
 
-    .line 316
+    .line 327
     iput-object v1, v0, Lcom/android/systemui/shared/recents/model/Task;->cti2TitleDescription:Ljava/lang/String;
 
     move-object/from16 v1, p28
 
-    .line 317
+    .line 328
     iput-object v1, v0, Lcom/android/systemui/shared/recents/model/Task;->cti2TaskDescription:Landroid/app/ActivityManager$TaskDescription;
 
     move-object/from16 v1, p29
 
-    .line 318
+    .line 329
     iput-object v1, v0, Lcom/android/systemui/shared/recents/model/Task;->cti2Bounds:Landroid/graphics/Rect;
 
     return-void
@@ -370,7 +370,7 @@
 .method public addCallback(Lcom/android/systemui/shared/recents/model/Task$TaskCallbacks;)V
     .locals 1
 
-    .line 362
+    .line 373
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/Task;->mCallbacks:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
@@ -379,7 +379,7 @@
 
     if-nez v0, :cond_0
 
-    .line 363
+    .line 374
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/Task;->mCallbacks:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -391,97 +391,97 @@
 .method public copyFrom(Lcom/android/systemui/shared/recents/model/Task;)V
     .locals 1
 
-    .line 325
+    .line 336
     iget-object v0, p1, Lcom/android/systemui/shared/recents/model/Task;->key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
 
     iput-object v0, p0, Lcom/android/systemui/shared/recents/model/Task;->key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
 
-    .line 326
+    .line 337
     iget-object v0, p1, Lcom/android/systemui/shared/recents/model/Task;->icon:Landroid/graphics/drawable/Drawable;
 
     iput-object v0, p0, Lcom/android/systemui/shared/recents/model/Task;->icon:Landroid/graphics/drawable/Drawable;
 
-    .line 327
+    .line 338
     iget-object v0, p1, Lcom/android/systemui/shared/recents/model/Task;->thumbnail:Landroid/graphics/Bitmap;
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/shared/recents/model/Task;->setThumbnail(Landroid/graphics/Bitmap;)V
 
-    .line 328
+    .line 339
     iget-object v0, p1, Lcom/android/systemui/shared/recents/model/Task;->title:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/systemui/shared/recents/model/Task;->title:Ljava/lang/String;
 
-    .line 329
+    .line 340
     iget-object v0, p1, Lcom/android/systemui/shared/recents/model/Task;->titleDescription:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/systemui/shared/recents/model/Task;->titleDescription:Ljava/lang/String;
 
-    .line 330
+    .line 341
     iget v0, p1, Lcom/android/systemui/shared/recents/model/Task;->colorPrimary:I
 
     iput v0, p0, Lcom/android/systemui/shared/recents/model/Task;->colorPrimary:I
 
-    .line 331
+    .line 342
     iget v0, p1, Lcom/android/systemui/shared/recents/model/Task;->colorBackground:I
 
     iput v0, p0, Lcom/android/systemui/shared/recents/model/Task;->colorBackground:I
 
-    .line 332
+    .line 343
     iget-boolean v0, p1, Lcom/android/systemui/shared/recents/model/Task;->useLightOnPrimaryColor:Z
 
     iput-boolean v0, p0, Lcom/android/systemui/shared/recents/model/Task;->useLightOnPrimaryColor:Z
 
-    .line 333
+    .line 344
     iget-object v0, p1, Lcom/android/systemui/shared/recents/model/Task;->bounds:Landroid/graphics/Rect;
 
     iput-object v0, p0, Lcom/android/systemui/shared/recents/model/Task;->bounds:Landroid/graphics/Rect;
 
-    .line 334
+    .line 345
     iget-object v0, p1, Lcom/android/systemui/shared/recents/model/Task;->taskDescription:Landroid/app/ActivityManager$TaskDescription;
 
     iput-object v0, p0, Lcom/android/systemui/shared/recents/model/Task;->taskDescription:Landroid/app/ActivityManager$TaskDescription;
 
-    .line 335
+    .line 346
     iget-boolean v0, p1, Lcom/android/systemui/shared/recents/model/Task;->isLaunchTarget:Z
 
     iput-boolean v0, p0, Lcom/android/systemui/shared/recents/model/Task;->isLaunchTarget:Z
 
-    .line 336
+    .line 347
     iget-boolean v0, p1, Lcom/android/systemui/shared/recents/model/Task;->isStackTask:Z
 
     iput-boolean v0, p0, Lcom/android/systemui/shared/recents/model/Task;->isStackTask:Z
 
-    .line 337
+    .line 348
     iget-boolean v0, p1, Lcom/android/systemui/shared/recents/model/Task;->isSystemApp:Z
 
     iput-boolean v0, p0, Lcom/android/systemui/shared/recents/model/Task;->isSystemApp:Z
 
-    .line 338
+    .line 349
     iget-boolean v0, p1, Lcom/android/systemui/shared/recents/model/Task;->isDockable:Z
 
     iput-boolean v0, p0, Lcom/android/systemui/shared/recents/model/Task;->isDockable:Z
 
-    .line 339
+    .line 350
     iget v0, p1, Lcom/android/systemui/shared/recents/model/Task;->resizeMode:I
 
     iput v0, p0, Lcom/android/systemui/shared/recents/model/Task;->resizeMode:I
 
-    .line 340
+    .line 351
     iget-object v0, p1, Lcom/android/systemui/shared/recents/model/Task;->topActivity:Landroid/content/ComponentName;
 
     iput-object v0, p0, Lcom/android/systemui/shared/recents/model/Task;->topActivity:Landroid/content/ComponentName;
 
-    .line 341
+    .line 352
     iget-object v0, p1, Lcom/android/systemui/shared/recents/model/Task;->baseActivity:Landroid/content/ComponentName;
 
     iput-object v0, p0, Lcom/android/systemui/shared/recents/model/Task;->baseActivity:Landroid/content/ComponentName;
 
-    .line 342
+    .line 353
     iget-boolean v0, p1, Lcom/android/systemui/shared/recents/model/Task;->isLocked:Z
 
     iput-boolean v0, p0, Lcom/android/systemui/shared/recents/model/Task;->isLocked:Z
 
-    .line 343
+    .line 354
     iget-boolean p1, p1, Lcom/android/systemui/shared/recents/model/Task;->isAccessLocked:Z
 
     iput-boolean p1, p0, Lcom/android/systemui/shared/recents/model/Task;->isAccessLocked:Z
@@ -492,24 +492,24 @@
 .method public dump(Ljava/lang/String;Ljava/io/PrintWriter;)V
     .locals 0
 
-    .line 481
+    .line 492
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-object p1, p0, Lcom/android/systemui/shared/recents/model/Task;->key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
 
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/Object;)V
 
-    .line 482
+    .line 493
     iget-boolean p1, p0, Lcom/android/systemui/shared/recents/model/Task;->isDockable:Z
 
     if-nez p1, :cond_0
 
     const-string p1, " dockable=N"
 
-    .line 483
+    .line 494
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 485
+    .line 496
     :cond_0
     iget-boolean p1, p0, Lcom/android/systemui/shared/recents/model/Task;->isLaunchTarget:Z
 
@@ -517,20 +517,20 @@
 
     const-string p1, " launchTarget=Y"
 
-    .line 486
+    .line 497
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     :cond_1
     const-string p1, " "
 
-    .line 488
+    .line 499
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-object p1, p0, Lcom/android/systemui/shared/recents/model/Task;->title:Ljava/lang/String;
 
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 489
+    .line 500
     invoke-virtual {p2}, Ljava/io/PrintWriter;->println()V
 
     return-void
@@ -539,10 +539,10 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
 
-    .line 454
+    .line 465
     check-cast p1, Lcom/android/systemui/shared/recents/model/Task;
 
-    .line 455
+    .line 466
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/Task;->key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
 
     iget-object p1, p1, Lcom/android/systemui/shared/recents/model/Task;->key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
@@ -557,14 +557,14 @@
 .method public getBaseComponent()Landroid/content/ComponentName;
     .locals 1
 
-    .line 442
+    .line 453
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/Task;->baseActivity:Landroid/content/ComponentName;
 
     if-eqz v0, :cond_0
 
     goto :goto_0
 
-    .line 444
+    .line 455
     :cond_0
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/Task;->key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
 
@@ -581,7 +581,7 @@
 .method public getLastActiveTime()J
     .locals 4
 
-    .line 448
+    .line 459
     invoke-virtual {p0}, Lcom/android/systemui/shared/recents/model/Task;->hasMultipleTasks()Z
 
     move-result v0
@@ -614,14 +614,14 @@
 .method public getTopComponent()Landroid/content/ComponentName;
     .locals 1
 
-    .line 433
+    .line 444
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/Task;->topActivity:Landroid/content/ComponentName;
 
     if-eqz v0, :cond_0
 
     goto :goto_0
 
-    .line 435
+    .line 446
     :cond_0
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/Task;->key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
 
@@ -638,7 +638,7 @@
 .method public hasCallBack()Z
     .locals 1
 
-    .line 375
+    .line 386
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/Task;->mCallbacks:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -661,7 +661,7 @@
 .method public hasMultipleTasks()Z
     .locals 1
 
-    .line 406
+    .line 417
     iget-boolean v0, p0, Lcom/android/systemui/shared/recents/model/Task;->hasMultipleTasks:Z
 
     return v0
@@ -670,7 +670,7 @@
 .method public isBlurThumbnail()Z
     .locals 1
 
-    .line 397
+    .line 408
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/Task;->key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
 
     iget-boolean v0, v0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->isThumbnailBlur:Z
@@ -711,7 +711,7 @@
 .method public isCoverThumbnail()Z
     .locals 1
 
-    .line 401
+    .line 412
     invoke-virtual {p0}, Lcom/android/systemui/shared/recents/model/Task;->isBlurThumbnail()Z
 
     move-result v0
@@ -738,12 +738,12 @@
         }
     .end annotation
 
-    .line 522
+    .line 533
     invoke-virtual {p0}, Lcom/android/systemui/shared/recents/model/Task;->getBaseComponent()Landroid/content/ComponentName;
 
     move-result-object v0
 
-    .line 523
+    .line 534
     iget-object v1, p0, Lcom/android/systemui/shared/recents/model/Task;->key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
 
     const/4 v2, 0x0
@@ -754,7 +754,7 @@
 
     goto :goto_0
 
-    .line 527
+    .line 538
     :cond_0
     invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -773,13 +773,13 @@
 
     check-cast v1, Lmiui/app/MiuiFreeFormManager$MiuiFreeFormStackInfo;
 
-    .line 528
+    .line 539
     iget v3, v1, Lmiui/app/MiuiFreeFormManager$MiuiFreeFormStackInfo;->userId:I
 
-    .line 529
+    .line 540
     iget-object v1, v1, Lmiui/app/MiuiFreeFormManager$MiuiFreeFormStackInfo;->packageName:Ljava/lang/String;
 
-    .line 530
+    .line 541
     invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v4
@@ -809,7 +809,7 @@
 
     const-string v0, "updateIsNeedHideState: key or getBaseComponent is null, return."
 
-    .line 524
+    .line 535
     invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v2
@@ -818,7 +818,7 @@
 .method public isNeedHide()Z
     .locals 1
 
-    .line 355
+    .line 366
     iget-boolean v0, p0, Lcom/android/systemui/shared/recents/model/Task;->mNeedHide:Z
 
     return v0
@@ -827,7 +827,7 @@
 .method public isProtected()Z
     .locals 1
 
-    .line 503
+    .line 514
     iget-boolean v0, p0, Lcom/android/systemui/shared/recents/model/Task;->isLocked:Z
 
     if-nez v0, :cond_1
@@ -854,13 +854,13 @@
 .method public notifyTaskDataLoaded(Landroid/graphics/Bitmap;Landroid/graphics/drawable/Drawable;Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;)V
     .locals 1
 
-    .line 412
+    .line 423
     iput-object p2, p0, Lcom/android/systemui/shared/recents/model/Task;->icon:Landroid/graphics/drawable/Drawable;
 
-    .line 413
+    .line 424
     invoke-virtual {p0, p1}, Lcom/android/systemui/shared/recents/model/Task;->setThumbnail(Landroid/graphics/Bitmap;)V
 
-    .line 414
+    .line 425
     iget-object p1, p0, Lcom/android/systemui/shared/recents/model/Task;->mCallbacks:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
@@ -872,7 +872,7 @@
     :goto_0
     if-ge p2, p1, :cond_0
 
-    .line 416
+    .line 427
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/Task;->mCallbacks:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -894,13 +894,13 @@
 .method public notifyTaskDataUnloaded(Landroid/graphics/Bitmap;Landroid/graphics/drawable/Drawable;)V
     .locals 0
 
-    .line 422
+    .line 433
     iput-object p2, p0, Lcom/android/systemui/shared/recents/model/Task;->icon:Landroid/graphics/drawable/Drawable;
 
-    .line 423
+    .line 434
     invoke-virtual {p0, p1}, Lcom/android/systemui/shared/recents/model/Task;->setThumbnail(Landroid/graphics/Bitmap;)V
 
-    .line 424
+    .line 435
     iget-object p1, p0, Lcom/android/systemui/shared/recents/model/Task;->mCallbacks:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
@@ -912,7 +912,7 @@
     :goto_0
     if-ltz p1, :cond_0
 
-    .line 425
+    .line 436
     iget-object p2, p0, Lcom/android/systemui/shared/recents/model/Task;->mCallbacks:Ljava/util/ArrayList;
 
     invoke-virtual {p2, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -934,7 +934,7 @@
 .method public onLockedChange()V
     .locals 3
 
-    .line 497
+    .line 508
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/Task;->mCallbacks:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -946,7 +946,7 @@
     :goto_0
     if-ltz v0, :cond_0
 
-    .line 498
+    .line 509
     iget-object v1, p0, Lcom/android/systemui/shared/recents/model/Task;->mCallbacks:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -970,7 +970,7 @@
 .method public printDetail()Ljava/lang/String;
     .locals 2
 
-    .line 476
+    .line 487
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -999,7 +999,7 @@
 .method public removeCallback(Lcom/android/systemui/shared/recents/model/Task$TaskCallbacks;)V
     .locals 1
 
-    .line 371
+    .line 382
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/Task;->mCallbacks:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
@@ -1010,7 +1010,7 @@
 .method public setLocked(Z)V
     .locals 0
 
-    .line 493
+    .line 504
     iput-boolean p1, p0, Lcom/android/systemui/shared/recents/model/Task;->isLocked:Z
 
     return-void
@@ -1019,7 +1019,7 @@
 .method public setNeedHide(Z)V
     .locals 0
 
-    .line 351
+    .line 362
     iput-boolean p1, p0, Lcom/android/systemui/shared/recents/model/Task;->mNeedHide:Z
 
     return-void
@@ -1028,12 +1028,12 @@
 .method public setStackId(I)V
     .locals 2
 
-    .line 382
+    .line 393
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/Task;->key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
 
     invoke-virtual {v0, p1}, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->setStackId(I)V
 
-    .line 383
+    .line 394
     iget-object p1, p0, Lcom/android/systemui/shared/recents/model/Task;->mCallbacks:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
@@ -1045,7 +1045,7 @@
     :goto_0
     if-ge v0, p1, :cond_0
 
-    .line 385
+    .line 396
     iget-object v1, p0, Lcom/android/systemui/shared/recents/model/Task;->mCallbacks:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1067,7 +1067,7 @@
 .method public setThumbnail(Landroid/graphics/Bitmap;)V
     .locals 0
 
-    .line 347
+    .line 358
     iput-object p1, p0, Lcom/android/systemui/shared/recents/model/Task;->thumbnail:Landroid/graphics/Bitmap;
 
     return-void
@@ -1076,7 +1076,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 460
+    .line 471
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1203,7 +1203,7 @@
         }
     .end annotation
 
-    .line 512
+    .line 523
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/Task;->key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
 
     if-eqz v0, :cond_1
@@ -1219,15 +1219,15 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 516
+    .line 527
     invoke-virtual {p0, v0}, Lcom/android/systemui/shared/recents/model/Task;->setNeedHide(Z)V
 
-    .line 517
+    .line 528
     invoke-virtual {p0, p1}, Lcom/android/systemui/shared/recents/model/Task;->isInSmallWindow(Ljava/util/Set;)Z
 
     move-result p1
 
-    .line 518
+    .line 529
     invoke-virtual {p0, p1}, Lcom/android/systemui/shared/recents/model/Task;->setNeedHide(Z)V
 
     return-void
@@ -1238,7 +1238,7 @@
 
     const-string v0, "updateIsNeedHideState: key or getBaseComponent is null, return."
 
-    .line 513
+    .line 524
     invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void

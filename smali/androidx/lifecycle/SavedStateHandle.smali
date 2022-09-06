@@ -408,7 +408,7 @@
 
     move-result-object p1
 
-    const-string v1, "values"
+    const-string/jumbo v1, "values"
 
     .line 126
     invoke-virtual {p0, v1}, Landroid/os/Bundle;->getParcelableArrayList(Ljava/lang/String;)Ljava/util/ArrayList;

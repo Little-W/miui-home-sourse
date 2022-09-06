@@ -24,17 +24,17 @@
 .method public constructor <init>(Lcom/miui/maml/ActionCommand;Lcom/miui/maml/data/Expression;)V
     .locals 1
 
-    .line 1220
+    .line 1225
     invoke-virtual {p1}, Lcom/miui/maml/ActionCommand;->getRoot()Lcom/miui/maml/ScreenElementRoot;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Lcom/miui/maml/ActionCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;)V
 
-    .line 1221
+    .line 1226
     iput-object p1, p0, Lcom/miui/maml/ActionCommand$ConditionCommand;->mCommand:Lcom/miui/maml/ActionCommand;
 
-    .line 1222
+    .line 1227
     iput-object p2, p0, Lcom/miui/maml/ActionCommand$ConditionCommand;->mCondition:Lcom/miui/maml/data/Expression;
 
     return-void
@@ -45,7 +45,7 @@
 .method protected doPerform()V
     .locals 4
 
-    .line 1232
+    .line 1237
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$ConditionCommand;->mCondition:Lcom/miui/maml/data/Expression;
 
     invoke-virtual {v0}, Lcom/miui/maml/data/Expression;->evaluate()D
@@ -58,7 +58,7 @@
 
     if-lez v0, :cond_0
 
-    .line 1233
+    .line 1238
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$ConditionCommand;->mCommand:Lcom/miui/maml/ActionCommand;
 
     invoke-virtual {v0}, Lcom/miui/maml/ActionCommand;->perform()V
@@ -70,7 +70,7 @@
 .method public init()V
     .locals 1
 
-    .line 1227
+    .line 1232
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$ConditionCommand;->mCommand:Lcom/miui/maml/ActionCommand;
 
     invoke-virtual {v0}, Lcom/miui/maml/ActionCommand;->init()V

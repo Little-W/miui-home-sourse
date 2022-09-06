@@ -999,7 +999,7 @@
     :cond_3
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "valueCount <= 0"
+    const-string/jumbo p1, "valueCount <= 0"
 
     invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 

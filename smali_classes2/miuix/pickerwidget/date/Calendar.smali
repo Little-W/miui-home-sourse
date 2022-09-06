@@ -959,15 +959,15 @@
 
     const-wide v0, -0xb1d069b5400L
 
-    .line 1411
+    .line 1416
     iput-wide v0, p0, Lmiuix/pickerwidget/date/Calendar;->gregorianCutover:J
 
     const/16 v0, 0x62e
 
-    .line 1413
+    .line 1418
     iput v0, p0, Lmiuix/pickerwidget/date/Calendar;->changeYear:I
 
-    .line 1415
+    .line 1420
     iget v0, p0, Lmiuix/pickerwidget/date/Calendar;->changeYear:I
 
     div-int/lit8 v1, v0, 0x64
@@ -982,7 +982,7 @@
 
     add-int/lit16 v1, v0, -0x7d0
 
-    .line 1417
+    .line 1422
     div-int/lit16 v1, v1, 0x190
 
     iget v2, p0, Lmiuix/pickerwidget/date/Calendar;->julianError:I
@@ -999,12 +999,12 @@
 
     const/16 v0, 0xa
 
-    .line 1420
+    .line 1425
     iput v0, p0, Lmiuix/pickerwidget/date/Calendar;->currentYearSkew:I
 
     const/4 v0, 0x0
 
-    .line 1422
+    .line 1427
     iput v0, p0, Lmiuix/pickerwidget/date/Calendar;->lastYearSkew:I
 
     .line 793
@@ -1025,7 +1025,7 @@
 
     const/16 v0, 0x17
 
-    .line 2242
+    .line 2247
     invoke-virtual {p0, v0}, Lmiuix/pickerwidget/date/Calendar;->get(I)I
 
     move-result v0
@@ -1054,16 +1054,16 @@
 
     const-string p2, "GMT"
 
-    .line 2249
+    .line 2254
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2251
+    .line 2256
     :cond_1
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     const p2, 0x36ee80
 
-    .line 2252
+    .line 2257
     div-int v1, v0, p2
 
     const/4 v2, 0x2
@@ -1074,10 +1074,10 @@
 
     const/16 p3, 0x3a
 
-    .line 2254
+    .line 2259
     invoke-virtual {p1, p3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 2256
+    .line 2261
     :cond_2
     rem-int/2addr v0, p2
 
@@ -1093,7 +1093,7 @@
 .method private static appendNumericValue(Ljava/lang/StringBuilder;II)V
     .locals 0
 
-    .line 2223
+    .line 2228
     invoke-static {p1, p2}, Lmiuix/pickerwidget/internal/util/SimpleNumberFormatter;->format(II)Ljava/lang/String;
 
     move-result-object p1
@@ -1106,7 +1106,7 @@
 .method private appendTimeZone(Ljava/lang/StringBuilder;Lmiuix/pickerwidget/date/CalendarFormatSymbols;I)V
     .locals 5
 
-    .line 2227
+    .line 2232
     iget-object v0, p0, Lmiuix/pickerwidget/date/Calendar;->mTimeZone:Ljava/util/TimeZone;
 
     iget-object v1, p0, Lmiuix/pickerwidget/date/Calendar;->mFields:[I
@@ -1135,25 +1135,25 @@
 
     move v2, v3
 
-    .line 2229
+    .line 2234
     :cond_1
     invoke-virtual {p2}, Lmiuix/pickerwidget/date/CalendarFormatSymbols;->getLocale()Ljava/util/Locale;
 
     move-result-object p2
 
-    .line 2227
+    .line 2232
     invoke-virtual {v0, v1, v2, p2}, Ljava/util/TimeZone;->getDisplayName(ZILjava/util/Locale;)Ljava/lang/String;
 
     move-result-object p2
 
     if-eqz p2, :cond_2
 
-    .line 2231
+    .line 2236
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
 
-    .line 2233
+    .line 2238
     :cond_2
     invoke-direct {p0, p1, v3, v3}, Lmiuix/pickerwidget/date/Calendar;->appendNumericTimeZone(Ljava/lang/StringBuilder;ZZ)V
 
@@ -1186,7 +1186,7 @@
 
     goto/16 :goto_1
 
-    .line 2217
+    .line 2222
     :sswitch_0
     invoke-direct {p0, p1, p2, p4}, Lmiuix/pickerwidget/date/Calendar;->appendTimeZone(Ljava/lang/StringBuilder;Lmiuix/pickerwidget/date/CalendarFormatSymbols;I)V
 
@@ -1195,7 +1195,7 @@
     :sswitch_1
     if-ne p4, v7, :cond_0
 
-    .line 2211
+    .line 2216
     iget-object p2, p0, Lmiuix/pickerwidget/date/Calendar;->mFields:[I
 
     aget p2, p2, v8
@@ -1206,7 +1206,7 @@
 
     goto/16 :goto_1
 
-    .line 2213
+    .line 2218
     :cond_0
     iget-object p2, p0, Lmiuix/pickerwidget/date/Calendar;->mFields:[I
 
@@ -1216,7 +1216,7 @@
 
     goto/16 :goto_1
 
-    .line 2207
+    .line 2212
     :sswitch_2
     invoke-virtual {p2}, Lmiuix/pickerwidget/date/CalendarFormatSymbols;->getSolarTerms()[Ljava/lang/String;
 
@@ -1234,7 +1234,7 @@
 
     goto/16 :goto_1
 
-    .line 2204
+    .line 2209
     :sswitch_3
     iget-object p2, p0, Lmiuix/pickerwidget/date/Calendar;->mFields:[I
 
@@ -1244,7 +1244,7 @@
 
     goto/16 :goto_1
 
-    .line 2199
+    .line 2204
     :sswitch_4
     iget-object p2, p0, Lmiuix/pickerwidget/date/Calendar;->mFields:[I
 
@@ -1256,7 +1256,7 @@
 
     move p2, v6
 
-    .line 2200
+    .line 2205
     :cond_1
     invoke-static {p1, p4, p2}, Lmiuix/pickerwidget/date/Calendar;->appendNumericValue(Ljava/lang/StringBuilder;II)V
 
@@ -1265,7 +1265,7 @@
     :sswitch_5
     if-eq p4, v7, :cond_2
 
-    .line 2192
+    .line 2197
     invoke-virtual {p2}, Lmiuix/pickerwidget/date/CalendarFormatSymbols;->getChineseDays()[Ljava/lang/String;
 
     move-result-object p2
@@ -1282,7 +1282,7 @@
 
     goto/16 :goto_1
 
-    .line 2194
+    .line 2199
     :cond_2
     invoke-virtual {p2}, Lmiuix/pickerwidget/date/CalendarFormatSymbols;->getHeavenlyStems()[Ljava/lang/String;
 
@@ -1300,7 +1300,7 @@
 
     invoke-virtual {p1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2195
+    .line 2200
     invoke-virtual {p2}, Lmiuix/pickerwidget/date/CalendarFormatSymbols;->getEarthlyBranches()[Ljava/lang/String;
 
     move-result-object p2
@@ -1320,7 +1320,7 @@
     :sswitch_6
     if-eq p4, v7, :cond_3
 
-    .line 2185
+    .line 2190
     invoke-virtual {p2}, Lmiuix/pickerwidget/date/CalendarFormatSymbols;->getAmPms()[Ljava/lang/String;
 
     move-result-object p2
@@ -1337,7 +1337,7 @@
 
     goto/16 :goto_1
 
-    .line 2187
+    .line 2192
     :cond_3
     invoke-virtual {p2}, Lmiuix/pickerwidget/date/CalendarFormatSymbols;->getDetailedAmPms()[Ljava/lang/String;
 
@@ -1358,7 +1358,7 @@
     :sswitch_7
     if-ne p4, v3, :cond_4
 
-    .line 2176
+    .line 2181
     invoke-direct {p0, p1, v8, v8}, Lmiuix/pickerwidget/date/Calendar;->appendNumericTimeZone(Ljava/lang/StringBuilder;ZZ)V
 
     goto/16 :goto_1
@@ -1366,12 +1366,12 @@
     :cond_4
     if-ne p4, v5, :cond_5
 
-    .line 2178
+    .line 2183
     invoke-direct {p0, p1, v2, v8}, Lmiuix/pickerwidget/date/Calendar;->appendNumericTimeZone(Ljava/lang/StringBuilder;ZZ)V
 
     goto/16 :goto_1
 
-    .line 2180
+    .line 2185
     :cond_5
     invoke-direct {p0, p1, v2, v2}, Lmiuix/pickerwidget/date/Calendar;->appendNumericTimeZone(Ljava/lang/StringBuilder;ZZ)V
 
@@ -1380,17 +1380,17 @@
     :sswitch_8
     if-eq p4, v7, :cond_6
 
-    .line 2161
+    .line 2166
     invoke-virtual {p2}, Lmiuix/pickerwidget/date/CalendarFormatSymbols;->getChineseDigits()[Ljava/lang/String;
 
     move-result-object p2
 
-    .line 2162
+    .line 2167
     iget-object p3, p0, Lmiuix/pickerwidget/date/Calendar;->mFields:[I
 
     aget p3, p3, v7
 
-    .line 2163
+    .line 2168
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->length()I
 
     move-result p4
@@ -1398,20 +1398,20 @@
     :goto_0
     if-lez p3, :cond_e
 
-    .line 2165
+    .line 2170
     rem-int/lit8 p5, p3, 0xa
 
-    .line 2166
+    .line 2171
     div-int/lit8 p3, p3, 0xa
 
-    .line 2167
+    .line 2172
     aget-object p5, p2, p5
 
     invoke-virtual {p1, p4, p5}, Ljava/lang/StringBuilder;->insert(ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
-    .line 2170
+    .line 2175
     :cond_6
     invoke-virtual {p2}, Lmiuix/pickerwidget/date/CalendarFormatSymbols;->getHeavenlyStems()[Ljava/lang/String;
 
@@ -1427,7 +1427,7 @@
 
     invoke-virtual {p1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2171
+    .line 2176
     invoke-virtual {p2}, Lmiuix/pickerwidget/date/CalendarFormatSymbols;->getEarthlyBranches()[Ljava/lang/String;
 
     move-result-object p2
@@ -1447,7 +1447,7 @@
     :sswitch_9
     if-eq p4, v7, :cond_7
 
-    .line 2152
+    .line 2157
     invoke-virtual {p2}, Lmiuix/pickerwidget/date/CalendarFormatSymbols;->getChineseLeapMonths()[Ljava/lang/String;
 
     move-result-object p3
@@ -1462,7 +1462,7 @@
 
     invoke-virtual {p1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2153
+    .line 2158
     invoke-virtual {p2}, Lmiuix/pickerwidget/date/CalendarFormatSymbols;->getChineseMonths()[Ljava/lang/String;
 
     move-result-object p2
@@ -1479,7 +1479,7 @@
 
     goto/16 :goto_1
 
-    .line 2155
+    .line 2160
     :cond_7
     invoke-virtual {p2}, Lmiuix/pickerwidget/date/CalendarFormatSymbols;->getHeavenlyStems()[Ljava/lang/String;
 
@@ -1497,7 +1497,7 @@
 
     invoke-virtual {p1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2156
+    .line 2161
     invoke-virtual {p2}, Lmiuix/pickerwidget/date/CalendarFormatSymbols;->getEarthlyBranches()[Ljava/lang/String;
 
     move-result-object p2
@@ -1517,7 +1517,7 @@
     :sswitch_a
     if-ge p4, v0, :cond_8
 
-    .line 2141
+    .line 2146
     iget-object p2, p0, Lmiuix/pickerwidget/date/Calendar;->mFields:[I
 
     aget p2, p2, v5
@@ -1531,7 +1531,7 @@
     :cond_8
     if-ne p4, v3, :cond_9
 
-    .line 2143
+    .line 2148
     invoke-virtual {p2}, Lmiuix/pickerwidget/date/CalendarFormatSymbols;->getMonths()[Ljava/lang/String;
 
     move-result-object p2
@@ -1549,7 +1549,7 @@
     :cond_9
     if-ne p4, v5, :cond_a
 
-    .line 2145
+    .line 2150
     invoke-virtual {p2}, Lmiuix/pickerwidget/date/CalendarFormatSymbols;->getShortestMonths()[Ljava/lang/String;
 
     move-result-object p2
@@ -1564,7 +1564,7 @@
 
     goto/16 :goto_1
 
-    .line 2147
+    .line 2152
     :cond_a
     invoke-virtual {p2}, Lmiuix/pickerwidget/date/CalendarFormatSymbols;->getShortMonths()[Ljava/lang/String;
 
@@ -1580,7 +1580,7 @@
 
     goto/16 :goto_1
 
-    .line 2136
+    .line 2141
     :sswitch_b
     iget-object p2, p0, Lmiuix/pickerwidget/date/Calendar;->mFields:[I
 
@@ -1597,7 +1597,7 @@
 
     if-ne p4, v7, :cond_b
 
-    .line 2131
+    .line 2136
     invoke-virtual {p2}, Lmiuix/pickerwidget/date/CalendarFormatSymbols;->getHeavenlyStems()[Ljava/lang/String;
 
     move-result-object p4
@@ -1612,7 +1612,7 @@
 
     invoke-virtual {p1, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2133
+    .line 2138
     :cond_b
     invoke-virtual {p2}, Lmiuix/pickerwidget/date/CalendarFormatSymbols;->getEarthlyBranches()[Ljava/lang/String;
 
@@ -1630,7 +1630,7 @@
 
     goto :goto_1
 
-    .line 2127
+    .line 2132
     :sswitch_d
     invoke-virtual {p2}, Lmiuix/pickerwidget/date/CalendarFormatSymbols;->getEras()[Ljava/lang/String;
 
@@ -1651,7 +1651,7 @@
 
     if-ne p4, v3, :cond_c
 
-    .line 2114
+    .line 2119
     invoke-virtual {p2}, Lmiuix/pickerwidget/date/CalendarFormatSymbols;->getWeekDays()[Ljava/lang/String;
 
     move-result-object p2
@@ -1671,7 +1671,7 @@
     :cond_c
     if-ne p4, v5, :cond_d
 
-    .line 2116
+    .line 2121
     invoke-virtual {p2}, Lmiuix/pickerwidget/date/CalendarFormatSymbols;->getShortestWeekDays()[Ljava/lang/String;
 
     move-result-object p2
@@ -1688,7 +1688,7 @@
 
     goto :goto_1
 
-    .line 2118
+    .line 2123
     :cond_d
     invoke-virtual {p2}, Lmiuix/pickerwidget/date/CalendarFormatSymbols;->getShortWeekDays()[Ljava/lang/String;
 
@@ -1706,7 +1706,7 @@
 
     goto :goto_1
 
-    .line 2109
+    .line 2114
     :sswitch_f
     iget-object p2, p0, Lmiuix/pickerwidget/date/Calendar;->mFields:[I
 
@@ -1716,7 +1716,7 @@
 
     goto :goto_1
 
-    .line 2101
+    .line 2106
     :sswitch_10
     invoke-virtual {p2}, Lmiuix/pickerwidget/date/CalendarFormatSymbols;->getChineseSymbolAnimals()[Ljava/lang/String;
 
@@ -1806,7 +1806,7 @@
 
     long-to-int p1, p1
 
-    .line 1356
+    .line 1361
     iget-object p2, p0, Lmiuix/pickerwidget/date/Calendar;->mFields:[I
 
     const/4 v0, 0x1
@@ -1824,7 +1824,7 @@
 
     add-int/lit8 v2, p2, 0x1
 
-    .line 1357
+    .line 1362
     :goto_0
     sget-object p2, Lmiuix/pickerwidget/date/Calendar;->DAY_CHINESE_YEAR_FROM_19000101:[I
 
@@ -1838,7 +1838,7 @@
 
     add-int/lit8 v2, v2, -0x1
 
-    .line 1360
+    .line 1365
     invoke-static {v2}, Lmiuix/pickerwidget/date/Calendar;->daysInChineseYear(I)I
 
     move-result p2
@@ -1850,14 +1850,14 @@
 
     add-int/lit8 v2, v2, -0x1
 
-    .line 1364
+    .line 1369
     invoke-static {v2}, Lmiuix/pickerwidget/date/Calendar;->daysInChineseYear(I)I
 
     move-result p2
 
     add-int/2addr p1, p2
 
-    .line 1367
+    .line 1372
     :cond_2
     iget-object p2, p0, Lmiuix/pickerwidget/date/Calendar;->mFields:[I
 
@@ -1869,10 +1869,10 @@
 
     add-int/lit8 v3, p1, 0x1
 
-    .line 1368
+    .line 1373
     aput v3, p2, v1
 
-    .line 1371
+    .line 1376
     invoke-static {v2}, Lmiuix/pickerwidget/date/Calendar;->leapChineseMonth(I)I
 
     move-result p2
@@ -1904,7 +1904,7 @@
 
     add-int/lit8 p1, p1, -0x1
 
-    .line 1379
+    .line 1384
     invoke-static {v2}, Lmiuix/pickerwidget/date/Calendar;->leapDaysInChineseYear(I)I
 
     move-result v4
@@ -1915,7 +1915,7 @@
 
     goto :goto_2
 
-    .line 1381
+    .line 1386
     :cond_3
     invoke-static {v2, p1}, Lmiuix/pickerwidget/date/Calendar;->daysInChineseMonth(II)I
 
@@ -1967,7 +1967,7 @@
 
     add-int/lit8 p1, p1, -0x1
 
-    .line 1404
+    .line 1409
     :cond_8
     iget-object p2, p0, Lmiuix/pickerwidget/date/Calendar;->mFields:[I
 
@@ -1977,21 +1977,21 @@
 
     const/4 v1, 0x6
 
-    .line 1405
+    .line 1410
     aput p1, p2, v1
 
     const/16 p1, 0xa
 
     add-int/2addr v3, v0
 
-    .line 1406
+    .line 1411
     aput v3, p2, p1
 
     return-void
 .end method
 
 .method private computeChineseEraNames(J)V
-    .locals 10
+    .locals 9
 
     .line 1316
     iget-object v0, p0, Lmiuix/pickerwidget/date/Calendar;->mFields:[I
@@ -2011,35 +2011,26 @@
 
     add-int/lit8 v2, v2, -0x1
 
-    .line 1321
+    .line 1328
     :cond_0
     iget-object v0, p0, Lmiuix/pickerwidget/date/Calendar;->mFields:[I
 
-    aget v5, v0, v3
+    const/4 v5, 0x6
 
-    const/16 v6, 0x9
+    aget v5, v0, v5
 
-    if-ne v5, v1, :cond_1
+    if-nez v5, :cond_1
 
-    .line 1322
-    aget v5, v0, v6
+    const/16 v5, 0xa
 
-    aget v0, v0, v1
+    aget v5, v0, v5
 
-    invoke-static {v0, v1}, Lmiuix/pickerwidget/date/Calendar;->solarTermDaysOfMonth(II)I
+    if-lt v5, v1, :cond_1
 
-    move-result v0
-
-    shr-int/lit8 v0, v0, 0x8
-
-    if-lt v5, v0, :cond_1
-
-    .line 1323
-    iget-object v0, p0, Lmiuix/pickerwidget/date/Calendar;->mFields:[I
-
+    .line 1329
     aget v2, v0, v1
 
-    .line 1326
+    .line 1331
     :cond_1
     iget-object v0, p0, Lmiuix/pickerwidget/date/Calendar;->mFields:[I
 
@@ -2047,36 +2038,36 @@
 
     add-int/lit16 v2, v2, -0x76c
 
-    add-int/lit8 v7, v2, 0xc
+    add-int/lit8 v6, v2, 0xc
 
-    int-to-long v7, v7
+    int-to-long v6, v6
 
-    const/16 v9, 0xc
+    const/16 v8, 0xc
 
-    invoke-static {v7, v8, v9}, Lmiuix/pickerwidget/date/Calendar;->mod(JI)I
+    invoke-static {v6, v7, v8}, Lmiuix/pickerwidget/date/Calendar;->mod(JI)I
 
-    move-result v7
+    move-result v6
 
-    aput v7, v0, v5
+    aput v6, v0, v5
 
-    .line 1327
+    .line 1332
     iget-object v0, p0, Lmiuix/pickerwidget/date/Calendar;->mFields:[I
 
     const/4 v5, 0x4
 
     add-int/lit8 v2, v2, 0x24
 
-    int-to-long v7, v2
+    int-to-long v6, v2
 
     const/16 v2, 0x3c
 
-    invoke-static {v7, v8, v2}, Lmiuix/pickerwidget/date/Calendar;->mod(JI)I
+    invoke-static {v6, v7, v2}, Lmiuix/pickerwidget/date/Calendar;->mod(JI)I
 
-    move-result v7
+    move-result v6
 
-    aput v7, v0, v5
+    aput v6, v0, v5
 
-    .line 1329
+    .line 1334
     iget-object v0, p0, Lmiuix/pickerwidget/date/Calendar;->mFields:[I
 
     aget v5, v0, v1
@@ -2089,35 +2080,37 @@
 
     shr-int/lit8 v0, v0, 0x8
 
-    .line 1330
+    .line 1335
     iget-object v5, p0, Lmiuix/pickerwidget/date/Calendar;->mFields:[I
 
-    aget v7, v5, v1
+    aget v6, v5, v1
 
-    add-int/lit16 v7, v7, -0x76c
+    add-int/lit16 v6, v6, -0x76c
 
-    mul-int/2addr v7, v9
+    mul-int/2addr v6, v8
 
     aget v3, v5, v3
 
-    add-int/2addr v7, v3
+    add-int/2addr v6, v3
 
-    .line 1331
-    aget v3, v5, v6
+    const/16 v3, 0x9
+
+    .line 1336
+    aget v3, v5, v3
 
     if-lt v3, v0, :cond_2
 
-    add-int/lit8 v7, v7, 0x1
+    add-int/lit8 v6, v6, 0x1
 
-    .line 1334
+    .line 1339
     :cond_2
     iget-object v0, p0, Lmiuix/pickerwidget/date/Calendar;->mFields:[I
 
     const/4 v3, 0x7
 
-    add-int/2addr v7, v9
+    add-int/2addr v6, v8
 
-    int-to-long v5, v7
+    int-to-long v5, v6
 
     invoke-static {v5, v6, v2}, Lmiuix/pickerwidget/date/Calendar;->mod(JI)I
 
@@ -2131,7 +2124,7 @@
 
     long-to-int p1, p1
 
-    .line 1337
+    .line 1342
     iget-object p2, p0, Lmiuix/pickerwidget/date/Calendar;->mFields:[I
 
     const/16 v0, 0xb
@@ -2146,12 +2139,12 @@
 
     aput v3, p2, v0
 
-    .line 1339
+    .line 1344
     iget-object p2, p0, Lmiuix/pickerwidget/date/Calendar;->mFields:[I
 
     const/16 v0, 0x13
 
-    mul-int/2addr p1, v9
+    mul-int/2addr p1, v8
 
     const/16 v3, 0x12
 
@@ -2179,12 +2172,12 @@
 .method private computeDate(JJ)V
     .locals 5
 
-    .line 1820
+    .line 1825
     invoke-direct {p0, p1, p2, p3, p4}, Lmiuix/pickerwidget/date/Calendar;->computeYearAndDay(JJ)I
 
     move-result v0
 
-    .line 1821
+    .line 1826
     iget-object v1, p0, Lmiuix/pickerwidget/date/Calendar;->mFields:[I
 
     const/16 v2, 0xc
@@ -2193,7 +2186,7 @@
 
     const/4 v2, 0x1
 
-    .line 1822
+    .line 1827
     aget v1, v1, v2
 
     iget v3, p0, Lmiuix/pickerwidget/date/Calendar;->changeYear:I
@@ -2206,16 +2199,16 @@
 
     if-gtz p3, :cond_0
 
-    .line 1823
+    .line 1828
     iget p3, p0, Lmiuix/pickerwidget/date/Calendar;->currentYearSkew:I
 
     add-int/2addr v0, p3
 
-    .line 1825
+    .line 1830
     :cond_0
     div-int/lit8 p3, v0, 0x20
 
-    .line 1826
+    .line 1831
     iget-object p4, p0, Lmiuix/pickerwidget/date/Calendar;->mFields:[I
 
     aget p4, p4, v2
@@ -2224,21 +2217,21 @@
 
     move-result p4
 
-    .line 1827
+    .line 1832
     invoke-static {p4, p3}, Lmiuix/pickerwidget/date/Calendar;->daysInYear(ZI)I
 
     move-result v1
 
     sub-int/2addr v0, v1
 
-    .line 1828
+    .line 1833
     invoke-static {p4, p3}, Lmiuix/pickerwidget/date/Calendar;->daysInMonth(ZI)I
 
     move-result v1
 
     if-le v0, v1, :cond_1
 
-    .line 1829
+    .line 1834
     invoke-static {p4, p3}, Lmiuix/pickerwidget/date/Calendar;->daysInMonth(ZI)I
 
     move-result p4
@@ -2247,7 +2240,7 @@
 
     add-int/lit8 p3, p3, 0x1
 
-    .line 1833
+    .line 1838
     :cond_1
     iget-object p4, p0, Lmiuix/pickerwidget/date/Calendar;->mFields:[I
 
@@ -2257,7 +2250,7 @@
 
     const/16 p3, 0x9
 
-    .line 1834
+    .line 1839
     aput v0, p4, p3
 
     const/16 p3, 0xe
@@ -2268,7 +2261,7 @@
 
     const/4 v0, 0x7
 
-    .line 1835
+    .line 1840
     invoke-static {p1, p2, v0}, Lmiuix/pickerwidget/date/Calendar;->mod(JI)I
 
     move-result p1
@@ -2285,7 +2278,7 @@
 
     move-object/from16 v0, p0
 
-    .line 1454
+    .line 1459
     iget-object v1, v0, Lmiuix/pickerwidget/date/Calendar;->mFields:[I
 
     iget-object v2, v0, Lmiuix/pickerwidget/date/Calendar;->mTimeZone:Ljava/util/TimeZone;
@@ -2298,14 +2291,14 @@
 
     aput v2, v1, v3
 
-    .line 1456
+    .line 1461
     iget-wide v1, v0, Lmiuix/pickerwidget/date/Calendar;->mMillisecond:J
 
     const-wide/32 v4, 0x5265c00
 
     div-long v6, v1, v4
 
-    .line 1457
+    .line 1462
     rem-long/2addr v1, v4
 
     long-to-int v1, v1
@@ -2320,7 +2313,7 @@
 
     sub-long/2addr v6, v4
 
-    .line 1464
+    .line 1469
     :cond_0
     iget-object v8, v0, Lmiuix/pickerwidget/date/Calendar;->mFields:[I
 
@@ -2347,13 +2340,13 @@
 
     goto :goto_1
 
-    .line 1474
+    .line 1479
     :cond_2
     iget-object v8, v0, Lmiuix/pickerwidget/date/Calendar;->mFields:[I
 
     aget v8, v8, v3
 
-    .line 1475
+    .line 1480
     iget-wide v9, v0, Lmiuix/pickerwidget/date/Calendar;->mMillisecond:J
 
     int-to-long v11, v8
@@ -2380,7 +2373,7 @@
 
     goto :goto_2
 
-    .line 1478
+    .line 1483
     :cond_3
     iget-wide v9, v0, Lmiuix/pickerwidget/date/Calendar;->mMillisecond:J
 
@@ -2396,17 +2389,17 @@
 
     move-wide v11, v15
 
-    .line 1482
+    .line 1487
     :cond_4
     :goto_2
     invoke-direct {v0, v6, v7, v11, v12}, Lmiuix/pickerwidget/date/Calendar;->computeDate(JJ)V
 
-    .line 1484
+    .line 1489
     invoke-direct {v0, v1}, Lmiuix/pickerwidget/date/Calendar;->getDstOffset(I)I
 
     move-result v8
 
-    .line 1485
+    .line 1490
     iget-object v9, v0, Lmiuix/pickerwidget/date/Calendar;->mFields:[I
 
     const/16 v10, 0x18
@@ -2442,7 +2435,7 @@
 
     if-eqz v2, :cond_a
 
-    .line 1497
+    .line 1502
     iget-object v2, v0, Lmiuix/pickerwidget/date/Calendar;->mFields:[I
 
     aget v6, v2, v10
@@ -2451,7 +2444,7 @@
 
     sub-int/2addr v6, v2
 
-    .line 1498
+    .line 1503
     iget-wide v2, v0, Lmiuix/pickerwidget/date/Calendar;->mMillisecond:J
 
     int-to-long v7, v6
@@ -2472,7 +2465,7 @@
 
     goto :goto_4
 
-    .line 1501
+    .line 1506
     :cond_7
     iget-wide v2, v0, Lmiuix/pickerwidget/date/Calendar;->mMillisecond:J
 
@@ -2488,7 +2481,7 @@
 
     move-wide v7, v15
 
-    .line 1505
+    .line 1510
     :cond_8
     :goto_4
     invoke-direct {v0, v4, v5, v7, v8}, Lmiuix/pickerwidget/date/Calendar;->computeDate(JJ)V
@@ -2498,7 +2491,7 @@
     :cond_9
     move-wide v4, v6
 
-    .line 1509
+    .line 1514
     :cond_a
     :goto_5
     iget-object v2, v0, Lmiuix/pickerwidget/date/Calendar;->mFields:[I
@@ -2511,10 +2504,10 @@
 
     if-gtz v6, :cond_b
 
-    .line 1510
+    .line 1515
     aput v7, v2, v7
 
-    .line 1511
+    .line 1516
     aget v6, v2, v3
 
     rsub-int/lit8 v6, v6, 0x1
@@ -2523,11 +2516,11 @@
 
     goto :goto_6
 
-    .line 1513
+    .line 1518
     :cond_b
     aput v3, v2, v7
 
-    .line 1516
+    .line 1521
     :goto_6
     iget-object v2, v0, Lmiuix/pickerwidget/date/Calendar;->mFields:[I
 
@@ -2537,30 +2530,30 @@
 
     aput v8, v2, v6
 
-    .line 1517
+    .line 1522
     div-int/lit16 v1, v1, 0x3e8
 
     const/16 v6, 0x15
 
-    .line 1518
+    .line 1523
     rem-int/lit8 v8, v1, 0x3c
 
     aput v8, v2, v6
 
-    .line 1519
+    .line 1524
     div-int/lit8 v1, v1, 0x3c
 
     const/16 v6, 0x14
 
-    .line 1520
+    .line 1525
     rem-int/lit8 v8, v1, 0x3c
 
     aput v8, v2, v6
 
-    .line 1521
+    .line 1526
     div-int/lit8 v1, v1, 0x3c
 
-    .line 1522
+    .line 1527
     rem-int/2addr v1, v10
 
     const/16 v6, 0x12
@@ -2569,7 +2562,7 @@
 
     const/16 v1, 0x11
 
-    .line 1524
+    .line 1529
     aget v8, v2, v6
 
     const/16 v9, 0xb
@@ -2586,7 +2579,7 @@
     :goto_7
     aput v8, v2, v1
 
-    .line 1526
+    .line 1531
     iget-object v1, v0, Lmiuix/pickerwidget/date/Calendar;->mFields:[I
 
     aget v2, v1, v6
@@ -2600,7 +2593,7 @@
     :pswitch_0
     const/4 v2, 0x6
 
-    .line 1563
+    .line 1568
     aput v2, v1, v6
 
     goto :goto_8
@@ -2608,7 +2601,7 @@
     :pswitch_1
     const/4 v2, 0x5
 
-    .line 1556
+    .line 1561
     aput v2, v1, v6
 
     goto :goto_8
@@ -2616,7 +2609,7 @@
     :pswitch_2
     const/4 v2, 0x4
 
-    .line 1553
+    .line 1558
     aput v2, v1, v6
 
     goto :goto_8
@@ -2624,7 +2617,7 @@
     :pswitch_3
     const/4 v2, 0x3
 
-    .line 1546
+    .line 1551
     aput v2, v1, v6
 
     goto :goto_8
@@ -2632,18 +2625,18 @@
     :pswitch_4
     const/4 v2, 0x2
 
-    .line 1543
+    .line 1548
     aput v2, v1, v6
 
     goto :goto_8
 
-    .line 1535
+    .line 1540
     :pswitch_5
     aput v3, v1, v6
 
     goto :goto_8
 
-    .line 1528
+    .line 1533
     :pswitch_6
     aput v7, v1, v6
 
@@ -2684,7 +2677,7 @@
 .method private computeSolarTerm()V
     .locals 8
 
-    .line 1343
+    .line 1348
     iget-object v0, p0, Lmiuix/pickerwidget/date/Calendar;->mFields:[I
 
     const/4 v1, 0x1
@@ -2699,7 +2692,7 @@
 
     move-result v0
 
-    .line 1344
+    .line 1349
     iget-object v2, p0, Lmiuix/pickerwidget/date/Calendar;->mFields:[I
 
     const/16 v4, 0x9
@@ -2712,7 +2705,7 @@
 
     if-ne v5, v6, :cond_0
 
-    .line 1345
+    .line 1350
     aget v0, v2, v3
 
     mul-int/lit8 v0, v0, 0x2
@@ -2723,7 +2716,7 @@
 
     goto :goto_0
 
-    .line 1346
+    .line 1351
     :cond_0
     aget v1, v2, v4
 
@@ -2731,7 +2724,7 @@
 
     if-ne v1, v0, :cond_1
 
-    .line 1347
+    .line 1352
     aget v0, v2, v3
 
     mul-int/lit8 v0, v0, 0x2
@@ -2745,7 +2738,7 @@
     :cond_1
     const/4 v0, 0x0
 
-    .line 1349
+    .line 1354
     aput v0, v2, v7
 
     :goto_0
@@ -2755,7 +2748,7 @@
 .method private computeYearAndDay(JJ)I
     .locals 4
 
-    .line 1845
+    .line 1850
     iget-wide v0, p0, Lmiuix/pickerwidget/date/Calendar;->gregorianCutover:J
 
     cmp-long p3, p3, v0
@@ -2764,7 +2757,7 @@
 
     if-gez p3, :cond_0
 
-    .line 1846
+    .line 1851
     iget p3, p0, Lmiuix/pickerwidget/date/Calendar;->julianSkew:I
 
     int-to-long v0, p3
@@ -2779,7 +2772,7 @@
     :goto_0
     const-wide/16 v2, 0x16d
 
-    .line 1850
+    .line 1855
     div-long v2, v0, v2
 
     long-to-int p3, v2
@@ -2790,7 +2783,7 @@
 
     int-to-long v0, p4
 
-    .line 1852
+    .line 1857
     invoke-direct {p0, v0, v1}, Lmiuix/pickerwidget/date/Calendar;->daysFromBaseYear(J)J
 
     move-result-wide v0
@@ -2808,7 +2801,7 @@
 
     add-int/lit8 p4, p4, -0x1
 
-    .line 1856
+    .line 1861
     invoke-direct {p0, p4}, Lmiuix/pickerwidget/date/Calendar;->daysInYear(I)I
 
     move-result p1
@@ -2817,7 +2810,7 @@
 
     add-long/2addr v0, p1
 
-    .line 1858
+    .line 1863
     :cond_2
     iget-object p1, p0, Lmiuix/pickerwidget/date/Calendar;->mFields:[I
 
@@ -2857,12 +2850,12 @@
 
     sub-long v9, p1, v9
 
-    .line 1867
+    .line 1872
     div-long/2addr v9, v7
 
     add-long/2addr v0, v9
 
-    .line 1868
+    .line 1873
     iget v2, p0, Lmiuix/pickerwidget/date/Calendar;->changeYear:I
 
     int-to-long v7, v2
@@ -2875,7 +2868,7 @@
 
     sub-long v7, p1, v7
 
-    .line 1869
+    .line 1874
     div-long/2addr v7, v5
 
     const-wide/16 v5, 0x641
@@ -2897,7 +2890,7 @@
 
     if-nez v3, :cond_1
 
-    .line 1872
+    .line 1877
     iget p1, p0, Lmiuix/pickerwidget/date/Calendar;->currentYearSkew:I
 
     int-to-long p1, p1
@@ -2915,7 +2908,7 @@
 
     if-nez p1, :cond_2
 
-    .line 1874
+    .line 1879
     iget p1, p0, Lmiuix/pickerwidget/date/Calendar;->lastYearSkew:I
 
     int-to-long p1, p1
@@ -2924,7 +2917,7 @@
 
     goto :goto_0
 
-    .line 1876
+    .line 1881
     :cond_2
     iget p1, p0, Lmiuix/pickerwidget/date/Calendar;->julianSkew:I
 
@@ -2935,7 +2928,7 @@
     :goto_0
     return-wide v0
 
-    .line 1880
+    .line 1885
     :cond_3
     iget v2, p0, Lmiuix/pickerwidget/date/Calendar;->changeYear:I
 
@@ -2953,7 +2946,7 @@
 
     sub-long/2addr p1, v11
 
-    .line 1881
+    .line 1886
     div-long/2addr p1, v7
 
     add-long/2addr v0, p1
@@ -2973,7 +2966,7 @@
 
     sub-long v9, p1, v11
 
-    .line 1883
+    .line 1888
     div-long/2addr v9, v7
 
     add-long/2addr v0, v9
@@ -2996,7 +2989,7 @@
 .method static daysInChineseMonth(II)I
     .locals 1
 
-    .line 1935
+    .line 1940
     sget-object v0, Lmiuix/pickerwidget/date/Calendar;->CHINESE_YEAR_INFO:[I
 
     add-int/lit16 p0, p0, -0x76c
@@ -3027,7 +3020,7 @@
 .method static daysInChineseYear(I)I
     .locals 2
 
-    .line 1943
+    .line 1948
     sget-object v0, Lmiuix/pickerwidget/date/Calendar;->DAY_CHINESE_YEAR_FROM_19000101:[I
 
     add-int/lit16 p0, p0, -0x76c
@@ -3052,7 +3045,7 @@
 
     if-ne p1, p0, :cond_0
 
-    .line 1892
+    .line 1897
     sget-object v0, Lmiuix/pickerwidget/date/Calendar;->DAYS_IN_MONTH:[B
 
     aget-byte p1, v0, p1
@@ -3061,7 +3054,7 @@
 
     return p1
 
-    .line 1895
+    .line 1900
     :cond_0
     sget-object p0, Lmiuix/pickerwidget/date/Calendar;->DAYS_IN_MONTH:[B
 
@@ -3073,7 +3066,7 @@
 .method private daysInYear(I)I
     .locals 2
 
-    .line 1902
+    .line 1907
     invoke-virtual {p0, p1}, Lmiuix/pickerwidget/date/Calendar;->isLeapYear(I)Z
 
     move-result v0
@@ -3087,18 +3080,18 @@
     :cond_0
     const/16 v0, 0x16d
 
-    .line 1903
+    .line 1908
     :goto_0
     iget v1, p0, Lmiuix/pickerwidget/date/Calendar;->changeYear:I
 
     if-ne p1, v1, :cond_1
 
-    .line 1904
+    .line 1909
     iget v1, p0, Lmiuix/pickerwidget/date/Calendar;->currentYearSkew:I
 
     sub-int/2addr v0, v1
 
-    .line 1906
+    .line 1911
     :cond_1
     iget v1, p0, Lmiuix/pickerwidget/date/Calendar;->changeYear:I
 
@@ -3106,7 +3099,7 @@
 
     if-ne p1, v1, :cond_2
 
-    .line 1907
+    .line 1912
     iget p1, p0, Lmiuix/pickerwidget/date/Calendar;->lastYearSkew:I
 
     sub-int/2addr v0, p1
@@ -3124,7 +3117,7 @@
 
     if-le p1, p0, :cond_0
 
-    .line 1917
+    .line 1922
     sget-object v0, Lmiuix/pickerwidget/date/Calendar;->DAYS_IN_YEAR:[I
 
     aget p1, v0, p1
@@ -3133,7 +3126,7 @@
 
     return p1
 
-    .line 1920
+    .line 1925
     :cond_0
     sget-object p0, Lmiuix/pickerwidget/date/Calendar;->DAYS_IN_YEAR:[I
 
@@ -3145,7 +3138,7 @@
 .method private getDstOffset(I)I
     .locals 11
 
-    .line 2260
+    .line 2265
     iget-object v0, p0, Lmiuix/pickerwidget/date/Calendar;->mFields:[I
 
     const/4 v1, 0x1
@@ -3185,7 +3178,7 @@
 
     move-result p1
 
-    .line 2262
+    .line 2267
     :goto_0
     iget-object v0, p0, Lmiuix/pickerwidget/date/Calendar;->mFields:[I
 
@@ -3195,7 +3188,7 @@
 
     const/16 v1, 0x17
 
-    .line 2263
+    .line 2268
     aget v0, v0, v1
 
     sub-int/2addr p1, v0
@@ -3209,7 +3202,7 @@
 .method private static leapChineseMonth(I)I
     .locals 1
 
-    .line 1962
+    .line 1967
     sget-object v0, Lmiuix/pickerwidget/date/Calendar;->CHINESE_YEAR_INFO:[I
 
     add-int/lit16 p0, p0, -0x76c
@@ -3236,13 +3229,14 @@
 .method static leapDaysInChineseYear(I)I
     .locals 1
 
-    .line 1953
+    .line 1958
     invoke-static {p0}, Lmiuix/pickerwidget/date/Calendar;->leapChineseMonth(I)I
 
     move-result v0
 
     if-ltz v0, :cond_1
 
+    .line 1959
     sget-object v0, Lmiuix/pickerwidget/date/Calendar;->CHINESE_YEAR_INFO:[I
 
     add-int/lit16 p0, p0, -0x76c
@@ -3278,7 +3272,7 @@
 
     int-to-long v0, p2
 
-    .line 1924
+    .line 1929
     rem-long v0, p0, v0
 
     long-to-int v0, v0
@@ -3576,7 +3570,7 @@
 
     return p0
 
-    .line 1977
+    .line 1982
     :cond_0
     sget-object v0, Lmiuix/pickerwidget/date/Calendar;->SOLAR_TERM_INDEX:[B
 
@@ -3594,7 +3588,7 @@
 
     add-int/lit8 v0, p0, 0x1
 
-    .line 1981
+    .line 1986
     sget-object v1, Lmiuix/pickerwidget/date/Calendar;->SOLAR_TERM_OS:[B
 
     aget-byte p0, v1, p0
@@ -3607,7 +3601,7 @@
 
     add-int/2addr p0, v3
 
-    .line 1982
+    .line 1987
     aget-byte v0, v1, v0
 
     add-int/lit8 v0, v0, -0x30
@@ -4143,21 +4137,21 @@
 
     if-ne p2, v9, :cond_18
 
+    .line 1142
     aget p1, p1, v7
 
-    .line 1142
     invoke-static {p1}, Lmiuix/pickerwidget/date/Calendar;->leapDaysInChineseYear(I)I
 
     move-result p1
 
     goto :goto_a
 
+    .line 1143
     :cond_18
     aget p2, p1, v7
 
     aget p1, p1, v6
 
-    .line 1143
     invoke-static {p2, p1}, Lmiuix/pickerwidget/date/Calendar;->daysInChineseMonth(II)I
 
     move-result p1
@@ -4326,21 +4320,21 @@
 
     if-ne p2, v9, :cond_20
 
+    .line 1062
     aget p1, p1, v7
 
-    .line 1062
     invoke-static {p1}, Lmiuix/pickerwidget/date/Calendar;->leapDaysInChineseYear(I)I
 
     move-result p1
 
     goto :goto_b
 
+    .line 1063
     :cond_20
     aget p2, p1, v7
 
     aget p1, p1, v6
 
-    .line 1063
     invoke-static {p2, p1}, Lmiuix/pickerwidget/date/Calendar;->daysInChineseMonth(II)I
 
     move-result p1
@@ -4519,7 +4513,7 @@
 .method public after(Lmiuix/pickerwidget/date/Calendar;)Z
     .locals 4
 
-    .line 1672
+    .line 1677
     invoke-virtual {p0}, Lmiuix/pickerwidget/date/Calendar;->getTimeInMillis()J
 
     move-result-wide v0
@@ -4546,7 +4540,7 @@
 .method public before(Lmiuix/pickerwidget/date/Calendar;)Z
     .locals 4
 
-    .line 1688
+    .line 1693
     invoke-virtual {p0}, Lmiuix/pickerwidget/date/Calendar;->getTimeInMillis()J
 
     move-result-wide v0
@@ -4573,7 +4567,7 @@
 .method public final clone()Ljava/lang/Object;
     .locals 2
 
-    .line 1649
+    .line 1654
     :try_start_0
     invoke-super {p0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
@@ -4581,7 +4575,7 @@
 
     check-cast v0, Lmiuix/pickerwidget/date/Calendar;
 
-    .line 1650
+    .line 1655
     iget-object v1, p0, Lmiuix/pickerwidget/date/Calendar;->mFields:[I
 
     invoke-virtual {v1}, [I->clone()Ljava/lang/Object;
@@ -4592,7 +4586,7 @@
 
     iput-object v1, v0, Lmiuix/pickerwidget/date/Calendar;->mFields:[I
 
-    .line 1651
+    .line 1656
     iget-object v1, p0, Lmiuix/pickerwidget/date/Calendar;->mTimeZone:Ljava/util/TimeZone;
 
     invoke-virtual {v1}, Ljava/util/TimeZone;->clone()Ljava/lang/Object;
@@ -4610,7 +4604,7 @@
     :catch_0
     move-exception v0
 
-    .line 1655
+    .line 1660
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -4634,7 +4628,7 @@
 .method public compareTo(Lmiuix/pickerwidget/date/Calendar;)I
     .locals 4
 
-    .line 1598
+    .line 1603
     iget-wide v0, p0, Lmiuix/pickerwidget/date/Calendar;->mMillisecond:J
 
     iget-wide v2, p1, Lmiuix/pickerwidget/date/Calendar;->mMillisecond:J
@@ -4668,7 +4662,7 @@
 
     if-eq p1, p0, :cond_1
 
-    .line 1616
+    .line 1621
     instance-of v0, p1, Lmiuix/pickerwidget/date/Calendar;
 
     if-eqz v0, :cond_0
@@ -4703,7 +4697,7 @@
 
     const/4 v0, 0x0
 
-    .line 1998
+    .line 2003
     invoke-virtual {p0, p1, p2, v0}, Lmiuix/pickerwidget/date/Calendar;->format(Landroid/content/Context;Ljava/lang/CharSequence;Lmiuix/pickerwidget/date/CalendarFormatSymbols;)Ljava/lang/String;
 
     move-result-object p1
@@ -4714,7 +4708,7 @@
 .method public format(Landroid/content/Context;Ljava/lang/CharSequence;Lmiuix/pickerwidget/date/CalendarFormatSymbols;)Ljava/lang/String;
     .locals 1
 
-    .line 2014
+    .line 2019
     invoke-static {}, Lmiuix/core/util/Pools;->getStringBuilderPool()Lmiuix/core/util/Pools$Pool;
 
     move-result-object v0
@@ -4725,7 +4719,7 @@
 
     check-cast v0, Ljava/lang/StringBuilder;
 
-    .line 2015
+    .line 2020
     invoke-virtual {p0, p1, v0, p2, p3}, Lmiuix/pickerwidget/date/Calendar;->format(Landroid/content/Context;Ljava/lang/StringBuilder;Ljava/lang/CharSequence;Lmiuix/pickerwidget/date/CalendarFormatSymbols;)Ljava/lang/StringBuilder;
 
     move-result-object p1
@@ -4734,7 +4728,7 @@
 
     move-result-object p1
 
-    .line 2016
+    .line 2021
     invoke-static {}, Lmiuix/core/util/Pools;->getStringBuilderPool()Lmiuix/core/util/Pools$Pool;
 
     move-result-object p2
@@ -4749,7 +4743,7 @@
 
     const/4 v0, 0x0
 
-    .line 2035
+    .line 2040
     invoke-virtual {p0, p1, p2, p3, v0}, Lmiuix/pickerwidget/date/Calendar;->format(Landroid/content/Context;Ljava/lang/StringBuilder;Ljava/lang/CharSequence;Lmiuix/pickerwidget/date/CalendarFormatSymbols;)Ljava/lang/StringBuilder;
 
     move-result-object p1
@@ -4762,12 +4756,12 @@
 
     if-nez p4, :cond_0
 
-    .line 2053
+    .line 2058
     invoke-static {p1}, Lmiuix/pickerwidget/date/CalendarFormatSymbols;->getOrCreate(Landroid/content/Context;)Lmiuix/pickerwidget/date/CalendarFormatSymbols;
 
     move-result-object p4
 
-    .line 2059
+    .line 2064
     :cond_0
     invoke-interface {p3}, Ljava/lang/CharSequence;->length()I
 
@@ -4782,7 +4776,7 @@
     :goto_0
     if-ge v0, p1, :cond_8
 
-    .line 2060
+    .line 2065
     invoke-interface {p3, v0}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v3
@@ -4799,14 +4793,14 @@
 
     if-ge v1, p1, :cond_1
 
-    .line 2064
+    .line 2069
     invoke-interface {p3, v1}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v2
 
     if-ne v2, v3, :cond_1
 
-    .line 2066
+    .line 2071
     invoke-virtual {p2, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     move v0, v1
@@ -4818,7 +4812,7 @@
 
     goto :goto_2
 
-    .line 2071
+    .line 2076
     :cond_2
     invoke-virtual {p2, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
@@ -4831,14 +4825,14 @@
 
     if-ge v1, p1, :cond_4
 
-    .line 2077
+    .line 2082
     invoke-interface {p3, v1}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v2
 
     if-ne v2, v3, :cond_4
 
-    .line 2079
+    .line 2084
     invoke-virtual {p2, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     move v0, v1
@@ -4859,7 +4853,7 @@
 
     if-gt v3, v1, :cond_7
 
-    .line 2084
+    .line 2089
     sget-object v1, Lmiuix/pickerwidget/date/Calendar;->FORMAT_CHARACTERS:[I
 
     add-int/lit8 v2, v3, -0x41
@@ -4877,7 +4871,7 @@
 
     if-ge v0, p1, :cond_6
 
-    .line 2085
+    .line 2090
     invoke-interface {p3, v0}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v1
@@ -4890,7 +4884,7 @@
 
     goto :goto_1
 
-    .line 2088
+    .line 2093
     :cond_6
     sget-object v0, Lmiuix/pickerwidget/date/Calendar;->FORMAT_CHARACTERS:[I
 
@@ -4908,7 +4902,7 @@
 
     goto :goto_2
 
-    .line 2090
+    .line 2095
     :cond_7
     invoke-virtual {p2, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
@@ -4983,7 +4977,7 @@
 
     packed-switch p1, :pswitch_data_0
 
-    .line 1745
+    .line 1750
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -5040,7 +5034,7 @@
 
     return p1
 
-    .line 1727
+    .line 1732
     :pswitch_8
     invoke-virtual {p0}, Lmiuix/pickerwidget/date/Calendar;->outOfChineseCalendarRange()Z
 
@@ -5062,7 +5056,7 @@
     :goto_0
     return v4
 
-    .line 1725
+    .line 1730
     :pswitch_9
     iget-object p1, p0, Lmiuix/pickerwidget/date/Calendar;->mFields:[I
 
@@ -5074,7 +5068,7 @@
 
     return p1
 
-    .line 1722
+    .line 1727
     :pswitch_a
     invoke-virtual {p0}, Lmiuix/pickerwidget/date/Calendar;->outOfChineseCalendarRange()Z
 
@@ -5084,7 +5078,7 @@
 
     goto :goto_1
 
-    .line 1723
+    .line 1728
     :cond_1
     invoke-virtual {p0}, Lmiuix/pickerwidget/date/Calendar;->isChineseLeapMonth()Z
 
@@ -5116,7 +5110,7 @@
     :goto_1
     return v4
 
-    .line 1720
+    .line 1725
     :pswitch_b
     iget-object p1, p0, Lmiuix/pickerwidget/date/Calendar;->mFields:[I
 
@@ -5155,7 +5149,7 @@
 
     return p1
 
-    .line 1704
+    .line 1709
     :pswitch_11
     iget-object p1, p0, Lmiuix/pickerwidget/date/Calendar;->mFields:[I
 
@@ -5176,7 +5170,7 @@
     :pswitch_12
     return v5
 
-    .line 1697
+    .line 1702
     :cond_4
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -5241,7 +5235,7 @@
 
     packed-switch p1, :pswitch_data_0
 
-    .line 1800
+    .line 1805
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -5290,7 +5284,7 @@
     :pswitch_7
     return v0
 
-    .line 1782
+    .line 1787
     :pswitch_8
     invoke-virtual {p0}, Lmiuix/pickerwidget/date/Calendar;->outOfChineseCalendarRange()Z
 
@@ -5303,7 +5297,7 @@
     :pswitch_9
     return v0
 
-    .line 1778
+    .line 1783
     :pswitch_a
     invoke-virtual {p0}, Lmiuix/pickerwidget/date/Calendar;->outOfChineseCalendarRange()Z
 
@@ -5339,7 +5333,7 @@
     :pswitch_12
     return v1
 
-    .line 1753
+    .line 1758
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -5392,7 +5386,7 @@
 .method public getChineseLeapMonth()I
     .locals 2
 
-    .line 1584
+    .line 1589
     iget-object v0, p0, Lmiuix/pickerwidget/date/Calendar;->mFields:[I
 
     const/4 v1, 0x2
@@ -5427,7 +5421,7 @@
 .method public hashCode()I
     .locals 4
 
-    .line 1606
+    .line 1611
     iget-wide v0, p0, Lmiuix/pickerwidget/date/Calendar;->mMillisecond:J
 
     const/16 v2, 0x20
@@ -5444,7 +5438,7 @@
 .method public isChineseLeapMonth()Z
     .locals 2
 
-    .line 1576
+    .line 1581
     iget-object v0, p0, Lmiuix/pickerwidget/date/Calendar;->mFields:[I
 
     const/16 v1, 0x8
@@ -5467,7 +5461,7 @@
 .method public isLeapYear(I)Z
     .locals 3
 
-    .line 1809
+    .line 1814
     iget v0, p0, Lmiuix/pickerwidget/date/Calendar;->changeYear:I
 
     const/4 v1, 0x1
@@ -5476,7 +5470,7 @@
 
     if-le p1, v0, :cond_2
 
-    .line 1810
+    .line 1815
     rem-int/lit8 v0, p1, 0x4
 
     if-nez v0, :cond_0
@@ -5498,7 +5492,7 @@
     :goto_0
     return v1
 
-    .line 1813
+    .line 1818
     :cond_2
     rem-int/lit8 p1, p1, 0x4
 
@@ -5722,21 +5716,21 @@
 
     if-ne p2, v1, :cond_4
 
+    .line 980
     aget p1, p1, v3
 
-    .line 980
     invoke-static {p1}, Lmiuix/pickerwidget/date/Calendar;->leapDaysInChineseYear(I)I
 
     move-result p1
 
     goto :goto_2
 
+    .line 981
     :cond_4
     aget p2, p1, v3
 
     aget p1, p1, v0
 
-    .line 981
     invoke-static {p2, p1}, Lmiuix/pickerwidget/date/Calendar;->daysInChineseMonth(II)I
 
     move-result p1
@@ -6460,10 +6454,10 @@
 .method public setGregorianChange(J)V
     .locals 4
 
-    .line 1429
+    .line 1434
     iput-wide p1, p0, Lmiuix/pickerwidget/date/Calendar;->gregorianCutover:J
 
-    .line 1430
+    .line 1435
     new-instance v0, Lmiuix/pickerwidget/date/Calendar;
 
     const-string v1, "GMT"
@@ -6474,12 +6468,12 @@
 
     invoke-direct {v0, v1}, Lmiuix/pickerwidget/date/Calendar;-><init>(Ljava/util/TimeZone;)V
 
-    .line 1431
+    .line 1436
     invoke-virtual {v0, p1, p2}, Lmiuix/pickerwidget/date/Calendar;->setTimeInMillis(J)Lmiuix/pickerwidget/date/Calendar;
 
     const/4 p1, 0x1
 
-    .line 1433
+    .line 1438
     invoke-virtual {v0, p1}, Lmiuix/pickerwidget/date/Calendar;->get(I)I
 
     move-result p2
@@ -6488,21 +6482,21 @@
 
     const/4 p2, 0x0
 
-    .line 1434
+    .line 1439
     invoke-virtual {v0, p2}, Lmiuix/pickerwidget/date/Calendar;->get(I)I
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 1435
+    .line 1440
     iget v1, p0, Lmiuix/pickerwidget/date/Calendar;->changeYear:I
 
     rsub-int/lit8 v1, v1, 0x1
 
     iput v1, p0, Lmiuix/pickerwidget/date/Calendar;->changeYear:I
 
-    .line 1438
+    .line 1443
     :cond_0
     iget v1, p0, Lmiuix/pickerwidget/date/Calendar;->changeYear:I
 
@@ -6518,7 +6512,7 @@
 
     add-int/lit16 v2, v1, -0x7d0
 
-    .line 1440
+    .line 1445
     div-int/lit16 v2, v2, 0x190
 
     iget v3, p0, Lmiuix/pickerwidget/date/Calendar;->julianError:I
@@ -6535,35 +6529,35 @@
 
     const/16 v1, 0xc
 
-    .line 1443
+    .line 1448
     invoke-virtual {v0, v1}, Lmiuix/pickerwidget/date/Calendar;->get(I)I
 
     move-result v0
 
-    .line 1444
+    .line 1449
     iget v1, p0, Lmiuix/pickerwidget/date/Calendar;->julianSkew:I
 
     if-ge v0, v1, :cond_1
 
     add-int/lit8 p2, v0, -0x1
 
-    .line 1445
+    .line 1450
     iput p2, p0, Lmiuix/pickerwidget/date/Calendar;->currentYearSkew:I
 
     sub-int/2addr v1, v0
 
     add-int/2addr v1, p1
 
-    .line 1446
+    .line 1451
     iput v1, p0, Lmiuix/pickerwidget/date/Calendar;->lastYearSkew:I
 
     goto :goto_0
 
-    .line 1448
+    .line 1453
     :cond_1
     iput p2, p0, Lmiuix/pickerwidget/date/Calendar;->lastYearSkew:I
 
-    .line 1449
+    .line 1454
     iput v1, p0, Lmiuix/pickerwidget/date/Calendar;->currentYearSkew:I
 
     :goto_0
@@ -6626,7 +6620,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 1624
+    .line 1629
     invoke-static {}, Lmiuix/core/util/Pools;->getStringBuilderPool()Lmiuix/core/util/Pools$Pool;
 
     move-result-object v0
@@ -6637,7 +6631,7 @@
 
     check-cast v0, Ljava/lang/StringBuilder;
 
-    .line 1625
+    .line 1630
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
@@ -6650,20 +6644,20 @@
 
     const-string v1, "[time"
 
-    .line 1626
+    .line 1631
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1627
+    .line 1632
     iget-wide v1, p0, Lmiuix/pickerwidget/date/Calendar;->mMillisecond:J
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     const-string v1, ",zone="
 
-    .line 1628
+    .line 1633
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1629
+    .line 1634
     iget-object v1, p0, Lmiuix/pickerwidget/date/Calendar;->mTimeZone:Ljava/util/TimeZone;
 
     invoke-virtual {v1}, Ljava/util/TimeZone;->getID()Ljava/lang/String;
@@ -6681,10 +6675,10 @@
 
     const/16 v2, 0x2c
 
-    .line 1632
+    .line 1637
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 1633
+    .line 1638
     sget-object v2, Lmiuix/pickerwidget/date/Calendar;->FIELD_NAMES:[Ljava/lang/String;
 
     aget-object v2, v2, v1
@@ -6693,10 +6687,10 @@
 
     const/16 v2, 0x3d
 
-    .line 1634
+    .line 1639
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 1635
+    .line 1640
     iget-object v2, p0, Lmiuix/pickerwidget/date/Calendar;->mFields:[I
 
     aget v2, v2, v1
@@ -6710,15 +6704,15 @@
     :cond_0
     const/16 v1, 0x5d
 
-    .line 1637
+    .line 1642
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 1638
+    .line 1643
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1639
+    .line 1644
     invoke-static {}, Lmiuix/core/util/Pools;->getStringBuilderPool()Lmiuix/core/util/Pools$Pool;
 
     move-result-object v2

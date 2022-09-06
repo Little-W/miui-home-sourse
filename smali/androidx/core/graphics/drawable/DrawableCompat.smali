@@ -54,6 +54,117 @@
     return p0
 .end method
 
+.method public static clearColorFilter(Landroid/graphics/drawable/Drawable;)V
+    .locals 3
+
+    .line 221
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x17
+
+    if-lt v0, v1, :cond_0
+
+    .line 223
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->clearColorFilter()V
+
+    goto :goto_1
+
+    .line 224
+    :cond_0
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x15
+
+    if-lt v0, v1, :cond_4
+
+    .line 225
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->clearColorFilter()V
+
+    .line 231
+    instance-of v0, p0, Landroid/graphics/drawable/InsetDrawable;
+
+    if-eqz v0, :cond_1
+
+    .line 232
+    check-cast p0, Landroid/graphics/drawable/InsetDrawable;
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/InsetDrawable;->getDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object p0
+
+    invoke-static {p0}, Landroidx/core/graphics/drawable/DrawableCompat;->clearColorFilter(Landroid/graphics/drawable/Drawable;)V
+
+    goto :goto_1
+
+    .line 233
+    :cond_1
+    instance-of v0, p0, Landroidx/core/graphics/drawable/WrappedDrawable;
+
+    if-eqz v0, :cond_2
+
+    .line 234
+    check-cast p0, Landroidx/core/graphics/drawable/WrappedDrawable;
+
+    invoke-interface {p0}, Landroidx/core/graphics/drawable/WrappedDrawable;->getWrappedDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object p0
+
+    invoke-static {p0}, Landroidx/core/graphics/drawable/DrawableCompat;->clearColorFilter(Landroid/graphics/drawable/Drawable;)V
+
+    goto :goto_1
+
+    .line 235
+    :cond_2
+    instance-of v0, p0, Landroid/graphics/drawable/DrawableContainer;
+
+    if-eqz v0, :cond_5
+
+    .line 236
+    check-cast p0, Landroid/graphics/drawable/DrawableContainer;
+
+    .line 238
+    invoke-virtual {p0}, Landroid/graphics/drawable/DrawableContainer;->getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/graphics/drawable/DrawableContainer$DrawableContainerState;
+
+    if-eqz p0, :cond_5
+
+    const/4 v0, 0x0
+
+    .line 241
+    invoke-virtual {p0}, Landroid/graphics/drawable/DrawableContainer$DrawableContainerState;->getChildCount()I
+
+    move-result v1
+
+    :goto_0
+    if-ge v0, v1, :cond_5
+
+    .line 242
+    invoke-virtual {p0, v0}, Landroid/graphics/drawable/DrawableContainer$DrawableContainerState;->getChild(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_3
+
+    .line 244
+    invoke-static {v2}, Landroidx/core/graphics/drawable/DrawableCompat;->clearColorFilter(Landroid/graphics/drawable/Drawable;)V
+
+    :cond_3
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    .line 250
+    :cond_4
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->clearColorFilter()V
+
+    :cond_5
+    :goto_1
+    return-void
+.end method
+
 .method public static getAlpha(Landroid/graphics/drawable/Drawable;)I
     .locals 2
 

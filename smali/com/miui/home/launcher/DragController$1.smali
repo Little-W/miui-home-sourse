@@ -80,7 +80,7 @@
 
     if-le v1, v3, :cond_0
 
-    const v1, 0x7f100179
+    const v1, 0x7f110182
 
     .line 407
     new-array v4, v3, [Ljava/lang/Object;
@@ -108,7 +108,7 @@
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f10017a
+    const v1, 0x7f110183
 
     .line 408
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -125,7 +125,7 @@
 
     move-result-object v1
 
-    const v4, 0x7f0e0009
+    const v4, 0x7f0f0009
 
     iget-object v5, p0, Lcom/miui/home/launcher/DragController$1;->this$0:Lcom/miui/home/launcher/DragController;
 

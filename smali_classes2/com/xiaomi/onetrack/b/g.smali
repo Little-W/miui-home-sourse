@@ -1,53 +1,67 @@
 .class public Lcom/xiaomi/onetrack/b/g;
-.super Ljava/lang/Object;
+.super Landroid/database/sqlite/SQLiteOpenHelper;
 
 
-# instance fields
-.field public a:Lorg/json/JSONArray;
+# static fields
+.field public static final a:Ljava/lang/String; = "one_track_cloud"
 
-.field public b:I
+.field public static final b:Ljava/lang/String; = "events_cloud"
 
-.field public c:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList<",
-            "Ljava/lang/Long;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static final c:Ljava/lang/String; = "_id"
 
-.field public d:Z
+.field public static final d:Ljava/lang/String; = "app_id"
+
+.field public static final e:Ljava/lang/String; = "cloud_data"
+
+.field public static final f:Ljava/lang/String; = "data_hash"
+
+.field public static final g:Ljava/lang/String; = "timestamp"
+
+.field static final h:Ljava/lang/String; = "CREATE TABLE events_cloud (_id  INTEGER PRIMARY KEY AUTOINCREMENT,app_id TEXT,cloud_data TEXT,timestamp INTEGER,data_hash TEXT)"
+
+.field private static final i:Ljava/lang/String; = "ConfigDatabaseHelper"
+
+.field private static final j:I = 0x1
 
 
 # direct methods
-.method public constructor <init>(Lorg/json/JSONArray;ILjava/util/ArrayList;Z)V
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 3
+
+    const-string v0, "one_track_cloud"
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    .line 36
+    invoke-direct {p0, p1, v0, v1, v2}, Landroid/database/sqlite/SQLiteOpenHelper;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public onCreate(Landroid/database/sqlite/SQLiteDatabase;)V
+    .locals 1
+
+    const-string v0, "CREATE TABLE events_cloud (_id  INTEGER PRIMARY KEY AUTOINCREMENT,app_id TEXT,cloud_data TEXT,timestamp INTEGER,data_hash TEXT)"
+
+    .line 41
+    invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+
+    const-string p1, "ConfigDatabaseHelper"
+
+    const-string v0, "onCreate: "
+
+    .line 42
+    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+.end method
+
+.method public onUpgrade(Landroid/database/sqlite/SQLiteDatabase;II)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lorg/json/JSONArray;",
-            "I",
-            "Ljava/util/ArrayList<",
-            "Ljava/lang/Long;",
-            ">;Z)V"
-        }
-    .end annotation
-
-    .line 14
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 15
-    iput-object p1, p0, Lcom/xiaomi/onetrack/b/g;->a:Lorg/json/JSONArray;
-
-    .line 16
-    iput p2, p0, Lcom/xiaomi/onetrack/b/g;->b:I
-
-    .line 17
-    iput-object p3, p0, Lcom/xiaomi/onetrack/b/g;->c:Ljava/util/ArrayList;
-
-    .line 18
-    iput-boolean p4, p0, Lcom/xiaomi/onetrack/b/g;->d:Z
 
     return-void
 .end method

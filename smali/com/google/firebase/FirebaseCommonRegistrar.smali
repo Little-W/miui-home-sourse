@@ -121,7 +121,7 @@
 
     if-eqz v0, :cond_1
 
-    const-string p0, "watch"
+    const-string/jumbo p0, "watch"
 
     return-object p0
 

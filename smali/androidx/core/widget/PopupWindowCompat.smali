@@ -3,6 +3,15 @@
 .source "PopupWindowCompat.java"
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroidx/core/widget/PopupWindowCompat$Api19Impl;,
+        Landroidx/core/widget/PopupWindowCompat$Api23Impl;
+    }
+.end annotation
+
+
 # static fields
 .field private static sOverlapAnchorField:Ljava/lang/reflect/Field;
 
@@ -17,19 +26,19 @@
 .method public static setOverlapAnchor(Landroid/widget/PopupWindow;Z)V
     .locals 4
 
-    .line 90
+    .line 93
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x17
 
     if-lt v0, v1, :cond_0
 
-    .line 91
-    invoke-virtual {p0, p1}, Landroid/widget/PopupWindow;->setOverlapAnchor(Z)V
+    .line 94
+    invoke-static {p0, p1}, Landroidx/core/widget/PopupWindowCompat$Api23Impl;->setOverlapAnchor(Landroid/widget/PopupWindow;Z)V
 
     goto :goto_1
 
-    .line 92
+    .line 95
     :cond_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -37,14 +46,14 @@
 
     if-lt v0, v1, :cond_2
 
-    .line 93
+    .line 96
     sget-boolean v0, Landroidx/core/widget/PopupWindowCompat;->sOverlapAnchorFieldAttempted:Z
 
     if-nez v0, :cond_1
 
     const/4 v0, 0x1
 
-    .line 95
+    .line 98
     :try_start_0
     const-class v1, Landroid/widget/PopupWindow;
 
@@ -56,7 +65,7 @@
 
     sput-object v1, Landroidx/core/widget/PopupWindowCompat;->sOverlapAnchorField:Ljava/lang/reflect/Field;
 
-    .line 96
+    .line 99
     sget-object v1, Landroidx/core/widget/PopupWindowCompat;->sOverlapAnchorField:Ljava/lang/reflect/Field;
 
     invoke-virtual {v1, v0}, Ljava/lang/reflect/Field;->setAccessible(Z)V
@@ -72,20 +81,20 @@
 
     const-string v3, "Could not fetch mOverlapAnchor field from PopupWindow"
 
-    .line 98
+    .line 101
     invoke-static {v2, v3, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 100
+    .line 103
     :goto_0
     sput-boolean v0, Landroidx/core/widget/PopupWindowCompat;->sOverlapAnchorFieldAttempted:Z
 
-    .line 102
+    .line 105
     :cond_1
     sget-object v0, Landroidx/core/widget/PopupWindowCompat;->sOverlapAnchorField:Ljava/lang/reflect/Field;
 
     if-eqz v0, :cond_2
 
-    .line 104
+    .line 107
     :try_start_1
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -104,7 +113,7 @@
 
     const-string v0, "Could not set overlap anchor field in PopupWindow"
 
-    .line 106
+    .line 109
     invoke-static {p1, v0, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_2
@@ -115,19 +124,19 @@
 .method public static setWindowLayoutType(Landroid/widget/PopupWindow;I)V
     .locals 6
 
-    .line 153
+    .line 157
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x17
 
     if-lt v0, v1, :cond_0
 
-    .line 154
-    invoke-virtual {p0, p1}, Landroid/widget/PopupWindow;->setWindowLayoutType(I)V
-
-    return-void
-
     .line 158
+    invoke-static {p0, p1}, Landroidx/core/widget/PopupWindowCompat$Api23Impl;->setWindowLayoutType(Landroid/widget/PopupWindow;I)V
+
+    goto :goto_0
+
+    .line 160
     :cond_0
     sget-boolean v0, Landroidx/core/widget/PopupWindowCompat;->sSetWindowLayoutTypeMethodAttempted:Z
 
@@ -137,7 +146,7 @@
 
     if-nez v0, :cond_1
 
-    .line 160
+    .line 162
     :try_start_0
     const-class v0, Landroid/widget/PopupWindow;
 
@@ -155,24 +164,24 @@
 
     sput-object v0, Landroidx/core/widget/PopupWindowCompat;->sSetWindowLayoutTypeMethod:Ljava/lang/reflect/Method;
 
-    .line 162
+    .line 164
     sget-object v0, Landroidx/core/widget/PopupWindowCompat;->sSetWindowLayoutTypeMethod:Ljava/lang/reflect/Method;
 
     invoke-virtual {v0, v2}, Ljava/lang/reflect/Method;->setAccessible(Z)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 166
+    .line 168
     :catch_0
     sput-boolean v2, Landroidx/core/widget/PopupWindowCompat;->sSetWindowLayoutTypeMethodAttempted:Z
 
-    .line 168
+    .line 170
     :cond_1
     sget-object v0, Landroidx/core/widget/PopupWindowCompat;->sSetWindowLayoutTypeMethod:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_2
 
-    .line 170
+    .line 172
     :try_start_1
     new-array v2, v2, [Ljava/lang/Object;
 
@@ -188,31 +197,32 @@
 
     :catch_1
     :cond_2
+    :goto_0
     return-void
 .end method
 
 .method public static showAsDropDown(Landroid/widget/PopupWindow;Landroid/view/View;III)V
     .locals 2
 
-    .line 68
+    .line 70
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x13
 
     if-lt v0, v1, :cond_0
 
-    .line 69
-    invoke-virtual {p0, p1, p2, p3, p4}, Landroid/widget/PopupWindow;->showAsDropDown(Landroid/view/View;III)V
+    .line 71
+    invoke-static {p0, p1, p2, p3, p4}, Landroidx/core/widget/PopupWindowCompat$Api19Impl;->showAsDropDown(Landroid/widget/PopupWindow;Landroid/view/View;III)V
 
     goto :goto_0
 
-    .line 73
+    .line 75
     :cond_0
     invoke-static {p1}, Landroidx/core/view/ViewCompat;->getLayoutDirection(Landroid/view/View;)I
 
     move-result v0
 
-    .line 72
+    .line 74
     invoke-static {p4, v0}, Landroidx/core/view/GravityCompat;->getAbsoluteGravity(II)I
 
     move-result p4
@@ -223,7 +233,7 @@
 
     if-ne p4, v0, :cond_1
 
-    .line 77
+    .line 79
     invoke-virtual {p0}, Landroid/widget/PopupWindow;->getWidth()I
 
     move-result p4
@@ -236,7 +246,7 @@
 
     sub-int/2addr p2, p4
 
-    .line 79
+    .line 81
     :cond_1
     invoke-virtual {p0, p1, p2, p3}, Landroid/widget/PopupWindow;->showAsDropDown(Landroid/view/View;II)V
 

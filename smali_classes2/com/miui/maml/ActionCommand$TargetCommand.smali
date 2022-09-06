@@ -38,10 +38,10 @@
 .method public constructor <init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
     .locals 1
 
-    .line 1433
+    .line 1438
     invoke-direct {p0, p1}, Lcom/miui/maml/ActionCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;)V
 
-    .line 1434
+    .line 1439
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$TargetCommand;->getVariables()Lcom/miui/maml/data/Variables;
 
     move-result-object p1
@@ -58,12 +58,12 @@
 
     iput-object p1, p0, Lcom/miui/maml/ActionCommand$TargetCommand;->mTargetNameExp:Lcom/miui/maml/data/Expression;
 
-    .line 1435
+    .line 1440
     iget-object p1, p0, Lcom/miui/maml/ActionCommand$TargetCommand;->mTargetNameExp:Lcom/miui/maml/data/Expression;
 
     if-eqz p1, :cond_0
 
-    .line 1436
+    .line 1441
     invoke-virtual {p1}, Lcom/miui/maml/data/Expression;->evaluateStr()Ljava/lang/String;
 
     move-result-object p1
@@ -75,14 +75,14 @@
     :cond_0
     const-string p1, "target"
 
-    .line 1438
+    .line 1443
     invoke-interface {p2, p1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/miui/maml/ActionCommand$TargetCommand;->mTargetName:Ljava/lang/String;
 
-    .line 1441
+    .line 1446
     :goto_0
     iget-object p1, p0, Lcom/miui/maml/ActionCommand$TargetCommand;->mTargetName:Ljava/lang/String;
 
@@ -94,10 +94,10 @@
 
     const/4 p1, 0x0
 
-    .line 1442
+    .line 1447
     iput-object p1, p0, Lcom/miui/maml/ActionCommand$TargetCommand;->mTargetName:Ljava/lang/String;
 
-    .line 1445
+    .line 1450
     :cond_1
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$TargetCommand;->getVariables()Lcom/miui/maml/data/Variables;
 
@@ -117,26 +117,26 @@
 
     const-string p1, "targetType"
 
-    .line 1446
+    .line 1451
     invoke-interface {p2, p1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 1447
+    .line 1452
     sget-object p2, Lcom/miui/maml/ActionCommand$TargetCommand$TargetType;->SCREEN_ELEMENT:Lcom/miui/maml/ActionCommand$TargetCommand$TargetType;
 
     iput-object p2, p0, Lcom/miui/maml/ActionCommand$TargetCommand;->mTargetType:Lcom/miui/maml/ActionCommand$TargetCommand$TargetType;
 
     const-string p2, "element"
 
-    .line 1448
+    .line 1453
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
 
     if-eqz p2, :cond_2
 
-    .line 1449
+    .line 1454
     sget-object p1, Lcom/miui/maml/ActionCommand$TargetCommand$TargetType;->SCREEN_ELEMENT:Lcom/miui/maml/ActionCommand$TargetCommand$TargetType;
 
     iput-object p1, p0, Lcom/miui/maml/ActionCommand$TargetCommand;->mTargetType:Lcom/miui/maml/ActionCommand$TargetCommand$TargetType;
@@ -146,14 +146,14 @@
     :cond_2
     const-string p2, "var"
 
-    .line 1450
+    .line 1455
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
 
     if-eqz p2, :cond_3
 
-    .line 1451
+    .line 1456
     sget-object p1, Lcom/miui/maml/ActionCommand$TargetCommand$TargetType;->VARIABLE:Lcom/miui/maml/ActionCommand$TargetCommand$TargetType;
 
     iput-object p1, p0, Lcom/miui/maml/ActionCommand$TargetCommand;->mTargetType:Lcom/miui/maml/ActionCommand$TargetCommand$TargetType;
@@ -163,19 +163,19 @@
     :cond_3
     const-string p2, "ctor"
 
-    .line 1452
+    .line 1457
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_4
 
-    .line 1453
+    .line 1458
     sget-object p1, Lcom/miui/maml/ActionCommand$TargetCommand$TargetType;->CONSTRUCTOR:Lcom/miui/maml/ActionCommand$TargetCommand$TargetType;
 
     iput-object p1, p0, Lcom/miui/maml/ActionCommand$TargetCommand;->mTargetType:Lcom/miui/maml/ActionCommand$TargetCommand$TargetType;
 
-    .line 1455
+    .line 1460
     :cond_4
     :goto_1
     new-instance p1, Ljava/lang/StringBuilder;
@@ -214,7 +214,7 @@
 .method private findTarget()V
     .locals 3
 
-    .line 1459
+    .line 1464
     sget-object v0, Lcom/miui/maml/ActionCommand$1;->$SwitchMap$com$miui$maml$ActionCommand$TargetCommand$TargetType:[I
 
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$TargetCommand;->mTargetType:Lcom/miui/maml/ActionCommand$TargetCommand$TargetType;
@@ -229,7 +229,7 @@
 
     goto/16 :goto_0
 
-    .line 1484
+    .line 1489
     :pswitch_0
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$TargetCommand;->getRoot()Lcom/miui/maml/ScreenElementRoot;
 
@@ -245,7 +245,7 @@
 
     goto/16 :goto_0
 
-    .line 1481
+    .line 1486
     :pswitch_1
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$TargetCommand;->getRoot()Lcom/miui/maml/ScreenElementRoot;
 
@@ -261,13 +261,13 @@
 
     goto :goto_0
 
-    .line 1473
+    .line 1478
     :pswitch_2
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$TargetCommand;->mTargetName:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    .line 1475
+    .line 1480
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$TargetCommand;->getVariables()Lcom/miui/maml/data/Variables;
 
     move-result-object v0
@@ -291,12 +291,12 @@
 
     const-string v1, "MethodCommand, type=var, empty target name"
 
-    .line 1477
+    .line 1482
     invoke-static {v0, v1}, Lcom/miui/maml/util/MamlLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 1462
+    .line 1467
     :pswitch_3
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$TargetCommand;->getRoot()Lcom/miui/maml/ScreenElementRoot;
 
@@ -308,14 +308,14 @@
 
     move-result-object v0
 
-    .line 1463
+    .line 1468
     iput-object v0, p0, Lcom/miui/maml/ActionCommand$TargetCommand;->mTarget:Ljava/lang/Object;
 
     if-nez v0, :cond_1
 
     const-string v0, "ActionCommand"
 
-    .line 1465
+    .line 1470
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -336,7 +336,7 @@
 
     goto :goto_0
 
-    .line 1466
+    .line 1471
     :cond_1
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$TargetCommand;->mTargetIndex:Lcom/miui/maml/data/Expression;
 
@@ -350,7 +350,7 @@
 
     const-string v0, "ActionCommand"
 
-    .line 1467
+    .line 1472
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -371,7 +371,7 @@
 
     const/4 v0, 0x0
 
-    .line 1469
+    .line 1474
     iput-object v0, p0, Lcom/miui/maml/ActionCommand$TargetCommand;->mTargetIndex:Lcom/miui/maml/data/Expression;
 
     :cond_2
@@ -392,29 +392,29 @@
 .method protected getTarget()Ljava/lang/Object;
     .locals 4
 
-    .line 1498
+    .line 1503
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$TargetCommand;->mTargetNameExp:Lcom/miui/maml/data/Expression;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_1
 
-    .line 1499
+    .line 1504
     invoke-virtual {v0}, Lcom/miui/maml/data/Expression;->evaluateStr()Ljava/lang/String;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    .line 1501
+    .line 1506
     iput-object v1, p0, Lcom/miui/maml/ActionCommand$TargetCommand;->mTargetName:Ljava/lang/String;
 
-    .line 1502
+    .line 1507
     iput-object v1, p0, Lcom/miui/maml/ActionCommand$TargetCommand;->mTarget:Ljava/lang/Object;
 
     return-object v1
 
-    .line 1504
+    .line 1509
     :cond_0
     iget-object v2, p0, Lcom/miui/maml/ActionCommand$TargetCommand;->mTargetName:Ljava/lang/String;
 
@@ -424,13 +424,13 @@
 
     if-nez v2, :cond_1
 
-    .line 1505
+    .line 1510
     iput-object v0, p0, Lcom/miui/maml/ActionCommand$TargetCommand;->mTargetName:Ljava/lang/String;
 
-    .line 1506
+    .line 1511
     invoke-direct {p0}, Lcom/miui/maml/ActionCommand$TargetCommand;->findTarget()V
 
-    .line 1510
+    .line 1515
     :cond_1
     sget-object v0, Lcom/miui/maml/ActionCommand$1;->$SwitchMap$com$miui$maml$ActionCommand$TargetCommand$TargetType:[I
 
@@ -446,25 +446,25 @@
 
     return-object v1
 
-    .line 1535
+    .line 1540
     :pswitch_0
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$TargetCommand;->mTarget:Ljava/lang/Object;
 
     return-object v0
 
-    .line 1533
+    .line 1538
     :pswitch_1
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$TargetCommand;->mTarget:Ljava/lang/Object;
 
     return-object v0
 
-    .line 1518
+    .line 1523
     :pswitch_2
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$TargetCommand;->mTarget:Ljava/lang/Object;
 
     if-eqz v0, :cond_4
 
-    .line 1519
+    .line 1524
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$TargetCommand;->getVariables()Lcom/miui/maml/data/Variables;
 
     move-result-object v0
@@ -481,12 +481,12 @@
 
     move-result-object v0
 
-    .line 1520
+    .line 1525
     iget-object v2, p0, Lcom/miui/maml/ActionCommand$TargetCommand;->mTargetIndex:Lcom/miui/maml/data/Expression;
 
     if-eqz v2, :cond_3
 
-    .line 1521
+    .line 1526
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -497,7 +497,7 @@
 
     if-eqz v2, :cond_2
 
-    .line 1522
+    .line 1527
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$TargetCommand;->mTargetIndex:Lcom/miui/maml/data/Expression;
 
     invoke-virtual {v1}, Lcom/miui/maml/data/Expression;->evaluate()D
@@ -515,7 +515,7 @@
     :cond_2
     const-string v0, "ActionCommand"
 
-    .line 1524
+    .line 1529
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -534,7 +534,7 @@
 
     invoke-static {v0, v2}, Lcom/miui/maml/util/MamlLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1526
+    .line 1531
     iput-object v1, p0, Lcom/miui/maml/ActionCommand$TargetCommand;->mTargetIndex:Lcom/miui/maml/data/Expression;
 
     goto :goto_0
@@ -546,7 +546,7 @@
     :goto_0
     return-object v1
 
-    .line 1512
+    .line 1517
     :pswitch_3
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$TargetCommand;->mTarget:Ljava/lang/Object;
 
@@ -556,7 +556,7 @@
 
     if-eqz v1, :cond_5
 
-    .line 1513
+    .line 1518
     check-cast v0, Lcom/miui/maml/elements/ElementGroup;
 
     invoke-virtual {v1}, Lcom/miui/maml/data/Expression;->evaluate()D
@@ -571,7 +571,7 @@
 
     return-object v0
 
-    .line 1515
+    .line 1520
     :cond_5
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$TargetCommand;->mTarget:Ljava/lang/Object;
 
@@ -591,10 +591,10 @@
 .method public init()V
     .locals 0
 
-    .line 1493
+    .line 1498
     invoke-super {p0}, Lcom/miui/maml/ActionCommand;->init()V
 
-    .line 1494
+    .line 1499
     invoke-direct {p0}, Lcom/miui/maml/ActionCommand$TargetCommand;->findTarget()V
 
     return-void

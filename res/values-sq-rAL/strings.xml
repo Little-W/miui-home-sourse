@@ -51,7 +51,7 @@
     <string name="all_apps">Të gjithë aplikacionet</string>
     <string name="all_apps_install_contentcenter_msg">Duket sikur Qendra e Përmbajtjes ishte çinstaluar. Të instalohet përsëri?</string>
     <string name="all_apps_install_contentcenter_title">Instalo Qendrën e Përmbajtjes</string>
-    <string name="all_apps_no_search_results">Nuk u gjetën rezultate</string>
+    <string name="all_apps_no_search_results">Nuk u mundësua gjetja e rezultateve</string>
     <string name="all_apps_search_app">Kërko aplikacionet</string>
     <string name="all_apps_search_market_message">Kërko në rrjet</string>
     <string name="all_apps_setting_classic_title">Klasik</string>
@@ -293,6 +293,7 @@
     <string name="eras_bc">BCE</string>
     <string name="evening">Pasdite</string>
     <string name="exit_overview_because_task_stack_changed">Të fundit të mbyllura për shkak të ndryshimeve që ndodhën në sfond</string>
+    <string name="external_not_support_split_screen_j18">Ndarja e ekranit nuk mbështetet në ekranin e jashtëm</string>
     <string name="failed_to_delete_temporary">Nuk mund të hiqet</string>
     <string name="failed_to_drop">Nuk mund të lëviz</string>
     <string name="failed_to_drop_widget_invalid">Kjo vegël është e pavlefshme</string>
@@ -497,6 +498,7 @@
     <string name="midnight">Natë</string>
     <string name="minus_one_screen">Kthina të aplikacionit</string>
     <string name="miui_screen_config_title">Parametrat e ekranit Kryesor</string>
+    <string name="miui_widget_menu_replace_text">Ndërro</string>
     <string name="miuix_access_state_desc">Të zgjedhur</string>
     <string name="miuix_appcompat_action_mode_deselect_all">Hiq</string>
     <string name="miuix_appcompat_action_mode_select_all">Përzgjidhi të gjitha</string>
@@ -523,6 +525,8 @@
     <string name="monday">E hënë</string>
     <string name="monday_short">Hën</string>
     <string name="monday_shortest">Hën</string>
+    <string name="monochrome_summary">Ndryshoni ngjyrën e sfondit për ikonat e përputhshme</string>
+    <string name="monochrome_title">Ngjyra e sfondit</string>
     <string name="month_april">Prill</string>
     <string name="month_april_short">Pri</string>
     <string name="month_april_shortest">Pri</string>
@@ -771,7 +775,7 @@
     <string name="search_bar_hint_content">Kërkoni për aplikacione dhe përmbajtje</string>
     <string name="search_guide_btn">E kuptova</string>
     <string name="search_in_apps_store">Kërko për “%1$s” në %2$s</string>
-    <string name="search_no_result">Nuk mund të gjenden rezultate</string>
+    <string name="search_no_result">Nuk u mundësua gjetja e asnjë rezultati</string>
     <string name="select_all">Zgjidh të gjitha</string>
     <string name="select_frame">Kuadër</string>
     <string name="select_photo">Foto</string>

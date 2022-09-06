@@ -360,7 +360,7 @@
 
     const/4 v3, 0x1
 
-    const-string v4, "v1"
+    const-string/jumbo v4, "v1"
 
     aput-object v4, v2, v3
 
@@ -594,7 +594,7 @@
 
     if-eq v0, v1, :cond_0
 
-    const-string v1, "x-firebase-client"
+    const-string/jumbo v1, "x-firebase-client"
 
     .line 492
     iget-object v2, p0, Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;->userAgentPublisher:Lcom/google/firebase/inject/Provider;
@@ -613,7 +613,7 @@
     .line 492
     invoke-virtual {p1, v1, v2}, Ljava/net/HttpURLConnection;->addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v1, "x-firebase-client-log-type"
+    const-string/jumbo v1, "x-firebase-client-log-type"
 
     .line 495
     invoke-virtual {v0}, Lcom/google/firebase/heartbeatinfo/HeartBeatInfo$HeartBeat;->getCode()I
@@ -637,7 +637,7 @@
 
     invoke-virtual {p1, v0, v1}, Ljava/net/HttpURLConnection;->addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v0, "x-goog-api-key"
+    const-string/jumbo v0, "x-goog-api-key"
 
     .line 499
     invoke-virtual {p1, v0, p2}, Ljava/net/HttpURLConnection;->addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
@@ -1353,7 +1353,7 @@
 
     if-eqz p5, :cond_0
 
-    const-string v4, "x-goog-fis-android-iid-migration-auth"
+    const-string/jumbo v4, "x-goog-fis-android-iid-migration-auth"
 
     .line 176
     invoke-virtual {v2, v4, p5}, Ljava/net/HttpURLConnection;->addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V

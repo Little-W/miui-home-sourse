@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/LauncherMenu;)V
     .locals 0
 
-    .line 92
+    .line 89
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherMenu$1;->this$0:Lcom/miui/home/launcher/LauncherMenu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onClick(Landroid/view/View;)V
     .locals 1
 
-    .line 95
+    .line 92
     iget-object p1, p0, Lcom/miui/home/launcher/LauncherMenu$1;->this$0:Lcom/miui/home/launcher/LauncherMenu;
 
     invoke-static {p1}, Lcom/miui/home/launcher/LauncherMenu;->access$000(Lcom/miui/home/launcher/LauncherMenu;)Lcom/miui/home/launcher/Launcher;
@@ -49,7 +49,7 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/Launcher;->showTransitionMenu(Z)V
 
-    .line 96
+    .line 93
     iget-object p1, p0, Lcom/miui/home/launcher/LauncherMenu$1;->this$0:Lcom/miui/home/launcher/LauncherMenu;
 
     invoke-static {p1}, Lcom/miui/home/launcher/LauncherMenu;->access$000(Lcom/miui/home/launcher/LauncherMenu;)Lcom/miui/home/launcher/Launcher;
@@ -62,7 +62,7 @@
 
     const-string p1, "screen_scroll"
 
-    .line 97
+    .line 94
     invoke-static {p1}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackHomeSettingSubClicked(Ljava/lang/String;)V
 
     return-void

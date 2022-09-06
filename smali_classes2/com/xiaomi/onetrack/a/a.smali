@@ -2,1871 +2,1692 @@
 .super Ljava/lang/Object;
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/xiaomi/onetrack/a/a$a;
+    }
+.end annotation
+
+
 # static fields
-.field public static final a:Ljava/lang/String; = "disable_log"
+.field private static final a:Ljava/lang/String; = "AdMonitorManager"
 
-.field public static final b:Ljava/lang/String; = "event"
+.field private static final b:I = 0x32000
 
-.field public static final c:Ljava/lang/String; = "events"
+.field private static final c:I = 0x64
 
-.field public static final d:Ljava/lang/String; = "level"
+.field private static final d:I = 0x4
 
-.field public static final e:Ljava/lang/String; = "sample"
+.field private static final e:I = 0x12c
 
-.field private static final f:Ljava/lang/String; = "AppConfigUpdater"
+.field private static final f:Ljava/lang/String; = "_id ASC"
 
-.field private static final g:J = 0xa4cb800L
+.field private static final g:I = 0x7
 
-.field private static final h:Ljava/lang/String; = "hash"
+.field private static h:Lcom/xiaomi/onetrack/a/a;
 
-.field private static final i:Ljava/lang/String; = "appId"
 
-.field private static final j:Ljava/lang/String; = "apps"
-
-.field private static final k:Ljava/lang/String; = "version"
-
-.field private static final l:Ljava/lang/String; = "type"
-
-.field private static final m:Ljava/lang/String; = "status"
-
-.field private static final n:Ljava/lang/String; = "deleted"
-
-.field private static final o:Ljava/lang/String; = "Android"
-
-.field private static p:Ljava/util/concurrent/atomic/AtomicBoolean; = null
-
-.field private static final q:I = 0x0
-
-.field private static final r:I = 0x1
-
-.field private static final s:I = 0x2
-
-.field private static final t:I = 0x64
-
-.field private static u:Ljava/util/concurrent/ConcurrentHashMap; = null
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/concurrent/ConcurrentHashMap<",
-            "Ljava/lang/String;",
-            "Ljava/lang/Long;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private static final v:J = 0x1b7740L
+# instance fields
+.field private final i:Lcom/xiaomi/onetrack/a/a$a;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method private constructor <init>()V
     .locals 2
 
-    .line 52
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
-
-    sput-object v0, Lcom/xiaomi/onetrack/a/a;->p:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    .line 58
-    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
-
-    sput-object v0, Lcom/xiaomi/onetrack/a/a;->u:Ljava/util/concurrent/ConcurrentHashMap;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 0
-
-    .line 36
+    .line 59
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    .line 60
+    invoke-static {}, Lcom/xiaomi/onetrack/f/a;->a()Landroid/content/Context;
 
-.method private static a(Lorg/json/JSONArray;Lorg/json/JSONArray;)Lorg/json/JSONArray;
-    .locals 7
+    move-result-object v0
 
-    const/4 v0, 0x0
+    .line 61
+    new-instance v1, Lcom/xiaomi/onetrack/a/a$a;
 
-    move-object v1, p0
+    invoke-direct {v1, v0}, Lcom/xiaomi/onetrack/a/a$a;-><init>(Landroid/content/Context;)V
 
-    move p0, v0
-
-    :goto_0
-    if-eqz p1, :cond_5
-
-    .line 326
-    :try_start_0
-    invoke-virtual {p1}, Lorg/json/JSONArray;->length()I
-
-    move-result v2
-
-    if-ge p0, v2, :cond_5
-
-    .line 327
-    invoke-virtual {p1, p0}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
-
-    move-result-object v2
-
-    const-string v3, "event"
-
-    .line 328
-    invoke-virtual {v2, v3}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    move v4, v0
-
-    :goto_1
-    if-eqz v1, :cond_1
-
-    .line 329
-    invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
-
-    move-result v5
-
-    if-ge v4, v5, :cond_1
-
-    .line 330
-    invoke-virtual {v1, v4}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
-
-    move-result-object v5
-
-    const-string v6, "event"
-
-    .line 331
-    invoke-virtual {v5, v6}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v5
-
-    .line 332
-    invoke-static {v3, v5}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_0
-
-    .line 334
-    invoke-virtual {v1, v4}, Lorg/json/JSONArray;->remove(I)Ljava/lang/Object;
-
-    goto :goto_2
-
-    :cond_0
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    :goto_2
-    const-string v3, "status"
-
-    .line 339
-    invoke-virtual {v2, v3}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_2
-
-    const-string v3, "status"
-
-    invoke-virtual {v2, v3}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_4
-
-    const-string v3, "status"
-
-    invoke-virtual {v2, v3}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v4, "deleted"
-
-    invoke-static {v3, v4}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_4
-
-    :cond_2
-    if-nez v1, :cond_3
-
-    .line 341
-    new-instance v3, Lorg/json/JSONArray;
-
-    invoke-direct {v3}, Lorg/json/JSONArray;-><init>()V
-
-    move-object v1, v3
-
-    .line 343
-    :cond_3
-    invoke-virtual {v1, v2}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    :cond_4
-    add-int/lit8 p0, p0, 0x1
-
-    goto :goto_0
-
-    :catch_0
-    move-exception p0
-
-    const-string p1, "AppConfigUpdater"
-
-    .line 347
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "mergeEventsElement error:"
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p1, p0}, Lcom/xiaomi/onetrack/util/p;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_5
-    return-object v1
-.end method
-
-.method private static a(Ljava/lang/String;Lorg/json/JSONObject;)Lorg/json/JSONObject;
-    .locals 3
-
-    const/4 v0, 0x0
-
-    .line 309
-    :try_start_0
-    invoke-static {}, Lcom/xiaomi/onetrack/a/g;->a()Lcom/xiaomi/onetrack/a/g;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p0}, Lcom/xiaomi/onetrack/a/g;->e(Ljava/lang/String;)Lcom/xiaomi/onetrack/a/k;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_0
-
-    .line 312
-    iget-object p0, p0, Lcom/xiaomi/onetrack/a/k;->e:Lorg/json/JSONObject;
-
-    const-string v1, "events"
-
-    .line 313
-    invoke-virtual {p0, v1}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
-
-    move-result-object p0
-
-    goto :goto_0
-
-    :cond_0
-    move-object p0, v0
-
-    :goto_0
-    const-string v1, "events"
-
-    .line 315
-    invoke-virtual {p1, v1}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
-
-    move-result-object v1
-
-    const-string v2, "events"
-
-    .line 316
-    invoke-static {p0, v1}, Lcom/xiaomi/onetrack/a/a;->a(Lorg/json/JSONArray;Lorg/json/JSONArray;)Lorg/json/JSONArray;
-
-    move-result-object p0
-
-    invoke-virtual {p1, v2, p0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object p1
-
-    :catch_0
-    move-exception p0
-
-    const-string p1, "AppConfigUpdater"
-
-    .line 319
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "mergeConfig: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p1, p0}, Lcom/xiaomi/onetrack/util/p;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v0
-.end method
-
-.method public static a(Ljava/lang/String;)V
-    .locals 1
+    iput-object v1, p0, Lcom/xiaomi/onetrack/a/a;->i:Lcom/xiaomi/onetrack/a/a$a;
 
     .line 62
-    new-instance v0, Lcom/xiaomi/onetrack/a/b;
-
-    invoke-direct {v0, p0}, Lcom/xiaomi/onetrack/a/b;-><init>(Ljava/lang/String;)V
-
-    invoke-static {v0}, Lcom/xiaomi/onetrack/util/i;->a(Ljava/lang/Runnable;)V
+    invoke-virtual {p0}, Lcom/xiaomi/onetrack/a/a;->c()V
 
     return-void
 .end method
 
-.method public static a(Ljava/lang/String;Ljava/util/List;)V
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            "Ljava/util/List<",
-            "Ljava/lang/String;",
-            ">;)V"
-        }
-    .end annotation
-
-    .line 152
-    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    .line 157
-    :cond_0
-    :try_start_0
-    new-instance v0, Lorg/json/JSONObject;
-
-    invoke-direct {v0, p0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
-
-    const-string p0, "code"
-
-    .line 158
-    invoke-virtual {v0, p0}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;)I
-
-    move-result p0
-
-    if-nez p0, :cond_1
-
-    .line 159
-    invoke-static {p1}, Lcom/xiaomi/onetrack/a/a;->d(Ljava/util/List;)V
-
-    const-string p0, "data"
-
-    .line 160
-    invoke-virtual {v0, p0}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
-
-    move-result-object p0
-
-    const-string v0, "apps"
-
-    .line 161
-    invoke-virtual {p0, v0}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
-
-    move-result-object p0
-
-    .line 162
-    invoke-static {p0, p1}, Lcom/xiaomi/onetrack/a/a;->a(Lorg/json/JSONArray;Ljava/util/List;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception p0
-
-    const-string p1, "AppConfigUpdater"
-
-    .line 165
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "saveAppCloudData: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p1, p0}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_1
-    :goto_0
-    return-void
-.end method
-
-.method private static a(Ljava/lang/String;Lorg/json/JSONObject;J)V
-    .locals 4
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lorg/json/JSONException;
-        }
-    .end annotation
-
-    if-nez p1, :cond_0
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    const-string v0, "version"
-
-    .line 206
-    invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;)I
-
-    move-result v0
-
-    .line 207
-    :goto_0
-    invoke-static {}, Lcom/xiaomi/onetrack/a/g;->a()Lcom/xiaomi/onetrack/a/g;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p0}, Lcom/xiaomi/onetrack/a/g;->d(Ljava/lang/String;)I
-
-    move-result p0
-
-    const-string v1, "AppConfigUpdater"
-
-    .line 208
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "local version: "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v3, ", server version: "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    if-lez p0, :cond_1
-
-    if-gt v0, p0, :cond_1
-
-    .line 210
-    invoke-static {p1, p2, p3}, Lcom/xiaomi/onetrack/a/a;->a(Lorg/json/JSONObject;J)V
-
-    return-void
-
-    :cond_1
-    if-eqz p1, :cond_2
-
-    const-string p0, "type"
-
-    .line 214
-    invoke-virtual {p1, p0}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;)I
-
-    move-result p0
-
-    goto :goto_1
-
-    :cond_2
-    const/4 p0, -0x1
-
-    :goto_1
-    const-string v1, "AppConfigUpdater"
-
-    .line 215
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "type: "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    if-eqz p0, :cond_5
-
-    const/4 v1, 0x1
-
-    if-ne p0, v1, :cond_3
-
-    goto :goto_2
-
-    :cond_3
-    const/4 v0, 0x2
-
-    if-ne p0, v0, :cond_4
-
-    .line 219
-    invoke-static {p1, p2, p3}, Lcom/xiaomi/onetrack/a/a;->b(Lorg/json/JSONObject;J)V
-
-    goto :goto_3
-
-    :cond_4
-    const-string p0, "AppConfigUpdater"
-
-    const-string p1, "handleData do nothing!"
-
-    .line 221
-    invoke-static {p0, p1}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_3
-
-    .line 217
-    :cond_5
-    :goto_2
-    invoke-static {p1, p2, p3, v0}, Lcom/xiaomi/onetrack/a/a;->a(Lorg/json/JSONObject;JI)V
-
-    :goto_3
-    return-void
-.end method
-
-.method static synthetic a(Ljava/util/List;)V
+.method static synthetic a(Lcom/xiaomi/onetrack/a/a;Lcom/xiaomi/onetrack/a/b/a;)J
     .locals 0
 
-    .line 36
-    invoke-static {p0}, Lcom/xiaomi/onetrack/a/a;->b(Ljava/util/List;)V
+    .line 26
+    invoke-direct {p0, p1}, Lcom/xiaomi/onetrack/a/a;->a(Lcom/xiaomi/onetrack/a/b/a;)J
 
-    return-void
+    move-result-wide p0
+
+    return-wide p0
 .end method
 
-.method private static a(Ljava/util/List;J)V
-    .locals 5
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List<",
-            "Ljava/lang/String;",
-            ">;J)V"
-        }
-    .end annotation
+.method private a(Lcom/xiaomi/onetrack/a/b/a;)J
+    .locals 8
 
-    .line 368
+    .line 89
+    iget-object v0, p0, Lcom/xiaomi/onetrack/a/a;->i:Lcom/xiaomi/onetrack/a/a$a;
+
+    monitor-enter v0
+
+    const-wide/16 v1, -0x1
+
+    .line 91
     :try_start_0
-    new-instance v0, Ljava/util/ArrayList;
+    invoke-virtual {p1}, Lcom/xiaomi/onetrack/a/b/a;->h()Z
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    move-result v3
 
-    const/4 v1, 0x0
+    if-nez v3, :cond_0
 
-    .line 369
-    :goto_0
-    invoke-interface {p0}, Ljava/util/List;->size()I
+    const-string v3, "AdMonitorManager"
 
-    move-result v2
+    .line 92
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    if-ge v1, v2, :cond_0
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 370
-    new-instance v2, Lcom/xiaomi/onetrack/a/k;
+    const-string v5, "addAdMonitorToDatabase event is inValid, event:"
 
-    invoke-direct {v2}, Lcom/xiaomi/onetrack/a/k;-><init>()V
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 371
-    invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/xiaomi/onetrack/a/b/a;->a()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v3, p1}, Lcom/xiaomi/onetrack/util/p;->c(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 93
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    return-wide v1
+
+    .line 95
+    :cond_0
+    :try_start_2
+    iget-object v3, p0, Lcom/xiaomi/onetrack/a/a;->i:Lcom/xiaomi/onetrack/a/a$a;
+
+    invoke-virtual {v3}, Lcom/xiaomi/onetrack/a/a$a;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v3
 
-    check-cast v3, Ljava/lang/String;
+    .line 96
+    new-instance v4, Landroid/content/ContentValues;
 
-    iput-object v3, v2, Lcom/xiaomi/onetrack/a/k;->a:Ljava/lang/String;
+    invoke-direct {v4}, Landroid/content/ContentValues;-><init>()V
 
-    const-wide/16 v3, 0x64
+    const-string v5, "appid"
 
-    .line 372
-    iput-wide v3, v2, Lcom/xiaomi/onetrack/a/k;->b:J
+    .line 97
+    invoke-virtual {p1}, Lcom/xiaomi/onetrack/a/b/a;->e()Ljava/lang/String;
 
-    .line 373
-    iput-wide p1, v2, Lcom/xiaomi/onetrack/a/k;->c:J
+    move-result-object v6
 
-    .line 374
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v4, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    add-int/lit8 v1, v1, 0x1
+    const-string v5, "package"
 
-    goto :goto_0
+    .line 98
+    invoke-virtual {p1}, Lcom/xiaomi/onetrack/a/b/a;->f()Ljava/lang/String;
 
-    .line 376
-    :cond_0
-    invoke-static {}, Lcom/xiaomi/onetrack/a/g;->a()Lcom/xiaomi/onetrack/a/g;
+    move-result-object v6
 
-    move-result-object p0
+    invoke-virtual {v4, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {p0, v0}, Lcom/xiaomi/onetrack/a/g;->a(Ljava/util/ArrayList;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_1
-
-    :catch_0
-    move-exception p0
-
-    const-string p1, "AppConfigUpdater"
-
-    .line 378
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v0, "handleError"
-
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p1, p0}, Lcom/xiaomi/onetrack/util/p;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    :goto_1
-    return-void
-.end method
-
-.method private static a(Ljava/util/List;JLjava/util/List;)V
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List<",
-            "Ljava/lang/String;",
-            ">;J",
-            "Ljava/util/List<",
-            "Ljava/lang/String;",
-            ">;)V"
-        }
-    .end annotation
-
-    .line 356
-    :try_start_0
-    invoke-interface {p0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    invoke-interface {p3}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    if-eq v0, v1, :cond_0
-
-    .line 357
-    invoke-interface {p0, p3}, Ljava/util/List;->removeAll(Ljava/util/Collection;)Z
-
-    .line 358
-    invoke-static {p0, p1, p2}, Lcom/xiaomi/onetrack/a/a;->a(Ljava/util/List;J)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception p0
-
-    const-string p1, "AppConfigUpdater"
-
-    .line 361
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string p3, "handleInvalidAppIds error:"
-
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p1, p0}, Lcom/xiaomi/onetrack/util/p;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_0
-    :goto_0
-    return-void
-.end method
-
-.method private static a(Lorg/json/JSONArray;Ljava/util/List;)V
-    .locals 9
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lorg/json/JSONArray;",
-            "Ljava/util/List<",
-            "Ljava/lang/String;",
-            ">;)V"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lorg/json/JSONException;
-        }
-    .end annotation
-
-    const-string v0, "AppConfigUpdater"
-
-    const-string v1, "updateDataToDb start"
-
-    .line 185
-    invoke-static {v0, v1}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 186
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    const-wide/32 v2, 0x5265c00
-
-    add-long/2addr v0, v2
-
-    new-instance v2, Ljava/util/Random;
-
-    invoke-direct {v2}, Ljava/util/Random;-><init>()V
-
-    const v3, 0x5265c00
-
-    invoke-virtual {v2, v3}, Ljava/util/Random;->nextInt(I)I
-
-    move-result v2
-
-    int-to-long v2, v2
-
-    add-long/2addr v0, v2
-
-    if-eqz p0, :cond_3
-
-    .line 187
-    invoke-virtual {p0}, Lorg/json/JSONArray;->length()I
-
-    move-result v2
-
-    if-lez v2, :cond_3
-
-    .line 188
-    new-instance v2, Ljava/util/ArrayList;
-
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
-
-    const/4 v3, 0x0
-
-    .line 189
-    :goto_0
-    invoke-virtual {p0}, Lorg/json/JSONArray;->length()I
-
-    move-result v4
-
-    if-ge v3, v4, :cond_2
-
-    .line 190
-    invoke-virtual {p0, v3}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
-
-    move-result-object v4
-
-    if-nez v4, :cond_0
-
-    const-string v5, ""
-
-    goto :goto_1
-
-    :cond_0
-    const-string v5, "appId"
-
-    .line 191
-    invoke-virtual {v4, v5}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v5
-
-    :goto_1
-    const-string v6, "AppConfigUpdater"
-
-    .line 192
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v8, "appId: "
-
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-static {v6, v7}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 193
-    invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v6
-
-    if-nez v6, :cond_1
-
-    .line 194
-    invoke-interface {v2, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 196
-    invoke-static {v5, v4, v0, v1}, Lcom/xiaomi/onetrack/a/a;->a(Ljava/lang/String;Lorg/json/JSONObject;J)V
-
-    :cond_1
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    .line 199
-    :cond_2
-    invoke-static {p1, v0, v1, v2}, Lcom/xiaomi/onetrack/a/a;->a(Ljava/util/List;JLjava/util/List;)V
-
-    goto :goto_2
-
-    .line 201
-    :cond_3
-    invoke-static {p1, v0, v1}, Lcom/xiaomi/onetrack/a/a;->a(Ljava/util/List;J)V
-
-    :goto_2
-    return-void
-.end method
-
-.method public static a(Lorg/json/JSONObject;)V
-    .locals 1
-
-    .line 383
-    new-instance v0, Lcom/xiaomi/onetrack/a/c;
-
-    invoke-direct {v0, p0}, Lcom/xiaomi/onetrack/a/c;-><init>(Lorg/json/JSONObject;)V
-
-    invoke-static {v0}, Lcom/xiaomi/onetrack/util/i;->a(Ljava/lang/Runnable;)V
-
-    return-void
-.end method
-
-.method private static a(Lorg/json/JSONObject;J)V
-    .locals 3
-
-    .line 227
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    if-eqz p0, :cond_0
-
-    .line 229
-    new-instance v1, Lcom/xiaomi/onetrack/a/k;
-
-    invoke-direct {v1}, Lcom/xiaomi/onetrack/a/k;-><init>()V
-
-    const-string v2, "appId"
-
-    .line 230
-    invoke-virtual {p0, v2}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    iput-object p0, v1, Lcom/xiaomi/onetrack/a/k;->a:Ljava/lang/String;
-
-    .line 231
-    iput-wide p1, v1, Lcom/xiaomi/onetrack/a/k;->c:J
-
-    .line 232
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 235
-    :cond_0
-    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result p0
-
-    if-nez p0, :cond_1
-
-    .line 236
-    invoke-static {}, Lcom/xiaomi/onetrack/a/g;->a()Lcom/xiaomi/onetrack/a/g;
-
-    move-result-object p0
-
-    invoke-virtual {p0, v0}, Lcom/xiaomi/onetrack/a/g;->a(Ljava/util/ArrayList;)V
-
-    goto :goto_0
-
-    :cond_1
-    const-string p0, "AppConfigUpdater"
-
-    const-string p1, "updateMinVersionData no timestamp can be updated!"
-
-    .line 238
-    invoke-static {p0, p1}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    :goto_0
-    return-void
-.end method
-
-.method private static a(Lorg/json/JSONObject;JI)V
-    .locals 4
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lorg/json/JSONException;
-        }
-    .end annotation
-
-    .line 244
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    if-eqz p0, :cond_3
-
-    .line 246
-    new-instance v1, Lcom/xiaomi/onetrack/a/k;
-
-    invoke-direct {v1}, Lcom/xiaomi/onetrack/a/k;-><init>()V
-
-    const-string v2, "hash"
-
-    .line 247
-    invoke-virtual {p0, v2}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    iput-object v2, v1, Lcom/xiaomi/onetrack/a/k;->d:Ljava/lang/String;
-
-    const-string v2, "appId"
-
-    .line 248
-    invoke-virtual {p0, v2}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    iput-object v2, v1, Lcom/xiaomi/onetrack/a/k;->a:Ljava/lang/String;
-
-    .line 249
-    invoke-static {p0}, Lcom/xiaomi/onetrack/a/a;->b(Lorg/json/JSONObject;)I
-
-    move-result v2
-
-    int-to-long v2, v2
-
-    iput-wide v2, v1, Lcom/xiaomi/onetrack/a/k;->b:J
-
-    .line 250
-    iput-wide p1, v1, Lcom/xiaomi/onetrack/a/k;->c:J
-
-    const-string p1, "events"
-
-    .line 251
-    invoke-virtual {p0, p1}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    .line 252
-    iput-object p0, v1, Lcom/xiaomi/onetrack/a/k;->e:Lorg/json/JSONObject;
-
-    goto :goto_1
-
-    .line 254
-    :cond_0
-    invoke-static {}, Lcom/xiaomi/onetrack/a/g;->a()Lcom/xiaomi/onetrack/a/g;
-
-    move-result-object p0
-
-    iget-object p1, v1, Lcom/xiaomi/onetrack/a/k;->a:Ljava/lang/String;
-
-    invoke-virtual {p0, p1}, Lcom/xiaomi/onetrack/a/g;->e(Ljava/lang/String;)Lcom/xiaomi/onetrack/a/k;
-
-    move-result-object p0
-
-    if-nez p0, :cond_1
-
-    const/4 p0, 0x0
-
-    goto :goto_0
-
-    .line 255
-    :cond_1
-    iget-object p0, p0, Lcom/xiaomi/onetrack/a/k;->e:Lorg/json/JSONObject;
-
-    :goto_0
-    if-eqz p0, :cond_2
-
-    const-string p1, "version"
-
-    .line 257
-    invoke-virtual {p0, p1, p3}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
-
-    .line 258
-    iput-object p0, v1, Lcom/xiaomi/onetrack/a/k;->e:Lorg/json/JSONObject;
-
-    .line 262
-    :cond_2
-    :goto_1
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 264
-    :cond_3
-    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result p0
-
-    if-nez p0, :cond_4
-
-    .line 265
-    invoke-static {}, Lcom/xiaomi/onetrack/a/g;->a()Lcom/xiaomi/onetrack/a/g;
-
-    move-result-object p0
-
-    invoke-virtual {p0, v0}, Lcom/xiaomi/onetrack/a/g;->a(Ljava/util/ArrayList;)V
-
-    goto :goto_2
-
-    :cond_4
-    const-string p0, "AppConfigUpdater"
-
-    const-string p1, "handleFullOrNoNewData no configuration can be updated!"
-
-    .line 267
-    invoke-static {p0, p1}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    :goto_2
-    return-void
-.end method
-
-.method private static b(Lorg/json/JSONObject;)I
-    .locals 4
-
-    const/16 v0, 0x64
-
-    :try_start_0
-    const-string v1, "sample"
-
-    .line 296
-    invoke-virtual {p0, v1, v0}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
-
-    move-result p0
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    if-ltz p0, :cond_1
-
-    if-le p0, v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    move v0, p0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception p0
-
-    const-string v1, "AppConfigUpdater"
-
-    .line 301
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "getCommonSample Exception:"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {v1, p0}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_1
-    :goto_0
-    return v0
-.end method
-
-.method public static b(Ljava/lang/String;)V
-    .locals 1
-
-    .line 71
-    invoke-static {p0}, Lcom/xiaomi/onetrack/a/a;->d(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 72
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    .line 73
-    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 74
-    invoke-static {v0}, Lcom/xiaomi/onetrack/a/a;->b(Ljava/util/List;)V
-
-    goto :goto_0
-
-    :cond_0
-    const-string p0, "AppConfigUpdater"
-
-    const-string v0, "AppConfigUpdater Does not meet prerequisites for request"
-
-    .line 76
-    invoke-static {p0, v0}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    :goto_0
-    return-void
-.end method
-
-.method private static b(Ljava/util/List;)V
-    .locals 7
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List<",
-            "Ljava/lang/String;",
-            ">;)V"
-        }
-    .end annotation
-
-    const-string v0, "AppConfigUpdater"
-
-    const-string v1, "pullCloudData start "
+    const-string v5, "event_name"
 
     .line 99
-    invoke-static {v0, v1}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1}, Lcom/xiaomi/onetrack/a/b/a;->a()Ljava/lang/String;
 
-    const-string v0, "AppConfigUpdater"
+    move-result-object v6
+
+    invoke-virtual {v4, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v5, "timestamp"
 
     .line 100
-    invoke-static {v0}, Lcom/xiaomi/onetrack/util/q;->a(Ljava/lang/String;)Z
+    invoke-virtual {p1}, Lcom/xiaomi/onetrack/a/b/a;->d()J
 
-    move-result v0
+    move-result-wide v6
 
-    if-eqz v0, :cond_0
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    return-void
+    move-result-object v6
+
+    invoke-virtual {v4, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
+
+    const-string v5, "url"
+
+    .line 101
+    invoke-virtual {p1}, Lcom/xiaomi/onetrack/a/b/a;->c()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v4, v5, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string p1, "monitor"
+
+    const/4 v5, 0x0
 
     .line 103
-    :cond_0
-    sget-object v0, Lcom/xiaomi/onetrack/a/a;->p:Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-virtual {v3, p1, v5, v4}, Landroid/database/sqlite/SQLiteDatabase;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
 
-    const/4 v1, 0x1
+    move-result-wide v3
 
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v2, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
+    const-string p1, "AdMonitorManager"
 
     .line 104
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    .line 106
-    :try_start_0
-    invoke-static {}, Lcom/xiaomi/onetrack/e/a;->b()Landroid/content/Context;
-
-    move-result-object v3
-
-    const-string v4, "oa"
-
-    .line 107
-    invoke-static {}, Lcom/xiaomi/onetrack/util/oaid/a;->a()Lcom/xiaomi/onetrack/util/oaid/a;
-
-    move-result-object v5
-
-    invoke-virtual {v5, v3}, Lcom/xiaomi/onetrack/util/oaid/a;->a(Landroid/content/Context;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-interface {v0, v4, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v3, "ov"
-
-    .line 108
-    invoke-static {}, Lcom/xiaomi/onetrack/util/q;->h()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-interface {v0, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v3, "ob"
-
-    .line 109
-    invoke-static {}, Lcom/xiaomi/onetrack/util/q;->d()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-interface {v0, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v3, "ii"
-
-    .line 110
-    invoke-static {}, Lcom/xiaomi/onetrack/util/q;->x()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    const-string v4, "1"
-
-    goto :goto_0
-
-    :cond_1
-    const-string v4, "0"
-
-    :goto_0
-    invoke-interface {v0, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v3, "sv"
-
-    const-string v4, "1.2.9"
-
-    .line 111
-    invoke-interface {v0, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v3, "appVer"
-
-    .line 112
-    invoke-static {}, Lcom/xiaomi/onetrack/e/a;->c()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-interface {v0, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v3, "av"
-
-    .line 113
-    invoke-static {}, Lcom/xiaomi/onetrack/util/q;->i()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-interface {v0, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v3, "ml"
-
-    .line 114
-    invoke-static {}, Lcom/xiaomi/onetrack/util/DeviceUtil;->c()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-interface {v0, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v3, "re"
-
-    .line 115
-    invoke-static {}, Lcom/xiaomi/onetrack/util/q;->y()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-interface {v0, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v3, "ail"
-
-    .line 116
-    invoke-static {p0}, Lcom/xiaomi/onetrack/a/a;->c(Ljava/util/List;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-interface {v0, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v3, "sender"
-
-    .line 117
-    invoke-static {}, Lcom/xiaomi/onetrack/e/a;->e()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-interface {v0, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v3, "platform"
-
-    const-string v4, "Android"
-
-    .line 118
-    invoke-interface {v0, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 119
-    invoke-static {}, Lcom/xiaomi/onetrack/util/x;->a()Lcom/xiaomi/onetrack/util/x;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Lcom/xiaomi/onetrack/util/x;->c()Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v4, "AppConfigUpdater"
-
-    .line 121
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v6, "pullData:"
+    const-string v6, "DB-Thread: AdMonitorManager.addAdMonitorToDatabase , row="
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v5
 
-    invoke-static {v4, v5}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v5}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 122
-    invoke-static {v3, v0, v1}, Lcom/xiaomi/onetrack/f/b;->b(Ljava/lang/String;Ljava/util/Map;Z)Ljava/lang/String;
+    .line 105
+    sget-boolean p1, Lcom/xiaomi/onetrack/util/p;->a:Z
+
+    if-eqz p1, :cond_1
+
+    const-string p1, "AdMonitorManager"
+
+    .line 106
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "\u6dfb\u52a0\u540e\uff0cad monitor url \u4e2d\u4e8b\u4ef6\u4e2a\u6570\u4e3a "
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Lcom/xiaomi/onetrack/a/a;->e()J
+
+    move-result-wide v6
+
+    invoke-virtual {v5, v6, v7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {p1, v5}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_2
+    .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    .line 108
+    :cond_1
+    :try_start_3
+    monitor-exit v0
+
+    return-wide v3
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p1
+
+    const-string v3, "AdMonitorManager"
+
+    .line 110
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "addAdMonitorToDatabase Throwable\uff1a"
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v3, p1}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 112
+    monitor-exit v0
+
+    return-wide v1
+
+    .line 113
+    :goto_0
+    monitor-exit v0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    throw p1
+.end method
+
+.method static synthetic a(Lcom/xiaomi/onetrack/a/a;)Lcom/xiaomi/onetrack/a/a$a;
+    .locals 0
+
+    .line 26
+    iget-object p0, p0, Lcom/xiaomi/onetrack/a/a;->i:Lcom/xiaomi/onetrack/a/a$a;
+
+    return-object p0
+.end method
+
+.method public static a()Lcom/xiaomi/onetrack/a/a;
+    .locals 1
+
+    .line 40
+    sget-object v0, Lcom/xiaomi/onetrack/a/a;->h:Lcom/xiaomi/onetrack/a/a;
+
+    if-nez v0, :cond_0
+
+    .line 41
+    invoke-static {}, Lcom/xiaomi/onetrack/f/a;->a()Landroid/content/Context;
 
     move-result-object v0
 
-    const-string v1, "AppConfigUpdater"
+    .line 42
+    invoke-static {v0}, Lcom/xiaomi/onetrack/a/a;->a(Landroid/content/Context;)V
 
-    .line 124
-    new-instance v3, Ljava/lang/StringBuilder;
+    .line 44
+    :cond_0
+    sget-object v0, Lcom/xiaomi/onetrack/a/a;->h:Lcom/xiaomi/onetrack/a/a;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    return-object v0
+.end method
 
-    const-string v4, "response:"
+.method public static a(Landroid/content/Context;)V
+    .locals 1
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 48
+    sget-object p0, Lcom/xiaomi/onetrack/a/a;->h:Lcom/xiaomi/onetrack/a/a;
 
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-nez p0, :cond_1
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 49
+    const-class p0, Lcom/xiaomi/onetrack/a/a;
 
-    move-result-object v3
+    monitor-enter p0
 
-    invoke-static {v1, v3}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
+    .line 50
+    :try_start_0
+    sget-object v0, Lcom/xiaomi/onetrack/a/a;->h:Lcom/xiaomi/onetrack/a/a;
 
-    .line 125
-    invoke-static {v0, p0}, Lcom/xiaomi/onetrack/a/a;->a(Ljava/lang/String;Ljava/util/List;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    if-nez v0, :cond_0
 
-    goto :goto_1
+    .line 51
+    new-instance v0, Lcom/xiaomi/onetrack/a/a;
+
+    invoke-direct {v0}, Lcom/xiaomi/onetrack/a/a;-><init>()V
+
+    sput-object v0, Lcom/xiaomi/onetrack/a/a;->h:Lcom/xiaomi/onetrack/a/a;
+
+    .line 53
+    :cond_0
+    monitor-exit p0
+
+    goto :goto_0
 
     :catchall_0
-    move-exception p0
+    move-exception v0
 
-    goto :goto_2
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    :catch_0
-    move-exception p0
+    throw v0
 
-    :try_start_1
-    const-string v0, "AppConfigUpdater"
-
-    .line 127
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "pullCloudData error: "
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {v0, p0}, Lcom/xiaomi/onetrack/util/p;->b(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    .line 129
-    :goto_1
-    sget-object p0, Lcom/xiaomi/onetrack/a/a;->p:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {p0, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
-
-    goto :goto_3
-
-    :goto_2
-    sget-object v0, Lcom/xiaomi/onetrack/a/a;->p:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
-
-    .line 130
-    throw p0
-
-    :cond_2
-    :goto_3
+    :cond_1
+    :goto_0
     return-void
 .end method
 
-.method private static b(Lorg/json/JSONObject;J)V
-    .locals 5
+.method private f()V
+    .locals 3
 
-    .line 273
-    new-instance v0, Ljava/util/ArrayList;
+    .line 352
+    :try_start_0
+    iget-object v0, p0, Lcom/xiaomi/onetrack/a/a;->i:Lcom/xiaomi/onetrack/a/a$a;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    invoke-virtual {v0}, Lcom/xiaomi/onetrack/a/a$a;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
-    if-eqz p0, :cond_0
+    move-result-object v0
 
-    const-string v1, "events"
+    const-string v1, "monitor"
 
-    .line 274
-    invoke-virtual {p0, v1}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
+    const/4 v2, 0x0
 
-    move-result v1
+    .line 353
+    invoke-virtual {v0, v1, v2, v2}, Landroid/database/sqlite/SQLiteDatabase;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
-    if-eqz v1, :cond_0
+    const-string v0, "AdMonitorManager"
 
-    .line 275
-    new-instance v1, Lcom/xiaomi/onetrack/a/k;
+    const-string v1, "delete table monitor"
 
-    invoke-direct {v1}, Lcom/xiaomi/onetrack/a/k;-><init>()V
+    .line 354
+    invoke-static {v0, v1}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    const-string v2, "hash"
+    goto :goto_0
 
-    .line 276
-    invoke-virtual {p0, v2}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+    :catch_0
+    move-exception v0
+
+    .line 356
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+
+    :goto_0
+    return-void
+.end method
+
+
+# virtual methods
+.method public a(Ljava/util/ArrayList;)I
+    .locals 7
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/ArrayList<",
+            "Ljava/lang/Integer;",
+            ">;)I"
+        }
+    .end annotation
+
+    .line 189
+    iget-object v0, p0, Lcom/xiaomi/onetrack/a/a;->i:Lcom/xiaomi/onetrack/a/a$a;
+
+    monitor-enter v0
+
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_3
+
+    .line 190
+    :try_start_0
+    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-nez v2, :cond_0
+
+    goto/16 :goto_1
+
+    .line 195
+    :cond_0
+    :try_start_1
+    iget-object v2, p0, Lcom/xiaomi/onetrack/a/a;->i:Lcom/xiaomi/onetrack/a/a$a;
+
+    invoke-virtual {v2}, Lcom/xiaomi/onetrack/a/a$a;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v2
 
-    iput-object v2, v1, Lcom/xiaomi/onetrack/a/k;->d:Ljava/lang/String;
+    .line 199
+    invoke-virtual {p1, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    const-string v2, "appId"
+    move-result-object v3
 
-    .line 277
-    invoke-virtual {p0, v2}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+    check-cast v3, Ljava/lang/Integer;
 
-    move-result-object v2
-
-    .line 278
-    iput-object v2, v1, Lcom/xiaomi/onetrack/a/k;->a:Ljava/lang/String;
-
-    .line 279
-    invoke-static {p0}, Lcom/xiaomi/onetrack/a/a;->b(Lorg/json/JSONObject;)I
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
     move-result v3
 
     int-to-long v3, v3
 
-    iput-wide v3, v1, Lcom/xiaomi/onetrack/a/k;->b:J
+    invoke-static {v3, v4}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
 
-    .line 280
-    iput-wide p1, v1, Lcom/xiaomi/onetrack/a/k;->c:J
+    move-result-object v3
 
-    .line 281
-    invoke-static {v2, p0}, Lcom/xiaomi/onetrack/a/a;->a(Ljava/lang/String;Lorg/json/JSONObject;)Lorg/json/JSONObject;
-
-    move-result-object p0
-
-    iput-object p0, v1, Lcom/xiaomi/onetrack/a/k;->e:Lorg/json/JSONObject;
-
-    .line 282
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_0
-    const-string p0, "AppConfigUpdater"
-
-    const-string p1, "handleIncrementalUpdate config is not change!"
-
-    .line 284
-    invoke-static {p0, p1}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 286
-    :goto_0
-    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result p0
-
-    if-nez p0, :cond_1
-
-    .line 287
-    invoke-static {}, Lcom/xiaomi/onetrack/a/g;->a()Lcom/xiaomi/onetrack/a/g;
-
-    move-result-object p0
-
-    invoke-virtual {p0, v0}, Lcom/xiaomi/onetrack/a/g;->a(Ljava/util/ArrayList;)V
-
-    goto :goto_1
-
-    :cond_1
-    const-string p0, "AppConfigUpdater"
-
-    const-string p1, "handleIncrementalUpdate no configuration can be updated!"
-
-    .line 289
-    invoke-static {p0, p1}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    :goto_1
-    return-void
-.end method
-
-.method private static c(Ljava/util/List;)Ljava/lang/String;
-    .locals 6
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List<",
-            "Ljava/lang/String;",
-            ">;)",
-            "Ljava/lang/String;"
-        }
-    .end annotation
-
-    .line 135
-    new-instance v0, Lorg/json/JSONArray;
-
-    invoke-direct {v0}, Lorg/json/JSONArray;-><init>()V
-
-    .line 137
-    :try_start_0
-    new-instance v1, Lorg/json/JSONObject;
-
-    invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
-
-    const/4 v2, 0x0
-
-    .line 138
-    :goto_0
-    invoke-interface {p0}, Ljava/util/List;->size()I
+    invoke-virtual {v3}, Ljava/lang/String;->length()I
 
     move-result v3
 
-    if-ge v2, v3, :cond_0
+    const/4 v4, 0x1
 
-    .line 139
-    invoke-interface {p0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    add-int/2addr v3, v4
+
+    .line 200
+    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
+
+    move-result v5
+
+    mul-int/2addr v3, v5
+
+    add-int/lit8 v3, v3, 0x10
+
+    .line 201
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5, v3}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    const-string v3, "_id"
+
+    .line 203
+    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v3, " in ("
+
+    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 204
+    invoke-virtual {p1, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
-    check-cast v3, Ljava/lang/String;
+    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v4, "appId"
+    .line 205
+    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
-    .line 140
-    invoke-virtual {v1, v4, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    move-result v3
 
-    const-string v4, "hash"
+    :goto_0
+    if-ge v4, v3, :cond_1
 
-    .line 141
-    invoke-static {}, Lcom/xiaomi/onetrack/a/g;->a()Lcom/xiaomi/onetrack/a/g;
+    const-string v6, ","
 
-    move-result-object v5
+    .line 207
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v5, v3}, Lcom/xiaomi/onetrack/a/g;->c(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p1, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const-string p1, ")"
+
+    .line 209
+    invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, "monitor"
+
+    .line 211
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v1, v4, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    const/4 v4, 0x0
 
-    .line 142
-    invoke-virtual {v0, v1}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
+    invoke-virtual {v2, p1, v3, v4}, Landroid/database/sqlite/SQLiteDatabase;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
+
+    move-result p1
+
+    const-string v2, "AdMonitorManager"
+
+    .line 213
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "*** *** deleted ad monitor count "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 214
+    sget-boolean v2, Lcom/xiaomi/onetrack/util/p;->a:Z
+
+    if-eqz v2, :cond_2
+
+    const-string v2, "AdMonitorManager"
+
+    .line 215
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "after delete ad monitor record remains="
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Lcom/xiaomi/onetrack/a/a;->e()J
+
+    move-result-wide v4
+
+    invoke-virtual {v3, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 217
+    :cond_2
+    :try_start_2
+    monitor-exit v0
+
+    return p1
+
+    :catch_0
+    move-exception p1
+
+    const-string v2, "AdMonitorManager"
+
+    .line 219
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "e="
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v2, p1}, Lcom/xiaomi/onetrack/util/p;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 221
+    monitor-exit v0
+
+    return v1
+
+    .line 191
+    :cond_3
+    :goto_1
+    monitor-exit v0
+
+    return v1
+
+    :catchall_0
+    move-exception p1
+
+    .line 222
+    monitor-exit v0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    throw p1
+.end method
+
+.method public a(Lcom/xiaomi/onetrack/f/b;)V
+    .locals 3
+
+    .line 68
+    :try_start_0
+    new-instance v0, Lcom/xiaomi/onetrack/a/b;
+
+    invoke-direct {v0, p0, p1}, Lcom/xiaomi/onetrack/a/b;-><init>(Lcom/xiaomi/onetrack/a/a;Lcom/xiaomi/onetrack/f/b;)V
+
+    invoke-static {v0}, Lcom/xiaomi/onetrack/a/a/a;->a(Ljava/lang/Runnable;)V
     :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    add-int/lit8 v2, v2, 0x1
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
     :catch_0
-    move-exception p0
+    move-exception p1
 
-    .line 145
-    invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
+    const-string v0, "AdMonitorManager"
 
-    .line 147
-    :cond_0
-    invoke-virtual {v0}, Lorg/json/JSONArray;->toString()Ljava/lang/String;
+    .line 83
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    move-result-object p0
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    return-object p0
-.end method
+    const-string v2, "filterAdMonitor Throwable\uff1a"
 
-.method static synthetic c(Ljava/lang/String;)Z
-    .locals 0
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 36
-    invoke-static {p0}, Lcom/xiaomi/onetrack/a/a;->e(Ljava/lang/String;)Z
+    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
-    move-result p0
+    move-result-object p1
 
-    return p0
-.end method
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method private static d(Ljava/util/List;)V
-    .locals 9
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List<",
-            "Ljava/lang/String;",
-            ">;)V"
-        }
-    .end annotation
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    if-eqz p0, :cond_0
+    move-result-object p1
 
-    .line 170
-    invoke-interface {p0}, Ljava/util/List;->size()I
+    invoke-static {v0, p1}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x0
-
-    .line 171
     :goto_0
-    invoke-interface {p0}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    if-ge v0, v1, :cond_0
-
-    .line 172
-    sget-object v1, Lcom/xiaomi/onetrack/a/a;->u:Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v3
-
-    const-wide/32 v5, 0x1b7740
-
-    add-long/2addr v3, v5
-
-    invoke-static {}, Ljava/lang/Math;->random()D
-
-    move-result-wide v5
-
-    const-wide v7, 0x413b774000000000L    # 1800000.0
-
-    mul-double/2addr v5, v7
-
-    double-to-long v5, v5
-
-    add-long/2addr v3, v5
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v2, v3}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
     return-void
 .end method
 
-.method private static d(Ljava/lang/String;)Z
-    .locals 6
-
-    .line 81
-    invoke-static {}, Lcom/xiaomi/onetrack/f/c;->a()Z
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    const-string p0, "AppConfigUpdater"
-
-    const-string v0, "net is not connected!"
-
-    .line 82
-    invoke-static {p0, v0}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    return v1
-
-    .line 86
-    :cond_0
-    invoke-static {}, Lcom/xiaomi/onetrack/a/g;->a()Lcom/xiaomi/onetrack/a/g;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Lcom/xiaomi/onetrack/a/g;->e(Ljava/lang/String;)Lcom/xiaomi/onetrack/a/k;
-
-    move-result-object p0
+.method public a(JJI)Z
+    .locals 3
 
     const/4 v0, 0x1
 
-    if-nez p0, :cond_1
+    if-gtz p5, :cond_0
 
     return v0
 
-    .line 90
+    :cond_0
+    const/4 v1, 0x4
+
+    const/4 v2, 0x0
+
+    if-ge p5, v1, :cond_2
+
+    sub-int/2addr p5, v0
+
+    .line 364
+    invoke-static {p5}, Lcom/xiaomi/onetrack/b/n;->a(I)I
+
+    move-result p5
+
+    sub-long/2addr p1, p3
+
+    .line 365
+    invoke-static {p1, p2}, Ljava/lang/Math;->abs(J)J
+
+    move-result-wide p1
+
+    int-to-long p3, p5
+
+    cmp-long p1, p1, p3
+
+    if-ltz p1, :cond_1
+
+    goto :goto_0
+
     :cond_1
-    iget-wide v2, p0, Lcom/xiaomi/onetrack/a/k;->c:J
+    move v0, v2
 
-    .line 92
+    :goto_0
+    return v0
+
+    :cond_2
+    return v2
+.end method
+
+.method public b()Lcom/xiaomi/onetrack/a/c/a;
+    .locals 22
+
+    move-object/from16 v7, p0
+
+    .line 118
+    iget-object v8, v7, Lcom/xiaomi/onetrack/a/a;->i:Lcom/xiaomi/onetrack/a/a$a;
+
+    monitor-enter v8
+
+    const/4 v12, 0x0
+
+    const/16 v17, 0x0
+
+    .line 122
+    :try_start_0
+    iget-object v0, v7, Lcom/xiaomi/onetrack/a/a;->i:Lcom/xiaomi/onetrack/a/a$a;
+
+    invoke-virtual {v0}, Lcom/xiaomi/onetrack/a/a$a;->getReadableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+
+    move-result-object v9
+
+    const-string v10, "monitor"
+
+    const/4 v11, 0x0
+
+    const/4 v13, 0x0
+
+    const/4 v14, 0x0
+
+    const/4 v15, 0x0
+
+    const-string v16, "_id ASC"
+
+    .line 123
+    invoke-virtual/range {v9 .. v16}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+
+    move-result-object v9
+    :try_end_0
+    .catch Landroid/database/sqlite/SQLiteBlobTooBigException; {:try_start_0 .. :try_end_0} :catch_3
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :try_start_1
+    const-string v0, "_id"
+
+    .line 126
+    invoke-interface {v9, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result v0
+
+    const-string v1, "appid"
+
+    .line 127
+    invoke-interface {v9, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    const-string v1, "package"
+
+    .line 128
+    invoke-interface {v9, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    const-string v1, "event_name"
+
+    .line 129
+    invoke-interface {v9, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    const-string v1, "timestamp"
+
+    .line 130
+    invoke-interface {v9, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result v10
+
+    const-string v1, "url"
+
+    .line 131
+    invoke-interface {v9, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result v11
+
+    const-string v1, "send_count"
+
+    .line 132
+    invoke-interface {v9, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result v12
+
+    .line 135
+    new-instance v13, Ljava/util/ArrayList;
+
+    invoke-direct {v13}, Ljava/util/ArrayList;-><init>()V
+
+    .line 138
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v14
+
+    const/16 v16, 0x0
+
+    move/from16 v18, v16
+
+    .line 139
+    :goto_0
+    invoke-interface {v9}, Landroid/database/Cursor;->moveToNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    .line 141
+    invoke-interface {v9, v12}, Landroid/database/Cursor;->getInt(I)I
+
+    move-result v6
+
+    .line 142
+    invoke-interface {v9, v10}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v4
 
-    cmp-long p0, v2, v4
+    move-object/from16 v1, p0
 
-    if-ltz p0, :cond_3
+    move-wide v2, v14
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    move-wide/from16 v19, v4
 
-    move-result-wide v4
+    move/from16 v21, v6
 
-    sub-long/2addr v2, v4
+    .line 143
+    invoke-virtual/range {v1 .. v6}, Lcom/xiaomi/onetrack/a/a;->a(JJI)Z
 
-    const-wide/32 v4, 0xa4cb800
+    move-result v1
 
-    cmp-long p0, v2, v4
+    if-nez v1, :cond_0
 
-    if-lez p0, :cond_2
+    goto :goto_0
+
+    .line 151
+    :cond_0
+    invoke-interface {v9, v0}, Landroid/database/Cursor;->getInt(I)I
+
+    move-result v1
+
+    .line 152
+    invoke-interface {v9, v11}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 153
+    new-instance v3, Lcom/xiaomi/onetrack/a/b/a;
+
+    invoke-direct {v3}, Lcom/xiaomi/onetrack/a/b/a;-><init>()V
+
+    .line 154
+    invoke-virtual {v3, v2}, Lcom/xiaomi/onetrack/a/b/a;->b(Ljava/lang/String;)V
+
+    .line 155
+    invoke-virtual {v3, v1}, Lcom/xiaomi/onetrack/a/b/a;->a(I)V
+
+    move-wide/from16 v1, v19
+
+    .line 156
+    invoke-virtual {v3, v1, v2}, Lcom/xiaomi/onetrack/a/b/a;->a(J)V
+
+    move/from16 v1, v21
+
+    .line 157
+    invoke-virtual {v3, v1}, Lcom/xiaomi/onetrack/a/b/a;->b(I)V
+
+    .line 158
+    invoke-virtual {v13, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v1, v18, 0x1
+
+    const/16 v2, 0x64
+
+    if-lt v1, v2, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    move/from16 v18, v1
 
     goto :goto_0
 
     :cond_2
-    return v1
+    move/from16 v1, v18
+
+    .line 164
+    :goto_1
+    invoke-virtual {v13}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    const/4 v2, 0x1
+
+    if-lez v0, :cond_4
+
+    const-string v0, "AdMonitorManager"
+
+    .line 165
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "get ad monitor size :"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v13}, Ljava/util/ArrayList;->size()I
+
+    move-result v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v0, v3}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 166
+    invoke-interface {v9}, Landroid/database/Cursor;->isAfterLast()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    const-string v0, "AdMonitorManager"
+
+    const-string v3, "cursor isAfterLast"
+
+    .line 167
+    invoke-static {v0, v3}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_2
 
     :cond_3
-    :goto_0
-    return v0
+    move/from16 v2, v16
+
+    .line 173
+    :cond_4
+    :goto_2
+    new-instance v0, Lcom/xiaomi/onetrack/a/c/a;
+
+    invoke-direct {v0, v1, v13, v2}, Lcom/xiaomi/onetrack/a/c/a;-><init>(ILjava/util/ArrayList;Z)V
+    :try_end_1
+    .catch Landroid/database/sqlite/SQLiteBlobTooBigException; {:try_start_1 .. :try_end_1} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    if-eqz v9, :cond_5
+
+    .line 181
+    :try_start_2
+    invoke-interface {v9}, Landroid/database/Cursor;->close()V
+
+    :cond_5
+    monitor-exit v8
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_3
+
+    :catch_1
+    move-exception v0
+
+    goto :goto_5
+
+    :catchall_0
+    move-exception v0
+
+    move-object/from16 v9, v17
+
+    goto :goto_7
+
+    :catch_2
+    move-exception v0
+
+    move-object/from16 v9, v17
+
+    :goto_3
+    :try_start_3
+    const-string v1, "AdMonitorManager"
+
+    const-string v2, ""
+
+    .line 178
+    invoke-static {v1, v2, v0}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    if-eqz v9, :cond_6
+
+    .line 181
+    :goto_4
+    :try_start_4
+    invoke-interface {v9}, Landroid/database/Cursor;->close()V
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_2
+
+    goto :goto_6
+
+    :catch_3
+    move-exception v0
+
+    move-object/from16 v9, v17
+
+    :goto_5
+    :try_start_5
+    const-string v1, "AdMonitorManager"
+
+    const-string v2, "blob too big ***"
+
+    .line 175
+    invoke-static {v1, v2, v0}, Lcom/xiaomi/onetrack/util/p;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 176
+    invoke-direct/range {p0 .. p0}, Lcom/xiaomi/onetrack/a/a;->f()V
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_1
+
+    if-eqz v9, :cond_6
+
+    goto :goto_4
+
+    .line 184
+    :cond_6
+    :goto_6
+    :try_start_6
+    monitor-exit v8
+
+    return-object v17
+
+    :catchall_1
+    move-exception v0
+
+    :goto_7
+    if-eqz v9, :cond_7
+
+    .line 181
+    invoke-interface {v9}, Landroid/database/Cursor;->close()V
+
+    .line 183
+    :cond_7
+    throw v0
+
+    :catchall_2
+    move-exception v0
+
+    .line 184
+    monitor-exit v8
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_2
+
+    throw v0
 .end method
 
-.method private static e(Ljava/lang/String;)Z
-    .locals 4
+.method public b(Ljava/util/ArrayList;)V
+    .locals 7
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/ArrayList<",
+            "Ljava/lang/Integer;",
+            ">;)V"
+        }
+    .end annotation
 
-    .line 418
-    sget-object v0, Lcom/xiaomi/onetrack/a/a;->u:Ljava/util/concurrent/ConcurrentHashMap;
+    .line 232
+    iget-object v0, p0, Lcom/xiaomi/onetrack/a/a;->i:Lcom/xiaomi/onetrack/a/a$a;
 
-    invoke-virtual {v0, p0}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    monitor-enter v0
 
-    move-result-object p0
+    if-eqz p1, :cond_4
 
-    check-cast p0, Ljava/lang/Long;
+    .line 234
+    :try_start_0
+    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
-    if-eqz p0, :cond_1
+    move-result v1
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_4
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 421
-    invoke-virtual {p0}, Ljava/lang/Long;->longValue()J
+    if-gtz v1, :cond_0
 
-    move-result-wide v0
+    goto/16 :goto_5
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    :cond_0
+    const/4 v1, 0x0
 
-    move-result-wide v2
+    .line 240
+    :try_start_1
+    iget-object v2, p0, Lcom/xiaomi/onetrack/a/a;->i:Lcom/xiaomi/onetrack/a/a$a;
 
-    sub-long/2addr v0, v2
+    invoke-virtual {v2}, Lcom/xiaomi/onetrack/a/a$a;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
-    const-wide/16 v2, 0x0
+    move-result-object v1
 
-    cmp-long v0, v0, v2
+    .line 241
+    invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
 
-    if-ltz v0, :cond_1
+    .line 242
+    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    invoke-virtual {p0}, Ljava/lang/Long;->longValue()J
+    move-result-object p1
 
-    move-result-wide v0
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    move-result v2
 
-    move-result-wide v2
+    if-eqz v2, :cond_1
 
-    sub-long/2addr v0, v2
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    const-wide/32 v2, 0x36ee80
+    move-result-object v2
 
-    cmp-long p0, v0, v2
+    check-cast v2, Ljava/lang/Integer;
 
-    if-lez p0, :cond_0
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    move-result v2
+
+    const-string v3, "update %s set %s = %s + 1 where %s = %s"
+
+    const/4 v4, 0x5
+
+    .line 243
+    new-array v4, v4, [Ljava/lang/Object;
+
+    const/4 v5, 0x0
+
+    const-string v6, "monitor"
+
+    aput-object v6, v4, v5
+
+    const/4 v5, 0x1
+
+    const-string v6, "send_count"
+
+    aput-object v6, v4, v5
+
+    const/4 v5, 0x2
+
+    const-string v6, "send_count"
+
+    aput-object v6, v4, v5
+
+    const/4 v5, 0x3
+
+    const-string v6, "_id"
+
+    aput-object v6, v4, v5
+
+    const/4 v5, 0x4
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    aput-object v2, v4, v5
+
+    invoke-static {v3, v4}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     goto :goto_0
 
-    :cond_0
-    const/4 p0, 0x0
+    .line 245
+    :cond_1
+    invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    return p0
+    if-eqz v1, :cond_3
+
+    .line 251
+    :try_start_2
+    invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
+
+    .line 252
+    invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->close()V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+    .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_4
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    goto/16 :goto_4
+
+    :catch_0
+    move-exception p1
+
+    :try_start_3
+    const-string v1, "AdMonitorManager"
+
+    .line 255
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "addAdMonitorsRetryCount endTransaction error: "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    :goto_1
+    invoke-static {v1, p1}, Lcom/xiaomi/onetrack/util/p;->b(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_3
+    .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_4
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    goto/16 :goto_4
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_2
+
+    :catch_1
+    move-exception p1
+
+    :try_start_4
+    const-string v2, "AdMonitorManager"
+
+    .line 247
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "addAdMonitorsRetryCount Exception: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v2, p1}, Lcom/xiaomi/onetrack/util/p;->b(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    if-eqz v1, :cond_3
+
+    .line 251
+    :try_start_5
+    invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
+
+    .line 252
+    invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->close()V
+    :try_end_5
+    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_2
+    .catch Ljava/lang/Throwable; {:try_start_5 .. :try_end_5} :catch_4
+    .catchall {:try_start_5 .. :try_end_5} :catchall_1
+
+    goto :goto_4
+
+    :catch_2
+    move-exception p1
+
+    :try_start_6
+    const-string v1, "AdMonitorManager"
+
+    .line 255
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "addAdMonitorsRetryCount endTransaction error: "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+    :try_end_6
+    .catch Ljava/lang/Throwable; {:try_start_6 .. :try_end_6} :catch_4
+    .catchall {:try_start_6 .. :try_end_6} :catchall_1
+
+    goto :goto_1
+
+    :goto_2
+    if-eqz v1, :cond_2
+
+    .line 251
+    :try_start_7
+    invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
+
+    .line 252
+    invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->close()V
+    :try_end_7
+    .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_3
+    .catch Ljava/lang/Throwable; {:try_start_7 .. :try_end_7} :catch_4
+    .catchall {:try_start_7 .. :try_end_7} :catchall_1
+
+    goto :goto_3
+
+    :catch_3
+    move-exception v1
+
+    :try_start_8
+    const-string v2, "AdMonitorManager"
+
+    .line 255
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "addAdMonitorsRetryCount endTransaction error: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v2, v1}, Lcom/xiaomi/onetrack/util/p;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 257
+    :cond_2
+    :goto_3
+    throw p1
+    :try_end_8
+    .catch Ljava/lang/Throwable; {:try_start_8 .. :try_end_8} :catch_4
+    .catchall {:try_start_8 .. :try_end_8} :catchall_1
+
+    :catch_4
+    move-exception p1
+
+    :try_start_9
+    const-string v1, "AdMonitorManager"
+
+    .line 259
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "addAdMonitorsRetryCount Throwable:"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v1, p1}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 261
+    :cond_3
+    :goto_4
+    monitor-exit v0
+
+    return-void
+
+    .line 235
+    :cond_4
+    :goto_5
+    monitor-exit v0
+
+    return-void
+
+    :catchall_1
+    move-exception p1
+
+    .line 261
+    monitor-exit v0
+    :try_end_9
+    .catchall {:try_start_9 .. :try_end_9} :catchall_1
+
+    throw p1
+.end method
+
+.method public c()V
+    .locals 1
+
+    .line 265
+    new-instance v0, Lcom/xiaomi/onetrack/a/c;
+
+    invoke-direct {v0, p0}, Lcom/xiaomi/onetrack/a/c;-><init>(Lcom/xiaomi/onetrack/a/a;)V
+
+    invoke-static {v0}, Lcom/xiaomi/onetrack/a/a/a;->a(Ljava/lang/Runnable;)V
+
+    return-void
+.end method
+
+.method public d()V
+    .locals 13
+
+    .line 312
+    iget-object v0, p0, Lcom/xiaomi/onetrack/a/a;->i:Lcom/xiaomi/onetrack/a/a$a;
+
+    monitor-enter v0
+
+    const/4 v1, 0x0
+
+    .line 315
+    :try_start_0
+    iget-object v2, p0, Lcom/xiaomi/onetrack/a/a;->i:Lcom/xiaomi/onetrack/a/a$a;
+
+    invoke-virtual {v2}, Lcom/xiaomi/onetrack/a/a$a;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+
+    move-result-object v2
+
+    const-string v11, "send_count >= ? "
+
+    const/4 v3, 0x1
+
+    .line 317
+    new-array v12, v3, [Ljava/lang/String;
+
+    const/4 v3, 0x0
+
+    const-wide/16 v4, 0x4
+
+    invoke-static {v4, v5}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
+
+    move-result-object v4
+
+    aput-object v4, v12, v3
+
+    const-string v4, "monitor"
+
+    const-string v3, "timestamp"
+
+    .line 318
+    filled-new-array {v3}, [Ljava/lang/String;
+
+    move-result-object v5
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    const-string v10, "_id ASC"
+
+    move-object v3, v2
+
+    move-object v6, v11
+
+    move-object v7, v12
+
+    invoke-virtual/range {v3 .. v10}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+
+    move-result-object v1
+
+    .line 325
+    invoke-interface {v1}, Landroid/database/Cursor;->getCount()I
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    const-string v3, "monitor"
+
+    .line 328
+    invoke-virtual {v2, v3, v11, v12}, Landroid/database/sqlite/SQLiteDatabase;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
+
+    move-result v2
+
+    const-string v3, "AdMonitorManager"
+
+    .line 329
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "*** deleted obsolete ad monitor count="
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v3, v2}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 331
+    :cond_0
+    sget-boolean v2, Lcom/xiaomi/onetrack/util/p;->a:Z
+
+    if-eqz v2, :cond_1
+
+    const-string v2, "AdMonitorManager"
+
+    .line 332
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "after delete obsolete ad monitor record remains="
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Lcom/xiaomi/onetrack/a/a;->e()J
+
+    move-result-wide v4
+
+    invoke-virtual {v3, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     :cond_1
-    :goto_0
-    const/4 p0, 0x1
+    if-eqz v1, :cond_2
 
-    return p0
+    .line 338
+    :goto_0
+    :try_start_1
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception v2
+
+    goto :goto_2
+
+    :catch_0
+    move-exception v2
+
+    :try_start_2
+    const-string v3, "AdMonitorManager"
+
+    .line 335
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "remove obsolete ad monitor failed with "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v3, v2}, Lcom/xiaomi/onetrack/util/p;->d(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    if-eqz v1, :cond_2
+
+    goto :goto_0
+
+    .line 341
+    :cond_2
+    :goto_1
+    :try_start_3
+    monitor-exit v0
+
+    return-void
+
+    :goto_2
+    if-eqz v1, :cond_3
+
+    .line 338
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+
+    .line 340
+    :cond_3
+    throw v2
+
+    :catchall_1
+    move-exception v1
+
+    .line 341
+    monitor-exit v0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    throw v1
+.end method
+
+.method public e()J
+    .locals 2
+
+    .line 346
+    iget-object v0, p0, Lcom/xiaomi/onetrack/a/a;->i:Lcom/xiaomi/onetrack/a/a$a;
+
+    invoke-virtual {v0}, Lcom/xiaomi/onetrack/a/a$a;->getReadableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+
+    move-result-object v0
+
+    const-string v1, "monitor"
+
+    .line 347
+    invoke-static {v0, v1}, Landroid/database/DatabaseUtils;->queryNumEntries(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;)J
+
+    move-result-wide v0
+
+    return-wide v0
 .end method

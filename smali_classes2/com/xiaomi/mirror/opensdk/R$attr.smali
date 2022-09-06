@@ -15,33 +15,33 @@
 
 
 # static fields
-.field public static final thumbnailBorderColor:I = 0x7f040360
+.field public static final thumbnailBorderColor:I = 0x7f0405c2
 
-.field public static final thumbnailBorderLevel:I = 0x7f040361
+.field public static final thumbnailBorderLevel:I = 0x7f0405c3
 
-.field public static final thumbnailBorderRoundOval:I = 0x7f040362
+.field public static final thumbnailBorderRoundOval:I = 0x7f0405c4
 
-.field public static final thumbnailBorderWidth:I = 0x7f040363
+.field public static final thumbnailBorderWidth:I = 0x7f0405c5
 
-.field public static final thumbnailCountColor:I = 0x7f040364
+.field public static final thumbnailCountColor:I = 0x7f0405c6
 
-.field public static final thumbnailCountMaxSize:I = 0x7f040365
+.field public static final thumbnailCountMaxSize:I = 0x7f0405c7
 
-.field public static final thumbnailHeight:I = 0x7f040366
+.field public static final thumbnailHeight:I = 0x7f0405c8
 
-.field public static final thumbnailMaskColor:I = 0x7f040367
+.field public static final thumbnailMaskColor:I = 0x7f0405c9
 
-.field public static final thumbnailMaxWidth:I = 0x7f040368
+.field public static final thumbnailMaxWidth:I = 0x7f0405ca
 
-.field public static final thumbnailMinWidth:I = 0x7f040369
+.field public static final thumbnailMinWidth:I = 0x7f0405cb
 
-.field public static final thumbnailShadowLayerColor:I = 0x7f04036a
+.field public static final thumbnailShadowLayerColor:I = 0x7f0405cc
 
-.field public static final thumbnailShadowLayerRadius:I = 0x7f04036b
+.field public static final thumbnailShadowLayerRadius:I = 0x7f0405cd
 
-.field public static final thumbnailShadowLayerX:I = 0x7f04036c
+.field public static final thumbnailShadowLayerX:I = 0x7f0405ce
 
-.field public static final thumbnailShadowLayerY:I = 0x7f04036d
+.field public static final thumbnailShadowLayerY:I = 0x7f0405cf
 
 
 # direct methods

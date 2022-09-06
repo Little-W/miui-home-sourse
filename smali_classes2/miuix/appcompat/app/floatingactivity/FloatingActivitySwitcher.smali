@@ -18,14 +18,22 @@
     .end annotation
 .end field
 
-.field private mLastActivityPanel:Landroid/view/View;
+.field private mLastActivityPanel:Ljava/lang/ref/WeakReference;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/ref/WeakReference<",
+            "Landroid/view/View;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
 .method static getInstance()Lmiuix/appcompat/app/floatingactivity/FloatingActivitySwitcher;
     .locals 1
 
-    .line 26
+    .line 25
     sget-object v0, Lmiuix/appcompat/app/floatingactivity/FloatingActivitySwitcher;->sInstance:Lmiuix/appcompat/app/floatingactivity/FloatingActivitySwitcher;
 
     return-object v0
@@ -34,7 +42,7 @@
 .method public static onSaveInstanceState(Lmiuix/appcompat/app/AppCompatActivity;Landroid/os/Bundle;)V
     .locals 2
 
-    .line 61
+    .line 60
     invoke-static {}, Lmiuix/appcompat/app/floatingactivity/FloatingActivitySwitcher;->getInstance()Lmiuix/appcompat/app/floatingactivity/FloatingActivitySwitcher;
 
     move-result-object v0
@@ -45,7 +53,7 @@
 
     const-string v0, "floating_switcher_saved_key"
 
-    .line 62
+    .line 61
     invoke-static {}, Lmiuix/appcompat/app/floatingactivity/FloatingActivitySwitcher;->getInstance()Lmiuix/appcompat/app/floatingactivity/FloatingActivitySwitcher;
 
     move-result-object v1
@@ -65,17 +73,17 @@
 .method public clear()V
     .locals 1
 
-    .line 158
+    .line 157
     iget-object v0, p0, Lmiuix/appcompat/app/floatingactivity/FloatingActivitySwitcher;->mActivityCache:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
     const/4 v0, 0x0
 
-    .line 159
-    iput-object v0, p0, Lmiuix/appcompat/app/floatingactivity/FloatingActivitySwitcher;->mLastActivityPanel:Landroid/view/View;
+    .line 158
+    iput-object v0, p0, Lmiuix/appcompat/app/floatingactivity/FloatingActivitySwitcher;->mLastActivityPanel:Ljava/lang/ref/WeakReference;
 
-    .line 160
+    .line 159
     sput-object v0, Lmiuix/appcompat/app/floatingactivity/FloatingActivitySwitcher;->sInstance:Lmiuix/appcompat/app/floatingactivity/FloatingActivitySwitcher;
 
     return-void
@@ -92,7 +100,7 @@
         }
     .end annotation
 
-    .line 94
+    .line 93
     iget-object v0, p0, Lmiuix/appcompat/app/floatingactivity/FloatingActivitySwitcher;->mActivityCache:Ljava/util/ArrayList;
 
     return-object v0
@@ -103,7 +111,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 99
+    .line 98
     iget-object v0, p0, Lmiuix/appcompat/app/floatingactivity/FloatingActivitySwitcher;->mActivityCache:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
@@ -121,23 +129,37 @@
 .method getLastActivityPanel()Landroid/view/View;
     .locals 1
 
-    .line 150
-    iget-object v0, p0, Lmiuix/appcompat/app/floatingactivity/FloatingActivitySwitcher;->mLastActivityPanel:Landroid/view/View;
+    .line 149
+    iget-object v0, p0, Lmiuix/appcompat/app/floatingactivity/FloatingActivitySwitcher;->mLastActivityPanel:Ljava/lang/ref/WeakReference;
 
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/View;
+
+    :goto_0
     return-object v0
 .end method
 
 .method getPreviousActivity(Lmiuix/appcompat/app/AppCompatActivity;)Lmiuix/appcompat/app/AppCompatActivity;
     .locals 1
 
-    .line 105
+    .line 104
     invoke-virtual {p0, p1}, Lmiuix/appcompat/app/floatingactivity/FloatingActivitySwitcher;->getActivityIndex(Lmiuix/appcompat/app/AppCompatActivity;)I
 
     move-result p1
 
     if-lez p1, :cond_0
 
-    .line 107
+    .line 106
     iget-object v0, p0, Lmiuix/appcompat/app/floatingactivity/FloatingActivitySwitcher;->mActivityCache:Ljava/util/ArrayList;
 
     add-int/lit8 p1, p1, -0x1
@@ -161,12 +183,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 142
+    .line 141
     iget-object v0, p0, Lmiuix/appcompat/app/floatingactivity/FloatingActivitySwitcher;->mActivityCache:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 144
+    .line 143
     :cond_0
     iget-object p1, p0, Lmiuix/appcompat/app/floatingactivity/FloatingActivitySwitcher;->mActivityCache:Ljava/util/ArrayList;
 
@@ -176,7 +198,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 145
+    .line 144
     invoke-virtual {p0}, Lmiuix/appcompat/app/floatingactivity/FloatingActivitySwitcher;->clear()V
 
     :cond_1

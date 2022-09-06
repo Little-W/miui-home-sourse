@@ -51,3 +51,9 @@
 
     return-object v0
 .end method
+
+.method public onEnterHomeAnimFinish()V
+    .locals 0
+
+    return-void
+.end method

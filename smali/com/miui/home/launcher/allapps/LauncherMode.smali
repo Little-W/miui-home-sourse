@@ -407,7 +407,7 @@
 .method public getCurrentDefaultScreenId()J
     .locals 2
 
-    .line 231
+    .line 235
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCurrentDefaultScreenIdFromPreference()J
 
     move-result-wide v0
@@ -443,7 +443,7 @@
 .method public getIconSizeScale()F
     .locals 1
 
-    .line 227
+    .line 231
     invoke-static {}, Lcom/miui/home/launcher/common/PreferenceUtils;->getInstance()Lcom/miui/home/launcher/common/PreferenceUtils;
 
     move-result-object v0
@@ -596,16 +596,31 @@
 .method public getTransformationType(Landroid/content/Context;)Ljava/lang/String;
     .locals 2
 
-    const-string v0, "pref_key_transformation_type"
+    .line 213
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isFoldDevice()Z
+
+    move-result v0
 
     const/4 v1, 0x1
+
+    if-eqz v0, :cond_0
 
     .line 214
     invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
+    move-result-object p1
+
+    return-object p1
+
+    :cond_0
+    const-string v0, "pref_key_transformation_type"
+
+    .line 217
+    invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
     move-result-object v1
 
-    .line 213
+    .line 216
     invoke-static {p1, v0, v1}, Lcom/miui/home/launcher/common/PreferenceUtils;->getString(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -627,17 +642,17 @@
 .method public isHomeSupportIconSearchBar(Landroid/content/Context;)Z
     .locals 1
 
-    .line 222
+    .line 226
     sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     if-nez v0, :cond_0
 
-    .line 223
+    .line 227
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    const v0, 0x7f050016
+    const v0, 0x7f050017
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -659,7 +674,7 @@
 .method public isHomeSupportSearchBar(Landroid/content/Context;)Z
     .locals 0
 
-    .line 218
+    .line 222
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/allapps/LauncherMode;->isHomeSupportIconSearchBar(Landroid/content/Context;)Z
 
     move-result p1

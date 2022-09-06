@@ -35,7 +35,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;FFIIZ)V
     .locals 0
 
-    .line 8822
+    .line 8905
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$81;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iput p2, p0, Lcom/miui/home/launcher/Launcher$81;->val$alpha:F
@@ -62,10 +62,10 @@
 
     const-string v1, "change shortcutMenuLayer alpha and scale by FsCallback"
 
-    .line 8824
+    .line 8907
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8825
+    .line 8908
     iget-object v2, p0, Lcom/miui/home/launcher/Launcher$81;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iget v3, p0, Lcom/miui/home/launcher/Launcher$81;->val$alpha:F

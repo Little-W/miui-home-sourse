@@ -49,6 +49,13 @@
         <item>Noklusējums</item>
         <item>Klasisks</item>
     </string-array>
+    <string-array name="monochrome_color_entries">
+        <item>Noklusējums</item>
+        <item>Zils</item>
+        <item>Zaļš</item>
+        <item>Lillā</item>
+        <item>Brūns</item>
+    </string-array>
     <string-array name="transformation_entries">
         <item>Slaids</item>
         <item>Pārklājums</item>

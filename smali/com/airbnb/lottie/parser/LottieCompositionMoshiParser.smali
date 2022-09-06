@@ -17,7 +17,7 @@
 .method static constructor <clinit>()V
     .locals 11
 
-    const-string v0, "w"
+    const-string/jumbo v0, "w"
 
     const-string v1, "h"
 
@@ -27,7 +27,7 @@
 
     const-string v4, "fr"
 
-    const-string v5, "v"
+    const-string/jumbo v5, "v"
 
     const-string v6, "layers"
 
@@ -54,7 +54,7 @@
 
     const-string v2, "layers"
 
-    const-string v3, "w"
+    const-string/jumbo v3, "w"
 
     const-string v4, "h"
 

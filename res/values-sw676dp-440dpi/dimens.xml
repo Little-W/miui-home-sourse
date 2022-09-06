@@ -9,7 +9,12 @@
     <dimen name="desktop_mode_subtitle_width">168.0dip</dimen>
     <dimen name="edit_mode_application_checkbox_margin_end">0.0dip</dimen>
     <dimen name="edit_mode_application_checkbox_margin_top">0.0dip</dimen>
+    <dimen name="edit_mode_indicator_diff">25.0dip</dimen>
     <dimen name="edit_mode_thumbnail_home_icon_radius">15.269989dip</dimen>
+    <dimen name="edit_mode_thumbnail_widget_pick_bg_width">344.35938dip</dimen>
+    <item type="dimen" name="edit_mode_thumbnail_workspace_diff_ratio">2.0</item>
+    <dimen name="edit_mode_workspace_indicator_diff_height">11.0dip</dimen>
+    <dimen name="editing_entry_thumbnail_view_gap">23.199982dip</dimen>
     <dimen name="fold_edit_cellscreen_translationx_distance">16.449982dip</dimen>
     <dimen name="folder_content_margin_top">0.0dip</dimen>
     <dimen name="folder_content_padding_left">53.0dip</dimen>
@@ -17,10 +22,10 @@
     <dimen name="folder_edit_text_margin_left">73.0dip</dimen>
     <dimen name="folder_edit_text_text_size">32.0dip</dimen>
     <dimen name="folder_item_vertical_spacing">0.0dip</dimen>
-    <dimen name="hotseats_height_land">88.0dip</dimen>
+    <dimen name="hotseats_height">100.0dip</dimen>
+    <dimen name="hotseats_height_land">68.0dip</dimen>
     <dimen name="hotseats_height_navigation">80.0dip</dimen>
-    <dimen name="hotseats_margin_top">-8.0dip</dimen>
-    <dimen name="hotseats_padding_top">22.0dip</dimen>
+    <dimen name="hotseats_margin_top">18.0dip</dimen>
     <dimen name="icon_padding_top">4.0dip</dimen>
     <dimen name="icon_title_margin_top">-3.0dip</dimen>
     <dimen name="launcher_action_bar_title_size">20.0dip</dimen>
@@ -39,6 +44,7 @@
     <dimen name="selected_view_corners_radius">18.0dip</dimen>
     <dimen name="set_home_screen_gap_fold">16.699982dip</dimen>
     <dimen name="set_home_screen_gap_middle">32.0dip</dimen>
+    <dimen name="slide_bar_margin_top">12.0dip</dimen>
     <dimen name="workspace_cell_additional_padding_top_notch">20.899994dip</dimen>
     <dimen name="workspace_cell_padding_side">4.3499756dip</dimen>
     <dimen name="workspace_cell_padding_side_rotatable">4.3499756dip</dimen>

@@ -100,7 +100,7 @@
 
     iget-object v1, v1, Lcom/mi/globallauncher/view/TapTargetView$9;->val$context:Landroid/content/Context;
 
-    const-string v2, "window"
+    const-string/jumbo v2, "window"
 
     .line 555
     invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;

@@ -16,7 +16,7 @@
     .locals 0
 
     .line 10
-    invoke-static {p0}, Lcom/xiaomi/onetrack/f/c;->a(Landroid/content/Context;)Lcom/xiaomi/onetrack/OneTrack$NetType;
+    invoke-static {p0}, Lcom/xiaomi/onetrack/g/c;->a(Landroid/content/Context;)Lcom/xiaomi/onetrack/OneTrack$NetType;
 
     move-result-object p0
 

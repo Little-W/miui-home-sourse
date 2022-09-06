@@ -11,6 +11,9 @@
     }
 .end annotation
 
+.annotation runtime Ljava/lang/Deprecated;
+.end annotation
+
 
 # static fields
 .field static sInstance:Landroidx/lifecycle/ClassesInfoCache;
@@ -46,7 +49,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 35
+    .line 39
     new-instance v0, Landroidx/lifecycle/ClassesInfoCache;
 
     invoke-direct {v0}, Landroidx/lifecycle/ClassesInfoCache;-><init>()V
@@ -59,17 +62,17 @@
 .method constructor <init>()V
     .locals 1
 
-    .line 33
+    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 41
+    .line 45
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroidx/lifecycle/ClassesInfoCache;->mCallbackMap:Ljava/util/Map;
 
-    .line 42
+    .line 46
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -92,37 +95,37 @@
         }
     .end annotation
 
-    .line 105
+    .line 109
     invoke-virtual {p1}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 106
+    .line 110
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     if-eqz v0, :cond_0
 
-    .line 108
+    .line 112
     invoke-virtual {p0, v0}, Landroidx/lifecycle/ClassesInfoCache;->getInfo(Ljava/lang/Class;)Landroidx/lifecycle/ClassesInfoCache$CallbackInfo;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 110
+    .line 114
     iget-object v0, v0, Landroidx/lifecycle/ClassesInfoCache$CallbackInfo;->mHandlerToEvent:Ljava/util/Map;
 
     invoke-interface {v1, v0}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
 
-    .line 114
+    .line 118
     :cond_0
     invoke-virtual {p1}, Ljava/lang/Class;->getInterfaces()[Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 115
+    .line 119
     array-length v2, v0
 
     const/4 v3, 0x0
@@ -134,19 +137,19 @@
 
     aget-object v5, v0, v4
 
-    .line 116
+    .line 120
     invoke-virtual {p0, v5}, Landroidx/lifecycle/ClassesInfoCache;->getInfo(Ljava/lang/Class;)Landroidx/lifecycle/ClassesInfoCache$CallbackInfo;
 
     move-result-object v5
 
     iget-object v5, v5, Landroidx/lifecycle/ClassesInfoCache$CallbackInfo;->mHandlerToEvent:Ljava/util/Map;
 
-    .line 117
+    .line 121
     invoke-interface {v5}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v5
 
-    .line 116
+    .line 120
     invoke-interface {v5}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
@@ -164,7 +167,7 @@
 
     check-cast v6, Ljava/util/Map$Entry;
 
-    .line 118
+    .line 122
     invoke-interface {v6}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v7
@@ -191,13 +194,13 @@
 
     goto :goto_2
 
-    .line 122
+    .line 126
     :cond_3
     invoke-direct {p0, p1}, Landroidx/lifecycle/ClassesInfoCache;->getDeclaredMethods(Ljava/lang/Class;)[Ljava/lang/reflect/Method;
 
     move-result-object p2
 
-    .line 124
+    .line 128
     :goto_2
     array-length v0, p2
 
@@ -210,7 +213,7 @@
 
     aget-object v5, p2, v2
 
-    .line 125
+    .line 129
     const-class v6, Landroidx/lifecycle/OnLifecycleEvent;
 
     invoke-virtual {v5, v6}, Ljava/lang/reflect/Method;->getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
@@ -225,18 +228,18 @@
 
     goto :goto_6
 
-    .line 130
+    .line 134
     :cond_4
     invoke-virtual {v5}, Ljava/lang/reflect/Method;->getParameterTypes()[Ljava/lang/Class;
 
     move-result-object v4
 
-    .line 132
+    .line 136
     array-length v8, v4
 
     if-lez v8, :cond_6
 
-    .line 134
+    .line 138
     aget-object v8, v4, v3
 
     const-class v9, Landroidx/lifecycle/LifecycleOwner;
@@ -251,7 +254,7 @@
 
     goto :goto_4
 
-    .line 135
+    .line 139
     :cond_5
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -264,20 +267,20 @@
     :cond_6
     move v8, v3
 
-    .line 139
+    .line 143
     :goto_4
     invoke-interface {v6}, Landroidx/lifecycle/OnLifecycleEvent;->value()Landroidx/lifecycle/Lifecycle$Event;
 
     move-result-object v6
 
-    .line 141
+    .line 145
     array-length v9, v4
 
     const/4 v10, 0x2
 
     if-le v9, v7, :cond_9
 
-    .line 143
+    .line 147
     aget-object v8, v4, v7
 
     const-class v9, Landroidx/lifecycle/Lifecycle$Event;
@@ -288,7 +291,7 @@
 
     if-eqz v8, :cond_8
 
-    .line 147
+    .line 151
     sget-object v8, Landroidx/lifecycle/Lifecycle$Event;->ON_ANY:Landroidx/lifecycle/Lifecycle$Event;
 
     if-ne v6, v8, :cond_7
@@ -297,7 +300,7 @@
 
     goto :goto_5
 
-    .line 148
+    .line 152
     :cond_7
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -307,7 +310,7 @@
 
     throw p1
 
-    .line 144
+    .line 148
     :cond_8
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -317,19 +320,19 @@
 
     throw p1
 
-    .line 152
+    .line 156
     :cond_9
     :goto_5
     array-length v4, v4
 
     if-gt v4, v10, :cond_a
 
-    .line 155
+    .line 159
     new-instance v4, Landroidx/lifecycle/ClassesInfoCache$MethodReference;
 
     invoke-direct {v4, v8, v5}, Landroidx/lifecycle/ClassesInfoCache$MethodReference;-><init>(ILjava/lang/reflect/Method;)V
 
-    .line 156
+    .line 160
     invoke-direct {p0, v1, v4, v6, p1}, Landroidx/lifecycle/ClassesInfoCache;->verifyAndPutHandler(Ljava/util/Map;Landroidx/lifecycle/ClassesInfoCache$MethodReference;Landroidx/lifecycle/Lifecycle$Event;Ljava/lang/Class;)V
 
     move v4, v7
@@ -339,7 +342,7 @@
 
     goto :goto_3
 
-    .line 153
+    .line 157
     :cond_a
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -349,18 +352,18 @@
 
     throw p1
 
-    .line 158
+    .line 162
     :cond_b
     new-instance p2, Landroidx/lifecycle/ClassesInfoCache$CallbackInfo;
 
     invoke-direct {p2, v1}, Landroidx/lifecycle/ClassesInfoCache$CallbackInfo;-><init>(Ljava/util/Map;)V
 
-    .line 159
+    .line 163
     iget-object v0, p0, Landroidx/lifecycle/ClassesInfoCache;->mCallbackMap:Ljava/util/Map;
 
     invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 160
+    .line 164
     iget-object v0, p0, Landroidx/lifecycle/ClassesInfoCache;->mHasLifecycleMethods:Ljava/util/Map;
 
     invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -383,7 +386,7 @@
         }
     .end annotation
 
-    .line 70
+    .line 74
     :try_start_0
     invoke-virtual {p1}, Ljava/lang/Class;->getDeclaredMethods()[Ljava/lang/reflect/Method;
 
@@ -396,7 +399,7 @@
     :catch_0
     move-exception p1
 
-    .line 72
+    .line 76
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "The observer class has some methods that use newer APIs which are not available in the current OS version. Lifecycles cannot access even other methods so you should make sure that your observer classes only access framework classes that are available in your min API level OR use lifecycle:compiler annotation processor."
@@ -422,7 +425,7 @@
         }
     .end annotation
 
-    .line 91
+    .line 95
     invoke-interface {p1, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -435,11 +438,11 @@
 
     goto :goto_0
 
-    .line 93
+    .line 97
     :cond_0
     iget-object p1, p2, Landroidx/lifecycle/ClassesInfoCache$MethodReference;->mMethod:Ljava/lang/reflect/Method;
 
-    .line 94
+    .line 98
     new-instance p2, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -450,7 +453,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 95
+    .line 99
     invoke-virtual {p1}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
     move-result-object p1
@@ -491,7 +494,7 @@
     :goto_0
     if-nez v0, :cond_2
 
-    .line 100
+    .line 104
     invoke-interface {p1, p2, p3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_2
@@ -511,7 +514,7 @@
         }
     .end annotation
 
-    .line 81
+    .line 85
     iget-object v0, p0, Landroidx/lifecycle/ClassesInfoCache;->mCallbackMap:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -527,7 +530,7 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 85
+    .line 89
     invoke-direct {p0, p1, v0}, Landroidx/lifecycle/ClassesInfoCache;->createInfo(Ljava/lang/Class;[Ljava/lang/reflect/Method;)Landroidx/lifecycle/ClassesInfoCache$CallbackInfo;
 
     move-result-object p1
@@ -545,7 +548,7 @@
         }
     .end annotation
 
-    .line 45
+    .line 49
     iget-object v0, p0, Landroidx/lifecycle/ClassesInfoCache;->mHasLifecycleMethods:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -556,20 +559,20 @@
 
     if-eqz v0, :cond_0
 
-    .line 47
+    .line 51
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p1
 
     return p1
 
-    .line 50
+    .line 54
     :cond_0
     invoke-direct {p0, p1}, Landroidx/lifecycle/ClassesInfoCache;->getDeclaredMethods(Ljava/lang/Class;)[Ljava/lang/reflect/Method;
 
     move-result-object v0
 
-    .line 51
+    .line 55
     array-length v1, v0
 
     const/4 v2, 0x0
@@ -581,7 +584,7 @@
 
     aget-object v4, v0, v3
 
-    .line 52
+    .line 56
     const-class v5, Landroidx/lifecycle/OnLifecycleEvent;
 
     invoke-virtual {v4, v5}, Ljava/lang/reflect/Method;->getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
@@ -592,7 +595,7 @@
 
     if-eqz v4, :cond_1
 
-    .line 60
+    .line 64
     invoke-direct {p0, p1, v0}, Landroidx/lifecycle/ClassesInfoCache;->createInfo(Ljava/lang/Class;[Ljava/lang/reflect/Method;)Landroidx/lifecycle/ClassesInfoCache$CallbackInfo;
 
     const/4 p1, 0x1
@@ -604,7 +607,7 @@
 
     goto :goto_0
 
-    .line 64
+    .line 68
     :cond_2
     iget-object v0, p0, Landroidx/lifecycle/ClassesInfoCache;->mHasLifecycleMethods:Ljava/util/Map;
 

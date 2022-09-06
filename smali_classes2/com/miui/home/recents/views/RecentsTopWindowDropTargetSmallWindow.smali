@@ -305,7 +305,7 @@
     .line 57
     invoke-super {p0}, Landroid/widget/FrameLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a025e
+    const v0, 0x7f0a031f
 
     .line 58
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/RecentsTopWindowDropTargetSmallWindow;->findViewById(I)Landroid/view/View;
@@ -314,7 +314,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/views/RecentsTopWindowDropTargetSmallWindow;->mSmallwindowIcon:Landroid/view/View;
 
-    const v0, 0x7f0a01e4
+    const v0, 0x7f0a0295
 
     .line 59
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/RecentsTopWindowDropTargetSmallWindow;->findViewById(I)Landroid/view/View;
@@ -325,7 +325,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/views/RecentsTopWindowDropTargetSmallWindow;->mSmallwindowHoldText:Landroid/widget/TextView;
 
-    const v0, 0x7f0a025d
+    const v0, 0x7f0a031e
 
     .line 60
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/RecentsTopWindowDropTargetSmallWindow;->findViewById(I)Landroid/view/View;
@@ -527,7 +527,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f08059a
+    const v2, 0x7f080698
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -542,7 +542,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0603b3
+    const v2, 0x7f0605af
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -557,7 +557,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f10037f
+    const v2, 0x7f1103e1
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -570,7 +570,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0704ae
+    const v1, 0x7f07068f
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

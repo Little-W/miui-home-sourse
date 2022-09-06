@@ -2602,7 +2602,7 @@
     .line 3666
     new-instance v1, Ljava/text/SimpleDateFormat;
 
-    const-string v3, "yyyy:MM:dd HH:mm:ss"
+    const-string/jumbo v3, "yyyy:MM:dd HH:mm:ss"
 
     invoke-direct {v1, v3}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
@@ -2826,6 +2826,8 @@
     sput-object v0, Landroidx/exifinterface/media/ExifInterface;->sGpsTimestampPattern:Ljava/util/regex/Pattern;
 
     return-void
+
+    nop
 
     :array_0
     .array-data 4

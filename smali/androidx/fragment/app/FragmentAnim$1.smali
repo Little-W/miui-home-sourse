@@ -25,7 +25,7 @@
 .method constructor <init>(Landroidx/fragment/app/Fragment;)V
     .locals 0
 
-    .line 134
+    .line 150
     iput-object p1, p0, Landroidx/fragment/app/FragmentAnim$1;->val$fragment:Landroidx/fragment/app/Fragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onCancel()V
     .locals 3
 
-    .line 137
+    .line 153
     iget-object v0, p0, Landroidx/fragment/app/FragmentAnim$1;->val$fragment:Landroidx/fragment/app/Fragment;
 
     invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->getAnimatingAway()Landroid/view/View;
@@ -49,22 +49,22 @@
 
     if-eqz v0, :cond_0
 
-    .line 138
+    .line 154
     iget-object v0, p0, Landroidx/fragment/app/FragmentAnim$1;->val$fragment:Landroidx/fragment/app/Fragment;
 
     invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->getAnimatingAway()Landroid/view/View;
 
     move-result-object v0
 
-    .line 139
+    .line 155
     iget-object v2, p0, Landroidx/fragment/app/FragmentAnim$1;->val$fragment:Landroidx/fragment/app/Fragment;
 
     invoke-virtual {v2, v1}, Landroidx/fragment/app/Fragment;->setAnimatingAway(Landroid/view/View;)V
 
-    .line 140
+    .line 156
     invoke-virtual {v0}, Landroid/view/View;->clearAnimation()V
 
-    .line 142
+    .line 158
     :cond_0
     iget-object v0, p0, Landroidx/fragment/app/FragmentAnim$1;->val$fragment:Landroidx/fragment/app/Fragment;
 

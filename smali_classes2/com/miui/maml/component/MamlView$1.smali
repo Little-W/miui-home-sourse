@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/maml/component/MamlView;)V
     .locals 0
 
-    .line 79
+    .line 81
     iput-object p1, p0, Lcom/miui/maml/component/MamlView$1;->this$0:Lcom/miui/maml/component/MamlView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onCommand(Ljava/lang/String;Ljava/lang/Double;Ljava/lang/String;)V
     .locals 1
 
-    .line 82
+    .line 84
     iget-object v0, p0, Lcom/miui/maml/component/MamlView$1;->this$0:Lcom/miui/maml/component/MamlView;
 
     invoke-static {v0}, Lcom/miui/maml/component/MamlView;->access$000(Lcom/miui/maml/component/MamlView;)Ljava/lang/ref/WeakReference;
@@ -47,7 +47,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 83
+    .line 85
     iget-object v0, p0, Lcom/miui/maml/component/MamlView$1;->this$0:Lcom/miui/maml/component/MamlView;
 
     invoke-static {v0}, Lcom/miui/maml/component/MamlView;->access$000(Lcom/miui/maml/component/MamlView;)Ljava/lang/ref/WeakReference;
@@ -62,7 +62,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 85
+    .line 87
     invoke-interface {v0, p1, p2, p3}, Lcom/miui/maml/component/MamlView$OnExternCommandListener;->onCommand(Ljava/lang/String;Ljava/lang/Double;Ljava/lang/String;)V
 
     :cond_0

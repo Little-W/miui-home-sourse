@@ -73,14 +73,14 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/xiaomi/onetrack/c/d;->h(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/xiaomi/onetrack/d/d;->h(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private static a(Ljava/util/List;)Lorg/json/JSONArray;
+.method public static a(Ljava/util/List;)Lorg/json/JSONArray;
     .locals 7
     .annotation system Ldalvik/annotation/Throws;
         value = {

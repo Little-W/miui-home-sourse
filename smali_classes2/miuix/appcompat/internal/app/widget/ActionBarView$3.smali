@@ -1,9 +1,6 @@
 .class Lmiuix/appcompat/internal/app/widget/ActionBarView$3;
-.super Ljava/lang/Object;
+.super Lmiuix/animation/listener/TransitionListener;
 .source "ActionBarView.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
 
 # annotations
@@ -25,33 +22,87 @@
 .method constructor <init>(Lmiuix/appcompat/internal/app/widget/ActionBarView;)V
     .locals 0
 
-    .line 195
+    .line 196
     iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$3;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lmiuix/animation/listener/TransitionListener;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 2
+.method public onUpdate(Ljava/lang/Object;Ljava/util/Collection;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Object;",
+            "Ljava/util/Collection<",
+            "Lmiuix/animation/listener/UpdateInfo;",
+            ">;)V"
+        }
+    .end annotation
 
-    .line 197
+    .line 199
+    invoke-super {p0, p1, p2}, Lmiuix/animation/listener/TransitionListener;->onUpdate(Ljava/lang/Object;Ljava/util/Collection;)V
+
+    .line 200
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$3;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
-    iget-object p1, p1, Lmiuix/appcompat/internal/app/widget/ActionBarView;->mWindowCallback:Landroid/view/Window$Callback;
+    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->access$100(Lmiuix/appcompat/internal/app/widget/ActionBarView;)Lmiuix/springback/view/SpringBackLayout;
 
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$3;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    move-result-object p1
 
-    invoke-static {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->access$200(Lmiuix/appcompat/internal/app/widget/ActionBarView;)Lmiuix/appcompat/internal/view/menu/action/ActionMenuItem;
+    invoke-virtual {p1}, Lmiuix/springback/view/SpringBackLayout;->getAlpha()F
 
-    move-result-object v0
+    move-result p1
 
-    const/4 v1, 0x0
+    const/4 p2, 0x0
 
-    invoke-interface {p1, v1, v0}, Landroid/view/Window$Callback;->onMenuItemSelected(ILandroid/view/MenuItem;)Z
+    cmpl-float p1, p1, p2
 
+    const/16 p2, 0x8
+
+    if-nez p1, :cond_0
+
+    .line 201
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$3;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->access$100(Lmiuix/appcompat/internal/app/widget/ActionBarView;)Lmiuix/springback/view/SpringBackLayout;
+
+    move-result-object p1
+
+    invoke-virtual {p1, p2}, Lmiuix/springback/view/SpringBackLayout;->setVisibility(I)V
+
+    goto :goto_0
+
+    .line 202
+    :cond_0
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$3;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->access$100(Lmiuix/appcompat/internal/app/widget/ActionBarView;)Lmiuix/springback/view/SpringBackLayout;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lmiuix/springback/view/SpringBackLayout;->getVisibility()I
+
+    move-result p1
+
+    if-ne p1, p2, :cond_1
+
+    .line 203
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$3;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->access$100(Lmiuix/appcompat/internal/app/widget/ActionBarView;)Lmiuix/springback/view/SpringBackLayout;
+
+    move-result-object p1
+
+    const/4 p2, 0x0
+
+    invoke-virtual {p1, p2}, Lmiuix/springback/view/SpringBackLayout;->setVisibility(I)V
+
+    :cond_1
+    :goto_0
     return-void
 .end method

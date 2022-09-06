@@ -32,13 +32,13 @@
 .method constructor <init>(Landroidx/lifecycle/Lifecycle;)V
     .locals 0
 
-    .line 419
+    .line 449
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 420
+    .line 450
     iput-object p1, p0, Landroidx/activity/result/ActivityResultRegistry$LifecycleContainer;->mLifecycle:Landroidx/lifecycle/Lifecycle;
 
-    .line 421
+    .line 451
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -53,12 +53,12 @@
 .method addObserver(Landroidx/lifecycle/LifecycleEventObserver;)V
     .locals 1
 
-    .line 425
+    .line 455
     iget-object v0, p0, Landroidx/activity/result/ActivityResultRegistry$LifecycleContainer;->mLifecycle:Landroidx/lifecycle/Lifecycle;
 
     invoke-virtual {v0, p1}, Landroidx/lifecycle/Lifecycle;->addObserver(Landroidx/lifecycle/LifecycleObserver;)V
 
-    .line 426
+    .line 456
     iget-object v0, p0, Landroidx/activity/result/ActivityResultRegistry$LifecycleContainer;->mObservers:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -69,7 +69,7 @@
 .method clearObservers()V
     .locals 3
 
-    .line 430
+    .line 460
     iget-object v0, p0, Landroidx/activity/result/ActivityResultRegistry$LifecycleContainer;->mObservers:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -89,14 +89,14 @@
 
     check-cast v1, Landroidx/lifecycle/LifecycleEventObserver;
 
-    .line 431
+    .line 461
     iget-object v2, p0, Landroidx/activity/result/ActivityResultRegistry$LifecycleContainer;->mLifecycle:Landroidx/lifecycle/Lifecycle;
 
     invoke-virtual {v2, v1}, Landroidx/lifecycle/Lifecycle;->removeObserver(Landroidx/lifecycle/LifecycleObserver;)V
 
     goto :goto_0
 
-    .line 433
+    .line 463
     :cond_0
     iget-object v0, p0, Landroidx/activity/result/ActivityResultRegistry$LifecycleContainer;->mObservers:Ljava/util/ArrayList;
 

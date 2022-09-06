@@ -1111,9 +1111,9 @@
     .line 831
     new-instance p0, Lcom/google/firebase/crashlytics/internal/common/FileBackedNativeSessionFile;
 
-    const-string p3, "user_meta_file"
+    const-string/jumbo p3, "user_meta_file"
 
-    const-string v1, "user"
+    const-string/jumbo v1, "user"
 
     invoke-direct {p0, p3, v1, p2}, Lcom/google/firebase/crashlytics/internal/common/FileBackedNativeSessionFile;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/io/File;)V
 

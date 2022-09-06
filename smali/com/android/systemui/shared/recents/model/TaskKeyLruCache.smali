@@ -110,7 +110,7 @@
 .method public dump(Ljava/lang/String;Ljava/io/PrintWriter;)V
     .locals 3
 
-    .line 145
+    .line 134
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -125,7 +125,7 @@
 
     move-result-object v0
 
-    .line 147
+    .line 136
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string p1, "TaskKeyLruCache"
@@ -134,7 +134,7 @@
 
     const-string p1, " numEntries="
 
-    .line 148
+    .line 137
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-object p1, p0, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;->mKeys:Ljava/util/Map;
@@ -145,10 +145,10 @@
 
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(I)V
 
-    .line 149
+    .line 138
     invoke-virtual {p2}, Ljava/io/PrintWriter;->println()V
 
-    .line 150
+    .line 139
     iget-object p1, p0, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;->mKeys:Ljava/util/Map;
 
     invoke-interface {p1}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -159,7 +159,7 @@
 
     move-result-object p1
 
-    .line 151
+    .line 140
     :goto_0
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -167,7 +167,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 152
+    .line 141
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-object v1, p0, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;->mKeys:Ljava/util/Map;
@@ -191,12 +191,12 @@
 .method public final evictAll()V
     .locals 1
 
-    .line 135
+    .line 124
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;->mCache:Landroid/util/LruCache;
 
     invoke-virtual {v0}, Landroid/util/LruCache;->evictAll()V
 
-    .line 136
+    .line 125
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;->mKeys:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
@@ -240,7 +240,7 @@
         }
     .end annotation
 
-    .line 93
+    .line 82
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;->mKeys:Ljava/util/Map;
 
     iget v1, p1, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->id:I
@@ -257,7 +257,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 95
+    .line 84
     iget v1, v0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->stackId:I
 
     iget v2, p1, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->stackId:I
@@ -290,7 +290,7 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 102
+    .line 91
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;->remove(Lcom/android/systemui/shared/recents/model/Task$TaskKey;)V
 
@@ -298,7 +298,7 @@
 
     return-object p1
 
-    .line 108
+    .line 97
     :cond_1
     invoke-virtual {p0, p1}, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;->get(Lcom/android/systemui/shared/recents/model/Task$TaskKey;)Ljava/lang/Object;
 
@@ -340,7 +340,7 @@
 
     goto :goto_0
 
-    .line 117
+    .line 106
     :cond_0
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;->mKeys:Ljava/util/Map;
 
@@ -352,7 +352,7 @@
 
     invoke-interface {v0, v1, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 118
+    .line 107
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;->mCache:Landroid/util/LruCache;
 
     iget p1, p1, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->id:I
@@ -369,7 +369,7 @@
     :goto_0
     const-string v0, "TaskKeyLruCache"
 
-    .line 114
+    .line 103
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -398,7 +398,7 @@
 .method public final remove(I)V
     .locals 2
 
-    .line 129
+    .line 118
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;->mCache:Landroid/util/LruCache;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -407,7 +407,7 @@
 
     invoke-virtual {v0, v1}, Landroid/util/LruCache;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 130
+    .line 119
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;->mKeys:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -422,7 +422,7 @@
 .method public final remove(Lcom/android/systemui/shared/recents/model/Task$TaskKey;)V
     .locals 0
 
-    .line 124
+    .line 113
     iget p1, p1, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->id:I
 
     invoke-virtual {p0, p1}, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;->remove(I)V
@@ -433,50 +433,10 @@
 .method public final trimToSize(I)V
     .locals 1
 
-    .line 141
+    .line 130
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;->mCache:Landroid/util/LruCache;
 
     invoke-virtual {v0, p1}, Landroid/util/LruCache;->trimToSize(I)V
 
-    return-void
-.end method
-
-.method public final updateIfWindowModeModified(II)V
-    .locals 2
-
-    .line 78
-    iget-object v0, p0, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;->mCache:Landroid/util/LruCache;
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/util/LruCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    .line 79
-    instance-of v1, v0, Lcom/android/systemui/shared/recents/model/ThumbnailData;
-
-    if-eqz v1, :cond_0
-
-    .line 80
-    check-cast v0, Lcom/android/systemui/shared/recents/model/ThumbnailData;
-
-    .line 81
-    iget-object v1, v0, Lcom/android/systemui/shared/recents/model/ThumbnailData;->thumbnailInfo:Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;
-
-    if-eqz v1, :cond_0
-
-    iget-object v0, v0, Lcom/android/systemui/shared/recents/model/ThumbnailData;->thumbnailInfo:Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;
-
-    iget v0, v0, Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;->mWindowMod:I
-
-    if-eq p2, v0, :cond_0
-
-    .line 83
-    invoke-virtual {p0, p1}, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;->remove(I)V
-
-    :cond_0
     return-void
 .end method

@@ -219,7 +219,7 @@
     .line 110
     iget-object p2, p0, Lmiuix/appcompat/internal/view/menu/MenuDialogHelper;->mMenu:Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
-    invoke-virtual {p2, v1}, Lmiuix/appcompat/internal/view/menu/MenuBuilder;->close(Z)V
+    invoke-virtual {p2, v1}, Lmiuix/appcompat/internal/view/menu/MenuBuilder;->closeInternal(Z)V
 
     .line 111
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V

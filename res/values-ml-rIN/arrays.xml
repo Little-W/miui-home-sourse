@@ -49,6 +49,13 @@
         <item>ഡിഫോൾട്ട്</item>
         <item>ക്ലാസിക്</item>
     </string-array>
+    <string-array name="monochrome_color_entries">
+        <item>ഡിഫോൾട്ട്</item>
+        <item>നീല</item>
+        <item>പച്ച</item>
+        <item>പർപ്പിൾ</item>
+        <item>ബ്രൗൺ</item>
+    </string-array>
     <string-array name="transformation_entries">
         <item>സ്ലൈഡുചെയ്യുക</item>
         <item>ക്രോസ്ഫേഡ്</item>

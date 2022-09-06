@@ -47,21 +47,21 @@
     iput-boolean v0, p0, Lcom/xiaomi/onetrack/util/o;->k:Z
 
     .line 48
-    invoke-static {}, Lcom/xiaomi/onetrack/e/a;->a()Landroid/content/Context;
+    invoke-static {}, Lcom/xiaomi/onetrack/f/a;->a()Landroid/content/Context;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/xiaomi/onetrack/util/o;->h:Landroid/content/Context;
 
     .line 49
-    invoke-static {}, Lcom/xiaomi/onetrack/e/a;->b()Landroid/content/Context;
+    invoke-static {}, Lcom/xiaomi/onetrack/f/a;->b()Landroid/content/Context;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/xiaomi/onetrack/util/o;->i:Landroid/content/Context;
 
     .line 50
-    invoke-static {}, Lcom/xiaomi/onetrack/e/a;->e()Ljava/lang/String;
+    invoke-static {}, Lcom/xiaomi/onetrack/f/a;->e()Ljava/lang/String;
 
     move-result-object v0
 
@@ -223,7 +223,7 @@
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/xiaomi/onetrack/c/a;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3}, Lcom/xiaomi/onetrack/d/a;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 

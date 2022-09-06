@@ -48,8 +48,8 @@
 
     :array_0
     .array-data 4
-        0x7f0805ad
-        0x7f0805ae
+        0x7f0806ad
+        0x7f0806ae
     .end array-data
 .end method
 
@@ -95,7 +95,7 @@
 .method public adaptIconStyle(Landroid/view/View;)Z
     .locals 3
 
-    const v0, 0x7f0a0071
+    const v0, 0x7f0a0083
 
     .line 49
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;

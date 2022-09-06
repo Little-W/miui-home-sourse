@@ -27,7 +27,7 @@
 .method public constructor <init>(Lcom/google/android/filament/utils/Bool2;)V
     .locals 1
 
-    const-string v0, "v"
+    const-string/jumbo v0, "v"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -610,7 +610,7 @@
 .method public final setRg(Lcom/google/android/filament/utils/Bool2;)V
     .locals 1
 
-    const-string v0, "value"
+    const-string/jumbo v0, "value"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -643,7 +643,7 @@
 .method public final setSt(Lcom/google/android/filament/utils/Bool2;)V
     .locals 1
 
-    const-string v0, "value"
+    const-string/jumbo v0, "value"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -685,7 +685,7 @@
 .method public final setXy(Lcom/google/android/filament/utils/Bool2;)V
     .locals 1
 
-    const-string v0, "value"
+    const-string/jumbo v0, "value"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 

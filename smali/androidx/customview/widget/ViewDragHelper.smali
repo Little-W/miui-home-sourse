@@ -22,6 +22,8 @@
 
 .field private mCapturedView:Landroid/view/View;
 
+.field private final mDefaultEdgeSize:I
+
 .field private mDragState:I
 
 .field private mEdgeDragsInProgress:[I
@@ -73,6 +75,125 @@
     sput-object v0, Landroidx/customview/widget/ViewDragHelper;->sInterpolator:Landroid/view/animation/Interpolator;
 
     return-void
+.end method
+
+.method private constructor <init>(Landroid/content/Context;Landroid/view/ViewGroup;Landroidx/customview/widget/ViewDragHelper$Callback;)V
+    .locals 1
+
+    .line 385
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, -0x1
+
+    .line 120
+    iput v0, p0, Landroidx/customview/widget/ViewDragHelper;->mActivePointerId:I
+
+    .line 342
+    new-instance v0, Landroidx/customview/widget/ViewDragHelper$2;
+
+    invoke-direct {v0, p0}, Landroidx/customview/widget/ViewDragHelper$2;-><init>(Landroidx/customview/widget/ViewDragHelper;)V
+
+    iput-object v0, p0, Landroidx/customview/widget/ViewDragHelper;->mSetIdleRunnable:Ljava/lang/Runnable;
+
+    if-eqz p2, :cond_1
+
+    if-eqz p3, :cond_0
+
+    .line 393
+    iput-object p2, p0, Landroidx/customview/widget/ViewDragHelper;->mParentView:Landroid/view/ViewGroup;
+
+    .line 394
+    iput-object p3, p0, Landroidx/customview/widget/ViewDragHelper;->mCallback:Landroidx/customview/widget/ViewDragHelper$Callback;
+
+    .line 396
+    invoke-static {p1}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
+
+    move-result-object p2
+
+    .line 397
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p3
+
+    invoke-virtual {p3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p3
+
+    iget p3, p3, Landroid/util/DisplayMetrics;->density:F
+
+    const/high16 v0, 0x41a00000    # 20.0f
+
+    mul-float/2addr p3, v0
+
+    const/high16 v0, 0x3f000000    # 0.5f
+
+    add-float/2addr p3, v0
+
+    float-to-int p3, p3
+
+    .line 398
+    iput p3, p0, Landroidx/customview/widget/ViewDragHelper;->mDefaultEdgeSize:I
+
+    .line 399
+    iget p3, p0, Landroidx/customview/widget/ViewDragHelper;->mDefaultEdgeSize:I
+
+    iput p3, p0, Landroidx/customview/widget/ViewDragHelper;->mEdgeSize:I
+
+    .line 401
+    invoke-virtual {p2}, Landroid/view/ViewConfiguration;->getScaledTouchSlop()I
+
+    move-result p3
+
+    iput p3, p0, Landroidx/customview/widget/ViewDragHelper;->mTouchSlop:I
+
+    .line 402
+    invoke-virtual {p2}, Landroid/view/ViewConfiguration;->getScaledMaximumFlingVelocity()I
+
+    move-result p3
+
+    int-to-float p3, p3
+
+    iput p3, p0, Landroidx/customview/widget/ViewDragHelper;->mMaxVelocity:F
+
+    .line 403
+    invoke-virtual {p2}, Landroid/view/ViewConfiguration;->getScaledMinimumFlingVelocity()I
+
+    move-result p2
+
+    int-to-float p2, p2
+
+    iput p2, p0, Landroidx/customview/widget/ViewDragHelper;->mMinVelocity:F
+
+    .line 404
+    new-instance p2, Landroid/widget/OverScroller;
+
+    sget-object p3, Landroidx/customview/widget/ViewDragHelper;->sInterpolator:Landroid/view/animation/Interpolator;
+
+    invoke-direct {p2, p1, p3}, Landroid/widget/OverScroller;-><init>(Landroid/content/Context;Landroid/view/animation/Interpolator;)V
+
+    iput-object p2, p0, Landroidx/customview/widget/ViewDragHelper;->mScroller:Landroid/widget/OverScroller;
+
+    return-void
+
+    .line 390
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "Callback may not be null"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    .line 387
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "Parent view may not be null"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 .method private checkNewEdgeDrag(FFII)Z
@@ -741,6 +862,47 @@
     float-to-int p1, p2
 
     return p1
+.end method
+
+.method public static create(Landroid/view/ViewGroup;FLandroidx/customview/widget/ViewDragHelper$Callback;)Landroidx/customview/widget/ViewDragHelper;
+    .locals 1
+
+    .line 371
+    invoke-static {p0, p2}, Landroidx/customview/widget/ViewDragHelper;->create(Landroid/view/ViewGroup;Landroidx/customview/widget/ViewDragHelper$Callback;)Landroidx/customview/widget/ViewDragHelper;
+
+    move-result-object p0
+
+    .line 372
+    iget p2, p0, Landroidx/customview/widget/ViewDragHelper;->mTouchSlop:I
+
+    int-to-float p2, p2
+
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    div-float/2addr v0, p1
+
+    mul-float/2addr p2, v0
+
+    float-to-int p1, p2
+
+    iput p1, p0, Landroidx/customview/widget/ViewDragHelper;->mTouchSlop:I
+
+    return-object p0
+.end method
+
+.method public static create(Landroid/view/ViewGroup;Landroidx/customview/widget/ViewDragHelper$Callback;)Landroidx/customview/widget/ViewDragHelper;
+    .locals 2
+
+    .line 357
+    new-instance v0, Landroidx/customview/widget/ViewDragHelper;
+
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1, p0, p1}, Landroidx/customview/widget/ViewDragHelper;-><init>(Landroid/content/Context;Landroid/view/ViewGroup;Landroidx/customview/widget/ViewDragHelper$Callback;)V
+
+    return-object v0
 .end method
 
 .method private dispatchViewReleased(FF)V
@@ -1977,6 +2139,15 @@
     return-object v0
 .end method
 
+.method public getDefaultEdgeSize()I
+    .locals 1
+
+    .line 488
+    iget v0, p0, Landroidx/customview/widget/ViewDragHelper;->mDefaultEdgeSize:I
+
+    return v0
+.end method
+
 .method public getEdgeSize()I
     .locals 1
 
@@ -2610,6 +2781,15 @@
     iput-object p1, p0, Landroidx/customview/widget/ViewDragHelper;->mCapturedView:Landroid/view/View;
 
     :cond_0
+    return-void
+.end method
+
+.method public setEdgeSize(I)V
+    .locals 0
+
+    .line 475
+    iput p1, p0, Landroidx/customview/widget/ViewDragHelper;->mEdgeSize:I
+
     return-void
 .end method
 

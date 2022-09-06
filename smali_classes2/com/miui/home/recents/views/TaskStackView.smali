@@ -1527,7 +1527,7 @@
     .line 1081
     iget-object p1, p0, Lcom/miui/home/recents/views/TaskStackView;->mInflater:Landroid/view/LayoutInflater;
 
-    const v0, 0x7f0d011e
+    const v0, 0x7f0d0162
 
     const/4 v1, 0x0
 
@@ -3157,7 +3157,7 @@
 
     aput-object v2, v1, v3
 
-    const v2, 0x7f10002b
+    const v2, 0x7f11002b
 
     invoke-virtual {v0, v2, v1}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -3559,7 +3559,7 @@
 
     new-instance p3, Lcom/miui/home/recents/messages/AllTaskViewsDismissedEvent;
 
-    const p4, 0x7f100375
+    const p4, 0x7f1103d7
 
     const/4 v0, 0x0
 
@@ -3666,7 +3666,7 @@
 
     new-instance v1, Lcom/miui/home/recents/messages/AllTaskViewsDismissedEvent;
 
-    const v3, 0x7f100375
+    const v3, 0x7f1103d7
 
     .line 1058
     invoke-virtual {p1}, Lcom/android/systemui/shared/recents/model/TaskStack;->getTaskCount()I

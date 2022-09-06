@@ -85,7 +85,7 @@
 .method public static getDefaultImpl()Landroid/support/v4/os/IResultReceiver;
     .locals 1
 
-    .line 127
+    .line 133
     sget-object v0, Landroid/support/v4/os/IResultReceiver$Stub$Proxy;->sDefaultImpl:Landroid/support/v4/os/IResultReceiver;
 
     return-object v0
@@ -94,14 +94,14 @@
 .method public static setDefaultImpl(Landroid/support/v4/os/IResultReceiver;)Z
     .locals 1
 
-    .line 120
+    .line 123
     sget-object v0, Landroid/support/v4/os/IResultReceiver$Stub$Proxy;->sDefaultImpl:Landroid/support/v4/os/IResultReceiver;
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_1
 
     if-eqz p0, :cond_0
 
-    .line 121
+    .line 127
     sput-object p0, Landroid/support/v4/os/IResultReceiver$Stub$Proxy;->sDefaultImpl:Landroid/support/v4/os/IResultReceiver;
 
     const/4 p0, 0x1
@@ -112,6 +112,16 @@
     const/4 p0, 0x0
 
     return p0
+
+    .line 124
+    :cond_1
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string v0, "setDefaultImpl() called twice"
+
+    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
 .end method
 
 

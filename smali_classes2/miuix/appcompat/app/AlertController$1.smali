@@ -25,7 +25,7 @@
 .method constructor <init>(Lmiuix/appcompat/app/AlertController;)V
     .locals 0
 
-    .line 183
+    .line 187
     iput-object p1, p0, Lmiuix/appcompat/app/AlertController$1;->this$0:Lmiuix/appcompat/app/AlertController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,10 +38,10 @@
 .method public onClick(Landroid/view/View;)V
     .locals 3
 
-    .line 187
+    .line 191
     sget v0, Lmiuix/view/HapticFeedbackConstants;->MIUI_TAP_LIGHT:I
 
-    .line 188
+    .line 192
     iget-object v1, p0, Lmiuix/appcompat/app/AlertController$1;->this$0:Lmiuix/appcompat/app/AlertController;
 
     iget-object v1, v1, Lmiuix/appcompat/app/AlertController;->mButtonPositive:Landroid/widget/Button;
@@ -54,7 +54,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 189
+    .line 193
     iget-object v0, p0, Lmiuix/appcompat/app/AlertController$1;->this$0:Lmiuix/appcompat/app/AlertController;
 
     iget-object v0, v0, Lmiuix/appcompat/app/AlertController;->mButtonPositiveMessage:Landroid/os/Message;
@@ -63,7 +63,7 @@
 
     move-result-object v0
 
-    .line 190
+    .line 194
     sget v1, Lmiuix/view/HapticFeedbackConstants;->MIUI_TAP_NORMAL:I
 
     move v2, v1
@@ -74,7 +74,7 @@
 
     goto :goto_0
 
-    .line 191
+    .line 195
     :cond_0
     iget-object v1, p0, Lmiuix/appcompat/app/AlertController$1;->this$0:Lmiuix/appcompat/app/AlertController;
 
@@ -88,7 +88,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 192
+    .line 196
     iget-object v1, p0, Lmiuix/appcompat/app/AlertController$1;->this$0:Lmiuix/appcompat/app/AlertController;
 
     iget-object v1, v1, Lmiuix/appcompat/app/AlertController;->mButtonNegativeMessage:Landroid/os/Message;
@@ -99,7 +99,7 @@
 
     goto :goto_0
 
-    .line 193
+    .line 197
     :cond_1
     iget-object v1, p0, Lmiuix/appcompat/app/AlertController$1;->this$0:Lmiuix/appcompat/app/AlertController;
 
@@ -113,7 +113,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 194
+    .line 198
     iget-object v1, p0, Lmiuix/appcompat/app/AlertController$1;->this$0:Lmiuix/appcompat/app/AlertController;
 
     iget-object v1, v1, Lmiuix/appcompat/app/AlertController;->mButtonNeutralMessage:Landroid/os/Message;
@@ -127,16 +127,16 @@
     :cond_2
     const/4 v1, 0x0
 
-    .line 198
+    .line 202
     :goto_0
     invoke-static {p1, v0}, Lmiuix/view/HapticCompat;->performHapticFeedback(Landroid/view/View;I)Z
 
     if-eqz v1, :cond_3
 
-    .line 200
+    .line 204
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 204
+    .line 208
     :cond_3
     iget-object p1, p0, Lmiuix/appcompat/app/AlertController$1;->this$0:Lmiuix/appcompat/app/AlertController;
 
@@ -152,7 +152,7 @@
 
     move-result-object p1
 
-    .line 205
+    .line 209
     invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
 
     return-void

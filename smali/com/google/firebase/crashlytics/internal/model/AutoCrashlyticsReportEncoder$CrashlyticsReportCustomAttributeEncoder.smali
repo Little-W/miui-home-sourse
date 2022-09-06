@@ -54,7 +54,7 @@
 
     sput-object v0, Lcom/google/firebase/crashlytics/internal/model/AutoCrashlyticsReportEncoder$CrashlyticsReportCustomAttributeEncoder;->KEY_DESCRIPTOR:Lcom/google/firebase/encoders/FieldDescriptor;
 
-    const-string v0, "value"
+    const-string/jumbo v0, "value"
 
     .line 465
     invoke-static {v0}, Lcom/google/firebase/encoders/FieldDescriptor;->of(Ljava/lang/String;)Lcom/google/firebase/encoders/FieldDescriptor;

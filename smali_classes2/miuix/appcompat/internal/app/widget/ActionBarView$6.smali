@@ -7,8 +7,8 @@
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lmiuix/appcompat/internal/app/widget/ActionBarView;->initImmersionMore(ILmiuix/appcompat/app/ActionBarDelegateImpl;)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lmiuix/appcompat/internal/app/widget/ActionBarView;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,21 +20,13 @@
 # instance fields
 .field final synthetic this$0:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
-.field final synthetic val$actionBarDelegate:Lmiuix/appcompat/app/ActionBarDelegateImpl;
-
-.field final synthetic val$moreButton:Landroid/view/View;
-
 
 # direct methods
-.method constructor <init>(Lmiuix/appcompat/internal/app/widget/ActionBarView;Lmiuix/appcompat/app/ActionBarDelegateImpl;Landroid/view/View;)V
+.method constructor <init>(Lmiuix/appcompat/internal/app/widget/ActionBarView;)V
     .locals 0
 
-    .line 430
+    .line 232
     iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$6;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    iput-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$6;->val$actionBarDelegate:Lmiuix/appcompat/app/ActionBarDelegateImpl;
-
-    iput-object p3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$6;->val$moreButton:Landroid/view/View;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -46,14 +38,20 @@
 .method public onClick(Landroid/view/View;)V
     .locals 2
 
-    .line 433
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$6;->val$actionBarDelegate:Lmiuix/appcompat/app/ActionBarDelegateImpl;
+    .line 234
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$6;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$6;->val$moreButton:Landroid/view/View;
+    iget-object p1, p1, Lmiuix/appcompat/internal/app/widget/ActionBarView;->mWindowCallback:Landroid/view/Window$Callback;
 
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$6;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$6;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
-    invoke-virtual {p1, v0, v1}, Lmiuix/appcompat/app/ActionBarDelegateImpl;->showImmersionMenu(Landroid/view/View;Landroid/view/ViewGroup;)V
+    invoke-static {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->access$400(Lmiuix/appcompat/internal/app/widget/ActionBarView;)Lmiuix/appcompat/internal/view/menu/action/ActionMenuItem;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-interface {p1, v1, v0}, Landroid/view/Window$Callback;->onMenuItemSelected(ILandroid/view/MenuItem;)Z
 
     return-void
 .end method

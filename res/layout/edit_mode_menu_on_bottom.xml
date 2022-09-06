@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.miui.home.launcher.FitSystemWindowView android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.miui.home.launcher.WorkspaceThumbnailView android:layout_gravity="bottom" android:id="@id/workspace_preview" android:visibility="invisible" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.miui.home.launcher.EditingEntryThumbnailView android:layout_gravity="bottom" android:id="@id/editing_entry_view" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginStart="@dimen/editing_entry_thumbnail_view_margin_left_right" android:layout_marginEnd="@dimen/editing_entry_thumbnail_view_margin_left_right" />
+    <include android:id="@id/default_screen_preview" android:visibility="gone" layout="@layout/default_screen_preview" />
+</com.miui.home.launcher.FitSystemWindowView>

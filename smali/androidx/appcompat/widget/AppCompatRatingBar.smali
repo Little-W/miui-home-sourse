@@ -11,7 +11,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    .line 44
+    .line 46
     sget v0, Landroidx/appcompat/R$attr;->ratingBarStyle:I
 
     invoke-direct {p0, p1, p2, v0}, Landroidx/appcompat/widget/AppCompatRatingBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -22,17 +22,24 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
-    .line 48
+    .line 51
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/RatingBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 50
+    .line 53
+    invoke-virtual {p0}, Landroidx/appcompat/widget/AppCompatRatingBar;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    invoke-static {p0, p1}, Landroidx/appcompat/widget/ThemeUtils;->checkAppCompatTheme(Landroid/view/View;Landroid/content/Context;)V
+
+    .line 55
     new-instance p1, Landroidx/appcompat/widget/AppCompatProgressBarHelper;
 
     invoke-direct {p1, p0}, Landroidx/appcompat/widget/AppCompatProgressBarHelper;-><init>(Landroid/widget/ProgressBar;)V
 
     iput-object p1, p0, Landroidx/appcompat/widget/AppCompatRatingBar;->mAppCompatProgressBarHelper:Landroidx/appcompat/widget/AppCompatProgressBarHelper;
 
-    .line 51
+    .line 56
     iget-object p1, p0, Landroidx/appcompat/widget/AppCompatRatingBar;->mAppCompatProgressBarHelper:Landroidx/appcompat/widget/AppCompatProgressBarHelper;
 
     invoke-virtual {p1, p2, p3}, Landroidx/appcompat/widget/AppCompatProgressBarHelper;->loadFromAttributes(Landroid/util/AttributeSet;I)V
@@ -47,11 +54,11 @@
 
     monitor-enter p0
 
-    .line 56
+    .line 61
     :try_start_0
     invoke-super {p0, p1, p2}, Landroid/widget/RatingBar;->onMeasure(II)V
 
-    .line 58
+    .line 63
     iget-object p2, p0, Landroidx/appcompat/widget/AppCompatRatingBar;->mAppCompatProgressBarHelper:Landroidx/appcompat/widget/AppCompatProgressBarHelper;
 
     invoke-virtual {p2}, Landroidx/appcompat/widget/AppCompatProgressBarHelper;->getSampleTile()Landroid/graphics/Bitmap;
@@ -60,7 +67,7 @@
 
     if-eqz p2, :cond_0
 
-    .line 60
+    .line 65
     invoke-virtual {p2}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result p2
@@ -73,22 +80,22 @@
 
     const/4 v0, 0x0
 
-    .line 61
+    .line 66
     invoke-static {p2, p1, v0}, Landroid/view/View;->resolveSizeAndState(III)I
 
     move-result p1
 
-    .line 62
+    .line 67
     invoke-virtual {p0}, Landroidx/appcompat/widget/AppCompatRatingBar;->getMeasuredHeight()I
 
     move-result p2
 
-    .line 61
+    .line 66
     invoke-virtual {p0, p1, p2}, Landroidx/appcompat/widget/AppCompatRatingBar;->setMeasuredDimension(II)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 64
+    .line 69
     :cond_0
     monitor-exit p0
 

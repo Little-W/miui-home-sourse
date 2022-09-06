@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/SearchBarTransferLayout;)V
     .locals 0
 
-    .line 330
+    .line 331
     iput-object p1, p0, Lcom/miui/home/launcher/SearchBarTransferLayout$2;->this$0:Lcom/miui/home/launcher/SearchBarTransferLayout;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 333
+    .line 334
     iget-object p1, p0, Lcom/miui/home/launcher/SearchBarTransferLayout$2;->this$0:Lcom/miui/home/launcher/SearchBarTransferLayout;
 
     invoke-static {p1}, Lcom/miui/home/launcher/SearchBarTransferLayout;->access$600(Lcom/miui/home/launcher/SearchBarTransferLayout;)Landroid/widget/TextView;

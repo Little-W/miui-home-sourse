@@ -49,6 +49,13 @@
         <item>"ডিফ'ল্ট"</item>
         <item>ধ্ৰুপদী</item>
     </string-array>
+    <string-array name="monochrome_color_entries">
+        <item>"ডিফ'ল্ট"</item>
+        <item>নীলা</item>
+        <item>সেউজীয়া</item>
+        <item>বেঙুনীয়া</item>
+        <item>মটীয়া</item>
+    </string-array>
     <string-array name="transformation_entries">
         <item>শ্লাইড</item>
         <item>ক্ৰছফেড</item>

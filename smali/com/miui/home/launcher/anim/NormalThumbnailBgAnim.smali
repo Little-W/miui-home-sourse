@@ -271,7 +271,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0700fd
+    const v1, 0x7f070135
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -319,7 +319,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0700eb
+    const v1, 0x7f070123
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -334,7 +334,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0700f5
+    const v1, 0x7f07012d
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -349,7 +349,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0700fe
+    const v1, 0x7f070136
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -482,7 +482,7 @@
 .end method
 
 .method protected initColor()V
-    .locals 2
+    .locals 3
 
     .line 98
     iget-object v0, p0, Lcom/miui/home/launcher/anim/NormalThumbnailBgAnim;->mTargetView:Landroid/view/View;
@@ -496,18 +496,18 @@
 
     move-result v1
 
+    const v2, 0x7f0600e3
+
     if-eqz v1, :cond_0
 
-    const v1, 0x7f0600bc
-
     .line 100
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v1
 
     iput v1, p0, Lcom/miui/home/launcher/anim/NormalThumbnailBgAnim;->mBorderlineNormalColor:I
 
-    const v1, 0x7f0600be
+    const v1, 0x7f0600e6
 
     .line 101
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
@@ -516,7 +516,7 @@
 
     iput v1, p0, Lcom/miui/home/launcher/anim/NormalThumbnailBgAnim;->mBorderlineSelectedColor:I
 
-    const v1, 0x7f0600ba
+    const v1, 0x7f0600e2
 
     .line 102
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
@@ -525,7 +525,7 @@
 
     iput v1, p0, Lcom/miui/home/launcher/anim/NormalThumbnailBgAnim;->mBackgroundNormalColor:I
 
-    const v1, 0x7f0600b8
+    const v1, 0x7f0600e0
 
     .line 103
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
@@ -536,17 +536,15 @@
 
     goto :goto_0
 
-    :cond_0
-    const v1, 0x7f0600bb
-
     .line 105
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
+    :cond_0
+    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v1
 
     iput v1, p0, Lcom/miui/home/launcher/anim/NormalThumbnailBgAnim;->mBorderlineNormalColor:I
 
-    const v1, 0x7f0600bd
+    const v1, 0x7f0600e5
 
     .line 106
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
@@ -555,7 +553,7 @@
 
     iput v1, p0, Lcom/miui/home/launcher/anim/NormalThumbnailBgAnim;->mBorderlineSelectedColor:I
 
-    const v1, 0x7f0600b9
+    const v1, 0x7f0600e1
 
     .line 107
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
@@ -564,7 +562,7 @@
 
     iput v1, p0, Lcom/miui/home/launcher/anim/NormalThumbnailBgAnim;->mBackgroundNormalColor:I
 
-    const v1, 0x7f0600b7
+    const v1, 0x7f0600df
 
     .line 108
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I

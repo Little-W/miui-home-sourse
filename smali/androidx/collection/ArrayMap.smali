@@ -52,6 +52,15 @@
     return-void
 .end method
 
+.method public constructor <init>(Landroidx/collection/SimpleArrayMap;)V
+    .locals 0
+
+    .line 71
+    invoke-direct {p0, p1}, Landroidx/collection/SimpleArrayMap;-><init>(Landroidx/collection/SimpleArrayMap;)V
+
+    return-void
+.end method
+
 .method private getCollection()Landroidx/collection/MapCollections;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;

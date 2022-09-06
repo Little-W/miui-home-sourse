@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/FolderIcon;)V
     .locals 0
 
-    .line 455
+    .line 463
     iput-object p1, p0, Lcom/miui/home/launcher/FolderIcon$9;->this$0:Lcom/miui/home/launcher/FolderIcon;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 3
 
-    .line 458
+    .line 466
     iget-object v0, p0, Lcom/miui/home/launcher/FolderIcon$9;->this$0:Lcom/miui/home/launcher/FolderIcon;
 
     invoke-static {v0}, Lcom/miui/home/launcher/FolderIcon;->access$200(Lcom/miui/home/launcher/FolderIcon;)Landroid/animation/ValueAnimator;
@@ -47,7 +47,7 @@
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
 
-    .line 459
+    .line 467
     iget-object v0, p0, Lcom/miui/home/launcher/FolderIcon$9;->this$0:Lcom/miui/home/launcher/FolderIcon;
 
     invoke-static {v0}, Lcom/miui/home/launcher/FolderIcon;->access$900(Lcom/miui/home/launcher/FolderIcon;)Lcom/miui/home/launcher/Launcher;
@@ -60,7 +60,7 @@
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/FolderCling;->prepareAutoOpening()V
 
-    .line 460
+    .line 468
     iget-object v0, p0, Lcom/miui/home/launcher/FolderIcon$9;->this$0:Lcom/miui/home/launcher/FolderIcon;
 
     invoke-static {v0}, Lcom/miui/home/launcher/FolderIcon;->access$900(Lcom/miui/home/launcher/FolderIcon;)Lcom/miui/home/launcher/Launcher;

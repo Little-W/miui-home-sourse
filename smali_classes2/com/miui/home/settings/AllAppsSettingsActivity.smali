@@ -33,7 +33,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f05000e
+    const v2, 0x7f05000d
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -56,19 +56,19 @@
 
     if-eqz v0, :cond_0
 
-    const v1, 0x7f10017f
+    const v1, 0x7f110188
 
     goto :goto_0
 
     :cond_0
     if-eqz p1, :cond_1
 
-    const v1, 0x7f100240
+    const v1, 0x7f11024f
 
     goto :goto_0
 
     :cond_1
-    const v1, 0x7f10005b
+    const v1, 0x7f11005b
 
     .line 34
     :goto_0
@@ -112,12 +112,7 @@
     .line 42
     invoke-virtual {v1, p1, v2}, Landroidx/fragment/app/FragmentTransaction;->replace(ILandroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentTransaction;
 
-    const/4 p1, 0x0
-
     .line 43
-    invoke-virtual {v1, p1}, Landroidx/fragment/app/FragmentTransaction;->addToBackStack(Ljava/lang/String;)Landroidx/fragment/app/FragmentTransaction;
-
-    .line 44
     invoke-virtual {v1}, Landroidx/fragment/app/FragmentTransaction;->commit()I
 
     return-void

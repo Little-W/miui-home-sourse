@@ -29,12 +29,12 @@
     .line 233
     iget-boolean v0, p0, Lcom/xiaomi/onetrack/OneTrack$1;->a:Z
 
-    invoke-static {v0}, Lcom/xiaomi/onetrack/b/h;->a(Z)V
+    invoke-static {v0}, Lcom/xiaomi/onetrack/c/i;->a(Z)V
 
     .line 234
     iget-boolean v0, p0, Lcom/xiaomi/onetrack/OneTrack$1;->a:Z
 
-    invoke-static {v0}, Lcom/xiaomi/onetrack/b/h;->b(Z)V
+    invoke-static {v0}, Lcom/xiaomi/onetrack/c/i;->b(Z)V
 
     return-void
 .end method

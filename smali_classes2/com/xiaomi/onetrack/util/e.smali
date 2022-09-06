@@ -10,7 +10,7 @@
 .method constructor <init>(Lcom/xiaomi/onetrack/util/d;Landroid/os/Looper;)V
     .locals 0
 
-    .line 38
+    .line 40
     iput-object p1, p0, Lcom/xiaomi/onetrack/util/e;->a:Lcom/xiaomi/onetrack/util/d;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -23,7 +23,7 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
-    .line 41
+    .line 43
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/16 v1, 0x64
@@ -32,7 +32,7 @@
 
     goto :goto_0
 
-    .line 43
+    .line 45
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/onetrack/util/e;->a:Lcom/xiaomi/onetrack/util/d;
 

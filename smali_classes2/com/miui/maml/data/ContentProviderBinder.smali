@@ -75,7 +75,7 @@
 
     const/4 v0, 0x0
 
-    .line 318
+    .line 319
     invoke-direct {p0, v0, p1}, Lcom/miui/maml/data/ContentProviderBinder;-><init>(Lorg/w3c/dom/Element;Lcom/miui/maml/ScreenElementRoot;)V
 
     return-void
@@ -99,13 +99,6 @@
     .line 77
     iput-boolean v0, p0, Lcom/miui/maml/data/ContentProviderBinder;->mAllowReg:Z
 
-    .line 81
-    new-instance v1, Lcom/miui/maml/data/ContentProviderBinder$ChangeObserver;
-
-    invoke-direct {v1, p0}, Lcom/miui/maml/data/ContentProviderBinder$ChangeObserver;-><init>(Lcom/miui/maml/data/ContentProviderBinder;)V
-
-    iput-object v1, p0, Lcom/miui/maml/data/ContentProviderBinder;->mChangeObserver:Lcom/miui/maml/data/ContentProviderBinder$ChangeObserver;
-
     const/4 v1, -0x1
 
     .line 92
@@ -125,9 +118,16 @@
 
     iput-object p2, p0, Lcom/miui/maml/data/ContentProviderBinder;->mHandler:Landroid/os/Handler;
 
+    .line 313
+    new-instance p2, Lcom/miui/maml/data/ContentProviderBinder$ChangeObserver;
+
+    invoke-direct {p2, p0}, Lcom/miui/maml/data/ContentProviderBinder$ChangeObserver;-><init>(Lcom/miui/maml/data/ContentProviderBinder;)V
+
+    iput-object p2, p0, Lcom/miui/maml/data/ContentProviderBinder;->mChangeObserver:Lcom/miui/maml/data/ContentProviderBinder$ChangeObserver;
+
     if-eqz p1, :cond_0
 
-    .line 314
+    .line 315
     invoke-direct {p0, p1}, Lcom/miui/maml/data/ContentProviderBinder;->load(Lorg/w3c/dom/Element;)V
 
     :cond_0
@@ -173,14 +173,14 @@
 .method private checkUpdate()V
     .locals 6
 
-    .line 740
+    .line 748
     iget v0, p0, Lcom/miui/maml/data/ContentProviderBinder;->mUpdateInterval:I
 
     if-gtz v0, :cond_0
 
     return-void
 
-    .line 742
+    .line 750
     :cond_0
     iget-object v0, p0, Lcom/miui/maml/data/ContentProviderBinder;->mHandler:Landroid/os/Handler;
 
@@ -188,7 +188,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 743
+    .line 751
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -197,7 +197,7 @@
 
     sub-long/2addr v0, v2
 
-    .line 744
+    .line 752
     iget v2, p0, Lcom/miui/maml/data/ContentProviderBinder;->mUpdateInterval:I
 
     mul-int/lit16 v2, v2, 0x3e8
@@ -208,12 +208,12 @@
 
     if-ltz v2, :cond_1
 
-    .line 745
+    .line 753
     invoke-virtual {p0}, Lcom/miui/maml/data/ContentProviderBinder;->startQuery()V
 
     const-wide/16 v0, 0x0
 
-    .line 748
+    .line 756
     :cond_1
     iget-object v2, p0, Lcom/miui/maml/data/ContentProviderBinder;->mHandler:Landroid/os/Handler;
 
@@ -235,14 +235,14 @@
 .method private load(Lorg/w3c/dom/Element;)V
     .locals 10
 
-    .line 359
+    .line 360
     invoke-virtual {p0}, Lcom/miui/maml/data/ContentProviderBinder;->getVariables()Lcom/miui/maml/data/Variables;
 
     move-result-object v7
 
     const-string v0, "uriExp"
 
-    .line 360
+    .line 361
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -253,7 +253,7 @@
 
     const-string v0, "uriFormatExp"
 
-    .line 361
+    .line 362
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -262,7 +262,7 @@
 
     move-result-object v6
 
-    .line 362
+    .line 363
     new-instance v8, Lcom/miui/maml/util/TextFormatter;
 
     const-string v0, "uri"
@@ -273,7 +273,7 @@
 
     const-string v0, "uriFormat"
 
-    .line 363
+    .line 364
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
@@ -294,12 +294,12 @@
 
     const-string v0, "columns"
 
-    .line 364
+    .line 365
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 365
+    .line 366
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -324,7 +324,7 @@
 
     const-string v0, "whereExp"
 
-    .line 366
+    .line 367
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -335,7 +335,7 @@
 
     const-string v0, "whereFormatExp"
 
-    .line 367
+    .line 368
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -344,7 +344,7 @@
 
     move-result-object v6
 
-    .line 368
+    .line 369
     new-instance v9, Lcom/miui/maml/util/TextFormatter;
 
     const-string v0, "where"
@@ -355,7 +355,7 @@
 
     const-string v0, "whereFormat"
 
-    .line 369
+    .line 370
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
@@ -376,12 +376,12 @@
 
     const-string v0, "args"
 
-    .line 370
+    .line 371
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 371
+    .line 372
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -404,12 +404,12 @@
 
     const-string v0, "order"
 
-    .line 372
+    .line 373
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 373
+    .line 374
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -423,12 +423,12 @@
 
     const-string v0, "countName"
 
-    .line 375
+    .line 376
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 376
+    .line 377
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -440,12 +440,12 @@
     :cond_3
     iput-object v0, p0, Lcom/miui/maml/data/ContentProviderBinder;->mCountName:Ljava/lang/String;
 
-    .line 377
+    .line 378
     iget-object v0, p0, Lcom/miui/maml/data/ContentProviderBinder;->mCountName:Ljava/lang/String;
 
     if-eqz v0, :cond_4
 
-    .line 378
+    .line 379
     new-instance v1, Lcom/miui/maml/data/IndexedVariable;
 
     const/4 v2, 0x1
@@ -459,39 +459,39 @@
 
     const/4 v1, -0x1
 
-    .line 381
+    .line 382
     invoke-static {p1, v0, v1}, Lcom/miui/maml/util/Utils;->getAttrAsInt(Lorg/w3c/dom/Element;Ljava/lang/String;I)I
 
     move-result v0
 
     iput v0, p0, Lcom/miui/maml/data/ContentProviderBinder;->mUpdateInterval:I
 
-    .line 382
+    .line 383
     iget v0, p0, Lcom/miui/maml/data/ContentProviderBinder;->mUpdateInterval:I
 
     if-lez v0, :cond_5
 
-    .line 383
+    .line 384
     new-instance v0, Lcom/miui/maml/data/ContentProviderBinder$1;
 
     invoke-direct {v0, p0}, Lcom/miui/maml/data/ContentProviderBinder$1;-><init>(Lcom/miui/maml/data/ContentProviderBinder;)V
 
     iput-object v0, p0, Lcom/miui/maml/data/ContentProviderBinder;->mUpdater:Ljava/lang/Runnable;
 
-    .line 390
+    .line 391
     :cond_5
     invoke-virtual {p0, p1}, Lcom/miui/maml/data/ContentProviderBinder;->loadVariables(Lorg/w3c/dom/Element;)V
 
     const-string v0, "List"
 
-    .line 392
+    .line 393
     invoke-static {p1, v0}, Lcom/miui/maml/util/Utils;->getChild(Lorg/w3c/dom/Element;Ljava/lang/String;)Lorg/w3c/dom/Element;
 
     move-result-object v0
 
     if-eqz v0, :cond_6
 
-    .line 395
+    .line 396
     :try_start_0
     new-instance v1, Lcom/miui/maml/data/ContentProviderBinder$List;
 
@@ -510,14 +510,14 @@
 
     const-string v1, "invalid List"
 
-    .line 397
+    .line 398
     invoke-static {v0, v1}, Lcom/miui/maml/util/MamlLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_6
     :goto_2
     const-string v0, "vigilant"
 
-    .line 400
+    .line 401
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -534,7 +534,7 @@
 .method private onQueryComplete()V
     .locals 0
 
-    .line 581
+    .line 582
     invoke-virtual {p0}, Lcom/miui/maml/data/ContentProviderBinder;->onUpdateComplete()V
 
     return-void
@@ -543,7 +543,7 @@
 .method private registerObserver(Landroid/net/Uri;Z)V
     .locals 3
 
-    .line 585
+    .line 586
     invoke-virtual {p0}, Lcom/miui/maml/data/ContentProviderBinder;->getContext()Lcom/miui/maml/ScreenContext;
 
     move-result-object v0
@@ -554,30 +554,30 @@
 
     move-result-object v0
 
-    .line 586
+    .line 587
     iget-object v1, p0, Lcom/miui/maml/data/ContentProviderBinder;->mChangeObserver:Lcom/miui/maml/data/ContentProviderBinder$ChangeObserver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
     if-eqz p2, :cond_1
 
-    .line 587
+    .line 588
     iget-boolean p2, p0, Lcom/miui/maml/data/ContentProviderBinder;->mAllowReg:Z
 
     if-eqz p2, :cond_1
 
-    .line 588
+    .line 589
     iget-object p2, p0, Lcom/miui/maml/data/ContentProviderBinder;->mLock:Ljava/lang/Object;
 
     monitor-enter p2
 
-    .line 589
+    .line 590
     :try_start_0
     iget-boolean v1, p0, Lcom/miui/maml/data/ContentProviderBinder;->mAllowReg:Z
 
     if-nez v1, :cond_0
 
-    .line 590
+    .line 591
     monitor-exit p2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -587,7 +587,7 @@
     :cond_0
     const/4 v1, 0x1
 
-    .line 593
+    .line 594
     :try_start_1
     iget-object v2, p0, Lcom/miui/maml/data/ContentProviderBinder;->mChangeObserver:Lcom/miui/maml/data/ContentProviderBinder$ChangeObserver;
 
@@ -605,7 +605,7 @@
     :try_start_2
     const-string v1, "ContentProviderBinder"
 
-    .line 597
+    .line 598
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -635,7 +635,7 @@
 
     const-string v1, "ContentProviderBinder"
 
-    .line 595
+    .line 596
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -658,7 +658,7 @@
 
     invoke-static {v1, p1}, Lcom/miui/maml/util/MamlLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 599
+    .line 600
     :goto_0
     monitor-exit p2
 
@@ -689,13 +689,13 @@
 
     goto :goto_0
 
-    .line 604
+    .line 605
     :cond_0
     invoke-interface {p1}, Landroid/database/Cursor;->getCount()I
 
     move-result v1
 
-    .line 605
+    .line 606
     :goto_0
     iget-object v2, p0, Lcom/miui/maml/data/ContentProviderBinder;->mCountVar:Lcom/miui/maml/data/IndexedVariable;
 
@@ -703,16 +703,16 @@
 
     int-to-double v3, v1
 
-    .line 606
+    .line 607
     invoke-virtual {v2, v3, v4}, Lcom/miui/maml/data/IndexedVariable;->set(D)V
 
-    .line 609
+    .line 610
     :cond_1
     iget-object v2, p0, Lcom/miui/maml/data/ContentProviderBinder;->mList:Lcom/miui/maml/data/ContentProviderBinder$List;
 
     if-eqz v2, :cond_2
 
-    .line 610
+    .line 611
     invoke-virtual {v2, p1}, Lcom/miui/maml/data/ContentProviderBinder$List;->fill(Landroid/database/Cursor;)V
 
     :cond_2
@@ -722,7 +722,7 @@
 
     goto/16 :goto_4
 
-    .line 619
+    .line 620
     :cond_3
     iget-object v1, p0, Lcom/miui/maml/data/ContentProviderBinder;->mVariables:Ljava/util/ArrayList;
 
@@ -744,12 +744,12 @@
 
     check-cast v2, Lcom/miui/maml/data/VariableBinder$Variable;
 
-    .line 620
+    .line 621
     move-object v3, v2
 
     check-cast v3, Lcom/miui/maml/data/ContentProviderBinder$Variable;
 
-    .line 621
+    .line 622
     iget-boolean v4, v3, Lcom/miui/maml/data/ContentProviderBinder$Variable;->mBlocked:Z
 
     if-eqz v4, :cond_5
@@ -759,7 +759,7 @@
     :cond_5
     const-wide/16 v4, 0x0
 
-    .line 627
+    .line 628
     iget v6, v3, Lcom/miui/maml/data/ContentProviderBinder$Variable;->mRow:I
 
     invoke-interface {p1, v6}, Landroid/database/Cursor;->moveToPosition(I)Z
@@ -768,23 +768,23 @@
 
     if-eqz v6, :cond_4
 
-    .line 629
+    .line 630
     :try_start_0
     iget-object v6, v3, Lcom/miui/maml/data/ContentProviderBinder$Variable;->mColumn:Ljava/lang/String;
 
-    .line 630
+    .line 631
     invoke-interface {p1, v6}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v6
 
-    .line 631
+    .line 632
     invoke-interface {p1, v6}, Landroid/database/Cursor;->isNull(I)Z
 
     move-result v7
 
     if-nez v7, :cond_c
 
-    .line 632
+    .line 633
     iget v7, v2, Lcom/miui/maml/data/VariableBinder$Variable;->mType:I
 
     const/4 v8, 0x2
@@ -797,7 +797,7 @@
 
     packed-switch v7, :pswitch_data_0
 
-    .line 667
+    .line 668
     iget v7, v2, Lcom/miui/maml/data/VariableBinder$Variable;->mType:I
 
     packed-switch v7, :pswitch_data_1
@@ -806,7 +806,7 @@
 
     goto :goto_2
 
-    .line 669
+    .line 670
     :pswitch_0
     invoke-interface {p1, v6}, Landroid/database/Cursor;->getDouble(I)D
 
@@ -814,7 +814,7 @@
 
     goto :goto_3
 
-    .line 672
+    .line 673
     :pswitch_1
     invoke-interface {p1, v6}, Landroid/database/Cursor;->getFloat(I)F
 
@@ -824,7 +824,7 @@
 
     goto :goto_3
 
-    .line 678
+    .line 679
     :pswitch_2
     invoke-interface {p1, v6}, Landroid/database/Cursor;->getLong(I)J
 
@@ -834,7 +834,7 @@
 
     goto :goto_3
 
-    .line 675
+    .line 676
     :pswitch_3
     invoke-interface {p1, v6}, Landroid/database/Cursor;->getInt(I)I
 
@@ -844,7 +844,7 @@
 
     goto :goto_3
 
-    .line 681
+    .line 682
     :goto_2
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -864,19 +864,19 @@
 
     invoke-static {v6, v7}, Lcom/miui/maml/util/MamlLog;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 684
+    .line 685
     :goto_3
     invoke-virtual {v2, v4, v5}, Lcom/miui/maml/data/VariableBinder$Variable;->set(D)V
 
     goto :goto_1
 
-    .line 634
+    .line 635
     :pswitch_4
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 636
+    .line 637
     :cond_6
     invoke-interface {p1, v6}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
@@ -884,14 +884,14 @@
 
     invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 637
+    .line 638
     invoke-interface {p1}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v5
 
     if-nez v5, :cond_6
 
-    .line 638
+    .line 639
     invoke-interface {v4}, Ljava/util/List;->toArray()[Ljava/lang/Object;
 
     move-result-object v4
@@ -900,13 +900,13 @@
 
     goto/16 :goto_1
 
-    .line 641
+    .line 642
     :pswitch_5
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 643
+    .line 644
     :cond_7
     invoke-interface {p1, v6}, Landroid/database/Cursor;->getDouble(I)D
 
@@ -918,14 +918,14 @@
 
     invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 644
+    .line 645
     invoke-interface {p1}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v5
 
     if-nez v5, :cond_7
 
-    .line 645
+    .line 646
     invoke-interface {v4}, Ljava/util/List;->toArray()[Ljava/lang/Object;
 
     move-result-object v4
@@ -938,21 +938,21 @@
     :pswitch_6
     const/4 v4, 0x0
 
-    .line 654
+    .line 655
     invoke-interface {p1, v6}, Landroid/database/Cursor;->getBlob(I)[B
 
     move-result-object v5
 
     if-eqz v5, :cond_9
 
-    .line 656
+    .line 657
     array-length v4, v5
 
     invoke-static {v5, v0, v4}, Landroid/graphics/BitmapFactory;->decodeByteArray([BII)Landroid/graphics/Bitmap;
 
     move-result-object v4
 
-    .line 657
+    .line 658
     :cond_9
     iget v5, v2, Lcom/miui/maml/data/VariableBinder$Variable;->mType:I
 
@@ -960,12 +960,12 @@
 
     if-ne v5, v6, :cond_a
 
-    .line 658
+    .line 659
     invoke-virtual {v2, v4}, Lcom/miui/maml/data/VariableBinder$Variable;->set(Ljava/lang/Object;)V
 
     goto/16 :goto_1
 
-    .line 660
+    .line 661
     :cond_a
     iget-object v2, p0, Lcom/miui/maml/data/ContentProviderBinder;->mRoot:Lcom/miui/maml/ScreenElementRoot;
 
@@ -975,23 +975,23 @@
 
     if-eqz v2, :cond_4
 
-    .line 662
+    .line 663
     invoke-virtual {v2, v4}, Lcom/miui/maml/elements/ImageScreenElement;->setBitmap(Landroid/graphics/Bitmap;)V
 
     goto/16 :goto_1
 
-    .line 648
+    .line 649
     :cond_b
     invoke-interface {p1, v6}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 649
+    .line 650
     invoke-virtual {v2, v4}, Lcom/miui/maml/data/VariableBinder$Variable;->set(Ljava/lang/Object;)V
 
     goto/16 :goto_1
 
-    .line 690
+    .line 691
     :cond_c
     iget-object v2, p0, Lcom/miui/maml/data/ContentProviderBinder;->mRoot:Lcom/miui/maml/ScreenElementRoot;
 
@@ -1008,7 +1008,7 @@
 
     const-string v3, "ContentProviderBinder"
 
-    .line 697
+    .line 698
     invoke-virtual {v2}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
     move-result-object v2
@@ -1020,7 +1020,7 @@
     :catch_1
     const-string v2, "ContentProviderBinder"
 
-    .line 695
+    .line 696
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1046,7 +1046,7 @@
 
     const-string v3, "ContentProviderBinder"
 
-    .line 693
+    .line 694
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1068,7 +1068,7 @@
     :cond_d
     return-void
 
-    .line 614
+    .line 615
     :cond_e
     :goto_4
     iget-object p1, p0, Lcom/miui/maml/data/ContentProviderBinder;->mVariables:Ljava/util/ArrayList;
@@ -1090,7 +1090,7 @@
 
     check-cast v0, Lcom/miui/maml/data/VariableBinder$Variable;
 
-    .line 615
+    .line 616
     check-cast v0, Lcom/miui/maml/data/ContentProviderBinder$Variable;
 
     iget-object v1, p0, Lcom/miui/maml/data/ContentProviderBinder;->mRoot:Lcom/miui/maml/ScreenElementRoot;
@@ -1160,52 +1160,52 @@
 .method public finish()V
     .locals 3
 
-    .line 323
+    .line 324
     iget-object v0, p0, Lcom/miui/maml/data/ContentProviderBinder;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
     const/4 v1, 0x0
 
-    .line 324
+    .line 325
     :try_start_0
     iput-boolean v1, p0, Lcom/miui/maml/data/ContentProviderBinder;->mAllowReg:Z
 
-    .line 325
+    .line 326
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     const/4 v0, 0x0
 
-    .line 326
+    .line 327
     iput-object v0, p0, Lcom/miui/maml/data/ContentProviderBinder;->mLastUri:Landroid/net/Uri;
 
-    .line 327
+    .line 328
     invoke-direct {p0, v0, v1}, Lcom/miui/maml/data/ContentProviderBinder;->registerObserver(Landroid/net/Uri;Z)V
 
-    .line 328
+    .line 329
     iget-object v1, p0, Lcom/miui/maml/data/ContentProviderBinder;->mHandler:Landroid/os/Handler;
 
     iget-object v2, p0, Lcom/miui/maml/data/ContentProviderBinder;->mUpdater:Ljava/lang/Runnable;
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 329
+    .line 330
     iget-object v1, p0, Lcom/miui/maml/data/ContentProviderBinder;->mContentTask:Lcom/miui/maml/data/ContentProviderBinder$ContentQueryTask;
 
     if-eqz v1, :cond_0
 
     const/4 v2, 0x1
 
-    .line 330
+    .line 331
     invoke-virtual {v1, v2}, Lcom/miui/maml/data/ContentProviderBinder$ContentQueryTask;->cancel(Z)Z
 
-    .line 332
+    .line 333
     :cond_0
     invoke-virtual {p0, v0}, Lcom/miui/maml/data/ContentProviderBinder;->setBlockedColumns([Ljava/lang/String;)V
 
-    .line 333
+    .line 334
     invoke-super {p0}, Lcom/miui/maml/data/VariableBinder;->finish()V
 
     return-void
@@ -1213,7 +1213,7 @@
     :catchall_0
     move-exception v1
 
-    .line 325
+    .line 326
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -1225,7 +1225,7 @@
 .method public final getUriText()Ljava/lang/String;
     .locals 1
 
-    .line 561
+    .line 562
     iget-object v0, p0, Lcom/miui/maml/data/ContentProviderBinder;->mUriFormatter:Lcom/miui/maml/util/TextFormatter;
 
     invoke-virtual {v0}, Lcom/miui/maml/util/TextFormatter;->getText()Ljava/lang/String;
@@ -1238,14 +1238,14 @@
 .method public onContentChanged()V
     .locals 1
 
-    .line 730
+    .line 738
     iget-boolean v0, p0, Lcom/miui/maml/data/ContentProviderBinder;->mFinished:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 732
+    .line 740
     :cond_0
     iget-boolean v0, p0, Lcom/miui/maml/data/ContentProviderBinder;->mPaused:Z
 
@@ -1257,12 +1257,12 @@
 
     const/4 v0, 0x1
 
-    .line 733
+    .line 741
     iput-boolean v0, p0, Lcom/miui/maml/data/ContentProviderBinder;->mNeedsRequery:Z
 
     goto :goto_0
 
-    .line 735
+    .line 743
     :cond_1
     invoke-virtual {p0}, Lcom/miui/maml/data/ContentProviderBinder;->startQuery()V
 
@@ -1273,7 +1273,7 @@
 .method protected onLoadVariable(Lorg/w3c/dom/Element;)Lcom/miui/maml/data/ContentProviderBinder$Variable;
     .locals 2
 
-    .line 405
+    .line 406
     new-instance v0, Lcom/miui/maml/data/ContentProviderBinder$Variable;
 
     invoke-virtual {p0}, Lcom/miui/maml/data/ContentProviderBinder;->getContext()Lcom/miui/maml/ScreenContext;
@@ -1301,10 +1301,10 @@
 .method public pause()V
     .locals 2
 
-    .line 338
+    .line 339
     invoke-super {p0}, Lcom/miui/maml/data/VariableBinder;->pause()V
 
-    .line 339
+    .line 340
     iget-object v0, p0, Lcom/miui/maml/data/ContentProviderBinder;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/miui/maml/data/ContentProviderBinder;->mUpdater:Ljava/lang/Runnable;
@@ -1317,10 +1317,10 @@
 .method public refresh()V
     .locals 0
 
-    .line 354
+    .line 355
     invoke-super {p0}, Lcom/miui/maml/data/VariableBinder;->refresh()V
 
-    .line 355
+    .line 356
     invoke-virtual {p0}, Lcom/miui/maml/data/ContentProviderBinder;->startQuery()V
 
     return-void
@@ -1329,20 +1329,20 @@
 .method public resume()V
     .locals 1
 
-    .line 344
+    .line 345
     invoke-super {p0}, Lcom/miui/maml/data/VariableBinder;->resume()V
 
-    .line 345
+    .line 346
     iget-boolean v0, p0, Lcom/miui/maml/data/ContentProviderBinder;->mNeedsRequery:Z
 
     if-eqz v0, :cond_0
 
-    .line 346
+    .line 347
     invoke-virtual {p0}, Lcom/miui/maml/data/ContentProviderBinder;->startQuery()V
 
     goto :goto_0
 
-    .line 348
+    .line 349
     :cond_0
     invoke-direct {p0}, Lcom/miui/maml/data/ContentProviderBinder;->checkUpdate()V
 
@@ -1357,12 +1357,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 569
+    .line 570
     new-instance v1, Ljava/util/HashSet;
 
     invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
 
-    .line 570
+    .line 571
     array-length v2, p1
 
     move v3, v0
@@ -1372,7 +1372,7 @@
 
     aget-object v4, p1, v3
 
-    .line 571
+    .line 572
     invoke-virtual {v1, v4}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v3, v3, 0x1
@@ -1382,7 +1382,7 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 574
+    .line 575
     :cond_1
     iget-object p1, p0, Lcom/miui/maml/data/ContentProviderBinder;->mVariables:Ljava/util/ArrayList;
 
@@ -1403,12 +1403,12 @@
 
     check-cast v2, Lcom/miui/maml/data/VariableBinder$Variable;
 
-    .line 575
+    .line 576
     check-cast v2, Lcom/miui/maml/data/ContentProviderBinder$Variable;
 
     if-eqz v1, :cond_2
 
-    .line 576
+    .line 577
     iget-object v3, v2, Lcom/miui/maml/data/ContentProviderBinder$Variable;->mColumn:Ljava/lang/String;
 
     invoke-virtual {v1, v3}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
@@ -1434,7 +1434,7 @@
 
     const-string v0, "ContentProviderBinder"
 
-    .line 410
+    .line 411
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1453,14 +1453,14 @@
 
     invoke-static {v0, v1}, Lcom/miui/maml/util/MamlLog;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 412
+    .line 413
     iget-boolean v0, p0, Lcom/miui/maml/data/ContentProviderBinder;->mFinished:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 415
+    .line 416
     :cond_0
     invoke-virtual {p0}, Lcom/miui/maml/data/ContentProviderBinder;->getUriText()Ljava/lang/String;
 
@@ -1472,12 +1472,12 @@
 
     const-string v1, "start query: uri null"
 
-    .line 417
+    .line 418
     invoke-static {v0, v1}, Lcom/miui/maml/util/MamlLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
-    .line 421
+    .line 422
     :cond_1
     iget-boolean v1, p0, Lcom/miui/maml/data/ContentProviderBinder;->mSystemBootCompleted:Z
 
@@ -1487,7 +1487,7 @@
 
     const-string v2, "sys.boot_completed"
 
-    .line 422
+    .line 423
     invoke-static {v2}, Lcom/miui/maml/util/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
@@ -1498,7 +1498,7 @@
 
     iput-boolean v1, p0, Lcom/miui/maml/data/ContentProviderBinder;->mSystemBootCompleted:Z
 
-    .line 423
+    .line 424
     iget-boolean v1, p0, Lcom/miui/maml/data/ContentProviderBinder;->mSystemBootCompleted:Z
 
     if-nez v1, :cond_2
@@ -1507,7 +1507,7 @@
 
     const-string v1, "start query: mSystemBootCompleted false"
 
-    .line 424
+    .line 425
     invoke-static {v0, v1}, Lcom/miui/maml/util/MamlLog;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -1515,20 +1515,20 @@
     :cond_2
     const/4 v1, 0x0
 
-    .line 429
+    .line 430
     iput-boolean v1, p0, Lcom/miui/maml/data/ContentProviderBinder;->mNeedsRequery:Z
 
-    .line 430
+    .line 431
     iget-object v2, p0, Lcom/miui/maml/data/ContentProviderBinder;->mContentTask:Lcom/miui/maml/data/ContentProviderBinder$ContentQueryTask;
 
     const/4 v3, 0x1
 
     if-eqz v2, :cond_3
 
-    .line 431
+    .line 432
     invoke-virtual {v2, v3}, Lcom/miui/maml/data/ContentProviderBinder$ContentQueryTask;->cancel(Z)Z
 
-    .line 433
+    .line 434
     :cond_3
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -1540,12 +1540,12 @@
 
     const-string v1, "start query: parse uri null"
 
-    .line 435
+    .line 436
     invoke-static {v0, v1}, Lcom/miui/maml/util/MamlLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
-    .line 439
+    .line 440
     :cond_4
     iget v2, p0, Lcom/miui/maml/data/ContentProviderBinder;->mUpdateInterval:I
 
@@ -1561,13 +1561,13 @@
 
     if-nez v2, :cond_5
 
-    .line 440
+    .line 441
     invoke-direct {p0, v0, v3}, Lcom/miui/maml/data/ContentProviderBinder;->registerObserver(Landroid/net/Uri;Z)V
 
-    .line 441
+    .line 442
     iput-object v0, p0, Lcom/miui/maml/data/ContentProviderBinder;->mLastUri:Landroid/net/Uri;
 
-    .line 444
+    .line 445
     :cond_5
     iget-object v2, p0, Lcom/miui/maml/data/ContentProviderBinder;->mWhereFormatter:Lcom/miui/maml/util/TextFormatter;
 
@@ -1575,33 +1575,33 @@
 
     move-result-object v2
 
-    .line 449
+    .line 450
     new-instance v3, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;
 
     invoke-direct {v3}, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;-><init>()V
 
-    .line 450
+    .line 451
     iput-object v0, v3, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;->uri:Landroid/net/Uri;
 
-    .line 451
+    .line 452
     iget-object v0, p0, Lcom/miui/maml/data/ContentProviderBinder;->mColumns:[Ljava/lang/String;
 
     iput-object v0, v3, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;->projection:[Ljava/lang/String;
 
-    .line 452
+    .line 453
     iput-object v2, v3, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;->selection:Ljava/lang/String;
 
-    .line 453
+    .line 454
     iget-object v0, p0, Lcom/miui/maml/data/ContentProviderBinder;->mArgs:[Ljava/lang/String;
 
     iput-object v0, v3, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;->selectionArgs:[Ljava/lang/String;
 
-    .line 454
+    .line 455
     iget-object v0, p0, Lcom/miui/maml/data/ContentProviderBinder;->mOrder:Ljava/lang/String;
 
     iput-object v0, v3, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;->orderBy:Ljava/lang/String;
 
-    .line 455
+    .line 456
     invoke-virtual {p0}, Lcom/miui/maml/data/ContentProviderBinder;->getContext()Lcom/miui/maml/ScreenContext;
 
     move-result-object v0
@@ -1612,14 +1612,14 @@
 
     move-result-object v0
 
-    .line 456
+    .line 457
     new-instance v2, Lcom/miui/maml/data/ContentProviderBinder$ContentQueryTask;
 
     invoke-direct {v2, p0, v0, v3}, Lcom/miui/maml/data/ContentProviderBinder$ContentQueryTask;-><init>(Lcom/miui/maml/data/ContentProviderBinder;Landroid/content/ContentResolver;Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;)V
 
     iput-object v2, p0, Lcom/miui/maml/data/ContentProviderBinder;->mContentTask:Lcom/miui/maml/data/ContentProviderBinder$ContentQueryTask;
 
-    .line 457
+    .line 458
     iget-object v0, p0, Lcom/miui/maml/data/ContentProviderBinder;->mContentTask:Lcom/miui/maml/data/ContentProviderBinder$ContentQueryTask;
 
     invoke-static {}, Lcom/miui/maml/util/ExecutorHelper;->getLocalTaskExecutor()Ljava/util/concurrent/ThreadPoolExecutor;
@@ -1630,14 +1630,14 @@
 
     invoke-virtual {v0, v2, v1}, Lcom/miui/maml/data/ContentProviderBinder$ContentQueryTask;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 459
+    .line 460
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/miui/maml/data/ContentProviderBinder;->mLastQueryTime:J
 
-    .line 460
+    .line 461
     invoke-direct {p0}, Lcom/miui/maml/data/ContentProviderBinder;->checkUpdate()V
 
     return-void

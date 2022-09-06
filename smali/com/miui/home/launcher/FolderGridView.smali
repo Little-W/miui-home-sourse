@@ -12,6 +12,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/miui/home/launcher/FolderGridView$FolderDropAnimationListener;,
         Lcom/miui/home/launcher/FolderGridView$BackupDataForDragging;
     }
 .end annotation
@@ -88,32 +89,32 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 3
 
-    .line 79
+    .line 80
     invoke-direct {p0, p1, p2}, Landroid/widget/GridView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const/4 p2, 0x0
 
-    .line 42
+    .line 43
     iput-object p2, p0, Lcom/miui/home/launcher/FolderGridView;->mAdapter:Lcom/miui/home/launcher/ShortcutsAdapter;
 
-    .line 43
+    .line 44
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/miui/home/launcher/FolderGridView;->mTmpRect:Landroid/graphics/Rect;
 
-    .line 44
+    .line 45
     iput-object p2, p0, Lcom/miui/home/launcher/FolderGridView;->mLastHit:Landroid/view/View;
 
-    .line 45
+    .line 46
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/miui/home/launcher/FolderGridView;->mBackupDataForDragIn:Ljava/util/HashMap;
 
-    .line 46
+    .line 47
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -122,63 +123,63 @@
 
     const/4 v0, 0x0
 
-    .line 49
+    .line 50
     iput-boolean v0, p0, Lcom/miui/home/launcher/FolderGridView;->usingDarkScrollBar:Z
 
     const/16 v1, 0xff
 
-    .line 51
+    .line 52
     iput v1, p0, Lcom/miui/home/launcher/FolderGridView;->mEdgeAlpha:I
 
-    .line 52
+    .line 53
     new-instance v1, Landroid/graphics/Rect;
 
     invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v1, p0, Lcom/miui/home/launcher/FolderGridView;->mRect:Landroid/graphics/Rect;
 
-    .line 54
+    .line 55
     iput-object p2, p0, Lcom/miui/home/launcher/FolderGridView;->mBackupDragObject:Lcom/miui/home/launcher/DragObject;
 
-    .line 409
+    .line 410
     new-instance p2, Lcom/miui/home/launcher/FolderGridView$4;
 
     invoke-direct {p2, p0}, Lcom/miui/home/launcher/FolderGridView$4;-><init>(Lcom/miui/home/launcher/FolderGridView;)V
 
     iput-object p2, p0, Lcom/miui/home/launcher/FolderGridView;->mStayConfirm:Ljava/lang/Runnable;
 
-    .line 459
+    .line 460
     new-instance p2, Lcom/miui/home/launcher/FolderGridView$5;
 
     invoke-direct {p2, p0}, Lcom/miui/home/launcher/FolderGridView$5;-><init>(Lcom/miui/home/launcher/FolderGridView;)V
 
     iput-object p2, p0, Lcom/miui/home/launcher/FolderGridView;->mConfirmAutoScroll:Ljava/lang/Runnable;
 
-    .line 80
+    .line 81
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/FolderGridView;->setFocusable(Z)V
 
-    .line 81
+    .line 82
     new-instance p2, Lcom/miui/home/launcher/common/PreciseClickConfirmor;
 
     invoke-direct {p2, p1}, Lcom/miui/home/launcher/common/PreciseClickConfirmor;-><init>(Landroid/content/Context;)V
 
     iput-object p2, p0, Lcom/miui/home/launcher/FolderGridView;->mClickConfirmor:Lcom/miui/home/launcher/common/PreciseClickConfirmor;
 
-    .line 82
+    .line 83
     new-instance p2, Landroid/graphics/Paint;
 
     invoke-direct {p2}, Landroid/graphics/Paint;-><init>()V
 
     iput-object p2, p0, Lcom/miui/home/launcher/FolderGridView;->mEdgePaint:Landroid/graphics/Paint;
 
-    .line 83
+    .line 84
     iget-object p2, p0, Lcom/miui/home/launcher/FolderGridView;->mEdgePaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f07012f
+    const v2, 0x7f070168
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -188,18 +189,18 @@
 
     invoke-virtual {p2, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 84
+    .line 85
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    const p2, 0x7f0600ce
+    const p2, 0x7f0600f6
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result p1
 
-    .line 85
+    .line 86
     iget-object p2, p0, Lcom/miui/home/launcher/FolderGridView;->mEdgePaint:Landroid/graphics/Paint;
 
     invoke-virtual {p2, p1}, Landroid/graphics/Paint;->setColor(I)V
@@ -210,10 +211,10 @@
 
     shr-int/lit8 p1, p1, 0x18
 
-    .line 86
+    .line 87
     iput p1, p0, Lcom/miui/home/launcher/FolderGridView;->mEdgeAlpha:I
 
-    .line 87
+    .line 88
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/FolderGridView;->setHapticFeedbackEnabled(Z)V
 
     return-void
@@ -222,7 +223,7 @@
 .method static synthetic access$000(Lcom/miui/home/launcher/FolderGridView;)Lcom/miui/home/launcher/ShortcutsAdapter;
     .locals 0
 
-    .line 35
+    .line 36
     iget-object p0, p0, Lcom/miui/home/launcher/FolderGridView;->mAdapter:Lcom/miui/home/launcher/ShortcutsAdapter;
 
     return-object p0
@@ -231,7 +232,7 @@
 .method static synthetic access$200(Lcom/miui/home/launcher/FolderGridView;)V
     .locals 0
 
-    .line 35
+    .line 36
     invoke-direct {p0}, Lcom/miui/home/launcher/FolderGridView;->reorderItems()V
 
     return-void
@@ -240,16 +241,25 @@
 .method static synthetic access$300(Lcom/miui/home/launcher/FolderGridView;)I
     .locals 0
 
-    .line 35
+    .line 36
     iget p0, p0, Lcom/miui/home/launcher/FolderGridView;->mAutoScrollDirection:I
 
     return p0
 .end method
 
+.method static synthetic access$400(Lcom/miui/home/launcher/FolderGridView;)Lcom/miui/home/launcher/Launcher;
+    .locals 0
+
+    .line 36
+    iget-object p0, p0, Lcom/miui/home/launcher/FolderGridView;->mLauncher:Lcom/miui/home/launcher/Launcher;
+
+    return-object p0
+.end method
+
 .method private appendDragObjectForDragEnter(Lcom/miui/home/launcher/DragObject;)V
     .locals 8
 
-    .line 436
+    .line 437
     iget-object v0, p0, Lcom/miui/home/launcher/FolderGridView;->mBackupDataForDragIn:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->isEmpty()Z
@@ -260,7 +270,7 @@
 
     return-void
 
-    .line 439
+    .line 440
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/FolderGridView;->mAdapter:Lcom/miui/home/launcher/ShortcutsAdapter;
 
@@ -268,10 +278,10 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/ShortcutsAdapter;->disableSaveWhenDatasetChanged(Z)V
 
-    .line 440
+    .line 441
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/FolderGridView;->saveBackupDataForDragging(Lcom/miui/home/launcher/DragObject;)V
 
-    .line 441
+    .line 442
     iget-object v0, p0, Lcom/miui/home/launcher/FolderGridView;->mAdapter:Lcom/miui/home/launcher/ShortcutsAdapter;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/ShortcutsAdapter;->getFolderInfo()Lcom/miui/home/launcher/FolderInfo;
@@ -288,12 +298,12 @@
 
     move-result v0
 
-    .line 442
+    .line 443
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 443
+    .line 444
     invoke-direct {p0}, Lcom/miui/home/launcher/FolderGridView;->getLastCellX()I
 
     move-result v3
@@ -302,7 +312,7 @@
 
     move v5, v4
 
-    .line 446
+    .line 447
     :cond_1
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
 
@@ -312,7 +322,7 @@
 
     if-nez v5, :cond_2
 
-    .line 447
+    .line 448
     iget-object v7, p0, Lcom/miui/home/launcher/FolderGridView;->mAdapter:Lcom/miui/home/launcher/ShortcutsAdapter;
 
     iput-object v6, v7, Lcom/miui/home/launcher/ShortcutsAdapter;->mFirstDragItem:Lcom/miui/home/launcher/ShortcutInfo;
@@ -324,13 +334,13 @@
 
     add-int/2addr v7, v1
 
-    .line 449
+    .line 450
     iput v7, v6, Lcom/miui/home/launcher/ShortcutInfo;->cellX:I
 
-    .line 450
+    .line 451
     invoke-interface {v2, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 452
+    .line 453
     :cond_3
     iget-object v6, p0, Lcom/miui/home/launcher/FolderGridView;->mAdapter:Lcom/miui/home/launcher/ShortcutsAdapter;
 
@@ -346,19 +356,19 @@
 
     add-int/lit8 v5, v5, 0x1
 
-    .line 454
+    .line 455
     invoke-virtual {p1, v4}, Lcom/miui/home/launcher/DragObject;->nextDragView(Z)Z
 
     move-result v6
 
     if-nez v6, :cond_1
 
-    .line 455
+    .line 456
     iget-object p1, p0, Lcom/miui/home/launcher/FolderGridView;->mAdapter:Lcom/miui/home/launcher/ShortcutsAdapter;
 
     invoke-virtual {p1, v2}, Lcom/miui/home/launcher/ShortcutsAdapter;->addAll(Ljava/util/Collection;)V
 
-    .line 456
+    .line 457
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderGridView;->layoutChildren()V
 
     return-void
@@ -379,7 +389,7 @@
 
     move v1, v0
 
-    .line 510
+    .line 511
     :goto_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderGridView;->getChildCount()I
 
@@ -387,17 +397,17 @@
 
     if-ge v1, v4, :cond_1
 
-    .line 511
+    .line 512
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/FolderGridView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v4
 
-    .line 512
+    .line 513
     iget-object v5, p0, Lcom/miui/home/launcher/FolderGridView;->mTmpRect:Landroid/graphics/Rect;
 
     invoke-virtual {v4, v5}, Landroid/view/View;->getHitRect(Landroid/graphics/Rect;)V
 
-    .line 513
+    .line 514
     iget-object v5, p0, Lcom/miui/home/launcher/FolderGridView;->mTmpRect:Landroid/graphics/Rect;
 
     invoke-virtual {v5}, Landroid/graphics/Rect;->centerX()I
@@ -436,7 +446,7 @@
 
     double-to-float v5, v5
 
-    .line 514
+    .line 515
     invoke-virtual {v4}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v6
@@ -447,7 +457,7 @@
 
     if-gez v7, :cond_0
 
-    .line 515
+    .line 516
     iget-object v7, p0, Lcom/miui/home/launcher/FolderGridView;->mAdapter:Lcom/miui/home/launcher/ShortcutsAdapter;
 
     invoke-virtual {v7, v6}, Lcom/miui/home/launcher/ShortcutsAdapter;->enableReorder(Lcom/miui/home/launcher/ShortcutInfo;)Z
@@ -468,12 +478,12 @@
     :cond_1
     if-eqz v2, :cond_2
 
-    .line 520
+    .line 521
     iget-object p1, p0, Lcom/miui/home/launcher/FolderGridView;->mLastHit:Landroid/view/View;
 
     if-eq v2, p1, :cond_2
 
-    .line 521
+    .line 522
     iput-object v2, p0, Lcom/miui/home/launcher/FolderGridView;->mLastHit:Landroid/view/View;
 
     const/4 p1, 0x1
@@ -487,7 +497,7 @@
 .method private getLastCellX()I
     .locals 2
 
-    .line 351
+    .line 352
     iget-object v0, p0, Lcom/miui/home/launcher/FolderGridView;->mAdapter:Lcom/miui/home/launcher/ShortcutsAdapter;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/ShortcutsAdapter;->getReorderCount()I
@@ -500,7 +510,7 @@
 
     return v0
 
-    .line 352
+    .line 353
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/FolderGridView;->mAdapter:Lcom/miui/home/launcher/ShortcutsAdapter;
 
@@ -522,7 +532,7 @@
 .method private isItemInfoAccepted(Lcom/miui/home/launcher/ItemInfo;)Z
     .locals 3
 
-    .line 661
+    .line 662
     iget v0, p1, Lcom/miui/home/launcher/ItemInfo;->itemType:I
 
     const/4 v1, 0x1
@@ -570,14 +580,14 @@
 .method private makePositionSnapShot()V
     .locals 4
 
-    .line 358
+    .line 359
     iget-object v0, p0, Lcom/miui/home/launcher/FolderGridView;->mLastPosMap:Ljava/util/HashMap;
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 360
+    .line 361
     :cond_0
     new-instance v0, Ljava/util/HashMap;
 
@@ -587,7 +597,7 @@
 
     const/4 v0, 0x0
 
-    .line 361
+    .line 362
     :goto_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderGridView;->getChildCount()I
 
@@ -595,27 +605,27 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 362
+    .line 363
     new-instance v1, Landroid/graphics/Rect;
 
     invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
 
-    .line 363
+    .line 364
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/FolderGridView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 364
+    .line 365
     invoke-virtual {v2}, Landroid/view/View;->getVisibility()I
 
     move-result v3
 
     if-nez v3, :cond_1
 
-    .line 365
+    .line 366
     invoke-virtual {v2, v1}, Landroid/view/View;->getHitRect(Landroid/graphics/Rect;)V
 
-    .line 366
+    .line 367
     iget-object v3, p0, Lcom/miui/home/launcher/FolderGridView;->mLastPosMap:Ljava/util/HashMap;
 
     invoke-virtual {v2}, Landroid/view/View;->getTag()Ljava/lang/Object;
@@ -638,14 +648,14 @@
 .method private removeAutoScroll()V
     .locals 2
 
-    .line 469
+    .line 470
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderGridView;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 471
+    .line 472
     iget-object v1, p0, Lcom/miui/home/launcher/FolderGridView;->mConfirmAutoScroll:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
@@ -657,7 +667,7 @@
 .method private reorderItems()V
     .locals 2
 
-    .line 417
+    .line 418
     iget-object v0, p0, Lcom/miui/home/launcher/FolderGridView;->mLastHit:Landroid/view/View;
 
     if-eqz v0, :cond_0
@@ -674,7 +684,7 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 418
+    .line 419
     :cond_0
     invoke-static {}, Lcom/miui/home/launcher/common/HapticFeedbackCompat;->getInstance()Lcom/miui/home/launcher/common/HapticFeedbackCompat;
 
@@ -682,10 +692,10 @@
 
     invoke-virtual {v0, p0}, Lcom/miui/home/launcher/common/HapticFeedbackCompat;->performMeshNormal(Landroid/view/View;)V
 
-    .line 419
+    .line 420
     invoke-direct {p0}, Lcom/miui/home/launcher/FolderGridView;->makePositionSnapShot()V
 
-    .line 420
+    .line 421
     iget-object v0, p0, Lcom/miui/home/launcher/FolderGridView;->mAdapter:Lcom/miui/home/launcher/ShortcutsAdapter;
 
     iget-object v1, p0, Lcom/miui/home/launcher/FolderGridView;->mLastHit:Landroid/view/View;
@@ -713,7 +723,7 @@
 .method private restoreBackupDataForDragging(Lcom/miui/home/launcher/DragObject;)V
     .locals 4
 
-    .line 335
+    .line 336
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/FolderGridView;->mBackupDataForDragIn:Ljava/util/HashMap;
 
@@ -731,28 +741,28 @@
 
     goto :goto_0
 
-    .line 339
+    .line 340
     :cond_1
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v1
 
-    .line 340
+    .line 341
     iget v2, v0, Lcom/miui/home/launcher/FolderGridView$BackupDataForDragging;->cellX:I
 
     iput v2, v1, Lcom/miui/home/launcher/ItemInfo;->cellX:I
 
-    .line 341
+    .line 342
     iget v2, v0, Lcom/miui/home/launcher/FolderGridView$BackupDataForDragging;->cellY:I
 
     iput v2, v1, Lcom/miui/home/launcher/ItemInfo;->cellY:I
 
-    .line 342
+    .line 343
     iget-wide v2, v0, Lcom/miui/home/launcher/FolderGridView$BackupDataForDragging;->container:J
 
     iput-wide v2, v1, Lcom/miui/home/launcher/ItemInfo;->container:J
 
-    .line 343
+    .line 344
     check-cast v1, Lcom/miui/home/launcher/ShortcutInfo;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/ShortcutInfo;->getBuddyIconView()Lcom/miui/home/launcher/ShortcutIcon;
@@ -763,7 +773,7 @@
 
     if-ne v2, v3, :cond_2
 
-    .line 344
+    .line 345
     invoke-virtual {v1}, Lcom/miui/home/launcher/ShortcutInfo;->getBuddyForParent()Landroid/view/ViewGroup;
 
     move-result-object v2
@@ -772,7 +782,7 @@
 
     if-eq v2, v3, :cond_3
 
-    .line 345
+    .line 346
     :cond_2
     iget-object v2, v0, Lcom/miui/home/launcher/FolderGridView$BackupDataForDragging;->mBuddyIconView:Landroid/view/View;
 
@@ -786,7 +796,7 @@
     :goto_0
     const/4 v0, 0x0
 
-    .line 347
+    .line 348
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/DragObject;->nextDragView(Z)Z
 
     move-result v0
@@ -799,7 +809,7 @@
 .method private saveBackupDataForDragging(Lcom/miui/home/launcher/DragObject;)V
     .locals 3
 
-    .line 323
+    .line 324
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/FolderGridView;->mBackupDataForDragIn:Ljava/util/HashMap;
 
@@ -815,7 +825,7 @@
 
     const/4 v0, 0x0
 
-    .line 330
+    .line 331
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/DragObject;->nextDragView(Z)Z
 
     move-result v0
@@ -834,7 +844,7 @@
 
     move v1, v0
 
-    .line 651
+    .line 652
     :goto_0
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getDraggingSize()I
 
@@ -842,14 +852,14 @@
 
     if-ge v1, v2, :cond_2
 
-    .line 652
+    .line 653
     invoke-virtual {p1, v1}, Lcom/miui/home/launcher/DragObject;->getDragInfo(I)Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v2
 
     if-eqz v2, :cond_1
 
-    .line 653
+    .line 654
     invoke-direct {p0, v2}, Lcom/miui/home/launcher/FolderGridView;->isItemInfoAccepted(Lcom/miui/home/launcher/ItemInfo;)Z
 
     move-result v2
@@ -876,12 +886,12 @@
 .method public addDragOverItem(Lcom/miui/home/launcher/ShortcutInfo;)V
     .locals 1
 
-    .line 65
+    .line 66
     iget-object v0, p0, Lcom/miui/home/launcher/FolderGridView;->mAdapter:Lcom/miui/home/launcher/ShortcutsAdapter;
 
     if-eqz v0, :cond_0
 
-    .line 66
+    .line 67
     iget-object v0, v0, Lcom/miui/home/launcher/ShortcutsAdapter;->mDragOverItems:Ljava/util/HashSet;
 
     invoke-virtual {v0, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
@@ -901,14 +911,14 @@
         }
     .end annotation
 
-    .line 155
+    .line 156
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderGridView;->isEnabled()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 156
+    .line 157
     invoke-super {p0, p1, p2, p3}, Landroid/widget/GridView;->addFocusables(Ljava/util/ArrayList;II)V
 
     :cond_0
@@ -918,7 +928,7 @@
 .method public afterDragStart()V
     .locals 4
 
-    .line 713
+    .line 714
     iget-object v0, p0, Lcom/miui/home/launcher/FolderGridView;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getDragController()Lcom/miui/home/launcher/DragController;
@@ -927,7 +937,7 @@
 
     invoke-virtual {v0, p0}, Lcom/miui/home/launcher/DragController;->removeDragListener(Lcom/miui/home/launcher/DragController$DragListener;)V
 
-    .line 714
+    .line 715
     iget-object v0, p0, Lcom/miui/home/launcher/FolderGridView;->mBackupDragObject:Lcom/miui/home/launcher/DragObject;
 
     const/4 v1, -0x1
@@ -938,13 +948,13 @@
 
     if-eq v2, v1, :cond_0
 
-    .line 715
+    .line 716
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/FolderGridView;->appendDragObjectForDragEnter(Lcom/miui/home/launcher/DragObject;)V
 
-    .line 716
+    .line 717
     invoke-direct {p0}, Lcom/miui/home/launcher/FolderGridView;->makePositionSnapShot()V
 
-    .line 717
+    .line 718
     iget-object v0, p0, Lcom/miui/home/launcher/FolderGridView;->mAdapter:Lcom/miui/home/launcher/ShortcutsAdapter;
 
     iget-object v2, v0, Lcom/miui/home/launcher/ShortcutsAdapter;->mFirstDragItem:Lcom/miui/home/launcher/ShortcutInfo;
@@ -955,13 +965,13 @@
 
     invoke-virtual {v0, v2, v3}, Lcom/miui/home/launcher/ShortcutsAdapter;->reorderItemByIndex(II)V
 
-    .line 719
+    .line 720
     :cond_0
     iput v1, p0, Lcom/miui/home/launcher/FolderGridView;->mDragStartedIndex:I
 
     const/4 v0, 0x0
 
-    .line 720
+    .line 721
     iput-object v0, p0, Lcom/miui/home/launcher/FolderGridView;->mBackupDragObject:Lcom/miui/home/launcher/DragObject;
 
     return-void
@@ -970,10 +980,10 @@
 .method public beforeDragStart(I)V
     .locals 0
 
-    .line 708
+    .line 709
     iput p1, p0, Lcom/miui/home/launcher/FolderGridView;->mDragStartedIndex:I
 
-    .line 709
+    .line 710
     iget-object p1, p0, Lcom/miui/home/launcher/FolderGridView;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getDragController()Lcom/miui/home/launcher/DragController;
@@ -988,7 +998,7 @@
 .method public calculateHeight()I
     .locals 4
 
-    .line 91
+    .line 92
     iget-object v0, p0, Lcom/miui/home/launcher/FolderGridView;->mAdapter:Lcom/miui/home/launcher/ShortcutsAdapter;
 
     if-nez v0, :cond_0
@@ -1005,7 +1015,7 @@
     :goto_0
     int-to-double v0, v0
 
-    .line 92
+    .line 93
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderGridView;->getNumColumns()I
 
     move-result v2
@@ -1036,7 +1046,7 @@
 
     move v0, v2
 
-    .line 96
+    .line 97
     :cond_1
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderGridView;->getPaddingTop()I
 
@@ -1048,7 +1058,7 @@
 
     add-int/2addr v1, v3
 
-    .line 97
+    .line 98
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getFolderCellHeight()I
 
     move-result v3
@@ -1057,7 +1067,7 @@
 
     add-int/2addr v1, v3
 
-    .line 98
+    .line 99
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderGridView;->getVerticalSpacing()I
 
     move-result v3
@@ -1074,7 +1084,7 @@
 .method public computeVerticalScrollOffset()I
     .locals 1
 
-    .line 704
+    .line 705
     invoke-super {p0}, Landroid/widget/GridView;->computeVerticalScrollOffset()I
 
     move-result v0
@@ -1085,7 +1095,7 @@
 .method public dispatchTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 3
 
-    .line 735
+    .line 736
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v0
@@ -1100,12 +1110,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 736
+    .line 737
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/FolderGridView;->setIgnoreCancelEvent(Z)V
 
     return v1
 
-    .line 739
+    .line 740
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/FolderGridView;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -1117,7 +1127,7 @@
 
     return v1
 
-    .line 742
+    .line 743
     :cond_1
     invoke-super {p0, p1}, Landroid/widget/GridView;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -1129,10 +1139,10 @@
 .method public draw(Landroid/graphics/Canvas;)V
     .locals 9
 
-    .line 627
+    .line 628
     invoke-super {p0, p1}, Landroid/widget/GridView;->draw(Landroid/graphics/Canvas;)V
 
-    .line 628
+    .line 629
     iget-object v0, p0, Lcom/miui/home/launcher/FolderGridView;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getFolderCling()Lcom/miui/home/launcher/FolderCling;
@@ -1163,14 +1173,14 @@
     :goto_0
     if-nez v0, :cond_2
 
-    .line 629
+    .line 630
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderGridView;->getChildCount()I
 
     move-result v0
 
     if-lez v0, :cond_2
 
-    .line 630
+    .line 631
     invoke-virtual {p0, v2}, Lcom/miui/home/launcher/FolderGridView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
@@ -1181,7 +1191,7 @@
 
     if-gez v0, :cond_1
 
-    .line 632
+    .line 633
     iget-object v0, p0, Lcom/miui/home/launcher/FolderGridView;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->isInNormalEditing()Z
@@ -1190,7 +1200,7 @@
 
     if-nez v0, :cond_1
 
-    .line 633
+    .line 634
     iget-object v0, p0, Lcom/miui/home/launcher/FolderGridView;->mEdgePaint:Landroid/graphics/Paint;
 
     iget v2, p0, Lcom/miui/home/launcher/FolderGridView;->mEdgeAlpha:I
@@ -1211,7 +1221,7 @@
 
     const/4 v5, 0x0
 
-    .line 634
+    .line 635
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderGridView;->getWidth()I
 
     move-result v0
@@ -1226,7 +1236,7 @@
 
     invoke-virtual/range {v3 .. v8}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 636
+    .line 637
     :cond_1
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderGridView;->getChildCount()I
 
@@ -1242,7 +1252,7 @@
 
     move-result v0
 
-    .line 637
+    .line 638
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderGridView;->getHeight()I
 
     move-result v1
@@ -1257,7 +1267,7 @@
 
     if-nez v0, :cond_2
 
-    .line 638
+    .line 639
     iget-object v0, p0, Lcom/miui/home/launcher/FolderGridView;->mEdgePaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/miui/home/launcher/FolderGridView;->mEdgeAlpha:I
@@ -1276,7 +1286,7 @@
 
     const/4 v3, 0x0
 
-    .line 639
+    .line 640
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderGridView;->getHeight()I
 
     move-result v0
@@ -1308,7 +1318,7 @@
 .method protected getBottomFadingEdgeStrength()F
     .locals 4
 
-    .line 612
+    .line 613
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderGridView;->getChildCount()I
 
     move-result v0
@@ -1322,7 +1332,7 @@
     :cond_0
     add-int/lit8 v0, v0, -0x1
 
-    .line 617
+    .line 618
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/FolderGridView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
@@ -1331,12 +1341,12 @@
 
     move-result v0
 
-    .line 618
+    .line 619
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderGridView;->getHeight()I
 
     move-result v1
 
-    .line 619
+    .line 620
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderGridView;->getPaddingBottom()I
 
     move-result v2
@@ -1345,7 +1355,7 @@
 
     int-to-float v2, v2
 
-    .line 620
+    .line 621
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderGridView;->getPaddingBottom()I
 
     move-result v3
@@ -1364,7 +1374,7 @@
 
     sub-int/2addr v0, v1
 
-    .line 621
+    .line 622
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderGridView;->getPaddingBottom()I
 
     move-result v1
@@ -1387,7 +1397,7 @@
 .method public getDropAnnounceForAccessibility(Lcom/miui/home/launcher/DragObject;)Ljava/lang/String;
     .locals 3
 
-    .line 173
+    .line 174
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderGridView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -1412,7 +1422,7 @@
 
     aput-object p1, v2, v1
 
-    const p1, 0x7f10006d
+    const p1, 0x7f11006e
 
     invoke-virtual {v0, p1, v2}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -1444,7 +1454,7 @@
 .method protected getTopFadingEdgeStrength()F
     .locals 3
 
-    .line 599
+    .line 600
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderGridView;->getChildCount()I
 
     move-result v0
@@ -1458,7 +1468,7 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 604
+    .line 605
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/FolderGridView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
@@ -1467,7 +1477,7 @@
 
     move-result v0
 
-    .line 605
+    .line 606
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderGridView;->getPaddingTop()I
 
     move-result v1
@@ -1476,7 +1486,7 @@
 
     int-to-float v1, v1
 
-    .line 606
+    .line 607
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderGridView;->getPaddingTop()I
 
     move-result v2
@@ -1515,7 +1525,7 @@
 .method public getVisionOffset([I)V
     .locals 2
 
-    .line 689
+    .line 690
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderGridView;->getChildCount()I
 
     move-result v0
@@ -1524,17 +1534,17 @@
 
     const/4 v0, 0x0
 
-    .line 690
+    .line 691
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/FolderGridView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 691
+    .line 692
     instance-of v1, v0, Lcom/miui/home/launcher/DragController$VisualizeCalibration;
 
     if-eqz v1, :cond_0
 
-    .line 692
+    .line 693
     check-cast v0, Lcom/miui/home/launcher/DragController$VisualizeCalibration;
 
     invoke-interface {v0, p1}, Lcom/miui/home/launcher/DragController$VisualizeCalibration;->getVisionOffset([I)V
@@ -1554,7 +1564,7 @@
 .method public isDropEnabled()Z
     .locals 2
 
-    .line 178
+    .line 179
     iget-object v0, p0, Lcom/miui/home/launcher/FolderGridView;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     sget-object v1, Lcom/miui/home/launcher/LauncherState;->ALL_APPS:Lcom/miui/home/launcher/LauncherState;
@@ -1571,7 +1581,7 @@
 .method public isIgnoreCancelEvent()Z
     .locals 1
 
-    .line 752
+    .line 753
     iget-boolean v0, p0, Lcom/miui/home/launcher/FolderGridView;->mIgnoreCancelEvent:Z
 
     return v0
@@ -1586,30 +1596,30 @@
 .method public onDragEnter(Lcom/miui/home/launcher/DragObject;)V
     .locals 6
 
-    .line 426
+    .line 427
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/FolderGridView;->appendDragObjectForDragEnter(Lcom/miui/home/launcher/DragObject;)V
 
-    const v0, 0x7f10006a
-
-    .line 427
-    invoke-virtual {p1, v0}, Lcom/miui/home/launcher/DragObject;->announce(I)V
+    const v0, 0x7f11006b
 
     .line 428
+    invoke-virtual {p1, v0}, Lcom/miui/home/launcher/DragObject;->announce(I)V
+
+    .line 429
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/FolderGridView;->checkNearestViewByDrag(Lcom/miui/home/launcher/DragObject;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 429
+    .line 430
     invoke-direct {p0}, Lcom/miui/home/launcher/FolderGridView;->reorderItems()V
 
-    .line 430
+    .line 431
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderGridView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f100060
+    const v1, 0x7f110061
 
     const/4 v2, 0x1
 
@@ -1637,7 +1647,7 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/DragObject;->announce(Ljava/lang/CharSequence;)V
 
-    .line 432
+    .line 433
     :cond_0
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
@@ -1655,30 +1665,30 @@
 .method public onDragExit(Lcom/miui/home/launcher/DragObject;)V
     .locals 3
 
-    .line 529
+    .line 530
     iget-object v0, p0, Lcom/miui/home/launcher/FolderGridView;->mAdapter:Lcom/miui/home/launcher/ShortcutsAdapter;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/ShortcutsAdapter;->disableSaveWhenDatasetChanged(Z)V
 
-    .line 530
+    .line 531
     iput v1, p0, Lcom/miui/home/launcher/FolderGridView;->mAutoScrollDirection:I
 
-    .line 531
+    .line 532
     invoke-direct {p0}, Lcom/miui/home/launcher/FolderGridView;->removeAutoScroll()V
 
-    .line 532
+    .line 533
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->isDroped()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 533
+    .line 534
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/FolderGridView;->restoreBackupDataForDragging(Lcom/miui/home/launcher/DragObject;)V
 
-    .line 535
+    .line 536
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/FolderGridView;->mBackupDataForDragIn:Ljava/util/HashMap;
 
@@ -1686,16 +1696,16 @@
 
     const/4 v0, 0x0
 
-    .line 536
+    .line 537
     iput-object v0, p0, Lcom/miui/home/launcher/FolderGridView;->mLastHit:Landroid/view/View;
 
-    .line 537
+    .line 538
     iput-object v0, p0, Lcom/miui/home/launcher/FolderGridView;->mLastPosMap:Ljava/util/HashMap;
 
-    .line 538
+    .line 539
     invoke-direct {p0}, Lcom/miui/home/launcher/FolderGridView;->makePositionSnapShot()V
 
-    .line 539
+    .line 540
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderGridView;->getHandler()Landroid/os/Handler;
 
     move-result-object v1
@@ -1704,7 +1714,7 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 540
+    .line 541
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getDragView()Lcom/miui/home/launcher/DragView;
 
     move-result-object p1
@@ -1715,7 +1725,7 @@
 
     if-nez p1, :cond_2
 
-    .line 541
+    .line 542
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderGridView;->getChildCount()I
 
     move-result p1
@@ -1725,7 +1735,7 @@
     :goto_0
     if-ltz p1, :cond_1
 
-    .line 542
+    .line 543
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/FolderGridView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
@@ -1738,7 +1748,7 @@
 
     goto :goto_0
 
-    .line 544
+    .line 545
     :cond_1
     iget-object p1, p0, Lcom/miui/home/launcher/FolderGridView;->mAdapter:Lcom/miui/home/launcher/ShortcutsAdapter;
 
@@ -1746,7 +1756,7 @@
 
     goto :goto_1
 
-    .line 546
+    .line 547
     :cond_2
     iget-object p1, p0, Lcom/miui/home/launcher/FolderGridView;->mAdapter:Lcom/miui/home/launcher/ShortcutsAdapter;
 
@@ -1754,18 +1764,18 @@
 
     invoke-virtual {p1}, Ljava/util/HashSet;->clear()V
 
-    .line 547
+    .line 548
     iget-object p1, p0, Lcom/miui/home/launcher/FolderGridView;->mAdapter:Lcom/miui/home/launcher/ShortcutsAdapter;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/ShortcutsAdapter;->notifyDataSetChanged()V
 
-    .line 549
+    .line 550
     :goto_1
     iget-object p1, p0, Lcom/miui/home/launcher/FolderGridView;->mAdapter:Lcom/miui/home/launcher/ShortcutsAdapter;
 
     iput-object v0, p1, Lcom/miui/home/launcher/ShortcutsAdapter;->mFirstDragItem:Lcom/miui/home/launcher/ShortcutInfo;
 
-    .line 550
+    .line 551
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderGridView;->getRootView()Landroid/view/View;
 
     move-result-object p1
@@ -1778,7 +1788,7 @@
 .method public onDragOver(Lcom/miui/home/launcher/DragObject;)V
     .locals 6
 
-    .line 477
+    .line 478
     iget-object v0, p0, Lcom/miui/home/launcher/FolderGridView;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->isInShortcutMenuState()Z
@@ -1789,7 +1799,7 @@
 
     return-void
 
-    .line 481
+    .line 482
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderGridView;->getTranslationY()F
 
@@ -1827,25 +1837,25 @@
 
     if-gez v0, :cond_1
 
-    .line 482
+    .line 483
     iget v0, p0, Lcom/miui/home/launcher/FolderGridView;->mAutoScrollDirection:I
 
     if-eq v0, v3, :cond_3
 
-    .line 483
+    .line 484
     invoke-direct {p0}, Lcom/miui/home/launcher/FolderGridView;->removeAutoScroll()V
 
-    .line 484
+    .line 485
     iput v3, p0, Lcom/miui/home/launcher/FolderGridView;->mAutoScrollDirection:I
 
-    .line 485
+    .line 486
     iget-object v0, p0, Lcom/miui/home/launcher/FolderGridView;->mConfirmAutoScroll:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/FolderGridView;->post(Ljava/lang/Runnable;)Z
 
     goto :goto_0
 
-    .line 487
+    .line 488
     :cond_1
     iget v0, p1, Lcom/miui/home/launcher/DragObject;->y:I
 
@@ -1869,34 +1879,34 @@
 
     if-gez v0, :cond_2
 
-    .line 488
+    .line 489
     iget v0, p0, Lcom/miui/home/launcher/FolderGridView;->mAutoScrollDirection:I
 
     const/4 v2, -0x1
 
     if-eq v0, v2, :cond_3
 
-    .line 489
+    .line 490
     invoke-direct {p0}, Lcom/miui/home/launcher/FolderGridView;->removeAutoScroll()V
 
-    .line 490
+    .line 491
     iput v2, p0, Lcom/miui/home/launcher/FolderGridView;->mAutoScrollDirection:I
 
-    .line 491
+    .line 492
     iget-object v0, p0, Lcom/miui/home/launcher/FolderGridView;->mConfirmAutoScroll:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/FolderGridView;->post(Ljava/lang/Runnable;)Z
 
     goto :goto_0
 
-    .line 494
+    .line 495
     :cond_2
     iput v1, p0, Lcom/miui/home/launcher/FolderGridView;->mAutoScrollDirection:I
 
-    .line 495
+    .line 496
     invoke-direct {p0}, Lcom/miui/home/launcher/FolderGridView;->removeAutoScroll()V
 
-    .line 498
+    .line 499
     :cond_3
     :goto_0
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/FolderGridView;->checkNearestViewByDrag(Lcom/miui/home/launcher/DragObject;)Z
@@ -1905,7 +1915,7 @@
 
     if-eqz v0, :cond_4
 
-    .line 499
+    .line 500
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderGridView;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -1914,19 +1924,19 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 500
+    .line 501
     iget-object v0, p0, Lcom/miui/home/launcher/FolderGridView;->mStayConfirm:Ljava/lang/Runnable;
 
     const-wide/16 v4, 0x12c
 
     invoke-virtual {p0, v0, v4, v5}, Lcom/miui/home/launcher/FolderGridView;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 502
+    .line 503
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderGridView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v2, 0x7f100060
+    const v2, 0x7f110061
 
     new-array v4, v3, [Ljava/lang/Object;
 
@@ -1948,7 +1958,7 @@
 
     move-result-object v0
 
-    .line 501
+    .line 502
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/DragObject;->announce(Ljava/lang/CharSequence;)V
 
     :cond_4
@@ -1958,27 +1968,27 @@
 .method public onDragStart([Lcom/miui/home/launcher/DragSource;Lcom/miui/home/launcher/DragObject;)V
     .locals 0
 
-    .line 725
+    .line 726
     iput-object p2, p0, Lcom/miui/home/launcher/FolderGridView;->mBackupDragObject:Lcom/miui/home/launcher/DragObject;
 
     return-void
 .end method
 
 .method public onDrop(Lcom/miui/home/launcher/DragObject;)Z
-    .locals 19
+    .locals 20
 
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
 
-    .line 187
+    .line 189
     invoke-virtual/range {p1 .. p1}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v2
 
     check-cast v2, Lcom/miui/home/launcher/ShortcutInfo;
 
-    .line 189
+    .line 191
     iget-wide v3, v2, Lcom/miui/home/launcher/ShortcutInfo;->id:J
 
     const-wide/16 v5, -0x1
@@ -1995,15 +2005,15 @@
 
     const-string v3, "folder"
 
-    .line 192
+    .line 194
     invoke-virtual {v2}, Lcom/miui/home/launcher/ShortcutInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 190
+    .line 192
     invoke-static {v3, v4}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackAllAppsDrag(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 195
+    .line 197
     :cond_0
     iget-object v3, v0, Lcom/miui/home/launcher/FolderGridView;->mItemsForDropping:Ljava/util/HashMap;
 
@@ -2013,7 +2023,7 @@
 
     invoke-virtual {v3, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 196
+    .line 198
     iget v3, v1, Lcom/miui/home/launcher/DragObject;->dropAction:I
 
     const/4 v4, 0x0
@@ -2032,7 +2042,7 @@
     :goto_0
     if-eqz v3, :cond_4
 
-    .line 200
+    .line 202
     invoke-direct/range {p0 .. p0}, Lcom/miui/home/launcher/FolderGridView;->getLastCellX()I
 
     move-result v6
@@ -2041,7 +2051,7 @@
 
     iput v6, v2, Lcom/miui/home/launcher/ShortcutInfo;->cellX:I
 
-    .line 201
+    .line 203
     iget-object v6, v0, Lcom/miui/home/launcher/FolderGridView;->mAdapter:Lcom/miui/home/launcher/ShortcutsAdapter;
 
     iget-object v6, v6, Lcom/miui/home/launcher/ShortcutsAdapter;->mDroppingDragViews:Ljava/util/HashMap;
@@ -2052,7 +2062,7 @@
 
     invoke-virtual {v6, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 202
+    .line 204
     iget-object v6, v0, Lcom/miui/home/launcher/FolderGridView;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v6}, Lcom/miui/home/launcher/Launcher;->getLauncherMode()Lcom/miui/home/launcher/allapps/LauncherMode;
@@ -2075,12 +2085,12 @@
 
     if-eqz v6, :cond_2
 
-    .line 203
+    .line 205
     iget-object v6, v0, Lcom/miui/home/launcher/FolderGridView;->mAdapter:Lcom/miui/home/launcher/ShortcutsAdapter;
 
     invoke-virtual {v6, v2}, Lcom/miui/home/launcher/ShortcutsAdapter;->add(Lcom/miui/home/launcher/ShortcutInfo;)V
 
-    .line 205
+    .line 207
     :cond_2
     invoke-virtual/range {p0 .. p0}, Lcom/miui/home/launcher/FolderGridView;->getCount()I
 
@@ -2094,7 +2104,7 @@
 
     if-ne v6, v5, :cond_3
 
-    .line 206
+    .line 208
     iget-object v6, v0, Lcom/miui/home/launcher/FolderGridView;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v6}, Lcom/miui/home/launcher/Launcher;->getFolderCling()Lcom/miui/home/launcher/FolderCling;
@@ -2105,52 +2115,52 @@
 
     goto :goto_1
 
-    .line 208
+    .line 210
     :cond_3
     invoke-virtual/range {p0 .. p0}, Lcom/miui/home/launcher/FolderGridView;->layoutChildren()V
 
-    .line 213
+    .line 215
     :cond_4
     :goto_1
     invoke-virtual {v0, v2}, Lcom/miui/home/launcher/FolderGridView;->findViewWithTag(Ljava/lang/Object;)Landroid/view/View;
 
     move-result-object v6
 
-    .line 216
+    .line 218
     new-instance v7, Lcom/miui/home/launcher/FolderGridView$1;
 
     invoke-direct {v7, v0, v2}, Lcom/miui/home/launcher/FolderGridView$1;-><init>(Lcom/miui/home/launcher/FolderGridView;Lcom/miui/home/launcher/ShortcutInfo;)V
 
-    .line 222
+    .line 224
     invoke-virtual/range {p1 .. p1}, Lcom/miui/home/launcher/DragObject;->getDragView()Lcom/miui/home/launcher/DragView;
 
     move-result-object v8
 
     if-nez v6, :cond_5
 
-    .line 225
+    .line 227
     invoke-virtual {v8}, Lcom/miui/home/launcher/DragView;->setFakeTargetMode()V
 
     move-object v6, v0
 
-    .line 227
+    .line 229
     :cond_5
     invoke-virtual {v8, v6}, Lcom/miui/home/launcher/DragView;->setAnimateTarget(Landroid/view/View;)Z
 
-    .line 228
+    .line 230
     invoke-virtual {v8, v7}, Lcom/miui/home/launcher/DragView;->setOnAnimationEndCallback(Ljava/lang/Runnable;)V
 
     if-eqz v3, :cond_6
 
     const/4 v6, 0x0
 
-    .line 230
+    .line 232
     invoke-virtual {v8, v6}, Lcom/miui/home/launcher/DragView;->setPivotX(F)V
 
-    .line 231
+    .line 233
     invoke-virtual {v8, v6}, Lcom/miui/home/launcher/DragView;->setPivotX(F)V
 
-    .line 235
+    .line 237
     :cond_6
     invoke-virtual/range {p1 .. p1}, Lcom/miui/home/launcher/DragObject;->isLastObject()Z
 
@@ -2158,27 +2168,27 @@
 
     if-eqz v6, :cond_10
 
-    .line 236
+    .line 238
     invoke-virtual {v0, v4}, Lcom/miui/home/launcher/FolderGridView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v6
 
-    .line 237
+    .line 239
     invoke-virtual {v6}, Landroid/view/View;->getHeight()I
 
     move-result v7
 
-    .line 238
+    .line 240
     invoke-virtual {v6}, Landroid/view/View;->getWidth()I
 
     move-result v8
 
     const/4 v9, 0x2
 
-    .line 239
+    .line 241
     new-array v10, v9, [F
 
-    .line 240
+    .line 242
     iget-object v11, v0, Lcom/miui/home/launcher/FolderGridView;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v11}, Lcom/miui/home/launcher/Launcher;->getDragLayer()Lcom/miui/home/launcher/DragLayer;
@@ -2189,7 +2199,7 @@
 
     move-result v11
 
-    .line 241
+    .line 243
     aget v12, v10, v4
 
     invoke-virtual/range {p0 .. p0}, Lcom/miui/home/launcher/FolderGridView;->getPaddingLeft()I
@@ -2202,7 +2212,7 @@
 
     add-float/2addr v12, v13
 
-    .line 242
+    .line 244
     aget v13, v10, v5
 
     invoke-virtual/range {p0 .. p0}, Lcom/miui/home/launcher/FolderGridView;->getPaddingTop()I
@@ -2215,112 +2225,142 @@
 
     add-float/2addr v13, v14
 
-    .line 243
+    .line 245
+    aget v14, v10, v4
+
+    invoke-virtual/range {p0 .. p0}, Lcom/miui/home/launcher/FolderGridView;->getWidth()I
+
+    move-result v15
+
+    int-to-float v15, v15
+
+    mul-float/2addr v15, v11
+
+    add-float/2addr v14, v15
+
+    .line 246
     aget v10, v10, v5
 
     invoke-virtual/range {p0 .. p0}, Lcom/miui/home/launcher/FolderGridView;->getHeight()I
 
-    move-result v14
+    move-result v15
 
     invoke-virtual/range {p0 .. p0}, Lcom/miui/home/launcher/FolderGridView;->getPaddingBottom()I
 
-    move-result v15
+    move-result v16
 
-    sub-int/2addr v14, v15
+    sub-int v15, v15, v16
 
-    int-to-float v14, v14
+    int-to-float v15, v15
 
-    mul-float/2addr v14, v11
+    mul-float/2addr v15, v11
 
-    add-float/2addr v10, v14
+    add-float/2addr v10, v15
 
     if-nez v3, :cond_b
 
-    .line 246
+    .line 249
+    iget-object v3, v0, Lcom/miui/home/launcher/FolderGridView;->mLauncher:Lcom/miui/home/launcher/Launcher;
+
+    invoke-virtual {v3}, Lcom/miui/home/launcher/Launcher;->getDragViewContainer()Lcom/miui/home/launcher/widget/DragContainerLayout;
+
+    move-result-object v3
+
+    new-instance v7, Landroid/graphics/Rect;
+
+    float-to-int v8, v12
+
+    float-to-int v11, v13
+
+    float-to-int v12, v14
+
+    float-to-int v10, v10
+
+    invoke-direct {v7, v8, v11, v12, v10}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    invoke-virtual {v3, v7}, Lcom/miui/home/launcher/widget/DragContainerLayout;->setDragDrawClipRect(Landroid/graphics/Rect;)V
+
+    .line 250
     iget-object v3, v0, Lcom/miui/home/launcher/FolderGridView;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v3}, Lcom/miui/home/launcher/Launcher;->getDragLayer()Lcom/miui/home/launcher/DragLayer;
 
     move-result-object v3
 
-    new-instance v11, Landroid/graphics/Rect;
+    new-instance v7, Landroid/graphics/Rect;
 
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getScreenWidth()I
 
-    move-result v12
+    move-result v8
 
-    float-to-int v10, v10
+    invoke-direct {v7, v4, v4, v8, v10}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    invoke-direct {v11, v4, v4, v12, v10}, Landroid/graphics/Rect;-><init>(IIII)V
+    invoke-virtual {v3, v7}, Lcom/miui/home/launcher/DragLayer;->setClipForDragging(Landroid/graphics/Rect;)V
 
-    invoke-virtual {v3, v11}, Lcom/miui/home/launcher/DragLayer;->setClipForDragging(Landroid/graphics/Rect;)V
-
-    move v3, v4
-
-    .line 249
+    .line 253
     :goto_2
     invoke-virtual/range {p0 .. p0}, Lcom/miui/home/launcher/FolderGridView;->getChildCount()I
 
-    move-result v10
+    move-result v3
 
-    if-ge v3, v10, :cond_9
+    if-ge v4, v3, :cond_9
 
-    .line 250
-    invoke-virtual {v0, v3}, Lcom/miui/home/launcher/FolderGridView;->getChildAt(I)Landroid/view/View;
+    .line 254
+    invoke-virtual {v0, v4}, Lcom/miui/home/launcher/FolderGridView;->getChildAt(I)Landroid/view/View;
 
-    move-result-object v10
-
-    .line 251
-    iget-object v11, v0, Lcom/miui/home/launcher/FolderGridView;->mItemsForDropping:Ljava/util/HashMap;
-
-    invoke-virtual {v10}, Landroid/view/View;->getTag()Ljava/lang/Object;
-
-    move-result-object v12
-
-    invoke-virtual {v11, v12}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v11
-
-    if-eqz v11, :cond_8
-
-    .line 252
-    instance-of v11, v10, Lcom/miui/home/launcher/AutoLayoutAnimation$HostView;
-
-    if-eqz v11, :cond_7
-
-    move-object v11, v10
-
-    check-cast v11, Lcom/miui/home/launcher/AutoLayoutAnimation$HostView;
-
-    invoke-interface {v11}, Lcom/miui/home/launcher/AutoLayoutAnimation$HostView;->getGhostView()Lcom/miui/home/launcher/AutoLayoutAnimation$GhostView;
-
-    move-result-object v12
-
-    if-eqz v12, :cond_7
-
-    .line 253
-    invoke-interface {v11}, Lcom/miui/home/launcher/AutoLayoutAnimation$HostView;->getGhostView()Lcom/miui/home/launcher/AutoLayoutAnimation$GhostView;
-
-    move-result-object v11
-
-    invoke-interface {v11, v10}, Lcom/miui/home/launcher/AutoLayoutAnimation$GhostView;->updateAnimateTarget(Landroid/view/View;)V
+    move-result-object v3
 
     .line 255
+    iget-object v7, v0, Lcom/miui/home/launcher/FolderGridView;->mItemsForDropping:Ljava/util/HashMap;
+
+    invoke-virtual {v3}, Landroid/view/View;->getTag()Ljava/lang/Object;
+
+    move-result-object v8
+
+    invoke-virtual {v7, v8}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_8
+
+    .line 256
+    instance-of v7, v3, Lcom/miui/home/launcher/AutoLayoutAnimation$HostView;
+
+    if-eqz v7, :cond_7
+
+    move-object v7, v3
+
+    check-cast v7, Lcom/miui/home/launcher/AutoLayoutAnimation$HostView;
+
+    invoke-interface {v7}, Lcom/miui/home/launcher/AutoLayoutAnimation$HostView;->getGhostView()Lcom/miui/home/launcher/AutoLayoutAnimation$GhostView;
+
+    move-result-object v8
+
+    if-eqz v8, :cond_7
+
+    .line 257
+    invoke-interface {v7}, Lcom/miui/home/launcher/AutoLayoutAnimation$HostView;->getGhostView()Lcom/miui/home/launcher/AutoLayoutAnimation$GhostView;
+
+    move-result-object v7
+
+    invoke-interface {v7, v3}, Lcom/miui/home/launcher/AutoLayoutAnimation$GhostView;->updateAnimateTarget(Landroid/view/View;)V
+
+    .line 259
     :cond_7
-    iget-object v11, v0, Lcom/miui/home/launcher/FolderGridView;->mItemsForDropping:Ljava/util/HashMap;
+    iget-object v7, v0, Lcom/miui/home/launcher/FolderGridView;->mItemsForDropping:Ljava/util/HashMap;
 
-    invoke-virtual {v10}, Landroid/view/View;->getTag()Ljava/lang/Object;
+    invoke-virtual {v3}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
-    move-result-object v10
+    move-result-object v3
 
-    invoke-virtual {v11, v10}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v7, v3}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_8
-    add-int/lit8 v3, v3, 0x1
+    add-int/lit8 v4, v4, 0x1
 
     goto :goto_2
 
-    .line 260
+    .line 264
     :cond_9
     iget-object v3, v0, Lcom/miui/home/launcher/FolderGridView;->mItemsForDropping:Ljava/util/HashMap;
 
@@ -2330,125 +2370,48 @@
 
     if-lez v3, :cond_e
 
-    .line 261
+    .line 265
     new-array v3, v9, [I
 
-    .line 262
+    .line 266
     invoke-virtual {v6, v3}, Landroid/view/View;->getLocationInWindow([I)V
 
-    .line 264
-    iget-object v6, v0, Lcom/miui/home/launcher/FolderGridView;->mItemsForDropping:Ljava/util/HashMap;
+    .line 268
+    iget-object v3, v0, Lcom/miui/home/launcher/FolderGridView;->mItemsForDropping:Ljava/util/HashMap;
 
-    invoke-virtual {v6}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
+    invoke-virtual {v3}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
-    move-result-object v6
+    move-result-object v3
 
-    invoke-interface {v6}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    invoke-interface {v3}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
-    move-result-object v6
+    move-result-object v3
 
     :goto_3
-    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v10
+    move-result v4
 
-    if-eqz v10, :cond_a
+    if-eqz v4, :cond_a
 
-    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v10
+    move-result-object v4
 
-    check-cast v10, Ljava/util/Map$Entry;
+    check-cast v4, Ljava/util/Map$Entry;
 
-    .line 265
-    aget v11, v3, v4
+    .line 269
+    invoke-interface {v4}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
-    invoke-interface {v10}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    move-result-object v4
 
-    move-result-object v12
+    check-cast v4, Lcom/miui/home/launcher/DragView;
 
-    check-cast v12, Lcom/miui/home/launcher/ItemInfo;
-
-    iget v12, v12, Lcom/miui/home/launcher/ItemInfo;->cellX:I
-
-    invoke-virtual/range {p0 .. p0}, Lcom/miui/home/launcher/FolderGridView;->getNumColumns()I
-
-    move-result v13
-
-    rem-int/2addr v12, v13
-
-    invoke-virtual/range {p0 .. p0}, Lcom/miui/home/launcher/FolderGridView;->getHorizontalSpacing()I
-
-    move-result v13
-
-    add-int/2addr v13, v8
-
-    mul-int/2addr v12, v13
-
-    add-int/2addr v11, v12
-
-    int-to-float v11, v11
-
-    .line 266
-    aget v12, v3, v4
-
-    invoke-virtual/range {p0 .. p0}, Lcom/miui/home/launcher/FolderGridView;->getFirstVisiblePosition()I
-
-    move-result v13
-
-    invoke-virtual/range {p0 .. p0}, Lcom/miui/home/launcher/FolderGridView;->getNumColumns()I
-
-    move-result v14
-
-    div-int/2addr v13, v14
-
-    invoke-interface {v10}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v14
-
-    check-cast v14, Lcom/miui/home/launcher/ItemInfo;
-
-    iget v14, v14, Lcom/miui/home/launcher/ItemInfo;->cellX:I
-
-    invoke-virtual/range {p0 .. p0}, Lcom/miui/home/launcher/FolderGridView;->getNumColumns()I
-
-    move-result v15
-
-    div-int/2addr v14, v15
-
-    sub-int/2addr v13, v14
-
-    .line 267
-    invoke-virtual/range {p0 .. p0}, Lcom/miui/home/launcher/FolderGridView;->getVerticalSpacing()I
-
-    move-result v14
-
-    add-int/2addr v14, v7
-
-    mul-int/2addr v13, v14
-
-    sub-int/2addr v12, v13
-
-    int-to-float v12, v12
-
-    .line 268
-    invoke-interface {v10}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v10
-
-    check-cast v10, Lcom/miui/home/launcher/DragView;
-
-    new-array v13, v9, [F
-
-    aput v11, v13, v4
-
-    aput v12, v13, v5
-
-    invoke-virtual {v10, v13}, Lcom/miui/home/launcher/DragView;->updateAnimateTarget([F)V
+    invoke-virtual {v4}, Lcom/miui/home/launcher/DragView;->remove()V
 
     goto :goto_3
 
-    .line 270
+    .line 271
     :cond_a
     iget-object v3, v0, Lcom/miui/home/launcher/FolderGridView;->mItemsForDropping:Ljava/util/HashMap;
 
@@ -2456,7 +2419,7 @@
 
     goto/16 :goto_6
 
-    .line 273
+    .line 274
     :cond_b
     iget-object v3, v0, Lcom/miui/home/launcher/FolderGridView;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -2480,7 +2443,7 @@
 
     invoke-virtual {v3, v6}, Lcom/miui/home/launcher/DragLayer;->setClipForDragging(Landroid/graphics/Rect;)V
 
-    .line 274
+    .line 275
     iget-object v3, v0, Lcom/miui/home/launcher/FolderGridView;->mAdapter:Lcom/miui/home/launcher/ShortcutsAdapter;
 
     invoke-virtual {v3}, Lcom/miui/home/launcher/ShortcutsAdapter;->getCount()I
@@ -2497,7 +2460,7 @@
 
     add-int/2addr v3, v5
 
-    .line 276
+    .line 277
     iget-object v6, v0, Lcom/miui/home/launcher/FolderGridView;->mItemsForDropping:Ljava/util/HashMap;
 
     invoke-virtual {v6}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
@@ -2521,7 +2484,7 @@
 
     check-cast v9, Ljava/util/Map$Entry;
 
-    .line 277
+    .line 278
     invoke-interface {v9}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v14
@@ -2530,7 +2493,7 @@
 
     iget v14, v14, Lcom/miui/home/launcher/ItemInfo;->cellX:I
 
-    .line 278
+    .line 279
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isLayoutRtl()Z
 
     move-result v15
@@ -2545,11 +2508,11 @@
 
     invoke-virtual/range {p0 .. p0}, Lcom/miui/home/launcher/FolderGridView;->getNumColumns()I
 
-    move-result v16
+    move-result v17
 
-    rem-int v16, v14, v16
+    rem-int v17, v14, v17
 
-    sub-int v15, v15, v16
+    sub-int v15, v15, v17
 
     goto :goto_5
 
@@ -2560,33 +2523,33 @@
 
     rem-int v15, v14, v15
 
-    .line 280
+    .line 281
     :goto_5
     invoke-virtual/range {p0 .. p0}, Lcom/miui/home/launcher/FolderGridView;->getColumnWidth()I
 
-    move-result v16
+    move-result v17
 
     invoke-virtual/range {p0 .. p0}, Lcom/miui/home/launcher/FolderGridView;->getHorizontalSpacing()I
 
-    move-result v17
+    move-result v18
 
-    add-int v16, v16, v17
+    add-int v17, v17, v18
 
-    mul-int v15, v15, v16
+    mul-int v15, v15, v17
 
     int-to-float v15, v15
 
     invoke-virtual/range {p0 .. p0}, Lcom/miui/home/launcher/FolderGridView;->getColumnWidth()I
 
-    move-result v16
+    move-result v17
 
-    sub-int v4, v16, v8
+    sub-int v4, v17, v8
 
     int-to-float v4, v4
 
-    const/high16 v16, 0x40000000    # 2.0f
+    const/high16 v17, 0x40000000    # 2.0f
 
-    div-float v4, v4, v16
+    div-float v4, v4, v17
 
     add-float/2addr v15, v4
 
@@ -2594,7 +2557,7 @@
 
     add-float/2addr v15, v12
 
-    .line 282
+    .line 283
     invoke-virtual/range {p0 .. p0}, Lcom/miui/home/launcher/FolderGridView;->getNumColumns()I
 
     move-result v4
@@ -2603,11 +2566,11 @@
 
     invoke-virtual/range {p0 .. p0}, Lcom/miui/home/launcher/FolderGridView;->getVerticalSpacing()I
 
-    move-result v18
+    move-result v19
 
-    add-int v18, v7, v18
+    add-int v19, v7, v19
 
-    mul-int v4, v4, v18
+    mul-int v4, v4, v19
 
     int-to-float v4, v4
 
@@ -2615,12 +2578,12 @@
 
     add-float/2addr v4, v13
 
-    .line 284
+    .line 285
     invoke-virtual/range {p0 .. p0}, Lcom/miui/home/launcher/FolderGridView;->getNumColumns()I
 
-    move-result v18
+    move-result v19
 
-    div-int v14, v14, v18
+    div-int v14, v14, v19
 
     sub-int v14, v3, v14
 
@@ -2628,11 +2591,11 @@
 
     invoke-virtual/range {p0 .. p0}, Lcom/miui/home/launcher/FolderGridView;->getVerticalSpacing()I
 
-    move-result v18
+    move-result v19
 
-    add-int v18, v7, v18
+    add-int v19, v7, v19
 
-    mul-int v14, v14, v18
+    mul-int v14, v14, v19
 
     add-int/2addr v14, v7
 
@@ -2642,12 +2605,12 @@
 
     sub-float v14, v10, v14
 
-    .line 286
+    .line 287
     invoke-static {v4, v14}, Ljava/lang/Math;->min(FF)F
 
     move-result v4
 
-    .line 288
+    .line 289
     invoke-interface {v9}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v14
@@ -2656,7 +2619,7 @@
 
     invoke-virtual {v14, v11}, Lcom/miui/home/launcher/DragView;->setTargetScale(F)V
 
-    .line 289
+    .line 290
     invoke-interface {v9}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v9
@@ -2667,24 +2630,24 @@
 
     new-array v5, v14, [F
 
-    .line 290
+    .line 291
     invoke-virtual/range {p1 .. p1}, Lcom/miui/home/launcher/DragObject;->getDragView()Lcom/miui/home/launcher/DragView;
 
-    move-result-object v18
+    move-result-object v19
 
-    invoke-virtual/range {v18 .. v18}, Lcom/miui/home/launcher/DragView;->getWidth()I
+    invoke-virtual/range {v19 .. v19}, Lcom/miui/home/launcher/DragView;->getWidth()I
 
     move-result v14
 
     int-to-float v14, v14
 
-    const/high16 v18, 0x3f800000    # 1.0f
+    const/high16 v19, 0x3f800000    # 1.0f
 
-    sub-float v18, v18, v11
+    sub-float v19, v19, v11
 
-    mul-float v14, v14, v18
+    mul-float v14, v14, v19
 
-    div-float v14, v14, v16
+    div-float v14, v14, v17
 
     sub-float/2addr v15, v14
 
@@ -2692,7 +2655,7 @@
 
     aput v15, v5, v14
 
-    .line 291
+    .line 292
     invoke-virtual/range {p1 .. p1}, Lcom/miui/home/launcher/DragObject;->getDragView()Lcom/miui/home/launcher/DragView;
 
     move-result-object v15
@@ -2703,9 +2666,9 @@
 
     int-to-float v15, v15
 
-    mul-float v15, v15, v18
+    mul-float v15, v15, v19
 
-    div-float v15, v15, v16
+    div-float v15, v15, v17
 
     sub-float/2addr v4, v15
 
@@ -2713,7 +2676,7 @@
 
     aput v4, v5, v15
 
-    .line 289
+    .line 290
     invoke-virtual {v9, v5}, Lcom/miui/home/launcher/DragView;->updateAnimateTarget([F)V
 
     move v4, v14
@@ -2722,16 +2685,16 @@
 
     goto/16 :goto_4
 
-    .line 294
+    .line 295
     :cond_d
     iget-object v3, v0, Lcom/miui/home/launcher/FolderGridView;->mItemsForDropping:Ljava/util/HashMap;
 
     invoke-virtual {v3}, Ljava/util/HashMap;->clear()V
 
-    .line 295
+    .line 296
     invoke-virtual/range {p0 .. p0}, Lcom/miui/home/launcher/FolderGridView;->scrollToLast()V
 
-    .line 297
+    .line 298
     :cond_e
     :goto_6
     invoke-virtual/range {p1 .. p1}, Lcom/miui/home/launcher/DragObject;->getDragSource()Lcom/miui/home/launcher/DragSource;
@@ -2742,18 +2705,18 @@
 
     if-eqz v3, :cond_f
 
-    .line 298
+    .line 299
     iget-object v3, v0, Lcom/miui/home/launcher/FolderGridView;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v3, v1}, Lcom/miui/home/launcher/Launcher;->insertNewShortcutFromAllApps(Lcom/miui/home/launcher/DragObject;)V
 
-    .line 301
+    .line 302
     :cond_f
     iget-object v1, v0, Lcom/miui/home/launcher/FolderGridView;->mAdapter:Lcom/miui/home/launcher/ShortcutsAdapter;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/ShortcutsAdapter;->saveContentPosition()V
 
-    .line 303
+    .line 304
     :cond_10
     invoke-virtual {v2}, Lcom/miui/home/launcher/ShortcutInfo;->finishPending()V
 
@@ -2765,7 +2728,7 @@
 .method public onDropCompleted()V
     .locals 1
 
-    .line 672
+    .line 673
     iget-object v0, p0, Lcom/miui/home/launcher/FolderGridView;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->exitMultiSelectEditModeIfNeed()V
@@ -2774,7 +2737,14 @@
 .end method
 
 .method public onDropStart(Lcom/miui/home/launcher/DragObject;)V
-    .locals 0
+    .locals 1
+
+    .line 184
+    new-instance v0, Lcom/miui/home/launcher/FolderGridView$FolderDropAnimationListener;
+
+    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/FolderGridView$FolderDropAnimationListener;-><init>(Lcom/miui/home/launcher/FolderGridView;Lcom/miui/home/launcher/DragObject;)V
+
+    invoke-virtual {p1, v0}, Lcom/miui/home/launcher/DragObject;->addDragAnimationListener(Lcom/miui/home/launcher/DragController$DropAnimationListener;)V
 
     return-void
 .end method
@@ -2782,17 +2752,17 @@
 .method protected onLayout(ZIIII)V
     .locals 4
 
-    .line 373
+    .line 374
     invoke-super/range {p0 .. p5}, Landroid/widget/GridView;->onLayout(ZIIII)V
 
-    .line 374
+    .line 375
     iget-object p1, p0, Lcom/miui/home/launcher/FolderGridView;->mLastPosMap:Ljava/util/HashMap;
 
     if-eqz p1, :cond_5
 
     const/4 p1, 0x0
 
-    .line 375
+    .line 376
     :goto_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderGridView;->getChildCount()I
 
@@ -2800,12 +2770,12 @@
 
     if-ge p1, p2, :cond_4
 
-    .line 376
+    .line 377
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/FolderGridView;->getChildAt(I)Landroid/view/View;
 
     move-result-object p2
 
-    .line 377
+    .line 378
     invoke-virtual {p2}, Landroid/view/View;->getVisibility()I
 
     move-result p3
@@ -2830,14 +2800,14 @@
 
     if-nez p3, :cond_3
 
-    .line 378
+    .line 379
     invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object p3
 
     check-cast p3, Lcom/miui/home/launcher/ShortcutInfo;
 
-    .line 379
+    .line 380
     iget-object p4, p0, Lcom/miui/home/launcher/FolderGridView;->mLastPosMap:Ljava/util/HashMap;
 
     invoke-virtual {p4, p3}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
@@ -2850,7 +2820,7 @@
 
     if-eqz p4, :cond_1
 
-    .line 380
+    .line 381
     iget-object p4, p0, Lcom/miui/home/launcher/FolderGridView;->mLastPosMap:Ljava/util/HashMap;
 
     invoke-virtual {p4, p3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2859,7 +2829,7 @@
 
     check-cast p3, Landroid/graphics/Rect;
 
-    .line 381
+    .line 382
     iget p4, p3, Landroid/graphics/Rect;->left:I
 
     invoke-virtual {p2}, Landroid/view/View;->getLeft()I
@@ -2876,13 +2846,13 @@
 
     if-eq p4, v2, :cond_3
 
-    .line 382
+    .line 383
     :cond_0
     new-instance p4, Landroid/view/animation/TranslateAnimation;
 
     iget v2, p3, Landroid/graphics/Rect;->left:I
 
-    .line 383
+    .line 384
     invoke-virtual {p2}, Landroid/view/View;->getLeft()I
 
     move-result v3
@@ -2903,15 +2873,15 @@
 
     invoke-direct {p4, v2, p5, p3, p5}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
-    .line 384
+    .line 385
     invoke-virtual {p4, v0, v1}, Landroid/view/animation/Animation;->setDuration(J)V
 
-    .line 385
+    .line 386
     invoke-virtual {p2, p4}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
     goto :goto_1
 
-    .line 389
+    .line 390
     :cond_1
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderGridView;->getChildCount()I
 
@@ -2921,7 +2891,7 @@
 
     if-ne p1, p3, :cond_2
 
-    .line 390
+    .line 391
     new-instance p3, Landroid/view/animation/TranslateAnimation;
 
     invoke-virtual {p2}, Landroid/view/View;->getWidth()I
@@ -2946,7 +2916,7 @@
 
     int-to-float p4, p4
 
-    .line 391
+    .line 392
     invoke-virtual {p2}, Landroid/view/View;->getHeight()I
 
     move-result v2
@@ -2961,15 +2931,15 @@
 
     invoke-direct {p3, p4, p5, v2, p5}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
-    .line 392
+    .line 393
     invoke-virtual {p3, v0, v1}, Landroid/view/animation/Animation;->setDuration(J)V
 
-    .line 393
+    .line 394
     invoke-virtual {p2, p3}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
     goto :goto_1
 
-    .line 396
+    .line 397
     :cond_2
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderGridView;->getNumColumns()I
 
@@ -2979,10 +2949,10 @@
 
     if-gt p1, p3, :cond_3
 
-    .line 397
+    .line 398
     new-instance p3, Landroid/view/animation/TranslateAnimation;
 
-    .line 398
+    .line 399
     invoke-virtual {p2}, Landroid/view/View;->getHeight()I
 
     move-result p4
@@ -2999,10 +2969,10 @@
 
     invoke-direct {p3, p5, p5, p4, p5}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
-    .line 399
+    .line 400
     invoke-virtual {p3, v0, v1}, Landroid/view/animation/Animation;->setDuration(J)V
 
-    .line 400
+    .line 401
     invoke-virtual {p2, p3}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
     :cond_3
@@ -3014,7 +2984,7 @@
     :cond_4
     const/4 p1, 0x0
 
-    .line 405
+    .line 406
     iput-object p1, p0, Lcom/miui/home/launcher/FolderGridView;->mLastPosMap:Ljava/util/HashMap;
 
     :cond_5
@@ -3024,20 +2994,20 @@
 .method protected onMeasure(II)V
     .locals 1
 
-    .line 103
+    .line 104
     invoke-super {p0, p1, p2}, Landroid/widget/GridView;->onMeasure(II)V
 
-    .line 104
+    .line 105
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderGridView;->calculateHeight()I
 
     move-result p1
 
-    .line 105
+    .line 106
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderGridView;->getMeasuredHeight()I
 
     move-result p2
 
-    .line 106
+    .line 107
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderGridView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
@@ -3046,14 +3016,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 107
+    .line 108
     iget p2, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
     const/4 v0, -0x2
 
     if-ne p2, v0, :cond_0
 
-    .line 109
+    .line 110
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderGridView;->getMeasuredWidth()I
 
     move-result p2
@@ -3067,12 +3037,12 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 7
 
-    .line 557
+    .line 558
     invoke-super {p0, p1}, Landroid/widget/GridView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
-    .line 558
+    .line 559
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v1
@@ -3081,21 +3051,21 @@
 
     if-nez v1, :cond_1
 
-    .line 559
+    .line 560
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v1
 
     float-to-int v1, v1
 
-    .line 560
+    .line 561
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v3
 
     float-to-int v3, v3
 
-    .line 561
+    .line 562
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderGridView;->getChildCount()I
 
     move-result v4
@@ -3105,24 +3075,24 @@
     :goto_0
     if-ltz v4, :cond_1
 
-    .line 563
+    .line 564
     invoke-virtual {p0, v4}, Lcom/miui/home/launcher/FolderGridView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v5
 
-    .line 564
+    .line 565
     invoke-virtual {v5}, Landroid/view/View;->getVisibility()I
 
     move-result v6
 
     if-nez v6, :cond_0
 
-    .line 565
+    .line 566
     iget-object v6, p0, Lcom/miui/home/launcher/FolderGridView;->mRect:Landroid/graphics/Rect;
 
     invoke-virtual {v5, v6}, Landroid/view/View;->getHitRect(Landroid/graphics/Rect;)V
 
-    .line 566
+    .line 567
     iget-object v6, p0, Lcom/miui/home/launcher/FolderGridView;->mRect:Landroid/graphics/Rect;
 
     invoke-virtual {v6, v1, v3}, Landroid/graphics/Rect;->contains(II)Z
@@ -3131,10 +3101,10 @@
 
     if-eqz v6, :cond_0
 
-    .line 567
+    .line 568
     iput-object v5, p0, Lcom/miui/home/launcher/FolderGridView;->mDownIcon:Landroid/view/View;
 
-    .line 568
+    .line 569
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v1
@@ -3152,21 +3122,21 @@
 
     goto :goto_0
 
-    .line 574
+    .line 575
     :cond_1
     :goto_1
     iget-object v1, p0, Lcom/miui/home/launcher/FolderGridView;->mClickConfirmor:Lcom/miui/home/launcher/common/PreciseClickConfirmor;
 
     invoke-virtual {v1, p1}, Lcom/miui/home/launcher/common/PreciseClickConfirmor;->onTouchEvent(Landroid/view/MotionEvent;)V
 
-    .line 575
+    .line 576
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v1
 
     if-eq v1, v2, :cond_2
 
-    .line 576
+    .line 577
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v1
@@ -3175,7 +3145,7 @@
 
     if-ne v1, v3, :cond_4
 
-    .line 577
+    .line 578
     :cond_2
     iget-object v1, p0, Lcom/miui/home/launcher/FolderGridView;->mDownIcon:Landroid/view/View;
 
@@ -3185,7 +3155,7 @@
 
     if-eqz v3, :cond_3
 
-    .line 578
+    .line 579
     check-cast v1, Lcom/miui/home/launcher/ItemIcon;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/ItemIcon;->folmeUp()V
@@ -3193,10 +3163,10 @@
     :cond_3
     const/4 v1, 0x0
 
-    .line 580
+    .line 581
     iput-object v1, p0, Lcom/miui/home/launcher/FolderGridView;->mDownIcon:Landroid/view/View;
 
-    .line 582
+    .line 583
     :cond_4
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -3204,7 +3174,7 @@
 
     if-ne v1, v2, :cond_6
 
-    .line 583
+    .line 584
     iget-object v1, p0, Lcom/miui/home/launcher/FolderGridView;->mClickConfirmor:Lcom/miui/home/launcher/common/PreciseClickConfirmor;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/common/PreciseClickConfirmor;->confirmClick()Z
@@ -3235,7 +3205,7 @@
 
     iget-object p1, p0, Lcom/miui/home/launcher/FolderGridView;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    .line 584
+    .line 585
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->isInNormalEditing()Z
 
     move-result p1
@@ -3254,7 +3224,7 @@
 
     move-object p1, p0
 
-    .line 586
+    .line 587
     :cond_5
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getParent()Landroid/view/ViewParent;
 
@@ -3264,12 +3234,12 @@
 
     if-eqz p1, :cond_6
 
-    .line 587
+    .line 588
     instance-of v1, p1, Lcom/miui/home/launcher/Folder;
 
     if-eqz v1, :cond_5
 
-    .line 588
+    .line 589
     check-cast p1, Lcom/miui/home/launcher/Folder;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Folder;->performClick()Z
@@ -3283,10 +3253,10 @@
 
     const/4 v0, 0x0
 
-    .line 756
+    .line 757
     iput-object v0, p0, Lcom/miui/home/launcher/FolderGridView;->mLastPosMap:Ljava/util/HashMap;
 
-    .line 757
+    .line 758
     invoke-direct {p0}, Lcom/miui/home/launcher/FolderGridView;->makePositionSnapShot()V
 
     return-void
@@ -3295,14 +3265,14 @@
 .method public removeView(Landroid/view/View;)V
     .locals 2
 
-    .line 677
+    .line 678
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/miui/home/launcher/ShortcutInfo;
 
-    .line 678
+    .line 679
     iget-object v1, p0, Lcom/miui/home/launcher/FolderGridView;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/Launcher;->isFolderShowing()Z
@@ -3311,21 +3281,21 @@
 
     if-eqz v1, :cond_0
 
-    .line 679
+    .line 680
     invoke-direct {p0}, Lcom/miui/home/launcher/FolderGridView;->makePositionSnapShot()V
 
-    .line 681
+    .line 682
     :cond_0
     iget-object v1, p0, Lcom/miui/home/launcher/FolderGridView;->mAdapter:Lcom/miui/home/launcher/ShortcutsAdapter;
 
     invoke-virtual {v1, v0}, Lcom/miui/home/launcher/ShortcutsAdapter;->remove(Lcom/miui/home/launcher/ShortcutInfo;)V
 
-    .line 682
+    .line 683
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/FolderGridView;->detachViewFromParent(Landroid/view/View;)V
 
     const/4 v0, 0x0
 
-    .line 683
+    .line 684
     invoke-virtual {p0, p1, v0}, Lcom/miui/home/launcher/FolderGridView;->removeDetachedView(Landroid/view/View;Z)V
 
     return-void
@@ -3334,7 +3304,7 @@
 .method public scrollToLast()V
     .locals 1
 
-    .line 308
+    .line 309
     new-instance v0, Lcom/miui/home/launcher/FolderGridView$2;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/FolderGridView$2;-><init>(Lcom/miui/home/launcher/FolderGridView;)V
@@ -3347,7 +3317,7 @@
 .method public bridge synthetic setAdapter(Landroid/widget/Adapter;)V
     .locals 0
 
-    .line 35
+    .line 36
     check-cast p1, Landroid/widget/ListAdapter;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/FolderGridView;->setAdapter(Landroid/widget/ListAdapter;)V
@@ -3358,27 +3328,27 @@
 .method public setAdapter(Landroid/widget/ListAdapter;)V
     .locals 2
 
-    .line 119
+    .line 120
     instance-of v0, p1, Lcom/miui/home/launcher/ShortcutsAdapter;
 
     if-eqz v0, :cond_0
 
-    .line 122
+    .line 123
     move-object v0, p1
 
     check-cast v0, Lcom/miui/home/launcher/ShortcutsAdapter;
 
     iput-object v0, p0, Lcom/miui/home/launcher/FolderGridView;->mAdapter:Lcom/miui/home/launcher/ShortcutsAdapter;
 
-    .line 123
+    .line 124
     invoke-super {p0, p1}, Landroid/widget/GridView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 124
+    .line 125
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderGridView;->clearDisappearingChildren()V
 
     return-void
 
-    .line 120
+    .line 121
     :cond_0
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -3410,7 +3380,7 @@
 .method public setIgnoreCancelEvent(Z)V
     .locals 0
 
-    .line 748
+    .line 749
     iput-boolean p1, p0, Lcom/miui/home/launcher/FolderGridView;->mIgnoreCancelEvent:Z
 
     return-void
@@ -3419,7 +3389,7 @@
 .method public setLauncher(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 114
+    .line 115
     iput-object p1, p0, Lcom/miui/home/launcher/FolderGridView;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     return-void

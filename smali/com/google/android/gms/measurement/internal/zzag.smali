@@ -240,7 +240,7 @@
 
     move-result-object v1
 
-    const-string v3, "user_attributes"
+    const-string/jumbo v3, "user_attributes"
 
     const-string v4, "CREATE TABLE IF NOT EXISTS user_attributes ( app_id TEXT NOT NULL, name TEXT NOT NULL, set_timestamp INTEGER NOT NULL, value BLOB NOT NULL, PRIMARY KEY (app_id, name)) ;"
 

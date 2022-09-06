@@ -1,4 +1,4 @@
-.class final Lmiuix/pickerwidget/date/CalendarFormatSymbols$1;
+.class Lmiuix/pickerwidget/date/CalendarFormatSymbols$1;
 .super Lmiuix/core/util/SoftReferenceSingleton;
 .source "CalendarFormatSymbols.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 

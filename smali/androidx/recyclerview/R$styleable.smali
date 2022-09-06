@@ -17,11 +17,15 @@
 # static fields
 .field public static final ColorStateListItem:[I
 
-.field public static final ColorStateListItem_alpha:I = 0x2
+.field public static final ColorStateListItem_alpha:I = 0x3
 
 .field public static final ColorStateListItem_android_alpha:I = 0x1
 
 .field public static final ColorStateListItem_android_color:I = 0x0
+
+.field public static final ColorStateListItem_android_lStar:I = 0x2
+
+.field public static final ColorStateListItem_lStar:I = 0x4
 
 .field public static final FontFamily:[I
 
@@ -58,6 +62,8 @@
 .field public static final FontFamily_fontProviderPackage:I = 0x4
 
 .field public static final FontFamily_fontProviderQuery:I = 0x5
+
+.field public static final FontFamily_fontProviderSystemFontFamily:I = 0x6
 
 .field public static final GradientColor:[I
 
@@ -122,7 +128,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    const/4 v0, 0x3
+    const/4 v0, 0x5
 
     .line 201
     new-array v0, v0, [I
@@ -131,9 +137,9 @@
 
     sput-object v0, Landroidx/recyclerview/R$styleable;->ColorStateListItem:[I
 
-    const/4 v0, 0x6
+    const/4 v0, 0x7
 
-    .line 205
+    .line 207
     new-array v0, v0, [I
 
     fill-array-data v0, :array_1
@@ -142,7 +148,7 @@
 
     const/16 v0, 0xa
 
-    .line 212
+    .line 215
     new-array v0, v0, [I
 
     fill-array-data v0, :array_2
@@ -151,7 +157,7 @@
 
     const/16 v0, 0xc
 
-    .line 223
+    .line 226
     new-array v1, v0, [I
 
     fill-array-data v1, :array_3
@@ -160,14 +166,14 @@
 
     const/4 v1, 0x2
 
-    .line 236
+    .line 239
     new-array v1, v1, [I
 
     fill-array-data v1, :array_4
 
     sput-object v1, Landroidx/recyclerview/R$styleable;->GradientColorItem:[I
 
-    .line 239
+    .line 242
     new-array v0, v0, [I
 
     fill-array-data v0, :array_5
@@ -180,17 +186,20 @@
     .array-data 4
         0x10101a5
         0x101031f
-        0x7f04006e
+        0x1010647
+        0x7f040071
+        0x7f0402f9
     .end array-data
 
     :array_1
     .array-data 4
-        0x7f040172
-        0x7f040173
-        0x7f040174
-        0x7f040175
-        0x7f040176
-        0x7f040177
+        0x7f04027f
+        0x7f040280
+        0x7f040281
+        0x7f040282
+        0x7f040283
+        0x7f040284
+        0x7f040285
     .end array-data
 
     :array_2
@@ -200,11 +209,11 @@
         0x101053f
         0x101056f
         0x1010570
-        0x7f040170
-        0x7f040178
-        0x7f040179
-        0x7f04017a
-        0x7f04038e
+        0x7f04027d
+        0x7f040286
+        0x7f040287
+        0x7f040288
+        0x7f04060d
     .end array-data
 
     :array_3
@@ -234,14 +243,14 @@
         0x10100c4
         0x10100eb
         0x10100f1
-        0x7f040162
-        0x7f040163
-        0x7f040164
-        0x7f040165
-        0x7f040166
-        0x7f0401af
-        0x7f0402c2
-        0x7f04030c
-        0x7f04031b
+        0x7f040253
+        0x7f040254
+        0x7f040255
+        0x7f040256
+        0x7f040257
+        0x7f040305
+        0x7f0404a3
+        0x7f04050b
+        0x7f04051a
     .end array-data
 .end method

@@ -25,7 +25,7 @@
 .method constructor <init>(Landroidx/fragment/app/Fragment;)V
     .locals 0
 
-    .line 2736
+    .line 2738
     iput-object p1, p0, Landroidx/fragment/app/Fragment$2;->this$0:Landroidx/fragment/app/Fragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 2
 
-    .line 2739
+    .line 2741
     iget-object v0, p0, Landroidx/fragment/app/Fragment$2;->this$0:Landroidx/fragment/app/Fragment;
 
     const/4 v1, 0x0

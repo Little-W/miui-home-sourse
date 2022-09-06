@@ -30,7 +30,7 @@
 .method constructor <init>(Lmiuix/appcompat/app/AlertController$AlertParams;Landroid/content/Context;Landroid/database/Cursor;ZLandroid/widget/ListView;Lmiuix/appcompat/app/AlertController;)V
     .locals 0
 
-    .line 1460
+    .line 1551
     iput-object p1, p0, Lmiuix/appcompat/app/AlertController$AlertParams$2;->this$0:Lmiuix/appcompat/app/AlertController$AlertParams;
 
     iput-object p5, p0, Lmiuix/appcompat/app/AlertController$AlertParams$2;->val$listView:Landroid/widget/ListView;
@@ -39,12 +39,12 @@
 
     invoke-direct {p0, p2, p3, p4}, Landroid/widget/CursorAdapter;-><init>(Landroid/content/Context;Landroid/database/Cursor;Z)V
 
-    .line 1465
+    .line 1556
     invoke-virtual {p0}, Lmiuix/appcompat/app/AlertController$AlertParams$2;->getCursor()Landroid/database/Cursor;
 
     move-result-object p1
 
-    .line 1466
+    .line 1557
     iget-object p2, p0, Lmiuix/appcompat/app/AlertController$AlertParams$2;->this$0:Lmiuix/appcompat/app/AlertController$AlertParams;
 
     iget-object p2, p2, Lmiuix/appcompat/app/AlertController$AlertParams;->mLabelColumn:Ljava/lang/String;
@@ -55,7 +55,7 @@
 
     iput p2, p0, Lmiuix/appcompat/app/AlertController$AlertParams$2;->mLabelIndex:I
 
-    .line 1467
+    .line 1558
     iget-object p2, p0, Lmiuix/appcompat/app/AlertController$AlertParams$2;->this$0:Lmiuix/appcompat/app/AlertController$AlertParams;
 
     iget-object p2, p2, Lmiuix/appcompat/app/AlertController$AlertParams;->mIsCheckedColumn:Ljava/lang/String;
@@ -76,14 +76,14 @@
 
     const p2, 0x1020014
 
-    .line 1472
+    .line 1563
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
     check-cast p1, Landroid/widget/CheckedTextView;
 
-    .line 1474
+    .line 1565
     iget p2, p0, Lmiuix/appcompat/app/AlertController$AlertParams$2;->mLabelIndex:I
 
     invoke-interface {p3, p2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
@@ -92,7 +92,7 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/CheckedTextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1475
+    .line 1566
     iget-object p2, p0, Lmiuix/appcompat/app/AlertController$AlertParams$2;->val$listView:Landroid/widget/ListView;
 
     invoke-interface {p3}, Landroid/database/Cursor;->getPosition()I
@@ -101,7 +101,7 @@
 
     iget v1, p0, Lmiuix/appcompat/app/AlertController$AlertParams$2;->mIsCheckedIndex:I
 
-    .line 1476
+    .line 1567
     invoke-interface {p3, v1}, Landroid/database/Cursor;->getInt(I)I
 
     move-result p3
@@ -115,11 +115,11 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 1475
+    .line 1566
     :goto_0
     invoke-virtual {p2, v0, v1}, Landroid/widget/ListView;->setItemChecked(IZ)V
 
-    .line 1477
+    .line 1568
     invoke-static {p1}, Lmiuix/appcompat/internal/util/EasyModeHelper;->updateTextViewSize(Landroid/widget/TextView;)V
 
     return-void
@@ -128,7 +128,7 @@
 .method public newView(Landroid/content/Context;Landroid/database/Cursor;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 1
 
-    .line 1482
+    .line 1573
     iget-object p1, p0, Lmiuix/appcompat/app/AlertController$AlertParams$2;->this$0:Lmiuix/appcompat/app/AlertController$AlertParams;
 
     iget-object p1, p1, Lmiuix/appcompat/app/AlertController$AlertParams;->mInflater:Landroid/view/LayoutInflater;
@@ -143,10 +143,10 @@
 
     move-result-object p1
 
-    .line 1484
+    .line 1575
     invoke-static {p1}, Lmiuix/internal/util/AnimHelper;->addPressAnim(Landroid/view/View;)V
 
-    .line 1485
+    .line 1576
     invoke-static {p1, v0}, Lmiuix/view/CompatViewMethod;->setForceDarkAllowed(Landroid/view/View;Z)V
 
     return-object p1

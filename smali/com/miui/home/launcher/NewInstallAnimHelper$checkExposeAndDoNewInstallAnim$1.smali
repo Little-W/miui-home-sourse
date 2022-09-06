@@ -49,7 +49,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 7
+    .line 6
     check-cast p1, Lcom/miui/home/launcher/NewInstallAppIcon;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/NewInstallAnimHelper$checkExposeAndDoNewInstallAnim$1;->invoke(Lcom/miui/home/launcher/NewInstallAppIcon;)Z
@@ -66,7 +66,7 @@
 .method public final invoke(Lcom/miui/home/launcher/NewInstallAppIcon;)Z
     .locals 2
 
-    .line 57
+    .line 60
     iget-object v0, p0, Lcom/miui/home/launcher/NewInstallAnimHelper$checkExposeAndDoNewInstallAnim$1;->this$0:Lcom/miui/home/launcher/NewInstallAnimHelper;
 
     invoke-static {v0}, Lcom/miui/home/launcher/NewInstallAnimHelper;->access$getMExposeItemList$p(Lcom/miui/home/launcher/NewInstallAnimHelper;)Ljava/util/ArrayList;

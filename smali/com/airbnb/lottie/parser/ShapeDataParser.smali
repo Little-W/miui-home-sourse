@@ -36,7 +36,7 @@
 
     const-string v0, "c"
 
-    const-string v1, "v"
+    const-string/jumbo v1, "v"
 
     const-string v2, "i"
 

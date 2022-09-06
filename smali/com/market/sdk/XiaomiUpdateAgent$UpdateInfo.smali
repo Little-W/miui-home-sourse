@@ -46,17 +46,17 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 249
+    .line 296
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, ""
 
-    .line 259
+    .line 306
     iput-object v0, p0, Lcom/market/sdk/XiaomiUpdateAgent$UpdateInfo;->diffUrl:Ljava/lang/String;
 
     const-string v0, ""
 
-    .line 260
+    .line 307
     iput-object v0, p0, Lcom/market/sdk/XiaomiUpdateAgent$UpdateInfo;->diffHash:Ljava/lang/String;
 
     return-void
@@ -67,7 +67,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 266
+    .line 313
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

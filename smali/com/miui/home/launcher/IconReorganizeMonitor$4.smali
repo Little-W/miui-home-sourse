@@ -45,7 +45,7 @@
     .line 219
     iget-object v0, p0, Lcom/miui/home/launcher/IconReorganizeMonitor$4;->val$context:Landroid/content/Context;
 
-    const v1, 0x7f1003a6
+    const v1, 0x7f110408
 
     const/4 v2, 0x0
 

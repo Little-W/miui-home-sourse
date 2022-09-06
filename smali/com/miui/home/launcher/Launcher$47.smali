@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/FolderInfo;)V
     .locals 0
 
-    .line 5098
+    .line 5155
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iput-object p2, p0, Lcom/miui/home/launcher/Launcher$47;->val$folderInfo:Lcom/miui/home/launcher/FolderInfo;
@@ -40,7 +40,7 @@
 .method public static synthetic lambda$run$0(Lcom/miui/home/launcher/Launcher$47;Lcom/miui/home/launcher/FolderInfo;)Ljava/lang/String;
     .locals 3
 
-    .line 5112
+    .line 5169
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
 
     const/4 v1, 0x1
@@ -55,7 +55,7 @@
 
     aput-object p1, v1, v2
 
-    const p1, 0x7f100079
+    const p1, 0x7f11007a
 
     invoke-virtual {v0, p1, v1}, Lcom/miui/home/launcher/Launcher;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -69,7 +69,7 @@
 .method public run()V
     .locals 5
 
-    .line 5101
+    .line 5158
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$1400(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/Workspace;
@@ -78,10 +78,10 @@
 
     invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->cancelTouchEvent(Landroid/view/View;)V
 
-    .line 5102
+    .line 5159
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$1900(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/FolderCling;
+    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$1700(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/FolderCling;
 
     move-result-object v0
 
@@ -93,7 +93,7 @@
 
     return-void
 
-    .line 5103
+    .line 5160
     :cond_0
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
@@ -107,7 +107,7 @@
 
     iget-object v2, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    .line 5104
+    .line 5161
     invoke-static {v2}, Lcom/miui/home/launcher/Launcher;->access$1400(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/Workspace;
 
     move-result-object v2
@@ -118,12 +118,12 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/miui/home/launcher/wallpaper/WallpaperManagerCompat;->sendWallPaperCommand(Ljava/lang/String;Landroid/os/IBinder;)V
 
-    .line 5105
+    .line 5162
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->cancelFolderAnimations()V
 
-    .line 5106
+    .line 5163
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$1400(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/Workspace;
@@ -140,7 +140,7 @@
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/OnLongClickAgent;->cancelCustomziedLongPress()V
 
-    .line 5107
+    .line 5164
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
 
     const/4 v1, 0x0
@@ -149,13 +149,13 @@
 
     const/4 v0, 0x1
 
-    .line 5108
+    .line 5165
     invoke-static {v0}, Lcom/miui/home/launcher/ShortcutIcon;->setEnableLoadingAnim(Z)V
 
-    .line 5109
+    .line 5166
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {v1}, Lcom/miui/home/launcher/Launcher;->access$1900(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/FolderCling;
+    invoke-static {v1}, Lcom/miui/home/launcher/Launcher;->access$1700(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/FolderCling;
 
     move-result-object v1
 
@@ -163,16 +163,16 @@
 
     invoke-virtual {v1, v2}, Lcom/miui/home/launcher/FolderCling;->bind(Lcom/miui/home/launcher/FolderInfo;)V
 
-    .line 5110
+    .line 5167
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {v1}, Lcom/miui/home/launcher/Launcher;->access$1900(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/FolderCling;
+    invoke-static {v1}, Lcom/miui/home/launcher/Launcher;->access$1700(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/FolderCling;
 
     move-result-object v1
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/FolderCling;->open()V
 
-    .line 5111
+    .line 5168
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$47;->val$folderInfo:Lcom/miui/home/launcher/FolderInfo;
 
     new-instance v2, Lcom/miui/home/launcher/-$$Lambda$Launcher$47$VLImm6H4HWOyvx8zzKr_T29vXIE;
@@ -181,12 +181,12 @@
 
     invoke-static {v2}, Lcom/miui/home/launcher/common/Utilities;->announceForAccessibility(Ljava/util/function/Supplier;)V
 
-    .line 5113
+    .line 5170
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/Launcher;->updateStatusBarClock()V
 
-    .line 5114
+    .line 5171
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v1}, Lcom/miui/home/launcher/Launcher;->access$6600(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/animate/SpringAnimator;
@@ -199,7 +199,7 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/miui/home/launcher/animate/SpringAnimator;->setDampingResponse(FF)V
 
-    .line 5115
+    .line 5172
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v1}, Lcom/miui/home/launcher/Launcher;->access$6600(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/animate/SpringAnimator;
@@ -212,7 +212,7 @@
 
     invoke-virtual {v1, v3, v2}, Lcom/miui/home/launcher/animate/SpringAnimator;->setStartEnd(FF)V
 
-    .line 5116
+    .line 5173
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v1}, Lcom/miui/home/launcher/Launcher;->access$6600(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/animate/SpringAnimator;
@@ -221,12 +221,12 @@
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/animate/SpringAnimator;->start()V
 
-    .line 5117
+    .line 5174
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v1, v0}, Lcom/miui/home/launcher/Launcher;->access$6700(Lcom/miui/home/launcher/Launcher;Z)V
 
-    .line 5118
+    .line 5175
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/Launcher;->isInEditing()Z
@@ -235,19 +235,19 @@
 
     if-nez v1, :cond_2
 
-    .line 5119
+    .line 5176
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$47;->val$folderInfo:Lcom/miui/home/launcher/FolderInfo;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/FolderInfo;->onLaunch()V
 
-    .line 5120
+    .line 5177
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iget-object v4, p0, Lcom/miui/home/launcher/Launcher$47;->val$folderInfo:Lcom/miui/home/launcher/FolderInfo;
 
     invoke-static {v1, v4}, Lcom/miui/home/launcher/LauncherModel;->updateItemFlagAndLaunchCount(Landroid/content/Context;Lcom/miui/home/launcher/ItemInfo;)Z
 
-    .line 5121
+    .line 5178
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/Launcher;->isShouldBlur()Z
@@ -270,7 +270,7 @@
 
     invoke-static {v2, v1, v0}, Lcom/miui/home/launcher/common/BlurUtils;->fastBlur(FLandroid/view/Window;Z)Landroid/animation/ValueAnimator;
 
-    .line 5123
+    .line 5180
     :cond_2
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
 

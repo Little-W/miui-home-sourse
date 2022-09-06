@@ -91,7 +91,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f1001e6
+    const v2, 0x7f1101f4
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -364,7 +364,7 @@
     .line 44
     invoke-super {p0}, Lcom/miui/home/launcher/ShortcutIcon;->onFinishInflate()V
 
-    const v0, 0x7f0a01c2
+    const v0, 0x7f0a0268
 
     .line 45
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/PairShortcutIcon;->findViewById(I)Landroid/view/View;
@@ -375,7 +375,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/PairShortcutIcon;->mPairIconContainer:Landroid/widget/LinearLayout;
 
-    const v0, 0x7f0a01c0
+    const v0, 0x7f0a0266
 
     .line 46
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/PairShortcutIcon;->findViewById(I)Landroid/view/View;
@@ -386,7 +386,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/PairShortcutIcon;->mShortcutIcon1:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a01c1
+    const v0, 0x7f0a0267
 
     .line 47
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/PairShortcutIcon;->findViewById(I)Landroid/view/View;

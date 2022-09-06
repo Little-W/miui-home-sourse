@@ -1,4 +1,4 @@
-.class final Lmiuix/animation/Folme$3;
+.class Lmiuix/animation/Folme$3;
 .super Ljava/lang/Object;
 .source "Folme.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
@@ -21,7 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 441
+    .line 442
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,12 +32,12 @@
 .method public run()V
     .locals 4
 
-    .line 444
+    .line 445
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 445
+    .line 446
     invoke-static {}, Lmiuix/animation/Folme;->access$500()Ljava/util/concurrent/ConcurrentHashMap;
 
     move-result-object v1
@@ -64,19 +64,19 @@
 
     check-cast v2, Lmiuix/animation/IAnimTarget;
 
-    .line 446
+    .line 447
     invoke-virtual {v2}, Lmiuix/animation/IAnimTarget;->isValid()Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 447
+    .line 448
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 450
+    .line 451
     :cond_1
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -84,20 +84,20 @@
 
     if-lez v1, :cond_2
 
-    .line 451
+    .line 452
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v1
 
-    .line 452
+    .line 453
     iput-object v0, v1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     const/4 v0, 0x2
 
-    .line 453
+    .line 454
     iput v0, v1, Landroid/os/Message;->what:I
 
-    .line 455
+    .line 456
     invoke-static {}, Lmiuix/animation/Folme;->access$600()Landroid/os/Handler;
 
     move-result-object v0

@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/LauncherMenu;)V
     .locals 0
 
-    .line 200
+    .line 197
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherMenu$8;->this$0:Lcom/miui/home/launcher/LauncherMenu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onClick(Landroid/view/View;)V
     .locals 5
 
-    .line 203
+    .line 200
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherMenu$8;->this$0:Lcom/miui/home/launcher/LauncherMenu;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/LauncherMenu;->isShown()Z
@@ -49,7 +49,7 @@
 
     return-void
 
-    .line 206
+    .line 203
     :cond_0
     invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isScreenCellsLocked()Z
 
@@ -57,7 +57,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 207
+    .line 204
     iget-object p1, p0, Lcom/miui/home/launcher/LauncherMenu$8;->this$0:Lcom/miui/home/launcher/LauncherMenu;
 
     invoke-static {p1}, Lcom/miui/home/launcher/LauncherMenu;->access$000(Lcom/miui/home/launcher/LauncherMenu;)Lcom/miui/home/launcher/Launcher;
@@ -68,7 +68,7 @@
 
     return-void
 
-    .line 210
+    .line 207
     :cond_1
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
@@ -80,10 +80,10 @@
 
     const/4 v0, 0x2
 
-    .line 211
+    .line 208
     new-array v1, v0, [I
 
-    .line 212
+    .line 209
     invoke-static {p1, v1}, Lcom/miui/home/launcher/ScreenUtils;->parseCellsSize(Ljava/lang/String;[I)Z
 
     move-result p1
@@ -95,7 +95,7 @@
     :cond_2
     const/4 p1, 0x0
 
-    .line 215
+    .line 212
     aget v2, v1, p1
 
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountX()I
@@ -116,7 +116,7 @@
 
     return-void
 
-    .line 218
+    .line 215
     :cond_3
     iget-object v2, p0, Lcom/miui/home/launcher/LauncherMenu$8;->this$0:Lcom/miui/home/launcher/LauncherMenu;
 
@@ -130,7 +130,7 @@
 
     invoke-static {v2, v3, v1}, Lcom/miui/home/launcher/DeviceConfig;->setScreenCells(Landroid/content/Context;II)Z
 
-    .line 219
+    .line 216
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherMenu$8;->this$0:Lcom/miui/home/launcher/LauncherMenu;
 
     invoke-static {v1}, Lcom/miui/home/launcher/LauncherMenu;->access$000(Lcom/miui/home/launcher/LauncherMenu;)Lcom/miui/home/launcher/Launcher;
@@ -139,7 +139,7 @@
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/Launcher;->onScreenCellsChanged()V
 
-    .line 220
+    .line 217
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherMenu$8;->this$0:Lcom/miui/home/launcher/LauncherMenu;
 
     const/4 v2, 0x3

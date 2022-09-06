@@ -71,7 +71,7 @@
 .method public static isUserBuild()Z
     .locals 2
 
-    const-string v0, "user"
+    const-string/jumbo v0, "user"
 
     .line 55
     sget-object v1, Landroid/os/Build;->TYPE:Ljava/lang/String;

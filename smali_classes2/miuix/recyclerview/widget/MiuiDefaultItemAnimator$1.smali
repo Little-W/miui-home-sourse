@@ -1,4 +1,4 @@
-.class final Lmiuix/recyclerview/widget/MiuiDefaultItemAnimator$1;
+.class Lmiuix/recyclerview/widget/MiuiDefaultItemAnimator$1;
 .super Ljava/lang/Object;
 .source "MiuiDefaultItemAnimator.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 

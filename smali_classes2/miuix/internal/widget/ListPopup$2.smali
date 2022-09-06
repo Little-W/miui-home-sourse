@@ -25,7 +25,7 @@
 .method constructor <init>(Lmiuix/internal/widget/ListPopup;)V
     .locals 0
 
-    .line 176
+    .line 204
     iput-object p1, p0, Lmiuix/internal/widget/ListPopup$2;->this$0:Lmiuix/internal/widget/ListPopup;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,10 +38,10 @@
 .method public onLayoutChange(Landroid/view/View;IIIIIIII)V
     .locals 0
 
-    .line 179
+    .line 207
     invoke-virtual {p1, p0}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
-    .line 181
+    .line 209
     iget-object p1, p0, Lmiuix/internal/widget/ListPopup$2;->this$0:Lmiuix/internal/widget/ListPopup;
 
     invoke-static {p1}, Lmiuix/internal/widget/ListPopup;->access$200(Lmiuix/internal/widget/ListPopup;)Landroid/widget/ListView;
@@ -52,54 +52,29 @@
 
     move-result-object p1
 
-    const/4 p2, 0x0
-
-    const/4 p3, 0x1
-
     if-eqz p1, :cond_0
 
-    .line 182
+    .line 210
     iget-object p1, p0, Lmiuix/internal/widget/ListPopup$2;->this$0:Lmiuix/internal/widget/ListPopup;
 
-    invoke-static {p1}, Lmiuix/internal/widget/ListPopup;->access$200(Lmiuix/internal/widget/ListPopup;)Landroid/widget/ListView;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/widget/ListView;->getLastVisiblePosition()I
+    invoke-static {p1}, Lmiuix/internal/widget/ListPopup;->access$300(Lmiuix/internal/widget/ListPopup;)Z
 
     move-result p1
 
-    iget-object p4, p0, Lmiuix/internal/widget/ListPopup$2;->this$0:Lmiuix/internal/widget/ListPopup;
+    goto :goto_0
 
-    invoke-static {p4}, Lmiuix/internal/widget/ListPopup;->access$200(Lmiuix/internal/widget/ListPopup;)Landroid/widget/ListView;
-
-    move-result-object p4
-
-    invoke-virtual {p4}, Landroid/widget/ListView;->getAdapter()Landroid/widget/ListAdapter;
-
-    move-result-object p4
-
-    invoke-interface {p4}, Landroid/widget/ListAdapter;->getCount()I
-
-    move-result p4
-
-    sub-int/2addr p4, p3
-
-    if-ne p1, p4, :cond_0
-
-    move p2, p3
-
-    .line 184
     :cond_0
-    iget-object p1, p0, Lmiuix/internal/widget/ListPopup$2;->this$0:Lmiuix/internal/widget/ListPopup;
+    const/4 p1, 0x1
 
-    iget-object p1, p1, Lmiuix/internal/widget/ListPopup;->mContentView:Landroid/view/View;
+    .line 212
+    :goto_0
+    iget-object p2, p0, Lmiuix/internal/widget/ListPopup$2;->this$0:Lmiuix/internal/widget/ListPopup;
 
-    check-cast p1, Lmiuix/springback/view/SpringBackLayout;
+    iget-object p2, p2, Lmiuix/internal/widget/ListPopup;->mContentView:Landroid/view/View;
 
-    xor-int/2addr p2, p3
+    check-cast p2, Lmiuix/springback/view/SpringBackLayout;
 
-    invoke-virtual {p1, p2}, Lmiuix/springback/view/SpringBackLayout;->setEnabled(Z)V
+    invoke-virtual {p2, p1}, Lmiuix/springback/view/SpringBackLayout;->setEnabled(Z)V
 
     return-void
 .end method

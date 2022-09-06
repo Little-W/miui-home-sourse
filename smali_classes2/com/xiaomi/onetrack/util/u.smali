@@ -241,7 +241,7 @@
 
     .line 104
     :cond_0
-    invoke-static {}, Lcom/xiaomi/onetrack/util/q;->x()Z
+    invoke-static {}, Lcom/xiaomi/onetrack/util/q;->h()Z
 
     move-result v1
 
@@ -326,7 +326,7 @@
     if-eqz v0, :cond_2
 
     .line 82
-    invoke-static {}, Lcom/xiaomi/onetrack/e/a;->e()Ljava/lang/String;
+    invoke-static {}, Lcom/xiaomi/onetrack/f/a;->e()Ljava/lang/String;
 
     move-result-object v0
 

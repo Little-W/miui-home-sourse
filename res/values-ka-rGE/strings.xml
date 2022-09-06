@@ -256,7 +256,7 @@
     <string name="deselect_all">მონიშვნის გაუქმება</string>
     <string name="disable_wallpaper_scroll">side-scrolling -ის გამორთვა</string>
     <string name="download_action">გადმოწერა</string>
-    <string name="drag_icon_to_homescreen_guide">დააწექით და გეჭიროთ აპლიკაციის ხატულა, შემდეგ კი გადაიტანეთ მთავარი ეკრანის მალსახმობზე</string>
+    <string name="drag_icon_to_homescreen_guide">დააჭირეთ და გეკავოთ აპლიკაციის ხატულა, შემდეგ კი გადაიტანეთ მთავარი ეკრანის მალსახმობზე</string>
     <string name="drag_multiple_item_name" />
     <string name="drag_single_item_name" />
     <string name="drawer_background">უკანა ფონები</string>
@@ -293,6 +293,7 @@
     <string name="eras_bc">ძვ.წ.აღ</string>
     <string name="evening">შუადღე</string>
     <string name="exit_overview_because_task_stack_changed">დახურულია ბოლოდროინდელები უკანა ფონზე მომხდარი ცვლილებების გამო</string>
+    <string name="external_not_support_split_screen_j18">გაყოფილ ეკრანზე გარეთა ეკრანის მხარდაჭერა არ არის</string>
     <string name="failed_to_delete_temporary">ვერ წავშლი</string>
     <string name="failed_to_drop">ვერ გადავიტან</string>
     <string name="failed_to_drop_widget_invalid">ეს ვიჯეტი არასწორია</string>
@@ -497,6 +498,7 @@
     <string name="midnight">ღამე</string>
     <string name="minus_one_screen">აპლიკაციების დაფა</string>
     <string name="miui_screen_config_title">მთავარი ეკრანის პარამეტრები</string>
+    <string name="miui_widget_menu_replace_text">გადართვა</string>
     <string name="miuix_access_state_desc">მონიშულია</string>
     <string name="miuix_appcompat_action_mode_deselect_all">მონიშვნის გაუქმება</string>
     <string name="miuix_appcompat_action_mode_select_all">მონიშნეთ ყველა</string>
@@ -523,6 +525,8 @@
     <string name="monday">ორშაბათი</string>
     <string name="monday_short">ორშ</string>
     <string name="monday_shortest">ორშ</string>
+    <string name="monochrome_summary">შეცვალეთ უკანა ფონის ფერი თავსებადი ხატულებისთვის</string>
+    <string name="monochrome_title">უკანა ფონის ფერი</string>
     <string name="month_april">აპრილი</string>
     <string name="month_april_short">აპრ</string>
     <string name="month_april_shortest">აპრ</string>

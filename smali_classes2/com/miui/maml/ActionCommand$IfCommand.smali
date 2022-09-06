@@ -34,10 +34,10 @@
 .method public constructor <init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
     .locals 4
 
-    .line 3155
+    .line 3160
     invoke-direct {p0, p1}, Lcom/miui/maml/ActionCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;)V
 
-    .line 3156
+    .line 3161
     invoke-virtual {p1}, Lcom/miui/maml/elements/ScreenElement;->getVariables()Lcom/miui/maml/data/Variables;
 
     move-result-object v0
@@ -54,14 +54,14 @@
 
     iput-object v0, p0, Lcom/miui/maml/ActionCommand$IfCommand;->mCondition:Lcom/miui/maml/data/Expression;
 
-    .line 3157
+    .line 3162
     invoke-interface {p2}, Lorg/w3c/dom/Element;->getChildNodes()Lorg/w3c/dom/NodeList;
 
     move-result-object p2
 
     const/4 v0, 0x0
 
-    .line 3158
+    .line 3163
     :goto_0
     invoke-interface {p2}, Lorg/w3c/dom/NodeList;->getLength()I
 
@@ -69,7 +69,7 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 3159
+    .line 3164
     invoke-interface {p2, v0}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v1
@@ -82,21 +82,21 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 3160
+    .line 3165
     invoke-interface {p2, v0}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v1
 
     check-cast v1, Lorg/w3c/dom/Element;
 
-    .line 3161
+    .line 3166
     invoke-interface {v1}, Lorg/w3c/dom/Element;->getTagName()Ljava/lang/String;
 
     move-result-object v2
 
     const-string v3, "Consequent"
 
-    .line 3162
+    .line 3167
     invoke-virtual {v3, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v3
@@ -107,7 +107,7 @@
 
     if-nez v3, :cond_0
 
-    .line 3163
+    .line 3168
     new-instance v2, Lcom/miui/maml/ActionCommand$MultiCommand;
 
     invoke-direct {v2, p1, v1}, Lcom/miui/maml/ActionCommand$MultiCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
@@ -119,7 +119,7 @@
     :cond_0
     const-string v3, "Alternate"
 
-    .line 3164
+    .line 3169
     invoke-virtual {v3, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v2
@@ -130,7 +130,7 @@
 
     if-nez v2, :cond_1
 
-    .line 3165
+    .line 3170
     new-instance v2, Lcom/miui/maml/ActionCommand$MultiCommand;
 
     invoke-direct {v2, p1, v1}, Lcom/miui/maml/ActionCommand$MultiCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
@@ -152,12 +152,12 @@
 .method public doPerform()V
     .locals 4
 
-    .line 3173
+    .line 3178
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$IfCommand;->mCondition:Lcom/miui/maml/data/Expression;
 
     if-eqz v0, :cond_1
 
-    .line 3174
+    .line 3179
     invoke-virtual {v0}, Lcom/miui/maml/data/Expression;->evaluate()D
 
     move-result-wide v0
@@ -168,23 +168,23 @@
 
     if-gtz v0, :cond_0
 
-    .line 3175
+    .line 3180
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$IfCommand;->mAlternateCommand:Lcom/miui/maml/ActionCommand$MultiCommand;
 
     if-eqz v0, :cond_1
 
-    .line 3176
+    .line 3181
     invoke-virtual {v0}, Lcom/miui/maml/ActionCommand$MultiCommand;->perform()V
 
     goto :goto_0
 
-    .line 3178
+    .line 3183
     :cond_0
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$IfCommand;->mConsequentCommand:Lcom/miui/maml/ActionCommand$MultiCommand;
 
     if-eqz v0, :cond_1
 
-    .line 3179
+    .line 3184
     invoke-virtual {v0}, Lcom/miui/maml/ActionCommand$MultiCommand;->perform()V
 
     :cond_1
@@ -195,21 +195,21 @@
 .method public finish()V
     .locals 1
 
-    .line 3216
+    .line 3221
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$IfCommand;->mAlternateCommand:Lcom/miui/maml/ActionCommand$MultiCommand;
 
     if-eqz v0, :cond_0
 
-    .line 3217
+    .line 3222
     invoke-virtual {v0}, Lcom/miui/maml/ActionCommand$MultiCommand;->finish()V
 
-    .line 3219
+    .line 3224
     :cond_0
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$IfCommand;->mConsequentCommand:Lcom/miui/maml/ActionCommand$MultiCommand;
 
     if-eqz v0, :cond_1
 
-    .line 3220
+    .line 3225
     invoke-virtual {v0}, Lcom/miui/maml/ActionCommand$MultiCommand;->finish()V
 
     :cond_1
@@ -219,21 +219,21 @@
 .method public init()V
     .locals 1
 
-    .line 3186
+    .line 3191
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$IfCommand;->mAlternateCommand:Lcom/miui/maml/ActionCommand$MultiCommand;
 
     if-eqz v0, :cond_0
 
-    .line 3187
+    .line 3192
     invoke-virtual {v0}, Lcom/miui/maml/ActionCommand$MultiCommand;->init()V
 
-    .line 3189
+    .line 3194
     :cond_0
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$IfCommand;->mConsequentCommand:Lcom/miui/maml/ActionCommand$MultiCommand;
 
     if-eqz v0, :cond_1
 
-    .line 3190
+    .line 3195
     invoke-virtual {v0}, Lcom/miui/maml/ActionCommand$MultiCommand;->init()V
 
     :cond_1
@@ -243,21 +243,21 @@
 .method public pause()V
     .locals 1
 
-    .line 3196
+    .line 3201
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$IfCommand;->mAlternateCommand:Lcom/miui/maml/ActionCommand$MultiCommand;
 
     if-eqz v0, :cond_0
 
-    .line 3197
+    .line 3202
     invoke-virtual {v0}, Lcom/miui/maml/ActionCommand$MultiCommand;->pause()V
 
-    .line 3199
+    .line 3204
     :cond_0
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$IfCommand;->mConsequentCommand:Lcom/miui/maml/ActionCommand$MultiCommand;
 
     if-eqz v0, :cond_1
 
-    .line 3200
+    .line 3205
     invoke-virtual {v0}, Lcom/miui/maml/ActionCommand$MultiCommand;->pause()V
 
     :cond_1
@@ -267,21 +267,21 @@
 .method public resume()V
     .locals 1
 
-    .line 3206
+    .line 3211
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$IfCommand;->mAlternateCommand:Lcom/miui/maml/ActionCommand$MultiCommand;
 
     if-eqz v0, :cond_0
 
-    .line 3207
+    .line 3212
     invoke-virtual {v0}, Lcom/miui/maml/ActionCommand$MultiCommand;->resume()V
 
-    .line 3209
+    .line 3214
     :cond_0
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$IfCommand;->mConsequentCommand:Lcom/miui/maml/ActionCommand$MultiCommand;
 
     if-eqz v0, :cond_1
 
-    .line 3210
+    .line 3215
     invoke-virtual {v0}, Lcom/miui/maml/ActionCommand$MultiCommand;->resume()V
 
     :cond_1

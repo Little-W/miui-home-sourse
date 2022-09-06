@@ -314,12 +314,12 @@
 .method private createActionMode(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;
     .locals 2
 
-    .line 1017
+    .line 1025
     instance-of v0, p1, Lmiuix/view/SearchActionMode$Callback;
 
     if-eqz v0, :cond_0
 
-    .line 1018
+    .line 1026
     new-instance v0, Lmiuix/appcompat/internal/view/SearchActionModeImpl;
 
     iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mContext:Landroid/content/Context;
@@ -328,7 +328,7 @@
 
     goto :goto_0
 
-    .line 1020
+    .line 1028
     :cond_0
     new-instance v0, Lmiuix/appcompat/internal/view/EditActionModeImpl;
 
@@ -345,7 +345,7 @@
 
     const/4 v0, 0x0
 
-    .line 1572
+    .line 1584
     invoke-direct {p0, p1, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->doHide(ZLmiuix/animation/controller/AnimState;)V
 
     return-void
@@ -354,19 +354,19 @@
 .method private doHide(ZLmiuix/animation/controller/AnimState;)V
     .locals 6
 
-    .line 1577
+    .line 1589
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mContainerAnim:Lmiuix/animation/IStateStyle;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 1578
+    .line 1590
     invoke-interface {v0}, Lmiuix/animation/IStateStyle;->getCurrentState()Lmiuix/animation/controller/AnimState;
 
     move-result-object v0
 
-    .line 1579
+    .line 1591
     iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mContainerAnim:Lmiuix/animation/IStateStyle;
 
     invoke-interface {v2}, Lmiuix/animation/IStateStyle;->cancel()V
@@ -376,7 +376,7 @@
     :cond_0
     move-object v0, v1
 
-    .line 1582
+    .line 1594
     :goto_0
     invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->isShowHideAnimationEnabled()Z
 
@@ -408,7 +408,7 @@
 
     const-string v5, "HideActionBar"
 
-    .line 1585
+    .line 1597
     invoke-direct {p0, v3, v5, v0, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->startContainerViewAnimation(ZLjava/lang/String;Lmiuix/animation/controller/AnimState;Lmiuix/animation/controller/AnimState;)Lmiuix/animation/IStateStyle;
 
     move-result-object p2
@@ -417,7 +417,7 @@
 
     goto :goto_3
 
-    .line 1587
+    .line 1599
     :cond_3
     iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mContainerView:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
@@ -431,33 +431,33 @@
 
     invoke-virtual {p2, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setTranslationY(F)V
 
-    .line 1588
+    .line 1600
     iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mContainerView:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
     invoke-virtual {p2, v4}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setAlpha(F)V
 
-    .line 1589
+    .line 1601
     iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mContainerView:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
     invoke-virtual {p2, v2}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setVisibility(I)V
 
-    .line 1592
+    .line 1604
     :goto_3
     iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mSplitView:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
     if-eqz p2, :cond_6
 
-    .line 1594
+    .line 1606
     iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mSpliterAnim:Lmiuix/animation/IStateStyle;
 
     if-eqz p2, :cond_4
 
-    .line 1595
+    .line 1607
     invoke-interface {p2}, Lmiuix/animation/IStateStyle;->getCurrentState()Lmiuix/animation/controller/AnimState;
 
     move-result-object v1
 
-    .line 1596
+    .line 1608
     iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mSpliterAnim:Lmiuix/animation/IStateStyle;
 
     invoke-interface {p2}, Lmiuix/animation/IStateStyle;->cancel()V
@@ -467,7 +467,7 @@
 
     const-string p1, "SpliterHide"
 
-    .line 1599
+    .line 1611
     invoke-direct {p0, v3, p1, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->startSplitViewAnimation(ZLjava/lang/String;Lmiuix/animation/controller/AnimState;)Lmiuix/animation/IStateStyle;
 
     move-result-object p1
@@ -476,7 +476,7 @@
 
     goto :goto_4
 
-    .line 1601
+    .line 1613
     :cond_5
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mSplitView:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
@@ -488,17 +488,17 @@
 
     invoke-virtual {p1, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setTranslationY(F)V
 
-    .line 1602
+    .line 1614
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mSplitView:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
     invoke-virtual {p1, v4}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setAlpha(F)V
 
-    .line 1603
+    .line 1615
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mSplitView:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
     invoke-virtual {p1, v2}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setVisibility(I)V
 
-    .line 1605
+    .line 1617
     :goto_4
     invoke-direct {p0, v3}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->updateContentMaskVisibility(Z)V
 
@@ -511,7 +511,7 @@
 
     const/4 v0, 0x0
 
-    .line 1526
+    .line 1538
     invoke-direct {p0, p1, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->doShow(ZLmiuix/animation/controller/AnimState;)V
 
     return-void
@@ -520,19 +520,19 @@
 .method private doShow(ZLmiuix/animation/controller/AnimState;)V
     .locals 7
 
-    .line 1531
+    .line 1543
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mContainerAnim:Lmiuix/animation/IStateStyle;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 1532
+    .line 1544
     invoke-interface {v0}, Lmiuix/animation/IStateStyle;->getCurrentState()Lmiuix/animation/controller/AnimState;
 
     move-result-object v0
 
-    .line 1533
+    .line 1545
     iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mContainerAnim:Lmiuix/animation/IStateStyle;
 
     invoke-interface {v2}, Lmiuix/animation/IStateStyle;->cancel()V
@@ -542,7 +542,7 @@
     :cond_0
     move-object v0, v1
 
-    .line 1535
+    .line 1547
     :goto_0
     invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->isShowHideAnimationEnabled()Z
 
@@ -567,7 +567,7 @@
     :goto_1
     move p1, v4
 
-    .line 1537
+    .line 1549
     :goto_2
     iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mContainerView:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
@@ -595,7 +595,7 @@
 
     const-string v6, "ShowActionBar"
 
-    .line 1539
+    .line 1551
     invoke-direct {p0, v4, v6, v0, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->startContainerViewAnimation(ZLjava/lang/String;Lmiuix/animation/controller/AnimState;Lmiuix/animation/controller/AnimState;)Lmiuix/animation/IStateStyle;
 
     move-result-object p2
@@ -604,39 +604,39 @@
 
     goto :goto_4
 
-    .line 1541
+    .line 1553
     :cond_4
     iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mContainerView:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
     invoke-virtual {p2, v5}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setTranslationY(F)V
 
-    .line 1542
+    .line 1554
     iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mContainerView:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
     invoke-virtual {p2, v2}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setAlpha(F)V
 
-    .line 1545
+    .line 1557
     :goto_4
     iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mSplitView:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
     if-eqz p2, :cond_8
 
-    .line 1547
+    .line 1559
     iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mSpliterAnim:Lmiuix/animation/IStateStyle;
 
     if-eqz p2, :cond_5
 
-    .line 1548
+    .line 1560
     invoke-interface {p2}, Lmiuix/animation/IStateStyle;->getCurrentState()Lmiuix/animation/controller/AnimState;
 
     move-result-object v1
 
-    .line 1549
+    .line 1561
     iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mSpliterAnim:Lmiuix/animation/IStateStyle;
 
     invoke-interface {p2}, Lmiuix/animation/IStateStyle;->cancel()V
 
-    .line 1551
+    .line 1563
     :cond_5
     iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mSplitView:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
@@ -646,14 +646,14 @@
 
     const-string p1, "SpliterShow"
 
-    .line 1553
+    .line 1565
     invoke-direct {p0, v4, p1, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->startSplitViewAnimation(ZLjava/lang/String;Lmiuix/animation/controller/AnimState;)Lmiuix/animation/IStateStyle;
 
     move-result-object p1
 
     iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mSpliterAnim:Lmiuix/animation/IStateStyle;
 
-    .line 1554
+    .line 1566
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mActionView:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     invoke-virtual {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->isSplitActionBar()Z
@@ -670,7 +670,7 @@
 
     if-lez p1, :cond_7
 
-    .line 1555
+    .line 1567
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mSplitView:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
     invoke-virtual {p1, v3}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->getChildAt(I)Landroid/view/View;
@@ -679,12 +679,12 @@
 
     if-eqz p1, :cond_7
 
-    .line 1556
+    .line 1568
     instance-of p2, p1, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
 
     if-eqz p2, :cond_7
 
-    .line 1557
+    .line 1569
     move-object p2, p1
 
     check-cast p2, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
@@ -697,25 +697,25 @@
 
     if-eqz p2, :cond_7
 
-    .line 1559
+    .line 1571
     check-cast p1, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView;
 
     invoke-virtual {p1}, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView;->startLayoutAnimation()V
 
     goto :goto_5
 
-    .line 1564
+    .line 1576
     :cond_6
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mSplitView:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
     invoke-virtual {p1, v5}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setTranslationY(F)V
 
-    .line 1565
+    .line 1577
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mSplitView:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
     invoke-virtual {p1, v2}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setAlpha(F)V
 
-    .line 1567
+    .line 1579
     :cond_7
     :goto_5
     invoke-direct {p0, v4}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->updateContentMaskVisibility(Z)V
@@ -727,7 +727,7 @@
 .method private getBlurOptioons()I
     .locals 6
 
-    .line 528
+    .line 536
     invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->getDisplayOptions()I
 
     move-result v0
@@ -749,7 +749,7 @@
     :cond_0
     move v0, v3
 
-    .line 529
+    .line 537
     :goto_0
     invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->getDisplayOptions()I
 
@@ -788,14 +788,14 @@
 .method private getSplitHeight()I
     .locals 3
 
-    .line 1445
+    .line 1457
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mSplitView:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
     invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->getHeight()I
 
     move-result v0
 
-    .line 1446
+    .line 1458
     iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mSplitView:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
     invoke-virtual {v1}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->getChildCount()I
@@ -806,7 +806,7 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 1447
+    .line 1459
     iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mSplitView:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
     const/4 v2, 0x0
@@ -817,22 +817,22 @@
 
     if-eqz v1, :cond_0
 
-    .line 1448
+    .line 1460
     instance-of v2, v1, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
 
     if-eqz v2, :cond_0
 
-    .line 1449
+    .line 1461
     check-cast v1, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
 
-    .line 1450
+    .line 1462
     invoke-virtual {v1}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->isOverflowMenuShowing()Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 1451
+    .line 1463
     invoke-virtual {v1}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->getCollapsedHeight()I
 
     move-result v0
@@ -844,14 +844,14 @@
 .method private setHasEmbeddedTabs(Z)V
     .locals 4
 
-    .line 305
+    .line 313
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mContainerView:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setTabContainer(Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;)V
 
-    .line 306
+    .line 314
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mActionView:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mTabScrollView:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
@@ -864,7 +864,7 @@
 
     invoke-virtual {p1, v0, v1, v2, v3}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setEmbeddedTabView(Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;)V
 
-    .line 307
+    .line 315
     invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->getNavigationMode()I
 
     move-result p1
@@ -884,7 +884,7 @@
     :cond_0
     move p1, v1
 
-    .line 308
+    .line 316
     :goto_0
     iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mTabScrollView:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
@@ -894,22 +894,22 @@
 
     if-eqz p1, :cond_1
 
-    .line 310
+    .line 318
     invoke-virtual {v2, v1}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->setVisibility(I)V
 
     goto :goto_1
 
-    .line 312
+    .line 320
     :cond_1
     invoke-virtual {v2, v3}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->setVisibility(I)V
 
-    .line 314
+    .line 322
     :goto_1
     iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mTabScrollView:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
     invoke-virtual {v2, v0}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->setEmbeded(Z)V
 
-    .line 316
+    .line 324
     :cond_2
     iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mExpanedTabScrollView:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
@@ -917,22 +917,22 @@
 
     if-eqz p1, :cond_3
 
-    .line 318
+    .line 326
     invoke-virtual {v2, v1}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->setVisibility(I)V
 
     goto :goto_2
 
-    .line 320
+    .line 328
     :cond_3
     invoke-virtual {v2, v3}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->setVisibility(I)V
 
-    .line 322
+    .line 330
     :goto_2
     iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mExpanedTabScrollView:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
     invoke-virtual {v2, v0}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->setEmbeded(Z)V
 
-    .line 324
+    .line 332
     :cond_4
     iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mCollapseTabScrollView:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
@@ -940,22 +940,22 @@
 
     if-eqz p1, :cond_5
 
-    .line 326
+    .line 334
     invoke-virtual {v2, v1}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->setVisibility(I)V
 
     goto :goto_3
 
-    .line 328
+    .line 336
     :cond_5
     invoke-virtual {v2, v3}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->setVisibility(I)V
 
-    .line 330
+    .line 338
     :goto_3
     iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mCollapseTabScrollView:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
     invoke-virtual {v2, v0}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->setEmbeded(Z)V
 
-    .line 332
+    .line 340
     :cond_6
     iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mExpandTabScrollView:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
@@ -963,22 +963,22 @@
 
     if-eqz p1, :cond_7
 
-    .line 334
+    .line 342
     invoke-virtual {v2, v1}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->setVisibility(I)V
 
     goto :goto_4
 
-    .line 336
+    .line 344
     :cond_7
     invoke-virtual {v2, v3}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->setVisibility(I)V
 
-    .line 338
+    .line 346
     :goto_4
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mExpandTabScrollView:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
     invoke-virtual {p1, v0}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->setEmbeded(Z)V
 
-    .line 340
+    .line 348
     :cond_8
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mActionView:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
@@ -990,7 +990,7 @@
 .method private startContainerViewAnimation(ZLjava/lang/String;Lmiuix/animation/controller/AnimState;Lmiuix/animation/controller/AnimState;)Lmiuix/animation/IStateStyle;
     .locals 9
 
-    .line 1408
+    .line 1420
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mContainerView:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
     invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->getHeight()I
@@ -1009,12 +1009,12 @@
 
     if-eqz p1, :cond_2
 
-    .line 1410
+    .line 1422
     new-instance p1, Lmiuix/animation/base/AnimConfig;
 
     invoke-direct {p1}, Lmiuix/animation/base/AnimConfig;-><init>()V
 
-    .line 1411
+    .line 1423
     new-array v0, v3, [F
 
     fill-array-data v0, :array_0
@@ -1027,14 +1027,14 @@
 
     if-nez p4, :cond_0
 
-    .line 1414
+    .line 1426
     new-instance p4, Lmiuix/animation/controller/AnimState;
 
     invoke-direct {p4, p2}, Lmiuix/animation/controller/AnimState;-><init>(Ljava/lang/Object;)V
 
     sget-object v0, Lmiuix/animation/property/ViewProperty;->TRANSLATION_Y:Lmiuix/animation/property/ViewProperty;
 
-    .line 1415
+    .line 1427
     invoke-virtual {p4, v0, v1, v2}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object p4
@@ -1043,12 +1043,12 @@
 
     const-wide/high16 v1, 0x3ff0000000000000L    # 1.0
 
-    .line 1416
+    .line 1428
     invoke-virtual {p4, v0, v1, v2}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object p4
 
-    .line 1418
+    .line 1430
     :cond_0
     new-array v0, v6, [Landroid/view/View;
 
@@ -1066,15 +1066,15 @@
 
     if-eqz p3, :cond_1
 
-    .line 1420
+    .line 1432
     invoke-virtual {p3, p2}, Lmiuix/animation/controller/AnimState;->setTag(Ljava/lang/Object;)V
 
-    .line 1421
+    .line 1433
     invoke-interface {v0, p3}, Lmiuix/animation/IStateStyle;->setTo(Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     move-result-object v0
 
-    .line 1423
+    .line 1435
     :cond_1
     new-array p2, v6, [Lmiuix/animation/base/AnimConfig;
 
@@ -1086,13 +1086,13 @@
 
     goto :goto_0
 
-    .line 1425
+    .line 1437
     :cond_2
     new-instance p1, Lmiuix/animation/base/AnimConfig;
 
     invoke-direct {p1}, Lmiuix/animation/base/AnimConfig;-><init>()V
 
-    .line 1426
+    .line 1438
     new-array v3, v3, [F
 
     fill-array-data v3, :array_1
@@ -1103,7 +1103,7 @@
 
     invoke-virtual {p1, v3}, Lmiuix/animation/base/AnimConfig;->setEase(Lmiuix/animation/utils/EaseManager$EaseStyle;)Lmiuix/animation/base/AnimConfig;
 
-    .line 1427
+    .line 1439
     new-array v3, v6, [Lmiuix/animation/listener/TransitionListener;
 
     new-instance v4, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$ViewHideTransitionListener;
@@ -1118,7 +1118,7 @@
 
     if-nez p4, :cond_3
 
-    .line 1430
+    .line 1442
     new-instance p4, Lmiuix/animation/controller/AnimState;
 
     invoke-direct {p4, p2}, Lmiuix/animation/controller/AnimState;-><init>(Ljava/lang/Object;)V
@@ -1131,19 +1131,19 @@
 
     int-to-double v7, v0
 
-    .line 1431
+    .line 1443
     invoke-virtual {p4, v3, v7, v8}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object p4
 
     sget-object v0, Lmiuix/animation/property/ViewProperty;->ALPHA:Lmiuix/animation/property/ViewProperty;
 
-    .line 1432
+    .line 1444
     invoke-virtual {p4, v0, v1, v2}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object p4
 
-    .line 1434
+    .line 1446
     :cond_3
     new-array v0, v6, [Landroid/view/View;
 
@@ -1161,15 +1161,15 @@
 
     if-eqz p3, :cond_4
 
-    .line 1436
+    .line 1448
     invoke-virtual {p3, p2}, Lmiuix/animation/controller/AnimState;->setTag(Ljava/lang/Object;)V
 
-    .line 1437
+    .line 1449
     invoke-interface {v0, p3}, Lmiuix/animation/IStateStyle;->setTo(Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     move-result-object v0
 
-    .line 1439
+    .line 1451
     :cond_4
     new-array p2, v6, [Lmiuix/animation/base/AnimConfig;
 
@@ -1198,7 +1198,7 @@
 .method private startSplitViewAnimation(ZLjava/lang/String;Lmiuix/animation/controller/AnimState;)Lmiuix/animation/IStateStyle;
     .locals 9
 
-    .line 1495
+    .line 1507
     invoke-direct {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->getSplitHeight()I
 
     move-result v0
@@ -1215,12 +1215,12 @@
 
     if-eqz p1, :cond_1
 
-    .line 1497
+    .line 1509
     new-instance p1, Lmiuix/animation/base/AnimConfig;
 
     invoke-direct {p1}, Lmiuix/animation/base/AnimConfig;-><init>()V
 
-    .line 1498
+    .line 1510
     new-array v0, v3, [F
 
     fill-array-data v0, :array_0
@@ -1231,14 +1231,14 @@
 
     invoke-virtual {p1, v0}, Lmiuix/animation/base/AnimConfig;->setEase(Lmiuix/animation/utils/EaseManager$EaseStyle;)Lmiuix/animation/base/AnimConfig;
 
-    .line 1499
+    .line 1511
     new-instance v0, Lmiuix/animation/controller/AnimState;
 
     invoke-direct {v0, p2}, Lmiuix/animation/controller/AnimState;-><init>(Ljava/lang/Object;)V
 
     sget-object v3, Lmiuix/animation/property/ViewProperty;->TRANSLATION_Y:Lmiuix/animation/property/ViewProperty;
 
-    .line 1500
+    .line 1512
     invoke-virtual {v0, v3, v1, v2}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v0
@@ -1247,12 +1247,12 @@
 
     const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
 
-    .line 1501
+    .line 1513
     invoke-virtual {v0, v1, v2, v3}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v0
 
-    .line 1502
+    .line 1514
     new-array v1, v6, [Landroid/view/View;
 
     iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mSplitView:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
@@ -1269,15 +1269,15 @@
 
     if-eqz p3, :cond_0
 
-    .line 1504
+    .line 1516
     invoke-virtual {p3, p2}, Lmiuix/animation/controller/AnimState;->setTag(Ljava/lang/Object;)V
 
-    .line 1505
+    .line 1517
     invoke-interface {v1, p3}, Lmiuix/animation/IStateStyle;->setTo(Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     move-result-object v1
 
-    .line 1507
+    .line 1519
     :cond_0
     new-array p2, v6, [Lmiuix/animation/base/AnimConfig;
 
@@ -1289,13 +1289,13 @@
 
     goto :goto_0
 
-    .line 1509
+    .line 1521
     :cond_1
     new-instance p1, Lmiuix/animation/base/AnimConfig;
 
     invoke-direct {p1}, Lmiuix/animation/base/AnimConfig;-><init>()V
 
-    .line 1510
+    .line 1522
     new-array v3, v3, [F
 
     fill-array-data v3, :array_1
@@ -1306,7 +1306,7 @@
 
     invoke-virtual {p1, v3}, Lmiuix/animation/base/AnimConfig;->setEase(Lmiuix/animation/utils/EaseManager$EaseStyle;)Lmiuix/animation/base/AnimConfig;
 
-    .line 1511
+    .line 1523
     new-array v3, v6, [Lmiuix/animation/listener/TransitionListener;
 
     new-instance v4, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$ViewHideTransitionListener;
@@ -1319,7 +1319,7 @@
 
     invoke-virtual {p1, v3}, Lmiuix/animation/base/AnimConfig;->addListeners([Lmiuix/animation/listener/TransitionListener;)Lmiuix/animation/base/AnimConfig;
 
-    .line 1512
+    .line 1524
     new-instance v3, Lmiuix/animation/controller/AnimState;
 
     invoke-direct {v3, p2}, Lmiuix/animation/controller/AnimState;-><init>(Ljava/lang/Object;)V
@@ -1330,19 +1330,19 @@
 
     int-to-double v7, v0
 
-    .line 1513
+    .line 1525
     invoke-virtual {v3, v4, v7, v8}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v0
 
     sget-object v3, Lmiuix/animation/property/ViewProperty;->ALPHA:Lmiuix/animation/property/ViewProperty;
 
-    .line 1514
+    .line 1526
     invoke-virtual {v0, v3, v1, v2}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v0
 
-    .line 1515
+    .line 1527
     new-array v1, v6, [Landroid/view/View;
 
     iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mSplitView:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
@@ -1359,15 +1359,15 @@
 
     if-eqz p3, :cond_2
 
-    .line 1517
+    .line 1529
     invoke-virtual {p3, p2}, Lmiuix/animation/controller/AnimState;->setTag(Ljava/lang/Object;)V
 
-    .line 1518
+    .line 1530
     invoke-interface {v1, p3}, Lmiuix/animation/IStateStyle;->setTo(Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     move-result-object v1
 
-    .line 1520
+    .line 1532
     :cond_2
     new-array p2, v6, [Lmiuix/animation/base/AnimConfig;
 
@@ -1398,7 +1398,7 @@
 .method private updateContentMaskVisibility(Z)V
     .locals 2
 
-    .line 1626
+    .line 1638
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mSplitView:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
     invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->getChildCount()I
@@ -1421,19 +1421,19 @@
 
     if-eqz v0, :cond_1
 
-    .line 1628
+    .line 1640
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mSplitView:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
     invoke-virtual {v0, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 1629
+    .line 1641
     check-cast v0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
 
     iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mSplitMenuView:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
 
-    .line 1631
+    .line 1643
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mSplitMenuView:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
 
     invoke-virtual {v0}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->isOverflowMenuShowing()Z
@@ -1448,7 +1448,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 1633
+    .line 1645
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mOverlayLayout:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
 
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mContentMaskOnClickListenr:Landroid/view/View$OnClickListener;
@@ -1461,12 +1461,12 @@
 
     move-result-object p1
 
-    .line 1634
+    .line 1646
     invoke-virtual {p1}, Landroid/animation/Animator;->start()V
 
     goto :goto_0
 
-    .line 1636
+    .line 1648
     :cond_0
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mOverlayLayout:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
 
@@ -1492,7 +1492,7 @@
 
     const/4 v0, 0x0
 
-    .line 1385
+    .line 1397
     invoke-direct {p0, p1, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->updateVisibility(ZLmiuix/animation/controller/AnimState;)V
 
     return-void
@@ -1501,7 +1501,7 @@
 .method private updateVisibility(ZLmiuix/animation/controller/AnimState;)V
     .locals 3
 
-    .line 1390
+    .line 1402
     iget-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mHiddenByApp:Z
 
     iget-boolean v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mHiddenBySystem:Z
@@ -1514,22 +1514,22 @@
 
     if-eqz v0, :cond_0
 
-    .line 1394
+    .line 1406
     iget-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mNowShowing:Z
 
     if-nez v0, :cond_1
 
     const/4 v0, 0x1
 
-    .line 1395
+    .line 1407
     iput-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mNowShowing:Z
 
-    .line 1396
+    .line 1408
     invoke-direct {p0, p1, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->doShow(ZLmiuix/animation/controller/AnimState;)V
 
     goto :goto_0
 
-    .line 1399
+    .line 1411
     :cond_0
     iget-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mNowShowing:Z
 
@@ -1537,10 +1537,10 @@
 
     const/4 v0, 0x0
 
-    .line 1400
+    .line 1412
     iput-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mNowShowing:Z
 
-    .line 1401
+    .line 1413
     invoke-direct {p0, p1, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->doHide(ZLmiuix/animation/controller/AnimState;)V
 
     :cond_1
@@ -1555,22 +1555,22 @@
 
     if-eqz p1, :cond_0
 
-    .line 1001
+    .line 1009
     invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->showForActionMode()V
 
     goto :goto_0
 
-    .line 1003
+    .line 1011
     :cond_0
     invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->hideForActionMode()V
 
-    .line 1006
+    .line 1014
     :goto_0
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mActionModeView:Lmiuix/appcompat/internal/app/widget/ActionModeView;
 
     invoke-interface {v0, p1}, Lmiuix/appcompat/internal/app/widget/ActionModeView;->animateToVisibility(Z)V
 
-    .line 1007
+    .line 1015
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mTabScrollView:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
     if-eqz v0, :cond_1
@@ -1591,28 +1591,28 @@
 
     if-eqz v0, :cond_1
 
-    .line 1008
+    .line 1016
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mTabScrollView:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
     xor-int/lit8 v1, p1, 0x1
 
     invoke-virtual {v0, v1}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->setEnabled(Z)V
 
-    .line 1009
+    .line 1017
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mExpanedTabScrollView:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
     xor-int/lit8 v1, p1, 0x1
 
     invoke-virtual {v0, v1}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->setEnabled(Z)V
 
-    .line 1010
+    .line 1018
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mCollapseTabScrollView:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
     xor-int/lit8 v1, p1, 0x1
 
     invoke-virtual {v0, v1}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->setEnabled(Z)V
 
-    .line 1011
+    .line 1019
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mCollapseTabScrollView:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
     xor-int/lit8 p1, p1, 0x1
@@ -1626,50 +1626,41 @@
 .method public createActionModeView(Landroid/view/ActionMode$Callback;)Lmiuix/appcompat/internal/app/widget/ActionModeView;
     .locals 1
 
-    .line 1027
+    .line 1035
     instance-of p1, p1, Lmiuix/view/SearchActionMode$Callback;
 
     if-eqz p1, :cond_3
 
-    .line 1028
+    .line 1036
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mSearchActionModeView:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
     if-nez p1, :cond_0
 
-    .line 1029
+    .line 1037
     invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->createSearchActionModeView()Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
     move-result-object p1
 
     iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mSearchActionModeView:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
-    .line 1031
+    .line 1039
     :cond_0
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mContainerView:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mOverlayLayout:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
 
-    invoke-virtual {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->isMiuixFloating()Z
-
-    move-result p1
-
-    if-nez p1, :cond_1
-
-    .line 1032
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mContainerView:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-    invoke-virtual {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->getPendingInsets()Landroid/graphics/Rect;
+    invoke-virtual {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->getBaseInnerInsets()Landroid/graphics/Rect;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    .line 1034
+    .line 1041
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mSearchActionModeView:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
     iget p1, p1, Landroid/graphics/Rect;->top:I
 
     invoke-virtual {v0, p1}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->setStatusBarPaddingTop(I)V
 
-    .line 1037
+    .line 1043
     :cond_1
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mOverlayLayout:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
 
@@ -1681,20 +1672,27 @@
 
     if-eq p1, v0, :cond_2
 
-    .line 1038
+    .line 1044
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mOverlayLayout:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
 
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mSearchActionModeView:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
     invoke-virtual {p1, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->addView(Landroid/view/View;)V
 
-    .line 1040
+    .line 1046
     :cond_2
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mSearchActionModeView:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mActionView:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    invoke-virtual {p1, v0}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->addAnimationListener(Lmiuix/view/ActionModeAnimationListener;)V
+
+    .line 1047
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mSearchActionModeView:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
     goto :goto_0
 
-    .line 1045
+    .line 1052
     :cond_3
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mContextView:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
 
@@ -1703,7 +1701,7 @@
     :goto_0
     return-object p1
 
-    .line 1046
+    .line 1053
     :cond_4
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -1717,7 +1715,7 @@
 .method public createSearchActionModeView()Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
     .locals 4
 
-    .line 1055
+    .line 1062
     invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->getThemedContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1726,7 +1724,7 @@
 
     move-result-object v0
 
-    .line 1056
+    .line 1063
     sget v1, Lmiuix/appcompat/R$layout;->miuix_appcompat_search_action_mode_view:I
 
     iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mOverlayLayout:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
@@ -1739,7 +1737,7 @@
 
     check-cast v0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
-    .line 1058
+    .line 1065
     new-instance v1, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$4;
 
     invoke-direct {v1, p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$4;-><init>(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)V
@@ -1752,7 +1750,7 @@
 .method public getDisplayOptions()I
     .locals 1
 
-    .line 627
+    .line 635
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mActionView:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->getDisplayOptions()I
@@ -1765,7 +1763,7 @@
 .method public getExpandState()I
     .locals 1
 
-    .line 1247
+    .line 1254
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mActionView:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->getExpandState()I
@@ -1778,7 +1776,7 @@
 .method public getNavigationMode()I
     .locals 1
 
-    .line 592
+    .line 600
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mActionView:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->getNavigationMode()I
@@ -1791,17 +1789,17 @@
 .method public getThemedContext()Landroid/content/Context;
     .locals 4
 
-    .line 854
+    .line 862
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mThemedContext:Landroid/content/Context;
 
     if-nez v0, :cond_1
 
-    .line 855
+    .line 863
     new-instance v0, Landroid/util/TypedValue;
 
     invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
 
-    .line 856
+    .line 864
     iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
@@ -1812,15 +1810,15 @@
 
     const/4 v3, 0x1
 
-    .line 857
+    .line 865
     invoke-virtual {v1, v2, v0, v3}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
 
-    .line 858
+    .line 866
     iget v0, v0, Landroid/util/TypedValue;->resourceId:I
 
     if-eqz v0, :cond_0
 
-    .line 861
+    .line 869
     new-instance v1, Landroid/view/ContextThemeWrapper;
 
     iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mContext:Landroid/content/Context;
@@ -1831,13 +1829,13 @@
 
     goto :goto_0
 
-    .line 863
+    .line 871
     :cond_0
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mContext:Landroid/content/Context;
 
     iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mThemedContext:Landroid/content/Context;
 
-    .line 866
+    .line 874
     :cond_1
     :goto_0
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mThemedContext:Landroid/content/Context;
@@ -1848,17 +1846,17 @@
 .method hideForActionMode()V
     .locals 4
 
-    .line 921
+    .line 929
     iget-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mShowingForMode:Z
 
     if-eqz v0, :cond_2
 
     const/4 v0, 0x0
 
-    .line 922
+    .line 930
     iput-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mShowingForMode:Z
 
-    .line 923
+    .line 931
     iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mActionView:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->getDisplayOptions()I
@@ -1883,32 +1881,32 @@
     :goto_0
     invoke-virtual {v1, v2}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->onActionModeEnd(Z)V
 
-    .line 924
+    .line 932
     invoke-direct {p0, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->updateVisibility(Z)V
 
-    .line 925
+    .line 933
     invoke-virtual {p0, v3}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->setResizable(Z)V
 
-    .line 926
+    .line 934
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mActionModeView:Lmiuix/appcompat/internal/app/widget/ActionModeView;
 
     instance-of v1, v0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
     if-eqz v1, :cond_1
 
-    .line 927
+    .line 935
     iget v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mCurrentExpandState:I
 
     invoke-virtual {p0, v0, v3}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->setExpandState(IZ)V
 
-    .line 928
+    .line 936
     iget-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mCurrentResizable:Z
 
     invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->setResizable(Z)V
 
     goto :goto_1
 
-    .line 930
+    .line 938
     :cond_1
     check-cast v0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
 
@@ -1918,7 +1916,7 @@
 
     iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mCurrentExpandState:I
 
-    .line 931
+    .line 939
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mActionModeView:Lmiuix/appcompat/internal/app/widget/ActionModeView;
 
     check-cast v0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
@@ -1929,17 +1927,17 @@
 
     iput-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mCurrentResizable:Z
 
-    .line 932
+    .line 940
     iget v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mCurrentExpandState:I
 
     invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->setExpandState(I)V
 
-    .line 933
+    .line 941
     iget-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mCurrentResizable:Z
 
     invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->setResizable(Z)V
 
-    .line 935
+    .line 943
     :goto_1
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mActionView:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
@@ -2093,6 +2091,7 @@
 
     move-result p1
 
+    .line 275
     iput p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mContextDisplayMode:I
 
     .line 278
@@ -2159,7 +2158,7 @@
 .method public isFragmentViewPagerMode()Z
     .locals 1
 
-    .line 1086
+    .line 1093
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mViewPagerController:Lmiuix/appcompat/internal/app/widget/ActionBarViewPagerController;
 
     if-eqz v0, :cond_0
@@ -2178,7 +2177,7 @@
 .method public isResizable()Z
     .locals 1
 
-    .line 1242
+    .line 1249
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mActionView:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->isResizable()Z
@@ -2191,7 +2190,7 @@
 .method isShowHideAnimationEnabled()Z
     .locals 1
 
-    .line 1610
+    .line 1622
     iget-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mShowHideAnimationEnabled:Z
 
     return v0
@@ -2200,7 +2199,7 @@
 .method public isShowing()Z
     .locals 1
 
-    .line 941
+    .line 949
     iget-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mNowShowing:Z
 
     return v0
@@ -2209,7 +2208,7 @@
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 0
 
-    .line 300
+    .line 301
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mContext:Landroid/content/Context;
 
     invoke-static {p1}, Lmiuix/appcompat/internal/view/ActionBarPolicy;->get(Landroid/content/Context;)Lmiuix/appcompat/internal/view/ActionBarPolicy;
@@ -2225,12 +2224,32 @@
     return-void
 .end method
 
+.method public onFloatingModeChanged(Z)V
+    .locals 1
+
+    .line 305
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mContainerView:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    invoke-virtual {v0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setIsMiuixFloating(Z)V
+
+    .line 306
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mSearchActionModeView:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+
+    if-eqz v0, :cond_0
+
+    .line 307
+    invoke-virtual {v0, p1}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->onFloatingModeChanged(Z)V
+
+    :cond_0
+    return-void
+.end method
+
 .method public setDisplayHomeAsUpEnabled(Z)V
     .locals 1
 
     if-eqz p1, :cond_0
 
-    .line 511
+    .line 519
     invoke-direct {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->getBlurOptioons()I
 
     move-result p1
@@ -2242,7 +2261,7 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 512
+    .line 520
     :goto_0
     invoke-direct {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->getBlurOptioons()I
 
@@ -2250,7 +2269,7 @@
 
     or-int/lit8 v0, v0, 0x4
 
-    .line 511
+    .line 519
     invoke-virtual {p0, p1, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->setDisplayOptions(II)V
 
     return-void
@@ -2259,7 +2278,7 @@
 .method public setDisplayOptions(II)V
     .locals 4
 
-    .line 483
+    .line 491
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mActionView:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->getDisplayOptions()I
@@ -2272,10 +2291,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 485
+    .line 493
     iput-boolean v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mDisplayHomeAsUpSet:Z
 
-    .line 487
+    .line 495
     :cond_0
     iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mActionView:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
@@ -2289,14 +2308,14 @@
 
     invoke-virtual {v1, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setDisplayOptions(I)V
 
-    .line 488
+    .line 496
     iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mActionView:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     invoke-virtual {p2}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->getDisplayOptions()I
 
     move-result p2
 
-    .line 489
+    .line 497
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mContainerView:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
     const/4 v1, 0x0
@@ -2316,7 +2335,7 @@
     :cond_1
     move p2, v1
 
-    .line 490
+    .line 498
     :goto_0
     invoke-virtual {v0, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setBlurBackground(Z)Z
 
@@ -2325,23 +2344,23 @@
 
     if-eqz p1, :cond_3
 
-    .line 492
+    .line 500
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mSplitView:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
     if-eqz p1, :cond_3
 
-    .line 493
+    .line 501
     invoke-virtual {p1, v2}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setBlurBackground(Z)Z
 
     goto :goto_1
 
-    .line 494
+    .line 502
     :cond_3
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mSplitView:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
     if-eqz p1, :cond_4
 
-    .line 495
+    .line 503
     invoke-virtual {p1, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setBlurBackground(Z)Z
 
     :cond_4
@@ -2352,7 +2371,7 @@
 .method public setExpandState(I)V
     .locals 1
 
-    .line 1252
+    .line 1259
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mActionView:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     invoke-virtual {v0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setExpandState(I)V
@@ -2361,12 +2380,14 @@
 .end method
 
 .method public setExpandState(IZ)V
-    .locals 1
+    .locals 2
 
-    .line 1257
+    .line 1264
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mActionView:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
-    invoke-virtual {v0, p1, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setExpandState(IZ)V
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, p1, p2, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setExpandState(IZZ)V
 
     return-void
 .end method
@@ -2374,7 +2395,7 @@
 .method public setHomeButtonEnabled(Z)V
     .locals 1
 
-    .line 536
+    .line 544
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mActionView:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     invoke-virtual {v0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setHomeButtonEnabled(Z)V
@@ -2385,7 +2406,7 @@
 .method public setResizable(Z)V
     .locals 1
 
-    .line 1237
+    .line 1244
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mActionView:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     invoke-virtual {v0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setResizable(Z)V
@@ -2396,12 +2417,12 @@
 .method public setShowHideAnimationEnabled(Z)V
     .locals 1
 
-    .line 1614
+    .line 1626
     iput-boolean p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mShowHideAnimationEnabled:Z
 
     if-nez p1, :cond_1
 
-    .line 1617
+    .line 1629
     invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->isShowing()Z
 
     move-result p1
@@ -2410,12 +2431,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 1618
+    .line 1630
     invoke-direct {p0, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->doShow(Z)V
 
     goto :goto_0
 
-    .line 1620
+    .line 1632
     :cond_0
     invoke-direct {p0, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->doHide(Z)V
 
@@ -2427,7 +2448,7 @@
 .method public setTitle(Ljava/lang/CharSequence;)V
     .locals 1
 
-    .line 473
+    .line 481
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mActionView:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     invoke-virtual {v0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setTitle(Ljava/lang/CharSequence;)V
@@ -2438,51 +2459,51 @@
 .method showForActionMode()V
     .locals 6
 
-    .line 888
+    .line 896
     iget-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mShowingForMode:Z
 
     if-nez v0, :cond_2
 
     const/4 v0, 0x1
 
-    .line 889
+    .line 897
     iput-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mShowingForMode:Z
 
     const/4 v1, 0x0
 
-    .line 890
+    .line 898
     invoke-direct {p0, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->updateVisibility(Z)V
 
-    .line 891
+    .line 899
     invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->getExpandState()I
 
     move-result v2
 
     iput v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mCurrentExpandState:I
 
-    .line 892
+    .line 900
     invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->isResizable()Z
 
     move-result v2
 
     iput-boolean v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mCurrentResizable:Z
 
-    .line 893
+    .line 901
     iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mActionModeView:Lmiuix/appcompat/internal/app/widget/ActionModeView;
 
     instance-of v3, v2, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
     if-eqz v3, :cond_0
 
-    .line 894
+    .line 902
     invoke-virtual {p0, v1, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->setExpandState(IZ)V
 
-    .line 895
+    .line 903
     invoke-virtual {p0, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->setResizable(Z)V
 
     goto :goto_0
 
-    .line 897
+    .line 905
     :cond_0
     check-cast v2, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
 
@@ -2490,7 +2511,7 @@
 
     invoke-virtual {v2, v3}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->setExpandState(I)V
 
-    .line 898
+    .line 906
     iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mActionModeView:Lmiuix/appcompat/internal/app/widget/ActionModeView;
 
     check-cast v2, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
@@ -2499,7 +2520,7 @@
 
     invoke-virtual {v2, v3}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->setResizable(Z)V
 
-    .line 900
+    .line 908
     :goto_0
     iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mActionView:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
@@ -2509,21 +2530,21 @@
 
     iput v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mCurrentAccessibilityImportant:I
 
-    .line 901
+    .line 909
     iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mActionView:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     const/4 v3, 0x4
 
     invoke-virtual {v2, v3}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setImportantForAccessibility(I)V
 
-    .line 902
+    .line 910
     iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mActionView:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     iget-object v3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mActionModeView:Lmiuix/appcompat/internal/app/widget/ActionModeView;
 
     instance-of v3, v3, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
-    .line 903
+    .line 911
     invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->getDisplayOptions()I
 
     move-result v4
@@ -2539,7 +2560,7 @@
     :cond_1
     move v0, v1
 
-    .line 902
+    .line 910
     :goto_1
     invoke-virtual {v2, v3, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->onActionModeStart(ZZ)V
 
@@ -2550,21 +2571,21 @@
 .method public startActionMode(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;
     .locals 3
 
-    .line 956
+    .line 964
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mActionMode:Landroid/view/ActionMode;
 
     if-eqz v0, :cond_0
 
-    .line 957
+    .line 965
     invoke-virtual {v0}, Landroid/view/ActionMode;->finish()V
 
-    .line 960
+    .line 968
     :cond_0
     invoke-direct {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->createActionMode(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;
 
     move-result-object v0
 
-    .line 961
+    .line 969
     iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mActionModeView:Lmiuix/appcompat/internal/app/widget/ActionModeView;
 
     instance-of v1, v1, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
@@ -2586,18 +2607,18 @@
 
     if-eqz v1, :cond_3
 
-    .line 963
+    .line 971
     :cond_2
     iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mActionModeView:Lmiuix/appcompat/internal/app/widget/ActionModeView;
 
     invoke-interface {v1}, Lmiuix/appcompat/internal/app/widget/ActionModeView;->closeMode()V
 
-    .line 964
+    .line 972
     iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mActionModeView:Lmiuix/appcompat/internal/app/widget/ActionModeView;
 
     invoke-interface {v1}, Lmiuix/appcompat/internal/app/widget/ActionModeView;->killMode()V
 
-    .line 967
+    .line 975
     :cond_3
     invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->createActionModeView(Landroid/view/ActionMode$Callback;)Lmiuix/appcompat/internal/app/widget/ActionModeView;
 
@@ -2605,50 +2626,50 @@
 
     iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mActionModeView:Lmiuix/appcompat/internal/app/widget/ActionModeView;
 
-    .line 969
+    .line 977
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mActionModeView:Lmiuix/appcompat/internal/app/widget/ActionModeView;
 
     if-eqz p1, :cond_7
 
-    .line 973
+    .line 981
     instance-of v1, v0, Lmiuix/appcompat/internal/view/ActionModeImpl;
 
     if-eqz v1, :cond_6
 
-    .line 974
+    .line 982
     move-object v1, v0
 
     check-cast v1, Lmiuix/appcompat/internal/view/ActionModeImpl;
 
-    .line 975
+    .line 983
     invoke-virtual {v1, p1}, Lmiuix/appcompat/internal/view/ActionModeImpl;->setActionModeView(Lmiuix/appcompat/internal/app/widget/ActionModeView;)V
 
-    .line 976
+    .line 984
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mActionModeCallback:Lmiuix/appcompat/internal/view/ActionModeImpl$ActionModeCallback;
 
     invoke-virtual {v1, p1}, Lmiuix/appcompat/internal/view/ActionModeImpl;->setActionModeCallback(Lmiuix/appcompat/internal/view/ActionModeImpl$ActionModeCallback;)V
 
-    .line 977
+    .line 985
     invoke-virtual {v1}, Lmiuix/appcompat/internal/view/ActionModeImpl;->dispatchOnCreate()Z
 
     move-result p1
 
     if-eqz p1, :cond_6
 
-    .line 978
+    .line 986
     invoke-virtual {v0}, Landroid/view/ActionMode;->invalidate()V
 
-    .line 979
+    .line 987
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mActionModeView:Lmiuix/appcompat/internal/app/widget/ActionModeView;
 
     invoke-interface {p1, v0}, Lmiuix/appcompat/internal/app/widget/ActionModeView;->initForMode(Landroid/view/ActionMode;)V
 
     const/4 p1, 0x1
 
-    .line 980
+    .line 988
     invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->animateToMode(Z)V
 
-    .line 981
+    .line 989
     iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mSplitView:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
     if-eqz v1, :cond_4
@@ -2657,21 +2678,21 @@
 
     if-ne v2, p1, :cond_4
 
-    .line 983
+    .line 991
     invoke-virtual {v1}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->getVisibility()I
 
     move-result p1
 
     if-eqz p1, :cond_4
 
-    .line 984
+    .line 992
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mSplitView:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
     const/4 v1, 0x0
 
     invoke-virtual {p1, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setVisibility(I)V
 
-    .line 987
+    .line 995
     :cond_4
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mActionModeView:Lmiuix/appcompat/internal/app/widget/ActionModeView;
 
@@ -2679,15 +2700,15 @@
 
     if-eqz v1, :cond_5
 
-    .line 988
+    .line 996
     check-cast p1, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
 
     const/16 v1, 0x20
 
-    .line 989
+    .line 997
     invoke-virtual {p1, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->sendAccessibilityEvent(I)V
 
-    .line 992
+    .line 1000
     :cond_5
     iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->mActionMode:Landroid/view/ActionMode;
 
@@ -2698,7 +2719,7 @@
 
     return-object p1
 
-    .line 970
+    .line 978
     :cond_7
     new-instance p1, Ljava/lang/IllegalStateException;
 

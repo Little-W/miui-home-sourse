@@ -150,15 +150,6 @@
     return-void
 .end method
 
-.method public getDeviceProfile()Lcom/miui/home/launcher/DeviceProfile;
-    .locals 1
-
-    .line 203
-    iget-object v0, p0, Lcom/miui/home/launcher/BaseActivity;->mDeviceProfile:Lcom/miui/home/launcher/DeviceProfile;
-
-    return-object v0
-.end method
-
 .method public abstract getOverviewPanel()Landroid/view/View;
     .annotation system Ldalvik/annotation/Signature;
         value = {

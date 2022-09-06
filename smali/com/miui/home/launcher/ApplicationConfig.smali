@@ -651,3 +651,49 @@
     :cond_0
     return v1
 .end method
+
+.method public static isWallpaperSupportBackup()Z
+    .locals 3
+
+    .line 178
+    :try_start_0
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v0
+
+    const-string v1, "com.miui.miwallpaper"
+
+    const/16 v2, 0x80
+
+    .line 180
+    invoke-virtual {v0, v1, v2}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
+
+    move-result-object v0
+
+    .line 181
+    iget-object v0, v0, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
+
+    const-string v1, "support_backup_default_lock_wallpaper"
+
+    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
+
+    move-result v0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return v0
+
+    :catch_0
+    move-exception v0
+
+    .line 183
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+
+    const/4 v0, 0x0
+
+    return v0
+.end method

@@ -102,7 +102,7 @@
 
     move-result-object p4
 
-    const v1, 0x7f0d008a
+    const v1, 0x7f0d009a
 
     const/4 v2, 0x0
 
@@ -213,7 +213,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f0d008a
+    const p2, 0x7f0d009a
 
     invoke-virtual {p1, p2, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -281,7 +281,7 @@
 
     if-ne p1, p2, :cond_0
 
-    const p1, 0x7f0a01a4
+    const p1, 0x7f0a0222
 
     .line 57
     iget-object p2, p0, Lcom/miui/home/launcher/LauncherAppWidgetHost;->mTempWidgetInfo:Lcom/miui/home/launcher/LauncherAppWidgetInfo;
@@ -423,7 +423,7 @@
     goto :goto_0
 
     :catch_0
-    const p2, 0x7f100031
+    const p2, 0x7f110031
 
     const/4 v0, 0x0
 

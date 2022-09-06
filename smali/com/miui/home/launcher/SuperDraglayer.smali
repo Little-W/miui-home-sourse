@@ -673,7 +673,7 @@
 
     const-string v0, "Launcher.DragLayer"
 
-    const-string v1, "updateWallpaperOffset"
+    const-string/jumbo v1, "updateWallpaperOffset"
 
     .line 513
     invoke-static {v0, v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
@@ -1363,7 +1363,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f060068
+    const v4, 0x7f060069
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -1399,7 +1399,7 @@
 
     move-result-object v5
 
-    const v6, 0x7f0b0019
+    const v6, 0x7f0b001b
 
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1490,7 +1490,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0b0017
+    const v3, 0x7f0b0019
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getInteger(I)I
 

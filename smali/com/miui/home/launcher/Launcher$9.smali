@@ -1,14 +1,11 @@
 .class Lcom/miui/home/launcher/Launcher$9;
-.super Ljava/lang/Object;
+.super Landroid/animation/AnimatorListenerAdapter;
 .source "Launcher.java"
-
-# interfaces
-.implements Landroid/view/animation/Animation$AnimationListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/Launcher;->setupAnimations()V
+    value = Lcom/miui/home/launcher/Launcher;->setupFolderCling()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,73 +22,81 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 2129
+    .line 2049
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$9;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onAnimationEnd(Landroid/view/animation/Animation;)V
-    .locals 1
+.method public onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 2
 
-    .line 2137
+    .line 2058
+    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$9;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$1602(Lcom/miui/home/launcher/Launcher;Z)Z
+
+    .line 2059
+    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$9;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$1700(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/FolderCling;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/FolderCling;->getFolder()Lcom/miui/home/launcher/Folder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Folder;->getOpenCloseAnimatorListenerAdapter()Landroid/animation/AnimatorListenerAdapter;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
+
+    .line 2060
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$9;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$1700(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/widget/WidgetsPreviewPage;
+    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$1700(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/FolderCling;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/miui/home/launcher/widget/WidgetsPreviewPage;->getVisibility()I
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    .line 2138
-    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$9;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$1700(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/widget/WidgetsPreviewPage;
-
-    move-result-object p1
-
-    const/16 v0, 0x8
-
-    invoke-virtual {p1, v0}, Lcom/miui/home/launcher/widget/WidgetsPreviewPage;->setVisibility(I)V
-
-    .line 2140
-    :cond_0
-    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$9;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$1700(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/widget/WidgetsPreviewPage;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lcom/miui/home/launcher/widget/WidgetsPreviewPage;->onExitAnimationEnd()V
+    invoke-static {p1}, Lcom/miui/home/launcher/util/ViewCompat;->notifyChildOfDragStart(Landroid/view/View;)V
 
     return-void
 .end method
 
-.method public onAnimationRepeat(Landroid/view/animation/Animation;)V
-    .locals 0
+.method public onAnimationStart(Landroid/animation/Animator;)V
+    .locals 2
 
-    return-void
-.end method
+    .line 2052
+    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$9;->this$0:Lcom/miui/home/launcher/Launcher;
 
-.method public onAnimationStart(Landroid/view/animation/Animation;)V
-    .locals 0
+    const/4 v1, 0x1
 
-    .line 2132
-    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$9;->this$0:Lcom/miui/home/launcher/Launcher;
+    invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$1602(Lcom/miui/home/launcher/Launcher;Z)Z
 
-    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$1700(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/widget/WidgetsPreviewPage;
+    .line 2053
+    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$9;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    move-result-object p1
+    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$1700(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/FolderCling;
 
-    invoke-virtual {p1}, Lcom/miui/home/launcher/widget/WidgetsPreviewPage;->onExitAnimationStart()V
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/FolderCling;->getFolder()Lcom/miui/home/launcher/Folder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Folder;->getOpenCloseAnimatorListenerAdapter()Landroid/animation/AnimatorListenerAdapter;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationStart(Landroid/animation/Animator;)V
 
     return-void
 .end method

@@ -21,7 +21,7 @@
 
     const-string v3, "last_deep_link_referrer"
 
-    const-string v4, "user_id"
+    const-string/jumbo v4, "user_id"
 
     const-string v5, "first_open_after_install"
 

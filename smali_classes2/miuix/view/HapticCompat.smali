@@ -47,7 +47,7 @@
 
     const-string v1, "miuix.view.ExtendedVibrator"
 
-    .line 116
+    .line 120
     filled-new-array {v0, v1}, [Ljava/lang/String;
 
     move-result-object v0
@@ -69,7 +69,7 @@
 .method private static varargs loadProviders([Ljava/lang/String;)V
     .locals 8
 
-    .line 105
+    .line 109
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -83,7 +83,7 @@
 
     const-string v4, "HapticCompat"
 
-    .line 106
+    .line 110
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -102,7 +102,7 @@
 
     const/4 v4, 0x1
 
-    .line 108
+    .line 112
     :try_start_0
     const-class v5, Lmiuix/view/HapticCompat;
 
@@ -123,7 +123,7 @@
 
     const-string v7, "load provider %s failed."
 
-    .line 110
+    .line 114
     new-array v4, v4, [Ljava/lang/Object;
 
     aput-object v3, v4, v1
@@ -146,7 +146,7 @@
 .method public static obtainFeedBack(I)I
     .locals 3
 
-    .line 91
+    .line 95
     sget-object v0, Lmiuix/view/HapticCompat;->sProviders:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -166,12 +166,12 @@
 
     check-cast v1, Lmiuix/view/HapticFeedbackProvider;
 
-    .line 92
+    .line 96
     instance-of v2, v1, Lmiuix/view/LinearVibrator;
 
     if-eqz v2, :cond_0
 
-    .line 93
+    .line 97
     check-cast v1, Lmiuix/view/LinearVibrator;
 
     invoke-virtual {v1, p0}, Lmiuix/view/LinearVibrator;->obtainFeedBack(I)I
@@ -301,7 +301,7 @@
     .annotation build Landroidx/annotation/Keep;
     .end annotation
 
-    .line 63
+    .line 67
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -322,12 +322,12 @@
     :goto_0
     if-nez v0, :cond_1
 
-    .line 65
+    .line 69
     invoke-static {p0, p1}, Lmiuix/view/HapticCompat;->performHapticFeedback(Landroid/view/View;I)Z
 
     goto :goto_1
 
-    .line 67
+    .line 71
     :cond_1
     sget-object v0, Lmiuix/view/HapticCompat;->sSingleThread:Ljava/util/concurrent/Executor;
 
@@ -346,7 +346,7 @@
     .annotation build Landroidx/annotation/Keep;
     .end annotation
 
-    .line 101
+    .line 105
     sget-object v0, Lmiuix/view/HapticCompat;->sProviders:Ljava/util/List;
 
     invoke-interface {v0, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z

@@ -45,3 +45,6 @@
 
 .method public abstract setRadius(Landroidx/cardview/widget/CardViewDelegate;F)V
 .end method
+
+.method public abstract updatePadding(Landroidx/cardview/widget/CardViewDelegate;)V
+.end method

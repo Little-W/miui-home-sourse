@@ -37,70 +37,70 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .line 40
+    .line 39
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     sput-object v0, Lcom/market/sdk/homeguide/AppstoreUserGuide;->sHomeUserGuideEnableRegions:Ljava/util/Set;
 
-    .line 41
+    .line 40
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     sput-object v0, Lcom/market/sdk/homeguide/AppstoreUserGuide;->sHomeUserGuideEnableLanguages:Ljava/util/Set;
 
-    .line 43
+    .line 42
     sget-object v0, Lcom/market/sdk/homeguide/AppstoreUserGuide;->sHomeUserGuideEnableRegions:Ljava/util/Set;
 
     const-string v1, "IN"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 44
+    .line 43
     sget-object v0, Lcom/market/sdk/homeguide/AppstoreUserGuide;->sHomeUserGuideEnableRegions:Ljava/util/Set;
 
     const-string v1, "ID"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 45
+    .line 44
     sget-object v0, Lcom/market/sdk/homeguide/AppstoreUserGuide;->sHomeUserGuideEnableRegions:Ljava/util/Set;
 
     const-string v1, "RU"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 46
+    .line 45
     sget-object v0, Lcom/market/sdk/homeguide/AppstoreUserGuide;->sHomeUserGuideEnableRegions:Ljava/util/Set;
 
     const-string v1, "ES"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 48
+    .line 47
     sget-object v0, Lcom/market/sdk/homeguide/AppstoreUserGuide;->sHomeUserGuideEnableLanguages:Ljava/util/Set;
 
     const-string v1, "en"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 49
+    .line 48
     sget-object v0, Lcom/market/sdk/homeguide/AppstoreUserGuide;->sHomeUserGuideEnableLanguages:Ljava/util/Set;
 
     const-string v1, "in"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 50
+    .line 49
     sget-object v0, Lcom/market/sdk/homeguide/AppstoreUserGuide;->sHomeUserGuideEnableLanguages:Ljava/util/Set;
 
     const-string v1, "ru"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 51
+    .line 50
     sget-object v0, Lcom/market/sdk/homeguide/AppstoreUserGuide;->sHomeUserGuideEnableLanguages:Ljava/util/Set;
 
     const-string v1, "es"
@@ -113,7 +113,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 34
+    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -124,12 +124,12 @@
 
     const-string v0, "miui.util.ScreenshotUtils"
 
-    .line 119
+    .line 118
     invoke-static {v0}, Lcom/market/sdk/utils/ReflectUtils;->getClass(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 120
+    .line 119
     const-class v1, Landroid/graphics/Bitmap;
 
     const/4 v2, 0x5
@@ -170,17 +170,17 @@
 
     move-result-object v1
 
-    .line 122
+    .line 121
     invoke-direct {p0}, Lcom/market/sdk/homeguide/AppstoreUserGuide;->getLayerForWallPaper()I
 
     move-result v3
 
     const-string v4, "getScreenshot"
 
-    .line 123
+    .line 122
     new-array v2, v2, [Ljava/lang/Object;
 
-    .line 124
+    .line 123
     invoke-static {}, Lcom/market/sdk/utils/AppGlobal;->getContext()Landroid/content/Context;
 
     move-result-object v10
@@ -213,7 +213,7 @@
 
     aput-object v3, v2, v9
 
-    .line 123
+    .line 122
     invoke-static {v0, v0, v4, v1, v2}, Lcom/market/sdk/utils/ReflectUtils;->invokeObject(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -233,42 +233,42 @@
 .method private createBackgroundBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
     .locals 4
 
-    .line 139
+    .line 138
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    .line 141
+    .line 140
     invoke-virtual {p2}, Landroid/graphics/Bitmap;->isMutable()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 142
+    .line 141
     invoke-static {}, Lcom/market/sdk/utils/ResourceUtils;->getScreenWidth()I
 
     move-result p2
 
-    .line 143
+    .line 142
     invoke-static {}, Lcom/market/sdk/utils/ResourceUtils;->getScreenHeight()I
 
     move-result v1
 
     sget-object v2, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
-    .line 142
+    .line 141
     invoke-static {p2, v1, v2}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
     move-result-object p2
 
-    .line 147
+    .line 146
     :cond_0
     new-instance v1, Landroid/graphics/Canvas;
 
     invoke-direct {v1, p2}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 148
+    .line 147
     new-instance v2, Landroid/graphics/PorterDuffXfermode;
 
     sget-object v3, Landroid/graphics/PorterDuff$Mode;->DST_OVER:Landroid/graphics/PorterDuff$Mode;
@@ -279,7 +279,7 @@
 
     const/4 v2, 0x0
 
-    .line 149
+    .line 148
     invoke-virtual {v1, p1, v2, v2, v0}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
     return-object p2
@@ -288,7 +288,7 @@
 .method private getLayerForWallPaper()I
     .locals 2
 
-    .line 135
+    .line 134
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1a
@@ -309,7 +309,7 @@
 .method private show(Lcom/market/sdk/homeguide/HomeUserGuideData;Lcom/market/sdk/homeguide/Interceptor;)V
     .locals 2
 
-    .line 154
+    .line 153
     invoke-static {}, Lcom/market/sdk/homeguide/AppstoreUserGuideService;->getUserGuideIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -320,12 +320,12 @@
 
     const-string p2, "can not found user guide service"
 
-    .line 155
+    .line 154
     invoke-static {p1, p2}, Lcom/market/sdk/utils/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
-    .line 158
+    .line 157
     :cond_0
     invoke-static {}, Lcom/market/sdk/homeguide/AppstoreUserGuideService;->openService()Lcom/market/sdk/homeguide/AppstoreUserGuideService;
 
@@ -361,7 +361,7 @@
 .method public needShowUserGuide()Z
     .locals 5
 
-    .line 55
+    .line 54
     invoke-static {}, Lcom/market/sdk/utils/Build;->isInternational()Z
 
     move-result v0
@@ -375,7 +375,7 @@
     :cond_0
     const-string v0, "need_show_user_guide"
 
-    .line 58
+    .line 57
     new-array v2, v1, [Lcom/market/sdk/utils/PrefUtils$PrefFile;
 
     const/4 v3, 0x1
@@ -388,7 +388,7 @@
 
     return v1
 
-    .line 61
+    .line 60
     :cond_1
     invoke-static {}, Lcom/market/sdk/utils/ResourceUtils;->isBigFontMode()Z
 
@@ -400,12 +400,12 @@
 
     const-string v2, "do not show appstore guide in big font mode"
 
-    .line 62
+    .line 61
     invoke-static {v0, v2}, Lcom/market/sdk/utils/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return v1
 
-    .line 67
+    .line 66
     :cond_2
     invoke-static {}, Lcom/market/sdk/utils/AppGlobal;->getContext()Landroid/content/Context;
 
@@ -430,7 +430,7 @@
 
     return v1
 
-    .line 75
+    .line 74
     :cond_4
     sget-object v0, Lcom/market/sdk/homeguide/AppstoreUserGuide;->sHomeUserGuideEnableRegions:Ljava/util/Set;
 
@@ -446,7 +446,7 @@
 
     const-string v0, "AppstoreUserGuide"
 
-    .line 76
+    .line 75
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -477,7 +477,7 @@
 
     return v1
 
-    .line 80
+    .line 79
     :cond_5
     sget-object v0, Lcom/market/sdk/homeguide/AppstoreUserGuide;->sHomeUserGuideEnableLanguages:Ljava/util/Set;
 
@@ -497,7 +497,7 @@
 
     const-string v0, "AppstoreUserGuide"
 
-    .line 81
+    .line 80
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -532,7 +532,7 @@
 
     return v1
 
-    .line 86
+    .line 85
     :cond_6
     invoke-static {}, Lcom/market/sdk/homeguide/AppstoreUserGuideService;->getUserGuideIntent()Landroid/content/Intent;
 
@@ -544,7 +544,7 @@
 
     const-string v2, "no service found to show appstore guide"
 
-    .line 87
+    .line 86
     invoke-static {v0, v2}, Lcom/market/sdk/utils/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return v1
@@ -556,7 +556,7 @@
 .method public tryShowUserGuide(Landroid/graphics/Bitmap;Lcom/market/sdk/homeguide/HomeUserGuideData;Lcom/market/sdk/homeguide/Interceptor;)V
     .locals 2
 
-    .line 102
+    .line 101
     invoke-direct {p0}, Lcom/market/sdk/homeguide/AppstoreUserGuide;->captureWallpaper()Landroid/graphics/Bitmap;
 
     move-result-object v0
@@ -567,27 +567,27 @@
 
     const-string p2, "capture wallpaper failed!"
 
-    .line 104
+    .line 103
     invoke-static {p1, p2}, Lcom/market/sdk/utils/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
-    .line 107
+    .line 106
     :cond_0
     invoke-virtual {p2}, Lcom/market/sdk/homeguide/HomeUserGuideData;->getLocalFilePath()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 109
+    .line 108
     invoke-direct {p0, v0, p1}, Lcom/market/sdk/homeguide/AppstoreUserGuide;->createBackgroundBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
     const/4 v0, 0x0
 
-    .line 111
+    .line 110
     :try_start_0
-    invoke-static {p1, v1, v0}, Lmiui/graphics/BitmapFactory;->saveToFile(Landroid/graphics/Bitmap;Ljava/lang/String;Z)Z
+    invoke-static {p1, v1, v0}, Lcom/market/sdk/utils/BitmapFactory;->saveToFile(Landroid/graphics/Bitmap;Ljava/lang/String;Z)Z
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -598,14 +598,14 @@
 
     const-string v0, "AppstoreUserGuide"
 
-    .line 113
+    .line 112
     invoke-virtual {p1}, Ljava/io/IOException;->toString()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-static {v0, v1, p1}, Lcom/market/sdk/utils/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 115
+    .line 114
     :goto_0
     invoke-direct {p0, p2, p3}, Lcom/market/sdk/homeguide/AppstoreUserGuide;->show(Lcom/market/sdk/homeguide/HomeUserGuideData;Lcom/market/sdk/homeguide/Interceptor;)V
 

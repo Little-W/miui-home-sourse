@@ -49,6 +49,13 @@
         <item>ಡೀಫಾಲ್ಟ್</item>
         <item>ಕ್ಲಾಸಿಕ್‌</item>
     </string-array>
+    <string-array name="monochrome_color_entries">
+        <item>ಡೀಫಾಲ್ಟ್‌</item>
+        <item>ನೀಲಿ</item>
+        <item>ಹಸಿರು</item>
+        <item>ಕೆನ್ನೇರಳೆ</item>
+        <item>ಕಂದು</item>
+    </string-array>
     <string-array name="transformation_entries">
         <item>ಸ್ಲೈಡ್</item>
         <item>ಕ್ರಾಸ್‌ಫೇಡ್</item>

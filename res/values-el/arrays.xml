@@ -104,6 +104,13 @@
         <item>Προεπιλογή</item>
         <item>Κλασσικό</item>
     </string-array>
+    <string-array name="monochrome_color_entries">
+        <item>Προεπιλογή</item>
+        <item>Μπλε</item>
+        <item>Πράσινο</item>
+        <item>Μωβ</item>
+        <item>Καφέ</item>
+    </string-array>
     <string-array name="transformation_entries">
         <item>Ολίσθηση</item>
         <item>Σταδιακό σβήσιμο</item>

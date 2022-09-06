@@ -1,4 +1,4 @@
-.class final Lmiuix/appcompat/internal/app/widget/ActionBarContextView$SavedState$1;
+.class Lmiuix/appcompat/internal/app/widget/ActionBarContextView$SavedState$1;
 .super Ljava/lang/Object;
 .source "ActionBarContextView.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 

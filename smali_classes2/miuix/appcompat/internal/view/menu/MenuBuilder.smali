@@ -1,9 +1,6 @@
 .class public Lmiuix/appcompat/internal/view/menu/MenuBuilder;
-.super Ljava/lang/Object;
+.super Lcom/android/internal/view/menu/MenuBuilder;
 .source "MenuBuilder.java"
-
-# interfaces
-.implements Landroid/view/Menu;
 
 
 # annotations
@@ -148,7 +145,7 @@
     .locals 1
 
     .line 210
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/android/internal/view/menu/MenuBuilder;-><init>()V
 
     const/4 v0, 0x0
 
@@ -780,6 +777,7 @@
     .line 492
     new-instance v3, Landroid/content/Intent;
 
+    .line 493
     iget v4, p7, Landroid/content/pm/ResolveInfo;->specificIndex:I
 
     if-gez v4, :cond_2
@@ -1050,12 +1048,12 @@
     const/4 v0, 0x1
 
     .line 986
-    invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/view/menu/MenuBuilder;->close(Z)V
+    invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/view/menu/MenuBuilder;->closeInternal(Z)V
 
     return-void
 .end method
 
-.method final close(Z)V
+.method final closeInternal(Z)V
     .locals 3
 
     .line 968
@@ -2313,7 +2311,7 @@
     if-eqz v1, :cond_7
 
     .line 933
-    invoke-virtual {p0, v3}, Lmiuix/appcompat/internal/view/menu/MenuBuilder;->close(Z)V
+    invoke-virtual {p0, v3}, Lmiuix/appcompat/internal/view/menu/MenuBuilder;->closeInternal(Z)V
 
     goto :goto_2
 
@@ -2335,14 +2333,14 @@
     if-nez p1, :cond_7
 
     .line 952
-    invoke-virtual {p0, v3}, Lmiuix/appcompat/internal/view/menu/MenuBuilder;->close(Z)V
+    invoke-virtual {p0, v3}, Lmiuix/appcompat/internal/view/menu/MenuBuilder;->closeInternal(Z)V
 
     goto :goto_2
 
     .line 936
     :cond_4
     :goto_1
-    invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/view/menu/MenuBuilder;->close(Z)V
+    invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/view/menu/MenuBuilder;->closeInternal(Z)V
 
     .line 938
     invoke-virtual {p1}, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->hasSubMenu()Z
@@ -2386,7 +2384,7 @@
     if-nez v1, :cond_7
 
     .line 948
-    invoke-virtual {p0, v3}, Lmiuix/appcompat/internal/view/menu/MenuBuilder;->close(Z)V
+    invoke-virtual {p0, v3}, Lmiuix/appcompat/internal/view/menu/MenuBuilder;->closeInternal(Z)V
 
     :cond_7
     :goto_2
@@ -2425,7 +2423,7 @@
     const/4 p2, 0x1
 
     .line 818
-    invoke-virtual {p0, p2}, Lmiuix/appcompat/internal/view/menu/MenuBuilder;->close(Z)V
+    invoke-virtual {p0, p2}, Lmiuix/appcompat/internal/view/menu/MenuBuilder;->closeInternal(Z)V
 
     :cond_1
     return p1
@@ -2558,15 +2556,6 @@
 
     .line 411
     iput-object p1, p0, Lmiuix/appcompat/internal/view/menu/MenuBuilder;->mCallback:Lmiuix/appcompat/internal/view/menu/MenuBuilder$Callback;
-
-    return-void
-.end method
-
-.method public setCurrentMenuInfo(Landroid/view/ContextMenu$ContextMenuInfo;)V
-    .locals 0
-
-    .line 1271
-    iput-object p1, p0, Lmiuix/appcompat/internal/view/menu/MenuBuilder;->mCurrentMenuInfo:Landroid/view/ContextMenu$ContextMenuInfo;
 
     return-void
 .end method

@@ -374,7 +374,7 @@
 
     const/4 v4, 0x1
 
-    const v5, 0x7f0600ac
+    const v5, 0x7f0600ae
 
     if-ne v1, v4, :cond_2
 
@@ -393,7 +393,7 @@
 
     move-result-object v4
 
-    const v6, 0x7f1003fa
+    const v6, 0x7f11045c
 
     invoke-virtual {v4, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -435,7 +435,7 @@
 
     move-result v1
 
-    const v2, 0x7f0801ee
+    const v2, 0x7f0802cc
 
     if-ne v1, v3, :cond_4
 
@@ -454,7 +454,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f100325
+    const v5, 0x7f110382
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -473,7 +473,7 @@
 
     check-cast v4, Landroid/content/Context;
 
-    const v5, 0x7f0603e9
+    const v5, 0x7f0605e8
 
     invoke-static {v4, v5}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
@@ -499,7 +499,7 @@
 
     check-cast v3, Landroid/content/Context;
 
-    const v4, 0x7f0600ae
+    const v4, 0x7f0600b0
 
     invoke-static {v3, v4}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
@@ -544,7 +544,7 @@
 
     move-result-object v4
 
-    const v6, 0x7f10024a
+    const v6, 0x7f11025a
 
     invoke-virtual {v4, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -587,7 +587,7 @@
 
     check-cast v3, Landroid/content/Context;
 
-    const v4, 0x7f0600ad
+    const v4, 0x7f0600af
 
     invoke-static {v3, v4}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 

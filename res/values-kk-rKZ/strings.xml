@@ -293,6 +293,7 @@
     <string name="eras_bc">Б.З.Б</string>
     <string name="evening">Түстен кейін</string>
     <string name="exit_overview_because_task_stack_changed">Фондық өзгерістерге байланысты, Жуырдағылар жабылды</string>
+    <string name="external_not_support_split_screen_j18">Экранды бөлу режимін сыртқы экран қолдамайды</string>
     <string name="failed_to_delete_temporary">Жою мүмкін болмады</string>
     <string name="failed_to_drop">Орын ауыстыру мүмкін болмады</string>
     <string name="failed_to_drop_widget_invalid">Осы виджет жарамсыз</string>
@@ -398,7 +399,7 @@
     <string name="gadget_weather_download_start">Жүктеу</string>
     <string name="gadget_weather_download_title">Жүктеу</string>
     <string name="gadget_weather_downloading">Қолданба мазмұның жүктеуде. Жүктеу аяқталғаннан кейін қолданбаны өшіріп қосыңыз.</string>
-    <string name="gadget_weather_loading">Ауа райы туралы деректер жоқ</string>
+    <string name="gadget_weather_loading">Деректер жоқ</string>
     <string name="gadget_weather_low_temp">Мин.</string>
     <string name="gadget_weather_theme_type">Виджет түрі</string>
     <string name="gadget_weather_time_format">d MMMM, EEEE</string>
@@ -497,6 +498,7 @@
     <string name="midnight">Түн</string>
     <string name="minus_one_screen">Қолданба сандығы</string>
     <string name="miui_screen_config_title">Бастапқы экраның баптаулары</string>
+    <string name="miui_widget_menu_replace_text">Ауыстыру</string>
     <string name="miuix_access_state_desc">Таңдалған</string>
     <string name="miuix_appcompat_action_mode_deselect_all">Таңдауды алып тастау</string>
     <string name="miuix_appcompat_action_mode_select_all">Барлығын таңдау</string>
@@ -523,6 +525,8 @@
     <string name="monday">Дүйсенбі</string>
     <string name="monday_short">Дс</string>
     <string name="monday_shortest">Дс</string>
+    <string name="monochrome_summary">Change background color for compatible icons</string>
+    <string name="monochrome_title">Background color</string>
     <string name="month_april">Сәуір</string>
     <string name="month_april_short">Сәу</string>
     <string name="month_april_shortest">Сәу</string>

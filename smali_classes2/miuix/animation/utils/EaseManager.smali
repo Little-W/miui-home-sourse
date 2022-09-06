@@ -414,9 +414,9 @@
 
     if-le v0, v2, :cond_0
 
+    .line 236
     array-length v0, p1
 
-    .line 236
     invoke-static {p1, v2, v0}, Ljava/util/Arrays;->copyOfRange([FII)[F
 
     move-result-object v0

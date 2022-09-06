@@ -60,7 +60,7 @@
 .method static constructor <clinit>()V
     .locals 16
 
-    .line 1674
+    .line 1679
     new-instance v0, Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
     const-string v1, "INVALID"
@@ -71,7 +71,7 @@
 
     sput-object v0, Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;->INVALID:Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
-    .line 1675
+    .line 1680
     new-instance v0, Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
     const-string v1, "BEGIN_FILL"
@@ -82,7 +82,7 @@
 
     sput-object v0, Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;->BEGIN_FILL:Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
-    .line 1676
+    .line 1681
     new-instance v0, Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
     const-string v1, "BEGIN_GRADIENT_FILL"
@@ -93,7 +93,7 @@
 
     sput-object v0, Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;->BEGIN_GRADIENT_FILL:Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
-    .line 1677
+    .line 1682
     new-instance v0, Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
     const-string v1, "CREATE_GRADIENT_BOX"
@@ -104,7 +104,7 @@
 
     sput-object v0, Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;->CREATE_GRADIENT_BOX:Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
-    .line 1678
+    .line 1683
     new-instance v0, Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
     const-string v1, "CURVE_TO"
@@ -115,7 +115,7 @@
 
     sput-object v0, Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;->CURVE_TO:Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
-    .line 1679
+    .line 1684
     new-instance v0, Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
     const-string v1, "CUBIC_CURVE_TO"
@@ -126,7 +126,7 @@
 
     sput-object v0, Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;->CUBIC_CURVE_TO:Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
-    .line 1680
+    .line 1685
     new-instance v0, Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
     const-string v1, "DRAW_CIRCLE"
@@ -137,7 +137,7 @@
 
     sput-object v0, Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;->DRAW_CIRCLE:Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
-    .line 1681
+    .line 1686
     new-instance v0, Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
     const-string v1, "DRAW_ELLIPSE"
@@ -148,7 +148,7 @@
 
     sput-object v0, Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;->DRAW_ELLIPSE:Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
-    .line 1682
+    .line 1687
     new-instance v0, Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
     const-string v1, "DRAW_RECT"
@@ -159,7 +159,7 @@
 
     sput-object v0, Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;->DRAW_RECT:Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
-    .line 1683
+    .line 1688
     new-instance v0, Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
     const-string v1, "DRAW_ROUND_RECT"
@@ -170,7 +170,7 @@
 
     sput-object v0, Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;->DRAW_ROUND_RECT:Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
-    .line 1684
+    .line 1689
     new-instance v0, Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
     const-string v1, "LINE_GRADIENT_STYLE"
@@ -181,7 +181,7 @@
 
     sput-object v0, Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;->LINE_GRADIENT_STYLE:Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
-    .line 1685
+    .line 1690
     new-instance v0, Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
     const-string v1, "LINE_STYLE"
@@ -192,7 +192,7 @@
 
     sput-object v0, Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;->LINE_STYLE:Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
-    .line 1686
+    .line 1691
     new-instance v0, Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
     const-string v1, "LINE_TO"
@@ -203,7 +203,7 @@
 
     sput-object v0, Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;->LINE_TO:Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
-    .line 1687
+    .line 1692
     new-instance v0, Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
     const-string v1, "MOVE_TO"
@@ -214,7 +214,7 @@
 
     sput-object v0, Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;->MOVE_TO:Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
-    .line 1688
+    .line 1693
     new-instance v0, Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
     const-string v1, "SET_RENDER_LISTENER"
@@ -227,7 +227,7 @@
 
     const/16 v0, 0xf
 
-    .line 1673
+    .line 1678
     new-array v0, v0, [Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
     sget-object v1, Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;->INVALID:Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
@@ -305,7 +305,7 @@
         }
     .end annotation
 
-    .line 1673
+    .line 1678
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -314,7 +314,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
     .locals 1
 
-    .line 1673
+    .line 1678
     const-class v0, Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -329,7 +329,7 @@
 .method public static values()[Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
     .locals 1
 
-    .line 1673
+    .line 1678
     sget-object v0, Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;->$VALUES:[Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
     invoke-virtual {v0}, [Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;->clone()Ljava/lang/Object;

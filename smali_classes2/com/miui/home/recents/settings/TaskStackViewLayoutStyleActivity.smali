@@ -28,15 +28,6 @@
     return-void
 .end method
 
-.method public onBackPressed()V
-    .locals 0
-
-    .line 33
-    invoke-virtual {p0}, Lcom/miui/home/recents/settings/TaskStackViewLayoutStyleActivity;->finish()V
-
-    return-void
-.end method
-
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 2
 
@@ -63,12 +54,7 @@
     .line 26
     invoke-virtual {p1, v1, v0}, Landroidx/fragment/app/FragmentTransaction;->replace(ILandroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentTransaction;
 
-    const/4 v0, 0x0
-
     .line 27
-    invoke-virtual {p1, v0}, Landroidx/fragment/app/FragmentTransaction;->addToBackStack(Ljava/lang/String;)Landroidx/fragment/app/FragmentTransaction;
-
-    .line 28
     invoke-virtual {p1}, Landroidx/fragment/app/FragmentTransaction;->commit()I
 
     return-void

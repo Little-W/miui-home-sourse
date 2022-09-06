@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/Launcher;->restoreWidget(Lcom/miui/home/launcher/LauncherAppWidgetInfo;Ljava/util/List;)V
+    value = Lcom/miui/home/launcher/Launcher;->restoreWidget(Lcom/miui/home/launcher/LauncherAppWidgetInfo;Landroid/appwidget/AppWidgetProviderInfo;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Landroid/view/View;)V
     .locals 0
 
-    .line 6812
+    .line 6872
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$60;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iput-object p2, p0, Lcom/miui/home/launcher/Launcher$60;->val$hostView:Landroid/view/View;
@@ -39,7 +39,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;Z)V
     .locals 0
 
-    .line 6815
+    .line 6875
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$60;->val$hostView:Landroid/view/View;
 
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
@@ -50,7 +50,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 6817
+    .line 6877
     iget-object p2, p0, Lcom/miui/home/launcher/Launcher$60;->val$hostView:Landroid/view/View;
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V

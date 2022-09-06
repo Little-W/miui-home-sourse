@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/ShortcutIcon;)V
     .locals 0
 
-    .line 348
+    .line 356
     iput-object p1, p0, Lcom/miui/home/launcher/ShortcutIcon$6;->this$0:Lcom/miui/home/launcher/ShortcutIcon;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,27 +38,16 @@
 .method public onCheckedChanged(Landroid/widget/CompoundButton;Z)V
     .locals 2
 
-    .line 351
+    .line 359
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon$6;->this$0:Lcom/miui/home/launcher/ShortcutIcon;
 
     invoke-static {v0}, Lcom/miui/home/launcher/ShortcutIcon;->access$200(Lcom/miui/home/launcher/ShortcutIcon;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
-    .line 352
-    iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon$6;->this$0:Lcom/miui/home/launcher/ShortcutIcon;
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/ShortcutIcon;->getTag()Ljava/lang/Object;
-
-    move-result-object v0
-
-    instance-of v0, v0, Lcom/miui/home/launcher/AppInfo;
-
-    if-nez v0, :cond_0
-
-    .line 353
+    .line 360
     invoke-static {}, Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;->getMonitor()Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;
 
     move-result-object v0
@@ -73,19 +62,18 @@
 
     invoke-virtual {v0, p2, v1}, Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;->onShortCutIconChecked(ZLcom/miui/home/launcher/ShortcutInfo;)V
 
-    .line 355
-    :cond_0
+    .line 361
     iget-object p2, p0, Lcom/miui/home/launcher/ShortcutIcon$6;->this$0:Lcom/miui/home/launcher/ShortcutIcon;
 
     invoke-static {p2}, Lcom/miui/home/launcher/ShortcutIcon;->access$300(Lcom/miui/home/launcher/ShortcutIcon;)V
 
-    .line 356
+    .line 362
     invoke-static {}, Lcom/miui/home/launcher/common/HapticFeedbackCompat;->getInstance()Lcom/miui/home/launcher/common/HapticFeedbackCompat;
 
     move-result-object p2
 
     invoke-virtual {p2, p1}, Lcom/miui/home/launcher/common/HapticFeedbackCompat;->performMeshNormal(Landroid/view/View;)V
 
-    :cond_1
+    :cond_0
     return-void
 .end method

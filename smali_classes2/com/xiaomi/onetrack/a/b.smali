@@ -1,4 +1,4 @@
-.class final Lcom/xiaomi/onetrack/a/b;
+.class Lcom/xiaomi/onetrack/a/b;
 .super Ljava/lang/Object;
 
 # interfaces
@@ -6,15 +6,19 @@
 
 
 # instance fields
-.field final synthetic a:Ljava/lang/String;
+.field final synthetic a:Lcom/xiaomi/onetrack/f/b;
+
+.field final synthetic b:Lcom/xiaomi/onetrack/a/a;
 
 
 # direct methods
-.method constructor <init>(Ljava/lang/String;)V
+.method constructor <init>(Lcom/xiaomi/onetrack/a/a;Lcom/xiaomi/onetrack/f/b;)V
     .locals 0
 
-    .line 62
-    iput-object p1, p0, Lcom/xiaomi/onetrack/a/b;->a:Ljava/lang/String;
+    .line 68
+    iput-object p1, p0, Lcom/xiaomi/onetrack/a/b;->b:Lcom/xiaomi/onetrack/a/a;
+
+    iput-object p2, p0, Lcom/xiaomi/onetrack/a/b;->a:Lcom/xiaomi/onetrack/f/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -24,12 +28,63 @@
 
 # virtual methods
 .method public run()V
-    .locals 1
+    .locals 3
 
-    .line 65
-    iget-object v0, p0, Lcom/xiaomi/onetrack/a/b;->a:Ljava/lang/String;
+    .line 71
+    iget-object v0, p0, Lcom/xiaomi/onetrack/a/b;->a:Lcom/xiaomi/onetrack/f/b;
 
-    invoke-static {v0}, Lcom/xiaomi/onetrack/a/a;->b(Ljava/lang/String;)V
+    instance-of v1, v0, Lcom/xiaomi/onetrack/a/b/b;
+
+    if-eqz v1, :cond_0
+
+    .line 72
+    check-cast v0, Lcom/xiaomi/onetrack/a/b/b;
+
+    invoke-virtual {v0}, Lcom/xiaomi/onetrack/a/b/b;->a()Ljava/util/List;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 73
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    if-lez v1, :cond_0
+
+    .line 74
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/xiaomi/onetrack/a/b/a;
+
+    .line 75
+    iget-object v2, p0, Lcom/xiaomi/onetrack/a/b;->b:Lcom/xiaomi/onetrack/a/a;
+
+    invoke-static {v2, v1}, Lcom/xiaomi/onetrack/a/a;->a(Lcom/xiaomi/onetrack/a/a;Lcom/xiaomi/onetrack/a/b/a;)J
+
+    goto :goto_0
+
+    .line 79
+    :cond_0
+    invoke-static {}, Lcom/xiaomi/onetrack/a/c/b;->a()Lcom/xiaomi/onetrack/a/c/b;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/xiaomi/onetrack/a/c/b;->b()V
 
     return-void
 .end method

@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/ShortcutIcon;)V
     .locals 0
 
-    .line 891
+    .line 900
     iput-object p1, p0, Lcom/miui/home/launcher/ShortcutIcon$11;->this$0:Lcom/miui/home/launcher/ShortcutIcon;
 
     invoke-direct {p0}, Lcom/miui/home/library/mirror/MirrorDragListener;-><init>()V
@@ -35,7 +35,7 @@
 .method public onDragEnd(Landroid/view/View;Landroid/view/DragEvent;)V
     .locals 0
 
-    .line 915
+    .line 924
     iget-object p1, p0, Lcom/miui/home/launcher/ShortcutIcon$11;->this$0:Lcom/miui/home/launcher/ShortcutIcon;
 
     invoke-static {p1}, Lcom/miui/home/launcher/ShortcutIcon;->access$500(Lcom/miui/home/launcher/ShortcutIcon;)Ljava/lang/Runnable;
@@ -50,7 +50,7 @@
 .method public onDragEnter(Landroid/view/View;Landroid/view/DragEvent;)V
     .locals 2
 
-    .line 900
+    .line 909
     iget-object p1, p0, Lcom/miui/home/launcher/ShortcutIcon$11;->this$0:Lcom/miui/home/launcher/ShortcutIcon;
 
     invoke-static {p1}, Lcom/miui/home/launcher/ShortcutIcon;->access$500(Lcom/miui/home/launcher/ShortcutIcon;)Ljava/lang/Runnable;
@@ -67,7 +67,7 @@
 .method public onDragExit(Landroid/view/View;Landroid/view/DragEvent;)V
     .locals 0
 
-    .line 910
+    .line 919
     iget-object p1, p0, Lcom/miui/home/launcher/ShortcutIcon$11;->this$0:Lcom/miui/home/launcher/ShortcutIcon;
 
     invoke-static {p1}, Lcom/miui/home/launcher/ShortcutIcon;->access$500(Lcom/miui/home/launcher/ShortcutIcon;)Ljava/lang/Runnable;
@@ -88,7 +88,7 @@
 .method public onDragStart(Landroid/view/View;Landroid/view/DragEvent;)V
     .locals 0
 
-    .line 895
+    .line 904
     iget-object p1, p0, Lcom/miui/home/launcher/ShortcutIcon$11;->this$0:Lcom/miui/home/launcher/ShortcutIcon;
 
     invoke-static {p1}, Lcom/miui/home/launcher/ShortcutIcon;->access$500(Lcom/miui/home/launcher/ShortcutIcon;)Ljava/lang/Runnable;
@@ -103,7 +103,7 @@
 .method public onDrop(Landroid/view/View;Landroid/view/DragEvent;)V
     .locals 0
 
-    .line 920
+    .line 929
     iget-object p1, p0, Lcom/miui/home/launcher/ShortcutIcon$11;->this$0:Lcom/miui/home/launcher/ShortcutIcon;
 
     invoke-static {p1}, Lcom/miui/home/launcher/ShortcutIcon;->access$500(Lcom/miui/home/launcher/ShortcutIcon;)Ljava/lang/Runnable;

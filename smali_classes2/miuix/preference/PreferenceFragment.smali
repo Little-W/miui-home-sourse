@@ -105,7 +105,7 @@
 .method private isTabletOrFold()Z
     .locals 1
 
-    .line 216
+    .line 219
     invoke-virtual {p0}, Lmiuix/preference/PreferenceFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
@@ -360,6 +360,32 @@
 
     .line 212
     :cond_3
+    invoke-virtual {p0}, Lmiuix/preference/PreferenceFragment;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    iget v0, p0, Lmiuix/preference/PreferenceFragment;->mExtraPaddingLevel:I
+
+    invoke-static {p1, v0}, Lmiuix/preference/utils/PreferenceLayoutUtils;->getExtraPaddingByLevel(Landroid/content/Context;I)I
+
+    move-result p1
+
+    iput p1, p0, Lmiuix/preference/PreferenceFragment;->mExtraPaddingHorizontal:I
+
+    .line 213
+    iget-object p1, p0, Lmiuix/preference/PreferenceFragment;->mGroupAdapter:Lmiuix/preference/PreferenceGroupAdapter;
+
+    iget v0, p0, Lmiuix/preference/PreferenceFragment;->mExtraPaddingLevel:I
+
+    iget v1, p0, Lmiuix/preference/PreferenceFragment;->mExtraPaddingHorizontal:I
+
+    iget-boolean v2, p0, Lmiuix/preference/PreferenceFragment;->mExtraPaddingEnable:Z
+
+    const/4 v3, 0x1
+
+    invoke-virtual {p1, v0, v1, v2, v3}, Lmiuix/preference/PreferenceGroupAdapter;->setExtraHorizontalPaddingLevel(IIZZ)V
+
+    .line 215
     invoke-virtual {p0}, Lmiuix/preference/PreferenceFragment;->getListView()Landroidx/recyclerview/widget/RecyclerView;
 
     move-result-object p1
@@ -624,7 +650,7 @@
 .method public onDisplayPreferenceDialog(Landroidx/preference/Preference;)V
     .locals 3
 
-    .line 222
+    .line 225
     invoke-virtual {p0}, Lmiuix/preference/PreferenceFragment;->getCallbackFragment()Landroidx/fragment/app/Fragment;
 
     move-result-object v0
@@ -635,14 +661,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 223
+    .line 226
     invoke-virtual {p0}, Lmiuix/preference/PreferenceFragment;->getCallbackFragment()Landroidx/fragment/app/Fragment;
 
     move-result-object v0
 
     check-cast v0, Landroidx/preference/PreferenceFragmentCompat$OnPreferenceDisplayDialogCallback;
 
-    .line 224
+    .line 227
     invoke-interface {v0, p0, p1}, Landroidx/preference/PreferenceFragmentCompat$OnPreferenceDisplayDialogCallback;->onPreferenceDisplayDialog(Landroidx/preference/PreferenceFragmentCompat;Landroidx/preference/Preference;)Z
 
     move-result v0
@@ -655,7 +681,7 @@
     :goto_0
     if-nez v0, :cond_1
 
-    .line 226
+    .line 229
     invoke-virtual {p0}, Lmiuix/preference/PreferenceFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v2
@@ -664,14 +690,14 @@
 
     if-eqz v2, :cond_1
 
-    .line 227
+    .line 230
     invoke-virtual {p0}, Lmiuix/preference/PreferenceFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
 
     check-cast v0, Landroidx/preference/PreferenceFragmentCompat$OnPreferenceDisplayDialogCallback;
 
-    .line 228
+    .line 231
     invoke-interface {v0, p0, p1}, Landroidx/preference/PreferenceFragmentCompat$OnPreferenceDisplayDialogCallback;->onPreferenceDisplayDialog(Landroidx/preference/PreferenceFragmentCompat;Landroidx/preference/Preference;)Z
 
     move-result v0
@@ -681,7 +707,7 @@
 
     return-void
 
-    .line 236
+    .line 239
     :cond_2
     invoke-virtual {p0}, Lmiuix/preference/PreferenceFragment;->getFragmentManager()Landroidx/fragment/app/FragmentManager;
 
@@ -697,13 +723,13 @@
 
     return-void
 
-    .line 241
+    .line 244
     :cond_3
     instance-of v0, p1, Landroidx/preference/EditTextPreference;
 
     if-eqz v0, :cond_4
 
-    .line 242
+    .line 245
     invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
 
     move-result-object p1
@@ -714,13 +740,13 @@
 
     goto :goto_1
 
-    .line 243
+    .line 246
     :cond_4
     instance-of v0, p1, Landroidx/preference/ListPreference;
 
     if-eqz v0, :cond_5
 
-    .line 244
+    .line 247
     invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
 
     move-result-object p1
@@ -731,13 +757,13 @@
 
     goto :goto_1
 
-    .line 245
+    .line 248
     :cond_5
     instance-of v0, p1, Landroidx/preference/MultiSelectListPreference;
 
     if-eqz v0, :cond_6
 
-    .line 246
+    .line 249
     invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
 
     move-result-object p1
@@ -746,11 +772,11 @@
 
     move-result-object p1
 
-    .line 254
+    .line 257
     :goto_1
     invoke-virtual {p1, p0, v1}, Landroidx/fragment/app/DialogFragment;->setTargetFragment(Landroidx/fragment/app/Fragment;I)V
 
-    .line 255
+    .line 258
     invoke-virtual {p0}, Lmiuix/preference/PreferenceFragment;->getFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object v0
@@ -761,7 +787,7 @@
 
     return-void
 
-    .line 248
+    .line 251
     :cond_6
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -773,7 +799,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 250
+    .line 253
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p1
@@ -800,24 +826,24 @@
 .method public onPreferenceTreeClick(Landroidx/preference/Preference;)Z
     .locals 3
 
-    .line 264
+    .line 267
     iget-boolean v0, p0, Lmiuix/preference/PreferenceFragment;->mItemSelectable:Z
 
     if-eqz v0, :cond_1
 
-    .line 265
+    .line 268
     invoke-virtual {p1}, Landroidx/preference/Preference;->getOrder()I
 
     move-result v0
 
-    .line 266
+    .line 269
     iget v1, p0, Lmiuix/preference/PreferenceFragment;->mCurSelectedItem:I
 
     if-eq v0, v1, :cond_1
 
     if-ltz v1, :cond_0
 
-    .line 268
+    .line 271
     invoke-virtual {p0}, Lmiuix/preference/PreferenceFragment;->getListView()Landroidx/recyclerview/widget/RecyclerView;
 
     move-result-object v1
@@ -832,10 +858,10 @@
 
     const/4 v2, 0x0
 
-    .line 270
+    .line 273
     invoke-virtual {v1, v2}, Landroid/view/View;->setSelected(Z)V
 
-    .line 273
+    .line 276
     :cond_0
     invoke-virtual {p0}, Lmiuix/preference/PreferenceFragment;->getListView()Landroidx/recyclerview/widget/RecyclerView;
 
@@ -849,13 +875,13 @@
 
     const/4 v2, 0x1
 
-    .line 275
+    .line 278
     invoke-virtual {v1, v2}, Landroid/view/View;->setSelected(Z)V
 
-    .line 276
+    .line 279
     iput v0, p0, Lmiuix/preference/PreferenceFragment;->mCurSelectedItem:I
 
-    .line 280
+    .line 283
     :cond_1
     invoke-super {p0, p1}, Landroidx/preference/PreferenceFragmentCompat;->onPreferenceTreeClick(Landroidx/preference/Preference;)Z
 

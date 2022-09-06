@@ -49,7 +49,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 7
+    .line 6
     check-cast p1, Lcom/miui/home/launcher/ShortcutInfo;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/NewInstallAnimHelper$checkExposeAndDoNewInstallAnim$3;->invoke(Lcom/miui/home/launcher/ShortcutInfo;)Z
@@ -70,7 +70,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 70
+    .line 73
     iget-object v0, p0, Lcom/miui/home/launcher/NewInstallAnimHelper$checkExposeAndDoNewInstallAnim$3;->this$0:Lcom/miui/home/launcher/NewInstallAnimHelper;
 
     invoke-static {v0}, Lcom/miui/home/launcher/NewInstallAnimHelper;->access$getMBuffer$p(Lcom/miui/home/launcher/NewInstallAnimHelper;)Ljava/util/ArrayList;

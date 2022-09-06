@@ -94,7 +94,7 @@
 
     if-eqz v0, :cond_0
 
-    const-string v0, "value"
+    const-string/jumbo v0, "value"
 
     .line 2
     check-cast p1, Ljava/lang/Double;
@@ -113,7 +113,7 @@
 
     if-eqz v0, :cond_1
 
-    const-string v0, "value"
+    const-string/jumbo v0, "value"
 
     .line 4
     check-cast p1, Ljava/lang/Long;
@@ -127,7 +127,7 @@
     return-void
 
     :cond_1
-    const-string v0, "value"
+    const-string/jumbo v0, "value"
 
     .line 5
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;

@@ -1149,7 +1149,7 @@
     goto :goto_3
 
     :cond_7
-    const-string p1, "}"
+    const-string/jumbo p1, "}"
 
     .line 119
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -1181,7 +1181,7 @@
 
     invoke-static {p0, p2, v1, v3}, Lcom/google/android/gms/internal/measurement/zzjk;->zza(Ljava/lang/StringBuilder;ILjava/lang/String;Ljava/lang/Object;)V
 
-    const-string v1, "value"
+    const-string/jumbo v1, "value"
 
     .line 124
     invoke-interface {p3}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
@@ -1206,7 +1206,7 @@
     goto :goto_4
 
     :cond_9
-    const-string p1, "}"
+    const-string/jumbo p1, "}"
 
     .line 129
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;

@@ -55,10 +55,10 @@
 
     goto :goto_0
 
+    .line 124
     :cond_0
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$1;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
 
-    .line 124
     invoke-static {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->access$100(Lmiuix/appcompat/internal/app/widget/ActionBarContextView;)Lmiuix/appcompat/internal/view/menu/action/ActionMenuItem;
 
     move-result-object v0

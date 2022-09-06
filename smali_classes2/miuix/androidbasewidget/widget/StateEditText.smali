@@ -47,7 +47,7 @@
 
     const/4 v0, 0x2
 
-    .line 23
+    .line 24
     new-array v0, v0, [Ljava/lang/Class;
 
     const-class v1, Landroid/content/Context;
@@ -70,14 +70,14 @@
 .method private createLabelLayout()V
     .locals 9
 
-    .line 286
+    .line 287
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x17
 
     if-lt v0, v1, :cond_0
 
-    .line 287
+    .line 288
     iget-object v0, p0, Lmiuix/androidbasewidget/widget/StateEditText;->mLabel:Ljava/lang/String;
 
     const/4 v1, 0x0
@@ -96,7 +96,7 @@
 
     move-result-object v0
 
-    .line 288
+    .line 289
     invoke-virtual {v0}, Landroid/text/StaticLayout$Builder;->build()Landroid/text/StaticLayout;
 
     move-result-object v0
@@ -105,7 +105,7 @@
 
     goto :goto_0
 
-    .line 290
+    .line 291
     :cond_0
     new-instance v0, Landroid/text/StaticLayout;
 
@@ -138,12 +138,12 @@
 .method private dispatchEndDrawableTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 1
 
-    .line 171
+    .line 172
     iget-object v0, p0, Lmiuix/androidbasewidget/widget/StateEditText;->mWidgetManager:Lmiuix/androidbasewidget/widget/StateEditText$WidgetManager;
 
     if-eqz v0, :cond_0
 
-    .line 172
+    .line 173
     invoke-direct {p0, p1}, Lmiuix/androidbasewidget/widget/StateEditText;->isWidgetResumedEvent(Landroid/view/MotionEvent;)Z
 
     move-result p1
@@ -159,39 +159,39 @@
 .method private drawExtraWidget(Landroid/graphics/Canvas;)V
     .locals 13
 
-    .line 256
+    .line 257
     iget-object v0, p0, Lmiuix/androidbasewidget/widget/StateEditText;->mExtraDrawables:[Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_2
 
-    .line 258
+    .line 259
     invoke-virtual {p0}, Lmiuix/androidbasewidget/widget/StateEditText;->getWidth()I
 
     move-result v0
 
-    .line 259
+    .line 260
     invoke-virtual {p0}, Lmiuix/androidbasewidget/widget/StateEditText;->getHeight()I
 
     move-result v1
 
-    .line 260
+    .line 261
     invoke-virtual {p0}, Lmiuix/androidbasewidget/widget/StateEditText;->getScrollX()I
 
     move-result v2
 
-    .line 261
+    .line 262
     invoke-virtual {p0}, Lmiuix/androidbasewidget/widget/StateEditText;->getPaddingEnd()I
 
     move-result v3
 
-    .line 262
+    .line 263
     invoke-virtual {p0}, Lmiuix/androidbasewidget/widget/StateEditText;->getCompoundDrawablesRelative()[Landroid/graphics/drawable/Drawable;
 
     move-result-object v4
 
     const/4 v5, 0x2
 
-    .line 263
+    .line 264
     aget-object v6, v4, v5
 
     const/4 v7, 0x0
@@ -213,13 +213,13 @@
 
     add-int/2addr v4, v6
 
-    .line 264
+    .line 265
     :goto_0
     div-int/2addr v1, v5
 
     move v5, v7
 
-    .line 265
+    .line 266
     :goto_1
     iget-object v6, p0, Lmiuix/androidbasewidget/widget/StateEditText;->mExtraDrawables:[Landroid/graphics/drawable/Drawable;
 
@@ -227,14 +227,14 @@
 
     if-ge v7, v8, :cond_2
 
-    .line 266
+    .line 267
     aget-object v6, v6, v7
 
     invoke-virtual {v6}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v6
 
-    .line 267
+    .line 268
     iget-object v8, p0, Lmiuix/androidbasewidget/widget/StateEditText;->mExtraDrawables:[Landroid/graphics/drawable/Drawable;
 
     aget-object v8, v8, v7
@@ -243,14 +243,14 @@
 
     move-result v8
 
-    .line 268
+    .line 269
     invoke-static {p0}, Lmiuix/internal/util/ViewUtils;->isLayoutRtl(Landroid/view/View;)Z
 
     move-result v9
 
     if-eqz v9, :cond_1
 
-    .line 269
+    .line 270
     iget-object v9, p0, Lmiuix/androidbasewidget/widget/StateEditText;->mExtraDrawables:[Landroid/graphics/drawable/Drawable;
 
     aget-object v9, v9, v7
@@ -275,7 +275,7 @@
 
     goto :goto_2
 
-    .line 274
+    .line 275
     :cond_1
     iget-object v9, p0, Lmiuix/androidbasewidget/widget/StateEditText;->mExtraDrawables:[Landroid/graphics/drawable/Drawable;
 
@@ -301,13 +301,13 @@
 
     invoke-virtual {v9, v11, v12, v10, v8}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 279
+    .line 280
     :goto_2
     iget v5, p0, Lmiuix/androidbasewidget/widget/StateEditText;->mWidgetPadding:I
 
     add-int/2addr v5, v6
 
-    .line 280
+    .line 281
     iget-object v6, p0, Lmiuix/androidbasewidget/widget/StateEditText;->mExtraDrawables:[Landroid/graphics/drawable/Drawable;
 
     aget-object v6, v6, v7
@@ -325,7 +325,7 @@
 .method private drawLabel(Landroid/graphics/Canvas;)V
     .locals 6
 
-    .line 236
+    .line 237
     iget-object v0, p0, Lmiuix/androidbasewidget/widget/StateEditText;->mLabel:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -338,7 +338,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 237
+    .line 238
     invoke-virtual {p0}, Lmiuix/androidbasewidget/widget/StateEditText;->getPaint()Landroid/text/TextPaint;
 
     move-result-object v0
@@ -347,7 +347,7 @@
 
     move-result v0
 
-    .line 238
+    .line 239
     invoke-virtual {p0}, Lmiuix/androidbasewidget/widget/StateEditText;->getPaint()Landroid/text/TextPaint;
 
     move-result-object v1
@@ -358,19 +358,19 @@
 
     invoke-virtual {v1, v2}, Landroid/text/TextPaint;->setColor(I)V
 
-    .line 239
+    .line 240
     invoke-virtual {p0}, Lmiuix/androidbasewidget/widget/StateEditText;->getPaddingStart()I
 
     move-result v1
 
-    .line 240
+    .line 241
     invoke-virtual {p0}, Lmiuix/androidbasewidget/widget/StateEditText;->getCompoundDrawablesRelative()[Landroid/graphics/drawable/Drawable;
 
     move-result-object v2
 
     const/4 v3, 0x0
 
-    .line 241
+    .line 242
     aget-object v4, v2, v3
 
     if-nez v4, :cond_0
@@ -391,7 +391,7 @@
     :goto_0
     const/4 v2, 0x0
 
-    .line 242
+    .line 243
     invoke-virtual {p0}, Lmiuix/androidbasewidget/widget/StateEditText;->getMeasuredHeight()I
 
     move-result v4
@@ -414,17 +414,17 @@
 
     move-result v2
 
-    .line 243
+    .line 244
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 244
+    .line 245
     invoke-static {p0}, Lmiuix/internal/util/ViewUtils;->isLayoutRtl(Landroid/view/View;)Z
 
     move-result v4
 
     if-eqz v4, :cond_1
 
-    .line 245
+    .line 246
     invoke-virtual {p0}, Lmiuix/androidbasewidget/widget/StateEditText;->getScrollX()I
 
     move-result v4
@@ -449,7 +449,7 @@
 
     goto :goto_1
 
-    .line 247
+    .line 248
     :cond_1
     invoke-virtual {p0}, Lmiuix/androidbasewidget/widget/StateEditText;->getScrollX()I
 
@@ -463,16 +463,16 @@
 
     invoke-virtual {p1, v1, v2}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 249
+    .line 250
     :goto_1
     iget-object v1, p0, Lmiuix/androidbasewidget/widget/StateEditText;->mLabelLayout:Landroid/text/StaticLayout;
 
     invoke-virtual {v1, p1}, Landroid/text/StaticLayout;->draw(Landroid/graphics/Canvas;)V
 
-    .line 250
+    .line 251
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 251
+    .line 252
     invoke-virtual {p0}, Lmiuix/androidbasewidget/widget/StateEditText;->getPaint()Landroid/text/TextPaint;
 
     move-result-object p1
@@ -486,7 +486,7 @@
 .method private getLabelLength()I
     .locals 2
 
-    .line 150
+    .line 151
     iget v0, p0, Lmiuix/androidbasewidget/widget/StateEditText;->mLabelLength:I
 
     if-nez v0, :cond_0
@@ -498,7 +498,7 @@
     :cond_0
     iget v0, p0, Lmiuix/androidbasewidget/widget/StateEditText;->mWidgetPadding:I
 
-    .line 151
+    .line 152
     :goto_0
     iget v1, p0, Lmiuix/androidbasewidget/widget/StateEditText;->mLabelLength:I
 
@@ -510,14 +510,14 @@
 .method private getWidgetLength()I
     .locals 5
 
-    .line 156
+    .line 157
     iget-object v0, p0, Lmiuix/androidbasewidget/widget/StateEditText;->mExtraDrawables:[Landroid/graphics/drawable/Drawable;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_1
 
-    .line 157
+    .line 158
     array-length v2, v0
 
     move v3, v1
@@ -527,14 +527,14 @@
 
     aget-object v4, v0, v1
 
-    .line 158
+    .line 159
     invoke-virtual {v4}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v4
 
     add-int/2addr v3, v4
 
-    .line 159
+    .line 160
     iget v4, p0, Lmiuix/androidbasewidget/widget/StateEditText;->mWidgetPadding:I
 
     add-int/2addr v3, v4
@@ -553,21 +553,21 @@
 .method private isWidgetResumedEvent(Landroid/view/MotionEvent;)Z
     .locals 6
 
-    .line 178
+    .line 179
     iget-object v0, p0, Lmiuix/androidbasewidget/widget/StateEditText;->mExtraDrawables:[Landroid/graphics/drawable/Drawable;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_1
 
-    .line 179
+    .line 180
     invoke-virtual {p0}, Lmiuix/androidbasewidget/widget/StateEditText;->getScrollX()I
 
     move-result v0
 
     move v2, v1
 
-    .line 180
+    .line 181
     :goto_0
     iget-object v3, p0, Lmiuix/androidbasewidget/widget/StateEditText;->mExtraDrawables:[Landroid/graphics/drawable/Drawable;
 
@@ -575,14 +575,14 @@
 
     if-ge v2, v4, :cond_1
 
-    .line 181
+    .line 182
     aget-object v3, v3, v2
 
     invoke-virtual {v3}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v3
 
-    .line 182
+    .line 183
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v4
@@ -611,7 +611,7 @@
 
     if-lez v3, :cond_0
 
-    .line 183
+    .line 184
     invoke-direct {p0, p1, v2}, Lmiuix/androidbasewidget/widget/StateEditText;->onWidgetTouchEvent(Landroid/view/MotionEvent;I)Z
 
     move-result p1
@@ -623,7 +623,7 @@
 
     goto :goto_0
 
-    .line 187
+    .line 188
     :cond_1
     iput-boolean v1, p0, Lmiuix/androidbasewidget/widget/StateEditText;->mPressed:Z
 
@@ -633,7 +633,7 @@
 .method private onWidgetTouchEvent(Landroid/view/MotionEvent;I)Z
     .locals 2
 
-    .line 192
+    .line 193
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result p1
@@ -650,7 +650,7 @@
 
     goto :goto_0
 
-    .line 194
+    .line 195
     :pswitch_0
     iget-boolean p1, p0, Lmiuix/androidbasewidget/widget/StateEditText;->mPressed:Z
 
@@ -660,30 +660,30 @@
 
     if-eqz p1, :cond_1
 
-    .line 195
+    .line 196
     invoke-virtual {p1, p2}, Lmiuix/androidbasewidget/widget/StateEditText$WidgetManager;->onWidgetClick(I)V
 
-    .line 196
+    .line 197
     iput-boolean v1, p0, Lmiuix/androidbasewidget/widget/StateEditText;->mPressed:Z
 
     return v0
 
-    .line 202
+    .line 203
     :pswitch_1
     iput-boolean v0, p0, Lmiuix/androidbasewidget/widget/StateEditText;->mPressed:Z
 
     goto :goto_0
 
-    .line 206
+    .line 207
     :cond_0
     iget-boolean p1, p0, Lmiuix/androidbasewidget/widget/StateEditText;->mPressed:Z
 
     if-eqz p1, :cond_1
 
-    .line 207
+    .line 208
     iput-boolean v1, p0, Lmiuix/androidbasewidget/widget/StateEditText;->mPressed:Z
 
-    .line 210
+    .line 211
     :cond_1
     :goto_0
     iget-boolean p1, p0, Lmiuix/androidbasewidget/widget/StateEditText;->mPressed:Z
@@ -704,7 +704,7 @@
 .method public dispatchTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 1
 
-    .line 167
+    .line 168
     invoke-direct {p0, p1}, Lmiuix/androidbasewidget/widget/StateEditText;->dispatchEndDrawableTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
@@ -735,26 +735,26 @@
 .method public getCompoundPaddingLeft()I
     .locals 2
 
-    .line 139
+    .line 140
     invoke-super {p0}, Lmiuix/androidbasewidget/widget/EditText;->getCompoundPaddingLeft()I
 
     move-result v0
 
-    .line 141
+    .line 142
     invoke-static {p0}, Lmiuix/internal/util/ViewUtils;->isLayoutRtl(Landroid/view/View;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 142
+    .line 143
     invoke-direct {p0}, Lmiuix/androidbasewidget/widget/StateEditText;->getWidgetLength()I
 
     move-result v1
 
     goto :goto_0
 
-    .line 144
+    .line 145
     :cond_0
     invoke-direct {p0}, Lmiuix/androidbasewidget/widget/StateEditText;->getLabelLength()I
 
@@ -769,26 +769,26 @@
 .method public getCompoundPaddingRight()I
     .locals 2
 
-    .line 127
+    .line 128
     invoke-super {p0}, Lmiuix/androidbasewidget/widget/EditText;->getCompoundPaddingRight()I
 
     move-result v0
 
-    .line 129
+    .line 130
     invoke-static {p0}, Lmiuix/internal/util/ViewUtils;->isLayoutRtl(Landroid/view/View;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 130
+    .line 131
     invoke-direct {p0}, Lmiuix/androidbasewidget/widget/StateEditText;->getLabelLength()I
 
     move-result v1
 
     goto :goto_0
 
-    .line 132
+    .line 133
     :cond_0
     invoke-direct {p0}, Lmiuix/androidbasewidget/widget/StateEditText;->getWidgetLength()I
 
@@ -803,13 +803,13 @@
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .locals 0
 
-    .line 230
+    .line 231
     invoke-super {p0, p1}, Lmiuix/androidbasewidget/widget/EditText;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 231
+    .line 232
     invoke-direct {p0, p1}, Lmiuix/androidbasewidget/widget/StateEditText;->drawExtraWidget(Landroid/graphics/Canvas;)V
 
-    .line 232
+    .line 233
     invoke-direct {p0, p1}, Lmiuix/androidbasewidget/widget/StateEditText;->drawLabel(Landroid/graphics/Canvas;)V
 
     return-void
@@ -818,10 +818,10 @@
 .method protected onMeasure(II)V
     .locals 0
 
-    .line 215
+    .line 216
     invoke-super {p0, p1, p2}, Lmiuix/androidbasewidget/widget/EditText;->onMeasure(II)V
 
-    .line 216
+    .line 217
     iget-object p1, p0, Lmiuix/androidbasewidget/widget/StateEditText;->mLabel:Ljava/lang/String;
 
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -834,7 +834,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 217
+    .line 218
     iget p1, p0, Lmiuix/androidbasewidget/widget/StateEditText;->mLabelMaxWidth:I
 
     if-nez p1, :cond_0
@@ -849,7 +849,7 @@
 
     if-le p1, p2, :cond_0
 
-    .line 218
+    .line 219
     invoke-virtual {p0}, Lmiuix/androidbasewidget/widget/StateEditText;->getMeasuredWidth()I
 
     move-result p1
@@ -858,10 +858,10 @@
 
     iput p1, p0, Lmiuix/androidbasewidget/widget/StateEditText;->mLabelLength:I
 
-    .line 219
+    .line 220
     invoke-direct {p0}, Lmiuix/androidbasewidget/widget/StateEditText;->createLabelLayout()V
 
-    .line 221
+    .line 222
     :cond_0
     iget-object p1, p0, Lmiuix/androidbasewidget/widget/StateEditText;->mLabelLayout:Landroid/text/StaticLayout;
 
@@ -881,14 +881,14 @@
 
     add-int/2addr p1, p2
 
-    .line 222
+    .line 223
     invoke-virtual {p0}, Lmiuix/androidbasewidget/widget/StateEditText;->getMeasuredHeight()I
 
     move-result p2
 
     if-le p1, p2, :cond_1
 
-    .line 223
+    .line 224
     invoke-virtual {p0}, Lmiuix/androidbasewidget/widget/StateEditText;->getMeasuredWidth()I
 
     move-result p2
@@ -899,20 +899,37 @@
     return-void
 .end method
 
+.method public setInputType(I)V
+    .locals 1
+
+    .line 297
+    invoke-virtual {p0}, Lmiuix/androidbasewidget/widget/StateEditText;->getTypeface()Landroid/graphics/Typeface;
+
+    move-result-object v0
+
+    .line 298
+    invoke-super {p0, p1}, Lmiuix/androidbasewidget/widget/EditText;->setInputType(I)V
+
+    .line 299
+    invoke-virtual {p0, v0}, Lmiuix/androidbasewidget/widget/StateEditText;->setTypeface(Landroid/graphics/Typeface;)V
+
+    return-void
+.end method
+
 .method public setLabel(Ljava/lang/String;)V
     .locals 1
 
-    .line 83
+    .line 84
     iput-object p1, p0, Lmiuix/androidbasewidget/widget/StateEditText;->mLabel:Ljava/lang/String;
 
-    .line 84
+    .line 85
     iget p1, p0, Lmiuix/androidbasewidget/widget/StateEditText;->mLabelMaxWidth:I
 
     const/4 v0, 0x0
 
     if-lez p1, :cond_1
 
-    .line 85
+    .line 86
     iget-object p1, p0, Lmiuix/androidbasewidget/widget/StateEditText;->mLabel:Ljava/lang/String;
 
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -947,7 +964,7 @@
 
     goto :goto_2
 
-    .line 87
+    .line 88
     :cond_1
     iget-object p1, p0, Lmiuix/androidbasewidget/widget/StateEditText;->mLabel:Ljava/lang/String;
 
@@ -975,7 +992,7 @@
     :goto_1
     iput v0, p0, Lmiuix/androidbasewidget/widget/StateEditText;->mLabelLength:I
 
-    .line 89
+    .line 90
     :goto_2
     iget-object p1, p0, Lmiuix/androidbasewidget/widget/StateEditText;->mLabel:Ljava/lang/String;
 
@@ -985,10 +1002,10 @@
 
     if-nez p1, :cond_3
 
-    .line 90
+    .line 91
     invoke-direct {p0}, Lmiuix/androidbasewidget/widget/StateEditText;->createLabelLayout()V
 
-    .line 92
+    .line 93
     :cond_3
     invoke-virtual {p0}, Lmiuix/androidbasewidget/widget/StateEditText;->invalidate()V
 
@@ -998,24 +1015,24 @@
 .method public setWidgetManager(Lmiuix/androidbasewidget/widget/StateEditText$WidgetManager;)V
     .locals 1
 
-    .line 73
+    .line 74
     iget-object v0, p0, Lmiuix/androidbasewidget/widget/StateEditText;->mWidgetManager:Lmiuix/androidbasewidget/widget/StateEditText$WidgetManager;
 
     if-eqz v0, :cond_0
 
-    .line 74
+    .line 75
     invoke-virtual {v0}, Lmiuix/androidbasewidget/widget/StateEditText$WidgetManager;->onDetached()V
 
-    .line 76
+    .line 77
     :cond_0
     iput-object p1, p0, Lmiuix/androidbasewidget/widget/StateEditText;->mWidgetManager:Lmiuix/androidbasewidget/widget/StateEditText$WidgetManager;
 
-    .line 77
+    .line 78
     iget-object p1, p0, Lmiuix/androidbasewidget/widget/StateEditText;->mWidgetManager:Lmiuix/androidbasewidget/widget/StateEditText$WidgetManager;
 
     if-eqz p1, :cond_1
 
-    .line 78
+    .line 79
     invoke-virtual {p1, p0}, Lmiuix/androidbasewidget/widget/StateEditText$WidgetManager;->onAttached(Lmiuix/androidbasewidget/widget/StateEditText;)V
 
     :cond_1

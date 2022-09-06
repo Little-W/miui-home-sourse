@@ -240,7 +240,7 @@
 
     iput p3, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mMaxVSpan:I
 
-    const p3, 0x7f0805c9
+    const p3, 0x7f0806c9
 
     .line 108
     invoke-virtual {p0, p3}, Lcom/miui/home/launcher/AppWidgetResizeFrame;->setBackgroundResource(I)V
@@ -258,7 +258,7 @@
     .line 113
     iget-object p3, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mLeftHandle:Landroid/widget/ImageView;
 
-    const p4, 0x7f0805cb
+    const p4, 0x7f0806cb
 
     invoke-virtual {p3, p4}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -286,7 +286,7 @@
     .line 119
     iget-object p3, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mRightHandle:Landroid/widget/ImageView;
 
-    const v0, 0x7f0805cc
+    const v0, 0x7f0806cc
 
     invoke-virtual {p3, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -312,7 +312,7 @@
     .line 125
     iget-object p3, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mTopHandle:Landroid/widget/ImageView;
 
-    const v0, 0x7f0805cd
+    const v0, 0x7f0806cd
 
     invoke-virtual {p3, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -338,7 +338,7 @@
     .line 131
     iget-object p3, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mBottomHandle:Landroid/widget/ImageView;
 
-    const v0, 0x7f0805ca
+    const v0, 0x7f0806ca
 
     invoke-virtual {p3, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -1909,7 +1909,7 @@
     goto/16 :goto_3
 
     :cond_2
-    const-string p1, "width"
+    const-string/jumbo p1, "width"
 
     .line 476
     new-array v9, v3, [I
@@ -1939,7 +1939,7 @@
 
     move-result-object v1
 
-    const-string v2, "x"
+    const-string/jumbo v2, "x"
 
     .line 479
     new-array v9, v3, [I
@@ -1954,7 +1954,7 @@
 
     move-result-object v2
 
-    const-string v5, "y"
+    const-string/jumbo v5, "y"
 
     .line 480
     new-array v9, v3, [I

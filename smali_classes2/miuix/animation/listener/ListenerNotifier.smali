@@ -138,7 +138,7 @@
         }
     .end annotation
 
-    .line 145
+    .line 150
     iget-object v0, p0, Lmiuix/animation/listener/ListenerNotifier;->mListenerMap:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -149,7 +149,7 @@
 
     if-nez v0, :cond_0
 
-    .line 147
+    .line 152
     const-class v0, Ljava/util/ArrayList;
 
     const/4 v1, 0x0
@@ -162,7 +162,7 @@
 
     check-cast v0, Ljava/util/List;
 
-    .line 148
+    .line 153
     iget-object v1, p0, Lmiuix/animation/listener/ListenerNotifier;->mListenerMap:Ljava/util/Map;
 
     invoke-interface {v1, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -187,7 +187,7 @@
         }
     .end annotation
 
-    .line 182
+    .line 187
     iget-object v0, p0, Lmiuix/animation/listener/ListenerNotifier;->mListenerMap:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -198,14 +198,14 @@
 
     if-eqz p1, :cond_0
 
-    .line 183
+    .line 188
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 184
+    .line 189
     invoke-static {p2, p1, p3, p4, p5}, Lmiuix/animation/listener/ListenerNotifier;->notifyListenerSet(Ljava/lang/Object;Ljava/util/List;Lmiuix/animation/listener/ListenerNotifier$INotifier;Ljava/util/Collection;Lmiuix/animation/listener/UpdateInfo;)V
 
     :cond_0
@@ -230,7 +230,7 @@
         }
     .end annotation
 
-    .line 190
+    .line 195
     const-class v0, Ljava/util/HashSet;
 
     const/4 v1, 0x0
@@ -243,7 +243,7 @@
 
     check-cast v0, Ljava/util/Set;
 
-    .line 191
+    .line 196
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -262,19 +262,19 @@
 
     check-cast v1, Lmiuix/animation/listener/TransitionListener;
 
-    .line 192
+    .line 197
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 193
+    .line 198
     invoke-interface {p2, p0, v1, p3, p4}, Lmiuix/animation/listener/ListenerNotifier$INotifier;->doNotify(Ljava/lang/Object;Lmiuix/animation/listener/TransitionListener;Ljava/util/Collection;Lmiuix/animation/listener/UpdateInfo;)V
 
     goto :goto_0
 
-    .line 196
+    .line 201
     :cond_1
     invoke-static {v0}, Lmiuix/animation/utils/ObjectPool;->release(Ljava/lang/Object;)V
 
@@ -318,7 +318,7 @@
 .method public notifyBegin(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 6
 
-    .line 154
+    .line 159
     sget-object v3, Lmiuix/animation/listener/ListenerNotifier;->sBegin:Lmiuix/animation/listener/ListenerNotifier$BeginNotifier;
 
     const/4 v4, 0x0
@@ -339,7 +339,7 @@
 .method public notifyCancelAll(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 6
 
-    .line 174
+    .line 179
     sget-object v3, Lmiuix/animation/listener/ListenerNotifier;->sCancelAll:Lmiuix/animation/listener/ListenerNotifier$CancelNotifier;
 
     const/4 v4, 0x0
@@ -360,7 +360,7 @@
 .method public notifyEndAll(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 6
 
-    .line 178
+    .line 183
     sget-object v3, Lmiuix/animation/listener/ListenerNotifier;->sEndAll:Lmiuix/animation/listener/ListenerNotifier$EndNotifier;
 
     const/4 v4, 0x0
@@ -381,7 +381,7 @@
 .method public notifyMassUpdate(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 6
 
-    .line 162
+    .line 167
     sget-object v3, Lmiuix/animation/listener/ListenerNotifier;->sMassUpdate:Lmiuix/animation/listener/ListenerNotifier$MassUpdateNotifier;
 
     const/4 v4, 0x0
@@ -412,7 +412,7 @@
         }
     .end annotation
 
-    .line 158
+    .line 163
     sget-object v3, Lmiuix/animation/listener/ListenerNotifier;->sPropertyBegin:Lmiuix/animation/listener/ListenerNotifier$PropertyBeginNotifier;
 
     const/4 v5, 0x0
@@ -443,7 +443,7 @@
         }
     .end annotation
 
-    .line 170
+    .line 175
     sget-object v3, Lmiuix/animation/listener/ListenerNotifier;->sPropertyEnd:Lmiuix/animation/listener/ListenerNotifier$PropertyEndNotifier;
 
     const/4 v5, 0x0
@@ -474,7 +474,7 @@
         }
     .end annotation
 
-    .line 166
+    .line 171
     sget-object v3, Lmiuix/animation/listener/ListenerNotifier;->sUpdate:Lmiuix/animation/listener/ListenerNotifier$UpdateNotifier;
 
     const/4 v5, 0x0
@@ -488,6 +488,26 @@
     move-object v4, p3
 
     invoke-direct/range {v0 .. v5}, Lmiuix/animation/listener/ListenerNotifier;->notify(Ljava/lang/Object;Ljava/lang/Object;Lmiuix/animation/listener/ListenerNotifier$INotifier;Ljava/util/Collection;Lmiuix/animation/listener/UpdateInfo;)V
+
+    return-void
+.end method
+
+.method public removeListeners()V
+    .locals 1
+
+    .line 145
+    iget-object v0, p0, Lmiuix/animation/listener/ListenerNotifier;->mListenerMap:Ljava/util/Map;
+
+    invoke-interface {v0}, Ljava/util/Map;->values()Ljava/util/Collection;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lmiuix/animation/utils/ObjectPool;->release(Ljava/lang/Object;)V
+
+    .line 146
+    iget-object v0, p0, Lmiuix/animation/listener/ListenerNotifier;->mListenerMap:Ljava/util/Map;
+
+    invoke-interface {v0}, Ljava/util/Map;->clear()V
 
     return-void
 .end method

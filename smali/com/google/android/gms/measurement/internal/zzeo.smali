@@ -506,7 +506,7 @@
     goto :goto_0
 
     :cond_6
-    const-string p1, "}]"
+    const-string/jumbo p1, "}]"
 
     .line 88
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;

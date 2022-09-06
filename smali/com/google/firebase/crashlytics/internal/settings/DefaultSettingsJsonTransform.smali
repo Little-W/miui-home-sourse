@@ -31,7 +31,7 @@
 
     move-result-object v2
 
-    const-string v0, "url"
+    const-string/jumbo v0, "url"
 
     .line 83
     invoke-virtual {p0, v0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -52,7 +52,7 @@
 
     move-result-object v5
 
-    const-string v0, "update_required"
+    const-string/jumbo v0, "update_required"
 
     const/4 v1, 0x0
 

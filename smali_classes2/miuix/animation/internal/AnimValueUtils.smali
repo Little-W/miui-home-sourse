@@ -40,9 +40,9 @@
 
     if-eqz v2, :cond_1
 
+    .line 46
     check-cast p1, Lmiuix/animation/property/IIntValueProperty;
 
-    .line 46
     invoke-virtual {p0, p1}, Lmiuix/animation/IAnimTarget;->getIntValue(Lmiuix/animation/property/IIntValueProperty;)I
 
     move-result p0

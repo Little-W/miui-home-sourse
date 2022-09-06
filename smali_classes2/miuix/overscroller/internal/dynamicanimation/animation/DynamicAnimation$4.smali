@@ -1,4 +1,4 @@
-.class final Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation$4;
+.class Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation$4;
 .super Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation$ViewProperty;
 .source "DynamicAnimation.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 

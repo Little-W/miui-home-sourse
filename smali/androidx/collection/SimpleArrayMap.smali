@@ -92,6 +92,28 @@
     return-void
 .end method
 
+.method public constructor <init>(Landroidx/collection/SimpleArrayMap;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroidx/collection/SimpleArrayMap<",
+            "TK;TV;>;)V"
+        }
+    .end annotation
+
+    .line 260
+    invoke-direct {p0}, Landroidx/collection/SimpleArrayMap;-><init>()V
+
+    if-eqz p1, :cond_0
+
+    .line 262
+    invoke-virtual {p0, p1}, Landroidx/collection/SimpleArrayMap;->putAll(Landroidx/collection/SimpleArrayMap;)V
+
+    :cond_0
+    return-void
+.end method
+
 .method private allocArrays(I)V
     .locals 5
 
@@ -1898,7 +1920,7 @@
 
     if-eqz v0, :cond_0
 
-    const-string v0, "{}"
+    const-string/jumbo v0, "{}"
 
     return-object v0
 

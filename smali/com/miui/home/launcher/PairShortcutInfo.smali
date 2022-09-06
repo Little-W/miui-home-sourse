@@ -180,6 +180,19 @@
     return-object v0
 .end method
 
+.method public getExtraPairPackageName()Ljava/lang/String;
+    .locals 1
+
+    .line 120
+    iget-object v0, p0, Lcom/miui/home/launcher/PairShortcutInfo;->mShortcutInfo2:Lcom/miui/home/launcher/ShortcutInfo;
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/ShortcutInfo;->getPackageName()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public getIconDrawable1()Landroid/graphics/drawable/Drawable;
     .locals 1
 
@@ -305,7 +318,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f100336
+    const v1, 0x7f110393
 
     const/4 v2, 0x2
 
@@ -384,6 +397,17 @@
     const/4 v0, 0x0
 
     :goto_0
+    return v0
+.end method
+
+.method public isPairIcon()Z
+    .locals 1
+
+    .line 115
+    invoke-virtual {p0}, Lcom/miui/home/launcher/PairShortcutInfo;->hasPairApp()Z
+
+    move-result v0
+
     return v0
 .end method
 

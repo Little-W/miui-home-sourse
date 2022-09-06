@@ -1,4 +1,4 @@
-.class final Lmiuix/animation/Folme$2;
+.class Lmiuix/animation/Folme$2;
 .super Landroid/os/Handler;
 .source "Folme.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
@@ -18,7 +18,7 @@
 .method constructor <init>(Landroid/os/Looper;)V
     .locals 0
 
-    .line 404
+    .line 405
     invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -29,17 +29,17 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 1
 
-    .line 407
+    .line 408
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 416
+    .line 417
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
     return-void
 
-    .line 413
+    .line 414
     :pswitch_0
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -49,13 +49,13 @@
 
     return-void
 
-    .line 409
+    .line 410
     :pswitch_1
     invoke-static {}, Lmiuix/animation/Folme;->access$300()V
 
     const/4 p1, 0x1
 
-    .line 410
+    .line 411
     invoke-static {p1}, Lmiuix/animation/Folme;->access$000(Z)V
 
     return-void

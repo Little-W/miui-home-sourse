@@ -34,7 +34,7 @@
 .method constructor <init>(Landroidx/fragment/app/DialogFragment;)V
     .locals 0
 
-    .line 140
+    .line 143
     iput-object p1, p0, Landroidx/fragment/app/DialogFragment$4;->this$0:Landroidx/fragment/app/DialogFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -54,7 +54,7 @@
 
     if-eqz p1, :cond_2
 
-    .line 144
+    .line 147
     iget-object p1, p0, Landroidx/fragment/app/DialogFragment$4;->this$0:Landroidx/fragment/app/DialogFragment;
 
     invoke-static {p1}, Landroidx/fragment/app/DialogFragment;->access$200(Landroidx/fragment/app/DialogFragment;)Z
@@ -63,21 +63,21 @@
 
     if-eqz p1, :cond_2
 
-    .line 145
+    .line 148
     iget-object p1, p0, Landroidx/fragment/app/DialogFragment$4;->this$0:Landroidx/fragment/app/DialogFragment;
 
     invoke-virtual {p1}, Landroidx/fragment/app/DialogFragment;->requireView()Landroid/view/View;
 
     move-result-object p1
 
-    .line 146
+    .line 149
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
     if-nez v0, :cond_1
 
-    .line 150
+    .line 153
     iget-object v0, p0, Landroidx/fragment/app/DialogFragment$4;->this$0:Landroidx/fragment/app/DialogFragment;
 
     invoke-static {v0}, Landroidx/fragment/app/DialogFragment;->access$000(Landroidx/fragment/app/DialogFragment;)Landroid/app/Dialog;
@@ -88,7 +88,7 @@
 
     const/4 v0, 0x3
 
-    .line 151
+    .line 154
     invoke-static {v0}, Landroidx/fragment/app/FragmentManager;->isLoggingEnabled(I)Z
 
     move-result v0
@@ -97,7 +97,7 @@
 
     const-string v0, "FragmentManager"
 
-    .line 152
+    .line 155
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -114,7 +114,7 @@
 
     iget-object v2, p0, Landroidx/fragment/app/DialogFragment$4;->this$0:Landroidx/fragment/app/DialogFragment;
 
-    .line 153
+    .line 156
     invoke-static {v2}, Landroidx/fragment/app/DialogFragment;->access$000(Landroidx/fragment/app/DialogFragment;)Landroid/app/Dialog;
 
     move-result-object v2
@@ -125,10 +125,10 @@
 
     move-result-object v1
 
-    .line 152
+    .line 155
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 155
+    .line 158
     :cond_0
     iget-object v0, p0, Landroidx/fragment/app/DialogFragment$4;->this$0:Landroidx/fragment/app/DialogFragment;
 
@@ -140,7 +140,7 @@
 
     goto :goto_0
 
-    .line 147
+    .line 150
     :cond_1
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -163,7 +163,7 @@
         }
     .end annotation
 
-    .line 140
+    .line 143
     check-cast p1, Landroidx/lifecycle/LifecycleOwner;
 
     invoke-virtual {p0, p1}, Landroidx/fragment/app/DialogFragment$4;->onChanged(Landroidx/lifecycle/LifecycleOwner;)V

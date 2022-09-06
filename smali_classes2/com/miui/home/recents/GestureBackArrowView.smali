@@ -530,7 +530,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f08019f
+    const v1, 0x7f080274
 
     invoke-static {v0, v1}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
@@ -706,7 +706,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0801c7
+    const v1, 0x7f0802a5
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -741,7 +741,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f08019e
+    const v1, 0x7f080273
 
     invoke-static {v0, v1}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 

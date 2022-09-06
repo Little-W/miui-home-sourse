@@ -105,7 +105,7 @@
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    const-string v1, "whiteSet"
+    const-string/jumbo v1, "whiteSet"
 
     const-string v2, ""
 

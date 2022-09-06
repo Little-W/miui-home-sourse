@@ -107,7 +107,7 @@
 
     move-result-object v5
 
-    const-string p0, "update_required"
+    const-string/jumbo p0, "update_required"
 
     .line 90
     invoke-virtual {p1, p0, v1}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z

@@ -55,7 +55,7 @@
     .line 26
     new-instance v0, Lcom/miui/home/launcher/animate/SpringAnimator$1;
 
-    const-string v1, "value"
+    const-string/jumbo v1, "value"
 
     invoke-direct {v0, p0, v1}, Lcom/miui/home/launcher/animate/SpringAnimator$1;-><init>(Lcom/miui/home/launcher/animate/SpringAnimator;Ljava/lang/String;)V
 

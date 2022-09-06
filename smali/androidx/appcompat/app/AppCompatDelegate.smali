@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static final sActiveDelegates:Landroidx/collection/ArraySet;
+.field private static final sActivityDelegates:Landroidx/collection/ArraySet;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/collection/ArraySet<",
@@ -15,7 +15,7 @@
     .end annotation
 .end field
 
-.field private static final sActiveDelegatesLock:Ljava/lang/Object;
+.field private static final sActivityDelegatesLock:Ljava/lang/Object;
 
 .field private static sDefaultNightMode:I = -0x64
 
@@ -24,19 +24,19 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 165
+    .line 173
     new-instance v0, Landroidx/collection/ArraySet;
 
     invoke-direct {v0}, Landroidx/collection/ArraySet;-><init>()V
 
-    sput-object v0, Landroidx/appcompat/app/AppCompatDelegate;->sActiveDelegates:Landroidx/collection/ArraySet;
+    sput-object v0, Landroidx/appcompat/app/AppCompatDelegate;->sActivityDelegates:Landroidx/collection/ArraySet;
 
-    .line 167
+    .line 175
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Landroidx/appcompat/app/AppCompatDelegate;->sActiveDelegatesLock:Ljava/lang/Object;
+    sput-object v0, Landroidx/appcompat/app/AppCompatDelegate;->sActivityDelegatesLock:Ljava/lang/Object;
 
     return-void
 .end method
@@ -44,57 +44,26 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 262
+    .line 271
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static create(Landroid/app/Activity;Landroidx/appcompat/app/AppCompatCallback;)Landroidx/appcompat/app/AppCompatDelegate;
-    .locals 1
-
-    .line 221
-    new-instance v0, Landroidx/appcompat/app/AppCompatDelegateImpl;
-
-    invoke-direct {v0, p0, p1}, Landroidx/appcompat/app/AppCompatDelegateImpl;-><init>(Landroid/app/Activity;Landroidx/appcompat/app/AppCompatCallback;)V
-
-    return-object v0
-.end method
-
-.method public static create(Landroid/app/Dialog;Landroidx/appcompat/app/AppCompatCallback;)Landroidx/appcompat/app/AppCompatDelegate;
-    .locals 1
-
-    .line 232
-    new-instance v0, Landroidx/appcompat/app/AppCompatDelegateImpl;
-
-    invoke-direct {v0, p0, p1}, Landroidx/appcompat/app/AppCompatDelegateImpl;-><init>(Landroid/app/Dialog;Landroidx/appcompat/app/AppCompatCallback;)V
-
-    return-object v0
-.end method
-
-.method public static getDefaultNightMode()I
-    .locals 1
-
-    .line 571
-    sget v0, Landroidx/appcompat/app/AppCompatDelegate;->sDefaultNightMode:I
-
-    return v0
-.end method
-
-.method static markStarted(Landroidx/appcompat/app/AppCompatDelegate;)V
+.method static addActiveDelegate(Landroidx/appcompat/app/AppCompatDelegate;)V
     .locals 3
 
-    .line 622
-    sget-object v0, Landroidx/appcompat/app/AppCompatDelegate;->sActiveDelegatesLock:Ljava/lang/Object;
+    .line 655
+    sget-object v0, Landroidx/appcompat/app/AppCompatDelegate;->sActivityDelegatesLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 625
+    .line 658
     :try_start_0
     invoke-static {p0}, Landroidx/appcompat/app/AppCompatDelegate;->removeDelegateFromActives(Landroidx/appcompat/app/AppCompatDelegate;)V
 
-    .line 627
-    sget-object v1, Landroidx/appcompat/app/AppCompatDelegate;->sActiveDelegates:Landroidx/collection/ArraySet;
+    .line 660
+    sget-object v1, Landroidx/appcompat/app/AppCompatDelegate;->sActivityDelegates:Landroidx/collection/ArraySet;
 
     new-instance v2, Ljava/lang/ref/WeakReference;
 
@@ -102,7 +71,7 @@
 
     invoke-virtual {v1, v2}, Landroidx/collection/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 628
+    .line 661
     monitor-exit v0
 
     return-void
@@ -117,19 +86,50 @@
     throw p0
 .end method
 
-.method static markStopped(Landroidx/appcompat/app/AppCompatDelegate;)V
+.method public static create(Landroid/app/Activity;Landroidx/appcompat/app/AppCompatCallback;)Landroidx/appcompat/app/AppCompatDelegate;
     .locals 1
 
-    .line 632
-    sget-object v0, Landroidx/appcompat/app/AppCompatDelegate;->sActiveDelegatesLock:Ljava/lang/Object;
+    .line 230
+    new-instance v0, Landroidx/appcompat/app/AppCompatDelegateImpl;
+
+    invoke-direct {v0, p0, p1}, Landroidx/appcompat/app/AppCompatDelegateImpl;-><init>(Landroid/app/Activity;Landroidx/appcompat/app/AppCompatCallback;)V
+
+    return-object v0
+.end method
+
+.method public static create(Landroid/app/Dialog;Landroidx/appcompat/app/AppCompatCallback;)Landroidx/appcompat/app/AppCompatDelegate;
+    .locals 1
+
+    .line 241
+    new-instance v0, Landroidx/appcompat/app/AppCompatDelegateImpl;
+
+    invoke-direct {v0, p0, p1}, Landroidx/appcompat/app/AppCompatDelegateImpl;-><init>(Landroid/app/Dialog;Landroidx/appcompat/app/AppCompatCallback;)V
+
+    return-object v0
+.end method
+
+.method public static getDefaultNightMode()I
+    .locals 1
+
+    .line 604
+    sget v0, Landroidx/appcompat/app/AppCompatDelegate;->sDefaultNightMode:I
+
+    return v0
+.end method
+
+.method static removeActivityDelegate(Landroidx/appcompat/app/AppCompatDelegate;)V
+    .locals 1
+
+    .line 665
+    sget-object v0, Landroidx/appcompat/app/AppCompatDelegate;->sActivityDelegatesLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 634
+    .line 667
     :try_start_0
     invoke-static {p0}, Landroidx/appcompat/app/AppCompatDelegate;->removeDelegateFromActives(Landroidx/appcompat/app/AppCompatDelegate;)V
 
-    .line 635
+    .line 668
     monitor-exit v0
 
     return-void
@@ -147,20 +147,20 @@
 .method private static removeDelegateFromActives(Landroidx/appcompat/app/AppCompatDelegate;)V
     .locals 3
 
-    .line 639
-    sget-object v0, Landroidx/appcompat/app/AppCompatDelegate;->sActiveDelegatesLock:Ljava/lang/Object;
+    .line 672
+    sget-object v0, Landroidx/appcompat/app/AppCompatDelegate;->sActivityDelegatesLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 640
+    .line 673
     :try_start_0
-    sget-object v1, Landroidx/appcompat/app/AppCompatDelegate;->sActiveDelegates:Landroidx/collection/ArraySet;
+    sget-object v1, Landroidx/appcompat/app/AppCompatDelegate;->sActivityDelegates:Landroidx/collection/ArraySet;
 
     invoke-virtual {v1}, Landroidx/collection/ArraySet;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    .line 641
+    .line 674
     :cond_0
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -169,7 +169,7 @@
 
     if-eqz v2, :cond_2
 
-    .line 642
+    .line 675
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
@@ -186,13 +186,13 @@
 
     if-nez v2, :cond_0
 
-    .line 646
+    .line 679
     :cond_1
     invoke-interface {v1}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0
 
-    .line 649
+    .line 682
     :cond_2
     monitor-exit v0
 
@@ -215,8 +215,19 @@
 
 .method public attachBaseContext(Landroid/content/Context;)V
     .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
     return-void
+.end method
+
+.method public attachBaseContext2(Landroid/content/Context;)Landroid/content/Context;
+    .locals 0
+
+    .line 395
+    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatDelegate;->attachBaseContext(Landroid/content/Context;)V
+
+    return-object p1
 .end method
 
 .method public abstract findViewById(I)Landroid/view/View;

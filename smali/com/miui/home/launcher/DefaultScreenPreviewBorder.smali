@@ -47,7 +47,7 @@
     .line 28
     invoke-super {p0}, Lcom/miui/home/launcher/ThumbnailContainerBorder;->onFinishInflate()V
 
-    const v0, 0x7f0a0138
+    const v0, 0x7f0a0195
 
     .line 29
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/DefaultScreenPreviewBorder;->findViewById(I)Landroid/view/View;
@@ -136,7 +136,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0600a4
+    const v1, 0x7f0600a6
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColorStateList(I)Landroid/content/res/ColorStateList;
 
@@ -150,7 +150,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0600a5
+    const v1, 0x7f0600a7
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColorStateList(I)Landroid/content/res/ColorStateList;
 

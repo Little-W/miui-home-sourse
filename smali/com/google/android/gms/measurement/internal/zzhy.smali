@@ -139,7 +139,7 @@
 
     if-nez v2, :cond_3
 
-    const-string v2, "utm_campaign"
+    const-string/jumbo v2, "utm_campaign"
 
     .line 37
     invoke-virtual {p4, v2}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -148,7 +148,7 @@
 
     if-nez v2, :cond_3
 
-    const-string v2, "utm_source"
+    const-string/jumbo v2, "utm_source"
 
     .line 38
     invoke-virtual {p4, v2}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -157,7 +157,7 @@
 
     if-nez v2, :cond_3
 
-    const-string v2, "utm_medium"
+    const-string/jumbo v2, "utm_medium"
 
     .line 39
     invoke-virtual {p4, v2}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -535,7 +535,7 @@
 
     if-eqz p1, :cond_10
 
-    const-string p1, "utm_campaign"
+    const-string/jumbo p1, "utm_campaign"
 
     .line 82
     invoke-virtual {p4, p1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -544,7 +544,7 @@
 
     if-nez p1, :cond_f
 
-    const-string p1, "utm_source"
+    const-string/jumbo p1, "utm_source"
 
     .line 83
     invoke-virtual {p4, p1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -553,7 +553,7 @@
 
     if-nez p1, :cond_f
 
-    const-string p1, "utm_medium"
+    const-string/jumbo p1, "utm_medium"
 
     .line 84
     invoke-virtual {p4, p1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -562,7 +562,7 @@
 
     if-nez p1, :cond_f
 
-    const-string p1, "utm_term"
+    const-string/jumbo p1, "utm_term"
 
     .line 85
     invoke-virtual {p4, p1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -571,7 +571,7 @@
 
     if-nez p1, :cond_f
 
-    const-string p1, "utm_content"
+    const-string/jumbo p1, "utm_content"
 
     .line 86
     invoke-virtual {p4, p1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z

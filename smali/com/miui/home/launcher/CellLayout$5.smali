@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/CellLayout;)V
     .locals 0
 
-    .line 2138
+    .line 2155
     iput-object p1, p0, Lcom/miui/home/launcher/CellLayout$5;->this$0:Lcom/miui/home/launcher/CellLayout;
 
     invoke-direct {p0}, Lcom/miui/home/launcher/common/messages/EditStateChangedMessageHandler;-><init>()V
@@ -38,7 +38,7 @@
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
-    .line 2141
+    .line 2158
     invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/EditModeChangedMessage;->getCurrentEditState()I
 
     move-result v0
@@ -47,7 +47,7 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 2142
+    .line 2159
     invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/EditModeChangedMessage;->getLastEditState()I
 
     move-result p1
@@ -56,7 +56,7 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 2143
+    .line 2160
     iget-object p1, p0, Lcom/miui/home/launcher/CellLayout$5;->this$0:Lcom/miui/home/launcher/CellLayout;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/CellLayout;->clearCellBackground()V

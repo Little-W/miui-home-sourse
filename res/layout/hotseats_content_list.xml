@@ -1,3 +1,3 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.miui.home.launcher.hotseats.HotSeatsListContent android:layout_gravity="center" android:id="@id/hotseat_content_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="never" android:paddingStart="@dimen/hotseats_list_content_padding_side" android:paddingEnd="@dimen/hotseats_list_content_padding_side" android:elevation="4.0dip"
+<com.miui.home.launcher.hotseats.HotSeatsListContent android:layout_gravity="center" android:id="@id/hotseat_content_list" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="never" android:paddingStart="@dimen/hotseats_list_content_padding_side" android:paddingEnd="@dimen/hotseats_list_content_padding_side" android:elevation="4.0dip"
   xmlns:android="http://schemas.android.com/apk/res/android" />

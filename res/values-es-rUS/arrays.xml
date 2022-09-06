@@ -49,6 +49,13 @@
         <item>Por defecto</item>
         <item>Clásico</item>
     </string-array>
+    <string-array name="monochrome_color_entries">
+        <item>Default</item>
+        <item>Blue</item>
+        <item>Green</item>
+        <item>Purple</item>
+        <item>Brown</item>
+    </string-array>
     <string-array name="transformation_entries">
         <item>Deslizar</item>
         <item>Desvanecer</item>

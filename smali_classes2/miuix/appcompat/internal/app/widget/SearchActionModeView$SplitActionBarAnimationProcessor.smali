@@ -25,7 +25,7 @@
 .method constructor <init>(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)V
     .locals 0
 
-    .line 702
+    .line 713
     iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$SplitActionBarAnimationProcessor;->this$0:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -56,7 +56,7 @@
 
     sub-float p2, p1, p2
 
-    .line 713
+    .line 724
     :cond_0
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$SplitActionBarAnimationProcessor;->this$0:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
@@ -66,7 +66,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 715
+    .line 726
     invoke-virtual {p1}, Landroid/view/View;->getHeight()I
 
     move-result v0

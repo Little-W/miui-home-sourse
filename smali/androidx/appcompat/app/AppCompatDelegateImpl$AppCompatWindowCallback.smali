@@ -15,6 +15,8 @@
 
 
 # instance fields
+.field private mActionBarCallback:Landroidx/appcompat/app/AppCompatDelegateImpl$ActionBarMenuCallback;
+
 .field final synthetic this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
 
@@ -22,10 +24,10 @@
 .method constructor <init>(Landroidx/appcompat/app/AppCompatDelegateImpl;Landroid/view/Window$Callback;)V
     .locals 0
 
-    .line 2807
+    .line 3079
     iput-object p1, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$AppCompatWindowCallback;->this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
-    .line 2808
+    .line 3080
     invoke-direct {p0, p2}, Landroidx/appcompat/view/WindowCallbackWrapper;-><init>(Landroid/view/Window$Callback;)V
 
     return-void
@@ -36,7 +38,7 @@
 .method public dispatchKeyEvent(Landroid/view/KeyEvent;)Z
     .locals 1
 
-    .line 2813
+    .line 3089
     iget-object v0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$AppCompatWindowCallback;->this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
     invoke-virtual {v0, p1}, Landroidx/appcompat/app/AppCompatDelegateImpl;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
@@ -45,7 +47,7 @@
 
     if-nez v0, :cond_1
 
-    .line 2814
+    .line 3090
     invoke-super {p0, p1}, Landroidx/appcompat/view/WindowCallbackWrapper;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
 
     move-result p1
@@ -70,7 +72,7 @@
 .method public dispatchKeyShortcutEvent(Landroid/view/KeyEvent;)Z
     .locals 2
 
-    .line 2819
+    .line 3095
     invoke-super {p0, p1}, Landroidx/appcompat/view/WindowCallbackWrapper;->dispatchKeyShortcutEvent(Landroid/view/KeyEvent;)Z
 
     move-result v0
@@ -79,7 +81,7 @@
 
     iget-object v0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$AppCompatWindowCallback;->this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
-    .line 2820
+    .line 3096
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result v1
@@ -116,7 +118,7 @@
 
     if-nez p1, :cond_0
 
-    .line 2825
+    .line 3101
     instance-of v0, p2, Landroidx/appcompat/view/menu/MenuBuilder;
 
     if-nez v0, :cond_0
@@ -125,7 +127,7 @@
 
     return p1
 
-    .line 2830
+    .line 3106
     :cond_0
     invoke-super {p0, p1, p2}, Landroidx/appcompat/view/WindowCallbackWrapper;->onCreatePanelMenu(ILandroid/view/Menu;)Z
 
@@ -134,13 +136,39 @@
     return p1
 .end method
 
+.method public onCreatePanelView(I)Landroid/view/View;
+    .locals 1
+
+    .line 3111
+    iget-object v0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$AppCompatWindowCallback;->mActionBarCallback:Landroidx/appcompat/app/AppCompatDelegateImpl$ActionBarMenuCallback;
+
+    if-eqz v0, :cond_0
+
+    .line 3112
+    invoke-interface {v0, p1}, Landroidx/appcompat/app/AppCompatDelegateImpl$ActionBarMenuCallback;->onCreatePanelView(I)Landroid/view/View;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    return-object v0
+
+    .line 3117
+    :cond_0
+    invoke-super {p0, p1}, Landroidx/appcompat/view/WindowCallbackWrapper;->onCreatePanelView(I)Landroid/view/View;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
 .method public onMenuOpened(ILandroid/view/Menu;)Z
     .locals 0
 
-    .line 2868
+    .line 3161
     invoke-super {p0, p1, p2}, Landroidx/appcompat/view/WindowCallbackWrapper;->onMenuOpened(ILandroid/view/Menu;)Z
 
-    .line 2869
+    .line 3162
     iget-object p2, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$AppCompatWindowCallback;->this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
     invoke-virtual {p2, p1}, Landroidx/appcompat/app/AppCompatDelegateImpl;->onMenuOpened(I)V
@@ -153,10 +181,10 @@
 .method public onPanelClosed(ILandroid/view/Menu;)V
     .locals 0
 
-    .line 2875
+    .line 3168
     invoke-super {p0, p1, p2}, Landroidx/appcompat/view/WindowCallbackWrapper;->onPanelClosed(ILandroid/view/Menu;)V
 
-    .line 2876
+    .line 3169
     iget-object p2, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$AppCompatWindowCallback;->this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
     invoke-virtual {p2, p1}, Landroidx/appcompat/app/AppCompatDelegateImpl;->onPanelClosed(I)V
@@ -165,9 +193,9 @@
 .end method
 
 .method public onPreparePanel(ILandroid/view/View;Landroid/view/Menu;)Z
-    .locals 3
+    .locals 4
 
-    .line 2841
+    .line 3128
     instance-of v0, p3, Landroidx/appcompat/view/menu/MenuBuilder;
 
     if-eqz v0, :cond_0
@@ -191,26 +219,46 @@
     return v1
 
     :cond_1
-    if-eqz v0, :cond_2
-
     const/4 v2, 0x1
 
-    .line 2854
+    if-eqz v0, :cond_2
+
+    .line 3141
     invoke-virtual {v0, v2}, Landroidx/appcompat/view/menu/MenuBuilder;->setOverrideVisibleItems(Z)V
 
-    .line 2857
+    .line 3145
     :cond_2
-    invoke-super {p0, p1, p2, p3}, Landroidx/appcompat/view/WindowCallbackWrapper;->onPreparePanel(ILandroid/view/View;Landroid/view/Menu;)Z
+    iget-object v3, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$AppCompatWindowCallback;->mActionBarCallback:Landroidx/appcompat/app/AppCompatDelegateImpl$ActionBarMenuCallback;
 
-    move-result p1
+    if-eqz v3, :cond_3
 
-    if-eqz v0, :cond_3
+    invoke-interface {v3, p1}, Landroidx/appcompat/app/AppCompatDelegateImpl$ActionBarMenuCallback;->onPreparePanel(I)Z
 
-    .line 2860
-    invoke-virtual {v0, v1}, Landroidx/appcompat/view/menu/MenuBuilder;->setOverrideVisibleItems(Z)V
+    move-result v3
+
+    if-eqz v3, :cond_3
+
+    goto :goto_1
 
     :cond_3
-    return p1
+    move v2, v1
+
+    :goto_1
+    if-nez v2, :cond_4
+
+    .line 3149
+    invoke-super {p0, p1, p2, p3}, Landroidx/appcompat/view/WindowCallbackWrapper;->onPreparePanel(ILandroid/view/View;Landroid/view/Menu;)Z
+
+    move-result v2
+
+    :cond_4
+    if-eqz v0, :cond_5
+
+    .line 3153
+    invoke-virtual {v0, v1}, Landroidx/appcompat/view/menu/MenuBuilder;->setOverrideVisibleItems(Z)V
+
+    :cond_5
+    return v2
 .end method
 
 .method public onProvideKeyboardShortcuts(Ljava/util/List;Landroid/view/Menu;I)V
@@ -226,7 +274,7 @@
         }
     .end annotation
 
-    .line 2934
+    .line 3227
     iget-object v0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$AppCompatWindowCallback;->this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
     const/4 v1, 0x0
@@ -239,19 +287,19 @@
 
     if-eqz v0, :cond_0
 
-    .line 2935
+    .line 3228
     iget-object v1, v0, Landroidx/appcompat/app/AppCompatDelegateImpl$PanelFeatureState;->menu:Landroidx/appcompat/view/menu/MenuBuilder;
 
     if-eqz v1, :cond_0
 
-    .line 2938
+    .line 3231
     iget-object p2, v0, Landroidx/appcompat/app/AppCompatDelegateImpl$PanelFeatureState;->menu:Landroidx/appcompat/view/menu/MenuBuilder;
 
     invoke-super {p0, p1, p2, p3}, Landroidx/appcompat/view/WindowCallbackWrapper;->onProvideKeyboardShortcuts(Ljava/util/List;Landroid/view/Menu;I)V
 
     goto :goto_0
 
-    .line 2941
+    .line 3234
     :cond_0
     invoke-super {p0, p1, p2, p3}, Landroidx/appcompat/view/WindowCallbackWrapper;->onProvideKeyboardShortcuts(Ljava/util/List;Landroid/view/Menu;I)V
 
@@ -262,7 +310,7 @@
 .method public onWindowStartingActionMode(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;
     .locals 2
 
-    .line 2882
+    .line 3175
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x17
@@ -273,7 +321,7 @@
 
     return-object p1
 
-    .line 2887
+    .line 3180
     :cond_0
     iget-object v0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$AppCompatWindowCallback;->this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
@@ -283,14 +331,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 2888
+    .line 3181
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatDelegateImpl$AppCompatWindowCallback;->startAsSupportActionMode(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;
 
     move-result-object p1
 
     return-object p1
 
-    .line 2891
+    .line 3184
     :cond_1
     invoke-super {p0, p1}, Landroidx/appcompat/view/WindowCallbackWrapper;->onWindowStartingActionMode(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;
 
@@ -302,7 +350,7 @@
 .method public onWindowStartingActionMode(Landroid/view/ActionMode$Callback;I)Landroid/view/ActionMode;
     .locals 1
 
-    .line 2919
+    .line 3212
     iget-object v0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$AppCompatWindowCallback;->this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
     invoke-virtual {v0}, Landroidx/appcompat/app/AppCompatDelegateImpl;->isHandleNativeActionModesEnabled()Z
@@ -315,7 +363,7 @@
 
     goto :goto_0
 
-    .line 2923
+    .line 3216
     :cond_0
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatDelegateImpl$AppCompatWindowCallback;->startAsSupportActionMode(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;
 
@@ -323,7 +371,7 @@
 
     return-object p1
 
-    .line 2927
+    .line 3220
     :cond_1
     :goto_0
     invoke-super {p0, p1, p2}, Landroidx/appcompat/view/WindowCallbackWrapper;->onWindowStartingActionMode(Landroid/view/ActionMode$Callback;I)Landroid/view/ActionMode;
@@ -336,7 +384,7 @@
 .method final startAsSupportActionMode(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;
     .locals 2
 
-    .line 2901
+    .line 3194
     new-instance v0, Landroidx/appcompat/view/SupportActionModeWrapper$CallbackWrapper;
 
     iget-object v1, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$AppCompatWindowCallback;->this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
@@ -345,17 +393,17 @@
 
     invoke-direct {v0, v1, p1}, Landroidx/appcompat/view/SupportActionModeWrapper$CallbackWrapper;-><init>(Landroid/content/Context;Landroid/view/ActionMode$Callback;)V
 
-    .line 2905
+    .line 3198
     iget-object p1, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$AppCompatWindowCallback;->this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
-    .line 2906
+    .line 3199
     invoke-virtual {p1, v0}, Landroidx/appcompat/app/AppCompatDelegateImpl;->startSupportActionMode(Landroidx/appcompat/view/ActionMode$Callback;)Landroidx/appcompat/view/ActionMode;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 2910
+    .line 3203
     invoke-virtual {v0, p1}, Landroidx/appcompat/view/SupportActionModeWrapper$CallbackWrapper;->getActionModeWrapper(Landroidx/appcompat/view/ActionMode;)Landroid/view/ActionMode;
 
     move-result-object p1

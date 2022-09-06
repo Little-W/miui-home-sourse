@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x2
+    accessFlags = 0xa
     name = "CategoryOrderUpdateCallback"
 .end annotation
 
@@ -17,18 +17,13 @@
 # instance fields
 .field private mAnimEnable:Z
 
-.field final synthetic this$0:Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapter;
-
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapter;Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+.method constructor <init>(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
     .locals 0
 
-    .line 207
-    iput-object p1, p0, Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapter$CategoryOrderUpdateCallback;->this$0:Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapter;
-
-    .line 208
-    invoke-direct {p0, p2}, Lcom/miui/home/launcher/allapps/AdapterListUpdateCallback;-><init>(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    .line 214
+    invoke-direct {p0, p1}, Lcom/miui/home/launcher/allapps/AdapterListUpdateCallback;-><init>(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     return-void
 .end method
@@ -38,7 +33,7 @@
 .method protected isAnimEnable()Z
     .locals 1
 
-    .line 215
+    .line 221
     iget-boolean v0, p0, Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapter$CategoryOrderUpdateCallback;->mAnimEnable:Z
 
     return v0
@@ -47,7 +42,7 @@
 .method setAnimEnable(Z)V
     .locals 0
 
-    .line 219
+    .line 225
     iput-boolean p1, p0, Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapter$CategoryOrderUpdateCallback;->mAnimEnable:Z
 
     return-void

@@ -21,10 +21,19 @@
 .method public abstract flagActionItems()Z
 .end method
 
+.method public abstract getId()I
+.end method
+
 .method public abstract initForMenu(Landroid/content/Context;Landroidx/appcompat/view/menu/MenuBuilder;)V
 .end method
 
 .method public abstract onCloseMenu(Landroidx/appcompat/view/menu/MenuBuilder;Z)V
+.end method
+
+.method public abstract onRestoreInstanceState(Landroid/os/Parcelable;)V
+.end method
+
+.method public abstract onSaveInstanceState()Landroid/os/Parcelable;
 .end method
 
 .method public abstract onSubMenuSelected(Landroidx/appcompat/view/menu/SubMenuBuilder;)Z

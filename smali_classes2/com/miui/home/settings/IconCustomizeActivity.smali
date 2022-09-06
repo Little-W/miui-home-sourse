@@ -7,7 +7,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 19
+    .line 20
     invoke-direct {p0}, Lcom/miui/home/launcher/PreferenceContainerActivity;-><init>()V
 
     return-void
@@ -18,7 +18,7 @@
 .method protected attachBaseContext(Landroid/content/Context;)V
     .locals 0
 
-    .line 25
+    .line 26
     invoke-static {p1}, Lcom/miui/home/launcher/common/StorageContextGetter;->getContext(Landroid/content/Context;)Landroid/content/Context;
 
     move-result-object p1
@@ -31,35 +31,41 @@
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 2
 
-    .line 30
+    .line 31
     invoke-super {p0, p1}, Lcom/miui/home/launcher/PreferenceContainerActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 31
+    .line 32
     invoke-virtual {p0}, Lcom/miui/home/settings/IconCustomizeActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object p1
 
-    .line 32
+    .line 33
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 33
+    .line 34
     sget-boolean v1, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     if-nez v1, :cond_0
 
-    const v1, 0x7f100243
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isFoldDevice()Z
 
-    .line 34
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    const v1, 0x7f110253
+
+    .line 35
     invoke-virtual {p0, v1}, Lcom/miui/home/settings/IconCustomizeActivity;->setTitle(I)V
 
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f100246
+    const v1, 0x7f110256
 
-    .line 36
+    .line 37
     invoke-virtual {p0, v1}, Lcom/miui/home/settings/IconCustomizeActivity;->setTitle(I)V
 
     :goto_0
@@ -67,7 +73,7 @@
 
     const-string v1, "miref"
 
-    .line 39
+    .line 40
     invoke-virtual {p1, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -79,34 +85,34 @@
     :cond_1
     const-string p1, "other"
 
-    .line 41
+    .line 42
     invoke-static {p1}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackEnterIconCustomizePage(Ljava/lang/String;)V
 
-    .line 43
+    .line 44
     :goto_1
     invoke-virtual {p0}, Lcom/miui/home/settings/IconCustomizeActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object p1
 
-    .line 44
+    .line 45
     invoke-virtual {p1}, Landroidx/fragment/app/FragmentManager;->beginTransaction()Landroidx/fragment/app/FragmentTransaction;
 
     move-result-object p1
 
-    .line 45
+    .line 46
     new-instance v1, Lcom/miui/home/settings/IconCustomizeFragment;
 
     invoke-direct {v1}, Lcom/miui/home/settings/IconCustomizeFragment;-><init>()V
 
-    .line 46
+    .line 47
     invoke-virtual {v1, v0}, Lcom/miui/home/settings/IconCustomizeFragment;->setArguments(Landroid/os/Bundle;)V
 
     const v0, 0x1020002
 
-    .line 47
+    .line 48
     invoke-virtual {p1, v0, v1}, Landroidx/fragment/app/FragmentTransaction;->replace(ILandroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentTransaction;
 
-    .line 48
+    .line 49
     invoke-virtual {p1}, Landroidx/fragment/app/FragmentTransaction;->commitAllowingStateLoss()I
 
     return-void

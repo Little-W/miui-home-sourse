@@ -25,20 +25,20 @@
 .method public close()V
     .locals 1
 
-    .line 119
+    .line 117
     invoke-super {p0}, Lmiuix/appcompat/internal/view/menu/MenuBuilder;->close()V
 
-    .line 120
+    .line 118
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/context/ContextMenuBuilder;->mHelper:Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindowHelper;
 
     if-eqz v0, :cond_0
 
-    .line 121
+    .line 119
     invoke-virtual {v0}, Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindowHelper;->dismiss()V
 
     const/4 v0, 0x0
 
-    .line 122
+    .line 120
     iput-object v0, p0, Lmiuix/appcompat/internal/view/menu/context/ContextMenuBuilder;->mHelper:Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindowHelper;
 
     :cond_0
@@ -116,9 +116,9 @@
     if-eqz p1, :cond_0
 
     .line 73
-    invoke-static {p1, p0}, Lmiuix/appcompat/internal/view/menu/context/ContextMenuHelper;->createContextMenu(Landroid/view/View;Lmiuix/appcompat/internal/view/menu/context/ContextMenuBuilder;)V
+    invoke-virtual {p1, p0}, Landroid/view/View;->createContextMenu(Landroid/view/ContextMenu;)V
 
-    .line 76
+    .line 75
     :cond_0
     invoke-virtual {p0}, Lmiuix/appcompat/internal/view/menu/context/ContextMenuBuilder;->getVisibleItems()Ljava/util/ArrayList;
 
@@ -134,15 +134,15 @@
 
     const/4 v0, 0x1
 
-    .line 77
+    .line 76
     invoke-static {p1, v0}, Landroid/util/EventLog;->writeEvent(II)I
 
-    .line 79
+    .line 78
     new-instance p1, Lmiuix/appcompat/internal/view/menu/MenuDialogHelper;
 
     invoke-direct {p1, p0}, Lmiuix/appcompat/internal/view/menu/MenuDialogHelper;-><init>(Lmiuix/appcompat/internal/view/menu/MenuBuilder;)V
 
-    .line 80
+    .line 79
     invoke-virtual {p1, p2}, Lmiuix/appcompat/internal/view/menu/MenuDialogHelper;->show(Landroid/os/IBinder;)V
 
     return-object p1
@@ -158,10 +158,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 103
-    invoke-static {p1, p0}, Lmiuix/appcompat/internal/view/menu/context/ContextMenuHelper;->createContextMenu(Landroid/view/View;Lmiuix/appcompat/internal/view/menu/context/ContextMenuBuilder;)V
+    .line 102
+    invoke-virtual {p1, p0}, Landroid/view/View;->createContextMenu(Landroid/view/ContextMenu;)V
 
-    .line 106
+    .line 104
     :cond_0
     invoke-virtual {p0}, Lmiuix/appcompat/internal/view/menu/context/ContextMenuBuilder;->getVisibleItems()Ljava/util/ArrayList;
 
@@ -177,22 +177,22 @@
 
     const/4 v1, 0x1
 
-    .line 107
+    .line 105
     invoke-static {v0, v1}, Landroid/util/EventLog;->writeEvent(II)I
 
-    .line 108
+    .line 106
     new-instance v0, Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindowHelper;
 
     invoke-direct {v0, p0}, Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindowHelper;-><init>(Lmiuix/appcompat/internal/view/menu/MenuBuilder;)V
 
     iput-object v0, p0, Lmiuix/appcompat/internal/view/menu/context/ContextMenuBuilder;->mHelper:Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindowHelper;
 
-    .line 109
+    .line 107
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/context/ContextMenuBuilder;->mHelper:Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindowHelper;
 
     invoke-virtual {v0, p2, p1, p3, p4}, Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindowHelper;->show(Landroid/os/IBinder;Landroid/view/View;FF)V
 
-    .line 111
+    .line 109
     iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/context/ContextMenuBuilder;->mHelper:Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindowHelper;
 
     return-object p1

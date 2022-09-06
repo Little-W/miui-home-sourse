@@ -47,25 +47,28 @@
 
     move-result-object v0
 
-    .line 137
     sget-object v1, Lcom/google/gson/stream/JsonToken;->NULL:Lcom/google/gson/stream/JsonToken;
 
     if-ne v0, v1, :cond_0
 
-    .line 138
+    .line 137
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->nextNull()V
 
     const/4 p1, 0x0
 
     return-object p1
 
-    .line 140
+    .line 139
     :cond_0
+    invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->peek()Lcom/google/gson/stream/JsonToken;
+
+    move-result-object v0
+
     sget-object v1, Lcom/google/gson/stream/JsonToken;->STRING:Lcom/google/gson/stream/JsonToken;
 
     if-ne v0, v1, :cond_1
 
-    .line 142
+    .line 141
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->nextString()Ljava/lang/String;
 
     move-result-object p1
@@ -80,7 +83,7 @@
 
     return-object p1
 
-    .line 144
+    .line 143
     :cond_1
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->nextBoolean()Z
 
@@ -117,7 +120,7 @@
         }
     .end annotation
 
-    .line 148
+    .line 147
     invoke-virtual {p1, p2}, Lcom/google/gson/stream/JsonWriter;->value(Ljava/lang/Boolean;)Lcom/google/gson/stream/JsonWriter;
 
     return-void

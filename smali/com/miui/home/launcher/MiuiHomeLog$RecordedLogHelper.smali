@@ -19,6 +19,8 @@
 
 .field mDate:Ljava/util/Date;
 
+.field mDateTimeFormatter:Ljava/time/format/DateTimeFormatter;
+
 .field private mHead:Ljava/lang/String;
 
 .field mSimpleDateFormat:Ljava/text/SimpleDateFormat;
@@ -32,10 +34,10 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 1
 
-    .line 71
+    .line 79
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 60
+    .line 63
     new-instance v0, Ljava/util/Date;
 
     invoke-direct {v0}, Ljava/util/Date;-><init>()V
@@ -44,20 +46,47 @@
 
     const/4 v0, 0x0
 
-    .line 62
+    .line 66
     iput v0, p0, Lcom/miui/home/launcher/MiuiHomeLog$RecordedLogHelper;->mCurrentSavedLogNum:I
 
-    .line 63
+    .line 67
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     iput-object v0, p0, Lcom/miui/home/launcher/MiuiHomeLog$RecordedLogHelper;->mStringBuilder:Ljava/lang/StringBuilder;
 
-    .line 72
+    .line 80
     iput-object p1, p0, Lcom/miui/home/launcher/MiuiHomeLog$RecordedLogHelper;->mTag:Ljava/lang/String;
 
-    .line 73
+    .line 81
+    sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v0, 0x1a
+
+    if-lt p1, v0, :cond_0
+
+    const-string p1, "mm:ss.SSS"
+
+    .line 82
+    invoke-static {p1}, Ljava/time/format/DateTimeFormatter;->ofPattern(Ljava/lang/String;)Ljava/time/format/DateTimeFormatter;
+
+    move-result-object p1
+
+    invoke-static {}, Ljava/time/ZoneId;->systemDefault()Ljava/time/ZoneId;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/time/format/DateTimeFormatter;->withZone(Ljava/time/ZoneId;)Ljava/time/format/DateTimeFormatter;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/miui/home/launcher/MiuiHomeLog$RecordedLogHelper;->mDateTimeFormatter:Ljava/time/format/DateTimeFormatter;
+
+    goto :goto_0
+
+    .line 84
+    :cond_0
     new-instance p1, Ljava/text/SimpleDateFormat;
 
     const-string v0, "mm:ss.SSS"
@@ -66,6 +95,7 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/MiuiHomeLog$RecordedLogHelper;->mSimpleDateFormat:Ljava/text/SimpleDateFormat;
 
+    :goto_0
     return-void
 .end method
 
@@ -74,22 +104,22 @@
 .method public addMessage(Ljava/lang/String;)V
     .locals 4
 
-    .line 84
+    .line 96
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 85
+    .line 97
     iget v2, p0, Lcom/miui/home/launcher/MiuiHomeLog$RecordedLogHelper;->mCurrentSavedLogNum:I
 
     const/16 v3, 0x32
 
     if-le v2, v3, :cond_0
 
-    .line 86
+    .line 98
     invoke-virtual {p0}, Lcom/miui/home/launcher/MiuiHomeLog$RecordedLogHelper;->printAll()V
 
-    .line 88
+    .line 100
     :cond_0
     iget v2, p0, Lcom/miui/home/launcher/MiuiHomeLog$RecordedLogHelper;->mCurrentSavedLogNum:I
 
@@ -97,7 +127,7 @@
 
     iput v2, p0, Lcom/miui/home/launcher/MiuiHomeLog$RecordedLogHelper;->mCurrentSavedLogNum:I
 
-    .line 89
+    .line 101
     iget-object v2, p0, Lcom/miui/home/launcher/MiuiHomeLog$RecordedLogHelper;->mStringBuilder:Ljava/lang/StringBuilder;
 
     invoke-virtual {p0, v0, v1}, Lcom/miui/home/launcher/MiuiHomeLog$RecordedLogHelper;->getDateToString(J)Ljava/lang/String;
@@ -106,7 +136,7 @@
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 90
+    .line 102
     invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     return-void
@@ -115,12 +145,35 @@
 .method public getDateToString(J)Ljava/lang/String;
     .locals 1
 
-    .line 67
+    .line 71
     iget-object v0, p0, Lcom/miui/home/launcher/MiuiHomeLog$RecordedLogHelper;->mDate:Ljava/util/Date;
 
     invoke-virtual {v0, p1, p2}, Ljava/util/Date;->setTime(J)V
 
-    .line 68
+    .line 72
+    sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 p2, 0x1a
+
+    if-lt p1, p2, :cond_0
+
+    .line 73
+    iget-object p1, p0, Lcom/miui/home/launcher/MiuiHomeLog$RecordedLogHelper;->mDateTimeFormatter:Ljava/time/format/DateTimeFormatter;
+
+    iget-object p2, p0, Lcom/miui/home/launcher/MiuiHomeLog$RecordedLogHelper;->mDate:Ljava/util/Date;
+
+    invoke-virtual {p2}, Ljava/util/Date;->toInstant()Ljava/time/Instant;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Ljava/time/format/DateTimeFormatter;->format(Ljava/time/temporal/TemporalAccessor;)Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+
+    .line 75
+    :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/MiuiHomeLog$RecordedLogHelper;->mSimpleDateFormat:Ljava/text/SimpleDateFormat;
 
     iget-object p2, p0, Lcom/miui/home/launcher/MiuiHomeLog$RecordedLogHelper;->mDate:Ljava/util/Date;
@@ -135,7 +188,7 @@
 .method public printAll()V
     .locals 3
 
-    .line 94
+    .line 106
     iget-object v0, p0, Lcom/miui/home/launcher/MiuiHomeLog$RecordedLogHelper;->mTag:Ljava/lang/String;
 
     iget-object v1, p0, Lcom/miui/home/launcher/MiuiHomeLog$RecordedLogHelper;->mStringBuilder:Ljava/lang/StringBuilder;
@@ -146,7 +199,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 95
+    .line 107
     iget-object v0, p0, Lcom/miui/home/launcher/MiuiHomeLog$RecordedLogHelper;->mStringBuilder:Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
@@ -157,7 +210,7 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/lang/StringBuilder;->delete(II)Ljava/lang/StringBuilder;
 
-    .line 96
+    .line 108
     iget-object v0, p0, Lcom/miui/home/launcher/MiuiHomeLog$RecordedLogHelper;->mHead:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -166,14 +219,14 @@
 
     if-nez v0, :cond_0
 
-    .line 97
+    .line 109
     iget-object v0, p0, Lcom/miui/home/launcher/MiuiHomeLog$RecordedLogHelper;->mStringBuilder:Ljava/lang/StringBuilder;
 
     iget-object v1, p0, Lcom/miui/home/launcher/MiuiHomeLog$RecordedLogHelper;->mHead:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 99
+    .line 111
     :cond_0
     iput v2, p0, Lcom/miui/home/launcher/MiuiHomeLog$RecordedLogHelper;->mCurrentSavedLogNum:I
 
@@ -183,7 +236,7 @@
 .method public setHead(Ljava/lang/String;)V
     .locals 2
 
-    .line 77
+    .line 89
     iget-object v0, p0, Lcom/miui/home/launcher/MiuiHomeLog$RecordedLogHelper;->mHead:Ljava/lang/String;
 
     invoke-static {p1, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
@@ -192,10 +245,10 @@
 
     if-nez v0, :cond_0
 
-    .line 78
+    .line 90
     iput-object p1, p0, Lcom/miui/home/launcher/MiuiHomeLog$RecordedLogHelper;->mHead:Ljava/lang/String;
 
-    .line 79
+    .line 91
     iget-object v0, p0, Lcom/miui/home/launcher/MiuiHomeLog$RecordedLogHelper;->mStringBuilder:Ljava/lang/StringBuilder;
 
     const/4 v1, 0x0

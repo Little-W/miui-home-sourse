@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/FolderIcon;Lcom/miui/home/launcher/ShortcutInfo;)V
     .locals 0
 
-    .line 713
+    .line 721
     iput-object p1, p0, Lcom/miui/home/launcher/FolderIcon$12;->this$0:Lcom/miui/home/launcher/FolderIcon;
 
     iput-object p2, p0, Lcom/miui/home/launcher/FolderIcon$12;->val$info:Lcom/miui/home/launcher/ShortcutInfo;
@@ -42,12 +42,12 @@
 .method public run()V
     .locals 1
 
-    .line 715
+    .line 723
     iget-object v0, p0, Lcom/miui/home/launcher/FolderIcon$12;->val$info:Lcom/miui/home/launcher/ShortcutInfo;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/ShortcutInfo;->restoreCheckedStatus()V
 
-    .line 716
+    .line 724
     iget-object v0, p0, Lcom/miui/home/launcher/FolderIcon$12;->val$info:Lcom/miui/home/launcher/ShortcutInfo;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/ShortcutInfo;->getBuddyIconView()Lcom/miui/home/launcher/ShortcutIcon;
@@ -56,10 +56,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 718
+    .line 726
     invoke-virtual {v0}, Lcom/miui/home/launcher/ShortcutIcon;->showAllChildViewWhenDrawChild()V
 
-    .line 720
+    .line 728
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/FolderIcon$12;->val$info:Lcom/miui/home/launcher/ShortcutInfo;
 

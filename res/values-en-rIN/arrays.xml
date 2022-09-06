@@ -49,6 +49,13 @@
         <item>Default</item>
         <item>Classic</item>
     </string-array>
+    <string-array name="monochrome_color_entries">
+        <item>Default</item>
+        <item>Blue</item>
+        <item>Green</item>
+        <item>Purple</item>
+        <item>Brown</item>
+    </string-array>
     <string-array name="transformation_entries">
         <item>Slide</item>
         <item>Crossfade</item>

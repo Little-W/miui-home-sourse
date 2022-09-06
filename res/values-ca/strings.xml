@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="Icon_name_classic_mode">"Configuració de la pantalla d'inici"</string>
-    <string name="abc_action_bar_home_description">"Navega a la pàgina d'inici"</string>
+    <string name="abc_action_bar_home_description">"Navega fins a la pàgina d'inici"</string>
     <string name="abc_action_bar_up_description">Navega cap amunt</string>
     <string name="abc_action_menu_overflow_description">Més opcions</string>
     <string name="abc_action_mode_done">Fet</string>
@@ -82,7 +82,7 @@
     <string name="all_apps_search_app">Cerqueu aplicacions</string>
     <string name="all_apps_search_market_message">Cercar a internet</string>
     <string name="all_apps_setting_classic_title">Clàssic</string>
-    <string name="all_apps_setting_desktop_desc">"Mostra totes les aplicacions instal·lades a la Pantalla d'inici. Manteniu premuda la icona d'una aplicació per veure les dreceres disponibles, gestionar o desinstal·lar l'aplicació."</string>
+    <string name="all_apps_setting_desktop_desc">"Mostra totes les aplicacions instal·lades a la Pantalla d'inici. Premeu prolongadament la icona d'una aplicació per veure les dreceres disponibles, gestionar o desinstal·lar l'aplicació."</string>
     <string name="all_apps_setting_desktop_title">Normal</string>
     <string name="all_apps_setting_drawer_desc">"Col·loqueu totes les aplicacions instal·lades al Calaix d'aplicacions que es pot obrir desplegant-se a la Pantalla d'Inici. Encara podreu trobar les aplicacions que us vau desplaçar a la Pantalla d'Inici al Calaix d'aplicacions."</string>
     <string name="all_apps_setting_drawer_tips_desc">"El Calaix d'aplicacions s'obre desviant-se a la Pantalla d'Inici. Si canvieu al mode de Pantalla d'Inici amb el Calaix d'aplicacions, el Centre de continguts no estarà disponible. Voleu canviar de totes maneres?"</string>
@@ -177,6 +177,7 @@
     <string name="back">Enrere</string>
     <string name="backup_fail">"No s'ha pogut copiar el llançador"</string>
     <string name="bad_wallpaper_source_prompt">No es pot carregar el fons de pantalla</string>
+    <string name="bottomsheet_action_expand_halfway">Desplega fins a la meitat</string>
     <string name="branch_feature_description">"A més d'aplicacions, el Cercador ràpid pot trobar contingut i elements integrats a l'aplicació en línia."</string>
     <string name="branch_guide_attention">"L'ús de la cerca millorada requereix compartir les sol·licituds de cerca, l'identificador de Google Ads i l'adreça IP amb Branch Metrics Inc. Llegiu i accepteu "<a href="http://url1"><font color="#B3000000">"Condicions de detecció d'usuaris finals i Condicions"</font></a> i <a href="http://url2"><font color="#B3000000">Política de privadesa de Branch Discovery</font></a>" abans d'utilitzar aquesta funció."</string>
     <string name="branch_guide_description_one">"Posarem totes les vostres aplicacions al Calaix d'aplicacions. La Pantalla d'inici es veurà ordenada i organitzada."</string>
@@ -223,8 +224,11 @@
     <string name="category_group_summary">"Categoritza aplicacions al Calaix d'aplicacions"</string>
     <string name="category_not_selected">Aplicacions disponibles</string>
     <string name="change_wallpaper">Canvia</string>
+    <string name="character_counter_content_description">Caràcters introduïts: %1$d de %2$d</string>
+    <string name="character_counter_overflowed_content_description">"S'ha superat el límit de caràcters (%1$d de %2$d)"</string>
     <string name="choose_wallpaper">Tria un fons de pantalla</string>
     <string name="chooser_wallpaper">Tria un fons de pantalla nou</string>
+    <string name="clear_text_end_icon_content_description">Esborra el text</string>
     <string name="clearable_edittext_clear_description">Netejar</string>
     <string name="close">Tanca</string>
     <string name="close_multi_finger_slide_summary">"Aquests gestos s'ignoraran en alguns escenaris (p. ex., reproducció de jocs i vídeos)"</string>
@@ -285,7 +289,7 @@
     <string name="deselect_all">Desseleccioneu-ho tot</string>
     <string name="disable_wallpaper_scroll">Desactiva el desplaçament lateral</string>
     <string name="download_action">Baixa</string>
-    <string name="drag_icon_to_homescreen_guide">"Manteniu premuda la icona d'una aplicació i després deixeu anar per afegir una drecera a la Pantalla d'Inici"</string>
+    <string name="drag_icon_to_homescreen_guide">"Premeu prolongadament la icona d'una aplicació i després deixeu anar per afegir una drecera a la Pantalla d'Inici"</string>
     <string name="drag_multiple_item_name" />
     <string name="drag_single_item_name" />
     <string name="drawer_background">Fons de pantalla</string>
@@ -320,9 +324,12 @@
     <string name="enter_search_setting_title">"Obre la cerca després d'obrir el Calaix d'aplicacions"</string>
     <string name="eras_ad">EC</string>
     <string name="eras_bc">AEC</string>
+    <string name="error_icon_content_description">Error</string>
     <string name="evening">Tarda</string>
     <string name="exit_overview_because_task_stack_changed">"Tancat Recents a causa dels canvis que s'han produït en segon pla"</string>
     <string name="expand_button_title">Opcions avançades</string>
+    <string name="exposed_dropdown_menu_content_description">Mostra el menú desplegable</string>
+    <string name="external_not_support_split_screen_j18">"La pantalla dividida no s'admet a la pantalla exterior"</string>
     <string name="failed_to_delete_temporary">No es pot suprimir</string>
     <string name="failed_to_drop">No es pot moure</string>
     <string name="failed_to_drop_widget_invalid">Aquest giny és invàlid</string>
@@ -453,6 +460,7 @@
     <string name="home_screen">"Pantalla d'Inici"</string>
     <string name="home_slide_up_action">"Llisqueu amunt a la Pantalla d'Inici"</string>
     <string name="home_switch_personal_assistant">-1 pantalla</string>
+    <string name="icon_content_description">Icona del quadre de diàleg</string>
     <string name="icon_customize_summary">"Seleccioneu l'estil i ajusteu la mida"</string>
     <string name="icon_form">Icones</string>
     <string name="icon_reorganize_channel">Organitza les icones</string>
@@ -463,6 +471,7 @@
     <string name="invalid_contact_shortcut">El contacte no és vàlid</string>
     <string name="is_setting_wallpaper_message">Establint fons de pantalla…</string>
     <string name="is_system_wallpaper_message">No es poden suprimir els recursos del sistema</string>
+    <string name="item_view_role_description">Tabulador</string>
     <string name="key_shortcut_settings_title">Dreceres als botons</string>
     <string name="launcher_icon_management">"Gestioneu la Drecera a la Pantalla d'Inici"</string>
     <string name="launcher_not_exist">"S'ha produït un error. Aneu a la Pantalla d'Inici i proveu-ho de nou."</string>
@@ -497,6 +506,18 @@
     <string name="maml_download_tip_wait_wifi">Aquest element es baixaràn quan es connecti a la Wi-Fi</string>
     <string name="maml_download_tip_wait_wifi_china">Aquest element es baixaràn quan es connecti a la WLAN</string>
     <string name="manager_group_settings">"Gestionar les categories d'aplicacions"</string>
+    <string name="material_clock_toggle_content_description">Selecciona a. m. o p. m.</string>
+    <string name="material_hour_selection">"Seleccioneu l'hora"</string>
+    <string name="material_hour_suffix">%1$s en punt</string>
+    <string name="material_minute_selection">Selecciona els minuts</string>
+    <string name="material_minute_suffix">%1$s minuts</string>
+    <string name="material_timepicker_am">a. m.</string>
+    <string name="material_timepicker_clock_mode_description">"Canvia al mode de rellotge per introduir l'hora."</string>
+    <string name="material_timepicker_hour">Hora</string>
+    <string name="material_timepicker_minute">Minut</string>
+    <string name="material_timepicker_pm">p. m.</string>
+    <string name="material_timepicker_select_time">"Selecció de l'hora"</string>
+    <string name="material_timepicker_text_input_mode_description">"Canvia al mode d'introducció de text per introduir l'hora."</string>
     <string name="memory_clear_nothing_result">No hi ha res per netejar a la memòria cau</string>
     <string name="memory_clear_result">%1$sB esborrats</string>
     <string name="memory_clear_result_giga">%1$s GB netejat</string>
@@ -527,6 +548,7 @@
     <string name="midnight">Nit</string>
     <string name="minus_one_screen">"Calaix d'aplicacions"</string>
     <string name="miui_screen_config_title">"Configuració de la Pantalla d'Inici"</string>
+    <string name="miui_widget_menu_replace_text">Canvia</string>
     <string name="miuix_access_state_desc">Seleccionat</string>
     <string name="miuix_appcompat_action_mode_deselect_all">Anul·la la selecció</string>
     <string name="miuix_appcompat_action_mode_select_all">Seleccioneu-ho tot</string>
@@ -553,6 +575,8 @@
     <string name="monday">dilluns</string>
     <string name="monday_short">dl.</string>
     <string name="monday_shortest">dl.</string>
+    <string name="monochrome_summary">Canvia el color de fons per a les icones compatibles</string>
+    <string name="monochrome_title">Color de fons</string>
     <string name="month_april">abril</string>
     <string name="month_april_short">abr</string>
     <string name="month_april_shortest">abr</string>
@@ -591,6 +615,39 @@
     <string name="month_september_shortest">set</string>
     <string name="more">Més</string>
     <string name="morning">Matí</string>
+    <string name="mtrl_badge_numberless_content_description">Notificació nova</string>
+    <string name="mtrl_chip_close_icon_content_description">Suprimeix %1$s</string>
+    <string name="mtrl_exceed_max_badge_number_content_description">Més de %1$d notificacions noves</string>
+    <string name="mtrl_picker_a11y_next_month">Canvia al mes següent</string>
+    <string name="mtrl_picker_a11y_prev_month">Canvia al mes anterior</string>
+    <string name="mtrl_picker_announce_current_selection">Selecció actual: %1$s</string>
+    <string name="mtrl_picker_confirm">@android:string/ok</string>
+    <string name="mtrl_picker_date_header_selected">%1$s</string>
+    <string name="mtrl_picker_date_header_title">Selecciona una data</string>
+    <string name="mtrl_picker_date_header_unselected">Data seleccionada</string>
+    <string name="mtrl_picker_day_of_week_column_header">Columna de dies: %1$s</string>
+    <string name="mtrl_picker_invalid_format">El format no és vàlid.</string>
+    <string name="mtrl_picker_invalid_format_example">Exemple: %1$s</string>
+    <string name="mtrl_picker_invalid_format_use">Utilitza: %1$s</string>
+    <string name="mtrl_picker_invalid_range">"L'interval no és vàlid."</string>
+    <string name="mtrl_picker_navigate_to_year_description">"Canvia a l'any %1$s"</string>
+    <string name="mtrl_picker_out_of_range">"La data està fora de l'interval: %1$s"</string>
+    <string name="mtrl_picker_range_header_only_end_selected">"Data d'inici - %1$s"</string>
+    <string name="mtrl_picker_range_header_only_start_selected">%1$s - data de finalització</string>
+    <string name="mtrl_picker_range_header_selected">%1$s - %2$s</string>
+    <string name="mtrl_picker_range_header_title">Selecciona un interval</string>
+    <string name="mtrl_picker_range_header_unselected">"Data d'inici - data de finalització"</string>
+    <string name="mtrl_picker_save">Desa</string>
+    <string name="mtrl_picker_text_input_date_hint">Data</string>
+    <string name="mtrl_picker_text_input_date_range_end_hint">Data de finalització</string>
+    <string name="mtrl_picker_text_input_date_range_start_hint">"Data d'inici"</string>
+    <string name="mtrl_picker_text_input_day_abbr">d</string>
+    <string name="mtrl_picker_text_input_month_abbr">m</string>
+    <string name="mtrl_picker_text_input_year_abbr">a</string>
+    <string name="mtrl_picker_toggle_to_calendar_input_mode">"Canvia al mode d'introducció de dades del calendari"</string>
+    <string name="mtrl_picker_toggle_to_day_selection">Toca per canviar a la selecció del dia</string>
+    <string name="mtrl_picker_toggle_to_text_input_mode">"Canvia al mode d'introducció de text"</string>
+    <string name="mtrl_picker_toggle_to_year_selection">"Toca per canviar a la selecció de l'any"</string>
     <string name="mtzgadget_missing_text">El giny no està disponible</string>
     <string name="multi_selecting_tips">Per triar una aplicació arrossegueu i deixeu anar la icona aquí.</string>
     <string name="navigation_guide_app_quick_switch_hide_line_summary">"Fes lliscar el dit cap amunt des de la part inferior de la pantalla, i després cap a l'esquerra o cap a la dreta"</string>
@@ -683,6 +740,7 @@
     <string name="ota_layout_adjustment_title">"Disposició de la Pantalla d'Inici"</string>
     <string name="out_of_space">"No queda més espai en aquesta Pantalla d'Inici"</string>
     <string name="pair_icon_name">%1$s | %2$s</string>
+    <string name="password_toggle_content_description">Mostra la contrasenya</string>
     <string name="perfect_icons_switch_summary">"Renderitza les animacions de les icones d'aplicacions de tercers"</string>
     <string name="perfect_icons_switch_title">"Animacions d'icones globals"</string>
     <string name="permdesc_install_shortcut">"Permet a una aplicació afegir accessos directes sense intervenció de l'usuari."</string>

@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/recents/BaseRecentsImpl;Landroid/os/Handler;)V
     .locals 0
 
-    .line 556
+    .line 573
     iput-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$9;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -33,10 +33,10 @@
 .method public static synthetic lambda$onChange$0(Lcom/miui/home/recents/BaseRecentsImpl$9;)V
     .locals 3
 
-    .line 560
+    .line 577
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl$9;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
-    .line 561
+    .line 578
     invoke-static {v0}, Lcom/miui/home/recents/BaseRecentsImpl;->access$200(Lcom/miui/home/recents/BaseRecentsImpl;)Landroid/content/Context;
 
     move-result-object v0
@@ -57,7 +57,7 @@
 
     const/4 v2, 0x1
 
-    .line 563
+    .line 580
     :cond_0
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl$9;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
@@ -67,7 +67,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 564
+    .line 581
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl$9;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     invoke-static {v0}, Lcom/miui/home/recents/BaseRecentsImpl;->access$900(Lcom/miui/home/recents/BaseRecentsImpl;)Lcom/miui/home/recents/GestureStubView;
@@ -76,7 +76,7 @@
 
     invoke-virtual {v0, v2}, Lcom/miui/home/recents/GestureStubView;->disableQuickSwitch(Z)V
 
-    .line 567
+    .line 584
     :cond_1
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl$9;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
@@ -86,7 +86,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 568
+    .line 585
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl$9;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     invoke-static {v0}, Lcom/miui/home/recents/BaseRecentsImpl;->access$1000(Lcom/miui/home/recents/BaseRecentsImpl;)Lcom/miui/home/recents/GestureStubView;
@@ -104,7 +104,7 @@
 .method public onChange(Z)V
     .locals 1
 
-    .line 559
+    .line 576
     sget-object p1, Lcom/miui/home/recents/TouchInteractionService;->BACKGROUND_EXECUTOR:Lcom/miui/home/library/utils/LooperExecutor;
 
     new-instance v0, Lcom/miui/home/recents/-$$Lambda$BaseRecentsImpl$9$B5PcBQCntJPZUO5HVfGo_7Wt6vM;

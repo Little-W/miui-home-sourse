@@ -27,13 +27,13 @@
 .method public constructor <init>(Lmiuix/preference/DropDownPreference;Landroid/widget/ArrayAdapter;)V
     .locals 0
 
-    .line 485
+    .line 487
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 486
+    .line 488
     iput-object p1, p0, Lmiuix/preference/DropDownPreference$PreferenceCheckedProvider;->mPreference:Lmiuix/preference/DropDownPreference;
 
-    .line 487
+    .line 489
     iput-object p2, p0, Lmiuix/preference/DropDownPreference$PreferenceCheckedProvider;->mAdapter:Landroid/widget/ArrayAdapter;
 
     return-void
@@ -44,7 +44,7 @@
 .method public isChecked(I)Z
     .locals 2
 
-    .line 492
+    .line 494
     iget-object v0, p0, Lmiuix/preference/DropDownPreference$PreferenceCheckedProvider;->mPreference:Lmiuix/preference/DropDownPreference;
 
     invoke-virtual {v0}, Lmiuix/preference/DropDownPreference;->getValue()Ljava/lang/String;

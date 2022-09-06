@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/anim/NormalEditEnterAnim;)V
     .locals 0
 
-    .line 188
+    .line 186
     iput-object p1, p0, Lcom/miui/home/launcher/anim/NormalEditEnterAnim$3;->this$0:Lcom/miui/home/launcher/anim/NormalEditEnterAnim;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .locals 0
 
-    .line 196
+    .line 194
     iget-object p1, p0, Lcom/miui/home/launcher/anim/NormalEditEnterAnim$3;->this$0:Lcom/miui/home/launcher/anim/NormalEditEnterAnim;
 
     iget-object p1, p1, Lcom/miui/home/launcher/anim/NormalEditEnterAnim;->mCellLayout:Lcom/miui/home/launcher/CellLayout;
@@ -54,7 +54,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 0
 
-    .line 191
+    .line 189
     iget-object p1, p0, Lcom/miui/home/launcher/anim/NormalEditEnterAnim$3;->this$0:Lcom/miui/home/launcher/anim/NormalEditEnterAnim;
 
     iget-object p1, p1, Lcom/miui/home/launcher/anim/NormalEditEnterAnim;->mCellLayout:Lcom/miui/home/launcher/CellLayout;
@@ -73,7 +73,7 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 0
 
-    .line 201
+    .line 199
     iget-object p1, p0, Lcom/miui/home/launcher/anim/NormalEditEnterAnim$3;->this$0:Lcom/miui/home/launcher/anim/NormalEditEnterAnim;
 
     iget-object p1, p1, Lcom/miui/home/launcher/anim/NormalEditEnterAnim;->mCellLayout:Lcom/miui/home/launcher/CellLayout;

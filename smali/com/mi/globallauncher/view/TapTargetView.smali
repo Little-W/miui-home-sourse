@@ -2164,7 +2164,7 @@
 
     move-result-object v1
 
-    const-string p0, "window"
+    const-string/jumbo p0, "window"
 
     .line 182
     invoke-virtual {v1, p0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;

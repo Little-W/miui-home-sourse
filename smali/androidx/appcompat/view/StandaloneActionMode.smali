@@ -77,7 +77,7 @@
 
 # virtual methods
 .method public finish()V
-    .locals 2
+    .locals 1
 
     .line 105
     iget-boolean v0, p0, Landroidx/appcompat/view/StandaloneActionMode;->mFinished:Z
@@ -93,13 +93,6 @@
     iput-boolean v0, p0, Landroidx/appcompat/view/StandaloneActionMode;->mFinished:Z
 
     .line 110
-    iget-object v0, p0, Landroidx/appcompat/view/StandaloneActionMode;->mContextView:Landroidx/appcompat/widget/ActionBarContextView;
-
-    const/16 v1, 0x20
-
-    invoke-virtual {v0, v1}, Landroidx/appcompat/widget/ActionBarContextView;->sendAccessibilityEvent(I)V
-
-    .line 111
     iget-object v0, p0, Landroidx/appcompat/view/StandaloneActionMode;->mCallback:Landroidx/appcompat/view/ActionMode$Callback;
 
     invoke-interface {v0, p0}, Landroidx/appcompat/view/ActionMode$Callback;->onDestroyActionMode(Landroidx/appcompat/view/ActionMode;)V
@@ -110,7 +103,7 @@
 .method public getCustomView()Landroid/view/View;
     .locals 1
 
-    .line 131
+    .line 130
     iget-object v0, p0, Landroidx/appcompat/view/StandaloneActionMode;->mCustomView:Ljava/lang/ref/WeakReference;
 
     if-eqz v0, :cond_0
@@ -133,7 +126,7 @@
 .method public getMenu()Landroid/view/Menu;
     .locals 1
 
-    .line 116
+    .line 115
     iget-object v0, p0, Landroidx/appcompat/view/StandaloneActionMode;->mMenu:Landroidx/appcompat/view/menu/MenuBuilder;
 
     return-object v0
@@ -142,7 +135,7 @@
 .method public getMenuInflater()Landroid/view/MenuInflater;
     .locals 2
 
-    .line 136
+    .line 135
     new-instance v0, Landroidx/appcompat/view/SupportMenuInflater;
 
     iget-object v1, p0, Landroidx/appcompat/view/StandaloneActionMode;->mContextView:Landroidx/appcompat/widget/ActionBarContextView;
@@ -159,7 +152,7 @@
 .method public getSubtitle()Ljava/lang/CharSequence;
     .locals 1
 
-    .line 126
+    .line 125
     iget-object v0, p0, Landroidx/appcompat/view/StandaloneActionMode;->mContextView:Landroidx/appcompat/widget/ActionBarContextView;
 
     invoke-virtual {v0}, Landroidx/appcompat/widget/ActionBarContextView;->getSubtitle()Ljava/lang/CharSequence;
@@ -172,7 +165,7 @@
 .method public getTitle()Ljava/lang/CharSequence;
     .locals 1
 
-    .line 121
+    .line 120
     iget-object v0, p0, Landroidx/appcompat/view/StandaloneActionMode;->mContextView:Landroidx/appcompat/widget/ActionBarContextView;
 
     invoke-virtual {v0}, Landroidx/appcompat/widget/ActionBarContextView;->getTitle()Ljava/lang/CharSequence;
@@ -211,7 +204,7 @@
 .method public onMenuItemSelected(Landroidx/appcompat/view/menu/MenuBuilder;Landroid/view/MenuItem;)Z
     .locals 0
 
-    .line 141
+    .line 140
     iget-object p1, p0, Landroidx/appcompat/view/StandaloneActionMode;->mCallback:Landroidx/appcompat/view/ActionMode$Callback;
 
     invoke-interface {p1, p0, p2}, Landroidx/appcompat/view/ActionMode$Callback;->onActionItemClicked(Landroidx/appcompat/view/ActionMode;Landroid/view/MenuItem;)Z
@@ -224,10 +217,10 @@
 .method public onMenuModeChange(Landroidx/appcompat/view/menu/MenuBuilder;)V
     .locals 0
 
-    .line 161
+    .line 160
     invoke-virtual {p0}, Landroidx/appcompat/view/StandaloneActionMode;->invalidate()V
 
-    .line 162
+    .line 161
     iget-object p1, p0, Landroidx/appcompat/view/StandaloneActionMode;->mContextView:Landroidx/appcompat/widget/ActionBarContextView;
 
     invoke-virtual {p1}, Landroidx/appcompat/widget/ActionBarContextView;->showOverflowMenu()Z

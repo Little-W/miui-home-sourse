@@ -604,6 +604,20 @@
     return p1
 .end method
 
+.method public onRestoreInstanceState(Landroid/os/Parcelable;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onSaveInstanceState()Landroid/os/Parcelable;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
 .method public onSubMenuSelected(Landroidx/appcompat/view/menu/SubMenuBuilder;)Z
     .locals 9
 

@@ -293,6 +293,7 @@
     <string name="eras_bc">MA</string>
     <string name="evening">Kunduzi</string>
     <string name="exit_overview_because_task_stack_changed">"Orqa fonda sodir bo‘lgan o'zgarishlar tufayli Eng so‘nggilar yopildi"</string>
+    <string name="external_not_support_split_screen_j18">Bo‘lingan ekran tashqi ekranda qo‘llab-quvvatlanmaydi</string>
     <string name="failed_to_delete_temporary">O‘chirib bo‘lmadi</string>
     <string name="failed_to_drop">Ko‘chirib bo‘lmadi</string>
     <string name="failed_to_drop_widget_invalid">Ushbu vidjet yaroqsiz</string>
@@ -497,6 +498,7 @@
     <string name="midnight">Tun</string>
     <string name="minus_one_screen">Ilovalar omborxonasi</string>
     <string name="miui_screen_config_title">Bosh ekran sozlamalari</string>
+    <string name="miui_widget_menu_replace_text">O‘zgartirish</string>
     <string name="miuix_access_state_desc">Tanlandi</string>
     <string name="miuix_appcompat_action_mode_deselect_all">Olib tashlash</string>
     <string name="miuix_appcompat_action_mode_select_all">Barchasini tanlash</string>
@@ -523,6 +525,8 @@
     <string name="monday">Dushanba</string>
     <string name="monday_short">Du</string>
     <string name="monday_shortest">Dsh</string>
+    <string name="monochrome_summary">Change background color for compatible icons</string>
+    <string name="monochrome_title">Background color</string>
     <string name="month_april">Aprel</string>
     <string name="month_april_short">Apr</string>
     <string name="month_april_shortest">Apr</string>

@@ -31,12 +31,12 @@
 .method protected constructor <init>(Lcom/miui/maml/elements/ScreenElement;Lcom/miui/maml/util/Variable;Ljava/lang/String;)V
     .locals 0
 
-    .line 1324
+    .line 1329
     invoke-direct {p0, p1, p2, p3}, Lcom/miui/maml/ActionCommand$PropertyCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;Lcom/miui/maml/util/Variable;Ljava/lang/String;)V
 
     const-string p1, "toggle"
 
-    .line 1325
+    .line 1330
     invoke-virtual {p3, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result p1
@@ -45,7 +45,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 1326
+    .line 1331
     iput-boolean p2, p0, Lcom/miui/maml/ActionCommand$VisibilityProperty;->mIsToggle:Z
 
     goto :goto_0
@@ -53,14 +53,14 @@
     :cond_0
     const-string p1, "true"
 
-    .line 1327
+    .line 1332
     invoke-virtual {p3, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 1328
+    .line 1333
     iput-boolean p2, p0, Lcom/miui/maml/ActionCommand$VisibilityProperty;->mIsShow:Z
 
     goto :goto_0
@@ -68,7 +68,7 @@
     :cond_1
     const-string p1, "false"
 
-    .line 1329
+    .line 1334
     invoke-virtual {p3, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result p1
@@ -77,7 +77,7 @@
 
     const/4 p1, 0x0
 
-    .line 1330
+    .line 1335
     iput-boolean p1, p0, Lcom/miui/maml/ActionCommand$VisibilityProperty;->mIsShow:Z
 
     :cond_2
@@ -90,12 +90,12 @@
 .method public doPerform()V
     .locals 2
 
-    .line 1335
+    .line 1340
     iget-boolean v0, p0, Lcom/miui/maml/ActionCommand$VisibilityProperty;->mIsToggle:Z
 
     if-eqz v0, :cond_0
 
-    .line 1336
+    .line 1341
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$VisibilityProperty;->mTargetElement:Lcom/miui/maml/elements/ScreenElement;
 
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$VisibilityProperty;->mTargetElement:Lcom/miui/maml/elements/ScreenElement;
@@ -110,7 +110,7 @@
 
     goto :goto_0
 
-    .line 1338
+    .line 1343
     :cond_0
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$VisibilityProperty;->mTargetElement:Lcom/miui/maml/elements/ScreenElement;
 

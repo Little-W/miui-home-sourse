@@ -79,7 +79,7 @@
 
     const-string v30, "session_start_with_rollout"
 
-    const-string v31, "user_engagement"
+    const-string/jumbo v31, "user_engagement"
 
     const-string v32, "ad_impression"
 
@@ -204,13 +204,13 @@
 
     const-string v10, "select_promotion"
 
-    const-string v11, "view_cart"
+    const-string/jumbo v11, "view_cart"
 
-    const-string v12, "view_item"
+    const-string/jumbo v12, "view_item"
 
-    const-string v13, "view_item_list"
+    const-string/jumbo v13, "view_item_list"
 
-    const-string v14, "view_promotion"
+    const-string/jumbo v14, "view_promotion"
 
     const-string v15, "ecommerce_purchase"
 
@@ -222,7 +222,7 @@
 
     const-string v19, "select_content"
 
-    const-string v20, "view_search_results"
+    const-string/jumbo v20, "view_search_results"
 
     .line 6
     filled-new-array/range {v1 .. v20}, [Ljava/lang/String;

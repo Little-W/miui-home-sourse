@@ -293,6 +293,7 @@
     <string name="eras_bc">கிமு</string>
     <string name="evening">பிற்பகல்</string>
     <string name="exit_overview_because_task_stack_changed">பின்னணியில் நடந்த மாற்றங்களால், சமீபத்தியவை மூடப்பட்டது</string>
+    <string name="external_not_support_split_screen_j18">வெளிப்புறத் திரையில் ஸ்பிளிட் ஸ்கிரீன் ஆதரிக்கப்படாது.</string>
     <string name="failed_to_delete_temporary">அகற்ற முடியவில்லை</string>
     <string name="failed_to_drop">நகர்த்த முடியவில்லை</string>
     <string name="failed_to_drop_widget_invalid">விட்ஜெட் செல்லாதது</string>
@@ -497,6 +498,7 @@
     <string name="midnight">இரவு</string>
     <string name="minus_one_screen">செயலி வைப்பகம்</string>
     <string name="miui_screen_config_title">முகப்புத்திரை அமைப்புகள்</string>
+    <string name="miui_widget_menu_replace_text">மாற்று</string>
     <string name="miuix_access_state_desc">தேர்ந்தெடுக்கப்பட்டது</string>
     <string name="miuix_appcompat_action_mode_deselect_all">தேர்வை நீக்கு</string>
     <string name="miuix_appcompat_action_mode_select_all">எல்லாம் தேர்ந்தெடு</string>
@@ -523,6 +525,8 @@
     <string name="monday">திங்கள்</string>
     <string name="monday_short">திங்</string>
     <string name="monday_shortest">திங்</string>
+    <string name="monochrome_summary">இணக்கமான ஐகான்களுக்கு பின்னணி நிறத்தை மாற்றவும்</string>
+    <string name="monochrome_title">பின்னணி நிறம்</string>
     <string name="month_april">ஏப்ரல்</string>
     <string name="month_april_short">ஏப்</string>
     <string name="month_april_shortest">ஏப்</string>

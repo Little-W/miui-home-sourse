@@ -34,7 +34,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher$42$1;Ljava/lang/String;)V
     .locals 0
 
-    .line 4110
+    .line 4165
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$42$1$1;->this$2:Lcom/miui/home/launcher/Launcher$42$1;
 
     iput-object p2, p0, Lcom/miui/home/launcher/Launcher$42$1$1;->val$wallpaperInfo:Ljava/lang/String;
@@ -49,7 +49,7 @@
 .method protected varargs doInBackground([Landroid/net/Uri;)Ljava/lang/Boolean;
     .locals 3
 
-    .line 4113
+    .line 4168
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$42$1$1;->this$2:Lcom/miui/home/launcher/Launcher$42$1;
 
     iget-object v0, v0, Lcom/miui/home/launcher/Launcher$42$1;->val$tmpIntent:Landroid/content/Intent;
@@ -66,7 +66,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 4115
+    .line 4170
     aget-object p1, p1, v2
 
     invoke-static {p1, v1}, Lcom/miui/home/launcher/WallpaperUtils;->setLockWallpaper(Landroid/net/Uri;Z)Z
@@ -79,7 +79,7 @@
 
     return-object p1
 
-    .line 4117
+    .line 4172
     :cond_0
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -91,7 +91,7 @@
 .method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 4110
+    .line 4165
     check-cast p1, [Landroid/net/Uri;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Launcher$42$1$1;->doInBackground([Landroid/net/Uri;)Ljava/lang/Boolean;
@@ -104,14 +104,14 @@
 .method protected onPostExecute(Ljava/lang/Boolean;)V
     .locals 2
 
-    .line 4123
+    .line 4178
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 4124
+    .line 4179
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -136,7 +136,7 @@
 
     move-result-object p1
 
-    .line 4126
+    .line 4181
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$42$1$1;->this$2:Lcom/miui/home/launcher/Launcher$42$1;
 
     iget-object v0, v0, Lcom/miui/home/launcher/Launcher$42$1;->this$1:Lcom/miui/home/launcher/Launcher$42;
@@ -149,7 +149,7 @@
 
     goto :goto_0
 
-    .line 4129
+    .line 4184
     :cond_0
     new-instance p1, Landroid/content/Intent;
 
@@ -161,10 +161,10 @@
 
     const/4 v1, 0x0
 
-    .line 4130
+    .line 4185
     invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 4131
+    .line 4186
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$42$1$1;->this$2:Lcom/miui/home/launcher/Launcher$42$1;
 
     iget-object v0, v0, Lcom/miui/home/launcher/Launcher$42$1;->this$1:Lcom/miui/home/launcher/Launcher$42;
@@ -180,7 +180,7 @@
 .method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
 
-    .line 4110
+    .line 4165
     check-cast p1, Ljava/lang/Boolean;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Launcher$42$1$1;->onPostExecute(Ljava/lang/Boolean;)V

@@ -40,7 +40,7 @@
 
     sget-object v1, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
-    const-string v2, "width"
+    const-string/jumbo v2, "width"
 
     invoke-direct {v0, v1, v2}, Lcom/miui/home/launcher/SearchBar$1;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
@@ -297,7 +297,7 @@
     .line 58
     invoke-super {p0}, Landroid/widget/FrameLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a0215
+    const v0, 0x7f0a02d1
 
     .line 59
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/SearchBar;->findViewById(I)Landroid/view/View;
@@ -308,7 +308,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/SearchBar;->mDesktopLayout:Lcom/miui/home/launcher/SearchBarDesktopLayout;
 
-    const v0, 0x7f0a0216
+    const v0, 0x7f0a02d2
 
     .line 60
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/SearchBar;->findViewById(I)Landroid/view/View;

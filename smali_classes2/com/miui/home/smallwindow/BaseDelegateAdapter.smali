@@ -55,23 +55,23 @@
 .method public constructor <init>(Landroid/content/Context;I)V
     .locals 1
 
-    .line 39
+    .line 40
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 32
+    .line 33
     iput v0, p0, Lcom/miui/home/smallwindow/BaseDelegateAdapter;->mLayoutId:I
 
     const/4 v0, 0x0
 
-    .line 37
+    .line 38
     iput v0, p0, Lcom/miui/home/smallwindow/BaseDelegateAdapter;->mSelectedCount:I
 
-    .line 40
+    .line 41
     iput-object p1, p0, Lcom/miui/home/smallwindow/BaseDelegateAdapter;->mContext:Landroid/content/Context;
 
-    .line 41
+    .line 42
     iput p2, p0, Lcom/miui/home/smallwindow/BaseDelegateAdapter;->mLayoutId:I
 
     return-void
@@ -80,7 +80,7 @@
 .method static synthetic access$200(Lcom/miui/home/smallwindow/BaseDelegateAdapter;)Landroid/content/Context;
     .locals 0
 
-    .line 21
+    .line 22
     iget-object p0, p0, Lcom/miui/home/smallwindow/BaseDelegateAdapter;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -89,10 +89,58 @@
 .method static synthetic access$300(Lcom/miui/home/smallwindow/BaseDelegateAdapter;)Ljava/util/ArrayList;
     .locals 0
 
-    .line 21
+    .line 22
     iget-object p0, p0, Lcom/miui/home/smallwindow/BaseDelegateAdapter;->mItemInfoList:Ljava/util/ArrayList;
 
     return-object p0
+.end method
+
+.method private checkIsInSmallWindow(Ljava/lang/String;)Z
+    .locals 2
+
+    .line 173
+    invoke-static {}, Lcom/miui/home/smallwindow/SmallWindowStateHelper;->getInstance()Lcom/miui/home/smallwindow/SmallWindowStateHelper;
+
+    move-result-object v0
+
+    invoke-static {}, Landroid/os/Process;->myUserHandle()Landroid/os/UserHandle;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/miui/launcher/utils/LauncherUtils;->getUserId(Landroid/os/UserHandle;)I
+
+    move-result v1
+
+    invoke-virtual {v0, p1, v1}, Lcom/miui/home/smallwindow/SmallWindowStateHelper;->isPkgInSmallWindowMode(Ljava/lang/String;I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const-string v0, "Launcher_BaseDelegateAdapter"
+
+    const-string v1, "checkIsInSmallWindow: is in small window"
+
+    .line 174
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 175
+    iget-object v0, p0, Lcom/miui/home/smallwindow/BaseDelegateAdapter;->mItemViewCallback:Lcom/miui/home/smallwindow/ItemViewCallback;
+
+    if-eqz v0, :cond_0
+
+    .line 176
+    invoke-interface {v0, p1}, Lcom/miui/home/smallwindow/ItemViewCallback;->onItemClicked(Ljava/lang/String;)V
+
+    :cond_0
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    return p1
 .end method
 
 
@@ -100,7 +148,7 @@
 .method public getItemCount()I
     .locals 1
 
-    .line 109
+    .line 110
     iget-object v0, p0, Lcom/miui/home/smallwindow/BaseDelegateAdapter;->mItemInfoList:Ljava/util/ArrayList;
 
     if-nez v0, :cond_0
@@ -109,7 +157,7 @@
 
     return v0
 
-    .line 113
+    .line 114
     :cond_0
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -123,17 +171,17 @@
 .method public getItemViewType(I)I
     .locals 1
 
-    .line 100
+    .line 101
     iget v0, p0, Lcom/miui/home/smallwindow/BaseDelegateAdapter;->mSelectedCount:I
 
     if-ne p1, v0, :cond_0
 
-    .line 101
+    .line 102
     sget p1, Lcom/miui/home/smallwindow/BaseDelegateAdapter;->ITEM_VIEW_TYPE_SPLIT:I
 
     return p1
 
-    .line 103
+    .line 104
     :cond_0
     sget p1, Lcom/miui/home/smallwindow/BaseDelegateAdapter;->ITEM_VIEW_TYPE_ITEM:I
 
@@ -143,7 +191,7 @@
 .method public getSelectedCount()I
     .locals 1
 
-    .line 121
+    .line 122
     iget v0, p0, Lcom/miui/home/smallwindow/BaseDelegateAdapter;->mSelectedCount:I
 
     return v0
@@ -152,7 +200,7 @@
 .method public bridge synthetic onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
     .locals 0
 
-    .line 21
+    .line 22
     check-cast p1, Lcom/miui/home/smallwindow/BaseViewHolder;
 
     invoke-virtual {p0, p1, p2}, Lcom/miui/home/smallwindow/BaseDelegateAdapter;->onBindViewHolder(Lcom/miui/home/smallwindow/BaseViewHolder;I)V
@@ -163,21 +211,21 @@
 .method public onBindViewHolder(Lcom/miui/home/smallwindow/BaseViewHolder;I)V
     .locals 3
 
-    .line 61
+    .line 62
     iget v0, p0, Lcom/miui/home/smallwindow/BaseDelegateAdapter;->mSelectedCount:I
 
     if-ne p2, v0, :cond_2
 
     if-eqz v0, :cond_1
 
-    .line 62
+    .line 63
     sget p2, Lcom/miui/home/smallwindow/SmallWindowSelectedAdapter;->SELECTED_LIST_MAX_SIZE:I
 
     if-ne v0, p2, :cond_0
 
     goto :goto_0
 
-    .line 65
+    .line 66
     :cond_0
     sget p2, Lcom/miui/home/smallwindow/R$id;->split:I
 
@@ -187,7 +235,7 @@
 
     goto :goto_1
 
-    .line 63
+    .line 64
     :cond_1
     :goto_0
     sget p2, Lcom/miui/home/smallwindow/R$id;->split:I
@@ -207,7 +255,7 @@
     :cond_3
     add-int/lit8 p2, p2, -0x1
 
-    .line 71
+    .line 72
     :goto_2
     sget v0, Lcom/miui/home/smallwindow/R$id;->icon:I
 
@@ -217,7 +265,7 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    .line 72
+    .line 73
     iget-object v1, p0, Lcom/miui/home/smallwindow/BaseDelegateAdapter;->mItemInfoList:Ljava/util/ArrayList;
 
     invoke-virtual {v1, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -232,7 +280,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 73
+    .line 74
     sget v1, Lcom/miui/home/smallwindow/R$id;->title:I
 
     invoke-virtual {p1, v1}, Lcom/miui/home/smallwindow/BaseViewHolder;->getView(I)Landroid/view/View;
@@ -241,7 +289,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    .line 74
+    .line 75
     iget-object v2, p0, Lcom/miui/home/smallwindow/BaseDelegateAdapter;->mItemInfoList:Ljava/util/ArrayList;
 
     invoke-virtual {v2, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -256,7 +304,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 75
+    .line 76
     sget v2, Lcom/miui/home/smallwindow/R$id;->container:I
 
     invoke-virtual {p1, v2}, Lcom/miui/home/smallwindow/BaseViewHolder;->getView(I)Landroid/view/View;
@@ -265,7 +313,7 @@
 
     if-eqz p1, :cond_4
 
-    .line 77
+    .line 78
     iget-object v2, p0, Lcom/miui/home/smallwindow/BaseDelegateAdapter;->mItemInfoList:Ljava/util/ArrayList;
 
     invoke-virtual {v2, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -280,7 +328,7 @@
 
     invoke-virtual {p1, v2}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 79
+    .line 80
     :cond_4
     new-instance p1, Lcom/miui/home/smallwindow/BaseDelegateAdapter$1;
 
@@ -288,7 +336,7 @@
 
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 88
+    .line 89
     new-instance p1, Lcom/miui/home/smallwindow/BaseDelegateAdapter$2;
 
     invoke-direct {p1, p0, p2}, Lcom/miui/home/smallwindow/BaseDelegateAdapter$2;-><init>(Lcom/miui/home/smallwindow/BaseDelegateAdapter;I)V
@@ -301,7 +349,7 @@
 .method public bridge synthetic onCreateViewHolder(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
     .locals 0
 
-    .line 21
+    .line 22
     invoke-virtual {p0, p1, p2}, Lcom/miui/home/smallwindow/BaseDelegateAdapter;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/miui/home/smallwindow/BaseViewHolder;
 
     move-result-object p1
@@ -312,14 +360,14 @@
 .method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/miui/home/smallwindow/BaseViewHolder;
     .locals 3
 
-    .line 50
+    .line 51
     sget v0, Lcom/miui/home/smallwindow/BaseDelegateAdapter;->ITEM_VIEW_TYPE_ITEM:I
 
     const/4 v1, 0x0
 
     if-ne p2, v0, :cond_0
 
-    .line 51
+    .line 52
     new-instance p2, Lcom/miui/home/smallwindow/BaseViewHolder;
 
     iget-object v0, p0, Lcom/miui/home/smallwindow/BaseDelegateAdapter;->mContext:Landroid/content/Context;
@@ -338,13 +386,13 @@
 
     return-object p2
 
-    .line 53
+    .line 54
     :cond_0
     sget v0, Lcom/miui/home/smallwindow/BaseDelegateAdapter;->ITEM_VIEW_TYPE_SPLIT:I
 
     if-ne p2, v0, :cond_1
 
-    .line 54
+    .line 55
     new-instance p2, Lcom/miui/home/smallwindow/BaseViewHolder;
 
     iget-object v0, p0, Lcom/miui/home/smallwindow/BaseDelegateAdapter;->mContext:Landroid/content/Context;
@@ -372,7 +420,7 @@
 .method public setItemInfoList(Ljava/util/ArrayList;)V
     .locals 0
 
-    .line 142
+    .line 143
     iput-object p1, p0, Lcom/miui/home/smallwindow/BaseDelegateAdapter;->mItemInfoList:Ljava/util/ArrayList;
 
     return-void
@@ -381,7 +429,7 @@
 .method public setItemViewCallback(Lcom/miui/home/smallwindow/ItemViewCallback;)V
     .locals 0
 
-    .line 45
+    .line 46
     iput-object p1, p0, Lcom/miui/home/smallwindow/BaseDelegateAdapter;->mItemViewCallback:Lcom/miui/home/smallwindow/ItemViewCallback;
 
     return-void
@@ -390,7 +438,7 @@
 .method public setSelectedCount(I)V
     .locals 0
 
-    .line 117
+    .line 118
     iput p1, p0, Lcom/miui/home/smallwindow/BaseDelegateAdapter;->mSelectedCount:I
 
     return-void
@@ -399,75 +447,85 @@
 .method public startFreeformActivity(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    .line 146
+    .line 147
+    invoke-direct {p0, p2}, Lcom/miui/home/smallwindow/BaseDelegateAdapter;->checkIsInSmallWindow(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    .line 150
+    :cond_0
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 147
+    .line 151
     new-instance v1, Landroid/content/ComponentName;
 
     invoke-direct {v1, p2, p3}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p3, "android.intent.action.MAIN"
 
-    .line 148
+    .line 152
     invoke-virtual {v0, p3}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
     const-string p3, "android.intent.category.LAUNCHER"
 
-    .line 149
+    .line 153
     invoke-virtual {v0, p3}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
     const/high16 p3, 0x10000000
 
-    .line 150
+    .line 154
     invoke-virtual {v0, p3}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 151
+    .line 155
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 153
+    .line 157
     :try_start_0
     invoke-static {p1, p2}, Lcom/miui/launcher/utils/ActivityUtilsCompat;->makeFreeformActivityOptions(Landroid/content/Context;Ljava/lang/String;)Landroid/app/ActivityOptions;
 
     move-result-object p3
 
-    if-eqz p3, :cond_1
+    if-eqz p3, :cond_2
 
-    .line 155
+    .line 159
     invoke-virtual {p3}, Landroid/app/ActivityOptions;->toBundle()Landroid/os/Bundle;
 
     move-result-object p3
 
     invoke-virtual {p1, v0, p3}, Landroid/content/Context;->startActivity(Landroid/content/Intent;Landroid/os/Bundle;)V
 
-    .line 156
+    .line 160
     iget-object p1, p0, Lcom/miui/home/smallwindow/BaseDelegateAdapter;->mItemViewCallback:Lcom/miui/home/smallwindow/ItemViewCallback;
 
-    if-eqz p1, :cond_0
+    if-eqz p1, :cond_1
 
-    .line 157
+    .line 161
     iget-object p1, p0, Lcom/miui/home/smallwindow/BaseDelegateAdapter;->mItemViewCallback:Lcom/miui/home/smallwindow/ItemViewCallback;
 
     invoke-interface {p1, p2}, Lcom/miui/home/smallwindow/ItemViewCallback;->onItemClicked(Ljava/lang/String;)V
 
-    :cond_0
+    :cond_1
     const-string p1, "Launcher_BaseDelegateAdapter"
 
     const-string p2, "startFreeformActivity success"
 
-    .line 159
+    .line 163
     invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    :cond_1
+    :cond_2
     const-string p1, "Launcher_BaseDelegateAdapter"
 
     const-string p2, "startFreeformActivity fail : option==null"
 
-    .line 161
+    .line 165
     invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -481,7 +539,7 @@
 
     const-string p3, "startFreeformActivity error"
 
-    .line 164
+    .line 168
     invoke-static {p2, p3, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0

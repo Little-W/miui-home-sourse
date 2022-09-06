@@ -29,7 +29,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/LauncherModel$LoaderTask;Lcom/miui/home/launcher/LauncherModel$Callbacks;Ljava/util/ArrayList;)V
     .locals 0
 
-    .line 1345
+    .line 1353
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$3;->this$1:Lcom/miui/home/launcher/LauncherModel$LoaderTask;
 
     iput-object p2, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$3;->val$callbacks:Lcom/miui/home/launcher/LauncherModel$Callbacks;
@@ -46,7 +46,7 @@
 .method public run()V
     .locals 2
 
-    .line 1348
+    .line 1356
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$3;->this$1:Lcom/miui/home/launcher/LauncherModel$LoaderTask;
 
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$3;->val$callbacks:Lcom/miui/home/launcher/LauncherModel$Callbacks;
@@ -57,7 +57,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1349
+    .line 1357
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$3;->val$callbacks:Lcom/miui/home/launcher/LauncherModel$Callbacks;
 
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$3;->val$list:Ljava/util/ArrayList;

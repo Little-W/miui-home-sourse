@@ -26,10 +26,10 @@
 
     const/4 v0, 0x0
 
-    .line 392
+    .line 393
     invoke-direct {p0, v0}, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$Transition;-><init>(Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$1;)V
 
-    .line 393
+    .line 394
     invoke-virtual {p1}, Landroid/graphics/drawable/AnimationDrawable;->getNumberOfFrames()I
 
     move-result v0
@@ -57,7 +57,7 @@
     :cond_1
     sub-int/2addr v0, v3
 
-    .line 396
+    .line 397
     :goto_1
     new-instance v4, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$FrameInterpolator;
 
@@ -67,29 +67,29 @@
 
     const/4 v5, 0x2
 
-    .line 398
+    .line 399
     new-array v5, v5, [I
 
     aput v2, v5, v1
 
     aput v0, v5, v3
 
-    .line 399
+    .line 400
     invoke-static {p1, p2, v5}, Landroid/animation/ObjectAnimator;->ofInt(Ljava/lang/Object;Ljava/lang/String;[I)Landroid/animation/ObjectAnimator;
 
     move-result-object p1
 
-    .line 400
+    .line 401
     sget p2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v0, 0x12
 
     if-lt p2, v0, :cond_2
 
-    .line 401
-    invoke-virtual {p1, v3}, Landroid/animation/ObjectAnimator;->setAutoCancel(Z)V
+    .line 402
+    invoke-static {p1, v3}, Landroidx/appcompat/resources/Compatibility$Api18Impl;->setAutoCancel(Landroid/animation/ObjectAnimator;Z)V
 
-    .line 403
+    .line 404
     :cond_2
     invoke-virtual {v4}, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$FrameInterpolator;->getTotalDuration()I
 
@@ -99,13 +99,13 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 404
+    .line 405
     invoke-virtual {p1, v4}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 405
+    .line 406
     iput-boolean p3, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimationDrawableTransition;->mHasReversibleFlag:Z
 
-    .line 406
+    .line 407
     iput-object p1, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimationDrawableTransition;->mAnim:Landroid/animation/ObjectAnimator;
 
     return-void
@@ -116,7 +116,7 @@
 .method public canReverse()Z
     .locals 1
 
-    .line 411
+    .line 412
     iget-boolean v0, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimationDrawableTransition;->mHasReversibleFlag:Z
 
     return v0
@@ -125,7 +125,7 @@
 .method public reverse()V
     .locals 1
 
-    .line 421
+    .line 422
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimationDrawableTransition;->mAnim:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->reverse()V
@@ -136,7 +136,7 @@
 .method public start()V
     .locals 1
 
-    .line 416
+    .line 417
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimationDrawableTransition;->mAnim:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
@@ -147,7 +147,7 @@
 .method public stop()V
     .locals 1
 
-    .line 426
+    .line 427
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimationDrawableTransition;->mAnim:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->cancel()V

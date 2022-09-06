@@ -318,6 +318,50 @@
     .end array-data
 .end method
 
+.method private isRestricted()Z
+    .locals 2
+
+    .line 301
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/AbsActionBarView;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/content/res/Configuration;->orientation:I
+
+    const/4 v1, 0x2
+
+    if-ne v0, v1, :cond_0
+
+    .line 303
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/AbsActionBarView;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lmiuix/internal/util/DeviceHelper;->isTablet(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+.end method
+
 
 # virtual methods
 .method getActionBarStyle()I
@@ -459,7 +503,7 @@
 .method public isResizable()Z
     .locals 1
 
-    .line 327
+    .line 333
     iget-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/AbsActionBarView;->mResizable:Z
 
     return v0
@@ -757,66 +801,45 @@
     const/4 v0, 0x0
 
     .line 297
-    invoke-virtual {p0, p1, v0}, Lmiuix/appcompat/internal/app/widget/AbsActionBarView;->setExpandState(IZ)V
+    invoke-virtual {p0, p1, v0, v0}, Lmiuix/appcompat/internal/app/widget/AbsActionBarView;->setExpandState(IZZ)V
 
     return-void
 .end method
 
-.method public setExpandState(IZ)V
-    .locals 2
+.method public setExpandState(IZZ)V
+    .locals 1
 
-    .line 301
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/AbsActionBarView;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/content/res/Configuration;->orientation:I
-
-    const/4 v1, 0x2
-
-    if-ne v0, v1, :cond_0
-
-    if-eqz p1, :cond_0
-
-    .line 302
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/AbsActionBarView;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lmiuix/internal/util/DeviceHelper;->isTablet(Landroid/content/Context;)Z
+    .line 307
+    invoke-direct {p0}, Lmiuix/appcompat/internal/app/widget/AbsActionBarView;->isRestricted()Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
+
+    if-nez p3, :cond_0
+
+    if-eqz p1, :cond_0
 
     return-void
 
-    .line 305
+    .line 311
     :cond_0
-    iget-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/AbsActionBarView;->mResizable:Z
+    iget-boolean p3, p0, Lmiuix/appcompat/internal/app/widget/AbsActionBarView;->mResizable:Z
 
-    if-eqz v0, :cond_4
+    if-eqz p3, :cond_4
 
-    iget v0, p0, Lmiuix/appcompat/internal/app/widget/AbsActionBarView;->mInnerExpandState:I
+    iget p3, p0, Lmiuix/appcompat/internal/app/widget/AbsActionBarView;->mInnerExpandState:I
 
-    if-eq v0, p1, :cond_4
+    if-eq p3, p1, :cond_4
 
     if-eqz p2, :cond_1
 
-    .line 308
-    invoke-virtual {p0, v0, p1}, Lmiuix/appcompat/internal/app/widget/AbsActionBarView;->onAnimatedExpandStateChanged(II)V
+    .line 314
+    invoke-virtual {p0, p3, p1}, Lmiuix/appcompat/internal/app/widget/AbsActionBarView;->onAnimatedExpandStateChanged(II)V
 
     goto :goto_1
 
-    .line 310
+    .line 316
     :cond_1
     iput p1, p0, Lmiuix/appcompat/internal/app/widget/AbsActionBarView;->mInnerExpandState:I
 
@@ -824,7 +847,7 @@
 
     const/4 p2, 0x0
 
-    .line 312
+    .line 318
     iput p2, p0, Lmiuix/appcompat/internal/app/widget/AbsActionBarView;->mExpandState:I
 
     goto :goto_0
@@ -834,15 +857,15 @@
 
     if-ne p1, p2, :cond_3
 
-    .line 314
+    .line 320
     iput p2, p0, Lmiuix/appcompat/internal/app/widget/AbsActionBarView;->mExpandState:I
 
-    .line 316
+    .line 322
     :cond_3
     :goto_0
-    invoke-virtual {p0, v0, p1}, Lmiuix/appcompat/internal/app/widget/AbsActionBarView;->onExpandStateChanged(II)V
+    invoke-virtual {p0, p3, p1}, Lmiuix/appcompat/internal/app/widget/AbsActionBarView;->onExpandStateChanged(II)V
 
-    .line 317
+    .line 323
     invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/AbsActionBarView;->requestLayout()V
 
     :cond_4
@@ -853,7 +876,7 @@
 .method public setResizable(Z)V
     .locals 0
 
-    .line 323
+    .line 329
     iput-boolean p1, p0, Lmiuix/appcompat/internal/app/widget/AbsActionBarView;->mResizable:Z
 
     return-void

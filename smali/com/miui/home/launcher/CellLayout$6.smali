@@ -21,7 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 3003
+    .line 3021
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,7 +32,7 @@
 .method public process(Landroid/graphics/drawable/Drawable;I)V
     .locals 0
 
-    .line 3006
+    .line 3024
     invoke-static {p1}, Lcom/miui/home/launcher/graphics/drawable/MamlCompat;->onResume(Landroid/graphics/drawable/Drawable;)V
 
     return-void
@@ -41,7 +41,7 @@
 .method public process(Lcom/miui/home/launcher/LauncherWidgetView;)V
     .locals 0
 
-    .line 3018
+    .line 3036
     invoke-virtual {p1}, Lcom/miui/home/launcher/LauncherWidgetView;->onVisible()V
 
     return-void
@@ -50,19 +50,19 @@
 .method public process(Lcom/miui/home/launcher/ShortcutIcon;I)V
     .locals 0
 
-    .line 3010
+    .line 3028
     invoke-virtual {p1}, Lcom/miui/home/launcher/ShortcutIcon;->getTag()Ljava/lang/Object;
 
     move-result-object p2
 
     check-cast p2, Lcom/miui/home/launcher/ShortcutInfo;
 
-    .line 3011
+    .line 3029
     instance-of p2, p2, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;
 
     if-eqz p2, :cond_0
 
-    .line 3012
+    .line 3030
     invoke-virtual {p1}, Lcom/miui/home/launcher/ShortcutIcon;->onProgressStatusChanged()V
 
     :cond_0
@@ -72,7 +72,7 @@
 .method public process(Lcom/miui/home/launcher/maml/MaMlWidgetView;)V
     .locals 0
 
-    .line 3023
+    .line 3041
     invoke-virtual {p1}, Lcom/miui/home/launcher/maml/MaMlWidgetView;->onVisible()V
 
     return-void

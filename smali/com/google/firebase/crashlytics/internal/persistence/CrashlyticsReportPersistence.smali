@@ -946,7 +946,7 @@
     .line 325
     iget-object v1, p0, Lcom/google/firebase/crashlytics/internal/persistence/CrashlyticsReportPersistence;->fileStore:Lcom/google/firebase/crashlytics/internal/persistence/FileStore;
 
-    const-string v3, "user-id"
+    const-string/jumbo v3, "user-id"
 
     invoke-virtual {v1, p1, v3}, Lcom/google/firebase/crashlytics/internal/persistence/FileStore;->getSessionFile(Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
 

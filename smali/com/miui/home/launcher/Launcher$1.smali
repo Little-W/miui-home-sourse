@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 646
+    .line 639
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$1;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 5
 
-    .line 649
+    .line 642
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$1;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$100(Lcom/miui/home/launcher/Launcher;)Z
@@ -47,7 +47,7 @@
 
     if-eqz v0, :cond_5
 
-    .line 650
+    .line 643
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$1;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$200(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/IBackAnimView;
@@ -56,7 +56,7 @@
 
     if-eqz v0, :cond_4
 
-    .line 651
+    .line 644
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$1;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$300(Lcom/miui/home/launcher/Launcher;)Z
@@ -65,7 +65,7 @@
 
     if-nez v0, :cond_0
 
-    .line 652
+    .line 645
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$1;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$200(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/IBackAnimView;
@@ -74,7 +74,7 @@
 
     invoke-interface {v0}, Lcom/miui/home/launcher/IBackAnimView;->onBackAnimStop()V
 
-    .line 654
+    .line 647
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$1;->this$0:Lcom/miui/home/launcher/Launcher;
 
@@ -84,7 +84,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 655
+    .line 648
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$1;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$200(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/IBackAnimView;
@@ -97,7 +97,7 @@
 
     goto :goto_0
 
-    .line 656
+    .line 649
     :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$1;->this$0:Lcom/miui/home/launcher/Launcher;
 
@@ -107,7 +107,7 @@
 
     if-nez v0, :cond_2
 
-    .line 657
+    .line 650
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$1;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$200(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/IBackAnimView;
@@ -118,7 +118,7 @@
 
     invoke-interface {v0, v1}, Lcom/miui/home/launcher/IBackAnimView;->updateBackAnim(Ljava/lang/String;)V
 
-    .line 659
+    .line 652
     :cond_2
     :goto_0
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$1;->this$0:Lcom/miui/home/launcher/Launcher;
@@ -131,14 +131,14 @@
 
     if-eqz v0, :cond_3
 
-    .line 660
+    .line 653
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$1;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$200(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/IBackAnimView;
 
     move-result-object v0
 
-    .line 661
+    .line 654
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$1;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v1}, Lcom/miui/home/launcher/Launcher;->access$500(Lcom/miui/home/launcher/Launcher;)Landroid/os/Handler;
@@ -153,7 +153,7 @@
 
     invoke-virtual {v1, v2, v3, v4}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 669
+    .line 662
     :cond_3
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$1;->this$0:Lcom/miui/home/launcher/Launcher;
 
@@ -165,7 +165,7 @@
 
     invoke-interface {v0, v1}, Lcom/miui/home/launcher/IBackAnimView;->setTranslationX(F)V
 
-    .line 670
+    .line 663
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$1;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$200(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/IBackAnimView;
@@ -174,14 +174,14 @@
 
     invoke-interface {v0, v1}, Lcom/miui/home/launcher/IBackAnimView;->setTranslationY(F)V
 
-    .line 671
+    .line 664
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$1;->this$0:Lcom/miui/home/launcher/Launcher;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$202(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/IBackAnimView;)Lcom/miui/home/launcher/IBackAnimView;
 
-    .line 673
+    .line 666
     :cond_4
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$1;->this$0:Lcom/miui/home/launcher/Launcher;
 
@@ -189,7 +189,7 @@
 
     invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$102(Lcom/miui/home/launcher/Launcher;Z)Z
 
-    .line 674
+    .line 667
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$1;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$302(Lcom/miui/home/launcher/Launcher;Z)Z

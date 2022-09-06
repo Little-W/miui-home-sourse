@@ -74,7 +74,7 @@
 
     .line 28
     :try_start_0
-    invoke-static {}, Lcom/xiaomi/onetrack/e/a;->e()Ljava/lang/String;
+    invoke-static {}, Lcom/xiaomi/onetrack/f/a;->e()Ljava/lang/String;
 
     move-result-object v0
 

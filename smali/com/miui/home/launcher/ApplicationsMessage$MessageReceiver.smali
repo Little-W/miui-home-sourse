@@ -90,7 +90,7 @@
     if-nez p2, :cond_3
 
     :cond_1
-    const-string p2, "userId"
+    const-string/jumbo p2, "userId"
 
     .line 149
     invoke-virtual {p3, p2, p4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
@@ -346,7 +346,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, "|"
+    const-string/jumbo v1, "|"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

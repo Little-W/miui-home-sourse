@@ -8084,7 +8084,7 @@
     :cond_3
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    const-string v0, "wrap_reverse is not supported in FlexboxLayoutManager"
+    const-string/jumbo v0, "wrap_reverse is not supported in FlexboxLayoutManager"
 
     invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 

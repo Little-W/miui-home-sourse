@@ -293,6 +293,7 @@
     <string name="eras_bc">ခရစ်တော်မပေါ်မီ</string>
     <string name="evening">နေ့လယ်</string>
     <string name="exit_overview_because_task_stack_changed">နောက်ကွယ်တွင်ဖြစ်ပွားသော အပြောင်းအလဲများကြောင့် လတ်လောအရာများကို ပိတ်ထားသည်</string>
+    <string name="external_not_support_split_screen_j18">ပြင်ပမျက်နှာပြင်တွင် မျက်နှာပြင်ခွဲခြင်း ခွင့်မပြုပါ</string>
     <string name="failed_to_delete_temporary">ဖယ်ရှား၍ မရပါ</string>
     <string name="failed_to_drop">ရွှေ့၍မရပါ</string>
     <string name="failed_to_drop_widget_invalid">ဤဝစ်ဂျက်မှာ မမှန်ပါ</string>
@@ -497,6 +498,7 @@
     <string name="midnight">ည</string>
     <string name="minus_one_screen">အက်ပ် မီးခံသေတ္တာ</string>
     <string name="miui_screen_config_title">ပင်မမျက်နှာပြင် ဆက်တင်</string>
+    <string name="miui_widget_menu_replace_text">ပြောင်းရန်</string>
     <string name="miuix_access_state_desc">ရွေးထားသည်</string>
     <string name="miuix_appcompat_action_mode_deselect_all">မရွေးတော့</string>
     <string name="miuix_appcompat_action_mode_select_all">အားလုံး ရွေးပါ</string>
@@ -523,6 +525,8 @@
     <string name="monday">တနင်္လာ</string>
     <string name="monday_short">တနင်္လာ</string>
     <string name="monday_shortest">တနင်္လာ</string>
+    <string name="monochrome_summary">တွဲသုံးနိုင်သော သင်္ကေတများအတွက် နောက်ခံအရောင်ပြောင်းပါ</string>
+    <string name="monochrome_title">နောက်ခံအရောင်</string>
     <string name="month_april">ဧပြီ</string>
     <string name="month_april_short">ဧပြီ</string>
     <string name="month_april_shortest">ဧပြီ</string>

@@ -206,7 +206,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f070100
+    const p2, 0x7f070138
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -492,7 +492,7 @@
     .line 164
     iget-object v3, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mInflater:Landroid/view/LayoutInflater;
 
-    const v4, 0x7f0d0146
+    const v4, 0x7f0d019a
 
     invoke-virtual {v3, v4, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -510,7 +510,7 @@
     .line 166
     invoke-virtual {v0, v3}, Landroid/view/View;->setImportantForAccessibility(I)V
 
-    const v3, 0x7f0a02a1
+    const v3, 0x7f0a0384
 
     .line 168
     invoke-virtual {v0, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -575,7 +575,7 @@
 
     move-result-object p1
 
-    const v1, 0x7f100141
+    const v1, 0x7f11014a
 
     new-array v2, v6, [Ljava/lang/Object;
 
@@ -1072,7 +1072,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070102
+    const v1, 0x7f07013a
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1085,7 +1085,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070101
+    const v1, 0x7f070139
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1734,6 +1734,22 @@
     iget-object v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mThumbnailMeasureController:Lcom/miui/home/launcher/ThumbnailMeasureController;
 
     invoke-virtual {v0, p0}, Lcom/miui/home/launcher/ThumbnailMeasureController;->onScreenSizeChanged(Landroid/view/View;)V
+
+    return-void
+.end method
+
+.method protected onSizeChanged(IIII)V
+    .locals 0
+
+    .line 608
+    invoke-super {p0, p1, p2, p3, p4}, Lcom/miui/home/launcher/EditModeThumbnailView;->onSizeChanged(IIII)V
+
+    .line 609
+    iget-object p1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mWorkspace:Lcom/miui/home/launcher/Workspace;
+
+    iget-boolean p2, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mShow:Z
+
+    invoke-virtual {p1, p2}, Lcom/miui/home/launcher/Workspace;->setIndicatorMarginBottomInEditThumbnailMode(Z)V
 
     return-void
 .end method

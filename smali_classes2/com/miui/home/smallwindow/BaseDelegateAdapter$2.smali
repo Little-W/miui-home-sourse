@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/home/smallwindow/BaseDelegateAdapter;I)V
     .locals 0
 
-    .line 88
+    .line 89
     iput-object p1, p0, Lcom/miui/home/smallwindow/BaseDelegateAdapter$2;->this$0:Lcom/miui/home/smallwindow/BaseDelegateAdapter;
 
     iput p2, p0, Lcom/miui/home/smallwindow/BaseDelegateAdapter$2;->val$position:I
@@ -42,7 +42,7 @@
 .method public onClick(Landroid/view/View;)V
     .locals 4
 
-    .line 91
+    .line 92
     iget-object p1, p0, Lcom/miui/home/smallwindow/BaseDelegateAdapter$2;->this$0:Lcom/miui/home/smallwindow/BaseDelegateAdapter;
 
     invoke-static {p1}, Lcom/miui/home/smallwindow/BaseDelegateAdapter;->access$200(Lcom/miui/home/smallwindow/BaseDelegateAdapter;)Landroid/content/Context;
@@ -51,7 +51,7 @@
 
     iget-object v1, p0, Lcom/miui/home/smallwindow/BaseDelegateAdapter$2;->this$0:Lcom/miui/home/smallwindow/BaseDelegateAdapter;
 
-    .line 92
+    .line 93
     invoke-static {v1}, Lcom/miui/home/smallwindow/BaseDelegateAdapter;->access$300(Lcom/miui/home/smallwindow/BaseDelegateAdapter;)Ljava/util/ArrayList;
 
     move-result-object v1
@@ -70,7 +70,7 @@
 
     iget-object v2, p0, Lcom/miui/home/smallwindow/BaseDelegateAdapter$2;->this$0:Lcom/miui/home/smallwindow/BaseDelegateAdapter;
 
-    .line 93
+    .line 94
     invoke-static {v2}, Lcom/miui/home/smallwindow/BaseDelegateAdapter;->access$300(Lcom/miui/home/smallwindow/BaseDelegateAdapter;)Ljava/util/ArrayList;
 
     move-result-object v2
@@ -87,7 +87,7 @@
 
     move-result-object v2
 
-    .line 91
+    .line 92
     invoke-virtual {p1, v0, v1, v2}, Lcom/miui/home/smallwindow/BaseDelegateAdapter;->startFreeformActivity(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void

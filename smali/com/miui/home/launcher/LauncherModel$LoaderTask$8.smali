@@ -29,7 +29,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/LauncherModel$LoaderTask;Lcom/miui/home/launcher/LauncherModel$Callbacks;Ljava/util/ArrayList;)V
     .locals 0
 
-    .line 2094
+    .line 2118
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$8;->this$1:Lcom/miui/home/launcher/LauncherModel$LoaderTask;
 
     iput-object p2, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$8;->val$callbacks:Lcom/miui/home/launcher/LauncherModel$Callbacks;
@@ -46,10 +46,10 @@
 .method public run()V
     .locals 2
 
-    .line 2097
+    .line 2121
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$8;->this$1:Lcom/miui/home/launcher/LauncherModel$LoaderTask;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->access$1900(Lcom/miui/home/launcher/LauncherModel$LoaderTask;)Z
+    invoke-static {v0}, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->access$2100(Lcom/miui/home/launcher/LauncherModel$LoaderTask;)Z
 
     move-result v0
 
@@ -59,7 +59,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 2098
+    .line 2122
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$8;->val$screens:Ljava/util/ArrayList;
 
     invoke-interface {v0, v1}, Lcom/miui/home/launcher/LauncherModel$Callbacks;->bindScreens(Ljava/util/ArrayList;)V

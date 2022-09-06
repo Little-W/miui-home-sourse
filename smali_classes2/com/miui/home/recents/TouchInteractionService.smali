@@ -409,17 +409,17 @@
 
     const-string v1, "preloadOverview: startRecentsActivity"
 
-    .line 293
+    .line 299
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 294
+    .line 300
     invoke-static {}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->getInstance()Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    .line 295
+    .line 301
     invoke-virtual {v0, p0, v1, v1}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->startRecentsActivity(Landroid/content/Intent;Lcom/android/systemui/shared/recents/system/AssistDataReceiver;Lcom/android/systemui/shared/recents/system/RecentsAnimationListener;)V
 
     return-void
@@ -486,15 +486,15 @@
     .line 264
     iget-boolean v0, p0, Lcom/miui/home/recents/TouchInteractionService;->mIsUserUnlocked:Z
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_5
 
     iget-object v0, p0, Lcom/miui/home/recents/TouchInteractionService;->mOverviewComponentObserver:Lcom/miui/home/recents/OverviewComponentObserver;
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_5
 
     sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
-    if-nez v0, :cond_4
+    if-nez v0, :cond_5
 
     sget-boolean v0, Lcom/miui/home/launcher/common/Utilities;->ATLEAST_S:Z
 
@@ -502,8 +502,29 @@
 
     goto/16 :goto_0
 
-    .line 267
+    .line 268
     :cond_0
+    sget-boolean v0, Lcom/miui/home/launcher/common/Utilities;->ATLEAST_T:Z
+
+    if-eqz v0, :cond_1
+
+    invoke-static {}, Lcom/miui/home/recents/UserSetupCompleteHelper;->isUserSetupComplete()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const-string p1, "TouchInteractionService"
+
+    const-string v0, "stop preloadOverview: isUserSetupComplete."
+
+    .line 269
+    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+
+    .line 273
+    :cond_1
     iget-object v0, p0, Lcom/miui/home/recents/TouchInteractionService;->mOverviewComponentObserver:Lcom/miui/home/recents/OverviewComponentObserver;
 
     invoke-virtual {v0}, Lcom/miui/home/recents/OverviewComponentObserver;->getHomePackageName()Ljava/lang/String;
@@ -512,7 +533,7 @@
 
     const-string v1, "TouchInteractionService"
 
-    .line 268
+    .line 274
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -529,7 +550,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 270
+    .line 276
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v1
@@ -542,35 +563,35 @@
 
     move-result v1
 
-    if-nez v1, :cond_1
+    if-nez v1, :cond_2
 
     const-string v1, "android"
 
-    .line 271
+    .line 277
     invoke-static {v0, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v1
 
-    if-nez v1, :cond_1
+    if-nez v1, :cond_2
 
     const-string v1, "com.android.provision"
 
-    .line 272
+    .line 278
     invoke-static {v0, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v1
 
-    if-nez v1, :cond_1
+    if-nez v1, :cond_2
 
     return-void
 
-    .line 276
-    :cond_1
+    .line 282
+    :cond_2
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v1
 
-    .line 277
+    .line 283
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v2
@@ -583,39 +604,39 @@
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_3
 
-    .line 278
+    .line 284
     invoke-virtual {v1}, Lcom/miui/home/launcher/Launcher;->isStarted()Z
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
     const-string p1, "TouchInteractionService"
 
     const-string v0, "stop preloadOverview: Launcher isStart."
 
-    .line 279
+    .line 285
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    :cond_2
-    if-eqz p1, :cond_3
+    :cond_3
+    if-eqz p1, :cond_4
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_4
 
-    .line 283
+    .line 289
     iget-object v0, p0, Lcom/miui/home/recents/TouchInteractionService;->mOverviewComponentObserver:Lcom/miui/home/recents/OverviewComponentObserver;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/Launcher;->getComponentName()Landroid/content/ComponentName;
 
     move-result-object v2
 
-    .line 284
+    .line 290
     invoke-virtual {v1}, Lcom/miui/home/launcher/Launcher;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -628,24 +649,24 @@
 
     move-result p1
 
-    .line 283
+    .line 289
     invoke-virtual {v0, v2, p1}, Lcom/miui/home/recents/OverviewComponentObserver;->canHandleConfigChanges(Landroid/content/ComponentName;I)Z
 
     move-result p1
 
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_4
 
     const-string p1, "TouchInteractionService"
 
     const-string v0, "stop preloadOverview: canHandleConfigChanges."
 
-    .line 285
+    .line 291
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 289
-    :cond_3
+    .line 295
+    :cond_4
     new-instance p1, Landroid/content/Intent;
 
     const-string v0, "android.intent.action.MAIN"
@@ -654,14 +675,14 @@
 
     const-string v0, "android.intent.category.HOME"
 
-    .line 290
+    .line 296
     invoke-virtual {p1, v0}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object p1
 
     iget-object v0, p0, Lcom/miui/home/recents/TouchInteractionService;->mOverviewComponentObserver:Lcom/miui/home/recents/OverviewComponentObserver;
 
-    .line 291
+    .line 297
     invoke-virtual {v0}, Lcom/miui/home/recents/OverviewComponentObserver;->getMyHomeComponent()Landroid/content/ComponentName;
 
     move-result-object v0
@@ -670,7 +691,7 @@
 
     move-result-object p1
 
-    .line 292
+    .line 298
     sget-object v0, Lcom/miui/home/recents/util/Executors;->UI_HELPER_EXECUTOR:Lcom/miui/home/library/utils/LooperExecutor;
 
     new-instance v1, Lcom/miui/home/recents/-$$Lambda$TouchInteractionService$bwZAYRD_p-Bh8HdFEjA-i_qaheA;
@@ -681,7 +702,7 @@
 
     return-void
 
-    :cond_4
+    :cond_5
     :goto_0
     return-void
 .end method

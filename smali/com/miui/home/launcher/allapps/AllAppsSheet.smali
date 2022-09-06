@@ -159,7 +159,7 @@
     invoke-virtual {v0, v1}, Landroidx/fragment/app/FragmentTransaction;->remove(Landroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentTransaction;
 
     .line 127
-    invoke-virtual {v0}, Landroidx/fragment/app/FragmentTransaction;->commitAllowingStateLoss()I
+    invoke-virtual {v0}, Landroidx/fragment/app/FragmentTransaction;->commitNowAllowingStateLoss()V
 
     const/4 v0, 0x0
 
@@ -304,12 +304,12 @@
     .line 111
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/AllAppsSheet;->mFragment:Lcom/miui/home/launcher/allapps/AllAppsSheetFragment;
 
-    const v2, 0x7f0a0067
+    const v2, 0x7f0a0073
 
     invoke-virtual {v0, v2, v1}, Landroidx/fragment/app/FragmentTransaction;->add(ILandroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentTransaction;
 
     .line 112
-    invoke-virtual {v0}, Landroidx/fragment/app/FragmentTransaction;->commitAllowingStateLoss()I
+    invoke-virtual {v0}, Landroidx/fragment/app/FragmentTransaction;->commitNowAllowingStateLoss()V
 
     return-void
 .end method

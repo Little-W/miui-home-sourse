@@ -6,23 +6,15 @@
 
 
 # instance fields
-.field final synthetic a:Ljava/lang/String;
-
-.field final synthetic b:Ljava/lang/Number;
-
-.field final synthetic c:Lcom/xiaomi/onetrack/api/g;
+.field final synthetic a:Lcom/xiaomi/onetrack/api/h;
 
 
 # direct methods
-.method constructor <init>(Lcom/xiaomi/onetrack/api/g;Ljava/lang/String;Ljava/lang/Number;)V
+.method constructor <init>(Lcom/xiaomi/onetrack/api/h;)V
     .locals 0
 
-    .line 288
-    iput-object p1, p0, Lcom/xiaomi/onetrack/api/i;->c:Lcom/xiaomi/onetrack/api/g;
-
-    iput-object p2, p0, Lcom/xiaomi/onetrack/api/i;->a:Ljava/lang/String;
-
-    iput-object p3, p0, Lcom/xiaomi/onetrack/api/i;->b:Ljava/lang/Number;
+    .line 118
+    iput-object p1, p0, Lcom/xiaomi/onetrack/api/i;->a:Lcom/xiaomi/onetrack/api/h;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -32,66 +24,85 @@
 
 # virtual methods
 .method public run()V
-    .locals 5
+    .locals 4
 
-    .line 292
+    .line 122
     :try_start_0
-    iget-object v0, p0, Lcom/xiaomi/onetrack/api/i;->c:Lcom/xiaomi/onetrack/api/g;
+    invoke-static {}, Lcom/xiaomi/onetrack/c/a;->a()V
 
-    const-string v1, "ot_profile_increment"
+    .line 123
+    invoke-static {}, Lcom/xiaomi/onetrack/util/aa;->B()J
 
-    invoke-static {v0, v1}, Lcom/xiaomi/onetrack/api/g;->b(Lcom/xiaomi/onetrack/api/g;Ljava/lang/String;)Lorg/json/JSONObject;
+    move-result-wide v0
 
-    move-result-object v0
+    const-wide/16 v2, 0x0
 
-    .line 293
-    new-instance v1, Lorg/json/JSONObject;
+    cmp-long v0, v0, v2
 
-    invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
+    if-nez v0, :cond_0
 
-    iget-object v2, p0, Lcom/xiaomi/onetrack/api/i;->a:Ljava/lang/String;
+    .line 124
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    iget-object v3, p0, Lcom/xiaomi/onetrack/api/i;->b:Ljava/lang/Number;
+    move-result-wide v0
 
-    invoke-virtual {v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-static {v0, v1}, Lcom/xiaomi/onetrack/util/aa;->n(J)V
 
-    move-result-object v1
+    .line 126
+    :cond_0
+    iget-object v0, p0, Lcom/xiaomi/onetrack/api/i;->a:Lcom/xiaomi/onetrack/api/h;
 
-    .line 294
-    iget-object v2, p0, Lcom/xiaomi/onetrack/api/i;->c:Lcom/xiaomi/onetrack/api/g;
-
-    invoke-static {v2}, Lcom/xiaomi/onetrack/api/g;->a(Lcom/xiaomi/onetrack/api/g;)Lcom/xiaomi/onetrack/Configuration;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lcom/xiaomi/onetrack/api/i;->c:Lcom/xiaomi/onetrack/api/g;
-
-    invoke-static {v3}, Lcom/xiaomi/onetrack/api/g;->c(Lcom/xiaomi/onetrack/api/g;)Lcom/xiaomi/onetrack/OneTrack$IEventHook;
-
-    move-result-object v3
-
-    iget-object v4, p0, Lcom/xiaomi/onetrack/api/i;->c:Lcom/xiaomi/onetrack/api/g;
-
-    invoke-static {v4}, Lcom/xiaomi/onetrack/api/g;->d(Lcom/xiaomi/onetrack/api/g;)Lcom/xiaomi/onetrack/util/v;
-
-    move-result-object v4
-
-    invoke-static {v1, v2, v3, v0, v4}, Lcom/xiaomi/onetrack/api/c;->b(Lorg/json/JSONObject;Lcom/xiaomi/onetrack/Configuration;Lcom/xiaomi/onetrack/OneTrack$IEventHook;Lorg/json/JSONObject;Lcom/xiaomi/onetrack/util/v;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/xiaomi/onetrack/api/h;->a(Lcom/xiaomi/onetrack/api/h;)Lcom/xiaomi/onetrack/Configuration;
 
     move-result-object v0
 
-    .line 295
-    iget-object v1, p0, Lcom/xiaomi/onetrack/api/i;->c:Lcom/xiaomi/onetrack/api/g;
+    invoke-virtual {v0}, Lcom/xiaomi/onetrack/Configuration;->getInstanceId()Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/xiaomi/onetrack/api/g;->e(Lcom/xiaomi/onetrack/api/g;)Lcom/xiaomi/onetrack/api/d;
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    .line 127
+    invoke-static {}, Lcom/xiaomi/onetrack/util/o;->a()Lcom/xiaomi/onetrack/util/o;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/xiaomi/onetrack/api/i;->a:Lcom/xiaomi/onetrack/api/h;
+
+    invoke-static {v1}, Lcom/xiaomi/onetrack/api/h;->a(Lcom/xiaomi/onetrack/api/h;)Lcom/xiaomi/onetrack/Configuration;
 
     move-result-object v1
 
-    const-string v2, "ot_profile_increment"
+    invoke-virtual {v1}, Lcom/xiaomi/onetrack/Configuration;->getInstanceId()Ljava/lang/String;
 
-    invoke-interface {v1, v2, v0}, Lcom/xiaomi/onetrack/api/d;->a(Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/xiaomi/onetrack/util/o;->a(Ljava/lang/String;)V
+
+    .line 129
+    :cond_1
+    iget-object v0, p0, Lcom/xiaomi/onetrack/api/i;->a:Lcom/xiaomi/onetrack/api/h;
+
+    invoke-static {v0}, Lcom/xiaomi/onetrack/api/h;->b(Lcom/xiaomi/onetrack/api/h;)V
+
+    .line 130
+    iget-object v0, p0, Lcom/xiaomi/onetrack/api/i;->a:Lcom/xiaomi/onetrack/api/h;
+
+    invoke-static {v0}, Lcom/xiaomi/onetrack/api/h;->c(Lcom/xiaomi/onetrack/api/h;)V
+
+    .line 131
+    invoke-static {}, Lcom/xiaomi/onetrack/util/d;->a()Lcom/xiaomi/onetrack/util/d;
+
+    const/4 v0, 0x0
+
+    .line 132
+    invoke-static {v0}, Lcom/xiaomi/onetrack/c/i;->c(Z)V
     :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
@@ -100,16 +111,16 @@
 
     const-string v1, "OneTrackImp"
 
-    .line 297
+    .line 134
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "userProfileIncrement single error:"
+    const-string v3, "init WorkerExecutor execute throwable:"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 

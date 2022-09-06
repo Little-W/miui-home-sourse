@@ -25,7 +25,7 @@
 .method constructor <init>(Landroidx/appcompat/widget/SearchView;)V
     .locals 0
 
-    .line 1161
+    .line 1168
     iput-object p1, p0, Landroidx/appcompat/widget/SearchView$7;->this$0:Landroidx/appcompat/widget/SearchView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onEditorAction(Landroid/widget/TextView;ILandroid/view/KeyEvent;)Z
     .locals 0
 
-    .line 1168
+    .line 1175
     iget-object p1, p0, Landroidx/appcompat/widget/SearchView$7;->this$0:Landroidx/appcompat/widget/SearchView;
 
     invoke-virtual {p1}, Landroidx/appcompat/widget/SearchView;->onSubmitQuery()V

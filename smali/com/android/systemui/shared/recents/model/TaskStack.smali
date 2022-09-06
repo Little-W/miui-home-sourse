@@ -102,7 +102,7 @@
         }
     .end annotation
 
-    .line 590
+    .line 557
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-interface {p1}, Ljava/util/List;->size()I
@@ -111,7 +111,7 @@
 
     invoke-direct {v0, v1}, Landroid/util/ArrayMap;-><init>(I)V
 
-    .line 591
+    .line 558
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v1
@@ -121,14 +121,14 @@
     :goto_0
     if-ge v2, v1, :cond_0
 
-    .line 593
+    .line 560
     invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/android/systemui/shared/recents/model/Task;
 
-    .line 594
+    .line 561
     iget-object v4, v3, Lcom/android/systemui/shared/recents/model/Task;->key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
 
     invoke-virtual {v0, v4, v3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -171,119 +171,10 @@
     return-object v0
 .end method
 
-.method public computeComponentsRemoved(Ljava/lang/String;I)Landroid/util/ArraySet;
-    .locals 7
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            "I)",
-            "Landroid/util/ArraySet<",
-            "Landroid/content/ComponentName;",
-            ">;"
-        }
-    .end annotation
-
-    .line 549
-    new-instance v0, Landroid/util/ArraySet;
-
-    invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
-
-    .line 550
-    new-instance v1, Landroid/util/ArraySet;
-
-    invoke-direct {v1}, Landroid/util/ArraySet;-><init>()V
-
-    .line 551
-    invoke-virtual {p0}, Lcom/android/systemui/shared/recents/model/TaskStack;->getTaskKeys()Ljava/util/ArrayList;
-
-    move-result-object v2
-
-    .line 552
-    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
-
-    move-result v3
-
-    const/4 v4, 0x0
-
-    :goto_0
-    if-ge v4, v3, :cond_4
-
-    .line 554
-    invoke-virtual {v2, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Lcom/android/systemui/shared/recents/model/Task$TaskKey;
-
-    .line 557
-    iget v6, v5, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->userId:I
-
-    if-eq v6, p2, :cond_0
-
-    goto :goto_1
-
-    .line 559
-    :cond_0
-    invoke-virtual {v5}, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->getComponent()Landroid/content/ComponentName;
-
-    move-result-object v5
-
-    .line 560
-    invoke-virtual {v5}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {v6, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_3
-
-    .line 561
-    invoke-virtual {v0, v5}, Landroid/util/ArraySet;->contains(Ljava/lang/Object;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_1
-
-    goto :goto_1
-
-    .line 565
-    :cond_1
-    invoke-static {}, Lcom/android/systemui/shared/recents/system/PackageManagerWrapper;->getInstance()Lcom/android/systemui/shared/recents/system/PackageManagerWrapper;
-
-    move-result-object v6
-
-    invoke-virtual {v6, v5, p2}, Lcom/android/systemui/shared/recents/system/PackageManagerWrapper;->getActivityInfo(Landroid/content/ComponentName;I)Landroid/content/pm/ActivityInfo;
-
-    move-result-object v6
-
-    if-eqz v6, :cond_2
-
-    .line 566
-    invoke-virtual {v0, v5}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
-
-    goto :goto_1
-
-    .line 568
-    :cond_2
-    invoke-virtual {v1, v5}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
-
-    :cond_3
-    :goto_1
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_0
-
-    :cond_4
-    return-object v1
-.end method
-
 .method public dump(Ljava/lang/String;Ljava/io/PrintWriter;)V
     .locals 4
 
-    .line 600
+    .line 567
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -298,7 +189,7 @@
 
     move-result-object v0
 
-    .line 602
+    .line 569
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string p1, "TaskStack"
@@ -307,7 +198,7 @@
 
     const-string p1, " numStackTasks="
 
-    .line 603
+    .line 570
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-object p1, p0, Lcom/android/systemui/shared/recents/model/TaskStack;->mStackTaskList:Lcom/android/systemui/shared/recents/model/FilteredTaskList;
@@ -318,17 +209,17 @@
 
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(I)V
 
-    .line 604
+    .line 571
     invoke-virtual {p2}, Ljava/io/PrintWriter;->println()V
 
-    .line 605
+    .line 572
     iget-object p1, p0, Lcom/android/systemui/shared/recents/model/TaskStack;->mStackTaskList:Lcom/android/systemui/shared/recents/model/FilteredTaskList;
 
     invoke-virtual {p1}, Lcom/android/systemui/shared/recents/model/FilteredTaskList;->getTasks()Ljava/util/ArrayList;
 
     move-result-object p1
 
-    .line 606
+    .line 573
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
     move-result v1
@@ -338,7 +229,7 @@
     :goto_0
     if-ge v2, v1, :cond_0
 
-    .line 608
+    .line 575
     invoke-virtual {p1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -1232,7 +1123,7 @@
 .method public toString()Ljava/lang/String;
     .locals 5
 
-    .line 577
+    .line 544
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1257,14 +1148,14 @@
 
     move-result-object v0
 
-    .line 578
+    .line 545
     iget-object v1, p0, Lcom/android/systemui/shared/recents/model/TaskStack;->mStackTaskList:Lcom/android/systemui/shared/recents/model/FilteredTaskList;
 
     invoke-virtual {v1}, Lcom/android/systemui/shared/recents/model/FilteredTaskList;->getTasks()Ljava/util/ArrayList;
 
     move-result-object v1
 
-    .line 579
+    .line 546
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v2
@@ -1274,7 +1165,7 @@
     :goto_0
     if-ge v3, v2, :cond_0
 
-    .line 581
+    .line 548
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V

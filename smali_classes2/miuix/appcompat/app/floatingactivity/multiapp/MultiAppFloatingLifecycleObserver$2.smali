@@ -29,7 +29,7 @@
 .method constructor <init>(Lmiuix/appcompat/app/floatingactivity/multiapp/MultiAppFloatingLifecycleObserver;Landroid/view/View;Landroid/view/View;)V
     .locals 0
 
-    .line 89
+    .line 88
     iput-object p1, p0, Lmiuix/appcompat/app/floatingactivity/multiapp/MultiAppFloatingLifecycleObserver$2;->this$0:Lmiuix/appcompat/app/floatingactivity/multiapp/MultiAppFloatingLifecycleObserver;
 
     iput-object p2, p0, Lmiuix/appcompat/app/floatingactivity/multiapp/MultiAppFloatingLifecycleObserver$2;->val$lastActivityPanel:Landroid/view/View;
@@ -46,7 +46,7 @@
 .method public run()V
     .locals 5
 
-    .line 92
+    .line 91
     iget-object v0, p0, Lmiuix/appcompat/app/floatingactivity/multiapp/MultiAppFloatingLifecycleObserver$2;->val$lastActivityPanel:Landroid/view/View;
 
     check-cast v0, Landroid/view/ViewGroup;
@@ -59,14 +59,14 @@
 
     const/4 v2, 0x0
 
-    .line 93
+    .line 92
     invoke-static {v1, v2}, Lmiuix/appcompat/app/floatingactivity/FloatingSwitcherAnimHelper;->getAnimConfig(ILjava/lang/Runnable;)Lmiuix/animation/base/AnimConfig;
 
     move-result-object v2
 
     const/4 v3, 0x1
 
-    .line 95
+    .line 94
     new-array v3, v3, [Lmiuix/animation/listener/TransitionListener;
 
     new-instance v4, Lmiuix/appcompat/app/floatingactivity/multiapp/MultiAppFloatingLifecycleObserver$2$1;
@@ -77,7 +77,7 @@
 
     invoke-virtual {v2, v3}, Lmiuix/animation/base/AnimConfig;->addListeners([Lmiuix/animation/listener/TransitionListener;)Lmiuix/animation/base/AnimConfig;
 
-    .line 103
+    .line 102
     invoke-static {v0, v2}, Lmiuix/appcompat/app/floatingactivity/FloatingSwitcherAnimHelper;->executeCloseExitAnimation(Landroid/view/View;Lmiuix/animation/base/AnimConfig;)V
 
     return-void

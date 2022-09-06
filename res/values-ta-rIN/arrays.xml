@@ -49,6 +49,13 @@
         <item>இயல்புநிலை</item>
         <item>கிளாசிக்</item>
     </string-array>
+    <string-array name="monochrome_color_entries">
+        <item>இயல்புநிலை</item>
+        <item>நீலம்</item>
+        <item>பச்சை</item>
+        <item>பர்பிள்</item>
+        <item>பழுப்பு</item>
+    </string-array>
     <string-array name="transformation_entries">
         <item>ஸ்லைடு</item>
         <item>க்ராஸ்ஃபேட்</item>

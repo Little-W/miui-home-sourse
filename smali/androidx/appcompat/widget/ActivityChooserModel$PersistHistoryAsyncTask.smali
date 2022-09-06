@@ -32,7 +32,7 @@
 .method constructor <init>(Landroidx/appcompat/widget/ActivityChooserModel;)V
     .locals 0
 
-    .line 1039
+    .line 1040
     iput-object p1, p0, Landroidx/appcompat/widget/ActivityChooserModel$PersistHistoryAsyncTask;->this$0:Landroidx/appcompat/widget/ActivityChooserModel;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
@@ -153,7 +153,7 @@
 
     invoke-interface {v4, v3, v8, v9}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    const-string v8, "weight"
+    const-string/jumbo v8, "weight"
 
     .line 1071
     iget v7, v7, Landroidx/appcompat/widget/ActivityChooserModel$HistoricalRecord;->weight:F

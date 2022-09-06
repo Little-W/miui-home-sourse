@@ -49,6 +49,13 @@
         <item>Defolt</item>
         <item>Klassiku</item>
     </string-array>
+    <string-array name="monochrome_color_entries">
+        <item>Standard</item>
+        <item>Ikħal</item>
+        <item>Aħdar</item>
+        <item>Vjola</item>
+        <item>Kannella</item>
+    </string-array>
     <string-array name="transformation_entries">
         <item>Slajd</item>
         <item>Krossfejd</item>

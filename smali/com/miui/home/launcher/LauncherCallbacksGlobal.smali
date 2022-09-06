@@ -22,7 +22,7 @@
 .method public constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 32
+    .line 35
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/overlay/assistant/AssistantLauncherCallbacks;-><init>(Lcom/miui/home/launcher/Launcher;)V
 
     return-void
@@ -31,7 +31,7 @@
 .method static synthetic access$000(Lcom/miui/home/launcher/LauncherCallbacksGlobal;)V
     .locals 0
 
-    .line 24
+    .line 25
     invoke-direct {p0}, Lcom/miui/home/launcher/LauncherCallbacksGlobal;->reloadMinusScreen()V
 
     return-void
@@ -40,19 +40,19 @@
 .method private registerObserver()V
     .locals 4
 
-    .line 54
+    .line 57
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherCallbacksGlobal;->mAssistantSwitchObserver:Lcom/miui/home/launcher/LauncherCallbacksGlobal$AssistantSwitchObserver;
 
     if-nez v0, :cond_0
 
-    .line 55
+    .line 58
     new-instance v0, Lcom/miui/home/launcher/LauncherCallbacksGlobal$AssistantSwitchObserver;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/LauncherCallbacksGlobal$AssistantSwitchObserver;-><init>(Lcom/miui/home/launcher/LauncherCallbacksGlobal;)V
 
     iput-object v0, p0, Lcom/miui/home/launcher/LauncherCallbacksGlobal;->mAssistantSwitchObserver:Lcom/miui/home/launcher/LauncherCallbacksGlobal$AssistantSwitchObserver;
 
-    .line 56
+    .line 59
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherCallbacksGlobal;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getContentResolver()Landroid/content/ContentResolver;
@@ -61,7 +61,7 @@
 
     const-string v1, "switch_personal_assistant"
 
-    .line 57
+    .line 60
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -70,23 +70,23 @@
 
     iget-object v3, p0, Lcom/miui/home/launcher/LauncherCallbacksGlobal;->mAssistantSwitchObserver:Lcom/miui/home/launcher/LauncherCallbacksGlobal$AssistantSwitchObserver;
 
-    .line 56
+    .line 59
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 60
+    .line 63
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherCallbacksGlobal;->mProvisionObserver:Lcom/miui/home/launcher/LauncherCallbacksGlobal$ProvisionObserver;
 
     if-nez v0, :cond_1
 
-    .line 61
+    .line 64
     new-instance v0, Lcom/miui/home/launcher/LauncherCallbacksGlobal$ProvisionObserver;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/LauncherCallbacksGlobal$ProvisionObserver;-><init>(Lcom/miui/home/launcher/LauncherCallbacksGlobal;)V
 
     iput-object v0, p0, Lcom/miui/home/launcher/LauncherCallbacksGlobal;->mProvisionObserver:Lcom/miui/home/launcher/LauncherCallbacksGlobal$ProvisionObserver;
 
-    .line 62
+    .line 65
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherCallbacksGlobal;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getContentResolver()Landroid/content/ContentResolver;
@@ -95,7 +95,7 @@
 
     const-string v1, "device_provisioned"
 
-    .line 63
+    .line 66
     invoke-static {v1}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -104,7 +104,7 @@
 
     iget-object v3, p0, Lcom/miui/home/launcher/LauncherCallbacksGlobal;->mProvisionObserver:Lcom/miui/home/launcher/LauncherCallbacksGlobal$ProvisionObserver;
 
-    .line 62
+    .line 65
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
     :cond_1
@@ -114,17 +114,17 @@
 .method private reloadMinusScreen()V
     .locals 3
 
-    .line 117
+    .line 129
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherCallbacksGlobal;->mLauncherAssistant:Lcom/miui/home/launcher/LauncherAssistantCompat;
 
     if-eqz v0, :cond_0
 
-    .line 118
+    .line 130
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherCallbacksGlobal;->mLauncherAssistant:Lcom/miui/home/launcher/LauncherAssistantCompat;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/LauncherAssistantCompat;->destroyLauncherClient()V
 
-    .line 120
+    .line 132
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherCallbacksGlobal;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -134,18 +134,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/LauncherCallbacksGlobal;->mLauncherAssistant:Lcom/miui/home/launcher/LauncherAssistantCompat;
 
-    .line 121
-    iget-object v0, p0, Lcom/miui/home/launcher/LauncherCallbacksGlobal;->mLauncherAssistant:Lcom/miui/home/launcher/LauncherAssistantCompat;
-
-    iget-object v1, p0, Lcom/miui/home/launcher/LauncherCallbacksGlobal;->mLauncher:Lcom/miui/home/launcher/Launcher;
-
-    invoke-virtual {v1}, Lcom/miui/home/launcher/Launcher;->getLauncherMode()Lcom/miui/home/launcher/allapps/LauncherMode;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/LauncherAssistantCompat;->createLauncherClient(Lcom/miui/home/launcher/allapps/LauncherMode;)V
-
-    .line 122
+    .line 133
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherCallbacksGlobal;->mLauncherAssistant:Lcom/miui/home/launcher/LauncherAssistantCompat;
 
     const/4 v1, 0x0
@@ -158,7 +147,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/miui/home/launcher/LauncherAssistantCompat;->onCreate(Landroid/os/Bundle;Lcom/miui/home/launcher/allapps/LauncherMode;)V
 
-    .line 123
+    .line 134
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherCallbacksGlobal;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->isStarted()Z
@@ -167,12 +156,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 124
+    .line 135
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherCallbacksGlobal;->mLauncherAssistant:Lcom/miui/home/launcher/LauncherAssistantCompat;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/LauncherAssistantCompat;->onStart()V
 
-    .line 126
+    .line 137
     :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherCallbacksGlobal;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -182,7 +171,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 127
+    .line 138
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherCallbacksGlobal;->mLauncherAssistant:Lcom/miui/home/launcher/LauncherAssistantCompat;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/LauncherAssistantCompat;->onResume()V
@@ -194,14 +183,14 @@
 .method private unregisterObserver()V
     .locals 3
 
-    .line 69
+    .line 72
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherCallbacksGlobal;->mAssistantSwitchObserver:Lcom/miui/home/launcher/LauncherCallbacksGlobal$AssistantSwitchObserver;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 70
+    .line 73
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherCallbacksGlobal;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getContentResolver()Landroid/content/ContentResolver;
@@ -212,16 +201,16 @@
 
     invoke-virtual {v0, v2}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
-    .line 71
+    .line 74
     iput-object v1, p0, Lcom/miui/home/launcher/LauncherCallbacksGlobal;->mAssistantSwitchObserver:Lcom/miui/home/launcher/LauncherCallbacksGlobal$AssistantSwitchObserver;
 
-    .line 73
+    .line 76
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherCallbacksGlobal;->mProvisionObserver:Lcom/miui/home/launcher/LauncherCallbacksGlobal$ProvisionObserver;
 
     if-eqz v0, :cond_1
 
-    .line 74
+    .line 77
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherCallbacksGlobal;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getContentResolver()Landroid/content/ContentResolver;
@@ -232,7 +221,7 @@
 
     invoke-virtual {v0, v2}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
-    .line 75
+    .line 78
     iput-object v1, p0, Lcom/miui/home/launcher/LauncherCallbacksGlobal;->mProvisionObserver:Lcom/miui/home/launcher/LauncherCallbacksGlobal$ProvisionObserver;
 
     :cond_1
@@ -244,13 +233,13 @@
 .method public onCreate(Landroid/os/Bundle;Lcom/miui/home/launcher/allapps/LauncherMode;)V
     .locals 0
 
-    .line 37
+    .line 40
     invoke-super {p0, p1, p2}, Lcom/miui/home/launcher/overlay/assistant/AssistantLauncherCallbacks;->onCreate(Landroid/os/Bundle;Lcom/miui/home/launcher/allapps/LauncherMode;)V
 
-    .line 38
+    .line 41
     invoke-direct {p0}, Lcom/miui/home/launcher/LauncherCallbacksGlobal;->registerObserver()V
 
-    .line 39
+    .line 42
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object p1
@@ -261,7 +250,7 @@
 
     if-nez p1, :cond_0
 
-    .line 40
+    .line 43
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object p1
@@ -275,13 +264,13 @@
 .method public onDestroy()V
     .locals 1
 
-    .line 46
+    .line 49
     invoke-super {p0}, Lcom/miui/home/launcher/overlay/assistant/AssistantLauncherCallbacks;->onDestroy()V
 
-    .line 47
+    .line 50
     invoke-direct {p0}, Lcom/miui/home/launcher/LauncherCallbacksGlobal;->unregisterObserver()V
 
-    .line 48
+    .line 51
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -292,12 +281,32 @@
 
     if-eqz v0, :cond_0
 
-    .line 49
+    .line 52
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
 
     invoke-virtual {v0, p0}, Lorg/greenrobot/eventbus/EventBus;->unregister(Ljava/lang/Object;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public onMessageEvent(Lcom/miui/home/launcher/common/messages/OverlayReconnectMessage;)V
+    .locals 0
+    .annotation runtime Lorg/greenrobot/eventbus/Subscribe;
+        threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
+    .end annotation
+
+    .line 107
+    invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/OverlayReconnectMessage;->getDirection()I
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    .line 108
+    invoke-direct {p0}, Lcom/miui/home/launcher/LauncherCallbacksGlobal;->reloadMinusScreen()V
 
     :cond_0
     return-void
@@ -311,7 +320,7 @@
 
     const-string v0, "com.google.android.googlequicksearchbox"
 
-    .line 92
+    .line 97
     invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/PackageDataClearMessage;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
@@ -324,7 +333,7 @@
 
     const-string v0, "com.mi.android.globalminusscreen"
 
-    .line 93
+    .line 98
     invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/PackageDataClearMessage;->getPackageName()Ljava/lang/String;
 
     move-result-object p1
@@ -335,7 +344,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 94
+    .line 99
     :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/LauncherCallbacksGlobal;->mAssistantSwitchObserver:Lcom/miui/home/launcher/LauncherCallbacksGlobal$AssistantSwitchObserver;
 
@@ -343,7 +352,7 @@
 
     const/4 v0, 0x0
 
-    .line 95
+    .line 100
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/LauncherCallbacksGlobal$AssistantSwitchObserver;->onChange(Z)V
 
     :cond_1

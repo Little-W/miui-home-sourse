@@ -975,9 +975,9 @@
 
     if-le v11, v12, :cond_0
 
+    .line 630
     iget-object v11, v0, Lmiuix/popupwidget/internal/widget/ArrowPopupView;->mContentFrameWrapper:Landroid/widget/LinearLayout;
 
-    .line 630
     invoke-virtual {v11}, Landroid/widget/LinearLayout;->getMeasuredWidth()I
 
     move-result v11
@@ -991,11 +991,10 @@
 
     move-result v11
 
-    .line 631
+    .line 632
     :goto_0
     iget-object v12, v0, Lmiuix/popupwidget/internal/widget/ArrowPopupView;->mContentFrameWrapper:Landroid/widget/LinearLayout;
 
-    .line 632
     invoke-virtual {v12}, Landroid/widget/LinearLayout;->getMeasuredHeight()I
 
     move-result v12
@@ -1008,9 +1007,9 @@
 
     if-le v12, v13, :cond_1
 
+    .line 633
     iget-object v12, v0, Lmiuix/popupwidget/internal/widget/ArrowPopupView;->mContentFrameWrapper:Landroid/widget/LinearLayout;
 
-    .line 633
     invoke-virtual {v12}, Landroid/widget/LinearLayout;->getMeasuredHeight()I
 
     move-result v12
@@ -1623,9 +1622,9 @@
 
     if-le v5, v6, :cond_0
 
+    .line 498
     iget-object v5, v0, Lmiuix/popupwidget/internal/widget/ArrowPopupView;->mContentFrameWrapper:Landroid/widget/LinearLayout;
 
-    .line 498
     invoke-virtual {v5}, Landroid/widget/LinearLayout;->getMeasuredWidth()I
 
     move-result v5
@@ -1639,11 +1638,10 @@
 
     move-result v5
 
-    .line 499
+    .line 500
     :goto_0
     iget-object v6, v0, Lmiuix/popupwidget/internal/widget/ArrowPopupView;->mContentFrameWrapper:Landroid/widget/LinearLayout;
 
-    .line 500
     invoke-virtual {v6}, Landroid/widget/LinearLayout;->getMeasuredHeight()I
 
     move-result v6
@@ -1656,9 +1654,9 @@
 
     if-le v6, v7, :cond_1
 
+    .line 501
     iget-object v6, v0, Lmiuix/popupwidget/internal/widget/ArrowPopupView;->mContentFrameWrapper:Landroid/widget/LinearLayout;
 
-    .line 501
     invoke-virtual {v6}, Landroid/widget/LinearLayout;->getMeasuredHeight()I
 
     move-result v6

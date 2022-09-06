@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/maml/elements/WebViewScreenElement;Z)V
     .locals 0
 
-    .line 271
+    .line 277
     iput-object p1, p0, Lcom/miui/maml/elements/WebViewScreenElement$7;->this$0:Lcom/miui/maml/elements/WebViewScreenElement;
 
     iput-boolean p2, p0, Lcom/miui/maml/elements/WebViewScreenElement$7;->val$pause:Z
@@ -42,12 +42,12 @@
 .method public run()V
     .locals 1
 
-    .line 273
+    .line 279
     iget-boolean v0, p0, Lcom/miui/maml/elements/WebViewScreenElement$7;->val$pause:Z
 
     if-eqz v0, :cond_0
 
-    .line 274
+    .line 280
     iget-object v0, p0, Lcom/miui/maml/elements/WebViewScreenElement$7;->this$0:Lcom/miui/maml/elements/WebViewScreenElement;
 
     invoke-static {v0}, Lcom/miui/maml/elements/WebViewScreenElement;->access$100(Lcom/miui/maml/elements/WebViewScreenElement;)Landroid/webkit/WebView;
@@ -58,7 +58,7 @@
 
     goto :goto_0
 
-    .line 276
+    .line 282
     :cond_0
     iget-object v0, p0, Lcom/miui/maml/elements/WebViewScreenElement$7;->this$0:Lcom/miui/maml/elements/WebViewScreenElement;
 

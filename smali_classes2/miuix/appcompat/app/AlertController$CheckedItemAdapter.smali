@@ -26,7 +26,7 @@
 .method public constructor <init>(Landroid/content/Context;II[Ljava/lang/CharSequence;)V
     .locals 0
 
-    .line 1569
+    .line 1660
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;II[Ljava/lang/Object;)V
 
     return-void
@@ -45,20 +45,20 @@
 .method public getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 0
 
-    .line 1585
+    .line 1676
     invoke-super {p0, p1, p2, p3}, Landroid/widget/ArrayAdapter;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object p1
 
     if-nez p2, :cond_0
 
-    .line 1587
+    .line 1678
     invoke-static {p1}, Lmiuix/internal/util/AnimHelper;->addPressAnim(Landroid/view/View;)V
 
     :cond_0
     const p2, 0x1020014
 
-    .line 1589
+    .line 1680
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p2

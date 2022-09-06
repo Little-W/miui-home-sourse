@@ -49,6 +49,13 @@
         <item>Standard</item>
         <item>Klassisk</item>
     </string-array>
+    <string-array name="monochrome_color_entries">
+        <item>Standard</item>
+        <item>Blå</item>
+        <item>Grön</item>
+        <item>Lila</item>
+        <item>Brun</item>
+    </string-array>
     <string-array name="transformation_entries">
         <item>Glid</item>
         <item>Crossfade</item>

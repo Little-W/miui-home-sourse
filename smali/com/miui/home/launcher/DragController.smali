@@ -781,7 +781,7 @@
 
     iget-object v0, v10, Lcom/miui/home/launcher/DragController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getDragViewContainer()Landroid/widget/FrameLayout;
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getDragViewContainer()Lcom/miui/home/launcher/widget/DragContainerLayout;
 
     move-result-object v1
 
@@ -880,7 +880,7 @@
 
     move-result-object p1
 
-    const v3, 0x7f080548
+    const v3, 0x7f080645
 
     .line 557
     invoke-virtual {p1, v3}, Lcom/miui/home/launcher/Application;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -1189,12 +1189,12 @@
 
     if-eqz v1, :cond_0
 
-    const v1, 0x7f0800ea
+    const v1, 0x7f0801b9
 
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f0800e9
+    const v1, 0x7f0801b8
 
     :goto_0
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -1284,7 +1284,7 @@
 .end method
 
 .method private drop(FFLcom/miui/home/launcher/DropTarget;)V
-    .locals 10
+    .locals 9
 
     const/4 v0, 0x1
 
@@ -1362,7 +1362,7 @@
     invoke-direct {p0}, Lcom/miui/home/launcher/DragController;->cleanLastDropTarget()V
 
     :cond_2
-    if-eqz p1, :cond_13
+    if-eqz p1, :cond_12
 
     .line 1095
     iget-object p2, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
@@ -1728,64 +1728,64 @@
     .line 1152
     invoke-interface {p3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v0
 
-    check-cast v2, Lcom/miui/home/launcher/ShortcutInfo;
+    check-cast v0, Lcom/miui/home/launcher/ShortcutInfo;
 
-    iget-wide v2, v2, Lcom/miui/home/launcher/ShortcutInfo;->container:J
+    iget-wide v2, v0, Lcom/miui/home/launcher/ShortcutInfo;->container:J
 
     invoke-interface {p3}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
-    move-result-object v4
+    move-result-object v0
 
-    check-cast v4, Ljava/lang/Long;
+    check-cast v0, Ljava/lang/Long;
 
-    invoke-virtual {v4}, Ljava/lang/Long;->longValue()J
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v4
 
-    cmp-long v2, v2, v4
+    cmp-long v0, v2, v4
 
-    if-eqz v2, :cond_10
+    if-eqz v0, :cond_10
 
     .line 1153
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
-    move-result-object v2
+    move-result-object v0
 
-    new-instance v9, Lcom/miui/home/launcher/common/messages/ChangeContainerOnDropMessage;
+    new-instance v8, Lcom/miui/home/launcher/common/messages/ChangeContainerOnDropMessage;
 
     invoke-interface {p3}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
-    move-result-object v3
+    move-result-object v2
 
-    check-cast v3, Ljava/lang/Long;
+    check-cast v2, Ljava/lang/Long;
 
-    invoke-virtual {v3}, Ljava/lang/Long;->longValue()J
+    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v4
+    move-result-wide v3
 
     invoke-interface {p3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
-    move-result-object v3
+    move-result-object v2
 
-    check-cast v3, Lcom/miui/home/launcher/ShortcutInfo;
+    check-cast v2, Lcom/miui/home/launcher/ShortcutInfo;
 
-    iget-wide v6, v3, Lcom/miui/home/launcher/ShortcutInfo;->container:J
+    iget-wide v5, v2, Lcom/miui/home/launcher/ShortcutInfo;->container:J
 
     invoke-interface {p3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object p3
 
-    move-object v8, p3
+    move-object v7, p3
 
-    check-cast v8, Lcom/miui/home/launcher/ShortcutInfo;
+    check-cast v7, Lcom/miui/home/launcher/ShortcutInfo;
 
-    move-object v3, v9
+    move-object v2, v8
 
-    invoke-direct/range {v3 .. v8}, Lcom/miui/home/launcher/common/messages/ChangeContainerOnDropMessage;-><init>(JJLcom/miui/home/launcher/ShortcutInfo;)V
+    invoke-direct/range {v2 .. v7}, Lcom/miui/home/launcher/common/messages/ChangeContainerOnDropMessage;-><init>(JJLcom/miui/home/launcher/ShortcutInfo;)V
 
-    invoke-virtual {v2, v9}, Lorg/greenrobot/eventbus/EventBus;->post(Ljava/lang/Object;)V
+    invoke-virtual {v0, v8}, Lorg/greenrobot/eventbus/EventBus;->post(Ljava/lang/Object;)V
 
     goto :goto_8
 
@@ -1793,27 +1793,7 @@
     :cond_11
     iget-object p2, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
-    iget-object p3, p0, Lcom/miui/home/launcher/DragController;->mLauncher:Lcom/miui/home/launcher/Launcher;
-
-    invoke-virtual {p3}, Lcom/miui/home/launcher/Launcher;->getStateManager()Lcom/miui/home/launcher/LauncherStateManager;
-
-    move-result-object p3
-
-    invoke-virtual {p3}, Lcom/miui/home/launcher/LauncherStateManager;->getState()Lcom/miui/home/launcher/LauncherState;
-
-    move-result-object p3
-
-    sget-object v2, Lcom/miui/home/launcher/LauncherState;->ASSISTANT_OVERLAY_STATE:Lcom/miui/home/launcher/overlay/assistant/AssistantOverlayState;
-
-    if-ne p3, v2, :cond_12
-
-    goto :goto_9
-
-    :cond_12
-    move v0, v1
-
-    :goto_9
-    invoke-virtual {p2, p1, v0}, Lcom/miui/home/launcher/DragObject;->onDragCompleted(Lcom/miui/home/launcher/DropTarget;Z)V
+    invoke-virtual {p2, p1, v1}, Lcom/miui/home/launcher/DragObject;->onDragCompleted(Lcom/miui/home/launcher/DropTarget;Z)V
 
     .line 1159
     invoke-interface {p1}, Lcom/miui/home/launcher/DropTarget;->onDropCompleted()V
@@ -1828,23 +1808,23 @@
 
     invoke-virtual {p2}, Lcom/miui/home/launcher/DragObject;->cancelAnnounce()V
 
-    goto :goto_a
+    goto :goto_9
 
     .line 1163
-    :cond_13
+    :cond_12
     iget-object p2, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
     invoke-virtual {p2, p1}, Lcom/miui/home/launcher/DragObject;->onDragCompleted(Lcom/miui/home/launcher/DropTarget;)V
 
     .line 1165
-    :goto_a
+    :goto_9
     iget-object p2, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
     invoke-virtual {p2}, Lcom/miui/home/launcher/DragObject;->getDragSource()Lcom/miui/home/launcher/DragSource;
 
     move-result-object p2
 
-    if-eqz p2, :cond_14
+    if-eqz p2, :cond_13
 
     .line 1166
     iget-object p2, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
@@ -1857,7 +1837,7 @@
 
     invoke-interface {p2, p1, p3}, Lcom/miui/home/launcher/DragSource;->onDragCompleted(Lcom/miui/home/launcher/DropTarget;Lcom/miui/home/launcher/DragObject;)V
 
-    :cond_14
+    :cond_13
     return-void
 .end method
 

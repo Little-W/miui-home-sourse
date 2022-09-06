@@ -228,7 +228,7 @@
 
     return v1
 
-    .line 230
+    .line 231
     :cond_0
     iget-object v0, p0, Lcom/miui/home/recents/OverviewComponentObserver;->mConfigChangesMap:Landroid/util/SparseIntArray;
 
@@ -260,7 +260,7 @@
 .method public getActivityControlHelper()Lcom/miui/home/recents/ActivityControlHelper;
     .locals 1
 
-    .line 247
+    .line 248
     iget-object v0, p0, Lcom/miui/home/recents/OverviewComponentObserver;->mActivityControlHelper:Lcom/miui/home/recents/ActivityControlHelper;
 
     return-object v0
@@ -276,7 +276,7 @@
 .end method
 
 .method public getHomePackageName()Ljava/lang/String;
-    .locals 1
+    .locals 2
 
     .line 208
     invoke-virtual {p0}, Lcom/miui/home/recents/OverviewComponentObserver;->getHomeIntent()Landroid/content/Intent;
@@ -285,21 +285,14 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/miui/home/recents/OverviewComponentObserver;->getHomeIntent()Landroid/content/Intent;
-
-    move-result-object v0
-
+    .line 209
     invoke-virtual {v0}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
-    move-result-object v0
+    move-result-object v1
 
-    if-eqz v0, :cond_0
+    if-eqz v1, :cond_0
 
-    .line 209
-    invoke-virtual {p0}, Lcom/miui/home/recents/OverviewComponentObserver;->getHomeIntent()Landroid/content/Intent;
-
-    move-result-object v0
-
+    .line 210
     invoke-virtual {v0}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v0
@@ -319,7 +312,7 @@
 .method public getMyHomeComponent()Landroid/content/ComponentName;
     .locals 1
 
-    .line 215
+    .line 216
     iget-object v0, p0, Lcom/miui/home/recents/OverviewComponentObserver;->mMyHomeComponent:Landroid/content/ComponentName;
 
     return-object v0
@@ -337,7 +330,7 @@
 .method public isHomeAndOverviewSame()Z
     .locals 1
 
-    .line 238
+    .line 239
     iget-boolean v0, p0, Lcom/miui/home/recents/OverviewComponentObserver;->mIsHomeAndOverviewSame:Z
 
     return v0

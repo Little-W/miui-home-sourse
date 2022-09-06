@@ -51,7 +51,7 @@
     <string name="all_apps">ਸਾਰੀਆਂ ਐਪਾਂ</string>
     <string name="all_apps_install_contentcenter_msg">ਇੰਝ ਲੱਗਦਾ ਹੈ ਸਮੱਗਰੀ ਕੇਂਦਰ ਅਣ-ਇੰਸਟਾਲ ਕੀਤਾ ਗਿਆ ਸੀ। ਦੁਬਾਰਾ ਇੰਸਟਾਲ ਕਰੋ?</string>
     <string name="all_apps_install_contentcenter_title">ਸਮੱਗਰੀ ਕੇਂਦਰ ਇੰਸਟਾਲ ਕਰੋ</string>
-    <string name="all_apps_no_search_results">ਨਤੀਜੇ ਨਹੀਂ ਲੱਭੇ ਜਾ ਸਕੇ</string>
+    <string name="all_apps_no_search_results">ਨਤੀਜੇ ਨਹੀਂ ਮਿਲ ਸਕੇ</string>
     <string name="all_apps_search_app">ਐਪਾਂ ਲਈ ਖੋਜ ਕਰੋ</string>
     <string name="all_apps_search_market_message">ਆਨਲਾਈਨ ਖੋਜ ਕਰੋ</string>
     <string name="all_apps_setting_classic_title">ਕਲਾਸਿਕ</string>
@@ -293,6 +293,7 @@
     <string name="eras_bc">BCE</string>
     <string name="evening">ਬਾਅਦ ਦੁਪਹਿਰ</string>
     <string name="exit_overview_because_task_stack_changed">ਬੈਕਗ੍ਰਾਊਂਡ ਵਿੱਚ ਹੋਏ ਬਦਲਾਵਾਂ ਕਰਕੇ ਹਾਲੀਆ ਬੰਦ ਕੀਤੇ ਗਏ</string>
+    <string name="external_not_support_split_screen_j18">"ਸਪਲਿਟ ਸਕ੍ਰੀਨ ਬਾਹਰੀ ਸਕ੍ਰੀਨ 'ਤੇ ਸਮਰਥਿਤ ਨਹੀਂ ਹੈ"</string>
     <string name="failed_to_delete_temporary">ਹਟਾਇਆ ਨਹੀਂ ਜਾ ਸਕਦਾ</string>
     <string name="failed_to_drop">ਹਿਲਾਇਆ ਨਹੀਂ ਜਾ ਸਕਦਾ</string>
     <string name="failed_to_drop_widget_invalid">ਇਹ ਵਿਜੇਟ ਅਵੈਧ ਹੈ</string>
@@ -497,6 +498,7 @@
     <string name="midnight">ਅੱਧੀਰਾਤ</string>
     <string name="minus_one_screen">ਐਪ ਵਾਲੇਟ</string>
     <string name="miui_screen_config_title">ਹੋਮ ਸਕ੍ਰੀਨ ਸੈਟਿੰਗਾਂ</string>
+    <string name="miui_widget_menu_replace_text">ਸਵਿੱਚ ਕਰੋ</string>
     <string name="miuix_access_state_desc">ਚੁਣਿਆ ਗਿਆ</string>
     <string name="miuix_appcompat_action_mode_deselect_all">ਚੋਣ ਹਟਾਓ</string>
     <string name="miuix_appcompat_action_mode_select_all">ਸਾਰੇ ਚੁਣੇ</string>
@@ -523,6 +525,8 @@
     <string name="monday">ਸੋਮਵਾਰ</string>
     <string name="monday_short">ਸੋਮ</string>
     <string name="monday_shortest">ਸੋਮ</string>
+    <string name="monochrome_summary">Change background color for compatible icons</string>
+    <string name="monochrome_title">Background color</string>
     <string name="month_april">ਅਪ੍ਰੈਲ</string>
     <string name="month_april_short">ਅਪ੍ਰੈਲ</string>
     <string name="month_april_shortest">ਅਪ੍ਰੈਲ</string>
@@ -652,7 +656,7 @@
     <string name="ota_layout_adjustment_title">ਹੋਮ ਸਕ੍ਰੀਨ ਲੇਆਉਟ</string>
     <string name="out_of_space">"ਇਸ ਹੋਮ ਸਕ੍ਰੀਨ 'ਤੇ ਹੋਰ ਥਾਂ ਨਹੀਂ ਹੈ"</string>
     <string name="pair_icon_name">%1$s | %2$s</string>
-    <string name="perfect_icons_switch_summary">ਤੀਜੀ ਧੀਰ ਐਪ ਪ੍ਰਤੀਕਾਂ ਉੱਤੇ ਐਨੀਮੇਸ਼ਨਾਂ ਰੇਂਡਰ ਕਰੋ</string>
+    <string name="perfect_icons_switch_summary">ਤੀਜੀ ਧੀਰ ਦੀਆਂ ਐਪ ਪ੍ਰਤੀਕਾਂ ਉੱਤੇ ਐਨੀਮੇਸ਼ਨਾਂ ਰੇਂਡਰ ਕਰੋ</string>
     <string name="perfect_icons_switch_title">ਵਿਸ਼ਵ-ਵਿਆਪੀ ਪ੍ਰਤੀਕ ਐਨੀਮੇਸ਼ਨ</string>
     <string name="permdesc_install_shortcut">ਐਪ ਨੂੰ, ਵਰਤੋਂਕਾਰ ਦੇ ਦਖ਼ਲ ਤੋਂ ਬਿਨਾ ਸ਼ਾਰਟਕੱਟ ਸ਼ਾਮਲ ਕਰਨ ਦਿੰਦਾ ਹੈ।</string>
     <string name="permdesc_install_widget">ਐਪ ਨੂੰ ਵਰਤੋਂਕਾਰ ਵੱਲੋਂ ਕੋਈ ਹੋਰ ਕਾਰਵਾਈ ਕੀਤੇ ਬਿਨਾਂ ਵਿਜੇਟ ਸ਼ਾਮਲ ਕਰਨ ਦਿੰਦਾ ਹੈ।</string>
@@ -732,7 +736,7 @@
     <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
     <string name="recnets_worldcirculate_display_computer_info">ਐਪ %s ਉੱਤੇ ਕੰਮ ਕਰ ਰਹੀ ਹੈ।</string>
     <string name="recnets_worldcirculate_display_default_info">ਇਸਨੂੰ ਇੱਥੇ ਵਾਪਸ ਲਿਆਉਣ ਲਈ ਟੈਪ ਕਰੋ।</string>
-    <string name="recnets_worldcirculate_display_default_info_pad">Tap to bring it back here.</string>
+    <string name="recnets_worldcirculate_display_default_info_pad">ਇਸਨੂੰ ਇੱਥੇ ਵਾਪਸ ਲਿਆਉਣ ਲਈ ਟੈਪ ਕਰੋ।</string>
     <string name="recnets_worldcirculate_display_pad_info">ਐਪ %s ਉੱਤੇ ਕੰਮ ਕਰ ਰਹੀ ਹੈ।</string>
     <string name="recommend_apk_size_and_desc">%1$dMB | %2$s</string>
     <string name="recommend_app">ਐਪ ਸੁਝਾਅ</string>

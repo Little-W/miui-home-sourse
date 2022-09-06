@@ -133,7 +133,7 @@
     if-nez v1, :cond_1
 
     .line 61
-    invoke-static {}, Lcom/xiaomi/onetrack/e/a;->a()Landroid/content/Context;
+    invoke-static {}, Lcom/xiaomi/onetrack/f/a;->a()Landroid/content/Context;
 
     move-result-object v1
 

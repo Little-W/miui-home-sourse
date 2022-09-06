@@ -22,7 +22,7 @@
 .method constructor <init>(Lmiuix/appcompat/app/AlertController;I)V
     .locals 0
 
-    .line 846
+    .line 881
     iput-object p1, p0, Lmiuix/appcompat/app/AlertController$2;->this$0:Lmiuix/appcompat/app/AlertController;
 
     invoke-direct {p0, p2}, Landroid/view/WindowInsetsAnimation$Callback;-><init>(I)V
@@ -35,17 +35,17 @@
 .method public onEnd(Landroid/view/WindowInsetsAnimation;)V
     .locals 1
 
-    .line 881
+    .line 923
     invoke-super {p0, p1}, Landroid/view/WindowInsetsAnimation$Callback;->onEnd(Landroid/view/WindowInsetsAnimation;)V
 
-    .line 882
+    .line 924
     iget-object p1, p0, Lmiuix/appcompat/app/AlertController$2;->this$0:Lmiuix/appcompat/app/AlertController;
 
     const/4 v0, 0x1
 
-    invoke-static {p1, v0}, Lmiuix/appcompat/app/AlertController;->access$602(Lmiuix/appcompat/app/AlertController;Z)Z
+    invoke-static {p1, v0}, Lmiuix/appcompat/app/AlertController;->access$002(Lmiuix/appcompat/app/AlertController;Z)Z
 
-    .line 883
+    .line 925
     iget-object p1, p0, Lmiuix/appcompat/app/AlertController$2;->this$0:Lmiuix/appcompat/app/AlertController;
 
     invoke-static {p1}, Lmiuix/appcompat/app/AlertController;->access$700(Lmiuix/appcompat/app/AlertController;)Landroid/view/Window;
@@ -62,7 +62,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 885
+    .line 927
     invoke-static {}, Landroid/view/WindowInsets$Type;->ime()I
 
     move-result v0
@@ -71,14 +71,14 @@
 
     move-result-object p1
 
-    .line 887
+    .line 929
     iget p1, p1, Landroid/graphics/Insets;->bottom:I
 
     if-gtz p1, :cond_0
 
     iget-object p1, p0, Lmiuix/appcompat/app/AlertController$2;->this$0:Lmiuix/appcompat/app/AlertController;
 
-    invoke-static {p1}, Lmiuix/appcompat/app/AlertController;->access$500(Lmiuix/appcompat/app/AlertController;)Landroid/view/View;
+    invoke-static {p1}, Lmiuix/appcompat/app/AlertController;->access$300(Lmiuix/appcompat/app/AlertController;)Landroid/view/View;
 
     move-result-object p1
 
@@ -92,12 +92,12 @@
 
     if-gez p1, :cond_0
 
-    .line 888
+    .line 930
     iget-object p1, p0, Lmiuix/appcompat/app/AlertController$2;->this$0:Lmiuix/appcompat/app/AlertController;
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lmiuix/appcompat/app/AlertController;->access$300(Lmiuix/appcompat/app/AlertController;I)V
+    invoke-static {p1, v0}, Lmiuix/appcompat/app/AlertController;->access$600(Lmiuix/appcompat/app/AlertController;I)V
 
     :cond_0
     return-void
@@ -106,18 +106,18 @@
 .method public onPrepare(Landroid/view/WindowInsetsAnimation;)V
     .locals 1
 
-    .line 895
+    .line 884
     invoke-super {p0, p1}, Landroid/view/WindowInsetsAnimation$Callback;->onPrepare(Landroid/view/WindowInsetsAnimation;)V
 
-    .line 896
+    .line 885
     invoke-static {}, Lmiuix/appcompat/widget/DialogAnimHelper;->cancelAnimator()V
 
-    .line 897
+    .line 886
     iget-object p1, p0, Lmiuix/appcompat/app/AlertController$2;->this$0:Lmiuix/appcompat/app/AlertController;
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lmiuix/appcompat/app/AlertController;->access$602(Lmiuix/appcompat/app/AlertController;Z)Z
+    invoke-static {p1, v0}, Lmiuix/appcompat/app/AlertController;->access$002(Lmiuix/appcompat/app/AlertController;Z)Z
 
     return-void
 .end method
@@ -135,7 +135,7 @@
         }
     .end annotation
 
-    .line 850
+    .line 909
     invoke-static {}, Landroid/view/WindowInsets$Type;->ime()I
 
     move-result p2
@@ -146,7 +146,7 @@
 
     if-eqz p2, :cond_2
 
-    .line 851
+    .line 910
     invoke-static {}, Landroid/view/WindowInsets$Type;->ime()I
 
     move-result p2
@@ -155,17 +155,18 @@
 
     move-result-object p2
 
-    .line 852
+    .line 911
     iget p2, p2, Landroid/graphics/Insets;->bottom:I
 
     iget-object v0, p0, Lmiuix/appcompat/app/AlertController$2;->this$0:Lmiuix/appcompat/app/AlertController;
 
-    invoke-static {v0}, Lmiuix/appcompat/app/AlertController;->access$000(Lmiuix/appcompat/app/AlertController;)Z
+    invoke-static {v0}, Lmiuix/appcompat/app/AlertController;->access$400(Lmiuix/appcompat/app/AlertController;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 912
     iget-object v0, p0, Lmiuix/appcompat/app/AlertController$2;->this$0:Lmiuix/appcompat/app/AlertController;
 
     invoke-static {v0}, Lmiuix/appcompat/app/AlertController;->access$100(Lmiuix/appcompat/app/AlertController;)I
@@ -177,7 +178,7 @@
     :cond_0
     iget-object v0, p0, Lmiuix/appcompat/app/AlertController$2;->this$0:Lmiuix/appcompat/app/AlertController;
 
-    invoke-static {v0}, Lmiuix/appcompat/app/AlertController;->access$200(Lmiuix/appcompat/app/AlertController;)I
+    invoke-static {v0}, Lmiuix/appcompat/app/AlertController;->access$500(Lmiuix/appcompat/app/AlertController;)I
 
     move-result v0
 
@@ -188,13 +189,13 @@
 
     const/4 p2, 0x0
 
-    .line 856
+    .line 916
     :cond_1
     iget-object v0, p0, Lmiuix/appcompat/app/AlertController$2;->this$0:Lmiuix/appcompat/app/AlertController;
 
     neg-int p2, p2
 
-    invoke-static {v0, p2}, Lmiuix/appcompat/app/AlertController;->access$300(Lmiuix/appcompat/app/AlertController;I)V
+    invoke-static {v0, p2}, Lmiuix/appcompat/app/AlertController;->access$600(Lmiuix/appcompat/app/AlertController;I)V
 
     :cond_2
     return-object p1
@@ -203,19 +204,10 @@
 .method public onStart(Landroid/view/WindowInsetsAnimation;Landroid/view/WindowInsetsAnimation$Bounds;)Landroid/view/WindowInsetsAnimation$Bounds;
     .locals 3
 
-    .line 864
+    .line 898
     iget-object v0, p0, Lmiuix/appcompat/app/AlertController$2;->this$0:Lmiuix/appcompat/app/AlertController;
 
-    invoke-static {v0}, Lmiuix/appcompat/app/AlertController;->access$000(Lmiuix/appcompat/app/AlertController;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 871
-    iget-object v0, p0, Lmiuix/appcompat/app/AlertController$2;->this$0:Lmiuix/appcompat/app/AlertController;
-
-    invoke-static {v0}, Lmiuix/appcompat/app/AlertController;->access$400(Lmiuix/appcompat/app/AlertController;)I
+    invoke-static {v0}, Lmiuix/appcompat/app/AlertController;->access$200(Lmiuix/appcompat/app/AlertController;)I
 
     move-result v1
 
@@ -223,7 +215,7 @@
 
     iget-object v2, p0, Lmiuix/appcompat/app/AlertController$2;->this$0:Lmiuix/appcompat/app/AlertController;
 
-    invoke-static {v2}, Lmiuix/appcompat/app/AlertController;->access$500(Lmiuix/appcompat/app/AlertController;)Landroid/view/View;
+    invoke-static {v2}, Lmiuix/appcompat/app/AlertController;->access$300(Lmiuix/appcompat/app/AlertController;)Landroid/view/View;
 
     move-result-object v2
 
@@ -237,7 +229,7 @@
 
     invoke-static {v0, v1}, Lmiuix/appcompat/app/AlertController;->access$102(Lmiuix/appcompat/app/AlertController;I)I
 
-    .line 872
+    .line 899
     iget-object v0, p0, Lmiuix/appcompat/app/AlertController$2;->this$0:Lmiuix/appcompat/app/AlertController;
 
     invoke-static {v0}, Lmiuix/appcompat/app/AlertController;->access$100(Lmiuix/appcompat/app/AlertController;)I
@@ -246,14 +238,14 @@
 
     if-gtz v0, :cond_0
 
-    .line 873
+    .line 900
     iget-object v0, p0, Lmiuix/appcompat/app/AlertController$2;->this$0:Lmiuix/appcompat/app/AlertController;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lmiuix/appcompat/app/AlertController;->access$102(Lmiuix/appcompat/app/AlertController;I)I
 
-    .line 876
+    .line 902
     :cond_0
     invoke-super {p0, p1, p2}, Landroid/view/WindowInsetsAnimation$Callback;->onStart(Landroid/view/WindowInsetsAnimation;Landroid/view/WindowInsetsAnimation$Bounds;)Landroid/view/WindowInsetsAnimation$Bounds;
 

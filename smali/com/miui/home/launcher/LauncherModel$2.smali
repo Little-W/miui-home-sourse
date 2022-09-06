@@ -27,7 +27,7 @@
 .method constructor <init>(Ljava/lang/String;Landroid/content/ContentResolver;)V
     .locals 0
 
-    .line 539
+    .line 548
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherModel$2;->val$orderedValue:Ljava/lang/String;
 
     iput-object p2, p0, Lcom/miui/home/launcher/LauncherModel$2;->val$cr:Landroid/content/ContentResolver;
@@ -42,19 +42,19 @@
 .method public run()V
     .locals 4
 
-    .line 542
+    .line 551
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
     const-string v1, "screenOrder"
 
-    .line 545
+    .line 554
     iget-object v2, p0, Lcom/miui/home/launcher/LauncherModel$2;->val$orderedValue:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 546
+    .line 555
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherModel$2;->val$cr:Landroid/content/ContentResolver;
 
     sget-object v2, Lcom/miui/home/launcher/LauncherSettings$Screens;->CONTENT_URI:Landroid/net/Uri;
@@ -71,7 +71,7 @@
 
     const-string v1, "Failed to update screens table for reorder, aborting"
 
-    .line 547
+    .line 556
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void

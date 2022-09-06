@@ -28,7 +28,7 @@
 .method private constructor <init>(Lcom/market/sdk/EnableStateManager;)V
     .locals 0
 
-    .line 339
+    .line 338
     iput-object p1, p0, Lcom/market/sdk/EnableStateManager$EnableStateUpdateReceiver;->this$0:Lcom/market/sdk/EnableStateManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +39,7 @@
 .method synthetic constructor <init>(Lcom/market/sdk/EnableStateManager;Lcom/market/sdk/EnableStateManager$1;)V
     .locals 0
 
-    .line 339
+    .line 338
     invoke-direct {p0, p1}, Lcom/market/sdk/EnableStateManager$EnableStateUpdateReceiver;-><init>(Lcom/market/sdk/EnableStateManager;)V
 
     return-void
@@ -56,14 +56,14 @@
 .method private onReceive$___twin___(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 4
 
-    .line 343
+    .line 342
     invoke-static {}, Lcom/market/sdk/utils/Utils;->isScreenOff()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 344
+    .line 343
     iget-object p1, p0, Lcom/market/sdk/EnableStateManager$EnableStateUpdateReceiver;->this$0:Lcom/market/sdk/EnableStateManager;
 
     const/4 p2, 0x0
@@ -72,11 +72,11 @@
 
     return-void
 
-    .line 347
+    .line 346
     :cond_0
     iget-object p1, p0, Lcom/market/sdk/EnableStateManager$EnableStateUpdateReceiver;->this$0:Lcom/market/sdk/EnableStateManager;
 
-    .line 348
+    .line 347
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -85,7 +85,7 @@
 
     add-long/2addr v0, v2
 
-    .line 347
+    .line 346
     invoke-static {p1, v0, v1}, Lcom/market/sdk/EnableStateManager;->access$100(Lcom/market/sdk/EnableStateManager;J)V
 
     return-void

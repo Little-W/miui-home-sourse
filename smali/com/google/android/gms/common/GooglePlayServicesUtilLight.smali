@@ -10,13 +10,13 @@
 
 .field static final sCanceledAvailabilityNotification:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field private static zzah:Z
+.field private static zzah:Z = false
 
-.field private static zzai:Z
+.field private static zzai:Z = false
 
-.field private static zzaj:Z
+.field private static zzaj:Z = false
 
-.field private static zzak:Z
+.field private static zzak:Z = false
 
 .field private static final zzal:Ljava/util/concurrent/atomic/AtomicBoolean;
 
@@ -403,7 +403,7 @@
 
     if-eqz v0, :cond_0
 
-    const-string v0, "user"
+    const-string/jumbo v0, "user"
 
     .line 162
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;

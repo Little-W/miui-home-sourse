@@ -22,7 +22,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 512
+    .line 518
     invoke-static {}, Lcom/miui/home/recents/util/RectFSpringAnim$AnimType;->values()[Lcom/miui/home/recents/util/RectFSpringAnim$AnimType;
 
     move-result-object v0

@@ -178,13 +178,13 @@
     move-result-object v0
 
     .line 44
-    invoke-static {}, Lcom/xiaomi/onetrack/e/a;->b()Landroid/content/Context;
+    invoke-static {}, Lcom/xiaomi/onetrack/f/a;->b()Landroid/content/Context;
 
     move-result-object v1
 
     new-instance v2, Landroid/content/Intent;
 
-    invoke-static {}, Lcom/xiaomi/onetrack/e/a;->b()Landroid/content/Context;
+    invoke-static {}, Lcom/xiaomi/onetrack/f/a;->b()Landroid/content/Context;
 
     move-result-object v3
 

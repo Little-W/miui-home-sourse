@@ -11,6 +11,7 @@
         Lcom/android/systemui/shared/R$string;,
         Lcom/android/systemui/shared/R$raw;,
         Lcom/android/systemui/shared/R$plurals;,
+        Lcom/android/systemui/shared/R$menu;,
         Lcom/android/systemui/shared/R$layout;,
         Lcom/android/systemui/shared/R$interpolator;,
         Lcom/android/systemui/shared/R$integer;,

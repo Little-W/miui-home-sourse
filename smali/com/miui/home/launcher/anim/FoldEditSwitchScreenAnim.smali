@@ -425,7 +425,7 @@
 
     const/high16 v2, 0x3f800000    # 1.0f
 
-    const-wide/16 v3, 0x190
+    const-wide/16 v3, 0x12c
 
     move-object v0, p0
 

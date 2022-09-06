@@ -49,6 +49,13 @@
         <item>Standard</item>
         <item>Klassisch</item>
     </string-array>
+    <string-array name="monochrome_color_entries">
+        <item>Standard</item>
+        <item>Blau</item>
+        <item>Grün</item>
+        <item>Lila</item>
+        <item>Braun</item>
+    </string-array>
     <string-array name="transformation_entries">
         <item>Schieben</item>
         <item>Crossfade</item>

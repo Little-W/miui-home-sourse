@@ -18,7 +18,7 @@
 
     .line 15
     :try_start_0
-    sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
+    sget-boolean v0, Lmiuix/os/Build;->IS_INTERNATIONAL_BUILD:Z
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 

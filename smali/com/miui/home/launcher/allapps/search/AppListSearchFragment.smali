@@ -37,7 +37,7 @@
 .method protected getLayoutResourceId()I
     .locals 1
 
-    const v0, 0x7f0d0066
+    const v0, 0x7f0d0076
 
     return v0
 .end method
@@ -228,6 +228,9 @@
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/search/AppListSearchFragment;->homeWatcherReceiver:Lcom/mi/globallauncher/branchInterface/IHomeKeyWatcher$HomeKeyWatcher;
 
+    if-eqz v0, :cond_1
+
+    .line 134
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/search/AppListSearchFragment;->getContext()Landroid/content/Context;
 
     move-result-object v1

@@ -185,7 +185,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f06036a
+    const v4, 0x7f060565
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -201,7 +201,7 @@
 
     invoke-virtual {v2, v1}, Lcom/miui/home/recents/util/RotationHelper;->updateRotationAnimation(I)V
 
-    const v2, 0x7f100025
+    const v2, 0x7f110025
 
     .line 52
     invoke-static {v2}, Lcom/miui/home/launcher/common/Utilities;->announceForAccessibility(I)V

@@ -23,7 +23,7 @@
     .line 29
     invoke-direct {p0, p1, p2}, Lcom/miui/home/launcher/FitSystemWindowView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 78
+    .line 79
     new-instance p1, Lcom/miui/home/launcher/-$$Lambda$-XoZXsORDLSzTUdddm6L6Uq-8zw;
 
     invoke-direct {p1, p0}, Lcom/miui/home/launcher/-$$Lambda$-XoZXsORDLSzTUdddm6L6Uq-8zw;-><init>(Lcom/miui/home/launcher/SearchBarContainer;)V
@@ -52,7 +52,7 @@
 .method public static synthetic lambda$trackShow$0(Lcom/miui/home/launcher/SearchBarContainer;)V
     .locals 3
 
-    .line 82
+    .line 83
     iget-object v0, p0, Lcom/miui/home/launcher/SearchBarContainer;->mSearchBar:Lcom/miui/home/launcher/SearchBar;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/SearchBar;->isShown()Z
@@ -69,7 +69,7 @@
 
     if-nez v0, :cond_0
 
-    .line 83
+    .line 84
     iget-object v0, p0, Lcom/miui/home/launcher/SearchBarContainer;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
@@ -80,17 +80,17 @@
 
     move-result v0
 
-    .line 84
+    .line 85
     iget-object v1, p0, Lcom/miui/home/launcher/SearchBarContainer;->mSearchBar:Lcom/miui/home/launcher/SearchBar;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/SearchBar;->isThemesShow()I
 
     move-result v1
 
-    .line 85
+    .line 86
     invoke-static {v0, v1}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackSearchBarShow(II)V
 
-    .line 86
+    .line 87
     iget-object v2, p0, Lcom/miui/home/launcher/SearchBarContainer;->mSearchBar:Lcom/miui/home/launcher/SearchBar;
 
     invoke-virtual {v2}, Lcom/miui/home/launcher/SearchBar;->isXiaoaiShow()Z
@@ -99,7 +99,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 87
+    .line 88
     invoke-static {v0, v1}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackSearchBarXiaoAiShow(II)V
 
     :cond_0
@@ -109,7 +109,7 @@
 .method private refreshSearchBarMarginBottom()V
     .locals 2
 
-    .line 60
+    .line 61
     iget-object v0, p0, Lcom/miui/home/launcher/SearchBarContainer;->mSearchBar:Lcom/miui/home/launcher/SearchBar;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/SearchBar;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -118,14 +118,14 @@
 
     check-cast v0, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 61
+    .line 62
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getSearchBarMarginBottom()I
 
     move-result v1
 
     iput v1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
-    .line 62
+    .line 63
     iget-object v1, p0, Lcom/miui/home/launcher/SearchBarContainer;->mSearchBar:Lcom/miui/home/launcher/SearchBar;
 
     invoke-virtual {v1, v0}, Lcom/miui/home/launcher/SearchBar;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
@@ -146,7 +146,7 @@
         }
     .end annotation
 
-    .line 95
+    .line 96
     invoke-static {p0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
@@ -157,12 +157,12 @@
 .method public hideMenu()V
     .locals 1
 
-    .line 114
+    .line 115
     iget-object v0, p0, Lcom/miui/home/launcher/SearchBarContainer;->mSearchBar:Lcom/miui/home/launcher/SearchBar;
 
     if-eqz v0, :cond_0
 
-    .line 115
+    .line 116
     invoke-virtual {v0}, Lcom/miui/home/launcher/SearchBar;->hideMenu()V
 
     :cond_0
@@ -172,12 +172,12 @@
 .method public isShowingMenu()Z
     .locals 1
 
-    .line 107
+    .line 108
     iget-object v0, p0, Lcom/miui/home/launcher/SearchBarContainer;->mSearchBar:Lcom/miui/home/launcher/SearchBar;
 
     if-eqz v0, :cond_0
 
-    .line 108
+    .line 109
     invoke-virtual {v0}, Lcom/miui/home/launcher/SearchBar;->isShowingMenu()Z
 
     move-result v0
@@ -193,13 +193,13 @@
 .method public onDeviceProfileChanged(Lcom/miui/home/launcher/DeviceProfile;)V
     .locals 0
 
-    .line 161
+    .line 162
     invoke-virtual {p0}, Lcom/miui/home/launcher/SearchBarContainer;->refreshSearchBarEnable()V
 
-    .line 162
+    .line 163
     invoke-direct {p0}, Lcom/miui/home/launcher/SearchBarContainer;->refreshSearchBarMarginBottom()V
 
-    .line 163
+    .line 164
     invoke-virtual {p0}, Lcom/miui/home/launcher/SearchBarContainer;->refreshSearchBarWidth()V
 
     return-void
@@ -213,7 +213,7 @@
 
     const-string v0, "com.android.quicksearchbox"
 
-    .line 100
+    .line 101
     invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/PackageDataClearMessage;->getPackageName()Ljava/lang/String;
 
     move-result-object p1
@@ -224,7 +224,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 101
+    .line 102
     invoke-virtual {p0}, Lcom/miui/home/launcher/SearchBarContainer;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -239,7 +239,7 @@
 
     invoke-static {p1, v0}, Lcom/miui/home/launcher/DeviceConfig;->setCurrentThemeSupportSearchBar(Landroid/content/Context;Z)Z
 
-    .line 102
+    .line 103
     invoke-virtual {p0}, Lcom/miui/home/launcher/SearchBarContainer;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -267,13 +267,16 @@
     .line 42
     invoke-direct {p0}, Lcom/miui/home/launcher/SearchBarContainer;->refreshSearchBarMarginBottom()V
 
+    .line 43
+    invoke-virtual {p0}, Lcom/miui/home/launcher/SearchBarContainer;->hideMenu()V
+
     return-void
 .end method
 
 .method public onWallpaperColorChanged()V
     .locals 1
 
-    .line 127
+    .line 128
     iget-object v0, p0, Lcom/miui/home/launcher/SearchBarContainer;->mSearchBar:Lcom/miui/home/launcher/SearchBar;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/SearchBar;->onWallpaperColorChanged()V
@@ -284,17 +287,17 @@
 .method public onWindowFocusChanged(Z)V
     .locals 2
 
-    .line 67
+    .line 68
     invoke-super {p0, p1}, Lcom/miui/home/launcher/FitSystemWindowView;->onWindowFocusChanged(Z)V
 
     if-eqz p1, :cond_0
 
-    .line 69
+    .line 70
     iget-object p1, p0, Lcom/miui/home/launcher/SearchBarContainer;->mTrackSearchBarShowRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/SearchBarContainer;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 70
+    .line 71
     iget-object p1, p0, Lcom/miui/home/launcher/SearchBarContainer;->mSearchBar:Lcom/miui/home/launcher/SearchBar;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/SearchBar;->isShown()Z
@@ -311,7 +314,7 @@
 
     if-nez p1, :cond_1
 
-    .line 71
+    .line 72
     iget-object p1, p0, Lcom/miui/home/launcher/SearchBarContainer;->mTrackSearchBarShowRunnable:Ljava/lang/Runnable;
 
     const-wide/16 v0, 0x3e8
@@ -320,7 +323,7 @@
 
     goto :goto_0
 
-    .line 74
+    .line 75
     :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/SearchBarContainer;->mTrackSearchBarShowRunnable:Ljava/lang/Runnable;
 
@@ -334,12 +337,12 @@
 .method public openSearch(Ljava/lang/String;)V
     .locals 1
 
-    .line 120
+    .line 121
     iget-object v0, p0, Lcom/miui/home/launcher/SearchBarContainer;->mSearchBar:Lcom/miui/home/launcher/SearchBar;
 
     if-eqz v0, :cond_0
 
-    .line 121
+    .line 122
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/SearchBar;->openSearch(Ljava/lang/String;)V
 
     :cond_0
@@ -349,10 +352,10 @@
 .method public refreshSearchBarEnable()V
     .locals 4
 
-    .line 46
+    .line 47
     iget-object v0, p0, Lcom/miui/home/launcher/SearchBarContainer;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    .line 47
+    .line 48
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getStateManager()Lcom/miui/home/launcher/LauncherStateManager;
 
     move-result-object v1
@@ -367,10 +370,10 @@
 
     invoke-direct {v3}, Lcom/miui/home/launcher/anim/AnimatorSetBuilder;-><init>()V
 
-    .line 46
+    .line 47
     invoke-static {v0, v1, v2, v3}, Lcom/miui/home/launcher/WorkspaceStateTransitionAnimation;->setSearchBarProperty(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/LauncherState;Lcom/miui/home/launcher/anim/PropertySetter;Lcom/miui/home/launcher/anim/AnimatorSetBuilder;)V
 
-    .line 48
+    .line 49
     iget-object v0, p0, Lcom/miui/home/launcher/SearchBarContainer;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     sget-object v1, Lcom/miui/home/launcher/LauncherState;->NORMAL:Lcom/miui/home/launcher/LauncherState;
@@ -393,7 +396,7 @@
 
     return-void
 
-    .line 51
+    .line 52
     :cond_0
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isShowSearchBar()Z
 
@@ -414,19 +417,19 @@
     :cond_1
     const/4 v0, 0x4
 
-    .line 55
+    .line 56
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/SearchBarContainer;->setVisibility(I)V
 
     goto :goto_1
 
-    .line 52
+    .line 53
     :cond_2
     :goto_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/SearchBarContainer;->refreshSearchBarWidth()V
 
     const/4 v0, 0x0
 
-    .line 53
+    .line 54
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/SearchBarContainer;->setVisibility(I)V
 
     :goto_1
@@ -436,12 +439,12 @@
 .method public refreshSearchBarWidth()V
     .locals 2
 
-    .line 131
+    .line 132
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getSearchBarWidth()I
 
     move-result v0
 
-    .line 132
+    .line 133
     iget-object v1, p0, Lcom/miui/home/launcher/SearchBarContainer;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/Launcher;->getHotSeats()Lcom/miui/home/launcher/hotseats/HotSeats;
@@ -462,14 +465,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 133
+    .line 134
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getSearchBarWidthDelta()I
 
     move-result v1
 
     add-int/2addr v0, v1
 
-    .line 135
+    .line 136
     :cond_0
     iget-object v1, p0, Lcom/miui/home/launcher/SearchBarContainer;->mSearchBar:Lcom/miui/home/launcher/SearchBar;
 
@@ -479,20 +482,20 @@
 
     if-eqz v1, :cond_1
 
-    .line 136
+    .line 137
     iget-object v1, p0, Lcom/miui/home/launcher/SearchBarContainer;->mSearchBar:Lcom/miui/home/launcher/SearchBar;
 
     invoke-virtual {v1, v0}, Lcom/miui/home/launcher/SearchBar;->setSearchBarWidthAnim(I)V
 
     goto :goto_0
 
-    .line 138
+    .line 139
     :cond_1
     iget-object v1, p0, Lcom/miui/home/launcher/SearchBarContainer;->mSearchBar:Lcom/miui/home/launcher/SearchBar;
 
     invoke-virtual {v1, v0}, Lcom/miui/home/launcher/SearchBar;->setSearchBarWidth(I)V
 
-    .line 139
+    .line 140
     iget-object v0, p0, Lcom/miui/home/launcher/SearchBarContainer;->mSearchBar:Lcom/miui/home/launcher/SearchBar;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/SearchBar;->requestLayout()V
@@ -504,15 +507,15 @@
 .method public setTranslationX(F)V
     .locals 0
 
-    .line 145
+    .line 146
     invoke-super {p0, p1}, Lcom/miui/home/launcher/FitSystemWindowView;->setTranslationX(F)V
 
-    .line 146
+    .line 147
     iget-object p1, p0, Lcom/miui/home/launcher/SearchBarContainer;->mSearchBar:Lcom/miui/home/launcher/SearchBar;
 
     if-eqz p1, :cond_0
 
-    .line 147
+    .line 148
     invoke-virtual {p1}, Lcom/miui/home/launcher/SearchBar;->refreshBlur()V
 
     :cond_0
@@ -522,15 +525,15 @@
 .method public setTranslationY(F)V
     .locals 0
 
-    .line 153
+    .line 154
     invoke-super {p0, p1}, Lcom/miui/home/launcher/FitSystemWindowView;->setTranslationY(F)V
 
-    .line 154
+    .line 155
     iget-object p1, p0, Lcom/miui/home/launcher/SearchBarContainer;->mSearchBar:Lcom/miui/home/launcher/SearchBar;
 
     if-eqz p1, :cond_0
 
-    .line 155
+    .line 156
     invoke-virtual {p1}, Lcom/miui/home/launcher/SearchBar;->refreshBlur()V
 
     :cond_0
@@ -540,7 +543,7 @@
 .method public setupViews()V
     .locals 1
 
-    const v0, 0x7f0a0211
+    const v0, 0x7f0a02cd
 
     .line 35
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/SearchBarContainer;->findViewById(I)Landroid/view/View;
@@ -563,7 +566,7 @@
 .method public trackShow()V
     .locals 1
 
-    .line 81
+    .line 82
     new-instance v0, Lcom/miui/home/launcher/-$$Lambda$SearchBarContainer$H9x5VVbxy4tXoa-yp5uU5mMsIqI;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/-$$Lambda$SearchBarContainer$H9x5VVbxy4tXoa-yp5uU5mMsIqI;-><init>(Lcom/miui/home/launcher/SearchBarContainer;)V

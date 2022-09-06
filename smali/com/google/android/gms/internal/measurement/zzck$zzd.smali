@@ -225,11 +225,11 @@
 
     const/4 p2, 0x0
 
-    const-string v0, "zzc"
+    const-string/jumbo v0, "zzc"
 
     aput-object v0, p1, p2
 
-    const-string p2, "zzd"
+    const-string/jumbo p2, "zzd"
 
     aput-object p2, p1, p3
 
@@ -244,31 +244,31 @@
 
     const/4 p2, 0x3
 
-    const-string p3, "zze"
+    const-string/jumbo p3, "zze"
 
     aput-object p3, p1, p2
 
     const/4 p2, 0x4
 
-    const-string p3, "zzf"
+    const-string/jumbo p3, "zzf"
 
     aput-object p3, p1, p2
 
     const/4 p2, 0x5
 
-    const-string p3, "zzg"
+    const-string/jumbo p3, "zzg"
 
     aput-object p3, p1, p2
 
     const/4 p2, 0x6
 
-    const-string p3, "zzh"
+    const-string/jumbo p3, "zzh"
 
     aput-object p3, p1, p2
 
     const/4 p2, 0x7
 
-    const-string p3, "zzi"
+    const-string/jumbo p3, "zzi"
 
     aput-object p3, p1, p2
 
@@ -280,7 +280,7 @@
 
     const/16 p2, 0x9
 
-    const-string p3, "zzj"
+    const-string/jumbo p3, "zzj"
 
     aput-object p3, p1, p2
 

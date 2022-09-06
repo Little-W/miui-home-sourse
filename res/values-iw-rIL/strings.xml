@@ -293,6 +293,7 @@
     <string name="eras_bc">לפנה\"ס</string>
     <string name="evening">לפנות ערב</string>
     <string name="exit_overview_because_task_stack_changed">\"האחרונים\" נסגרו בגלל שינויים שאירעו ברקע</string>
+    <string name="external_not_support_split_screen_j18">"'מסך מפוצל' אינו נתמך במסך חיצוני"</string>
     <string name="failed_to_delete_temporary">לא ניתן להסיר</string>
     <string name="failed_to_drop">לא ניתן להעביר</string>
     <string name="failed_to_drop_widget_invalid">"הווידג'ט אינו חוקי"</string>
@@ -497,6 +498,7 @@
     <string name="midnight">לילה</string>
     <string name="minus_one_screen">כספת היישומים</string>
     <string name="miui_screen_config_title">"הגדרות 'מסך הבית'"</string>
+    <string name="miui_widget_menu_replace_text">להחליף</string>
     <string name="miuix_access_state_desc">נבחר</string>
     <string name="miuix_appcompat_action_mode_deselect_all">נקה בחירה מהכל</string>
     <string name="miuix_appcompat_action_mode_select_all">בחר הכל</string>
@@ -523,6 +525,8 @@
     <string name="monday">שני</string>
     <string name="monday_short">"ב'"</string>
     <string name="monday_shortest">"ב'"</string>
+    <string name="monochrome_summary">שינוי צבע רקע עבור סמלים תואמים</string>
+    <string name="monochrome_title">צבע רקע</string>
     <string name="month_april">אפריל</string>
     <string name="month_april_short">"אפר'"</string>
     <string name="month_april_shortest">"אפר'"</string>

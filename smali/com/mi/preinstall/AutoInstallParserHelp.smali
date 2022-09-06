@@ -12,7 +12,7 @@
 
 
 # static fields
-.field private static isCopyPAIExecute:Z
+.field private static isCopyPAIExecute:Z = false
 
 
 # direct methods
@@ -938,7 +938,7 @@
     :cond_0
     const-string v0, "miui.os.MiuiInit"
 
-    const-string v1, "writePreinstallPAIPackage"
+    const-string/jumbo v1, "writePreinstallPAIPackage"
 
     const/4 v2, 0x1
 

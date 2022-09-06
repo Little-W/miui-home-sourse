@@ -76,7 +76,7 @@
     :cond_1
     new-instance p0, Ljava/lang/NullPointerException;
 
-    const-string p1, "view == null"
+    const-string/jumbo p1, "view == null"
 
     invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 

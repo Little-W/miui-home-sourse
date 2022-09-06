@@ -1,4 +1,4 @@
-.class final Lcom/xiaomi/onetrack/b/j;
+.class Lcom/xiaomi/onetrack/b/j;
 .super Ljava/lang/Object;
 
 # interfaces
@@ -6,15 +6,19 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/xiaomi/onetrack/api/d;
+.field final synthetic a:Ljava/lang/String;
+
+.field final synthetic b:Lcom/xiaomi/onetrack/b/h;
 
 
 # direct methods
-.method constructor <init>(Lcom/xiaomi/onetrack/api/d;)V
+.method constructor <init>(Lcom/xiaomi/onetrack/b/h;Ljava/lang/String;)V
     .locals 0
 
-    .line 228
-    iput-object p1, p0, Lcom/xiaomi/onetrack/b/j;->a:Lcom/xiaomi/onetrack/api/d;
+    .line 105
+    iput-object p1, p0, Lcom/xiaomi/onetrack/b/j;->b:Lcom/xiaomi/onetrack/b/h;
+
+    iput-object p2, p0, Lcom/xiaomi/onetrack/b/j;->a:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -24,103 +28,47 @@
 
 # virtual methods
 .method public run()V
-    .locals 4
+    .locals 6
 
-    .line 232
+    .line 109
     :try_start_0
-    invoke-static {}, Lcom/xiaomi/onetrack/b/h;->c()Ljava/util/List;
+    iget-object v0, p0, Lcom/xiaomi/onetrack/b/j;->b:Lcom/xiaomi/onetrack/b/h;
+
+    invoke-static {v0}, Lcom/xiaomi/onetrack/b/h;->a(Lcom/xiaomi/onetrack/b/h;)Lcom/xiaomi/onetrack/b/g;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
-
-    .line 233
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    if-lez v1, :cond_0
-
-    .line 234
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v0}, Lcom/xiaomi/onetrack/b/g;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    const-string v1, "app_id=?"
 
-    move-result v1
+    const-string v2, "events_cloud"
 
-    if-eqz v1, :cond_0
+    const/4 v3, 0x1
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    .line 111
+    new-array v3, v3, [Ljava/lang/String;
 
-    move-result-object v1
+    const/4 v4, 0x0
 
-    check-cast v1, Lorg/json/JSONObject;
+    iget-object v5, p0, Lcom/xiaomi/onetrack/b/j;->a:Ljava/lang/String;
 
-    const-string v2, "eventName"
+    aput-object v5, v3, v4
 
-    .line 235
-    invoke-virtual {v1, v2}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "data"
-
-    .line 236
-    invoke-virtual {v1, v3}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 237
-    iget-object v3, p0, Lcom/xiaomi/onetrack/b/j;->a:Lcom/xiaomi/onetrack/api/d;
-
-    invoke-interface {v3, v2, v1}, Lcom/xiaomi/onetrack/api/d;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x1
-
-    .line 241
-    invoke-static {v0}, Lcom/xiaomi/onetrack/b/h;->c(Z)V
+    invoke-virtual {v0, v2, v1, v3}, Landroid/database/sqlite/SQLiteDatabase;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_1
+    goto :goto_0
 
     :catch_0
     move-exception v0
 
-    const-string v1, "NetworkAccessManager"
+    .line 113
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 243
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "cta event error: "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcom/xiaomi/onetrack/util/p;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    :goto_1
-    const/4 v0, 0x0
-
-    .line 245
-    invoke-static {v0}, Lcom/xiaomi/onetrack/b/h;->d(Z)Z
-
+    :goto_0
     return-void
 .end method

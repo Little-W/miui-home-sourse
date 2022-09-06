@@ -760,7 +760,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "uploadFirstFolderRecommendAdInfo, appName="
+    const-string/jumbo v3, "uploadFirstFolderRecommendAdInfo, appName="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -781,7 +781,7 @@
     :cond_0
     const-string v0, "RecommendController"
 
-    const-string v1, "uploadFirstFolderRecommendAdInfo, the first one is null"
+    const-string/jumbo v1, "uploadFirstFolderRecommendAdInfo, the first one is null"
 
     .line 73
     invoke-static {v0, v1}, Lcom/miui/home/launcher/MiuiHomeLog;->log(Ljava/lang/String;Ljava/lang/String;)V

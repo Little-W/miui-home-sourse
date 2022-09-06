@@ -15,16 +15,16 @@
 
 
 # static fields
-.field public static final branch_backup_rules:I = 0x7f130001
+.field public static final branch_backup_rules:I = 0x7f140001
 
-.field public static final remote_config_defaults:I = 0x7f130027
+.field public static final remote_config_defaults:I = 0x7f14002e
 
 
 # direct methods
 .method private constructor <init>()V
     .locals 0
 
-    .line 6080
+    .line 6150
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

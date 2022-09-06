@@ -339,7 +339,7 @@
 .end method
 
 .method private getThemeResourceId(Landroid/view/ContextThemeWrapper;)I
-    .locals 3
+    .locals 4
 
     .line 236
     :try_start_0
@@ -351,9 +351,15 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v1, v2}, Lmiuix/reflect/Reflects;->getMethod(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    move-object v3, v2
+
+    check-cast v3, [Ljava/lang/Class;
+
+    invoke-static {v0, v1, v3}, Lmiuix/reflect/Reflects;->getMethod(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v0
+
+    check-cast v2, [Ljava/lang/Object;
 
     .line 235
     invoke-static {p1, v0, v2}, Lmiuix/reflect/Reflects;->invoke(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;

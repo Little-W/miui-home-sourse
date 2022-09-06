@@ -30,19 +30,19 @@
 .method public constructor <init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
     .locals 1
 
-    .line 1200
+    .line 1205
     invoke-direct {p0, p1}, Lcom/miui/maml/ActionCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;)V
 
     const-string p1, "command"
 
-    .line 1201
+    .line 1206
     invoke-interface {p2, p1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/miui/maml/ActionCommand$ExternCommand;->mCommand:Ljava/lang/String;
 
-    .line 1202
+    .line 1207
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$ExternCommand;->getVariables()Lcom/miui/maml/data/Variables;
 
     move-result-object p1
@@ -59,7 +59,7 @@
 
     iput-object p1, p0, Lcom/miui/maml/ActionCommand$ExternCommand;->mNumParaExp:Lcom/miui/maml/data/Expression;
 
-    .line 1203
+    .line 1208
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$ExternCommand;->getVariables()Lcom/miui/maml/data/Variables;
 
     move-result-object p1
@@ -84,14 +84,14 @@
 .method protected doPerform()V
     .locals 6
 
-    .line 1208
+    .line 1213
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$ExternCommand;->getRoot()Lcom/miui/maml/ScreenElementRoot;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$ExternCommand;->mCommand:Ljava/lang/String;
 
-    .line 1209
+    .line 1214
     iget-object v2, p0, Lcom/miui/maml/ActionCommand$ExternCommand;->mNumParaExp:Lcom/miui/maml/data/Expression;
 
     const/4 v3, 0x0
@@ -111,7 +111,7 @@
 
     move-result-object v2
 
-    .line 1210
+    .line 1215
     :goto_0
     iget-object v4, p0, Lcom/miui/maml/ActionCommand$ExternCommand;->mStrParaExp:Lcom/miui/maml/data/Expression;
 
@@ -124,7 +124,7 @@
 
     move-result-object v3
 
-    .line 1208
+    .line 1213
     :goto_1
     invoke-virtual {v0, v1, v2, v3}, Lcom/miui/maml/ScreenElementRoot;->issueExternCommand(Ljava/lang/String;Ljava/lang/Double;Ljava/lang/String;)V
 

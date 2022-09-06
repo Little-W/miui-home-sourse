@@ -293,6 +293,7 @@
     <string name="eras_bc">খ্ৰীষ্টপূৰ্ব</string>
     <string name="evening">আবেলি</string>
     <string name="exit_overview_because_task_stack_changed">পৃষ্ঠভূমিত সংঘটিত হোৱা পৰিৱৰ্তনসমূহৰ বাবে শেহতীয়াসমূহ বন্ধ কৰা হৈছে</string>
+    <string name="external_not_support_split_screen_j18">স্প্লিট-স্ক্ৰীণ বাহিৰৰ স্ক্রীণত সমৰ্থিত নহয়</string>
     <string name="failed_to_delete_temporary">আঁতৰাব নোৱাৰি</string>
     <string name="failed_to_drop">লৈ যাব নোৱাৰি</string>
     <string name="failed_to_drop_widget_invalid">এই ৱিজেটটো অমান্য</string>
@@ -497,6 +498,7 @@
     <string name="midnight">নিশা</string>
     <string name="minus_one_screen">এপ ভল্ট</string>
     <string name="miui_screen_config_title">গৃহ স্ক্ৰীণ ছেটিংছ</string>
+    <string name="miui_widget_menu_replace_text">সলনি</string>
     <string name="miuix_access_state_desc">চয়নিত</string>
     <string name="miuix_appcompat_action_mode_deselect_all">চয়নহীন কৰক</string>
     <string name="miuix_appcompat_action_mode_select_all">সকলো চয়ন কৰক</string>
@@ -523,6 +525,8 @@
     <string name="monday">সোমবাৰ</string>
     <string name="monday_short">সোম</string>
     <string name="monday_shortest">সোম</string>
+    <string name="monochrome_summary">সুসম আইকনৰ বাবে পৃষ্ঠভূমিৰ ৰং পৰিৱৰ্তন কৰক</string>
+    <string name="monochrome_title">পৃষ্ঠভূমিৰ ৰং</string>
     <string name="month_april">এপ্ৰিল</string>
     <string name="month_april_short">এপ্ৰি</string>
     <string name="month_april_shortest">এপ্ৰি</string>

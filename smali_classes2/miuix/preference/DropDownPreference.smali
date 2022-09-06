@@ -360,9 +360,14 @@
 .method private findSpinnerIndexOfValue(Ljava/lang/String;)I
     .locals 3
 
+    .line 440
+    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->mEntryValues:[Ljava/lang/CharSequence;
+
+    if-eqz v0, :cond_1
+
     const/4 v0, 0x0
 
-    .line 440
+    .line 441
     :goto_0
     iget-object v1, p0, Lmiuix/preference/DropDownPreference;->mEntryValues:[Ljava/lang/CharSequence;
 
@@ -370,7 +375,7 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 441
+    .line 442
     aget-object v1, v1, v0
 
     invoke-static {v1, p1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z

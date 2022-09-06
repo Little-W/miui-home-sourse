@@ -25,7 +25,7 @@
 
 .field private mUninstallAnimShowing:Z
 
-.field private mUninstallConfirmAppDialog:Lmiuix/appcompat/app/AlertDialog;
+.field private mUninstallConfirmAppDialog:Lmiui/home/lib/dialog/AlertDialog;
 
 .field private mUninstallDialog:Lcom/miui/home/launcher/UninstallDialog;
 
@@ -91,7 +91,7 @@
     .line 48
     iget-object p1, p0, Lcom/miui/home/launcher/UninstallDialogWrapper;->mDropTargetBar:Lcom/miui/home/launcher/DropTargetBar;
 
-    const v0, 0x7f0a02d2
+    const v0, 0x7f0a03bf
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/DropTargetBar;->findViewById(I)Landroid/view/View;
 
@@ -111,7 +111,7 @@
     .line 50
     iget-object p1, p0, Lcom/miui/home/launcher/UninstallDialogWrapper;->mUninstallDialog:Lcom/miui/home/launcher/UninstallDialog;
 
-    const v0, 0x7f0a0088
+    const v0, 0x7f0a009c
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/UninstallDialog;->findViewById(I)Landroid/view/View;
 
@@ -122,7 +122,7 @@
     .line 51
     iget-object p1, p0, Lcom/miui/home/launcher/UninstallDialogWrapper;->mUninstallDialog:Lcom/miui/home/launcher/UninstallDialog;
 
-    const v0, 0x7f0a008a
+    const v0, 0x7f0a009e
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/UninstallDialog;->findViewById(I)Landroid/view/View;
 
@@ -137,7 +137,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f0b002f
+    const v0, 0x7f0b0031
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -299,17 +299,17 @@
     .locals 1
 
     .line 153
-    iget-object v0, p0, Lcom/miui/home/launcher/UninstallDialogWrapper;->mUninstallConfirmAppDialog:Lmiuix/appcompat/app/AlertDialog;
+    iget-object v0, p0, Lcom/miui/home/launcher/UninstallDialogWrapper;->mUninstallConfirmAppDialog:Lmiui/home/lib/dialog/AlertDialog;
 
     if-eqz v0, :cond_0
 
     .line 154
-    invoke-virtual {v0}, Lmiuix/appcompat/app/AlertDialog;->dismiss()V
+    invoke-virtual {v0}, Lmiui/home/lib/dialog/AlertDialog;->dismiss()V
 
     const/4 v0, 0x0
 
     .line 155
-    iput-object v0, p0, Lcom/miui/home/launcher/UninstallDialogWrapper;->mUninstallConfirmAppDialog:Lmiuix/appcompat/app/AlertDialog;
+    iput-object v0, p0, Lcom/miui/home/launcher/UninstallDialogWrapper;->mUninstallConfirmAppDialog:Lmiui/home/lib/dialog/AlertDialog;
 
     :cond_0
     return-void
@@ -375,9 +375,9 @@
     invoke-virtual {v1, v0}, Lcom/miui/home/launcher/uninstall/SecondConfirmDialog;->setCancelConsumer(Ljava/util/function/Consumer;)V
 
     .line 147
-    iput-object v1, p0, Lcom/miui/home/launcher/UninstallDialogWrapper;->mUninstallConfirmAppDialog:Lmiuix/appcompat/app/AlertDialog;
+    iput-object v1, p0, Lcom/miui/home/launcher/UninstallDialogWrapper;->mUninstallConfirmAppDialog:Lmiui/home/lib/dialog/AlertDialog;
 
-    const v0, 0x7f100138
+    const v0, 0x7f110141
 
     .line 148
     invoke-virtual {v1, v0}, Lcom/miui/home/launcher/uninstall/SecondConfirmDialog;->setPositiveButTitle(I)V
@@ -473,11 +473,11 @@
 
     move-result p1
 
-    const v0, 0x7f0a0088
+    const v0, 0x7f0a009c
 
     if-eq p1, v0, :cond_1
 
-    const v0, 0x7f0a008a
+    const v0, 0x7f0a009e
 
     if-eq p1, v0, :cond_0
 

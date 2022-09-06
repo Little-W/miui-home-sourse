@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/maml/elements/TimepanelScreenElement;)V
     .locals 0
 
-    .line 63
+    .line 66
     iput-object p1, p0, Lcom/miui/maml/elements/TimepanelScreenElement$1;->this$0:Lcom/miui/maml/elements/TimepanelScreenElement;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 8
 
-    .line 66
+    .line 69
     iget-object v0, p0, Lcom/miui/maml/elements/TimepanelScreenElement$1;->this$0:Lcom/miui/maml/elements/TimepanelScreenElement;
 
     invoke-static {v0}, Lcom/miui/maml/elements/TimepanelScreenElement;->access$000(Lcom/miui/maml/elements/TimepanelScreenElement;)Z
@@ -49,7 +49,7 @@
 
     return-void
 
-    .line 70
+    .line 73
     :cond_0
     iget-object v0, p0, Lcom/miui/maml/elements/TimepanelScreenElement$1;->this$0:Lcom/miui/maml/elements/TimepanelScreenElement;
 
@@ -63,20 +63,20 @@
 
     return-void
 
-    .line 75
+    .line 78
     :cond_1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
 
-    .line 76
+    .line 79
     iget-object v3, p0, Lcom/miui/maml/elements/TimepanelScreenElement$1;->this$0:Lcom/miui/maml/elements/TimepanelScreenElement;
 
     iget-object v3, v3, Lcom/miui/maml/elements/TimepanelScreenElement;->mCalendar:Ljava/util/Calendar;
 
     invoke-virtual {v3, v1, v2}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
-    .line 77
+    .line 80
     iget-object v1, p0, Lcom/miui/maml/elements/TimepanelScreenElement$1;->this$0:Lcom/miui/maml/elements/TimepanelScreenElement;
 
     invoke-static {v1}, Lcom/miui/maml/elements/TimepanelScreenElement;->access$100(Lcom/miui/maml/elements/TimepanelScreenElement;)Lcom/miui/maml/data/Expression;
@@ -85,7 +85,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 78
+    .line 81
     iget-object v1, p0, Lcom/miui/maml/elements/TimepanelScreenElement$1;->this$0:Lcom/miui/maml/elements/TimepanelScreenElement;
 
     invoke-static {v1}, Lcom/miui/maml/elements/TimepanelScreenElement;->access$100(Lcom/miui/maml/elements/TimepanelScreenElement;)Lcom/miui/maml/data/Expression;
@@ -96,14 +96,14 @@
 
     move-result-object v1
 
-    .line 79
+    .line 82
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
     if-nez v2, :cond_2
 
-    .line 80
+    .line 83
     iget-object v2, p0, Lcom/miui/maml/elements/TimepanelScreenElement$1;->this$0:Lcom/miui/maml/elements/TimepanelScreenElement;
 
     iget-object v2, v2, Lcom/miui/maml/elements/TimepanelScreenElement;->mCalendar:Ljava/util/Calendar;
@@ -114,7 +114,7 @@
 
     invoke-virtual {v2, v1}, Ljava/util/Calendar;->setTimeZone(Ljava/util/TimeZone;)V
 
-    .line 83
+    .line 86
     :cond_2
     iget-object v1, p0, Lcom/miui/maml/elements/TimepanelScreenElement$1;->this$0:Lcom/miui/maml/elements/TimepanelScreenElement;
 
@@ -130,7 +130,7 @@
 
     move-result-object v1
 
-    .line 84
+    .line 87
     iget-object v2, p0, Lcom/miui/maml/elements/TimepanelScreenElement$1;->this$0:Lcom/miui/maml/elements/TimepanelScreenElement;
 
     invoke-static {v2}, Lcom/miui/maml/elements/TimepanelScreenElement;->access$300(Lcom/miui/maml/elements/TimepanelScreenElement;)Z
@@ -153,18 +153,18 @@
 
     return-void
 
-    .line 87
+    .line 90
     :cond_3
     iget-object v2, p0, Lcom/miui/maml/elements/TimepanelScreenElement$1;->this$0:Lcom/miui/maml/elements/TimepanelScreenElement;
 
     invoke-static {v2, v1}, Lcom/miui/maml/elements/TimepanelScreenElement;->access$402(Lcom/miui/maml/elements/TimepanelScreenElement;Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
-    .line 88
+    .line 91
     new-instance v2, Landroid/graphics/Canvas;
 
     invoke-direct {v2, v0}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 89
+    .line 92
     sget-object v0, Landroid/graphics/PorterDuff$Mode;->CLEAR:Landroid/graphics/PorterDuff$Mode;
 
     const/4 v3, 0x0
@@ -173,7 +173,7 @@
 
     move v0, v3
 
-    .line 91
+    .line 94
     :goto_0
     invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
 
@@ -181,12 +181,12 @@
 
     if-ge v3, v4, :cond_5
 
-    .line 92
+    .line 95
     invoke-interface {v1, v3}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v4
 
-    .line 93
+    .line 96
     iget-object v5, p0, Lcom/miui/maml/elements/TimepanelScreenElement$1;->this$0:Lcom/miui/maml/elements/TimepanelScreenElement;
 
     invoke-static {v5, v4}, Lcom/miui/maml/elements/TimepanelScreenElement;->access$500(Lcom/miui/maml/elements/TimepanelScreenElement;C)Landroid/graphics/Bitmap;
@@ -201,17 +201,17 @@
 
     const/4 v7, 0x0
 
-    .line 95
+    .line 98
     invoke-virtual {v2, v4, v5, v6, v7}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    .line 96
+    .line 99
     invoke-virtual {v4}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v4
 
     add-int/2addr v0, v4
 
-    .line 97
+    .line 100
     iget-object v4, p0, Lcom/miui/maml/elements/TimepanelScreenElement$1;->this$0:Lcom/miui/maml/elements/TimepanelScreenElement;
 
     invoke-static {v4}, Lcom/miui/maml/elements/TimepanelScreenElement;->access$600(Lcom/miui/maml/elements/TimepanelScreenElement;)I
@@ -225,7 +225,7 @@
 
     goto :goto_0
 
-    .line 100
+    .line 103
     :cond_5
     iget-object v1, p0, Lcom/miui/maml/elements/TimepanelScreenElement$1;->this$0:Lcom/miui/maml/elements/TimepanelScreenElement;
 
@@ -233,7 +233,7 @@
 
     invoke-virtual {v1}, Lcom/miui/maml/elements/BitmapProvider$VersionedBitmap;->updateVersion()I
 
-    .line 102
+    .line 105
     iget-object v1, p0, Lcom/miui/maml/elements/TimepanelScreenElement$1;->this$0:Lcom/miui/maml/elements/TimepanelScreenElement;
 
     invoke-static {v1}, Lcom/miui/maml/elements/TimepanelScreenElement;->access$600(Lcom/miui/maml/elements/TimepanelScreenElement;)I
@@ -244,7 +244,7 @@
 
     invoke-static {v1, v0}, Lcom/miui/maml/elements/TimepanelScreenElement;->access$702(Lcom/miui/maml/elements/TimepanelScreenElement;I)I
 
-    .line 103
+    .line 106
     iget-object v0, p0, Lcom/miui/maml/elements/TimepanelScreenElement$1;->this$0:Lcom/miui/maml/elements/TimepanelScreenElement;
 
     invoke-static {v0}, Lcom/miui/maml/elements/TimepanelScreenElement;->access$700(Lcom/miui/maml/elements/TimepanelScreenElement;)I
@@ -259,7 +259,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/miui/maml/elements/TimepanelScreenElement;->setActualWidth(D)V
 
-    .line 105
+    .line 108
     iget-object v0, p0, Lcom/miui/maml/elements/TimepanelScreenElement$1;->this$0:Lcom/miui/maml/elements/TimepanelScreenElement;
 
     invoke-virtual {v0}, Lcom/miui/maml/elements/TimepanelScreenElement;->requestUpdate()V

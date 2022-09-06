@@ -1,4 +1,4 @@
-.class final Lmiuix/animation/utils/LogUtils$1;
+.class Lmiuix/animation/utils/LogUtils$1;
 .super Landroid/os/Handler;
 .source "LogUtils.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 

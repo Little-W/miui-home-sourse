@@ -105,25 +105,36 @@
     .line 132
     iget-object p2, p0, Lcom/miui/maml/elements/WebViewScreenElement;->mWebView:Landroid/webkit/WebView;
 
+    invoke-virtual {p2}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
+
+    move-result-object p2
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p2, v2}, Landroid/webkit/WebSettings;->setAllowContentAccess(Z)V
+
+    .line 133
+    iget-object p2, p0, Lcom/miui/maml/elements/WebViewScreenElement;->mWebView:Landroid/webkit/WebView;
+
     const/16 v2, 0x64
 
     invoke-virtual {p2, v2}, Landroid/webkit/WebView;->setInitialScale(I)V
 
     const-string p2, "userAgent"
 
-    .line 133
+    .line 134
     invoke-interface {p1, p2}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 134
+    .line 135
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 135
+    .line 136
     iget-object v2, p0, Lcom/miui/maml/elements/WebViewScreenElement;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v2}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
@@ -132,7 +143,7 @@
 
     invoke-virtual {v2, p2}, Landroid/webkit/WebSettings;->setUserAgentString(Ljava/lang/String;)V
 
-    .line 137
+    .line 138
     :cond_0
     iget-object p2, p0, Lcom/miui/maml/elements/WebViewScreenElement;->mWebView:Landroid/webkit/WebView;
 
@@ -146,7 +157,7 @@
 
     invoke-virtual {p2, v2, v3}, Landroid/webkit/WebView;->addJavascriptInterface(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 138
+    .line 139
     new-instance p2, Landroid/view/ViewGroup$LayoutParams;
 
     const/4 v2, -0x1
@@ -155,7 +166,7 @@
 
     iput-object p2, p0, Lcom/miui/maml/elements/WebViewScreenElement;->mLayoutParams:Landroid/view/ViewGroup$LayoutParams;
 
-    .line 140
+    .line 141
     invoke-virtual {p0}, Lcom/miui/maml/elements/WebViewScreenElement;->getContext()Lcom/miui/maml/ScreenContext;
 
     move-result-object p2
@@ -166,14 +177,14 @@
 
     iput-object p2, p0, Lcom/miui/maml/elements/WebViewScreenElement;->mHandler:Landroid/os/Handler;
 
-    .line 141
+    .line 142
     invoke-virtual {p0}, Lcom/miui/maml/elements/WebViewScreenElement;->getVariables()Lcom/miui/maml/data/Variables;
 
     move-result-object p2
 
     const-string v2, "uriExp"
 
-    .line 142
+    .line 143
     invoke-interface {p1, v2}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
@@ -182,7 +193,7 @@
 
     move-result-object v2
 
-    .line 143
+    .line 144
     new-instance v3, Lcom/miui/maml/util/TextFormatter;
 
     const-string v4, "uri"
@@ -197,7 +208,7 @@
 
     const-string v2, "cachePage"
 
-    .line 145
+    .line 146
     invoke-interface {p1, v2}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
@@ -210,12 +221,12 @@
 
     const-string v2, "useNetwork"
 
-    .line 146
+    .line 147
     invoke-interface {p1, v2}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 147
+    .line 148
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -235,19 +246,19 @@
     :cond_1
     const-string v0, "wifi"
 
-    .line 149
+    .line 150
     invoke-virtual {v0, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 150
+    .line 151
     iput v1, p0, Lcom/miui/maml/elements/WebViewScreenElement;->mUseNetwork:I
 
     goto :goto_1
 
-    .line 152
+    .line 153
     :cond_2
     invoke-static {p2, p1}, Lcom/miui/maml/data/Expression;->build(Lcom/miui/maml/data/Variables;Ljava/lang/String;)Lcom/miui/maml/data/Expression;
 
@@ -257,7 +268,7 @@
 
     goto :goto_1
 
-    .line 148
+    .line 149
     :cond_3
     :goto_0
     iput v0, p0, Lcom/miui/maml/elements/WebViewScreenElement;->mUseNetwork:I
@@ -330,7 +341,7 @@
         }
     .end annotation
 
-    .line 221
+    .line 227
     iget v0, p0, Lcom/miui/maml/elements/WebViewScreenElement;->mUseNetwork:I
 
     const/4 v1, 0x1
@@ -346,7 +357,7 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 224
+    .line 230
     invoke-virtual {p0}, Lcom/miui/maml/elements/WebViewScreenElement;->getContext()Lcom/miui/maml/ScreenContext;
 
     move-result-object v0
@@ -361,14 +372,14 @@
 
     check-cast v0, Landroid/net/ConnectivityManager;
 
-    .line 225
+    .line 231
     invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
     move-result-object v3
 
     if-eqz v3, :cond_1
 
-    .line 226
+    .line 232
     invoke-virtual {v0}, Landroid/net/ConnectivityManager;->isActiveNetworkMetered()Z
 
     move-result v0
@@ -396,7 +407,7 @@
 .method private final finishWebView()V
     .locals 2
 
-    .line 300
+    .line 306
     iget-object v0, p0, Lcom/miui/maml/elements/WebViewScreenElement;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/miui/maml/elements/WebViewScreenElement$9;
@@ -411,7 +422,7 @@
 .method private final initWebView()V
     .locals 2
 
-    .line 283
+    .line 289
     iget-boolean v0, p0, Lcom/miui/maml/elements/WebViewScreenElement;->mViewAdded:Z
 
     if-eqz v0, :cond_0
@@ -420,7 +431,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 284
+    .line 290
     :cond_0
     iget-object v0, p0, Lcom/miui/maml/elements/WebViewScreenElement;->mHandler:Landroid/os/Handler;
 
@@ -437,7 +448,7 @@
 .method public static synthetic lambda$goBack$0(Lcom/miui/maml/elements/WebViewScreenElement;)V
     .locals 1
 
-    .line 216
+    .line 222
     iget-object v0, p0, Lcom/miui/maml/elements/WebViewScreenElement;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->goBack()V
@@ -448,7 +459,7 @@
 .method private pauseWebView(Z)V
     .locals 2
 
-    .line 271
+    .line 277
     iget-object v0, p0, Lcom/miui/maml/elements/WebViewScreenElement;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/miui/maml/elements/WebViewScreenElement$7;
@@ -463,21 +474,21 @@
 .method private updateLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Z
     .locals 4
 
-    .line 328
+    .line 334
     invoke-virtual {p0}, Lcom/miui/maml/elements/WebViewScreenElement;->getWidth()F
 
     move-result v0
 
     float-to-int v0, v0
 
-    .line 329
+    .line 335
     iget v1, p1, Landroid/view/ViewGroup$LayoutParams;->width:I
 
     const/4 v2, 0x1
 
     if-eq v1, v0, :cond_0
 
-    .line 330
+    .line 336
     iput v0, p1, Landroid/view/ViewGroup$LayoutParams;->width:I
 
     move v0, v2
@@ -487,7 +498,7 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 333
+    .line 339
     :goto_0
     invoke-virtual {p0}, Lcom/miui/maml/elements/WebViewScreenElement;->getHeight()F
 
@@ -495,12 +506,12 @@
 
     float-to-int v1, v1
 
-    .line 334
+    .line 340
     iget v3, p1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
     if-eq v3, v1, :cond_1
 
-    .line 335
+    .line 341
     iput v1, p1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
     move v0, v2
@@ -512,32 +523,32 @@
 .method private final updateView()V
     .locals 2
 
-    .line 314
+    .line 320
     iget-boolean v0, p0, Lcom/miui/maml/elements/WebViewScreenElement;->mViewAdded:Z
 
     if-eqz v0, :cond_0
 
-    .line 315
+    .line 321
     invoke-virtual {p0}, Lcom/miui/maml/elements/WebViewScreenElement;->getAbsoluteLeft()F
 
     move-result v0
 
-    .line 316
+    .line 322
     iget-object v1, p0, Lcom/miui/maml/elements/WebViewScreenElement;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v1, v0}, Landroid/webkit/WebView;->setX(F)V
 
-    .line 317
+    .line 323
     invoke-virtual {p0}, Lcom/miui/maml/elements/WebViewScreenElement;->getAbsoluteTop()F
 
     move-result v0
 
-    .line 318
+    .line 324
     iget-object v1, p0, Lcom/miui/maml/elements/WebViewScreenElement;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v1, v0}, Landroid/webkit/WebView;->setY(F)V
 
-    .line 320
+    .line 326
     iget-object v0, p0, Lcom/miui/maml/elements/WebViewScreenElement;->mLayoutParams:Landroid/view/ViewGroup$LayoutParams;
 
     invoke-direct {p0, v0}, Lcom/miui/maml/elements/WebViewScreenElement;->updateLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Z
@@ -546,7 +557,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 321
+    .line 327
     iget-object v0, p0, Lcom/miui/maml/elements/WebViewScreenElement;->mWebView:Landroid/webkit/WebView;
 
     iget-object v1, p0, Lcom/miui/maml/elements/WebViewScreenElement;->mLayoutParams:Landroid/view/ViewGroup$LayoutParams;
@@ -568,17 +579,17 @@
 .method protected doTick(J)V
     .locals 2
 
-    .line 233
+    .line 239
     invoke-super {p0, p1, p2}, Lcom/miui/maml/elements/AnimatedScreenElement;->doTick(J)V
 
-    .line 235
+    .line 241
     iget-object p1, p0, Lcom/miui/maml/elements/WebViewScreenElement;->mUriFormatter:Lcom/miui/maml/util/TextFormatter;
 
     invoke-virtual {p1}, Lcom/miui/maml/util/TextFormatter;->getText()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 236
+    .line 242
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p2
@@ -595,7 +606,7 @@
 
     const-string p2, "MAML.WebViewScreenE"
 
-    .line 237
+    .line 243
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -612,10 +623,10 @@
 
     invoke-static {p2, v0}, Lcom/miui/maml/util/MamlLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 238
+    .line 244
     invoke-virtual {p0, p1}, Lcom/miui/maml/elements/WebViewScreenElement;->loadUrl(Ljava/lang/String;)V
 
-    .line 240
+    .line 246
     :cond_0
     invoke-direct {p0}, Lcom/miui/maml/elements/WebViewScreenElement;->updateView()V
 
@@ -625,20 +636,20 @@
 .method public finish()V
     .locals 1
 
-    .line 174
+    .line 175
     invoke-super {p0}, Lcom/miui/maml/elements/AnimatedScreenElement;->finish()V
 
-    .line 175
+    .line 176
     invoke-direct {p0}, Lcom/miui/maml/elements/WebViewScreenElement;->finishWebView()V
 
-    .line 176
+    .line 177
     iget-boolean v0, p0, Lcom/miui/maml/elements/WebViewScreenElement;->mCachePage:Z
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 177
+    .line 178
     iput-object v0, p0, Lcom/miui/maml/elements/WebViewScreenElement;->mCurUrl:Ljava/lang/String;
 
     :cond_0
@@ -648,7 +659,7 @@
 .method public goBack()V
     .locals 2
 
-    .line 216
+    .line 222
     iget-object v0, p0, Lcom/miui/maml/elements/WebViewScreenElement;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/miui/maml/elements/-$$Lambda$WebViewScreenElement$nfOpiK_fDUp6el6-_W0Aiknw3Wg;
@@ -663,15 +674,15 @@
 .method public init()V
     .locals 2
 
-    .line 159
+    .line 160
     invoke-super {p0}, Lcom/miui/maml/elements/AnimatedScreenElement;->init()V
 
-    .line 161
+    .line 162
     iget-object v0, p0, Lcom/miui/maml/elements/WebViewScreenElement;->mUseNetworkExp:Lcom/miui/maml/data/Expression;
 
     if-eqz v0, :cond_0
 
-    .line 162
+    .line 163
     invoke-virtual {v0}, Lcom/miui/maml/data/Expression;->evaluate()D
 
     move-result-wide v0
@@ -680,7 +691,7 @@
 
     iput v0, p0, Lcom/miui/maml/elements/WebViewScreenElement;->mUseNetwork:I
 
-    .line 165
+    .line 166
     :cond_0
     iget-object v0, p0, Lcom/miui/maml/elements/WebViewScreenElement;->mRoot:Lcom/miui/maml/ScreenElementRoot;
 
@@ -690,7 +701,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 166
+    .line 167
     invoke-direct {p0}, Lcom/miui/maml/elements/WebViewScreenElement;->initWebView()V
 
     goto :goto_0
@@ -700,7 +711,7 @@
 
     const-string v1, "ViewManager must be set before init"
 
-    .line 168
+    .line 169
     invoke-static {v0, v1}, Lcom/miui/maml/util/MamlLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
@@ -710,7 +721,7 @@
 .method public loadUrl(Ljava/lang/String;)V
     .locals 3
 
-    .line 186
+    .line 187
     invoke-direct {p0}, Lcom/miui/maml/elements/WebViewScreenElement;->canUseNetwork()Z
 
     move-result v0
@@ -727,7 +738,7 @@
 
     const-string v0, "MAML.WebViewScreenE"
 
-    .line 187
+    .line 188
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -746,11 +757,42 @@
 
     return-void
 
-    .line 191
     :cond_0
-    iput-object p1, p0, Lcom/miui/maml/elements/WebViewScreenElement;->mCurUrl:Ljava/lang/String;
+    const-string v0, "http://"
 
     .line 192
+    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const-string v0, "MAML.WebViewScreenE"
+
+    .line 193
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, " Cleartext HTTP traffic not permitted : "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Lcom/miui/maml/util/MamlLog;->w(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    .line 197
+    :cond_1
+    iput-object p1, p0, Lcom/miui/maml/elements/WebViewScreenElement;->mCurUrl:Ljava/lang/String;
+
+    .line 198
     iget-object v0, p0, Lcom/miui/maml/elements/WebViewScreenElement;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/miui/maml/elements/WebViewScreenElement$3;
@@ -765,10 +807,10 @@
 .method protected onVisibilityChange(Z)V
     .locals 2
 
-    .line 245
+    .line 251
     invoke-super {p0, p1}, Lcom/miui/maml/elements/AnimatedScreenElement;->onVisibilityChange(Z)V
 
-    .line 247
+    .line 253
     iget-object v0, p0, Lcom/miui/maml/elements/WebViewScreenElement;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/miui/maml/elements/WebViewScreenElement$6;
@@ -783,17 +825,17 @@
 .method public pause()V
     .locals 1
 
-    .line 256
+    .line 262
     invoke-super {p0}, Lcom/miui/maml/elements/AnimatedScreenElement;->pause()V
 
-    .line 257
+    .line 263
     iget-boolean v0, p0, Lcom/miui/maml/elements/WebViewScreenElement;->mViewAdded:Z
 
     if-eqz v0, :cond_0
 
     const/4 v0, 0x1
 
-    .line 258
+    .line 264
     invoke-direct {p0, v0}, Lcom/miui/maml/elements/WebViewScreenElement;->pauseWebView(Z)V
 
     :cond_0
@@ -803,7 +845,7 @@
 .method public reload()V
     .locals 2
 
-    .line 208
+    .line 214
     iget-object v0, p0, Lcom/miui/maml/elements/WebViewScreenElement;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/miui/maml/elements/WebViewScreenElement$5;
@@ -824,17 +866,17 @@
 .method public resume()V
     .locals 1
 
-    .line 264
+    .line 270
     invoke-super {p0}, Lcom/miui/maml/elements/AnimatedScreenElement;->resume()V
 
-    .line 265
+    .line 271
     iget-boolean v0, p0, Lcom/miui/maml/elements/WebViewScreenElement;->mViewAdded:Z
 
     if-eqz v0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 266
+    .line 272
     invoke-direct {p0, v0}, Lcom/miui/maml/elements/WebViewScreenElement;->pauseWebView(Z)V
 
     :cond_0
@@ -844,7 +886,7 @@
 .method public runjs(Ljava/lang/String;)V
     .locals 2
 
-    .line 200
+    .line 206
     iget-object v0, p0, Lcom/miui/maml/elements/WebViewScreenElement;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/miui/maml/elements/WebViewScreenElement$4;

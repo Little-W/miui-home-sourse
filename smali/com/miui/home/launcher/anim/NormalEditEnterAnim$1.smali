@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/anim/NormalEditEnterAnim;)V
     .locals 0
 
-    .line 144
+    .line 142
     iput-object p1, p0, Lcom/miui/home/launcher/anim/NormalEditEnterAnim$1;->this$0:Lcom/miui/home/launcher/anim/NormalEditEnterAnim;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 0
 
-    .line 152
+    .line 150
     iget-object p1, p0, Lcom/miui/home/launcher/anim/NormalEditEnterAnim$1;->this$0:Lcom/miui/home/launcher/anim/NormalEditEnterAnim;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/anim/NormalEditEnterAnim;->onEnterAnimationEnd()V
@@ -48,7 +48,7 @@
 
     const/4 p1, 0x0
 
-    .line 147
+    .line 145
     invoke-static {p1}, Lcom/miui/home/launcher/AutoLayoutAnimation;->setDisableAutoLayoutAnimation(Z)V
 
     return-void

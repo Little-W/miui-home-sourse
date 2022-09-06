@@ -29,6 +29,8 @@
 
 .field private mHotSeatsCellWidth:I
 
+.field private final mHotSeatsListCellWidth:I
+
 .field private mRealScreenHeight:I
 
 .field private mScreenHeight:I
@@ -46,7 +48,7 @@
 
 # direct methods
 .method public constructor <init>(IILcom/miui/home/launcher/DeviceConfig;Landroid/content/Context;)V
-    .locals 1
+    .locals 3
 
     const-string v0, "dpc"
 
@@ -56,51 +58,72 @@
 
     invoke-static {p4, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 13
+    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 14
+    .line 15
     iput v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mScreenWidth:I
 
-    .line 15
+    .line 16
     iput v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mScreenHeight:I
 
-    .line 16
+    .line 17
     iput v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mRealScreenHeight:I
 
-    .line 17
+    .line 18
     iput v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mCellWorkingHeight:I
 
-    .line 18
+    .line 19
     iput v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mCellWorkingWidth:I
 
-    .line 19
+    .line 20
     iput v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mCellWidth:I
 
-    .line 20
+    .line 21
     iput v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mCellHeight:I
 
-    .line 22
+    .line 23
     iput v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mScreenLongSize:I
 
-    .line 23
+    .line 24
     iput v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mScreenShortSize:I
 
-    .line 27
+    .line 28
     iput v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mHotSeatsCellWidth:I
 
-    .line 28
+    .line 29
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
+
+    move-result-object v1
+
+    const-string v2, "Application.getInstance()"
+
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {v1}, Lcom/miui/home/launcher/Application;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const v2, 0x7f07019e
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v1
+
+    iput v1, p0, Lcom/miui/home/launcher/DeviceProfile;->mHotSeatsListCellWidth:I
+
+    .line 30
     iput v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mHotSeatsCellHeight:I
 
-    .line 35
+    .line 37
     iput v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mHotSeatsCellContentHeight:I
 
-    .line 38
+    .line 40
     invoke-virtual {p0, p1, p2, p4}, Lcom/miui/home/launcher/DeviceProfile;->initScreenSize(IILandroid/content/Context;)V
 
-    .line 39
+    .line 41
     iput-object p3, p0, Lcom/miui/home/launcher/DeviceProfile;->mDPC:Lcom/miui/home/launcher/DeviceConfig;
 
     return-void
@@ -115,7 +138,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 91
+    .line 95
     iget p1, p0, Lcom/miui/home/launcher/DeviceProfile;->mCellWorkingWidth:I
 
     int-to-float p1, p1
@@ -154,7 +177,7 @@
 
     iput p1, p0, Lcom/miui/home/launcher/DeviceProfile;->mCellWidth:I
 
-    .line 92
+    .line 96
     iget p1, p0, Lcom/miui/home/launcher/DeviceProfile;->mCellWorkingHeight:I
 
     int-to-float p1, p1
@@ -191,7 +214,7 @@
 
     iput p1, p0, Lcom/miui/home/launcher/DeviceProfile;->mCellHeight:I
 
-    .line 93
+    .line 97
     iget p1, p0, Lcom/miui/home/launcher/DeviceProfile;->mScreenWidth:I
 
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountX()I
@@ -208,7 +231,7 @@
 
     iput p1, p0, Lcom/miui/home/launcher/DeviceProfile;->mWidgetCellWidth:I
 
-    .line 94
+    .line 98
     iget p1, p0, Lcom/miui/home/launcher/DeviceProfile;->mScreenHeight:I
 
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getStatusBarHeight()I
@@ -221,7 +244,7 @@
 
     sub-int/2addr p1, v0
 
-    .line 95
+    .line 99
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sWidgetCellPaddingBottom:I
 
     sub-int/2addr p1, v0
@@ -234,14 +257,14 @@
 
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sWidgetCellMinHeight:I
 
-    .line 94
+    .line 98
     invoke-static {p1, v0}, Ljava/lang/Math;->max(II)I
 
     move-result p1
 
     iput p1, p0, Lcom/miui/home/launcher/DeviceProfile;->mWidgetCellHeight:I
 
-    .line 96
+    .line 100
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object p1
@@ -254,36 +277,9 @@
 
     move-result-object p1
 
-    .line 97
-    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
-
-    move-result-object v0
-
-    const-string v1, "Application.getInstance()"
-
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->isInFoldLargeScreen()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const v0, 0x7f070163
-
-    .line 98
-    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v0
-
-    goto :goto_0
-
-    .line 100
-    :cond_0
+    .line 101
     iget v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mCellWidth:I
 
-    .line 97
-    :goto_0
     iput v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mHotSeatsCellWidth:I
 
     .line 102
@@ -291,14 +287,14 @@
 
     iput v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mHotSeatsCellHeight:I
 
-    const v0, 0x7f07009d
+    const v0, 0x7f0700a3
 
     .line 103
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v0
 
-    const v1, 0x7f070172
+    const v1, 0x7f0701ad
 
     .line 104
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -393,8 +389,17 @@
 .method public final getHotSeatsCellHeight()I
     .locals 1
 
-    .line 173
+    .line 178
     iget v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mHotSeatsCellHeight:I
+
+    return v0
+.end method
+
+.method public final getHotSeatsCellListWidth()I
+    .locals 1
+
+    .line 174
+    iget v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mHotSeatsListCellWidth:I
 
     return v0
 .end method
@@ -451,10 +456,10 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 78
+    .line 80
     iput p1, p0, Lcom/miui/home/launcher/DeviceProfile;->mScreenWidth:I
 
-    .line 79
+    .line 81
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object p3
@@ -469,7 +474,7 @@
 
     if-eqz p3, :cond_0
 
-    .line 80
+    .line 82
     iget p3, p0, Lcom/miui/home/launcher/DeviceProfile;->mScreenWidth:I
 
     div-int/lit8 p3, p3, 0x2
@@ -484,7 +489,7 @@
 
     goto :goto_0
 
-    .line 82
+    .line 84
     :cond_0
     iget p3, p0, Lcom/miui/home/launcher/DeviceProfile;->mScreenWidth:I
 
@@ -496,31 +501,77 @@
 
     sub-int/2addr p3, v0
 
-    .line 79
+    .line 81
     :goto_0
     iput p3, p0, Lcom/miui/home/launcher/DeviceProfile;->mCellWorkingWidth:I
 
-    .line 84
+    .line 86
     iput p2, p0, Lcom/miui/home/launcher/DeviceProfile;->mScreenHeight:I
 
-    .line 85
+    .line 87
     iget p3, p0, Lcom/miui/home/launcher/DeviceProfile;->mScreenHeight:I
 
     iput p3, p0, Lcom/miui/home/launcher/DeviceProfile;->mRealScreenHeight:I
 
-    .line 86
+    .line 88
     invoke-static {p1, p2}, Ljava/lang/Math;->max(II)I
 
     move-result p3
 
     iput p3, p0, Lcom/miui/home/launcher/DeviceProfile;->mScreenLongSize:I
 
-    .line 87
+    .line 89
     invoke-static {p1, p2}, Ljava/lang/Math;->min(II)I
 
     move-result p1
 
     iput p1, p0, Lcom/miui/home/launcher/DeviceProfile;->mScreenShortSize:I
+
+    const-string p1, "DeviceProfile"
+
+    .line 91
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p3, "initScreenSize, mScreenWidth = "
+
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget p3, p0, Lcom/miui/home/launcher/DeviceProfile;->mScreenWidth:I
+
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p3, " , mScreenHeight = "
+
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget p3, p0, Lcom/miui/home/launcher/DeviceProfile;->mScreenHeight:I
+
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p3, " \uff0c mRealScreenHeight = "
+
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget p3, p0, Lcom/miui/home/launcher/DeviceProfile;->mRealScreenHeight:I
+
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p3, " , mCellWorkingWidth = "
+
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget p3, p0, Lcom/miui/home/launcher/DeviceProfile;->mCellWorkingWidth:I
+
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    .line 90
+    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 .end method
@@ -575,7 +626,7 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 63
+    .line 65
     iget v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mRealScreenHeight:I
 
     iget v1, p0, Lcom/miui/home/launcher/DeviceProfile;->mScreenWidth:I
@@ -588,7 +639,7 @@
 
     if-eq v1, p2, :cond_2
 
-    .line 65
+    .line 67
     :cond_0
     invoke-virtual {p0, p2, p1, p3}, Lcom/miui/home/launcher/DeviceProfile;->initScreenSize(IILandroid/content/Context;)V
 
@@ -606,7 +657,7 @@
 
     return p1
 
-    .line 70
+    .line 72
     :cond_3
     :goto_0
     invoke-virtual {p0, p1, p2, p3}, Lcom/miui/home/launcher/DeviceProfile;->initScreenSize(IILandroid/content/Context;)V

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <favorites xmlns:launcher="http://schemas.android.com/apk/res-auto">
     <default launcher:screen="1" />
-    <folder launcher:screen="0" launcher:title="com.miui.home:string/default_folder_title_tools_path" launcher:x="3" launcher:y="5" />
-    <folder launcher:presets_container="true" launcher:screen="2" launcher:title="com.miui.home:string/default_folder_title_hot_path" launcher:x="2" launcher:y="0" />
-    <folder launcher:presets_container="true" launcher:screen="2" launcher:title="com.miui.home:string/default_folder_title_recommend_path" launcher:x="1" launcher:y="0" />
-    <maml launcher:productId="b8006e83-c497-4642-9815-f674b82842b0" launcher:screen="0" launcher:spanX="4" launcher:spanY="2" launcher:title="时钟" launcher:uri="file:///system/media/theme/default/gadgets/maml_clock_4x2.mtz" launcher:versionCode="12" launcher:x="0" launcher:y="0" />
+    <folder launcher:screen="0" launcher:title="com.miui.home:string/default_folder_title_tools" launcher:x="3" launcher:y="5" />
+    <folder launcher:presets_container="true" launcher:screen="1" launcher:title="com.miui.home:string/default_folder_title_hot" launcher:x="2" launcher:y="4" />
+    <folder launcher:presets_container="true" launcher:screen="1" launcher:title="com.miui.home:string/default_folder_title_recommend" launcher:x="3" launcher:y="4" />
+    <maml launcher:itemFlags="160" launcher:productId="b9884f60-2597-4e66-b94e-cffe97be3b69" launcher:screen="0" launcher:spanX="4" launcher:spanY="2" launcher:title="@string/gadget_clock_label" launcher:uri="file:///system/media/theme/default/maml/maml_clock_4x2.mtz" launcher:versionCode="12" launcher:x="0" launcher:y="0" />
     <favorite launcher:className="com.miui.weather2.ActivityWeatherMain" launcher:packageName="com.miui.weather2" launcher:screen="0" launcher:x="0" launcher:y="3" />
     <favorite launcher:className="com.miui.gallery.activity.HomePageActivity" launcher:packageName="com.miui.gallery" launcher:screen="0" launcher:x="1" launcher:y="3" />
     <shortcut launcher:className="com.miui.securityspace.ui.activity.SwitchUserActivity" launcher:iconResource="com.miui.securitycore:drawable/exit_private_space" launcher:packageName="com.miui.securitycore" launcher:retained="true" launcher:screen="0" launcher:title="com.miui.securitycore:string/exit_private_space" launcher:x="2" launcher:y="3" />
@@ -17,19 +17,13 @@
     <favorite launcher:className="com.android.settings.MainSettings" launcher:packageName="com.android.settings" launcher:screen="0" launcher:x="0" launcher:y="5" />
     <favorite launcher:className="com.xiaomi.market.ui.MarketTabActivity" launcher:packageName="com.xiaomi.market" launcher:screen="0" launcher:x="1" launcher:y="5" />
     <favorite launcher:className="com.miui.securityscan.MainActivity" launcher:packageName="com.miui.securitycenter" launcher:screen="0" launcher:x="2" launcher:y="5" />
-    <include layout="@xml/layout_folder_tools" />
-    <appwidget launcher:className="com.android.calendar.widget.NearEventAppWidget" launcher:packageName="com.android.calendar" launcher:screen="1" launcher:spanX="4" launcher:spanY="2" launcher:x="0" launcher:y="0" />
+    <include layout="@xml/layout_folder_tools_fold" />
+    <appwidget launcher:className="com.android.calendar.widget.NearEventAppWidget" launcher:itemFlags="160" launcher:packageName="com.android.calendar" launcher:screen="1" launcher:spanX="4" launcher:spanY="2" launcher:x="0" launcher:y="0" />
     <favorite launcher:className="com.mipay.wallet.ui.MipayEntryActivity" launcher:packageName="com.mipay.wallet" launcher:screen="1" launcher:x="0" launcher:y="2" />
-    <favorite launcher:className="com.xiaomi.smarthome.SmartHomeMainActivity" launcher:packageName="com.xiaomi.smarthome" launcher:screen="1" launcher:x="1" launcher:y="2" />
-    <favorite launcher:className="com.miui.player.ui.MusicBrowserActivity" launcher:packageName="com.miui.player" launcher:screen="1" launcher:x="0" launcher:y="3" />
-    <favorite launcher:className="com.xiaomi.youpin.activity.SplashActivity" launcher:packageName="com.xiaomi.youpin" launcher:screen="1" launcher:x="1" launcher:y="3" />
-    <maml launcher:productId="b8006e83-c497-4642-9815-f674b82842b0" launcher:screen="1" launcher:spanX="2" launcher:spanY="2" launcher:title="天气" launcher:uri="file:///system/media/theme/default/gadgets/maml_weather_2x2.mtz" launcher:versionCode="010203" launcher:x="2" launcher:y="2" />
-    <appwidget launcher:className="com.mi.health.exercise.widget.StepRemoteWidgetProvider" launcher:packageName="com.mi.health" launcher:screen="1" launcher:spanX="2" launcher:spanY="2" launcher:x="0" launcher:y="4" />
-    <favorite launcher:className="com.mi.health.home.HomeActivity" launcher:packageName="com.mi.health" launcher:screen="1" launcher:x="2" launcher:y="4" />
-    <favorite launcher:className="com.duokan.reader.DkReaderActivity" launcher:packageName="com.duokan.reader" launcher:screen="1" launcher:x="3" launcher:y="4" />
-    <favorite launcher:className="com.xiaomi.vipaccount.ui.VipAccountActivity" launcher:packageName="com.xiaomi.vipaccount" launcher:screen="1" launcher:x="2" launcher:y="5" />
-    <favorite launcher:className="com.miui.miservice.main.MainActivity" launcher:packageName="com.miui.miservice" launcher:screen="1" launcher:x="3" launcher:y="5" />
-    <favorite launcher:className="com.xiaomi.jr.app.MiFinanceActivity" launcher:packageName="com.xiaomi.jr" launcher:screen="2" launcher:x="0" launcher:y="0" />
-    <include layout="@xml/layout_folder_recommend" />
+    <favorite launcher:className="com.miui.player.ui.MusicBrowserActivity" launcher:packageName="com.miui.player" launcher:screen="1" launcher:x="1" launcher:y="2" />
+    <favorite launcher:className="com.mi.health.home.HomeActivity" launcher:packageName="com.mi.health" launcher:screen="1" launcher:x="0" launcher:y="3" />
+    <favorite launcher:className="com.miui.miservice.main.MainActivity" launcher:packageName="com.miui.miservice" launcher:screen="1" launcher:x="1" launcher:y="3" />
+    <maml launcher:itemFlags="160" launcher:productId="b8006e83-c497-4642-9815-f674b82842b0" launcher:screen="1" launcher:spanX="2" launcher:spanY="2" launcher:title="@string/gadget_weather_title" launcher:uri="file:///system/media/theme/default/maml/maml_weather_2x2.mtz" launcher:versionCode="010203" launcher:x="2" launcher:y="2" />
+    <appwidget launcher:className="com.mi.health.exercise.widget.StepRemoteWidgetProvider" launcher:itemFlags="160" launcher:packageName="com.mi.health" launcher:screen="1" launcher:spanX="2" launcher:spanY="2" launcher:x="0" launcher:y="4" />
     <include layout="@xml/layout_hotseats" />
 </favorites>

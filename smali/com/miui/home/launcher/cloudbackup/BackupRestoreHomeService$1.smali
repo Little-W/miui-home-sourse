@@ -445,7 +445,7 @@
 
     move-result-object v6
 
-    const-string v7, "xml"
+    const-string/jumbo v7, "xml"
 
     .line 128
     invoke-static {v6}, Lmiuix/core/util/FileUtils;->getExtension(Ljava/lang/String;)Ljava/lang/String;

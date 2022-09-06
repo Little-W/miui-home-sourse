@@ -81,7 +81,7 @@
     .line 52
     sget-object v0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsReportDataCapture;->ARCHITECTURES_BY_NAME:Ljava/util/Map;
 
-    const-string v1, "x86"
+    const-string/jumbo v1, "x86"
 
     const/4 v2, 0x0
 
@@ -94,7 +94,7 @@
     .line 53
     sget-object v0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsReportDataCapture;->ARCHITECTURES_BY_NAME:Ljava/util/Map;
 
-    const-string v1, "x86_64"
+    const-string/jumbo v1, "x86_64"
 
     const/4 v3, 0x1
 

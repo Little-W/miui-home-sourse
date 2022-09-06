@@ -373,7 +373,7 @@
 
     move-result-object v0
 
-    const-string v1, "v"
+    const-string/jumbo v1, "v"
 
     invoke-virtual {p0, v1, v0}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 

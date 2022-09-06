@@ -33,15 +33,15 @@
 .method public constructor <init>(Lmiuix/appcompat/app/AppCompatActivity;)V
     .locals 1
 
-    .line 663
+    .line 669
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 661
+    .line 667
     iput-object v0, p0, Lmiuix/appcompat/app/floatingactivity/multiapp/MultiAppFloatingActivitySwitcher$OpenExitAnimationExecutor;->mAppCompatActivity:Ljava/lang/ref/WeakReference;
 
-    .line 664
+    .line 670
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -56,7 +56,7 @@
 .method public run()V
     .locals 1
 
-    .line 669
+    .line 675
     iget-object v0, p0, Lmiuix/appcompat/app/floatingactivity/multiapp/MultiAppFloatingActivitySwitcher$OpenExitAnimationExecutor;->mAppCompatActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -67,7 +67,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 671
+    .line 677
     invoke-virtual {v0}, Lmiuix/appcompat/app/AppCompatActivity;->executeOpenExitAnimation()V
 
     :cond_0

@@ -83,6 +83,8 @@
 
 .field private mSnappingChild:Z
 
+.field private final mStartTaskViewTouchDownAnimRunnable:Ljava/lang/Runnable;
+
 .field private mSwipeHelper:Lcom/miui/home/recents/views/SwipeHelperForRecents;
 
 .field private mSwipeHelperAnimations:Landroid/util/ArrayMap;
@@ -111,14 +113,14 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .line 66
+    .line 68
     new-instance v7, Landroid/graphics/Path;
 
     invoke-direct {v7}, Landroid/graphics/Path;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 67
+    .line 69
     invoke-virtual {v7, v0, v0}, Landroid/graphics/Path;->moveTo(FF)V
 
     const v1, 0x3e4ccccd    # 0.2f
@@ -135,10 +137,10 @@
 
     move-object v0, v7
 
-    .line 68
+    .line 70
     invoke-virtual/range {v0 .. v6}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
 
-    .line 69
+    .line 71
     new-instance v0, Lcom/miui/home/recents/util/FreePathInterpolator;
 
     invoke-direct {v0, v7}, Lcom/miui/home/recents/util/FreePathInterpolator;-><init>(Landroid/graphics/Path;)V
@@ -151,126 +153,133 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/miui/home/recents/views/TaskStackView;Lcom/miui/home/recents/views/TaskStackViewScroller;)V
     .locals 2
 
-    .line 110
+    .line 112
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 81
+    .line 83
     iput v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mActivePointerId:I
 
     const/4 v0, 0x0
 
-    .line 84
+    .line 86
     iput-object v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mActiveTaskView:Lcom/miui/home/recents/views/TaskView;
-
-    .line 94
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mCurrentTasks:Ljava/util/ArrayList;
-
-    .line 95
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mCurrentTaskTransforms:Ljava/util/ArrayList;
 
     .line 96
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mFinalTaskTransforms:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mCurrentTasks:Ljava/util/ArrayList;
 
     .line 97
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mCurrentTaskTransforms:Ljava/util/ArrayList;
+
+    .line 98
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mFinalTaskTransforms:Ljava/util/ArrayList;
+
+    .line 99
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mSwipeHelperAnimations:Landroid/util/ArrayMap;
 
-    .line 98
+    .line 100
     new-instance v0, Lcom/miui/home/recents/views/TaskViewTransform;
 
     invoke-direct {v0}, Lcom/miui/home/recents/views/TaskViewTransform;-><init>()V
 
     iput-object v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTmpTransform:Lcom/miui/home/recents/views/TaskViewTransform;
 
-    .line 111
+    .line 463
+    new-instance v0, Lcom/miui/home/recents/views/-$$Lambda$TaskStackViewTouchHandler$n6wJ8CKor4I_OUpHhwEdmbqhJsk;
+
+    invoke-direct {v0, p0}, Lcom/miui/home/recents/views/-$$Lambda$TaskStackViewTouchHandler$n6wJ8CKor4I_OUpHhwEdmbqhJsk;-><init>(Lcom/miui/home/recents/views/TaskStackViewTouchHandler;)V
+
+    iput-object v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mStartTaskViewTouchDownAnimRunnable:Ljava/lang/Runnable;
+
+    .line 113
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 112
+    .line 114
     invoke-static {p1}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
 
     move-result-object v1
 
-    .line 113
+    .line 115
     iput-object p2, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
 
-    .line 114
+    .line 116
     iput-object p3, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mScroller:Lcom/miui/home/recents/views/TaskStackViewScroller;
 
-    .line 115
+    .line 117
     invoke-virtual {v1}, Landroid/view/ViewConfiguration;->getScaledMinimumFlingVelocity()I
 
     move-result p2
 
     iput p2, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mMinimumVelocity:I
 
-    .line 116
+    .line 118
     invoke-virtual {v1}, Landroid/view/ViewConfiguration;->getScaledMaximumFlingVelocity()I
 
     move-result p2
 
     iput p2, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mMaximumVelocity:I
 
-    const p2, 0x7f0703e6
-
-    .line 117
-    invoke-virtual {v0, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result p2
-
-    iput p2, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mScrollTouchSlop:I
-
-    .line 118
-    invoke-virtual {v1}, Landroid/view/ViewConfiguration;->getScaledWindowTouchSlop()I
-
-    move-result p2
-
-    iput p2, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mWindowTouchSlop:I
-
-    const p2, 0x7f0703ca
+    const p2, 0x7f0705b9
 
     .line 119
     invoke-virtual {v0, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result p2
 
-    iput p2, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mOverscrollSize:I
-
-    const p2, 0x7f0703d1
+    iput p2, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mScrollTouchSlop:I
 
     .line 120
+    invoke-virtual {v1}, Landroid/view/ViewConfiguration;->getScaledWindowTouchSlop()I
+
+    move-result p2
+
+    iput p2, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mWindowTouchSlop:I
+
+    const p2, 0x7f07059d
+
+    .line 121
+    invoke-virtual {v0, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result p2
+
+    iput p2, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mOverscrollSize:I
+
+    const p2, 0x7f0705a4
+
+    .line 122
     invoke-virtual {v0, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result p2
 
     iput p2, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mRecentsTaskLockDistance:I
 
-    .line 122
+    .line 124
     new-instance p2, Lcom/miui/home/recents/views/TaskStackViewTouchHandler$1;
 
     invoke-direct {p2, p0, p0, p1}, Lcom/miui/home/recents/views/TaskStackViewTouchHandler$1;-><init>(Lcom/miui/home/recents/views/TaskStackViewTouchHandler;Lcom/miui/home/recents/views/SwipeHelperForRecents$Callback;Landroid/content/Context;)V
 
     iput-object p2, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mSwipeHelper:Lcom/miui/home/recents/views/SwipeHelperForRecents;
 
-    .line 164
+    .line 166
     iget-object p1, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mSwipeHelper:Lcom/miui/home/recents/views/SwipeHelperForRecents;
 
     const/4 p2, 0x1
@@ -283,7 +292,7 @@
 .method static synthetic access$000(Lcom/miui/home/recents/views/TaskStackViewTouchHandler;)Landroid/util/ArrayMap;
     .locals 0
 
-    .line 56
+    .line 58
     iget-object p0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mSwipeHelperAnimations:Landroid/util/ArrayMap;
 
     return-object p0
@@ -292,7 +301,7 @@
 .method static synthetic access$102(Lcom/miui/home/recents/views/TaskStackViewTouchHandler;Z)Z
     .locals 0
 
-    .line 56
+    .line 58
     iput-boolean p1, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mSnappingChild:Z
 
     return p1
@@ -301,7 +310,7 @@
 .method static synthetic access$200(Lcom/miui/home/recents/views/TaskStackViewTouchHandler;)Z
     .locals 0
 
-    .line 56
+    .line 58
     invoke-direct {p0}, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->isScrollDirectionY()Z
 
     move-result p0
@@ -312,7 +321,7 @@
 .method static synthetic access$300(Lcom/miui/home/recents/views/TaskStackViewTouchHandler;)Lcom/miui/home/recents/views/TaskView;
     .locals 0
 
-    .line 56
+    .line 58
     iget-object p0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mSameTopPositionTaskView:Lcom/miui/home/recents/views/TaskView;
 
     return-object p0
@@ -321,7 +330,7 @@
 .method static synthetic access$400(Lcom/miui/home/recents/views/TaskStackViewTouchHandler;)Lcom/miui/home/recents/views/TaskStackView;
     .locals 0
 
-    .line 56
+    .line 58
     iget-object p0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
 
     return-object p0
@@ -330,14 +339,14 @@
 .method private calcTargetStackScroll(FLcom/miui/home/recents/views/TaskView;)F
     .locals 2
 
-    .line 597
+    .line 612
     invoke-direct {p0}, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->isScrollDirectionY()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 598
+    .line 613
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
 
     invoke-virtual {v0}, Lcom/miui/home/recents/views/TaskStackView;->getStack()Lcom/android/systemui/shared/recents/model/TaskStack;
@@ -352,10 +361,10 @@
 
     move-result p2
 
-    .line 599
+    .line 614
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mScroller:Lcom/miui/home/recents/views/TaskStackViewScroller;
 
-    .line 600
+    .line 615
     invoke-virtual {v0, p1}, Lcom/miui/home/recents/views/TaskStackViewScroller;->getNearestMotionlessScrollP(F)F
 
     move-result v0
@@ -394,10 +403,10 @@
 
     int-to-float p2, v0
 
-    .line 603
+    .line 618
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
 
-    .line 604
+    .line 619
     invoke-virtual {v0}, Lcom/miui/home/recents/views/TaskStackView;->getStackAlgorithm()Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;
 
     move-result-object v0
@@ -419,7 +428,7 @@
 .method private canStartScroll(FF)Z
     .locals 3
 
-    .line 256
+    .line 258
     invoke-direct {p0}, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->isScrollDirectionY()Z
 
     move-result v0
@@ -430,7 +439,7 @@
 
     if-nez v0, :cond_1
 
-    .line 257
+    .line 259
     iget v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mScrollTouchSlop:I
 
     int-to-float v0, v0
@@ -451,7 +460,7 @@
     :goto_0
     return v1
 
-    .line 259
+    .line 261
     :cond_1
     iget v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mScrollTouchSlop:I
 
@@ -477,7 +486,7 @@
 .method private findSameTopPositionTaskView(Lcom/miui/home/recents/views/TaskView;)Lcom/miui/home/recents/views/TaskView;
     .locals 5
 
-    .line 785
+    .line 800
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
 
     invoke-virtual {v0}, Lcom/miui/home/recents/views/TaskStackView;->getStack()Lcom/android/systemui/shared/recents/model/TaskStack;
@@ -488,7 +497,7 @@
 
     move-result-object v0
 
-    .line 786
+    .line 801
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v1
@@ -498,7 +507,7 @@
     :goto_0
     if-ltz v1, :cond_1
 
-    .line 787
+    .line 802
     iget-object v2, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
 
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -513,7 +522,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 788
+    .line 803
     invoke-virtual {v2}, Lcom/miui/home/recents/views/TaskView;->getVisibility()I
 
     move-result v3
@@ -522,7 +531,7 @@
 
     if-eq v2, p1, :cond_0
 
-    .line 789
+    .line 804
     invoke-virtual {v2}, Lcom/miui/home/recents/views/TaskView;->getTop()I
 
     move-result v3
@@ -547,46 +556,46 @@
 .end method
 
 .method private findViewAtPoint(FF)Lcom/miui/home/recents/views/TaskView;
-    .locals 5
+    .locals 4
 
-    .line 772
-    iget-object v3, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
+    .line 787
+    iget-object v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
 
-    invoke-virtual {v3}, Lcom/miui/home/recents/views/TaskStackView;->getStack()Lcom/android/systemui/shared/recents/model/TaskStack;
+    invoke-virtual {v0}, Lcom/miui/home/recents/views/TaskStackView;->getStack()Lcom/android/systemui/shared/recents/model/TaskStack;
 
-    move-result-object v3
+    move-result-object v0
 
-    invoke-virtual {v3}, Lcom/android/systemui/shared/recents/model/TaskStack;->getStackTasks()Ljava/util/ArrayList;
+    invoke-virtual {v0}, Lcom/android/systemui/shared/recents/model/TaskStack;->getStackTasks()Ljava/util/ArrayList;
 
-    move-result-object v2
+    move-result-object v0
 
-    .line 773
-    const/4 v1, 0x0
+    .line 788
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    add-int/lit8 v1, v1, -0x1
 
     :goto_0
-    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+    if-ltz v1, :cond_1
 
-    move-result v3
+    .line 790
+    iget-object v2, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
 
-    if-ge v1, v3, :cond_1
-
-    .line 775
-    iget-object v4, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
-
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/android/systemui/shared/recents/model/Task;
 
-    invoke-virtual {v4, v3}, Lcom/miui/home/recents/views/TaskStackView;->getChildViewForTask(Lcom/android/systemui/shared/recents/model/Task;)Lcom/miui/home/recents/views/TaskView;
+    invoke-virtual {v2, v3}, Lcom/miui/home/recents/views/TaskStackView;->getChildViewForTask(Lcom/android/systemui/shared/recents/model/Task;)Lcom/miui/home/recents/views/TaskView;
 
-    move-result-object v0
+    move-result-object v2
 
-    if-eqz v0, :cond_0
+    if-eqz v2, :cond_0
 
-    .line 776
-    invoke-virtual {v0}, Lcom/miui/home/recents/views/TaskView;->getVisibility()I
+    .line 791
+    invoke-virtual {v2}, Lcom/miui/home/recents/views/TaskView;->getVisibility()I
 
     move-result v3
 
@@ -594,45 +603,44 @@
 
     iget-object v3, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
 
-    .line 777
-    invoke-virtual {v3, p1, p2, v0}, Lcom/miui/home/recents/views/TaskStackView;->isTouchPointInView(FFLcom/miui/home/recents/views/TaskView;)Z
+    .line 792
+    invoke-virtual {v3, p1, p2, v2}, Lcom/miui/home/recents/views/TaskStackView;->isTouchPointInView(FFLcom/miui/home/recents/views/TaskView;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    :goto_1
-    return-object v0
+    return-object v2
 
     :cond_0
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 v1, v1, -0x1
 
     goto :goto_0
 
     :cond_1
-    const/4 v0, 0x0
+    const/4 p1, 0x0
 
-    goto :goto_1
+    return-object p1
 .end method
 
 .method private getDeltaP(FFFFLcom/miui/home/recents/views/TaskStackLayoutAlgorithm;)F
     .locals 1
 
-    .line 264
+    .line 266
     invoke-direct {p0}, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->isScrollDirectionY()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 265
+    .line 267
     invoke-virtual {p5, p1, p3}, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->getDeltaPForX(FF)F
 
     move-result p1
 
     return p1
 
-    .line 267
+    .line 269
     :cond_0
     invoke-virtual {p5, p2, p4}, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->getDeltaPForY(FF)F
 
@@ -648,7 +656,7 @@
 
     move-object/from16 v7, p1
 
-    .line 282
+    .line 284
     iget-object v0, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
 
     invoke-virtual {v0}, Lcom/miui/home/recents/views/TaskStackView;->isShowingMenu()Z
@@ -661,18 +669,18 @@
 
     return v8
 
-    .line 286
+    .line 288
     :cond_0
     invoke-direct/range {p0 .. p0}, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->initVelocityTrackerIfNotExists()V
 
-    .line 287
+    .line 289
     iget-object v0, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
 
     invoke-virtual {v0}, Lcom/miui/home/recents/views/TaskStackView;->getStackAlgorithm()Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;
 
     move-result-object v9
 
-    .line 288
+    .line 290
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
@@ -688,18 +696,18 @@
     :pswitch_0
     goto/16 :goto_3
 
-    .line 385
+    .line 384
     :pswitch_1
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getActionIndex()I
 
     move-result v0
 
-    .line 386
+    .line 385
     invoke-virtual {v7, v0}, Landroid/view/MotionEvent;->getPointerId(I)I
 
     move-result v2
 
-    .line 387
+    .line 386
     iget v3, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mActivePointerId:I
 
     if-ne v2, v3, :cond_2
@@ -708,7 +716,7 @@
 
     move v1, v8
 
-    .line 390
+    .line 389
     :cond_1
     invoke-virtual {v7, v1}, Landroid/view/MotionEvent;->getPointerId(I)I
 
@@ -716,26 +724,26 @@
 
     iput v1, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mActivePointerId:I
 
-    .line 391
+    .line 390
     invoke-virtual {v7, v0}, Landroid/view/MotionEvent;->getX(I)F
 
     move-result v1
 
     iput v1, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mDownX:F
 
-    .line 392
+    .line 391
     invoke-virtual {v7, v0}, Landroid/view/MotionEvent;->getY(I)F
 
     move-result v0
 
     iput v0, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mDownY:F
 
-    .line 393
+    .line 392
     iget v0, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mDownY:F
 
     iput v0, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mLastY:F
 
-    .line 394
+    .line 393
     iget-object v0, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mScroller:Lcom/miui/home/recents/views/TaskStackViewScroller;
 
     invoke-virtual {v0}, Lcom/miui/home/recents/views/TaskStackViewScroller;->getStackScroll()F
@@ -744,7 +752,7 @@
 
     iput v0, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mDownScrollP:F
 
-    .line 396
+    .line 395
     :cond_2
     iget-object v0, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mVelocityTracker:Landroid/view/VelocityTracker;
 
@@ -752,39 +760,39 @@
 
     goto/16 :goto_3
 
-    .line 316
+    .line 314
     :pswitch_2
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getActionIndex()I
 
     move-result v0
 
-    .line 317
+    .line 315
     invoke-virtual {v7, v0}, Landroid/view/MotionEvent;->getPointerId(I)I
 
     move-result v1
 
     iput v1, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mActivePointerId:I
 
-    .line 318
+    .line 316
     invoke-virtual {v7, v0}, Landroid/view/MotionEvent;->getX(I)F
 
     move-result v1
 
     iput v1, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mDownX:F
 
-    .line 319
+    .line 317
     invoke-virtual {v7, v0}, Landroid/view/MotionEvent;->getY(I)F
 
     move-result v0
 
     iput v0, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mDownY:F
 
-    .line 320
+    .line 318
     iget v0, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mDownY:F
 
     iput v0, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mLastY:F
 
-    .line 321
+    .line 319
     iget-object v0, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mScroller:Lcom/miui/home/recents/views/TaskStackViewScroller;
 
     invoke-virtual {v0}, Lcom/miui/home/recents/views/TaskStackViewScroller;->getStackScroll()F
@@ -793,7 +801,7 @@
 
     iput v0, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mDownScrollP:F
 
-    .line 322
+    .line 320
     iget-object v0, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     invoke-virtual {v0, v7}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
@@ -802,11 +810,14 @@
 
     .line 452
     :pswitch_3
+    invoke-direct/range {p0 .. p0}, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->removePendingTaskViewTouchDownAnim()V
+
+    .line 453
     iget-object v0, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mActiveTaskView:Lcom/miui/home/recents/views/TaskView;
 
     if-eqz v0, :cond_3
 
-    .line 453
+    .line 454
     invoke-static {}, Lcom/miui/home/recents/util/SpringAnimationUtils;->getInstance()Lcom/miui/home/recents/util/SpringAnimationUtils;
 
     move-result-object v0
@@ -818,13 +829,16 @@
     :cond_3
     const-string v0, "scroll cancel"
 
-    .line 455
+    .line 456
     invoke-direct {v6, v0}, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->reset(Ljava/lang/String;)V
 
     goto/16 :goto_3
 
-    .line 326
+    .line 324
     :pswitch_4
+    invoke-direct/range {p0 .. p0}, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->removePendingTaskViewTouchDownAnim()V
+
+    .line 325
     iget v0, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mActivePointerId:I
 
     invoke-virtual {v7, v0}, Landroid/view/MotionEvent;->findPointerIndex(I)I
@@ -833,14 +847,14 @@
 
     if-ltz v0, :cond_4
 
-    .line 327
+    .line 326
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getPointerCount()I
 
     move-result v2
 
     if-lt v0, v2, :cond_5
 
-    .line 329
+    .line 328
     :cond_4
     invoke-virtual {v7, v1}, Landroid/view/MotionEvent;->getPointerId(I)I
 
@@ -850,23 +864,23 @@
 
     move v0, v1
 
-    .line 331
+    .line 330
     :cond_5
     invoke-virtual {v7, v0}, Landroid/view/MotionEvent;->getY(I)F
 
     move-result v11
 
-    .line 332
+    .line 331
     invoke-virtual {v7, v0}, Landroid/view/MotionEvent;->getX(I)F
 
     move-result v3
 
-    .line 333
+    .line 332
     iget-boolean v0, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mIsScrolling:Z
 
     if-nez v0, :cond_7
 
-    .line 334
+    .line 333
     iget v0, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mDownY:F
 
     sub-float v0, v11, v0
@@ -875,7 +889,7 @@
 
     move-result v0
 
-    .line 335
+    .line 334
     iget v1, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mDownX:F
 
     sub-float v1, v3, v1
@@ -884,17 +898,17 @@
 
     move-result v1
 
-    .line 337
+    .line 336
     invoke-direct {v6, v1, v0}, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->canStartScroll(FF)Z
 
     move-result v0
 
     if-eqz v0, :cond_7
 
-    .line 338
+    .line 337
     invoke-virtual {v6, v8}, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->setIsScrolling(Z)V
 
-    .line 341
+    .line 340
     iget-object v0, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
 
     invoke-virtual {v0}, Lcom/miui/home/recents/views/TaskStackView;->getParent()Landroid/view/ViewParent;
@@ -903,10 +917,10 @@
 
     if-eqz v0, :cond_6
 
-    .line 343
+    .line 342
     invoke-interface {v0, v8}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
 
-    .line 346
+    .line 345
     :cond_6
     invoke-static {}, Lcom/miui/home/recents/util/SpringAnimationUtils;->getInstance()Lcom/miui/home/recents/util/SpringAnimationUtils;
 
@@ -916,13 +930,13 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/util/SpringAnimationUtils;->startTaskViewTouchMoveOrUpAnim(Lcom/miui/home/recents/views/TaskView;)V
 
-    .line 349
+    .line 348
     :cond_7
     iget-boolean v0, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mIsScrolling:Z
 
     if-eqz v0, :cond_c
 
-    .line 350
+    .line 349
     iget v1, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mDownX:F
 
     iget v2, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mDownY:F
@@ -937,13 +951,13 @@
 
     move-result v0
 
-    .line 353
+    .line 352
     iget v1, v9, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mMinScrollP:F
 
-    .line 354
+    .line 353
     iget v2, v9, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mMaxScrollP:F
 
-    .line 355
+    .line 354
     iget v3, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mDownScrollP:F
 
     add-float/2addr v3, v0
@@ -956,7 +970,7 @@
 
     if-lez v0, :cond_9
 
-    .line 357
+    .line 356
     :cond_8
     invoke-static {v3, v1, v2}, Lcom/miui/home/recents/util/Utilities;->clamp(FFF)F
 
@@ -964,7 +978,7 @@
 
     sub-float/2addr v3, v0
 
-    .line 359
+    .line 358
     invoke-static {v3}, Ljava/lang/Math;->abs(F)F
 
     move-result v1
@@ -973,14 +987,14 @@
 
     div-float/2addr v1, v2
 
-    .line 360
+    .line 359
     sget-object v4, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->OVERSCROLL_INTERP:Landroid/view/animation/Interpolator;
 
     invoke-interface {v4, v1}, Landroid/view/animation/Interpolator;->getInterpolation(F)F
 
     move-result v1
 
-    .line 361
+    .line 360
     invoke-static {v3}, Ljava/lang/Math;->signum(F)F
 
     move-result v3
@@ -991,7 +1005,7 @@
 
     add-float/2addr v3, v0
 
-    .line 365
+    .line 364
     :cond_9
     iget-object v0, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
 
@@ -1005,14 +1019,14 @@
 
     if-eqz v0, :cond_b
 
-    .line 366
+    .line 365
     iget-object v0, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mScroller:Lcom/miui/home/recents/views/TaskStackViewScroller;
 
     invoke-virtual {v0}, Lcom/miui/home/recents/views/TaskStackViewScroller;->getExitRecentOverscrollThreshold()F
 
     move-result v0
 
-    .line 367
+    .line 366
     iget v1, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mLastScrollP:F
 
     neg-float v0, v0
@@ -1033,12 +1047,12 @@
 
     if-lez v1, :cond_a
 
-    .line 368
+    .line 367
     iget-object v1, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
 
     invoke-virtual {v1, v8}, Lcom/miui/home/recents/views/TaskStackView;->performHapticFeedback(I)Z
 
-    .line 369
+    .line 368
     invoke-static {}, Lcom/miui/home/recents/util/SpringAnimationUtils;->getInstance()Lcom/miui/home/recents/util/SpringAnimationUtils;
 
     move-result-object v1
@@ -1047,7 +1061,7 @@
 
     invoke-virtual {v1, v2}, Lcom/miui/home/recents/util/SpringAnimationUtils;->startDragExitRecentsAnim(Lcom/miui/home/recents/views/TaskStackView;)V
 
-    .line 371
+    .line 370
     :cond_a
     iget v1, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mLastScrollP:F
 
@@ -1067,7 +1081,7 @@
 
     if-gez v0, :cond_b
 
-    .line 372
+    .line 371
     invoke-static {}, Lcom/miui/home/recents/util/SpringAnimationUtils;->getInstance()Lcom/miui/home/recents/util/SpringAnimationUtils;
 
     move-result-object v0
@@ -1076,28 +1090,31 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/util/SpringAnimationUtils;->startCancelDragExitRecentsAnim(Lcom/miui/home/recents/views/TaskStackView;)V
 
-    .line 376
+    .line 375
     :cond_b
     iget-object v0, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mScroller:Lcom/miui/home/recents/views/TaskStackViewScroller;
 
     invoke-virtual {v0, v3}, Lcom/miui/home/recents/views/TaskStackViewScroller;->setStackScroll(F)V
 
-    .line 377
+    .line 376
     iput v3, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mLastScrollP:F
 
-    .line 380
+    .line 379
     :cond_c
     iput v11, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mLastY:F
 
-    .line 381
+    .line 380
     iget-object v0, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     invoke-virtual {v0, v7}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
 
     goto/16 :goto_3
 
-    .line 400
+    .line 399
     :pswitch_5
+    invoke-direct/range {p0 .. p0}, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->removePendingTaskViewTouchDownAnim()V
+
+    .line 400
     iget-object v0, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     invoke-virtual {v0, v7}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
@@ -1370,42 +1387,42 @@
 
     goto :goto_3
 
-    .line 292
+    .line 294
     :pswitch_6
     iget-object v0, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mScroller:Lcom/miui/home/recents/views/TaskStackViewScroller;
 
     invoke-virtual {v0}, Lcom/miui/home/recents/views/TaskStackViewScroller;->stopScroller()V
 
-    .line 293
+    .line 295
     iget-object v0, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mScroller:Lcom/miui/home/recents/views/TaskStackViewScroller;
 
     invoke-virtual {v0}, Lcom/miui/home/recents/views/TaskStackViewScroller;->stopBoundScrollAnimation()V
 
-    .line 294
+    .line 296
     iget-object v0, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
 
     invoke-virtual {v0}, Lcom/miui/home/recents/views/TaskStackView;->cancelDeferredTaskViewLayoutAnimation()V
 
-    .line 297
+    .line 299
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
 
     iput v0, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mDownX:F
 
-    .line 298
+    .line 300
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v0
 
     iput v0, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mDownY:F
 
-    .line 299
+    .line 301
     iget v0, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mDownY:F
 
     iput v0, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mLastY:F
 
-    .line 300
+    .line 302
     iget-object v0, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mScroller:Lcom/miui/home/recents/views/TaskStackViewScroller;
 
     invoke-virtual {v0}, Lcom/miui/home/recents/views/TaskStackViewScroller;->getStackScroll()F
@@ -1414,14 +1431,14 @@
 
     iput v0, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mDownScrollP:F
 
-    .line 301
+    .line 303
     invoke-virtual {v7, v1}, Landroid/view/MotionEvent;->getPointerId(I)I
 
     move-result v0
 
     iput v0, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mActivePointerId:I
 
-    .line 302
+    .line 304
     iget v0, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mDownX:F
 
     iget v1, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mDownY:F
@@ -1434,7 +1451,7 @@
 
     const-string v0, "TaskStackViewTouchHandler"
 
-    .line 304
+    .line 306
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1453,36 +1470,24 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 306
-    invoke-direct/range {p0 .. p0}, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->isScrollDirectionY()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_14
-
     .line 307
-    invoke-static {}, Lcom/miui/home/recents/util/SpringAnimationUtils;->getInstance()Lcom/miui/home/recents/util/SpringAnimationUtils;
+    invoke-direct/range {p0 .. p0}, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->startTaskViewTouchDownAnim()V
 
-    move-result-object v0
-
-    iget-object v1, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mActiveTaskView:Lcom/miui/home/recents/views/TaskView;
-
-    invoke-virtual {v0, v1}, Lcom/miui/home/recents/util/SpringAnimationUtils;->startTaskViewTouchDownAnim(Lcom/miui/home/recents/views/TaskView;)V
-
-    .line 311
-    :cond_14
+    .line 309
     invoke-virtual/range {p0 .. p0}, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->initOrResetVelocityTracker()V
 
-    .line 312
+    .line 310
     iget-object v0, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     invoke-virtual {v0, v7}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
 
-    .line 459
+    .line 460
     :goto_3
     iget-boolean v0, v6, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mIsScrolling:Z
 
     return v0
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
@@ -1499,12 +1504,12 @@
 .method private initVelocityTrackerIfNotExists()V
     .locals 1
 
-    .line 189
+    .line 191
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     if-nez v0, :cond_0
 
-    .line 190
+    .line 192
     invoke-static {}, Landroid/view/VelocityTracker;->obtain()Landroid/view/VelocityTracker;
 
     move-result-object v0
@@ -1518,7 +1523,7 @@
 .method private isScrollDirectionY()Z
     .locals 2
 
-    .line 172
+    .line 174
     iget v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mScrollDirection:I
 
     const/4 v1, 0x1
@@ -1534,10 +1539,25 @@
     return v1
 .end method
 
+.method public static synthetic lambda$new$0(Lcom/miui/home/recents/views/TaskStackViewTouchHandler;)V
+    .locals 2
+
+    .line 463
+    invoke-static {}, Lcom/miui/home/recents/util/SpringAnimationUtils;->getInstance()Lcom/miui/home/recents/util/SpringAnimationUtils;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mActiveTaskView:Lcom/miui/home/recents/views/TaskView;
+
+    invoke-virtual {v0, v1}, Lcom/miui/home/recents/util/SpringAnimationUtils;->startTaskViewTouchDownAnim(Lcom/miui/home/recents/views/TaskView;)V
+
+    return-void
+.end method
+
 .method private maybeHideRecentsFromBackgroundTap(FF)V
     .locals 3
 
-    .line 474
+    .line 489
     iget v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mDownX:F
 
     sub-float/2addr v0, p1
@@ -1546,7 +1566,7 @@
 
     move-result p1
 
-    .line 475
+    .line 490
     iget v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mDownY:F
 
     sub-float/2addr v0, p2
@@ -1557,7 +1577,7 @@
 
     const-string v0, "TaskStackViewTouchHandler"
 
-    .line 476
+    .line 491
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1588,7 +1608,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 479
+    .line 494
     iget v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mScrollTouchSlop:I
 
     int-to-float v1, v0
@@ -1608,10 +1628,10 @@
     :cond_0
     const-string p1, "clickEmptySpace"
 
-    .line 484
+    .line 499
     invoke-static {p1}, Lcom/miui/home/launcher/AnalyticalDataCollectorForRecents;->sendHideRecentsEvent(Ljava/lang/String;)V
 
-    .line 485
+    .line 500
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object p1
@@ -1633,12 +1653,29 @@
     return-void
 .end method
 
+.method private removePendingTaskViewTouchDownAnim()V
+    .locals 2
+
+    .line 474
+    sget-object v0, Lcom/miui/home/recents/util/Executors;->MAIN_EXECUTOR:Lcom/miui/home/library/utils/LooperExecutor;
+
+    invoke-virtual {v0}, Lcom/miui/home/library/utils/LooperExecutor;->getHandler()Landroid/os/Handler;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mStartTaskViewTouchDownAnimRunnable:Ljava/lang/Runnable;
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+
+    return-void
+.end method
+
 .method private reset(Ljava/lang/String;)V
     .locals 3
 
     const-string v0, "TaskStackViewTouchHandler"
 
-    .line 463
+    .line 478
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1657,36 +1694,71 @@
 
     const/4 p1, 0x0
 
-    .line 464
+    .line 479
     iput-object p1, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mActiveTaskView:Lcom/miui/home/recents/views/TaskView;
 
     const/4 p1, -0x1
 
-    .line 465
+    .line 480
     iput p1, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mActivePointerId:I
 
     const/4 p1, 0x0
 
-    .line 466
+    .line 481
     invoke-virtual {p0, p1}, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->setIsScrolling(Z)V
 
-    .line 467
+    .line 482
     invoke-virtual {p0}, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->recycleVelocityTracker()V
 
+    return-void
+.end method
+
+.method private startTaskViewTouchDownAnim()V
+    .locals 4
+
+    .line 466
+    invoke-direct {p0}, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->isScrollDirectionY()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 467
+    iget-object v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mStartTaskViewTouchDownAnimRunnable:Ljava/lang/Runnable;
+
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+
+    goto :goto_0
+
+    .line 469
+    :cond_0
+    sget-object v0, Lcom/miui/home/recents/util/Executors;->MAIN_EXECUTOR:Lcom/miui/home/library/utils/LooperExecutor;
+
+    invoke-virtual {v0}, Lcom/miui/home/library/utils/LooperExecutor;->getHandler()Landroid/os/Handler;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mStartTaskViewTouchDownAnimRunnable:Ljava/lang/Runnable;
+
+    const-wide/16 v2, 0x32
+
+    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    :goto_0
     return-void
 .end method
 
 .method private updateTaskViewTransforms(F)V
     .locals 10
 
-    .line 721
+    .line 736
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
 
     invoke-virtual {v0}, Lcom/miui/home/recents/views/TaskStackView;->getTaskViews()Ljava/util/List;
 
     move-result-object v0
 
-    .line 722
+    .line 737
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v1
@@ -1696,19 +1768,19 @@
     :goto_0
     if-ge v2, v1, :cond_4
 
-    .line 724
+    .line 739
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/miui/home/recents/views/TaskView;
 
-    .line 725
+    .line 740
     invoke-virtual {v3}, Lcom/miui/home/recents/views/TaskView;->getTask()Lcom/android/systemui/shared/recents/model/Task;
 
     move-result-object v4
 
-    .line 727
+    .line 742
     iget-object v5, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
 
     invoke-virtual {v5, v4}, Lcom/miui/home/recents/views/TaskStackView;->isIgnoredTask(Lcom/android/systemui/shared/recents/model/Task;)Z
@@ -1719,7 +1791,7 @@
 
     goto/16 :goto_2
 
-    .line 731
+    .line 746
     :cond_0
     iget-object v5, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mCurrentTasks:Ljava/util/ArrayList;
 
@@ -1736,7 +1808,7 @@
     :cond_1
     if-ltz v4, :cond_3
 
-    .line 738
+    .line 753
     iget-object v5, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mCurrentTaskTransforms:Ljava/util/ArrayList;
 
     invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
@@ -1755,7 +1827,7 @@
 
     goto :goto_1
 
-    .line 745
+    .line 760
     :cond_2
     iget-object v5, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mCurrentTaskTransforms:Ljava/util/ArrayList;
 
@@ -1765,7 +1837,7 @@
 
     check-cast v5, Lcom/miui/home/recents/views/TaskViewTransform;
 
-    .line 746
+    .line 761
     iget-object v6, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mFinalTaskTransforms:Ljava/util/ArrayList;
 
     invoke-virtual {v6, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1774,12 +1846,12 @@
 
     check-cast v4, Lcom/miui/home/recents/views/TaskViewTransform;
 
-    .line 748
+    .line 763
     iget-object v6, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTmpTransform:Lcom/miui/home/recents/views/TaskViewTransform;
 
     invoke-virtual {v6, v5}, Lcom/miui/home/recents/views/TaskViewTransform;->copyFrom(Lcom/miui/home/recents/views/TaskViewTransform;)V
 
-    .line 750
+    .line 765
     iget-object v6, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTmpTransform:Lcom/miui/home/recents/views/TaskViewTransform;
 
     iget-object v6, v6, Lcom/miui/home/recents/views/TaskViewTransform;->rect:Landroid/graphics/RectF;
@@ -1794,7 +1866,7 @@
 
     invoke-virtual {v6, v7}, Landroid/graphics/RectF;->set(Landroid/graphics/RectF;)V
 
-    .line 752
+    .line 767
     iget-object v6, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTmpTransform:Lcom/miui/home/recents/views/TaskViewTransform;
 
     iget v7, v5, Lcom/miui/home/recents/views/TaskViewTransform;->viewOutlineAlpha:F
@@ -1811,7 +1883,7 @@
 
     iput v7, v6, Lcom/miui/home/recents/views/TaskViewTransform;->viewOutlineAlpha:F
 
-    .line 755
+    .line 770
     iget-object v6, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTmpTransform:Lcom/miui/home/recents/views/TaskViewTransform;
 
     iget v7, v5, Lcom/miui/home/recents/views/TaskViewTransform;->translationZ:F
@@ -1828,7 +1900,7 @@
 
     iput v7, v6, Lcom/miui/home/recents/views/TaskViewTransform;->translationZ:F
 
-    .line 758
+    .line 773
     iget-object v4, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
 
     iget-object v5, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTmpTransform:Lcom/miui/home/recents/views/TaskViewTransform;
@@ -1843,7 +1915,7 @@
     :goto_1
     const-string v3, "TaskStackViewTouchHandler"
 
-    .line 739
+    .line 754
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -1860,7 +1932,7 @@
 
     iget-object v4, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mCurrentTaskTransforms:Ljava/util/ArrayList;
 
-    .line 740
+    .line 755
     invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
 
     move-result v4
@@ -1873,7 +1945,7 @@
 
     iget-object v4, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mFinalTaskTransforms:Ljava/util/ArrayList;
 
-    .line 741
+    .line 756
     invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
 
     move-result v4
@@ -1884,7 +1956,7 @@
 
     move-result-object v4
 
-    .line 739
+    .line 754
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_2
@@ -1901,17 +1973,17 @@
 .method public canChildBeDismissed(Landroid/view/View;)Z
     .locals 2
 
-    .line 520
+    .line 535
     move-object v0, p1
 
     check-cast v0, Lcom/miui/home/recents/views/TaskView;
 
-    .line 521
+    .line 536
     invoke-virtual {v0}, Lcom/miui/home/recents/views/TaskView;->getTask()Lcom/android/systemui/shared/recents/model/Task;
 
     move-result-object v0
 
-    .line 522
+    .line 537
     iget-object v1, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mSwipeHelperAnimations:Landroid/util/ArrayMap;
 
     invoke-virtual {v1, p1}, Landroid/util/ArrayMap;->containsKey(Ljava/lang/Object;)Z
@@ -1922,7 +1994,7 @@
 
     iget-object p1, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
 
-    .line 523
+    .line 538
     invoke-virtual {p1}, Lcom/miui/home/recents/views/TaskStackView;->getStack()Lcom/android/systemui/shared/recents/model/TaskStack;
 
     move-result-object p1
@@ -1949,7 +2021,7 @@
 .method public cancelDismissTaskViewAnimIfNeed()Z
     .locals 6
 
-    .line 229
+    .line 231
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mSwipeHelperAnimations:Landroid/util/ArrayMap;
 
     invoke-virtual {v0}, Landroid/util/ArrayMap;->isEmpty()Z
@@ -1960,14 +2032,14 @@
 
     if-eqz v0, :cond_4
 
-    .line 233
+    .line 235
     iget-object v1, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
 
     invoke-virtual {v1}, Lcom/miui/home/recents/views/TaskStackView;->getTaskViews()Ljava/util/List;
 
     move-result-object v1
 
-    .line 234
+    .line 236
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v2
@@ -1977,14 +2049,14 @@
     :goto_0
     if-ltz v2, :cond_1
 
-    .line 235
+    .line 237
     invoke-interface {v1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/miui/home/recents/views/TaskView;
 
-    .line 237
+    .line 239
     iget-object v4, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
 
     invoke-virtual {v3}, Lcom/miui/home/recents/views/TaskView;->getTask()Lcom/android/systemui/shared/recents/model/Task;
@@ -1999,7 +2071,7 @@
 
     goto :goto_1
 
-    .line 240
+    .line 242
     :cond_0
     invoke-virtual {v3}, Lcom/miui/home/recents/views/TaskView;->cancelTransformAnimation()V
 
@@ -2008,7 +2080,7 @@
 
     goto :goto_0
 
-    .line 243
+    .line 245
     :cond_1
     iget-object v1, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mSwipeHelperAnimations:Landroid/util/ArrayMap;
 
@@ -2034,7 +2106,7 @@
 
     const-string v3, "TaskStackViewTouchHandler"
 
-    .line 244
+    .line 246
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -2051,19 +2123,19 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 245
+    .line 247
     instance-of v3, v2, Landroid/animation/ObjectAnimator;
 
     if-eqz v3, :cond_2
 
-    .line 246
+    .line 248
     check-cast v2, Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v2}, Landroid/animation/ObjectAnimator;->cancel()V
 
     goto :goto_2
 
-    .line 250
+    .line 252
     :cond_3
     iget-object v1, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mSwipeHelperAnimations:Landroid/util/ArrayMap;
 
@@ -2076,7 +2148,7 @@
 .method public checkToBeginDrag(Landroid/view/View;)Z
     .locals 0
 
-    .line 704
+    .line 719
     check-cast p1, Lcom/miui/home/recents/views/TaskView;
 
     invoke-virtual {p1}, Lcom/miui/home/recents/views/TaskView;->startDrag()Z
@@ -2091,7 +2163,7 @@
 .method public evaluate(FLandroid/graphics/RectF;Landroid/graphics/RectF;)Landroid/graphics/RectF;
     .locals 5
 
-    .line 763
+    .line 778
     iget v0, p2, Landroid/graphics/RectF;->left:F
 
     iget v1, p3, Landroid/graphics/RectF;->left:F
@@ -2104,7 +2176,7 @@
 
     add-float/2addr v0, v1
 
-    .line 764
+    .line 779
     iget v1, p2, Landroid/graphics/RectF;->top:F
 
     iget v2, p3, Landroid/graphics/RectF;->top:F
@@ -2117,7 +2189,7 @@
 
     add-float/2addr v1, v2
 
-    .line 765
+    .line 780
     iget v2, p2, Landroid/graphics/RectF;->right:F
 
     iget v3, p3, Landroid/graphics/RectF;->right:F
@@ -2130,7 +2202,7 @@
 
     add-float/2addr v2, v3
 
-    .line 766
+    .line 781
     iget v3, p2, Landroid/graphics/RectF;->bottom:F
 
     iget p3, p3, Landroid/graphics/RectF;->bottom:F
@@ -2143,7 +2215,7 @@
 
     add-float/2addr v3, p3
 
-    .line 767
+    .line 782
     new-instance p1, Landroid/graphics/RectF;
 
     invoke-direct {p1, v0, v1, v2, v3}, Landroid/graphics/RectF;-><init>(FFFF)V
@@ -2154,7 +2226,7 @@
 .method public getChildAtPosition(Landroid/view/MotionEvent;)Landroid/view/View;
     .locals 1
 
-    .line 505
+    .line 520
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
@@ -2196,7 +2268,7 @@
 .method public getOldStackScroll()F
     .locals 1
 
-    .line 611
+    .line 626
     iget v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mOldStackScroll:F
 
     return v0
@@ -2205,7 +2277,7 @@
 .method public getScaledDismissSize()F
     .locals 2
 
-    .line 800
+    .line 815
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
 
     invoke-virtual {v0}, Lcom/miui/home/recents/views/TaskStackView;->getWidth()I
@@ -2234,12 +2306,12 @@
 .method initOrResetVelocityTracker()V
     .locals 1
 
-    .line 181
+    .line 183
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     if-nez v0, :cond_0
 
-    .line 182
+    .line 184
     invoke-static {}, Landroid/view/VelocityTracker;->obtain()Landroid/view/VelocityTracker;
 
     move-result-object v0
@@ -2248,7 +2320,7 @@
 
     goto :goto_0
 
-    .line 184
+    .line 186
     :cond_0
     invoke-virtual {v0}, Landroid/view/VelocityTracker;->clear()V
 
@@ -2267,7 +2339,7 @@
 .method public isSnappingChild()Z
     .locals 1
 
-    .line 674
+    .line 689
     iget-boolean v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mSnappingChild:Z
 
     return v0
@@ -2276,15 +2348,15 @@
 .method public onBeginDrag(Landroid/view/View;)V
     .locals 2
 
-    .line 538
+    .line 553
     check-cast p1, Lcom/miui/home/recents/views/TaskView;
 
     const/high16 v0, 0x41200000    # 10.0f
 
-    .line 541
+    .line 556
     invoke-virtual {p1, v0}, Lcom/miui/home/recents/views/TaskView;->setTranslationZ(F)V
 
-    .line 543
+    .line 558
     invoke-static {}, Lcom/miui/home/recents/util/SpringAnimationUtils;->getInstance()Lcom/miui/home/recents/util/SpringAnimationUtils;
 
     move-result-object v0
@@ -2295,21 +2367,21 @@
 
     invoke-virtual {v0, p1, v1}, Lcom/miui/home/recents/util/SpringAnimationUtils;->startTaskViewSwipeAnim(Lcom/miui/home/recents/views/TaskView;Z)V
 
-    .line 545
+    .line 560
     invoke-direct {p0}, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->isScrollDirectionY()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 546
+    .line 561
     invoke-virtual {p1}, Lcom/miui/home/recents/views/TaskView;->getHeaderView()Lcom/miui/home/recents/views/TaskViewHeader;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/miui/home/recents/views/TaskViewHeader;->startDismissTaskAnim()V
 
-    .line 547
+    .line 562
     invoke-direct {p0, p1}, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->findSameTopPositionTaskView(Lcom/miui/home/recents/views/TaskView;)Lcom/miui/home/recents/views/TaskView;
 
     move-result-object v0
@@ -2319,10 +2391,10 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 551
+    .line 566
     invoke-virtual {p1, v0}, Lcom/miui/home/recents/views/TaskView;->setTouchEnabled(Z)V
 
-    .line 553
+    .line 568
     iget-object p1, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
 
     invoke-virtual {p1}, Lcom/miui/home/recents/views/TaskStackView;->getParent()Landroid/view/ViewParent;
@@ -2333,13 +2405,13 @@
 
     const/4 v0, 0x1
 
-    .line 555
+    .line 570
     invoke-interface {p1, v0}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
 
     :cond_1
     const-string p1, "swipe begin"
 
-    .line 557
+    .line 572
     invoke-direct {p0, p1}, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->reset(Ljava/lang/String;)V
 
     return-void
@@ -2348,14 +2420,14 @@
 .method public onChildDismissedEnd(Landroid/view/View;)V
     .locals 5
 
-    .line 635
+    .line 650
     move-object v0, p1
 
     check-cast v0, Lcom/miui/home/recents/views/TaskView;
 
     const-string v1, "TaskStackViewTouchHandler"
 
-    .line 637
+    .line 652
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2372,7 +2444,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 639
+    .line 654
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v1
@@ -2389,12 +2461,12 @@
 
     invoke-virtual {v1, v2}, Lorg/greenrobot/eventbus/EventBus;->post(Ljava/lang/Object;)V
 
-    .line 644
+    .line 659
     iget-object v1, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mSwipeHelperAnimations:Landroid/util/ArrayMap;
 
     invoke-virtual {v1, p1}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 645
+    .line 660
     invoke-virtual {v0}, Lcom/miui/home/recents/views/TaskView;->getTask()Lcom/android/systemui/shared/recents/model/Task;
 
     move-result-object p1
@@ -2409,7 +2481,7 @@
 
     move-result-object p1
 
-    .line 646
+    .line 661
     iget-object v1, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mCurrentTasks:Ljava/util/ArrayList;
 
     if-eqz v1, :cond_0
@@ -2427,7 +2499,7 @@
     :cond_0
     const/4 v0, -0x1
 
-    .line 645
+    .line 660
     :goto_0
     invoke-static {p1, v0}, Lcom/miui/home/launcher/AnalyticalDataCollectorForRecents;->sendRemoveTaskEvent(Ljava/lang/String;I)V
 
@@ -2437,7 +2509,7 @@
 .method public onChildDismissedStart()V
     .locals 2
 
-    .line 627
+    .line 642
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mScroller:Lcom/miui/home/recents/views/TaskStackViewScroller;
 
     iget v1, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTargetStackScroll:F
@@ -2450,49 +2522,49 @@
 .method public onChildSnappedBack(Landroid/view/View;F)V
     .locals 2
 
-    .line 655
+    .line 670
     move-object p2, p1
 
     check-cast p2, Lcom/miui/home/recents/views/TaskView;
 
     const/4 v0, 0x1
 
-    .line 658
+    .line 673
     invoke-virtual {p2, v0}, Lcom/miui/home/recents/views/TaskView;->setTouchEnabled(Z)V
 
     const/4 v0, 0x0
 
-    .line 660
+    .line 675
     invoke-virtual {p2, v0}, Lcom/miui/home/recents/views/TaskView;->setTranslationZ(F)V
 
     const/4 v0, 0x0
 
-    .line 665
+    .line 680
     iput-boolean v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mSnappingChild:Z
 
-    .line 666
+    .line 681
     invoke-virtual {p2}, Lcom/miui/home/recents/views/TaskView;->getTask()Lcom/android/systemui/shared/recents/model/Task;
 
     move-result-object p2
 
-    .line 667
+    .line 682
     iget-object v1, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
 
     invoke-virtual {v1, p2}, Lcom/miui/home/recents/views/TaskStackView;->removeIgnoreTask(Lcom/android/systemui/shared/recents/model/Task;)V
 
-    .line 668
+    .line 683
     iget-object p2, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
 
     invoke-virtual {p2, v0}, Lcom/miui/home/recents/views/TaskStackView;->updateLayoutAlgorithm(Z)V
 
-    .line 669
+    .line 684
     iget-object p2, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
 
     sget-object v0, Lcom/android/systemui/shared/recents/utilities/AnimationProps;->IMMEDIATE:Lcom/android/systemui/shared/recents/utilities/AnimationProps;
 
     invoke-virtual {p2, v0}, Lcom/miui/home/recents/views/TaskStackView;->relayoutTaskViews(Lcom/android/systemui/shared/recents/utilities/AnimationProps;)V
 
-    .line 670
+    .line 685
     iget-object p2, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mSwipeHelperAnimations:Landroid/util/ArrayMap;
 
     invoke-virtual {p2, p1}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2503,24 +2575,24 @@
 .method public onDragCancelled(Landroid/view/View;)V
     .locals 1
 
-    .line 683
+    .line 698
     check-cast p1, Lcom/miui/home/recents/views/TaskView;
 
-    .line 684
+    .line 699
     invoke-direct {p0}, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->isScrollDirectionY()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 685
+    .line 700
     invoke-static {}, Lcom/miui/home/recents/util/SpringAnimationUtils;->getInstance()Lcom/miui/home/recents/util/SpringAnimationUtils;
 
     move-result-object v0
 
     invoke-virtual {v0, p1}, Lcom/miui/home/recents/util/SpringAnimationUtils;->startTaskViewSwipeCancelAnim(Lcom/miui/home/recents/views/TaskView;)V
 
-    .line 686
+    .line 701
     invoke-virtual {p1}, Lcom/miui/home/recents/views/TaskView;->getHeaderView()Lcom/miui/home/recents/views/TaskViewHeader;
 
     move-result-object p1
@@ -2529,7 +2601,7 @@
 
     goto :goto_0
 
-    .line 688
+    .line 703
     :cond_0
     invoke-virtual {p1}, Lcom/miui/home/recents/views/TaskView;->getHeaderView()Lcom/miui/home/recents/views/TaskViewHeader;
 
@@ -2554,12 +2626,12 @@
 .method public onDragEnd(Landroid/view/View;)V
     .locals 3
 
-    .line 562
+    .line 577
     instance-of v0, p1, Lcom/miui/home/recents/views/TaskView;
 
     if-eqz v0, :cond_1
 
-    .line 563
+    .line 578
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mSameTopPositionTaskView:Lcom/miui/home/recents/views/TaskView;
 
     if-eqz v0, :cond_0
@@ -2578,7 +2650,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 564
+    .line 579
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mSameTopPositionTaskView:Lcom/miui/home/recents/views/TaskView;
 
     invoke-virtual {v0}, Lcom/miui/home/recents/views/TaskView;->getHeaderView()Lcom/miui/home/recents/views/TaskViewHeader;
@@ -2595,18 +2667,18 @@
 
     const-wide/16 v1, 0x96
 
-    .line 565
+    .line 580
     invoke-virtual {v0, v1, v2}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    .line 568
+    .line 583
     :cond_0
     check-cast p1, Lcom/miui/home/recents/views/TaskView;
 
-    .line 571
+    .line 586
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
 
     invoke-virtual {p1}, Lcom/miui/home/recents/views/TaskView;->getTask()Lcom/android/systemui/shared/recents/model/Task;
@@ -2615,7 +2687,7 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/views/TaskStackView;->addIgnoreTask(Lcom/android/systemui/shared/recents/model/Task;)V
 
-    .line 573
+    .line 588
     new-instance v0, Ljava/util/ArrayList;
 
     iget-object v1, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
@@ -2632,7 +2704,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mCurrentTasks:Ljava/util/ArrayList;
 
-    .line 576
+    .line 591
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
 
     iget-object v1, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mCurrentTasks:Ljava/util/ArrayList;
@@ -2641,14 +2713,14 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/miui/home/recents/views/TaskStackView;->getCurrentTaskTransforms(Ljava/util/ArrayList;Ljava/util/ArrayList;)V
 
-    .line 579
+    .line 594
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/views/TaskStackView;->updateLayoutAlgorithm(Z)V
 
-    .line 581
+    .line 596
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mScroller:Lcom/miui/home/recents/views/TaskStackViewScroller;
 
     invoke-virtual {v0}, Lcom/miui/home/recents/views/TaskStackViewScroller;->getStackScroll()F
@@ -2657,12 +2729,12 @@
 
     iput v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mOldStackScroll:F
 
-    .line 584
+    .line 599
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mScroller:Lcom/miui/home/recents/views/TaskStackViewScroller;
 
     iget-object v1, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
 
-    .line 585
+    .line 600
     invoke-virtual {v1}, Lcom/miui/home/recents/views/TaskStackView;->getStackAlgorithm()Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;
 
     move-result-object v1
@@ -2677,21 +2749,21 @@
 
     move-result p1
 
-    .line 584
+    .line 599
     invoke-virtual {v0, p1}, Lcom/miui/home/recents/views/TaskStackViewScroller;->getNearestMotionlessScrollP(F)F
 
     move-result p1
 
     iput p1, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTargetStackScroll:F
 
-    .line 588
+    .line 603
     iget-object p1, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
 
     iget v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTargetStackScroll:F
 
     invoke-virtual {p1, v0}, Lcom/miui/home/recents/views/TaskStackView;->bindVisibleTaskViews(F)V
 
-    .line 591
+    .line 606
     iget-object p1, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
 
     iget v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTargetStackScroll:F
@@ -2709,7 +2781,7 @@
 .method public onGenericMotionEvent(Landroid/view/MotionEvent;)Z
     .locals 2
 
-    .line 490
+    .line 505
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getSource()I
 
     move-result v0
@@ -2720,7 +2792,7 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 492
+    .line 507
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result p1
@@ -2748,7 +2820,7 @@
 .method public onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 2
 
-    .line 203
+    .line 205
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
 
     invoke-virtual {v0}, Lcom/miui/home/recents/views/TaskStackView;->isShowingMenu()Z
@@ -2761,7 +2833,7 @@
 
     return v1
 
-    .line 208
+    .line 210
     :cond_0
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mSwipeHelper:Lcom/miui/home/recents/views/SwipeHelperForRecents;
 
@@ -2771,14 +2843,14 @@
 
     iput-boolean v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mInterceptedBySwipeHelper:Z
 
-    .line 209
+    .line 211
     iget-boolean v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mInterceptedBySwipeHelper:Z
 
     if-eqz v0, :cond_1
 
     return v1
 
-    .line 213
+    .line 215
     :cond_1
     invoke-direct {p0, p1}, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->handleTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -2790,7 +2862,7 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 2
 
-    .line 219
+    .line 221
     iget-boolean v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mInterceptedBySwipeHelper:Z
 
     const/4 v1, 0x1
@@ -2807,7 +2879,7 @@
 
     return v1
 
-    .line 223
+    .line 225
     :cond_0
     invoke-direct {p0, p1}, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->handleTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -2817,17 +2889,17 @@
 .method recycleVelocityTracker()V
     .locals 1
 
-    .line 195
+    .line 197
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     if-eqz v0, :cond_0
 
-    .line 196
+    .line 198
     invoke-virtual {v0}, Landroid/view/VelocityTracker;->recycle()V
 
     const/4 v0, 0x0
 
-    .line 197
+    .line 199
     iput-object v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     :cond_0
@@ -2839,7 +2911,7 @@
 
     const/4 v0, 0x0
 
-    .line 678
+    .line 693
     iput-boolean v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mSnappingChild:Z
 
     return-void
@@ -2848,7 +2920,7 @@
 .method public setIsScrolling(Z)V
     .locals 1
 
-    .line 272
+    .line 274
     iget-boolean v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mIsScrolling:Z
 
     if-ne v0, p1, :cond_0
@@ -2858,12 +2930,12 @@
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 276
+    .line 278
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
 
     invoke-virtual {v0}, Lcom/miui/home/recents/views/TaskStackView;->onScrollStart()V
 
-    .line 278
+    .line 280
     :cond_1
     iput-boolean p1, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mIsScrolling:Z
 
@@ -2873,7 +2945,7 @@
 .method public setScrollDirection(I)V
     .locals 0
 
-    .line 168
+    .line 170
     iput p1, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mScrollDirection:I
 
     return-void
@@ -2882,7 +2954,7 @@
 .method public setSwipeDirection(I)V
     .locals 1
 
-    .line 176
+    .line 178
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mSwipeHelper:Lcom/miui/home/recents/views/SwipeHelperForRecents;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->setSwipeDirection(I)V
@@ -2893,7 +2965,7 @@
 .method public updateSwipeProgress(Landroid/view/View;F)Z
     .locals 1
 
-    .line 618
+    .line 633
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mSwipeHelperAnimations:Landroid/util/ArrayMap;
 
     invoke-virtual {v0, p1}, Landroid/util/ArrayMap;->containsKey(Ljava/lang/Object;)Z
@@ -2902,14 +2974,14 @@
 
     if-eqz p1, :cond_1
 
-    .line 619
+    .line 634
     invoke-direct {p0}, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->isScrollDirectionY()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 620
+    .line 635
     sget-object p1, Lcom/miui/home/launcher/anim/Interpolators;->FAST_OUT_SLOW_IN:Landroid/view/animation/Interpolator;
 
     invoke-static {p2}, Ljava/lang/Math;->abs(F)F
@@ -2927,7 +2999,7 @@
 
     move-result p1
 
-    .line 619
+    .line 634
     :goto_0
     invoke-direct {p0, p1}, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->updateTaskViewTransforms(F)V
 

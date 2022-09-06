@@ -1600,9 +1600,9 @@
 
     if-eqz v2, :cond_3
 
+    .line 249
     iget-wide v9, v2, Lmiuix/animation/internal/AnimOperationInfo;->sendTime:J
 
-    .line 249
     invoke-static {v9, v10}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v10
@@ -1685,6 +1685,7 @@
     .line 255
     iget-object v6, v1, Lmiuix/animation/IAnimTarget;->animManager:Lmiuix/animation/internal/AnimManager;
 
+    .line 256
     iget v10, v12, Lmiuix/animation/internal/AnimStats;->cancelCount:I
 
     iget v12, v12, Lmiuix/animation/internal/AnimStats;->endCount:I
@@ -1696,6 +1697,7 @@
     :cond_5
     const/4 v10, 0x2
 
+    .line 255
     invoke-virtual {v6, v8, v10, v9}, Lmiuix/animation/internal/AnimManager;->notifyTransitionEnd(Lmiuix/animation/internal/TransitionInfo;II)V
 
     goto :goto_4

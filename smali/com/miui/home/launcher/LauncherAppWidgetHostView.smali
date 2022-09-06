@@ -22,7 +22,7 @@
 
 .field private final mCornerRadiusEnforcementOutline:Landroid/view/ViewOutlineProvider;
 
-.field private final mEnforcedCornerRadius:F
+.field private mEnforcedCornerRadius:F
 
 .field private final mEnforcedRectangle:Landroid/graphics/Rect;
 
@@ -148,7 +148,7 @@
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v0, "widget corner = "
+    const-string/jumbo v0, "widget corner = "
 
     invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -267,75 +267,153 @@
     return v1
 .end method
 
+.method private computeRoundedCornerRadius(Lcom/miui/home/launcher/LauncherAppWidgetInfo;)F
+    .locals 4
+
+    .line 329
+    invoke-virtual {p0}, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/miui/home/launcher/widget/RoundedCornerEnforcement;->computeEnforcedRadius(Landroid/content/Context;)F
+
+    move-result v0
+
+    .line 331
+    iget-boolean v1, p1, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->isMIUIWidget:Z
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x2
+
+    if-eqz v1, :cond_0
+
+    iget v1, p1, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->spanX:I
+
+    if-ne v1, v3, :cond_0
+
+    iget v1, p1, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->spanY:I
+
+    if-ne v1, v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v2, 0x0
+
+    :goto_0
+    if-eqz v2, :cond_2
+
+    .line 333
+    iget v0, p1, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->spanX:I
+
+    iget p1, p1, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->spanY:I
+
+    if-le v0, p1, :cond_1
+
+    iget-object p1, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mEnforcedRectangle:Landroid/graphics/Rect;
+
+    invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
+
+    move-result p1
+
+    goto :goto_1
+
+    :cond_1
+    iget-object p1, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mEnforcedRectangle:Landroid/graphics/Rect;
+
+    invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
+
+    move-result p1
+
+    :goto_1
+    div-int/2addr p1, v3
+
+    int-to-float p1, p1
+
+    move v0, p1
+
+    :cond_2
+    return v0
+.end method
+
 .method private enforceRoundedCorners()V
-    .locals 2
+    .locals 3
 
-    .line 305
-    iget v0, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mEnforcedCornerRadius:F
-
-    const/4 v1, 0x0
-
-    cmpg-float v0, v0, v1
-
-    if-lez v0, :cond_3
-
+    .line 309
     invoke-virtual {p0}, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/miui/home/launcher/LauncherAppWidgetInfo;
 
+    .line 310
+    iget v1, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mEnforcedCornerRadius:F
+
+    const/4 v2, 0x0
+
+    cmpg-float v1, v1, v2
+
+    if-lez v1, :cond_3
+
     invoke-static {v0}, Lcom/miui/home/launcher/widget/RoundedCornerEnforcement;->isRoundedCornerEnabled(Lcom/miui/home/launcher/LauncherAppWidgetInfo;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_1
-
-    .line 309
-    :cond_0
-    invoke-static {p0}, Lcom/miui/home/launcher/widget/RoundedCornerEnforcement;->findBackground(Landroid/view/View;)Landroid/view/View;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_2
-
-    .line 311
-    invoke-static {p0, v0}, Lcom/miui/home/launcher/widget/RoundedCornerEnforcement;->hasAppWidgetOptedOut(Landroid/view/View;Landroid/view/View;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    if-nez v1, :cond_0
+
+    goto :goto_1
+
+    .line 314
+    :cond_0
+    invoke-static {p0}, Lcom/miui/home/launcher/widget/RoundedCornerEnforcement;->findBackground(Landroid/view/View;)Landroid/view/View;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_2
+
+    .line 316
+    invoke-static {p0, v1}, Lcom/miui/home/launcher/widget/RoundedCornerEnforcement;->hasAppWidgetOptedOut(Landroid/view/View;Landroid/view/View;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
 
     goto :goto_0
 
-    .line 315
+    .line 320
     :cond_1
-    iget-object v1, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mEnforcedRectangle:Landroid/graphics/Rect;
+    iget-object v2, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mEnforcedRectangle:Landroid/graphics/Rect;
 
-    invoke-static {p0, v0, v1}, Lcom/miui/home/launcher/widget/RoundedCornerEnforcement;->computeRoundedRectangle(Landroid/view/View;Landroid/view/View;Landroid/graphics/Rect;)V
+    invoke-static {p0, v1, v2}, Lcom/miui/home/launcher/widget/RoundedCornerEnforcement;->computeRoundedRectangle(Landroid/view/View;Landroid/view/View;Landroid/graphics/Rect;)V
 
-    .line 318
+    .line 323
+    invoke-direct {p0, v0}, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->computeRoundedCornerRadius(Lcom/miui/home/launcher/LauncherAppWidgetInfo;)F
+
+    move-result v0
+
+    iput v0, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mEnforcedCornerRadius:F
+
+    .line 324
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mCornerRadiusEnforcementOutline:Landroid/view/ViewOutlineProvider;
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
 
     const/4 v0, 0x1
 
-    .line 319
+    .line 325
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->setClipToOutline(Z)V
 
     return-void
 
-    .line 312
+    .line 317
     :cond_2
     :goto_0
     invoke-direct {p0}, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->resetRoundedCorners()V
 
     return-void
 
-    .line 306
+    .line 311
     :cond_3
     :goto_1
     invoke-direct {p0}, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->resetRoundedCorners()V
@@ -362,6 +440,18 @@
 
     .line 277
     :cond_0
+    iget-object v0, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mLauncher:Lcom/miui/home/launcher/Launcher;
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->isLauncherReady()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    return-void
+
+    .line 281
+    :cond_1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1f
@@ -370,12 +460,12 @@
 
     const/4 v3, 0x1
 
-    if-ge v0, v1, :cond_1
+    if-ge v0, v1, :cond_2
 
     :try_start_0
     const-string v0, "mLayoutId"
 
-    .line 279
+    .line 283
     sget-object v1, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -395,27 +485,27 @@
 
     const-string v2, "reInflate"
 
-    .line 281
+    .line 285
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
 
-    .line 284
-    :cond_1
+    .line 288
+    :cond_2
     invoke-virtual {p0}, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->getChildCount()I
 
     move-result v0
 
-    if-ne v0, v3, :cond_2
+    if-ne v0, v3, :cond_3
 
     const/4 v0, 0x0
 
-    .line 286
+    .line 290
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v5
 
-    .line 287
+    .line 291
     const-class v4, Landroid/view/View;
 
     const-string v6, "setTagInternal"
@@ -438,7 +528,7 @@
 
     const v1, 0x1020018
 
-    .line 288
+    .line 292
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -451,15 +541,15 @@
 
     aput-object v0, v9, v3
 
-    .line 287
+    .line 291
     invoke-static/range {v4 .. v9}, Lcom/miui/launcher/utils/ReflectUtils;->invoke(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Class;[Ljava/lang/Object;)V
 
     goto :goto_0
 
-    :cond_2
+    :cond_3
     const-string v1, "Launcher.Widget"
 
-    .line 290
+    .line 294
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -480,11 +570,11 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 293
+    .line 297
     :goto_0
     iput-boolean v3, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mIsReInflate:Z
 
-    .line 294
+    .line 298
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mRemoteViews:Landroid/widget/RemoteViews;
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->updateAppWidget(Landroid/widget/RemoteViews;)V
@@ -495,14 +585,14 @@
 .method private resetRoundedCorners()V
     .locals 1
 
-    .line 299
+    .line 303
     sget-object v0, Landroid/view/ViewOutlineProvider;->BACKGROUND:Landroid/view/ViewOutlineProvider;
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
 
     const/4 v0, 0x0
 
-    .line 300
+    .line 304
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->setClipToOutline(Z)V
 
     return-void
@@ -524,7 +614,7 @@
 .method public bindWidgetUpdateListener(Lcom/miui/home/launcher/LauncherAppWidgetHostView$WidgetUpdateListener;)V
     .locals 0
 
-    .line 337
+    .line 353
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mWidgetUpdateListener:Lcom/miui/home/launcher/LauncherAppWidgetHostView$WidgetUpdateListener;
 
     return-void
@@ -615,7 +705,7 @@
 .method public getEnforcedCornerRadius()F
     .locals 1
 
-    .line 326
+    .line 342
     iget v0, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mEnforcedCornerRadius:F
 
     return v0
@@ -631,7 +721,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "widget load error:"
+    const-string/jumbo v2, "widget load error:"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -802,7 +892,7 @@
 .method public onScreenSizeChanged()V
     .locals 0
 
-    .line 345
+    .line 361
     invoke-direct {p0}, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->reInflate()V
 
     return-void

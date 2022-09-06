@@ -1,4 +1,4 @@
-.class final Lmiuix/appcompat/internal/app/widget/ActionBarView$SavedState$1;
+.class Lmiuix/appcompat/internal/app/widget/ActionBarView$SavedState$1;
 .super Ljava/lang/Object;
 .source "ActionBarView.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
@@ -30,7 +30,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 2012
+    .line 2084
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +41,7 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
-    .line 2012
+    .line 2084
     invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView$SavedState$1;->createFromParcel(Landroid/os/Parcel;)Lmiuix/appcompat/internal/app/widget/ActionBarView$SavedState;
 
     move-result-object p1
@@ -52,7 +52,7 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Ljava/lang/Object;
     .locals 0
 
-    .line 2012
+    .line 2084
     invoke-virtual {p0, p1, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarView$SavedState$1;->createFromParcel(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Lmiuix/appcompat/internal/app/widget/ActionBarView$SavedState;
 
     move-result-object p1
@@ -63,7 +63,7 @@
 .method public createFromParcel(Landroid/os/Parcel;)Lmiuix/appcompat/internal/app/widget/ActionBarView$SavedState;
     .locals 1
 
-    .line 2016
+    .line 2088
     new-instance v0, Lmiuix/appcompat/internal/app/widget/ActionBarView$SavedState;
 
     invoke-direct {v0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView$SavedState;-><init>(Landroid/os/Parcel;)V
@@ -74,21 +74,21 @@
 .method public createFromParcel(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Lmiuix/appcompat/internal/app/widget/ActionBarView$SavedState;
     .locals 2
 
-    .line 2026
+    .line 2098
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x18
 
     if-lt v0, v1, :cond_0
 
-    .line 2027
+    .line 2099
     new-instance v0, Lmiuix/appcompat/internal/app/widget/ActionBarView$SavedState;
 
     invoke-direct {v0, p1, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarView$SavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
 
     return-object v0
 
-    .line 2029
+    .line 2101
     :cond_0
     new-instance p2, Lmiuix/appcompat/internal/app/widget/ActionBarView$SavedState;
 
@@ -100,7 +100,7 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 2012
+    .line 2084
     invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView$SavedState$1;->newArray(I)[Lmiuix/appcompat/internal/app/widget/ActionBarView$SavedState;
 
     move-result-object p1
@@ -111,7 +111,7 @@
 .method public newArray(I)[Lmiuix/appcompat/internal/app/widget/ActionBarView$SavedState;
     .locals 0
 
-    .line 2021
+    .line 2093
     new-array p1, p1, [Lmiuix/appcompat/internal/app/widget/ActionBarView$SavedState;
 
     return-object p1

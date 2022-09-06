@@ -58,7 +58,7 @@
     .locals 0
 
     .line 219
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/view/menu/MenuBuilder;->close(Z)V
+    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/view/menu/MenuBuilder;->closeInternal(Z)V
 
     return-void
 .end method
@@ -437,11 +437,11 @@
 
     if-eqz v5, :cond_4
 
+    .line 92
     move-object v5, v4
 
     check-cast v5, Lmiuix/appcompat/internal/view/menu/MenuView$ItemView;
 
-    .line 92
     invoke-interface {v5}, Lmiuix/appcompat/internal/view/menu/MenuView$ItemView;->getItemData()Lmiuix/appcompat/internal/view/menu/MenuItemImpl;
 
     move-result-object v5

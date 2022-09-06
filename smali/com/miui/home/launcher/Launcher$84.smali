@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 8928
+    .line 9011
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$84;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 4
 
-    .line 8931
+    .line 9014
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$84;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->isDestroyed()Z
@@ -49,7 +49,7 @@
 
     return-void
 
-    .line 8934
+    .line 9017
     :cond_0
     new-instance v0, Landroid/content/Intent;
 
@@ -59,10 +59,10 @@
 
     const-string v1, "com.android.systemui"
 
-    .line 8935
+    .line 9018
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 8936
+    .line 9019
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$84;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v1}, Lcom/miui/home/launcher/Launcher;->access$9900(Lcom/miui/home/launcher/Launcher;)Landroid/content/ServiceConnection;
@@ -79,7 +79,7 @@
 
     const-string v0, "Launcher"
 
-    .line 8937
+    .line 9020
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V

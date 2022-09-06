@@ -49,6 +49,13 @@
         <item>डिफॉल्ट</item>
         <item>क्लासिक</item>
     </string-array>
+    <string-array name="monochrome_color_entries">
+        <item>डिफॉल्ट</item>
+        <item>निळा</item>
+        <item>हिरवा</item>
+        <item>जांभळा</item>
+        <item>तपकिरी</item>
+    </string-array>
     <string-array name="transformation_entries">
         <item>स्लाइड</item>
         <item>क्रॉसफेड</item>

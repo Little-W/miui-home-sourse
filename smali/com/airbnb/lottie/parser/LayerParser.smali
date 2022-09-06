@@ -47,7 +47,7 @@
 
     const-string v15, "st"
 
-    const-string v16, "w"
+    const-string/jumbo v16, "w"
 
     const-string v17, "h"
 

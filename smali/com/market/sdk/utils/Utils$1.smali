@@ -1,4 +1,4 @@
-.class final Lcom/market/sdk/utils/Utils$1;
+.class Lcom/market/sdk/utils/Utils$1;
 .super Lcom/market/sdk/Singleton;
 .source "Utils.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
@@ -26,7 +26,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 31
+    .line 30
     invoke-direct {p0}, Lcom/market/sdk/Singleton;-><init>()V
 
     return-void
@@ -37,7 +37,7 @@
 .method protected bridge synthetic create()Ljava/lang/Object;
     .locals 1
 
-    .line 31
+    .line 30
     invoke-virtual {p0}, Lcom/market/sdk/utils/Utils$1;->create()Ljava/lang/String;
 
     move-result-object v0
@@ -48,14 +48,14 @@
 .method protected create()Ljava/lang/String;
     .locals 1
 
-    .line 35
+    .line 34
     invoke-static {}, Lcom/market/sdk/utils/Client;->isMiui()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 36
+    .line 35
     invoke-static {}, Lcom/market/sdk/utils/Client;->isInternationalMiui()Z
 
     move-result v0

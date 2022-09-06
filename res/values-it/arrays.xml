@@ -49,6 +49,13 @@
         <item>Predefinito</item>
         <item>Classico</item>
     </string-array>
+    <string-array name="monochrome_color_entries">
+        <item>Predefinito</item>
+        <item>Blu</item>
+        <item>Verde</item>
+        <item>Viola</item>
+        <item>Marrone</item>
+    </string-array>
     <string-array name="transformation_entries">
         <item>Scivola</item>
         <item>Dissolvenza</item>

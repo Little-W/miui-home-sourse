@@ -35,7 +35,7 @@
 .method public onReceiveResult(ILandroid/os/Bundle;)V
     .locals 0
 
-    const-string p1, "whiteSet"
+    const-string/jumbo p1, "whiteSet"
 
     .line 113
     invoke-virtual {p2, p1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;

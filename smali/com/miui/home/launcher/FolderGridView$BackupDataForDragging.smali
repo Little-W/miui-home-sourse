@@ -30,7 +30,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 70
+    .line 71
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,7 +39,7 @@
 .method synthetic constructor <init>(Lcom/miui/home/launcher/FolderGridView$1;)V
     .locals 0
 
-    .line 70
+    .line 71
     invoke-direct {p0}, Lcom/miui/home/launcher/FolderGridView$BackupDataForDragging;-><init>()V
 
     return-void

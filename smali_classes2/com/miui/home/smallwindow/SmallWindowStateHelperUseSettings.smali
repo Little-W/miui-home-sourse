@@ -227,27 +227,31 @@
 
 # virtual methods
 .method public canEnterMiniSmallWindow()Z
-    .locals 1
+    .locals 2
+
+    const/4 v0, 0x0
+
+    const/4 v1, -0x1
 
     .line 175
-    invoke-virtual {p0}, Lcom/miui/home/smallwindow/SmallWindowStateHelperUseSettings;->canEnterSmallWindow()Z
+    invoke-virtual {p0, v0, v1}, Lcom/miui/home/smallwindow/SmallWindowStateHelperUseSettings;->canEnterSmallWindow(Ljava/lang/String;I)Z
 
     move-result v0
 
     return v0
 .end method
 
-.method public canEnterSmallWindow()Z
-    .locals 1
+.method public canEnterSmallWindow(Ljava/lang/String;I)Z
+    .locals 0
 
     .line 170
     invoke-virtual {p0}, Lcom/miui/home/smallwindow/SmallWindowStateHelperUseSettings;->isInSmallWindowMode()Z
 
-    move-result v0
+    move-result p1
 
-    xor-int/lit8 v0, v0, 0x1
+    xor-int/lit8 p1, p1, 0x1
 
-    return v0
+    return p1
 .end method
 
 .method public getAllSmallWindows()Ljava/util/Set;

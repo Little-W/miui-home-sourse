@@ -1,4 +1,4 @@
-.class final Lmiuix/animation/property/ViewProperty$3;
+.class Lmiuix/animation/property/ViewProperty$3;
 .super Lmiuix/animation/property/ViewProperty;
 .source "ViewProperty.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 

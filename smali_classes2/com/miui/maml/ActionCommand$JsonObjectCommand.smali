@@ -36,17 +36,17 @@
 .method public constructor <init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
     .locals 2
 
-    .line 2593
+    .line 2598
     invoke-direct {p0, p1, p2}, Lcom/miui/maml/ActionCommand$TargetCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
 
     const-string p1, "command"
 
-    .line 2594
+    .line 2599
     invoke-interface {p2, p1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 2595
+    .line 2600
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$JsonObjectCommand;->getVariables()Lcom/miui/maml/data/Variables;
 
     move-result-object v0
@@ -63,7 +63,7 @@
 
     iput-object v0, p0, Lcom/miui/maml/ActionCommand$JsonObjectCommand;->mNameExp:Lcom/miui/maml/data/Expression;
 
-    .line 2596
+    .line 2601
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$JsonObjectCommand;->getVariables()Lcom/miui/maml/data/Variables;
 
     move-result-object v0
@@ -80,7 +80,7 @@
 
     iput-object p2, p0, Lcom/miui/maml/ActionCommand$JsonObjectCommand;->mValueExp:Lcom/miui/maml/data/Expression;
 
-    .line 2597
+    .line 2602
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     move-result p2
@@ -174,14 +174,14 @@
     :goto_1
     packed-switch p1, :pswitch_data_0
 
-    .line 2617
+    .line 2622
     sget-object p1, Lcom/miui/maml/ActionCommand$JsonObjectCommand$CommandType;->INVALID:Lcom/miui/maml/ActionCommand$JsonObjectCommand$CommandType;
 
     iput-object p1, p0, Lcom/miui/maml/ActionCommand$JsonObjectCommand;->mCommand:Lcom/miui/maml/ActionCommand$JsonObjectCommand$CommandType;
 
     goto :goto_2
 
-    .line 2614
+    .line 2619
     :pswitch_0
     sget-object p1, Lcom/miui/maml/ActionCommand$JsonObjectCommand$CommandType;->REMOVE:Lcom/miui/maml/ActionCommand$JsonObjectCommand$CommandType;
 
@@ -189,7 +189,7 @@
 
     goto :goto_2
 
-    .line 2611
+    .line 2616
     :pswitch_1
     sget-object p1, Lcom/miui/maml/ActionCommand$JsonObjectCommand$CommandType;->PUT_JSON_ARRAY:Lcom/miui/maml/ActionCommand$JsonObjectCommand$CommandType;
 
@@ -197,7 +197,7 @@
 
     goto :goto_2
 
-    .line 2608
+    .line 2613
     :pswitch_2
     sget-object p1, Lcom/miui/maml/ActionCommand$JsonObjectCommand$CommandType;->PUT_JSON_OBJECT:Lcom/miui/maml/ActionCommand$JsonObjectCommand$CommandType;
 
@@ -205,7 +205,7 @@
 
     goto :goto_2
 
-    .line 2605
+    .line 2610
     :pswitch_3
     sget-object p1, Lcom/miui/maml/ActionCommand$JsonObjectCommand$CommandType;->PUT_INT:Lcom/miui/maml/ActionCommand$JsonObjectCommand$CommandType;
 
@@ -213,7 +213,7 @@
 
     goto :goto_2
 
-    .line 2602
+    .line 2607
     :pswitch_4
     sget-object p1, Lcom/miui/maml/ActionCommand$JsonObjectCommand$CommandType;->PUT_BOOLEAN:Lcom/miui/maml/ActionCommand$JsonObjectCommand$CommandType;
 
@@ -221,13 +221,13 @@
 
     goto :goto_2
 
-    .line 2599
+    .line 2604
     :pswitch_5
     sget-object p1, Lcom/miui/maml/ActionCommand$JsonObjectCommand$CommandType;->PUT_STRING:Lcom/miui/maml/ActionCommand$JsonObjectCommand$CommandType;
 
     iput-object p1, p0, Lcom/miui/maml/ActionCommand$JsonObjectCommand;->mCommand:Lcom/miui/maml/ActionCommand$JsonObjectCommand$CommandType;
 
-    .line 2620
+    .line 2625
     :goto_2
     sget-object p1, Lcom/miui/maml/ActionCommand$TargetCommand$TargetType;->VARIABLE:Lcom/miui/maml/ActionCommand$TargetCommand$TargetType;
 
@@ -261,22 +261,22 @@
 .method public doPerform()V
     .locals 4
 
-    .line 2625
+    .line 2630
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$JsonObjectCommand;->getTarget()Ljava/lang/Object;
 
     move-result-object v0
 
     if-eqz v0, :cond_9
 
-    .line 2626
+    .line 2631
     instance-of v1, v0, Lorg/json/JSONObject;
 
     if-eqz v1, :cond_9
 
-    .line 2627
+    .line 2632
     check-cast v0, Lorg/json/JSONObject;
 
-    .line 2630
+    .line 2635
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$JsonObjectCommand;->mCommand:Lcom/miui/maml/ActionCommand$JsonObjectCommand$CommandType;
 
     sget-object v2, Lcom/miui/maml/ActionCommand$JsonObjectCommand$CommandType;->REMOVE:Lcom/miui/maml/ActionCommand$JsonObjectCommand$CommandType;
@@ -285,7 +285,7 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 2631
+    .line 2636
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$JsonObjectCommand;->mNameExp:Lcom/miui/maml/data/Expression;
 
     if-eqz v1, :cond_0
@@ -297,10 +297,10 @@
     :cond_0
     if-eqz v3, :cond_9
 
-    .line 2633
+    .line 2638
     invoke-virtual {v0, v3}, Lorg/json/JSONObject;->remove(Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2636
+    .line 2641
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$JsonObjectCommand;->getVariables()Lcom/miui/maml/data/Variables;
 
     move-result-object v1
@@ -311,7 +311,7 @@
 
     goto/16 :goto_3
 
-    .line 2639
+    .line 2644
     :cond_1
     sget-object v1, Lcom/miui/maml/ActionCommand$1;->$SwitchMap$com$miui$maml$ActionCommand$JsonObjectCommand$CommandType:[I
 
@@ -327,20 +327,20 @@
 
     goto :goto_1
 
-    .line 2653
+    .line 2658
     :pswitch_0
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$JsonObjectCommand;->mValueExp:Lcom/miui/maml/data/Expression;
 
     if-eqz v1, :cond_7
 
-    .line 2654
+    .line 2659
     invoke-virtual {v1}, Lcom/miui/maml/data/Expression;->evaluateStr()Ljava/lang/String;
 
     move-result-object v1
 
     const-string v2, "0"
 
-    .line 2655
+    .line 2660
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -369,7 +369,7 @@
 
     goto :goto_2
 
-    .line 2650
+    .line 2655
     :pswitch_1
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$JsonObjectCommand;->mValueExp:Lcom/miui/maml/data/Expression;
 
@@ -386,7 +386,7 @@
 
     goto :goto_2
 
-    .line 2647
+    .line 2652
     :pswitch_2
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$JsonObjectCommand;->mValueExp:Lcom/miui/maml/data/Expression;
 
@@ -403,7 +403,7 @@
 
     goto :goto_2
 
-    .line 2644
+    .line 2649
     :pswitch_3
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$JsonObjectCommand;->mValueExp:Lcom/miui/maml/data/Expression;
 
@@ -420,7 +420,7 @@
 
     goto :goto_2
 
-    .line 2641
+    .line 2646
     :pswitch_4
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$JsonObjectCommand;->mValueExp:Lcom/miui/maml/data/Expression;
 
@@ -445,7 +445,7 @@
     :goto_1
     move-object v1, v3
 
-    .line 2661
+    .line 2666
     :goto_2
     iget-object v2, p0, Lcom/miui/maml/ActionCommand$JsonObjectCommand;->mNameExp:Lcom/miui/maml/data/Expression;
 
@@ -460,11 +460,11 @@
 
     if-eqz v1, :cond_9
 
-    .line 2664
+    .line 2669
     :try_start_0
     invoke-virtual {v0, v3, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 2667
+    .line 2672
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$JsonObjectCommand;->getVariables()Lcom/miui/maml/data/Variables;
 
     move-result-object v1

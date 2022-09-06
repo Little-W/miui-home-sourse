@@ -285,7 +285,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f070336
+    const v3, 0x7f070447
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -331,7 +331,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f100152
+    const v4, 0x7f11015b
 
     invoke-virtual {v3, v4}, Landroid/app/ActionBar;->setTitle(I)V
 

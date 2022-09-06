@@ -400,10 +400,10 @@
 
     goto :goto_1
 
+    .line 169
     :cond_1
     iget-object v2, p0, Lmiuix/recyclerview/widget/MiuiBaseDefaultItemAnimator;->mChangesList:Ljava/util/ArrayList;
 
-    .line 169
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -424,10 +424,10 @@
 
     goto :goto_2
 
+    .line 171
     :cond_2
     iget-object v3, p0, Lmiuix/recyclerview/widget/MiuiBaseDefaultItemAnimator;->mAdditionsList:Ljava/util/ArrayList;
 
-    .line 171
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
     move-result-object v3

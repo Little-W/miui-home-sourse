@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<favorites xmlns:launcher="http://schemas.android.com/apk/res-auto">
+    <default launcher:screen="1" />
+    <folder launcher:screen="0" launcher:title="com.miui.home:string/default_folder_title_tools" launcher:x="3" launcher:y="2" />
+    <folder launcher:presets_container="true" launcher:screen="1" launcher:title="com.miui.home:string/default_folder_title_recommend" launcher:x="0" launcher:y="1" />
+    <favorite launcher:className="com.miui.weather2.ActivityWeatherMain" launcher:packageName="com.miui.weather2" launcher:screen="0" launcher:x="0" launcher:y="0" />
+    <favorite launcher:className="com.android.calendar.homepage.AllInOneActivity" launcher:packageName="com.android.calendar" launcher:screen="0" launcher:x="1" launcher:y="0" />
+    <shortcut launcher:className="com.miui.securityspace.ui.activity.SwitchUserActivity" launcher:iconResource="com.miui.securitycore:drawable/exit_private_space" launcher:packageName="com.miui.securitycore" launcher:retained="true" launcher:screen="0" launcher:title="com.miui.securitycore:string/exit_private_space" launcher:x="2" launcher:y="0" />
+    <favorite launcher:className="com.android.fileexplorer.FileExplorerTabActivity" launcher:packageName="com.android.fileexplorer" launcher:screen="0" launcher:x="3" launcher:y="0" />
+    <favorite launcher:className="com.miui.securityscan.MainActivity" launcher:packageName="com.miui.securitycenter" launcher:screen="0" launcher:x="0" launcher:y="1" />
+    <favorite launcher:className="com.android.settings.MiuiSettings" launcher:packageName="com.android.settings" launcher:screen="0" launcher:x="1" launcher:y="1" />
+    <favorite launcher:className="com.xiaomi.market.ui.MarketTabActivity" launcher:packageName="com.xiaomi.market" launcher:screen="0" launcher:x="2" launcher:y="1" />
+    <favorite launcher:className="com.xiaomi.gamecenter.ui.MainTabActivity" launcher:packageName="com.xiaomi.gamecenter" launcher:screen="0" launcher:x="3" launcher:y="1" />
+    <favorite launcher:className="com.android.camera.Camera" launcher:packageName="com.android.camera" launcher:screen="0" launcher:x="0" launcher:y="2" />
+    <favorite launcher:className="com.miui.player.ui.MusicBrowserActivity" launcher:packageName="com.miui.player" launcher:screen="0" launcher:x="1" launcher:y="2" />
+    <favorite launcher:className="com.miui.video.HomeActivity" launcher:packageName="com.miui.video" launcher:screen="0" launcher:x="2" launcher:y="2" />
+    <include layout="@xml/layout_folder_tools_pad" />
+    <favorite launcher:className="com.miui.miservice.main.MainActivity" launcher:packageName="com.miui.miservice" launcher:screen="1" launcher:x="0" launcher:y="0" />
+    <favorite launcher:className="com.xiaomi.vipaccount.ui.VipAccountActivity" launcher:packageName="com.xiaomi.vipaccount" launcher:screen="1" launcher:x="1" launcher:y="0" />
+    <favorite launcher:className="com.xiaomi.smarthome.SmartHomeMainActivity" launcher:packageName="com.xiaomi.smarthome" launcher:screen="1" launcher:x="2" launcher:y="0" />
+    <favorite launcher:className="com.mipay.wallet.ui.MipayEntryActivity" launcher:packageName="com.mipay.wallet" launcher:screen="1" launcher:x="3" launcher:y="0" />
+    <include layout="@xml/layout_hotseats_pad" />
+</favorites>

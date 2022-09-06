@@ -25,7 +25,7 @@
 .method constructor <init>(Lmiuix/appcompat/app/AppDelegate;)V
     .locals 0
 
-    .line 547
+    .line 582
     iput-object p1, p0, Lmiuix/appcompat/app/AppDelegate$1;->this$0:Lmiuix/appcompat/app/AppDelegate;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,14 +38,14 @@
 .method public run()V
     .locals 4
 
-    .line 550
+    .line 585
     iget-object v0, p0, Lmiuix/appcompat/app/AppDelegate$1;->this$0:Lmiuix/appcompat/app/AppDelegate;
 
     invoke-virtual {v0}, Lmiuix/appcompat/app/AppDelegate;->createMenu()Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
     move-result-object v0
 
-    .line 551
+    .line 586
     iget-object v1, p0, Lmiuix/appcompat/app/AppDelegate$1;->this$0:Lmiuix/appcompat/app/AppDelegate;
 
     invoke-virtual {v1}, Lmiuix/appcompat/app/AppDelegate;->isImmersionMenuEnabled()Z
@@ -58,7 +58,7 @@
 
     iget-object v1, p0, Lmiuix/appcompat/app/AppDelegate$1;->this$0:Lmiuix/appcompat/app/AppDelegate;
 
-    .line 552
+    .line 587
     invoke-static {v1}, Lmiuix/appcompat/app/AppDelegate;->access$000(Lmiuix/appcompat/app/AppDelegate;)Lmiuix/appcompat/app/ActivityCallback;
 
     move-result-object v1
@@ -73,7 +73,7 @@
 
     iget-object v1, p0, Lmiuix/appcompat/app/AppDelegate$1;->this$0:Lmiuix/appcompat/app/AppDelegate;
 
-    .line 553
+    .line 588
     invoke-static {v1}, Lmiuix/appcompat/app/AppDelegate;->access$000(Lmiuix/appcompat/app/AppDelegate;)Lmiuix/appcompat/app/ActivityCallback;
 
     move-result-object v1
@@ -84,14 +84,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 554
+    .line 589
     iget-object v1, p0, Lmiuix/appcompat/app/AppDelegate$1;->this$0:Lmiuix/appcompat/app/AppDelegate;
 
     invoke-virtual {v1, v0}, Lmiuix/appcompat/app/AppDelegate;->setMenu(Lmiuix/appcompat/internal/view/menu/MenuBuilder;)V
 
     goto :goto_0
 
-    .line 556
+    .line 591
     :cond_0
     iget-object v0, p0, Lmiuix/appcompat/app/AppDelegate$1;->this$0:Lmiuix/appcompat/app/AppDelegate;
 

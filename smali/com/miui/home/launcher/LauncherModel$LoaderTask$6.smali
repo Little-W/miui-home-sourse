@@ -35,7 +35,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/LauncherModel$LoaderTask;Ljava/lang/Runnable;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;)V
     .locals 0
 
-    .line 1533
+    .line 1542
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$6;->this$1:Lcom/miui/home/launcher/LauncherModel$LoaderTask;
 
     iput-object p2, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$6;->val$endWaiting:Ljava/lang/Runnable;
@@ -58,12 +58,12 @@
 .method public run()V
     .locals 9
 
-    .line 1536
+    .line 1545
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$6;->val$endWaiting:Ljava/lang/Runnable;
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 1537
+    .line 1546
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$6;->val$cloudBackupPackageName:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -74,7 +74,7 @@
 
     return-void
 
-    .line 1540
+    .line 1549
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$6;->val$packageNames:Ljava/util/List;
 
@@ -82,7 +82,7 @@
 
     move-result v0
 
-    .line 1541
+    .line 1550
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
 
     move-result-object v1
@@ -102,7 +102,7 @@
     :goto_0
     if-ge v3, v0, :cond_2
 
-    .line 1543
+    .line 1552
     iget-object v4, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$6;->val$packageNames:Ljava/util/List;
 
     invoke-interface {v4, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -111,7 +111,7 @@
 
     check-cast v4, Ljava/lang/String;
 
-    .line 1544
+    .line 1553
     iget-object v5, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$6;->val$uris:Ljava/util/List;
 
     invoke-interface {v5, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -120,7 +120,7 @@
 
     check-cast v5, Landroid/net/Uri;
 
-    .line 1545
+    .line 1554
     new-instance v6, Lcom/miui/home/launcher/progress/ProgressUpdateParams;
 
     iget-object v7, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$6;->val$cloudBackupPackageName:Ljava/lang/String;
@@ -129,12 +129,12 @@
 
     invoke-direct {v6, v4, v7, v8}, Lcom/miui/home/launcher/progress/ProgressUpdateParams;-><init>(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 1546
+    .line 1555
     iget-object v4, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$6;->val$title:Ljava/lang/String;
 
     invoke-virtual {v6, v4}, Lcom/miui/home/launcher/progress/ProgressUpdateParams;->setTitle(Ljava/lang/String;)V
 
-    .line 1547
+    .line 1556
     invoke-virtual {v6, v5}, Lcom/miui/home/launcher/progress/ProgressUpdateParams;->setIconUri(Landroid/net/Uri;)V
 
     add-int/lit8 v4, v0, -0x1
@@ -148,7 +148,7 @@
     :cond_1
     move v4, v2
 
-    .line 1548
+    .line 1557
     :goto_1
     invoke-virtual {v1, v6, v4}, Lcom/miui/home/launcher/progress/ProgressManager;->updateProgress(Lcom/miui/home/launcher/progress/ProgressUpdateParams;Z)V
 

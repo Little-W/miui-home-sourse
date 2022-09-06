@@ -12,6 +12,8 @@
 
 
 # static fields
+.field private static final TAG:Ljava/lang/String; = "BranchAllAppsIndicator"
+
 .field private static final instance:Lcom/mi/globallauncher/BranchAllAppsIndicator;
 
 
@@ -25,7 +27,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 24
+    .line 28
     new-instance v0, Lcom/mi/globallauncher/BranchAllAppsIndicator;
 
     invoke-direct {v0}, Lcom/mi/globallauncher/BranchAllAppsIndicator;-><init>()V
@@ -38,7 +40,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 26
+    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,7 +49,7 @@
 .method private cancelDrawerBounceAnimation()V
     .locals 1
 
-    .line 137
+    .line 145
     invoke-static {}, Lcom/mi/globallauncher/util/BranchSwitchController;->isIndiaRegion()Z
 
     move-result v0
@@ -56,7 +58,7 @@
 
     return-void
 
-    .line 140
+    .line 148
     :cond_0
     iget-object v0, p0, Lcom/mi/globallauncher/BranchAllAppsIndicator;->mDrawerBounceAnimation:Landroid/animation/AnimatorSet;
 
@@ -64,13 +66,13 @@
 
     return-void
 
-    .line 143
+    .line 151
     :cond_1
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
 
     const/4 v0, 0x0
 
-    .line 144
+    .line 152
     iput-object v0, p0, Lcom/mi/globallauncher/BranchAllAppsIndicator;->mDrawerBounceAnimation:Landroid/animation/AnimatorSet;
 
     return-void
@@ -79,7 +81,7 @@
 .method public static getInstance()Lcom/mi/globallauncher/BranchAllAppsIndicator;
     .locals 1
 
-    .line 30
+    .line 34
     sget-object v0, Lcom/mi/globallauncher/BranchAllAppsIndicator;->instance:Lcom/mi/globallauncher/BranchAllAppsIndicator;
 
     return-object v0
@@ -88,14 +90,14 @@
 .method public static synthetic lambda$showDrawerBounceAnimation$0(Lcom/mi/globallauncher/BranchAllAppsIndicator;)V
     .locals 1
 
-    .line 128
+    .line 136
     iget-object v0, p0, Lcom/mi/globallauncher/BranchAllAppsIndicator;->mDrawerBounceAnimation:Landroid/animation/AnimatorSet;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 131
+    .line 139
     :cond_0
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
 
@@ -105,7 +107,7 @@
 .method private showDrawerBounceAnimation(Lcom/mi/globallauncher/BranchAllAppsIndicator$IBranchAllAppsIndicatorCallBack;)V
     .locals 5
 
-    .line 103
+    .line 111
     invoke-static {}, Lcom/mi/globallauncher/util/BranchSwitchController;->isIndiaRegion()Z
 
     move-result v0
@@ -114,11 +116,11 @@
 
     return-void
 
-    .line 106
+    .line 114
     :cond_0
     invoke-direct {p0}, Lcom/mi/globallauncher/BranchAllAppsIndicator;->cancelDrawerBounceAnimation()V
 
-    .line 107
+    .line 115
     new-instance v0, Landroid/view/animation/PathInterpolator;
 
     const v1, 0x3ea8f5c3    # 0.33f
@@ -131,7 +133,7 @@
 
     invoke-direct {v0, v1, v2, v3, v4}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
 
-    .line 108
+    .line 116
     invoke-interface {p1}, Lcom/mi/globallauncher/BranchAllAppsIndicator$IBranchAllAppsIndicatorCallBack;->getHandleContainer()Landroid/widget/LinearLayout;
 
     move-result-object v1
@@ -150,25 +152,25 @@
 
     const-wide/16 v2, 0x3e8
 
-    .line 109
+    .line 117
     invoke-virtual {v1, v2, v3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
     const/4 v2, -0x1
 
-    .line 110
+    .line 118
     invoke-virtual {v1, v2}, Landroid/animation/ObjectAnimator;->setRepeatCount(I)V
 
-    .line 111
+    .line 119
     invoke-virtual {v1, v0}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 112
+    .line 120
     new-instance v0, Landroid/animation/AnimatorSet;
 
     invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
 
     iput-object v0, p0, Lcom/mi/globallauncher/BranchAllAppsIndicator;->mDrawerBounceAnimation:Landroid/animation/AnimatorSet;
 
-    .line 113
+    .line 121
     iget-object v0, p0, Lcom/mi/globallauncher/BranchAllAppsIndicator;->mDrawerBounceAnimation:Landroid/animation/AnimatorSet;
 
     const/4 v2, 0x1
@@ -181,7 +183,7 @@
 
     invoke-virtual {v0, v2}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 114
+    .line 122
     iget-object v0, p0, Lcom/mi/globallauncher/BranchAllAppsIndicator;->mDrawerBounceAnimation:Landroid/animation/AnimatorSet;
 
     new-instance v1, Lcom/mi/globallauncher/BranchAllAppsIndicator$1;
@@ -190,7 +192,7 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 125
+    .line 133
     iget-object v0, p0, Lcom/mi/globallauncher/BranchAllAppsIndicator;->mDrawerBounceAnimation:Landroid/animation/AnimatorSet;
 
     invoke-interface {p1}, Lcom/mi/globallauncher/BranchAllAppsIndicator$IBranchAllAppsIndicatorCallBack;->getHandleContainer()Landroid/widget/LinearLayout;
@@ -199,7 +201,7 @@
 
     invoke-virtual {v0, p1}, Landroid/animation/AnimatorSet;->setTarget(Ljava/lang/Object;)V
 
-    .line 127
+    .line 135
     new-instance p1, Lcom/mi/globallauncher/-$$Lambda$BranchAllAppsIndicator$dQkD6hY9NzXDnMGzJADHdozekCA;
 
     invoke-direct {p1, p0}, Lcom/mi/globallauncher/-$$Lambda$BranchAllAppsIndicator$dQkD6hY9NzXDnMGzJADHdozekCA;-><init>(Lcom/mi/globallauncher/BranchAllAppsIndicator;)V
@@ -221,16 +223,31 @@
 .method public changedByBranch(Lcom/miui/home/launcher/Launcher;)Z
     .locals 4
 
-    .line 43
+    .line 47
+    iget-object v0, p0, Lcom/mi/globallauncher/BranchAllAppsIndicator;->callBack:Lcom/mi/globallauncher/BranchAllAppsIndicator$IBranchAllAppsIndicatorCallBack;
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
+
+    const-string p1, "BranchAllAppsIndicator"
+
+    const-string v0, "changedByBranch: callBack = null"
+
+    .line 48
+    invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v1
+
+    .line 51
+    :cond_0
     invoke-static {}, Lcom/mi/globallauncher/util/BranchSwitchController;->isIndiaRegion()Z
 
     move-result v0
 
-    const/4 v1, 0x0
+    if-eqz v0, :cond_6
 
-    if-eqz v0, :cond_5
-
-    .line 44
+    .line 52
     iget-object v0, p0, Lcom/mi/globallauncher/BranchAllAppsIndicator;->callBack:Lcom/mi/globallauncher/BranchAllAppsIndicator$IBranchAllAppsIndicatorCallBack;
 
     invoke-interface {v0}, Lcom/mi/globallauncher/BranchAllAppsIndicator$IBranchAllAppsIndicatorCallBack;->getAllAppsIndicator()Lcom/miui/home/launcher/pageindicators/AllAppsIndicator;
@@ -239,7 +256,7 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/pageindicators/AllAppsIndicator;->setVisibility(I)V
 
-    .line 45
+    .line 53
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->isDrawerMode()Z
 
     move-result v0
@@ -248,7 +265,7 @@
 
     const/high16 v3, 0x3f800000    # 1.0f
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_3
 
     invoke-static {}, Lcom/mi/globallauncher/BranchClientImplement;->getInstance()Lcom/mi/globallauncher/BranchClientImplement;
 
@@ -258,12 +275,12 @@
 
     move-result p1
 
-    if-eqz p1, :cond_0
+    if-eqz p1, :cond_1
 
     goto :goto_0
 
-    .line 53
-    :cond_0
+    .line 61
+    :cond_1
     iget-object p1, p0, Lcom/mi/globallauncher/BranchAllAppsIndicator;->callBack:Lcom/mi/globallauncher/BranchAllAppsIndicator$IBranchAllAppsIndicatorCallBack;
 
     invoke-interface {p1}, Lcom/mi/globallauncher/BranchAllAppsIndicator$IBranchAllAppsIndicatorCallBack;->getHandleContainer()Landroid/widget/LinearLayout;
@@ -274,7 +291,7 @@
 
     move-result p1
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_2
 
     iget-object p1, p0, Lcom/mi/globallauncher/BranchAllAppsIndicator;->callBack:Lcom/mi/globallauncher/BranchAllAppsIndicator$IBranchAllAppsIndicatorCallBack;
 
@@ -288,10 +305,10 @@
 
     const/4 v0, 0x4
 
-    if-ne p1, v0, :cond_3
+    if-ne p1, v0, :cond_4
 
-    .line 54
-    :cond_1
+    .line 62
+    :cond_2
     iget-object p1, p0, Lcom/mi/globallauncher/BranchAllAppsIndicator;->callBack:Lcom/mi/globallauncher/BranchAllAppsIndicator$IBranchAllAppsIndicatorCallBack;
 
     invoke-interface {p1}, Lcom/mi/globallauncher/BranchAllAppsIndicator$IBranchAllAppsIndicatorCallBack;->getHandleContainer()Landroid/widget/LinearLayout;
@@ -300,7 +317,7 @@
 
     invoke-virtual {p1, v2}, Landroid/widget/LinearLayout;->setAlpha(F)V
 
-    .line 55
+    .line 63
     iget-object p1, p0, Lcom/mi/globallauncher/BranchAllAppsIndicator;->callBack:Lcom/mi/globallauncher/BranchAllAppsIndicator$IBranchAllAppsIndicatorCallBack;
 
     invoke-interface {p1}, Lcom/mi/globallauncher/BranchAllAppsIndicator$IBranchAllAppsIndicatorCallBack;->getBranchScreenIndicator()Landroid/view/View;
@@ -309,7 +326,7 @@
 
     invoke-virtual {p1, v3}, Landroid/view/View;->setAlpha(F)V
 
-    .line 56
+    .line 64
     iget-object p1, p0, Lcom/mi/globallauncher/BranchAllAppsIndicator;->callBack:Lcom/mi/globallauncher/BranchAllAppsIndicator$IBranchAllAppsIndicatorCallBack;
 
     invoke-interface {p1}, Lcom/mi/globallauncher/BranchAllAppsIndicator$IBranchAllAppsIndicatorCallBack;->getAllAppsIndicator()Lcom/miui/home/launcher/pageindicators/AllAppsIndicator;
@@ -318,7 +335,7 @@
 
     invoke-virtual {p1, v3}, Lcom/miui/home/launcher/pageindicators/AllAppsIndicator;->setAlpha(F)V
 
-    .line 57
+    .line 65
     iget-object p1, p0, Lcom/mi/globallauncher/BranchAllAppsIndicator;->callBack:Lcom/mi/globallauncher/BranchAllAppsIndicator$IBranchAllAppsIndicatorCallBack;
 
     invoke-interface {p1}, Lcom/mi/globallauncher/BranchAllAppsIndicator$IBranchAllAppsIndicatorCallBack;->getHandleContainer()Landroid/widget/LinearLayout;
@@ -331,8 +348,8 @@
 
     goto :goto_1
 
-    .line 46
-    :cond_2
+    .line 54
+    :cond_3
     :goto_0
     iget-object p1, p0, Lcom/mi/globallauncher/BranchAllAppsIndicator;->callBack:Lcom/mi/globallauncher/BranchAllAppsIndicator$IBranchAllAppsIndicatorCallBack;
 
@@ -344,9 +361,9 @@
 
     move-result p1
 
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_4
 
-    .line 47
+    .line 55
     iget-object p1, p0, Lcom/mi/globallauncher/BranchAllAppsIndicator;->callBack:Lcom/mi/globallauncher/BranchAllAppsIndicator$IBranchAllAppsIndicatorCallBack;
 
     invoke-interface {p1}, Lcom/mi/globallauncher/BranchAllAppsIndicator$IBranchAllAppsIndicatorCallBack;->getHandleContainer()Landroid/widget/LinearLayout;
@@ -355,7 +372,7 @@
 
     invoke-virtual {p1, v2}, Landroid/widget/LinearLayout;->setAlpha(F)V
 
-    .line 48
+    .line 56
     iget-object p1, p0, Lcom/mi/globallauncher/BranchAllAppsIndicator;->callBack:Lcom/mi/globallauncher/BranchAllAppsIndicator$IBranchAllAppsIndicatorCallBack;
 
     invoke-interface {p1}, Lcom/mi/globallauncher/BranchAllAppsIndicator$IBranchAllAppsIndicatorCallBack;->getBranchScreenIndicator()Landroid/view/View;
@@ -364,7 +381,7 @@
 
     invoke-virtual {p1, v3}, Landroid/view/View;->setAlpha(F)V
 
-    .line 49
+    .line 57
     iget-object p1, p0, Lcom/mi/globallauncher/BranchAllAppsIndicator;->callBack:Lcom/mi/globallauncher/BranchAllAppsIndicator$IBranchAllAppsIndicatorCallBack;
 
     invoke-interface {p1}, Lcom/mi/globallauncher/BranchAllAppsIndicator$IBranchAllAppsIndicatorCallBack;->getAllAppsIndicator()Lcom/miui/home/launcher/pageindicators/AllAppsIndicator;
@@ -373,7 +390,7 @@
 
     invoke-virtual {p1, v3}, Lcom/miui/home/launcher/pageindicators/AllAppsIndicator;->setAlpha(F)V
 
-    .line 50
+    .line 58
     iget-object p1, p0, Lcom/mi/globallauncher/BranchAllAppsIndicator;->callBack:Lcom/mi/globallauncher/BranchAllAppsIndicator$IBranchAllAppsIndicatorCallBack;
 
     invoke-interface {p1}, Lcom/mi/globallauncher/BranchAllAppsIndicator$IBranchAllAppsIndicatorCallBack;->getHandleContainer()Landroid/widget/LinearLayout;
@@ -382,8 +399,8 @@
 
     invoke-virtual {p1, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 60
-    :cond_3
+    .line 68
+    :cond_4
     :goto_1
     iget-object p1, p0, Lcom/mi/globallauncher/BranchAllAppsIndicator;->callBack:Lcom/mi/globallauncher/BranchAllAppsIndicator$IBranchAllAppsIndicatorCallBack;
 
@@ -395,21 +412,21 @@
 
     move-result p1
 
-    if-eqz p1, :cond_4
+    if-eqz p1, :cond_5
 
     const/4 v1, 0x1
 
-    :cond_4
+    :cond_5
     return v1
 
-    :cond_5
+    :cond_6
     return v1
 .end method
 
 .method public isShowNewFeatureTag(Lcom/miui/home/launcher/Launcher;)Z
     .locals 2
 
-    .line 68
+    .line 76
     invoke-static {}, Lcom/mi/globallauncher/util/BranchSwitchController;->isIndiaRegion()Z
 
     move-result v0
@@ -418,7 +435,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 69
+    .line 77
     invoke-static {}, Lcom/mi/globallauncher/BranchClientImplement;->getInstance()Lcom/mi/globallauncher/BranchClientImplement;
 
     move-result-object v0
@@ -436,7 +453,7 @@
 .method public onWallpaperColorChanged(Landroid/content/Context;)V
     .locals 2
 
-    .line 75
+    .line 83
     invoke-static {}, Lcom/mi/globallauncher/util/BranchSwitchController;->isIndiaRegion()Z
 
     move-result v0
@@ -447,9 +464,9 @@
 
     if-eqz v0, :cond_0
 
-    const v1, 0x7f0603ed
+    const v1, 0x7f0605ec
 
-    .line 78
+    .line 86
     invoke-interface {v0}, Lcom/mi/globallauncher/BranchAllAppsIndicator$IBranchAllAppsIndicatorCallBack;->getHandleMessage()Landroid/widget/TextView;
 
     move-result-object v0
@@ -467,7 +484,7 @@
 .method public setCallBack(Lcom/mi/globallauncher/BranchAllAppsIndicator$IBranchAllAppsIndicatorCallBack;)V
     .locals 0
 
-    .line 36
+    .line 40
     iput-object p1, p0, Lcom/mi/globallauncher/BranchAllAppsIndicator;->callBack:Lcom/mi/globallauncher/BranchAllAppsIndicator$IBranchAllAppsIndicatorCallBack;
 
     return-void
@@ -476,7 +493,7 @@
 .method public updateAllAppsIndicator(Z)V
     .locals 2
 
-    .line 83
+    .line 91
     invoke-static {}, Lcom/mi/globallauncher/util/BranchSwitchController;->isIndiaRegion()Z
 
     move-result v0
@@ -492,9 +509,9 @@
     :cond_0
     if-eqz p1, :cond_1
 
-    const p1, 0x7f0800bb
+    const p1, 0x7f080188
 
-    .line 89
+    .line 97
     invoke-interface {v0}, Lcom/mi/globallauncher/BranchAllAppsIndicator$IBranchAllAppsIndicatorCallBack;->getHandleContainer()Landroid/widget/LinearLayout;
 
     move-result-object v0
@@ -515,7 +532,7 @@
 
     invoke-virtual {v0, p1}, Landroid/widget/LinearLayout;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 90
+    .line 98
     iget-object p1, p0, Lcom/mi/globallauncher/BranchAllAppsIndicator;->callBack:Lcom/mi/globallauncher/BranchAllAppsIndicator$IBranchAllAppsIndicatorCallBack;
 
     invoke-interface {p1}, Lcom/mi/globallauncher/BranchAllAppsIndicator$IBranchAllAppsIndicatorCallBack;->getHandleMessage()Landroid/widget/TextView;
@@ -526,19 +543,19 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 91
+    .line 99
     iget-object p1, p0, Lcom/mi/globallauncher/BranchAllAppsIndicator;->callBack:Lcom/mi/globallauncher/BranchAllAppsIndicator$IBranchAllAppsIndicatorCallBack;
 
     invoke-interface {p1}, Lcom/mi/globallauncher/BranchAllAppsIndicator$IBranchAllAppsIndicatorCallBack;->requestIndicatorLayout()V
 
-    .line 92
+    .line 100
     iget-object p1, p0, Lcom/mi/globallauncher/BranchAllAppsIndicator;->callBack:Lcom/mi/globallauncher/BranchAllAppsIndicator$IBranchAllAppsIndicatorCallBack;
 
     invoke-direct {p0, p1}, Lcom/mi/globallauncher/BranchAllAppsIndicator;->showDrawerBounceAnimation(Lcom/mi/globallauncher/BranchAllAppsIndicator$IBranchAllAppsIndicatorCallBack;)V
 
     goto :goto_0
 
-    .line 94
+    .line 102
     :cond_1
     invoke-interface {v0}, Lcom/mi/globallauncher/BranchAllAppsIndicator$IBranchAllAppsIndicatorCallBack;->getHandleContainer()Landroid/widget/LinearLayout;
 
@@ -548,7 +565,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/LinearLayout;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 95
+    .line 103
     iget-object p1, p0, Lcom/mi/globallauncher/BranchAllAppsIndicator;->callBack:Lcom/mi/globallauncher/BranchAllAppsIndicator$IBranchAllAppsIndicatorCallBack;
 
     invoke-interface {p1}, Lcom/mi/globallauncher/BranchAllAppsIndicator$IBranchAllAppsIndicatorCallBack;->getHandleMessage()Landroid/widget/TextView;
@@ -559,12 +576,12 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 96
+    .line 104
     iget-object p1, p0, Lcom/mi/globallauncher/BranchAllAppsIndicator;->callBack:Lcom/mi/globallauncher/BranchAllAppsIndicator$IBranchAllAppsIndicatorCallBack;
 
     invoke-interface {p1}, Lcom/mi/globallauncher/BranchAllAppsIndicator$IBranchAllAppsIndicatorCallBack;->requestIndicatorLayout()V
 
-    .line 97
+    .line 105
     invoke-direct {p0}, Lcom/mi/globallauncher/BranchAllAppsIndicator;->cancelDrawerBounceAnimation()V
 
     :goto_0

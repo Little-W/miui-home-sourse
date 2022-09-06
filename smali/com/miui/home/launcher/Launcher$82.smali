@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 8869
+    .line 8952
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$82;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 1
 
-    .line 8872
+    .line 8955
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$82;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p2}, Lcom/android/systemui/fsgesture/IFsGestureService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/systemui/fsgesture/IFsGestureService;
@@ -47,7 +47,7 @@
 
     invoke-static {p1, p2}, Lcom/miui/home/launcher/Launcher;->access$8802(Lcom/miui/home/launcher/Launcher;Lcom/android/systemui/fsgesture/IFsGestureService;)Lcom/android/systemui/fsgesture/IFsGestureService;
 
-    .line 8873
+    .line 8956
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$82;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$8800(Lcom/miui/home/launcher/Launcher;)Lcom/android/systemui/fsgesture/IFsGestureService;
@@ -56,7 +56,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 8875
+    .line 8958
     :try_start_0
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$82;->this$0:Lcom/miui/home/launcher/Launcher;
 
@@ -74,7 +74,7 @@
 
     invoke-interface {p1, p2, v0}, Lcom/android/systemui/fsgesture/IFsGestureService;->registerCallback(Ljava/lang/String;Lcom/android/systemui/fsgesture/IFsGestureCallback;)V
 
-    .line 8876
+    .line 8959
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$82;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->notifyBackGestureStatus()V
@@ -86,16 +86,16 @@
     :catch_0
     move-exception p1
 
-    .line 8878
+    .line 8961
     invoke-virtual {p1}, Landroid/os/RemoteException;->printStackTrace()V
 
     :cond_0
     :goto_0
     const-string p1, "Launcher"
 
-    const-string p2, "\u8fde\u63a5Service \u6210\u529f"
+    const-string/jumbo p2, "\u8fde\u63a5Service \u6210\u529f"
 
-    .line 8881
+    .line 8964
     invoke-static {p1, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -104,16 +104,16 @@
 .method public onServiceDisconnected(Landroid/content/ComponentName;)V
     .locals 1
 
-    .line 8886
+    .line 8969
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$82;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$9600(Lcom/miui/home/launcher/Launcher;)V
 
     const-string p1, "Launcher"
 
-    const-string v0, "\u8fde\u63a5Service \u5931\u8d25"
+    const-string/jumbo v0, "\u8fde\u63a5Service \u5931\u8d25"
 
-    .line 8887
+    .line 8970
     invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void

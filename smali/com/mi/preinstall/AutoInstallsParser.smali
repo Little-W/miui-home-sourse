@@ -223,7 +223,7 @@
 
     const-string v0, "default_layout"
 
-    const-string v1, "xml"
+    const-string/jumbo v1, "xml"
 
     .line 57
     invoke-virtual {p2, v0, v1, p1}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
@@ -259,7 +259,7 @@
     :cond_0
     new-instance p1, Lcom/mi/preinstall/AutoInstallsParser;
 
-    const-string v1, "workspace"
+    const-string/jumbo v1, "workspace"
 
     invoke-direct {p1, p0, p2, v0, v1}, Lcom/mi/preinstall/AutoInstallsParser;-><init>(Landroid/content/Context;Landroid/content/res/Resources;ILjava/lang/String;)V
 
@@ -328,7 +328,7 @@
 
     const-string v0, "auto_install"
 
-    const-string v1, "xml"
+    const-string/jumbo v1, "xml"
 
     .line 80
     invoke-virtual {p2, v0, v1, p1}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I

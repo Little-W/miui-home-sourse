@@ -29,7 +29,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/FolderIcon;Lcom/miui/home/launcher/ItemInfo;Lcom/miui/home/launcher/DragObject;)V
     .locals 0
 
-    .line 420
+    .line 428
     iput-object p1, p0, Lcom/miui/home/launcher/FolderIcon$8;->this$0:Lcom/miui/home/launcher/FolderIcon;
 
     iput-object p2, p0, Lcom/miui/home/launcher/FolderIcon$8;->val$info:Lcom/miui/home/launcher/ItemInfo;
@@ -46,12 +46,12 @@
 .method public onDropAnimationFinish()V
     .locals 1
 
-    .line 423
+    .line 431
     iget-object v0, p0, Lcom/miui/home/launcher/FolderIcon$8;->val$info:Lcom/miui/home/launcher/ItemInfo;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/ItemInfo;->finishPending()V
 
-    .line 424
+    .line 432
     iget-object v0, p0, Lcom/miui/home/launcher/FolderIcon$8;->val$d:Lcom/miui/home/launcher/DragObject;
 
     invoke-virtual {v0, p0}, Lcom/miui/home/launcher/DragObject;->removeDragAnimationListener(Lcom/miui/home/launcher/DragController$DropAnimationListener;)V

@@ -126,7 +126,7 @@
 .method private static isDesiredAppStarted(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 7
 
-    const-string v0, "usagestats"
+    const-string/jumbo v0, "usagestats"
 
     .line 103
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;

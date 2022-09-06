@@ -90,25 +90,25 @@
 
     const/16 p1, 0x10
 
+    .line 145
     new-array v3, v2, [F
 
     const/high16 v4, 0x43960000    # 300.0f
 
     aput v4, v3, v1
 
-    .line 145
     invoke-static {p1, v3}, Lmiuix/animation/utils/EaseManager;->getStyle(I[F)Lmiuix/animation/utils/EaseManager$EaseStyle;
 
     move-result-object p1
 
     goto :goto_0
 
+    .line 146
     :cond_0
     new-array p1, v3, [F
 
     fill-array-data p1, :array_0
 
-    .line 146
     invoke-static {v4, p1}, Lmiuix/animation/utils/EaseManager;->getStyle(I[F)Lmiuix/animation/utils/EaseManager$EaseStyle;
 
     move-result-object p1
@@ -136,23 +136,23 @@
 
     if-ne p1, v5, :cond_2
 
+    .line 150
     new-array p1, v3, [F
 
     fill-array-data p1, :array_1
 
-    .line 150
     invoke-static {v4, p1}, Lmiuix/animation/utils/EaseManager;->getStyle(I[F)Lmiuix/animation/utils/EaseManager$EaseStyle;
 
     move-result-object p1
 
     goto :goto_1
 
+    .line 151
     :cond_2
     new-array p1, v3, [F
 
     fill-array-data p1, :array_2
 
-    .line 151
     invoke-static {v4, p1}, Lmiuix/animation/utils/EaseManager;->getStyle(I[F)Lmiuix/animation/utils/EaseManager$EaseStyle;
 
     move-result-object p1
@@ -176,23 +176,23 @@
 
     if-ne p1, v5, :cond_4
 
+    .line 155
     new-array p1, v3, [F
 
     fill-array-data p1, :array_3
 
-    .line 155
     invoke-static {v4, p1}, Lmiuix/animation/utils/EaseManager;->getStyle(I[F)Lmiuix/animation/utils/EaseManager$EaseStyle;
 
     move-result-object p1
 
     goto :goto_2
 
+    .line 156
     :cond_4
     new-array p1, v3, [F
 
     fill-array-data p1, :array_4
 
-    .line 156
     invoke-static {v4, p1}, Lmiuix/animation/utils/EaseManager;->getStyle(I[F)Lmiuix/animation/utils/EaseManager$EaseStyle;
 
     move-result-object p1
@@ -211,23 +211,23 @@
 
     if-ne p1, v5, :cond_6
 
+    .line 160
     new-array p1, v3, [F
 
     fill-array-data p1, :array_5
 
-    .line 160
     invoke-static {v4, p1}, Lmiuix/animation/utils/EaseManager;->getStyle(I[F)Lmiuix/animation/utils/EaseManager$EaseStyle;
 
     move-result-object p1
 
     goto :goto_3
 
+    .line 161
     :cond_6
     new-array p1, v3, [F
 
     fill-array-data p1, :array_6
 
-    .line 161
     invoke-static {v4, p1}, Lmiuix/animation/utils/EaseManager;->getStyle(I[F)Lmiuix/animation/utils/EaseManager$EaseStyle;
 
     move-result-object p1

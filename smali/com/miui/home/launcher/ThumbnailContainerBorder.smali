@@ -86,7 +86,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0600c7
+    const v2, 0x7f0600ef
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -96,7 +96,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0600c5
+    const v3, 0x7f0600ed
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -109,7 +109,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0700f1
+    const v2, 0x7f070129
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -142,7 +142,7 @@
     .line 29
     invoke-super {p0}, Lcom/miui/home/launcher/AutoLayoutThumbnailItem;->onFinishInflate()V
 
-    const v0, 0x7f0a02a1
+    const v0, 0x7f0a0384
 
     .line 30
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ThumbnailContainerBorder;->findViewById(I)Landroid/view/View;

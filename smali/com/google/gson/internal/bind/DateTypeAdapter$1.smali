@@ -21,7 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 47
+    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,7 +44,7 @@
         }
     .end annotation
 
-    .line 50
+    .line 45
     invoke-virtual {p2}, Lcom/google/gson/reflect/TypeToken;->getRawType()Ljava/lang/Class;
 
     move-result-object p1

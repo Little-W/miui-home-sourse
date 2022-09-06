@@ -22,7 +22,7 @@
 .method public constructor <init>(Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;)V
     .locals 0
 
-    .line 46
+    .line 45
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$GridSpanSizer;->this$0:Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;-><init>()V
@@ -35,7 +35,7 @@
 .method public getSpanSize(I)I
     .locals 1
 
-    .line 49
+    .line 48
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$GridSpanSizer;->this$0:Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->getItem(I)Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$AdapterItem;
@@ -50,7 +50,7 @@
 
     return v0
 
-    .line 52
+    .line 51
     :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$GridSpanSizer;->this$0:Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;
 

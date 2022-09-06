@@ -403,17 +403,6 @@
     return p1
 .end method
 
-.method public delete(J)V
-    .locals 0
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    .line 132
-    invoke-virtual {p0, p1, p2}, Landroidx/collection/LongSparseArray;->remove(J)V
-
-    return-void
-.end method
-
 .method public get(J)Ljava/lang/Object;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
@@ -495,6 +484,27 @@
     move-result p1
 
     return p1
+.end method
+
+.method public isEmpty()Z
+    .locals 1
+
+    .line 339
+    invoke-virtual {p0}, Landroidx/collection/LongSparseArray;->size()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
 .end method
 
 .method public keyAt(I)J
@@ -777,7 +787,7 @@
 
     if-gtz v0, :cond_0
 
-    const-string v0, "{}"
+    const-string/jumbo v0, "{}"
 
     return-object v0
 

@@ -16,7 +16,7 @@
 .method private updateActionBarStyle()V
     .locals 2
 
-    .line 39
+    .line 38
     invoke-virtual {p0}, Lcom/miui/home/recents/settings/NavigationBarTypeActivity;->getAppCompatActionBar()Lmiuix/appcompat/app/ActionBar;
 
     move-result-object v0
@@ -25,10 +25,10 @@
 
     const/4 v1, 0x0
 
-    .line 41
+    .line 40
     invoke-virtual {v0, v1}, Lmiuix/appcompat/app/ActionBar;->setExpandState(I)V
 
-    .line 42
+    .line 41
     invoke-virtual {v0, v1}, Lmiuix/appcompat/app/ActionBar;->setResizable(Z)V
 
     :cond_0
@@ -46,15 +46,6 @@
     move-result-object p1
 
     invoke-super {p0, p1}, Lcom/miui/home/launcher/PreferenceContainerActivity;->attachBaseContext(Landroid/content/Context;)V
-
-    return-void
-.end method
-
-.method public onBackPressed()V
-    .locals 0
-
-    .line 48
-    invoke-virtual {p0}, Lcom/miui/home/recents/settings/NavigationBarTypeActivity;->finish()V
 
     return-void
 .end method
@@ -85,12 +76,7 @@
     .line 25
     invoke-virtual {p1, v1, v0}, Landroidx/fragment/app/FragmentTransaction;->replace(ILandroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentTransaction;
 
-    const/4 v0, 0x0
-
     .line 26
-    invoke-virtual {p1, v0}, Landroidx/fragment/app/FragmentTransaction;->addToBackStack(Ljava/lang/String;)Landroidx/fragment/app/FragmentTransaction;
-
-    .line 27
     invoke-virtual {p1}, Landroidx/fragment/app/FragmentTransaction;->commit()I
 
     return-void
@@ -99,10 +85,10 @@
 .method public onResume()V
     .locals 1
 
-    .line 32
+    .line 31
     invoke-super {p0}, Lcom/miui/home/launcher/PreferenceContainerActivity;->onResume()V
 
-    .line 33
+    .line 32
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -113,7 +99,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 34
+    .line 33
     invoke-direct {p0}, Lcom/miui/home/recents/settings/NavigationBarTypeActivity;->updateActionBarStyle()V
 
     :cond_0

@@ -39,6 +39,10 @@
     <plurals name="miuix_appcompat_items_selected">
         <item quantity="other">已選擇%d個</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d 個新通知</item>
+        <item quantity="one">%d 個新通知</item>
+    </plurals>
     <plurals name="remove_dialog_title_multi_format">
         <item quantity="other">移除%1$d個應用程式</item>
     </plurals>

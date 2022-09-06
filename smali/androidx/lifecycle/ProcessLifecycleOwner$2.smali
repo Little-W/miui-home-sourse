@@ -25,7 +25,7 @@
 .method constructor <init>(Landroidx/lifecycle/ProcessLifecycleOwner;)V
     .locals 0
 
-    .line 73
+    .line 76
     iput-object p1, p0, Landroidx/lifecycle/ProcessLifecycleOwner$2;->this$0:Landroidx/lifecycle/ProcessLifecycleOwner;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +44,7 @@
 .method public onResume()V
     .locals 1
 
-    .line 85
+    .line 88
     iget-object v0, p0, Landroidx/lifecycle/ProcessLifecycleOwner$2;->this$0:Landroidx/lifecycle/ProcessLifecycleOwner;
 
     invoke-virtual {v0}, Landroidx/lifecycle/ProcessLifecycleOwner;->activityResumed()V
@@ -55,7 +55,7 @@
 .method public onStart()V
     .locals 1
 
-    .line 80
+    .line 83
     iget-object v0, p0, Landroidx/lifecycle/ProcessLifecycleOwner$2;->this$0:Landroidx/lifecycle/ProcessLifecycleOwner;
 
     invoke-virtual {v0}, Landroidx/lifecycle/ProcessLifecycleOwner;->activityStarted()V

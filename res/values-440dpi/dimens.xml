@@ -40,7 +40,7 @@
     <dimen name="miuix_appcompat_action_button_height">27.0dip</dimen>
     <dimen name="miuix_appcompat_action_button_main_height">58.899994dip</dimen>
     <dimen name="miuix_appcompat_action_button_main_width">58.899994dip</dimen>
-    <dimen name="miuix_appcompat_action_button_max_width">120.0dip</dimen>
+    <dimen name="miuix_appcompat_action_button_max_width">152.72998dip</dimen>
     <dimen name="miuix_appcompat_action_button_min_width">69.0dip</dimen>
     <dimen name="miuix_appcompat_action_button_width">27.269989dip</dimen>
     <dimen name="miuix_appcompat_action_menu_item_view_padding_horizontal">3.269989dip</dimen>

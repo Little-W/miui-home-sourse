@@ -46,7 +46,7 @@
 .method static constructor <clinit>()V
     .locals 10
 
-    .line 36
+    .line 34
     new-instance v0, Lcom/market/sdk/utils/Connection$NetworkError;
 
     const-string v1, "OK"
@@ -57,7 +57,7 @@
 
     sput-object v0, Lcom/market/sdk/utils/Connection$NetworkError;->OK:Lcom/market/sdk/utils/Connection$NetworkError;
 
-    .line 37
+    .line 35
     new-instance v0, Lcom/market/sdk/utils/Connection$NetworkError;
 
     const-string v1, "URL_ERROR"
@@ -68,7 +68,7 @@
 
     sput-object v0, Lcom/market/sdk/utils/Connection$NetworkError;->URL_ERROR:Lcom/market/sdk/utils/Connection$NetworkError;
 
-    .line 38
+    .line 36
     new-instance v0, Lcom/market/sdk/utils/Connection$NetworkError;
 
     const-string v1, "NETWORK_ERROR"
@@ -79,7 +79,7 @@
 
     sput-object v0, Lcom/market/sdk/utils/Connection$NetworkError;->NETWORK_ERROR:Lcom/market/sdk/utils/Connection$NetworkError;
 
-    .line 39
+    .line 37
     new-instance v0, Lcom/market/sdk/utils/Connection$NetworkError;
 
     const-string v1, "AUTH_ERROR"
@@ -90,7 +90,7 @@
 
     sput-object v0, Lcom/market/sdk/utils/Connection$NetworkError;->AUTH_ERROR:Lcom/market/sdk/utils/Connection$NetworkError;
 
-    .line 40
+    .line 38
     new-instance v0, Lcom/market/sdk/utils/Connection$NetworkError;
 
     const-string v1, "CLIENT_ERROR"
@@ -101,7 +101,7 @@
 
     sput-object v0, Lcom/market/sdk/utils/Connection$NetworkError;->CLIENT_ERROR:Lcom/market/sdk/utils/Connection$NetworkError;
 
-    .line 41
+    .line 39
     new-instance v0, Lcom/market/sdk/utils/Connection$NetworkError;
 
     const-string v1, "SERVER_ERROR"
@@ -112,7 +112,7 @@
 
     sput-object v0, Lcom/market/sdk/utils/Connection$NetworkError;->SERVER_ERROR:Lcom/market/sdk/utils/Connection$NetworkError;
 
-    .line 42
+    .line 40
     new-instance v0, Lcom/market/sdk/utils/Connection$NetworkError;
 
     const-string v1, "RESULT_ERROR"
@@ -123,7 +123,7 @@
 
     sput-object v0, Lcom/market/sdk/utils/Connection$NetworkError;->RESULT_ERROR:Lcom/market/sdk/utils/Connection$NetworkError;
 
-    .line 43
+    .line 41
     new-instance v0, Lcom/market/sdk/utils/Connection$NetworkError;
 
     const-string v1, "UNKNOWN_ERROR"
@@ -136,7 +136,7 @@
 
     const/16 v0, 0x8
 
-    .line 35
+    .line 33
     new-array v0, v0, [Lcom/market/sdk/utils/Connection$NetworkError;
 
     sget-object v1, Lcom/market/sdk/utils/Connection$NetworkError;->OK:Lcom/market/sdk/utils/Connection$NetworkError;
@@ -184,7 +184,7 @@
         }
     .end annotation
 
-    .line 35
+    .line 33
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -193,7 +193,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/market/sdk/utils/Connection$NetworkError;
     .locals 1
 
-    .line 35
+    .line 33
     const-class v0, Lcom/market/sdk/utils/Connection$NetworkError;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -208,7 +208,7 @@
 .method public static values()[Lcom/market/sdk/utils/Connection$NetworkError;
     .locals 1
 
-    .line 35
+    .line 33
     sget-object v0, Lcom/market/sdk/utils/Connection$NetworkError;->$VALUES:[Lcom/market/sdk/utils/Connection$NetworkError;
 
     invoke-virtual {v0}, [Lcom/market/sdk/utils/Connection$NetworkError;->clone()Ljava/lang/Object;

@@ -33,10 +33,10 @@
 .method public constructor <init>(Lmiuix/androidbasewidget/widget/SeekBar;)V
     .locals 1
 
-    .line 377
+    .line 378
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 378
+    .line 379
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -51,7 +51,7 @@
 .method public run()V
     .locals 1
 
-    .line 383
+    .line 384
     iget-object v0, p0, Lmiuix/androidbasewidget/widget/SeekBar$ColorUpdateRunner;->mSeekBarRef:Ljava/lang/ref/WeakReference;
 
     if-nez v0, :cond_0
@@ -70,7 +70,7 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 385
+    .line 386
     invoke-static {v0}, Lmiuix/androidbasewidget/widget/SeekBar;->access$1100(Lmiuix/androidbasewidget/widget/SeekBar;)V
 
     :cond_1

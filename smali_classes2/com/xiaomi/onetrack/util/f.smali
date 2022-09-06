@@ -18,7 +18,7 @@
 .method constructor <init>(Lcom/xiaomi/onetrack/util/d;)V
     .locals 0
 
-    .line 81
+    .line 83
     iput-object p1, p0, Lcom/xiaomi/onetrack/util/f;->a:Lcom/xiaomi/onetrack/util/d;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,28 +40,28 @@
     :try_start_0
     const-string p1, "host"
 
-    .line 85
+    .line 87
     invoke-virtual {p2, p1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     const-string v0, "packagename"
 
-    .line 86
+    .line 88
     invoke-virtual {p2, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "projectId"
 
-    .line 87
+    .line 89
     invoke-virtual {p2, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     const-string v2, "user"
 
-    .line 88
+    .line 90
     invoke-virtual {p2, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
@@ -70,29 +70,29 @@
 
     const/4 v4, 0x0
 
-    .line 89
+    .line 91
     invoke-virtual {p2, v3, v4}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v3
 
     const-string v5, "quickuploadon"
 
-    .line 90
+    .line 92
     invoke-virtual {p2, v5, v4}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result p2
 
-    .line 91
-    invoke-static {}, Lcom/xiaomi/onetrack/e/a;->e()Ljava/lang/String;
+    .line 93
+    invoke-static {}, Lcom/xiaomi/onetrack/f/a;->e()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 92
+    .line 94
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v5
 
-    if-nez v5, :cond_2
+    if-nez v5, :cond_3
 
     const-string v5, ""
 
@@ -100,7 +100,7 @@
 
     move-result v5
 
-    if-nez v5, :cond_2
+    if-nez v5, :cond_3
 
     invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -110,19 +110,31 @@
 
     goto :goto_0
 
-    .line 95
+    .line 97
     :cond_0
     sput-boolean v3, Lcom/xiaomi/onetrack/util/p;->a:Z
 
-    .line 96
+    .line 98
     sput-boolean p2, Lcom/xiaomi/onetrack/util/p;->b:Z
 
     if-nez p2, :cond_1
 
     return-void
 
-    .line 102
+    .line 103
     :cond_1
+    iget-object p2, p0, Lcom/xiaomi/onetrack/util/f;->a:Lcom/xiaomi/onetrack/util/d;
+
+    invoke-static {p2, p1}, Lcom/xiaomi/onetrack/util/d;->b(Lcom/xiaomi/onetrack/util/d;Ljava/lang/String;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_2
+
+    return-void
+
+    .line 108
+    :cond_2
     iget-object p2, p0, Lcom/xiaomi/onetrack/util/f;->a:Lcom/xiaomi/onetrack/util/d;
 
     invoke-static {p2, p1, v1, v2}, Lcom/xiaomi/onetrack/util/d;->a(Lcom/xiaomi/onetrack/util/d;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
@@ -131,14 +143,14 @@
 
     goto :goto_1
 
-    :cond_2
+    :cond_3
     :goto_0
     return-void
 
     :catch_0
     move-exception p1
 
-    .line 104
+    .line 110
     invoke-static {}, Lcom/xiaomi/onetrack/util/d;->b()Ljava/lang/String;
 
     move-result-object p2

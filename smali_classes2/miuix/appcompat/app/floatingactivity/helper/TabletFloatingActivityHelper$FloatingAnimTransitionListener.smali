@@ -32,17 +32,17 @@
 .method private constructor <init>(Lmiuix/appcompat/app/floatingactivity/helper/TabletFloatingActivityHelper;I)V
     .locals 1
 
-    .line 557
+    .line 556
     invoke-direct {p0}, Lmiuix/animation/listener/TransitionListener;-><init>()V
 
-    .line 558
+    .line 557
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lmiuix/appcompat/app/floatingactivity/helper/TabletFloatingActivityHelper$FloatingAnimTransitionListener;->mRefs:Ljava/lang/ref/WeakReference;
 
-    .line 559
+    .line 558
     iput p2, p0, Lmiuix/appcompat/app/floatingactivity/helper/TabletFloatingActivityHelper$FloatingAnimTransitionListener;->mType:I
 
     return-void
@@ -51,7 +51,7 @@
 .method synthetic constructor <init>(Lmiuix/appcompat/app/floatingactivity/helper/TabletFloatingActivityHelper;ILmiuix/appcompat/app/floatingactivity/helper/TabletFloatingActivityHelper$1;)V
     .locals 0
 
-    .line 552
+    .line 551
     invoke-direct {p0, p1, p2}, Lmiuix/appcompat/app/floatingactivity/helper/TabletFloatingActivityHelper$FloatingAnimTransitionListener;-><init>(Lmiuix/appcompat/app/floatingactivity/helper/TabletFloatingActivityHelper;I)V
 
     return-void
@@ -62,10 +62,10 @@
 .method public onCancel(Ljava/lang/Object;)V
     .locals 1
 
-    .line 573
+    .line 572
     invoke-super {p0, p1}, Lmiuix/animation/listener/TransitionListener;->onCancel(Ljava/lang/Object;)V
 
-    .line 574
+    .line 573
     iget-object v0, p0, Lmiuix/appcompat/app/floatingactivity/helper/TabletFloatingActivityHelper$FloatingAnimTransitionListener;->mRefs:Ljava/lang/ref/WeakReference;
 
     if-nez v0, :cond_0
@@ -84,7 +84,7 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 576
+    .line 575
     invoke-static {v0, p1}, Lmiuix/appcompat/app/floatingactivity/helper/TabletFloatingActivityHelper;->access$600(Lmiuix/appcompat/app/floatingactivity/helper/TabletFloatingActivityHelper;Ljava/lang/Object;)V
 
     :cond_1
@@ -94,10 +94,10 @@
 .method public onComplete(Ljava/lang/Object;)V
     .locals 1
 
-    .line 564
+    .line 563
     invoke-super {p0, p1}, Lmiuix/animation/listener/TransitionListener;->onComplete(Ljava/lang/Object;)V
 
-    .line 565
+    .line 564
     iget-object v0, p0, Lmiuix/appcompat/app/floatingactivity/helper/TabletFloatingActivityHelper$FloatingAnimTransitionListener;->mRefs:Ljava/lang/ref/WeakReference;
 
     if-nez v0, :cond_0
@@ -116,7 +116,7 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 567
+    .line 566
     invoke-static {v0, p1}, Lmiuix/appcompat/app/floatingactivity/helper/TabletFloatingActivityHelper;->access$600(Lmiuix/appcompat/app/floatingactivity/helper/TabletFloatingActivityHelper;Ljava/lang/Object;)V
 
     :cond_1

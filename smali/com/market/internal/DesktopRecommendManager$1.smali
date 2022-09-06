@@ -1,4 +1,4 @@
-.class final Lcom/market/internal/DesktopRecommendManager$1;
+.class Lcom/market/internal/DesktopRecommendManager$1;
 .super Lcom/market/sdk/RemoteMethodInvoker;
 .source "DesktopRecommendManager.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 

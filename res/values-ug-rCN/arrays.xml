@@ -41,6 +41,13 @@
         <item>سۈكۈتتىكى</item>
         <item>كىلاسسىك</item>
     </string-array>
+    <string-array name="monochrome_color_entries">
+        <item>سۈكۈتتىكى رەڭگى</item>
+        <item>كۆك</item>
+        <item>يېشىل</item>
+        <item>بىنەپشە</item>
+        <item>ساغۇچ</item>
+    </string-array>
     <string-array name="transformation_entries">
         <item>كلاسسىك</item>
         <item>تەدرىجىي كۈچىيىپ ئاجىزلاش</item>

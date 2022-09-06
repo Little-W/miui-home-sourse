@@ -18,7 +18,7 @@
 .method public actionBarChanged()V
     .locals 1
 
-    .line 60
+    .line 59
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -47,22 +47,13 @@
     return-void
 .end method
 
-.method public onBackPressed()V
-    .locals 0
-
-    .line 71
-    invoke-virtual {p0}, Lcom/miui/home/settings/MiuiHomeSettingActivity;->finish()V
-
-    return-void
-.end method
-
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 0
 
-    .line 65
+    .line 64
     invoke-super {p0, p1}, Lcom/miui/home/launcher/PreferenceContainerActivity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 66
+    .line 65
     invoke-virtual {p0}, Lcom/miui/home/settings/MiuiHomeSettingActivity;->actionBarChanged()V
 
     return-void
@@ -86,7 +77,7 @@
 
     if-eqz v0, :cond_0
 
-    const p1, 0x7f100258
+    const p1, 0x7f11026a
 
     .line 35
     invoke-virtual {p0, p1}, Lcom/miui/home/settings/MiuiHomeSettingActivity;->setTitle(I)V
@@ -123,12 +114,7 @@
     .line 45
     invoke-virtual {p1, v1, v0}, Landroidx/fragment/app/FragmentTransaction;->replace(ILandroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentTransaction;
 
-    const/4 v0, 0x0
-
     .line 46
-    invoke-virtual {p1, v0}, Landroidx/fragment/app/FragmentTransaction;->addToBackStack(Ljava/lang/String;)Landroidx/fragment/app/FragmentTransaction;
-
-    .line 47
     invoke-virtual {p1}, Landroidx/fragment/app/FragmentTransaction;->commit()I
 
     return-void
@@ -137,20 +123,20 @@
 .method public setActionBarStyle(Z)V
     .locals 1
 
-    .line 51
+    .line 50
     invoke-virtual {p0}, Lcom/miui/home/settings/MiuiHomeSettingActivity;->getAppCompatActionBar()Lmiuix/appcompat/app/ActionBar;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 53
+    .line 52
     invoke-virtual {v0, p1}, Lmiuix/appcompat/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
 
-    .line 54
+    .line 53
     invoke-virtual {v0, p1}, Lmiuix/appcompat/app/ActionBar;->setExpandState(I)V
 
-    .line 55
+    .line 54
     invoke-virtual {v0, p1}, Lmiuix/appcompat/app/ActionBar;->setResizable(Z)V
 
     :cond_0

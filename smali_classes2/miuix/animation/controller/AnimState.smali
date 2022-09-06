@@ -808,6 +808,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 311
     iget-object v0, p0, Lmiuix/animation/controller/AnimState;->tempIntValueProperty:Lmiuix/animation/property/IntValueProperty;
 
     goto :goto_0

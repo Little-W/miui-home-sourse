@@ -28,6 +28,9 @@
     return-void
 .end method
 
+.method public abstract resetAllViews()V
+.end method
+
 .method public abstract startEditAnim(ZLcom/miui/home/launcher/EditStateChangeReason;)V
 .end method
 

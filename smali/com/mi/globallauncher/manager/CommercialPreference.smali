@@ -422,7 +422,7 @@
 .method public getUuidCache()Ljava/lang/String;
     .locals 2
 
-    const-string v0, "uuid_cache"
+    const-string/jumbo v0, "uuid_cache"
 
     const-string v1, ""
 
@@ -437,7 +437,7 @@
 .method public getUuidExpireTime()J
     .locals 3
 
-    const-string v0, "uuid_expire"
+    const-string/jumbo v0, "uuid_expire"
 
     const-wide/16 v1, 0x0
 
@@ -735,7 +735,7 @@
 .method public isUseMiAppStore()Z
     .locals 2
 
-    const-string v0, "use_mi_app_store"
+    const-string/jumbo v0, "use_mi_app_store"
 
     const/4 v1, 0x0
 
@@ -1296,7 +1296,7 @@
 .method public setUseMiAppStore(Z)V
     .locals 1
 
-    const-string v0, "use_mi_app_store"
+    const-string/jumbo v0, "use_mi_app_store"
 
     .line 538
     invoke-virtual {p0, v0, p1}, Lcom/mi/globallauncher/manager/CommercialPreference;->putBoolean(Ljava/lang/String;Z)V
@@ -1307,7 +1307,7 @@
 .method public setUuidCache(Ljava/lang/String;)V
     .locals 1
 
-    const-string v0, "uuid_cache"
+    const-string/jumbo v0, "uuid_cache"
 
     .line 346
     invoke-virtual {p0, v0, p1}, Lcom/mi/globallauncher/manager/CommercialPreference;->putString(Ljava/lang/String;Ljava/lang/String;)V
@@ -1318,7 +1318,7 @@
 .method public setUuidExpireTime(J)V
     .locals 1
 
-    const-string v0, "uuid_expire"
+    const-string/jumbo v0, "uuid_expire"
 
     .line 336
     invoke-virtual {p0, v0, p1, p2}, Lcom/mi/globallauncher/manager/CommercialPreference;->putLong(Ljava/lang/String;J)V

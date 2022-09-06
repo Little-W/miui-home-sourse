@@ -51,7 +51,7 @@
 
     sput-object v0, Lcom/airbnb/lottie/parser/moshi/JsonUtf8Reader;->DOUBLE_QUOTE_OR_SLASH:Lokio/ByteString;
 
-    const-string v0, "{}[]:, \n\t\r\u000c/\\;#="
+    const-string/jumbo v0, "{}[]:, \n\t\r\u000c/\\;#="
 
     .line 33
     invoke-static {v0}, Lokio/ByteString;->encodeUtf8(Ljava/lang/String;)Lokio/ByteString;

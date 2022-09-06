@@ -277,18 +277,29 @@
     return-object p0
 .end method
 
+.method static synthetic access$300(Lmiuix/internal/widget/ListPopup;)Z
+    .locals 0
+
+    .line 42
+    invoke-direct {p0}, Lmiuix/internal/widget/ListPopup;->isNeedScroll()Z
+
+    move-result p0
+
+    return p0
+.end method
+
 .method private calculateXoffset(Landroid/view/View;)I
     .locals 5
 
     const/4 v0, 0x2
 
-    .line 328
+    .line 356
     new-array v0, v0, [I
 
-    .line 329
+    .line 357
     invoke-virtual {p1, v0}, Landroid/view/View;->getLocationInWindow([I)V
 
-    .line 331
+    .line 359
     invoke-static {p1}, Landroidx/appcompat/widget/ViewUtils;->isLayoutRtl(Landroid/view/View;)Z
 
     move-result v1
@@ -299,14 +310,14 @@
 
     if-eqz v1, :cond_1
 
-    .line 332
+    .line 360
     aget v1, v0, v3
 
     iget v4, p0, Lmiuix/internal/widget/ListPopup;->mOffsetX:I
 
     sub-int/2addr v1, v4
 
-    .line 333
+    .line 361
     invoke-virtual {p0}, Lmiuix/internal/widget/ListPopup;->getWidth()I
 
     move-result v4
@@ -317,7 +328,7 @@
 
     add-int/2addr v1, v4
 
-    .line 334
+    .line 362
     invoke-virtual {p1}, Landroid/view/View;->getRootView()Landroid/view/View;
 
     move-result-object v4
@@ -328,7 +339,7 @@
 
     if-le v1, v4, :cond_0
 
-    .line 335
+    .line 363
     invoke-virtual {p1}, Landroid/view/View;->getRootView()Landroid/view/View;
 
     move-result-object v1
@@ -360,7 +371,7 @@
 
     goto :goto_0
 
-    .line 339
+    .line 367
     :cond_1
     aget v1, v0, v3
 
@@ -374,7 +385,7 @@
 
     add-int/2addr v1, v4
 
-    .line 340
+    .line 368
     invoke-virtual {p0}, Lmiuix/internal/widget/ListPopup;->getWidth()I
 
     move-result v4
@@ -387,7 +398,7 @@
 
     if-gez v1, :cond_2
 
-    .line 342
+    .line 370
     invoke-virtual {p0}, Lmiuix/internal/widget/ListPopup;->getWidth()I
 
     move-result v1
@@ -416,7 +427,7 @@
     :goto_0
     if-nez v2, :cond_5
 
-    .line 347
+    .line 375
     iget-boolean v0, p0, Lmiuix/internal/widget/ListPopup;->mOffsetXSet:Z
 
     if-eqz v0, :cond_3
@@ -428,19 +439,19 @@
 
     if-eqz v0, :cond_5
 
-    .line 348
+    .line 376
     iget-boolean v1, p0, Lmiuix/internal/widget/ListPopup;->mOffsetXSet:Z
 
     if-nez v1, :cond_5
 
-    .line 349
+    .line 377
     invoke-static {p1}, Landroidx/appcompat/widget/ViewUtils;->isLayoutRtl(Landroid/view/View;)Z
 
     move-result p1
 
     if-eqz p1, :cond_4
 
-    .line 350
+    .line 378
     iget-object p1, p0, Lmiuix/internal/widget/ListPopup;->mBackgroundPadding:Landroid/graphics/Rect;
 
     iget p1, p1, Landroid/graphics/Rect;->left:I
@@ -453,7 +464,7 @@
 
     goto :goto_1
 
-    .line 352
+    .line 380
     :cond_4
     iget-object p1, p0, Lmiuix/internal/widget/ListPopup;->mBackgroundPadding:Landroid/graphics/Rect;
 
@@ -473,7 +484,7 @@
 .method private calculateYoffset(Landroid/view/View;)I
     .locals 5
 
-    .line 309
+    .line 337
     iget-boolean v0, p0, Lmiuix/internal/widget/ListPopup;->mOffsetYSet:Z
 
     if-eqz v0, :cond_0
@@ -502,20 +513,20 @@
     :goto_0
     const/4 v1, 0x2
 
-    .line 310
+    .line 338
     new-array v1, v1, [I
 
-    .line 311
+    .line 339
     invoke-virtual {p1, v1}, Landroid/view/View;->getLocationInWindow([I)V
 
     const/4 v2, 0x1
 
-    .line 312
+    .line 340
     aget v1, v1, v2
 
     int-to-float v1, v1
 
-    .line 313
+    .line 341
     iget-object v2, p0, Lmiuix/internal/widget/ListPopup;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -528,18 +539,18 @@
 
     iget v2, v2, Landroid/util/DisplayMetrics;->heightPixels:I
 
-    .line 314
+    .line 342
     iget v3, p0, Lmiuix/internal/widget/ListPopup;->mMaxAllowedHeight:I
 
     if-lez v3, :cond_1
 
+    .line 343
     iget-object v3, p0, Lmiuix/internal/widget/ListPopup;->mContentSize:Lmiuix/internal/widget/ListPopup$ContentSize;
 
     iget v3, v3, Lmiuix/internal/widget/ListPopup$ContentSize;->mHeight:I
 
     iget v4, p0, Lmiuix/internal/widget/ListPopup;->mMaxAllowedHeight:I
 
-    .line 315
     invoke-static {v3, v4}, Ljava/lang/Math;->min(II)I
 
     move-result v3
@@ -562,7 +573,7 @@
 
     add-float/2addr v1, v4
 
-    .line 318
+    .line 346
     invoke-virtual {p1}, Landroid/view/View;->getHeight()I
 
     move-result v4
@@ -577,7 +588,7 @@
 
     if-lez v1, :cond_3
 
-    .line 319
+    .line 347
     iget-boolean v1, p0, Lmiuix/internal/widget/ListPopup;->mOffsetYSet:Z
 
     if-eqz v1, :cond_2
@@ -607,7 +618,7 @@
 
     return-void
 
-    .line 442
+    .line 470
     :cond_0
     invoke-virtual {p0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -619,7 +630,7 @@
 
     return-void
 
-    .line 446
+    .line 474
     :cond_1
     iget v1, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
 
@@ -629,10 +640,10 @@
 
     const v1, 0x3e99999a    # 0.3f
 
-    .line 447
+    .line 475
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->dimAmount:F
 
-    .line 449
+    .line 477
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -645,10 +656,100 @@
 
     check-cast v1, Landroid/view/WindowManager;
 
-    .line 450
+    .line 478
     invoke-interface {v1, p0, v0}, Landroid/view/WindowManager;->updateViewLayout(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     return-void
+.end method
+
+.method private isNeedScroll()Z
+    .locals 5
+
+    .line 177
+    iget-object v0, p0, Lmiuix/internal/widget/ListPopup;->mListView:Landroid/widget/ListView;
+
+    invoke-virtual {v0}, Landroid/widget/ListView;->getFirstVisiblePosition()I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_0
+
+    return v1
+
+    .line 180
+    :cond_0
+    iget-object v0, p0, Lmiuix/internal/widget/ListPopup;->mListView:Landroid/widget/ListView;
+
+    invoke-virtual {v0}, Landroid/widget/ListView;->getLastVisiblePosition()I
+
+    move-result v0
+
+    iget-object v2, p0, Lmiuix/internal/widget/ListPopup;->mListView:Landroid/widget/ListView;
+
+    invoke-virtual {v2}, Landroid/widget/ListView;->getAdapter()Landroid/widget/ListAdapter;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Landroid/widget/ListAdapter;->getCount()I
+
+    move-result v2
+
+    sub-int/2addr v2, v1
+
+    if-eq v0, v2, :cond_1
+
+    return v1
+
+    :cond_1
+    const/4 v0, 0x0
+
+    move v2, v0
+
+    move v3, v2
+
+    .line 186
+    :goto_0
+    iget-object v4, p0, Lmiuix/internal/widget/ListPopup;->mListView:Landroid/widget/ListView;
+
+    invoke-virtual {v4}, Landroid/widget/ListView;->getLastVisiblePosition()I
+
+    move-result v4
+
+    if-gt v2, v4, :cond_2
+
+    .line 187
+    iget-object v4, p0, Lmiuix/internal/widget/ListPopup;->mListView:Landroid/widget/ListView;
+
+    invoke-virtual {v4, v2}, Landroid/widget/ListView;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result v4
+
+    add-int/2addr v3, v4
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    .line 190
+    :cond_2
+    iget-object v2, p0, Lmiuix/internal/widget/ListPopup;->mListView:Landroid/widget/ListView;
+
+    invoke-virtual {v2}, Landroid/widget/ListView;->getMeasuredHeight()I
+
+    move-result v2
+
+    if-ge v2, v3, :cond_3
+
+    return v1
+
+    :cond_3
+    return v0
 .end method
 
 .method public static synthetic lambda$new$0(Lmiuix/internal/widget/ListPopup;Landroid/view/View;)V
@@ -678,7 +779,7 @@
 .method public static synthetic lambda$prepareShow$2(Lmiuix/internal/widget/ListPopup;Landroid/widget/AdapterView;Landroid/view/View;IJ)V
     .locals 7
 
-    .line 210
+    .line 238
     iget-object v0, p0, Lmiuix/internal/widget/ListPopup;->mListView:Landroid/widget/ListView;
 
     invoke-virtual {v0}, Landroid/widget/ListView;->getHeaderViewsCount()I
@@ -687,7 +788,7 @@
 
     sub-int v4, p3, v0
 
-    .line 211
+    .line 239
     iget-object p3, p0, Lmiuix/internal/widget/ListPopup;->mOnItemClickListener:Landroid/widget/AdapterView$OnItemClickListener;
 
     if-eqz p3, :cond_0
@@ -702,7 +803,7 @@
 
     if-ge v4, p3, :cond_0
 
-    .line 212
+    .line 240
     iget-object v1, p0, Lmiuix/internal/widget/ListPopup;->mOnItemClickListener:Landroid/widget/AdapterView$OnItemClickListener;
 
     move-object v2, p1
@@ -722,17 +823,17 @@
 
     const/4 v0, 0x0
 
-    .line 384
+    .line 412
     invoke-static {v0, v0}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result v1
 
-    .line 386
+    .line 414
     invoke-static {v0, v0}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result v2
 
-    .line 387
+    .line 415
     invoke-interface {p1}, Landroid/widget/ListAdapter;->getCount()I
 
     move-result v3
@@ -752,7 +853,7 @@
     :goto_0
     if-ge v0, v3, :cond_5
 
-    .line 389
+    .line 417
     invoke-interface {p1, v0}, Landroid/widget/ListAdapter;->getItemViewType(I)I
 
     move-result v9
@@ -766,28 +867,28 @@
     :cond_0
     if-nez v7, :cond_1
 
-    .line 395
+    .line 423
     new-instance v7, Landroid/widget/FrameLayout;
 
     invoke-direct {v7, p3}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 397
+    .line 425
     :cond_1
     invoke-interface {p1, v0, v8, v7}, Landroid/widget/ListAdapter;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v8
 
-    .line 398
+    .line 426
     invoke-virtual {v8, v1, v2}, Landroid/view/View;->measure(II)V
 
-    .line 399
+    .line 427
     invoke-virtual {v8}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v9
 
     add-int/2addr v6, v9
 
-    .line 400
+    .line 428
     iget-object v9, p0, Lmiuix/internal/widget/ListPopup;->mContentSize:Lmiuix/internal/widget/ListPopup$ContentSize;
 
     iget-boolean v9, v9, Lmiuix/internal/widget/ListPopup$ContentSize;->mHasContentWidth:Z
@@ -796,7 +897,7 @@
 
     goto :goto_1
 
-    .line 403
+    .line 431
     :cond_2
     invoke-virtual {v8}, Landroid/view/View;->getMeasuredWidth()I
 
@@ -804,7 +905,7 @@
 
     if-lt v9, p4, :cond_3
 
-    .line 405
+    .line 433
     iget-object v9, p0, Lmiuix/internal/widget/ListPopup;->mContentSize:Lmiuix/internal/widget/ListPopup$ContentSize;
 
     invoke-virtual {v9, p4}, Lmiuix/internal/widget/ListPopup$ContentSize;->updateWidth(I)V
@@ -822,7 +923,7 @@
 
     goto :goto_0
 
-    .line 410
+    .line 438
     :cond_5
     iget-object p1, p0, Lmiuix/internal/widget/ListPopup;->mContentSize:Lmiuix/internal/widget/ListPopup$ContentSize;
 
@@ -830,12 +931,12 @@
 
     if-nez p1, :cond_6
 
-    .line 411
+    .line 439
     iget-object p1, p0, Lmiuix/internal/widget/ListPopup;->mContentSize:Lmiuix/internal/widget/ListPopup$ContentSize;
 
     invoke-virtual {p1, v5}, Lmiuix/internal/widget/ListPopup$ContentSize;->updateWidth(I)V
 
-    .line 413
+    .line 441
     :cond_6
     iget-object p1, p0, Lmiuix/internal/widget/ListPopup;->mContentSize:Lmiuix/internal/widget/ListPopup$ContentSize;
 
@@ -847,7 +948,7 @@
 .method private shouldSetElevation()Z
     .locals 2
 
-    .line 230
+    .line 258
     iget-boolean v0, p0, Lmiuix/internal/widget/ListPopup;->mHasShadow:Z
 
     if-eqz v0, :cond_1
@@ -881,27 +982,27 @@
 .method private showWithAnchor(Landroid/view/View;)V
     .locals 3
 
-    .line 283
+    .line 311
     invoke-direct {p0, p1}, Lmiuix/internal/widget/ListPopup;->calculateYoffset(Landroid/view/View;)I
 
     move-result v0
 
-    .line 284
+    .line 312
     invoke-direct {p0, p1}, Lmiuix/internal/widget/ListPopup;->calculateXoffset(Landroid/view/View;)I
 
     move-result v1
 
-    .line 285
+    .line 313
     iget v2, p0, Lmiuix/internal/widget/ListPopup;->mDropDownGravity:I
 
     invoke-virtual {p0, p1, v1, v0, v2}, Lmiuix/internal/widget/ListPopup;->showAsDropDown(Landroid/view/View;III)V
 
-    .line 286
+    .line 314
     sget v0, Lmiuix/view/HapticFeedbackConstants;->MIUI_POPUP_NORMAL:I
 
     invoke-static {p1, v0}, Lmiuix/view/HapticCompat;->performHapticFeedback(Landroid/view/View;I)Z
 
-    .line 287
+    .line 315
     iget-object p1, p0, Lmiuix/internal/widget/ListPopup;->mRootView:Landroid/widget/FrameLayout;
 
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->getRootView()Landroid/view/View;
@@ -918,14 +1019,14 @@
 .method protected computePopupContentWidth()I
     .locals 4
 
-    .line 276
+    .line 304
     iget-object v0, p0, Lmiuix/internal/widget/ListPopup;->mContentSize:Lmiuix/internal/widget/ListPopup$ContentSize;
 
     iget-boolean v0, v0, Lmiuix/internal/widget/ListPopup$ContentSize;->mHasContentWidth:Z
 
     if-nez v0, :cond_0
 
-    .line 277
+    .line 305
     iget-object v0, p0, Lmiuix/internal/widget/ListPopup;->mAdapter:Landroid/widget/ListAdapter;
 
     const/4 v1, 0x0
@@ -936,7 +1037,7 @@
 
     invoke-direct {p0, v0, v1, v2, v3}, Lmiuix/internal/widget/ListPopup;->measureContentSize(Landroid/widget/ListAdapter;Landroid/view/ViewGroup;Landroid/content/Context;I)V
 
-    .line 279
+    .line 307
     :cond_0
     iget-object v0, p0, Lmiuix/internal/widget/ListPopup;->mContentSize:Lmiuix/internal/widget/ListPopup$ContentSize;
 
@@ -966,10 +1067,10 @@
 .method public dismiss()V
     .locals 1
 
-    .line 304
+    .line 332
     invoke-super {p0}, Landroid/widget/PopupWindow;->dismiss()V
 
-    .line 305
+    .line 333
     iget-object v0, p0, Lmiuix/internal/widget/ListPopup;->mContext:Landroid/content/Context;
 
     invoke-static {v0, p0}, Lmiuix/appcompat/internal/util/SinglePopControl;->hidePop(Landroid/content/Context;Ljava/lang/Object;)V
@@ -980,14 +1081,14 @@
 .method public fastShow(Landroid/view/View;Landroid/view/ViewGroup;)V
     .locals 0
 
-    .line 367
+    .line 395
     invoke-virtual {p0}, Lmiuix/internal/widget/ListPopup;->computePopupContentWidth()I
 
     move-result p2
 
     invoke-virtual {p0, p2}, Lmiuix/internal/widget/ListPopup;->setWidth(I)V
 
-    .line 368
+    .line 396
     invoke-direct {p0, p1}, Lmiuix/internal/widget/ListPopup;->showWithAnchor(Landroid/view/View;)V
 
     return-void
@@ -996,7 +1097,7 @@
 .method public getHorizontalOffset()I
     .locals 1
 
-    .line 272
+    .line 300
     iget v0, p0, Lmiuix/internal/widget/ListPopup;->mOffsetX:I
 
     return v0
@@ -1005,7 +1106,7 @@
 .method public getListView()Landroid/widget/ListView;
     .locals 1
 
-    .line 242
+    .line 270
     iget-object v0, p0, Lmiuix/internal/widget/ListPopup;->mListView:Landroid/widget/ListView;
 
     return-object v0
@@ -1014,7 +1115,7 @@
 .method public getMinMarginScreen()I
     .locals 1
 
-    .line 260
+    .line 288
     iget v0, p0, Lmiuix/internal/widget/ListPopup;->mMinMarginScreen:I
 
     return v0
@@ -1023,7 +1124,7 @@
 .method public getOffsetFromStatusBar()I
     .locals 1
 
-    .line 264
+    .line 292
     iget v0, p0, Lmiuix/internal/widget/ListPopup;->mOffsetFromStatusBar:I
 
     return v0
@@ -1032,7 +1133,7 @@
 .method public getVerticalOffset()I
     .locals 1
 
-    .line 268
+    .line 296
     iget v0, p0, Lmiuix/internal/widget/ListPopup;->mOffsetY:I
 
     return v0
@@ -1091,18 +1192,18 @@
 
     const-string v0, "show: anchor is null"
 
-    .line 170
+    .line 198
     invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return p2
 
-    .line 174
+    .line 202
     :cond_0
     iget-object v0, p0, Lmiuix/internal/widget/ListPopup;->mContentView:Landroid/view/View;
 
     if-nez v0, :cond_1
 
-    .line 175
+    .line 203
     iget-object v0, p0, Lmiuix/internal/widget/ListPopup;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
@@ -1119,7 +1220,7 @@
 
     iput-object v0, p0, Lmiuix/internal/widget/ListPopup;->mContentView:Landroid/view/View;
 
-    .line 176
+    .line 204
     iget-object v0, p0, Lmiuix/internal/widget/ListPopup;->mContentView:Landroid/view/View;
 
     new-instance v1, Lmiuix/internal/widget/ListPopup$2;
@@ -1128,7 +1229,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
-    .line 189
+    .line 217
     :cond_1
     iget-object v0, p0, Lmiuix/internal/widget/ListPopup;->mRootView:Landroid/widget/FrameLayout;
 
@@ -1150,20 +1251,20 @@
 
     if-eq v0, v2, :cond_3
 
-    .line 190
+    .line 218
     :cond_2
     iget-object v0, p0, Lmiuix/internal/widget/ListPopup;->mRootView:Landroid/widget/FrameLayout;
 
     invoke-virtual {v0}, Landroid/widget/FrameLayout;->removeAllViews()V
 
-    .line 191
+    .line 219
     iget-object v0, p0, Lmiuix/internal/widget/ListPopup;->mRootView:Landroid/widget/FrameLayout;
 
     iget-object v2, p0, Lmiuix/internal/widget/ListPopup;->mContentView:Landroid/view/View;
 
     invoke-virtual {v0, v2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
 
-    .line 192
+    .line 220
     iget-object v0, p0, Lmiuix/internal/widget/ListPopup;->mContentView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -1174,20 +1275,20 @@
 
     const/4 v2, -0x1
 
-    .line 193
+    .line 221
     iput v2, v0, Landroid/widget/FrameLayout$LayoutParams;->width:I
 
     const/4 v2, -0x2
 
-    .line 194
+    .line 222
     iput v2, v0, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
     const/16 v2, 0x10
 
-    .line 195
+    .line 223
     iput v2, v0, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
-    .line 198
+    .line 226
     :cond_3
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -1201,7 +1302,7 @@
 
     if-eqz v0, :cond_4
 
-    .line 199
+    .line 227
     iget-object v0, p0, Lmiuix/internal/widget/ListPopup;->mRootView:Landroid/widget/FrameLayout;
 
     iget v2, p0, Lmiuix/internal/widget/ListPopup;->mElevation:I
@@ -1210,19 +1311,19 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/FrameLayout;->setElevation(F)V
 
-    .line 200
+    .line 228
     iget v0, p0, Lmiuix/internal/widget/ListPopup;->mElevation:I
 
     int-to-float v0, v0
 
     invoke-virtual {p0, v0}, Lmiuix/internal/widget/ListPopup;->setElevation(F)V
 
-    .line 201
+    .line 229
     iget-object v0, p0, Lmiuix/internal/widget/ListPopup;->mRootView:Landroid/widget/FrameLayout;
 
     invoke-virtual {p0, v0}, Lmiuix/internal/widget/ListPopup;->setPopupShadowAlpha(Landroid/view/View;)V
 
-    .line 204
+    .line 232
     :cond_4
     iget-object v0, p0, Lmiuix/internal/widget/ListPopup;->mContentView:Landroid/view/View;
 
@@ -1236,7 +1337,7 @@
 
     iput-object v0, p0, Lmiuix/internal/widget/ListPopup;->mListView:Landroid/widget/ListView;
 
-    .line 205
+    .line 233
     iget-object v0, p0, Lmiuix/internal/widget/ListPopup;->mListView:Landroid/widget/ListView;
 
     if-nez v0, :cond_5
@@ -1245,12 +1346,12 @@
 
     const-string v0, "list not found"
 
-    .line 206
+    .line 234
     invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return p2
 
-    .line 209
+    .line 237
     :cond_5
     new-instance v2, Lmiuix/internal/widget/-$$Lambda$ListPopup$EEAHM0S02mwIJGsdW6acNhVxhE4;
 
@@ -1258,21 +1359,21 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 215
+    .line 243
     iget-object v0, p0, Lmiuix/internal/widget/ListPopup;->mListView:Landroid/widget/ListView;
 
     iget-object v2, p0, Lmiuix/internal/widget/ListPopup;->mAdapter:Landroid/widget/ListAdapter;
 
     invoke-virtual {v0, v2}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 216
+    .line 244
     invoke-virtual {p0}, Lmiuix/internal/widget/ListPopup;->computePopupContentWidth()I
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lmiuix/internal/widget/ListPopup;->setWidth(I)V
 
-    .line 217
+    .line 245
     iget-object v0, p0, Lmiuix/internal/widget/ListPopup;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lmiuix/internal/util/DeviceHelper;->isTablet(Landroid/content/Context;)Z
@@ -1293,14 +1394,14 @@
 
     if-le v0, v2, :cond_6
 
-    .line 218
+    .line 246
     invoke-virtual {p0, v2}, Lmiuix/internal/widget/ListPopup;->setHeight(I)V
 
-    .line 222
+    .line 250
     :cond_6
     iget-object v0, p0, Lmiuix/internal/widget/ListPopup;->mContext:Landroid/content/Context;
 
-    .line 223
+    .line 251
     invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1313,7 +1414,7 @@
 
     check-cast v0, Landroid/view/inputmethod/InputMethodManager;
 
-    .line 224
+    .line 252
     invoke-virtual {p1}, Landroid/view/View;->getWindowToken()Landroid/os/IBinder;
 
     move-result-object p1
@@ -1357,7 +1458,7 @@
 .method public setContentWidth(I)V
     .locals 1
 
-    .line 234
+    .line 262
     iget-object v0, p0, Lmiuix/internal/widget/ListPopup;->mContentSize:Lmiuix/internal/widget/ListPopup$ContentSize;
 
     invoke-virtual {v0, p1}, Lmiuix/internal/widget/ListPopup$ContentSize;->updateWidth(I)V
@@ -1368,7 +1469,7 @@
 .method public setDropDownGravity(I)V
     .locals 0
 
-    .line 238
+    .line 266
     iput p1, p0, Lmiuix/internal/widget/ListPopup;->mDropDownGravity:I
 
     return-void
@@ -1377,7 +1478,7 @@
 .method public setHasShadow(Z)V
     .locals 0
 
-    .line 256
+    .line 284
     iput-boolean p1, p0, Lmiuix/internal/widget/ListPopup;->mHasShadow:Z
 
     return-void
@@ -1386,12 +1487,12 @@
 .method public setHorizontalOffset(I)V
     .locals 0
 
-    .line 251
+    .line 279
     iput p1, p0, Lmiuix/internal/widget/ListPopup;->mOffsetX:I
 
     const/4 p1, 0x1
 
-    .line 252
+    .line 280
     iput-boolean p1, p0, Lmiuix/internal/widget/ListPopup;->mOffsetXSet:Z
 
     return-void
@@ -1400,7 +1501,7 @@
 .method public setMaxAllowedHeight(I)V
     .locals 0
 
-    .line 454
+    .line 482
     iput p1, p0, Lmiuix/internal/widget/ListPopup;->mMaxAllowedHeight:I
 
     return-void
@@ -1427,14 +1528,14 @@
 .method protected setPopupShadowAlpha(Landroid/view/View;)V
     .locals 2
 
-    .line 417
+    .line 445
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x15
 
     if-lt v0, v1, :cond_1
 
-    .line 418
+    .line 446
     iget-object v0, p0, Lmiuix/internal/widget/ListPopup;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lmiuix/core/util/MiuixUIUtils;->isFreeformMode(Landroid/content/Context;)Z
@@ -1445,12 +1546,12 @@
 
     const/4 v0, 0x0
 
-    .line 419
+    .line 447
     invoke-virtual {p1, v0}, Landroid/view/View;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
 
     goto :goto_0
 
-    .line 421
+    .line 449
     :cond_0
     new-instance v0, Lmiuix/internal/widget/ListPopup$3;
 
@@ -1475,12 +1576,12 @@
 .method public setVerticalOffset(I)V
     .locals 0
 
-    .line 246
+    .line 274
     iput p1, p0, Lmiuix/internal/widget/ListPopup;->mOffsetY:I
 
     const/4 p1, 0x1
 
-    .line 247
+    .line 275
     iput-boolean p1, p0, Lmiuix/internal/widget/ListPopup;->mOffsetYSet:Z
 
     return-void
@@ -1506,10 +1607,10 @@
 .method public showAsDropDown(Landroid/view/View;III)V
     .locals 0
 
-    .line 292
+    .line 320
     invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/PopupWindow;->showAsDropDown(Landroid/view/View;III)V
 
-    .line 293
+    .line 321
     iget-object p1, p0, Lmiuix/internal/widget/ListPopup;->mContext:Landroid/content/Context;
 
     invoke-static {p1, p0}, Lmiuix/appcompat/internal/util/SinglePopControl;->showPop(Landroid/content/Context;Ljava/lang/Object;)V
@@ -1520,10 +1621,10 @@
 .method public showAtLocation(Landroid/view/View;III)V
     .locals 0
 
-    .line 298
+    .line 326
     invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/PopupWindow;->showAtLocation(Landroid/view/View;III)V
 
-    .line 299
+    .line 327
     iget-object p1, p0, Lmiuix/internal/widget/ListPopup;->mContext:Landroid/content/Context;
 
     invoke-static {p1, p0}, Lmiuix/appcompat/internal/util/SinglePopControl;->showPop(Landroid/content/Context;Ljava/lang/Object;)V

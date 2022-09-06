@@ -26,7 +26,7 @@
 .method constructor <init>(Lcom/miui/home/recents/NavStubView;II)V
     .locals 0
 
-    .line 3697
+    .line 3690
     iput-object p1, p0, Lcom/miui/home/recents/NavStubView$14;->this$0:Lcom/miui/home/recents/NavStubView;
 
     iput p2, p0, Lcom/miui/home/recents/NavStubView$14;->val$finalTaskIndex:I
@@ -43,12 +43,12 @@
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 3706
+    .line 3699
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$14;->this$0:Lcom/miui/home/recents/NavStubView;
 
     const/4 v0, 0x1
 
-    invoke-static {p1, v0}, Lcom/miui/home/recents/NavStubView;->access$6502(Lcom/miui/home/recents/NavStubView;Z)Z
+    invoke-static {p1, v0}, Lcom/miui/home/recents/NavStubView;->access$6402(Lcom/miui/home/recents/NavStubView;Z)Z
 
     return-void
 .end method
@@ -56,10 +56,10 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 3
 
-    .line 3711
+    .line 3704
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$14;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    invoke-static {p1}, Lcom/miui/home/recents/NavStubView;->access$6500(Lcom/miui/home/recents/NavStubView;)Z
+    invoke-static {p1}, Lcom/miui/home/recents/NavStubView;->access$6400(Lcom/miui/home/recents/NavStubView;)Z
 
     move-result p1
 
@@ -67,11 +67,11 @@
 
     return-void
 
-    .line 3714
+    .line 3707
     :cond_0
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$14;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    invoke-static {p1}, Lcom/miui/home/recents/NavStubView;->access$6700(Lcom/miui/home/recents/NavStubView;)Z
+    invoke-static {p1}, Lcom/miui/home/recents/NavStubView;->access$6600(Lcom/miui/home/recents/NavStubView;)Z
 
     move-result p1
 
@@ -102,7 +102,7 @@
     :cond_1
     const/4 p1, 0x0
 
-    .line 3715
+    .line 3708
     :goto_0
     iget-object v0, p0, Lcom/miui/home/recents/NavStubView$14;->this$0:Lcom/miui/home/recents/NavStubView;
 
@@ -120,56 +120,56 @@
 
     goto :goto_1
 
-    .line 3716
+    .line 3709
     :cond_2
     invoke-virtual {p1}, Lcom/miui/home/recents/views/TaskView;->getTopPackageName()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 3715
+    .line 3708
     :goto_1
     invoke-static {v0, v1, v2, p1}, Lcom/miui/home/recents/util/StateBroadcastUtils;->sendStateBroadcast(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3717
+    .line 3710
     iget p1, p0, Lcom/miui/home/recents/NavStubView$14;->val$finalTaskIndex:I
 
     iget v0, p0, Lcom/miui/home/recents/NavStubView$14;->val$finalRunningTaskIndex:I
 
     if-ne p1, v0, :cond_3
 
-    .line 3718
+    .line 3711
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$14;->this$0:Lcom/miui/home/recents/NavStubView;
 
     iget-object v0, p1, Lcom/miui/home/recents/NavStubView;->mResumeLastTaskRunnable:Ljava/lang/Runnable;
 
-    invoke-static {p1, v0}, Lcom/miui/home/recents/NavStubView;->access$6800(Lcom/miui/home/recents/NavStubView;Ljava/lang/Runnable;)V
+    invoke-static {p1, v0}, Lcom/miui/home/recents/NavStubView;->access$6700(Lcom/miui/home/recents/NavStubView;Ljava/lang/Runnable;)V
 
-    .line 3719
+    .line 3712
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$14;->this$0:Lcom/miui/home/recents/NavStubView;
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lcom/miui/home/recents/NavStubView;->access$6900(Lcom/miui/home/recents/NavStubView;Z)V
+    invoke-static {p1, v0}, Lcom/miui/home/recents/NavStubView;->access$6800(Lcom/miui/home/recents/NavStubView;Z)V
 
     goto :goto_4
 
-    .line 3721
+    .line 3714
     :cond_3
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$14;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-virtual {p1}, Lcom/miui/home/recents/NavStubView;->postStartNewTaskRunnable()V
 
-    .line 3722
+    .line 3715
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$14;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-static {p1}, Lcom/miui/home/recents/NavStubView;->access$1100(Lcom/miui/home/recents/NavStubView;)Z
 
     move-result p1
 
-    .line 3723
+    .line 3716
     iget-object v0, p0, Lcom/miui/home/recents/NavStubView$14;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    invoke-static {v0}, Lcom/miui/home/recents/NavStubView;->access$7000(Lcom/miui/home/recents/NavStubView;)Z
+    invoke-static {v0}, Lcom/miui/home/recents/NavStubView;->access$6900(Lcom/miui/home/recents/NavStubView;)Z
 
     move-result v0
 
@@ -182,7 +182,7 @@
     :cond_4
     const-string v0, "portrait"
 
-    .line 3724
+    .line 3717
     :goto_2
     iget v1, p0, Lcom/miui/home/recents/NavStubView$14;->val$finalTaskIndex:I
 
@@ -201,15 +201,15 @@
     :cond_5
     const-string v1, "left"
 
-    .line 3722
+    .line 3715
     :goto_3
     invoke-static {p1, v0, v1}, Lcom/miui/home/launcher/AnalyticalDataCollectorForRecents;->sendQuickSwitchEvent(ZLjava/lang/String;Ljava/lang/String;)V
 
-    .line 3726
+    .line 3719
     :goto_4
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$14;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    invoke-static {p1}, Lcom/miui/home/recents/NavStubView;->access$6400(Lcom/miui/home/recents/NavStubView;)V
+    invoke-static {p1}, Lcom/miui/home/recents/NavStubView;->access$6300(Lcom/miui/home/recents/NavStubView;)V
 
     return-void
 .end method
@@ -217,19 +217,19 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 3700
+    .line 3693
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$14;->this$0:Lcom/miui/home/recents/NavStubView;
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lcom/miui/home/recents/NavStubView;->access$6502(Lcom/miui/home/recents/NavStubView;Z)Z
+    invoke-static {p1, v0}, Lcom/miui/home/recents/NavStubView;->access$6402(Lcom/miui/home/recents/NavStubView;Z)Z
 
-    .line 3701
+    .line 3694
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$14;->this$0:Lcom/miui/home/recents/NavStubView;
 
     const/4 v0, 0x1
 
-    invoke-static {p1, v0}, Lcom/miui/home/recents/NavStubView;->access$6602(Lcom/miui/home/recents/NavStubView;Z)Z
+    invoke-static {p1, v0}, Lcom/miui/home/recents/NavStubView;->access$6502(Lcom/miui/home/recents/NavStubView;Z)Z
 
     return-void
 .end method

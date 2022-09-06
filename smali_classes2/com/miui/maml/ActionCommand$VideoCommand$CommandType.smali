@@ -42,7 +42,7 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .line 2680
+    .line 2685
     new-instance v0, Lcom/miui/maml/ActionCommand$VideoCommand$CommandType;
 
     const-string v1, "PAUSE"
@@ -53,7 +53,7 @@
 
     sput-object v0, Lcom/miui/maml/ActionCommand$VideoCommand$CommandType;->PAUSE:Lcom/miui/maml/ActionCommand$VideoCommand$CommandType;
 
-    .line 2681
+    .line 2686
     new-instance v0, Lcom/miui/maml/ActionCommand$VideoCommand$CommandType;
 
     const-string v1, "PLAY"
@@ -64,7 +64,7 @@
 
     sput-object v0, Lcom/miui/maml/ActionCommand$VideoCommand$CommandType;->PLAY:Lcom/miui/maml/ActionCommand$VideoCommand$CommandType;
 
-    .line 2682
+    .line 2687
     new-instance v0, Lcom/miui/maml/ActionCommand$VideoCommand$CommandType;
 
     const-string v1, "SEEK_TO"
@@ -75,7 +75,7 @@
 
     sput-object v0, Lcom/miui/maml/ActionCommand$VideoCommand$CommandType;->SEEK_TO:Lcom/miui/maml/ActionCommand$VideoCommand$CommandType;
 
-    .line 2683
+    .line 2688
     new-instance v0, Lcom/miui/maml/ActionCommand$VideoCommand$CommandType;
 
     const-string v1, "CONFIG"
@@ -86,7 +86,7 @@
 
     sput-object v0, Lcom/miui/maml/ActionCommand$VideoCommand$CommandType;->CONFIG:Lcom/miui/maml/ActionCommand$VideoCommand$CommandType;
 
-    .line 2684
+    .line 2689
     new-instance v0, Lcom/miui/maml/ActionCommand$VideoCommand$CommandType;
 
     const-string v1, "SET_VOLUME"
@@ -97,7 +97,7 @@
 
     sput-object v0, Lcom/miui/maml/ActionCommand$VideoCommand$CommandType;->SET_VOLUME:Lcom/miui/maml/ActionCommand$VideoCommand$CommandType;
 
-    .line 2685
+    .line 2690
     new-instance v0, Lcom/miui/maml/ActionCommand$VideoCommand$CommandType;
 
     const-string v1, "INVALID"
@@ -110,7 +110,7 @@
 
     const/4 v0, 0x6
 
-    .line 2679
+    .line 2684
     new-array v0, v0, [Lcom/miui/maml/ActionCommand$VideoCommand$CommandType;
 
     sget-object v1, Lcom/miui/maml/ActionCommand$VideoCommand$CommandType;->PAUSE:Lcom/miui/maml/ActionCommand$VideoCommand$CommandType;
@@ -150,7 +150,7 @@
         }
     .end annotation
 
-    .line 2679
+    .line 2684
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -159,7 +159,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/miui/maml/ActionCommand$VideoCommand$CommandType;
     .locals 1
 
-    .line 2679
+    .line 2684
     const-class v0, Lcom/miui/maml/ActionCommand$VideoCommand$CommandType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -174,7 +174,7 @@
 .method public static values()[Lcom/miui/maml/ActionCommand$VideoCommand$CommandType;
     .locals 1
 
-    .line 2679
+    .line 2684
     sget-object v0, Lcom/miui/maml/ActionCommand$VideoCommand$CommandType;->$VALUES:[Lcom/miui/maml/ActionCommand$VideoCommand$CommandType;
 
     invoke-virtual {v0}, [Lcom/miui/maml/ActionCommand$VideoCommand$CommandType;->clone()Ljava/lang/Object;

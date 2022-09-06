@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/settings/BaseAllAppsSettingsFragment;)V
     .locals 0
 
-    .line 288
+    .line 289
     iput-object p1, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment$2;->this$0:Lcom/miui/home/settings/BaseAllAppsSettingsFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onCancel(Landroid/content/DialogInterface;)V
     .locals 1
 
-    .line 291
+    .line 292
     iget-object p1, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment$2;->this$0:Lcom/miui/home/settings/BaseAllAppsSettingsFragment;
 
     invoke-static {p1}, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->access$300(Lcom/miui/home/settings/BaseAllAppsSettingsFragment;)Lcom/miui/home/settings/preference/ListPreference;

@@ -75,13 +75,13 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "|T|"
+    const-string/jumbo v1, "|T|"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string p1, "|"
+    const-string/jumbo p1, "|"
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -338,7 +338,7 @@
     :try_start_0
     iget-object v1, p0, Lcom/google/firebase/installations/local/IidStore;->iidPrefs:Landroid/content/SharedPreferences;
 
-    const-string v2, "|S|id"
+    const-string/jumbo v2, "|S|id"
 
     const/4 v3, 0x0
 
@@ -373,7 +373,7 @@
     :try_start_0
     iget-object v1, p0, Lcom/google/firebase/installations/local/IidStore;->iidPrefs:Landroid/content/SharedPreferences;
 
-    const-string v2, "|S||P|"
+    const-string/jumbo v2, "|S||P|"
 
     const/4 v3, 0x0
 
@@ -512,7 +512,7 @@
 
     if-nez v5, :cond_1
 
-    const-string v1, "{"
+    const-string/jumbo v1, "{"
 
     .line 107
     invoke-virtual {v4, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z

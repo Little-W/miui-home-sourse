@@ -25,7 +25,7 @@
 .method constructor <init>(Landroidx/fragment/app/Fragment;)V
     .locals 0
 
-    .line 2923
+    .line 2936
     iput-object p1, p0, Landroidx/fragment/app/Fragment$5;->this$0:Landroidx/fragment/app/Fragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,19 +38,19 @@
 .method public onStateChanged(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Lifecycle$Event;)V
     .locals 0
 
-    .line 2927
+    .line 2940
     sget-object p1, Landroidx/lifecycle/Lifecycle$Event;->ON_STOP:Landroidx/lifecycle/Lifecycle$Event;
 
     if-ne p2, p1, :cond_0
 
-    .line 2928
+    .line 2941
     iget-object p1, p0, Landroidx/fragment/app/Fragment$5;->this$0:Landroidx/fragment/app/Fragment;
 
     iget-object p1, p1, Landroidx/fragment/app/Fragment;->mView:Landroid/view/View;
 
     if-eqz p1, :cond_0
 
-    .line 2929
+    .line 2942
     iget-object p1, p0, Landroidx/fragment/app/Fragment$5;->this$0:Landroidx/fragment/app/Fragment;
 
     iget-object p1, p1, Landroidx/fragment/app/Fragment;->mView:Landroid/view/View;

@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/ScreenView;)V
     .locals 0
 
-    .line 80
+    .line 82
     iput-object p1, p0, Lcom/miui/home/launcher/ScreenView$1;->this$0:Lcom/miui/home/launcher/ScreenView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 1
 
-    .line 82
+    .line 84
     iget-object v0, p0, Lcom/miui/home/launcher/ScreenView$1;->this$0:Lcom/miui/home/launcher/ScreenView;
 
     invoke-static {v0}, Lcom/miui/home/launcher/ScreenView;->access$000(Lcom/miui/home/launcher/ScreenView;)V

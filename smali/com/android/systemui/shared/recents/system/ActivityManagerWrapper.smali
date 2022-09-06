@@ -146,7 +146,7 @@
     .line 93
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->mContext:Landroid/content/Context;
 
-    const-string v1, "window"
+    const-string/jumbo v1, "window"
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 

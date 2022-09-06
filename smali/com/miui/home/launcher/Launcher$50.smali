@@ -24,7 +24,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Z)V
     .locals 0
 
-    .line 5446
+    .line 5503
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$50;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iput-boolean p2, p0, Lcom/miui/home/launcher/Launcher$50;->val$isLoadingViewGoOut:Z
@@ -39,12 +39,12 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 5448
+    .line 5505
     iget-boolean p1, p0, Lcom/miui/home/launcher/Launcher$50;->val$isLoadingViewGoOut:Z
 
     if-eqz p1, :cond_0
 
-    .line 5449
+    .line 5506
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$50;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$7100(Lcom/miui/home/launcher/Launcher;)Landroid/view/ViewGroup;
@@ -65,7 +65,7 @@
 
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    .line 5450
+    .line 5507
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$50;->this$0:Lcom/miui/home/launcher/Launcher;
 
     const/4 v0, 0x0

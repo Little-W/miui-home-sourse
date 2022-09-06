@@ -237,13 +237,7 @@
     :cond_0
     iget-object v0, p0, Lmiuix/pickerwidget/widget/NumberPicker$PressedStateHelper;->this$0:Lmiuix/pickerwidget/widget/NumberPicker;
 
-    invoke-static {v0}, Lmiuix/pickerwidget/widget/NumberPicker;->access$1800(Lmiuix/pickerwidget/widget/NumberPicker;)Z
-
-    move-result v3
-
-    xor-int/2addr v1, v3
-
-    invoke-static {v0, v1}, Lmiuix/pickerwidget/widget/NumberPicker;->access$1802(Lmiuix/pickerwidget/widget/NumberPicker;Z)Z
+    invoke-static {v0, v1}, Lmiuix/pickerwidget/widget/NumberPicker;->access$1880(Lmiuix/pickerwidget/widget/NumberPicker;I)Z
 
     .line 2340
     iget-object v0, p0, Lmiuix/pickerwidget/widget/NumberPicker$PressedStateHelper;->this$0:Lmiuix/pickerwidget/widget/NumberPicker;
@@ -289,13 +283,7 @@
     :cond_1
     iget-object v0, p0, Lmiuix/pickerwidget/widget/NumberPicker$PressedStateHelper;->this$0:Lmiuix/pickerwidget/widget/NumberPicker;
 
-    invoke-static {v0}, Lmiuix/pickerwidget/widget/NumberPicker;->access$1600(Lmiuix/pickerwidget/widget/NumberPicker;)Z
-
-    move-result v3
-
-    xor-int/2addr v1, v3
-
-    invoke-static {v0, v1}, Lmiuix/pickerwidget/widget/NumberPicker;->access$1602(Lmiuix/pickerwidget/widget/NumberPicker;Z)Z
+    invoke-static {v0, v1}, Lmiuix/pickerwidget/widget/NumberPicker;->access$1680(Lmiuix/pickerwidget/widget/NumberPicker;I)Z
 
     .line 2331
     iget-object v0, p0, Lmiuix/pickerwidget/widget/NumberPicker$PressedStateHelper;->this$0:Lmiuix/pickerwidget/widget/NumberPicker;

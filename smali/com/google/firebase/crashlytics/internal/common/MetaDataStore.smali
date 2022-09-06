@@ -160,7 +160,7 @@
     .line 133
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/common/MetaDataStore;->fileStore:Lcom/google/firebase/crashlytics/internal/persistence/FileStore;
 
-    const-string v1, "user-data"
+    const-string/jumbo v1, "user-data"
 
     invoke-virtual {v0, p1, v1}, Lcom/google/firebase/crashlytics/internal/persistence/FileStore;->getSessionFile(Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
 

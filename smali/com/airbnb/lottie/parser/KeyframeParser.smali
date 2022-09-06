@@ -60,9 +60,9 @@
 
     sput-object v0, Lcom/airbnb/lottie/parser/KeyframeParser;->NAMES:Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
 
-    const-string v0, "x"
+    const-string/jumbo v0, "x"
 
-    const-string v1, "y"
+    const-string/jumbo v1, "y"
 
     .line 40
     filled-new-array {v0, v1}, [Ljava/lang/String;

@@ -86,7 +86,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f10003c
+    const v0, 0x7f11003c
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -112,7 +112,7 @@
 
     move-result-object p2
 
-    const v1, 0x7f100045
+    const v1, 0x7f110045
 
     invoke-virtual {p2, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -136,7 +136,7 @@
 
     move-result-object p2
 
-    const v1, 0x7f10004a
+    const v1, 0x7f11004a
 
     invoke-virtual {p2, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -935,7 +935,7 @@
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/allapps/category/BaseAllAppsCategoryListContainer;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
 
-    const v0, 0x7f0a0057
+    const v0, 0x7f0a0061
 
     .line 100
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/allapps/category/BaseAllAppsCategoryListContainer;->findViewById(I)Landroid/view/View;
@@ -955,7 +955,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0a02a5
+    const v0, 0x7f0a0388
 
     .line 110
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/allapps/category/BaseAllAppsCategoryListContainer;->findViewById(I)Landroid/view/View;
@@ -966,7 +966,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/allapps/category/BaseAllAppsCategoryListContainer;->mTipView:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a0059
+    const v0, 0x7f0a0063
 
     .line 112
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/allapps/category/BaseAllAppsCategoryListContainer;->findViewById(I)Landroid/view/View;
@@ -1010,7 +1010,7 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/library/view/viewpager/ViewPager;->setAdapter(Lcom/miui/home/library/view/viewpager/PagerAdapter;)V
 
-    const v0, 0x7f0a0182
+    const v0, 0x7f0a01ea
 
     .line 117
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/allapps/category/BaseAllAppsCategoryListContainer;->findViewById(I)Landroid/view/View;

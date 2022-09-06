@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/maml/MaMlWidgetInfo;)V
     .locals 0
 
-    .line 6888
+    .line 6912
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$61;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iput-object p2, p0, Lcom/miui/home/launcher/Launcher$61;->val$info:Lcom/miui/home/launcher/maml/MaMlWidgetInfo;
@@ -40,7 +40,7 @@
 .method static synthetic lambda$onDownloadProgress$1(Lcom/miui/home/launcher/maml/MaMlWidgetInfo;I)V
     .locals 0
 
-    .line 6903
+    .line 6927
     iget-object p0, p0, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->hostView:Lcom/miui/home/launcher/maml/MaMlWidgetView;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/maml/MaMlWidgetView;->getHostView()Lcom/miui/home/launcher/maml/MaMlHostView;
@@ -57,7 +57,7 @@
 .method static synthetic lambda$onDownloadStatusChange$0(Lcom/miui/home/launcher/maml/MaMlWidgetInfo;)V
     .locals 2
 
-    .line 6895
+    .line 6919
     iget-object p0, p0, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->hostView:Lcom/miui/home/launcher/maml/MaMlWidgetView;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/maml/MaMlWidgetView;->getHostView()Lcom/miui/home/launcher/maml/MaMlHostView;
@@ -80,7 +80,7 @@
 .method public onDownloadProgress(I)V
     .locals 3
 
-    .line 6902
+    .line 6926
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$61;->val$info:Lcom/miui/home/launcher/maml/MaMlWidgetInfo;
 
     iget-object v0, v0, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->hostView:Lcom/miui/home/launcher/maml/MaMlWidgetView;
@@ -93,7 +93,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 6903
+    .line 6927
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$61;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
@@ -119,7 +119,7 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 6892
+    .line 6916
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$61;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$3000(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/LauncherModel;
@@ -147,7 +147,7 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 6895
+    .line 6919
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$61;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;

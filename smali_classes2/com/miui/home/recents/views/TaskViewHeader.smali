@@ -97,7 +97,7 @@
 
     move-result-object p2
 
-    const p3, 0x7f10002c
+    const p3, 0x7f11002c
 
     invoke-virtual {p2, p3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -105,7 +105,7 @@
 
     iput-object p2, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mAppInfoDescFormat:Ljava/lang/String;
 
-    const p2, 0x7f0703db
+    const p2, 0x7f0705ae
 
     .line 81
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -531,7 +531,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0801e8
+    const v2, 0x7f0802c6
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -548,7 +548,7 @@
     .line 102
     invoke-super {p0}, Landroid/widget/FrameLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a0140
+    const v0, 0x7f0a019e
 
     .line 104
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/TaskViewHeader;->findViewById(I)Landroid/view/View;
@@ -564,7 +564,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
-    const v0, 0x7f0a0278
+    const v0, 0x7f0a0345
 
     .line 106
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/TaskViewHeader;->findViewById(I)Landroid/view/View;
@@ -580,7 +580,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
-    const v0, 0x7f0a02a6
+    const v0, 0x7f0a0389
 
     .line 108
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/TaskViewHeader;->findViewById(I)Landroid/view/View;
@@ -591,7 +591,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mTitleView:Landroid/widget/TextView;
 
-    const v0, 0x7f0a017d
+    const v0, 0x7f0a01e4
 
     .line 109
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/TaskViewHeader;->findViewById(I)Landroid/view/View;
@@ -602,7 +602,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mLockedImageView:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a00dc
+    const v0, 0x7f0a0111
 
     .line 110
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/TaskViewHeader;->findViewById(I)Landroid/view/View;

@@ -39,17 +39,17 @@
 .method constructor <init>()V
     .locals 2
 
-    .line 2541
+    .line 2558
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, -0x1
 
-    .line 2547
+    .line 2564
     iput-wide v0, p0, Lcom/miui/home/launcher/CellLayout$CellInfo;->screenId:J
 
     const/4 v0, -0x1
 
-    .line 2548
+    .line 2565
     iput v0, p0, Lcom/miui/home/launcher/CellLayout$CellInfo;->screenType:I
 
     return-void
@@ -60,7 +60,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 2553
+    .line 2570
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

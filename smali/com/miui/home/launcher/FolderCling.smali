@@ -149,7 +149,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/FolderCling;->mEditStateChangedMessageHandler:Lcom/miui/home/launcher/common/messages/EditStateChangedMessageHandler;
 
-    .line 631
+    .line 634
     new-instance v0, Lcom/miui/home/launcher/FolderCling$UpdateFolderPaddingHandler;
 
     const/4 v1, 0x0
@@ -158,21 +158,21 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/FolderCling;->mUpdateFolderPaddingHandler:Lcom/miui/home/launcher/FolderCling$UpdateFolderPaddingHandler;
 
-    .line 632
+    .line 635
     new-instance v0, Lcom/miui/home/launcher/FolderCling$CancelEmptySpaceLongClickHandler;
 
     invoke-direct {v0, p0, v1}, Lcom/miui/home/launcher/FolderCling$CancelEmptySpaceLongClickHandler;-><init>(Lcom/miui/home/launcher/FolderCling;Lcom/miui/home/launcher/FolderCling$1;)V
 
     iput-object v0, p0, Lcom/miui/home/launcher/FolderCling;->mCancelEmptySpaceLongClickHandler:Lcom/miui/home/launcher/FolderCling$CancelEmptySpaceLongClickHandler;
 
-    .line 633
+    .line 636
     new-instance v0, Lcom/miui/home/launcher/FolderCling$FolderUpdateLayoutHandler;
 
     invoke-direct {v0, p0, v1}, Lcom/miui/home/launcher/FolderCling$FolderUpdateLayoutHandler;-><init>(Lcom/miui/home/launcher/FolderCling;Lcom/miui/home/launcher/FolderCling$1;)V
 
     iput-object v0, p0, Lcom/miui/home/launcher/FolderCling;->mFolderUpdateLayoutHandler:Lcom/miui/home/launcher/FolderCling$FolderUpdateLayoutHandler;
 
-    .line 635
+    .line 638
     new-instance v0, Lcom/miui/home/launcher/FolderCling$LoadingFinishMessageHandler;
 
     invoke-direct {v0, p0, v1}, Lcom/miui/home/launcher/FolderCling$LoadingFinishMessageHandler;-><init>(Lcom/miui/home/launcher/FolderCling;Lcom/miui/home/launcher/FolderCling$1;)V
@@ -190,7 +190,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f070130
+    const v0, 0x7f070169
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -203,7 +203,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f070146
+    const v0, 0x7f07017f
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -216,7 +216,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f070128
+    const v0, 0x7f070160
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -396,7 +396,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f070127
+    const v0, 0x7f07015f
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -462,7 +462,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f07013c
+    const v0, 0x7f070175
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -538,12 +538,12 @@
 
     if-eqz p1, :cond_0
 
-    const p1, 0x7f100061
+    const p1, 0x7f110062
 
     goto :goto_0
 
     :cond_0
-    const p1, 0x7f10007d
+    const p1, 0x7f11007e
 
     :goto_0
     const/4 v1, 0x1
@@ -1166,7 +1166,7 @@
 .method public dispatchTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 1
 
-    .line 660
+    .line 663
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/FolderCling;->onFilterTouchEventForSecurity(Landroid/view/MotionEvent;)Z
 
     move-result v0
@@ -1175,7 +1175,7 @@
 
     iget-object v0, p0, Lcom/miui/home/launcher/FolderCling;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    .line 661
+    .line 664
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->isUninstallDialogShowing()Z
 
     move-result v0
@@ -1184,7 +1184,7 @@
 
     iget-object v0, p0, Lcom/miui/home/launcher/FolderCling;->mFolder:Lcom/miui/home/launcher/Folder;
 
-    .line 662
+    .line 665
     invoke-virtual {v0}, Lcom/miui/home/launcher/Folder;->isEditing()Z
 
     move-result v0
@@ -1193,7 +1193,7 @@
 
     iget-object v0, p0, Lcom/miui/home/launcher/FolderCling;->mOnLongClickAgent:Lcom/miui/home/launcher/OnLongClickAgent;
 
-    .line 663
+    .line 666
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/OnLongClickAgent;->onDispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
@@ -1204,7 +1204,7 @@
 
     return p1
 
-    .line 666
+    .line 669
     :cond_0
     invoke-super {p0, p1}, Lcom/miui/launcher/views/LauncherFrameLayout;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -1256,7 +1256,7 @@
         }
     .end annotation
 
-    .line 697
+    .line 700
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderCling;->getFolder()Lcom/miui/home/launcher/Folder;
 
     move-result-object v0
@@ -1293,7 +1293,7 @@
 
     const/4 v0, 0x5
 
-    .line 646
+    .line 649
     new-array v0, v0, [Ljava/lang/Object;
 
     iget-object v1, p0, Lcom/miui/home/launcher/FolderCling;->mEditStateChangedMessageHandler:Lcom/miui/home/launcher/common/messages/EditStateChangedMessageHandler;
@@ -1612,12 +1612,12 @@
 .method public onDestory()V
     .locals 2
 
-    .line 683
+    .line 686
     iget-object v0, p0, Lcom/miui/home/launcher/FolderCling;->mFolder:Lcom/miui/home/launcher/Folder;
 
     if-eqz v0, :cond_1
 
-    .line 684
+    .line 687
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -1630,7 +1630,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 685
+    .line 688
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -1639,7 +1639,7 @@
 
     invoke-virtual {v0, v1}, Lorg/greenrobot/eventbus/EventBus;->unregister(Ljava/lang/Object;)V
 
-    .line 688
+    .line 691
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderCling;->getFolderInfo()Lcom/miui/home/launcher/FolderInfo;
 
@@ -1647,7 +1647,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 690
+    .line 693
     invoke-virtual {v0}, Lcom/miui/home/launcher/FolderInfo;->getRecommendController()Lcom/miui/home/launcher/commercial/recommend/RecommendController;
 
     move-result-object v0
@@ -1663,19 +1663,19 @@
 .method public onDeviceProfileChanged(Lcom/miui/home/launcher/DeviceProfile;)V
     .locals 1
 
-    .line 710
+    .line 713
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderCling;->getRecommendScreen()Lcom/miui/home/launcher/commercial/recommend/RecommendScreen;
 
     move-result-object p1
 
     invoke-interface {p1}, Lcom/miui/home/launcher/commercial/recommend/RecommendScreen;->onScreenOrientationChanged()V
 
-    .line 711
+    .line 714
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderCling;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    const v0, 0x7f070130
+    const v0, 0x7f070169
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -1683,12 +1683,12 @@
 
     iput p1, p0, Lcom/miui/home/launcher/FolderCling;->mEditModePaddingTop:I
 
-    .line 712
+    .line 715
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderCling;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    const v0, 0x7f070146
+    const v0, 0x7f07017f
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -1696,12 +1696,12 @@
 
     iput p1, p0, Lcom/miui/home/launcher/FolderCling;->mNormalModePaddingTop:I
 
-    .line 713
+    .line 716
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderCling;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    const v0, 0x7f070128
+    const v0, 0x7f070160
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -1828,12 +1828,12 @@
 .method public onFilterTouchEventForSecurity(Landroid/view/MotionEvent;)Z
     .locals 1
 
-    .line 702
+    .line 705
     iget-boolean v0, p0, Lcom/miui/home/launcher/FolderCling;->mOpened:Z
 
     if-eqz v0, :cond_0
 
-    .line 703
+    .line 706
     invoke-super {p0, p1}, Lcom/miui/launcher/views/LauncherFrameLayout;->onFilterTouchEventForSecurity(Landroid/view/MotionEvent;)Z
 
     move-result p1
@@ -1857,7 +1857,7 @@
     .line 96
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/FolderCling;->setChildrenDrawingOrderEnabled(Z)V
 
-    const v0, 0x7f0a0112
+    const v0, 0x7f0a0166
 
     .line 97
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/FolderCling;->findViewById(I)Landroid/view/View;
@@ -1868,7 +1868,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/FolderCling;->mFolder:Lcom/miui/home/launcher/Folder;
 
-    const v0, 0x7f0a01f0
+    const v0, 0x7f0a02a1
 
     .line 98
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/FolderCling;->findViewById(I)Landroid/view/View;
@@ -1879,7 +1879,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/FolderCling;->mSmallIconsRecommendScreen:Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;
 
-    const v0, 0x7f0a027f
+    const v0, 0x7f0a034c
 
     .line 99
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/FolderCling;->findViewById(I)Landroid/view/View;
@@ -1911,7 +1911,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0600cf
+    const v1, 0x7f0600f7
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -2026,7 +2026,7 @@
 .method public onScreenSizeChanged()V
     .locals 1
 
-    .line 717
+    .line 720
     iget-object v0, p0, Lcom/miui/home/launcher/FolderCling;->mFolder:Lcom/miui/home/launcher/Folder;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Folder;->onScreenSizeChanged()V
@@ -2055,10 +2055,10 @@
 
     const/4 v0, 0x0
 
-    .line 677
+    .line 680
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/FolderCling;->setRecommendButtonChecked(Z)V
 
-    .line 678
+    .line 681
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderCling;->getFolderInfo()Lcom/miui/home/launcher/FolderInfo;
 
     move-result-object v1
@@ -2067,7 +2067,7 @@
 
     const/4 v0, 0x1
 
-    .line 679
+    .line 682
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/FolderCling;->updateRecommendScreenVisibility(Z)V
 
     return-void
@@ -2508,7 +2508,7 @@
 
     const-string v0, "FolderCling"
 
-    const-string v1, "updateRecommendScreenVisibility==>find not release res, just release"
+    const-string/jumbo v1, "updateRecommendScreenVisibility==>find not release res, just release"
 
     .line 425
     invoke-static {v0, v1}, Lcom/miui/home/launcher/MiuiHomeLog;->log(Ljava/lang/String;Ljava/lang/String;)V

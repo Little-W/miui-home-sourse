@@ -24,10 +24,10 @@
 .method constructor <init>(Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
     .locals 0
 
-    .line 234
+    .line 233
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$AppSelectListUpdateCallback;->this$0:Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;
 
-    .line 235
+    .line 234
     invoke-direct {p0, p2}, Lcom/miui/home/launcher/allapps/AdapterListUpdateCallback;-><init>(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     return-void
@@ -38,7 +38,7 @@
 .method protected isAnimEnable()Z
     .locals 1
 
-    .line 240
+    .line 239
     iget-boolean v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$AppSelectListUpdateCallback;->mAnimEnable:Z
 
     return v0
@@ -47,7 +47,7 @@
 .method setAnimEnable(Z)V
     .locals 0
 
-    .line 244
+    .line 243
     iput-boolean p1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$AppSelectListUpdateCallback;->mAnimEnable:Z
 
     return-void

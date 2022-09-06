@@ -28,7 +28,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 431
+    .line 465
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
     return-void
@@ -37,7 +37,7 @@
 .method synthetic constructor <init>(Lcom/market/sdk/XiaomiUpdateAgent$1;)V
     .locals 0
 
-    .line 431
+    .line 465
     invoke-direct {p0}, Lcom/market/sdk/XiaomiUpdateAgent$CheckUpdateTask$CheckDownloadTask;-><init>()V
 
     return-void
@@ -48,8 +48,8 @@
 .method protected varargs doInBackground([Ljava/lang/Void;)Ljava/lang/Boolean;
     .locals 1
 
-    .line 435
-    invoke-static {}, Lcom/market/sdk/XiaomiUpdateAgent;->access$200()Ljava/lang/ref/WeakReference;
+    .line 469
+    invoke-static {}, Lcom/market/sdk/XiaomiUpdateAgent;->access$100()Ljava/lang/ref/WeakReference;
 
     move-result-object p1
 
@@ -63,20 +63,20 @@
 
     const/4 p1, 0x0
 
-    .line 437
+    .line 471
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
 
     return-object p1
 
-    .line 439
+    .line 473
     :cond_0
     invoke-static {p1}, Lcom/market/sdk/DownloadInstallManager;->getManager(Landroid/content/Context;)Lcom/market/sdk/DownloadInstallManager;
 
     move-result-object p1
 
-    invoke-static {}, Lcom/market/sdk/XiaomiUpdateAgent;->access$400()Lcom/market/sdk/LocalAppInfo;
+    invoke-static {}, Lcom/market/sdk/XiaomiUpdateAgent;->access$200()Lcom/market/sdk/LocalAppInfo;
 
     move-result-object v0
 
@@ -94,7 +94,7 @@
 .method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 431
+    .line 465
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/market/sdk/XiaomiUpdateAgent$CheckUpdateTask$CheckDownloadTask;->doInBackground([Ljava/lang/Void;)Ljava/lang/Boolean;
@@ -107,15 +107,21 @@
 .method protected onPostExecute(Ljava/lang/Boolean;)V
     .locals 0
 
-    .line 444
+    .line 478
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    .line 445
-    invoke-static {}, Lcom/market/sdk/XiaomiUpdateAgent$CheckUpdateTask;->access$1300()V
+    invoke-static {}, Lcom/market/sdk/XiaomiUpdateAgent$CheckUpdateTask;->access$800()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    .line 479
+    invoke-static {}, Lcom/market/sdk/XiaomiUpdateAgent$CheckUpdateTask;->access$900()V
 
     :cond_0
     return-void
@@ -124,7 +130,7 @@
 .method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
 
-    .line 431
+    .line 465
     check-cast p1, Ljava/lang/Boolean;
 
     invoke-virtual {p0, p1}, Lcom/market/sdk/XiaomiUpdateAgent$CheckUpdateTask$CheckDownloadTask;->onPostExecute(Ljava/lang/Boolean;)V

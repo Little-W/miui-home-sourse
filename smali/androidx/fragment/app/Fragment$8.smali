@@ -30,7 +30,7 @@
 .method constructor <init>(Landroidx/fragment/app/Fragment;Landroidx/arch/core/util/Function;Ljava/util/concurrent/atomic/AtomicReference;Landroidx/activity/result/contract/ActivityResultContract;Landroidx/activity/result/ActivityResultCallback;)V
     .locals 0
 
-    .line 3442
+    .line 3493
     iput-object p1, p0, Landroidx/fragment/app/Fragment$8;->this$0:Landroidx/fragment/app/Fragment;
 
     iput-object p2, p0, Landroidx/fragment/app/Fragment$8;->val$registryProvider:Landroidx/arch/core/util/Function;
@@ -53,14 +53,14 @@
 .method onPreAttached()V
     .locals 6
 
-    .line 3445
+    .line 3496
     iget-object v0, p0, Landroidx/fragment/app/Fragment$8;->this$0:Landroidx/fragment/app/Fragment;
 
     invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->generateActivityResultKey()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3446
+    .line 3497
     iget-object v1, p0, Landroidx/fragment/app/Fragment$8;->val$registryProvider:Landroidx/arch/core/util/Function;
 
     const/4 v2, 0x0
@@ -71,7 +71,7 @@
 
     check-cast v1, Landroidx/activity/result/ActivityResultRegistry;
 
-    .line 3447
+    .line 3498
     iget-object v2, p0, Landroidx/fragment/app/Fragment$8;->val$ref:Ljava/util/concurrent/atomic/AtomicReference;
 
     iget-object v3, p0, Landroidx/fragment/app/Fragment$8;->this$0:Landroidx/fragment/app/Fragment;

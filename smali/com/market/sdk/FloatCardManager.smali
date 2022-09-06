@@ -23,7 +23,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 19
+    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,7 +32,7 @@
 .method static synthetic access$000(Lcom/market/sdk/FloatCardManager;Landroid/net/Uri;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    .line 19
+    .line 22
     invoke-direct {p0, p1, p2}, Lcom/market/sdk/FloatCardManager;->getStringFromUri(Landroid/net/Uri;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -41,54 +41,47 @@
 .end method
 
 .method public static get(Landroid/app/Application;)Lcom/market/sdk/FloatCardManager;
-    .locals 2
-
-    .line 29
-    sget-object v0, Lcom/market/sdk/FloatCardManager;->sInstance:Lcom/market/sdk/FloatCardManager;
-
-    if-nez v0, :cond_1
-
-    .line 30
-    const-class v0, Lcom/market/sdk/FloatCardManager;
-
-    monitor-enter v0
-
-    .line 31
-    :try_start_0
-    sget-object v1, Lcom/market/sdk/FloatCardManager;->sInstance:Lcom/market/sdk/FloatCardManager;
-
-    if-nez v1, :cond_0
+    .locals 1
 
     .line 32
-    new-instance v1, Lcom/market/sdk/FloatCardManager;
+    sget-object p0, Lcom/market/sdk/FloatCardManager;->sInstance:Lcom/market/sdk/FloatCardManager;
 
-    invoke-direct {v1}, Lcom/market/sdk/FloatCardManager;-><init>()V
-
-    sput-object v1, Lcom/market/sdk/FloatCardManager;->sInstance:Lcom/market/sdk/FloatCardManager;
+    if-nez p0, :cond_1
 
     .line 33
-    new-instance v1, Lcom/market/sdk/AppActivityLifecycleTracker;
+    const-class p0, Lcom/market/sdk/FloatCardManager;
 
-    invoke-direct {v1}, Lcom/market/sdk/AppActivityLifecycleTracker;-><init>()V
+    monitor-enter p0
 
-    invoke-virtual {p0, v1}, Landroid/app/Application;->registerActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V
+    .line 34
+    :try_start_0
+    sget-object v0, Lcom/market/sdk/FloatCardManager;->sInstance:Lcom/market/sdk/FloatCardManager;
+
+    if-nez v0, :cond_0
 
     .line 35
+    new-instance v0, Lcom/market/sdk/FloatCardManager;
+
+    invoke-direct {v0}, Lcom/market/sdk/FloatCardManager;-><init>()V
+
+    sput-object v0, Lcom/market/sdk/FloatCardManager;->sInstance:Lcom/market/sdk/FloatCardManager;
+
+    .line 37
     :cond_0
-    monitor-exit v0
+    monitor-exit p0
 
     goto :goto_0
 
     :catchall_0
-    move-exception p0
+    move-exception v0
 
-    monitor-exit v0
+    monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p0
+    throw v0
 
-    .line 37
+    .line 39
     :cond_1
     :goto_0
     sget-object p0, Lcom/market/sdk/FloatCardManager;->sInstance:Lcom/market/sdk/FloatCardManager;
@@ -101,7 +94,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 226
+    .line 228
     invoke-virtual {p1}, Landroid/net/Uri;->isHierarchical()Z
 
     move-result v0
@@ -110,7 +103,7 @@
 
     goto :goto_0
 
-    .line 229
+    .line 231
     :cond_0
     invoke-virtual {p1, p2}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
@@ -130,7 +123,7 @@
 .method public downloadByFloat(Ljava/lang/String;)Z
     .locals 3
 
-    .line 82
+    .line 84
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -149,7 +142,7 @@
 
     goto :goto_0
 
-    .line 86
+    .line 88
     :cond_0
     :try_start_0
     invoke-static {}, Lcom/market/sdk/utils/AppGlobal;->getContext()Landroid/content/Context;
@@ -162,7 +155,7 @@
 
     move-result-object v0
 
-    .line 87
+    .line 89
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
@@ -180,7 +173,7 @@
 
     const-string v0, "MarketManager"
 
-    .line 90
+    .line 92
     invoke-virtual {p1}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -199,7 +192,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 64
+    .line 66
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -221,7 +214,7 @@
 
     move p2, v0
 
-    .line 70
+    .line 72
     :cond_1
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -239,7 +232,7 @@
 
     move-result-object p1
 
-    .line 72
+    .line 74
     :try_start_0
     invoke-static {}, Lcom/market/sdk/utils/AppGlobal;->getContext()Landroid/content/Context;
 
@@ -251,7 +244,7 @@
 
     move-result-object p2
 
-    .line 73
+    .line 75
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
@@ -267,7 +260,7 @@
 
     const-string p2, "MarketManager"
 
-    .line 76
+    .line 78
     invoke-virtual {p1}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -280,7 +273,7 @@
 .method public downloadOnly(Ljava/lang/String;)Z
     .locals 3
 
-    .line 49
+    .line 51
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -291,7 +284,7 @@
 
     return v1
 
-    .line 53
+    .line 55
     :cond_0
     :try_start_0
     invoke-static {}, Lcom/market/sdk/utils/AppGlobal;->getContext()Landroid/content/Context;
@@ -304,7 +297,7 @@
 
     move-result-object v0
 
-    .line 54
+    .line 56
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
@@ -322,7 +315,7 @@
 
     const-string v0, "MarketManager"
 
-    .line 57
+    .line 59
     invoke-virtual {p1}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -335,7 +328,7 @@
 .method public lifecycleChanged(Landroid/app/Activity;I)Z
     .locals 2
 
-    .line 216
+    .line 218
     :try_start_0
     invoke-static {}, Lcom/market/sdk/utils/AppGlobal;->getContext()Landroid/content/Context;
 
@@ -347,7 +340,7 @@
 
     move-result-object v0
 
-    .line 217
+    .line 219
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -365,7 +358,7 @@
 
     const-string p2, "MarketManager"
 
-    .line 220
+    .line 222
     invoke-virtual {p1}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -380,7 +373,7 @@
 .method public pauseByFloat(Ljava/lang/String;)Z
     .locals 4
 
-    .line 128
+    .line 130
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -399,7 +392,7 @@
 
     goto :goto_1
 
-    .line 134
+    .line 136
     :cond_0
     :try_start_0
     invoke-static {}, Lcom/market/sdk/utils/AppGlobal;->getContext()Landroid/content/Context;
@@ -412,7 +405,7 @@
 
     move-result-object v0
 
-    .line 135
+    .line 137
     invoke-static {}, Lcom/market/sdk/MarketManager;->getManager()Lcom/market/sdk/MarketManager;
 
     move-result-object v2
@@ -425,7 +418,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 136
+    .line 138
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
@@ -434,7 +427,7 @@
 
     goto :goto_0
 
-    .line 138
+    .line 140
     :cond_1
     new-instance v2, Ljava/lang/Thread;
 
@@ -444,7 +437,7 @@
 
     invoke-direct {v2, v3}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 146
+    .line 148
     invoke-virtual {v2}, Ljava/lang/Thread;->start()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -459,7 +452,7 @@
 
     const-string v0, "MarketManager"
 
-    .line 150
+    .line 152
     invoke-virtual {p1}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -478,7 +471,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 97
+    .line 99
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -500,7 +493,7 @@
 
     move p2, v0
 
-    .line 103
+    .line 105
     :cond_1
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -518,7 +511,7 @@
 
     move-result-object p1
 
-    .line 106
+    .line 108
     :try_start_0
     invoke-static {}, Lcom/market/sdk/utils/AppGlobal;->getContext()Landroid/content/Context;
 
@@ -530,7 +523,7 @@
 
     move-result-object p2
 
-    .line 107
+    .line 109
     invoke-static {}, Lcom/market/sdk/MarketManager;->getManager()Lcom/market/sdk/MarketManager;
 
     move-result-object v2
@@ -543,7 +536,7 @@
 
     if-eqz v2, :cond_2
 
-    .line 108
+    .line 110
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
@@ -552,7 +545,7 @@
 
     goto :goto_0
 
-    .line 110
+    .line 112
     :cond_2
     new-instance v2, Ljava/lang/Thread;
 
@@ -562,7 +555,7 @@
 
     invoke-direct {v2, v3}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 118
+    .line 120
     invoke-virtual {v2}, Ljava/lang/Thread;->start()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -575,7 +568,7 @@
 
     const-string p2, "MarketManager"
 
-    .line 122
+    .line 124
     invoke-virtual {p1}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -588,7 +581,7 @@
 .method public resumeByFloat(Ljava/lang/String;)Z
     .locals 4
 
-    .line 188
+    .line 190
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -607,7 +600,7 @@
 
     goto :goto_1
 
-    .line 193
+    .line 195
     :cond_0
     :try_start_0
     invoke-static {}, Lcom/market/sdk/utils/AppGlobal;->getContext()Landroid/content/Context;
@@ -620,7 +613,7 @@
 
     move-result-object v0
 
-    .line 194
+    .line 196
     invoke-static {}, Lcom/market/sdk/MarketManager;->getManager()Lcom/market/sdk/MarketManager;
 
     move-result-object v2
@@ -633,7 +626,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 195
+    .line 197
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
@@ -642,7 +635,7 @@
 
     goto :goto_0
 
-    .line 197
+    .line 199
     :cond_1
     new-instance v2, Ljava/lang/Thread;
 
@@ -652,7 +645,7 @@
 
     invoke-direct {v2, v3}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 205
+    .line 207
     invoke-virtual {v2}, Ljava/lang/Thread;->start()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -667,7 +660,7 @@
 
     const-string v0, "MarketManager"
 
-    .line 209
+    .line 211
     invoke-virtual {p1}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -686,7 +679,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 157
+    .line 159
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -708,7 +701,7 @@
 
     move p2, v0
 
-    .line 163
+    .line 165
     :cond_1
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -726,7 +719,7 @@
 
     move-result-object p1
 
-    .line 166
+    .line 168
     :try_start_0
     invoke-static {}, Lcom/market/sdk/utils/AppGlobal;->getContext()Landroid/content/Context;
 
@@ -738,7 +731,7 @@
 
     move-result-object p2
 
-    .line 167
+    .line 169
     invoke-static {}, Lcom/market/sdk/MarketManager;->getManager()Lcom/market/sdk/MarketManager;
 
     move-result-object v2
@@ -751,7 +744,7 @@
 
     if-eqz v2, :cond_2
 
-    .line 168
+    .line 170
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
@@ -760,7 +753,7 @@
 
     goto :goto_0
 
-    .line 170
+    .line 172
     :cond_2
     new-instance v2, Ljava/lang/Thread;
 
@@ -770,7 +763,7 @@
 
     invoke-direct {v2, v3}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 178
+    .line 180
     invoke-virtual {v2}, Ljava/lang/Thread;->start()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -783,7 +776,7 @@
 
     const-string p2, "MarketManager"
 
-    .line 182
+    .line 184
     invoke-virtual {p1}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -796,8 +789,8 @@
 .method public setUseGetApps(Z)V
     .locals 1
 
-    .line 41
-    sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
+    .line 43
+    sget-boolean v0, Lmiuix/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     if-eqz v0, :cond_0
 
@@ -805,7 +798,7 @@
 
     const-string p1, "com.xiaomi.mipicks"
 
-    .line 42
+    .line 44
     iput-object p1, p0, Lcom/market/sdk/FloatCardManager;->targetPackage:Ljava/lang/String;
 
     goto :goto_0
@@ -813,9 +806,9 @@
     :cond_0
     const-string p1, "MarketManager"
 
-    const-string v0, "you can only set target market package name in international build!"
+    const-string/jumbo v0, "you can only set target market package name in international build!"
 
-    .line 44
+    .line 46
     invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0

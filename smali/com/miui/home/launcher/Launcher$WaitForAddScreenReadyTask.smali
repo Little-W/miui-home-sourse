@@ -39,30 +39,30 @@
 .method public constructor <init>(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/ItemInfo;JJIIZLjava/lang/Runnable;)V
     .locals 0
 
-    .line 7223
+    .line 7249
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$WaitForAddScreenReadyTask;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 7224
+    .line 7250
     iput-object p2, p0, Lcom/miui/home/launcher/Launcher$WaitForAddScreenReadyTask;->mItemInfo:Lcom/miui/home/launcher/ItemInfo;
 
-    .line 7225
+    .line 7251
     iput-wide p3, p0, Lcom/miui/home/launcher/Launcher$WaitForAddScreenReadyTask;->mScreenId:J
 
-    .line 7226
+    .line 7252
     iput-wide p5, p0, Lcom/miui/home/launcher/Launcher$WaitForAddScreenReadyTask;->mContainer:J
 
-    .line 7227
+    .line 7253
     iput p7, p0, Lcom/miui/home/launcher/Launcher$WaitForAddScreenReadyTask;->mCellX:I
 
-    .line 7228
+    .line 7254
     iput p8, p0, Lcom/miui/home/launcher/Launcher$WaitForAddScreenReadyTask;->mCellY:I
 
-    .line 7229
+    .line 7255
     iput-boolean p9, p0, Lcom/miui/home/launcher/Launcher$WaitForAddScreenReadyTask;->mAddLaterIfInvalid:Z
 
-    .line 7230
+    .line 7256
     iput-object p10, p0, Lcom/miui/home/launcher/Launcher$WaitForAddScreenReadyTask;->mCallback:Ljava/lang/Runnable;
 
     return-void
@@ -73,7 +73,7 @@
 .method public getItemInfo()Lcom/miui/home/launcher/ItemInfo;
     .locals 1
 
-    .line 7239
+    .line 7265
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$WaitForAddScreenReadyTask;->mItemInfo:Lcom/miui/home/launcher/ItemInfo;
 
     return-object v0
@@ -82,7 +82,7 @@
 .method public run()V
     .locals 10
 
-    .line 7235
+    .line 7261
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$WaitForAddScreenReadyTask;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$WaitForAddScreenReadyTask;->mItemInfo:Lcom/miui/home/launcher/ItemInfo;

@@ -68,7 +68,7 @@
 .method public constructor <init>(Landroid/view/View;Lcom/google/android/filament/utils/Manipulator;)V
     .locals 1
 
-    const-string v0, "view"
+    const-string/jumbo v0, "view"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 

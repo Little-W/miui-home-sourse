@@ -215,7 +215,7 @@
 
     move-result-object v0
 
-    const-string v1, "version"
+    const-string/jumbo v1, "version"
 
     .line 36
     invoke-virtual {p0}, Lcom/google/android/gms/common/Feature;->getVersion()J

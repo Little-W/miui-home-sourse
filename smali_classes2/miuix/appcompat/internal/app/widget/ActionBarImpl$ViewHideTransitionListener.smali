@@ -30,10 +30,10 @@
 .method public constructor <init>(Landroid/view/View;)V
     .locals 1
 
-    .line 1802
+    .line 1814
     invoke-direct {p0}, Lmiuix/animation/listener/TransitionListener;-><init>()V
 
-    .line 1803
+    .line 1815
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -48,7 +48,7 @@
 .method public onComplete(Ljava/lang/Object;Lmiuix/animation/listener/UpdateInfo;)V
     .locals 0
 
-    .line 1808
+    .line 1820
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$ViewHideTransitionListener;->mRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -61,7 +61,7 @@
 
     const/16 p2, 0x8
 
-    .line 1810
+    .line 1822
     invoke-virtual {p1, p2}, Landroid/view/View;->setVisibility(I)V
 
     :cond_0

@@ -198,7 +198,7 @@
 
     const-string p1, "Launcher.UninstallWidgetReceiver"
 
-    const-string p2, "widget not added"
+    const-string/jumbo p2, "widget not added"
 
     .line 43
     invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
@@ -215,7 +215,7 @@
 
     const-string p1, "Launcher.UninstallWidgetReceiver"
 
-    const-string p2, "widget remove failed: workspace is null"
+    const-string/jumbo p2, "widget remove failed: workspace is null"
 
     .line 47
     invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
@@ -286,7 +286,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v4, "widget remove success:"
+    const-string/jumbo v4, "widget remove success:"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

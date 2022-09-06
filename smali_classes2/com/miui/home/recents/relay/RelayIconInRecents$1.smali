@@ -32,42 +32,19 @@
 
 
 # virtual methods
-.method public onBegin(Ljava/lang/Object;)V
-    .locals 1
-
-    const-string v0, "show"
-
-    .line 57
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    .line 58
-    iget-object p1, p0, Lcom/miui/home/recents/relay/RelayIconInRecents$1;->this$0:Lcom/miui/home/recents/relay/RelayIconInRecents;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Lcom/miui/home/recents/relay/RelayIconInRecents;->setVisibility(I)V
-
-    :cond_0
-    return-void
-.end method
-
 .method public onComplete(Ljava/lang/Object;)V
     .locals 1
 
     const-string v0, "hide"
 
-    .line 63
+    .line 56
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 64
+    .line 57
     iget-object p1, p0, Lcom/miui/home/recents/relay/RelayIconInRecents$1;->this$0:Lcom/miui/home/recents/relay/RelayIconInRecents;
 
     const/4 v0, 0x4

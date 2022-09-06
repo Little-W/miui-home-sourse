@@ -49,6 +49,13 @@
         <item>Per defecte</item>
         <item>Clàssic</item>
     </string-array>
+    <string-array name="monochrome_color_entries">
+        <item>Per defecte</item>
+        <item>Blau</item>
+        <item>Verd</item>
+        <item>Lila</item>
+        <item>Marró</item>
+    </string-array>
     <string-array name="transformation_entries">
         <item>Diapositiva</item>
         <item>Fos</item>

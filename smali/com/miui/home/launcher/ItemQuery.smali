@@ -41,7 +41,7 @@
 
     const-string v14, "spanY"
 
-    const-string v15, "uri"
+    const-string/jumbo v15, "uri"
 
     const-string v16, "displayMode"
 

@@ -36,7 +36,7 @@
 .method constructor <init>(Lcom/market/sdk/MarketManager;Ljava/lang/String;Ljava/lang/String;Z)V
     .locals 0
 
-    .line 187
+    .line 178
     iput-object p1, p0, Lcom/market/sdk/MarketManager$2;->this$0:Lcom/market/sdk/MarketManager;
 
     iput-object p2, p0, Lcom/market/sdk/MarketManager$2;->val$path:Ljava/lang/String;
@@ -55,7 +55,7 @@
 .method public innerInvoke(Lcom/market/sdk/IMarketService;)Lcom/market/sdk/ApkVerifyInfo;
     .locals 3
 
-    .line 190
+    .line 181
     :try_start_0
     iget-object v0, p0, Lcom/market/sdk/MarketManager$2;->val$path:Ljava/lang/String;
 
@@ -85,7 +85,7 @@
         }
     .end annotation
 
-    .line 187
+    .line 178
     invoke-virtual {p0, p1}, Lcom/market/sdk/MarketManager$2;->innerInvoke(Lcom/market/sdk/IMarketService;)Lcom/market/sdk/ApkVerifyInfo;
 
     move-result-object p1

@@ -36,7 +36,7 @@
 .method static constructor <clinit>()V
     .locals 5
 
-    .line 983
+    .line 991
     new-instance v0, Lcom/miui/maml/ScreenElementRoot$ExtraResource$MetricsType;
 
     const-string v1, "DEN"
@@ -47,7 +47,7 @@
 
     sput-object v0, Lcom/miui/maml/ScreenElementRoot$ExtraResource$MetricsType;->DEN:Lcom/miui/maml/ScreenElementRoot$ExtraResource$MetricsType;
 
-    .line 984
+    .line 992
     new-instance v0, Lcom/miui/maml/ScreenElementRoot$ExtraResource$MetricsType;
 
     const-string v1, "SW"
@@ -58,7 +58,7 @@
 
     sput-object v0, Lcom/miui/maml/ScreenElementRoot$ExtraResource$MetricsType;->SW:Lcom/miui/maml/ScreenElementRoot$ExtraResource$MetricsType;
 
-    .line 985
+    .line 993
     new-instance v0, Lcom/miui/maml/ScreenElementRoot$ExtraResource$MetricsType;
 
     const-string v1, "SW_DEN"
@@ -71,7 +71,7 @@
 
     const/4 v0, 0x3
 
-    .line 982
+    .line 990
     new-array v0, v0, [Lcom/miui/maml/ScreenElementRoot$ExtraResource$MetricsType;
 
     sget-object v1, Lcom/miui/maml/ScreenElementRoot$ExtraResource$MetricsType;->DEN:Lcom/miui/maml/ScreenElementRoot$ExtraResource$MetricsType;
@@ -99,7 +99,7 @@
         }
     .end annotation
 
-    .line 982
+    .line 990
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -108,7 +108,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/miui/maml/ScreenElementRoot$ExtraResource$MetricsType;
     .locals 1
 
-    .line 982
+    .line 990
     const-class v0, Lcom/miui/maml/ScreenElementRoot$ExtraResource$MetricsType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -123,7 +123,7 @@
 .method public static values()[Lcom/miui/maml/ScreenElementRoot$ExtraResource$MetricsType;
     .locals 1
 
-    .line 982
+    .line 990
     sget-object v0, Lcom/miui/maml/ScreenElementRoot$ExtraResource$MetricsType;->$VALUES:[Lcom/miui/maml/ScreenElementRoot$ExtraResource$MetricsType;
 
     invoke-virtual {v0}, [Lcom/miui/maml/ScreenElementRoot$ExtraResource$MetricsType;->clone()Ljava/lang/Object;

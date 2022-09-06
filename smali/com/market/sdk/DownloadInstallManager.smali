@@ -372,7 +372,13 @@
     .line 152
     iget-object v0, p0, Lcom/market/sdk/DownloadInstallManager;->mContext:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/market/sdk/XiaomiUpdateAgent;->getAppInfo(Landroid/content/Context;)Lcom/market/sdk/LocalAppInfo;
+    iget-object v1, p0, Lcom/market/sdk/DownloadInstallManager;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/market/sdk/XiaomiUpdateAgent;->getAppInfo(Landroid/content/Context;Ljava/lang/String;)Lcom/market/sdk/LocalAppInfo;
 
     move-result-object v0
 
@@ -401,7 +407,7 @@
 
     move-result-object v2
 
-    const-string v3, "update_download"
+    const-string/jumbo v3, "update_download"
 
     sget-object v4, Lcom/market/sdk/utils/Constants$Update;->UPDATE_PROJECTION:[Ljava/lang/String;
 
@@ -456,7 +462,7 @@
 
     invoke-direct {v1}, Lcom/market/sdk/XiaomiUpdateAgent$UpdateInfo;-><init>()V
 
-    const-string v2, "version_code"
+    const-string/jumbo v2, "version_code"
 
     .line 168
     invoke-interface {v0, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -726,7 +732,7 @@
 
     move-result-object v1
 
-    const-string v2, "update_download"
+    const-string/jumbo v2, "update_download"
 
     sget-object v3, Lcom/market/sdk/utils/Constants$Update;->UPDATE_PROJECTION:[Ljava/lang/String;
 

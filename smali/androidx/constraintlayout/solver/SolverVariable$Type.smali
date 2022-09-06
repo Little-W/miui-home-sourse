@@ -40,7 +40,7 @@
 .method static constructor <clinit>()V
     .locals 7
 
-    .line 69
+    .line 76
     new-instance v0, Landroidx/constraintlayout/solver/SolverVariable$Type;
 
     const-string v1, "UNRESTRICTED"
@@ -51,7 +51,7 @@
 
     sput-object v0, Landroidx/constraintlayout/solver/SolverVariable$Type;->UNRESTRICTED:Landroidx/constraintlayout/solver/SolverVariable$Type;
 
-    .line 73
+    .line 80
     new-instance v0, Landroidx/constraintlayout/solver/SolverVariable$Type;
 
     const-string v1, "CONSTANT"
@@ -62,7 +62,7 @@
 
     sput-object v0, Landroidx/constraintlayout/solver/SolverVariable$Type;->CONSTANT:Landroidx/constraintlayout/solver/SolverVariable$Type;
 
-    .line 77
+    .line 84
     new-instance v0, Landroidx/constraintlayout/solver/SolverVariable$Type;
 
     const-string v1, "SLACK"
@@ -73,7 +73,7 @@
 
     sput-object v0, Landroidx/constraintlayout/solver/SolverVariable$Type;->SLACK:Landroidx/constraintlayout/solver/SolverVariable$Type;
 
-    .line 81
+    .line 88
     new-instance v0, Landroidx/constraintlayout/solver/SolverVariable$Type;
 
     const-string v1, "ERROR"
@@ -84,7 +84,7 @@
 
     sput-object v0, Landroidx/constraintlayout/solver/SolverVariable$Type;->ERROR:Landroidx/constraintlayout/solver/SolverVariable$Type;
 
-    .line 85
+    .line 92
     new-instance v0, Landroidx/constraintlayout/solver/SolverVariable$Type;
 
     const-string v1, "UNKNOWN"
@@ -97,7 +97,7 @@
 
     const/4 v0, 0x5
 
-    .line 65
+    .line 72
     new-array v0, v0, [Landroidx/constraintlayout/solver/SolverVariable$Type;
 
     sget-object v1, Landroidx/constraintlayout/solver/SolverVariable$Type;->UNRESTRICTED:Landroidx/constraintlayout/solver/SolverVariable$Type;
@@ -133,7 +133,7 @@
         }
     .end annotation
 
-    .line 65
+    .line 72
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -142,7 +142,7 @@
 .method public static valueOf(Ljava/lang/String;)Landroidx/constraintlayout/solver/SolverVariable$Type;
     .locals 1
 
-    .line 65
+    .line 72
     const-class v0, Landroidx/constraintlayout/solver/SolverVariable$Type;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -157,7 +157,7 @@
 .method public static values()[Landroidx/constraintlayout/solver/SolverVariable$Type;
     .locals 1
 
-    .line 65
+    .line 72
     sget-object v0, Landroidx/constraintlayout/solver/SolverVariable$Type;->$VALUES:[Landroidx/constraintlayout/solver/SolverVariable$Type;
 
     invoke-virtual {v0}, [Landroidx/constraintlayout/solver/SolverVariable$Type;->clone()Ljava/lang/Object;

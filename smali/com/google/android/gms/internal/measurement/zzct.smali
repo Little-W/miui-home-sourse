@@ -65,7 +65,7 @@
 
     const-string v0, "key"
 
-    const-string v1, "value"
+    const-string/jumbo v1, "value"
 
     .line 76
     filled-new-array {v0, v1}, [Ljava/lang/String;

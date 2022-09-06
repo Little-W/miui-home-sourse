@@ -145,6 +145,7 @@
 
     goto :goto_0
 
+    .line 123
     :cond_0
     new-instance p2, Lmiuix/animation/property/ValueProperty;
 
@@ -152,6 +153,7 @@
 
     goto :goto_1
 
+    .line 122
     :cond_1
     :goto_0
     new-instance p2, Lmiuix/animation/property/IntValueProperty;

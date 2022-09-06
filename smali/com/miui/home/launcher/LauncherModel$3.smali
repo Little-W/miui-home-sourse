@@ -29,7 +29,7 @@
 .method constructor <init>(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/util/ArrayList;)V
     .locals 0
 
-    .line 558
+    .line 567
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherModel$3;->val$cr:Landroid/content/ContentResolver;
 
     iput-object p2, p0, Lcom/miui/home/launcher/LauncherModel$3;->val$authority:Ljava/lang/String;
@@ -46,7 +46,7 @@
 .method public run()V
     .locals 3
 
-    .line 561
+    .line 570
     :try_start_0
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$3;->val$cr:Landroid/content/ContentResolver;
 
@@ -61,7 +61,7 @@
 
     return-void
 
-    .line 565
+    .line 574
     :catch_0
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -71,7 +71,7 @@
 
     throw v0
 
-    .line 563
+    .line 572
     :catch_1
     new-instance v0, Ljava/lang/RuntimeException;
 

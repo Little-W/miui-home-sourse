@@ -27,7 +27,7 @@
 .method constructor <init>(Ljava/lang/Class;Lcom/google/gson/TypeAdapter;)V
     .locals 0
 
-    .line 881
+    .line 880
     iput-object p1, p0, Lcom/google/gson/internal/bind/TypeAdapters$35;->val$clazz:Ljava/lang/Class;
 
     iput-object p2, p0, Lcom/google/gson/internal/bind/TypeAdapters$35;->val$typeAdapter:Lcom/google/gson/TypeAdapter;
@@ -54,12 +54,12 @@
         }
     .end annotation
 
-    .line 884
+    .line 883
     invoke-virtual {p2}, Lcom/google/gson/reflect/TypeToken;->getRawType()Ljava/lang/Class;
 
     move-result-object p1
 
-    .line 885
+    .line 884
     iget-object p2, p0, Lcom/google/gson/internal/bind/TypeAdapters$35;->val$clazz:Ljava/lang/Class;
 
     invoke-virtual {p2, p1}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
@@ -72,7 +72,7 @@
 
     return-object p1
 
-    .line 888
+    .line 887
     :cond_0
     new-instance p2, Lcom/google/gson/internal/bind/TypeAdapters$35$1;
 
@@ -84,7 +84,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 904
+    .line 903
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

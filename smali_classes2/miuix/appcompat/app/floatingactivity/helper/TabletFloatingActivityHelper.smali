@@ -778,28 +778,31 @@
 .method private makeDownMoveMaxY()V
     .locals 3
 
-    const/4 v0, 0x2
-
     .line 443
-    new-array v0, v0, [I
+    invoke-direct {p0}, Lmiuix/appcompat/app/floatingactivity/helper/TabletFloatingActivityHelper;->getAnimPanel()Landroid/view/View;
+
+    move-result-object v0
 
     .line 444
-    iget-object v1, p0, Lmiuix/appcompat/app/floatingactivity/helper/TabletFloatingActivityHelper;->mPanel:Landroid/view/View;
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->getLocationInWindow([I)V
-
-    .line 445
-    iget-object v1, p0, Lmiuix/appcompat/app/floatingactivity/helper/TabletFloatingActivityHelper;->mFloatingRoot:Landroid/view/View;
-
-    invoke-virtual {v1}, Landroid/view/View;->getHeight()I
+    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
 
     move-result v1
 
-    const/4 v2, 0x1
+    iget-object v2, p0, Lmiuix/appcompat/app/floatingactivity/helper/TabletFloatingActivityHelper;->mFloatingRoot:Landroid/view/View;
 
-    aget v0, v0, v2
+    invoke-virtual {v2}, Landroid/view/View;->getHeight()I
 
-    sub-int/2addr v1, v0
+    move-result v2
+
+    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
+
+    move-result v0
+
+    sub-int/2addr v2, v0
+
+    div-int/lit8 v2, v2, 0x2
+
+    add-int/2addr v1, v2
 
     int-to-float v0, v1
 
@@ -1074,15 +1077,15 @@
 .method public delegateFinishFloatingActivityInternal()Z
     .locals 4
 
-    .line 450
+    .line 449
     iget-boolean v0, p0, Lmiuix/appcompat/app/floatingactivity/helper/TabletFloatingActivityHelper;->mIsFloatingWindow:Z
 
     if-eqz v0, :cond_0
 
-    .line 451
+    .line 450
     invoke-direct {p0}, Lmiuix/appcompat/app/floatingactivity/helper/TabletFloatingActivityHelper;->getSnapShotAndSetPanel()V
 
-    .line 452
+    .line 451
     iget-object v0, p0, Lmiuix/appcompat/app/floatingactivity/helper/TabletFloatingActivityHelper;->mFloatingActivitySlidDownHandler:Landroid/os/Handler;
 
     new-instance v1, Lmiuix/appcompat/app/floatingactivity/helper/TabletFloatingActivityHelper$FinishFloatingActivityDelegate;
@@ -1097,7 +1100,7 @@
 
     goto :goto_0
 
-    .line 455
+    .line 454
     :cond_0
     iget-object v0, p0, Lmiuix/appcompat/app/floatingactivity/helper/TabletFloatingActivityHelper;->mOnFloatingCallback:Lmiuix/appcompat/app/floatingactivity/OnFloatingCallback;
 
@@ -1105,10 +1108,10 @@
 
     const/4 v1, 0x0
 
-    .line 456
+    .line 455
     invoke-interface {v0, v1}, Lmiuix/appcompat/app/floatingactivity/OnFloatingCallback;->getSnapShotAndSetPanel(Lmiuix/appcompat/app/AppCompatActivity;)V
 
-    .line 458
+    .line 457
     :cond_1
     new-instance v0, Lmiuix/appcompat/app/floatingactivity/helper/TabletFloatingActivityHelper$FinishFloatingActivityDelegate;
 
@@ -1127,12 +1130,12 @@
 .method public executeCloseEnterAnimation()V
     .locals 1
 
-    .line 501
+    .line 500
     iget-boolean v0, p0, Lmiuix/appcompat/app/floatingactivity/helper/TabletFloatingActivityHelper;->mIsFloatingWindow:Z
 
     if-eqz v0, :cond_0
 
-    .line 502
+    .line 501
     iget-object v0, p0, Lmiuix/appcompat/app/floatingactivity/helper/TabletFloatingActivityHelper;->mPanel:Landroid/view/View;
 
     invoke-static {v0}, Lmiuix/appcompat/app/floatingactivity/FloatingSwitcherAnimHelper;->executeCloseEnterAnimation(Landroid/view/View;)V
@@ -1144,12 +1147,12 @@
 .method public executeOpenEnterAnimation()V
     .locals 1
 
-    .line 487
+    .line 486
     iget-boolean v0, p0, Lmiuix/appcompat/app/floatingactivity/helper/TabletFloatingActivityHelper;->mIsFloatingWindow:Z
 
     if-eqz v0, :cond_0
 
-    .line 488
+    .line 487
     iget-object v0, p0, Lmiuix/appcompat/app/floatingactivity/helper/TabletFloatingActivityHelper;->mPanel:Landroid/view/View;
 
     invoke-static {v0}, Lmiuix/appcompat/app/floatingactivity/FloatingSwitcherAnimHelper;->executeOpenEnterAnimation(Landroid/view/View;)V
@@ -1161,12 +1164,12 @@
 .method public executeOpenExitAnimation()V
     .locals 1
 
-    .line 494
+    .line 493
     iget-boolean v0, p0, Lmiuix/appcompat/app/floatingactivity/helper/TabletFloatingActivityHelper;->mIsFloatingWindow:Z
 
     if-eqz v0, :cond_0
 
-    .line 495
+    .line 494
     iget-object v0, p0, Lmiuix/appcompat/app/floatingactivity/helper/TabletFloatingActivityHelper;->mPanel:Landroid/view/View;
 
     invoke-static {v0}, Lmiuix/appcompat/app/floatingactivity/FloatingSwitcherAnimHelper;->executeOpenExitAnimation(Landroid/view/View;)V
@@ -1187,7 +1190,7 @@
 .method public getFloatingLayoutParam()Landroid/view/ViewGroup$LayoutParams;
     .locals 1
 
-    .line 465
+    .line 464
     iget-object v0, p0, Lmiuix/appcompat/app/floatingactivity/helper/TabletFloatingActivityHelper;->mFloatingLayoutParam:Landroid/view/ViewGroup$LayoutParams;
 
     return-object v0

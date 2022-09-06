@@ -293,6 +293,7 @@
     <string name="eras_bc">ກ່ອນຄ.ສ</string>
     <string name="evening">ຕອນບ່າຍ</string>
     <string name="exit_overview_because_task_stack_changed">ປິດຫຼ້າສຸດເນື່ອງຈາກການປ່ຽນແປງທີ່ເກີດຂຶ້ນໃນພື້ນຫຼັງ</string>
+    <string name="external_not_support_split_screen_j18">ໜ້າຈໍແຍກບໍ່ຖືກຮອງຮັບການແບ່ງໜ້າຈໍ</string>
     <string name="failed_to_delete_temporary">ບໍ່ສາມາດຍ້າຍໄດ້</string>
     <string name="failed_to_drop">ບໍ່ສາມາດຍ້າຍໄດ້</string>
     <string name="failed_to_drop_widget_invalid">Widget ນີ້ໃຊ້ບໍ່ໄດ້</string>
@@ -497,6 +498,7 @@
     <string name="midnight">ກາງຄືນ</string>
     <string name="minus_one_screen">App vault</string>
     <string name="miui_screen_config_title">ການຕັ້ງຄ່າໜ້າຈໍຫຼັກ</string>
+    <string name="miui_widget_menu_replace_text">​ສັບ​ປ່ຽນ</string>
     <string name="miuix_access_state_desc">ເລືອກແລ້ວ</string>
     <string name="miuix_appcompat_action_mode_deselect_all">ຍົກເລີກການເລືອກ</string>
     <string name="miuix_appcompat_action_mode_select_all">​ເລືອກ​ທັງ​ໝົດ</string>
@@ -523,6 +525,8 @@
     <string name="monday">ວັນຈັນ</string>
     <string name="monday_short">ຈັນ</string>
     <string name="monday_shortest">ຈັນ</string>
+    <string name="monochrome_summary">Change background color for compatible icons</string>
+    <string name="monochrome_title">Background color</string>
     <string name="month_april">ເດືອນເມສາ</string>
     <string name="month_april_short">ເມສາ</string>
     <string name="month_april_shortest">ເມສາ</string>

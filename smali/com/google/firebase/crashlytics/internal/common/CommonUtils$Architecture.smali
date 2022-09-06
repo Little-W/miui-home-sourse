@@ -255,7 +255,7 @@
     .line 151
     sget-object v0, Lcom/google/firebase/crashlytics/internal/common/CommonUtils$Architecture;->matcher:Ljava/util/Map;
 
-    const-string v1, "x86"
+    const-string/jumbo v1, "x86"
 
     sget-object v2, Lcom/google/firebase/crashlytics/internal/common/CommonUtils$Architecture;->X86_32:Lcom/google/firebase/crashlytics/internal/common/CommonUtils$Architecture;
 

@@ -1,4 +1,4 @@
-.class final Lmiuix/pickerwidget/date/DateUtils$1;
+.class Lmiuix/pickerwidget/date/DateUtils$1;
 .super Lmiuix/core/util/Pools$Manager;
 .source "DateUtils.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 

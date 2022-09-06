@@ -28,7 +28,7 @@
 .method constructor <init>(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;Landroid/os/Handler;ZLjava/lang/ref/WeakReference;Ljava/lang/ref/WeakReference;Landroid/graphics/Rect;)V
     .locals 0
 
-    .line 206
+    .line 209
     iput-object p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$1;->this$0:Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;
 
     iput-object p4, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$1;->val$view:Ljava/lang/ref/WeakReference;
@@ -47,19 +47,19 @@
 .method public onCreateAnimation([Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;Lcom/miui/home/recents/LauncherAnimationRunner$AnimationResult;)V
     .locals 12
 
-    .line 211
+    .line 214
     new-instance v1, Landroid/animation/AnimatorSet;
 
     invoke-direct {v1}, Landroid/animation/AnimatorSet;-><init>()V
 
-    .line 213
+    .line 216
     iget-object v0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$1;->this$0:Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;
 
     invoke-static {v0, p1}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->access$000(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;[Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;)Z
 
     move-result v0
 
-    .line 214
+    .line 217
     iget-object v2, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$1;->this$0:Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;
 
     const/4 v3, 0x1
@@ -85,7 +85,7 @@
     :goto_0
     move v5, v3
 
-    .line 217
+    .line 220
     :goto_1
     iget-object v2, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$1;->val$view:Ljava/lang/ref/WeakReference;
 
@@ -97,7 +97,7 @@
 
     check-cast v7, Landroid/view/View;
 
-    .line 218
+    .line 221
     iget-object v2, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$1;->val$launcherRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -110,15 +110,13 @@
 
     if-eqz v2, :cond_2
 
-    .line 221
-    iget-object v6, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$1;->this$0:Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;
+    .line 224
+    invoke-static {v2}, Lcom/miui/home/recents/util/BoostHelperCompat;->boostMainThreadAndRenderThread(Lcom/miui/home/launcher/Launcher;)V
 
-    invoke-static {v6, v2}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->access$200(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;Lcom/miui/home/launcher/Launcher;)V
-
-    .line 222
+    .line 225
     invoke-virtual {v2, v3}, Lcom/miui/home/launcher/Launcher;->animateWallpaperZoom(Z)V
 
-    .line 224
+    .line 227
     :cond_2
     iget-object v2, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$1;->this$0:Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;
 
@@ -128,7 +126,7 @@
 
     if-eqz v2, :cond_3
 
-    .line 225
+    .line 228
     iget-object v0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$1;->this$0:Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;
 
     move-object v2, v7
@@ -146,7 +144,7 @@
     :cond_3
     if-eqz v0, :cond_6
 
-    .line 229
+    .line 232
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isPhone()Z
 
     move-result v0
@@ -179,7 +177,7 @@
     :cond_6
     move v9, v5
 
-    .line 231
+    .line 234
     :goto_3
     iget-object v6, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$1;->this$0:Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;
 
@@ -189,14 +187,14 @@
 
     move-object v11, p2
 
-    invoke-static/range {v6 .. v11}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->access$300(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;Landroid/view/View;[Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;ZLandroid/graphics/Rect;Lcom/miui/home/recents/LauncherAnimationRunner$AnimationResult;)V
+    invoke-static/range {v6 .. v11}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->access$200(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;Landroid/view/View;[Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;ZLandroid/graphics/Rect;Lcom/miui/home/recents/LauncherAnimationRunner$AnimationResult;)V
 
     goto :goto_4
 
     :cond_7
     if-eqz p2, :cond_8
 
-    .line 234
+    .line 237
     invoke-virtual {p2}, Lcom/miui/home/recents/LauncherAnimationRunner$AnimationResult;->finish()V
 
     :cond_8

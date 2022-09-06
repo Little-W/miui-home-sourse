@@ -101,8 +101,8 @@
         0x10101ab
         0x10101ac
         0x1010354
-        0x7f040258
-        0x7f040259
+        0x7f0403ef
+        0x7f0403f0
     .end array-data
 
     :array_1
@@ -113,14 +113,14 @@
         0x10101ab
         0x10101ac
         0x1010354
-        0x7f040258
-        0x7f040259
+        0x7f0403ef
+        0x7f0403f0
     .end array-data
 
     :array_2
     .array-data 4
         0x1010354
-        0x7f040258
-        0x7f040259
+        0x7f0403ef
+        0x7f0403f0
     .end array-data
 .end method

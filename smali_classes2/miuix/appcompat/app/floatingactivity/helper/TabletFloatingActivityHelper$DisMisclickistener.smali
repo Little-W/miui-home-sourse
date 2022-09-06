@@ -29,7 +29,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 581
+    .line 580
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,7 +38,7 @@
 .method synthetic constructor <init>(Lmiuix/appcompat/app/floatingactivity/helper/TabletFloatingActivityHelper$1;)V
     .locals 0
 
-    .line 581
+    .line 580
     invoke-direct {p0}, Lmiuix/appcompat/app/floatingactivity/helper/TabletFloatingActivityHelper$DisMisclickistener;-><init>()V
 
     return-void
@@ -49,7 +49,7 @@
 .method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 6
 
-    .line 589
+    .line 588
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
@@ -58,18 +58,18 @@
 
     goto :goto_0
 
-    .line 596
+    .line 595
     :pswitch_0
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
 
-    .line 597
+    .line 596
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
 
     move-result p2
 
-    .line 598
+    .line 597
     iget v1, p0, Lmiuix/appcompat/app/floatingactivity/helper/TabletFloatingActivityHelper$DisMisclickistener;->mStartX:F
 
     sub-float/2addr v0, v1
@@ -98,7 +98,7 @@
 
     move-result-wide v0
 
-    .line 599
+    .line 598
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -111,7 +111,7 @@
 
     move-result p1
 
-    .line 600
+    .line 599
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
@@ -120,7 +120,7 @@
 
     sub-long/2addr v2, v4
 
-    .line 601
+    .line 600
     invoke-static {}, Landroid/view/ViewConfiguration;->getLongPressTimeout()I
 
     move-result p2
@@ -142,7 +142,7 @@
 
     return p1
 
-    .line 591
+    .line 590
     :pswitch_1
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
 
@@ -150,14 +150,14 @@
 
     iput p1, p0, Lmiuix/appcompat/app/floatingactivity/helper/TabletFloatingActivityHelper$DisMisclickistener;->mStartX:F
 
-    .line 592
+    .line 591
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
 
     move-result p1
 
     iput p1, p0, Lmiuix/appcompat/app/floatingactivity/helper/TabletFloatingActivityHelper$DisMisclickistener;->mStartY:F
 
-    .line 593
+    .line 592
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide p1

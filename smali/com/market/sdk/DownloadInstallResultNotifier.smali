@@ -27,7 +27,7 @@
     goto :goto_0
 
     :pswitch_0
-    const-string p0, "\u5b58\u50a8\u5206\u533a\u4e0d\u53ef\u7528\uff0c\u8bf7\u68c0\u67e5SD\u5361"
+    const-string/jumbo p0, "\u5b58\u50a8\u5206\u533a\u4e0d\u53ef\u7528\uff0c\u8bf7\u68c0\u67e5SD\u5361"
 
     .line 20
     invoke-static {p0}, Lcom/market/sdk/DownloadInstallResultNotifier;->showToast(Ljava/lang/String;)V
@@ -35,7 +35,7 @@
     goto :goto_0
 
     :pswitch_1
-    const-string p0, "\u8fde\u63a5\u4e0b\u8f7d\u7ba1\u7406\u5668\u5931\u8d25\uff0c\u8bf7\u5728\u5e94\u7528\u7ba1\u7406\u4e2d\u68c0\u67e5\u4e0b\u8f7d\u7ba1\u7406\u5668\u7684\u72b6\u6001"
+    const-string/jumbo p0, "\u8fde\u63a5\u4e0b\u8f7d\u7ba1\u7406\u5668\u5931\u8d25\uff0c\u8bf7\u5728\u5e94\u7528\u7ba1\u7406\u4e2d\u68c0\u67e5\u4e0b\u8f7d\u7ba1\u7406\u5668\u7684\u72b6\u6001"
 
     .line 24
     invoke-static {p0}, Lcom/market/sdk/DownloadInstallResultNotifier;->showToast(Ljava/lang/String;)V

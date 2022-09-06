@@ -105,7 +105,7 @@
 .method public getUpdateDrawerModeForCloudConfig()Z
     .locals 2
 
-    const-string v0, "update_drawer_mode_for_cloud_config"
+    const-string/jumbo v0, "update_drawer_mode_for_cloud_config"
 
     const/4 v1, 0x0
 
@@ -345,7 +345,7 @@
 .method public setUpdateDrawerModeForCloudConfig(Z)V
     .locals 1
 
-    const-string v0, "update_drawer_mode_for_cloud_config"
+    const-string/jumbo v0, "update_drawer_mode_for_cloud_config"
 
     .line 89
     invoke-virtual {p0, v0, p1}, Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;->putBoolean(Ljava/lang/String;Z)V

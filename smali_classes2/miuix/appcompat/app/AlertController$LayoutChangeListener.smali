@@ -35,17 +35,17 @@
 .method constructor <init>(Lmiuix/appcompat/app/AlertController;)V
     .locals 1
 
-    .line 1669
+    .line 1763
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1670
+    .line 1764
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lmiuix/appcompat/app/AlertController$LayoutChangeListener;->mHost:Ljava/lang/ref/WeakReference;
 
-    .line 1671
+    .line 1765
     new-instance p1, Landroid/graphics/Rect;
 
     invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
@@ -60,7 +60,7 @@
 
     const/4 v0, 0x0
 
-    .line 1729
+    .line 1823
     invoke-virtual {p1, p2, v0, p3, v0}, Landroid/view/View;->setPadding(IIII)V
 
     return-void
@@ -69,18 +69,18 @@
 .method private handleImeChange(Landroid/view/View;Landroid/graphics/Rect;Lmiuix/appcompat/app/AlertController;)V
     .locals 1
 
-    .line 1710
+    .line 1804
     invoke-virtual {p1}, Landroid/view/View;->getHeight()I
 
     move-result p1
 
-    invoke-static {p3}, Lmiuix/appcompat/app/AlertController;->access$200(Lmiuix/appcompat/app/AlertController;)I
+    invoke-static {p3}, Lmiuix/appcompat/app/AlertController;->access$500(Lmiuix/appcompat/app/AlertController;)I
 
     move-result v0
 
     sub-int/2addr p1, v0
 
-    .line 1711
+    .line 1805
     iget p2, p2, Landroid/graphics/Rect;->bottom:I
 
     sub-int/2addr p1, p2
@@ -89,7 +89,7 @@
 
     neg-int p1, p1
 
-    .line 1720
+    .line 1814
     invoke-static {}, Lmiuix/appcompat/widget/DialogAnimHelper;->cancelAnimator()V
 
     goto :goto_0
@@ -97,9 +97,9 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 1725
+    .line 1819
     :goto_0
-    invoke-static {p3, p1}, Lmiuix/appcompat/app/AlertController;->access$300(Lmiuix/appcompat/app/AlertController;I)V
+    invoke-static {p3, p1}, Lmiuix/appcompat/app/AlertController;->access$600(Lmiuix/appcompat/app/AlertController;I)V
 
     return-void
 .end method
@@ -107,7 +107,7 @@
 .method private handleMultiWindowLandscapeChange(Lmiuix/appcompat/app/AlertController;I)V
     .locals 3
 
-    .line 1733
+    .line 1827
     invoke-static {p1}, Lmiuix/appcompat/app/AlertController;->access$1100(Lmiuix/appcompat/app/AlertController;)Landroid/content/Context;
 
     move-result-object v0
@@ -116,18 +116,18 @@
 
     move-result v0
 
+    const/4 v1, 0x0
+
     if-eqz v0, :cond_2
 
-    .line 1734
+    .line 1828
     iget-object v0, p0, Lmiuix/appcompat/app/AlertController$LayoutChangeListener;->mWindowVisibleFrame:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->left:I
 
-    const/4 v1, 0x0
-
     if-lez v0, :cond_1
 
-    .line 1735
+    .line 1829
     invoke-static {p1}, Lmiuix/appcompat/app/AlertController;->access$1100(Lmiuix/appcompat/app/AlertController;)Landroid/content/Context;
 
     move-result-object v0
@@ -144,14 +144,14 @@
 
     sub-int v0, p2, v0
 
-    .line 1737
+    .line 1831
     iget-object v2, p0, Lmiuix/appcompat/app/AlertController$LayoutChangeListener;->mWindowVisibleFrame:Landroid/graphics/Rect;
 
     iget v2, v2, Landroid/graphics/Rect;->right:I
 
     if-ne v2, p2, :cond_0
 
-    .line 1739
+    .line 1833
     invoke-static {p1}, Lmiuix/appcompat/app/AlertController;->access$1200(Lmiuix/appcompat/app/AlertController;)Landroid/view/View;
 
     move-result-object p1
@@ -160,7 +160,7 @@
 
     goto :goto_0
 
-    .line 1742
+    .line 1836
     :cond_0
     invoke-static {p1}, Lmiuix/appcompat/app/AlertController;->access$1200(Lmiuix/appcompat/app/AlertController;)Landroid/view/View;
 
@@ -170,7 +170,7 @@
 
     goto :goto_0
 
-    .line 1745
+    .line 1839
     :cond_1
     invoke-static {p1}, Lmiuix/appcompat/app/AlertController;->access$1200(Lmiuix/appcompat/app/AlertController;)Landroid/view/View;
 
@@ -178,7 +178,32 @@
 
     invoke-direct {p0, p1, v1, v1}, Lmiuix/appcompat/app/AlertController$LayoutChangeListener;->changeViewPadding(Landroid/view/View;II)V
 
+    goto :goto_0
+
+    .line 1842
     :cond_2
+    invoke-static {p1}, Lmiuix/appcompat/app/AlertController;->access$1200(Lmiuix/appcompat/app/AlertController;)Landroid/view/View;
+
+    move-result-object p1
+
+    .line 1843
+    invoke-virtual {p1}, Landroid/view/View;->getPaddingLeft()I
+
+    move-result p2
+
+    if-gtz p2, :cond_3
+
+    invoke-virtual {p1}, Landroid/view/View;->getPaddingRight()I
+
+    move-result p2
+
+    if-lez p2, :cond_4
+
+    .line 1845
+    :cond_3
+    invoke-direct {p0, p1, v1, v1}, Lmiuix/appcompat/app/AlertController$LayoutChangeListener;->changeViewPadding(Landroid/view/View;II)V
+
+    :cond_4
     :goto_0
     return-void
 .end method
@@ -188,7 +213,7 @@
 .method public hasNavigationBarHeightInMultiWindowMode()Z
     .locals 3
 
-    .line 1757
+    .line 1857
     iget-object v0, p0, Lmiuix/appcompat/app/AlertController$LayoutChangeListener;->mHost:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -219,7 +244,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/Display;->getRealSize(Landroid/graphics/Point;)V
 
-    .line 1758
+    .line 1858
     iget-object v0, p0, Lmiuix/appcompat/app/AlertController$LayoutChangeListener;->mWindowVisibleFrame:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->left:I
@@ -248,7 +273,7 @@
 
     if-ne v0, v2, :cond_1
 
-    .line 1760
+    .line 1860
     iget-object v0, p0, Lmiuix/appcompat/app/AlertController$LayoutChangeListener;->mWindowVisibleFrame:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->top:I
@@ -286,7 +311,7 @@
 .method public onLayoutChange(Landroid/view/View;IIIIIIII)V
     .locals 0
 
-    .line 1677
+    .line 1771
     iget-object p2, p0, Lmiuix/appcompat/app/AlertController$LayoutChangeListener;->mHost:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -297,32 +322,32 @@
 
     if-eqz p2, :cond_1
 
-    .line 1680
+    .line 1774
     iget-object p3, p0, Lmiuix/appcompat/app/AlertController$LayoutChangeListener;->mWindowVisibleFrame:Landroid/graphics/Rect;
 
     invoke-virtual {p1, p3}, Landroid/view/View;->getWindowVisibleDisplayFrame(Landroid/graphics/Rect;)V
 
-    .line 1681
+    .line 1775
     invoke-static {p2}, Lmiuix/appcompat/app/AlertController;->access$900(Lmiuix/appcompat/app/AlertController;)V
 
-    .line 1682
+    .line 1776
     invoke-direct {p0, p2, p4}, Lmiuix/appcompat/app/AlertController$LayoutChangeListener;->handleMultiWindowLandscapeChange(Lmiuix/appcompat/app/AlertController;I)V
 
-    .line 1683
+    .line 1777
     sget p3, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 p4, 0x1e
 
     if-ge p3, p4, :cond_1
 
-    .line 1684
+    .line 1778
     invoke-virtual {p1}, Landroid/view/View;->findFocus()Landroid/view/View;
 
     move-result-object p3
 
     if-eqz p3, :cond_0
 
-    .line 1687
+    .line 1781
     iget-object p3, p0, Lmiuix/appcompat/app/AlertController$LayoutChangeListener;->mWindowVisibleFrame:Landroid/graphics/Rect;
 
     invoke-static {p2, p3}, Lmiuix/appcompat/app/AlertController;->access$1000(Lmiuix/appcompat/app/AlertController;Landroid/graphics/Rect;)Z
@@ -331,16 +356,16 @@
 
     if-nez p3, :cond_1
 
-    .line 1688
+    .line 1782
     iget-object p3, p0, Lmiuix/appcompat/app/AlertController$LayoutChangeListener;->mWindowVisibleFrame:Landroid/graphics/Rect;
 
     invoke-direct {p0, p1, p3, p2}, Lmiuix/appcompat/app/AlertController$LayoutChangeListener;->handleImeChange(Landroid/view/View;Landroid/graphics/Rect;Lmiuix/appcompat/app/AlertController;)V
 
     goto :goto_0
 
-    .line 1691
+    .line 1785
     :cond_0
-    invoke-static {p2}, Lmiuix/appcompat/app/AlertController;->access$500(Lmiuix/appcompat/app/AlertController;)Landroid/view/View;
+    invoke-static {p2}, Lmiuix/appcompat/app/AlertController;->access$300(Lmiuix/appcompat/app/AlertController;)Landroid/view/View;
 
     move-result-object p1
 
@@ -356,8 +381,8 @@
 
     const/4 p1, 0x0
 
-    .line 1692
-    invoke-static {p2, p1}, Lmiuix/appcompat/app/AlertController;->access$300(Lmiuix/appcompat/app/AlertController;I)V
+    .line 1786
+    invoke-static {p2, p1}, Lmiuix/appcompat/app/AlertController;->access$600(Lmiuix/appcompat/app/AlertController;I)V
 
     :cond_1
     :goto_0

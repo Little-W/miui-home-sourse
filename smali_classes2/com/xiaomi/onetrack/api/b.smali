@@ -61,7 +61,17 @@
 
 .field public static final ab:I = -0x1
 
-.field public static final ac:Ljava/lang/String; = "exp_id"
+.field public static final ac:Ljava/lang/String; = "tip"
+
+.field public static final ad:Ljava/lang/String; = "exp_id"
+
+.field public static final ae:Ljava/lang/String; = "onetrack_dau"
+
+.field public static final af:Ljava/lang/String; = "view"
+
+.field public static final ag:Ljava/lang/String; = "ot_login"
+
+.field public static final ah:Ljava/lang/String; = "ot_logout"
 
 .field public static final b:Ljava/lang/String; = "ot_logout"
 

@@ -353,7 +353,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f07006f
+    const v2, 0x7f070073
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -403,7 +403,7 @@
     .line 41
     invoke-super {p0}, Landroid/widget/ViewSwitcher;->onFinishInflate()V
 
-    const v0, 0x7f0a0097
+    const v0, 0x7f0a00ac
 
     .line 42
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/allapps/BaseAllAppsCategoryContainer;->findViewById(I)Landroid/view/View;
@@ -414,7 +414,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/allapps/BaseAllAppsCategoryContainer;->mListContainer:Lcom/miui/home/launcher/allapps/category/AllAppsCategoryListContainer;
 
-    const v0, 0x7f0a0096
+    const v0, 0x7f0a00ab
 
     .line 43
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/allapps/BaseAllAppsCategoryContainer;->findViewById(I)Landroid/view/View;

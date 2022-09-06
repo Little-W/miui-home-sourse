@@ -49,6 +49,13 @@
         <item>I paracaktuar</item>
         <item>Klasik</item>
     </string-array>
+    <string-array name="monochrome_color_entries">
+        <item>Paracaktuar</item>
+        <item>Blu</item>
+        <item>Jeshile</item>
+        <item>Vjollcë</item>
+        <item>Bojë kafe</item>
+    </string-array>
     <string-array name="transformation_entries">
         <item>Rrëshqitje</item>
         <item>Transformini Crossfade</item>

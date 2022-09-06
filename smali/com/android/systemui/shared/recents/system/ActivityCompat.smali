@@ -106,14 +106,14 @@
 
     move-result-object p1
 
-    const-string v3, "window:left"
+    const-string/jumbo v3, "window:left"
 
     .line 55
     aget v1, p1, v1
 
     invoke-virtual {v2, v3, v1}, Landroid/view/ViewHierarchyEncoder;->addProperty(Ljava/lang/String;I)V
 
-    const-string v1, "window:top"
+    const-string/jumbo v1, "window:top"
 
     const/4 v3, 0x1
 

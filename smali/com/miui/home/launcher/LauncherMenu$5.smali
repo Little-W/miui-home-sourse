@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/LauncherMenu;)V
     .locals 0
 
-    .line 136
+    .line 133
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherMenu$5;->this$0:Lcom/miui/home/launcher/LauncherMenu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onCheckedChanged(Landroid/widget/CompoundButton;Z)V
     .locals 1
 
-    .line 139
+    .line 136
     iget-object p1, p0, Lcom/miui/home/launcher/LauncherMenu$5;->this$0:Lcom/miui/home/launcher/LauncherMenu;
 
     invoke-static {p1}, Lcom/miui/home/launcher/LauncherMenu;->access$300(Lcom/miui/home/launcher/LauncherMenu;)Landroid/content/Context;
@@ -55,7 +55,7 @@
 
     if-eqz p2, :cond_0
 
-    .line 143
+    .line 140
     iget-object p1, p0, Lcom/miui/home/launcher/LauncherMenu$5;->this$0:Lcom/miui/home/launcher/LauncherMenu;
 
     invoke-static {p1}, Lcom/miui/home/launcher/LauncherMenu;->access$000(Lcom/miui/home/launcher/LauncherMenu;)Lcom/miui/home/launcher/Launcher;
@@ -70,7 +70,7 @@
 
     goto :goto_0
 
-    .line 145
+    .line 142
     :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/LauncherMenu$5;->this$0:Lcom/miui/home/launcher/LauncherMenu;
 
@@ -86,7 +86,7 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/ShakeMonitor;->startMonitorIfNeed(Ljava/lang/Runnable;)V
 
-    .line 147
+    .line 144
     :goto_0
     invoke-static {p2}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackHomeSettingSubLockLayout(Z)V
 

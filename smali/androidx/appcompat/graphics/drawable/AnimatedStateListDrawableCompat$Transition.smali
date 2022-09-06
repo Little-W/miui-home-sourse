@@ -18,7 +18,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 353
+    .line 354
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -27,7 +27,7 @@
 .method synthetic constructor <init>(Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$1;)V
     .locals 0
 
-    .line 353
+    .line 354
     invoke-direct {p0}, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$Transition;-><init>()V
 
     return-void

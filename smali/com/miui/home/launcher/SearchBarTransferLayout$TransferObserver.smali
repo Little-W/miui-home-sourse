@@ -40,7 +40,7 @@
 .method private clearTransferData()V
     .locals 2
 
-    .line 252
+    .line 253
     iget-object v0, p0, Lcom/miui/home/launcher/SearchBarTransferLayout$TransferObserver;->this$0:Lcom/miui/home/launcher/SearchBarTransferLayout;
 
     invoke-static {v0}, Lcom/miui/home/launcher/SearchBarTransferLayout;->access$600(Lcom/miui/home/launcher/SearchBarTransferLayout;)Landroid/widget/TextView;
@@ -51,7 +51,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 253
+    .line 254
     iget-object v0, p0, Lcom/miui/home/launcher/SearchBarTransferLayout$TransferObserver;->this$0:Lcom/miui/home/launcher/SearchBarTransferLayout;
 
     invoke-static {v0}, Lcom/miui/home/launcher/SearchBarTransferLayout;->access$000(Lcom/miui/home/launcher/SearchBarTransferLayout;)Landroid/widget/ImageView;
@@ -62,17 +62,17 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 254
+    .line 255
     iget-object v0, p0, Lcom/miui/home/launcher/SearchBarTransferLayout$TransferObserver;->this$0:Lcom/miui/home/launcher/SearchBarTransferLayout;
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/SearchBarTransferLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 255
+    .line 256
     iget-object v0, p0, Lcom/miui/home/launcher/SearchBarTransferLayout$TransferObserver;->this$0:Lcom/miui/home/launcher/SearchBarTransferLayout;
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/SearchBarTransferLayout;->setTag(Ljava/lang/Object;)V
 
-    .line 256
+    .line 257
     iget-object v0, p0, Lcom/miui/home/launcher/SearchBarTransferLayout$TransferObserver;->this$0:Lcom/miui/home/launcher/SearchBarTransferLayout;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/SearchBarTransferLayout;->hideTransferIfNeed()V
@@ -138,6 +138,11 @@
     .line 245
     iget-object v0, p0, Lcom/miui/home/launcher/SearchBarTransferLayout$TransferObserver;->this$0:Lcom/miui/home/launcher/SearchBarTransferLayout;
 
+    invoke-static {v0}, Lcom/miui/home/launcher/SearchBarTransferLayout;->access$700(Lcom/miui/home/launcher/SearchBarTransferLayout;)V
+
+    .line 246
+    iget-object v0, p0, Lcom/miui/home/launcher/SearchBarTransferLayout$TransferObserver;->this$0:Lcom/miui/home/launcher/SearchBarTransferLayout;
+
     invoke-static {v0}, Lcom/miui/home/launcher/SearchBarTransferLayout;->access$000(Lcom/miui/home/launcher/SearchBarTransferLayout;)Landroid/widget/ImageView;
 
     move-result-object v0
@@ -146,7 +151,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 246
+    .line 247
     iget-object v0, p0, Lcom/miui/home/launcher/SearchBarTransferLayout$TransferObserver;->this$0:Lcom/miui/home/launcher/SearchBarTransferLayout;
 
     new-instance v1, Lcom/miui/home/launcher/SearchBarTransferLayout$TransferObserver$TransferClickListener;
@@ -157,12 +162,12 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/SearchBarTransferLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 247
+    .line 248
     iget-object v0, p0, Lcom/miui/home/launcher/SearchBarTransferLayout$TransferObserver;->this$0:Lcom/miui/home/launcher/SearchBarTransferLayout;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/SearchBarTransferLayout;->setTag(Ljava/lang/Object;)V
 
-    .line 248
+    .line 249
     iget-object p1, p0, Lcom/miui/home/launcher/SearchBarTransferLayout$TransferObserver;->this$0:Lcom/miui/home/launcher/SearchBarTransferLayout;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/SearchBarTransferLayout;->showTransferIfNeed()V

@@ -19,7 +19,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 11
+    .line 12
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -36,32 +36,42 @@
 .method private onReceive$___twin___(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 6
 
-    .line 16
+    .line 17
+    invoke-static {}, Lcom/market/sdk/utils/Client;->isMiui()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    .line 20
+    :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "android.intent.action.DOWNLOAD_COMPLETE"
 
-    .line 17
+    .line 21
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     const-string v0, "extra_download_id"
 
     const-wide/16 v1, -0x1
 
-    .line 18
+    .line 22
     invoke-virtual {p2, v0, v1, v2}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
 
     move-result-wide v3
 
     const-string p2, "MarketSDKDownloadReceiver"
 
-    .line 19
+    .line 23
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -80,19 +90,19 @@
 
     cmp-long p2, v3, v1
 
-    if-nez p2, :cond_0
+    if-nez p2, :cond_1
 
     return-void
 
-    .line 23
-    :cond_0
+    .line 27
+    :cond_1
     invoke-static {p1}, Lcom/market/sdk/DownloadInstallManager;->getManager(Landroid/content/Context;)Lcom/market/sdk/DownloadInstallManager;
 
     move-result-object p1
 
     invoke-virtual {p1, v3, v4}, Lcom/market/sdk/DownloadInstallManager;->handleDownloadComplete(J)V
 
-    :cond_1
+    :cond_2
     return-void
 .end method
 

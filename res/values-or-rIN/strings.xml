@@ -293,6 +293,7 @@
     <string name="eras_bc">BCE</string>
     <string name="evening">ମଧ୍ୟାହ୍ନ</string>
     <string name="exit_overview_because_task_stack_changed">ପୃଷ୍ଠପଟରେ ପରିବର୍ତ୍ତନ ହେବା ଯୋଗୁଁ \"ବର୍ତ୍ତମାନର\" କୁ ବନ୍ଦ କରାଯାଇଛି</string>
+    <string name="external_not_support_split_screen_j18">ସ୍ପ୍ଲିଟ୍ ସ୍କ୍ରିନ୍ ବାହ୍ୟ ସ୍କ୍ରିନରେ ସମର୍ଥିତ ନୁହେଁ</string>
     <string name="failed_to_delete_temporary">ହଟାଯାଇ ପାରିବ ନାହିଁ</string>
     <string name="failed_to_drop">ସ୍ଥାନାନ୍ତରିତ କରାଯାଇପାରିବ ନାହିଁ</string>
     <string name="failed_to_drop_widget_invalid">ଏହି ୱିଜେଟ୍ ଅମାନ୍ୟ ଅଟେ</string>
@@ -497,6 +498,7 @@
     <string name="midnight">ରାତି</string>
     <string name="minus_one_screen">ଆପ୍ ଭଲ୍ଟ</string>
     <string name="miui_screen_config_title">ହୋମ୍‌ ସ୍କ୍ରିନ୍ ସେଟିଂସ୍‌</string>
+    <string name="miui_widget_menu_replace_text">ସୁଇଚ୍ କରନ୍ତୁ</string>
     <string name="miuix_access_state_desc">ଚୟନ କରାଯାଇଛି</string>
     <string name="miuix_appcompat_action_mode_deselect_all">ଅଚୟନ କରନ୍ତୁ</string>
     <string name="miuix_appcompat_action_mode_select_all">ସମସ୍ତ ଚୟନ କରନ୍ତୁ</string>
@@ -523,6 +525,8 @@
     <string name="monday">ସୋମବାର</string>
     <string name="monday_short">ସୋମ</string>
     <string name="monday_shortest">ସୋମ</string>
+    <string name="monochrome_summary">କମ୍ପାଟିବୁଲ ଆଇକନ ପାଇଁ ପୃଷ୍ଠଭୂମି ରଙ୍ଗ ବଦଳାନ୍ତୁ</string>
+    <string name="monochrome_title">ପୃଷ୍ଠଭୂମି ରଙ୍ଗ</string>
     <string name="month_april">ଏପ୍ରିଲ</string>
     <string name="month_april_short">ଏପ୍ରି</string>
     <string name="month_april_shortest">ଏପ୍ରି</string>

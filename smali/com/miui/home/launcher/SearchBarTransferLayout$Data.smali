@@ -36,31 +36,31 @@
 .method constructor <init>(Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/String;II)V
     .locals 0
 
-    .line 357
+    .line 358
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 358
+    .line 359
     iput-object p1, p0, Lcom/miui/home/launcher/SearchBarTransferLayout$Data;->dataId:Ljava/lang/String;
 
-    .line 359
+    .line 360
     iput-object p2, p0, Lcom/miui/home/launcher/SearchBarTransferLayout$Data;->title:Ljava/lang/String;
 
-    .line 360
+    .line 361
     iput-object p3, p0, Lcom/miui/home/launcher/SearchBarTransferLayout$Data;->intent:Landroid/content/Intent;
 
-    .line 361
+    .line 362
     iput-object p4, p0, Lcom/miui/home/launcher/SearchBarTransferLayout$Data;->action:Ljava/lang/String;
 
-    .line 362
+    .line 363
     iput-object p5, p0, Lcom/miui/home/launcher/SearchBarTransferLayout$Data;->icon:Landroid/graphics/drawable/Drawable;
 
-    .line 363
+    .line 364
     iput-object p6, p0, Lcom/miui/home/launcher/SearchBarTransferLayout$Data;->type:Ljava/lang/String;
 
-    .line 364
+    .line 365
     iput p7, p0, Lcom/miui/home/launcher/SearchBarTransferLayout$Data;->showTime:I
 
-    .line 365
+    .line 366
     iput p8, p0, Lcom/miui/home/launcher/SearchBarTransferLayout$Data;->textShowTime:I
 
     return-void

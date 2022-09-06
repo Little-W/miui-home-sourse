@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/recents/BaseRecentsImpl;Landroid/os/Handler;)V
     .locals 0
 
-    .line 226
+    .line 243
     iput-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$3;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -35,7 +35,7 @@
 .method public onChange(Z)V
     .locals 2
 
-    .line 229
+    .line 246
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$3;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     invoke-static {p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$200(Lcom/miui/home/recents/BaseRecentsImpl;)Landroid/content/Context;
@@ -46,7 +46,7 @@
 
     move-result-object p1
 
-    .line 230
+    .line 247
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl$3;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     invoke-static {v0}, Lcom/miui/home/recents/BaseRecentsImpl;->access$200(Lcom/miui/home/recents/BaseRecentsImpl;)Landroid/content/Context;
@@ -63,7 +63,7 @@
 
     invoke-virtual {v0, p1}, Lcom/miui/home/recents/BaseRecentsImpl;->setIsUseMiuiHomeAsDefaultHome(Z)V
 
-    .line 231
+    .line 248
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$3;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     invoke-static {p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$200(Lcom/miui/home/recents/BaseRecentsImpl;)Landroid/content/Context;

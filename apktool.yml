@@ -1,5 +1,5 @@
 !!brut.androlib.meta.MetaInfo
-apkFileName: 526.apk
+apkFileName: 727.apk
 compressionType: false
 doNotCompress:
 - resources.arsc
@@ -67,5 +67,5 @@ usesFramework:
   tag: null
 version: 2.6.1
 versionInfo:
-  versionCode: '439004982'
-  versionName: ALPHA-4.39.0.4982-05262018
+  versionCode: '439005500'
+  versionName: ALPHA-4.39.0.5500-07271657

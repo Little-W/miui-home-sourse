@@ -36,29 +36,29 @@
 .method public constructor <init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
     .locals 3
 
-    .line 3295
+    .line 3300
     invoke-direct {p0, p1, p2}, Lcom/miui/maml/ActionCommand$MultiCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
 
     const-string p1, "indexName"
 
-    .line 3297
+    .line 3302
     invoke-interface {p2, p1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 3298
+    .line 3303
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$LoopCommand;->getVariables()Lcom/miui/maml/data/Variables;
 
     move-result-object v0
 
-    .line 3299
+    .line 3304
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 3300
+    .line 3305
     new-instance v1, Lcom/miui/maml/data/IndexedVariable;
 
     const/4 v2, 0x1
@@ -70,7 +70,7 @@
     :cond_0
     const-string p1, "begin"
 
-    .line 3302
+    .line 3307
     invoke-interface {p2, p1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -83,7 +83,7 @@
 
     const-string p1, "count"
 
-    .line 3303
+    .line 3308
     invoke-interface {p2, p1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -94,14 +94,14 @@
 
     iput-object p1, p0, Lcom/miui/maml/ActionCommand$LoopCommand;->mCountExp:Lcom/miui/maml/data/Expression;
 
-    .line 3304
+    .line 3309
     iget-object p1, p0, Lcom/miui/maml/ActionCommand$LoopCommand;->mCountExp:Lcom/miui/maml/data/Expression;
 
     if-nez p1, :cond_1
 
     const-string p1, "end"
 
-    .line 3305
+    .line 3310
     invoke-interface {p2, p1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -115,7 +115,7 @@
     :cond_1
     const-string p1, "loopCondition"
 
-    .line 3307
+    .line 3312
     invoke-interface {p2, p1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -134,7 +134,7 @@
 .method protected doPerform()V
     .locals 9
 
-    .line 3312
+    .line 3317
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$LoopCommand;->mBeginExp:Lcom/miui/maml/data/Expression;
 
     const/4 v1, 0x0
@@ -152,7 +152,7 @@
 
     double-to-int v0, v2
 
-    .line 3313
+    .line 3318
     :goto_0
     iget-object v2, p0, Lcom/miui/maml/ActionCommand$LoopCommand;->mCountExp:Lcom/miui/maml/data/Expression;
 
@@ -170,7 +170,7 @@
 
     goto :goto_1
 
-    .line 3314
+    .line 3319
     :cond_1
     iget-object v2, p0, Lcom/miui/maml/ActionCommand$LoopCommand;->mEndExp:Lcom/miui/maml/data/Expression;
 
@@ -200,7 +200,7 @@
 
     const-string v4, "ActionCommand"
 
-    .line 3316
+    .line 3321
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -227,7 +227,7 @@
     :goto_2
     if-gt v0, v2, :cond_7
 
-    .line 3319
+    .line 3324
     iget-object v3, p0, Lcom/miui/maml/ActionCommand$LoopCommand;->mConditionExp:Lcom/miui/maml/data/Expression;
 
     if-eqz v3, :cond_4
@@ -244,7 +244,7 @@
 
     goto :goto_4
 
-    .line 3322
+    .line 3327
     :cond_4
     iget-object v3, p0, Lcom/miui/maml/ActionCommand$LoopCommand;->mIndexVar:Lcom/miui/maml/data/IndexedVariable;
 
@@ -252,10 +252,10 @@
 
     int-to-double v4, v0
 
-    .line 3323
+    .line 3328
     invoke-virtual {v3, v4, v5}, Lcom/miui/maml/data/IndexedVariable;->set(D)V
 
-    .line 3325
+    .line 3330
     :cond_5
     iget-object v3, p0, Lcom/miui/maml/ActionCommand$LoopCommand;->mCommands:Ljava/util/ArrayList;
 
@@ -268,7 +268,7 @@
     :goto_3
     if-ge v4, v3, :cond_6
 
-    .line 3327
+    .line 3332
     iget-object v5, p0, Lcom/miui/maml/ActionCommand$LoopCommand;->mCommands:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;

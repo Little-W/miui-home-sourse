@@ -34,10 +34,10 @@
 .method protected constructor <init>()V
     .locals 1
 
-    .line 355
+    .line 361
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 356
+    .line 362
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -46,7 +46,7 @@
 
     const/4 v0, 0x1
 
-    .line 357
+    .line 363
     iput-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;->mIsAcceptAlphaChange:Z
 
     return-void
@@ -55,7 +55,7 @@
 .method static synthetic access$000(Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;)Ljava/util/List;
     .locals 0
 
-    .line 355
+    .line 361
     iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;->mViews:Ljava/util/List;
 
     return-object p0
@@ -66,7 +66,7 @@
 .method public animTo(FIILmiuix/animation/base/AnimConfig;)V
     .locals 4
 
-    .line 414
+    .line 420
     new-instance v0, Lmiuix/animation/controller/AnimState;
 
     const-string v1, "to"
@@ -75,6 +75,7 @@
 
     sget-object v1, Lmiuix/animation/property/ViewProperty;->ALPHA:Lmiuix/animation/property/ViewProperty;
 
+    .line 421
     iget-boolean v2, p0, Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;->mIsAcceptAlphaChange:Z
 
     if-eqz v2, :cond_0
@@ -87,7 +88,6 @@
     :goto_0
     float-to-double v2, p1
 
-    .line 415
     invoke-virtual {v0, v1, v2, v3}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object p1
@@ -96,7 +96,7 @@
 
     int-to-double v1, p2
 
-    .line 416
+    .line 422
     invoke-virtual {p1, v0, v1, v2}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object p1
@@ -105,12 +105,12 @@
 
     int-to-double v0, p3
 
-    .line 417
+    .line 423
     invoke-virtual {p1, p2, v0, v1}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object p1
 
-    .line 419
+    .line 424
     iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;->mViews:Ljava/util/List;
 
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -132,7 +132,7 @@
 
     const/4 v0, 0x1
 
-    .line 420
+    .line 425
     new-array v1, v0, [Landroid/view/View;
 
     const/4 v2, 0x0
@@ -162,7 +162,7 @@
 .method public attachViews(Landroid/view/View;)V
     .locals 1
 
-    .line 361
+    .line 367
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;->mViews:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
@@ -173,7 +173,7 @@
 
     return-void
 
-    .line 364
+    .line 370
     :cond_0
     new-instance v0, Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView$1;
 
@@ -181,7 +181,7 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 
-    .line 377
+    .line 383
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;->mViews:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -189,22 +189,44 @@
     return-void
 .end method
 
-.method public setAcceptAlphaChange(Z)V
-    .locals 0
+.method public onHide()V
+    .locals 3
 
-    .line 388
-    iput-boolean p1, p0, Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;->mIsAcceptAlphaChange:Z
+    .line 436
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;->mViews:Ljava/util/List;
 
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/view/View;
+
+    const/4 v2, 0x0
+
+    .line 437
+    invoke-virtual {v1, v2}, Landroid/view/View;->setEnabled(Z)V
+
+    goto :goto_0
+
+    :cond_0
     return-void
 .end method
 
-.method public setAlpha(F)V
-    .locals 6
+.method public onShow()V
+    .locals 3
 
-    .line 381
-    iput p1, p0, Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;->mAlpha:F
-
-    .line 382
+    .line 430
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;->mViews:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -226,7 +248,53 @@
 
     const/4 v2, 0x1
 
-    .line 383
+    .line 431
+    invoke-virtual {v1, v2}, Landroid/view/View;->setEnabled(Z)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public setAcceptAlphaChange(Z)V
+    .locals 0
+
+    .line 394
+    iput-boolean p1, p0, Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;->mIsAcceptAlphaChange:Z
+
+    return-void
+.end method
+
+.method public setAlpha(F)V
+    .locals 6
+
+    .line 387
+    iput p1, p0, Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;->mAlpha:F
+
+    .line 388
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;->mViews:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/view/View;
+
+    const/4 v2, 0x1
+
+    .line 389
     new-array v3, v2, [Landroid/view/View;
 
     const/4 v4, 0x0
@@ -266,7 +334,7 @@
 .method public setAnimFrom(FII)V
     .locals 4
 
-    .line 404
+    .line 410
     new-instance v0, Lmiuix/animation/controller/AnimState;
 
     const-string v1, "from"
@@ -275,6 +343,7 @@
 
     sget-object v1, Lmiuix/animation/property/ViewProperty;->ALPHA:Lmiuix/animation/property/ViewProperty;
 
+    .line 411
     iget-boolean v2, p0, Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;->mIsAcceptAlphaChange:Z
 
     if-eqz v2, :cond_0
@@ -287,7 +356,6 @@
     :goto_0
     float-to-double v2, p1
 
-    .line 405
     invoke-virtual {v0, v1, v2, v3}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object p1
@@ -296,7 +364,7 @@
 
     int-to-double v1, p2
 
-    .line 406
+    .line 412
     invoke-virtual {p1, v0, v1, v2}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object p1
@@ -305,12 +373,12 @@
 
     int-to-double v0, p3
 
-    .line 407
+    .line 413
     invoke-virtual {p1, p2, v0, v1}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object p1
 
-    .line 408
+    .line 414
     iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;->mViews:Ljava/util/List;
 
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -332,7 +400,7 @@
 
     const/4 v0, 0x1
 
-    .line 409
+    .line 415
     new-array v0, v0, [Landroid/view/View;
 
     const/4 v1, 0x0
@@ -358,7 +426,7 @@
 .method public setVisibility(I)V
     .locals 2
 
-    .line 398
+    .line 404
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;->mViews:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -378,7 +446,7 @@
 
     check-cast v1, Landroid/view/View;
 
-    .line 399
+    .line 405
     invoke-virtual {v1, p1}, Landroid/view/View;->setVisibility(I)V
 
     goto :goto_0

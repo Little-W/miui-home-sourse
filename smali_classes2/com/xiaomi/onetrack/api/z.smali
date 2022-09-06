@@ -1,60 +1,62 @@
 .class Lcom/xiaomi/onetrack/api/z;
-.super Ljava/lang/Object;
+.super Landroid/content/BroadcastReceiver;
 
-# interfaces
-.implements Ljava/lang/Runnable;
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/xiaomi/onetrack/api/z$_lancet;
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Z
-
-.field final synthetic b:Lcom/xiaomi/onetrack/api/g;
+.field final synthetic a:Lcom/xiaomi/onetrack/api/h;
 
 
 # direct methods
-.method constructor <init>(Lcom/xiaomi/onetrack/api/g;Z)V
+.method constructor <init>(Lcom/xiaomi/onetrack/api/h;)V
     .locals 0
 
-    .line 768
-    iput-object p1, p0, Lcom/xiaomi/onetrack/api/z;->b:Lcom/xiaomi/onetrack/api/g;
+    .line 805
+    iput-object p1, p0, Lcom/xiaomi/onetrack/api/z;->a:Lcom/xiaomi/onetrack/api/h;
 
-    iput-boolean p2, p0, Lcom/xiaomi/onetrack/api/z;->a:Z
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    return-void
+.end method
 
+.method static synthetic access$000(Lcom/xiaomi/onetrack/api/z;Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/xiaomi/onetrack/api/z;->onReceive$___twin___(Landroid/content/Context;Landroid/content/Intent;)V
+
+    return-void
+.end method
+
+.method private onReceive$___twin___(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 0
+
+    .line 809
+    :try_start_0
+    new-instance p1, Lcom/xiaomi/onetrack/api/aa;
+
+    invoke-direct {p1, p0, p2}, Lcom/xiaomi/onetrack/api/aa;-><init>(Lcom/xiaomi/onetrack/api/z;Landroid/content/Intent;)V
+
+    invoke-static {p1}, Lcom/xiaomi/onetrack/c/a;->a(Ljava/lang/Runnable;)V
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 2
+.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 0
 
-    .line 771
-    iget-object v0, p0, Lcom/xiaomi/onetrack/api/z;->b:Lcom/xiaomi/onetrack/api/g;
-
-    invoke-static {v0}, Lcom/xiaomi/onetrack/api/g;->d(Lcom/xiaomi/onetrack/api/g;)Lcom/xiaomi/onetrack/util/v;
-
-    move-result-object v0
-
-    iget-boolean v1, p0, Lcom/xiaomi/onetrack/api/z;->a:Z
-
-    invoke-virtual {v0, v1}, Lcom/xiaomi/onetrack/util/v;->a(Z)V
-
-    .line 772
-    iget-object v0, p0, Lcom/xiaomi/onetrack/api/z;->b:Lcom/xiaomi/onetrack/api/g;
-
-    invoke-static {v0}, Lcom/xiaomi/onetrack/api/g;->a(Lcom/xiaomi/onetrack/api/g;)Lcom/xiaomi/onetrack/Configuration;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/xiaomi/onetrack/util/r;->a(Lcom/xiaomi/onetrack/Configuration;)Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-boolean v1, p0, Lcom/xiaomi/onetrack/api/z;->a:Z
-
-    invoke-static {v0, v1}, Lcom/xiaomi/onetrack/util/aa;->a(Ljava/lang/String;Z)V
+    invoke-static {p0, p1, p2}, Lcom/xiaomi/onetrack/api/z$_lancet;->com_miui_home_launcher_aop_BroadcastReceiverHooker_onReceive(Lcom/xiaomi/onetrack/api/z;Landroid/content/Context;Landroid/content/Intent;)V
 
     return-void
 .end method

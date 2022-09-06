@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Workspace;)V
     .locals 0
 
-    .line 1974
+    .line 2010
     iput-object p1, p0, Lcom/miui/home/launcher/Workspace$9;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onScrollAnimEnd()V
     .locals 1
 
-    .line 1977
+    .line 2013
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace$9;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Workspace;->getLastCellScreen()Lcom/miui/home/launcher/CellScreen;
@@ -51,7 +51,7 @@
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/CellLayout;->checkToDeleteSelf()V
 
-    .line 1978
+    .line 2014
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace$9;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-virtual {v0, p0}, Lcom/miui/home/launcher/Workspace;->removeScrollToNextScreenAnimListener(Lcom/miui/home/launcher/fold/ScrollToNextScreenAnimListener;)V

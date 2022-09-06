@@ -28,10 +28,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
-    .line 74
+    .line 77
     invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 75
+    .line 78
     check-cast p1, Lcom/miui/home/launcher/Launcher;
 
     iput-object p1, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mLauncher:Lcom/miui/home/launcher/Launcher;
@@ -42,27 +42,27 @@
 .method private init()V
     .locals 2
 
-    .line 207
+    .line 248
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRecommendController:Lcom/miui/home/launcher/commercial/recommend/RecommendController;
 
     if-eqz v0, :cond_0
 
-    .line 208
+    .line 249
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRecommendAppsView:Lcom/miui/home/launcher/commercial/recommend/RecommendAppsThumbnailView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/commercial/recommend/RecommendAppsThumbnailView;->setVisibility(I)V
 
-    .line 209
+    .line 250
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRecommendAppsView:Lcom/miui/home/launcher/commercial/recommend/RecommendAppsThumbnailView;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/commercial/recommend/RecommendAppsThumbnailView;->invalidate()V
 
-    .line 210
+    .line 251
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRecommendTitle:Landroid/widget/TextView;
 
-    const v1, 0x7f100394
+    const v1, 0x7f1103f6
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -73,12 +73,8 @@
 .method public static synthetic lambda$showOrHideRecommendScreenInner$0(Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;)V
     .locals 3
 
-    .line 149
-    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/market/sdk/MarketManager;->getManager(Landroid/content/Context;)Lcom/market/sdk/MarketManager;
+    .line 152
+    invoke-static {}, Lcom/market/sdk/MarketManager;->getManager()Lcom/market/sdk/MarketManager;
 
     move-result-object v0
 
@@ -88,16 +84,16 @@
 
     if-nez v0, :cond_0
 
-    .line 150
+    .line 153
     invoke-static {p0}, Lcom/miui/home/launcher/Launcher;->getLauncher(Landroid/view/View;)Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
 
-    .line 151
+    .line 154
     invoke-static {}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackShowMarketConnectNetworkDialog()V
 
-    .line 152
-    invoke-static {v0}, Lcom/market/sdk/MarketManager;->getManager(Landroid/content/Context;)Lcom/market/sdk/MarketManager;
+    .line 155
+    invoke-static {}, Lcom/market/sdk/MarketManager;->getManager()Lcom/market/sdk/MarketManager;
 
     move-result-object v1
 
@@ -112,7 +108,7 @@
 .method private showOrHideRecommendScreenInner(Z)V
     .locals 5
 
-    .line 143
+    .line 146
     invoke-virtual {p0}, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
@@ -125,7 +121,7 @@
 
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->cancel()V
 
-    .line 144
+    .line 147
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -138,7 +134,7 @@
 
     invoke-virtual {v0, v1}, Lorg/greenrobot/eventbus/EventBus;->post(Ljava/lang/Object;)V
 
-    .line 145
+    .line 148
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getFolderCling()Lcom/miui/home/launcher/FolderCling;
@@ -153,10 +149,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 147
+    .line 150
     invoke-direct {p0}, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->updateRecommendHeaderRightIcon()V
 
-    .line 148
+    .line 151
     new-instance p1, Lcom/miui/home/launcher/commercial/recommend/-$$Lambda$SmallIconsRecommendScreen$__euekH80Ecjli-XWdVuC7zTP5s;
 
     invoke-direct {p1, p0}, Lcom/miui/home/launcher/commercial/recommend/-$$Lambda$SmallIconsRecommendScreen$__euekH80Ecjli-XWdVuC7zTP5s;-><init>(Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;)V
@@ -165,10 +161,10 @@
 
     const/4 p1, 0x0
 
-    .line 156
+    .line 159
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->setVisibility(I)V
 
-    .line 157
+    .line 160
     invoke-virtual {p0}, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->getHeight()I
 
     move-result p1
@@ -179,10 +175,10 @@
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->setTranslationY(F)V
 
-    .line 158
+    .line 161
     invoke-virtual {p0, v3}, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->setAlpha(F)V
 
-    .line 159
+    .line 162
     invoke-virtual {p0}, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
@@ -197,7 +193,7 @@
 
     move-result-object p1
 
-    .line 160
+    .line 163
     invoke-virtual {p1, v0, v1}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
@@ -206,7 +202,7 @@
 
     invoke-direct {v0}, Landroid/view/animation/DecelerateInterpolator;-><init>()V
 
-    .line 161
+    .line 164
     invoke-virtual {p1, v0}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
@@ -215,17 +211,17 @@
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen$1;-><init>(Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;)V
 
-    .line 162
+    .line 165
     invoke-virtual {p1, v0}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
 
-    .line 167
+    .line 170
     invoke-virtual {p1}, Landroid/view/ViewPropertyAnimator;->start()V
 
     goto :goto_0
 
-    .line 169
+    .line 172
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->animate()Landroid/view/ViewPropertyAnimator;
 
@@ -243,7 +239,7 @@
 
     move-result-object p1
 
-    .line 170
+    .line 173
     invoke-virtual {p1, v3}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
@@ -254,7 +250,7 @@
 
     const-wide/16 v0, 0x0
 
-    .line 171
+    .line 174
     invoke-virtual {p1, v0, v1}, Landroid/view/ViewPropertyAnimator;->setStartDelay(J)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
@@ -263,7 +259,7 @@
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen$2;-><init>(Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;)V
 
-    .line 172
+    .line 175
     invoke-virtual {p1, v0}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
@@ -272,22 +268,65 @@
 
     invoke-direct {v0}, Landroid/view/animation/DecelerateInterpolator;-><init>()V
 
-    .line 178
+    .line 181
     invoke-virtual {p1, v0}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
 
-    .line 179
+    .line 182
     invoke-virtual {p1}, Landroid/view/ViewPropertyAnimator;->start()V
 
     :goto_0
     return-void
 .end method
 
+.method private updateRecommendAppsViewLayoutParams()V
+    .locals 3
+
+    .line 214
+    iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRecommendAppsView:Lcom/miui/home/launcher/commercial/recommend/RecommendAppsThumbnailView;
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/commercial/recommend/RecommendAppsThumbnailView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/LinearLayout$LayoutParams;
+
+    .line 215
+    invoke-virtual {p0}, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const v2, 0x7f070166
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v1
+
+    iput v1, v0, Landroid/widget/LinearLayout$LayoutParams;->width:I
+
+    const/4 v1, 0x1
+
+    .line 216
+    iput v1, v0, Landroid/widget/LinearLayout$LayoutParams;->gravity:I
+
+    .line 217
+    iget-object v1, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRecommendAppsView:Lcom/miui/home/launcher/commercial/recommend/RecommendAppsThumbnailView;
+
+    invoke-virtual {v1}, Lcom/miui/home/launcher/commercial/recommend/RecommendAppsThumbnailView;->calculateFixedGap()V
+
+    .line 218
+    iget-object v1, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRecommendAppsView:Lcom/miui/home/launcher/commercial/recommend/RecommendAppsThumbnailView;
+
+    invoke-virtual {v1, v0}, Lcom/miui/home/launcher/commercial/recommend/RecommendAppsThumbnailView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-void
+.end method
+
 .method private updateRecommendHeaderRightIcon()V
     .locals 3
 
-    .line 102
+    .line 105
     invoke-static {}, Lcom/miui/home/launcher/commercial/cloudSettings/CloudSettingsController;->getInstance()Lcom/miui/home/launcher/commercial/cloudSettings/CloudSettingsController;
 
     move-result-object v0
@@ -306,25 +345,25 @@
 
     if-eqz v0, :cond_0
 
-    .line 103
+    .line 106
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mXOutImageView:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 104
+    .line 107
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRefresh:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
     goto :goto_0
 
-    .line 106
+    .line 109
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mXOutImageView:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 107
+    .line 110
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRefresh:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
@@ -333,31 +372,109 @@
     return-void
 .end method
 
+.method private updateRecommendHeaderViewLayoutParams()V
+    .locals 6
+
+    .line 222
+    iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRecommendHeader:Landroid/widget/FrameLayout;
+
+    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/LinearLayout$LayoutParams;
+
+    const/4 v1, 0x1
+
+    .line 223
+    iput v1, v0, Landroid/widget/LinearLayout$LayoutParams;->gravity:I
+
+    .line 224
+    invoke-virtual {p0}, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const v2, 0x7f070166
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v1
+
+    iput v1, v0, Landroid/widget/LinearLayout$LayoutParams;->width:I
+
+    .line 225
+    iget-object v1, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRecommendHeader:Landroid/widget/FrameLayout;
+
+    invoke-virtual {p0}, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    const v3, 0x7f07016c
+
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v2
+
+    .line 227
+    invoke-virtual {p0}, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    const v4, 0x7f07016e
+
+    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v3
+
+    .line 228
+    invoke-virtual {p0}, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    const v5, 0x7f0705bc
+
+    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v4
+
+    const/4 v5, 0x0
+
+    .line 225
+    invoke-virtual {v1, v2, v5, v3, v4}, Landroid/widget/FrameLayout;->setPadding(IIII)V
+
+    .line 229
+    iget-object v1, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRecommendHeader:Landroid/widget/FrameLayout;
+
+    invoke-virtual {v1, v0}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-void
+.end method
+
 
 # virtual methods
 .method public bind(Lcom/miui/home/launcher/FolderInfo;)V
     .locals 0
 
-    .line 113
+    .line 116
     invoke-virtual {p1}, Lcom/miui/home/launcher/FolderInfo;->getRecommendController()Lcom/miui/home/launcher/commercial/recommend/RecommendController;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRecommendController:Lcom/miui/home/launcher/commercial/recommend/RecommendController;
 
-    .line 114
+    .line 117
     iget-object p1, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRecommendController:Lcom/miui/home/launcher/commercial/recommend/RecommendController;
 
     if-nez p1, :cond_0
 
     const/4 p1, 0x0
 
-    .line 115
+    .line 118
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->setContentAdapter(Lcom/miui/home/launcher/commercial/recommend/RecommendShortcutsAdapter;)V
 
     goto :goto_0
 
-    .line 117
+    .line 120
     :cond_0
     invoke-virtual {p1}, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->getAdapter()Lcom/miui/home/launcher/commercial/recommend/RecommendShortcutsAdapter;
 
@@ -372,7 +489,7 @@
 .method public dispatchTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 2
 
-    .line 327
+    .line 368
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -383,7 +500,7 @@
 
     invoke-virtual {v0, v1}, Lorg/greenrobot/eventbus/EventBus;->post(Ljava/lang/Object;)V
 
-    .line 328
+    .line 369
     invoke-super {p0, p1}, Landroid/widget/LinearLayout;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result p1
@@ -394,14 +511,14 @@
 .method public doRefresh()V
     .locals 2
 
-    .line 246
+    .line 287
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRecommendController:Lcom/miui/home/launcher/commercial/recommend/RecommendController;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 249
+    .line 290
     :cond_0
     invoke-static {}, Lcom/miui/home/launcher/commercial/cloudSettings/CloudSettingsController;->getInstance()Lcom/miui/home/launcher/commercial/cloudSettings/CloudSettingsController;
 
@@ -417,7 +534,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 250
+    .line 291
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRecommendController:Lcom/miui/home/launcher/commercial/recommend/RecommendController;
 
     const/4 v1, 0x1
@@ -426,7 +543,7 @@
 
     goto :goto_0
 
-    .line 251
+    .line 292
     :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRecommendController:Lcom/miui/home/launcher/commercial/recommend/RecommendController;
 
@@ -438,12 +555,12 @@
 
     if-le v0, v1, :cond_2
 
-    .line 252
+    .line 293
     invoke-virtual {p0}, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->refreshDisplayContents()V
 
     goto :goto_0
 
-    .line 254
+    .line 295
     :cond_2
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRecommendController:Lcom/miui/home/launcher/commercial/recommend/RecommendController;
 
@@ -464,7 +581,7 @@
 .method public getContent()Lcom/miui/home/launcher/commercial/recommend/RecommendAppsThumbnailView;
     .locals 1
 
-    .line 322
+    .line 363
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRecommendAppsView:Lcom/miui/home/launcher/commercial/recommend/RecommendAppsThumbnailView;
 
     return-object v0
@@ -479,7 +596,7 @@
 .method public getRecommendTitle()Landroid/widget/TextView;
     .locals 1
 
-    .line 215
+    .line 256
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRecommendTitle:Landroid/widget/TextView;
 
     return-object v0
@@ -494,7 +611,7 @@
 .method public onAppStartDownload(Ljava/lang/String;)V
     .locals 1
 
-    .line 263
+    .line 304
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRecommendAppsView:Lcom/miui/home/launcher/commercial/recommend/RecommendAppsThumbnailView;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/commercial/recommend/RecommendAppsThumbnailView;->getVisibility()I
@@ -503,7 +620,7 @@
 
     if-nez v0, :cond_0
 
-    .line 264
+    .line 305
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRecommendAppsView:Lcom/miui/home/launcher/commercial/recommend/RecommendAppsThumbnailView;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/commercial/recommend/RecommendAppsThumbnailView;->onAppStartDownload(Ljava/lang/String;)V
@@ -515,22 +632,22 @@
 .method public onClick(Landroid/view/View;)V
     .locals 2
 
-    .line 230
+    .line 271
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result p1
 
-    const v0, 0x7f0a01ef
+    const v0, 0x7f0a02a0
 
     if-eq p1, v0, :cond_1
 
-    const v0, 0x7f0a01f2
+    const v0, 0x7f0a02a3
 
     if-eq p1, v0, :cond_0
 
     goto :goto_0
 
-    .line 240
+    .line 281
     :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRecommendController:Lcom/miui/home/launcher/commercial/recommend/RecommendController;
 
@@ -538,7 +655,7 @@
 
     goto :goto_0
 
-    .line 232
+    .line 273
     :cond_1
     iget-object p1, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRefresh:Landroid/widget/ImageView;
 
@@ -546,7 +663,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setRotation(F)V
 
-    .line 233
+    .line 274
     iget-object p1, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRefresh:Landroid/widget/ImageView;
 
     invoke-virtual {p1}, Landroid/widget/ImageView;->animate()Landroid/view/ViewPropertyAnimator;
@@ -555,7 +672,7 @@
 
     invoke-virtual {p1}, Landroid/view/ViewPropertyAnimator;->cancel()V
 
-    .line 234
+    .line 275
     iget-object p1, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRefresh:Landroid/widget/ImageView;
 
     invoke-virtual {p1}, Landroid/widget/ImageView;->animate()Landroid/view/ViewPropertyAnimator;
@@ -578,7 +695,7 @@
 
     invoke-direct {v0}, Landroid/view/animation/LinearInterpolator;-><init>()V
 
-    .line 235
+    .line 276
     invoke-virtual {p1, v0}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
@@ -587,13 +704,25 @@
 
     const-string p1, "click_refresh"
 
-    .line 236
+    .line 277
     invoke-static {p1}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackFolderRecommend(Ljava/lang/String;)V
 
-    .line 237
+    .line 278
     invoke-virtual {p0}, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->doRefresh()V
 
     :goto_0
+    return-void
+.end method
+
+.method protected onConfigurationChanged(Landroid/content/res/Configuration;)V
+    .locals 0
+
+    .line 200
+    invoke-super {p0, p1}, Landroid/widget/LinearLayout;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+
+    .line 202
+    invoke-virtual {p0}, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->onScreenSizeChanged()V
+
     return-void
 .end method
 
@@ -606,14 +735,14 @@
 .method public onDropBack(Lcom/miui/home/launcher/DragObject;)V
     .locals 2
 
-    .line 295
+    .line 336
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRecommendController:Lcom/miui/home/launcher/commercial/recommend/RecommendController;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 298
+    .line 339
     :cond_0
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
 
@@ -629,7 +758,7 @@
 
     return-void
 
-    .line 301
+    .line 342
     :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRecommendController:Lcom/miui/home/launcher/commercial/recommend/RecommendController;
 
@@ -641,7 +770,7 @@
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->add(Lcom/miui/home/launcher/CommercialRemoteShortcutInfo;)V
 
-    .line 302
+    .line 343
     iget-object p1, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRecommendController:Lcom/miui/home/launcher/commercial/recommend/RecommendController;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->refresh()V
@@ -652,12 +781,12 @@
 .method protected onFinishInflate()V
     .locals 2
 
-    .line 86
+    .line 89
     invoke-super {p0}, Landroid/widget/LinearLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a0118
+    const v0, 0x7f0a016d
 
-    .line 87
+    .line 90
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -666,7 +795,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRecommendHeader:Landroid/widget/FrameLayout;
 
-    .line 88
+    .line 91
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRecommendHeader:Landroid/widget/FrameLayout;
 
     invoke-virtual {v0}, Landroid/widget/FrameLayout;->getBackground()Landroid/graphics/drawable/Drawable;
@@ -677,9 +806,9 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    const v0, 0x7f0a01f1
+    const v0, 0x7f0a02a2
 
-    .line 89
+    .line 92
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -688,7 +817,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRecommendTitle:Landroid/widget/TextView;
 
-    .line 90
+    .line 93
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isLayoutRtl()Z
 
     move-result v0
@@ -701,7 +830,7 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 91
+    .line 94
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRecommendTitle:Landroid/widget/TextView;
 
     const/4 v1, 0x5
@@ -709,9 +838,9 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setGravity(I)V
 
     :cond_0
-    const v0, 0x7f0a01ef
+    const v0, 0x7f0a02a0
 
-    .line 93
+    .line 96
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -720,14 +849,14 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRefresh:Landroid/widget/ImageView;
 
-    .line 94
+    .line 97
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRefresh:Landroid/widget/ImageView;
 
     invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0a01f2
+    const v0, 0x7f0a02a3
 
-    .line 95
+    .line 98
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -736,14 +865,14 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mXOutImageView:Landroid/widget/ImageView;
 
-    .line 96
+    .line 99
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mXOutImageView:Landroid/widget/ImageView;
 
     invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0a01ea
+    const v0, 0x7f0a029b
 
-    .line 97
+    .line 100
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -752,7 +881,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRecommendAppsView:Lcom/miui/home/launcher/commercial/recommend/RecommendAppsThumbnailView;
 
-    .line 98
+    .line 101
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRecommendAppsView:Lcom/miui/home/launcher/commercial/recommend/RecommendAppsThumbnailView;
 
     iget-object v1, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mLauncher:Lcom/miui/home/launcher/Launcher;
@@ -765,7 +894,7 @@
 .method public onFolderAlphaChange(F)V
     .locals 0
 
-    .line 123
+    .line 126
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->setAlpha(F)V
 
     return-void
@@ -774,14 +903,14 @@
 .method public onScreenOrientationChanged()V
     .locals 2
 
-    .line 186
+    .line 188
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isRotatable()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 187
+    .line 189
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getRecommendGridPaddingBottom()I
 
     move-result v0
@@ -790,24 +919,24 @@
 
     invoke-virtual {p0, v1, v1, v1, v0}, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->setPadding(IIII)V
 
-    .line 188
+    .line 190
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isScreenOrientationLandscape()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f08055e
+    const v0, 0x7f08065b
 
-    .line 189
+    .line 191
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->setHeaderBgRes(I)V
 
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f08055d
+    const v0, 0x7f08065a
 
-    .line 191
+    .line 193
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->setHeaderBgRes(I)V
 
     :cond_1
@@ -815,17 +944,39 @@
     return-void
 .end method
 
+.method public onScreenSizeChanged()V
+    .locals 2
+
+    .line 207
+    invoke-virtual {p0}, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->updateRecommendView()V
+
+    .line 208
+    invoke-virtual {p0}, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    const/4 v1, -0x2
+
+    .line 209
+    iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
+
+    .line 210
+    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-void
+.end method
+
 .method public onWallpaperColorChanged()V
     .locals 4
 
-    .line 80
+    .line 83
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     iget-object v1, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRecommendTitle:Landroid/widget/TextView;
 
-    const v2, 0x7f1100c9
+    const v2, 0x7f12013a
 
-    const v3, 0x7f1100ca
+    const v3, 0x7f12013b
 
     invoke-static {v0, v1, v2, v3}, Lcom/miui/home/launcher/common/Utilities;->adaptTitleStyleToWallpaper(Landroid/content/Context;Landroid/widget/TextView;II)V
 
@@ -835,7 +986,7 @@
 .method public refreshDisplayContents()V
     .locals 1
 
-    .line 259
+    .line 300
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRecommendAppsView:Lcom/miui/home/launcher/commercial/recommend/RecommendAppsThumbnailView;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/commercial/recommend/RecommendAppsThumbnailView;->snapToNextScreen()V
@@ -846,7 +997,7 @@
 .method setContentAdapter(Lcom/miui/home/launcher/commercial/recommend/RecommendShortcutsAdapter;)V
     .locals 1
 
-    .line 219
+    .line 260
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRecommendController:Lcom/miui/home/launcher/commercial/recommend/RecommendController;
 
     if-nez v0, :cond_0
@@ -856,12 +1007,12 @@
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 223
+    .line 264
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/commercial/recommend/RecommendShortcutsAdapter;->setLauncher(Lcom/miui/home/launcher/Launcher;)V
 
-    .line 225
+    .line 266
     :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRecommendAppsView:Lcom/miui/home/launcher/commercial/recommend/RecommendAppsThumbnailView;
 
@@ -873,12 +1024,12 @@
 .method public setContentAlpha(F)V
     .locals 1
 
-    .line 312
+    .line 353
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRecommendHeader:Landroid/widget/FrameLayout;
 
     invoke-virtual {v0, p1}, Landroid/widget/FrameLayout;->setAlpha(F)V
 
-    .line 313
+    .line 354
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRecommendAppsView:Lcom/miui/home/launcher/commercial/recommend/RecommendAppsThumbnailView;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/commercial/recommend/RecommendAppsThumbnailView;->setAlpha(F)V
@@ -895,12 +1046,12 @@
 .method public setHeaderBgRes(I)V
     .locals 1
 
-    .line 317
+    .line 358
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRecommendHeader:Landroid/widget/FrameLayout;
 
     invoke-virtual {v0, p1}, Landroid/widget/FrameLayout;->setBackgroundResource(I)V
 
-    .line 318
+    .line 359
     iget-object p1, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRecommendHeader:Landroid/widget/FrameLayout;
 
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->getBackground()Landroid/graphics/drawable/Drawable;
@@ -917,7 +1068,7 @@
 .method public showOrHideRecommendScreen(Z)V
     .locals 1
 
-    .line 128
+    .line 131
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRecommendController:Lcom/miui/home/launcher/commercial/recommend/RecommendController;
 
     if-nez v0, :cond_0
@@ -927,21 +1078,21 @@
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 132
+    .line 135
     invoke-direct {p0}, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->init()V
 
-    .line 133
+    .line 136
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRecommendController:Lcom/miui/home/launcher/commercial/recommend/RecommendController;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->onFolderShowRecommends()V
 
     goto :goto_0
 
-    .line 135
+    .line 138
     :cond_1
     invoke-virtual {v0}, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->onFolderHideRecommends()V
 
-    .line 137
+    .line 140
     :goto_0
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->showOrHideRecommendScreenInner(Z)V
 
@@ -951,7 +1102,7 @@
 .method public snapToAppView(Ljava/lang/String;)V
     .locals 1
 
-    .line 280
+    .line 321
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRecommendAppsView:Lcom/miui/home/launcher/commercial/recommend/RecommendAppsThumbnailView;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/commercial/recommend/RecommendAppsThumbnailView;->getVisibility()I
@@ -960,11 +1111,23 @@
 
     if-nez v0, :cond_0
 
-    .line 281
+    .line 322
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRecommendAppsView:Lcom/miui/home/launcher/commercial/recommend/RecommendAppsThumbnailView;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/commercial/recommend/RecommendAppsThumbnailView;->snapToAppView(Ljava/lang/String;)V
 
     :cond_0
+    return-void
+.end method
+
+.method public updateRecommendView()V
+    .locals 0
+
+    .line 233
+    invoke-direct {p0}, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->updateRecommendHeaderViewLayoutParams()V
+
+    .line 234
+    invoke-direct {p0}, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->updateRecommendAppsViewLayoutParams()V
+
     return-void
 .end method

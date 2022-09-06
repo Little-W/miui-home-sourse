@@ -223,7 +223,7 @@
 .method protected getLayoutResourceId()I
     .locals 1
 
-    const v0, 0x7f0d0062
+    const v0, 0x7f0d0072
 
     return v0
 .end method
@@ -502,7 +502,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f0a026f
+    const p2, 0x7f0a0335
 
     .line 84
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -516,7 +516,7 @@
     .line 85
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mSpringContainer:Lcom/miui/home/launcher/view/SpringRelativeLayout;
 
-    const p3, 0x7f0a0066
+    const p3, 0x7f0a0072
 
     invoke-virtual {p2, p3}, Lcom/miui/home/launcher/view/SpringRelativeLayout;->addSpringView(I)V
 
@@ -611,7 +611,7 @@
     .line 100
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->updatePoolSize()V
 
-    const p2, 0x7f0a0109
+    const p2, 0x7f0a0154
 
     .line 102
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;

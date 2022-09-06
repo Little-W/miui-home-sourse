@@ -33,10 +33,10 @@
 .method constructor <init>(Lmiuix/androidbasewidget/widget/ClearableEditText;)V
     .locals 1
 
-    .line 298
+    .line 315
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 299
+    .line 316
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -51,7 +51,7 @@
 .method public afterTextChanged(Landroid/text/Editable;)V
     .locals 3
 
-    .line 312
+    .line 329
     iget-object v0, p0, Lmiuix/androidbasewidget/widget/ClearableEditText$ShowWidgetTextWatcher;->mRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -64,7 +64,7 @@
 
     return-void
 
-    .line 316
+    .line 333
     :cond_0
     invoke-static {v0}, Lmiuix/androidbasewidget/widget/ClearableEditText;->access$000(Lmiuix/androidbasewidget/widget/ClearableEditText;)Z
 
@@ -88,7 +88,7 @@
     :goto_0
     if-eq v1, p1, :cond_2
 
-    .line 317
+    .line 334
     invoke-static {v0}, Lmiuix/androidbasewidget/widget/ClearableEditText;->access$000(Lmiuix/androidbasewidget/widget/ClearableEditText;)Z
 
     move-result p1
@@ -97,17 +97,17 @@
 
     invoke-static {v0, p1}, Lmiuix/androidbasewidget/widget/ClearableEditText;->access$002(Lmiuix/androidbasewidget/widget/ClearableEditText;Z)Z
 
-    .line 318
+    .line 335
     invoke-virtual {v0}, Lmiuix/androidbasewidget/widget/ClearableEditText;->refreshDrawableState()V
 
-    .line 319
+    .line 336
     invoke-static {v0}, Lmiuix/androidbasewidget/widget/ClearableEditText;->access$300(Lmiuix/androidbasewidget/widget/ClearableEditText;)Lmiuix/androidbasewidget/widget/ClearableEditText$AccessHelper;
 
     move-result-object p1
 
     if-eqz p1, :cond_2
 
-    .line 320
+    .line 337
     invoke-static {v0}, Lmiuix/androidbasewidget/widget/ClearableEditText;->access$300(Lmiuix/androidbasewidget/widget/ClearableEditText;)Lmiuix/androidbasewidget/widget/ClearableEditText$AccessHelper;
 
     move-result-object p1

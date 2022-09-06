@@ -26,8 +26,8 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 13
-    sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
+    .line 14
+    sget-boolean v0, Lmiuix/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     if-eqz v0, :cond_0
 

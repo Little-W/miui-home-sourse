@@ -293,6 +293,7 @@
     <string name="eras_bc">BCE</string>
     <string name="evening">మధ్యాహ్నం</string>
     <string name="exit_overview_because_task_stack_changed">నేపథ్యంలో జరిగిన మార్పుల కారణంగా ఇటీవలివి ఫోల్డర్ మూసివేయబడింది</string>
+    <string name="external_not_support_split_screen_j18">వెలుపలి స్క్రీన్‌పై స్క్రీన్ విభజనకి మద్దతు ఉండదు</string>
     <string name="failed_to_delete_temporary">తీసివేయలేరు</string>
     <string name="failed_to_drop">తరలించలేరు</string>
     <string name="failed_to_drop_widget_invalid">ఈ విడ్జెట్ చెల్లదు</string>
@@ -497,6 +498,7 @@
     <string name="midnight">రాత్రి</string>
     <string name="minus_one_screen">అప్లికేషన్ వాల్ట్</string>
     <string name="miui_screen_config_title">హోమ్ స్క్రీన్ సెట్టింగ్‌లు</string>
+    <string name="miui_widget_menu_replace_text">మార్చు</string>
     <string name="miuix_access_state_desc">ఎంచుకున్నారు</string>
     <string name="miuix_appcompat_action_mode_deselect_all">ఎంపిక తీసివేయి</string>
     <string name="miuix_appcompat_action_mode_select_all">అన్నీ ఎంచుకోండి</string>
@@ -523,6 +525,8 @@
     <string name="monday">సోమవారం</string>
     <string name="monday_short">సోమ</string>
     <string name="monday_shortest">సోమ</string>
+    <string name="monochrome_summary">Change background color for compatible icons</string>
+    <string name="monochrome_title">Background color</string>
     <string name="month_april">ఏప్రిల్</string>
     <string name="month_april_short">ఏప్రి</string>
     <string name="month_april_shortest">ఏప్రి</string>

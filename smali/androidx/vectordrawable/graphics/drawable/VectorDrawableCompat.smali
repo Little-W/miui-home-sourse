@@ -745,7 +745,7 @@
 
     iput-boolean p3, v0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$VectorDrawableCompatState;->mAutoMirrored:Z
 
-    const-string p3, "viewportWidth"
+    const-string/jumbo p3, "viewportWidth"
 
     const/4 v0, 0x7
 
@@ -758,7 +758,7 @@
 
     iput p3, v1, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$VPathRenderer;->mViewportWidth:F
 
-    const-string p3, "viewportHeight"
+    const-string/jumbo p3, "viewportHeight"
 
     const/16 v0, 0x8
 

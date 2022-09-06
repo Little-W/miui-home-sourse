@@ -767,7 +767,7 @@
 
     invoke-static {v1}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotEmpty(Ljava/lang/String;)Ljava/lang/String;
 
-    const-string v1, "value"
+    const-string/jumbo v1, "value"
 
     .line 647
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
@@ -820,7 +820,7 @@
 
     move-result-wide v5
 
-    const-string v3, "value"
+    const-string/jumbo v3, "value"
 
     .line 654
     invoke-virtual {v0, v3}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
@@ -2082,7 +2082,7 @@
 
     invoke-static {v0, p1, v1, v2}, Lcom/google/android/gms/measurement/internal/zzgs;->zza(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string p1, "value"
+    const-string/jumbo p1, "value"
 
     .line 567
     const-class v1, Ljava/lang/Object;
@@ -2184,7 +2184,7 @@
 
     invoke-static {p1}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotEmpty(Ljava/lang/String;)Ljava/lang/String;
 
-    const-string p1, "value"
+    const-string/jumbo p1, "value"
 
     .line 583
     invoke-virtual {v0, p1}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
@@ -2205,7 +2205,7 @@
 
     move-result-object p1
 
-    const-string p2, "value"
+    const-string/jumbo p2, "value"
 
     .line 586
     invoke-virtual {v0, p2}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
@@ -4981,7 +4981,7 @@
 
     move-result-object p4
 
-    const-string v3, "user property"
+    const-string/jumbo v3, "user property"
 
     .line 409
     invoke-virtual {p4, v3, p2}, Lcom/google/android/gms/measurement/internal/zzkv;->zza(Ljava/lang/String;Ljava/lang/String;)Z
@@ -4995,7 +4995,7 @@
     goto :goto_1
 
     :cond_2
-    const-string v3, "user property"
+    const-string/jumbo v3, "user property"
 
     .line 411
     sget-object v4, Lcom/google/android/gms/measurement/internal/zzgx;->zza:[Ljava/lang/String;
@@ -5013,7 +5013,7 @@
     goto :goto_1
 
     :cond_3
-    const-string v3, "user property"
+    const-string/jumbo v3, "user property"
 
     .line 413
     invoke-virtual {p4, v3, v2, p2}, Lcom/google/android/gms/measurement/internal/zzkv;->zza(Ljava/lang/String;ILjava/lang/String;)Z

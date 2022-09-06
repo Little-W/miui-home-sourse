@@ -59,7 +59,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 792
+    .line 796
     new-instance v0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean$1;
 
     invoke-direct {v0}, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean$1;-><init>()V
@@ -72,7 +72,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 735
+    .line 739
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -81,80 +81,80 @@
 .method protected constructor <init>(Landroid/os/Parcel;)V
     .locals 3
 
-    .line 777
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 778
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;->backgroundColor:Ljava/lang/String;
-
-    .line 779
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;->blurLayerColor:Ljava/lang/String;
-
-    .line 780
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v0
-
-    iput v0, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;->blurRadius:I
-
     .line 781
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;->backgroundBorderColor:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 782
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;->leftIcon:Ljava/lang/String;
+    iput-object v0, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;->backgroundColor:Ljava/lang/String;
 
     .line 783
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;->rightIcon:Ljava/lang/String;
+    iput-object v0, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;->blurLayerColor:Ljava/lang/String;
 
     .line 784
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;->blurRadius:I
+
+    .line 785
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;->backgroundBorderColor:Ljava/lang/String;
+
+    .line 786
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;->leftIcon:Ljava/lang/String;
+
+    .line 787
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;->rightIcon:Ljava/lang/String;
+
+    .line 788
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;->expId:Ljava/lang/String;
 
-    .line 785
+    .line 789
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;->testHashStart:I
 
-    .line 786
+    .line 790
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;->testHashEnd:I
 
-    .line 787
+    .line 791
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;->backgroundBorderWidth:I
 
-    .line 788
+    .line 792
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result v0
@@ -175,7 +175,7 @@
     :goto_0
     iput-boolean v0, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;->engineChainChange:Z
 
-    .line 789
+    .line 793
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result p1
@@ -196,7 +196,7 @@
 .method static synthetic access$100(Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;)Ljava/lang/String;
     .locals 0
 
-    .line 625
+    .line 629
     iget-object p0, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;->backgroundColor:Ljava/lang/String;
 
     return-object p0
@@ -205,7 +205,7 @@
 .method static synthetic access$200(Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;)I
     .locals 0
 
-    .line 625
+    .line 629
     iget p0, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;->backgroundBorderWidth:I
 
     return p0
@@ -224,7 +224,7 @@
 .method public getBackgroundBorderColor()Ljava/lang/String;
     .locals 1
 
-    .line 688
+    .line 692
     iget-object v0, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;->backgroundBorderColor:Ljava/lang/String;
 
     return-object v0
@@ -233,7 +233,7 @@
 .method public getBlurLayerColor()Ljava/lang/String;
     .locals 1
 
-    .line 672
+    .line 676
     iget-object v0, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;->blurLayerColor:Ljava/lang/String;
 
     return-object v0
@@ -242,7 +242,7 @@
 .method public getBlurRadius()I
     .locals 1
 
-    .line 680
+    .line 684
     iget v0, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;->blurRadius:I
 
     return v0
@@ -251,7 +251,7 @@
 .method public getExpId()Ljava/lang/String;
     .locals 1
 
-    .line 712
+    .line 716
     iget-object v0, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;->expId:Ljava/lang/String;
 
     return-object v0
@@ -260,7 +260,7 @@
 .method public getLeftIcon()Ljava/lang/String;
     .locals 1
 
-    .line 696
+    .line 700
     iget-object v0, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;->leftIcon:Ljava/lang/String;
 
     return-object v0
@@ -269,7 +269,7 @@
 .method public getRightIcon()Ljava/lang/String;
     .locals 1
 
-    .line 704
+    .line 708
     iget-object v0, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;->rightIcon:Ljava/lang/String;
 
     return-object v0
@@ -278,7 +278,7 @@
 .method public getTestHashEnd()I
     .locals 1
 
-    .line 728
+    .line 732
     iget v0, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;->testHashEnd:I
 
     return v0
@@ -287,7 +287,7 @@
 .method public getTestHashStart()I
     .locals 1
 
-    .line 720
+    .line 724
     iget v0, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;->testHashStart:I
 
     return v0
@@ -296,7 +296,7 @@
 .method public isEngineChainChange()Z
     .locals 1
 
-    .line 648
+    .line 652
     iget-boolean v0, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;->engineChainChange:Z
 
     return v0
@@ -305,7 +305,7 @@
 .method public isShowSetting()Z
     .locals 1
 
-    .line 640
+    .line 644
     iget-boolean v0, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;->showSetting:Z
 
     return v0
@@ -314,7 +314,7 @@
 .method public setLeftIcon(Ljava/lang/String;)V
     .locals 0
 
-    .line 700
+    .line 704
     iput-object p1, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;->leftIcon:Ljava/lang/String;
 
     return-void
@@ -323,7 +323,7 @@
 .method public setRightIcon(Ljava/lang/String;)V
     .locals 0
 
-    .line 708
+    .line 712
     iput-object p1, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;->rightIcon:Ljava/lang/String;
 
     return-void
@@ -332,7 +332,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 740
+    .line 744
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -461,62 +461,62 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    .line 763
+    .line 767
     iget-object p2, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;->backgroundColor:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 764
+    .line 768
     iget-object p2, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;->blurLayerColor:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 765
+    .line 769
     iget p2, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;->blurRadius:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 766
+    .line 770
     iget-object p2, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;->backgroundBorderColor:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 767
+    .line 771
     iget-object p2, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;->leftIcon:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 768
+    .line 772
     iget-object p2, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;->rightIcon:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 769
+    .line 773
     iget-object p2, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;->expId:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 770
+    .line 774
     iget p2, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;->testHashStart:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 771
+    .line 775
     iget p2, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;->testHashEnd:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 772
+    .line 776
     iget p2, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;->backgroundBorderWidth:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 773
+    .line 777
     iget-boolean p2, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;->engineChainChange:Z
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 774
+    .line 778
     iget-boolean p2, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;->showSetting:Z
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V

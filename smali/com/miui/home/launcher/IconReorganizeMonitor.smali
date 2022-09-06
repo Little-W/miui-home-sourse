@@ -591,7 +591,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f100326
+    const v4, 0x7f110383
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -634,7 +634,7 @@
 
     if-eqz v5, :cond_1
 
-    const v5, 0x7f1003a4
+    const v5, 0x7f110406
 
     invoke-virtual {p0, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -643,7 +643,7 @@
     goto :goto_0
 
     :cond_1
-    const v5, 0x7f1003a5
+    const v5, 0x7f110407
 
     .line 137
     invoke-virtual {p0, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -690,7 +690,7 @@
 
     const/4 v7, 0x4
 
-    const v8, 0x7f100245
+    const v8, 0x7f110255
 
     .line 146
     invoke-virtual {p0, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -723,7 +723,7 @@
     invoke-direct {v7, p0}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;)V
 
     :goto_1
-    const v8, 0x7f0801de
+    const v8, 0x7f0802bc
 
     .line 153
     invoke-virtual {v7, v8}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
@@ -762,7 +762,7 @@
 
     const/4 v1, -0x1
 
-    const v3, 0x7f1003a8
+    const v3, 0x7f11040a
 
     .line 160
     invoke-virtual {p0, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;

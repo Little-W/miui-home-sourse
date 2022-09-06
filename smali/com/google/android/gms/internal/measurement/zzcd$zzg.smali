@@ -2128,23 +2128,23 @@
 
     const/4 p2, 0x0
 
-    const-string v0, "zzc"
+    const-string/jumbo v0, "zzc"
 
     aput-object v0, p1, p2
 
-    const-string p2, "zzd"
+    const-string/jumbo p2, "zzd"
 
     aput-object p2, p1, p3
 
     const/4 p2, 0x2
 
-    const-string p3, "zze"
+    const-string/jumbo p3, "zze"
 
     aput-object p3, p1, p2
 
     const/4 p2, 0x3
 
-    const-string p3, "zzf"
+    const-string/jumbo p3, "zzf"
 
     aput-object p3, p1, p2
 
@@ -2156,7 +2156,7 @@
 
     const/4 p2, 0x5
 
-    const-string p3, "zzg"
+    const-string/jumbo p3, "zzg"
 
     aput-object p3, p1, p2
 
@@ -2168,145 +2168,145 @@
 
     const/4 p2, 0x7
 
-    const-string p3, "zzh"
+    const-string/jumbo p3, "zzh"
 
     aput-object p3, p1, p2
 
     const/16 p2, 0x8
 
-    const-string p3, "zzi"
+    const-string/jumbo p3, "zzi"
 
     aput-object p3, p1, p2
 
     const/16 p2, 0x9
 
-    const-string p3, "zzj"
+    const-string/jumbo p3, "zzj"
 
     aput-object p3, p1, p2
 
     const/16 p2, 0xa
 
-    const-string p3, "zzl"
+    const-string/jumbo p3, "zzl"
 
     aput-object p3, p1, p2
 
     const/16 p2, 0xb
 
-    const-string p3, "zzm"
+    const-string/jumbo p3, "zzm"
 
     aput-object p3, p1, p2
 
     const/16 p2, 0xc
 
-    const-string p3, "zzn"
+    const-string/jumbo p3, "zzn"
 
     aput-object p3, p1, p2
 
     const/16 p2, 0xd
 
-    const-string p3, "zzo"
+    const-string/jumbo p3, "zzo"
 
     aput-object p3, p1, p2
 
     const/16 p2, 0xe
 
-    const-string p3, "zzp"
+    const-string/jumbo p3, "zzp"
 
     aput-object p3, p1, p2
 
     const/16 p2, 0xf
 
-    const-string p3, "zzq"
+    const-string/jumbo p3, "zzq"
 
     aput-object p3, p1, p2
 
     const/16 p2, 0x10
 
-    const-string p3, "zzr"
+    const-string/jumbo p3, "zzr"
 
     aput-object p3, p1, p2
 
     const/16 p2, 0x11
 
-    const-string p3, "zzs"
+    const-string/jumbo p3, "zzs"
 
     aput-object p3, p1, p2
 
     const/16 p2, 0x12
 
-    const-string p3, "zzt"
+    const-string/jumbo p3, "zzt"
 
     aput-object p3, p1, p2
 
     const/16 p2, 0x13
 
-    const-string p3, "zzu"
+    const-string/jumbo p3, "zzu"
 
     aput-object p3, p1, p2
 
     const/16 p2, 0x14
 
-    const-string p3, "zzv"
+    const-string/jumbo p3, "zzv"
 
     aput-object p3, p1, p2
 
     const/16 p2, 0x15
 
-    const-string p3, "zzw"
+    const-string/jumbo p3, "zzw"
 
     aput-object p3, p1, p2
 
     const/16 p2, 0x16
 
-    const-string p3, "zzx"
+    const-string/jumbo p3, "zzx"
 
     aput-object p3, p1, p2
 
     const/16 p2, 0x17
 
-    const-string p3, "zzy"
+    const-string/jumbo p3, "zzy"
 
     aput-object p3, p1, p2
 
     const/16 p2, 0x18
 
-    const-string p3, "zzz"
+    const-string/jumbo p3, "zzz"
 
     aput-object p3, p1, p2
 
     const/16 p2, 0x19
 
-    const-string p3, "zzaa"
+    const-string/jumbo p3, "zzaa"
 
     aput-object p3, p1, p2
 
     const/16 p2, 0x1a
 
-    const-string p3, "zzab"
+    const-string/jumbo p3, "zzab"
 
     aput-object p3, p1, p2
 
     const/16 p2, 0x1b
 
-    const-string p3, "zzac"
+    const-string/jumbo p3, "zzac"
 
     aput-object p3, p1, p2
 
     const/16 p2, 0x1c
 
-    const-string p3, "zzk"
+    const-string/jumbo p3, "zzk"
 
     aput-object p3, p1, p2
 
     const/16 p2, 0x1d
 
-    const-string p3, "zzad"
+    const-string/jumbo p3, "zzad"
 
     aput-object p3, p1, p2
 
     const/16 p2, 0x1e
 
-    const-string p3, "zzae"
+    const-string/jumbo p3, "zzae"
 
     aput-object p3, p1, p2
 
@@ -2318,109 +2318,109 @@
 
     const/16 p2, 0x20
 
-    const-string p3, "zzaf"
+    const-string/jumbo p3, "zzaf"
 
     aput-object p3, p1, p2
 
     const/16 p2, 0x21
 
-    const-string p3, "zzag"
+    const-string/jumbo p3, "zzag"
 
     aput-object p3, p1, p2
 
     const/16 p2, 0x22
 
-    const-string p3, "zzah"
+    const-string/jumbo p3, "zzah"
 
     aput-object p3, p1, p2
 
     const/16 p2, 0x23
 
-    const-string p3, "zzai"
+    const-string/jumbo p3, "zzai"
 
     aput-object p3, p1, p2
 
     const/16 p2, 0x24
 
-    const-string p3, "zzaj"
+    const-string/jumbo p3, "zzaj"
 
     aput-object p3, p1, p2
 
     const/16 p2, 0x25
 
-    const-string p3, "zzak"
+    const-string/jumbo p3, "zzak"
 
     aput-object p3, p1, p2
 
     const/16 p2, 0x26
 
-    const-string p3, "zzal"
+    const-string/jumbo p3, "zzal"
 
     aput-object p3, p1, p2
 
     const/16 p2, 0x27
 
-    const-string p3, "zzam"
+    const-string/jumbo p3, "zzam"
 
     aput-object p3, p1, p2
 
     const/16 p2, 0x28
 
-    const-string p3, "zzan"
+    const-string/jumbo p3, "zzan"
 
     aput-object p3, p1, p2
 
     const/16 p2, 0x29
 
-    const-string p3, "zzao"
+    const-string/jumbo p3, "zzao"
 
     aput-object p3, p1, p2
 
     const/16 p2, 0x2a
 
-    const-string p3, "zzap"
+    const-string/jumbo p3, "zzap"
 
     aput-object p3, p1, p2
 
     const/16 p2, 0x2b
 
-    const-string p3, "zzaq"
+    const-string/jumbo p3, "zzaq"
 
     aput-object p3, p1, p2
 
     const/16 p2, 0x2c
 
-    const-string p3, "zzar"
+    const-string/jumbo p3, "zzar"
 
     aput-object p3, p1, p2
 
     const/16 p2, 0x2d
 
-    const-string p3, "zzas"
+    const-string/jumbo p3, "zzas"
 
     aput-object p3, p1, p2
 
     const/16 p2, 0x2e
 
-    const-string p3, "zzat"
+    const-string/jumbo p3, "zzat"
 
     aput-object p3, p1, p2
 
     const/16 p2, 0x2f
 
-    const-string p3, "zzau"
+    const-string/jumbo p3, "zzau"
 
     aput-object p3, p1, p2
 
     const/16 p2, 0x30
 
-    const-string p3, "zzav"
+    const-string/jumbo p3, "zzav"
 
     aput-object p3, p1, p2
 
     const/16 p2, 0x31
 
-    const-string p3, "zzaw"
+    const-string/jumbo p3, "zzaw"
 
     aput-object p3, p1, p2
 
@@ -2459,8 +2459,6 @@
     invoke-direct {p1}, Lcom/google/android/gms/internal/measurement/zzcd$zzg;-><init>()V
 
     return-object p1
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0x1

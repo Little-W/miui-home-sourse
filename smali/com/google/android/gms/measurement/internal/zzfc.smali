@@ -610,7 +610,7 @@
 
     move-result-object v0
 
-    const-string v1, "use_service"
+    const-string/jumbo v1, "use_service"
 
     .line 78
     invoke-interface {v0, v1, p1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
@@ -982,7 +982,7 @@
 
     move-result-object v0
 
-    const-string v1, "use_service"
+    const-string/jumbo v1, "use_service"
 
     invoke-interface {v0, v1}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
 
@@ -1000,7 +1000,7 @@
 
     move-result-object v0
 
-    const-string v1, "use_service"
+    const-string/jumbo v1, "use_service"
 
     const/4 v2, 0x0
 

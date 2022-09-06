@@ -49,7 +49,7 @@
     .line 50
     iget-object p1, p0, Lcom/android/thememanager/receiver/WallpaperChangedReceiver$ResetWallpaperDesiredDimensionsTask;->mContext:Landroid/content/Context;
 
-    const-string v0, "wallpaper"
+    const-string/jumbo v0, "wallpaper"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -177,7 +177,7 @@
     :cond_0
     iget-object p1, p0, Lcom/android/thememanager/receiver/WallpaperChangedReceiver$ResetWallpaperDesiredDimensionsTask;->mContext:Landroid/content/Context;
 
-    const-string v0, "wallpaper"
+    const-string/jumbo v0, "wallpaper"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 

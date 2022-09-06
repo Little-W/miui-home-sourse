@@ -1658,7 +1658,7 @@
 
     invoke-virtual {v6, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    const-string v0, "uptime_ms"
+    const-string/jumbo v0, "uptime_ms"
 
     .line 131
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/EventInternal;->getUptimeMillis()J
@@ -1867,7 +1867,7 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v2, "value"
+    const-string/jumbo v2, "value"
 
     .line 160
     invoke-interface {p2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
@@ -2378,7 +2378,7 @@
 
     const-string v6, "timestamp_ms"
 
-    const-string v7, "uptime_ms"
+    const-string/jumbo v7, "uptime_ms"
 
     const-string v8, "payload_encoding"
 
@@ -2525,7 +2525,7 @@
 
     const-string v2, "name"
 
-    const-string v4, "value"
+    const-string/jumbo v4, "value"
 
     .line 520
     filled-new-array {p2, v2, v4}, [Ljava/lang/String;

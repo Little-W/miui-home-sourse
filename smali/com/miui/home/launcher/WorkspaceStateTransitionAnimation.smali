@@ -28,37 +28,37 @@
 .method static setSearchBarProperty(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/LauncherState;Lcom/miui/home/launcher/anim/PropertySetter;Lcom/miui/home/launcher/anim/AnimatorSetBuilder;)V
     .locals 8
 
-    .line 102
+    .line 104
     invoke-virtual {p1, p0}, Lcom/miui/home/launcher/LauncherState;->getSearchBarProperty(Lcom/miui/home/launcher/Launcher;)[F
 
     move-result-object p1
 
     const/4 v0, 0x0
 
-    .line 103
+    .line 105
     aget v0, p1, v0
 
     const/4 v1, 0x1
 
-    .line 104
+    .line 106
     aget v1, p1, v1
 
     const/4 v2, 0x2
 
-    .line 105
+    .line 107
     aget v2, p1, v2
 
     const/4 v3, 0x3
 
-    .line 106
+    .line 108
     aget v3, p1, v3
 
     const/4 v4, 0x4
 
-    .line 107
+    .line 109
     aget p1, p1, v4
 
-    .line 108
+    .line 110
     sget-object v4, Lcom/miui/home/launcher/anim/Interpolators;->LINEAR:Landroid/view/animation/Interpolator;
 
     const/4 v5, 0x6
@@ -73,7 +73,7 @@
 
     if-nez v6, :cond_0
 
-    .line 109
+    .line 111
     sget-object v6, Lcom/miui/home/launcher/anim/Interpolators;->ALPHA_OUT:Landroid/view/animation/Interpolator;
 
     goto :goto_0
@@ -88,14 +88,14 @@
 
     move-result-object p3
 
-    .line 110
+    .line 112
     invoke-virtual {p0}, Lcom/miui/home/launcher/Launcher;->getSearchBarContainer()Lcom/miui/home/launcher/SearchBarContainer;
 
     move-result-object v6
 
     invoke-virtual {p2, v6, v0, p3}, Lcom/miui/home/launcher/anim/PropertySetter;->setViewAlpha(Landroid/view/View;FLandroid/animation/TimeInterpolator;)V
 
-    .line 111
+    .line 113
     invoke-virtual {p0}, Lcom/miui/home/launcher/Launcher;->getSearchBar()Lcom/miui/home/launcher/SearchBar;
 
     move-result-object p3
@@ -118,7 +118,7 @@
     :goto_1
     invoke-virtual {p2, p3, v2, v0}, Lcom/miui/home/launcher/anim/PropertySetter;->setViewAlpha(Landroid/view/View;FLandroid/animation/TimeInterpolator;)V
 
-    .line 112
+    .line 114
     invoke-virtual {p0}, Lcom/miui/home/launcher/Launcher;->getSearchBar()Lcom/miui/home/launcher/SearchBar;
 
     move-result-object p3
@@ -141,7 +141,7 @@
     :goto_2
     invoke-virtual {p2, p3, v3, v0}, Lcom/miui/home/launcher/anim/PropertySetter;->setViewAlpha(Landroid/view/View;FLandroid/animation/TimeInterpolator;)V
 
-    .line 113
+    .line 115
     invoke-virtual {p0}, Lcom/miui/home/launcher/Launcher;->getSearchBarContainer()Lcom/miui/home/launcher/SearchBarContainer;
 
     move-result-object p3
@@ -150,7 +150,7 @@
 
     invoke-virtual {p2, p3, v0, v1, v4}, Lcom/miui/home/launcher/anim/PropertySetter;->setFloat(Ljava/lang/Object;Landroid/util/Property;FLandroid/animation/TimeInterpolator;)V
 
-    .line 114
+    .line 116
     invoke-virtual {p0}, Lcom/miui/home/launcher/Launcher;->getSearchBarContainer()Lcom/miui/home/launcher/SearchBarContainer;
 
     move-result-object p0
@@ -165,17 +165,17 @@
 .method private setShortcutMenuLayerProperty(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/LauncherState;Lcom/miui/home/launcher/anim/PropertySetter;)V
     .locals 7
 
-    .line 118
+    .line 120
     invoke-virtual {p2}, Lcom/miui/home/launcher/LauncherState;->getShortcutMenuLayerAlpha()F
 
     move-result v0
 
-    .line 119
+    .line 121
     invoke-virtual {p2}, Lcom/miui/home/launcher/LauncherState;->getShortcutMenuLayerScale()F
 
     move-result v1
 
-    .line 120
+    .line 122
     iget-boolean v2, p2, Lcom/miui/home/launcher/LauncherState;->mIsFromFsGesture:Z
 
     if-nez v2, :cond_2
@@ -184,7 +184,7 @@
 
     if-nez v2, :cond_2
 
-    .line 121
+    .line 123
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getShortcutMenuLayer()Lcom/miui/home/launcher/ShortcutMenuLayer;
 
     move-result-object v2
@@ -203,7 +203,7 @@
 
     invoke-virtual {v2, v3}, Lcom/miui/home/launcher/ShortcutMenuLayer;->setPivotX(F)V
 
-    .line 122
+    .line 124
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getShortcutMenuLayer()Lcom/miui/home/launcher/ShortcutMenuLayer;
 
     move-result-object v2
@@ -222,7 +222,7 @@
 
     invoke-virtual {v2, v3}, Lcom/miui/home/launcher/ShortcutMenuLayer;->setPivotY(F)V
 
-    .line 124
+    .line 126
     new-instance v2, Lcom/miui/home/launcher/anim/PhysicBasedInterpolator;
 
     const v3, 0x3f7d70a4    # 0.99f
@@ -231,7 +231,7 @@
 
     invoke-direct {v2, v3, v4}, Lcom/miui/home/launcher/anim/PhysicBasedInterpolator;-><init>(FF)V
 
-    .line 125
+    .line 127
     invoke-virtual {p3}, Lcom/miui/home/launcher/anim/PropertySetter;->getDuration()J
 
     move-result-wide v3
@@ -264,13 +264,13 @@
 
     float-to-long v3, v3
 
-    .line 129
+    .line 131
     :cond_0
     invoke-virtual {p3, v3, v4}, Lcom/miui/home/launcher/anim/PropertySetter;->setDuration(J)V
 
     const-string v3, "StateManager"
 
-    .line 130
+    .line 132
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -307,7 +307,7 @@
 
     invoke-static {v3, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 133
+    .line 135
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getShortcutMenuLayer()Lcom/miui/home/launcher/ShortcutMenuLayer;
 
     move-result-object p2
@@ -324,7 +324,7 @@
     :goto_0
     invoke-virtual {p3, p2, v0, v3}, Lcom/miui/home/launcher/anim/PropertySetter;->setViewAlpha(Landroid/view/View;FLandroid/animation/TimeInterpolator;)V
 
-    .line 134
+    .line 136
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getShortcutMenuLayer()Lcom/miui/home/launcher/ShortcutMenuLayer;
 
     move-result-object p2
@@ -333,7 +333,7 @@
 
     invoke-virtual {p3, p2, v3, v1, v2}, Lcom/miui/home/launcher/anim/PropertySetter;->setFloat(Ljava/lang/Object;Landroid/util/Property;FLandroid/animation/TimeInterpolator;)V
 
-    .line 135
+    .line 137
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getShortcutMenuLayer()Lcom/miui/home/launcher/ShortcutMenuLayer;
 
     move-result-object p2
@@ -342,14 +342,14 @@
 
     invoke-virtual {p3, p2, v3, v1, v2}, Lcom/miui/home/launcher/anim/PropertySetter;->setFloat(Ljava/lang/Object;Landroid/util/Property;FLandroid/animation/TimeInterpolator;)V
 
-    .line 136
+    .line 138
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getAssistantOverlayController()Lcom/miui/home/launcher/overlay/assistant/AssistantOverlayTransitionController;
 
     move-result-object p2
 
     invoke-virtual {p2, v0, v1}, Lcom/miui/home/launcher/overlay/assistant/AssistantOverlayTransitionController;->setAlphaAndScale(FF)V
 
-    .line 137
+    .line 139
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getFeedOverlayController()Lcom/miui/home/launcher/overlay/feed/FeedOverlayTransitionController;
 
     move-result-object p1
@@ -562,11 +562,20 @@
     invoke-virtual {v2, v3, v4, v5, v13}, Lcom/miui/home/launcher/anim/PropertySetter;->setFloat(Ljava/lang/Object;Landroid/util/Property;FLandroid/animation/TimeInterpolator;)V
 
     .line 91
+    iget-object v3, v0, Lcom/miui/home/launcher/WorkspaceStateTransitionAnimation;->mLauncher:Lcom/miui/home/launcher/Launcher;
+
+    invoke-virtual {v3}, Lcom/miui/home/launcher/Launcher;->isFolderShowing()Z
+
+    move-result v3
+
+    if-nez v3, :cond_4
+
+    .line 92
     iget-object v3, v0, Lcom/miui/home/launcher/WorkspaceStateTransitionAnimation;->mWorkspace:Lcom/miui/home/launcher/Workspace;
 
     invoke-virtual {v2, v3, v10, v14}, Lcom/miui/home/launcher/anim/PropertySetter;->setViewAlpha(Landroid/view/View;FLandroid/animation/TimeInterpolator;)V
 
-    .line 92
+    .line 93
     iget-object v3, v0, Lcom/miui/home/launcher/WorkspaceStateTransitionAnimation;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v3}, Lcom/miui/home/launcher/Launcher;->getHotSeats()Lcom/miui/home/launcher/hotseats/HotSeats;
@@ -575,7 +584,8 @@
 
     invoke-virtual {v2, v3, v12, v1}, Lcom/miui/home/launcher/anim/PropertySetter;->setViewAlpha(Landroid/view/View;FLandroid/animation/TimeInterpolator;)V
 
-    .line 93
+    .line 95
+    :cond_4
     iget-object v1, v0, Lcom/miui/home/launcher/WorkspaceStateTransitionAnimation;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/Launcher;->getHotSeats()Lcom/miui/home/launcher/hotseats/HotSeats;
@@ -586,7 +596,7 @@
 
     invoke-virtual {v2, v1, v3, v6, v13}, Lcom/miui/home/launcher/anim/PropertySetter;->setFloat(Ljava/lang/Object;Landroid/util/Property;FLandroid/animation/TimeInterpolator;)V
 
-    .line 94
+    .line 96
     iget-object v1, v0, Lcom/miui/home/launcher/WorkspaceStateTransitionAnimation;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/Launcher;->getHotSeats()Lcom/miui/home/launcher/hotseats/HotSeats;
@@ -597,7 +607,7 @@
 
     invoke-virtual {v2, v1, v3, v7, v13}, Lcom/miui/home/launcher/anim/PropertySetter;->setFloat(Ljava/lang/Object;Landroid/util/Property;FLandroid/animation/TimeInterpolator;)V
 
-    .line 95
+    .line 97
     iget-object v1, v0, Lcom/miui/home/launcher/WorkspaceStateTransitionAnimation;->mWorkspace:Lcom/miui/home/launcher/Workspace;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/Workspace;->getScreenIndicator()Landroid/view/View;
@@ -608,7 +618,7 @@
 
     invoke-virtual {v2, v1, v3, v8, v13}, Lcom/miui/home/launcher/anim/PropertySetter;->setFloat(Ljava/lang/Object;Landroid/util/Property;FLandroid/animation/TimeInterpolator;)V
 
-    .line 96
+    .line 98
     iget-object v1, v0, Lcom/miui/home/launcher/WorkspaceStateTransitionAnimation;->mWorkspace:Lcom/miui/home/launcher/Workspace;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/Workspace;->getScreenIndicator()Landroid/view/View;
@@ -617,7 +627,7 @@
 
     invoke-virtual {v2, v1, v9, v11}, Lcom/miui/home/launcher/anim/PropertySetter;->setViewAlpha(Landroid/view/View;FLandroid/animation/TimeInterpolator;)V
 
-    .line 97
+    .line 99
     iget-object v1, v0, Lcom/miui/home/launcher/WorkspaceStateTransitionAnimation;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     move-object/from16 v3, p1
@@ -626,7 +636,7 @@
 
     invoke-static {v1, v3, v2, v4}, Lcom/miui/home/launcher/WorkspaceStateTransitionAnimation;->setSearchBarProperty(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/LauncherState;Lcom/miui/home/launcher/anim/PropertySetter;Lcom/miui/home/launcher/anim/AnimatorSetBuilder;)V
 
-    .line 98
+    .line 100
     iget-object v1, v0, Lcom/miui/home/launcher/WorkspaceStateTransitionAnimation;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {v0, v1, v3, v2}, Lcom/miui/home/launcher/WorkspaceStateTransitionAnimation;->setShortcutMenuLayerProperty(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/LauncherState;Lcom/miui/home/launcher/anim/PropertySetter;)V

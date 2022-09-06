@@ -729,7 +729,7 @@
 
     if-gtz v0, :cond_0
 
-    const-string v0, "{}"
+    const-string/jumbo v0, "{}"
 
     return-object v0
 

@@ -89,7 +89,7 @@
     .line 55
     invoke-virtual {v4, v5, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    const-string v2, "v"
+    const-string/jumbo v2, "v"
 
     .line 56
     invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -346,7 +346,7 @@
     goto :goto_2
 
     :pswitch_0
-    const-string v7, "v"
+    const-string/jumbo v7, "v"
 
     .line 24
     invoke-virtual {v5, v7}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -363,7 +363,7 @@
     goto :goto_3
 
     :pswitch_1
-    const-string v7, "v"
+    const-string/jumbo v7, "v"
 
     .line 21
     invoke-virtual {v5, v7}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -380,7 +380,7 @@
     goto :goto_3
 
     :pswitch_2
-    const-string v7, "v"
+    const-string/jumbo v7, "v"
 
     .line 18
     invoke-virtual {v5, v7}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -476,8 +476,6 @@
     iget-object v0, p0, Lcom/google/android/gms/measurement/internal/zzfh;->zzd:Landroid/os/Bundle;
 
     return-object v0
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0x0

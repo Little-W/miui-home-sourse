@@ -293,6 +293,7 @@
     <string name="eras_bc">e.Kr</string>
     <string name="evening">Pärastlõuna</string>
     <string name="exit_overview_because_task_stack_changed">Hiljutised suleti taustal toimunud muudatuste tõttu</string>
+    <string name="external_not_support_split_screen_j18">Jagatud ekraani ei toetata välisekraanil</string>
     <string name="failed_to_delete_temporary">Eemaldada ei saa</string>
     <string name="failed_to_drop">Liigutada ei saa</string>
     <string name="failed_to_drop_widget_invalid">Vidin on vigane</string>
@@ -497,6 +498,7 @@
     <string name="midnight">Öö</string>
     <string name="minus_one_screen">Rakenduste hoidla</string>
     <string name="miui_screen_config_title">Avakuva seaded</string>
+    <string name="miui_widget_menu_replace_text">Vaheta</string>
     <string name="miuix_access_state_desc">Valitud</string>
     <string name="miuix_appcompat_action_mode_deselect_all">Tühista valik</string>
     <string name="miuix_appcompat_action_mode_select_all">Vali kõik</string>
@@ -523,6 +525,8 @@
     <string name="monday">esmaspäev</string>
     <string name="monday_short">E</string>
     <string name="monday_shortest">E</string>
+    <string name="monochrome_summary">Muuda ühilduvate ikoonide taustavärvi</string>
+    <string name="monochrome_title">Taustavärv</string>
     <string name="month_april">aprill</string>
     <string name="month_april_short">apr</string>
     <string name="month_april_shortest">apr</string>

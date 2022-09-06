@@ -571,6 +571,7 @@
 
     goto :goto_0
 
+    .line 281
     :cond_1
     iget p1, p0, Landroidx/appcompat/view/menu/ActionMenuItemView;->mMinWidth:I
 

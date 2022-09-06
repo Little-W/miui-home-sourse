@@ -389,9 +389,9 @@
 
     if-eqz v0, :cond_4
 
+    .line 70
     check-cast p1, Landroid/content/ContextWrapper;
 
-    .line 70
     invoke-virtual {p1}, Landroid/content/ContextWrapper;->getBaseContext()Landroid/content/Context;
 
     move-result-object p1

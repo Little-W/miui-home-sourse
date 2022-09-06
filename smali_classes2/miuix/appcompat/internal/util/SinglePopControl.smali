@@ -62,9 +62,9 @@
 
     if-eqz v2, :cond_1
 
+    .line 50
     check-cast v1, Landroid/content/ContextWrapper;
 
-    .line 50
     invoke-virtual {v1}, Landroid/content/ContextWrapper;->getBaseContext()Landroid/content/Context;
 
     move-result-object v1

@@ -2032,7 +2032,7 @@
 
     .line 677
     :goto_2
-    invoke-virtual {v2, v3}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->animateContentMarginBottom(I)V
+    invoke-virtual {v2, v3}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->animateContentMarginBottomByBottomMenu(I)V
 
     .line 678
     iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->mMenuView:Lmiuix/appcompat/internal/view/menu/action/ActionMenuView;
@@ -2338,7 +2338,7 @@
 
     .line 784
     :cond_9
-    invoke-virtual {v12, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->animateContentMarginBottom(I)V
+    invoke-virtual {v12, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->animateContentMarginBottomByBottomMenu(I)V
 
     if-eqz v11, :cond_a
 
@@ -3857,11 +3857,11 @@
     return-void
 .end method
 
-.method public bridge synthetic setExpandState(IZ)V
+.method public bridge synthetic setExpandState(IZZ)V
     .locals 0
 
     .line 62
-    invoke-super {p0, p1, p2}, Lmiuix/appcompat/internal/app/widget/AbsActionBarView;->setExpandState(IZ)V
+    invoke-super {p0, p1, p2, p3}, Lmiuix/appcompat/internal/app/widget/AbsActionBarView;->setExpandState(IZZ)V
 
     return-void
 .end method

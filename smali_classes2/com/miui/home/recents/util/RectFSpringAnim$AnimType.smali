@@ -46,7 +46,7 @@
 .method static constructor <clinit>()V
     .locals 10
 
-    .line 501
+    .line 507
     new-instance v0, Lcom/miui/home/recents/util/RectFSpringAnim$AnimType;
 
     const-string v1, "BREAK_OPEN"
@@ -57,7 +57,7 @@
 
     sput-object v0, Lcom/miui/home/recents/util/RectFSpringAnim$AnimType;->BREAK_OPEN:Lcom/miui/home/recents/util/RectFSpringAnim$AnimType;
 
-    .line 502
+    .line 508
     new-instance v0, Lcom/miui/home/recents/util/RectFSpringAnim$AnimType;
 
     const-string v1, "OPEN_FROM_HOME"
@@ -68,7 +68,7 @@
 
     sput-object v0, Lcom/miui/home/recents/util/RectFSpringAnim$AnimType;->OPEN_FROM_HOME:Lcom/miui/home/recents/util/RectFSpringAnim$AnimType;
 
-    .line 503
+    .line 509
     new-instance v0, Lcom/miui/home/recents/util/RectFSpringAnim$AnimType;
 
     const-string v1, "OPEN_FROM_RECENTS"
@@ -79,7 +79,7 @@
 
     sput-object v0, Lcom/miui/home/recents/util/RectFSpringAnim$AnimType;->OPEN_FROM_RECENTS:Lcom/miui/home/recents/util/RectFSpringAnim$AnimType;
 
-    .line 504
+    .line 510
     new-instance v0, Lcom/miui/home/recents/util/RectFSpringAnim$AnimType;
 
     const-string v1, "CLOSE_TO_RECENTS"
@@ -90,7 +90,7 @@
 
     sput-object v0, Lcom/miui/home/recents/util/RectFSpringAnim$AnimType;->CLOSE_TO_RECENTS:Lcom/miui/home/recents/util/RectFSpringAnim$AnimType;
 
-    .line 505
+    .line 511
     new-instance v0, Lcom/miui/home/recents/util/RectFSpringAnim$AnimType;
 
     const-string v1, "CLOSE_TO_HOME"
@@ -101,7 +101,7 @@
 
     sput-object v0, Lcom/miui/home/recents/util/RectFSpringAnim$AnimType;->CLOSE_TO_HOME:Lcom/miui/home/recents/util/RectFSpringAnim$AnimType;
 
-    .line 506
+    .line 512
     new-instance v0, Lcom/miui/home/recents/util/RectFSpringAnim$AnimType;
 
     const-string v1, "CLOSE_FROM_FEED"
@@ -112,7 +112,7 @@
 
     sput-object v0, Lcom/miui/home/recents/util/RectFSpringAnim$AnimType;->CLOSE_FROM_FEED:Lcom/miui/home/recents/util/RectFSpringAnim$AnimType;
 
-    .line 507
+    .line 513
     new-instance v0, Lcom/miui/home/recents/util/RectFSpringAnim$AnimType;
 
     const-string v1, "APP_TO_APP"
@@ -123,7 +123,7 @@
 
     sput-object v0, Lcom/miui/home/recents/util/RectFSpringAnim$AnimType;->APP_TO_APP:Lcom/miui/home/recents/util/RectFSpringAnim$AnimType;
 
-    .line 508
+    .line 514
     new-instance v0, Lcom/miui/home/recents/util/RectFSpringAnim$AnimType;
 
     const-string v1, "START_FIRST_TASK"
@@ -136,7 +136,7 @@
 
     const/16 v0, 0x8
 
-    .line 500
+    .line 506
     new-array v0, v0, [Lcom/miui/home/recents/util/RectFSpringAnim$AnimType;
 
     sget-object v1, Lcom/miui/home/recents/util/RectFSpringAnim$AnimType;->BREAK_OPEN:Lcom/miui/home/recents/util/RectFSpringAnim$AnimType;
@@ -184,7 +184,7 @@
         }
     .end annotation
 
-    .line 500
+    .line 506
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -193,7 +193,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/miui/home/recents/util/RectFSpringAnim$AnimType;
     .locals 1
 
-    .line 500
+    .line 506
     const-class v0, Lcom/miui/home/recents/util/RectFSpringAnim$AnimType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -208,7 +208,7 @@
 .method public static values()[Lcom/miui/home/recents/util/RectFSpringAnim$AnimType;
     .locals 1
 
-    .line 500
+    .line 506
     sget-object v0, Lcom/miui/home/recents/util/RectFSpringAnim$AnimType;->$VALUES:[Lcom/miui/home/recents/util/RectFSpringAnim$AnimType;
 
     invoke-virtual {v0}, [Lcom/miui/home/recents/util/RectFSpringAnim$AnimType;->clone()Ljava/lang/Object;

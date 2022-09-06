@@ -191,7 +191,7 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    const-string v0, "version_code"
+    const-string/jumbo v0, "version_code"
 
     .line 255
     iget-object v1, p0, Lcom/market/sdk/DownloadInstallManager$WorkerHandler;->this$0:Lcom/market/sdk/DownloadInstallManager;
@@ -737,7 +737,7 @@
 .end method
 
 .method public reloadDownloadTasks()V
-    .locals 2
+    .locals 3
 
     .line 194
     iget-object v0, p0, Lcom/market/sdk/DownloadInstallManager$WorkerHandler;->this$0:Lcom/market/sdk/DownloadInstallManager;
@@ -764,7 +764,17 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/market/sdk/XiaomiUpdateAgent;->getAppInfo(Landroid/content/Context;)Lcom/market/sdk/LocalAppInfo;
+    iget-object v2, p0, Lcom/market/sdk/DownloadInstallManager$WorkerHandler;->this$0:Lcom/market/sdk/DownloadInstallManager;
+
+    invoke-static {v2}, Lcom/market/sdk/DownloadInstallManager;->access$200(Lcom/market/sdk/DownloadInstallManager;)Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcom/market/sdk/XiaomiUpdateAgent;->getAppInfo(Landroid/content/Context;Ljava/lang/String;)Lcom/market/sdk/LocalAppInfo;
 
     move-result-object v1
 

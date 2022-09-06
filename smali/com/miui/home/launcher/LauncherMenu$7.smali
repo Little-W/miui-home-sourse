@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/LauncherMenu;)V
     .locals 0
 
-    .line 160
+    .line 157
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherMenu$7;->this$0:Lcom/miui/home/launcher/LauncherMenu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onClick(Landroid/view/View;)V
     .locals 1
 
-    .line 163
+    .line 160
     iget-object p1, p0, Lcom/miui/home/launcher/LauncherMenu$7;->this$0:Lcom/miui/home/launcher/LauncherMenu;
 
     invoke-static {p1}, Lcom/miui/home/launcher/LauncherMenu;->access$000(Lcom/miui/home/launcher/LauncherMenu;)Lcom/miui/home/launcher/Launcher;
@@ -49,7 +49,7 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/Launcher;->showMenu(Z)V
 
-    .line 164
+    .line 161
     new-instance p1, Landroid/content/Intent;
 
     const-string v0, "com.miui.home.Setting"
@@ -58,10 +58,10 @@
 
     const v0, 0x10808000
 
-    .line 165
+    .line 162
     invoke-virtual {p1, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 166
+    .line 163
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherMenu$7;->this$0:Lcom/miui/home/launcher/LauncherMenu;
 
     invoke-static {v0}, Lcom/miui/home/launcher/LauncherMenu;->access$300(Lcom/miui/home/launcher/LauncherMenu;)Landroid/content/Context;
@@ -72,7 +72,7 @@
 
     const-string p1, "more_settings"
 
-    .line 167
+    .line 164
     invoke-static {p1}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackHomeSettingSubClicked(Ljava/lang/String;)V
 
     return-void

@@ -39,14 +39,16 @@
 
 .field private n:Z
 
-.field private o:Lcom/xiaomi/onetrack/OneTrack$IEventHook;
+.field private o:Ljava/lang/String;
+
+.field private p:Lcom/xiaomi/onetrack/OneTrack$IEventHook;
 
 
 # direct methods
 .method private constructor <init>(Lcom/xiaomi/onetrack/Configuration$Builder;)V
     .locals 1
 
-    .line 26
+    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 14
@@ -76,103 +78,110 @@
     .line 22
     iput-boolean v0, p0, Lcom/xiaomi/onetrack/Configuration;->n:Z
 
-    .line 27
+    .line 29
     invoke-static {p1}, Lcom/xiaomi/onetrack/Configuration$Builder;->a(Lcom/xiaomi/onetrack/Configuration$Builder;)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/xiaomi/onetrack/Configuration;->a:Ljava/lang/String;
 
-    .line 28
+    .line 30
     invoke-static {p1}, Lcom/xiaomi/onetrack/Configuration$Builder;->b(Lcom/xiaomi/onetrack/Configuration$Builder;)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/xiaomi/onetrack/Configuration;->b:Ljava/lang/String;
 
-    .line 29
+    .line 31
     invoke-static {p1}, Lcom/xiaomi/onetrack/Configuration$Builder;->c(Lcom/xiaomi/onetrack/Configuration$Builder;)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/xiaomi/onetrack/Configuration;->c:Ljava/lang/String;
 
-    .line 30
+    .line 32
     invoke-static {p1}, Lcom/xiaomi/onetrack/Configuration$Builder;->d(Lcom/xiaomi/onetrack/Configuration$Builder;)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/xiaomi/onetrack/Configuration;->d:Z
 
-    .line 31
+    .line 33
     invoke-static {p1}, Lcom/xiaomi/onetrack/Configuration$Builder;->e(Lcom/xiaomi/onetrack/Configuration$Builder;)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/xiaomi/onetrack/Configuration;->e:Ljava/lang/String;
 
-    .line 32
+    .line 34
     invoke-static {p1}, Lcom/xiaomi/onetrack/Configuration$Builder;->f(Lcom/xiaomi/onetrack/Configuration$Builder;)Lcom/xiaomi/onetrack/OneTrack$Mode;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/xiaomi/onetrack/Configuration;->f:Lcom/xiaomi/onetrack/OneTrack$Mode;
 
-    .line 33
+    .line 35
     invoke-static {p1}, Lcom/xiaomi/onetrack/Configuration$Builder;->g(Lcom/xiaomi/onetrack/Configuration$Builder;)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/xiaomi/onetrack/Configuration;->g:Z
 
-    .line 34
+    .line 36
     invoke-static {p1}, Lcom/xiaomi/onetrack/Configuration$Builder;->h(Lcom/xiaomi/onetrack/Configuration$Builder;)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/xiaomi/onetrack/Configuration;->i:Z
 
-    .line 35
+    .line 37
     invoke-static {p1}, Lcom/xiaomi/onetrack/Configuration$Builder;->i(Lcom/xiaomi/onetrack/Configuration$Builder;)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/xiaomi/onetrack/Configuration;->h:Z
 
-    .line 36
+    .line 38
     invoke-static {p1}, Lcom/xiaomi/onetrack/Configuration$Builder;->j(Lcom/xiaomi/onetrack/Configuration$Builder;)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/xiaomi/onetrack/Configuration;->j:Z
 
-    .line 37
+    .line 39
     invoke-static {p1}, Lcom/xiaomi/onetrack/Configuration$Builder;->k(Lcom/xiaomi/onetrack/Configuration$Builder;)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/xiaomi/onetrack/Configuration;->k:Z
 
-    .line 38
+    .line 40
     invoke-static {p1}, Lcom/xiaomi/onetrack/Configuration$Builder;->l(Lcom/xiaomi/onetrack/Configuration$Builder;)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/xiaomi/onetrack/Configuration;->l:Z
 
-    .line 39
+    .line 41
     invoke-static {p1}, Lcom/xiaomi/onetrack/Configuration$Builder;->m(Lcom/xiaomi/onetrack/Configuration$Builder;)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/xiaomi/onetrack/Configuration;->m:Ljava/lang/String;
 
-    .line 40
+    .line 42
     invoke-static {p1}, Lcom/xiaomi/onetrack/Configuration$Builder;->n(Lcom/xiaomi/onetrack/Configuration$Builder;)Z
 
-    move-result p1
+    move-result v0
 
-    iput-boolean p1, p0, Lcom/xiaomi/onetrack/Configuration;->n:Z
+    iput-boolean v0, p0, Lcom/xiaomi/onetrack/Configuration;->n:Z
+
+    .line 43
+    invoke-static {p1}, Lcom/xiaomi/onetrack/Configuration$Builder;->o(Lcom/xiaomi/onetrack/Configuration$Builder;)Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/xiaomi/onetrack/Configuration;->o:Ljava/lang/String;
 
     return-void
 .end method
@@ -189,12 +198,12 @@
 .method private a(Ljava/lang/String;)Ljava/lang/String;
     .locals 4
 
-    .line 218
+    .line 242
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 219
+    .line 243
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -211,7 +220,7 @@
 
     const/4 v1, 0x0
 
-    .line 220
+    .line 244
     :goto_0
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
@@ -225,7 +234,7 @@
 
     if-eq v1, v2, :cond_1
 
-    .line 221
+    .line 245
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v3
@@ -247,12 +256,12 @@
     :cond_0
     const-string v2, "*"
 
-    .line 224
+    .line 248
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_2
 
-    .line 222
+    .line 246
     :cond_1
     :goto_1
     invoke-virtual {p1, v1}, Ljava/lang/String;->charAt(I)C
@@ -266,11 +275,11 @@
 
     goto :goto_0
 
-    .line 228
+    .line 252
     :cond_2
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 230
+    .line 254
     :cond_3
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -281,10 +290,19 @@
 
 
 # virtual methods
+.method public getAdEventAppId()Ljava/lang/String;
+    .locals 1
+
+    .line 105
+    iget-object v0, p0, Lcom/xiaomi/onetrack/Configuration;->o:Ljava/lang/String;
+
+    return-object v0
+.end method
+
 .method public getAppId()Ljava/lang/String;
     .locals 1
 
-    .line 44
+    .line 48
     iget-object v0, p0, Lcom/xiaomi/onetrack/Configuration;->a:Ljava/lang/String;
 
     return-object v0
@@ -293,7 +311,7 @@
 .method public getChannel()Ljava/lang/String;
     .locals 1
 
-    .line 52
+    .line 56
     iget-object v0, p0, Lcom/xiaomi/onetrack/Configuration;->c:Ljava/lang/String;
 
     return-object v0
@@ -302,7 +320,7 @@
 .method public getInstanceId()Ljava/lang/String;
     .locals 1
 
-    .line 93
+    .line 97
     iget-object v0, p0, Lcom/xiaomi/onetrack/Configuration;->m:Ljava/lang/String;
 
     return-object v0
@@ -311,7 +329,7 @@
 .method public getMode()Lcom/xiaomi/onetrack/OneTrack$Mode;
     .locals 1
 
-    .line 64
+    .line 68
     iget-object v0, p0, Lcom/xiaomi/onetrack/Configuration;->f:Lcom/xiaomi/onetrack/OneTrack$Mode;
 
     return-object v0
@@ -320,7 +338,7 @@
 .method public getPluginId()Ljava/lang/String;
     .locals 1
 
-    .line 48
+    .line 52
     iget-object v0, p0, Lcom/xiaomi/onetrack/Configuration;->b:Ljava/lang/String;
 
     return-object v0
@@ -329,7 +347,7 @@
 .method public getRegion()Ljava/lang/String;
     .locals 1
 
-    .line 60
+    .line 64
     iget-object v0, p0, Lcom/xiaomi/onetrack/Configuration;->e:Ljava/lang/String;
 
     return-object v0
@@ -338,7 +356,7 @@
 .method public isAutoTrackActivityAction()Z
     .locals 1
 
-    .line 85
+    .line 89
     iget-boolean v0, p0, Lcom/xiaomi/onetrack/Configuration;->k:Z
 
     return v0
@@ -347,7 +365,7 @@
 .method public isExceptionCatcherEnable()Z
     .locals 1
 
-    .line 73
+    .line 77
     iget-boolean v0, p0, Lcom/xiaomi/onetrack/Configuration;->j:Z
 
     return v0
@@ -358,7 +376,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 69
+    .line 73
     iget-boolean v0, p0, Lcom/xiaomi/onetrack/Configuration;->g:Z
 
     return v0
@@ -367,7 +385,7 @@
 .method public isIMEIEnable()Z
     .locals 1
 
-    .line 81
+    .line 85
     iget-boolean v0, p0, Lcom/xiaomi/onetrack/Configuration;->i:Z
 
     return v0
@@ -376,7 +394,7 @@
 .method public isIMSIEnable()Z
     .locals 1
 
-    .line 77
+    .line 81
     iget-boolean v0, p0, Lcom/xiaomi/onetrack/Configuration;->h:Z
 
     return v0
@@ -385,7 +403,7 @@
 .method public isInternational()Z
     .locals 1
 
-    .line 56
+    .line 60
     iget-boolean v0, p0, Lcom/xiaomi/onetrack/Configuration;->d:Z
 
     return v0
@@ -394,7 +412,7 @@
 .method public isOverrideMiuiRegionSetting()Z
     .locals 1
 
-    .line 89
+    .line 93
     iget-boolean v0, p0, Lcom/xiaomi/onetrack/Configuration;->l:Z
 
     return v0
@@ -403,7 +421,7 @@
 .method public isUseCustomPrivacyPolicy()Z
     .locals 1
 
-    .line 97
+    .line 101
     iget-boolean v0, p0, Lcom/xiaomi/onetrack/Configuration;->n:Z
 
     return v0
@@ -412,7 +430,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 197
+    .line 220
     :try_start_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -424,7 +442,7 @@
 
     iget-object v1, p0, Lcom/xiaomi/onetrack/Configuration;->a:Ljava/lang/String;
 
-    .line 198
+    .line 221
     invoke-direct {p0, v1}, Lcom/xiaomi/onetrack/Configuration;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -441,7 +459,7 @@
 
     iget-object v2, p0, Lcom/xiaomi/onetrack/Configuration;->b:Ljava/lang/String;
 
-    .line 199
+    .line 222
     invoke-direct {p0, v2}, Lcom/xiaomi/onetrack/Configuration;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
@@ -532,7 +550,7 @@
 
     iget-object v1, p0, Lcom/xiaomi/onetrack/Configuration;->m:Ljava/lang/String;
 
-    .line 209
+    .line 233
     invoke-direct {p0, v1}, Lcom/xiaomi/onetrack/Configuration;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1

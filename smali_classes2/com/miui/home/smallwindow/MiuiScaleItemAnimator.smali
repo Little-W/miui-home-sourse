@@ -1,5 +1,5 @@
 .class public Lcom/miui/home/smallwindow/MiuiScaleItemAnimator;
-.super Lcom/miui/home/smallwindow/MiuiDefaultItemAnimator;
+.super Lcom/miui/home/library/animator/MiuiDefaultItemAnimator;
 .source "MiuiScaleItemAnimator.java"
 
 
@@ -7,8 +7,8 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 17
-    invoke-direct {p0}, Lcom/miui/home/smallwindow/MiuiDefaultItemAnimator;-><init>()V
+    .line 19
+    invoke-direct {p0}, Lcom/miui/home/library/animator/MiuiDefaultItemAnimator;-><init>()V
 
     return-void
 .end method
@@ -18,10 +18,10 @@
 .method protected doAnimateAdd(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
     .locals 8
 
-    .line 30
+    .line 32
     iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    .line 31
+    .line 33
     new-instance v1, Lmiuix/animation/controller/AnimState;
 
     const-string v2, "end"
@@ -32,28 +32,28 @@
 
     const-wide/high16 v3, 0x3ff0000000000000L    # 1.0
 
-    .line 32
+    .line 34
     invoke-virtual {v1, v2, v3, v4}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v1
 
     sget-object v2, Lmiuix/animation/property/ViewProperty;->SCALE_Y:Lmiuix/animation/property/ViewProperty;
 
-    .line 33
+    .line 35
     invoke-virtual {v1, v2, v3, v4}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v1
 
     sget-object v2, Lmiuix/animation/property/ViewProperty;->ALPHA:Lmiuix/animation/property/ViewProperty;
 
-    .line 34
+    .line 36
     invoke-virtual {v1, v2, v3, v4}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v1
 
     const/4 v2, 0x1
 
-    .line 35
+    .line 37
     new-array v3, v2, [Landroid/view/View;
 
     const/4 v4, 0x0
@@ -82,9 +82,9 @@
 
     new-array v2, v2, [Lmiuix/animation/listener/TransitionListener;
 
-    new-instance v6, Lcom/miui/home/smallwindow/MiuiDefaultItemAnimator$AddAnimationLister;
+    new-instance v6, Lcom/miui/home/library/animator/MiuiDefaultItemAnimator$AddAnimationLister;
 
-    invoke-direct {v6, p0, p1}, Lcom/miui/home/smallwindow/MiuiDefaultItemAnimator$AddAnimationLister;-><init>(Lcom/miui/home/smallwindow/MiuiDefaultItemAnimator;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
+    invoke-direct {v6, p0, p1}, Lcom/miui/home/library/animator/MiuiDefaultItemAnimator$AddAnimationLister;-><init>(Lcom/miui/home/library/animator/MiuiDefaultItemAnimator;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
     aput-object v6, v2, v4
 
@@ -102,10 +102,10 @@
 .method protected doAnimateRemove(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
     .locals 7
 
-    .line 40
+    .line 42
     iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    .line 41
+    .line 43
     new-instance v1, Lmiuix/animation/controller/AnimState;
 
     const-string v2, "end"
@@ -116,14 +116,14 @@
 
     const-wide/high16 v3, 0x3fe0000000000000L    # 0.5
 
-    .line 42
+    .line 44
     invoke-virtual {v1, v2, v3, v4}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v1
 
     sget-object v2, Lmiuix/animation/property/ViewProperty;->SCALE_Y:Lmiuix/animation/property/ViewProperty;
 
-    .line 43
+    .line 45
     invoke-virtual {v1, v2, v3, v4}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v1
@@ -132,14 +132,14 @@
 
     const-wide/16 v3, 0x0
 
-    .line 44
+    .line 46
     invoke-virtual {v1, v2, v3, v4}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v1
 
     const/4 v2, 0x1
 
-    .line 45
+    .line 47
     new-array v3, v2, [Landroid/view/View;
 
     const/4 v4, 0x0
@@ -162,9 +162,9 @@
 
     new-array v2, v2, [Lmiuix/animation/listener/TransitionListener;
 
-    new-instance v6, Lcom/miui/home/smallwindow/MiuiDefaultItemAnimator$RemoveLister;
+    new-instance v6, Lcom/miui/home/library/animator/MiuiDefaultItemAnimator$RemoveLister;
 
-    invoke-direct {v6, p0, p1}, Lcom/miui/home/smallwindow/MiuiDefaultItemAnimator$RemoveLister;-><init>(Lcom/miui/home/smallwindow/MiuiDefaultItemAnimator;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
+    invoke-direct {v6, p0, p1}, Lcom/miui/home/library/animator/MiuiDefaultItemAnimator$RemoveLister;-><init>(Lcom/miui/home/library/animator/MiuiDefaultItemAnimator;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
     aput-object v6, v2, v4
 
@@ -182,7 +182,7 @@
 .method protected preAnimateAddImpl(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
     .locals 4
 
-    .line 21
+    .line 23
     new-instance v0, Lmiuix/animation/controller/AnimState;
 
     const-string v1, "start"
@@ -193,14 +193,14 @@
 
     const-wide/high16 v2, 0x3fe0000000000000L    # 0.5
 
-    .line 22
+    .line 24
     invoke-virtual {v0, v1, v2, v3}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v0
 
     sget-object v1, Lmiuix/animation/property/ViewProperty;->SCALE_Y:Lmiuix/animation/property/ViewProperty;
 
-    .line 23
+    .line 25
     invoke-virtual {v0, v1, v2, v3}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v0
@@ -209,14 +209,14 @@
 
     const-wide/16 v2, 0x0
 
-    .line 24
+    .line 26
     invoke-virtual {v0, v1, v2, v3}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    .line 25
+    .line 27
     new-array v1, v1, [Landroid/view/View;
 
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;

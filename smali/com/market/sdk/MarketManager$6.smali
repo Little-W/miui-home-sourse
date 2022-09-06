@@ -34,7 +34,7 @@
 .method constructor <init>(Lcom/market/sdk/MarketManager;Lcom/market/sdk/compat/FutureTaskCompat;[Ljava/lang/String;)V
     .locals 0
 
-    .line 486
+    .line 477
     iput-object p1, p0, Lcom/market/sdk/MarketManager$6;->this$0:Lcom/market/sdk/MarketManager;
 
     iput-object p2, p0, Lcom/market/sdk/MarketManager$6;->val$taskCompat:Lcom/market/sdk/compat/FutureTaskCompat;
@@ -56,7 +56,7 @@
         }
     .end annotation
 
-    .line 486
+    .line 477
     invoke-virtual {p0, p1}, Lcom/market/sdk/MarketManager$6;->innerInvoke(Lcom/market/sdk/IMarketService;)Ljava/lang/Void;
 
     move-result-object p1
@@ -72,14 +72,14 @@
         }
     .end annotation
 
-    .line 490
+    .line 481
     new-instance v0, Lcom/market/sdk/MarketManager$6$1;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, p0, v1}, Lcom/market/sdk/MarketManager$6$1;-><init>(Lcom/market/sdk/MarketManager$6;Landroid/os/Handler;)V
 
-    .line 500
+    .line 491
     iget-object v2, p0, Lcom/market/sdk/MarketManager$6;->val$pkgList:[Ljava/lang/String;
 
     invoke-interface {p1, v2, v0}, Lcom/market/sdk/IMarketService;->getCategoryV2([Ljava/lang/String;Landroid/os/ResultReceiver;)V

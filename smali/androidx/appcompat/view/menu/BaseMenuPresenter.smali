@@ -148,6 +148,15 @@
     return-object v0
 .end method
 
+.method public getId()I
+    .locals 1
+
+    .line 244
+    iget v0, p0, Landroidx/appcompat/view/menu/BaseMenuPresenter;->mId:I
+
+    return v0
+.end method
+
 .method public getItemView(Landroidx/appcompat/view/menu/MenuItemImpl;Landroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 1
 
@@ -261,16 +270,24 @@
     .line 220
     iget-object v0, p0, Landroidx/appcompat/view/menu/BaseMenuPresenter;->mCallback:Landroidx/appcompat/view/menu/MenuPresenter$Callback;
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
-    .line 221
+    if-eqz p1, :cond_0
+
+    goto :goto_0
+
+    .line 222
+    :cond_0
+    iget-object p1, p0, Landroidx/appcompat/view/menu/BaseMenuPresenter;->mMenu:Landroidx/appcompat/view/menu/MenuBuilder;
+
+    :goto_0
     invoke-interface {v0, p1}, Landroidx/appcompat/view/menu/MenuPresenter$Callback;->onOpenSubMenu(Landroidx/appcompat/view/menu/MenuBuilder;)Z
 
     move-result p1
 
     return p1
 
-    :cond_0
+    :cond_1
     const/4 p1, 0x0
 
     return p1
@@ -288,7 +305,7 @@
 .method public setId(I)V
     .locals 0
 
-    .line 247
+    .line 248
     iput p1, p0, Landroidx/appcompat/view/menu/BaseMenuPresenter;->mId:I
 
     return-void
@@ -368,11 +385,11 @@
 
     if-eqz v7, :cond_1
 
+    .line 104
     move-object v7, v6
 
     check-cast v7, Landroidx/appcompat/view/menu/MenuView$ItemView;
 
-    .line 104
     invoke-interface {v7}, Landroidx/appcompat/view/menu/MenuView$ItemView;->getItemData()Landroidx/appcompat/view/menu/MenuItemImpl;
 
     move-result-object v7

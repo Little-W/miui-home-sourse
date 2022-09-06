@@ -774,6 +774,21 @@
     return p1
 .end method
 
+.method static synthetic access$1680(Lmiuix/pickerwidget/widget/NumberPicker;I)Z
+    .locals 1
+
+    .line 75
+    iget-boolean v0, p0, Lmiuix/pickerwidget/widget/NumberPicker;->mIncrementVirtualButtonPressed:Z
+
+    xor-int/2addr p1, v0
+
+    int-to-byte p1, p1
+
+    iput-boolean p1, p0, Lmiuix/pickerwidget/widget/NumberPicker;->mIncrementVirtualButtonPressed:Z
+
+    return p1
+.end method
+
 .method static synthetic access$1700(Lmiuix/pickerwidget/widget/NumberPicker;)I
     .locals 0
 
@@ -796,6 +811,21 @@
     .locals 0
 
     .line 75
+    iput-boolean p1, p0, Lmiuix/pickerwidget/widget/NumberPicker;->mDecrementVirtualButtonPressed:Z
+
+    return p1
+.end method
+
+.method static synthetic access$1880(Lmiuix/pickerwidget/widget/NumberPicker;I)Z
+    .locals 1
+
+    .line 75
+    iget-boolean v0, p0, Lmiuix/pickerwidget/widget/NumberPicker;->mDecrementVirtualButtonPressed:Z
+
+    xor-int/2addr p1, v0
+
+    int-to-byte p1, p1
+
     iput-boolean p1, p0, Lmiuix/pickerwidget/widget/NumberPicker;->mDecrementVirtualButtonPressed:Z
 
     return p1
@@ -3567,6 +3597,7 @@
 
     goto :goto_0
 
+    .line 2038
     :cond_0
     iget v1, p0, Lmiuix/pickerwidget/widget/NumberPicker;->mValue:I
 
@@ -4262,9 +4293,9 @@
     :goto_0
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 1718
     iget-object v1, p0, Lmiuix/pickerwidget/widget/NumberPicker;->mLabel:Ljava/lang/CharSequence;
 
-    .line 1718
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1

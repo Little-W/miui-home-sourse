@@ -73,13 +73,15 @@
     .line 30
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/SecurityManagerWrapper;->mSM:Lmiui/security/SecurityManager;
 
-    iget-object v1, p0, Lcom/android/systemui/shared/recents/system/SecurityManagerWrapper;->mContext:Landroid/content/Context;
+    const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lmiui/security/SecurityManager;->isAccessControlActived(Landroid/content/Context;)Z
+    if-eqz v0, :cond_2
+
+    iget-object v2, p0, Lcom/android/systemui/shared/recents/system/SecurityManagerWrapper;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0, v2}, Lmiui/security/SecurityManager;->isAccessControlActived(Landroid/content/Context;)Z
 
     move-result v0
-
-    const/4 v1, 0x0
 
     if-eqz v0, :cond_2
 

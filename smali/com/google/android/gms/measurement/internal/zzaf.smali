@@ -3102,7 +3102,7 @@
 
     move-result-object v2
 
-    const-string v3, "user_attributes"
+    const-string/jumbo v3, "user_attributes"
 
     const-string v4, "name"
 
@@ -3110,7 +3110,7 @@
 
     const-string v6, "set_timestamp"
 
-    const-string v7, "value"
+    const-string/jumbo v7, "value"
 
     .line 250
     filled-new-array {v4, v5, v6, v7}, [Ljava/lang/String;
@@ -3831,13 +3831,13 @@
 
     move-result-object v11
 
-    const-string v12, "user_attributes"
+    const-string/jumbo v12, "user_attributes"
 
     const-string v1, "name"
 
     const-string v4, "set_timestamp"
 
-    const-string v5, "value"
+    const-string/jumbo v5, "value"
 
     const-string v6, "origin"
 
@@ -4201,7 +4201,7 @@
 
     const-string v6, "name"
 
-    const-string v7, "value"
+    const-string/jumbo v7, "value"
 
     const-string v8, "active"
 
@@ -6835,7 +6835,7 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    const-string v2, "value"
+    const-string/jumbo v2, "value"
 
     .line 191
     iget-object v3, p1, Lcom/google/android/gms/measurement/internal/zzkw;->zze:Ljava/lang/Object;
@@ -6848,7 +6848,7 @@
 
     move-result-object v2
 
-    const-string v3, "user_attributes"
+    const-string/jumbo v3, "user_attributes"
 
     const/4 v4, 0x0
 
@@ -7000,7 +7000,7 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v2, "value"
+    const-string/jumbo v2, "value"
 
     .line 370
     iget-object v3, p1, Lcom/google/android/gms/measurement/internal/zzz;->zzc:Lcom/google/android/gms/measurement/internal/zzku;
@@ -8324,7 +8324,7 @@
 
     move-result-object v0
 
-    const-string v1, "user_attributes"
+    const-string/jumbo v1, "user_attributes"
 
     const-string v2, "app_id=? and name=?"
 
@@ -8510,11 +8510,11 @@
 
     move-result-object v10
 
-    const-string v11, "user_attributes"
+    const-string/jumbo v11, "user_attributes"
 
     const-string v0, "set_timestamp"
 
-    const-string v1, "value"
+    const-string/jumbo v1, "value"
 
     const-string v2, "origin"
 
@@ -8762,7 +8762,7 @@
 
     const-string v11, "origin"
 
-    const-string v12, "value"
+    const-string/jumbo v12, "value"
 
     const-string v13, "active"
 

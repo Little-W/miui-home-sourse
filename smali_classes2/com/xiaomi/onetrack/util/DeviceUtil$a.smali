@@ -33,7 +33,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .line 805
+    .line 808
     new-instance v0, Landroid/content/pm/Signature;
 
     const-string v1, "3082033b30820223a003020102020900a07a328482f70d2a300d06092a864886f70d01010505003035310b30090603550406130255533113301106035504080c0a43616c69666f726e69613111300f06035504070c084d6f756e7461696e301e170d3133303430313033303831325a170d3430303831373033303831325a3035310b30090603550406130255533113301106035504080c0a43616c69666f726e69613111300f06035504070c084d6f756e7461696e30820120300d06092a864886f70d01010105000382010d00308201080282010100ac678c9234a0226edbeb75a43e8e18f632d8c8a094c087fffbbb0b5e4429d845e36bffbe2d7098e320855258aa777368c18c538f968063d5d61663dc946ab03acbb31d00a27d452e12e6d42865e27d6d0ad2d8b12cf3b3096a7ec66a21db2a6a697857fd4d29fb4cdf294b3371d7601f2e3f190c0164efa543897026c719b334808e4f612fe3a3da589115fc30f9ca89862feefdf31a9164ecb295dcf7767e673be2192dda64f88189fd6e6ebd62e572c7997c2385a0ea9292ec799dee8f87596fc73aa123fb6f577d09ac0c123179c3bdbc978c2fe6194eb9fa4ab3658bfe8b44040bb13fe7809409e622189379fbc63966ab36521793547b01673ecb5f15cf020103a350304e301d0603551d0e0416041447203684e562385ada79108c4c94c5055037592f301f0603551d2304183016801447203684e562385ada79108c4c94c5055037592f300c0603551d13040530030101ff300d06092a864886f70d010105050003820101008d530fe05c6fe694c7559ddb5dd2c556528dd3cad4f7580f439f9a90a4681d37ce246b9a6681bdd5a5437f0b8bba903e39bac309fc0e9ee5553681612e723e9ec4f6abab6b643b33013f09246a9b5db7703b96f838fb27b00612f5fcd431bea32f68350ae51a4a1d012c520c401db7cccc15a7b19c4310b0c3bfc625ce5744744d0b9eeb02b0a4e7d51ed59849ce580b9f7c3062c84b9a0b13cc211e1c916c289820266a610801e3316c915649804571b147beadbf88d3b517ee04121d40630853f2f2a506bb788620de9648faeacff568e5033a666316bc2046526674ed3de25ceefdc4ad3628f1a230fd41bf9ca9f6a078173850dba555768fe1c191483ad9"
@@ -48,7 +48,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 796
+    .line 799
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -59,7 +59,7 @@
 
     if-eqz p0, :cond_0
 
-    .line 815
+    .line 818
     iget-object v0, p0, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     if-eqz v0, :cond_0
@@ -70,7 +70,7 @@
 
     if-lez v0, :cond_0
 
-    .line 816
+    .line 819
     iget-object p0, p0, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     const/4 v0, 0x0
@@ -101,7 +101,7 @@
 
     const/4 v0, 0x0
 
-    .line 931
+    .line 934
     :try_start_0
     invoke-virtual {p0, p1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
@@ -109,10 +109,10 @@
 
     const/4 p1, 0x1
 
-    .line 932
+    .line 935
     invoke-virtual {p0, p1}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 933
+    .line 936
     invoke-virtual {p0, v0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -128,7 +128,7 @@
 
     const-string v1, "getStaticVariableValue exception"
 
-    .line 935
+    .line 938
     invoke-static {p1, v1, p0}, Lcom/xiaomi/onetrack/util/p;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-object v0
@@ -142,7 +142,7 @@
     :try_start_0
     const-string v1, "mitv.common.ConfigurationManager"
 
-    .line 905
+    .line 908
     invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v1
@@ -151,14 +151,14 @@
 
     const/4 v3, 0x0
 
-    .line 906
+    .line 909
     new-array v4, v3, [Ljava/lang/Class;
 
     invoke-virtual {v1, v2, v4}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v2
 
-    .line 907
+    .line 910
     new-array v4, v3, [Ljava/lang/Object;
 
     invoke-virtual {v2, v1, v4}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
@@ -167,14 +167,14 @@
 
     const-string v4, "getProductCategory"
 
-    .line 909
+    .line 912
     new-array v5, v3, [Ljava/lang/Class;
 
     invoke-virtual {v1, v4, v5}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v1
 
-    .line 910
+    .line 913
     new-array v3, v3, [Ljava/lang/Object;
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
@@ -191,14 +191,14 @@
 
     const-string v2, "mitv.tv.TvContext"
 
-    .line 913
+    .line 916
     invoke-static {v2}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v2
 
     const-string v3, "PRODUCT_CATEGORY_MITV"
 
-    .line 914
+    .line 917
     invoke-static {v2, v3}, Lcom/xiaomi/onetrack/util/DeviceUtil$a;->a(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v3
@@ -220,7 +220,7 @@
     :cond_0
     const-string v3, "PRODUCT_CATEGORY_MIBOX"
 
-    .line 916
+    .line 919
     invoke-static {v2, v3}, Lcom/xiaomi/onetrack/util/DeviceUtil$a;->a(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v3
@@ -242,7 +242,7 @@
     :cond_1
     const-string v3, "PRODUCT_CATEGORY_MITVBOX"
 
-    .line 918
+    .line 921
     invoke-static {v2, v3}, Lcom/xiaomi/onetrack/util/DeviceUtil$a;->a(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v3
@@ -264,7 +264,7 @@
     :cond_2
     const-string v3, "PRODUCT_CATEGORY_MIPROJECTOR"
 
-    .line 920
+    .line 923
     invoke-static {v2, v3}, Lcom/xiaomi/onetrack/util/DeviceUtil$a;->a(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v2
@@ -290,7 +290,7 @@
 
     const-string v2, "DeviceUtil"
 
-    .line 924
+    .line 927
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -323,7 +323,7 @@
 
     const/4 v1, 0x0
 
-    .line 883
+    .line 886
     :try_start_0
     new-instance v2, Ljava/io/BufferedReader;
 
@@ -342,7 +342,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 885
+    .line 888
     :try_start_1
     invoke-virtual {v2}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
@@ -350,7 +350,7 @@
 
     if-eqz p0, :cond_0
 
-    .line 888
+    .line 891
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -366,7 +366,7 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 894
+    .line 897
     :cond_0
     invoke-static {v2}, Lcom/xiaomi/onetrack/util/m;->a(Ljava/io/Closeable;)V
 
@@ -400,12 +400,12 @@
 
     const-string v3, "catEntry exception"
 
-    .line 892
+    .line 895
     invoke-static {v2, v3, p0}, Lcom/xiaomi/onetrack/util/p;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 894
+    .line 897
     invoke-static {v1}, Lcom/xiaomi/onetrack/util/m;->a(Ljava/io/Closeable;)V
 
     :goto_1
@@ -414,14 +414,14 @@
     :goto_2
     invoke-static {v1}, Lcom/xiaomi/onetrack/util/m;->a(Ljava/io/Closeable;)V
 
-    .line 895
+    .line 898
     throw p0
 .end method
 
 .method static a(Landroid/content/Context;)Z
     .locals 3
 
-    .line 808
+    .line 811
     sget-object v0, Lcom/xiaomi/onetrack/util/DeviceUtil$a;->f:[Landroid/content/pm/Signature;
 
     const/4 v1, 0x1
@@ -430,7 +430,7 @@
 
     if-nez v0, :cond_0
 
-    .line 809
+    .line 812
     new-array v0, v1, [Landroid/content/pm/Signature;
 
     invoke-static {p0}, Lcom/xiaomi/onetrack/util/DeviceUtil$a;->c(Landroid/content/Context;)Landroid/content/pm/Signature;
@@ -441,7 +441,7 @@
 
     sput-object v0, Lcom/xiaomi/onetrack/util/DeviceUtil$a;->f:[Landroid/content/pm/Signature;
 
-    .line 811
+    .line 814
     :cond_0
     sget-object p0, Lcom/xiaomi/onetrack/util/DeviceUtil$a;->f:[Landroid/content/pm/Signature;
 
@@ -471,14 +471,14 @@
 .method public static b(Landroid/content/Context;)Ljava/lang/String;
     .locals 4
 
-    .line 832
+    .line 835
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x11
 
     if-lt v0, v1, :cond_0
 
-    .line 835
+    .line 838
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -490,7 +490,7 @@
 
     move-result-object p0
 
-    .line 836
+    .line 839
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -505,25 +505,25 @@
     :cond_0
     const/4 p0, 0x0
 
-    .line 845
+    .line 848
     :try_start_1
     sget-object v0, Landroid/os/Build;->PRODUCT:Ljava/lang/String;
 
     const-string v1, "ro.product.model"
 
-    .line 846
+    .line 849
     invoke-static {v1}, Lcom/xiaomi/onetrack/util/DeviceUtil;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 847
+    .line 850
     invoke-static {}, Lcom/xiaomi/onetrack/util/DeviceUtil$a;->a()Ljava/lang/String;
 
     move-result-object v2
 
     const-string v3, "tv"
 
-    .line 848
+    .line 851
     invoke-static {v3, v2}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -534,7 +534,7 @@
 
     const-string v2, "batman"
 
-    .line 849
+    .line 852
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -543,7 +543,7 @@
 
     const-string v2, "conan"
 
-    .line 850
+    .line 853
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -555,7 +555,7 @@
     :cond_1
     const-string v2, "augustrush"
 
-    .line 852
+    .line 855
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -564,7 +564,7 @@
 
     const-string v2, "casablanca"
 
-    .line 853
+    .line 856
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -580,7 +580,7 @@
     :goto_0
     const-string p0, "me2"
 
-    .line 857
+    .line 860
     invoke-static {p0, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result p0
@@ -589,7 +589,7 @@
 
     const-string p0, "persist.service.bdroid.bdaddr"
 
-    .line 858
+    .line 861
     invoke-static {p0}, Lcom/xiaomi/onetrack/util/DeviceUtil;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -599,7 +599,7 @@
     :cond_4
     const-string p0, "transformers"
 
-    .line 859
+    .line 862
     invoke-static {p0, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result p0
@@ -617,7 +617,7 @@
     :cond_5
     const-string p0, "dolphin-zorro"
 
-    .line 860
+    .line 863
     invoke-static {p0, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result p0
@@ -627,7 +627,7 @@
     :cond_6
     const-string p0, "/sys/class/net/wlan0/address"
 
-    .line 861
+    .line 864
     invoke-static {p0}, Lcom/xiaomi/onetrack/util/DeviceUtil$a;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -639,7 +639,7 @@
 
     const-string p0, "/sys/class/net/eth0/address"
 
-    .line 864
+    .line 867
     invoke-static {p0}, Lcom/xiaomi/onetrack/util/DeviceUtil$a;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -649,12 +649,12 @@
     :cond_8
     const-string p0, "ro.boot.btmac"
 
-    .line 867
+    .line 870
     invoke-static {p0}, Lcom/xiaomi/onetrack/util/DeviceUtil$a;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 869
+    .line 872
     :goto_1
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -662,7 +662,7 @@
 
     if-nez v0, :cond_9
 
-    .line 870
+    .line 873
     invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object p0
@@ -683,7 +683,7 @@
 
     const-string v1, "getMiTvMac exception"
 
-    .line 874
+    .line 877
     invoke-static {v0, v1, p0}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     const-string p0, ""
@@ -694,7 +694,7 @@
 .method private static c(Landroid/content/Context;)Landroid/content/pm/Signature;
     .locals 2
 
-    .line 823
+    .line 826
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -704,12 +704,12 @@
 
     const/16 v1, 0x40
 
-    .line 824
+    .line 827
     invoke-virtual {p0, v0, v1}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
 
     move-result-object p0
 
-    .line 825
+    .line 828
     invoke-static {p0}, Lcom/xiaomi/onetrack/util/DeviceUtil$a;->a(Landroid/content/pm/PackageInfo;)Landroid/content/pm/Signature;
 
     move-result-object p0

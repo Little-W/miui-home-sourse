@@ -15,13 +15,23 @@
 
 
 # static fields
+.field public static final Capability:[I
+
+.field public static final Capability_queryPatterns:I = 0x0
+
+.field public static final Capability_shortcutMatchRequired:I = 0x1
+
 .field public static final ColorStateListItem:[I
 
-.field public static final ColorStateListItem_alpha:I = 0x2
+.field public static final ColorStateListItem_alpha:I = 0x3
 
 .field public static final ColorStateListItem_android_alpha:I = 0x1
 
 .field public static final ColorStateListItem_android_color:I = 0x0
+
+.field public static final ColorStateListItem_android_lStar:I = 0x2
+
+.field public static final ColorStateListItem_lStar:I = 0x4
 
 .field public static final FontFamily:[I
 
@@ -59,6 +69,8 @@
 
 .field public static final FontFamily_fontProviderQuery:I = 0x5
 
+.field public static final FontFamily_fontProviderSystemFontFamily:I = 0x6
+
 .field public static final GradientColor:[I
 
 .field public static final GradientColorItem:[I
@@ -94,89 +106,103 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
-
-    const/4 v0, 0x3
-
-    .line 184
-    new-array v0, v0, [I
-
-    fill-array-data v0, :array_0
-
-    sput-object v0, Landroidx/core/R$styleable;->ColorStateListItem:[I
-
-    const/4 v0, 0x6
-
-    .line 188
-    new-array v0, v0, [I
-
-    fill-array-data v0, :array_1
-
-    sput-object v0, Landroidx/core/R$styleable;->FontFamily:[I
-
-    const/16 v0, 0xa
-
-    .line 195
-    new-array v0, v0, [I
-
-    fill-array-data v0, :array_2
-
-    sput-object v0, Landroidx/core/R$styleable;->FontFamilyFont:[I
-
-    const/16 v0, 0xc
-
-    .line 206
-    new-array v0, v0, [I
-
-    fill-array-data v0, :array_3
-
-    sput-object v0, Landroidx/core/R$styleable;->GradientColor:[I
+    .locals 2
 
     const/4 v0, 0x2
 
-    .line 219
+    .line 204
+    new-array v1, v0, [I
+
+    fill-array-data v1, :array_0
+
+    sput-object v1, Landroidx/core/R$styleable;->Capability:[I
+
+    const/4 v1, 0x5
+
+    .line 207
+    new-array v1, v1, [I
+
+    fill-array-data v1, :array_1
+
+    sput-object v1, Landroidx/core/R$styleable;->ColorStateListItem:[I
+
+    const/4 v1, 0x7
+
+    .line 213
+    new-array v1, v1, [I
+
+    fill-array-data v1, :array_2
+
+    sput-object v1, Landroidx/core/R$styleable;->FontFamily:[I
+
+    const/16 v1, 0xa
+
+    .line 221
+    new-array v1, v1, [I
+
+    fill-array-data v1, :array_3
+
+    sput-object v1, Landroidx/core/R$styleable;->FontFamilyFont:[I
+
+    const/16 v1, 0xc
+
+    .line 232
+    new-array v1, v1, [I
+
+    fill-array-data v1, :array_4
+
+    sput-object v1, Landroidx/core/R$styleable;->GradientColor:[I
+
+    .line 245
     new-array v0, v0, [I
 
-    fill-array-data v0, :array_4
+    fill-array-data v0, :array_5
 
     sput-object v0, Landroidx/core/R$styleable;->GradientColorItem:[I
 
     return-void
 
-    nop
-
     :array_0
     .array-data 4
-        0x10101a5
-        0x101031f
-        0x7f04006e
+        0x7f04048d
+        0x7f0404e6
     .end array-data
 
     :array_1
     .array-data 4
-        0x7f040172
-        0x7f040173
-        0x7f040174
-        0x7f040175
-        0x7f040176
-        0x7f040177
+        0x10101a5
+        0x101031f
+        0x1010647
+        0x7f040071
+        0x7f0402f9
     .end array-data
 
     :array_2
+    .array-data 4
+        0x7f04027f
+        0x7f040280
+        0x7f040281
+        0x7f040282
+        0x7f040283
+        0x7f040284
+        0x7f040285
+    .end array-data
+
+    :array_3
     .array-data 4
         0x1010532
         0x1010533
         0x101053f
         0x101056f
         0x1010570
-        0x7f040170
-        0x7f040178
-        0x7f040179
-        0x7f04017a
-        0x7f04038e
+        0x7f04027d
+        0x7f040286
+        0x7f040287
+        0x7f040288
+        0x7f04060d
     .end array-data
 
-    :array_3
+    :array_4
     .array-data 4
         0x101019d
         0x101019e
@@ -192,7 +218,7 @@
         0x1010513
     .end array-data
 
-    :array_4
+    :array_5
     .array-data 4
         0x10101a5
         0x1010514

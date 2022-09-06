@@ -110,6 +110,19 @@
     return-void
 .end method
 
+.method public static synthetic lambda$onConfigurationChanged$2(Lmiuix/appcompat/internal/app/widget/actionbar/CollapseTitle;)V
+    .locals 1
+
+    .line 200
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/actionbar/CollapseTitle;->getSubtitleAdjustSize()F
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/app/widget/actionbar/CollapseTitle;->setSubTitleTextSize(F)V
+
+    return-void
+.end method
+
 .method public static synthetic lambda$vu-VUnZLUdp-3JO5pIzZWq8iHzw(Lmiuix/appcompat/internal/app/widget/actionbar/CollapseTitle;)V
     .locals 0
 
@@ -121,21 +134,21 @@
 .method private onLandscapeChange()V
     .locals 5
 
-    .line 203
+    .line 205
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/actionbar/CollapseTitle;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 204
+    .line 206
     iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/actionbar/CollapseTitle;->mCollapseTitleLayout:Landroid/widget/LinearLayout;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    .line 205
+    .line 207
     iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/actionbar/CollapseTitle;->mCollapseSubtitleView:Landroid/widget/TextView;
 
     iget-object v3, p0, Lmiuix/appcompat/internal/app/widget/actionbar/CollapseTitle;->mContext:Landroid/content/Context;
@@ -144,14 +157,14 @@
 
     invoke-virtual {v1, v3, v4}, Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;I)V
 
-    .line 206
+    .line 208
     iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/actionbar/CollapseTitle;->mCollapseSubtitleView:Landroid/widget/TextView;
 
     sget v3, Lmiuix/appcompat/R$drawable;->miuix_appcompat_action_bar_subtitle_bg_land:I
 
     invoke-virtual {v1, v3}, Landroid/widget/TextView;->setBackgroundResource(I)V
 
-    .line 207
+    .line 209
     iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/actionbar/CollapseTitle;->mCollapseSubtitleView:Landroid/widget/TextView;
 
     invoke-virtual {v1}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -160,7 +173,7 @@
 
     check-cast v1, Landroid/widget/LinearLayout$LayoutParams;
 
-    .line 208
+    .line 210
     sget v3, Lmiuix/appcompat/R$dimen;->miuix_appcompat_action_bar_subtitle_start_margin:I
 
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
@@ -169,13 +182,13 @@
 
     invoke-virtual {v1, v0}, Landroid/widget/LinearLayout$LayoutParams;->setMarginStart(I)V
 
-    .line 209
+    .line 211
     iput v2, v1, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
 
-    .line 210
+    .line 212
     iput v2, v1, Landroid/widget/LinearLayout$LayoutParams;->bottomMargin:I
 
-    .line 211
+    .line 213
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/actionbar/CollapseTitle;->mCollapseSubtitleView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
@@ -186,21 +199,21 @@
 .method private onPortraitChange()V
     .locals 4
 
-    .line 215
+    .line 217
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/actionbar/CollapseTitle;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 216
+    .line 218
     iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/actionbar/CollapseTitle;->mCollapseTitleLayout:Landroid/widget/LinearLayout;
 
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    .line 217
+    .line 219
     iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/actionbar/CollapseTitle;->mCollapseSubtitleView:Landroid/widget/TextView;
 
     iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/actionbar/CollapseTitle;->mContext:Landroid/content/Context;
@@ -209,14 +222,14 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;I)V
 
-    .line 218
+    .line 220
     iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/actionbar/CollapseTitle;->mCollapseSubtitleView:Landroid/widget/TextView;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 219
+    .line 221
     iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/actionbar/CollapseTitle;->mCollapseSubtitleView:Landroid/widget/TextView;
 
     invoke-virtual {v1}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -227,10 +240,10 @@
 
     const/4 v2, 0x0
 
-    .line 220
+    .line 222
     invoke-virtual {v1, v2}, Landroid/widget/LinearLayout$LayoutParams;->setMarginStart(I)V
 
-    .line 221
+    .line 223
     sget v3, Lmiuix/appcompat/R$dimen;->action_bar_subtitle_top_margin:I
 
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
@@ -239,7 +252,7 @@
 
     iput v3, v1, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
 
-    .line 222
+    .line 224
     sget v3, Lmiuix/appcompat/R$dimen;->action_bar_subtitle_bottom_margin:I
 
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
@@ -248,17 +261,17 @@
 
     iput v0, v1, Landroid/widget/LinearLayout$LayoutParams;->bottomMargin:I
 
-    .line 223
+    .line 225
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/actionbar/CollapseTitle;->mCollapseSubtitleView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v2, v2, v2, v2}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    .line 224
+    .line 226
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/actionbar/CollapseTitle;->mCollapseSubtitleView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 225
+    .line 227
     invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/actionbar/CollapseTitle;->getSubtitleAdjustSize()F
 
     move-result v0
@@ -370,16 +383,6 @@
     move-result v3
 
     sub-int/2addr v2, v3
-
-    iget-object v3, p0, Lmiuix/appcompat/internal/app/widget/actionbar/CollapseTitle;->mCollapseSubtitleView:Landroid/widget/TextView;
-
-    invoke-virtual {v3}, Landroid/widget/TextView;->getMeasuredHeight()I
-
-    move-result v3
-
-    invoke-static {v2, v3}, Ljava/lang/Math;->min(II)I
-
-    move-result v2
 
     .line 171
     iget-object v3, p0, Lmiuix/appcompat/internal/app/widget/actionbar/CollapseTitle;->mCollapseSubtitleView:Landroid/widget/TextView;
@@ -775,7 +778,18 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->post(Ljava/lang/Runnable;)Z
 
+    goto :goto_0
+
+    .line 200
     :cond_1
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/actionbar/CollapseTitle;->mCollapseSubtitleView:Landroid/widget/TextView;
+
+    new-instance v0, Lmiuix/appcompat/internal/app/widget/actionbar/-$$Lambda$CollapseTitle$12-n8xkeRdV-ANK1dyUI1bK_I14;
+
+    invoke-direct {v0, p0}, Lmiuix/appcompat/internal/app/widget/actionbar/-$$Lambda$CollapseTitle$12-n8xkeRdV-ANK1dyUI1bK_I14;-><init>(Lmiuix/appcompat/internal/app/widget/actionbar/CollapseTitle;)V
+
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->post(Ljava/lang/Runnable;)Z
+
     :goto_0
     return-void
 .end method

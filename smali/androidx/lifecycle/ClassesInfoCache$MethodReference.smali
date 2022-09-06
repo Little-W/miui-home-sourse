@@ -13,6 +13,9 @@
     name = "MethodReference"
 .end annotation
 
+.annotation runtime Ljava/lang/Deprecated;
+.end annotation
+
 
 # instance fields
 .field final mCallType:I
@@ -24,16 +27,16 @@
 .method constructor <init>(ILjava/lang/reflect/Method;)V
     .locals 0
 
-    .line 205
+    .line 211
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 206
+    .line 212
     iput p1, p0, Landroidx/lifecycle/ClassesInfoCache$MethodReference;->mCallType:I
 
-    .line 207
+    .line 213
     iput-object p2, p0, Landroidx/lifecycle/ClassesInfoCache$MethodReference;->mMethod:Ljava/lang/reflect/Method;
 
-    .line 208
+    .line 214
     iget-object p1, p0, Landroidx/lifecycle/ClassesInfoCache$MethodReference;->mMethod:Ljava/lang/reflect/Method;
 
     const/4 p2, 0x1
@@ -54,7 +57,7 @@
 
     return v0
 
-    .line 237
+    .line 243
     :cond_0
     instance-of v1, p1, Landroidx/lifecycle/ClassesInfoCache$MethodReference;
 
@@ -64,11 +67,11 @@
 
     return v2
 
-    .line 241
+    .line 247
     :cond_1
     check-cast p1, Landroidx/lifecycle/ClassesInfoCache$MethodReference;
 
-    .line 242
+    .line 248
     iget v1, p0, Landroidx/lifecycle/ClassesInfoCache$MethodReference;->mCallType:I
 
     iget v3, p1, Landroidx/lifecycle/ClassesInfoCache$MethodReference;->mCallType:I
@@ -105,7 +108,7 @@
 .method public hashCode()I
     .locals 2
 
-    .line 247
+    .line 253
     iget v0, p0, Landroidx/lifecycle/ClassesInfoCache$MethodReference;->mCallType:I
 
     mul-int/lit8 v0, v0, 0x1f
@@ -128,7 +131,7 @@
 .method invokeCallback(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Lifecycle$Event;Ljava/lang/Object;)V
     .locals 4
 
-    .line 214
+    .line 220
     :try_start_0
     iget v0, p0, Landroidx/lifecycle/ClassesInfoCache$MethodReference;->mCallType:I
 
@@ -140,7 +143,7 @@
 
     goto :goto_0
 
-    .line 222
+    .line 228
     :pswitch_0
     iget-object v0, p0, Landroidx/lifecycle/ClassesInfoCache$MethodReference;->mMethod:Ljava/lang/reflect/Method;
 
@@ -156,7 +159,7 @@
 
     goto :goto_0
 
-    .line 219
+    .line 225
     :pswitch_1
     iget-object p2, p0, Landroidx/lifecycle/ClassesInfoCache$MethodReference;->mMethod:Ljava/lang/reflect/Method;
 
@@ -168,7 +171,7 @@
 
     goto :goto_0
 
-    .line 216
+    .line 222
     :pswitch_2
     iget-object p1, p0, Landroidx/lifecycle/ClassesInfoCache$MethodReference;->mMethod:Ljava/lang/reflect/Method;
 
@@ -185,7 +188,7 @@
     :catch_0
     move-exception p1
 
-    .line 228
+    .line 234
     new-instance p2, Ljava/lang/RuntimeException;
 
     invoke-direct {p2, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -195,7 +198,7 @@
     :catch_1
     move-exception p1
 
-    .line 226
+    .line 232
     new-instance p2, Ljava/lang/RuntimeException;
 
     invoke-virtual {p1}, Ljava/lang/reflect/InvocationTargetException;->getCause()Ljava/lang/Throwable;
