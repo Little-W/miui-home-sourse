@@ -1,4 +1,4 @@
-.class Lcom/market/sdk/DesktopRecommendInfo$3;
+.class final Lcom/market/sdk/DesktopRecommendInfo$3;
 .super Ljava/lang/Object;
 .source "DesktopRecommendInfo.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x8
     name = null
 .end annotation
 

@@ -22,7 +22,7 @@
 .method private final addToggle(Landroid/database/sqlite/SQLiteDatabase;Landroid/content/ContentValues;Landroid/content/res/TypedArray;)V
     .locals 2
 
-    const/16 v0, 0x14
+    const/16 v0, 0x12
 
     .line 29
     invoke-virtual {p3, v0}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;

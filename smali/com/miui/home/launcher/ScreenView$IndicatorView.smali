@@ -26,17 +26,17 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 572
+    .line 589
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 573
+    .line 590
     new-instance v0, Lcom/miui/home/launcher/ScreenView;
 
     invoke-direct {v0, p1}, Lcom/miui/home/launcher/ScreenView;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/miui/home/launcher/ScreenView$IndicatorView;->mScreenIndicator:Lcom/miui/home/launcher/ScreenView;
 
-    .line 574
+    .line 591
     iget-object p1, p0, Lcom/miui/home/launcher/ScreenView$IndicatorView;->mScreenIndicator:Lcom/miui/home/launcher/ScreenView;
 
     const/4 v0, -0x1
@@ -51,7 +51,7 @@
 .method public addScreenIndicatorPoint(Landroid/view/View;ILandroid/widget/LinearLayout$LayoutParams;)V
     .locals 1
 
-    .line 591
+    .line 608
     iget-object v0, p0, Lcom/miui/home/launcher/ScreenView$IndicatorView;->mScreenIndicator:Lcom/miui/home/launcher/ScreenView;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/miui/home/launcher/ScreenView;->addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
@@ -62,7 +62,7 @@
 .method protected getScreenIndicator()Lcom/miui/home/launcher/ScreenView;
     .locals 1
 
-    .line 579
+    .line 596
     iget-object v0, p0, Lcom/miui/home/launcher/ScreenView$IndicatorView;->mScreenIndicator:Lcom/miui/home/launcher/ScreenView;
 
     return-object v0
@@ -71,7 +71,7 @@
 .method public getScreenIndicatorPoint(I)Landroid/view/View;
     .locals 1
 
-    .line 583
+    .line 600
     iget-object v0, p0, Lcom/miui/home/launcher/ScreenView$IndicatorView;->mScreenIndicator:Lcom/miui/home/launcher/ScreenView;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/ScreenView;->getChildAt(I)Landroid/view/View;
@@ -84,7 +84,7 @@
 .method public getScreenIndicatorPointCount()I
     .locals 1
 
-    .line 607
+    .line 624
     iget-object v0, p0, Lcom/miui/home/launcher/ScreenView$IndicatorView;->mScreenIndicator:Lcom/miui/home/launcher/ScreenView;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/ScreenView;->getChildCount()I
@@ -97,7 +97,7 @@
 .method public getScreenIndicatorPointIndex(Landroid/view/View;)I
     .locals 1
 
-    .line 587
+    .line 604
     iget-object v0, p0, Lcom/miui/home/launcher/ScreenView$IndicatorView;->mScreenIndicator:Lcom/miui/home/launcher/ScreenView;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/ScreenView;->getChildIndex(Landroid/view/View;)I
@@ -110,7 +110,7 @@
 .method public onScreenSizeChanged()V
     .locals 0
 
-    .line 616
+    .line 633
     invoke-virtual {p0}, Lcom/miui/home/launcher/ScreenView$IndicatorView;->requestLayout()V
 
     return-void
@@ -125,7 +125,7 @@
 .method public removeScreenIndicatorPoint(I)V
     .locals 1
 
-    .line 599
+    .line 616
     iget-object v0, p0, Lcom/miui/home/launcher/ScreenView$IndicatorView;->mScreenIndicator:Lcom/miui/home/launcher/ScreenView;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/ScreenView;->removeScreen(I)V
@@ -136,7 +136,7 @@
 .method public removeScreenIndicatorPoint(II)V
     .locals 1
 
-    .line 595
+    .line 612
     iget-object v0, p0, Lcom/miui/home/launcher/ScreenView$IndicatorView;->mScreenIndicator:Lcom/miui/home/launcher/ScreenView;
 
     invoke-virtual {v0, p1, p2}, Lcom/miui/home/launcher/ScreenView;->removeScreensInLayout(II)V
@@ -147,7 +147,7 @@
 .method public setScreenIndicatorLayoutMode(I)V
     .locals 1
 
-    .line 603
+    .line 620
     iget-object v0, p0, Lcom/miui/home/launcher/ScreenView$IndicatorView;->mScreenIndicator:Lcom/miui/home/launcher/ScreenView;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/ScreenView;->setScreenLayoutMode(I)V

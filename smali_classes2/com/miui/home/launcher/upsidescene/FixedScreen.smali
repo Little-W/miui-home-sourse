@@ -76,7 +76,7 @@
     .line 29
     invoke-super {p0}, Landroid/widget/FrameLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a0173
+    const v0, 0x7f0a016f
 
     .line 30
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/FixedScreen;->findViewById(I)Landroid/view/View;

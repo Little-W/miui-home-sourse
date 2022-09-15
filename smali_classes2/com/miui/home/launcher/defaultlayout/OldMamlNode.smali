@@ -56,7 +56,7 @@
     invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->throwNpe()V
 
     :cond_0
-    const/16 v3, 0x15
+    const/16 v3, 0x13
 
     invoke-virtual {v2, v3}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 

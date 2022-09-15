@@ -1571,7 +1571,11 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/android/systemui/shared/recents/model/RecentsTaskLoader;->removeThumbnailCache(I)V
+    iget-object v1, p2, Lcom/android/systemui/shared/recents/model/ThumbnailData;->thumbnailInfo:Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;
+
+    iget v1, v1, Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;->mWindowMod:I
+
+    invoke-virtual {v0, p1, v1}, Lcom/android/systemui/shared/recents/model/RecentsTaskLoader;->updateIfWindowModeModified(II)V
 
     .line 173
     iget-boolean v0, p0, Lcom/miui/home/recents/RecentsModel;->mIgnoreTaskSnapshotChanged:Z

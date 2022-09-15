@@ -30,14 +30,14 @@
 .method public constructor <init>(Lcom/miui/maml/ScreenElementRoot$ExtraResource;)V
     .locals 0
 
-    .line 893
+    .line 886
     iput-object p1, p0, Lcom/miui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;->this$0:Lcom/miui/maml/ScreenElementRoot$ExtraResource;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/high16 p1, 0x3f800000    # 1.0f
 
-    .line 891
+    .line 884
     iput p1, p0, Lcom/miui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;->mScale:F
 
     return-void
@@ -46,25 +46,25 @@
 .method public constructor <init>(Lcom/miui/maml/ScreenElementRoot$ExtraResource;Ljava/lang/String;Lcom/miui/maml/ScreenElementRoot$ExtraResource$MetricsType;)V
     .locals 6
 
-    .line 896
+    .line 889
     iput-object p1, p0, Lcom/miui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;->this$0:Lcom/miui/maml/ScreenElementRoot$ExtraResource;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/high16 p1, 0x3f800000    # 1.0f
 
-    .line 891
+    .line 884
     iput p1, p0, Lcom/miui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;->mScale:F
 
     :try_start_0
     const-string p1, ":"
 
-    .line 898
+    .line 891
     invoke-virtual {p2, p1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p1
 
-    .line 899
+    .line 892
     sget-object v0, Lcom/miui/maml/ScreenElementRoot$4;->$SwitchMap$com$miui$maml$ScreenElementRoot$ExtraResource$MetricsType:[I
 
     invoke-virtual {p3}, Lcom/miui/maml/ScreenElementRoot$ExtraResource$MetricsType;->ordinal()I
@@ -81,7 +81,7 @@
 
     goto/16 :goto_2
 
-    .line 918
+    .line 911
     :pswitch_0
     aget-object p3, p1, v1
 
@@ -91,10 +91,10 @@
 
     move-result-object p3
 
-    .line 919
+    .line 912
     iput v1, p0, Lcom/miui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;->mSizeType:I
 
-    .line 920
+    .line 913
     array-length v2, p3
 
     const/4 v3, 0x3
@@ -103,7 +103,7 @@
 
     if-ne v2, v0, :cond_2
 
-    .line 921
+    .line 914
     aget-object v2, p3, v1
 
     const-string v5, "sw"
@@ -114,7 +114,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 922
+    .line 915
     aget-object p3, p3, v1
 
     invoke-virtual {p3, v4}, Ljava/lang/String;->substring(I)Ljava/lang/String;
@@ -127,7 +127,7 @@
 
     iput p3, p0, Lcom/miui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;->mScreenWidth:I
 
-    .line 923
+    .line 916
     iget p3, p0, Lcom/miui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;->mScreenWidth:I
 
     mul-int/lit16 p3, p3, 0xf0
@@ -142,7 +142,7 @@
 
     goto :goto_0
 
-    .line 925
+    .line 918
     :cond_0
     aget-object v2, p3, v1
 
@@ -154,7 +154,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 926
+    .line 919
     aget-object p3, p3, v1
 
     invoke-virtual {p3, v3}, Ljava/lang/String;->substring(I)Ljava/lang/String;
@@ -167,7 +167,7 @@
 
     iput p3, p0, Lcom/miui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;->mDensity:I
 
-    .line 927
+    .line 920
     iget p3, p0, Lcom/miui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;->mDensity:I
 
     invoke-static {p3}, Lcom/miui/maml/ResourceManager;->translateDensity(I)I
@@ -182,7 +182,7 @@
 
     goto :goto_0
 
-    .line 930
+    .line 923
     :cond_1
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -204,13 +204,13 @@
 
     throw p1
 
-    .line 931
+    .line 924
     :cond_2
     array-length v2, p3
 
     if-lt v2, v4, :cond_6
 
-    .line 932
+    .line 925
     aget-object v1, p3, v1
 
     invoke-virtual {v1, v4}, Ljava/lang/String;->substring(I)Ljava/lang/String;
@@ -223,7 +223,7 @@
 
     iput v1, p0, Lcom/miui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;->mScreenWidth:I
 
-    .line 933
+    .line 926
     aget-object v1, p3, v0
 
     invoke-virtual {v1, v3}, Ljava/lang/String;->substring(I)Ljava/lang/String;
@@ -236,12 +236,12 @@
 
     iput v1, p0, Lcom/miui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;->mDensity:I
 
-    .line 934
+    .line 927
     array-length v1, p3
 
     if-ne v1, v3, :cond_3
 
-    .line 935
+    .line 928
     aget-object p3, p3, v4
 
     invoke-static {p3}, Lcom/miui/maml/ScreenElementRoot$ExtraResource;->access$200(Ljava/lang/String;)I
@@ -250,14 +250,14 @@
 
     iput p3, p0, Lcom/miui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;->mSizeType:I
 
-    .line 940
+    .line 933
     :cond_3
     :goto_0
     array-length p3, p1
 
     if-le p3, v0, :cond_5
 
-    .line 941
+    .line 934
     array-length p3, p1
 
     if-ne p3, v4, :cond_4
@@ -276,13 +276,13 @@
 
     iput p3, p0, Lcom/miui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;->mScale:F
 
-    .line 943
+    .line 936
     :cond_5
     invoke-virtual {p0, p1}, Lcom/miui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;->onParseInfo([Ljava/lang/String;)V
 
     goto :goto_2
 
-    .line 938
+    .line 931
     :cond_6
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -304,7 +304,7 @@
 
     throw p1
 
-    .line 909
+    .line 902
     :pswitch_1
     aget-object p3, p1, v1
 
@@ -314,7 +314,7 @@
 
     iput p3, p0, Lcom/miui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;->mScreenWidth:I
 
-    .line 910
+    .line 903
     iget p3, p0, Lcom/miui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;->mScreenWidth:I
 
     mul-int/lit16 p3, p3, 0xf0
@@ -327,12 +327,12 @@
 
     iput p3, p0, Lcom/miui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;->mDensity:I
 
-    .line 912
+    .line 905
     array-length p3, p1
 
     if-le p3, v0, :cond_7
 
-    .line 913
+    .line 906
     aget-object p1, p1, v0
 
     invoke-static {p1}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
@@ -343,7 +343,7 @@
 
     goto :goto_2
 
-    .line 901
+    .line 894
     :pswitch_2
     aget-object p3, p1, v1
 
@@ -353,7 +353,7 @@
 
     iput p3, p0, Lcom/miui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;->mDensity:I
 
-    .line 902
+    .line 895
     iget p3, p0, Lcom/miui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;->mDensity:I
 
     invoke-static {p3}, Lcom/miui/maml/ResourceManager;->translateDensity(I)I
@@ -366,12 +366,12 @@
 
     iput p3, p0, Lcom/miui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;->mScreenWidth:I
 
-    .line 904
+    .line 897
     array-length p3, p1
 
     if-le p3, v0, :cond_7
 
-    .line 905
+    .line 898
     aget-object p1, p1, v0
 
     invoke-static {p1}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
@@ -386,7 +386,7 @@
     :goto_2
     return-void
 
-    .line 947
+    .line 940
     :catch_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -406,7 +406,7 @@
 
     invoke-static {p2, p1}, Lcom/miui/maml/util/MamlLog;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 948
+    .line 941
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
     const-string p2, "invalid format"
@@ -436,7 +436,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 957
+    .line 950
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

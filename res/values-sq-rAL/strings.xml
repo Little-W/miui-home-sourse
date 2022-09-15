@@ -293,7 +293,6 @@
     <string name="eras_bc">BCE</string>
     <string name="evening">Pasdite</string>
     <string name="exit_overview_because_task_stack_changed">Të fundit të mbyllura për shkak të ndryshimeve që ndodhën në sfond</string>
-    <string name="external_not_support_split_screen_j18">Ndarja e ekranit nuk mbështetet në ekranin e jashtëm</string>
     <string name="failed_to_delete_temporary">Nuk mund të hiqet</string>
     <string name="failed_to_drop">Nuk mund të lëviz</string>
     <string name="failed_to_drop_widget_invalid">Kjo vegël është e pavlefshme</string>
@@ -498,7 +497,6 @@
     <string name="midnight">Natë</string>
     <string name="minus_one_screen">Kthina të aplikacionit</string>
     <string name="miui_screen_config_title">Parametrat e ekranit Kryesor</string>
-    <string name="miui_widget_menu_replace_text">Ndërro</string>
     <string name="miuix_access_state_desc">Të zgjedhur</string>
     <string name="miuix_appcompat_action_mode_deselect_all">Hiq</string>
     <string name="miuix_appcompat_action_mode_select_all">Përzgjidhi të gjitha</string>
@@ -525,8 +523,6 @@
     <string name="monday">E hënë</string>
     <string name="monday_short">Hën</string>
     <string name="monday_shortest">Hën</string>
-    <string name="monochrome_summary">Ndryshoni ngjyrën e sfondit për ikonat e përputhshme</string>
-    <string name="monochrome_title">Ngjyra e sfondit</string>
     <string name="month_april">Prill</string>
     <string name="month_april_short">Pri</string>
     <string name="month_april_shortest">Pri</string>

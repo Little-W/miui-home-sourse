@@ -39,7 +39,7 @@
     .line 97
     iget-object p1, p0, Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter$ViewHolder;->mWidgetCell:Lcom/miui/home/launcher/widget/WidgetCell;
 
-    const v0, 0x7f0a01ca
+    const v0, 0x7f0a01c6
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/widget/WidgetCell;->findViewById(I)Landroid/view/View;
 
@@ -52,7 +52,7 @@
     .line 98
     iget-object p1, p0, Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter$ViewHolder;->mWidgetCell:Lcom/miui/home/launcher/widget/WidgetCell;
 
-    const v0, 0x7f0a01cd
+    const v0, 0x7f0a01c9
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/widget/WidgetCell;->findViewById(I)Landroid/view/View;
 

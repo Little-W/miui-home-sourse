@@ -293,7 +293,6 @@
     <string name="eras_bc">Մ․Թ․Ա․</string>
     <string name="evening">Ցերեկ</string>
     <string name="exit_overview_because_task_stack_changed">Փակվել են վերջին՝ հետին պլանում տեղի ունեցած փոփոխությունների պատճառով</string>
-    <string name="external_not_support_split_screen_j18">Պառակտված էկրանը չի աջակցվում արտաքին էկրանին</string>
     <string name="failed_to_delete_temporary">Չի հաջողվում հեռացնել</string>
     <string name="failed_to_drop">Չի հաջողվում տեղափոխել</string>
     <string name="failed_to_drop_widget_invalid">Այս վիջիտը սխալ է</string>
@@ -498,7 +497,6 @@
     <string name="midnight">Գիշեր</string>
     <string name="minus_one_screen">Հավելվածների պահոց</string>
     <string name="miui_screen_config_title">Գլխավոր էկրանի կարգավորումները</string>
-    <string name="miui_widget_menu_replace_text">Միացնել</string>
     <string name="miuix_access_state_desc">Ընտրված</string>
     <string name="miuix_appcompat_action_mode_deselect_all">Հանել ընտրությունը</string>
     <string name="miuix_appcompat_action_mode_select_all">Ընտրել բոլորը</string>
@@ -525,8 +523,6 @@
     <string name="monday">Երկուշաբթի</string>
     <string name="monday_short">Երկ</string>
     <string name="monday_shortest">Երկ</string>
-    <string name="monochrome_summary">Փոխեք ֆոնի գույնը համատեղելի սրբապատկերների համար</string>
-    <string name="monochrome_title">Ֆոնի գույնը</string>
     <string name="month_april">Ապրիլ</string>
     <string name="month_april_short">Ապր</string>
     <string name="month_april_shortest">Ապր</string>

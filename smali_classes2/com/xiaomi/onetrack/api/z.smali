@@ -18,7 +18,7 @@
 .method constructor <init>(Lcom/xiaomi/onetrack/api/h;)V
     .locals 0
 
-    .line 805
+    .line 803
     iput-object p1, p0, Lcom/xiaomi/onetrack/api/z;->a:Lcom/xiaomi/onetrack/api/h;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -37,7 +37,7 @@
 .method private onReceive$___twin___(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
 
-    .line 809
+    .line 807
     :try_start_0
     new-instance p1, Lcom/xiaomi/onetrack/api/aa;
 

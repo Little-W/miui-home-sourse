@@ -97,108 +97,108 @@
 .method static constructor <clinit>()V
     .locals 6
 
-    .line 39
+    .line 40
     invoke-static {}, Lcom/market/sdk/utils/CollectionUtils;->newHashMap()Ljava/util/HashMap;
 
     move-result-object v0
 
     sput-object v0, Lcom/market/sdk/EnableStateManager;->sDefaultEnableRegionList:Ljava/util/Map;
 
-    .line 40
+    .line 41
     invoke-static {}, Lcom/market/sdk/utils/CollectionUtils;->newHashMap()Ljava/util/HashMap;
 
     move-result-object v0
 
     sput-object v0, Lcom/market/sdk/EnableStateManager;->sDefaultDisableRegionList:Ljava/util/Map;
 
-    .line 41
+    .line 42
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lcom/market/sdk/EnableStateManager;->sEnableStateControlledPkgList:Ljava/util/List;
 
-    .line 43
+    .line 44
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lcom/market/sdk/EnableStateManager;->sShouldKeepStatePackages:Ljava/util/List;
 
-    .line 50
-    sget-object v0, Lcom/market/sdk/EnableStateManager;->sEnableStateControlledPkgList:Ljava/util/List;
-
-    const-string v1, "com.xiaomi.mipicks"
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
     .line 51
     sget-object v0, Lcom/market/sdk/EnableStateManager;->sEnableStateControlledPkgList:Ljava/util/List;
 
-    const-string v1, "com.miui.virtualsim"
+    const-string v1, "com.xiaomi.mipicks"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 52
     sget-object v0, Lcom/market/sdk/EnableStateManager;->sEnableStateControlledPkgList:Ljava/util/List;
 
-    const-string v1, "com.xiaomi.glgm"
+    const-string v1, "com.miui.virtualsim"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 53
     sget-object v0, Lcom/market/sdk/EnableStateManager;->sEnableStateControlledPkgList:Ljava/util/List;
 
-    const-string v1, "com.mi.globalTrendNews"
+    const-string v1, "com.xiaomi.glgm"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 54
     sget-object v0, Lcom/market/sdk/EnableStateManager;->sEnableStateControlledPkgList:Ljava/util/List;
 
-    const-string v1, "com.mipay.wallet.in"
+    const-string v1, "com.mi.globalTrendNews"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 55
     sget-object v0, Lcom/market/sdk/EnableStateManager;->sEnableStateControlledPkgList:Ljava/util/List;
 
+    const-string v1, "com.mipay.wallet.in"
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 56
+    sget-object v0, Lcom/market/sdk/EnableStateManager;->sEnableStateControlledPkgList:Ljava/util/List;
+
     const-string v1, "com.micredit.in"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 57
+    .line 58
     sget-object v0, Lcom/market/sdk/EnableStateManager;->sShouldKeepStatePackages:Ljava/util/List;
 
     const-string v1, "com.xiaomi.mipicks"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 59
+    .line 60
     invoke-static {}, Lcom/market/sdk/utils/CollectionUtils;->newArrayList()Ljava/util/ArrayList;
 
     move-result-object v0
 
     const-string v1, "IN"
 
-    .line 60
+    .line 61
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     const-string v1, "RU"
 
-    .line 61
+    .line 62
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     const-string v1, "ID"
 
-    .line 62
+    .line 63
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     const-string v1, "V10.2.0.0"
 
     const-string v2, "8.9.30"
 
-    .line 63
+    .line 64
     invoke-static {v1, v2}, Lcom/market/sdk/utils/VersionConstraint;->of(Ljava/lang/String;Ljava/lang/String;)Lcom/market/sdk/utils/VersionConstraint;
 
     move-result-object v1
@@ -213,7 +213,7 @@
 
     const-string v2, "9.3.7"
 
-    .line 64
+    .line 65
     invoke-static {v1, v2}, Lcom/market/sdk/utils/VersionConstraint;->of(Ljava/lang/String;Ljava/lang/String;)Lcom/market/sdk/utils/VersionConstraint;
 
     move-result-object v1
@@ -226,10 +226,10 @@
 
     const-string v1, "ES"
 
-    .line 65
+    .line 66
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 67
+    .line 68
     :cond_0
     invoke-static {}, Lcom/market/sdk/utils/CollectionUtils;->newArrayList()Ljava/util/ArrayList;
 
@@ -237,58 +237,58 @@
 
     const-string v2, "ID"
 
-    .line 68
+    .line 69
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 69
+    .line 70
     invoke-static {}, Lcom/market/sdk/utils/CollectionUtils;->newArrayList()Ljava/util/ArrayList;
 
     move-result-object v2
 
     const-string v3, "IN"
 
-    .line 70
+    .line 71
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 71
+    .line 72
     invoke-static {}, Lcom/market/sdk/utils/CollectionUtils;->newArrayList()Ljava/util/ArrayList;
 
     move-result-object v3
 
     const-string v4, "IN"
 
-    .line 72
+    .line 73
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 73
+    .line 74
     sget-object v4, Lcom/market/sdk/EnableStateManager;->sDefaultEnableRegionList:Ljava/util/Map;
 
     const-string v5, "com.xiaomi.mipicks"
 
     invoke-interface {v4, v5, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 74
+    .line 75
     sget-object v0, Lcom/market/sdk/EnableStateManager;->sDefaultEnableRegionList:Ljava/util/Map;
 
     const-string v4, "com.miui.virtualsim"
 
     invoke-interface {v0, v4, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 75
+    .line 76
     sget-object v0, Lcom/market/sdk/EnableStateManager;->sDefaultEnableRegionList:Ljava/util/Map;
 
     const-string v1, "com.mipay.wallet.in"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 76
+    .line 77
     sget-object v0, Lcom/market/sdk/EnableStateManager;->sDefaultEnableRegionList:Ljava/util/Map;
 
     const-string v1, "com.micredit.in"
 
     invoke-interface {v0, v1, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 79
+    .line 80
     new-instance v0, Lcom/market/sdk/EnableStateManager;
 
     invoke-direct {v0}, Lcom/market/sdk/EnableStateManager;-><init>()V
@@ -301,31 +301,31 @@
 .method private constructor <init>()V
     .locals 2
 
-    .line 83
+    .line 84
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 45
-    invoke-static {}, Lcom/market/sdk/utils/CollectionUtils;->newConconrrentHashMap()Ljava/util/concurrent/ConcurrentHashMap;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/market/sdk/EnableStateManager;->mCloudEnableSettings:Ljava/util/Map;
 
     .line 46
     invoke-static {}, Lcom/market/sdk/utils/CollectionUtils;->newConconrrentHashMap()Ljava/util/concurrent/ConcurrentHashMap;
 
     move-result-object v0
 
+    iput-object v0, p0, Lcom/market/sdk/EnableStateManager;->mCloudEnableSettings:Ljava/util/Map;
+
+    .line 47
+    invoke-static {}, Lcom/market/sdk/utils/CollectionUtils;->newConconrrentHashMap()Ljava/util/concurrent/ConcurrentHashMap;
+
+    move-result-object v0
+
     iput-object v0, p0, Lcom/market/sdk/EnableStateManager;->mCloudDisableSettings:Ljava/util/Map;
 
-    .line 84
+    .line 85
     invoke-static {}, Lcom/market/sdk/MarketManager;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/market/sdk/EnableStateManager;->mContext:Landroid/content/Context;
 
-    .line 85
+    .line 86
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -354,7 +354,7 @@
 .method static synthetic access$100(Lcom/market/sdk/EnableStateManager;J)V
     .locals 0
 
-    .line 37
+    .line 38
     invoke-direct {p0, p1, p2}, Lcom/market/sdk/EnableStateManager;->scheduleEnableStateUpdateReceiver(J)V
 
     return-void
@@ -363,7 +363,7 @@
 .method static synthetic access$200()Ljava/lang/String;
     .locals 1
 
-    .line 37
+    .line 38
     sget-object v0, Lcom/market/sdk/EnableStateManager;->mEnableSettingPath:Ljava/lang/String;
 
     return-object v0
@@ -372,7 +372,7 @@
 .method static synthetic access$300(Lcom/market/sdk/EnableStateManager;Z)V
     .locals 0
 
-    .line 37
+    .line 38
     invoke-direct {p0, p1}, Lcom/market/sdk/EnableStateManager;->updateApplicationEnableStateInner(Z)V
 
     return-void
@@ -391,12 +391,12 @@
         }
     .end annotation
 
-    .line 211
+    .line 212
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 212
+    .line 213
     iget-object v1, p0, Lcom/market/sdk/EnableStateManager;->mCloudDisableSettings:Ljava/util/Map;
 
     invoke-interface {v1, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -407,10 +407,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 214
+    .line 215
     invoke-interface {v0, v1}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
-    .line 217
+    .line 218
     :cond_0
     sget-object v1, Lcom/market/sdk/EnableStateManager;->sDefaultDisableRegionList:Ljava/util/Map;
 
@@ -422,20 +422,20 @@
 
     if-eqz v1, :cond_1
 
-    .line 219
+    .line 220
     invoke-interface {v0, v1}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
     :cond_1
     const-string v1, "disable_regions"
 
-    .line 222
+    .line 223
     invoke-static {p1, v1}, Lcom/market/sdk/utils/Utils;->getStringArray(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p1
 
     if-eqz p1, :cond_2
 
-    .line 224
+    .line 225
     invoke-static {p1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p1
@@ -459,12 +459,12 @@
         }
     .end annotation
 
-    .line 230
+    .line 231
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 232
+    .line 233
     iget-object v1, p0, Lcom/market/sdk/EnableStateManager;->mCloudEnableSettings:Ljava/util/Map;
 
     invoke-interface {v1, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -475,13 +475,13 @@
 
     if-eqz v1, :cond_0
 
-    .line 234
+    .line 235
     invoke-interface {v0, v1}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
     :cond_0
     const-string v1, "MarketManager"
 
-    .line 236
+    .line 237
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -504,7 +504,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 238
+    .line 239
     sget-object v1, Lcom/market/sdk/EnableStateManager;->sDefaultEnableRegionList:Ljava/util/Map;
 
     invoke-interface {v1, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -515,13 +515,13 @@
 
     if-eqz v1, :cond_1
 
-    .line 240
+    .line 241
     invoke-interface {v0, v1}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
     :cond_1
     const-string v1, "MarketManager"
 
-    .line 242
+    .line 243
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -546,14 +546,14 @@
 
     const-string v1, "enable_regions"
 
-    .line 244
+    .line 245
     invoke-static {p1, v1}, Lcom/market/sdk/utils/Utils;->getStringArray(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v1
 
     if-eqz v1, :cond_2
 
-    .line 246
+    .line 247
     invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v1
@@ -563,7 +563,7 @@
     :cond_2
     const-string v1, "MarketManager"
 
-    .line 248
+    .line 249
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -586,7 +586,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 250
+    .line 251
     sget-object v1, Lcom/market/sdk/EnableStateManager;->sShouldKeepStatePackages:Ljava/util/List;
 
     invoke-interface {v1, p1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
@@ -607,7 +607,7 @@
 
     if-eqz v1, :cond_5
 
-    .line 251
+    .line 252
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -634,13 +634,13 @@
 
     if-eqz v1, :cond_3
 
-    .line 253
+    .line 254
     invoke-interface {v0, v1}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
     :cond_3
     const-string v1, "MarketManager"
 
-    .line 256
+    .line 257
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -661,7 +661,7 @@
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 257
+    .line 258
     invoke-static {p1}, Lcom/market/sdk/utils/PkgUtils;->isPackageEnabled(Ljava/lang/String;)Z
 
     move-result v4
@@ -672,12 +672,12 @@
 
     move-result-object v2
 
-    .line 256
+    .line 257
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     if-eqz p2, :cond_4
 
-    .line 259
+    .line 260
     invoke-static {p1}, Lcom/market/sdk/utils/PkgUtils;->isPackageEnabled(Ljava/lang/String;)Z
 
     move-result p2
@@ -686,7 +686,7 @@
 
     const-string p2, "MarketManager"
 
-    .line 260
+    .line 261
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -713,14 +713,14 @@
 
     invoke-static {p2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 261
+    .line 262
     invoke-static {}, Lcom/market/sdk/utils/Region;->getRegion()Ljava/lang/String;
 
     move-result-object p2
 
     invoke-interface {v0, p2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 264
+    .line 265
     :cond_4
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -747,7 +747,7 @@
 .method public static getManager()Lcom/market/sdk/EnableStateManager;
     .locals 1
 
-    .line 89
+    .line 90
     sget-object v0, Lcom/market/sdk/EnableStateManager;->sInstance:Lcom/market/sdk/EnableStateManager;
 
     return-object v0
@@ -758,7 +758,7 @@
 
     const/4 v0, 0x0
 
-    .line 139
+    .line 140
     :try_start_0
     iget-object v1, p0, Lcom/market/sdk/EnableStateManager;->mContext:Landroid/content/Context;
 
@@ -766,7 +766,7 @@
 
     move-result-object v1
 
-    .line 140
+    .line 141
     invoke-virtual {v1, p1, v0}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
 
     move-result-object p1
@@ -784,7 +784,7 @@
 
     const-string v1, "MarketManager"
 
-    .line 144
+    .line 145
     invoke-virtual {p1}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -798,7 +798,7 @@
 .method private registerReceiverIfNeeded()V
     .locals 1
 
-    .line 101
+    .line 102
     iget-boolean v0, p0, Lcom/market/sdk/EnableStateManager;->receiverRegistered:Z
 
     if-eqz v0, :cond_0
@@ -808,15 +808,15 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 104
+    .line 105
     iput-boolean v0, p0, Lcom/market/sdk/EnableStateManager;->receiverRegistered:Z
 
-    .line 105
+    .line 106
     new-instance v0, Lcom/market/sdk/EnableStateManager$1;
 
     invoke-direct {v0, p0}, Lcom/market/sdk/EnableStateManager$1;-><init>(Lcom/market/sdk/EnableStateManager;)V
 
-    .line 115
+    .line 116
     invoke-virtual {v0}, Lcom/market/sdk/EnableStateManager$1;->start()V
 
     return-void
@@ -825,7 +825,7 @@
 .method private scheduleEnableStateUpdateReceiver(J)V
     .locals 5
 
-    .line 119
+    .line 120
     iget-object v0, p0, Lcom/market/sdk/EnableStateManager;->mContext:Landroid/content/Context;
 
     const-string v1, "alarm"
@@ -836,14 +836,14 @@
 
     check-cast v0, Landroid/app/AlarmManager;
 
-    .line 120
+    .line 121
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "com.xiaomi.market.sdk.EnableUpdateReceiver"
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 121
+    .line 122
     iget-object v2, p0, Lcom/market/sdk/EnableStateManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
@@ -852,7 +852,7 @@
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 122
+    .line 123
     iget-object v2, p0, Lcom/market/sdk/EnableStateManager;->mContext:Landroid/content/Context;
 
     const/4 v3, 0x0
@@ -865,7 +865,7 @@
 
     const/4 v2, 0x1
 
-    .line 123
+    .line 124
     invoke-virtual {v0, v2, p1, p2, v1}, Landroid/app/AlarmManager;->setExact(IJLandroid/app/PendingIntent;)V
 
     return-void
@@ -874,7 +874,7 @@
 .method private tryDisablePkg(Ljava/lang/String;)V
     .locals 3
 
-    .line 183
+    .line 184
     :try_start_0
     iget-object v0, p0, Lcom/market/sdk/EnableStateManager;->mContext:Landroid/content/Context;
 
@@ -882,7 +882,7 @@
 
     move-result-object v0
 
-    .line 184
+    .line 185
     iget-object v1, p0, Lcom/market/sdk/EnableStateManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -904,7 +904,7 @@
 
     const/4 v2, 0x0
 
-    .line 187
+    .line 188
     invoke-virtual {v0, p1, v1, v2}, Landroid/content/pm/PackageManager;->setApplicationEnabledSetting(Ljava/lang/String;II)V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
@@ -916,7 +916,7 @@
 
     const-string v0, "MarketManager"
 
-    .line 191
+    .line 192
     invoke-virtual {p1}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -931,7 +931,7 @@
 .method private tryEnablePkg(Ljava/lang/String;)V
     .locals 3
 
-    .line 198
+    .line 199
     :try_start_0
     iget-object v0, p0, Lcom/market/sdk/EnableStateManager;->mContext:Landroid/content/Context;
 
@@ -939,7 +939,7 @@
 
     move-result-object v0
 
-    .line 199
+    .line 200
     iget-object v1, p0, Lcom/market/sdk/EnableStateManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -958,7 +958,7 @@
 
     const/4 v2, 0x0
 
-    .line 201
+    .line 202
     invoke-virtual {v0, p1, v1, v2}, Landroid/content/pm/PackageManager;->setApplicationEnabledSetting(Ljava/lang/String;II)V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
@@ -970,7 +970,7 @@
 
     const-string v0, "MarketManager"
 
-    .line 205
+    .line 206
     invoke-virtual {p1}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -985,12 +985,12 @@
 .method private tryUpdateCloudSettings()V
     .locals 1
 
-    .line 317
+    .line 318
     new-instance v0, Lcom/market/sdk/EnableStateManager$2;
 
     invoke-direct {v0, p0}, Lcom/market/sdk/EnableStateManager$2;-><init>(Lcom/market/sdk/EnableStateManager;)V
 
-    .line 335
+    .line 336
     invoke-virtual {v0}, Lcom/market/sdk/EnableStateManager$2;->invokeInNewThread()V
 
     return-void
@@ -999,10 +999,10 @@
 .method private updateApplicationEnableStateInner(Z)V
     .locals 3
 
-    .line 128
+    .line 129
     invoke-direct {p0}, Lcom/market/sdk/EnableStateManager;->updateCloudConfigFromFile()V
 
-    .line 129
+    .line 130
     sget-object v0, Lcom/market/sdk/EnableStateManager;->sEnableStateControlledPkgList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -1023,19 +1023,19 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 130
+    .line 131
     invoke-direct {p0, v1}, Lcom/market/sdk/EnableStateManager;->isAppInstalled(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 131
+    .line 132
     invoke-direct {p0, v1, p1}, Lcom/market/sdk/EnableStateManager;->updateEnableState(Ljava/lang/String;Z)V
 
     goto :goto_0
 
-    .line 134
+    .line 135
     :cond_1
     invoke-direct {p0}, Lcom/market/sdk/EnableStateManager;->tryUpdateCloudSettings()V
 
@@ -1045,19 +1045,19 @@
 .method private updateCloudConfigFromFile()V
     .locals 11
 
-    .line 271
+    .line 272
     iget-object v0, p0, Lcom/market/sdk/EnableStateManager;->mCloudEnableSettings:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
-    .line 272
+    .line 273
     iget-object v0, p0, Lcom/market/sdk/EnableStateManager;->mCloudDisableSettings:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
     const/4 v0, 0x0
 
-    .line 275
+    .line 276
     :try_start_0
     new-instance v1, Ljava/io/BufferedReader;
 
@@ -1076,13 +1076,13 @@
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 277
+    .line 278
     :try_start_1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 279
+    .line 280
     :goto_0
     invoke-virtual {v1}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
@@ -1090,12 +1090,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 280
+    .line 281
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
-    .line 282
+    .line 283
     :cond_0
     new-instance v2, Lorg/json/JSONObject;
 
@@ -1105,12 +1105,12 @@
 
     invoke-direct {v2, v0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 283
+    .line 284
     invoke-virtual {v2}, Lorg/json/JSONObject;->keys()Ljava/util/Iterator;
 
     move-result-object v0
 
-    .line 284
+    .line 285
     :cond_1
     :goto_1
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -1119,21 +1119,21 @@
 
     if-eqz v3, :cond_5
 
-    .line 285
+    .line 286
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Ljava/lang/String;
 
-    .line 286
+    .line 287
     invoke-virtual {v2, v3}, Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
 
     move-result-object v4
 
     const-string v5, "enable_list"
 
-    .line 288
+    .line 289
     invoke-virtual {v4, v5}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object v5
@@ -1142,14 +1142,14 @@
 
     if-eqz v5, :cond_3
 
-    .line 290
+    .line 291
     invoke-static {}, Lcom/market/sdk/utils/CollectionUtils;->newArrayList()Ljava/util/ArrayList;
 
     move-result-object v7
 
     move v8, v6
 
-    .line 291
+    .line 292
     :goto_2
     invoke-virtual {v5}, Lorg/json/JSONArray;->length()I
 
@@ -1157,19 +1157,19 @@
 
     if-ge v8, v9, :cond_2
 
-    .line 292
+    .line 293
     invoke-virtual {v5, v8}, Lorg/json/JSONArray;->getString(I)Ljava/lang/String;
 
     move-result-object v9
 
-    .line 293
+    .line 294
     invoke-interface {v7, v9}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_2
 
-    .line 295
+    .line 296
     :cond_2
     iget-object v5, p0, Lcom/market/sdk/EnableStateManager;->mCloudEnableSettings:Ljava/util/Map;
 
@@ -1178,19 +1178,19 @@
     :cond_3
     const-string v5, "disable_list"
 
-    .line 298
+    .line 299
     invoke-virtual {v4, v5}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object v4
 
     if-eqz v4, :cond_1
 
-    .line 300
+    .line 301
     invoke-static {}, Lcom/market/sdk/utils/CollectionUtils;->newArrayList()Ljava/util/ArrayList;
 
     move-result-object v5
 
-    .line 301
+    .line 302
     :goto_3
     invoke-virtual {v4}, Lorg/json/JSONArray;->length()I
 
@@ -1198,19 +1198,19 @@
 
     if-ge v6, v7, :cond_4
 
-    .line 302
+    .line 303
     invoke-virtual {v4, v6}, Lorg/json/JSONArray;->getString(I)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 303
+    .line 304
     invoke-interface {v5, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_3
 
-    .line 305
+    .line 306
     :cond_4
     iget-object v4, p0, Lcom/market/sdk/EnableStateManager;->mCloudDisableSettings:Ljava/util/Map;
 
@@ -1250,7 +1250,7 @@
     :try_start_2
     const-string v2, "MarketManager"
 
-    .line 309
+    .line 310
     invoke-virtual {v0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -1259,7 +1259,7 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 312
+    .line 313
     :cond_5
     invoke-static {v1}, Lcom/market/sdk/utils/Utils;->closeQuietly(Ljava/io/Closeable;)V
 
@@ -1271,7 +1271,7 @@
     :goto_5
     invoke-static {v1}, Lcom/market/sdk/utils/Utils;->closeQuietly(Ljava/io/Closeable;)V
 
-    .line 313
+    .line 314
     throw v0
 .end method
 
@@ -1283,19 +1283,19 @@
 
     const-string v1, "CN"
 
-    .line 152
-    invoke-static {v0, v1}, Lmiuix/core/util/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .line 153
+    invoke-static {v0, v1}, Lmiui/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "all"
 
-    .line 154
+    .line 155
     invoke-direct {p0, p1}, Lcom/market/sdk/EnableStateManager;->getDisableRegions(Ljava/lang/String;)Ljava/util/Set;
 
     move-result-object v2
 
-    .line 155
+    .line 156
     invoke-interface {v2}, Ljava/util/Set;->isEmpty()Z
 
     move-result v3
@@ -1306,7 +1306,7 @@
 
     const-string p2, "MarketManager"
 
-    .line 156
+    .line 157
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1333,7 +1333,7 @@
 
     invoke-static {p2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 157
+    .line 158
     invoke-interface {v2, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result p2
@@ -1348,13 +1348,13 @@
 
     goto :goto_0
 
-    .line 160
+    .line 161
     :cond_0
     invoke-direct {p0, p1}, Lcom/market/sdk/EnableStateManager;->tryEnablePkg(Ljava/lang/String;)V
 
     goto :goto_2
 
-    .line 158
+    .line 159
     :cond_1
     :goto_0
     invoke-direct {p0, p1}, Lcom/market/sdk/EnableStateManager;->tryDisablePkg(Ljava/lang/String;)V
@@ -1366,14 +1366,14 @@
 
     const/4 v3, 0x0
 
-    .line 163
+    .line 164
     new-array v5, v4, [Lcom/market/sdk/utils/PrefUtils$PrefFile;
 
     invoke-static {v2, v3, v5}, Lcom/market/sdk/utils/PrefUtils;->getString(Ljava/lang/String;Ljava/lang/String;[Lcom/market/sdk/utils/PrefUtils$PrefFile;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 164
+    .line 165
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
@@ -1388,7 +1388,7 @@
 
     move p2, v4
 
-    .line 167
+    .line 168
     :cond_3
     invoke-direct {p0, p1, p2}, Lcom/market/sdk/EnableStateManager;->getEnableSettings(Ljava/lang/String;Z)Ljava/util/Set;
 
@@ -1396,7 +1396,7 @@
 
     const-string v2, "MarketManager"
 
-    .line 168
+    .line 169
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1423,7 +1423,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 169
+    .line 170
     invoke-interface {p2, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result v2
@@ -1438,13 +1438,13 @@
 
     goto :goto_1
 
-    .line 172
+    .line 173
     :cond_4
     invoke-direct {p0, p1}, Lcom/market/sdk/EnableStateManager;->tryDisablePkg(Ljava/lang/String;)V
 
     goto :goto_2
 
-    .line 170
+    .line 171
     :cond_5
     :goto_1
     invoke-direct {p0, p1}, Lcom/market/sdk/EnableStateManager;->tryEnablePkg(Ljava/lang/String;)V
@@ -1452,7 +1452,7 @@
     :goto_2
     const-string p1, "lastRegion"
 
-    .line 175
+    .line 176
     new-array p2, v4, [Lcom/market/sdk/utils/PrefUtils$PrefFile;
 
     invoke-static {p1, v0, p2}, Lcom/market/sdk/utils/PrefUtils;->setString(Ljava/lang/String;Ljava/lang/String;[Lcom/market/sdk/utils/PrefUtils$PrefFile;)V
@@ -1466,7 +1466,7 @@
 
     const-string p2, "MarketManager"
 
-    .line 177
+    .line 178
     invoke-virtual {p1}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -1482,7 +1482,7 @@
 .method public updateApplicationEnableState(Z)V
     .locals 1
 
-    .line 93
+    .line 94
     invoke-static {}, Lcom/market/sdk/utils/Utils;->isInternationalBuild()Z
 
     move-result v0
@@ -1499,11 +1499,11 @@
 
     goto :goto_0
 
-    .line 96
+    .line 97
     :cond_0
     invoke-direct {p0, p1}, Lcom/market/sdk/EnableStateManager;->updateApplicationEnableStateInner(Z)V
 
-    .line 97
+    .line 98
     invoke-direct {p0}, Lcom/market/sdk/EnableStateManager;->registerReceiverIfNeeded()V
 
     return-void

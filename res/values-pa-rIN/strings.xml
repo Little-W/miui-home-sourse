@@ -293,7 +293,6 @@
     <string name="eras_bc">BCE</string>
     <string name="evening">ਬਾਅਦ ਦੁਪਹਿਰ</string>
     <string name="exit_overview_because_task_stack_changed">ਬੈਕਗ੍ਰਾਊਂਡ ਵਿੱਚ ਹੋਏ ਬਦਲਾਵਾਂ ਕਰਕੇ ਹਾਲੀਆ ਬੰਦ ਕੀਤੇ ਗਏ</string>
-    <string name="external_not_support_split_screen_j18">"ਸਪਲਿਟ ਸਕ੍ਰੀਨ ਬਾਹਰੀ ਸਕ੍ਰੀਨ 'ਤੇ ਸਮਰਥਿਤ ਨਹੀਂ ਹੈ"</string>
     <string name="failed_to_delete_temporary">ਹਟਾਇਆ ਨਹੀਂ ਜਾ ਸਕਦਾ</string>
     <string name="failed_to_drop">ਹਿਲਾਇਆ ਨਹੀਂ ਜਾ ਸਕਦਾ</string>
     <string name="failed_to_drop_widget_invalid">ਇਹ ਵਿਜੇਟ ਅਵੈਧ ਹੈ</string>
@@ -498,7 +497,6 @@
     <string name="midnight">ਅੱਧੀਰਾਤ</string>
     <string name="minus_one_screen">ਐਪ ਵਾਲੇਟ</string>
     <string name="miui_screen_config_title">ਹੋਮ ਸਕ੍ਰੀਨ ਸੈਟਿੰਗਾਂ</string>
-    <string name="miui_widget_menu_replace_text">ਸਵਿੱਚ ਕਰੋ</string>
     <string name="miuix_access_state_desc">ਚੁਣਿਆ ਗਿਆ</string>
     <string name="miuix_appcompat_action_mode_deselect_all">ਚੋਣ ਹਟਾਓ</string>
     <string name="miuix_appcompat_action_mode_select_all">ਸਾਰੇ ਚੁਣੇ</string>
@@ -525,8 +523,6 @@
     <string name="monday">ਸੋਮਵਾਰ</string>
     <string name="monday_short">ਸੋਮ</string>
     <string name="monday_shortest">ਸੋਮ</string>
-    <string name="monochrome_summary">Change background color for compatible icons</string>
-    <string name="monochrome_title">Background color</string>
     <string name="month_april">ਅਪ੍ਰੈਲ</string>
     <string name="month_april_short">ਅਪ੍ਰੈਲ</string>
     <string name="month_april_shortest">ਅਪ੍ਰੈਲ</string>

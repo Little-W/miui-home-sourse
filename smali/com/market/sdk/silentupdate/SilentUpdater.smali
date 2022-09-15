@@ -13,7 +13,7 @@
 
 
 # static fields
-.field private static final ACTION_DOWNLOAD:Ljava/lang/String; = "com.xiaomi.market.service.AppDownloadService"
+.field private static final ACTION_DOWNLOAD:Ljava/lang/String; = "com.xiaomi.market.data.AppDownloadService"
 
 .field public static final CODE_ALREADY_NEW:I = -0x5
 
@@ -113,10 +113,10 @@
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 1
 
-    .line 85
+    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 78
@@ -126,35 +126,26 @@
 
     iput-object v0, p0, Lcom/market/sdk/silentupdate/SilentUpdater;->actionQueue:Ljava/util/List;
 
-    .line 87
+    .line 85
     new-instance v0, Lcom/market/sdk/silentupdate/SilentUpdater$1;
 
     invoke-direct {v0, p0}, Lcom/market/sdk/silentupdate/SilentUpdater$1;-><init>(Lcom/market/sdk/silentupdate/SilentUpdater;)V
 
     iput-object v0, p0, Lcom/market/sdk/silentupdate/SilentUpdater;->deathRecipient:Landroid/os/IBinder$DeathRecipient;
 
-    .line 94
+    .line 92
     new-instance v0, Lcom/market/sdk/silentupdate/SilentUpdater$2;
 
     invoke-direct {v0, p0}, Lcom/market/sdk/silentupdate/SilentUpdater$2;-><init>(Lcom/market/sdk/silentupdate/SilentUpdater;)V
 
     iput-object v0, p0, Lcom/market/sdk/silentupdate/SilentUpdater;->conn:Landroid/content/ServiceConnection;
 
-    .line 117
+    .line 115
     new-instance v0, Lcom/market/sdk/silentupdate/SilentUpdater$3;
 
     invoke-direct {v0, p0}, Lcom/market/sdk/silentupdate/SilentUpdater$3;-><init>(Lcom/market/sdk/silentupdate/SilentUpdater;)V
 
     iput-object v0, p0, Lcom/market/sdk/silentupdate/SilentUpdater;->callbackWrapper:Lcom/market/sdk/silentupdate/UpdateResultReceiver$Callback;
-
-    return-void
-.end method
-
-.method synthetic constructor <init>(Lcom/market/sdk/silentupdate/SilentUpdater$1;)V
-    .locals 0
-
-    .line 29
-    invoke-direct {p0}, Lcom/market/sdk/silentupdate/SilentUpdater;-><init>()V
 
     return-void
 .end method
@@ -186,18 +177,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$1000(Ljava/lang/String;I)Z
-    .locals 0
-
-    .line 29
-    invoke-static {p0, p1}, Lcom/market/sdk/silentupdate/SilentUpdater;->isSupportedInPkg(Ljava/lang/String;I)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method static synthetic access$1102(Lcom/market/sdk/silentupdate/SilentUpdater;Ljava/lang/String;)Ljava/lang/String;
+.method static synthetic access$1002(Lcom/market/sdk/silentupdate/SilentUpdater;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
     .line 29
@@ -206,7 +186,7 @@
     return-object p1
 .end method
 
-.method static synthetic access$1202(Lcom/market/sdk/silentupdate/SilentUpdater;Landroid/os/Bundle;)Landroid/os/Bundle;
+.method static synthetic access$1102(Lcom/market/sdk/silentupdate/SilentUpdater;Landroid/os/Bundle;)Landroid/os/Bundle;
     .locals 0
 
     .line 29
@@ -215,7 +195,7 @@
     return-object p1
 .end method
 
-.method static synthetic access$1302(Lcom/market/sdk/silentupdate/SilentUpdater;Z)Z
+.method static synthetic access$1202(Lcom/market/sdk/silentupdate/SilentUpdater;Z)Z
     .locals 0
 
     .line 29
@@ -224,7 +204,7 @@
     return p1
 .end method
 
-.method static synthetic access$1402(Lcom/market/sdk/silentupdate/SilentUpdater;Z)Z
+.method static synthetic access$1302(Lcom/market/sdk/silentupdate/SilentUpdater;Z)Z
     .locals 0
 
     .line 29
@@ -233,7 +213,7 @@
     return p1
 .end method
 
-.method static synthetic access$1502(Lcom/market/sdk/silentupdate/SilentUpdater;Z)Z
+.method static synthetic access$1402(Lcom/market/sdk/silentupdate/SilentUpdater;Z)Z
     .locals 0
 
     .line 29
@@ -242,7 +222,7 @@
     return p1
 .end method
 
-.method static synthetic access$1602(Lcom/market/sdk/silentupdate/SilentUpdater;Z)Z
+.method static synthetic access$1502(Lcom/market/sdk/silentupdate/SilentUpdater;Z)Z
     .locals 0
 
     .line 29
@@ -296,7 +276,7 @@
     return-void
 .end method
 
-.method static synthetic access$702(Lcom/market/sdk/silentupdate/SilentUpdater;Ljava/lang/String;)Ljava/lang/String;
+.method static synthetic access$602(Lcom/market/sdk/silentupdate/SilentUpdater;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
     .line 29
@@ -305,7 +285,7 @@
     return-object p1
 .end method
 
-.method static synthetic access$802(Lcom/market/sdk/silentupdate/SilentUpdater;Ljava/lang/String;)Ljava/lang/String;
+.method static synthetic access$702(Lcom/market/sdk/silentupdate/SilentUpdater;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
     .line 29
@@ -314,7 +294,7 @@
     return-object p1
 .end method
 
-.method static synthetic access$902(Lcom/market/sdk/silentupdate/SilentUpdater;I)I
+.method static synthetic access$802(Lcom/market/sdk/silentupdate/SilentUpdater;I)I
     .locals 0
 
     .line 29
@@ -323,15 +303,21 @@
     return p1
 .end method
 
+.method static synthetic access$900(Ljava/lang/String;I)Z
+    .locals 0
+
+    .line 29
+    invoke-static {p0, p1}, Lcom/market/sdk/silentupdate/SilentUpdater;->isSupportedInPkg(Ljava/lang/String;I)Z
+
+    move-result p0
+
+    return p0
+.end method
+
 .method private bindService()V
     .locals 4
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lcom/market/sdk/silentupdate/CheckedException;
-        }
-    .end annotation
 
-    .line 305
+    .line 303
     iget-object v0, p0, Lcom/market/sdk/silentupdate/SilentUpdater;->targetPkg:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/market/sdk/silentupdate/SilentUpdater;->isSilentUpdateAvailable(Ljava/lang/String;)Z
@@ -340,24 +326,24 @@
 
     if-eqz v0, :cond_0
 
-    .line 309
+    .line 307
     new-instance v0, Landroid/content/Intent;
 
-    const-string v1, "com.xiaomi.market.service.AppDownloadService"
+    const-string v1, "com.xiaomi.market.data.AppDownloadService"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 310
+    .line 308
     iget-object v1, p0, Lcom/market/sdk/silentupdate/SilentUpdater;->targetPkg:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 312
+    .line 310
     invoke-static {}, Lcom/market/sdk/utils/AppGlobal;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    .line 313
+    .line 311
     iget-object v2, p0, Lcom/market/sdk/silentupdate/SilentUpdater;->conn:Landroid/content/ServiceConnection;
 
     const/4 v3, 0x1
@@ -366,28 +352,21 @@
 
     return-void
 
-    .line 306
+    .line 304
     :cond_0
-    new-instance v0, Lcom/market/sdk/silentupdate/CheckedException;
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    const-string v1, "SilentUpdate check failed\uff0cThis operation is not supported"
-
-    invoke-direct {v0, v1}, Lcom/market/sdk/silentupdate/CheckedException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
 
     throw v0
 .end method
 
 .method private declared-synchronized enqueAction(I)V
     .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lcom/market/sdk/silentupdate/CheckedException;
-        }
-    .end annotation
 
     monitor-enter p0
 
-    .line 211
+    .line 209
     :try_start_0
     iget-object v0, p0, Lcom/market/sdk/silentupdate/SilentUpdater;->actionQueue:Ljava/util/List;
 
@@ -397,23 +376,23 @@
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 212
+    .line 210
     iget-object p1, p0, Lcom/market/sdk/silentupdate/SilentUpdater;->appDownloadManager:Lcom/xiaomi/market/IAppDownloadManager;
 
     if-nez p1, :cond_0
 
-    .line 214
+    .line 212
     invoke-direct {p0}, Lcom/market/sdk/silentupdate/SilentUpdater;->bindService()V
 
     goto :goto_0
 
-    .line 216
+    .line 214
     :cond_0
     invoke-direct {p0}, Lcom/market/sdk/silentupdate/SilentUpdater;->processActions()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 218
+    .line 216
     :goto_0
     monitor-exit p0
 
@@ -430,7 +409,7 @@
 .method private handleCancel()V
     .locals 3
 
-    .line 245
+    .line 243
     :try_start_0
     iget-object v0, p0, Lcom/market/sdk/silentupdate/SilentUpdater;->appDownloadManager:Lcom/xiaomi/market/IAppDownloadManager;
 
@@ -459,7 +438,7 @@
     :catch_0
     move-exception v0
 
-    .line 247
+    .line 245
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0
@@ -469,7 +448,7 @@
 .method private handlePause()V
     .locals 3
 
-    .line 261
+    .line 259
     :try_start_0
     iget-object v0, p0, Lcom/market/sdk/silentupdate/SilentUpdater;->appDownloadManager:Lcom/xiaomi/market/IAppDownloadManager;
 
@@ -498,7 +477,7 @@
     :catch_0
     move-exception v0
 
-    .line 263
+    .line 261
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0
@@ -508,7 +487,7 @@
 .method private handleResume()V
     .locals 3
 
-    .line 253
+    .line 251
     :try_start_0
     iget-object v0, p0, Lcom/market/sdk/silentupdate/SilentUpdater;->appDownloadManager:Lcom/xiaomi/market/IAppDownloadManager;
 
@@ -537,7 +516,7 @@
     :catch_0
     move-exception v0
 
-    .line 255
+    .line 253
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0
@@ -547,17 +526,17 @@
 .method private handleUpdate()V
     .locals 7
 
-    .line 268
+    .line 266
     invoke-static {}, Lcom/market/sdk/utils/AppGlobal;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 269
+    .line 267
     invoke-static {}, Lcom/market/sdk/silentupdate/SigGenerator;->generateNonce()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 270
+    .line 268
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -576,7 +555,7 @@
 
     move-result-object v2
 
-    .line 272
+    .line 270
     :try_start_0
     iget-object v3, p0, Lcom/market/sdk/silentupdate/SilentUpdater;->appId:Ljava/lang/String;
 
@@ -590,14 +569,14 @@
 
     move-result-object v3
 
-    .line 273
+    .line 271
     new-instance v4, Landroid/os/Bundle;
 
     invoke-direct {v4}, Landroid/os/Bundle;-><init>()V
 
     const-string v5, "packageName"
 
-    .line 274
+    .line 272
     invoke-virtual {v0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v6
@@ -606,7 +585,7 @@
 
     const-string v5, "senderPackageName"
 
-    .line 275
+    .line 273
     invoke-virtual {v0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
@@ -615,43 +594,43 @@
 
     const-string v0, "ref"
 
-    .line 276
+    .line 274
     invoke-virtual {v4, v0, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "nonce"
 
-    .line 277
+    .line 275
     invoke-virtual {v4, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "appSignature"
 
-    .line 278
+    .line 276
     invoke-virtual {v4, v0, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "appClientId"
 
-    .line 279
+    .line 277
     iget-object v1, p0, Lcom/market/sdk/silentupdate/SilentUpdater;->appId:Ljava/lang/String;
 
     invoke-virtual {v4, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "ext_targetVersionCode"
 
-    .line 280
+    .line 278
     iget v1, p0, Lcom/market/sdk/silentupdate/SilentUpdater;->versionCode:I
 
     invoke-virtual {v4, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string v0, "show_cta"
 
-    .line 281
+    .line 279
     iget-boolean v1, p0, Lcom/market/sdk/silentupdate/SilentUpdater;->showUserAgreementIfNeeded:Z
 
     invoke-virtual {v4, v0, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     const-string v0, "ext_abTestIdentifier"
 
-    .line 282
+    .line 280
     invoke-static {}, Lcom/market/sdk/XiaomiUpdateAgent;->getAbTestIdentifier()Lcom/market/sdk/AbTestIdentifier;
 
     move-result-object v1
@@ -662,7 +641,7 @@
 
     invoke-virtual {v4, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 283
+    .line 281
     iget-boolean v0, p0, Lcom/market/sdk/silentupdate/SilentUpdater;->forceUpdate:Z
 
     const/4 v1, 0x1
@@ -671,10 +650,10 @@
 
     const-string v0, "marketClientControlParam_force_update"
 
-    .line 284
+    .line 282
     invoke-virtual {v4, v0, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 286
+    .line 284
     :cond_0
     iget-boolean v0, p0, Lcom/market/sdk/silentupdate/SilentUpdater;->hideUpdate:Z
 
@@ -682,10 +661,10 @@
 
     const-string v0, "marketClientControlParam_hide_download"
 
-    .line 287
+    .line 285
     invoke-virtual {v4, v0, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 289
+    .line 287
     :cond_1
     iget-boolean v0, p0, Lcom/market/sdk/silentupdate/SilentUpdater;->wifiOnly:Z
 
@@ -693,16 +672,16 @@
 
     const-string v0, "marketClientControlParam_download_wifi_only"
 
-    .line 290
+    .line 288
     invoke-virtual {v4, v0, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 292
+    .line 290
     :cond_2
     iget-object v0, p0, Lcom/market/sdk/silentupdate/SilentUpdater;->extras:Landroid/os/Bundle;
 
     if-eqz v0, :cond_4
 
-    .line 293
+    .line 291
     invoke-virtual {v4}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
     move-result-object v0
@@ -724,20 +703,20 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 294
+    .line 292
     iget-object v2, p0, Lcom/market/sdk/silentupdate/SilentUpdater;->extras:Landroid/os/Bundle;
 
     invoke-virtual {v2, v1}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 296
+    .line 294
     :cond_3
     iget-object v0, p0, Lcom/market/sdk/silentupdate/SilentUpdater;->extras:Landroid/os/Bundle;
 
     invoke-virtual {v4, v0}, Landroid/os/Bundle;->putAll(Landroid/os/Bundle;)V
 
-    .line 298
+    .line 296
     :cond_4
     iget-object v0, p0, Lcom/market/sdk/silentupdate/SilentUpdater;->appDownloadManager:Lcom/xiaomi/market/IAppDownloadManager;
 
@@ -750,7 +729,7 @@
     :catch_0
     move-exception v0
 
-    .line 300
+    .line 298
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_1
@@ -760,7 +739,7 @@
 .method public static isCancelAvailable()Z
     .locals 1
 
-    .line 381
+    .line 379
     invoke-static {}, Lcom/market/sdk/silentupdate/SilentUpdater;->isPauseAavailable()Z
 
     move-result v0
@@ -771,7 +750,7 @@
 .method public static isPauseAavailable()Z
     .locals 2
 
-    .line 369
+    .line 367
     invoke-static {}, Lcom/market/sdk/utils/Client;->isInternationalMiui()Z
 
     move-result v0
@@ -782,7 +761,7 @@
 
     const-string v0, "com.xiaomi.mipicks"
 
-    .line 370
+    .line 368
     invoke-static {v0, v1}, Lcom/market/sdk/silentupdate/SilentUpdater;->isSupportedInPkg(Ljava/lang/String;I)Z
 
     move-result v0
@@ -814,7 +793,7 @@
     :cond_2
     const-string v0, "com.xiaomi.market"
 
-    .line 372
+    .line 370
     invoke-static {v0, v1}, Lcom/market/sdk/silentupdate/SilentUpdater;->isSupportedInPkg(Ljava/lang/String;I)Z
 
     move-result v0
@@ -825,7 +804,7 @@
 .method public static isResumeAavailable()Z
     .locals 1
 
-    .line 377
+    .line 375
     invoke-static {}, Lcom/market/sdk/silentupdate/SilentUpdater;->isPauseAavailable()Z
 
     move-result v0
@@ -836,7 +815,7 @@
 .method public static isSilentUpdateAvailable()Z
     .locals 2
 
-    .line 361
+    .line 359
     invoke-static {}, Lcom/market/sdk/utils/Client;->isInternationalMiui()Z
 
     move-result v0
@@ -847,7 +826,7 @@
 
     const-string v0, "com.xiaomi.mipicks"
 
-    .line 362
+    .line 360
     invoke-static {v0, v1}, Lcom/market/sdk/silentupdate/SilentUpdater;->isSupportedInPkg(Ljava/lang/String;I)Z
 
     move-result v0
@@ -879,7 +858,7 @@
     :cond_2
     const-string v0, "com.xiaomi.market"
 
-    .line 364
+    .line 362
     invoke-static {v0, v1}, Lcom/market/sdk/silentupdate/SilentUpdater;->isSupportedInPkg(Ljava/lang/String;I)Z
 
     move-result v0
@@ -890,14 +869,14 @@
 .method public static isSilentUpdateAvailable(Ljava/lang/String;)Z
     .locals 1
 
-    .line 385
+    .line 383
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 386
+    .line 384
     invoke-static {}, Lcom/market/sdk/silentupdate/SilentUpdater;->isSilentUpdateAvailable()Z
 
     move-result p0
@@ -907,7 +886,7 @@
     :cond_0
     const/4 v0, -0x1
 
-    .line 388
+    .line 386
     invoke-static {p0, v0}, Lcom/market/sdk/silentupdate/SilentUpdater;->isSupportedInPkg(Ljava/lang/String;I)Z
 
     move-result p0
@@ -922,7 +901,7 @@
 
     if-lez p1, :cond_0
 
-    .line 394
+    .line 392
     :try_start_0
     invoke-static {}, Lcom/market/sdk/utils/AppGlobal;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -932,25 +911,25 @@
 
     move-result-object v1
 
-    .line 395
+    .line 393
     iget v1, v1, Landroid/content/pm/PackageInfo;->versionCode:I
 
     if-ge v1, p1, :cond_0
 
     return v0
 
-    .line 399
+    .line 397
     :cond_0
     new-instance p1, Landroid/content/Intent;
 
-    const-string v1, "com.xiaomi.market.service.AppDownloadService"
+    const-string v1, "com.xiaomi.market.data.AppDownloadService"
 
     invoke-direct {p1, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 400
+    .line 398
     invoke-virtual {p1, p0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 401
+    .line 399
     invoke-static {}, Lcom/market/sdk/utils/AppGlobal;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
@@ -961,7 +940,7 @@
 
     if-eqz p0, :cond_2
 
-    .line 402
+    .line 400
     invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
 
     move-result p1
@@ -970,7 +949,7 @@
 
     goto :goto_0
 
-    .line 405
+    .line 403
     :cond_1
     invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -978,7 +957,7 @@
 
     check-cast p0, Landroid/content/pm/ResolveInfo;
 
-    .line 406
+    .line 404
     iget-object p0, p0, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
 
     invoke-virtual {p0}, Landroid/content/pm/ServiceInfo;->isEnabled()Z
@@ -1002,7 +981,7 @@
 
     monitor-enter p0
 
-    .line 221
+    .line 219
     :try_start_0
     new-instance v0, Ljava/util/ArrayList;
 
@@ -1010,7 +989,7 @@
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 222
+    .line 220
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -1036,31 +1015,31 @@
 
     goto :goto_0
 
-    .line 234
+    .line 232
     :pswitch_0
     invoke-direct {p0}, Lcom/market/sdk/silentupdate/SilentUpdater;->handleCancel()V
 
     goto :goto_0
 
-    .line 231
+    .line 229
     :pswitch_1
     invoke-direct {p0}, Lcom/market/sdk/silentupdate/SilentUpdater;->handleResume()V
 
     goto :goto_0
 
-    .line 228
+    .line 226
     :pswitch_2
     invoke-direct {p0}, Lcom/market/sdk/silentupdate/SilentUpdater;->handlePause()V
 
     goto :goto_0
 
-    .line 225
+    .line 223
     :pswitch_3
     invoke-direct {p0}, Lcom/market/sdk/silentupdate/SilentUpdater;->handleUpdate()V
 
     goto :goto_0
 
-    .line 240
+    .line 238
     :cond_0
     iget-object v0, p0, Lcom/market/sdk/silentupdate/SilentUpdater;->actionQueue:Ljava/util/List;
 
@@ -1068,7 +1047,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 241
+    .line 239
     monitor-exit p0
 
     return-void
@@ -1094,7 +1073,7 @@
 
     monitor-enter p0
 
-    .line 202
+    .line 200
     :try_start_0
     iget-object v0, p0, Lcom/market/sdk/silentupdate/SilentUpdater;->actionQueue:Ljava/util/List;
 
@@ -1102,7 +1081,7 @@
 
     move-result-object v0
 
-    .line 203
+    .line 201
     :cond_0
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -1111,7 +1090,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 204
+    .line 202
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
@@ -1124,14 +1103,14 @@
 
     if-ne v1, p1, :cond_0
 
-    .line 205
+    .line 203
     invoke-interface {v0}, Ljava/util/Iterator;->remove()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
-    .line 208
+    .line 206
     :cond_1
     monitor-exit p0
 
@@ -1148,12 +1127,12 @@
 .method private unbindService()V
     .locals 3
 
-    .line 317
+    .line 315
     iget-object v0, p0, Lcom/market/sdk/silentupdate/SilentUpdater;->appDownloadManager:Lcom/xiaomi/market/IAppDownloadManager;
 
     if-eqz v0, :cond_0
 
-    .line 319
+    .line 317
     :try_start_0
     invoke-interface {v0}, Lcom/xiaomi/market/IAppDownloadManager;->asBinder()Landroid/os/IBinder;
 
@@ -1165,7 +1144,7 @@
 
     invoke-interface {v0, v1, v2}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 320
+    .line 318
     invoke-static {}, Lcom/market/sdk/utils/AppGlobal;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1176,7 +1155,7 @@
 
     const/4 v0, 0x0
 
-    .line 321
+    .line 319
     iput-object v0, p0, Lcom/market/sdk/silentupdate/SilentUpdater;->appDownloadManager:Lcom/xiaomi/market/IAppDownloadManager;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -1186,7 +1165,7 @@
     :catch_0
     move-exception v0
 
-    .line 323
+    .line 321
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_0
@@ -1198,30 +1177,25 @@
 # virtual methods
 .method public cancel()V
     .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lcom/market/sdk/silentupdate/CheckedException;
-        }
-    .end annotation
 
     const/4 v0, 0x1
 
-    .line 187
+    .line 185
     invoke-direct {p0, v0}, Lcom/market/sdk/silentupdate/SilentUpdater;->removeAction(I)V
 
     const/4 v0, 0x2
 
-    .line 188
+    .line 186
     invoke-direct {p0, v0}, Lcom/market/sdk/silentupdate/SilentUpdater;->removeAction(I)V
 
     const/4 v0, 0x3
 
-    .line 189
+    .line 187
     invoke-direct {p0, v0}, Lcom/market/sdk/silentupdate/SilentUpdater;->removeAction(I)V
 
     const/4 v0, 0x4
 
-    .line 190
+    .line 188
     invoke-direct {p0, v0}, Lcom/market/sdk/silentupdate/SilentUpdater;->enqueAction(I)V
 
     return-void
@@ -1229,18 +1203,13 @@
 
 .method public forceUpdate()V
     .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lcom/market/sdk/silentupdate/CheckedException;
-        }
-    .end annotation
 
     const/4 v0, 0x1
 
-    .line 170
+    .line 168
     iput-boolean v0, p0, Lcom/market/sdk/silentupdate/SilentUpdater;->forceUpdate:Z
 
-    .line 171
+    .line 169
     invoke-virtual {p0}, Lcom/market/sdk/silentupdate/SilentUpdater;->update()V
 
     return-void
@@ -1248,15 +1217,10 @@
 
 .method public pause()V
     .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lcom/market/sdk/silentupdate/CheckedException;
-        }
-    .end annotation
 
     const/4 v0, 0x2
 
-    .line 179
+    .line 177
     invoke-direct {p0, v0}, Lcom/market/sdk/silentupdate/SilentUpdater;->enqueAction(I)V
 
     return-void
@@ -1264,15 +1228,10 @@
 
 .method public resume()V
     .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lcom/market/sdk/silentupdate/CheckedException;
-        }
-    .end annotation
 
     const/4 v0, 0x3
 
-    .line 198
+    .line 196
     invoke-direct {p0, v0}, Lcom/market/sdk/silentupdate/SilentUpdater;->enqueAction(I)V
 
     return-void
@@ -1280,15 +1239,10 @@
 
 .method public update()V
     .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lcom/market/sdk/silentupdate/CheckedException;
-        }
-    .end annotation
 
     const/4 v0, 0x1
 
-    .line 163
+    .line 161
     invoke-direct {p0, v0}, Lcom/market/sdk/silentupdate/SilentUpdater;->enqueAction(I)V
 
     return-void

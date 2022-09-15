@@ -6,7 +6,6 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem$ReplaceWidgetShortcutMenuItem;,
         Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem$AddWidgetShortcutMenuItem;,
         Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem$EditShortcutMenuItem;,
         Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem$DeleteShortcutMenuItem;,
@@ -45,7 +44,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 42
+    .line 40
     invoke-direct {p0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenuItem;-><init>()V
 
     return-void
@@ -54,7 +53,7 @@
 .method static synthetic access$000(Lcom/miui/home/launcher/ItemInfo;Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 42
+    .line 40
     invoke-static {p0, p1}, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem;->addPairIconToWorkspace(Lcom/miui/home/launcher/ItemInfo;Lcom/miui/home/launcher/Launcher;)V
 
     return-void
@@ -63,7 +62,7 @@
 .method static synthetic access$100(Lcom/miui/home/launcher/ItemInfo;Ljava/lang/String;)V
     .locals 0
 
-    .line 42
+    .line 40
     invoke-static {p0, p1}, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem;->analyticalData(Lcom/miui/home/launcher/ItemInfo;Ljava/lang/String;)V
 
     return-void
@@ -72,17 +71,17 @@
 .method private static addPairIconToWorkspace(Lcom/miui/home/launcher/ItemInfo;Lcom/miui/home/launcher/Launcher;)V
     .locals 7
 
-    .line 246
+    .line 243
     instance-of v0, p0, Lcom/miui/home/launcher/PairShortcutInfo;
 
     if-eqz v0, :cond_0
 
-    .line 247
+    .line 244
     move-object v0, p0
 
     check-cast v0, Lcom/miui/home/launcher/PairShortcutInfo;
 
-    .line 248
+    .line 245
     new-instance v3, Landroid/content/Intent;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/PairShortcutInfo;->getShortcutInfo1()Lcom/miui/home/launcher/ShortcutInfo;
@@ -95,75 +94,75 @@
 
     invoke-direct {v3, v1}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
 
-    .line 249
+    .line 246
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getAppPairController()Lcom/miui/home/launcher/AppPairController;
 
     move-result-object v1
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/ItemInfo;->getIntent()Landroid/content/Intent;
 
+    move-result-object p0
+
+    .line 247
+    invoke-virtual {v0}, Lcom/miui/home/launcher/PairShortcutInfo;->getShortcutInfo2()Lcom/miui/home/launcher/ShortcutInfo;
+
     move-result-object v2
 
-    .line 250
+    invoke-virtual {v2}, Lcom/miui/home/launcher/ShortcutInfo;->getPackageName()Ljava/lang/String;
+
+    move-result-object v2
+
     invoke-virtual {v0}, Lcom/miui/home/launcher/PairShortcutInfo;->getShortcutInfo2()Lcom/miui/home/launcher/ShortcutInfo;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lcom/miui/home/launcher/ShortcutInfo;->getPackageName()Ljava/lang/String;
+    invoke-virtual {v4}, Lcom/miui/home/launcher/ShortcutInfo;->getUserId()I
 
-    move-result-object v4
+    move-result v4
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/PairShortcutInfo;->getShortcutInfo2()Lcom/miui/home/launcher/ShortcutInfo;
+    .line 246
+    invoke-virtual {v1, p0, v2, v4}, Lcom/miui/home/launcher/AppPairController;->getAppPairIntent(Landroid/content/Intent;Ljava/lang/String;I)Landroid/content/Intent;
 
-    move-result-object v5
+    move-result-object p0
 
-    invoke-virtual {v5}, Lcom/miui/home/launcher/ShortcutInfo;->getUserId()I
+    const-string v1, "android.intent.extra.shortcut.ICON"
 
-    move-result v5
-
-    .line 249
-    invoke-virtual {v1, v2, v4, v5}, Lcom/miui/home/launcher/AppPairController;->getAppPairIntent(Landroid/content/Intent;Ljava/lang/String;I)Landroid/content/Intent;
-
-    move-result-object v1
-
-    const-string v2, "android.intent.extra.shortcut.ICON"
-
-    .line 251
+    .line 248
     invoke-virtual {v0}, Lcom/miui/home/launcher/PairShortcutInfo;->getPairBitmap()Landroid/graphics/Bitmap;
 
-    move-result-object v4
+    move-result-object v2
 
-    invoke-virtual {v3, v2, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+    invoke-virtual {v3, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    const-string v2, "iconType"
+    const-string v1, "iconType"
 
-    const/4 v4, 0x7
+    const/4 v2, 0x7
 
-    .line 252
-    invoke-virtual {v3, v2, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    .line 249
+    invoke-virtual {v3, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    const-string v2, "android.intent.extra.shortcut.INTENT"
+    const-string v1, "android.intent.extra.shortcut.INTENT"
 
-    .line 253
-    invoke-virtual {v3, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+    .line 250
+    invoke-virtual {v3, v1, p0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    const-string v1, "android.intent.extra.shortcut.NAME"
+    const-string p0, "android.intent.extra.shortcut.NAME"
 
-    .line 254
+    .line 251
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/PairShortcutInfo;->getPairName(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v3, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v3, p0, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const/4 v2, 0x0
 
-    .line 256
+    .line 253
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
-    move-result-object v0
+    move-result-object p0
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->getPackageName()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/miui/home/launcher/Application;->getPackageName()Ljava/lang/String;
 
     move-result-object v4
 
@@ -171,11 +170,11 @@
 
     new-instance v6, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem$1;
 
-    invoke-direct {v6, p1, p0}, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem$1;-><init>(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/ItemInfo;)V
+    invoke-direct {v6, p1}, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem$1;-><init>(Lcom/miui/home/launcher/Launcher;)V
 
     move-object v1, p1
 
-    .line 255
+    .line 252
     invoke-static/range {v1 .. v6}, Lcom/miui/home/launcher/InstallShortcutReceiver;->checkToAddShortcut(Landroid/content/Context;Lcom/miui/launcher/common/PinItemRequestCompat;Landroid/content/Intent;Ljava/lang/String;ILcom/miui/home/launcher/InstallShortcutReceiver$InstallShortcutListener;)V
 
     :cond_0
@@ -183,33 +182,25 @@
 .end method
 
 .method private static analyticalData(Lcom/miui/home/launcher/ItemInfo;Ljava/lang/String;)V
-    .locals 3
+    .locals 2
 
     const-string v0, "unknown"
 
-    const-string v1, "unknown"
+    .line 401
+    instance-of v1, p0, Lcom/miui/home/launcher/ShortcutInfo;
 
-    .line 447
-    instance-of v2, p0, Lcom/miui/home/launcher/ShortcutInfo;
+    if-eqz v1, :cond_0
 
-    if-eqz v2, :cond_0
-
-    .line 448
+    .line 402
     check-cast p0, Lcom/miui/home/launcher/ShortcutInfo;
 
-    .line 449
-    invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutInfo;->getPairCompletePackageName()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 450
-    invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutInfo;->getAppStyle()Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 452
+    .line 404
     :cond_0
-    invoke-static {v0, p1, v1}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackClickShortcutMenuItem(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackClickShortcutMenuItem(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -217,9 +208,9 @@
 .method public static createAllSystemShortcutMenuItems()V
     .locals 5
 
-    const/4 v0, 0x7
+    const/4 v0, 0x6
 
-    .line 67
+    .line 65
     new-array v0, v0, [Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem;
 
     new-instance v1, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem$ShareAppShortcutMenuItem;
@@ -254,19 +245,11 @@
 
     aput-object v1, v0, v4
 
-    new-instance v1, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem$ReplaceWidgetShortcutMenuItem;
-
-    invoke-direct {v1}, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem$ReplaceWidgetShortcutMenuItem;-><init>()V
-
-    const/4 v4, 0x4
-
-    aput-object v1, v0, v4
-
     new-instance v1, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem$DeleteShortcutMenuItem;
 
     invoke-direct {v1}, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem$DeleteShortcutMenuItem;-><init>()V
 
-    const/4 v4, 0x5
+    const/4 v4, 0x4
 
     aput-object v1, v0, v4
 
@@ -274,7 +257,7 @@
 
     invoke-direct {v1}, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem$AddToWorkspaceMenuItem;-><init>()V
 
-    const/4 v4, 0x6
+    const/4 v4, 0x5
 
     aput-object v1, v0, v4
 
@@ -284,7 +267,7 @@
 
     sput-object v0, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem;->sAllSystemShortcutMenuItems:Ljava/util/List;
 
-    .line 77
+    .line 74
     new-array v0, v3, [Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem;
 
     new-instance v1, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem$AddWidgetShortcutMenuItem;
@@ -313,7 +296,7 @@
         }
     .end annotation
 
-    .line 81
+    .line 78
     sget-object v0, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem;->sAllSystemShortcutMenuItems:Ljava/util/List;
 
     return-object v0
@@ -330,7 +313,7 @@
         }
     .end annotation
 
-    .line 85
+    .line 82
     sget-object v0, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem;->sAllWidgetShortcutMenuItems:Ljava/util/List;
 
     return-object v0
@@ -339,14 +322,14 @@
 .method public static resetAllSystemShortcutMenuItems()V
     .locals 2
 
-    .line 60
+    .line 58
     sget-object v0, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem;->sAllSystemShortcutMenuItems:Ljava/util/List;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 61
+    .line 59
     :cond_0
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -365,7 +348,7 @@
 
     check-cast v1, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem;
 
-    .line 62
+    .line 60
     invoke-virtual {v1}, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem;->resetData()V
 
     goto :goto_0
@@ -379,19 +362,19 @@
 .method public isValid(Lcom/miui/home/launcher/ItemInfo;)Z
     .locals 1
 
-    .line 47
+    .line 45
     instance-of v0, p1, Lcom/miui/home/launcher/ShortcutInfo;
 
     if-eqz v0, :cond_0
 
-    .line 48
+    .line 46
     invoke-virtual {p1}, Lcom/miui/home/launcher/ItemInfo;->getUser()Landroid/os/UserHandle;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem;->setUserHandle(Landroid/os/UserHandle;)V
 
-    .line 49
+    .line 47
     check-cast p1, Lcom/miui/home/launcher/ShortcutInfo;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/ShortcutInfo;->getComponentName()Landroid/content/ComponentName;
@@ -400,7 +383,7 @@
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem;->setComponentName(Landroid/content/ComponentName;)V
 
-    .line 51
+    .line 49
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem;->isValid()Z
 
@@ -414,10 +397,10 @@
 
     const/4 v0, 0x0
 
-    .line 55
+    .line 53
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem;->setUserHandle(Landroid/os/UserHandle;)V
 
-    .line 56
+    .line 54
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem;->setComponentName(Landroid/content/ComponentName;)V
 
     return-void

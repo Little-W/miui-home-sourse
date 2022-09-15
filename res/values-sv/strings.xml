@@ -329,7 +329,6 @@
     <string name="exit_overview_because_task_stack_changed">Stängde Senaste på grund av ändringar som skedde i bakgrunden</string>
     <string name="expand_button_title">Avancerat</string>
     <string name="exposed_dropdown_menu_content_description">Visa rullgardinsmenyn</string>
-    <string name="external_not_support_split_screen_j18">Delad skärm stöds in på ytterskärmen</string>
     <string name="failed_to_delete_temporary">Kan inte ta bort</string>
     <string name="failed_to_drop">Kan inte flytta</string>
     <string name="failed_to_drop_widget_invalid">Widgeten är felaktig</string>
@@ -548,7 +547,6 @@
     <string name="midnight">Natt</string>
     <string name="minus_one_screen">App vault</string>
     <string name="miui_screen_config_title">Inställningar för Hemskärm</string>
-    <string name="miui_widget_menu_replace_text">Växla</string>
     <string name="miuix_access_state_desc">Valt</string>
     <string name="miuix_appcompat_action_mode_deselect_all">Välj ingen</string>
     <string name="miuix_appcompat_action_mode_select_all">Välj alla</string>
@@ -575,8 +573,6 @@
     <string name="monday">Måndag</string>
     <string name="monday_short">Mån</string>
     <string name="monday_shortest">Mån</string>
-    <string name="monochrome_summary">Byt bakgrundsfärg för kompatibla ikoner</string>
-    <string name="monochrome_title">Bakgrundsfärg</string>
     <string name="month_april">April</string>
     <string name="month_april_short">Apr</string>
     <string name="month_april_shortest">Apr</string>

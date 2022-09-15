@@ -29,10 +29,10 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .line 72
+    .line 67
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 73
+    .line 68
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v1
@@ -49,19 +49,19 @@
 
     sput-object v0, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->sIdFactor:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 74
+    .line 69
     invoke-static {}, Landroid/os/Process;->myUid()I
 
     move-result v0
 
     sput v0, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->sUid:I
 
-    .line 86
+    .line 81
     sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     if-eqz v0, :cond_0
 
-    .line 87
+    .line 82
     new-instance v0, Lcom/miui/home/launcher/AssistantWidgetCompatGlobal;
 
     invoke-direct {v0}, Lcom/miui/home/launcher/AssistantWidgetCompatGlobal;-><init>()V
@@ -78,37 +78,37 @@
 
     const-string v0, ".maml.cfg"
 
-    .line 166
+    .line 161
     sput-object v0, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->MAML_CONFIG_BACKUP_EXT:Ljava/lang/String;
 
     const-string v0, "name"
 
-    .line 167
+    .line 162
     sput-object v0, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->MAML_CONFIG_BACKUP_ENTRY_NAME:Ljava/lang/String;
 
     const-string v0, "maxId"
 
-    .line 168
+    .line 163
     sput-object v0, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->MAML_CONFIG_BACKUP_ENTRY_MAX_ID:Ljava/lang/String;
 
     const-string v0, ".maml.zip"
 
-    .line 195
+    .line 190
     sput-object v0, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->MAML_RES_BACKUP_EXT:Ljava/lang/String;
 
     const-string v0, "name"
 
-    .line 196
+    .line 191
     sput-object v0, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->MAML_RES_BACKUP_ENTRY_NAME:Ljava/lang/String;
 
     const-string v0, "ver"
 
-    .line 197
+    .line 192
     sput-object v0, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->MAML_RES_BACKUP_ENTRY_VER:Ljava/lang/String;
 
     const-string v0, ".widget.preview"
 
-    .line 227
+    .line 222
     sput-object v0, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->WIDGET_PREVIEW_EXT:Ljava/lang/String;
 
     return-void
@@ -117,7 +117,7 @@
 .method public static allocMaMlWidgetId()I
     .locals 4
 
-    .line 90
+    .line 85
     sget v0, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->sUid:I
 
     mul-int/lit16 v0, v0, 0x2710
@@ -130,7 +130,7 @@
 
     add-int/2addr v0, v1
 
-    .line 91
+    .line 86
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v1
@@ -160,7 +160,7 @@
         }
     .end annotation
 
-    .line 173
+    .line 168
     new-instance v0, Ljava/io/File;
 
     invoke-virtual {p0}, Landroid/content/Context;->getFilesDir()Ljava/io/File;
@@ -171,14 +171,14 @@
 
     invoke-direct {v0, p0, v1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 174
+    .line 169
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result p0
 
     if-eqz p0, :cond_1
 
-    .line 175
+    .line 170
     invoke-virtual {v0}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object p0
@@ -192,7 +192,7 @@
 
     aget-object v2, p0, v1
 
-    .line 176
+    .line 171
     invoke-virtual {v2}, Ljava/io/File;->isFile()Z
 
     move-result v3
@@ -211,7 +211,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 178
+    .line 173
     :try_start_0
     invoke-virtual {v2}, Ljava/io/File;->getCanonicalPath()Ljava/lang/String;
 
@@ -221,12 +221,12 @@
 
     invoke-static {v3, v4}, Landroid/system/Os;->chmod(Ljava/lang/String;I)V
 
-    .line 179
+    .line 174
     new-instance v3, Lorg/json/JSONObject;
 
     invoke-direct {v3}, Lorg/json/JSONObject;-><init>()V
 
-    .line 180
+    .line 175
     sget-object v4, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->MAML_CONFIG_BACKUP_ENTRY_NAME:Ljava/lang/String;
 
     invoke-virtual {v2}, Ljava/io/File;->getName()Ljava/lang/String;
@@ -235,7 +235,7 @@
 
     invoke-virtual {v3, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 181
+    .line 176
     sget-object v4, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->MAML_CONFIG_BACKUP_ENTRY_MAX_ID:Ljava/lang/String;
 
     sget-object v5, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->sIdFactor:Ljava/util/concurrent/atomic/AtomicInteger;
@@ -246,7 +246,7 @@
 
     invoke-virtual {v3, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 182
+    .line 177
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -281,7 +281,7 @@
 
     move-result-object v3
 
-    .line 184
+    .line 179
     invoke-static {v2, v3}, Lcom/miui/home/launcher/cloudbackup/BackupRestoreHomeService;->createFileInfoBundle(Ljava/io/File;Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v4
@@ -290,7 +290,7 @@
 
     const-string v4, "WidgetMoveCompat"
 
-    .line 185
+    .line 180
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -324,7 +324,7 @@
     :catch_0
     move-exception v2
 
-    .line 187
+    .line 182
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_0
@@ -349,19 +349,19 @@
         }
     .end annotation
 
-    .line 199
+    .line 194
     invoke-static {}, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->getResDir()Ljava/io/File;
 
     move-result-object p0
 
-    .line 200
+    .line 195
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 201
+    .line 196
     invoke-virtual {p0}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object p0
@@ -377,20 +377,20 @@
 
     aget-object v3, p0, v2
 
-    .line 202
+    .line 197
     invoke-virtual {v3}, Ljava/io/File;->isDirectory()Z
 
     move-result v4
 
     if-eqz v4, :cond_1
 
-    .line 204
+    .line 199
     :try_start_0
     invoke-virtual {v3}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 205
+    .line 200
     invoke-virtual {v3}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object v3
@@ -404,7 +404,7 @@
 
     aget-object v7, v3, v6
 
-    .line 206
+    .line 201
     new-instance v8, Ljava/io/File;
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -423,14 +423,14 @@
 
     invoke-direct {v8, v7, v9}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 207
+    .line 202
     invoke-virtual {v8}, Ljava/io/File;->exists()Z
 
     move-result v9
 
     if-eqz v9, :cond_0
 
-    .line 208
+    .line 203
     invoke-virtual {v8}, Ljava/io/File;->getCanonicalPath()Ljava/lang/String;
 
     move-result-object v9
@@ -439,17 +439,17 @@
 
     invoke-static {v9, v10}, Landroid/system/Os;->chmod(Ljava/lang/String;I)V
 
-    .line 209
+    .line 204
     new-instance v9, Lorg/json/JSONObject;
 
     invoke-direct {v9}, Lorg/json/JSONObject;-><init>()V
 
-    .line 210
+    .line 205
     sget-object v10, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->MAML_RES_BACKUP_ENTRY_NAME:Ljava/lang/String;
 
     invoke-virtual {v9, v10, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 211
+    .line 206
     sget-object v10, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->MAML_RES_BACKUP_ENTRY_VER:Ljava/lang/String;
 
     invoke-virtual {v7}, Ljava/io/File;->getName()Ljava/lang/String;
@@ -458,7 +458,7 @@
 
     invoke-virtual {v9, v10, v7}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 212
+    .line 207
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -493,7 +493,7 @@
 
     move-result-object v7
 
-    .line 215
+    .line 210
     invoke-static {v8, v7}, Lcom/miui/home/launcher/cloudbackup/BackupRestoreHomeService;->createFileInfoBundle(Ljava/io/File;Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v8
@@ -502,7 +502,7 @@
 
     const-string v8, "WidgetMoveCompat"
 
-    .line 216
+    .line 211
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -537,7 +537,7 @@
 
     const-string v4, "WidgetMoveCompat"
 
-    .line 220
+    .line 215
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -580,18 +580,18 @@
         }
     .end annotation
 
-    .line 247
+    .line 242
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 248
+    .line 243
     invoke-static {p0, v0}, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->backupMaMlResources(Landroid/content/Context;Ljava/util/List;)V
 
-    .line 249
+    .line 244
     invoke-static {p0, v0}, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->backupMaMlConfigs(Landroid/content/Context;Ljava/util/List;)V
 
-    .line 250
+    .line 245
     invoke-static {p0, v0}, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->backupWidgetPreviews(Landroid/content/Context;Ljava/util/List;)V
 
     return-object v0
@@ -609,24 +609,24 @@
         }
     .end annotation
 
-    .line 229
+    .line 224
     invoke-static {p0}, Lcom/miui/home/launcher/util/BitmapUtil;->getBitmapSavePath(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 230
+    .line 225
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 231
+    .line 226
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result p0
 
     if-eqz p0, :cond_1
 
-    .line 232
+    .line 227
     invoke-virtual {v0}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object p0
@@ -640,14 +640,14 @@
 
     aget-object v2, p0, v1
 
-    .line 233
+    .line 228
     invoke-virtual {v2}, Ljava/io/File;->isFile()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 235
+    .line 230
     :try_start_0
     invoke-virtual {v2}, Ljava/io/File;->getCanonicalPath()Ljava/lang/String;
 
@@ -657,7 +657,7 @@
 
     invoke-static {v3, v4}, Landroid/system/Os;->chmod(Ljava/lang/String;I)V
 
-    .line 236
+    .line 231
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -684,7 +684,7 @@
 
     const-string v3, "WidgetMoveCompat"
 
-    .line 237
+    .line 232
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -714,7 +714,7 @@
 
     const-string v3, "WidgetMoveCompat"
 
-    .line 239
+    .line 234
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -745,56 +745,6 @@
     return-void
 .end method
 
-.method private static checkParams(Lcom/miui/home/launcher/ItemInfo;)Z
-    .locals 2
-
-    const/4 v0, 0x0
-
-    if-nez p0, :cond_0
-
-    return v0
-
-    .line 789
-    :cond_0
-    instance-of v1, p0, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;
-
-    if-eqz v1, :cond_1
-
-    .line 790
-    check-cast p0, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;
-
-    .line 791
-    iget-object v1, p0, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->resPath:Ljava/lang/String;
-
-    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    iget-object p0, p0, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->maMlDownloadUrl:Ljava/lang/String;
-
-    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_1
-
-    const-string p0, "WidgetMoveCompat"
-
-    const-string v1, "resPatch & maMlDownloadUrl should not be null"
-
-    .line 792
-    invoke-static {p0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    return v0
-
-    :cond_1
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
 .method public static copyExternalFile(Landroid/content/Context;Landroid/net/Uri;Ljava/io/File;)Z
     .locals 3
 
@@ -807,7 +757,7 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 566
+    .line 561
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -815,12 +765,12 @@
 
     const-string v2, "r"
 
-    .line 567
+    .line 562
     invoke-virtual {p0, p1, v2}, Landroid/content/ContentResolver;->openFileDescriptor(Landroid/net/Uri;Ljava/lang/String;)Landroid/os/ParcelFileDescriptor;
 
     move-result-object p0
 
-    .line 569
+    .line 564
     new-instance p1, Ljava/io/BufferedInputStream;
 
     new-instance v2, Ljava/io/FileInputStream;
@@ -836,7 +786,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    .line 570
+    .line 565
     :try_start_1
     new-instance p0, Ljava/io/BufferedOutputStream;
 
@@ -851,11 +801,11 @@
 
     const/16 p2, 0x2000
 
-    .line 572
+    .line 567
     :try_start_2
     new-array p2, p2, [B
 
-    .line 573
+    .line 568
     :goto_0
     invoke-virtual {p1, p2}, Ljava/io/BufferedInputStream;->read([B)I
 
@@ -865,7 +815,7 @@
 
     if-eq v1, v2, :cond_1
 
-    .line 574
+    .line 569
     invoke-virtual {p0, p2, v0, v1}, Ljava/io/BufferedOutputStream;->write([BII)V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
@@ -876,10 +826,10 @@
     :cond_1
     const/4 p2, 0x1
 
-    .line 580
+    .line 575
     invoke-static {p1}, Lmiuix/core/util/IOUtils;->closeQuietly(Ljava/io/InputStream;)V
 
-    .line 581
+    .line 576
     invoke-static {p0}, Lmiuix/core/util/IOUtils;->closeQuietly(Ljava/io/OutputStream;)V
 
     return p2
@@ -926,17 +876,17 @@
 
     move-object p0, v1
 
-    .line 578
+    .line 573
     :goto_3
     :try_start_3
     invoke-virtual {p2}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_3
 
-    .line 580
+    .line 575
     invoke-static {v1}, Lmiuix/core/util/IOUtils;->closeQuietly(Ljava/io/InputStream;)V
 
-    .line 581
+    .line 576
     invoke-static {p0}, Lmiuix/core/util/IOUtils;->closeQuietly(Ljava/io/OutputStream;)V
 
     return v0
@@ -944,21 +894,21 @@
     :catchall_3
     move-exception p2
 
-    .line 580
+    .line 575
     :goto_4
     invoke-static {v1}, Lmiuix/core/util/IOUtils;->closeQuietly(Ljava/io/InputStream;)V
 
-    .line 581
+    .line 576
     invoke-static {p0}, Lmiuix/core/util/IOUtils;->closeQuietly(Ljava/io/OutputStream;)V
 
-    .line 582
+    .line 577
     throw p2
 .end method
 
 .method public static copyRes(Lcom/miui/home/launcher/maml/MaMlWidgetInfo;Landroid/net/Uri;)Ljava/lang/String;
     .locals 3
 
-    .line 452
+    .line 447
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -973,7 +923,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 453
+    .line 448
     invoke-static {p0}, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->getMaMlResPath(Lcom/miui/home/launcher/maml/MaMlWidgetInfo;)Ljava/lang/String;
 
     move-result-object p0
@@ -989,7 +939,7 @@
 .method public static createConfigPath(Landroid/content/Context;I)Ljava/lang/String;
     .locals 2
 
-    .line 104
+    .line 99
     new-instance v0, Ljava/io/File;
 
     invoke-virtual {p0}, Landroid/content/Context;->getFilesDir()Ljava/io/File;
@@ -1000,10 +950,10 @@
 
     invoke-direct {v0, p0, v1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 105
+    .line 100
     invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
 
-    .line 106
+    .line 101
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1018,12 +968,12 @@
 
     move-result-object p0
 
-    .line 107
+    .line 102
     new-instance p1, Ljava/io/File;
 
     invoke-direct {p1, v0, p0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 108
+    .line 103
     invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object p0
@@ -1034,7 +984,7 @@
 .method public static createEditUri(Landroid/content/Context;Lcom/miui/home/launcher/maml/MaMlWidgetInfo;)Ljava/lang/String;
     .locals 7
 
-    .line 96
+    .line 91
     iget-object v0, p1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->configPath:Ljava/lang/String;
 
     const/4 v1, 0x1
@@ -1047,7 +997,7 @@
 
     move-result-object v0
 
-    .line 97
+    .line 92
     new-instance v4, Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
@@ -1062,7 +1012,7 @@
 
     invoke-direct {v4, v0}, Ljava/lang/String;-><init>([B)V
 
-    .line 98
+    .line 93
     iget-object v0, p1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->productId:Ljava/lang/String;
 
     iget v2, p1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->versionCode:I
@@ -1071,7 +1021,7 @@
 
     move-result-object p0
 
-    .line 99
+    .line 94
     new-instance v3, Ljava/lang/String;
 
     invoke-virtual {p0}, Landroid/net/Uri;->toString()Ljava/lang/String;
@@ -1088,7 +1038,7 @@
 
     invoke-direct {v3, p0}, Ljava/lang/String;-><init>([B)V
 
-    .line 100
+    .line 95
     iget-object v1, p1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->productId:Ljava/lang/String;
 
     iget-object v2, p1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->type:Ljava/lang/String;
@@ -1104,688 +1054,10 @@
     return-object p0
 .end method
 
-.method public static createItemInfo(Lcom/miui/home/launcher/Launcher;Landroid/os/Bundle;)Lcom/miui/home/launcher/MIUIWidgetBasicInfo;
-    .locals 12
-
-    const-string v0, "widget_id"
-
-    const/4 v1, -0x1
-
-    .line 671
-    invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
-
-    move-result v0
-
-    const-string v2, "widget_origin_id"
-
-    .line 672
-    invoke-virtual {p1, v2, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
-
-    move-result v2
-
-    const-string v3, "widget_download_uri"
-
-    .line 673
-    invoke-virtual {p1, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v4, "widget_span_x"
-
-    .line 674
-    invoke-virtual {p1, v4}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
-
-    move-result v4
-
-    const-string v5, "widget_span_y"
-
-    .line 675
-    invoke-virtual {p1, v5}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
-
-    move-result v5
-
-    const-string v6, "widget_type"
-
-    .line 677
-    invoke-virtual {p1, v6}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
-
-    move-result v6
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x1
-
-    if-ne v6, v9, :cond_2
-
-    const-string v6, "widget_info"
-
-    .line 679
-    invoke-virtual {p1, v6}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
-
-    move-result-object v6
-
-    check-cast v6, Landroid/appwidget/AppWidgetProviderInfo;
-
-    if-eqz v6, :cond_1
-
-    .line 681
-    invoke-static {p0, v6}, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;->fromProviderInfo(Landroid/content/Context;Landroid/appwidget/AppWidgetProviderInfo;)Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;
-
-    move-result-object v1
-
-    .line 682
-    invoke-virtual {v1, v0}, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;->setAppWidgetId(I)V
-
-    .line 683
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountX()I
-
-    move-result v3
-
-    invoke-static {p0}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountXMin(Landroid/content/Context;)I
-
-    move-result v6
-
-    if-ne v3, v6, :cond_0
-
-    .line 684
-    iput v5, v1, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;->spanY:I
-
-    .line 685
-    iput v4, v1, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;->spanX:I
-
-    :cond_0
-    const-string v3, "widgetExtraData"
-
-    .line 687
-    invoke-virtual {p1, v3}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
-
-    move-result-object v3
-
-    iput-object v3, v1, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;->widgetExtras:Landroid/os/Bundle;
-
-    goto :goto_0
-
-    .line 690
-    :cond_1
-    new-instance v6, Lcom/miui/home/launcher/LauncherAppWidgetInfo;
-
-    invoke-direct {v6, v1}, Lcom/miui/home/launcher/LauncherAppWidgetInfo;-><init>(I)V
-
-    .line 691
-    new-instance v1, Landroid/content/ComponentName;
-
-    const-string v10, "widget_app_package"
-
-    invoke-virtual {p1, v10}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v10
-
-    const-string v11, "widget_info_name"
-
-    .line 692
-    invoke-virtual {p1, v11}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v11
-
-    invoke-direct {v1, v10, v11}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 693
-    invoke-virtual {v6, v1}, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->setProvider(Landroid/content/ComponentName;)V
-
-    const-string v1, "widget_app_icon_preview_url"
-
-    .line 694
-    invoke-virtual {p1, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    iput-object v1, v6, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->appIconPreUrl:Ljava/lang/String;
-
-    const-string v1, "widget_title"
-
-    .line 695
-    invoke-virtual {p1, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v6, v1}, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->setLabel(Ljava/lang/CharSequence;)V
-
-    .line 696
-    iput-object v3, v6, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->downloadUri:Ljava/lang/String;
-
-    const-string v1, "preview_light_url"
-
-    .line 697
-    invoke-virtual {p1, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    iput-object v1, v6, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->previewUrlLight:Ljava/lang/String;
-
-    const-string v1, "preview_dark_url"
-
-    .line 698
-    invoke-virtual {p1, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    iput-object v1, v6, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->previewUrlDark:Ljava/lang/String;
-
-    .line 699
-    iput v5, v6, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->spanY:I
-
-    .line 700
-    iput v4, v6, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->spanX:I
-
-    const-string v1, "widgetExtraData"
-
-    .line 701
-    invoke-virtual {p1, v1}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
-
-    move-result-object v1
-
-    iput-object v1, v6, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->widgetExtras:Landroid/os/Bundle;
-
-    const-string v1, "widget_download_app_info"
-
-    .line 702
-    invoke-virtual {p1, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    iput-object v1, v6, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->downloadAppInfo:Ljava/lang/String;
-
-    move-object v1, v6
-
-    :goto_0
-    const-string v3, "widget_app_version"
-
-    .line 705
-    invoke-virtual {p1, v3}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
-
-    move-result v3
-
-    iput v3, v1, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->appVersion:I
-
-    const-string v3, "widget_app_name"
-
-    .line 706
-    invoke-virtual {p1, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    iput-object v3, v1, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->appName:Ljava/lang/String;
-
-    const-string v3, "widget_title"
-
-    .line 707
-    invoke-virtual {p1, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    .line 708
-    invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_8
-
-    .line 709
-    invoke-virtual {v1, v3}, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->setLabel(Ljava/lang/CharSequence;)V
-
-    goto/16 :goto_4
-
-    :cond_2
-    const/4 v1, 0x2
-
-    if-ne v6, v1, :cond_7
-
-    .line 712
-    new-instance v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;
-
-    invoke-direct {v1, v4, v5}, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;-><init>(II)V
-
-    .line 713
-    invoke-static {}, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->allocMaMlWidgetId()I
-
-    move-result v4
-
-    iput v4, v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->gadgetId:I
-
-    const-string v4, "maml_product_id"
-
-    .line 714
-    invoke-virtual {p1, v4}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    iput-object v4, v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->productId:Ljava/lang/String;
-
-    const-string v4, "maml_tag_category"
-
-    .line 715
-    invoke-virtual {p1, v4}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    iput-object v4, v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->maMlTagCategory:Ljava/lang/String;
-
-    const-string v4, "maml_tag"
-
-    .line 716
-    invoke-virtual {p1, v4}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    iput-object v4, v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->maMlTag:Ljava/lang/String;
-
-    const-string v4, "maml_type"
-
-    .line 717
-    invoke-virtual {p1, v4}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    iput-object v4, v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->type:Ljava/lang/String;
-
-    const-string v4, "widget_app_name"
-
-    .line 719
-    invoke-virtual {p1, v4}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    iput-object v4, v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->appName:Ljava/lang/String;
-
-    const-string v4, "widget_app_package"
-
-    .line 720
-    invoke-virtual {p1, v4}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    iput-object v4, v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->appPackage:Ljava/lang/String;
-
-    const-string v4, "widget_app_version"
-
-    .line 721
-    invoke-virtual {p1, v4}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
-
-    move-result v4
-
-    iput v4, v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->appVersion:I
-
-    .line 722
-    invoke-virtual {v1, p0}, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->refreshAppNameFromPackageManager(Landroid/content/Context;)V
-
-    const-string v4, "widget_app_icon_preview_url"
-
-    .line 723
-    invoke-virtual {p1, v4}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    iput-object v4, v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->appIconPreUrl:Ljava/lang/String;
-
-    .line 724
-    iput-object v3, v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->downloadUri:Ljava/lang/String;
-
-    const-string v3, "maml_download_url"
-
-    .line 725
-    invoke-virtual {p1, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    iput-object v3, v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->maMlDownloadUrl:Ljava/lang/String;
-
-    const-string v3, "preview_light_url"
-
-    .line 726
-    invoke-virtual {p1, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    iput-object v3, v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->previewUrlLight:Ljava/lang/String;
-
-    const-string v3, "preview_dark_url"
-
-    .line 727
-    invoke-virtual {p1, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    iput-object v3, v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->previewUrlDark:Ljava/lang/String;
-
-    const-string v3, "maml_mtz_file_size"
-
-    .line 728
-    invoke-virtual {p1, v3}, Landroid/os/Bundle;->getLong(Ljava/lang/String;)J
-
-    move-result-wide v3
-
-    iput-wide v3, v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->mtzSizeInKb:J
-
-    const-string v3, "maml_title"
-
-    .line 729
-    invoke-virtual {p1, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->setTitle(Ljava/lang/CharSequence;)V
-
-    const-string v3, "maml_version"
-
-    .line 730
-    invoke-virtual {p1, v3}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
-
-    move-result v3
-
-    iput v3, v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->versionCode:I
-
-    const-string v3, "maml_uri"
-
-    .line 732
-    invoke-virtual {p1, v3}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
-
-    move-result-object v3
-
-    check-cast v3, Landroid/net/Uri;
-
-    .line 733
-    iput v8, v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->status:I
-
-    if-eqz v3, :cond_6
-
-    .line 736
-    invoke-static {v1, v3}, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->copyRes(Lcom/miui/home/launcher/maml/MaMlWidgetInfo;Landroid/net/Uri;)Ljava/lang/String;
-
-    move-result-object v3
-
-    iput-object v3, v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->resPath:Ljava/lang/String;
-
-    .line 737
-    iget-object v3, v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->resPath:Ljava/lang/String;
-
-    invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_8
-
-    .line 738
-    iput v9, v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->status:I
-
-    const-string v3, "maml_config_uri"
-
-    .line 740
-    invoke-virtual {p1, v3}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
-
-    move-result-object v3
-
-    check-cast v3, Landroid/net/Uri;
-
-    const-string v4, "maml_editable"
-
-    .line 741
-    invoke-virtual {p1, v4}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
-
-    move-result v4
-
-    iput-boolean v4, v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->isEditable:Z
-
-    const-string v4, "maml_custom_edit_uri"
-
-    .line 742
-    invoke-virtual {p1, v4}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    iput-object v4, v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->customEditUri:Ljava/lang/String;
-
-    .line 743
-    iget-boolean v4, v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->isEditable:Z
-
-    if-eqz v3, :cond_3
-
-    move v5, v9
-
-    goto :goto_1
-
-    :cond_3
-    move v5, v8
-
-    :goto_1
-    or-int/2addr v4, v5
-
-    if-nez v4, :cond_5
-
-    iget-object v4, v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->customEditUri:Ljava/lang/String;
-
-    invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_4
-
-    goto :goto_2
-
-    :cond_4
-    move v4, v8
-
-    goto :goto_3
-
-    :cond_5
-    :goto_2
-    move v4, v9
-
-    :goto_3
-    iput-boolean v4, v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->isEditable:Z
-
-    if-eqz v3, :cond_8
-
-    .line 748
-    iget v4, v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->gadgetId:I
-
-    invoke-static {v4, v3}, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->moveConfig(ILandroid/net/Uri;)Ljava/lang/String;
-
-    move-result-object v3
-
-    iput-object v3, v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->configPath:Ljava/lang/String;
-
-    goto :goto_4
-
-    .line 753
-    :cond_6
-    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
-
-    move-result-object v3
-
-    invoke-static {v3, v1}, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->updateMaMlInfo(Landroid/content/Context;Lcom/miui/home/launcher/maml/MaMlWidgetInfo;)Z
-
-    goto :goto_4
-
-    :cond_7
-    move-object v1, v7
-
-    :cond_8
-    :goto_4
-    if-eqz v1, :cond_b
-
-    if-gez v2, :cond_9
-
-    move v2, v0
-
-    .line 759
-    :cond_9
-    iput v2, v1, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->originWidgetId:I
-
-    .line 760
-    iput-boolean v9, v1, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->isMIUIWidget:Z
-
-    const-string v2, "preview_content"
-
-    .line 761
-    invoke-virtual {p1, v2}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/graphics/Bitmap;
-
-    iput-object v2, v1, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->transitionBitmap:Landroid/graphics/Bitmap;
-
-    const-string v2, "widget_show_warning_toast"
-
-    .line 762
-    invoke-virtual {p1, v2, v8}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v2
-
-    iput-boolean v2, v1, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->showWidgetNumberWarningToast:Z
-
-    const-string v2, "widget_warning_toast"
-
-    const-string v3, ""
-
-    .line 763
-    invoke-virtual {p1, v2, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    iput-object v2, v1, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->warningToastForWidgetNumber:Ljava/lang/String;
-
-    const-string v2, "widget_show_add_toast"
-
-    .line 764
-    invoke-virtual {p1, v2, v8}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v2
-
-    iput-boolean v2, v1, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->showWidgetAddedToast:Z
-
-    const-string v2, "widget_added_toast"
-
-    const-string v3, ""
-
-    .line 765
-    invoke-virtual {p1, v2, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    iput-object v2, v1, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->resultToastForWidgetAdd:Ljava/lang/String;
-
-    const-string v2, "widget_can_drag_from_home_to_pa"
-
-    .line 766
-    invoke-virtual {p1, v2, v9}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v2
-
-    iput-boolean v2, v1, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->canDragFromHomeToPA:Z
-
-    const-string v2, "default_source"
-
-    .line 767
-    invoke-virtual {p1, v2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->setDefaultSource(I)V
-
-    const-string v2, "add_source"
-
-    .line 768
-    invoke-virtual {p1, v2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
-
-    move-result v2
-
-    iput v2, v1, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->addSource:I
-
-    const-string v2, "picker_tip_source"
-
-    .line 769
-    invoke-virtual {p1, v2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
-
-    move-result v2
-
-    iput v2, v1, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->pickerTipSource:I
-
-    const-string v2, "picker_id"
-
-    .line 770
-    invoke-virtual {p1, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    iput-object v2, v1, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->pickerID:Ljava/lang/String;
-
-    const-string v2, "widget_package_version_name"
-
-    .line 771
-    invoke-virtual {p1, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, v1, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->appVersionName:Ljava/lang/String;
-
-    .line 774
-    iget-object p1, v1, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->transitionBitmap:Landroid/graphics/Bitmap;
-
-    if-eqz p1, :cond_a
-
-    iget p1, v1, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->status:I
-
-    if-eq p1, v9, :cond_a
-
-    .line 775
-    new-instance p1, Lcom/miui/home/launcher/widget/-$$Lambda$MIUIWidgetCompat$nayfoNGdQQhMuqHYcd-EPnEmjB8;
-
-    invoke-direct {p1, v1, p0}, Lcom/miui/home/launcher/widget/-$$Lambda$MIUIWidgetCompat$nayfoNGdQQhMuqHYcd-EPnEmjB8;-><init>(Lcom/miui/home/launcher/MIUIWidgetBasicInfo;Lcom/miui/home/launcher/Launcher;)V
-
-    invoke-static {p1}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
-
-    .line 779
-    :cond_a
-    new-instance p0, Lcom/miui/home/launcher/MIUIWidgetBasicInfo$WidgetMovement;
-
-    invoke-direct {p0}, Lcom/miui/home/launcher/MIUIWidgetBasicInfo$WidgetMovement;-><init>()V
-
-    iput-object p0, v1, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->movement:Lcom/miui/home/launcher/MIUIWidgetBasicInfo$WidgetMovement;
-
-    .line 780
-    iget-object p0, v1, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->movement:Lcom/miui/home/launcher/MIUIWidgetBasicInfo$WidgetMovement;
-
-    iput v9, p0, Lcom/miui/home/launcher/MIUIWidgetBasicInfo$WidgetMovement;->direction:I
-
-    .line 781
-    iget-object p0, v1, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->movement:Lcom/miui/home/launcher/MIUIWidgetBasicInfo$WidgetMovement;
-
-    iput v0, p0, Lcom/miui/home/launcher/MIUIWidgetBasicInfo$WidgetMovement;->paWidgetId:I
-
-    .line 783
-    :cond_b
-    invoke-static {v1}, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->checkParams(Lcom/miui/home/launcher/ItemInfo;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_c
-
-    goto :goto_5
-
-    :cond_c
-    move-object v1, v7
-
-    :goto_5
-    return-object v1
-.end method
-
 .method public static createMaMlType(II)Ljava/lang/String;
     .locals 1
 
-    .line 112
+    .line 107
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1808,7 +1080,7 @@
 .method public static deleteFiles(Lcom/miui/home/launcher/maml/MaMlWidgetInfo;Z)V
     .locals 2
 
-    .line 631
+    .line 626
     :try_start_0
     iget-object v0, p0, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->configPath:Ljava/lang/String;
 
@@ -1818,20 +1090,20 @@
 
     if-nez v0, :cond_0
 
-    .line 632
+    .line 627
     new-instance v0, Ljava/io/File;
 
     iget-object v1, p0, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->configPath:Ljava/lang/String;
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 633
+    .line 628
     invoke-virtual {v0}, Ljava/io/File;->deleteOnExit()V
 
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 637
+    .line 632
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object p1
@@ -1842,7 +1114,7 @@
 
     invoke-static {p1, v0, v1}, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->uninstallMaMl(Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 638
+    .line 633
     new-instance p1, Lcom/miui/home/launcher/widget/-$$Lambda$MIUIWidgetCompat$r5warsF5YIaRIeyL9jHWUVFnP_4;
 
     invoke-direct {p1, p0}, Lcom/miui/home/launcher/widget/-$$Lambda$MIUIWidgetCompat$r5warsF5YIaRIeyL9jHWUVFnP_4;-><init>(Lcom/miui/home/launcher/maml/MaMlWidgetInfo;)V
@@ -1856,7 +1128,7 @@
     :catch_0
     move-exception p0
 
-    .line 641
+    .line 636
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_1
@@ -1867,8 +1139,24 @@
 .method private static deleteMaMls(Landroid/content/Context;)V
     .locals 2
 
-    .line 255
+    .line 250
     invoke-static {}, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->getResDir()Ljava/io/File;
+
+    move-result-object v0
+
+    .line 251
+    invoke-virtual {v0}, Ljava/io/File;->exists()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 252
+    invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->deleteFile(Ljava/io/File;)V
+
+    .line 255
+    :cond_0
+    invoke-static {}, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->getConfigDir()Ljava/io/File;
 
     move-result-object v0
 
@@ -1877,46 +1165,30 @@
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_1
 
     .line 257
     invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->deleteFile(Ljava/io/File;)V
 
     .line 260
-    :cond_0
-    invoke-static {}, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->getConfigDir()Ljava/io/File;
-
-    move-result-object v0
-
-    .line 261
-    invoke-virtual {v0}, Ljava/io/File;->exists()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    .line 262
-    invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->deleteFile(Ljava/io/File;)V
-
-    .line 265
     :cond_1
     invoke-static {p0}, Lcom/miui/home/launcher/util/BitmapUtil;->getBitmapSavePath(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 266
+    .line 261
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 267
+    .line 262
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result p0
 
     if-eqz p0, :cond_2
 
-    .line 268
+    .line 263
     invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->deleteFile(Ljava/io/File;)V
 
     :cond_2
@@ -1937,7 +1209,7 @@
         }
     .end annotation
 
-    .line 536
+    .line 531
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -1955,12 +1227,12 @@
 
     check-cast v0, Lcom/miui/maml/widget/edit/MamlWidget;
 
-    .line 537
+    .line 532
     invoke-virtual {v0}, Lcom/miui/maml/widget/edit/MamlWidget;->getXy()Landroid/util/Pair;
 
     move-result-object v1
 
-    .line 538
+    .line 533
     iget-object v2, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v2, Ljava/lang/Integer;
@@ -1987,7 +1259,7 @@
 
     const-string p0, "WidgetMoveCompat"
 
-    .line 539
+    .line 534
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2019,12 +1291,12 @@
 .method private static getConfigDir()Ljava/io/File;
     .locals 3
 
-    .line 135
+    .line 130
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
 
-    .line 136
+    .line 131
     new-instance v1, Ljava/io/File;
 
     invoke-virtual {v0}, Landroid/content/Context;->getFilesDir()Ljava/io/File;
@@ -2041,7 +1313,7 @@
 .method public static final getLegacyResDir(Landroid/content/Context;Ljava/lang/String;)Ljava/io/File;
     .locals 2
 
-    .line 599
+    .line 594
     new-instance v0, Ljava/io/File;
 
     invoke-virtual {p0}, Landroid/content/Context;->getFilesDir()Ljava/io/File;
@@ -2052,7 +1324,7 @@
 
     invoke-direct {v0, p0, v1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 600
+    .line 595
     new-instance p0, Ljava/io/File;
 
     invoke-direct {p0, v0, p1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
@@ -2063,7 +1335,7 @@
 .method public static final getLegacyResDir(Landroid/content/Context;)Ljava/lang/String;
     .locals 2
 
-    .line 593
+    .line 588
     new-instance v0, Ljava/io/File;
 
     invoke-virtual {p0}, Landroid/content/Context;->getFilesDir()Ljava/io/File;
@@ -2074,10 +1346,10 @@
 
     invoke-direct {v0, p0, v1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 594
+    .line 589
     invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
 
-    .line 595
+    .line 590
     invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object p0
@@ -2088,7 +1360,7 @@
 .method public static getMaMlDir(Ljava/lang/String;I)Ljava/io/File;
     .locals 3
 
-    .line 150
+    .line 145
     new-instance v0, Ljava/io/File;
 
     invoke-static {}, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->getResDir()Ljava/io/File;
@@ -2123,7 +1395,7 @@
 .method private static getMaMlResDir(Ljava/lang/String;I)Ljava/io/File;
     .locals 4
 
-    .line 162
+    .line 157
     new-instance v0, Ljava/io/File;
 
     invoke-static {}, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->getResDir()Ljava/io/File;
@@ -2164,7 +1436,7 @@
 .method public static getMaMlResPath(Ljava/lang/String;IZ)Ljava/io/File;
     .locals 3
 
-    .line 339
+    .line 334
     new-instance v0, Ljava/io/File;
 
     invoke-static {p0, p1}, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->getMaMlDir(Ljava/lang/String;I)Ljava/io/File;
@@ -2189,7 +1461,7 @@
 
     if-eqz p2, :cond_0
 
-    .line 341
+    .line 336
     invoke-virtual {v0}, Ljava/io/File;->getParentFile()Ljava/io/File;
 
     move-result-object p1
@@ -2199,7 +1471,7 @@
     :cond_0
     if-nez p2, :cond_2
 
-    .line 343
+    .line 338
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result p1
@@ -2208,7 +1480,7 @@
 
     goto :goto_0
 
-    .line 346
+    .line 341
     :cond_1
     new-instance p1, Ljava/io/File;
 
@@ -2248,11 +1520,11 @@
 
     const/4 v0, 0x0
 
-    .line 460
+    .line 455
     :try_start_0
     sget-object v1, Lcom/miui/maml/widget/edit/ParseMamlResource;->INSTANCE:Lcom/miui/maml/widget/edit/ParseMamlResource;
 
-    .line 461
+    .line 456
     iget-object v2, p0, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->productId:Ljava/lang/String;
 
     iget v3, p0, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->versionCode:I
@@ -2265,7 +1537,7 @@
 
     move-result-object v2
 
-    .line 462
+    .line 457
     new-instance v3, Ljava/io/File;
 
     invoke-direct {v3, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -2278,7 +1550,7 @@
 
     move-result-object p0
 
-    .line 463
+    .line 458
     invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
 
     move-result v1
@@ -2289,7 +1561,7 @@
 
     const-string v1, "fail to find maml widgets in res path"
 
-    .line 464
+    .line 459
     invoke-static {p0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v0
@@ -2297,7 +1569,7 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 467
+    .line 462
     invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p0
@@ -2317,7 +1589,7 @@
 
     const-string v1, "WidgetMoveCompat"
 
-    .line 469
+    .line 464
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2354,11 +1626,11 @@
         }
     .end annotation
 
-    .line 548
+    .line 543
     :try_start_0
     sget-object v0, Lcom/miui/maml/widget/edit/ParseMamlResource;->INSTANCE:Lcom/miui/maml/widget/edit/ParseMamlResource;
 
-    .line 549
+    .line 544
     invoke-static {p0, p1}, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->getMaMlResDir(Ljava/lang/String;I)Ljava/io/File;
 
     move-result-object p0
@@ -2367,7 +1639,7 @@
 
     move-result-object p0
 
-    .line 550
+    .line 545
     new-instance p1, Ljava/io/File;
 
     invoke-direct {p1, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -2385,7 +1657,7 @@
 
     const-string p1, "WidgetMoveCompat"
 
-    .line 553
+    .line 548
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2414,12 +1686,12 @@
 .method private static getResDir()Ljava/io/File;
     .locals 3
 
-    .line 129
+    .line 124
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
 
-    .line 130
+    .line 125
     new-instance v1, Ljava/io/File;
 
     invoke-virtual {v0}, Landroid/content/Context;->getFilesDir()Ljava/io/File;
@@ -2438,26 +1710,26 @@
 
     const/4 v0, 0x0
 
-    .line 604
+    .line 599
     invoke-static {p1, p2, v0}, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->getMaMlResPath(Ljava/lang/String;IZ)Ljava/io/File;
 
     move-result-object p2
 
-    .line 605
+    .line 600
     invoke-virtual {p2}, Ljava/io/File;->exists()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 606
+    .line 601
     invoke-virtual {p2}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
-    .line 608
+    .line 603
     :cond_0
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -2489,19 +1761,19 @@
 .method public static grantAssistantPermission(Landroid/content/Context;Ljava/lang/String;Z)Landroid/net/Uri;
     .locals 1
 
-    .line 616
+    .line 611
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     const-string p1, "com.miui.home.fileprovider"
 
-    .line 617
+    .line 612
     invoke-static {p0, p1, v0}, Landroidx/core/content/FileProvider;->getUriForFile(Landroid/content/Context;Ljava/lang/String;Ljava/io/File;)Landroid/net/Uri;
 
     move-result-object p1
 
-    .line 618
+    .line 613
     sget-object v0, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->sAssistantWidget:Lcom/miui/home/launcher/AssistantWidget;
 
     invoke-interface {v0}, Lcom/miui/home/launcher/AssistantWidget;->getPkgName()Ljava/lang/String;
@@ -2526,7 +1798,7 @@
 .method public static grantPaResPermission(Landroid/content/Context;Ljava/lang/String;I)Landroid/net/Uri;
     .locals 0
 
-    .line 612
+    .line 607
     invoke-static {p0, p1, p2}, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->getResZipPath(Landroid/content/Context;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p1
@@ -2549,7 +1821,7 @@
 
     const/4 v1, 0x1
 
-    .line 386
+    .line 381
     :try_start_0
     invoke-static {p2, p3, v1}, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->getMaMlResPath(Ljava/lang/String;IZ)Ljava/io/File;
 
@@ -2557,7 +1829,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 388
+    .line 383
     :try_start_1
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
@@ -2565,10 +1837,10 @@
 
     if-nez v3, :cond_0
 
-    .line 389
+    .line 384
     invoke-virtual {v2}, Ljava/io/File;->createNewFile()Z
 
-    .line 390
+    .line 385
     invoke-static {p0, p1, v2}, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->copyExternalFile(Landroid/content/Context;Landroid/net/Uri;Ljava/io/File;)Z
 
     move-result v3
@@ -2577,7 +1849,7 @@
 
     const-string v3, "WidgetMoveCompat"
 
-    .line 391
+    .line 386
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -2594,7 +1866,7 @@
 
     invoke-static {v3, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 395
+    .line 390
     :cond_0
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
@@ -2602,10 +1874,10 @@
 
     if-eqz p1, :cond_5
 
-    .line 396
+    .line 391
     sget-object p1, Lcom/miui/maml/widget/edit/ParseMamlResource;->INSTANCE:Lcom/miui/maml/widget/edit/ParseMamlResource;
 
-    .line 397
+    .line 392
     invoke-static {p2, p3}, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->getMaMlDir(Ljava/lang/String;I)Ljava/io/File;
 
     move-result-object v3
@@ -2620,7 +1892,7 @@
 
     if-eqz p0, :cond_2
 
-    .line 398
+    .line 393
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result p0
@@ -2632,13 +1904,13 @@
 
     goto :goto_0
 
-    .line 408
+    .line 403
     :cond_1
     monitor-exit v0
 
     return v1
 
-    .line 400
+    .line 395
     :cond_2
     :goto_0
     :try_start_2
@@ -2648,7 +1920,7 @@
 
     const/4 v3, 0x0
 
-    .line 401
+    .line 396
     invoke-static {p2, p3}, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->getMaMlResDir(Ljava/lang/String;I)Ljava/io/File;
 
     move-result-object p3
@@ -2657,25 +1929,25 @@
 
     move-result-object p3
 
-    .line 399
+    .line 394
     invoke-virtual {p1, p2, p0, v3, p3}, Lcom/miui/maml/widget/edit/ParseMamlResource;->importMamlResource(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Runnable;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 402
+    .line 397
     invoke-virtual {p0}, Ljava/lang/String;->isEmpty()Z
 
     move-result p1
 
     if-eqz p1, :cond_3
 
-    .line 403
+    .line 398
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
     :cond_3
     const-string p1, "WidgetMoveCompat"
 
-    .line 405
+    .line 400
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2692,7 +1964,7 @@
 
     invoke-static {p1, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 406
+    .line 401
     invoke-virtual {p0}, Ljava/lang/String;->isEmpty()Z
 
     move-result p0
@@ -2709,7 +1981,7 @@
     :catch_0
     move-exception p0
 
-    .line 412
+    .line 407
     :try_start_3
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
@@ -2717,13 +1989,13 @@
 
     if-eqz p1, :cond_4
 
-    .line 413
+    .line 408
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
     :cond_4
     const-string p1, "WidgetMoveCompat"
 
-    .line 415
+    .line 410
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2749,7 +2021,7 @@
     :cond_5
     const/4 p0, 0x0
 
-    .line 417
+    .line 412
     monitor-exit v0
 
     return p0
@@ -2771,7 +2043,7 @@
 
     const/4 v1, 0x0
 
-    .line 366
+    .line 361
     :try_start_0
     invoke-static {p1, p2}, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->getMaMlDir(Ljava/lang/String;I)Ljava/io/File;
 
@@ -2781,28 +2053,28 @@
 
     move-result-object v2
 
-    .line 365
+    .line 360
     invoke-static {p0, p1, v2}, Lcom/miui/maml/widget/edit/MamlutilKt;->copyMamlResource(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;
 
     move-result-object p0
 
     if-eqz p0, :cond_1
 
-    .line 368
+    .line 363
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v2
 
     if-lez v2, :cond_1
 
-    .line 369
+    .line 364
     invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Lcom/miui/maml/widget/edit/MamlWidget;
 
-    .line 370
+    .line 365
     invoke-virtual {p0}, Lcom/miui/maml/widget/edit/MamlWidget;->getInfo()Lcom/miui/maml/widget/edit/MamlResource;
 
     move-result-object p0
@@ -2834,7 +2106,7 @@
     :try_start_1
     const-string p2, "WidgetMoveCompat"
 
-    .line 373
+    .line 368
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2863,7 +2135,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 375
+    .line 370
     :cond_1
     monitor-exit v0
 
@@ -2875,25 +2147,10 @@
     throw p0
 .end method
 
-.method static synthetic lambda$createItemInfo$1(Lcom/miui/home/launcher/MIUIWidgetBasicInfo;Lcom/miui/home/launcher/Launcher;)V
-    .locals 1
-
-    .line 775
-    iget-object v0, p0, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->transitionBitmap:Landroid/graphics/Bitmap;
-
-    invoke-virtual {p0}, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->getUniqueTag()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {v0, p1, p0}, Lcom/miui/home/launcher/util/BitmapUtil;->saveBitmap(Landroid/graphics/Bitmap;Landroid/content/Context;Ljava/lang/String;)Z
-
-    return-void
-.end method
-
 .method static synthetic lambda$deleteFiles$0(Lcom/miui/home/launcher/maml/MaMlWidgetInfo;)V
     .locals 1
 
-    .line 638
+    .line 633
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -2910,7 +2167,7 @@
 .method public static move(II)V
     .locals 6
 
-    .line 646
+    .line 641
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -2919,7 +2176,7 @@
 
     move-result-object v0
 
-    .line 647
+    .line 642
     invoke-virtual {v0, p1}, Landroid/appwidget/AppWidgetManager;->getAppWidgetOptions(I)Landroid/os/Bundle;
 
     move-result-object v1
@@ -2928,12 +2185,12 @@
 
     const/4 v3, 0x1
 
-    .line 648
+    .line 643
     invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     const-string v2, "miuiOldIds"
 
-    .line 649
+    .line 644
     new-array v4, v3, [I
 
     const/4 v5, 0x0
@@ -2944,14 +2201,14 @@
 
     const-string p0, "miuiNewIds"
 
-    .line 650
+    .line 645
     new-array v2, v3, [I
 
     aput p1, v2, v5
 
     invoke-virtual {v1, p0, v2}, Landroid/os/Bundle;->putIntArray(Ljava/lang/String;[I)V
 
-    .line 651
+    .line 646
     invoke-virtual {v0, p1, v1}, Landroid/appwidget/AppWidgetManager;->updateAppWidgetOptions(ILandroid/os/Bundle;)V
 
     return-void
@@ -2960,7 +2217,7 @@
 .method public static moveComplete(I)Z
     .locals 3
 
-    .line 655
+    .line 650
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -2969,7 +2226,7 @@
 
     move-result-object v0
 
-    .line 656
+    .line 651
     invoke-virtual {v0, p0}, Landroid/appwidget/AppWidgetManager;->getAppWidgetOptions(I)Landroid/os/Bundle;
 
     move-result-object v1
@@ -2978,7 +2235,7 @@
 
     const-string v2, "miuiIdChangedComplete"
 
-    .line 657
+    .line 652
     invoke-virtual {v1, v2}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
     move-result v2
@@ -2990,25 +2247,25 @@
     :cond_0
     const-string v2, "miuiIdChangedComplete"
 
-    .line 660
+    .line 655
     invoke-virtual {v1, v2}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
 
     const-string v2, "miuiIdChanged"
 
-    .line 661
+    .line 656
     invoke-virtual {v1, v2}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
 
     const-string v2, "miuiNewIds"
 
-    .line 662
+    .line 657
     invoke-virtual {v1, v2}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
 
     const-string v2, "miuiOldIds"
 
-    .line 663
+    .line 658
     invoke-virtual {v1, v2}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
 
-    .line 664
+    .line 659
     invoke-virtual {v0, p0, v1}, Landroid/appwidget/AppWidgetManager;->updateAppWidgetOptions(ILandroid/os/Bundle;)V
 
     const/4 p0, 0x1
@@ -3025,7 +2282,7 @@
 .method public static moveConfig(ILandroid/net/Uri;)Ljava/lang/String;
     .locals 3
 
-    .line 116
+    .line 111
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -3034,7 +2291,7 @@
 
     move-result-object v0
 
-    .line 117
+    .line 112
     new-instance v1, Ljava/io/File;
 
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
@@ -3047,7 +2304,7 @@
 
     invoke-direct {v1, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 119
+    .line 114
     :try_start_0
     invoke-virtual {v1}, Ljava/io/File;->createNewFile()Z
 
@@ -3055,7 +2312,7 @@
 
     if-eqz p0, :cond_0
 
-    .line 120
+    .line 115
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object p0
@@ -3069,7 +2326,7 @@
     :catch_0
     move-exception p0
 
-    .line 123
+    .line 118
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_0
@@ -3089,10 +2346,10 @@
         }
     .end annotation
 
-    .line 273
+    .line 268
     invoke-static {p0}, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->deleteMaMls(Landroid/content/Context;)V
 
-    .line 274
+    .line 269
     new-instance v0, Ljava/io/File;
 
     invoke-virtual {p0}, Landroid/content/Context;->getFilesDir()Ljava/io/File;
@@ -3103,7 +2360,7 @@
 
     invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 275
+    .line 270
     new-instance v1, Ljava/io/File;
 
     invoke-static {p0}, Lcom/miui/home/launcher/util/BitmapUtil;->getBitmapSavePath(Landroid/content/Context;)Ljava/lang/String;
@@ -3112,7 +2369,7 @@
 
     invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 277
+    .line 272
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -3135,12 +2392,12 @@
 
     check-cast v4, Landroid/net/Uri;
 
-    .line 278
+    .line 273
     invoke-virtual {v4}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 279
+    .line 274
     sget-object v6, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->MAML_RES_BACKUP_EXT:Ljava/lang/String;
 
     invoke-virtual {v5, v6}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
@@ -3151,7 +2408,7 @@
 
     if-eqz v6, :cond_1
 
-    .line 281
+    .line 276
     :try_start_0
     invoke-virtual {v5}, Ljava/lang/String;->length()I
 
@@ -3169,7 +2426,7 @@
 
     move-result-object v5
 
-    .line 282
+    .line 277
     new-instance v6, Ljava/lang/String;
 
     invoke-static {v5, v7}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
@@ -3178,26 +2435,26 @@
 
     const-string v7, "UTF-8"
 
-    .line 284
+    .line 279
     invoke-static {v7}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
 
     move-result-object v7
 
     invoke-direct {v6, v5, v7}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
 
-    .line 285
+    .line 280
     new-instance v5, Lorg/json/JSONObject;
 
     invoke-direct {v5, v6}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 286
+    .line 281
     sget-object v6, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->MAML_RES_BACKUP_ENTRY_NAME:Ljava/lang/String;
 
     invoke-virtual {v5, v6}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 287
+    .line 282
     sget-object v7, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->MAML_RES_BACKUP_ENTRY_VER:Ljava/lang/String;
 
     invoke-virtual {v5, v7}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -3208,7 +2465,7 @@
 
     move-result v5
 
-    .line 288
+    .line 283
     invoke-static {p0, v4, v6, v5}, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->installMaMlFromExternal(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;I)Z
 
     move-result v5
@@ -3217,7 +2474,7 @@
 
     const-string v5, "WidgetMoveCompat"
 
-    .line 289
+    .line 284
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -3243,7 +2500,7 @@
 
     const-string v6, "WidgetMoveCompat"
 
-    .line 292
+    .line 287
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -3272,7 +2529,7 @@
 
     goto/16 :goto_0
 
-    .line 294
+    .line 289
     :cond_1
     sget-object v6, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->MAML_CONFIG_BACKUP_EXT:Ljava/lang/String;
 
@@ -3282,7 +2539,7 @@
 
     if-eqz v6, :cond_2
 
-    .line 295
+    .line 290
     invoke-virtual {v5}, Ljava/lang/String;->length()I
 
     move-result v6
@@ -3299,7 +2556,7 @@
 
     move-result-object v5
 
-    .line 297
+    .line 292
     :try_start_1
     new-instance v6, Ljava/lang/String;
 
@@ -3309,51 +2566,51 @@
 
     const-string v7, "UTF-8"
 
-    .line 299
+    .line 294
     invoke-static {v7}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
 
     move-result-object v7
 
     invoke-direct {v6, v5, v7}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
 
-    .line 300
+    .line 295
     new-instance v5, Lorg/json/JSONObject;
 
     invoke-direct {v5, v6}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 301
+    .line 296
     sget-object v6, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->MAML_CONFIG_BACKUP_ENTRY_NAME:Ljava/lang/String;
 
     invoke-virtual {v5, v6}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 302
+    .line 297
     sget-object v7, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->MAML_CONFIG_BACKUP_ENTRY_MAX_ID:Ljava/lang/String;
 
     invoke-virtual {v5, v7}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
 
     move-result v3
 
-    .line 303
+    .line 298
     new-instance v5, Ljava/io/File;
 
     invoke-direct {v5, v0, v6}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 304
+    .line 299
     invoke-virtual {v5}, Ljava/io/File;->getParentFile()Ljava/io/File;
 
     move-result-object v6
 
     invoke-virtual {v6}, Ljava/io/File;->mkdirs()Z
 
-    .line 305
+    .line 300
     invoke-virtual {v5}, Ljava/io/File;->createNewFile()Z
 
-    .line 306
+    .line 301
     invoke-static {p0, v4, v5}, Lcom/miui/home/launcher/cloudbackup/BackupRestoreHomeService;->copyFile(Landroid/content/Context;Landroid/net/Uri;Ljava/io/File;)V
 
-    .line 307
+    .line 302
     invoke-virtual {v5}, Ljava/io/File;->getCanonicalPath()Ljava/lang/String;
 
     move-result-object v6
@@ -3364,7 +2621,7 @@
 
     const-string v6, "WidgetMoveCompat"
 
-    .line 308
+    .line 303
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -3394,7 +2651,7 @@
 
     const-string v6, "WidgetMoveCompat"
 
-    .line 310
+    .line 305
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -3423,7 +2680,7 @@
 
     goto/16 :goto_0
 
-    .line 312
+    .line 307
     :cond_2
     sget-object v6, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->WIDGET_PREVIEW_EXT:Ljava/lang/String;
 
@@ -3433,7 +2690,7 @@
 
     if-eqz v6, :cond_0
 
-    .line 313
+    .line 308
     invoke-virtual {v5}, Ljava/lang/String;->length()I
 
     move-result v6
@@ -3450,12 +2707,12 @@
 
     move-result-object v5
 
-    .line 314
+    .line 309
     new-instance v6, Ljava/io/File;
 
     invoke-direct {v6, v1, v5}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 316
+    .line 311
     :try_start_2
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
@@ -3463,16 +2720,16 @@
 
     if-nez v7, :cond_3
 
-    .line 317
+    .line 312
     invoke-virtual {v1}, Ljava/io/File;->mkdirs()Z
 
-    .line 319
+    .line 314
     :cond_3
     invoke-static {p0, v4, v6}, Lcom/miui/home/launcher/cloudbackup/BackupRestoreHomeService;->copyFile(Landroid/content/Context;Landroid/net/Uri;Ljava/io/File;)V
 
     const-string v6, "WidgetMoveCompat"
 
-    .line 320
+    .line 315
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -3498,7 +2755,7 @@
 
     const-string v6, "WidgetMoveCompat"
 
-    .line 322
+    .line 317
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -3527,13 +2784,13 @@
 
     goto/16 :goto_0
 
-    .line 327
+    .line 322
     :cond_4
     sget-object p0, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->sIdFactor:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {p0, v3}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    .line 328
+    .line 323
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object p0
@@ -3554,7 +2811,7 @@
 .method private static uninstallLegacyMaMl(Landroid/content/Context;Ljava/lang/String;)V
     .locals 3
 
-    .line 422
+    .line 417
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3573,7 +2830,7 @@
 
     move-result-object v0
 
-    .line 423
+    .line 418
     new-instance v1, Ljava/io/File;
 
     invoke-virtual {p0}, Landroid/content/Context;->getFilesDir()Ljava/io/File;
@@ -3582,17 +2839,17 @@
 
     invoke-direct {v1, v2, v0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 424
+    .line 419
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 425
+    .line 420
     invoke-static {v1}, Lcom/miui/home/launcher/common/Utilities;->deleteFile(Ljava/io/File;)V
 
-    .line 429
+    .line 424
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -3608,7 +2865,7 @@
 
     move-result-object p1
 
-    .line 430
+    .line 425
     new-instance v0, Ljava/io/File;
 
     invoke-virtual {p0}, Landroid/content/Context;->getFilesDir()Ljava/io/File;
@@ -3617,14 +2874,14 @@
 
     invoke-direct {v0, p0, p1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 431
+    .line 426
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result p0
 
     if-eqz p0, :cond_1
 
-    .line 432
+    .line 427
     invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->deleteFile(Ljava/io/File;)V
 
     :cond_1
@@ -3634,42 +2891,42 @@
 .method public static uninstallMaMl(Landroid/content/Context;Ljava/lang/String;I)V
     .locals 0
 
-    .line 437
+    .line 432
     invoke-static {p0, p1}, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->uninstallLegacyMaMl(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 440
+    .line 435
     invoke-static {p1, p2}, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->getMaMlDir(Ljava/lang/String;I)Ljava/io/File;
 
     move-result-object p0
 
-    .line 441
+    .line 436
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 442
+    .line 437
     invoke-static {p0}, Lcom/miui/home/launcher/common/Utilities;->deleteFile(Ljava/io/File;)V
 
-    .line 443
+    .line 438
     invoke-virtual {p0}, Ljava/io/File;->getParentFile()Ljava/io/File;
 
     move-result-object p0
 
-    .line 444
+    .line 439
     invoke-virtual {p0}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 445
+    .line 440
     array-length p1, p1
 
     if-nez p1, :cond_1
 
-    .line 446
+    .line 441
     :cond_0
     invoke-static {p0}, Lcom/miui/home/launcher/common/Utilities;->deleteFile(Ljava/io/File;)V
 
@@ -3680,21 +2937,21 @@
 .method private static updateMaMlInfo(Lcom/miui/home/launcher/maml/MaMlWidgetInfo;Lcom/miui/maml/widget/edit/MamlWidget;)V
     .locals 1
 
-    .line 529
+    .line 524
     invoke-virtual {p1}, Lcom/miui/maml/widget/edit/MamlWidget;->getResPath()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->resPath:Ljava/lang/String;
 
-    .line 530
+    .line 525
     invoke-virtual {p1}, Lcom/miui/maml/widget/edit/MamlWidget;->getEditable()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->isEditable:Z
 
-    .line 531
+    .line 526
     invoke-virtual {p1}, Lcom/miui/maml/widget/edit/MamlWidget;->getCustomEditLink()Ljava/lang/String;
 
     move-result-object p1
@@ -3703,7 +2960,7 @@
 
     const/4 p1, 0x1
 
-    .line 532
+    .line 527
     iput p1, p0, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->status:I
 
     return-void
@@ -3714,11 +2971,11 @@
 
     const/4 v0, 0x0
 
-    .line 505
+    .line 500
     :try_start_0
     sget-object v1, Lcom/miui/maml/widget/edit/ParseMamlResource;->INSTANCE:Lcom/miui/maml/widget/edit/ParseMamlResource;
 
-    .line 506
+    .line 501
     iget-object v2, p1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->productId:Ljava/lang/String;
 
     iget v3, p1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->versionCode:I
@@ -3731,7 +2988,7 @@
 
     move-result-object v2
 
-    .line 507
+    .line 502
     new-instance v3, Ljava/io/File;
 
     invoke-direct {v3, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -3746,7 +3003,7 @@
 
     if-eqz v1, :cond_3
 
-    .line 508
+    .line 503
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
     move-result v2
@@ -3755,7 +3012,7 @@
 
     goto :goto_1
 
-    .line 512
+    .line 507
     :cond_0
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -3763,7 +3020,7 @@
 
     check-cast v1, Lcom/miui/maml/widget/edit/MamlWidget;
 
-    .line 514
+    .line 509
     iget-object v2, p1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->resPath:Ljava/lang/String;
 
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -3779,21 +3036,21 @@
     :cond_1
     iget v2, p1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->versionCode:I
 
-    .line 515
+    .line 510
     :goto_0
     invoke-static {p1, v1}, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->updateMaMlInfo(Lcom/miui/home/launcher/maml/MaMlWidgetInfo;Lcom/miui/maml/widget/edit/MamlWidget;)V
 
-    .line 517
+    .line 512
     iget v1, p1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->versionCode:I
 
     if-ge v2, v1, :cond_2
 
-    .line 518
+    .line 513
     iget v1, p1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->versionCode:I
 
     invoke-virtual {p1, v2, v1}, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->onUpgrade(II)V
 
-    .line 519
+    .line 514
     invoke-virtual {p1}, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->getUniqueTag()Ljava/lang/String;
 
     move-result-object p1
@@ -3811,7 +3068,7 @@
 
     const-string p1, "fail to find maml widgets in res path"
 
-    .line 509
+    .line 504
     invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -3823,7 +3080,7 @@
 
     const-string p1, "WidgetMoveCompat"
 
-    .line 523
+    .line 518
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3861,7 +3118,7 @@
         }
     .end annotation
 
-    .line 476
+    .line 471
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
@@ -3872,7 +3129,7 @@
 
     return v1
 
-    .line 478
+    .line 473
     :cond_0
     invoke-static {p2, p3}, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->getNativeMaMlWidgets(Ljava/lang/String;I)Ljava/util/List;
 
@@ -3882,7 +3139,7 @@
 
     if-eqz v0, :cond_7
 
-    .line 479
+    .line 474
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v3
@@ -3891,7 +3148,7 @@
 
     goto/16 :goto_2
 
-    .line 483
+    .line 478
     :cond_1
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -3911,7 +3168,7 @@
 
     check-cast v3, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;
 
-    .line 484
+    .line 479
     iget-object v4, v3, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->resPath:Ljava/lang/String;
 
     invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -3920,14 +3177,14 @@
 
     if-eqz v4, :cond_3
 
-    .line 485
+    .line 480
     invoke-virtual {v3}, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->getUniqueTag()Ljava/lang/String;
 
     move-result-object v4
 
     invoke-static {p0, v4}, Lcom/miui/home/launcher/util/BitmapUtil;->deleteSavedBitmapFile(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 487
+    .line 482
     :cond_3
     iget-object v4, v3, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->resPath:Ljava/lang/String;
 
@@ -3947,25 +3204,25 @@
     :goto_1
     if-ge v4, p3, :cond_2
 
-    .line 489
+    .line 484
     invoke-static {v0, v3}, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->findNativeMaMlWidget(Ljava/util/List;Lcom/miui/home/launcher/maml/MaMlWidgetInfo;)Lcom/miui/maml/widget/edit/MamlWidget;
 
     move-result-object v5
 
     if-eqz v5, :cond_5
 
-    .line 491
+    .line 486
     iput p3, v3, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->versionCode:I
 
-    .line 492
+    .line 487
     invoke-static {v3, v5}, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->updateMaMlInfo(Lcom/miui/home/launcher/maml/MaMlWidgetInfo;Lcom/miui/maml/widget/edit/MamlWidget;)V
 
-    .line 493
+    .line 488
     invoke-virtual {v3, v4, p3}, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->onUpgrade(II)V
 
     const-string v4, "WidgetMoveCompat"
 
-    .line 494
+    .line 489
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -4011,7 +3268,7 @@
     :cond_5
     const-string v4, "WidgetMoveCompat"
 
-    .line 496
+    .line 491
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V

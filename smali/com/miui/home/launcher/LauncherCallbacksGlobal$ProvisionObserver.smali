@@ -22,10 +22,10 @@
 .method public constructor <init>(Lcom/miui/home/launcher/LauncherCallbacksGlobal;)V
     .locals 1
 
-    .line 113
+    .line 105
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherCallbacksGlobal$ProvisionObserver;->this$0:Lcom/miui/home/launcher/LauncherCallbacksGlobal;
 
-    .line 114
+    .line 106
     new-instance p1, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -48,12 +48,12 @@
 
     const-string v0, ""
 
-    .line 120
+    .line 112
     invoke-static {p1, v0}, Lcom/miui/launcher/utils/MiuiSettingsUtils;->getStringFromSystemProperites(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 121
+    .line 113
     sget-object v0, Lcom/miui/home/launcher/LauncherAssistantCompat;->CLIENT_ID_BASE:Ljava/lang/String;
 
     invoke-static {v0, p1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
@@ -62,10 +62,10 @@
 
     if-nez p1, :cond_0
 
-    .line 122
+    .line 114
     invoke-static {}, Lcom/miui/home/launcher/LauncherAssistantCompat;->resetRSAConstants()V
 
-    .line 123
+    .line 115
     iget-object p1, p0, Lcom/miui/home/launcher/LauncherCallbacksGlobal$ProvisionObserver;->this$0:Lcom/miui/home/launcher/LauncherCallbacksGlobal;
 
     invoke-static {p1}, Lcom/miui/home/launcher/LauncherCallbacksGlobal;->access$000(Lcom/miui/home/launcher/LauncherCallbacksGlobal;)V

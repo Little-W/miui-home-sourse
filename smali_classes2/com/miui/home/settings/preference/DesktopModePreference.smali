@@ -125,7 +125,7 @@
 
     iput-object v0, p0, Lcom/miui/home/settings/preference/DesktopModePreference;->mVisualCheckGroup:Lmiuix/visual/check/VisualCheckGroup;
 
-    const v0, 0x7f0a0102
+    const v0, 0x7f0a0101
 
     .line 39
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
@@ -136,7 +136,7 @@
 
     iput-object v0, p0, Lcom/miui/home/settings/preference/DesktopModePreference;->mDesktop:Lmiuix/visual/check/VisualCheckBox;
 
-    const v0, 0x7f0a0121
+    const v0, 0x7f0a0120
 
     .line 40
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
@@ -152,7 +152,7 @@
 
     invoke-direct {p0, v0}, Lcom/miui/home/settings/preference/DesktopModePreference;->setChecked(Z)V
 
-    const v0, 0x7f0a0123
+    const v0, 0x7f0a0122
 
     .line 42
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;

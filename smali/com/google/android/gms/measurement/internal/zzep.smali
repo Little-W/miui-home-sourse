@@ -173,7 +173,7 @@
 
     const-string v4, "create table if not exists messages ( type INTEGER NOT NULL, entry BLOB NOT NULL)"
 
-    const-string v5, "type,entry"
+    const-string/jumbo v5, "type,entry"
 
     const/4 v6, 0x0
 

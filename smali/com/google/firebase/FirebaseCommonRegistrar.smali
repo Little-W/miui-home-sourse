@@ -96,7 +96,7 @@
 
     if-eqz v0, :cond_0
 
-    const-string p0, "tv"
+    const-string/jumbo p0, "tv"
 
     return-object p0
 

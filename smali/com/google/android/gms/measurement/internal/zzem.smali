@@ -48,7 +48,7 @@
 
     move-result-object v3
 
-    const-string v4, "type=?"
+    const-string/jumbo v4, "type=?"
 
     const-string v1, "3"
 
@@ -143,7 +143,7 @@
 
     invoke-direct {v3}, Landroid/content/ContentValues;-><init>()V
 
-    const-string v0, "type"
+    const-string/jumbo v0, "type"
 
     .line 20
     invoke-static/range {p1 .. p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -799,7 +799,7 @@
 
     const-string v0, "rowid"
 
-    const-string v9, "type"
+    const-string/jumbo v9, "type"
 
     const-string v11, "entry"
 
@@ -1791,7 +1791,7 @@
 
     const-string v6, "messages"
 
-    const-string v7, "type == ?"
+    const-string/jumbo v7, "type == ?"
 
     .line 261
     new-array v8, v5, [Ljava/lang/String;

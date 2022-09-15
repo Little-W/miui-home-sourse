@@ -329,7 +329,6 @@
     <string name="exit_overview_because_task_stack_changed">Arka planda oluşan değişikliklerden dolayı Son kullanılanlar kapatıldı</string>
     <string name="expand_button_title">Gelişmiş</string>
     <string name="exposed_dropdown_menu_content_description">Açılır menüyü göster</string>
-    <string name="external_not_support_split_screen_j18">Ekran bölme özelliği dış ekranda desteklenmiyor</string>
     <string name="failed_to_delete_temporary">Kaldırılamıyor</string>
     <string name="failed_to_drop">Taşınamıyor</string>
     <string name="failed_to_drop_widget_invalid">Araç geçersiz</string>
@@ -548,7 +547,6 @@
     <string name="midnight">Gece</string>
     <string name="minus_one_screen">Uygulama kasası</string>
     <string name="miui_screen_config_title">Ana ekran ayarları</string>
-    <string name="miui_widget_menu_replace_text">Değiştir</string>
     <string name="miuix_access_state_desc">Seçili</string>
     <string name="miuix_appcompat_action_mode_deselect_all">Seçimi kaldır</string>
     <string name="miuix_appcompat_action_mode_select_all">Tümünü seç</string>
@@ -575,8 +573,6 @@
     <string name="monday">Pazartesi</string>
     <string name="monday_short">Pzt</string>
     <string name="monday_shortest">Pzt</string>
-    <string name="monochrome_summary">Change background color for compatible icons</string>
-    <string name="monochrome_title">Background color</string>
     <string name="month_april">Nisan</string>
     <string name="month_april_short">Nis</string>
     <string name="month_april_shortest">Nis</string>

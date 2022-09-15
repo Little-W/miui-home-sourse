@@ -29,7 +29,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Landroid/content/Intent;Lcom/miui/launcher/common/ShortcutInfoCompat;)V
     .locals 0
 
-    .line 6603
+    .line 6558
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$58;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iput-object p2, p0, Lcom/miui/home/launcher/Launcher$58;->val$intent:Landroid/content/Intent;
@@ -46,7 +46,7 @@
 .method public run()V
     .locals 6
 
-    .line 6605
+    .line 6560
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$58;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$3000(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/LauncherModel;
@@ -67,7 +67,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 6607
+    .line 6562
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$58;->val$detail:Lcom/miui/launcher/common/ShortcutInfoCompat;
 
     invoke-virtual {v1}, Lcom/miui/launcher/common/ShortcutInfoCompat;->getPackage()Ljava/lang/String;
@@ -82,7 +82,7 @@
 
     const/4 v3, 0x3
 
-    .line 6608
+    .line 6563
     new-array v3, v3, [Ljava/lang/Object;
 
     const/4 v4, 0x0
@@ -121,7 +121,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6609
+    .line 6564
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$58;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/DeepShortcutInfo;->addToLauncher(Lcom/miui/home/launcher/Launcher;)V

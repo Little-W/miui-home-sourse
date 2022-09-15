@@ -31,7 +31,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 58
+    .line 59
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -44,10 +44,10 @@
 .method public constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 60
+    .line 61
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 61
+    .line 62
     iput-object p1, p0, Lcom/miui/home/launcher/uninstall/UninstallController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     return-void
@@ -56,7 +56,7 @@
 .method static synthetic access$000()Ljava/util/List;
     .locals 1
 
-    .line 49
+    .line 50
     sget-object v0, Lcom/miui/home/launcher/uninstall/UninstallController;->mDeleteAppList:Ljava/util/List;
 
     return-object v0
@@ -65,7 +65,7 @@
 .method static synthetic access$100(Lcom/miui/home/launcher/uninstall/UninstallController;)Lcom/miui/home/launcher/Launcher;
     .locals 0
 
-    .line 49
+    .line 50
     iget-object p0, p0, Lcom/miui/home/launcher/uninstall/UninstallController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     return-object p0
@@ -74,7 +74,7 @@
 .method static synthetic access$200(Lcom/miui/home/launcher/uninstall/UninstallController;Lcom/miui/home/launcher/ShortcutInfo;)Z
     .locals 0
 
-    .line 49
+    .line 50
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/uninstall/UninstallController;->isHiddenAppDisableNotifications(Lcom/miui/home/launcher/ShortcutInfo;)Z
 
     move-result p0
@@ -85,7 +85,7 @@
 .method public static announceDeleted(Lcom/miui/home/launcher/ItemInfo;)V
     .locals 1
 
-    .line 253
+    .line 254
     invoke-virtual {p0}, Lcom/miui/home/launcher/ItemInfo;->getAnnounceForDelete()Ljava/lang/String;
 
     move-result-object v0
@@ -96,7 +96,7 @@
 
     if-nez v0, :cond_0
 
-    .line 254
+    .line 255
     new-instance v0, Lcom/miui/home/launcher/uninstall/UninstallController$4;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/uninstall/UninstallController$4;-><init>(Lcom/miui/home/launcher/ItemInfo;)V
@@ -110,7 +110,7 @@
 .method private deleteItemFromMultiSelectMonitor(Lcom/miui/home/launcher/FolderInfo;)V
     .locals 2
 
-    .line 196
+    .line 197
     invoke-virtual {p1}, Lcom/miui/home/launcher/FolderInfo;->getContents()Ljava/util/List;
 
     move-result-object p1
@@ -132,7 +132,7 @@
 
     check-cast v0, Lcom/miui/home/launcher/ShortcutInfo;
 
-    .line 197
+    .line 198
     invoke-static {}, Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;->getMonitor()Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;
 
     move-result-object v1
@@ -603,7 +603,7 @@
 .method public static synthetic lambda$uninstallApps$0(Lcom/miui/home/launcher/uninstall/UninstallController;Lcom/miui/home/launcher/ShortcutInfo;Ljava/lang/Void;)Ljava/lang/Void;
     .locals 0
 
-    .line 69
+    .line 70
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/uninstall/UninstallController;->uninstallApp(Lcom/miui/home/launcher/ShortcutInfo;)Z
 
     const/4 p1, 0x0
@@ -623,36 +623,25 @@
         }
     .end annotation
 
-    .line 266
+    .line 267
     new-instance v0, Lcom/miui/home/launcher/uninstall/DeleteDialog;
 
     invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/uninstall/DeleteDialog;-><init>(Landroid/content/Context;Ljava/util/List;)V
 
-    .line 267
+    .line 268
     new-instance p1, Lcom/miui/home/launcher/uninstall/UninstallController$5;
 
     invoke-direct {p1, p0}, Lcom/miui/home/launcher/uninstall/UninstallController$5;-><init>(Lcom/miui/home/launcher/Launcher;)V
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/uninstall/DeleteDialog;->setPositiveConsumer(Ljava/util/function/Consumer;)V
 
-    const p0, 0x7f1104bc
-
-    .line 274
-    invoke-virtual {v0, p0}, Lcom/miui/home/launcher/uninstall/DeleteDialog;->setPositiveButTitle(I)V
+    const p0, 0x7f1104b7
 
     .line 275
-    invoke-virtual {v0}, Lcom/miui/home/launcher/uninstall/DeleteDialog;->show()V
+    invoke-virtual {v0, p0}, Lcom/miui/home/launcher/uninstall/DeleteDialog;->setPositiveButTitle(I)V
 
     .line 276
-    invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
-
-    move-result-object p0
-
-    new-instance p1, Lcom/miui/home/launcher/common/messages/LauncherShowUninstallDialogMessage;
-
-    invoke-direct {p1}, Lcom/miui/home/launcher/common/messages/LauncherShowUninstallDialogMessage;-><init>()V
-
-    invoke-virtual {p0, p1}, Lorg/greenrobot/eventbus/EventBus;->post(Ljava/lang/Object;)V
+    invoke-virtual {v0}, Lcom/miui/home/launcher/uninstall/DeleteDialog;->show()V
 
     return-void
 .end method
@@ -666,7 +655,7 @@
 
     return-void
 
-    .line 203
+    .line 204
     :cond_0
     iget v0, p1, Lcom/miui/home/launcher/ItemInfo;->itemType:I
 
@@ -676,7 +665,7 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 204
+    .line 205
     iget-object v0, p0, Lcom/miui/home/launcher/uninstall/UninstallController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     iget-wide v3, p1, Lcom/miui/home/launcher/ItemInfo;->container:J
@@ -685,7 +674,7 @@
 
     move-result-object v0
 
-    .line 205
+    .line 206
     invoke-virtual {v0}, Lcom/miui/home/launcher/FolderInfo;->getPreinstallManager()Lcom/miui/home/launcher/commercial/preinstall/FolderPreinstallManager;
 
     move-result-object v0
@@ -702,7 +691,7 @@
 
     goto/16 :goto_0
 
-    .line 206
+    .line 207
     :cond_1
     iget v0, p1, Lcom/miui/home/launcher/ItemInfo;->itemType:I
 
@@ -710,39 +699,39 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 207
+    .line 208
     move-object v0, p1
 
     check-cast v0, Lcom/miui/home/launcher/FolderInfo;
 
-    .line 208
+    .line 209
     iget-object v1, p0, Lcom/miui/home/launcher/uninstall/UninstallController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v1, v0}, Lcom/miui/home/launcher/LauncherModel;->deleteUserFolderContentsFromDatabase(Landroid/content/Context;Lcom/miui/home/launcher/FolderInfo;)V
 
-    .line 209
+    .line 210
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/uninstall/UninstallController;->deleteItemFromMultiSelectMonitor(Lcom/miui/home/launcher/FolderInfo;)V
 
-    .line 210
+    .line 211
     iget-object v1, p0, Lcom/miui/home/launcher/uninstall/UninstallController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v1, v0}, Lcom/miui/home/launcher/Launcher;->removeFolder(Lcom/miui/home/launcher/FolderInfo;)V
 
-    .line 211
+    .line 212
     invoke-virtual {p1}, Lcom/miui/home/launcher/ItemInfo;->isInWorkspace()Z
 
     move-result v1
 
     if-eqz v1, :cond_9
 
-    .line 212
+    .line 213
     iget-object v1, p0, Lcom/miui/home/launcher/uninstall/UninstallController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v1, v0}, Lcom/miui/home/launcher/Launcher;->fillEmpty(Lcom/miui/home/launcher/ItemInfo;)V
 
     goto :goto_0
 
-    .line 214
+    .line 215
     :cond_2
     iget v0, p1, Lcom/miui/home/launcher/ItemInfo;->itemType:I
 
@@ -750,25 +739,25 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 215
+    .line 216
     move-object v0, p1
 
     check-cast v0, Lcom/miui/home/launcher/LauncherAppWidgetInfo;
 
-    .line 216
+    .line 217
     iget-object v1, p0, Lcom/miui/home/launcher/uninstall/UninstallController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v1, v0}, Lcom/miui/home/launcher/Launcher;->removeAppWidget(Lcom/miui/home/launcher/LauncherAppWidgetInfo;)V
 
     goto :goto_0
 
-    .line 217
+    .line 218
     :cond_3
     iget v0, p1, Lcom/miui/home/launcher/ItemInfo;->itemType:I
 
     if-nez v0, :cond_4
 
-    .line 218
+    .line 219
     iget-object v0, p0, Lcom/miui/home/launcher/uninstall/UninstallController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     move-object v1, p1
@@ -779,7 +768,7 @@
 
     goto :goto_0
 
-    .line 219
+    .line 220
     :cond_4
     iget v0, p1, Lcom/miui/home/launcher/ItemInfo;->itemType:I
 
@@ -787,7 +776,7 @@
 
     if-ne v0, v1, :cond_5
 
-    .line 220
+    .line 221
     iget-object v0, p0, Lcom/miui/home/launcher/uninstall/UninstallController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     move-object v1, p1
@@ -802,7 +791,7 @@
 
     goto :goto_0
 
-    .line 221
+    .line 222
     :cond_5
     iget v0, p1, Lcom/miui/home/launcher/ItemInfo;->itemType:I
 
@@ -810,7 +799,7 @@
 
     if-ne v0, v1, :cond_6
 
-    .line 222
+    .line 223
     iget-object v0, p0, Lcom/miui/home/launcher/uninstall/UninstallController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     move-object v1, p1
@@ -821,7 +810,7 @@
 
     goto :goto_0
 
-    .line 223
+    .line 224
     :cond_6
     invoke-static {p1}, Lcom/miui/home/launcher/common/Utilities;->isHybirdApp(Lcom/miui/home/launcher/ItemInfo;)Z
 
@@ -829,21 +818,21 @@
 
     if-eqz v0, :cond_7
 
-    .line 224
+    .line 225
     move-object v0, p1
 
     check-cast v0, Lcom/miui/home/launcher/ShortcutInfo;
 
     invoke-static {v0}, Lcom/miui/home/launcher/hybrid/HybridController;->trackDelete(Lcom/miui/home/launcher/ShortcutInfo;)V
 
-    .line 225
+    .line 226
     iget-object v1, p0, Lcom/miui/home/launcher/uninstall/UninstallController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v1, v0, v2}, Lcom/miui/home/launcher/Launcher;->removeShortcutIcon(Lcom/miui/home/launcher/ShortcutInfo;Z)V
 
     goto :goto_0
 
-    .line 226
+    .line 227
     :cond_7
     iget v0, p1, Lcom/miui/home/launcher/ItemInfo;->itemType:I
 
@@ -859,7 +848,7 @@
 
     goto :goto_0
 
-    .line 230
+    .line 231
     :cond_8
     iget-object v0, p0, Lcom/miui/home/launcher/uninstall/UninstallController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -869,27 +858,39 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/miui/home/launcher/Launcher;->removeShortcutIcon(Lcom/miui/home/launcher/ShortcutInfo;Z)V
 
-    .line 232
+    .line 233
     :cond_9
     :goto_0
     instance-of v0, p1, Lcom/miui/home/launcher/ShortcutInfo;
 
     if-eqz v0, :cond_a
 
-    .line 233
+    .line 234
     move-object v0, p1
 
     check-cast v0, Lcom/miui/home/launcher/ShortcutInfo;
 
-    .line 234
+    .line 235
     iget-object v1, v0, Lcom/miui/home/launcher/ShortcutInfo;->mIntent:Landroid/content/Intent;
 
     if-eqz v1, :cond_a
 
-    .line 235
-    invoke-static {v0}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackDeletedShortCut(Lcom/miui/home/launcher/ShortcutInfo;)V
+    .line 236
+    invoke-virtual {v0}, Lcom/miui/home/launcher/ShortcutInfo;->getIconPackage()Ljava/lang/String;
 
-    .line 238
+    move-result-object v1
+
+    iget-object v0, v0, Lcom/miui/home/launcher/ShortcutInfo;->mIntent:Landroid/content/Intent;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v3}, Landroid/content/Intent;->toUri(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackDeletedShortCut(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 239
     :cond_a
     iget v0, p1, Lcom/miui/home/launcher/ItemInfo;->itemType:I
 
@@ -901,7 +902,7 @@
 
     check-cast v1, Lcom/miui/home/launcher/ShortcutInfo;
 
-    .line 239
+    .line 240
     invoke-virtual {v1}, Lcom/miui/home/launcher/ShortcutInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
@@ -912,14 +913,14 @@
 
     if-eqz v0, :cond_b
 
-    .line 240
+    .line 241
     new-instance v0, Lcom/miui/home/launcher/uninstall/UninstallController$3;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/uninstall/UninstallController$3;-><init>(Lcom/miui/home/launcher/uninstall/UninstallController;)V
 
     invoke-static {v0}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
 
-    .line 249
+    .line 250
     :cond_b
     invoke-static {p1}, Lcom/miui/home/launcher/uninstall/UninstallController;->announceDeleted(Lcom/miui/home/launcher/ItemInfo;)V
 
@@ -937,7 +938,7 @@
         }
     .end annotation
 
-    .line 190
+    .line 191
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -955,7 +956,7 @@
 
     check-cast v0, Lcom/miui/home/launcher/ShortcutInfo;
 
-    .line 191
+    .line 192
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/uninstall/UninstallController;->deleteItem(Lcom/miui/home/launcher/ItemInfo;)V
 
     goto :goto_0
@@ -984,7 +985,7 @@
 .method public hideApp(Lcom/miui/home/launcher/ShortcutInfo;Lcom/miui/home/launcher/Launcher;)V
     .locals 1
 
-    .line 177
+    .line 178
     new-instance v0, Lcom/miui/home/launcher/uninstall/UninstallController$2;
 
     invoke-direct {v0, p0, p2, p1}, Lcom/miui/home/launcher/uninstall/UninstallController$2;-><init>(Lcom/miui/home/launcher/uninstall/UninstallController;Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/ShortcutInfo;)V
@@ -1007,24 +1008,24 @@
         }
     .end annotation
 
-    .line 153
+    .line 154
     new-instance v0, Lcom/miui/home/launcher/uninstall/RemoveDialog;
 
     invoke-direct {v0, p2, p1}, Lcom/miui/home/launcher/uninstall/RemoveDialog;-><init>(Landroid/content/Context;Ljava/util/List;)V
 
-    .line 154
+    .line 155
     new-instance p1, Lcom/miui/home/launcher/uninstall/UninstallController$1;
 
     invoke-direct {p1, p0, p2}, Lcom/miui/home/launcher/uninstall/UninstallController$1;-><init>(Lcom/miui/home/launcher/uninstall/UninstallController;Lcom/miui/home/launcher/Launcher;)V
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/uninstall/RemoveDialog;->setPositiveConsumer(Ljava/util/function/Consumer;)V
 
-    const p1, 0x7f11046e
-
-    .line 161
-    invoke-virtual {v0, p1}, Lcom/miui/home/launcher/uninstall/RemoveDialog;->setPositiveButTitle(I)V
+    const p1, 0x7f110469
 
     .line 162
+    invoke-virtual {v0, p1}, Lcom/miui/home/launcher/uninstall/RemoveDialog;->setPositiveButTitle(I)V
+
+    .line 163
     invoke-virtual {v0}, Lcom/miui/home/launcher/uninstall/RemoveDialog;->show()V
 
     return-void
@@ -1045,7 +1046,7 @@
 
     const/4 v0, 0x0
 
-    .line 166
+    .line 167
     :goto_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -1053,26 +1054,26 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 167
+    .line 168
     invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/miui/home/launcher/ShortcutInfo;
 
-    .line 168
+    .line 169
     invoke-static {v1, p2}, Lcom/miui/home/launcher/uninstall/UninstallController;->isHideAppValid(Lcom/miui/home/launcher/ItemInfo;Lcom/miui/home/launcher/Launcher;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 169
+    .line 170
     invoke-virtual {p0, v1, p2}, Lcom/miui/home/launcher/uninstall/UninstallController;->hideApp(Lcom/miui/home/launcher/ShortcutInfo;Lcom/miui/home/launcher/Launcher;)V
 
     goto :goto_1
 
-    .line 170
+    .line 171
     :cond_0
     invoke-static {v1, p2}, Lcom/miui/home/launcher/uninstall/UninstallController;->isDeleteValid(Lcom/miui/home/launcher/ItemInfo;Lcom/miui/home/launcher/Launcher;)Z
 
@@ -1080,7 +1081,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 171
+    .line 172
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/uninstall/UninstallController;->deleteItem(Lcom/miui/home/launcher/ItemInfo;)V
 
     :cond_1
@@ -1102,7 +1103,7 @@
 
     return v0
 
-    .line 80
+    .line 81
     :cond_0
     iget-object v1, p0, Lcom/miui/home/launcher/uninstall/UninstallController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -1114,12 +1115,12 @@
 
     if-eqz v1, :cond_4
 
-    .line 81
+    .line 82
     invoke-virtual {p1}, Lcom/miui/home/launcher/ShortcutInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 83
+    .line 84
     :try_start_0
     invoke-virtual {p1}, Lcom/miui/home/launcher/ShortcutInfo;->getUser()Landroid/os/UserHandle;
 
@@ -1131,7 +1132,7 @@
 
     if-eqz v3, :cond_1
 
-    .line 84
+    .line 85
     iget-object v3, p0, Lcom/miui/home/launcher/uninstall/UninstallController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     new-instance v4, Lcom/miui/home/launcher/uninstall/UninstallController$DeleteObserver;
@@ -1144,7 +1145,7 @@
 
     goto :goto_0
 
-    .line 86
+    .line 87
     :cond_1
     iget-object v3, p0, Lcom/miui/home/launcher/uninstall/UninstallController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -1154,14 +1155,14 @@
 
     if-eqz v3, :cond_2
 
-    .line 87
+    .line 88
     iget-object v3, p0, Lcom/miui/home/launcher/uninstall/UninstallController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     const/4 v4, 0x0
 
     invoke-static {v3, v1, v4}, Lcom/miui/launcher/utils/LauncherUtils;->deletePackageAsXspaceUser(Landroid/content/Context;Ljava/lang/String;Lcom/miui/launcher/common/PackageDeleteObserverDelegate;)V
 
-    .line 89
+    .line 90
     :cond_2
     iget-object v3, p0, Lcom/miui/home/launcher/uninstall/UninstallController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -1179,16 +1180,22 @@
 
     invoke-static {v3, v1, v4, v5, v6}, Lcom/miui/launcher/utils/LauncherUtils;->deletePackageAsUser(Landroid/content/Context;Ljava/lang/String;Lcom/miui/launcher/common/PackageDeleteObserverDelegate;II)V
 
-    .line 91
+    .line 92
     :goto_0
     iget-object v3, p1, Lcom/miui/home/launcher/ShortcutInfo;->mIntent:Landroid/content/Intent;
 
     if-eqz v3, :cond_3
 
-    .line 92
-    invoke-static {p1}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackDeletedShortCut(Lcom/miui/home/launcher/ShortcutInfo;)V
+    .line 93
+    iget-object v3, p1, Lcom/miui/home/launcher/ShortcutInfo;->mIntent:Landroid/content/Intent;
 
-    .line 94
+    invoke-virtual {v3, v0}, Landroid/content/Intent;->toUri(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v1, v3}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackDeletedShortCut(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 95
     :cond_3
     invoke-static {p1}, Lcom/miui/home/launcher/uninstall/UninstallController;->announceDeleted(Lcom/miui/home/launcher/ItemInfo;)V
     :try_end_0
@@ -1201,7 +1208,7 @@
 
     const-string v2, "UninstallController"
 
-    .line 97
+    .line 98
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1220,7 +1227,7 @@
 
     goto :goto_1
 
-    .line 99
+    .line 100
     :cond_4
     iget-object v1, p0, Lcom/miui/home/launcher/uninstall/UninstallController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -1230,12 +1237,12 @@
 
     if-eqz v1, :cond_5
 
-    .line 100
+    .line 101
     iget-object v0, p0, Lcom/miui/home/launcher/uninstall/UninstallController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p0, p1, v0}, Lcom/miui/home/launcher/uninstall/UninstallController;->hideApp(Lcom/miui/home/launcher/ShortcutInfo;Lcom/miui/home/launcher/Launcher;)V
 
-    .line 101
+    .line 102
     invoke-static {p1}, Lcom/miui/home/launcher/uninstall/UninstallController;->announceDeleted(Lcom/miui/home/launcher/ItemInfo;)V
 
     return v2
@@ -1256,12 +1263,12 @@
         }
     .end annotation
 
-    .line 65
+    .line 66
     sget-object v0, Lcom/miui/home/launcher/uninstall/UninstallController;->mDeleteAppList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 66
+    .line 67
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -1279,14 +1286,14 @@
 
     check-cast v0, Lcom/miui/home/launcher/ShortcutInfo;
 
-    .line 67
+    .line 68
     invoke-virtual {v0}, Lcom/miui/home/launcher/ShortcutInfo;->isApplicatoin()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 68
+    .line 69
     new-instance v1, Lcom/miui/home/launcher/uninstall/-$$Lambda$UninstallController$ZWqkH8kI1mOj7u7EgUxJn-XBNrY;
 
     invoke-direct {v1, p0, v0}, Lcom/miui/home/launcher/uninstall/-$$Lambda$UninstallController$ZWqkH8kI1mOj7u7EgUxJn-XBNrY;-><init>(Lcom/miui/home/launcher/uninstall/UninstallController;Lcom/miui/home/launcher/ShortcutInfo;)V
@@ -1297,7 +1304,7 @@
 
     goto :goto_0
 
-    .line 73
+    .line 74
     :cond_0
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/uninstall/UninstallController;->deleteItem(Lcom/miui/home/launcher/ItemInfo;)V
 

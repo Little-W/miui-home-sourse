@@ -46,7 +46,7 @@
 .method constructor <init>(Lcom/google/gson/internal/Excluder;ZZLcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;)V
     .locals 0
 
-    .line 120
+    .line 122
     iput-object p1, p0, Lcom/google/gson/internal/Excluder$1;->this$0:Lcom/google/gson/internal/Excluder;
 
     iput-boolean p2, p0, Lcom/google/gson/internal/Excluder$1;->val$skipDeserialize:Z
@@ -72,14 +72,14 @@
         }
     .end annotation
 
-    .line 141
+    .line 143
     iget-object v0, p0, Lcom/google/gson/internal/Excluder$1;->delegate:Lcom/google/gson/TypeAdapter;
 
     if-eqz v0, :cond_0
 
     goto :goto_0
 
-    .line 142
+    .line 144
     :cond_0
     iget-object v0, p0, Lcom/google/gson/internal/Excluder$1;->val$gson:Lcom/google/gson/Gson;
 
@@ -87,7 +87,7 @@
 
     iget-object v2, p0, Lcom/google/gson/internal/Excluder$1;->val$type:Lcom/google/gson/reflect/TypeToken;
 
-    .line 144
+    .line 146
     invoke-virtual {v0, v1, v2}, Lcom/google/gson/Gson;->getDelegateAdapter(Lcom/google/gson/TypeAdapterFactory;Lcom/google/gson/reflect/TypeToken;)Lcom/google/gson/TypeAdapter;
 
     move-result-object v0
@@ -116,19 +116,19 @@
         }
     .end annotation
 
-    .line 125
+    .line 127
     iget-boolean v0, p0, Lcom/google/gson/internal/Excluder$1;->val$skipDeserialize:Z
 
     if-eqz v0, :cond_0
 
-    .line 126
+    .line 128
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->skipValue()V
 
     const/4 p1, 0x0
 
     return-object p1
 
-    .line 129
+    .line 131
     :cond_0
     invoke-direct {p0}, Lcom/google/gson/internal/Excluder$1;->delegate()Lcom/google/gson/TypeAdapter;
 
@@ -157,17 +157,17 @@
         }
     .end annotation
 
-    .line 133
+    .line 135
     iget-boolean v0, p0, Lcom/google/gson/internal/Excluder$1;->val$skipSerialize:Z
 
     if-eqz v0, :cond_0
 
-    .line 134
+    .line 136
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonWriter;->nullValue()Lcom/google/gson/stream/JsonWriter;
 
     return-void
 
-    .line 137
+    .line 139
     :cond_0
     invoke-direct {p0}, Lcom/google/gson/internal/Excluder$1;->delegate()Lcom/google/gson/TypeAdapter;
 

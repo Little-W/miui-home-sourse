@@ -35,7 +35,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 42
+    .line 43
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/data/system/pa_internal"
@@ -100,7 +100,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 41
+    .line 42
     invoke-direct {p0}, Lmiuix/preference/PreferenceFragment;-><init>()V
 
     return-void
@@ -109,7 +109,7 @@
 .method private initRbUI()V
     .locals 4
 
-    .line 73
+    .line 74
     invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->getCurrentPersonalAssistant()Ljava/lang/String;
 
     move-result-object v0
@@ -121,7 +121,7 @@
     :cond_0
     const/4 v1, -0x1
 
-    .line 75
+    .line 76
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v2
@@ -164,22 +164,22 @@
     :goto_0
     packed-switch v1, :pswitch_data_0
 
-    .line 83
+    .line 84
     iget-object v0, p0, Lcom/miui/home/settings/LauncherPersonalAssistantSettingActivity$LauncherPersonalAssistantSettingFragment;->mAppVaultRb:Lmiuix/preference/RadioButtonPreference;
 
     goto :goto_1
 
-    .line 80
+    .line 81
     :pswitch_0
     iget-object v0, p0, Lcom/miui/home/settings/LauncherPersonalAssistantSettingActivity$LauncherPersonalAssistantSettingFragment;->mNoActionRb:Lmiuix/preference/RadioButtonPreference;
 
     goto :goto_1
 
-    .line 77
+    .line 78
     :pswitch_1
     iget-object v0, p0, Lcom/miui/home/settings/LauncherPersonalAssistantSettingActivity$LauncherPersonalAssistantSettingFragment;->mGoogleRb:Lmiuix/preference/RadioButtonPreference;
 
-    .line 86
+    .line 87
     :goto_1
     iget-object v1, p0, Lcom/miui/home/settings/LauncherPersonalAssistantSettingActivity$LauncherPersonalAssistantSettingFragment;->mSwitchCategory:Lmiuix/preference/RadioButtonPreferenceCategory;
 
@@ -199,7 +199,7 @@
 
     const-string v0, "home_switch_personal_assistant"
 
-    .line 59
+    .line 60
     invoke-virtual {p0, v0}, Lcom/miui/home/settings/LauncherPersonalAssistantSettingActivity$LauncherPersonalAssistantSettingFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v0
@@ -208,7 +208,7 @@
 
     iput-object v0, p0, Lcom/miui/home/settings/LauncherPersonalAssistantSettingActivity$LauncherPersonalAssistantSettingFragment;->mSwitchCategory:Lmiuix/preference/RadioButtonPreferenceCategory;
 
-    .line 60
+    .line 61
     iget-object v0, p0, Lcom/miui/home/settings/LauncherPersonalAssistantSettingActivity$LauncherPersonalAssistantSettingFragment;->mSwitchCategory:Lmiuix/preference/RadioButtonPreferenceCategory;
 
     const-string v1, "personal_assistant_google"
@@ -221,7 +221,7 @@
 
     iput-object v0, p0, Lcom/miui/home/settings/LauncherPersonalAssistantSettingActivity$LauncherPersonalAssistantSettingFragment;->mGoogleRb:Lmiuix/preference/RadioButtonPreference;
 
-    .line 61
+    .line 62
     iget-object v0, p0, Lcom/miui/home/settings/LauncherPersonalAssistantSettingActivity$LauncherPersonalAssistantSettingFragment;->mSwitchCategory:Lmiuix/preference/RadioButtonPreferenceCategory;
 
     const-string v1, "personal_assistant_app_vault"
@@ -234,7 +234,7 @@
 
     iput-object v0, p0, Lcom/miui/home/settings/LauncherPersonalAssistantSettingActivity$LauncherPersonalAssistantSettingFragment;->mAppVaultRb:Lmiuix/preference/RadioButtonPreference;
 
-    .line 62
+    .line 63
     iget-object v0, p0, Lcom/miui/home/settings/LauncherPersonalAssistantSettingActivity$LauncherPersonalAssistantSettingFragment;->mSwitchCategory:Lmiuix/preference/RadioButtonPreferenceCategory;
 
     const-string v1, "personal_assistant_none"
@@ -247,22 +247,22 @@
 
     iput-object v0, p0, Lcom/miui/home/settings/LauncherPersonalAssistantSettingActivity$LauncherPersonalAssistantSettingFragment;->mNoActionRb:Lmiuix/preference/RadioButtonPreference;
 
-    .line 64
+    .line 65
     iget-object v0, p0, Lcom/miui/home/settings/LauncherPersonalAssistantSettingActivity$LauncherPersonalAssistantSettingFragment;->mGoogleRb:Lmiuix/preference/RadioButtonPreference;
 
     invoke-virtual {v0, p0}, Lmiuix/preference/RadioButtonPreference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
 
-    .line 65
+    .line 66
     iget-object v0, p0, Lcom/miui/home/settings/LauncherPersonalAssistantSettingActivity$LauncherPersonalAssistantSettingFragment;->mAppVaultRb:Lmiuix/preference/RadioButtonPreference;
 
     invoke-virtual {v0, p0}, Lmiuix/preference/RadioButtonPreference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
 
-    .line 66
+    .line 67
     iget-object v0, p0, Lcom/miui/home/settings/LauncherPersonalAssistantSettingActivity$LauncherPersonalAssistantSettingFragment;->mNoActionRb:Lmiuix/preference/RadioButtonPreference;
 
     invoke-virtual {v0, p0}, Lmiuix/preference/RadioButtonPreference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
 
-    .line 68
+    .line 69
     invoke-direct {p0}, Lcom/miui/home/settings/LauncherPersonalAssistantSettingActivity$LauncherPersonalAssistantSettingFragment;->initRbUI()V
 
     return-void
@@ -275,10 +275,10 @@
 
     const p1, 0x7f140015
 
-    .line 54
+    .line 55
     invoke-virtual {p0, p1}, Lcom/miui/home/settings/LauncherPersonalAssistantSettingActivity$LauncherPersonalAssistantSettingFragment;->addPreferencesFromResource(I)V
 
-    .line 55
+    .line 56
     invoke-direct {p0}, Lcom/miui/home/settings/LauncherPersonalAssistantSettingActivity$LauncherPersonalAssistantSettingFragment;->initView()V
 
     return-void
@@ -289,7 +289,7 @@
 
     const-string v0, "Launcher.PersonalAssistantSetting"
 
-    .line 91
+    .line 92
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -310,7 +310,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 92
+    .line 93
     invoke-virtual {p0}, Lcom/miui/home/settings/LauncherPersonalAssistantSettingActivity$LauncherPersonalAssistantSettingFragment;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -337,7 +337,7 @@
     :goto_0
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 94
+    .line 95
     invoke-virtual {p0}, Lcom/miui/home/settings/LauncherPersonalAssistantSettingActivity$LauncherPersonalAssistantSettingFragment;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -350,7 +350,7 @@
 
     const-string v2, "personal_assistant_none"
 
-    .line 95
+    .line 96
     invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
 
     move-result-object p1
@@ -363,7 +363,7 @@
 
     xor-int/2addr p1, v2
 
-    .line 94
+    .line 95
     invoke-static {v0, v1, p1}, Landroid/provider/MiuiSettings$System;->putBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
     return v2

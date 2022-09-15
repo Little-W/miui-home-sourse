@@ -71,6 +71,6 @@
 
 .field public static final clearable_edittext_clear_description:I = 0x7f110135
 
-.field public static final search_menu_title:I = 0x7f110416
+.field public static final search_menu_title:I = 0x7f110411
 
-.field public static final status_bar_notification_info_overflow:I = 0x7f110455
+.field public static final status_bar_notification_info_overflow:I = 0x7f110450

@@ -131,7 +131,7 @@
 
     const-class v1, Ljava/lang/Float;
 
-    const-string v2, "translationAlpha"
+    const-string/jumbo v2, "translationAlpha"
 
     invoke-direct {v0, v1, v2}, Landroidx/transition/ViewUtils$1;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 

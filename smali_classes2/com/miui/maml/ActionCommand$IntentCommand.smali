@@ -249,292 +249,273 @@
 
 # virtual methods
 .method protected doPerform()V
-    .locals 6
+    .locals 5
 
     .line 1084
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntent:Landroid/content/Intent;
 
-    if-eqz v0, :cond_7
+    if-eqz v0, :cond_6
 
     .line 1085
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntentInfo:Lcom/miui/maml/util/IntentInfo;
 
     invoke-virtual {v1, v0}, Lcom/miui/maml/util/IntentInfo;->update(Landroid/content/Intent;)V
 
-    const/4 v0, 0x0
-
-    .line 1088
+    .line 1087
     :try_start_0
-    sget-object v1, Lcom/miui/maml/ActionCommand$1;->$SwitchMap$com$miui$maml$ActionCommand$IntentCommand$IntentType:[I
+    sget-object v0, Lcom/miui/maml/ActionCommand$1;->$SwitchMap$com$miui$maml$ActionCommand$IntentCommand$IntentType:[I
 
-    iget-object v2, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntentType:Lcom/miui/maml/ActionCommand$IntentCommand$IntentType;
+    iget-object v1, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntentType:Lcom/miui/maml/ActionCommand$IntentCommand$IntentType;
 
-    invoke-virtual {v2}, Lcom/miui/maml/ActionCommand$IntentCommand$IntentType;->ordinal()I
+    invoke-virtual {v1}, Lcom/miui/maml/ActionCommand$IntentCommand$IntentType;->ordinal()I
 
-    move-result v2
+    move-result v1
 
-    aget v1, v1, v2
+    aget v0, v0, v1
 
-    packed-switch v1, :pswitch_data_0
+    packed-switch v0, :pswitch_data_0
 
     goto/16 :goto_2
 
-    .line 1127
+    .line 1122
     :pswitch_0
-    iget-object v1, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntentVar:Lcom/miui/maml/data/IndexedVariable;
+    iget-object v0, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntentVar:Lcom/miui/maml/data/IndexedVariable;
 
-    if-eqz v1, :cond_7
+    if-eqz v0, :cond_6
 
-    .line 1128
-    iget-object v1, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntentVar:Lcom/miui/maml/data/IndexedVariable;
+    .line 1123
+    iget-object v0, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntentVar:Lcom/miui/maml/data/IndexedVariable;
 
-    iget-object v2, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntent:Landroid/content/Intent;
+    iget-object v1, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntent:Landroid/content/Intent;
 
-    invoke-virtual {v1, v2}, Lcom/miui/maml/data/IndexedVariable;->set(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Lcom/miui/maml/data/IndexedVariable;->set(Ljava/lang/Object;)Z
 
     goto/16 :goto_2
 
-    .line 1124
+    .line 1119
     :pswitch_1
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$IntentCommand;->getContext()Landroid/content/Context;
 
-    move-result-object v1
+    move-result-object v0
 
-    iget-object v2, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntent:Landroid/content/Intent;
+    iget-object v1, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntent:Landroid/content/Intent;
 
-    invoke-static {v1, v2}, Lcom/miui/maml/util/Utils;->startService(Landroid/content/Context;Landroid/content/Intent;)V
+    invoke-static {v0, v1}, Lcom/miui/maml/util/Utils;->startService(Landroid/content/Context;Landroid/content/Intent;)V
 
     goto/16 :goto_2
 
-    .line 1121
+    .line 1116
     :pswitch_2
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$IntentCommand;->getContext()Landroid/content/Context;
 
-    move-result-object v1
+    move-result-object v0
 
-    iget-object v2, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntent:Landroid/content/Intent;
+    iget-object v1, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntent:Landroid/content/Intent;
 
-    invoke-static {v1, v2}, Lcom/miui/maml/util/Utils;->sendBroadcast(Landroid/content/Context;Landroid/content/Intent;)V
+    invoke-static {v0, v1}, Lcom/miui/maml/util/Utils;->sendBroadcast(Landroid/content/Context;Landroid/content/Intent;)V
 
     goto/16 :goto_2
 
-    .line 1090
+    .line 1089
     :pswitch_3
-    iget-object v1, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mActivityOptionsBundle:Lcom/miui/maml/ActionCommand$ObjVar;
+    iget-object v0, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mActivityOptionsBundle:Lcom/miui/maml/ActionCommand$ObjVar;
 
-    if-eqz v1, :cond_0
+    if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mActivityOptionsBundle:Lcom/miui/maml/ActionCommand$ObjVar;
+    iget-object v0, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mActivityOptionsBundle:Lcom/miui/maml/ActionCommand$ObjVar;
 
-    invoke-virtual {v1}, Lcom/miui/maml/ActionCommand$ObjVar;->get()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/miui/maml/ActionCommand$ObjVar;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v0
 
-    check-cast v1, Landroid/os/Bundle;
+    check-cast v0, Landroid/os/Bundle;
 
     goto :goto_0
 
     :cond_0
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    .line 1091
+    .line 1090
     :goto_0
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$IntentCommand;->getContext()Landroid/content/Context;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-virtual {v2}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
-    move-result-object v2
+    move-result-object v1
 
-    iget-object v3, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntent:Landroid/content/Intent;
+    iget-object v2, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntent:Landroid/content/Intent;
 
-    const/high16 v4, 0x10000
+    const/high16 v3, 0x10000
 
-    invoke-virtual {v2, v3, v4}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
+    invoke-virtual {v1, v2, v3}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
 
-    move-result-object v2
+    move-result-object v1
 
-    if-eqz v2, :cond_2
+    if-eqz v1, :cond_2
+
+    .line 1091
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    if-lez v1, :cond_2
 
     .line 1092
-    invoke-interface {v2}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    if-lez v2, :cond_2
-
-    .line 1093
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$IntentCommand;->getScreenElement()Lcom/miui/maml/elements/ScreenElement;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-virtual {v2}, Lcom/miui/maml/elements/ScreenElement;->getRoot()Lcom/miui/maml/ScreenElementRoot;
+    invoke-virtual {v1}, Lcom/miui/maml/elements/ScreenElement;->getRoot()Lcom/miui/maml/ScreenElementRoot;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-virtual {v2}, Lcom/miui/maml/ScreenElementRoot;->getContextAndRect()Landroid/util/Pair;
+    invoke-virtual {v1}, Lcom/miui/maml/ScreenElementRoot;->getContextAndRect()Landroid/util/Pair;
 
-    move-result-object v2
+    move-result-object v1
 
-    if-eqz v2, :cond_1
+    if-eqz v1, :cond_1
+
+    .line 1094
+    iget-object v2, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntent:Landroid/content/Intent;
+
+    const-string v3, "maml_view_location_on_screen"
+
+    iget-object v4, v1, Landroid/util/Pair;->second:Ljava/lang/Object;
+
+    check-cast v4, Landroid/os/Parcelable;
+
+    invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
     .line 1095
-    iget-object v3, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntent:Landroid/content/Intent;
+    iget-object v1, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
 
-    const-string v4, "maml_view_location_on_screen"
+    check-cast v1, Landroid/content/Context;
 
-    iget-object v5, v2, Landroid/util/Pair;->second:Ljava/lang/Object;
+    iget-object v2, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntent:Landroid/content/Intent;
 
-    check-cast v5, Landroid/os/Parcelable;
-
-    invoke-virtual {v3, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
-
-    .line 1096
-    iget-object v2, v2, Landroid/util/Pair;->first:Ljava/lang/Object;
-
-    check-cast v2, Landroid/content/Context;
-
-    iget-object v3, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntent:Landroid/content/Intent;
-
-    invoke-static {v2, v3, v1}, Lcom/miui/maml/util/Utils;->startActivity(Landroid/content/Context;Landroid/content/Intent;Landroid/os/Bundle;)V
+    invoke-static {v1, v2, v0}, Lcom/miui/maml/util/Utils;->startActivity(Landroid/content/Context;Landroid/content/Intent;Landroid/os/Bundle;)V
 
     goto :goto_2
 
-    .line 1098
+    .line 1097
     :cond_1
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$IntentCommand;->getContext()Landroid/content/Context;
 
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntent:Landroid/content/Intent;
+
+    invoke-static {v1, v2, v0}, Lcom/miui/maml/util/Utils;->startActivity(Landroid/content/Context;Landroid/content/Intent;Landroid/os/Bundle;)V
+
+    goto :goto_2
+
+    .line 1101
+    :cond_2
+    iget-object v1, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntent:Landroid/content/Intent;
+
+    invoke-virtual {v1}, Landroid/content/Intent;->getPackage()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    .line 1102
+    iget-object v1, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntent:Landroid/content/Intent;
+
+    invoke-virtual {v1}, Landroid/content/Intent;->getPackage()Ljava/lang/String;
+
+    move-result-object v1
+
+    goto :goto_1
+
+    .line 1103
+    :cond_3
+    iget-object v1, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntent:Landroid/content/Intent;
+
+    .line 1104
+    invoke-virtual {v1}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 1103
+    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    .line 1105
+    iget-object v1, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntent:Landroid/content/Intent;
+
+    invoke-virtual {v1}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
+
+    move-result-object v1
+
+    .line 1106
+    invoke-virtual {v1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 1111
+    :goto_1
+    invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$IntentCommand;->getContext()Landroid/content/Context;
+
     move-result-object v2
 
     iget-object v3, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntent:Landroid/content/Intent;
 
-    invoke-static {v2, v3, v1}, Lcom/miui/maml/util/Utils;->startActivity(Landroid/content/Context;Landroid/content/Intent;Landroid/os/Bundle;)V
-
-    goto :goto_2
-
-    .line 1100
-    :cond_2
-    iget-object v2, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mFallbackTrigger:Lcom/miui/maml/CommandTrigger;
-
-    if-eqz v2, :cond_3
-
-    const/4 v0, 0x1
-
-    .line 1103
-    iget-object v1, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mFallbackTrigger:Lcom/miui/maml/CommandTrigger;
-
-    invoke-virtual {v1}, Lcom/miui/maml/CommandTrigger;->perform()V
-
-    goto :goto_2
-
-    .line 1106
-    :cond_3
-    iget-object v2, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntent:Landroid/content/Intent;
-
-    invoke-virtual {v2}, Landroid/content/Intent;->getPackage()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_4
-
-    .line 1107
-    iget-object v2, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntent:Landroid/content/Intent;
-
-    invoke-virtual {v2}, Landroid/content/Intent;->getPackage()Ljava/lang/String;
-
-    move-result-object v2
-
-    goto :goto_1
-
-    .line 1108
-    :cond_4
-    iget-object v2, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntent:Landroid/content/Intent;
-
-    .line 1109
-    invoke-virtual {v2}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 1108
-    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_5
-
-    .line 1110
-    iget-object v2, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntent:Landroid/content/Intent;
-
-    invoke-virtual {v2}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
-
-    move-result-object v2
-
-    .line 1111
-    invoke-virtual {v2}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 1116
-    :goto_1
-    invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$IntentCommand;->getContext()Landroid/content/Context;
-
-    move-result-object v3
-
-    iget-object v4, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntent:Landroid/content/Intent;
-
-    invoke-static {v3, v2, v4, v1}, Lcom/miui/maml/util/HideSdkDependencyUtils;->PreloadedAppPolicy_installPreloadedDataApp(Landroid/content/Context;Ljava/lang/String;Landroid/content/Intent;Landroid/os/Bundle;)Z
+    invoke-static {v2, v1, v3, v0}, Lcom/miui/maml/util/HideSdkDependencyUtils;->PreloadedAppPolicy_installPreloadedDataApp(Landroid/content/Context;Ljava/lang/String;Landroid/content/Intent;Landroid/os/Bundle;)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_2
 
-    :cond_5
+    :cond_4
     return-void
 
     :catch_0
-    move-exception v1
+    move-exception v0
 
-    if-nez v0, :cond_6
+    .line 1128
+    iget-object v1, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mFallbackTrigger:Lcom/miui/maml/CommandTrigger;
 
-    .line 1133
-    iget-object v0, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mFallbackTrigger:Lcom/miui/maml/CommandTrigger;
-
-    if-eqz v0, :cond_6
+    if-eqz v1, :cond_5
 
     const-string v0, "ActionCommand"
 
     const-string v1, "fail to send Intent, fallback..."
 
-    .line 1134
+    .line 1129
     invoke-static {v0, v1}, Lcom/miui/maml/util/MamlLog;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1135
+    .line 1130
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mFallbackTrigger:Lcom/miui/maml/CommandTrigger;
 
     invoke-virtual {v0}, Lcom/miui/maml/CommandTrigger;->perform()V
 
     goto :goto_2
 
+    :cond_5
+    const-string v1, "ActionCommand"
+
+    .line 1132
+    invoke-virtual {v0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcom/miui/maml/util/MamlLog;->e(Ljava/lang/String;Ljava/lang/String;)V
+
     :cond_6
-    const-string v0, "ActionCommand"
-
-    .line 1137
-    invoke-virtual {v1}, Ljava/lang/Exception;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/miui/maml/util/MamlLog;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_7
     :goto_2
     return-void
 

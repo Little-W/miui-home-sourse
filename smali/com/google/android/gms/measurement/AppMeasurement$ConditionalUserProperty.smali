@@ -171,7 +171,7 @@
 
     iput-object v0, p0, Lcom/google/android/gms/measurement/AppMeasurement$ConditionalUserProperty;->mValue:Ljava/lang/Object;
 
-    const-string v0, "trigger_event_name"
+    const-string/jumbo v0, "trigger_event_name"
 
     .line 37
     const-class v1, Ljava/lang/String;
@@ -185,7 +185,7 @@
 
     iput-object v0, p0, Lcom/google/android/gms/measurement/AppMeasurement$ConditionalUserProperty;->mTriggerEventName:Ljava/lang/String;
 
-    const-string v0, "trigger_timeout"
+    const-string/jumbo v0, "trigger_timeout"
 
     .line 39
     const-class v1, Ljava/lang/Long;
@@ -238,7 +238,7 @@
 
     iput-object v0, p0, Lcom/google/android/gms/measurement/AppMeasurement$ConditionalUserProperty;->mTimedOutEventParams:Landroid/os/Bundle;
 
-    const-string v0, "triggered_event_name"
+    const-string/jumbo v0, "triggered_event_name"
 
     .line 46
     const-class v1, Ljava/lang/String;
@@ -252,7 +252,7 @@
 
     iput-object v0, p0, Lcom/google/android/gms/measurement/AppMeasurement$ConditionalUserProperty;->mTriggeredEventName:Ljava/lang/String;
 
-    const-string v0, "triggered_event_params"
+    const-string/jumbo v0, "triggered_event_params"
 
     .line 48
     const-class v1, Landroid/os/Bundle;
@@ -365,7 +365,7 @@
 
     iput-wide v0, p0, Lcom/google/android/gms/measurement/AppMeasurement$ConditionalUserProperty;->mCreationTimestamp:J
 
-    const-string v0, "triggered_timestamp"
+    const-string/jumbo v0, "triggered_timestamp"
 
     .line 63
     const-class v1, Ljava/lang/Long;
@@ -448,13 +448,13 @@
 
     if-eqz v1, :cond_4
 
-    const-string v2, "trigger_event_name"
+    const-string/jumbo v2, "trigger_event_name"
 
     .line 77
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_4
-    const-string v1, "trigger_timeout"
+    const-string/jumbo v1, "trigger_timeout"
 
     .line 78
     iget-wide v2, p0, Lcom/google/android/gms/measurement/AppMeasurement$ConditionalUserProperty;->mTriggerTimeout:J
@@ -488,7 +488,7 @@
 
     if-eqz v1, :cond_7
 
-    const-string v2, "triggered_event_name"
+    const-string/jumbo v2, "triggered_event_name"
 
     .line 84
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
@@ -499,7 +499,7 @@
 
     if-eqz v1, :cond_8
 
-    const-string v2, "triggered_event_params"
+    const-string/jumbo v2, "triggered_event_params"
 
     .line 86
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
@@ -548,7 +548,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    const-string v1, "triggered_timestamp"
+    const-string/jumbo v1, "triggered_timestamp"
 
     .line 94
     iget-wide v2, p0, Lcom/google/android/gms/measurement/AppMeasurement$ConditionalUserProperty;->mTriggeredTimestamp:J

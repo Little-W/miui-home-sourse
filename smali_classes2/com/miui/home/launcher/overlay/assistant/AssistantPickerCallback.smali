@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nAssistantPickerCallback.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AssistantPickerCallback.kt\ncom/miui/home/launcher/overlay/assistant/AssistantPickerCallback\n*L\n1#1,86:1\n*E\n"
+    value = "SMAP\nAssistantPickerCallback.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AssistantPickerCallback.kt\ncom/miui/home/launcher/overlay/assistant/AssistantPickerCallback\n*L\n1#1,70:1\n*E\n"
 .end annotation
 
 
@@ -19,7 +19,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 22
+    .line 21
     new-instance v0, Lcom/miui/home/launcher/overlay/assistant/AssistantPickerCallback;
 
     invoke-direct {v0}, Lcom/miui/home/launcher/overlay/assistant/AssistantPickerCallback;-><init>()V
@@ -32,7 +32,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 22
+    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +41,7 @@
 .method public static final synthetic access$changeContinueAddState(Lcom/miui/home/launcher/overlay/assistant/AssistantPickerCallback;Z)V
     .locals 0
 
-    .line 22
+    .line 21
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/overlay/assistant/AssistantPickerCallback;->changeContinueAddState(Z)V
 
     return-void
@@ -50,17 +50,17 @@
 .method private final changeContinueAddState(Z)V
     .locals 1
 
-    .line 67
+    .line 61
     sget-boolean v0, Lcom/miui/home/launcher/overlay/assistant/AssistantPickerCallback;->isPickerInContinueAddState:Z
 
     if-eq p1, v0, :cond_1
 
-    .line 68
+    .line 62
     sput-boolean p1, Lcom/miui/home/launcher/overlay/assistant/AssistantPickerCallback;->isPickerInContinueAddState:Z
 
     if-eqz p1, :cond_0
 
-    .line 70
+    .line 64
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object p1
@@ -69,7 +69,7 @@
 
     goto :goto_0
 
-    .line 72
+    .line 66
     :cond_0
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
@@ -79,39 +79,6 @@
 
     :cond_1
     :goto_0
-    return-void
-.end method
-
-.method private final exitPickerContinueAddState()V
-    .locals 3
-
-    const/4 v0, 0x0
-
-    .line 81
-    invoke-direct {p0, v0}, Lcom/miui/home/launcher/overlay/assistant/AssistantPickerCallback;->changeContinueAddState(Z)V
-
-    .line 82
-    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    new-instance v1, Landroid/content/Intent;
-
-    const-string v2, "action_exit_picker_continue_add"
-
-    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    const-string v2, "com.miui.personalassistant"
-
-    .line 83
-    invoke-virtual {v1, v2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 82
-    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Launcher;->sendBroadcast(Landroid/content/Intent;)V
-
-    :cond_0
     return-void
 .end method
 
@@ -126,7 +93,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 32
+    .line 31
     :try_start_0
     new-instance v0, Lcom/miui/home/launcher/overlay/assistant/AssistantPickerCallback$deliverTouchEvent$$inlined$run$lambda$1;
 
@@ -143,32 +110,16 @@
     :catch_0
     move-exception p1
 
-    .line 38
+    .line 37
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
     const/4 p1, 0x0
 
-    .line 39
+    .line 38
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/overlay/assistant/AssistantPickerCallback;->changeContinueAddState(Z)V
 
     :cond_0
     :goto_0
-    return-void
-.end method
-
-.method public final onLauncherShowUninstallDialog(Lcom/miui/home/launcher/common/messages/LauncherShowUninstallDialogMessage;)V
-    .locals 1
-    .annotation runtime Lorg/greenrobot/eventbus/Subscribe;
-        threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
-    .end annotation
-
-    const-string v0, "message"
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 60
-    invoke-direct {p0}, Lcom/miui/home/launcher/overlay/assistant/AssistantPickerCallback;->exitPickerContinueAddState()V
-
     return-void
 .end method
 
@@ -182,7 +133,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 49
+    .line 48
     invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/EditModeChangedMessage;->getCurrentEditState()I
 
     move-result v0
@@ -199,8 +150,31 @@
 
     if-eq p1, v0, :cond_0
 
+    const/4 p1, 0x0
+
+    .line 50
+    invoke-direct {p0, p1}, Lcom/miui/home/launcher/overlay/assistant/AssistantPickerCallback;->changeContinueAddState(Z)V
+
     .line 51
-    invoke-direct {p0}, Lcom/miui/home/launcher/overlay/assistant/AssistantPickerCallback;->exitPickerContinueAddState()V
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    new-instance v0, Landroid/content/Intent;
+
+    const-string v1, "action_exit_picker_continue_add"
+
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    const-string v1, "com.miui.personalassistant"
+
+    .line 52
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 51
+    invoke-virtual {p1, v0}, Lcom/miui/home/launcher/Launcher;->sendBroadcast(Landroid/content/Intent;)V
 
     :cond_0
     return-void

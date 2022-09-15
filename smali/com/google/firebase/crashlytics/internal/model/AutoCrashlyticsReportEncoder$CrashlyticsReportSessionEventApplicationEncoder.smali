@@ -87,7 +87,7 @@
 
     sput-object v0, Lcom/google/firebase/crashlytics/internal/model/AutoCrashlyticsReportEncoder$CrashlyticsReportSessionEventApplicationEncoder;->BACKGROUND_DESCRIPTOR:Lcom/google/firebase/encoders/FieldDescriptor;
 
-    const-string v0, "uiOrientation"
+    const-string/jumbo v0, "uiOrientation"
 
     .line 285
     invoke-static {v0}, Lcom/google/firebase/encoders/FieldDescriptor;->of(Ljava/lang/String;)Lcom/google/firebase/encoders/FieldDescriptor;

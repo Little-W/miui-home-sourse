@@ -140,6 +140,116 @@
     return-object p0
 .end method
 
+.method public static final decodeAES(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .locals 3
+
+    .line 208
+    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_4
+
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_1
+
+    .line 211
+    :cond_0
+    invoke-virtual {p1}, Ljava/lang/String;->getBytes()[B
+
+    move-result-object p1
+
+    if-eqz p1, :cond_3
+
+    .line 212
+    array-length v0, p1
+
+    const/16 v2, 0x10
+
+    if-eq v0, v2, :cond_1
+
+    goto :goto_0
+
+    .line 215
+    :cond_1
+    new-instance v0, Ljavax/crypto/spec/SecretKeySpec;
+
+    const-string v2, "AES"
+
+    invoke-direct {v0, p1, v2}, Ljavax/crypto/spec/SecretKeySpec;-><init>([BLjava/lang/String;)V
+
+    :try_start_0
+    const-string p1, "AES"
+
+    .line 218
+    invoke-static {p1}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
+
+    move-result-object p1
+
+    const/4 v2, 0x2
+
+    .line 219
+    invoke-virtual {p1, v2, v0}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;)V
+
+    .line 220
+    invoke-static {p0}, Lcom/market/sdk/utils/Coder;->hex2Byte(Ljava/lang/String;)[B
+
+    move-result-object p0
+
+    if-nez p0, :cond_2
+
+    return-object v1
+
+    .line 224
+    :cond_2
+    invoke-virtual {p1, p0}, Ljavax/crypto/Cipher;->doFinal([B)[B
+
+    move-result-object p0
+
+    .line 225
+    new-instance p1, Ljava/lang/String;
+
+    invoke-direct {p1, p0}, Ljava/lang/String;-><init>([B)V
+    :try_end_0
+    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_0 .. :try_end_0} :catch_4
+    .catch Ljavax/crypto/NoSuchPaddingException; {:try_start_0 .. :try_end_0} :catch_3
+    .catch Ljava/security/InvalidKeyException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljavax/crypto/IllegalBlockSizeException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljavax/crypto/BadPaddingException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p1
+
+    :catch_0
+    return-object v1
+
+    :catch_1
+    return-object v1
+
+    :catch_2
+    return-object v1
+
+    :catch_3
+    return-object v1
+
+    :catch_4
+    return-object v1
+
+    :cond_3
+    :goto_0
+    return-object v1
+
+    :cond_4
+    :goto_1
+    return-object v1
+.end method
+
 .method public static final decodeBase64(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
@@ -160,7 +270,7 @@
 .method public static final decodeBase64AndAES(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 4
 
-    .line 211
+    .line 243
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -177,7 +287,7 @@
 
     goto :goto_1
 
-    .line 214
+    .line 246
     :cond_0
     invoke-static {p1}, Lcom/market/sdk/utils/Coder;->decodeBase64Bytes(Ljava/lang/String;)[B
 
@@ -185,7 +295,7 @@
 
     if-eqz p1, :cond_3
 
-    .line 215
+    .line 247
     array-length v0, p1
 
     const/16 v2, 0x10
@@ -194,7 +304,7 @@
 
     goto :goto_0
 
-    .line 218
+    .line 250
     :cond_1
     new-instance v0, Ljavax/crypto/spec/SecretKeySpec;
 
@@ -205,12 +315,12 @@
     :try_start_0
     const-string p1, "AES/CBC/PKCS5Padding"
 
-    .line 221
+    .line 253
     invoke-static {p1}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
 
     move-result-object p1
 
-    .line 222
+    .line 254
     new-instance v2, Ljavax/crypto/spec/IvParameterSpec;
 
     const-string v3, "0102030405060708"
@@ -223,10 +333,10 @@
 
     const/4 v3, 0x2
 
-    .line 223
+    .line 255
     invoke-virtual {p1, v3, v0, v2}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;Ljava/security/spec/AlgorithmParameterSpec;)V
 
-    .line 224
+    .line 256
     invoke-static {p0}, Lcom/market/sdk/utils/Coder;->decodeBase64Bytes(Ljava/lang/String;)[B
 
     move-result-object p0
@@ -235,13 +345,13 @@
 
     return-object v1
 
-    .line 228
+    .line 260
     :cond_2
     invoke-virtual {p1, p0}, Ljavax/crypto/Cipher;->doFinal([B)[B
 
     move-result-object p0
 
-    .line 229
+    .line 261
     new-instance p1, Ljava/lang/String;
 
     invoke-direct {p1, p0}, Ljava/lang/String;-><init>([B)V

@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/smallwindow/SmallWindowStateHelperUseManager;)V
     .locals 0
 
-    .line 37
+    .line 35
     iput-object p1, p0, Lcom/miui/home/smallwindow/SmallWindowStateHelperUseManager$1;->this$0:Lcom/miui/home/smallwindow/SmallWindowStateHelperUseManager;
 
     invoke-direct {p0}, Lmiui/app/IFreeformCallback$Stub;-><init>()V
@@ -39,7 +39,7 @@
 
     const-string v0, "SmallWindowStateHelper"
 
-    .line 41
+    .line 39
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -64,11 +64,10 @@
 
     packed-switch p1, :pswitch_data_0
 
-    :pswitch_0
     goto :goto_0
 
-    .line 57
-    :pswitch_1
+    .line 51
+    :pswitch_0
     iget-object p1, p0, Lcom/miui/home/smallwindow/SmallWindowStateHelperUseManager$1;->this$0:Lcom/miui/home/smallwindow/SmallWindowStateHelperUseManager;
 
     const/4 p2, 0x0
@@ -77,10 +76,10 @@
 
     goto :goto_0
 
-    :pswitch_2
+    :pswitch_1
     const/4 p1, 0x1
 
-    .line 53
+    .line 47
     iget-object p2, p0, Lcom/miui/home/smallwindow/SmallWindowStateHelperUseManager$1;->this$0:Lcom/miui/home/smallwindow/SmallWindowStateHelperUseManager;
 
     invoke-static {p2, p1}, Lcom/miui/home/smallwindow/SmallWindowStateHelperUseManager;->access$000(Lcom/miui/home/smallwindow/SmallWindowStateHelperUseManager;Z)V
@@ -90,18 +89,11 @@
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_2
-        :pswitch_2
-        :pswitch_2
         :pswitch_1
-        :pswitch_2
+        :pswitch_1
         :pswitch_1
         :pswitch_0
+        :pswitch_1
         :pswitch_0
-        :pswitch_0
-        :pswitch_2
-        :pswitch_2
-        :pswitch_2
-        :pswitch_2
     .end packed-switch
 .end method

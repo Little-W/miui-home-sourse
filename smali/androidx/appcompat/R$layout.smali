@@ -71,10 +71,10 @@
 
 .field public static final abc_tooltip:I = 0x7f0d001b
 
-.field public static final select_dialog_item_material:I = 0x7f0d016c
+.field public static final select_dialog_item_material:I = 0x7f0d016b
 
-.field public static final select_dialog_multichoice_material:I = 0x7f0d016d
+.field public static final select_dialog_multichoice_material:I = 0x7f0d016c
 
-.field public static final select_dialog_singlechoice_material:I = 0x7f0d016e
+.field public static final select_dialog_singlechoice_material:I = 0x7f0d016d
 
-.field public static final support_simple_spinner_dropdown_item:I = 0x7f0d017a
+.field public static final support_simple_spinner_dropdown_item:I = 0x7f0d0179

@@ -30,7 +30,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher$PerformLaunchAction;)V
     .locals 0
 
-    .line 4880
+    .line 4854
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$PerformLaunchAction$1;->this$1:Lcom/miui/home/launcher/Launcher$PerformLaunchAction;
 
     invoke-direct {p0}, Lcom/miui/home/launcher/common/ResultRunnable;-><init>()V
@@ -43,10 +43,10 @@
 .method public run()V
     .locals 3
 
-    .line 4883
+    .line 4857
     invoke-super {p0}, Lcom/miui/home/launcher/common/ResultRunnable;->run()V
 
-    .line 4884
+    .line 4858
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$PerformLaunchAction$1;->this$1:Lcom/miui/home/launcher/Launcher$PerformLaunchAction;
 
     iget-object v0, v0, Lcom/miui/home/launcher/Launcher$PerformLaunchAction;->this$0:Lcom/miui/home/launcher/Launcher;

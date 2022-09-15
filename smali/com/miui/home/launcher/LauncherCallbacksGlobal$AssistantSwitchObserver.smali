@@ -22,10 +22,10 @@
 .method public constructor <init>(Lcom/miui/home/launcher/LauncherCallbacksGlobal;)V
     .locals 1
 
-    .line 83
+    .line 82
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherCallbacksGlobal$AssistantSwitchObserver;->this$0:Lcom/miui/home/launcher/LauncherCallbacksGlobal;
 
-    .line 84
+    .line 83
     new-instance p1, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -48,13 +48,13 @@
 
     const-string v0, "AssistantSwitchObserver onChange.."
 
-    .line 89
+    .line 88
     invoke-static {p1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 90
+    .line 89
     invoke-static {}, Lcom/miui/home/launcher/MIUIWidgetUtil;->resetMIUIWidgetSupport()V
 
-    .line 91
+    .line 90
     iget-object p1, p0, Lcom/miui/home/launcher/LauncherCallbacksGlobal$AssistantSwitchObserver;->this$0:Lcom/miui/home/launcher/LauncherCallbacksGlobal;
 
     invoke-static {p1}, Lcom/miui/home/launcher/LauncherCallbacksGlobal;->access$000(Lcom/miui/home/launcher/LauncherCallbacksGlobal;)V

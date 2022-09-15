@@ -38,7 +38,7 @@
 
     const/16 v2, 0xe
 
-    .line 223
+    .line 220
     invoke-direct {p0, v1, v2, v0, v0}, Lcom/miui/maml/ScreenElementRoot$FramerateHelper;-><init>(IIII)V
 
     return-void
@@ -47,32 +47,32 @@
 .method public constructor <init>(IIII)V
     .locals 1
 
-    .line 226
+    .line 223
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 210
+    .line 207
     new-instance v0, Landroid/text/TextPaint;
 
     invoke-direct {v0}, Landroid/text/TextPaint;-><init>()V
 
     iput-object v0, p0, Lcom/miui/maml/ScreenElementRoot$FramerateHelper;->mPaint:Landroid/text/TextPaint;
 
-    .line 227
+    .line 224
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot$FramerateHelper;->mPaint:Landroid/text/TextPaint;
 
     invoke-virtual {v0, p1}, Landroid/text/TextPaint;->setColor(I)V
 
-    .line 228
+    .line 225
     iget-object p1, p0, Lcom/miui/maml/ScreenElementRoot$FramerateHelper;->mPaint:Landroid/text/TextPaint;
 
     int-to-float p2, p2
 
     invoke-virtual {p1, p2}, Landroid/text/TextPaint;->setTextSize(F)V
 
-    .line 229
+    .line 226
     iput p3, p0, Lcom/miui/maml/ScreenElementRoot$FramerateHelper;->mTextX:I
 
-    .line 230
+    .line 227
     iput p4, p0, Lcom/miui/maml/ScreenElementRoot$FramerateHelper;->mTextY:I
 
     return-void
@@ -83,7 +83,7 @@
 .method public draw(Landroid/graphics/Canvas;)V
     .locals 4
 
-    .line 234
+    .line 231
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot$FramerateHelper;->mFramerateText:Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -94,7 +94,7 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 235
+    .line 232
     :cond_0
     iget v0, p0, Lcom/miui/maml/ScreenElementRoot$FramerateHelper;->mRealFrameRate:I
 
@@ -104,7 +104,7 @@
 
     const/4 v1, 0x1
 
-    .line 236
+    .line 233
     new-array v1, v1, [Ljava/lang/Object;
 
     const/4 v2, 0x0
@@ -123,7 +123,7 @@
 
     iput-object v0, p0, Lcom/miui/maml/ScreenElementRoot$FramerateHelper;->mFramerateText:Ljava/lang/String;
 
-    .line 238
+    .line 235
     :cond_1
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot$FramerateHelper;->mFramerateText:Ljava/lang/String;
 
@@ -145,7 +145,7 @@
 .method public set(I)V
     .locals 0
 
-    .line 242
+    .line 239
     iput p1, p0, Lcom/miui/maml/ScreenElementRoot$FramerateHelper;->mRealFrameRate:I
 
     return-void

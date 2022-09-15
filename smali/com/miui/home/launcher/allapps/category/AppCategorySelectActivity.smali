@@ -274,23 +274,6 @@
     return-void
 .end method
 
-.method public onResume()V
-    .locals 1
-
-    .line 106
-    invoke-super {p0}, Lmiuix/appcompat/app/AppCompatActivity;->onResume()V
-
-    .line 107
-    invoke-static {p0}, Lcom/miui/home/launcher/DeviceConfig;->loadAllAppsCellCountX(Landroid/content/Context;)V
-
-    .line 108
-    iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectActivity;->mFragment:Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->refreshSpanCount()V
-
-    return-void
-.end method
-
 .method public onSave(ILjava/lang/String;Ljava/lang/String;Ljava/util/Collection;Ljava/util/Collection;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;

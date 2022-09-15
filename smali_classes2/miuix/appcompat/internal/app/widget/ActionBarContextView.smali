@@ -487,108 +487,160 @@
 .end method
 
 .method private animateLayoutWithProcess(F)V
-    .locals 6
+    .locals 17
 
-    const/high16 v0, 0x40400000    # 3.0f
+    move-object/from16 v0, p0
 
-    mul-float/2addr p1, v0
+    const/high16 v1, 0x40400000    # 3.0f
 
-    const/high16 v0, 0x3f800000    # 1.0f
+    mul-float v1, v1, p1
+
+    const/high16 v2, 0x3f800000    # 1.0f
 
     .line 568
-    invoke-static {v0, p1}, Ljava/lang/Math;->min(FF)F
+    invoke-static {v2, v1}, Ljava/lang/Math;->min(FF)F
 
-    move-result p1
+    move-result v1
 
-    sub-float p1, v0, p1
+    sub-float v4, v2, v1
 
     .line 569
-    iget v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->mInnerExpandState:I
+    iget v1, v0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->mInnerExpandState:I
 
-    const/16 v2, 0x14
+    const/4 v2, 0x2
 
-    const/4 v3, 0x0
+    if-ne v1, v2, :cond_1
 
-    const/4 v4, 0x0
+    const/4 v1, 0x0
 
-    const/4 v5, 0x2
-
-    if-ne v1, v5, :cond_1
-
-    cmpl-float v1, p1, v3
+    cmpl-float v1, v4, v1
 
     if-lez v1, :cond_0
 
     .line 571
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->mCollapseController:Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;
+    iget-object v5, v0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->mCollapseController:Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;
 
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->mCollapseAnimHideConfig:Lmiuix/animation/base/AnimConfig;
+    const/4 v6, 0x0
 
-    invoke-virtual {v0, v3, v4, v2, v1}, Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;->animTo(FIILmiuix/animation/base/AnimConfig;)V
+    const/4 v7, 0x0
+
+    const/16 v8, 0x14
+
+    iget-object v9, v0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->mCollapseAnimHideConfig:Lmiuix/animation/base/AnimConfig;
+
+    const/4 v10, 0x0
+
+    invoke-virtual/range {v5 .. v10}, Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;->animTo(FIILmiuix/animation/base/AnimConfig;Z)V
 
     goto :goto_0
 
     .line 573
     :cond_0
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->mCollapseController:Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;
+    iget-object v11, v0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->mCollapseController:Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;
 
-    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->mCollapseAnimShowConfig:Lmiuix/animation/base/AnimConfig;
+    const/high16 v12, 0x3f800000    # 1.0f
 
-    invoke-virtual {v1, v0, v4, v4, v2}, Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;->animTo(FIILmiuix/animation/base/AnimConfig;)V
+    const/4 v13, 0x0
+
+    const/4 v14, 0x0
+
+    iget-object v15, v0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->mCollapseAnimShowConfig:Lmiuix/animation/base/AnimConfig;
+
+    const/16 v16, 0x0
+
+    invoke-virtual/range {v11 .. v16}, Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;->animTo(FIILmiuix/animation/base/AnimConfig;Z)V
 
     .line 575
     :goto_0
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->mMovableController:Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;
+    iget-object v3, v0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->mMovableController:Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;
 
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->mMovableAnimConfig:Lmiuix/animation/base/AnimConfig;
+    const/4 v5, 0x0
 
-    invoke-virtual {v0, p1, v4, v4, v1}, Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;->animTo(FIILmiuix/animation/base/AnimConfig;)V
+    const/4 v6, 0x0
+
+    iget-object v7, v0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->mMovableAnimConfig:Lmiuix/animation/base/AnimConfig;
+
+    const/4 v8, 0x0
+
+    invoke-virtual/range {v3 .. v8}, Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;->animTo(FIILmiuix/animation/base/AnimConfig;Z)V
 
     goto :goto_1
 
     .line 576
     :cond_1
-    iget p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->mInnerExpandState:I
+    iget v1, v0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->mInnerExpandState:I
 
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
-    if-ne p1, v1, :cond_2
+    if-ne v1, v2, :cond_2
 
     .line 577
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->mCollapseController:Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;
+    iget-object v3, v0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->mCollapseController:Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;
 
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->mCollapseAnimHideConfig:Lmiuix/animation/base/AnimConfig;
+    const/4 v4, 0x0
 
-    invoke-virtual {p1, v3, v4, v2, v1}, Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;->animTo(FIILmiuix/animation/base/AnimConfig;)V
+    const/4 v5, 0x0
+
+    const/16 v6, 0x14
+
+    iget-object v7, v0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->mCollapseAnimHideConfig:Lmiuix/animation/base/AnimConfig;
+
+    const/4 v8, 0x0
+
+    invoke-virtual/range {v3 .. v8}, Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;->animTo(FIILmiuix/animation/base/AnimConfig;Z)V
 
     .line 578
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->mMovableController:Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;
+    iget-object v9, v0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->mMovableController:Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;
 
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->mMovableAnimConfig:Lmiuix/animation/base/AnimConfig;
+    const/high16 v10, 0x3f800000    # 1.0f
 
-    invoke-virtual {p1, v0, v4, v4, v1}, Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;->animTo(FIILmiuix/animation/base/AnimConfig;)V
+    const/4 v11, 0x0
+
+    const/4 v12, 0x0
+
+    iget-object v13, v0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->mMovableAnimConfig:Lmiuix/animation/base/AnimConfig;
+
+    const/4 v14, 0x0
+
+    invoke-virtual/range {v9 .. v14}, Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;->animTo(FIILmiuix/animation/base/AnimConfig;Z)V
 
     goto :goto_1
 
     .line 579
     :cond_2
-    iget p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->mInnerExpandState:I
+    iget v1, v0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->mInnerExpandState:I
 
-    if-nez p1, :cond_3
+    if-nez v1, :cond_3
 
     .line 580
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->mCollapseController:Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;
+    iget-object v2, v0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->mCollapseController:Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;
 
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->mCollapseAnimShowConfig:Lmiuix/animation/base/AnimConfig;
+    const/high16 v3, 0x3f800000    # 1.0f
 
-    invoke-virtual {p1, v0, v4, v4, v1}, Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;->animTo(FIILmiuix/animation/base/AnimConfig;)V
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    iget-object v6, v0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->mCollapseAnimShowConfig:Lmiuix/animation/base/AnimConfig;
+
+    const/4 v7, 0x0
+
+    invoke-virtual/range {v2 .. v7}, Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;->animTo(FIILmiuix/animation/base/AnimConfig;Z)V
 
     .line 581
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->mMovableController:Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;
+    iget-object v8, v0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->mMovableController:Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;
 
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->mMovableAnimConfig:Lmiuix/animation/base/AnimConfig;
+    const/4 v9, 0x0
 
-    invoke-virtual {p1, v3, v4, v4, v0}, Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;->animTo(FIILmiuix/animation/base/AnimConfig;)V
+    const/4 v10, 0x0
+
+    const/4 v11, 0x0
+
+    iget-object v12, v0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->mMovableAnimConfig:Lmiuix/animation/base/AnimConfig;
+
+    const/4 v13, 0x0
+
+    invoke-virtual/range {v8 .. v13}, Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;->animTo(FIILmiuix/animation/base/AnimConfig;Z)V
 
     :cond_3
     :goto_1
@@ -2032,7 +2084,7 @@
 
     .line 677
     :goto_2
-    invoke-virtual {v2, v3}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->animateContentMarginBottomByBottomMenu(I)V
+    invoke-virtual {v2, v3}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->animateContentMarginBottom(I)V
 
     .line 678
     iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->mMenuView:Lmiuix/appcompat/internal/view/menu/action/ActionMenuView;
@@ -2338,7 +2390,7 @@
 
     .line 784
     :cond_9
-    invoke-virtual {v12, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->animateContentMarginBottomByBottomMenu(I)V
+    invoke-virtual {v12, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->animateContentMarginBottom(I)V
 
     if-eqz v11, :cond_a
 

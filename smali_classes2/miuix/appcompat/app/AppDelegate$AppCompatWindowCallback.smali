@@ -22,10 +22,10 @@
 .method public constructor <init>(Lmiuix/appcompat/app/AppDelegate;Landroid/view/Window$Callback;)V
     .locals 0
 
-    .line 811
+    .line 801
     iput-object p1, p0, Lmiuix/appcompat/app/AppDelegate$AppCompatWindowCallback;->this$0:Lmiuix/appcompat/app/AppDelegate;
 
-    .line 812
+    .line 802
     invoke-direct {p0, p2}, Landroidx/appcompat/view/WindowCallbackWrapper;-><init>(Landroid/view/Window$Callback;)V
 
     return-void

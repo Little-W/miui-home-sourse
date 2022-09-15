@@ -49,13 +49,6 @@
         <item>ডিফল্ট</item>
         <item>ক্ল্যাসিক</item>
     </string-array>
-    <string-array name="monochrome_color_entries">
-        <item>ডিফল্ট</item>
-        <item>নীল</item>
-        <item>সবুজ</item>
-        <item>বেগুনী</item>
-        <item>বাদামি</item>
-    </string-array>
     <string-array name="transformation_entries">
         <item>স্লাইড</item>
         <item>ক্রসফেড</item>

@@ -72,7 +72,7 @@
 
     const-string v1, "screen"
 
-    const/16 v2, 0x10
+    const/16 v2, 0xe
 
     .line 33
     invoke-virtual {p1, v2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
@@ -93,7 +93,7 @@
 
     const-string p3, "cellY"
 
-    const/16 v0, 0x18
+    const/16 v0, 0x16
 
     .line 36
     invoke-virtual {p1, v0}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
@@ -116,7 +116,7 @@
 .method private final getCellX(Landroid/content/res/TypedArray;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    const/16 v0, 0x17
+    const/16 v0, 0x15
 
     .line 48
     invoke-virtual {p1, v0}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
@@ -215,7 +215,7 @@
 .method private final getContainer(Landroid/content/res/TypedArray;)Ljava/lang/String;
     .locals 1
 
-    const/4 v0, 0x4
+    const/4 v0, 0x2
 
     .line 40
     invoke-virtual {p1, v0}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;

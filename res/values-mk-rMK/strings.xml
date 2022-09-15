@@ -293,7 +293,6 @@
     <string name="eras_bc">П.Н.Е</string>
     <string name="evening">Попладне</string>
     <string name="exit_overview_because_task_stack_changed">Неодамнешни е затворен поради промени настани во позадина</string>
-    <string name="external_not_support_split_screen_j18">Поделениот екран не е поддржан на надворешен екран</string>
     <string name="failed_to_delete_temporary">Не може да се отстрани</string>
     <string name="failed_to_drop">Не може да се помести</string>
     <string name="failed_to_drop_widget_invalid">Овој додаток на екранот е невалиден</string>
@@ -498,7 +497,6 @@
     <string name="midnight">Ноќ</string>
     <string name="minus_one_screen">App vault</string>
     <string name="miui_screen_config_title">Нагодувања на Почетен екран</string>
-    <string name="miui_widget_menu_replace_text">Промени</string>
     <string name="miuix_access_state_desc">Избрано</string>
     <string name="miuix_appcompat_action_mode_deselect_all">Поништи</string>
     <string name="miuix_appcompat_action_mode_select_all">Одберете ги сите</string>
@@ -525,8 +523,6 @@
     <string name="monday">Понеделник</string>
     <string name="monday_short">Пон</string>
     <string name="monday_shortest">Пон</string>
-    <string name="monochrome_summary">Change background color for compatible icons</string>
-    <string name="monochrome_title">Background color</string>
     <string name="month_april">Април</string>
     <string name="month_april_short">Апр</string>
     <string name="month_april_shortest">Апр</string>

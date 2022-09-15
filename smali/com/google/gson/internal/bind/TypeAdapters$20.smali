@@ -26,7 +26,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 465
+    .line 466
     invoke-direct {p0}, Lcom/google/gson/TypeAdapter;-><init>()V
 
     return-void
@@ -42,7 +42,7 @@
         }
     .end annotation
 
-    .line 465
+    .line 466
     invoke-virtual {p0, p1}, Lcom/google/gson/internal/bind/TypeAdapters$20;->read(Lcom/google/gson/stream/JsonReader;)Ljava/lang/StringBuffer;
 
     move-result-object p1
@@ -58,7 +58,7 @@
         }
     .end annotation
 
-    .line 468
+    .line 469
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->peek()Lcom/google/gson/stream/JsonToken;
 
     move-result-object v0
@@ -67,14 +67,14 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 469
+    .line 470
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->nextNull()V
 
     const/4 p1, 0x0
 
     return-object p1
 
-    .line 472
+    .line 473
     :cond_0
     new-instance v0, Ljava/lang/StringBuffer;
 
@@ -95,7 +95,7 @@
         }
     .end annotation
 
-    .line 465
+    .line 466
     check-cast p2, Ljava/lang/StringBuffer;
 
     invoke-virtual {p0, p1, p2}, Lcom/google/gson/internal/bind/TypeAdapters$20;->write(Lcom/google/gson/stream/JsonWriter;Ljava/lang/StringBuffer;)V
@@ -117,7 +117,7 @@
 
     goto :goto_0
 
-    .line 476
+    .line 477
     :cond_0
     invoke-virtual {p2}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 

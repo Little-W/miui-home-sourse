@@ -72,12 +72,59 @@
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/commercial/recommend/RecommendAppsThumbnailView;->setScreenLayoutMode(I)V
 
     .line 45
-    invoke-virtual {p0}, Lcom/miui/home/launcher/commercial/recommend/RecommendAppsThumbnailView;->calculateFixedGap()V
+    invoke-direct {p0}, Lcom/miui/home/launcher/commercial/recommend/RecommendAppsThumbnailView;->calculateFixedGap()V
 
     const/16 p1, 0xfa
 
     .line 46
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/commercial/recommend/RecommendAppsThumbnailView;->setScreenSnapDuration(I)V
+
+    return-void
+.end method
+
+.method private calculateFixedGap()V
+    .locals 2
+
+    .line 51
+    invoke-virtual {p0}, Lcom/miui/home/launcher/commercial/recommend/RecommendAppsThumbnailView;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v1, 0x7f070165
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v0
+
+    .line 52
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellWidth()I
+
+    move-result v1
+
+    mul-int/lit8 v1, v1, 0x4
+
+    sub-int/2addr v0, v1
+
+    int-to-float v0, v0
+
+    const/high16 v1, 0x40400000    # 3.0f
+
+    div-float/2addr v0, v1
+
+    float-to-double v0, v0
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->floor(D)D
+
+    move-result-wide v0
+
+    double-to-int v0, v0
+
+    .line 53
+    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/commercial/recommend/RecommendAppsThumbnailView;->setFixedGap(I)V
 
     return-void
 .end method
@@ -259,53 +306,6 @@
 
 
 # virtual methods
-.method calculateFixedGap()V
-    .locals 2
-
-    .line 51
-    invoke-virtual {p0}, Lcom/miui/home/launcher/commercial/recommend/RecommendAppsThumbnailView;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f070166
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v0
-
-    .line 52
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellWidth()I
-
-    move-result v1
-
-    mul-int/lit8 v1, v1, 0x4
-
-    sub-int/2addr v0, v1
-
-    int-to-float v0, v0
-
-    const/high16 v1, 0x40400000    # 3.0f
-
-    div-float/2addr v0, v1
-
-    float-to-double v0, v0
-
-    invoke-static {v0, v1}, Ljava/lang/Math;->floor(D)D
-
-    move-result-wide v0
-
-    double-to-int v0, v0
-
-    .line 53
-    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/commercial/recommend/RecommendAppsThumbnailView;->setFixedGap(I)V
-
-    return-void
-.end method
-
 .method protected clearThumbnail(Landroid/view/View;)V
     .locals 0
 
@@ -542,7 +542,7 @@
     if-eqz p1, :cond_0
 
     .line 228
-    invoke-virtual {p0}, Lcom/miui/home/launcher/commercial/recommend/RecommendAppsThumbnailView;->calculateFixedGap()V
+    invoke-direct {p0}, Lcom/miui/home/launcher/commercial/recommend/RecommendAppsThumbnailView;->calculateFixedGap()V
 
     :cond_0
     return-void

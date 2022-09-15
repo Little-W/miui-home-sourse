@@ -42,7 +42,7 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .line 2401
+    .line 2396
     new-instance v0, Lcom/miui/maml/ActionCommand$FolmeCommand$Type;
 
     const-string v1, "TO"
@@ -53,7 +53,7 @@
 
     sput-object v0, Lcom/miui/maml/ActionCommand$FolmeCommand$Type;->TO:Lcom/miui/maml/ActionCommand$FolmeCommand$Type;
 
-    .line 2402
+    .line 2397
     new-instance v0, Lcom/miui/maml/ActionCommand$FolmeCommand$Type;
 
     const-string v1, "SET_TO"
@@ -64,7 +64,7 @@
 
     sput-object v0, Lcom/miui/maml/ActionCommand$FolmeCommand$Type;->SET_TO:Lcom/miui/maml/ActionCommand$FolmeCommand$Type;
 
-    .line 2403
+    .line 2398
     new-instance v0, Lcom/miui/maml/ActionCommand$FolmeCommand$Type;
 
     const-string v1, "FROM_TO"
@@ -75,7 +75,7 @@
 
     sput-object v0, Lcom/miui/maml/ActionCommand$FolmeCommand$Type;->FROM_TO:Lcom/miui/maml/ActionCommand$FolmeCommand$Type;
 
-    .line 2404
+    .line 2399
     new-instance v0, Lcom/miui/maml/ActionCommand$FolmeCommand$Type;
 
     const-string v1, "CANCEL"
@@ -86,7 +86,7 @@
 
     sput-object v0, Lcom/miui/maml/ActionCommand$FolmeCommand$Type;->CANCEL:Lcom/miui/maml/ActionCommand$FolmeCommand$Type;
 
-    .line 2405
+    .line 2400
     new-instance v0, Lcom/miui/maml/ActionCommand$FolmeCommand$Type;
 
     const-string v1, "ADD_RANGE_BOARD"
@@ -97,7 +97,7 @@
 
     sput-object v0, Lcom/miui/maml/ActionCommand$FolmeCommand$Type;->ADD_RANGE_BOARD:Lcom/miui/maml/ActionCommand$FolmeCommand$Type;
 
-    .line 2406
+    .line 2401
     new-instance v0, Lcom/miui/maml/ActionCommand$FolmeCommand$Type;
 
     const-string v1, "INVALID"
@@ -110,7 +110,7 @@
 
     const/4 v0, 0x6
 
-    .line 2400
+    .line 2395
     new-array v0, v0, [Lcom/miui/maml/ActionCommand$FolmeCommand$Type;
 
     sget-object v1, Lcom/miui/maml/ActionCommand$FolmeCommand$Type;->TO:Lcom/miui/maml/ActionCommand$FolmeCommand$Type;
@@ -150,7 +150,7 @@
         }
     .end annotation
 
-    .line 2400
+    .line 2395
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -159,7 +159,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/miui/maml/ActionCommand$FolmeCommand$Type;
     .locals 1
 
-    .line 2400
+    .line 2395
     const-class v0, Lcom/miui/maml/ActionCommand$FolmeCommand$Type;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -174,7 +174,7 @@
 .method public static values()[Lcom/miui/maml/ActionCommand$FolmeCommand$Type;
     .locals 1
 
-    .line 2400
+    .line 2395
     sget-object v0, Lcom/miui/maml/ActionCommand$FolmeCommand$Type;->$VALUES:[Lcom/miui/maml/ActionCommand$FolmeCommand$Type;
 
     invoke-virtual {v0}, [Lcom/miui/maml/ActionCommand$FolmeCommand$Type;->clone()Ljava/lang/Object;

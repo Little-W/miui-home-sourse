@@ -207,7 +207,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v1, 0x7f0a0384
+    const v1, 0x7f0a0380
 
     .line 103
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -223,7 +223,7 @@
 
     invoke-virtual {v1, p1, v2, v3, v0}, Lcom/miui/home/launcher/ThumbnailContainer;->setCellLayoutThumbnail(Lcom/miui/home/launcher/CellScreen;IILandroid/view/View;)V
 
-    const p1, 0x7f0a0195
+    const p1, 0x7f0a0191
 
     .line 105
     invoke-virtual {v0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -505,7 +505,7 @@
 
     iput v0, p0, Lcom/miui/home/launcher/DefaultScreenPreviewView;->mHomeIconLayoutHeight:I
 
-    const v0, 0x7f0a027f
+    const v0, 0x7f0a027b
 
     .line 55
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/DefaultScreenPreviewView;->findViewById(I)Landroid/view/View;
@@ -521,7 +521,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070584
+    const v1, 0x7f07057f
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -529,7 +529,7 @@
 
     iput v0, p0, Lcom/miui/home/launcher/DefaultScreenPreviewView;->mPreviewPaddingTop:I
 
-    const v0, 0x7f0a00f5
+    const v0, 0x7f0a00f4
 
     .line 57
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/DefaultScreenPreviewView;->findViewById(I)Landroid/view/View;
@@ -547,7 +547,7 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/view/LauncherActionBar;->setTitle(I)V
 
-    const v0, 0x7f0a00f6
+    const v0, 0x7f0a00f5
 
     .line 59
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/DefaultScreenPreviewView;->findViewById(I)Landroid/view/View;
@@ -624,7 +624,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0705e4
+    const v1, 0x7f0705df
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -635,7 +635,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0705e3
+    const v2, 0x7f0705de
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

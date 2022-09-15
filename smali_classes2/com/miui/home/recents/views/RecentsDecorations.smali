@@ -63,7 +63,7 @@
     .line 29
     invoke-super {p0}, Landroid/widget/FrameLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a0291
+    const v0, 0x7f0a028d
 
     .line 30
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/RecentsDecorations;->findViewById(I)Landroid/view/View;
@@ -105,7 +105,7 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/relay/RelayIconInRecents;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0a0317
+    const v0, 0x7f0a0313
 
     .line 40
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/RecentsDecorations;->findViewById(I)Landroid/view/View;

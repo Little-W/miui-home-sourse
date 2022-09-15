@@ -25,7 +25,7 @@
 .method constructor <init>(Lmiuix/appcompat/widget/Spinner;)V
     .locals 0
 
-    .line 711
+    .line 712
     iput-object p1, p0, Lmiuix/appcompat/widget/Spinner$1;->this$0:Lmiuix/appcompat/widget/Spinner;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onGlobalLayout()V
     .locals 1
 
-    .line 714
+    .line 715
     iget-object v0, p0, Lmiuix/appcompat/widget/Spinner$1;->this$0:Lmiuix/appcompat/widget/Spinner;
 
     invoke-static {v0}, Lmiuix/appcompat/widget/Spinner;->access$100(Lmiuix/appcompat/widget/Spinner;)Lmiuix/appcompat/widget/Spinner$SpinnerPopup;
@@ -51,12 +51,12 @@
 
     if-nez v0, :cond_0
 
-    .line 715
+    .line 716
     iget-object v0, p0, Lmiuix/appcompat/widget/Spinner$1;->this$0:Lmiuix/appcompat/widget/Spinner;
 
     invoke-virtual {v0}, Lmiuix/appcompat/widget/Spinner;->showPopup()V
 
-    .line 717
+    .line 718
     :cond_0
     iget-object v0, p0, Lmiuix/appcompat/widget/Spinner$1;->this$0:Lmiuix/appcompat/widget/Spinner;
 
@@ -66,7 +66,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 719
+    .line 720
     invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
     :cond_1

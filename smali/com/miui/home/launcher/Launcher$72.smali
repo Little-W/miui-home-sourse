@@ -33,7 +33,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Ljava/util/ArrayList;)V
     .locals 0
 
-    .line 8000
+    .line 7990
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$72;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iput-object p2, p0, Lcom/miui/home/launcher/Launcher$72;->val$itemTypeList:Ljava/util/ArrayList;
@@ -48,12 +48,12 @@
 .method public run()V
     .locals 5
 
-    .line 8003
+    .line 7993
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 8004
+    .line 7994
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$72;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v1}, Lcom/miui/home/launcher/Launcher;->access$3600(Lcom/miui/home/launcher/Launcher;)Ljava/util/HashSet;
@@ -68,12 +68,12 @@
 
     const/4 v0, 0x0
 
-    .line 8005
+    .line 7995
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Launcher$72;->setResult(Ljava/lang/Object;)V
 
     return-void
 
-    .line 8008
+    .line 7998
     :cond_0
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$72;->this$0:Lcom/miui/home/launcher/Launcher;
 
@@ -99,12 +99,12 @@
 
     check-cast v2, Lcom/miui/home/launcher/ShortcutInfo;
 
-    .line 8009
+    .line 7999
     invoke-virtual {v2}, Lcom/miui/home/launcher/ShortcutInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 8010
+    .line 8000
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v4
@@ -125,12 +125,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 8011
+    .line 8001
     invoke-virtual {v0, v3}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 8014
+    .line 8004
     :cond_2
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Launcher$72;->setResult(Ljava/lang/Object;)V
 

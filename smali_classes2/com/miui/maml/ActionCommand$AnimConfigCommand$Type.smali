@@ -38,7 +38,7 @@
 .method static constructor <clinit>()V
     .locals 6
 
-    .line 2335
+    .line 2330
     new-instance v0, Lcom/miui/maml/ActionCommand$AnimConfigCommand$Type;
 
     const-string v1, "UPDATE"
@@ -49,7 +49,7 @@
 
     sput-object v0, Lcom/miui/maml/ActionCommand$AnimConfigCommand$Type;->UPDATE:Lcom/miui/maml/ActionCommand$AnimConfigCommand$Type;
 
-    .line 2336
+    .line 2331
     new-instance v0, Lcom/miui/maml/ActionCommand$AnimConfigCommand$Type;
 
     const-string v1, "REMOVE"
@@ -60,7 +60,7 @@
 
     sput-object v0, Lcom/miui/maml/ActionCommand$AnimConfigCommand$Type;->REMOVE:Lcom/miui/maml/ActionCommand$AnimConfigCommand$Type;
 
-    .line 2337
+    .line 2332
     new-instance v0, Lcom/miui/maml/ActionCommand$AnimConfigCommand$Type;
 
     const-string v1, "CLEAR"
@@ -71,7 +71,7 @@
 
     sput-object v0, Lcom/miui/maml/ActionCommand$AnimConfigCommand$Type;->CLEAR:Lcom/miui/maml/ActionCommand$AnimConfigCommand$Type;
 
-    .line 2338
+    .line 2333
     new-instance v0, Lcom/miui/maml/ActionCommand$AnimConfigCommand$Type;
 
     const-string v1, "INVALID"
@@ -84,7 +84,7 @@
 
     const/4 v0, 0x4
 
-    .line 2334
+    .line 2329
     new-array v0, v0, [Lcom/miui/maml/ActionCommand$AnimConfigCommand$Type;
 
     sget-object v1, Lcom/miui/maml/ActionCommand$AnimConfigCommand$Type;->UPDATE:Lcom/miui/maml/ActionCommand$AnimConfigCommand$Type;
@@ -116,7 +116,7 @@
         }
     .end annotation
 
-    .line 2334
+    .line 2329
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -125,7 +125,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/miui/maml/ActionCommand$AnimConfigCommand$Type;
     .locals 1
 
-    .line 2334
+    .line 2329
     const-class v0, Lcom/miui/maml/ActionCommand$AnimConfigCommand$Type;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -140,7 +140,7 @@
 .method public static values()[Lcom/miui/maml/ActionCommand$AnimConfigCommand$Type;
     .locals 1
 
-    .line 2334
+    .line 2329
     sget-object v0, Lcom/miui/maml/ActionCommand$AnimConfigCommand$Type;->$VALUES:[Lcom/miui/maml/ActionCommand$AnimConfigCommand$Type;
 
     invoke-virtual {v0}, [Lcom/miui/maml/ActionCommand$AnimConfigCommand$Type;->clone()Ljava/lang/Object;

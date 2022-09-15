@@ -21,10 +21,6 @@
 
     const/16 v0, 0x3ec
 
-    if-eq p0, v0, :cond_1
-
-    const/16 v0, 0x3f9
-
     if-ne p0, v0, :cond_0
 
     goto :goto_0

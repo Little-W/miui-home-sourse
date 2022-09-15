@@ -24,7 +24,7 @@
 
     move-object/from16 v0, p3
 
-    const/16 v1, 0xc
+    const/16 v1, 0xa
 
     .line 38
     invoke-virtual {v0, v1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
@@ -91,14 +91,14 @@
     goto :goto_3
 
     :cond_4
-    const/16 v1, 0x11
+    const/16 v1, 0xf
 
     .line 44
     invoke-virtual {v0, v1, v3}, Landroid/content/res/TypedArray;->getInt(II)I
 
     move-result v7
 
-    const/16 v1, 0x12
+    const/16 v1, 0x10
 
     .line 45
     invoke-virtual {v0, v1, v3}, Landroid/content/res/TypedArray;->getInt(II)I
@@ -156,7 +156,7 @@
 
     const/4 v0, -0x1
 
-    const/16 v1, 0x8
+    const/4 v1, 0x6
 
     .line 55
     invoke-virtual {p1, v1, v0}, Landroid/content/res/TypedArray;->getInt(II)I

@@ -15,7 +15,7 @@
 .method constructor <init>(Lcom/xiaomi/onetrack/api/h;Ljava/lang/String;)V
     .locals 0
 
-    .line 219
+    .line 217
     iput-object p1, p0, Lcom/xiaomi/onetrack/api/ae;->b:Lcom/xiaomi/onetrack/api/h;
 
     iput-object p2, p0, Lcom/xiaomi/onetrack/api/ae;->a:Ljava/lang/String;
@@ -30,7 +30,7 @@
 .method public run()V
     .locals 12
 
-    .line 223
+    .line 221
     :try_start_0
     new-instance v0, Lorg/json/JSONArray;
 
@@ -40,7 +40,7 @@
 
     const/4 v1, 0x0
 
-    .line 224
+    .line 222
     :goto_0
     invoke-virtual {v0}, Lorg/json/JSONArray;->length()I
 
@@ -48,7 +48,7 @@
 
     if-ge v1, v2, :cond_3
 
-    .line 225
+    .line 223
     invoke-virtual {v0, v1}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v2
@@ -57,7 +57,7 @@
 
     const-string v3, "H"
 
-    .line 226
+    .line 224
     invoke-virtual {v2, v3}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
 
     move-result v3
@@ -77,17 +77,17 @@
     :cond_0
     const-string v3, "H"
 
-    .line 230
+    .line 228
     invoke-virtual {v2, v3}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
 
     move-result-object v3
 
-    .line 231
+    .line 229
     new-instance v11, Lcom/xiaomi/onetrack/api/d;
 
     invoke-direct {v11, v3}, Lcom/xiaomi/onetrack/api/d;-><init>(Lorg/json/JSONObject;)V
 
-    .line 232
+    .line 230
     iget-object v3, p0, Lcom/xiaomi/onetrack/api/ae;->b:Lcom/xiaomi/onetrack/api/h;
 
     invoke-virtual {v11}, Lcom/xiaomi/onetrack/api/d;->a()Ljava/lang/String;
@@ -105,12 +105,12 @@
     :cond_1
     const-string v3, "B"
 
-    .line 236
+    .line 234
     invoke-virtual {v2, v3}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
 
     move-result-object v5
 
-    .line 237
+    .line 235
     iget-object v2, p0, Lcom/xiaomi/onetrack/api/ae;->b:Lcom/xiaomi/onetrack/api/h;
 
     invoke-virtual {v11}, Lcom/xiaomi/onetrack/api/d;->a()Ljava/lang/String;
@@ -121,7 +121,7 @@
 
     move-result-object v8
 
-    .line 238
+    .line 236
     iget-object v2, p0, Lcom/xiaomi/onetrack/api/ae;->b:Lcom/xiaomi/onetrack/api/h;
 
     invoke-static {v2}, Lcom/xiaomi/onetrack/api/h;->a(Lcom/xiaomi/onetrack/api/h;)Lcom/xiaomi/onetrack/Configuration;
@@ -130,19 +130,19 @@
 
     iget-object v2, p0, Lcom/xiaomi/onetrack/api/ae;->b:Lcom/xiaomi/onetrack/api/h;
 
-    invoke-static {v2}, Lcom/xiaomi/onetrack/api/h;->d(Lcom/xiaomi/onetrack/api/h;)Lcom/xiaomi/onetrack/OneTrack$IEventHook;
+    invoke-static {v2}, Lcom/xiaomi/onetrack/api/h;->c(Lcom/xiaomi/onetrack/api/h;)Lcom/xiaomi/onetrack/OneTrack$IEventHook;
 
     move-result-object v7
 
     iget-object v2, p0, Lcom/xiaomi/onetrack/api/ae;->b:Lcom/xiaomi/onetrack/api/h;
 
-    invoke-static {v2}, Lcom/xiaomi/onetrack/api/h;->e(Lcom/xiaomi/onetrack/api/h;)Lcom/xiaomi/onetrack/util/v;
+    invoke-static {v2}, Lcom/xiaomi/onetrack/api/h;->d(Lcom/xiaomi/onetrack/api/h;)Lcom/xiaomi/onetrack/util/v;
 
     move-result-object v9
 
     iget-object v2, p0, Lcom/xiaomi/onetrack/api/ae;->b:Lcom/xiaomi/onetrack/api/h;
 
-    invoke-static {v2}, Lcom/xiaomi/onetrack/api/h;->f(Lcom/xiaomi/onetrack/api/h;)Z
+    invoke-static {v2}, Lcom/xiaomi/onetrack/api/h;->e(Lcom/xiaomi/onetrack/api/h;)Z
 
     move-result v10
 
@@ -152,10 +152,10 @@
 
     move-result-object v2
 
-    .line 240
+    .line 238
     iget-object v3, p0, Lcom/xiaomi/onetrack/api/ae;->b:Lcom/xiaomi/onetrack/api/h;
 
-    invoke-static {v3}, Lcom/xiaomi/onetrack/api/h;->g(Lcom/xiaomi/onetrack/api/h;)Lcom/xiaomi/onetrack/api/e;
+    invoke-static {v3}, Lcom/xiaomi/onetrack/api/h;->f(Lcom/xiaomi/onetrack/api/h;)Lcom/xiaomi/onetrack/api/e;
 
     move-result-object v3
 
@@ -173,7 +173,7 @@
 
     const-string v3, "h5 json is empty or has no \"H\" or \"B\" "
 
-    .line 227
+    .line 225
     invoke-static {v2, v3}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -188,7 +188,7 @@
 
     const-string v1, "OneTrackImp"
 
-    .line 243
+    .line 241
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V

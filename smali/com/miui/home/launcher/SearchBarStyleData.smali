@@ -200,9 +200,9 @@
     .locals 6
 
     .line 180
-    new-instance v0, Lcom/mi/google/gson/Gson;
+    new-instance v0, Lcom/google/gson/Gson;
 
-    invoke-direct {v0}, Lcom/mi/google/gson/Gson;-><init>()V
+    invoke-direct {v0}, Lcom/google/gson/Gson;-><init>()V
 
     .line 181
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
@@ -307,7 +307,7 @@
     .line 191
     const-class v2, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarTestResponseBean;
 
-    invoke-virtual {v0, v1, v2}, Lcom/mi/google/gson/Gson;->fromJson(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/Gson;->fromJson(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -334,9 +334,9 @@
     .locals 5
 
     .line 170
-    new-instance v0, Lcom/mi/google/gson/Gson;
+    new-instance v0, Lcom/google/gson/Gson;
 
-    invoke-direct {v0}, Lcom/mi/google/gson/Gson;-><init>()V
+    invoke-direct {v0}, Lcom/google/gson/Gson;-><init>()V
 
     .line 171
     invoke-static {}, Lcom/miui/home/launcher/common/PreferenceUtils;->getInstance()Lcom/miui/home/launcher/common/PreferenceUtils;
@@ -376,7 +376,7 @@
     .line 174
     const-class v2, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarTestResponseBean2;
 
-    invoke-virtual {v0, v1, v2}, Lcom/mi/google/gson/Gson;->fromJson(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/Gson;->fromJson(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1422,7 +1422,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f0705c8
+    const v2, 0x7f0705c3
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimension(I)F
 

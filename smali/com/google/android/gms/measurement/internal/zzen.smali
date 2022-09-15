@@ -949,7 +949,7 @@
 .method protected final zzz()V
     .locals 10
 
-    const-string v0, "unknown"
+    const-string/jumbo v0, "unknown"
 
     const-string v1, "Unknown"
 
@@ -1832,6 +1832,8 @@
     iput v5, p0, Lcom/google/android/gms/measurement/internal/zzen;->zzi:I
 
     return-void
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0

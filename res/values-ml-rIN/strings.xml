@@ -293,7 +293,6 @@
     <string name="eras_bc">BCE</string>
     <string name="evening">ഉച്ചകഴിഞ്ഞ്</string>
     <string name="exit_overview_because_task_stack_changed">പശ്ചാത്തലത്തിൽ സംഭവിച്ച മാറ്റങ്ങൾ കാരണം സമീപകാലത്തേത് അടച്ചു</string>
-    <string name="external_not_support_split_screen_j18">ബാഹ്യ സ്ക്രീനിൽ സ്പ്ലിറ്റ് സ്ക്രീൻ പിന്തുണയ്ക്കുന്നില്ല</string>
     <string name="failed_to_delete_temporary">നീക്കംചെയ്യാനാകില്ല</string>
     <string name="failed_to_drop">നീക്കാനാകില്ല</string>
     <string name="failed_to_drop_widget_invalid">ഈ വിജറ്റ് അസാധുവാണ്</string>
@@ -498,7 +497,6 @@
     <string name="midnight">രാത്രി</string>
     <string name="minus_one_screen">ആപ്പ് വോൾട്ട്</string>
     <string name="miui_screen_config_title">ഹോം സ്ക്രീന്‍ ക്രമീകരണം</string>
-    <string name="miui_widget_menu_replace_text">മാറുക</string>
     <string name="miuix_access_state_desc">തിരഞ്ഞെടുത്തു</string>
     <string name="miuix_appcompat_action_mode_deselect_all">തിരഞ്ഞെടുത്തത് മാറ്റുക</string>
     <string name="miuix_appcompat_action_mode_select_all">എല്ലാം തിരഞ്ഞെടുക്കുക</string>
@@ -525,8 +523,6 @@
     <string name="monday">തിങ്കൾ</string>
     <string name="monday_short">തിങ്കള്‍</string>
     <string name="monday_shortest">തിങ്കള്‍</string>
-    <string name="monochrome_summary">അനുയോജ്യമായ ഐക്കണുകൾക്കായി പശ്ചാത്തല വർണ്ണം മാറ്റുക</string>
-    <string name="monochrome_title">പശ്ചാത്തല വർണ്ണം</string>
     <string name="month_april">ഏപ്രില്‍</string>
     <string name="month_april_short">ഏപ്രിൽ</string>
     <string name="month_april_shortest">ഏപ്രിൽ</string>

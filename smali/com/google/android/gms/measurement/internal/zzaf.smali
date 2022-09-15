@@ -4205,17 +4205,17 @@
 
     const-string v8, "active"
 
-    const-string v9, "trigger_event_name"
+    const-string/jumbo v9, "trigger_event_name"
 
-    const-string v10, "trigger_timeout"
+    const-string/jumbo v10, "trigger_timeout"
 
     const-string v11, "timed_out_event"
 
     const-string v12, "creation_timestamp"
 
-    const-string v13, "triggered_event"
+    const-string/jumbo v13, "triggered_event"
 
-    const-string v14, "triggered_timestamp"
+    const-string/jumbo v14, "triggered_timestamp"
 
     const-string v15, "time_to_live"
 
@@ -7022,14 +7022,14 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Boolean;)V
 
-    const-string v2, "trigger_event_name"
+    const-string/jumbo v2, "trigger_event_name"
 
     .line 372
     iget-object v3, p1, Lcom/google/android/gms/measurement/internal/zzz;->zzf:Ljava/lang/String;
 
     invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v2, "trigger_timeout"
+    const-string/jumbo v2, "trigger_timeout"
 
     .line 373
     iget-wide v3, p1, Lcom/google/android/gms/measurement/internal/zzz;->zzh:J
@@ -7064,7 +7064,7 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    const-string v2, "triggered_event"
+    const-string/jumbo v2, "triggered_event"
 
     .line 376
     invoke-virtual {p0}, Lcom/google/android/gms/measurement/internal/zzgr;->zzo()Lcom/google/android/gms/measurement/internal/zzkv;
@@ -7077,7 +7077,7 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;[B)V
 
-    const-string v2, "triggered_timestamp"
+    const-string/jumbo v2, "triggered_timestamp"
 
     .line 377
     iget-object v3, p1, Lcom/google/android/gms/measurement/internal/zzz;->zzc:Lcom/google/android/gms/measurement/internal/zzku;
@@ -8766,17 +8766,17 @@
 
     const-string v13, "active"
 
-    const-string v14, "trigger_event_name"
+    const-string/jumbo v14, "trigger_event_name"
 
-    const-string v15, "trigger_timeout"
+    const-string/jumbo v15, "trigger_timeout"
 
     const-string v16, "timed_out_event"
 
     const-string v17, "creation_timestamp"
 
-    const-string v18, "triggered_event"
+    const-string/jumbo v18, "triggered_event"
 
-    const-string v19, "triggered_timestamp"
+    const-string/jumbo v19, "triggered_timestamp"
 
     const-string v20, "time_to_live"
 

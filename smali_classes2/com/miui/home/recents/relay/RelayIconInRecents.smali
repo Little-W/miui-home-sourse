@@ -401,7 +401,7 @@
     .line 70
     invoke-super {p0}, Landroidx/constraintlayout/widget/ConstraintLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a02a8
+    const v0, 0x7f0a02a4
 
     .line 71
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/relay/RelayIconInRecents;->findViewById(I)Landroid/view/View;
@@ -412,7 +412,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/relay/RelayIconInRecents;->mRelayIcon:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a02a6
+    const v0, 0x7f0a02a2
 
     .line 72
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/relay/RelayIconInRecents;->findViewById(I)Landroid/view/View;
@@ -423,7 +423,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/relay/RelayIconInRecents;->mRelayAppInfo:Landroid/widget/TextView;
 
-    const v0, 0x7f0a02a7
+    const v0, 0x7f0a02a3
 
     .line 73
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/relay/RelayIconInRecents;->findViewById(I)Landroid/view/View;
@@ -553,7 +553,7 @@
 
     move-result-object p2
 
-    const v1, 0x7f1103eb
+    const v1, 0x7f1103e6
 
     invoke-virtual {p2, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

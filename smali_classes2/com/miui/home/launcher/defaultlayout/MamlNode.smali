@@ -18,7 +18,7 @@
 
     const/4 v0, -0x1
 
-    const/16 v1, 0x8
+    const/4 v1, 0x6
 
     .line 54
     invoke-virtual {p1, v1, v0}, Landroid/content/res/TypedArray;->getInt(II)I
@@ -36,7 +36,7 @@
 
 # virtual methods
 .method public final addMamlWidget(Landroid/database/sqlite/SQLiteDatabase;Landroid/content/ContentValues;Landroid/content/res/TypedArray;)V
-    .locals 4
+    .locals 5
 
     const-string v0, "db"
 
@@ -50,66 +50,66 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const/16 v0, 0x15
+    const/16 v0, 0x13
 
     .line 29
     invoke-virtual {p3, v0}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
     .line 31
-    new-instance v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;
+    new-instance v2, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;
 
-    invoke-direct {v1}, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;-><init>()V
+    invoke-direct {v2}, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;-><init>()V
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
+
+    const/16 v4, 0xf
+
+    .line 32
+    invoke-virtual {p3, v4, v3}, Landroid/content/res/TypedArray;->getInt(II)I
+
+    move-result v4
+
+    iput v4, v2, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->configSpanX:I
+
+    const/16 v4, 0x10
+
+    .line 33
+    invoke-virtual {p3, v4, v3}, Landroid/content/res/TypedArray;->getInt(II)I
+
+    move-result v4
+
+    iput v4, v2, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->configSpanY:I
+
+    const/16 v4, 0xc
+
+    .line 34
+    invoke-virtual {p3, v4}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    iput-object v4, v2, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->productId:Ljava/lang/String;
+
+    const/16 v4, 0x14
+
+    .line 35
+    invoke-virtual {p3, v4, v3}, Landroid/content/res/TypedArray;->getInt(II)I
+
+    move-result v3
+
+    iput v3, v2, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->versionCode:I
 
     const/16 v3, 0x11
 
-    .line 32
-    invoke-virtual {p3, v3, v2}, Landroid/content/res/TypedArray;->getInt(II)I
-
-    move-result v3
-
-    iput v3, v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->configSpanX:I
-
-    const/16 v3, 0x12
-
-    .line 33
-    invoke-virtual {p3, v3, v2}, Landroid/content/res/TypedArray;->getInt(II)I
-
-    move-result v3
-
-    iput v3, v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->configSpanY:I
-
-    const/16 v3, 0xe
-
-    .line 34
-    invoke-virtual {p3, v3}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    iput-object v3, v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->productId:Ljava/lang/String;
-
-    const/16 v3, 0x16
-
-    .line 35
-    invoke-virtual {p3, v3, v2}, Landroid/content/res/TypedArray;->getInt(II)I
-
-    move-result v2
-
-    iput v2, v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->versionCode:I
-
-    const/16 v2, 0x13
-
     .line 36
-    invoke-virtual {p3, v2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
+    invoke-virtual {p3, v3}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
     check-cast v3, Ljava/lang/CharSequence;
 
-    invoke-virtual {v1, v3}, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {v2, v3}, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->setTitle(Ljava/lang/CharSequence;)V
 
     const-string v3, "itemFlags"
 
@@ -127,7 +127,7 @@
     const-string p3, "spanX"
 
     .line 38
-    iget v3, v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->configSpanX:I
+    iget v3, v2, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->configSpanX:I
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -138,7 +138,7 @@
     const-string p3, "spanY"
 
     .line 39
-    iget v3, v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->configSpanY:I
+    iget v3, v2, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->configSpanY:I
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -149,31 +149,31 @@
     const-string p3, "itemType"
 
     .line 40
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-virtual {p2, p3, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+    invoke-virtual {p2, p3, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
     const-string p3, "product_id"
 
     .line 41
-    iget-object v2, v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->productId:Ljava/lang/String;
+    iget-object v0, v2, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->productId:Ljava/lang/String;
 
-    invoke-virtual {p2, p3, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p2, p3, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p3, "title"
 
     .line 42
-    invoke-virtual {v1}, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->getTitle()Ljava/lang/CharSequence;
+    invoke-virtual {v2}, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->getTitle()Ljava/lang/CharSequence;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-virtual {p2, p3, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p2, p3, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 44
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
@@ -182,17 +182,17 @@
 
     check-cast p3, Landroid/content/Context;
 
-    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
     .line 45
-    iget-object v2, v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->productId:Ljava/lang/String;
+    iget-object v1, v2, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->productId:Ljava/lang/String;
 
-    iget v3, v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->versionCode:I
+    iget v3, v2, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->versionCode:I
 
     .line 44
-    invoke-static {p3, v0, v2, v3}, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->installMaMlFromExternal(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;I)Z
+    invoke-static {p3, v0, v1, v3}, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->installMaMlFromExternal(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;I)Z
 
     move-result p3
 
@@ -201,7 +201,7 @@
     const-string p3, "uri"
 
     .line 46
-    invoke-static {v1}, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->getMaMlResPath(Lcom/miui/home/launcher/maml/MaMlWidgetInfo;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->getMaMlResPath(Lcom/miui/home/launcher/maml/MaMlWidgetInfo;)Ljava/lang/String;
 
     move-result-object v0
 

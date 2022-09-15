@@ -281,7 +281,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0d0199
+    const v1, 0x7f0d0198
 
     const/4 v2, 0x0
 
@@ -298,7 +298,7 @@
     .line 88
     iget-object v0, p0, Lcom/miui/home/launcher/compat/UserPresentLoadingAnimation;->mWorkspaceLoadingView:Landroid/widget/FrameLayout;
 
-    const v1, 0x7f0a01e7
+    const v1, 0x7f0a01e3
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -333,7 +333,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0806d4
+    const v1, 0x7f0806d0
 
     invoke-virtual {v0, v1, v3}, Landroid/content/res/Resources;->getDrawable(ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
 
@@ -349,7 +349,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0806d3
+    const v1, 0x7f0806cf
 
     invoke-virtual {v0, v1, v3}, Landroid/content/res/Resources;->getDrawable(ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
 

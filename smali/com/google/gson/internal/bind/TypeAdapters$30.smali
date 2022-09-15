@@ -21,7 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 807
+    .line 808
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,12 +44,12 @@
         }
     .end annotation
 
-    .line 810
+    .line 811
     invoke-virtual {p2}, Lcom/google/gson/reflect/TypeToken;->getRawType()Ljava/lang/Class;
 
     move-result-object p1
 
-    .line 811
+    .line 812
     const-class p2, Ljava/lang/Enum;
 
     invoke-virtual {p2, p1}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
@@ -64,7 +64,7 @@
 
     goto :goto_0
 
-    .line 814
+    .line 815
     :cond_0
     invoke-virtual {p1}, Ljava/lang/Class;->isEnum()Z
 
@@ -72,12 +72,12 @@
 
     if-nez p2, :cond_1
 
-    .line 815
+    .line 816
     invoke-virtual {p1}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
 
     move-result-object p1
 
-    .line 817
+    .line 818
     :cond_1
     new-instance p2, Lcom/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter;
 

@@ -15,14 +15,14 @@
 
 
 # static fields
-.field public static final xiaomi_update_sdk_file_paths:I = 0x7f140036
+.field public static final xiaomi_update_sdk_file_paths:I = 0x7f14002f
 
 
 # direct methods
 .method private constructor <init>()V
     .locals 0
 
-    .line 5572
+    .line 164
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

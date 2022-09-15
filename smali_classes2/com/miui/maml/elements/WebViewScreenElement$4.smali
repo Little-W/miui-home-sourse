@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/maml/elements/WebViewScreenElement;Ljava/lang/String;)V
     .locals 0
 
-    .line 206
+    .line 200
     iput-object p1, p0, Lcom/miui/maml/elements/WebViewScreenElement$4;->this$0:Lcom/miui/maml/elements/WebViewScreenElement;
 
     iput-object p2, p0, Lcom/miui/maml/elements/WebViewScreenElement$4;->val$jsfun:Ljava/lang/String;
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 3
 
-    .line 208
+    .line 202
     iget-object v0, p0, Lcom/miui/maml/elements/WebViewScreenElement$4;->this$0:Lcom/miui/maml/elements/WebViewScreenElement;
 
     invoke-static {v0}, Lcom/miui/maml/elements/WebViewScreenElement;->access$100(Lcom/miui/maml/elements/WebViewScreenElement;)Landroid/webkit/WebView;

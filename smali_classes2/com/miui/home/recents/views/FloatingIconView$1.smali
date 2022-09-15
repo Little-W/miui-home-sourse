@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/recents/views/FloatingIconView;)V
     .locals 0
 
-    .line 465
+    .line 464
     iput-object p1, p0, Lcom/miui/home/recents/views/FloatingIconView$1;->this$0:Lcom/miui/home/recents/views/FloatingIconView;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 0
 
-    .line 468
+    .line 467
     iget-object p1, p0, Lcom/miui/home/recents/views/FloatingIconView$1;->this$0:Lcom/miui/home/recents/views/FloatingIconView;
 
     invoke-static {p1}, Lcom/miui/home/recents/views/FloatingIconView;->access$000(Lcom/miui/home/recents/views/FloatingIconView;)V

@@ -329,7 +329,6 @@
     <string name="exit_overview_because_task_stack_changed">Bagian Terkini ditutup dikarenakan perubahan di latar belakang</string>
     <string name="expand_button_title">Lanjutan</string>
     <string name="exposed_dropdown_menu_content_description">Tampilkan menu dropdown</string>
-    <string name="external_not_support_split_screen_j18">Pembagi layar tidak didukung di Layar luar</string>
     <string name="failed_to_delete_temporary">Tidak dapat dihapus</string>
     <string name="failed_to_drop">Tidak dapat dipindahkan</string>
     <string name="failed_to_drop_widget_invalid">Widget ini tidak valid</string>
@@ -548,7 +547,6 @@
     <string name="midnight">Malam</string>
     <string name="minus_one_screen">App vault</string>
     <string name="miui_screen_config_title">Setelan Layar utama</string>
-    <string name="miui_widget_menu_replace_text">Ganti</string>
     <string name="miuix_access_state_desc">Terpilih</string>
     <string name="miuix_appcompat_action_mode_deselect_all">Batal pilih</string>
     <string name="miuix_appcompat_action_mode_select_all">Pilih semua</string>
@@ -575,8 +573,6 @@
     <string name="monday">Senin</string>
     <string name="monday_short">Sen</string>
     <string name="monday_shortest">Sen</string>
-    <string name="monochrome_summary">Ubah warna latar belakang untuk ikon yang kompatibel</string>
-    <string name="monochrome_title">Warna latar belakang</string>
     <string name="month_april">April</string>
     <string name="month_april_short">Apr</string>
     <string name="month_april_shortest">Apr</string>

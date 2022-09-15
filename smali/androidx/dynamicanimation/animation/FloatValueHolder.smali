@@ -1,4 +1,4 @@
-.class public Landroidx/dynamicanimation/animation/FloatValueHolder;
+.class public final Landroidx/dynamicanimation/animation/FloatValueHolder;
 .super Ljava/lang/Object;
 .source "FloatValueHolder.java"
 

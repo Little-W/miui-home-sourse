@@ -4,6 +4,10 @@
 
 
 # static fields
+.field private static final DEFAULT_DENSITY:F
+
+.field private static final DEFAULT_SCALED_DENSITY:F
+
 .field private static final DM:Landroid/util/DisplayMetrics;
 
 .field private static final TAG:Ljava/lang/String; = "LauncherWidgetLayoutFactory"
@@ -14,16 +18,12 @@
 
 .field private mAutoScaleTag:I
 
-.field private mDefaultDensity:F
-
-.field private mDefaultScaleDensity:F
-
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 24
+    .line 26
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -38,73 +38,73 @@
 
     sput-object v0, Lcom/miui/home/launcher/widget/device/LauncherWidgetLayoutFactory;->DM:Landroid/util/DisplayMetrics;
 
+    .line 28
+    sget-object v0, Lcom/miui/home/launcher/widget/device/LauncherWidgetLayoutFactory;->DM:Landroid/util/DisplayMetrics;
+
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+
+    sput v0, Lcom/miui/home/launcher/widget/device/LauncherWidgetLayoutFactory;->DEFAULT_DENSITY:F
+
+    .line 29
+    sget-object v0, Lcom/miui/home/launcher/widget/device/LauncherWidgetLayoutFactory;->DM:Landroid/util/DisplayMetrics;
+
+    iget v0, v0, Landroid/util/DisplayMetrics;->scaledDensity:F
+
+    sput v0, Lcom/miui/home/launcher/widget/device/LauncherWidgetLayoutFactory;->DEFAULT_SCALED_DENSITY:F
+
     return-void
 .end method
 
 .method public constructor <init>()V
     .locals 1
 
-    .line 32
+    .line 34
     invoke-direct {p0}, Lcom/miui/miuiwidget/MIUIWidgetLayoutFactory;-><init>()V
 
-    .line 26
-    sget-object v0, Lcom/miui/home/launcher/widget/device/LauncherWidgetLayoutFactory;->DM:Landroid/util/DisplayMetrics;
+    const v0, 0x7f0a021e
 
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    iput v0, p0, Lcom/miui/home/launcher/widget/device/LauncherWidgetLayoutFactory;->mDefaultDensity:F
-
-    .line 27
-    sget-object v0, Lcom/miui/home/launcher/widget/device/LauncherWidgetLayoutFactory;->DM:Landroid/util/DisplayMetrics;
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->scaledDensity:F
-
-    iput v0, p0, Lcom/miui/home/launcher/widget/device/LauncherWidgetLayoutFactory;->mDefaultScaleDensity:F
-
-    const v0, 0x7f0a0222
-
-    .line 33
+    .line 35
     iput v0, p0, Lcom/miui/home/launcher/widget/device/LauncherWidgetLayoutFactory;->mAutoScaleTag:I
 
-    const v0, 0x7f0a0221
+    const v0, 0x7f0a021d
 
-    .line 34
+    .line 36
     iput v0, p0, Lcom/miui/home/launcher/widget/device/LauncherWidgetLayoutFactory;->mAutoScaleFactorTag:I
 
     return-void
 .end method
 
-.method private scaleDensity(Landroid/util/DisplayMetrics;F)V
+.method public static scaleDensity(Landroid/util/DisplayMetrics;F)V
     .locals 2
 
-    .line 74
-    iget v0, p1, Landroid/util/DisplayMetrics;->density:F
+    .line 76
+    iget v0, p0, Landroid/util/DisplayMetrics;->density:F
 
-    iget v1, p0, Lcom/miui/home/launcher/widget/device/LauncherWidgetLayoutFactory;->mDefaultDensity:F
+    sget v1, Lcom/miui/home/launcher/widget/device/LauncherWidgetLayoutFactory;->DEFAULT_DENSITY:F
 
     cmpl-float v0, v0, v1
 
     if-nez v0, :cond_0
 
-    mul-float/2addr v1, p2
-
-    .line 75
-    iput v1, p1, Landroid/util/DisplayMetrics;->density:F
+    mul-float/2addr v1, p1
 
     .line 77
-    :cond_0
-    iget v0, p1, Landroid/util/DisplayMetrics;->scaledDensity:F
+    iput v1, p0, Landroid/util/DisplayMetrics;->density:F
 
-    iget v1, p0, Lcom/miui/home/launcher/widget/device/LauncherWidgetLayoutFactory;->mDefaultScaleDensity:F
+    .line 79
+    :cond_0
+    iget v0, p0, Landroid/util/DisplayMetrics;->scaledDensity:F
+
+    sget v1, Lcom/miui/home/launcher/widget/device/LauncherWidgetLayoutFactory;->DEFAULT_SCALED_DENSITY:F
 
     cmpl-float v0, v0, v1
 
     if-nez v0, :cond_1
 
-    mul-float/2addr v1, p2
+    mul-float/2addr v1, p1
 
-    .line 78
-    iput v1, p1, Landroid/util/DisplayMetrics;->scaledDensity:F
+    .line 80
+    iput v1, p0, Landroid/util/DisplayMetrics;->scaledDensity:F
 
     :cond_1
     return-void
@@ -115,7 +115,7 @@
 .method public onCreateView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/view/View;
     .locals 2
 
-    .line 40
+    .line 42
     invoke-virtual {p3}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
@@ -132,38 +132,13 @@
 
     return-object p1
 
-    .line 44
+    .line 46
     :cond_0
     invoke-super {p0, p1, p2, p3, p4}, Lcom/miui/miuiwidget/MIUIWidgetLayoutFactory;->onCreateView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/view/View;
 
     move-result-object p1
 
     return-object p1
-.end method
-
-.method public onDensityChanged(Landroid/content/Context;)V
-    .locals 1
-
-    .line 91
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p1
-
-    .line 92
-    iget v0, p1, Landroid/util/DisplayMetrics;->density:F
-
-    iput v0, p0, Lcom/miui/home/launcher/widget/device/LauncherWidgetLayoutFactory;->mDefaultDensity:F
-
-    .line 93
-    iget p1, p1, Landroid/util/DisplayMetrics;->scaledDensity:F
-
-    iput p1, p0, Lcom/miui/home/launcher/widget/device/LauncherWidgetLayoutFactory;->mDefaultScaleDensity:F
-
-    return-void
 .end method
 
 .method protected onPostCreateView(Landroid/view/View;Landroid/view/View;)V
@@ -173,7 +148,7 @@
 
     if-eqz p2, :cond_0
 
-    .line 85
+    .line 87
     iget v0, p0, Lcom/miui/home/launcher/widget/device/LauncherWidgetLayoutFactory;->mAutoScaleTag:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
@@ -182,7 +157,7 @@
 
     invoke-virtual {p2, v0, v1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 
-    .line 86
+    .line 88
     iget v0, p0, Lcom/miui/home/launcher/widget/device/LauncherWidgetLayoutFactory;->mAutoScaleFactorTag:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
@@ -202,7 +177,7 @@
 
     return-void
 
-    .line 53
+    .line 55
     :cond_0
     iget p2, p0, Lcom/miui/home/launcher/widget/device/LauncherWidgetLayoutFactory;->mAutoScaleTag:I
 
@@ -212,7 +187,7 @@
 
     const-string p4, "LauncherWidgetLayoutFactory"
 
-    .line 54
+    .line 56
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -239,7 +214,7 @@
 
     const/4 p4, 0x0
 
-    .line 55
+    .line 57
     invoke-static {p4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p4
@@ -253,9 +228,9 @@
     return-void
 
     :cond_1
-    const p2, 0x7f0701c2
+    const p2, 0x7f0701bf
 
-    .line 60
+    .line 62
     invoke-virtual {p3}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object p4
@@ -268,9 +243,9 @@
 
     if-eqz p4, :cond_2
 
-    const p2, 0x7f070576
+    const p2, 0x7f070571
 
-    .line 63
+    .line 65
     :cond_2
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
@@ -284,7 +259,7 @@
 
     move-result p2
 
-    .line 64
+    .line 66
     iget p4, p0, Lcom/miui/home/launcher/widget/device/LauncherWidgetLayoutFactory;->mAutoScaleFactorTag:I
 
     invoke-static {p2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -293,7 +268,7 @@
 
     invoke-virtual {p1, p4, v0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 
-    .line 65
+    .line 67
     invoke-virtual {p3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -302,7 +277,7 @@
 
     move-result-object p1
 
-    invoke-direct {p0, p1, p2}, Lcom/miui/home/launcher/widget/device/LauncherWidgetLayoutFactory;->scaleDensity(Landroid/util/DisplayMetrics;F)V
+    invoke-static {p1, p2}, Lcom/miui/home/launcher/widget/device/LauncherWidgetLayoutFactory;->scaleDensity(Landroid/util/DisplayMetrics;F)V
 
     return-void
 .end method

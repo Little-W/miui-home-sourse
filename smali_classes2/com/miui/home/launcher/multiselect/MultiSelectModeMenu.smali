@@ -172,7 +172,7 @@
     .line 28
     invoke-super {p0}, Landroid/widget/FrameLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a015a
+    const v0, 0x7f0a0157
 
     .line 29
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/multiselect/MultiSelectModeMenu;->findViewById(I)Landroid/view/View;
@@ -183,7 +183,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/multiselect/MultiSelectModeMenu;->mFinishContainer:Lcom/miui/home/launcher/multiselect/FinishContainer;
 
-    const v0, 0x7f0a0139
+    const v0, 0x7f0a0138
 
     .line 30
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/multiselect/MultiSelectModeMenu;->findViewById(I)Landroid/view/View;

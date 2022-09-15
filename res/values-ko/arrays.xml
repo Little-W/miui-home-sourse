@@ -49,13 +49,6 @@
         <item>기본값</item>
         <item>클래식</item>
     </string-array>
-    <string-array name="monochrome_color_entries">
-        <item>기본</item>
-        <item>파란색</item>
-        <item>초록색</item>
-        <item>보라색</item>
-        <item>갈색</item>
-    </string-array>
     <string-array name="transformation_entries">
         <item>슬라이드</item>
         <item>크로스페이드</item>

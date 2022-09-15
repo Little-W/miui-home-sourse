@@ -234,7 +234,7 @@
 
     move-result-object p2
 
-    const p3, 0x7f0d0079
+    const p3, 0x7f0d0078
 
     const/4 v0, 0x0
 
@@ -246,7 +246,7 @@
     move-result-object p2
 
     :goto_0
-    const p3, 0x7f0a0389
+    const p3, 0x7f0a0385
 
     .line 81
     invoke-virtual {p2, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -558,7 +558,7 @@
 
     iget-object v2, p0, Lcom/miui/home/launcher/upsidescene/AppsSelectView;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f1101f8
+    const v3, 0x7f1101f7
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 

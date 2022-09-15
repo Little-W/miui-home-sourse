@@ -8,13 +8,9 @@
 
 
 # instance fields
-.field protected mBoundsOnScreen:Landroid/graphics/Rect;
-
 .field private mIsDrawingInThumbnailView:Z
 
 .field protected mIsEditMode:Z
-
-.field protected mLocationOnScreen:[I
 
 .field protected mNoWordAdapter:Lcom/miui/home/launcher/util/noword/NoWordWidgetAdapter;
 
@@ -27,23 +23,23 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .line 37
+    .line 35
     invoke-direct {p0, p1}, Lcom/miui/launcher/views/LauncherRelativeLayout;-><init>(Landroid/content/Context;)V
 
     const-wide/16 v0, 0x0
 
-    .line 28
+    .line 26
     iput-wide v0, p0, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;->mStartShowingTime:J
 
     const/4 p1, 0x0
 
-    .line 30
+    .line 28
     iput-boolean p1, p0, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;->mVisible:Z
 
-    .line 31
+    .line 29
     iput-boolean p1, p0, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;->mIsEditMode:Z
 
-    .line 34
+    .line 32
     new-instance p1, Lcom/miui/home/launcher/util/noword/NoWordWidgetAdapter;
 
     invoke-direct {p1, p0}, Lcom/miui/home/launcher/util/noword/NoWordWidgetAdapter;-><init>(Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;)V
@@ -58,7 +54,7 @@
 
     const/4 v0, 0x0
 
-    .line 41
+    .line 39
     invoke-direct {p0, p1, p2, v0}, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
@@ -67,23 +63,23 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
-    .line 45
+    .line 43
     invoke-direct {p0, p1, p2, p3}, Lcom/miui/launcher/views/LauncherRelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     const-wide/16 p1, 0x0
 
-    .line 28
+    .line 26
     iput-wide p1, p0, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;->mStartShowingTime:J
 
     const/4 p1, 0x0
 
-    .line 30
+    .line 28
     iput-boolean p1, p0, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;->mVisible:Z
 
-    .line 31
+    .line 29
     iput-boolean p1, p0, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;->mIsEditMode:Z
 
-    .line 34
+    .line 32
     new-instance p1, Lcom/miui/home/launcher/util/noword/NoWordWidgetAdapter;
 
     invoke-direct {p1, p0}, Lcom/miui/home/launcher/util/noword/NoWordWidgetAdapter;-><init>(Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;)V
@@ -96,7 +92,7 @@
 .method private trackExposeEvent()V
     .locals 6
 
-    .line 74
+    .line 72
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -117,7 +113,7 @@
 
     if-ltz v2, :cond_0
 
-    .line 76
+    .line 74
     invoke-virtual {p0}, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;->getTag()Ljava/lang/Object;
 
     move-result-object v2
@@ -130,7 +126,7 @@
 
     if-nez v2, :cond_0
 
-    .line 77
+    .line 75
     invoke-virtual {p0}, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;->getContext()Landroid/content/Context;
 
     move-result-object v2
@@ -143,7 +139,7 @@
 
     invoke-static {v2, v3, v0, v1}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackExposeMiuiWidget(Landroid/content/Context;Lcom/miui/home/launcher/MIUIWidgetBasicInfo;J)V
 
-    .line 79
+    .line 77
     :cond_0
     iput-wide v4, p0, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;->mStartShowingTime:J
 
@@ -155,7 +151,7 @@
 .method protected drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
     .locals 2
 
-    .line 116
+    .line 114
     iget-object v0, p0, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;->mNoWordAdapter:Lcom/miui/home/launcher/util/noword/NoWordWidgetAdapter;
 
     invoke-virtual {v0, p2}, Lcom/miui/home/launcher/util/noword/NoWordWidgetAdapter;->preDrawChild(Landroid/view/View;)I
@@ -166,12 +162,12 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 119
+    .line 117
     invoke-super {p0, p1, p2, p3, p4}, Lcom/miui/launcher/views/LauncherRelativeLayout;->drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
 
     move-result p2
 
-    .line 120
+    .line 118
     iget-object p3, p0, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;->mNoWordAdapter:Lcom/miui/home/launcher/util/noword/NoWordWidgetAdapter;
 
     iget-boolean p4, p0, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;->mIsDrawingInThumbnailView:Z
@@ -187,45 +183,6 @@
     return p2
 .end method
 
-.method protected getBoundsOnScreenInternal(Lcom/miui/home/launcher/HostViewContainer;)V
-    .locals 2
-
-    .line 133
-    iget-object v0, p0, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;->mBoundsOnScreen:Landroid/graphics/Rect;
-
-    if-nez v0, :cond_0
-
-    .line 134
-    new-instance v0, Landroid/graphics/Rect;
-
-    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
-
-    iput-object v0, p0, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;->mBoundsOnScreen:Landroid/graphics/Rect;
-
-    .line 136
-    :cond_0
-    iget-object v0, p0, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;->mLocationOnScreen:[I
-
-    if-nez v0, :cond_1
-
-    const/4 v0, 0x2
-
-    .line 137
-    new-array v0, v0, [I
-
-    iput-object v0, p0, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;->mLocationOnScreen:[I
-
-    .line 139
-    :cond_1
-    iget-object v0, p0, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;->mLocationOnScreen:[I
-
-    iget-object v1, p0, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;->mBoundsOnScreen:Landroid/graphics/Rect;
-
-    invoke-interface {p1, v0, v1}, Lcom/miui/home/launcher/HostViewContainer;->getHostViewBoundsOnScreen([ILandroid/graphics/Rect;)V
-
-    return-void
-.end method
-
 .method public getTitleView()Lcom/miui/home/launcher/TitleTextView;
     .locals 1
 
@@ -237,7 +194,7 @@
 .method public onDestroy()V
     .locals 0
 
-    .line 56
+    .line 54
     invoke-direct {p0}, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;->trackExposeEvent()V
 
     return-void
@@ -246,10 +203,10 @@
 .method protected onFinishInflate()V
     .locals 1
 
-    .line 110
+    .line 108
     invoke-super {p0}, Lcom/miui/launcher/views/LauncherRelativeLayout;->onFinishInflate()V
 
-    .line 111
+    .line 109
     iget-object v0, p0, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;->mNoWordAdapter:Lcom/miui/home/launcher/util/noword/NoWordWidgetAdapter;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/util/noword/NoWordWidgetAdapter;->onBindElementFinishInflate()V
@@ -262,22 +219,22 @@
 
     const/4 v0, 0x0
 
-    .line 67
+    .line 65
     iput-boolean v0, p0, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;->mVisible:Z
 
-    .line 68
+    .line 66
     invoke-virtual {p0}, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/miui/home/launcher/ItemInfo;
 
-    .line 69
+    .line 67
     invoke-direct {p0}, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;->trackExposeEvent()V
 
     const-string v1, "Launcher.widget"
 
-    .line 70
+    .line 68
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -310,7 +267,7 @@
 .method public onResume()V
     .locals 2
 
-    .line 49
+    .line 47
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -325,17 +282,17 @@
 
     const/4 v0, 0x1
 
-    .line 60
+    .line 58
     iput-boolean v0, p0, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;->mVisible:Z
 
-    .line 61
+    .line 59
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;->mStartShowingTime:J
 
-    .line 62
+    .line 60
     invoke-virtual {p0}, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;->getTag()Ljava/lang/Object;
 
     move-result-object v0
@@ -344,7 +301,7 @@
 
     const-string v1, "Launcher.widget"
 
-    .line 63
+    .line 61
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -371,23 +328,23 @@
 .method public onWallpaperColorChanged()V
     .locals 4
 
-    .line 88
+    .line 86
     invoke-virtual {p0}, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;->getTitleView()Lcom/miui/home/launcher/TitleTextView;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 90
+    .line 88
     iget-object v1, p0, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f1205de
+    const v2, 0x7f1205da
 
-    const v3, 0x7f1205e1
+    const v3, 0x7f1205dd
 
     invoke-static {v1, v0, v2, v3}, Lcom/miui/home/launcher/common/Utilities;->adaptTitleStyleToWallpaper(Landroid/content/Context;Landroid/widget/TextView;II)V
 
-    .line 91
+    .line 89
     invoke-virtual {v0}, Lcom/miui/home/launcher/TitleTextView;->invalidate()V
 
     :cond_0
@@ -399,35 +356,35 @@
 
     if-eqz p1, :cond_0
 
-    .line 97
+    .line 95
     iget-boolean p2, p0, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;->mVisible:Z
 
     if-eqz p2, :cond_0
 
-    .line 98
+    .line 96
     invoke-direct {p0}, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;->trackExposeEvent()V
 
     goto :goto_0
 
-    .line 100
+    .line 98
     :cond_0
     iget-boolean p2, p0, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;->mVisible:Z
 
     if-eqz p2, :cond_1
 
-    .line 101
+    .line 99
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;->mStartShowingTime:J
 
-    .line 104
+    .line 102
     :cond_1
     :goto_0
     iput-boolean p1, p0, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;->mIsEditMode:Z
 
-    .line 105
+    .line 103
     iget-object p2, p0, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;->mNoWordAdapter:Lcom/miui/home/launcher/util/noword/NoWordWidgetAdapter;
 
     invoke-virtual {p2, p1}, Lcom/miui/home/launcher/util/noword/NoWordWidgetAdapter;->onEditModeChange(Z)V
@@ -438,7 +395,7 @@
 .method public setIsDrawingInThumbnailView(Z)V
     .locals 0
 
-    .line 126
+    .line 124
     iput-boolean p1, p0, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;->mIsDrawingInThumbnailView:Z
 
     return-void

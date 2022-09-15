@@ -880,7 +880,7 @@
 
     move-result-object p1
 
-    const v3, 0x7f080645
+    const v3, 0x7f080642
 
     .line 557
     invoke-virtual {p1, v3}, Lcom/miui/home/launcher/Application;->getDrawable(I)Landroid/graphics/drawable/Drawable;

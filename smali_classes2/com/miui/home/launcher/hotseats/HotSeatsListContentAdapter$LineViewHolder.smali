@@ -18,17 +18,17 @@
 .method public constructor <init>(Lcom/miui/home/launcher/hotseats/FlexboxItemContainer;Landroid/view/View;)V
     .locals 2
 
-    .line 267
+    .line 261
     invoke-direct {p0, p1, p2}, Lcom/miui/home/launcher/hotseats/HotSeatsListContentAdapter$ViewHolder;-><init>(Lcom/miui/home/launcher/hotseats/FlexboxItemContainer;Landroid/view/View;)V
 
-    .line 268
+    .line 262
     invoke-virtual {p1}, Lcom/miui/home/launcher/hotseats/FlexboxItemContainer;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p2
 
     check-cast p2, Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutParams;
 
-    .line 269
+    .line 263
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getHotSeatsListCellWidth()I
 
     move-result v0
@@ -41,24 +41,24 @@
 
     iput v0, p2, Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutParams;->width:I
 
-    .line 270
+    .line 264
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getHotSeatsCellHeight()I
 
     move-result v0
 
     iput v0, p2, Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutParams;->height:I
 
-    .line 271
+    .line 265
     iget v0, p2, Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutParams;->width:I
 
     invoke-virtual {p2, v0}, Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutParams;->setMaxWidth(I)V
 
-    .line 272
+    .line 266
     iget v0, p2, Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutParams;->width:I
 
     invoke-virtual {p2, v0}, Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutParams;->setMinWidth(I)V
 
-    .line 274
+    .line 268
     iget p2, p2, Lcom/google/android/flexbox/FlexboxLayoutManager$LayoutParams;->width:I
 
     int-to-float p2, p2
@@ -69,7 +69,7 @@
 
     invoke-virtual {p1, p2}, Lcom/miui/home/launcher/hotseats/FlexboxItemContainer;->setPivotX(F)V
 
-    .line 275
+    .line 269
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getHotSeatsCellContentHeight()I
 
     move-result p2

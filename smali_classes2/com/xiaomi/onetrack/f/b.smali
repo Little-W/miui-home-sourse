@@ -403,7 +403,7 @@
     .line 316
     sget-object p2, Lcom/xiaomi/onetrack/f/b$b;->w:Ljava/lang/String;
 
-    const-string p5, "2.0.3"
+    const-string p5, "2.0.1"
 
     invoke-virtual {v0, p2, p5}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
@@ -799,7 +799,7 @@
     .line 254
     sget-object p0, Lcom/xiaomi/onetrack/f/b$b;->w:Ljava/lang/String;
 
-    const-string p2, "2.0.3"
+    const-string p2, "2.0.1"
 
     invoke-virtual {v0, p0, p2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 

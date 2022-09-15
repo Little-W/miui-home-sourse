@@ -37,7 +37,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/uninstall/UninstallController;Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 154
+    .line 155
     iput-object p1, p0, Lcom/miui/home/launcher/uninstall/UninstallController$1;->this$0:Lcom/miui/home/launcher/uninstall/UninstallController;
 
     iput-object p2, p0, Lcom/miui/home/launcher/uninstall/UninstallController$1;->val$launcher:Lcom/miui/home/launcher/Launcher;
@@ -50,7 +50,7 @@
 .method public static synthetic lambda$accept$0(Lcom/miui/home/launcher/uninstall/UninstallController$1;Ljava/util/List;Lcom/miui/home/launcher/Launcher;)V
     .locals 1
 
-    .line 158
+    .line 159
     iget-object v0, p0, Lcom/miui/home/launcher/uninstall/UninstallController$1;->this$0:Lcom/miui/home/launcher/uninstall/UninstallController;
 
     invoke-virtual {v0, p1, p2}, Lcom/miui/home/launcher/uninstall/UninstallController;->hideApps(Ljava/util/List;Lcom/miui/home/launcher/Launcher;)V
@@ -63,7 +63,7 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 154
+    .line 155
     check-cast p1, Ljava/util/List;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/uninstall/UninstallController$1;->accept(Ljava/util/List;)V
@@ -82,7 +82,7 @@
         }
     .end annotation
 
-    .line 157
+    .line 158
     iget-object v0, p0, Lcom/miui/home/launcher/uninstall/UninstallController$1;->this$0:Lcom/miui/home/launcher/uninstall/UninstallController;
 
     invoke-static {v0}, Lcom/miui/home/launcher/uninstall/UninstallController;->access$100(Lcom/miui/home/launcher/uninstall/UninstallController;)Lcom/miui/home/launcher/Launcher;

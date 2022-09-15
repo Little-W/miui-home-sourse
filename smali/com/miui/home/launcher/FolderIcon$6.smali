@@ -38,7 +38,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/FolderIcon;ILcom/miui/home/launcher/ShortcutInfo;)V
     .locals 0
 
-    .line 335
+    .line 334
     iput-object p1, p0, Lcom/miui/home/launcher/FolderIcon$6;->this$0:Lcom/miui/home/launcher/FolderIcon;
 
     iput p2, p0, Lcom/miui/home/launcher/FolderIcon$6;->val$currentIndex:I
@@ -55,7 +55,7 @@
 .method public accept(Landroid/graphics/drawable/Drawable;)V
     .locals 2
 
-    .line 338
+    .line 337
     iget-object v0, p0, Lcom/miui/home/launcher/FolderIcon$6;->this$0:Lcom/miui/home/launcher/FolderIcon;
 
     invoke-static {v0}, Lcom/miui/home/launcher/FolderIcon;->access$400(Lcom/miui/home/launcher/FolderIcon;)[Lcom/miui/home/launcher/FolderIcon$PreviewIconView;
@@ -68,7 +68,7 @@
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/FolderIcon$PreviewIconView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 339
+    .line 338
     iget-object p1, p0, Lcom/miui/home/launcher/FolderIcon$6;->this$0:Lcom/miui/home/launcher/FolderIcon;
 
     invoke-static {p1}, Lcom/miui/home/launcher/FolderIcon;->access$400(Lcom/miui/home/launcher/FolderIcon;)[Lcom/miui/home/launcher/FolderIcon$PreviewIconView;
@@ -83,7 +83,7 @@
 
     iput-object v0, p1, Lcom/miui/home/launcher/FolderIcon$PreviewIconView;->mBuddyInfo:Lcom/miui/home/launcher/ShortcutInfo;
 
-    .line 340
+    .line 339
     iget-object p1, p0, Lcom/miui/home/launcher/FolderIcon$6;->this$0:Lcom/miui/home/launcher/FolderIcon;
 
     invoke-static {p1}, Lcom/miui/home/launcher/FolderIcon;->access$400(Lcom/miui/home/launcher/FolderIcon;)[Lcom/miui/home/launcher/FolderIcon$PreviewIconView;
@@ -100,7 +100,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 341
+    .line 340
     iget-object p1, p0, Lcom/miui/home/launcher/FolderIcon$6;->this$0:Lcom/miui/home/launcher/FolderIcon;
 
     invoke-static {p1}, Lcom/miui/home/launcher/FolderIcon;->access$400(Lcom/miui/home/launcher/FolderIcon;)[Lcom/miui/home/launcher/FolderIcon$PreviewIconView;
@@ -120,7 +120,7 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 335
+    .line 334
     check-cast p1, Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/FolderIcon$6;->accept(Landroid/graphics/drawable/Drawable;)V

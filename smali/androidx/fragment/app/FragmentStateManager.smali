@@ -1377,7 +1377,7 @@
     goto :goto_0
 
     :catch_0
-    const-string v0, "unknown"
+    const-string/jumbo v0, "unknown"
 
     .line 512
     :goto_0

@@ -15,7 +15,7 @@
 .method constructor <init>(Lcom/xiaomi/onetrack/api/h;Z)V
     .locals 0
 
-    .line 528
+    .line 526
     iput-object p1, p0, Lcom/xiaomi/onetrack/api/q;->b:Lcom/xiaomi/onetrack/api/h;
 
     iput-boolean p2, p0, Lcom/xiaomi/onetrack/api/q;->a:Z
@@ -30,27 +30,27 @@
 .method public run()V
     .locals 5
 
-    .line 532
+    .line 530
     :try_start_0
     invoke-static {}, Lcom/xiaomi/onetrack/util/aa;->z()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 533
+    .line 531
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 534
+    .line 532
     new-instance v1, Lorg/json/JSONObject;
 
     invoke-direct {v1, v0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
     const-string v0, "B"
 
-    .line 535
+    .line 533
     invoke-virtual {v1, v0}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
 
     move-result-object v0
@@ -63,10 +63,10 @@
 
     move-result-object v0
 
-    .line 536
+    .line 534
     iget-object v2, p0, Lcom/xiaomi/onetrack/api/q;->b:Lcom/xiaomi/onetrack/api/h;
 
-    invoke-static {v2}, Lcom/xiaomi/onetrack/api/h;->g(Lcom/xiaomi/onetrack/api/h;)Lcom/xiaomi/onetrack/api/e;
+    invoke-static {v2}, Lcom/xiaomi/onetrack/api/h;->f(Lcom/xiaomi/onetrack/api/h;)Lcom/xiaomi/onetrack/api/e;
 
     move-result-object v2
 
@@ -84,7 +84,7 @@
 
     invoke-interface {v2, v3, v0}, Lcom/xiaomi/onetrack/api/e;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 537
+    .line 535
     sget-boolean v0, Lcom/xiaomi/onetrack/util/p;->a:Z
 
     if-eqz v0, :cond_0
@@ -93,13 +93,13 @@
 
     const-string v1, "trackPageEndAuto"
 
-    .line 538
+    .line 536
     invoke-static {v0, v1}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     const-string v0, ""
 
-    .line 540
+    .line 538
     invoke-static {v0}, Lcom/xiaomi/onetrack/util/aa;->i(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -111,7 +111,7 @@
 
     const-string v1, "OneTrackImp"
 
-    .line 543
+    .line 541
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V

@@ -4,28 +4,21 @@
 
 
 # static fields
-.field private static sCurrentSize:Landroid/graphics/Point;
-
 .field private static sScreenRealSize:Landroid/graphics/Point;
+
+.field private static sWindowManager:Landroid/view/WindowManager;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 36
+    .line 35
     new-instance v0, Landroid/graphics/Point;
 
     invoke-direct {v0}, Landroid/graphics/Point;-><init>()V
 
     sput-object v0, Lmiuix/core/util/screenutils/SplitScreenModeHelper;->sScreenRealSize:Landroid/graphics/Point;
-
-    .line 37
-    new-instance v0, Landroid/graphics/Point;
-
-    invoke-direct {v0}, Landroid/graphics/Point;-><init>()V
-
-    sput-object v0, Lmiuix/core/util/screenutils/SplitScreenModeHelper;->sCurrentSize:Landroid/graphics/Point;
 
     return-void
 .end method
@@ -33,7 +26,7 @@
 .method public static detectScreenMode(Landroid/content/Context;)I
     .locals 0
 
-    .line 63
+    .line 61
     invoke-static {p0}, Lmiuix/core/util/screenutils/SplitScreenModeHelper;->detectWindowInfo(Landroid/content/Context;)Lmiuix/core/util/screenutils/MultiWindowModeHelper$WindowInfo;
 
     move-result-object p0
@@ -44,143 +37,148 @@
 .end method
 
 .method public static detectWindowInfo(Landroid/content/Context;)Lmiuix/core/util/screenutils/MultiWindowModeHelper$WindowInfo;
-    .locals 3
+    .locals 4
 
-    .line 68
+    .line 66
     new-instance v0, Lmiuix/core/util/screenutils/MultiWindowModeHelper$WindowInfo;
 
     invoke-direct {v0}, Lmiuix/core/util/screenutils/MultiWindowModeHelper$WindowInfo;-><init>()V
 
-    .line 69
-    sget-object v1, Lmiuix/core/util/screenutils/SplitScreenModeHelper;->sScreenRealSize:Landroid/graphics/Point;
+    .line 67
+    invoke-static {p0}, Lmiuix/core/util/screenutils/SplitScreenModeHelper;->getWindowManager(Landroid/content/Context;)Landroid/view/WindowManager;
 
-    sget-object v2, Lmiuix/core/util/screenutils/SplitScreenModeHelper;->sCurrentSize:Landroid/graphics/Point;
+    move-result-object v1
 
-    invoke-static {p0, v1, v2}, Lmiuix/core/util/WindowUtils;->getScreenAndWindowSize(Landroid/content/Context;Landroid/graphics/Point;Landroid/graphics/Point;)V
+    invoke-interface {v1}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
-    .line 72
+    move-result-object v1
+
+    sget-object v2, Lmiuix/core/util/screenutils/SplitScreenModeHelper;->sScreenRealSize:Landroid/graphics/Point;
+
+    invoke-virtual {v1, v2}, Landroid/view/Display;->getRealSize(Landroid/graphics/Point;)V
+
+    .line 68
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p0
+
+    .line 71
     invoke-static {}, Lmiuix/core/util/screenutils/SplitScreenModeHelper;->isLandscape()Z
-
-    move-result p0
-
-    const/4 v1, 0x0
-
-    if-eqz p0, :cond_0
-
-    .line 73
-    sget-object p0, Lmiuix/core/util/screenutils/SplitScreenModeHelper;->sCurrentSize:Landroid/graphics/Point;
-
-    iget p0, p0, Landroid/graphics/Point;->x:I
-
-    int-to-float p0, p0
-
-    sget-object v2, Lmiuix/core/util/screenutils/SplitScreenModeHelper;->sScreenRealSize:Landroid/graphics/Point;
-
-    iget v2, v2, Landroid/graphics/Point;->x:I
-
-    int-to-float v2, v2
-
-    add-float/2addr v2, v1
-
-    div-float/2addr p0, v2
-
-    goto :goto_0
-
-    .line 76
-    :cond_0
-    sget-object p0, Lmiuix/core/util/screenutils/SplitScreenModeHelper;->sCurrentSize:Landroid/graphics/Point;
-
-    iget p0, p0, Landroid/graphics/Point;->x:I
-
-    int-to-float p0, p0
-
-    sget-object v2, Lmiuix/core/util/screenutils/SplitScreenModeHelper;->sScreenRealSize:Landroid/graphics/Point;
-
-    iget v2, v2, Landroid/graphics/Point;->x:I
-
-    int-to-float v2, v2
-
-    add-float/2addr v2, v1
-
-    div-float/2addr p0, v2
-
-    const/high16 v2, 0x3f800000    # 1.0f
-
-    cmpl-float v2, p0, v2
-
-    if-nez v2, :cond_1
-
-    .line 78
-    sget-object p0, Lmiuix/core/util/screenutils/SplitScreenModeHelper;->sCurrentSize:Landroid/graphics/Point;
-
-    iget p0, p0, Landroid/graphics/Point;->y:I
-
-    int-to-float p0, p0
-
-    sget-object v2, Lmiuix/core/util/screenutils/SplitScreenModeHelper;->sScreenRealSize:Landroid/graphics/Point;
-
-    iget v2, v2, Landroid/graphics/Point;->y:I
-
-    int-to-float v2, v2
-
-    add-float/2addr v2, v1
-
-    div-float/2addr p0, v2
-
-    .line 83
-    :cond_1
-    :goto_0
-    sget-object v2, Lmiuix/core/util/screenutils/SplitScreenModeHelper;->sCurrentSize:Landroid/graphics/Point;
-
-    iget v2, v2, Landroid/graphics/Point;->x:I
-
-    iput v2, v0, Lmiuix/core/util/screenutils/MultiWindowModeHelper$WindowInfo;->windowWidth:I
-
-    .line 84
-    sget-object v2, Lmiuix/core/util/screenutils/SplitScreenModeHelper;->sCurrentSize:Landroid/graphics/Point;
-
-    iget v2, v2, Landroid/graphics/Point;->y:I
-
-    iput v2, v0, Lmiuix/core/util/screenutils/MultiWindowModeHelper$WindowInfo;->windowHeight:I
-
-    const v2, 0x3ecccccd    # 0.4f
-
-    .line 85
-    invoke-static {p0, v1, v2}, Lmiuix/core/util/screenutils/SplitScreenModeHelper;->isInRegion(FFF)Z
 
     move-result v1
 
-    if-eqz v1, :cond_2
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_0
+
+    .line 72
+    iget v1, p0, Landroid/util/DisplayMetrics;->widthPixels:I
+
+    int-to-float v1, v1
+
+    sget-object v3, Lmiuix/core/util/screenutils/SplitScreenModeHelper;->sScreenRealSize:Landroid/graphics/Point;
+
+    iget v3, v3, Landroid/graphics/Point;->x:I
+
+    int-to-float v3, v3
+
+    add-float/2addr v3, v2
+
+    div-float/2addr v1, v3
+
+    goto :goto_0
+
+    .line 75
+    :cond_0
+    iget v1, p0, Landroid/util/DisplayMetrics;->widthPixels:I
+
+    int-to-float v1, v1
+
+    sget-object v3, Lmiuix/core/util/screenutils/SplitScreenModeHelper;->sScreenRealSize:Landroid/graphics/Point;
+
+    iget v3, v3, Landroid/graphics/Point;->x:I
+
+    int-to-float v3, v3
+
+    add-float/2addr v3, v2
+
+    div-float/2addr v1, v3
+
+    const/high16 v3, 0x3f800000    # 1.0f
+
+    cmpl-float v3, v1, v3
+
+    if-nez v3, :cond_1
+
+    .line 77
+    iget v1, p0, Landroid/util/DisplayMetrics;->heightPixels:I
+
+    int-to-float v1, v1
+
+    sget-object v3, Lmiuix/core/util/screenutils/SplitScreenModeHelper;->sScreenRealSize:Landroid/graphics/Point;
+
+    iget v3, v3, Landroid/graphics/Point;->y:I
+
+    int-to-float v3, v3
+
+    add-float/2addr v3, v2
+
+    div-float/2addr v1, v3
+
+    .line 82
+    :cond_1
+    :goto_0
+    iget v3, p0, Landroid/util/DisplayMetrics;->widthPixels:I
+
+    iput v3, v0, Lmiuix/core/util/screenutils/MultiWindowModeHelper$WindowInfo;->windowWidth:I
+
+    .line 83
+    iget p0, p0, Landroid/util/DisplayMetrics;->heightPixels:I
+
+    iput p0, v0, Lmiuix/core/util/screenutils/MultiWindowModeHelper$WindowInfo;->windowHeight:I
+
+    const p0, 0x3ecccccd    # 0.4f
+
+    .line 84
+    invoke-static {v1, v2, p0}, Lmiuix/core/util/screenutils/SplitScreenModeHelper;->isInRegion(FFF)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
 
     const/16 p0, 0x1001
 
-    .line 86
+    .line 85
     iput p0, v0, Lmiuix/core/util/screenutils/MultiWindowModeHelper$WindowInfo;->windowMode:I
 
     goto :goto_1
 
     :cond_2
-    const v1, 0x3f19999a    # 0.6f
+    const v2, 0x3f19999a    # 0.6f
 
-    .line 87
-    invoke-static {p0, v2, v1}, Lmiuix/core/util/screenutils/SplitScreenModeHelper;->isInRegion(FFF)Z
+    .line 86
+    invoke-static {v1, p0, v2}, Lmiuix/core/util/screenutils/SplitScreenModeHelper;->isInRegion(FFF)Z
 
-    move-result v2
+    move-result p0
 
-    if-eqz v2, :cond_3
+    if-eqz p0, :cond_3
 
     const/16 p0, 0x1002
 
-    .line 88
+    .line 87
     iput p0, v0, Lmiuix/core/util/screenutils/MultiWindowModeHelper$WindowInfo;->windowMode:I
 
     goto :goto_1
 
     :cond_3
-    const v2, 0x3f4ccccd    # 0.8f
+    const p0, 0x3f4ccccd    # 0.8f
 
-    .line 89
-    invoke-static {p0, v1, v2}, Lmiuix/core/util/screenutils/SplitScreenModeHelper;->isInRegion(FFF)Z
+    .line 88
+    invoke-static {v1, v2, p0}, Lmiuix/core/util/screenutils/SplitScreenModeHelper;->isInRegion(FFF)Z
 
     move-result p0
 
@@ -188,7 +186,7 @@
 
     const/16 p0, 0x1003
 
-    .line 90
+    .line 89
     iput p0, v0, Lmiuix/core/util/screenutils/MultiWindowModeHelper$WindowInfo;->windowMode:I
 
     goto :goto_1
@@ -196,11 +194,41 @@
     :cond_4
     const/16 p0, 0x1004
 
-    .line 92
+    .line 91
     iput p0, v0, Lmiuix/core/util/screenutils/MultiWindowModeHelper$WindowInfo;->windowMode:I
 
     :goto_1
     return-object v0
+.end method
+
+.method private static getWindowManager(Landroid/content/Context;)Landroid/view/WindowManager;
+    .locals 1
+
+    .line 38
+    sget-object v0, Lmiuix/core/util/screenutils/SplitScreenModeHelper;->sWindowManager:Landroid/view/WindowManager;
+
+    if-nez v0, :cond_0
+
+    .line 39
+    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object p0
+
+    const-string v0, "window"
+
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/view/WindowManager;
+
+    sput-object p0, Lmiuix/core/util/screenutils/SplitScreenModeHelper;->sWindowManager:Landroid/view/WindowManager;
+
+    .line 41
+    :cond_0
+    sget-object p0, Lmiuix/core/util/screenutils/SplitScreenModeHelper;->sWindowManager:Landroid/view/WindowManager;
+
+    return-object p0
 .end method
 
 .method private static isInRegion(FFF)Z
@@ -228,7 +256,7 @@
 .method private static isLandscape()Z
     .locals 2
 
-    .line 47
+    .line 45
     sget-object v0, Lmiuix/core/util/screenutils/SplitScreenModeHelper;->sScreenRealSize:Landroid/graphics/Point;
 
     iget v0, v0, Landroid/graphics/Point;->x:I

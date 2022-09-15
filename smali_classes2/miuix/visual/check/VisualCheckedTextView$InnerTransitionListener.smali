@@ -30,10 +30,10 @@
 .method constructor <init>(Lmiuix/visual/check/VisualCheckedTextView;)V
     .locals 1
 
-    .line 44
+    .line 42
     invoke-direct {p0}, Lmiuix/animation/listener/TransitionListener;-><init>()V
 
-    .line 45
+    .line 43
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -48,7 +48,7 @@
 .method public onUpdate(Ljava/lang/Object;Lmiuix/animation/property/IIntValueProperty;IFZ)V
     .locals 0
 
-    .line 51
+    .line 49
     iget-object p1, p0, Lmiuix/visual/check/VisualCheckedTextView$InnerTransitionListener;->mRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -59,7 +59,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 53
+    .line 51
     invoke-virtual {p1, p3}, Lmiuix/visual/check/VisualCheckedTextView;->setTextColor(I)V
 
     :cond_0

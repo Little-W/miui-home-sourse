@@ -13,7 +13,7 @@
 .method constructor <init>(Lcom/xiaomi/onetrack/api/h;)V
     .locals 0
 
-    .line 468
+    .line 466
     iput-object p1, p0, Lcom/xiaomi/onetrack/api/n;->a:Lcom/xiaomi/onetrack/api/h;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -26,27 +26,27 @@
 .method public run()V
     .locals 5
 
-    .line 472
+    .line 470
     :try_start_0
     invoke-static {}, Lcom/xiaomi/onetrack/util/aa;->t()J
 
     move-result-wide v0
 
-    .line 473
+    .line 471
     invoke-static {v0, v1}, Lcom/xiaomi/onetrack/util/ac;->d(J)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 474
+    .line 472
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     invoke-static {v0, v1}, Lcom/xiaomi/onetrack/util/aa;->m(J)V
 
-    .line 475
+    .line 473
     iget-object v0, p0, Lcom/xiaomi/onetrack/api/n;->a:Lcom/xiaomi/onetrack/api/h;
 
     const-string v1, "onetrack_dau"
@@ -55,7 +55,7 @@
 
     move-result-object v0
 
-    .line 476
+    .line 474
     iget-object v1, p0, Lcom/xiaomi/onetrack/api/n;->a:Lcom/xiaomi/onetrack/api/h;
 
     invoke-static {v1}, Lcom/xiaomi/onetrack/api/h;->a(Lcom/xiaomi/onetrack/api/h;)Lcom/xiaomi/onetrack/Configuration;
@@ -64,19 +64,19 @@
 
     iget-object v2, p0, Lcom/xiaomi/onetrack/api/n;->a:Lcom/xiaomi/onetrack/api/h;
 
-    invoke-static {v2}, Lcom/xiaomi/onetrack/api/h;->d(Lcom/xiaomi/onetrack/api/h;)Lcom/xiaomi/onetrack/OneTrack$IEventHook;
+    invoke-static {v2}, Lcom/xiaomi/onetrack/api/h;->c(Lcom/xiaomi/onetrack/api/h;)Lcom/xiaomi/onetrack/OneTrack$IEventHook;
 
     move-result-object v2
 
     iget-object v3, p0, Lcom/xiaomi/onetrack/api/n;->a:Lcom/xiaomi/onetrack/api/h;
 
-    invoke-static {v3}, Lcom/xiaomi/onetrack/api/h;->e(Lcom/xiaomi/onetrack/api/h;)Lcom/xiaomi/onetrack/util/v;
+    invoke-static {v3}, Lcom/xiaomi/onetrack/api/h;->d(Lcom/xiaomi/onetrack/api/h;)Lcom/xiaomi/onetrack/util/v;
 
     move-result-object v3
 
     iget-object v4, p0, Lcom/xiaomi/onetrack/api/n;->a:Lcom/xiaomi/onetrack/api/h;
 
-    invoke-static {v4}, Lcom/xiaomi/onetrack/api/h;->f(Lcom/xiaomi/onetrack/api/h;)Z
+    invoke-static {v4}, Lcom/xiaomi/onetrack/api/h;->e(Lcom/xiaomi/onetrack/api/h;)Z
 
     move-result v4
 
@@ -84,10 +84,10 @@
 
     move-result-object v0
 
-    .line 477
+    .line 475
     iget-object v1, p0, Lcom/xiaomi/onetrack/api/n;->a:Lcom/xiaomi/onetrack/api/h;
 
-    invoke-static {v1}, Lcom/xiaomi/onetrack/api/h;->g(Lcom/xiaomi/onetrack/api/h;)Lcom/xiaomi/onetrack/api/e;
+    invoke-static {v1}, Lcom/xiaomi/onetrack/api/h;->f(Lcom/xiaomi/onetrack/api/h;)Lcom/xiaomi/onetrack/api/e;
 
     move-result-object v1
 
@@ -104,7 +104,7 @@
 
     const-string v1, "OneTrackImp"
 
-    .line 480
+    .line 478
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V

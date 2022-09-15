@@ -262,7 +262,7 @@
     :cond_2
     iget-object p1, p4, Lcom/google/android/material/transformation/FabTransformationBehavior$FabTransformationSpec;->timings:Lcom/google/android/material/animation/MotionSpec;
 
-    const-string p2, "translationXCurveUpwards"
+    const-string/jumbo p2, "translationXCurveUpwards"
 
     invoke-virtual {p1, p2}, Lcom/google/android/material/animation/MotionSpec;->getTiming(Ljava/lang/String;)Lcom/google/android/material/animation/MotionTiming;
 
@@ -271,7 +271,7 @@
     .line 549
     iget-object p2, p4, Lcom/google/android/material/transformation/FabTransformationBehavior$FabTransformationSpec;->timings:Lcom/google/android/material/animation/MotionSpec;
 
-    const-string p3, "translationYCurveUpwards"
+    const-string/jumbo p3, "translationYCurveUpwards"
 
     invoke-virtual {p2, p3}, Lcom/google/android/material/animation/MotionSpec;->getTiming(Ljava/lang/String;)Lcom/google/android/material/animation/MotionTiming;
 
@@ -283,7 +283,7 @@
     :cond_3
     iget-object p1, p4, Lcom/google/android/material/transformation/FabTransformationBehavior$FabTransformationSpec;->timings:Lcom/google/android/material/animation/MotionSpec;
 
-    const-string p2, "translationXCurveDownwards"
+    const-string/jumbo p2, "translationXCurveDownwards"
 
     invoke-virtual {p1, p2}, Lcom/google/android/material/animation/MotionSpec;->getTiming(Ljava/lang/String;)Lcom/google/android/material/animation/MotionTiming;
 
@@ -292,7 +292,7 @@
     .line 553
     iget-object p2, p4, Lcom/google/android/material/transformation/FabTransformationBehavior$FabTransformationSpec;->timings:Lcom/google/android/material/animation/MotionSpec;
 
-    const-string p3, "translationYCurveDownwards"
+    const-string/jumbo p3, "translationYCurveDownwards"
 
     invoke-virtual {p2, p3}, Lcom/google/android/material/animation/MotionSpec;->getTiming(Ljava/lang/String;)Lcom/google/android/material/animation/MotionTiming;
 
@@ -305,7 +305,7 @@
     :goto_0
     iget-object p1, p4, Lcom/google/android/material/transformation/FabTransformationBehavior$FabTransformationSpec;->timings:Lcom/google/android/material/animation/MotionSpec;
 
-    const-string p2, "translationXLinear"
+    const-string/jumbo p2, "translationXLinear"
 
     invoke-virtual {p1, p2}, Lcom/google/android/material/animation/MotionSpec;->getTiming(Ljava/lang/String;)Lcom/google/android/material/animation/MotionTiming;
 
@@ -314,7 +314,7 @@
     .line 545
     iget-object p2, p4, Lcom/google/android/material/transformation/FabTransformationBehavior$FabTransformationSpec;->timings:Lcom/google/android/material/animation/MotionSpec;
 
-    const-string p3, "translationYLinear"
+    const-string/jumbo p3, "translationYLinear"
 
     invoke-virtual {p2, p3}, Lcom/google/android/material/animation/MotionSpec;->getTiming(Ljava/lang/String;)Lcom/google/android/material/animation/MotionTiming;
 

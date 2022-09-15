@@ -1170,7 +1170,7 @@
 
     move-result-object v6
 
-    const-string v7, "tz-offset"
+    const-string/jumbo v7, "tz-offset"
 
     .line 261
     invoke-virtual {v4, v7}, Lcom/google/android/datatransport/runtime/EventInternal;->getLong(Ljava/lang/String;)J
@@ -1527,7 +1527,7 @@
 
     move-result-object p1
 
-    const-string v1, "tz-offset"
+    const-string/jumbo v1, "tz-offset"
 
     .line 163
     invoke-static {}, Lcom/google/android/datatransport/cct/CctTransportBackend;->getTzOffset()J

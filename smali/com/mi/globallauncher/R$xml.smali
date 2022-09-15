@@ -17,7 +17,7 @@
 # static fields
 .field public static final branch_backup_rules:I = 0x7f140001
 
-.field public static final remote_config_defaults:I = 0x7f14002e
+.field public static final remote_config_defaults:I = 0x7f140027
 
 
 # direct methods

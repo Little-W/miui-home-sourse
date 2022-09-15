@@ -274,7 +274,7 @@
 
     const-string p1, "PrivacyAuthorizationObserver"
 
-    const-string v0, "unregister"
+    const-string/jumbo v0, "unregister"
 
     .line 59
     invoke-static {p1, v0}, Lcom/miui/home/launcher/MiuiHomeLog;->log(Ljava/lang/String;Ljava/lang/String;)V

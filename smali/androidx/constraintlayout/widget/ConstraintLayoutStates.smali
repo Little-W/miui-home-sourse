@@ -248,7 +248,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v4, "unknown tag "
+    const-string/jumbo v4, "unknown tag "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -296,6 +296,8 @@
     :cond_3
     :goto_5
     return-void
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x2

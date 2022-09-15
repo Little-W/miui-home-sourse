@@ -53,7 +53,7 @@
 
     move-result-object v1
 
-    if-eqz v1, :cond_8
+    if-eqz v1, :cond_6
 
     .line 608
     iget-object v1, p0, Lcom/miui/home/launcher/FolderCling$3;->this$0:Lcom/miui/home/launcher/FolderCling;
@@ -62,7 +62,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_8
+    if-eqz v1, :cond_6
 
     const/16 v1, 0x8
 
@@ -103,7 +103,7 @@
     :goto_1
     if-nez v1, :cond_2
 
-    if-eqz p1, :cond_8
+    if-eqz p1, :cond_6
 
     .line 612
     :cond_2
@@ -188,86 +188,28 @@
 
     .line 626
     :cond_4
-    iget-object p1, p0, Lcom/miui/home/launcher/FolderCling$3;->this$0:Lcom/miui/home/launcher/FolderCling;
-
-    invoke-static {p1}, Lcom/miui/home/launcher/FolderCling;->access$000(Lcom/miui/home/launcher/FolderCling;)Lcom/miui/home/launcher/Folder;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lcom/miui/home/launcher/Folder;->getInfo()Lcom/miui/home/launcher/FolderInfo;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lcom/miui/home/launcher/FolderInfo;->isHotFolder()Z
-
-    move-result p1
-
-    if-nez p1, :cond_5
-
-    iget-object p1, p0, Lcom/miui/home/launcher/FolderCling$3;->this$0:Lcom/miui/home/launcher/FolderCling;
-
-    invoke-static {p1}, Lcom/miui/home/launcher/FolderCling;->access$000(Lcom/miui/home/launcher/FolderCling;)Lcom/miui/home/launcher/Folder;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lcom/miui/home/launcher/Folder;->getInfo()Lcom/miui/home/launcher/FolderInfo;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lcom/miui/home/launcher/FolderInfo;->isRecommendFolder()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_6
-
-    .line 627
-    :cond_5
-    iget-object p1, p0, Lcom/miui/home/launcher/FolderCling$3;->this$0:Lcom/miui/home/launcher/FolderCling;
-
-    invoke-static {p1}, Lcom/miui/home/launcher/FolderCling;->access$000(Lcom/miui/home/launcher/FolderCling;)Lcom/miui/home/launcher/Folder;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lcom/miui/home/launcher/Folder;->getInfo()Lcom/miui/home/launcher/FolderInfo;
-
-    move-result-object p1
-
-    iget-object v0, p0, Lcom/miui/home/launcher/FolderCling$3;->this$0:Lcom/miui/home/launcher/FolderCling;
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/FolderCling;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lcom/miui/home/launcher/FolderInfo;->getAdapter(Landroid/content/Context;)Lcom/miui/home/launcher/ShortcutsAdapter;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lcom/miui/home/launcher/ShortcutsAdapter;->notifyDataSetChanged()V
-
-    .line 629
-    :cond_6
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object p1
 
     new-instance v0, Lcom/miui/home/launcher/common/messages/FolderStateChangedMessage;
 
-    if-eqz v1, :cond_7
+    if-eqz v1, :cond_5
 
     const/4 v1, 0x3
 
     goto :goto_3
 
-    :cond_7
+    :cond_5
     const/4 v1, 0x5
 
-    .line 630
+    .line 627
     :goto_3
     invoke-direct {v0, v1}, Lcom/miui/home/launcher/common/messages/FolderStateChangedMessage;-><init>(I)V
 
-    .line 629
+    .line 626
     invoke-virtual {p1, v0}, Lorg/greenrobot/eventbus/EventBus;->post(Ljava/lang/Object;)V
 
-    :cond_8
+    :cond_6
     return-void
 .end method

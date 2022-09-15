@@ -33,27 +33,27 @@
 .method public constructor <init>(Lcom/miui/home/launcher/ScreenView;Landroid/content/Context;II)V
     .locals 1
 
-    .line 643
+    .line 660
     iput-object p1, p0, Lcom/miui/home/launcher/ScreenView$SlideBar;->this$0:Lcom/miui/home/launcher/ScreenView;
 
-    .line 644
+    .line 661
     invoke-direct {p0, p2}, Lcom/miui/launcher/views/LauncherFrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 640
+    .line 657
     new-instance p1, Landroid/graphics/Rect;
 
     invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
     iput-object p1, p0, Lcom/miui/home/launcher/ScreenView$SlideBar;->mPos:Landroid/graphics/Rect;
 
-    .line 641
+    .line 658
     new-instance p1, Landroid/graphics/Rect;
 
     invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
     iput-object p1, p0, Lcom/miui/home/launcher/ScreenView$SlideBar;->mPadding:Landroid/graphics/Rect;
 
-    .line 645
+    .line 662
     invoke-virtual {p0}, Lcom/miui/home/launcher/ScreenView$SlideBar;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -64,14 +64,14 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/ScreenView$SlideBar;->mSlidePointBmp:Landroid/graphics/Bitmap;
 
-    .line 646
+    .line 663
     iget-object p1, p0, Lcom/miui/home/launcher/ScreenView$SlideBar;->mSlidePointBmp:Landroid/graphics/Bitmap;
 
     if-nez p1, :cond_0
 
     return-void
 
-    .line 650
+    .line 667
     :cond_0
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getNinePatchChunk()[B
 
@@ -79,7 +79,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 652
+    .line 669
     new-instance p2, Landroid/graphics/NinePatch;
 
     iget-object p3, p0, Lcom/miui/home/launcher/ScreenView$SlideBar;->mSlidePointBmp:Landroid/graphics/Bitmap;
@@ -90,17 +90,17 @@
 
     iput-object p2, p0, Lcom/miui/home/launcher/ScreenView$SlideBar;->mSlidePoint:Landroid/graphics/NinePatch;
 
-    .line 656
+    .line 673
     new-instance p1, Landroid/widget/FrameLayout;
 
     iget-object p2, p0, Lcom/miui/home/launcher/ScreenView$SlideBar;->mContext:Landroid/content/Context;
 
     invoke-direct {p1, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 657
+    .line 674
     invoke-virtual {p1, p4}, Landroid/widget/FrameLayout;->setBackgroundResource(I)V
 
-    .line 658
+    .line 675
     new-instance p2, Landroid/widget/FrameLayout$LayoutParams;
 
     const/4 p3, -0x1
@@ -111,10 +111,10 @@
 
     invoke-direct {p2, p3, p4, v0}, Landroid/widget/FrameLayout$LayoutParams;-><init>(III)V
 
-    .line 662
+    .line 679
     invoke-virtual {p0, p1, p2}, Lcom/miui/home/launcher/ScreenView$SlideBar;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 663
+    .line 680
     iget-object p2, p0, Lcom/miui/home/launcher/ScreenView$SlideBar;->mPadding:Landroid/graphics/Rect;
 
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->getPaddingLeft()I
@@ -123,7 +123,7 @@
 
     iput p3, p2, Landroid/graphics/Rect;->left:I
 
-    .line 664
+    .line 681
     iget-object p2, p0, Lcom/miui/home/launcher/ScreenView$SlideBar;->mPadding:Landroid/graphics/Rect;
 
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->getPaddingTop()I
@@ -132,7 +132,7 @@
 
     iput p3, p2, Landroid/graphics/Rect;->top:I
 
-    .line 665
+    .line 682
     iget-object p2, p0, Lcom/miui/home/launcher/ScreenView$SlideBar;->mPadding:Landroid/graphics/Rect;
 
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->getPaddingRight()I
@@ -141,7 +141,7 @@
 
     iput p3, p2, Landroid/graphics/Rect;->right:I
 
-    .line 666
+    .line 683
     iget-object p2, p0, Lcom/miui/home/launcher/ScreenView$SlideBar;->mPadding:Landroid/graphics/Rect;
 
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->getPaddingBottom()I
@@ -150,7 +150,7 @@
 
     iput p1, p2, Landroid/graphics/Rect;->bottom:I
 
-    .line 667
+    .line 684
     iget-object p1, p0, Lcom/miui/home/launcher/ScreenView$SlideBar;->mPos:Landroid/graphics/Rect;
 
     iget-object p2, p0, Lcom/miui/home/launcher/ScreenView$SlideBar;->mPadding:Landroid/graphics/Rect;
@@ -159,7 +159,7 @@
 
     iput p2, p1, Landroid/graphics/Rect;->top:I
 
-    .line 668
+    .line 685
     iget-object p1, p0, Lcom/miui/home/launcher/ScreenView$SlideBar;->mPos:Landroid/graphics/Rect;
 
     iget p2, p1, Landroid/graphics/Rect;->top:I
@@ -185,15 +185,15 @@
 .method protected dispatchDraw(Landroid/graphics/Canvas;)V
     .locals 2
 
-    .line 678
+    .line 695
     invoke-super {p0, p1}, Lcom/miui/launcher/views/LauncherFrameLayout;->dispatchDraw(Landroid/graphics/Canvas;)V
 
-    .line 679
+    .line 696
     iget-object v0, p0, Lcom/miui/home/launcher/ScreenView$SlideBar;->mSlidePoint:Landroid/graphics/NinePatch;
 
     if-eqz v0, :cond_0
 
-    .line 680
+    .line 697
     iget-object v1, p0, Lcom/miui/home/launcher/ScreenView$SlideBar;->mPos:Landroid/graphics/Rect;
 
     invoke-virtual {v0, p1, v1}, Landroid/graphics/NinePatch;->draw(Landroid/graphics/Canvas;Landroid/graphics/Rect;)V
@@ -205,7 +205,7 @@
 .method public getSlidePaddingLeft()I
     .locals 1
 
-    .line 702
+    .line 719
     iget-object v0, p0, Lcom/miui/home/launcher/ScreenView$SlideBar;->mPadding:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->left:I
@@ -216,7 +216,7 @@
 .method public getSlideWidth()I
     .locals 2
 
-    .line 698
+    .line 715
     invoke-virtual {p0}, Lcom/miui/home/launcher/ScreenView$SlideBar;->getMeasuredWidth()I
 
     move-result v0
@@ -239,7 +239,7 @@
 .method protected getSuggestedMinimumHeight()I
     .locals 2
 
-    .line 673
+    .line 690
     iget-object v0, p0, Lcom/miui/home/launcher/ScreenView$SlideBar;->mSlidePointBmp:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getHeight()I
@@ -260,12 +260,12 @@
 .method protected onSetFrame(IIII)V
     .locals 0
 
-    .line 686
+    .line 703
     iget-object p1, p0, Lcom/miui/home/launcher/ScreenView$SlideBar;->mSlidePoint:Landroid/graphics/NinePatch;
 
     if-eqz p1, :cond_0
 
-    .line 687
+    .line 704
     iget-object p1, p0, Lcom/miui/home/launcher/ScreenView$SlideBar;->mPos:Landroid/graphics/Rect;
 
     sub-int/2addr p4, p2
@@ -278,7 +278,7 @@
 
     iput p4, p1, Landroid/graphics/Rect;->bottom:I
 
-    .line 688
+    .line 705
     iget-object p1, p0, Lcom/miui/home/launcher/ScreenView$SlideBar;->mPos:Landroid/graphics/Rect;
 
     iget p2, p1, Landroid/graphics/Rect;->bottom:I
@@ -300,12 +300,12 @@
 .method public setPosition(II)V
     .locals 1
 
-    .line 693
+    .line 710
     iget-object v0, p0, Lcom/miui/home/launcher/ScreenView$SlideBar;->mPos:Landroid/graphics/Rect;
 
     iput p1, v0, Landroid/graphics/Rect;->left:I
 
-    .line 694
+    .line 711
     iput p2, v0, Landroid/graphics/Rect;->right:I
 
     return-void

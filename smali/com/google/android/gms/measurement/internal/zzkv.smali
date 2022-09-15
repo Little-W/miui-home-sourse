@@ -2147,7 +2147,7 @@
 
     if-eqz v3, :cond_1
 
-    const-string v3, "trigger_event_name"
+    const-string/jumbo v3, "trigger_event_name"
 
     .line 824
     iget-object v4, v1, Lcom/google/android/gms/measurement/internal/zzz;->zzf:Ljava/lang/String;
@@ -2192,7 +2192,7 @@
     invoke-virtual {v2, v3, v4}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
 
     :cond_2
-    const-string v3, "trigger_timeout"
+    const-string/jumbo v3, "trigger_timeout"
 
     .line 831
     iget-wide v4, v1, Lcom/google/android/gms/measurement/internal/zzz;->zzh:J
@@ -2204,7 +2204,7 @@
 
     if-eqz v3, :cond_3
 
-    const-string v3, "triggered_event_name"
+    const-string/jumbo v3, "triggered_event_name"
 
     .line 833
     iget-object v4, v1, Lcom/google/android/gms/measurement/internal/zzz;->zzi:Lcom/google/android/gms/measurement/internal/zzaq;
@@ -2220,7 +2220,7 @@
 
     if-eqz v3, :cond_3
 
-    const-string v3, "triggered_event_params"
+    const-string/jumbo v3, "triggered_event_params"
 
     .line 835
     iget-object v4, v1, Lcom/google/android/gms/measurement/internal/zzz;->zzi:Lcom/google/android/gms/measurement/internal/zzaq;
@@ -2236,7 +2236,7 @@
     invoke-virtual {v2, v3, v4}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
 
     :cond_3
-    const-string v3, "triggered_timestamp"
+    const-string/jumbo v3, "triggered_timestamp"
 
     .line 838
     iget-object v4, v1, Lcom/google/android/gms/measurement/internal/zzz;->zzc:Lcom/google/android/gms/measurement/internal/zzku;

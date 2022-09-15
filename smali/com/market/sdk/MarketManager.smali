@@ -85,7 +85,7 @@
 .method private ensureNotUiThread()V
     .locals 2
 
-    .line 88
+    .line 97
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -98,7 +98,7 @@
 
     return-void
 
-    .line 89
+    .line 98
     :cond_0
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
@@ -112,7 +112,7 @@
 .method public static getContext()Landroid/content/Context;
     .locals 1
 
-    .line 76
+    .line 85
     sget-object v0, Lcom/market/sdk/MarketManager;->sManager:Lcom/market/sdk/MarketManager;
 
     iget-object v0, v0, Lcom/market/sdk/MarketManager;->mContext:Landroid/content/Context;
@@ -121,62 +121,92 @@
 .end method
 
 .method public static getManager()Lcom/market/sdk/MarketManager;
-    .locals 3
+    .locals 1
 
-    .line 65
-    sget-object v0, Lcom/market/sdk/MarketManager;->sManager:Lcom/market/sdk/MarketManager;
+    .line 81
+    invoke-static {}, Lcom/market/sdk/utils/AppGlobal;->getContext()Landroid/content/Context;
 
-    if-nez v0, :cond_1
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/market/sdk/MarketManager;->getManager(Landroid/content/Context;)Lcom/market/sdk/MarketManager;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static getManager(Landroid/content/Context;)Lcom/market/sdk/MarketManager;
+    .locals 2
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    if-nez p0, :cond_0
+
+    const-string p0, "MarketManager"
+
+    const-string v0, "context is null"
 
     .line 66
+    invoke-static {p0, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 p0, 0x0
+
+    return-object p0
+
+    .line 69
+    :cond_0
+    invoke-static {p0}, Lcom/market/sdk/utils/AppGlobal;->setContext(Landroid/content/Context;)V
+
+    .line 70
+    sget-object v0, Lcom/market/sdk/MarketManager;->sManager:Lcom/market/sdk/MarketManager;
+
+    if-nez v0, :cond_2
+
+    .line 71
     const-class v0, Lcom/market/sdk/MarketManager;
 
     monitor-enter v0
 
-    .line 67
+    .line 72
     :try_start_0
     sget-object v1, Lcom/market/sdk/MarketManager;->sManager:Lcom/market/sdk/MarketManager;
 
-    if-nez v1, :cond_0
+    if-nez v1, :cond_1
 
-    .line 68
+    .line 73
     new-instance v1, Lcom/market/sdk/MarketManager;
 
-    invoke-static {}, Lcom/market/sdk/utils/AppGlobal;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-direct {v1, v2}, Lcom/market/sdk/MarketManager;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, p0}, Lcom/market/sdk/MarketManager;-><init>(Landroid/content/Context;)V
 
     sput-object v1, Lcom/market/sdk/MarketManager;->sManager:Lcom/market/sdk/MarketManager;
 
-    .line 70
-    :cond_0
+    .line 75
+    :cond_1
     monitor-exit v0
 
     goto :goto_0
 
     :catchall_0
-    move-exception v1
+    move-exception p0
 
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw v1
+    throw p0
 
-    .line 72
-    :cond_1
+    .line 77
+    :cond_2
     :goto_0
-    sget-object v0, Lcom/market/sdk/MarketManager;->sManager:Lcom/market/sdk/MarketManager;
+    sget-object p0, Lcom/market/sdk/MarketManager;->sManager:Lcom/market/sdk/MarketManager;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public static getMarketPackageName()Ljava/lang/String;
     .locals 1
 
-    .line 97
+    .line 106
     sget-object v0, Lcom/market/sdk/MarketManager;->MARKET_PACKAGE_NAME:Ljava/lang/String;
 
     return-object v0
@@ -185,9 +215,9 @@
 .method public static initMarketPackageName()Ljava/lang/String;
     .locals 1
 
-    .line 81
+    .line 90
     :try_start_0
-    sget-boolean v0, Lmiuix/os/Build;->IS_INTERNATIONAL_BUILD:Z
+    sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     if-eqz v0, :cond_0
 
@@ -214,12 +244,12 @@
 .method public allowConnectToNetwork()Z
     .locals 2
 
-    .line 297
+    .line 306
     invoke-direct {p0}, Lcom/market/sdk/MarketManager;->ensureNotUiThread()V
 
     const/4 v0, 0x1
 
-    .line 298
+    .line 307
     invoke-virtual {p0, v0}, Lcom/market/sdk/MarketManager;->isAppStoreInstalled(Z)Z
 
     move-result v0
@@ -230,13 +260,13 @@
 
     return v1
 
-    .line 301
+    .line 310
     :cond_0
     new-instance v0, Lcom/market/sdk/MarketManager$4;
 
     invoke-direct {v0, p0}, Lcom/market/sdk/MarketManager$4;-><init>(Lcom/market/sdk/MarketManager;)V
 
-    .line 310
+    .line 319
     invoke-virtual {v0}, Lcom/market/sdk/MarketManager$4;->invoke()Ljava/lang/Object;
 
     move-result-object v0
@@ -245,7 +275,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 311
+    .line 320
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v1
@@ -257,15 +287,15 @@
 .method public getApkCheckInfo(Ljava/lang/String;Ljava/lang/String;Z)Lcom/market/sdk/ApkVerifyInfo;
     .locals 1
 
-    .line 177
+    .line 186
     invoke-direct {p0}, Lcom/market/sdk/MarketManager;->ensureNotUiThread()V
 
-    .line 178
+    .line 187
     new-instance v0, Lcom/market/sdk/MarketManager$2;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lcom/market/sdk/MarketManager$2;-><init>(Lcom/market/sdk/MarketManager;Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 186
+    .line 195
     invoke-virtual {v0}, Lcom/market/sdk/MarketManager$2;->invoke()Ljava/lang/Object;
 
     move-result-object p1
@@ -278,15 +308,15 @@
 .method public getApkVerifyInfo(Ljava/lang/String;Ljava/lang/String;Z)Lcom/market/sdk/ApkVerifyInfo;
     .locals 1
 
-    .line 156
+    .line 165
     invoke-direct {p0}, Lcom/market/sdk/MarketManager;->ensureNotUiThread()V
 
-    .line 157
+    .line 166
     new-instance v0, Lcom/market/sdk/MarketManager$1;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lcom/market/sdk/MarketManager$1;-><init>(Lcom/market/sdk/MarketManager;Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 165
+    .line 174
     invoke-virtual {v0}, Lcom/market/sdk/MarketManager$1;->invoke()Ljava/lang/Object;
 
     move-result-object p1
@@ -299,7 +329,7 @@
 .method public getAppstoreUserGuide()Lcom/market/sdk/homeguide/AppstoreUserGuide;
     .locals 1
 
-    .line 511
+    .line 520
     new-instance v0, Lcom/market/sdk/homeguide/AppstoreUserGuide;
 
     invoke-direct {v0}, Lcom/market/sdk/homeguide/AppstoreUserGuide;-><init>()V
@@ -310,12 +340,12 @@
 .method public varargs getCategory([Ljava/lang/String;)I
     .locals 3
 
-    .line 444
+    .line 453
     invoke-direct {p0}, Lcom/market/sdk/MarketManager;->ensureNotUiThread()V
 
     const/4 v0, 0x1
 
-    .line 445
+    .line 454
     invoke-virtual {p0, v0}, Lcom/market/sdk/MarketManager;->isAppStoreInstalled(Z)Z
 
     move-result v0
@@ -330,21 +360,21 @@
 
     goto :goto_0
 
-    .line 448
+    .line 457
     :cond_0
     new-instance v0, Lcom/market/sdk/compat/FutureTaskCompat;
 
     invoke-direct {v0}, Lcom/market/sdk/compat/FutureTaskCompat;-><init>()V
 
-    .line 449
+    .line 458
     new-instance v2, Lcom/market/sdk/MarketManager$5;
 
     invoke-direct {v2, p0, v0, p1}, Lcom/market/sdk/MarketManager$5;-><init>(Lcom/market/sdk/MarketManager;Lcom/market/sdk/compat/FutureTaskCompat;[Ljava/lang/String;)V
 
-    .line 462
+    .line 471
     invoke-virtual {v2}, Lcom/market/sdk/MarketManager$5;->invokeAsync()V
 
-    .line 463
+    .line 472
     invoke-virtual {v0}, Lcom/market/sdk/compat/FutureTaskCompat;->get()Ljava/lang/Object;
 
     move-result-object p1
@@ -353,7 +383,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 464
+    .line 473
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result v1
@@ -369,12 +399,12 @@
 .method public varargs getCategoryName([Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    .line 472
+    .line 481
     invoke-direct {p0}, Lcom/market/sdk/MarketManager;->ensureNotUiThread()V
 
     const/4 v0, 0x1
 
-    .line 473
+    .line 482
     invoke-virtual {p0, v0}, Lcom/market/sdk/MarketManager;->isAppStoreInstalled(Z)Z
 
     move-result v0
@@ -387,21 +417,21 @@
 
     goto :goto_0
 
-    .line 476
+    .line 485
     :cond_0
     new-instance v0, Lcom/market/sdk/compat/FutureTaskCompat;
 
     invoke-direct {v0}, Lcom/market/sdk/compat/FutureTaskCompat;-><init>()V
 
-    .line 477
+    .line 486
     new-instance v1, Lcom/market/sdk/MarketManager$6;
 
     invoke-direct {v1, p0, v0, p1}, Lcom/market/sdk/MarketManager$6;-><init>(Lcom/market/sdk/MarketManager;Lcom/market/sdk/compat/FutureTaskCompat;[Ljava/lang/String;)V
 
-    .line 494
+    .line 503
     invoke-virtual {v1}, Lcom/market/sdk/MarketManager$6;->invokeAsync()V
 
-    .line 495
+    .line 504
     invoke-virtual {v0}, Lcom/market/sdk/compat/FutureTaskCompat;->get()Ljava/lang/Object;
 
     move-result-object p1
@@ -420,7 +450,7 @@
 .method public getDesktopFolderConfig(Lcom/market/sdk/IDesktopFolderConfigCallback;)V
     .locals 2
 
-    .line 385
+    .line 394
     sget-object v0, Lcom/market/sdk/MarketFeatures;->DESK_RECOMMEND_V3:Lcom/market/sdk/MarketFeatures;
 
     invoke-virtual {p0, v0}, Lcom/market/sdk/MarketManager;->hasFeature(Lcom/market/sdk/MarketFeatures;)Z
@@ -429,14 +459,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 386
+    .line 395
     iget-object v0, p0, Lcom/market/sdk/MarketManager;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/market/sdk/MarketService;->openService(Landroid/content/Context;)Lcom/market/sdk/IMarketService;
 
     move-result-object v0
 
-    .line 388
+    .line 397
     :try_start_0
     new-instance v1, Lcom/market/sdk/DesktopFolderConfigCallbackAdapter;
 
@@ -451,7 +481,7 @@
     :cond_0
     const-string v0, "Market service not impl."
 
-    .line 392
+    .line 401
     invoke-interface {p1, v0}, Lcom/market/sdk/IDesktopFolderConfigCallback;->onFailed(Ljava/lang/String;)V
 
     :catch_0
@@ -462,7 +492,7 @@
 .method public getDiscoverUpdateManager()Lcom/market/sdk/DiscoverUpdateManager;
     .locals 1
 
-    .line 515
+    .line 524
     invoke-static {}, Lcom/market/sdk/DiscoverUpdateManager;->get()Lcom/market/sdk/DiscoverUpdateManager;
 
     move-result-object v0
@@ -473,7 +503,7 @@
 .method public getFloatCardManager()Lcom/market/sdk/FloatCardManager;
     .locals 1
 
-    .line 519
+    .line 528
     iget-object v0, p0, Lcom/market/sdk/MarketManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -492,31 +522,31 @@
 .method public getOpenDetailIntent(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
     .locals 2
 
-    .line 205
+    .line 214
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
     const-string v1, "packageName"
 
-    .line 206
+    .line 215
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string p1, "ref"
 
-    .line 207
+    .line 216
     invoke-virtual {v0, p1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string p1, "mimarket://details"
 
-    .line 208
+    .line 217
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
 
     invoke-virtual {v0, p1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    .line 209
+    .line 218
     new-instance p1, Landroid/content/ComponentName;
 
     sget-object p2, Lcom/market/sdk/MarketManager;->MARKET_PACKAGE_NAME:Ljava/lang/String;
@@ -533,7 +563,7 @@
 .method public getSearchIntent(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
     .locals 2
 
-    .line 220
+    .line 229
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -554,32 +584,32 @@
 
     move-result-object p1
 
-    .line 221
+    .line 230
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
 
-    .line 222
+    .line 231
     new-instance p2, Landroid/content/Intent;
 
     invoke-direct {p2}, Landroid/content/Intent;-><init>()V
 
     const-string v0, "android.intent.action.VIEW"
 
-    .line 223
+    .line 232
     invoke-virtual {p2, v0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v0, "android.intent.category.DEFAULT"
 
-    .line 224
+    .line 233
     invoke-virtual {p2, v0}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v0, "android.intent.category.BROWSABLE"
 
-    .line 225
+    .line 234
     invoke-virtual {p2, v0}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 226
+    .line 235
     invoke-virtual {p2, p1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
     return-object p2
@@ -588,7 +618,7 @@
 .method public hasFeature(Lcom/market/sdk/MarketFeatures;)Z
     .locals 0
 
-    .line 350
+    .line 359
     invoke-virtual {p1}, Lcom/market/sdk/MarketFeatures;->isSupported()Z
 
     move-result p1
@@ -618,7 +648,7 @@
 
     move-object v6, p2
 
-    .line 499
+    .line 508
     invoke-virtual/range {v0 .. v6}, Lcom/market/sdk/MarketManager;->installThirdPartPackage(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/market/pm/api/MarketInstallerListener;)V
 
     return-void
@@ -632,14 +662,14 @@
         }
     .end annotation
 
-    .line 504
+    .line 513
     new-instance v0, Lcom/market/pm/api/MarketInstaller;
 
     iget-object v1, p0, Lcom/market/sdk/MarketManager;->mContext:Landroid/content/Context;
 
     invoke-direct {v0, v1}, Lcom/market/pm/api/MarketInstaller;-><init>(Landroid/content/Context;)V
 
-    .line 505
+    .line 514
     invoke-virtual {v0, p6}, Lcom/market/pm/api/MarketInstaller;->setListener(Lcom/market/pm/api/MarketInstallerListener;)V
 
     move-object v1, p1
@@ -652,7 +682,7 @@
 
     move-object v5, p5
 
-    .line 506
+    .line 515
     invoke-virtual/range {v0 .. v5}, Lcom/market/pm/api/MarketInstaller;->installPackage(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -661,7 +691,7 @@
 .method public isAppStoreEnabled()Z
     .locals 5
 
-    .line 113
+    .line 122
     iget-object v0, p0, Lcom/market/sdk/MarketManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -670,7 +700,7 @@
 
     const/4 v1, 0x0
 
-    .line 115
+    .line 124
     :try_start_0
     invoke-virtual {p0}, Lcom/market/sdk/MarketManager;->isAppStoreInstalled()Z
 
@@ -680,7 +710,7 @@
 
     return v1
 
-    .line 118
+    .line 127
     :cond_0
     sget-object v2, Lcom/market/sdk/MarketManager;->MARKET_PACKAGE_NAME:Ljava/lang/String;
 
@@ -707,7 +737,7 @@
 
     const-string v2, "MarketManager"
 
-    .line 122
+    .line 131
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -732,7 +762,7 @@
 
     const/4 v0, 0x1
 
-    .line 105
+    .line 114
     invoke-virtual {p0, v0}, Lcom/market/sdk/MarketManager;->isAppStoreInstalled(Z)Z
 
     move-result v0
@@ -743,7 +773,7 @@
 .method public isAppStoreInstalled(Z)Z
     .locals 3
 
-    .line 133
+    .line 142
     iget-object v0, p0, Lcom/market/sdk/MarketManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -752,7 +782,7 @@
 
     const/4 v1, 0x0
 
-    .line 135
+    .line 144
     :try_start_0
     sget-object v2, Lcom/market/sdk/MarketManager;->MARKET_PACKAGE_NAME:Ljava/lang/String;
 
@@ -766,7 +796,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 138
+    .line 147
     iget p1, v0, Landroid/content/pm/ApplicationInfo;->flags:I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -791,7 +821,7 @@
 .method public isInWhiteSetForApkCheck(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 1
 
-    .line 195
+    .line 204
     iget-object v0, p0, Lcom/market/sdk/MarketManager;->mContext:Landroid/content/Context;
 
     invoke-static {v0, p1, p2}, Lcom/market/sdk/utils/WhiteSetManager;->isInWhiteSetForApkCheck(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Z
@@ -815,7 +845,7 @@
         }
     .end annotation
 
-    .line 361
+    .line 370
     sget-object v0, Lcom/market/sdk/MarketFeatures;->DESK_RECOMMEND_V2:Lcom/market/sdk/MarketFeatures;
 
     invoke-virtual {p0, v0}, Lcom/market/sdk/MarketManager;->hasFeature(Lcom/market/sdk/MarketFeatures;)Z
@@ -824,14 +854,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 362
+    .line 371
     iget-object v0, p0, Lcom/market/sdk/MarketManager;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/market/sdk/MarketService;->openService(Landroid/content/Context;)Lcom/market/sdk/IMarketService;
 
     move-result-object v1
 
-    .line 364
+    .line 373
     :try_start_0
     new-instance v6, Lcom/market/sdk/DesktopRecommendCallbackAdapter;
 
@@ -849,7 +879,7 @@
 
     goto :goto_0
 
-    .line 367
+    .line 376
     :cond_0
     invoke-static {p1, p2, p3, p4, p5}, Lcom/market/internal/DesktopRecommendManager;->loadDesktopRecommendInfo(JLjava/lang/String;Ljava/util/List;Lcom/market/sdk/DesktopRecommendCallback;)V
 
@@ -876,7 +906,7 @@
         }
     .end annotation
 
-    .line 372
+    .line 381
     sget-object v0, Lcom/market/sdk/MarketFeatures;->DESK_RECOMMEND_V3:Lcom/market/sdk/MarketFeatures;
 
     invoke-virtual {p0, v0}, Lcom/market/sdk/MarketManager;->hasFeature(Lcom/market/sdk/MarketFeatures;)Z
@@ -885,7 +915,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 373
+    .line 382
     new-instance v0, Lcom/market/sdk/DesktopRecommendArgs;
 
     move-object v1, v0
@@ -900,14 +930,14 @@
 
     invoke-direct/range {v1 .. v6}, Lcom/market/sdk/DesktopRecommendArgs;-><init>(JLjava/lang/String;Ljava/util/ArrayList;Ljava/util/Map;)V
 
-    .line 374
+    .line 383
     iget-object p1, p0, Lcom/market/sdk/MarketManager;->mContext:Landroid/content/Context;
 
     invoke-static {p1}, Lcom/market/sdk/MarketService;->openService(Landroid/content/Context;)Lcom/market/sdk/IMarketService;
 
     move-result-object p1
 
-    .line 376
+    .line 385
     :try_start_0
     invoke-virtual {v0}, Lcom/market/sdk/DesktopRecommendArgs;->parcel()Landroid/os/Bundle;
 
@@ -934,7 +964,7 @@
 
     move-object v5, p6
 
-    .line 380
+    .line 389
     invoke-virtual/range {v0 .. v5}, Lcom/market/sdk/MarketManager;->loadDesktopRecommendInfo(JLjava/lang/String;Ljava/util/ArrayList;Lcom/market/sdk/DesktopRecommendCallback;)V
 
     :catch_0
@@ -945,7 +975,7 @@
 .method public loadIcon(Ljava/lang/String;Ljava/lang/String;Lcom/market/sdk/ImageCallback;)V
     .locals 0
 
-    .line 337
+    .line 346
     invoke-static {p1, p2, p3}, Lcom/market/sdk/ImageManager;->loadIcon(Ljava/lang/String;Ljava/lang/String;Lcom/market/sdk/ImageCallback;)V
 
     return-void
@@ -954,7 +984,7 @@
 .method public loadImage(Ljava/lang/String;IILcom/market/sdk/ImageCallback;)V
     .locals 0
 
-    .line 341
+    .line 350
     invoke-static {p1, p2, p3, p4}, Lcom/market/sdk/ImageManager;->loadImage(Ljava/lang/String;IILcom/market/sdk/ImageCallback;)V
 
     return-void
@@ -963,7 +993,7 @@
 .method public openSearchActivity(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    .line 237
+    .line 246
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -978,7 +1008,7 @@
 
     goto :goto_1
 
-    .line 240
+    .line 249
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1000,49 +1030,49 @@
 
     move-result-object p2
 
-    .line 241
+    .line 250
     invoke-static {p2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p2
 
-    .line 242
+    .line 251
     new-instance p3, Landroid/content/Intent;
 
     invoke-direct {p3}, Landroid/content/Intent;-><init>()V
 
     const-string v0, "android.intent.action.VIEW"
 
-    .line 243
+    .line 252
     invoke-virtual {p3, v0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v0, "android.intent.category.DEFAULT"
 
-    .line 244
+    .line 253
     invoke-virtual {p3, v0}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v0, "android.intent.category.BROWSABLE"
 
-    .line 245
+    .line 254
     invoke-virtual {p3, v0}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 246
+    .line 255
     invoke-virtual {p3, p2}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
     if-nez p1, :cond_1
 
     const/high16 p1, 0x10000000
 
-    .line 248
+    .line 257
     invoke-virtual {p3, p1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 249
+    .line 258
     iget-object p1, p0, Lcom/market/sdk/MarketManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1, p3}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
     goto :goto_0
 
-    .line 251
+    .line 260
     :cond_1
     invoke-virtual {p1, p3}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
@@ -1057,7 +1087,7 @@
 .method public openSearchActivity(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    .line 261
+    .line 270
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -1072,7 +1102,7 @@
 
     goto :goto_0
 
-    .line 264
+    .line 273
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1094,40 +1124,40 @@
 
     move-result-object p1
 
-    .line 265
+    .line 274
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
 
-    .line 266
+    .line 275
     new-instance p2, Landroid/content/Intent;
 
     invoke-direct {p2}, Landroid/content/Intent;-><init>()V
 
     const-string v0, "android.intent.action.VIEW"
 
-    .line 267
+    .line 276
     invoke-virtual {p2, v0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v0, "android.intent.category.DEFAULT"
 
-    .line 268
+    .line 277
     invoke-virtual {p2, v0}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v0, "android.intent.category.BROWSABLE"
 
-    .line 269
+    .line 278
     invoke-virtual {p2, v0}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 270
+    .line 279
     invoke-virtual {p2, p1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
     const/high16 p1, 0x10000000
 
-    .line 271
+    .line 280
     invoke-virtual {p2, p1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 272
+    .line 281
     iget-object p1, p0, Lcom/market/sdk/MarketManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1, p2}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
@@ -1142,12 +1172,12 @@
 .method public recourdStaticsCountEvent(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 281
+    .line 290
     new-instance v0, Lcom/market/sdk/MarketManager$3;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/market/sdk/MarketManager$3;-><init>(Lcom/market/sdk/MarketManager;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 289
+    .line 298
     invoke-virtual {v0}, Lcom/market/sdk/MarketManager$3;->invokeAsync()V
 
     return-void
@@ -1169,12 +1199,12 @@
         }
     .end annotation
 
-    .line 398
+    .line 407
     new-instance v0, Lcom/market/sdk/DownloadResponse;
 
     invoke-direct {v0}, Lcom/market/sdk/DownloadResponse;-><init>()V
 
-    .line 399
+    .line 408
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -1189,12 +1219,12 @@
 
     const/4 p1, -0x1
 
-    .line 400
+    .line 409
     iput p1, v0, Lcom/market/sdk/DownloadResponse;->code:I
 
     return-object v0
 
-    .line 404
+    .line 413
     :cond_0
     iget-object v1, p0, Lcom/market/sdk/MarketManager;->mContext:Landroid/content/Context;
 
@@ -1206,12 +1236,12 @@
 
     const/4 p1, -0x2
 
-    .line 405
+    .line 414
     iput p1, v0, Lcom/market/sdk/DownloadResponse;->code:I
 
     const-string p1, "install_no_network_description"
 
-    .line 406
+    .line 415
     invoke-static {p1}, Lcom/market/sdk/utils/Utils;->getStringResources(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -1220,7 +1250,7 @@
 
     return-object v0
 
-    .line 410
+    .line 419
     :cond_1
     new-instance v1, Landroid/content/Intent;
 
@@ -1228,24 +1258,24 @@
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 411
+    .line 420
     sget-object v2, Lcom/market/sdk/MarketManager;->MARKET_PACKAGE_NAME:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v2, "appId"
 
-    .line 412
+    .line 421
     invoke-virtual {v1, v2, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string p1, "packageName"
 
-    .line 413
+    .line 422
     invoke-virtual {v1, p1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string p1, "senderPackageName"
 
-    .line 414
+    .line 423
     iget-object p2, p0, Lcom/market/sdk/MarketManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {p2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
@@ -1256,22 +1286,22 @@
 
     const-string p1, "ref"
 
-    .line 415
+    .line 424
     invoke-virtual {v1, p1, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     if-eqz p4, :cond_3
 
-    .line 417
+    .line 426
     invoke-interface {p4}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object p1
 
-    .line 418
+    .line 427
     new-instance p2, Lorg/json/JSONObject;
 
     invoke-direct {p2}, Lorg/json/JSONObject;-><init>()V
 
-    .line 420
+    .line 429
     :try_start_0
     invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -1290,14 +1320,14 @@
 
     check-cast p3, Ljava/lang/String;
 
-    .line 421
+    .line 430
     invoke-interface {p4, p3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/lang/String;
 
-    .line 422
+    .line 431
     invoke-virtual {p2, p3, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     goto :goto_0
@@ -1305,7 +1335,7 @@
     :cond_2
     const-string p1, "extra_query_params"
 
-    .line 424
+    .line 433
     invoke-virtual {p2}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
     move-result-object p2
@@ -1321,14 +1351,14 @@
 
     const-string p2, "MarketManager"
 
-    .line 426
+    .line 435
     invoke-virtual {p1}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
     move-result-object p1
 
     invoke-static {p2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 429
+    .line 438
     :cond_3
     :goto_1
     iget-object p1, p0, Lcom/market/sdk/MarketManager;->mContext:Landroid/content/Context;
@@ -1337,7 +1367,7 @@
 
     const/4 p1, 0x0
 
-    .line 430
+    .line 439
     iput p1, v0, Lcom/market/sdk/DownloadResponse;->code:I
 
     return-object v0
@@ -1348,7 +1378,7 @@
 
     const/4 v0, 0x1
 
-    .line 321
+    .line 330
     invoke-virtual {p0, v0}, Lcom/market/sdk/MarketManager;->isAppStoreInstalled(Z)Z
 
     move-result v1
@@ -1359,13 +1389,13 @@
 
     goto :goto_0
 
-    .line 324
+    .line 333
     :cond_0
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 325
+    .line 334
     new-instance v2, Landroid/content/ComponentName;
 
     sget-object v3, Lcom/market/sdk/MarketManager;->MARKET_PACKAGE_NAME:Ljava/lang/String;
@@ -1376,7 +1406,7 @@
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 326
+    .line 335
     invoke-virtual {p1, v1, p2}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
 
     return v0
@@ -1391,7 +1421,7 @@
 .method public updateApplicationEnableState()V
     .locals 3
 
-    .line 436
+    .line 445
     :try_start_0
     invoke-static {}, Lcom/market/sdk/EnableStateManager;->getManager()Lcom/market/sdk/EnableStateManager;
 
@@ -1415,7 +1445,7 @@
 
     const-string v0, "MarketManager"
 
-    .line 437
+    .line 446
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1445,7 +1475,7 @@
 
     const-string v1, "MarketManager"
 
-    .line 439
+    .line 448
     invoke-virtual {v0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
     move-result-object v2

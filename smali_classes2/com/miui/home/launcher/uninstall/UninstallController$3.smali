@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/uninstall/UninstallController;)V
     .locals 0
 
-    .line 240
+    .line 241
     iput-object p1, p0, Lcom/miui/home/launcher/uninstall/UninstallController$3;->this$0:Lcom/miui/home/launcher/uninstall/UninstallController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 2
 
-    .line 243
+    .line 244
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.ACTION_MARKET_RECOMMEND_SHORTCUT_DELETED"
@@ -47,10 +47,10 @@
 
     const-string v1, "com.xiaomi.market"
 
-    .line 244
+    .line 245
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 245
+    .line 246
     iget-object v1, p0, Lcom/miui/home/launcher/uninstall/UninstallController$3;->this$0:Lcom/miui/home/launcher/uninstall/UninstallController;
 
     invoke-static {v1}, Lcom/miui/home/launcher/uninstall/UninstallController;->access$100(Lcom/miui/home/launcher/uninstall/UninstallController;)Lcom/miui/home/launcher/Launcher;

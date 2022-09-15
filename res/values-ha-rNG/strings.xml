@@ -293,7 +293,6 @@
     <string name="eras_bc">BCE</string>
     <string name="evening">Yamma</string>
     <string name="exit_overview_because_task_stack_changed">Rufe Na kwanan nan baya saboda canje-canje da suka faru a bango</string>
-    <string name="external_not_support_split_screen_j18">Rababben allo bai iya aiki akan Allon waje</string>
     <string name="failed_to_delete_temporary">Ya kasa cirewa</string>
     <string name="failed_to_drop">Ya kasa canzawa</string>
     <string name="failed_to_drop_widget_invalid">Wijet din bai da asali</string>
@@ -498,7 +497,6 @@
     <string name="midnight">Dare</string>
     <string name="minus_one_screen">"Ma'ajin manhaja"</string>
     <string name="miui_screen_config_title">Saittunan Allon farko</string>
-    <string name="miui_widget_menu_replace_text">Canza</string>
     <string name="miuix_access_state_desc">An zaba</string>
     <string name="miuix_appcompat_action_mode_deselect_all">Cire alamar zabi</string>
     <string name="miuix_appcompat_action_mode_select_all">Zabi duka</string>
@@ -525,8 +523,6 @@
     <string name="monday">Litinin</string>
     <string name="monday_short">Litinin</string>
     <string name="monday_shortest">Litinin</string>
-    <string name="monochrome_summary">Canja launi na bango na tambari</string>
-    <string name="monochrome_title">Launin bangon</string>
     <string name="month_april">Afrilu</string>
     <string name="month_april_short">Afrilu</string>
     <string name="month_april_shortest">Afrilu</string>

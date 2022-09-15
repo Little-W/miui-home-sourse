@@ -407,17 +407,3 @@
 
     return-object p0
 .end method
-
-.method public show()Lmiui/home/lib/dialog/AlertDialog;
-    .locals 1
-
-    .line 1110
-    invoke-virtual {p0}, Lmiui/home/lib/dialog/AlertDialog$Builder;->create()Lmiui/home/lib/dialog/AlertDialog;
-
-    move-result-object v0
-
-    .line 1111
-    invoke-virtual {v0}, Lmiui/home/lib/dialog/AlertDialog;->show()V
-
-    return-object v0
-.end method

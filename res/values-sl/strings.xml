@@ -329,7 +329,6 @@
     <string name="exit_overview_because_task_stack_changed">Meni Nedavno je bil zaprt zaradi sprememb v ozadju</string>
     <string name="expand_button_title">Dodatno</string>
     <string name="exposed_dropdown_menu_content_description">Prikaz spustnega menija</string>
-    <string name="external_not_support_split_screen_j18">Razdeljen zaslon ni podprt na zunanjem zaslonu</string>
     <string name="failed_to_delete_temporary">Ni mogoče izbrisati</string>
     <string name="failed_to_drop">Ni mogoče premakniti</string>
     <string name="failed_to_drop_widget_invalid">Pripomoček je neveljaven</string>
@@ -548,7 +547,6 @@
     <string name="midnight">Noč</string>
     <string name="minus_one_screen">Shramba aplikacij</string>
     <string name="miui_screen_config_title">Nastavitve Začetnega zaslona</string>
-    <string name="miui_widget_menu_replace_text">Zamenjaj</string>
     <string name="miuix_access_state_desc">Izbrano</string>
     <string name="miuix_appcompat_action_mode_deselect_all">Prekliči izbrano</string>
     <string name="miuix_appcompat_action_mode_select_all">Izberi vse</string>
@@ -575,8 +573,6 @@
     <string name="monday">Ponedeljek</string>
     <string name="monday_short">Pon</string>
     <string name="monday_shortest">Pon</string>
-    <string name="monochrome_summary">Change background color for compatible icons</string>
-    <string name="monochrome_title">Background color</string>
     <string name="month_april">April</string>
     <string name="month_april_short">Apr</string>
     <string name="month_april_shortest">Apr</string>

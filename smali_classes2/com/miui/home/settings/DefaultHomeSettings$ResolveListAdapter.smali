@@ -166,7 +166,7 @@
     .line 179
     iget-object p2, p0, Lcom/miui/home/settings/DefaultHomeSettings$ResolveListAdapter;->mLayoutInflater:Landroid/view/LayoutInflater;
 
-    const v0, 0x7f0d015a
+    const v0, 0x7f0d0159
 
     const/4 v1, 0x0
 
@@ -180,7 +180,7 @@
 
     move-result-object p1
 
-    const p3, 0x7f0a028c
+    const p3, 0x7f0a0288
 
     .line 183
     invoke-virtual {p2, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -198,7 +198,7 @@
 
     invoke-virtual {p3, v0}, Landroid/widget/CheckedTextView;->setChecked(Z)V
 
-    const v0, 0x7f0a019e
+    const v0, 0x7f0a019a
 
     .line 185
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -218,7 +218,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    const v0, 0x7f0a024c
+    const v0, 0x7f0a0248
 
     .line 187
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -247,7 +247,7 @@
 
     invoke-virtual {v0, p1}, Landroid/widget/CheckedTextView;->setChecked(Z)V
 
-    const p1, 0x7f0a02b2
+    const p1, 0x7f0a02ae
 
     .line 191
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;

@@ -3,12 +3,12 @@
 .source "ActionBarView.java"
 
 # interfaces
-.implements Landroid/text/TextWatcher;
+.implements Landroid/view/View$OnClickListener;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lmiuix/appcompat/internal/app/widget/ActionBarView;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lmiuix/appcompat/internal/app/widget/ActionBarView;->initImmersionMore(ILmiuix/appcompat/app/ActionBarDelegateImpl;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,13 +20,21 @@
 # instance fields
 .field final synthetic this$0:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
+.field final synthetic val$actionBarDelegate:Lmiuix/appcompat/app/ActionBarDelegateImpl;
+
+.field final synthetic val$moreButton:Landroid/view/View;
+
 
 # direct methods
-.method constructor <init>(Lmiuix/appcompat/internal/app/widget/ActionBarView;)V
+.method constructor <init>(Lmiuix/appcompat/internal/app/widget/ActionBarView;Lmiuix/appcompat/app/ActionBarDelegateImpl;Landroid/view/View;)V
     .locals 0
 
-    .line 244
+    .line 456
     iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$8;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    iput-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$8;->val$actionBarDelegate:Lmiuix/appcompat/app/ActionBarDelegateImpl;
+
+    iput-object p3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$8;->val$moreButton:Landroid/view/View;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -35,29 +43,17 @@
 
 
 # virtual methods
-.method public afterTextChanged(Landroid/text/Editable;)V
-    .locals 0
+.method public onClick(Landroid/view/View;)V
+    .locals 2
 
-    return-void
-.end method
+    .line 459
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$8;->val$actionBarDelegate:Lmiuix/appcompat/app/ActionBarDelegateImpl;
 
-.method public beforeTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 0
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$8;->val$moreButton:Landroid/view/View;
 
-    return-void
-.end method
+    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$8;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
-.method public onTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 0
-
-    .line 251
-    iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$8;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-static {p2}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->access$600(Lmiuix/appcompat/internal/app/widget/ActionBarView;)Lmiuix/appcompat/internal/app/widget/actionbar/ExpandTitle;
-
-    move-result-object p2
-
-    invoke-virtual {p2, p1}, Lmiuix/appcompat/internal/app/widget/actionbar/ExpandTitle;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {p1, v0, v1}, Lmiuix/appcompat/app/ActionBarDelegateImpl;->showImmersionMenu(Landroid/view/View;Landroid/view/ViewGroup;)V
 
     return-void
 .end method

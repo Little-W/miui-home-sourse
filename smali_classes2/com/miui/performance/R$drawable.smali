@@ -203,84 +203,84 @@
 
 .field public static final design_snackbar_background:I = 0x7f0801d8
 
-.field public static final ic_clock_black_24dp:I = 0x7f08028c
+.field public static final ic_clock_black_24dp:I = 0x7f080289
 
-.field public static final ic_keyboard_black_24dp:I = 0x7f08029b
+.field public static final ic_keyboard_black_24dp:I = 0x7f080298
 
-.field public static final ic_memory:I = 0x7f08029f
+.field public static final ic_memory:I = 0x7f08029c
 
-.field public static final ic_mtrl_checked_circle:I = 0x7f0802a1
+.field public static final ic_mtrl_checked_circle:I = 0x7f08029e
 
-.field public static final ic_mtrl_chip_checked_black:I = 0x7f0802a2
+.field public static final ic_mtrl_chip_checked_black:I = 0x7f08029f
 
-.field public static final ic_mtrl_chip_checked_circle:I = 0x7f0802a3
+.field public static final ic_mtrl_chip_checked_circle:I = 0x7f0802a0
 
-.field public static final ic_mtrl_chip_close_circle:I = 0x7f0802a4
+.field public static final ic_mtrl_chip_close_circle:I = 0x7f0802a1
 
-.field public static final material_cursor_drawable:I = 0x7f0802e4
+.field public static final material_cursor_drawable:I = 0x7f0802e1
 
-.field public static final material_ic_calendar_black_24dp:I = 0x7f0802e5
+.field public static final material_ic_calendar_black_24dp:I = 0x7f0802e2
 
-.field public static final material_ic_clear_black_24dp:I = 0x7f0802e6
+.field public static final material_ic_clear_black_24dp:I = 0x7f0802e3
 
-.field public static final material_ic_edit_black_24dp:I = 0x7f0802e7
+.field public static final material_ic_edit_black_24dp:I = 0x7f0802e4
 
-.field public static final material_ic_keyboard_arrow_left_black_24dp:I = 0x7f0802e8
+.field public static final material_ic_keyboard_arrow_left_black_24dp:I = 0x7f0802e5
 
-.field public static final material_ic_keyboard_arrow_next_black_24dp:I = 0x7f0802e9
+.field public static final material_ic_keyboard_arrow_next_black_24dp:I = 0x7f0802e6
 
-.field public static final material_ic_keyboard_arrow_previous_black_24dp:I = 0x7f0802ea
+.field public static final material_ic_keyboard_arrow_previous_black_24dp:I = 0x7f0802e7
 
-.field public static final material_ic_keyboard_arrow_right_black_24dp:I = 0x7f0802eb
+.field public static final material_ic_keyboard_arrow_right_black_24dp:I = 0x7f0802e8
 
-.field public static final material_ic_menu_arrow_down_black_24dp:I = 0x7f0802ec
+.field public static final material_ic_menu_arrow_down_black_24dp:I = 0x7f0802e9
 
-.field public static final material_ic_menu_arrow_up_black_24dp:I = 0x7f0802ed
+.field public static final material_ic_menu_arrow_up_black_24dp:I = 0x7f0802ea
 
-.field public static final mtrl_dialog_background:I = 0x7f08060d
+.field public static final mtrl_dialog_background:I = 0x7f08060a
 
-.field public static final mtrl_dropdown_arrow:I = 0x7f08060e
+.field public static final mtrl_dropdown_arrow:I = 0x7f08060b
 
-.field public static final mtrl_ic_arrow_drop_down:I = 0x7f08060f
+.field public static final mtrl_ic_arrow_drop_down:I = 0x7f08060c
 
-.field public static final mtrl_ic_arrow_drop_up:I = 0x7f080610
+.field public static final mtrl_ic_arrow_drop_up:I = 0x7f08060d
 
-.field public static final mtrl_ic_cancel:I = 0x7f080611
+.field public static final mtrl_ic_cancel:I = 0x7f08060e
 
-.field public static final mtrl_ic_error:I = 0x7f080612
+.field public static final mtrl_ic_error:I = 0x7f08060f
 
-.field public static final mtrl_popupmenu_background:I = 0x7f080614
+.field public static final mtrl_popupmenu_background:I = 0x7f080611
 
-.field public static final mtrl_tabs_default_indicator:I = 0x7f080616
+.field public static final mtrl_tabs_default_indicator:I = 0x7f080613
 
-.field public static final navigation_empty_icon:I = 0x7f080624
+.field public static final navigation_empty_icon:I = 0x7f080621
 
-.field public static final notification_action_background:I = 0x7f080630
+.field public static final notification_action_background:I = 0x7f08062d
 
-.field public static final notification_bg:I = 0x7f080632
+.field public static final notification_bg:I = 0x7f08062f
 
-.field public static final notification_bg_low:I = 0x7f080633
+.field public static final notification_bg_low:I = 0x7f080630
 
-.field public static final notification_bg_low_normal:I = 0x7f080634
+.field public static final notification_bg_low_normal:I = 0x7f080631
 
-.field public static final notification_bg_low_pressed:I = 0x7f080635
+.field public static final notification_bg_low_pressed:I = 0x7f080632
 
-.field public static final notification_bg_normal:I = 0x7f080636
+.field public static final notification_bg_normal:I = 0x7f080633
 
-.field public static final notification_bg_normal_pressed:I = 0x7f080637
+.field public static final notification_bg_normal_pressed:I = 0x7f080634
 
-.field public static final notification_icon_background:I = 0x7f080638
+.field public static final notification_icon_background:I = 0x7f080635
 
-.field public static final notification_template_icon_bg:I = 0x7f080639
+.field public static final notification_template_icon_bg:I = 0x7f080636
 
-.field public static final notification_template_icon_low_bg:I = 0x7f08063a
+.field public static final notification_template_icon_low_bg:I = 0x7f080637
 
-.field public static final notification_tile_bg:I = 0x7f08063b
+.field public static final notification_tile_bg:I = 0x7f080638
 
-.field public static final notify_panel_notification_icon_bg:I = 0x7f08063d
+.field public static final notify_panel_notification_icon_bg:I = 0x7f08063a
 
-.field public static final test_custom_background:I = 0x7f08069f
+.field public static final test_custom_background:I = 0x7f08069b
 
-.field public static final tooltip_frame_dark:I = 0x7f0806b0
+.field public static final tooltip_frame_dark:I = 0x7f0806ac
 
-.field public static final tooltip_frame_light:I = 0x7f0806b1
+.field public static final tooltip_frame_light:I = 0x7f0806ad

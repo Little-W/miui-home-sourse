@@ -329,7 +329,6 @@
     <string name="exit_overview_because_task_stack_changed">백그라운드에서 발생한 변경으로 인해 최근 작업이 종료되었습니다</string>
     <string name="expand_button_title">고급</string>
     <string name="exposed_dropdown_menu_content_description">드롭다운 메뉴 표시</string>
-    <string name="external_not_support_split_screen_j18">외부 화면에서는 분할 화면이 지원되지 않습니다</string>
     <string name="failed_to_delete_temporary">제거할 수 없습니다.</string>
     <string name="failed_to_drop">이동할 수 없습니다.</string>
     <string name="failed_to_drop_widget_invalid">이 위젯은 잘못되었습니다.</string>
@@ -548,7 +547,6 @@
     <string name="midnight">야간</string>
     <string name="minus_one_screen">앱 서랍</string>
     <string name="miui_screen_config_title">홈 화면 설정</string>
-    <string name="miui_widget_menu_replace_text">전환</string>
     <string name="miuix_access_state_desc">선택됨</string>
     <string name="miuix_appcompat_action_mode_deselect_all">선택 해제</string>
     <string name="miuix_appcompat_action_mode_select_all">모두 선택</string>
@@ -575,8 +573,6 @@
     <string name="monday">월요일</string>
     <string name="monday_short">월</string>
     <string name="monday_shortest">월</string>
-    <string name="monochrome_summary">호환되는 아이콘을 위한 배경 색상 변경</string>
-    <string name="monochrome_title">배경 색상</string>
     <string name="month_april">4월</string>
     <string name="month_april_short">4월</string>
     <string name="month_april_shortest">4월</string>

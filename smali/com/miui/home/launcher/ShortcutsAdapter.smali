@@ -60,7 +60,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 58
+    .line 59
     new-instance v0, Lcom/miui/home/launcher/ShortcutsAdapter$PositionComparator;
 
     invoke-direct {v0}, Lcom/miui/home/launcher/ShortcutsAdapter$PositionComparator;-><init>()V
@@ -73,7 +73,7 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/miui/home/launcher/FolderInfo;)V
     .locals 2
 
-    .line 61
+    .line 62
     invoke-virtual {p2}, Lcom/miui/home/launcher/FolderInfo;->getContents()Ljava/util/List;
 
     move-result-object v0
@@ -82,27 +82,27 @@
 
     invoke-direct {p0, p1, v1, v0}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;ILjava/util/List;)V
 
-    .line 47
+    .line 48
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/miui/home/launcher/ShortcutsAdapter;->mDragOverItems:Ljava/util/HashSet;
 
-    .line 48
+    .line 49
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/miui/home/launcher/ShortcutsAdapter;->mDroppingDragViews:Ljava/util/HashMap;
 
-    .line 49
+    .line 50
     iput-boolean v1, p0, Lcom/miui/home/launcher/ShortcutsAdapter;->mDisableSaveWhenDatasetChanged:Z
 
-    .line 62
+    .line 63
     iput-object p2, p0, Lcom/miui/home/launcher/ShortcutsAdapter;->mInfo:Lcom/miui/home/launcher/FolderInfo;
 
-    .line 63
+    .line 64
     invoke-static {p1}, Lcom/miui/home/launcher/Application;->getLauncherApplication(Landroid/content/Context;)Lcom/miui/home/launcher/Application;
 
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
@@ -111,7 +111,7 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/ShortcutsAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    .line 64
+    .line 65
     invoke-direct {p0}, Lcom/miui/home/launcher/ShortcutsAdapter;->buildSortingMap()V
 
     return-void
@@ -120,14 +120,14 @@
 .method private buildSortingMap()V
     .locals 5
 
-    .line 179
+    .line 177
     new-instance v0, Ljava/util/TreeMap;
 
     sget-object v1, Lcom/miui/home/launcher/ShortcutsAdapter;->PC:Lcom/miui/home/launcher/ShortcutsAdapter$PositionComparator;
 
     invoke-direct {v0, v1}, Ljava/util/TreeMap;-><init>(Ljava/util/Comparator;)V
 
-    .line 181
+    .line 179
     iget-object v1, p0, Lcom/miui/home/launcher/ShortcutsAdapter;->mInfo:Lcom/miui/home/launcher/FolderInfo;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/FolderInfo;->getContents()Ljava/util/List;
@@ -155,7 +155,7 @@
 
     add-int/lit8 v4, v2, 0x1
 
-    .line 182
+    .line 180
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -166,7 +166,7 @@
 
     goto :goto_0
 
-    .line 184
+    .line 182
     :cond_0
     invoke-interface {v0}, Ljava/util/SortedMap;->values()Ljava/util/Collection;
 
@@ -178,7 +178,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/ShortcutsAdapter;->mPositionMap:[Ljava/lang/Object;
 
-    .line 185
+    .line 183
     iget-boolean v0, p0, Lcom/miui/home/launcher/ShortcutsAdapter;->mDisableSaveWhenDatasetChanged:Z
 
     if-nez v0, :cond_1
@@ -189,7 +189,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 186
+    .line 184
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutsAdapter;->saveContentPosition()V
 
     :cond_1
@@ -199,7 +199,7 @@
 .method private formatToSequence()Z
     .locals 4
 
-    .line 192
+    .line 190
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutsAdapter;->getReorderCount()I
 
     move-result v0
@@ -211,7 +211,7 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 194
+    .line 192
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/ShortcutsAdapter;->getItem(I)Lcom/miui/home/launcher/ShortcutInfo;
 
     move-result-object v3
@@ -222,7 +222,7 @@
 
     const/4 v2, 0x1
 
-    .line 197
+    .line 195
     :cond_0
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/ShortcutsAdapter;->getItem(I)Lcom/miui/home/launcher/ShortcutInfo;
 
@@ -238,23 +238,10 @@
     return v2
 .end method
 
-.method static synthetic lambda$notifyDataSetChanged$0(Lcom/miui/home/launcher/ShortcutInfo;)V
-    .locals 1
-
-    .line 78
-    invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutInfo;->isChecked()Z
-
-    move-result v0
-
-    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ShortcutInfo;->setIsChecked(Z)V
-
-    return-void
-.end method
-
 .method private refreshFolderPreviewIcons()V
     .locals 1
 
-    .line 87
+    .line 85
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutsAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->isInShortcutMenuState()Z
@@ -263,7 +250,7 @@
 
     if-nez v0, :cond_0
 
-    .line 88
+    .line 86
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutsAdapter;->mInfo:Lcom/miui/home/launcher/FolderInfo;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/FolderInfo;->refreshPreviewIcons()V
@@ -277,16 +264,16 @@
 .method public add(Lcom/miui/home/launcher/ShortcutInfo;)V
     .locals 1
 
-    .line 265
+    .line 263
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutsAdapter;->mInfo:Lcom/miui/home/launcher/FolderInfo;
 
     monitor-enter v0
 
-    .line 266
+    .line 264
     :try_start_0
     invoke-super {p0, p1}, Landroid/widget/ArrayAdapter;->add(Ljava/lang/Object;)V
 
-    .line 267
+    .line 265
     monitor-exit v0
 
     return-void
@@ -304,7 +291,7 @@
 .method public bridge synthetic add(Ljava/lang/Object;)V
     .locals 0
 
-    .line 40
+    .line 41
     check-cast p1, Lcom/miui/home/launcher/ShortcutInfo;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/ShortcutsAdapter;->add(Lcom/miui/home/launcher/ShortcutInfo;)V
@@ -324,16 +311,16 @@
         }
     .end annotation
 
-    .line 279
+    .line 277
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutsAdapter;->mInfo:Lcom/miui/home/launcher/FolderInfo;
 
     monitor-enter v0
 
-    .line 280
+    .line 278
     :try_start_0
     invoke-super {p0, p1}, Landroid/widget/ArrayAdapter;->addAll(Ljava/util/Collection;)V
 
-    .line 281
+    .line 279
     monitor-exit v0
 
     return-void
@@ -351,7 +338,7 @@
 .method public disableSaveWhenDatasetChanged(Z)V
     .locals 0
 
-    .line 175
+    .line 173
     iput-boolean p1, p0, Lcom/miui/home/launcher/ShortcutsAdapter;->mDisableSaveWhenDatasetChanged:Z
 
     return-void
@@ -368,12 +355,12 @@
 .method public getCount()I
     .locals 2
 
-    .line 272
+    .line 270
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutsAdapter;->mInfo:Lcom/miui/home/launcher/FolderInfo;
 
     monitor-enter v0
 
-    .line 273
+    .line 271
     :try_start_0
     invoke-super {p0}, Landroid/widget/ArrayAdapter;->getCount()I
 
@@ -386,7 +373,7 @@
     :catchall_0
     move-exception v1
 
-    .line 274
+    .line 272
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -397,7 +384,7 @@
 .method public getFolderInfo()Lcom/miui/home/launcher/FolderInfo;
     .locals 1
 
-    .line 68
+    .line 69
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutsAdapter;->mInfo:Lcom/miui/home/launcher/FolderInfo;
 
     return-object v0
@@ -406,7 +393,7 @@
 .method public getIsDragging(Lcom/miui/home/launcher/ShortcutInfo;)Z
     .locals 1
 
-    .line 292
+    .line 290
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutsAdapter;->mDragOverItems:Ljava/util/HashSet;
 
     invoke-virtual {v0, p1}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
@@ -428,12 +415,12 @@
 .method public getItem(I)Lcom/miui/home/launcher/ShortcutInfo;
     .locals 2
 
-    .line 104
+    .line 102
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutsAdapter;->mInfo:Lcom/miui/home/launcher/FolderInfo;
 
     monitor-enter v0
 
-    .line 105
+    .line 103
     :try_start_0
     iget-object v1, p0, Lcom/miui/home/launcher/ShortcutsAdapter;->mPositionMap:[Ljava/lang/Object;
 
@@ -458,7 +445,7 @@
     :catchall_0
     move-exception p1
 
-    .line 106
+    .line 104
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -469,7 +456,7 @@
 .method public bridge synthetic getItem(I)Ljava/lang/Object;
     .locals 0
 
-    .line 40
+    .line 41
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/ShortcutsAdapter;->getItem(I)Lcom/miui/home/launcher/ShortcutInfo;
 
     move-result-object p1
@@ -480,7 +467,7 @@
 .method public getItemId(I)J
     .locals 2
 
-    .line 111
+    .line 109
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/ShortcutsAdapter;->getItem(I)Lcom/miui/home/launcher/ShortcutInfo;
 
     move-result-object p1
@@ -493,7 +480,7 @@
 .method public getReorderCount()I
     .locals 1
 
-    .line 115
+    .line 113
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutsAdapter;->getCount()I
 
     move-result v0
@@ -504,19 +491,19 @@
 .method public getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 5
 
-    .line 204
+    .line 202
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/ShortcutsAdapter;->getItem(I)Lcom/miui/home/launcher/ShortcutInfo;
 
     move-result-object p1
 
-    .line 205
+    .line 203
     instance-of p2, p1, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;
 
     if-eqz p2, :cond_0
 
     const p2, 0x7f0d0040
 
-    .line 206
+    .line 204
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutsAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p2, v0, p3, p1}, Lcom/miui/home/launcher/ShortcutIcon;->fromXml(ILcom/miui/home/launcher/Launcher;Landroid/view/ViewGroup;Lcom/miui/home/launcher/ShortcutInfo;)Lcom/miui/home/launcher/ShortcutIcon;
@@ -528,14 +515,14 @@
     :cond_0
     const p2, 0x7f0d0039
 
-    .line 207
+    .line 205
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutsAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p2, v0, p3, p1}, Lcom/miui/home/launcher/ShortcutIcon;->fromXml(ILcom/miui/home/launcher/Launcher;Landroid/view/ViewGroup;Lcom/miui/home/launcher/ShortcutInfo;)Lcom/miui/home/launcher/ShortcutIcon;
 
     move-result-object p2
 
-    .line 208
+    .line 206
     :goto_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutsAdapter;->getContext()Landroid/content/Context;
 
@@ -547,7 +534,7 @@
 
     invoke-virtual {p3, p2}, Lcom/miui/home/library/mirror/MirrorManagerCompat;->setMirrorMenuListener(Landroid/view/View;)V
 
-    .line 209
+    .line 207
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutsAdapter;->getContext()Landroid/content/Context;
 
     move-result-object p3
@@ -558,7 +545,7 @@
 
     invoke-virtual {p3, p2}, Lcom/miui/home/library/mirror/MirrorManagerCompat;->setDragListener(Landroid/view/View;)V
 
-    .line 210
+    .line 208
     invoke-virtual {p2}, Lcom/miui/home/launcher/ShortcutIcon;->getGhostView()Lcom/miui/home/launcher/AutoLayoutAnimation$GhostView;
 
     move-result-object p3
@@ -567,10 +554,10 @@
 
     if-eqz p3, :cond_1
 
-    .line 211
+    .line 209
     invoke-virtual {p2, v0}, Lcom/miui/home/launcher/ShortcutIcon;->setVisibility(I)V
 
-    .line 214
+    .line 212
     :cond_1
     iget-object p3, p0, Lcom/miui/home/launcher/ShortcutsAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -588,7 +575,7 @@
 
     if-nez p3, :cond_3
 
-    .line 215
+    .line 213
     iget-object p3, p0, Lcom/miui/home/launcher/ShortcutsAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p3}, Lcom/miui/home/launcher/Launcher;->getUninstallController()Lcom/miui/home/launcher/uninstall/UninstallController;
@@ -617,18 +604,18 @@
 
     if-eqz p3, :cond_2
 
-    .line 216
+    .line 214
     invoke-virtual {p2, v1}, Lcom/miui/home/launcher/ShortcutIcon;->setAlpha(F)V
 
     goto :goto_1
 
-    .line 218
+    .line 216
     :cond_2
     invoke-virtual {p2, v2}, Lcom/miui/home/launcher/ShortcutIcon;->setAlpha(F)V
 
     goto :goto_1
 
-    .line 220
+    .line 218
     :cond_3
     iget-object p3, p0, Lcom/miui/home/launcher/ShortcutsAdapter;->mDragOverItems:Ljava/util/HashSet;
 
@@ -638,10 +625,10 @@
 
     if-eqz p3, :cond_4
 
-    .line 221
+    .line 219
     invoke-virtual {p2, v1}, Lcom/miui/home/launcher/ShortcutIcon;->setAlpha(F)V
 
-    .line 224
+    .line 222
     :cond_4
     :goto_1
     iget-object p3, p0, Lcom/miui/home/launcher/ShortcutsAdapter;->mDroppingDragViews:Ljava/util/HashMap;
@@ -652,7 +639,7 @@
 
     if-eqz p3, :cond_5
 
-    .line 225
+    .line 223
     iget-object p3, p0, Lcom/miui/home/launcher/ShortcutsAdapter;->mDroppingDragViews:Ljava/util/HashMap;
 
     invoke-virtual {p3, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -661,20 +648,20 @@
 
     check-cast p3, Lcom/miui/home/launcher/DragView;
 
-    .line 226
+    .line 224
     invoke-virtual {p3}, Lcom/miui/home/launcher/DragView;->isTargetAnimating()Z
 
     move-result v1
 
     if-eqz v1, :cond_5
 
-    .line 227
+    .line 225
     invoke-virtual {p3, p2}, Lcom/miui/home/launcher/DragView;->updateAnimateTarget(Landroid/view/View;)V
 
-    .line 228
+    .line 226
     invoke-virtual {p2, v0}, Lcom/miui/home/launcher/ShortcutIcon;->setVisibility(I)V
 
-    .line 231
+    .line 229
     :cond_5
     iget-wide v0, p1, Lcom/miui/home/launcher/ShortcutInfo;->container:J
 
@@ -686,10 +673,10 @@
 
     if-nez p3, :cond_6
 
-    .line 232
+    .line 230
     invoke-virtual {p2}, Lcom/miui/home/launcher/ShortcutIcon;->onWallpaperColorChanged()V
 
-    .line 235
+    .line 233
     :cond_6
     invoke-virtual {p2}, Lcom/miui/home/launcher/ShortcutIcon;->getIconContainer()Landroid/view/View;
 
@@ -703,10 +690,10 @@
 
     if-eqz p3, :cond_7
 
-    .line 236
+    .line 234
     invoke-virtual {p2}, Lcom/miui/home/launcher/ShortcutIcon;->restoreToInitState()V
 
-    .line 238
+    .line 236
     :cond_7
     invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isScreenCellsLocked()Z
 
@@ -718,7 +705,7 @@
 
     iget-object p3, p0, Lcom/miui/home/launcher/ShortcutsAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    .line 239
+    .line 237
     invoke-virtual {p3}, Lcom/miui/home/launcher/Launcher;->isInNormalEditing()Z
 
     move-result p3
@@ -732,11 +719,11 @@
     :cond_8
     move p3, v0
 
-    .line 238
+    .line 236
     :goto_2
     invoke-virtual {p2, p3, v0}, Lcom/miui/home/launcher/ShortcutIcon;->setEditMode(ZZ)V
 
-    .line 240
+    .line 238
     iget-object p3, p0, Lcom/miui/home/launcher/ShortcutsAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p3}, Lcom/miui/home/launcher/Launcher;->getDragController()Lcom/miui/home/launcher/DragController;
@@ -749,17 +736,17 @@
 
     if-eqz p3, :cond_9
 
-    .line 241
+    .line 239
     invoke-virtual {p2}, Lcom/miui/home/launcher/ShortcutIcon;->getTitleContainer()Landroid/view/View;
 
     move-result-object p3
 
     invoke-virtual {p3, v2}, Landroid/view/View;->setAlpha(F)V
 
-    .line 242
+    .line 240
     invoke-virtual {p2}, Lcom/miui/home/launcher/ShortcutIcon;->resetCheckBox()V
 
-    .line 244
+    .line 242
     :cond_9
     invoke-static {p1}, Lcom/miui/home/launcher/hybrid/HybridController;->trackView(Lcom/miui/home/launcher/ShortcutInfo;)V
 
@@ -767,9 +754,9 @@
 .end method
 
 .method public notifyDataSetChanged()V
-    .locals 2
+    .locals 1
 
-    .line 76
+    .line 77
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutsAdapter;->mDragOverItems:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->isEmpty()Z
@@ -790,27 +777,16 @@
 
     if-nez v0, :cond_0
 
-    .line 77
-    iget-object v0, p0, Lcom/miui/home/launcher/ShortcutsAdapter;->mDragOverItems:Ljava/util/HashSet;
-
-    invoke-virtual {v0}, Ljava/util/HashSet;->stream()Ljava/util/stream/Stream;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/miui/home/launcher/-$$Lambda$ShortcutsAdapter$WmgwwaHfKTqwRM4wjvlcli7uv1Q;->INSTANCE:Lcom/miui/home/launcher/-$$Lambda$ShortcutsAdapter$WmgwwaHfKTqwRM4wjvlcli7uv1Q;
-
-    invoke-interface {v0, v1}, Ljava/util/stream/Stream;->forEach(Ljava/util/function/Consumer;)V
-
-    .line 80
+    .line 78
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutsAdapter;->mDragOverItems:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
 
-    .line 82
+    .line 80
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutsAdapter;->notifyDataSetChangedWithoutUpdateFolderPreviewIcons()V
 
-    .line 83
+    .line 81
     invoke-direct {p0}, Lcom/miui/home/launcher/ShortcutsAdapter;->refreshFolderPreviewIcons()V
 
     return-void
@@ -819,13 +795,13 @@
 .method public notifyDataSetChangedWithoutUpdateFolderPreviewIcons()V
     .locals 2
 
-    .line 93
+    .line 91
     invoke-direct {p0}, Lcom/miui/home/launcher/ShortcutsAdapter;->buildSortingMap()V
 
-    .line 94
+    .line 92
     invoke-super {p0}, Landroid/widget/ArrayAdapter;->notifyDataSetChanged()V
 
-    .line 95
+    .line 93
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutsAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     iget-object v1, p0, Lcom/miui/home/launcher/ShortcutsAdapter;->mInfo:Lcom/miui/home/launcher/FolderInfo;
@@ -850,16 +826,16 @@
 .method public remove(Lcom/miui/home/launcher/ShortcutInfo;)V
     .locals 1
 
-    .line 286
+    .line 284
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutsAdapter;->mInfo:Lcom/miui/home/launcher/FolderInfo;
 
     monitor-enter v0
 
-    .line 287
+    .line 285
     :try_start_0
     invoke-super {p0, p1}, Landroid/widget/ArrayAdapter;->remove(Ljava/lang/Object;)V
 
-    .line 288
+    .line 286
     monitor-exit v0
 
     return-void
@@ -877,7 +853,7 @@
 .method public bridge synthetic remove(Ljava/lang/Object;)V
     .locals 0
 
-    .line 40
+    .line 41
     check-cast p1, Lcom/miui/home/launcher/ShortcutInfo;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/ShortcutsAdapter;->remove(Lcom/miui/home/launcher/ShortcutInfo;)V
@@ -888,7 +864,7 @@
 .method public removeAllDrags()V
     .locals 2
 
-    .line 249
+    .line 247
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutsAdapter;->mDragOverItems:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->size()I
@@ -902,10 +878,10 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 251
+    .line 249
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ShortcutsAdapter;->setNotifyOnChange(Z)V
 
-    .line 252
+    .line 250
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutsAdapter;->mDragOverItems:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
@@ -925,16 +901,16 @@
 
     check-cast v1, Lcom/miui/home/launcher/ShortcutInfo;
 
-    .line 253
+    .line 251
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/ShortcutsAdapter;->remove(Lcom/miui/home/launcher/ShortcutInfo;)V
 
     goto :goto_0
 
-    .line 255
+    .line 253
     :cond_1
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutsAdapter;->notifyDataSetChanged()V
 
-    .line 256
+    .line 254
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutsAdapter;->mDragOverItems:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
@@ -945,14 +921,14 @@
 .method public reorderItemByIndex(II)V
     .locals 5
 
-    .line 140
+    .line 138
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutsAdapter;->mDragOverItems:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->size()I
 
     move-result v0
 
-    .line 141
+    .line 139
     invoke-static {p2, p1}, Ljava/lang/Math;->min(II)I
 
     move-result v1
@@ -967,12 +943,12 @@
 
     sub-int/2addr v4, v3
 
-    .line 142
+    .line 140
     invoke-static {v2, v4}, Ljava/lang/Math;->max(II)I
 
     move-result v2
 
-    .line 143
+    .line 141
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutsAdapter;->getCount()I
 
     move-result v4
@@ -985,7 +961,7 @@
 
     sub-int p1, p2, p1
 
-    .line 145
+    .line 143
     invoke-static {p1}, Ljava/lang/Math;->abs(I)I
 
     move-result p1
@@ -1008,14 +984,14 @@
     :goto_1
     if-gt v1, v2, :cond_5
 
-    .line 152
+    .line 150
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/ShortcutsAdapter;->getItem(I)Lcom/miui/home/launcher/ShortcutInfo;
 
     move-result-object p2
 
     if-eqz v3, :cond_3
 
-    .line 154
+    .line 152
     iget-object v4, p0, Lcom/miui/home/launcher/ShortcutsAdapter;->mDragOverItems:Ljava/util/HashSet;
 
     invoke-virtual {v4, p2}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
@@ -1024,7 +1000,7 @@
 
     if-nez v4, :cond_2
 
-    .line 155
+    .line 153
     iget v4, p2, Lcom/miui/home/launcher/ShortcutInfo;->cellX:I
 
     add-int/2addr v4, v0
@@ -1033,7 +1009,7 @@
 
     goto :goto_2
 
-    .line 157
+    .line 155
     :cond_2
     iget v4, p2, Lcom/miui/home/launcher/ShortcutInfo;->cellX:I
 
@@ -1043,7 +1019,7 @@
 
     goto :goto_2
 
-    .line 160
+    .line 158
     :cond_3
     iget-object v4, p0, Lcom/miui/home/launcher/ShortcutsAdapter;->mDragOverItems:Ljava/util/HashSet;
 
@@ -1053,7 +1029,7 @@
 
     if-nez v4, :cond_4
 
-    .line 161
+    .line 159
     iget v4, p2, Lcom/miui/home/launcher/ShortcutInfo;->cellX:I
 
     sub-int/2addr v4, v0
@@ -1062,7 +1038,7 @@
 
     goto :goto_2
 
-    .line 163
+    .line 161
     :cond_4
     iget v4, p2, Lcom/miui/home/launcher/ShortcutInfo;->cellX:I
 
@@ -1075,7 +1051,7 @@
 
     goto :goto_1
 
-    .line 167
+    .line 165
     :cond_5
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutsAdapter;->notifyDataSetChanged()V
 
@@ -1085,7 +1061,7 @@
 .method public reorderItemByInsert(Lcom/miui/home/launcher/ShortcutInfo;)V
     .locals 5
 
-    .line 119
+    .line 117
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutsAdapter;->mFirstDragItem:Lcom/miui/home/launcher/ShortcutInfo;
 
     if-ne v0, p1, :cond_0
@@ -1099,7 +1075,7 @@
 
     move v2, v1
 
-    .line 124
+    .line 122
     :goto_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutsAdapter;->getReorderCount()I
 
@@ -1107,15 +1083,15 @@
 
     if-ge v0, v3, :cond_3
 
-    .line 125
+    .line 123
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ShortcutsAdapter;->getItem(I)Lcom/miui/home/launcher/ShortcutInfo;
 
     move-result-object v3
 
-    .line 126
+    .line 124
     iput v0, v3, Lcom/miui/home/launcher/ShortcutInfo;->cellX:I
 
-    .line 127
+    .line 125
     iget-object v4, p0, Lcom/miui/home/launcher/ShortcutsAdapter;->mFirstDragItem:Lcom/miui/home/launcher/ShortcutInfo;
 
     if-ne v3, v4, :cond_1
@@ -1135,14 +1111,14 @@
     :cond_3
     if-nez p1, :cond_4
 
-    .line 135
+    .line 133
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutsAdapter;->getReorderCount()I
 
     move-result p1
 
     add-int/lit8 v2, p1, -0x1
 
-    .line 136
+    .line 134
     :cond_4
     invoke-virtual {p0, v1, v2}, Lcom/miui/home/launcher/ShortcutsAdapter;->reorderItemByIndex(II)V
 
@@ -1152,7 +1128,7 @@
 .method public saveContentPosition()V
     .locals 2
 
-    .line 171
+    .line 169
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutsAdapter;->getContext()Landroid/content/Context;
 
     move-result-object v0

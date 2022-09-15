@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/gadget/MtzGadget;)V
     .locals 0
 
-    .line 130
+    .line 128
     iput-object p1, p0, Lcom/miui/home/launcher/gadget/MtzGadget$2;->this$0:Lcom/miui/home/launcher/gadget/MtzGadget;
 
     invoke-direct {p0}, Lcom/miui/launcher/views/MamlOnExternCommandListener;-><init>()V
@@ -35,7 +35,7 @@
 .method public onMamlCommand(Ljava/lang/String;Ljava/lang/Double;Ljava/lang/String;)V
     .locals 0
 
-    .line 133
+    .line 131
     iget-object p2, p0, Lcom/miui/home/launcher/gadget/MtzGadget$2;->this$0:Lcom/miui/home/launcher/gadget/MtzGadget;
 
     invoke-static {p2}, Lcom/miui/home/launcher/gadget/MtzGadget;->access$000(Lcom/miui/home/launcher/gadget/MtzGadget;)Z
@@ -55,14 +55,14 @@
     :cond_0
     const-string p2, "start_activity"
 
-    .line 134
+    .line 132
     invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 135
+    .line 133
     iget-object p1, p0, Lcom/miui/home/launcher/gadget/MtzGadget$2;->this$0:Lcom/miui/home/launcher/gadget/MtzGadget;
 
     new-instance p2, Lcom/miui/home/launcher/gadget/MtzGadget$2$1;

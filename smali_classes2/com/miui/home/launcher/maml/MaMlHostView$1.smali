@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/maml/MaMlHostView;)V
     .locals 0
 
-    .line 122
+    .line 117
     iput-object p1, p0, Lcom/miui/home/launcher/maml/MaMlHostView$1;->this$0:Lcom/miui/home/launcher/maml/MaMlHostView;
 
     invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
@@ -35,7 +35,7 @@
 .method public getOutline(Landroid/view/View;Landroid/graphics/Outline;)V
     .locals 1
 
-    .line 125
+    .line 120
     iget-object p1, p0, Lcom/miui/home/launcher/maml/MaMlHostView$1;->this$0:Lcom/miui/home/launcher/maml/MaMlHostView;
 
     invoke-static {p1}, Lcom/miui/home/launcher/maml/MaMlHostView;->access$000(Lcom/miui/home/launcher/maml/MaMlHostView;)Landroid/graphics/Rect;
@@ -62,7 +62,7 @@
 
     goto :goto_0
 
-    .line 128
+    .line 123
     :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/maml/MaMlHostView$1;->this$0:Lcom/miui/home/launcher/maml/MaMlHostView;
 
@@ -80,7 +80,7 @@
 
     goto :goto_1
 
-    .line 126
+    .line 121
     :cond_1
     :goto_0
     invoke-virtual {p2}, Landroid/graphics/Outline;->setEmpty()V

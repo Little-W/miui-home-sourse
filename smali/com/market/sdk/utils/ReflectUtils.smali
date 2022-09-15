@@ -22,7 +22,7 @@
         value = {
             "Ljava/util/Map<",
             "Ljava/lang/String;",
-            "Lcom/market/sdk/reflect/Field;",
+            "Lmiui/reflect/Field;",
             ">;"
         }
     .end annotation
@@ -33,7 +33,7 @@
         value = {
             "Ljava/util/Map<",
             "Ljava/lang/String;",
-            "Lcom/market/sdk/reflect/Method;",
+            "Lmiui/reflect/Method;",
             ">;"
         }
     .end annotation
@@ -222,7 +222,7 @@
     return-object v0
 .end method
 
-.method public static getField(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Lcom/market/sdk/reflect/Field;
+.method public static getField(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Lmiui/reflect/Field;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -232,7 +232,7 @@
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             ")",
-            "Lcom/market/sdk/reflect/Field;"
+            "Lmiui/reflect/Field;"
         }
     .end annotation
 
@@ -249,12 +249,12 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/market/sdk/reflect/Field;
+    check-cast v1, Lmiui/reflect/Field;
 
     if-nez v1, :cond_0
 
     .line 57
-    invoke-static {p0, p1, p2}, Lcom/market/sdk/reflect/Field;->of(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Lcom/market/sdk/reflect/Field;
+    invoke-static {p0, p1, p2}, Lmiui/reflect/Field;->of(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Lmiui/reflect/Field;
 
     move-result-object v1
 
@@ -315,7 +315,7 @@
 
     .line 70
     :try_start_0
-    invoke-static {p0, p2, p3}, Lcom/market/sdk/utils/ReflectUtils;->getField(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Lcom/market/sdk/reflect/Field;
+    invoke-static {p0, p2, p3}, Lcom/market/sdk/utils/ReflectUtils;->getField(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Lmiui/reflect/Field;
 
     move-result-object p0
 
@@ -325,7 +325,7 @@
 
     .line 74
     :cond_0
-    invoke-virtual {p0, p1}, Lcom/market/sdk/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Lmiui/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
     :try_end_0
@@ -348,7 +348,7 @@
     return-object v0
 .end method
 
-.method public static getMethod(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Lcom/market/sdk/reflect/Method;
+.method public static getMethod(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Lmiui/reflect/Method;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -358,7 +358,7 @@
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             ")",
-            "Lcom/market/sdk/reflect/Method;"
+            "Lmiui/reflect/Method;"
         }
     .end annotation
 
@@ -375,12 +375,12 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/market/sdk/reflect/Method;
+    check-cast v1, Lmiui/reflect/Method;
 
     if-nez v1, :cond_0
 
     .line 86
-    invoke-static {p0, p1, p2}, Lcom/market/sdk/reflect/Method;->of(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Lcom/market/sdk/reflect/Method;
+    invoke-static {p0, p1, p2}, Lmiui/reflect/Method;->of(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Lmiui/reflect/Method;
 
     move-result-object v1
 
@@ -436,7 +436,7 @@
 
     .line 106
     :try_start_0
-    invoke-static {p1, p0}, Lcom/market/sdk/reflect/ReflectUtilsForMiui;->getSignature([Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/String;
+    invoke-static {p1, p0}, Lmiui/reflect/ReflectUtils;->getSignature([Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/String;
 
     move-result-object p0
     :try_end_0
@@ -479,14 +479,14 @@
 
     .line 29
     :try_start_0
-    invoke-static {p0, p2, p3}, Lcom/market/sdk/utils/ReflectUtils;->getMethod(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Lcom/market/sdk/reflect/Method;
+    invoke-static {p0, p2, p3}, Lcom/market/sdk/utils/ReflectUtils;->getMethod(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Lmiui/reflect/Method;
 
     move-result-object p2
 
     if-eqz p2, :cond_0
 
     .line 31
-    invoke-virtual {p2, p0, p1, p4}, Lcom/market/sdk/reflect/Method;->invoke(Ljava/lang/Class;Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-virtual {p2, p0, p1, p4}, Lmiui/reflect/Method;->invoke(Ljava/lang/Class;Ljava/lang/Object;[Ljava/lang/Object;)V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -539,14 +539,14 @@
 
     .line 42
     :try_start_0
-    invoke-static {p0, p2, p3}, Lcom/market/sdk/utils/ReflectUtils;->getMethod(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Lcom/market/sdk/reflect/Method;
+    invoke-static {p0, p2, p3}, Lcom/market/sdk/utils/ReflectUtils;->getMethod(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Lmiui/reflect/Method;
 
     move-result-object p2
 
     if-eqz p2, :cond_0
 
     .line 44
-    invoke-virtual {p2, p0, p1, p4}, Lcom/market/sdk/reflect/Method;->invokeObject(Ljava/lang/Class;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p2, p0, p1, p4}, Lmiui/reflect/Method;->invokeObject(Ljava/lang/Class;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
     :try_end_0

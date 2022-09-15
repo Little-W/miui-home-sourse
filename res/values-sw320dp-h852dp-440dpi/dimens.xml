@@ -26,7 +26,6 @@
     <item type="dimen" name="launcher_miui_widget_density_scale_factor">0.86</item>
     <item type="dimen" name="miui_widget_bounds_offset_scale_factor">1.05</item>
     <item type="dimen" name="pa_miui_widget_density_scale_factor">0.86</item>
-    <dimen name="recommend_margin_start">20.0dip</dimen>
     <dimen name="recommend_switch_summary_padding_left">19.0dip</dimen>
     <dimen name="search_bar_margin_bottom">43.0dip</dimen>
     <dimen name="search_bar_margin_top">13.0dip</dimen>

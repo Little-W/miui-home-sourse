@@ -32,7 +32,7 @@
     .line 77
     invoke-direct {p0, p2}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;-><init>(Landroid/view/View;)V
 
-    const p1, 0x7f0a01a3
+    const p1, 0x7f0a019f
 
     .line 78
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -43,7 +43,7 @@
 
     iput-object p1, p0, Lcom/miui/home/settings/IconCustomizePreviewAdapter$ViewHolder;->icon:Lcom/miui/home/launcher/LauncherIconImageView;
 
-    const p1, 0x7f0a01a7
+    const p1, 0x7f0a01a3
 
     .line 79
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;

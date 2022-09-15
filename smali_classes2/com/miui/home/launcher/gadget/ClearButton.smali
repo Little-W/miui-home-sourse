@@ -588,7 +588,7 @@
 .method public iconContainerId()I
     .locals 1
 
-    const v0, 0x7f0a019f
+    const v0, 0x7f0a019b
 
     return v0
 .end method
@@ -647,11 +647,11 @@
     .line 60
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f0d0081
+    const v1, 0x7f0d0080
 
     invoke-static {v0, v1, p0}, Lcom/miui/home/launcher/gadget/ClearButton;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    const v0, 0x7f0a00c9
+    const v0, 0x7f0a00c8
 
     .line 61
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/gadget/ClearButton;->findViewById(I)Landroid/view/View;
@@ -660,7 +660,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mContentBody:Landroid/view/View;
 
-    const v0, 0x7f0a01a8
+    const v0, 0x7f0a01a4
 
     .line 62
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/gadget/ClearButton;->findViewById(I)Landroid/view/View;
@@ -671,7 +671,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mTitleContainer:Landroid/view/ViewGroup;
 
-    const v0, 0x7f0a0083
+    const v0, 0x7f0a0082
 
     .line 63
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/gadget/ClearButton;->findViewById(I)Landroid/view/View;
@@ -694,7 +694,7 @@
 
     invoke-virtual {v1, v0}, Lcom/miui/home/launcher/LauncherIconImageView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    const v0, 0x7f0a00ca
+    const v0, 0x7f0a00c9
 
     .line 66
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/gadget/ClearButton;->findViewById(I)Landroid/view/View;
@@ -705,7 +705,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mClearIcon:Lcom/miui/home/launcher/common/ClearIconImageView;
 
-    const v0, 0x7f0a01a7
+    const v0, 0x7f0a01a3
 
     .line 67
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/gadget/ClearButton;->findViewById(I)Landroid/view/View;
@@ -819,9 +819,9 @@
 
     iget-object v1, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mLabel:Landroid/widget/TextView;
 
-    const v2, 0x7f1205de
+    const v2, 0x7f1205da
 
-    const v3, 0x7f1205e1
+    const v3, 0x7f1205dd
 
     invoke-static {v0, v1, v2, v3}, Lcom/miui/home/launcher/common/Utilities;->adaptTitleStyleToWallpaper(Landroid/content/Context;Landroid/widget/TextView;II)V
 
@@ -876,7 +876,7 @@
 .method public titleViewId()I
     .locals 1
 
-    const v0, 0x7f0a01a7
+    const v0, 0x7f0a01a3
 
     return v0
 .end method

@@ -424,7 +424,7 @@
 
     if-eqz v0, :cond_2
 
-    const-string v1, "unset"
+    const-string/jumbo v1, "unset"
 
     .line 133
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -460,7 +460,7 @@
 
     const-string v2, "_npa"
 
-    const-string v3, "true"
+    const-string/jumbo v3, "true"
 
     .line 138
     invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -813,7 +813,7 @@
 
     move-result-object v4
 
-    const-string v3, "triggered_timestamp"
+    const-string/jumbo v3, "triggered_timestamp"
 
     .line 653
     invoke-virtual {v0, v3}, Landroid/os/Bundle;->getLong(Ljava/lang/String;)J
@@ -851,14 +851,14 @@
 
     move-result-object v10
 
-    const-string v3, "triggered_event_name"
+    const-string/jumbo v3, "triggered_event_name"
 
     .line 659
     invoke-virtual {v0, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v11
 
-    const-string v3, "triggered_event_params"
+    const-string/jumbo v3, "triggered_event_params"
 
     .line 660
     invoke-virtual {v0, v3}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
@@ -1084,14 +1084,14 @@
 
     const/4 v9, 0x0
 
-    const-string v3, "trigger_event_name"
+    const-string/jumbo v3, "trigger_event_name"
 
     .line 687
     invoke-virtual {v0, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v10
 
-    const-string v3, "trigger_timeout"
+    const-string/jumbo v3, "trigger_timeout"
 
     .line 688
     invoke-virtual {v0, v3}, Landroid/os/Bundle;->getLong(Ljava/lang/String;)J
@@ -1312,7 +1312,7 @@
 
     move-result v9
 
-    const-string v3, "trigger_event_name"
+    const-string/jumbo v3, "trigger_event_name"
 
     .line 720
     invoke-virtual {v0, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -1321,7 +1321,7 @@
 
     const/4 v11, 0x0
 
-    const-string v3, "trigger_timeout"
+    const-string/jumbo v3, "trigger_timeout"
 
     .line 721
     invoke-virtual {v0, v3}, Landroid/os/Bundle;->getLong(Ljava/lang/String;)J
@@ -2089,14 +2089,14 @@
 
     invoke-static {v0, p1, v1, v2}, Lcom/google/android/gms/measurement/internal/zzgs;->zza(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string p1, "trigger_event_name"
+    const-string/jumbo p1, "trigger_event_name"
 
     .line 568
     const-class v1, Ljava/lang/String;
 
     invoke-static {v0, p1, v1, v2}, Lcom/google/android/gms/measurement/internal/zzgs;->zza(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string p1, "trigger_timeout"
+    const-string/jumbo p1, "trigger_timeout"
 
     .line 569
     const-class v1, Ljava/lang/Long;
@@ -2125,14 +2125,14 @@
 
     invoke-static {v0, p1, v1, v2}, Lcom/google/android/gms/measurement/internal/zzgs;->zza(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string p1, "triggered_event_name"
+    const-string/jumbo p1, "triggered_event_name"
 
     .line 574
     const-class v1, Ljava/lang/String;
 
     invoke-static {v0, p1, v1, v2}, Lcom/google/android/gms/measurement/internal/zzgs;->zza(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string p1, "triggered_event_params"
+    const-string/jumbo p1, "triggered_event_params"
 
     .line 575
     const-class v1, Landroid/os/Bundle;
@@ -2329,14 +2329,14 @@
     :cond_3
     invoke-static {v0, p3}, Lcom/google/android/gms/measurement/internal/zzgs;->zza(Landroid/os/Bundle;Ljava/lang/Object;)V
 
-    const-string p2, "trigger_timeout"
+    const-string/jumbo p2, "trigger_timeout"
 
     .line 609
     invoke-virtual {v0, p2}, Landroid/os/Bundle;->getLong(Ljava/lang/String;)J
 
     move-result-wide p2
 
-    const-string v1, "trigger_event_name"
+    const-string/jumbo v1, "trigger_event_name"
 
     .line 610
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -4810,7 +4810,7 @@
 
     if-nez v0, :cond_1
 
-    const-string v0, "true"
+    const-string/jumbo v0, "true"
 
     goto :goto_1
 
@@ -4838,7 +4838,7 @@
 
     iget-object v0, v0, Lcom/google/android/gms/measurement/internal/zzfc;->zzn:Lcom/google/android/gms/measurement/internal/zzfi;
 
-    const-string v1, "unset"
+    const-string/jumbo v1, "unset"
 
     invoke-virtual {v0, v1}, Lcom/google/android/gms/measurement/internal/zzfi;->zza(Ljava/lang/String;)V
 

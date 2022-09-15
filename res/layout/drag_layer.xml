@@ -6,11 +6,15 @@
             <com.miui.home.launcher.Workspace android:id="@id/workspace" android:paddingTop="@dimen/status_bar_height" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
             <include android:id="@id/hotseat" layout="@layout/layout_hotseats" />
         </com.miui.home.launcher.FitSystemWindowView>
-        <ViewStub android:id="@id/folder_cling_stub" android:layout="@layout/folder_cling" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-        <ViewStub android:id="@id/edit_mode_menu_on_bottom_stub" android:layout="@layout/edit_mode_menu_on_bottom" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-        <ViewStub android:id="@id/edit_mode_menu_on_top_stub" android:layout="@layout/edit_mode_menu_on_top" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <include layout="@layout/folder_cling" />
+        <com.miui.home.launcher.FitSystemWindowView android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.miui.home.launcher.WorkspaceThumbnailView android:layout_gravity="bottom" android:id="@id/workspace_preview" android:visibility="invisible" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <com.miui.home.launcher.EditingEntryThumbnailView android:layout_gravity="bottom" android:id="@id/editing_entry_view" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginStart="@dimen/editing_entry_thumbnail_view_margin_left_right" android:layout_marginEnd="@dimen/editing_entry_thumbnail_view_margin_left_right" />
+            <include android:id="@id/default_screen_preview" android:visibility="gone" layout="@layout/default_screen_preview" />
+        </com.miui.home.launcher.FitSystemWindowView>
+        <include layout="@layout/edit_mode_menu_on_top" />
         <com.miui.home.launcher.view.ScrimView android:id="@id/scrim_view" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:importantForAccessibility="no" />
-        <ViewStub android:id="@id/apps_view_stub" android:visibility="gone" android:layout="@layout/all_apps" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <include android:id="@id/apps_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/all_apps" />
         <com.miui.home.launcher.SearchBarContainer android:layout_gravity="bottom" android:id="@id/search_bar_container" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
             <include android:layout_gravity="center_horizontal" android:id="@id/search_bar" android:layout_width="wrap_content" android:layout_height="@dimen/search_bar_height" android:layout_marginTop="@dimen/search_bar_margin_top" android:layout_marginBottom="@dimen/search_bar_margin_bottom" layout="@layout/layout_search_bar" />
         </com.miui.home.launcher.SearchBarContainer>
@@ -20,6 +24,6 @@
     <FrameLayout android:paddingTop="@dimen/status_bar_height" android:layout_width="1.0px" android:layout_height="fill_parent">
         <FrameLayout android:id="@id/default_position" android:layout_width="1.0px" android:layout_height="fill_parent" android:importantForAccessibility="no" />
     </FrameLayout>
-    <ViewStub android:id="@id/widgets_preview_layout_stub" android:layout="@layout/widgets_preview_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <include layout="@layout/widgets_preview_layout" />
     <com.miui.home.launcher.widget.DragContainerLayout android:id="@id/drag_view_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
 </com.miui.home.launcher.DragLayer>

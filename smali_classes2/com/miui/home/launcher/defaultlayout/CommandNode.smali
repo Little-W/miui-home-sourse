@@ -38,7 +38,7 @@
 
     if-eqz v0, :cond_0
 
-    const/16 v2, 0x9
+    const/4 v2, 0x7
 
     invoke-virtual {v0, v2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -57,7 +57,7 @@
 
     if-eqz v2, :cond_1
 
-    const/16 v3, 0xa
+    const/16 v3, 0x8
 
     invoke-virtual {v2, v3}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -76,7 +76,7 @@
 
     if-eqz v3, :cond_2
 
-    const/16 v1, 0xb
+    const/16 v1, 0x9
 
     invoke-virtual {v3, v1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 

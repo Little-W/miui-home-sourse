@@ -246,7 +246,7 @@
 .method private isIgnoreTranslateSurface()Z
     .locals 2
 
-    .line 224
+    .line 223
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1e
@@ -742,9 +742,6 @@
 
     invoke-virtual {v12, v9}, Landroid/graphics/RectF;->roundOut(Landroid/graphics/Rect;)V
 
-    .line 200
-    invoke-virtual/range {p0 .. p0}, Lcom/miui/home/recents/util/ClipAnimationHelper;->updateCurrentRectWithInsets()V
-
     :cond_9
     move/from16 v18, v10
 
@@ -752,7 +749,7 @@
 
     goto :goto_6
 
-    .line 202
+    .line 201
     :cond_a
     iget v11, v8, Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;->activityType:I
 
@@ -760,17 +757,17 @@
 
     if-eqz v3, :cond_b
 
-    .line 203
+    .line 202
     iget v10, v3, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;->targetAlpha:F
 
-    .line 204
+    .line 203
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isInMultiWindowMode()Z
 
     move-result v11
 
     if-nez v11, :cond_b
 
-    .line 205
+    .line 204
     iget-object v11, v0, Lcom/miui/home/recents/util/ClipAnimationHelper;->mTmpMatrix:Landroid/graphics/Matrix;
 
     iget v12, v3, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;->scale:F
@@ -800,7 +797,7 @@
 
     move v14, v10
 
-    .line 211
+    .line 210
     :goto_6
     new-instance v10, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$SurfaceParams;
 
@@ -820,14 +817,16 @@
 
     goto/16 :goto_4
 
-    .line 214
+    .line 213
     :cond_c
     iget-object v1, v2, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;->syncTransactionApplier:Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;
 
     invoke-direct {v0, v1, v4}, Lcom/miui/home/recents/util/ClipAnimationHelper;->applySurfaceParams(Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;[Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$SurfaceParams;)V
 
-    .line 216
-    iget-object v1, v0, Lcom/miui/home/recents/util/ClipAnimationHelper;->mCurrentRectWithInsets:Landroid/graphics/RectF;
+    .line 215
+    invoke-virtual/range {p0 .. p0}, Lcom/miui/home/recents/util/ClipAnimationHelper;->getCurrentRectWithInsets()Landroid/graphics/RectF;
+
+    move-result-object v1
 
     return-object v1
 .end method
@@ -1020,6 +1019,53 @@
     return-void
 .end method
 
+.method public getCurrentRectWithInsets()Landroid/graphics/RectF;
+    .locals 3
+
+    .line 227
+    iget-object v0, p0, Lcom/miui/home/recents/util/ClipAnimationHelper;->mTmpMatrix:Landroid/graphics/Matrix;
+
+    iget-object v1, p0, Lcom/miui/home/recents/util/ClipAnimationHelper;->mCurrentRectWithInsets:Landroid/graphics/RectF;
+
+    iget-object v2, p0, Lcom/miui/home/recents/util/ClipAnimationHelper;->mClipRectF:Landroid/graphics/RectF;
+
+    invoke-virtual {v0, v1, v2}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;Landroid/graphics/RectF;)Z
+
+    .line 228
+    invoke-direct {p0}, Lcom/miui/home/recents/util/ClipAnimationHelper;->isIgnoreTranslateSurface()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 229
+    iget-object v0, p0, Lcom/miui/home/recents/util/ClipAnimationHelper;->mCurrentRectWithInsets:Landroid/graphics/RectF;
+
+    iget-object v1, p0, Lcom/miui/home/recents/util/ClipAnimationHelper;->mSourceStackBounds:Landroid/graphics/Rect;
+
+    iget v1, v1, Landroid/graphics/Rect;->left:I
+
+    neg-int v1, v1
+
+    int-to-float v1, v1
+
+    iget-object v2, p0, Lcom/miui/home/recents/util/ClipAnimationHelper;->mSourceStackBounds:Landroid/graphics/Rect;
+
+    iget v2, v2, Landroid/graphics/Rect;->top:I
+
+    neg-int v2, v2
+
+    int-to-float v2, v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/graphics/RectF;->offset(FF)V
+
+    .line 231
+    :cond_0
+    iget-object v0, p0, Lcom/miui/home/recents/util/ClipAnimationHelper;->mCurrentRectWithInsets:Landroid/graphics/RectF;
+
+    return-object v0
+.end method
+
 .method public getSourceRect()Landroid/graphics/RectF;
     .locals 1
 
@@ -1127,53 +1173,9 @@
 .method public setIsUseForHomeGesture(Z)V
     .locals 0
 
-    .line 220
+    .line 219
     iput-boolean p1, p0, Lcom/miui/home/recents/util/ClipAnimationHelper;->mIsUseForHomeGesture:Z
 
-    return-void
-.end method
-
-.method public updateCurrentRectWithInsets()V
-    .locals 3
-
-    .line 228
-    iget-object v0, p0, Lcom/miui/home/recents/util/ClipAnimationHelper;->mTmpMatrix:Landroid/graphics/Matrix;
-
-    iget-object v1, p0, Lcom/miui/home/recents/util/ClipAnimationHelper;->mCurrentRectWithInsets:Landroid/graphics/RectF;
-
-    iget-object v2, p0, Lcom/miui/home/recents/util/ClipAnimationHelper;->mClipRectF:Landroid/graphics/RectF;
-
-    invoke-virtual {v0, v1, v2}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;Landroid/graphics/RectF;)Z
-
-    .line 229
-    invoke-direct {p0}, Lcom/miui/home/recents/util/ClipAnimationHelper;->isIgnoreTranslateSurface()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 230
-    iget-object v0, p0, Lcom/miui/home/recents/util/ClipAnimationHelper;->mCurrentRectWithInsets:Landroid/graphics/RectF;
-
-    iget-object v1, p0, Lcom/miui/home/recents/util/ClipAnimationHelper;->mSourceStackBounds:Landroid/graphics/Rect;
-
-    iget v1, v1, Landroid/graphics/Rect;->left:I
-
-    neg-int v1, v1
-
-    int-to-float v1, v1
-
-    iget-object v2, p0, Lcom/miui/home/recents/util/ClipAnimationHelper;->mSourceStackBounds:Landroid/graphics/Rect;
-
-    iget v2, v2, Landroid/graphics/Rect;->top:I
-
-    neg-int v2, v2
-
-    int-to-float v2, v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/graphics/RectF;->offset(FF)V
-
-    :cond_0
     return-void
 .end method
 

@@ -283,7 +283,6 @@
     <string name="eras_bc">སྤྱི་ལོ་སྔོན།</string>
     <string name="evening">དགོང་མོ།</string>
     <string name="exit_overview_because_task_stack_changed">རྒྱབ་ངོས་ཉེར་སྤྱོད་ལ་འགྱུར་བ་བྱུང་སྟབས། ཉེ་བའི་ལས་འགན་ལས་ཕྱིར་ཐོན་ཟིན།</string>
-    <string name="external_not_support_split_screen_j18">ཕྱི་ངོས་ཀྱིས་གནས་སྐབས་སུ་འཆར་ངོས་བགོ་བར་རྒྱབ་སྐྱོར་མི་བྱེད།</string>
     <string name="failed_to_delete_temporary">སུབ་མི་ཐུབ། ཅུང་ཙམ་ནས་ཡང་ལྟ།</string>
     <string name="failed_to_drop">སྤོ་མི་ཐུབ། པར་རྟགས་མ་གནས་ལ་ལོག་པ།</string>
     <string name="failed_to_drop_widget_invalid">བར་གཞུག་ནུས་མེད།</string>
@@ -487,7 +486,6 @@
     <string name="midnight">ནམ་དགུང་།</string>
     <string name="minus_one_screen">རིག་ནུས་ལག་རོགས།</string>
     <string name="miui_screen_config_title">ཅོག་ངོས་བཀོད་པ།</string>
-    <string name="miui_widget_menu_replace_text">བརྗེ་བ།</string>
     <string name="miuix_access_state_desc">བདམས་པ།</string>
     <string name="miuix_appcompat_action_mode_deselect_all">ཚང་མ་མི་འདེམས།</string>
     <string name="miuix_appcompat_action_mode_select_all">ཡོངས་འདེམས།</string>
@@ -514,8 +512,6 @@
     <string name="monday">གཟའ་ཟླ་བ།</string>
     <string name="monday_short">གཟའ་ཟླ་བ།</string>
     <string name="monday_shortest">ཟླ་བ།</string>
-    <string name="monochrome_summary">更改图标背景色，应用于适配此功能的图标</string>
-    <string name="monochrome_title">图标背景色</string>
     <string name="month_april">ཟླ་བཞི་པ།</string>
     <string name="month_april_short">བཞི།</string>
     <string name="month_april_shortest">བཞི།</string>
@@ -931,8 +927,6 @@
     <string name="uninstall_xspace_dialog_title_format">ཉིས་འབྱེད་\"%s\"ཕྱིར་ལེན།</string>
     <string name="unknown_artist_name">ངོས་མ་ཟིན་པའི་སྒྱུ་རྩལ་པ།</string>
     <string name="unnamed_folder_name">ཡིག་ཁུག</string>
-    <string name="unstable_dialog_message">སྒྲིག་ཆས་འདི་Android 13གསར་སྤེལ་བྱེད་མཁན་གྱི་སྔོན་ལྟའི་འཆར་གཞིར་ཚུད་ཟིན། འཆར་འགོད་དེ་Androidགསར་སྤེལ་བྱེད་མཁན་དང་གྲོགས་པོ་དག་གིས་Android 13ཡི་སྔོན་ལྟའི་པར་གཞི་ཚོད་སྤྱོད་བྱེད། སྔོན་ལྟའི་པར་གཞི་དེའི་ནང་དུ་སྒྲིག་ཆས་ཀྱི་རྒྱུན་ལྡན་བེད་སྤྱོད་ལ་ཤུགས་རྐྱེན་ཐེབས་སྲིད་པའི་ནོར་འཁྲུལ་དང་ཞན་ཆ་ཡོད་སྲིད།</string>
-    <string name="unstable_dialog_title">Android གསར་སྤེལ་མཁན་གྱི་སྔོན་ལྟའི་འཆར་གཞི།</string>
     <string name="upgrade_remove_small_window_in_recents">ཉེ་དུས་ལས་འགན་སྒེའུ་ཆུང་ཉེར་སྤྱོད་ཀྱི་འཛུལ་སྒོ་སུབ་ཟིན། ཕྱོགས་ཡོངས་ཀྱི་གཞོགས་ངོས་སྒྲོམ་ནས་སྒེའུ་ཁུང་བྱེད་ནུས་སྤྱད་ཆོག</string>
     <string name="wallpaper">རྩིག་ཤོག</string>
     <string name="wallpaper_auto_change_title">རྩིག་ཤོག་རིམ་གཏོང་།(སོར་འཇོག་བརྙན་ཤེལ་སྒོ་ལྕགས་རྒྱབ་པ་ཁོ་ན)</string>

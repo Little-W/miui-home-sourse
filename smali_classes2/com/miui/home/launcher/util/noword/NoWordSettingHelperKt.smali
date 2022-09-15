@@ -11,20 +11,20 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 31
+    .line 29
     invoke-static {p0}, Lcom/miui/home/launcher/common/Utilities;->refreshNoWordModel(Landroid/content/Context;)V
 
-    .line 32
+    .line 30
     invoke-static {}, Lcom/miui/home/launcher/allapps/LauncherModeController;->getCurrentLauncherCellCountInstance()Lcom/miui/home/launcher/compat/LauncherCellCount;
 
     move-result-object p0
 
-    .line 33
+    .line 31
     instance-of v0, p0, Lcom/miui/home/launcher/compat/LauncherCellCountCompatNoWord;
 
     if-eqz v0, :cond_0
 
-    .line 35
+    .line 33
     check-cast p0, Lcom/miui/home/launcher/compat/LauncherCellCountCompatNoWord;
 
     const/4 v0, 0x0
@@ -34,7 +34,7 @@
     :cond_0
     const-string p0, "NoWordSettingHelper"
 
-    .line 37
+    .line 35
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -61,7 +61,7 @@
 .method public static final isNoWordAvailable()Z
     .locals 1
 
-    .line 52
+    .line 50
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isMiuiLiteVersion()Z
 
     move-result v0
@@ -96,14 +96,14 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 44
+    .line 42
     sget-object v0, Lcom/miui/home/launcher/util/noword/NoWordSettingHelper;->INSTANCE:Lcom/miui/home/launcher/util/noword/NoWordSettingHelper;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/util/noword/NoWordSettingHelper;->setSwitchingNoWordModel(Z)V
 
-    .line 45
+    .line 43
     sget-object v0, Lcom/miui/home/launcher/anim/NoWordSwitchAnimHelper;->INSTANCE:Lcom/miui/home/launcher/anim/NoWordSwitchAnimHelper;
 
     const/4 v1, 0x0

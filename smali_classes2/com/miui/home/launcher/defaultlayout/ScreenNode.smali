@@ -22,7 +22,7 @@
 .method private final getContainer(Landroid/content/res/TypedArray;)J
     .locals 2
 
-    const/4 v0, 0x4
+    const/4 v0, 0x2
 
     .line 30
     invoke-virtual {p1, v0}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
@@ -97,7 +97,7 @@
     invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->throwNpe()V
 
     :cond_0
-    const/4 v1, 0x7
+    const/4 v1, 0x5
 
     invoke-virtual {v0, v1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 

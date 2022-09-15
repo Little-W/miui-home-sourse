@@ -63,8 +63,8 @@
 
 
 # virtual methods
-.method public animTo(FIILmiuix/animation/base/AnimConfig;)V
-    .locals 4
+.method public animTo(FIILmiuix/animation/base/AnimConfig;Z)V
+    .locals 6
 
     .line 420
     new-instance v0, Lmiuix/animation/controller/AnimState;
@@ -110,7 +110,7 @@
 
     move-result-object p1
 
-    .line 424
+    .line 425
     iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;->mViews:Ljava/util/List;
 
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -122,7 +122,7 @@
 
     move-result p3
 
-    if-eqz p3, :cond_1
+    if-eqz p3, :cond_2
 
     invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -130,16 +130,38 @@
 
     check-cast p3, Landroid/view/View;
 
-    const/4 v0, 0x1
+    const/4 v0, 0x2
 
-    .line 425
-    new-array v1, v0, [Landroid/view/View;
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    const/4 v2, 0x1
 
-    aput-object p3, v1, v2
+    if-nez p5, :cond_1
 
-    invoke-static {v1}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
+    .line 427
+    new-instance v3, Lmiuix/animation/base/AnimConfig;
+
+    invoke-direct {v3}, Lmiuix/animation/base/AnimConfig;-><init>()V
+
+    new-array v4, v2, [Lmiuix/animation/listener/TransitionListener;
+
+    new-instance v5, Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView$2;
+
+    invoke-direct {v5, p0, p3}, Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView$2;-><init>(Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;Landroid/view/View;)V
+
+    aput-object v5, v4, v1
+
+    .line 428
+    invoke-virtual {v3, v4}, Lmiuix/animation/base/AnimConfig;->addListeners([Lmiuix/animation/listener/TransitionListener;)Lmiuix/animation/base/AnimConfig;
+
+    move-result-object v3
+
+    .line 439
+    new-array v4, v2, [Landroid/view/View;
+
+    aput-object p3, v4, v1
+
+    invoke-static {v4}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
 
     move-result-object p3
 
@@ -149,13 +171,39 @@
 
     new-array v0, v0, [Lmiuix/animation/base/AnimConfig;
 
+    aput-object p4, v0, v1
+
+    aput-object v3, v0, v2
+
+    invoke-interface {p3, p1, v0}, Lmiuix/animation/IStateStyle;->to(Ljava/lang/Object;[Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/IStateStyle;
+
+    goto :goto_1
+
+    .line 442
+    :cond_1
+    new-array v3, v2, [Landroid/view/View;
+
+    aput-object p3, v3, v1
+
+    invoke-static {v3}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
+
+    move-result-object p3
+
+    invoke-interface {p3}, Lmiuix/animation/IFolme;->state()Lmiuix/animation/IStateStyle;
+
+    move-result-object p3
+
+    new-array v0, v0, [Lmiuix/animation/base/AnimConfig;
+
+    aput-object p4, v0, v1
+
     aput-object p4, v0, v2
 
     invoke-interface {p3, p1, v0}, Lmiuix/animation/IStateStyle;->to(Ljava/lang/Object;[Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/IStateStyle;
 
     goto :goto_1
 
-    :cond_1
+    :cond_2
     return-void
 .end method
 
@@ -192,7 +240,7 @@
 .method public onHide()V
     .locals 3
 
-    .line 436
+    .line 454
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;->mViews:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -214,7 +262,7 @@
 
     const/4 v2, 0x0
 
-    .line 437
+    .line 455
     invoke-virtual {v1, v2}, Landroid/view/View;->setEnabled(Z)V
 
     goto :goto_0
@@ -226,7 +274,7 @@
 .method public onShow()V
     .locals 3
 
-    .line 430
+    .line 448
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;->mViews:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -248,7 +296,7 @@
 
     const/4 v2, 0x1
 
-    .line 431
+    .line 449
     invoke-virtual {v1, v2}, Landroid/view/View;->setEnabled(Z)V
 
     goto :goto_0

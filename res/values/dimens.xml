@@ -352,7 +352,6 @@
     <dimen name="fold_edit_other_cellscreen_translationx_distance">33.26999dip</dimen>
     <dimen name="folder_background_padding_top">18.0dip</dimen>
     <dimen name="folder_bottom_padding">60.0dip</dimen>
-    <dimen name="folder_content_grid_view_margin_bottom">0.0dip</dimen>
     <dimen name="folder_content_margin_bottom">0.0dip</dimen>
     <dimen name="folder_content_margin_top">0.0dip</dimen>
     <dimen name="folder_content_padding_left">4.0dip</dimen>
@@ -395,8 +394,6 @@
     <item type="dimen" name="hint_pressed_alpha_material_light">0.54</item>
     <dimen name="home_feed_allow_height">50.0dip</dimen>
     <dimen name="home_feed_allow_width">9.0dip</dimen>
-    <item type="dimen" name="home_preference_item_padding_end">@dimen/miuix_preference_item_padding_end</item>
-    <item type="dimen" name="home_preference_item_padding_start">@dimen/miuix_preference_item_padding_start</item>
     <item type="dimen" name="horizontal_shortcut_menu_item_icon_height">@dimen/horizontal_shortcut_menu_item_icon_width</item>
     <item type="dimen" name="horizontal_shortcut_menu_item_icon_margin_end">@dimen/horizontal_shortcut_menu_item_icon_margin_start</item>
     <dimen name="horizontal_shortcut_menu_item_icon_margin_start">14.5dip</dimen>
@@ -765,7 +762,6 @@
     <dimen name="miuix_appcompat_check_widget_height_v19">37.799988dip</dimen>
     <dimen name="miuix_appcompat_check_widget_width">23.0dip</dimen>
     <dimen name="miuix_appcompat_check_widget_width_v19">37.799988dip</dimen>
-    <dimen name="miuix_appcompat_checked_text_view_addition_margin">14.0dip</dimen>
     <dimen name="miuix_appcompat_clearable_edit_text_size">13.299988sp</dimen>
     <dimen name="miuix_appcompat_config_prefDialogWidth">320.0dip</dimen>
     <dimen name="miuix_appcompat_context_menu_separate_item_horizontal_padding">23.329987dip</dimen>
@@ -830,7 +826,6 @@
     <dimen name="miuix_appcompat_dialog_pannel_vertical_padding_bottom">26.669983dip</dimen>
     <dimen name="miuix_appcompat_dialog_pannel_vertical_padding_top">26.669983dip</dimen>
     <dimen name="miuix_appcompat_dialog_progress_horizontal_margin">6.669983dip</dimen>
-    <dimen name="miuix_appcompat_dialog_progress_horizontal_width">62.0dip</dimen>
     <dimen name="miuix_appcompat_dialog_progress_message_padding_vertical">5.0dip</dimen>
     <dimen name="miuix_appcompat_dialog_progress_message_text_size">16.0sp</dimen>
     <dimen name="miuix_appcompat_dialog_progress_title_vertical_padding_bottom">0.0dip</dimen>
@@ -1450,11 +1445,11 @@
     <dimen name="recents_task_view_header_height">40.0dip</dimen>
     <dimen name="recents_task_view_header_height_tablet_land">64.0dip</dimen>
     <dimen name="recents_task_view_header_title_margin_end">25.0dip</dimen>
-    <dimen name="recents_task_view_header_title_text_size">0.0sp</dimen>
+    <dimen name="recents_task_view_header_title_text_size">13.0sp</dimen>
     <item type="dimen" name="recents_task_view_padding_ratio">0.0</item>
     <dimen name="recents_task_view_privacy_protect_icon_marginTop">20.0dip</dimen>
-    <dimen name="recents_task_view_rounded_corners_radius_max">110.0dip</dimen>
-    <dimen name="recents_task_view_rounded_corners_radius_min">30.0dip</dimen>
+    <dimen name="recents_task_view_rounded_corners_radius_max">25.0dip</dimen>
+    <dimen name="recents_task_view_rounded_corners_radius_min">7.0dip</dimen>
     <dimen name="recents_task_view_sub_header_app_info_spacing">3.0dip</dimen>
     <dimen name="recents_tip_margin_top">20.0dip</dimen>
     <dimen name="recents_tv_small_window_text_size">13.099976sp</dimen>

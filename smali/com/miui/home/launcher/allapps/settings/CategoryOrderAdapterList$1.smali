@@ -30,7 +30,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapterList;)V
     .locals 0
 
-    .line 138
+    .line 140
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapterList$1;->this$0:Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapterList;
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/DiffUtil$ItemCallback;-><init>()V
@@ -43,7 +43,7 @@
 .method public areContentsTheSame(Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapterList$AdapterItem;Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapterList$AdapterItem;)Z
     .locals 0
 
-    .line 146
+    .line 148
     invoke-virtual {p1, p2}, Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapterList$AdapterItem;->areContentsTheSame(Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapterList$AdapterItem;)Z
 
     move-result p1
@@ -54,7 +54,7 @@
 .method public bridge synthetic areContentsTheSame(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 0
 
-    .line 138
+    .line 140
     check-cast p1, Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapterList$AdapterItem;
 
     check-cast p2, Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapterList$AdapterItem;
@@ -69,7 +69,7 @@
 .method public areItemsTheSame(Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapterList$AdapterItem;Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapterList$AdapterItem;)Z
     .locals 0
 
-    .line 141
+    .line 143
     invoke-virtual {p1, p2}, Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapterList$AdapterItem;->areItemsTheSame(Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapterList$AdapterItem;)Z
 
     move-result p1
@@ -80,7 +80,7 @@
 .method public bridge synthetic areItemsTheSame(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 0
 
-    .line 138
+    .line 140
     check-cast p1, Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapterList$AdapterItem;
 
     check-cast p2, Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapterList$AdapterItem;

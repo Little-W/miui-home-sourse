@@ -1124,7 +1124,7 @@
     goto :goto_1
 
     :sswitch_1
-    const-string v3, "type"
+    const-string/jumbo v3, "type"
 
     invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1243,6 +1243,8 @@
 
     return-object p0
 
+    nop
+
     :sswitch_data_0
     .sparse-switch
         -0x4f94e1aa -> :sswitch_4
@@ -1303,7 +1305,7 @@
     goto :goto_1
 
     :sswitch_0
-    const-string v3, "uiOrientation"
+    const-string/jumbo v3, "uiOrientation"
 
     invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1446,6 +1448,8 @@
     move-result-object p0
 
     return-object p0
+
+    nop
 
     :sswitch_data_0
     .sparse-switch
@@ -2137,7 +2141,7 @@
     goto :goto_1
 
     :sswitch_2
-    const-string v3, "type"
+    const-string/jumbo v3, "type"
 
     invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2246,6 +2250,8 @@
     move-result-object p0
 
     return-object p0
+
+    nop
 
     :sswitch_data_0
     .sparse-switch

@@ -49,13 +49,6 @@
         <item>Predefinido</item>
         <item>Clásico</item>
     </string-array>
-    <string-array name="monochrome_color_entries">
-        <item>Predefinido</item>
-        <item>Azul</item>
-        <item>Verde</item>
-        <item>Púrpura</item>
-        <item>Marrón</item>
-    </string-array>
     <string-array name="transformation_entries">
         <item>Esvaradío</item>
         <item>Esvaecer</item>

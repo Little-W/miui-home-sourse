@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;Landroid/os/Bundle;)V
     .locals 0
 
-    .line 204
+    .line 227
     iput-object p1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay$1;->this$0:Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;
 
     iput-object p2, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay$1;->val$extras:Landroid/os/Bundle;
@@ -42,10 +42,10 @@
 .method public run()V
     .locals 4
 
-    .line 207
+    .line 230
     monitor-enter p0
 
-    .line 208
+    .line 231
     :try_start_0
     iget-object v0, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay$1;->this$0:Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;
 
@@ -61,10 +61,10 @@
 
     const-string v2, "METHOD_DRAG_END_WITH_RESULT return null cause of null mPaItemInfo"
 
-    .line 209
+    .line 232
     invoke-static {v0, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 210
+    .line 233
     iget-object v0, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay$1;->this$0:Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;
 
     invoke-static {v0}, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->access$100(Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;)Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay$BlockingTask;
@@ -73,7 +73,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 211
+    .line 234
     iget-object v0, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay$1;->this$0:Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;
 
     invoke-static {v0}, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->access$100(Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;)Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay$BlockingTask;
@@ -86,13 +86,13 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay$BlockingTask;->setResult(Ljava/lang/Object;)V
 
-    .line 213
+    .line 236
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay$1;->this$0:Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;
 
     invoke-static {v0}, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->access$200(Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;)V
 
-    .line 214
+    .line 237
     monitor-exit p0
 
     return-void
@@ -102,10 +102,10 @@
 
     const-string v2, "METHOD_DRAG_END_WITH_RESULT"
 
-    .line 216
+    .line 239
     invoke-static {v0, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 217
+    .line 240
     iget-object v0, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay$1;->this$0:Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;
 
     invoke-static {v0}, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->access$400(Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;)Lcom/miui/home/launcher/DragLayer;
@@ -122,7 +122,7 @@
 
     invoke-virtual {v0, v2}, Lcom/miui/home/launcher/DragLayer;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    .line 218
+    .line 241
     iget-object v0, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay$1;->this$0:Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;
 
     invoke-static {v0}, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->access$500(Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;)Lcom/miui/home/launcher/DragController;
@@ -131,7 +131,7 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/DragController;->setDraggingFromAssistant(Z)V
 
-    .line 219
+    .line 242
     monitor-exit p0
 
     return-void

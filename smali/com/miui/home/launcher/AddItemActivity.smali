@@ -26,7 +26,7 @@
 .end method
 
 .method public static synthetic lambda$onCreate$0(Lcom/miui/home/launcher/AddItemActivity;)V
-    .locals 5
+    .locals 4
 
     .line 45
     new-instance v0, Lcom/miui/launcher/common/ShortcutInfoCompat;
@@ -44,21 +44,18 @@
 
     move-result-object v1
 
+    .line 47
+    iget-object v2, p0, Lcom/miui/home/launcher/AddItemActivity;->mRequest:Lcom/miui/launcher/common/PinItemRequestCompat;
+
     .line 48
-    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lcom/miui/home/launcher/AddItemActivity;->mRequest:Lcom/miui/launcher/common/PinItemRequestCompat;
-
     invoke-virtual {v0}, Lcom/miui/launcher/common/ShortcutInfoCompat;->getPackage()Ljava/lang/String;
 
     move-result-object v0
 
-    const/16 v4, 0xe
+    const/16 v3, 0xe
 
     .line 47
-    invoke-static {v2, v3, v1, v0, v4}, Lcom/miui/home/launcher/InstallShortcutReceiver;->checkToAddShortcut(Landroid/content/Context;Lcom/miui/launcher/common/PinItemRequestCompat;Landroid/content/Intent;Ljava/lang/String;I)V
+    invoke-static {p0, v2, v1, v0, v3}, Lcom/miui/home/launcher/InstallShortcutReceiver;->checkToAddShortcut(Landroid/content/Context;Lcom/miui/launcher/common/PinItemRequestCompat;Landroid/content/Intent;Ljava/lang/String;I)V
 
     return-void
 .end method

@@ -477,7 +477,7 @@
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 1
 
-    const p3, 0x7f0d0075
+    const p3, 0x7f0d0074
 
     const/4 v0, 0x0
 
@@ -607,7 +607,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f0a027e
+    const v0, 0x7f0a027a
 
     .line 66
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -618,7 +618,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;->mPreview:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a0122
+    const v0, 0x7f0a0121
 
     .line 67
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -659,7 +659,7 @@
 
     invoke-virtual {p2, p0}, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundColorAdapter;->setOnItemClickListener(Lcom/miui/home/launcher/common/OnItemClickListener;)V
 
-    const p2, 0x7f0a00d2
+    const p2, 0x7f0a00d1
 
     .line 72
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;

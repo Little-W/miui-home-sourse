@@ -27,7 +27,6 @@
     <dimen name="hotseats_padding_top">0.0dip</dimen>
     <dimen name="icon_padding_top">4.0dip</dimen>
     <dimen name="recents_task_view_header_height">41.0dip</dimen>
-    <dimen name="recommend_margin_start">20.0dip</dimen>
     <dimen name="recommend_switch_summary_padding_left">5.0dip</dimen>
     <dimen name="search_bar_margin_bottom">43.0dip</dimen>
     <dimen name="search_bar_margin_top">13.0dip</dimen>

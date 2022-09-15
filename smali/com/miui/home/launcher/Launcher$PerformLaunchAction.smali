@@ -31,12 +31,12 @@
 .method public constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 4869
+    .line 4843
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$PerformLaunchAction;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4870
+    .line 4844
     invoke-virtual {p0}, Lcom/miui/home/launcher/Launcher$PerformLaunchAction;->reset()V
 
     return-void
@@ -47,10 +47,10 @@
 .method public launch(Landroid/content/Intent;Ljava/lang/Object;Landroid/view/View;Landroid/os/Handler;)V
     .locals 0
 
-    .line 4874
+    .line 4848
     invoke-virtual {p0, p1, p2, p3}, Lcom/miui/home/launcher/Launcher$PerformLaunchAction;->set(Landroid/content/Intent;Ljava/lang/Object;Landroid/view/View;)V
 
-    .line 4875
+    .line 4849
     invoke-virtual {p1}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object p2
@@ -61,7 +61,7 @@
 
     goto :goto_0
 
-    .line 4876
+    .line 4850
     :cond_0
     invoke-virtual {p1}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
@@ -71,7 +71,7 @@
 
     move-result-object p1
 
-    .line 4877
+    .line 4851
     :goto_0
     invoke-static {p1}, Lcom/miui/home/launcher/common/Utilities;->isAppIncompatible(Ljava/lang/String;)Z
 
@@ -79,7 +79,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 4878
+    .line 4852
     invoke-virtual {p3}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object p1
@@ -88,7 +88,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 4880
+    .line 4854
     invoke-virtual {p3}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object p1
@@ -105,12 +105,12 @@
 
     invoke-direct {p2, p0}, Lcom/miui/home/launcher/Launcher$PerformLaunchAction$1;-><init>(Lcom/miui/home/launcher/Launcher$PerformLaunchAction;)V
 
-    .line 4879
+    .line 4853
     invoke-static {p1, p2}, Lcom/miui/home/launcher/common/Utilities;->asyncGetIncompatibleDialogIntent(Ljava/lang/String;Lcom/miui/home/launcher/common/ResultRunnable;)V
 
     goto :goto_1
 
-    .line 4888
+    .line 4862
     :cond_1
     invoke-virtual {p0}, Lcom/miui/home/launcher/Launcher$PerformLaunchAction;->run()V
 
@@ -123,13 +123,13 @@
 
     const/4 v0, 0x0
 
-    .line 4899
+    .line 4873
     iput-object v0, p0, Lcom/miui/home/launcher/Launcher$PerformLaunchAction;->mIntent:Landroid/content/Intent;
 
-    .line 4900
+    .line 4874
     iput-object v0, p0, Lcom/miui/home/launcher/Launcher$PerformLaunchAction;->mTag:Ljava/lang/Object;
 
-    .line 4901
+    .line 4875
     iput-object v0, p0, Lcom/miui/home/launcher/Launcher$PerformLaunchAction;->mView:Landroid/view/View;
 
     return-void
@@ -138,12 +138,12 @@
 .method public run()V
     .locals 4
 
-    .line 4905
+    .line 4879
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$PerformLaunchAction;->mIntent:Landroid/content/Intent;
 
     if-eqz v0, :cond_0
 
-    .line 4906
+    .line 4880
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$PerformLaunchAction;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v1, v0}, Lcom/miui/home/launcher/Launcher;->access$6400(Lcom/miui/home/launcher/Launcher;Landroid/content/Intent;)Z
@@ -152,14 +152,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 4907
+    .line 4881
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$PerformLaunchAction;->this$0:Lcom/miui/home/launcher/Launcher;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$402(Lcom/miui/home/launcher/Launcher;Z)Z
 
-    .line 4908
+    .line 4882
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$PerformLaunchAction;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$PerformLaunchAction;->mIntent:Landroid/content/Intent;
@@ -170,12 +170,12 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/miui/home/launcher/Launcher;->startActivity(Landroid/content/Intent;Ljava/lang/Object;Landroid/view/View;)V
 
-    .line 4909
+    .line 4883
     invoke-virtual {p0}, Lcom/miui/home/launcher/Launcher$PerformLaunchAction;->reset()V
 
     goto :goto_0
 
-    .line 4912
+    .line 4886
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/Launcher$PerformLaunchAction;->reset()V
 
@@ -187,13 +187,13 @@
 .method public set(Landroid/content/Intent;Ljava/lang/Object;Landroid/view/View;)V
     .locals 0
 
-    .line 4893
+    .line 4867
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$PerformLaunchAction;->mIntent:Landroid/content/Intent;
 
-    .line 4894
+    .line 4868
     iput-object p2, p0, Lcom/miui/home/launcher/Launcher$PerformLaunchAction;->mTag:Ljava/lang/Object;
 
-    .line 4895
+    .line 4869
     iput-object p3, p0, Lcom/miui/home/launcher/Launcher$PerformLaunchAction;->mView:Landroid/view/View;
 
     return-void

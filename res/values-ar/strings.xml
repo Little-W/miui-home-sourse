@@ -329,7 +329,6 @@
     <string name="exit_overview_because_task_stack_changed">تم إغلاق التطبيقات الأخيرة بسبب التغييرات التي حدثت في الخلفية</string>
     <string name="expand_button_title">إعدادات متقدمة</string>
     <string name="exposed_dropdown_menu_content_description">عرض القائمة المنسدلة</string>
-    <string name="external_not_support_split_screen_j18">تقسيم الشاشة غير مدعوم على الشاشة الخارجية</string>
     <string name="failed_to_delete_temporary">لا يمكن الإزالة</string>
     <string name="failed_to_drop">لا يمكن التحريك</string>
     <string name="failed_to_drop_widget_invalid">هذا التطبيق المصغر غير صالح</string>
@@ -548,7 +547,6 @@
     <string name="midnight">الليل</string>
     <string name="minus_one_screen">منصة التطبيقات</string>
     <string name="miui_screen_config_title">إعدادات الشاشة الرئيسية</string>
-    <string name="miui_widget_menu_replace_text">تبديل</string>
     <string name="miuix_access_state_desc">محدد</string>
     <string name="miuix_appcompat_action_mode_deselect_all">الغاء التحديد</string>
     <string name="miuix_appcompat_action_mode_select_all">تحديد الكل</string>
@@ -575,8 +573,6 @@
     <string name="monday">الإثنين</string>
     <string name="monday_short">الإثنين</string>
     <string name="monday_shortest">الإثنين</string>
-    <string name="monochrome_summary">Change background color for compatible icons</string>
-    <string name="monochrome_title">Background color</string>
     <string name="month_april">أبريل</string>
     <string name="month_april_short">أبريل</string>
     <string name="month_april_shortest">أبريل</string>

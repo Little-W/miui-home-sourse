@@ -3,17 +3,7 @@
 .source "RoundedCornerEnforcement.java"
 
 
-# static fields
-.field private static sSystemDefaultRadius:F = -1.0f
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 0
-
-    return-void
-.end method
-
 .method private static accumulateViewsWithId(Landroid/view/View;ILjava/util/List;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
@@ -27,30 +17,30 @@
         }
     .end annotation
 
-    .line 132
+    .line 127
     invoke-virtual {p0}, Landroid/view/View;->getId()I
 
     move-result v0
 
     if-ne v0, p1, :cond_0
 
-    .line 133
+    .line 128
     invoke-interface {p2, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     return-void
 
-    .line 136
+    .line 131
     :cond_0
     instance-of v0, p0, Landroid/view/ViewGroup;
 
     if-eqz v0, :cond_1
 
-    .line 137
+    .line 132
     check-cast p0, Landroid/view/ViewGroup;
 
     const/4 v0, 0x0
 
-    .line 138
+    .line 133
     :goto_0
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
@@ -58,7 +48,7 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 139
+    .line 134
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
@@ -76,64 +66,46 @@
 .method public static computeEnforcedRadius(Landroid/content/Context;)F
     .locals 2
 
-    .line 111
-    sget v0, Lcom/miui/home/launcher/widget/RoundedCornerEnforcement;->sSystemDefaultRadius:F
-
-    const/4 v1, 0x0
-
-    cmpg-float v0, v0, v1
-
-    if-gez v0, :cond_1
-
-    .line 112
+    .line 110
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    .line 113
+    .line 111
     sget-boolean v0, Lcom/miui/home/launcher/common/Utilities;->ATLEAST_S:Z
 
     if-nez v0, :cond_0
 
-    const v0, 0x7f0702a3
+    const v0, 0x7f0702a0
 
-    .line 114
+    .line 112
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result p0
 
     int-to-float p0, p0
 
-    sput p0, Lcom/miui/home/launcher/widget/RoundedCornerEnforcement;->sSystemDefaultRadius:F
-
-    goto :goto_0
+    return p0
 
     :cond_0
     const v0, 0x1050008
 
-    .line 116
+    .line 114
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v0
 
     const v1, 0x7f070143
 
-    .line 117
+    .line 115
     invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result p0
 
-    .line 118
+    .line 116
     invoke-static {p0, v0}, Ljava/lang/Math;->min(FF)F
 
     move-result p0
-
-    sput p0, Lcom/miui/home/launcher/widget/RoundedCornerEnforcement;->sSystemDefaultRadius:F
-
-    .line 121
-    :cond_1
-    :goto_0
-    sget p0, Lcom/miui/home/launcher/widget/RoundedCornerEnforcement;->sSystemDefaultRadius:F
 
     return p0
 .end method
@@ -256,7 +228,7 @@
 .method private static findUndefinedBackground(Landroid/view/View;)Landroid/view/View;
     .locals 4
 
-    .line 153
+    .line 148
     invoke-virtual {p0}, Landroid/view/View;->getVisibility()I
 
     move-result v0
@@ -267,7 +239,7 @@
 
     return-object v1
 
-    .line 156
+    .line 151
     :cond_0
     invoke-static {p0}, Lcom/miui/home/launcher/widget/RoundedCornerEnforcement;->isViewVisible(Landroid/view/View;)Z
 
@@ -277,20 +249,20 @@
 
     return-object p0
 
-    .line 162
+    .line 157
     :cond_1
     instance-of v0, p0, Landroid/view/ViewGroup;
 
     if-eqz v0, :cond_4
 
-    .line 163
+    .line 158
     move-object v0, p0
 
     check-cast v0, Landroid/view/ViewGroup;
 
     const/4 v2, 0x0
 
-    .line 164
+    .line 159
     :goto_0
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
 
@@ -298,7 +270,7 @@
 
     if-ge v2, v3, :cond_4
 
-    .line 165
+    .line 160
     invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v3
@@ -338,12 +310,12 @@
         }
     .end annotation
 
-    .line 125
+    .line 120
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 126
+    .line 121
     invoke-static {p0, p1, v0}, Lcom/miui/home/launcher/widget/RoundedCornerEnforcement;->accumulateViewsWithId(Landroid/view/View;ILjava/util/List;)V
 
     return-object v0
@@ -402,7 +374,7 @@
 .method private static isViewVisible(Landroid/view/View;)Z
     .locals 2
 
-    .line 145
+    .line 140
     invoke-virtual {p0}, Landroid/view/View;->getVisibility()I
 
     move-result v0
@@ -413,7 +385,7 @@
 
     return v1
 
-    .line 148
+    .line 143
     :cond_0
     invoke-virtual {p0}, Landroid/view/View;->willNotDraw()Z
 

@@ -26,7 +26,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 427
+    .line 428
     invoke-direct {p0}, Lcom/google/gson/TypeAdapter;-><init>()V
 
     return-void
@@ -42,7 +42,7 @@
         }
     .end annotation
 
-    .line 427
+    .line 428
     invoke-virtual {p0, p1}, Lcom/google/gson/internal/bind/TypeAdapters$18;->read(Lcom/google/gson/stream/JsonReader;)Ljava/math/BigInteger;
 
     move-result-object p1
@@ -58,7 +58,7 @@
         }
     .end annotation
 
-    .line 429
+    .line 430
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->peek()Lcom/google/gson/stream/JsonToken;
 
     move-result-object v0
@@ -67,14 +67,14 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 430
+    .line 431
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->nextNull()V
 
     const/4 p1, 0x0
 
     return-object p1
 
-    .line 434
+    .line 435
     :cond_0
     :try_start_0
     new-instance v0, Ljava/math/BigInteger;
@@ -92,7 +92,7 @@
     :catch_0
     move-exception p1
 
-    .line 436
+    .line 437
     new-instance v0, Lcom/google/gson/JsonSyntaxException;
 
     invoke-direct {v0, p1}, Lcom/google/gson/JsonSyntaxException;-><init>(Ljava/lang/Throwable;)V
@@ -108,7 +108,7 @@
         }
     .end annotation
 
-    .line 427
+    .line 428
     check-cast p2, Ljava/math/BigInteger;
 
     invoke-virtual {p0, p1, p2}, Lcom/google/gson/internal/bind/TypeAdapters$18;->write(Lcom/google/gson/stream/JsonWriter;Ljava/math/BigInteger;)V
@@ -124,7 +124,7 @@
         }
     .end annotation
 
-    .line 441
+    .line 442
     invoke-virtual {p1, p2}, Lcom/google/gson/stream/JsonWriter;->value(Ljava/lang/Number;)Lcom/google/gson/stream/JsonWriter;
 
     return-void

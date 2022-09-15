@@ -682,7 +682,7 @@
 
     invoke-direct {v4, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    const-string v1, "unable to connect to service: "
+    const-string/jumbo v1, "unable to connect to service: "
 
     invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -774,6 +774,8 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw p1
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x1

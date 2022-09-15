@@ -2,7 +2,6 @@
 <resources>
     <dimen name="all_apps_scroller_text_size">6.0sp</dimen>
     <dimen name="edit_mode_top_menu_text_view_margin_top">0.0dip</dimen>
-    <dimen name="fold_device_all_apps_category_title_text_size">4.0sp</dimen>
     <dimen name="hotseats_margin_top">2.0dip</dimen>
     <dimen name="search_bar_margin_bottom">12.0dip</dimen>
     <dimen name="search_bar_margin_top">10.0dip</dimen>

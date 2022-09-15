@@ -196,15 +196,15 @@
 
     .line 53
     :try_start_0
-    new-instance p2, Lcom/mi/google/gson/Gson;
+    new-instance p2, Lcom/google/gson/Gson;
 
-    invoke-direct {p2}, Lcom/mi/google/gson/Gson;-><init>()V
+    invoke-direct {p2}, Lcom/google/gson/Gson;-><init>()V
 
     iget-object p3, p0, Lcom/miui/home/launcher/model/WidgetRemoveTask;->jsonData:Ljava/lang/String;
 
     const-class v0, Lcom/miui/home/launcher/offlinewidget/OfflineWidgetBean;
 
-    invoke-virtual {p2, p3, v0}, Lcom/mi/google/gson/Gson;->fromJson(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p2, p3, v0}, Lcom/google/gson/Gson;->fromJson(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p2
 

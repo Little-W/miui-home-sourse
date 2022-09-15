@@ -803,6 +803,27 @@
     return-void
 .end method
 
+.method public setOnExternCommandListener(Lcom/miui/launcher/views/MamlOnExternCommandListener;)Z
+    .locals 1
+
+    .line 194
+    iget-object v0, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mRoot:Ljava/lang/Object;
+
+    if-nez v0, :cond_0
+
+    const/4 p1, 0x0
+
+    return p1
+
+    .line 197
+    :cond_0
+    invoke-static {v0, p1}, Lcom/miui/launcher/utils/MamlUtils;->setOnExternCommandListener(Ljava/lang/Object;Lcom/miui/launcher/views/MamlOnExternCommandListener;)V
+
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
 .method public updateAppearance(Ljava/util/Calendar;)V
     .locals 0
 

@@ -34,7 +34,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/ItemInfo;)V
     .locals 0
 
-    .line 255
+    .line 256
     iput-object p1, p0, Lcom/miui/home/launcher/uninstall/UninstallController$4;->val$itemInfo:Lcom/miui/home/launcher/ItemInfo;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,7 +47,7 @@
 .method public bridge synthetic get()Ljava/lang/Object;
     .locals 1
 
-    .line 255
+    .line 256
     invoke-virtual {p0}, Lcom/miui/home/launcher/uninstall/UninstallController$4;->get()Ljava/lang/String;
 
     move-result-object v0
@@ -58,7 +58,7 @@
 .method public get()Ljava/lang/String;
     .locals 4
 
-    .line 258
+    .line 259
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -69,7 +69,7 @@
 
     iget-object v2, p0, Lcom/miui/home/launcher/uninstall/UninstallController$4;->val$itemInfo:Lcom/miui/home/launcher/ItemInfo;
 
-    .line 259
+    .line 260
     invoke-virtual {v2}, Lcom/miui/home/launcher/ItemInfo;->getAnnounceForDelete()Ljava/lang/String;
 
     move-result-object v2
@@ -80,7 +80,7 @@
 
     const v2, 0x7f110069
 
-    .line 258
+    .line 259
     invoke-virtual {v0, v2, v1}, Lcom/miui/home/launcher/Application;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0

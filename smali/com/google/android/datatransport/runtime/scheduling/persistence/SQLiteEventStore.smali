@@ -316,7 +316,7 @@
     invoke-virtual {v0, v1, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
-    const-string p2, "transport_contexts"
+    const-string/jumbo p2, "transport_contexts"
 
     const/4 v1, 0x0
 
@@ -527,7 +527,7 @@
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :goto_0
-    const-string v6, "transport_contexts"
+    const-string/jumbo v6, "transport_contexts"
 
     const-string p2, "_id"
 
@@ -1636,7 +1636,7 @@
 
     invoke-virtual {v6, v7, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    const-string v0, "transport_name"
+    const-string/jumbo v0, "transport_name"
 
     .line 129
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/EventInternal;->getTransportName()Ljava/lang/String;
@@ -2215,7 +2215,7 @@
 
     invoke-virtual {v0, v1, p0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    const-string p0, "transport_contexts"
+    const-string/jumbo p0, "transport_contexts"
 
     const-string p1, "backend_name = ? and priority = ?"
 
@@ -2285,7 +2285,7 @@
 
     invoke-virtual {v0, p0, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    const-string p0, "transport_contexts"
+    const-string/jumbo p0, "transport_contexts"
 
     .line 331
     invoke-virtual {p3, p0, p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
@@ -2374,7 +2374,7 @@
 
     const-string v4, "_id"
 
-    const-string v5, "transport_name"
+    const-string/jumbo v5, "transport_name"
 
     const-string v6, "timestamp_ms"
 

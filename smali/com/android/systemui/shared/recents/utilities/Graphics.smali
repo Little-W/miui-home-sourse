@@ -13,7 +13,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 47
+    .line 44
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -35,30 +35,23 @@
 .method private static copyToEmpty(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
     .locals 2
 
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x0
-
-    return-object p0
-
-    .line 26
-    :cond_0
+    .line 23
     sget-object v0, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
-    .line 27
+    .line 24
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;
 
     move-result-object v1
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_0
 
-    .line 28
+    .line 25
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;
 
     move-result-object v0
 
-    .line 31
-    :cond_1
+    .line 28
+    :cond_0
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v1
@@ -100,7 +93,7 @@
     :cond_0
     if-eqz p2, :cond_1
 
-    .line 38
+    .line 35
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v0
@@ -121,13 +114,13 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 39
+    .line 36
     :cond_1
     invoke-static {p1}, Lcom/android/systemui/shared/recents/utilities/Graphics;->copyToEmpty(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
     move-result-object p2
 
-    .line 42
+    .line 39
     :cond_2
     invoke-static {p0, p1, p2, p3}, Lcom/android/systemui/shared/recents/utilities/Graphics;->fastblur_v17(Landroid/content/Context;Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;I)Landroid/graphics/Bitmap;
 
@@ -148,18 +141,18 @@
 
     mul-int/lit8 v1, v1, 0x2
 
-    .line 52
+    .line 49
     div-int/lit8 p3, p3, 0x2
 
     goto :goto_0
 
-    .line 56
+    .line 53
     :cond_0
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v2
 
-    .line 57
+    .line 54
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v3
@@ -170,7 +163,7 @@
 
     goto :goto_1
 
-    .line 62
+    .line 59
     :cond_1
     div-int/2addr v2, v1
 
@@ -188,7 +181,7 @@
 
     move-result-object v2
 
-    .line 66
+    .line 63
     :goto_1
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
@@ -196,14 +189,14 @@
 
     if-nez v3, :cond_2
 
-    .line 67
+    .line 64
     new-instance v3, Lcom/android/systemui/shared/recents/utilities/Graphics$1;
 
     invoke-direct {v3, p0}, Lcom/android/systemui/shared/recents/utilities/Graphics$1;-><init>(Landroid/content/Context;)V
 
     move-object p0, v3
 
-    .line 75
+    .line 72
     :cond_2
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
@@ -216,12 +209,12 @@
 
     move-result-object v3
 
-    .line 76
+    .line 73
     invoke-virtual {v3}, Ljava/lang/Class;->getEnumConstants()[Ljava/lang/Object;
 
     move-result-object v3
 
-    .line 78
+    .line 75
     array-length v4, v3
 
     const/4 v5, 0x0
@@ -229,20 +222,20 @@
     :goto_2
     if-ge v5, v4, :cond_4
 
-    .line 81
+    .line 78
     aget-object v6, v3, v5
 
-    .line 82
+    .line 79
     check-cast v6, Ljava/lang/Enum;
 
-    .line 83
+    .line 80
     invoke-virtual {v6}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object v7
 
     const-string v8, "RGBA_F16"
 
-    .line 84
+    .line 81
     invoke-virtual {v8, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v7
@@ -255,7 +248,7 @@
 
     if-ne v7, v6, :cond_3
 
-    .line 85
+    .line 82
     invoke-static {v2}, Lcom/android/systemui/shared/recents/utilities/Graphics;->transferF16ToARGB(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
     move-result-object v2
@@ -269,7 +262,7 @@
 
     goto :goto_2
 
-    .line 92
+    .line 89
     :catch_0
     :cond_4
     :goto_3
@@ -277,13 +270,13 @@
 
     monitor-enter v3
 
-    .line 93
+    .line 90
     :try_start_1
     sget-object v4, Lcom/android/systemui/shared/recents/utilities/Graphics;->sRsContext:Landroid/renderscript/RenderScript;
 
     if-nez v4, :cond_5
 
-    .line 94
+    .line 91
     invoke-static {p0}, Landroid/renderscript/RenderScript;->create(Landroid/content/Context;)Landroid/renderscript/RenderScript;
 
     move-result-object p0
@@ -300,7 +293,7 @@
     :cond_6
     move-object p0, v2
 
-    .line 104
+    .line 101
     :goto_4
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getRowBytes()I
 
@@ -312,14 +305,14 @@
 
     if-eq v1, v4, :cond_7
 
-    .line 105
+    .line 102
     sget-object v1, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     invoke-virtual {v2, v1, v0}, Landroid/graphics/Bitmap;->copy(Landroid/graphics/Bitmap$Config;Z)Landroid/graphics/Bitmap;
 
     move-result-object v2
 
-    .line 108
+    .line 105
     :cond_7
     sget-object v0, Lcom/android/systemui/shared/recents/utilities/Graphics;->sRsContext:Landroid/renderscript/RenderScript;
 
@@ -327,7 +320,7 @@
 
     move-result-object v0
 
-    .line 109
+    .line 106
     sget-object v1, Lcom/android/systemui/shared/recents/utilities/Graphics;->sRsContext:Landroid/renderscript/RenderScript;
 
     invoke-virtual {v0}, Landroid/renderscript/Allocation;->getType()Landroid/renderscript/Type;
@@ -338,7 +331,7 @@
 
     move-result-object v1
 
-    .line 110
+    .line 107
     sget-object v4, Lcom/android/systemui/shared/recents/utilities/Graphics;->sRsContext:Landroid/renderscript/RenderScript;
 
     sget-object v5, Lcom/android/systemui/shared/recents/utilities/Graphics;->sRsContext:Landroid/renderscript/RenderScript;
@@ -353,46 +346,46 @@
 
     int-to-float p3, p3
 
-    .line 111
+    .line 108
     invoke-virtual {v4, p3}, Landroid/renderscript/ScriptIntrinsicBlur;->setRadius(F)V
 
-    .line 112
+    .line 109
     invoke-virtual {v4, v0}, Landroid/renderscript/ScriptIntrinsicBlur;->setInput(Landroid/renderscript/Allocation;)V
 
-    .line 113
+    .line 110
     invoke-virtual {v4, v1}, Landroid/renderscript/ScriptIntrinsicBlur;->forEach(Landroid/renderscript/Allocation;)V
 
-    .line 114
+    .line 111
     invoke-virtual {v1, p0}, Landroid/renderscript/Allocation;->copyTo(Landroid/graphics/Bitmap;)V
 
     if-eq p0, p2, :cond_8
 
-    .line 116
+    .line 113
     invoke-static {p0, p2}, Lcom/android/systemui/shared/recents/utilities/Graphics;->scaleBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
     :cond_8
     if-eq v2, p1, :cond_9
 
-    .line 120
+    .line 117
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->recycle()V
 
     :cond_9
     if-eq p0, p2, :cond_a
 
-    .line 124
+    .line 121
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 127
+    .line 124
     :cond_a
     invoke-virtual {v0}, Landroid/renderscript/Allocation;->destroy()V
 
-    .line 128
+    .line 125
     invoke-virtual {v1}, Landroid/renderscript/Allocation;->destroy()V
 
-    .line 129
+    .line 126
     invoke-virtual {v4}, Landroid/renderscript/ScriptIntrinsicBlur;->destroy()V
 
-    .line 130
+    .line 127
     monitor-exit v3
 
     return-object p2
@@ -400,7 +393,7 @@
     :catchall_0
     move-exception p0
 
-    .line 131
+    .line 128
     monitor-exit v3
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -417,7 +410,7 @@
 
     return-object p0
 
-    .line 158
+    .line 155
     :cond_0
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -433,29 +426,29 @@
 
     goto :goto_0
 
-    .line 161
+    .line 158
     :cond_1
     sget-object v0, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
-    .line 162
+    .line 159
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;
 
     move-result-object v1
 
     if-eqz v1, :cond_2
 
-    .line 163
+    .line 160
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;
 
     move-result-object v0
 
-    .line 166
+    .line 163
     :cond_2
     invoke-static {p1, p2, v0}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
-    .line 167
+    .line 164
     invoke-static {p0, p1}, Lcom/android/systemui/shared/recents/utilities/Graphics;->scaleBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
     move-object p0, p1
@@ -471,7 +464,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 176
+    .line 173
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v0
@@ -494,7 +487,7 @@
 
     goto :goto_0
 
-    .line 179
+    .line 176
     :cond_0
     new-instance v0, Landroid/graphics/Canvas;
 
@@ -502,26 +495,26 @@
 
     const/4 v1, 0x0
 
-    .line 180
+    .line 177
     invoke-virtual {v0, v1, v1, v1, v1}, Landroid/graphics/Canvas;->drawARGB(IIII)V
 
-    .line 181
+    .line 178
     new-instance v2, Landroid/graphics/Paint;
 
     invoke-direct {v2}, Landroid/graphics/Paint;-><init>()V
 
     const/4 v3, 0x1
 
-    .line 182
+    .line 179
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setFilterBitmap(Z)V
 
-    .line 183
+    .line 180
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 184
+    .line 181
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setDither(Z)V
 
-    .line 185
+    .line 182
     new-instance v3, Landroid/graphics/Rect;
 
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
@@ -562,12 +555,12 @@
 .method private static transferF16ToARGB(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
     .locals 4
 
-    .line 135
+    .line 132
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v0
 
-    .line 136
+    .line 133
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v1
@@ -576,41 +569,41 @@
 
     if-eqz v1, :cond_1
 
-    .line 138
+    .line 135
     sget-object v2, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     invoke-static {v0, v1, v2}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 139
+    .line 136
     new-instance v1, Landroid/graphics/Canvas;
 
     invoke-direct {v1, v0}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 140
+    .line 137
     new-instance v2, Landroid/graphics/Paint;
 
     invoke-direct {v2}, Landroid/graphics/Paint;-><init>()V
 
     const/4 v3, 0x3
 
-    .line 141
+    .line 138
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setFlags(I)V
 
     const/4 v3, 0x0
 
-    .line 142
+    .line 139
     invoke-virtual {v1, p0, v3, v3, v2}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    .line 143
+    .line 140
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->isRecycled()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 144
+    .line 141
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->recycle()V
 
     :cond_0

@@ -329,7 +329,6 @@
     <string name="exit_overview_because_task_stack_changed">Zatvoreno Nedavno zbog promjena koje su se dogodile u pozadini</string>
     <string name="expand_button_title">Napredno</string>
     <string name="exposed_dropdown_menu_content_description">Prikaži padajući izbornik</string>
-    <string name="external_not_support_split_screen_j18">Podijeljeni zaslon nije podržan na vanjskom zaslonu</string>
     <string name="failed_to_delete_temporary">Ne mogu ukloniti</string>
     <string name="failed_to_drop">Ne mogu premjestiti</string>
     <string name="failed_to_drop_widget_invalid">Ovaj widget nije valjan</string>
@@ -548,7 +547,6 @@
     <string name="midnight">Noć</string>
     <string name="minus_one_screen">Trezor aplikacija</string>
     <string name="miui_screen_config_title">Postavke Početnog zaslona</string>
-    <string name="miui_widget_menu_replace_text">Promjeni</string>
     <string name="miuix_access_state_desc">Odabrano</string>
     <string name="miuix_appcompat_action_mode_deselect_all">Poništi odabir</string>
     <string name="miuix_appcompat_action_mode_select_all">Odaberi sve</string>
@@ -575,8 +573,6 @@
     <string name="monday">Ponedjeljak</string>
     <string name="monday_short">Pon</string>
     <string name="monday_shortest">Pon</string>
-    <string name="monochrome_summary">Change background color for compatible icons</string>
-    <string name="monochrome_title">Background color</string>
     <string name="month_april">Travanj</string>
     <string name="month_april_short">Tra</string>
     <string name="month_april_shortest">Tra</string>

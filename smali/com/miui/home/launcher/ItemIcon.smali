@@ -374,7 +374,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f0701b1
+    const v2, 0x7f0701ae
 
     .line 144
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimension(I)F
@@ -2011,7 +2011,7 @@
 .method protected onFinishInflate()V
     .locals 3
 
-    const v0, 0x7f0a019f
+    const v0, 0x7f0a019b
 
     .line 109
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ItemIcon;->findViewById(I)Landroid/view/View;
@@ -2022,7 +2022,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mIconContainer:Landroid/widget/FrameLayout;
 
-    const v0, 0x7f0a01a6
+    const v0, 0x7f0a01a2
 
     .line 110
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ItemIcon;->findViewById(I)Landroid/view/View;
@@ -2033,7 +2033,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mIconTile:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a01a3
+    const v0, 0x7f0a019f
 
     .line 111
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ItemIcon;->findViewById(I)Landroid/view/View;
@@ -2044,7 +2044,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
-    const v0, 0x7f0a01a4
+    const v0, 0x7f0a01a0
 
     .line 112
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ItemIcon;->findViewById(I)Landroid/view/View;
@@ -2070,7 +2070,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
     :cond_0
-    const v0, 0x7f0a01a7
+    const v0, 0x7f0a01a3
 
     .line 115
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ItemIcon;->findViewById(I)Landroid/view/View;
@@ -2081,7 +2081,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mTitle:Lcom/miui/home/launcher/TitleTextView;
 
-    const v0, 0x7f0a01a8
+    const v0, 0x7f0a01a4
 
     .line 116
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ItemIcon;->findViewById(I)Landroid/view/View;
@@ -2377,9 +2377,9 @@
 
     iget-object v1, p0, Lcom/miui/home/launcher/ItemIcon;->mTitle:Lcom/miui/home/launcher/TitleTextView;
 
-    const v2, 0x7f1205de
+    const v2, 0x7f1205da
 
-    const v3, 0x7f1205e1
+    const v3, 0x7f1205dd
 
     invoke-static {v0, v1, v2, v3}, Lcom/miui/home/launcher/common/Utilities;->adaptTitleStyleToWallpaper(Landroid/content/Context;Landroid/widget/TextView;II)V
 

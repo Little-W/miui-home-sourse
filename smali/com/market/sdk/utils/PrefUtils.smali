@@ -148,13 +148,12 @@
     .locals 2
 
     .line 33
-    invoke-static {}, Lcom/market/sdk/utils/AppGlobal;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/market/sdk/MarketManager;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/market/sdk/utils/PrefUtils$PrefFile;->fileName:Ljava/lang/String;
 
-    .line 34
     iget-boolean p0, p0, Lcom/market/sdk/utils/PrefUtils$PrefFile;->isMultiProcess:Z
 
     if-eqz p0, :cond_0
@@ -166,7 +165,6 @@
     :cond_0
     const/4 p0, 0x0
 
-    .line 33
     :goto_0
     invoke-virtual {v0, v1, p0}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 

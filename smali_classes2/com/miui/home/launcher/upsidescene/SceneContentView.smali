@@ -82,7 +82,7 @@
     .line 38
     invoke-super {p0}, Landroid/widget/FrameLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a02ca
+    const v0, 0x7f0a02c6
 
     .line 40
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/SceneContentView;->findViewById(I)Landroid/view/View;

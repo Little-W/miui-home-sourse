@@ -283,7 +283,6 @@
     <string name="eras_bc">مىلادىدىن بۇرۇنقى</string>
     <string name="evening">گۇگۇم</string>
     <string name="exit_overview_because_task_stack_changed">ئارقا سۇپا ئەپ ئۆزگىرىشى سەۋەبلىك، يېقىنقى ۋەزىپىدىن چېكىندى</string>
-    <string name="external_not_support_split_screen_j18">سىرتقى ئېكران ئېكران ئايرىشنى قوللىمايدۇ</string>
     <string name="failed_to_delete_temporary">ئۆچۈرۈش مەغلۇپ بولدى، سەل تۇرۇپ قايتا سىناڭ</string>
     <string name="failed_to_drop">يۆتكەش مەغلۇپ بولدى،سىنبەلگە ئەسلى ئورنىغا قايتتى</string>
     <string name="failed_to_drop_widget_invalid">قىستۇرما ئىناۋەتسىز</string>
@@ -487,7 +486,6 @@
     <string name="midnight">يېرىم كېچە</string>
     <string name="minus_one_screen">ئەقلىي ياردەمچى</string>
     <string name="miui_screen_config_title">ئېكران ئورۇنلاشتۇرۇشى</string>
-    <string name="miui_widget_menu_replace_text">ئالماشتۇرۇش</string>
     <string name="miuix_access_state_desc">تاللاندى</string>
     <string name="miuix_appcompat_action_mode_deselect_all">ھەممىنى تاللىماسلىق</string>
     <string name="miuix_appcompat_action_mode_select_all">ھەممىنى تاللاش</string>
@@ -514,8 +512,6 @@
     <string name="monday">دۈشەنبە</string>
     <string name="monday_short">دۈشەنبە</string>
     <string name="monday_shortest">دۈشەنبە</string>
-    <string name="monochrome_summary">سىنبەلگە رەڭگىنى ماسلاشتۇرۇپ ئۆزگەرتىدۇ</string>
-    <string name="monochrome_title">سىنبەلگە رەڭگى</string>
     <string name="month_april">4-ئاي</string>
     <string name="month_april_short">ئاپرېل</string>
     <string name="month_april_shortest">ئاپرېل</string>
@@ -931,8 +927,6 @@
     <string name="uninstall_xspace_dialog_title_format">\"%s\"نى قوش ئېچىشنى ئۆچۈرۈش</string>
     <string name="unknown_artist_name">نامەلۇم سەنئەتكار</string>
     <string name="unnamed_folder_name">قىسقۇچ</string>
-    <string name="unstable_dialog_message">بۇ ئۈسكۈنە Android 13 ئاچقۇچىنىڭ ئالدىن كۆرۈش پىلانىغا كىرگۈزۈلگەن بولۇپ، بۇ پىلاندا Android ئاچقۇچىلارنىڭ Android 13 نىڭ ئالدىن كۆرۈش نۇسخىسىنى سىناق قىلىشىغا رۇخسەت قىلىنغان، بۇ ئالدىن كۆرۈش نۇسخىسى ئۈسكۈنىنىڭ نورمال ئىشلىشىگە تەسىر يەتكۈزىدىغان خاتالىق ۋە نۇقسانلارنى ئۆز ئىچىگە ئېلىشى مۇمكىن.</string>
-    <string name="unstable_dialog_title">Android ئاچقۇچىلار پىلانى</string>
     <string name="upgrade_remove_small_window_in_recents">يېقىنقى ۋەزىپە كىچىك كۆزنەك ئەپ ئېغىزى چىقىرىۋېتىلدى، يان تەرەپ سىتونىدىن كىچىك كۆزنەكنى ئىشلەتسىڭىز بولىدۇ</string>
     <string name="wallpaper">تەگلىك</string>
     <string name="wallpaper_auto_change_title">ئېكران قۇلۇپى(پەقەت سۈكۈتتىكى قۇلۇپ ئېكرانىدىلا)</string>

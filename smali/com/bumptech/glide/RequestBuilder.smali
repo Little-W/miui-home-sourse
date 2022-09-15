@@ -752,7 +752,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "unknown priority: "
+    const-string/jumbo v1, "unknown priority: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -787,8 +787,6 @@
     sget-object p1, Lcom/bumptech/glide/Priority;->NORMAL:Lcom/bumptech/glide/Priority;
 
     return-object p1
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0x1

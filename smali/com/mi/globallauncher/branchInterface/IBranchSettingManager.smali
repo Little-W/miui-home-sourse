@@ -16,13 +16,5 @@
 .method public abstract privacyDialogDestroy()V
 .end method
 
-.method public abstract setBranchSettingCallBack(Ljava/lang/ref/WeakReference;)V
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/ref/WeakReference<",
-            "Lcom/mi/globallauncher/branchInterface/IBranchSettingCallBack;",
-            ">;)V"
-        }
-    .end annotation
+.method public abstract setBranchSettingCallBack(Lcom/mi/globallauncher/branchInterface/IBranchSettingCallBack;)V
 .end method

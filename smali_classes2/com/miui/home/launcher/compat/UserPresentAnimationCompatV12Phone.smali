@@ -142,12 +142,12 @@
 .method public endAnimation(Landroid/view/View;)V
     .locals 1
 
-    const v0, 0x7f0a03cb
+    const v0, 0x7f0a03c7
 
     .line 30
     invoke-direct {p0, p1, v0}, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Phone;->endAnimation(Landroid/view/View;I)V
 
-    const v0, 0x7f0a03d0
+    const v0, 0x7f0a03cc
 
     .line 31
     invoke-direct {p0, p1, v0}, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Phone;->endAnimation(Landroid/view/View;I)V
@@ -168,7 +168,7 @@
 
     iput p3, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Phone;->mAllAnimationViewNum:I
 
-    const p3, 0x7f0a03c5
+    const p3, 0x7f0a03c1
 
     .line 46
     invoke-virtual {p1, p3}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
@@ -203,7 +203,7 @@
     move v0, v2
 
     :goto_0
-    const p3, 0x7f0a03c6
+    const p3, 0x7f0a03c2
 
     .line 51
     invoke-virtual {p1, p3}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
@@ -229,7 +229,7 @@
     invoke-virtual {p1, p3, v1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 
     :cond_1
-    const v5, 0x7f0a03d0
+    const v5, 0x7f0a03cc
 
     const v6, -0x3b448000    # -1500.0f
 
@@ -282,7 +282,7 @@
     .line 70
     invoke-virtual {p3, v0, v1}, Lcom/miui/home/launcher/animate/SpringAnimator;->startDelay(J)V
 
-    const v4, 0x7f0a03cb
+    const v4, 0x7f0a03c7
 
     const/4 v5, 0x0
 

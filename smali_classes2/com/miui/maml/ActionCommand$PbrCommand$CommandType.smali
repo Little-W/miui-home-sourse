@@ -34,7 +34,7 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .line 1600
+    .line 1595
     new-instance v0, Lcom/miui/maml/ActionCommand$PbrCommand$CommandType;
 
     const-string v1, "INVALID"
@@ -45,7 +45,7 @@
 
     sput-object v0, Lcom/miui/maml/ActionCommand$PbrCommand$CommandType;->INVALID:Lcom/miui/maml/ActionCommand$PbrCommand$CommandType;
 
-    .line 1601
+    .line 1596
     new-instance v0, Lcom/miui/maml/ActionCommand$PbrCommand$CommandType;
 
     const-string v1, "UPDATE_UNIFORM"
@@ -58,7 +58,7 @@
 
     const/4 v0, 0x2
 
-    .line 1599
+    .line 1594
     new-array v0, v0, [Lcom/miui/maml/ActionCommand$PbrCommand$CommandType;
 
     sget-object v1, Lcom/miui/maml/ActionCommand$PbrCommand$CommandType;->INVALID:Lcom/miui/maml/ActionCommand$PbrCommand$CommandType;
@@ -82,7 +82,7 @@
         }
     .end annotation
 
-    .line 1599
+    .line 1594
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -91,7 +91,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/miui/maml/ActionCommand$PbrCommand$CommandType;
     .locals 1
 
-    .line 1599
+    .line 1594
     const-class v0, Lcom/miui/maml/ActionCommand$PbrCommand$CommandType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -106,7 +106,7 @@
 .method public static values()[Lcom/miui/maml/ActionCommand$PbrCommand$CommandType;
     .locals 1
 
-    .line 1599
+    .line 1594
     sget-object v0, Lcom/miui/maml/ActionCommand$PbrCommand$CommandType;->$VALUES:[Lcom/miui/maml/ActionCommand$PbrCommand$CommandType;
 
     invoke-virtual {v0}, [Lcom/miui/maml/ActionCommand$PbrCommand$CommandType;->clone()Ljava/lang/Object;

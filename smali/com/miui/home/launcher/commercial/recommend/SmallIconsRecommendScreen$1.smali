@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;)V
     .locals 0
 
-    .line 165
+    .line 162
     iput-object p1, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen$1;->this$0:Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 2
 
-    .line 168
+    .line 165
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object p1

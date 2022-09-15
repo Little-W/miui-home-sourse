@@ -93,7 +93,7 @@
 
     move-result v1
 
-    const/16 v2, 0xc
+    const/16 v2, 0xa
 
     if-eqz v1, :cond_5
 

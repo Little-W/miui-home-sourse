@@ -191,7 +191,7 @@
 .method private ableToUseFolmeAnim(Landroidx/preference/Preference;)Z
     .locals 1
 
-    .line 223
+    .line 220
     instance-of v0, p1, Landroidx/preference/PreferenceCategory;
 
     if-nez v0, :cond_1
@@ -206,7 +206,7 @@
 
     check-cast p1, Lmiuix/preference/FolmeAnimationController;
 
-    .line 225
+    .line 222
     invoke-interface {p1}, Lmiuix/preference/FolmeAnimationController;->isTouchAnimationEnable()Z
 
     move-result p1
@@ -237,20 +237,20 @@
 .method private drawDrawable(Landroid/graphics/drawable/Drawable;ZZ)V
     .locals 8
 
-    .line 412
+    .line 409
     instance-of v0, p1, Lmiuix/preference/drawable/MaskTaggingDrawable;
 
     if-eqz v0, :cond_0
 
-    .line 413
+    .line 410
     check-cast p1, Lmiuix/preference/drawable/MaskTaggingDrawable;
 
     const/4 v0, 0x1
 
-    .line 414
+    .line 411
     invoke-virtual {p1, v0}, Lmiuix/preference/drawable/MaskTaggingDrawable;->setMaskEnabled(Z)V
 
-    .line 415
+    .line 412
     iget-object v2, p0, Lmiuix/preference/PreferenceGroupAdapter;->mClipPaint:Landroid/graphics/Paint;
 
     iget v3, p0, Lmiuix/preference/PreferenceGroupAdapter;->mMaskPaddingTop:I
@@ -267,21 +267,21 @@
 
     invoke-virtual/range {v1 .. v7}, Lmiuix/preference/drawable/MaskTaggingDrawable;->setClipPaint(Landroid/graphics/Paint;IIIII)V
 
-    .line 418
+    .line 415
     iget-object v0, p0, Lmiuix/preference/PreferenceGroupAdapter;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-static {v0}, Landroidx/appcompat/widget/ViewUtils;->isLayoutRtl(Landroid/view/View;)Z
 
     move-result v0
 
-    .line 419
+    .line 416
     iget-object v1, p0, Lmiuix/preference/PreferenceGroupAdapter;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {p0, v1, v0}, Lmiuix/preference/PreferenceGroupAdapter;->getLeftAndRightWithRTL(Landroidx/recyclerview/widget/RecyclerView;Z)Landroid/util/Pair;
 
     move-result-object v1
 
-    .line 420
+    .line 417
     iget-object v2, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v2, Ljava/lang/Integer;
@@ -300,7 +300,7 @@
 
     invoke-virtual {p1, v2, v1, v0}, Lmiuix/preference/drawable/MaskTaggingDrawable;->setLeftRight(IIZ)V
 
-    .line 421
+    .line 418
     invoke-virtual {p1, p2, p3}, Lmiuix/preference/drawable/MaskTaggingDrawable;->updateDrawCorner(ZZ)V
 
     :cond_0
@@ -310,7 +310,7 @@
 .method private drawRadioSetPreferenceCategory(Lmiuix/preference/RadioButtonPreferenceCategory;)V
     .locals 4
 
-    .line 362
+    .line 359
     invoke-virtual {p1}, Lmiuix/preference/RadioButtonPreferenceCategory;->getPreferenceCount()I
 
     move-result v0
@@ -320,20 +320,20 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 364
+    .line 361
     invoke-virtual {p1, v1}, Lmiuix/preference/RadioButtonPreferenceCategory;->getPreference(I)Landroidx/preference/Preference;
 
     move-result-object v2
 
-    .line 365
+    .line 362
     instance-of v3, v2, Lmiuix/preference/RadioSetPreferenceCategory;
 
     if-eqz v3, :cond_0
 
-    .line 366
+    .line 363
     check-cast v2, Lmiuix/preference/RadioSetPreferenceCategory;
 
-    .line 367
+    .line 364
     invoke-direct {p0, v2}, Lmiuix/preference/PreferenceGroupAdapter;->drawRadioSetPreferenceCategory(Lmiuix/preference/RadioSetPreferenceCategory;)V
 
     :cond_0
@@ -348,12 +348,12 @@
 .method private drawRadioSetPreferenceCategory(Lmiuix/preference/RadioSetPreferenceCategory;)V
     .locals 5
 
-    .line 373
+    .line 370
     invoke-virtual {p1}, Lmiuix/preference/RadioSetPreferenceCategory;->getPreferenceCount()I
 
     move-result v0
 
-    .line 374
+    .line 371
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
@@ -363,14 +363,14 @@
     :goto_0
     if-ge v2, v0, :cond_1
 
-    .line 376
+    .line 373
     invoke-virtual {p1, v2}, Lmiuix/preference/RadioSetPreferenceCategory;->getPreference(I)Landroidx/preference/Preference;
 
     move-result-object v3
 
     if-eqz v3, :cond_0
 
-    .line 378
+    .line 375
     invoke-virtual {p0, v3}, Lmiuix/preference/PreferenceGroupAdapter;->getPreferenceAdapterPosition(Landroidx/preference/Preference;)I
 
     move-result v3
@@ -379,7 +379,7 @@
 
     if-eq v3, v4, :cond_0
 
-    .line 380
+    .line 377
     iget-object v4, p0, Lmiuix/preference/PreferenceGroupAdapter;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {v4, v3}, Landroidx/recyclerview/widget/RecyclerView;->getChildAt(I)Landroid/view/View;
@@ -388,7 +388,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 382
+    .line 379
     invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_0
@@ -396,7 +396,7 @@
 
     goto :goto_0
 
-    .line 387
+    .line 384
     :cond_1
     invoke-direct {p0, v1}, Lmiuix/preference/PreferenceGroupAdapter;->drawViews(Ljava/util/List;)V
 
@@ -408,7 +408,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 407
+    .line 404
     invoke-virtual {p1}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
@@ -434,7 +434,7 @@
 
     move v1, v0
 
-    .line 391
+    .line 388
     :goto_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -453,7 +453,7 @@
     :cond_0
     move v3, v0
 
-    .line 397
+    .line 394
     :goto_1
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -468,7 +468,7 @@
     :cond_1
     move v2, v0
 
-    .line 400
+    .line 397
     :goto_2
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -476,7 +476,7 @@
 
     check-cast v4, Landroid/view/View;
 
-    .line 401
+    .line 398
     invoke-direct {p0, v4, v3, v2}, Lmiuix/preference/PreferenceGroupAdapter;->drawView(Landroid/view/View;ZZ)V
 
     add-int/lit8 v1, v1, 0x1
@@ -500,14 +500,14 @@
         }
     .end annotation
 
-    .line 337
+    .line 334
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     const/4 v1, 0x0
 
-    .line 338
+    .line 335
     :goto_0
     invoke-virtual {p1}, Landroidx/preference/PreferenceGroup;->getPreferenceCount()I
 
@@ -515,19 +515,19 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 339
+    .line 336
     invoke-virtual {p1, v1}, Landroidx/preference/PreferenceGroup;->getPreference(I)Landroidx/preference/Preference;
 
     move-result-object v2
 
-    .line 340
+    .line 337
     invoke-virtual {v2}, Landroidx/preference/Preference;->isVisible()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 341
+    .line 338
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_0
@@ -544,26 +544,26 @@
 
     if-ltz p2, :cond_1
 
-    .line 237
+    .line 234
     iget-object v0, p0, Lmiuix/preference/PreferenceGroupAdapter;->mDescriptors:[Lmiuix/preference/PreferenceGroupAdapter$PositionDescriptor;
 
     array-length v1, v0
 
     if-ge p2, v1, :cond_1
 
-    .line 238
+    .line 235
     aget-object v1, v0, p2
 
     if-nez v1, :cond_0
 
-    .line 239
+    .line 236
     new-instance v1, Lmiuix/preference/PreferenceGroupAdapter$PositionDescriptor;
 
     invoke-direct {v1, p0}, Lmiuix/preference/PreferenceGroupAdapter$PositionDescriptor;-><init>(Lmiuix/preference/PreferenceGroupAdapter;)V
 
     aput-object v1, v0, p2
 
-    .line 241
+    .line 238
     :cond_0
     iget-object v0, p0, Lmiuix/preference/PreferenceGroupAdapter;->mDescriptors:[Lmiuix/preference/PreferenceGroupAdapter$PositionDescriptor;
 
@@ -579,19 +579,19 @@
     :goto_0
     if-nez v0, :cond_7
 
-    .line 244
+    .line 241
     invoke-virtual {p1}, Landroidx/preference/Preference;->getParent()Landroidx/preference/PreferenceGroup;
 
     move-result-object v0
 
     if-eqz v0, :cond_7
 
-    .line 246
+    .line 243
     invoke-direct {p0, v0}, Lmiuix/preference/PreferenceGroupAdapter;->getAllVisiblePreferences(Landroidx/preference/PreferenceGroup;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 247
+    .line 244
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
     move-result v1
@@ -600,7 +600,7 @@
 
     return-void
 
-    .line 252
+    .line 249
     :cond_2
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -612,12 +612,12 @@
 
     if-ne v1, v2, :cond_3
 
-    .line 253
+    .line 250
     sget-object v0, Lmiuix/preference/PreferenceGroupAdapter;->STATE_SET_SINGLE:[I
 
     goto :goto_1
 
-    .line 255
+    .line 252
     :cond_3
     invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -631,14 +631,14 @@
 
     if-nez v1, :cond_4
 
-    .line 256
+    .line 253
     sget-object v0, Lmiuix/preference/PreferenceGroupAdapter;->STATE_SET_FIRST:[I
 
     const/4 v2, 0x2
 
     goto :goto_1
 
-    .line 258
+    .line 255
     :cond_4
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -658,29 +658,29 @@
 
     if-nez v0, :cond_5
 
-    .line 259
+    .line 256
     sget-object v0, Lmiuix/preference/PreferenceGroupAdapter;->STATE_SET_LAST:[I
 
     const/4 v2, 0x4
 
     goto :goto_1
 
-    .line 262
+    .line 259
     :cond_5
     sget-object v0, Lmiuix/preference/PreferenceGroupAdapter;->STATE_SET_MIDDLE:[I
 
     const/4 v2, 0x3
 
-    .line 265
+    .line 262
     :goto_1
     instance-of v1, p1, Landroidx/preference/PreferenceCategory;
 
     if-eqz v1, :cond_6
 
-    .line 266
+    .line 263
     check-cast p1, Landroidx/preference/PreferenceCategory;
 
-    .line 267
+    .line 264
     invoke-virtual {p1}, Landroidx/preference/PreferenceCategory;->getTitle()Ljava/lang/CharSequence;
 
     move-result-object p1
@@ -691,7 +691,7 @@
 
     if-eqz p1, :cond_6
 
-    .line 269
+    .line 266
     sget-object p1, Lmiuix/preference/PreferenceGroupAdapter;->STATE_SET_NO_TITLE:[I
 
     array-length v1, p1
@@ -702,12 +702,12 @@
 
     new-array v1, v1, [I
 
-    .line 270
+    .line 267
     array-length v4, p1
 
     invoke-static {p1, v3, v1, v3, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 271
+    .line 268
     sget-object p1, Lmiuix/preference/PreferenceGroupAdapter;->STATE_SET_NO_TITLE:[I
 
     array-length p1, p1
@@ -718,7 +718,7 @@
 
     move-object v0, v1
 
-    .line 279
+    .line 276
     :cond_6
     iget-object p1, p0, Lmiuix/preference/PreferenceGroupAdapter;->mDescriptors:[Lmiuix/preference/PreferenceGroupAdapter$PositionDescriptor;
 
@@ -726,7 +726,7 @@
 
     iput-object v0, v1, Lmiuix/preference/PreferenceGroupAdapter$PositionDescriptor;->status:[I
 
-    .line 280
+    .line 277
     aget-object p1, p1, p2
 
     iput v2, p1, Lmiuix/preference/PreferenceGroupAdapter$PositionDescriptor;->type:I
@@ -738,21 +738,21 @@
 .method private isArrowRightVisible(Landroidx/preference/Preference;)Z
     .locals 1
 
-    .line 229
+    .line 226
     invoke-virtual {p1}, Landroidx/preference/Preference;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
     if-nez v0, :cond_2
 
-    .line 230
+    .line 227
     invoke-virtual {p1}, Landroidx/preference/Preference;->getFragment()Ljava/lang/String;
 
     move-result-object v0
 
     if-nez v0, :cond_2
 
-    .line 231
+    .line 228
     invoke-virtual {p1}, Landroidx/preference/Preference;->getOnPreferenceClickListener()Landroidx/preference/Preference$OnPreferenceClickListener;
 
     move-result-object v0
@@ -788,39 +788,39 @@
 
     if-eqz p1, :cond_2
 
-    .line 348
+    .line 345
     iget-object v0, p0, Lmiuix/preference/PreferenceGroupAdapter;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     if-eqz v0, :cond_2
 
-    .line 349
+    .line 346
     instance-of v0, p1, Lmiuix/preference/RadioButtonPreferenceCategory;
 
     if-eqz v0, :cond_0
 
-    .line 350
+    .line 347
     check-cast p1, Lmiuix/preference/RadioButtonPreferenceCategory;
 
-    .line 351
+    .line 348
     invoke-direct {p0, p1}, Lmiuix/preference/PreferenceGroupAdapter;->drawRadioSetPreferenceCategory(Lmiuix/preference/RadioButtonPreferenceCategory;)V
 
     goto :goto_0
 
-    .line 352
+    .line 349
     :cond_0
     instance-of v0, p1, Lmiuix/preference/RadioSetPreferenceCategory;
 
     if-eqz v0, :cond_1
 
-    .line 353
+    .line 350
     check-cast p1, Lmiuix/preference/RadioSetPreferenceCategory;
 
-    .line 354
+    .line 351
     invoke-direct {p0, p1}, Lmiuix/preference/PreferenceGroupAdapter;->drawRadioSetPreferenceCategory(Lmiuix/preference/RadioSetPreferenceCategory;)V
 
     goto :goto_0
 
-    .line 355
+    .line 352
     :cond_1
     instance-of p1, p1, Lmiuix/preference/RadioButtonPreference;
 
@@ -834,7 +834,7 @@
 .method public getLeftAndRightWithRTL(Landroidx/recyclerview/widget/RecyclerView;Z)Landroid/util/Pair;
     .locals 1
 
-    .line 210
+    .line 207
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getScrollBarSize()I
 
     move-result v0
@@ -843,7 +843,7 @@
 
     mul-int/lit8 v0, v0, 0x3
 
-    .line 214
+    .line 211
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getWidth()I
 
     move-result p1
@@ -855,7 +855,7 @@
     :cond_0
     const/4 p2, 0x0
 
-    .line 217
+    .line 214
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getWidth()I
 
     move-result p1
@@ -864,7 +864,7 @@
 
     sub-int/2addr p1, v0
 
-    .line 219
+    .line 216
     :goto_0
     new-instance v0, Landroid/util/Pair;
 
@@ -884,7 +884,7 @@
 .method getPositionType(I)I
     .locals 1
 
-    .line 308
+    .line 305
     iget-object v0, p0, Lmiuix/preference/PreferenceGroupAdapter;->mDescriptors:[Lmiuix/preference/PreferenceGroupAdapter$PositionDescriptor;
 
     aget-object p1, v0, p1
@@ -939,15 +939,15 @@
 .method public onAttachedToRecyclerView(Landroidx/recyclerview/widget/RecyclerView;)V
     .locals 1
 
-    .line 287
+    .line 284
     invoke-super {p0, p1}, Landroidx/preference/PreferenceGroupAdapter;->onAttachedToRecyclerView(Landroidx/recyclerview/widget/RecyclerView;)V
 
-    .line 288
+    .line 285
     iget-object v0, p0, Lmiuix/preference/PreferenceGroupAdapter;->mObserver:Landroidx/recyclerview/widget/RecyclerView$AdapterDataObserver;
 
     invoke-virtual {p0, v0}, Lmiuix/preference/PreferenceGroupAdapter;->registerAdapterDataObserver(Landroidx/recyclerview/widget/RecyclerView$AdapterDataObserver;)V
 
-    .line 289
+    .line 286
     iput-object p1, p0, Lmiuix/preference/PreferenceGroupAdapter;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     return-void
@@ -956,29 +956,29 @@
 .method public onBindViewHolder(Landroidx/preference/PreferenceViewHolder;I)V
     .locals 8
 
-    .line 126
+    .line 123
     invoke-super {p0, p1, p2}, Landroidx/preference/PreferenceGroupAdapter;->onBindViewHolder(Landroidx/preference/PreferenceViewHolder;I)V
 
-    .line 127
+    .line 124
     iget-object v0, p1, Landroidx/preference/PreferenceViewHolder;->itemView:Landroid/view/View;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lmiuix/view/CompatViewMethod;->setForceDarkAllowed(Landroid/view/View;Z)V
 
-    .line 128
+    .line 125
     invoke-virtual {p0, p2}, Lmiuix/preference/PreferenceGroupAdapter;->getItem(I)Landroidx/preference/Preference;
 
     move-result-object v0
 
-    .line 129
+    .line 126
     instance-of v2, v0, Landroidx/preference/PreferenceCategory;
 
     const/4 v3, 0x1
 
     if-nez v2, :cond_0
 
-    .line 130
+    .line 127
     new-array v4, v3, [Landroid/view/View;
 
     iget-object v5, p1, Landroidx/preference/PreferenceViewHolder;->itemView:Landroid/view/View;
@@ -1005,25 +1005,25 @@
 
     invoke-interface {v4, v5, v6}, Lmiuix/animation/IHoverStyle;->handleHoverOf(Landroid/view/View;[Lmiuix/animation/base/AnimConfig;)V
 
-    .line 132
+    .line 129
     :cond_0
     invoke-direct {p0, v0, p2}, Lmiuix/preference/PreferenceGroupAdapter;->getPreferenceDescriptor(Landroidx/preference/Preference;I)V
 
-    .line 133
+    .line 130
     iget-object v4, p0, Lmiuix/preference/PreferenceGroupAdapter;->mDescriptors:[Lmiuix/preference/PreferenceGroupAdapter$PositionDescriptor;
 
     aget-object p2, v4, p2
 
     iget-object p2, p2, Lmiuix/preference/PreferenceGroupAdapter$PositionDescriptor;->status:[I
 
-    .line 135
+    .line 132
     iget-object v4, p1, Landroidx/preference/PreferenceViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {v4}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v4
 
-    .line 136
+    .line 133
     instance-of v5, v4, Landroid/graphics/drawable/LevelListDrawable;
 
     if-eqz v5, :cond_3
@@ -1034,7 +1034,7 @@
 
     if-eqz v2, :cond_3
 
-    .line 138
+    .line 135
     :cond_1
     iget-boolean v2, p0, Lmiuix/preference/PreferenceGroupAdapter;->mExtraPaddingEnable:Z
 
@@ -1050,7 +1050,7 @@
     :goto_0
     invoke-virtual {v4, v2}, Landroid/graphics/drawable/Drawable;->setLevel(I)Z
 
-    .line 139
+    .line 136
     new-instance v2, Lmiuix/preference/drawable/MaskTaggingDrawable;
 
     invoke-virtual {v4}, Landroid/graphics/drawable/Drawable;->getCurrent()Landroid/graphics/drawable/Drawable;
@@ -1059,7 +1059,7 @@
 
     invoke-direct {v2, v4}, Lmiuix/preference/drawable/MaskTaggingDrawable;-><init>(Landroid/graphics/drawable/Drawable;)V
 
-    .line 140
+    .line 137
     iget-object v4, p1, Landroidx/preference/PreferenceViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {v4, v2}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
@@ -1069,7 +1069,7 @@
     :cond_3
     move-object v2, v4
 
-    .line 143
+    .line 140
     :goto_1
     nop
 
@@ -1089,19 +1089,19 @@
 
     if-eqz v4, :cond_4
 
-    .line 144
+    .line 141
     new-instance v4, Lmiuix/preference/drawable/MaskTaggingDrawable;
 
     invoke-direct {v4, v2}, Lmiuix/preference/drawable/MaskTaggingDrawable;-><init>(Landroid/graphics/drawable/Drawable;)V
 
-    .line 145
+    .line 142
     iget-object v2, p1, Landroidx/preference/PreferenceViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {v2, v4}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     move-object v2, v4
 
-    .line 148
+    .line 145
     :cond_4
     nop
 
@@ -1109,34 +1109,34 @@
 
     if-eqz v4, :cond_12
 
-    .line 149
+    .line 146
     check-cast v2, Lmiuix/preference/drawable/MaskTaggingDrawable;
 
     if-eqz p2, :cond_5
 
-    .line 151
+    .line 148
     invoke-virtual {v2, p2}, Lmiuix/preference/drawable/MaskTaggingDrawable;->setTaggingState([I)Z
 
-    .line 154
+    .line 151
     :cond_5
     new-instance p2, Landroid/graphics/Rect;
 
     invoke-direct {p2}, Landroid/graphics/Rect;-><init>()V
 
-    .line 155
+    .line 152
     invoke-virtual {v2, p2}, Lmiuix/preference/drawable/MaskTaggingDrawable;->getPadding(Landroid/graphics/Rect;)Z
 
     move-result v4
 
     if-eqz v4, :cond_11
 
-    .line 156
+    .line 153
     iget v4, p2, Landroid/graphics/Rect;->left:I
 
-    .line 157
+    .line 154
     iget v5, p2, Landroid/graphics/Rect;->right:I
 
-    .line 158
+    .line 155
     iget-object v6, p0, Lmiuix/preference/PreferenceGroupAdapter;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-static {v6}, Landroidx/appcompat/widget/ViewUtils;->isLayoutRtl(Landroid/view/View;)Z
@@ -1155,7 +1155,7 @@
     :goto_2
     iput v6, p2, Landroid/graphics/Rect;->right:I
 
-    .line 159
+    .line 156
     iget-object v6, p0, Lmiuix/preference/PreferenceGroupAdapter;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-static {v6}, Landroidx/appcompat/widget/ViewUtils;->isLayoutRtl(Landroid/view/View;)Z
@@ -1169,7 +1169,7 @@
     :cond_7
     iput v4, p2, Landroid/graphics/Rect;->left:I
 
-    .line 160
+    .line 157
     invoke-virtual {v0}, Landroidx/preference/Preference;->getParent()Landroidx/preference/PreferenceGroup;
 
     move-result-object v4
@@ -1178,24 +1178,24 @@
 
     if-eqz v4, :cond_d
 
-    .line 161
+    .line 158
     iget-object v4, p1, Landroidx/preference/PreferenceViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {v4}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v4
 
-    .line 163
+    .line 160
     instance-of v5, v4, Landroid/view/ViewGroup$MarginLayoutParams;
 
     if-eqz v5, :cond_8
 
-    .line 164
+    .line 161
     check-cast v4, Landroid/view/ViewGroup$MarginLayoutParams;
 
     goto :goto_3
 
-    .line 166
+    .line 163
     :cond_8
     new-instance v5, Landroid/view/ViewGroup$MarginLayoutParams;
 
@@ -1203,7 +1203,7 @@
 
     move-object v4, v5
 
-    .line 168
+    .line 165
     :goto_3
     iget-object v5, p0, Lmiuix/preference/PreferenceGroupAdapter;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
@@ -1215,22 +1215,22 @@
 
     invoke-virtual {v4, v5}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginEnd(I)V
 
-    .line 169
+    .line 166
     iget-object v5, p1, Landroidx/preference/PreferenceViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {v5, v4}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 170
+    .line 167
     invoke-virtual {v0}, Landroidx/preference/Preference;->getParent()Landroidx/preference/PreferenceGroup;
 
     move-result-object v4
 
     check-cast v4, Lmiuix/preference/RadioSetPreferenceCategory;
 
-    .line 171
+    .line 168
     invoke-virtual {v2, v1}, Lmiuix/preference/drawable/MaskTaggingDrawable;->setMaskEnabled(Z)V
 
-    .line 173
+    .line 170
     invoke-virtual {v4}, Lmiuix/preference/RadioSetPreferenceCategory;->isChecked()Z
 
     move-result v4
@@ -1247,23 +1247,23 @@
     :goto_4
     sget-object v5, Landroid/graphics/PorterDuff$Mode;->SRC_OVER:Landroid/graphics/PorterDuff$Mode;
 
-    .line 172
+    .line 169
     invoke-virtual {v2, v4, v5}, Lmiuix/preference/drawable/MaskTaggingDrawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 175
+    .line 172
     iget-object v4, p0, Lmiuix/preference/PreferenceGroupAdapter;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     if-eqz v4, :cond_e
 
-    .line 176
+    .line 173
     instance-of v5, v0, Lmiuix/preference/RadioButtonPreference;
 
-    .line 177
+    .line 174
     invoke-virtual {v4}, Landroidx/recyclerview/widget/RecyclerView;->getScrollBarSize()I
 
     move-result v4
 
-    .line 178
+    .line 175
     iget-object v6, p0, Lmiuix/preference/PreferenceGroupAdapter;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-static {v6}, Landroidx/appcompat/widget/ViewUtils;->isLayoutRtl(Landroid/view/View;)Z
@@ -1272,7 +1272,7 @@
 
     if-eqz v6, :cond_b
 
-    .line 179
+    .line 176
     iget v6, p2, Landroid/graphics/Rect;->right:I
 
     if-eqz v5, :cond_a
@@ -1289,7 +1289,7 @@
 
     iput v6, p2, Landroid/graphics/Rect;->right:I
 
-    .line 180
+    .line 177
     iget v5, p2, Landroid/graphics/Rect;->left:I
 
     mul-int/lit8 v4, v4, 0x3
@@ -1300,7 +1300,7 @@
 
     goto :goto_7
 
-    .line 182
+    .line 179
     :cond_b
     iget v6, p2, Landroid/graphics/Rect;->left:I
 
@@ -1318,7 +1318,7 @@
 
     iput v6, p2, Landroid/graphics/Rect;->left:I
 
-    .line 183
+    .line 180
     iget v5, p2, Landroid/graphics/Rect;->right:I
 
     mul-int/lit8 v4, v4, 0x3
@@ -1332,10 +1332,10 @@
     :cond_d
     const/4 v4, 0x0
 
-    .line 187
+    .line 184
     invoke-virtual {v2, v4}, Lmiuix/preference/drawable/MaskTaggingDrawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 189
+    .line 186
     :cond_e
     :goto_7
     iget v4, p2, Landroid/graphics/Rect;->left:I
@@ -1354,7 +1354,7 @@
     :goto_8
     add-int/2addr v4, v5
 
-    .line 190
+    .line 187
     iget v5, p2, Landroid/graphics/Rect;->right:I
 
     iget-boolean v6, p0, Lmiuix/preference/PreferenceGroupAdapter;->mExtraPaddingEnable:Z
@@ -1371,7 +1371,7 @@
     :goto_9
     add-int/2addr v5, v6
 
-    .line 191
+    .line 188
     iget-object v6, p1, Landroidx/preference/PreferenceViewHolder;->itemView:Landroid/view/View;
 
     iget v7, p2, Landroid/graphics/Rect;->top:I
@@ -1380,7 +1380,7 @@
 
     invoke-virtual {v6, v4, v7, v5, p2}, Landroid/view/View;->setPadding(IIII)V
 
-    .line 193
+    .line 190
     :cond_11
     instance-of p2, v0, Lmiuix/preference/RadioButtonPreference;
 
@@ -1396,7 +1396,7 @@
 
     if-eqz p2, :cond_12
 
-    .line 194
+    .line 191
     new-array p2, v3, [I
 
     const v3, 0x10100a0
@@ -1405,7 +1405,7 @@
 
     invoke-virtual {v2, p2}, Lmiuix/preference/drawable/MaskTaggingDrawable;->setTaggingState([I)Z
 
-    .line 198
+    .line 195
     :cond_12
     iget-object p2, p1, Landroidx/preference/PreferenceViewHolder;->itemView:Landroid/view/View;
 
@@ -1417,7 +1417,7 @@
 
     if-eqz p2, :cond_14
 
-    .line 200
+    .line 197
     invoke-direct {p0, v0}, Lmiuix/preference/PreferenceGroupAdapter;->isArrowRightVisible(Landroidx/preference/Preference;)Z
 
     move-result v2
@@ -1432,7 +1432,7 @@
     :goto_a
     invoke-virtual {p2, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 202
+    .line 199
     :cond_14
     invoke-direct {p0, v0}, Lmiuix/preference/PreferenceGroupAdapter;->ableToUseFolmeAnim(Landroidx/preference/Preference;)Z
 
@@ -1440,12 +1440,12 @@
 
     if-eqz p2, :cond_15
 
-    .line 203
+    .line 200
     iget-object p2, p1, Landroidx/preference/PreferenceViewHolder;->itemView:Landroid/view/View;
 
     invoke-static {p2}, Lmiuix/internal/util/AnimHelper;->addPressAnim(Landroid/view/View;)V
 
-    .line 205
+    .line 202
     :cond_15
     iget-object p1, p1, Landroidx/preference/PreferenceViewHolder;->itemView:Landroid/view/View;
 
@@ -1476,17 +1476,17 @@
 .method public onDetachedFromRecyclerView(Landroidx/recyclerview/widget/RecyclerView;)V
     .locals 0
 
-    .line 294
+    .line 291
     invoke-super {p0, p1}, Landroidx/preference/PreferenceGroupAdapter;->onDetachedFromRecyclerView(Landroidx/recyclerview/widget/RecyclerView;)V
 
-    .line 295
+    .line 292
     iget-object p1, p0, Lmiuix/preference/PreferenceGroupAdapter;->mObserver:Landroidx/recyclerview/widget/RecyclerView$AdapterDataObserver;
 
     invoke-virtual {p0, p1}, Lmiuix/preference/PreferenceGroupAdapter;->unregisterAdapterDataObserver(Landroidx/recyclerview/widget/RecyclerView$AdapterDataObserver;)V
 
     const/4 p1, 0x0
 
-    .line 296
+    .line 293
     iput-object p1, p0, Lmiuix/preference/PreferenceGroupAdapter;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     return-void
@@ -1495,22 +1495,22 @@
 .method public onPreferenceChange(Landroidx/preference/Preference;)V
     .locals 2
 
-    .line 318
+    .line 315
     invoke-super {p0, p1}, Landroidx/preference/PreferenceGroupAdapter;->onPreferenceChange(Landroidx/preference/Preference;)V
 
-    .line 319
+    .line 316
     invoke-virtual {p1}, Landroidx/preference/Preference;->getDependency()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 320
+    .line 317
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_2
 
-    .line 321
+    .line 318
     invoke-virtual {p1}, Landroidx/preference/Preference;->getPreferenceManager()Landroidx/preference/PreferenceManager;
 
     move-result-object v1
@@ -1521,17 +1521,17 @@
 
     if-eqz v0, :cond_2
 
-    .line 323
+    .line 320
     instance-of v1, p1, Landroidx/preference/PreferenceCategory;
 
     if-eqz v1, :cond_1
 
-    .line 324
+    .line 321
     instance-of v1, v0, Landroidx/preference/TwoStatePreference;
 
     if-eqz v1, :cond_0
 
-    .line 325
+    .line 322
     check-cast v0, Landroidx/preference/TwoStatePreference;
 
     invoke-virtual {v0}, Landroidx/preference/TwoStatePreference;->isChecked()Z
@@ -1542,7 +1542,7 @@
 
     goto :goto_0
 
-    .line 327
+    .line 324
     :cond_0
     invoke-virtual {v0}, Landroidx/preference/Preference;->isEnabled()Z
 
@@ -1552,7 +1552,7 @@
 
     goto :goto_0
 
-    .line 330
+    .line 327
     :cond_1
     invoke-virtual {p1}, Landroidx/preference/Preference;->isEnabled()Z
 
@@ -1570,17 +1570,17 @@
 
     if-eqz p1, :cond_0
 
-    .line 301
+    .line 298
     invoke-virtual {p1}, Landroidx/preference/Preference;->isVisible()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 302
+    .line 299
     invoke-direct {p0, p1}, Lmiuix/preference/PreferenceGroupAdapter;->updateViewBackgroundMask(Landroidx/preference/Preference;)V
 
-    .line 304
+    .line 301
     :cond_0
     invoke-super {p0, p1}, Landroidx/preference/PreferenceGroupAdapter;->onPreferenceVisibilityChange(Landroidx/preference/Preference;)V
 
@@ -1614,43 +1614,29 @@
 .method protected setExtraHorizontalPaddingLevel(IIZ)V
     .locals 1
 
-    const/4 v0, 0x0
-
-    .line 111
-    invoke-virtual {p0, p1, p2, p3, v0}, Lmiuix/preference/PreferenceGroupAdapter;->setExtraHorizontalPaddingLevel(IIZZ)V
-
-    return-void
-.end method
-
-.method protected setExtraHorizontalPaddingLevel(IIZZ)V
-    .locals 0
-
-    if-nez p4, :cond_0
-
-    .line 115
+    .line 112
     invoke-static {p1}, Lmiuix/appcompat/internal/util/LayoutUIUtils;->isLevelValid(I)Z
 
-    move-result p4
+    move-result v0
 
-    if-eqz p4, :cond_1
+    if-eqz v0, :cond_0
 
-    iget p4, p0, Lmiuix/preference/PreferenceGroupAdapter;->mExtraPaddingLevel:I
+    iget v0, p0, Lmiuix/preference/PreferenceGroupAdapter;->mExtraPaddingLevel:I
 
-    if-eq p4, p1, :cond_1
+    if-eq v0, p1, :cond_0
 
-    .line 117
-    :cond_0
+    .line 114
     iput p1, p0, Lmiuix/preference/PreferenceGroupAdapter;->mExtraPaddingLevel:I
 
-    .line 118
+    .line 115
     iput p2, p0, Lmiuix/preference/PreferenceGroupAdapter;->mExtraPaddingHorizontal:I
 
-    .line 119
+    .line 116
     iput-boolean p3, p0, Lmiuix/preference/PreferenceGroupAdapter;->mExtraPaddingEnable:Z
 
-    .line 120
+    .line 117
     invoke-virtual {p0}, Lmiuix/preference/PreferenceGroupAdapter;->notifyDataSetChanged()V
 
-    :cond_1
+    :cond_0
     return-void
 .end method

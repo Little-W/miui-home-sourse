@@ -78,7 +78,7 @@
 
 # virtual methods
 .method protected varargs doInBackground([Ljava/lang/String;)Ljava/lang/Boolean;
-    .locals 5
+    .locals 6
 
     .line 525
     iget-object p1, p0, Lcom/miui/maml/data/ContentProviderBinder$ContentQueryTask;->mResolver:Ljava/lang/ref/WeakReference;
@@ -123,19 +123,19 @@
     .line 534
     invoke-static {}, Lcom/miui/maml/util/ExecutorHelper;->getLocalTaskExecutor()Ljava/util/concurrent/ThreadPoolExecutor;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/ThreadPoolExecutor;->execute(Ljava/lang/Runnable;)V
+    invoke-virtual {v1, p1}, Ljava/util/concurrent/ThreadPoolExecutor;->execute(Ljava/lang/Runnable;)V
 
-    const-wide/16 v0, 0x4e20
+    const-wide/16 v1, 0x4e20
 
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
     .line 536
     :try_start_0
-    sget-object v3, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+    sget-object v4, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {p1, v0, v1, v3}, Ljava/util/concurrent/FutureTask;->get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+    invoke-virtual {p1, v1, v2, v4}, Ljava/util/concurrent/FutureTask;->get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
     :try_end_0
     .catch Ljava/util/concurrent/ExecutionException; {:try_start_0 .. :try_end_0} :catch_2
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_1
@@ -144,59 +144,62 @@
     goto :goto_0
 
     :catch_0
-    move-exception v0
+    move-exception v1
 
-    const-string v1, "ContentProviderBinder"
+    const-string v2, "ContentProviderBinder"
 
     .line 542
-    new-instance v3, Ljava/lang/StringBuilder;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v4, "WorkerTask execute error, maybe timeout, uri = "
+    const-string v5, "WorkerTask execute error, maybe timeout, uri = "
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v4, p0, Lcom/miui/maml/data/ContentProviderBinder$ContentQueryTask;->mWorkArgs:Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;
+    iget-object v5, p0, Lcom/miui/maml/data/ContentProviderBinder$ContentQueryTask;->mWorkArgs:Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;
 
-    iget-object v4, v4, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;->uri:Landroid/net/Uri;
+    iget-object v5, v5, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;->uri:Landroid/net/Uri;
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v4
 
-    invoke-static {v1, v3, v0}, Lcom/miui/maml/util/MamlLog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v2, v4, v1}, Lcom/miui/maml/util/MamlLog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 543
-    invoke-virtual {p1, v2}, Ljava/util/concurrent/FutureTask;->cancel(Z)Z
+    invoke-virtual {p1, v3}, Ljava/util/concurrent/FutureTask;->cancel(Z)Z
 
     goto :goto_0
 
     :catch_1
     const-string p1, "ContentProviderBinder"
 
-    const-string v0, "WorkerTask interrupted"
+    const-string v1, "WorkerTask interrupted"
 
     .line 540
-    invoke-static {p1, v0}, Lcom/miui/maml/util/MamlLog;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lcom/miui/maml/util/MamlLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     :catch_2
     move-exception p1
 
-    const-string v0, "ContentProviderBinder"
+    const-string v1, "ContentProviderBinder"
 
-    const-string v1, "WorkerTask execute exception, maybe timeout"
+    const-string v2, "WorkerTask execute exception, maybe timeout"
 
     .line 538
-    invoke-static {v0, v1, p1}, Lcom/miui/maml/util/MamlLog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v1, v2, p1}, Lcom/miui/maml/util/MamlLog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 545
+    :goto_0
+    invoke-static {v0}, Lcom/miui/maml/data/ContentProviderBinder;->access$200(Lcom/miui/maml/data/ContentProviderBinder;)V
 
     .line 546
-    :goto_0
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
 

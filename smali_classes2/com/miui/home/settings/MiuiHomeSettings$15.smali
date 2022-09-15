@@ -35,7 +35,7 @@
 .method constructor <init>(Lcom/miui/home/settings/MiuiHomeSettings;)V
     .locals 0
 
-    .line 844
+    .line 838
     iput-object p1, p0, Lcom/miui/home/settings/MiuiHomeSettings$15;->this$0:Lcom/miui/home/settings/MiuiHomeSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -48,7 +48,7 @@
 .method public apply(Ljava/lang/Void;)Ljava/lang/Boolean;
     .locals 0
 
-    .line 847
+    .line 841
     iget-object p1, p0, Lcom/miui/home/settings/MiuiHomeSettings$15;->this$0:Lcom/miui/home/settings/MiuiHomeSettings;
 
     invoke-static {p1}, Lcom/miui/home/settings/MiuiHomeSettings;->access$600(Lcom/miui/home/settings/MiuiHomeSettings;)Z
@@ -65,7 +65,7 @@
 .method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 844
+    .line 838
     check-cast p1, Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/settings/MiuiHomeSettings$15;->apply(Ljava/lang/Void;)Ljava/lang/Boolean;

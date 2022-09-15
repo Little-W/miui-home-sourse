@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/gadget/ClockGadgetDelegate$1;Landroid/content/Context;)V
     .locals 0
 
-    .line 245
+    .line 265
     iput-object p1, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate$1$1;->this$1:Lcom/miui/home/launcher/gadget/ClockGadgetDelegate$1;
 
     invoke-direct {p0, p2}, Lcom/miui/home/launcher/gadget/AwesomeClock;-><init>(Landroid/content/Context;)V
@@ -35,7 +35,7 @@
 .method public onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 0
 
-    .line 248
+    .line 268
     iget-object p1, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate$1$1;->this$1:Lcom/miui/home/launcher/gadget/ClockGadgetDelegate$1;
 
     iget-object p1, p1, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate$1;->this$0:Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;

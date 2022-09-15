@@ -671,7 +671,7 @@
 
     const-string v1, "Launcher.GlobalFolderPreinstallManager"
 
-    const-string v2, "transfer info fail"
+    const-string/jumbo v2, "transfer info fail"
 
     .line 247
     invoke-static {v1, v2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I

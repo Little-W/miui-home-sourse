@@ -28,19 +28,19 @@
 .method public constructor <init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
     .locals 1
 
-    .line 2538
+    .line 2533
     invoke-direct {p0, p1, p2}, Lcom/miui/maml/ActionCommand$TargetCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
 
     const-string p1, "action"
 
-    .line 2539
+    .line 2534
     invoke-interface {p2, p1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/miui/maml/ActionCommand$ActionPerformCommand;->mAction:Ljava/lang/String;
 
-    .line 2540
+    .line 2535
     iget-object p1, p0, Lcom/miui/maml/ActionCommand$ActionPerformCommand;->mAction:Ljava/lang/String;
 
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -51,10 +51,10 @@
 
     const/4 p1, 0x0
 
-    .line 2541
+    .line 2536
     iput-object p1, p0, Lcom/miui/maml/ActionCommand$ActionPerformCommand;->mAction:Ljava/lang/String;
 
-    .line 2542
+    .line 2537
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$ActionPerformCommand;->getVariables()Lcom/miui/maml/data/Variables;
 
     move-result-object p1
@@ -80,7 +80,7 @@
 .method public doPerform()V
     .locals 2
 
-    .line 2548
+    .line 2543
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$ActionPerformCommand;->getTarget()Ljava/lang/Object;
 
     move-result-object v0
@@ -91,31 +91,31 @@
 
     return-void
 
-    .line 2552
+    .line 2547
     :cond_0
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$ActionPerformCommand;->mAction:Ljava/lang/String;
 
     if-eqz v1, :cond_1
 
-    .line 2553
+    .line 2548
     invoke-virtual {v0, v1}, Lcom/miui/maml/elements/ScreenElement;->performAction(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 2554
+    .line 2549
     :cond_1
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$ActionPerformCommand;->mActionExp:Lcom/miui/maml/data/Expression;
 
     if-eqz v1, :cond_2
 
-    .line 2555
+    .line 2550
     invoke-virtual {v1}, Lcom/miui/maml/data/Expression;->evaluateStr()Ljava/lang/String;
 
     move-result-object v1
 
     if-eqz v1, :cond_2
 
-    .line 2557
+    .line 2552
     invoke-virtual {v0, v1}, Lcom/miui/maml/elements/ScreenElement;->performAction(Ljava/lang/String;)V
 
     :cond_2

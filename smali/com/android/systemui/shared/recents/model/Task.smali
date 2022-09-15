@@ -807,7 +807,7 @@
     :goto_0
     const-string p1, "Task"
 
-    const-string v0, "updateIsNeedHideState: key or getBaseComponent is null, return."
+    const-string/jumbo v0, "updateIsNeedHideState: key or getBaseComponent is null, return."
 
     .line 535
     invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
@@ -1236,7 +1236,7 @@
     :goto_0
     const-string p1, "Task"
 
-    const-string v0, "updateIsNeedHideState: key or getBaseComponent is null, return."
+    const-string/jumbo v0, "updateIsNeedHideState: key or getBaseComponent is null, return."
 
     .line 524
     invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I

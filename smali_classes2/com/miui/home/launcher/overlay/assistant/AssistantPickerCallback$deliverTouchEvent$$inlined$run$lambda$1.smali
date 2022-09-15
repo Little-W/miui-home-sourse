@@ -41,14 +41,14 @@
 .method public final run()V
     .locals 2
 
-    .line 33
+    .line 32
     sget-object v0, Lcom/miui/home/launcher/overlay/assistant/AssistantPickerCallback;->INSTANCE:Lcom/miui/home/launcher/overlay/assistant/AssistantPickerCallback;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Lcom/miui/home/launcher/overlay/assistant/AssistantPickerCallback;->access$changeContinueAddState(Lcom/miui/home/launcher/overlay/assistant/AssistantPickerCallback;Z)V
 
-    .line 34
+    .line 33
     iget-object v0, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantPickerCallback$deliverTouchEvent$$inlined$run$lambda$1;->$this_run:Lcom/miui/home/launcher/Launcher;
 
     iget-object v1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantPickerCallback$deliverTouchEvent$$inlined$run$lambda$1;->$event$inlined:Landroid/view/MotionEvent;

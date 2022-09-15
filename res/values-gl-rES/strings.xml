@@ -293,7 +293,6 @@
     <string name="eras_bc">A. C.</string>
     <string name="evening">Tarde</string>
     <string name="exit_overview_because_task_stack_changed">Pecháronse os Recentes debido aos cambios producidos en segundo plano</string>
-    <string name="external_not_support_split_screen_j18">A pantalla dividida non é compatible coa pantalla externa</string>
     <string name="failed_to_delete_temporary">Non se pode eliminar</string>
     <string name="failed_to_drop">Non se pode mover</string>
     <string name="failed_to_drop_widget_invalid">Widget non válido</string>
@@ -498,7 +497,6 @@
     <string name="midnight">Noite</string>
     <string name="minus_one_screen">Vault da aplicación</string>
     <string name="miui_screen_config_title">Axustes da Pantalla de inicio</string>
-    <string name="miui_widget_menu_replace_text">Cambiar</string>
     <string name="miuix_access_state_desc">Seleccionado</string>
     <string name="miuix_appcompat_action_mode_deselect_all">Desmarcar</string>
     <string name="miuix_appcompat_action_mode_select_all">Seleccionar todo</string>
@@ -525,8 +523,6 @@
     <string name="monday">Luns</string>
     <string name="monday_short">Lun</string>
     <string name="monday_shortest">Luns</string>
-    <string name="monochrome_summary">Cambiar a cor de fondo para as iconas compatibles</string>
-    <string name="monochrome_title">Cor do fondo</string>
     <string name="month_april">Abril</string>
     <string name="month_april_short">Abr</string>
     <string name="month_april_shortest">Abr</string>

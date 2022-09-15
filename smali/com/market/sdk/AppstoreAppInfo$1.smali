@@ -1,4 +1,4 @@
-.class Lcom/market/sdk/AppstoreAppInfo$1;
+.class final Lcom/market/sdk/AppstoreAppInfo$1;
 .super Ljava/lang/Object;
 .source "AppstoreAppInfo.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x8
     name = null
 .end annotation
 

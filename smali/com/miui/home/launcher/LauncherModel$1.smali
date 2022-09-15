@@ -70,7 +70,7 @@
 
     const-string v0, "Launcher.Model"
 
-    const-string v1, "update Item in database failed"
+    const-string/jumbo v1, "update Item in database failed"
 
     .line 532
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I

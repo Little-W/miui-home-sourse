@@ -32,22 +32,22 @@
 .method public constructor <init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
     .locals 1
 
-    .line 1560
+    .line 1555
     invoke-direct {p0, p1, p2}, Lcom/miui/maml/ActionCommand$TargetCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
 
-    .line 1561
+    .line 1556
     sget-object p1, Lcom/miui/maml/ActionCommand$TargetCommand$TargetType;->VARIABLE_BINDER:Lcom/miui/maml/ActionCommand$TargetCommand$TargetType;
 
     iput-object p1, p0, Lcom/miui/maml/ActionCommand$SensorBinderCommand;->mTargetType:Lcom/miui/maml/ActionCommand$TargetCommand$TargetType;
 
     const-string p1, "command"
 
-    .line 1562
+    .line 1557
     invoke-interface {p2, p1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 1563
+    .line 1558
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     move-result p2
@@ -95,14 +95,14 @@
     :goto_1
     packed-switch p1, :pswitch_data_0
 
-    .line 1571
+    .line 1566
     sget-object p1, Lcom/miui/maml/ActionCommand$SensorBinderCommand$CommandType;->INVALID:Lcom/miui/maml/ActionCommand$SensorBinderCommand$CommandType;
 
     iput-object p1, p0, Lcom/miui/maml/ActionCommand$SensorBinderCommand;->mCommand:Lcom/miui/maml/ActionCommand$SensorBinderCommand$CommandType;
 
     goto :goto_2
 
-    .line 1568
+    .line 1563
     :pswitch_0
     sget-object p1, Lcom/miui/maml/ActionCommand$SensorBinderCommand$CommandType;->TURN_OFF:Lcom/miui/maml/ActionCommand$SensorBinderCommand$CommandType;
 
@@ -110,7 +110,7 @@
 
     goto :goto_2
 
-    .line 1565
+    .line 1560
     :pswitch_1
     sget-object p1, Lcom/miui/maml/ActionCommand$SensorBinderCommand$CommandType;->TURN_ON:Lcom/miui/maml/ActionCommand$SensorBinderCommand$CommandType;
 
@@ -133,25 +133,25 @@
 .method protected doPerform()V
     .locals 3
 
-    .line 1578
+    .line 1573
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$SensorBinderCommand;->getTarget()Ljava/lang/Object;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 1579
+    .line 1574
     instance-of v1, v0, Lcom/miui/maml/data/SensorBinder;
 
     if-nez v1, :cond_0
 
     goto :goto_1
 
-    .line 1582
+    .line 1577
     :cond_0
     check-cast v0, Lcom/miui/maml/data/SensorBinder;
 
-    .line 1583
+    .line 1578
     sget-object v1, Lcom/miui/maml/ActionCommand$1;->$SwitchMap$com$miui$maml$ActionCommand$SensorBinderCommand$CommandType:[I
 
     iget-object v2, p0, Lcom/miui/maml/ActionCommand$SensorBinderCommand;->mCommand:Lcom/miui/maml/ActionCommand$SensorBinderCommand$CommandType;
@@ -166,13 +166,13 @@
 
     goto :goto_0
 
-    .line 1588
+    .line 1583
     :pswitch_0
     invoke-virtual {v0}, Lcom/miui/maml/data/SensorBinder;->turnOffSensorBinder()V
 
     goto :goto_0
 
-    .line 1585
+    .line 1580
     :pswitch_1
     invoke-virtual {v0}, Lcom/miui/maml/data/SensorBinder;->turnOnSensorBinder()V
 

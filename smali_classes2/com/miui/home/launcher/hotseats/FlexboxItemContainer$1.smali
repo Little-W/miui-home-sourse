@@ -27,7 +27,7 @@
 .method constructor <init>(Ljava/lang/Class;Ljava/lang/String;)V
     .locals 0
 
-    .line 30
+    .line 31
     invoke-direct {p0, p1, p2}, Landroid/util/Property;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
     return-void
@@ -38,7 +38,7 @@
 .method public get(Landroid/view/View;)Ljava/lang/Float;
     .locals 0
 
-    .line 33
+    .line 34
     invoke-virtual {p1}, Landroid/view/View;->getScaleX()F
 
     move-result p1
@@ -53,7 +53,7 @@
 .method public bridge synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 30
+    .line 31
     check-cast p1, Landroid/view/View;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/hotseats/FlexboxItemContainer$1;->get(Landroid/view/View;)Ljava/lang/Float;
@@ -66,14 +66,14 @@
 .method public set(Landroid/view/View;Ljava/lang/Float;)V
     .locals 1
 
-    .line 38
+    .line 39
     invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
 
     move-result v0
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setScaleX(F)V
 
-    .line 39
+    .line 40
     invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
 
     move-result p2
@@ -86,7 +86,7 @@
 .method public bridge synthetic set(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
-    .line 30
+    .line 31
     check-cast p1, Landroid/view/View;
 
     check-cast p2, Ljava/lang/Float;

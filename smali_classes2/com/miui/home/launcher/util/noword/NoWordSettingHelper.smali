@@ -13,7 +13,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 55
+    .line 53
     new-instance v0, Lcom/miui/home/launcher/util/noword/NoWordSettingHelper;
 
     invoke-direct {v0}, Lcom/miui/home/launcher/util/noword/NoWordSettingHelper;-><init>()V
@@ -26,7 +26,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 55
+    .line 53
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,7 +37,7 @@
 .method public final getSwitchingNoWordModel()Z
     .locals 1
 
-    .line 59
+    .line 57
     sget-boolean v0, Lcom/miui/home/launcher/util/noword/NoWordSettingHelper;->mSwitchingNoWordModel:Z
 
     return v0
@@ -46,7 +46,7 @@
 .method public final setSwitchingNoWordModel(Z)V
     .locals 0
 
-    .line 59
+    .line 57
     sput-boolean p1, Lcom/miui/home/launcher/util/noword/NoWordSettingHelper;->mSwitchingNoWordModel:Z
 
     return-void

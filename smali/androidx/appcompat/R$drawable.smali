@@ -187,8 +187,8 @@
 
 .field public static final btn_radio_on_to_off_mtrl_animation:I = 0x7f0801b5
 
-.field public static final test_level_drawable:I = 0x7f0806a0
+.field public static final test_level_drawable:I = 0x7f08069c
 
-.field public static final tooltip_frame_dark:I = 0x7f0806b0
+.field public static final tooltip_frame_dark:I = 0x7f0806ac
 
-.field public static final tooltip_frame_light:I = 0x7f0806b1
+.field public static final tooltip_frame_light:I = 0x7f0806ad

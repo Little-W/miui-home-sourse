@@ -138,7 +138,15 @@
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {}, Lcom/xiaomi/onetrack/f/a;->e()Ljava/lang/String;
+    invoke-static {}, Lcom/xiaomi/onetrack/f/a;->b()Landroid/content/Context;
+
+    move-result-object p1
+
+    invoke-static {}, Landroid/os/Process;->myPid()I
+
+    move-result p2
+
+    invoke-static {p1, p2}, Lcom/xiaomi/onetrack/util/b;->a(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object p1
 
@@ -237,7 +245,15 @@
 
     const/4 v5, 0x4
 
-    invoke-static {}, Lcom/xiaomi/onetrack/f/a;->e()Ljava/lang/String;
+    invoke-static {}, Lcom/xiaomi/onetrack/f/a;->b()Landroid/content/Context;
+
+    move-result-object v6
+
+    invoke-static {}, Landroid/os/Process;->myPid()I
+
+    move-result v7
+
+    invoke-static {v6, v7}, Lcom/xiaomi/onetrack/util/b;->a(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v6
 

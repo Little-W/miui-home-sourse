@@ -11,7 +11,7 @@
 
 .field public static final FLAVOR:Ljava/lang/String; = ""
 
-.field public static final SDK_VERSION:Ljava/lang/String; = "2.0.3"
+.field public static final SDK_VERSION:Ljava/lang/String; = "2.0.1"
 
 .field public static final VERSION_CODE:I = 0x1
 

@@ -16,7 +16,7 @@
 
     invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    const-string v0, "unknown status code: "
+    const-string/jumbo v0, "unknown status code: "
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -107,8 +107,6 @@
     const-string p0, "SUCCESS_CACHE"
 
     return-object p0
-
-    nop
 
     :pswitch_data_0
     .packed-switch -0x1

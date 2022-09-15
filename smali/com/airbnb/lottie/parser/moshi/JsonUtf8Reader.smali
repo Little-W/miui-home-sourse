@@ -1222,7 +1222,7 @@
 
     :cond_5
     :goto_2
-    const-string v0, "true"
+    const-string/jumbo v0, "true"
 
     const-string v2, "TRUE"
 

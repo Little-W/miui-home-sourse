@@ -50,6 +50,15 @@
     return-void
 .end method
 
+.method public onBackPressed()V
+    .locals 0
+
+    .line 47
+    invoke-virtual {p0}, Lcom/miui/home/recents/settings/NavigationBarTypeActivity;->finish()V
+
+    return-void
+.end method
+
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 2
 

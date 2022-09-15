@@ -240,7 +240,7 @@
 
     const-string p1, "Launcher.Transfer"
 
-    const-string p2, "transfer is closed"
+    const-string/jumbo p2, "transfer is closed"
 
     .line 166
     invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
@@ -290,7 +290,7 @@
 
     sget-object v1, Lcom/miui/home/launcher/SearchBarTransferLayout;->URI:Landroid/net/Uri;
 
-    const-string v2, "transfer"
+    const-string/jumbo v2, "transfer"
 
     const/4 v3, 0x0
 
@@ -305,7 +305,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "transfer:"
+    const-string/jumbo v2, "transfer:"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -567,7 +567,7 @@
 
     const-string v0, "Launcher.Transfer"
 
-    const-string v1, "unregister transfer observer"
+    const-string/jumbo v1, "unregister transfer observer"
 
     .line 124
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
@@ -782,7 +782,7 @@
     .line 71
     invoke-super {p0}, Landroid/widget/LinearLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a0389
+    const v0, 0x7f0a0385
 
     .line 72
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/SearchBarTransferLayout;->findViewById(I)Landroid/view/View;
@@ -793,7 +793,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/SearchBarTransferLayout;->mTitle:Landroid/widget/TextView;
 
-    const v0, 0x7f0a019e
+    const v0, 0x7f0a019a
 
     .line 73
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/SearchBarTransferLayout;->findViewById(I)Landroid/view/View;

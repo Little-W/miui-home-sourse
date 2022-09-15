@@ -2983,7 +2983,7 @@
         <item name="android:navigationBarColor">@android:color/transparent</item>
     </style>
     <style name="MIUIXPreference" parent="@style/BaseTheme">
-        <item name="preferenceTheme">@style/Theme.PreferenceOverlay.DayNight.Home</item>
+        <item name="preferenceTheme">@style/Theme.PreferenceOverlay.DayNight</item>
     </style>
     <style name="MaterialAlertDialog.Material3" parent="@style/MaterialAlertDialog.MaterialComponents">
         <item name="android:layout">@layout/m3_alert_dialog</item>
@@ -3358,7 +3358,6 @@
     </style>
     <style name="Miuix.Preference.CheckBoxPreference" parent="@style/Miuix.Preference">
         <item name="android:widgetLayout">@layout/miuix_preference_widget_checkbox</item>
-        <item name="singleLineTitle">false</item>
     </style>
     <style name="Miuix.Preference.DialogPreference" parent="@style/Miuix.Preference">
         <item name="android:positiveButtonText">@android:string/ok</item>
@@ -3369,7 +3368,6 @@
     </style>
     <style name="Miuix.Preference.DropDown" parent="@style/Miuix.Preference">
         <item name="android:widgetLayout">@layout/miuix_preference_widget_spinner</item>
-        <item name="singleLineTitle">false</item>
     </style>
     <style name="Miuix.Preference.PreferenceScreen" parent="@style/Miuix.Preference" />
     <style name="Miuix.Preference.RadioButtonPreference" parent="@style/Miuix.Preference">
@@ -5280,10 +5278,6 @@
     </style>
     <style name="Theme.PreferenceOverlay.Dark" parent="@style/V12.PreferenceThemeOverlay.Dark" />
     <style name="Theme.PreferenceOverlay.DayNight" parent="@style/Theme.PreferenceOverlay.Light" />
-    <style name="Theme.PreferenceOverlay.DayNight.Home" parent="@style/Theme.PreferenceOverlay.DayNight">
-        <item name="preferenceItemPaddingEnd">@dimen/home_preference_item_padding_end</item>
-        <item name="preferenceItemPaddingStart">@dimen/home_preference_item_padding_start</item>
-    </style>
     <style name="Theme.PreferenceOverlay.Floating.Dark" parent="@style/V12.PreferenceThemeOverlay.Floating.Dark" />
     <style name="Theme.PreferenceOverlay.Floating.DayNight" parent="@style/Theme.PreferenceOverlay.Floating.Light" />
     <style name="Theme.PreferenceOverlay.Floating.Light" parent="@style/V12.PreferenceThemeOverlay.Floating.Light" />
@@ -6106,26 +6100,6 @@
     <style name="Widget.ActionMode.Button.Light" parent="@style/Widget.ActionMode.Button">
         <item name="android:textColor">@color/miuix_appcompat_action_mode_title_button_text_light</item>
         <item name="android:background">@drawable/miuix_appcompat_action_mode_title_button_bg_light</item>
-    </style>
-    <style name="Widget.AlertDialogListItem" parent="@style/Widget">
-        <item name="android:ellipsize">end</item>
-        <item name="android:gravity">center_vertical</item>
-        <item name="android:background">?dialogListItemBackground</item>
-        <item name="android:paddingTop">@dimen/miuix_appcompat_dialog_list_item_padding_vertical</item>
-        <item name="android:paddingBottom">@dimen/miuix_appcompat_dialog_list_item_padding_vertical</item>
-        <item name="android:minHeight">?dialogListPreferredItemHeight</item>
-        <item name="android:paddingStart">@dimen/miuix_appcompat_dialog_list_item_padding_start</item>
-        <item name="android:paddingEnd">@dimen/miuix_appcompat_dialog_list_item_padding_end</item>
-    </style>
-    <style name="Widget.AlertDialogListItem.MultiChoice" parent="@style/Widget.AlertDialogListItem">
-        <item name="android:textAppearance">@style/Miuix.AppCompat.TextAppearance.AlertDialogListItem.MultiChoice</item>
-        <item name="android:checkMark">@null</item>
-        <item name="checkMarkCompat">?android:listChoiceIndicatorMultiple</item>
-    </style>
-    <style name="Widget.AlertDialogListItem.SingleChoice" parent="@style/Widget.AlertDialogListItem">
-        <item name="android:textAppearance">@style/Miuix.AppCompat.TextAppearance.AlertDialogListItem.SingleChoice</item>
-        <item name="android:checkMark">@null</item>
-        <item name="checkMarkCompat">?android:listChoiceIndicatorSingle</item>
     </style>
     <style name="Widget.AlphabetIndexer" parent="">
         <item name="android:background">@drawable/miuix_appcompat_alphabet_indexer_bg</item>

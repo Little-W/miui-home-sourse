@@ -13,7 +13,7 @@
 .method public acceptItem(Lcom/miui/home/launcher/ItemInfo;)Z
     .locals 0
 
-    .line 36
+    .line 34
     invoke-virtual {p1}, Lcom/miui/home/launcher/ItemInfo;->canAcceptByHotSeats()Z
 
     move-result p1
@@ -65,17 +65,6 @@
 .method public abstract isSeatsFull()Z
 .end method
 
-.method public abstract keepDataConsistent(Ljava/util/List;)V
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List<",
-            "Lcom/miui/home/launcher/ItemInfo;",
-            ">;)V"
-        }
-    .end annotation
-.end method
-
 .method public onDropCompleted()V
     .locals 0
 
@@ -123,40 +112,16 @@
 .method public abstract startLoading()V
 .end method
 
-.method public updateFolderMessageWhenDrag(Lcom/miui/home/launcher/DropTarget;Lcom/miui/home/launcher/DragObject;)V
-    .locals 1
-
-    .line 87
-    instance-of p1, p1, Lcom/miui/home/launcher/Workspace;
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p2}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
-
-    move-result-object p1
-
-    iget p1, p1, Lcom/miui/home/launcher/ItemInfo;->itemType:I
-
-    const/4 v0, 0x2
-
-    if-ne p1, v0, :cond_0
-
-    .line 88
-    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
-
-    move-result-object p1
-
-    invoke-virtual {p2}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
-
-    move-result-object p2
-
-    check-cast p2, Lcom/miui/home/launcher/FolderInfo;
-
-    invoke-virtual {p1, p2}, Lcom/miui/home/launcher/Launcher;->updateFolderMessage(Lcom/miui/home/launcher/FolderInfo;)V
-
-    :cond_0
-    return-void
+.method public abstract updateIconSize()V
 .end method
 
-.method public abstract updateIconSize()V
+.method public abstract updateItemInfos(Ljava/util/List;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/miui/home/launcher/ItemInfo;",
+            ">;)V"
+        }
+    .end annotation
 .end method

@@ -329,7 +329,6 @@
     <string name="exit_overview_because_task_stack_changed">Z důvodu změn na pozadí byla funkce Nedávné ukončena</string>
     <string name="expand_button_title">Rozšířená nastavení</string>
     <string name="exposed_dropdown_menu_content_description">Zobrazit rozbalovací nabídku</string>
-    <string name="external_not_support_split_screen_j18">Rozdělení obrazovky není na vnější obrazovce podporováno</string>
     <string name="failed_to_delete_temporary">Nelze odstranit</string>
     <string name="failed_to_drop">Nelze přesunout</string>
     <string name="failed_to_drop_widget_invalid">Tento widget není platný</string>
@@ -548,7 +547,6 @@
     <string name="midnight">Noc</string>
     <string name="minus_one_screen">Aplikační trezor</string>
     <string name="miui_screen_config_title">Nastavení Domovské obrazovky</string>
-    <string name="miui_widget_menu_replace_text">Přepnout</string>
     <string name="miuix_access_state_desc">Vybráno</string>
     <string name="miuix_appcompat_action_mode_deselect_all">Zrušit výběr</string>
     <string name="miuix_appcompat_action_mode_select_all">Vybrat vše</string>
@@ -575,8 +573,6 @@
     <string name="monday">Pondělí</string>
     <string name="monday_short">Pon</string>
     <string name="monday_shortest">Pon</string>
-    <string name="monochrome_summary">Change background color for compatible icons</string>
-    <string name="monochrome_title">Background color</string>
     <string name="month_april">duben</string>
     <string name="month_april_short">dub</string>
     <string name="month_april_shortest">dub</string>

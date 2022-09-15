@@ -33,10 +33,10 @@
 .method constructor <init>(Lcom/miui/home/launcher/FolderInfo;)V
     .locals 1
 
-    .line 650
+    .line 649
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 651
+    .line 650
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -51,7 +51,7 @@
 .method public onAppCategoryNameLoaded(Ljava/lang/String;)V
     .locals 2
 
-    .line 656
+    .line 655
     iget-object v0, p0, Lcom/miui/home/launcher/FolderIcon$CategoryUpdateListener;->mFolderInfoRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -64,7 +64,7 @@
 
     return-void
 
-    .line 661
+    .line 660
     :cond_0
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 

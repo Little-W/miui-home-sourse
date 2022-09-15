@@ -311,14 +311,14 @@
 
     invoke-direct {p1, v0, v1}, Lmiui/home/lib/dialog/AlertDialog$Builder;-><init>(Landroid/content/Context;I)V
 
-    const v0, 0x7f110405
+    const v0, 0x7f110400
 
     .line 122
     invoke-virtual {p1, v0}, Lmiui/home/lib/dialog/AlertDialog$Builder;->setTitle(I)Lmiui/home/lib/dialog/AlertDialog$Builder;
 
     move-result-object p1
 
-    const v0, 0x7f110404
+    const v0, 0x7f1103ff
 
     .line 123
     invoke-virtual {p1, v0}, Lmiui/home/lib/dialog/AlertDialog$Builder;->setMessage(I)Lmiui/home/lib/dialog/AlertDialog$Builder;
@@ -374,7 +374,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f110291
+    const v0, 0x7f110290
 
     invoke-virtual {p1, v0}, Landroidx/fragment/app/FragmentActivity;->setTitle(I)V
 
@@ -501,7 +501,7 @@
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 1
 
-    const p3, 0x7f0d0073
+    const p3, 0x7f0d0072
 
     const/4 v0, 0x0
 
@@ -676,7 +676,7 @@
 
     invoke-virtual {p2, p0}, Lmiuix/slidingwidget/widget/SlidingButton;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
-    const p2, 0x7f0a00ac
+    const p2, 0x7f0a00ab
 
     .line 94
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -744,7 +744,7 @@
 
     invoke-virtual {p2, v0}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
-    const p2, 0x7f0a02ac
+    const p2, 0x7f0a02a8
 
     .line 102
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;

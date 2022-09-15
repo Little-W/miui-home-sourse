@@ -25,7 +25,7 @@
 .method constructor <init>(Lmiuix/appcompat/widget/Spinner$DialogPopup;)V
     .locals 0
 
-    .line 1015
+    .line 1016
     iput-object p1, p0, Lmiuix/appcompat/widget/Spinner$DialogPopup$1;->this$1:Lmiuix/appcompat/widget/Spinner$DialogPopup;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onDismiss(Landroid/content/DialogInterface;)V
     .locals 0
 
-    .line 1018
+    .line 1019
     iget-object p1, p0, Lmiuix/appcompat/widget/Spinner$DialogPopup$1;->this$1:Lmiuix/appcompat/widget/Spinner$DialogPopup;
 
     iget-object p1, p1, Lmiuix/appcompat/widget/Spinner$DialogPopup;->this$0:Lmiuix/appcompat/widget/Spinner;

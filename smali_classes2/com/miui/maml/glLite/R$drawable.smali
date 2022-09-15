@@ -179,125 +179,125 @@
 
 .field public static final btn_radio_on_to_off_mtrl_animation:I = 0x7f0801b5
 
-.field public static final file_icon_3gpp:I = 0x7f0801f2
+.field public static final file_icon_3gpp:I = 0x7f0801ef
 
-.field public static final file_icon_aac:I = 0x7f0801f3
+.field public static final file_icon_aac:I = 0x7f0801f0
 
-.field public static final file_icon_amr:I = 0x7f0801f4
+.field public static final file_icon_amr:I = 0x7f0801f1
 
-.field public static final file_icon_ape:I = 0x7f0801f5
+.field public static final file_icon_ape:I = 0x7f0801f2
 
-.field public static final file_icon_apk:I = 0x7f0801f6
+.field public static final file_icon_apk:I = 0x7f0801f3
 
-.field public static final file_icon_audio:I = 0x7f0801f7
+.field public static final file_icon_audio:I = 0x7f0801f4
 
-.field public static final file_icon_default:I = 0x7f0801f8
+.field public static final file_icon_default:I = 0x7f0801f5
 
-.field public static final file_icon_doc:I = 0x7f0801f9
+.field public static final file_icon_doc:I = 0x7f0801f6
 
-.field public static final file_icon_dps:I = 0x7f0801fa
+.field public static final file_icon_dps:I = 0x7f0801f7
 
-.field public static final file_icon_dpt:I = 0x7f0801fb
+.field public static final file_icon_dpt:I = 0x7f0801f8
 
-.field public static final file_icon_et:I = 0x7f0801fc
+.field public static final file_icon_et:I = 0x7f0801f9
 
-.field public static final file_icon_ett:I = 0x7f0801fd
+.field public static final file_icon_ett:I = 0x7f0801fa
 
-.field public static final file_icon_flac:I = 0x7f0801fe
+.field public static final file_icon_flac:I = 0x7f0801fb
 
-.field public static final file_icon_html:I = 0x7f0801ff
+.field public static final file_icon_html:I = 0x7f0801fc
 
-.field public static final file_icon_m4a:I = 0x7f080200
+.field public static final file_icon_m4a:I = 0x7f0801fd
 
-.field public static final file_icon_mid:I = 0x7f080201
+.field public static final file_icon_mid:I = 0x7f0801fe
 
-.field public static final file_icon_mp3:I = 0x7f080202
+.field public static final file_icon_mp3:I = 0x7f0801ff
 
-.field public static final file_icon_ogg:I = 0x7f080203
+.field public static final file_icon_ogg:I = 0x7f080200
 
-.field public static final file_icon_pdf:I = 0x7f080204
+.field public static final file_icon_pdf:I = 0x7f080201
 
-.field public static final file_icon_picture:I = 0x7f080205
+.field public static final file_icon_picture:I = 0x7f080202
 
-.field public static final file_icon_pps:I = 0x7f080206
+.field public static final file_icon_pps:I = 0x7f080203
 
-.field public static final file_icon_ppt:I = 0x7f080207
+.field public static final file_icon_ppt:I = 0x7f080204
 
-.field public static final file_icon_rar:I = 0x7f080208
+.field public static final file_icon_rar:I = 0x7f080205
 
-.field public static final file_icon_theme:I = 0x7f080209
+.field public static final file_icon_theme:I = 0x7f080206
 
-.field public static final file_icon_txt:I = 0x7f08020a
+.field public static final file_icon_txt:I = 0x7f080207
 
-.field public static final file_icon_vcf:I = 0x7f08020b
+.field public static final file_icon_vcf:I = 0x7f080208
 
-.field public static final file_icon_video:I = 0x7f08020c
+.field public static final file_icon_video:I = 0x7f080209
 
-.field public static final file_icon_wav:I = 0x7f08020d
+.field public static final file_icon_wav:I = 0x7f08020a
 
-.field public static final file_icon_wma:I = 0x7f08020e
+.field public static final file_icon_wma:I = 0x7f08020b
 
-.field public static final file_icon_wps:I = 0x7f08020f
+.field public static final file_icon_wps:I = 0x7f08020c
 
-.field public static final file_icon_wpt:I = 0x7f080210
+.field public static final file_icon_wpt:I = 0x7f08020d
 
-.field public static final file_icon_xls:I = 0x7f080211
+.field public static final file_icon_xls:I = 0x7f08020e
 
-.field public static final file_icon_xml:I = 0x7f080212
+.field public static final file_icon_xml:I = 0x7f08020f
 
-.field public static final file_icon_zip:I = 0x7f080213
+.field public static final file_icon_zip:I = 0x7f080210
 
-.field public static final ic_contact_photo_bg:I = 0x7f08028e
+.field public static final ic_contact_photo_bg:I = 0x7f08028b
 
-.field public static final ic_contact_photo_fg:I = 0x7f08028f
+.field public static final ic_contact_photo_fg:I = 0x7f08028c
 
-.field public static final ic_contact_photo_mask:I = 0x7f080290
+.field public static final ic_contact_photo_mask:I = 0x7f08028d
 
-.field public static final miuix_appcompat_number_picker_bg:I = 0x7f08053f
+.field public static final miuix_appcompat_number_picker_bg:I = 0x7f08053c
 
-.field public static final miuix_appcompat_number_picker_bg_dark:I = 0x7f080540
+.field public static final miuix_appcompat_number_picker_bg_dark:I = 0x7f08053d
 
-.field public static final miuix_appcompat_number_picker_bg_normal:I = 0x7f080541
+.field public static final miuix_appcompat_number_picker_bg_normal:I = 0x7f08053e
 
-.field public static final miuix_appcompat_number_picker_bg_normal_dark:I = 0x7f080542
+.field public static final miuix_appcompat_number_picker_bg_normal_dark:I = 0x7f08053f
 
-.field public static final notification_action_background:I = 0x7f080630
+.field public static final notification_action_background:I = 0x7f08062d
 
-.field public static final notification_bg:I = 0x7f080632
+.field public static final notification_bg:I = 0x7f08062f
 
-.field public static final notification_bg_low:I = 0x7f080633
+.field public static final notification_bg_low:I = 0x7f080630
 
-.field public static final notification_bg_low_normal:I = 0x7f080634
+.field public static final notification_bg_low_normal:I = 0x7f080631
 
-.field public static final notification_bg_low_pressed:I = 0x7f080635
+.field public static final notification_bg_low_pressed:I = 0x7f080632
 
-.field public static final notification_bg_normal:I = 0x7f080636
+.field public static final notification_bg_normal:I = 0x7f080633
 
-.field public static final notification_bg_normal_pressed:I = 0x7f080637
+.field public static final notification_bg_normal_pressed:I = 0x7f080634
 
-.field public static final notification_icon_background:I = 0x7f080638
+.field public static final notification_icon_background:I = 0x7f080635
 
-.field public static final notification_template_icon_bg:I = 0x7f080639
+.field public static final notification_template_icon_bg:I = 0x7f080636
 
-.field public static final notification_template_icon_low_bg:I = 0x7f08063a
+.field public static final notification_template_icon_low_bg:I = 0x7f080637
 
-.field public static final notification_tile_bg:I = 0x7f08063b
+.field public static final notification_tile_bg:I = 0x7f080638
 
-.field public static final notify_panel_notification_icon_bg:I = 0x7f08063d
+.field public static final notify_panel_notification_icon_bg:I = 0x7f08063a
 
-.field public static final sliding_panel_visualization_bg:I = 0x7f080695
+.field public static final sliding_panel_visualization_bg:I = 0x7f080691
 
-.field public static final sliding_panel_visualization_dot_bar:I = 0x7f080696
+.field public static final sliding_panel_visualization_dot_bar:I = 0x7f080692
 
-.field public static final sliding_panel_visualization_shadow_dot_bar:I = 0x7f080697
+.field public static final sliding_panel_visualization_shadow_dot_bar:I = 0x7f080693
 
-.field public static final tooltip_frame_dark:I = 0x7f0806b0
+.field public static final tooltip_frame_dark:I = 0x7f0806ac
 
-.field public static final tooltip_frame_light:I = 0x7f0806b1
+.field public static final tooltip_frame_light:I = 0x7f0806ad
 
-.field public static final word_photo_bg_dark:I = 0x7f0806cf
+.field public static final word_photo_bg_dark:I = 0x7f0806cb
 
-.field public static final word_photo_bg_light:I = 0x7f0806d0
+.field public static final word_photo_bg_light:I = 0x7f0806cc
 
 
 # direct methods

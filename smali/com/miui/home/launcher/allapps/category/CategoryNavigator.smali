@@ -40,18 +40,26 @@
 
     return-void
 
-    .line 52
+    .line 50
     :cond_0
-    invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/category/CategoryNavigator;->getMeasuredWidth()I
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getScreenWidth()I
 
     move-result v0
 
-    .line 54
+    const/high16 v1, 0x42500000    # 52.0f
+
+    invoke-static {v1}, Lcom/miui/home/launcher/common/Utilities;->dp2px(F)I
+
+    move-result v1
+
+    sub-int/2addr v0, v1
+
+    .line 52
     new-instance v1, Landroid/util/SparseArray;
 
     invoke-direct {v1}, Landroid/util/SparseArray;-><init>()V
 
-    .line 55
+    .line 53
     invoke-virtual {p1}, Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/abs/CommonNavigatorAdapter;->getCount()I
 
     move-result v2
@@ -65,7 +73,7 @@
     :goto_0
     if-ge v4, v2, :cond_2
 
-    .line 56
+    .line 54
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/category/CategoryNavigator;->getContext()Landroid/content/Context;
 
     move-result-object v6
@@ -74,27 +82,27 @@
 
     move-result-object v6
 
-    .line 57
+    .line 55
     instance-of v7, v6, Landroid/view/View;
 
     if-eqz v7, :cond_1
 
-    .line 58
+    .line 56
     move-object v7, v6
 
     check-cast v7, Landroid/view/View;
 
-    .line 59
+    .line 57
     invoke-virtual {v7, v3, v3}, Landroid/view/View;->measure(II)V
 
-    .line 60
+    .line 58
     invoke-virtual {v7}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v7
 
     add-int/2addr v5, v7
 
-    .line 61
+    .line 59
     invoke-virtual {v1, v4, v6}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     :cond_1
@@ -107,7 +115,7 @@
 
     if-lez v5, :cond_3
 
-    .line 64
+    .line 62
     invoke-virtual {v1}, Landroid/util/SparseArray;->size()I
 
     move-result v1
@@ -160,20 +168,20 @@
 
     invoke-virtual {v0, v1}, Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/abs/CommonNavigatorAdapter;->unregisterDataSetObserver(Landroid/database/DataSetObserver;)V
 
-    .line 39
     :cond_0
-    invoke-direct {p0, p1}, Lcom/miui/home/launcher/allapps/category/CategoryNavigator;->updateAdjustMode(Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/abs/CommonNavigatorAdapter;)V
-
-    .line 42
-    invoke-super {p0, p1}, Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/CommonNavigator;->setAdapter(Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/abs/CommonNavigatorAdapter;)V
-
     if-eqz p1, :cond_1
 
-    .line 44
+    .line 40
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/CategoryNavigator;->mObserver:Landroid/database/DataSetObserver;
 
     invoke-virtual {p1, v0}, Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/abs/CommonNavigatorAdapter;->registerDataSetObserver(Landroid/database/DataSetObserver;)V
 
+    .line 42
     :cond_1
+    invoke-direct {p0, p1}, Lcom/miui/home/launcher/allapps/category/CategoryNavigator;->updateAdjustMode(Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/abs/CommonNavigatorAdapter;)V
+
+    .line 43
+    invoke-super {p0, p1}, Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/CommonNavigator;->setAdapter(Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/abs/CommonNavigatorAdapter;)V
+
     return-void
 .end method

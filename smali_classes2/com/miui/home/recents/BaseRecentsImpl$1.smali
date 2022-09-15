@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/recents/BaseRecentsImpl;)V
     .locals 0
 
-    .line 155
+    .line 152
     iput-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$1;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onDisplayAdded(I)V
     .locals 1
 
-    .line 159
+    .line 156
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$1;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     const/4 v0, 0x1
@@ -51,7 +51,7 @@
 .method public onDisplayChanged(I)V
     .locals 1
 
-    .line 169
+    .line 166
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$1;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     const/4 v0, 0x1
@@ -64,7 +64,7 @@
 .method public onDisplayRemoved(I)V
     .locals 1
 
-    .line 164
+    .line 161
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$1;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     const/4 v0, 0x1

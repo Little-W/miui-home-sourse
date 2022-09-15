@@ -514,7 +514,7 @@
 
     if-eqz p1, :cond_4
 
-    const v0, 0x7f0a03c7
+    const v0, 0x7f0a03c3
 
     const/4 v1, 0x0
 

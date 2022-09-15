@@ -13,7 +13,7 @@
 .method constructor <init>(Lcom/xiaomi/onetrack/api/h;)V
     .locals 0
 
-    .line 118
+    .line 117
     iput-object p1, p0, Lcom/xiaomi/onetrack/api/i;->a:Lcom/xiaomi/onetrack/api/h;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -26,11 +26,11 @@
 .method public run()V
     .locals 4
 
-    .line 122
+    .line 121
     :try_start_0
     invoke-static {}, Lcom/xiaomi/onetrack/c/a;->a()V
 
-    .line 123
+    .line 122
     invoke-static {}, Lcom/xiaomi/onetrack/util/aa;->B()J
 
     move-result-wide v0
@@ -41,14 +41,14 @@
 
     if-nez v0, :cond_0
 
-    .line 124
+    .line 123
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     invoke-static {v0, v1}, Lcom/xiaomi/onetrack/util/aa;->n(J)V
 
-    .line 126
+    .line 125
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/onetrack/api/i;->a:Lcom/xiaomi/onetrack/api/h;
 
@@ -66,7 +66,7 @@
 
     if-nez v0, :cond_1
 
-    .line 127
+    .line 126
     invoke-static {}, Lcom/xiaomi/onetrack/util/o;->a()Lcom/xiaomi/onetrack/util/o;
 
     move-result-object v0
@@ -83,23 +83,18 @@
 
     invoke-virtual {v0, v1}, Lcom/xiaomi/onetrack/util/o;->a(Ljava/lang/String;)V
 
-    .line 129
+    .line 128
     :cond_1
     iget-object v0, p0, Lcom/xiaomi/onetrack/api/i;->a:Lcom/xiaomi/onetrack/api/h;
 
     invoke-static {v0}, Lcom/xiaomi/onetrack/api/h;->b(Lcom/xiaomi/onetrack/api/h;)V
 
-    .line 130
-    iget-object v0, p0, Lcom/xiaomi/onetrack/api/i;->a:Lcom/xiaomi/onetrack/api/h;
-
-    invoke-static {v0}, Lcom/xiaomi/onetrack/api/h;->c(Lcom/xiaomi/onetrack/api/h;)V
-
-    .line 131
+    .line 129
     invoke-static {}, Lcom/xiaomi/onetrack/util/d;->a()Lcom/xiaomi/onetrack/util/d;
 
     const/4 v0, 0x0
 
-    .line 132
+    .line 130
     invoke-static {v0}, Lcom/xiaomi/onetrack/c/i;->c(Z)V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
@@ -111,7 +106,7 @@
 
     const-string v1, "OneTrackImp"
 
-    .line 134
+    .line 132
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V

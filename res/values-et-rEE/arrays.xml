@@ -49,13 +49,6 @@
         <item>Vaikimisi</item>
         <item>Klassikaline</item>
     </string-array>
-    <string-array name="monochrome_color_entries">
-        <item>Vaikimisi</item>
-        <item>Sinine</item>
-        <item>Roheline</item>
-        <item>Lilla</item>
-        <item>Pruun</item>
-    </string-array>
     <string-array name="transformation_entries">
         <item>Libisema</item>
         <item>Ristlõige</item>

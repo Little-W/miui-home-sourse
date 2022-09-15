@@ -22,7 +22,7 @@
 .method private constructor <init>(Lcom/miui/home/launcher/FolderCling;)V
     .locals 0
 
-    .line 640
+    .line 637
     iput-object p1, p0, Lcom/miui/home/launcher/FolderCling$LoadingFinishMessageHandler;->this$0:Lcom/miui/home/launcher/FolderCling;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -33,7 +33,7 @@
 .method synthetic constructor <init>(Lcom/miui/home/launcher/FolderCling;Lcom/miui/home/launcher/FolderCling$1;)V
     .locals 0
 
-    .line 640
+    .line 637
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/FolderCling$LoadingFinishMessageHandler;-><init>(Lcom/miui/home/launcher/FolderCling;)V
 
     return-void
@@ -47,14 +47,14 @@
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
-    .line 643
+    .line 640
     iget-object p1, p0, Lcom/miui/home/launcher/FolderCling$LoadingFinishMessageHandler;->this$0:Lcom/miui/home/launcher/FolderCling;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/FolderCling;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    const v1, 0x7f1103f8
+    const v1, 0x7f1103f3
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -62,7 +62,7 @@
 
     invoke-static {p1, v0}, Lcom/miui/home/launcher/FolderCling;->access$202(Lcom/miui/home/launcher/FolderCling;Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
-    .line 644
+    .line 641
     invoke-static {}, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->initLoadingAnimationContents()V
 
     return-void

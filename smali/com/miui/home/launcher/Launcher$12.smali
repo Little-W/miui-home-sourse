@@ -3,26 +3,17 @@
 .source "Launcher.java"
 
 # interfaces
-.implements Ljava/util/function/Consumer;
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/Launcher;->loadPaView()V
+    value = Lcom/miui/home/launcher/Launcher;->setupAnimations()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
     accessFlags = 0x0
     name = null
-.end annotation
-
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Ljava/util/function/Consumer<",
-        "Ljava/lang/Void;",
-        ">;"
-    }
 .end annotation
 
 
@@ -34,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 2180
+    .line 2193
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$12;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,31 +35,75 @@
 
 
 # virtual methods
-.method public bridge synthetic accept(Ljava/lang/Object;)V
-    .locals 0
+.method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 2
 
-    .line 2180
-    check-cast p1, Ljava/lang/Void;
+    .line 2196
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-    invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Launcher$12;->accept(Ljava/lang/Void;)V
+    move-result-object p1
 
-    return-void
-.end method
+    check-cast p1, Ljava/lang/Float;
 
-.method public accept(Ljava/lang/Void;)V
-    .locals 1
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
-    .line 2183
-    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$12;->this$0:Lcom/miui/home/launcher/Launcher;
+    move-result p1
 
-    const/4 v0, 0x0
+    .line 2197
+    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$12;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {p1, v0}, Lcom/miui/home/launcher/Launcher;->access$2002(Lcom/miui/home/launcher/Launcher;Z)Z
+    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$2000(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/DefaultScreenPreviewView;
 
-    .line 2184
-    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$12;->this$0:Lcom/miui/home/launcher/Launcher;
+    move-result-object v0
 
-    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$2100(Lcom/miui/home/launcher/Launcher;)V
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    sub-float/2addr v1, p1
+
+    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/DefaultScreenPreviewView;->setAlpha(F)V
+
+    .line 2198
+    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$12;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$2000(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/DefaultScreenPreviewView;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/miui/home/launcher/Launcher$12;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    invoke-static {v1}, Lcom/miui/home/launcher/Launcher;->access$2000(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/DefaultScreenPreviewView;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/miui/home/launcher/DefaultScreenPreviewView;->getHeight()I
+
+    move-result v1
+
+    div-int/lit8 v1, v1, 0x2
+
+    int-to-float v1, v1
+
+    mul-float/2addr v1, p1
+
+    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/DefaultScreenPreviewView;->setTranslationY(F)V
+
+    .line 2199
+    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$12;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$1400(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/Workspace;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Lcom/miui/home/launcher/Workspace;->setAlpha(F)V
+
+    .line 2200
+    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$12;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$2100(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/EditingEntryThumbnailView;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Lcom/miui/home/launcher/EditingEntryThumbnailView;->setAlpha(F)V
 
     return-void
 .end method

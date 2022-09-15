@@ -329,7 +329,6 @@
     <string name="exit_overview_because_task_stack_changed">Gần đây đã đóng do thay đổi xảy ra trong nền</string>
     <string name="expand_button_title">Nâng cao</string>
     <string name="exposed_dropdown_menu_content_description">Hiển thị menu thả xuống</string>
-    <string name="external_not_support_split_screen_j18">Chia màn hình không hỗ trợ trên màn hình ngoài</string>
     <string name="failed_to_delete_temporary">Không thể xóa</string>
     <string name="failed_to_drop">Di chuyển thất bại</string>
     <string name="failed_to_drop_widget_invalid">Tiện ích này không hợp lệ</string>
@@ -548,7 +547,6 @@
     <string name="midnight">Ban đêm</string>
     <string name="minus_one_screen">App vault</string>
     <string name="miui_screen_config_title">Cài đặt Màn hình chính</string>
-    <string name="miui_widget_menu_replace_text">Chuyển</string>
     <string name="miuix_access_state_desc">Đã chọn</string>
     <string name="miuix_appcompat_action_mode_deselect_all">Bỏ chọn</string>
     <string name="miuix_appcompat_action_mode_select_all">Chọn tất cả</string>
@@ -575,8 +573,6 @@
     <string name="monday">Thứ hai</string>
     <string name="monday_short">Th 2</string>
     <string name="monday_shortest">Th 2</string>
-    <string name="monochrome_summary">Thay đổi màu nền cho biểu tượng tương thích</string>
-    <string name="monochrome_title">Màu nền</string>
     <string name="month_april">Tháng 4</string>
     <string name="month_april_short">Thg 4</string>
     <string name="month_april_shortest">Thg 4</string>

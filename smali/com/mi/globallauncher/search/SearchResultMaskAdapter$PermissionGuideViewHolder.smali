@@ -254,7 +254,7 @@
 
     move-result-object v0
 
-    const-string v1, "uni_search_permission_button_clicked"
+    const-string/jumbo v1, "uni_search_permission_button_clicked"
 
     invoke-interface {v0, v1}, Lcom/mi/globallauncher/branchInterface/ICommercialPreference;->containKey(Ljava/lang/String;)Z
 

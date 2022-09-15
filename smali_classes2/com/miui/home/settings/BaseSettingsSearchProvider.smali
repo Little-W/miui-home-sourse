@@ -91,7 +91,7 @@
 
     const-string p1, "iconResId"
 
-    const p2, 0x7f0802a0
+    const p2, 0x7f08029d
 
     .line 130
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -122,7 +122,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f11024e
+    const v1, 0x7f11024d
 
     .line 140
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -224,7 +224,7 @@
 
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const p1, 0x7f110370
+    const p1, 0x7f11036b
 
     invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -413,7 +413,7 @@
 
     if-eqz p5, :cond_5
 
-    const p5, 0x7f110468
+    const p5, 0x7f110463
 
     .line 59
     invoke-virtual {p3, p5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -460,7 +460,7 @@
     :goto_0
     if-nez v1, :cond_5
 
-    const p5, 0x7f11038d
+    const p5, 0x7f110388
 
     .line 65
     invoke-virtual {p3, p5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -469,7 +469,7 @@
 
     if-eqz p4, :cond_4
 
-    const v0, 0x7f11038e
+    const v0, 0x7f110389
 
     invoke-virtual {p3, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -485,7 +485,7 @@
 
     :cond_5
     :goto_2
-    const p5, 0x7f1102ad
+    const p5, 0x7f1102ab
 
     .line 68
     invoke-virtual {p3, p5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -496,7 +496,7 @@
 
     invoke-static {p1, p5, v0}, Lcom/miui/home/settings/BaseSettingsSearchProvider;->addMiuiHomeSettingsSearchItem(Landroid/database/MatrixCursor;Ljava/lang/String;Ljava/lang/String;)V
 
-    const p5, 0x7f110276
+    const p5, 0x7f110275
 
     .line 69
     invoke-virtual {p3, p5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -514,7 +514,7 @@
 
     if-nez p5, :cond_6
 
-    const p5, 0x7f110410
+    const p5, 0x7f11040b
 
     .line 71
     invoke-virtual {p3, p5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -545,7 +545,7 @@
     invoke-static {p1, p5, v0}, Lcom/miui/home/settings/BaseSettingsSearchProvider;->addMiuiHomeSettingsSearchItem(Landroid/database/MatrixCursor;Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_7
-    const p5, 0x7f11039a
+    const p5, 0x7f110395
 
     .line 76
     invoke-virtual {p3, p5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -556,7 +556,7 @@
 
     invoke-static {p1, p5, v0}, Lcom/miui/home/settings/BaseSettingsSearchProvider;->addMiuiHomeSettingsSearchItem(Landroid/database/MatrixCursor;Ljava/lang/String;Ljava/lang/String;)V
 
-    const p5, 0x7f11042b
+    const p5, 0x7f110426
 
     .line 77
     invoke-virtual {p3, p5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -574,7 +574,7 @@
 
     if-eqz p5, :cond_8
 
-    const p5, 0x7f1102ba
+    const p5, 0x7f1102b8
 
     .line 79
     invoke-virtual {p3, p5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -612,7 +612,7 @@
 
     invoke-static {p1, p5, v0, v1}, Lcom/miui/home/settings/BaseSettingsSearchProvider;->addSearchItem(Landroid/database/MatrixCursor;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    const p5, 0x7f110256
+    const p5, 0x7f110255
 
     .line 83
     invoke-virtual {p3, p5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -632,7 +632,7 @@
 
     if-eqz p5, :cond_9
 
-    const v0, 0x7f1103bf
+    const v0, 0x7f1103ba
 
     .line 86
     invoke-virtual {p3, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -656,7 +656,7 @@
 
     if-eqz v0, :cond_d
 
-    const v0, 0x7f110370
+    const v0, 0x7f11036b
 
     .line 90
     invoke-virtual {p3, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -670,7 +670,7 @@
 
     invoke-direct {p4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v1, 0x7f110371
+    const v1, 0x7f11036c
 
     .line 90
     invoke-virtual {p3, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -683,7 +683,7 @@
 
     invoke-virtual {p4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const v1, 0x7f110372
+    const v1, 0x7f11036d
 
     .line 91
     invoke-virtual {p3, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -696,7 +696,7 @@
 
     invoke-virtual {p4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const v1, 0x7f110373
+    const v1, 0x7f11036e
 
     invoke-virtual {p3, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -708,7 +708,7 @@
 
     invoke-virtual {p4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const v1, 0x7f110374
+    const v1, 0x7f11036f
 
     .line 92
     invoke-virtual {p3, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -730,7 +730,7 @@
     :goto_3
     invoke-static {p1, v0, p4}, Lcom/miui/home/settings/BaseSettingsSearchProvider;->addNavBarTypeSettingsSearchItem(Landroid/database/MatrixCursor;Ljava/lang/String;Ljava/lang/String;)V
 
-    const p4, 0x7f11036f
+    const p4, 0x7f11036a
 
     .line 93
     invoke-virtual {p3, p4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -741,7 +741,7 @@
 
     invoke-static {p1, p4, v0}, Lcom/miui/home/settings/BaseSettingsSearchProvider;->addNavBarTypeSettingsSearchItem(Landroid/database/MatrixCursor;Ljava/lang/String;Ljava/lang/String;)V
 
-    const p4, 0x7f110375
+    const p4, 0x7f110370
 
     .line 94
     invoke-virtual {p3, p4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -759,7 +759,7 @@
 
     if-eqz p2, :cond_c
 
-    const p2, 0x7f11020a
+    const p2, 0x7f110209
 
     .line 96
     invoke-virtual {p3, p2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -772,12 +772,12 @@
 
     if-eqz p5, :cond_b
 
-    const p2, 0x7f110355
+    const p2, 0x7f110350
 
     goto :goto_4
 
     :cond_b
-    const p2, 0x7f11033e
+    const p2, 0x7f110339
 
     .line 97
     :goto_4
@@ -792,7 +792,7 @@
     goto :goto_5
 
     :cond_c
-    const p2, 0x7f11046a
+    const p2, 0x7f110465
 
     .line 100
     invoke-virtual {p3, p2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -803,7 +803,7 @@
 
     invoke-static {p1, p2, p4}, Lcom/miui/home/settings/BaseSettingsSearchProvider;->addNavBarTypeSettingsSearchItem(Landroid/database/MatrixCursor;Ljava/lang/String;Ljava/lang/String;)V
 
-    const p2, 0x7f11025f
+    const p2, 0x7f11025e
 
     .line 101
     invoke-virtual {p3, p2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -834,7 +834,7 @@
 
     if-eqz p2, :cond_d
 
-    const p2, 0x7f11036a
+    const p2, 0x7f110365
 
     .line 104
     invoke-virtual {p3, p2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -849,7 +849,7 @@
     :goto_5
     if-eqz p5, :cond_e
 
-    const p2, 0x7f1103dd
+    const p2, 0x7f1103d8
 
     .line 109
     invoke-virtual {p3, p2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -858,7 +858,7 @@
 
     invoke-static {p1, p2}, Lcom/miui/home/settings/BaseSettingsSearchProvider;->addRecentLayoutStyleSettingsSearchItem(Landroid/database/MatrixCursor;Ljava/lang/String;)V
 
-    const p2, 0x7f1103df
+    const p2, 0x7f1103da
 
     .line 110
     invoke-virtual {p3, p2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -867,7 +867,7 @@
 
     invoke-static {p1, p2}, Lcom/miui/home/settings/BaseSettingsSearchProvider;->addRecentLayoutStyleSettingsSearchItem(Landroid/database/MatrixCursor;Ljava/lang/String;)V
 
-    const p2, 0x7f1103de
+    const p2, 0x7f1103d9
 
     .line 111
     invoke-virtual {p3, p2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -877,7 +877,7 @@
     invoke-static {p1, p2}, Lcom/miui/home/settings/BaseSettingsSearchProvider;->addRecentLayoutStyleSettingsSearchItem(Landroid/database/MatrixCursor;Ljava/lang/String;)V
 
     :cond_e
-    const p2, 0x7f110268
+    const p2, 0x7f110267
 
     .line 113
     invoke-virtual {p3, p2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;

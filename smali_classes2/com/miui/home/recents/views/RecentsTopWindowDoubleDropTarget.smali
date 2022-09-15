@@ -93,7 +93,7 @@
 
     move-result-object p0
 
-    const v0, 0x7f0d0164
+    const v0, 0x7f0d0163
 
     const/4 v1, 0x0
 
@@ -410,7 +410,7 @@
 .method protected onFinishInflate()V
     .locals 1
 
-    const v0, 0x7f0a0297
+    const v0, 0x7f0a0293
 
     .line 43
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/RecentsTopWindowDoubleDropTarget;->findViewById(I)Landroid/view/View;
@@ -421,7 +421,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/views/RecentsTopWindowDoubleDropTarget;->mDropTargetWorldCirculate:Lcom/miui/home/recents/views/RecentsTopWindowDropTargetWorldCirculate;
 
-    const v0, 0x7f0a0296
+    const v0, 0x7f0a0292
 
     .line 44
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/RecentsTopWindowDoubleDropTarget;->findViewById(I)Landroid/view/View;
@@ -575,7 +575,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070695
+    const v1, 0x7f070690
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -588,7 +588,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070690
+    const v1, 0x7f07068b
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -601,7 +601,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070692
+    const v1, 0x7f07068d
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -612,7 +612,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f070691
+    const v2, 0x7f07068c
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -635,7 +635,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f070694
+    const v2, 0x7f07068f
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -648,7 +648,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f070693
+    const v3, 0x7f07068e
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

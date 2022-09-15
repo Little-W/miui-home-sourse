@@ -318,7 +318,7 @@
 .method public static a(Z)V
     .locals 0
 
-    .line 356
+    .line 340
     sput-boolean p0, Lcom/xiaomi/onetrack/util/q;->r:Z
 
     return-void
@@ -327,7 +327,7 @@
 .method public static a(ZLjava/lang/String;Lcom/xiaomi/onetrack/OneTrack$Mode;)V
     .locals 1
 
-    .line 341
+    .line 325
     sget-object v0, Lcom/xiaomi/onetrack/OneTrack$Mode;->APP:Lcom/xiaomi/onetrack/OneTrack$Mode;
 
     if-ne p2, v0, :cond_0
@@ -336,7 +336,7 @@
 
     goto :goto_0
 
-    .line 343
+    .line 327
     :cond_0
     sget-object v0, Lcom/xiaomi/onetrack/OneTrack$Mode;->PLUGIN:Lcom/xiaomi/onetrack/OneTrack$Mode;
 
@@ -346,7 +346,7 @@
 
     goto :goto_0
 
-    .line 345
+    .line 329
     :cond_1
     sget-object v0, Lcom/xiaomi/onetrack/OneTrack$Mode;->SDK:Lcom/xiaomi/onetrack/OneTrack$Mode;
 
@@ -359,19 +359,19 @@
     :cond_2
     const/4 p2, 0x0
 
-    .line 348
+    .line 332
     :goto_0
     sget v0, Lcom/xiaomi/onetrack/util/q;->s:I
 
     if-gt v0, p2, :cond_3
 
-    .line 349
+    .line 333
     sput-boolean p0, Lcom/xiaomi/onetrack/util/q;->p:Z
 
-    .line 350
+    .line 334
     sput-object p1, Lcom/xiaomi/onetrack/util/q;->q:Ljava/lang/String;
 
-    .line 351
+    .line 335
     sput p2, Lcom/xiaomi/onetrack/util/q;->s:I
 
     :cond_3
@@ -441,113 +441,33 @@
 .end method
 
 .method public static a(Landroid/content/Context;)Z
-    .locals 6
+    .locals 5
 
     .line 175
     sget-object v0, Lcom/xiaomi/onetrack/util/q;->l:Ljava/lang/reflect/Method;
 
-    const/4 v1, 0x0
+    const/4 v1, 0x1
 
-    const/4 v2, 0x1
-
-    if-nez v0, :cond_2
-
-    .line 177
-    :try_start_0
-    invoke-static {}, Lcom/xiaomi/onetrack/util/q;->a()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 179
-    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v0
-
-    const-string v3, "upload_log_pref"
-
-    const/4 v4, -0x1
-
-    invoke-static {v0, v3, v4}, Landroid/provider/Settings$Secure;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
-
-    move-result v0
-
-    const-string v3, "OsUtil"
-
-    .line 180
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "isUserExperiencePlanEnabled upload_log_value: "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v3, v4}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
-
-    if-ne v0, v2, :cond_0
-
-    return v2
-
-    :cond_0
-    if-nez v0, :cond_1
+    if-nez v0, :cond_0
 
     return v1
 
-    :cond_1
-    return v2
+    :cond_0
+    const/4 v2, 0x0
 
-    :catch_0
-    move-exception v0
+    .line 179
+    :try_start_0
+    new-array v3, v1, [Ljava/lang/Object;
 
-    const-string v3, "OsUtil"
-
-    .line 191
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "Settings failed: "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v3, v0}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 195
-    :cond_2
-    :try_start_1
-    sget-object v0, Lcom/xiaomi/onetrack/util/q;->l:Ljava/lang/reflect/Method;
-
-    const/4 v3, 0x0
-
-    new-array v4, v2, [Ljava/lang/Object;
+    const/4 v4, 0x0
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
 
-    aput-object p0, v4, v1
+    aput-object p0, v3, v4
 
-    invoke-virtual {v0, v3, v4}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
@@ -556,44 +476,44 @@
     invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p0
-    :try_end_1
-    .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_1
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     return p0
 
-    :catch_1
+    :catch_0
     move-exception p0
 
     const-string v0, "OsUtil"
 
-    .line 197
-    new-instance v1, Ljava/lang/StringBuilder;
+    .line 181
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v3, "isUserExperiencePlanEnabled failed: "
 
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return v2
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v1
 .end method
 
 .method public static a(Ljava/lang/String;)Z
     .locals 2
 
-    .line 207
+    .line 191
     invoke-static {}, Lcom/xiaomi/onetrack/OneTrack;->isDisable()Z
 
     move-result v0
@@ -610,7 +530,7 @@
 
     goto :goto_0
 
-    .line 211
+    .line 195
     :cond_0
     invoke-static {}, Lcom/xiaomi/onetrack/util/q;->g()Z
 
@@ -620,12 +540,12 @@
 
     const-string v0, "should not access network or location, not provisioned"
 
-    .line 212
+    .line 196
     invoke-static {p0, v0}, Lcom/xiaomi/onetrack/util/p;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     return v1
 
-    .line 215
+    .line 199
     :cond_1
     invoke-static {}, Lcom/xiaomi/onetrack/c/i;->b()Z
 
@@ -635,7 +555,7 @@
 
     const-string v0, "should not access network or location, cta"
 
-    .line 216
+    .line 200
     invoke-static {p0, v0}, Lcom/xiaomi/onetrack/util/p;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     return v1
@@ -649,7 +569,7 @@
     :goto_0
     const-string v0, "should not access network or location, cta"
 
-    .line 208
+    .line 192
     invoke-static {p0, v0}, Lcom/xiaomi/onetrack/util/p;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     return v1
@@ -881,7 +801,7 @@
 .method public static d()Ljava/lang/String;
     .locals 1
 
-    .line 223
+    .line 207
     sget-object v0, Landroid/os/Build$VERSION;->INCREMENTAL:Ljava/lang/String;
 
     return-object v0
@@ -890,7 +810,7 @@
 .method public static e()Ljava/lang/String;
     .locals 1
 
-    .line 259
+    .line 243
     sget-object v0, Landroid/os/Build$VERSION;->RELEASE:Ljava/lang/String;
 
     return-object v0
@@ -903,7 +823,7 @@
 
     const/4 v1, 0x0
 
-    .line 265
+    .line 249
     :try_start_0
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -913,7 +833,7 @@
 
     const-string v2, "android.os.UserHandle"
 
-    .line 266
+    .line 250
     invoke-static {v2}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v2
@@ -922,7 +842,7 @@
 
     const/4 v4, 0x1
 
-    .line 267
+    .line 251
     new-array v5, v4, [Ljava/lang/Class;
 
     sget-object v6, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
@@ -933,15 +853,15 @@
 
     move-result-object v2
 
-    .line 268
+    .line 252
     invoke-virtual {v2, v4}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
-    .line 269
+    .line 253
     invoke-static {}, Landroid/os/Process;->myUid()I
 
     move-result v3
 
-    .line 270
+    .line 254
     new-array v5, v4, [Ljava/lang/Object;
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -965,7 +885,7 @@
 
     const/4 v6, 0x2
 
-    .line 271
+    .line 255
     new-array v6, v6, [Ljava/lang/Object;
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1005,7 +925,7 @@
     :goto_0
     const-string v3, "OsUtil"
 
-    .line 274
+    .line 258
     invoke-static {v3}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
@@ -1034,12 +954,12 @@
     :goto_1
     if-nez v0, :cond_1
 
-    .line 277
+    .line 261
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    .line 279
+    .line 263
     :cond_1
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
@@ -1056,13 +976,13 @@
 
     const/4 v0, 0x1
 
-    .line 285
+    .line 269
     :try_start_0
     invoke-static {}, Lcom/xiaomi/onetrack/f/a;->b()Landroid/content/Context;
 
     move-result-object v1
 
-    .line 287
+    .line 271
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v3, 0x11
@@ -1071,7 +991,7 @@
 
     return v0
 
-    .line 288
+    .line 272
     :cond_0
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1081,7 +1001,7 @@
 
     const/4 v3, 0x0
 
-    .line 289
+    .line 273
     invoke-static {v1, v2, v3}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result v1
@@ -1095,7 +1015,7 @@
 
     const-string v1, "OsUtil"
 
-    .line 291
+    .line 275
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1124,7 +1044,7 @@
 
     const-string v3, "isDeviceProvisioned exception"
 
-    .line 295
+    .line 279
     invoke-static {v2, v3, v1}, Lcom/xiaomi/onetrack/util/p;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return v0
@@ -1133,7 +1053,7 @@
 .method public static h()Z
     .locals 1
 
-    .line 324
+    .line 308
     invoke-static {}, Lcom/xiaomi/onetrack/util/q;->a()Z
 
     move-result v0
@@ -1144,14 +1064,14 @@
 
     if-nez v0, :cond_0
 
-    .line 325
+    .line 309
     invoke-static {}, Lcom/xiaomi/onetrack/util/q;->l()Z
 
     move-result v0
 
     return v0
 
-    .line 327
+    .line 311
     :cond_0
     sget-boolean v0, Lcom/xiaomi/onetrack/util/q;->p:Z
 
@@ -1161,7 +1081,7 @@
 .method public static i()Ljava/lang/String;
     .locals 1
 
-    .line 332
+    .line 316
     invoke-static {}, Lcom/xiaomi/onetrack/util/q;->a()Z
 
     move-result v0
@@ -1172,14 +1092,14 @@
 
     if-nez v0, :cond_0
 
-    .line 333
+    .line 317
     invoke-static {}, Lcom/xiaomi/onetrack/util/q;->k()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 
-    .line 335
+    .line 319
     :cond_0
     sget-object v0, Lcom/xiaomi/onetrack/util/q;->q:Ljava/lang/String;
 
@@ -1205,7 +1125,7 @@
 .method public static j()Ljava/lang/String;
     .locals 1
 
-    .line 360
+    .line 344
     invoke-static {}, Lcom/xiaomi/onetrack/util/q;->k()Ljava/lang/String;
 
     move-result-object v0
@@ -1221,12 +1141,12 @@
 
     const-string v1, ""
 
-    .line 228
+    .line 212
     invoke-static {v0, v1}, Lcom/xiaomi/onetrack/util/ab;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 229
+    .line 213
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -1237,12 +1157,12 @@
 
     const-string v1, ""
 
-    .line 230
+    .line 214
     invoke-static {v0, v1}, Lcom/xiaomi/onetrack/util/ab;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 232
+    .line 216
     :cond_0
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1258,7 +1178,7 @@
 
     const-string v1, "android.os.LocaleList"
 
-    .line 234
+    .line 218
     invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v1
@@ -1269,7 +1189,7 @@
 
     new-array v4, v3, [Ljava/lang/Class;
 
-    .line 235
+    .line 219
     invoke-virtual {v1, v2, v4}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v1
@@ -1282,7 +1202,7 @@
 
     move-result-object v1
 
-    .line 236
+    .line 220
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -1301,7 +1221,7 @@
 
     move-result-object v2
 
-    .line 237
+    .line 221
     instance-of v4, v2, Ljava/lang/Integer;
 
     if-eqz v4, :cond_1
@@ -1314,7 +1234,7 @@
 
     if-lez v2, :cond_1
 
-    .line 238
+    .line 222
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -1345,7 +1265,7 @@
 
     move-result-object v1
 
-    .line 239
+    .line 223
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -1364,17 +1284,17 @@
 
     move-result-object v1
 
-    .line 240
+    .line 224
     instance-of v2, v1, Ljava/lang/String;
 
     if-eqz v2, :cond_1
 
-    .line 241
+    .line 225
     move-object v0, v1
 
     check-cast v0, Ljava/lang/String;
 
-    .line 245
+    .line 229
     :cond_1
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1382,7 +1302,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 246
+    .line 230
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v0
@@ -1391,7 +1311,7 @@
 
     move-result-object v0
 
-    .line 249
+    .line 233
     :cond_2
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1399,7 +1319,7 @@
 
     if-nez v1, :cond_3
 
-    .line 250
+    .line 234
     invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v0
@@ -1413,7 +1333,7 @@
 
     const-string v1, "OsUtil"
 
-    .line 253
+    .line 237
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1443,7 +1363,7 @@
 .method private static l()Z
     .locals 2
 
-    .line 302
+    .line 286
     sget-object v0, Lcom/xiaomi/onetrack/util/q;->k:Ljava/lang/Class;
 
     if-eqz v0, :cond_0
@@ -1451,7 +1371,7 @@
     :try_start_0
     const-string v1, "IS_INTERNATIONAL_BUILD"
 
-    .line 304
+    .line 288
     invoke-virtual {v0, v1}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v0
@@ -1472,14 +1392,14 @@
 
     return v0
 
-    .line 313
+    .line 297
     :catch_0
     :cond_0
     invoke-static {}, Lcom/xiaomi/onetrack/util/q;->k()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 314
+    .line 298
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -1488,7 +1408,7 @@
 
     const-string v1, "CN"
 
-    .line 315
+    .line 299
     invoke-virtual {v0}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
 
     move-result-object v0

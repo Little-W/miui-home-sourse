@@ -192,7 +192,7 @@
 
     iput p2, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mUTime:F
 
-    const-string p2, "uTime"
+    const-string/jumbo p2, "uTime"
 
     .line 269
     iget v0, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mUTime:F
@@ -992,7 +992,7 @@
     goto/16 :goto_3
 
     :cond_1
-    const v0, 0x7f0a03d8
+    const v0, 0x7f0a03d4
 
     .line 137
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ProgressShortcutIcon;->findViewById(I)Landroid/view/View;
@@ -1150,7 +1150,7 @@
     .line 163
     iget-object p1, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlDownloadView:Lcom/miui/maml/component/MamlView;
 
-    const-string v3, "uWavePer"
+    const-string/jumbo v3, "uWavePer"
 
     const-wide/high16 v4, 0x3ff0000000000000L    # 1.0
 

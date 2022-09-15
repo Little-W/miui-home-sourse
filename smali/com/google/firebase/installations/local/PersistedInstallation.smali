@@ -308,7 +308,7 @@
     :cond_0
     new-instance v0, Ljava/io/IOException;
 
-    const-string v1, "unable to rename the tmpfile to PersistedInstallation"
+    const-string/jumbo v1, "unable to rename the tmpfile to PersistedInstallation"
 
     invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 

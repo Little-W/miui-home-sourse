@@ -102,7 +102,7 @@
 
     move-result-object p1
 
-    const p3, 0x7f07066d
+    const p3, 0x7f070668
 
     invoke-virtual {p1, p3}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -115,7 +115,7 @@
 
     move-result-object p1
 
-    const p3, 0x7f070584
+    const p3, 0x7f07057f
 
     invoke-virtual {p1, p3}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -319,7 +319,7 @@
 
     const/4 v2, -0x1
 
-    iput v2, v1, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->pickerTipSource:I
+    iput v2, v1, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->tip_source:I
 
     const/16 v2, 0x3e8
 
@@ -608,7 +608,7 @@
 
     const/4 v1, -0x1
 
-    iput v1, v0, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->pickerTipSource:I
+    iput v1, v0, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->tip_source:I
 
     const/16 v1, 0x3e9
 

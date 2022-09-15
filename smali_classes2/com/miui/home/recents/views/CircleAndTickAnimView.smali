@@ -115,7 +115,7 @@
     .line 59
     invoke-virtual {p0}, Lcom/miui/home/recents/views/CircleAndTickAnimView;->stopAnimator()V
 
-    const p1, 0x7f08063c
+    const p1, 0x7f080639
 
     const p2, 0x7f0801b1
 

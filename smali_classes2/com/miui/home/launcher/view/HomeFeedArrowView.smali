@@ -414,7 +414,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f07018f
+    const v1, 0x7f07018e
 
     .line 82
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -423,7 +423,7 @@
 
     iput v1, p0, Lcom/miui/home/launcher/view/HomeFeedArrowView;->mHeight:I
 
-    const v1, 0x7f070190
+    const v1, 0x7f07018f
 
     .line 83
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -432,7 +432,7 @@
 
     iput v1, p0, Lcom/miui/home/launcher/view/HomeFeedArrowView;->mLineWidth:I
 
-    const v1, 0x7f11042f
+    const v1, 0x7f11042a
 
     .line 84
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;

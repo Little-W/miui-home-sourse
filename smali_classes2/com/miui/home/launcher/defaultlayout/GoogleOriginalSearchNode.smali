@@ -35,7 +35,7 @@
     invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->throwNpe()V
 
     :cond_0
-    const/16 v1, 0x11
+    const/16 v1, 0xf
 
     const/4 v2, 0x0
 
@@ -53,7 +53,7 @@
     invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->throwNpe()V
 
     :cond_1
-    const/16 v3, 0x12
+    const/16 v3, 0x10
 
     invoke-virtual {v1, v3, v2}, Landroid/content/res/TypedArray;->getInt(II)I
 

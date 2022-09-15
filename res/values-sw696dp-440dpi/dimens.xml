@@ -17,14 +17,13 @@
     <dimen name="fastscroll_letter_side_padding_bottom">10.899994dip</dimen>
     <dimen name="fastscroll_letter_side_padding_top">10.899994dip</dimen>
     <dimen name="folder_background_padding_top">-8.0dip</dimen>
-    <dimen name="folder_content_margin_bottom">-20.0dip</dimen>
+    <dimen name="folder_content_margin_bottom">-35.0dip</dimen>
     <dimen name="folder_content_margin_top">18.0dip</dimen>
     <dimen name="folder_content_padding_left">53.0dip</dimen>
     <dimen name="folder_content_padding_right">53.0dip</dimen>
     <dimen name="folder_edit_mode_top_padding">0.0dip</dimen>
-    <dimen name="folder_edit_text_margin_left">71.0dip</dimen>
+    <dimen name="folder_edit_text_margin_left">73.0dip</dimen>
     <dimen name="folder_edit_text_margin_left_noword">64.0dip</dimen>
-    <dimen name="folder_edit_text_margin_right">71.0dip</dimen>
     <dimen name="folder_edit_text_text_size_noword">35.599976dip</dimen>
     <dimen name="folder_grid_frame_margin_top">0.0dip</dimen>
     <dimen name="folder_grid_margin_top">0.0dip</dimen>
@@ -47,8 +46,6 @@
     <dimen name="recents_task_view_header_height">41.0dip</dimen>
     <dimen name="recents_task_view_rounded_corners_radius_min">12.0dip</dimen>
     <dimen name="recents_task_view_sub_header_app_info_spacing">6.0dip</dimen>
-    <dimen name="recommend_header_padding_bottom">0.0dip</dimen>
-    <dimen name="recommend_margin_start">26.0dip</dimen>
     <dimen name="recommend_switch_margin_top">-15.0dip</dimen>
     <dimen name="recommend_switch_summary_padding_left">2.0dip</dimen>
     <dimen name="set_home_screen_gap_middle">32.0dip</dimen>

@@ -236,7 +236,7 @@
 
     move-result-object p1
 
-    const-string v4, "unknown"
+    const-string/jumbo v4, "unknown"
 
     invoke-direct {v3, p1, v4}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -321,6 +321,8 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     throw p1
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0

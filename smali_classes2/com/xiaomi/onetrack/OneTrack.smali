@@ -123,7 +123,7 @@
 .method public static sdkVersion()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "2.0.3"
+    const-string v0, "2.0.1"
 
     return-object v0
 .end method

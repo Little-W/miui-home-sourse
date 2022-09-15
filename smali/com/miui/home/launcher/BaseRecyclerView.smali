@@ -84,7 +84,7 @@
 
     check-cast v0, Landroid/view/ViewGroup;
 
-    const v1, 0x7f0a0155
+    const v1, 0x7f0a0152
 
     .line 91
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -93,7 +93,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    const v2, 0x7f0a0154
+    const v2, 0x7f0a0151
 
     .line 92
     invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -102,7 +102,7 @@
 
     check-cast v2, Lcom/miui/home/launcher/view/LetterRecyclerViewFastScroller;
 
-    const v3, 0x7f0a0153
+    const v3, 0x7f0a0150
 
     .line 93
     invoke-virtual {v0, v3}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -290,7 +290,7 @@
 
     check-cast p1, Landroid/view/ViewGroup;
 
-    const p2, 0x7f0a0154
+    const p2, 0x7f0a0151
 
     .line 120
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;

@@ -26,7 +26,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 559
+    .line 560
     invoke-direct {p0}, Lcom/google/gson/TypeAdapter;-><init>()V
 
     return-void
@@ -42,7 +42,7 @@
         }
     .end annotation
 
-    .line 559
+    .line 560
     invoke-virtual {p0, p1}, Lcom/google/gson/internal/bind/TypeAdapters$25;->read(Lcom/google/gson/stream/JsonReader;)Ljava/util/Currency;
 
     move-result-object p1
@@ -58,7 +58,7 @@
         }
     .end annotation
 
-    .line 562
+    .line 563
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->nextString()Ljava/lang/String;
 
     move-result-object p1
@@ -78,7 +78,7 @@
         }
     .end annotation
 
-    .line 559
+    .line 560
     check-cast p2, Ljava/util/Currency;
 
     invoke-virtual {p0, p1, p2}, Lcom/google/gson/internal/bind/TypeAdapters$25;->write(Lcom/google/gson/stream/JsonWriter;Ljava/util/Currency;)V
@@ -94,7 +94,7 @@
         }
     .end annotation
 
-    .line 566
+    .line 567
     invoke-virtual {p2}, Ljava/util/Currency;->getCurrencyCode()Ljava/lang/String;
 
     move-result-object p2

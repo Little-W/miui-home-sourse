@@ -24,12 +24,12 @@
 .method public constructor <init>(Lcom/miui/home/library/animator/MiuiDefaultItemAnimator;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
     .locals 0
 
-    .line 627
+    .line 626
     iput-object p1, p0, Lcom/miui/home/library/animator/MiuiDefaultItemAnimator$RemoveLister;->this$0:Lcom/miui/home/library/animator/MiuiDefaultItemAnimator;
 
     invoke-direct {p0}, Lmiuix/animation/listener/TransitionListener;-><init>()V
 
-    .line 628
+    .line 627
     iput-object p2, p0, Lcom/miui/home/library/animator/MiuiDefaultItemAnimator$RemoveLister;->mViewHolder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     return-void
@@ -40,7 +40,7 @@
 .method public onBegin(Ljava/lang/Object;)V
     .locals 1
 
-    .line 633
+    .line 632
     iget-object p1, p0, Lcom/miui/home/library/animator/MiuiDefaultItemAnimator$RemoveLister;->this$0:Lcom/miui/home/library/animator/MiuiDefaultItemAnimator;
 
     iget-object v0, p0, Lcom/miui/home/library/animator/MiuiDefaultItemAnimator$RemoveLister;->mViewHolder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
@@ -53,7 +53,7 @@
 .method public onComplete(Ljava/lang/Object;)V
     .locals 1
 
-    .line 638
+    .line 637
     iget-object p1, p0, Lcom/miui/home/library/animator/MiuiDefaultItemAnimator$RemoveLister;->this$0:Lcom/miui/home/library/animator/MiuiDefaultItemAnimator;
 
     iget-object v0, p0, Lcom/miui/home/library/animator/MiuiDefaultItemAnimator$RemoveLister;->mViewHolder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
@@ -62,14 +62,14 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/library/animator/MiuiDefaultItemAnimator;->resetView(Landroid/view/View;)V
 
-    .line 639
+    .line 638
     iget-object p1, p0, Lcom/miui/home/library/animator/MiuiDefaultItemAnimator$RemoveLister;->this$0:Lcom/miui/home/library/animator/MiuiDefaultItemAnimator;
 
     iget-object v0, p0, Lcom/miui/home/library/animator/MiuiDefaultItemAnimator$RemoveLister;->mViewHolder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     invoke-virtual {p1, v0}, Lcom/miui/home/library/animator/MiuiDefaultItemAnimator;->dispatchRemoveFinished(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
-    .line 640
+    .line 639
     iget-object p1, p0, Lcom/miui/home/library/animator/MiuiDefaultItemAnimator$RemoveLister;->this$0:Lcom/miui/home/library/animator/MiuiDefaultItemAnimator;
 
     iget-object p1, p1, Lcom/miui/home/library/animator/MiuiDefaultItemAnimator;->mRemoveAnimations:Ljava/util/ArrayList;
@@ -78,7 +78,7 @@
 
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 641
+    .line 640
     iget-object p1, p0, Lcom/miui/home/library/animator/MiuiDefaultItemAnimator$RemoveLister;->this$0:Lcom/miui/home/library/animator/MiuiDefaultItemAnimator;
 
     invoke-virtual {p1}, Lcom/miui/home/library/animator/MiuiDefaultItemAnimator;->dispatchFinishedWhenDone()V

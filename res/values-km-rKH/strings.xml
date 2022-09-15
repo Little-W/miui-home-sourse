@@ -293,7 +293,6 @@
     <string name="eras_bc">មុនគ្រិស្តសករាជ</string>
     <string name="evening">ពេលរសៀល</string>
     <string name="exit_overview_because_task_stack_changed">បានបិទថ្មីៗ ដោយសារការផ្លាស់ប្តូរដែលបានកើតឡើងក្នុងផ្ទៃខាងក្រោយ</string>
-    <string name="external_not_support_split_screen_j18">អេក្រង់ពុះមិនត្រូវបានគាំទ្រនៅលើអេក្រង់ខាងក្រៅទេ។</string>
     <string name="failed_to_delete_temporary">មិន​អាច​លុប​ចេញ</string>
     <string name="failed_to_drop">មិន​អាច​ផ្លាស់ទី</string>
     <string name="failed_to_drop_widget_invalid">ធាតុក្រាហ្វិកនេះមិនត្រឹមត្រូវ</string>
@@ -498,7 +497,6 @@
     <string name="midnight">រាត្រី</string>
     <string name="minus_one_screen">ឃ្លាំងកម្មវិធី</string>
     <string name="miui_screen_config_title">សំណុំ​កំណត់អេក្រង់ដើម</string>
-    <string name="miui_widget_menu_replace_text">ប្ដូរ</string>
     <string name="miuix_access_state_desc">បានជ្រើសរើស</string>
     <string name="miuix_appcompat_action_mode_deselect_all">លែង​ជ្រើសរើស</string>
     <string name="miuix_appcompat_action_mode_select_all">ជ្រើសរើសទាំងអស់</string>
@@ -525,8 +523,6 @@
     <string name="monday">ថ្ងៃច័ន្ទ</string>
     <string name="monday_short">ច័ន្ទ</string>
     <string name="monday_shortest">ច័ន្ទ</string>
-    <string name="monochrome_summary">ផ្លាស់ប្ដូរពណ៌ផ្ទៃខាងក្រោយ ដើម្បីទទួលបានរូបតំណាងដែលត្រូវគ្នា</string>
-    <string name="monochrome_title">ពណ៌ផ្ទៃខាងក្រោយ</string>
     <string name="month_april">មេសា</string>
     <string name="month_april_short">មេសា</string>
     <string name="month_april_shortest">មេសា</string>

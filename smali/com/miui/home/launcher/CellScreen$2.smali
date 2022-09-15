@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/CellScreen;)V
     .locals 0
 
-    .line 165
+    .line 172
     iput-object p1, p0, Lcom/miui/home/launcher/CellScreen$2;->this$0:Lcom/miui/home/launcher/CellScreen;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 174
+    .line 181
     iget-object p1, p0, Lcom/miui/home/launcher/CellScreen$2;->this$0:Lcom/miui/home/launcher/CellScreen;
 
     const/4 v0, 0x0
@@ -48,7 +48,7 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 169
+    .line 176
     iget-object p1, p0, Lcom/miui/home/launcher/CellScreen$2;->this$0:Lcom/miui/home/launcher/CellScreen;
 
     const/4 v0, 0x1

@@ -49,13 +49,6 @@
         <item>Na asali</item>
         <item>Gargajiya</item>
     </string-array>
-    <string-array name="monochrome_color_entries">
-        <item>Na asali</item>
-        <item>Shuɗe</item>
-        <item>Kore</item>
-        <item>Launi shuni</item>
-        <item>Launin ruwan kasa</item>
-    </string-array>
     <string-array name="transformation_entries">
         <item>Jawowa</item>
         <item>Ketarewa</item>

@@ -153,43 +153,42 @@
         }
     .end annotation
 
-    :try_start_0
     const-string v0, "_id"
 
-    .line 404
+    .line 403
     invoke-interface {p0, v0}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v0
 
     const-string v1, "status"
 
-    .line 405
+    .line 404
     invoke-interface {p0, v1}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v1
 
     const-string v2, "reason"
 
-    .line 406
+    .line 405
     invoke-interface {p0, v2}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v2
 
     const-string v3, "bytes_so_far"
 
-    .line 407
+    .line 406
     invoke-interface {p0, v3}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v3
 
     const-string v4, "total_size"
 
-    .line 408
+    .line 407
     invoke-interface {p0, v4}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v4
 
-    .line 410
+    .line 409
     invoke-static {}, Lcom/market/sdk/utils/Client;->isLaterThanHoneycomb()Z
 
     move-result v5
@@ -203,65 +202,58 @@
     :cond_0
     const-string v5, "file_path"
 
-    .line 415
+    .line 414
     :goto_0
     invoke-interface {p0, v5}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v5
 
-    .line 417
+    .line 416
     new-instance v6, Lcom/market/sdk/DownloadInstallManager$DownloadManagerInfo;
 
     invoke-direct {v6}, Lcom/market/sdk/DownloadInstallManager$DownloadManagerInfo;-><init>()V
 
-    .line 418
+    .line 417
     invoke-interface {p0, v0}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v7
 
     iput-wide v7, v6, Lcom/market/sdk/DownloadInstallManager$DownloadManagerInfo;->id:J
 
-    .line 419
+    .line 418
     invoke-interface {p0, v1}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v0
 
     iput v0, v6, Lcom/market/sdk/DownloadInstallManager$DownloadManagerInfo;->status:I
 
-    .line 420
+    .line 419
     invoke-interface {p0, v2}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v0
 
     iput v0, v6, Lcom/market/sdk/DownloadInstallManager$DownloadManagerInfo;->reason:I
 
-    .line 421
+    .line 420
     invoke-interface {p0, v3}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v0
 
     iput v0, v6, Lcom/market/sdk/DownloadInstallManager$DownloadManagerInfo;->currBytes:I
 
-    .line 422
+    .line 421
     invoke-interface {p0, v4}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v0
 
     iput v0, v6, Lcom/market/sdk/DownloadInstallManager$DownloadManagerInfo;->totalBytes:I
 
-    .line 423
+    .line 422
     invoke-interface {p0, v5}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object p0
 
     iput-object p0, v6, Lcom/market/sdk/DownloadInstallManager$DownloadManagerInfo;->downloadFilePath:Ljava/lang/String;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     return-object v6
-
-    :catch_0
-    const/4 p0, 0x0
-
-    return-object p0
 .end method

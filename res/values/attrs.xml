@@ -489,8 +489,6 @@
     <attr name="colorTertiaryContainer" format="color" />
     <attr name="commitIcon" format="reference" />
     <attr name="compoundButtonCheckboxExpandDrawable" format="reference" />
-    <attr name="configSpanX" format="string" />
-    <attr name="configSpanY" format="string" />
     <attr name="connectDetailDisconnectedDrawable" format="reference" />
     <attr name="connectPreferenceBgConnectedColor" format="reference|color" />
     <attr name="connectPreferenceBgDisconnectedColor" format="reference|color" />

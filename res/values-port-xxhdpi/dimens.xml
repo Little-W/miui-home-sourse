@@ -2,5 +2,5 @@
 <resources>
     <dimen name="clear_container_padding_bottom">20.179993dip</dimen>
     <dimen name="recents_task_view_header_height">36.69998dip</dimen>
-    <dimen name="recents_task_view_header_title_text_size">0.0sp</dimen>
+    <dimen name="recents_task_view_header_title_text_size">11.919983sp</dimen>
 </resources>

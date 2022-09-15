@@ -42,10 +42,10 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 675
+    .line 826
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 676
+    .line 827
     new-instance v0, Ljava/util/concurrent/ArrayBlockingQueue;
 
     const/4 v1, 0x1
@@ -67,12 +67,12 @@
         }
     .end annotation
 
-    .line 685
+    .line 836
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 686
+    .line 837
     iget-object v1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay$WidgetAddTask;->mRectQueue:Ljava/util/concurrent/ArrayBlockingQueue;
 
     invoke-virtual {v1}, Ljava/util/concurrent/ArrayBlockingQueue;->take()Ljava/lang/Object;
@@ -83,7 +83,7 @@
 
     const-string v2, "available_drop_rect"
 
-    .line 687
+    .line 838
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
     return-object v0
@@ -97,7 +97,7 @@
         }
     .end annotation
 
-    .line 672
+    .line 823
     invoke-virtual {p0}, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay$WidgetAddTask;->call()Landroid/os/Bundle;
 
     move-result-object v0
@@ -108,7 +108,7 @@
 .method public setAnimationRect(Landroid/graphics/Rect;)V
     .locals 1
 
-    .line 680
+    .line 831
     iget-object v0, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay$WidgetAddTask;->mRectQueue:Ljava/util/concurrent/ArrayBlockingQueue;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/ArrayBlockingQueue;->offer(Ljava/lang/Object;)Z

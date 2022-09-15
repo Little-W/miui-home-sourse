@@ -53,7 +53,7 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .line 83
+    .line 81
     sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     if-eqz v0, :cond_0
@@ -65,16 +65,16 @@
     :cond_0
     const-string v0, "com.xiaomi.tv.gallerylockscreen.lockscreen_magazine_provider"
 
-    .line 84
+    .line 82
     :goto_0
     sput-object v0, Lcom/miui/home/launcher/WallpaperUtils;->DEFAULT_LOCKWALLPAPER_PROVIDER:Ljava/lang/String;
 
-    .line 87
+    .line 85
     sget-object v0, Lcom/miui/home/launcher/WallpaperUtils;->DEFAULT_LOCKWALLPAPER_PROVIDER:Ljava/lang/String;
 
     sput-object v0, Lcom/miui/home/launcher/WallpaperUtils;->sDefaultLockWallpaperProvider:Ljava/lang/String;
 
-    .line 89
+    .line 87
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -83,23 +83,23 @@
 
     const/4 v0, 0x0
 
-    .line 92
+    .line 90
     sput v0, Lcom/miui/home/launcher/WallpaperUtils;->sCurrentWallpaperColorMode:I
 
-    .line 93
+    .line 91
     sput v0, Lcom/miui/home/launcher/WallpaperUtils;->sCurrentStatusBarAreaColorMode:I
 
-    .line 95
+    .line 93
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v1, Lcom/miui/home/launcher/WallpaperUtils;->sPresetWallpaperPicker:Ljava/util/ArrayList;
 
-    .line 96
+    .line 94
     sput-boolean v0, Lcom/miui/home/launcher/WallpaperUtils;->sIsCurrentWallpaperScrollable:Z
 
-    .line 98
+    .line 96
     invoke-static {}, Lcom/miui/home/launcher/WallpaperUtils;->obtainCurrentScreenMode()Lcom/miui/home/launcher/common/ScreenMode;
 
     move-result-object v0
@@ -108,24 +108,24 @@
 
     const/4 v0, 0x4
 
-    .line 100
+    .line 98
     new-array v0, v0, [B
 
     sput-object v0, Lcom/miui/home/launcher/WallpaperUtils;->sBytesForInt:[B
 
     const/4 v0, 0x2
 
-    .line 101
+    .line 99
     new-array v0, v0, [B
 
     sput-object v0, Lcom/miui/home/launcher/WallpaperUtils;->sBytesForShort:[B
 
-    .line 104
+    .line 102
     invoke-static {}, Lmiui/os/UserHandle;->myUserId()I
 
     move-result v0
 
-    .line 105
+    .line 103
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -146,7 +146,7 @@
 
     sput-object v0, Lcom/miui/home/launcher/WallpaperUtils;->SYSTEM_WALLPAPER_RUNTIME_PATH:Ljava/lang/String;
 
-    .line 106
+    .line 104
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.GET_CONTENT"
@@ -155,26 +155,26 @@
 
     sput-object v0, Lcom/miui/home/launcher/WallpaperUtils;->sPickerIntent:Landroid/content/Intent;
 
-    .line 107
+    .line 105
     sget-object v0, Lcom/miui/home/launcher/WallpaperUtils;->sPickerIntent:Landroid/content/Intent;
 
     const-string v1, "android.intent.category.OPENABLE"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 108
+    .line 106
     sget-object v0, Lcom/miui/home/launcher/WallpaperUtils;->sPickerIntent:Landroid/content/Intent;
 
     const-string v1, "image/*"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 109
+    .line 107
     sget-object v0, Lcom/miui/home/launcher/WallpaperUtils;->sPresetWallpaperPicker:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 110
+    .line 108
     sget-object v0, Lcom/miui/home/launcher/WallpaperUtils;->sPresetWallpaperPicker:Ljava/util/ArrayList;
 
     new-instance v1, Landroid/content/ComponentName;
@@ -187,7 +187,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 187
+    .line 185
     new-instance v0, Landroid/graphics/Point;
 
     invoke-direct {v0}, Landroid/graphics/Point;-><init>()V
@@ -217,7 +217,7 @@
 
     return-object p0
 
-    .line 936
+    .line 928
     :cond_0
     :try_start_0
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
@@ -254,7 +254,7 @@
 
     move-result v0
 
-    .line 937
+    .line 929
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v1
@@ -275,7 +275,7 @@
 
     float-to-int v1, v1
 
-    .line 938
+    .line 930
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v3
@@ -294,15 +294,15 @@
 
     float-to-int p2, v3
 
-    .line 939
+    .line 931
     new-instance v0, Lcom/miui/home/library/utils/Graphics$CropOption;
 
     invoke-direct {v0}, Lcom/miui/home/library/utils/Graphics$CropOption;-><init>()V
 
-    .line 940
+    .line 932
     new-instance v2, Landroid/graphics/Rect;
 
-    .line 941
+    .line 933
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v3
@@ -319,7 +319,7 @@
 
     iput-object v2, v0, Lcom/miui/home/library/utils/Graphics$CropOption;->srcBmpDrawingArea:Landroid/graphics/Rect;
 
-    .line 942
+    .line 934
     iget-object p2, v0, Lcom/miui/home/library/utils/Graphics$CropOption;->srcBmpDrawingArea:Landroid/graphics/Rect;
 
     invoke-virtual {p2}, Landroid/graphics/Rect;->width()I
@@ -332,17 +332,17 @@
 
     move-result v1
 
-    .line 943
+    .line 935
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;
 
     move-result-object v2
 
-    .line 942
+    .line 934
     invoke-static {p2, v1, v2}, Lcom/miui/home/launcher/common/Utilities;->createBitmapSafely(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
     move-result-object p0
 
-    .line 944
+    .line 936
     invoke-static {p1, p0, v0}, Lcom/miui/home/library/utils/Graphics;->cropBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;Lcom/miui/home/library/utils/Graphics$CropOption;)Landroid/graphics/Bitmap;
     :try_end_0
     .catch Ljava/lang/OutOfMemoryError; {:try_start_0 .. :try_end_0} :catch_0
@@ -350,7 +350,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 949
+    .line 941
     :goto_0
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->recycle()V
 
@@ -364,7 +364,7 @@
     :catch_0
     move-exception p2
 
-    .line 946
+    .line 938
     :try_start_1
     invoke-virtual {p2}, Ljava/lang/OutOfMemoryError;->printStackTrace()V
     :try_end_1
@@ -381,10 +381,10 @@
     :goto_2
     if-eqz p1, :cond_2
 
-    .line 949
+    .line 941
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 951
+    .line 943
     :cond_2
     throw p0
 .end method
@@ -396,7 +396,7 @@
 
     return-void
 
-    .line 872
+    .line 864
     :cond_0
     new-instance v0, Ljava/io/File;
 
@@ -406,12 +406,12 @@
 
     const-string v1, "backup_lock_wallpaper"
 
-    .line 873
+    .line 865
     invoke-virtual {p0, v1}, Landroid/content/Context;->getFileStreamPath(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object p0
 
-    .line 874
+    .line 866
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v1
@@ -420,7 +420,7 @@
 
     const-string v1, "pref_key_lock_wallpaper_path"
 
-    .line 875
+    .line 867
     invoke-static {v1}, Lcom/miui/home/launcher/WallpaperUtils;->getWallpaperSourceUri(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -433,7 +433,7 @@
 
     goto :goto_0
 
-    .line 876
+    .line 868
     :cond_1
     invoke-virtual {v1}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
@@ -442,7 +442,7 @@
     :goto_0
     invoke-static {v2, v1}, Lcom/miui/home/launcher/WallpaperUtils;->setWallpaperSourceUri(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 877
+    .line 869
     invoke-static {v0, p0}, Lmiuix/core/util/FileUtils;->copyFile(Ljava/io/File;Ljava/io/File;)Z
 
     :cond_2
@@ -456,7 +456,7 @@
 
     if-ne p2, v0, :cond_0
 
-    .line 537
+    .line 529
     iget p2, p1, Landroid/graphics/Rect;->left:I
 
     mul-int/2addr p4, p5
@@ -465,7 +465,7 @@
 
     iput p2, p0, Landroid/graphics/Rect;->left:I
 
-    .line 538
+    .line 530
     iget p1, p1, Landroid/graphics/Rect;->bottom:I
 
     add-int/lit8 p3, p3, 0x1
@@ -483,7 +483,7 @@
 
     if-ne p2, v0, :cond_1
 
-    .line 540
+    .line 532
     iget p2, p1, Landroid/graphics/Rect;->right:I
 
     add-int/lit8 p3, p3, 0x1
@@ -494,7 +494,7 @@
 
     iput p2, p0, Landroid/graphics/Rect;->left:I
 
-    .line 541
+    .line 533
     iget p1, p1, Landroid/graphics/Rect;->bottom:I
 
     add-int/lit8 p4, p4, 0x1
@@ -512,7 +512,7 @@
 
     if-ne p2, v0, :cond_2
 
-    .line 543
+    .line 535
     iget p2, p1, Landroid/graphics/Rect;->right:I
 
     add-int/lit8 p4, p4, 0x1
@@ -523,7 +523,7 @@
 
     iput p2, p0, Landroid/graphics/Rect;->left:I
 
-    .line 544
+    .line 536
     iget p1, p1, Landroid/graphics/Rect;->top:I
 
     mul-int/2addr p3, p5
@@ -534,7 +534,7 @@
 
     goto :goto_0
 
-    .line 546
+    .line 538
     :cond_2
     iget p2, p1, Landroid/graphics/Rect;->left:I
 
@@ -544,7 +544,7 @@
 
     iput p2, p0, Landroid/graphics/Rect;->left:I
 
-    .line 547
+    .line 539
     iget p1, p1, Landroid/graphics/Rect;->top:I
 
     mul-int/2addr p4, p5
@@ -553,7 +553,7 @@
 
     iput p1, p0, Landroid/graphics/Rect;->top:I
 
-    .line 550
+    .line 542
     :goto_0
     iget p1, p0, Landroid/graphics/Rect;->left:I
 
@@ -561,7 +561,7 @@
 
     iput p1, p0, Landroid/graphics/Rect;->right:I
 
-    .line 551
+    .line 543
     iget p1, p0, Landroid/graphics/Rect;->top:I
 
     add-int/2addr p1, p5
@@ -574,10 +574,10 @@
 .method private static changeDefaultScreenColor(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 315
+    .line 313
     invoke-static {p0}, Lcom/miui/home/launcher/WallpaperUtils;->onScreenColorModeChanged(Lcom/miui/home/launcher/Launcher;)V
 
-    .line 316
+    .line 314
     invoke-static {p0}, Lcom/miui/home/launcher/WallpaperUtils;->onHotSeatsColorModeChanged(Lcom/miui/home/launcher/Launcher;)V
 
     return-void
@@ -590,7 +590,7 @@
 
     const/4 v1, 0x0
 
-    .line 142
+    .line 140
     invoke-static {v0, v1}, Lcom/miui/home/launcher/WallpaperUtils;->setWallpaperSourceUri(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -605,7 +605,7 @@
 
     float-to-double v0, v0
 
-    .line 527
+    .line 519
     invoke-static {v0, v1}, Ljava/lang/Math;->floor(D)D
 
     move-result-wide v0
@@ -623,14 +623,14 @@
 
     if-gt p0, v0, :cond_1
 
-    .line 531
+    .line 523
     invoke-static {p0}, Ljava/lang/Integer;->highestOneBit(I)I
 
     move-result p0
 
     goto :goto_0
 
-    .line 532
+    .line 524
     :cond_1
     div-int/2addr p0, v0
 
@@ -643,7 +643,7 @@
 .method public static correctHomeScreenPreview(IZZ)Landroid/graphics/Bitmap;
     .locals 2
 
-    .line 270
+    .line 268
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
@@ -654,32 +654,32 @@
 
     return-object p0
 
-    .line 274
+    .line 272
     :cond_0
     sget v1, Lcom/miui/home/launcher/WallpaperUtils;->sCurrentWallpaperColorMode:I
 
     if-eq v1, p0, :cond_1
 
-    .line 276
+    .line 274
     invoke-static {p0}, Lcom/miui/home/launcher/WallpaperUtils;->setCurrentWallpaperColorMode(I)V
 
-    .line 277
+    .line 275
     invoke-static {v0}, Lcom/miui/home/launcher/WallpaperUtils;->changeDefaultScreenColor(Lcom/miui/home/launcher/Launcher;)V
 
-    .line 278
+    .line 276
     invoke-static {p1, p2}, Lcom/miui/home/launcher/WallpaperUtils;->getDefaultHomeScreenTopLayer(ZZ)Landroid/graphics/Bitmap;
 
     move-result-object p0
 
-    .line 279
+    .line 277
     invoke-static {v1}, Lcom/miui/home/launcher/WallpaperUtils;->setCurrentWallpaperColorMode(I)V
 
-    .line 280
+    .line 278
     invoke-static {v0}, Lcom/miui/home/launcher/WallpaperUtils;->changeDefaultScreenColor(Lcom/miui/home/launcher/Launcher;)V
 
     goto :goto_0
 
-    .line 282
+    .line 280
     :cond_1
     invoke-static {p1, p2}, Lcom/miui/home/launcher/WallpaperUtils;->getDefaultHomeScreenTopLayer(ZZ)Landroid/graphics/Bitmap;
 
@@ -692,12 +692,12 @@
 .method public static decodeRegion(Landroid/content/Context;Landroid/net/Uri;Landroid/graphics/Rect;III)Landroid/graphics/Bitmap;
     .locals 10
 
-    .line 498
+    .line 490
     new-instance v0, Lcom/miui/home/library/utils/InputStreamLoader;
 
     invoke-direct {v0, p0, p1}, Lcom/miui/home/library/utils/InputStreamLoader;-><init>(Landroid/content/Context;Landroid/net/Uri;)V
 
-    .line 499
+    .line 491
     new-instance p0, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {p0}, Landroid/graphics/BitmapFactory$Options;-><init>()V
@@ -715,7 +715,7 @@
     :cond_0
     int-to-float p1, p3
 
-    .line 503
+    .line 495
     invoke-virtual {p2}, Landroid/graphics/Rect;->width()I
 
     move-result v1
@@ -750,7 +750,7 @@
     :goto_0
     int-to-float p1, p3
 
-    .line 501
+    .line 493
     invoke-virtual {p2}, Landroid/graphics/Rect;->height()I
 
     move-result v1
@@ -782,7 +782,7 @@
     :goto_1
     const/4 p1, 0x0
 
-    .line 507
+    .line 499
     :try_start_0
     invoke-virtual {v0}, Lcom/miui/home/library/utils/InputStreamLoader;->get()Ljava/io/InputStream;
 
@@ -793,12 +793,12 @@
 
     if-nez v1, :cond_2
 
-    .line 516
+    .line 508
     invoke-virtual {v0}, Lcom/miui/home/library/utils/InputStreamLoader;->close()V
 
     return-object p1
 
-    .line 510
+    .line 502
     :cond_2
     :try_start_1
     invoke-virtual {v0}, Lcom/miui/home/library/utils/InputStreamLoader;->get()Ljava/io/InputStream;
@@ -814,10 +814,10 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 516
+    .line 508
     invoke-virtual {v0}, Lcom/miui/home/library/utils/InputStreamLoader;->close()V
 
-    .line 518
+    .line 510
     sget-object p1, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     invoke-static {p3, p4, p1}, Lcom/miui/home/launcher/common/Utilities;->createBitmapSafely(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
@@ -826,12 +826,12 @@
 
     if-eqz p1, :cond_3
 
-    .line 520
+    .line 512
     new-instance v3, Landroid/graphics/Canvas;
 
     invoke-direct {v3, p1}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 521
+    .line 513
     iget v9, p0, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
     move v4, p5
@@ -855,13 +855,13 @@
     :catch_0
     move-exception p0
 
-    .line 513
+    .line 505
     :try_start_2
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 516
+    .line 508
     invoke-virtual {v0}, Lcom/miui/home/library/utils/InputStreamLoader;->close()V
 
     return-object p1
@@ -869,19 +869,19 @@
     :goto_2
     invoke-virtual {v0}, Lcom/miui/home/library/utils/InputStreamLoader;->close()V
 
-    .line 517
+    .line 509
     throw p0
 .end method
 
-.method private static drawHotSeat(Landroid/graphics/Canvas;Lcom/miui/home/launcher/Launcher;ZII)V
+.method public static drawHotSeat(Landroid/graphics/Canvas;Lcom/miui/home/launcher/Launcher;Z)V
     .locals 9
 
-    .line 375
+    .line 373
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getHotSeats()Lcom/miui/home/launcher/hotseats/HotSeats;
 
     move-result-object v0
 
-    .line 376
+    .line 374
     new-instance v8, Landroid/graphics/Paint;
 
     invoke-direct {v8}, Landroid/graphics/Paint;-><init>()V
@@ -890,10 +890,10 @@
 
     const/16 p2, 0x64
 
-    .line 378
+    .line 376
     invoke-virtual {v8, p2}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 380
+    .line 378
     :cond_0
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getHotSeatsMarginBottom()I
 
@@ -901,20 +901,33 @@
 
     const/4 v2, 0x0
 
-    .line 381
-    invoke-virtual {v0}, Lcom/miui/home/launcher/hotseats/HotSeats;->getHeight()I
+    .line 379
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getDeviceHeight()I
 
     move-result v1
 
-    add-int/2addr v1, p2
+    invoke-virtual {v0}, Lcom/miui/home/launcher/hotseats/HotSeats;->getHeight()I
 
-    sub-int v1, p4, v1
+    move-result v3
+
+    add-int/2addr v3, p2
+
+    sub-int/2addr v1, v3
 
     int-to-float v3, v1
 
-    int-to-float v4, p3
+    .line 380
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getDeviceWidth()I
 
-    int-to-float v5, p4
+    move-result v1
+
+    int-to-float v4, v1
+
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getDeviceHeight()I
+
+    move-result v1
+
+    int-to-float v5, v1
 
     const/16 v7, 0x1f
 
@@ -922,37 +935,42 @@
 
     move-object v6, v8
 
+    .line 379
     invoke-virtual/range {v1 .. v7}, Landroid/graphics/Canvas;->saveLayer(FFFFLandroid/graphics/Paint;I)I
 
-    const/4 p3, 0x0
+    const/4 v1, 0x0
 
-    .line 383
+    .line 381
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getDeviceHeight()I
+
+    move-result v2
+
     invoke-virtual {v0}, Lcom/miui/home/launcher/hotseats/HotSeats;->getHeight()I
 
-    move-result v1
+    move-result v3
 
-    add-int/2addr v1, p2
+    add-int/2addr v3, p2
 
-    sub-int/2addr p4, v1
+    sub-int/2addr v2, v3
 
-    int-to-float p2, p4
+    int-to-float p2, v2
 
-    invoke-virtual {p0, p3, p2}, Landroid/graphics/Canvas;->translate(FF)V
+    invoke-virtual {p0, v1, p2}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 384
+    .line 382
     invoke-virtual {v0, p0}, Lcom/miui/home/launcher/hotseats/HotSeats;->draw(Landroid/graphics/Canvas;)V
 
-    .line 385
+    .line 383
     invoke-virtual {p0}, Landroid/graphics/Canvas;->restore()V
 
-    .line 387
+    .line 385
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isShowSearchBar()Z
 
     move-result p2
 
     if-eqz p2, :cond_1
 
-    .line 388
+    .line 386
     invoke-static {p0, v8, p1}, Lcom/miui/home/launcher/WallpaperUtils;->drawSearchBar(Landroid/graphics/Canvas;Landroid/graphics/Paint;Lcom/miui/home/launcher/Launcher;)V
 
     :cond_1
@@ -976,22 +994,22 @@
 
     mul-int/lit16 v9, v3, 0x200
 
-    .line 557
+    .line 549
     new-instance v10, Landroid/graphics/Rect;
 
     invoke-direct {v10}, Landroid/graphics/Rect;-><init>()V
 
-    .line 558
+    .line 550
     new-instance v11, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v11}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    .line 559
+    .line 551
     sget-object v4, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     iput-object v4, v11, Landroid/graphics/BitmapFactory$Options;->inPreferredConfig:Landroid/graphics/Bitmap$Config;
 
-    .line 560
+    .line 552
     iput v3, v11, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
     const/16 v4, 0x10e
@@ -1011,7 +1029,7 @@
 
     mul-float/2addr v1, v3
 
-    .line 565
+    .line 557
     invoke-virtual/range {p3 .. p3}, Landroid/graphics/Rect;->width()I
 
     move-result v6
@@ -1024,7 +1042,7 @@
 
     mul-float/2addr v3, v2
 
-    .line 566
+    .line 558
     invoke-virtual/range {p3 .. p3}, Landroid/graphics/Rect;->height()I
 
     move-result v2
@@ -1033,7 +1051,7 @@
 
     div-float/2addr v3, v2
 
-    .line 565
+    .line 557
     invoke-virtual {v0, v1, v3}, Landroid/graphics/Canvas;->scale(FF)V
 
     goto :goto_1
@@ -1046,7 +1064,7 @@
 
     mul-float/2addr v1, v3
 
-    .line 562
+    .line 554
     invoke-virtual/range {p3 .. p3}, Landroid/graphics/Rect;->height()I
 
     move-result v6
@@ -1059,7 +1077,7 @@
 
     mul-float/2addr v3, v2
 
-    .line 563
+    .line 555
     invoke-virtual/range {p3 .. p3}, Landroid/graphics/Rect;->width()I
 
     move-result v2
@@ -1068,10 +1086,10 @@
 
     div-float/2addr v3, v2
 
-    .line 562
+    .line 554
     invoke-virtual {v0, v1, v3}, Landroid/graphics/Canvas;->scale(FF)V
 
-    .line 569
+    .line 561
     :goto_1
     new-instance v12, Landroid/graphics/Paint;
 
@@ -1085,7 +1103,7 @@
 
     goto :goto_2
 
-    .line 570
+    .line 562
     :cond_2
     invoke-virtual/range {p3 .. p3}, Landroid/graphics/Rect;->width()I
 
@@ -1106,7 +1124,7 @@
 
     goto :goto_4
 
-    .line 571
+    .line 563
     :cond_4
     invoke-virtual/range {p3 .. p3}, Landroid/graphics/Rect;->height()I
 
@@ -1120,11 +1138,11 @@
 
     move-result v2
 
-    .line 572
+    .line 564
     :goto_5
     div-int v14, v1, v9
 
-    .line 573
+    .line 565
     div-int v15, v2, v9
 
     const/16 v16, 0x0
@@ -1153,35 +1171,35 @@
 
     move v6, v9
 
-    .line 576
+    .line 568
     invoke-static/range {v1 .. v6}, Lcom/miui/home/launcher/WallpaperUtils;->calcTileRect(Landroid/graphics/Rect;Landroid/graphics/Rect;IIII)V
 
     move-object/from16 v1, p3
 
-    .line 577
+    .line 569
     invoke-virtual {v10, v1}, Landroid/graphics/Rect;->intersect(Landroid/graphics/Rect;)Z
 
     move-result v2
 
     if-eqz v2, :cond_8
 
-    .line 581
+    .line 573
     monitor-enter p2
 
-    .line 582
+    .line 574
     :try_start_0
     invoke-virtual {v8, v10, v11}, Landroid/graphics/BitmapRegionDecoder;->decodeRegion(Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object v2
 
-    .line 583
+    .line 575
     monitor-exit p2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     if-eqz v2, :cond_7
 
-    .line 584
+    .line 576
     invoke-virtual {v10}, Landroid/graphics/Rect;->isEmpty()Z
 
     move-result v3
@@ -1190,14 +1208,14 @@
 
     if-eqz v7, :cond_6
 
-    .line 586
+    .line 578
     new-instance v3, Landroid/graphics/Matrix;
 
     invoke-direct {v3}, Landroid/graphics/Matrix;-><init>()V
 
     int-to-float v4, v7
 
-    .line 587
+    .line 579
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v5
@@ -1220,12 +1238,12 @@
 
     const/16 v20, 0x0
 
-    .line 589
+    .line 581
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v21
 
-    .line 590
+    .line 582
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v22
@@ -1236,12 +1254,12 @@
 
     move-object/from16 v23, v3
 
-    .line 589
+    .line 581
     invoke-static/range {v18 .. v24}, Landroid/graphics/Bitmap;->createBitmap(Landroid/graphics/Bitmap;IIIILandroid/graphics/Matrix;Z)Landroid/graphics/Bitmap;
 
     move-result-object v3
 
-    .line 591
+    .line 583
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->recycle()V
 
     move-object v2, v3
@@ -1259,10 +1277,10 @@
 
     int-to-float v6, v6
 
-    .line 593
+    .line 585
     invoke-virtual {v0, v2, v4, v6, v12}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    .line 594
+    .line 586
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->recycle()V
 
     goto :goto_8
@@ -1277,7 +1295,7 @@
     :catchall_0
     move-exception v0
 
-    .line 583
+    .line 575
     :try_start_1
     monitor-exit p2
     :try_end_1
@@ -1310,55 +1328,64 @@
     return-void
 .end method
 
-.method private static drawIndicator(Landroid/graphics/Canvas;Lcom/miui/home/launcher/Workspace;II)V
-    .locals 2
+.method public static drawIndicator(Landroid/graphics/Canvas;Lcom/miui/home/launcher/Workspace;)V
+    .locals 3
 
-    .line 364
+    .line 362
     invoke-virtual {p0}, Landroid/graphics/Canvas;->save()I
 
-    .line 365
+    .line 363
     invoke-virtual {p1}, Lcom/miui/home/launcher/Workspace;->getScreenIndicator()Landroid/view/View;
 
     move-result-object p1
 
-    .line 366
+    .line 364
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getWorkspaceIndicatorMarginBottom()I
 
     move-result v0
 
     int-to-float v0, v0
 
-    .line 367
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
+    .line 365
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getDeviceWidth()I
 
     move-result v1
 
-    sub-int/2addr p2, v1
+    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
-    div-int/lit8 p2, p2, 0x2
+    move-result v2
 
-    int-to-float p2, p2
+    sub-int/2addr v1, v2
 
-    int-to-float p3, p3
+    div-int/lit8 v1, v1, 0x2
 
-    sub-float/2addr p3, v0
+    int-to-float v1, v1
 
-    .line 369
+    .line 366
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getDeviceHeight()I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    sub-float/2addr v2, v0
+
+    .line 367
     invoke-virtual {p1}, Landroid/view/View;->getHeight()I
 
     move-result v0
 
     int-to-float v0, v0
 
-    sub-float/2addr p3, v0
+    sub-float/2addr v2, v0
 
-    .line 367
-    invoke-virtual {p0, p2, p3}, Landroid/graphics/Canvas;->translate(FF)V
+    .line 365
+    invoke-virtual {p0, v1, v2}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 370
+    .line 368
     invoke-virtual {p1, p0}, Landroid/view/View;->draw(Landroid/graphics/Canvas;)V
 
-    .line 371
+    .line 369
     invoke-virtual {p0}, Landroid/graphics/Canvas;->restore()V
 
     return-void
@@ -1367,12 +1394,12 @@
 .method private static drawScreenByCanvas(Landroid/graphics/Canvas;Lcom/miui/home/launcher/CellLayout;Lcom/miui/home/launcher/Launcher;I)V
     .locals 1
 
-    .line 357
+    .line 355
     invoke-virtual {p0}, Landroid/graphics/Canvas;->save()I
 
     int-to-float p3, p3
 
-    .line 358
+    .line 356
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getStatusBarHeight()I
 
     move-result v0
@@ -1381,10 +1408,10 @@
 
     invoke-virtual {p0, p3, v0}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 359
+    .line 357
     invoke-static {p1, p2, p0}, Lcom/miui/home/launcher/WallpaperUtils;->setDefaultScreenStatus(Lcom/miui/home/launcher/CellLayout;Lcom/miui/home/launcher/Launcher;Landroid/graphics/Canvas;)V
 
-    .line 360
+    .line 358
     invoke-virtual {p0}, Landroid/graphics/Canvas;->restore()V
 
     return-void
@@ -1393,24 +1420,24 @@
 .method private static drawSearchBar(Landroid/graphics/Canvas;Landroid/graphics/Paint;Lcom/miui/home/launcher/Launcher;)V
     .locals 8
 
-    .line 393
+    .line 391
     invoke-virtual {p2}, Lcom/miui/home/launcher/Launcher;->getSearchBar()Lcom/miui/home/launcher/SearchBar;
 
     move-result-object v0
 
-    .line 394
+    .line 392
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isShowNavigationBar()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 395
+    .line 393
     invoke-virtual {p2}, Lcom/miui/home/launcher/Launcher;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
 
-    const v1, 0x7f0705cb
+    const v1, 0x7f0705c6
 
     invoke-virtual {p2, v1}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -1418,13 +1445,13 @@
 
     goto :goto_0
 
-    .line 396
+    .line 394
     :cond_0
     invoke-virtual {p2}, Lcom/miui/home/launcher/Launcher;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
 
-    const v1, 0x7f0705ca
+    const v1, 0x7f0705c5
 
     invoke-virtual {p2, v1}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -1433,7 +1460,7 @@
     :goto_0
     const/4 v2, 0x0
 
-    .line 397
+    .line 395
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getDeviceHeight()I
 
     move-result v1
@@ -1448,7 +1475,7 @@
 
     int-to-float v3, v1
 
-    .line 398
+    .line 396
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getDeviceWidth()I
 
     move-result v1
@@ -1467,10 +1494,10 @@
 
     move-object v6, p1
 
-    .line 397
+    .line 395
     invoke-virtual/range {v1 .. v7}, Landroid/graphics/Canvas;->saveLayer(FFFFLandroid/graphics/Paint;I)I
 
-    .line 399
+    .line 397
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getDeviceWidth()I
 
     move-result p1
@@ -1485,7 +1512,7 @@
 
     int-to-float p1, p1
 
-    .line 400
+    .line 398
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getDeviceHeight()I
 
     move-result v1
@@ -1500,13 +1527,13 @@
 
     int-to-float p2, v1
 
-    .line 399
+    .line 397
     invoke-virtual {p0, p1, p2}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 401
+    .line 399
     invoke-virtual {v0, p0}, Lcom/miui/home/launcher/SearchBar;->draw(Landroid/graphics/Canvas;)V
 
-    .line 402
+    .line 400
     invoke-virtual {p0}, Landroid/graphics/Canvas;->restore()V
 
     return-void
@@ -1515,7 +1542,7 @@
 .method public static getCurrentWallpaperColorMode()I
     .locals 1
 
-    .line 180
+    .line 178
     sget v0, Lcom/miui/home/launcher/WallpaperUtils;->sCurrentWallpaperColorMode:I
 
     return v0
@@ -1524,36 +1551,36 @@
 .method private static getDefaultHomeScreenTopLayer(ZZ)Landroid/graphics/Bitmap;
     .locals 9
 
-    .line 427
+    .line 423
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v6
 
-    .line 428
+    .line 424
     invoke-static {v6}, Lcom/miui/home/launcher/WallpaperUtils;->getWorkSpace(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/Workspace;
 
     move-result-object v0
 
-    if-eqz v6, :cond_4
+    if-eqz v6, :cond_6
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_6
 
-    .line 430
+    .line 426
     invoke-virtual {v0}, Lcom/miui/home/launcher/Workspace;->getDefaultCellLayout()Lcom/miui/home/launcher/CellLayout;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    goto/16 :goto_3
+    goto/16 :goto_5
 
-    .line 432
+    .line 428
     :cond_0
     invoke-static {v6}, Lcom/miui/home/launcher/WallpaperUtils;->getDefaultScreenList(Lcom/miui/home/launcher/Launcher;)Ljava/util/List;
 
     move-result-object v7
 
-    .line 434
+    .line 430
     invoke-virtual {v6}, Lcom/miui/home/launcher/Launcher;->isInNormalEditing()Z
 
     move-result v1
@@ -1564,7 +1591,7 @@
 
     move v1, v8
 
-    .line 435
+    .line 431
     :goto_0
     invoke-interface {v7}, Ljava/util/List;->size()I
 
@@ -1572,7 +1599,7 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 436
+    .line 432
     invoke-interface {v7, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -1589,11 +1616,11 @@
 
     goto :goto_0
 
-    .line 440
+    .line 436
     :cond_1
     sget-object v2, Lcom/miui/home/library/utils/Environment;->DIRECTORY_PICTURES:Ljava/lang/String;
 
-    .line 441
+    .line 437
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v1
@@ -1602,7 +1629,7 @@
 
     move-result v1
 
-    .line 442
+    .line 438
     sget-object v3, Lcom/miui/home/launcher/WallpaperUtils;->mScreenMode:Lcom/miui/home/launcher/common/ScreenMode;
 
     sget-object v4, Lcom/miui/home/launcher/common/FoldScreenModeObservable;->INSTANCE:Lcom/miui/home/launcher/common/FoldScreenModeObservable;
@@ -1611,110 +1638,118 @@
 
     move-result-object v4
 
-    if-ne v3, v4, :cond_2
+    if-ne v3, v4, :cond_3
 
-    invoke-virtual {v6}, Lcom/miui/home/launcher/Launcher;->isLauncherReady()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_2
-
-    .line 443
+    .line 439
     invoke-static {v7, p0, v6, v0, p1}, Lcom/miui/home/launcher/WallpaperUtils;->getDefaultScreenPreview(Ljava/util/List;ZLcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/Workspace;Z)Landroid/graphics/Bitmap;
 
-    move-result-object p1
+    move-result-object p0
 
-    .line 444
-    invoke-static {v1, p0}, Lcom/miui/home/launcher/WallpaperUtils;->getFileName(ZZ)Ljava/lang/String;
+    if-eqz v1, :cond_2
 
-    move-result-object v3
+    const-string p1, "preview_large"
 
+    goto :goto_1
+
+    :cond_2
+    const-string p1, "preview_normal"
+
+    :goto_1
+    move-object v3, p1
+
+    .line 440
     sget-object v4, Landroid/graphics/Bitmap$CompressFormat;->PNG:Landroid/graphics/Bitmap$CompressFormat;
 
     const/16 v5, 0x64
 
-    move-object v0, p1
+    move-object v0, p0
 
     move-object v1, v6
 
     invoke-static/range {v0 .. v5}, Lcom/miui/home/launcher/common/Utilities$BitmapUtils;->saveBitmapInFile(Landroid/graphics/Bitmap;Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/graphics/Bitmap$CompressFormat;I)V
 
-    goto :goto_1
+    goto :goto_3
 
-    .line 446
-    :cond_2
-    new-instance p1, Ljava/lang/StringBuilder;
+    .line 442
+    :cond_3
+    new-instance p0, Ljava/lang/StringBuilder;
 
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
     invoke-virtual {v6, v2}, Lcom/miui/home/launcher/Launcher;->getExternalFilesDir(Ljava/lang/String;)Ljava/io/File;
 
-    move-result-object v0
+    move-result-object p1
 
-    invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p1
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object v0, Ljava/io/File;->separator:Ljava/lang/String;
+    const-string p1, "/"
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v1, p0}, Lcom/miui/home/launcher/WallpaperUtils;->getFileName(ZZ)Ljava/lang/String;
+    if-eqz v1, :cond_4
 
-    move-result-object p0
+    const-string p1, "preview_large"
 
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    goto :goto_2
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :cond_4
+    const-string p1, "preview_normal"
+
+    :goto_2
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
     invoke-static {p0}, Lcom/miui/home/launcher/common/Utilities$BitmapUtils;->getBitmapFromFile(Ljava/lang/String;)Landroid/graphics/Bitmap;
 
-    move-result-object p1
+    move-result-object p0
 
-    .line 449
-    :goto_1
+    .line 445
+    :goto_3
     invoke-virtual {v6}, Lcom/miui/home/launcher/Launcher;->isInNormalEditing()Z
 
-    move-result p0
+    move-result p1
 
-    if-eqz p0, :cond_3
+    if-eqz p1, :cond_5
 
-    .line 450
-    :goto_2
+    .line 446
+    :goto_4
     invoke-interface {v7}, Ljava/util/List;->size()I
 
-    move-result p0
+    move-result p1
 
-    if-ge v8, p0, :cond_3
+    if-ge v8, p1, :cond_5
 
-    .line 451
+    .line 447
     invoke-interface {v7, v8}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object p1
 
-    check-cast p0, Lcom/miui/home/launcher/CellScreen;
+    check-cast p1, Lcom/miui/home/launcher/CellScreen;
 
-    invoke-virtual {p0}, Lcom/miui/home/launcher/CellScreen;->getCellLayout()Lcom/miui/home/launcher/CellLayout;
+    invoke-virtual {p1}, Lcom/miui/home/launcher/CellScreen;->getCellLayout()Lcom/miui/home/launcher/CellLayout;
 
-    move-result-object p0
+    move-result-object p1
 
     const/4 v0, 0x1
 
-    invoke-static {p0, v0}, Lcom/miui/home/launcher/WallpaperUtils;->setGadgetMode(Lcom/miui/home/launcher/CellLayout;Z)V
+    invoke-static {p1, v0}, Lcom/miui/home/launcher/WallpaperUtils;->setGadgetMode(Lcom/miui/home/launcher/CellLayout;Z)V
 
     add-int/lit8 v8, v8, 0x1
 
-    goto :goto_2
+    goto :goto_4
 
-    :cond_3
-    return-object p1
+    :cond_5
+    return-object p0
 
-    :cond_4
-    :goto_3
+    :cond_6
+    :goto_5
     const/4 p0, 0x0
 
     return-object p0
@@ -1733,22 +1768,22 @@
         }
     .end annotation
 
-    .line 288
+    .line 286
     invoke-static {p0}, Lcom/miui/home/launcher/WallpaperUtils;->getWorkSpace(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/Workspace;
 
     move-result-object p0
 
-    .line 289
+    .line 287
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 290
+    .line 288
     invoke-virtual {p0}, Lcom/miui/home/launcher/Workspace;->getDefaultScreenIndex()I
 
     move-result v1
 
-    .line 291
+    .line 289
     iget-object v2, p0, Lcom/miui/home/launcher/Workspace;->mCurrentIndexMediator:Lcom/miui/home/launcher/common/CurrentIndexMediator;
 
     invoke-virtual {v2, v1}, Lcom/miui/home/launcher/common/CurrentIndexMediator;->getAllIndexesOnScreen(I)Ljava/util/List;
@@ -1757,7 +1792,7 @@
 
     const/4 v2, 0x0
 
-    .line 292
+    .line 290
     :goto_0
     invoke-interface {v1}, Ljava/util/List;->size()I
 
@@ -1765,7 +1800,7 @@
 
     if-ge v2, v3, :cond_1
 
-    .line 293
+    .line 291
     invoke-interface {v1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -1782,7 +1817,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 295
+    .line 293
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_0
@@ -1794,8 +1829,8 @@
     return-object v0
 .end method
 
-.method private static getDefaultScreenPreview(Ljava/util/List;ZLcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/Workspace;Z)Landroid/graphics/Bitmap;
-    .locals 11
+.method public static getDefaultScreenPreview(Ljava/util/List;ZLcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/Workspace;Z)Landroid/graphics/Bitmap;
+    .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1809,79 +1844,34 @@
         }
     .end annotation
 
-    .line 406
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getScreenWidth()I
+    .line 404
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getDeviceWidth()I
 
-    move-result v8
+    move-result v0
 
-    .line 407
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getScreenHeight()I
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getDeviceHeight()I
 
-    move-result v9
+    move-result v1
 
-    .line 408
-    new-instance v10, Lcom/miui/home/launcher/-$$Lambda$WallpaperUtils$jLjKUsg93R5wRz9DlYFuQbQM3Y4;
+    new-instance v8, Lcom/miui/home/launcher/-$$Lambda$WallpaperUtils$J5eXqTD93krx0EK_Hz0c230lr4g;
 
-    move-object v0, v10
+    move-object v2, v8
 
-    move-object v1, p0
+    move-object v3, p0
 
-    move-object v2, p2
+    move-object v4, p2
 
-    move v3, v8
+    move-object v5, p3
 
-    move-object v4, p3
-
-    move v5, p1
-
-    move v6, v9
+    move v6, p1
 
     move v7, p4
 
-    invoke-direct/range {v0 .. v7}, Lcom/miui/home/launcher/-$$Lambda$WallpaperUtils$jLjKUsg93R5wRz9DlYFuQbQM3Y4;-><init>(Ljava/util/List;Lcom/miui/home/launcher/Launcher;ILcom/miui/home/launcher/Workspace;ZIZ)V
+    invoke-direct/range {v2 .. v7}, Lcom/miui/home/launcher/-$$Lambda$WallpaperUtils$J5eXqTD93krx0EK_Hz0c230lr4g;-><init>(Ljava/util/List;Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/Workspace;ZZ)V
 
     const/4 p0, 0x0
 
-    invoke-static {v8, v9, p0, v10}, Lcom/miui/launcher/utils/BitmapRenderer;->createHardwareBitmapWithAcceleratedCanvas(IILandroid/graphics/Outline;Lcom/miui/launcher/utils/BitmapRenderer$Renderer;)Landroid/graphics/Bitmap;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method private static getFileName(ZZ)Ljava/lang/String;
-    .locals 1
-
-    .line 458
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    if-eqz p0, :cond_0
-
-    const-string p0, "preview_large"
-
-    goto :goto_0
-
-    :cond_0
-    const-string p0, "preview_normal"
-
-    :goto_0
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    if-eqz p1, :cond_1
-
-    const-string p0, "_only_shortcut"
-
-    goto :goto_1
-
-    :cond_1
-    const-string p0, ""
-
-    :goto_1
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v1, p0, v8}, Lcom/miui/launcher/utils/BitmapRenderer;->createHardwareBitmapWithAcceleratedCanvas(IILandroid/graphics/Outline;Lcom/miui/launcher/utils/BitmapRenderer$Renderer;)Landroid/graphics/Bitmap;
 
     move-result-object p0
 
@@ -1891,7 +1881,7 @@
 .method public static getIconTitleShadowColor()I
     .locals 5
 
-    .line 259
+    .line 257
     sget v0, Lcom/miui/home/launcher/WallpaperUtils;->sCurrentWallpaperColorMode:I
 
     const-wide v1, 0x3fd51eb851eb851fL    # 0.33
@@ -1947,7 +1937,7 @@
 
     const-wide/16 v1, 0x0
 
-    .line 1037
+    .line 1029
     invoke-static {p0, v0, v1, v2}, Lcom/miui/home/launcher/common/PreferenceUtils;->getLong(Landroid/content/Context;Ljava/lang/String;J)J
 
     move-result-wide v0
@@ -1958,7 +1948,7 @@
 .method public static getLockWallpaperProvider(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
 
-    .line 994
+    .line 986
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -1979,7 +1969,7 @@
 
     const/16 v1, 0xb4
 
-    .line 1028
+    .line 1020
     invoke-static {p0, v0, v1}, Lcom/miui/home/launcher/common/PreferenceUtils;->getInt(Landroid/content/Context;Ljava/lang/String;I)I
 
     move-result p0
@@ -1990,7 +1980,7 @@
 .method public static getRotatedBitmap(Landroid/net/Uri;)Landroid/graphics/Bitmap;
     .locals 7
 
-    .line 964
+    .line 956
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -2001,7 +1991,7 @@
 
     return-object v1
 
-    .line 966
+    .line 958
     :cond_0
     invoke-static {p0}, Lcom/miui/home/launcher/common/Utilities;->isUriFileExists(Landroid/net/Uri;)Z
 
@@ -2011,7 +2001,7 @@
 
     return-object v1
 
-    .line 970
+    .line 962
     :cond_1
     :try_start_0
     invoke-static {v0, p0}, Lcom/miui/home/library/utils/Graphics;->getBitmapSize(Landroid/content/Context;Landroid/net/Uri;)Landroid/graphics/BitmapFactory$Options;
@@ -2020,7 +2010,7 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 977
+    .line 969
     new-instance v2, Landroid/graphics/Rect;
 
     iget v3, v1, Landroid/graphics/BitmapFactory$Options;->outWidth:I
@@ -2031,12 +2021,12 @@
 
     invoke-direct {v2, v5, v5, v3, v4}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 978
+    .line 970
     new-instance v3, Lcom/miui/home/library/utils/InputStreamLoader;
 
     invoke-direct {v3, v0, p0}, Lcom/miui/home/library/utils/InputStreamLoader;-><init>(Landroid/content/Context;Landroid/net/Uri;)V
 
-    .line 979
+    .line 971
     invoke-virtual {v3}, Lcom/miui/home/library/utils/InputStreamLoader;->get()Ljava/io/InputStream;
 
     move-result-object v4
@@ -2045,7 +2035,7 @@
 
     move-result v5
 
-    .line 980
+    .line 972
     invoke-virtual {v3}, Lcom/miui/home/library/utils/InputStreamLoader;->close()V
 
     const/16 v3, 0x10e
@@ -2058,7 +2048,7 @@
 
     goto :goto_0
 
-    .line 981
+    .line 973
     :cond_2
     iget v6, v1, Landroid/graphics/BitmapFactory$Options;->outWidth:I
 
@@ -2075,7 +2065,7 @@
 
     goto :goto_2
 
-    .line 982
+    .line 974
     :cond_4
     iget v1, v1, Landroid/graphics/BitmapFactory$Options;->outHeight:I
 
@@ -2092,7 +2082,7 @@
 
     move v3, v6
 
-    .line 983
+    .line 975
     invoke-static/range {v0 .. v5}, Lcom/miui/home/launcher/WallpaperUtils;->decodeRegion(Landroid/content/Context;Landroid/net/Uri;Landroid/graphics/Rect;III)Landroid/graphics/Bitmap;
 
     move-result-object p0
@@ -2102,7 +2092,7 @@
     :catch_0
     move-exception p0
 
-    .line 973
+    .line 965
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     return-object v1
@@ -2111,7 +2101,7 @@
 .method public static getSampleRatio(Landroid/graphics/Bitmap;)I
     .locals 2
 
-    .line 206
+    .line 204
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v0
@@ -2120,7 +2110,7 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 207
+    .line 205
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result p0
@@ -2144,12 +2134,12 @@
 .method private static getScreenSize(Lcom/miui/home/launcher/Launcher;)Landroid/graphics/Point;
     .locals 3
 
-    .line 779
+    .line 771
     new-instance v0, Landroid/graphics/Point;
 
     invoke-direct {v0}, Landroid/graphics/Point;-><init>()V
 
-    .line 780
+    .line 772
     invoke-virtual {p0}, Lcom/miui/home/launcher/Launcher;->getWindowManager()Landroid/view/WindowManager;
 
     move-result-object p0
@@ -2158,7 +2148,7 @@
 
     move-result-object p0
 
-    .line 782
+    .line 774
     invoke-virtual {p0}, Landroid/view/Display;->getRotation()I
 
     move-result v1
@@ -2180,7 +2170,7 @@
     :goto_0
     const/4 v1, 0x1
 
-    .line 785
+    .line 777
     :goto_1
     sget-object v2, Lcom/miui/home/launcher/WallpaperUtils;->mTmpPoint:Landroid/graphics/Point;
 
@@ -2188,7 +2178,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 786
+    .line 778
     sget-object p0, Lcom/miui/home/launcher/WallpaperUtils;->mTmpPoint:Landroid/graphics/Point;
 
     iget p0, p0, Landroid/graphics/Point;->x:I
@@ -2205,7 +2195,7 @@
 
     if-eqz v1, :cond_3
 
-    .line 787
+    .line 779
     sget-object p0, Lcom/miui/home/launcher/WallpaperUtils;->mTmpPoint:Landroid/graphics/Point;
 
     iget p0, p0, Landroid/graphics/Point;->y:I
@@ -2226,7 +2216,7 @@
 .method public static getWallpaperColorModeInArea(Landroid/graphics/Rect;Landroid/graphics/Bitmap;)I
     .locals 5
 
-    .line 246
+    .line 244
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v0
@@ -2241,7 +2231,7 @@
 
     div-float/2addr v0, v1
 
-    .line 247
+    .line 245
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v1
@@ -2256,7 +2246,7 @@
 
     div-float/2addr v1, v2
 
-    .line 248
+    .line 246
     iget v2, p0, Landroid/graphics/Rect;->left:I
 
     int-to-float v2, v2
@@ -2265,7 +2255,7 @@
 
     float-to-int v2, v2
 
-    .line 249
+    .line 247
     iget v3, p0, Landroid/graphics/Rect;->top:I
 
     int-to-float v3, v3
@@ -2274,7 +2264,7 @@
 
     float-to-int v3, v3
 
-    .line 250
+    .line 248
     invoke-virtual {p0}, Landroid/graphics/Rect;->width()I
 
     move-result v4
@@ -2285,7 +2275,7 @@
 
     float-to-int v0, v4
 
-    .line 251
+    .line 249
     invoke-virtual {p0}, Landroid/graphics/Rect;->height()I
 
     move-result p0
@@ -2296,14 +2286,14 @@
 
     float-to-int p0, p0
 
-    .line 252
+    .line 250
     invoke-static {p1, v2, v3, v0, p0}, Lcom/miui/home/launcher/common/Utilities;->createBitmapSafely(Landroid/graphics/Bitmap;IIII)Landroid/graphics/Bitmap;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 254
+    .line 252
     invoke-static {p0}, Lcom/miui/home/launcher/WallpaperUtils;->getSampleRatio(Landroid/graphics/Bitmap;)I
 
     move-result p1
@@ -2326,14 +2316,14 @@
 .method public static getWallpaperSourcePath(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    .line 168
+    .line 166
     invoke-static {p0}, Lcom/miui/home/launcher/WallpaperUtils;->getWallpaperSourceUri(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 170
+    .line 168
     invoke-virtual {p0}, Landroid/net/Uri;->getPath()Ljava/lang/String;
 
     move-result-object p0
@@ -2349,7 +2339,7 @@
 .method private static getWallpaperSourceUri(Ljava/lang/String;)Landroid/net/Uri;
     .locals 2
 
-    .line 153
+    .line 151
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -2360,16 +2350,16 @@
 
     return-object v1
 
-    .line 156
+    .line 154
     :cond_0
     invoke-static {v0, p0, v1}, Lcom/miui/home/launcher/common/PreferenceUtils;->getString(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 157
+    .line 155
     invoke-static {p0, v0}, Lcom/miui/home/launcher/WallpaperUtils;->setWallpaperSourceUri(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 158
+    .line 156
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p0
@@ -2378,27 +2368,27 @@
 
     return-object v1
 
-    .line 160
+    .line 158
     :cond_1
     new-instance p0, Ljava/io/File;
 
     invoke-direct {p0, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 161
+    .line 159
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 162
+    .line 160
     invoke-static {p0}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
 
     move-result-object p0
 
     return-object p0
 
-    .line 164
+    .line 162
     :cond_2
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -2410,7 +2400,7 @@
 .method private static getWorkSpace(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/Workspace;
     .locals 0
 
-    .line 422
+    .line 418
     invoke-virtual {p0}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
 
     move-result-object p0
@@ -2421,7 +2411,7 @@
 .method public static hasAppliedLightWallpaper()Z
     .locals 2
 
-    .line 176
+    .line 174
     sget v0, Lcom/miui/home/launcher/WallpaperUtils;->sCurrentWallpaperColorMode:I
 
     const/4 v1, 0x2
@@ -2442,7 +2432,7 @@
 .method public static hasLightBgForStatusBar()Z
     .locals 2
 
-    .line 184
+    .line 182
     sget v0, Lcom/miui/home/launcher/WallpaperUtils;->sCurrentStatusBarAreaColorMode:I
 
     const/4 v1, 0x2
@@ -2463,12 +2453,12 @@
 .method public static hasValidProvider(Landroid/content/Context;)Z
     .locals 3
 
-    .line 1020
+    .line 1012
     invoke-static {p0}, Lcom/miui/home/launcher/WallpaperUtils;->getLockWallpaperProvider(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1021
+    .line 1013
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -2477,7 +2467,7 @@
 
     const-string v1, "com.miui.home.none_provider"
 
-    .line 1022
+    .line 1014
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2486,7 +2476,7 @@
 
     goto :goto_0
 
-    .line 1024
+    .line 1016
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2522,7 +2512,7 @@
 .method public static isCurrentWallpaperScrollable()Z
     .locals 1
 
-    .line 230
+    .line 228
     sget-boolean v0, Lcom/miui/home/launcher/WallpaperUtils;->sIsCurrentWallpaperScrollable:Z
 
     return v0
@@ -2531,14 +2521,14 @@
 .method public static isDefaultLockStyle()Z
     .locals 2
 
-    .line 1054
+    .line 1046
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/data/system/theme//lockscreen"
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1055
+    .line 1047
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v0
@@ -2568,7 +2558,7 @@
 .method public static isKeyguardShowLiveWallpaper()Z
     .locals 3
 
-    .line 988
+    .line 980
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -2582,7 +2572,7 @@
     :cond_0
     const-string v2, "keyguard_show_livewallpaper"
 
-    .line 990
+    .line 982
     invoke-static {v0, v2, v1}, Lcom/miui/home/launcher/common/PreferenceUtils;->getBoolean(Landroid/content/Context;Ljava/lang/String;Z)Z
 
     move-result v0
@@ -2597,7 +2587,7 @@
 
     const/4 v1, 0x1
 
-    .line 1046
+    .line 1038
     invoke-static {p0, v0, v1}, Lcom/miui/home/launcher/common/PreferenceUtils;->getBoolean(Landroid/content/Context;Ljava/lang/String;Z)Z
 
     move-result p0
@@ -2608,7 +2598,7 @@
 .method public static isSearchBarAreaLight()Z
     .locals 2
 
-    .line 129
+    .line 127
     sget v0, Lcom/miui/home/launcher/WallpaperUtils;->sSearchBarAreaColorMode:I
 
     const/4 v1, 0x2
@@ -2629,7 +2619,7 @@
 .method public static isStaticWallpaper(Landroid/app/WallpaperManager;)Z
     .locals 0
 
-    .line 214
+    .line 212
     invoke-virtual {p0}, Landroid/app/WallpaperManager;->getWallpaperInfo()Landroid/app/WallpaperInfo;
 
     move-result-object p0
@@ -2647,12 +2637,12 @@
     return p0
 .end method
 
-.method static synthetic lambda$getDefaultScreenPreview$0(Ljava/util/List;Lcom/miui/home/launcher/Launcher;ILcom/miui/home/launcher/Workspace;ZIZLandroid/graphics/Canvas;)V
-    .locals 3
+.method static synthetic lambda$getDefaultScreenPreview$0(Ljava/util/List;Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/Workspace;ZZLandroid/graphics/Canvas;)V
+    .locals 4
 
     const/4 v0, 0x0
 
-    .line 409
+    .line 405
     :goto_0
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -2660,7 +2650,7 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 410
+    .line 406
     invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -2671,26 +2661,30 @@
 
     move-result-object v1
 
-    iget v2, p3, Lcom/miui/home/launcher/Workspace;->mVisibleRange:I
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getDeviceWidth()I
 
-    div-int v2, p2, v2
+    move-result v2
+
+    iget v3, p2, Lcom/miui/home/launcher/Workspace;->mVisibleRange:I
+
+    div-int/2addr v2, v3
 
     mul-int/2addr v2, v0
 
-    invoke-static {p7, v1, p1, v2}, Lcom/miui/home/launcher/WallpaperUtils;->drawScreenByCanvas(Landroid/graphics/Canvas;Lcom/miui/home/launcher/CellLayout;Lcom/miui/home/launcher/Launcher;I)V
+    invoke-static {p5, v1, p1, v2}, Lcom/miui/home/launcher/WallpaperUtils;->drawScreenByCanvas(Landroid/graphics/Canvas;Lcom/miui/home/launcher/CellLayout;Lcom/miui/home/launcher/Launcher;I)V
 
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
     :cond_0
-    if-nez p4, :cond_1
+    if-nez p3, :cond_1
 
-    .line 414
-    invoke-static {p7, p3, p2, p5}, Lcom/miui/home/launcher/WallpaperUtils;->drawIndicator(Landroid/graphics/Canvas;Lcom/miui/home/launcher/Workspace;II)V
+    .line 410
+    invoke-static {p5, p2}, Lcom/miui/home/launcher/WallpaperUtils;->drawIndicator(Landroid/graphics/Canvas;Lcom/miui/home/launcher/Workspace;)V
 
-    .line 415
-    invoke-static {p7, p1, p6, p2, p5}, Lcom/miui/home/launcher/WallpaperUtils;->drawHotSeat(Landroid/graphics/Canvas;Lcom/miui/home/launcher/Launcher;ZII)V
+    .line 411
+    invoke-static {p5, p1, p4}, Lcom/miui/home/launcher/WallpaperUtils;->drawHotSeat(Landroid/graphics/Canvas;Lcom/miui/home/launcher/Launcher;Z)V
 
     :cond_1
     return-void
@@ -2699,7 +2693,7 @@
 .method static synthetic lambda$sendLockWallpaperBroadcast$1(ZLandroid/content/Context;)V
     .locals 2
 
-    .line 1063
+    .line 1055
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.miui.keyguard.setwallpaper"
@@ -2708,10 +2702,10 @@
 
     const-string v1, "set_lock_wallpaper_result"
 
-    .line 1064
+    .line 1056
     invoke-virtual {v0, v1, p0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 1065
+    .line 1057
     invoke-virtual {p1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
     return-void
@@ -2720,7 +2714,7 @@
 .method private static obtainCurrentScreenMode()Lcom/miui/home/launcher/common/ScreenMode;
     .locals 1
 
-    .line 117
+    .line 115
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -2747,12 +2741,12 @@
 
     if-eqz p2, :cond_0
 
-    .line 200
+    .line 198
     instance-of p0, p1, Lcom/miui/home/launcher/WallpaperUtils$WallpaperColorChangedListener;
 
     if-eqz p0, :cond_0
 
-    .line 201
+    .line 199
     check-cast p1, Lcom/miui/home/launcher/WallpaperUtils$WallpaperColorChangedListener;
 
     invoke-interface {p1}, Lcom/miui/home/launcher/WallpaperUtils$WallpaperColorChangedListener;->onWallpaperColorChanged()V
@@ -2766,10 +2760,10 @@
 
     const/4 v0, 0x0
 
-    .line 137
+    .line 135
     invoke-static {v0}, Lcom/miui/home/launcher/WallpaperUtils;->setCurrentWallpaperColorMode(I)V
 
-    .line 138
+    .line 136
     invoke-static {v0}, Lcom/miui/home/launcher/WallpaperUtils;->setCurrentStatusBarAreaColorMode(I)V
 
     return-void
@@ -2778,7 +2772,7 @@
 .method private static onHotSeatsColorModeChanged(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 309
+    .line 307
     invoke-virtual {p0}, Lcom/miui/home/launcher/Launcher;->getHotSeats()Lcom/miui/home/launcher/hotseats/HotSeats;
 
     move-result-object p0
@@ -2787,7 +2781,7 @@
 
     return-void
 
-    .line 311
+    .line 309
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/hotseats/HotSeats;->onWallpaperColorChanged()V
 
@@ -2797,7 +2791,7 @@
 .method private static onLockWallpaperChanged(Z)Z
     .locals 3
 
-    .line 900
+    .line 892
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -2813,10 +2807,10 @@
 
     const-string p0, "currentWallpaperInfo"
 
-    .line 903
+    .line 895
     invoke-static {v0, p0}, Lcom/miui/home/launcher/common/PreferenceUtils;->removeKey(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 904
+    .line 896
     invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -2829,11 +2823,11 @@
 
     goto :goto_0
 
-    .line 907
+    .line 899
     :cond_1
     invoke-static {v1}, Lcom/miui/home/launcher/WallpaperUtils;->setLockScreenShowLiveWallpaper(Z)V
 
-    .line 909
+    .line 901
     :goto_0
     new-instance p0, Landroid/content/Intent;
 
@@ -2851,14 +2845,14 @@
 .method private static onScreenColorModeChanged(Lcom/miui/home/launcher/Launcher;)V
     .locals 2
 
-    .line 302
+    .line 300
     invoke-static {p0}, Lcom/miui/home/launcher/WallpaperUtils;->getDefaultScreenList(Lcom/miui/home/launcher/Launcher;)Ljava/util/List;
 
     move-result-object p0
 
     const/4 v0, 0x0
 
-    .line 303
+    .line 301
     :goto_0
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -2866,7 +2860,7 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 304
+    .line 302
     invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -2890,7 +2884,7 @@
 
     return-void
 
-    .line 852
+    .line 844
     :cond_0
     sget-object v0, Lcom/miui/home/launcher/WallpaperUtils;->sWallpaperLock:Ljava/lang/Object;
 
@@ -2899,19 +2893,19 @@
     :try_start_0
     const-string v1, "backup_lock_wallpaper"
 
-    .line 853
+    .line 845
     invoke-virtual {p0, v1}, Landroid/content/Context;->getFileStreamPath(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v1
 
-    .line 854
+    .line 846
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 855
+    .line 847
     invoke-virtual {v1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v2
@@ -2922,27 +2916,27 @@
 
     const-string v2, "pref_key_backed_up_lock_wallpaper_path"
 
-    .line 856
+    .line 848
     invoke-static {v2}, Lcom/miui/home/launcher/WallpaperUtils;->getWallpaperSourcePath(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 857
+    .line 849
     invoke-static {p0, v2}, Lcom/miui/home/launcher/common/ThemeUtils;->tellThemeLockWallpaperPath(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 858
+    .line 850
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
     const-string p0, "pref_key_backed_up_lock_wallpaper_path"
 
     const/4 v1, 0x0
 
-    .line 859
+    .line 851
     invoke-static {p0, v1}, Lcom/miui/home/launcher/WallpaperUtils;->setWallpaperSourceUri(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 862
+    .line 854
     :cond_1
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -2952,16 +2946,16 @@
 
     const-string v1, "/data/system/theme/lock_wallpaper"
 
-    .line 863
+    .line 855
     invoke-static {v1}, Lmiui/theme/ThemeFileUtils;->remove(Ljava/lang/String;)Z
 
     :cond_2
     const-string v1, ""
 
-    .line 865
+    .line 857
     invoke-static {p0, v1}, Lcom/miui/home/launcher/common/ThemeUtils;->tellThemeLockWallpaperPath(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 867
+    .line 859
     :goto_0
     monitor-exit v0
 
@@ -2980,19 +2974,19 @@
 .method public static resetLockWallpaperProviderIfNeeded(Landroid/content/Context;)V
     .locals 5
 
-    .line 1000
+    .line 992
     invoke-static {p0}, Lcom/miui/home/launcher/WallpaperUtils;->getLockWallpaperProvider(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1001
+    .line 993
     sget-boolean v1, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     if-eqz v1, :cond_1
 
     const-string v1, "com.xiaomi.tv.gallerylockscreen.lockscreen_magazine_provider"
 
-    .line 1002
+    .line 994
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -3018,12 +3012,12 @@
     :goto_0
     const-string v2, "com.android.thememanager.theme_lockwallpaper"
 
-    .line 1003
+    .line 995
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
-    .line 1004
+    .line 996
     invoke-static {p0}, Lcom/miui/home/launcher/WallpaperUtils;->isProviderClosedByUser(Landroid/content/Context;)Z
 
     move-result v3
@@ -3035,14 +3029,14 @@
     :cond_2
     if-nez v3, :cond_5
 
-    .line 1005
+    .line 997
     new-instance v3, Ljava/io/File;
 
     const-string v4, "/data/system/theme/lock_wallpaper"
 
     invoke-direct {v3, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1007
+    .line 999
     invoke-virtual {v3}, Ljava/io/File;->exists()Z
 
     move-result v3
@@ -3057,7 +3051,7 @@
 
     if-eqz v1, :cond_5
 
-    .line 1008
+    .line 1000
     :cond_3
     invoke-static {p0}, Lcom/miui/home/launcher/DeviceConfig;->needHideLockProvider(Landroid/content/Context;)Z
 
@@ -3065,7 +3059,7 @@
 
     if-nez v0, :cond_5
 
-    .line 1009
+    .line 1001
     invoke-static {p0}, Lcom/miui/home/launcher/WallpaperUtils;->hasValidProvider(Landroid/content/Context;)Z
 
     move-result v0
@@ -3074,7 +3068,7 @@
 
     if-eqz v1, :cond_5
 
-    .line 1010
+    .line 1002
     :cond_4
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -3090,7 +3084,7 @@
 
     const-string v1, "reset Default Lock Wallpaper Provider"
 
-    .line 1012
+    .line 1004
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_5
@@ -3098,7 +3092,7 @@
 
     const-string v0, "currentWallpaperInfo"
 
-    .line 1015
+    .line 1007
     invoke-static {p0, v0}, Lcom/miui/home/launcher/common/PreferenceUtils;->removeKey(Landroid/content/Context;Ljava/lang/String;)V
 
     :cond_6
@@ -3110,7 +3104,7 @@
 
     const/4 v0, 0x0
 
-    .line 757
+    .line 749
     :try_start_0
     new-instance v1, Ljava/io/FileOutputStream;
 
@@ -3119,13 +3113,13 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 758
+    .line 750
     :try_start_1
     sget-boolean p1, Lcom/miui/home/launcher/DeviceConfig;->IS_MIUI_LITE_DEVICE:Z
 
     if-eqz p1, :cond_0
 
-    .line 759
+    .line 751
     sget-object p1, Landroid/graphics/Bitmap$CompressFormat;->WEBP:Landroid/graphics/Bitmap$CompressFormat;
 
     const/16 v0, 0xa
@@ -3134,7 +3128,7 @@
 
     goto :goto_0
 
-    .line 761
+    .line 753
     :cond_0
     sget-object p1, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
 
@@ -3148,7 +3142,7 @@
     :goto_0
     const/4 p0, 0x1
 
-    .line 769
+    .line 761
     :try_start_2
     invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
     :try_end_2
@@ -3159,7 +3153,7 @@
     :catch_0
     move-exception p1
 
-    .line 772
+    .line 764
     invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_3
@@ -3186,7 +3180,7 @@
     :catch_2
     move-exception p0
 
-    .line 765
+    .line 757
     :goto_1
     :try_start_3
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
@@ -3195,7 +3189,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 769
+    .line 761
     :try_start_4
     invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
     :try_end_4
@@ -3206,7 +3200,7 @@
     :catch_3
     move-exception p0
 
-    .line 772
+    .line 764
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     :cond_1
@@ -3219,7 +3213,7 @@
     :goto_4
     if-eqz v1, :cond_2
 
-    .line 769
+    .line 761
     :try_start_5
     invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
     :try_end_5
@@ -3230,10 +3224,10 @@
     :catch_4
     move-exception p1
 
-    .line 772
+    .line 764
     invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 774
+    .line 766
     :cond_2
     :goto_5
     throw p0
@@ -3242,7 +3236,7 @@
 .method public static sendLockWallpaperBroadcast(Landroid/content/Context;Z)V
     .locals 1
 
-    .line 1062
+    .line 1054
     new-instance v0, Lcom/miui/home/launcher/-$$Lambda$WallpaperUtils$oPg2hz6q5VlHOcoH3_oAKFDp5hw;
 
     invoke-direct {v0, p1, p0}, Lcom/miui/home/launcher/-$$Lambda$WallpaperUtils$oPg2hz6q5VlHOcoH3_oAKFDp5hw;-><init>(ZLandroid/content/Context;)V
@@ -3255,7 +3249,7 @@
 .method public static setCurrentSearchBarAreaColorMode(I)V
     .locals 0
 
-    .line 125
+    .line 123
     sput p0, Lcom/miui/home/launcher/WallpaperUtils;->sSearchBarAreaColorMode:I
 
     return-void
@@ -3264,7 +3258,7 @@
 .method public static setCurrentStatusBarAreaColorMode(I)V
     .locals 0
 
-    .line 218
+    .line 216
     sput p0, Lcom/miui/home/launcher/WallpaperUtils;->sCurrentStatusBarAreaColorMode:I
 
     return-void
@@ -3273,7 +3267,7 @@
 .method public static setCurrentWallpaperColorMode(I)V
     .locals 0
 
-    .line 222
+    .line 220
     sput p0, Lcom/miui/home/launcher/WallpaperUtils;->sCurrentWallpaperColorMode:I
 
     return-void
@@ -3284,23 +3278,23 @@
 
     const/4 v0, 0x0
 
-    .line 349
-    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/CellLayout;->setEditModeOnWallpaperChanged(Z)V
+    .line 347
+    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/CellLayout;->setEditMode(Z)V
 
-    .line 350
+    .line 348
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/CellLayout;->quickShowOrHideAllShortcutsCheckBox(Z)V
 
-    .line 351
+    .line 349
     invoke-virtual {p0, p2}, Lcom/miui/home/launcher/CellLayout;->draw(Landroid/graphics/Canvas;)V
 
-    .line 352
+    .line 350
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->isInNormalEditing()Z
 
     move-result p2
 
-    invoke-virtual {p0, p2}, Lcom/miui/home/launcher/CellLayout;->setEditModeOnWallpaperChanged(Z)V
+    invoke-virtual {p0, p2}, Lcom/miui/home/launcher/CellLayout;->setEditMode(Z)V
 
-    .line 353
+    .line 351
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->isInNormalEditing()Z
 
     move-result p1
@@ -3324,7 +3318,7 @@
 .method private static setGadgetMode(Lcom/miui/home/launcher/CellLayout;Z)V
     .locals 6
 
-    .line 462
+    .line 454
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
@@ -3333,7 +3327,7 @@
 
     return-void
 
-    .line 465
+    .line 457
     :cond_0
     iget-object v0, v0, Lcom/miui/home/launcher/Launcher;->mGadgets:Ljava/util/ArrayList;
 
@@ -3355,7 +3349,7 @@
 
     check-cast v1, Lcom/miui/home/launcher/gadget/Gadget;
 
-    .line 466
+    .line 458
     invoke-virtual {v1}, Lcom/miui/home/launcher/gadget/Gadget;->getTag()Ljava/lang/Object;
 
     move-result-object v2
@@ -3374,12 +3368,12 @@
 
     if-eqz p1, :cond_2
 
-    .line 468
+    .line 460
     invoke-virtual {v1}, Lcom/miui/home/launcher/gadget/Gadget;->onEditNormal()V
 
     goto :goto_0
 
-    .line 470
+    .line 462
     :cond_2
     invoke-virtual {v1}, Lcom/miui/home/launcher/gadget/Gadget;->onEditDisable()V
 
@@ -3392,7 +3386,7 @@
 .method public static setIsCurrentWallpaperScrollable(Z)V
     .locals 0
 
-    .line 226
+    .line 224
     sput-boolean p0, Lcom/miui/home/launcher/WallpaperUtils;->sIsCurrentWallpaperScrollable:Z
 
     return-void
@@ -3403,7 +3397,7 @@
 
     const-string v0, "pref_key_last_request_lock_wallpaper_time"
 
-    .line 1041
+    .line 1033
     invoke-static {p0, v0, p1, p2}, Lcom/miui/home/launcher/common/PreferenceUtils;->putLong(Landroid/content/Context;Ljava/lang/String;J)V
 
     const/4 p0, 0x1
@@ -3414,7 +3408,7 @@
 .method private static setLockScreenShowLiveWallpaper(Z)V
     .locals 2
 
-    .line 320
+    .line 318
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -3426,12 +3420,12 @@
     :cond_0
     const-string v1, "keyguard_show_livewallpaper"
 
-    .line 322
+    .line 320
     invoke-static {v0, v1, p0}, Lcom/miui/home/launcher/common/PreferenceUtils;->putBoolean(Landroid/content/Context;Ljava/lang/String;Z)V
 
     if-eqz p0, :cond_1
 
-    .line 324
+    .line 322
     invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -3449,12 +3443,12 @@
 .method public static setLockWallpaper(Landroid/content/Context;Landroid/graphics/Bitmap;ZLjava/lang/String;)Z
     .locals 3
 
-    .line 882
+    .line 874
     sget-object v0, Lcom/miui/home/launcher/WallpaperUtils;->sWallpaperLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 883
+    .line 875
     :try_start_0
     new-instance v1, Ljava/io/File;
 
@@ -3462,7 +3456,7 @@
 
     invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 884
+    .line 876
     invoke-virtual {v1}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v1
@@ -3475,7 +3469,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 886
+    .line 878
     invoke-virtual {p0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v2
@@ -3486,12 +3480,12 @@
 
     if-nez p1, :cond_0
 
-    .line 887
+    .line 879
     monitor-exit v0
 
     return v1
 
-    .line 889
+    .line 881
     :cond_0
     invoke-virtual {p0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
@@ -3499,10 +3493,10 @@
 
     invoke-static {p1, p3, p2}, Lcom/miui/home/launcher/WallpaperUtils;->setLockWallpaperWithoutCrop(Ljava/lang/String;Ljava/lang/String;Z)Z
 
-    .line 890
+    .line 882
     invoke-virtual {p0}, Ljava/io/File;->delete()Z
 
-    .line 892
+    .line 884
     :cond_1
     new-instance p0, Ljava/io/File;
 
@@ -3516,7 +3510,7 @@
 
     if-eqz p0, :cond_2
 
-    .line 893
+    .line 885
     invoke-static {p2}, Lcom/miui/home/launcher/WallpaperUtils;->onLockWallpaperChanged(Z)Z
 
     move-result p0
@@ -3525,7 +3519,7 @@
 
     return p0
 
-    .line 895
+    .line 887
     :cond_2
     monitor-exit v0
 
@@ -3534,7 +3528,7 @@
     :catchall_0
     move-exception p0
 
-    .line 896
+    .line 888
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -3545,12 +3539,12 @@
 .method public static setLockWallpaper(Landroid/net/Uri;Z)Z
     .locals 7
 
-    .line 914
+    .line 906
     sget-object v0, Lcom/miui/home/launcher/WallpaperUtils;->sWallpaperLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 915
+    .line 907
     :try_start_0
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
@@ -3560,12 +3554,12 @@
 
     if-nez v1, :cond_0
 
-    .line 916
+    .line 908
     monitor-exit v0
 
     return v2
 
-    .line 917
+    .line 909
     :cond_0
     invoke-static {p0}, Lcom/miui/home/launcher/common/Utilities;->isUriFileExists(Landroid/net/Uri;)Z
 
@@ -3577,25 +3571,25 @@
 
     return v2
 
-    .line 918
+    .line 910
     :cond_1
     invoke-static {v1}, Lcom/miui/home/launcher/WallpaperUtils;->getScreenSize(Lcom/miui/home/launcher/Launcher;)Landroid/graphics/Point;
 
     move-result-object v3
 
-    .line 919
+    .line 911
     invoke-static {p0}, Lcom/miui/home/launcher/WallpaperUtils;->getRotatedBitmap(Landroid/net/Uri;)Landroid/graphics/Bitmap;
 
     move-result-object v4
 
     if-nez v4, :cond_2
 
-    .line 921
+    .line 913
     monitor-exit v0
 
     return v2
 
-    .line 923
+    .line 915
     :cond_2
     invoke-virtual {v4}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -3625,7 +3619,7 @@
 
     if-nez v2, :cond_3
 
-    .line 924
+    .line 916
     invoke-static {p0, p1}, Lcom/miui/home/launcher/WallpaperUtils;->setLockWallpaperWithoutCrop(Landroid/net/Uri;Z)Z
 
     move-result p0
@@ -3634,13 +3628,13 @@
 
     return p0
 
-    .line 926
+    .line 918
     :cond_3
     invoke-static {v1, v4, v3}, Lcom/miui/home/launcher/WallpaperUtils;->autoCropWallpaper(Landroid/content/Context;Landroid/graphics/Bitmap;Landroid/graphics/Point;)Landroid/graphics/Bitmap;
 
     move-result-object v2
 
-    .line 927
+    .line 919
     invoke-virtual {p0}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -3656,7 +3650,7 @@
     :catchall_0
     move-exception p0
 
-    .line 928
+    .line 920
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -3669,7 +3663,7 @@
 
     const-string v0, "pref_key_lock_wallpaper_update_minute"
 
-    .line 1032
+    .line 1024
     invoke-static {p0, v0, p1}, Lcom/miui/home/launcher/common/PreferenceUtils;->putInt(Landroid/content/Context;Ljava/lang/String;I)V
 
     const/4 p0, 0x1
@@ -3680,7 +3674,7 @@
 .method public static setLockWallpaperWithoutCrop(Landroid/net/Uri;Z)Z
     .locals 7
 
-    .line 823
+    .line 815
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -3694,7 +3688,7 @@
     :cond_0
     if-eqz p0, :cond_4
 
-    .line 825
+    .line 817
     invoke-static {p0}, Lcom/miui/home/launcher/common/Utilities;->isUriFileExists(Landroid/net/Uri;)Z
 
     move-result v2
@@ -3703,7 +3697,7 @@
 
     goto :goto_1
 
-    .line 829
+    .line 821
     :cond_1
     :try_start_0
     invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->getContentResolver()Landroid/content/ContentResolver;
@@ -3716,22 +3710,22 @@
 
     const-string v3, "lockWallpaperBack"
 
-    .line 830
+    .line 822
     invoke-virtual {v0, v3}, Lcom/miui/home/launcher/Application;->getFileStreamPath(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v0
 
-    .line 831
+    .line 823
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v3
 
     if-nez v3, :cond_2
 
-    .line 832
+    .line 824
     invoke-virtual {v0}, Ljava/io/File;->createNewFile()Z
 
-    .line 834
+    .line 826
     :cond_2
     new-instance v3, Ljava/io/FileOutputStream;
 
@@ -3739,10 +3733,10 @@
 
     const/16 v4, 0x400
 
-    .line 836
+    .line 828
     new-array v4, v4, [B
 
-    .line 838
+    .line 830
     :goto_0
     invoke-virtual {v2, v4}, Ljava/io/InputStream;->read([B)I
 
@@ -3752,19 +3746,19 @@
 
     if-eq v5, v6, :cond_3
 
-    .line 839
+    .line 831
     invoke-virtual {v3, v4, v1, v5}, Ljava/io/OutputStream;->write([BII)V
 
     goto :goto_0
 
-    .line 841
+    .line 833
     :cond_3
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
 
-    .line 842
+    .line 834
     invoke-virtual {v3}, Ljava/io/OutputStream;->close()V
 
-    .line 843
+    .line 835
     invoke-virtual {v0}, Ljava/io/File;->getPath()Ljava/lang/String;
 
     move-result-object v0
@@ -3784,7 +3778,7 @@
     :catch_0
     move-exception p0
 
-    .line 845
+    .line 837
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     return v1
@@ -3799,10 +3793,10 @@
 
     const-string v0, "pref_key_lock_wallpaper_path"
 
-    .line 792
+    .line 784
     invoke-static {v0, p1}, Lcom/miui/home/launcher/WallpaperUtils;->setWallpaperSourceUri(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 793
+    .line 785
     invoke-static {p0, p2}, Lcom/miui/home/launcher/WallpaperUtils;->setLockWallpaperWithoutCrop(Ljava/lang/String;Z)Z
 
     move-result p0
@@ -3813,23 +3807,23 @@
 .method public static setLockWallpaperWithoutCrop(Ljava/lang/String;Z)Z
     .locals 2
 
-    .line 797
+    .line 789
     sget-object v0, Lcom/miui/home/launcher/WallpaperUtils;->sWallpaperLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 798
+    .line 790
     :try_start_0
     new-instance v1, Lcom/miui/home/launcher/WallpaperUtils$1;
 
     invoke-direct {v1, p0, p1}, Lcom/miui/home/launcher/WallpaperUtils$1;-><init>(Ljava/lang/String;Z)V
 
-    .line 817
+    .line 809
     invoke-interface {v1}, Ljava/lang/Runnable;->run()V
 
     const/4 p0, 0x1
 
-    .line 818
+    .line 810
     monitor-exit v0
 
     return p0
@@ -3837,7 +3831,7 @@
     :catchall_0
     move-exception p0
 
-    .line 819
+    .line 811
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -3850,7 +3844,7 @@
 
     const-string v0, "pref_key_provider_closed"
 
-    .line 1050
+    .line 1042
     invoke-static {p0, v0, p1}, Lcom/miui/home/launcher/common/PreferenceUtils;->putBoolean(Landroid/content/Context;Ljava/lang/String;Z)V
 
     return-void
@@ -3861,7 +3855,7 @@
 
     const-string/jumbo v0, "wallpaper"
 
-    .line 330
+    .line 328
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
@@ -3870,14 +3864,14 @@
 
     if-eqz p1, :cond_0
 
-    .line 333
+    .line 331
     invoke-virtual {p1}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object p1
 
     goto :goto_0
 
-    .line 334
+    .line 332
     :cond_0
     invoke-virtual {v0}, Landroid/app/WallpaperManager;->getWallpaperInfo()Landroid/app/WallpaperInfo;
 
@@ -3890,7 +3884,7 @@
     :cond_1
     const/4 p1, 0x0
 
-    .line 337
+    .line 335
     :goto_0
     invoke-static {p0, p1}, Lcom/miui/home/launcher/WallpaperUtils;->startWallpaperPreviewActivity(Landroid/content/Context;Landroid/net/Uri;)V
 
@@ -3900,7 +3894,7 @@
 .method public static setWallpaperSourceUri(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 146
+    .line 144
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -3909,7 +3903,7 @@
 
     return-void
 
-    .line 149
+    .line 147
     :cond_0
     invoke-static {v0, p0, p1}, Lcom/miui/home/launcher/common/PreferenceUtils;->putString(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
@@ -3919,14 +3913,14 @@
 .method public static startWallpaperPreviewActivity(Landroid/content/Context;Landroid/net/Uri;)V
     .locals 4
 
-    .line 341
+    .line 339
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "miui.intent.action.START_WALLPAPER_DETAIL"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 342
+    .line 340
     new-instance v1, Landroid/content/ComponentName;
 
     const-string v2, "com.android.thememanager"
@@ -3937,15 +3931,15 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 343
+    .line 341
     invoke-virtual {v0, p1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
     const/4 p1, 0x1
 
-    .line 344
+    .line 342
     invoke-virtual {v0, p1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 345
+    .line 343
     invoke-virtual {p0, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
     return-void
@@ -3954,14 +3948,14 @@
 .method public static updateLauncherComponentColorByWallpaper(Lcom/miui/home/launcher/gadget/ColorUpdatable;)V
     .locals 1
 
-    .line 234
+    .line 232
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->supportCheckRegionalWallpaper()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 235
+    .line 233
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
@@ -3970,7 +3964,7 @@
 
     return-void
 
-    .line 237
+    .line 235
     :cond_0
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getDesktopWallpaperManager()Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager;
 
@@ -3980,13 +3974,13 @@
 
     return-void
 
-    .line 239
+    .line 237
     :cond_1
     invoke-virtual {v0, p0}, Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager;->updateLauncherComponentColorByWallpaper(Lcom/miui/home/launcher/gadget/ColorUpdatable;)V
 
     goto :goto_1
 
-    .line 241
+    .line 239
     :cond_2
     invoke-static {}, Lcom/miui/home/launcher/WallpaperUtils;->hasAppliedLightWallpaper()Z
 
@@ -4011,7 +4005,7 @@
 .method public static updateScreenMode()V
     .locals 1
 
-    .line 121
+    .line 119
     invoke-static {}, Lcom/miui/home/launcher/WallpaperUtils;->obtainCurrentScreenMode()Lcom/miui/home/launcher/common/ScreenMode;
 
     move-result-object v0
@@ -4024,7 +4018,7 @@
 .method public static varyViewGroupByWallpaper(Landroid/view/ViewGroup;)V
     .locals 4
 
-    .line 190
+    .line 188
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v0
@@ -4034,17 +4028,17 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 192
+    .line 190
     invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 193
+    .line 191
     instance-of v3, v2, Lcom/miui/home/launcher/WallpaperUtils$WallpaperColorChangedListener;
 
     if-eqz v3, :cond_0
 
-    .line 194
+    .line 192
     check-cast v2, Lcom/miui/home/launcher/WallpaperUtils$WallpaperColorChangedListener;
 
     invoke-interface {v2}, Lcom/miui/home/launcher/WallpaperUtils$WallpaperColorChangedListener;->onWallpaperColorChanged()V

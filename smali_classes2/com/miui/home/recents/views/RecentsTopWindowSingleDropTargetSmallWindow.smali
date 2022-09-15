@@ -250,7 +250,7 @@
 .method protected onFinishInflate()V
     .locals 1
 
-    const v0, 0x7f0a0292
+    const v0, 0x7f0a028e
 
     .line 45
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/RecentsTopWindowSingleDropTargetSmallWindow;->findViewById(I)Landroid/view/View;
@@ -259,7 +259,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/views/RecentsTopWindowSingleDropTargetSmallWindow;->mSmallwindowBackground:Landroid/view/View;
 
-    const v0, 0x7f0a031f
+    const v0, 0x7f0a031b
 
     .line 46
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/RecentsTopWindowSingleDropTargetSmallWindow;->findViewById(I)Landroid/view/View;
@@ -268,7 +268,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/views/RecentsTopWindowSingleDropTargetSmallWindow;->mSmallwindowIcon:Landroid/view/View;
 
-    const v0, 0x7f0a0295
+    const v0, 0x7f0a0291
 
     .line 47
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/RecentsTopWindowSingleDropTargetSmallWindow;->findViewById(I)Landroid/view/View;
@@ -279,7 +279,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/views/RecentsTopWindowSingleDropTargetSmallWindow;->mSmallwindowHoldText:Landroid/widget/TextView;
 
-    const v0, 0x7f0a0294
+    const v0, 0x7f0a0290
 
     .line 48
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/RecentsTopWindowSingleDropTargetSmallWindow;->findViewById(I)Landroid/view/View;
@@ -290,7 +290,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/views/RecentsTopWindowSingleDropTargetSmallWindow;->mSmallwindowDragText:Landroid/widget/TextView;
 
-    const v0, 0x7f0a031e
+    const v0, 0x7f0a031a
 
     .line 49
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/RecentsTopWindowSingleDropTargetSmallWindow;->findViewById(I)Landroid/view/View;
@@ -567,7 +567,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f080656
+    const v2, 0x7f080653
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -582,7 +582,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f080698
+    const v2, 0x7f080694
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -612,7 +612,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f1103e1
+    const v3, 0x7f1103dc
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -640,7 +640,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f1103e0
+    const v2, 0x7f1103db
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -653,7 +653,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070613
+    const v1, 0x7f07060e
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -666,7 +666,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f07060f
+    const v1, 0x7f07060a
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -679,7 +679,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070611
+    const v1, 0x7f07060c
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -690,7 +690,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f070610
+    const v2, 0x7f07060b
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -713,7 +713,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f07060b
+    const v2, 0x7f070606
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -731,7 +731,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f07060c
+    const v1, 0x7f070607
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -744,7 +744,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f07060d
+    const v1, 0x7f070608
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

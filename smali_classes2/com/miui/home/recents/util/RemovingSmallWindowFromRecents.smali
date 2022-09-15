@@ -11,7 +11,7 @@
 .method public static doToast(Landroid/content/Context;)V
     .locals 2
 
-    const v0, 0x7f1104c8
+    const v0, 0x7f1104c1
 
     const/4 v1, 0x1
 

@@ -138,7 +138,7 @@
 
     move-result-object v1
 
-    const-string v2, "translationY"
+    const-string/jumbo v2, "translationY"
 
     const/4 v3, 0x3
 
@@ -209,6 +209,8 @@
     invoke-static {p1}, Lcom/miui/home/launcher/common/Utilities;->useViewToPost(Ljava/lang/Runnable;)V
 
     return-void
+
+    nop
 
     :array_0
     .array-data 4

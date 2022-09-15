@@ -899,7 +899,7 @@
 
     const-string p1, "SuggestionsAdapter"
 
-    const-string v1, "unexpected error retrieving valid column from cursor, did the remote process die?"
+    const-string/jumbo v1, "unexpected error retrieving valid column from cursor, did the remote process die?"
 
     .line 685
     invoke-static {p1, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I

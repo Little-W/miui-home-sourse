@@ -74,7 +74,7 @@
 
     iput-object p1, p0, Lcom/miui/home/settings/DeleteAppAdapter$MyViewHolder;->name:Landroid/widget/TextView;
 
-    const p1, 0x7f0a03aa
+    const p1, 0x7f0a03a6
 
     .line 135
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;

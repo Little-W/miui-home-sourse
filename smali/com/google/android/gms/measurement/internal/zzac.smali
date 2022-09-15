@@ -487,7 +487,7 @@
 
     if-nez v1, :cond_0
 
-    const-string v1, "uninitialized"
+    const-string/jumbo v1, "uninitialized"
 
     .line 20
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -523,7 +523,7 @@
 
     if-nez v1, :cond_2
 
-    const-string v1, "uninitialized"
+    const-string/jumbo v1, "uninitialized"
 
     .line 24
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;

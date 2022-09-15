@@ -329,7 +329,6 @@
     <string name="exit_overview_because_task_stack_changed">Нещодавні програми були закриті через зміни, які виникли у фоновому режимі</string>
     <string name="expand_button_title">Додатково</string>
     <string name="exposed_dropdown_menu_content_description">Показати спадне меню</string>
-    <string name="external_not_support_split_screen_j18">Розділення екрана не підтримується на зовнішньому екрані</string>
     <string name="failed_to_delete_temporary">Не вдалося видалити</string>
     <string name="failed_to_drop">Не вдалося перемістити</string>
     <string name="failed_to_drop_widget_invalid">Недійсний віджет</string>
@@ -548,7 +547,6 @@
     <string name="midnight">Ніч</string>
     <string name="minus_one_screen">Стрічка віджетів</string>
     <string name="miui_screen_config_title">Налаштування робочого столу</string>
-    <string name="miui_widget_menu_replace_text">Змінити</string>
     <string name="miuix_access_state_desc">Вибрано</string>
     <string name="miuix_appcompat_action_mode_deselect_all">Зняти вибір</string>
     <string name="miuix_appcompat_action_mode_select_all">Вибрати все</string>
@@ -575,8 +573,6 @@
     <string name="monday">Понеділок</string>
     <string name="monday_short">Пон</string>
     <string name="monday_shortest">Пн</string>
-    <string name="monochrome_summary">Change background color for compatible icons</string>
-    <string name="monochrome_title">Background color</string>
     <string name="month_april">Квітень</string>
     <string name="month_april_short">Квіт</string>
     <string name="month_april_shortest">Квіт</string>

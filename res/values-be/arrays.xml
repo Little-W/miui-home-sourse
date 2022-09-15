@@ -49,13 +49,6 @@
         <item>Па змаўчанні</item>
         <item>Класічны</item>
     </string-array>
-    <string-array name="monochrome_color_entries">
-        <item>Па змаўчанні</item>
-        <item>Сіні</item>
-        <item>Зялёны</item>
-        <item>Фіялетавы</item>
-        <item>Карычневы</item>
-    </string-array>
     <string-array name="transformation_entries">
         <item>Слайд</item>
         <item>Згасанне</item>

@@ -281,6 +281,9 @@
 
 
 # virtual methods
+.method public abstract createLauncherClient(Lcom/miui/home/launcher/allapps/LauncherMode;)V
+.end method
+
 .method public abstract destroyLauncherClient()V
 .end method
 

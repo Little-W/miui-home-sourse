@@ -16,7 +16,7 @@
 # static fields
 .field private static final DEFAULT_INTERPOLATOR:Landroid/view/animation/Interpolator;
 
-.field private static sDisableAutoLayoutAnimation:Z
+.field private static sDisableAutoLayoutAnimation:Z = false
 
 
 # direct methods

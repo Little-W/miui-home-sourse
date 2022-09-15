@@ -29,7 +29,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/LauncherModel;Lcom/miui/home/launcher/LauncherModel$Callbacks;Lcom/miui/home/launcher/upsidescene/data/FreeStyle;)V
     .locals 0
 
-    .line 2737
+    .line 2725
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherModel$11;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     iput-object p2, p0, Lcom/miui/home/launcher/LauncherModel$11;->val$callbacks:Lcom/miui/home/launcher/LauncherModel$Callbacks;
@@ -46,7 +46,7 @@
 .method public run()V
     .locals 2
 
-    .line 2739
+    .line 2727
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$11;->val$callbacks:Lcom/miui/home/launcher/LauncherModel$Callbacks;
 
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherModel$11;->val$freeStyle:Lcom/miui/home/launcher/upsidescene/data/FreeStyle;

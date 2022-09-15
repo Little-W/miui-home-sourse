@@ -15,7 +15,7 @@
 .method constructor <init>(Lcom/xiaomi/onetrack/api/h;Ljava/lang/String;)V
     .locals 0
 
-    .line 640
+    .line 638
     iput-object p1, p0, Lcom/xiaomi/onetrack/api/u;->b:Lcom/xiaomi/onetrack/api/h;
 
     iput-object p2, p0, Lcom/xiaomi/onetrack/api/u;->a:Ljava/lang/String;
@@ -30,7 +30,7 @@
 .method public run()V
     .locals 4
 
-    .line 644
+    .line 642
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/onetrack/api/u;->b:Lcom/xiaomi/onetrack/api/h;
 
@@ -46,24 +46,24 @@
 
     move-result-object v0
 
-    .line 645
+    .line 643
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 646
+    .line 644
     new-instance v1, Lorg/json/JSONObject;
 
     invoke-direct {v1, v0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 647
+    .line 645
     iget-object v0, p0, Lcom/xiaomi/onetrack/api/u;->a:Ljava/lang/String;
 
     invoke-virtual {v1, v0}, Lorg/json/JSONObject;->remove(Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 648
+    .line 646
     iget-object v0, p0, Lcom/xiaomi/onetrack/api/u;->b:Lcom/xiaomi/onetrack/api/h;
 
     invoke-static {v0}, Lcom/xiaomi/onetrack/api/h;->a(Lcom/xiaomi/onetrack/api/h;)Lcom/xiaomi/onetrack/Configuration;
@@ -89,7 +89,7 @@
 
     const-string v1, "OneTrackImp"
 
-    .line 651
+    .line 649
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V

@@ -1,4 +1,4 @@
-.class public Lcom/miui/home/launcher/compat/LauncherCellCountCompatNoWord;
+.class public final Lcom/miui/home/launcher/compat/LauncherCellCountCompatNoWord;
 .super Lcom/miui/home/launcher/compat/LauncherCellCountCompatResource;
 .source "LauncherCellCountCompatNoWord.kt"
 

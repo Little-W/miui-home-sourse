@@ -34,7 +34,7 @@
 .method public iconContainerId()I
     .locals 1
 
-    const v0, 0x7f0a03dd
+    const v0, 0x7f0a03d9
 
     return v0
 .end method
@@ -63,7 +63,7 @@
 .method public titleViewId()I
     .locals 1
 
-    const v0, 0x7f0a01a7
+    const v0, 0x7f0a01a3
 
     return v0
 .end method

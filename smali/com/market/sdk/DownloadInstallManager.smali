@@ -372,13 +372,7 @@
     .line 152
     iget-object v0, p0, Lcom/market/sdk/DownloadInstallManager;->mContext:Landroid/content/Context;
 
-    iget-object v1, p0, Lcom/market/sdk/DownloadInstallManager;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/market/sdk/XiaomiUpdateAgent;->getAppInfo(Landroid/content/Context;Ljava/lang/String;)Lcom/market/sdk/LocalAppInfo;
+    invoke-static {v0}, Lcom/market/sdk/XiaomiUpdateAgent;->getAppInfo(Landroid/content/Context;)Lcom/market/sdk/LocalAppInfo;
 
     move-result-object v0
 

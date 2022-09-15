@@ -26,7 +26,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    const-string v0, "true"
+    const-string/jumbo v0, "true"
 
     .line 7
     invoke-static {v0}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z

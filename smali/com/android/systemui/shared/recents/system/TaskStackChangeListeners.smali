@@ -16,7 +16,7 @@
 
 .field private static final TAG:Ljava/lang/String; = "TaskStackChangeListeners"
 
-.field private static sIsOnTaskSnapshotChangedTransactCodeValid:Z
+.field private static sIsOnTaskSnapshotChangedTransactCodeValid:Z = false
 
 .field private static sOnTaskSnapshotChangedTransactCode:I
 
@@ -772,7 +772,7 @@
     .line 69
     sget-object p1, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->TAG:Ljava/lang/String;
 
-    const-string v0, "unregisterTaskStackListener"
+    const-string/jumbo v0, "unregisterTaskStackListener"
 
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 

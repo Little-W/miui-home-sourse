@@ -539,7 +539,7 @@
 
     const-string v1, "sv"
 
-    const-string v2, "2.0.3"
+    const-string v2, "2.0.1"
 
     .line 91
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;

@@ -25,8 +25,8 @@
 
 .field public static final TextAppearance_Compat_Notification_Title:I = 0x7f120277
 
-.field public static final Widget_Compat_NotificationActionContainer:I = 0x7f120464
+.field public static final Widget_Compat_NotificationActionContainer:I = 0x7f120460
 
-.field public static final Widget_Compat_NotificationActionText:I = 0x7f120465
+.field public static final Widget_Compat_NotificationActionText:I = 0x7f120461
 
-.field public static final Widget_Support_CoordinatorLayout:I = 0x7f1205db
+.field public static final Widget_Support_CoordinatorLayout:I = 0x7f1205d7

@@ -15,9 +15,9 @@
 
 
 # static fields
-.field public static final menu_new_display_open:I = 0x7f1102b9
+.field public static final menu_new_display_open:I = 0x7f1102b7
 
-.field public static final menu_pc_open:I = 0x7f1102bb
+.field public static final menu_pc_open:I = 0x7f1102b9
 
 
 # direct methods

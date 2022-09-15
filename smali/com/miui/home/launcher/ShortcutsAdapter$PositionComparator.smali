@@ -30,7 +30,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 51
+    .line 52
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +41,7 @@
 .method public compare(Lcom/miui/home/launcher/ShortcutInfo;Lcom/miui/home/launcher/ShortcutInfo;)I
     .locals 0
 
-    .line 54
+    .line 55
     iget p1, p1, Lcom/miui/home/launcher/ShortcutInfo;->cellX:I
 
     iget p2, p2, Lcom/miui/home/launcher/ShortcutInfo;->cellX:I
@@ -62,7 +62,7 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    .line 51
+    .line 52
     check-cast p1, Lcom/miui/home/launcher/ShortcutInfo;
 
     check-cast p2, Lcom/miui/home/launcher/ShortcutInfo;

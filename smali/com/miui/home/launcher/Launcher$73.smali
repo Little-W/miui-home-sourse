@@ -37,7 +37,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;ILjava/util/ArrayList;Landroid/content/ComponentName;)V
     .locals 0
 
-    .line 8026
+    .line 8016
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$73;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iput p2, p0, Lcom/miui/home/launcher/Launcher$73;->val$userId:I
@@ -56,12 +56,12 @@
 .method public run()V
     .locals 5
 
-    .line 8029
+    .line 8019
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 8030
+    .line 8020
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$73;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v1}, Lcom/miui/home/launcher/Launcher;->access$3600(Lcom/miui/home/launcher/Launcher;)Ljava/util/HashSet;
@@ -86,12 +86,12 @@
 
     check-cast v2, Lcom/miui/home/launcher/ShortcutInfo;
 
-    .line 8031
+    .line 8021
     invoke-virtual {v2}, Lcom/miui/home/launcher/ShortcutInfo;->getUserId()I
 
     move-result v3
 
-    .line 8032
+    .line 8022
     iget-object v4, v2, Lcom/miui/home/launcher/ShortcutInfo;->mIntent:Landroid/content/Intent;
 
     if-eqz v4, :cond_0
@@ -112,7 +112,7 @@
 
     iget v4, v2, Lcom/miui/home/launcher/ShortcutInfo;->itemType:I
 
-    .line 8033
+    .line 8023
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -125,7 +125,7 @@
 
     goto :goto_0
 
-    .line 8036
+    .line 8026
     :cond_1
     iget-object v3, p0, Lcom/miui/home/launcher/Launcher$73;->val$cn:Landroid/content/ComponentName;
 
@@ -143,7 +143,7 @@
 
     iget-object v3, p0, Lcom/miui/home/launcher/Launcher$73;->val$cn:Landroid/content/ComponentName;
 
-    .line 8037
+    .line 8027
     invoke-virtual {v3}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v3
@@ -166,7 +166,7 @@
 
     iget-object v3, p0, Lcom/miui/home/launcher/Launcher$73;->val$cn:Landroid/content/ComponentName;
 
-    .line 8038
+    .line 8028
     invoke-virtual {v3}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
 
     move-result-object v3
@@ -177,13 +177,13 @@
 
     if-eqz v3, :cond_0
 
-    .line 8039
+    .line 8029
     :cond_2
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 8042
+    .line 8032
     :cond_3
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Launcher$73;->setResult(Ljava/lang/Object;)V
 

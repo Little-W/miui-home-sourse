@@ -42,17 +42,17 @@
 .method public constructor <init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
     .locals 3
 
-    .line 1615
+    .line 1610
     invoke-direct {p0, p1, p2}, Lcom/miui/maml/ActionCommand$TargetCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
 
     const-string p1, "params"
 
-    .line 1616
+    .line 1611
     invoke-interface {p2, p1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 1617
+    .line 1612
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$PbrCommand;->getVariables()Lcom/miui/maml/data/Variables;
 
     move-result-object v0
@@ -63,7 +63,7 @@
 
     iput-object v0, p0, Lcom/miui/maml/ActionCommand$PbrCommand;->mParams:[Lcom/miui/maml/data/Expression;
 
-    .line 1618
+    .line 1613
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$PbrCommand;->mParams:[Lcom/miui/maml/data/Expression;
 
     invoke-virtual {p0, v0}, Lcom/miui/maml/ActionCommand$PbrCommand;->isExpressionsValid([Lcom/miui/maml/data/Expression;)Z
@@ -72,14 +72,14 @@
 
     iput-boolean v0, p0, Lcom/miui/maml/ActionCommand$PbrCommand;->mIsParamsValid:Z
 
-    .line 1619
+    .line 1614
     iget-boolean v0, p0, Lcom/miui/maml/ActionCommand$PbrCommand;->mIsParamsValid:Z
 
     if-nez v0, :cond_0
 
     const-string v0, "PbrCommand"
 
-    .line 1620
+    .line 1615
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -99,7 +99,7 @@
     :cond_0
     const-string p1, "uniformName"
 
-    .line 1622
+    .line 1617
     invoke-interface {p2, p1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -108,7 +108,7 @@
 
     const-string p1, "custElementName"
 
-    .line 1623
+    .line 1618
     invoke-interface {p2, p1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -117,7 +117,7 @@
 
     const-string p1, "uniformRefresh"
 
-    .line 1624
+    .line 1619
     invoke-interface {p2, p1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -128,7 +128,7 @@
 
     iput-boolean p1, p0, Lcom/miui/maml/ActionCommand$PbrCommand;->mUniformAutoRefresh:Z
 
-    .line 1625
+    .line 1620
     invoke-direct {p0, p2}, Lcom/miui/maml/ActionCommand$PbrCommand;->parseCommand(Lorg/w3c/dom/Element;)V
 
     return-void
@@ -139,12 +139,12 @@
 
     const-string v0, "command"
 
-    .line 1646
+    .line 1641
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 1647
+    .line 1642
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     move-result v0
@@ -177,7 +177,7 @@
 
     goto :goto_2
 
-    .line 1649
+    .line 1644
     :cond_2
     sget-object p1, Lcom/miui/maml/ActionCommand$PbrCommand$CommandType;->UPDATE_UNIFORM:Lcom/miui/maml/ActionCommand$PbrCommand$CommandType;
 
@@ -192,25 +192,25 @@
 .method protected doPerform()V
     .locals 5
 
-    .line 1630
+    .line 1625
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$PbrCommand;->getTarget()Ljava/lang/Object;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    .line 1631
+    .line 1626
     instance-of v1, v0, Lcom/miui/maml/elements/filament/PhysicallyBasedRenderingElement;
 
     if-nez v1, :cond_0
 
     goto :goto_1
 
-    .line 1634
+    .line 1629
     :cond_0
     check-cast v0, Lcom/miui/maml/elements/filament/PhysicallyBasedRenderingElement;
 
-    .line 1635
+    .line 1630
     sget-object v1, Lcom/miui/maml/ActionCommand$1;->$SwitchMap$com$miui$maml$ActionCommand$PbrCommand$CommandType:[I
 
     iget-object v2, p0, Lcom/miui/maml/ActionCommand$PbrCommand;->mCommand:Lcom/miui/maml/ActionCommand$PbrCommand$CommandType;
@@ -227,7 +227,7 @@
 
     goto :goto_0
 
-    .line 1637
+    .line 1632
     :cond_1
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$PbrCommand;->mCustElementName:Ljava/lang/String;
 

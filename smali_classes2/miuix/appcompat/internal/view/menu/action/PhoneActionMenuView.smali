@@ -60,7 +60,7 @@
 
     const/4 v0, 0x3
 
-    .line 37
+    .line 38
     new-array v0, v0, [I
 
     const/4 v1, 0x0
@@ -91,7 +91,7 @@
 
     const/4 v0, 0x0
 
-    .line 87
+    .line 88
     invoke-direct {p0, p1, v0}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -100,41 +100,41 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 3
 
-    .line 91
+    .line 92
     invoke-direct {p0, p1, p2}, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 64
+    .line 65
     sget-object v0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$OverflowMenuState;->Collapsed:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$OverflowMenuState;
 
     iput-object v0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mOverflowMenuState:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$OverflowMenuState;
 
     const/4 v0, 0x0
 
-    .line 80
+    .line 81
     iput v0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mMaxActionButtonWidth:I
 
-    .line 82
+    .line 83
     iput v0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mMenuItemGap:I
 
-    .line 84
+    .line 85
     iput v0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mActionCount:I
 
     const/4 v1, 0x0
 
-    .line 93
+    .line 94
     invoke-super {p0, v1}, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 95
+    .line 96
     iput-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mContext:Landroid/content/Context;
 
-    .line 96
+    .line 97
     sget-object v1, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->ATTRS:[I
 
     invoke-virtual {p1, p2, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p2
 
-    .line 97
+    .line 98
     invoke-virtual {p2, v0}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
@@ -143,7 +143,7 @@
 
     const/4 v1, 0x1
 
-    .line 98
+    .line 99
     invoke-virtual {p2, v1}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v2
@@ -152,38 +152,38 @@
 
     const/4 v2, 0x2
 
-    .line 99
+    .line 100
     invoke-virtual {p2, v2, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result v0
 
     iput v0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mSplitActionBarOverlayHeight:I
 
-    .line 100
+    .line 101
     invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 102
+    .line 103
     invoke-direct {p0}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->extractBackground()V
 
-    .line 103
+    .line 104
     new-instance p2, Landroid/view/View;
 
     invoke-direct {p2, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
     iput-object p2, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mBackgroundView:Landroid/view/View;
 
-    .line 104
+    .line 105
     iget-object p2, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mBackgroundView:Landroid/view/View;
 
     invoke-virtual {p0, p2}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->addView(Landroid/view/View;)V
 
-    .line 105
+    .line 106
     invoke-direct {p0, p1}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->addBlurView(Landroid/content/Context;)V
 
-    .line 107
+    .line 108
     invoke-virtual {p0, v1}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->setChildrenDrawingOrderEnabled(Z)V
 
-    .line 109
+    .line 110
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
@@ -196,7 +196,7 @@
 
     iput p2, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mMaxActionButtonWidth:I
 
-    .line 110
+    .line 111
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -215,7 +215,7 @@
 .method static synthetic access$100(Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;)Landroid/view/View;
     .locals 0
 
-    .line 35
+    .line 36
     iget-object p0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mOverflowMenuView:Landroid/view/View;
 
     return-object p0
@@ -224,7 +224,7 @@
 .method static synthetic access$200(Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;)Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$OverflowMenuState;
     .locals 0
 
-    .line 35
+    .line 36
     iget-object p0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mOverflowMenuState:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$OverflowMenuState;
 
     return-object p0
@@ -233,7 +233,7 @@
 .method static synthetic access$202(Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$OverflowMenuState;)Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$OverflowMenuState;
     .locals 0
 
-    .line 35
+    .line 36
     iput-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mOverflowMenuState:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$OverflowMenuState;
 
     return-object p1
@@ -242,7 +242,7 @@
 .method static synthetic access$300(Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;)Z
     .locals 0
 
-    .line 35
+    .line 36
     iget-boolean p0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mIsShowBlurBackground:Z
 
     return p0
@@ -251,7 +251,7 @@
 .method static synthetic access$400(Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;)Landroid/graphics/drawable/Drawable;
     .locals 0
 
-    .line 35
+    .line 36
     iget-object p0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mCollapseBackground:Landroid/graphics/drawable/Drawable;
 
     return-object p0
@@ -260,7 +260,7 @@
 .method static synthetic access$500(Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;)Landroid/view/View;
     .locals 0
 
-    .line 35
+    .line 36
     iget-object p0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mBackgroundView:Landroid/view/View;
 
     return-object p0
@@ -269,40 +269,40 @@
 .method private addBlurView(Landroid/content/Context;)V
     .locals 1
 
-    .line 665
+    .line 666
     new-instance v0, Lmiuix/blurdrawable/widget/BlurBackgroundView;
 
     invoke-direct {v0, p1}, Lmiuix/blurdrawable/widget/BlurBackgroundView;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mBlurBackgroundView:Lmiuix/blurdrawable/widget/BlurBackgroundView;
 
-    .line 666
+    .line 667
     new-instance p1, Landroid/widget/FrameLayout$LayoutParams;
 
     const/4 v0, -0x1
 
     invoke-direct {p1, v0, v0}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
-    .line 667
+    .line 668
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mBlurBackgroundView:Lmiuix/blurdrawable/widget/BlurBackgroundView;
 
     invoke-virtual {v0, p1}, Lmiuix/blurdrawable/widget/BlurBackgroundView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 668
+    .line 669
     iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mBlurBackgroundView:Lmiuix/blurdrawable/widget/BlurBackgroundView;
 
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->addView(Landroid/view/View;I)V
 
-    .line 669
+    .line 670
     iget-boolean p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mIsShowBlurBackground:Z
 
     if-eqz p1, :cond_0
 
     const/4 p1, 0x1
 
-    .line 670
+    .line 671
     invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->setBlurBackground(Z)Z
 
     :cond_0
@@ -312,14 +312,14 @@
 .method private clearBackground()V
     .locals 2
 
-    .line 124
+    .line 125
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mBackgroundView:Landroid/view/View;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 125
+    .line 126
     invoke-virtual {p0, v1}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     return-void
@@ -328,19 +328,19 @@
 .method private extractBackground()V
     .locals 2
 
-    .line 401
+    .line 402
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mBackgroundPadding:Landroid/graphics/Rect;
 
     if-nez v0, :cond_0
 
-    .line 402
+    .line 403
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mBackgroundPadding:Landroid/graphics/Rect;
 
-    .line 405
+    .line 406
     :cond_0
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mOverflowMenuView:Landroid/view/View;
 
@@ -356,14 +356,14 @@
     :goto_0
     if-nez v0, :cond_2
 
-    .line 407
+    .line 408
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mBackgroundPadding:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->setEmpty()V
 
     return-void
 
-    .line 411
+    .line 412
     :cond_2
     iget-object v1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mBackgroundPadding:Landroid/graphics/Rect;
 
@@ -479,7 +479,7 @@
 .method private resetBackground()V
     .locals 3
 
-    .line 129
+    .line 130
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mBackgroundView:Landroid/view/View;
 
     iget-object v1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mOverflowMenuState:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$OverflowMenuState;
@@ -488,7 +488,7 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 130
+    .line 131
     iget-object v1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mCollapseBackground:Landroid/graphics/drawable/Drawable;
 
     goto :goto_0
@@ -496,11 +496,11 @@
     :cond_0
     iget-object v1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mExpandBackground:Landroid/graphics/drawable/Drawable;
 
-    .line 129
+    .line 130
     :goto_0
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 131
+    .line 132
     invoke-direct {p0}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->extractBackground()V
 
     return-void
@@ -579,14 +579,14 @@
 .method protected getChildDrawingOrder(II)I
     .locals 4
 
-    .line 427
+    .line 428
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mOverflowMenuView:Landroid/view/View;
 
     invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->indexOfChild(Landroid/view/View;)I
 
     move-result v0
 
-    .line 428
+    .line 429
     iget-object v1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mBackgroundView:Landroid/view/View;
 
     invoke-virtual {p0, v1}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->indexOfChild(Landroid/view/View;)I
@@ -655,7 +655,7 @@
 
     goto :goto_0
 
-    .line 459
+    .line 460
     :cond_7
     invoke-super {p0, p1, p2}, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView;->getChildDrawingOrder(II)I
 
@@ -696,7 +696,7 @@
 
     const/4 v0, 0x0
 
-    .line 464
+    .line 465
     invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
@@ -727,7 +727,7 @@
 
     const/4 v0, 0x0
 
-    .line 469
+    .line 470
     invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
@@ -847,23 +847,8 @@
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 1
 
-    .line 136
-    invoke-super {p0, p1}, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView;->onConfigurationChanged(Landroid/content/res/Configuration;)V
-
     .line 137
-    iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mContext:Landroid/content/Context;
-
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p1
-
-    sget v0, Lmiuix/appcompat/R$dimen;->miuix_appcompat_action_button_max_width:I
-
-    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result p1
-
-    iput p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mMaxActionButtonWidth:I
+    invoke-super {p0, p1}, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     .line 138
     iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mContext:Landroid/content/Context;
@@ -890,19 +875,19 @@
 
     sub-int p2, p5, p3
 
-    .line 352
+    .line 353
     iget-object p3, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mOverflowMenuView:Landroid/view/View;
 
     const/4 p4, 0x0
 
     if-eqz p3, :cond_0
 
-    .line 353
+    .line 354
     invoke-virtual {p3}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result p3
 
-    .line 354
+    .line 355
     iget-object v1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mOverflowMenuView:Landroid/view/View;
 
     const/4 v2, 0x0
@@ -917,7 +902,7 @@
 
     invoke-static/range {v0 .. v5}, Lmiuix/internal/util/ViewUtils;->layoutChildView(Landroid/view/ViewGroup;Landroid/view/View;IIII)V
 
-    .line 355
+    .line 356
     iget-object p5, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mBackgroundPadding:Landroid/graphics/Rect;
 
     iget p5, p5, Landroid/graphics/Rect;->top:I
@@ -929,7 +914,7 @@
     :cond_0
     move p3, p4
 
-    .line 359
+    .line 360
     :goto_0
     iget-object v1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mBackgroundView:Landroid/view/View;
 
@@ -945,17 +930,17 @@
 
     invoke-static/range {v0 .. v5}, Lmiuix/internal/util/ViewUtils;->layoutChildView(Landroid/view/ViewGroup;Landroid/view/View;IIII)V
 
-    .line 360
+    .line 361
     iget-object v1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mBlurBackgroundView:Lmiuix/blurdrawable/widget/BlurBackgroundView;
 
     invoke-static/range {v0 .. v5}, Lmiuix/internal/util/ViewUtils;->layoutChildView(Landroid/view/ViewGroup;Landroid/view/View;IIII)V
 
-    .line 362
+    .line 363
     invoke-virtual {p0}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->getChildCount()I
 
     move-result p5
 
-    .line 363
+    .line 364
     iget v0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mMenuItemWidth:I
 
     sub-int/2addr p1, v0
@@ -965,12 +950,12 @@
     :goto_1
     if-ge p4, p5, :cond_2
 
-    .line 366
+    .line 367
     invoke-virtual {p0, p4}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v6
 
-    .line 367
+    .line 368
     invoke-direct {p0, v6}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->isNotActionMenuItemChild(Landroid/view/View;)Z
 
     move-result v0
@@ -979,7 +964,7 @@
 
     goto :goto_2
 
-    .line 370
+    .line 371
     :cond_1
     invoke-virtual {v6}, Landroid/view/View;->getMeasuredWidth()I
 
@@ -997,10 +982,10 @@
 
     move v5, p2
 
-    .line 371
+    .line 372
     invoke-static/range {v0 .. v5}, Lmiuix/internal/util/ViewUtils;->layoutChildView(Landroid/view/ViewGroup;Landroid/view/View;IIII)V
 
-    .line 372
+    .line 373
     invoke-virtual {v6}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v0
@@ -1112,10 +1097,10 @@
 
     move/from16 v4, p2
 
-    .line 301
+    .line 302
     invoke-virtual/range {v0 .. v5}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->measureChildWithMargins(Landroid/view/View;IIII)V
 
-    .line 302
+    .line 303
     invoke-virtual {v14}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v0
@@ -1128,7 +1113,7 @@
 
     add-int/2addr v12, v0
 
-    .line 304
+    .line 305
     invoke-virtual {v14}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v0
@@ -1144,7 +1129,7 @@
 
     goto :goto_0
 
-    .line 307
+    .line 308
     :cond_2
     iget v0, v6, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mMenuItemGap:I
 
@@ -1158,10 +1143,10 @@
 
     if-le v0, v9, :cond_3
 
-    .line 308
+    .line 309
     iput v8, v6, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mMenuItemGap:I
 
-    .line 310
+    .line 311
     :cond_3
     iget v0, v6, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mMenuItemGap:I
 
@@ -1173,25 +1158,25 @@
 
     add-int/2addr v12, v0
 
-    .line 312
+    .line 313
     iput v12, v6, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mMenuItemWidth:I
 
-    .line 313
+    .line 314
     iput v13, v6, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mMenuItemHeight:I
 
-    .line 315
+    .line 316
     iget-object v0, v6, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mOverflowMenuView:Landroid/view/View;
 
     if-eqz v0, :cond_5
 
-    .line 316
+    .line 317
     invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 317
+    .line 318
     iget-object v1, v6, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mContext:Landroid/content/Context;
 
     invoke-static {v1}, Lmiuix/core/util/MiuixUIUtils;->getStatusBarHeight(Landroid/content/Context;)I
@@ -1200,12 +1185,12 @@
 
     iput v1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
-    .line 318
+    .line 319
     iget v1, v6, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mMenuItemHeight:I
 
     iput v1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
-    .line 320
+    .line 321
     iget-object v1, v6, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mOverflowMenuView:Landroid/view/View;
 
     const/4 v3, 0x0
@@ -1220,7 +1205,7 @@
 
     invoke-virtual/range {v0 .. v5}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->measureChildWithMargins(Landroid/view/View;IIII)V
 
-    .line 321
+    .line 322
     iget-object v0, v6, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mOverflowMenuView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getMeasuredWidth()I
@@ -1229,7 +1214,7 @@
 
     invoke-static {v12, v0}, Ljava/lang/Math;->max(II)I
 
-    .line 322
+    .line 323
     iget-object v0, v6, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mOverflowMenuView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
@@ -1238,14 +1223,14 @@
 
     add-int/2addr v13, v0
 
-    .line 325
+    .line 326
     iget-object v0, v6, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mOverflowMenuState:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$OverflowMenuState;
 
     sget-object v1, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$OverflowMenuState;->Expanded:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$OverflowMenuState;
 
     if-ne v0, v1, :cond_4
 
-    .line 326
+    .line 327
     iget-object v0, v6, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mOverflowMenuView:Landroid/view/View;
 
     const/4 v1, 0x0
@@ -1254,7 +1239,7 @@
 
     goto :goto_2
 
-    .line 327
+    .line 328
     :cond_4
     iget-object v0, v6, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mOverflowMenuState:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$OverflowMenuState;
 
@@ -1262,34 +1247,34 @@
 
     if-ne v0, v1, :cond_5
 
-    .line 328
+    .line 329
     iget-object v0, v6, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mOverflowMenuView:Landroid/view/View;
 
     int-to-float v1, v13
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 332
+    .line 333
     :cond_5
     :goto_2
     iget-object v0, v6, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mOverflowMenuView:Landroid/view/View;
 
     if-nez v0, :cond_6
 
-    .line 333
+    .line 334
     iget-object v0, v6, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mBackgroundPadding:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->top:I
 
     add-int/2addr v13, v0
 
-    .line 335
+    .line 336
     :cond_6
     iget-boolean v0, v6, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mIsShowBlurBackground:Z
 
     if-nez v0, :cond_8
 
-    .line 336
+    .line 337
     iget-object v0, v6, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mBackgroundView:Landroid/view/View;
 
     iget-object v1, v6, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mOverflowMenuState:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$OverflowMenuState;
@@ -1298,7 +1283,7 @@
 
     if-ne v1, v2, :cond_7
 
-    .line 337
+    .line 338
     iget-object v1, v6, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mCollapseBackground:Landroid/graphics/drawable/Drawable;
 
     goto :goto_3
@@ -1306,11 +1291,11 @@
     :cond_7
     iget-object v1, v6, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mExpandBackground:Landroid/graphics/drawable/Drawable;
 
-    .line 336
+    .line 337
     :goto_3
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 340
+    .line 341
     :cond_8
     invoke-virtual {p0, v9, v13}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->setMeasuredDimension(II)V
 
@@ -1330,7 +1315,7 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 2
 
-    .line 380
+    .line 381
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v0
@@ -1343,7 +1328,7 @@
 
     goto :goto_0
 
-    .line 381
+    .line 382
     :cond_0
     invoke-virtual {v1}, Landroid/view/View;->getTranslationY()F
 
@@ -1378,14 +1363,14 @@
 .method public setAlpha(F)V
     .locals 2
 
-    .line 615
+    .line 616
     iget-boolean v0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mIsShowBlurBackground:Z
 
     if-eqz v0, :cond_1
 
     const/4 v0, 0x0
 
-    .line 616
+    .line 617
     :goto_0
     invoke-virtual {p0}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->getChildCount()I
 
@@ -1393,7 +1378,7 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 618
+    .line 619
     invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
@@ -1404,7 +1389,7 @@
 
     goto :goto_1
 
-    .line 621
+    .line 622
     :cond_0
     invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->getChildAt(I)Landroid/view/View;
 
@@ -1417,7 +1402,7 @@
 
     goto :goto_0
 
-    .line 625
+    .line 626
     :cond_1
     invoke-super {p0, p1}, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView;->setAlpha(F)V
 
@@ -1446,7 +1431,7 @@
 .method public setBlurBackground(Z)Z
     .locals 3
 
-    .line 641
+    .line 642
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mBlurBackgroundView:Lmiuix/blurdrawable/widget/BlurBackgroundView;
 
     invoke-virtual {v0, p1}, Lmiuix/blurdrawable/widget/BlurBackgroundView;->setBlurBackground(Z)Z
@@ -1455,18 +1440,18 @@
 
     if-eqz v0, :cond_3
 
-    .line 643
+    .line 644
     iput-boolean p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mIsShowBlurBackground:Z
 
-    .line 644
+    .line 645
     iget-object v1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mExpandedMenuBlurView:Lmiuix/appcompat/internal/view/menu/ExpandedMenuBlurView;
 
     if-eqz v1, :cond_0
 
-    .line 645
+    .line 646
     invoke-virtual {v1, p1}, Lmiuix/appcompat/internal/view/menu/ExpandedMenuBlurView;->setBlurBackground(Z)Z
 
-    .line 647
+    .line 648
     :cond_0
     iget-boolean p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mIsShowBlurBackground:Z
 
@@ -1474,14 +1459,14 @@
 
     if-eqz p1, :cond_2
 
-    .line 648
+    .line 649
     iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mBackgroundView:Landroid/view/View;
 
     const/4 v2, 0x0
 
     invoke-virtual {p1, v2}, Landroid/view/View;->setAlpha(F)V
 
-    .line 649
+    .line 650
     iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mExpandedMenuBlurView:Lmiuix/appcompat/internal/view/menu/ExpandedMenuBlurView;
 
     const/4 v2, 0x0
@@ -1494,7 +1479,7 @@
 
     if-le p1, v1, :cond_1
 
-    .line 650
+    .line 651
     iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mExpandedMenuBlurView:Lmiuix/appcompat/internal/view/menu/ExpandedMenuBlurView;
 
     invoke-virtual {p1, v1}, Lmiuix/appcompat/internal/view/menu/ExpandedMenuBlurView;->getChildAt(I)Landroid/view/View;
@@ -1507,7 +1492,7 @@
 
     iput-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mOverflowBackgroundBackup:Landroid/graphics/drawable/Drawable;
 
-    .line 651
+    .line 652
     iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mExpandedMenuBlurView:Lmiuix/appcompat/internal/view/menu/ExpandedMenuBlurView;
 
     invoke-virtual {p1, v1}, Lmiuix/appcompat/internal/view/menu/ExpandedMenuBlurView;->getChildAt(I)Landroid/view/View;
@@ -1516,13 +1501,13 @@
 
     invoke-virtual {p1, v2}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 653
+    .line 654
     :cond_1
     invoke-virtual {p0, v2}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     goto :goto_0
 
-    .line 655
+    .line 656
     :cond_2
     iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mBackgroundView:Landroid/view/View;
 
@@ -1530,7 +1515,7 @@
 
     invoke-virtual {p1, v2}, Landroid/view/View;->setAlpha(F)V
 
-    .line 656
+    .line 657
     iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mExpandedMenuBlurView:Lmiuix/appcompat/internal/view/menu/ExpandedMenuBlurView;
 
     if-eqz p1, :cond_3
@@ -1545,7 +1530,7 @@
 
     if-eqz p1, :cond_3
 
-    .line 657
+    .line 658
     iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mExpandedMenuBlurView:Lmiuix/appcompat/internal/view/menu/ExpandedMenuBlurView;
 
     invoke-virtual {p1, v1}, Lmiuix/appcompat/internal/view/menu/ExpandedMenuBlurView;->getChildAt(I)Landroid/view/View;
@@ -1677,14 +1662,14 @@
 .method public setValue(F)V
     .locals 2
 
-    .line 415
+    .line 416
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mOverflowMenuView:Landroid/view/View;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 418
+    .line 419
     :cond_0
     invoke-virtual {p0}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->getMeasuredHeight()I
 
@@ -1791,21 +1776,21 @@
 .method public updateBackground(Z)V
     .locals 0
 
-    .line 114
+    .line 115
     iput-boolean p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mIsShowBlurBackground:Z
 
     if-eqz p1, :cond_0
 
-    .line 116
+    .line 117
     invoke-direct {p0}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->clearBackground()V
 
     goto :goto_0
 
-    .line 118
+    .line 119
     :cond_0
     invoke-direct {p0}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->resetBackground()V
 
-    .line 120
+    .line 121
     :goto_0
     invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->setBlurBackground(Z)Z
 

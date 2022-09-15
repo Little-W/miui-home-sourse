@@ -45,8 +45,6 @@
 
 .field public pickerID:Ljava/lang/String;
 
-.field public pickerTipSource:I
-
 .field public previewUrlDark:Ljava/lang/String;
 
 .field public previewUrlLight:Ljava/lang/String;
@@ -59,6 +57,8 @@
 
 .field public status:I
 
+.field public tip_source:I
+
 .field public transitionBitmap:Landroid/graphics/Bitmap;
 
 .field public warningToastForWidgetNumber:Ljava/lang/String;
@@ -68,17 +68,17 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 125
+    .line 123
     invoke-direct {p0}, Lcom/miui/home/launcher/ItemInfo;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 78
+    .line 76
     iput v0, p0, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->originWidgetId:I
 
     const/4 v0, 0x1
 
-    .line 101
+    .line 99
     iput-boolean v0, p0, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->canDragFromHomeToPA:Z
 
     return-void
@@ -105,12 +105,12 @@
 .method public load(Landroid/content/Context;Landroid/database/Cursor;)V
     .locals 4
 
-    .line 134
+    .line 132
     invoke-super {p0, p1, p2}, Lcom/miui/home/launcher/ItemInfo;->load(Landroid/content/Context;Landroid/database/Cursor;)V
 
     const/16 p1, 0x18
 
-    .line 135
+    .line 133
     invoke-interface {p2, p1}, Landroid/database/Cursor;->getInt(I)I
 
     move-result p1
@@ -119,7 +119,7 @@
 
     const/16 p1, 0x13
 
-    .line 136
+    .line 134
     invoke-interface {p2, p1}, Landroid/database/Cursor;->getInt(I)I
 
     move-result p1
@@ -141,29 +141,29 @@
     :cond_0
     move v0, v1
 
-    .line 137
+    .line 135
     :goto_0
     iput-boolean v0, p0, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->isMIUIWidget:Z
 
-    .line 139
+    .line 137
     invoke-interface {p2, v3}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 140
+    .line 138
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 142
+    .line 140
     :try_start_0
     invoke-static {p2, v3}, Landroid/content/Intent;->parseUri(Ljava/lang/String;I)Landroid/content/Intent;
 
     move-result-object p2
 
-    .line 143
+    .line 141
     invoke-virtual {p0, p2}, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->parsePendingWidgetParams(Landroid/content/Intent;)V
     :try_end_0
     .catch Ljava/net/URISyntaxException; {:try_start_0 .. :try_end_0} :catch_0
@@ -176,7 +176,7 @@
 
     if-ne p2, v0, :cond_2
 
-    .line 149
+    .line 147
     iput v3, p0, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->defaultSource:I
 
     :cond_2
@@ -188,7 +188,7 @@
 
     move v1, v3
 
-    .line 151
+    .line 149
     :cond_3
     iput-boolean v1, p0, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->canDragFromHomeToPA:Z
 
@@ -200,7 +200,7 @@
 
     const-string v0, "originWidgetId"
 
-    .line 156
+    .line 154
     iget v1, p0, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->originWidgetId:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -209,10 +209,10 @@
 
     invoke-virtual {p2, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 157
+    .line 155
     invoke-super {p0, p1, p2}, Lcom/miui/home/launcher/ItemInfo;->onAddToDatabase(Landroid/content/Context;Landroid/content/ContentValues;)V
 
-    .line 158
+    .line 156
     invoke-virtual {p0}, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->getExtraIntentParams()Landroid/content/Intent;
 
     move-result-object p1
@@ -221,7 +221,7 @@
 
     const/4 v0, 0x1
 
-    .line 161
+    .line 159
     invoke-virtual {p1, v0}, Landroid/content/Intent;->toUri(I)Ljava/lang/String;
 
     move-result-object p1
@@ -234,10 +234,10 @@
     :goto_0
     const-string v0, "intent"
 
-    .line 163
+    .line 161
     invoke-virtual {p2, v0, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 165
+    .line 163
     iget-boolean p1, p0, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->isMIUIWidget:Z
 
     if-eqz p1, :cond_1
@@ -254,7 +254,7 @@
     :goto_1
     iput p1, p0, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->itemFlags:I
 
-    .line 166
+    .line 164
     iget-boolean p1, p0, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->canDragFromHomeToPA:Z
 
     if-eqz p1, :cond_2
@@ -273,7 +273,7 @@
 
     const-string p1, "itemFlags"
 
-    .line 167
+    .line 165
     iget v0, p0, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->itemFlags:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -288,12 +288,12 @@
 .method public onUpgrade(II)V
     .locals 1
 
-    .line 179
+    .line 177
     iget-object v0, p0, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->mUpgradeListener:Lcom/miui/home/launcher/MIUIWidgetBasicInfo$UpgradeListener;
 
     if-eqz v0, :cond_0
 
-    .line 180
+    .line 178
     invoke-interface {v0, p1, p2}, Lcom/miui/home/launcher/MIUIWidgetBasicInfo$UpgradeListener;->onUpgrade(II)V
 
     :cond_0
@@ -309,7 +309,7 @@
 .method public setDefaultSource(I)V
     .locals 0
 
-    .line 175
+    .line 173
     iput p1, p0, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->defaultSource:I
 
     return-void
@@ -318,7 +318,7 @@
 .method public setUpgradeListener(Lcom/miui/home/launcher/MIUIWidgetBasicInfo$UpgradeListener;)V
     .locals 0
 
-    .line 223
+    .line 221
     iput-object p1, p0, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->mUpgradeListener:Lcom/miui/home/launcher/MIUIWidgetBasicInfo$UpgradeListener;
 
     return-void

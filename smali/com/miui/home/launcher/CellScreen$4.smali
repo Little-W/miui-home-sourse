@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/CellScreen;Z)V
     .locals 0
 
-    .line 326
+    .line 322
     iput-object p1, p0, Lcom/miui/home/launcher/CellScreen$4;->this$0:Lcom/miui/home/launcher/CellScreen;
 
     iput-boolean p2, p0, Lcom/miui/home/launcher/CellScreen$4;->val$isEditing:Z
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 2
 
-    .line 329
+    .line 325
     iget-object v0, p0, Lcom/miui/home/launcher/CellScreen$4;->this$0:Lcom/miui/home/launcher/CellScreen;
 
     invoke-static {v0}, Lcom/miui/home/launcher/CellScreen;->access$200(Lcom/miui/home/launcher/CellScreen;)Lcom/miui/home/launcher/CellLayout;
@@ -53,7 +53,7 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/CellLayout;->setEditMode(Z)V
 
-    .line 330
+    .line 326
     iget-object v0, p0, Lcom/miui/home/launcher/CellScreen$4;->this$0:Lcom/miui/home/launcher/CellScreen;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/CellScreen;->updateEditLayout()V

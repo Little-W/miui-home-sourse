@@ -329,7 +329,6 @@
     <string name="exit_overview_because_task_stack_changed">Recentes fechado devido a alterações que ocorreram em segundo plano</string>
     <string name="expand_button_title">Avançadas</string>
     <string name="exposed_dropdown_menu_content_description">Mostrar menu pendente</string>
-    <string name="external_not_support_split_screen_j18">O Ecrã dividido não é suportado no ecrã externo</string>
     <string name="failed_to_delete_temporary">Não é possível remover</string>
     <string name="failed_to_drop">Não é possível mover</string>
     <string name="failed_to_drop_widget_invalid">Este widget não é válido</string>
@@ -548,7 +547,6 @@
     <string name="midnight">Noite</string>
     <string name="minus_one_screen">Cofre de aplicações</string>
     <string name="miui_screen_config_title">Definições do Ecrã inicial</string>
-    <string name="miui_widget_menu_replace_text">Alternar</string>
     <string name="miuix_access_state_desc">Selecionado</string>
     <string name="miuix_appcompat_action_mode_deselect_all">Desmarcar tudo</string>
     <string name="miuix_appcompat_action_mode_select_all">Selecionar tudo</string>
@@ -575,8 +573,6 @@
     <string name="monday">Segunda-feira</string>
     <string name="monday_short">Seg</string>
     <string name="monday_shortest">Seg</string>
-    <string name="monochrome_summary">Alterar cor de fundo para ícones compatíveis</string>
-    <string name="monochrome_title">Cor de fundo</string>
     <string name="month_april">Abril</string>
     <string name="month_april_short">Abr</string>
     <string name="month_april_shortest">Abr</string>

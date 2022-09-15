@@ -49,13 +49,6 @@
         <item>ଡିଫଲ୍ଟ୍‌</item>
         <item>କ୍ଲାସିକ୍‌</item>
     </string-array>
-    <string-array name="monochrome_color_entries">
-        <item>ଡିଫଲ୍ଟ</item>
-        <item>ନୀଳ</item>
-        <item>ସବୁଜ</item>
-        <item>ବାଇଗଣୀ</item>
-        <item>ବାଦାମି</item>
-    </string-array>
     <string-array name="transformation_entries">
         <item>ସ୍ଲାଇଡ୍‌</item>
         <item>କ୍ରସ୍‌ଫେଡ୍‌</item>

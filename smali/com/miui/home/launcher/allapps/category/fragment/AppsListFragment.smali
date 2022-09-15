@@ -223,7 +223,7 @@
 .method protected getLayoutResourceId()I
     .locals 1
 
-    const v0, 0x7f0d0072
+    const v0, 0x7f0d0071
 
     return v0
 .end method
@@ -502,7 +502,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f0a0335
+    const p2, 0x7f0a0331
 
     .line 84
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -611,7 +611,7 @@
     .line 100
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->updatePoolSize()V
 
-    const p2, 0x7f0a0154
+    const p2, 0x7f0a0151
 
     .line 102
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;

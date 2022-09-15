@@ -32,38 +32,38 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/xiaomi/onetrack/Configuration;)V
     .locals 2
 
-    .line 79
+    .line 78
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 77
+    .line 76
     iput-boolean v0, p0, Lcom/xiaomi/onetrack/api/h;->j:Z
 
-    .line 805
+    .line 803
     new-instance v0, Lcom/xiaomi/onetrack/api/z;
 
     invoke-direct {v0, p0}, Lcom/xiaomi/onetrack/api/z;-><init>(Lcom/xiaomi/onetrack/api/h;)V
 
     iput-object v0, p0, Lcom/xiaomi/onetrack/api/h;->k:Landroid/content/BroadcastReceiver;
 
-    .line 80
+    .line 79
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p1
 
-    .line 81
+    .line 80
     iput-object p1, p0, Lcom/xiaomi/onetrack/api/h;->d:Landroid/content/Context;
 
-    .line 82
+    .line 81
     iput-object p2, p0, Lcom/xiaomi/onetrack/api/h;->f:Lcom/xiaomi/onetrack/Configuration;
 
-    .line 83
+    .line 82
     invoke-direct {p0, p1}, Lcom/xiaomi/onetrack/api/h;->b(Landroid/content/Context;)V
 
     const-string p1, "OneTrackImp"
 
-    .line 84
+    .line 83
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -84,20 +84,13 @@
 
     invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    const-string p1, "OneTrackImp"
-
-    const-string p2, "OneTrackImp sdk ver : 2.0.3"
-
-    .line 85
-    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     return-void
 .end method
 
 .method static synthetic a(Lcom/xiaomi/onetrack/api/h;)Lcom/xiaomi/onetrack/Configuration;
     .locals 0
 
-    .line 66
+    .line 65
     iget-object p0, p0, Lcom/xiaomi/onetrack/api/h;->f:Lcom/xiaomi/onetrack/Configuration;
 
     return-object p0
@@ -111,22 +104,22 @@
         }
     .end annotation
 
-    .line 782
+    .line 780
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
     const-string v1, "last_ver_name"
 
-    .line 783
+    .line 781
     invoke-virtual {v0, v1, p3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     const-string p3, "last_ver_code"
 
-    .line 784
+    .line 782
     invoke-virtual {v0, p3, p1, p2}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
-    .line 785
+    .line 783
     invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -137,7 +130,7 @@
 .method static synthetic a(Lcom/xiaomi/onetrack/api/h;Ljava/lang/String;J)V
     .locals 0
 
-    .line 66
+    .line 65
     invoke-direct {p0, p1, p2, p3}, Lcom/xiaomi/onetrack/api/h;->a(Ljava/lang/String;J)V
 
     return-void
@@ -146,7 +139,7 @@
 .method static synthetic a(Lcom/xiaomi/onetrack/api/h;Ljava/lang/String;Z)V
     .locals 0
 
-    .line 66
+    .line 65
     invoke-direct {p0, p1, p2}, Lcom/xiaomi/onetrack/api/h;->a(Ljava/lang/String;Z)V
 
     return-void
@@ -155,7 +148,7 @@
 .method static synthetic a(Lcom/xiaomi/onetrack/api/h;Z)V
     .locals 0
 
-    .line 66
+    .line 65
     invoke-direct {p0, p1}, Lcom/xiaomi/onetrack/api/h;->d(Z)V
 
     return-void
@@ -164,7 +157,7 @@
 .method private a(Ljava/lang/String;J)V
     .locals 2
 
-    .line 509
+    .line 507
     sget-object v0, Lcom/xiaomi/onetrack/api/h;->c:Ljava/util/concurrent/ExecutorService;
 
     new-instance v1, Lcom/xiaomi/onetrack/api/p;
@@ -179,7 +172,7 @@
 .method private a(Ljava/lang/String;Z)V
     .locals 2
 
-    .line 487
+    .line 485
     sget-object v0, Lcom/xiaomi/onetrack/api/h;->c:Ljava/util/concurrent/ExecutorService;
 
     new-instance v1, Lcom/xiaomi/onetrack/api/o;
@@ -194,7 +187,7 @@
 .method static synthetic a(Lcom/xiaomi/onetrack/api/h;Ljava/lang/String;)Z
     .locals 0
 
-    .line 66
+    .line 65
     invoke-direct {p0, p1}, Lcom/xiaomi/onetrack/api/h;->d(Ljava/lang/String;)Z
 
     move-result p0
@@ -205,7 +198,7 @@
 .method static synthetic b(Lcom/xiaomi/onetrack/api/h;Ljava/lang/String;)Lorg/json/JSONObject;
     .locals 0
 
-    .line 66
+    .line 65
     invoke-direct {p0, p1}, Lcom/xiaomi/onetrack/api/h;->f(Ljava/lang/String;)Lorg/json/JSONObject;
 
     move-result-object p0
@@ -216,10 +209,10 @@
 .method private b(Landroid/content/Context;)V
     .locals 8
 
-    .line 89
+    .line 87
     invoke-static {}, Lcom/xiaomi/onetrack/util/p;->a()V
 
-    .line 91
+    .line 89
     iget-object v0, p0, Lcom/xiaomi/onetrack/api/h;->f:Lcom/xiaomi/onetrack/Configuration;
 
     invoke-virtual {v0}, Lcom/xiaomi/onetrack/Configuration;->isInternational()Z
@@ -240,12 +233,12 @@
 
     invoke-static {v0, v1, v2}, Lcom/xiaomi/onetrack/util/q;->a(ZLjava/lang/String;Lcom/xiaomi/onetrack/OneTrack$Mode;)V
 
-    .line 92
+    .line 90
     sget-object v0, Lcom/xiaomi/onetrack/api/h;->c:Ljava/util/concurrent/ExecutorService;
 
     if-nez v0, :cond_0
 
-    .line 93
+    .line 91
     new-instance v0, Ljava/util/concurrent/ThreadPoolExecutor;
 
     const/4 v2, 0x0
@@ -266,7 +259,7 @@
 
     sput-object v0, Lcom/xiaomi/onetrack/api/h;->c:Ljava/util/concurrent/ExecutorService;
 
-    .line 98
+    .line 96
     :cond_0
     new-instance v0, Lcom/xiaomi/onetrack/util/v;
 
@@ -276,7 +269,7 @@
 
     iput-object v0, p0, Lcom/xiaomi/onetrack/api/h;->i:Lcom/xiaomi/onetrack/util/v;
 
-    .line 99
+    .line 97
     invoke-static {}, Lcom/xiaomi/onetrack/util/q;->a()Z
 
     move-result v0
@@ -295,7 +288,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 100
+    .line 98
     invoke-static {}, Lcom/xiaomi/onetrack/util/o;->a()Lcom/xiaomi/onetrack/util/o;
 
     move-result-object v0
@@ -308,7 +301,7 @@
 
     invoke-virtual {v0, v1}, Lcom/xiaomi/onetrack/util/o;->a(Ljava/lang/Boolean;)V
 
-    .line 101
+    .line 99
     new-instance v0, Lcom/xiaomi/onetrack/api/al;
 
     iget-object v1, p0, Lcom/xiaomi/onetrack/api/h;->f:Lcom/xiaomi/onetrack/Configuration;
@@ -321,7 +314,7 @@
 
     goto :goto_0
 
-    .line 103
+    .line 101
     :cond_1
     invoke-static {}, Lcom/xiaomi/onetrack/util/o;->a()Lcom/xiaomi/onetrack/util/o;
 
@@ -335,7 +328,7 @@
 
     invoke-virtual {v0, v1}, Lcom/xiaomi/onetrack/util/o;->a(Ljava/lang/Boolean;)V
 
-    .line 104
+    .line 102
     new-instance v0, Lcom/xiaomi/onetrack/api/aj;
 
     iget-object v1, p0, Lcom/xiaomi/onetrack/api/h;->f:Lcom/xiaomi/onetrack/Configuration;
@@ -346,7 +339,7 @@
 
     iput-object v0, p0, Lcom/xiaomi/onetrack/api/h;->b:Lcom/xiaomi/onetrack/api/e;
 
-    .line 106
+    .line 104
     :goto_0
     iget-object v0, p0, Lcom/xiaomi/onetrack/api/h;->f:Lcom/xiaomi/onetrack/Configuration;
 
@@ -358,7 +351,7 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 108
+    .line 106
     iget-object v0, p0, Lcom/xiaomi/onetrack/api/h;->f:Lcom/xiaomi/onetrack/Configuration;
 
     invoke-virtual {v0}, Lcom/xiaomi/onetrack/Configuration;->isOverrideMiuiRegionSetting()Z
@@ -367,10 +360,10 @@
 
     invoke-static {v0}, Lcom/xiaomi/onetrack/util/q;->a(Z)V
 
-    .line 109
+    .line 107
     invoke-direct {p0, p1}, Lcom/xiaomi/onetrack/api/h;->c(Landroid/content/Context;)V
 
-    .line 110
+    .line 108
     iget-object v0, p0, Lcom/xiaomi/onetrack/api/h;->f:Lcom/xiaomi/onetrack/Configuration;
 
     invoke-virtual {v0}, Lcom/xiaomi/onetrack/Configuration;->isExceptionCatcherEnable()Z
@@ -379,30 +372,33 @@
 
     if-eqz v0, :cond_2
 
-    .line 111
+    .line 109
     invoke-static {p1, p0}, Lcom/xiaomi/onetrack/CrashAnalysis;->start(Landroid/content/Context;Lcom/xiaomi/onetrack/api/h;)V
 
-    .line 112
+    .line 110
     invoke-static {}, Lcom/xiaomi/onetrack/CrashAnalysis;->isSupport()Z
 
-    move-result p1
+    move-result v0
 
-    if-nez p1, :cond_2
+    if-nez v0, :cond_2
 
-    .line 113
-    new-instance p1, Lcom/xiaomi/onetrack/api/f;
+    .line 111
+    new-instance v0, Lcom/xiaomi/onetrack/api/f;
 
-    invoke-direct {p1}, Lcom/xiaomi/onetrack/api/f;-><init>()V
+    invoke-direct {v0}, Lcom/xiaomi/onetrack/api/f;-><init>()V
 
-    iput-object p1, p0, Lcom/xiaomi/onetrack/api/h;->e:Lcom/xiaomi/onetrack/api/f;
+    iput-object v0, p0, Lcom/xiaomi/onetrack/api/h;->e:Lcom/xiaomi/onetrack/api/f;
 
-    .line 114
-    iget-object p1, p0, Lcom/xiaomi/onetrack/api/h;->e:Lcom/xiaomi/onetrack/api/f;
+    .line 112
+    iget-object v0, p0, Lcom/xiaomi/onetrack/api/h;->e:Lcom/xiaomi/onetrack/api/f;
 
-    invoke-virtual {p1}, Lcom/xiaomi/onetrack/api/f;->a()V
+    invoke-virtual {v0}, Lcom/xiaomi/onetrack/api/f;->a()V
 
-    .line 118
+    .line 116
     :cond_2
+    invoke-direct {p0, p1}, Lcom/xiaomi/onetrack/api/h;->d(Landroid/content/Context;)V
+
+    .line 117
     sget-object p1, Lcom/xiaomi/onetrack/api/h;->c:Ljava/util/concurrent/ExecutorService;
 
     new-instance v0, Lcom/xiaomi/onetrack/api/i;
@@ -417,16 +413,25 @@
 .method static synthetic b(Lcom/xiaomi/onetrack/api/h;)V
     .locals 0
 
-    .line 66
-    invoke-direct {p0}, Lcom/xiaomi/onetrack/api/h;->k()V
+    .line 65
+    invoke-direct {p0}, Lcom/xiaomi/onetrack/api/h;->j()V
 
     return-void
+.end method
+
+.method static synthetic c(Lcom/xiaomi/onetrack/api/h;)Lcom/xiaomi/onetrack/OneTrack$IEventHook;
+    .locals 0
+
+    .line 65
+    iget-object p0, p0, Lcom/xiaomi/onetrack/api/h;->h:Lcom/xiaomi/onetrack/OneTrack$IEventHook;
+
+    return-object p0
 .end method
 
 .method private c(Landroid/content/Context;)V
     .locals 1
 
-    .line 384
+    .line 382
     check-cast p1, Landroid/app/Application;
 
     new-instance v0, Lcom/xiaomi/onetrack/api/m;
@@ -438,19 +443,10 @@
     return-void
 .end method
 
-.method static synthetic c(Lcom/xiaomi/onetrack/api/h;)V
-    .locals 0
-
-    .line 66
-    invoke-direct {p0}, Lcom/xiaomi/onetrack/api/h;->j()V
-
-    return-void
-.end method
-
 .method private c()Z
     .locals 2
 
-    .line 141
+    .line 139
     iget-object v0, p0, Lcom/xiaomi/onetrack/api/h;->f:Lcom/xiaomi/onetrack/Configuration;
 
     invoke-virtual {v0}, Lcom/xiaomi/onetrack/Configuration;->isOverrideMiuiRegionSetting()Z
@@ -463,7 +459,7 @@
 
     return v0
 
-    .line 144
+    .line 142
     :cond_0
     invoke-static {}, Lcom/xiaomi/onetrack/util/q;->j()Ljava/lang/String;
 
@@ -485,7 +481,7 @@
 .method static synthetic c(Lcom/xiaomi/onetrack/api/h;Ljava/lang/String;)Z
     .locals 0
 
-    .line 66
+    .line 65
     invoke-direct {p0, p1}, Lcom/xiaomi/onetrack/api/h;->e(Ljava/lang/String;)Z
 
     move-result p0
@@ -493,11 +489,11 @@
     return p0
 .end method
 
-.method static synthetic d(Lcom/xiaomi/onetrack/api/h;)Lcom/xiaomi/onetrack/OneTrack$IEventHook;
+.method static synthetic d(Lcom/xiaomi/onetrack/api/h;)Lcom/xiaomi/onetrack/util/v;
     .locals 0
 
-    .line 66
-    iget-object p0, p0, Lcom/xiaomi/onetrack/api/h;->h:Lcom/xiaomi/onetrack/OneTrack$IEventHook;
+    .line 65
+    iget-object p0, p0, Lcom/xiaomi/onetrack/api/h;->i:Lcom/xiaomi/onetrack/util/v;
 
     return-object p0
 .end method
@@ -505,7 +501,7 @@
 .method private d()V
     .locals 2
 
-    .line 468
+    .line 466
     sget-object v0, Lcom/xiaomi/onetrack/api/h;->c:Ljava/util/concurrent/ExecutorService;
 
     new-instance v1, Lcom/xiaomi/onetrack/api/n;
@@ -517,10 +513,40 @@
     return-void
 .end method
 
+.method private d(Landroid/content/Context;)V
+    .locals 2
+
+    .line 794
+    :try_start_0
+    new-instance v0, Landroid/content/IntentFilter;
+
+    invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
+
+    const-string v1, "android.intent.action.SCREEN_ON"
+
+    .line 795
+    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    const-string v1, "android.intent.action.SCREEN_OFF"
+
+    .line 796
+    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    .line 797
+    iget-object v1, p0, Lcom/xiaomi/onetrack/api/h;->k:Landroid/content/BroadcastReceiver;
+
+    invoke-virtual {p1, v1, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    return-void
+.end method
+
 .method private d(Z)V
     .locals 2
 
-    .line 528
+    .line 526
     sget-object v0, Lcom/xiaomi/onetrack/api/h;->c:Ljava/util/concurrent/ExecutorService;
 
     new-instance v1, Lcom/xiaomi/onetrack/api/q;
@@ -535,7 +561,7 @@
 .method private d(Ljava/lang/String;)Z
     .locals 6
 
-    .line 587
+    .line 585
     invoke-static {p1}, Lcom/xiaomi/onetrack/util/r;->a(Ljava/lang/String;)Z
 
     move-result v0
@@ -548,7 +574,7 @@
 
     const-string v3, "Invalid eventname: %s. Eventname can only consist of numbers, letters, underscores ,and can not start with a number or \"onetrack_\" or \"ot_\""
 
-    .line 589
+    .line 587
     new-array v4, v1, [Ljava/lang/Object;
 
     const/4 v5, 0x0
@@ -567,26 +593,17 @@
     return p1
 .end method
 
-.method static synthetic e(Lcom/xiaomi/onetrack/api/h;)Lcom/xiaomi/onetrack/util/v;
-    .locals 0
-
-    .line 66
-    iget-object p0, p0, Lcom/xiaomi/onetrack/api/h;->i:Lcom/xiaomi/onetrack/util/v;
-
-    return-object p0
-.end method
-
 .method private e()Z
     .locals 3
 
-    .line 550
+    .line 548
     sget-boolean v0, Lcom/xiaomi/onetrack/util/p;->a:Z
 
     if-eqz v0, :cond_0
 
     const-string v0, "OneTrackImp"
 
-    .line 551
+    .line 549
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -617,7 +634,7 @@
 
     invoke-static {v0, v1}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 553
+    .line 551
     :cond_0
     invoke-direct {p0}, Lcom/xiaomi/onetrack/api/h;->f()Z
 
@@ -642,12 +659,21 @@
     return v0
 .end method
 
+.method static synthetic e(Lcom/xiaomi/onetrack/api/h;)Z
+    .locals 0
+
+    .line 65
+    iget-boolean p0, p0, Lcom/xiaomi/onetrack/api/h;->j:Z
+
+    return p0
+.end method
+
 .method private e(Ljava/lang/String;)Z
     .locals 6
 
     const-string v0, "onetrack_dau"
 
-    .line 595
+    .line 593
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -666,7 +692,7 @@
 
     const-string v0, "ot_login"
 
-    .line 596
+    .line 594
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -683,7 +709,7 @@
 
     goto :goto_0
 
-    .line 600
+    .line 598
     :cond_0
     invoke-static {p1}, Lcom/xiaomi/onetrack/util/r;->a(Ljava/lang/String;)Z
 
@@ -697,7 +723,7 @@
 
     const-string v4, "Invalid eventname: %s. Eventname can only consist of numbers, letters, underscores ,and can not start with a number or \"onetrack_\" or \"ot_\""
 
-    .line 602
+    .line 600
     new-array v5, v2, [Ljava/lang/Object;
 
     aput-object p1, v5, v1
@@ -718,12 +744,21 @@
     return v1
 .end method
 
+.method static synthetic f(Lcom/xiaomi/onetrack/api/h;)Lcom/xiaomi/onetrack/api/e;
+    .locals 0
+
+    .line 65
+    iget-object p0, p0, Lcom/xiaomi/onetrack/api/h;->b:Lcom/xiaomi/onetrack/api/e;
+
+    return-object p0
+.end method
+
 .method private f(Ljava/lang/String;)Lorg/json/JSONObject;
     .locals 4
 
     const/4 v0, 0x0
 
-    .line 663
+    .line 661
     :try_start_0
     iget-object v1, p0, Lcom/xiaomi/onetrack/api/h;->g:Lcom/xiaomi/onetrack/OneTrack$ICommonPropertyProvider;
 
@@ -743,12 +778,12 @@
     :goto_0
     const/4 v1, 0x0
 
-    .line 664
+    .line 662
     invoke-static {p1, v1}, Lcom/xiaomi/onetrack/util/r;->a(Ljava/util/Map;Z)Lorg/json/JSONObject;
 
     move-result-object p1
 
-    .line 666
+    .line 664
     iget-object v1, p0, Lcom/xiaomi/onetrack/api/h;->f:Lcom/xiaomi/onetrack/Configuration;
 
     invoke-static {v1}, Lcom/xiaomi/onetrack/util/r;->a(Lcom/xiaomi/onetrack/Configuration;)Ljava/lang/String;
@@ -759,14 +794,14 @@
 
     move-result-object v1
 
-    .line 667
+    .line 665
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
     if-nez v2, :cond_1
 
-    .line 668
+    .line 666
     new-instance v2, Lorg/json/JSONObject;
 
     invoke-direct {v2, v1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
@@ -776,7 +811,7 @@
     :cond_1
     move-object v2, v0
 
-    .line 670
+    .line 668
     :goto_1
     invoke-static {p1, v2}, Lcom/xiaomi/onetrack/util/r;->a(Lorg/json/JSONObject;Lorg/json/JSONObject;)Lorg/json/JSONObject;
 
@@ -791,7 +826,7 @@
 
     const-string v1, "OneTrackImp"
 
-    .line 672
+    .line 670
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -818,7 +853,7 @@
 .method private f()Z
     .locals 4
 
-    .line 558
+    .line 556
     :try_start_0
     new-instance v0, Landroid/content/ComponentName;
 
@@ -828,7 +863,7 @@
 
     invoke-direct {v0, v1, v2}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 560
+    .line 558
     invoke-static {}, Lcom/xiaomi/onetrack/f/a;->b()Landroid/content/Context;
 
     move-result-object v1
@@ -837,7 +872,7 @@
 
     move-result-object v1
 
-    .line 561
+    .line 559
     invoke-virtual {v1, v0}, Landroid/content/pm/PackageManager;->getComponentEnabledSetting(Landroid/content/ComponentName;)I
 
     move-result v0
@@ -858,7 +893,7 @@
 
     const-string v1, "OneTrackImp"
 
-    .line 566
+    .line 564
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -885,22 +920,13 @@
     return v0
 .end method
 
-.method static synthetic f(Lcom/xiaomi/onetrack/api/h;)Z
+.method static synthetic g(Lcom/xiaomi/onetrack/api/h;)V
     .locals 0
 
-    .line 66
-    iget-boolean p0, p0, Lcom/xiaomi/onetrack/api/h;->j:Z
+    .line 65
+    invoke-direct {p0}, Lcom/xiaomi/onetrack/api/h;->d()V
 
-    return p0
-.end method
-
-.method static synthetic g(Lcom/xiaomi/onetrack/api/h;)Lcom/xiaomi/onetrack/api/e;
-    .locals 0
-
-    .line 66
-    iget-object p0, p0, Lcom/xiaomi/onetrack/api/h;->b:Lcom/xiaomi/onetrack/api/e;
-
-    return-object p0
+    return-void
 .end method
 
 .method private static g()Z
@@ -908,7 +934,7 @@
 
     const/4 v0, 0x0
 
-    .line 573
+    .line 571
     :try_start_0
     invoke-static {}, Lcom/xiaomi/onetrack/f/a;->b()Landroid/content/Context;
 
@@ -920,12 +946,12 @@
 
     const-string v2, "com.miui.analytics"
 
-    .line 574
+    .line 572
     invoke-virtual {v1, v2, v0}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
 
     move-result-object v1
 
-    .line 575
+    .line 573
     iget v1, v1, Landroid/content/pm/PackageInfo;->versionCode:I
 
     const v2, 0x7867b6b4
@@ -939,7 +965,7 @@
     :cond_0
     const-string v2, "OneTrackImp"
 
-    .line 579
+    .line 577
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -963,7 +989,7 @@
     :catch_0
     move-exception v1
 
-    .line 581
+    .line 579
     invoke-virtual {v1}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
 
     :goto_0
@@ -973,7 +999,7 @@
 .method private h()V
     .locals 2
 
-    .line 726
+    .line 724
     sget-object v0, Lcom/xiaomi/onetrack/api/h;->c:Ljava/util/concurrent/ExecutorService;
 
     new-instance v1, Lcom/xiaomi/onetrack/api/x;
@@ -988,8 +1014,8 @@
 .method static synthetic h(Lcom/xiaomi/onetrack/api/h;)V
     .locals 0
 
-    .line 66
-    invoke-direct {p0}, Lcom/xiaomi/onetrack/api/h;->d()V
+    .line 65
+    invoke-direct {p0}, Lcom/xiaomi/onetrack/api/h;->i()V
 
     return-void
 .end method
@@ -997,14 +1023,14 @@
 .method private i()V
     .locals 2
 
-    .line 741
+    .line 739
     invoke-static {}, Lcom/xiaomi/onetrack/c/i;->d()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 742
+    .line 740
     sget-object v0, Lcom/xiaomi/onetrack/api/h;->c:Ljava/util/concurrent/ExecutorService;
 
     new-instance v1, Lcom/xiaomi/onetrack/api/y;
@@ -1017,19 +1043,10 @@
     return-void
 .end method
 
-.method static synthetic i(Lcom/xiaomi/onetrack/api/h;)V
-    .locals 0
-
-    .line 66
-    invoke-direct {p0}, Lcom/xiaomi/onetrack/api/h;->i()V
-
-    return-void
-.end method
-
 .method private j()V
     .locals 13
 
-    .line 753
+    .line 751
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/onetrack/api/h;->f:Lcom/xiaomi/onetrack/Configuration;
 
@@ -1043,7 +1060,7 @@
 
     return-void
 
-    .line 756
+    .line 754
     :cond_0
     invoke-static {}, Lcom/xiaomi/onetrack/f/a;->d()I
 
@@ -1051,34 +1068,34 @@
 
     int-to-long v4, v0
 
-    .line 757
+    .line 755
     invoke-static {}, Lcom/xiaomi/onetrack/f/a;->c()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 758
+    .line 756
     invoke-direct {p0, v4, v5, v0}, Lcom/xiaomi/onetrack/api/h;->a(JLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 759
+    .line 757
     invoke-static {}, Lcom/xiaomi/onetrack/util/aa;->A()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 761
+    .line 759
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 762
+    .line 760
     invoke-static {v0}, Lcom/xiaomi/onetrack/util/aa;->j(Ljava/lang/String;)V
 
     return-void
 
-    .line 766
+    .line 764
     :cond_1
     new-instance v2, Lorg/json/JSONObject;
 
@@ -1086,14 +1103,14 @@
 
     const-string v1, "last_ver_code"
 
-    .line 767
+    .line 765
     invoke-virtual {v2, v1}, Lorg/json/JSONObject;->optLong(Ljava/lang/String;)J
 
     move-result-wide v6
 
     const-string v1, "last_ver_name"
 
-    .line 768
+    .line 766
     invoke-virtual {v2, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
@@ -1102,15 +1119,15 @@
 
     if-eqz v1, :cond_2
 
-    .line 771
+    .line 769
     invoke-static {v0}, Lcom/xiaomi/onetrack/util/aa;->j(Ljava/lang/String;)V
 
-    .line 772
+    .line 770
     invoke-static {}, Lcom/xiaomi/onetrack/f/a;->f()J
 
     move-result-wide v8
 
-    .line 773
+    .line 771
     iget-object v0, p0, Lcom/xiaomi/onetrack/api/h;->f:Lcom/xiaomi/onetrack/Configuration;
 
     iget-object v10, p0, Lcom/xiaomi/onetrack/api/h;->h:Lcom/xiaomi/onetrack/OneTrack$IEventHook;
@@ -1135,7 +1152,7 @@
 
     move-result-object v0
 
-    .line 774
+    .line 772
     iget-object v1, p0, Lcom/xiaomi/onetrack/api/h;->b:Lcom/xiaomi/onetrack/api/e;
 
     const-string v2, "onetrack_upgrade"
@@ -1151,7 +1168,7 @@
 
     const-string v1, "OneTrackImp"
 
-    .line 777
+    .line 775
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1177,40 +1194,6 @@
     return-void
 .end method
 
-.method private k()V
-    .locals 3
-
-    .line 796
-    :try_start_0
-    new-instance v0, Landroid/content/IntentFilter;
-
-    invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
-
-    const-string v1, "android.intent.action.SCREEN_ON"
-
-    .line 797
-    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    const-string v1, "android.intent.action.SCREEN_OFF"
-
-    .line 798
-    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    .line 799
-    invoke-static {}, Lcom/xiaomi/onetrack/f/a;->b()Landroid/content/Context;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/xiaomi/onetrack/api/h;->k:Landroid/content/BroadcastReceiver;
-
-    invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    return-void
-.end method
-
 
 # virtual methods
 .method public a(Landroid/content/Context;)Ljava/lang/String;
@@ -1221,21 +1204,21 @@
         }
     .end annotation
 
-    .line 698
+    .line 696
     invoke-static {}, Lcom/xiaomi/onetrack/util/w;->a()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 701
+    .line 699
     invoke-static {p1}, Lcom/xiaomi/onetrack/util/DeviceUtil;->y(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object p1
 
     return-object p1
 
-    .line 699
+    .line 697
     :cond_0
     new-instance p1, Lcom/xiaomi/onetrack/OnMainThreadException;
 
@@ -1249,7 +1232,7 @@
 .method public a()V
     .locals 2
 
-    .line 631
+    .line 629
     sget-object v0, Lcom/xiaomi/onetrack/api/h;->c:Ljava/util/concurrent/ExecutorService;
 
     new-instance v1, Lcom/xiaomi/onetrack/api/s;
@@ -1264,7 +1247,7 @@
 .method public a(Lcom/xiaomi/onetrack/OneTrack$ICommonPropertyProvider;)V
     .locals 0
 
-    .line 658
+    .line 656
     iput-object p1, p0, Lcom/xiaomi/onetrack/api/h;->g:Lcom/xiaomi/onetrack/OneTrack$ICommonPropertyProvider;
 
     return-void
@@ -1273,10 +1256,10 @@
 .method public a(Lcom/xiaomi/onetrack/OneTrack$IEventHook;)V
     .locals 1
 
-    .line 790
+    .line 788
     iput-object p1, p0, Lcom/xiaomi/onetrack/api/h;->h:Lcom/xiaomi/onetrack/OneTrack$IEventHook;
 
-    .line 791
+    .line 789
     iget-object v0, p0, Lcom/xiaomi/onetrack/api/h;->i:Lcom/xiaomi/onetrack/util/v;
 
     invoke-virtual {v0, p1}, Lcom/xiaomi/onetrack/util/v;->a(Lcom/xiaomi/onetrack/OneTrack$IEventHook;)V
@@ -1291,7 +1274,7 @@
 
     return-void
 
-    .line 708
+    .line 706
     :cond_0
     sget-object v0, Lcom/xiaomi/onetrack/api/h;->c:Ljava/util/concurrent/ExecutorService;
 
@@ -1307,7 +1290,7 @@
 .method public a(Ljava/lang/String;)V
     .locals 2
 
-    .line 219
+    .line 217
     sget-object v0, Lcom/xiaomi/onetrack/api/h;->c:Ljava/util/concurrent/ExecutorService;
 
     new-instance v1, Lcom/xiaomi/onetrack/api/ae;
@@ -1333,7 +1316,7 @@
         }
     .end annotation
 
-    .line 301
+    .line 299
     sget-object v0, Lcom/xiaomi/onetrack/api/h;->c:Ljava/util/concurrent/ExecutorService;
 
     new-instance v7, Lcom/xiaomi/onetrack/api/ai;
@@ -1360,7 +1343,7 @@
 .method public a(Ljava/lang/String;Ljava/lang/Number;)V
     .locals 2
 
-    .line 342
+    .line 340
     sget-object v0, Lcom/xiaomi/onetrack/api/h;->c:Ljava/util/concurrent/ExecutorService;
 
     new-instance v1, Lcom/xiaomi/onetrack/api/k;
@@ -1375,7 +1358,7 @@
 .method public a(Ljava/lang/String;Ljava/lang/Object;)V
     .locals 2
 
-    .line 281
+    .line 279
     sget-object v0, Lcom/xiaomi/onetrack/api/h;->c:Ljava/util/concurrent/ExecutorService;
 
     new-instance v1, Lcom/xiaomi/onetrack/api/ah;
@@ -1390,7 +1373,7 @@
 .method public a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;J)V
     .locals 11
 
-    .line 250
+    .line 248
     sget-object v0, Lcom/xiaomi/onetrack/api/h;->c:Ljava/util/concurrent/ExecutorService;
 
     new-instance v10, Lcom/xiaomi/onetrack/api/af;
@@ -1432,7 +1415,7 @@
         }
     .end annotation
 
-    .line 148
+    .line 146
     sget-object v0, Lcom/xiaomi/onetrack/api/h;->c:Ljava/util/concurrent/ExecutorService;
 
     new-instance v1, Lcom/xiaomi/onetrack/api/t;
@@ -1457,7 +1440,7 @@
         }
     .end annotation
 
-    .line 168
+    .line 166
     sget-object v0, Lcom/xiaomi/onetrack/api/h;->c:Ljava/util/concurrent/ExecutorService;
 
     new-instance v1, Lcom/xiaomi/onetrack/api/ac;
@@ -1485,7 +1468,7 @@
         }
     .end annotation
 
-    .line 190
+    .line 188
     sget-object v0, Lcom/xiaomi/onetrack/api/h;->c:Ljava/util/concurrent/ExecutorService;
 
     new-instance v1, Lcom/xiaomi/onetrack/api/ad;
@@ -1509,7 +1492,7 @@
         }
     .end annotation
 
-    .line 265
+    .line 263
     sget-object v0, Lcom/xiaomi/onetrack/api/h;->c:Ljava/util/concurrent/ExecutorService;
 
     new-instance v1, Lcom/xiaomi/onetrack/api/ag;
@@ -1533,7 +1516,7 @@
         }
     .end annotation
 
-    .line 358
+    .line 356
     sget-object v0, Lcom/xiaomi/onetrack/api/h;->c:Ljava/util/concurrent/ExecutorService;
 
     new-instance v1, Lcom/xiaomi/onetrack/api/l;
@@ -1548,7 +1531,7 @@
 .method public a(Z)V
     .locals 0
 
-    .line 722
+    .line 720
     sput-boolean p1, Lcom/xiaomi/onetrack/util/p;->a:Z
 
     return-void
@@ -1562,14 +1545,14 @@
         }
     .end annotation
 
-    .line 691
+    .line 689
     invoke-static {}, Lcom/xiaomi/onetrack/util/w;->a()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 694
+    .line 692
     invoke-static {}, Lcom/xiaomi/onetrack/util/o;->a()Lcom/xiaomi/onetrack/util/o;
 
     move-result-object v0
@@ -1580,7 +1563,7 @@
 
     return-object v0
 
-    .line 692
+    .line 690
     :cond_0
     new-instance v0, Lcom/xiaomi/onetrack/OnMainThreadException;
 
@@ -1594,7 +1577,7 @@
 .method public b(Ljava/lang/String;)V
     .locals 2
 
-    .line 640
+    .line 638
     sget-object v0, Lcom/xiaomi/onetrack/api/h;->c:Ljava/util/concurrent/ExecutorService;
 
     new-instance v1, Lcom/xiaomi/onetrack/api/u;
@@ -1619,7 +1602,7 @@
         }
     .end annotation
 
-    .line 326
+    .line 324
     sget-object v0, Lcom/xiaomi/onetrack/api/h;->c:Ljava/util/concurrent/ExecutorService;
 
     new-instance v1, Lcom/xiaomi/onetrack/api/j;
@@ -1634,7 +1617,7 @@
 .method public b(Z)V
     .locals 2
 
-    .line 834
+    .line 831
     iget-object v0, p0, Lcom/xiaomi/onetrack/api/h;->f:Lcom/xiaomi/onetrack/Configuration;
 
     invoke-virtual {v0}, Lcom/xiaomi/onetrack/Configuration;->isUseCustomPrivacyPolicy()Z
@@ -1645,7 +1628,7 @@
 
     return-void
 
-    .line 838
+    .line 835
     :cond_0
     sget-object v0, Lcom/xiaomi/onetrack/api/h;->c:Ljava/util/concurrent/ExecutorService;
 
@@ -1661,7 +1644,7 @@
 .method public c(Ljava/lang/String;)V
     .locals 2
 
-    .line 678
+    .line 676
     sget-object v0, Lcom/xiaomi/onetrack/api/h;->c:Ljava/util/concurrent/ExecutorService;
 
     new-instance v1, Lcom/xiaomi/onetrack/api/v;
@@ -1689,7 +1672,7 @@
 
     return-void
 
-    .line 611
+    .line 609
     :cond_0
     sget-object v0, Lcom/xiaomi/onetrack/api/h;->c:Ljava/util/concurrent/ExecutorService;
 
@@ -1705,7 +1688,7 @@
 .method public c(Z)V
     .locals 0
 
-    .line 848
+    .line 845
     iput-boolean p1, p0, Lcom/xiaomi/onetrack/api/h;->j:Z
 
     return-void

@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/market/sdk/MarketManager$6;Landroid/os/Handler;)V
     .locals 0
 
-    .line 481
+    .line 490
     iput-object p1, p0, Lcom/market/sdk/MarketManager$6$1;->this$1:Lcom/market/sdk/MarketManager$6;
 
     invoke-direct {p0, p2}, Landroid/os/ResultReceiver;-><init>(Landroid/os/Handler;)V
@@ -37,7 +37,7 @@
 
     if-eqz p2, :cond_0
 
-    .line 485
+    .line 494
     iget-object p1, p0, Lcom/market/sdk/MarketManager$6$1;->this$1:Lcom/market/sdk/MarketManager$6;
 
     iget-object p1, p1, Lcom/market/sdk/MarketManager$6;->val$taskCompat:Lcom/market/sdk/compat/FutureTaskCompat;
@@ -52,7 +52,7 @@
 
     goto :goto_0
 
-    .line 487
+    .line 496
     :cond_0
     iget-object p1, p0, Lcom/market/sdk/MarketManager$6$1;->this$1:Lcom/market/sdk/MarketManager$6;
 

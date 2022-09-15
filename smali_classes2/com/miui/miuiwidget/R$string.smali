@@ -71,9 +71,9 @@
 
 .field public static final androidx_startup:I = 0x7f11005f
 
-.field public static final search_menu_title:I = 0x7f110416
+.field public static final search_menu_title:I = 0x7f110411
 
-.field public static final status_bar_notification_info_overflow:I = 0x7f110455
+.field public static final status_bar_notification_info_overflow:I = 0x7f110450
 
 
 # direct methods

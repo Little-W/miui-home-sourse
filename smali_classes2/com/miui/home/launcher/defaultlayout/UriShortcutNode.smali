@@ -22,7 +22,7 @@
 .method private final addUriShortcut(Landroid/database/sqlite/SQLiteDatabase;Landroid/content/ContentValues;Landroid/content/res/TypedArray;)V
     .locals 12
 
-    const/4 v0, 0x6
+    const/4 v0, 0x4
 
     .line 22
     invoke-virtual {p3, v0}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
@@ -35,7 +35,7 @@
 
     invoke-static {v5, v0}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const/16 v0, 0xc
+    const/16 v0, 0xa
 
     .line 25
     invoke-virtual {p3, v0}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
@@ -80,7 +80,7 @@
 
     invoke-static {v6, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const/16 v0, 0x13
+    const/16 v0, 0x11
 
     .line 28
     invoke-virtual {p3, v0}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
@@ -92,14 +92,14 @@
 
     move-result-object v8
 
-    const/16 v0, 0x15
+    const/16 v0, 0x13
 
     .line 30
     invoke-virtual {p3, v0}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v9
 
-    const/16 v0, 0xf
+    const/16 v0, 0xd
 
     .line 31
     invoke-virtual {p3, v0, v1}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z

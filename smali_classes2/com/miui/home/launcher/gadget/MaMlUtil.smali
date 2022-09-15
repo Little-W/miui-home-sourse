@@ -143,7 +143,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f11028e
+    const v2, 0x7f11028d
 
     .line 141
     invoke-virtual {v0, v2}, Lmiui/home/lib/dialog/AlertDialog$Builder;->setTitle(I)Lmiui/home/lib/dialog/AlertDialog$Builder;
@@ -161,7 +161,7 @@
 
     aput-object p1, v3, v1
 
-    const p1, 0x7f11028d
+    const p1, 0x7f11028c
 
     invoke-virtual {p0, p1, v3}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -182,7 +182,7 @@
 
     aput-object v0, p2, v1
 
-    const v0, 0x7f11028b
+    const v0, 0x7f11028a
 
     invoke-virtual {p0, v0, p2}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -197,12 +197,12 @@
 
     if-eqz p1, :cond_0
 
-    const p1, 0x7f110289
+    const p1, 0x7f110288
 
     goto :goto_0
 
     :cond_0
-    const p1, 0x7f11028a
+    const p1, 0x7f110289
 
     .line 146
     :goto_0
@@ -215,7 +215,7 @@
 
     move-result-object p0
 
-    const p1, 0x7f11028c
+    const p1, 0x7f11028b
 
     new-instance p2, Lcom/miui/home/launcher/gadget/-$$Lambda$MaMlUtil$q0Ap0KjeCK2RJGH7T674Bomi6yc;
 

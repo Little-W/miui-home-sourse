@@ -329,7 +329,6 @@
     <string name="exit_overview_because_task_stack_changed">Τα Πρόσφατα έκλεισαν λόγω αλλαγών που έγιναν στο παρασκήνιο</string>
     <string name="expand_button_title">Σύνθετες</string>
     <string name="exposed_dropdown_menu_content_description">Εμφάνιση αναπτυσσόμενου μενού</string>
-    <string name="external_not_support_split_screen_j18">Ο Διαχωρισμός οθόνης δεν υποστηρίζεται στην εξωτερική οθόνη</string>
     <string name="failed_to_delete_temporary">Αδυναμία αφαίρεσης</string>
     <string name="failed_to_drop">Αδυναμία μετακίνησης</string>
     <string name="failed_to_drop_widget_invalid">Το widget δεν είναι έγκυρο</string>
@@ -548,7 +547,6 @@
     <string name="midnight">Νύχτα</string>
     <string name="minus_one_screen">Αποθήκη εφαρμογών</string>
     <string name="miui_screen_config_title">Ρυθμίσεις αρχικής οθόνης</string>
-    <string name="miui_widget_menu_replace_text">Εναλλαγή</string>
     <string name="miuix_access_state_desc">Έγινε επιλογή</string>
     <string name="miuix_appcompat_action_mode_deselect_all">Αποεπιλογή</string>
     <string name="miuix_appcompat_action_mode_select_all">Επιλογή όλων</string>
@@ -575,8 +573,6 @@
     <string name="monday">Δευτέρα</string>
     <string name="monday_short">Δευ</string>
     <string name="monday_shortest">Δευ</string>
-    <string name="monochrome_summary">Αλλαγή χρώματος παρασκηνίου για συμβατά εικονίδια</string>
-    <string name="monochrome_title">Χρώμα παρασκηνίου</string>
     <string name="month_april">Απριλίου</string>
     <string name="month_april_short">Απρ</string>
     <string name="month_april_shortest">Απρ</string>

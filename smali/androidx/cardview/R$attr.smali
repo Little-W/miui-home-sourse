@@ -29,12 +29,12 @@
 
 .field public static final cardViewStyle:I = 0x7f0400e4
 
-.field public static final contentPadding:I = 0x7f040191
+.field public static final contentPadding:I = 0x7f04018f
 
-.field public static final contentPaddingBottom:I = 0x7f040192
+.field public static final contentPaddingBottom:I = 0x7f040190
 
-.field public static final contentPaddingLeft:I = 0x7f040194
+.field public static final contentPaddingLeft:I = 0x7f040192
 
-.field public static final contentPaddingRight:I = 0x7f040195
+.field public static final contentPaddingRight:I = 0x7f040193
 
-.field public static final contentPaddingTop:I = 0x7f040197
+.field public static final contentPaddingTop:I = 0x7f040195

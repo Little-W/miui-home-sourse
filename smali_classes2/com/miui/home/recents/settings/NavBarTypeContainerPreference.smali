@@ -58,7 +58,7 @@
 
     iput-object p1, p0, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->mOnClickListener:Landroid/view/View$OnClickListener;
 
-    const p1, 0x7f0d0133
+    const p1, 0x7f0d0132
 
     .line 43
     invoke-virtual {p0, p1}, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->setLayoutResource(I)V
@@ -415,14 +415,14 @@
     .line 119
     iget-object v0, p0, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->mGestureLearnAlertDialog:Lcom/miui/home/recents/settings/GestureLearnAlertDialog;
 
-    const v1, 0x7f11034b
+    const v1, 0x7f110346
 
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;->setTitle(I)V
 
     .line 120
     iget-object v0, p0, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->mGestureLearnAlertDialog:Lcom/miui/home/recents/settings/GestureLearnAlertDialog;
 
-    const v1, 0x7f11034a
+    const v1, 0x7f110345
 
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;->setMessage(I)V
 
@@ -474,14 +474,14 @@
 
     invoke-direct {v1, p0}, Lcom/miui/home/recents/settings/-$$Lambda$NavBarTypeContainerPreference$xRC8XKr4JwAzzOwGzEOecvusUBk;-><init>(Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;)V
 
-    const v2, 0x7f11036d
+    const v2, 0x7f110368
 
     .line 101
     invoke-virtual {v0, v2, v1}, Lmiui/home/lib/dialog/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiui/home/lib/dialog/AlertDialog$Builder;
 
     move-result-object v0
 
-    const v1, 0x7f11036b
+    const v1, 0x7f110366
 
     const/4 v2, 0x0
 
@@ -502,7 +502,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f11036e
+    const v1, 0x7f110369
 
     .line 112
     invoke-virtual {v0, v1}, Lmiui/home/lib/dialog/AlertDialog;->setTitle(I)V
@@ -512,7 +512,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f11036c
+    const v2, 0x7f110367
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -583,7 +583,7 @@
     .line 50
     iget-object p1, p1, Landroidx/preference/PreferenceViewHolder;->itemView:Landroid/view/View;
 
-    const v0, 0x7f0a03d9
+    const v0, 0x7f0a03d5
 
     .line 51
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -608,7 +608,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    const v0, 0x7f0a0177
+    const v0, 0x7f0a0173
 
     .line 55
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -619,7 +619,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->mFullScreenGestureView:Lcom/miui/home/recents/settings/NavigationBarTypeView;
 
-    const v0, 0x7f0a0178
+    const v0, 0x7f0a0174
 
     .line 56
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;

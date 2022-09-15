@@ -120,7 +120,7 @@
 
     invoke-direct {v4, p0}, Lcom/miui/home/launcher/DragObject$1;-><init>(Lcom/miui/home/launcher/DragObject;)V
 
-    const v5, 0x7f0d0137
+    const v5, 0x7f0d0136
 
     invoke-virtual {v2, v5, v3, v4}, Landroidx/asynclayoutinflater/view/AsyncLayoutInflater;->inflate(ILandroid/view/ViewGroup;Landroidx/asynclayoutinflater/view/AsyncLayoutInflater$OnInflateFinishedListener;)V
 

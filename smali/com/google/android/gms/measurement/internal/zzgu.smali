@@ -322,7 +322,7 @@
 
     const-string v27, "tax"
 
-    const-string v28, "transaction_id"
+    const-string/jumbo v28, "transaction_id"
 
     const-string/jumbo v29, "value"
 

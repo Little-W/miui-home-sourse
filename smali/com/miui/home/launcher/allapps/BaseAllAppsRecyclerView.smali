@@ -129,7 +129,7 @@
 .method protected getAvailableScrollHeight()I
     .locals 3
 
-    .line 380
+    .line 379
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/BaseAllAppsRecyclerView;->getPaddingTop()I
 
     move-result v0
@@ -150,7 +150,7 @@
 
     add-int/2addr v0, v1
 
-    .line 381
+    .line 380
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/BaseAllAppsRecyclerView;->getHeight()I
 
     move-result v1
@@ -243,7 +243,7 @@
 .end method
 
 .method public getCurrentScrollY(II)I
-    .locals 9
+    .locals 8
 
     .line 330
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/BaseAllAppsRecyclerView;->mApps:Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;
@@ -283,160 +283,151 @@
 
     if-gez v2, :cond_7
 
-    .line 336
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    const/4 v2, 0x0
 
-    move-result v2
-
-    invoke-static {p1, v2}, Ljava/lang/Math;->min(II)I
-
-    move-result v2
-
-    const/4 v3, 0x0
+    move v3, v2
 
     move v4, v3
 
-    move v5, v4
-
     :goto_1
-    if-ge v4, v2, :cond_6
+    if-ge v3, p1, :cond_6
+
+    .line 337
+    invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;
 
     .line 338
-    invoke-interface {v0, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    iget v6, v5, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;->viewType:I
 
-    move-result-object v6
-
-    check-cast v6, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;
-
-    .line 339
-    iget v7, v6, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;->viewType:I
-
-    invoke-static {v7}, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->isIconViewType(I)Z
-
-    move-result v7
-
-    if-eqz v7, :cond_2
-
-    if-eqz v1, :cond_1
-
-    .line 341
-    iget v7, v1, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;->viewType:I
-
-    iget v8, v6, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;->viewType:I
-
-    if-ne v7, v8, :cond_1
-
-    iget v7, v1, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;->rowIndex:I
-
-    iget v8, v6, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;->rowIndex:I
-
-    if-ne v7, v8, :cond_1
-
-    goto :goto_4
-
-    .line 347
-    :cond_1
-    iget v7, v6, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;->rowAppIndex:I
-
-    if-nez v7, :cond_5
-
-    .line 348
-    iget-object v7, p0, Lcom/miui/home/launcher/allapps/BaseAllAppsRecyclerView;->mViewHeights:Landroid/util/SparseIntArray;
-
-    iget v6, v6, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;->viewType:I
-
-    invoke-virtual {v7, v6, v3}, Landroid/util/SparseIntArray;->get(II)I
+    invoke-static {v6}, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->isIconViewType(I)Z
 
     move-result v6
 
-    add-int/2addr v5, v6
+    if-eqz v6, :cond_2
+
+    if-eqz v1, :cond_1
+
+    .line 340
+    iget v6, v1, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;->viewType:I
+
+    iget v7, v5, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;->viewType:I
+
+    if-ne v6, v7, :cond_1
+
+    iget v6, v1, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;->rowIndex:I
+
+    iget v7, v5, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;->rowIndex:I
+
+    if-ne v6, v7, :cond_1
+
+    goto :goto_4
+
+    .line 346
+    :cond_1
+    iget v6, v5, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;->rowAppIndex:I
+
+    if-nez v6, :cond_5
+
+    .line 347
+    iget-object v6, p0, Lcom/miui/home/launcher/allapps/BaseAllAppsRecyclerView;->mViewHeights:Landroid/util/SparseIntArray;
+
+    iget v5, v5, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;->viewType:I
+
+    invoke-virtual {v6, v5, v2}, Landroid/util/SparseIntArray;->get(II)I
+
+    move-result v5
+
+    add-int/2addr v4, v5
 
     goto :goto_3
 
-    .line 352
+    .line 351
     :cond_2
-    iget-object v7, p0, Lcom/miui/home/launcher/allapps/BaseAllAppsRecyclerView;->mViewHeights:Landroid/util/SparseIntArray;
+    iget-object v6, p0, Lcom/miui/home/launcher/allapps/BaseAllAppsRecyclerView;->mViewHeights:Landroid/util/SparseIntArray;
 
-    iget v8, v6, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;->viewType:I
+    iget v7, v5, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;->viewType:I
 
-    invoke-virtual {v7, v8}, Landroid/util/SparseIntArray;->get(I)I
+    invoke-virtual {v6, v7}, Landroid/util/SparseIntArray;->get(I)I
 
-    move-result v7
+    move-result v6
 
-    if-nez v7, :cond_4
+    if-nez v6, :cond_4
 
-    .line 354
-    invoke-virtual {p0, v4}, Lcom/miui/home/launcher/allapps/BaseAllAppsRecyclerView;->findViewHolderForAdapterPosition(I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
+    .line 353
+    invoke-virtual {p0, v3}, Lcom/miui/home/launcher/allapps/BaseAllAppsRecyclerView;->findViewHolderForAdapterPosition(I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
-    move-result-object v7
+    move-result-object v6
 
-    if-nez v7, :cond_3
+    if-nez v6, :cond_3
+
+    .line 355
+    invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/BaseAllAppsRecyclerView;->getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
+
+    move-result-object v6
+
+    iget v5, v5, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;->viewType:I
+
+    invoke-virtual {v6, p0, v5}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->createViewHolder(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
+
+    move-result-object v5
 
     .line 356
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/BaseAllAppsRecyclerView;->getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
-    move-result-object v7
-
-    iget v6, v6, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;->viewType:I
-
-    invoke-virtual {v7, p0, v6}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->createViewHolder(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
-
     move-result-object v6
 
+    invoke-virtual {v6, v5, v3}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
+
     .line 357
-    invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/BaseAllAppsRecyclerView;->getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
+    iget-object v6, v5, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    move-result-object v7
-
-    invoke-virtual {v7, v6, v4}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
+    invoke-virtual {v6, v2, v2}, Landroid/view/View;->measure(II)V
 
     .line 358
-    iget-object v7, v6, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
-
-    invoke-virtual {v7, v3, v3}, Landroid/view/View;->measure(II)V
-
-    .line 359
-    iget-object v7, v6, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
-
-    invoke-virtual {v7}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v7
-
-    .line 361
-    invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/BaseAllAppsRecyclerView;->getRecycledViewPool()Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;
-
-    move-result-object v8
-
-    invoke-virtual {v8, v6}, Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;->putRecycledView(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
-
-    goto :goto_2
-
-    .line 363
-    :cond_3
-    iget-object v6, v7, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
+    iget-object v6, v5, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {v6}, Landroid/view/View;->getMeasuredHeight()I
 
-    move-result v7
+    move-result v6
+
+    .line 360
+    invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/BaseAllAppsRecyclerView;->getRecycledViewPool()Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;
+
+    move-result-object v7
+
+    invoke-virtual {v7, v5}, Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;->putRecycledView(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
+
+    goto :goto_2
+
+    .line 362
+    :cond_3
+    iget-object v5, v6, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
+
+    invoke-virtual {v5}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result v6
 
     :cond_4
     :goto_2
-    add-int/2addr v5, v7
+    add-int/2addr v4, v6
 
     :cond_5
     :goto_3
-    add-int/lit8 v4, v4, 0x1
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 369
+    .line 368
     :cond_6
     :goto_4
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/BaseAllAppsRecyclerView;->mCachedScrollPositions:Landroid/util/SparseIntArray;
 
-    invoke-virtual {v0, p1, v5}, Landroid/util/SparseIntArray;->put(II)V
+    invoke-virtual {v0, p1, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    move v2, v5
+    move v2, v4
 
     :cond_7
     sub-int/2addr v2, p2
@@ -551,10 +542,10 @@
 .method protected onAttachedToWindow()V
     .locals 1
 
-    .line 391
+    .line 390
     invoke-super {p0}, Lcom/miui/home/launcher/BaseRecyclerView;->onAttachedToWindow()V
 
-    .line 392
+    .line 391
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -565,7 +556,7 @@
 
     if-nez v0, :cond_0
 
-    .line 393
+    .line 392
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -579,10 +570,10 @@
 .method protected onDetachedFromWindow()V
     .locals 1
 
-    .line 399
+    .line 398
     invoke-super {p0}, Lcom/miui/home/launcher/BaseRecyclerView;->onDetachedFromWindow()V
 
-    .line 400
+    .line 399
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -593,7 +584,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 401
+    .line 400
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -624,14 +615,14 @@
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
-    .line 407
+    .line 406
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/BaseAllAppsRecyclerView;->getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 408
+    .line 407
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/BaseAllAppsRecyclerView;->getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     move-result-object p1

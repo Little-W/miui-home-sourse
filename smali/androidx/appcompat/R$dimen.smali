@@ -181,32 +181,32 @@
 
 .field public static final disabled_alpha_material_light:I = 0x7f0700f0
 
-.field public static final highlight_alpha_material_colored:I = 0x7f070188
+.field public static final highlight_alpha_material_colored:I = 0x7f070187
 
-.field public static final highlight_alpha_material_dark:I = 0x7f070189
+.field public static final highlight_alpha_material_dark:I = 0x7f070188
 
-.field public static final highlight_alpha_material_light:I = 0x7f07018a
+.field public static final highlight_alpha_material_light:I = 0x7f070189
 
-.field public static final hint_alpha_material_dark:I = 0x7f07018b
+.field public static final hint_alpha_material_dark:I = 0x7f07018a
 
-.field public static final hint_alpha_material_light:I = 0x7f07018c
+.field public static final hint_alpha_material_light:I = 0x7f07018b
 
-.field public static final hint_pressed_alpha_material_dark:I = 0x7f07018d
+.field public static final hint_pressed_alpha_material_dark:I = 0x7f07018c
 
-.field public static final hint_pressed_alpha_material_light:I = 0x7f07018e
+.field public static final hint_pressed_alpha_material_light:I = 0x7f07018d
 
-.field public static final tooltip_corner_radius:I = 0x7f070647
+.field public static final tooltip_corner_radius:I = 0x7f070642
 
-.field public static final tooltip_horizontal_padding:I = 0x7f070648
+.field public static final tooltip_horizontal_padding:I = 0x7f070643
 
-.field public static final tooltip_margin:I = 0x7f070649
+.field public static final tooltip_margin:I = 0x7f070644
 
-.field public static final tooltip_precise_anchor_extra_offset:I = 0x7f07064a
+.field public static final tooltip_precise_anchor_extra_offset:I = 0x7f070645
 
-.field public static final tooltip_precise_anchor_threshold:I = 0x7f07064b
+.field public static final tooltip_precise_anchor_threshold:I = 0x7f070646
 
-.field public static final tooltip_vertical_padding:I = 0x7f07064c
+.field public static final tooltip_vertical_padding:I = 0x7f070647
 
-.field public static final tooltip_y_offset_non_touch:I = 0x7f07064d
+.field public static final tooltip_y_offset_non_touch:I = 0x7f070648
 
-.field public static final tooltip_y_offset_touch:I = 0x7f07064e
+.field public static final tooltip_y_offset_touch:I = 0x7f070649

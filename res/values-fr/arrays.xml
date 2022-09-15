@@ -49,13 +49,6 @@
         <item>Par défaut</item>
         <item>Elégant</item>
     </string-array>
-    <string-array name="monochrome_color_entries">
-        <item>Par défaut</item>
-        <item>Bleu</item>
-        <item>Vert</item>
-        <item>Violet</item>
-        <item>Marron</item>
-    </string-array>
     <string-array name="transformation_entries">
         <item>Diapositive</item>
         <item>Fondu</item>

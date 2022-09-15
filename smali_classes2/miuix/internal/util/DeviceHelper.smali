@@ -81,6 +81,30 @@
     return v1
 .end method
 
+.method public static isHideGestureLine(Landroid/content/Context;)Z
+    .locals 2
+
+    .line 58
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p0
+
+    const-string v0, "hide_gesture_line"
+
+    const/4 v1, 0x0
+
+    invoke-static {p0, v0, v1}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const/4 v1, 0x1
+
+    :cond_0
+    return v1
+.end method
+
 .method public static isOled()Z
     .locals 1
 

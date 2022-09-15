@@ -16,7 +16,7 @@
 .method private final addFolder(Landroid/database/sqlite/SQLiteDatabase;Landroid/content/ContentValues;Landroid/content/res/TypedArray;)V
     .locals 1
 
-    const/16 v0, 0x13
+    const/16 v0, 0x11
 
     .line 23
     invoke-virtual {p3, v0}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;

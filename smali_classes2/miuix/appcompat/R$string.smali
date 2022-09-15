@@ -261,450 +261,450 @@
 
 .field public static final evening:I = 0x7f1101b4
 
-.field public static final fmt_chinese_date:I = 0x7f1101c0
+.field public static final fmt_chinese_date:I = 0x7f1101bf
 
-.field public static final fmt_date:I = 0x7f1101c1
+.field public static final fmt_date:I = 0x7f1101c0
 
-.field public static final fmt_date_day:I = 0x7f1101c2
+.field public static final fmt_date_day:I = 0x7f1101c1
 
-.field public static final fmt_date_long_month:I = 0x7f1101c3
+.field public static final fmt_date_long_month:I = 0x7f1101c2
 
-.field public static final fmt_date_long_month_day:I = 0x7f1101c4
+.field public static final fmt_date_long_month_day:I = 0x7f1101c3
 
-.field public static final fmt_date_long_year_month:I = 0x7f1101c5
+.field public static final fmt_date_long_year_month:I = 0x7f1101c4
 
-.field public static final fmt_date_long_year_month_day:I = 0x7f1101c6
+.field public static final fmt_date_long_year_month_day:I = 0x7f1101c5
 
-.field public static final fmt_date_numeric_day:I = 0x7f1101c7
+.field public static final fmt_date_numeric_day:I = 0x7f1101c6
 
-.field public static final fmt_date_numeric_month:I = 0x7f1101c8
+.field public static final fmt_date_numeric_month:I = 0x7f1101c7
 
-.field public static final fmt_date_numeric_month_day:I = 0x7f1101c9
+.field public static final fmt_date_numeric_month_day:I = 0x7f1101c8
 
-.field public static final fmt_date_numeric_year:I = 0x7f1101ca
+.field public static final fmt_date_numeric_year:I = 0x7f1101c9
 
-.field public static final fmt_date_numeric_year_month:I = 0x7f1101cb
+.field public static final fmt_date_numeric_year_month:I = 0x7f1101ca
 
-.field public static final fmt_date_numeric_year_month_day:I = 0x7f1101cc
+.field public static final fmt_date_numeric_year_month_day:I = 0x7f1101cb
 
-.field public static final fmt_date_short_month:I = 0x7f1101cd
+.field public static final fmt_date_short_month:I = 0x7f1101cc
 
-.field public static final fmt_date_short_month_day:I = 0x7f1101ce
+.field public static final fmt_date_short_month_day:I = 0x7f1101cd
 
-.field public static final fmt_date_short_year_month:I = 0x7f1101cf
+.field public static final fmt_date_short_year_month:I = 0x7f1101ce
 
-.field public static final fmt_date_short_year_month_day:I = 0x7f1101d0
+.field public static final fmt_date_short_year_month_day:I = 0x7f1101cf
 
-.field public static final fmt_date_time:I = 0x7f1101d1
+.field public static final fmt_date_time:I = 0x7f1101d0
 
-.field public static final fmt_date_time_timezone:I = 0x7f1101d2
+.field public static final fmt_date_time_timezone:I = 0x7f1101d1
 
-.field public static final fmt_date_timezone:I = 0x7f1101d3
+.field public static final fmt_date_timezone:I = 0x7f1101d2
 
-.field public static final fmt_date_year:I = 0x7f1101d4
+.field public static final fmt_date_year:I = 0x7f1101d3
 
-.field public static final fmt_time:I = 0x7f1101d5
+.field public static final fmt_time:I = 0x7f1101d4
 
-.field public static final fmt_time_12hour:I = 0x7f1101d6
+.field public static final fmt_time_12hour:I = 0x7f1101d5
 
-.field public static final fmt_time_12hour_minute:I = 0x7f1101d7
+.field public static final fmt_time_12hour_minute:I = 0x7f1101d6
 
-.field public static final fmt_time_12hour_minute_pm:I = 0x7f1101d8
+.field public static final fmt_time_12hour_minute_pm:I = 0x7f1101d7
 
-.field public static final fmt_time_12hour_minute_second:I = 0x7f1101d9
+.field public static final fmt_time_12hour_minute_second:I = 0x7f1101d8
 
-.field public static final fmt_time_12hour_minute_second_millis:I = 0x7f1101da
+.field public static final fmt_time_12hour_minute_second_millis:I = 0x7f1101d9
 
-.field public static final fmt_time_12hour_minute_second_millis_pm:I = 0x7f1101db
+.field public static final fmt_time_12hour_minute_second_millis_pm:I = 0x7f1101da
 
-.field public static final fmt_time_12hour_minute_second_pm:I = 0x7f1101dc
+.field public static final fmt_time_12hour_minute_second_pm:I = 0x7f1101db
 
-.field public static final fmt_time_12hour_pm:I = 0x7f1101dd
+.field public static final fmt_time_12hour_pm:I = 0x7f1101dc
 
-.field public static final fmt_time_24hour:I = 0x7f1101de
+.field public static final fmt_time_24hour:I = 0x7f1101dd
 
-.field public static final fmt_time_24hour_minute:I = 0x7f1101df
+.field public static final fmt_time_24hour_minute:I = 0x7f1101de
 
-.field public static final fmt_time_24hour_minute_second:I = 0x7f1101e0
+.field public static final fmt_time_24hour_minute_second:I = 0x7f1101df
 
-.field public static final fmt_time_24hour_minute_second_millis:I = 0x7f1101e1
+.field public static final fmt_time_24hour_minute_second_millis:I = 0x7f1101e0
 
-.field public static final fmt_time_millis:I = 0x7f1101e2
+.field public static final fmt_time_millis:I = 0x7f1101e1
 
-.field public static final fmt_time_minute:I = 0x7f1101e3
+.field public static final fmt_time_minute:I = 0x7f1101e2
 
-.field public static final fmt_time_minute_second:I = 0x7f1101e4
+.field public static final fmt_time_minute_second:I = 0x7f1101e3
 
-.field public static final fmt_time_minute_second_millis:I = 0x7f1101e5
+.field public static final fmt_time_minute_second_millis:I = 0x7f1101e4
 
-.field public static final fmt_time_second:I = 0x7f1101e6
+.field public static final fmt_time_second:I = 0x7f1101e5
 
-.field public static final fmt_time_second_millis:I = 0x7f1101e7
+.field public static final fmt_time_second_millis:I = 0x7f1101e6
 
-.field public static final fmt_time_timezone:I = 0x7f1101e8
+.field public static final fmt_time_timezone:I = 0x7f1101e7
 
-.field public static final fmt_timezone:I = 0x7f1101e9
+.field public static final fmt_timezone:I = 0x7f1101e8
 
-.field public static final fmt_weekday:I = 0x7f1101ea
+.field public static final fmt_weekday:I = 0x7f1101e9
 
-.field public static final fmt_weekday_date:I = 0x7f1101eb
+.field public static final fmt_weekday_date:I = 0x7f1101ea
 
-.field public static final fmt_weekday_date_time:I = 0x7f1101ec
+.field public static final fmt_weekday_date_time:I = 0x7f1101eb
 
-.field public static final fmt_weekday_date_time_timezone:I = 0x7f1101ed
+.field public static final fmt_weekday_date_time_timezone:I = 0x7f1101ec
 
-.field public static final fmt_weekday_date_timezone:I = 0x7f1101ee
+.field public static final fmt_weekday_date_timezone:I = 0x7f1101ed
 
-.field public static final fmt_weekday_long:I = 0x7f1101ef
+.field public static final fmt_weekday_long:I = 0x7f1101ee
 
-.field public static final fmt_weekday_short:I = 0x7f1101f0
+.field public static final fmt_weekday_short:I = 0x7f1101ef
 
-.field public static final fmt_weekday_time:I = 0x7f1101f1
+.field public static final fmt_weekday_time:I = 0x7f1101f0
 
-.field public static final fmt_weekday_time_timezone:I = 0x7f1101f2
+.field public static final fmt_weekday_time_timezone:I = 0x7f1101f1
 
-.field public static final fmt_weekday_timezone:I = 0x7f1101f3
+.field public static final fmt_weekday_timezone:I = 0x7f1101f2
 
-.field public static final friday:I = 0x7f110206
+.field public static final friday:I = 0x7f110205
 
-.field public static final friday_short:I = 0x7f110207
+.field public static final friday_short:I = 0x7f110206
 
-.field public static final friday_shortest:I = 0x7f110208
+.field public static final friday_shortest:I = 0x7f110207
 
-.field public static final heavenly_stems_bing:I = 0x7f11023d
+.field public static final heavenly_stems_bing:I = 0x7f11023c
 
-.field public static final heavenly_stems_ding:I = 0x7f11023e
+.field public static final heavenly_stems_ding:I = 0x7f11023d
 
-.field public static final heavenly_stems_geng:I = 0x7f11023f
+.field public static final heavenly_stems_geng:I = 0x7f11023e
 
-.field public static final heavenly_stems_gui:I = 0x7f110240
+.field public static final heavenly_stems_gui:I = 0x7f11023f
 
-.field public static final heavenly_stems_ji:I = 0x7f110241
+.field public static final heavenly_stems_ji:I = 0x7f110240
 
-.field public static final heavenly_stems_jia:I = 0x7f110242
+.field public static final heavenly_stems_jia:I = 0x7f110241
 
-.field public static final heavenly_stems_ren:I = 0x7f110243
+.field public static final heavenly_stems_ren:I = 0x7f110242
 
-.field public static final heavenly_stems_wu:I = 0x7f110244
+.field public static final heavenly_stems_wu:I = 0x7f110243
 
-.field public static final heavenly_stems_xin:I = 0x7f110245
+.field public static final heavenly_stems_xin:I = 0x7f110244
 
-.field public static final heavenly_stems_yi:I = 0x7f110246
+.field public static final heavenly_stems_yi:I = 0x7f110245
 
-.field public static final midnight:I = 0x7f1102c5
+.field public static final midnight:I = 0x7f1102c3
 
-.field public static final miuix_access_state_desc:I = 0x7f1102c9
+.field public static final miuix_access_state_desc:I = 0x7f1102c6
 
-.field public static final miuix_alphabet_indexer_name:I = 0x7f1102ca
+.field public static final miuix_alphabet_indexer_name:I = 0x7f1102c7
 
-.field public static final miuix_appcompat_action_mode_deselect_all:I = 0x7f1102cb
+.field public static final miuix_appcompat_action_mode_deselect_all:I = 0x7f1102c8
 
-.field public static final miuix_appcompat_action_mode_select_all:I = 0x7f1102cc
+.field public static final miuix_appcompat_action_mode_select_all:I = 0x7f1102c9
 
-.field public static final miuix_appcompat_action_mode_title_empty:I = 0x7f1102cd
+.field public static final miuix_appcompat_action_mode_title_empty:I = 0x7f1102ca
 
-.field public static final miuix_appcompat_actionbar_immersion_button_more_description:I = 0x7f1102ce
+.field public static final miuix_appcompat_actionbar_immersion_button_more_description:I = 0x7f1102cb
 
-.field public static final miuix_appcompat_cancel_description:I = 0x7f1102cf
+.field public static final miuix_appcompat_cancel_description:I = 0x7f1102cc
 
-.field public static final miuix_appcompat_confirm_description:I = 0x7f1102d0
+.field public static final miuix_appcompat_confirm_description:I = 0x7f1102cd
 
-.field public static final miuix_appcompat_delete_description:I = 0x7f1102d1
+.field public static final miuix_appcompat_delete_description:I = 0x7f1102ce
 
-.field public static final miuix_appcompat_deselect_all:I = 0x7f1102d2
+.field public static final miuix_appcompat_deselect_all:I = 0x7f1102cf
 
-.field public static final miuix_appcompat_deselect_all_description:I = 0x7f1102d3
+.field public static final miuix_appcompat_deselect_all_description:I = 0x7f1102d0
 
-.field public static final miuix_appcompat_search_action_mode_cancel:I = 0x7f1102d4
+.field public static final miuix_appcompat_search_action_mode_cancel:I = 0x7f1102d1
 
-.field public static final miuix_appcompat_search_input_description:I = 0x7f1102d5
+.field public static final miuix_appcompat_search_input_description:I = 0x7f1102d2
 
-.field public static final miuix_appcompat_select_all:I = 0x7f1102d6
+.field public static final miuix_appcompat_select_all:I = 0x7f1102d3
 
-.field public static final miuix_appcompat_select_all_description:I = 0x7f1102d7
+.field public static final miuix_appcompat_select_all_description:I = 0x7f1102d4
 
-.field public static final miuix_appcompat_select_item:I = 0x7f1102d8
+.field public static final miuix_appcompat_select_item:I = 0x7f1102d5
 
-.field public static final miuix_indexer_collect:I = 0x7f1102d9
+.field public static final miuix_indexer_collect:I = 0x7f1102d6
 
-.field public static final miuix_indexer_selected:I = 0x7f1102da
+.field public static final miuix_indexer_selected:I = 0x7f1102d7
 
-.field public static final miuix_sbl_tracking_progress_labe_pull_to_refresh:I = 0x7f1102db
+.field public static final miuix_sbl_tracking_progress_labe_pull_to_refresh:I = 0x7f1102d8
 
-.field public static final miuix_sbl_tracking_progress_labe_refreshed:I = 0x7f1102dc
+.field public static final miuix_sbl_tracking_progress_labe_refreshed:I = 0x7f1102d9
 
-.field public static final miuix_sbl_tracking_progress_labe_refreshing:I = 0x7f1102dd
+.field public static final miuix_sbl_tracking_progress_labe_refreshing:I = 0x7f1102da
 
-.field public static final miuix_sbl_tracking_progress_labe_release_to_refresh:I = 0x7f1102de
+.field public static final miuix_sbl_tracking_progress_labe_release_to_refresh:I = 0x7f1102db
 
-.field public static final miuix_sbl_tracking_progress_labe_up_nodata:I = 0x7f1102df
+.field public static final miuix_sbl_tracking_progress_labe_up_nodata:I = 0x7f1102dc
 
-.field public static final miuix_sbl_tracking_progress_labe_up_none:I = 0x7f1102e0
+.field public static final miuix_sbl_tracking_progress_labe_up_none:I = 0x7f1102dd
 
-.field public static final miuix_sbl_tracking_progress_labe_up_refresh:I = 0x7f1102e1
+.field public static final miuix_sbl_tracking_progress_labe_up_refresh:I = 0x7f1102de
 
-.field public static final miuix_sbl_tracking_progress_labe_up_refresh_fail:I = 0x7f1102e2
+.field public static final miuix_sbl_tracking_progress_labe_up_refresh_fail:I = 0x7f1102df
 
-.field public static final monday:I = 0x7f1102e3
+.field public static final monday:I = 0x7f1102e0
 
-.field public static final monday_short:I = 0x7f1102e4
+.field public static final monday_short:I = 0x7f1102e1
 
-.field public static final monday_shortest:I = 0x7f1102e5
+.field public static final monday_shortest:I = 0x7f1102e2
 
-.field public static final month_april:I = 0x7f1102e8
+.field public static final month_april:I = 0x7f1102e3
 
-.field public static final month_april_short:I = 0x7f1102e9
+.field public static final month_april_short:I = 0x7f1102e4
 
-.field public static final month_april_shortest:I = 0x7f1102ea
+.field public static final month_april_shortest:I = 0x7f1102e5
 
-.field public static final month_august:I = 0x7f1102eb
+.field public static final month_august:I = 0x7f1102e6
 
-.field public static final month_august_short:I = 0x7f1102ec
+.field public static final month_august_short:I = 0x7f1102e7
 
-.field public static final month_august_shortest:I = 0x7f1102ed
+.field public static final month_august_shortest:I = 0x7f1102e8
 
-.field public static final month_december:I = 0x7f1102ee
+.field public static final month_december:I = 0x7f1102e9
 
-.field public static final month_december_short:I = 0x7f1102ef
+.field public static final month_december_short:I = 0x7f1102ea
 
-.field public static final month_december_shortest:I = 0x7f1102f0
+.field public static final month_december_shortest:I = 0x7f1102eb
 
-.field public static final month_february:I = 0x7f1102f1
+.field public static final month_february:I = 0x7f1102ec
 
-.field public static final month_february_short:I = 0x7f1102f2
+.field public static final month_february_short:I = 0x7f1102ed
 
-.field public static final month_february_shortest:I = 0x7f1102f3
+.field public static final month_february_shortest:I = 0x7f1102ee
 
-.field public static final month_january:I = 0x7f1102f4
+.field public static final month_january:I = 0x7f1102ef
 
-.field public static final month_january_short:I = 0x7f1102f5
+.field public static final month_january_short:I = 0x7f1102f0
 
-.field public static final month_january_shortest:I = 0x7f1102f6
+.field public static final month_january_shortest:I = 0x7f1102f1
 
-.field public static final month_july:I = 0x7f1102f7
+.field public static final month_july:I = 0x7f1102f2
 
-.field public static final month_july_short:I = 0x7f1102f8
+.field public static final month_july_short:I = 0x7f1102f3
 
-.field public static final month_july_shortest:I = 0x7f1102f9
+.field public static final month_july_shortest:I = 0x7f1102f4
 
-.field public static final month_june:I = 0x7f1102fa
+.field public static final month_june:I = 0x7f1102f5
 
-.field public static final month_june_short:I = 0x7f1102fb
+.field public static final month_june_short:I = 0x7f1102f6
 
-.field public static final month_june_shortest:I = 0x7f1102fc
+.field public static final month_june_shortest:I = 0x7f1102f7
 
-.field public static final month_march:I = 0x7f1102fd
+.field public static final month_march:I = 0x7f1102f8
 
-.field public static final month_march_short:I = 0x7f1102fe
+.field public static final month_march_short:I = 0x7f1102f9
 
-.field public static final month_march_shortest:I = 0x7f1102ff
+.field public static final month_march_shortest:I = 0x7f1102fa
 
-.field public static final month_may:I = 0x7f110300
+.field public static final month_may:I = 0x7f1102fb
 
-.field public static final month_may_short:I = 0x7f110301
+.field public static final month_may_short:I = 0x7f1102fc
 
-.field public static final month_may_shortest:I = 0x7f110302
+.field public static final month_may_shortest:I = 0x7f1102fd
 
-.field public static final month_november:I = 0x7f110303
+.field public static final month_november:I = 0x7f1102fe
 
-.field public static final month_november_short:I = 0x7f110304
+.field public static final month_november_short:I = 0x7f1102ff
 
-.field public static final month_november_shortest:I = 0x7f110305
+.field public static final month_november_shortest:I = 0x7f110300
 
-.field public static final month_october:I = 0x7f110306
+.field public static final month_october:I = 0x7f110301
 
-.field public static final month_october_short:I = 0x7f110307
+.field public static final month_october_short:I = 0x7f110302
 
-.field public static final month_october_shortest:I = 0x7f110308
+.field public static final month_october_shortest:I = 0x7f110303
 
-.field public static final month_september:I = 0x7f110309
+.field public static final month_september:I = 0x7f110304
 
-.field public static final month_september_short:I = 0x7f11030a
+.field public static final month_september_short:I = 0x7f110305
 
-.field public static final month_september_shortest:I = 0x7f11030b
+.field public static final month_september_shortest:I = 0x7f110306
 
-.field public static final more:I = 0x7f11030c
+.field public static final more:I = 0x7f110307
 
-.field public static final morning:I = 0x7f11030d
+.field public static final morning:I = 0x7f110308
 
-.field public static final night:I = 0x7f110378
+.field public static final night:I = 0x7f110373
 
-.field public static final noon:I = 0x7f11037d
+.field public static final noon:I = 0x7f110378
 
-.field public static final pm:I = 0x7f1103ab
+.field public static final pm:I = 0x7f1103a6
 
-.field public static final saturday:I = 0x7f11040d
+.field public static final saturday:I = 0x7f110408
 
-.field public static final saturday_short:I = 0x7f11040e
+.field public static final saturday_short:I = 0x7f110409
 
-.field public static final saturday_shortest:I = 0x7f11040f
+.field public static final saturday_shortest:I = 0x7f11040a
 
-.field public static final search_menu_title:I = 0x7f110416
+.field public static final search_menu_title:I = 0x7f110411
 
-.field public static final send:I = 0x7f11041c
+.field public static final send:I = 0x7f110417
 
-.field public static final solar_term_autumn_begins:I = 0x7f110438
+.field public static final solar_term_autumn_begins:I = 0x7f110433
 
-.field public static final solar_term_autumn_equinox:I = 0x7f110439
+.field public static final solar_term_autumn_equinox:I = 0x7f110434
 
-.field public static final solar_term_clear_and_bright:I = 0x7f11043a
+.field public static final solar_term_clear_and_bright:I = 0x7f110435
 
-.field public static final solar_term_cold_dews:I = 0x7f11043b
+.field public static final solar_term_cold_dews:I = 0x7f110436
 
-.field public static final solar_term_grain_buds:I = 0x7f11043c
+.field public static final solar_term_grain_buds:I = 0x7f110437
 
-.field public static final solar_term_grain_in_ear:I = 0x7f11043d
+.field public static final solar_term_grain_in_ear:I = 0x7f110438
 
-.field public static final solar_term_grain_rain:I = 0x7f11043e
+.field public static final solar_term_grain_rain:I = 0x7f110439
 
-.field public static final solar_term_great_cold:I = 0x7f11043f
+.field public static final solar_term_great_cold:I = 0x7f11043a
 
-.field public static final solar_term_great_heat:I = 0x7f110440
+.field public static final solar_term_great_heat:I = 0x7f11043b
 
-.field public static final solar_term_heavy_snow:I = 0x7f110441
+.field public static final solar_term_heavy_snow:I = 0x7f11043c
 
-.field public static final solar_term_hoar_frost_falls:I = 0x7f110442
+.field public static final solar_term_hoar_frost_falls:I = 0x7f11043d
 
-.field public static final solar_term_insects_awaken:I = 0x7f110443
+.field public static final solar_term_insects_awaken:I = 0x7f11043e
 
-.field public static final solar_term_light_snow:I = 0x7f110444
+.field public static final solar_term_light_snow:I = 0x7f11043f
 
-.field public static final solar_term_slight_cold:I = 0x7f110445
+.field public static final solar_term_slight_cold:I = 0x7f110440
 
-.field public static final solar_term_slight_heat:I = 0x7f110446
+.field public static final solar_term_slight_heat:I = 0x7f110441
 
-.field public static final solar_term_spring_begins:I = 0x7f110447
+.field public static final solar_term_spring_begins:I = 0x7f110442
 
-.field public static final solar_term_stopping_the_heat:I = 0x7f110448
+.field public static final solar_term_stopping_the_heat:I = 0x7f110443
 
-.field public static final solar_term_summer_begins:I = 0x7f110449
+.field public static final solar_term_summer_begins:I = 0x7f110444
 
-.field public static final solar_term_summer_solstice:I = 0x7f11044a
+.field public static final solar_term_summer_solstice:I = 0x7f110445
 
-.field public static final solar_term_the_rains:I = 0x7f11044b
+.field public static final solar_term_the_rains:I = 0x7f110446
 
-.field public static final solar_term_vernal_equinox:I = 0x7f11044c
+.field public static final solar_term_vernal_equinox:I = 0x7f110447
 
-.field public static final solar_term_white_dews:I = 0x7f11044d
+.field public static final solar_term_white_dews:I = 0x7f110448
 
-.field public static final solar_term_winter_begins:I = 0x7f11044e
+.field public static final solar_term_winter_begins:I = 0x7f110449
 
-.field public static final solar_term_winter_solstice:I = 0x7f11044f
+.field public static final solar_term_winter_solstice:I = 0x7f11044a
 
-.field public static final status_bar_notification_info_overflow:I = 0x7f110455
+.field public static final status_bar_notification_info_overflow:I = 0x7f110450
 
-.field public static final sunday:I = 0x7f110461
+.field public static final sunday:I = 0x7f11045c
 
-.field public static final sunday_short:I = 0x7f110462
+.field public static final sunday_short:I = 0x7f11045d
 
-.field public static final sunday_shortest:I = 0x7f110463
+.field public static final sunday_shortest:I = 0x7f11045e
 
-.field public static final the_anniversary_of_lifting_martial_law:I = 0x7f110475
+.field public static final the_anniversary_of_lifting_martial_law:I = 0x7f110470
 
-.field public static final the_anti_aggression_day:I = 0x7f110476
+.field public static final the_anti_aggression_day:I = 0x7f110471
 
-.field public static final the_arbor_day:I = 0x7f110477
+.field public static final the_arbor_day:I = 0x7f110472
 
-.field public static final the_armed_forces_day:I = 0x7f110478
+.field public static final the_armed_forces_day:I = 0x7f110473
 
-.field public static final the_armys_day:I = 0x7f110479
+.field public static final the_armys_day:I = 0x7f110474
 
-.field public static final the_childrens_day:I = 0x7f11047a
+.field public static final the_childrens_day:I = 0x7f110475
 
-.field public static final the_chinese_youth_day:I = 0x7f11047b
+.field public static final the_chinese_youth_day:I = 0x7f110476
 
-.field public static final the_christmas_day:I = 0x7f11047c
+.field public static final the_christmas_day:I = 0x7f110477
 
-.field public static final the_double_ninth_festival:I = 0x7f11047d
+.field public static final the_double_ninth_festival:I = 0x7f110478
 
-.field public static final the_dragon_boat_festival:I = 0x7f11047e
+.field public static final the_dragon_boat_festival:I = 0x7f110479
 
-.field public static final the_easter_day:I = 0x7f11047f
+.field public static final the_easter_day:I = 0x7f11047a
 
-.field public static final the_eve_of_the_spring_festival:I = 0x7f110480
+.field public static final the_eve_of_the_spring_festival:I = 0x7f11047b
 
-.field public static final the_fifth_day:I = 0x7f110481
+.field public static final the_fifth_day:I = 0x7f11047c
 
-.field public static final the_fools_day:I = 0x7f110482
+.field public static final the_fools_day:I = 0x7f11047d
 
-.field public static final the_forth_day:I = 0x7f110483
+.field public static final the_forth_day:I = 0x7f11047e
 
-.field public static final the_hksar_establishment_day:I = 0x7f110484
+.field public static final the_hksar_establishment_day:I = 0x7f11047f
 
-.field public static final the_international_womens_day:I = 0x7f110485
+.field public static final the_international_womens_day:I = 0x7f110480
 
-.field public static final the_laba_festival:I = 0x7f110486
+.field public static final the_laba_festival:I = 0x7f110481
 
-.field public static final the_labour_day:I = 0x7f110487
+.field public static final the_labour_day:I = 0x7f110482
 
-.field public static final the_lantern_festival:I = 0x7f110488
+.field public static final the_lantern_festival:I = 0x7f110483
 
-.field public static final the_mid_autumn_festival:I = 0x7f110489
+.field public static final the_mid_autumn_festival:I = 0x7f110484
 
-.field public static final the_national_day:I = 0x7f11048a
+.field public static final the_national_day:I = 0x7f110485
 
-.field public static final the_national_father_day:I = 0x7f11048b
+.field public static final the_national_father_day:I = 0x7f110486
 
-.field public static final the_new_years_day:I = 0x7f11048c
+.field public static final the_new_years_day:I = 0x7f110487
 
-.field public static final the_night_of_sevens:I = 0x7f11048d
+.field public static final the_night_of_sevens:I = 0x7f110488
 
-.field public static final the_partys_day:I = 0x7f11048e
+.field public static final the_partys_day:I = 0x7f110489
 
-.field public static final the_peace_day:I = 0x7f11048f
+.field public static final the_peace_day:I = 0x7f11048a
 
-.field public static final the_retrocession_day:I = 0x7f110490
+.field public static final the_retrocession_day:I = 0x7f11048b
 
-.field public static final the_second_day:I = 0x7f110491
+.field public static final the_second_day:I = 0x7f11048c
 
-.field public static final the_seventh_day:I = 0x7f110492
+.field public static final the_seventh_day:I = 0x7f11048d
 
-.field public static final the_sixth_day:I = 0x7f110493
+.field public static final the_sixth_day:I = 0x7f11048e
 
-.field public static final the_spirit_festival:I = 0x7f110494
+.field public static final the_spirit_festival:I = 0x7f11048f
 
-.field public static final the_spring_festival:I = 0x7f110495
+.field public static final the_spring_festival:I = 0x7f110490
 
-.field public static final the_teachers_day:I = 0x7f110496
+.field public static final the_teachers_day:I = 0x7f110491
 
-.field public static final the_third_day:I = 0x7f110497
+.field public static final the_third_day:I = 0x7f110492
 
-.field public static final the_tw_childrens_day:I = 0x7f110498
+.field public static final the_tw_childrens_day:I = 0x7f110493
 
-.field public static final the_tw_youth_day:I = 0x7f110499
+.field public static final the_tw_youth_day:I = 0x7f110494
 
-.field public static final the_united_nations_day:I = 0x7f11049a
+.field public static final the_united_nations_day:I = 0x7f110495
 
-.field public static final the_valentines_day:I = 0x7f11049b
+.field public static final the_valentines_day:I = 0x7f110496
 
-.field public static final the_water_lantern_festival:I = 0x7f11049c
+.field public static final the_water_lantern_festival:I = 0x7f110497
 
-.field public static final thursday:I = 0x7f11049d
+.field public static final thursday:I = 0x7f110498
 
-.field public static final thursday_short:I = 0x7f11049e
+.field public static final thursday_short:I = 0x7f110499
 
-.field public static final thursday_shortest:I = 0x7f11049f
+.field public static final thursday_shortest:I = 0x7f11049a
 
-.field public static final time_picker_dialog_title:I = 0x7f1104a0
+.field public static final time_picker_dialog_title:I = 0x7f11049b
 
-.field public static final time_picker_label_hour:I = 0x7f1104a1
+.field public static final time_picker_label_hour:I = 0x7f11049c
 
-.field public static final time_picker_label_minute:I = 0x7f1104a2
+.field public static final time_picker_label_minute:I = 0x7f11049d
 
-.field public static final today:I = 0x7f1104a8
+.field public static final today:I = 0x7f1104a3
 
-.field public static final tomorrow:I = 0x7f1104ab
+.field public static final tomorrow:I = 0x7f1104a6
 
-.field public static final tuesday:I = 0x7f1104b4
+.field public static final tuesday:I = 0x7f1104af
 
-.field public static final tuesday_short:I = 0x7f1104b5
+.field public static final tuesday_short:I = 0x7f1104b0
 
-.field public static final tuesday_shortest:I = 0x7f1104b6
+.field public static final tuesday_shortest:I = 0x7f1104b1
 
-.field public static final wednesday:I = 0x7f1104d2
+.field public static final wednesday:I = 0x7f1104cb
 
-.field public static final wednesday_short:I = 0x7f1104d3
+.field public static final wednesday_short:I = 0x7f1104cc
 
-.field public static final wednesday_shortest:I = 0x7f1104d4
+.field public static final wednesday_shortest:I = 0x7f1104cd
 
-.field public static final yesterday:I = 0x7f1104e7
+.field public static final yesterday:I = 0x7f1104dd

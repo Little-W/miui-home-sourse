@@ -85,7 +85,7 @@
     :goto_0
     sget-object v1, Lcom/miui/home/launcher/compat/LauncherCellCountCompat;->sInstance:Lcom/miui/home/launcher/compat/LauncherCellCount;
 
-    if-nez v1, :cond_d
+    if-nez v1, :cond_c
 
     .line 33
     sget-boolean v1, Lcom/miui/home/launcher/DeviceConfig;->IS_SB_BUILD:Z
@@ -286,30 +286,16 @@
 
     move-result v1
 
-    if-eqz v1, :cond_c
-
-    .line 54
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isFoldDevice()Z
-
-    move-result v1
-
     if-eqz v1, :cond_b
 
-    new-instance v1, Lcom/miui/home/launcher/compat/LauncherCellCountCompatNoWordFold;
-
-    invoke-direct {v1}, Lcom/miui/home/launcher/compat/LauncherCellCountCompatNoWordFold;-><init>()V
-
-    goto :goto_3
-
-    :cond_b
+    .line 54
     new-instance v1, Lcom/miui/home/launcher/compat/LauncherCellCountCompatNoWord;
 
     invoke-direct {v1}, Lcom/miui/home/launcher/compat/LauncherCellCountCompatNoWord;-><init>()V
 
-    :goto_3
     sput-object v1, Lcom/miui/home/launcher/compat/LauncherCellCountCompat;->sInstance:Lcom/miui/home/launcher/compat/LauncherCellCount;
 
-    :cond_c
+    :cond_b
     const-string v1, "Launcher.CellCount"
 
     .line 56
@@ -340,7 +326,7 @@
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 58
-    :cond_d
+    :cond_c
     sget-object v1, Lcom/miui/home/launcher/compat/LauncherCellCountCompat;->sInstance:Lcom/miui/home/launcher/compat/LauncherCellCount;
 
     monitor-exit v0

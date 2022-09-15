@@ -15,7 +15,7 @@
 
 
 # static fields
-.field private static sConstructor:Ljava/lang/reflect/Constructor;
+.field private static sConstructor:Ljava/lang/reflect/Constructor; = null
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/reflect/Constructor<",
@@ -25,11 +25,11 @@
     .end annotation
 .end field
 
-.field private static sConstructorFetched:Z
+.field private static sConstructorFetched:Z = false
 
-.field private static sConsumedField:Ljava/lang/reflect/Field;
+.field private static sConsumedField:Ljava/lang/reflect/Field; = null
 
-.field private static sConsumedFieldFetched:Z
+.field private static sConsumedFieldFetched:Z = false
 
 
 # instance fields

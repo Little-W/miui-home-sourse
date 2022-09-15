@@ -24,6 +24,8 @@
 
 .field public static final enum LOWER_CASE_WITH_DASHES:Lcom/google/gson/FieldNamingPolicy;
 
+.field public static final enum LOWER_CASE_WITH_DOTS:Lcom/google/gson/FieldNamingPolicy;
+
 .field public static final enum LOWER_CASE_WITH_UNDERSCORES:Lcom/google/gson/FieldNamingPolicy;
 
 .field public static final enum UPPER_CAMEL_CASE:Lcom/google/gson/FieldNamingPolicy;
@@ -33,7 +35,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 7
+    .locals 8
 
     .line 37
     new-instance v0, Lcom/google/gson/FieldNamingPolicy$1;
@@ -90,7 +92,18 @@
 
     sput-object v0, Lcom/google/gson/FieldNamingPolicy;->LOWER_CASE_WITH_DASHES:Lcom/google/gson/FieldNamingPolicy;
 
-    const/4 v0, 0x5
+    .line 136
+    new-instance v0, Lcom/google/gson/FieldNamingPolicy$6;
+
+    const-string v1, "LOWER_CASE_WITH_DOTS"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v0, v1, v7}, Lcom/google/gson/FieldNamingPolicy$6;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/google/gson/FieldNamingPolicy;->LOWER_CASE_WITH_DOTS:Lcom/google/gson/FieldNamingPolicy;
+
+    const/4 v0, 0x6
 
     .line 31
     new-array v0, v0, [Lcom/google/gson/FieldNamingPolicy;
@@ -114,6 +127,10 @@
     sget-object v1, Lcom/google/gson/FieldNamingPolicy;->LOWER_CASE_WITH_DASHES:Lcom/google/gson/FieldNamingPolicy;
 
     aput-object v1, v0, v6
+
+    sget-object v1, Lcom/google/gson/FieldNamingPolicy;->LOWER_CASE_WITH_DOTS:Lcom/google/gson/FieldNamingPolicy;
+
+    aput-object v1, v0, v7
 
     sput-object v0, Lcom/google/gson/FieldNamingPolicy;->$VALUES:[Lcom/google/gson/FieldNamingPolicy;
 
@@ -146,7 +163,7 @@
 .method private static modifyString(CLjava/lang/String;I)Ljava/lang/String;
     .locals 1
 
-    .line 162
+    .line 185
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -159,7 +176,7 @@
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 163
+    .line 186
     invoke-virtual {p1, p2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object p0
@@ -172,7 +189,7 @@
 
     goto :goto_0
 
-    .line 164
+    .line 187
     :cond_0
     invoke-static {p0}, Ljava/lang/String;->valueOf(C)Ljava/lang/String;
 
@@ -185,12 +202,12 @@
 .method static separateCamelCase(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 5
 
-    .line 124
+    .line 147
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 125
+    .line 148
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v1
@@ -200,12 +217,12 @@
     :goto_0
     if-ge v2, v1, :cond_1
 
-    .line 126
+    .line 149
     invoke-virtual {p0, v2}, Ljava/lang/String;->charAt(I)C
 
     move-result v3
 
-    .line 127
+    .line 150
     invoke-static {v3}, Ljava/lang/Character;->isUpperCase(C)Z
 
     move-result v4
@@ -218,10 +235,10 @@
 
     if-eqz v4, :cond_0
 
-    .line 128
+    .line 151
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 130
+    .line 153
     :cond_0
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
@@ -229,7 +246,7 @@
 
     goto :goto_0
 
-    .line 132
+    .line 155
     :cond_1
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -241,19 +258,19 @@
 .method static upperCaseFirstLetter(Ljava/lang/String;)Ljava/lang/String;
     .locals 5
 
-    .line 139
+    .line 162
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const/4 v1, 0x0
 
-    .line 141
+    .line 164
     invoke-virtual {p0, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v2
 
-    .line 142
+    .line 165
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v3
@@ -263,7 +280,7 @@
 
     if-ge v1, v4, :cond_1
 
-    .line 145
+    .line 168
     invoke-static {v2}, Ljava/lang/Character;->isLetter(C)Z
 
     move-result v4
@@ -272,20 +289,20 @@
 
     goto :goto_1
 
-    .line 149
+    .line 172
     :cond_0
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     add-int/lit8 v1, v1, 0x1
 
-    .line 150
+    .line 173
     invoke-virtual {p0, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v2
 
     goto :goto_0
 
-    .line 153
+    .line 176
     :cond_1
     :goto_1
     invoke-static {v2}, Ljava/lang/Character;->isUpperCase(C)Z
@@ -294,7 +311,7 @@
 
     if-nez v3, :cond_2
 
-    .line 154
+    .line 177
     invoke-static {v2}, Ljava/lang/Character;->toUpperCase(C)C
 
     move-result v2
@@ -305,7 +322,7 @@
 
     move-result-object p0
 
-    .line 155
+    .line 178
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;

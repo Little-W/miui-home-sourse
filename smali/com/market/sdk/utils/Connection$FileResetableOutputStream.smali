@@ -29,17 +29,17 @@
         }
     .end annotation
 
-    .line 539
+    .line 541
     iput-object p1, p0, Lcom/market/sdk/utils/Connection$FileResetableOutputStream;->this$0:Lcom/market/sdk/utils/Connection;
 
-    .line 540
+    .line 542
     new-instance v0, Ljava/io/FileOutputStream;
 
     invoke-direct {v0, p2}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
     invoke-direct {p0, p1, v0}, Lcom/market/sdk/utils/Connection$ResetableOutputStream;-><init>(Lcom/market/sdk/utils/Connection;Ljava/io/OutputStream;)V
 
-    .line 541
+    .line 543
     iput-object p2, p0, Lcom/market/sdk/utils/Connection$FileResetableOutputStream;->mFile:Ljava/io/File;
 
     return-void
@@ -50,7 +50,7 @@
 .method public reset()V
     .locals 2
 
-    .line 547
+    .line 549
     :try_start_0
     iget-object v0, p0, Lcom/market/sdk/utils/Connection$FileResetableOutputStream;->mOutputStream:Ljava/io/OutputStream;
 
@@ -58,13 +58,13 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 551
+    .line 553
     :catch_0
     iget-object v0, p0, Lcom/market/sdk/utils/Connection$FileResetableOutputStream;->mFile:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
-    .line 553
+    .line 555
     :try_start_1
     new-instance v0, Ljava/io/FileOutputStream;
 

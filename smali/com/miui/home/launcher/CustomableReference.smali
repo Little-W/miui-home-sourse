@@ -59,7 +59,7 @@
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v0, "unknown reference type:"
+    const-string/jumbo v0, "unknown reference type:"
 
     invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -102,6 +102,8 @@
     :goto_0
     return-void
 
+    nop
+
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_2
@@ -132,7 +134,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "unknown reference type:"
+    const-string/jumbo v2, "unknown reference type:"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -163,6 +165,8 @@
     iget-object v0, p0, Lcom/miui/home/launcher/CustomableReference;->mStrongRef:Ljava/lang/Object;
 
     return-object v0
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x1

@@ -64,14 +64,14 @@
     .line 32
     invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
 
-    const p2, 0x7f0d009f
+    const p2, 0x7f0d009e
 
     .line 34
     invoke-static {p1, p2, p0}, Lcom/miui/home/launcher/view/LabelSeekBar;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object p2
 
-    const v0, 0x7f0a02fa
+    const v0, 0x7f0a02f6
 
     .line 35
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -82,7 +82,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/view/LabelSeekBar;->mSeekBar:Lmiuix/androidbasewidget/widget/SeekBar;
 
-    const v0, 0x7f0a02fb
+    const v0, 0x7f0a02f7
 
     .line 36
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;

@@ -286,19 +286,19 @@
 .method private getMenuToTaskViewPosition()Lcom/miui/home/recents/util/RelativePosition;
     .locals 3
 
-    .line 609
+    .line 608
     invoke-virtual {p0}, Lcom/miui/home/recents/views/TaskView;->getWidth()I
 
     move-result v0
 
     div-int/lit8 v0, v0, 0x2
 
-    .line 610
+    .line 609
     new-instance v1, Lcom/miui/home/recents/util/RelativePosition;
 
     invoke-direct {v1}, Lcom/miui/home/recents/util/RelativePosition;-><init>()V
 
-    .line 611
+    .line 610
     iget-object v2, p0, Lcom/miui/home/recents/views/TaskView;->mDownTouchPos:Landroid/graphics/Point;
 
     iget v2, v2, Landroid/graphics/Point;->x:I
@@ -319,7 +319,7 @@
 .end method
 
 .method private launchForegroundSmallWindow(Lcom/android/systemui/shared/recents/model/Task;Ljava/lang/String;)V
-    .locals 6
+    .locals 3
 
     .line 517
     invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isPadDevice()Z
@@ -347,32 +347,9 @@
 
     invoke-virtual {v0, v1, v2, p2, p1}, Lcom/miui/home/smallwindow/SmallWindowStateHelper;->launchFreeformFromUnpin(Landroid/content/Context;ILjava/lang/String;I)V
 
-    .line 520
-    invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
-
-    move-result-object p1
-
-    new-instance p2, Lcom/miui/home/recents/messages/HideRecentsEvent;
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    move-object v0, p2
-
-    invoke-direct/range {v0 .. v5}, Lcom/miui/home/recents/messages/HideRecentsEvent;-><init>(ZZZZZ)V
-
-    invoke-virtual {p1, p2}, Lorg/greenrobot/eventbus/EventBus;->post(Ljava/lang/Object;)V
-
     goto :goto_0
 
-    .line 522
+    .line 521
     :cond_0
     invoke-static {}, Lcom/miui/home/smallwindow/SmallWindowStateHelper;->getInstance()Lcom/miui/home/smallwindow/SmallWindowStateHelper;
 
@@ -399,7 +376,7 @@
 .method private setFreezeRecentTasksReordering(Landroid/app/ActivityOptions;)V
     .locals 4
 
-    .line 529
+    .line 528
     :try_start_0
     sget-object v0, Lcom/miui/home/recents/views/TaskView;->sSetFreezeRecentTasksReorderingMethod:Ljava/lang/reflect/Method;
 
@@ -409,14 +386,14 @@
 
     const-string v0, "android.app.ActivityOptions"
 
-    .line 530
+    .line 529
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
     const-string v2, "setFreezeRecentTasksReordering"
 
-    .line 531
+    .line 530
     new-array v3, v1, [Ljava/lang/Class;
 
     invoke-virtual {v0, v2, v3}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
@@ -425,7 +402,7 @@
 
     sput-object v0, Lcom/miui/home/recents/views/TaskView;->sSetFreezeRecentTasksReorderingMethod:Ljava/lang/reflect/Method;
 
-    .line 533
+    .line 532
     :cond_0
     sget-object v0, Lcom/miui/home/recents/views/TaskView;->sSetFreezeRecentTasksReorderingMethod:Ljava/lang/reflect/Method;
 
@@ -440,7 +417,7 @@
     :catch_0
     move-exception p1
 
-    .line 535
+    .line 534
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0
@@ -492,7 +469,7 @@
 .method private startActivityUseRememberFromRecents(ZLandroid/app/ActivityOptions;)V
     .locals 10
 
-    .line 540
+    .line 539
     invoke-static {}, Lcom/miui/home/recents/ForegroundTaskHelper;->getInstance()Lcom/miui/home/recents/ForegroundTaskHelper;
 
     move-result-object v0
@@ -501,7 +478,7 @@
 
     move-result-object v0
 
-    .line 541
+    .line 540
     invoke-static {}, Lcom/miui/home/recents/ForegroundTaskHelper;->getInstance()Lcom/miui/home/recents/ForegroundTaskHelper;
 
     move-result-object v1
@@ -510,14 +487,14 @@
 
     move-result-object v1
 
-    .line 542
+    .line 541
     iget-object v2, p0, Lcom/miui/home/recents/views/TaskView;->mTask:Lcom/android/systemui/shared/recents/model/Task;
 
     invoke-virtual {v2, v0}, Lcom/android/systemui/shared/recents/model/Task;->isInSmallWindow(Ljava/util/Set;)Z
 
     move-result v2
 
-    .line 543
+    .line 542
     invoke-interface {v0}, Ljava/util/Set;->isEmpty()Z
 
     move-result v0
@@ -540,14 +517,14 @@
 
     if-eqz v3, :cond_1
 
-    .line 554
+    .line 553
     invoke-static {}, Lcom/miui/home/recents/ForegroundTaskHelper;->getInstance()Lcom/miui/home/recents/ForegroundTaskHelper;
 
     move-result-object v1
 
     invoke-virtual {v1}, Lcom/miui/home/recents/ForegroundTaskHelper;->startForegroundSmallWindows()V
 
-    .line 555
+    .line 554
     invoke-static {}, Lcom/miui/home/recents/ForegroundTaskHelper;->getInstance()Lcom/miui/home/recents/ForegroundTaskHelper;
 
     move-result-object v1
@@ -561,14 +538,14 @@
 
     if-nez v3, :cond_2
 
-    .line 566
+    .line 565
     invoke-static {}, Lcom/miui/home/recents/ForegroundTaskHelper;->getInstance()Lcom/miui/home/recents/ForegroundTaskHelper;
 
     move-result-object v1
 
     invoke-virtual {v1}, Lcom/miui/home/recents/ForegroundTaskHelper;->startForegroundSmallWindows()V
 
-    .line 567
+    .line 566
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v1
@@ -596,14 +573,14 @@
 
     if-eqz v0, :cond_3
 
-    .line 577
+    .line 576
     invoke-static {}, Lcom/miui/home/recents/ForegroundTaskHelper;->getInstance()Lcom/miui/home/recents/ForegroundTaskHelper;
 
     move-result-object v1
 
     invoke-virtual {v1}, Lcom/miui/home/recents/ForegroundTaskHelper;->startForegroundSmallWindows()V
 
-    .line 578
+    .line 577
     invoke-direct {p0, p1, p2}, Lcom/miui/home/recents/views/TaskView;->startActivityFromRecents(ZLandroid/app/ActivityOptions;)V
 
     :cond_3
@@ -611,7 +588,7 @@
 
     if-nez v0, :cond_4
 
-    .line 588
+    .line 587
     invoke-direct {p0, p1, p2}, Lcom/miui/home/recents/views/TaskView;->startActivityFromRecents(ZLandroid/app/ActivityOptions;)V
 
     :cond_4
@@ -754,7 +731,7 @@
 
     if-nez p2, :cond_0
 
-    const p2, 0x7f0a0368
+    const p2, 0x7f0a0364
 
     .line 334
     invoke-virtual {p0, p2}, Lcom/miui/home/recents/views/TaskView;->findViewById(I)Landroid/view/View;
@@ -993,7 +970,7 @@
     .line 350
     iget-object p2, p0, Lcom/miui/home/recents/views/TaskView;->mWorldCirculateImageView:Landroid/widget/ImageView;
 
-    const v2, 0x7f0806dc
+    const v2, 0x7f0806d8
 
     invoke-virtual {p2, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -1005,7 +982,7 @@
 
     move-result-object v2
 
-    const v4, 0x7f1103f0
+    const v4, 0x7f1103eb
 
     invoke-virtual {v2, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1045,7 +1022,7 @@
     .line 354
     iget-object p2, p0, Lcom/miui/home/recents/views/TaskView;->mWorldCirculateImageView:Landroid/widget/ImageView;
 
-    const v2, 0x7f0806db
+    const v2, 0x7f0806d7
 
     invoke-virtual {p2, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -1057,7 +1034,7 @@
 
     move-result-object v2
 
-    const v4, 0x7f1103ed
+    const v4, 0x7f1103e8
 
     invoke-virtual {v2, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1090,7 +1067,7 @@
     .line 359
     iget-object p2, p0, Lcom/miui/home/recents/views/TaskView;->mWorldCirculateBackTextView:Landroid/widget/TextView;
 
-    const v0, 0x7f1103ef
+    const v0, 0x7f1103ea
 
     invoke-virtual {p2, v0}, Landroid/widget/TextView;->setText(I)V
 
@@ -1100,7 +1077,7 @@
     :cond_b
     iget-object p2, p0, Lcom/miui/home/recents/views/TaskView;->mWorldCirculateBackTextView:Landroid/widget/TextView;
 
-    const v0, 0x7f1103ee
+    const v0, 0x7f1103e9
 
     invoke-virtual {p2, v0}, Landroid/widget/TextView;->setText(I)V
 
@@ -1216,7 +1193,7 @@
 .method public getFullscreenProgress()F
     .locals 1
 
-    .line 726
+    .line 725
     iget v0, p0, Lcom/miui/home/recents/views/TaskView;->mFullscreenProgress:F
 
     return v0
@@ -1243,7 +1220,7 @@
 .method public getSpringAnimationImpl()Lcom/miui/home/recents/util/SpringAnimationImpl;
     .locals 1
 
-    .line 730
+    .line 729
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskView;->mSpringAnimationImpl:Lcom/miui/home/recents/util/SpringAnimationImpl;
 
     return-object v0
@@ -1578,10 +1555,10 @@
 .method protected onAttachedToWindow()V
     .locals 0
 
-    .line 702
+    .line 701
     invoke-super {p0}, Lcom/miui/home/recents/views/FixedSizeFrameLayout;->onAttachedToWindow()V
 
-    .line 703
+    .line 702
     invoke-virtual {p0}, Lcom/miui/home/recents/views/TaskView;->registerEventBus()V
 
     return-void
@@ -1650,10 +1627,10 @@
 .method protected onDetachedFromWindow()V
     .locals 0
 
-    .line 708
+    .line 707
     invoke-super {p0}, Lcom/miui/home/recents/views/FixedSizeFrameLayout;->onDetachedFromWindow()V
 
-    .line 709
+    .line 708
     invoke-virtual {p0}, Lcom/miui/home/recents/views/TaskView;->unregisterEventBus()V
 
     return-void
@@ -1665,7 +1642,7 @@
     .line 170
     invoke-super {p0}, Lcom/miui/home/recents/views/FixedSizeFrameLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a0367
+    const v0, 0x7f0a0363
 
     .line 172
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/TaskView;->findViewById(I)Landroid/view/View;
@@ -1676,7 +1653,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/views/TaskView;->mHeaderView:Lcom/miui/home/recents/views/TaskViewHeader;
 
-    const v0, 0x7f0a036b
+    const v0, 0x7f0a0367
 
     .line 173
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/TaskView;->findViewById(I)Landroid/view/View;
@@ -1687,7 +1664,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/views/TaskView;->mThumbnailView:Lcom/miui/home/recents/views/TaskViewThumbnail;
 
-    const v0, 0x7f0a0366
+    const v0, 0x7f0a0362
 
     .line 174
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/TaskView;->findViewById(I)Landroid/view/View;
@@ -1696,7 +1673,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/views/TaskView;->mAccessLockView:Landroid/view/View;
 
-    const v0, 0x7f0a036a
+    const v0, 0x7f0a0366
 
     .line 175
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/TaskView;->findViewById(I)Landroid/view/View;
@@ -1705,7 +1682,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/views/TaskView;->mScreeningView:Landroid/view/View;
 
-    const v0, 0x7f0a0369
+    const v0, 0x7f0a0365
 
     .line 176
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/TaskView;->findViewById(I)Landroid/view/View;
@@ -1716,7 +1693,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/views/TaskView;->mPrivacyProtectImageView:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a03ef
+    const v0, 0x7f0a03ea
 
     .line 177
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/TaskView;->findViewById(I)Landroid/view/View;
@@ -1727,7 +1704,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/views/TaskView;->mWorldCirculateContainer:Landroid/widget/LinearLayout;
 
-    const v0, 0x7f0a03f0
+    const v0, 0x7f0a03eb
 
     .line 178
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/TaskView;->findViewById(I)Landroid/view/View;
@@ -1738,7 +1715,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/views/TaskView;->mWorldCirculateImageView:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a03f1
+    const v0, 0x7f0a03ec
 
     .line 179
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/TaskView;->findViewById(I)Landroid/view/View;
@@ -1749,7 +1726,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/views/TaskView;->mWorldCirculateTextView:Landroid/widget/TextView;
 
-    const v0, 0x7f0a009b
+    const v0, 0x7f0a009a
 
     .line 180
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/TaskView;->findViewById(I)Landroid/view/View;
@@ -1835,14 +1812,14 @@
 .method public onLongClick(Landroid/view/View;)Z
     .locals 2
 
-    .line 596
+    .line 595
     invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isLowMemoryDevices()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 597
+    .line 596
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object p1
@@ -1857,7 +1834,7 @@
 
     goto :goto_0
 
-    .line 599
+    .line 598
     :cond_0
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
@@ -2079,7 +2056,7 @@
 .method public registerEventBus()V
     .locals 1
 
-    .line 689
+    .line 688
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -2090,7 +2067,7 @@
 
     if-nez v0, :cond_0
 
-    .line 690
+    .line 689
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -2233,7 +2210,7 @@
 .method public setFullscreenProgress(F)V
     .locals 1
 
-    .line 718
+    .line 717
     iget v0, p0, Lcom/miui/home/recents/views/TaskView;->mFullscreenProgress:F
 
     cmpl-float v0, p1, v0
@@ -2242,11 +2219,11 @@
 
     return-void
 
-    .line 721
+    .line 720
     :cond_0
     iput p1, p0, Lcom/miui/home/recents/views/TaskView;->mFullscreenProgress:F
 
-    .line 722
+    .line 721
     iget-object p1, p0, Lcom/miui/home/recents/views/TaskView;->mThumbnailView:Lcom/miui/home/recents/views/TaskViewThumbnail;
 
     invoke-virtual {p1}, Lcom/miui/home/recents/views/TaskViewThumbnail;->invalidate()V
@@ -2329,7 +2306,7 @@
 .method public unregisterEventBus()V
     .locals 1
 
-    .line 695
+    .line 694
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -2340,7 +2317,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 696
+    .line 695
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0

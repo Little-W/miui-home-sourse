@@ -377,7 +377,7 @@
 .method public getUniSearchPermissionGuideCloseCount()I
     .locals 2
 
-    const-string v0, "uni_search_permission_close"
+    const-string/jumbo v0, "uni_search_permission_close"
 
     const/4 v1, 0x0
 
@@ -392,7 +392,7 @@
 .method public getUniSearchPermissionGuideCloseTime()J
     .locals 3
 
-    const-string v0, "uni_search_permission_close_time"
+    const-string/jumbo v0, "uni_search_permission_close_time"
 
     const-wide/16 v1, 0x0
 
@@ -720,7 +720,7 @@
 .method public isUniSearchPermissionButtonClicked()Z
     .locals 2
 
-    const-string v0, "uni_search_permission_button_clicked"
+    const-string/jumbo v0, "uni_search_permission_button_clicked"
 
     const/4 v1, 0x0
 
@@ -1248,7 +1248,7 @@
 .method public setUniSearchPermissionButtonClicked()V
     .locals 2
 
-    const-string v0, "uni_search_permission_button_clicked"
+    const-string/jumbo v0, "uni_search_permission_button_clicked"
 
     const/4 v1, 0x1
 
@@ -1261,7 +1261,7 @@
 .method public setUniSearchPermissionGuideCloseCount(I)V
     .locals 1
 
-    const-string v0, "uni_search_permission_close"
+    const-string/jumbo v0, "uni_search_permission_close"
 
     .line 166
     invoke-virtual {p0, v0, p1}, Lcom/mi/globallauncher/manager/CommercialPreference;->putInt(Ljava/lang/String;I)V
@@ -1272,7 +1272,7 @@
 .method public setUniSearchPermissionGuideCloseTime(J)V
     .locals 1
 
-    const-string v0, "uni_search_permission_close_time"
+    const-string/jumbo v0, "uni_search_permission_close_time"
 
     .line 176
     invoke-virtual {p0, v0, p1, p2}, Lcom/mi/globallauncher/manager/CommercialPreference;->putLong(Ljava/lang/String;J)V

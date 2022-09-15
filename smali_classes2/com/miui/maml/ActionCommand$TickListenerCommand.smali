@@ -34,10 +34,10 @@
 .method public constructor <init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
     .locals 1
 
-    .line 2082
+    .line 2077
     invoke-direct {p0, p1, p2}, Lcom/miui/maml/ActionCommand$TargetCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
 
-    .line 2083
+    .line 2078
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$TickListenerCommand;->getVariables()Lcom/miui/maml/data/Variables;
 
     move-result-object p1
@@ -56,12 +56,12 @@
 
     const-string p1, "command"
 
-    .line 2084
+    .line 2079
     invoke-interface {p2, p1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 2085
+    .line 2080
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     move-result p2
@@ -111,7 +111,7 @@
 
     goto :goto_2
 
-    .line 2090
+    .line 2085
     :pswitch_0
     sget-object p1, Lcom/miui/maml/ActionCommand$TickListenerCommand$CommandType;->UNSET:Lcom/miui/maml/ActionCommand$TickListenerCommand$CommandType;
 
@@ -119,7 +119,7 @@
 
     goto :goto_2
 
-    .line 2087
+    .line 2082
     :pswitch_1
     sget-object p1, Lcom/miui/maml/ActionCommand$TickListenerCommand$CommandType;->SET:Lcom/miui/maml/ActionCommand$TickListenerCommand$CommandType;
 
@@ -142,25 +142,25 @@
 .method protected doPerform()V
     .locals 3
 
-    .line 2099
+    .line 2094
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$TickListenerCommand;->getTarget()Ljava/lang/Object;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    .line 2100
+    .line 2095
     instance-of v1, v0, Lcom/miui/maml/elements/AnimatedScreenElement;
 
     if-nez v1, :cond_0
 
     goto :goto_1
 
-    .line 2103
+    .line 2098
     :cond_0
     check-cast v0, Lcom/miui/maml/elements/AnimatedScreenElement;
 
-    .line 2105
+    .line 2100
     sget-object v1, Lcom/miui/maml/ActionCommand$1;->$SwitchMap$com$miui$maml$ActionCommand$TickListenerCommand$CommandType:[I
 
     iget-object v2, p0, Lcom/miui/maml/ActionCommand$TickListenerCommand;->mCommand:Lcom/miui/maml/ActionCommand$TickListenerCommand$CommandType;
@@ -175,13 +175,13 @@
 
     goto :goto_0
 
-    .line 2114
+    .line 2109
     :pswitch_0
     invoke-virtual {v0}, Lcom/miui/maml/elements/AnimatedScreenElement;->unsetOnTickListener()V
 
     goto :goto_0
 
-    .line 2107
+    .line 2102
     :pswitch_1
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$TickListenerCommand;->mFunNameExp:Lcom/miui/maml/data/Expression;
 
@@ -189,7 +189,7 @@
 
     move-result-object v1
 
-    .line 2108
+    .line 2103
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$TickListenerCommand;->getRoot()Lcom/miui/maml/ScreenElementRoot;
 
     move-result-object v2
@@ -200,12 +200,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 2109
+    .line 2104
     instance-of v2, v1, Lcom/miui/maml/elements/FunctionElement;
 
     if-eqz v2, :cond_1
 
-    .line 2110
+    .line 2105
     check-cast v1, Lcom/miui/maml/elements/FunctionElement;
 
     invoke-virtual {v0, v1}, Lcom/miui/maml/elements/AnimatedScreenElement;->setOnTickListener(Lcom/miui/maml/elements/FunctionElement;)V

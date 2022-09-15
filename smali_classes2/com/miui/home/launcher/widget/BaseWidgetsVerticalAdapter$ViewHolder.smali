@@ -36,7 +36,7 @@
     .line 365
     invoke-direct {p0, p2}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;-><init>(Landroid/view/View;)V
 
-    const v0, 0x7f0a03df
+    const v0, 0x7f0a03db
 
     .line 366
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -47,7 +47,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/widget/BaseWidgetsVerticalAdapter$ViewHolder;->mTitle:Landroid/widget/TextView;
 
-    const v0, 0x7f0a03e0
+    const v0, 0x7f0a03dc
 
     .line 367
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -92,7 +92,7 @@
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter;->setWidgetDetailsCallback(Lcom/miui/home/launcher/widget/WidgetDetailsCallback;)V
 
-    const p1, 0x7f0a03e2
+    const p1, 0x7f0a03de
 
     .line 372
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;

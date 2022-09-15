@@ -31,22 +31,22 @@
 .method constructor <init>(Lcom/market/sdk/silentupdate/SilentUpdater;)V
     .locals 0
 
-    .line 117
+    .line 115
     iput-object p1, p0, Lcom/market/sdk/silentupdate/SilentUpdater$3;->this$0:Lcom/market/sdk/silentupdate/SilentUpdater;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p1, 0x0
 
-    .line 118
+    .line 116
     iput p1, p0, Lcom/market/sdk/silentupdate/SilentUpdater$3;->lastErrorCode:I
 
-    .line 119
+    .line 117
     iput p1, p0, Lcom/market/sdk/silentupdate/SilentUpdater$3;->lastStatus:I
 
     const/4 p1, -0x1
 
-    .line 120
+    .line 118
     iput p1, p0, Lcom/market/sdk/silentupdate/SilentUpdater$3;->lastProgress:I
 
     return-void
@@ -57,7 +57,7 @@
 .method public onResult(Landroid/os/Bundle;)V
     .locals 3
 
-    .line 124
+    .line 122
     iget-object v0, p0, Lcom/market/sdk/silentupdate/SilentUpdater$3;->this$0:Lcom/market/sdk/silentupdate/SilentUpdater;
 
     invoke-static {v0}, Lcom/market/sdk/silentupdate/SilentUpdater;->access$400(Lcom/market/sdk/silentupdate/SilentUpdater;)Lcom/market/sdk/silentupdate/SilentUpdater$UpdateCallback;
@@ -73,17 +73,17 @@
     :cond_0
     const-string v0, "errorCode"
 
-    .line 128
+    .line 126
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 129
+    .line 127
     iget v1, p0, Lcom/market/sdk/silentupdate/SilentUpdater$3;->lastErrorCode:I
 
     if-eq v1, v0, :cond_4
 
-    .line 130
+    .line 128
     iput v0, p0, Lcom/market/sdk/silentupdate/SilentUpdater$3;->lastErrorCode:I
 
     if-ltz v0, :cond_1
@@ -92,7 +92,7 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 132
+    .line 130
     :cond_1
     invoke-static {}, Lcom/market/sdk/silentupdate/UpdateResultReceiver;->get()Lcom/market/sdk/silentupdate/UpdateResultReceiver;
 
@@ -100,7 +100,7 @@
 
     invoke-virtual {v1}, Lcom/market/sdk/silentupdate/UpdateResultReceiver;->unregister()V
 
-    .line 133
+    .line 131
     iget-object v1, p0, Lcom/market/sdk/silentupdate/SilentUpdater$3;->this$0:Lcom/market/sdk/silentupdate/SilentUpdater;
 
     invoke-static {v1}, Lcom/market/sdk/silentupdate/SilentUpdater;->access$500(Lcom/market/sdk/silentupdate/SilentUpdater;)V
@@ -110,12 +110,12 @@
 
     const-string v1, "reason"
 
-    .line 137
+    .line 135
     invoke-virtual {p1, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 138
+    .line 136
     iget-object v2, p0, Lcom/market/sdk/silentupdate/SilentUpdater$3;->this$0:Lcom/market/sdk/silentupdate/SilentUpdater;
 
     invoke-static {v2}, Lcom/market/sdk/silentupdate/SilentUpdater;->access$400(Lcom/market/sdk/silentupdate/SilentUpdater;)Lcom/market/sdk/silentupdate/SilentUpdater$UpdateCallback;
@@ -126,7 +126,7 @@
 
     goto :goto_0
 
-    .line 140
+    .line 138
     :cond_3
     iget-object v1, p0, Lcom/market/sdk/silentupdate/SilentUpdater$3;->this$0:Lcom/market/sdk/silentupdate/SilentUpdater;
 
@@ -146,24 +146,24 @@
 
     const-string v0, "status"
 
-    .line 145
+    .line 143
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result v0
 
     const-string v1, "progress"
 
-    .line 146
+    .line 144
     invoke-virtual {p1, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result p1
 
-    .line 147
+    .line 145
     iget v1, p0, Lcom/market/sdk/silentupdate/SilentUpdater$3;->lastStatus:I
 
     if-eq v1, v0, :cond_5
 
-    .line 148
+    .line 146
     iget-object v1, p0, Lcom/market/sdk/silentupdate/SilentUpdater$3;->this$0:Lcom/market/sdk/silentupdate/SilentUpdater;
 
     invoke-static {v1}, Lcom/market/sdk/silentupdate/SilentUpdater;->access$400(Lcom/market/sdk/silentupdate/SilentUpdater;)Lcom/market/sdk/silentupdate/SilentUpdater$UpdateCallback;
@@ -172,16 +172,16 @@
 
     invoke-interface {v1, v0}, Lcom/market/sdk/silentupdate/SilentUpdater$UpdateCallback;->onStatusChanged(I)V
 
-    .line 149
+    .line 147
     iput v0, p0, Lcom/market/sdk/silentupdate/SilentUpdater$3;->lastStatus:I
 
-    .line 151
+    .line 149
     :cond_5
     iget v0, p0, Lcom/market/sdk/silentupdate/SilentUpdater$3;->lastProgress:I
 
     if-eq v0, p1, :cond_6
 
-    .line 152
+    .line 150
     iget-object v0, p0, Lcom/market/sdk/silentupdate/SilentUpdater$3;->this$0:Lcom/market/sdk/silentupdate/SilentUpdater;
 
     invoke-static {v0}, Lcom/market/sdk/silentupdate/SilentUpdater;->access$400(Lcom/market/sdk/silentupdate/SilentUpdater;)Lcom/market/sdk/silentupdate/SilentUpdater$UpdateCallback;
@@ -190,7 +190,7 @@
 
     invoke-interface {v0, p1}, Lcom/market/sdk/silentupdate/SilentUpdater$UpdateCallback;->onProgressChanged(I)V
 
-    .line 153
+    .line 151
     iput p1, p0, Lcom/market/sdk/silentupdate/SilentUpdater$3;->lastProgress:I
 
     :cond_6

@@ -318,7 +318,7 @@
 
     move-result-object v0
 
-    const-string v1, "translationX"
+    const-string/jumbo v1, "translationX"
 
     const/4 v2, 0x1
 

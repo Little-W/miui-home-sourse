@@ -55,7 +55,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "type needs to be >= FIRST and <= LAST, type="
+    const-string/jumbo v2, "type needs to be >= FIRST and <= LAST, type="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -109,8 +109,6 @@
     const/4 p0, 0x2
 
     return p0
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0x1

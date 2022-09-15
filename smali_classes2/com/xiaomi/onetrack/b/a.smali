@@ -1376,7 +1376,7 @@
 
     const-string v3, "sv"
 
-    const-string v4, "2.0.3"
+    const-string v4, "2.0.1"
 
     .line 125
     invoke-interface {v0, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;

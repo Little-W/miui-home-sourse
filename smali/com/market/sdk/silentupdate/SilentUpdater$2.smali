@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/market/sdk/silentupdate/SilentUpdater;)V
     .locals 0
 
-    .line 94
+    .line 92
     iput-object p1, p0, Lcom/market/sdk/silentupdate/SilentUpdater$2;->this$0:Lcom/market/sdk/silentupdate/SilentUpdater;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 1
 
-    .line 97
+    .line 95
     iget-object p1, p0, Lcom/market/sdk/silentupdate/SilentUpdater$2;->this$0:Lcom/market/sdk/silentupdate/SilentUpdater;
 
     invoke-static {p2}, Lcom/xiaomi/market/IAppDownloadManager$Stub;->asInterface(Landroid/os/IBinder;)Lcom/xiaomi/market/IAppDownloadManager;
@@ -47,7 +47,7 @@
 
     invoke-static {p1, p2}, Lcom/market/sdk/silentupdate/SilentUpdater;->access$002(Lcom/market/sdk/silentupdate/SilentUpdater;Lcom/xiaomi/market/IAppDownloadManager;)Lcom/xiaomi/market/IAppDownloadManager;
 
-    .line 99
+    .line 97
     :try_start_0
     iget-object p1, p0, Lcom/market/sdk/silentupdate/SilentUpdater$2;->this$0:Lcom/market/sdk/silentupdate/SilentUpdater;
 
@@ -76,10 +76,10 @@
     :catch_0
     move-exception p1
 
-    .line 101
+    .line 99
     invoke-virtual {p1}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 103
+    .line 101
     :goto_0
     invoke-static {}, Lcom/market/sdk/silentupdate/UpdateResultReceiver;->get()Lcom/market/sdk/silentupdate/UpdateResultReceiver;
 
@@ -93,7 +93,7 @@
 
     invoke-virtual {p1, p2}, Lcom/market/sdk/silentupdate/UpdateResultReceiver;->register(Lcom/market/sdk/silentupdate/UpdateResultReceiver$Callback;)V
 
-    .line 104
+    .line 102
     iget-object p1, p0, Lcom/market/sdk/silentupdate/SilentUpdater$2;->this$0:Lcom/market/sdk/silentupdate/SilentUpdater;
 
     invoke-static {p1}, Lcom/market/sdk/silentupdate/SilentUpdater;->access$300(Lcom/market/sdk/silentupdate/SilentUpdater;)V
@@ -104,7 +104,7 @@
 .method public onServiceDisconnected(Landroid/content/ComponentName;)V
     .locals 2
 
-    .line 109
+    .line 107
     iget-object p1, p0, Lcom/market/sdk/silentupdate/SilentUpdater$2;->this$0:Lcom/market/sdk/silentupdate/SilentUpdater;
 
     invoke-static {p1}, Lcom/market/sdk/silentupdate/SilentUpdater;->access$000(Lcom/market/sdk/silentupdate/SilentUpdater;)Lcom/xiaomi/market/IAppDownloadManager;
@@ -113,7 +113,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 111
+    .line 109
     invoke-interface {p1}, Lcom/xiaomi/market/IAppDownloadManager;->asBinder()Landroid/os/IBinder;
 
     move-result-object p1
@@ -128,7 +128,7 @@
 
     invoke-interface {p1, v0, v1}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 113
+    .line 111
     :cond_0
     iget-object p1, p0, Lcom/market/sdk/silentupdate/SilentUpdater$2;->this$0:Lcom/market/sdk/silentupdate/SilentUpdater;
 

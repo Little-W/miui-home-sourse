@@ -8,8 +8,6 @@
 
 .field private mFoldEditBgMargin:I
 
-.field mFoldEnterEditAnimator:Lcom/miui/home/launcher/animate/SpringAnimator;
-
 .field private mIsFoldLongClickInEdit:Z
 
 
@@ -17,41 +15,26 @@
 .method public constructor <init>(Lcom/miui/home/launcher/CellLayout;)V
     .locals 0
 
-    .line 29
+    .line 28
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/anim/NormalEditEnterAnim;-><init>(Lcom/miui/home/launcher/CellLayout;)V
 
-    .line 30
+    .line 29
     invoke-direct {p0}, Lcom/miui/home/launcher/anim/FoldEditEnterAnim;->initFoldParam()V
 
-    return-void
-.end method
-
-.method private cancelEnterEditAnimate()V
-    .locals 1
-
-    .line 106
-    iget-object v0, p0, Lcom/miui/home/launcher/anim/FoldEditEnterAnim;->mFoldEnterEditAnimator:Lcom/miui/home/launcher/animate/SpringAnimator;
-
-    if-eqz v0, :cond_0
-
-    .line 107
-    invoke-virtual {v0}, Lcom/miui/home/launcher/animate/SpringAnimator;->cancel()V
-
-    :cond_0
     return-void
 .end method
 
 .method private initFoldParam()V
     .locals 5
 
-    .line 35
+    .line 34
     iget-object v0, p0, Lcom/miui/home/launcher/anim/FoldEditEnterAnim;->mCellLayout:Lcom/miui/home/launcher/CellLayout;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/CellLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 36
+    .line 35
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v1
@@ -78,26 +61,26 @@
 
     const v1, 0x7f07015b
 
-    .line 38
+    .line 37
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
     move-result v1
 
     const v2, 0x7f0600ec
 
-    .line 39
+    .line 38
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v2
 
     const v3, 0x7f0600eb
 
-    .line 40
+    .line 39
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v0
 
-    .line 41
+    .line 40
     new-instance v3, Lcom/miui/home/launcher/anim/CommonBackgroundAnim;
 
     iget-object v4, p0, Lcom/miui/home/launcher/anim/FoldEditEnterAnim;->mCellLayout:Lcom/miui/home/launcher/CellLayout;
@@ -106,7 +89,7 @@
 
     iput-object v3, p0, Lcom/miui/home/launcher/anim/FoldEditEnterAnim;->mBackgroundAnim:Lcom/miui/home/launcher/anim/CommonBackgroundAnim;
 
-    .line 42
+    .line 41
     iget-object v0, p0, Lcom/miui/home/launcher/anim/FoldEditEnterAnim;->mBackgroundAnim:Lcom/miui/home/launcher/anim/CommonBackgroundAnim;
 
     int-to-float v1, v1
@@ -119,7 +102,7 @@
 .method public static synthetic lambda$startFoldEnterEditAnim$0(Lcom/miui/home/launcher/anim/FoldEditEnterAnim;F)V
     .locals 2
 
-    .line 70
+    .line 69
     iget-object v0, p0, Lcom/miui/home/launcher/anim/FoldEditEnterAnim;->mCellLayout:Lcom/miui/home/launcher/CellLayout;
 
     iget-object v1, p0, Lcom/miui/home/launcher/anim/FoldEditEnterAnim;->mCellLayout:Lcom/miui/home/launcher/CellLayout;
@@ -136,7 +119,7 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/CellLayout;->setPivotY(F)V
 
-    .line 71
+    .line 70
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/anim/FoldEditEnterAnim;->scaleTargetView(F)V
 
     return-void
@@ -145,7 +128,7 @@
 .method private startFoldEnterEditAnim()V
     .locals 5
 
-    .line 68
+    .line 67
     new-instance v0, Lcom/miui/home/launcher/animate/SpringAnimator;
 
     invoke-static {}, Lcom/miui/home/launcher/Workspace;->getScreenScaleRatio()F
@@ -160,32 +143,22 @@
 
     invoke-direct {v0, v2, v3, v4, v1}, Lcom/miui/home/launcher/animate/SpringAnimator;-><init>(FFFF)V
 
-    iput-object v0, p0, Lcom/miui/home/launcher/anim/FoldEditEnterAnim;->mFoldEnterEditAnimator:Lcom/miui/home/launcher/animate/SpringAnimator;
-
-    .line 69
-    iget-object v0, p0, Lcom/miui/home/launcher/anim/FoldEditEnterAnim;->mFoldEnterEditAnimator:Lcom/miui/home/launcher/animate/SpringAnimator;
-
+    .line 68
     new-instance v1, Lcom/miui/home/launcher/anim/-$$Lambda$FoldEditEnterAnim$n34XYJjO-D-b4_2NW6r4BdtJkIo;
 
     invoke-direct {v1, p0}, Lcom/miui/home/launcher/anim/-$$Lambda$FoldEditEnterAnim$n34XYJjO-D-b4_2NW6r4BdtJkIo;-><init>(Lcom/miui/home/launcher/anim/FoldEditEnterAnim;)V
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/animate/SpringAnimator;->setUpdateListener(Lcom/miui/home/launcher/animate/SpringAnimator$UpdateListener;)V
 
-    .line 73
-    iget-object v0, p0, Lcom/miui/home/launcher/anim/FoldEditEnterAnim;->mFoldEnterEditAnimator:Lcom/miui/home/launcher/animate/SpringAnimator;
-
+    .line 72
     invoke-virtual {v0}, Lcom/miui/home/launcher/animate/SpringAnimator;->registerEndAnimationMessage()V
-
-    .line 74
-    iget-object v0, p0, Lcom/miui/home/launcher/anim/FoldEditEnterAnim;->mFoldEnterEditAnimator:Lcom/miui/home/launcher/animate/SpringAnimator;
 
     const-wide/16 v1, 0x32
 
+    .line 73
     invoke-virtual {v0, v1, v2}, Lcom/miui/home/launcher/animate/SpringAnimator;->startDelay(J)V
 
-    .line 75
-    iget-object v0, p0, Lcom/miui/home/launcher/anim/FoldEditEnterAnim;->mFoldEnterEditAnimator:Lcom/miui/home/launcher/animate/SpringAnimator;
-
+    .line 74
     invoke-virtual {v0}, Lcom/miui/home/launcher/animate/SpringAnimator;->start()V
 
     return-void
@@ -198,14 +171,14 @@
 
     if-nez p1, :cond_0
 
-    .line 79
+    .line 78
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isFoldDevice()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 80
+    .line 79
     iget-object p1, p0, Lcom/miui/home/launcher/anim/FoldEditEnterAnim;->mCellLayout:Lcom/miui/home/launcher/CellLayout;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/CellLayout;->getMeasuredHeight()I
@@ -226,7 +199,7 @@
 
     int-to-float p1, p1
 
-    .line 81
+    .line 80
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getNotchEditModePaddingTopDelta()I
 
     move-result v0
@@ -245,7 +218,7 @@
 
     int-to-float v4, v0
 
-    .line 82
+    .line 81
     iget-object v1, p0, Lcom/miui/home/launcher/anim/FoldEditEnterAnim;->mBackgroundAnim:Lcom/miui/home/launcher/anim/CommonBackgroundAnim;
 
     const/4 v3, 0x0
@@ -265,10 +238,10 @@
 .method protected prepareAnimParam()V
     .locals 1
 
-    .line 62
+    .line 61
     invoke-super {p0}, Lcom/miui/home/launcher/anim/NormalEditEnterAnim;->prepareAnimParam()V
 
-    .line 63
+    .line 62
     iget-boolean v0, p0, Lcom/miui/home/launcher/anim/FoldEditEnterAnim;->mIsFoldLongClickInEdit:Z
 
     if-eqz v0, :cond_0
@@ -289,7 +262,7 @@
     :goto_0
     iput v0, p0, Lcom/miui/home/launcher/anim/FoldEditEnterAnim;->mCurrentCellLayoutScale:F
 
-    .line 64
+    .line 63
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isFoldDevice()Z
 
     move-result v0
@@ -302,7 +275,7 @@
 .method protected scaleTargetView(F)V
     .locals 1
 
-    .line 102
+    .line 101
     iget-object v0, p0, Lcom/miui/home/launcher/anim/FoldEditEnterAnim;->mCellLayout:Lcom/miui/home/launcher/CellLayout;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/CellLayout;->updateEditModeScale(F)V
@@ -315,7 +288,7 @@
 
     if-eqz p2, :cond_1
 
-    .line 47
+    .line 46
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isFoldDevice()Z
 
     move-result v0
@@ -324,7 +297,7 @@
 
     const-string v0, "event_long_click_in_edit"
 
-    .line 48
+    .line 47
     invoke-virtual {p2}, Lcom/miui/home/launcher/EditStateChangeReason;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -337,7 +310,7 @@
 
     const-string v0, "event_menu"
 
-    .line 49
+    .line 48
     invoke-virtual {p2}, Lcom/miui/home/launcher/EditStateChangeReason;->toString()Ljava/lang/String;
 
     move-result-object p2
@@ -361,15 +334,15 @@
 
     if-eqz p1, :cond_2
 
-    .line 50
+    .line 49
     iget-boolean p2, p0, Lcom/miui/home/launcher/anim/FoldEditEnterAnim;->mIsFoldLongClickInEdit:Z
 
     if-eqz p2, :cond_2
 
-    .line 51
+    .line 50
     invoke-virtual {p0}, Lcom/miui/home/launcher/anim/FoldEditEnterAnim;->startEnterAnim()V
 
-    .line 52
+    .line 51
     invoke-direct {p0}, Lcom/miui/home/launcher/anim/FoldEditEnterAnim;->startFoldEnterEditAnim()V
 
     goto :goto_1
@@ -377,12 +350,12 @@
     :cond_2
     if-eqz p1, :cond_3
 
-    .line 54
+    .line 53
     invoke-virtual {p0}, Lcom/miui/home/launcher/anim/FoldEditEnterAnim;->startEnterAnim()V
 
     goto :goto_1
 
-    .line 56
+    .line 55
     :cond_3
     invoke-virtual {p0}, Lcom/miui/home/launcher/anim/FoldEditEnterAnim;->startOutAnim()V
 
@@ -390,27 +363,10 @@
     return-void
 .end method
 
-.method public startOutAnim()V
-    .locals 1
-
-    .line 113
-    invoke-direct {p0}, Lcom/miui/home/launcher/anim/FoldEditEnterAnim;->cancelEnterEditAnimate()V
-
-    .line 114
-    invoke-virtual {p0}, Lcom/miui/home/launcher/anim/FoldEditEnterAnim;->startNormalOutAnim()V
-
-    const/4 v0, 0x0
-
-    .line 115
-    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/anim/FoldEditEnterAnim;->updateBlur(Z)V
-
-    return-void
-.end method
-
 .method public updateEditBackground(F)V
     .locals 2
 
-    .line 87
+    .line 86
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isFoldDevice()Z
 
     move-result v0
@@ -421,7 +377,7 @@
 
     sub-float p1, v0, p1
 
-    .line 88
+    .line 87
     invoke-static {}, Lcom/miui/home/launcher/Workspace;->getScreenScaleRatio()F
 
     move-result v1
@@ -440,7 +396,7 @@
 
     if-ltz v0, :cond_0
 
-    .line 90
+    .line 89
     iget-object v0, p0, Lcom/miui/home/launcher/anim/FoldEditEnterAnim;->mBackgroundAnim:Lcom/miui/home/launcher/anim/CommonBackgroundAnim;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/anim/CommonBackgroundAnim;->updateBackgroundColor(F)V
@@ -452,7 +408,7 @@
 .method public updateParam()V
     .locals 2
 
-    .line 97
+    .line 96
     iget-object v0, p0, Lcom/miui/home/launcher/anim/FoldEditEnterAnim;->mCellLayout:Lcom/miui/home/launcher/CellLayout;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/CellLayout;->getResources()Landroid/content/res/Resources;

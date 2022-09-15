@@ -448,7 +448,7 @@
 
     if-eqz p3, :cond_0
 
-    const/16 v0, 0xc
+    const/16 v0, 0xa
 
     .line 2560
     invoke-virtual {p3, v0}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
@@ -502,7 +502,7 @@
 
     if-eqz p3, :cond_2
 
-    const/16 v1, 0xf
+    const/16 v1, 0xd
 
     .line 2564
     invoke-virtual {p3, v1, v8}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
@@ -3008,7 +3008,7 @@
 
     const-string v5, "presets_container"
 
-    const-string v6, "true"
+    const-string/jumbo v6, "true"
 
     .line 2439
     invoke-virtual {v3, v2, v5, v6}, Lcom/miui/launcher/utils/LauncherFastXmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
@@ -3236,7 +3236,7 @@
 
     const-string v7, "retained"
 
-    const-string v8, "true"
+    const-string/jumbo v8, "true"
 
     .line 2482
     invoke-virtual {v3, v6, v7, v8}, Lcom/miui/launcher/utils/LauncherFastXmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
@@ -4167,7 +4167,7 @@
 
     move-result-object v3
 
-    const/16 v4, 0x13
+    const/16 v4, 0x11
 
     .line 1122
     invoke-virtual {v3, v4}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
@@ -4819,7 +4819,7 @@
 
     const-string v0, "Launcher.LauncherProvider"
 
-    const-string v1, "updateDefaultFolderLabel fail"
+    const-string/jumbo v1, "updateDefaultFolderLabel fail"
 
     .line 1924
     invoke-static {v0, v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
@@ -4833,7 +4833,7 @@
 
     const-string v0, "Launcher.LauncherProvider"
 
-    const-string v1, "update folder label exception"
+    const-string/jumbo v1, "update folder label exception"
 
     .line 1926
     invoke-static {v0, v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
@@ -6361,7 +6361,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "tryRemoveDupIdRows, dupIdCount="
+    const-string/jumbo v3, "tryRemoveDupIdRows, dupIdCount="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -9112,7 +9112,7 @@
 
     if-ne v1, v0, :cond_30
 
-    const-string v0, "update favorites set launchCount = launchCount+1 where itemType = 2"
+    const-string/jumbo v0, "update favorites set launchCount = launchCount+1 where itemType = 2"
 
     .line 1665
     invoke-static {v13, v0}, Lcom/miui/home/launcher/LauncherProvider;->safelyExecSQL(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;)V

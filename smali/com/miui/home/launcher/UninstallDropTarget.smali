@@ -159,7 +159,7 @@
 
     invoke-virtual {p1, v0, v1}, Lcom/miui/home/launcher/UninstallDropTargetMode;->onClick(Lcom/miui/home/launcher/Launcher;Ljava/util/List;)V
 
-    const-string p1, "uninstall"
+    const-string/jumbo p1, "uninstall"
 
     .line 57
     invoke-static {p1}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackEditModeTopMenuClickEvent(Ljava/lang/String;)V

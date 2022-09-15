@@ -251,7 +251,7 @@
 
     move-result-object v2
 
-    const-string v3, "type"
+    const-string/jumbo v3, "type"
 
     .line 204
     invoke-interface {v0, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -370,7 +370,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v8, "type:"
+    const-string/jumbo v8, "type:"
 
     invoke-virtual {v6, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

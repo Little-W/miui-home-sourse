@@ -329,7 +329,6 @@
     <string name="exit_overview_because_task_stack_changed">バックグラウンドで発生した変更により、\"最近のタスク\"が終了されました</string>
     <string name="expand_button_title">詳細設定</string>
     <string name="exposed_dropdown_menu_content_description">プルダウン メニューを表示</string>
-    <string name="external_not_support_split_screen_j18">外側の画面は画面分割に対応していません</string>
     <string name="failed_to_delete_temporary">削除できません</string>
     <string name="failed_to_drop">移動できません</string>
     <string name="failed_to_drop_widget_invalid">このウィジェットは無効です</string>
@@ -548,7 +547,6 @@
     <string name="midnight">真夜中</string>
     <string name="minus_one_screen">アプリ保管庫</string>
     <string name="miui_screen_config_title">ホーム画面の設定</string>
-    <string name="miui_widget_menu_replace_text">切り替える</string>
     <string name="miuix_access_state_desc">選択済み</string>
     <string name="miuix_appcompat_action_mode_deselect_all">選択を解除</string>
     <string name="miuix_appcompat_action_mode_select_all">すべて選択</string>
@@ -575,8 +573,6 @@
     <string name="monday">月曜日</string>
     <string name="monday_short">月</string>
     <string name="monday_shortest">月</string>
-    <string name="monochrome_summary">対応アイコンの背景色を変更する</string>
-    <string name="monochrome_title">背景の色</string>
     <string name="month_april">4月</string>
     <string name="month_april_short">4月</string>
     <string name="month_april_shortest">4月</string>

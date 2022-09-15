@@ -329,7 +329,6 @@
     <string name="exit_overview_because_task_stack_changed">Recientes cerrados debido a cambios que ocurrieron en segundo plano</string>
     <string name="expand_button_title">Opciones avanzadas</string>
     <string name="exposed_dropdown_menu_content_description">Mostrar menú desplegable</string>
-    <string name="external_not_support_split_screen_j18">La pantalla dividida no es compatible con la pantalla exterior</string>
     <string name="failed_to_delete_temporary">No se pudo eliminar</string>
     <string name="failed_to_drop">No se pudo mover</string>
     <string name="failed_to_drop_widget_invalid">Este widget es inválido</string>
@@ -435,7 +434,7 @@
     <string name="gadget_weather_download_start">Descargar</string>
     <string name="gadget_weather_download_title">Descargar</string>
     <string name="gadget_weather_downloading">Descargando contenido de la aplicación. Reinicie la aplicación al terminar la descarga.</string>
-    <string name="gadget_weather_loading">Sin datos</string>
+    <string name="gadget_weather_loading">No hay datos</string>
     <string name="gadget_weather_low_temp">Temperatura baja</string>
     <string name="gadget_weather_theme_type">Tipo de gadget</string>
     <string name="gadget_weather_time_format">EEEE, d MMMM</string>
@@ -548,7 +547,6 @@
     <string name="midnight">Noche</string>
     <string name="minus_one_screen">Bóveda de aplicaciones</string>
     <string name="miui_screen_config_title">Ajustes de pantalla de inicio</string>
-    <string name="miui_widget_menu_replace_text">Cambiar</string>
     <string name="miuix_access_state_desc">Seleccionado</string>
     <string name="miuix_appcompat_action_mode_deselect_all">Deseleccionar</string>
     <string name="miuix_appcompat_action_mode_select_all">Seleccionar todo</string>
@@ -575,8 +573,6 @@
     <string name="monday">Lunes</string>
     <string name="monday_short">Lun</string>
     <string name="monday_shortest">Lun</string>
-    <string name="monochrome_summary">Change background color for compatible icons</string>
-    <string name="monochrome_title">Background color</string>
     <string name="month_april">Abril</string>
     <string name="month_april_short">Abr</string>
     <string name="month_april_shortest">Abr</string>

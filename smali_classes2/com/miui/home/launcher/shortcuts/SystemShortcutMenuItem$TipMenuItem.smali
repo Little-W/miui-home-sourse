@@ -18,15 +18,15 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .line 229
+    .line 226
     invoke-direct {p0}, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem;-><init>()V
 
-    .line 230
+    .line 227
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem$TipMenuItem;->setShortTitle(Ljava/lang/CharSequence;)V
 
     const/4 p1, 0x0
 
-    .line 231
+    .line 228
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem$TipMenuItem;->setIconDrawable(Landroid/graphics/drawable/Drawable;)V
 
     return-void

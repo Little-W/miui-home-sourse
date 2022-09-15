@@ -325,7 +325,6 @@
     <string name="exit_overview_because_task_stack_changed">因后台应用变化，已退出最近任务</string>
     <string name="expand_button_title">高级</string>
     <string name="exposed_dropdown_menu_content_description">显示下拉菜单</string>
-    <string name="external_not_support_split_screen_j18">外屏暂不支持分屏</string>
     <string name="failed_to_delete_temporary">删除失败，请稍候再试</string>
     <string name="failed_to_drop">移动失败, 图标回到原位置</string>
     <string name="failed_to_drop_widget_invalid">插件无效</string>
@@ -545,7 +544,6 @@
     <string name="midnight">半夜</string>
     <string name="minus_one_screen">智能助理</string>
     <string name="miui_screen_config_title">桌面布局</string>
-    <string name="miui_widget_menu_replace_text">更换</string>
     <string name="miuix_access_state_desc">选中</string>
     <string name="miuix_alphabet_indexer_name">索引条</string>
     <string name="miuix_appcompat_action_mode_deselect_all">全不选</string>
@@ -575,8 +573,6 @@
     <string name="monday">星期一</string>
     <string name="monday_short">周一</string>
     <string name="monday_shortest">一</string>
-    <string name="monochrome_summary">更改图标背景色，应用于适配此功能的图标</string>
-    <string name="monochrome_title">图标背景色</string>
     <string name="month_april">四月</string>
     <string name="month_april_short">四</string>
     <string name="month_april_shortest">四</string>
@@ -1032,8 +1028,6 @@
     <string name="uninstall_xspace_dialog_title_format">卸载双开\"%s\"</string>
     <string name="unknown_artist_name">未知艺术家</string>
     <string name="unnamed_folder_name">文件夹</string>
-    <string name="unstable_dialog_message">该设备已加入Android 13开发者预览计划，该计划允许Android开发人员和发烧友试用Android 13的预览版本，此预览版本可能包含会影响设备正常运行的错误和缺陷。</string>
-    <string name="unstable_dialog_title">Android 开发者预览计划</string>
     <string name="upgrade_remove_small_window_in_recents">最近任务小窗应用入口已移除，可通过全局侧边栏使用小窗功能</string>
     <string name="v7_preference_off">关闭</string>
     <string name="v7_preference_on">开启</string>
@@ -1062,8 +1056,5 @@
     <string name="work_profile_second_content">IT管理员有权查看工作资料及相关数据。</string>
     <string name="work_profile_title">工作资料</string>
     <string name="work_profile_toggle_label">工作资料</string>
-    <string name="xiaomi_market_sdk_update_dialog_cancel">以后再说</string>
-    <string name="xiaomi_market_sdk_update_dialog_ok">立即更新</string>
-    <string name="xiaomi_market_sdk_update_dialog_title">发现新版本</string>
     <string name="yesterday">昨天</string>
 </resources>

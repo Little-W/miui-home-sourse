@@ -642,7 +642,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f11033f
+    const v2, 0x7f11033a
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -826,7 +826,7 @@
     .line 295
     iget-object p1, p0, Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;->mNavigationPosition:Lcom/miui/home/settings/preference/ValuePreference;
 
-    const v0, 0x7f110367
+    const v0, 0x7f110362
 
     invoke-virtual {p1, v0}, Lcom/miui/home/settings/preference/ValuePreference;->setValue(I)V
 
@@ -845,7 +845,7 @@
     .line 297
     iget-object p1, p0, Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;->mNavigationPosition:Lcom/miui/home/settings/preference/ValuePreference;
 
-    const v0, 0x7f110368
+    const v0, 0x7f110363
 
     invoke-virtual {p1, v0}, Lcom/miui/home/settings/preference/ValuePreference;->setValue(I)V
 
@@ -855,7 +855,7 @@
     :cond_1
     iget-object p1, p0, Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;->mNavigationPosition:Lcom/miui/home/settings/preference/ValuePreference;
 
-    const v0, 0x7f110366
+    const v0, 0x7f110361
 
     invoke-virtual {p1, v0}, Lcom/miui/home/settings/preference/ValuePreference;->setValue(I)V
 
@@ -1021,12 +1021,12 @@
 
     invoke-direct {v0, v1}, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f110353
+    const v1, 0x7f11034e
 
     .line 280
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;->setTitle(I)V
 
-    const v1, 0x7f110352
+    const v1, 0x7f11034d
 
     .line 281
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;->setMessage(I)V
@@ -1055,12 +1055,12 @@
 
     if-eqz p1, :cond_0
 
-    const v1, 0x7f110334
+    const v1, 0x7f11032f
 
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f110336
+    const v1, 0x7f110331
 
     :goto_0
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setSummary(I)V
@@ -1070,12 +1070,12 @@
 
     if-eqz p1, :cond_1
 
-    const v1, 0x7f08061a
+    const v1, 0x7f080617
 
     goto :goto_1
 
     :cond_1
-    const v1, 0x7f080619
+    const v1, 0x7f080616
 
     :goto_1
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setIcon(I)V
@@ -1085,12 +1085,12 @@
 
     if-eqz p1, :cond_2
 
-    const v1, 0x7f08061f
+    const v1, 0x7f08061c
 
     goto :goto_2
 
     :cond_2
-    const v1, 0x7f08061e
+    const v1, 0x7f08061b
 
     :goto_2
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setIcon(I)V
@@ -1100,12 +1100,12 @@
 
     if-eqz p1, :cond_3
 
-    const v1, 0x7f08061d
+    const v1, 0x7f08061a
 
     goto :goto_3
 
     :cond_3
-    const v1, 0x7f08061c
+    const v1, 0x7f080619
 
     :goto_3
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setIcon(I)V
@@ -1115,12 +1115,12 @@
 
     if-eqz p1, :cond_4
 
-    const v1, 0x7f080621
+    const v1, 0x7f08061e
 
     goto :goto_4
 
     :cond_4
-    const v1, 0x7f080620
+    const v1, 0x7f08061d
 
     :goto_4
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setIcon(I)V
@@ -1130,12 +1130,12 @@
 
     if-eqz p1, :cond_5
 
-    const p1, 0x7f080618
+    const p1, 0x7f080615
 
     goto :goto_5
 
     :cond_5
-    const p1, 0x7f080617
+    const p1, 0x7f080614
 
     :goto_5
     invoke-virtual {v0, p1}, Landroidx/preference/Preference;->setIcon(I)V
@@ -1459,7 +1459,7 @@
 
     const v2, 0x7f1100af
 
-    const v3, 0x7f11025f
+    const v3, 0x7f11025e
 
     if-ne v0, v1, :cond_1
 
@@ -1548,7 +1548,7 @@
 
     iput-object p1, p0, Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;->mContext:Landroid/content/Context;
 
-    const p1, 0x7f140023
+    const p1, 0x7f140020
 
     .line 96
     invoke-virtual {p0, p1, p2}, Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;->setPreferencesFromResource(ILjava/lang/String;)V

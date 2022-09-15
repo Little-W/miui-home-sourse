@@ -128,18 +128,6 @@
     return-void
 .end method
 
-.method public onMessageEvent(Lcom/miui/home/launcher/overlay/assistant/AssistantConnectMessage;)V
-    .locals 0
-    .annotation runtime Lorg/greenrobot/eventbus/Subscribe;
-        threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
-    .end annotation
-
-    .line 61
-    invoke-virtual {p0}, Lcom/miui/home/launcher/overlay/assistant/AssistantLauncherClient;->reconnect()V
-
-    return-void
-.end method
-
 .method public onStart()V
     .locals 1
 
@@ -173,7 +161,7 @@
 .method public queueIdle()Z
     .locals 1
 
-    .line 66
+    .line 61
     invoke-virtual {p0}, Lcom/miui/home/launcher/overlay/assistant/AssistantLauncherClient;->connect()V
 
     const/4 v0, 0x0

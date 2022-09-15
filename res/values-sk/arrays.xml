@@ -49,13 +49,6 @@
         <item>Predvolený</item>
         <item>Klasický</item>
     </string-array>
-    <string-array name="monochrome_color_entries">
-        <item>Default</item>
-        <item>Blue</item>
-        <item>Green</item>
-        <item>Purple</item>
-        <item>Brown</item>
-    </string-array>
     <string-array name="transformation_entries">
         <item>Klasický (bez odrazu)</item>
         <item>Prelínanie</item>

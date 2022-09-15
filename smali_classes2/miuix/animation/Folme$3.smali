@@ -21,7 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 442
+    .line 441
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,12 +32,12 @@
 .method public run()V
     .locals 4
 
-    .line 445
+    .line 444
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 446
+    .line 445
     invoke-static {}, Lmiuix/animation/Folme;->access$500()Ljava/util/concurrent/ConcurrentHashMap;
 
     move-result-object v1
@@ -64,19 +64,19 @@
 
     check-cast v2, Lmiuix/animation/IAnimTarget;
 
-    .line 447
+    .line 446
     invoke-virtual {v2}, Lmiuix/animation/IAnimTarget;->isValid()Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 448
+    .line 447
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 451
+    .line 450
     :cond_1
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -84,20 +84,20 @@
 
     if-lez v1, :cond_2
 
-    .line 452
+    .line 451
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v1
 
-    .line 453
+    .line 452
     iput-object v0, v1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     const/4 v0, 0x2
 
-    .line 454
+    .line 453
     iput v0, v1, Landroid/os/Message;->what:I
 
-    .line 456
+    .line 455
     invoke-static {}, Lmiuix/animation/Folme;->access$600()Landroid/os/Handler;
 
     move-result-object v0

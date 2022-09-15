@@ -58,7 +58,7 @@
 
     const/4 v0, 0x0
 
-    .line 58
+    .line 60
     invoke-direct {p0, p1, v0}, Lcom/market/sdk/utils/Connection;-><init>(Ljava/lang/String;Z)V
 
     return-void
@@ -67,7 +67,7 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 62
+    .line 64
     invoke-static {p1, p2}, Lcom/market/sdk/utils/Connection;->connect(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -82,10 +82,10 @@
 .method public constructor <init>(Ljava/lang/String;Z)V
     .locals 3
 
-    .line 65
+    .line 67
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 68
+    .line 70
     :try_start_0
     new-instance v0, Ljava/net/URL;
 
@@ -100,7 +100,7 @@
 
     const-string v0, "MarketConnection"
 
-    .line 70
+    .line 72
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -119,11 +119,11 @@
 
     const/4 v0, 0x0
 
-    .line 72
+    .line 74
     :goto_0
     invoke-direct {p0, v0}, Lcom/market/sdk/utils/Connection;->init(Ljava/net/URL;)V
 
-    .line 74
+    .line 76
     iput-boolean p2, p0, Lcom/market/sdk/utils/Connection;->mIsBackground:Z
 
     return-void
@@ -132,7 +132,7 @@
 .method public static connect(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 4
 
-    .line 78
+    .line 80
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -141,7 +141,7 @@
 
     return-object p1
 
-    .line 81
+    .line 83
     :cond_0
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -151,7 +151,7 @@
 
     return-object p0
 
-    .line 85
+    .line 87
     :cond_1
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -171,7 +171,7 @@
 
     if-ne v0, v3, :cond_2
 
-    .line 86
+    .line 88
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -182,7 +182,7 @@
 
     move-result-object p0
 
-    .line 88
+    .line 90
     :cond_2
     invoke-virtual {p1, v2}, Ljava/lang/String;->charAt(I)C
 
@@ -190,12 +190,12 @@
 
     if-ne v0, v3, :cond_3
 
-    .line 89
+    .line 91
     invoke-virtual {p1, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 91
+    .line 93
     :cond_3
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -223,7 +223,7 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 397
+    .line 399
     sget-object p1, Lcom/market/sdk/utils/Connection$NetworkError;->OK:Lcom/market/sdk/utils/Connection$NetworkError;
 
     return-object p1
@@ -231,7 +231,7 @@
     :cond_0
     const-string v0, "MarketConnection"
 
-    .line 399
+    .line 401
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -248,7 +248,7 @@
 
     invoke-static {v0, p1}, Lcom/market/sdk/utils/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 400
+    .line 402
     sget-object p1, Lcom/market/sdk/utils/Connection$NetworkError;->SERVER_ERROR:Lcom/market/sdk/utils/Connection$NetworkError;
 
     return-object p1
@@ -259,31 +259,31 @@
 
     const/4 v0, 0x1
 
-    .line 95
+    .line 97
     iput-boolean v0, p0, Lcom/market/sdk/utils/Connection;->mNeedBaseParameter:Z
 
     const/4 v1, 0x0
 
-    .line 96
+    .line 98
     iput-boolean v1, p0, Lcom/market/sdk/utils/Connection;->mUseGet:Z
 
-    .line 97
+    .line 99
     iput-boolean v0, p0, Lcom/market/sdk/utils/Connection;->mNeedHosted:Z
 
-    .line 98
+    .line 100
     iput-boolean v0, p0, Lcom/market/sdk/utils/Connection;->mNeedId:Z
 
-    .line 99
+    .line 101
     iput-boolean v0, p0, Lcom/market/sdk/utils/Connection;->mNeedSessionID:Z
 
-    .line 100
+    .line 102
     invoke-virtual {p0, p1}, Lcom/market/sdk/utils/Connection;->checkURL(Ljava/net/URL;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 101
+    .line 103
     iput-object p1, p0, Lcom/market/sdk/utils/Connection;->mUrl:Ljava/net/URL;
 
     :cond_0
@@ -293,15 +293,15 @@
 .method private innerRequest(Ljava/lang/String;Ljava/lang/String;ZZLcom/market/sdk/utils/Connection$ResetableOutputStream;)Lcom/market/sdk/utils/Connection$NetworkError;
     .locals 8
 
-    .line 273
+    .line 275
     new-instance p4, Ljava/util/ArrayList;
 
     invoke-direct {p4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 274
+    .line 276
     invoke-virtual {p4, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 277
+    .line 279
     invoke-virtual {p4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -320,14 +320,14 @@
 
     check-cast p4, Ljava/lang/String;
 
-    .line 278
+    .line 280
     sget-boolean v0, Lcom/market/sdk/utils/Utils;->DEBUG:Z
 
     if-eqz v0, :cond_1
 
     const-string v0, "MarketConnection"
 
-    .line 279
+    .line 281
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -344,7 +344,7 @@
 
     invoke-static {v0, v1}, Lcom/market/sdk/utils/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 285
+    .line 287
     :cond_1
     :try_start_0
     new-instance v0, Ljava/net/URL;
@@ -355,7 +355,7 @@
 
     const/4 p4, 0x0
 
-    .line 292
+    .line 294
     :try_start_1
     invoke-virtual {v0}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
 
@@ -368,12 +368,12 @@
 
     const/16 v2, 0x2710
 
-    .line 293
+    .line 295
     :try_start_2
     invoke-virtual {v1, v2}, Ljava/net/HttpURLConnection;->setConnectTimeout(I)V
 
-    .line 294
-    invoke-static {}, Lcom/market/sdk/utils/AppGlobal;->getContext()Landroid/content/Context;
+    .line 296
+    invoke-static {}, Lcom/market/sdk/XiaomiUpdateAgent;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
@@ -383,7 +383,7 @@
 
     if-eqz v3, :cond_2
 
-    .line 295
+    .line 297
     invoke-virtual {v1, v2}, Ljava/net/HttpURLConnection;->setReadTimeout(I)V
 
     goto :goto_1
@@ -391,7 +391,7 @@
     :cond_2
     const/16 v2, 0x7530
 
-    .line 297
+    .line 299
     invoke-virtual {v1, v2}, Ljava/net/HttpURLConnection;->setReadTimeout(I)V
 
     :goto_1
@@ -401,10 +401,10 @@
 
     const-string v3, "GET"
 
-    .line 300
+    .line 302
     invoke-virtual {v1, v3}, Ljava/net/HttpURLConnection;->setRequestMethod(Ljava/lang/String;)V
 
-    .line 301
+    .line 303
     invoke-virtual {v1, v2}, Ljava/net/HttpURLConnection;->setDoOutput(Z)V
 
     goto :goto_2
@@ -412,18 +412,18 @@
     :cond_3
     const-string v3, "POST"
 
-    .line 303
+    .line 305
     invoke-virtual {v1, v3}, Ljava/net/HttpURLConnection;->setRequestMethod(Ljava/lang/String;)V
 
     const/4 v3, 0x1
 
-    .line 304
+    .line 306
     invoke-virtual {v1, v3}, Ljava/net/HttpURLConnection;->setDoOutput(Z)V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_3
     .catchall {:try_start_2 .. :try_end_2} :catchall_3
 
-    .line 307
+    .line 309
     :goto_2
     :try_start_3
     invoke-virtual {p0, v1}, Lcom/market/sdk/utils/Connection;->onConnectionCreated(Ljava/net/HttpURLConnection;)Ljava/net/HttpURLConnection;
@@ -434,39 +434,39 @@
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_3
 
-    .line 311
+    .line 313
     :try_start_4
     invoke-virtual {v1}, Ljava/net/HttpURLConnection;->connect()V
 
     if-nez p3, :cond_5
 
-    .line 314
+    .line 316
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
 
     if-nez v3, :cond_5
 
-    .line 315
+    .line 317
     invoke-virtual {v1}, Ljava/net/HttpURLConnection;->getOutputStream()Ljava/io/OutputStream;
 
     move-result-object v3
 
-    .line 316
+    .line 318
     invoke-virtual {p2}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v4
 
     invoke-virtual {v3, v4}, Ljava/io/OutputStream;->write([B)V
 
-    .line 317
+    .line 319
     sget-boolean v4, Lcom/market/sdk/utils/Utils;->DEBUG:Z
 
     if-eqz v4, :cond_4
 
     const-string v4, "MarketConnection"
 
-    .line 318
+    .line 320
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -483,22 +483,22 @@
 
     invoke-static {v4, v5}, Lcom/market/sdk/utils/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 320
+    .line 322
     :cond_4
     invoke-virtual {v3}, Ljava/io/OutputStream;->close()V
 
-    .line 323
+    .line 325
     :cond_5
     invoke-virtual {v1}, Ljava/net/HttpURLConnection;->getResponseCode()I
 
     move-result v3
 
-    .line 324
+    .line 326
     invoke-direct {p0, v3}, Lcom/market/sdk/utils/Connection;->handleResponseCode(I)Lcom/market/sdk/utils/Connection$NetworkError;
 
     move-result-object v3
 
-    .line 325
+    .line 327
     sget-object v4, Lcom/market/sdk/utils/Connection$NetworkError;->OK:Lcom/market/sdk/utils/Connection$NetworkError;
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_3
@@ -508,7 +508,7 @@
 
     if-eqz p5, :cond_9
 
-    .line 329
+    .line 331
     :try_start_5
     new-instance v4, Ljava/io/BufferedInputStream;
 
@@ -525,11 +525,11 @@
 
     const/16 p4, 0x400
 
-    .line 330
+    .line 332
     :try_start_6
     new-array v5, p4, [B
 
-    .line 332
+    .line 334
     :goto_3
     invoke-virtual {v4, v5, v2, p4}, Ljava/io/BufferedInputStream;->read([BII)I
 
@@ -537,19 +537,19 @@
 
     if-lez v6, :cond_6
 
-    .line 333
+    .line 335
     invoke-virtual {p5, v5, v2, v6}, Lcom/market/sdk/utils/Connection$ResetableOutputStream;->write([BII)V
 
     goto :goto_3
 
-    .line 335
+    .line 337
     :cond_6
     invoke-virtual {p5}, Lcom/market/sdk/utils/Connection$ResetableOutputStream;->flush()V
     :try_end_6
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_0
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    .line 344
+    .line 346
     :try_start_7
     invoke-virtual {v4}, Ljava/io/BufferedInputStream;->close()V
     :try_end_7
@@ -583,7 +583,7 @@
     :try_start_8
     const-string v2, "MarketConnection"
 
-    .line 338
+    .line 340
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -610,14 +610,14 @@
 
     invoke-static {v2, p4}, Lcom/market/sdk/utils/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 340
+    .line 342
     invoke-virtual {p5}, Lcom/market/sdk/utils/Connection$ResetableOutputStream;->reset()V
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_1
 
     if-eqz v4, :cond_7
 
-    .line 344
+    .line 346
     :try_start_9
     invoke-virtual {v4}, Ljava/io/BufferedInputStream;->close()V
     :try_end_9
@@ -627,7 +627,7 @@
     :cond_7
     if-eqz v1, :cond_0
 
-    .line 355
+    .line 357
     :goto_5
     invoke-virtual {v1}, Ljava/net/HttpURLConnection;->disconnect()V
 
@@ -639,11 +639,11 @@
     :goto_6
     if-eqz v4, :cond_8
 
-    .line 344
+    .line 346
     :try_start_a
     invoke-virtual {v4}, Ljava/io/BufferedInputStream;->close()V
 
-    .line 346
+    .line 348
     :cond_8
     throw p4
     :try_end_a
@@ -654,7 +654,7 @@
     :goto_7
     if-eqz v1, :cond_a
 
-    .line 355
+    .line 357
     invoke-virtual {v1}, Ljava/net/HttpURLConnection;->disconnect()V
 
     :cond_a
@@ -663,7 +663,7 @@
     :catch_2
     move-exception p4
 
-    .line 309
+    .line 311
     :try_start_b
     iget-object p1, p4, Lcom/market/sdk/utils/Connection$ConnectionException;->mError:Lcom/market/sdk/utils/Connection$NetworkError;
     :try_end_b
@@ -672,7 +672,7 @@
 
     if-eqz v1, :cond_b
 
-    .line 355
+    .line 357
     invoke-virtual {v1}, Ljava/net/HttpURLConnection;->disconnect()V
 
     :cond_b
@@ -703,7 +703,7 @@
     :try_start_c
     const-string v2, "MarketConnection"
 
-    .line 352
+    .line 354
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -742,10 +742,10 @@
     :goto_9
     if-eqz v1, :cond_c
 
-    .line 355
+    .line 357
     invoke-virtual {v1}, Ljava/net/HttpURLConnection;->disconnect()V
 
-    .line 357
+    .line 359
     :cond_c
     throw p1
 
@@ -754,7 +754,7 @@
 
     const-string v0, "MarketConnection"
 
-    .line 287
+    .line 289
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -773,7 +773,7 @@
 
     goto/16 :goto_0
 
-    .line 360
+    .line 362
     :cond_d
     sget-object p1, Lcom/market/sdk/utils/Connection$NetworkError;->NETWORK_ERROR:Lcom/market/sdk/utils/Connection$NetworkError;
 
@@ -791,7 +791,7 @@
 
     return v0
 
-    .line 391
+    .line 393
     :cond_0
     invoke-virtual {p1}, Ljava/net/URL;->getProtocol()Ljava/lang/String;
 
@@ -799,7 +799,7 @@
 
     const-string v1, "http"
 
-    .line 392
+    .line 394
     invoke-static {p1, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -824,7 +824,7 @@
 .method public getParameter()Lcom/market/sdk/utils/Connection$Parameter;
     .locals 1
 
-    .line 114
+    .line 116
     iget-object v0, p0, Lcom/market/sdk/utils/Connection;->mParameter:Lcom/market/sdk/utils/Connection$Parameter;
 
     return-object v0
@@ -833,7 +833,7 @@
 .method public getResponse()Lorg/json/JSONObject;
     .locals 1
 
-    .line 106
+    .line 108
     iget-object v0, p0, Lcom/market/sdk/utils/Connection;->mResponse:Lorg/json/JSONObject;
 
     return-object v0
@@ -842,7 +842,7 @@
 .method public getStringResponse()Ljava/lang/String;
     .locals 1
 
-    .line 110
+    .line 112
     iget-object v0, p0, Lcom/market/sdk/utils/Connection;->mString:Ljava/lang/String;
 
     return-object v0
@@ -884,19 +884,19 @@
 .method protected request(Lcom/market/sdk/utils/Connection$ResetableOutputStream;)Lcom/market/sdk/utils/Connection$NetworkError;
     .locals 10
 
-    .line 203
+    .line 205
     iget-object v0, p0, Lcom/market/sdk/utils/Connection;->mUrl:Ljava/net/URL;
 
     if-nez v0, :cond_0
 
-    .line 205
+    .line 207
     sget-object p1, Lcom/market/sdk/utils/Connection$NetworkError;->URL_ERROR:Lcom/market/sdk/utils/Connection$NetworkError;
 
     return-object p1
 
-    .line 208
+    .line 210
     :cond_0
-    invoke-static {}, Lcom/market/sdk/utils/AppGlobal;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/market/sdk/XiaomiUpdateAgent;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -906,29 +906,29 @@
 
     if-nez v0, :cond_1
 
-    .line 210
+    .line 212
     sget-object p1, Lcom/market/sdk/utils/Connection$NetworkError;->NETWORK_ERROR:Lcom/market/sdk/utils/Connection$NetworkError;
 
     return-object p1
 
-    .line 213
+    .line 215
     :cond_1
     iget-object v0, p0, Lcom/market/sdk/utils/Connection;->mParameter:Lcom/market/sdk/utils/Connection$Parameter;
 
     if-nez v0, :cond_2
 
-    .line 215
+    .line 217
     new-instance v0, Lcom/market/sdk/utils/Connection$Parameter;
 
     invoke-direct {v0, p0}, Lcom/market/sdk/utils/Connection$Parameter;-><init>(Lcom/market/sdk/utils/Connection;)V
 
     iput-object v0, p0, Lcom/market/sdk/utils/Connection;->mParameter:Lcom/market/sdk/utils/Connection$Parameter;
 
-    .line 219
+    .line 221
     :cond_2
     iget-object v0, p0, Lcom/market/sdk/utils/Connection;->mParameter:Lcom/market/sdk/utils/Connection$Parameter;
 
-    .line 221
+    .line 223
     :try_start_0
     invoke-virtual {p0, v0}, Lcom/market/sdk/utils/Connection;->onQueryCreated(Lcom/market/sdk/utils/Connection$Parameter;)Lcom/market/sdk/utils/Connection$Parameter;
 
@@ -936,47 +936,47 @@
     :try_end_0
     .catch Lcom/market/sdk/utils/Connection$ConnectionException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 227
+    .line 229
     iget-object v1, p0, Lcom/market/sdk/utils/Connection;->mUrl:Ljava/net/URL;
 
     invoke-virtual {v1}, Ljava/net/URL;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 228
+    .line 230
     iget-boolean v2, p0, Lcom/market/sdk/utils/Connection;->mUseGet:Z
 
     if-eqz v2, :cond_4
 
-    .line 230
+    .line 232
     invoke-virtual {v0}, Lcom/market/sdk/utils/Connection$Parameter;->isEmpty()Z
 
     move-result v2
 
     if-nez v2, :cond_4
 
-    .line 231
+    .line 233
     iget-object v1, p0, Lcom/market/sdk/utils/Connection;->mUrl:Ljava/net/URL;
 
     invoke-virtual {v1}, Ljava/net/URL;->getQuery()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 232
+    .line 234
     iget-object v2, p0, Lcom/market/sdk/utils/Connection;->mUrl:Ljava/net/URL;
 
     invoke-virtual {v2}, Ljava/net/URL;->toString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 233
+    .line 235
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
-    .line 234
+    .line 236
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -999,7 +999,7 @@
 
     goto :goto_0
 
-    .line 236
+    .line 238
     :cond_3
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1021,7 +1021,7 @@
 
     move-result-object v1
 
-    .line 244
+    .line 246
     :cond_4
     :goto_0
     :try_start_1
@@ -1031,14 +1031,14 @@
     :try_end_1
     .catch Lcom/market/sdk/utils/Connection$ConnectionException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 249
+    .line 251
     sget-boolean v2, Lcom/market/sdk/utils/Utils;->DEBUG:Z
 
     if-eqz v2, :cond_5
 
     const-string v2, "MarketConnection"
 
-    .line 250
+    .line 252
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1058,12 +1058,12 @@
     :cond_5
     const-string v2, ""
 
-    .line 257
+    .line 259
     iget-boolean v3, p0, Lcom/market/sdk/utils/Connection;->mUseGet:Z
 
     if-nez v3, :cond_6
 
-    .line 258
+    .line 260
     invoke-virtual {v0}, Lcom/market/sdk/utils/Connection$Parameter;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -1075,13 +1075,13 @@
     :cond_6
     move-object v4, v2
 
-    .line 261
+    .line 263
     :goto_1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v8
 
-    .line 262
+    .line 264
     iget-boolean v5, p0, Lcom/market/sdk/utils/Connection;->mUseGet:Z
 
     const/4 v6, 0x0
@@ -1096,19 +1096,19 @@
 
     move-result-object p1
 
-    .line 263
+    .line 265
     sget-boolean v0, Lcom/market/sdk/utils/Utils;->DEBUG:Z
 
     if-eqz v0, :cond_7
 
-    .line 264
+    .line 266
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
     const-string v0, "MarketConnection"
 
-    .line 265
+    .line 267
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1139,7 +1139,7 @@
     :catch_0
     move-exception p1
 
-    .line 246
+    .line 248
     iget-object p1, p1, Lcom/market/sdk/utils/Connection$ConnectionException;->mError:Lcom/market/sdk/utils/Connection$NetworkError;
 
     return-object p1
@@ -1147,7 +1147,7 @@
     :catch_1
     move-exception p1
 
-    .line 223
+    .line 225
     iget-object p1, p1, Lcom/market/sdk/utils/Connection$ConnectionException;->mError:Lcom/market/sdk/utils/Connection$NetworkError;
 
     return-object p1
@@ -1163,7 +1163,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 185
+    .line 187
     :try_start_0
     new-instance v0, Lcom/market/sdk/utils/Connection$FileResetableOutputStream;
 
@@ -1171,23 +1171,23 @@
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 190
+    .line 192
     invoke-virtual {p0, v0}, Lcom/market/sdk/utils/Connection;->request(Lcom/market/sdk/utils/Connection$ResetableOutputStream;)Lcom/market/sdk/utils/Connection$NetworkError;
 
     move-result-object v1
 
-    .line 192
+    .line 194
     :try_start_1
     invoke-virtual {v0}, Lcom/market/sdk/utils/Connection$FileResetableOutputStream;->close()V
 
-    .line 193
+    .line 195
     sget-object v0, Lcom/market/sdk/utils/Connection$NetworkError;->OK:Lcom/market/sdk/utils/Connection$NetworkError;
 
     if-eq v1, v0, :cond_0
 
     const-string v0, "MarketConnection"
 
-    .line 194
+    .line 196
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1204,7 +1204,7 @@
 
     invoke-static {v0, v2}, Lcom/market/sdk/utils/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 195
+    .line 197
     invoke-virtual {p1}, Ljava/io/File;->delete()Z
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
@@ -1216,7 +1216,7 @@
     :catch_1
     move-exception p1
 
-    .line 187
+    .line 189
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1235,10 +1235,10 @@
 
     invoke-static {v1, v0}, Lcom/market/sdk/utils/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 188
+    .line 190
     throw p1
 
-    .line 181
+    .line 183
     :cond_1
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -1250,12 +1250,12 @@
 .method public requestJSON()Lcom/market/sdk/utils/Connection$NetworkError;
     .locals 5
 
-    .line 141
+    .line 143
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 142
+    .line 144
     new-instance v1, Lcom/market/sdk/utils/Connection$MemoryResetableOutputStream;
 
     invoke-direct {v1, p0, v0}, Lcom/market/sdk/utils/Connection$MemoryResetableOutputStream;-><init>(Lcom/market/sdk/utils/Connection;Ljava/io/ByteArrayOutputStream;)V
@@ -1264,13 +1264,13 @@
 
     move-result-object v1
 
-    .line 144
+    .line 146
     :try_start_0
     sget-object v2, Lcom/market/sdk/utils/Connection$NetworkError;->OK:Lcom/market/sdk/utils/Connection$NetworkError;
 
     if-ne v1, v2, :cond_0
 
-    .line 145
+    .line 147
     new-instance v2, Lorg/json/JSONObject;
 
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toString()Ljava/lang/String;
@@ -1286,7 +1286,7 @@
     :cond_0
     const-string v2, "MarketConnection"
 
-    .line 147
+    .line 149
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1306,7 +1306,7 @@
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 154
+    .line 156
     :goto_0
     :try_start_1
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->close()V
@@ -1327,7 +1327,7 @@
     :try_start_2
     const-string v2, "MarketConnection"
 
-    .line 150
+    .line 152
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1344,12 +1344,12 @@
 
     invoke-static {v2, v1}, Lcom/market/sdk/utils/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 151
+    .line 153
     sget-object v1, Lcom/market/sdk/utils/Connection$NetworkError;->RESULT_ERROR:Lcom/market/sdk/utils/Connection$NetworkError;
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 154
+    .line 156
     :try_start_3
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->close()V
     :try_end_3
@@ -1364,7 +1364,7 @@
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_3
 
-    .line 157
+    .line 159
     :catch_3
     throw v1
 .end method
@@ -1372,12 +1372,12 @@
 .method public requestString()Lcom/market/sdk/utils/Connection$NetworkError;
     .locals 5
 
-    .line 162
+    .line 164
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 163
+    .line 165
     new-instance v1, Lcom/market/sdk/utils/Connection$MemoryResetableOutputStream;
 
     invoke-direct {v1, p0, v0}, Lcom/market/sdk/utils/Connection$MemoryResetableOutputStream;-><init>(Lcom/market/sdk/utils/Connection;Ljava/io/ByteArrayOutputStream;)V
@@ -1386,12 +1386,12 @@
 
     move-result-object v1
 
-    .line 164
+    .line 166
     sget-object v2, Lcom/market/sdk/utils/Connection$NetworkError;->OK:Lcom/market/sdk/utils/Connection$NetworkError;
 
     if-ne v1, v2, :cond_0
 
-    .line 165
+    .line 167
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toString()Ljava/lang/String;
 
     move-result-object v2
@@ -1403,7 +1403,7 @@
     :cond_0
     const-string v2, "MarketConnection"
 
-    .line 167
+    .line 169
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1420,7 +1420,7 @@
 
     invoke-static {v2, v3}, Lcom/market/sdk/utils/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 170
+    .line 172
     :goto_0
     :try_start_0
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->close()V
@@ -1434,7 +1434,7 @@
 .method public setNeedBaseParameter(Z)V
     .locals 0
 
-    .line 122
+    .line 124
     iput-boolean p1, p0, Lcom/market/sdk/utils/Connection;->mNeedBaseParameter:Z
 
     return-void
@@ -1443,7 +1443,7 @@
 .method public setNeedHosted(Z)V
     .locals 0
 
-    .line 126
+    .line 128
     iput-boolean p1, p0, Lcom/market/sdk/utils/Connection;->mNeedHosted:Z
 
     return-void
@@ -1452,7 +1452,7 @@
 .method public setNeedId(Z)V
     .locals 0
 
-    .line 130
+    .line 132
     iput-boolean p1, p0, Lcom/market/sdk/utils/Connection;->mNeedId:Z
 
     return-void
@@ -1461,7 +1461,7 @@
 .method public setNeedSessionId(Z)V
     .locals 0
 
-    .line 134
+    .line 136
     iput-boolean p1, p0, Lcom/market/sdk/utils/Connection;->mNeedSessionID:Z
 
     return-void
@@ -1470,7 +1470,7 @@
 .method public setUseGet(Z)V
     .locals 0
 
-    .line 118
+    .line 120
     iput-boolean p1, p0, Lcom/market/sdk/utils/Connection;->mUseGet:Z
 
     return-void

@@ -95,7 +95,6 @@
     <item type="id" name="apps_list_view" />
     <item type="id" name="apps_sheet" />
     <item type="id" name="apps_view" />
-    <item type="id" name="apps_view_stub" />
     <item type="id" name="arrow" />
     <item type="id" name="arrow_right" />
     <item type="id" name="auto_fill_sliding_button" />
@@ -233,9 +232,7 @@
     <item type="id" name="edit_header" />
     <item type="id" name="edit_mode_checkbox" />
     <item type="id" name="edit_mode_group_container" />
-    <item type="id" name="edit_mode_menu_on_bottom_stub" />
     <item type="id" name="edit_mode_menu_on_top" />
-    <item type="id" name="edit_mode_menu_on_top_stub" />
     <item type="id" name="edit_query" />
     <item type="id" name="edit_text_bottom_line" />
     <item type="id" name="editing_entry_view" />
@@ -257,7 +254,6 @@
     <item type="id" name="first_item" />
     <item type="id" name="folder_animation_fake_icon" />
     <item type="id" name="folder_cling" />
-    <item type="id" name="folder_cling_stub" />
     <item type="id" name="folder_content" />
     <item type="id" name="folder_grid" />
     <item type="id" name="folder_header" />
@@ -778,7 +774,6 @@
     <item type="id" name="widgets_cell_list" />
     <item type="id" name="widgets_layout" />
     <item type="id" name="widgets_layout_actionBar" />
-    <item type="id" name="widgets_preview_layout_stub" />
     <item type="id" name="widgets_view" />
     <item type="id" name="work_footer_divider" />
     <item type="id" name="work_mode_toggle" />

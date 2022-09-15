@@ -5291,7 +5291,7 @@
 
     move-result-object p2
 
-    const-string v0, "uimode"
+    const-string/jumbo v0, "uimode"
 
     .line 2441
     invoke-virtual {p2, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -5326,8 +5326,6 @@
 
     :cond_1
     return v1
-
-    nop
 
     :pswitch_data_0
     .packed-switch -0x1

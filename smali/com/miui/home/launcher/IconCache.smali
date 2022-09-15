@@ -833,7 +833,7 @@
 
     const-string v0, "icon_folder.png"
 
-    const v1, 0x7f0802b8
+    const v1, 0x7f0802b5
 
     .line 297
     invoke-direct {p0, v0, v1}, Lcom/miui/home/launcher/IconCache;->getRawIcon(Ljava/lang/String;I)Landroid/graphics/drawable/Drawable;
@@ -848,7 +848,7 @@
 
     const-string v0, "icon_folder_light.png"
 
-    const v1, 0x7f0802b9
+    const v1, 0x7f0802b6
 
     .line 301
     invoke-direct {p0, v0, v1}, Lcom/miui/home/launcher/IconCache;->getRawIcon(Ljava/lang/String;I)Landroid/graphics/drawable/Drawable;
@@ -949,7 +949,7 @@
 
     const-string v0, "maml_download_light.png"
 
-    const v1, 0x7f0802be
+    const v1, 0x7f0802bb
 
     .line 313
     invoke-direct {p0, v0, v1}, Lcom/miui/home/launcher/IconCache;->getRawIcon(Ljava/lang/String;I)Landroid/graphics/drawable/Drawable;
@@ -971,7 +971,7 @@
 
     const-string v0, "pair_icon_bg_dark.xml"
 
-    const v1, 0x7f08063e
+    const v1, 0x7f08063b
 
     .line 309
     invoke-direct {p0, v0, v1}, Lcom/miui/home/launcher/IconCache;->getRawIcon(Ljava/lang/String;I)Landroid/graphics/drawable/Drawable;
@@ -986,7 +986,7 @@
 
     const-string v0, "pair_icon_bg_light.xml"
 
-    const v1, 0x7f08063f
+    const v1, 0x7f08063c
 
     .line 305
     invoke-direct {p0, v0, v1}, Lcom/miui/home/launcher/IconCache;->getRawIcon(Ljava/lang/String;I)Landroid/graphics/drawable/Drawable;

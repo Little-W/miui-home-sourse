@@ -18,7 +18,7 @@
 .method constructor <init>(Landroid/os/Looper;)V
     .locals 0
 
-    .line 405
+    .line 404
     invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -29,17 +29,17 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 1
 
-    .line 408
+    .line 407
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 417
+    .line 416
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
     return-void
 
-    .line 414
+    .line 413
     :pswitch_0
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -49,13 +49,13 @@
 
     return-void
 
-    .line 410
+    .line 409
     :pswitch_1
     invoke-static {}, Lmiuix/animation/Folme;->access$300()V
 
     const/4 p1, 0x1
 
-    .line 411
+    .line 410
     invoke-static {p1}, Lmiuix/animation/Folme;->access$000(Z)V
 
     return-void

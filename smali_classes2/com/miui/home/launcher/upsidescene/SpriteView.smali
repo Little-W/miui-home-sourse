@@ -94,7 +94,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f070672
+    const v0, 0x7f07066d
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -422,7 +422,7 @@
 
     move-result-object p0
 
-    const v2, 0x7f1101f6
+    const v2, 0x7f1101f5
 
     invoke-virtual {p0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -496,7 +496,7 @@
     goto :goto_0
 
     :cond_2
-    const p0, 0x7f0d0071
+    const p0, 0x7f0d0070
 
     .line 302
     invoke-virtual {p2}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->getLauncher()Lcom/miui/home/launcher/Launcher;

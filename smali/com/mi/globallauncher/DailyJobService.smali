@@ -31,7 +31,7 @@
 
     const-string p0, "AppCategoryInfoUpdate"
 
-    const-string v0, "update service canceled"
+    const-string/jumbo v0, "update service canceled"
 
     .line 51
     invoke-static {p0, v0}, Lcom/mi/globallauncher/util/CommercialLogger;->d(Ljava/lang/String;Ljava/lang/String;)V

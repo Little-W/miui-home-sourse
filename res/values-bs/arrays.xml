@@ -49,13 +49,6 @@
         <item>Zadano</item>
         <item>Klasično</item>
     </string-array>
-    <string-array name="monochrome_color_entries">
-        <item>Zadano</item>
-        <item>Plava</item>
-        <item>Zelena</item>
-        <item>Ljubičasta</item>
-        <item>Smeđa</item>
-    </string-array>
     <string-array name="transformation_entries">
         <item>Bez preklapanja</item>
         <item>Nestajanje</item>

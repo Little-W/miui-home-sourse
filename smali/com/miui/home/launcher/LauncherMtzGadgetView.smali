@@ -65,7 +65,7 @@
     .line 30
     invoke-super {p0}, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;->onFinishInflate()V
 
-    const v0, 0x7f0a03dd
+    const v0, 0x7f0a03d9
 
     .line 31
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/LauncherMtzGadgetView;->findViewById(I)Landroid/view/View;
@@ -76,7 +76,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/LauncherMtzGadgetView;->mWidgetContainer:Lcom/miui/home/launcher/LauncherWidgetContainerView;
 
-    const v0, 0x7f0a01a7
+    const v0, 0x7f0a01a3
 
     .line 32
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/LauncherMtzGadgetView;->findViewById(I)Landroid/view/View;

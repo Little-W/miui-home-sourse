@@ -127,7 +127,7 @@
 
     int-to-float v6, v0
 
-    const v7, 0x3f19999a    # 0.6f
+    const v7, 0x3e4ccccd    # 0.2f
 
     mul-float/2addr v6, v7
 

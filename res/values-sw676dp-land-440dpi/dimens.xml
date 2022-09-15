@@ -13,10 +13,8 @@
     <dimen name="folder_grid_frame_margin_top">-10.0dip</dimen>
     <dimen name="hotseats_height_land">68.0dip</dimen>
     <dimen name="hotseats_margin_top">-7.0dip</dimen>
-    <dimen name="hotseats_padding_top">0.0dip</dimen>
     <item type="dimen" name="navigation_bar_type_container_ratio">0.95</item>
     <item type="dimen" name="recents_task_view_padding_ratio">0.107</item>
-    <dimen name="selected_view_corners_radius">15.0dip</dimen>
     <dimen name="set_home_screen_gap_middle">32.0dip</dimen>
     <dimen name="slide_bar_margin_top">5.0dip</dimen>
     <dimen name="workspace_cell_padding_side_rotatable">30.0dip</dimen>

@@ -151,7 +151,7 @@
 
     move-result-object p3
 
-    const p4, 0x7f0802a9
+    const p4, 0x7f0802a6
 
     invoke-virtual {p3, p4}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -164,7 +164,7 @@
 
     move-result-object p3
 
-    const p4, 0x7f0802ad
+    const p4, 0x7f0802aa
 
     invoke-virtual {p3, p4}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -177,7 +177,7 @@
 
     move-result-object p3
 
-    const p4, 0x7f0705a6
+    const p4, 0x7f0705a1
 
     invoke-virtual {p3, p4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -190,7 +190,7 @@
 
     move-result-object p1
 
-    const p3, 0x7f0705a5
+    const p3, 0x7f0705a0
 
     invoke-virtual {p1, p3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -971,7 +971,7 @@
     .line 328
     iget-object v0, p0, Lcom/miui/home/recents/views/RecentMenuView;->mScreeningToast:Landroid/widget/Toast;
 
-    const v3, 0x7f1103db
+    const v3, 0x7f1103d6
 
     if-eqz v0, :cond_0
 
@@ -1163,7 +1163,7 @@
     .line 234
     iget-object v1, v0, Lcom/miui/home/recents/views/RecentMenuView;->mTask:Lcom/android/systemui/shared/recents/model/Task;
 
-    const v2, 0x7f0a0212
+    const v2, 0x7f0a020e
 
     const/4 v3, 0x0
 
@@ -1207,15 +1207,15 @@
 
     move-result v5
 
-    const v6, 0x7f0a020c
+    const v6, 0x7f0a0208
 
     if-eq v5, v6, :cond_6
 
-    const v6, 0x7f0a020e
+    const v6, 0x7f0a020a
 
     if-eq v5, v6, :cond_5
 
-    const v6, 0x7f0a0210
+    const v6, 0x7f0a020c
 
     if-eq v5, v6, :cond_2
 
@@ -1336,7 +1336,7 @@
 
     move-result-object v10
 
-    const v11, 0x7f0705ae
+    const v11, 0x7f0705a9
 
     invoke-virtual {v10, v11}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1513,7 +1513,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0802a9
+    const v2, 0x7f0802a6
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -1526,7 +1526,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0802ad
+    const v2, 0x7f0802aa
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -1560,7 +1560,7 @@
     :cond_1
     iget-object v1, p0, Lcom/miui/home/recents/views/RecentMenuView;->mMenuItemInfo:Landroid/widget/ImageView;
 
-    const v2, 0x7f0802ab
+    const v2, 0x7f0802a8
 
     invoke-virtual {v0, v2}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -1571,7 +1571,7 @@
     .line 592
     iget-object v1, p0, Lcom/miui/home/recents/views/RecentMenuView;->mMenuItemMultiWindow:Landroid/widget/ImageView;
 
-    const v2, 0x7f0802aa
+    const v2, 0x7f0802a7
 
     invoke-virtual {v0, v2}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -1582,7 +1582,7 @@
     .line 593
     iget-object v1, p0, Lcom/miui/home/recents/views/RecentMenuView;->mMenuItemLock:Landroid/widget/ImageView;
 
-    const v2, 0x7f080646
+    const v2, 0x7f080643
 
     invoke-virtual {v0, v2}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -1618,7 +1618,7 @@
     .line 597
     iget-object v1, p0, Lcom/miui/home/recents/views/RecentMenuView;->mMenuItemSmallWindow:Landroid/widget/ImageView;
 
-    const v3, 0x7f0802ac
+    const v3, 0x7f0802a9
 
     invoke-virtual {v0, v3}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -1694,7 +1694,7 @@
     .line 151
     invoke-super {p0}, Landroid/widget/FrameLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a020d
+    const v0, 0x7f0a0209
 
     .line 152
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/RecentMenuView;->findViewById(I)Landroid/view/View;
@@ -1705,7 +1705,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/views/RecentMenuView;->mMenuItemInfoContainer:Landroid/widget/FrameLayout;
 
-    const v0, 0x7f0a020f
+    const v0, 0x7f0a020b
 
     .line 153
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/RecentMenuView;->findViewById(I)Landroid/view/View;
@@ -1716,7 +1716,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/views/RecentMenuView;->mMenuItemLockContainer:Landroid/widget/FrameLayout;
 
-    const v0, 0x7f0a0211
+    const v0, 0x7f0a020d
 
     .line 154
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/RecentMenuView;->findViewById(I)Landroid/view/View;
@@ -1727,7 +1727,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/views/RecentMenuView;->mMenuItemMultiWindowContainer:Landroid/widget/FrameLayout;
 
-    const v0, 0x7f0a0213
+    const v0, 0x7f0a020f
 
     .line 155
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/RecentMenuView;->findViewById(I)Landroid/view/View;
@@ -1738,7 +1738,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/views/RecentMenuView;->mMenuItemSmallWindowContainer:Landroid/widget/FrameLayout;
 
-    const v0, 0x7f0a020c
+    const v0, 0x7f0a0208
 
     .line 156
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/RecentMenuView;->findViewById(I)Landroid/view/View;
@@ -1749,7 +1749,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/views/RecentMenuView;->mMenuItemInfo:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a020e
+    const v0, 0x7f0a020a
 
     .line 157
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/RecentMenuView;->findViewById(I)Landroid/view/View;
@@ -1760,7 +1760,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/views/RecentMenuView;->mMenuItemLock:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a0210
+    const v0, 0x7f0a020c
 
     .line 158
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/RecentMenuView;->findViewById(I)Landroid/view/View;
@@ -1771,7 +1771,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/views/RecentMenuView;->mMenuItemMultiWindow:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a0212
+    const v0, 0x7f0a020e
 
     .line 159
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/RecentMenuView;->findViewById(I)Landroid/view/View;
@@ -1785,7 +1785,7 @@
     .line 160
     iget-object v0, p0, Lcom/miui/home/recents/views/RecentMenuView;->mMenuItemInfo:Landroid/widget/ImageView;
 
-    const v1, 0x7f0802ab
+    const v1, 0x7f0802a8
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -1796,7 +1796,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f1103cf
+    const v2, 0x7f1103ca
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1807,14 +1807,14 @@
     .line 162
     iget-object v0, p0, Lcom/miui/home/recents/views/RecentMenuView;->mMenuItemMultiWindow:Landroid/widget/ImageView;
 
-    const v1, 0x7f0802aa
+    const v1, 0x7f0802a7
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 163
     iget-object v0, p0, Lcom/miui/home/recents/views/RecentMenuView;->mMenuItemSmallWindow:Landroid/widget/ImageView;
 
-    const v1, 0x7f0802ac
+    const v1, 0x7f0802a9
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -2241,7 +2241,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f1103d2
+    const v4, 0x7f1103cd
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -2255,7 +2255,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f1103d0
+    const v4, 0x7f1103cb
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -2576,7 +2576,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0705a6
+    const v2, 0x7f0705a1
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -2587,37 +2587,22 @@
     .line 608
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v1
-
-    const v2, 0x7f0705a5
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v1
-
-    iput v1, p0, Lcom/miui/home/recents/views/RecentMenuView;->mHorizontalMargin:I
-
-    .line 609
-    iget-object v1, p0, Lcom/miui/home/recents/views/RecentMenuView;->mMenuItemMultiWindow:Landroid/widget/ImageView;
-
-    const v2, 0x7f0802aa
-
-    invoke-virtual {v0, v2}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    .line 610
-    iget-object v1, p0, Lcom/miui/home/recents/views/RecentMenuView;->mMenuItemMultiWindow:Landroid/widget/ImageView;
-
-    const v2, 0x7f080646
-
-    invoke-virtual {v0, v2}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setBackground(Landroid/graphics/drawable/Drawable;)V
+    const v1, 0x7f0705a0
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v0
+
+    iput v0, p0, Lcom/miui/home/recents/views/RecentMenuView;->mHorizontalMargin:I
+
+    .line 609
+    iget-object v0, p0, Lcom/miui/home/recents/views/RecentMenuView;->mMenuItemMultiWindow:Landroid/widget/ImageView;
+
+    const v1, 0x7f0802a7
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
     return-void
 .end method

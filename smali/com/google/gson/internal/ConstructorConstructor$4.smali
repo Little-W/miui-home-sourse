@@ -33,7 +33,7 @@
 .method constructor <init>(Lcom/google/gson/internal/ConstructorConstructor;)V
     .locals 0
 
-    .line 136
+    .line 138
     iput-object p1, p0, Lcom/google/gson/internal/ConstructorConstructor$4;->this$0:Lcom/google/gson/internal/ConstructorConstructor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,7 +51,7 @@
         }
     .end annotation
 
-    .line 138
+    .line 140
     new-instance v0, Ljava/util/TreeSet;
 
     invoke-direct {v0}, Ljava/util/TreeSet;-><init>()V
