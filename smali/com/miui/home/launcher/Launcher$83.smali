@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/Launcher;->notifyFsGestureHomeStatus(ZLjava/lang/String;)V
+    value = Lcom/miui/home/launcher/Launcher;->changeAlphaScale(FFIIIIZ)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,21 +20,33 @@
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/launcher/Launcher;
 
-.field final synthetic val$enableBackGesture:Z
+.field final synthetic val$alpha:F
 
-.field final synthetic val$type:Ljava/lang/String;
+.field final synthetic val$iconPivotX:I
+
+.field final synthetic val$iconPivotY:I
+
+.field final synthetic val$scale:F
+
+.field final synthetic val$visible:Z
 
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/Launcher;ZLjava/lang/String;)V
+.method constructor <init>(Lcom/miui/home/launcher/Launcher;FFIIZ)V
     .locals 0
 
-    .line 8950
+    .line 8642
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$83;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    iput-boolean p2, p0, Lcom/miui/home/launcher/Launcher$83;->val$enableBackGesture:Z
+    iput p2, p0, Lcom/miui/home/launcher/Launcher$83;->val$alpha:F
 
-    iput-object p3, p0, Lcom/miui/home/launcher/Launcher$83;->val$type:Ljava/lang/String;
+    iput p3, p0, Lcom/miui/home/launcher/Launcher$83;->val$scale:F
+
+    iput p4, p0, Lcom/miui/home/launcher/Launcher$83;->val$iconPivotX:I
+
+    iput p5, p0, Lcom/miui/home/launcher/Launcher$83;->val$iconPivotY:I
+
+    iput-boolean p6, p0, Lcom/miui/home/launcher/Launcher$83;->val$visible:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,24 +56,29 @@
 
 # virtual methods
 .method public run()V
-    .locals 3
+    .locals 8
 
-    .line 8953
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$83;->this$0:Lcom/miui/home/launcher/Launcher;
+    const-string v0, "Launcher"
 
-    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$9700(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/Application;
+    const-string v1, "change shortcutMenuLayer alpha and scale by FsCallback"
 
-    move-result-object v0
+    .line 8644
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->getRecentsImpl()Lcom/miui/home/recents/BaseRecentsImpl;
+    .line 8645
+    iget-object v2, p0, Lcom/miui/home/launcher/Launcher$83;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    move-result-object v0
+    iget v3, p0, Lcom/miui/home/launcher/Launcher$83;->val$alpha:F
 
-    iget-boolean v1, p0, Lcom/miui/home/launcher/Launcher$83;->val$enableBackGesture:Z
+    iget v4, p0, Lcom/miui/home/launcher/Launcher$83;->val$scale:F
 
-    iget-object v2, p0, Lcom/miui/home/launcher/Launcher$83;->val$type:Ljava/lang/String;
+    iget v5, p0, Lcom/miui/home/launcher/Launcher$83;->val$iconPivotX:I
 
-    invoke-virtual {v0, v1, v2}, Lcom/miui/home/recents/BaseRecentsImpl;->updateFsgWindowVisibilityState(ZLjava/lang/String;)V
+    iget v6, p0, Lcom/miui/home/launcher/Launcher$83;->val$iconPivotY:I
+
+    iget-boolean v7, p0, Lcom/miui/home/launcher/Launcher$83;->val$visible:Z
+
+    invoke-virtual/range {v2 .. v7}, Lcom/miui/home/launcher/Launcher;->changeShortcutMenuLayerAlphaScale(FFIIZ)V
 
     return-void
 .end method

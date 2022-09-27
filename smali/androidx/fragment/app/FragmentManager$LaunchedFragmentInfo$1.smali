@@ -30,7 +30,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 3643
+    .line 3621
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +41,7 @@
 .method public createFromParcel(Landroid/os/Parcel;)Landroidx/fragment/app/FragmentManager$LaunchedFragmentInfo;
     .locals 1
 
-    .line 3646
+    .line 3624
     new-instance v0, Landroidx/fragment/app/FragmentManager$LaunchedFragmentInfo;
 
     invoke-direct {v0, p1}, Landroidx/fragment/app/FragmentManager$LaunchedFragmentInfo;-><init>(Landroid/os/Parcel;)V
@@ -52,7 +52,7 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
-    .line 3643
+    .line 3621
     invoke-virtual {p0, p1}, Landroidx/fragment/app/FragmentManager$LaunchedFragmentInfo$1;->createFromParcel(Landroid/os/Parcel;)Landroidx/fragment/app/FragmentManager$LaunchedFragmentInfo;
 
     move-result-object p1
@@ -63,7 +63,7 @@
 .method public newArray(I)[Landroidx/fragment/app/FragmentManager$LaunchedFragmentInfo;
     .locals 0
 
-    .line 3651
+    .line 3629
     new-array p1, p1, [Landroidx/fragment/app/FragmentManager$LaunchedFragmentInfo;
 
     return-object p1
@@ -72,7 +72,7 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 3643
+    .line 3621
     invoke-virtual {p0, p1}, Landroidx/fragment/app/FragmentManager$LaunchedFragmentInfo$1;->newArray(I)[Landroidx/fragment/app/FragmentManager$LaunchedFragmentInfo;
 
     move-result-object p1

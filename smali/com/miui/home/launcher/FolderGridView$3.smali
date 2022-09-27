@@ -24,7 +24,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/FolderGridView;Lcom/miui/home/launcher/DragObject;)V
     .locals 0
 
-    .line 324
+    .line 329
     iput-object p1, p0, Lcom/miui/home/launcher/FolderGridView$3;->this$0:Lcom/miui/home/launcher/FolderGridView;
 
     iput-object p2, p0, Lcom/miui/home/launcher/FolderGridView$3;->val$dragObject:Lcom/miui/home/launcher/DragObject;
@@ -33,7 +33,7 @@
 
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/FolderGridView$BackupDataForDragging;-><init>(Lcom/miui/home/launcher/FolderGridView$1;)V
 
-    .line 325
+    .line 330
     iget-object p1, p0, Lcom/miui/home/launcher/FolderGridView$3;->val$dragObject:Lcom/miui/home/launcher/DragObject;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
@@ -44,7 +44,7 @@
 
     iput p1, p0, Lcom/miui/home/launcher/FolderGridView$3;->cellX:I
 
-    .line 326
+    .line 331
     iget-object p1, p0, Lcom/miui/home/launcher/FolderGridView$3;->val$dragObject:Lcom/miui/home/launcher/DragObject;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
@@ -55,7 +55,7 @@
 
     iput p1, p0, Lcom/miui/home/launcher/FolderGridView$3;->cellY:I
 
-    .line 327
+    .line 332
     iget-object p1, p0, Lcom/miui/home/launcher/FolderGridView$3;->val$dragObject:Lcom/miui/home/launcher/DragObject;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
@@ -66,7 +66,7 @@
 
     iput-wide p1, p0, Lcom/miui/home/launcher/FolderGridView$3;->container:J
 
-    .line 328
+    .line 333
     iget-object p1, p0, Lcom/miui/home/launcher/FolderGridView$3;->val$dragObject:Lcom/miui/home/launcher/DragObject;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
@@ -81,7 +81,7 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/FolderGridView$3;->mBuddyIconView:Landroid/view/View;
 
-    .line 329
+    .line 334
     iget-object p1, p0, Lcom/miui/home/launcher/FolderGridView$3;->val$dragObject:Lcom/miui/home/launcher/DragObject;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;

@@ -39,7 +39,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/FolderIcon;ZI)V
     .locals 0
 
-    .line 314
+    .line 286
     iput-object p1, p0, Lcom/miui/home/launcher/FolderIcon$5;->this$0:Lcom/miui/home/launcher/FolderIcon;
 
     iput-boolean p2, p0, Lcom/miui/home/launcher/FolderIcon$5;->val$isToggle:Z
@@ -56,7 +56,7 @@
 .method public apply(Lcom/miui/home/launcher/ShortcutInfo;)Landroid/graphics/drawable/Drawable;
     .locals 5
 
-    .line 317
+    .line 289
     iget-object v0, p0, Lcom/miui/home/launcher/FolderIcon$5;->this$0:Lcom/miui/home/launcher/FolderIcon;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/FolderIcon;->getContext()Landroid/content/Context;
@@ -69,7 +69,7 @@
 
     move-result-object v1
 
-    .line 318
+    .line 290
     iget-boolean v2, p0, Lcom/miui/home/launcher/FolderIcon$5;->val$isToggle:Z
 
     const/4 v3, 0x0
@@ -95,7 +95,7 @@
 
     move-result-object v2
 
-    .line 317
+    .line 289
     :goto_0
     invoke-virtual {p1, v0, v1, v2}, Lcom/miui/home/launcher/ShortcutInfo;->getIconDrawable(Landroid/content/Context;Lcom/miui/home/launcher/IconCache;Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
@@ -105,7 +105,7 @@
 
     return-object v3
 
-    .line 322
+    .line 294
     :cond_1
     invoke-virtual {p1}, Lcom/miui/home/launcher/ShortcutInfo;->getColorFilter()Landroid/graphics/ColorFilter;
 
@@ -113,7 +113,7 @@
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 323
+    .line 295
     iget-object p1, p0, Lcom/miui/home/launcher/FolderIcon$5;->this$0:Lcom/miui/home/launcher/FolderIcon;
 
     invoke-static {p1}, Lcom/miui/home/launcher/FolderIcon;->access$500(Lcom/miui/home/launcher/FolderIcon;)I
@@ -130,7 +130,7 @@
 
     if-nez p1, :cond_3
 
-    .line 324
+    .line 296
     :cond_2
     iget-object p1, p0, Lcom/miui/home/launcher/FolderIcon$5;->this$0:Lcom/miui/home/launcher/FolderIcon;
 
@@ -144,7 +144,7 @@
 
     invoke-static {p1, v1}, Lcom/miui/home/launcher/FolderIcon;->access$800(Lcom/miui/home/launcher/FolderIcon;Landroid/content/res/Resources;)V
 
-    .line 326
+    .line 298
     :cond_3
     iget-object p1, p0, Lcom/miui/home/launcher/FolderIcon$5;->this$0:Lcom/miui/home/launcher/FolderIcon;
 
@@ -154,12 +154,12 @@
 
     iget-object v1, p0, Lcom/miui/home/launcher/FolderIcon$5;->this$0:Lcom/miui/home/launcher/FolderIcon;
 
-    .line 327
+    .line 299
     invoke-static {v1}, Lcom/miui/home/launcher/FolderIcon;->access$600(Lcom/miui/home/launcher/FolderIcon;)I
 
     move-result v1
 
-    .line 326
+    .line 298
     invoke-static {p1, v1, v0}, Lcom/miui/home/launcher/common/Utilities;->drawable2Bitmap(IILandroid/graphics/drawable/Drawable;)Landroid/graphics/Bitmap;
 
     move-result-object p1
@@ -168,7 +168,7 @@
 
     return-object v3
 
-    .line 331
+    .line 303
     :cond_4
     new-instance v0, Landroid/graphics/drawable/BitmapDrawable;
 
@@ -186,7 +186,7 @@
 .method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 314
+    .line 286
     check-cast p1, Lcom/miui/home/launcher/ShortcutInfo;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/FolderIcon$5;->apply(Lcom/miui/home/launcher/ShortcutInfo;)Landroid/graphics/drawable/Drawable;

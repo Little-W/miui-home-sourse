@@ -40,7 +40,7 @@
 .method static constructor <clinit>()V
     .locals 7
 
-    .line 121
+    .line 125
     new-instance v0, Lcom/google/android/filament/Engine$Backend;
 
     const-string v1, "DEFAULT"
@@ -51,7 +51,7 @@
 
     sput-object v0, Lcom/google/android/filament/Engine$Backend;->DEFAULT:Lcom/google/android/filament/Engine$Backend;
 
-    .line 125
+    .line 129
     new-instance v0, Lcom/google/android/filament/Engine$Backend;
 
     const-string v1, "OPENGL"
@@ -62,7 +62,7 @@
 
     sput-object v0, Lcom/google/android/filament/Engine$Backend;->OPENGL:Lcom/google/android/filament/Engine$Backend;
 
-    .line 129
+    .line 133
     new-instance v0, Lcom/google/android/filament/Engine$Backend;
 
     const-string v1, "VULKAN"
@@ -73,7 +73,7 @@
 
     sput-object v0, Lcom/google/android/filament/Engine$Backend;->VULKAN:Lcom/google/android/filament/Engine$Backend;
 
-    .line 133
+    .line 137
     new-instance v0, Lcom/google/android/filament/Engine$Backend;
 
     const-string v1, "METAL"
@@ -84,7 +84,7 @@
 
     sput-object v0, Lcom/google/android/filament/Engine$Backend;->METAL:Lcom/google/android/filament/Engine$Backend;
 
-    .line 137
+    .line 141
     new-instance v0, Lcom/google/android/filament/Engine$Backend;
 
     const-string v1, "NOOP"
@@ -97,7 +97,7 @@
 
     const/4 v0, 0x5
 
-    .line 117
+    .line 121
     new-array v0, v0, [Lcom/google/android/filament/Engine$Backend;
 
     sget-object v1, Lcom/google/android/filament/Engine$Backend;->DEFAULT:Lcom/google/android/filament/Engine$Backend;
@@ -133,7 +133,7 @@
         }
     .end annotation
 
-    .line 117
+    .line 121
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -142,7 +142,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/android/filament/Engine$Backend;
     .locals 1
 
-    .line 117
+    .line 121
     const-class v0, Lcom/google/android/filament/Engine$Backend;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -157,7 +157,7 @@
 .method public static values()[Lcom/google/android/filament/Engine$Backend;
     .locals 1
 
-    .line 117
+    .line 121
     sget-object v0, Lcom/google/android/filament/Engine$Backend;->$VALUES:[Lcom/google/android/filament/Engine$Backend;
 
     invoke-virtual {v0}, [Lcom/google/android/filament/Engine$Backend;->clone()Ljava/lang/Object;

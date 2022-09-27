@@ -40,14 +40,18 @@
 .end method
 
 .method public getSettingsValue()Ljava/lang/String;
-    .locals 1
+    .locals 3
 
     .line 15
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/miui/home/settings/LauncherGestureController;->getSlideUpGesture(Landroid/content/Context;)Ljava/lang/String;
+    const-string v1, "launcher_slideup_gesture"
+
+    const-string v2, "content_center"
+
+    invoke-static {v0, v1, v2}, Lcom/miui/home/settings/LauncherGestureController;->getSystemString(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -77,7 +81,7 @@
 .method public putSettingsValue(Ljava/lang/String;)V
     .locals 2
 
-    .line 20
+    .line 21
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0

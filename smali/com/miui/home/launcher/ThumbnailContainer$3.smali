@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/ThumbnailContainer;)V
     .locals 0
 
-    .line 289
+    .line 275
     iput-object p1, p0, Lcom/miui/home/launcher/ThumbnailContainer$3;->this$0:Lcom/miui/home/launcher/ThumbnailContainer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 2
 
-    .line 292
+    .line 278
     iget-object v0, p0, Lcom/miui/home/launcher/ThumbnailContainer$3;->this$0:Lcom/miui/home/launcher/ThumbnailContainer;
 
     invoke-static {v0}, Lcom/miui/home/launcher/ThumbnailContainer;->access$000(Lcom/miui/home/launcher/ThumbnailContainer;)Lcom/miui/home/launcher/Launcher;
@@ -49,14 +49,14 @@
 
     move-result-object v0
 
-    .line 293
+    .line 279
     invoke-virtual {v0}, Lcom/miui/home/launcher/Workspace;->isScrolling()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 294
+    .line 280
     iget-object v1, p0, Lcom/miui/home/launcher/ThumbnailContainer$3;->this$0:Lcom/miui/home/launcher/ThumbnailContainer;
 
     invoke-static {v1}, Lcom/miui/home/launcher/ThumbnailContainer;->access$100(Lcom/miui/home/launcher/ThumbnailContainer;)Lcom/miui/home/launcher/CellScreen;

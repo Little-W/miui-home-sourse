@@ -26,6 +26,8 @@
 # static fields
 .field private static final DOUBLE_TAP_TIMEOUT:I
 
+.field private static final LONGPRESS_TIMEOUT:I
+
 .field private static final TAP_TIMEOUT:I
 
 
@@ -78,13 +80,20 @@
     .locals 1
 
     .line 62
+    invoke-static {}, Landroid/view/ViewConfiguration;->getLongPressTimeout()I
+
+    move-result v0
+
+    sput v0, Landroidx/core/view/GestureDetectorCompat$GestureDetectorCompatImplBase;->LONGPRESS_TIMEOUT:I
+
+    .line 63
     invoke-static {}, Landroid/view/ViewConfiguration;->getTapTimeout()I
 
     move-result v0
 
     sput v0, Landroidx/core/view/GestureDetectorCompat$GestureDetectorCompatImplBase;->TAP_TIMEOUT:I
 
-    .line 63
+    .line 64
     invoke-static {}, Landroid/view/ViewConfiguration;->getDoubleTapTimeout()I
 
     move-result v0
@@ -1176,16 +1185,12 @@
 
     add-long/2addr v5, v7
 
-    .line 321
-    invoke-static {}, Landroid/view/ViewConfiguration;->getLongPressTimeout()I
-
-    move-result v3
+    sget v3, Landroidx/core/view/GestureDetectorCompat$GestureDetectorCompatImplBase;->LONGPRESS_TIMEOUT:I
 
     int-to-long v7, v3
 
     add-long/2addr v5, v7
 
-    .line 320
     invoke-virtual {v1, v4, v5, v6}, Landroid/os/Handler;->sendEmptyMessageAtTime(IJ)Z
 
     .line 323

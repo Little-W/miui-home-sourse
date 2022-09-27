@@ -6,6 +6,8 @@
 # static fields
 .field public static final CONFIG_DEFAULT:J = 0x0L
 
+.field public static final CONFIG_ENABLE_XCB:J = 0x4L
+
 .field public static final CONFIG_READABLE:J = 0x2L
 
 .field public static final CONFIG_TRANSPARENT:J = 0x1L
@@ -21,16 +23,19 @@
 .method constructor <init>(JLjava/lang/Object;)V
     .locals 0
 
-    .line 88
+    .line 94
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 89
+    .line 95
     iput-wide p1, p0, Lcom/google/android/filament/SwapChain;->mNativeObject:J
 
-    .line 90
+    .line 96
     iput-object p3, p0, Lcom/google/android/filament/SwapChain;->mSurface:Ljava/lang/Object;
 
     return-void
+.end method
+
+.method private static native nSetFrameCompletedCallback(JLjava/lang/Object;Ljava/lang/Runnable;)V
 .end method
 
 
@@ -40,7 +45,7 @@
 
     const-wide/16 v0, 0x0
 
-    .line 109
+    .line 140
     iput-wide v0, p0, Lcom/google/android/filament/SwapChain;->mNativeObject:J
 
     return-void
@@ -49,7 +54,7 @@
 .method public getNativeObject()J
     .locals 4
 
-    .line 102
+    .line 133
     iget-wide v0, p0, Lcom/google/android/filament/SwapChain;->mNativeObject:J
 
     const-wide/16 v2, 0x0
@@ -60,7 +65,7 @@
 
     return-wide v0
 
-    .line 103
+    .line 134
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -74,8 +79,21 @@
 .method public getNativeWindow()Ljava/lang/Object;
     .locals 1
 
-    .line 98
+    .line 104
     iget-object v0, p0, Lcom/google/android/filament/SwapChain;->mSurface:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public setFrameCompletedCallback(Ljava/lang/Object;Ljava/lang/Runnable;)V
+    .locals 2
+
+    .line 129
+    invoke-virtual {p0}, Lcom/google/android/filament/SwapChain;->getNativeObject()J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1, p1, p2}, Lcom/google/android/filament/SwapChain;->nSetFrameCompletedCallback(JLjava/lang/Object;Ljava/lang/Runnable;)V
+
+    return-void
 .end method

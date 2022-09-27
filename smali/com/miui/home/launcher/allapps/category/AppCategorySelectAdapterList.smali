@@ -342,7 +342,7 @@
 
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f110272
+    const v2, 0x7f100218
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -421,7 +421,7 @@
 
     iget-object v2, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f110036
+    const v3, 0x7f100034
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -441,7 +441,7 @@
 
     iget-object v2, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f1100e8
+    const v3, 0x7f1000b7
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

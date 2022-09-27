@@ -1190,7 +1190,7 @@
 
     if-eqz p1, :cond_1
 
-    const-string/jumbo p1, "true"
+    const-string p1, "true"
 
     goto :goto_0
 
@@ -1345,7 +1345,7 @@
 
     if-eqz p1, :cond_0
 
-    const-string/jumbo p1, "true"
+    const-string p1, "true"
 
     goto :goto_0
 

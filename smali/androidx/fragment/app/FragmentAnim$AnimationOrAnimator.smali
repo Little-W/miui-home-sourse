@@ -24,22 +24,22 @@
 .method constructor <init>(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 245
+    .line 229
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 246
+    .line 230
     iput-object v0, p0, Landroidx/fragment/app/FragmentAnim$AnimationOrAnimator;->animation:Landroid/view/animation/Animation;
 
-    .line 247
+    .line 231
     iput-object p1, p0, Landroidx/fragment/app/FragmentAnim$AnimationOrAnimator;->animator:Landroid/animation/Animator;
 
     if-eqz p1, :cond_0
 
     return-void
 
-    .line 249
+    .line 233
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -53,22 +53,22 @@
 .method constructor <init>(Landroid/view/animation/Animation;)V
     .locals 1
 
-    .line 237
+    .line 221
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 238
+    .line 222
     iput-object p1, p0, Landroidx/fragment/app/FragmentAnim$AnimationOrAnimator;->animation:Landroid/view/animation/Animation;
 
     const/4 v0, 0x0
 
-    .line 239
+    .line 223
     iput-object v0, p0, Landroidx/fragment/app/FragmentAnim$AnimationOrAnimator;->animator:Landroid/animation/Animator;
 
     if-eqz p1, :cond_0
 
     return-void
 
-    .line 241
+    .line 225
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 

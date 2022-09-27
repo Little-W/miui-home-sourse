@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/ApplicationsMessage;Z)V
     .locals 0
 
-    .line 201
+    .line 199
     iput-object p1, p0, Lcom/miui/home/launcher/ApplicationsMessage$2;->this$0:Lcom/miui/home/launcher/ApplicationsMessage;
 
     iput-boolean p2, p0, Lcom/miui/home/launcher/ApplicationsMessage$2;->val$firstTime:Z
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 3
 
-    .line 204
+    .line 202
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.APPLICATION_MESSAGE_QUERY"
@@ -51,12 +51,12 @@
 
     const-string v1, "com.miui.extra_update_request_first_time"
 
-    .line 205
+    .line 203
     iget-boolean v2, p0, Lcom/miui/home/launcher/ApplicationsMessage$2;->val$firstTime:Z
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 206
+    .line 204
     iget-object v1, p0, Lcom/miui/home/launcher/ApplicationsMessage$2;->this$0:Lcom/miui/home/launcher/ApplicationsMessage;
 
     invoke-static {v1}, Lcom/miui/home/launcher/ApplicationsMessage;->access$500(Lcom/miui/home/launcher/ApplicationsMessage;)Landroid/content/Context;

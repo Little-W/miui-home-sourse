@@ -1,9 +1,6 @@
 .class Lcom/miui/home/launcher/FolderIcon$10;
-.super Ljava/lang/Object;
+.super Landroid/animation/AnimatorListenerAdapter;
 .source "FolderIcon.java"
-
-# interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # annotations
@@ -25,34 +22,27 @@
 .method constructor <init>(Lcom/miui/home/launcher/FolderIcon;)V
     .locals 0
 
-    .line 556
+    .line 520
     iput-object p1, p0, Lcom/miui/home/launcher/FolderIcon$10;->this$0:Lcom/miui/home/launcher/FolderIcon;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+.method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 559
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    .line 523
+    iget-object p1, p0, Lcom/miui/home/launcher/FolderIcon$10;->this$0:Lcom/miui/home/launcher/FolderIcon;
 
-    move-result-object p1
+    new-instance v0, Lcom/miui/home/launcher/FolderIcon$10$1;
 
-    check-cast p1, Ljava/lang/Float;
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/FolderIcon$10$1;-><init>(Lcom/miui/home/launcher/FolderIcon$10;)V
 
-    .line 560
-    iget-object v0, p0, Lcom/miui/home/launcher/FolderIcon$10;->this$0:Lcom/miui/home/launcher/FolderIcon;
-
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
-
-    move-result p1
-
-    invoke-virtual {v0, p1}, Lcom/miui/home/launcher/FolderIcon;->setAlpha(F)V
+    invoke-virtual {p1, v0}, Lcom/miui/home/launcher/FolderIcon;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method

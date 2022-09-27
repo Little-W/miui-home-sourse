@@ -22,7 +22,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
-            "Landroidx/vectordrawable/graphics/drawable/Animatable2Compat$AnimationCallback;",
+            "Ljava/lang/Object;",
             ">;"
         }
     .end annotation

@@ -27,7 +27,7 @@
 .method constructor <init>(Ljava/lang/Class;Ljava/lang/String;)V
     .locals 0
 
-    .line 51
+    .line 49
     invoke-direct {p0, p1, p2}, Landroid/util/Property;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
     return-void
@@ -38,7 +38,7 @@
 .method public get(Lcom/miui/home/launcher/allapps/AllAppsTransitionController;)Ljava/lang/Float;
     .locals 0
 
-    .line 55
+    .line 53
     invoke-static {p1}, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->access$000(Lcom/miui/home/launcher/allapps/AllAppsTransitionController;)F
 
     move-result p1
@@ -53,7 +53,7 @@
 .method public bridge synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 51
+    .line 49
     check-cast p1, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/allapps/AllAppsTransitionController$1;->get(Lcom/miui/home/launcher/allapps/AllAppsTransitionController;)Ljava/lang/Float;
@@ -66,7 +66,7 @@
 .method public set(Lcom/miui/home/launcher/allapps/AllAppsTransitionController;Ljava/lang/Float;)V
     .locals 0
 
-    .line 60
+    .line 58
     invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
 
     move-result p2
@@ -79,7 +79,7 @@
 .method public bridge synthetic set(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
-    .line 51
+    .line 49
     check-cast p1, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;
 
     check-cast p2, Ljava/lang/Float;

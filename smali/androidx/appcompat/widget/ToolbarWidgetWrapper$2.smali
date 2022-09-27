@@ -26,7 +26,7 @@
 .method constructor <init>(Landroidx/appcompat/widget/ToolbarWidgetWrapper;I)V
     .locals 0
 
-    .line 572
+    .line 569
     iput-object p1, p0, Landroidx/appcompat/widget/ToolbarWidgetWrapper$2;->this$0:Landroidx/appcompat/widget/ToolbarWidgetWrapper;
 
     iput p2, p0, Landroidx/appcompat/widget/ToolbarWidgetWrapper$2;->val$visibility:I
@@ -35,7 +35,7 @@
 
     const/4 p1, 0x0
 
-    .line 573
+    .line 570
     iput-boolean p1, p0, Landroidx/appcompat/widget/ToolbarWidgetWrapper$2;->mCanceled:Z
 
     return-void
@@ -48,7 +48,7 @@
 
     const/4 p1, 0x1
 
-    .line 589
+    .line 586
     iput-boolean p1, p0, Landroidx/appcompat/widget/ToolbarWidgetWrapper$2;->mCanceled:Z
 
     return-void
@@ -57,12 +57,12 @@
 .method public onAnimationEnd(Landroid/view/View;)V
     .locals 1
 
-    .line 582
+    .line 579
     iget-boolean p1, p0, Landroidx/appcompat/widget/ToolbarWidgetWrapper$2;->mCanceled:Z
 
     if-nez p1, :cond_0
 
-    .line 583
+    .line 580
     iget-object p1, p0, Landroidx/appcompat/widget/ToolbarWidgetWrapper$2;->this$0:Landroidx/appcompat/widget/ToolbarWidgetWrapper;
 
     iget-object p1, p1, Landroidx/appcompat/widget/ToolbarWidgetWrapper;->mToolbar:Landroidx/appcompat/widget/Toolbar;
@@ -78,7 +78,7 @@
 .method public onAnimationStart(Landroid/view/View;)V
     .locals 1
 
-    .line 577
+    .line 574
     iget-object p1, p0, Landroidx/appcompat/widget/ToolbarWidgetWrapper$2;->this$0:Landroidx/appcompat/widget/ToolbarWidgetWrapper;
 
     iget-object p1, p1, Landroidx/appcompat/widget/ToolbarWidgetWrapper;->mToolbar:Landroidx/appcompat/widget/Toolbar;

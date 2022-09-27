@@ -24,7 +24,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 104
+    .line 106
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

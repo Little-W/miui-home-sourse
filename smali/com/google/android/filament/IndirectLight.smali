@@ -16,26 +16,14 @@
 
 
 # direct methods
-.method constructor <init>(J)V
+.method public constructor <init>(J)V
     .locals 0
 
-    .line 93
+    .line 87
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 94
+    .line 88
     iput-wide p1, p0, Lcom/google/android/filament/IndirectLight;->mNativeObject:J
-
-    return-void
-.end method
-
-.method public constructor <init>(Lcom/google/android/filament/Engine;J)V
-    .locals 0
-
-    .line 89
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 90
-    iput-wide p2, p0, Lcom/google/android/filament/IndirectLight;->mNativeObject:J
 
     return-void
 .end method
@@ -43,7 +31,7 @@
 .method static synthetic access$000()J
     .locals 2
 
-    .line 86
+    .line 84
     invoke-static {}, Lcom/google/android/filament/IndirectLight;->nCreateBuilder()J
 
     move-result-wide v0
@@ -54,7 +42,7 @@
 .method static synthetic access$100(JJ)V
     .locals 0
 
-    .line 86
+    .line 84
     invoke-static {p0, p1, p2, p3}, Lcom/google/android/filament/IndirectLight;->nBuilderReflections(JJ)V
 
     return-void
@@ -63,7 +51,7 @@
 .method static synthetic access$200(JI[F)V
     .locals 0
 
-    .line 86
+    .line 84
     invoke-static {p0, p1, p2, p3}, Lcom/google/android/filament/IndirectLight;->nIrradiance(JI[F)V
 
     return-void
@@ -72,7 +60,7 @@
 .method static synthetic access$300(JI[F)V
     .locals 0
 
-    .line 86
+    .line 84
     invoke-static {p0, p1, p2, p3}, Lcom/google/android/filament/IndirectLight;->nRadiance(JI[F)V
 
     return-void
@@ -81,7 +69,7 @@
 .method static synthetic access$400(JJ)V
     .locals 0
 
-    .line 86
+    .line 84
     invoke-static {p0, p1, p2, p3}, Lcom/google/android/filament/IndirectLight;->nIrradianceAsTexture(JJ)V
 
     return-void
@@ -90,7 +78,7 @@
 .method static synthetic access$500(JF)V
     .locals 0
 
-    .line 86
+    .line 84
     invoke-static {p0, p1, p2}, Lcom/google/android/filament/IndirectLight;->nIntensity(JF)V
 
     return-void
@@ -99,7 +87,7 @@
 .method static synthetic access$600(JFFFFFFFFF)V
     .locals 0
 
-    .line 86
+    .line 84
     invoke-static/range {p0 .. p10}, Lcom/google/android/filament/IndirectLight;->nRotation(JFFFFFFFFF)V
 
     return-void
@@ -108,7 +96,7 @@
 .method static synthetic access$700(JJ)J
     .locals 0
 
-    .line 86
+    .line 84
     invoke-static {p0, p1, p2, p3}, Lcom/google/android/filament/IndirectLight;->nBuilderBuild(JJ)J
 
     move-result-wide p0
@@ -119,7 +107,7 @@
 .method static synthetic access$800(J)V
     .locals 0
 
-    .line 86
+    .line 84
     invoke-static {p0, p1}, Lcom/google/android/filament/IndirectLight;->nDestroyBuilder(J)V
 
     return-void
@@ -128,24 +116,24 @@
 .method public static getColorEstimate([F[FFFF)[F
     .locals 2
 
-    .line 464
+    .line 459
     array-length v0, p1
 
     const/16 v1, 0x1b
 
     if-lt v0, v1, :cond_0
 
-    .line 468
+    .line 463
     invoke-static {p0}, Lcom/google/android/filament/Asserts;->assertFloat4([F)[F
 
     move-result-object p0
 
-    .line 469
+    .line 464
     invoke-static {p0, p1, p2, p3, p4}, Lcom/google/android/filament/IndirectLight;->nGetColorEstimateStatic([F[FFFF)V
 
     return-object p0
 
-    .line 465
+    .line 460
     :cond_0
     new-instance p0, Ljava/lang/ArrayIndexOutOfBoundsException;
 
@@ -159,24 +147,24 @@
 .method public static getDirectionEstimate([F[F)[F
     .locals 2
 
-    .line 423
+    .line 417
     array-length v0, p0
 
     const/16 v1, 0x1b
 
     if-lt v0, v1, :cond_0
 
-    .line 427
+    .line 421
     invoke-static {p1}, Lcom/google/android/filament/Asserts;->assertFloat3([F)[F
 
     move-result-object p1
 
-    .line 428
+    .line 422
     invoke-static {p0, p1}, Lcom/google/android/filament/IndirectLight;->nGetDirectionEstimateStatic([F[F)V
 
     return-object p1
 
-    .line 424
+    .line 418
     :cond_0
     new-instance p0, Ljava/lang/ArrayIndexOutOfBoundsException;
 
@@ -214,6 +202,12 @@
 .method private static native nGetIntensity(J)F
 .end method
 
+.method private static native nGetIrradianceTexture(J)J
+.end method
+
+.method private static native nGetReflectionsTexture(J)J
+.end method
+
 .method private static native nGetRotation(J[F)V
 .end method
 
@@ -245,7 +239,7 @@
 
     const-wide/16 v0, 0x0
 
-    .line 490
+    .line 498
     iput-wide v0, p0, Lcom/google/android/filament/IndirectLight;->mNativeObject:J
 
     return-void
@@ -253,13 +247,15 @@
 
 .method public getColorEstimate([FFFF)[F
     .locals 6
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
-    .line 477
+    .line 473
     invoke-static {p1}, Lcom/google/android/filament/Asserts;->assertFloat4([F)[F
 
     move-result-object p1
 
-    .line 478
+    .line 474
     invoke-virtual {p0}, Lcom/google/android/filament/IndirectLight;->getNativeObject()J
 
     move-result-wide v0
@@ -279,13 +275,15 @@
 
 .method public getDirectionEstimate([F)[F
     .locals 2
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
-    .line 435
+    .line 430
     invoke-static {p1}, Lcom/google/android/filament/Asserts;->assertFloat3([F)[F
 
     move-result-object p1
 
-    .line 436
+    .line 431
     invoke-virtual {p0}, Lcom/google/android/filament/IndirectLight;->getNativeObject()J
 
     move-result-wide v0
@@ -298,7 +296,7 @@
 .method public getIntensity()F
     .locals 2
 
-    .line 367
+    .line 361
     invoke-virtual {p0}, Lcom/google/android/filament/IndirectLight;->getNativeObject()J
 
     move-result-wide v0
@@ -310,10 +308,44 @@
     return v0
 .end method
 
+.method public getIrradianceTexture()Lcom/google/android/filament/Texture;
+    .locals 4
+
+    .line 486
+    invoke-virtual {p0}, Lcom/google/android/filament/IndirectLight;->getNativeObject()J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Lcom/google/android/filament/IndirectLight;->nGetIrradianceTexture(J)J
+
+    move-result-wide v0
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v2, v0, v2
+
+    if-nez v2, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    .line 487
+    :cond_0
+    new-instance v2, Lcom/google/android/filament/Texture;
+
+    invoke-direct {v2, v0, v1}, Lcom/google/android/filament/Texture;-><init>(J)V
+
+    move-object v0, v2
+
+    :goto_0
+    return-object v0
+.end method
+
 .method public getNativeObject()J
     .locals 4
 
-    .line 483
+    .line 491
     iget-wide v0, p0, Lcom/google/android/filament/IndirectLight;->mNativeObject:J
 
     const-wide/16 v2, 0x0
@@ -324,7 +356,7 @@
 
     return-wide v0
 
-    .line 484
+    .line 492
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -335,15 +367,49 @@
     throw v0
 .end method
 
+.method public getReflectionsTexture()Lcom/google/android/filament/Texture;
+    .locals 4
+
+    .line 480
+    invoke-virtual {p0}, Lcom/google/android/filament/IndirectLight;->getNativeObject()J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Lcom/google/android/filament/IndirectLight;->nGetReflectionsTexture(J)J
+
+    move-result-wide v0
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v2, v0, v2
+
+    if-nez v2, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    .line 481
+    :cond_0
+    new-instance v2, Lcom/google/android/filament/Texture;
+
+    invoke-direct {v2, v0, v1}, Lcom/google/android/filament/Texture;-><init>(J)V
+
+    move-object v0, v2
+
+    :goto_0
+    return-object v0
+.end method
+
 .method public getRotation([F)[F
     .locals 2
 
-    .line 393
+    .line 387
     invoke-static {p1}, Lcom/google/android/filament/Asserts;->assertMat3f([F)[F
 
     move-result-object p1
 
-    .line 394
+    .line 388
     invoke-virtual {p0}, Lcom/google/android/filament/IndirectLight;->getNativeObject()J
 
     move-result-wide v0
@@ -356,7 +422,7 @@
 .method public setIntensity(F)V
     .locals 2
 
-    .line 360
+    .line 354
     invoke-virtual {p0}, Lcom/google/android/filament/IndirectLight;->getNativeObject()J
 
     move-result-wide v0
@@ -369,10 +435,10 @@
 .method public setRotation([F)V
     .locals 11
 
-    .line 376
+    .line 370
     invoke-static {p1}, Lcom/google/android/filament/Asserts;->assertMat3fIn([F)V
 
-    .line 377
+    .line 371
     invoke-virtual {p0}, Lcom/google/android/filament/IndirectLight;->getNativeObject()J
 
     move-result-wide v0

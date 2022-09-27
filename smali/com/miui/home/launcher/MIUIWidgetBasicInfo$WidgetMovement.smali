@@ -26,12 +26,12 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 197
+    .line 194
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 201
+    .line 198
     iput v0, p0, Lcom/miui/home/launcher/MIUIWidgetBasicInfo$WidgetMovement;->direction:I
 
     return-void
@@ -42,7 +42,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 207
+    .line 204
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

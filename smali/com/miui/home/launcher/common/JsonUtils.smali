@@ -121,7 +121,7 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    const-string/jumbo v2, "wallpaperUri"
+    const-string v2, "wallpaperUri"
 
     .line 122
     iget-object v3, p0, Lcom/miui/home/launcher/lockwallpaper/mode/WallpaperInfo;->wallpaperUri:Ljava/lang/String;
@@ -272,7 +272,7 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
 
-    const-string/jumbo v2, "wallpaperInfos"
+    const-string v2, "wallpaperInfos"
 
     .line 167
     iget-object p0, p0, Lcom/miui/home/launcher/lockwallpaper/mode/RequestInfo;->wallpaperInfos:Ljava/util/List;
@@ -385,7 +385,7 @@
     iput-object p0, v0, Lcom/miui/home/launcher/lockwallpaper/mode/ResultInfo;->dialogComponent:Ljava/lang/String;
 
     :cond_2
-    const-string/jumbo p0, "wallpaperInfos"
+    const-string p0, "wallpaperInfos"
 
     .line 97
     invoke-virtual {v2, p0}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
@@ -402,7 +402,7 @@
     .line 99
     new-instance v3, Lorg/json/JSONArray;
 
-    const-string/jumbo v4, "wallpaperInfos"
+    const-string v4, "wallpaperInfos"
 
     invoke-virtual {v2, v4}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -543,7 +543,7 @@
     iput-object p0, v0, Lcom/miui/home/launcher/lockwallpaper/mode/WallpaperInfo;->key:Ljava/lang/String;
 
     :cond_2
-    const-string/jumbo p0, "wallpaperUri"
+    const-string p0, "wallpaperUri"
 
     .line 42
     invoke-virtual {v2, p0}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
@@ -552,7 +552,7 @@
 
     if-eqz p0, :cond_3
 
-    const-string/jumbo p0, "wallpaperUri"
+    const-string p0, "wallpaperUri"
 
     .line 43
     invoke-virtual {v2, p0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;

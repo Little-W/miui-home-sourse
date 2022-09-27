@@ -420,30 +420,6 @@
     return-object v0
 .end method
 
-.method public getWidgetCategoryId()I
-    .locals 1
-
-    .line 162
-    iget v0, p0, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;->mWidgetCategory:I
-
-    return v0
-.end method
-
-.method public getWidgetCategoryString()Ljava/lang/String;
-    .locals 1
-
-    .line 167
-    iget-object v0, p0, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;->providerInfo:Landroid/appwidget/AppWidgetProviderInfo;
-
-    iget-object v0, v0, Landroid/appwidget/AppWidgetProviderInfo;->provider:Landroid/content/ComponentName;
-
-    invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
 .method public getWidgetFeatures()I
     .locals 1
 

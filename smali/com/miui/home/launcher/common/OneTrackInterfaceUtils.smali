@@ -381,7 +381,7 @@
     :try_start_0
     sget-object v0, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->sOneHandModeOneTrack:Lcom/xiaomi/onetrack/OneTrack;
 
-    const-string v1, "miuihome_handmode"
+    const-string v1, "31000000730"
 
     invoke-virtual {v0, v1, p0, p1}, Lcom/xiaomi/onetrack/OneTrack;->trackPluginEvent(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
 

@@ -63,7 +63,7 @@
     .line 31
     invoke-super {p0}, Landroid/widget/FrameLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a0298
+    const v0, 0x7f0a01a0
 
     .line 32
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/FolderContainer;->findViewById(I)Landroid/view/View;
@@ -90,7 +90,7 @@
     .line 34
     iget-object v0, p0, Lcom/miui/home/launcher/FolderContainer;->mRecommendAppsSwitch:Landroid/widget/LinearLayout;
 
-    const v1, 0x7f0a0349
+    const v1, 0x7f0a020f
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 

@@ -63,6 +63,8 @@
 
 .field public static final enum SAMPLER_EXTERNAL:Lcom/google/android/filament/Material$Parameter$Type;
 
+.field public static final enum SUBPASS_INPUT:Lcom/google/android/filament/Material$Parameter$Type;
+
 .field public static final enum UINT:Lcom/google/android/filament/Material$Parameter$Type;
 
 .field public static final enum UINT2:Lcom/google/android/filament/Material$Parameter$Type;
@@ -76,7 +78,7 @@
 .method static constructor <clinit>()V
     .locals 16
 
-    .line 214
+    .line 230
     new-instance v0, Lcom/google/android/filament/Material$Parameter$Type;
 
     const-string v1, "BOOL"
@@ -87,7 +89,7 @@
 
     sput-object v0, Lcom/google/android/filament/Material$Parameter$Type;->BOOL:Lcom/google/android/filament/Material$Parameter$Type;
 
-    .line 215
+    .line 231
     new-instance v0, Lcom/google/android/filament/Material$Parameter$Type;
 
     const-string v1, "BOOL2"
@@ -98,7 +100,7 @@
 
     sput-object v0, Lcom/google/android/filament/Material$Parameter$Type;->BOOL2:Lcom/google/android/filament/Material$Parameter$Type;
 
-    .line 216
+    .line 232
     new-instance v0, Lcom/google/android/filament/Material$Parameter$Type;
 
     const-string v1, "BOOL3"
@@ -109,7 +111,7 @@
 
     sput-object v0, Lcom/google/android/filament/Material$Parameter$Type;->BOOL3:Lcom/google/android/filament/Material$Parameter$Type;
 
-    .line 217
+    .line 233
     new-instance v0, Lcom/google/android/filament/Material$Parameter$Type;
 
     const-string v1, "BOOL4"
@@ -120,7 +122,7 @@
 
     sput-object v0, Lcom/google/android/filament/Material$Parameter$Type;->BOOL4:Lcom/google/android/filament/Material$Parameter$Type;
 
-    .line 218
+    .line 234
     new-instance v0, Lcom/google/android/filament/Material$Parameter$Type;
 
     const-string v1, "FLOAT"
@@ -131,7 +133,7 @@
 
     sput-object v0, Lcom/google/android/filament/Material$Parameter$Type;->FLOAT:Lcom/google/android/filament/Material$Parameter$Type;
 
-    .line 219
+    .line 235
     new-instance v0, Lcom/google/android/filament/Material$Parameter$Type;
 
     const-string v1, "FLOAT2"
@@ -142,7 +144,7 @@
 
     sput-object v0, Lcom/google/android/filament/Material$Parameter$Type;->FLOAT2:Lcom/google/android/filament/Material$Parameter$Type;
 
-    .line 220
+    .line 236
     new-instance v0, Lcom/google/android/filament/Material$Parameter$Type;
 
     const-string v1, "FLOAT3"
@@ -153,7 +155,7 @@
 
     sput-object v0, Lcom/google/android/filament/Material$Parameter$Type;->FLOAT3:Lcom/google/android/filament/Material$Parameter$Type;
 
-    .line 221
+    .line 237
     new-instance v0, Lcom/google/android/filament/Material$Parameter$Type;
 
     const-string v1, "FLOAT4"
@@ -164,7 +166,7 @@
 
     sput-object v0, Lcom/google/android/filament/Material$Parameter$Type;->FLOAT4:Lcom/google/android/filament/Material$Parameter$Type;
 
-    .line 222
+    .line 238
     new-instance v0, Lcom/google/android/filament/Material$Parameter$Type;
 
     const-string v1, "INT"
@@ -175,7 +177,7 @@
 
     sput-object v0, Lcom/google/android/filament/Material$Parameter$Type;->INT:Lcom/google/android/filament/Material$Parameter$Type;
 
-    .line 223
+    .line 239
     new-instance v0, Lcom/google/android/filament/Material$Parameter$Type;
 
     const-string v1, "INT2"
@@ -186,7 +188,7 @@
 
     sput-object v0, Lcom/google/android/filament/Material$Parameter$Type;->INT2:Lcom/google/android/filament/Material$Parameter$Type;
 
-    .line 224
+    .line 240
     new-instance v0, Lcom/google/android/filament/Material$Parameter$Type;
 
     const-string v1, "INT3"
@@ -197,7 +199,7 @@
 
     sput-object v0, Lcom/google/android/filament/Material$Parameter$Type;->INT3:Lcom/google/android/filament/Material$Parameter$Type;
 
-    .line 225
+    .line 241
     new-instance v0, Lcom/google/android/filament/Material$Parameter$Type;
 
     const-string v1, "INT4"
@@ -208,7 +210,7 @@
 
     sput-object v0, Lcom/google/android/filament/Material$Parameter$Type;->INT4:Lcom/google/android/filament/Material$Parameter$Type;
 
-    .line 226
+    .line 242
     new-instance v0, Lcom/google/android/filament/Material$Parameter$Type;
 
     const-string v1, "UINT"
@@ -219,7 +221,7 @@
 
     sput-object v0, Lcom/google/android/filament/Material$Parameter$Type;->UINT:Lcom/google/android/filament/Material$Parameter$Type;
 
-    .line 227
+    .line 243
     new-instance v0, Lcom/google/android/filament/Material$Parameter$Type;
 
     const-string v1, "UINT2"
@@ -230,7 +232,7 @@
 
     sput-object v0, Lcom/google/android/filament/Material$Parameter$Type;->UINT2:Lcom/google/android/filament/Material$Parameter$Type;
 
-    .line 228
+    .line 244
     new-instance v0, Lcom/google/android/filament/Material$Parameter$Type;
 
     const-string v1, "UINT3"
@@ -241,7 +243,7 @@
 
     sput-object v0, Lcom/google/android/filament/Material$Parameter$Type;->UINT3:Lcom/google/android/filament/Material$Parameter$Type;
 
-    .line 229
+    .line 245
     new-instance v0, Lcom/google/android/filament/Material$Parameter$Type;
 
     const-string v1, "UINT4"
@@ -252,7 +254,7 @@
 
     sput-object v0, Lcom/google/android/filament/Material$Parameter$Type;->UINT4:Lcom/google/android/filament/Material$Parameter$Type;
 
-    .line 230
+    .line 246
     new-instance v0, Lcom/google/android/filament/Material$Parameter$Type;
 
     const-string v1, "MAT3"
@@ -263,7 +265,7 @@
 
     sput-object v0, Lcom/google/android/filament/Material$Parameter$Type;->MAT3:Lcom/google/android/filament/Material$Parameter$Type;
 
-    .line 231
+    .line 247
     new-instance v0, Lcom/google/android/filament/Material$Parameter$Type;
 
     const-string v1, "MAT4"
@@ -274,7 +276,7 @@
 
     sput-object v0, Lcom/google/android/filament/Material$Parameter$Type;->MAT4:Lcom/google/android/filament/Material$Parameter$Type;
 
-    .line 232
+    .line 248
     new-instance v0, Lcom/google/android/filament/Material$Parameter$Type;
 
     const-string v1, "SAMPLER_2D"
@@ -285,7 +287,7 @@
 
     sput-object v0, Lcom/google/android/filament/Material$Parameter$Type;->SAMPLER_2D:Lcom/google/android/filament/Material$Parameter$Type;
 
-    .line 233
+    .line 249
     new-instance v0, Lcom/google/android/filament/Material$Parameter$Type;
 
     const-string v1, "SAMPLER_2D_ARRAY"
@@ -296,7 +298,7 @@
 
     sput-object v0, Lcom/google/android/filament/Material$Parameter$Type;->SAMPLER_2D_ARRAY:Lcom/google/android/filament/Material$Parameter$Type;
 
-    .line 234
+    .line 250
     new-instance v0, Lcom/google/android/filament/Material$Parameter$Type;
 
     const-string v1, "SAMPLER_CUBEMAP"
@@ -307,7 +309,7 @@
 
     sput-object v0, Lcom/google/android/filament/Material$Parameter$Type;->SAMPLER_CUBEMAP:Lcom/google/android/filament/Material$Parameter$Type;
 
-    .line 235
+    .line 251
     new-instance v0, Lcom/google/android/filament/Material$Parameter$Type;
 
     const-string v1, "SAMPLER_EXTERNAL"
@@ -318,7 +320,7 @@
 
     sput-object v0, Lcom/google/android/filament/Material$Parameter$Type;->SAMPLER_EXTERNAL:Lcom/google/android/filament/Material$Parameter$Type;
 
-    .line 236
+    .line 252
     new-instance v0, Lcom/google/android/filament/Material$Parameter$Type;
 
     const-string v1, "SAMPLER_3D"
@@ -329,9 +331,20 @@
 
     sput-object v0, Lcom/google/android/filament/Material$Parameter$Type;->SAMPLER_3D:Lcom/google/android/filament/Material$Parameter$Type;
 
-    const/16 v0, 0x17
+    .line 253
+    new-instance v0, Lcom/google/android/filament/Material$Parameter$Type;
 
-    .line 213
+    const-string v1, "SUBPASS_INPUT"
+
+    const/16 v15, 0x17
+
+    invoke-direct {v0, v1, v15}, Lcom/google/android/filament/Material$Parameter$Type;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/google/android/filament/Material$Parameter$Type;->SUBPASS_INPUT:Lcom/google/android/filament/Material$Parameter$Type;
+
+    const/16 v0, 0x18
+
+    .line 229
     new-array v0, v0, [Lcom/google/android/filament/Material$Parameter$Type;
 
     sget-object v1, Lcom/google/android/filament/Material$Parameter$Type;->BOOL:Lcom/google/android/filament/Material$Parameter$Type;
@@ -446,6 +459,12 @@
 
     aput-object v1, v0, v2
 
+    sget-object v1, Lcom/google/android/filament/Material$Parameter$Type;->SUBPASS_INPUT:Lcom/google/android/filament/Material$Parameter$Type;
+
+    const/16 v2, 0x17
+
+    aput-object v1, v0, v2
+
     sput-object v0, Lcom/google/android/filament/Material$Parameter$Type;->$VALUES:[Lcom/google/android/filament/Material$Parameter$Type;
 
     return-void
@@ -459,7 +478,7 @@
         }
     .end annotation
 
-    .line 213
+    .line 229
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -468,7 +487,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/android/filament/Material$Parameter$Type;
     .locals 1
 
-    .line 213
+    .line 229
     const-class v0, Lcom/google/android/filament/Material$Parameter$Type;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -483,7 +502,7 @@
 .method public static values()[Lcom/google/android/filament/Material$Parameter$Type;
     .locals 1
 
-    .line 213
+    .line 229
     sget-object v0, Lcom/google/android/filament/Material$Parameter$Type;->$VALUES:[Lcom/google/android/filament/Material$Parameter$Type;
 
     invoke-virtual {v0}, [Lcom/google/android/filament/Material$Parameter$Type;->clone()Ljava/lang/Object;

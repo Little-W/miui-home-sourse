@@ -79,7 +79,7 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/Background;->mLongClickHandler:Lcom/miui/home/launcher/Background$LongClickHandler;
 
-    .line 138
+    .line 135
     new-instance p1, Lcom/miui/home/launcher/Background$1;
 
     invoke-direct {p1, p0}, Lcom/miui/home/launcher/Background$1;-><init>(Lcom/miui/home/launcher/Background;)V
@@ -161,7 +161,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0605df
+    const v1, 0x7f0603b8
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -331,7 +331,7 @@
 .method public touchedAtValidArea(F)Z
     .locals 2
 
-    .line 133
+    .line 130
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getWorkspaceInvalidateEdgeWidth()I
 
     move-result v0
@@ -342,7 +342,7 @@
 
     if-lez v1, :cond_0
 
-    .line 135
+    .line 132
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getScreenWidth()I
 
     move-result v1

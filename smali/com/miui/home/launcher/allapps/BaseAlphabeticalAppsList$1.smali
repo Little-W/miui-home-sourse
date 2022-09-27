@@ -1,19 +1,24 @@
 .class Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$1;
-.super Ljava/lang/Object;
+.super Landroidx/recyclerview/widget/DiffUtil$ItemCallback;
 .source "BaseAlphabeticalAppsList.java"
-
-# interfaces
-.implements Lcom/mi/globallauncher/BranchAppListDataManager$IBranchCompositeSearchCallBack;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList;->appendBranchSearchResult(Lio/branch/search/BranchSearchResult;)V
+    value = Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList;->getDifferConfig()Landroidx/recyclerview/widget/AsyncDifferConfig;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
     accessFlags = 0x0
     name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Landroidx/recyclerview/widget/DiffUtil$ItemCallback<",
+        "Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;",
+        ">;"
+    }
 .end annotation
 
 
@@ -25,59 +30,64 @@
 .method constructor <init>(Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList;)V
     .locals 0
 
-    .line 606
+    .line 582
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$1;->this$0:Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroidx/recyclerview/widget/DiffUtil$ItemCallback;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public adapterItems()Ljava/util/ArrayList;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/ArrayList<",
-            "Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;",
-            ">;"
-        }
-    .end annotation
+.method public areContentsTheSame(Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;)Z
+    .locals 0
 
-    .line 609
-    iget-object v0, p0, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$1;->this$0:Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList;
+    .line 590
+    invoke-virtual {p1, p2}, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;->areContentsTheSame(Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;)Z
 
-    iget-object v0, v0, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList;->mAdapterItems:Ljava/util/ArrayList;
+    move-result p1
 
-    return-object v0
+    return p1
 .end method
 
-.method public getResources()Landroid/content/res/Resources;
-    .locals 1
+.method public bridge synthetic areContentsTheSame(Ljava/lang/Object;Ljava/lang/Object;)Z
+    .locals 0
 
-    .line 614
-    iget-object v0, p0, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$1;->this$0:Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList;
+    .line 582
+    check-cast p1, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList;->access$000(Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList;)Lcom/miui/home/launcher/Launcher;
+    check-cast p2, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;
 
-    move-result-object v0
+    invoke-virtual {p0, p1, p2}, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$1;->areContentsTheSame(Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;)Z
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getResources()Landroid/content/res/Resources;
+    move-result p1
 
-    move-result-object v0
-
-    return-object v0
+    return p1
 .end method
 
-.method public refreshBaseRecyclerView()V
-    .locals 1
+.method public areItemsTheSame(Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;)Z
+    .locals 0
 
-    .line 619
-    iget-object v0, p0, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$1;->this$0:Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList;
+    .line 585
+    invoke-virtual {p1, p2}, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;->areItemsTheSame(Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;)Z
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList;->refreshRecyclerView()V
+    move-result p1
 
-    return-void
+    return p1
+.end method
+
+.method public bridge synthetic areItemsTheSame(Ljava/lang/Object;Ljava/lang/Object;)Z
+    .locals 0
+
+    .line 582
+    check-cast p1, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;
+
+    check-cast p2, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;
+
+    invoke-virtual {p0, p1, p2}, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$1;->areItemsTheSame(Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;)Z
+
+    move-result p1
+
+    return p1
 .end method

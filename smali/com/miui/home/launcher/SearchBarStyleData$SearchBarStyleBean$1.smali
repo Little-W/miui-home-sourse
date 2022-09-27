@@ -30,7 +30,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 796
+    .line 792
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +41,7 @@
 .method public createFromParcel(Landroid/os/Parcel;)Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;
     .locals 1
 
-    .line 799
+    .line 795
     new-instance v0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;
 
     invoke-direct {v0, p1}, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;-><init>(Landroid/os/Parcel;)V
@@ -52,7 +52,7 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
-    .line 796
+    .line 792
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean$1;->createFromParcel(Landroid/os/Parcel;)Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;
 
     move-result-object p1
@@ -63,7 +63,7 @@
 .method public newArray(I)[Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;
     .locals 0
 
-    .line 804
+    .line 800
     new-array p1, p1, [Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;
 
     return-object p1
@@ -72,7 +72,7 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 796
+    .line 792
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean$1;->newArray(I)[Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;
 
     move-result-object p1

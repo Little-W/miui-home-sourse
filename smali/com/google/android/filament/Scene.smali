@@ -89,7 +89,7 @@
 
     const-wide/16 v0, 0x0
 
-    .line 173
+    .line 174
     iput-wide v0, p0, Lcom/google/android/filament/Scene;->mNativeObject:J
 
     return-void
@@ -107,7 +107,7 @@
 .method public getLightCount()I
     .locals 2
 
-    .line 162
+    .line 163
     invoke-virtual {p0}, Lcom/google/android/filament/Scene;->getNativeObject()J
 
     move-result-wide v0
@@ -122,7 +122,7 @@
 .method public getNativeObject()J
     .locals 4
 
-    .line 166
+    .line 167
     iget-wide v0, p0, Lcom/google/android/filament/Scene;->mNativeObject:J
 
     const-wide/16 v2, 0x0
@@ -133,7 +133,7 @@
 
     return-wide v0
 
-    .line 167
+    .line 168
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -147,7 +147,7 @@
 .method public getRenderableCount()I
     .locals 2
 
-    .line 153
+    .line 154
     invoke-virtual {p0}, Lcom/google/android/filament/Scene;->getNativeObject()J
 
     move-result-wide v0
@@ -174,8 +174,10 @@
         .annotation build Lcom/google/android/filament/Entity;
         .end annotation
     .end param
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
-    .line 132
+    .line 133
     invoke-virtual {p0, p1}, Lcom/google/android/filament/Scene;->removeEntity(I)V
 
     return-void
@@ -188,7 +190,7 @@
         .end annotation
     .end param
 
-    .line 144
+    .line 145
     invoke-virtual {p0}, Lcom/google/android/filament/Scene;->getNativeObject()J
 
     move-result-wide v0

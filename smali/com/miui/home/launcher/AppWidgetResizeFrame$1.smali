@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/AppWidgetResizeFrame;)V
     .locals 0
 
-    .line 427
+    .line 428
     iput-object p1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame$1;->this$0:Lcom/miui/home/launcher/AppWidgetResizeFrame;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 2
 
-    .line 430
+    .line 431
     iget-object v0, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame$1;->this$0:Lcom/miui/home/launcher/AppWidgetResizeFrame;
 
     const/4 v1, 0x1

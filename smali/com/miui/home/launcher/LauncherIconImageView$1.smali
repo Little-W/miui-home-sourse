@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/LauncherIconImageView;)V
     .locals 0
 
-    .line 62
+    .line 58
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherIconImageView$1;->this$0:Lcom/miui/home/launcher/LauncherIconImageView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 2
 
-    .line 65
+    .line 61
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherIconImageView$1;->this$0:Lcom/miui/home/launcher/LauncherIconImageView;
 
     invoke-static {v0}, Lcom/miui/home/launcher/LauncherIconImageView;->access$000(Lcom/miui/home/launcher/LauncherIconImageView;)Landroid/graphics/drawable/Drawable;

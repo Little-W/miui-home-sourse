@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="Icon_name_classic_mode">Home screen settings</string>
     <string name="abc_action_bar_home_description">Navigate home</string>
     <string name="abc_action_bar_up_description">Navigate up</string>
     <string name="abc_action_menu_overflow_description">More options</string>
@@ -53,10 +52,8 @@
     <string name="activity_not_unlocked">Wait until your device is fully rebooted before opening apps</string>
     <string name="add_custom_category">Custom</string>
     <string name="add_screen">Add screen</string>
-    <string name="add_to_workspace">Add to Home screen</string>
     <string name="added_all_category">Added all apps successfully</string>
     <string name="afternoon">Afternoon</string>
-    <string name="agree_button">Agree</string>
     <string name="alexa_notification_add">Add</string>
     <string name="alexa_notification_cancel">Not now</string>
     <string name="alexa_notification_content">Add Alexa shortcut to Control centre?</string>
@@ -95,7 +92,6 @@
     <string name="all_apps_slide_up_tips">Swiping up is reserved for opening App drawer. Switch to the regular Home screen mode and try again.</string>
     <string name="all_apps_suggestions">App suggestions</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">Animation speed</string>
     <string name="announce_for_app_move_in_folder">Moved to position %1$d in the folder</string>
     <string name="announce_for_checked">%1$s, checked</string>
     <string name="announce_for_choose_default_screen">Set screen %1$d as the default Home screen</string>
@@ -148,13 +144,6 @@
     <string name="app_category_tools">Tools</string>
     <string name="app_category_travel">Travel</string>
     <string name="app_category_vr">VR</string>
-    <string name="app_drawer_double_confirm_description">"This will change your Home screen layout. You'll be able to revert these changes in the Settings later."</string>
-    <string name="app_drawer_double_confirm_title">Attention</string>
-    <string name="app_drawer_feature_description">App drawer is a perfect tool for arranging all your apps. Categorise apps automatically and find anything you need in a snap!</string>
-    <string name="app_drawer_guide_description">"Find what you're looking for in your favourite apps"</string>
-    <string name="app_drawer_guide_title">App drawer</string>
-    <string name="app_drawer_tip_title">"We've replaced Content feed with App drawer."</string>
-    <string name="app_install_state">Installed</string>
     <string name="app_name">smallWindow</string>
     <string name="application_name">System launcher</string>
     <string name="apply">Set</string>
@@ -177,35 +166,8 @@
     <string name="back">Back</string>
     <string name="backup_fail">"Couldn't backup launcher"</string>
     <string name="bad_wallpaper_source_prompt">"Can't load wallpaper"</string>
-    <string name="branch_feature_description">Besides apps, Quick Finder can find in-app content and items online.</string>
-    <string name="branch_guide_attention">Using enhanced search requires sharing your search requests, Google Ads ID, and IP address with Branch Metrics Inc. Read and agree to <a href="http://url1"><font color="#B3000000">End User Discovery Terms &amp; Conditions</font></a> and <a href="http://url2"><font color="#B3000000">Branch Discovery Privacy Policy</font></a> before using this feature.</string>
-    <string name="branch_guide_description_one">"We'll put all your apps in the App drawer. Your Home screen will look neat and organised."</string>
-    <string name="branch_guide_description_three">"With built-in search, you'll be able to find whatever you need in a snap!"</string>
-    <string name="branch_guide_description_two">App drawer categorises apps automatically.</string>
-    <string name="branch_guide_tip_title">Every app in its own place</string>
-    <string name="branch_guide_title">Meet App drawer</string>
-    <string name="branch_guide_type_four_desc">You can go back to the old ways in two easy steps</string>
-    <string name="branch_guide_type_four_main">In the Settings, go to Home screen > Home screen and select \"Classic\".</string>
-    <string name="branch_guide_type_four_step_one">Open Settings</string>
-    <string name="branch_guide_type_four_step_two">Select Home screen</string>
-    <string name="branch_guide_type_one_desc">Manage your apps with App drawer</string>
-    <string name="branch_guide_type_one_main">Keep your apps in the App drawer to make your Home screen neat and organised.</string>
-    <string name="branch_new_feature">New feature</string>
-    <string name="branch_privacy_policy">Privacy Policy</string>
-    <string name="branch_search_guide_description">Our search results are much more comprehensive now</string>
-    <string name="branch_search_guide_privacy">"This service is powered by Branch Metrics Inc. Your location info, search queries, and Google Ads ID will be shared with Branch. Read and agree to Branch's "<a href="http://url1"><font color="#B3000000">Terms and Conditions</font></a> and <a href="http://url2"><font color="#B3000000">Privacy Policy</font></a> before using this service.</string>
-    <string name="branch_search_guide_title">"Find what you're looking for in your favourite apps"</string>
-    <string name="branch_terms_condition">Terms and Conditions</string>
-    <string name="branch_tip_title">With Quick Finder, you can find everything you need in a snap.</string>
-    <string name="btn_agree">Agree</string>
-    <string name="btn_cancel">Cancel</string>
-    <string name="btn_close">Turn off</string>
-    <string name="btn_open">Turn On</string>
-    <string name="btn_request_permission">Grant permissions</string>
-    <string name="btn_set_right_now">Grant permissions</string>
     <string name="buffering">Buffering…</string>
     <string name="cancel_action">Cancel</string>
-    <string name="cancel_botton">Cancel</string>
     <string name="cancel_btn_label">Cancel</string>
     <string name="cant_edit_lock_screen">"Can't edit Lock screen style"</string>
     <string name="cant_remove_folder">"Can't remove folder"</string>
@@ -316,11 +278,9 @@
     <string name="emptyplaylist">Tap to add songs</string>
     <string name="enable_wallpaper_scroll">Turn side-scrolling on</string>
     <string name="encryption">Encryption</string>
-    <string name="enter_search_setting_title">Open search after opening App drawer</string>
     <string name="eras_ad">CE</string>
     <string name="eras_bc">BCE</string>
     <string name="evening">Afternoon</string>
-    <string name="exit_overview_because_task_stack_changed">Closed Recents due to changes that occurred in the background</string>
     <string name="expand_button_title">Advanced</string>
     <string name="failed_to_delete_temporary">"Can't remove"</string>
     <string name="failed_to_drop">"Can't move"</string>
@@ -378,8 +338,6 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
-    <string name="fold_pair_install_shortcut_long_click">Press and hold to add to Home screen</string>
-    <string name="fold_pair_installed_shortcut_launcher">This shortcut already exists</string>
     <string name="folder_name">Folder</string>
     <string name="frame_load_failed">"Can't load frame"</string>
     <string name="free_style_apps_title">Choose app</string>
@@ -435,14 +393,11 @@
     <string name="gadget_weather_title_14">Weather</string>
     <string name="gadget_weather_title_24">Weather</string>
     <string name="global_search_hint">Search</string>
-    <string name="got_it_botton">Got it</string>
     <string name="group_folder">New folder</string>
     <string name="group_live_folders">Folders</string>
     <string name="group_shortcuts">Shortcuts</string>
     <string name="guide_install_app_msg">"This app isn't installed on your device. Find and install the app now?"</string>
     <string name="guide_install_app_title">Find and install app?</string>
-    <string name="guide_permission_title">Permissions required</string>
-    <string name="guide_privacy_dialog_title">Terms of Service</string>
     <string name="guide_tips_editing_mode">Press &amp; hold to pick up a widget</string>
     <string name="home_gesture_content_center">Content Centre</string>
     <string name="home_gesture_global_search">Search</string>
@@ -473,9 +428,6 @@
     <string name="launcher_slide_up_title">Swipe up on the Home screen</string>
     <string name="launcher_sliding_up_gesture">Swipe up on the Home screen to open search</string>
     <string name="launcher_title">Home screen &amp; Recents</string>
-    <string name="layout_guide_description">"If you don't like App drawer, you can always go back to the classic Home screen. Simply use the \"Home screen settings\" shortcut and switch between the two modes."</string>
-    <string name="layout_guide_tip_title">You can go back to the old ways in a single tap</string>
-    <string name="layout_guide_title">How to remove App drawer</string>
     <string name="like">Add to favourites</string>
     <string name="liked">Added to favourites</string>
     <string name="loading_desktop">Just a sec…</string>
@@ -642,11 +594,6 @@
     <string name="navigation_guide_recent_title">Open Recents</string>
     <string name="navigation_guide_recent_title_spec_with_quotation_pad">Open Recents</string>
     <string name="navigation_guide_settings">Gesture demos</string>
-    <string name="navigation_position_center">Center</string>
-    <string name="navigation_position_left">Left</string>
-    <string name="navigation_position_right">Right</string>
-    <string name="navigation_position_summary">Custom positions of navigation buttons can only be applied to Home screen</string>
-    <string name="navigation_position_title">Navigation buttons position</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">Cancel</string>
     <string name="navigation_set_miui_home_as_default_dialog_message">"Can't use full screen gestures with third party launchers. Switch to the system launcher and turn on full screen gestures?"</string>
     <string name="navigation_set_miui_home_as_default_dialog_ok">OK</string>
@@ -655,11 +602,9 @@
     <string name="navigation_type_title">System navigation</string>
     <string name="navigation_type_virtual_key">Buttons</string>
     <string name="network_error">"Couldn't connect to the network. Try again."</string>
-    <string name="new_feature_title">"What's new"</string>
     <string name="night">Evening</string>
     <string name="no_detail_page">No details page</string>
     <string name="no_space_toast">Not enough space</string>
-    <string name="no_space_toast_fold">Not enough space here</string>
     <string name="no_space_toast_when_click_widget">Not enough space on this page. Try dragging this item to a different page.</string>
     <string name="noon">Midday</string>
     <string name="normal_wallpaper">Wallpaper</string>
@@ -669,7 +614,6 @@
     <string name="notification_reset_title">Arranged icons successfully</string>
     <string name="one_key_call_title">Tap to dial</string>
     <string name="online_wallpaper">Online</string>
-    <string name="open_pad_personal_assistant_settings">Home screen widgets</string>
     <string name="open_personal_assistant_dialog_btn_cancel">Cancel</string>
     <string name="open_personal_assistant_dialog_btn_confirm">Turn off</string>
     <string name="open_personal_assistant_dialog_desc">"After you turn off App vault, you won't be able to see or use App vault widgets. Their updated versions won't be available to you as well. Turn off anyway?"</string>
@@ -678,10 +622,9 @@
     <string name="open_personal_assistant_settings">App vault settings</string>
     <string name="open_personal_assistant_title">App vault</string>
     <string name="ota_layout_adjustment_button_text">Got it</string>
-    <string name="ota_layout_adjustment_content">Inner and outer Home screen layouts were synchronised in the new version.</string>
+    <string name="ota_layout_adjustment_content">Inner and outer Home screen layouts were synchronized in the new version.</string>
     <string name="ota_layout_adjustment_title">Home screen layouts</string>
     <string name="out_of_space">No more room on this Home screen</string>
-    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">Render animations on third party app icons</string>
     <string name="perfect_icons_switch_title">Global icon animations</string>
     <string name="permdesc_install_shortcut">Allows an app to add shortcuts without user intervention.</string>
@@ -701,7 +644,6 @@
     <string name="photo_load_failed">"Can't load photo"</string>
     <string name="please_slide_agian">Slide again</string>
     <string name="pm">PM</string>
-    <string name="popular_search">Popular</string>
     <string name="pref_cell_layout_size">App icon layout</string>
     <string name="pref_enable_drawing_cache_summary">Turn off to free up memory. This may cause slower performance.</string>
     <string name="pref_enable_drawing_cache_title">Drawing cache</string>
@@ -722,14 +664,6 @@
     <string name="privacy_thumbnail_blur_summary">Blur app previews in Recents</string>
     <string name="privacy_thumbnail_blur_title">Blur app previews</string>
     <string name="quick_app">Quick apps</string>
-    <string name="quick_finder_feature_description">Quick Finder allows you to find apps, in-app content, and items online faster. You can turn this feature off in the Settings.</string>
-    <string name="quick_finder_tip_title">Find everything you need faster</string>
-    <string name="quick_search_all_app_desc">Display all apps in the App drawer</string>
-    <string name="quick_search_desc">Open search after opening App drawer</string>
-    <string name="quick_search_guide_all_apps">All apps</string>
-    <string name="quick_search_guide_ok_btn">OK</string>
-    <string name="quick_search_guide_quick_search">Quick search</string>
-    <string name="quick_search_guide_title">Select default mode</string>
     <string name="recent_apps">Recent</string>
     <string name="recent_menu_item_info">Info</string>
     <string name="recent_menu_item_lock">Lock</string>
@@ -758,13 +692,6 @@
     <string name="recents_title_market">Find apps</string>
     <string name="recents_title_security_scan">Security scan</string>
     <string name="recents_tv_small_window_text">Floating windows</string>
-    <string name="recents_worldcirculate_text">Release to select</string>
-    <string name="recnets_relay_device_info">From %s</string>
-    <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
-    <string name="recnets_worldcirculate_display_computer_info">The app is working on %s.</string>
-    <string name="recnets_worldcirculate_display_default_info">Tap to bring it back here.</string>
-    <string name="recnets_worldcirculate_display_default_info_pad">Tap to bring it back here.</string>
-    <string name="recnets_worldcirculate_display_pad_info">The app is working on %s.</string>
     <string name="recommend_apk_size_and_desc">%1$dMB | %2$s</string>
     <string name="recommend_app">App suggestions</string>
     <string name="recommend_apps_default_title">Empty</string>
@@ -782,8 +709,6 @@
     <string name="remove_invalidate_gadget_tips">One of the widgets you use is no longer available. You can add another one.</string>
     <string name="remove_sys_app_content">"You'll be able to add the Home screen shortcut again in Settings > Apps > Manage Home screen shortcuts. Remove now?"</string>
     <string name="remove_sys_app_title">Remove the Home screen shortcut?</string>
-    <string name="request_permission_msg">POCO Launcher needs a couple of permissions to give you the access to its full functionality.</string>
-    <string name="request_permission_title">Permissions required</string>
     <string name="reset_cate_tip_content">If you continue, default app groups will be restored. Continue anyway?</string>
     <string name="reset_cate_tip_title">Restore default groups</string>
     <string name="reset_description_first_time">You can restore the layout from %1$s within 2 hours</string>
@@ -799,8 +724,6 @@
     <string name="screen_cells_config_title">Home screen layout</string>
     <string name="screen_locked_toast">Home screen layout is locked.</string>
     <string name="screen_number">%d screen</string>
-    <string name="search_bar_hint_content">Search for apps and content</string>
-    <string name="search_guide_btn">Got it</string>
     <string name="search_in_apps_store">Search for \"%1$s\" in %2$s</string>
     <string name="search_menu_title">Search</string>
     <string name="search_no_result">"Couldn't find any results"</string>
@@ -809,7 +732,6 @@
     <string name="select_photo">Photo</string>
     <string name="send">Send</string>
     <string name="server_error">A server error occurred. Wait a minute or two and try again.</string>
-    <string name="service_double_attention">Enhanced search functionality is provided by Branch Metrics Inc. To make this feature work, we need to share your search requests, Google Ads ID, and IP address with Branch Metrics Inc. Read and agree to <a href="http://url1"><font color="#B3000000">End User Discovery Terms &amp; Conditions</font></a> and <a href="http://url2"><font color="#B3000000">Branch Discovery Privacy Policy</font></a> before using this feature.</string>
     <string name="setting_wallpaper_tip">Pinch or swipe to adjust</string>
     <string name="settings">Settings</string>
     <string name="settings_shortcut">Settings</string>
@@ -848,14 +770,12 @@
     <string name="status_installing">Installing</string>
     <string name="status_paused">Paused</string>
     <string name="status_pending">Waiting</string>
-    <string name="suggestions">Suggestions</string>
     <string name="summary_collapsed_preference_list">%1$s, %2$s</string>
     <string name="sunday">Sunday</string>
     <string name="sunday_short">Sun</string>
     <string name="sunday_shortest">Sun</string>
     <string name="swipe_the_desktop_to_the_left">Swipe left on the Home screen</string>
     <string name="swipe_the_desktop_to_the_right">Swipe right on the Home screen</string>
-    <string name="switch_on_button">Turn On</string>
     <string name="switch_personal_assistant_app_vault">App vault</string>
     <string name="switch_personal_assistant_google">Google Discover</string>
     <string name="switch_personal_assistant_none">None</string>
@@ -866,10 +786,6 @@
     <string name="system_shortcuts_remove">Remove</string>
     <string name="system_text">Auto</string>
     <string name="task_access_locked_app_msg">Turned on app lock</string>
-    <string name="term_of_service">Terms and conditions</string>
-    <string name="terms_of_services_one">"Welcome to App drawer and Quick Finder. Quick Finder allows you to find apps, in-app content, and items online faster. Read and agree to Xiaomi's "<a href="http://url1"><font color="#B3000000">Privacy Policy</font></a> before using these features.</string>
-    <string name="terms_of_services_three">You can turn this feature off in the Settings.</string>
-    <string name="terms_of_services_two">Using enhanced search requires sharing necessary personal information, including your search queries, Google Advertising ID, and IP address, with Branch Metrics Inc. Branch will process your personal information in accordance with <a href="http://url1"><font color="#B3000000">Branch Discovery Privacy Policy</font></a>. Read and agree to <a href="http://url2"><font color="#B3000000">End User Discovery Terms &amp; Conditions</font></a> and <a href="http://url3"><font color="#B3000000">Branch Discovery Privacy Policy</font></a> before using this feature.</string>
     <string name="the_anniversary_of_lifting_martial_law">Anniversary of Lifting Martial Law</string>
     <string name="the_anti_aggression_day">Anti-Aggression Day</string>
     <string name="the_arbor_day">Arbor Day</string>
@@ -936,11 +852,6 @@
     <string name="tuesday">Tuesday</string>
     <string name="tuesday_short">Tue</string>
     <string name="tuesday_shortest">Tue</string>
-    <string name="uni_search_permission_content">Turn on online search features. (Search services are provided by Branch.)</string>
-    <string name="uni_search_permission_msg">Allow POCO Launcher to access your location and contacts to improve search results.</string>
-    <string name="uni_search_permission_title">Improved search</string>
-    <string name="uni_search_setting_summary">Directly find contents within the app</string>
-    <string name="uni_search_setting_title">In-app query mode</string>
     <string name="uninstall">Uninstall</string>
     <string name="uninstall_dialog_message">Uninstalling will remove all app data.</string>
     <string name="uninstall_dialog_title_format">Uninstall %s?</string>
@@ -951,7 +862,6 @@
     <string name="uninstall_xspace_dialog_title_format">Uninstall dual \"%s\"?</string>
     <string name="unknown_artist_name">Unknown artist</string>
     <string name="unnamed_folder_name">Folder</string>
-    <string name="upgrade_remove_small_window_in_recents">You can use sidebar to open apps in floating windows</string>
     <string name="v7_preference_off">OFF</string>
     <string name="v7_preference_on">ON</string>
     <string name="wallpaper">Wallpaper</string>

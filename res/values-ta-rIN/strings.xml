@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="Icon_name_classic_mode">முகப்பு திரை அமைப்புகள்</string>
     <string name="accessibility_all_app_custom_category_finish">முடிந்தது</string>
     <string name="accessibility_all_app_custom_category_item_remove">வகைகளில் இருந்து “%1$s” ஐ அகற்று</string>
     <string name="accessibility_clear_search_bar_text">தேடல் பட்டியை அழிக்கவும்</string>
@@ -26,10 +25,8 @@
     <string name="activity_not_unlocked">செயலிகளைத் திறக்கும் முன்பு, உங்கள் சாதனம் முழுமையாக மறுதொடக்கம் ஆகும் வரை காத்திருக்கவும்</string>
     <string name="add_custom_category">தனிப்பயன்</string>
     <string name="add_screen">திரையை சேர்</string>
-    <string name="add_to_workspace">முகப்பு திரையில் சேர்</string>
     <string name="added_all_category">எல்லா செயலிகளும் வெற்றிகரமாகச் சேர்க்கப்பட்டன</string>
     <string name="afternoon">பிற்பகல்</string>
-    <string name="agree_button">ஏற்கிறேன்</string>
     <string name="alexa_notification_add">சேர்</string>
     <string name="alexa_notification_cancel">இப்போது வேண்டாம்</string>
     <string name="alexa_notification_content">கட்டுப்பாட்டு மையத்தில், Alexa குறுக்குவழியைச் சேர்க்கவா?</string>
@@ -68,7 +65,6 @@
     <string name="all_apps_slide_up_tips">மேல் நோக்கி ஸ்வைப் செய்வது, செயலி வைப்பகத்திற்காக ஒதுக்கப்பட்டுள்ளது. வழக்கமான முகப்புத் திரை பயன்முறைக்கு மாறி, மீண்டும் முயலவும்.</string>
     <string name="all_apps_suggestions">செயலி பரிந்துரைகள்</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">அனிமேஷன் வேகம்</string>
     <string name="announce_for_app_move_in_folder">கோப்புறையில் %1$d நிலைக்கு நகர்த்தப்பட்டது</string>
     <string name="announce_for_checked">%1$s, சரிபார்க்கப்பட்டது</string>
     <string name="announce_for_choose_default_screen">%1$d திரையை இயல்புநிலை முகப்புத் திரையாக அமைத்தது</string>
@@ -121,13 +117,6 @@
     <string name="app_category_tools">கருவி</string>
     <string name="app_category_travel">பயணம்</string>
     <string name="app_category_vr">VR</string>
-    <string name="app_drawer_double_confirm_description">இது உங்கள் முகப்புத் திரை தளவமைப்பை மாற்றியமைக்கும். அமைப்புகளில், இந்த மாற்றங்களை நீங்கள் பின்னர் மீட்டமைக்கலாம்.</string>
-    <string name="app_drawer_double_confirm_title">கவனிக்க</string>
-    <string name="app_drawer_feature_description">செயலி வைப்பகம், உங்கள் எல்லா செயலிகளையும் ஒழுங்கமைத்து வைப்பதற்கான ஒரு கச்சிதமான கருவியாகும். செயலிகளைத் தானாக வகைப்படுத்தவும் மற்றும் நீங்கள் விரும்புவது எதையும் ஒரு நொடியில் கண்டறியவும்!</string>
-    <string name="app_drawer_guide_description">உங்களுக்குப் பிடித்த செயலிகளில் நீங்கள் தேடுவதைக் கண்டறியுங்கள்</string>
-    <string name="app_drawer_guide_title">செயலி வைப்பகம்</string>
-    <string name="app_drawer_tip_title">உள்ளடக்க ஊட்டத்தை நாங்கள் செயலி வைப்பகத்தால் இடமாற்றியுள்ளோம்.</string>
-    <string name="app_install_state">நிறுவப்பட்டது</string>
     <string name="app_name">smallWindow</string>
     <string name="application_name">சிஸ்டம் லாஞ்சர்</string>
     <string name="apply">அமை</string>
@@ -150,35 +139,8 @@
     <string name="back">பின்செல்</string>
     <string name="backup_fail">லாஞ்சரைக் காப்புப்பிரதியெடுக்க முடியாது</string>
     <string name="bad_wallpaper_source_prompt">வால்பேப்பரை ஏற்ற முடியவில்லை</string>
-    <string name="branch_feature_description">செயலிகளைத் தவிர, விரைவு கண்டறிதல் செயலியின் உள்ளடக்கம் மற்றும் ஆன்லைன் உருப்படிகளையும் கண்டறிய முடியும்.</string>
-    <string name="branch_guide_attention">மேம்பட்ட தேடலைப் பயன்படுத்துவது என்பதில், உங்கள் தேடல் கோரிக்கைகள், Google Ads ID மற்றும் IP முகவரி ஆகியவற்றை Branch Metrics Inc. உடன் பகிர்ந்து கொள்வது உள்ளடங்கியுள்ளது. இந்த அம்சத்தைப் பயன்படுத்துவதற்கு முன்பாக, <a href="http://url1"><font color="#B3000000">இறுதிப் பயனர் கண்டறிதல் விதிமுறைகள் &amp; நிபந்தனைகள்</font></a> மற்றும் <a href="http://url2"><font color="#B3000000">Branch Discovery தனியுரிமைக் கொள்கை</font></a> ஆகியவற்றைப் படித்து ஏற்றுக் கொள்ளவும்.</string>
-    <string name="branch_guide_description_one">உங்கள் செயலிகளை செயலி டிராயரில் நாங்கள் வைப்போம். உங்கள் முகப்புத்திரை சீராகவும், ஒழுங்கமைவுடனும் தோற்றமளிக்கும்.</string>
-    <string name="branch_guide_description_three">உள்ளமைந்த தேடல் மூலமாக, உங்களால் தேவையானதை ஒரு நொடியில் கண்டறிய முடியும்!</string>
-    <string name="branch_guide_description_two">செயலி டிராயர் செயலிகளைத் தானாக வகைப்படுத்தும்.</string>
-    <string name="branch_guide_tip_title">ஒவ்வொரு செயலிக்கும் ஒரு இடம்</string>
-    <string name="branch_guide_title">செயலி வைப்பகத்தைக் காண்க</string>
-    <string name="branch_guide_type_four_desc">இரண்டு எளிய படிகளில் பழைய முறைக்கு நீங்கள் சென்று விட முடியும்</string>
-    <string name="branch_guide_type_four_main">அமைப்புகளில், முகப்புத் திரை > முகப்புத் திரை என்பதற்குச் சென்று, “கிளாசிக்” என்பதைத் தேர்ந்தெடுக்கவும்.</string>
-    <string name="branch_guide_type_four_step_one">அமைப்புகளைத் திறக்கவும்</string>
-    <string name="branch_guide_type_four_step_two">முகப்புத் திரையைத் தேர்ந்தெடுக்கவும்</string>
-    <string name="branch_guide_type_one_desc">செயலி டிராயர் மூலம் உங்கள் செயலிகளை நிர்வகிக்கவும்</string>
-    <string name="branch_guide_type_one_main">உங்கள் முகப்புத் திரையை நேர்த்தியாகவும் ஒழுங்கமைப்புடனும் வைத்துக்கொள்ள செயலிகளை செயலி டிராயரில் வைக்கவும்.</string>
-    <string name="branch_new_feature">புதிய அம்சம்</string>
-    <string name="branch_privacy_policy">தனியுரிமைக் கொள்கை</string>
-    <string name="branch_search_guide_description">எங்கள் தேடல் முடிவுகள் இப்போது இன்னும் விரிவாக இருக்கின்றன</string>
-    <string name="branch_search_guide_privacy">இந்தச் சேவையை வழங்குவது Branch Metrics Inc. உங்கள் இருப்பிட விவரம், தேடல் வினவல்கள் மற்றும் Google Ads ID ஆகியவை Branch உடன் பகிர்ந்து கொள்ளப்படும். இந்தச் சேவையைப் பயன்படுத்துவதற்கு முன்பு Branch -இன் <a href="http://url1"><font color="#B3000000">நிபந்தனைகள் மற்றும் விதிமுறைகள்Conditions</font></a> மற்றும் <a href="http://url2"><font color="#B3000000">தனியுரிமைக் கொள்கை</font></a> ஆகியவற்றைப் படித்து ஏற்றுக்கொள்ளவும்.</string>
-    <string name="branch_search_guide_title">உங்களுக்குப் பிடித்த செயலிகளில் நீங்கள் தேடுவதைக் கண்டறியுங்கள்</string>
-    <string name="branch_terms_condition">விதிமுறைகள் மற்றும் நிபந்தனைகள்</string>
-    <string name="branch_tip_title">விரைவு கண்டறிதல் உடன், நீங்கள் விரும்புவது எதையும் ஒரு நொடியில் கண்டறியலாம்.</string>
-    <string name="btn_agree">ஏற்கிறேன்</string>
-    <string name="btn_cancel">ரத்துசெய்</string>
-    <string name="btn_close">முடக்கு</string>
-    <string name="btn_open">இயக்கு</string>
-    <string name="btn_request_permission">அனுமதிகளை வழங்கு</string>
-    <string name="btn_set_right_now">அனுமதிகளை வழங்கு</string>
     <string name="buffering">இடையகப்படுத்துகிறது…</string>
     <string name="cancel_action">ரத்துசெய்</string>
-    <string name="cancel_botton">ரத்துசெய்</string>
     <string name="cancel_btn_label">ரத்துசெய்</string>
     <string name="cant_edit_lock_screen">பூட்டுத்திரை ஸ்டைலைத் திருத்த முடியாது</string>
     <string name="cant_remove_folder">கோப்புறையை நீக்க முடியவில்லை</string>
@@ -288,11 +250,9 @@
     <string name="emptyplaylist">பாடல்களைச் சேர்க்க தட்டவும்</string>
     <string name="enable_wallpaper_scroll">பக்க ஸ்க்ரோலிங்கை இயக்கு</string>
     <string name="encryption">என்கிரிப்ஷன்</string>
-    <string name="enter_search_setting_title">செயலி வைப்பகத்தைத் திறந்த பின், தேடலைத் திற</string>
     <string name="eras_ad">கிபி</string>
     <string name="eras_bc">கிமு</string>
     <string name="evening">பிற்பகல்</string>
-    <string name="exit_overview_because_task_stack_changed">பின்னணியில் நடந்த மாற்றங்களால், சமீபத்தியவை மூடப்பட்டது</string>
     <string name="failed_to_delete_temporary">அகற்ற முடியவில்லை</string>
     <string name="failed_to_drop">நகர்த்த முடியவில்லை</string>
     <string name="failed_to_drop_widget_invalid">விட்ஜெட் செல்லாதது</string>
@@ -349,8 +309,6 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
-    <string name="fold_pair_install_shortcut_long_click">முகப்புத் திரையில் சேர்க்க அழுத்திப் பிடிக்கவும்</string>
-    <string name="fold_pair_installed_shortcut_launcher">இந்தக் குறுக்குவழி ஏற்கனவே உள்ளது</string>
     <string name="folder_name">கோப்புறை</string>
     <string name="frame_load_failed">ஃபிரேமை ஏற்ற முடியவில்லை</string>
     <string name="free_style_apps_title">பயன்பாட்டைத் தேர்வு செய்க</string>
@@ -360,7 +318,7 @@
     <string name="free_style_edit_bar_select_app">பயன்பாட்டைத் தேர்வு செய்க</string>
     <string name="free_style_edit_bottom_empty_tip">திருத்த, செவ்வகத்தைத் தட்டவும்</string>
     <string name="free_style_edit_drawer">அலமாரி</string>
-    <string name="free_style_edit_move_tip">ஒரு உருப்படியை நகர்த்த, அழுத்து &amp; பிடிக்கவும்</string>
+    <string name="free_style_edit_move_tip">ஒரு உருப்படியை நகர்த்த அழுத்தி பிடிக்கவும்</string>
     <string name="free_style_edit_tab_free_component">பொருள்கள்</string>
     <string name="free_style_edit_tab_shortcut">குறுக்குவழிகள்</string>
     <string name="free_style_edit_tab_widget">விட்ஜெட்கள்</string>
@@ -406,15 +364,12 @@
     <string name="gadget_weather_title_14">வானிலை</string>
     <string name="gadget_weather_title_24">வானிலை</string>
     <string name="global_search_hint">தேடு</string>
-    <string name="got_it_botton">புரிந்தது</string>
     <string name="group_folder">புதிய கோப்புறை</string>
     <string name="group_live_folders">கோப்புறை</string>
     <string name="group_shortcuts">குறுக்குவழிகள்</string>
     <string name="guide_install_app_msg">இந்தப் பயன்பாடு உங்கள் சாதனத்தில் நிறுவப்படவில்லை. பயன்பாட்டைக் கண்டறிந்து நிறுவவா?</string>
     <string name="guide_install_app_title">பயன்பாட்டை கண்டுபிடித்து, நிறுவவும்?</string>
-    <string name="guide_permission_title">அனுமதிகள் தேவை</string>
-    <string name="guide_privacy_dialog_title">சேவை விதிமுறைகள்</string>
-    <string name="guide_tips_editing_mode">ஒரு விட்ஜெட்டைத் தேர்ந்தெடுக்க, அழுத்து &amp; பிடிக்கவும்</string>
+    <string name="guide_tips_editing_mode">ஒரு விட்ஜெட்டைத் தேர்வுசெய்ய, தொட்டுப் பிடிக்கவும்</string>
     <string name="home_gesture_content_center">உள்ளடக்கம் மையம்</string>
     <string name="home_gesture_global_search">தேடவும்</string>
     <string name="home_gesture_no_action">ஒன்றுமில்லை</string>
@@ -444,9 +399,6 @@
     <string name="launcher_slide_up_title">முகப்புத் திரையில் மேல்நோக்கி ஸ்வைப் செய்க</string>
     <string name="launcher_sliding_up_gesture">தேடலைத் திறக்க, முகப்புத் திரையில் இருந்து மேல்நோக்கி ஸ்வைப் செய்யவும்</string>
     <string name="launcher_title">முகப்புத் திரை &amp; சமீபத்தியவை</string>
-    <string name="layout_guide_description">உங்களுக்கு செயலி டிராயர் பிடிக்கவில்லை என்றால், நீங்கள் எப்போது வேண்டுமானாலும் கிளாசிக் முகப்புத் திரைக்கு செல்லலாம். இரண்டு பயன்முறைகளுக்கு இடையே எளிதாக மாறுவதற்கு ”முகப்பு திரை அமைப்புகள்” குறுக்குவழியைப் பயன்படுத்தலாம்.</string>
-    <string name="layout_guide_tip_title">ஒரே தட்டலில் பழைய முறைக்கு நீங்கள் சென்று விட முடியும்</string>
-    <string name="layout_guide_title">எப்படி செயலி டிராயரை அகற்றுவது</string>
     <string name="like">விருப்பப்பட்டியலில் சேர்</string>
     <string name="liked">பிடித்தவையில் சேர்க்கப்பட்டது</string>
     <string name="loading_desktop">சற்று காத்திருங்கள்…</string>
@@ -613,11 +565,6 @@
     <string name="navigation_guide_recent_title">சமீபத்தியவைகளை திற</string>
     <string name="navigation_guide_recent_title_spec_with_quotation_pad">சமீபத்தியவைகளை திற</string>
     <string name="navigation_guide_settings">சைகை செய்முறைகள்</string>
-    <string name="navigation_position_center">மையம்</string>
-    <string name="navigation_position_left">இடது</string>
-    <string name="navigation_position_right">வலது</string>
-    <string name="navigation_position_summary">வழிசெலுத்தல் பொத்தான்களின் தனிப்பயன் நிலைகளை முகப்புத் திரையில் மட்டுமே பயன்படுத்த முடியும்</string>
-    <string name="navigation_position_title">வழிச்செலுத்தல் பொத்தான்கள் நிலை</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">ரத்துசெய்</string>
     <string name="navigation_set_miui_home_as_default_dialog_message">மூன்றாம் தரப்பு லாஞ்சர்களுடன் முழுத்திரை சைகைகளைப் பயன்படுத்த முடியாது. சிஸ்டம் லாஞ்சருக்கு மாறி, முழுத்திரை சைகைகளை இயக்கவா?</string>
     <string name="navigation_set_miui_home_as_default_dialog_ok">சரி</string>
@@ -626,11 +573,9 @@
     <string name="navigation_type_title">முறைமை வழிசெலுத்தல்</string>
     <string name="navigation_type_virtual_key">பொத்தான்கள்</string>
     <string name="network_error">நெட்வொர்க்குடன் இணைய முடியவில்லை. மீண்டும் முயலவும்.</string>
-    <string name="new_feature_title">புதிது என்ன</string>
     <string name="night">மாலை</string>
     <string name="no_detail_page">விவரங்கள் இல்லை</string>
     <string name="no_space_toast">போதுமான சேமிப்பிடம் இல்லை</string>
-    <string name="no_space_toast_fold">இங்கே போதுமான இடமில்லை</string>
     <string name="no_space_toast_when_click_widget">இந்தப் பக்கத்தில் போதுமான இடம் இல்லை. இந்த உருப்படியை வேறொரு பக்கத்திற்கு இழுத்து செல்ல முயற்சிக்கவும்.</string>
     <string name="noon">மதியம்</string>
     <string name="normal_wallpaper">வால்பேப்பர்</string>
@@ -639,7 +584,6 @@
     <string name="notification_reset_title">ஐகான்கள் வெற்றிகரமாக வரிசைப்படுத்தப்பட்டன</string>
     <string name="one_key_call_title">டயல்செய்வதற்குத் தட்டவும்</string>
     <string name="online_wallpaper">ஆன்லைன்</string>
-    <string name="open_pad_personal_assistant_settings">முகப்புத் திரை விட்ஜெட்கள்</string>
     <string name="open_personal_assistant_dialog_btn_cancel">ரத்துசெய்</string>
     <string name="open_personal_assistant_dialog_btn_confirm">அணை</string>
     <string name="open_personal_assistant_dialog_desc">செயலி வைப்பகத்தை நீங்கள் அணைத்த பிறகு, செயலி வைப்பக விட்ஜெட்களை நீங்கள் பார்க்கவோ, பயன்படுத்தவோ முடியாது. அவற்றின் புதுப்பிக்கப்பட்ட பதிப்புகளும் உங்களுக்குக் கிடைக்காது. இருந்தாலும் அணைக்கவா?</string>
@@ -651,7 +595,6 @@
     <string name="ota_layout_adjustment_content">புதிய பதிப்பில் உட்புற மற்றும் வெளிப்புற முகப்புத் திரை தளவமைப்புகள் ஒத்திசைக்கப்படும்.</string>
     <string name="ota_layout_adjustment_title">முகப்பு திரை வடிவமைப்புகள்</string>
     <string name="out_of_space">இந்த முகப்பு திரையில் மேலும் இடமில்லை</string>
-    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">மூன்றாம் தரப்பு செயலி ஐகான்களில் அனிமேஷன்களைக் காட்டு</string>
     <string name="perfect_icons_switch_title">ஒட்டுமொத்த ஐகான் அனிமேஷன்கள்</string>
     <string name="permdesc_install_shortcut">பயனர் குறுக்கீடு இல்லாமல் பயன்பாடு குறுக்குவழிகளை சேர்க்க அனுமதிக்கும்.</string>
@@ -671,7 +614,6 @@
     <string name="photo_load_failed">படத்தை ஏற்ற முடியவில்லை</string>
     <string name="please_slide_agian">மீண்டும் ஸ்லைடு செய்க</string>
     <string name="pm">PM</string>
-    <string name="popular_search">பிரபலமானவை</string>
     <string name="pref_cell_layout_size">பயன்பாட்டு ஐகான் தளவமைப்பு</string>
     <string name="pref_enable_drawing_cache_summary">நினைவகத்தை காலியாக்க அணைக்கவும். இதனால் மெதுவான செயல்திறன் ஏற்படலாம்.</string>
     <string name="pref_enable_drawing_cache_title">வரைதல் தேக்ககம்</string>
@@ -691,14 +633,6 @@
     <string name="privacy_thumbnail_blur_summary">சமீபத்தியவையில் செயலி முன்னோட்டங்களை மங்கலாக்கவும்</string>
     <string name="privacy_thumbnail_blur_title">செயலி முன்னோட்டங்களை மங்கலாக்கவும்</string>
     <string name="quick_app">விரைவு செயலி</string>
-    <string name="quick_finder_feature_description">விரைவு கண்டறிதல், உங்களை செயலிக்குள்ளான உள்ளடக்கம் மற்றும் ஆன்லைன் உருப்படிகளை வேகமாகக் கண்டறிய உதவுகிறது. நீங்கள் இந்த அம்சத்தை அமைப்புகளில் முடக்கலாம்.</string>
-    <string name="quick_finder_tip_title">நீங்கள் தேடுவது எதையும் விரைவாகக் கண்டறியுங்கள்</string>
-    <string name="quick_search_all_app_desc">செயலி வைப்பகத்தில் எல்லா செயலிகளையும் காண்பி</string>
-    <string name="quick_search_desc">செயலி வைப்பகத்தைத் திறந்த பின், தேடலைத் திற</string>
-    <string name="quick_search_guide_all_apps">அனைத்து செயலிகள்</string>
-    <string name="quick_search_guide_ok_btn">சரி</string>
-    <string name="quick_search_guide_quick_search">விரைவு தேடல்</string>
-    <string name="quick_search_guide_title">இயல்புநிலை பயன்முறையைத் தேர்ந்தெடு</string>
     <string name="recent_apps">சமீபத்தியவை</string>
     <string name="recent_menu_item_info">தகவல்</string>
     <string name="recent_menu_item_lock">பூட்டு</string>
@@ -727,13 +661,6 @@
     <string name="recents_title_market">செயலிகளைக் கண்டறிக</string>
     <string name="recents_title_security_scan">பாதுகாப்பு ஸ்கேன்</string>
     <string name="recents_tv_small_window_text">மிதக்கும் சாளரங்கள்</string>
-    <string name="recents_worldcirculate_text">தேர்ந்தெடுக்க விடுவிக்கவும்</string>
-    <string name="recnets_relay_device_info">%s இடமிருந்து</string>
-    <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
-    <string name="recnets_worldcirculate_display_computer_info">%s -இல் செயலி செயல்படுகிறது.</string>
-    <string name="recnets_worldcirculate_display_default_info">மீண்டும் இங்கே கொண்டு வர, தட்டவும்.</string>
-    <string name="recnets_worldcirculate_display_default_info_pad">மீண்டும் இங்கே கொண்டு வர, தட்டவும்.</string>
-    <string name="recnets_worldcirculate_display_pad_info">%s -இல் செயலி செயல்படுகிறது.</string>
     <string name="recommend_apk_size_and_desc">%1$dMB | %2$s</string>
     <string name="recommend_app">செயலி பரிந்துரைகள்</string>
     <string name="recommend_apps_default_title">காலி</string>
@@ -751,8 +678,6 @@
     <string name="remove_invalidate_gadget_tips">நீங்கள் பயன்படுத்தும் விட்ஜெட்களில் ஒன்று இப்போது கிடைக்கவில்லை. நீங்கள் வேறொன்றைச் சேர்க்கலாம்.</string>
     <string name="remove_sys_app_content">நீங்கள் மீண்டும் முகப்புத் திரை குறுக்குவழியை அமைப்புகள் > செயலிகள் > முகப்பு திரை குறுக்குவழிகளை நிர்வகிக்கவும் என்பதில் இருந்து சேர்க்க முடியும். இப்போது அகற்ற விரும்புகிறீர்களா?</string>
     <string name="remove_sys_app_title">முகப்பு திரை குறுக்குவழியை அகற்றவா?</string>
-    <string name="request_permission_msg">முழுமையான செயல்திறனை உங்களுக்கு வழங்க, POCO துவக்கிக்கு இன்னும் இரண்டு அனுமதிகள் தேவைப்படுகிறது.</string>
-    <string name="request_permission_title">அனுமதிகள் தேவை</string>
     <string name="reset_cate_tip_content">நீங்கள் தொடர்ந்தால், இயல்புநிலை செயலி குழுக்கள் மீட்டெடுக்கப்படும். இருந்தாலும் தொடரவா?</string>
     <string name="reset_cate_tip_title">இயல்புநிலை குழுக்களை மீட்டமை</string>
     <string name="reset_description_first_time">2 மணிநேரத்திற்குள் %1$s இலிருந்து தளவமைப்பை மீட்டெடுக்கலாம்</string>
@@ -768,8 +693,6 @@
     <string name="screen_cells_config_title">முகப்புத்திரை தளவமைப்பு</string>
     <string name="screen_locked_toast">முகப்புத் திரை வடிவமைப்பு பூட்டப்பட்டுள்ளது.</string>
     <string name="screen_number">%d திரை</string>
-    <string name="search_bar_hint_content">செயலிகள் மற்றும் உள்ளடக்கத்தைத் தேடவும்</string>
-    <string name="search_guide_btn">புரிந்தது</string>
     <string name="search_in_apps_store">%2$s -இல் \"%1$s\" -ஐத் தேடவும்</string>
     <string name="search_no_result">முடிவுகள் எதுவும் கிடைக்கவில்லை</string>
     <string name="select_all">அனைத்தையும் தேர்ந்தெடு</string>
@@ -777,7 +700,6 @@
     <string name="select_photo">படம்</string>
     <string name="send">அனுப்பு</string>
     <string name="server_error">சர்வர் பிழை ஏற்பட்டது. ஓரிரு நிமிடம் காத்திருந்து மீண்டும் முயலவும்.</string>
-    <string name="service_double_attention">மேம்பட்ட தேடல் செயல்பாடானது, Branch Metrics Inc. -ஆல் வழங்கப்படுகிறது. இந்த அம்சம் செயல்பட, நாங்கள் உங்களுடைய தேடல் கோரிக்கைகள், Google Ads ID மற்றும் IP முகவரி ஆகியவற்றை Branch Metrics Inc. உடன் பகிர்ந்து கொள்ள் வேண்டும். இந்த அம்சத்தைப் பயன்படுத்துவதற்கு முன்பாக, <a href="http://url1"><font color="#B3000000">இறுதிப் பயனர் கண்டறிதல் விதிமுறைகள் &amp; நிபந்தனைகள்</font></a> மற்றும் <a href="http://url2"><font color="#B3000000">Branch Discovery தனியுரிமைக் கொள்கை</font></a> ஆகியவற்றைப் படித்து ஏற்றுக் கொள்ளவும்.</string>
     <string name="setting_wallpaper_tip">சரிசெய்ய பின்ச் அல்லது ஸ்வைப் செய்யவும்</string>
     <string name="settings">அமைப்புகள்</string>
     <string name="settings_shortcut">அமைப்புகள்</string>
@@ -815,13 +737,11 @@
     <string name="status_installing">நிறுவுகிறது</string>
     <string name="status_paused">இடைநிறுத்தப்பட்டது</string>
     <string name="status_pending">காத்திருப்பவை</string>
-    <string name="suggestions">பரிந்துரைகள்</string>
     <string name="sunday">ஞாயிறு</string>
     <string name="sunday_short">ஞாயி</string>
     <string name="sunday_shortest">ஞாயி</string>
     <string name="swipe_the_desktop_to_the_left">முகப்புத் திரையில் இடதுபுறம் ஸ்வைப் செய்க</string>
     <string name="swipe_the_desktop_to_the_right">முகப்புத் திரையில் வலதுபுறம் ஸ்வைப் செய்க</string>
-    <string name="switch_on_button">இயக்கு</string>
     <string name="switch_personal_assistant_app_vault">செயலி வைப்பகம்</string>
     <string name="switch_personal_assistant_google">Google Discover</string>
     <string name="switch_personal_assistant_none">ஒன்றுமில்லை</string>
@@ -832,10 +752,6 @@
     <string name="system_shortcuts_remove">அகற்று</string>
     <string name="system_text">தானியங்கு</string>
     <string name="task_access_locked_app_msg">செயலி பூட்டு இயக்கப்பட்டது</string>
-    <string name="term_of_service">விதிமுறைகள் மற்றும் நிபந்தனைகள்</string>
-    <string name="terms_of_services_one">செயலி வைப்பகம் மற்றும் விரைவு கண்டறிதலுக்கு வரவேற்கிறோம். விரைவு கண்டறிதல், உங்களை செயலிகளையும், செயலிகளுக்குள்ளான உள்ளடக்கத்தையும் ஆன்லைன் உருப்படிகளையும் வேகமாகக் கண்டறிய அனுமதிக்கிறது. இந்த அம்சங்களைப் பயன்படுத்துவதற்கு முன்பாக Xiaomi -இன் <a href="http://url1"><font color="#B3000000">தனியுரிமைக் கொள்கையை</font></a> படிக்கவும்.</string>
-    <string name="terms_of_services_three">அமைப்புகளில், இந்த அம்சத்தை நீங்கள் அணைக்கலாம்.</string>
-    <string name="terms_of_services_two">மேம்பட்ட தேடலைப் பயன்படுத்துவது மூலமாக, அத்தியாவசியமான தனிப்பட்ட தகவல்களை Branch Metrics Inc. உடன் பகிர்ந்து கொள்ள வேண்டியிருக்கலாம், இதில் உங்கள் தேடல் வினவல்கள் Google விளம்பரப்படுத்தல் ID மற்றும் IP முகவரிகள் உள்ளடங்கலாம், Branch உங்கள் தனிப்பட்ட தகவல்களை <a href="http://url1"><font color="#B3000000">Branch Discovery தனியுரிமைக் கொள்கைக்கு</font></a> இணங்கியபடி செயலாக்கும். இந்த அம்சத்தைப் பயன்படுத்த தொடங்குவதற்கு முன்பாக, <a href="http://url2"><font color="#B3000000">End User Discovery விதிகள் மற்றும் நிபந்தனைகள்</font></a> மற்றும் <a href="http://url3"><font color="#B3000000">Branch Discovery தனியுரிமைக் கொள்கை</font></a> ஆகியவற்றைப் படித்து ஏற்றுக் கொள்ளவும்.</string>
     <string name="the_anniversary_of_lifting_martial_law">ராணுவ சட்ட விலக்கப்பட்ட ஆண்டு விழா</string>
     <string name="the_anti_aggression_day">வன்முறை எதிர்ப்பு தினம்</string>
     <string name="the_arbor_day">ஆர்பர் நாள்</string>
@@ -902,11 +818,6 @@
     <string name="tuesday">செவ்வாய்</string>
     <string name="tuesday_short">செவ்</string>
     <string name="tuesday_shortest">செவ்</string>
-    <string name="uni_search_permission_content">ஆன்லைன் தேடல் அம்சங்களை இயக்கு. (தேடல் சேவைகள் Branch-ஆல் வழங்கப்படுகின்றன.)</string>
-    <string name="uni_search_permission_msg">தேடல் முடிவுகளை மேம்படுத்த, POCO துவக்கி உங்கள் இருப்பிடத்தையும் தொடர்புகளையும் அணுக அனுமதிக்கவும்.</string>
-    <string name="uni_search_permission_title">மேம்பட்ட தேடல்</string>
-    <string name="uni_search_setting_summary">செயலிக்குள்ளே உள்ளடக்கத்தை நேரடியாக கண்டறியவும்</string>
-    <string name="uni_search_setting_title">செயலிக்குள்ளான வினவல் பயன்முறை</string>
     <string name="uninstall">நிறுவல்நீக்கு</string>
     <string name="uninstall_dialog_message">நிறுவல்நீக்கினால், பயன்பாட்டு தரவு அனைத்தும் நீக்கப்படும்.</string>
     <string name="uninstall_dialog_title_format">%s ஐ நிறுவல் நீக்கவா?</string>
@@ -917,7 +828,6 @@
     <string name="uninstall_xspace_dialog_title_format">இரட்டை \"%s\" ஐ நிறுவல் நீக்கவா?</string>
     <string name="unknown_artist_name">தெரியாத கலைஞர்</string>
     <string name="unnamed_folder_name">கோப்புறை</string>
-    <string name="upgrade_remove_small_window_in_recents">மிதக்கும் சாளரங்களில் பக்கப்பட்டி திறக்க நீங்கள் பக்கப்பட்டியைப் பயன்படுத்தலாம்</string>
     <string name="wallpaper">வால்பேப்பர்</string>
     <string name="wallpaper_auto_change_title">திரை பூட்டு</string>
     <string name="wallpaper_failed_message">வால்பேப்பரை அமைக்க முடியவில்லை</string>
@@ -940,7 +850,7 @@
     <string name="work_profile_first_content">தனிப்பட்ட தரவு தனிப்பட்டதாக இருக்கும் &amp; பணி செயலிகளில் இருந்து மறைக்கப்பட்டிருக்கும்</string>
     <string name="work_profile_got_button">புரிந்தது</string>
     <string name="work_profile_next_button">அடுத்தது</string>
-    <string name="work_profile_second_content">பணி செயலிகள் &amp; தரவு உங்கள் IT நிர்வாகிக்கு தெரியும்படி இருக்கும்</string>
+    <string name="work_profile_second_content">பணி செயலிகளும் தரவும் உங்கள் IT நிர்வாகிக்கு தெரியும்படி இருக்கும்</string>
     <string name="work_profile_title">பணி சுயவிவரம்</string>
     <string name="work_profile_toggle_label">பணி சுயவிவரம்</string>
     <string name="yesterday">நேற்று</string>

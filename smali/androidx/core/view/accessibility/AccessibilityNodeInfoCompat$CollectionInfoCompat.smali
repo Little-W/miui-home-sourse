@@ -22,10 +22,10 @@
 .method constructor <init>(Ljava/lang/Object;)V
     .locals 0
 
-    .line 809
+    .line 764
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 810
+    .line 765
     iput-object p1, p0, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$CollectionInfoCompat;->mInfo:Ljava/lang/Object;
 
     return-void
@@ -34,14 +34,14 @@
 .method public static obtain(IIZI)Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$CollectionInfoCompat;
     .locals 2
 
-    .line 779
+    .line 734
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x15
 
     if-lt v0, v1, :cond_0
 
-    .line 780
+    .line 735
     new-instance v0, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$CollectionInfoCompat;
 
     invoke-static {p0, p1, p2, p3}, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionInfo;->obtain(IIZI)Landroid/view/accessibility/AccessibilityNodeInfo$CollectionInfo;
@@ -52,7 +52,7 @@
 
     return-object v0
 
-    .line 782
+    .line 737
     :cond_0
     sget p3, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -60,7 +60,7 @@
 
     if-lt p3, v0, :cond_1
 
-    .line 783
+    .line 738
     new-instance p3, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$CollectionInfoCompat;
 
     invoke-static {p0, p1, p2}, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionInfo;->obtain(IIZ)Landroid/view/accessibility/AccessibilityNodeInfo$CollectionInfo;
@@ -71,7 +71,7 @@
 
     return-object p3
 
-    .line 786
+    .line 741
     :cond_1
     new-instance p0, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$CollectionInfoCompat;
 

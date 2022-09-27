@@ -17,10 +17,10 @@
 
     const-string v0, "allapps"
 
-    .line 28
+    .line 24
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/common/BaseSharePreference;-><init>(Ljava/lang/String;)V
 
-    .line 29
+    .line 25
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;->registerOnSharedPreferenceChangeListener()V
 
     return-void
@@ -29,7 +29,7 @@
 .method synthetic constructor <init>(Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper$1;)V
     .locals 0
 
-    .line 16
+    .line 15
     invoke-direct {p0}, Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;-><init>()V
 
     return-void
@@ -38,7 +38,7 @@
 .method public static getInstance()Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;
     .locals 1
 
-    .line 37
+    .line 33
     invoke-static {}, Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper$Holder;->access$100()Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;
 
     move-result-object v0
@@ -55,7 +55,7 @@
 
     const/16 v1, 0xff
 
-    .line 62
+    .line 58
     invoke-virtual {p0, v0, v1}, Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;->getInt(Ljava/lang/String;I)I
 
     move-result v0
@@ -76,12 +76,12 @@
 
     const/4 v1, 0x0
 
-    .line 46
+    .line 42
     invoke-virtual {p0, v0, v1}, Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 47
+    .line 43
     sget-object v1, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->LIGHT:Lcom/miui/home/launcher/allapps/AllAppsColorMode;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->name()Ljava/lang/String;
@@ -94,12 +94,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 48
+    .line 44
     sget-object v0, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->LIGHT:Lcom/miui/home/launcher/allapps/AllAppsColorMode;
 
     return-object v0
 
-    .line 49
+    .line 45
     :cond_0
     sget-object v1, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->DARK:Lcom/miui/home/launcher/allapps/AllAppsColorMode;
 
@@ -113,12 +113,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 50
+    .line 46
     sget-object v0, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->DARK:Lcom/miui/home/launcher/allapps/AllAppsColorMode;
 
     return-object v0
 
-    .line 51
+    .line 47
     :cond_1
     sget-object v1, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->SYSTEM:Lcom/miui/home/launcher/allapps/AllAppsColorMode;
 
@@ -132,12 +132,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 52
+    .line 48
     sget-object v0, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->SYSTEM:Lcom/miui/home/launcher/allapps/AllAppsColorMode;
 
     return-object v0
 
-    .line 54
+    .line 50
     :cond_2
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->supportDarkMode()Z
 
@@ -163,7 +163,7 @@
 
     const/4 v1, 0x1
 
-    .line 86
+    .line 82
     invoke-virtual {p0, v0, v1}, Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
@@ -176,29 +176,11 @@
 
     const-string v0, "auto_add_app_shortcut"
 
-    .line 94
-    invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getBranchSettingManager()Lcom/mi/globallauncher/branchInterface/IBranchSettingManager;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Lcom/mi/globallauncher/branchInterface/IBranchSettingManager;->branchAutoAddAppShortcut()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
+    .line 90
     sget-boolean v1, Lcom/miui/home/launcher/DeviceConfig;->IS_SB_BUILD:Z
 
-    if-nez v1, :cond_0
+    xor-int/lit8 v1, v1, 0x1
 
-    const/4 v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    :goto_0
     invoke-virtual {p0, v0, v1}, Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
@@ -211,7 +193,7 @@
 
     const-string v0, "letter_fast_scroller_enable"
 
-    .line 78
+    .line 74
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v1
@@ -236,7 +218,7 @@
 
     const/4 v1, 0x1
 
-    .line 70
+    .line 66
     invoke-virtual {p0, v0, v1}, Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
@@ -247,7 +229,7 @@
 .method public onSharedPreferenceChanged(Landroid/content/SharedPreferences;Ljava/lang/String;)V
     .locals 1
 
-    .line 42
+    .line 38
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object p1
@@ -266,7 +248,7 @@
 
     const-string v0, "app_category_enable"
 
-    .line 90
+    .line 86
     invoke-virtual {p0, v0, p1}, Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;->putBoolean(Ljava/lang/String;Z)V
 
     return-void
@@ -277,7 +259,7 @@
 
     const-string v0, "auto_add_app_shortcut"
 
-    .line 98
+    .line 94
     invoke-virtual {p0, v0, p1}, Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;->putBoolean(Ljava/lang/String;Z)V
 
     return-void
@@ -288,7 +270,7 @@
 
     const-string v0, "background_alpha"
 
-    .line 66
+    .line 62
     invoke-virtual {p0, v0, p1}, Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;->putInt(Ljava/lang/String;I)V
 
     return-void
@@ -299,7 +281,7 @@
 
     const-string v0, "color_mode"
 
-    .line 58
+    .line 54
     invoke-virtual {p0, v0, p1}, Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -310,7 +292,7 @@
 
     const-string v0, "letter_fast_scroller_enable"
 
-    .line 82
+    .line 78
     invoke-virtual {p0, v0, p1}, Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;->putBoolean(Ljava/lang/String;Z)V
 
     return-void
@@ -321,7 +303,7 @@
 
     const-string v0, "recommend_app_enable"
 
-    .line 74
+    .line 70
     invoke-virtual {p0, v0, p1}, Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;->putBoolean(Ljava/lang/String;Z)V
 
     return-void

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.mi.globallauncher.search.SearchResultMaskView android:id="@id/search_result_mask" android:background="@color/alpha30black" android:focusable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.mi.globallauncher.view.CustomListView android:id="@id/mask_list_view" android:background="@color/transparent" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@color/transparent" android:stackFromBottom="true" android:transcriptMode="alwaysScroll" android:fadeScrollbars="false" android:paddingStart="@dimen/dp14" android:paddingEnd="@dimen/dp14" />
-    <ImageView android:id="@id/mask_close_btn" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp16" android:src="@drawable/icon_close_with_bg" android:layout_alignParentTop="true" android:contentDescription="@string/btn_close" android:layout_marginEnd="@dimen/dp24" android:layout_alignParentEnd="true" />
-</com.mi.globallauncher.search.SearchResultMaskView>

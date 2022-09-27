@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="Icon_name_classic_mode">Saittunan Allon farko</string>
     <string name="accessibility_all_app_custom_category_finish">An gama yi</string>
     <string name="accessibility_all_app_custom_category_item_remove">"Cire ''%1$s'' daga su iri"</string>
     <string name="accessibility_clear_search_bar_text">"Goge ba'a na bincike"</string>
     <string name="accessibility_enter_all_app_mode">"Bude Ma'ajin manhaja"</string>
     <string name="accessibility_enter_all_app_settings">"Bude saittunan Ma'ajin manhaja"</string>
-    <string name="accessibility_menu_item_smallwindow_disable">Wannan manhajar bai dace da bambarowar taga</string>
-    <string name="accessibility_menu_item_smallwindow_enable">Wannan manhajar ya dace Bambarowar taga</string>
+    <string name="accessibility_menu_item_smallwindow_disable">Wannan manhajar bai dace da tagar bambarowa</string>
+    <string name="accessibility_menu_item_smallwindow_enable">Wannan manhajar ya dace tagar bambarowa</string>
     <string name="accessibility_menu_item_split_disable">Manhajar bai iya aiki da Raba allo.</string>
     <string name="accessibility_menu_item_split_enable">Manhajar na aiki da Raba allo</string>
     <string name="accessibility_recent_task_enter">Bude na kwanan nan</string>
@@ -26,10 +25,8 @@
     <string name="activity_not_unlocked">"Dakata har sai na'urarka ta sake kunnawa sosai kafin budewar manhaja"</string>
     <string name="add_custom_category">Tsara da kanka</string>
     <string name="add_screen">Kara allon</string>
-    <string name="add_to_workspace">Kara ma Allon waje</string>
     <string name="added_all_category">An yi nasarar kara manhaja</string>
     <string name="afternoon">Yamma</string>
-    <string name="agree_button">Yarda</string>
     <string name="alexa_notification_add">Kara</string>
     <string name="alexa_notification_cancel">"Ba'a yanzu ba"</string>
     <string name="alexa_notification_content">Kara gajerar hanyar Alexa zuwa Santar sarrafawa?</string>
@@ -68,7 +65,6 @@
     <string name="all_apps_slide_up_tips">An ajiye ja ta sama don budewar Akwatin manhaja. Canza zuwa yanayin Allon farko na daidai sai ka sake gwadawa.</string>
     <string name="all_apps_suggestions">Shawararin manhaja</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">Saurin yin wasa</string>
     <string name="announce_for_app_move_in_folder">An matsa zuwa matsayi na %1$d a cikin foldan</string>
     <string name="announce_for_checked">Ya bincika, %1$s</string>
     <string name="announce_for_choose_default_screen">Saita allon %1$d a matsayin Allon farko na asali</string>
@@ -121,13 +117,6 @@
     <string name="app_category_tools">Na kayan aiki</string>
     <string name="app_category_travel">Na tafiya</string>
     <string name="app_category_vr">Na VR</string>
-    <string name="app_drawer_double_confirm_description">Wannan zai canza nunawar Allon farko. Za ku iya sake waɗannan canje-canje a Saittuna a gaba.</string>
-    <string name="app_drawer_double_confirm_title">Kula</string>
-    <string name="app_drawer_feature_description">"Ma'ajin manhaja wata cikakke kayan aiki ne don tsara duk manhajaka. Rarraba manhaja ta atomatik kuma sami duk abin da kuke buƙata a da sauri!"</string>
-    <string name="app_drawer_guide_description">Samu abun da kake nema a cikin manhajar daka fiso</string>
-    <string name="app_drawer_guide_title">Akwatin manhaja</string>
-    <string name="app_drawer_tip_title">"Mun canza Abunda ya kunsa da Ma'ajiyin manhaja."</string>
-    <string name="app_install_state">An sanya</string>
     <string name="app_name">smallWindow</string>
     <string name="application_name">Kaddamarwar sistem</string>
     <string name="apply">Saita</string>
@@ -150,35 +139,8 @@
     <string name="back">Na baya</string>
     <string name="backup_fail">"Ba'a iya maido da bayanan mai kaddamarwa"</string>
     <string name="bad_wallpaper_source_prompt">Ya kasa lodin hoton fuskar allon</string>
-    <string name="branch_feature_description">Bayan manhaja, Quick Finder na iya samun abubuwan cikin-app da abubuwa akan layi.</string>
-    <string name="branch_guide_attention">Amfani da ingantaccen bincike yana buƙatar raba buƙatun bincikenku, ID ɗin Talla na Google, da adireshin IP tare da Branch Metrics Inc. Karanta kuma ka yarda da <a href="http://url1"><font color="#B3000000">Sharuɗɗan Binciken Mai amfani&amp;Yanayi</font></a> da <a href="http://url2"><font color="#B3000000">Sharuddan Bayanai na Branch Discovery</font></a> kafin amfani da wannan siffar.</string>
-    <string name="branch_guide_description_one">"Za mu sanya duk ayyukanka a cikin Ma'ajin manhaja. Allon farko zata zama mai tsari da tsabta."</string>
-    <string name="branch_guide_description_three">Tare da binciken-ginannen, zaku iya samun duk abin da kuke buƙata a cikin sauri!</string>
-    <string name="branch_guide_description_two">"Ma'ajin manhaja na shirya manhaja da kansa"</string>
-    <string name="branch_guide_tip_title">Kowane manhaja a wurin sa</string>
-    <string name="branch_guide_title">"Hadu da Ma'ajin manhaja"</string>
-    <string name="branch_guide_type_four_desc">Kuna iya komawa tsohuwar hanyoyi ta matakai biyu masu sauƙi</string>
-    <string name="branch_guide_type_four_main">A cikin Saittuna, je zuwa Allon farko > Allon farko kuma zaɓi \"Gargajiya\".</string>
-    <string name="branch_guide_type_four_step_one">Bude Saittuna</string>
-    <string name="branch_guide_type_four_step_two">Zabi Allon farko</string>
-    <string name="branch_guide_type_one_desc">"Sarrafa manhajar ka tare Ma'ajin manhaja"</string>
-    <string name="branch_guide_type_one_main">"Ajiye manhajar ka a cikin Ma'ajin manhaja don sa Allon farko ya zama sabo da tsari."</string>
-    <string name="branch_new_feature">Sabon siffa</string>
-    <string name="branch_privacy_policy">Sharuddan Bayanai</string>
-    <string name="branch_search_guide_description">Ana fahimtar sakamakon binciken mu a yanzu</string>
-    <string name="branch_search_guide_privacy">"Branch Metrics Inc ke bada wannan sabis. Bayanan gano wuri, binciken tambayoyi da ID tallacen tallacen za'a rabar tare da Branch. Karanta kuma ka amince da "<a href="http://url1"><font color="#B3000000">Sharuddan Yanayi</font></a> da <a href="http://url2"><font color="#B3000000">Sharuddan bayanai</font></a> kafin amfani da wannan sabis.</string>
-    <string name="branch_search_guide_title">Samu abun da kake nema a cikin manhajar daka fiso</string>
-    <string name="branch_terms_condition">Sharudda da Yanayi</string>
-    <string name="branch_tip_title">Tare da Quick Finder, zaka iya samun duk abin da kake buƙata a cikin sauri.</string>
-    <string name="btn_agree">Amince</string>
-    <string name="btn_cancel">Soke</string>
-    <string name="btn_close">Kashe</string>
-    <string name="btn_open">Kunna</string>
-    <string name="btn_request_permission">Ba da izini</string>
-    <string name="btn_set_right_now">Ba da izini</string>
     <string name="buffering">Rigakafin…</string>
     <string name="cancel_action">Soke</string>
-    <string name="cancel_botton">Soke</string>
     <string name="cancel_btn_label">Soke</string>
     <string name="cant_edit_lock_screen">Ya kasa gyara salon Allon kulle</string>
     <string name="cant_remove_folder">Ya kasa cire folda</string>
@@ -288,11 +250,9 @@
     <string name="emptyplaylist">Taba ka kara wakoki</string>
     <string name="enable_wallpaper_scroll">Kunna gungurawa na gefe</string>
     <string name="encryption">Buyar bayanai</string>
-    <string name="enter_search_setting_title">"Bude bincike bayan ka bude ma'ajin Manhaja"</string>
     <string name="eras_ad">CE</string>
     <string name="eras_bc">BCE</string>
     <string name="evening">Yamma</string>
-    <string name="exit_overview_because_task_stack_changed">Rufe Na kwanan nan baya saboda canje-canje da suka faru a bango</string>
     <string name="failed_to_delete_temporary">Ya kasa cirewa</string>
     <string name="failed_to_drop">Ya kasa canzawa</string>
     <string name="failed_to_drop_widget_invalid">Wijet din bai da asali</string>
@@ -349,8 +309,6 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
-    <string name="fold_pair_install_shortcut_long_click">Danna ka rike don ka Kara zuwa allon farko</string>
-    <string name="fold_pair_installed_shortcut_launcher">Akwai irin wannan gajeren hanya</string>
     <string name="folder_name">Folda</string>
     <string name="frame_load_failed">An kasa lodin firam</string>
     <string name="free_style_apps_title">Zabi manhajar</string>
@@ -406,14 +364,11 @@
     <string name="gadget_weather_title_14">Yanayin iska</string>
     <string name="gadget_weather_title_24">Yanayin iska</string>
     <string name="global_search_hint">Bincika</string>
-    <string name="got_it_botton">Na fahimta</string>
     <string name="group_folder">Sabon folda</string>
     <string name="group_live_folders">Folda</string>
     <string name="group_shortcuts">Gajerar hanya</string>
     <string name="guide_install_app_msg">"Ba'a sanya manhajar akan na'urar ka ba. A nema kuma a kaffa manhajar a yanzu?"</string>
     <string name="guide_install_app_title">A nema kuma a sanya manhajar?</string>
-    <string name="guide_permission_title">Ana bukatar izini</string>
-    <string name="guide_privacy_dialog_title">Sharuddan ayyuka</string>
     <string name="guide_tips_editing_mode">Danna &amp; rike sai ka zabi wijet</string>
     <string name="home_gesture_content_center">Tsakiyar Abu</string>
     <string name="home_gesture_global_search">Bincike</string>
@@ -444,9 +399,6 @@
     <string name="launcher_slide_up_title">Ja zuwa sama akan Allon farko</string>
     <string name="launcher_sliding_up_gesture">Jawo zuwa sama akan Allon farko ka bude bincike</string>
     <string name="launcher_title">Allon farko &amp; na kwanan nan</string>
-    <string name="layout_guide_description">"Idan bakya son Ma'ajin manhaja, a koyaushe zaku iya komawa shafin allo na yau da kullun. Kawai yi amfani da gajeriyar hanyar \"Saittunan Allon farko\" kuma sauyawa tsakanin yanayin."</string>
-    <string name="layout_guide_tip_title">Kuna iya komawa tsoffin hanyoyin cikin tabawa guda ɗaya</string>
-    <string name="layout_guide_title">"Ta yaya ake cire Ma'ajin manhaja"</string>
     <string name="like">Kara zuwa wanda aka fiso</string>
     <string name="liked">An kara ma wanda ka fiso</string>
     <string name="loading_desktop">Dan dakata…</string>
@@ -613,11 +565,6 @@
     <string name="navigation_guide_recent_title">Bude na kwanan nan</string>
     <string name="navigation_guide_recent_title_spec_with_quotation_pad">Bude na kwanan nan</string>
     <string name="navigation_guide_settings">Gwajin taɓin umurni</string>
-    <string name="navigation_position_center">Tsakiya</string>
-    <string name="navigation_position_left">Hagu</string>
-    <string name="navigation_position_right">Dama</string>
-    <string name="navigation_position_summary">Ana iya sanya matsayi na madannin kewayawa da aka tsara zuwa Allon farko kadai</string>
-    <string name="navigation_position_title">Matsayin Madannin kewayawa</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">Soke</string>
     <string name="navigation_set_miui_home_as_default_dialog_message">Ba za a iya amfani da isharar allo tare da masu ƙaddamarwa na ɓangare na uku ba. Canja zuwa tsarin ƙaddamarwar sistem kuma kunna isharar cikakken allo?</string>
     <string name="navigation_set_miui_home_as_default_dialog_ok">Ya yi</string>
@@ -626,11 +573,9 @@
     <string name="navigation_type_title">Sistem na kewayawa</string>
     <string name="navigation_type_virtual_key">Madanni</string>
     <string name="network_error">Ya kasa hadawa da hanyar sadarwa. Sake gwadawa.</string>
-    <string name="new_feature_title">Me ke faruwa</string>
     <string name="night">Maraice</string>
     <string name="no_detail_page">Babu shafin karin bayani</string>
     <string name="no_space_toast">Babu isashen sarari</string>
-    <string name="no_space_toast_fold">Babu isashen wuri a nan</string>
     <string name="no_space_toast_when_click_widget">Babu isashen sarari akan wannan shafin. Yi kokari ka ja wannan abu zuwa wani shafi daban.</string>
     <string name="noon">Da rana</string>
     <string name="normal_wallpaper">Hoton fuskar allon</string>
@@ -639,7 +584,6 @@
     <string name="notification_reset_title">An yi nasarar gyara tambari</string>
     <string name="one_key_call_title">Taba ka buga</string>
     <string name="online_wallpaper">Na kan layi</string>
-    <string name="open_pad_personal_assistant_settings">Wijet na Allon farko</string>
     <string name="open_personal_assistant_dialog_btn_cancel">Soke</string>
     <string name="open_personal_assistant_dialog_btn_confirm">Kashe</string>
     <string name="open_personal_assistant_dialog_desc">"Bayan kun kashe taskar manhaja, ba za ku iya gani ko amfani da wijet na Ma'ajiyar manhaja ba. Sabbin sigoginsu kuma ba za su same ku ba. Kashe ta wata hanya?"</string>
@@ -651,7 +595,6 @@
     <string name="ota_layout_adjustment_content">An daidaita tsarin allo na ciki da waje a cikin sabon sigar.</string>
     <string name="ota_layout_adjustment_title">Shimfidar Allon waje</string>
     <string name="out_of_space">Babu wuri kuma akan allon farko</string>
-    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">Wasu wasanni akan tambarin wasu manhaja daban</string>
     <string name="perfect_icons_switch_title">Tambarin global</string>
     <string name="permdesc_install_shortcut">Bada dama ma manhaja ya kara gajeren hanya ba tare da wani aikin mai amfani ba.</string>
@@ -671,10 +614,9 @@
     <string name="photo_load_failed">Ya kasa lodin hoto</string>
     <string name="please_slide_agian">Sake murzawa</string>
     <string name="pm">PM</string>
-    <string name="popular_search">Mafi shahara</string>
     <string name="pref_cell_layout_size">Nunin tambarin manhajar</string>
     <string name="pref_enable_drawing_cache_summary">Kashe ka fanco sarari a mimori. Wannan na iya rage karfin yin aiki.</string>
-    <string name="pref_enable_drawing_cache_title">Zana gurbin bayanai</string>
+    <string name="pref_enable_drawing_cache_title">"Ma'adanin kera hoto"</string>
     <string name="pref_icon_shadow_summary">Nuna inuwa manhajar da kuma yanayin ganin abun da aka fi so.</string>
     <string name="pref_icon_shadow_title">Inuwar tambari</string>
     <string name="pref_keep_in_memory_summary">A bar mai kaddamarwa ya ci gaba da aiki idan mimori ya yi kasa.</string>
@@ -691,14 +633,6 @@
     <string name="privacy_thumbnail_blur_summary">Sa duhu ma dubin farko na manhaja a cikin na kwanan nan</string>
     <string name="privacy_thumbnail_blur_title">Sa duhu ma dubin farko na manhaja</string>
     <string name="quick_app">Manhaja na hanzari</string>
-    <string name="quick_finder_feature_description">Quick Finder yana ba ka damar nemo manhaja, abubuwan manhaja ya kunsa, da abubuwa kan layi da sauri. Kuna iya kashe wannan fasalin a cikin Saittuna.</string>
-    <string name="quick_finder_tip_title">Nemi duk abin da kuke buƙata da sauri</string>
-    <string name="quick_search_all_app_desc">"Nuna dukan manhaja a cikin Ma'ajin manhaja"</string>
-    <string name="quick_search_desc">"Bude bincike bayan ka bude ma'ajin Manhaja"</string>
-    <string name="quick_search_guide_all_apps">Duka manhaja</string>
-    <string name="quick_search_guide_ok_btn">Ya Yi</string>
-    <string name="quick_search_guide_quick_search">Bincike na hanzari</string>
-    <string name="quick_search_guide_title">Zabi yanayi na asali</string>
     <string name="recent_apps">Na kwanan nan</string>
     <string name="recent_menu_item_info">Bayanai</string>
     <string name="recent_menu_item_lock">Kulle</string>
@@ -707,9 +641,9 @@
     <string name="recents_app_info_button_label">Bayanan manhajar</string>
     <string name="recents_clear_all_tasks">Share duka</string>
     <string name="recents_config_title">Na kwanan nan</string>
-    <string name="recents_dimiss_task">Goge</string>
+    <string name="recents_dimiss_task">Ya share komai</string>
     <string name="recents_empty_message">Babu abubuwa na kwanan nan</string>
-    <string name="recents_empty_message_dismissed_all">Ka goge komai</string>
+    <string name="recents_empty_message_dismissed_all">Ka share komai</string>
     <string name="recents_empty_message_multi_window">Bude manhaja tun daga Allon farko</string>
     <string name="recents_exit_multi_window_mode">Fita</string>
     <string name="recents_forbid_dock_when_screening_toast_text">"Ba'a iya amfani da Rababben yayin da ake shirya wasa"</string>
@@ -726,14 +660,7 @@
     <string name="recents_title_garbage_deepclean">Zurfafa gogewa</string>
     <string name="recents_title_market">Samun manhaja</string>
     <string name="recents_title_security_scan">Bincike na tsaro</string>
-    <string name="recents_tv_small_window_text">Bambarowar taga</string>
-    <string name="recents_worldcirculate_text">Saki ka zaba</string>
-    <string name="recnets_relay_device_info">Daga %s</string>
-    <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
-    <string name="recnets_worldcirculate_display_computer_info">Manhajar na aiki a %s.</string>
-    <string name="recnets_worldcirculate_display_default_info">Taba ka maido da shi a nan</string>
-    <string name="recnets_worldcirculate_display_default_info_pad">Taba ka maido da shi a nan</string>
-    <string name="recnets_worldcirculate_display_pad_info">Manhajar na aiki a %s.</string>
+    <string name="recents_tv_small_window_text">Taga mai bambarowa</string>
     <string name="recommend_apk_size_and_desc">%1$dMB | %2$s</string>
     <string name="recommend_app">Shawararin manhaja</string>
     <string name="recommend_apps_default_title">Babu komai</string>
@@ -751,8 +678,6 @@
     <string name="remove_invalidate_gadget_tips">Babu daya daga cikin wijet din da kake amfani dashi. Ka na iya kara wani daban.</string>
     <string name="remove_sys_app_content">Za ku iya ƙara Gajeren hanyan Allon farko a cikin Saittuna > Manhaja >; Sarrafa Gajeren hanyan Allon farko. Cire yanzu?</string>
     <string name="remove_sys_app_title">Ya cire gajeren hanyan Allon farko?</string>
-    <string name="request_permission_msg">Kaddamarwar POCO na bukatar wasu izini don baka ikon isowa ga shi da samun dukan ayyukansa.</string>
-    <string name="request_permission_title">Ana bukatar izini</string>
     <string name="reset_cate_tip_content">Idan ka ci gaba, za sake maido da kungiyar manhaja na asali. Ya ci gaba duk da haka?</string>
     <string name="reset_cate_tip_title">Miado da kungiya na asali</string>
     <string name="reset_description_first_time">Ka na iya maido na nunawa daga %1$s tsakanin awowi 2</string>
@@ -768,8 +693,6 @@
     <string name="screen_cells_config_title">Nunawar Allon farko</string>
     <string name="screen_locked_toast">An kulle nunawar Allon farko.</string>
     <string name="screen_number">Allon %d</string>
-    <string name="search_bar_hint_content">Binciken manhaja da abun da ya ksuna</string>
-    <string name="search_guide_btn">Na fahimta</string>
     <string name="search_in_apps_store">Bincike ma \"%1$s\" in %2$s</string>
     <string name="search_no_result">Ya kasa samu sakamako ba</string>
     <string name="select_all">Zabi duka</string>
@@ -777,7 +700,6 @@
     <string name="select_photo">Hoto</string>
     <string name="send">Aika</string>
     <string name="server_error">Kuskure na saba ya auku. Dakata minti daya ko biyu sai ka gwada kuma.</string>
-    <string name="service_double_attention">An samar da ingantaccen aikin bincike ta Branch Metrics Inc. Don yin wannan fasalin yayi aiki, muna buƙatar raba buƙatun bincikenku, ID ɗin talla na Google, da adireshin IP tare da Branch Metrics Inc. Karanta kuma ka yarda da <a href="http://url1"><font color="#B3000000">Sharuɗɗan Binciken Mai amfani&amp;Yanayi</font></a> da <a href="http://url2"><font color="#B3000000">Sharuddan Bayanai na Branch Discovery</font></a> kafin amfani da wannan siffar.</string>
     <string name="setting_wallpaper_tip">Tsunkule ko kuma ka jawo dan saitawa daidai</string>
     <string name="settings">Saittuna</string>
     <string name="settings_shortcut">Saittuna</string>
@@ -799,7 +721,7 @@
     <string name="small_window_edit_title">Manhajar yanzu</string>
     <string name="small_window_empty">Zaba daga cikin manhajar da akwai</string>
     <string name="small_window_select_title">Manhajar da akwai</string>
-    <string name="small_window_title_text">Taba ka bude Bambarowar taga</string>
+    <string name="small_window_title_text">Taba ka bude tagar bambarowa</string>
     <string name="small_window_toast">Ka na iya kara manhaja har zuwa %d</string>
     <string name="sort_by_abc">Shirya jeri ta sunaye</string>
     <string name="sort_by_frequency">Shirya jeri ta yi amfani</string>
@@ -815,13 +737,11 @@
     <string name="status_installing">Sanyawa</string>
     <string name="status_paused">An dakatar</string>
     <string name="status_pending">Jiran</string>
-    <string name="suggestions">Shawarwari</string>
     <string name="sunday">Lahadi</string>
     <string name="sunday_short">Lahadi</string>
     <string name="sunday_shortest">Lahadi</string>
     <string name="swipe_the_desktop_to_the_left">Jawo zuwa hagu akan Allon farko</string>
     <string name="swipe_the_desktop_to_the_right">Jawo zuwa dama akan Allon farko</string>
-    <string name="switch_on_button">Kunna</string>
     <string name="switch_personal_assistant_app_vault">"Ma'ajin manhaja"</string>
     <string name="switch_personal_assistant_google">Google Discover</string>
     <string name="switch_personal_assistant_none">Kar ayi kome</string>
@@ -832,10 +752,6 @@
     <string name="system_shortcuts_remove">Cire</string>
     <string name="system_text">Oto</string>
     <string name="task_access_locked_app_msg">An kunna kullewar manhajar</string>
-    <string name="term_of_service">Sharudda da yanayi</string>
-    <string name="terms_of_services_one">"Barka da zuwa Ma'ajin manhaja da Quick Finder. Quick Finder yana ba ka damar nemo manhaja, abubuwan manhajar, da abubuwa kan layi da sauri. Karanta kuma ka yarda da "<a href="http://url1"><font color="#B3000000">Sharuddan Bayanai</font></a> na Xiaomi kafin amfani da wadannan siffofin.</string>
-    <string name="terms_of_services_three">Ka na iya kunna wannan fasalin a cikin saittuna.</string>
-    <string name="terms_of_services_two">Amfani da ingantaccen bincike yana buƙatar raba bayanan sirri, tare da tambayoyin bincikenku, ID ɗin Talla na Google, da adireshin IP, tare da Branch Metrics Inc. Branch zai aiwatar da keɓaɓɓun bayananku daidai bisa ga <a href="http://url1"><font color="#B3000000">Sharuddan Bayanan Branch Discovery</font></a>. Karanta kuma ka yarda da <a href="http://url2"><font color="#B3000000">Sharuɗɗan Binciken Mai amfani&amp; Yanayi</font></a> da <a href="http://url3"><font color="#B3000000">Sharuddan Bayanan Branch Discovery</font></a> kafin amfaani wannan siffar.</string>
     <string name="the_anniversary_of_lifting_martial_law">"Bikin Shekarar tunawa da Dauke Shari'ar Martial"</string>
     <string name="the_anti_aggression_day">Ranar riga kafin tashin hankali</string>
     <string name="the_arbor_day">Ranar Arbor</string>
@@ -902,11 +818,6 @@
     <string name="tuesday">Talata</string>
     <string name="tuesday_short">Talata</string>
     <string name="tuesday_shortest">Talata</string>
-    <string name="uni_search_permission_content">Kunna siffofi na bincike akan layi. (Branch ke bada sabisin bincike.)</string>
-    <string name="uni_search_permission_msg">Ba POCO izinin isowa ga wurin da kake da lambobi don ka kyautata sakamakon bincike.</string>
-    <string name="uni_search_permission_title">Kyautata bincike</string>
-    <string name="uni_search_setting_summary">Kai tsaye nemo abubuwan da ke cikin manhaja ɗin</string>
-    <string name="uni_search_setting_title">Yanayin tambaya cikin manhaja</string>
     <string name="uninstall">Cire</string>
     <string name="uninstall_dialog_message">Cirewa zai share dukan bayanan manhajar.</string>
     <string name="uninstall_dialog_title_format">A cire %s?</string>
@@ -917,7 +828,6 @@
     <string name="uninstall_xspace_dialog_title_format">A cire manhaja biyu a hade na \"%s\"?</string>
     <string name="unknown_artist_name">Mawaki mara asali</string>
     <string name="unnamed_folder_name">Folda</string>
-    <string name="upgrade_remove_small_window_in_recents">"Za ka iya amfani da ba'a na gefe don buɗe manhaja a cikin bambarowar taga"</string>
     <string name="wallpaper">Hoton fuskar allon</string>
     <string name="wallpaper_auto_change_title">Allon kulle</string>
     <string name="wallpaper_failed_message">Ya kasa setin hoton fuskar allon</string>

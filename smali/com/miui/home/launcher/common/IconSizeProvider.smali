@@ -18,9 +18,3 @@
 
 .method public abstract getLauncherIconWidth()I
 .end method
-
-.method public abstract getLauncherPairIconHeight()I
-.end method
-
-.method public abstract getLauncherPairIconWidth()I
-.end method

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="Icon_name_classic_mode">Għażliet tal-iskrin prinċipali</string>
     <string name="accessibility_all_app_custom_category_finish">Lest</string>
     <string name="accessibility_all_app_custom_category_item_remove">Neħħi \"%1$s\" mill-kategoriji</string>
     <string name="accessibility_clear_search_bar_text">Neħħi kollox mil-linja tat-tiftix</string>
@@ -26,10 +25,8 @@
     <string name="activity_not_unlocked">"Stenna sakemm it-tagħmir tiegħek ikun reġa' xegħel kompletament mill-ġdid qabel tiftaħ xi apps"</string>
     <string name="add_custom_category">Personalizzata</string>
     <string name="add_screen">Żid skrin</string>
-    <string name="add_to_workspace">Żid mal-Iskrin ewlieni</string>
     <string name="added_all_category">L-apps kollha ġew miżjuda</string>
     <string name="afternoon">Wara nofsinhar</string>
-    <string name="agree_button">Naqbel</string>
     <string name="alexa_notification_add">Żid</string>
     <string name="alexa_notification_cancel">Mhux issa</string>
     <string name="alexa_notification_content">Trid iżżid shortcut għal Alexa fiċ-Ċentru tal-kontroll?</string>
@@ -68,7 +65,6 @@
     <string name="all_apps_slide_up_tips">"Il-mossa fejn iżżerżaq subgħajk 'il fuq merfugħha biss għall-kexxun tal-apps. Aqleb għall-modalità komuni tal-Iskrin prinċipali u erġa' pprova."</string>
     <string name="all_apps_suggestions">Suġġerimenti għall-apps</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">Ħeffa tal-animazzjoni</string>
     <string name="announce_for_app_move_in_folder">Tmexxa għall-pożizzjoni %1$d fil-fowlder</string>
     <string name="announce_for_checked">%1$s, iċċekkjat</string>
     <string name="announce_for_choose_default_screen">Poġġi l-iskrin %1$d bħala l-iskrin Prinċipali komuni</string>
@@ -121,13 +117,6 @@
     <string name="app_category_tools">Għodda</string>
     <string name="app_category_travel">Vjaġġi</string>
     <string name="app_category_vr">VR</string>
-    <string name="app_drawer_double_confirm_description">"Din se tibdel il-mod kif inhu mqassam l-Iskrin prinċipali tiegħek. Se tkun tista' treġġa' lura dal-bidliet mill-Għażliet iktar tard."</string>
-    <string name="app_drawer_double_confirm_title">Oqgħod attent</string>
-    <string name="app_drawer_feature_description">"Il-Kexxun tal-apps hija l-għodda ideali biex torganizza l-apps kollha tiegħek. Iġbor l-apps awtomatikament u sib dak kollu li teħtieġ f'leħħa ta' berqa!"</string>
-    <string name="app_drawer_guide_description">Sib dak li qed tfittex fl-apps favoriti tiegħek</string>
-    <string name="app_drawer_guide_title">Kexxun tal-apps</string>
-    <string name="app_drawer_tip_title">Minflok il-feed tal-kontenut, issa se ssib il-Kexxun tal-apps.</string>
-    <string name="app_install_state">Installata</string>
     <string name="app_name">smallWindow</string>
     <string name="application_name">Lanċjatur tas-sistema</string>
     <string name="apply">Issettja</string>
@@ -150,35 +139,8 @@
     <string name="back">Lura</string>
     <string name="backup_fail">Ma setax isir il-backup tal-lanċatur</string>
     <string name="bad_wallpaper_source_prompt">"Ma jistax itella' l-wallpaper"</string>
-    <string name="branch_feature_description">"Barra l-apps, Quick Finder tista' ssib il-kontenut tal-apps u l-affarijiet li jinsabu onlajn."</string>
-    <string name="branch_guide_attention">"Biex tuża t-tiftix imtejjeb triq taqsam it-tfittxijiet, l-ID ta' Google Ads u l-indirizz IP tiegħek ma' Branch Metrics Inc. Qabel tuża dil-faċilità, aqra u aqbel mat-"<a href="http://url1"><font color="#B3000000">Termini u l-Kundizzjonijiet Discovery tal-Utent</font></a> u mal-<a href="http://url2"><font color="#B3000000">"Politika tal-Privatezza Discovery ta' Branch"</font></a>.</string>
-    <string name="branch_guide_description_one">Aħna npoġġu l-apps tiegħek fil-Kexxun tal-apps. L-Iskrin Prinċipali tiegħek jidher pulit u organizzat.</string>
-    <string name="branch_guide_description_three">"Bi tfittxija inkorporata, int tkun tista' tfittex kulma jkollok bżonn fi ftit sekondi!"</string>
-    <string name="branch_guide_description_two">"Il-Kexxun tal-apps jikkategorizza l-apps b'mod awtomatiku."</string>
-    <string name="branch_guide_tip_title">Kull app fil-post tagħha</string>
-    <string name="branch_guide_title">Inlaqqgħuk mal-Kexxun tal-apps</string>
-    <string name="branch_guide_type_four_desc">"Tista' tmur lura għall-mod li kien jintuża qabel b'2 passi"</string>
-    <string name="branch_guide_type_four_main">Iftaħ Għażliet, Skrin prinċipali > Skrin prinċipali u agħżel \"Klassiku\".</string>
-    <string name="branch_guide_type_four_step_one">Iftaħ Għażliet</string>
-    <string name="branch_guide_type_four_step_two">Agħżel Skrin prinċipali</string>
-    <string name="branch_guide_type_one_desc">Ħu ħsieb l-apps tiegħek bil-Kexxun tal-apps</string>
-    <string name="branch_guide_type_one_main">Żomm l-apps tiegħek fil-Kexxun tal-apps biex iżżomm l-Iskrin prinċipali pulit u organizzat.</string>
-    <string name="branch_new_feature">Faċilità ġdida</string>
-    <string name="branch_privacy_policy">Politika tal-Privatezza</string>
-    <string name="branch_search_guide_description">Ir-riżultati tat-tiftix tagħha issa huma ħafna aħjar</string>
-    <string name="branch_search_guide_privacy">"Das-servizz huwa grazzi għal Branch Metrics Inc. Il-post fejn tinsab, it-tiftixiet tiegħek u l-ID ta' Google Ads se jinqasmu ma' Branch. Aqra u aqbel mat-"<a href="http://url1"><font color="#B3000000">Termini u l-Kundizzjonijiet</font></a> u l-<a href="http://url2"><font color="#B3000000">Politika tal-Privatezza</font></a>" ta' Branch qabel tuża das-servizz."</string>
-    <string name="branch_search_guide_title">Sib dak li qed tfittex fl-apps favoriti tiegħek</string>
-    <string name="branch_terms_condition">Termini u Kundizzjonijiet</string>
-    <string name="branch_tip_title">"Grazzi għal Quick Finder, tista' ssib dak kollu li teħtieġ f'leħħa ta' berqa."</string>
-    <string name="btn_agree">Naqbel</string>
-    <string name="btn_cancel">Ikkanċella</string>
-    <string name="btn_close">Itfi</string>
-    <string name="btn_open">Ixgħel</string>
-    <string name="btn_request_permission">Agħti l-permessi</string>
-    <string name="btn_set_right_now">Agħti l-permessi</string>
     <string name="buffering">Qed jibbufferja…</string>
     <string name="cancel_action">Ikkanċella</string>
-    <string name="cancel_botton">Ikkanċella</string>
     <string name="cancel_btn_label">Ħassar</string>
     <string name="cant_edit_lock_screen">"Ma jistax jedittja stil ta' skrin Imsakkar."</string>
     <string name="cant_remove_folder">Ma nistgħux ineħħu il-fowlder</string>
@@ -288,11 +250,9 @@
     <string name="emptyplaylist">Miss biex iżżid il-kanzunetti</string>
     <string name="enable_wallpaper_scroll">Ixgħal il-karattertistika li tħalli l-istampi jiċċalqu fil-ġenb</string>
     <string name="encryption">Enkripzjoni</string>
-    <string name="enter_search_setting_title">Iftaħ il-modalità tat-tiftix wara li tiftaħ il-Kexxun tal-apps</string>
     <string name="eras_ad">WK</string>
     <string name="eras_bc">QK</string>
     <string name="evening">Wara nofsinhar</string>
-    <string name="exit_overview_because_task_stack_changed">Għalaq Riċenti minħabba tibdil li seħħ fl-isfond</string>
     <string name="failed_to_delete_temporary">Ma jistax jiċċaqlaq</string>
     <string name="failed_to_drop">Ma jistax jiċċaqlaq</string>
     <string name="failed_to_drop_widget_invalid">Widgit invalidu</string>
@@ -349,8 +309,6 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
-    <string name="fold_pair_install_shortcut_long_click">Agħfas u żomm biex tpoġġi fuq l-Iskrin ewlieni</string>
-    <string name="fold_pair_installed_shortcut_launcher">Dix-shortcut diġà teżisti</string>
     <string name="folder_name">Fowlder</string>
     <string name="frame_load_failed">Ma jistax itella l-frejm</string>
     <string name="free_style_apps_title">Agħżel app</string>
@@ -406,14 +364,11 @@
     <string name="gadget_weather_title_14">Temp</string>
     <string name="gadget_weather_title_24">Temp</string>
     <string name="global_search_hint">Fittex</string>
-    <string name="got_it_botton">Fhimt</string>
     <string name="group_folder">Fowlder ġdid</string>
     <string name="group_live_folders">Fowlders</string>
     <string name="group_shortcuts">Shortcut</string>
     <string name="guide_install_app_msg">Din l-app mhux installata fuq it-tagħmir tiegħek. Trid issib u tinstalla l-app issa?</string>
     <string name="guide_install_app_title">Trid issib u tinstalla l-app?</string>
-    <string name="guide_permission_title">Permessi meħtieġa</string>
-    <string name="guide_privacy_dialog_title">Termini tas-Servizz</string>
     <string name="guide_tips_editing_mode">"Għafas &amp; żomm biex terfa' wiġit"</string>
     <string name="home_gesture_content_center">Iċ-Ċentru tal-Kontenut</string>
     <string name="home_gesture_global_search">Fittex</string>
@@ -444,9 +399,6 @@
     <string name="launcher_slide_up_title">"Mexxi 'il fuq fuq l-iskrin prinċipali"</string>
     <string name="launcher_sliding_up_gesture">"Mexxi ' l fuq tal-iskrin prinċipali biex tiftaħ it-tfittxija"</string>
     <string name="launcher_title">Skrin prinċipali &amp; Riċenti</string>
-    <string name="layout_guide_description">"Jekk ma jogħġbokx il-Kexxun tal-apps, int dejjem tista' tmur lura għall-Iskrin Prinċipali l-klassiku. Uża ix-shortcut tal-\"Għażliet tal-iskrin prinċipali\" u aqleb bejn iż-żewġ modalitajiet."</string>
-    <string name="layout_guide_tip_title">"Tista' tmur lura għall-metodi l-antiki b' taptipa waħda"</string>
-    <string name="layout_guide_title">Kif tneħħi l-Kexxun tal-apps</string>
     <string name="like">Favorit</string>
     <string name="liked">Miżjud mal-favoriti</string>
     <string name="loading_desktop">Tini sekonda…</string>
@@ -613,11 +565,6 @@
     <string name="navigation_guide_recent_title">Iftaħ ir-Riċenti</string>
     <string name="navigation_guide_recent_title_spec_with_quotation_pad">Iftaħ ir-Riċenti</string>
     <string name="navigation_guide_settings">Dimostrazzjoni tal-mossi</string>
-    <string name="navigation_position_center">Nofs</string>
-    <string name="navigation_position_left">Xellug</string>
-    <string name="navigation_position_right">Lemin</string>
-    <string name="navigation_position_summary">"Il-buttuni tan-navigazzjoni jista' jkollhom pożizzjoni personalizzata fuq l-Iskrin prinċipali biss"</string>
-    <string name="navigation_position_title">Pożizzjoni tal-buttuni tan-navigazzjoni</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">Ikkanċella</string>
     <string name="navigation_set_miui_home_as_default_dialog_message">"Ma jistax juża ġesti tal-iskrin sħiħ ma' lanċaturi ta' partijiet terzi. Trid taqleb għal-lanċatur tas-sistemà u tixgħel il-ġesti tal-iskrin sħiħ?"</string>
     <string name="navigation_set_miui_home_as_default_dialog_ok">OK</string>
@@ -626,11 +573,9 @@
     <string name="navigation_type_title">Navigazzjoni tas-sistema</string>
     <string name="navigation_type_virtual_key">Buttuni</string>
     <string name="network_error">"Ma setax jaqbad man-netwerk. Erġa' pprova."</string>
-    <string name="new_feature_title">"X'hemm ġdid"</string>
     <string name="night">Filgħaxija</string>
     <string name="no_detail_page">Paġna bla dettalji</string>
     <string name="no_space_toast">"M'hemmx biżżejjed spazju"</string>
-    <string name="no_space_toast_fold">"M'għandekx biżżejjed spazju hawn"</string>
     <string name="no_space_toast_when_click_widget">"M'hemmx biżżejjed spazju fuq dil-paġna. Ipprova kaxkar dil-ħaġa fuq paġna oħra."</string>
     <string name="noon">Nofsinhar</string>
     <string name="normal_wallpaper">Wallpaper</string>
@@ -639,7 +584,6 @@
     <string name="notification_reset_title">"Ikoni rranġati b'suċċess"</string>
     <string name="one_key_call_title">Miss biex iċċempel</string>
     <string name="online_wallpaper">Onlajn</string>
-    <string name="open_pad_personal_assistant_settings">Widgets tal-iskrin ewlieni</string>
     <string name="open_personal_assistant_dialog_btn_cancel">Ħassar</string>
     <string name="open_personal_assistant_dialog_btn_confirm">Itfi</string>
     <string name="open_personal_assistant_dialog_desc">"Mhux se tkun tista' tara jew tuża l-widgets tal-Maħżen tal-apps wara li titfi l-Maħżen tal-apps. Lanqas mhu se jkunulek disponibbli l-verżjonijiet aġġornati tagħhom. Trid titfi xorta waħda?"</string>
@@ -651,7 +595,6 @@
     <string name="ota_layout_adjustment_content">"It-tqassim ta' ġewwa u ta' barra tal-Iskrin prinċipali ġew sinkronizzati fil-verżjoni l-ġdida."</string>
     <string name="ota_layout_adjustment_title">It-tqassim tal-iskrin priċipali</string>
     <string name="out_of_space">"M'hemmx iktar spazju fuq dan l-iskrin Prinċipali"</string>
-    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">Uri l-animazzjonijiet tal-ikoni tal-apps terzi</string>
     <string name="perfect_icons_switch_title">Animazzjonijiet ġenerali tal-ikoni</string>
     <string name="permdesc_install_shortcut">Ħalli app iżżid shortcuts mingħajr intervent tal-utent.</string>
@@ -671,7 +614,6 @@
     <string name="photo_load_failed">"Ma setatx tittella' r-ritratt"</string>
     <string name="please_slide_agian">"Erġa' żerżaq"</string>
     <string name="pm">PM</string>
-    <string name="popular_search">Popolari</string>
     <string name="pref_cell_layout_size">Firxa tal-ikona tal-app</string>
     <string name="pref_enable_drawing_cache_summary">"Itfi biex ikollok iktar memorja. Dan jista' jagħmel l-operat jaħdem iktar bil-mod."</string>
     <string name="pref_enable_drawing_cache_title">Cache tat-tpinġija</string>
@@ -691,14 +633,6 @@
     <string name="privacy_thumbnail_blur_summary">Blur l-previżjonijiet tal-app fir-Riċenti</string>
     <string name="privacy_thumbnail_blur_title">Sfoka l-previżjonijiet tal-app</string>
     <string name="quick_app">"Apps ta' malajr"</string>
-    <string name="quick_finder_feature_description">"Quick Finder tħallik issib iktar malajr l-apps, il-kontenut tal-apps u l-affarijiet li jinsabu onlajn. Tista' titfi dil-faċilità mill-Għażliet."</string>
-    <string name="quick_finder_tip_title">Sib iktar malajr dak kollu li teħtieġ</string>
-    <string name="quick_search_all_app_desc">Uri l-apps kollha fil-Kexxun tal-apps</string>
-    <string name="quick_search_desc">Iftaħ il-modalità tat-tiftix wara li tiftaħ il-Kexxun tal-apps</string>
-    <string name="quick_search_guide_all_apps">L-apps kollha</string>
-    <string name="quick_search_guide_ok_btn">OK</string>
-    <string name="quick_search_guide_quick_search">"Tiftixa ta' malajr"</string>
-    <string name="quick_search_guide_title">Agħżel il-modalità komuni</string>
     <string name="recent_apps">Riċenti</string>
     <string name="recent_menu_item_info">Info</string>
     <string name="recent_menu_item_lock">Sakkar</string>
@@ -727,13 +661,6 @@
     <string name="recents_title_market">Sib l-apps</string>
     <string name="recents_title_security_scan">Skenn tas-sigurtà</string>
     <string name="recents_tv_small_window_text">Twieqi li jitilgħu fil-wiċċ</string>
-    <string name="recents_worldcirculate_text">Itlaq biex tagħżel</string>
-    <string name="recnets_relay_device_info">Minn %s</string>
-    <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
-    <string name="recnets_worldcirculate_display_computer_info">Dil-app qed taħdem fuq %s.</string>
-    <string name="recnets_worldcirculate_display_default_info">Agħfas biex turiha hawn.</string>
-    <string name="recnets_worldcirculate_display_default_info_pad">Agħfas biex turiha hawn.</string>
-    <string name="recnets_worldcirculate_display_pad_info">Dil-app qed taħdem fuq %s.</string>
     <string name="recommend_apk_size_and_desc">%1$dMB | %2$s</string>
     <string name="recommend_app">Suġġerimenti għall-apps</string>
     <string name="recommend_apps_default_title">Vojt</string>
@@ -751,8 +678,6 @@
     <string name="remove_invalidate_gadget_tips">"Waħda mill-wiġits li tuża m'għadhiex disponibbli. Tista' żżid oħra minflokha."</string>
     <string name="remove_sys_app_content">"Se tkun tista' żżid mill-ġdid ix-shortcut tal-Iskrin prinċipali minn Għażliet > Apps > Immaniġġja x-shortcuts tal-Iskrin prinċipali. Trid tneħħiha issa?"</string>
     <string name="remove_sys_app_title">Trid tneħħi x-shortcut tal-Iskrin prinċipali?</string>
-    <string name="request_permission_msg">L-Għodda tat-tlugh POCO teħtieġ xi permessi biex ittik aċċess għall-faċilitajiet kollha tagħha.</string>
-    <string name="request_permission_title">Permessi meħtieġa</string>
     <string name="reset_cate_tip_content">Jekk tkompli, il-gruppi komuni tal-apps se jiġu rkuprati. Trid tkompli xorta waħda?</string>
     <string name="reset_cate_tip_title">Irkupra l-gruppi komuni</string>
     <string name="reset_description_first_time">"Int tista' treġġa' lura t-tqassim tal-paġna minn %1$s fi żmien 2 siegħat"</string>
@@ -768,8 +693,6 @@
     <string name="screen_cells_config_title">Il-firxa tal-iskrin priċipali</string>
     <string name="screen_locked_toast">Il-firxa tal-iskrin prnċipali hi msakkra</string>
     <string name="screen_number">%d skrin</string>
-    <string name="search_bar_hint_content">Fittex għall-apps u għall-kontenut</string>
-    <string name="search_guide_btn">Fhimt</string>
     <string name="search_in_apps_store">Fittex \"%1$s\" ġewwa %2$s</string>
     <string name="search_no_result">"Ma seta' jsib l-ebda riżultat"</string>
     <string name="select_all">Agħżel kollox</string>
@@ -777,7 +700,6 @@
     <string name="select_photo">Ritratt</string>
     <string name="send">Ibgħat</string>
     <string name="server_error">"Seħħ żball fis-server. Stenna minuta jew tnejn u erġa' pprova."</string>
-    <string name="service_double_attention">"Il-faċilità tat-tiftix imtejjeb hija grazzi għal Branch Metrics Inc. Biex dil-faċilità tkun tista' taħdem, jeħtiġilna naqsmu t-tfittxijiet, l-ID ta' Google Ads u l-Indirizz IP tiegħek ma' Branch Metrics Inc. Qabel tuża dil-faċilità, aqra u aqbel mat-"<a href="http://url1"><font color="#B3000000">Termini u l-Kundizzjonijiet Discovery tal-Utent</font></a> u mal-<a href="http://url2"><font color="#B3000000">"Politika tal-Privatezza Discovery ta' Branch"</font></a>.</string>
     <string name="setting_wallpaper_tip">Agħfas jew isswajpja biex taġġusta</string>
     <string name="settings">Għażliet</string>
     <string name="settings_shortcut">Għażliet</string>
@@ -815,13 +737,11 @@
     <string name="status_installing">Installar</string>
     <string name="status_paused">Pawża</string>
     <string name="status_pending">Qed jistenna</string>
-    <string name="suggestions">Suġġerimenti</string>
     <string name="sunday">Il-Ħadd</string>
     <string name="sunday_short">Ħad</string>
     <string name="sunday_shortest">Ħad</string>
     <string name="swipe_the_desktop_to_the_left">Mexxi lejn ix-xellug fuq l-iskrin prinċipali</string>
     <string name="swipe_the_desktop_to_the_right">Mexxi lejn il-lemin fuq l-iskrin prinċipali</string>
-    <string name="switch_on_button">Ixgħel</string>
     <string name="switch_personal_assistant_app_vault">Maħżen tal-apps</string>
     <string name="switch_personal_assistant_google">Google Discover</string>
     <string name="switch_personal_assistant_none">L-ebda</string>
@@ -832,10 +752,6 @@
     <string name="system_shortcuts_remove">Neħħi</string>
     <string name="system_text">Awto</string>
     <string name="task_access_locked_app_msg">Xgħelt il-katnazz tal-app</string>
-    <string name="term_of_service">Termini u kundizzjonijiet</string>
-    <string name="terms_of_services_one">Merħba fil-Kexxun tal-apps u fi Quick Finder. Quick Finder tħallik issib l-apps, il-kontenut fl-apps u affarijiet oħra onlajn iktar malajr. Qabel tuża dal-faċilitajiet, aqra u aqbel mal-<a href="http://url1"><font color="#B3000000">Politika tal-Privatezza</font></a>" ta' Xiaomi."</string>
-    <string name="terms_of_services_three">"Tista' titfi dil-faċilità mill-Għażliet."</string>
-    <string name="terms_of_services_two">"Biex tkun tista' tuża t-tiftix imtejjeb trid taqsam l-informazzjoni personali meħtieġa, inklużi t-tfittxijiet tiegħek, l-ID tar-Riklami ta' Google u l-indirizz IP tiegħek ma' Branch Metrics Inc. Branch se tipproċessa l-informazzjoni personali tiegħek skont il-"<a href="http://url1"><font color="#B3000000">"Politika tal-Privatezza ta' Branch Discovery"</font></a>. Qabel tuża dil-faċilità, aqra u aqbel mat-<a href="http://url2"><font color="#B3000000">"Termini u l-Kundizzjonijiet ta' Discovery"</font></a> u mal-<a href="http://url3"><font color="#B3000000">"Politika tal-Privatezza ta' Branch Discovery"</font></a>.</string>
     <string name="the_anniversary_of_lifting_martial_law">L-Anniversarju tat-Tneħħija tal-Liġi Marzjali</string>
     <string name="the_anti_aggression_day">Jum Kontra l-Aggressjonijiet</string>
     <string name="the_arbor_day">Jum is-Siġar</string>
@@ -902,11 +818,6 @@
     <string name="tuesday">It-Tlieta</string>
     <string name="tuesday_short">Tli</string>
     <string name="tuesday_shortest">Tli</string>
-    <string name="uni_search_permission_content">Ixgħel il-faċilitajiet tat-tiftix onlajn. (Is-servizzi tat-tiftix huma grazzi għal Branch.)</string>
-    <string name="uni_search_permission_msg">Ħalli lill-għodda tat-tlugħ POCO taċċessa l-post fejn tinsab kif ukoll il-kuntatti tiegħek biex ittejjeb ir-riżultati tat-tiftix.</string>
-    <string name="uni_search_permission_title">Tfittxija mtejba</string>
-    <string name="uni_search_setting_summary">Sib il-kontenut direttament fl-app</string>
-    <string name="uni_search_setting_title">Modalità tat-tfittxija fl-apps</string>
     <string name="uninstall">Neħħi l-installazzjoni</string>
     <string name="uninstall_dialog_message">Jekk tneħħi l-installazzjoni dan ser ineħħi d-dejta kollha tal-app.</string>
     <string name="uninstall_dialog_title_format">Trid tneħħi l-installazzjoni %s?</string>
@@ -917,7 +828,6 @@
     <string name="uninstall_xspace_dialog_title_format">Trid tneħħi l-installazzjoni duwali %s\"?</string>
     <string name="unknown_artist_name">Artist mhux magħruf</string>
     <string name="unnamed_folder_name">Fowlder</string>
-    <string name="upgrade_remove_small_window_in_recents">"Tista' tuża l-faxxa tal-ġenb biex tiftaħ l-apps fi twieqi li jitilgħu fil-wiċċ"</string>
     <string name="wallpaper">Wallpaper</string>
     <string name="wallpaper_auto_change_title">Skrin imsakkar</string>
     <string name="wallpaper_failed_message">Ma jistax jissettja l-wallpaper</string>

@@ -29,7 +29,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback;[Ljava/lang/String;Landroid/os/UserHandle;)V
     .locals 0
 
-    .line 428
+    .line 415
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback$7;->this$1:Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback;
 
     iput-object p2, p0, Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback$7;->val$packageNames:[Ljava/lang/String;
@@ -46,14 +46,14 @@
 .method public run()V
     .locals 4
 
-    .line 430
+    .line 417
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.PACKAGES_UNSUSPENDED"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 431
+    .line 418
     new-instance v1, Ljava/util/ArrayList;
 
     iget-object v2, p0, Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback$7;->val$packageNames:[Ljava/lang/String;
@@ -66,10 +66,10 @@
 
     const-string v2, "android.intent.extra.changed_package_list"
 
-    .line 432
+    .line 419
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putStringArrayListExtra(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/content/Intent;
 
-    .line 433
+    .line 420
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback$7;->this$1:Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback;
 
     iget-object v1, v1, Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback;->this$0:Lcom/miui/home/launcher/LauncherModel;

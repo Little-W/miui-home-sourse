@@ -41,12 +41,12 @@
     .line 105
     iput v0, p0, Lcom/google/android/filament/Renderer$FrameRateOptions;->headRoomRatio:F
 
-    const/high16 v0, 0x3e000000    # 0.125f
+    const v0, 0x3d888889
 
     .line 110
     iput v0, p0, Lcom/google/android/filament/Renderer$FrameRateOptions;->scaleRate:F
 
-    const/16 v0, 0x9
+    const/16 v0, 0xf
 
     .line 115
     iput v0, p0, Lcom/google/android/filament/Renderer$FrameRateOptions;->history:I

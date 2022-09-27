@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher$25;)V
     .locals 0
 
-    .line 3795
+    .line 3681
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$25$1;->this$1:Lcom/miui/home/launcher/Launcher$25;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 1
 
-    .line 3798
+    .line 3684
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$25$1;->this$1:Lcom/miui/home/launcher/Launcher$25;
 
     iget-object v0, v0, Lcom/miui/home/launcher/Launcher$25;->this$0:Lcom/miui/home/launcher/Launcher;

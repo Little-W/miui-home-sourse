@@ -46,7 +46,7 @@
 
     const/4 v0, 0x1
 
-    .line 81
+    .line 78
     new-array v0, v0, [I
 
     const/4 v1, 0x0
@@ -63,7 +63,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    .line 146
+    .line 140
     sget v0, Landroidx/appcompat/R$attr;->spinnerStyle:I
 
     invoke-direct {p0, p1, p2, v0}, Landroidx/appcompat/widget/AppCompatSpinner;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -76,7 +76,7 @@
 
     const/4 v0, -0x1
 
-    .line 162
+    .line 155
     invoke-direct {p0, p1, p2, p3, v0}, Landroidx/appcompat/widget/AppCompatSpinner;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     return-void
@@ -97,7 +97,7 @@
 
     move v4, p4
 
-    .line 182
+    .line 174
     invoke-direct/range {v0 .. v5}, Landroidx/appcompat/widget/AppCompatSpinner;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILandroid/content/res/Resources$Theme;)V
 
     return-void
@@ -106,24 +106,17 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILandroid/content/res/Resources$Theme;)V
     .locals 6
 
-    .line 211
+    .line 203
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/Spinner;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 108
+    .line 105
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner;->mTempRect:Landroid/graphics/Rect;
 
-    .line 213
-    invoke-virtual {p0}, Landroidx/appcompat/widget/AppCompatSpinner;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-static {p0, v0}, Landroidx/appcompat/widget/ThemeUtils;->checkAppCompatTheme(Landroid/view/View;Landroid/content/Context;)V
-
-    .line 215
+    .line 205
     sget-object v0, Landroidx/appcompat/R$styleable;->Spinner:[I
 
     const/4 v1, 0x0
@@ -132,7 +125,7 @@
 
     move-result-object v0
 
-    .line 218
+    .line 208
     new-instance v2, Landroidx/appcompat/widget/AppCompatBackgroundHelper;
 
     invoke-direct {v2, p0}, Landroidx/appcompat/widget/AppCompatBackgroundHelper;-><init>(Landroid/view/View;)V
@@ -141,7 +134,7 @@
 
     if-eqz p5, :cond_0
 
-    .line 221
+    .line 211
     new-instance v2, Landroidx/appcompat/view/ContextThemeWrapper;
 
     invoke-direct {v2, p1, p5}, Landroidx/appcompat/view/ContextThemeWrapper;-><init>(Landroid/content/Context;Landroid/content/res/Resources$Theme;)V
@@ -150,7 +143,7 @@
 
     goto :goto_0
 
-    .line 223
+    .line 213
     :cond_0
     sget p5, Landroidx/appcompat/R$styleable;->Spinner_popupTheme:I
 
@@ -160,7 +153,7 @@
 
     if-eqz p5, :cond_1
 
-    .line 225
+    .line 215
     new-instance v2, Landroidx/appcompat/view/ContextThemeWrapper;
 
     invoke-direct {v2, p1, p5}, Landroidx/appcompat/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
@@ -169,7 +162,7 @@
 
     goto :goto_0
 
-    .line 227
+    .line 217
     :cond_1
     iput-object p1, p0, Landroidx/appcompat/widget/AppCompatSpinner;->mPopupContext:Landroid/content/Context;
 
@@ -180,7 +173,7 @@
 
     if-ne p4, p5, :cond_4
 
-    .line 234
+    .line 224
     :try_start_0
     sget-object p5, Landroidx/appcompat/widget/AppCompatSpinner;->ATTRS_ANDROID_SPINNERMODE:[I
 
@@ -191,7 +184,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 236
+    .line 226
     :try_start_1
     invoke-virtual {p5, v1}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -199,7 +192,7 @@
 
     if-eqz v3, :cond_2
 
-    .line 237
+    .line 227
     invoke-virtual {p5, v1, v1}, Landroid/content/res/TypedArray;->getInt(II)I
 
     move-result p4
@@ -210,7 +203,7 @@
     :cond_2
     if-eqz p5, :cond_4
 
-    .line 243
+    .line 233
     :goto_1
     invoke-virtual {p5}, Landroid/content/res/TypedArray;->recycle()V
 
@@ -239,7 +232,7 @@
 
     const-string v5, "Could not read android:spinnerMode"
 
-    .line 240
+    .line 230
     invoke-static {v4, v5, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
@@ -254,10 +247,10 @@
     :goto_3
     if-eqz p5, :cond_3
 
-    .line 243
+    .line 233
     invoke-virtual {p5}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 245
+    .line 235
     :cond_3
     throw p1
 
@@ -267,7 +260,7 @@
 
     goto :goto_5
 
-    .line 255
+    .line 245
     :pswitch_0
     new-instance p4, Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup;
 
@@ -275,7 +268,7 @@
 
     invoke-direct {p4, p0, p5, p2, p3}, Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup;-><init>(Landroidx/appcompat/widget/AppCompatSpinner;Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 256
+    .line 246
     iget-object p5, p0, Landroidx/appcompat/widget/AppCompatSpinner;->mPopupContext:Landroid/content/Context;
 
     sget-object v3, Landroidx/appcompat/R$styleable;->Spinner:[I
@@ -284,7 +277,7 @@
 
     move-result-object p5
 
-    .line 258
+    .line 248
     sget v1, Landroidx/appcompat/R$styleable;->Spinner_android_dropDownWidth:I
 
     const/4 v3, -0x2
@@ -295,18 +288,18 @@
 
     iput v1, p0, Landroidx/appcompat/widget/AppCompatSpinner;->mDropDownWidth:I
 
-    .line 260
+    .line 250
     sget v1, Landroidx/appcompat/R$styleable;->Spinner_android_popupBackground:I
 
-    .line 261
+    .line 251
     invoke-virtual {p5, v1}, Landroidx/appcompat/widget/TintTypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
-    .line 260
+    .line 250
     invoke-virtual {p4, v1}, Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 262
+    .line 252
     sget v1, Landroidx/appcompat/R$styleable;->Spinner_android_prompt:I
 
     invoke-virtual {v0, v1}, Landroidx/appcompat/widget/TintTypedArray;->getString(I)Ljava/lang/String;
@@ -315,13 +308,13 @@
 
     invoke-virtual {p4, v1}, Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup;->setPromptText(Ljava/lang/CharSequence;)V
 
-    .line 263
+    .line 253
     invoke-virtual {p5}, Landroidx/appcompat/widget/TintTypedArray;->recycle()V
 
-    .line 265
+    .line 255
     iput-object p4, p0, Landroidx/appcompat/widget/AppCompatSpinner;->mPopup:Landroidx/appcompat/widget/AppCompatSpinner$SpinnerPopup;
 
-    .line 266
+    .line 256
     new-instance p5, Landroidx/appcompat/widget/AppCompatSpinner$1;
 
     invoke-direct {p5, p0, p0, p4}, Landroidx/appcompat/widget/AppCompatSpinner$1;-><init>(Landroidx/appcompat/widget/AppCompatSpinner;Landroid/view/View;Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup;)V
@@ -330,7 +323,7 @@
 
     goto :goto_5
 
-    .line 250
+    .line 240
     :pswitch_1
     new-instance p4, Landroidx/appcompat/widget/AppCompatSpinner$DialogPopup;
 
@@ -338,7 +331,7 @@
 
     iput-object p4, p0, Landroidx/appcompat/widget/AppCompatSpinner;->mPopup:Landroidx/appcompat/widget/AppCompatSpinner$SpinnerPopup;
 
-    .line 251
+    .line 241
     iget-object p4, p0, Landroidx/appcompat/widget/AppCompatSpinner;->mPopup:Landroidx/appcompat/widget/AppCompatSpinner$SpinnerPopup;
 
     sget p5, Landroidx/appcompat/R$styleable;->Spinner_android_prompt:I
@@ -349,7 +342,7 @@
 
     invoke-interface {p4, p5}, Landroidx/appcompat/widget/AppCompatSpinner$SpinnerPopup;->setPromptText(Ljava/lang/CharSequence;)V
 
-    .line 284
+    .line 274
     :goto_5
     sget p4, Landroidx/appcompat/R$styleable;->Spinner_android_entries:I
 
@@ -359,50 +352,48 @@
 
     if-eqz p4, :cond_5
 
-    .line 286
+    .line 276
     new-instance p5, Landroid/widget/ArrayAdapter;
 
     const v1, 0x1090008
 
     invoke-direct {p5, p1, v1, p4}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;I[Ljava/lang/Object;)V
 
-    .line 288
+    .line 278
     sget p1, Landroidx/appcompat/R$layout;->support_simple_spinner_dropdown_item:I
 
     invoke-virtual {p5, p1}, Landroid/widget/ArrayAdapter;->setDropDownViewResource(I)V
 
-    .line 289
+    .line 279
     invoke-virtual {p0, p5}, Landroidx/appcompat/widget/AppCompatSpinner;->setAdapter(Landroid/widget/SpinnerAdapter;)V
 
-    .line 292
+    .line 282
     :cond_5
     invoke-virtual {v0}, Landroidx/appcompat/widget/TintTypedArray;->recycle()V
 
     const/4 p1, 0x1
 
-    .line 294
+    .line 284
     iput-boolean p1, p0, Landroidx/appcompat/widget/AppCompatSpinner;->mPopupSet:Z
 
-    .line 298
+    .line 288
     iget-object p1, p0, Landroidx/appcompat/widget/AppCompatSpinner;->mTempAdapter:Landroid/widget/SpinnerAdapter;
 
     if-eqz p1, :cond_6
 
-    .line 299
+    .line 289
     invoke-virtual {p0, p1}, Landroidx/appcompat/widget/AppCompatSpinner;->setAdapter(Landroid/widget/SpinnerAdapter;)V
 
-    .line 300
+    .line 290
     iput-object v2, p0, Landroidx/appcompat/widget/AppCompatSpinner;->mTempAdapter:Landroid/widget/SpinnerAdapter;
 
-    .line 303
+    .line 293
     :cond_6
     iget-object p1, p0, Landroidx/appcompat/widget/AppCompatSpinner;->mBackgroundTintHelper:Landroidx/appcompat/widget/AppCompatBackgroundHelper;
 
     invoke-virtual {p1, p2, p3}, Landroidx/appcompat/widget/AppCompatBackgroundHelper;->loadFromAttributes(Landroid/util/AttributeSet;I)V
 
     return-void
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0x0
@@ -422,7 +413,7 @@
 
     return v0
 
-    .line 568
+    .line 558
     :cond_0
     invoke-virtual {p0}, Landroidx/appcompat/widget/AppCompatSpinner;->getMeasuredWidth()I
 
@@ -432,7 +423,7 @@
 
     move-result v1
 
-    .line 570
+    .line 560
     invoke-virtual {p0}, Landroidx/appcompat/widget/AppCompatSpinner;->getMeasuredHeight()I
 
     move-result v2
@@ -441,7 +432,7 @@
 
     move-result v2
 
-    .line 574
+    .line 564
     invoke-virtual {p0}, Landroidx/appcompat/widget/AppCompatSpinner;->getSelectedItemPosition()I
 
     move-result v3
@@ -450,7 +441,7 @@
 
     move-result v3
 
-    .line 575
+    .line 565
     invoke-interface {p1}, Landroid/widget/SpinnerAdapter;->getCount()I
 
     move-result v4
@@ -467,7 +458,7 @@
 
     sub-int/2addr v3, v5
 
-    .line 577
+    .line 567
     invoke-static {v0, v3}, Ljava/lang/Math;->max(II)I
 
     move-result v3
@@ -481,7 +472,7 @@
     :goto_0
     if-ge v3, v4, :cond_3
 
-    .line 579
+    .line 569
     invoke-interface {p1, v3}, Landroid/widget/SpinnerAdapter;->getItemViewType(I)I
 
     move-result v8
@@ -492,20 +483,20 @@
 
     move v0, v8
 
-    .line 584
+    .line 574
     :cond_1
     invoke-interface {p1, v3, v7, p0}, Landroid/widget/SpinnerAdapter;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v7
 
-    .line 585
+    .line 575
     invoke-virtual {v7}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v8
 
     if-nez v8, :cond_2
 
-    .line 586
+    .line 576
     new-instance v8, Landroid/view/ViewGroup$LayoutParams;
 
     const/4 v9, -0x2
@@ -514,11 +505,11 @@
 
     invoke-virtual {v7, v8}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 590
+    .line 580
     :cond_2
     invoke-virtual {v7, v1, v2}, Landroid/view/View;->measure(II)V
 
-    .line 591
+    .line 581
     invoke-virtual {v7}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v8
@@ -534,12 +525,12 @@
     :cond_3
     if-eqz p2, :cond_4
 
-    .line 596
+    .line 586
     iget-object p1, p0, Landroidx/appcompat/widget/AppCompatSpinner;->mTempRect:Landroid/graphics/Rect;
 
     invoke-virtual {p2, p1}, Landroid/graphics/drawable/Drawable;->getPadding(Landroid/graphics/Rect;)Z
 
-    .line 597
+    .line 587
     iget-object p1, p0, Landroidx/appcompat/widget/AppCompatSpinner;->mTempRect:Landroid/graphics/Rect;
 
     iget p1, p1, Landroid/graphics/Rect;->left:I
@@ -559,15 +550,15 @@
 .method protected drawableStateChanged()V
     .locals 1
 
-    .line 553
+    .line 543
     invoke-super {p0}, Landroid/widget/Spinner;->drawableStateChanged()V
 
-    .line 554
+    .line 544
     iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner;->mBackgroundTintHelper:Landroidx/appcompat/widget/AppCompatBackgroundHelper;
 
     if-eqz v0, :cond_0
 
-    .line 555
+    .line 545
     invoke-virtual {v0}, Landroidx/appcompat/widget/AppCompatBackgroundHelper;->applySupportBackgroundTint()V
 
     :cond_0
@@ -577,19 +568,19 @@
 .method public getDropDownHorizontalOffset()I
     .locals 2
 
-    .line 375
+    .line 365
     iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner;->mPopup:Landroidx/appcompat/widget/AppCompatSpinner$SpinnerPopup;
 
     if-eqz v0, :cond_0
 
-    .line 376
+    .line 366
     invoke-interface {v0}, Landroidx/appcompat/widget/AppCompatSpinner$SpinnerPopup;->getHorizontalOffset()I
 
     move-result v0
 
     return v0
 
-    .line 377
+    .line 367
     :cond_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -597,7 +588,7 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 378
+    .line 368
     invoke-super {p0}, Landroid/widget/Spinner;->getDropDownHorizontalOffset()I
 
     move-result v0
@@ -613,19 +604,19 @@
 .method public getDropDownVerticalOffset()I
     .locals 2
 
-    .line 349
+    .line 339
     iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner;->mPopup:Landroidx/appcompat/widget/AppCompatSpinner$SpinnerPopup;
 
     if-eqz v0, :cond_0
 
-    .line 350
+    .line 340
     invoke-interface {v0}, Landroidx/appcompat/widget/AppCompatSpinner$SpinnerPopup;->getVerticalOffset()I
 
     move-result v0
 
     return v0
 
-    .line 351
+    .line 341
     :cond_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -633,7 +624,7 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 352
+    .line 342
     invoke-super {p0}, Landroid/widget/Spinner;->getDropDownVerticalOffset()I
 
     move-result v0
@@ -649,17 +640,17 @@
 .method public getDropDownWidth()I
     .locals 2
 
-    .line 394
+    .line 384
     iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner;->mPopup:Landroidx/appcompat/widget/AppCompatSpinner$SpinnerPopup;
 
     if-eqz v0, :cond_0
 
-    .line 395
+    .line 385
     iget v0, p0, Landroidx/appcompat/widget/AppCompatSpinner;->mDropDownWidth:I
 
     return v0
 
-    .line 396
+    .line 386
     :cond_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -667,7 +658,7 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 397
+    .line 387
     invoke-super {p0}, Landroid/widget/Spinner;->getDropDownWidth()I
 
     move-result v0
@@ -683,7 +674,7 @@
 .method final getInternalPopup()Landroidx/appcompat/widget/AppCompatSpinner$SpinnerPopup;
     .locals 1
 
-    .line 605
+    .line 595
     iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner;->mPopup:Landroidx/appcompat/widget/AppCompatSpinner$SpinnerPopup;
 
     return-object v0
@@ -692,19 +683,19 @@
 .method public getPopupBackground()Landroid/graphics/drawable/Drawable;
     .locals 2
 
-    .line 330
+    .line 320
     iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner;->mPopup:Landroidx/appcompat/widget/AppCompatSpinner$SpinnerPopup;
 
     if-eqz v0, :cond_0
 
-    .line 331
+    .line 321
     invoke-interface {v0}, Landroidx/appcompat/widget/AppCompatSpinner$SpinnerPopup;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     return-object v0
 
-    .line 332
+    .line 322
     :cond_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -712,7 +703,7 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 333
+    .line 323
     invoke-super {p0}, Landroid/widget/Spinner;->getPopupBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
@@ -728,7 +719,7 @@
 .method public getPopupContext()Landroid/content/Context;
     .locals 1
 
-    .line 311
+    .line 301
     iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner;->mPopupContext:Landroid/content/Context;
 
     return-object v0
@@ -737,7 +728,7 @@
 .method public getPrompt()Ljava/lang/CharSequence;
     .locals 1
 
-    .line 474
+    .line 464
     iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner;->mPopup:Landroidx/appcompat/widget/AppCompatSpinner$SpinnerPopup;
 
     if-eqz v0, :cond_0
@@ -760,12 +751,12 @@
 .method public getSupportBackgroundTintList()Landroid/content/res/ColorStateList;
     .locals 1
 
-    .line 518
+    .line 508
     iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner;->mBackgroundTintHelper:Landroidx/appcompat/widget/AppCompatBackgroundHelper;
 
     if-eqz v0, :cond_0
 
-    .line 519
+    .line 509
     invoke-virtual {v0}, Landroidx/appcompat/widget/AppCompatBackgroundHelper;->getSupportBackgroundTintList()Landroid/content/res/ColorStateList;
 
     move-result-object v0
@@ -782,12 +773,12 @@
 .method public getSupportBackgroundTintMode()Landroid/graphics/PorterDuff$Mode;
     .locals 1
 
-    .line 547
+    .line 537
     iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner;->mBackgroundTintHelper:Landroidx/appcompat/widget/AppCompatBackgroundHelper;
 
     if-eqz v0, :cond_0
 
-    .line 548
+    .line 538
     invoke-virtual {v0}, Landroidx/appcompat/widget/AppCompatBackgroundHelper;->getSupportBackgroundTintMode()Landroid/graphics/PorterDuff$Mode;
 
     move-result-object v0
@@ -804,10 +795,10 @@
 .method protected onDetachedFromWindow()V
     .locals 1
 
-    .line 421
+    .line 411
     invoke-super {p0}, Landroid/widget/Spinner;->onDetachedFromWindow()V
 
-    .line 423
+    .line 413
     iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner;->mPopup:Landroidx/appcompat/widget/AppCompatSpinner$SpinnerPopup;
 
     if-eqz v0, :cond_0
@@ -818,7 +809,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 424
+    .line 414
     iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner;->mPopup:Landroidx/appcompat/widget/AppCompatSpinner$SpinnerPopup;
 
     invoke-interface {v0}, Landroidx/appcompat/widget/AppCompatSpinner$SpinnerPopup;->dismiss()V
@@ -830,10 +821,10 @@
 .method protected onMeasure(II)V
     .locals 2
 
-    .line 438
+    .line 428
     invoke-super {p0, p1, p2}, Landroid/widget/Spinner;->onMeasure(II)V
 
-    .line 440
+    .line 430
     iget-object p2, p0, Landroidx/appcompat/widget/AppCompatSpinner;->mPopup:Landroidx/appcompat/widget/AppCompatSpinner$SpinnerPopup;
 
     if-eqz p2, :cond_0
@@ -846,12 +837,12 @@
 
     if-ne p2, v0, :cond_0
 
-    .line 441
+    .line 431
     invoke-virtual {p0}, Landroidx/appcompat/widget/AppCompatSpinner;->getMeasuredWidth()I
 
     move-result p2
 
-    .line 443
+    .line 433
     invoke-virtual {p0}, Landroidx/appcompat/widget/AppCompatSpinner;->getAdapter()Landroid/widget/SpinnerAdapter;
 
     move-result-object v0
@@ -864,27 +855,27 @@
 
     move-result v0
 
-    .line 442
+    .line 432
     invoke-static {p2, v0}, Ljava/lang/Math;->max(II)I
 
     move-result p2
 
-    .line 444
+    .line 434
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result p1
 
-    .line 442
+    .line 432
     invoke-static {p2, p1}, Ljava/lang/Math;->min(II)I
 
     move-result p1
 
-    .line 445
+    .line 435
     invoke-virtual {p0}, Landroidx/appcompat/widget/AppCompatSpinner;->getMeasuredHeight()I
 
     move-result p2
 
-    .line 442
+    .line 432
     invoke-virtual {p0, p1, p2}, Landroidx/appcompat/widget/AppCompatSpinner;->setMeasuredDimension(II)V
 
     :cond_0
@@ -894,34 +885,34 @@
 .method public onRestoreInstanceState(Landroid/os/Parcelable;)V
     .locals 1
 
-    .line 627
+    .line 617
     check-cast p1, Landroidx/appcompat/widget/AppCompatSpinner$SavedState;
 
-    .line 629
+    .line 619
     invoke-virtual {p1}, Landroidx/appcompat/widget/AppCompatSpinner$SavedState;->getSuperState()Landroid/os/Parcelable;
 
     move-result-object v0
 
     invoke-super {p0, v0}, Landroid/widget/Spinner;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
-    .line 631
+    .line 621
     iget-boolean p1, p1, Landroidx/appcompat/widget/AppCompatSpinner$SavedState;->mShowDropdown:Z
 
     if-eqz p1, :cond_0
 
-    .line 632
+    .line 622
     invoke-virtual {p0}, Landroidx/appcompat/widget/AppCompatSpinner;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 634
+    .line 624
     new-instance v0, Landroidx/appcompat/widget/AppCompatSpinner$2;
 
     invoke-direct {v0, p0}, Landroidx/appcompat/widget/AppCompatSpinner$2;-><init>(Landroidx/appcompat/widget/AppCompatSpinner;)V
 
-    .line 650
+    .line 640
     invoke-virtual {p1, v0}, Landroid/view/ViewTreeObserver;->addOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
     :cond_0
@@ -931,17 +922,17 @@
 .method public onSaveInstanceState()Landroid/os/Parcelable;
     .locals 2
 
-    .line 619
+    .line 609
     new-instance v0, Landroidx/appcompat/widget/AppCompatSpinner$SavedState;
 
-    .line 620
+    .line 610
     invoke-super {p0}, Landroid/widget/Spinner;->onSaveInstanceState()Landroid/os/Parcelable;
 
     move-result-object v1
 
     invoke-direct {v0, v1}, Landroidx/appcompat/widget/AppCompatSpinner$SavedState;-><init>(Landroid/os/Parcelable;)V
 
-    .line 621
+    .line 611
     iget-object v1, p0, Landroidx/appcompat/widget/AppCompatSpinner;->mPopup:Landroidx/appcompat/widget/AppCompatSpinner$SpinnerPopup;
 
     if-eqz v1, :cond_0
@@ -968,7 +959,7 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 1
 
-    .line 430
+    .line 420
     iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner;->mForwardingListener:Landroidx/appcompat/widget/ForwardingListener;
 
     if-eqz v0, :cond_0
@@ -983,7 +974,7 @@
 
     return p1
 
-    .line 433
+    .line 423
     :cond_0
     invoke-super {p0, p1}, Landroid/widget/Spinner;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -995,19 +986,19 @@
 .method public performClick()Z
     .locals 1
 
-    .line 451
+    .line 441
     iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner;->mPopup:Landroidx/appcompat/widget/AppCompatSpinner$SpinnerPopup;
 
     if-eqz v0, :cond_1
 
-    .line 453
+    .line 443
     invoke-interface {v0}, Landroidx/appcompat/widget/AppCompatSpinner$SpinnerPopup;->isShowing()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 454
+    .line 444
     invoke-virtual {p0}, Landroidx/appcompat/widget/AppCompatSpinner;->showPopup()V
 
     :cond_0
@@ -1015,7 +1006,7 @@
 
     return v0
 
-    .line 460
+    .line 450
     :cond_1
     invoke-super {p0}, Landroid/widget/Spinner;->performClick()Z
 
@@ -1027,7 +1018,7 @@
 .method public bridge synthetic setAdapter(Landroid/widget/Adapter;)V
     .locals 0
 
-    .line 78
+    .line 76
     check-cast p1, Landroid/widget/SpinnerAdapter;
 
     invoke-virtual {p0, p1}, Landroidx/appcompat/widget/AppCompatSpinner;->setAdapter(Landroid/widget/SpinnerAdapter;)V
@@ -1038,26 +1029,26 @@
 .method public setAdapter(Landroid/widget/SpinnerAdapter;)V
     .locals 3
 
-    .line 406
+    .line 396
     iget-boolean v0, p0, Landroidx/appcompat/widget/AppCompatSpinner;->mPopupSet:Z
 
     if-nez v0, :cond_0
 
-    .line 407
+    .line 397
     iput-object p1, p0, Landroidx/appcompat/widget/AppCompatSpinner;->mTempAdapter:Landroid/widget/SpinnerAdapter;
 
     return-void
 
-    .line 411
+    .line 401
     :cond_0
     invoke-super {p0, p1}, Landroid/widget/Spinner;->setAdapter(Landroid/widget/SpinnerAdapter;)V
 
-    .line 413
+    .line 403
     iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner;->mPopup:Landroidx/appcompat/widget/AppCompatSpinner$SpinnerPopup;
 
     if-eqz v0, :cond_2
 
-    .line 414
+    .line 404
     iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner;->mPopupContext:Landroid/content/Context;
 
     if-nez v0, :cond_1
@@ -1066,7 +1057,7 @@
 
     move-result-object v0
 
-    .line 415
+    .line 405
     :cond_1
     iget-object v1, p0, Landroidx/appcompat/widget/AppCompatSpinner;->mPopup:Landroidx/appcompat/widget/AppCompatSpinner$SpinnerPopup;
 
@@ -1087,15 +1078,15 @@
 .method public setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
     .locals 1
 
-    .line 487
+    .line 477
     invoke-super {p0, p1}, Landroid/widget/Spinner;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 488
+    .line 478
     iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner;->mBackgroundTintHelper:Landroidx/appcompat/widget/AppCompatBackgroundHelper;
 
     if-eqz v0, :cond_0
 
-    .line 489
+    .line 479
     invoke-virtual {v0, p1}, Landroidx/appcompat/widget/AppCompatBackgroundHelper;->onSetBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
     :cond_0
@@ -1105,15 +1096,15 @@
 .method public setBackgroundResource(I)V
     .locals 1
 
-    .line 479
+    .line 469
     invoke-super {p0, p1}, Landroid/widget/Spinner;->setBackgroundResource(I)V
 
-    .line 480
+    .line 470
     iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner;->mBackgroundTintHelper:Landroidx/appcompat/widget/AppCompatBackgroundHelper;
 
     if-eqz v0, :cond_0
 
-    .line 481
+    .line 471
     invoke-virtual {v0, p1}, Landroidx/appcompat/widget/AppCompatBackgroundHelper;->onSetBackgroundResource(I)V
 
     :cond_0
@@ -1123,22 +1114,22 @@
 .method public setDropDownHorizontalOffset(I)V
     .locals 2
 
-    .line 359
+    .line 349
     iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner;->mPopup:Landroidx/appcompat/widget/AppCompatSpinner$SpinnerPopup;
 
     if-eqz v0, :cond_0
 
-    .line 360
+    .line 350
     invoke-interface {v0, p1}, Landroidx/appcompat/widget/AppCompatSpinner$SpinnerPopup;->setHorizontalOriginalOffset(I)V
 
-    .line 361
+    .line 351
     iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner;->mPopup:Landroidx/appcompat/widget/AppCompatSpinner$SpinnerPopup;
 
     invoke-interface {v0, p1}, Landroidx/appcompat/widget/AppCompatSpinner$SpinnerPopup;->setHorizontalOffset(I)V
 
     goto :goto_0
 
-    .line 362
+    .line 352
     :cond_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -1146,7 +1137,7 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 363
+    .line 353
     invoke-super {p0, p1}, Landroid/widget/Spinner;->setDropDownHorizontalOffset(I)V
 
     :cond_1
@@ -1157,17 +1148,17 @@
 .method public setDropDownVerticalOffset(I)V
     .locals 2
 
-    .line 340
+    .line 330
     iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner;->mPopup:Landroidx/appcompat/widget/AppCompatSpinner$SpinnerPopup;
 
     if-eqz v0, :cond_0
 
-    .line 341
+    .line 331
     invoke-interface {v0, p1}, Landroidx/appcompat/widget/AppCompatSpinner$SpinnerPopup;->setVerticalOffset(I)V
 
     goto :goto_0
 
-    .line 342
+    .line 332
     :cond_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -1175,7 +1166,7 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 343
+    .line 333
     invoke-super {p0, p1}, Landroid/widget/Spinner;->setDropDownVerticalOffset(I)V
 
     :cond_1
@@ -1186,17 +1177,17 @@
 .method public setDropDownWidth(I)V
     .locals 2
 
-    .line 385
+    .line 375
     iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner;->mPopup:Landroidx/appcompat/widget/AppCompatSpinner$SpinnerPopup;
 
     if-eqz v0, :cond_0
 
-    .line 386
+    .line 376
     iput p1, p0, Landroidx/appcompat/widget/AppCompatSpinner;->mDropDownWidth:I
 
     goto :goto_0
 
-    .line 387
+    .line 377
     :cond_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -1204,7 +1195,7 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 388
+    .line 378
     invoke-super {p0, p1}, Landroid/widget/Spinner;->setDropDownWidth(I)V
 
     :cond_1
@@ -1215,17 +1206,17 @@
 .method public setPopupBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
     .locals 2
 
-    .line 316
+    .line 306
     iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner;->mPopup:Landroidx/appcompat/widget/AppCompatSpinner$SpinnerPopup;
 
     if-eqz v0, :cond_0
 
-    .line 317
+    .line 307
     invoke-interface {v0, p1}, Landroidx/appcompat/widget/AppCompatSpinner$SpinnerPopup;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
     goto :goto_0
 
-    .line 318
+    .line 308
     :cond_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -1233,7 +1224,7 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 319
+    .line 309
     invoke-super {p0, p1}, Landroid/widget/Spinner;->setPopupBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
     :cond_1
@@ -1244,7 +1235,7 @@
 .method public setPopupBackgroundResource(I)V
     .locals 1
 
-    .line 325
+    .line 315
     invoke-virtual {p0}, Landroidx/appcompat/widget/AppCompatSpinner;->getPopupContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1261,17 +1252,17 @@
 .method public setPrompt(Ljava/lang/CharSequence;)V
     .locals 1
 
-    .line 465
+    .line 455
     iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner;->mPopup:Landroidx/appcompat/widget/AppCompatSpinner$SpinnerPopup;
 
     if-eqz v0, :cond_0
 
-    .line 466
+    .line 456
     invoke-interface {v0, p1}, Landroidx/appcompat/widget/AppCompatSpinner$SpinnerPopup;->setPromptText(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 
-    .line 468
+    .line 458
     :cond_0
     invoke-super {p0, p1}, Landroid/widget/Spinner;->setPrompt(Ljava/lang/CharSequence;)V
 
@@ -1282,12 +1273,12 @@
 .method public setSupportBackgroundTintList(Landroid/content/res/ColorStateList;)V
     .locals 1
 
-    .line 503
+    .line 493
     iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner;->mBackgroundTintHelper:Landroidx/appcompat/widget/AppCompatBackgroundHelper;
 
     if-eqz v0, :cond_0
 
-    .line 504
+    .line 494
     invoke-virtual {v0, p1}, Landroidx/appcompat/widget/AppCompatBackgroundHelper;->setSupportBackgroundTintList(Landroid/content/res/ColorStateList;)V
 
     :cond_0
@@ -1297,12 +1288,12 @@
 .method public setSupportBackgroundTintMode(Landroid/graphics/PorterDuff$Mode;)V
     .locals 1
 
-    .line 532
+    .line 522
     iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner;->mBackgroundTintHelper:Landroidx/appcompat/widget/AppCompatBackgroundHelper;
 
     if-eqz v0, :cond_0
 
-    .line 533
+    .line 523
     invoke-virtual {v0, p1}, Landroidx/appcompat/widget/AppCompatBackgroundHelper;->setSupportBackgroundTintMode(Landroid/graphics/PorterDuff$Mode;)V
 
     :cond_0
@@ -1312,14 +1303,14 @@
 .method showPopup()V
     .locals 3
 
-    .line 609
+    .line 599
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x11
 
     if-lt v0, v1, :cond_0
 
-    .line 610
+    .line 600
     iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner;->mPopup:Landroidx/appcompat/widget/AppCompatSpinner$SpinnerPopup;
 
     invoke-virtual {p0}, Landroidx/appcompat/widget/AppCompatSpinner;->getTextDirection()I
@@ -1334,7 +1325,7 @@
 
     goto :goto_0
 
-    .line 612
+    .line 602
     :cond_0
     iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner;->mPopup:Landroidx/appcompat/widget/AppCompatSpinner$SpinnerPopup;
 

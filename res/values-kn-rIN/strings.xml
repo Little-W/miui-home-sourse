@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="Icon_name_classic_mode">ಹೋಮ್‌ ಸ್ಕ್ರೀನ್‌ ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
     <string name="accessibility_all_app_custom_category_finish">ಮುಗಿಯಿತು</string>
     <string name="accessibility_all_app_custom_category_item_remove">ವರ್ಗಗಳಿಂದ \"%1$s\" ತೆಗೆದುಹಾಕಿ</string>
     <string name="accessibility_clear_search_bar_text">ಹುಡುಕಾಟ ಬಾರ್‌ ಅಳಿಸಿ</string>
@@ -26,10 +25,8 @@
     <string name="activity_not_unlocked">ಆ್ಯಪ್‌ಗಳನ್ನು ತೆರೆಯುವ ಮುನ್ನ ಡಿವೈಸ್‌ ರಿಬೂಟ್‌ ಆಗುವ ತನಕ ಕಾಯಿರಿ</string>
     <string name="add_custom_category">ಕಸ್ಟಮ್‌</string>
     <string name="add_screen">ಸ್ಕ್ರೀನ್‌ ಸೇರಿಸು</string>
-    <string name="add_to_workspace">ಹೋಮ್‌ ಸ್ಕ್ರೀನ್‌ಗೆ ಸೇರಿಸಿ</string>
     <string name="added_all_category">ಎಲ್ಲಾ ಆ್ಯಪ್‌ಗಳನ್ನು ಸೇರಿಸಲಾಗಿದೆ</string>
     <string name="afternoon">ಅಪರಾಹ್ನ</string>
-    <string name="agree_button">ಸಮ್ಮತಿ</string>
     <string name="alexa_notification_add">ಸೇರಿಸಿ</string>
     <string name="alexa_notification_cancel">ಈಗ ಬೇಡ</string>
     <string name="alexa_notification_content">ನಿಯಂತ್ರಣ ಕೇಂದ್ರಕ್ಕೆ Alexa ಶಾರ್ಟ್‌ಕಟ್ ಸೇರಿಸುವುದೇ?</string>
@@ -68,7 +65,6 @@
     <string name="all_apps_slide_up_tips">ಮೇಲಕ್ಕೆ ಸ್ವೈಪ್‌ ಮಾಡುವುದು ಆ್ಯಪ್‌ ಡ್ರಾಯರ್‌ಗೆ ಮಾತ್ರ ಕಾಯ್ದಿರಿಸಲಾಗಿರುತ್ತದೆ. ಸಹಜ ಹೋಮ್ ಸ್ಕ್ರೀನ್‌ ಮೋಡ್‌ಗೆ ಬದಲಾಯಿಸಿ, ಮತ್ತೊಮ್ಮೆ ಪ್ರಯತ್ನಿಸಿ.</string>
     <string name="all_apps_suggestions">ಆ್ಯಪ್‌ ಸಲಹೆಗಳು</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">ಅ್ಯನಿಮೇಷನ್ ವೇಗ</string>
     <string name="announce_for_app_move_in_folder">ಫೋಲ್ಡರ್‌ನಲ್ಲಿ %1$d ಸ್ಥಳಕ್ಕೆ ಸರಿಸಲಾಗಿದೆ</string>
     <string name="announce_for_checked">%1$s, ಗುರುತಿಸಲಾಗಿದೆ</string>
     <string name="announce_for_choose_default_screen">%1$d ಸ್ಕ್ರೀನ್‌‌ ಅನ್ನು ಡೀಫಾಲ್ಟ್‌ ಹೋಮ್‌ ಸ್ಕ್ರೀನ್‌ ಆಗಿ ಹೊಂದಿಸಿ</string>
@@ -121,13 +117,6 @@
     <string name="app_category_tools">ಪರಿಕರಗಳು</string>
     <string name="app_category_travel">ಪ್ರಯಾಣ</string>
     <string name="app_category_vr">VR</string>
-    <string name="app_drawer_double_confirm_description">ಇದು ನಿಮ್ಮ ಹೋಮ್‌ ಸ್ಕ್ರೀನ್‌ ಲೇ ಔಟ್‌ ಬದಲಾಯಿಸುತ್ತದೆ. ಬಳಿಕ ನೀವು ಈ ಬದಲಾವಣೆಗಳನ್ನು ಸೆಟ್ಟಿಂಗ್‌ಗಳಲ್ಲಿ ಬದಲಾಯಿಸಬಹುದು.</string>
-    <string name="app_drawer_double_confirm_title">ಎಚ್ಚರಿಕೆ</string>
-    <string name="app_drawer_feature_description">ನಿಮ್ಮೆಲ್ಲಾ ಆ್ಯಪ್‌ಗಳನ್ನು ಕ್ರಮಗೊಳಿಸಲು ಆ್ಯಪ್‌ ಡ್ರಾಯರ್‌ ಸೂಕ್ತ ಪರಿಕರವಾಗಿದೆ. ಆ್ಯಪ್‌ಗಳನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ವರ್ಗೀಕರಿಸಿ ಮತ್ತು ನಿಮಗೆ ಬೇಕಾಗಿದ್ದನ್ನು ಕ್ಷಣಾರ್ಧದಲ್ಲಿ ಹುಡುಕಿ!</string>
-    <string name="app_drawer_guide_description">ನೀವೇನು ಹುಡುಕುತ್ತಿದ್ದೀರೋ ಅದನ್ನು ನಿಮ್ಮ ಮೆಚ್ಚಿನ ಆ್ಯಪ್‌ಗಳಲ್ಲಿ ನೋಡಿ</string>
-    <string name="app_drawer_guide_title">ಆ್ಯಪ್‌‌ ಡ್ರಾಯರ್‌</string>
-    <string name="app_drawer_tip_title">ಕಂಟೆಂಟ್‌ ಫೀಡ್‌ ಜಾಗಕ್ಕೆ ಆ್ಯಪ್‌ ಡ್ರಾಯರ್‌ ಬಂದಿದೆ.</string>
-    <string name="app_install_state">ಇನ್‌ಸ್ಟಾಲ್‌ ಆಗಿದೆ</string>
     <string name="app_name">smallWindow</string>
     <string name="application_name">ಸಿಸ್ಟಂ ಲಾಂಚರ್</string>
     <string name="apply">ಹೊಂದಿಸು</string>
@@ -150,35 +139,8 @@
     <string name="back">ಹಿಂದೆ</string>
     <string name="backup_fail">ಲಾಂಚರ್‌ ಬ್ಯಾಕಪ್‌ ಮಾಡಲಾಗಲಿಲ್ಲ</string>
     <string name="bad_wallpaper_source_prompt">ವಾಲ್‌ಪೇಪರ್ ಲೋಡ್ ಆಗುತ್ತಿಲ್ಲ</string>
-    <string name="branch_feature_description">ಆ್ಯಪ್‌ಗಳು ಅಲ್ಲದೇ, ಕ್ವಿಕ್‌ ಫೈಂಡರ್‌ ಇನ್‌-ಆ್ಯಪ್‌ ಕಂಟೆಂಟ್‌ ಮತ್ತು ಆನ್‌ಲೈನ್‌ ಐಟಂಗಳನ್ನು ಕೂಡ ಪತ್ತೆ ಮಾಡುತ್ತದೆ.</string>
-    <string name="branch_guide_attention">ವರ್ಧಿತ ಹುಡುಕಾಟವನ್ನು ಬಳಸಲು, ನಿಮ್ಮ ಹುಡುಕಾಟ ವಿನಂತಿಗಳು, Google Ads ID, ಮತ್ತು ಐಪಿ ವಿಳಾಸವನ್ನು Branch Metrics Inc. ಜೊತೆ ಹಂಚಿಕೊಳ್ಳಬೇಕಾಗುತ್ತದೆ. ಈ ಫೀಚರ್ ಬಳಸುವ ಮುನ್ನ ನೀವು <a href="http://url1"><font color="#B3000000">ಅಂತಿಮ ಬಳಕೆದಾರ ನಿಯಮಗಳು&amp; ಷರತ್ತುಗಳು</font></a> ಮತ್ತು<a href="http://url2"><font color="#B3000000">ಬ್ರಾಂಚ್‌ ಡಿಸ್ಕವರಿ ಗೌಪ್ಯತೆ ನೀತಿ</font></a>ಗಳನ್ನು ಓದಿ, ಸಮ್ಮತಿಸಬೇಕಾಗುತ್ತದೆ.</string>
-    <string name="branch_guide_description_one">ನಿಮ್ಮ ಎಲ್ಲಾ ಆ್ಯಪ್‌ಗಳನ್ನು ಆ್ಯಪ್‌ ಡ್ರಾಯರ್‌ನಲ್ಲಿ ಇರಿಸುತ್ತೇವೆ. ನಿಮ್ಮ ಹೋಮ್‌ ಸ್ಕ್ರೀನ್‌ ಸ್ವಚ್ಛವಾಗಿ, ಕ್ರಮಬದ್ಧವಾಗಿ ಕಾಣಿಸುತ್ತದೆ.</string>
-    <string name="branch_guide_description_three">ಬಿಲ್ಟ್‌-ಇನ್‌ ಹುಡುಕಾಟದ ಸಹಾಯದಿಂದ, ನಿಮಗೆ ಬೇಕಾಗಿದ್ದನ್ನು ಕ್ಷಣಾರ್ಧದಲ್ಲಿ ಹುಡುಕಬಹುದು!</string>
-    <string name="branch_guide_description_two">ಆ್ಯಪ್‌ ಡ್ರಾಯರ್‌ ಆ್ಯಪ್‌ಗಳನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ವರ್ಗೀಕರಿಸುತ್ತದೆ.</string>
-    <string name="branch_guide_tip_title">ಪ್ರತಿಯೊಂದು ಆ್ಯಪ್‌ಗಳು ಅವುಗಳದ್ದೇ ಸ್ಥಳದಲ್ಲಿ</string>
-    <string name="branch_guide_title">ಆ್ಯಪ್‌ ಡ್ರಾಯರ್‌ ನೋಡಿ</string>
-    <string name="branch_guide_type_four_desc">ಎರಡೇ ಎರಡು ಸರಳವಾದ ಹಂತಗಳ ಮೂಲಕ ನೀವು ಹಳೆಯ ಲೇಔಟ್‌ಗೆ ಮರಳಬಹುದು</string>
-    <string name="branch_guide_type_four_main">ಸೆಟ್ಟಿಂಗ್‌ಗಳಲ್ಲಿ, ಹೋಮ್‌ ಸ್ಕ್ರೀನ್‌ > ಹೋಮ್‌ ಸ್ಕ್ರೀನ್‌ ಗೆ ಹೋಗಿ ಹಾಗೂ \"ಕ್ಲಾಸಿಕ್‌\" ಆಯ್ಕೆ ಮಾಡಿ.</string>
-    <string name="branch_guide_type_four_step_one">ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ತೆರೆಯಿರಿ</string>
-    <string name="branch_guide_type_four_step_two">ಹೋಮ್‌ ಸ್ಕ್ರೀನ್‌ ಆಯ್ಕೆ ಮಾಡಿ</string>
-    <string name="branch_guide_type_one_desc">ಆ್ಯಪ್‌ ಡ್ರಾಯರ್‌ ಸಹಾಯದಿಂದ ನಿಮ್ಮ ಆ್ಯಪ್‌ಗಳನ್ನು ನಿರ್ವಹಿಸಿ</string>
-    <string name="branch_guide_type_one_main">ನಿಮ್ಮ ಆ್ಯಪ್‌ಗಳನ್ನು ಆ್ಯಪ್‌ ಡ್ರಾಯರ್‌ನಲ್ಲಿರಿಸಿ. ಇದರಿಂದ, ಹೋಮ್‌ ಸ್ಕ್ರೀನ್‌ ಚೊಕ್ಕಟವಾಗಿ ಹಾಗೂ ಸಂಘಟಿತವಾಗಿರುತ್ತದೆ.</string>
-    <string name="branch_new_feature">ಹೊಸ ಫೀಚರ್‌</string>
-    <string name="branch_privacy_policy">ಗೌಪ್ಯತೆ ನೀತಿ</string>
-    <string name="branch_search_guide_description">ನಿಮ್ಮ ಹುಡುಕಾಟ ಫಲಿತಾಂಶಗಳು ಈಗ ಬಹಳಷ್ಟು ಸ್ಪಷ್ಟವಾಗಿವೆ</string>
-    <string name="branch_search_guide_privacy">ಇದು Branch Metrics Inc ಸಂಚಾಲಿತ ಸೇವೆಯಾಗಿದೆ. ನಿಮ್ಮ ಸ್ಥಳ ಮಾಹಿತಿ, ಹುಡುಕಾಟ ಪ್ರಶ್ನೆಗಳು ಮತ್ತು Google Ads ಐಡಿಯನ್ನು Branch ಜೊತೆ ಹಂಚಿಕೊಳ್ಳಲಾಗುತ್ತದೆ. ಈ ಸೇವೆಯನ್ನು ಬಳಸುವ ಮುನ್ನ Branch ನ <a href="http://url1"><font color="#B3000000">ನಿಯಮಗಳು ಮತ್ತು ಷರತ್ತುಗಳು</font></a> ಮತ್ತು <a href="http://url2"><font color="#B3000000">ಗೌಪ್ಯತೆ ನೀತಿ</font></a>ಯನ್ನು ಓದಿ ಮತ್ತು ಸಮ್ಮತಿಸಿ.</string>
-    <string name="branch_search_guide_title">ನೀವೇನು ಹುಡುಕುತ್ತಿದ್ದೀರೋ ಅದನ್ನು ನಿಮ್ಮ ಮೆಚ್ಚಿನ ಆ್ಯಪ್‌ಗಳಲ್ಲಿ ನೋಡಿ</string>
-    <string name="branch_terms_condition">ನಿಬಂಧನೆಗಳು ಮತ್ತು ಷರತ್ತುಗಳು</string>
-    <string name="branch_tip_title">ಕ್ವಿಕ್‌ ಫೈಂಡರ್‌ ಸಹಾಯದಿಂದ, ನಿಮಗೆ ಬೇಕಾಗಿದ್ದನ್ನು ಅರೆಕ್ಷಣದಲ್ಲಿ ಹುಡುಕಬಹುದು.</string>
-    <string name="btn_agree">ಸಮ್ಮತಿ</string>
-    <string name="btn_cancel">ರದ್ದು</string>
-    <string name="btn_close">ಆಫ್‌ ಮಾಡು</string>
-    <string name="btn_open">ಆನ್ ಮಾಡಿ</string>
-    <string name="btn_request_permission">ಅನುಮತಿಗಳನ್ನು ಒದಗಿಸಿ</string>
-    <string name="btn_set_right_now">ಅನುಮತಿಗಳನ್ನು ಒದಗಿಸಿ</string>
     <string name="buffering">ಬಫರ್ ಆಗುತ್ತಿದೆ…</string>
     <string name="cancel_action">ರದ್ದು</string>
-    <string name="cancel_botton">ರದ್ದು</string>
     <string name="cancel_btn_label">ರದ್ದು</string>
     <string name="cant_edit_lock_screen">ಲಾಕ್‌ ಸ್ಕ್ರೀನ್‌ ಶೈಲಿಯನ್ನು ಎಡಿಟ್‌ ಮಾಡಲಾಗುವುದಿಲ್ಲ</string>
     <string name="cant_remove_folder">ಫೋಲ್ಡರ್ ತೆಗೆಯಲು ಸಾಧ್ಯವಿಲ್ಲ</string>
@@ -288,11 +250,9 @@
     <string name="emptyplaylist">ಹಾಡುಗಳನ್ನು ಸೇರಿಸಲು ಟ್ಯಾಪ್‌ ಮಾಡಿ</string>
     <string name="enable_wallpaper_scroll">ಸೈಡ್-ಸ್ಕ್ರೋಲಿಂಗ್ ಆನ್ ಮಾಡಿ</string>
     <string name="encryption">ಎನ್‌ಕ್ರಿಪ್ಷನ್</string>
-    <string name="enter_search_setting_title">ಆ್ಯಪ್‌ ಡ್ರಾಯರ್‌ ತೆರೆದ ಮೇಲೆ ಹುಡುಕಾಟ ತೆರೆಯಿರಿ</string>
     <string name="eras_ad">ಕ್ರಿಶ</string>
     <string name="eras_bc">ಕ್ರಿಪೂ</string>
     <string name="evening">ಅಪರಾಹ್ನ</string>
-    <string name="exit_overview_because_task_stack_changed">ಹಿನ್ನೆಲೆಯ ಬದಲಾವಣೆಗಳಿಂದಾಗಿ ಇತ್ತೀಚಿನವುಗಳನ್ನು ಮುಚ್ಚಲಾಗಿದೆ</string>
     <string name="failed_to_delete_temporary">ತೆಗೆಯಲು ಸಾಧ್ಯವಿಲ್ಲ</string>
     <string name="failed_to_drop">ಸರಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ</string>
     <string name="failed_to_drop_widget_invalid">ಈ ವಿಜೆಟ್ ಅಮಾನ್ಯವಾಗಿದೆ</string>
@@ -349,8 +309,6 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
-    <string name="fold_pair_install_shortcut_long_click">ಹೋಮ್‌ ಸ್ಕ್ರೀನ್‌ಗೆ ಸೇರಿಸಲು ಒತ್ತಿ ಹಿಡಿಯಿರಿ</string>
-    <string name="fold_pair_installed_shortcut_launcher">ಈ ಶಾರ್ಟ್‌ಕಟ್‌‌ ಈಗಾಗಲೇ ಅಸ್ತಿತ್ವದಲ್ಲಿದೆ</string>
     <string name="folder_name">ಫೋಲ್ಡರ್</string>
     <string name="frame_load_failed">ಫ್ರೇಮ್ ಲೋಡ್ ಮಾಡಲು ಆಗುತ್ತಿಲ್ಲ</string>
     <string name="free_style_apps_title">ಆ್ಯಪ್‌ ಆಯ್ಕೆ ಮಾಡಿ</string>
@@ -406,14 +364,11 @@
     <string name="gadget_weather_title_14">ಹವಾಮಾನ</string>
     <string name="gadget_weather_title_24">ಹವಾಮಾನ</string>
     <string name="global_search_hint">ಹುಡುಕಿ</string>
-    <string name="got_it_botton">ಅರ್ಥವಾಯಿತು</string>
     <string name="group_folder">ಹೊಸ ಫೋಲ್ಡರ್</string>
     <string name="group_live_folders">ಫೋಲ್ಡರ್‌ಗಳು</string>
     <string name="group_shortcuts">ಶಾರ್ಟ್‌ಕಟ್‌ಗಳು</string>
     <string name="guide_install_app_msg">ಈ ಆ್ಯಪ್‌ ನಿಮ್ಮ ಡಿವೈಸ್‌ನಲ್ಲಿ ಇನ್‌ಸ್ಟಾಲ್‌ ಆಗಿಲ್ಲ. ಇದೀಗ ಆ್ಯಪ್‌ ಹುಡುಕಿ, ಇನ್‌ಸ್ಟಾಲ್‌ ಮಾಡುವುದೇ?</string>
     <string name="guide_install_app_title">ಆ್ಯಪ್‌ ಪತ್ತೆ ಮಾಡಿ, ಇನ್‌ಸ್ಟಾಲ್‌ ಮಾಡುವುದೇ?</string>
-    <string name="guide_permission_title">ಅನುಮತಿಗಳ ಅಗತ್ಯವಿದೆ</string>
-    <string name="guide_privacy_dialog_title">ಸೇವಾ ನಿಯಮಗಳು</string>
     <string name="guide_tips_editing_mode">ವಿಜೆಟ್ ಆಯ್ಕೆಮಾಡಲು ಒತ್ತಿ ಹಿಡಿಯಿರಿ</string>
     <string name="home_gesture_content_center">ಕಂಟೆಂಟ್‌ ಕೇಂದ್ರ</string>
     <string name="home_gesture_global_search">ಹುಡುಕಾಟ</string>
@@ -444,9 +399,6 @@
     <string name="launcher_slide_up_title">ಹೋಮ್‌ ಸ್ಕ್ರೀನ್‌ನಲ್ಲಿ ಮೇಲಕ್ಕೆ ಸ್ವೈಪ್‌ ಮಾಡಿ</string>
     <string name="launcher_sliding_up_gesture">ಹುಡುಕಾಟ ತೆರೆಯಲು ಮುಖಪುಟ ಸ್ಕ್ರೀನ್‌ನಲ್ಲಿ ಮೇಲಕ್ಕೆ ಸ್ವೈಪ್ ಮಾಡಿ</string>
     <string name="launcher_title">ಹೋಮ್‌ ಸ್ಕ್ರೀನ್‌ ಮತ್ತು ಇತ್ತೀಚಿನವುಗಳು</string>
-    <string name="layout_guide_description">ನಿಮಗೆ ಆ್ಯಪ್‌ ಡ್ರಾಯರ್‌ ಇಷ್ಟವಾಗಲಿಲ್ಲ ಎಂದಾದರೆ, ನೀವು ಯಾವುದೇ ಕ್ಷಣದಲ್ಲಿ ಕ್ಲಾಸಿಕ್‌ ಹೋಮ್‌ ಸ್ಕ್ರೀನ್‌ಗೆ ಹಿಂದಿರುಗಬಹುದು. \"ಹೋಮ್‌ ಸ್ಕ್ರೀನ್‌ ಸೆಟ್ಟಿಂಗ್‌ಗಳು\" ಶಾರ್ಟ್‌ಕಟ್‌ ಬಳಸಿ ಹಾಗೂ ಎರಡು ಮೋಡ್‌ಗಳ ನಡುವೆ ಬದಲಾಯಿಸಿ.</string>
-    <string name="layout_guide_tip_title">ಒಂದೇ ಒಂದು ಟ್ಯಾಪ್‌ ಮೂಲಕ ನೀವು ಹಿಂದಿನ ವಿಧಾನಕ್ಕೆ ಹಿಂದಿರುಗಬಹುದು</string>
-    <string name="layout_guide_title">ಆ್ಯಪ್‌ ಡ್ರಾಯರ್‌ ಅನ್ನು ತೆಗೆದುಹಾಕುವ ಬಗೆ</string>
     <string name="like">ಮೆಚ್ಚಿನವುಗಳಿಗೆ ಸೇರಿಸಿ</string>
     <string name="liked">ಮೆಚ್ಚಿನವುಗೆ ಸೇರಿಸಲಾಗಿದೆ</string>
     <string name="loading_desktop">ಕೇವಲ ಒಂದು ಸೆಕೆಂಡ್…</string>
@@ -613,11 +565,6 @@
     <string name="navigation_guide_recent_title">ಇತ್ತೀಚಿನವುಗಳನ್ನು ತೆರೆಯಿರಿ</string>
     <string name="navigation_guide_recent_title_spec_with_quotation_pad">ಇತ್ತೀಚಿನವುಗಳನ್ನು ತೆರೆಯಿರಿ</string>
     <string name="navigation_guide_settings">ಗೆಶ್ಚರ್‌ ಡೆಮೊಗಳು</string>
-    <string name="navigation_position_center">ಮಧ್ಯೆ</string>
-    <string name="navigation_position_left">ಎಡ</string>
-    <string name="navigation_position_right">ಬಲ</string>
-    <string name="navigation_position_summary">ನ್ಯಾವಿಗೇಶನ್‌ ಬಟನ್‌ಗಳ ಕಸ್ಟಮ್‌ ಸ್ಥಾನಗಳನ್ನು ಹೋಮ್‌ ಸ್ಕ್ರೀನ್‌ಗೆ ಮಾತ್ರ ಅನ್ವಯಿಸಬಹುದು</string>
-    <string name="navigation_position_title">ನ್ಯಾವಿಗೇಶನ್ ಬಟನ್‌ಗಳ ಸ್ಥಾನ</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">ರದ್ದು</string>
     <string name="navigation_set_miui_home_as_default_dialog_message">ಥರ್ಡ್‌ ಪಾರ್ಟಿ ಲಾಂಚರ್‌ಗಳ ಜೊತೆ ಪೂರ್ಣ ಸ್ಕ್ರೀನ್‌ ಗೆಶ್ಚರ್‌ಗಳನ್ನು ಬಳಸಲು ಆಗುವುದಿಲ್ಲ. ಸಿಸ್ಟಂ ಲಾಂಚರ್‌ಗೆ ಬದಲಾಯಿಸಿ ಹಾಗೂ ಪೂರ್ಣ ಸ್ಕ್ರೀನ್‌ ಗೆಶ್ಚರ್‌ಗಳನ್ನು ಆನ್‌ ಮಾಡಬೇಕೇ?</string>
     <string name="navigation_set_miui_home_as_default_dialog_ok">ಸರಿ</string>
@@ -626,11 +573,9 @@
     <string name="navigation_type_title">ಸಿಸ್ಟಂ ನ್ಯಾವಿಗೇಷನ್</string>
     <string name="navigation_type_virtual_key">ಬಟನ್‌ಗಳು</string>
     <string name="network_error">ನೆಟ್‌ವರ್ಕ್‌ಗೆ ಸಂಪರ್ಕಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ. ಮರು ಪ್ರಯತ್ನಿಸಿ.</string>
-    <string name="new_feature_title">ಹೊಸತೇನಿದೆ</string>
     <string name="night">ಸಂಜೆ</string>
     <string name="no_detail_page">ವಿವರಗಳ ಪುಟ ಇಲ್ಲ</string>
     <string name="no_space_toast">ಸ್ಥಳ ಸಾಕಷ್ಟಿಲ್ಲ</string>
-    <string name="no_space_toast_fold">ಇಲ್ಲಿ ಸ್ಥಳ ಸಾಕಷ್ಟಿಲ್ಲ</string>
     <string name="no_space_toast_when_click_widget">ಈ ಪುಟದಲ್ಲಿ ಸಾಕಷ್ಟು ಸ್ಥಳಾವಕಾಶವಿಲ್ಲ. ಈ ಐಟಂ ಅನ್ನು ಬೇರೊಂದು ಪುಟಕ್ಕೆ ಎಳೆಯಲು ಪ್ರಯತ್ನಿಸಿ.</string>
     <string name="noon">ಮಧ್ಯಾಹ್ನ</string>
     <string name="normal_wallpaper">ವಾಲ್‌ಪೇಪರ್</string>
@@ -639,7 +584,6 @@
     <string name="notification_reset_title">ಐಕಾನ್‌ಗಳನ್ನು ಕ್ರಮಗೊಳಿಸಲಾಗಿದೆ</string>
     <string name="one_key_call_title">ಡಯಲ್‌ ಮಾಡಲು ಟ್ಯಾಪ್‌ ಮಾಡಿ</string>
     <string name="online_wallpaper">ಆನ್‌ಲೈನ್</string>
-    <string name="open_pad_personal_assistant_settings">ಹೋಮ್‌ ಸ್ಕ್ರೀನ್‌ ವಿಜೆಟ್‌ಗಳು</string>
     <string name="open_personal_assistant_dialog_btn_cancel">ರದ್ದು</string>
     <string name="open_personal_assistant_dialog_btn_confirm">ಆಫ್ ಮಾಡಿ</string>
     <string name="open_personal_assistant_dialog_desc">ನೀವು ಆ್ಯಪ್‌ ವೋಲ್ಟ್‌ ಅನ್ನು ಆಫ್‌ ಮಾಡಿದ ಬಳಿಕ, ನೀವು ಆ್ಯಪ್‌ ವೋಲ್ಟ್‌ ವಿಜೆಟ್‌ಗಳನ್ನು ನೋಡಲು ಅಥವಾ ಬಳಸಲು ಸಾಧ್ಯವಾಗುವುದಿಲ್ಲ. ಅವರ ಅಪ್‌ಡೇಟ್‌ ಆದ ಆವೃತ್ತಿ ಕೂಡ ನಿಮಗೆ ಲಭ್ಯವಿರುವುದಿಲ್ಲ. ಆದರೂ ಆಫ್‌ ಮಾಡಬೇಕೇ?</string>
@@ -651,7 +595,6 @@
     <string name="ota_layout_adjustment_content">ಹೊಸ ಆವೃತ್ತಿಯಲ್ಲಿ ಒಳ ಹಾಗೂ ಬಾಹ್ಯ ಹೋಮ್‌ ಸ್ಕ್ರೀನ್‌ ಲೇಔಟ್‌ಗಳನ್ನು ಸಿಂಕ್‌ ಮಾಡಲಾಗುತ್ತದೆ.</string>
     <string name="ota_layout_adjustment_title">ಹೋಮ್‌ ಸ್ಕ್ರೀನ್‌ ಲೇಔಟ್‌ಗಳು</string>
     <string name="out_of_space">ಈ ಹೋಮ್ ಸ್ಕ್ರೀನ್‌ಗೆ ಸ್ಥಳವಿಲ್ಲ</string>
-    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">ಥರ್ಡ್‌ ಪಾರ್ಟಿ ಆ್ಯಪ್‌ ಐಕಾನ್‌ಗಳ ಮೇಲೆ ಅನಿಮೇಶನ್‌ಗಳನ್ನು ರೆಂಡರ್‌ ಮಾಡಿ</string>
     <string name="perfect_icons_switch_title">ಗ್ಲೋಬಲ್‌ ಐಕಾನ್‌ ಅನಿಮೇಶನ್‌</string>
     <string name="permdesc_install_shortcut">ಬಳಕೆದಾರ ಮಧ್ಯಪ್ರವೇಶ ಇಲ್ಲದೇ ಆ್ಯಪ್‌‌ಗೆ ಶಾರ್ಟ್‌ಕಟ್ ಸೇರಿಸಲು ಅನುಮತಿಸುತ್ತದೆ.</string>
@@ -671,7 +614,6 @@
     <string name="photo_load_failed">ಫೋಟೋ ಲೋಡ್ ಆಗುತ್ತಿಲ್ಲ</string>
     <string name="please_slide_agian">ಮತ್ತೆ ಸ್ಲೈಡ್‌ ಮಾಡಿ</string>
     <string name="pm">PM</string>
-    <string name="popular_search">ಜನಪ್ರಿಯ</string>
     <string name="pref_cell_layout_size">ಆ್ಯಪ್‌ ಐಕಾನ್ ಲೇಔಟ್</string>
     <string name="pref_enable_drawing_cache_summary">ಮೆಮೋರಿಯನ್ನು ಅಳಿಸಲು ಆಫ್ ಮಾಡಿ. ಇದು ನಿಧಾನ ಕಾರ್ಯನಿರ್ವಹಣೆ ಉಂಟುಮಾಡಬಹುದು.</string>
     <string name="pref_enable_drawing_cache_title">ಡ್ರಾಯಿಂಗ್ ಕ್ಯಾಶೆ</string>
@@ -691,14 +633,6 @@
     <string name="privacy_thumbnail_blur_summary">ಇತ್ತೀಚಿನವು ಗಳಲ್ಲಿ ಆ್ಯಪ್‌ ಪೂರ್ವವೀಕ್ಷಣೆಗಳನ್ನು ಮುಸುಕುಗೊಳಿಸಿ</string>
     <string name="privacy_thumbnail_blur_title">ಆ್ಯಪ್‌ ಪೂರ್ವವೀಕ್ಷಣೆಗಳನ್ನು ಮುಸುಕುಗೊಳಿಸಿ</string>
     <string name="quick_app">ತ್ವರಿತ ಆ್ಯಪ್‌‌ಗಳು</string>
-    <string name="quick_finder_feature_description">ಆ್ಯಪ್‌ಗಳನ್ನು ಹುಡುಕಲು, ಇನ್‌-ಆ್ಯಪ್‌ ಕಂಟೆಂಟ್‌ ಮತ್ತು ಆನ್‌ಲೈನ್‌ ಐಟಂಗಳನ್ನು ತ್ವರಿತಗತಿಯಲ್ಲಿ ಹುಡುಕಲು ಕ್ವಿಕ್‌ ಫೈಂಡರ್‌ ನಿಮಗೆ ಅವಕಾಶ ಮಾಡಿಕೊಡುತ್ತದೆ. ನೀವು ಸೆಟ್ಟಿಂಗ್‌ಗಳಲ್ಲಿ ಈ ಫೀಚರ್ ಆಫ್‌ ಮಾಡಬಹುದು.</string>
-    <string name="quick_finder_tip_title">ನಿಮಗೆ ಬೇಕಾಗಿದ್ದನ್ನು ಕ್ಷಣಾರ್ಧದಲ್ಲಿ ಪತ್ತೆ ಮಾಡಿ</string>
-    <string name="quick_search_all_app_desc">ಎಲ್ಲಾ ಆ್ಯಪ್‌ಗಳನ್ನು ಆ್ಯಪ್‌ ಡ್ರಾಯರ್‌ನಲ್ಲಿ ಡಿಸ್‌ಪ್ಲೇ ಮಾಡಿ</string>
-    <string name="quick_search_desc">ಆ್ಯಪ್‌ ಡ್ರಾಯರ್‌ ತೆರೆದ ಮೇಲೆ ಹುಡುಕಾಟ ತೆರೆಯಿರಿ</string>
-    <string name="quick_search_guide_all_apps">ಎಲ್ಲಾ ಆ್ಯಪ್‌ಗಳು</string>
-    <string name="quick_search_guide_ok_btn">ಸರಿ</string>
-    <string name="quick_search_guide_quick_search">ತ್ವರಿತ ಹುಡುಕಾಟ</string>
-    <string name="quick_search_guide_title">ಡೀಫಾಲ್ಟ್‌ ಮೋಡ್‌ ಆಯ್ಕೆ ಮಾಡಿ</string>
     <string name="recent_apps">ಇತ್ತೀಚಿನವು</string>
     <string name="recent_menu_item_info">ಮಾಹಿತಿ</string>
     <string name="recent_menu_item_lock">ಲಾಕ್‌</string>
@@ -727,13 +661,6 @@
     <string name="recents_title_market">ಆ್ಯಪ್‌ಗಳನ್ನು ಹುಡುಕಿ</string>
     <string name="recents_title_security_scan">ಭದ್ರತೆ ಸ್ಕ್ಯಾನ್‌</string>
     <string name="recents_tv_small_window_text">ಫ್ಲೋಟಿಂಗ್‌ ವಿಂಡೋ</string>
-    <string name="recents_worldcirculate_text">ಆಯ್ಕೆ ಮಾಡಲು ಸಡಿಲಗೊಳಿಸಿ</string>
-    <string name="recnets_relay_device_info">%s ಮೂಲಕ</string>
-    <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
-    <string name="recnets_worldcirculate_display_computer_info">ಆ್ಯಪ್‌ ಈಗ %s ನಲ್ಲಿ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತಿದೆ.</string>
-    <string name="recnets_worldcirculate_display_default_info">ಅದನ್ನು ಇಲ್ಲಿಗೆ ತರಲು ಟ್ಯಾಪ್‌ ಮಾಡಿ.</string>
-    <string name="recnets_worldcirculate_display_default_info_pad">ಅದನ್ನು ಇಲ್ಲಿಗೆ ತರಲು ಟ್ಯಾಪ್‌ ಮಾಡಿ.</string>
-    <string name="recnets_worldcirculate_display_pad_info">ಆ್ಯಪ್‌ ಈಗ %s ನಲ್ಲಿ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತಿದೆ.</string>
     <string name="recommend_apk_size_and_desc">%1$dMB | %2$s</string>
     <string name="recommend_app">ಆ್ಯಪ್‌ ಸಲಹೆಗಳು</string>
     <string name="recommend_apps_default_title">ಖಾಲಿ</string>
@@ -751,8 +678,6 @@
     <string name="remove_invalidate_gadget_tips">ನೀವು ಬಳಸುವ ವಿಜೆಟ್‌ಗಳಲ್ಲಿ ಒಂದು ಲಭ್ಯವಿಲ್ಲ. ನೀವು ಬೇರೊಂದನ್ನು ಸೇರಿಸಬಹುದು.</string>
     <string name="remove_sys_app_content">ಹೋಮ್‌ ಸ್ಕ್ರೀನ್‌ ಶಾರ್ಟ್‌ಕಟ್‌ ಅನ್ನು ನೀವು ಮತ್ತೊಮ್ಮೆ ಸೆಟ್ಟಿಂಗ್‌ಗಳು > ಆ್ಯಪ್‌ಗಳು > ಹೋಮ್‌ಸ್ಕ್ರೀನ್‌ ಶಾರ್ಟ್‌ಕಟ್‌ಗಳನ್ನು ನಿರ್ವಹಿಸಿ ಯಲ್ಲಿ ಸೇರಿಸಬಹುದು. ತೆಗೆದುಹಾಕಬೇಕೇ?</string>
     <string name="remove_sys_app_title">ಹೋಮ್‌ ಸ್ಕ್ರೀನ್‌ ಶಾರ್ಟ್‌ಕಟ್‌‌ ತೆಗೆದುಹಾಕಬೇಕೇ?</string>
-    <string name="request_permission_msg">POCO ಲಾಂಚರ್‌ಗೆ ಕೆಲವೊಂದು ಅನುಮತಿಗಳು ಬೇಕು. ಆಗ ಮಾತ್ರ ನೀವು ಅದರ ಪೂರ್ಣ ಪ್ರಯೋಜನ ಪಡೆದುಕೊಳ್ಳಬಹುದು.</string>
-    <string name="request_permission_title">ಅನುಮತಿಗಳ ಅಗತ್ಯವಿದೆ</string>
     <string name="reset_cate_tip_content">ನೀವು ಮುಂದುವರಿದರೆ, ಡೀಫಾಲ್ಟ್‌ ಆ್ಯಪ್‌ ಗುಂಪುಗಳನ್ನು ಮರುಸ್ಥಾಪಿಸಲಾಗುತ್ತದೆ. ಮುಂದುವರಿಸುವುದೇ?</string>
     <string name="reset_cate_tip_title">ಡೀಫಾಲ್ಟ್ ಗುಂಪುಗಳನ್ನು ಮರುಸ್ಥಾಪಿಸಿ</string>
     <string name="reset_description_first_time">2 ವಾರಗಳಲ್ಲಿ ನೀವು %1$s ಲೇಔಟ್‌ ಅನ್ನು ಮರುಸ್ಥಾಪಿಸಿ</string>
@@ -768,8 +693,6 @@
     <string name="screen_cells_config_title">ಹೋಮ್‌ ಸ್ಕ್ರೀನ್‌ ಲೇಔಟ್‌</string>
     <string name="screen_locked_toast">ಮುಖಪುಟ ಲೇಔಟ್‌ ಲಾಕ್ ಮಾಡಿ.</string>
     <string name="screen_number">%d ಸ್ಕ್ರೀನ್‌</string>
-    <string name="search_bar_hint_content">ಆ್ಯಪ್‌ಗಳು ಮತ್ತು ಕಂಟೆಂಟ್‌ ಹುಡುಕಿ</string>
-    <string name="search_guide_btn">ಅರ್ಥವಾಯಿತು</string>
     <string name="search_in_apps_store">%1$s/%2$sಗಾಗಿ ಹುಡುಕಿ</string>
     <string name="search_no_result">ಯಾವುದೇ ಫಲಿತಾಂಶಗಳು ಕಂಡುಬರಲಿಲ್ಲ</string>
     <string name="select_all">ಎಲ್ಲಾ ಆಯ್ಕೆಮಾಡಿ</string>
@@ -777,7 +700,6 @@
     <string name="select_photo">ಫೋಟೋ</string>
     <string name="send">ಕಳುಹಿಸು</string>
     <string name="server_error">ಸರ್ವರ್‌ ದೋಷ ಎದುರಾಗಿದೆ. ಒಂದೆರಡು ನಿಮಿಷ ಕಾಯಿರಿ, ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.</string>
-    <string name="service_double_attention">ವರ್ಧಿತ ಹುಡುಕಾಟ ಕಾರ್ಯವನ್ನು Branch Metrics Inc. ಒದಗಿಸುತ್ತಿದೆ. ಈ ಫೀಚರ್‌ ಕಾರ್ಯನಿರ್ವಹಿಸುವಂತೆ ಮಾಡಲು ನಿಮ್ಮ ಹುಡುಕಾಟ ವಿನಂತಿಗಳು, Google Ads ID, ಮತ್ತು ಐಪಿ ವಿಳಾಸವನ್ನು Branch Metrics Inc. ಜೊತೆ ಹಂಚಿಕೊಳ್ಳಬೇಕಾಗುತ್ತದೆ. ಈ ಫೀಚರ್ ಬಳಸುವ ಮುನ್ನ ನೀವು <a href="http://url1"><font color="#B3000000">ಅಂತಿಮ ಬಳಕೆದಾರ ನಿಯಮಗಳು&amp; ಷರತ್ತುಗಳು</font></a> ಮತ್ತು<a href="http://url2"><font color="#B3000000">Branch ಡಿಸ್ಕವರಿ ಗೌಪ್ಯತೆ ನೀತಿ</font></a>ಗಳನ್ನು ಓದಿ, ಸಮ್ಮತಿಸಬೇಕಾಗುತ್ತದೆ.</string>
     <string name="setting_wallpaper_tip">ಸರಿಹೊಂದಿಸಲು ಪಿಂಚ್‌ ಮಾಡಿ ಅಥವಾ ಸ್ವೈಪ್ ಮಾಡಿ</string>
     <string name="settings">ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
     <string name="settings_shortcut">ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
@@ -815,13 +737,11 @@
     <string name="status_installing">ಇನ್‌ಸ್ಟಾಲ್‌ ಆಗುತ್ತಿದೆ</string>
     <string name="status_paused">ವಿರಾಮಗೊಳಿಸು</string>
     <string name="status_pending">ನಿರೀಕ್ಷಿಸುತ್ತಿದೆ</string>
-    <string name="suggestions">ಸಲಹೆಗಳು</string>
     <string name="sunday">ಭಾನುವಾರ</string>
     <string name="sunday_short">ಭಾನು</string>
     <string name="sunday_shortest">ಭಾನು</string>
     <string name="swipe_the_desktop_to_the_left">ಹೋಮ್‌ ಸ್ಕ್ರೀನ್‌ನಲ್ಲಿ ಎಡಕ್ಕೆ ಸ್ವೈಪ್‌ ಮಾಡಿ</string>
     <string name="swipe_the_desktop_to_the_right">ಹೋಮ್‌ ಸ್ಕ್ರೀನ್‌ನಲ್ಲಿ ಬಲಕ್ಕೆ ಸ್ವೈಪ್‌ ಮಾಡಿ</string>
-    <string name="switch_on_button">ಆನ್ ಮಾಡಿ</string>
     <string name="switch_personal_assistant_app_vault">ಆ್ಯಪ್‌‌ ವೋಲ್ಟ್‌</string>
     <string name="switch_personal_assistant_google">Google Discover</string>
     <string name="switch_personal_assistant_none">ಇಲ್ಲ</string>
@@ -832,10 +752,6 @@
     <string name="system_shortcuts_remove">ತೆಗೆದುಹಾಕಿ</string>
     <string name="system_text">ಸ್ವಯಂ</string>
     <string name="task_access_locked_app_msg">ಆ್ಯಪ್‌ ಲಾಕ್‌ ಆನ್ ಮಾಡಿ</string>
-    <string name="term_of_service">ನಿಯಮಗಳು ಮತ್ತು ಷರತ್ತುಗಳು</string>
-    <string name="terms_of_services_one">ಆ್ಯಪ್‌ ಡ್ರಾಯರ್‌ ಮತ್ತು ಕ್ವಿಕ್‌ ಫೈಂಡರ್‌ಗೆ ಸುಸ್ವಾಗತ. ಆನ್‌ಲೈನ್‌ನಲ್ಲಿ ಆ್ಯಪ್‌ಗಳನ್ನು ಹುಡುಕಲು, ಇನ್‌-ಆ್ಯಪ್‌ ಕೆಂಟೆಂಟ್‌ಗಳನ್ನು ನೋಡಲು ಮತ್ತು ಐಟಂಗಳನ್ನು ತ್ವರಿತಗತಿಯಲ್ಲಿ ಹುಡುಕಲು ಕ್ವಿಕ್‌ ಫೈಂಟರ್‌ ನಿಮಗೆ ಸಹಾಯ ಮಾಡುತ್ತದೆ. ಈ ಫೀಚರ್‌ಗಳನ್ನು ಬಳಸುವ ಮುನ್ನ Xiaomi ಯ <a href="http://url1"><font color="#B3000000">ಗೌಪ್ಯತೆ ನೀತಿ</font></a>ಯನ್ನು ಓದಿ ಹಾಗೂ ಅವುಗಳಿಗೆ ಸಮ್ಮತಿಸಿ.</string>
-    <string name="terms_of_services_three">ನೀವು ಈ ಫೀಚರ್‌ ಅನ್ನು ಸೆಟ್ಟಿಂಗ್‌ಗಳಲ್ಲಿ ಆಫ್‌ ಮಾಡಬಹುದು.</string>
-    <string name="terms_of_services_two">ವರ್ಧಿತ ಹುಡುಕಾಟ ಬಳಸಲು, ಅಗತ್ಯವಿರುವ ವೈಯಕ್ತಿಕ ಮಾಹಿತಿಯನ್ನು ಹಂಚಿಕೊಳ್ಳಬೇಕಾಗುತ್ತದೆ. ಅಂದರೆ, ನಿಮ್ಮ ಹುಡುಕಾಟದ ಕ್ವೇರಿಗಳು, Google ಜಾಹೀರಾತು ಐಡಿ ಮತ್ತು ಐಪಿ ವಿಳಾಸವನ್ನು ಒಳಗೊಂಡಂತೆ ಹಲವು ಬಗೆಯ ಮಾಹಿತಿಯನ್ನು ನೀವು Branch Metrics Inc. ಜೊತೆ ಹಂಚಿಕೊಳ್ಳಬೇಕಾಗುತ್ತದೆ. Branch ನಿಮ್ಮ ವೈಯಕ್ತಿಕ ಮಾಹಿತಿಯನ್ನು <a href="http://url1"><font color="#B3000000">Branch ಡಿಸ್ಕವರಿ ಗೌಪ್ಯತೆ ನೀತಿ</font></a>ಗೆ ಅನುಸಾರ ಪ್ರಕ್ರಿಯೆಗೊಳಿಸುತ್ತದೆ. ಈ ಫೀಚರ್‌ ಬಳಸುವ ಮುನ್ನ <a href="http://url2"><font color="#B3000000">ಅಂತಿಮ ಬಳಕೆದಾರ ಡಿಸ್ಕವರಿ ನಿಯಮಗಳು-ಷರತ್ತುಗಳು</font></a> ಮತ್ತು<a href="http://url3"><font color="#B3000000">Branch ಡಿಸ್ಕವರಿ ಗೌಪ್ಯತೆ ನೀತಿ</font></a>ಗಳನ್ನು ಓದಿ ಹಾಗೂ ಅವುಗಳಿಗೆ ಸಮ್ಮತಿಸಿ.</string>
     <string name="the_anniversary_of_lifting_martial_law">ಮಾರ್ಷಲ್‌ ಲಾ ತೆಗೆದುಹಾಕಿದ ವಾರ್ಷಿಕೋತ್ಸವ</string>
     <string name="the_anti_aggression_day">ಆ್ಯಂಟಿ-ಅಗ್ರೆಶನ್‌ ಡೇ</string>
     <string name="the_arbor_day">ಆರ್ಬರ್‌ ಡೇ</string>
@@ -902,11 +818,6 @@
     <string name="tuesday">ಮಂಗಳವಾರ</string>
     <string name="tuesday_short">ಮಂಗಳ</string>
     <string name="tuesday_shortest">ಮಂಗಳ</string>
-    <string name="uni_search_permission_content">ಆನ್‌ಲೈನ್‌ ಹುಡುಕಾಟ ಫೀಚರ್‌ಗಳನ್ನು ಆನ್ ಮಾಡಿ. (ಬ್ರಾಂಚ್‌ ಹುಡುಕಾಟ ಸೇವೆಗಳನ್ನು ಒದಗಿಸುತ್ತದೆ.)</string>
-    <string name="uni_search_permission_msg">ಹುಡುಕಾಟ ಫಲಿತಾಂಶಗಳನ್ನು ಸುಧಾರಿಸುವ ನಿಟ್ಟಿನಲ್ಲಿ ನಿಮ್ಮ ಸ್ಥಳ ಮತ್ತು ಸಂಪರ್ಕಗಳನ್ನು ಪ್ರವೇಶಿಸಲು POCO ಲಾಂಚರ್‌ಗೆ ಅನುಮತಿಸಿ.</string>
-    <string name="uni_search_permission_title">ಸುಧಾರಿತ ಹುಡುಕಾಟ</string>
-    <string name="uni_search_setting_summary">ಆ್ಯಪ್‌ನಲ್ಲಿ ಕಂಟೆಂಟ್‌ಗಳನ್ನು ನೇರವಾಗಿ ಪತ್ತೆಮಾಡುತ್ತದೆ</string>
-    <string name="uni_search_setting_title">ಇನ್‌-ಆ್ಯಪ್‌ ಕ್ವೇರಿ ಮೋಡ್‌</string>
     <string name="uninstall">ಅನ್‌ಇನ್‌ಸ್ಟಾಲ್‌‌</string>
     <string name="uninstall_dialog_message">ಅನ್‌ಇನ್‌ಸ್ಟಾಲ್‌ ಮಾಡುವುದರಿಂದ ಎಲ್ಲಾ ಆ್ಯಪ್‌ ಡೇಟಾವನ್ನು ತೆಗೆದುಹಾಕುತ್ತದೆ.</string>
     <string name="uninstall_dialog_title_format">%s ಅನ್‌ಇನ್‌ಸ್ಟಾಲ್‌ ಮಾಡುವುದೇ?</string>
@@ -917,7 +828,6 @@
     <string name="uninstall_xspace_dialog_title_format">ಡ್ಯುಯಲ್ \"%s\" ಅನ್ನು ಅನ್‌ಇನ್‌ಸ್ಟಾಲ್‌ ಮಾಡುವುದೇ?</string>
     <string name="unknown_artist_name">ಅಪರಿಚಿತ ಕಲಾವಿದ</string>
     <string name="unnamed_folder_name">ಫೋಲ್ಡರ್</string>
-    <string name="upgrade_remove_small_window_in_recents">ಫ್ಲೋಟಿಂಗ್‌ ವಿಂಡೋಗಳಲ್ಲಿ ಆ್ಯಪ್‌ಗಳನ್ನು ತೆರೆಯಲು ನೀವು ಸೈಡ್‌ಬಾರ್‌ ಬಳಸಬಹುದು</string>
     <string name="wallpaper">ವಾಲ್‌ಪೇಪರ್</string>
     <string name="wallpaper_auto_change_title">ಲಾಕ್‌ ಸ್ಕ್ರೀನ್‌</string>
     <string name="wallpaper_failed_message">ವಾಲ್‌ಪೇಪರ್‌‌ ಹೊಂದಿಸಲಾಗುತ್ತಿಲ್ಲ</string>

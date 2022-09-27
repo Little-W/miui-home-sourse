@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="BaseTheme" parent="@style/Theme.Dark">
-        <item name="android:alertDialogStyle">@style/Home.AlertDialogStyle</item>
-        <item name="android:dialogTheme">@style/AlertDialog.Theme.Home.Dark</item>
         <item name="android:forceDarkAllowed">false</item>
-        <item name="miuiAlertDialogTheme">@style/AlertDialog.Theme.Home.Dark</item>
     </style>
 </resources>

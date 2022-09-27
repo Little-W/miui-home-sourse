@@ -106,7 +106,7 @@
     .line 439
     iget-object p2, p0, Lcom/market/sdk/utils/Connection$Parameter;->params:Ljava/util/TreeMap;
 
-    const-string/jumbo v0, "true"
+    const-string v0, "true"
 
     invoke-virtual {p2, p1, v0}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 

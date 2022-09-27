@@ -201,7 +201,7 @@
 
     check-cast v0, Lcom/miui/home/launcher/FolderInfo;
 
-    const-string/jumbo v1, "user_game_folder"
+    const-string v1, "user_game_folder"
 
     .line 84
     invoke-virtual {v0, p0, v1}, Lcom/miui/home/launcher/FolderInfo;->setLabelAndUpdateDb(Landroid/content/Context;Ljava/lang/CharSequence;)V

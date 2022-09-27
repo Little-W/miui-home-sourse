@@ -36,7 +36,7 @@
 .method static constructor <clinit>()V
     .locals 5
 
-    .line 29
+    .line 37
     new-instance v0, Lcom/google/android/filament/TextureSampler$WrapMode;
 
     const-string v1, "CLAMP_TO_EDGE"
@@ -47,7 +47,7 @@
 
     sput-object v0, Lcom/google/android/filament/TextureSampler$WrapMode;->CLAMP_TO_EDGE:Lcom/google/android/filament/TextureSampler$WrapMode;
 
-    .line 33
+    .line 41
     new-instance v0, Lcom/google/android/filament/TextureSampler$WrapMode;
 
     const-string v1, "REPEAT"
@@ -58,7 +58,7 @@
 
     sput-object v0, Lcom/google/android/filament/TextureSampler$WrapMode;->REPEAT:Lcom/google/android/filament/TextureSampler$WrapMode;
 
-    .line 37
+    .line 45
     new-instance v0, Lcom/google/android/filament/TextureSampler$WrapMode;
 
     const-string v1, "MIRRORED_REPEAT"
@@ -71,7 +71,7 @@
 
     const/4 v0, 0x3
 
-    .line 25
+    .line 33
     new-array v0, v0, [Lcom/google/android/filament/TextureSampler$WrapMode;
 
     sget-object v1, Lcom/google/android/filament/TextureSampler$WrapMode;->CLAMP_TO_EDGE:Lcom/google/android/filament/TextureSampler$WrapMode;
@@ -99,7 +99,7 @@
         }
     .end annotation
 
-    .line 25
+    .line 33
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -108,7 +108,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/android/filament/TextureSampler$WrapMode;
     .locals 1
 
-    .line 25
+    .line 33
     const-class v0, Lcom/google/android/filament/TextureSampler$WrapMode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -123,7 +123,7 @@
 .method public static values()[Lcom/google/android/filament/TextureSampler$WrapMode;
     .locals 1
 
-    .line 25
+    .line 33
     sget-object v0, Lcom/google/android/filament/TextureSampler$WrapMode;->$VALUES:[Lcom/google/android/filament/TextureSampler$WrapMode;
 
     invoke-virtual {v0}, [Lcom/google/android/filament/TextureSampler$WrapMode;->clone()Ljava/lang/Object;

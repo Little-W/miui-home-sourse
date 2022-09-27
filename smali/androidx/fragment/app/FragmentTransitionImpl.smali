@@ -50,42 +50,34 @@
 
     .line 362
     :cond_0
-    invoke-static {p1}, Landroidx/core/view/ViewCompat;->getTransitionName(Landroid/view/View;)Ljava/lang/String;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_1
-
-    .line 363
     invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    :cond_1
     move p1, v0
 
-    .line 365
+    .line 363
     :goto_0
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v1
 
-    if-ge p1, v1, :cond_4
+    if-ge p1, v1, :cond_3
 
-    .line 366
+    .line 364
     invoke-interface {p0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/view/View;
 
-    .line 367
+    .line 365
     instance-of v2, v1, Landroid/view/ViewGroup;
 
-    if-eqz v2, :cond_3
+    if-eqz v2, :cond_2
 
-    .line 368
+    .line 366
     check-cast v1, Landroid/view/ViewGroup;
 
-    .line 369
+    .line 367
     invoke-virtual {v1}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v2
@@ -93,41 +85,34 @@
     const/4 v3, 0x0
 
     :goto_1
-    if-ge v3, v2, :cond_3
+    if-ge v3, v2, :cond_2
 
-    .line 371
+    .line 369
     invoke-virtual {v1, v3}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v4
 
-    .line 372
+    .line 370
     invoke-static {p0, v4, v0}, Landroidx/fragment/app/FragmentTransitionImpl;->containedBeforeIndex(Ljava/util/List;Landroid/view/View;I)Z
 
     move-result v5
 
-    if-nez v5, :cond_2
+    if-nez v5, :cond_1
 
-    .line 373
-    invoke-static {v4}, Landroidx/core/view/ViewCompat;->getTransitionName(Landroid/view/View;)Ljava/lang/String;
-
-    move-result-object v5
-
-    if-eqz v5, :cond_2
-
-    .line 374
+    .line 371
     invoke-interface {p0, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    :cond_2
+    :cond_1
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    :cond_3
+    :cond_2
     add-int/lit8 p1, p1, 0x1
 
     goto :goto_0
 
-    :cond_4
+    :cond_3
     return-void
 .end method
 
@@ -151,7 +136,7 @@
     :goto_0
     if-ge v1, p2, :cond_1
 
-    .line 387
+    .line 384
     invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -186,7 +171,7 @@
         }
     .end annotation
 
-    .line 406
+    .line 403
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p0
@@ -208,7 +193,7 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 407
+    .line 404
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
@@ -219,7 +204,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 408
+    .line 405
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object p0
@@ -239,7 +224,7 @@
 
     if-eqz p0, :cond_1
 
-    .line 398
+    .line 395
     invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
 
     move-result p0

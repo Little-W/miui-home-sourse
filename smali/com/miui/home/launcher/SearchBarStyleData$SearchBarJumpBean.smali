@@ -43,7 +43,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 616
+    .line 612
     new-instance v0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarJumpBean$1;
 
     invoke-direct {v0}, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarJumpBean$1;-><init>()V
@@ -56,7 +56,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 606
+    .line 602
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -65,31 +65,31 @@
 .method protected constructor <init>(Landroid/os/Parcel;)V
     .locals 1
 
-    .line 609
+    .line 605
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 610
+    .line 606
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarJumpBean;->expId:Ljava/lang/String;
 
-    .line 611
+    .line 607
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarJumpBean;->testHashStart:I
 
-    .line 612
+    .line 608
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarJumpBean;->testHashEnd:I
 
-    .line 613
+    .line 609
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object p1
@@ -102,7 +102,7 @@
 .method static synthetic access$000(Lcom/miui/home/launcher/SearchBarStyleData$SearchBarJumpBean;)Ljava/lang/String;
     .locals 0
 
-    .line 545
+    .line 541
     iget-object p0, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarJumpBean;->jumpUri:Ljava/lang/String;
 
     return-object p0
@@ -121,7 +121,7 @@
 .method public getExpId()Ljava/lang/String;
     .locals 1
 
-    .line 552
+    .line 548
     iget-object v0, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarJumpBean;->expId:Ljava/lang/String;
 
     return-object v0
@@ -130,7 +130,7 @@
 .method public getJumpUri()Ljava/lang/String;
     .locals 1
 
-    .line 576
+    .line 572
     iget-object v0, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarJumpBean;->jumpUri:Ljava/lang/String;
 
     return-object v0
@@ -139,7 +139,7 @@
 .method public getTestHashEnd()I
     .locals 1
 
-    .line 568
+    .line 564
     iget v0, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarJumpBean;->testHashEnd:I
 
     return v0
@@ -148,7 +148,7 @@
 .method public getTestHashStart()I
     .locals 1
 
-    .line 560
+    .line 556
     iget v0, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarJumpBean;->testHashStart:I
 
     return v0
@@ -157,7 +157,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 598
+    .line 594
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -214,22 +214,22 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    .line 590
+    .line 586
     iget-object p2, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarJumpBean;->expId:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 591
+    .line 587
     iget p2, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarJumpBean;->testHashStart:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 592
+    .line 588
     iget p2, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarJumpBean;->testHashEnd:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 593
+    .line 589
     iget-object p2, p0, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarJumpBean;->jumpUri:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V

@@ -1,4 +1,4 @@
-.class Landroidx/viewpager/widget/OriginalViewPager$2;
+.class final Landroidx/viewpager/widget/OriginalViewPager$2;
 .super Ljava/lang/Object;
 .source "OriginalViewPager.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x8
     name = null
 .end annotation
 

@@ -68,21 +68,10 @@
     if-eqz v0, :cond_0
 
     .line 56
-    invoke-virtual {v0}, Landroid/view/View;->isAttachedToWindow()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    .line 58
-    :try_start_0
     iget v1, p0, Lmiuix/view/HapticCompat$WeakReferenceHandler;->mFeedbackConstant:I
 
     invoke-static {v0, v1}, Lmiuix/view/HapticCompat;->performHapticFeedback(Landroid/view/View;I)Z
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    :catch_0
     :cond_0
     return-void
 .end method

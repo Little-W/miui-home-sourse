@@ -7,14 +7,12 @@
     <dimen name="editing_panel_height">136.0dip</dimen>
     <dimen name="folder_bottom_padding">90.0dip</dimen>
     <dimen name="folder_content_padding_left">5.0dip</dimen>
-    <dimen name="folder_content_padding_right">0.0dip</dimen>
     <dimen name="folder_content_width">292.0dip</dimen>
     <dimen name="folder_preview_item_padding">0.30000007dip</dimen>
     <dimen name="folder_top_padding">69.0dip</dimen>
     <dimen name="hotseats_height">82.0dip</dimen>
     <dimen name="hotseats_padding_bottom">0.0dip</dimen>
     <dimen name="hotseats_padding_side">1.0dip</dimen>
-    <dimen name="hotseats_padding_top">0.0dip</dimen>
     <dimen name="icon_padding_top">6.0dip</dimen>
     <dimen name="recommend_loading_item_padding">21.0dip</dimen>
     <dimen name="status_bar_height">20.0dip</dimen>

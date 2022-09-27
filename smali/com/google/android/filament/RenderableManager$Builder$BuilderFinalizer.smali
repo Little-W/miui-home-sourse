@@ -22,7 +22,7 @@
 .method constructor <init>(J)V
     .locals 0
 
-    .line 361
+    .line 446
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-wide p1, p0, Lcom/google/android/filament/RenderableManager$Builder$BuilderFinalizer;->mNativeObject:J
@@ -35,18 +35,18 @@
 .method public finalize()V
     .locals 3
 
-    .line 365
+    .line 450
     :try_start_0
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 368
+    .line 453
     :catch_0
     iget-wide v0, p0, Lcom/google/android/filament/RenderableManager$Builder$BuilderFinalizer;->mNativeObject:J
 
-    invoke-static {v0, v1}, Lcom/google/android/filament/RenderableManager;->access$1700(J)V
+    invoke-static {v0, v1}, Lcom/google/android/filament/RenderableManager;->access$2000(J)V
 
     goto :goto_0
 
@@ -55,9 +55,9 @@
 
     iget-wide v1, p0, Lcom/google/android/filament/RenderableManager$Builder$BuilderFinalizer;->mNativeObject:J
 
-    invoke-static {v1, v2}, Lcom/google/android/filament/RenderableManager;->access$1700(J)V
+    invoke-static {v1, v2}, Lcom/google/android/filament/RenderableManager;->access$2000(J)V
 
-    .line 369
+    .line 454
     throw v0
 
     :goto_0

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="Icon_name_classic_mode">桌面設定</string>
     <string name="abc_action_bar_home_description">瀏覽主頁</string>
     <string name="abc_action_bar_up_description">向上瀏覽</string>
     <string name="abc_action_menu_overflow_description">更多選項</string>
@@ -52,10 +51,8 @@
     <string name="activity_not_unlocked">重啟後需等待應用程式回應，請稍後再試</string>
     <string name="add_custom_category">自訂</string>
     <string name="add_screen">增加螢幕</string>
-    <string name="add_to_workspace">增加至桌面</string>
     <string name="added_all_category">全部應用程式已增加</string>
     <string name="afternoon">下午</string>
-    <string name="agree_button">同意</string>
     <string name="alexa_notification_add">增加</string>
     <string name="alexa_notification_cancel">暫時不用</string>
     <string name="alexa_notification_content">增加Alexa快捷設定到控制中心？</string>
@@ -94,7 +91,6 @@
     <string name="all_apps_slide_up_tips">抽屜模式下上滑手勢已被佔用，請切換為標準模式後設定</string>
     <string name="all_apps_suggestions">應用程式建議</string>
     <string name="am">上午</string>
-    <string name="animation_rate_title">動畫速率</string>
     <string name="announce_for_app_move_in_folder">移動至資料夾內的第%1$d 個位置</string>
     <string name="announce_for_checked">%1$s，已選取</string>
     <string name="announce_for_choose_default_screen">已將第%1$d畫面設定為主畫面</string>
@@ -146,13 +142,6 @@
     <string name="app_category_tools">實用工具</string>
     <string name="app_category_travel">旅行交通</string>
     <string name="app_category_vr">VR</string>
-    <string name="app_drawer_double_confirm_description">這會改變你的桌面佈局，是否確認？ 你可以通過桌面設定改回一般模式</string>
-    <string name="app_drawer_double_confirm_title">提醒</string>
-    <string name="app_drawer_feature_description">高效抽屜搜尋與應用程式智慧分組，自動收納新安裝的應用程式，讓你的桌面整潔有序。</string>
-    <string name="app_drawer_guide_description">在您最喜歡的應用程式裡找到您想要的內容</string>
-    <string name="app_drawer_guide_title">應用程式抽屜</string>
-    <string name="app_drawer_tip_title">原資訊流升級為抽屜，助你高效快捷管理應用程式</string>
-    <string name="app_install_state">已安裝</string>
     <string name="app_name">smallWindow</string>
     <string name="application_name">系統桌面</string>
     <string name="apply">設為</string>
@@ -175,30 +164,8 @@
     <string name="back">返回</string>
     <string name="backup_fail">備份失敗</string>
     <string name="bad_wallpaper_source_prompt">載入失敗</string>
-    <string name="bottomsheet_action_expand_halfway">展開一半</string>
-    <string name="branch_feature_description">不僅尋找應用程式，還能尋找應用程式內的內容，找到你感興趣的資訊。</string>
-    <string name="branch_guide_attention">為了增強你的應用程式尋找體驗，你的搜尋請求詞、Google Ads ID及IP位址需要與Branch Metrics Inc共用。請在使用該服務前閱讀並同意Branch的<a href="http://url1"><font color="#B3000000">《使用者協定》</font></a>與<a href="http://url2"><font color="#B3000000">《隱私政策》</font></a></string>
-    <string name="branch_guide_description_one">已將您的應用程式收入抽屜，給您一個整潔的桌面。</string>
-    <string name="branch_guide_description_three">便捷的全局搜尋，一秒找到想要的應用程式。</string>
-    <string name="branch_guide_description_two">抽屜自動分類應用程式，所有應用程式陳列有序。</string>
-    <string name="branch_guide_tip_title">讓您的桌面整潔有序</string>
-    <string name="branch_guide_title">新功能</string>
-    <string name="branch_new_feature">新功能</string>
-    <string name="branch_privacy_policy">隱私政策</string>
-    <string name="branch_search_guide_description">充分利用我們獨特而又高品質的桌面服務。</string>
-    <string name="branch_search_guide_privacy">該服務由Branch Metrics Inc.提供。您的地理位置，搜尋查詢和Google Ads ID將會被分享給Branch。如果您要使用該功能，請您同意Branch的<a href="http://url1"><font color="#B3000000">條款細則</font></a>和<a href="http://url2"><font color="#B3000000">隱私政策</font></a></string>
-    <string name="branch_search_guide_title">在您最喜歡的應用程式裡找到您想要的內容</string>
-    <string name="branch_terms_condition">條款細則</string>
-    <string name="branch_tip_title">增強你的尋找應用程式體驗</string>
-    <string name="btn_agree">同意並繼續</string>
-    <string name="btn_cancel">取消</string>
-    <string name="btn_close">關閉</string>
-    <string name="btn_open">開啟</string>
-    <string name="btn_request_permission">獲得完美體驗</string>
-    <string name="btn_set_right_now">立即體驗</string>
     <string name="buffering">緩衝...</string>
     <string name="cancel_action">取消</string>
-    <string name="cancel_botton">取消</string>
     <string name="cancel_btn_label">取消</string>
     <string name="cant_edit_lock_screen">無法編輯目前螢幕鎖定樣式</string>
     <string name="cant_remove_folder">不能刪除非空資料夾</string>
@@ -216,17 +183,13 @@
     <string name="category_group_summary">在抽屜內顯示應用程式分組</string>
     <string name="category_not_selected">未增加的應用程式</string>
     <string name="change_wallpaper">更換</string>
-    <string name="character_counter_content_description">已輸入 %1$d 個字元 (共 %2$d 個)</string>
-    <string name="character_counter_overflowed_content_description">超出字元限制 %1$d 個字元 (上限 %2$d 個字元)</string>
     <string name="choose_wallpaper">選擇新的桌布</string>
     <string name="chooser_wallpaper">選擇桌布來源</string>
-    <string name="clear_text_end_icon_content_description">清除文字</string>
     <string name="clearable_edittext_clear_description">清空</string>
     <string name="close">關閉</string>
     <string name="close_multi_finger_slide_summary">在某些場景（如全螢幕遊戲、影片），三指、四指手勢不生效</string>
     <string name="close_multi_finger_slide_title">隱藏三指、四指手勢</string>
     <string name="cloud_app_restore_title">等待還原</string>
-    <string name="common_google_play_services_unknown_issue">「%1$s」存取 Google Play 服務時發生問題。請稍後再試一次。</string>
     <string name="common_home_search_delete">刪除桌面搜尋框</string>
     <string name="common_home_search_delete_cancle">取消</string>
     <string name="common_home_search_delete_confirm">刪除</string>
@@ -311,14 +274,10 @@
     <string name="emptyplaylist">您選的播放清單是空的</string>
     <string name="enable_wallpaper_scroll">開啟桌布滾動模式</string>
     <string name="encryption">加密</string>
-    <string name="enter_search_setting_title">進入抽屜後預設開啟搜尋</string>
     <string name="eras_ad">西元</string>
     <string name="eras_bc">西元前</string>
-    <string name="error_icon_content_description">錯誤</string>
     <string name="evening">傍晚</string>
-    <string name="exit_overview_because_task_stack_changed">因後台應用程式變化，已退出最近任務</string>
     <string name="expand_button_title">進階</string>
-    <string name="exposed_dropdown_menu_content_description">顯示下拉式選單</string>
     <string name="failed_to_delete_temporary">刪除失敗，請稍候再試</string>
     <string name="failed_to_drop">移動失敗, 圖標回到原位置</string>
     <string name="failed_to_drop_widget_invalid">插件無效</string>
@@ -374,8 +333,6 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">zW T</string>
     <string name="fmt_weekday_timezone">zW</string>
-    <string name="fold_pair_install_shortcut_long_click">長按圖示支援建立捷徑</string>
-    <string name="fold_pair_installed_shortcut_launcher">桌面已建立該捷徑</string>
     <string name="folder_name">資料夾</string>
     <string name="frame_load_failed">相框格式錯誤，載入失敗。</string>
     <string name="free_style_apps_title">選擇應用程式</string>
@@ -431,14 +388,11 @@
     <string name="gadget_weather_title_14">天氣4X1</string>
     <string name="gadget_weather_title_24">天氣4X2</string>
     <string name="global_search_hint">點選搜尋</string>
-    <string name="got_it_botton">知道了</string>
     <string name="group_folder">新建資料夾</string>
     <string name="group_live_folders">資料夾</string>
     <string name="group_shortcuts">快捷方式</string>
     <string name="guide_install_app_msg">您還沒有安裝該應用程式，立即去應用程式商店下載嗎？</string>
     <string name="guide_install_app_title">安裝應用程式</string>
-    <string name="guide_permission_title">權限申請</string>
-    <string name="guide_privacy_dialog_title">聲明與條款</string>
     <string name="guide_tips_editing_mode">按住下方小工具拖動到螢幕上</string>
     <string name="home_gesture_content_center">內容中心</string>
     <string name="home_gesture_global_search">搜尋</string>
@@ -448,7 +402,6 @@
     <string name="home_screen">桌面</string>
     <string name="home_slide_up_action">桌面上滑操作</string>
     <string name="home_switch_personal_assistant">選擇資訊助手</string>
-    <string name="icon_content_description">對話框圖示</string>
     <string name="icon_customize_summary">選擇圖示風格、調節圖示大小</string>
     <string name="icon_form">圖示樣式</string>
     <string name="icon_reorganize_channel">圖示整理</string>
@@ -459,7 +412,6 @@
     <string name="invalid_contact_shortcut">無效聯絡人</string>
     <string name="is_setting_wallpaper_message">正在設定中...</string>
     <string name="is_system_wallpaper_message">不能選擇系統資源</string>
-    <string name="item_view_role_description">分頁</string>
     <string name="key_shortcut_settings_title">按鍵捷徑</string>
     <string name="launcher_icon_management">桌面圖示管理</string>
     <string name="launcher_not_exist">桌面被清除，請返回桌面後重試</string>
@@ -471,9 +423,6 @@
     <string name="launcher_slide_up_title">桌面上滑</string>
     <string name="launcher_sliding_up_gesture">桌面上滑進入搜尋</string>
     <string name="launcher_title">桌面與近期任務</string>
-    <string name="layout_guide_description">若您在使用過程中對目前佈局不滿意，點擊桌面“桌面設定”圖示即可恢復至原有的佈局。</string>
-    <string name="layout_guide_tip_title">僅需一步即可完成恢復</string>
-    <string name="layout_guide_title">如何恢復佈局</string>
     <string name="like">收藏</string>
     <string name="liked">已收藏</string>
     <string name="loading_desktop">正在載入桌面...</string>
@@ -494,18 +443,6 @@
     <string name="maml_download_tip_wait_wifi">等待Wi-Fi環境下載</string>
     <string name="maml_download_tip_wait_wifi_china">等待WLAN環境下載</string>
     <string name="manager_group_settings">管理應用程式分組</string>
-    <string name="material_clock_toggle_content_description">選擇上午或下午</string>
-    <string name="material_hour_selection">選取時段</string>
-    <string name="material_hour_suffix">%1$s 點</string>
-    <string name="material_minute_selection">選取分鐘</string>
-    <string name="material_minute_suffix">%1$s 分</string>
-    <string name="material_timepicker_am">AM</string>
-    <string name="material_timepicker_clock_mode_description">切換至時鐘模式即可輸入時間。</string>
-    <string name="material_timepicker_hour">小時</string>
-    <string name="material_timepicker_minute">分鐘</string>
-    <string name="material_timepicker_pm">PM</string>
-    <string name="material_timepicker_select_time">選取時間</string>
-    <string name="material_timepicker_text_input_mode_description">切換至文字輸入模式即可輸入時間。</string>
     <string name="memory_clear_nothing_result">已經清理至最佳狀態</string>
     <string name="memory_clear_result">成功釋放了%1$s記憶體</string>
     <string name="memory_clear_result_giga">成功釋放了%1$sG記憶體</string>
@@ -600,39 +537,6 @@
     <string name="month_september_shortest">九</string>
     <string name="more">更多</string>
     <string name="morning">上午</string>
-    <string name="mtrl_badge_numberless_content_description">新通知</string>
-    <string name="mtrl_chip_close_icon_content_description">移除「%1$s」</string>
-    <string name="mtrl_exceed_max_badge_number_content_description">超過 %1$d 則新通知</string>
-    <string name="mtrl_picker_a11y_next_month">變更為下個月</string>
-    <string name="mtrl_picker_a11y_prev_month">變更為上個月</string>
-    <string name="mtrl_picker_announce_current_selection">目前選取：%1$s</string>
-    <string name="mtrl_picker_confirm">@android:string/ok</string>
-    <string name="mtrl_picker_date_header_selected">%1$s</string>
-    <string name="mtrl_picker_date_header_title">請選擇日期</string>
-    <string name="mtrl_picker_date_header_unselected">已選取日期</string>
-    <string name="mtrl_picker_day_of_week_column_header">日期欄：%1$s</string>
-    <string name="mtrl_picker_invalid_format">格式無效。</string>
-    <string name="mtrl_picker_invalid_format_example">例如：%1$s</string>
-    <string name="mtrl_picker_invalid_format_use">使用：%1$s</string>
-    <string name="mtrl_picker_invalid_range">範圍無效。</string>
-    <string name="mtrl_picker_navigate_to_year_description">瀏覽至 %1$s 年</string>
-    <string name="mtrl_picker_out_of_range">超出範圍：%1$s</string>
-    <string name="mtrl_picker_range_header_only_end_selected">開始日期 – %1$s</string>
-    <string name="mtrl_picker_range_header_only_start_selected">%1$s – 結束日期</string>
-    <string name="mtrl_picker_range_header_selected">%1$s – %2$s</string>
-    <string name="mtrl_picker_range_header_title">請選擇範圍</string>
-    <string name="mtrl_picker_range_header_unselected">開始日期 – 結束日期</string>
-    <string name="mtrl_picker_save">儲存</string>
-    <string name="mtrl_picker_text_input_date_hint">日期</string>
-    <string name="mtrl_picker_text_input_date_range_end_hint">結束日期</string>
-    <string name="mtrl_picker_text_input_date_range_start_hint">開始日期</string>
-    <string name="mtrl_picker_text_input_day_abbr">日</string>
-    <string name="mtrl_picker_text_input_month_abbr">月</string>
-    <string name="mtrl_picker_text_input_year_abbr">年</string>
-    <string name="mtrl_picker_toggle_to_calendar_input_mode">切換至日曆輸入模式</string>
-    <string name="mtrl_picker_toggle_to_day_selection">輕按以切換至選擇日期</string>
-    <string name="mtrl_picker_toggle_to_text_input_mode">切換至文字輸入模式</string>
-    <string name="mtrl_picker_toggle_to_year_selection">輕按以切換至選擇年份</string>
     <string name="mtzgadget_missing_text">不再提供該外掛程式，請重新新增</string>
     <string name="multi_selecting_tips">拖移圖示到該區域進行整理</string>
     <string name="navigation_guide_app_quick_switch_hide_line_summary">從底部上滑，然後左右滑動切換應用程式</string>
@@ -685,11 +589,6 @@
     <string name="navigation_guide_recent_title">切換最近任務</string>
     <string name="navigation_guide_recent_title_spec_with_quotation_pad">“切換最近任務”</string>
     <string name="navigation_guide_settings">操作教學</string>
-    <string name="navigation_position_center">螢幕中間</string>
-    <string name="navigation_position_left">螢幕左側</string>
-    <string name="navigation_position_right">螢幕右側</string>
-    <string name="navigation_position_summary">虛擬鍵位置設定僅針對主螢幕生效</string>
-    <string name="navigation_position_title">虛擬鍵位置</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">取消</string>
     <string name="navigation_set_miui_home_as_default_dialog_message">非系統桌面不支援使用全螢幕手勢，是否切換到系統桌面，並開啟全螢幕手勢？</string>
     <string name="navigation_set_miui_home_as_default_dialog_ok">確定</string>
@@ -697,11 +596,9 @@
     <string name="navigation_type_full_screen">全螢幕手勢</string>
     <string name="navigation_type_title">系統導航方式</string>
     <string name="navigation_type_virtual_key">經典導航鍵</string>
-    <string name="new_feature_title">新特徵</string>
     <string name="night">晚上</string>
     <string name="no_detail_page">沒有詳細頁面</string>
     <string name="no_space_toast">空間不足</string>
-    <string name="no_space_toast_fold">此半螢幕空間不足</string>
     <string name="no_space_toast_when_click_widget">目前頁面空間不足，拖動可增加到其他頁面</string>
     <string name="noon">中午</string>
     <string name="normal_wallpaper">桌面桌布</string>
@@ -711,7 +608,6 @@
     <string name="notification_reset_title">桌面圖示整理完畢</string>
     <string name="one_key_call_title">一鍵呼叫</string>
     <string name="online_wallpaper">線上桌布</string>
-    <string name="open_pad_personal_assistant_settings">桌面小工具</string>
     <string name="open_personal_assistant_dialog_btn_cancel">取消</string>
     <string name="open_personal_assistant_dialog_btn_confirm">關閉</string>
     <string name="open_personal_assistant_dialog_desc">關閉後你將無法在桌面最左螢幕檢視小工具資訊，使用小工具服務，同時也意味著無法收到後續的最佳化更新，是否確認關閉？</string>
@@ -723,8 +619,6 @@
     <string name="ota_layout_adjustment_content">升級新版本後桌面佈局內外螢幕將保證一致，已為您同步外螢幕佈局至內螢幕。</string>
     <string name="ota_layout_adjustment_title">桌面佈局調整</string>
     <string name="out_of_space">此主螢幕上已沒有空間。</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
-    <string name="password_toggle_content_description">顯示密碼</string>
     <string name="perfect_icons_switch_summary">重繪第三方應用程式圖示，實現完美動畫</string>
     <string name="perfect_icons_switch_title">完美圖示</string>
     <string name="permdesc_install_shortcut">允許應用程式在沒有使用者介入的情況下新增快捷方式。</string>
@@ -744,7 +638,6 @@
     <string name="photo_load_failed">圖片載入失敗！</string>
     <string name="please_slide_agian">請再劃一次</string>
     <string name="pm">下午</string>
-    <string name="popular_search">熱詞</string>
     <string name="pref_cell_layout_size">佈局</string>
     <string name="pref_enable_drawing_cache_summary">"關閉此選項會釋放更多記憶體
 但是會降低流暢性"</string>
@@ -766,14 +659,6 @@
     <string name="privacy_thumbnail_blur_summary">將最近任務中的預覽圖模糊處理</string>
     <string name="privacy_thumbnail_blur_title">模糊預覽圖</string>
     <string name="quick_app">快應用</string>
-    <string name="quick_finder_feature_description">開啟Quick Finder，提升尋找應用程式的效率，稍後你可以在設定中關閉該功能。</string>
-    <string name="quick_finder_tip_title">提高應用程式尋找速度</string>
-    <string name="quick_search_all_app_desc">進入抽屜時顯示所有應用程式</string>
-    <string name="quick_search_desc">進入抽屜時開啟應用程式搜尋</string>
-    <string name="quick_search_guide_all_apps">所有應用程式</string>
-    <string name="quick_search_guide_ok_btn">確定</string>
-    <string name="quick_search_guide_quick_search">快速搜尋</string>
-    <string name="quick_search_guide_title">選擇一個預設模式</string>
     <string name="recent_apps">最近使用</string>
     <string name="recent_menu_item_info">應用程式詳情</string>
     <string name="recent_menu_item_lock">鎖定任務</string>
@@ -802,13 +687,6 @@
     <string name="recents_title_market">應用程式搜尋</string>
     <string name="recents_title_security_scan">安全掃描</string>
     <string name="recents_tv_small_window_text">小窗應用程式</string>
-    <string name="recents_worldcirculate_text">鬆手選擇</string>
-    <string name="recnets_relay_device_info">來自%s</string>
-    <string name="recnets_worldcirculate_button_text">小米妙享中心</string>
-    <string name="recnets_worldcirculate_display_computer_info">正在\"%s\"上運作</string>
-    <string name="recnets_worldcirculate_display_default_info">點擊回到手機使用</string>
-    <string name="recnets_worldcirculate_display_default_info_pad">點擊回到平板使用</string>
-    <string name="recnets_worldcirculate_display_pad_info">正在\"%s\"上運作</string>
     <string name="recommend_app">應用程式建議欄</string>
     <string name="recommend_apps_default_title">暫無數據</string>
     <string name="recommend_apps_no_data">暫無資料</string>
@@ -825,8 +703,6 @@
     <string name="remove_invalidate_gadget_tips">桌面中有插件已不再提供，請重新增加</string>
     <string name="remove_sys_app_content">您正在移除系統應用程式圖示，移除後，您可在設定-應用程式設定-桌面圖示管理中重新增加，確定移除？</string>
     <string name="remove_sys_app_title">是否移除系統應用程式圖示？</string>
-    <string name="request_permission_msg">我們檢索到您未獲得全部的體驗，點擊開啟獲得更優質的體驗。</string>
-    <string name="request_permission_title">請升級服務</string>
     <string name="reset_cate_tip_content">重置後應用程式分組將恢復至初始化狀態，是否繼續?</string>
     <string name="reset_cate_tip_title">重置</string>
     <string name="reset_description_first_time">兩小時內可恢復到%1$s時的佈局</string>
@@ -841,8 +717,6 @@
     <string name="screen_cells_config_title">桌面佈局規則</string>
     <string name="screen_locked_toast">桌面已鎖定</string>
     <string name="screen_number">第%d屏</string>
-    <string name="search_bar_hint_content">搜尋應用程式和內容</string>
-    <string name="search_guide_btn">知道了</string>
     <string name="search_in_apps_store">前往%2$s搜尋\"%1$s\"</string>
     <string name="search_menu_title">搜尋</string>
     <string name="search_no_result">未找到結果</string>
@@ -850,7 +724,6 @@
     <string name="select_frame">選相框</string>
     <string name="select_photo">選相片</string>
     <string name="send">傳送</string>
-    <string name="service_double_attention">增強體驗服務由Branch Metrics Inc提供，你的搜尋請求詞、Google Ads ID及IP位址需要與Branch共用。請在使用該服務前閱讀並同意Branch的<a href="http://url1"><font color="#B3000000">《使用者協定》</font></a>與<a href="http://url2"><font color="#B3000000">《隱私政策》</font></a>。</string>
     <string name="setting_wallpaper_tip">移動或縮放</string>
     <string name="settings">設定</string>
     <string name="settings_shortcut">設定捷徑</string>
@@ -913,14 +786,12 @@
     <string name="status_installing">正在安裝</string>
     <string name="status_paused">暫停</string>
     <string name="status_pending">等待中</string>
-    <string name="suggestions">建議</string>
     <string name="summary_collapsed_preference_list">%1$s、%2$s</string>
     <string name="sunday">星期日</string>
     <string name="sunday_short">週日</string>
     <string name="sunday_shortest">日</string>
     <string name="swipe_the_desktop_to_the_left">向左滑動桌面</string>
     <string name="swipe_the_desktop_to_the_right">向右滑動桌面</string>
-    <string name="switch_on_button">開啟</string>
     <string name="switch_personal_assistant_app_vault">資訊助手</string>
     <string name="switch_personal_assistant_google">谷歌探索</string>
     <string name="switch_personal_assistant_none">關閉資訊助手</string>
@@ -931,10 +802,6 @@
     <string name="system_shortcuts_remove">移除</string>
     <string name="system_text">預設</string>
     <string name="task_access_locked_app_msg">已開啟應用程式鎖</string>
-    <string name="term_of_service">服務條款</string>
-    <string name="terms_of_services_one">歡迎使用小米的應用程式抽屜及應用程式尋找服務，可以讓您快速尋找應用程式內的內容，請您閱讀並同意小米的<a href="http://url1"><font color="#B3000000">《隱私政策》</font></a>。</string>
-    <string name="terms_of_services_three">您可在桌面設定中關閉該功能。</string>
-    <string name="terms_of_services_two">為了實現應用程式尋找服務中的應用程式內搜尋功能，我們需要向Branch Metrics Inc分享必要的個人資訊，包括您的搜尋詞、Google廣告ID和IP地址。Branch會按照其<a href="http://url1"><font color="#B3000000">《隱私政策》</font></a>處理接收的資料，請您閱讀並同意Branch Metrics Inc的<a href="http://url2"><font color="#B3000000">《用戶協議》</font></a>和<a href="http://url3"><font color="#B3000000">《隱私政策》</font></a>。</string>
     <string name="the_anniversary_of_lifting_martial_law">解嚴紀念日</string>
     <string name="the_anti_aggression_day">反侵略日</string>
     <string name="the_arbor_day">植樹節</string>
@@ -1001,11 +868,6 @@
     <string name="tuesday">星期二</string>
     <string name="tuesday_short">週二</string>
     <string name="tuesday_shortest">二</string>
-    <string name="uni_search_permission_content">請開啟優質的線上搜尋服務（本搜尋服務由Branch提供）</string>
-    <string name="uni_search_permission_msg">請開啟位置權限和聯絡人權限以取得更優質的搜尋服務</string>
-    <string name="uni_search_permission_title">搜尋升級</string>
-    <string name="uni_search_setting_summary">提供更豐富的線上搜尋結果</string>
-    <string name="uni_search_setting_title">搜尋服務</string>
     <string name="uninstall">移除</string>
     <string name="uninstall_dialog_message">移除後其所有資料也將被刪除</string>
     <string name="uninstall_dialog_title_format">移除\"%s\"</string>
@@ -1016,7 +878,6 @@
     <string name="uninstall_xspace_dialog_title_format">卸載雙開\"%s\"</string>
     <string name="unknown_artist_name">未知藝術家</string>
     <string name="unnamed_folder_name">資料夾</string>
-    <string name="upgrade_remove_small_window_in_recents">最近任務浮窗應用程式入口已移除，可透過全域側邊欄使用浮窗功能</string>
     <string name="v7_preference_off">關閉</string>
     <string name="v7_preference_on">開啟</string>
     <string name="wallpaper">桌布</string>

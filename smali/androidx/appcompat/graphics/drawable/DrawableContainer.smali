@@ -9,7 +9,6 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroidx/appcompat/graphics/drawable/DrawableContainer$Api21Impl;,
         Landroidx/appcompat/graphics/drawable/DrawableContainer$BlockInvalidateCallback;,
         Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;
     }
@@ -39,6 +38,8 @@
 
 .field private mLastDrawable:Landroid/graphics/drawable/Drawable;
 
+.field private mLastIndex:I
+
 .field private mMutated:Z
 
 
@@ -46,18 +47,21 @@
 .method constructor <init>()V
     .locals 1
 
-    .line 54
+    .line 53
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
     const/16 v0, 0xff
 
-    .line 72
+    .line 71
     iput v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mAlpha:I
 
     const/4 v0, -0x1
 
-    .line 75
+    .line 74
     iput v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mCurIndex:I
+
+    .line 75
+    iput v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mLastIndex:I
 
     return-void
 .end method
@@ -202,11 +206,11 @@
     if-lt v0, v1, :cond_5
 
     .line 519
-    invoke-static {p0}, Landroidx/core/graphics/drawable/DrawableCompat;->getLayoutDirection(Landroid/graphics/drawable/Drawable;)I
+    invoke-virtual {p0}, Landroidx/appcompat/graphics/drawable/DrawableContainer;->getLayoutDirection()I
 
     move-result v0
 
-    invoke-static {p1, v0}, Landroidx/core/graphics/drawable/DrawableCompat;->setLayoutDirection(Landroid/graphics/drawable/Drawable;I)Z
+    invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->setLayoutDirection(I)Z
 
     .line 521
     :cond_5
@@ -221,7 +225,7 @@
 
     iget-boolean v0, v0, Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;->mAutoMirrored:Z
 
-    invoke-static {p1, v0}, Landroidx/core/graphics/drawable/DrawableCompat;->setAutoMirrored(Landroid/graphics/drawable/Drawable;Z)V
+    invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->setAutoMirrored(Z)V
 
     .line 524
     :cond_6
@@ -245,7 +249,7 @@
 
     iget v0, v0, Landroid/graphics/Rect;->bottom:I
 
-    invoke-static {p1, v1, v2, v3, v0}, Landroidx/core/graphics/drawable/DrawableCompat;->setHotspotBounds(Landroid/graphics/drawable/Drawable;IIII)V
+    invoke-virtual {p1, v1, v2, v3, v0}, Landroid/graphics/drawable/Drawable;->setHotspotBounds(IIII)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -311,7 +315,7 @@
 
     goto :goto_0
 
-    .line 1207
+    .line 1204
     :cond_0
     invoke-virtual {p0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
@@ -439,7 +443,12 @@
     .line 557
     iput-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mLastDrawable:Landroid/graphics/drawable/Drawable;
 
+    const/4 v0, -0x1
+
     .line 558
+    iput v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mLastIndex:I
+
+    .line 559
     iput-wide v7, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mExitAnimationEnd:J
 
     goto :goto_2
@@ -451,14 +460,14 @@
 
     long-to-int v3, v10
 
-    .line 560
+    .line 561
     iget-object v4, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mDrawableContainerState:Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;
 
     iget v4, v4, Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;->mExitFadeDuration:I
 
     div-int/2addr v3, v4
 
-    .line 562
+    .line 563
     iget-object v4, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mLastDrawable:Landroid/graphics/drawable/Drawable;
 
     iget v5, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mAlpha:I
@@ -471,7 +480,7 @@
 
     goto :goto_3
 
-    .line 567
+    .line 568
     :cond_4
     iput-wide v7, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mExitAnimationEnd:J
 
@@ -484,7 +493,7 @@
 
     if-eqz v0, :cond_6
 
-    .line 570
+    .line 571
     iget-object p1, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mAnimationRunnable:Ljava/lang/Runnable;
 
     const-wide/16 v3, 0x10
@@ -500,7 +509,7 @@
 .method public applyTheme(Landroid/content/res/Resources$Theme;)V
     .locals 1
 
-    .line 594
+    .line 595
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mDrawableContainerState:Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;
 
     invoke-virtual {v0, p1}, Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;->applyTheme(Landroid/content/res/Resources$Theme;)V
@@ -511,7 +520,7 @@
 .method public canApplyTheme()Z
     .locals 1
 
-    .line 600
+    .line 601
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mDrawableContainerState:Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;
 
     invoke-virtual {v0}, Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;->canApplyTheme()Z
@@ -524,7 +533,7 @@
 .method cloneConstantState()Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;
     .locals 1
 
-    .line 630
+    .line 632
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mDrawableContainerState:Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;
 
     return-object v0
@@ -557,7 +566,7 @@
 .method public getAlpha()I
     .locals 1
 
-    .line 153
+    .line 154
     iget v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mAlpha:I
 
     return v0
@@ -586,7 +595,7 @@
 .method public final getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
     .locals 2
 
-    .line 605
+    .line 606
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mDrawableContainerState:Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;
 
     invoke-virtual {v0}, Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;->canConstantState()Z
@@ -595,7 +604,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 606
+    .line 607
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mDrawableContainerState:Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;
 
     invoke-virtual {p0}, Landroidx/appcompat/graphics/drawable/DrawableContainer;->getChangingConfigurations()I
@@ -604,7 +613,7 @@
 
     iput v1, v0, Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;->mChangingConfigurations:I
 
-    .line 607
+    .line 608
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mDrawableContainerState:Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;
 
     return-object v0
@@ -618,7 +627,7 @@
 .method public getCurrent()Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    .line 577
+    .line 578
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mCurrDrawable:Landroid/graphics/drawable/Drawable;
 
     return-object v0
@@ -627,7 +636,7 @@
 .method getCurrentIndex()I
     .locals 1
 
-    .line 415
+    .line 414
     iget v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mCurIndex:I
 
     return v0
@@ -636,17 +645,17 @@
 .method public getHotspotBounds(Landroid/graphics/Rect;)V
     .locals 1
 
-    .line 295
+    .line 296
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mHotspotBounds:Landroid/graphics/Rect;
 
     if-eqz v0, :cond_0
 
-    .line 296
+    .line 297
     invoke-virtual {p1, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     goto :goto_0
 
-    .line 298
+    .line 299
     :cond_0
     invoke-super {p0, p1}, Landroid/graphics/drawable/Drawable;->getHotspotBounds(Landroid/graphics/Rect;)V
 
@@ -657,7 +666,7 @@
 .method public getIntrinsicHeight()I
     .locals 1
 
-    .line 341
+    .line 342
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mDrawableContainerState:Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;
 
     invoke-virtual {v0}, Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;->isConstantSize()Z
@@ -666,7 +675,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 342
+    .line 343
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mDrawableContainerState:Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;
 
     invoke-virtual {v0}, Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;->getConstantHeight()I
@@ -675,7 +684,7 @@
 
     return v0
 
-    .line 344
+    .line 345
     :cond_0
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mCurrDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -697,7 +706,7 @@
 .method public getIntrinsicWidth()I
     .locals 1
 
-    .line 333
+    .line 334
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mDrawableContainerState:Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;
 
     invoke-virtual {v0}, Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;->isConstantSize()Z
@@ -706,7 +715,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 334
+    .line 335
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mDrawableContainerState:Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;
 
     invoke-virtual {v0}, Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;->getConstantWidth()I
@@ -715,7 +724,7 @@
 
     return v0
 
-    .line 336
+    .line 337
     :cond_0
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mCurrDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -737,7 +746,7 @@
 .method public getMinimumHeight()I
     .locals 1
 
-    .line 357
+    .line 358
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mDrawableContainerState:Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;
 
     invoke-virtual {v0}, Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;->isConstantSize()Z
@@ -746,7 +755,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 358
+    .line 359
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mDrawableContainerState:Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;
 
     invoke-virtual {v0}, Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;->getConstantMinimumHeight()I
@@ -755,7 +764,7 @@
 
     return v0
 
-    .line 360
+    .line 361
     :cond_0
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mCurrDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -777,7 +786,7 @@
 .method public getMinimumWidth()I
     .locals 1
 
-    .line 349
+    .line 350
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mDrawableContainerState:Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;
 
     invoke-virtual {v0}, Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;->isConstantSize()Z
@@ -786,7 +795,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 350
+    .line 351
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mDrawableContainerState:Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;
 
     invoke-virtual {v0}, Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;->getConstantMinimumWidth()I
@@ -795,7 +804,7 @@
 
     return v0
 
-    .line 352
+    .line 353
     :cond_0
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mCurrDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -830,10 +839,10 @@
 
     goto :goto_0
 
-    .line 406
     :cond_0
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mDrawableContainerState:Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;
 
+    .line 406
     invoke-virtual {v0}, Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;->getOpacity()I
 
     move-result v0
@@ -851,13 +860,13 @@
 .method public getOutline(Landroid/graphics/Outline;)V
     .locals 1
 
-    .line 131
+    .line 132
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mCurrDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
 
-    .line 132
-    invoke-static {v0, p1}, Landroidx/appcompat/graphics/drawable/DrawableContainer$Api21Impl;->getOutline(Landroid/graphics/drawable/Drawable;Landroid/graphics/Outline;)V
+    .line 133
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->getOutline(Landroid/graphics/Outline;)V
 
     :cond_0
     return-void
@@ -937,9 +946,10 @@
     .line 122
     iget v2, p1, Landroid/graphics/Rect;->right:I
 
+    .line 123
     iput v2, p1, Landroid/graphics/Rect;->left:I
 
-    .line 123
+    .line 124
     iput v1, p1, Landroid/graphics/Rect;->right:I
 
     :cond_3
@@ -949,15 +959,15 @@
 .method public invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
     .locals 1
 
-    .line 368
+    .line 369
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mDrawableContainerState:Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;
 
     if-eqz v0, :cond_0
 
-    .line 369
+    .line 370
     invoke-virtual {v0}, Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;->invalidateCache()V
 
-    .line 371
+    .line 372
     :cond_0
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mCurrDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -969,7 +979,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 372
+    .line 373
     invoke-virtual {p0}, Landroidx/appcompat/graphics/drawable/DrawableContainer;->getCallback()Landroid/graphics/drawable/Drawable$Callback;
 
     move-result-object p1
@@ -1022,6 +1032,11 @@
     .line 252
     iput-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mLastDrawable:Landroid/graphics/drawable/Drawable;
 
+    const/4 v0, -0x1
+
+    .line 253
+    iput v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mLastIndex:I
+
     move v0, v1
 
     goto :goto_0
@@ -1029,28 +1044,28 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 255
+    .line 256
     :goto_0
     iget-object v2, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mCurrDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v2, :cond_1
 
-    .line 256
+    .line 257
     invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->jumpToCurrentState()V
 
-    .line 257
+    .line 258
     iget-boolean v2, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mHasAlpha:Z
 
     if-eqz v2, :cond_1
 
-    .line 258
+    .line 259
     iget-object v2, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mCurrDrawable:Landroid/graphics/drawable/Drawable;
 
     iget v3, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mAlpha:I
 
     invoke-virtual {v2, v3}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 261
+    .line 262
     :cond_1
     iget-wide v2, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mExitAnimationEnd:J
 
@@ -1060,12 +1075,12 @@
 
     if-eqz v2, :cond_2
 
-    .line 262
+    .line 263
     iput-wide v4, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mExitAnimationEnd:J
 
     move v0, v1
 
-    .line 265
+    .line 266
     :cond_2
     iget-wide v2, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mEnterAnimationEnd:J
 
@@ -1073,7 +1088,7 @@
 
     if-eqz v2, :cond_3
 
-    .line 266
+    .line 267
     iput-wide v4, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mEnterAnimationEnd:J
 
     move v0, v1
@@ -1081,7 +1096,7 @@
     :cond_3
     if-eqz v0, :cond_4
 
-    .line 270
+    .line 271
     invoke-virtual {p0}, Landroidx/appcompat/graphics/drawable/DrawableContainer;->invalidateSelf()V
 
     :cond_4
@@ -1091,7 +1106,7 @@
 .method public mutate()Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    .line 614
+    .line 616
     iget-boolean v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mMutated:Z
 
     if-nez v0, :cond_0
@@ -1102,20 +1117,20 @@
 
     if-ne v0, p0, :cond_0
 
-    .line 615
+    .line 617
     invoke-virtual {p0}, Landroidx/appcompat/graphics/drawable/DrawableContainer;->cloneConstantState()Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;
 
     move-result-object v0
 
-    .line 616
+    .line 618
     invoke-virtual {v0}, Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;->mutate()V
 
-    .line 617
+    .line 619
     invoke-virtual {p0, v0}, Landroidx/appcompat/graphics/drawable/DrawableContainer;->setConstantState(Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;)V
 
     const/4 v0, 0x1
 
-    .line 618
+    .line 620
     iput-boolean v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mMutated:Z
 
     :cond_0
@@ -1149,7 +1164,7 @@
 .method public onLayoutDirectionChanged(I)Z
     .locals 2
 
-    .line 328
+    .line 329
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mDrawableContainerState:Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;
 
     invoke-virtual {p0}, Landroidx/appcompat/graphics/drawable/DrawableContainer;->getCurrentIndex()I
@@ -1166,25 +1181,25 @@
 .method protected onLevelChange(I)Z
     .locals 1
 
-    .line 315
+    .line 316
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mLastDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
 
-    .line 316
+    .line 317
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setLevel(I)Z
 
     move-result p1
 
     return p1
 
-    .line 318
+    .line 319
     :cond_0
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mCurrDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_1
 
-    .line 319
+    .line 320
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setLevel(I)Z
 
     move-result p1
@@ -1200,25 +1215,25 @@
 .method protected onStateChange([I)Z
     .locals 1
 
-    .line 304
+    .line 305
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mLastDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
 
-    .line 305
+    .line 306
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setState([I)Z
 
     move-result p1
 
     return p1
 
-    .line 307
+    .line 308
     :cond_0
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mCurrDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_1
 
-    .line 308
+    .line 309
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setState([I)Z
 
     move-result p1
@@ -1234,7 +1249,7 @@
 .method public scheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
     .locals 1
 
-    .line 378
+    .line 379
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mCurrDrawable:Landroid/graphics/drawable/Drawable;
 
     if-ne p1, v0, :cond_0
@@ -1245,7 +1260,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 379
+    .line 380
     invoke-virtual {p0}, Landroidx/appcompat/graphics/drawable/DrawableContainer;->getCallback()Landroid/graphics/drawable/Drawable$Callback;
 
     move-result-object p1
@@ -1257,9 +1272,9 @@
 .end method
 
 .method selectDrawable(I)Z
-    .locals 9
+    .locals 8
 
-    .line 428
+    .line 427
     iget v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mCurIndex:I
 
     const/4 v1, 0x0
@@ -1268,39 +1283,46 @@
 
     return v1
 
-    .line 431
+    .line 430
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
 
-    .line 437
+    .line 436
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mDrawableContainerState:Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;
 
     iget v0, v0, Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;->mExitFadeDuration:I
 
-    const/4 v4, 0x0
+    const/4 v4, -0x1
 
-    const-wide/16 v5, 0x0
+    const/4 v5, 0x0
+
+    const-wide/16 v6, 0x0
 
     if-lez v0, :cond_3
 
-    .line 438
+    .line 437
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mLastDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_1
 
-    .line 439
+    .line 438
     invoke-virtual {v0, v1, v1}, Landroid/graphics/drawable/Drawable;->setVisible(ZZ)Z
 
-    .line 441
+    .line 440
     :cond_1
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mCurrDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_2
 
-    .line 442
+    .line 441
     iput-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mLastDrawable:Landroid/graphics/drawable/Drawable;
+
+    .line 442
+    iget v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mCurIndex:I
+
+    iput v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mLastIndex:I
 
     .line 443
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mDrawableContainerState:Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;
@@ -1317,87 +1339,88 @@
 
     .line 445
     :cond_2
-    iput-object v4, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mLastDrawable:Landroid/graphics/drawable/Drawable;
+    iput-object v5, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mLastDrawable:Landroid/graphics/drawable/Drawable;
 
     .line 446
-    iput-wide v5, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mExitAnimationEnd:J
+    iput v4, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mLastIndex:I
+
+    .line 447
+    iput-wide v6, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mExitAnimationEnd:J
 
     goto :goto_0
 
-    .line 448
+    .line 449
     :cond_3
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mCurrDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_4
 
-    .line 449
+    .line 450
     invoke-virtual {v0, v1, v1}, Landroid/graphics/drawable/Drawable;->setVisible(ZZ)Z
 
     :cond_4
     :goto_0
     if-ltz p1, :cond_6
 
-    .line 451
+    .line 452
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mDrawableContainerState:Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;
 
     iget v0, v0, Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;->mNumChildren:I
 
     if-ge p1, v0, :cond_6
 
-    .line 452
+    .line 453
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mDrawableContainerState:Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;
 
     invoke-virtual {v0, p1}, Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;->getChild(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 453
+    .line 454
     iput-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mCurrDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 454
+    .line 455
     iput p1, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mCurIndex:I
 
     if-eqz v0, :cond_7
-
-    .line 456
-    iget-object p1, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mDrawableContainerState:Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;
-
-    iget p1, p1, Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;->mEnterFadeDuration:I
-
-    if-lez p1, :cond_5
 
     .line 457
     iget-object p1, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mDrawableContainerState:Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;
 
     iget p1, p1, Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;->mEnterFadeDuration:I
 
-    int-to-long v7, p1
+    if-lez p1, :cond_5
 
-    add-long/2addr v2, v7
+    .line 458
+    iget-object p1, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mDrawableContainerState:Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;
+
+    iget p1, p1, Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;->mEnterFadeDuration:I
+
+    int-to-long v4, p1
+
+    add-long/2addr v2, v4
 
     iput-wide v2, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mEnterAnimationEnd:J
 
-    .line 459
+    .line 460
     :cond_5
     invoke-direct {p0, v0}, Landroidx/appcompat/graphics/drawable/DrawableContainer;->initializeDrawableForDisplay(Landroid/graphics/drawable/Drawable;)V
 
     goto :goto_1
 
-    .line 462
-    :cond_6
-    iput-object v4, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mCurrDrawable:Landroid/graphics/drawable/Drawable;
-
-    const/4 p1, -0x1
-
     .line 463
-    iput p1, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mCurIndex:I
+    :cond_6
+    iput-object v5, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mCurrDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 465
+    .line 464
+    iput v4, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mCurIndex:I
+
+    .line 466
     :cond_7
     :goto_1
     iget-wide v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mEnterAnimationEnd:J
 
-    cmp-long p1, v0, v5
+    cmp-long p1, v0, v6
 
     const/4 v0, 0x1
 
@@ -1405,17 +1428,17 @@
 
     iget-wide v1, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mExitAnimationEnd:J
 
-    cmp-long p1, v1, v5
+    cmp-long p1, v1, v6
 
     if-eqz p1, :cond_a
 
-    .line 466
+    .line 467
     :cond_8
     iget-object p1, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mAnimationRunnable:Ljava/lang/Runnable;
 
     if-nez p1, :cond_9
 
-    .line 467
+    .line 468
     new-instance p1, Landroidx/appcompat/graphics/drawable/DrawableContainer$1;
 
     invoke-direct {p1, p0}, Landroidx/appcompat/graphics/drawable/DrawableContainer$1;-><init>(Landroidx/appcompat/graphics/drawable/DrawableContainer;)V
@@ -1424,15 +1447,15 @@
 
     goto :goto_2
 
-    .line 475
+    .line 476
     :cond_9
     invoke-virtual {p0, p1}, Landroidx/appcompat/graphics/drawable/DrawableContainer;->unscheduleSelf(Ljava/lang/Runnable;)V
 
-    .line 478
+    .line 479
     :goto_2
     invoke-virtual {p0, v0}, Landroidx/appcompat/graphics/drawable/DrawableContainer;->animate(Z)V
 
-    .line 480
+    .line 481
     :cond_a
     invoke-virtual {p0}, Landroidx/appcompat/graphics/drawable/DrawableContainer;->invalidateSelf()V
 
@@ -1442,7 +1465,7 @@
 .method public setAlpha(I)V
     .locals 5
 
-    .line 138
+    .line 139
     iget-boolean v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mHasAlpha:Z
 
     if-eqz v0, :cond_0
@@ -1454,18 +1477,18 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 139
+    .line 140
     iput-boolean v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mHasAlpha:Z
 
-    .line 140
+    .line 141
     iput p1, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mAlpha:I
 
-    .line 141
+    .line 142
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mCurrDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_2
 
-    .line 142
+    .line 143
     iget-wide v1, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mEnterAnimationEnd:J
 
     const-wide/16 v3, 0x0
@@ -1474,7 +1497,7 @@
 
     if-nez v1, :cond_1
 
-    .line 143
+    .line 144
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
     goto :goto_0
@@ -1482,7 +1505,7 @@
     :cond_1
     const/4 p1, 0x0
 
-    .line 145
+    .line 146
     invoke-virtual {p0, p1}, Landroidx/appcompat/graphics/drawable/DrawableContainer;->animate(Z)V
 
     :cond_2
@@ -1554,33 +1577,38 @@
 .method setConstantState(Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;)V
     .locals 1
 
-    .line 1156
+    .line 1152
     iput-object p1, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mDrawableContainerState:Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;
 
-    .line 1158
+    .line 1154
     iget v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mCurIndex:I
 
     if-ltz v0, :cond_0
 
-    .line 1159
+    .line 1155
     invoke-virtual {p1, v0}, Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;->getChild(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
     iput-object p1, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mCurrDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 1160
+    .line 1156
     iget-object p1, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mCurrDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz p1, :cond_0
 
-    .line 1161
+    .line 1157
     invoke-direct {p0, p1}, Landroidx/appcompat/graphics/drawable/DrawableContainer;->initializeDrawableForDisplay(Landroid/graphics/drawable/Drawable;)V
 
     :cond_0
+    const/4 p1, -0x1
+
+    .line 1162
+    iput p1, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mLastIndex:I
+
     const/4 p1, 0x0
 
-    .line 1166
+    .line 1163
     iput-object p1, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mLastDrawable:Landroid/graphics/drawable/Drawable;
 
     return-void
@@ -1618,12 +1646,12 @@
 .method public setHotspot(FF)V
     .locals 1
 
-    .line 276
+    .line 277
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mCurrDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
 
-    .line 277
+    .line 278
     invoke-static {v0, p1, p2}, Landroidx/core/graphics/drawable/DrawableCompat;->setHotspot(Landroid/graphics/drawable/Drawable;FF)V
 
     :cond_0
@@ -1633,12 +1661,12 @@
 .method public setHotspotBounds(IIII)V
     .locals 1
 
-    .line 283
+    .line 284
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mHotspotBounds:Landroid/graphics/Rect;
 
     if-nez v0, :cond_0
 
-    .line 284
+    .line 285
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0, p1, p2, p3, p4}, Landroid/graphics/Rect;-><init>(IIII)V
@@ -1647,17 +1675,17 @@
 
     goto :goto_0
 
-    .line 286
+    .line 287
     :cond_0
     invoke-virtual {v0, p1, p2, p3, p4}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 288
+    .line 289
     :goto_0
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mCurrDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_1
 
-    .line 289
+    .line 290
     invoke-static {v0, p1, p2, p3, p4}, Landroidx/core/graphics/drawable/DrawableCompat;->setHotspotBounds(Landroid/graphics/drawable/Drawable;IIII)V
 
     :cond_1
@@ -1725,26 +1753,26 @@
 .method public setVisible(ZZ)Z
     .locals 2
 
-    .line 392
+    .line 393
     invoke-super {p0, p1, p2}, Landroid/graphics/drawable/Drawable;->setVisible(ZZ)Z
 
     move-result v0
 
-    .line 393
+    .line 394
     iget-object v1, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mLastDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_0
 
-    .line 394
+    .line 395
     invoke-virtual {v1, p1, p2}, Landroid/graphics/drawable/Drawable;->setVisible(ZZ)Z
 
-    .line 396
+    .line 397
     :cond_0
     iget-object v1, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mCurrDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_1
 
-    .line 397
+    .line 398
     invoke-virtual {v1, p1, p2}, Landroid/graphics/drawable/Drawable;->setVisible(ZZ)Z
 
     :cond_1
@@ -1754,7 +1782,7 @@
 .method public unscheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
     .locals 1
 
-    .line 385
+    .line 386
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mCurrDrawable:Landroid/graphics/drawable/Drawable;
 
     if-ne p1, v0, :cond_0
@@ -1765,7 +1793,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 386
+    .line 387
     invoke-virtual {p0}, Landroidx/appcompat/graphics/drawable/DrawableContainer;->getCallback()Landroid/graphics/drawable/Drawable$Callback;
 
     move-result-object p1
@@ -1779,7 +1807,7 @@
 .method final updateDensity(Landroid/content/res/Resources;)V
     .locals 1
 
-    .line 588
+    .line 589
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer;->mDrawableContainerState:Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;
 
     invoke-virtual {v0, p1}, Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;->updateDensity(Landroid/content/res/Resources;)V

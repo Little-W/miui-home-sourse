@@ -64,7 +64,7 @@
     iput-object p2, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->mApps:Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;
 
     .line 71
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountXDrawerMode()I
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountX()I
 
     move-result p1
 
@@ -646,7 +646,7 @@
 
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->mLayoutInflater:Landroid/view/LayoutInflater;
 
-    const v2, 0x7f0d0033
+    const v2, 0x7f0d0026
 
     invoke-virtual {v1, v2, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -660,7 +660,7 @@
     :pswitch_2
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->mLayoutInflater:Landroid/view/LayoutInflater;
 
-    const v1, 0x7f0d0041
+    const v1, 0x7f0d002d
 
     invoke-virtual {p2, v1, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -710,7 +710,7 @@
     .locals 2
 
     .line 85
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountXDrawerMode()I
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountX()I
 
     move-result v0
 

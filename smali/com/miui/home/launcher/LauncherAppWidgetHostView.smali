@@ -53,27 +53,27 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/miui/home/launcher/Launcher;)V
     .locals 1
 
-    .line 86
+    .line 87
     invoke-direct {p0, p1}, Lcom/miui/launcher/views/LauncherWidgetHostView;-><init>(Landroid/content/Context;)V
 
     const/4 v0, 0x0
 
-    .line 62
+    .line 63
     iput-boolean v0, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mSkipNextAutoLayoutAnimation:Z
 
     const/4 v0, 0x1
 
-    .line 63
+    .line 64
     iput-boolean v0, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mIsEnableAutoLayoutAnimation:Z
 
-    .line 72
+    .line 73
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mEnforcedRectangle:Landroid/graphics/Rect;
 
-    .line 74
+    .line 75
     new-instance v0, Lcom/miui/home/launcher/LauncherAppWidgetHostView$1;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/LauncherAppWidgetHostView$1;-><init>(Lcom/miui/home/launcher/LauncherAppWidgetHostView;)V
@@ -82,7 +82,7 @@
 
     const-string v0, "layout_inflater"
 
-    .line 87
+    .line 88
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
@@ -91,17 +91,17 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mInflater:Landroid/view/LayoutInflater;
 
-    .line 88
+    .line 89
     new-instance v0, Lcom/miui/home/launcher/OnLongClickAgent;
 
     invoke-direct {v0, p0, p0}, Lcom/miui/home/launcher/OnLongClickAgent;-><init>(Landroid/view/ViewGroup;Lcom/miui/home/launcher/OnLongClickAgent$VersionTagGenerator;)V
 
     iput-object v0, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mOnLongClickAgent:Lcom/miui/home/launcher/OnLongClickAgent;
 
-    .line 89
+    .line 90
     iput-object p2, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    .line 90
+    .line 91
     new-instance p2, Lcom/miui/home/launcher/common/ViewPropertyBackuperDelegate;
 
     invoke-direct {p2, p0}, Lcom/miui/home/launcher/common/ViewPropertyBackuperDelegate;-><init>(Landroid/view/View;)V
@@ -112,10 +112,10 @@
 
     const/4 v0, 0x0
 
-    .line 91
+    .line 92
     invoke-virtual {p0, p2, v0}, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->setLayerType(ILandroid/graphics/Paint;)V
 
-    .line 92
+    .line 93
     new-instance p2, Landroid/content/res/Configuration;
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -130,7 +130,7 @@
 
     iput-object p2, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mConfiguration:Landroid/content/res/Configuration;
 
-    .line 94
+    .line 95
     invoke-virtual {p0}, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -143,7 +143,7 @@
 
     const-string p1, "Launcher.Widget"
 
-    .line 95
+    .line 96
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -168,7 +168,7 @@
 .method static synthetic access$000(Lcom/miui/home/launcher/LauncherAppWidgetHostView;)Landroid/graphics/Rect;
     .locals 0
 
-    .line 52
+    .line 53
     iget-object p0, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mEnforcedRectangle:Landroid/graphics/Rect;
 
     return-object p0
@@ -177,7 +177,7 @@
 .method static synthetic access$100(Lcom/miui/home/launcher/LauncherAppWidgetHostView;)F
     .locals 0
 
-    .line 52
+    .line 53
     iget p0, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mEnforcedCornerRadius:F
 
     return p0
@@ -186,7 +186,7 @@
 .method private checkScrollableRecursively(Landroid/view/ViewGroup;)Z
     .locals 5
 
-    .line 245
+    .line 246
     instance-of v0, p1, Landroid/widget/AdapterView;
 
     const/4 v1, 0x0
@@ -195,12 +195,12 @@
 
     if-eqz v0, :cond_3
 
-    .line 246
+    .line 247
     instance-of v0, p1, Landroid/widget/AbsListView;
 
     if-eqz v0, :cond_2
 
-    .line 247
+    .line 248
     check-cast p1, Landroid/widget/AbsListView;
 
     invoke-virtual {p1, v2}, Landroid/widget/AbsListView;->canScrollList(I)Z
@@ -211,7 +211,7 @@
 
     const/4 v0, -0x1
 
-    .line 248
+    .line 249
     invoke-virtual {p1, v0}, Landroid/widget/AbsListView;->canScrollList(I)Z
 
     move-result p1
@@ -230,7 +230,7 @@
     :cond_3
     move v0, v1
 
-    .line 252
+    .line 253
     :goto_0
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getChildCount()I
 
@@ -238,12 +238,12 @@
 
     if-ge v0, v3, :cond_5
 
-    .line 253
+    .line 254
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v3
 
-    .line 254
+    .line 255
     instance-of v4, v3, Landroid/view/ViewGroup;
 
     if-eqz v4, :cond_4
@@ -270,7 +270,7 @@
 .method private enforceRoundedCorners()V
     .locals 2
 
-    .line 309
+    .line 306
     iget v0, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mEnforcedCornerRadius:F
 
     const/4 v1, 0x0
@@ -293,7 +293,7 @@
 
     goto :goto_1
 
-    .line 313
+    .line 310
     :cond_0
     invoke-static {p0}, Lcom/miui/home/launcher/widget/RoundedCornerEnforcement;->findBackground(Landroid/view/View;)Landroid/view/View;
 
@@ -301,7 +301,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 315
+    .line 312
     invoke-static {p0, v0}, Lcom/miui/home/launcher/widget/RoundedCornerEnforcement;->hasAppWidgetOptedOut(Landroid/view/View;Landroid/view/View;)Z
 
     move-result v1
@@ -310,32 +310,32 @@
 
     goto :goto_0
 
-    .line 319
+    .line 316
     :cond_1
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mEnforcedRectangle:Landroid/graphics/Rect;
 
     invoke-static {p0, v0, v1}, Lcom/miui/home/launcher/widget/RoundedCornerEnforcement;->computeRoundedRectangle(Landroid/view/View;Landroid/view/View;Landroid/graphics/Rect;)V
 
-    .line 322
+    .line 319
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mCornerRadiusEnforcementOutline:Landroid/view/ViewOutlineProvider;
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
 
     const/4 v0, 0x1
 
-    .line 323
+    .line 320
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->setClipToOutline(Z)V
 
     return-void
 
-    .line 316
+    .line 313
     :cond_2
     :goto_0
     invoke-direct {p0}, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->resetRoundedCorners()V
 
     return-void
 
-    .line 310
+    .line 307
     :cond_3
     :goto_1
     invoke-direct {p0}, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->resetRoundedCorners()V
@@ -346,7 +346,7 @@
 .method private reInflate()V
     .locals 10
 
-    .line 272
+    .line 273
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mRemoteViews:Landroid/widget/RemoteViews;
 
     if-nez v0, :cond_0
@@ -355,25 +355,13 @@
 
     const-string v1, "reInflate mRemoteViews is null!"
 
-    .line 273
+    .line 274
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 277
+    .line 278
     :cond_0
-    iget-object v0, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mLauncher:Lcom/miui/home/launcher/Launcher;
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->hasBeenResumed()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    return-void
-
-    .line 281
-    :cond_1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1f
@@ -382,12 +370,12 @@
 
     const/4 v3, 0x1
 
-    if-ge v0, v1, :cond_2
+    if-ge v0, v1, :cond_1
 
     :try_start_0
     const-string v0, "mLayoutId"
 
-    .line 283
+    .line 280
     sget-object v1, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -407,27 +395,27 @@
 
     const-string v2, "reInflate"
 
-    .line 285
+    .line 282
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
 
-    .line 288
-    :cond_2
+    .line 285
+    :cond_1
     invoke-virtual {p0}, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->getChildCount()I
 
     move-result v0
 
-    if-ne v0, v3, :cond_3
+    if-ne v0, v3, :cond_2
 
     const/4 v0, 0x0
 
-    .line 290
+    .line 287
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v5
 
-    .line 291
+    .line 288
     const-class v4, Landroid/view/View;
 
     const-string v6, "setTagInternal"
@@ -450,7 +438,7 @@
 
     const v1, 0x1020018
 
-    .line 292
+    .line 289
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -463,15 +451,15 @@
 
     aput-object v0, v9, v3
 
-    .line 291
+    .line 288
     invoke-static/range {v4 .. v9}, Lcom/miui/launcher/utils/ReflectUtils;->invoke(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Class;[Ljava/lang/Object;)V
 
     goto :goto_0
 
-    :cond_3
+    :cond_2
     const-string v1, "Launcher.Widget"
 
-    .line 294
+    .line 291
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -492,11 +480,11 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 297
+    .line 294
     :goto_0
     iput-boolean v3, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mIsReInflate:Z
 
-    .line 298
+    .line 295
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mRemoteViews:Landroid/widget/RemoteViews;
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->updateAppWidget(Landroid/widget/RemoteViews;)V
@@ -507,14 +495,14 @@
 .method private resetRoundedCorners()V
     .locals 1
 
-    .line 303
+    .line 300
     sget-object v0, Landroid/view/ViewOutlineProvider;->BACKGROUND:Landroid/view/ViewOutlineProvider;
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
 
     const/4 v0, 0x0
 
-    .line 304
+    .line 301
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->setClipToOutline(Z)V
 
     return-void
@@ -525,7 +513,7 @@
 .method public backupProperty()V
     .locals 1
 
-    .line 228
+    .line 229
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mViewPropertyBackuperDelegate:Lcom/miui/home/launcher/common/ViewPropertyBackuperDelegate;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/common/ViewPropertyBackuperDelegate;->backupProperty()V
@@ -536,7 +524,7 @@
 .method public bindWidgetUpdateListener(Lcom/miui/home/launcher/LauncherAppWidgetHostView$WidgetUpdateListener;)V
     .locals 0
 
-    .line 341
+    .line 338
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mWidgetUpdateListener:Lcom/miui/home/launcher/LauncherAppWidgetHostView$WidgetUpdateListener;
 
     return-void
@@ -551,7 +539,7 @@
 .method public cancelLongPress()V
     .locals 1
 
-    .line 152
+    .line 153
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mOnLongClickAgent:Lcom/miui/home/launcher/OnLongClickAgent;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/OnLongClickAgent;->cancelCustomziedLongPress()V
@@ -562,7 +550,7 @@
 .method public dispatchTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 2
 
-    .line 114
+    .line 115
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mOnLongClickAgent:Lcom/miui/home/launcher/OnLongClickAgent;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/OnLongClickAgent;->onDispatchTouchEvent(Landroid/view/MotionEvent;)Z
@@ -575,7 +563,7 @@
 
     return v1
 
-    .line 117
+    .line 118
     :cond_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -597,14 +585,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 118
+    .line 119
     invoke-virtual {p0}, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->getAppWidgetInfo()Landroid/appwidget/AppWidgetProviderInfo;
 
     move-result-object v0
 
     invoke-static {v0}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackWidgetClick(Landroid/appwidget/AppWidgetProviderInfo;)V
 
-    .line 120
+    .line 121
     :cond_1
     invoke-super {p0, p1}, Lcom/miui/launcher/views/LauncherWidgetHostView;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -616,7 +604,7 @@
 .method public doSetFrame(IIII)Z
     .locals 0
 
-    .line 184
+    .line 185
     invoke-static {p0, p1, p2, p3, p4}, Lcom/miui/home/launcher/AutoLayoutAnimation;->setFrame(Lcom/miui/home/launcher/AutoLayoutAnimation$HostView;IIII)Z
 
     move-result p1
@@ -627,7 +615,7 @@
 .method public getEnforcedCornerRadius()F
     .locals 1
 
-    .line 330
+    .line 327
     iget v0, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mEnforcedCornerRadius:F
 
     return v0
@@ -638,7 +626,7 @@
 
     const-string v0, "Launcher.Widget"
 
-    .line 100
+    .line 101
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -657,10 +645,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 101
+    .line 102
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mInflater:Landroid/view/LayoutInflater;
 
-    const v1, 0x7f0d0043
+    const v1, 0x7f0d002f
 
     const/4 v2, 0x0
 
@@ -682,7 +670,7 @@
 .method public getSkipNextAutoLayoutAnimation()Z
     .locals 1
 
-    .line 175
+    .line 176
     iget-boolean v0, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mSkipNextAutoLayoutAnimation:Z
 
     return v0
@@ -691,7 +679,7 @@
 .method public getVersionTag()Ljava/lang/Object;
     .locals 1
 
-    .line 161
+    .line 162
     invoke-virtual {p0}, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->getWindowAttachCount()I
 
     move-result v0
@@ -706,7 +694,7 @@
 .method public isEnableAutoLayoutAnimation()Z
     .locals 1
 
-    .line 179
+    .line 180
     iget-boolean v0, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mIsEnableAutoLayoutAnimation:Z
 
     return v0
@@ -715,7 +703,7 @@
 .method protected onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 1
 
-    .line 264
+    .line 265
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mConfiguration:Landroid/content/res/Configuration;
 
     invoke-virtual {p1, v0}, Landroid/content/res/Configuration;->diff(Landroid/content/res/Configuration;)I
@@ -726,10 +714,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 266
+    .line 267
     invoke-direct {p0}, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->reInflate()V
 
-    .line 268
+    .line 269
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mConfiguration:Landroid/content/res/Configuration;
 
@@ -741,7 +729,7 @@
 .method public onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 3
 
-    .line 126
+    .line 127
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->isInEditing()Z
@@ -754,7 +742,7 @@
 
     return v1
 
-    .line 130
+    .line 131
     :cond_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -764,7 +752,7 @@
 
     goto :goto_0
 
-    .line 132
+    .line 133
     :cond_1
     invoke-static {p0}, Lcom/miui/home/launcher/Launcher;->getLauncher(Landroid/view/View;)Lcom/miui/home/launcher/Launcher;
 
@@ -774,15 +762,15 @@
 
     move-result-object v0
 
-    .line 133
+    .line 134
     iget-boolean v2, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mIsScrollable:Z
 
     if-eqz v2, :cond_2
 
-    .line 134
+    .line 135
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/DragLayer;->requestSwipeControllerDisallowInterceptTouchEventVertical(Z)V
 
-    .line 142
+    .line 143
     :cond_2
     :goto_0
     invoke-super {p0, p1}, Lcom/miui/launcher/views/LauncherWidgetHostView;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
@@ -795,27 +783,18 @@
 .method protected onLayout(ZIIII)V
     .locals 0
 
-    .line 238
+    .line 239
     invoke-super/range {p0 .. p5}, Lcom/miui/launcher/views/LauncherWidgetHostView;->onLayout(ZIIII)V
 
-    .line 239
+    .line 240
     invoke-direct {p0, p0}, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->checkScrollableRecursively(Landroid/view/ViewGroup;)Z
 
     move-result p1
 
     iput-boolean p1, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mIsScrollable:Z
 
-    .line 241
+    .line 242
     invoke-direct {p0}, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->enforceRoundedCorners()V
-
-    return-void
-.end method
-
-.method public onScreenSizeChanged()V
-    .locals 0
-
-    .line 349
-    invoke-direct {p0}, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->reInflate()V
 
     return-void
 .end method
@@ -831,7 +810,7 @@
 .method public restoreProperty()V
     .locals 1
 
-    .line 233
+    .line 234
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mViewPropertyBackuperDelegate:Lcom/miui/home/launcher/common/ViewPropertyBackuperDelegate;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/common/ViewPropertyBackuperDelegate;->restoreProperty()V
@@ -842,10 +821,10 @@
 .method public setAppWidget(ILandroid/appwidget/AppWidgetProviderInfo;)V
     .locals 0
 
-    .line 108
+    .line 109
     invoke-super {p0, p1, p2}, Lcom/miui/launcher/views/LauncherWidgetHostView;->setAppWidget(ILandroid/appwidget/AppWidgetProviderInfo;)V
 
-    .line 109
+    .line 110
     iput-object p2, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mInfo:Landroid/appwidget/AppWidgetProviderInfo;
 
     return-void
@@ -854,7 +833,7 @@
 .method public setEnableAutoLayoutAnimation(Z)V
     .locals 0
 
-    .line 165
+    .line 166
     iput-boolean p1, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mIsEnableAutoLayoutAnimation:Z
 
     return-void
@@ -869,7 +848,7 @@
 .method public setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
     .locals 1
 
-    .line 147
+    .line 148
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mOnLongClickAgent:Lcom/miui/home/launcher/OnLongClickAgent;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/OnLongClickAgent;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
@@ -882,7 +861,7 @@
 
     const/4 p1, 0x0
 
-    .line 223
+    .line 224
     invoke-super {p0, p1, p1, p1, p1}, Lcom/miui/launcher/views/LauncherWidgetHostView;->setPadding(IIII)V
 
     return-void
@@ -891,7 +870,7 @@
 .method public setSkipNextAutoLayoutAnimation(Z)V
     .locals 0
 
-    .line 170
+    .line 171
     iput-boolean p1, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mSkipNextAutoLayoutAnimation:Z
 
     return-void
@@ -900,10 +879,10 @@
 .method public updateAppWidget(Landroid/widget/RemoteViews;)V
     .locals 3
 
-    .line 205
+    .line 206
     invoke-super {p0, p1}, Lcom/miui/launcher/views/LauncherWidgetHostView;->updateAppWidget(Landroid/widget/RemoteViews;)V
 
-    .line 206
+    .line 207
     invoke-virtual {p0}, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->getChildCount()I
 
     move-result v0
@@ -917,14 +896,14 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 207
+    .line 208
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
-    .line 208
+    .line 209
     invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v2
@@ -933,27 +912,27 @@
 
     if-eqz v2, :cond_1
 
-    .line 209
+    .line 210
     invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v2
 
     check-cast v2, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 210
+    .line 211
     invoke-virtual {v2, v0, v0, v0, v0}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
 
-    .line 211
+    .line 212
     invoke-virtual {v1, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 212
+    .line 213
     invoke-virtual {v1}, Landroid/view/View;->requestLayout()V
 
-    .line 214
+    .line 215
     :cond_1
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mRemoteViews:Landroid/widget/RemoteViews;
 
-    .line 215
+    .line 216
     iget-boolean v1, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mIsReInflate:Z
 
     if-nez v1, :cond_2
@@ -962,10 +941,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 216
+    .line 217
     invoke-interface {v1, p1}, Lcom/miui/home/launcher/LauncherAppWidgetHostView$WidgetUpdateListener;->onWidgetUpdate(Landroid/widget/RemoteViews;)V
 
-    .line 218
+    .line 219
     :cond_2
     iput-boolean v0, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mIsReInflate:Z
 

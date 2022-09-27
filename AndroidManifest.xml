@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="31" android:compileSdkVersionCodename="12" android:sharedUserId="@string/sharedUserId" package="com.miui.home" platformBuildVersionCode="439005256" platformBuildVersionName="ALPHA-4.39.0.5256-06221740">
-    <uses-permission android:name="android.permission.CHANGE_COMPONENT_ENABLED_STATE"/>
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="31" android:compileSdkVersionCodename="12" android:sharedUserId="@string/sharedUserId" package="com.miui.home" platformBuildVersionCode="426004432" platformBuildVersionName="ALPHA-4.26.0.4432-03032019">
     <permission android:description="@string/permdesc_install_shortcut" android:label="@string/permlab_install_shortcut" android:name="com.android.launcher.permission.INSTALL_SHORTCUT" android:permissionGroup="android.permission-group.SYSTEM_TOOLS" android:protectionLevel="normal"/>
     <permission android:description="@string/permdesc_uninstall_shortcut" android:label="@string/permlab_uninstall_shortcut" android:name="com.miui.home.launcher.permission.UNINSTALL_SHORTCUT" android:permissionGroup="android.permission-group.SYSTEM_TOOLS" android:protectionLevel="normal"/>
     <permission android:description="@string/permdesc_install_widget" android:label="@string/permlab_install_widget" android:name="com.miui.home.launcher.permission.INSTALL_WIDGET" android:permissionGroup="android.permission-group.SYSTEM_TOOLS" android:protectionLevel="normal"/>
@@ -8,8 +7,7 @@
     <permission android:description="@string/permdesc_write_settings" android:label="@string/permlab_write_settings" android:name="com.android.launcher.permission.WRITE_SETTINGS" android:permissionGroup="android.permission-group.SYSTEM_TOOLS" android:protectionLevel="signatureOrSystem"/>
     <permission android:name="com.miui.home.launcher.permission.LOADING_STATUS" android:protectionLevel="normal"/>
     <permission android:name="com.miui.home.launcher.permission.REMOVE_WIDGET" android:protectionLevel="signature"/>
-    <permission android:name="com.miui.home.launcher.permission.PUSH_REFRESH_WIDGET" android:protectionLevel="signatureOrSystem"/>
-    <uses-permission android:name="miui.permission.powerkeeper.POWER_DATA"/>
+    <permission android:name="com.miui.home.launcher.permission.PUSH_REFRESH_WIDGET" android:protectionLevel="signatureOrSystem"/> // The MaMl widget runs in home need it to access data in powerkeeper. <uses-permission android:name="miui.permission.powerkeeper.POWER_DATA"/>
     <uses-permission android:name="miui.permission.powerkeeper.HIDDEN_MODE_PROVIDER"/>
     <uses-permission android:name="android.permission.SET_WALLPAPER_COMPONENT"/>
     <uses-permission android:name="android.permission.BIND_WALLPAPER"/>
@@ -48,6 +46,7 @@
     <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS"/>
     <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
     <uses-permission android:name="com.android.SystemUI.permission.TIGGER_TOGGLE"/>
+    <uses-permission android:name="android.permission.CHANGE_COMPONENT_ENABLED_STATE"/>
     <uses-permission android:name="com.miui.notes.permission.ACCESS_NOTE"/>
     <uses-permission android:name="android.permission.SET_PROCESS_LIMIT"/>
     <uses-permission android:name="miui.permission.SHELL"/>
@@ -89,7 +88,6 @@
     <uses-permission android:name="com.miui.securitycore.permission.XSPACE_DUAL"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
     <uses-permission android:name="com.android.updater.permission.ACCESS_UPDATESERVICE"/>
     <uses-permission android:name="com.miui.systemAdSolution.adSwitch.PROVIDER"/>
     <uses-permission android:name="android.permission.START_TASKS_FROM_RECENTS"/>
@@ -100,6 +98,7 @@
     <uses-permission android:name="android.permission.INJECT_EVENTS"/>
     <uses-permission android:name="android.permission.REORDER_TASKS"/>
     <uses-permission android:name="android.permission.STATUS_BAR_SERVICE"/>
+    <uses-permission android:name="miui.permission.USE_INTERNAL_GENERAL_API"/>
     <uses-permission android:name="android.permission.SET_ACTIVITY_WATCHER"/>
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
     <uses-permission android:name="miui.autoinstall.config.permission.AUTOINSTALL"/>
@@ -112,33 +111,20 @@
     <uses-permission android:name="android.permission.UNLIMITED_TOASTS"/>
     <uses-permission android:name="android.permission.START_ANY_ACTIVITY"/>
     <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
-    <uses-permission android:name="android.permission.ALLOW_SLIPPERY_TOUCHES"/>
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
     <uses-permission android:name="com.xiaomi.market.sdk.UPDATE"/>
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
-    <uses-permission android:name="android.permission.WAKE_LOCK"/>
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
-    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
     <uses-permission android:name="com.miui.permission.REGION_SAMPLING"/>
-    <application android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:backupAgent="com.miui.home.launcher.backup.LauncherBackupAgent" android:directBootAware="true" android:extractNativeLibs="true" android:hardwareAccelerated="@bool/config_hardwareAccelerated" android:icon="@drawable/icon_launcher" android:label="@string/application_name" android:largeHeap="true" android:name="com.miui.home.launcher.Application" android:process="@string/process" android:requestLegacyExternalStorage="true" android:supportsRtl="true" android:theme="@style/BaseTheme">
+    <application android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:backupAgent="com.miui.home.launcher.backup.LauncherBackupAgent" android:directBootAware="true" android:hardwareAccelerated="@bool/config_hardwareAccelerated" android:icon="@drawable/icon_launcher" android:label="@string/application_name" android:largeHeap="true" android:name="com.miui.home.launcher.Application" android:process="@string/process" android:requestLegacyExternalStorage="true" android:supportsRtl="true" android:theme="@style/BaseTheme">
         <uses-library android:name="com.miui.system" android:required="false"/>
         <uses-library android:name="com.miui.core" android:required="false"/>
         <meta-data android:name="miui.xiaoai.disable_swipe_up_gesture" android:value="true"/>
         <meta-data android:name="notch.config" android:value="portrait"/>
         <meta-data android:name="com.android.launcher3.launcher_dump_provider" android:value="com.miui.home.launcher.LauncherProvider"/>
-        <meta-data android:name="com.sensorsdata.analytics.android.DisableTrackDeviceId" android:value="true"/>
         <meta-data android:name="supportRecents" android:value="true"/>
         <meta-data android:name="miui.supports_wallpaper_zoom_out" android:value="true"/>
         <meta-data android:name="com.android.thememanager.PRIV_PATH_RES" android:value="true"/>
-        <meta-data android:name="not_support_wallpaper_backup" android:value="true"/>
         <meta-data android:name="show_permission_instruction" android:value="true"/>
-        <meta-data android:name="firebase_crashlytics_collection_enabled" android:value="false"/>
-        <meta-data android:name="firebase_analytics_collection_enabled" android:value="false"/>
-        <meta-data android:name="google_analytics_adid_collection_enabled" android:value="false"/>
-        <meta-data android:name="google_analytics_ssaid_collection_enabled" android:value="false"/>
-        <meta-data android:name="miui.screenInnerOrientation" android:value="unspecified"/>
-        <meta-data android:name="com.xiaomi.mirror.relay_recents" android:value="true"/>
-        <meta-data android:name="miuiwidget.global.compat.version" android:value="1"/>
         <activity android:clearTaskOnLaunch="true" android:configChanges="keyboard|keyboardHidden|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:excludeFromRecents="true" android:launchMode="singleTask" android:name="com.miui.home.launcher.Launcher" android:resizeableActivity="true" android:resumeWhilePausing="true" android:screenOrientation="portrait" android:stateNotNeeded="true" android:taskAffinity="" android:theme="@style/LauncherTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -207,12 +193,6 @@
         <receiver android:name="com.miui.home.launcher.IronSource.IronSourcePreInstallReceiver" android:permission="miui.permission.USE_INTERNAL_GENERAL_API">
             <intent-filter>
                 <action android:name="com.miui.sec.external.intent.action.PRE_INSTALL"/>
-            </intent-filter>
-        </receiver>
-        <receiver android:exported="true" android:name="com.miui.home.launcher.SecretCodeBroadcastReceiver">
-            <intent-filter>
-                <action android:name="android.telephony.action.SECRET_CODE"/>
-                <data android:host="64844663" android:scheme="android_secret_code"/>
             </intent-filter>
         </receiver>
         <provider android:authorities="@string/provider_settings" android:exported="true" android:name="com.miui.home.launcher.LauncherProvider" android:readPermission="com.android.launcher.permission.READ_SETTINGS" android:writePermission="@string/provider_writePermission"/>
@@ -304,12 +284,6 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
-        <activity android:label="@string/navigation_position_title" android:launchMode="singleTop" android:name="com.miui.home.recents.settings.NavigationPositionActivity" android:screenOrientation="portrait" android:theme="@style/MIUIXPreference">
-            <intent-filter>
-                <action android:name="com.miui.home.recents.navigation_position"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </activity>
         <activity android:launchMode="singleTop" android:name="com.miui.home.settings.IconCustomizeActivity" android:screenOrientation="portrait" android:theme="@style/MIUIXPreference" android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
             <intent-filter>
                 <action android:name="com.miui.home.action.ICON_CUSTOMIZE"/>
@@ -364,55 +338,26 @@
         <meta-data android:name="miuixpreference" android:value="1.0"/>
         <meta-data android:name="recyclerview" android:value="2.0"/>
         <meta-data android:name="recyclerview_animator" android:value="2.0"/>
-        <meta-data android:name="io.branch.sdk.BranchKey" android:value="key_live_imJJwWS7uH8pJ9WsNX2dTipbDtlKqWd7"/>
-        <meta-data android:name="io.branch.sdk.BranchTestKey" android:value="key_test_pdHLA0I9vOZcI56yJZ9NDjciuunIu1zn"/>
-        <meta-data android:name="io.branch.sdk.TestMode" android:value="true"/>
-        <activity android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:directBootAware="false" android:excludeFromRecents="true" android:launchMode="singleTop" android:name="com.mi.globallauncher.activity.CommercialWebViewActivity" android:screenOrientation="portrait" android:theme="@style/WebViewCustomLightTheme"/>
-        <service android:name="com.mi.globallauncher.config.CommercialCloudConfigJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
-        <service android:exported="false" android:label="Branch local content update service" android:name="io.branch.search.internal.rawsqlite.BundleUpdateService" android:permission="android.permission.BIND_JOB_SERVICE"/>
-        <service android:exported="false" android:label="DISCONTINUED Branch local content update service" android:name="io.branch.search.internal.rawsqlite.SQLUpdaterService" android:permission="android.permission.BIND_JOB_SERVICE"/>
-        <service android:exported="false" android:label="Branch aggregate analytics" android:name="io.branch.search.internal.services.ScheduledQueryService" android:permission="android.permission.BIND_JOB_SERVICE"/>
-        <service android:exported="false" android:label="Branch aggregate analytics" android:name="io.branch.search.internal.services.PingService" android:permission="android.permission.BIND_JOB_SERVICE"/>
         <meta-data android:name="visualcheck" android:value="1.0"/>
-        <meta-data android:name="com.miui.maml.sdk" android:value="true"/>
         <meta-data android:name="appcompat" android:value="1.0"/>
-        <meta-data android:name="springback" android:value="2.0"/>
-        <meta-data android:name="pickerwidget" android:value="1.0"/>
         <meta-data android:name="popupwidget" android:value="1.0"/>
-        <meta-data android:name="slidingwidget" android:value="1.0"/>
+        <meta-data android:name="com.miui.maml.sdk" android:value="true"/>
+        <meta-data android:name="pickerwidget" android:value="1.0"/>
         <meta-data android:name="androidbasewidget" android:value="1.0"/>
+        <meta-data android:name="springback" android:value="2.0"/>
+        <meta-data android:name="slidingwidget" android:value="1.0"/>
         <meta-data android:name="miuixbasewidget" android:value="1.0"/>
         <meta-data android:name="nest" android:value="2.0"/>
         <meta-data android:name="dynamicoverscroller" android:value="2.0"/>
         <meta-data android:name="folme" android:value="2.0"/>
         <meta-data android:name="devicebaseinfo" android:value="1.0"/>
-        <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver"/>
-        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService"/>
-        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
-        <provider android:authorities="com.miui.home.com.squareup.picasso" android:exported="false" android:name="com.squareup.picasso.PicassoProvider"/>
-        <meta-data android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule" android:value="GlideModule"/>
-        <meta-data android:name="viewpager" android:value="2.0"/>
-        <service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
-            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
-            <meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
-            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
-        </service>
-        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
         <meta-data android:name="haptic" android:value="1.0"/>
-        <provider android:authorities="com.miui.home.androidx-startup" android:exported="false" android:name="androidx.startup.InitializationProvider">
-            <meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"/>
-            <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
-        </provider>
-        <meta-data android:name="spring" android:value="1.0"/>
-        <meta-data android:name="animation" android:value="1.0"/>
-        <service android:exported="false" android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery">
-            <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
-        </service>
-        <service android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE"/>
-        <receiver android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"/>
+        <meta-data android:name="smooth" android:value="1.0"/>
         <meta-data android:name="graphics" android:value="2.0"/>
         <meta-data android:name="core" android:value="2.0"/>
-        <meta-data android:name="smooth" android:value="1.0"/>
+        <meta-data android:name="viewpager" android:value="2.0"/>
+        <meta-data android:name="animation" android:value="1.0"/>
+        <meta-data android:name="spring" android:value="1.0"/>
         <meta-data android:name="blurdrawable" android:value="1.0"/>
     </application>
 </manifest>

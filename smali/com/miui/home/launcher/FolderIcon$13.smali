@@ -1,11 +1,11 @@
 .class Lcom/miui/home/launcher/FolderIcon$13;
-.super Lcom/miui/home/library/mirror/MirrorDragListener;
+.super Lcom/miui/home/launcher/util/noword/NoWordItemIconAdapter;
 .source "FolderIcon.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/FolderIcon;->getMirrorDragListener()Lcom/miui/home/library/mirror/MirrorDragListener;
+    value = Lcom/miui/home/launcher/FolderIcon;->initNoWordAdapter()Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,98 +19,59 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/FolderIcon;)V
+.method constructor <init>(Lcom/miui/home/launcher/FolderIcon;Lcom/miui/home/launcher/ItemIcon;)V
     .locals 0
 
-    .line 786
+    .line 795
     iput-object p1, p0, Lcom/miui/home/launcher/FolderIcon$13;->this$0:Lcom/miui/home/launcher/FolderIcon;
 
-    invoke-direct {p0}, Lcom/miui/home/library/mirror/MirrorDragListener;-><init>()V
+    invoke-direct {p0, p2}, Lcom/miui/home/launcher/util/noword/NoWordItemIconAdapter;-><init>(Lcom/miui/home/launcher/ItemIcon;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onDragEnd(Landroid/view/View;Landroid/view/DragEvent;)V
-    .locals 0
-
-    .line 810
-    iget-object p1, p0, Lcom/miui/home/launcher/FolderIcon$13;->this$0:Lcom/miui/home/launcher/FolderIcon;
-
-    invoke-static {p1}, Lcom/miui/home/launcher/FolderIcon;->access$1100(Lcom/miui/home/launcher/FolderIcon;)Ljava/lang/Runnable;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Lcom/miui/home/launcher/FolderIcon;->removeCallbacks(Ljava/lang/Runnable;)Z
-
-    return-void
-.end method
-
-.method public onDragEnter(Landroid/view/View;Landroid/view/DragEvent;)V
+.method public canDrawForegroundTitle()Z
     .locals 2
 
-    .line 795
-    iget-object p1, p0, Lcom/miui/home/launcher/FolderIcon$13;->this$0:Lcom/miui/home/launcher/FolderIcon;
+    .line 803
+    iget-object v0, p0, Lcom/miui/home/launcher/FolderIcon$13;->this$0:Lcom/miui/home/launcher/FolderIcon;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/FolderIcon;->access$1100(Lcom/miui/home/launcher/FolderIcon;)Ljava/lang/Runnable;
+    invoke-static {v0}, Lcom/miui/home/launcher/FolderIcon;->access$1200(Lcom/miui/home/launcher/FolderIcon;)Landroid/view/View;
 
-    move-result-object p2
+    move-result-object v0
 
-    const-wide/16 v0, 0x3e8
+    invoke-virtual {v0}, Landroid/view/View;->getAlpha()F
 
-    invoke-virtual {p1, p2, v0, v1}, Lcom/miui/home/launcher/FolderIcon;->postDelayed(Ljava/lang/Runnable;J)Z
+    move-result v0
 
-    return-void
+    const/4 v1, 0x0
+
+    cmpl-float v0, v0, v1
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
 .end method
 
-.method public onDragExit(Landroid/view/View;Landroid/view/DragEvent;)V
-    .locals 0
+.method public viewChangeAlphaWhenEditModeChange()Landroid/view/View;
+    .locals 1
 
-    .line 805
-    iget-object p1, p0, Lcom/miui/home/launcher/FolderIcon$13;->this$0:Lcom/miui/home/launcher/FolderIcon;
+    .line 798
+    iget-object v0, p0, Lcom/miui/home/launcher/FolderIcon$13;->this$0:Lcom/miui/home/launcher/FolderIcon;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/FolderIcon;->access$1100(Lcom/miui/home/launcher/FolderIcon;)Ljava/lang/Runnable;
+    invoke-static {v0}, Lcom/miui/home/launcher/FolderIcon;->access$1200(Lcom/miui/home/launcher/FolderIcon;)Landroid/view/View;
 
-    move-result-object p2
+    move-result-object v0
 
-    invoke-virtual {p1, p2}, Lcom/miui/home/launcher/FolderIcon;->removeCallbacks(Ljava/lang/Runnable;)Z
-
-    return-void
-.end method
-
-.method public onDragOver(Landroid/view/View;Landroid/view/DragEvent;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onDragStart(Landroid/view/View;Landroid/view/DragEvent;)V
-    .locals 0
-
-    .line 790
-    iget-object p1, p0, Lcom/miui/home/launcher/FolderIcon$13;->this$0:Lcom/miui/home/launcher/FolderIcon;
-
-    invoke-static {p1}, Lcom/miui/home/launcher/FolderIcon;->access$1100(Lcom/miui/home/launcher/FolderIcon;)Ljava/lang/Runnable;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Lcom/miui/home/launcher/FolderIcon;->removeCallbacks(Ljava/lang/Runnable;)Z
-
-    return-void
-.end method
-
-.method public onDrop(Landroid/view/View;Landroid/view/DragEvent;)V
-    .locals 0
-
-    .line 815
-    iget-object p1, p0, Lcom/miui/home/launcher/FolderIcon$13;->this$0:Lcom/miui/home/launcher/FolderIcon;
-
-    invoke-static {p1}, Lcom/miui/home/launcher/FolderIcon;->access$1100(Lcom/miui/home/launcher/FolderIcon;)Ljava/lang/Runnable;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Lcom/miui/home/launcher/FolderIcon;->removeCallbacks(Ljava/lang/Runnable;)Z
-
-    return-void
+    return-object v0
 .end method

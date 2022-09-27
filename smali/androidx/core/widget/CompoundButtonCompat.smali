@@ -107,44 +107,6 @@
     return-object v1
 .end method
 
-.method public static getButtonTintList(Landroid/widget/CompoundButton;)Landroid/content/res/ColorStateList;
-    .locals 2
-
-    .line 71
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x15
-
-    if-lt v0, v1, :cond_0
-
-    .line 72
-    invoke-virtual {p0}, Landroid/widget/CompoundButton;->getButtonTintList()Landroid/content/res/ColorStateList;
-
-    move-result-object p0
-
-    return-object p0
-
-    .line 74
-    :cond_0
-    instance-of v0, p0, Landroidx/core/widget/TintableCompoundButton;
-
-    if-eqz v0, :cond_1
-
-    .line 75
-    check-cast p0, Landroidx/core/widget/TintableCompoundButton;
-
-    invoke-interface {p0}, Landroidx/core/widget/TintableCompoundButton;->getSupportButtonTintList()Landroid/content/res/ColorStateList;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_1
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
 .method public static setButtonTintList(Landroid/widget/CompoundButton;Landroid/content/res/ColorStateList;)V
     .locals 2
 

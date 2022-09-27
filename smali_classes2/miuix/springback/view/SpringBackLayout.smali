@@ -147,14 +147,14 @@
     .line 114
     iput-boolean v3, p0, Lmiuix/springback/view/SpringBackLayout;->mSpringBackEnable:Z
 
-    .line 1432
+    .line 1438
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v4, p0, Lmiuix/springback/view/SpringBackLayout;->mOnScrollListeners:Ljava/util/List;
 
-    .line 1434
+    .line 1440
     iput v1, p0, Lmiuix/springback/view/SpringBackLayout;->mScrollState:I
 
     .line 122
@@ -286,7 +286,7 @@
 .method private checkHorizontalScrollStart(I)V
     .locals 3
 
-    .line 747
+    .line 753
     invoke-virtual {p0}, Lmiuix/springback/view/SpringBackLayout;->getScrollX()I
 
     move-result v0
@@ -307,10 +307,10 @@
     :goto_0
     if-eqz v0, :cond_2
 
-    .line 749
+    .line 755
     iput-boolean v1, p0, Lmiuix/springback/view/SpringBackLayout;->mIsBeingDragged:Z
 
-    .line 750
+    .line 756
     invoke-virtual {p0}, Lmiuix/springback/view/SpringBackLayout;->getScrollX()I
 
     move-result v0
@@ -335,14 +335,14 @@
 
     move-result p1
 
-    .line 751
+    .line 757
     invoke-virtual {p0}, Lmiuix/springback/view/SpringBackLayout;->getScrollX()I
 
     move-result v0
 
     if-gez v0, :cond_1
 
-    .line 752
+    .line 758
     iget v0, p0, Lmiuix/springback/view/SpringBackLayout;->mInitialDownX:F
 
     sub-float/2addr v0, p1
@@ -351,7 +351,7 @@
 
     goto :goto_1
 
-    .line 754
+    .line 760
     :cond_1
     iget v0, p0, Lmiuix/springback/view/SpringBackLayout;->mInitialDownX:F
 
@@ -359,7 +359,7 @@
 
     iput v0, p0, Lmiuix/springback/view/SpringBackLayout;->mInitialDownX:F
 
-    .line 756
+    .line 762
     :goto_1
     iget p1, p0, Lmiuix/springback/view/SpringBackLayout;->mInitialDownX:F
 
@@ -367,7 +367,7 @@
 
     goto :goto_2
 
-    .line 758
+    .line 764
     :cond_2
     iput-boolean v2, p0, Lmiuix/springback/view/SpringBackLayout;->mIsBeingDragged:Z
 
@@ -547,12 +547,12 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 737
+    .line 743
     invoke-direct {p0, p1}, Lmiuix/springback/view/SpringBackLayout;->checkVerticalScrollStart(I)V
 
     goto :goto_0
 
-    .line 739
+    .line 745
     :cond_0
     invoke-direct {p0, p1}, Lmiuix/springback/view/SpringBackLayout;->checkHorizontalScrollStart(I)V
 
@@ -563,7 +563,7 @@
 .method private checkVerticalScrollStart(I)V
     .locals 3
 
-    .line 720
+    .line 726
     invoke-virtual {p0}, Lmiuix/springback/view/SpringBackLayout;->getScrollY()I
 
     move-result v0
@@ -584,10 +584,10 @@
     :goto_0
     if-eqz v0, :cond_2
 
-    .line 722
+    .line 728
     iput-boolean v1, p0, Lmiuix/springback/view/SpringBackLayout;->mIsBeingDragged:Z
 
-    .line 723
+    .line 729
     invoke-virtual {p0}, Lmiuix/springback/view/SpringBackLayout;->getScrollY()I
 
     move-result v0
@@ -612,14 +612,14 @@
 
     move-result p1
 
-    .line 724
+    .line 730
     invoke-virtual {p0}, Lmiuix/springback/view/SpringBackLayout;->getScrollY()I
 
     move-result v0
 
     if-gez v0, :cond_1
 
-    .line 725
+    .line 731
     iget v0, p0, Lmiuix/springback/view/SpringBackLayout;->mInitialDownY:F
 
     sub-float/2addr v0, p1
@@ -628,7 +628,7 @@
 
     goto :goto_1
 
-    .line 727
+    .line 733
     :cond_1
     iget v0, p0, Lmiuix/springback/view/SpringBackLayout;->mInitialDownY:F
 
@@ -636,7 +636,7 @@
 
     iput v0, p0, Lmiuix/springback/view/SpringBackLayout;->mInitialDownY:F
 
-    .line 729
+    .line 735
     :goto_1
     iget p1, p0, Lmiuix/springback/view/SpringBackLayout;->mInitialDownY:F
 
@@ -644,7 +644,7 @@
 
     goto :goto_2
 
-    .line 731
+    .line 737
     :cond_2
     iput-boolean v2, p0, Lmiuix/springback/view/SpringBackLayout;->mIsBeingDragged:Z
 
@@ -661,7 +661,7 @@
 
     const/4 p3, 0x1
 
-    .line 1297
+    .line 1303
     aput p1, p2, p3
 
     goto :goto_0
@@ -669,7 +669,7 @@
     :cond_0
     const/4 p3, 0x0
 
-    .line 1299
+    .line 1305
     aput p1, p2, p3
 
     :goto_0
@@ -696,15 +696,15 @@
 .method private dispatchScrollState(I)V
     .locals 4
 
-    .line 1423
+    .line 1429
     iget v0, p0, Lmiuix/springback/view/SpringBackLayout;->mScrollState:I
 
     if-eq v0, p1, :cond_0
 
-    .line 1425
+    .line 1431
     iput p1, p0, Lmiuix/springback/view/SpringBackLayout;->mScrollState:I
 
-    .line 1426
+    .line 1432
     iget-object v1, p0, Lmiuix/springback/view/SpringBackLayout;->mOnScrollListeners:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -724,7 +724,7 @@
 
     check-cast v2, Lmiuix/springback/view/SpringBackLayout$OnScrollListener;
 
-    .line 1427
+    .line 1433
     iget-object v3, p0, Lmiuix/springback/view/SpringBackLayout;->mSpringScroller:Lmiuix/springback/view/SpringScroller;
 
     invoke-virtual {v3}, Lmiuix/springback/view/SpringScroller;->isFinished()Z
@@ -976,7 +976,7 @@
 
     float-to-int p1, p1
 
-    .line 858
+    .line 864
     invoke-virtual {p0, v0, p1}, Lmiuix/springback/view/SpringBackLayout;->scrollTo(II)V
 
     goto :goto_0
@@ -986,7 +986,7 @@
 
     float-to-int p1, p1
 
-    .line 860
+    .line 866
     invoke-virtual {p0, p1, v0}, Lmiuix/springback/view/SpringBackLayout;->scrollTo(II)V
 
     :goto_0
@@ -1000,7 +1000,7 @@
 
     if-ne p2, v0, :cond_0
 
-    .line 1002
+    .line 1008
     iget p2, p0, Lmiuix/springback/view/SpringBackLayout;->mScreenHeight:I
 
     goto :goto_0
@@ -1011,7 +1011,7 @@
     :goto_0
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 1003
+    .line 1009
     invoke-static {p1, v0}, Ljava/lang/Math;->min(FF)F
 
     move-result p1
@@ -1020,7 +1020,7 @@
 
     const-wide/high16 v2, 0x4008000000000000L    # 3.0
 
-    .line 1004
+    .line 1010
     invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v4
@@ -1051,7 +1051,7 @@
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 998
+    .line 1004
     invoke-direct {p0, v0, p1}, Lmiuix/springback/view/SpringBackLayout;->obtainDampingDistance(FI)F
 
     move-result p1
@@ -1066,7 +1066,7 @@
 
     if-ne p2, v0, :cond_0
 
-    .line 992
+    .line 998
     iget v0, p0, Lmiuix/springback/view/SpringBackLayout;->mScreenHeight:I
 
     goto :goto_0
@@ -1074,7 +1074,7 @@
     :cond_0
     iget v0, p0, Lmiuix/springback/view/SpringBackLayout;->mScreenWith:I
 
-    .line 993
+    .line 999
     :goto_0
     invoke-static {p1}, Ljava/lang/Math;->abs(F)F
 
@@ -1090,7 +1090,7 @@
 
     move-result p1
 
-    .line 994
+    .line 1000
     invoke-direct {p0, p1, p2}, Lmiuix/springback/view/SpringBackLayout;->obtainDampingDistance(FI)F
 
     move-result p1
@@ -1105,7 +1105,7 @@
 
     if-ne p3, v0, :cond_0
 
-    .line 1011
+    .line 1017
     iget p3, p0, Lmiuix/springback/view/SpringBackLayout;->mScreenHeight:I
 
     goto :goto_0
@@ -1113,7 +1113,7 @@
     :cond_0
     iget p3, p0, Lmiuix/springback/view/SpringBackLayout;->mScreenWith:I
 
-    .line 1012
+    .line 1018
     :goto_0
     invoke-static {p1}, Ljava/lang/Math;->abs(F)F
 
@@ -1137,7 +1137,7 @@
 
     const-wide v2, 0x3fe5555555555555L    # 0.6666666666666666
 
-    .line 1013
+    .line 1019
     invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v2
@@ -1471,23 +1471,26 @@
 
     if-nez v2, :cond_0
 
-    .line 606
-    invoke-direct {p0, p1, v0, v1}, Lmiuix/springback/view/SpringBackLayout;->onScrollEvent(Landroid/view/MotionEvent;II)Z
-
-    move-result p1
+    const/4 p1, 0x0
 
     return p1
 
-    .line 607
+    .line 608
     :cond_0
+    invoke-direct {p0, v1}, Lmiuix/springback/view/SpringBackLayout;->isTargetScrollToTop(I)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
     invoke-direct {p0, v1}, Lmiuix/springback/view/SpringBackLayout;->isTargetScrollToBottom(I)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 608
-    invoke-direct {p0, p1, v0, v1}, Lmiuix/springback/view/SpringBackLayout;->onScrollUpEvent(Landroid/view/MotionEvent;II)Z
+    .line 609
+    invoke-direct {p0, p1, v0, v1}, Lmiuix/springback/view/SpringBackLayout;->onScrollEvent(Landroid/view/MotionEvent;II)Z
 
     move-result p1
 
@@ -1495,6 +1498,21 @@
 
     .line 610
     :cond_1
+    invoke-direct {p0, v1}, Lmiuix/springback/view/SpringBackLayout;->isTargetScrollToBottom(I)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    .line 611
+    invoke-direct {p0, p1, v0, v1}, Lmiuix/springback/view/SpringBackLayout;->onScrollUpEvent(Landroid/view/MotionEvent;II)Z
+
+    move-result p1
+
+    return p1
+
+    .line 613
+    :cond_2
     invoke-direct {p0, p1, v0, v1}, Lmiuix/springback/view/SpringBackLayout;->onScrollDownEvent(Landroid/view/MotionEvent;II)Z
 
     move-result p1
@@ -1505,7 +1523,7 @@
 .method private onNestedPreScroll(I[II)V
     .locals 7
 
-    .line 1205
+    .line 1211
     iget v0, p0, Lmiuix/springback/view/SpringBackLayout;->mNestedScrollAxes:I
 
     const/4 v1, 0x0
@@ -1536,7 +1554,7 @@
     :goto_1
     if-eqz v0, :cond_2
 
-    .line 1207
+    .line 1213
     invoke-virtual {p0}, Lmiuix/springback/view/SpringBackLayout;->getScrollY()I
 
     move-result v0
@@ -1548,7 +1566,7 @@
 
     move-result v0
 
-    .line 1208
+    .line 1214
     :goto_2
     invoke-static {v0}, Ljava/lang/Math;->abs(I)I
 
@@ -1560,7 +1578,7 @@
 
     if-lez p1, :cond_4
 
-    .line 1210
+    .line 1216
     iget p3, p0, Lmiuix/springback/view/SpringBackLayout;->mTotalScrollTopUnconsumed:F
 
     cmpl-float v0, p3, v5
@@ -1575,10 +1593,10 @@
 
     float-to-int p1, p3
 
-    .line 1212
+    .line 1218
     invoke-direct {p0, p1, p2, v4}, Lmiuix/springback/view/SpringBackLayout;->consumeDelta(I[II)V
 
-    .line 1213
+    .line 1219
     iput v5, p0, Lmiuix/springback/view/SpringBackLayout;->mTotalScrollTopUnconsumed:F
 
     goto :goto_3
@@ -1586,17 +1604,17 @@
     :cond_3
     sub-float/2addr p3, v0
 
-    .line 1215
+    .line 1221
     iput p3, p0, Lmiuix/springback/view/SpringBackLayout;->mTotalScrollTopUnconsumed:F
 
-    .line 1216
+    .line 1222
     invoke-direct {p0, p1, p2, v4}, Lmiuix/springback/view/SpringBackLayout;->consumeDelta(I[II)V
 
-    .line 1218
+    .line 1224
     :goto_3
     invoke-direct {p0, v3}, Lmiuix/springback/view/SpringBackLayout;->dispatchScrollState(I)V
 
-    .line 1219
+    .line 1225
     iget p1, p0, Lmiuix/springback/view/SpringBackLayout;->mTotalScrollTopUnconsumed:F
 
     invoke-direct {p0, p1, v4}, Lmiuix/springback/view/SpringBackLayout;->obtainSpringBackDistance(FI)F
@@ -1610,7 +1628,7 @@
     :cond_4
     if-gez p1, :cond_13
 
-    .line 1220
+    .line 1226
     iget p3, p0, Lmiuix/springback/view/SpringBackLayout;->mTotalScrollBottomUnconsumed:F
 
     neg-float v0, p3
@@ -1629,10 +1647,10 @@
 
     float-to-int p1, p3
 
-    .line 1222
+    .line 1228
     invoke-direct {p0, p1, p2, v4}, Lmiuix/springback/view/SpringBackLayout;->consumeDelta(I[II)V
 
-    .line 1223
+    .line 1229
     iput v5, p0, Lmiuix/springback/view/SpringBackLayout;->mTotalScrollBottomUnconsumed:F
 
     goto :goto_4
@@ -1640,17 +1658,17 @@
     :cond_5
     add-float/2addr p3, v0
 
-    .line 1225
+    .line 1231
     iput p3, p0, Lmiuix/springback/view/SpringBackLayout;->mTotalScrollBottomUnconsumed:F
 
-    .line 1226
+    .line 1232
     invoke-direct {p0, p1, p2, v4}, Lmiuix/springback/view/SpringBackLayout;->consumeDelta(I[II)V
 
-    .line 1228
+    .line 1234
     :goto_4
     invoke-direct {p0, v3}, Lmiuix/springback/view/SpringBackLayout;->dispatchScrollState(I)V
 
-    .line 1229
+    .line 1235
     iget p1, p0, Lmiuix/springback/view/SpringBackLayout;->mTotalScrollBottomUnconsumed:F
 
     invoke-direct {p0, p1, v4}, Lmiuix/springback/view/SpringBackLayout;->obtainSpringBackDistance(FI)F
@@ -1666,7 +1684,7 @@
     :cond_6
     if-ne v4, v2, :cond_7
 
-    .line 1232
+    .line 1238
     iget p3, p0, Lmiuix/springback/view/SpringBackLayout;->mVelocityY:F
 
     goto :goto_5
@@ -1677,7 +1695,7 @@
     :goto_5
     if-lez p1, :cond_c
 
-    .line 1233
+    .line 1239
     iget v2, p0, Lmiuix/springback/view/SpringBackLayout;->mTotalScrollTopUnconsumed:F
 
     cmpl-float v6, v2, v5
@@ -1690,7 +1708,7 @@
 
     if-lez v6, :cond_9
 
-    .line 1235
+    .line 1241
     invoke-direct {p0, v2, v4}, Lmiuix/springback/view/SpringBackLayout;->obtainSpringBackDistance(FI)F
 
     move-result p3
@@ -1703,21 +1721,21 @@
 
     float-to-int p1, p3
 
-    .line 1237
+    .line 1243
     invoke-direct {p0, p1, p2, v4}, Lmiuix/springback/view/SpringBackLayout;->consumeDelta(I[II)V
 
-    .line 1239
+    .line 1245
     iput v5, p0, Lmiuix/springback/view/SpringBackLayout;->mTotalScrollTopUnconsumed:F
 
     goto :goto_6
 
-    .line 1241
+    .line 1247
     :cond_8
     invoke-direct {p0, p1, p2, v4}, Lmiuix/springback/view/SpringBackLayout;->consumeDelta(I[II)V
 
     sub-float v5, p3, v0
 
-    .line 1244
+    .line 1250
     invoke-static {v5}, Ljava/lang/Math;->signum(F)F
 
     move-result p1
@@ -1732,35 +1750,35 @@
 
     mul-float/2addr p1, p2
 
-    .line 1243
+    .line 1249
     invoke-direct {p0, v5, p1, v4}, Lmiuix/springback/view/SpringBackLayout;->obtainTouchDistance(FFI)F
 
     move-result p1
 
     iput p1, p0, Lmiuix/springback/view/SpringBackLayout;->mTotalScrollTopUnconsumed:F
 
-    .line 1246
+    .line 1252
     :goto_6
     invoke-direct {p0, v5, v4}, Lmiuix/springback/view/SpringBackLayout;->moveTarget(FI)V
 
-    .line 1247
+    .line 1253
     invoke-direct {p0, v3}, Lmiuix/springback/view/SpringBackLayout;->dispatchScrollState(I)V
 
     goto/16 :goto_a
 
-    .line 1249
+    .line 1255
     :cond_9
     iget-boolean v2, p0, Lmiuix/springback/view/SpringBackLayout;->mScrollByFling:Z
 
     if-nez v2, :cond_a
 
-    .line 1250
+    .line 1256
     iput-boolean v3, p0, Lmiuix/springback/view/SpringBackLayout;->mScrollByFling:Z
 
-    .line 1251
+    .line 1257
     invoke-direct {p0, p3, v4, v1}, Lmiuix/springback/view/SpringBackLayout;->springBack(FIZ)V
 
-    .line 1253
+    .line 1259
     :cond_a
     iget-object p3, p0, Lmiuix/springback/view/SpringBackLayout;->mSpringScroller:Lmiuix/springback/view/SpringScroller;
 
@@ -1770,7 +1788,7 @@
 
     if-eqz p3, :cond_b
 
-    .line 1254
+    .line 1260
     iget-object p3, p0, Lmiuix/springback/view/SpringBackLayout;->mSpringScroller:Lmiuix/springback/view/SpringScroller;
 
     invoke-virtual {p3}, Lmiuix/springback/view/SpringScroller;->getCurrX()I
@@ -1787,7 +1805,7 @@
 
     int-to-float p3, v0
 
-    .line 1255
+    .line 1261
     invoke-direct {p0, v4}, Lmiuix/springback/view/SpringBackLayout;->obtainMaxSpringBackDistance(I)F
 
     move-result v0
@@ -1804,11 +1822,11 @@
 
     goto :goto_7
 
-    .line 1257
+    .line 1263
     :cond_b
     iput v5, p0, Lmiuix/springback/view/SpringBackLayout;->mTotalScrollTopUnconsumed:F
 
-    .line 1259
+    .line 1265
     :goto_7
     invoke-direct {p0, p1, p2, v4}, Lmiuix/springback/view/SpringBackLayout;->consumeDelta(I[II)V
 
@@ -1817,7 +1835,7 @@
     :cond_c
     if-gez p1, :cond_11
 
-    .line 1261
+    .line 1267
     iget v2, p0, Lmiuix/springback/view/SpringBackLayout;->mTotalScrollBottomUnconsumed:F
 
     neg-float v6, v2
@@ -1832,7 +1850,7 @@
 
     if-gez v6, :cond_e
 
-    .line 1263
+    .line 1269
     invoke-direct {p0, v2, v4}, Lmiuix/springback/view/SpringBackLayout;->obtainSpringBackDistance(FI)F
 
     move-result p3
@@ -1847,21 +1865,21 @@
 
     float-to-int p1, p3
 
-    .line 1265
+    .line 1271
     invoke-direct {p0, p1, p2, v4}, Lmiuix/springback/view/SpringBackLayout;->consumeDelta(I[II)V
 
-    .line 1267
+    .line 1273
     iput v5, p0, Lmiuix/springback/view/SpringBackLayout;->mTotalScrollBottomUnconsumed:F
 
     goto :goto_8
 
-    .line 1269
+    .line 1275
     :cond_d
     invoke-direct {p0, p1, p2, v4}, Lmiuix/springback/view/SpringBackLayout;->consumeDelta(I[II)V
 
     add-float v5, p3, v0
 
-    .line 1272
+    .line 1278
     invoke-static {v5}, Ljava/lang/Math;->signum(F)F
 
     move-result p1
@@ -1876,37 +1894,37 @@
 
     mul-float/2addr p1, p2
 
-    .line 1271
+    .line 1277
     invoke-direct {p0, v5, p1, v4}, Lmiuix/springback/view/SpringBackLayout;->obtainTouchDistance(FFI)F
 
     move-result p1
 
     iput p1, p0, Lmiuix/springback/view/SpringBackLayout;->mTotalScrollBottomUnconsumed:F
 
-    .line 1274
+    .line 1280
     :goto_8
     invoke-direct {p0, v3}, Lmiuix/springback/view/SpringBackLayout;->dispatchScrollState(I)V
 
     neg-float p1, v5
 
-    .line 1275
+    .line 1281
     invoke-direct {p0, p1, v4}, Lmiuix/springback/view/SpringBackLayout;->moveTarget(FI)V
 
     goto :goto_a
 
-    .line 1277
+    .line 1283
     :cond_e
     iget-boolean v2, p0, Lmiuix/springback/view/SpringBackLayout;->mScrollByFling:Z
 
     if-nez v2, :cond_f
 
-    .line 1278
+    .line 1284
     iput-boolean v3, p0, Lmiuix/springback/view/SpringBackLayout;->mScrollByFling:Z
 
-    .line 1279
+    .line 1285
     invoke-direct {p0, p3, v4, v1}, Lmiuix/springback/view/SpringBackLayout;->springBack(FIZ)V
 
-    .line 1281
+    .line 1287
     :cond_f
     iget-object p3, p0, Lmiuix/springback/view/SpringBackLayout;->mSpringScroller:Lmiuix/springback/view/SpringScroller;
 
@@ -1916,7 +1934,7 @@
 
     if-eqz p3, :cond_10
 
-    .line 1282
+    .line 1288
     iget-object p3, p0, Lmiuix/springback/view/SpringBackLayout;->mSpringScroller:Lmiuix/springback/view/SpringScroller;
 
     invoke-virtual {p3}, Lmiuix/springback/view/SpringScroller;->getCurrX()I
@@ -1933,7 +1951,7 @@
 
     int-to-float p3, v0
 
-    .line 1283
+    .line 1289
     invoke-direct {p0, v4}, Lmiuix/springback/view/SpringBackLayout;->obtainMaxSpringBackDistance(I)F
 
     move-result v0
@@ -1950,11 +1968,11 @@
 
     goto :goto_9
 
-    .line 1285
+    .line 1291
     :cond_10
     iput v5, p0, Lmiuix/springback/view/SpringBackLayout;->mTotalScrollBottomUnconsumed:F
 
-    .line 1287
+    .line 1293
     :goto_9
     invoke-direct {p0, p1, p2, v4}, Lmiuix/springback/view/SpringBackLayout;->consumeDelta(I[II)V
 
@@ -1963,7 +1981,7 @@
     :cond_11
     if-eqz p1, :cond_13
 
-    .line 1289
+    .line 1295
     iget p3, p0, Lmiuix/springback/view/SpringBackLayout;->mTotalScrollBottomUnconsumed:F
 
     cmpl-float p3, p3, v5
@@ -1987,7 +2005,7 @@
 
     if-nez p3, :cond_13
 
-    .line 1290
+    .line 1296
     invoke-direct {p0, p1, p2, v4}, Lmiuix/springback/view/SpringBackLayout;->consumeDelta(I[II)V
 
     :cond_13
@@ -2009,13 +2027,13 @@
     :pswitch_0
     goto/16 :goto_2
 
-    .line 835
+    .line 841
     :pswitch_1
     invoke-direct {p0, p1}, Lmiuix/springback/view/SpringBackLayout;->onSecondaryPointerUp(Landroid/view/MotionEvent;)V
 
     goto/16 :goto_2
 
-    .line 798
+    .line 804
     :pswitch_2
     iget p2, p0, Lmiuix/springback/view/SpringBackLayout;->mActivePointerId:I
 
@@ -2029,7 +2047,7 @@
 
     const-string p2, "Got ACTION_POINTER_DOWN event but have an invalid active pointer id."
 
-    .line 800
+    .line 806
     invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v2
@@ -2037,17 +2055,17 @@
     :cond_0
     if-ne p3, v0, :cond_2
 
-    .line 805
+    .line 811
     invoke-virtual {p1, p2}, Landroid/view/MotionEvent;->getY(I)F
 
     move-result p2
 
-    .line 806
+    .line 812
     iget p3, p0, Lmiuix/springback/view/SpringBackLayout;->mInitialDownY:F
 
     sub-float/2addr p2, p3
 
-    .line 807
+    .line 813
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionIndex()I
 
     move-result p3
@@ -2058,12 +2076,12 @@
 
     const-string p2, "Got ACTION_POINTER_DOWN event but have an invalid action index."
 
-    .line 809
+    .line 815
     invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v2
 
-    .line 813
+    .line 819
     :cond_1
     invoke-virtual {p1, p3}, Landroid/view/MotionEvent;->getY(I)F
 
@@ -2071,28 +2089,28 @@
 
     sub-float/2addr v0, p2
 
-    .line 814
+    .line 820
     iput v0, p0, Lmiuix/springback/view/SpringBackLayout;->mInitialDownY:F
 
-    .line 815
+    .line 821
     iget p2, p0, Lmiuix/springback/view/SpringBackLayout;->mInitialDownY:F
 
     iput p2, p0, Lmiuix/springback/view/SpringBackLayout;->mInitialMotionY:F
 
     goto :goto_0
 
-    .line 817
+    .line 823
     :cond_2
     invoke-virtual {p1, p2}, Landroid/view/MotionEvent;->getX(I)F
 
     move-result p2
 
-    .line 818
+    .line 824
     iget p3, p0, Lmiuix/springback/view/SpringBackLayout;->mInitialDownX:F
 
     sub-float/2addr p2, p3
 
-    .line 819
+    .line 825
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionIndex()I
 
     move-result p3
@@ -2103,12 +2121,12 @@
 
     const-string p2, "Got ACTION_POINTER_DOWN event but have an invalid action index."
 
-    .line 821
+    .line 827
     invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v2
 
-    .line 826
+    .line 832
     :cond_3
     invoke-virtual {p1, p3}, Landroid/view/MotionEvent;->getX(I)F
 
@@ -2116,15 +2134,15 @@
 
     sub-float/2addr v0, p2
 
-    .line 827
+    .line 833
     iput v0, p0, Lmiuix/springback/view/SpringBackLayout;->mInitialDownX:F
 
-    .line 828
+    .line 834
     iget p2, p0, Lmiuix/springback/view/SpringBackLayout;->mInitialDownX:F
 
     iput p2, p0, Lmiuix/springback/view/SpringBackLayout;->mInitialMotionX:F
 
-    .line 830
+    .line 836
     :goto_0
     invoke-virtual {p1, p3}, Landroid/view/MotionEvent;->getPointerId(I)I
 
@@ -2134,7 +2152,7 @@
 
     goto/16 :goto_2
 
-    .line 770
+    .line 776
     :pswitch_3
     iget p2, p0, Lmiuix/springback/view/SpringBackLayout;->mActivePointerId:I
 
@@ -2148,12 +2166,12 @@
 
     const-string p2, "Got ACTION_MOVE event but have an invalid active pointer id."
 
-    .line 772
+    .line 778
     invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v2
 
-    .line 776
+    .line 782
     :cond_4
     iget-boolean v3, p0, Lmiuix/springback/view/SpringBackLayout;->mIsBeingDragged:Z
 
@@ -2161,12 +2179,12 @@
 
     if-ne p3, v0, :cond_5
 
-    .line 779
+    .line 785
     invoke-virtual {p1, p2}, Landroid/view/MotionEvent;->getY(I)F
 
     move-result p1
 
-    .line 780
+    .line 786
     iget p2, p0, Lmiuix/springback/view/SpringBackLayout;->mInitialMotionY:F
 
     sub-float p2, p1, p2
@@ -2187,13 +2205,13 @@
 
     goto :goto_1
 
-    .line 782
+    .line 788
     :cond_5
     invoke-virtual {p1, p2}, Landroid/view/MotionEvent;->getX(I)F
 
     move-result p1
 
-    .line 783
+    .line 789
     iget p2, p0, Lmiuix/springback/view/SpringBackLayout;->mInitialMotionX:F
 
     sub-float p2, p1, p2
@@ -2219,21 +2237,21 @@
 
     if-lez v0, :cond_6
 
-    .line 788
+    .line 794
     invoke-virtual {p0, v1}, Lmiuix/springback/view/SpringBackLayout;->requestDisallowParentInterceptTouchEvent(Z)V
 
-    .line 789
+    .line 795
     invoke-direct {p0, p2, p3}, Lmiuix/springback/view/SpringBackLayout;->moveTarget(FI)V
 
     goto :goto_2
 
-    .line 791
+    .line 797
     :cond_6
     invoke-direct {p0, p1, p3}, Lmiuix/springback/view/SpringBackLayout;->moveTarget(FI)V
 
     return v2
 
-    .line 839
+    .line 845
     :pswitch_4
     iget p2, p0, Lmiuix/springback/view/SpringBackLayout;->mActivePointerId:I
 
@@ -2247,32 +2265,32 @@
 
     const-string p2, "Got ACTION_UP event but don\'t have an active pointer id."
 
-    .line 841
+    .line 847
     invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v2
 
-    .line 844
+    .line 850
     :cond_7
     iget-boolean p1, p0, Lmiuix/springback/view/SpringBackLayout;->mIsBeingDragged:Z
 
     if-eqz p1, :cond_8
 
-    .line 845
+    .line 851
     iput-boolean v2, p0, Lmiuix/springback/view/SpringBackLayout;->mIsBeingDragged:Z
 
-    .line 846
+    .line 852
     invoke-direct {p0, p3}, Lmiuix/springback/view/SpringBackLayout;->springBack(I)V
 
     :cond_8
     const/4 p1, -0x1
 
-    .line 848
+    .line 854
     iput p1, p0, Lmiuix/springback/view/SpringBackLayout;->mActivePointerId:I
 
     return v2
 
-    .line 766
+    .line 772
     :pswitch_5
     invoke-virtual {p1, v2}, Landroid/view/MotionEvent;->getPointerId(I)I
 
@@ -2280,7 +2298,7 @@
 
     iput p1, p0, Lmiuix/springback/view/SpringBackLayout;->mActivePointerId:I
 
-    .line 767
+    .line 773
     invoke-direct {p0, p3}, Lmiuix/springback/view/SpringBackLayout;->checkScrollStart(I)V
 
     :cond_9
@@ -2313,13 +2331,13 @@
     :pswitch_0
     goto/16 :goto_2
 
-    .line 694
+    .line 700
     :pswitch_1
     invoke-direct {p0, p1}, Lmiuix/springback/view/SpringBackLayout;->onSecondaryPointerUp(Landroid/view/MotionEvent;)V
 
     goto/16 :goto_2
 
-    .line 657
+    .line 663
     :pswitch_2
     iget p2, p0, Lmiuix/springback/view/SpringBackLayout;->mActivePointerId:I
 
@@ -2333,7 +2351,7 @@
 
     const-string p2, "Got ACTION_POINTER_DOWN event but have an invalid active pointer id."
 
-    .line 659
+    .line 665
     invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v2
@@ -2341,17 +2359,17 @@
     :cond_0
     if-ne p3, v0, :cond_2
 
-    .line 664
+    .line 670
     invoke-virtual {p1, p2}, Landroid/view/MotionEvent;->getY(I)F
 
     move-result p2
 
-    .line 665
+    .line 671
     iget p3, p0, Lmiuix/springback/view/SpringBackLayout;->mInitialDownY:F
 
     sub-float/2addr p2, p3
 
-    .line 666
+    .line 672
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionIndex()I
 
     move-result p3
@@ -2362,12 +2380,12 @@
 
     const-string p2, "Got ACTION_POINTER_DOWN event but have an invalid action index."
 
-    .line 668
+    .line 674
     invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v2
 
-    .line 672
+    .line 678
     :cond_1
     invoke-virtual {p1, p3}, Landroid/view/MotionEvent;->getY(I)F
 
@@ -2375,28 +2393,28 @@
 
     sub-float/2addr v0, p2
 
-    .line 673
+    .line 679
     iput v0, p0, Lmiuix/springback/view/SpringBackLayout;->mInitialDownY:F
 
-    .line 674
+    .line 680
     iget p2, p0, Lmiuix/springback/view/SpringBackLayout;->mInitialDownY:F
 
     iput p2, p0, Lmiuix/springback/view/SpringBackLayout;->mInitialMotionY:F
 
     goto :goto_0
 
-    .line 676
+    .line 682
     :cond_2
     invoke-virtual {p1, p2}, Landroid/view/MotionEvent;->getX(I)F
 
     move-result p2
 
-    .line 677
+    .line 683
     iget p3, p0, Lmiuix/springback/view/SpringBackLayout;->mInitialDownX:F
 
     sub-float/2addr p2, p3
 
-    .line 678
+    .line 684
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionIndex()I
 
     move-result p3
@@ -2407,12 +2425,12 @@
 
     const-string p2, "Got ACTION_POINTER_DOWN event but have an invalid action index."
 
-    .line 680
+    .line 686
     invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v2
 
-    .line 685
+    .line 691
     :cond_3
     invoke-virtual {p1, p3}, Landroid/view/MotionEvent;->getX(I)F
 
@@ -2420,15 +2438,15 @@
 
     sub-float/2addr v0, p2
 
-    .line 686
+    .line 692
     iput v0, p0, Lmiuix/springback/view/SpringBackLayout;->mInitialDownX:F
 
-    .line 687
+    .line 693
     iget p2, p0, Lmiuix/springback/view/SpringBackLayout;->mInitialDownX:F
 
     iput p2, p0, Lmiuix/springback/view/SpringBackLayout;->mInitialMotionX:F
 
-    .line 689
+    .line 695
     :goto_0
     invoke-virtual {p1, p3}, Landroid/view/MotionEvent;->getPointerId(I)I
 
@@ -2441,7 +2459,7 @@
     :pswitch_3
     return v2
 
-    .line 634
+    .line 640
     :pswitch_4
     iget p2, p0, Lmiuix/springback/view/SpringBackLayout;->mActivePointerId:I
 
@@ -2455,12 +2473,12 @@
 
     const-string p2, "Got ACTION_MOVE event but have an invalid active pointer id."
 
-    .line 636
+    .line 642
     invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v2
 
-    .line 640
+    .line 646
     :cond_4
     iget-boolean v2, p0, Lmiuix/springback/view/SpringBackLayout;->mIsBeingDragged:Z
 
@@ -2468,12 +2486,12 @@
 
     if-ne p3, v0, :cond_5
 
-    .line 643
+    .line 649
     invoke-virtual {p1, p2}, Landroid/view/MotionEvent;->getY(I)F
 
     move-result p1
 
-    .line 644
+    .line 650
     iget p2, p0, Lmiuix/springback/view/SpringBackLayout;->mInitialMotionY:F
 
     sub-float p2, p1, p2
@@ -2494,13 +2512,13 @@
 
     goto :goto_1
 
-    .line 646
+    .line 652
     :cond_5
     invoke-virtual {p1, p2}, Landroid/view/MotionEvent;->getX(I)F
 
     move-result p1
 
-    .line 647
+    .line 653
     iget p2, p0, Lmiuix/springback/view/SpringBackLayout;->mInitialMotionX:F
 
     sub-float p2, p1, p2
@@ -2519,16 +2537,16 @@
 
     mul-float/2addr p2, p1
 
-    .line 651
+    .line 657
     :goto_1
     invoke-virtual {p0, v1}, Lmiuix/springback/view/SpringBackLayout;->requestDisallowParentInterceptTouchEvent(Z)V
 
-    .line 652
+    .line 658
     invoke-direct {p0, p2, p3}, Lmiuix/springback/view/SpringBackLayout;->moveTarget(FI)V
 
     goto :goto_2
 
-    .line 697
+    .line 703
     :pswitch_5
     iget p2, p0, Lmiuix/springback/view/SpringBackLayout;->mActivePointerId:I
 
@@ -2542,32 +2560,32 @@
 
     const-string p2, "Got ACTION_UP event but don\'t have an active pointer id."
 
-    .line 699
+    .line 705
     invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v2
 
-    .line 702
+    .line 708
     :cond_6
     iget-boolean p1, p0, Lmiuix/springback/view/SpringBackLayout;->mIsBeingDragged:Z
 
     if-eqz p1, :cond_7
 
-    .line 703
+    .line 709
     iput-boolean v2, p0, Lmiuix/springback/view/SpringBackLayout;->mIsBeingDragged:Z
 
-    .line 704
+    .line 710
     invoke-direct {p0, p3}, Lmiuix/springback/view/SpringBackLayout;->springBack(I)V
 
     :cond_7
     const/4 p1, -0x1
 
-    .line 706
+    .line 712
     iput p1, p0, Lmiuix/springback/view/SpringBackLayout;->mActivePointerId:I
 
     return v2
 
-    .line 629
+    .line 635
     :pswitch_6
     invoke-virtual {p1, v2}, Landroid/view/MotionEvent;->getPointerId(I)I
 
@@ -2575,7 +2593,7 @@
 
     iput p1, p0, Lmiuix/springback/view/SpringBackLayout;->mActivePointerId:I
 
-    .line 630
+    .line 636
     invoke-direct {p0, p3}, Lmiuix/springback/view/SpringBackLayout;->checkScrollStart(I)V
 
     :cond_8
@@ -2610,13 +2628,13 @@
     :pswitch_0
     goto/16 :goto_2
 
-    .line 960
+    .line 966
     :pswitch_1
     invoke-direct {p0, p1}, Lmiuix/springback/view/SpringBackLayout;->onSecondaryPointerUp(Landroid/view/MotionEvent;)V
 
     goto/16 :goto_2
 
-    .line 923
+    .line 929
     :pswitch_2
     iget p2, p0, Lmiuix/springback/view/SpringBackLayout;->mActivePointerId:I
 
@@ -2630,7 +2648,7 @@
 
     const-string p2, "Got ACTION_POINTER_DOWN event but have an invalid active pointer id."
 
-    .line 925
+    .line 931
     invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v2
@@ -2638,17 +2656,17 @@
     :cond_0
     if-ne p3, v0, :cond_2
 
-    .line 930
+    .line 936
     invoke-virtual {p1, p2}, Landroid/view/MotionEvent;->getY(I)F
 
     move-result p2
 
-    .line 931
+    .line 937
     iget p3, p0, Lmiuix/springback/view/SpringBackLayout;->mInitialDownY:F
 
     sub-float/2addr p2, p3
 
-    .line 932
+    .line 938
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionIndex()I
 
     move-result p3
@@ -2659,12 +2677,12 @@
 
     const-string p2, "Got ACTION_POINTER_DOWN event but have an invalid action index."
 
-    .line 934
+    .line 940
     invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v2
 
-    .line 938
+    .line 944
     :cond_1
     invoke-virtual {p1, p3}, Landroid/view/MotionEvent;->getY(I)F
 
@@ -2672,28 +2690,28 @@
 
     sub-float/2addr v0, p2
 
-    .line 939
+    .line 945
     iput v0, p0, Lmiuix/springback/view/SpringBackLayout;->mInitialDownY:F
 
-    .line 940
+    .line 946
     iget p2, p0, Lmiuix/springback/view/SpringBackLayout;->mInitialDownY:F
 
     iput p2, p0, Lmiuix/springback/view/SpringBackLayout;->mInitialMotionY:F
 
     goto :goto_0
 
-    .line 942
+    .line 948
     :cond_2
     invoke-virtual {p1, p2}, Landroid/view/MotionEvent;->getX(I)F
 
     move-result p2
 
-    .line 943
+    .line 949
     iget p3, p0, Lmiuix/springback/view/SpringBackLayout;->mInitialDownX:F
 
     sub-float/2addr p2, p3
 
-    .line 944
+    .line 950
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionIndex()I
 
     move-result p3
@@ -2704,12 +2722,12 @@
 
     const-string p2, "Got ACTION_POINTER_DOWN event but have an invalid action index."
 
-    .line 946
+    .line 952
     invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v2
 
-    .line 951
+    .line 957
     :cond_3
     invoke-virtual {p1, p3}, Landroid/view/MotionEvent;->getX(I)F
 
@@ -2717,15 +2735,15 @@
 
     sub-float/2addr v0, p2
 
-    .line 952
+    .line 958
     iput v0, p0, Lmiuix/springback/view/SpringBackLayout;->mInitialDownX:F
 
-    .line 953
+    .line 959
     iget p2, p0, Lmiuix/springback/view/SpringBackLayout;->mInitialDownX:F
 
     iput p2, p0, Lmiuix/springback/view/SpringBackLayout;->mInitialMotionX:F
 
-    .line 955
+    .line 961
     :goto_0
     invoke-virtual {p1, p3}, Landroid/view/MotionEvent;->getPointerId(I)I
 
@@ -2735,7 +2753,7 @@
 
     goto/16 :goto_2
 
-    .line 894
+    .line 900
     :pswitch_3
     iget p2, p0, Lmiuix/springback/view/SpringBackLayout;->mActivePointerId:I
 
@@ -2749,12 +2767,12 @@
 
     const-string p2, "Got ACTION_MOVE event but have an invalid active pointer id."
 
-    .line 896
+    .line 902
     invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v2
 
-    .line 900
+    .line 906
     :cond_4
     iget-boolean v3, p0, Lmiuix/springback/view/SpringBackLayout;->mIsBeingDragged:Z
 
@@ -2762,12 +2780,12 @@
 
     if-ne p3, v0, :cond_5
 
-    .line 903
+    .line 909
     invoke-virtual {p1, p2}, Landroid/view/MotionEvent;->getY(I)F
 
     move-result p1
 
-    .line 904
+    .line 910
     iget p2, p0, Lmiuix/springback/view/SpringBackLayout;->mInitialMotionY:F
 
     sub-float/2addr p2, p1
@@ -2788,13 +2806,13 @@
 
     goto :goto_1
 
-    .line 906
+    .line 912
     :cond_5
     invoke-virtual {p1, p2}, Landroid/view/MotionEvent;->getX(I)F
 
     move-result p1
 
-    .line 907
+    .line 913
     iget p2, p0, Lmiuix/springback/view/SpringBackLayout;->mInitialMotionX:F
 
     sub-float/2addr p2, p1
@@ -2820,23 +2838,23 @@
 
     if-lez v0, :cond_6
 
-    .line 913
+    .line 919
     invoke-virtual {p0, v1}, Lmiuix/springback/view/SpringBackLayout;->requestDisallowParentInterceptTouchEvent(Z)V
 
     neg-float p1, p2
 
-    .line 914
+    .line 920
     invoke-direct {p0, p1, p3}, Lmiuix/springback/view/SpringBackLayout;->moveTarget(FI)V
 
     goto :goto_2
 
-    .line 916
+    .line 922
     :cond_6
     invoke-direct {p0, p1, p3}, Lmiuix/springback/view/SpringBackLayout;->moveTarget(FI)V
 
     return v2
 
-    .line 964
+    .line 970
     :pswitch_4
     iget p2, p0, Lmiuix/springback/view/SpringBackLayout;->mActivePointerId:I
 
@@ -2850,32 +2868,32 @@
 
     const-string p2, "Got ACTION_UP event but don\'t have an active pointer id."
 
-    .line 966
+    .line 972
     invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v2
 
-    .line 969
+    .line 975
     :cond_7
     iget-boolean p1, p0, Lmiuix/springback/view/SpringBackLayout;->mIsBeingDragged:Z
 
     if-eqz p1, :cond_8
 
-    .line 970
+    .line 976
     iput-boolean v2, p0, Lmiuix/springback/view/SpringBackLayout;->mIsBeingDragged:Z
 
-    .line 971
+    .line 977
     invoke-direct {p0, p3}, Lmiuix/springback/view/SpringBackLayout;->springBack(I)V
 
     :cond_8
     const/4 p1, -0x1
 
-    .line 973
+    .line 979
     iput p1, p0, Lmiuix/springback/view/SpringBackLayout;->mActivePointerId:I
 
     return v2
 
-    .line 890
+    .line 896
     :pswitch_5
     invoke-virtual {p1, v2}, Landroid/view/MotionEvent;->getPointerId(I)I
 
@@ -2883,7 +2901,7 @@
 
     iput p1, p0, Lmiuix/springback/view/SpringBackLayout;->mActivePointerId:I
 
-    .line 891
+    .line 897
     invoke-direct {p0, p3}, Lmiuix/springback/view/SpringBackLayout;->checkScrollStart(I)V
 
     :cond_9
@@ -2907,17 +2925,17 @@
 .method private onSecondaryPointerUp(Landroid/view/MotionEvent;)V
     .locals 3
 
-    .line 981
+    .line 987
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionIndex()I
 
     move-result v0
 
-    .line 982
+    .line 988
     invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->getPointerId(I)I
 
     move-result v1
 
-    .line 983
+    .line 989
     iget v2, p0, Lmiuix/springback/view/SpringBackLayout;->mActivePointerId:I
 
     if-ne v1, v2, :cond_1
@@ -2931,7 +2949,7 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 987
+    .line 993
     :goto_0
     invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->getPointerId(I)I
 
@@ -3231,14 +3249,14 @@
 .method private onVerticalTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 3
 
-    .line 615
+    .line 618
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v0
 
     const/4 v1, 0x2
 
-    .line 616
+    .line 619
     invoke-direct {p0, v1}, Lmiuix/springback/view/SpringBackLayout;->isTargetScrollToTop(I)Z
 
     move-result v2
@@ -3251,30 +3269,48 @@
 
     if-nez v2, :cond_0
 
-    .line 617
-    invoke-direct {p0, p1, v0, v1}, Lmiuix/springback/view/SpringBackLayout;->onScrollEvent(Landroid/view/MotionEvent;II)Z
-
-    move-result p1
+    const/4 p1, 0x0
 
     return p1
 
-    .line 618
+    .line 622
     :cond_0
+    invoke-direct {p0, v1}, Lmiuix/springback/view/SpringBackLayout;->isTargetScrollToTop(I)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
     invoke-direct {p0, v1}, Lmiuix/springback/view/SpringBackLayout;->isTargetScrollToBottom(I)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 619
+    .line 623
+    invoke-direct {p0, p1, v0, v1}, Lmiuix/springback/view/SpringBackLayout;->onScrollEvent(Landroid/view/MotionEvent;II)Z
+
+    move-result p1
+
+    return p1
+
+    .line 624
+    :cond_1
+    invoke-direct {p0, v1}, Lmiuix/springback/view/SpringBackLayout;->isTargetScrollToBottom(I)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    .line 625
     invoke-direct {p0, p1, v0, v1}, Lmiuix/springback/view/SpringBackLayout;->onScrollUpEvent(Landroid/view/MotionEvent;II)Z
 
     move-result p1
 
     return p1
 
-    .line 621
-    :cond_1
+    .line 627
+    :cond_2
     invoke-direct {p0, p1, v0, v1}, Lmiuix/springback/view/SpringBackLayout;->onScrollDownEvent(Landroid/view/MotionEvent;II)Z
 
     move-result p1
@@ -3285,7 +3321,7 @@
 .method private springBack(FIZ)V
     .locals 10
 
-    .line 869
+    .line 875
     iget-object v0, p0, Lmiuix/springback/view/SpringBackLayout;->mOnSpringListener:Lmiuix/springback/view/SpringBackLayout$OnSpringListener;
 
     if-eqz v0, :cond_0
@@ -3298,23 +3334,23 @@
 
     return-void
 
-    .line 872
+    .line 878
     :cond_0
     iget-object v0, p0, Lmiuix/springback/view/SpringBackLayout;->mSpringScroller:Lmiuix/springback/view/SpringScroller;
 
     invoke-virtual {v0}, Lmiuix/springback/view/SpringScroller;->forceStop()V
 
-    .line 873
+    .line 879
     invoke-virtual {p0}, Lmiuix/springback/view/SpringBackLayout;->getScrollX()I
 
     move-result v0
 
-    .line 874
+    .line 880
     invoke-virtual {p0}, Lmiuix/springback/view/SpringBackLayout;->getScrollY()I
 
     move-result v1
 
-    .line 875
+    .line 881
     iget-object v2, p0, Lmiuix/springback/view/SpringBackLayout;->mSpringScroller:Lmiuix/springback/view/SpringScroller;
 
     int-to-float v3, v0
@@ -3345,7 +3381,7 @@
 
     const/4 p1, 0x0
 
-    .line 877
+    .line 883
     invoke-direct {p0, p1}, Lmiuix/springback/view/SpringBackLayout;->dispatchScrollState(I)V
 
     goto :goto_0
@@ -3353,13 +3389,13 @@
     :cond_1
     const/4 p1, 0x2
 
-    .line 879
+    .line 885
     invoke-direct {p0, p1}, Lmiuix/springback/view/SpringBackLayout;->dispatchScrollState(I)V
 
     :goto_0
     if-eqz p3, :cond_2
 
-    .line 882
+    .line 888
     invoke-virtual {p0}, Lmiuix/springback/view/SpringBackLayout;->postInvalidateOnAnimation()V
 
     :cond_2
@@ -3373,7 +3409,7 @@
 
     const/4 v1, 0x1
 
-    .line 865
+    .line 871
     invoke-direct {p0, v0, p1, v1}, Lmiuix/springback/view/SpringBackLayout;->springBack(FIZ)V
 
     return-void
@@ -3481,7 +3517,7 @@
 .method public dispatchNestedFling(FFZ)Z
     .locals 1
 
-    .line 1404
+    .line 1410
     iget-object v0, p0, Lmiuix/springback/view/SpringBackLayout;->mNestedScrollingChildHelper:Landroidx/core/view/NestedScrollingChildHelper;
 
     invoke-virtual {v0, p1, p2, p3}, Landroidx/core/view/NestedScrollingChildHelper;->dispatchNestedFling(FFZ)Z
@@ -3494,7 +3530,7 @@
 .method public dispatchNestedPreFling(FF)Z
     .locals 1
 
-    .line 1399
+    .line 1405
     iget-object v0, p0, Lmiuix/springback/view/SpringBackLayout;->mNestedScrollingChildHelper:Landroidx/core/view/NestedScrollingChildHelper;
 
     invoke-virtual {v0, p1, p2}, Landroidx/core/view/NestedScrollingChildHelper;->dispatchNestedPreFling(FF)Z
@@ -3507,7 +3543,7 @@
 .method public dispatchNestedPreScroll(II[I[I)Z
     .locals 1
 
-    .line 1409
+    .line 1415
     iget-object v0, p0, Lmiuix/springback/view/SpringBackLayout;->mNestedScrollingChildHelper:Landroidx/core/view/NestedScrollingChildHelper;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Landroidx/core/view/NestedScrollingChildHelper;->dispatchNestedPreScroll(II[I[I)Z
@@ -3520,7 +3556,7 @@
 .method public dispatchNestedPreScroll(II[I[II)Z
     .locals 6
 
-    .line 1394
+    .line 1400
     iget-object v0, p0, Lmiuix/springback/view/SpringBackLayout;->mNestedScrollingChildHelper:Landroidx/core/view/NestedScrollingChildHelper;
 
     move v1, p1
@@ -3543,7 +3579,7 @@
 .method public dispatchNestedScroll(IIII[II[I)V
     .locals 8
 
-    .line 1363
+    .line 1369
     iget-object v0, p0, Lmiuix/springback/view/SpringBackLayout;->mNestedScrollingChildHelper:Landroidx/core/view/NestedScrollingChildHelper;
 
     move v1, p1
@@ -3643,7 +3679,7 @@
 .method public isNestedScrollingEnabled()Z
     .locals 1
 
-    .line 1310
+    .line 1316
     iget-object v0, p0, Lmiuix/springback/view/SpringBackLayout;->mNestedScrollingChildHelper:Landroidx/core/view/NestedScrollingChildHelper;
 
     invoke-virtual {v0}, Landroidx/core/view/NestedScrollingChildHelper;->isNestedScrollingEnabled()Z
@@ -4004,10 +4040,11 @@
 
     goto :goto_0
 
-    .line 239
+    .line 238
     :cond_2
     iget-object p2, p0, Lmiuix/springback/view/SpringBackLayout;->mTarget:Landroid/view/View;
 
+    .line 239
     invoke-virtual {p2}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v2
@@ -4017,10 +4054,10 @@
 
     goto :goto_1
 
-    .line 240
     :cond_3
     iget-object p1, p0, Lmiuix/springback/view/SpringBackLayout;->mTarget:Landroid/view/View;
 
+    .line 240
     invoke-virtual {p1}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v3
@@ -4035,10 +4072,10 @@
 .method public onNestedCurrentFling(FF)Z
     .locals 0
 
-    .line 1454
+    .line 1460
     iput p1, p0, Lmiuix/springback/view/SpringBackLayout;->mVelocityX:F
 
-    .line 1455
+    .line 1461
     iput p2, p0, Lmiuix/springback/view/SpringBackLayout;->mVelocityY:F
 
     const/4 p1, 0x1
@@ -4049,7 +4086,7 @@
 .method public onNestedFling(Landroid/view/View;FFZ)Z
     .locals 0
 
-    .line 1353
+    .line 1359
     invoke-virtual {p0, p2, p3, p4}, Lmiuix/springback/view/SpringBackLayout;->dispatchNestedFling(FFZ)Z
 
     move-result p1
@@ -4060,7 +4097,7 @@
 .method public onNestedPreFling(Landroid/view/View;FF)Z
     .locals 0
 
-    .line 1358
+    .line 1364
     invoke-virtual {p0, p2, p3}, Lmiuix/springback/view/SpringBackLayout;->dispatchNestedPreFling(FF)Z
 
     move-result p1
@@ -4071,35 +4108,35 @@
 .method public onNestedPreScroll(Landroid/view/View;II[II)V
     .locals 7
 
-    .line 1190
+    .line 1196
     iget-boolean p1, p0, Lmiuix/springback/view/SpringBackLayout;->mSpringBackEnable:Z
 
     if-eqz p1, :cond_1
 
-    .line 1191
+    .line 1197
     iget p1, p0, Lmiuix/springback/view/SpringBackLayout;->mNestedScrollAxes:I
 
     const/4 v0, 0x2
 
     if-ne p1, v0, :cond_0
 
-    .line 1192
+    .line 1198
     invoke-direct {p0, p3, p4, p5}, Lmiuix/springback/view/SpringBackLayout;->onNestedPreScroll(I[II)V
 
     goto :goto_0
 
-    .line 1194
+    .line 1200
     :cond_0
     invoke-direct {p0, p2, p4, p5}, Lmiuix/springback/view/SpringBackLayout;->onNestedPreScroll(I[II)V
 
-    .line 1197
+    .line 1203
     :cond_1
     :goto_0
     iget-object p1, p0, Lmiuix/springback/view/SpringBackLayout;->mParentScrollConsumed:[I
 
     const/4 v0, 0x0
 
-    .line 1198
+    .line 1204
     aget v1, p4, v0
 
     sub-int v2, p2, v1
@@ -4124,7 +4161,7 @@
 
     if-eqz p3, :cond_2
 
-    .line 1199
+    .line 1205
     aget p3, p4, v0
 
     aget p5, p1, v0
@@ -4133,7 +4170,7 @@
 
     aput p3, p4, v0
 
-    .line 1200
+    .line 1206
     aget p3, p4, p2
 
     aget p1, p1, p2
@@ -4149,7 +4186,7 @@
 .method public onNestedScroll(Landroid/view/View;IIII)V
     .locals 8
 
-    .line 1114
+    .line 1120
     iget-object v7, p0, Lmiuix/springback/view/SpringBackLayout;->mNestedScrollingV2ConsumedCompat:[I
 
     const/4 v6, 0x0
@@ -4174,7 +4211,7 @@
 .method public onNestedScroll(Landroid/view/View;IIIII)V
     .locals 8
 
-    .line 1108
+    .line 1114
     iget-object v7, p0, Lmiuix/springback/view/SpringBackLayout;->mNestedScrollingV2ConsumedCompat:[I
 
     move-object v0, p0
@@ -4201,7 +4238,7 @@
 
     move-object v8, p0
 
-    .line 1018
+    .line 1024
     iget v0, v8, Lmiuix/springback/view/SpringBackLayout;->mNestedScrollAxes:I
 
     const/4 v9, 0x0
@@ -4232,7 +4269,7 @@
     :goto_1
     if-eqz v12, :cond_2
 
-    .line 1020
+    .line 1026
     aget v0, p7, v11
 
     goto :goto_2
@@ -4243,7 +4280,7 @@
     :goto_2
     move v14, v0
 
-    .line 1021
+    .line 1027
     iget-object v5, v8, Lmiuix/springback/view/SpringBackLayout;->mParentOffsetInWindow:[I
 
     move-object v0, p0
@@ -4262,7 +4299,7 @@
 
     invoke-virtual/range {v0 .. v7}, Lmiuix/springback/view/SpringBackLayout;->dispatchNestedScroll(IIII[II[I)V
 
-    .line 1023
+    .line 1029
     iget-boolean v0, v8, Lmiuix/springback/view/SpringBackLayout;->mSpringBackEnable:Z
 
     if-nez v0, :cond_3
@@ -4272,7 +4309,7 @@
     :cond_3
     if-eqz v12, :cond_4
 
-    .line 1026
+    .line 1032
     aget v0, p7, v11
 
     goto :goto_3
@@ -4314,14 +4351,14 @@
 
     if-gez v9, :cond_e
 
-    .line 1033
+    .line 1039
     invoke-direct {p0, v1}, Lmiuix/springback/view/SpringBackLayout;->isTargetScrollToTop(I)Z
 
     move-result v4
 
     if-eqz v4, :cond_e
 
-    .line 1034
+    .line 1040
     invoke-direct {p0}, Lmiuix/springback/view/SpringBackLayout;->supportTopSpringBackMode()Z
 
     move-result v4
@@ -4330,12 +4367,12 @@
 
     if-eqz p6, :cond_d
 
-    .line 1036
+    .line 1042
     invoke-direct {p0, v1}, Lmiuix/springback/view/SpringBackLayout;->obtainMaxSpringBackDistance(I)F
 
     move-result v4
 
-    .line 1037
+    .line 1043
     iget v5, v8, Lmiuix/springback/view/SpringBackLayout;->mVelocityY:F
 
     cmpl-float v5, v5, v3
@@ -4350,7 +4387,7 @@
 
     goto :goto_7
 
-    .line 1044
+    .line 1050
     :cond_8
     iget v5, v8, Lmiuix/springback/view/SpringBackLayout;->mTotalScrollTopUnconsumed:F
 
@@ -4360,18 +4397,18 @@
 
     return-void
 
-    .line 1047
+    .line 1053
     :cond_9
     iget v3, v8, Lmiuix/springback/view/SpringBackLayout;->mTotalFlingUnconsumed:F
 
     sub-float/2addr v4, v3
 
-    .line 1048
+    .line 1054
     iget v3, v8, Lmiuix/springback/view/SpringBackLayout;->consumeNestFlingCounter:I
 
     if-ge v3, v2, :cond_15
 
-    .line 1049
+    .line 1055
     invoke-static {v9}, Ljava/lang/Math;->abs(I)I
 
     move-result v2
@@ -4382,14 +4419,14 @@
 
     if-gtz v2, :cond_a
 
-    .line 1050
+    .line 1056
     iget v0, v8, Lmiuix/springback/view/SpringBackLayout;->mTotalFlingUnconsumed:F
 
     add-float/2addr v0, v4
 
     iput v0, v8, Lmiuix/springback/view/SpringBackLayout;->mTotalFlingUnconsumed:F
 
-    .line 1051
+    .line 1057
     aget v0, p7, v11
 
     int-to-float v0, v0
@@ -4402,7 +4439,7 @@
 
     goto :goto_6
 
-    .line 1053
+    .line 1059
     :cond_a
     iget v2, v8, Lmiuix/springback/view/SpringBackLayout;->mTotalFlingUnconsumed:F
 
@@ -4416,18 +4453,18 @@
 
     iput v2, v8, Lmiuix/springback/view/SpringBackLayout;->mTotalFlingUnconsumed:F
 
-    .line 1054
+    .line 1060
     aget v2, p7, v11
 
     add-int/2addr v2, v0
 
     aput v2, p7, v11
 
-    .line 1056
+    .line 1062
     :goto_6
     invoke-direct {p0, v10}, Lmiuix/springback/view/SpringBackLayout;->dispatchScrollState(I)V
 
-    .line 1057
+    .line 1063
     iget v0, v8, Lmiuix/springback/view/SpringBackLayout;->mTotalFlingUnconsumed:F
 
     invoke-direct {p0, v0, v1}, Lmiuix/springback/view/SpringBackLayout;->obtainSpringBackDistance(FI)F
@@ -4436,7 +4473,7 @@
 
     invoke-direct {p0, v0, v1}, Lmiuix/springback/view/SpringBackLayout;->moveTarget(FI)V
 
-    .line 1058
+    .line 1064
     iget v0, v8, Lmiuix/springback/view/SpringBackLayout;->consumeNestFlingCounter:I
 
     add-int/2addr v0, v11
@@ -4445,7 +4482,7 @@
 
     goto/16 :goto_a
 
-    .line 1038
+    .line 1044
     :cond_b
     :goto_7
     iput-boolean v11, v8, Lmiuix/springback/view/SpringBackLayout;->mScrollByFling:Z
@@ -4460,18 +4497,18 @@
 
     if-gtz v0, :cond_c
 
-    .line 1040
+    .line 1046
     iget-object v0, v8, Lmiuix/springback/view/SpringBackLayout;->mSpringScroller:Lmiuix/springback/view/SpringScroller;
 
     invoke-virtual {v0, v9}, Lmiuix/springback/view/SpringScroller;->setFirstStep(I)V
 
-    .line 1042
+    .line 1048
     :cond_c
     invoke-direct {p0, v10}, Lmiuix/springback/view/SpringBackLayout;->dispatchScrollState(I)V
 
     goto/16 :goto_a
 
-    .line 1062
+    .line 1068
     :cond_d
     iget-object v2, v8, Lmiuix/springback/view/SpringBackLayout;->mSpringScroller:Lmiuix/springback/view/SpringScroller;
 
@@ -4481,7 +4518,7 @@
 
     if-eqz v2, :cond_15
 
-    .line 1063
+    .line 1069
     iget v2, v8, Lmiuix/springback/view/SpringBackLayout;->mTotalScrollTopUnconsumed:F
 
     invoke-static {v9}, Ljava/lang/Math;->abs(I)I
@@ -4494,10 +4531,10 @@
 
     iput v2, v8, Lmiuix/springback/view/SpringBackLayout;->mTotalScrollTopUnconsumed:F
 
-    .line 1064
+    .line 1070
     invoke-direct {p0, v11}, Lmiuix/springback/view/SpringBackLayout;->dispatchScrollState(I)V
 
-    .line 1065
+    .line 1071
     iget v2, v8, Lmiuix/springback/view/SpringBackLayout;->mTotalScrollTopUnconsumed:F
 
     invoke-direct {p0, v2, v1}, Lmiuix/springback/view/SpringBackLayout;->obtainSpringBackDistance(FI)F
@@ -4506,7 +4543,7 @@
 
     invoke-direct {p0, v2, v1}, Lmiuix/springback/view/SpringBackLayout;->moveTarget(FI)V
 
-    .line 1066
+    .line 1072
     aget v1, p7, v11
 
     add-int/2addr v1, v0
@@ -4518,14 +4555,14 @@
     :cond_e
     if-lez v9, :cond_15
 
-    .line 1069
+    .line 1075
     invoke-direct {p0, v1}, Lmiuix/springback/view/SpringBackLayout;->isTargetScrollToBottom(I)Z
 
     move-result v4
 
     if-eqz v4, :cond_15
 
-    .line 1070
+    .line 1076
     invoke-direct {p0}, Lmiuix/springback/view/SpringBackLayout;->supportBottomSpringBackMode()Z
 
     move-result v4
@@ -4534,12 +4571,12 @@
 
     if-eqz p6, :cond_14
 
-    .line 1072
+    .line 1078
     invoke-direct {p0, v1}, Lmiuix/springback/view/SpringBackLayout;->obtainMaxSpringBackDistance(I)F
 
     move-result v4
 
-    .line 1073
+    .line 1079
     iget v5, v8, Lmiuix/springback/view/SpringBackLayout;->mVelocityY:F
 
     cmpl-float v5, v5, v3
@@ -4554,7 +4591,7 @@
 
     goto :goto_9
 
-    .line 1080
+    .line 1086
     :cond_f
     iget v5, v8, Lmiuix/springback/view/SpringBackLayout;->mTotalScrollBottomUnconsumed:F
 
@@ -4564,18 +4601,18 @@
 
     return-void
 
-    .line 1083
+    .line 1089
     :cond_10
     iget v3, v8, Lmiuix/springback/view/SpringBackLayout;->mTotalFlingUnconsumed:F
 
     sub-float/2addr v4, v3
 
-    .line 1084
+    .line 1090
     iget v3, v8, Lmiuix/springback/view/SpringBackLayout;->consumeNestFlingCounter:I
 
     if-ge v3, v2, :cond_15
 
-    .line 1085
+    .line 1091
     invoke-static {v9}, Ljava/lang/Math;->abs(I)I
 
     move-result v2
@@ -4586,14 +4623,14 @@
 
     if-gtz v2, :cond_11
 
-    .line 1086
+    .line 1092
     iget v0, v8, Lmiuix/springback/view/SpringBackLayout;->mTotalFlingUnconsumed:F
 
     add-float/2addr v0, v4
 
     iput v0, v8, Lmiuix/springback/view/SpringBackLayout;->mTotalFlingUnconsumed:F
 
-    .line 1087
+    .line 1093
     aget v0, p7, v11
 
     int-to-float v0, v0
@@ -4606,7 +4643,7 @@
 
     goto :goto_8
 
-    .line 1089
+    .line 1095
     :cond_11
     iget v2, v8, Lmiuix/springback/view/SpringBackLayout;->mTotalFlingUnconsumed:F
 
@@ -4620,18 +4657,18 @@
 
     iput v2, v8, Lmiuix/springback/view/SpringBackLayout;->mTotalFlingUnconsumed:F
 
-    .line 1090
+    .line 1096
     aget v2, p7, v11
 
     add-int/2addr v2, v0
 
     aput v2, p7, v11
 
-    .line 1092
+    .line 1098
     :goto_8
     invoke-direct {p0, v10}, Lmiuix/springback/view/SpringBackLayout;->dispatchScrollState(I)V
 
-    .line 1093
+    .line 1099
     iget v0, v8, Lmiuix/springback/view/SpringBackLayout;->mTotalFlingUnconsumed:F
 
     invoke-direct {p0, v0, v1}, Lmiuix/springback/view/SpringBackLayout;->obtainSpringBackDistance(FI)F
@@ -4642,7 +4679,7 @@
 
     invoke-direct {p0, v0, v1}, Lmiuix/springback/view/SpringBackLayout;->moveTarget(FI)V
 
-    .line 1094
+    .line 1100
     iget v0, v8, Lmiuix/springback/view/SpringBackLayout;->consumeNestFlingCounter:I
 
     add-int/2addr v0, v11
@@ -4651,7 +4688,7 @@
 
     goto :goto_a
 
-    .line 1074
+    .line 1080
     :cond_12
     :goto_9
     iput-boolean v11, v8, Lmiuix/springback/view/SpringBackLayout;->mScrollByFling:Z
@@ -4664,18 +4701,18 @@
 
     if-gtz v0, :cond_13
 
-    .line 1076
+    .line 1082
     iget-object v0, v8, Lmiuix/springback/view/SpringBackLayout;->mSpringScroller:Lmiuix/springback/view/SpringScroller;
 
     invoke-virtual {v0, v9}, Lmiuix/springback/view/SpringScroller;->setFirstStep(I)V
 
-    .line 1078
+    .line 1084
     :cond_13
     invoke-direct {p0, v10}, Lmiuix/springback/view/SpringBackLayout;->dispatchScrollState(I)V
 
     goto :goto_a
 
-    .line 1097
+    .line 1103
     :cond_14
     iget-object v2, v8, Lmiuix/springback/view/SpringBackLayout;->mSpringScroller:Lmiuix/springback/view/SpringScroller;
 
@@ -4685,7 +4722,7 @@
 
     if-eqz v2, :cond_15
 
-    .line 1098
+    .line 1104
     iget v2, v8, Lmiuix/springback/view/SpringBackLayout;->mTotalScrollBottomUnconsumed:F
 
     invoke-static {v9}, Ljava/lang/Math;->abs(I)I
@@ -4698,10 +4735,10 @@
 
     iput v2, v8, Lmiuix/springback/view/SpringBackLayout;->mTotalScrollBottomUnconsumed:F
 
-    .line 1099
+    .line 1105
     invoke-direct {p0, v11}, Lmiuix/springback/view/SpringBackLayout;->dispatchScrollState(I)V
 
-    .line 1100
+    .line 1106
     iget v2, v8, Lmiuix/springback/view/SpringBackLayout;->mTotalScrollBottomUnconsumed:F
 
     invoke-direct {p0, v2, v1}, Lmiuix/springback/view/SpringBackLayout;->obtainSpringBackDistance(FI)F
@@ -4712,7 +4749,7 @@
 
     invoke-direct {p0, v2, v1}, Lmiuix/springback/view/SpringBackLayout;->moveTarget(FI)V
 
-    .line 1101
+    .line 1107
     aget v1, p7, v11
 
     add-int/2addr v1, v0
@@ -4727,14 +4764,14 @@
 .method public onNestedScrollAccepted(Landroid/view/View;Landroid/view/View;I)V
     .locals 1
 
-    .line 1184
+    .line 1190
     iget-object v0, p0, Lmiuix/springback/view/SpringBackLayout;->mNestedScrollingParentHelper:Landroidx/core/view/NestedScrollingParentHelper;
 
     invoke-virtual {v0, p1, p2, p3}, Landroidx/core/view/NestedScrollingParentHelper;->onNestedScrollAccepted(Landroid/view/View;Landroid/view/View;I)V
 
     and-int/lit8 p1, p3, 0x2
 
-    .line 1185
+    .line 1191
     invoke-virtual {p0, p1}, Lmiuix/springback/view/SpringBackLayout;->startNestedScroll(I)Z
 
     return-void
@@ -4743,12 +4780,12 @@
 .method public onNestedScrollAccepted(Landroid/view/View;Landroid/view/View;II)V
     .locals 5
 
-    .line 1149
+    .line 1155
     iget-boolean v0, p0, Lmiuix/springback/view/SpringBackLayout;->mSpringBackEnable:Z
 
     if-eqz v0, :cond_7
 
-    .line 1150
+    .line 1156
     iget v0, p0, Lmiuix/springback/view/SpringBackLayout;->mNestedScrollAxes:I
 
     const/4 v1, 0x2
@@ -4777,7 +4814,7 @@
     :goto_1
     if-eqz v0, :cond_2
 
-    .line 1152
+    .line 1158
     invoke-virtual {p0}, Lmiuix/springback/view/SpringBackLayout;->getScrollY()I
 
     move-result v0
@@ -4800,12 +4837,12 @@
 
     if-nez p4, :cond_3
 
-    .line 1155
+    .line 1161
     iput v4, p0, Lmiuix/springback/view/SpringBackLayout;->mTotalFlingUnconsumed:F
 
     goto :goto_3
 
-    .line 1157
+    .line 1163
     :cond_3
     invoke-static {v0}, Ljava/lang/Math;->abs(F)F
 
@@ -4825,11 +4862,11 @@
 
     iput p4, p0, Lmiuix/springback/view/SpringBackLayout;->mTotalFlingUnconsumed:F
 
-    .line 1159
+    .line 1165
     :goto_3
     iput-boolean v3, p0, Lmiuix/springback/view/SpringBackLayout;->mNestedFlingInProgress:Z
 
-    .line 1160
+    .line 1166
     iput v2, p0, Lmiuix/springback/view/SpringBackLayout;->consumeNestFlingCounter:I
 
     goto :goto_5
@@ -4839,10 +4876,10 @@
 
     if-nez p4, :cond_5
 
-    .line 1163
+    .line 1169
     iput v4, p0, Lmiuix/springback/view/SpringBackLayout;->mTotalScrollTopUnconsumed:F
 
-    .line 1164
+    .line 1170
     iput v4, p0, Lmiuix/springback/view/SpringBackLayout;->mTotalScrollBottomUnconsumed:F
 
     goto :goto_4
@@ -4852,7 +4889,7 @@
 
     if-gez p4, :cond_6
 
-    .line 1166
+    .line 1172
     invoke-static {v0}, Ljava/lang/Math;->abs(F)F
 
     move-result p4
@@ -4871,16 +4908,16 @@
 
     iput p4, p0, Lmiuix/springback/view/SpringBackLayout;->mTotalScrollTopUnconsumed:F
 
-    .line 1167
+    .line 1173
     iput v4, p0, Lmiuix/springback/view/SpringBackLayout;->mTotalScrollBottomUnconsumed:F
 
     goto :goto_4
 
-    .line 1169
+    .line 1175
     :cond_6
     iput v4, p0, Lmiuix/springback/view/SpringBackLayout;->mTotalScrollTopUnconsumed:F
 
-    .line 1170
+    .line 1176
     invoke-static {v0}, Ljava/lang/Math;->abs(F)F
 
     move-result p4
@@ -4899,26 +4936,26 @@
 
     iput p4, p0, Lmiuix/springback/view/SpringBackLayout;->mTotalScrollBottomUnconsumed:F
 
-    .line 1172
+    .line 1178
     :goto_4
     iput-boolean v3, p0, Lmiuix/springback/view/SpringBackLayout;->mNestedScrollInProgress:Z
 
-    .line 1174
+    .line 1180
     :goto_5
     iput v4, p0, Lmiuix/springback/view/SpringBackLayout;->mVelocityY:F
 
-    .line 1175
+    .line 1181
     iput v4, p0, Lmiuix/springback/view/SpringBackLayout;->mVelocityX:F
 
-    .line 1176
+    .line 1182
     iput-boolean v2, p0, Lmiuix/springback/view/SpringBackLayout;->mScrollByFling:Z
 
-    .line 1177
+    .line 1183
     iget-object p4, p0, Lmiuix/springback/view/SpringBackLayout;->mSpringScroller:Lmiuix/springback/view/SpringScroller;
 
     invoke-virtual {p4}, Lmiuix/springback/view/SpringScroller;->forceStop()V
 
-    .line 1179
+    .line 1185
     :cond_7
     invoke-virtual {p0, p1, p2, p3}, Lmiuix/springback/view/SpringBackLayout;->onNestedScrollAccepted(Landroid/view/View;Landroid/view/View;I)V
 
@@ -4967,7 +5004,7 @@
 .method public onStartNestedScroll(Landroid/view/View;Landroid/view/View;I)Z
     .locals 0
 
-    .line 1144
+    .line 1150
     invoke-virtual {p0}, Lmiuix/springback/view/SpringBackLayout;->isEnabled()Z
 
     move-result p1
@@ -4978,17 +5015,17 @@
 .method public onStartNestedScroll(Landroid/view/View;Landroid/view/View;II)Z
     .locals 4
 
-    .line 1120
+    .line 1126
     iget-boolean p2, p0, Lmiuix/springback/view/SpringBackLayout;->mSpringBackEnable:Z
 
     const/4 v0, 0x1
 
     if-eqz p2, :cond_5
 
-    .line 1121
+    .line 1127
     iput p3, p0, Lmiuix/springback/view/SpringBackLayout;->mNestedScrollAxes:I
 
-    .line 1122
+    .line 1128
     iget p2, p0, Lmiuix/springback/view/SpringBackLayout;->mNestedScrollAxes:I
 
     const/4 v1, 0x2
@@ -5012,7 +5049,7 @@
     :cond_1
     move v1, v0
 
-    .line 1124
+    .line 1130
     :goto_1
     iget v3, p0, Lmiuix/springback/view/SpringBackLayout;->mOriginScrollOrientation:I
 
@@ -5022,7 +5059,7 @@
 
     return v2
 
-    .line 1127
+    .line 1133
     :cond_2
     invoke-virtual {p0, p1, p1, p3}, Lmiuix/springback/view/SpringBackLayout;->onStartNestedScroll(Landroid/view/View;Landroid/view/View;I)Z
 
@@ -5035,7 +5072,7 @@
     :cond_3
     if-eqz p2, :cond_4
 
-    .line 1130
+    .line 1136
     invoke-virtual {p0}, Lmiuix/springback/view/SpringBackLayout;->getScrollY()I
 
     move-result p1
@@ -5058,7 +5095,7 @@
 
     if-eqz p1, :cond_5
 
-    .line 1131
+    .line 1137
     iget-object p1, p0, Lmiuix/springback/view/SpringBackLayout;->mTarget:Landroid/view/View;
 
     instance-of p1, p1, Landroidx/core/widget/NestedScrollView;
@@ -5067,7 +5104,7 @@
 
     return v2
 
-    .line 1135
+    .line 1141
     :cond_5
     iget-object p1, p0, Lmiuix/springback/view/SpringBackLayout;->mNestedScrollingChildHelper:Landroidx/core/view/NestedScrollingChildHelper;
 
@@ -5086,22 +5123,22 @@
 .method public onStopNestedScroll(Landroid/view/View;I)V
     .locals 3
 
-    .line 1315
+    .line 1321
     iget-object v0, p0, Lmiuix/springback/view/SpringBackLayout;->mNestedScrollingParentHelper:Landroidx/core/view/NestedScrollingParentHelper;
 
     invoke-virtual {v0, p1, p2}, Landroidx/core/view/NestedScrollingParentHelper;->onStopNestedScroll(Landroid/view/View;I)V
 
-    .line 1316
+    .line 1322
     invoke-virtual {p0, p2}, Lmiuix/springback/view/SpringBackLayout;->stopNestedScroll(I)V
 
-    .line 1317
+    .line 1323
     iget-boolean p1, p0, Lmiuix/springback/view/SpringBackLayout;->mSpringBackEnable:Z
 
     if-nez p1, :cond_0
 
     return-void
 
-    .line 1320
+    .line 1326
     :cond_0
     iget p1, p0, Lmiuix/springback/view/SpringBackLayout;->mNestedScrollAxes:I
 
@@ -5125,18 +5162,18 @@
 
     move p2, v1
 
-    .line 1322
+    .line 1328
     :cond_2
     iget-boolean v2, p0, Lmiuix/springback/view/SpringBackLayout;->mNestedScrollInProgress:Z
 
     if-eqz v2, :cond_5
 
-    .line 1323
+    .line 1329
     iput-boolean v0, p0, Lmiuix/springback/view/SpringBackLayout;->mNestedScrollInProgress:Z
 
     if-eqz p1, :cond_3
 
-    .line 1324
+    .line 1330
     invoke-virtual {p0}, Lmiuix/springback/view/SpringBackLayout;->getScrollY()I
 
     move-result p1
@@ -5151,7 +5188,7 @@
     :goto_1
     int-to-float p1, p1
 
-    .line 1325
+    .line 1331
     iget-boolean v0, p0, Lmiuix/springback/view/SpringBackLayout;->mNestedFlingInProgress:Z
 
     const/4 v2, 0x0
@@ -5162,7 +5199,7 @@
 
     if-eqz v0, :cond_4
 
-    .line 1326
+    .line 1332
     invoke-direct {p0, p2}, Lmiuix/springback/view/SpringBackLayout;->springBack(I)V
 
     goto :goto_3
@@ -5172,26 +5209,26 @@
 
     if-eqz p1, :cond_9
 
-    .line 1328
+    .line 1334
     invoke-direct {p0, v1}, Lmiuix/springback/view/SpringBackLayout;->dispatchScrollState(I)V
 
     goto :goto_3
 
-    .line 1330
+    .line 1336
     :cond_5
     iget-boolean p1, p0, Lmiuix/springback/view/SpringBackLayout;->mNestedFlingInProgress:Z
 
     if-eqz p1, :cond_9
 
-    .line 1331
+    .line 1337
     iput-boolean v0, p0, Lmiuix/springback/view/SpringBackLayout;->mNestedFlingInProgress:Z
 
-    .line 1332
+    .line 1338
     iget-boolean p1, p0, Lmiuix/springback/view/SpringBackLayout;->mScrollByFling:Z
 
     if-eqz p1, :cond_8
 
-    .line 1333
+    .line 1339
     iget-object p1, p0, Lmiuix/springback/view/SpringBackLayout;->mSpringScroller:Lmiuix/springback/view/SpringScroller;
 
     invoke-virtual {p1}, Lmiuix/springback/view/SpringScroller;->isFinished()Z
@@ -5202,7 +5239,7 @@
 
     if-ne p2, v1, :cond_6
 
-    .line 1334
+    .line 1340
     iget p1, p0, Lmiuix/springback/view/SpringBackLayout;->mVelocityY:F
 
     goto :goto_2
@@ -5210,17 +5247,17 @@
     :cond_6
     iget p1, p0, Lmiuix/springback/view/SpringBackLayout;->mVelocityX:F
 
-    .line 1335
+    .line 1341
     :goto_2
     invoke-direct {p0, p1, p2, v0}, Lmiuix/springback/view/SpringBackLayout;->springBack(FIZ)V
 
-    .line 1338
+    .line 1344
     :cond_7
     invoke-virtual {p0}, Lmiuix/springback/view/SpringBackLayout;->postInvalidateOnAnimation()V
 
     goto :goto_3
 
-    .line 1340
+    .line 1346
     :cond_8
     invoke-direct {p0, p2}, Lmiuix/springback/view/SpringBackLayout;->springBack(I)V
 
@@ -5436,7 +5473,7 @@
 .method public setNestedScrollingEnabled(Z)V
     .locals 1
 
-    .line 1305
+    .line 1311
     iget-object v0, p0, Lmiuix/springback/view/SpringBackLayout;->mNestedScrollingChildHelper:Landroidx/core/view/NestedScrollingChildHelper;
 
     invoke-virtual {v0, p1}, Landroidx/core/view/NestedScrollingChildHelper;->setNestedScrollingEnabled(Z)V
@@ -5447,7 +5484,7 @@
 .method public setOnSpringListener(Lmiuix/springback/view/SpringBackLayout$OnSpringListener;)V
     .locals 0
 
-    .line 1445
+    .line 1451
     iput-object p1, p0, Lmiuix/springback/view/SpringBackLayout;->mOnSpringListener:Lmiuix/springback/view/SpringBackLayout$OnSpringListener;
 
     return-void
@@ -5525,7 +5562,7 @@
 .method public startNestedScroll(I)Z
     .locals 1
 
-    .line 1374
+    .line 1380
     iget-object v0, p0, Lmiuix/springback/view/SpringBackLayout;->mNestedScrollingChildHelper:Landroidx/core/view/NestedScrollingChildHelper;
 
     invoke-virtual {v0, p1}, Landroidx/core/view/NestedScrollingChildHelper;->startNestedScroll(I)Z
@@ -5538,7 +5575,7 @@
 .method public stopNestedScroll()V
     .locals 1
 
-    .line 1348
+    .line 1354
     iget-object v0, p0, Lmiuix/springback/view/SpringBackLayout;->mNestedScrollingChildHelper:Landroidx/core/view/NestedScrollingChildHelper;
 
     invoke-virtual {v0}, Landroidx/core/view/NestedScrollingChildHelper;->stopNestedScroll()V
@@ -5549,7 +5586,7 @@
 .method public stopNestedScroll(I)V
     .locals 1
 
-    .line 1379
+    .line 1385
     iget-object v0, p0, Lmiuix/springback/view/SpringBackLayout;->mNestedScrollingChildHelper:Landroidx/core/view/NestedScrollingChildHelper;
 
     invoke-virtual {v0, p1}, Landroidx/core/view/NestedScrollingChildHelper;->stopNestedScroll(I)V

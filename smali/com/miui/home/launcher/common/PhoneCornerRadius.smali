@@ -23,7 +23,7 @@
     .line 33
     sget-object v0, Lmiui/os/Build;->DEVICE:Ljava/lang/String;
 
-    const-string/jumbo v1, "vince"
+    const-string v1, "vince"
 
     invoke-static {v0, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 

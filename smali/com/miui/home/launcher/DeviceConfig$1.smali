@@ -26,17 +26,17 @@
 .method constructor <init>()V
     .locals 1
 
-    .line 236
+    .line 232
     invoke-direct {p0}, Ljava/util/HashSet;-><init>()V
 
     const-string v0, "mx_telcel"
 
-    .line 237
+    .line 233
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/DeviceConfig$1;->add(Ljava/lang/Object;)Z
 
     const-string v0, "lm_cr"
 
-    .line 238
+    .line 234
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/DeviceConfig$1;->add(Ljava/lang/Object;)Z
 
     return-void

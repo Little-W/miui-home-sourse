@@ -1,14 +1,11 @@
 .class Lcom/miui/home/launcher/CellLayout$1;
-.super Ljava/lang/Object;
+.super Landroid/animation/AnimatorListenerAdapter;
 .source "CellLayout.java"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/CellLayout;->onLayout(ZIIII)V
+    value = Lcom/miui/home/launcher/CellLayout;->setAndDoEditModeAnimation(Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,96 +17,39 @@
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/launcher/CellLayout;
 
-.field final synthetic val$cellXY:[I
-
-.field final synthetic val$childLeft:I
-
-.field final synthetic val$childTop:I
-
-.field final synthetic val$lp:Lcom/miui/home/launcher/CellLayout$LayoutParams;
-
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/CellLayout;[IILcom/miui/home/launcher/CellLayout$LayoutParams;I)V
+.method constructor <init>(Lcom/miui/home/launcher/CellLayout;)V
     .locals 0
 
-    .line 675
+    .line 368
     iput-object p1, p0, Lcom/miui/home/launcher/CellLayout$1;->this$0:Lcom/miui/home/launcher/CellLayout;
 
-    iput-object p2, p0, Lcom/miui/home/launcher/CellLayout$1;->val$cellXY:[I
-
-    iput p3, p0, Lcom/miui/home/launcher/CellLayout$1;->val$childLeft:I
-
-    iput-object p4, p0, Lcom/miui/home/launcher/CellLayout$1;->val$lp:Lcom/miui/home/launcher/CellLayout$LayoutParams;
-
-    iput p5, p0, Lcom/miui/home/launcher/CellLayout$1;->val$childTop:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 8
+.method public onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 0
 
-    .line 678
-    iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$1;->this$0:Lcom/miui/home/launcher/CellLayout;
+    .line 376
+    iget-object p1, p0, Lcom/miui/home/launcher/CellLayout$1;->this$0:Lcom/miui/home/launcher/CellLayout;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/CellLayout;->access$000(Lcom/miui/home/launcher/CellLayout;)Landroid/app/WallpaperManager;
+    invoke-static {p1}, Lcom/miui/home/launcher/CellLayout;->access$000(Lcom/miui/home/launcher/CellLayout;)V
 
-    move-result-object v1
+    return-void
+.end method
 
-    iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$1;->this$0:Lcom/miui/home/launcher/CellLayout;
+.method public onAnimationStart(Landroid/animation/Animator;)V
+    .locals 0
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/CellLayout;->getWindowToken()Landroid/os/IBinder;
+    const/4 p1, 0x0
 
-    move-result-object v2
-
-    const-string v3, "android.home.drop"
-
-    iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$1;->val$cellXY:[I
-
-    const/4 v4, 0x0
-
-    aget v0, v0, v4
-
-    iget v4, p0, Lcom/miui/home/launcher/CellLayout$1;->val$childLeft:I
-
-    add-int/2addr v0, v4
-
-    iget-object v4, p0, Lcom/miui/home/launcher/CellLayout$1;->val$lp:Lcom/miui/home/launcher/CellLayout$LayoutParams;
-
-    iget v4, v4, Lcom/miui/home/launcher/CellLayout$LayoutParams;->width:I
-
-    div-int/lit8 v4, v4, 0x2
-
-    add-int/2addr v4, v0
-
-    iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$1;->val$cellXY:[I
-
-    const/4 v5, 0x1
-
-    aget v0, v0, v5
-
-    iget v5, p0, Lcom/miui/home/launcher/CellLayout$1;->val$childTop:I
-
-    add-int/2addr v0, v5
-
-    iget-object v5, p0, Lcom/miui/home/launcher/CellLayout$1;->val$lp:Lcom/miui/home/launcher/CellLayout$LayoutParams;
-
-    iget v5, v5, Lcom/miui/home/launcher/CellLayout$LayoutParams;->height:I
-
-    div-int/lit8 v5, v5, 0x2
-
-    add-int/2addr v5, v0
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    invoke-virtual/range {v1 .. v7}, Landroid/app/WallpaperManager;->sendWallpaperCommand(Landroid/os/IBinder;Ljava/lang/String;IIILandroid/os/Bundle;)V
+    .line 371
+    invoke-static {p1}, Lcom/miui/home/launcher/AutoLayoutAnimation;->setDisableAutoLayoutAnimation(Z)V
 
     return-void
 .end method

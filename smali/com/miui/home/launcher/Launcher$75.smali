@@ -1,14 +1,11 @@
 .class Lcom/miui/home/launcher/Launcher$75;
-.super Ljava/lang/Object;
+.super Lcom/miui/home/launcher/common/ResultRunnable;
 .source "Launcher.java"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/miui/home/launcher/Launcher;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/miui/home/launcher/Launcher;->getShortcutInfo(Landroid/content/ComponentName;I[Ljava/lang/Integer;)Ljava/util/List;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -16,19 +13,40 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/miui/home/launcher/common/ResultRunnable<",
+        "Ljava/util/ArrayList<",
+        "Lcom/miui/home/launcher/ShortcutInfo;",
+        ">;>;"
+    }
+.end annotation
+
 
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/launcher/Launcher;
 
+.field final synthetic val$cn:Landroid/content/ComponentName;
+
+.field final synthetic val$itemTypeList:Ljava/util/ArrayList;
+
+.field final synthetic val$userId:I
+
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
+.method constructor <init>(Lcom/miui/home/launcher/Launcher;ILjava/util/ArrayList;Landroid/content/ComponentName;)V
     .locals 0
 
-    .line 8282
+    .line 7828
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$75;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lcom/miui/home/launcher/Launcher$75;->val$userId:I
+
+    iput-object p3, p0, Lcom/miui/home/launcher/Launcher$75;->val$itemTypeList:Ljava/util/ArrayList;
+
+    iput-object p4, p0, Lcom/miui/home/launcher/Launcher$75;->val$cn:Landroid/content/ComponentName;
+
+    invoke-direct {p0}, Lcom/miui/home/launcher/common/ResultRunnable;-><init>()V
 
     return-void
 .end method
@@ -38,229 +56,136 @@
 .method public run()V
     .locals 5
 
-    .line 8285
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->usingFsGesture()Z
+    .line 7831
+    new-instance v0, Ljava/util/ArrayList;
 
-    move-result v0
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 8286
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->showBackGestureInEditingMode()Z
+    .line 7832
+    iget-object v1, p0, Lcom/miui/home/launcher/Launcher$75;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    move-result v1
+    invoke-static {v1}, Lcom/miui/home/launcher/Launcher;->access$3800(Lcom/miui/home/launcher/Launcher;)Ljava/util/HashSet;
 
-    const-string v2, "Launcher"
+    move-result-object v1
 
-    .line 8287
-    new-instance v3, Ljava/lang/StringBuilder;
+    invoke-virtual {v1}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "notifyBackGestureStatus:run usingFsGesture="
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v4, "   show="
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v4, "   focus="
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v4, p0, Lcom/miui/home/launcher/Launcher$75;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    .line 8289
-    invoke-static {v4}, Lcom/miui/home/launcher/Launcher;->access$8600(Lcom/miui/home/launcher/Launcher;)Z
-
-    move-result v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v4, "   pause="
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v4, p0, Lcom/miui/home/launcher/Launcher$75;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    .line 8290
-    invoke-static {v4}, Lcom/miui/home/launcher/Launcher;->access$8700(Lcom/miui/home/launcher/Launcher;)Z
-
-    move-result v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    .line 8287
-    invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 8291
-    iget-object v2, p0, Lcom/miui/home/launcher/Launcher$75;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-static {v2}, Lcom/miui/home/launcher/Launcher;->access$8800(Lcom/miui/home/launcher/Launcher;)Lcom/android/systemui/fsgesture/IFsGestureService;
-
-    move-result-object v2
-
-    if-nez v2, :cond_0
-
-    sget-boolean v2, Lcom/miui/launcher/utils/SdkVersion;->ATLEAST_R:Z
-
-    if-eqz v2, :cond_6
+    move-result-object v1
 
     :cond_0
-    if-eqz v0, :cond_6
-
-    if-eqz v1, :cond_5
-
-    .line 8293
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$75;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$8600(Lcom/miui/home/launcher/Launcher;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$75;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$8700(Lcom/miui/home/launcher/Launcher;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_6
-
-    .line 8294
-    :cond_1
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$75;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    sget-object v1, Lcom/miui/home/launcher/LauncherState;->OVERVIEW:Lcom/miui/home/recents/OverviewState;
-
-    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Launcher;->isInState(Lcom/miui/home/launcher/LauncherState;)Z
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$75;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getRecentsContainer()Lcom/miui/home/recents/views/RecentsContainer;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$75;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getRecentsContainer()Lcom/miui/home/recents/views/RecentsContainer;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/miui/home/recents/views/RecentsContainer;->isInLandscapeOverview()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    .line 8295
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$75;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    const-string/jumbo v2, "typefrom_landscape_overview"
-
-    invoke-static {v0, v1, v2}, Lcom/miui/home/launcher/Launcher;->access$8900(Lcom/miui/home/launcher/Launcher;ZLjava/lang/String;)V
-
-    goto :goto_1
-
-    .line 8297
-    :cond_2
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$75;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->isInNormalEditing()Z
-
-    move-result v2
-
-    if-nez v2, :cond_4
-
-    iget-object v2, p0, Lcom/miui/home/launcher/Launcher$75;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    .line 8298
-    invoke-virtual {v2}, Lcom/miui/home/launcher/Launcher;->isFolderShowing()Z
-
-    move-result v2
-
-    if-nez v2, :cond_4
-
-    iget-object v2, p0, Lcom/miui/home/launcher/Launcher$75;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    sget-object v3, Lcom/miui/home/launcher/LauncherState;->FEED_STATE:Lcom/miui/home/launcher/LauncherState;
-
-    invoke-virtual {v2, v3}, Lcom/miui/home/launcher/Launcher;->isInState(Lcom/miui/home/launcher/LauncherState;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_4
-
-    iget-object v2, p0, Lcom/miui/home/launcher/Launcher$75;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    sget-object v3, Lcom/miui/home/launcher/LauncherState;->ALL_APPS:Lcom/miui/home/launcher/LauncherState;
-
-    invoke-virtual {v2, v3}, Lcom/miui/home/launcher/Launcher;->isInState(Lcom/miui/home/launcher/LauncherState;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_4
-
-    iget-object v2, p0, Lcom/miui/home/launcher/Launcher$75;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    sget-object v3, Lcom/miui/home/launcher/LauncherState;->OVERVIEW:Lcom/miui/home/recents/OverviewState;
-
-    .line 8299
-    invoke-virtual {v2, v3}, Lcom/miui/home/launcher/Launcher;->isInState(Lcom/miui/home/launcher/LauncherState;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_4
-
-    iget-object v2, p0, Lcom/miui/home/launcher/Launcher$75;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    sget-object v3, Lcom/miui/home/launcher/LauncherState;->FEED_OVERLAY_STATE:Lcom/miui/home/launcher/overlay/feed/FeedOverlayState;
-
-    invoke-virtual {v2, v3}, Lcom/miui/home/launcher/Launcher;->isInState(Lcom/miui/home/launcher/LauncherState;)Z
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/miui/home/launcher/ShortcutInfo;
+
+    .line 7833
+    invoke-virtual {v2}, Lcom/miui/home/launcher/ShortcutInfo;->getUserId()I
+
+    move-result v3
+
+    .line 7834
+    iget-object v4, v2, Lcom/miui/home/launcher/ShortcutInfo;->mIntent:Landroid/content/Intent;
+
+    if-eqz v4, :cond_0
+
+    iget-object v4, v2, Lcom/miui/home/launcher/ShortcutInfo;->mIntent:Landroid/content/Intent;
+
+    invoke-virtual {v4}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_0
+
+    iget v4, p0, Lcom/miui/home/launcher/Launcher$75;->val$userId:I
+
+    if-ne v3, v4, :cond_0
+
+    iget-object v3, p0, Lcom/miui/home/launcher/Launcher$75;->val$itemTypeList:Ljava/util/ArrayList;
+
+    iget v4, v2, Lcom/miui/home/launcher/ShortcutInfo;->itemType:I
+
+    .line 7835
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_1
+
     goto :goto_0
 
+    .line 7838
+    :cond_1
+    iget-object v3, p0, Lcom/miui/home/launcher/Launcher$75;->val$cn:Landroid/content/ComponentName;
+
+    iget-object v4, v2, Lcom/miui/home/launcher/ShortcutInfo;->mIntent:Landroid/content/Intent;
+
+    invoke-virtual {v4}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Landroid/content/ComponentName;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_2
+
+    iget-object v3, p0, Lcom/miui/home/launcher/Launcher$75;->val$cn:Landroid/content/ComponentName;
+
+    .line 7839
+    invoke-virtual {v3}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+
+    move-result-object v3
+
+    iget-object v4, v2, Lcom/miui/home/launcher/ShortcutInfo;->mIntent:Landroid/content/Intent;
+
+    invoke-virtual {v4}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    iget-object v3, p0, Lcom/miui/home/launcher/Launcher$75;->val$cn:Landroid/content/ComponentName;
+
+    .line 7840
+    invoke-virtual {v3}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    .line 7841
+    :cond_2
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    .line 7844
     :cond_3
-    const/4 v1, 0x0
+    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Launcher$75;->setResult(Ljava/lang/Object;)V
 
-    .line 8297
-    :cond_4
-    :goto_0
-    invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$9000(Lcom/miui/home/launcher/Launcher;Z)V
-
-    goto :goto_1
-
-    .line 8303
-    :cond_5
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$75;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$8600(Lcom/miui/home/launcher/Launcher;)Z
-
-    move-result v1
-
-    invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$9000(Lcom/miui/home/launcher/Launcher;Z)V
-
-    :cond_6
-    :goto_1
     return-void
 .end method

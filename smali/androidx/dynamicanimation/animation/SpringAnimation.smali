@@ -22,30 +22,6 @@
 
 
 # direct methods
-.method public constructor <init>(Landroidx/dynamicanimation/animation/FloatValueHolder;)V
-    .locals 0
-
-    .line 78
-    invoke-direct {p0, p1}, Landroidx/dynamicanimation/animation/DynamicAnimation;-><init>(Landroidx/dynamicanimation/animation/FloatValueHolder;)V
-
-    const/4 p1, 0x0
-
-    .line 60
-    iput-object p1, p0, Landroidx/dynamicanimation/animation/SpringAnimation;->mSpring:Landroidx/dynamicanimation/animation/SpringForce;
-
-    const p1, 0x7f7fffff    # Float.MAX_VALUE
-
-    .line 61
-    iput p1, p0, Landroidx/dynamicanimation/animation/SpringAnimation;->mPendingPosition:F
-
-    const/4 p1, 0x0
-
-    .line 63
-    iput-boolean p1, p0, Landroidx/dynamicanimation/animation/SpringAnimation;->mEndRequested:Z
-
-    return-void
-.end method
-
 .method public constructor <init>(Ljava/lang/Object;Landroidx/dynamicanimation/animation/FloatPropertyCompat;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;

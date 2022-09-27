@@ -22,10 +22,10 @@
 .method constructor <init>(J)V
     .locals 0
 
-    .line 144
+    .line 153
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 145
+    .line 154
     iput-wide p1, p0, Lcom/google/android/filament/RenderTarget$Builder$BuilderFinalizer;->mNativeObject:J
 
     return-void
@@ -36,18 +36,18 @@
 .method public finalize()V
     .locals 3
 
-    .line 151
+    .line 160
     :try_start_0
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 154
+    .line 163
     :catch_0
     iget-wide v0, p0, Lcom/google/android/filament/RenderTarget$Builder$BuilderFinalizer;->mNativeObject:J
 
-    invoke-static {v0, v1}, Lcom/google/android/filament/RenderTarget;->access$800(J)V
+    invoke-static {v0, v1}, Lcom/google/android/filament/RenderTarget;->access$900(J)V
 
     goto :goto_0
 
@@ -56,9 +56,9 @@
 
     iget-wide v1, p0, Lcom/google/android/filament/RenderTarget$Builder$BuilderFinalizer;->mNativeObject:J
 
-    invoke-static {v1, v2}, Lcom/google/android/filament/RenderTarget;->access$800(J)V
+    invoke-static {v1, v2}, Lcom/google/android/filament/RenderTarget;->access$900(J)V
 
-    .line 155
+    .line 164
     throw v0
 
     :goto_0

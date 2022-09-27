@@ -34,7 +34,7 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .line 455
+    .line 745
     new-instance v0, Lcom/google/android/filament/View$Dithering;
 
     const-string v1, "NONE"
@@ -45,7 +45,7 @@
 
     sput-object v0, Lcom/google/android/filament/View$Dithering;->NONE:Lcom/google/android/filament/View$Dithering;
 
-    .line 456
+    .line 746
     new-instance v0, Lcom/google/android/filament/View$Dithering;
 
     const-string v1, "TEMPORAL"
@@ -58,7 +58,7 @@
 
     const/4 v0, 0x2
 
-    .line 454
+    .line 744
     new-array v0, v0, [Lcom/google/android/filament/View$Dithering;
 
     sget-object v1, Lcom/google/android/filament/View$Dithering;->NONE:Lcom/google/android/filament/View$Dithering;
@@ -82,7 +82,7 @@
         }
     .end annotation
 
-    .line 454
+    .line 744
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -91,7 +91,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/android/filament/View$Dithering;
     .locals 1
 
-    .line 454
+    .line 744
     const-class v0, Lcom/google/android/filament/View$Dithering;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -106,7 +106,7 @@
 .method public static values()[Lcom/google/android/filament/View$Dithering;
     .locals 1
 
-    .line 454
+    .line 744
     sget-object v0, Lcom/google/android/filament/View$Dithering;->$VALUES:[Lcom/google/android/filament/View$Dithering;
 
     invoke-virtual {v0}, [Lcom/google/android/filament/View$Dithering;->clone()Ljava/lang/Object;

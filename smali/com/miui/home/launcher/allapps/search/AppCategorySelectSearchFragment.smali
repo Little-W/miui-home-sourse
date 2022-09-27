@@ -152,7 +152,7 @@
 
     move-result v1
 
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountXDrawerMode()I
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountX()I
 
     move-result v2
 
@@ -311,7 +311,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f0a006a
+    const v0, 0x7f0a005d
 
     invoke-virtual {p1, v0}, Landroidx/fragment/app/FragmentManager;->findFragmentById(I)Landroidx/fragment/app/Fragment;
 
@@ -355,7 +355,7 @@
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 1
 
-    const p3, 0x7f0d0076
+    const p3, 0x7f0d004b
 
     const/4 v0, 0x0
 
@@ -482,7 +482,7 @@
     .line 93
     invoke-super {p0, p1, p2}, Landroidx/fragment/app/Fragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
-    const p2, 0x7f0a0331
+    const p2, 0x7f0a0204
 
     .line 94
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -491,7 +491,7 @@
 
     check-cast p2, Lcom/miui/home/launcher/view/SpringRelativeLayout;
 
-    const v0, 0x7f0a0072
+    const v0, 0x7f0a0065
 
     .line 95
     invoke-virtual {p2, v0}, Lcom/miui/home/launcher/view/SpringRelativeLayout;->addSpringView(I)V
@@ -543,7 +543,7 @@
 
     invoke-virtual {p2, v0}, Landroidx/recyclerview/widget/RecyclerView;->setHasFixedSize(Z)V
 
-    const p2, 0x7f0a009e
+    const p2, 0x7f0a007b
 
     .line 105
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -554,7 +554,7 @@
 
     iput-object p2, p0, Lcom/miui/home/launcher/allapps/search/AppCategorySelectSearchFragment;->mBackButton:Lcom/miui/home/launcher/util/typeface/TypefaceIconView;
 
-    const p2, 0x7f0a00a1
+    const p2, 0x7f0a007d
 
     .line 106
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;

@@ -1,9 +1,8 @@
 !!brut.androlib.meta.MetaInfo
-apkFileName: 622.apk
+apkFileName: 303.apk
 compressionType: false
 doNotCompress:
 - resources.arsc
-- assets/cold_start_bundle
 - png
 - webp
 - ogg
@@ -17,31 +16,6 @@ sdkInfo:
 sharedLibrary: false
 sparseResources: false
 unknownFiles:
-  DebugProbesKt.bin: '8'
-  firebase-analytics.properties: '8'
-  firebase-annotations.properties: '8'
-  firebase-common.properties: '8'
-  firebase-components.properties: '8'
-  firebase-crashlytics.properties: '8'
-  firebase-encoders-json.properties: '8'
-  firebase-encoders-proto.properties: '8'
-  firebase-encoders.properties: '8'
-  firebase-installations-interop.properties: '8'
-  firebase-installations.properties: '8'
-  firebase-measurement-connector.properties: '8'
-  play-services-ads-identifier.properties: '8'
-  play-services-basement.properties: '8'
-  play-services-measurement-api.properties: '8'
-  play-services-measurement-base.properties: '8'
-  play-services-measurement-impl.properties: '8'
-  play-services-measurement-sdk-api.properties: '8'
-  play-services-measurement-sdk.properties: '8'
-  play-services-measurement.properties: '8'
-  play-services-stats.properties: '8'
-  play-services-tasks.properties: '8'
-  transport-api.properties: '8'
-  transport-backend-cct.properties: '8'
-  transport-runtime.properties: '8'
   com/miui/msa/global/guessyoulike/v1/GlobalCloudAdConfig.aidl: '8'
   com/miui/msa/global/guessyoulike/v1/GlobalColudControlInfo.aidl: '8'
   com/miui/msa/global/guessyoulike/v1/GlobalFolderInfo.aidl: '8'
@@ -60,12 +34,11 @@ unknownFiles:
   com/miui/msa/internal/preinstall/v2/IInternalPreInstallAdV2.aidl: '8'
   com/miui/msa/preinstall/v1/IPreinstallAd.aidl: '8'
   com/miui/msa/preinstall/v1/PreinstallAdInfo.aidl: '8'
-  okhttp3/internal/publicsuffix/publicsuffixes.gz: '8'
 usesFramework:
   ids:
   - 1
   tag: null
 version: 2.6.1
 versionInfo:
-  versionCode: '439005256'
-  versionName: ALPHA-4.39.0.5256-06221740
+  versionCode: '426004432'
+  versionName: ALPHA-4.26.0.4432-03032019

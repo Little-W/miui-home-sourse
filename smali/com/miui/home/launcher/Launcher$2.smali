@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 863
+    .line 843
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$2;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 2
 
-    .line 866
+    .line 846
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "miui.intent.action.TEXT_CONTENT_EXTENSION"
@@ -47,10 +47,10 @@
 
     const-string v1, "com.miui.contentextension"
 
-    .line 867
+    .line 847
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 868
+    .line 848
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$2;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v1, v0}, Lcom/miui/home/launcher/Launcher;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;

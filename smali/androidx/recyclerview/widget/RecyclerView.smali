@@ -5250,21 +5250,6 @@
     return-void
 .end method
 
-.method public clearOnScrollListeners()V
-    .locals 1
-
-    .line 1727
-    iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView;->mScrollListeners:Ljava/util/List;
-
-    if-eqz v0, :cond_0
-
-    .line 1728
-    invoke-interface {v0}, Ljava/util/List;->clear()V
-
-    :cond_0
-    return-void
-.end method
-
 .method public computeHorizontalScrollExtent()I
     .locals 2
 

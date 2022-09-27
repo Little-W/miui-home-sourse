@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/widget/SwitchCompat$1;
+.class final Landroidx/appcompat/widget/SwitchCompat$1;
 .super Landroid/util/Property;
 .source "SwitchCompat.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x8
     name = null
 .end annotation
 
@@ -27,7 +27,7 @@
 .method constructor <init>(Ljava/lang/Class;Ljava/lang/String;)V
     .locals 0
 
-    .line 123
+    .line 102
     invoke-direct {p0, p1, p2}, Landroid/util/Property;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
     return-void
@@ -38,7 +38,7 @@
 .method public get(Landroidx/appcompat/widget/SwitchCompat;)Ljava/lang/Float;
     .locals 0
 
-    .line 126
+    .line 105
     iget p1, p1, Landroidx/appcompat/widget/SwitchCompat;->mThumbPosition:F
 
     invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -51,7 +51,7 @@
 .method public bridge synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 123
+    .line 102
     check-cast p1, Landroidx/appcompat/widget/SwitchCompat;
 
     invoke-virtual {p0, p1}, Landroidx/appcompat/widget/SwitchCompat$1;->get(Landroidx/appcompat/widget/SwitchCompat;)Ljava/lang/Float;
@@ -64,7 +64,7 @@
 .method public set(Landroidx/appcompat/widget/SwitchCompat;Ljava/lang/Float;)V
     .locals 0
 
-    .line 131
+    .line 110
     invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
 
     move-result p2
@@ -77,7 +77,7 @@
 .method public bridge synthetic set(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
-    .line 123
+    .line 102
     check-cast p1, Landroidx/appcompat/widget/SwitchCompat;
 
     check-cast p2, Ljava/lang/Float;

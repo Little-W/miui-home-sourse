@@ -98,7 +98,7 @@
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 4
+    .locals 3
 
     .line 90
     invoke-direct {p0, p1, p2}, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
@@ -188,16 +188,9 @@
     :cond_0
     sget v2, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_android_elevation:I
 
-    const/16 v3, 0x15
-
     if-ne v0, v2, :cond_1
 
     .line 98
-    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    if-lt v2, v3, :cond_b
-
-    .line 99
     iget v2, p0, Landroidx/constraintlayout/widget/Constraints$LayoutParams;->elevation:F
 
     invoke-virtual {p1, v0, v2}, Landroid/content/res/TypedArray;->getFloat(IF)F
@@ -208,18 +201,18 @@
 
     const/4 v0, 0x1
 
-    .line 100
+    .line 99
     iput-boolean v0, p0, Landroidx/constraintlayout/widget/Constraints$LayoutParams;->applyElevation:Z
 
     goto/16 :goto_1
 
-    .line 102
+    .line 100
     :cond_1
     sget v2, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_android_rotationX:I
 
     if-ne v0, v2, :cond_2
 
-    .line 103
+    .line 101
     iget v2, p0, Landroidx/constraintlayout/widget/Constraints$LayoutParams;->rotationX:F
 
     invoke-virtual {p1, v0, v2}, Landroid/content/res/TypedArray;->getFloat(IF)F
@@ -230,13 +223,13 @@
 
     goto/16 :goto_1
 
-    .line 104
+    .line 102
     :cond_2
     sget v2, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_android_rotationY:I
 
     if-ne v0, v2, :cond_3
 
-    .line 105
+    .line 103
     iget v2, p0, Landroidx/constraintlayout/widget/Constraints$LayoutParams;->rotationY:F
 
     invoke-virtual {p1, v0, v2}, Landroid/content/res/TypedArray;->getFloat(IF)F
@@ -247,13 +240,13 @@
 
     goto/16 :goto_1
 
-    .line 106
+    .line 104
     :cond_3
     sget v2, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_android_rotation:I
 
     if-ne v0, v2, :cond_4
 
-    .line 107
+    .line 105
     iget v2, p0, Landroidx/constraintlayout/widget/Constraints$LayoutParams;->rotation:F
 
     invoke-virtual {p1, v0, v2}, Landroid/content/res/TypedArray;->getFloat(IF)F
@@ -264,13 +257,13 @@
 
     goto :goto_1
 
-    .line 108
+    .line 106
     :cond_4
     sget v2, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_android_scaleX:I
 
     if-ne v0, v2, :cond_5
 
-    .line 109
+    .line 107
     iget v2, p0, Landroidx/constraintlayout/widget/Constraints$LayoutParams;->scaleX:F
 
     invoke-virtual {p1, v0, v2}, Landroid/content/res/TypedArray;->getFloat(IF)F
@@ -281,13 +274,13 @@
 
     goto :goto_1
 
-    .line 110
+    .line 108
     :cond_5
     sget v2, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_android_scaleY:I
 
     if-ne v0, v2, :cond_6
 
-    .line 111
+    .line 109
     iget v2, p0, Landroidx/constraintlayout/widget/Constraints$LayoutParams;->scaleY:F
 
     invoke-virtual {p1, v0, v2}, Landroid/content/res/TypedArray;->getFloat(IF)F
@@ -298,13 +291,13 @@
 
     goto :goto_1
 
-    .line 112
+    .line 110
     :cond_6
     sget v2, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_android_transformPivotX:I
 
     if-ne v0, v2, :cond_7
 
-    .line 113
+    .line 111
     iget v2, p0, Landroidx/constraintlayout/widget/Constraints$LayoutParams;->transformPivotX:F
 
     invoke-virtual {p1, v0, v2}, Landroid/content/res/TypedArray;->getFloat(IF)F
@@ -315,13 +308,13 @@
 
     goto :goto_1
 
-    .line 114
+    .line 112
     :cond_7
     sget v2, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_android_transformPivotY:I
 
     if-ne v0, v2, :cond_8
 
-    .line 115
+    .line 113
     iget v2, p0, Landroidx/constraintlayout/widget/Constraints$LayoutParams;->transformPivotY:F
 
     invoke-virtual {p1, v0, v2}, Landroid/content/res/TypedArray;->getFloat(IF)F
@@ -332,13 +325,13 @@
 
     goto :goto_1
 
-    .line 116
+    .line 114
     :cond_8
     sget v2, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_android_translationX:I
 
     if-ne v0, v2, :cond_9
 
-    .line 117
+    .line 115
     iget v2, p0, Landroidx/constraintlayout/widget/Constraints$LayoutParams;->translationX:F
 
     invoke-virtual {p1, v0, v2}, Landroid/content/res/TypedArray;->getFloat(IF)F
@@ -349,13 +342,13 @@
 
     goto :goto_1
 
-    .line 118
+    .line 116
     :cond_9
     sget v2, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_android_translationY:I
 
     if-ne v0, v2, :cond_a
 
-    .line 119
+    .line 117
     iget v2, p0, Landroidx/constraintlayout/widget/Constraints$LayoutParams;->translationY:F
 
     invoke-virtual {p1, v0, v2}, Landroid/content/res/TypedArray;->getFloat(IF)F
@@ -366,25 +359,20 @@
 
     goto :goto_1
 
-    .line 120
+    .line 118
     :cond_a
     sget v2, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_android_translationZ:I
 
     if-ne v0, v2, :cond_b
 
-    .line 121
-    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    if-lt v2, v3, :cond_b
-
-    .line 122
+    .line 119
     iget v2, p0, Landroidx/constraintlayout/widget/Constraints$LayoutParams;->translationZ:F
 
     invoke-virtual {p1, v0, v2}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
     move-result v0
 
-    iput v0, p0, Landroidx/constraintlayout/widget/Constraints$LayoutParams;->translationZ:F
+    iput v0, p0, Landroidx/constraintlayout/widget/Constraints$LayoutParams;->translationX:F
 
     :cond_b
     :goto_1

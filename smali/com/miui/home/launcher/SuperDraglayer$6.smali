@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/SuperDraglayer;Landroid/view/View;)V
     .locals 0
 
-    .line 650
+    .line 641
     iput-object p1, p0, Lcom/miui/home/launcher/SuperDraglayer$6;->this$0:Lcom/miui/home/launcher/SuperDraglayer;
 
     iput-object p2, p0, Lcom/miui/home/launcher/SuperDraglayer$6;->val$maskView:Landroid/view/View;
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 3
 
-    .line 652
+    .line 643
     iget-object v0, p0, Lcom/miui/home/launcher/SuperDraglayer$6;->val$maskView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
@@ -51,12 +51,12 @@
 
     iget-object v1, p0, Lcom/miui/home/launcher/SuperDraglayer$6;->this$0:Lcom/miui/home/launcher/SuperDraglayer;
 
-    .line 653
+    .line 644
     invoke-virtual {v1}, Lcom/miui/home/launcher/SuperDraglayer;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f0b001b
+    const v2, 0x7f0b0018
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -70,7 +70,7 @@
 
     const/4 v1, 0x0
 
-    .line 654
+    .line 645
     invoke-virtual {v0, v1}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
@@ -79,12 +79,12 @@
 
     invoke-direct {v1, p0}, Lcom/miui/home/launcher/SuperDraglayer$6$1;-><init>(Lcom/miui/home/launcher/SuperDraglayer$6;)V
 
-    .line 655
+    .line 646
     invoke-virtual {v0, v1}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
 
-    .line 660
+    .line 651
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->start()V
 
     return-void

@@ -25,7 +25,7 @@
 .method public constructor <init>(Lcom/miui/home/launcher/SuperDraglayer;)V
     .locals 0
 
-    .line 686
+    .line 677
     iput-object p1, p0, Lcom/miui/home/launcher/SuperDraglayer$ScaleDetectorListener;->this$0:Lcom/miui/home/launcher/SuperDraglayer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,12 +38,12 @@
 .method public onScale(Landroid/view/ScaleGestureDetector;)Z
     .locals 4
 
-    .line 690
+    .line 681
     invoke-virtual {p1}, Landroid/view/ScaleGestureDetector;->getScaleFactor()F
 
     move-result p1
 
-    .line 691
+    .line 682
     iget-object v0, p0, Lcom/miui/home/launcher/SuperDraglayer$ScaleDetectorListener;->this$0:Lcom/miui/home/launcher/SuperDraglayer;
 
     invoke-static {v0}, Lcom/miui/home/launcher/SuperDraglayer;->access$000(Lcom/miui/home/launcher/SuperDraglayer;)Lcom/miui/home/launcher/util/TouchController;
@@ -62,7 +62,7 @@
 
     iget-object p1, p0, Lcom/miui/home/launcher/SuperDraglayer$ScaleDetectorListener;->this$0:Lcom/miui/home/launcher/SuperDraglayer;
 
-    .line 692
+    .line 683
     invoke-static {p1}, Lcom/miui/home/launcher/SuperDraglayer;->access$000(Lcom/miui/home/launcher/SuperDraglayer;)Lcom/miui/home/launcher/util/TouchController;
 
     move-result-object p1
@@ -71,14 +71,14 @@
 
     if-eqz p1, :cond_0
 
-    .line 693
+    .line 684
     iget-object p1, p0, Lcom/miui/home/launcher/SuperDraglayer$ScaleDetectorListener;->this$0:Lcom/miui/home/launcher/SuperDraglayer;
 
     const/4 v0, 0x1
 
     invoke-static {p1, v0}, Lcom/miui/home/launcher/SuperDraglayer;->access$102(Lcom/miui/home/launcher/SuperDraglayer;Z)Z
 
-    .line 694
+    .line 685
     iget-object p1, p0, Lcom/miui/home/launcher/SuperDraglayer$ScaleDetectorListener;->this$0:Lcom/miui/home/launcher/SuperDraglayer;
 
     invoke-static {p1}, Lcom/miui/home/launcher/SuperDraglayer;->access$000(Lcom/miui/home/launcher/SuperDraglayer;)Lcom/miui/home/launcher/util/TouchController;
@@ -95,7 +95,7 @@
 
     invoke-virtual {p1, v2, v1, v3}, Lcom/miui/home/launcher/touch/FeedSwipeController;->onDragEnd(FZLjava/lang/Runnable;)V
 
-    .line 700
+    .line 691
     iget-object p1, p0, Lcom/miui/home/launcher/SuperDraglayer$ScaleDetectorListener;->this$0:Lcom/miui/home/launcher/SuperDraglayer;
 
     const/4 v1, 0x0
@@ -111,14 +111,14 @@
 .method public onScaleBegin(Landroid/view/ScaleGestureDetector;)Z
     .locals 2
 
-    .line 708
+    .line 699
     iget-object p1, p0, Lcom/miui/home/launcher/SuperDraglayer$ScaleDetectorListener;->this$0:Lcom/miui/home/launcher/SuperDraglayer;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lcom/miui/home/launcher/SuperDraglayer;->access$102(Lcom/miui/home/launcher/SuperDraglayer;Z)Z
 
-    .line 709
+    .line 700
     iget-object p1, p0, Lcom/miui/home/launcher/SuperDraglayer$ScaleDetectorListener;->this$0:Lcom/miui/home/launcher/SuperDraglayer;
 
     invoke-static {p1}, Lcom/miui/home/launcher/SuperDraglayer;->access$200(Lcom/miui/home/launcher/SuperDraglayer;)I

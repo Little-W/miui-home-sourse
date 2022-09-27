@@ -18,7 +18,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 126
+    .line 107
     invoke-direct {p0}, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;-><init>()V
 
     return-void
@@ -29,7 +29,7 @@
 .method public areContentsTheSame(Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;)Z
     .locals 2
 
-    .line 136
+    .line 117
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem$1;->appLabel:Ljava/lang/CharSequence;
 
     iget-object v1, p1, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;->appLabel:Ljava/lang/CharSequence;
@@ -44,7 +44,7 @@
 
     iget-object v1, p1, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;->appDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 137
+    .line 118
     invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
@@ -77,7 +77,7 @@
 .method public areItemsTheSame(Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;)Z
     .locals 2
 
-    .line 129
+    .line 110
     iget v0, p0, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem$1;->viewType:I
 
     iget v1, p1, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;->viewType:I
@@ -92,7 +92,7 @@
 
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem$1;->appInfo:Lcom/miui/home/launcher/AppInfo;
 
-    .line 131
+    .line 112
     invoke-virtual {v0}, Lcom/miui/home/launcher/AppInfo;->toComponentKey()Lcom/miui/home/launcher/util/ComponentKey;
 
     move-result-object v0

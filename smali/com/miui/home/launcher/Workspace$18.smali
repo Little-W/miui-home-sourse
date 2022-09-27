@@ -3,12 +3,12 @@
 .source "Workspace.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/miui/home/launcher/Workspace;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/miui/home/launcher/Workspace;->bindScreenAdded(JII)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Workspace;)V
     .locals 0
 
-    .line 2927
+    .line 3182
     iput-object p1, p0, Lcom/miui/home/launcher/Workspace$18;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -35,50 +35,46 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 5
+.method public onGlobalLayout()V
+    .locals 2
 
-    .line 2930
+    .line 3186
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace$18;->this$0:Lcom/miui/home/launcher/Workspace;
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Workspace;->isInNormalEditingMode()Z
+    invoke-static {v0}, Lcom/miui/home/launcher/Workspace;->access$200(Lcom/miui/home/launcher/Workspace;)Lcom/miui/home/launcher/Launcher;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->isPreviewShowing()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    const/4 v0, 0x0
+    .line 3187
+    iget-object v0, p0, Lcom/miui/home/launcher/Workspace$18;->this$0:Lcom/miui/home/launcher/Workspace;
 
-    .line 2931
-    :goto_0
-    iget-object v1, p0, Lcom/miui/home/launcher/Workspace$18;->this$0:Lcom/miui/home/launcher/Workspace;
+    invoke-static {v0}, Lcom/miui/home/launcher/Workspace;->access$200(Lcom/miui/home/launcher/Workspace;)Lcom/miui/home/launcher/Launcher;
 
-    invoke-virtual {v1}, Lcom/miui/home/launcher/Workspace;->getScreenCount()I
+    move-result-object v0
 
-    move-result v1
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getWorkspacePreview()Lcom/miui/home/launcher/WorkspaceThumbnailView;
 
-    if-ge v0, v1, :cond_0
+    move-result-object v0
 
-    .line 2932
-    iget-object v1, p0, Lcom/miui/home/launcher/Workspace$18;->this$0:Lcom/miui/home/launcher/Workspace;
+    const/4 v1, 0x1
 
-    invoke-virtual {v1, v0}, Lcom/miui/home/launcher/Workspace;->getCellScreen(I)Lcom/miui/home/launcher/CellScreen;
+    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->loadThumbnails(Z)V
 
-    move-result-object v1
-
-    const/high16 v2, -0x80000000
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x1
-
-    .line 2933
-    invoke-virtual {v1, v4, v2, v3}, Lcom/miui/home/launcher/CellScreen;->setEditMode(ZILcom/miui/home/launcher/EditStateChangeReason;)Z
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
+    .line 3189
     :cond_0
+    iget-object v0, p0, Lcom/miui/home/launcher/Workspace$18;->this$0:Lcom/miui/home/launcher/Workspace;
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Workspace;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
+
     return-void
 .end method

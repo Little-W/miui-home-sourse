@@ -30,7 +30,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 52
+    .line 49
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
@@ -43,14 +43,14 @@
 .method public static debug(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 43
+    .line 40
     sget-boolean v0, Lcom/miui/home/launcher/MiuiHomeLog;->sIsDebugLogEnable:Z
 
     if-nez v0, :cond_0
 
     goto :goto_0
 
-    .line 44
+    .line 41
     :cond_0
     invoke-static {p0, p1}, Lcom/miui/home/launcher/MiuiHomeLog;->log(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -61,7 +61,7 @@
 .method private static getRecordedLogHelper(Ljava/lang/String;)Lcom/miui/home/launcher/MiuiHomeLog$RecordedLogHelper;
     .locals 2
 
-    .line 122
+    .line 110
     sget-object v0, Lcom/miui/home/launcher/MiuiHomeLog;->sRecordedLogHashMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0, p0}, Ljava/util/concurrent/ConcurrentHashMap;->containsKey(Ljava/lang/Object;)Z
@@ -70,19 +70,19 @@
 
     if-nez v0, :cond_0
 
-    .line 123
+    .line 111
     new-instance v0, Lcom/miui/home/launcher/MiuiHomeLog$RecordedLogHelper;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/MiuiHomeLog$RecordedLogHelper;-><init>(Ljava/lang/String;)V
 
-    .line 124
+    .line 112
     sget-object v1, Lcom/miui/home/launcher/MiuiHomeLog;->sRecordedLogHashMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v1, p0, v0}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
-    .line 126
+    .line 114
     :cond_0
     sget-object v0, Lcom/miui/home/launcher/MiuiHomeLog;->sRecordedLogHashMap:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -105,7 +105,7 @@
 
     const/4 v1, 0x0
 
-    .line 30
+    .line 27
     invoke-static {p0, v0, v1}, Lcom/miui/home/launcher/common/PreferenceUtils;->getBoolean(Landroid/content/Context;Ljava/lang/String;Z)Z
 
     move-result p0
@@ -114,7 +114,7 @@
 
     const-string p0, "MiuiHomeLog"
 
-    .line 31
+    .line 28
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -139,7 +139,7 @@
 .method public static log(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    .line 49
+    .line 46
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -162,7 +162,7 @@
 .method public static printAndClearMessage(Ljava/lang/String;)V
     .locals 1
 
-    .line 132
+    .line 120
     sget-object v0, Lcom/miui/home/launcher/MiuiHomeLog;->sRecordedLogHashMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0, p0}, Ljava/util/concurrent/ConcurrentHashMap;->containsKey(Ljava/lang/Object;)Z
@@ -171,7 +171,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 133
+    .line 121
     sget-object v0, Lcom/miui/home/launcher/MiuiHomeLog;->sRecordedLogHashMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0, p0}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -180,7 +180,7 @@
 
     check-cast p0, Lcom/miui/home/launcher/MiuiHomeLog$RecordedLogHelper;
 
-    .line 134
+    .line 122
     invoke-virtual {p0}, Lcom/miui/home/launcher/MiuiHomeLog$RecordedLogHelper;->printAll()V
 
     :cond_0
@@ -190,12 +190,12 @@
 .method public static saveRecorded(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 116
+    .line 104
     invoke-static {p0}, Lcom/miui/home/launcher/MiuiHomeLog;->getRecordedLogHelper(Ljava/lang/String;)Lcom/miui/home/launcher/MiuiHomeLog$RecordedLogHelper;
 
     move-result-object p0
 
-    .line 117
+    .line 105
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/MiuiHomeLog$RecordedLogHelper;->addMessage(Ljava/lang/String;)V
 
     return-void
@@ -204,12 +204,12 @@
 .method public static setHead(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 139
+    .line 127
     invoke-static {p0}, Lcom/miui/home/launcher/MiuiHomeLog;->getRecordedLogHelper(Ljava/lang/String;)Lcom/miui/home/launcher/MiuiHomeLog$RecordedLogHelper;
 
     move-result-object p0
 
-    .line 140
+    .line 128
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/MiuiHomeLog$RecordedLogHelper;->setHead(Ljava/lang/String;)V
 
     return-void

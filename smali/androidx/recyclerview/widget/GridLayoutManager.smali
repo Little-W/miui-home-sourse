@@ -1897,15 +1897,6 @@
     return p2
 .end method
 
-.method public getSpanCount()I
-    .locals 1
-
-    .line 801
-    iget v0, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanCount:I
-
-    return v0
-.end method
-
 .method layoutChunk(Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;Landroidx/recyclerview/widget/LinearLayoutManager$LayoutChunkResult;)V
     .locals 18
 

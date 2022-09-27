@@ -14,12 +14,10 @@
     <dimen name="folder_content_margin_bottom">2.0dip</dimen>
     <dimen name="folder_content_margin_top">2.0dip</dimen>
     <dimen name="folder_content_padding_left">12.0dip</dimen>
-    <dimen name="folder_content_padding_right">0.0dip</dimen>
     <dimen name="folder_content_width">290.0dip</dimen>
     <dimen name="free_style_apps_btn_text_size">13.0sp</dimen>
     <dimen name="hotseats_height">98.0dip</dimen>
     <dimen name="hotseats_padding_bottom">2.0dip</dimen>
-    <dimen name="hotseats_padding_top">0.0dip</dimen>
     <dimen name="miuix_appcompat_action_bar_default_height">58.149994dip</dimen>
     <dimen name="miuix_appcompat_action_bar_floating_height">58.19998dip</dimen>
     <dimen name="miuix_appcompat_action_bar_horizontal_padding_end">17.5dip</dimen>

@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/WorkspaceThumbnailView;)V
     .locals 0
 
-    .line 198
+    .line 193
     iput-object p1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView$1;->this$0:Lcom/miui/home/launcher/WorkspaceThumbnailView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onClick(Landroid/view/View;)V
     .locals 1
 
-    .line 200
+    .line 195
     instance-of v0, p1, Lcom/miui/home/launcher/ThumbnailContainer;
 
     if-eqz v0, :cond_0
@@ -55,14 +55,14 @@
 
     if-nez v0, :cond_0
 
-    .line 201
+    .line 196
     check-cast p1, Lcom/miui/home/launcher/ThumbnailContainer;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/ThumbnailContainer;->getContent()Lcom/miui/home/launcher/CellScreen;
 
     move-result-object p1
 
-    .line 202
+    .line 197
     iget-object v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView$1;->this$0:Lcom/miui/home/launcher/WorkspaceThumbnailView;
 
     invoke-static {v0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->access$100(Lcom/miui/home/launcher/WorkspaceThumbnailView;)Lcom/miui/home/launcher/Workspace;
@@ -71,21 +71,10 @@
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/Workspace;->snapToScreen(Lcom/miui/home/launcher/CellScreen;)I
 
-    .line 203
+    .line 198
     iget-object p1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView$1;->this$0:Lcom/miui/home/launcher/WorkspaceThumbnailView;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->access$200(Lcom/miui/home/launcher/WorkspaceThumbnailView;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    .line 204
-    iget-object p1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView$1;->this$0:Lcom/miui/home/launcher/WorkspaceThumbnailView;
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p1, v0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->updateborderLine(Z)V
+    invoke-virtual {p1}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->updateborderLine()V
 
     :cond_0
     return-void

@@ -83,7 +83,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f1202f1
+    const v1, 0x7f1101dd
 
     const/4 v2, 0x1
 
@@ -130,7 +130,7 @@
     .line 43
     invoke-virtual {v0, p0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->setAppCategorySelectListener(Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment$AppCategorySelectListener;)V
 
-    const v1, 0x7f0a0056
+    const v1, 0x7f0a004c
 
     .line 44
     invoke-virtual {p1, v1, v0}, Landroidx/fragment/app/FragmentTransaction;->replace(ILandroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentTransaction;
@@ -165,7 +165,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f1100e1
+    const p2, 0x7f1000b0
 
     invoke-virtual {p0, p2}, Lcom/miui/home/launcher/allapps/category/AppCategoryAddActivity;->getString(I)Ljava/lang/String;
 

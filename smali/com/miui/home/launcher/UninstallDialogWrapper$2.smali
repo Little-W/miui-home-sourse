@@ -70,7 +70,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f0a00fb
+    const v0, 0x7f0a00b7
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/UninstallDialog;->findViewById(I)Landroid/view/View;
 

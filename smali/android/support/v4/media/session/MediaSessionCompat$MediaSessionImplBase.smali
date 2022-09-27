@@ -2026,7 +2026,7 @@
     :cond_1
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v0, "volumeProvider may not be null"
+    const-string v0, "volumeProvider may not be null"
 
     invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 

@@ -18,7 +18,7 @@
 .method constructor <init>(Landroid/view/View;F)V
     .locals 1
 
-    .line 660
+    .line 646
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getScreenSerialExecutor()Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;
 
     move-result-object v0
@@ -33,7 +33,7 @@
 .method getOutline()Landroid/graphics/Bitmap;
     .locals 2
 
-    .line 665
+    .line 651
     iget-object v0, p0, Lcom/miui/home/launcher/DragController$ItemIconOutlineTask;->view:Landroid/view/View;
 
     iget v1, p0, Lcom/miui/home/launcher/DragController$ItemIconOutlineTask;->scale:F

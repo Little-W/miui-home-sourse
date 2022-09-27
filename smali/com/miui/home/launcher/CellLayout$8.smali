@@ -1,9 +1,6 @@
 .class Lcom/miui/home/launcher/CellLayout$8;
-.super Ljava/lang/Object;
+.super Lcom/miui/home/launcher/common/messages/EditStateChangedMessageHandler;
 .source "CellLayout.java"
-
-# interfaces
-.implements Lcom/miui/home/launcher/CellLayout$ItemVisibilityWorker;
 
 
 # annotations
@@ -17,52 +14,53 @@
 .end annotation
 
 
+# instance fields
+.field final synthetic this$0:Lcom/miui/home/launcher/CellLayout;
+
+
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Lcom/miui/home/launcher/CellLayout;)V
     .locals 0
 
-    .line 3073
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 2219
+    iput-object p1, p0, Lcom/miui/home/launcher/CellLayout$8;->this$0:Lcom/miui/home/launcher/CellLayout;
+
+    invoke-direct {p0}, Lcom/miui/home/launcher/common/messages/EditStateChangedMessageHandler;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public process(Landroid/graphics/drawable/Drawable;I)V
-    .locals 1
+.method public onMessageEvent(Lcom/miui/home/launcher/common/messages/EditModeChangedMessage;)V
+    .locals 2
+    .annotation runtime Lorg/greenrobot/eventbus/Subscribe;
+        threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
+    .end annotation
 
-    const/4 v0, 0x1
+    .line 2222
+    invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/EditModeChangedMessage;->getCurrentEditState()I
 
-    if-eq p2, v0, :cond_0
+    move-result v0
 
-    .line 3079
-    invoke-static {p1}, Lcom/miui/home/launcher/graphics/drawable/MamlCompat;->onPause(Landroid/graphics/drawable/Drawable;)V
+    const/4 v1, 0x7
+
+    if-ne v0, v1, :cond_0
+
+    .line 2223
+    invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/EditModeChangedMessage;->getLastEditState()I
+
+    move-result p1
+
+    const/16 v0, 0x11
+
+    if-ne p1, v0, :cond_0
+
+    .line 2224
+    iget-object p1, p0, Lcom/miui/home/launcher/CellLayout$8;->this$0:Lcom/miui/home/launcher/CellLayout;
+
+    invoke-virtual {p1}, Lcom/miui/home/launcher/CellLayout;->clearCellBackground()V
 
     :cond_0
-    return-void
-.end method
-
-.method public process(Lcom/miui/home/launcher/LauncherWidgetView;)V
-    .locals 0
-
-    .line 3089
-    invoke-virtual {p1}, Lcom/miui/home/launcher/LauncherWidgetView;->onInvisible()V
-
-    return-void
-.end method
-
-.method public process(Lcom/miui/home/launcher/ShortcutIcon;I)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public process(Lcom/miui/home/launcher/maml/MaMlWidgetView;)V
-    .locals 0
-
-    .line 3094
-    invoke-virtual {p1}, Lcom/miui/home/launcher/maml/MaMlWidgetView;->onInvisible()V
-
     return-void
 .end method

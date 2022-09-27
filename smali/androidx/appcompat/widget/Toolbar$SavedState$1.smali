@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/widget/Toolbar$SavedState$1;
+.class final Landroidx/appcompat/widget/Toolbar$SavedState$1;
 .super Ljava/lang/Object;
 .source "Toolbar.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x8
     name = null
 .end annotation
 
@@ -30,7 +30,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 2532
+    .line 2425
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +41,7 @@
 .method public createFromParcel(Landroid/os/Parcel;)Landroidx/appcompat/widget/Toolbar$SavedState;
     .locals 2
 
-    .line 2540
+    .line 2433
     new-instance v0, Landroidx/appcompat/widget/Toolbar$SavedState;
 
     const/4 v1, 0x0
@@ -54,7 +54,7 @@
 .method public createFromParcel(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Landroidx/appcompat/widget/Toolbar$SavedState;
     .locals 1
 
-    .line 2535
+    .line 2428
     new-instance v0, Landroidx/appcompat/widget/Toolbar$SavedState;
 
     invoke-direct {v0, p1, p2}, Landroidx/appcompat/widget/Toolbar$SavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
@@ -65,7 +65,7 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
-    .line 2532
+    .line 2425
     invoke-virtual {p0, p1}, Landroidx/appcompat/widget/Toolbar$SavedState$1;->createFromParcel(Landroid/os/Parcel;)Landroidx/appcompat/widget/Toolbar$SavedState;
 
     move-result-object p1
@@ -76,7 +76,7 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Ljava/lang/Object;
     .locals 0
 
-    .line 2532
+    .line 2425
     invoke-virtual {p0, p1, p2}, Landroidx/appcompat/widget/Toolbar$SavedState$1;->createFromParcel(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Landroidx/appcompat/widget/Toolbar$SavedState;
 
     move-result-object p1
@@ -87,7 +87,7 @@
 .method public newArray(I)[Landroidx/appcompat/widget/Toolbar$SavedState;
     .locals 0
 
-    .line 2545
+    .line 2438
     new-array p1, p1, [Landroidx/appcompat/widget/Toolbar$SavedState;
 
     return-object p1
@@ -96,7 +96,7 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 2532
+    .line 2425
     invoke-virtual {p0, p1}, Landroidx/appcompat/widget/Toolbar$SavedState$1;->newArray(I)[Landroidx/appcompat/widget/Toolbar$SavedState;
 
     move-result-object p1

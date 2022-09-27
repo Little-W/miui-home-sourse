@@ -28,7 +28,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/ApplicationsMessage;)V
     .locals 0
 
-    .line 125
+    .line 123
     iput-object p1, p0, Lcom/miui/home/launcher/ApplicationsMessage$MessageReceiver;->this$0:Lcom/miui/home/launcher/ApplicationsMessage;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -51,7 +51,7 @@
 
     if-nez p2, :cond_0
 
-    .line 146
+    .line 144
     iget-object p1, p0, Lcom/miui/home/launcher/ApplicationsMessage$MessageReceiver;->this$0:Lcom/miui/home/launcher/ApplicationsMessage;
 
     invoke-static {p1}, Lcom/miui/home/launcher/ApplicationsMessage;->access$400(Lcom/miui/home/launcher/ApplicationsMessage;)V
@@ -61,7 +61,7 @@
     :cond_0
     if-nez p2, :cond_3
 
-    .line 147
+    .line 145
     iget-object p2, p0, Lcom/miui/home/launcher/ApplicationsMessage$MessageReceiver;->this$0:Lcom/miui/home/launcher/ApplicationsMessage;
 
     invoke-static {p2}, Lcom/miui/home/launcher/ApplicationsMessage;->access$200(Lcom/miui/home/launcher/ApplicationsMessage;)Ljava/util/HashSet;
@@ -82,7 +82,7 @@
 
     const/4 v0, 0x1
 
-    .line 148
+    .line 146
     invoke-virtual {p3, p2, v0}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result p2
@@ -90,9 +90,9 @@
     if-nez p2, :cond_3
 
     :cond_1
-    const-string/jumbo p2, "userId"
+    const-string p2, "userId"
 
-    .line 149
+    .line 147
     invoke-virtual {p3, p2, p4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p2
@@ -106,7 +106,7 @@
     :cond_2
     move v3, p2
 
-    .line 153
+    .line 151
     :goto_0
     iget-object v0, p0, Lcom/miui/home/launcher/ApplicationsMessage$MessageReceiver;->this$0:Lcom/miui/home/launcher/ApplicationsMessage;
 
@@ -118,28 +118,28 @@
 
     const-string p2, "android.intent.extra.update_application_message_text"
 
-    .line 154
+    .line 152
     invoke-virtual {p3, p2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
     const-string p2, "android.intent.extra.update_application_message_text_background"
 
-    .line 155
+    .line 153
     invoke-virtual {p3, p2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
     const-string p2, "android.intent.extra.update_application_message_icon_tile"
 
-    .line 156
+    .line 154
     invoke-virtual {p3, p2}, Landroid/content/Intent;->getByteArrayExtra(Ljava/lang/String;)[B
 
     move-result-object v6
 
     move-object v1, p1
 
-    .line 153
+    .line 151
     invoke-static/range {v0 .. v6}, Lcom/miui/home/launcher/ApplicationsMessage;->access$000(Lcom/miui/home/launcher/ApplicationsMessage;Landroid/content/ComponentName;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;[B)V
 
     :cond_3
@@ -152,7 +152,7 @@
 
     const-string v0, "Launcher.ApplicationsMessage"
 
-    .line 129
+    .line 127
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -177,17 +177,17 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 130
+    .line 128
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 131
+    .line 129
     invoke-static {p1}, Lcom/miui/launcher/utils/LauncherUtils;->getSender(Landroid/content/Intent;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 132
+    .line 130
     iget-object v2, p0, Lcom/miui/home/launcher/ApplicationsMessage$MessageReceiver;->this$0:Lcom/miui/home/launcher/ApplicationsMessage;
 
     invoke-static {v2}, Lcom/miui/home/launcher/ApplicationsMessage;->access$200(Lcom/miui/home/launcher/ApplicationsMessage;)Ljava/util/HashSet;
@@ -198,7 +198,7 @@
 
     move-result v6
 
-    .line 133
+    .line 131
     iget-object v2, p0, Lcom/miui/home/launcher/ApplicationsMessage$MessageReceiver;->this$0:Lcom/miui/home/launcher/ApplicationsMessage;
 
     invoke-static {v2}, Lcom/miui/home/launcher/ApplicationsMessage;->access$300(Lcom/miui/home/launcher/ApplicationsMessage;)Ljava/util/HashSet;
@@ -222,7 +222,7 @@
 
     iget-object v2, p0, Lcom/miui/home/launcher/ApplicationsMessage$MessageReceiver;->this$0:Lcom/miui/home/launcher/ApplicationsMessage;
 
-    .line 134
+    .line 132
     invoke-static {v2}, Lcom/miui/home/launcher/ApplicationsMessage;->access$100(Lcom/miui/home/launcher/ApplicationsMessage;)Lcom/miui/home/launcher/Launcher;
 
     move-result-object v2
@@ -235,7 +235,7 @@
     :try_start_0
     const-string v1, "android.intent.action.APPLICATION_MESSAGE_UPDATE"
 
-    .line 139
+    .line 137
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -244,19 +244,19 @@
 
     const-string v0, "android.intent.extra.update_application_component_name"
 
-    .line 140
+    .line 138
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "Launcher.ApplicationsMessage"
 
-    .line 141
+    .line 139
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "update "
+    const-string v3, "update "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -280,7 +280,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 142
+    .line 140
     invoke-static {}, Landroid/os/Process;->myUserHandle()Landroid/os/UserHandle;
 
     move-result-object v1
@@ -289,12 +289,12 @@
 
     move-result v8
 
-    .line 143
+    .line 141
     invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->reConstructComponentName(Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object v5
 
-    .line 144
+    .line 142
     iget-object v0, p0, Lcom/miui/home/launcher/ApplicationsMessage$MessageReceiver;->this$0:Lcom/miui/home/launcher/ApplicationsMessage;
 
     invoke-static {v0}, Lcom/miui/home/launcher/ApplicationsMessage;->access$100(Lcom/miui/home/launcher/ApplicationsMessage;)Lcom/miui/home/launcher/Launcher;
@@ -324,7 +324,7 @@
 
     const-string v1, "problem while stopping AppWidgetHost during Launcher destruction"
 
-    .line 162
+    .line 160
     invoke-static {v0, v1, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_2
@@ -335,7 +335,7 @@
     :goto_1
     const-string p1, "Launcher.ApplicationsMessage"
 
-    .line 135
+    .line 133
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -368,7 +368,7 @@
 .method private onReceive$___twin___(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
 
-    .line 128
+    .line 126
     new-instance p1, Lcom/miui/home/launcher/-$$Lambda$ApplicationsMessage$MessageReceiver$i37jdjaqEyTxzQiNKZia9JTHIws;
 
     invoke-direct {p1, p0, p2}, Lcom/miui/home/launcher/-$$Lambda$ApplicationsMessage$MessageReceiver$i37jdjaqEyTxzQiNKZia9JTHIws;-><init>(Lcom/miui/home/launcher/ApplicationsMessage$MessageReceiver;Landroid/content/Intent;)V

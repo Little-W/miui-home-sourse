@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/navigation_type_container" android:layout_width="fill_parent" android:layout_height="wrap_content"
+<LinearLayout android:orientation="horizontal" android:id="@id/navigation_type_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/navigation_guide_container_margin_horizontal" android:paddingEnd="@dimen/navigation_guide_container_margin_horizontal"
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.miui.home.recents.settings.NavigationBarTypeView android:orientation="vertical" android:id="@id/full_screen_gesture" android:layout_width="wrap_content" android:layout_height="wrap_content">
-        <com.miui.home.settings.FixedAspectRatioLottieAnimView android:id="@id/full_screen_lottie_view" android:layout_width="@dimen/navigation_bar_type_width" android:layout_height="0.0dip" app:aspectRatio="@dimen/navigation_bar_type_container_ratio" style="@style/NavBarTypeLottieAnim" />
-        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/navigation_type_full_screen" style="@style/NavBarTypeTitle" />
-    </com.miui.home.recents.settings.NavigationBarTypeView>
-    <com.miui.home.recents.settings.NavigationBarTypeView android:orientation="vertical" android:id="@id/virtual_key" android:layout_width="wrap_content" android:layout_height="wrap_content">
-        <com.miui.home.settings.FixedAspectRatioLottieAnimView android:layout_width="@dimen/navigation_bar_type_width" android:layout_height="0.0dip" android:src="@drawable/navigation_picker_virtual_keys" app:aspectRatio="@dimen/navigation_bar_type_container_ratio" style="@style/NavBarTypeLottieAnim" />
+    <com.miui.home.recents.settings.NavigationBarTypeView android:orientation="vertical" android:id="@id/virtual_key" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <com.miui.home.settings.FixedAspectRatioLottieAnimView android:layout_width="fill_parent" android:layout_height="0.0dip" android:src="@drawable/navigation_picker_virtual_keys" app:aspectRatio="1.8" style="@style/NavBarTypeLottieAnim" />
         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/navigation_type_virtual_key" style="@style/NavBarTypeTitle" />
+    </com.miui.home.recents.settings.NavigationBarTypeView>
+    <com.miui.home.recents.settings.NavigationBarTypeView android:orientation="vertical" android:id="@id/full_screen_gesture" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <com.miui.home.settings.FixedAspectRatioLottieAnimView android:id="@id/full_screen_lottie_view" android:layout_width="fill_parent" android:layout_height="0.0dip" app:aspectRatio="1.8" style="@style/NavBarTypeLottieAnim" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/navigation_type_full_screen" style="@style/NavBarTypeTitle" />
     </com.miui.home.recents.settings.NavigationBarTypeView>
 </LinearLayout>

@@ -22,7 +22,7 @@
 .method constructor <init>(J)V
     .locals 0
 
-    .line 157
+    .line 222
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-wide p1, p0, Lcom/google/android/filament/Stream$Builder$BuilderFinalizer;->mNativeObject:J
@@ -35,14 +35,14 @@
 .method public finalize()V
     .locals 3
 
-    .line 162
+    .line 227
     :try_start_0
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 165
+    .line 230
     :catch_0
     iget-wide v0, p0, Lcom/google/android/filament/Stream$Builder$BuilderFinalizer;->mNativeObject:J
 
@@ -57,7 +57,7 @@
 
     invoke-static {v1, v2}, Lcom/google/android/filament/Stream;->access$600(J)V
 
-    .line 166
+    .line 231
     throw v0
 
     :goto_0

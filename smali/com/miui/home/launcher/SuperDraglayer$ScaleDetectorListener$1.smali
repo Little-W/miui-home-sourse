@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/SuperDraglayer$ScaleDetectorListener;)V
     .locals 0
 
-    .line 694
+    .line 685
     iput-object p1, p0, Lcom/miui/home/launcher/SuperDraglayer$ScaleDetectorListener$1;->this$1:Lcom/miui/home/launcher/SuperDraglayer$ScaleDetectorListener;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 1
 
-    .line 697
+    .line 688
     iget-object v0, p0, Lcom/miui/home/launcher/SuperDraglayer$ScaleDetectorListener$1;->this$1:Lcom/miui/home/launcher/SuperDraglayer$ScaleDetectorListener;
 
     iget-object v0, v0, Lcom/miui/home/launcher/SuperDraglayer$ScaleDetectorListener;->this$0:Lcom/miui/home/launcher/SuperDraglayer;

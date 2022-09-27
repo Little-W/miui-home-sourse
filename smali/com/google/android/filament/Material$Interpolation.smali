@@ -34,7 +34,7 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .line 102
+    .line 116
     new-instance v0, Lcom/google/android/filament/Material$Interpolation;
 
     const-string v1, "SMOOTH"
@@ -45,7 +45,7 @@
 
     sput-object v0, Lcom/google/android/filament/Material$Interpolation;->SMOOTH:Lcom/google/android/filament/Material$Interpolation;
 
-    .line 105
+    .line 119
     new-instance v0, Lcom/google/android/filament/Material$Interpolation;
 
     const-string v1, "FLAT"
@@ -58,7 +58,7 @@
 
     const/4 v0, 0x2
 
-    .line 100
+    .line 114
     new-array v0, v0, [Lcom/google/android/filament/Material$Interpolation;
 
     sget-object v1, Lcom/google/android/filament/Material$Interpolation;->SMOOTH:Lcom/google/android/filament/Material$Interpolation;
@@ -82,7 +82,7 @@
         }
     .end annotation
 
-    .line 100
+    .line 114
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -91,7 +91,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/android/filament/Material$Interpolation;
     .locals 1
 
-    .line 100
+    .line 114
     const-class v0, Lcom/google/android/filament/Material$Interpolation;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -106,7 +106,7 @@
 .method public static values()[Lcom/google/android/filament/Material$Interpolation;
     .locals 1
 
-    .line 100
+    .line 114
     sget-object v0, Lcom/google/android/filament/Material$Interpolation;->$VALUES:[Lcom/google/android/filament/Material$Interpolation;
 
     invoke-virtual {v0}, [Lcom/google/android/filament/Material$Interpolation;->clone()Ljava/lang/Object;

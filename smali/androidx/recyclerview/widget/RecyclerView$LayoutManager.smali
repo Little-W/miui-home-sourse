@@ -1745,40 +1745,6 @@
     return v0
 .end method
 
-.method public getItemCount()I
-    .locals 1
-
-    .line 9112
-    iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    if-eqz v0, :cond_1
-
-    .line 9113
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->getItemCount()I
-
-    move-result v0
-
-    goto :goto_1
-
-    :cond_1
-    const/4 v0, 0x0
-
-    :goto_1
-    return v0
-.end method
-
 .method public getLayoutDirection()I
     .locals 1
 
@@ -1856,27 +1822,6 @@
     return v0
 .end method
 
-.method public getPaddingEnd()I
-    .locals 1
-
-    .line 9059
-    iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
-
-    if-eqz v0, :cond_0
-
-    invoke-static {v0}, Landroidx/core/view/ViewCompat;->getPaddingEnd(Landroid/view/View;)I
-
-    move-result v0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    return v0
-.end method
-
 .method public getPaddingLeft()I
     .locals 1
 
@@ -1907,27 +1852,6 @@
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getPaddingRight()I
-
-    move-result v0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    return v0
-.end method
-
-.method public getPaddingStart()I
-    .locals 1
-
-    .line 9049
-    iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
-
-    if-eqz v0, :cond_0
-
-    invoke-static {v0}, Landroidx/core/view/ViewCompat;->getPaddingStart(Landroid/view/View;)I
 
     move-result v0
 
@@ -2311,15 +2235,6 @@
     const/4 p1, 0x0
 
     return p1
-.end method
-
-.method public isMeasurementCacheEnabled()Z
-    .locals 1
-
-    .line 9324
-    iget-boolean v0, p0, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->mMeasurementCacheEnabled:Z
-
-    return v0
 .end method
 
 .method public isSmoothScrolling()Z
@@ -3427,32 +3342,6 @@
     return p1
 .end method
 
-.method public removeAllViews()V
-    .locals 2
-
-    .line 8649
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getChildCount()I
-
-    move-result v0
-
-    add-int/lit8 v0, v0, -0x1
-
-    :goto_0
-    if-ltz v0, :cond_0
-
-    .line 8651
-    iget-object v1, p0, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->mChildHelper:Landroidx/recyclerview/widget/ChildHelper;
-
-    invoke-virtual {v1, v0}, Landroidx/recyclerview/widget/ChildHelper;->removeViewAt(I)V
-
-    add-int/lit8 v0, v0, -0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
 .method public removeAndRecycleAllViews(Landroidx/recyclerview/widget/RecyclerView$Recycler;)V
     .locals 2
 
@@ -3791,17 +3680,6 @@
     const/4 p1, 0x0
 
     return p1
-.end method
-
-.method public setAutoMeasureEnabled(Z)V
-    .locals 0
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    .line 7918
-    iput-boolean p1, p0, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->mAutoMeasure:Z
-
-    return-void
 .end method
 
 .method setExactMeasureSpecsFrom(Landroidx/recyclerview/widget/RecyclerView;)V

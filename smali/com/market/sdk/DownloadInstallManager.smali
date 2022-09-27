@@ -401,7 +401,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "update_download"
+    const-string v3, "update_download"
 
     sget-object v4, Lcom/market/sdk/utils/Constants$Update;->UPDATE_PROJECTION:[Ljava/lang/String;
 
@@ -456,7 +456,7 @@
 
     invoke-direct {v1}, Lcom/market/sdk/XiaomiUpdateAgent$UpdateInfo;-><init>()V
 
-    const-string/jumbo v2, "version_code"
+    const-string v2, "version_code"
 
     .line 168
     invoke-interface {v0, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -726,7 +726,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "update_download"
+    const-string v2, "update_download"
 
     sget-object v3, Lcom/market/sdk/utils/Constants$Update;->UPDATE_PROJECTION:[Ljava/lang/String;
 

@@ -32,7 +32,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 2022
+    .line 1914
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,6 +40,36 @@
 
 
 # virtual methods
+.method isWidgetFinding()Z
+    .locals 2
+
+    .line 1922
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isRotatable()Z
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_0
+
+    iget v0, p0, Lcom/miui/home/launcher/Workspace$CellInfo;->spanX:I
+
+    if-gt v0, v1, :cond_1
+
+    iget v0, p0, Lcom/miui/home/launcher/Workspace$CellInfo;->spanY:I
+
+    if-le v0, v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :cond_1
+    :goto_0
+    return v1
+.end method
+
 .method nextScreen(I)V
     .locals 1
 
@@ -47,25 +77,25 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 2032
+    .line 1926
     iget p1, p0, Lcom/miui/home/launcher/Workspace$CellInfo;->screenOrder:I
 
     if-lez p1, :cond_0
 
     add-int/lit8 p1, p1, -0x1
 
-    .line 2033
+    .line 1927
     iput p1, p0, Lcom/miui/home/launcher/Workspace$CellInfo;->screenOrder:I
 
     goto :goto_0
 
-    .line 2035
+    .line 1929
     :cond_0
     iput v0, p0, Lcom/miui/home/launcher/Workspace$CellInfo;->screenOrder:I
 
     goto :goto_0
 
-    .line 2038
+    .line 1932
     :cond_1
     iget p1, p0, Lcom/miui/home/launcher/Workspace$CellInfo;->screenOrder:I
 
@@ -80,7 +110,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 2044
+    .line 1938
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

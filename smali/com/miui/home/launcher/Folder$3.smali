@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Folder;)V
     .locals 0
 
-    .line 290
+    .line 262
     iput-object p1, p0, Lcom/miui/home/launcher/Folder$3;->this$0:Lcom/miui/home/launcher/Folder;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 1
 
-    .line 293
+    .line 265
     iget-object v0, p0, Lcom/miui/home/launcher/Folder$3;->this$0:Lcom/miui/home/launcher/Folder;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Folder;->access$400(Lcom/miui/home/launcher/Folder;)Landroid/graphics/drawable/Drawable;

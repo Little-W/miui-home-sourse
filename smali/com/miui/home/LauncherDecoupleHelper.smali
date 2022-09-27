@@ -85,25 +85,6 @@
     return-void
 .end method
 
-.method public final onAppsChanged(Ljava/util/List;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List<",
-            "+",
-            "Lcom/miui/home/launcher/AppInfo;",
-            ">;)V"
-        }
-    .end annotation
-
-    const-string v0, "removedPackages"
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
-
-    return-void
-.end method
-
 .method public final setAppListFilter(Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;)V
     .locals 1
 

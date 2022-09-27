@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="Icon_name_classic_mode">ഹോം സ്ക്രീന്‍ ക്രമീകരണം</string>
     <string name="accessibility_all_app_custom_category_finish">പൂർത്തിയാക്കി</string>
     <string name="accessibility_all_app_custom_category_item_remove">വിഭാഗങ്ങളിൽ നിന്ന് \"%1$s\" നീക്കംചെയ്യുക</string>
     <string name="accessibility_clear_search_bar_text">തിരയൽ ബാർ മായ്ക്കുക</string>
@@ -26,10 +25,8 @@
     <string name="activity_not_unlocked">ആപ്പുകൾ തുറക്കുന്നതിന് മുമ്പ് നിങ്ങളുടെ ഉപകരണം പൂർണ്ണമായി റീബൂട്ടുചെയ്യപ്പെടുന്നത് വരെ കാത്തിരിക്കുക</string>
     <string name="add_custom_category">ഇഷ്‌ടാനുസൃതം</string>
     <string name="add_screen">സ്ക്രീൻ ചേർക്കുക</string>
-    <string name="add_to_workspace">ഹോം സ്‌ക്രീനിലേക്ക് ചേർക്കുക</string>
     <string name="added_all_category">എല്ലാ ആപ്പുകളും ചേർത്തു</string>
     <string name="afternoon">ഉച്ചകഴിഞ്ഞ്</string>
-    <string name="agree_button">അംഗീകരിക്കുക</string>
     <string name="alexa_notification_add">ചേർക്കുക</string>
     <string name="alexa_notification_cancel">ഇപ്പോഴല്ല</string>
     <string name="alexa_notification_content">നിയന്ത്രണ കേന്ദ്രത്തിലേക്ക് Alexa എളുപ്പവഴി ചേർക്കണോ?</string>
@@ -68,7 +65,6 @@
     <string name="all_apps_slide_up_tips">ആപ്പ് ഡ്രോയർ തുറക്കുന്നതിനായി മുകളിലേക്ക് സ്വൈപ്പുചെയ്യുന്നത് കരുതിവച്ചിരിക്കുന്നു. സാധാരണ ഹോം സ്‌ക്രീൻ മോഡിലേക്ക് മാറി വീണ്ടും ശ്രമിക്കുക.</string>
     <string name="all_apps_suggestions">ആപ്പ് നിർദ്ദേശങ്ങൾ</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">ആനിമേഷൻ വേഗത</string>
     <string name="announce_for_app_move_in_folder">ഫോൾഡറിലെ %1$d സ്ഥാനത്തേക്ക് നീക്കി</string>
     <string name="announce_for_checked">%1$s, പരിശോധിച്ചു</string>
     <string name="announce_for_choose_default_screen">ഡിഫോൾട്ട് ഹോം സ്ക്രീനായി സ്ക്രീൻ %1$d ക്രമീകരിക്കുക</string>
@@ -121,13 +117,6 @@
     <string name="app_category_tools">ടൂളുകൾ</string>
     <string name="app_category_travel">യാത്ര</string>
     <string name="app_category_vr">VR</string>
-    <string name="app_drawer_double_confirm_description">ഇത് നിങ്ങളുടെ ഹോം സ്ക്രീൻ ലേഔട്ട് മാറ്റും. ഈ മാറ്റങ്ങൾ ക്രമീകരണത്തിൽ നിങ്ങൾക്ക് പിന്നീട് പഴയപടിയാക്കാം.</string>
-    <string name="app_drawer_double_confirm_title">ശ്രദ്ധിക്കുക</string>
-    <string name="app_drawer_feature_description">നിങ്ങളുടെ എല്ലാ ആപ്പുകളും ക്രമീകരിക്കുന്നതിനുള്ള മികച്ച ഉപകരണമാണ് ആപ്പ് ഡ്രോയർ. ആപ്പുകൾ സ്വയമേവ വർഗ്ഗീകരിച്ച് നിങ്ങൾക്കാവശ്യമുള്ളതെന്തും ഒറ്റയടിക്ക് കണ്ടെത്തുക!</string>
-    <string name="app_drawer_guide_description">നിങ്ങളുടെ പ്രിയപ്പെട്ട ആപ്പുകളിൽ നിങ്ങൾ തിരയുന്നത് കണ്ടെത്തുക</string>
-    <string name="app_drawer_guide_title">ആപ്പ് ഡ്രോയർ</string>
-    <string name="app_drawer_tip_title">ഞങ്ങൾ ആപ്പ് ഡ്രോയർ ഉപയോഗിച്ച് ഉള്ളടക്ക ഫീഡ് മാറ്റിപകരം വച്ചു.</string>
-    <string name="app_install_state">ഇൻസ്റ്റാൾ ചെയ്തു</string>
     <string name="app_name">smallWindow</string>
     <string name="application_name">സിസ്റ്റം ലോഞ്ചർ</string>
     <string name="apply">ക്രമീകരിക്കുക</string>
@@ -150,35 +139,8 @@
     <string name="back">മടങ്ങുക</string>
     <string name="backup_fail">ലോഞ്ചർ ബാക്കപ്പുചെയ്യാനായില്ല</string>
     <string name="bad_wallpaper_source_prompt">വാൾപേപ്പർ ലോഡ് ചെയ്യാനായില്ല</string>
-    <string name="branch_feature_description">ആപ്പുകൾ കൂടാതെ, ദ്രുത ഫൈൻഡറിന് ആപ്പിലെ ഉള്ളടക്കവും ഇനങ്ങളും ഓൺലൈനിൽ കണ്ടെത്താൻ കഴിയും.</string>
-    <string name="branch_guide_attention">മെച്ചപ്പെടുത്തിയ തിരയൽ ഉപയോഗിക്കുന്നതിന് നിങ്ങളുടെ തിരയൽ അഭ്യർത്ഥനകൾ, Google പരസ്യ ഐഡി, IP വിലാസം എന്നിവ Branch Metrics Inc-മായി പങ്കിടേണ്ടതുണ്ട്. ഈ ഫീച്ചർ ഉപയോഗിക്കുന്നതിന് മുമ്പ് <a href="http://url1"><font color="#B3000000">അന്തിമ ഉപയോക്തൃ കണ്ടെത്തൽ നിബന്ധനകളും ഉപാധികളും</font></a>, <a href="http://url2"><font color="#B3000000">Branch Discovery സ്വകാര്യതാ നയവും</font></a> വായിച്ച് അംഗീകരിക്കേണ്ടതുണ്ട്.</string>
-    <string name="branch_guide_description_one">ഞങ്ങൾ നിങ്ങളുടെ എല്ലാ ആപ്പുകളും ആപ്പ് ഡ്രോയറിൽ വയ്ക്കും. നിങ്ങളുടെ ഹോം സ്‌ക്രീൻ വൃത്തിയും ചിട്ടയും ഉള്ളതായി കാണപ്പെടും.</string>
-    <string name="branch_guide_description_three">അന്തർനിർമ്മിത തിരയൽ ഉപയോഗിച്ച്, നിങ്ങൾക്ക് ആവശ്യമുള്ളതെല്ലാം ഒറ്റയടിക്ക് കണ്ടെത്താൻ കഴിയും!</string>
-    <string name="branch_guide_description_two">ആപ്പ് ഡ്രോയർ ആപ്പുകളെ സ്വയമേവ വർഗീകരിക്കുന്നു.</string>
-    <string name="branch_guide_tip_title">ഓരോ ആപ്പും അതിന്റേതായ സ്ഥലത്ത്</string>
-    <string name="branch_guide_title">ആപ്പ് ഡ്രോയർ സന്ദർശിക്കുക</string>
-    <string name="branch_guide_type_four_desc">രണ്ട് ലളിതമായ ഘട്ടങ്ങളിലൂടെ നിങ്ങൾക്ക് പഴയ രീതിയിലേക്ക് മടങ്ങാം</string>
-    <string name="branch_guide_type_four_main">ക്രമീകരണത്തിൽ, ഹോം സ്ക്രീൻ > ഹോം സ്ക്രീൻ എന്നതിലേക്ക് പോയി \"ക്ലാസിക്\" തിരഞ്ഞെടുക്കുക.</string>
-    <string name="branch_guide_type_four_step_one">ക്രമീകരണം തുറക്കുക</string>
-    <string name="branch_guide_type_four_step_two">ഹോം സ്ക്രീൻ തിരഞ്ഞെടുക്കുക</string>
-    <string name="branch_guide_type_one_desc">ആപ്പ് ഡ്രോയർ ഉപയോഗിച്ച് നിങ്ങളുടെ ആപ്പുകൾ മാനേജുചെയ്യുക</string>
-    <string name="branch_guide_type_one_main">നിങ്ങളുടെ ഹോം സ്‌ക്രീൻ വൃത്തിയും ചിട്ടയുമുള്ളതാക്കാൻ ആപ്പുകൾ ആപ്പ് ഡ്രോയറിൽ സൂക്ഷിക്കുക.</string>
-    <string name="branch_new_feature">പുതിയ ഫീച്ചർ</string>
-    <string name="branch_privacy_policy">സ്വകാര്യതാ നയം</string>
-    <string name="branch_search_guide_description">ഞങ്ങളുടെ തിരയൽ ഫലങ്ങൾ ഇപ്പോൾ കൂടുതൽ സമഗ്രമാണ്</string>
-    <string name="branch_search_guide_privacy">ഈ സേവനം നൽകുന്നത് Branch Metrics Inc. ആണ്. നിങ്ങളുടെ ലൊക്കേഷൻ വിവരങ്ങൾ, തിരയൽ അന്വേഷണങ്ങൾ, Google പരസ്യ ഐഡി എന്നിവ Branch-മായി പങ്കിടും. ഈ സേവനം ഉപയോഗിക്കുന്നതിന് മുമ്പ് Branch-ന്റെ <a href="http://url1"><font color="#B3000000">ഉപാധികളും നിബന്ധനകളും</font></a>, <a href="http://url2"><font color="#B3000000">സ്വകാര്യതാ നയം</font></a> എന്നിവ വായിക്കുകയും അംഗീകരിക്കുകയും ചെയ്യുക.</string>
-    <string name="branch_search_guide_title">നിങ്ങളുടെ പ്രിയപ്പെട്ട ആപ്പുകളിൽ നിങ്ങൾ തിരയുന്നത് കണ്ടെത്തുക</string>
-    <string name="branch_terms_condition">ഉപാധികളും നിബന്ധനകളും</string>
-    <string name="branch_tip_title">ദ്രുത ഫൈൻഡർ ഉപയോഗിച്ച്, നിങ്ങൾക്ക് ആവശ്യമുള്ളതെല്ലാം ഒറ്റയടിക്ക് കണ്ടെത്താൻ കഴിയും.</string>
-    <string name="btn_agree">അംഗീകരിക്കുക</string>
-    <string name="btn_cancel">റദ്ദാക്കുക</string>
-    <string name="btn_close">ഓഫാക്കുക</string>
-    <string name="btn_open">ഓണാക്കുക</string>
-    <string name="btn_request_permission">അനുമതികൾ നൽകുക</string>
-    <string name="btn_set_right_now">അനുമതികൾ നൽകുക</string>
     <string name="buffering">ബഫർ ചെയ്യുന്നു…</string>
     <string name="cancel_action">റദ്ദാക്കുക</string>
-    <string name="cancel_botton">റദ്ദാക്കുക</string>
     <string name="cancel_btn_label">റദ്ദാക്കുക</string>
     <string name="cant_edit_lock_screen">ലോക്ക് സ്ക്രീൻ ശൈലി എഡിറ്റുചെയ്യാനാകില്ല</string>
     <string name="cant_remove_folder">ഫോൾഡർ നീക്കംചെയ്യാൻ കഴിയില്ല</string>
@@ -288,11 +250,9 @@
     <string name="emptyplaylist">ഗാനങ്ങൾ ചേർക്കാൻ ടാപ്പുചെയ്യുക</string>
     <string name="enable_wallpaper_scroll">സൈഡ് സ്ക്രോളിംഗ് ഓൺ ചെയ്യുക</string>
     <string name="encryption">എൻക്രിപ്ഷൻ</string>
-    <string name="enter_search_setting_title">ആപ്പ് ഡ്രോയർ തുറന്നതിനുശേഷം തിരയൽ തുറക്കുക</string>
     <string name="eras_ad">CE</string>
     <string name="eras_bc">BCE</string>
     <string name="evening">ഉച്ചകഴിഞ്ഞ്</string>
-    <string name="exit_overview_because_task_stack_changed">പശ്ചാത്തലത്തിൽ സംഭവിച്ച മാറ്റങ്ങൾ കാരണം സമീപകാലത്തേത് അടച്ചു</string>
     <string name="failed_to_delete_temporary">നീക്കംചെയ്യാനാകില്ല</string>
     <string name="failed_to_drop">നീക്കാനാകില്ല</string>
     <string name="failed_to_drop_widget_invalid">ഈ വിജറ്റ് അസാധുവാണ്</string>
@@ -349,8 +309,6 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
-    <string name="fold_pair_install_shortcut_long_click">ഹോം സ്‌ക്രീനിലേക്ക് ചേർക്കാൻ അമർത്തിപ്പിടിക്കുക</string>
-    <string name="fold_pair_installed_shortcut_launcher">ഈ എളുപ്പവഴി ഇതിനകം നിലവിലുണ്ട്</string>
     <string name="folder_name">ഫോൾഡർ</string>
     <string name="frame_load_failed">ഫ്രെയിം ലോഡുചെയ്യാനാകില്ല</string>
     <string name="free_style_apps_title">ആപ്പ് തിരഞ്ഞെടുക്കുക</string>
@@ -406,14 +364,11 @@
     <string name="gadget_weather_title_14">കാലാവസ്ഥ</string>
     <string name="gadget_weather_title_24">കാലാവസ്ഥ</string>
     <string name="global_search_hint">തിരയുക</string>
-    <string name="got_it_botton">മനസിലായി</string>
     <string name="group_folder">പുതിയ ഫോൾഡർ</string>
     <string name="group_live_folders">ഫോൾഡറുകൾ</string>
     <string name="group_shortcuts">എളുപ്പവഴികൾ</string>
     <string name="guide_install_app_msg">നിങ്ങളുടെ ഉപകരണത്തിൽ ഈ ആപ്പ് ഇൻസ്റ്റാൾ ചെയ്തിട്ടില്ല. ഇപ്പോൾ ആപ്പ് കണ്ടെത്തി ഇൻസ്റ്റാൾ ചെയ്യട്ടെ?</string>
     <string name="guide_install_app_title">ആപ്പ് കണ്ടെത്തി ഇൻസ്റ്റാൾ ചെയ്യട്ടെ?</string>
-    <string name="guide_permission_title">അനുമതികൾ ആവശ്യമാണ്</string>
-    <string name="guide_privacy_dialog_title">സേവന വ്യവസ്ഥകള്‍</string>
     <string name="guide_tips_editing_mode">ഒരു വിജറ്റ് തിരഞ്ഞെടുക്കാൻ അമർത്തിപ്പിടിക്കുക</string>
     <string name="home_gesture_content_center">ഉള്ളടക്ക കേന്ദ്രം</string>
     <string name="home_gesture_global_search">തിരയുക </string>
@@ -444,9 +399,6 @@
     <string name="launcher_slide_up_title">ഹോം സ്ക്രീനിൽ മുകളിലേയ്ക്ക് സ്വൈപ്പുചെയ്യുക</string>
     <string name="launcher_sliding_up_gesture">തിരയൽ തുറക്കാൻ ഹോം സ്ക്രീനിൽ മുകളിലേക്ക് സ്വൈപ്പുചെയ്യുക</string>
     <string name="launcher_title">ഹോം സ്ക്രീനും സമീപകാലത്തുള്ളവയും</string>
-    <string name="layout_guide_description">ആപ്പ് ഡ്രോയർ നിങ്ങൾക്ക് ഇഷ്‌ടമായില്ലെങ്കിൽ, നിങ്ങൾക്ക് എല്ലായ്‌പ്പോഴും ക്ലാസിക് ഹോം സ്‌ക്രീനിലേക്ക് മടങ്ങാം. \"ഹോം സ്‌ക്രീൻ ക്രമീകരണം\" എളുപ്പവഴി ഉപയോഗിച്ച് രണ്ട് മോഡുകൾക്കിടയിൽ മാറുക.</string>
-    <string name="layout_guide_tip_title">ഒരൊറ്റ ടാപ്പുചെയ്യലിലൂടെ നിങ്ങൾക്ക് പഴയ രീതികളിലേക്ക് മടങ്ങാം</string>
-    <string name="layout_guide_title">ആപ്പ് ഡ്രോയർ എങ്ങനെ നീക്കംചെയ്യാം</string>
     <string name="like">പ്രിയപ്പെട്ടവയിലേയ്ക്ക് ചേർക്കുക</string>
     <string name="liked">പ്രിയപ്പെട്ടവയിലേയ്ക്ക് ചേർത്തു</string>
     <string name="loading_desktop">ഒരു നിമിഷം…</string>
@@ -613,11 +565,6 @@
     <string name="navigation_guide_recent_title">സമീപകാലത്തുള്ളവ തുറക്കുക</string>
     <string name="navigation_guide_recent_title_spec_with_quotation_pad">സമീപകാലത്തുള്ളവ തുറക്കുക</string>
     <string name="navigation_guide_settings">ഗെസ്ച്വർ ഡെമോകൾ</string>
-    <string name="navigation_position_center">മധ്യം</string>
-    <string name="navigation_position_left">ഇടത്</string>
-    <string name="navigation_position_right">വലത്</string>
-    <string name="navigation_position_summary">നാവിഗേഷൻ ബട്ടണുകളുടെ ഇഷ്‌ടാനുസൃത സ്ഥാനങ്ങൾ ഹോം സ്‌ക്രീനിൽ മാത്രമേ പ്രയോഗിക്കാൻ കഴിയൂ</string>
-    <string name="navigation_position_title">നാവിഗേഷൻ ബട്ടണുകളുടെ സ്ഥാനം</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">റദ്ദാക്കുക</string>
     <string name="navigation_set_miui_home_as_default_dialog_message">മൂന്നാം കക്ഷി ലോഞ്ചറുകൾ ഉപയോഗിച്ച് പൂർണ്ണ സ്‌ക്രീൻ ആംഗ്യങ്ങൾ ഉപയോഗിക്കാനാകില്ല. സിസ്റ്റം ലോഞ്ചറിലേക്ക് മാറി പൂർണ്ണ സ്‌ക്രീൻ ആംഗ്യങ്ങൾ ഓണാക്കണോ?</string>
     <string name="navigation_set_miui_home_as_default_dialog_ok">ശരി</string>
@@ -626,11 +573,9 @@
     <string name="navigation_type_title">സിസ്റ്റം നാവിഗേഷൻ</string>
     <string name="navigation_type_virtual_key">ബട്ടണുകൾ</string>
     <string name="network_error">നെറ്റ്‌വര്‍ക്കുമായി കണക്റ്റുചെയ്യാനായില്ല. വീണ്ടും ശ്രമിക്കുക.</string>
-    <string name="new_feature_title">പുതിയത് എന്താണ്</string>
     <string name="night">വൈകുന്നേരം</string>
     <string name="no_detail_page">വിശദാംശങ്ങൾ പേജ് ഇല്ല</string>
     <string name="no_space_toast">മതിയായ ഇടമില്ല</string>
-    <string name="no_space_toast_fold">ഇവിടെ മതിയായ ഇടമില്ല</string>
     <string name="no_space_toast_when_click_widget">ഈ പേജിൽ മതിയായ ഇടമില്ല. ഈ ഇനം മറ്റൊരു പേജിലേക്ക് ഡ്രാഗ് ചെയ്യാൻ ശ്രമിക്കുക.</string>
     <string name="noon">മദ്ധ്യാഹ്നം</string>
     <string name="normal_wallpaper">വാൾപേപ്പർ</string>
@@ -639,7 +584,6 @@
     <string name="notification_reset_title">ഐക്കണുകൾ ക്രമീകരിച്ചു</string>
     <string name="one_key_call_title">ഡയൽ ചെയ്യാൻ ടാപ്പുചെയ്യുക</string>
     <string name="online_wallpaper">ഓൺലൈൻ</string>
-    <string name="open_pad_personal_assistant_settings">ഹോം സ്ക്രീൻ വിജറ്റുകൾ</string>
     <string name="open_personal_assistant_dialog_btn_cancel">റദ്ദാക്കുക</string>
     <string name="open_personal_assistant_dialog_btn_confirm">ഓഫാക്കുക</string>
     <string name="open_personal_assistant_dialog_desc">നിങ്ങൾ ആപ്പ് വോൾട്ട് ഓഫാക്കിയതിനുശേഷം, നിങ്ങൾക്ക് ആപ്പ് വോൾട്ട് വിജറ്റുകൾ കാണാനോ ഉപയോഗിക്കാനോ കഴിയില്ല. അവരുടെ അപ്ഡേറ്റുചെയ്ത പതിപ്പുകൾ നിങ്ങൾക്ക് ലഭ്യമാകില്ല. എന്തായാലും ഓഫാക്കണോ?</string>
@@ -651,7 +595,6 @@
     <string name="ota_layout_adjustment_content">പുതിയ പതിപ്പിൽ ആന്തരികവും ബാഹ്യവുമായ ഹോം സ്ക്രീൻ ലേഔട്ടുകൾ സമന്വയിപ്പിച്ചിരിക്കുന്നു.</string>
     <string name="ota_layout_adjustment_title">ഹോം സ്ക്രീൻ ലേഔട്ടുകൾ</string>
     <string name="out_of_space">ഈ ഹോം സ്ക്രീനിൽ ഇനി സ്ഥലമില്ല</string>
-    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">മൂന്നാം കക്ഷി ആപ്പ് ഐക്കണുകളിൽ ആനിമേഷനുകൾ റെൻഡർ ചെയ്യുക</string>
     <string name="perfect_icons_switch_title">ആഗോള ഐക്കൺ ആനിമേഷനുകൾ</string>
     <string name="permdesc_install_shortcut">ഉപയോക്താവിന്റെ ഇടപെടൽ കൂടാതെ എളുപ്പവഴികൾ ചേർക്കാൻ ആപ്പിനെ അനുവദിക്കുന്നു.</string>
@@ -671,7 +614,6 @@
     <string name="photo_load_failed">ഫോട്ടോ ലോഡുചെയ്യാനാകില്ല</string>
     <string name="please_slide_agian">വീണ്ടും സ്ലൈഡുചെയ്യുക</string>
     <string name="pm">PM</string>
-    <string name="popular_search">പ്രചാരമുള്ളത്</string>
     <string name="pref_cell_layout_size">ആപ് ഐക്കൺ ലേഔട്ട്</string>
     <string name="pref_enable_drawing_cache_summary">മെമ്മറി സൃഷ്ടിക്കാൻ ഓഫ് ചെയ്യുക. ഇത് പ്രകടനം മെല്ലെയാക്കാനിടയാക്കാം.</string>
     <string name="pref_enable_drawing_cache_title">ഡ്രോയിംഗ് കാഷെ</string>
@@ -691,14 +633,6 @@
     <string name="privacy_thumbnail_blur_summary">സമീപകാലത്തുള്ളവയിലെ ആപ്പ് പ്രിവ്യൂകൾ മങ്ങിക്കുക</string>
     <string name="privacy_thumbnail_blur_title">ആപ്പ് പ്രിവ്യൂകൾ മങ്ങിക്കുക</string>
     <string name="quick_app">ദ്രുത ആപ്പുകൾ</string>
-    <string name="quick_finder_feature_description">ആപ്പുകൾ, ആപ്പുകളിലെ ഉള്ളടക്കം, ഇനങ്ങൾ എന്നിവ ഓൺലൈനിൽ വേഗത്തിൽ കണ്ടെത്താൻ ദ്രുത ഫൈൻഡർ നിങ്ങളെ അനുവദിക്കുന്നു. ക്രമീകരണത്തിൽ നിങ്ങൾക്ക് ഈ ഫീച്ചർ ഓഫാക്കാം.</string>
-    <string name="quick_finder_tip_title">നിങ്ങൾക്ക് ആവശ്യമുള്ളതെല്ലാം വേഗത്തിൽ കണ്ടെത്തുക</string>
-    <string name="quick_search_all_app_desc">ആപ്പ് ഡ്രോയറിൽ എല്ലാ ആപ്പുകളും പ്രദർശിപ്പിക്കുക</string>
-    <string name="quick_search_desc">ആപ്പ് ഡ്രോയർ തുറന്നതിനുശേഷം തിരയൽ തുറക്കുക</string>
-    <string name="quick_search_guide_all_apps">എല്ലാ ആപ്പുകളും</string>
-    <string name="quick_search_guide_ok_btn">ശരി</string>
-    <string name="quick_search_guide_quick_search">വേഗത്തിലുള്ള തിരയൽ</string>
-    <string name="quick_search_guide_title">ഡിഫോൾട്ട് മോഡ് തിരഞ്ഞെടുക്കുക</string>
     <string name="recent_apps">സമീപകാലത്തേത്</string>
     <string name="recent_menu_item_info">വിവരം</string>
     <string name="recent_menu_item_lock">ലോക്കുചെയ്യുക</string>
@@ -727,13 +661,6 @@
     <string name="recents_title_market">ആപ്പുകൾ കണ്ടെത്തുക</string>
     <string name="recents_title_security_scan">സുരക്ഷ സ്കാൻ</string>
     <string name="recents_tv_small_window_text">ഫ്ലോട്ടിംഗ് വിൻഡോകൾ</string>
-    <string name="recents_worldcirculate_text">തിരഞ്ഞെടുക്കാൻ റിലീസ് ചെയ്യുക</string>
-    <string name="recnets_relay_device_info">%s-ൽ നിന്ന്</string>
-    <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
-    <string name="recnets_worldcirculate_display_computer_info">ആപ്പ് %s-യിൽ പ്രവർത്തിക്കുന്നു</string>
-    <string name="recnets_worldcirculate_display_default_info">അത് ഇവിടെ തിരികെ കൊണ്ടുവരാൻ ടാപ്പുചെയ്യുക.</string>
-    <string name="recnets_worldcirculate_display_default_info_pad">അത് ഇവിടെ തിരികെ കൊണ്ടുവരാൻ ടാപ്പുചെയ്യുക.</string>
-    <string name="recnets_worldcirculate_display_pad_info">ആപ്പ് %s-യിൽ പ്രവർത്തിക്കുന്നു</string>
     <string name="recommend_apk_size_and_desc">%1$dMB | %2$s</string>
     <string name="recommend_app">ആപ്പ് നിർദ്ദേശങ്ങൾ</string>
     <string name="recommend_apps_default_title">ശൂന്യം</string>
@@ -751,8 +678,6 @@
     <string name="remove_invalidate_gadget_tips">നിങ്ങൾ ഉപയോഗിക്കുന്ന വിജറ്റുകളിൽ ഒന്ന് മേലിൽ ലഭ്യമല്ല. നിങ്ങൾക്ക് മറ്റൊന്ന് ചേർക്കാൻ കഴിയും.</string>
     <string name="remove_sys_app_content">ക്രമീകരണം > ആപ്പുകൾ > ഹോം സ്‌ക്രീൻ എളുപ്പവഴികൾ മാനേജുചെയ്യുക എന്നതിൽ ഹോം സ്‌ക്രീൻ എളുപ്പവഴികൾ വീണ്ടും ചേർക്കാൻ കഴിയും. ഇപ്പോൾ നീക്കംചെയ്യണോ?</string>
     <string name="remove_sys_app_title">ഹോം സ്ക്രീൻ എളുപ്പവഴി നീക്കംചെയ്യണോ?</string>
-    <string name="request_permission_msg">POCO ലോഞ്ചറിന് അതിന്റെ പൂർണ്ണമായ പ്രവർത്തനത്തിലേക്ക് നിങ്ങൾക്ക് ആക്സസ്സ് നൽകാൻ കുറച്ച് അനുമതികൾ ആവശ്യമാണ്.</string>
-    <string name="request_permission_title">അനുമതികൾ ആവശ്യമാണ്</string>
     <string name="reset_cate_tip_content">നിങ്ങൾ തുടരുകയാണെങ്കിൽ, ഡിഫോൾട്ട് ആപ്പ് ഗ്രൂപ്പുകൾ പുനഃസ്ഥാപിക്കും. എന്തായാലും തുടരണോ?</string>
     <string name="reset_cate_tip_title">ഡിഫോൾട്ട് ഗ്രൂപ്പുകൾ പുനഃസ്ഥാപിക്കുക</string>
     <string name="reset_description_first_time">2 മണിക്കൂറിനുള്ളിൽ %1$s-ൽ നിന്നും നിങ്ങൾക്ക് ലേഔട്ട് പുനസ്ഥാപിക്കാം</string>
@@ -768,8 +693,6 @@
     <string name="screen_cells_config_title">ഹോം സ്ക്രീൻ ലേഔട്ട്</string>
     <string name="screen_locked_toast">ഹോം സ്ക്രീന്‍ ലേഔട്ട് ലോക്കുചെയ്തു.</string>
     <string name="screen_number">%d സ്ക്രീൻ</string>
-    <string name="search_bar_hint_content">ആപ്പുകൾക്കും ഉള്ളടക്കത്തിനുമായി തിരയുക</string>
-    <string name="search_guide_btn">മനസിലായി</string>
     <string name="search_in_apps_store">\"%1$s\" in %2$s തിരയുക</string>
     <string name="search_no_result"> ഫലങ്ങളൊന്നും കണ്ടെത്താനായില്ല</string>
     <string name="select_all">എല്ലാം തിരഞ്ഞെടുക്കുക</string>
@@ -777,7 +700,6 @@
     <string name="select_photo">ഫോട്ടോ</string>
     <string name="send">അയക്കുക</string>
     <string name="server_error">ഒരു സെർവർ പിശക് സംഭവിച്ചു. ഒന്നോ രണ്ടോ മിനിറ്റ് കാത്തിരുന്ന് വീണ്ടും ശ്രമിക്കുക.</string>
-    <string name="service_double_attention">മെച്ചപ്പെടുത്തിയ തിരയൽ‌ പ്രവർ‌ത്തനം Branch Metrics Inc‌ നൽ‌കുന്നു. ഈ ഫീച്ചർ പ്രവർ‌ത്തിക്കുന്നതിന്, നിങ്ങളുടെ തിരയൽ‌ അഭ്യർ‌ത്ഥനകൾ‌, Google പരസ്യ ഐഡി, IP വിലാസം എന്നിവ Branch Metrics Inc-മായി പങ്കിടേണ്ടതുണ്ട്. ഈ ഫീച്ചർ ഉപയോഗിക്കുന്നതിന് മുമ്പ് <a href="http://url1"><font color="#B3000000">അന്തിമ ഉപയോക്തൃ കണ്ടെത്തൽ നിബന്ധനകളും ഉപാധികളും</font></a>, <a href="http://url2"><font color="#B3000000">Branch Discovery സ്വകാര്യതാ നയവും</font></a> വായിച്ച് അംഗീകരിക്കേണ്ടതുണ്ട്.</string>
     <string name="setting_wallpaper_tip">ക്രമീകരിക്കാൻ പിഞ്ച് അല്ലെങ്കിൽ സ്വൈപ്പുചെയ്യുക</string>
     <string name="settings">ക്രമീകരണം</string>
     <string name="settings_shortcut">ക്രമീകരണം</string>
@@ -815,13 +737,11 @@
     <string name="status_installing">ഇൻസ്റ്റാൾ ചെയ്യുന്നു</string>
     <string name="status_paused">തൽക്കാലം നിർത്തി</string>
     <string name="status_pending">കാത്തിരിക്കുന്നു</string>
-    <string name="suggestions">നിർദ്ദേശങ്ങൾ</string>
     <string name="sunday">ഞായർ</string>
     <string name="sunday_short">ഞായര്‍</string>
     <string name="sunday_shortest">ഞായര്‍</string>
     <string name="swipe_the_desktop_to_the_left">ഹോം സ്ക്രീനിൽ ഇടത്തേക്ക് സ്വൈപ്പുചെയ്യുക</string>
     <string name="swipe_the_desktop_to_the_right">ഹോം സ്ക്രീനിൽ വലത്തേക്ക് സ്വൈപ്പുചെയ്യുക</string>
-    <string name="switch_on_button">ഓണാക്കുക</string>
     <string name="switch_personal_assistant_app_vault">ആപ്പ് വോൾട്ട്</string>
     <string name="switch_personal_assistant_google">Google Discover</string>
     <string name="switch_personal_assistant_none">ഒന്നുമില്ല</string>
@@ -832,10 +752,6 @@
     <string name="system_shortcuts_remove">നീക്കംചെയ്യുക</string>
     <string name="system_text">സ്വയം</string>
     <string name="task_access_locked_app_msg">ആപ്പ് ലോക്ക് ഓൺ ചെയ്തു</string>
-    <string name="term_of_service">ഉപാധികളും നിബന്ധനകളും</string>
-    <string name="terms_of_services_one">ആപ്പ് ഡ്രോയർ, ക്വിക്ക് ഫൈൻഡർ എന്നിവയിലേക്ക് സ്വാഗതം. ആപ്പുകൾ, ഇൻ-ആപ്പ് ഉള്ളടക്കം, ഇനങ്ങൾ എന്നിവ ഓൺലൈനിൽ വേഗത്തിൽ കണ്ടെത്താൻ ക്വിക്ക് ഫൈൻഡർ നിങ്ങളെ അനുവദിക്കുന്നു. ഈ ഫീച്ചറുകൾ ഉപയോഗിക്കുന്നതിന് മുമ്പ് Xiaomi-യുടെ <a href="http://url1"><font color="#B3000000">സ്വകാര്യതാ നയം</font></a> വായിച്ച് അംഗീകരിക്കുക.</string>
-    <string name="terms_of_services_three">ക്രമീകരണത്തിൽ ഈ ഫീച്ചർ ഓഫാക്കാൻ നിങ്ങൾക്കാകും.</string>
-    <string name="terms_of_services_two">മെച്ചപ്പെടുത്തിയ തിരയൽ ഉപയോഗിക്കുന്നതിന് നിങ്ങളുടെ തിരയൽ അന്വേഷണങ്ങൾ, Google പരസ്യ ഐഡി, IP വിലാസം എന്നിവ ഉൾപ്പെടെ ആവശ്യമായ വ്യക്തിഗത വിവരങ്ങൾ Branch Metrics Inc ഉപയോഗിച്ച് പങ്കിടേണ്ടതുണ്ട്. <a href="http://url1"><font color="#B3000000">Branch ഡിസ്കവറി സ്വകാര്യതാ നയം</font></a> അനുസരിച്ച് Branch നിങ്ങളുടെ വ്യക്തിഗത വിവരങ്ങൾ പ്രോസസ്സ് ചെയ്യും. ഈ ഫീച്ചർ ഉപയോഗിക്കുന്നതിനുമുമ്പ് <a href="http://url2"><font color="#B3000000">അന്തിമ ഉപയോക്തൃ ഡിസ്കവറി നിബന്ധനകളും നിബന്ധനകളും</font></a>, <a href="http://url3"><font color="#B3000000">Branch ഡിസ്കവറി സ്വകാര്യതാ നയവും</font></a> വായിച്ച് അംഗീകരിക്കേണ്ടതുണ്ട്.</string>
     <string name="the_anniversary_of_lifting_martial_law">ആയോധന നിയമത്തിന്റെ വാർഷികം</string>
     <string name="the_anti_aggression_day">ആക്രമണ വിരുദ്ധ ദിനം</string>
     <string name="the_arbor_day">ആർബർ ദിനം</string>
@@ -902,11 +818,6 @@
     <string name="tuesday">ചൊവ്വ</string>
     <string name="tuesday_short">ചൊവ്വ</string>
     <string name="tuesday_shortest">ചൊവ്വ</string>
-    <string name="uni_search_permission_content">ഓൺലൈൻ തിരയൽ ഫീച്ചറുകൾ ഓണാക്കുക. (തിരയൽ സേവനങ്ങൾ Branch നൽകുന്നു.)</string>
-    <string name="uni_search_permission_msg">തിരയൽ ഫലങ്ങൾ മെച്ചപ്പെടുത്തുന്നതിന് നിങ്ങളുടെ ലൊക്കേഷനും കോൺടാക്റ്റുകളും ആക്സസ് ചെയ്യാൻ POCO ലോഞ്ചറിനെ അനുവദിക്കുക.</string>
-    <string name="uni_search_permission_title">തിരയൽ മെച്ചപ്പെടുത്തി</string>
-    <string name="uni_search_setting_summary">ആപ്പിലെ ഉള്ളടക്കങ്ങൾ നേരിട്ട് കണ്ടെത്തുക</string>
-    <string name="uni_search_setting_title">ആപ്പിലെ അന്വേഷണ മോഡ്</string>
     <string name="uninstall">അൺഇൻസ്റ്റാൾ ചെയ്യുക</string>
     <string name="uninstall_dialog_message">അൺഇൻസ്റ്റാൾ ചെയ്താൽ എല്ലാ ആപ്പ് ഡാറ്റകളും നീക്കംചെയ്യപ്പെടും.</string>
     <string name="uninstall_dialog_title_format">%s അൺഇൻസ്റ്റാൾ ചെയ്യട്ടെ?</string>
@@ -917,7 +828,6 @@
     <string name="uninstall_xspace_dialog_title_format">ഇരട്ട \"%s\" അൺ‌ഇൻസ്റ്റാൾചെയ്യണോ?</string>
     <string name="unknown_artist_name">അറിയില്ലാത്ത ആർട്ടിസ്റ്റ്</string>
     <string name="unnamed_folder_name">ഫോൾഡർ</string>
-    <string name="upgrade_remove_small_window_in_recents">ഫ്ലോട്ടിംഗ് വിൻഡോകളിൽ ആപ്പുകൾ തുറക്കാൻ നിങ്ങൾക്ക് സൈഡ്ബാർ ഉപയോഗിക്കാം</string>
     <string name="wallpaper">വാൾപേപ്പർ</string>
     <string name="wallpaper_auto_change_title">ലോക്ക് സ്ക്രീൻ</string>
     <string name="wallpaper_failed_message">വാൾപേപ്പർ ക്രമീകരിക്കാനാകുന്നില്ല</string>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="Icon_name_classic_mode">होम स्क्रिन सेटिंग्स</string>
     <string name="accessibility_all_app_custom_category_finish">सम्पन्न भयो</string>
     <string name="accessibility_all_app_custom_category_item_remove">कोटीबाट \"%1$s\" हटाउनुहोस्</string>
     <string name="accessibility_clear_search_bar_text">खोज पट्टी खाली गर्नुहोस्</string>
@@ -26,10 +25,8 @@
     <string name="activity_not_unlocked">एपहरू खोल्न अघि तपाईंको डिभाइस पूर्ण रूपमा रिबुट नहुन्जेलसम्म पर्खनुहोस्</string>
     <string name="add_custom_category">अनुकूलन गर्नुहोस्</string>
     <string name="add_screen">स्क्रिन थप्नुहोस्</string>
-    <string name="add_to_workspace">होम स्क्रिनमा थप्नुहोस्</string>
     <string name="added_all_category">सबै एपहरू सफलतापूर्वक थपियो</string>
     <string name="afternoon">दिउँसो</string>
-    <string name="agree_button">समहत छु</string>
     <string name="alexa_notification_add">थप्नुहोस्</string>
     <string name="alexa_notification_cancel">अहिले होइन</string>
     <string name="alexa_notification_content">नियन्त्रण केन्द्र मा Alexa सर्टकर्ट थप्नुहुन्छ?</string>
@@ -68,7 +65,6 @@
     <string name="all_apps_slide_up_tips">माथि स्वाइप अप गर्ने एप ड्रयर खोल्नका लागि आरक्षित छ। नियमित होम स्क्रिन मोडमा स्विच गर्नुहोस् र फेरि प्रयास गर्नुहोस्।</string>
     <string name="all_apps_suggestions">एप सुझावहरू</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">एनिमेसन गति</string>
     <string name="announce_for_app_move_in_folder">फोल्डरको %1$d स्थानमा लगियो</string>
     <string name="announce_for_checked">%1$s, जाँची सक्यो</string>
     <string name="announce_for_choose_default_screen">स्क्रीन %1$d पूर्वनिर्धारित होम स्क्रिनको रूपमा सेट गर्नुहोस्</string>
@@ -121,13 +117,6 @@
     <string name="app_category_tools">उपकरणहरू</string>
     <string name="app_category_travel">यात्रा</string>
     <string name="app_category_vr">VR</string>
-    <string name="app_drawer_double_confirm_description">यसले तपाईंको होम स्क्रिन लेआउट परिवर्तन गर्छ। तपाईंले पछि सेटिंग्समा यी परिवर्तनहरू बद्ली गर्न सक्नुहुनेछ।</string>
-    <string name="app_drawer_double_confirm_title">ध्यान दिनुहोस्</string>
-    <string name="app_drawer_feature_description">एप ड्रयर तपाईंको सबै एपहरू व्यवस्थित गर्नको लागि उत्तम उपकरण हो। एपहरूलाई स्वचालित रूपमा वर्गीकृत गर्नुहोस् र तपाईंलाई चाहिने कुनै पनि कुरा झट्ट फेला पार्नुहोस्!</string>
-    <string name="app_drawer_guide_description">तपाईंको मनपर्दो एप्समा तपाईं के चाहानुहुन्छ सो खोज्नुहोस्</string>
-    <string name="app_drawer_guide_title">एप ड्रयर</string>
-    <string name="app_drawer_tip_title">हामीले एप ड्रयरलाई सामग्री फिडमा परिवर्तन गर्यौं।</string>
-    <string name="app_install_state">इन्स्टल गरियो</string>
     <string name="app_name">smallWindow</string>
     <string name="application_name">सिस्टम लन्चर</string>
     <string name="apply">सेट गर्नुहोस्</string>
@@ -150,35 +139,8 @@
     <string name="back">पछाडी</string>
     <string name="backup_fail">ब्याकअप लन्चर गर्न सकिएन</string>
     <string name="bad_wallpaper_source_prompt">वालपेपर लोड गर्न सकिएन</string>
-    <string name="branch_feature_description">एपहरू बाहेक, Quick Finder ले इन-एप सामग्री र वस्तुहरू अनलाइन फेला पार्न सक्दछ।</string>
-    <string name="branch_guide_attention">वर्धित खोजी प्रयोग गर्न तपाईंको खोजी अनुरोधहरू, Google विज्ञापन आइडी, र आईपी ठेगाना Branch Metrics Inc.सँग साझेदारी गर्नु आवश्यक छ। यो फिचर प्रयोग गर्न अघि <a href="http://url1"><font color="#B3000000">अन्त प्रयोगकर्ता खोज सर्तहरू &amp; सर्तहरू</font></a> र <a href="http://url2"><font color="#B3000000">Branch Discovery Privacy निति</font></a> पढ्नुहोस् र यससंग सहमत हुनुहोस्।</string>
-    <string name="branch_guide_description_one">हामी तपाईंको सबै एपहरू एप ड्रयरमा हाल्नेछौं। तपाईंको होम स्क्रिन सफा र व्यवस्थित देखिनेछ।</string>
-    <string name="branch_guide_description_three">बिल्ट-इन खोजका साथ, तपाईं स्न्यापमा तपाईंलाई चाहिने सबै भेट्टाउन सक्षम हुनुहुनेछ!</string>
-    <string name="branch_guide_description_two">एप ड्रयरले एपहरूलाई स्वचालित रूपमा वर्गीकृत गर्दछ।</string>
-    <string name="branch_guide_tip_title">प्रत्येक एप आफ्नो ठाउँमा राखिएको छ</string>
-    <string name="branch_guide_title">एप ड्रयर हेर्नुहोस्</string>
-    <string name="branch_guide_type_four_desc">तपाईं दुई सजिलो चरणमा पुरानो तरिकामा फर्कन सक्नुहुन्छ</string>
-    <string name="branch_guide_type_four_main">सेटिंग्समा, होम स्क्रिन > होम स्क्रिन मा जानुहोस् र \"क्लासिक\" चयन गर्नुहोस्।</string>
-    <string name="branch_guide_type_four_step_one">सेटिंग्स खोल्नुहोस्</string>
-    <string name="branch_guide_type_four_step_two">होम स्क्रिन चयन गर्नुहोस्</string>
-    <string name="branch_guide_type_one_desc">एप ड्रयरमा तपाईंको एप्स प्रबन्धन गर्नुहोस्</string>
-    <string name="branch_guide_type_one_main">तपाईंको होम स्क्रिन सफा र व्यवस्थित बनाउन तपाईंको एपहरू एप ड्रयरमा राख्नुहोस्।</string>
-    <string name="branch_new_feature">नयाँ फिचर</string>
-    <string name="branch_privacy_policy">गोपनीयता नीति</string>
-    <string name="branch_search_guide_description">हाम्रो खोज नतीजाहरू अब धेरै व्यापक छन्</string>
-    <string name="branch_search_guide_privacy">यो सेवा Branch Metrics Inc. द्वारा संचालित गरिन्छ। तपाईंको स्थान जानकारी, खोज प्रश्नहरू, र Google विज्ञापन आइडी Branch सँग शेयर गरिनेछ। यो सेवा प्रयोग गर्न अघि Branch को <a href="http://url1"><font color="#B3000000">सर्त तथा नियमहरू</font></a> र <a href="http://url2"><font color="#B3000000">गोपनीयता नीति</font></a> पढ्नुहोस् र यससंग सहमत हुनुहोस्।</string>
-    <string name="branch_search_guide_title">तपाईंको मनपर्दो एप्समा तपाईं के चाहानुहुन्छ सो खोज्नुहोस्</string>
-    <string name="branch_terms_condition">शर्त तथा अवस्थाहरू</string>
-    <string name="branch_tip_title">Quick Finder ले, तपाईं झट्ट तपाईंलाई चाहिने सबै भेट्टाउन सक्नुहुन्छ।</string>
-    <string name="btn_agree">समहत छु</string>
-    <string name="btn_cancel">रद्द गर्नुहोस्</string>
-    <string name="btn_close">अफ गर्नुहोस्</string>
-    <string name="btn_open">अन गर्नुहोस्</string>
-    <string name="btn_request_permission">अनुमति दिनुहोस्</string>
-    <string name="btn_set_right_now">अनुमति दिनुहोस्</string>
     <string name="buffering">बफरिङ…</string>
     <string name="cancel_action">रद्द गर्नुहोस्</string>
-    <string name="cancel_botton">रद्द गर्नुहोस्</string>
     <string name="cancel_btn_label">रद्द गर्नुहोस्</string>
     <string name="cant_edit_lock_screen">लक स्क्रिन शैली सम्पादन गर्न सकिँदैन</string>
     <string name="cant_remove_folder">फोल्डर हटाउन सक्दैन</string>
@@ -288,11 +250,9 @@
     <string name="emptyplaylist">गीतहरू थप्नको लागि ट्यपा गर्नुहोस्</string>
     <string name="enable_wallpaper_scroll">छेउ-स्क्रोलिङ अन गर्नुहोस्</string>
     <string name="encryption">इन्क्रिप्सन</string>
-    <string name="enter_search_setting_title">एप ड्रयर खोलेपछि खोज खोल्नुहोस्</string>
     <string name="eras_ad">ईस्वी</string>
     <string name="eras_bc">ई.पू.</string>
     <string name="evening">दिउँसो</string>
-    <string name="exit_overview_because_task_stack_changed">पृष्ठभूमिमा भएका परिवर्तनहरूको कारणले बन्द गरिएको हालैको</string>
     <string name="failed_to_delete_temporary">हटाउन सक्दैन</string>
     <string name="failed_to_drop">सार्न सक्दैन</string>
     <string name="failed_to_drop_widget_invalid">यो विजेट अमान्य छ</string>
@@ -349,8 +309,6 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
-    <string name="fold_pair_install_shortcut_long_click">होम स्क्रिनमा थप्न थिचेर राख्नुहोस्</string>
-    <string name="fold_pair_installed_shortcut_launcher">यो शर्टकट पहिले नै अवस्थित छ</string>
     <string name="folder_name">फोल्डर</string>
     <string name="frame_load_failed">फ्रेम लोड गर्न सक्दैन</string>
     <string name="free_style_apps_title">एप छनोट गर्नुहोस्</string>
@@ -406,14 +364,11 @@
     <string name="gadget_weather_title_14">मौसम</string>
     <string name="gadget_weather_title_24">मौसम</string>
     <string name="global_search_hint">खोज्नुहोस्</string>
-    <string name="got_it_botton">बुझें</string>
     <string name="group_folder">नयाँ फोल्डर</string>
     <string name="group_live_folders">फोल्डरहरू</string>
     <string name="group_shortcuts">सर्टकटहरू</string>
     <string name="guide_install_app_msg">यो एप यस डिभाइसमा स्थापित गरिएको छैन। अहिले एप फेला पारि इन्स्टल गर्ने?</string>
     <string name="guide_install_app_title">एप फेला पारि स्थापना गर्ने?</string>
-    <string name="guide_permission_title">अनुमति आवश्यक छ</string>
-    <string name="guide_privacy_dialog_title">सेवाका सर्तहरू</string>
     <string name="guide_tips_editing_mode">विजेट पिक अप गर्न त्यसलाई थिचेर राख्नुहोस्</string>
     <string name="home_gesture_content_center">विषयवस्तु केन्द्र</string>
     <string name="home_gesture_global_search">खोज्नुहोस्</string>
@@ -443,10 +398,7 @@
     <string name="launcher_search_bar_value_enable">अन छ</string>
     <string name="launcher_slide_up_title">होम स्क्रिनमा माथि स्वाइप गर्नुहोस्</string>
     <string name="launcher_sliding_up_gesture">खोज खोल्नको लागि होम स्क्रिनमा माथि तिर स्वाइप गर्नुहोस्</string>
-    <string name="launcher_title">होम स्क्रिन र हालैको</string>
-    <string name="layout_guide_description">यदि तपाईंलाई एप ड्रयर मनपर्दैन भने, तपाईं जहिले पनि क्लासिक होम स्क्रिनमा जान सक्नुहुन्छ। केवल \"होम स्क्रिन सेटिंग्स\" सर्टकट प्रयोग गर्नुहोस् र दुई मोडहरू बीच स्विच गर्नुहोस्।</string>
-    <string name="layout_guide_tip_title">तपाइँ एकल ट्यापमा पुरानो तरिकाहरूमा फेरि जान सक्नुहुन्छ</string>
-    <string name="layout_guide_title">एप ड्रयर कसरी हटाउने</string>
+    <string name="launcher_title">होम स्क्रिन र हालकाहरू</string>
     <string name="like">मनपर्नेहरूमा थप्नुहोस्</string>
     <string name="liked">मनपर्नेहरूमा थपियो</string>
     <string name="loading_desktop">एक क्षण पर्खनुहोस्…</string>
@@ -613,11 +565,6 @@
     <string name="navigation_guide_recent_title">हालैको खोल्नुहोस्</string>
     <string name="navigation_guide_recent_title_spec_with_quotation_pad">हालैको खोल्नुहोस्</string>
     <string name="navigation_guide_settings">गेस्चर डेमोहरू</string>
-    <string name="navigation_position_center">केन्द्र</string>
-    <string name="navigation_position_left">बायाँ</string>
-    <string name="navigation_position_right">दायाँ</string>
-    <string name="navigation_position_summary">नेभिगेसन बटनहरूको अनुकूलन स्थितिहरू होम स्क्रिनमा मात्र लागू गर्न सकिन्छ</string>
-    <string name="navigation_position_title">नेभिगेसन बटनहरू पोजिसन</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">रद्द गर्नुहोस्</string>
     <string name="navigation_set_miui_home_as_default_dialog_message">तेस्रो पार्टी लन्चरहरू मार्फत पूर्ण स्क्रीन इशाराहरू प्रयोग गर्न सकिँदैन। सिस्टम लन्चरमा स्विच गरेर पूर्ण स्क्रिन इशारा खोल्नुहुन्छ?</string>
     <string name="navigation_set_miui_home_as_default_dialog_ok">ठिक छ</string>
@@ -626,11 +573,9 @@
     <string name="navigation_type_title">सिस्टम नेभिगेसन</string>
     <string name="navigation_type_virtual_key">बटनहरू</string>
     <string name="network_error">नेटवर्कमा जडान गर्न सकिएन। फेरि प्रयास गर्नुहोस्।</string>
-    <string name="new_feature_title">नयाँ के छ</string>
     <string name="night">साँझ</string>
     <string name="no_detail_page">विवरण पृष्ठ छैन</string>
     <string name="no_space_toast">पर्याप्त खाली ठाउँ छैन</string>
-    <string name="no_space_toast_fold">यहाँ पर्याप्त ठाउँ छैन</string>
     <string name="no_space_toast_when_click_widget">यस पृष्ठमा पर्याप्त स्थान छैन। यस वस्तुलाई फरक पृष्ठमा तान्नुहोस्।</string>
     <string name="noon">मध्य दिन</string>
     <string name="normal_wallpaper">वालपेपर</string>
@@ -639,7 +584,6 @@
     <string name="notification_reset_title">आइकनहरू सफलतापूर्वक व्यवस्थित गरियो</string>
     <string name="one_key_call_title">डायल गर्न ट्याप गर्नुहोस्</string>
     <string name="online_wallpaper">अनलाइन</string>
-    <string name="open_pad_personal_assistant_settings">होम स्क्रिन विजेट</string>
     <string name="open_personal_assistant_dialog_btn_cancel">रद्द गर्नुहोस्</string>
     <string name="open_personal_assistant_dialog_btn_confirm">अफ गर्नुहोस्</string>
     <string name="open_personal_assistant_dialog_desc">तपाईंले एप भल्ट बन्द गरेपछि, तपाईंले एप भल्ट विजेट हरू हेर्न वा प्रयोग गर्न सक्नुहुने छैन। तिनीहरूको अपडेट गरिएको संस्करण पनि उपलब्ध हुने छैन। जे भए पनि बन्द गर्नुहुन्छ?</string>
@@ -651,7 +595,6 @@
     <string name="ota_layout_adjustment_content">बाहिरी र भित्री होम स्क्रिन लेटाउटहरू नयाँ संस्करणसंग सिंक गरियो।</string>
     <string name="ota_layout_adjustment_title">होम स्क्रिन लेटाउट</string>
     <string name="out_of_space">यस होम स्क्रिनमा थप खाली ठाउँ छैन</string>
-    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">तेस्रो पार्टी एप आइकनहरूमा एनिमेसनहरू प्रस्तुत गर्नुहोस्</string>
     <string name="perfect_icons_switch_title">ग्लोबल आइकन एनिमेसनहरू</string>
     <string name="permdesc_install_shortcut">प्रयोगकर्ता इन्टरभेन्सन बिना एपलाई सर्टकटहरू थप्न अनुमति दिनुहोस्।</string>
@@ -671,7 +614,6 @@
     <string name="photo_load_failed">फोटो लोड गर्न सक्दैन</string>
     <string name="please_slide_agian">फेरि स्लाइड गर्नुहोस्</string>
     <string name="pm">PM</string>
-    <string name="popular_search">प्रचलित</string>
     <string name="pref_cell_layout_size">एप प्रतिमा सजावट</string>
     <string name="pref_enable_drawing_cache_summary">स्मृति खाली गर्नको लागि अफ गर्नुहोस्। यसले प्रदर्शन ढिलो बनाउन सक्छ।</string>
     <string name="pref_enable_drawing_cache_title">चित्र कोर्ने क्यास</string>
@@ -691,14 +633,6 @@
     <string name="privacy_thumbnail_blur_summary">हालैकोमा एपको पूर्वावलोकन ब्लर गर्नुहोस्</string>
     <string name="privacy_thumbnail_blur_title">एपको पूर्वावलोकन ब्लर गर्नुहोस्</string>
     <string name="quick_app">कुइक एप्स</string>
-    <string name="quick_finder_feature_description">Quick Finder ले तपाईंलाई एपहरू, इन-एप सामग्री, र वस्तु छिटो अनलाइन फेला पार्न अनुमति दिन्छ। तपाईं सेटिंग्स मा यो सुविधा बन्द गर्न सक्नुहुन्छ।</string>
-    <string name="quick_finder_tip_title">तपाईंलाई चाहिने सबै कुरा झट्ट फेला पार्नुहोस्</string>
-    <string name="quick_search_all_app_desc">सबै एप्स एप्स ड्रयरमा देखाउनुहोस्</string>
-    <string name="quick_search_desc">एप ड्रयर खोलेपछि खोज खोल्नुहोस्</string>
-    <string name="quick_search_guide_all_apps">सबै एप्स</string>
-    <string name="quick_search_guide_ok_btn">ठिक छ</string>
-    <string name="quick_search_guide_quick_search">त्वरित खोज</string>
-    <string name="quick_search_guide_title">पूर्वनिर्धारित मोड चयन गर्नुहोस्</string>
     <string name="recent_apps">हालैको</string>
     <string name="recent_menu_item_info">जानकारी</string>
     <string name="recent_menu_item_lock">लक गर्नुहोस्</string>
@@ -727,13 +661,6 @@
     <string name="recents_title_market">एप्स फेला पार्नुहोस्</string>
     <string name="recents_title_security_scan">सुरक्षा स्क्यान</string>
     <string name="recents_tv_small_window_text">फ्लोटिंग विन्डोस्</string>
-    <string name="recents_worldcirculate_text">चयन गर्न रिलिज गर्नुहोस्</string>
-    <string name="recnets_relay_device_info">%s बाट</string>
-    <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
-    <string name="recnets_worldcirculate_display_computer_info">एप %s मा चल्दैछ</string>
-    <string name="recnets_worldcirculate_display_default_info">यसलाई फेरि प्रयोग गर्न ट्याप गर्नुहोस्।</string>
-    <string name="recnets_worldcirculate_display_default_info_pad">यसलाई फेरि प्रयोग गर्न ट्याप गर्नुहोस्।</string>
-    <string name="recnets_worldcirculate_display_pad_info">एप %s मा चल्दैछ</string>
     <string name="recommend_apk_size_and_desc">%1$dMB | %2$s</string>
     <string name="recommend_app">एप सुझावहरू</string>
     <string name="recommend_apps_default_title">खाली गर्नुहोस्</string>
@@ -751,8 +678,6 @@
     <string name="remove_invalidate_gadget_tips">तपाईले प्रयोग गर्ने एउटा विजेट अब उपलब्ध छैन। तपाईं अर्को थप्न सक्नुहुन्छ।</string>
     <string name="remove_sys_app_content">तपाईं सेटिंग्स > एप्स > Manaहोम स्क्रिन सर्टकर्ट प्रबन्धन गर्नुहोस् मा होम स्क्रिन सर्टकर्ट थप्न सक्नुहुनेछ. अहिले हटाउनुहुन्छ?</string>
     <string name="remove_sys_app_title">होम स्क्रिन सर्टकट हटाउनुहुन्छ?</string>
-    <string name="request_permission_msg">POCO लन्चरले तपाईंलाई यसको पूर्ण प्रकार्यतामा पहुँच दिनको लागि केही अनुमतिहरू चाहिन्छ।</string>
-    <string name="request_permission_title">अनुमति आवश्यक छ</string>
     <string name="reset_cate_tip_content">यदि तपाईं जारी राख्नुहुन्छ भने, पूर्वनिर्धारित एप ग्रुपहरू पुनर्स्थापित हुनेछन्। जे भए पनि जारी राख्नुहुन्छ?</string>
     <string name="reset_cate_tip_title">पूर्वनिर्धारित ग्रुप पुन: भण्डारण गर्नुहोस्</string>
     <string name="reset_description_first_time">तपाईंले लेआउट %1$s 2 घण्टा भित्र बहाल गर्न सक्नुहुन्छ।</string>
@@ -768,8 +693,6 @@
     <string name="screen_cells_config_title">होम स्क्रिन सजावट</string>
     <string name="screen_locked_toast">होम स्क्रिन सजावट लक गरिएको छ।</string>
     <string name="screen_number">%d स्क्रिन</string>
-    <string name="search_bar_hint_content">एप र सामग्रीहरू खोज्नुहोस्</string>
-    <string name="search_guide_btn">बुझें</string>
     <string name="search_in_apps_store">%2$s मा \"%1$s\" खोज्नुहोस्</string>
     <string name="search_no_result">कुनै पनि परिणामहरू फेला पार्न सकिएन</string>
     <string name="select_all">सबै चयन गर्नुहोस्</string>
@@ -777,7 +700,6 @@
     <string name="select_photo">फोटो</string>
     <string name="send">पठाउनुहोस्</string>
     <string name="server_error">सरभरमा त्रुटि देखा पर्यो। एक वा दुई मिनेट पर्खनुहोस् र फेरि प्रयास गर्नुहोस्</string>
-    <string name="service_double_attention">विस्तारित खोज कार्यक्षमता Branch Metrics Inc. द्वारा प्रदान गरिएको हो। यो सुविधालाई काम गर्नको लागि हामीले तपाईंको खोजी अनुरोधहरू, Google विज्ञापन आइडी, र आईपी ठेगाना Branch Metrics Inc. सँग साझा गर्नु आवश्यक छ। यो फिचर प्रयोग गर्न अघि <a href="http://url1"><font color="#B3000000">अन्त प्रयोगकर्ता खोज सर्तहरू&amp; शर्त</font></a> र <a href="http://url2"><font color="#B3000000">Branch खोज गोपनीयता नीति</font></a> पढ्नुहोस् र यससंग सहमत हुनुहोस्।</string>
     <string name="setting_wallpaper_tip">समायोजन गर्नको लागि पिन्च वा स्वाइप गर्नुहोस्</string>
     <string name="settings">सेटिङहरू</string>
     <string name="settings_shortcut">सेटिङहरू</string>
@@ -815,13 +737,11 @@
     <string name="status_installing">इन्स्टल हुँदैछ</string>
     <string name="status_paused">पज गरियो</string>
     <string name="status_pending">प्रतिक्षा गर्दै</string>
-    <string name="suggestions">सुझावहरू</string>
     <string name="sunday">आइतवार</string>
     <string name="sunday_short">आइत</string>
     <string name="sunday_shortest">आइत</string>
     <string name="swipe_the_desktop_to_the_left">होम स्क्रिनमा बाँया स्वाइप गर्नुहोस्</string>
     <string name="swipe_the_desktop_to_the_right">होम स्क्रिनमा दाँया स्वाइप गर्नुहोस्</string>
-    <string name="switch_on_button">अन गर्नुहोस्</string>
     <string name="switch_personal_assistant_app_vault">एप भल्ट</string>
     <string name="switch_personal_assistant_google">Google Discover</string>
     <string name="switch_personal_assistant_none">कुनै पनि होइन</string>
@@ -832,10 +752,6 @@
     <string name="system_shortcuts_remove">हटाउनुहोस्</string>
     <string name="system_text">स्वत</string>
     <string name="task_access_locked_app_msg">एप लक अन गरियो</string>
-    <string name="term_of_service">सर्त तथा नियमहरू</string>
-    <string name="terms_of_services_one">एप ड्रयर र कुइक फाइन्डरमा स्वागत छ। कुइक फाइन्डरले तपाईंलाई एपहरू, इन-एप सामग्री, र वस्तुहरू छिटो अनलाइन फेला पार्न अनुमति दिन्छ। यी फिचरहरू प्रयोग गर्न अघि तपाईं Xiaomi को <a href="http://url1"><font color="#B3000000">गोपनीयता नीति</font></a> पढ्नुहोस् र यससंग सहमत हुनुहोस्।</string>
-    <string name="terms_of_services_three">तपाईंले कुनै पनि समय सेटिंग्समा यो फिचर अफ गर्न सक्नुहुन्छ।</string>
-    <string name="terms_of_services_two">परिष्कृत खोज प्रयोग गर्न आवश्यक निजी जानकारी जस्तै जपाईंको खोज प्रश्न समेत, Google विज्ञापन आइडी, र IP ठेगाना Branch Metrics Inc संग साझा गर्नुपर्छ। Branch ले तपाईंको निजी जानकारी <a href="http://url1"><font color="#B3000000">Branch Discovery गोपनीयता नीति</font></a> अनुसार प्रशोधन गर्नेछ। यो फिचर प्रयोग गर्न अघि <a href="http://url2"><font color="#B3000000">End User Discovery शर्त &amp; नियमहरू</font></a> र <a href="http://url3"><font color="#B3000000">Branch Discovery गोपनीयता नीति</font></a> पढ्नुहोस् र यससंग सहमत हुनुहोस्।</string>
     <string name="the_anniversary_of_lifting_martial_law">मार्शल लॉ लिफ्टिंगको वार्षिकोत्सव</string>
     <string name="the_anti_aggression_day">विरोधी आक्रमण दिन</string>
     <string name="the_arbor_day">आर्बर डे</string>
@@ -902,11 +818,6 @@
     <string name="tuesday">मङ्गलवार</string>
     <string name="tuesday_short">मङ्गल</string>
     <string name="tuesday_shortest">मंगल</string>
-    <string name="uni_search_permission_content">अनलाइन खोज फिचर अन गर्नुहोस्। (खोजी सेवाहरू शाखा द्वारा प्रदान गरिएको हो।)</string>
-    <string name="uni_search_permission_msg">POCO लन्चरलाई खोज परिणाम सुधार गर्न तपाईंको स्थान र सम्पर्कहरूमा पहुँच गर्ने अनुमति दिनुहोस्।</string>
-    <string name="uni_search_permission_title">खोजमा सुधार गरिएको छ</string>
-    <string name="uni_search_setting_summary">एपभित्र सिधै सामग्रीहरू फेला पार्नुहोस्</string>
-    <string name="uni_search_setting_title">इन-एप प्रश्न मोड</string>
     <string name="uninstall">अनइन्स्टल गर्नुहोस्</string>
     <string name="uninstall_dialog_message">अनइन्स्टल गर्नाले सबै एप डाटा हटाउनेछ।</string>
     <string name="uninstall_dialog_title_format">%s अनइन्स्टल गर्ने?</string>
@@ -917,7 +828,6 @@
     <string name="uninstall_xspace_dialog_title_format">डुअल \"%s\" अनइन्स्टल गर्ने?</string>
     <string name="unknown_artist_name">अज्ञात कलाकार</string>
     <string name="unnamed_folder_name">फोल्डर</string>
-    <string name="upgrade_remove_small_window_in_recents">तपाईं फ्लोटिंग विन्डोहरूमा एपहरू खोल्न साइडबार प्रयोग गर्न सक्नुहुन्छ</string>
     <string name="wallpaper">वालपेपर</string>
     <string name="wallpaper_auto_change_title">लक स्क्रिन</string>
     <string name="wallpaper_failed_message">वालपेपर सेट गर्न सक्दैन</string>

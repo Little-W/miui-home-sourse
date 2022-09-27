@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<View android:layout_gravity="center_horizontal" android:background="@color/hotseats_list_div_line_color" android:layout_width="@dimen/hotseats_list_div_line_width" android:layout_height="@dimen/hotseats_list_div_line_hight" android:layout_marginTop="@dimen/hotseats_list_div_line_margin_top" android:layout_marginBottom="@dimen/hotseats_list_div_line_margin_top" android:layout_marginStart="@dimen/hotseats_list_div_line_margin_start" android:layout_marginEnd="@dimen/hotseats_list_div_line_margin_start"
-  xmlns:android="http://schemas.android.com/apk/res/android" />

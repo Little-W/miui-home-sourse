@@ -26,12 +26,12 @@
 .method public constructor <init>(II)V
     .locals 0
 
-    .line 160
+    .line 151
     invoke-direct {p0, p1, p2}, Lcom/miui/home/launcher/InsettableFrameLayout$LayoutParams;-><init>(II)V
 
     const/4 p1, 0x0
 
-    .line 154
+    .line 145
     iput-boolean p1, p0, Lcom/miui/home/launcher/SuperDraglayer$LayoutParams;->customPosition:Z
 
     return-void

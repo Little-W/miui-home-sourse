@@ -11,7 +11,13 @@
 .end annotation
 
 
+# static fields
+.field private static final sBackendValues:[Lcom/google/android/filament/Engine$Backend;
+
+
 # instance fields
+.field private final mEntityManager:Lcom/google/android/filament/EntityManager;
+
 .field private final mLightManager:Lcom/google/android/filament/LightManager;
 
 .field private mNativeObject:J
@@ -22,16 +28,29 @@
 
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    .line 109
+    invoke-static {}, Lcom/google/android/filament/Engine$Backend;->values()[Lcom/google/android/filament/Engine$Backend;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/google/android/filament/Engine;->sBackendValues:[Lcom/google/android/filament/Engine$Backend;
+
+    return-void
+.end method
+
 .method private constructor <init>(J)V
     .locals 3
 
-    .line 140
+    .line 144
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 141
+    .line 145
     iput-wide p1, p0, Lcom/google/android/filament/Engine;->mNativeObject:J
 
-    .line 142
+    .line 146
     new-instance v0, Lcom/google/android/filament/TransformManager;
 
     invoke-static {p1, p2}, Lcom/google/android/filament/Engine;->nGetTransformManager(J)J
@@ -42,7 +61,7 @@
 
     iput-object v0, p0, Lcom/google/android/filament/Engine;->mTransformManager:Lcom/google/android/filament/TransformManager;
 
-    .line 143
+    .line 147
     new-instance v0, Lcom/google/android/filament/LightManager;
 
     invoke-static {p1, p2}, Lcom/google/android/filament/Engine;->nGetLightManager(J)J
@@ -53,16 +72,27 @@
 
     iput-object v0, p0, Lcom/google/android/filament/Engine;->mLightManager:Lcom/google/android/filament/LightManager;
 
-    .line 144
+    .line 148
     new-instance v0, Lcom/google/android/filament/RenderableManager;
 
     invoke-static {p1, p2}, Lcom/google/android/filament/Engine;->nGetRenderableManager(J)J
 
-    move-result-wide p1
+    move-result-wide v1
 
-    invoke-direct {v0, p1, p2}, Lcom/google/android/filament/RenderableManager;-><init>(J)V
+    invoke-direct {v0, v1, v2}, Lcom/google/android/filament/RenderableManager;-><init>(J)V
 
     iput-object v0, p0, Lcom/google/android/filament/Engine;->mRenderableManager:Lcom/google/android/filament/RenderableManager;
+
+    .line 149
+    new-instance v0, Lcom/google/android/filament/EntityManager;
+
+    invoke-static {p1, p2}, Lcom/google/android/filament/Engine;->nGetEntityManager(J)J
+
+    move-result-wide p1
+
+    invoke-direct {v0, p1, p2}, Lcom/google/android/filament/EntityManager;-><init>(J)V
+
+    iput-object v0, p0, Lcom/google/android/filament/Engine;->mEntityManager:Lcom/google/android/filament/EntityManager;
 
     return-void
 .end method
@@ -74,11 +104,11 @@
 
     return-void
 
-    .line 663
+    .line 680
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
-    const-string v0, "Object couldn\'t be destoyed (double destroy()?)"
+    const-string v0, "Object couldn\'t be destroyed (double destroy()?)"
 
     invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
@@ -90,7 +120,7 @@
 
     const-wide/16 v0, 0x0
 
-    .line 658
+    .line 675
     iput-wide v0, p0, Lcom/google/android/filament/Engine;->mNativeObject:J
 
     return-void
@@ -101,7 +131,7 @@
 
     const-wide/16 v0, 0x0
 
-    .line 162
+    .line 167
     invoke-static {v0, v1, v0, v1}, Lcom/google/android/filament/Engine;->nCreateEngine(JJ)J
 
     move-result-wide v2
@@ -110,14 +140,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 164
+    .line 169
     new-instance v0, Lcom/google/android/filament/Engine;
 
     invoke-direct {v0, v2, v3}, Lcom/google/android/filament/Engine;-><init>(J)V
 
     return-object v0
 
-    .line 163
+    .line 168
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -131,7 +161,7 @@
 .method public static create(Lcom/google/android/filament/Engine$Backend;)Lcom/google/android/filament/Engine;
     .locals 4
 
-    .line 184
+    .line 189
     invoke-virtual {p0}, Lcom/google/android/filament/Engine$Backend;->ordinal()I
 
     move-result p0
@@ -148,14 +178,14 @@
 
     if-eqz p0, :cond_0
 
-    .line 186
+    .line 191
     new-instance p0, Lcom/google/android/filament/Engine;
 
     invoke-direct {p0, v0, v1}, Lcom/google/android/filament/Engine;-><init>(J)V
 
     return-object p0
 
-    .line 185
+    .line 190
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -169,7 +199,7 @@
 .method public static create(Ljava/lang/Object;)Lcom/google/android/filament/Engine;
     .locals 4
 
-    .line 208
+    .line 213
     invoke-static {}, Lcom/google/android/filament/Platform;->get()Lcom/google/android/filament/Platform;
 
     move-result-object v0
@@ -180,7 +210,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 210
+    .line 215
     invoke-static {}, Lcom/google/android/filament/Platform;->get()Lcom/google/android/filament/Platform;
 
     move-result-object v0
@@ -191,7 +221,7 @@
 
     const-wide/16 v2, 0x0
 
-    .line 209
+    .line 214
     invoke-static {v2, v3, v0, v1}, Lcom/google/android/filament/Engine;->nCreateEngine(JJ)J
 
     move-result-wide v0
@@ -200,14 +230,14 @@
 
     if-eqz p0, :cond_0
 
-    .line 212
+    .line 217
     new-instance p0, Lcom/google/android/filament/Engine;
 
     invoke-direct {p0, v0, v1}, Lcom/google/android/filament/Engine;-><init>(J)V
 
     return-object p0
 
-    .line 211
+    .line 216
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -217,7 +247,7 @@
 
     throw p0
 
-    .line 214
+    .line 219
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -240,10 +270,7 @@
     throw v0
 .end method
 
-.method private static native nCreateCamera(J)J
-.end method
-
-.method private static native nCreateCameraWithEntity(JI)J
+.method private static native nCreateCamera(JI)J
 .end method
 
 .method private static native nCreateEngine(JJ)J
@@ -270,7 +297,7 @@
 .method private static native nCreateView(J)J
 .end method
 
-.method private static native nDestroyCamera(JJ)V
+.method private static native nDestroyCameraComponent(JI)V
 .end method
 
 .method private static native nDestroyColorGrading(JJ)Z
@@ -306,6 +333,9 @@
 .method private static native nDestroyScene(JJ)Z
 .end method
 
+.method private static native nDestroySkinningBuffer(JJ)Z
+.end method
+
 .method private static native nDestroySkybox(JJ)Z
 .end method
 
@@ -333,6 +363,12 @@
 .method private static native nGetCameraComponent(JI)J
 .end method
 
+.method private static native nGetEntityManager(J)J
+.end method
+
+.method private static native nGetJobSystem(J)J
+.end method
+
 .method private static native nGetLightManager(J)J
 .end method
 
@@ -344,15 +380,19 @@
 
 
 # virtual methods
-.method public createCamera()Lcom/google/android/filament/Camera;
+.method public createCamera(I)Lcom/google/android/filament/Camera;
     .locals 4
+    .param p1    # I
+        .annotation build Lcom/google/android/filament/Entity;
+        .end annotation
+    .end param
 
-    .line 408
+    .line 414
     invoke-virtual {p0}, Lcom/google/android/filament/Engine;->getNativeObject()J
 
     move-result-wide v0
 
-    invoke-static {v0, v1}, Lcom/google/android/filament/Engine;->nCreateCamera(J)J
+    invoke-static {v0, v1, p1}, Lcom/google/android/filament/Engine;->nCreateCamera(JI)J
 
     move-result-wide v0
 
@@ -362,54 +402,14 @@
 
     if-eqz v2, :cond_0
 
-    .line 410
+    .line 416
     new-instance v2, Lcom/google/android/filament/Camera;
 
-    invoke-direct {v2, v0, v1}, Lcom/google/android/filament/Camera;-><init>(J)V
+    invoke-direct {v2, v0, v1, p1}, Lcom/google/android/filament/Camera;-><init>(JI)V
 
     return-object v2
 
-    .line 409
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "Couldn\'t create Camera"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public createCamera(I)Lcom/google/android/filament/Camera;
-    .locals 4
-    .param p1    # I
-        .annotation build Lcom/google/android/filament/Entity;
-        .end annotation
-    .end param
-
-    .line 422
-    invoke-virtual {p0}, Lcom/google/android/filament/Engine;->getNativeObject()J
-
-    move-result-wide v0
-
-    invoke-static {v0, v1, p1}, Lcom/google/android/filament/Engine;->nCreateCameraWithEntity(JI)J
-
-    move-result-wide v0
-
-    const-wide/16 v2, 0x0
-
-    cmp-long p1, v0, v2
-
-    if-eqz p1, :cond_0
-
-    .line 424
-    new-instance p1, Lcom/google/android/filament/Camera;
-
-    invoke-direct {p1, v0, v1}, Lcom/google/android/filament/Camera;-><init>(J)V
-
-    return-object p1
-
-    .line 423
+    .line 415
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -423,7 +423,7 @@
 .method public createFence()Lcom/google/android/filament/Fence;
     .locals 4
 
-    .line 493
+    .line 485
     invoke-virtual {p0}, Lcom/google/android/filament/Engine;->getNativeObject()J
 
     move-result-wide v0
@@ -438,14 +438,14 @@
 
     if-eqz v2, :cond_0
 
-    .line 495
+    .line 487
     new-instance v2, Lcom/google/android/filament/Fence;
 
     invoke-direct {v2, v0, v1}, Lcom/google/android/filament/Fence;-><init>(J)V
 
     return-object v2
 
-    .line 494
+    .line 486
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -459,7 +459,7 @@
 .method public createRenderer()Lcom/google/android/filament/Renderer;
     .locals 4
 
-    .line 384
+    .line 389
     invoke-virtual {p0}, Lcom/google/android/filament/Engine;->getNativeObject()J
 
     move-result-wide v0
@@ -474,14 +474,14 @@
 
     if-eqz v2, :cond_0
 
-    .line 386
+    .line 391
     new-instance v2, Lcom/google/android/filament/Renderer;
 
     invoke-direct {v2, p0, v0, v1}, Lcom/google/android/filament/Renderer;-><init>(Lcom/google/android/filament/Engine;J)V
 
     return-object v2
 
-    .line 385
+    .line 390
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -495,7 +495,7 @@
 .method public createScene()Lcom/google/android/filament/Scene;
     .locals 4
 
-    .line 459
+    .line 451
     invoke-virtual {p0}, Lcom/google/android/filament/Engine;->getNativeObject()J
 
     move-result-wide v0
@@ -510,14 +510,14 @@
 
     if-eqz v2, :cond_0
 
-    .line 461
+    .line 453
     new-instance v2, Lcom/google/android/filament/Scene;
 
     invoke-direct {v2, v0, v1}, Lcom/google/android/filament/Scene;-><init>(J)V
 
     return-object v2
 
-    .line 460
+    .line 452
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -535,7 +535,7 @@
 
     if-ltz p2, :cond_1
 
-    .line 317
+    .line 322
     invoke-virtual {p0}, Lcom/google/android/filament/Engine;->getNativeObject()J
 
     move-result-wide v0
@@ -556,7 +556,7 @@
 
     if-eqz p3, :cond_0
 
-    .line 319
+    .line 324
     new-instance p3, Lcom/google/android/filament/SwapChain;
 
     const/4 p4, 0x0
@@ -565,7 +565,7 @@
 
     return-object p3
 
-    .line 318
+    .line 323
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -575,7 +575,7 @@
 
     throw p1
 
-    .line 321
+    .line 326
     :cond_1
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -591,7 +591,7 @@
 
     const-wide/16 v0, 0x0
 
-    .line 269
+    .line 274
     invoke-virtual {p0, p1, v0, v1}, Lcom/google/android/filament/Engine;->createSwapChain(Ljava/lang/Object;J)Lcom/google/android/filament/SwapChain;
 
     move-result-object p1
@@ -602,7 +602,7 @@
 .method public createSwapChain(Ljava/lang/Object;J)Lcom/google/android/filament/SwapChain;
     .locals 2
 
-    .line 290
+    .line 295
     invoke-static {}, Lcom/google/android/filament/Platform;->get()Lcom/google/android/filament/Platform;
 
     move-result-object v0
@@ -613,7 +613,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 291
+    .line 296
     invoke-virtual {p0}, Lcom/google/android/filament/Engine;->getNativeObject()J
 
     move-result-wide v0
@@ -628,14 +628,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 293
+    .line 298
     new-instance v0, Lcom/google/android/filament/SwapChain;
 
     invoke-direct {v0, p2, p3, p1}, Lcom/google/android/filament/SwapChain;-><init>(JLjava/lang/Object;)V
 
     return-object v0
 
-    .line 292
+    .line 297
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -645,7 +645,7 @@
 
     throw p1
 
-    .line 295
+    .line 300
     :cond_1
     new-instance p2, Ljava/lang/IllegalArgumentException;
 
@@ -671,7 +671,7 @@
 .method public createSwapChainFromNativeSurface(Lcom/google/android/filament/NativeSurface;J)Lcom/google/android/filament/SwapChain;
     .locals 6
 
-    .line 338
+    .line 343
     invoke-virtual {p0}, Lcom/google/android/filament/Engine;->getNativeObject()J
 
     move-result-wide v0
@@ -692,14 +692,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 340
+    .line 345
     new-instance v0, Lcom/google/android/filament/SwapChain;
 
     invoke-direct {v0, p2, p3, p1}, Lcom/google/android/filament/SwapChain;-><init>(JLjava/lang/Object;)V
 
     return-object v0
 
-    .line 339
+    .line 344
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -713,7 +713,7 @@
 .method public createView()Lcom/google/android/filament/View;
     .locals 4
 
-    .line 361
+    .line 366
     invoke-virtual {p0}, Lcom/google/android/filament/Engine;->getNativeObject()J
 
     move-result-wide v0
@@ -728,14 +728,14 @@
 
     if-eqz v2, :cond_0
 
-    .line 363
+    .line 368
     new-instance v2, Lcom/google/android/filament/View;
 
     invoke-direct {v2, v0, v1}, Lcom/google/android/filament/View;-><init>(J)V
 
     return-object v2
 
-    .line 362
+    .line 367
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -749,248 +749,40 @@
 .method public destroy()V
     .locals 2
 
-    .line 244
+    .line 249
     invoke-virtual {p0}, Lcom/google/android/filament/Engine;->getNativeObject()J
 
     move-result-wide v0
 
     invoke-static {v0, v1}, Lcom/google/android/filament/Engine;->nDestroyEngine(J)V
 
-    .line 245
+    .line 250
     invoke-direct {p0}, Lcom/google/android/filament/Engine;->clearNativeObject()V
 
     return-void
 .end method
 
-.method public destroyCamera(Lcom/google/android/filament/Camera;)V
-    .locals 4
-
-    .line 446
-    invoke-virtual {p0}, Lcom/google/android/filament/Engine;->getNativeObject()J
-
-    move-result-wide v0
-
-    invoke-virtual {p1}, Lcom/google/android/filament/Camera;->getNativeObject()J
-
-    move-result-wide v2
-
-    invoke-static {v0, v1, v2, v3}, Lcom/google/android/filament/Engine;->nDestroyCamera(JJ)V
-
-    .line 447
-    invoke-virtual {p1}, Lcom/google/android/filament/Camera;->clearNativeObject()V
-
-    return-void
-.end method
-
-.method public destroyEntity(I)V
+.method public destroyCameraComponent(I)V
     .locals 2
     .param p1    # I
         .annotation build Lcom/google/android/filament/Entity;
         .end annotation
     .end param
 
-    .line 606
+    .line 439
     invoke-virtual {p0}, Lcom/google/android/filament/Engine;->getNativeObject()J
 
     move-result-wide v0
 
-    invoke-static {v0, v1, p1}, Lcom/google/android/filament/Engine;->nDestroyEntity(JI)V
+    invoke-static {v0, v1, p1}, Lcom/google/android/filament/Engine;->nDestroyCameraComponent(JI)V
 
     return-void
 .end method
 
-.method public destroyFence(Lcom/google/android/filament/Fence;)V
+.method public destroyColorGrading(Lcom/google/android/filament/ColorGrading;)V
     .locals 4
 
-    .line 503
-    invoke-virtual {p0}, Lcom/google/android/filament/Engine;->getNativeObject()J
-
-    move-result-wide v0
-
-    invoke-virtual {p1}, Lcom/google/android/filament/Fence;->getNativeObject()J
-
-    move-result-wide v2
-
-    invoke-static {v0, v1, v2, v3}, Lcom/google/android/filament/Engine;->nDestroyFence(JJ)Z
-
-    move-result v0
-
-    invoke-static {v0}, Lcom/google/android/filament/Engine;->assertDestroy(Z)V
-
-    .line 504
-    invoke-virtual {p1}, Lcom/google/android/filament/Fence;->clearNativeObject()V
-
-    return-void
-.end method
-
-.method public destroyIndexBuffer(Lcom/google/android/filament/IndexBuffer;)V
-    .locals 4
-
-    .line 514
-    invoke-virtual {p0}, Lcom/google/android/filament/Engine;->getNativeObject()J
-
-    move-result-wide v0
-
-    invoke-virtual {p1}, Lcom/google/android/filament/IndexBuffer;->getNativeObject()J
-
-    move-result-wide v2
-
-    invoke-static {v0, v1, v2, v3}, Lcom/google/android/filament/Engine;->nDestroyIndexBuffer(JJ)Z
-
-    move-result v0
-
-    invoke-static {v0}, Lcom/google/android/filament/Engine;->assertDestroy(Z)V
-
-    .line 515
-    invoke-virtual {p1}, Lcom/google/android/filament/IndexBuffer;->clearNativeObject()V
-
-    return-void
-.end method
-
-.method public destroyIndirectLight(Lcom/google/android/filament/IndirectLight;)V
-    .locals 4
-
-    .line 532
-    invoke-virtual {p0}, Lcom/google/android/filament/Engine;->getNativeObject()J
-
-    move-result-wide v0
-
-    invoke-virtual {p1}, Lcom/google/android/filament/IndirectLight;->getNativeObject()J
-
-    move-result-wide v2
-
-    invoke-static {v0, v1, v2, v3}, Lcom/google/android/filament/Engine;->nDestroyIndirectLight(JJ)Z
-
-    move-result v0
-
-    invoke-static {v0}, Lcom/google/android/filament/Engine;->assertDestroy(Z)V
-
-    .line 533
-    invoke-virtual {p1}, Lcom/google/android/filament/IndirectLight;->clearNativeObject()V
-
-    return-void
-.end method
-
-.method public destroyMaterial(Lcom/google/android/filament/Material;)V
-    .locals 4
-
-    .line 545
-    invoke-virtual {p0}, Lcom/google/android/filament/Engine;->getNativeObject()J
-
-    move-result-wide v0
-
-    invoke-virtual {p1}, Lcom/google/android/filament/Material;->getNativeObject()J
-
-    move-result-wide v2
-
-    invoke-static {v0, v1, v2, v3}, Lcom/google/android/filament/Engine;->nDestroyMaterial(JJ)Z
-
-    move-result v0
-
-    invoke-static {v0}, Lcom/google/android/filament/Engine;->assertDestroy(Z)V
-
-    .line 546
-    invoke-virtual {p1}, Lcom/google/android/filament/Material;->clearNativeObject()V
-
-    return-void
-.end method
-
-.method public destroyMaterialInstance(Lcom/google/android/filament/MaterialInstance;)V
-    .locals 4
-
-    .line 554
-    invoke-virtual {p0}, Lcom/google/android/filament/Engine;->getNativeObject()J
-
-    move-result-wide v0
-
-    invoke-virtual {p1}, Lcom/google/android/filament/MaterialInstance;->getNativeObject()J
-
-    move-result-wide v2
-
-    invoke-static {v0, v1, v2, v3}, Lcom/google/android/filament/Engine;->nDestroyMaterialInstance(JJ)Z
-
-    move-result v0
-
-    invoke-static {v0}, Lcom/google/android/filament/Engine;->assertDestroy(Z)V
-
-    .line 555
-    invoke-virtual {p1}, Lcom/google/android/filament/MaterialInstance;->clearNativeObject()V
-
-    return-void
-.end method
-
-.method public destroyRenderTarget(Lcom/google/android/filament/RenderTarget;)V
-    .locals 4
-
-    .line 590
-    invoke-virtual {p0}, Lcom/google/android/filament/Engine;->getNativeObject()J
-
-    move-result-wide v0
-
-    invoke-virtual {p1}, Lcom/google/android/filament/RenderTarget;->getNativeObject()J
-
-    move-result-wide v2
-
-    invoke-static {v0, v1, v2, v3}, Lcom/google/android/filament/Engine;->nDestroyRenderTarget(JJ)Z
-
-    .line 591
-    invoke-virtual {p1}, Lcom/google/android/filament/RenderTarget;->clearNativeObject()V
-
-    return-void
-.end method
-
-.method public destroyRenderer(Lcom/google/android/filament/Renderer;)V
-    .locals 4
-
-    .line 394
-    invoke-virtual {p0}, Lcom/google/android/filament/Engine;->getNativeObject()J
-
-    move-result-wide v0
-
-    invoke-virtual {p1}, Lcom/google/android/filament/Renderer;->getNativeObject()J
-
-    move-result-wide v2
-
-    invoke-static {v0, v1, v2, v3}, Lcom/google/android/filament/Engine;->nDestroyRenderer(JJ)Z
-
-    move-result v0
-
-    invoke-static {v0}, Lcom/google/android/filament/Engine;->assertDestroy(Z)V
-
-    .line 395
-    invoke-virtual {p1}, Lcom/google/android/filament/Renderer;->clearNativeObject()V
-
-    return-void
-.end method
-
-.method public destroyScene(Lcom/google/android/filament/Scene;)V
-    .locals 4
-
-    .line 469
-    invoke-virtual {p0}, Lcom/google/android/filament/Engine;->getNativeObject()J
-
-    move-result-wide v0
-
-    invoke-virtual {p1}, Lcom/google/android/filament/Scene;->getNativeObject()J
-
-    move-result-wide v2
-
-    invoke-static {v0, v1, v2, v3}, Lcom/google/android/filament/Engine;->nDestroyScene(JJ)Z
-
-    move-result v0
-
-    invoke-static {v0}, Lcom/google/android/filament/Engine;->assertDestroy(Z)V
-
-    .line 470
-    invoke-virtual {p1}, Lcom/google/android/filament/Scene;->clearNativeObject()V
-
-    return-void
-.end method
-
-.method public destroySkybox(Lcom/google/android/filament/ColorGrading;)V
-    .locals 4
-
-    .line 572
+    .line 573
     invoke-virtual {p0}, Lcom/google/android/filament/Engine;->getNativeObject()J
 
     move-result-wide v0
@@ -1005,8 +797,237 @@
 
     invoke-static {v0}, Lcom/google/android/filament/Engine;->assertDestroy(Z)V
 
-    .line 573
+    .line 574
     invoke-virtual {p1}, Lcom/google/android/filament/ColorGrading;->clearNativeObject()V
+
+    return-void
+.end method
+
+.method public destroyEntity(I)V
+    .locals 2
+    .param p1    # I
+        .annotation build Lcom/google/android/filament/Entity;
+        .end annotation
+    .end param
+
+    .line 607
+    invoke-virtual {p0}, Lcom/google/android/filament/Engine;->getNativeObject()J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1, p1}, Lcom/google/android/filament/Engine;->nDestroyEntity(JI)V
+
+    return-void
+.end method
+
+.method public destroyFence(Lcom/google/android/filament/Fence;)V
+    .locals 4
+
+    .line 495
+    invoke-virtual {p0}, Lcom/google/android/filament/Engine;->getNativeObject()J
+
+    move-result-wide v0
+
+    invoke-virtual {p1}, Lcom/google/android/filament/Fence;->getNativeObject()J
+
+    move-result-wide v2
+
+    invoke-static {v0, v1, v2, v3}, Lcom/google/android/filament/Engine;->nDestroyFence(JJ)Z
+
+    move-result v0
+
+    invoke-static {v0}, Lcom/google/android/filament/Engine;->assertDestroy(Z)V
+
+    .line 496
+    invoke-virtual {p1}, Lcom/google/android/filament/Fence;->clearNativeObject()V
+
+    return-void
+.end method
+
+.method public destroyIndexBuffer(Lcom/google/android/filament/IndexBuffer;)V
+    .locals 4
+
+    .line 506
+    invoke-virtual {p0}, Lcom/google/android/filament/Engine;->getNativeObject()J
+
+    move-result-wide v0
+
+    invoke-virtual {p1}, Lcom/google/android/filament/IndexBuffer;->getNativeObject()J
+
+    move-result-wide v2
+
+    invoke-static {v0, v1, v2, v3}, Lcom/google/android/filament/Engine;->nDestroyIndexBuffer(JJ)Z
+
+    move-result v0
+
+    invoke-static {v0}, Lcom/google/android/filament/Engine;->assertDestroy(Z)V
+
+    .line 507
+    invoke-virtual {p1}, Lcom/google/android/filament/IndexBuffer;->clearNativeObject()V
+
+    return-void
+.end method
+
+.method public destroyIndirectLight(Lcom/google/android/filament/IndirectLight;)V
+    .locals 4
+
+    .line 533
+    invoke-virtual {p0}, Lcom/google/android/filament/Engine;->getNativeObject()J
+
+    move-result-wide v0
+
+    invoke-virtual {p1}, Lcom/google/android/filament/IndirectLight;->getNativeObject()J
+
+    move-result-wide v2
+
+    invoke-static {v0, v1, v2, v3}, Lcom/google/android/filament/Engine;->nDestroyIndirectLight(JJ)Z
+
+    move-result v0
+
+    invoke-static {v0}, Lcom/google/android/filament/Engine;->assertDestroy(Z)V
+
+    .line 534
+    invoke-virtual {p1}, Lcom/google/android/filament/IndirectLight;->clearNativeObject()V
+
+    return-void
+.end method
+
+.method public destroyMaterial(Lcom/google/android/filament/Material;)V
+    .locals 4
+
+    .line 546
+    invoke-virtual {p0}, Lcom/google/android/filament/Engine;->getNativeObject()J
+
+    move-result-wide v0
+
+    invoke-virtual {p1}, Lcom/google/android/filament/Material;->getNativeObject()J
+
+    move-result-wide v2
+
+    invoke-static {v0, v1, v2, v3}, Lcom/google/android/filament/Engine;->nDestroyMaterial(JJ)Z
+
+    move-result v0
+
+    invoke-static {v0}, Lcom/google/android/filament/Engine;->assertDestroy(Z)V
+
+    .line 547
+    invoke-virtual {p1}, Lcom/google/android/filament/Material;->clearNativeObject()V
+
+    return-void
+.end method
+
+.method public destroyMaterialInstance(Lcom/google/android/filament/MaterialInstance;)V
+    .locals 4
+
+    .line 555
+    invoke-virtual {p0}, Lcom/google/android/filament/Engine;->getNativeObject()J
+
+    move-result-wide v0
+
+    invoke-virtual {p1}, Lcom/google/android/filament/MaterialInstance;->getNativeObject()J
+
+    move-result-wide v2
+
+    invoke-static {v0, v1, v2, v3}, Lcom/google/android/filament/Engine;->nDestroyMaterialInstance(JJ)Z
+
+    move-result v0
+
+    invoke-static {v0}, Lcom/google/android/filament/Engine;->assertDestroy(Z)V
+
+    .line 556
+    invoke-virtual {p1}, Lcom/google/android/filament/MaterialInstance;->clearNativeObject()V
+
+    return-void
+.end method
+
+.method public destroyRenderTarget(Lcom/google/android/filament/RenderTarget;)V
+    .locals 4
+
+    .line 591
+    invoke-virtual {p0}, Lcom/google/android/filament/Engine;->getNativeObject()J
+
+    move-result-wide v0
+
+    invoke-virtual {p1}, Lcom/google/android/filament/RenderTarget;->getNativeObject()J
+
+    move-result-wide v2
+
+    invoke-static {v0, v1, v2, v3}, Lcom/google/android/filament/Engine;->nDestroyRenderTarget(JJ)Z
+
+    .line 592
+    invoke-virtual {p1}, Lcom/google/android/filament/RenderTarget;->clearNativeObject()V
+
+    return-void
+.end method
+
+.method public destroyRenderer(Lcom/google/android/filament/Renderer;)V
+    .locals 4
+
+    .line 399
+    invoke-virtual {p0}, Lcom/google/android/filament/Engine;->getNativeObject()J
+
+    move-result-wide v0
+
+    invoke-virtual {p1}, Lcom/google/android/filament/Renderer;->getNativeObject()J
+
+    move-result-wide v2
+
+    invoke-static {v0, v1, v2, v3}, Lcom/google/android/filament/Engine;->nDestroyRenderer(JJ)Z
+
+    move-result v0
+
+    invoke-static {v0}, Lcom/google/android/filament/Engine;->assertDestroy(Z)V
+
+    .line 400
+    invoke-virtual {p1}, Lcom/google/android/filament/Renderer;->clearNativeObject()V
+
+    return-void
+.end method
+
+.method public destroyScene(Lcom/google/android/filament/Scene;)V
+    .locals 4
+
+    .line 461
+    invoke-virtual {p0}, Lcom/google/android/filament/Engine;->getNativeObject()J
+
+    move-result-wide v0
+
+    invoke-virtual {p1}, Lcom/google/android/filament/Scene;->getNativeObject()J
+
+    move-result-wide v2
+
+    invoke-static {v0, v1, v2, v3}, Lcom/google/android/filament/Engine;->nDestroyScene(JJ)Z
+
+    move-result v0
+
+    invoke-static {v0}, Lcom/google/android/filament/Engine;->assertDestroy(Z)V
+
+    .line 462
+    invoke-virtual {p1}, Lcom/google/android/filament/Scene;->clearNativeObject()V
+
+    return-void
+.end method
+
+.method public destroySkinningBuffer(Lcom/google/android/filament/SkinningBuffer;)V
+    .locals 4
+
+    .line 524
+    invoke-virtual {p0}, Lcom/google/android/filament/Engine;->getNativeObject()J
+
+    move-result-wide v0
+
+    invoke-virtual {p1}, Lcom/google/android/filament/SkinningBuffer;->getNativeObject()J
+
+    move-result-wide v2
+
+    invoke-static {v0, v1, v2, v3}, Lcom/google/android/filament/Engine;->nDestroySkinningBuffer(JJ)Z
+
+    move-result v0
+
+    invoke-static {v0}, Lcom/google/android/filament/Engine;->assertDestroy(Z)V
+
+    .line 525
+    invoke-virtual {p1}, Lcom/google/android/filament/SkinningBuffer;->clearNativeObject()V
 
     return-void
 .end method
@@ -1014,7 +1035,7 @@
 .method public destroySkybox(Lcom/google/android/filament/Skybox;)V
     .locals 4
 
-    .line 563
+    .line 564
     invoke-virtual {p0}, Lcom/google/android/filament/Engine;->getNativeObject()J
 
     move-result-wide v0
@@ -1029,7 +1050,7 @@
 
     invoke-static {v0}, Lcom/google/android/filament/Engine;->assertDestroy(Z)V
 
-    .line 564
+    .line 565
     invoke-virtual {p1}, Lcom/google/android/filament/Skybox;->clearNativeObject()V
 
     return-void
@@ -1038,7 +1059,7 @@
 .method public destroyStream(Lcom/google/android/filament/Stream;)V
     .locals 4
 
-    .line 480
+    .line 472
     invoke-virtual {p0}, Lcom/google/android/filament/Engine;->getNativeObject()J
 
     move-result-wide v0
@@ -1053,7 +1074,7 @@
 
     invoke-static {v0}, Lcom/google/android/filament/Engine;->assertDestroy(Z)V
 
-    .line 481
+    .line 473
     invoke-virtual {p1}, Lcom/google/android/filament/Stream;->clearNativeObject()V
 
     return-void
@@ -1062,7 +1083,7 @@
 .method public destroySwapChain(Lcom/google/android/filament/SwapChain;)V
     .locals 4
 
-    .line 348
+    .line 353
     invoke-virtual {p0}, Lcom/google/android/filament/Engine;->getNativeObject()J
 
     move-result-wide v0
@@ -1077,7 +1098,7 @@
 
     invoke-static {v0}, Lcom/google/android/filament/Engine;->assertDestroy(Z)V
 
-    .line 349
+    .line 354
     invoke-virtual {p1}, Lcom/google/android/filament/SwapChain;->clearNativeObject()V
 
     return-void
@@ -1086,7 +1107,7 @@
 .method public destroyTexture(Lcom/google/android/filament/Texture;)V
     .locals 4
 
-    .line 581
+    .line 582
     invoke-virtual {p0}, Lcom/google/android/filament/Engine;->getNativeObject()J
 
     move-result-wide v0
@@ -1101,7 +1122,7 @@
 
     invoke-static {v0}, Lcom/google/android/filament/Engine;->assertDestroy(Z)V
 
-    .line 582
+    .line 583
     invoke-virtual {p1}, Lcom/google/android/filament/Texture;->clearNativeObject()V
 
     return-void
@@ -1110,7 +1131,7 @@
 .method public destroyVertexBuffer(Lcom/google/android/filament/VertexBuffer;)V
     .locals 4
 
-    .line 523
+    .line 515
     invoke-virtual {p0}, Lcom/google/android/filament/Engine;->getNativeObject()J
 
     move-result-wide v0
@@ -1125,7 +1146,7 @@
 
     invoke-static {v0}, Lcom/google/android/filament/Engine;->assertDestroy(Z)V
 
-    .line 524
+    .line 516
     invoke-virtual {p1}, Lcom/google/android/filament/VertexBuffer;->clearNativeObject()V
 
     return-void
@@ -1134,7 +1155,7 @@
 .method public destroyView(Lcom/google/android/filament/View;)V
     .locals 4
 
-    .line 371
+    .line 376
     invoke-virtual {p0}, Lcom/google/android/filament/Engine;->getNativeObject()J
 
     move-result-wide v0
@@ -1149,7 +1170,7 @@
 
     invoke-static {v0}, Lcom/google/android/filament/Engine;->assertDestroy(Z)V
 
-    .line 372
+    .line 377
     invoke-virtual {p1}, Lcom/google/android/filament/View;->clearNativeObject()V
 
     return-void
@@ -1158,7 +1179,7 @@
 .method public flushAndWait()V
     .locals 2
 
-    .line 646
+    .line 655
     invoke-virtual {p0}, Lcom/google/android/filament/Engine;->getNativeObject()J
 
     move-result-wide v0
@@ -1171,10 +1192,8 @@
 .method public getBackend()Lcom/google/android/filament/Engine$Backend;
     .locals 3
 
-    .line 253
-    invoke-static {}, Lcom/google/android/filament/Engine$Backend;->values()[Lcom/google/android/filament/Engine$Backend;
-
-    move-result-object v0
+    .line 258
+    sget-object v0, Lcom/google/android/filament/Engine;->sBackendValues:[Lcom/google/android/filament/Engine$Backend;
 
     invoke-virtual {p0}, Lcom/google/android/filament/Engine;->getNativeObject()J
 
@@ -1198,7 +1217,7 @@
         .end annotation
     .end param
 
-    .line 436
+    .line 428
     invoke-virtual {p0}, Lcom/google/android/filament/Engine;->getNativeObject()J
 
     move-result-wide v0
@@ -1209,30 +1228,76 @@
 
     const-wide/16 v2, 0x0
 
-    cmp-long p1, v0, v2
+    cmp-long v2, v0, v2
 
-    if-nez p1, :cond_0
+    if-nez v2, :cond_0
 
     const/4 p1, 0x0
 
     return-object p1
 
-    .line 438
+    .line 430
     :cond_0
-    new-instance p1, Lcom/google/android/filament/Camera;
+    new-instance v2, Lcom/google/android/filament/Camera;
 
-    invoke-direct {p1, v0, v1}, Lcom/google/android/filament/Camera;-><init>(J)V
+    invoke-direct {v2, v0, v1, p1}, Lcom/google/android/filament/Camera;-><init>(JI)V
 
-    return-object p1
+    return-object v2
+.end method
+
+.method public getEntityManager()Lcom/google/android/filament/EntityManager;
+    .locals 1
+
+    .line 641
+    iget-object v0, p0, Lcom/google/android/filament/Engine;->mEntityManager:Lcom/google/android/filament/EntityManager;
+
+    return-object v0
 .end method
 
 .method public getLightManager()Lcom/google/android/filament/LightManager;
     .locals 1
 
-    .line 624
+    .line 625
     iget-object v0, p0, Lcom/google/android/filament/Engine;->mLightManager:Lcom/google/android/filament/LightManager;
 
     return-object v0
+.end method
+
+.method public getNativeJobSystem()J
+    .locals 4
+    .annotation build Lcom/google/android/filament/proguard/UsedByReflection;
+        value = "MaterialBuilder.java"
+    .end annotation
+
+    .line 668
+    iget-wide v0, p0, Lcom/google/android/filament/Engine;->mNativeObject:J
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_0
+
+    .line 671
+    invoke-virtual {p0}, Lcom/google/android/filament/Engine;->getNativeObject()J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Lcom/google/android/filament/Engine;->nGetJobSystem(J)J
+
+    move-result-wide v0
+
+    return-wide v0
+
+    .line 669
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Calling method on destroyed Engine"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method
 
 .method public getNativeObject()J
@@ -1241,7 +1306,7 @@
         value = "TextureHelper.java"
     .end annotation
 
-    .line 651
+    .line 660
     iget-wide v0, p0, Lcom/google/android/filament/Engine;->mNativeObject:J
 
     const-wide/16 v2, 0x0
@@ -1252,7 +1317,7 @@
 
     return-wide v0
 
-    .line 652
+    .line 661
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -1266,7 +1331,7 @@
 .method public getRenderableManager()Lcom/google/android/filament/RenderableManager;
     .locals 1
 
-    .line 632
+    .line 633
     iget-object v0, p0, Lcom/google/android/filament/Engine;->mRenderableManager:Lcom/google/android/filament/RenderableManager;
 
     return-object v0
@@ -1275,7 +1340,7 @@
 .method public getTransformManager()Lcom/google/android/filament/TransformManager;
     .locals 1
 
-    .line 616
+    .line 617
     iget-object v0, p0, Lcom/google/android/filament/Engine;->mTransformManager:Lcom/google/android/filament/TransformManager;
 
     return-object v0
@@ -1284,7 +1349,7 @@
 .method public isValid()Z
     .locals 4
 
-    .line 221
+    .line 226
     iget-wide v0, p0, Lcom/google/android/filament/Engine;->mNativeObject:J
 
     const-wide/16 v2, 0x0

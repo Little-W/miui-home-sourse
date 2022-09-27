@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/Launcher;->lambda$checkAllAppsLabel$42(Lcom/miui/home/launcher/ShortcutInfo;Lcom/miui/home/launcher/ShortcutInfo;Landroid/content/pm/PackageManager;Landroid/content/Intent;Z)V
+    value = Lcom/miui/home/launcher/Launcher;->preloadFolderContent()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,21 +20,17 @@
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/launcher/Launcher;
 
-.field final synthetic val$info:Lcom/miui/home/launcher/ShortcutInfo;
-
-.field final synthetic val$result:Ljava/lang/CharSequence;
+.field final synthetic val$info:Lcom/miui/home/launcher/FolderInfo;
 
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/Launcher;Ljava/lang/CharSequence;Lcom/miui/home/launcher/ShortcutInfo;)V
+.method constructor <init>(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/FolderInfo;)V
     .locals 0
 
-    .line 6604
+    .line 6338
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$59;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    iput-object p2, p0, Lcom/miui/home/launcher/Launcher$59;->val$result:Ljava/lang/CharSequence;
-
-    iput-object p3, p0, Lcom/miui/home/launcher/Launcher$59;->val$info:Lcom/miui/home/launcher/ShortcutInfo;
+    iput-object p2, p0, Lcom/miui/home/launcher/Launcher$59;->val$info:Lcom/miui/home/launcher/FolderInfo;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,27 +40,14 @@
 
 # virtual methods
 .method public run()V
-    .locals 3
+    .locals 2
 
-    .line 6607
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$59;->val$result:Ljava/lang/CharSequence;
-
-    if-eqz v0, :cond_0
-
-    .line 6608
-    iget-object v1, p0, Lcom/miui/home/launcher/Launcher$59;->val$info:Lcom/miui/home/launcher/ShortcutInfo;
-
-    iget-object v2, p0, Lcom/miui/home/launcher/Launcher$59;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-virtual {v1, v0, v2}, Lcom/miui/home/launcher/ShortcutInfo;->setLabelAndUpdateDB(Ljava/lang/CharSequence;Landroid/content/Context;)V
-
-    .line 6609
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$59;->val$info:Lcom/miui/home/launcher/ShortcutInfo;
+    .line 6341
+    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$59;->val$info:Lcom/miui/home/launcher/FolderInfo;
 
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$59;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/ShortcutInfo;->updateBuddyIconView(Lcom/miui/home/launcher/Launcher;)V
+    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/FolderInfo;->preLoadContentView(Lcom/miui/home/launcher/Launcher;)V
 
-    :cond_0
     return-void
 .end method

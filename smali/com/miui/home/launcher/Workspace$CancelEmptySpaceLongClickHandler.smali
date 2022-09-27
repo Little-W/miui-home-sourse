@@ -22,7 +22,7 @@
 .method private constructor <init>(Lcom/miui/home/launcher/Workspace;)V
     .locals 0
 
-    .line 3728
+    .line 3535
     iput-object p1, p0, Lcom/miui/home/launcher/Workspace$CancelEmptySpaceLongClickHandler;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -33,7 +33,7 @@
 .method synthetic constructor <init>(Lcom/miui/home/launcher/Workspace;Lcom/miui/home/launcher/Workspace$1;)V
     .locals 0
 
-    .line 3728
+    .line 3535
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/Workspace$CancelEmptySpaceLongClickHandler;-><init>(Lcom/miui/home/launcher/Workspace;)V
 
     return-void
@@ -47,10 +47,10 @@
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
-    .line 3731
+    .line 3538
     iget-object p1, p0, Lcom/miui/home/launcher/Workspace$CancelEmptySpaceLongClickHandler;->this$0:Lcom/miui/home/launcher/Workspace;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/Workspace;->access$1800(Lcom/miui/home/launcher/Workspace;)Lcom/miui/home/launcher/OnLongClickAgent;
+    invoke-static {p1}, Lcom/miui/home/launcher/Workspace;->access$1600(Lcom/miui/home/launcher/Workspace;)Lcom/miui/home/launcher/OnLongClickAgent;
 
     move-result-object p1
 

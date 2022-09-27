@@ -25,8 +25,6 @@
     .end annotation
 .end field
 
-.field private mHasNewInstallApps:Z
-
 .field private mIsRecommendAppsSwitchON:Z
 
 .field private mPreinstallManager:Lcom/miui/home/launcher/commercial/preinstall/FolderPreinstallManager;
@@ -40,45 +38,42 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 73
+    .line 68
     invoke-direct {p0}, Lcom/miui/home/launcher/ItemInfo;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 57
+    .line 55
     iput-object v0, p0, Lcom/miui/home/launcher/FolderInfo;->icon:Lcom/miui/home/launcher/Folder$FolderCallback;
 
-    .line 60
+    .line 58
     new-instance v1, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-direct {v1}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
     iput-object v1, p0, Lcom/miui/home/launcher/FolderInfo;->mContents:Ljava/util/List;
 
-    .line 61
+    .line 59
     iput-object v0, p0, Lcom/miui/home/launcher/FolderInfo;->mAdapter:Lcom/miui/home/launcher/ShortcutsAdapter;
 
     const/4 v0, 0x0
 
-    .line 66
+    .line 64
     iput-boolean v0, p0, Lcom/miui/home/launcher/FolderInfo;->mIsRecommendAppsSwitchON:Z
-
-    .line 68
-    iput-boolean v0, p0, Lcom/miui/home/launcher/FolderInfo;->mHasNewInstallApps:Z
 
     const/4 v0, 0x2
 
-    .line 74
+    .line 69
     iput v0, p0, Lcom/miui/home/launcher/FolderInfo;->itemType:I
 
-    .line 75
+    .line 70
     invoke-static {p0}, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->getController(Lcom/miui/home/launcher/FolderInfo;)Lcom/miui/home/launcher/commercial/recommend/RecommendController;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/miui/home/launcher/FolderInfo;->mRecommendAppsController:Lcom/miui/home/launcher/commercial/recommend/RecommendController;
 
-    .line 76
+    .line 71
     invoke-static {}, Lcom/miui/home/launcher/commercial/preinstall/FolderPreinstallManager;->getManager()Lcom/miui/home/launcher/commercial/preinstall/FolderPreinstallManager;
 
     move-result-object v0
@@ -88,10 +83,69 @@
     return-void
 .end method
 
+.method private hasNewInstalledApp()Z
+    .locals 3
+
+    .line 172
+    monitor-enter p0
+
+    .line 173
+    :try_start_0
+    iget-object v0, p0, Lcom/miui/home/launcher/FolderInfo;->mContents:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :cond_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/miui/home/launcher/ShortcutInfo;
+
+    .line 174
+    iget v1, v1, Lcom/miui/home/launcher/ShortcutInfo;->itemFlags:I
+
+    const/4 v2, 0x4
+
+    if-ne v1, v2, :cond_0
+
+    const/4 v0, 0x1
+
+    .line 175
+    monitor-exit p0
+
+    return v0
+
+    .line 178
+    :cond_1
+    monitor-exit p0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
+.end method
+
 .method private isSystemCreatedFolder(Ljava/lang/String;)Z
     .locals 1
 
-    .line 245
+    .line 233
     iget-object v0, p0, Lcom/miui/home/launcher/FolderInfo;->mLabel:Ljava/lang/CharSequence;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -122,7 +176,7 @@
 .method public static synthetic lambda$preLoadContentView$0(Lcom/miui/home/launcher/FolderInfo;Lcom/miui/home/launcher/Launcher;)V
     .locals 4
 
-    .line 162
+    .line 157
     iget-wide v0, p0, Lcom/miui/home/launcher/FolderInfo;->id:J
 
     const-wide/16 v2, -0x1
@@ -131,7 +185,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 163
+    .line 158
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/FolderInfo;->initRecommendSwitchState(Lcom/miui/home/launcher/Launcher;)V
 
     :cond_0
@@ -141,7 +195,7 @@
 .method private updateLabelFromTitle(Landroid/content/Context;)V
     .locals 1
 
-    .line 97
+    .line 92
     iget-object v0, p0, Lcom/miui/home/launcher/FolderInfo;->mTitle:Ljava/lang/CharSequence;
 
     invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
@@ -154,75 +208,13 @@
 
     if-eqz p1, :cond_0
 
-    .line 98
+    .line 93
     iget-object p1, p0, Lcom/miui/home/launcher/FolderInfo;->mTitle:Ljava/lang/CharSequence;
 
     iput-object p1, p0, Lcom/miui/home/launcher/FolderInfo;->mLabel:Ljava/lang/CharSequence;
 
     :cond_0
     return-void
-.end method
-
-.method private updateNewInstallFlag()V
-    .locals 3
-
-    const/4 v0, 0x0
-
-    .line 179
-    iput-boolean v0, p0, Lcom/miui/home/launcher/FolderInfo;->mHasNewInstallApps:Z
-
-    .line 180
-    monitor-enter p0
-
-    .line 181
-    :try_start_0
-    iget-object v0, p0, Lcom/miui/home/launcher/FolderInfo;->mContents:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :cond_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/miui/home/launcher/ShortcutInfo;
-
-    .line 182
-    iget v1, v1, Lcom/miui/home/launcher/ShortcutInfo;->itemFlags:I
-
-    const/4 v2, 0x4
-
-    and-int/2addr v1, v2
-
-    if-ne v1, v2, :cond_0
-
-    const/4 v0, 0x1
-
-    .line 183
-    iput-boolean v0, p0, Lcom/miui/home/launcher/FolderInfo;->mHasNewInstallApps:Z
-
-    .line 187
-    :cond_1
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
 .end method
 
 
@@ -232,7 +224,7 @@
 
     const/4 v0, 0x0
 
-    .line 108
+    .line 103
     invoke-virtual {p0, p1, v0, p2}, Lcom/miui/home/launcher/FolderInfo;->add(Lcom/miui/home/launcher/ShortcutInfo;ZLcom/miui/home/launcher/allapps/LauncherMode;)V
 
     return-void
@@ -241,7 +233,7 @@
 .method public add(Lcom/miui/home/launcher/ShortcutInfo;ZLcom/miui/home/launcher/allapps/LauncherMode;)V
     .locals 2
 
-    .line 112
+    .line 107
     iget v0, p1, Lcom/miui/home/launcher/ShortcutInfo;->itemType:I
 
     const/16 v1, 0xf
@@ -250,11 +242,11 @@
 
     return-void
 
-    .line 115
+    .line 110
     :cond_0
     monitor-enter p0
 
-    .line 116
+    .line 111
     :try_start_0
     iget-object v0, p0, Lcom/miui/home/launcher/FolderInfo;->mContents:Ljava/util/List;
 
@@ -268,7 +260,7 @@
 
     const/4 p2, -0x1
 
-    .line 119
+    .line 114
     iget-object p3, p0, Lcom/miui/home/launcher/FolderInfo;->mContents:Ljava/util/List;
 
     invoke-interface {p3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -288,7 +280,7 @@
 
     check-cast v0, Lcom/miui/home/launcher/ShortcutInfo;
 
-    .line 120
+    .line 115
     iget v0, v0, Lcom/miui/home/launcher/ShortcutInfo;->cellX:I
 
     invoke-static {p2, v0}, Ljava/lang/Math;->max(II)I
@@ -300,27 +292,27 @@
     :cond_1
     add-int/lit8 p2, p2, 0x1
 
-    .line 122
+    .line 117
     iput p2, p1, Lcom/miui/home/launcher/ShortcutInfo;->cellX:I
 
-    .line 124
+    .line 119
     :cond_2
     iget-object p2, p0, Lcom/miui/home/launcher/FolderInfo;->mContents:Ljava/util/List;
 
     invoke-interface {p2, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 126
+    .line 121
     :cond_3
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 127
+    .line 122
     iget-wide p2, p0, Lcom/miui/home/launcher/FolderInfo;->id:J
 
     iput-wide p2, p1, Lcom/miui/home/launcher/ShortcutInfo;->container:J
 
-    .line 128
+    .line 123
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderInfo;->updateNewInstallNotification()V
 
     return-void
@@ -328,47 +320,13 @@
     :catchall_0
     move-exception p1
 
-    .line 126
+    .line 121
     :try_start_1
     monitor-exit p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     throw p1
-.end method
-
-.method public areContentsTheSame(Lcom/miui/home/launcher/ItemInfo;)Z
-    .locals 1
-
-    .line 479
-    invoke-super {p0, p1}, Lcom/miui/home/launcher/ItemInfo;->areContentsTheSame(Lcom/miui/home/launcher/ItemInfo;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/miui/home/launcher/FolderInfo;->mContents:Ljava/util/List;
-
-    check-cast p1, Lcom/miui/home/launcher/FolderInfo;
-
-    iget-object p1, p1, Lcom/miui/home/launcher/FolderInfo;->mContents:Ljava/util/List;
-
-    .line 480
-    invoke-interface {v0, p1}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    return p1
 .end method
 
 .method public canAcceptByHotSeats()Z
@@ -382,7 +340,7 @@
 .method public canBeDeleted(Landroid/content/Context;)Z
     .locals 0
 
-    .line 449
+    .line 437
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderInfo;->count()I
 
     move-result p1
@@ -403,7 +361,7 @@
 .method public canRecommendAppsScreenShow()Z
     .locals 1
 
-    .line 416
+    .line 404
     iget-object v0, p0, Lcom/miui/home/launcher/FolderInfo;->mRecommendAppsController:Lcom/miui/home/launcher/commercial/recommend/RecommendController;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->canRecommendScreenShow()Z
@@ -424,14 +382,14 @@
 .method public clone()Lcom/miui/home/launcher/ItemInfo;
     .locals 2
 
-    .line 358
+    .line 346
     invoke-super {p0}, Lcom/miui/home/launcher/ItemInfo;->clone()Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v0
 
     check-cast v0, Lcom/miui/home/launcher/FolderInfo;
 
-    .line 359
+    .line 347
     new-instance v1, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-direct {v1}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
@@ -449,7 +407,7 @@
         }
     .end annotation
 
-    .line 48
+    .line 46
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderInfo;->clone()Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v0
@@ -460,10 +418,10 @@
 .method public contains(Lcom/miui/home/launcher/ShortcutInfo;)Z
     .locals 1
 
-    .line 139
+    .line 134
     monitor-enter p0
 
-    .line 140
+    .line 135
     :try_start_0
     iget-object v0, p0, Lcom/miui/home/launcher/FolderInfo;->mContents:Ljava/util/List;
 
@@ -478,7 +436,7 @@
     :catchall_0
     move-exception p1
 
-    .line 141
+    .line 136
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -489,10 +447,10 @@
 .method public count()I
     .locals 1
 
-    .line 298
+    .line 286
     monitor-enter p0
 
-    .line 299
+    .line 287
     :try_start_0
     iget-object v0, p0, Lcom/miui/home/launcher/FolderInfo;->mContents:Ljava/util/List;
 
@@ -507,7 +465,7 @@
     :catchall_0
     move-exception v0
 
-    .line 300
+    .line 288
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -518,17 +476,17 @@
 .method public getAdapter(Landroid/content/Context;)Lcom/miui/home/launcher/ShortcutsAdapter;
     .locals 1
 
-    .line 304
+    .line 292
     iget-object v0, p0, Lcom/miui/home/launcher/FolderInfo;->mAdapter:Lcom/miui/home/launcher/ShortcutsAdapter;
 
     if-nez v0, :cond_5
 
-    .line 305
+    .line 293
     sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     if-eqz v0, :cond_2
 
-    .line 306
+    .line 294
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderInfo;->isRecommendFolder()Z
 
     move-result v0
@@ -543,7 +501,7 @@
 
     goto :goto_0
 
-    .line 309
+    .line 297
     :cond_0
     new-instance v0, Lcom/miui/home/launcher/ShortcutsAdapter;
 
@@ -553,7 +511,7 @@
 
     goto :goto_2
 
-    .line 307
+    .line 295
     :cond_1
     :goto_0
     new-instance v0, Lcom/miui/home/launcher/commercial/preinstall/global/GlobalPreinstallableFolderShortcutsAdapter;
@@ -564,7 +522,7 @@
 
     goto :goto_2
 
-    .line 312
+    .line 300
     :cond_2
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderInfo;->isRecommendFolder()Z
 
@@ -580,7 +538,7 @@
 
     goto :goto_1
 
-    .line 315
+    .line 303
     :cond_3
     new-instance v0, Lcom/miui/home/launcher/ShortcutsAdapter;
 
@@ -590,7 +548,7 @@
 
     goto :goto_2
 
-    .line 313
+    .line 301
     :cond_4
     :goto_1
     new-instance v0, Lcom/miui/home/launcher/commercial/preinstall/cn/CNPreinstallableFolderShortcutsAdapter;
@@ -599,7 +557,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/FolderInfo;->mAdapter:Lcom/miui/home/launcher/ShortcutsAdapter;
 
-    .line 319
+    .line 307
     :cond_5
     :goto_2
     iget-object p1, p0, Lcom/miui/home/launcher/FolderInfo;->mAdapter:Lcom/miui/home/launcher/ShortcutsAdapter;
@@ -610,7 +568,7 @@
 .method public getBuddyIconView()Lcom/miui/home/launcher/FolderIcon;
     .locals 1
 
-    .line 253
+    .line 241
     iget-object v0, p0, Lcom/miui/home/launcher/FolderInfo;->mBuddyIconView:Lcom/miui/home/launcher/FolderIcon;
 
     return-object v0
@@ -627,10 +585,10 @@
         }
     .end annotation
 
-    .line 145
+    .line 140
     monitor-enter p0
 
-    .line 146
+    .line 141
     :try_start_0
     iget-object v0, p0, Lcom/miui/home/launcher/FolderInfo;->mContents:Ljava/util/List;
 
@@ -641,7 +599,7 @@
     :catchall_0
     move-exception v0
 
-    .line 147
+    .line 142
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -652,7 +610,7 @@
 .method public getFolderNameUsedToRequestFolderAdList(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
 
-    .line 375
+    .line 363
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderInfo;->isRecommendFolder()Z
 
     move-result v0
@@ -663,7 +621,7 @@
 
     goto :goto_0
 
-    .line 377
+    .line 365
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderInfo;->isHotFolder()Z
 
@@ -675,7 +633,7 @@
 
     goto :goto_0
 
-    .line 380
+    .line 368
     :cond_1
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/FolderInfo;->getTitle(Landroid/content/Context;)Ljava/lang/CharSequence;
 
@@ -692,7 +650,7 @@
 .method public getGlobalFolderTagId()Ljava/lang/String;
     .locals 1
 
-    .line 463
+    .line 451
     iget-object v0, p0, Lcom/miui/home/launcher/FolderInfo;->globalFolderTagId:Ljava/lang/String;
 
     return-object v0
@@ -701,7 +659,7 @@
 .method public getGlobalFolderTagIdToRequestRecommendAd()[Ljava/lang/String;
     .locals 1
 
-    .line 386
+    .line 374
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderInfo;->isRecommendFolder()Z
 
     move-result v0
@@ -710,14 +668,14 @@
 
     const-string v0, "1.302.4.1"
 
-    .line 387
+    .line 375
     filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 
-    .line 388
+    .line 376
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderInfo;->isGamesFolder()Z
 
@@ -727,14 +685,14 @@
 
     const-string v0, "1.302.4.13"
 
-    .line 389
+    .line 377
     filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 
-    .line 390
+    .line 378
     :cond_1
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderInfo;->isUserGameFolder()Z
 
@@ -744,7 +702,7 @@
 
     const-string v0, "1.302.4.18"
 
-    .line 391
+    .line 379
     filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object v0
@@ -754,7 +712,7 @@
     :cond_2
     const/4 v0, 0x0
 
-    .line 393
+    .line 381
     new-array v0, v0, [Ljava/lang/String;
 
     return-object v0
@@ -771,17 +729,17 @@
         }
     .end annotation
 
-    .line 364
+    .line 352
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 365
+    .line 353
     monitor-enter p0
 
     const/4 v1, 0x0
 
-    .line 366
+    .line 354
     :goto_0
     :try_start_0
     iget-object v2, p0, Lcom/miui/home/launcher/FolderInfo;->mContents:Ljava/util/List;
@@ -792,7 +750,7 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 367
+    .line 355
     iget-object v2, p0, Lcom/miui/home/launcher/FolderInfo;->mContents:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -811,7 +769,7 @@
 
     goto :goto_0
 
-    .line 369
+    .line 357
     :cond_0
     monitor-exit p0
 
@@ -830,7 +788,7 @@
 .method public getPreinstallAdsEnable()Z
     .locals 1
 
-    .line 412
+    .line 400
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderInfo;->isRecommendFolder()Z
 
     move-result v0
@@ -872,7 +830,7 @@
 .method public getPreinstallManager()Lcom/miui/home/launcher/commercial/preinstall/FolderPreinstallManager;
     .locals 1
 
-    .line 474
+    .line 462
     iget-object v0, p0, Lcom/miui/home/launcher/FolderInfo;->mPreinstallManager:Lcom/miui/home/launcher/commercial/preinstall/FolderPreinstallManager;
 
     return-object v0
@@ -881,7 +839,7 @@
 .method public getRecommendController()Lcom/miui/home/launcher/commercial/recommend/RecommendController;
     .locals 1
 
-    .line 398
+    .line 386
     iget-object v0, p0, Lcom/miui/home/launcher/FolderInfo;->mRecommendAppsController:Lcom/miui/home/launcher/commercial/recommend/RecommendController;
 
     return-object v0
@@ -890,7 +848,7 @@
 .method public getTitle(Landroid/content/Context;)Ljava/lang/CharSequence;
     .locals 1
 
-    .line 323
+    .line 311
     iget-object v0, p0, Lcom/miui/home/launcher/FolderInfo;->mTitle:Ljava/lang/CharSequence;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -899,7 +857,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 324
+    .line 312
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object p1
@@ -908,7 +866,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f1104c0
+    const v0, 0x7f1003f0
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -919,12 +877,12 @@
     :cond_0
     if-nez p1, :cond_1
 
-    .line 327
+    .line 315
     iget-object p1, p0, Lcom/miui/home/launcher/FolderInfo;->mTitle:Ljava/lang/CharSequence;
 
     return-object p1
 
-    .line 329
+    .line 317
     :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/FolderInfo;->mTitle:Ljava/lang/CharSequence;
 
@@ -935,34 +893,25 @@
     return-object p1
 .end method
 
-.method public hasNewInstalledApp()Z
-    .locals 1
-
-    .line 191
-    iget-boolean v0, p0, Lcom/miui/home/launcher/FolderInfo;->mHasNewInstallApps:Z
-
-    return v0
-.end method
-
 .method public initRecommendSwitchState(Lcom/miui/home/launcher/Launcher;)V
     .locals 1
 
-    .line 196
+    .line 184
     iget-object p1, p0, Lcom/miui/home/launcher/FolderInfo;->mRecommendAppsController:Lcom/miui/home/launcher/commercial/recommend/RecommendController;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->isRecommendSwitchOn()Z
 
     move-result p1
 
-    .line 198
+    .line 186
     iget-boolean v0, p0, Lcom/miui/home/launcher/FolderInfo;->mIsRecommendAppsSwitchON:Z
 
     if-eq v0, p1, :cond_0
 
-    .line 199
+    .line 187
     iput-boolean p1, p0, Lcom/miui/home/launcher/FolderInfo;->mIsRecommendAppsSwitchON:Z
 
-    .line 200
+    .line 188
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/FolderInfo;->onRecommendAppsSwitchStateChanged(Z)V
 
     :cond_0
@@ -972,14 +921,14 @@
 .method public isAllItemDragging(Lcom/miui/home/launcher/DragObject;)Z
     .locals 4
 
-    .line 428
+    .line 416
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     const/4 v1, 0x0
 
-    .line 429
+    .line 417
     :goto_0
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getDraggingSize()I
 
@@ -987,19 +936,19 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 430
+    .line 418
     invoke-virtual {p1, v1}, Lcom/miui/home/launcher/DragObject;->getDragInfo(I)Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    .line 431
+    .line 419
     instance-of v3, v2, Lcom/miui/home/launcher/ShortcutInfo;
 
     if-eqz v3, :cond_0
 
-    .line 432
+    .line 420
     check-cast v2, Lcom/miui/home/launcher/ShortcutInfo;
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -1009,11 +958,11 @@
 
     goto :goto_0
 
-    .line 435
+    .line 423
     :cond_1
     monitor-enter p0
 
-    .line 436
+    .line 424
     :try_start_0
     iget-object p1, p0, Lcom/miui/home/launcher/FolderInfo;->mContents:Ljava/util/List;
 
@@ -1028,7 +977,7 @@
     :catchall_0
     move-exception p1
 
-    .line 437
+    .line 425
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1041,7 +990,7 @@
 
     const-string v0, "com.miui.home:string/default_folder_title_game"
 
-    .line 229
+    .line 217
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/FolderInfo;->isSystemCreatedFolder(Ljava/lang/String;)Z
 
     move-result v0
@@ -1054,7 +1003,7 @@
 
     const-string v0, "Google"
 
-    .line 209
+    .line 197
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/FolderInfo;->isSystemCreatedFolder(Ljava/lang/String;)Z
 
     move-result v0
@@ -1067,7 +1016,7 @@
 
     const-string v0, "com.miui.home:string/default_folder_title_hot"
 
-    .line 225
+    .line 213
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/FolderInfo;->isSystemCreatedFolder(Ljava/lang/String;)Z
 
     move-result v0
@@ -1078,7 +1027,7 @@
 .method public isOpened()Z
     .locals 1
 
-    .line 424
+    .line 412
     iget-boolean v0, p0, Lcom/miui/home/launcher/FolderInfo;->opened:Z
 
     return v0
@@ -1089,7 +1038,7 @@
 
     const-string v0, "com.miui.home:string/default_folder_title_recommend"
 
-    .line 221
+    .line 209
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/FolderInfo;->isSystemCreatedFolder(Ljava/lang/String;)Z
 
     move-result v0
@@ -1102,7 +1051,7 @@
 
     const-string v0, "com.miui.home:string/russia_preinstall_folder_name"
 
-    .line 213
+    .line 201
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/FolderInfo;->isSystemCreatedFolder(Ljava/lang/String;)Z
 
     move-result v0
@@ -1115,7 +1064,7 @@
 
     const-string v0, "com.miui.home:string/default_folder_title_tools"
 
-    .line 217
+    .line 205
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/FolderInfo;->isSystemCreatedFolder(Ljava/lang/String;)Z
 
     move-result v0
@@ -1126,9 +1075,9 @@
 .method public isUserGameFolder()Z
     .locals 1
 
-    const-string/jumbo v0, "user_game_folder"
+    const-string v0, "user_game_folder"
 
-    .line 233
+    .line 221
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/FolderInfo;->isSystemCreatedFolder(Ljava/lang/String;)Z
 
     move-result v0
@@ -1141,7 +1090,7 @@
 
     const-string v0, "com.miui.home:string/all_app_category_work"
 
-    .line 241
+    .line 229
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/FolderInfo;->isSystemCreatedFolder(Ljava/lang/String;)Z
 
     move-result v0
@@ -1152,12 +1101,12 @@
 .method public load(Landroid/content/Context;Landroid/database/Cursor;)V
     .locals 2
 
-    .line 81
+    .line 76
     invoke-super {p0, p1, p2}, Lcom/miui/home/launcher/ItemInfo;->load(Landroid/content/Context;Landroid/database/Cursor;)V
 
     const/4 p1, 0x2
 
-    .line 82
+    .line 77
     invoke-interface {p2, p1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object p1
@@ -1166,17 +1115,17 @@
 
     const/16 p1, 0x16
 
-    .line 83
+    .line 78
     invoke-interface {p2, p1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/miui/home/launcher/FolderInfo;->mLabel:Ljava/lang/CharSequence;
 
-    .line 84
+    .line 79
     monitor-enter p0
 
-    .line 85
+    .line 80
     :try_start_0
     iget-object p1, p0, Lcom/miui/home/launcher/FolderInfo;->mContents:Ljava/util/List;
 
@@ -1197,20 +1146,20 @@
 
     check-cast p2, Lcom/miui/home/launcher/ShortcutInfo;
 
-    .line 86
+    .line 81
     iget-wide v0, p0, Lcom/miui/home/launcher/FolderInfo;->id:J
 
     iput-wide v0, p2, Lcom/miui/home/launcher/ShortcutInfo;->container:J
 
     goto :goto_0
 
-    .line 88
+    .line 83
     :cond_0
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 89
+    .line 84
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderInfo;->isRecommendFolder()Z
 
     move-result p1
@@ -1219,12 +1168,12 @@
 
     const-string p1, "1.302.4.2"
 
-    .line 90
+    .line 85
     iput-object p1, p0, Lcom/miui/home/launcher/FolderInfo;->globalFolderTagId:Ljava/lang/String;
 
     goto :goto_1
 
-    .line 91
+    .line 86
     :cond_1
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderInfo;->isGamesFolder()Z
 
@@ -1234,7 +1183,7 @@
 
     const-string p1, "1.302.4.12"
 
-    .line 92
+    .line 87
     iput-object p1, p0, Lcom/miui/home/launcher/FolderInfo;->globalFolderTagId:Ljava/lang/String;
 
     :cond_2
@@ -1244,7 +1193,7 @@
     :catchall_0
     move-exception p1
 
-    .line 88
+    .line 83
     :try_start_1
     monitor-exit p0
     :try_end_1
@@ -1256,17 +1205,17 @@
 .method public notifyDataSetChanged()V
     .locals 1
 
-    .line 284
+    .line 272
     iget-object v0, p0, Lcom/miui/home/launcher/FolderInfo;->mAdapter:Lcom/miui/home/launcher/ShortcutsAdapter;
 
     if-eqz v0, :cond_0
 
-    .line 285
+    .line 273
     invoke-virtual {v0}, Lcom/miui/home/launcher/ShortcutsAdapter;->notifyDataSetChanged()V
 
     goto :goto_0
 
-    .line 287
+    .line 275
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderInfo;->refreshPreviewIcons()V
 
@@ -1277,12 +1226,12 @@
 .method public onAddToDatabase(Landroid/content/Context;Landroid/content/ContentValues;)V
     .locals 2
 
-    .line 344
+    .line 332
     invoke-super {p0, p1, p2}, Lcom/miui/home/launcher/ItemInfo;->onAddToDatabase(Landroid/content/Context;Landroid/content/ContentValues;)V
 
     const-string v0, "title"
 
-    .line 345
+    .line 333
     iget-object v1, p0, Lcom/miui/home/launcher/FolderInfo;->mTitle:Ljava/lang/CharSequence;
 
     invoke-interface {v1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
@@ -1291,7 +1240,7 @@
 
     invoke-virtual {p2, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 347
+    .line 335
     iget-object v0, p0, Lcom/miui/home/launcher/FolderInfo;->mLabel:Ljava/lang/CharSequence;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -1302,7 +1251,7 @@
 
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/FolderInfo;->updateLabelFromTitle(Landroid/content/Context;)V
 
-    .line 348
+    .line 336
     :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/FolderInfo;->mLabel:Ljava/lang/CharSequence;
 
@@ -1322,7 +1271,7 @@
     :goto_0
     const-string v0, "label"
 
-    .line 349
+    .line 337
     invoke-virtual {p2, v0, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -1331,15 +1280,15 @@
 .method public onBinded(Z)V
     .locals 1
 
-    .line 441
+    .line 429
     iget-object v0, p0, Lcom/miui/home/launcher/FolderInfo;->mAdapter:Lcom/miui/home/launcher/ShortcutsAdapter;
 
     if-eqz v0, :cond_0
 
-    .line 442
+    .line 430
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/ShortcutsAdapter;->onBinded(Z)V
 
-    .line 444
+    .line 432
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/FolderInfo;->mRecommendAppsController:Lcom/miui/home/launcher/commercial/recommend/RecommendController;
 
@@ -1351,7 +1300,7 @@
 .method public onCurrentScreenShowing()V
     .locals 1
 
-    .line 459
+    .line 447
     iget-object v0, p0, Lcom/miui/home/launcher/FolderInfo;->mRecommendAppsController:Lcom/miui/home/launcher/commercial/recommend/RecommendController;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->onCurrentScreenShowing()V
@@ -1362,12 +1311,12 @@
 .method public onRecommendAppsSwitchStateChanged(Z)V
     .locals 1
 
-    .line 402
+    .line 390
     iget-object v0, p0, Lcom/miui/home/launcher/FolderInfo;->mAdapter:Lcom/miui/home/launcher/ShortcutsAdapter;
 
     if-eqz v0, :cond_0
 
-    .line 403
+    .line 391
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/ShortcutsAdapter;->onRecommendAppsEnableChanged(Z)V
 
     :cond_0
@@ -1377,10 +1326,10 @@
 .method public preLoadContentView(Lcom/miui/home/launcher/Launcher;)V
     .locals 3
 
-    .line 156
+    .line 151
     monitor-enter p0
 
-    .line 157
+    .line 152
     :try_start_0
     iget-object v0, p0, Lcom/miui/home/launcher/FolderInfo;->mContents:Ljava/util/List;
 
@@ -1401,7 +1350,7 @@
 
     check-cast v1, Lcom/miui/home/launcher/ShortcutInfo;
 
-    .line 158
+    .line 153
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getFolderCling()Lcom/miui/home/launcher/FolderCling;
 
     move-result-object v2
@@ -1418,13 +1367,13 @@
 
     goto :goto_0
 
-    .line 160
+    .line 155
     :cond_0
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 161
+    .line 156
     new-instance v0, Lcom/miui/home/launcher/-$$Lambda$FolderInfo$CRwpfrS3PbQ6HPKytdy1LIozWqk;
 
     invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/-$$Lambda$FolderInfo$CRwpfrS3PbQ6HPKytdy1LIozWqk;-><init>(Lcom/miui/home/launcher/FolderInfo;Lcom/miui/home/launcher/Launcher;)V
@@ -1436,7 +1385,7 @@
     :catchall_0
     move-exception p1
 
-    .line 160
+    .line 155
     :try_start_1
     monitor-exit p0
     :try_end_1
@@ -1448,7 +1397,7 @@
 .method public printSimpleIdentity()Ljava/lang/String;
     .locals 3
 
-    .line 353
+    .line 341
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1471,14 +1420,14 @@
 .method refreshPreviewIcons()V
     .locals 2
 
-    .line 292
+    .line 280
     iget-object v0, p0, Lcom/miui/home/launcher/FolderInfo;->icon:Lcom/miui/home/launcher/Folder$FolderCallback;
 
     if-eqz v0, :cond_0
 
     const/4 v1, 0x0
 
-    .line 293
+    .line 281
     invoke-interface {v0, v1}, Lcom/miui/home/launcher/Folder$FolderCallback;->loadItemIcons(Z)V
 
     :cond_0
@@ -1488,21 +1437,21 @@
 .method public remove(Lcom/miui/home/launcher/ShortcutInfo;)V
     .locals 1
 
-    .line 262
+    .line 250
     monitor-enter p0
 
-    .line 263
+    .line 251
     :try_start_0
     iget-object v0, p0, Lcom/miui/home/launcher/FolderInfo;->mContents:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 264
+    .line 252
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 265
+    .line 253
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderInfo;->updateNewInstallNotification()V
 
     return-void
@@ -1510,7 +1459,7 @@
     :catchall_0
     move-exception p1
 
-    .line 264
+    .line 252
     :try_start_1
     monitor-exit p0
     :try_end_1
@@ -1522,10 +1471,10 @@
 .method public remove(J)Z
     .locals 4
 
-    .line 269
+    .line 257
     monitor-enter p0
 
-    .line 270
+    .line 258
     :try_start_0
     iget-object v0, p0, Lcom/miui/home/launcher/FolderInfo;->mContents:Ljava/util/List;
 
@@ -1546,37 +1495,37 @@
 
     check-cast v1, Lcom/miui/home/launcher/ShortcutInfo;
 
-    .line 271
+    .line 259
     iget-wide v2, v1, Lcom/miui/home/launcher/ShortcutInfo;->id:J
 
     cmp-long v2, v2, p1
 
     if-nez v2, :cond_0
 
-    .line 272
+    .line 260
     iget-object p1, p0, Lcom/miui/home/launcher/FolderInfo;->mContents:Ljava/util/List;
 
     invoke-interface {p1, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 273
+    .line 261
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderInfo;->notifyDataSetChanged()V
 
-    .line 274
+    .line 262
     iget-object p1, p0, Lcom/miui/home/launcher/FolderInfo;->mBuddyIconView:Lcom/miui/home/launcher/FolderIcon;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/FolderIcon;->checkToDeleteSelf()V
 
-    .line 275
+    .line 263
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderInfo;->updateNewInstallNotification()V
 
     const/4 p1, 0x1
 
-    .line 276
+    .line 264
     monitor-exit p0
 
     return p1
 
-    .line 279
+    .line 267
     :cond_1
     monitor-exit p0
 
@@ -1597,7 +1546,7 @@
 .method public removeRecommendAppsViewKey()V
     .locals 1
 
-    .line 420
+    .line 408
     iget-object v0, p0, Lcom/miui/home/launcher/FolderInfo;->mRecommendAppsController:Lcom/miui/home/launcher/commercial/recommend/RecommendController;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->removeRecommendSwitchSharedPreference()V
@@ -1608,7 +1557,7 @@
 .method public setBuddyIconView(Lcom/miui/home/launcher/FolderIcon;)V
     .locals 0
 
-    .line 249
+    .line 237
     iput-object p1, p0, Lcom/miui/home/launcher/FolderInfo;->mBuddyIconView:Lcom/miui/home/launcher/FolderIcon;
 
     return-void
@@ -1617,7 +1566,7 @@
 .method public setLabelAndUpdateDb(Landroid/content/Context;Ljava/lang/CharSequence;)V
     .locals 4
 
-    .line 467
+    .line 455
     iget-wide v0, p0, Lcom/miui/home/launcher/FolderInfo;->id:J
 
     const-wide/16 v2, -0x1
@@ -1632,10 +1581,10 @@
 
     if-nez v0, :cond_0
 
-    .line 468
+    .line 456
     iput-object p2, p0, Lcom/miui/home/launcher/FolderInfo;->mLabel:Ljava/lang/CharSequence;
 
-    .line 469
+    .line 457
     iget-wide v0, p0, Lcom/miui/home/launcher/FolderInfo;->id:J
 
     iget-object p2, p0, Lcom/miui/home/launcher/FolderInfo;->mLabel:Ljava/lang/CharSequence;
@@ -1649,7 +1598,7 @@
 .method public setRecommendAppsSwitchOn(Z)V
     .locals 1
 
-    .line 408
+    .line 396
     iget-object v0, p0, Lcom/miui/home/launcher/FolderInfo;->mRecommendAppsController:Lcom/miui/home/launcher/commercial/recommend/RecommendController;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->setRecommendSwitchOn(Z)V
@@ -1660,22 +1609,22 @@
 .method public setTitle(Ljava/lang/CharSequence;Landroid/content/Context;)V
     .locals 4
 
-    .line 333
+    .line 321
     iput-object p1, p0, Lcom/miui/home/launcher/FolderInfo;->mTitle:Ljava/lang/CharSequence;
 
-    .line 334
+    .line 322
     iget-object v0, p0, Lcom/miui/home/launcher/FolderInfo;->icon:Lcom/miui/home/launcher/Folder$FolderCallback;
 
     if-eqz v0, :cond_0
 
-    .line 335
+    .line 323
     invoke-virtual {p0, p2}, Lcom/miui/home/launcher/FolderInfo;->getTitle(Landroid/content/Context;)Ljava/lang/CharSequence;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Lcom/miui/home/launcher/Folder$FolderCallback;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 337
+    .line 325
     :cond_0
     iget-wide v0, p0, Lcom/miui/home/launcher/FolderInfo;->id:J
 
@@ -1685,7 +1634,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 338
+    .line 326
     iget-wide v0, p0, Lcom/miui/home/launcher/FolderInfo;->id:J
 
     invoke-static {p2, v0, v1, p1}, Lcom/miui/home/launcher/LauncherModel;->updateTitleInDatabase(Landroid/content/Context;JLjava/lang/CharSequence;)V
@@ -1697,16 +1646,15 @@
 .method public updateNewInstallNotification()V
     .locals 2
 
-    .line 171
-    invoke-direct {p0}, Lcom/miui/home/launcher/FolderInfo;->updateNewInstallFlag()V
-
-    .line 172
+    .line 165
     iget-object v0, p0, Lcom/miui/home/launcher/FolderInfo;->mBuddyIconView:Lcom/miui/home/launcher/FolderIcon;
 
     if-eqz v0, :cond_1
 
-    .line 173
-    iget-boolean v0, p0, Lcom/miui/home/launcher/FolderInfo;->mHasNewInstallApps:Z
+    .line 166
+    invoke-direct {p0}, Lcom/miui/home/launcher/FolderInfo;->hasNewInstalledApp()Z
+
+    move-result v0
 
     if-eqz v0, :cond_0
 
@@ -1727,7 +1675,7 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 174
+    .line 167
     :goto_0
     iget-object v1, p0, Lcom/miui/home/launcher/FolderInfo;->mBuddyIconView:Lcom/miui/home/launcher/FolderIcon;
 

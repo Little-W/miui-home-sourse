@@ -42,7 +42,7 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .line 308
+    .line 371
     new-instance v0, Lcom/google/android/filament/Texture$Swizzle;
 
     const-string v1, "SUBSTITUTE_ZERO"
@@ -53,7 +53,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$Swizzle;->SUBSTITUTE_ZERO:Lcom/google/android/filament/Texture$Swizzle;
 
-    .line 309
+    .line 372
     new-instance v0, Lcom/google/android/filament/Texture$Swizzle;
 
     const-string v1, "SUBSTITUTE_ONE"
@@ -64,7 +64,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$Swizzle;->SUBSTITUTE_ONE:Lcom/google/android/filament/Texture$Swizzle;
 
-    .line 310
+    .line 373
     new-instance v0, Lcom/google/android/filament/Texture$Swizzle;
 
     const-string v1, "CHANNEL_0"
@@ -75,7 +75,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$Swizzle;->CHANNEL_0:Lcom/google/android/filament/Texture$Swizzle;
 
-    .line 311
+    .line 374
     new-instance v0, Lcom/google/android/filament/Texture$Swizzle;
 
     const-string v1, "CHANNEL_1"
@@ -86,7 +86,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$Swizzle;->CHANNEL_1:Lcom/google/android/filament/Texture$Swizzle;
 
-    .line 312
+    .line 375
     new-instance v0, Lcom/google/android/filament/Texture$Swizzle;
 
     const-string v1, "CHANNEL_2"
@@ -97,7 +97,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$Swizzle;->CHANNEL_2:Lcom/google/android/filament/Texture$Swizzle;
 
-    .line 313
+    .line 376
     new-instance v0, Lcom/google/android/filament/Texture$Swizzle;
 
     const-string v1, "CHANNEL_3"
@@ -110,7 +110,7 @@
 
     const/4 v0, 0x6
 
-    .line 307
+    .line 370
     new-array v0, v0, [Lcom/google/android/filament/Texture$Swizzle;
 
     sget-object v1, Lcom/google/android/filament/Texture$Swizzle;->SUBSTITUTE_ZERO:Lcom/google/android/filament/Texture$Swizzle;
@@ -150,7 +150,7 @@
         }
     .end annotation
 
-    .line 307
+    .line 370
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -159,7 +159,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/android/filament/Texture$Swizzle;
     .locals 1
 
-    .line 307
+    .line 370
     const-class v0, Lcom/google/android/filament/Texture$Swizzle;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -174,7 +174,7 @@
 .method public static values()[Lcom/google/android/filament/Texture$Swizzle;
     .locals 1
 
-    .line 307
+    .line 370
     sget-object v0, Lcom/google/android/filament/Texture$Swizzle;->$VALUES:[Lcom/google/android/filament/Texture$Swizzle;
 
     invoke-virtual {v0}, [Lcom/google/android/filament/Texture$Swizzle;->clone()Ljava/lang/Object;

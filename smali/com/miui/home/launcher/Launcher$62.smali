@@ -1,14 +1,11 @@
 .class Lcom/miui/home/launcher/Launcher$62;
-.super Ljava/lang/Object;
+.super Landroid/animation/AnimatorListenerAdapter;
 .source "Launcher.java"
-
-# interfaces
-.implements Landroid/widget/PopupWindow$OnDismissListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/Launcher;->showUpsideEnterOrExitTipIfNeed(Z)Z
+    value = Lcom/miui/home/launcher/Launcher;->restoreWidget(Lcom/miui/home/launcher/LauncherAppWidgetInfo;Ljava/util/List;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,38 +17,44 @@
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/launcher/Launcher;
 
-.field final synthetic val$group:Landroid/widget/FrameLayout;
+.field final synthetic val$hostView:Landroid/view/View;
 
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/Launcher;Landroid/widget/FrameLayout;)V
+.method constructor <init>(Lcom/miui/home/launcher/Launcher;Landroid/view/View;)V
     .locals 0
 
-    .line 7037
+    .line 6703
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$62;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    iput-object p2, p0, Lcom/miui/home/launcher/Launcher$62;->val$group:Landroid/widget/FrameLayout;
+    iput-object p2, p0, Lcom/miui/home/launcher/Launcher$62;->val$hostView:Landroid/view/View;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onDismiss()V
-    .locals 2
+.method public onAnimationEnd(Landroid/animation/Animator;Z)V
+    .locals 0
 
-    .line 7039
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$62;->this$0:Lcom/miui/home/launcher/Launcher;
+    .line 6706
+    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$62;->val$hostView:Landroid/view/View;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$2400(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/DragLayer;
+    invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
-    move-result-object v0
+    move-result-object p1
 
-    iget-object v1, p0, Lcom/miui/home/launcher/Launcher$62;->val$group:Landroid/widget/FrameLayout;
+    check-cast p1, Landroid/view/ViewGroup;
 
-    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/DragLayer;->removeView(Landroid/view/View;)V
+    if-eqz p1, :cond_0
 
+    .line 6708
+    iget-object p2, p0, Lcom/miui/home/launcher/Launcher$62;->val$hostView:Landroid/view/View;
+
+    invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+
+    :cond_0
     return-void
 .end method

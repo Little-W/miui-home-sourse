@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/DragController;)V
     .locals 0
 
-    .line 1304
+    .line 1276
     iput-object p1, p0, Lcom/miui/home/launcher/DragController$ScrollRunnable;->this$0:Lcom/miui/home/launcher/DragController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +40,7 @@
 .method public run()V
     .locals 4
 
-    .line 1308
+    .line 1280
     iget-object v0, p0, Lcom/miui/home/launcher/DragController$ScrollRunnable;->this$0:Lcom/miui/home/launcher/DragController;
 
     invoke-static {v0}, Lcom/miui/home/launcher/DragController;->access$100(Lcom/miui/home/launcher/DragController;)Lcom/miui/home/launcher/DragScroller;
@@ -59,7 +59,7 @@
 
     iget-object v0, p0, Lcom/miui/home/launcher/DragController$ScrollRunnable;->this$0:Lcom/miui/home/launcher/DragController;
 
-    .line 1309
+    .line 1281
     invoke-static {v0}, Lcom/miui/home/launcher/DragController;->access$100(Lcom/miui/home/launcher/DragController;)Lcom/miui/home/launcher/DragScroller;
 
     move-result-object v0
@@ -70,7 +70,7 @@
 
     iget-object v0, p0, Lcom/miui/home/launcher/DragController$ScrollRunnable;->this$0:Lcom/miui/home/launcher/DragController;
 
-    .line 1310
+    .line 1282
     invoke-static {v0}, Lcom/miui/home/launcher/DragController;->access$300(Lcom/miui/home/launcher/DragController;)Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
@@ -91,13 +91,13 @@
 
     if-eqz v0, :cond_2
 
-    .line 1311
+    .line 1283
     :cond_0
     iget v0, p0, Lcom/miui/home/launcher/DragController$ScrollRunnable;->mDirection:I
 
     if-nez v0, :cond_1
 
-    .line 1312
+    .line 1284
     iget-object v0, p0, Lcom/miui/home/launcher/DragController$ScrollRunnable;->this$0:Lcom/miui/home/launcher/DragController;
 
     invoke-static {v0}, Lcom/miui/home/launcher/DragController;->access$100(Lcom/miui/home/launcher/DragController;)Lcom/miui/home/launcher/DragScroller;
@@ -108,7 +108,7 @@
 
     goto :goto_0
 
-    .line 1314
+    .line 1286
     :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/DragController$ScrollRunnable;->this$0:Lcom/miui/home/launcher/DragController;
 
@@ -118,7 +118,7 @@
 
     invoke-interface {v0}, Lcom/miui/home/launcher/DragScroller;->scrollDragingRight()V
 
-    .line 1316
+    .line 1288
     :goto_0
     iget-object v0, p0, Lcom/miui/home/launcher/DragController$ScrollRunnable;->this$0:Lcom/miui/home/launcher/DragController;
 
@@ -126,7 +126,7 @@
 
     invoke-static {v0, v1}, Lcom/miui/home/launcher/DragController;->access$402(Lcom/miui/home/launcher/DragController;I)I
 
-    .line 1317
+    .line 1289
     iget-object v0, p0, Lcom/miui/home/launcher/DragController$ScrollRunnable;->this$0:Lcom/miui/home/launcher/DragController;
 
     invoke-static {v0}, Lcom/miui/home/launcher/DragController;->access$600(Lcom/miui/home/launcher/DragController;)Landroid/os/Handler;
@@ -150,7 +150,7 @@
 .method setDirection(I)V
     .locals 0
 
-    .line 1322
+    .line 1294
     iput p1, p0, Lcom/miui/home/launcher/DragController$ScrollRunnable;->mDirection:I
 
     return-void

@@ -22,7 +22,7 @@
 .method constructor <init>(Landroidx/fragment/app/Fragment;)V
     .locals 0
 
-    .line 2896
+    .line 2883
     iput-object p1, p0, Landroidx/fragment/app/Fragment$4;->this$0:Landroidx/fragment/app/Fragment;
 
     invoke-direct {p0}, Landroidx/fragment/app/FragmentContainer;-><init>()V
@@ -35,14 +35,14 @@
 .method public onFindViewById(I)Landroid/view/View;
     .locals 2
 
-    .line 2900
+    .line 2887
     iget-object v0, p0, Landroidx/fragment/app/Fragment$4;->this$0:Landroidx/fragment/app/Fragment;
 
     iget-object v0, v0, Landroidx/fragment/app/Fragment;->mView:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
-    .line 2904
+    .line 2891
     iget-object v0, p0, Landroidx/fragment/app/Fragment$4;->this$0:Landroidx/fragment/app/Fragment;
 
     iget-object v0, v0, Landroidx/fragment/app/Fragment;->mView:Landroid/view/View;
@@ -53,7 +53,7 @@
 
     return-object p1
 
-    .line 2901
+    .line 2888
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -85,7 +85,7 @@
 .method public onHasView()Z
     .locals 1
 
-    .line 2909
+    .line 2896
     iget-object v0, p0, Landroidx/fragment/app/Fragment$4;->this$0:Landroidx/fragment/app/Fragment;
 
     iget-object v0, v0, Landroidx/fragment/app/Fragment;->mView:Landroid/view/View;

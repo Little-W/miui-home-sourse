@@ -55,7 +55,7 @@
 
     const/4 v1, 0x1
 
-    const v2, 0x7f110087
+    const v2, 0x7f100082
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -64,7 +64,7 @@
 
     const/4 v1, 0x2
 
-    const v2, 0x7f110090
+    const v2, 0x7f10008b
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -73,7 +73,7 @@
 
     const/4 v1, 0x3
 
-    const v2, 0x7f110093
+    const v2, 0x7f10008e
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -82,7 +82,7 @@
 
     const/4 v1, 0x4
 
-    const v2, 0x7f11008a
+    const v2, 0x7f100085
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -91,7 +91,7 @@
 
     const/4 v1, 0x5
 
-    const v2, 0x7f110092
+    const v2, 0x7f10008d
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -100,7 +100,7 @@
 
     const/4 v1, 0x6
 
-    const v2, 0x7f11008d
+    const v2, 0x7f100088
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -109,7 +109,7 @@
 
     const/4 v1, 0x7
 
-    const v2, 0x7f110084
+    const v2, 0x7f10007f
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -118,7 +118,7 @@
 
     const/16 v1, 0x8
 
-    const v2, 0x7f110091
+    const v2, 0x7f10008c
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -127,7 +127,7 @@
 
     const/16 v1, 0x9
 
-    const v2, 0x7f11008f
+    const v2, 0x7f10008a
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -136,7 +136,7 @@
 
     const/16 v1, 0xa
 
-    const v2, 0x7f11008e
+    const v2, 0x7f100089
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -145,7 +145,7 @@
 
     const/16 v1, 0xb
 
-    const v2, 0x7f11008c
+    const v2, 0x7f100087
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -154,7 +154,7 @@
 
     const/16 v1, 0xc
 
-    const v2, 0x7f110085
+    const v2, 0x7f100080
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -163,7 +163,7 @@
 
     const/16 v1, 0xd
 
-    const v2, 0x7f110086
+    const v2, 0x7f100081
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -172,7 +172,7 @@
 
     const/16 v1, 0xe
 
-    const v2, 0x7f110089
+    const v2, 0x7f100084
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -181,7 +181,7 @@
 
     const/16 v1, 0xf
 
-    const v2, 0x7f110088
+    const v2, 0x7f100083
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -190,7 +190,7 @@
 
     const/16 v1, 0x1b
 
-    const v2, 0x7f11008b
+    const v2, 0x7f100086
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -199,7 +199,7 @@
 
     const/16 v1, 0xd1
 
-    const v2, 0x7f110094
+    const v2, 0x7f10008f
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -414,7 +414,7 @@
 
     move-result-object p1
 
-    const/high16 v5, 0x7f100000
+    const/high16 v5, 0x7f0f0000
 
     invoke-virtual {p1, v5}, Landroid/content/res/Resources;->openRawResource(I)Ljava/io/InputStream;
 
@@ -649,7 +649,7 @@
 
     move-result v1
 
-    const v2, 0x7f1101f5
+    const v2, 0x7f1001ad
 
     if-eqz v1, :cond_6
 

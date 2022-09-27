@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Background$1;)V
     .locals 0
 
-    .line 157
+    .line 154
     iput-object p1, p0, Lcom/miui/home/launcher/Background$1$1;->this$1:Lcom/miui/home/launcher/Background$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 2
 
-    .line 160
+    .line 157
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -49,7 +49,7 @@
 
     move-result p1
 
-    .line 161
+    .line 158
     iget-object v0, p0, Lcom/miui/home/launcher/Background$1$1;->this$1:Lcom/miui/home/launcher/Background$1;
 
     iget-object v0, v0, Lcom/miui/home/launcher/Background$1;->this$0:Lcom/miui/home/launcher/Background;

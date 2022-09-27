@@ -120,7 +120,7 @@
     return-void
 
     :cond_0
-    const v0, 0x1a2ab048
+    const v0, 0x19644fd0
 
     .line 137
     invoke-static {}, Lcom/miui/home/launcher/CategorySettingHelper;->getInstance()Lcom/miui/home/launcher/CategorySettingHelper;
@@ -263,7 +263,7 @@
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v10, "update default app category:"
+    const-string v10, "update default app category:"
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -476,7 +476,7 @@
 .method public call(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
     .locals 0
 
-    const-string/jumbo p2, "update_default_app_category"
+    const-string p2, "update_default_app_category"
 
     .line 126
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z

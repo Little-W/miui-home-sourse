@@ -36,7 +36,7 @@
 .method static constructor <clinit>()V
     .locals 5
 
-    .line 41
+    .line 104
     new-instance v0, Lcom/google/android/filament/Stream$StreamType;
 
     const-string v1, "NATIVE"
@@ -47,7 +47,7 @@
 
     sput-object v0, Lcom/google/android/filament/Stream$StreamType;->NATIVE:Lcom/google/android/filament/Stream$StreamType;
 
-    .line 44
+    .line 107
     new-instance v0, Lcom/google/android/filament/Stream$StreamType;
 
     const-string v1, "TEXTURE_ID"
@@ -58,7 +58,7 @@
 
     sput-object v0, Lcom/google/android/filament/Stream$StreamType;->TEXTURE_ID:Lcom/google/android/filament/Stream$StreamType;
 
-    .line 47
+    .line 110
     new-instance v0, Lcom/google/android/filament/Stream$StreamType;
 
     const-string v1, "ACQUIRED"
@@ -71,7 +71,7 @@
 
     const/4 v0, 0x3
 
-    .line 39
+    .line 102
     new-array v0, v0, [Lcom/google/android/filament/Stream$StreamType;
 
     sget-object v1, Lcom/google/android/filament/Stream$StreamType;->NATIVE:Lcom/google/android/filament/Stream$StreamType;
@@ -99,7 +99,7 @@
         }
     .end annotation
 
-    .line 39
+    .line 102
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -108,7 +108,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/android/filament/Stream$StreamType;
     .locals 1
 
-    .line 39
+    .line 102
     const-class v0, Lcom/google/android/filament/Stream$StreamType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -123,7 +123,7 @@
 .method public static values()[Lcom/google/android/filament/Stream$StreamType;
     .locals 1
 
-    .line 39
+    .line 102
     sget-object v0, Lcom/google/android/filament/Stream$StreamType;->$VALUES:[Lcom/google/android/filament/Stream$StreamType;
 
     invoke-virtual {v0}, [Lcom/google/android/filament/Stream$StreamType;->clone()Ljava/lang/Object;

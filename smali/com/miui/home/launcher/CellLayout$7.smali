@@ -3,12 +3,12 @@
 .source "CellLayout.java"
 
 # interfaces
-.implements Lcom/miui/home/launcher/CellLayout$ItemVisibilityWorker;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/miui/home/launcher/CellLayout;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/miui/home/launcher/CellLayout;->fillEmptyCellAuto(II)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,11 +17,17 @@
 .end annotation
 
 
+# instance fields
+.field final synthetic this$0:Lcom/miui/home/launcher/CellLayout;
+
+
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Lcom/miui/home/launcher/CellLayout;)V
     .locals 0
 
-    .line 3034
+    .line 2025
+    iput-object p1, p0, Lcom/miui/home/launcher/CellLayout$7;->this$0:Lcom/miui/home/launcher/CellLayout;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,17 +35,27 @@
 
 
 # virtual methods
-.method public process(Landroid/graphics/drawable/Drawable;I)V
-    .locals 0
+.method public run()V
+    .locals 2
 
-    return-void
-.end method
+    .line 2027
+    iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$7;->this$0:Lcom/miui/home/launcher/CellLayout;
 
-.method public process(Lcom/miui/home/launcher/ShortcutIcon;I)V
-    .locals 0
+    invoke-virtual {v0}, Lcom/miui/home/launcher/CellLayout;->requestLayout()V
 
-    .line 3040
-    invoke-virtual {p1}, Lcom/miui/home/launcher/ShortcutIcon;->updateMamlDownloadVisible()V
+    const-string v0, "Launcher.CellLayout"
+
+    const-string v1, "requestLayout after has recalculated item position"
+
+    .line 2028
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 2029
+    iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$7;->this$0:Lcom/miui/home/launcher/CellLayout;
+
+    iget-object v0, v0, Lcom/miui/home/launcher/CellLayout;->mLauncher:Lcom/miui/home/launcher/Launcher;
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->invalidateWorkspacePreview()V
 
     return-void
 .end method

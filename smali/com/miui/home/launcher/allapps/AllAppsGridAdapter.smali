@@ -29,8 +29,6 @@
 
 
 # instance fields
-.field public isColorSelecting:Z
-
 .field private mAllAppsColorMode:Lcom/miui/home/launcher/allapps/AllAppsColorMode;
 
 .field private final mApps:Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;
@@ -71,10 +69,6 @@
 
 .field private mMarketSearchMessage:Ljava/lang/String;
 
-.field protected mNeedReverse:Z
-
-.field private mSearchBarController:Lcom/miui/home/launcher/allapps/search/AllAppsSearchBarController;
-
 .field private mUpdateCallback:Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$AllAppsListUpdateCallback;
 
 
@@ -82,31 +76,23 @@
 .method public constructor <init>(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;Lcom/miui/home/launcher/allapps/AllAppsColorMode;I)V
     .locals 1
 
-    .line 138
+    .line 136
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;-><init>()V
 
-    const/4 v0, 0x0
-
-    .line 390
-    iput-boolean v0, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mNeedReverse:Z
-
-    .line 446
-    iput-boolean v0, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->isColorSelecting:Z
-
-    .line 139
+    .line 137
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    .line 140
+    .line 138
     iput-object p2, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mApps:Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;
 
-    .line 141
+    .line 139
     new-instance p2, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$AppsGridLayoutManager;
 
     invoke-direct {p2, p0, p1}, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$AppsGridLayoutManager;-><init>(Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;Landroid/content/Context;)V
 
     iput-object p2, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mGridLayoutMgr:Landroidx/recyclerview/widget/GridLayoutManager;
 
-    .line 142
+    .line 140
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mGridLayoutMgr:Landroidx/recyclerview/widget/GridLayoutManager;
 
     new-instance v0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$GridSpanSizer;
@@ -115,21 +101,21 @@
 
     invoke-virtual {p2, v0}, Landroidx/recyclerview/widget/GridLayoutManager;->setSpanSizeLookup(Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;)V
 
-    .line 143
+    .line 141
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mLayoutInflater:Landroid/view/LayoutInflater;
 
-    .line 145
+    .line 143
     new-instance p1, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$AllAppsListUpdateCallback;
 
     invoke-direct {p1, p0, p0}, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$AllAppsListUpdateCallback;-><init>(Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mUpdateCallback:Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$AllAppsListUpdateCallback;
 
-    .line 146
+    .line 144
     new-instance p1, Landroidx/recyclerview/widget/AsyncListDiffer;
 
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mUpdateCallback:Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$AllAppsListUpdateCallback;
@@ -144,17 +130,17 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mDifferList:Landroidx/recyclerview/widget/AsyncListDiffer;
 
-    .line 148
+    .line 146
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getAllAppsCellHeight()I
 
     move-result p1
 
     iput p1, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mCellHeight:I
 
-    .line 150
+    .line 148
     iput-object p3, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mAllAppsColorMode:Lcom/miui/home/launcher/allapps/AllAppsColorMode;
 
-    .line 151
+    .line 149
     iput p4, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mBackgroundAlpha:I
 
     return-void
@@ -163,7 +149,7 @@
 .method static synthetic access$000(Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;)I
     .locals 0
 
-    .line 52
+    .line 51
     iget p0, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mAppsPerRow:I
 
     return p0
@@ -174,7 +160,7 @@
 
     const/16 v0, 0x10
 
-    .line 175
+    .line 173
     invoke-static {p0, v0}, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->isViewType(II)Z
 
     move-result p0
@@ -187,7 +173,7 @@
 
     const/16 v0, 0x42
 
-    .line 179
+    .line 177
     invoke-static {p0, v0}, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->isViewType(II)Z
 
     move-result p0
@@ -216,7 +202,7 @@
 .method public static synthetic lambda$onCreateViewHolder$0(Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;)V
     .locals 2
 
-    .line 262
+    .line 256
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mMarketSearchIntent:Landroid/content/Intent;
@@ -229,7 +215,7 @@
 .method public static synthetic lambda$onCreateViewHolder$1(Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;Landroid/view/View;)V
     .locals 2
 
-    .line 261
+    .line 255
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     new-instance v0, Lcom/miui/home/launcher/allapps/-$$Lambda$AllAppsGridAdapter$tHmzikkxNNYl6C7IJ9oXQQCjmN8;
@@ -246,7 +232,7 @@
 .method private resetView(Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;)V
     .locals 2
 
-    .line 375
+    .line 363
     iget-object v0, p1, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getScaleX()F
@@ -259,12 +245,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 376
+    .line 364
     iget-object v0, p1, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setScaleX(F)V
 
-    .line 378
+    .line 366
     :cond_0
     iget-object v0, p1, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;->itemView:Landroid/view/View;
 
@@ -276,12 +262,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 379
+    .line 367
     iget-object v0, p1, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setScaleY(F)V
 
-    .line 381
+    .line 369
     :cond_1
     iget-object v0, p1, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;->itemView:Landroid/view/View;
 
@@ -301,7 +287,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 382
+    .line 370
     iget-object p1, p1, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {p1, v1}, Landroid/view/View;->setAlpha(F)V
@@ -312,22 +298,10 @@
 
 
 # virtual methods
-.method public afterNotifyData()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public beforeNotifyData()V
-    .locals 0
-
-    return-void
-.end method
-
 .method public getItem(I)Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;
     .locals 1
 
-    .line 411
+    .line 393
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mDifferList:Landroidx/recyclerview/widget/AsyncListDiffer;
 
     invoke-virtual {v0}, Landroidx/recyclerview/widget/AsyncListDiffer;->getCurrentList()Ljava/util/List;
@@ -346,7 +320,7 @@
 .method public getItemCount()I
     .locals 1
 
-    .line 397
+    .line 380
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mDifferList:Landroidx/recyclerview/widget/AsyncListDiffer;
 
     invoke-virtual {v0}, Landroidx/recyclerview/widget/AsyncListDiffer;->getCurrentList()Ljava/util/List;
@@ -363,7 +337,7 @@
 .method public getItemViewType(I)I
     .locals 0
 
-    .line 402
+    .line 385
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->getItem(I)Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;
 
     move-result-object p1
@@ -384,7 +358,7 @@
         }
     .end annotation
 
-    .line 407
+    .line 389
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mDifferList:Landroidx/recyclerview/widget/AsyncListDiffer;
 
     invoke-virtual {v0}, Landroidx/recyclerview/widget/AsyncListDiffer;->getCurrentList()Ljava/util/List;
@@ -397,7 +371,7 @@
 .method public getLayoutManager()Landroidx/recyclerview/widget/GridLayoutManager;
     .locals 1
 
-    .line 235
+    .line 229
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mGridLayoutMgr:Landroidx/recyclerview/widget/GridLayoutManager;
 
     return-object v0
@@ -420,7 +394,7 @@
 
     goto :goto_0
 
-    .line 285
+    .line 277
     :cond_0
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -430,13 +404,13 @@
 
     throw p1
 
-    .line 283
+    .line 275
     :cond_1
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    const p2, 0x7f07005c
+    const p2, 0x7f070055
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -444,7 +418,7 @@
 
     return p1
 
-    .line 281
+    .line 273
     :cond_2
     :goto_0
     iget p1, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mCellHeight:I
@@ -455,10 +429,10 @@
 .method public onAttachedToRecyclerView(Landroidx/recyclerview/widget/RecyclerView;)V
     .locals 1
 
-    .line 436
+    .line 419
     invoke-super {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->onAttachedToRecyclerView(Landroidx/recyclerview/widget/RecyclerView;)V
 
-    .line 437
+    .line 420
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mUpdateCallback:Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$AllAppsListUpdateCallback;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$AllAppsListUpdateCallback;->onAttachedToRecyclerView(Landroidx/recyclerview/widget/RecyclerView;)V
@@ -469,7 +443,7 @@
 .method public bridge synthetic onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
     .locals 0
 
-    .line 52
+    .line 51
     check-cast p1, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;
 
     invoke-virtual {p0, p1, p2}, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->onBindViewHolder(Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;I)V
@@ -478,115 +452,96 @@
 .end method
 
 .method public onBindViewHolder(Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;I)V
-    .locals 7
+    .locals 6
 
-    .line 291
-    iget-object v5, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mAllAppsColorMode:Lcom/miui/home/launcher/allapps/AllAppsColorMode;
+    .line 283
+    iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mAllAppsColorMode:Lcom/miui/home/launcher/allapps/AllAppsColorMode;
 
-    .line 292
-    iget v0, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mBackgroundAlpha:I
+    .line 284
+    iget v1, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mBackgroundAlpha:I
 
-    .line 293
+    .line 285
     invoke-virtual {p1}, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;->getItemViewType()I
 
-    move-result v1
+    move-result v2
 
-    const/4 v2, 0x2
-
-    const/4 v3, 0x0
-
-    if-eq v1, v2, :cond_7
-
-    const/4 v2, 0x4
+    const/4 v3, 0x2
 
     const/4 v4, 0x0
 
-    if-eq v1, v2, :cond_6
+    if-eq v2, v3, :cond_7
 
-    const/16 v2, 0x8
+    const/4 v3, 0x4
 
-    if-eq v1, v2, :cond_5
+    const/4 v5, 0x0
 
-    const/16 v6, 0x10
+    if-eq v2, v3, :cond_6
 
-    if-eq v1, v6, :cond_4
+    const/16 v3, 0x8
 
-    const/16 v6, 0x20
+    if-eq v2, v3, :cond_5
 
-    if-eq v1, v6, :cond_1
+    const/16 p2, 0x10
 
-    const/16 v2, 0x40
+    if-eq v2, p2, :cond_4
 
-    if-eq v1, v2, :cond_0
+    const/16 p2, 0x20
 
-    .line 350
-    invoke-static {}, Lcom/mi/globallauncher/BranchClientImplement;->getInstance()Lcom/mi/globallauncher/BranchClientImplement;
+    if-eq v2, p2, :cond_1
 
-    move-result-object v0
+    const/16 p2, 0x40
 
-    invoke-virtual {p1}, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;->getItemViewType()I
-
-    move-result v1
-
-    iget-object v2, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mApps:Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;
-
-    iget-object v6, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mSearchBarController:Lcom/miui/home/launcher/allapps/search/AllAppsSearchBarController;
-
-    move-object v3, p1
-
-    move v4, p2
-
-    invoke-virtual/range {v0 .. v6}, Lcom/mi/globallauncher/BranchClientImplement;->onBindViewHolder(ILcom/miui/home/launcher/allapps/AlphabeticalAppsList;Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;ILcom/miui/home/launcher/allapps/AllAppsColorMode;Lcom/miui/home/launcher/allapps/search/AllAppsSearchBarController;)V
+    if-eq v2, p2, :cond_0
 
     goto/16 :goto_1
 
-    .line 340
+    .line 331
     :cond_0
     iget-object p2, p1, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast p2, Lcom/miui/home/launcher/ShortcutIcon;
 
-    .line 341
-    iget-object v1, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
+    .line 332
+    iget-object v2, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    invoke-virtual {v5, v1, v0}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->getAppTextColor(Landroid/content/Context;I)I
+    invoke-virtual {v0, v2, v1}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->getAppTextColor(Landroid/content/Context;I)I
 
-    move-result v1
+    move-result v2
 
-    invoke-virtual {p2, v1}, Lcom/miui/home/launcher/ShortcutIcon;->setTextColor(I)V
+    invoke-virtual {p2, v2}, Lcom/miui/home/launcher/ShortcutIcon;->setTextColor(I)V
 
-    .line 342
+    .line 333
     invoke-virtual {p2}, Lcom/miui/home/launcher/ShortcutIcon;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v1
+    move-result-object v2
 
-    const v2, 0x7f11019a
+    const v3, 0x7f10015b
 
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {p2, v1}, Lcom/miui/home/launcher/ShortcutIcon;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {p2, v2}, Lcom/miui/home/launcher/ShortcutIcon;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 343
-    iget-object v1, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
+    .line 334
+    iget-object v2, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    invoke-virtual {v5, v1, v0}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->getEditIconDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v0, v2, v1}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->getEditIconDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    invoke-virtual {p2, v0, v4}, Lcom/miui/home/launcher/ShortcutIcon;->setIconImageView(Landroid/graphics/drawable/Drawable;Landroid/graphics/Bitmap;)V
+    invoke-virtual {p2, v0, v5}, Lcom/miui/home/launcher/ShortcutIcon;->setIconImageView(Landroid/graphics/drawable/Drawable;Landroid/graphics/Bitmap;)V
 
-    .line 345
+    .line 336
     invoke-virtual {p2}, Lcom/miui/home/launcher/ShortcutIcon;->getMeasuredHeight()I
 
     move-result v0
 
     iget v1, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mCellHeight:I
 
-    if-eq v0, v1, :cond_9
+    if-eq v0, v1, :cond_8
 
-    .line 346
+    .line 337
     invoke-virtual {p2}, Lcom/miui/home/launcher/ShortcutIcon;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p2
@@ -597,101 +552,101 @@
 
     goto/16 :goto_1
 
-    .line 319
+    .line 310
     :cond_1
     move-object p2, p1
 
     check-cast p2, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$SearchMarketViewHolder;
 
-    .line 320
-    iget-object v1, p2, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$SearchMarketViewHolder;->itemView:Landroid/view/View;
+    .line 311
+    iget-object v2, p2, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$SearchMarketViewHolder;->itemView:Landroid/view/View;
 
-    .line 321
-    iget-object v4, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mMarketSearchIntent:Landroid/content/Intent;
+    .line 312
+    iget-object v5, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mMarketSearchIntent:Landroid/content/Intent;
 
-    if-eqz v4, :cond_3
+    if-eqz v5, :cond_3
 
-    iget-object v4, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mMarketSearchMessage:Ljava/lang/String;
+    iget-object v5, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mMarketSearchMessage:Ljava/lang/String;
 
-    invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result v4
+    move-result v5
 
-    if-nez v4, :cond_3
+    if-nez v5, :cond_3
 
-    .line 322
-    invoke-virtual {v1, v3}, Landroid/view/View;->setVisibility(I)V
+    .line 313
+    invoke-virtual {v2, v4}, Landroid/view/View;->setVisibility(I)V
 
-    .line 323
-    iget-object v1, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mMarketSearchDrawable:Landroid/graphics/drawable/Drawable;
-
-    if-eqz v1, :cond_2
-
-    .line 324
-    iget-object v1, p2, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$SearchMarketViewHolder;->icon:Landroid/widget/ImageView;
-
-    invoke-virtual {v1, v3}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    .line 325
-    iget-object v1, p2, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$SearchMarketViewHolder;->icon:Landroid/widget/ImageView;
-
+    .line 314
     iget-object v2, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mMarketSearchDrawable:Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    if-eqz v2, :cond_2
+
+    .line 315
+    iget-object v2, p2, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$SearchMarketViewHolder;->icon:Landroid/widget/ImageView;
+
+    invoke-virtual {v2, v4}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    .line 316
+    iget-object v2, p2, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$SearchMarketViewHolder;->icon:Landroid/widget/ImageView;
+
+    iget-object v3, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mMarketSearchDrawable:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     goto :goto_0
 
-    .line 327
+    .line 318
     :cond_2
-    iget-object v1, p2, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$SearchMarketViewHolder;->icon:Landroid/widget/ImageView;
+    iget-object v2, p2, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$SearchMarketViewHolder;->icon:Landroid/widget/ImageView;
 
-    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setVisibility(I)V
+    invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 329
+    .line 320
     :goto_0
-    iget-object v1, p2, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$SearchMarketViewHolder;->text:Landroid/widget/TextView;
+    iget-object v2, p2, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$SearchMarketViewHolder;->text:Landroid/widget/TextView;
 
-    iget-object v2, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mMarketSearchMessage:Ljava/lang/String;
+    iget-object v3, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mMarketSearchMessage:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 330
-    iget-object v1, p2, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$SearchMarketViewHolder;->text:Landroid/widget/TextView;
+    .line 321
+    iget-object v2, p2, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$SearchMarketViewHolder;->text:Landroid/widget/TextView;
+
+    iget-object v3, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
+
+    invoke-virtual {v0, v3, v1}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->getSecondaryTextColor(Landroid/content/Context;I)I
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setTextColor(I)V
+
+    .line 322
+    iget-object p2, p2, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$SearchMarketViewHolder;->arrow:Lcom/miui/home/launcher/util/typeface/TypefaceIconView;
 
     iget-object v2, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    invoke-virtual {v5, v2, v0}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->getSecondaryTextColor(Landroid/content/Context;I)I
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTextColor(I)V
-
-    .line 331
-    iget-object p2, p2, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$SearchMarketViewHolder;->arrow:Lcom/miui/home/launcher/util/typeface/TypefaceIconView;
-
-    iget-object v1, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
-
-    invoke-virtual {v5, v1, v0}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->getSecondaryTextColor(Landroid/content/Context;I)I
+    invoke-virtual {v0, v2, v1}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->getSecondaryTextColor(Landroid/content/Context;I)I
 
     move-result v0
 
     invoke-virtual {p2, v0}, Lcom/miui/home/launcher/util/typeface/TypefaceIconView;->setPatternColor(I)V
 
-    goto/16 :goto_1
+    goto :goto_1
 
-    .line 333
+    .line 324
     :cond_3
-    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v2, v3}, Landroid/view/View;->setVisibility(I)V
 
-    goto/16 :goto_1
+    goto :goto_1
 
-    .line 337
+    .line 328
     :cond_4
     iget-object p2, p1, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;->itemView:Landroid/view/View;
 
-    iget-object v1, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
+    iget-object v2, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    invoke-virtual {v5, v1, v0}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->getDividerColor(Landroid/content/Context;I)I
+    invoke-virtual {v0, v2, v1}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->getDividerColor(Landroid/content/Context;I)I
 
     move-result v0
 
@@ -699,56 +654,56 @@
 
     goto :goto_1
 
-    .line 314
+    .line 305
     :cond_5
-    iget-object v1, p1, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;->itemView:Landroid/view/View;
+    iget-object v2, p1, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;->itemView:Landroid/view/View;
 
-    check-cast v1, Landroid/widget/TextView;
+    check-cast v2, Landroid/widget/TextView;
 
-    .line 315
-    iget-object v2, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
+    .line 306
+    iget-object v3, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    invoke-virtual {v5, v2, v0}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->getPrimaryTextColor(Landroid/content/Context;I)I
+    invoke-virtual {v0, v3, v1}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->getPrimaryTextColor(Landroid/content/Context;I)I
 
     move-result v0
 
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTextColor(I)V
+    invoke-virtual {v2, v0}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 316
+    .line 307
     invoke-virtual {p0, p2}, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->getItem(I)Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;
 
     move-result-object p2
 
     iget-object p2, p2, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;->categoryName:Ljava/lang/String;
 
-    invoke-virtual {v1, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v2, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     goto :goto_1
 
-    .line 309
+    .line 300
     :cond_6
     iget-object p2, p1, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast p2, Landroid/widget/TextView;
 
-    iget-object v1, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
+    iget-object v2, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    .line 310
-    invoke-virtual {v5, v1, v0}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->getSearchEmptyDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    .line 301
+    invoke-virtual {v0, v2, v1}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->getSearchEmptyDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
-    move-result-object v1
+    move-result-object v2
 
-    .line 309
-    invoke-virtual {p2, v4, v1, v4, v4}, Landroid/widget/TextView;->setCompoundDrawablesWithIntrinsicBounds(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+    .line 300
+    invoke-virtual {p2, v5, v2, v5, v5}, Landroid/widget/TextView;->setCompoundDrawablesWithIntrinsicBounds(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    .line 311
+    .line 302
     iget-object p2, p1, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast p2, Landroid/widget/TextView;
 
-    iget-object v1, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
+    iget-object v2, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    invoke-virtual {v5, v1, v0}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->getAppTextColor(Landroid/content/Context;I)I
+    invoke-virtual {v0, v2, v1}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->getAppTextColor(Landroid/content/Context;I)I
 
     move-result v0
 
@@ -756,39 +711,39 @@
 
     goto :goto_1
 
-    .line 295
+    .line 287
     :cond_7
     invoke-virtual {p0, p2}, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->getItem(I)Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;
 
     move-result-object p2
 
-    .line 296
+    .line 288
     iget-object p2, p2, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;->appInfo:Lcom/miui/home/launcher/AppInfo;
 
-    .line 297
-    iget-object v1, p1, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;->itemView:Landroid/view/View;
+    .line 289
+    iget-object v2, p1, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;->itemView:Landroid/view/View;
 
-    check-cast v1, Lcom/miui/home/launcher/ShortcutIcon;
+    check-cast v2, Lcom/miui/home/launcher/ShortcutIcon;
 
-    .line 299
-    iget-object v2, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
+    .line 291
+    iget-object v3, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    invoke-virtual {v5, v2, v0}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->getAppTextColor(Landroid/content/Context;I)I
+    invoke-virtual {v0, v3, v1}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->getAppTextColor(Landroid/content/Context;I)I
 
     move-result v0
 
-    invoke-virtual {v1, v0}, Lcom/miui/home/launcher/ShortcutIcon;->setTextColor(I)V
+    invoke-virtual {v2, v0}, Lcom/miui/home/launcher/ShortcutIcon;->setTextColor(I)V
 
-    .line 300
+    .line 292
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    invoke-virtual {v1, v0, p2}, Lcom/miui/home/launcher/ShortcutIcon;->bindAppInfo(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/AppInfo;)V
+    invoke-virtual {v2, v0, p2}, Lcom/miui/home/launcher/ShortcutIcon;->bindAppInfo(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/AppInfo;)V
 
-    .line 301
-    invoke-virtual {v1, v3}, Lcom/miui/home/launcher/ShortcutIcon;->setVisibility(I)V
+    .line 293
+    invoke-virtual {v2, v4}, Lcom/miui/home/launcher/ShortcutIcon;->setVisibility(I)V
 
-    .line 303
-    invoke-virtual {v1}, Lcom/miui/home/launcher/ShortcutIcon;->getMeasuredHeight()I
+    .line 295
+    invoke-virtual {v2}, Lcom/miui/home/launcher/ShortcutIcon;->getMeasuredHeight()I
 
     move-result p2
 
@@ -796,8 +751,8 @@
 
     if-eq p2, v0, :cond_8
 
-    .line 304
-    invoke-virtual {v1}, Lcom/miui/home/launcher/ShortcutIcon;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    .line 296
+    invoke-virtual {v2}, Lcom/miui/home/launcher/ShortcutIcon;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p2
 
@@ -805,38 +760,24 @@
 
     iput v0, p2, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 306
+    .line 341
     :cond_8
-    invoke-static {}, Lcom/mi/globallauncher/BranchClientImplement;->getInstance()Lcom/mi/globallauncher/BranchClientImplement;
-
-    move-result-object p2
-
-    iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mApps:Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;->getQuery()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p2, v0}, Lcom/mi/globallauncher/BranchClientImplement;->trackShowBranchFrequentLocalApp(Ljava/lang/String;)V
-
-    .line 353
-    :cond_9
     :goto_1
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mBindViewCallback:Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$BindViewCallback;
 
-    if-eqz p2, :cond_a
+    if-eqz p2, :cond_9
 
-    .line 354
+    .line 342
     invoke-interface {p2, p1}, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$BindViewCallback;->onBindView(Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;)V
 
-    :cond_a
+    :cond_9
     return-void
 .end method
 
 .method public bridge synthetic onCreateViewHolder(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
     .locals 0
 
-    .line 52
+    .line 51
     invoke-virtual {p0, p1, p2}, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;
 
     move-result-object p1
@@ -849,48 +790,66 @@
 
     const/4 v0, 0x2
 
-    const v1, 0x7f0d003a
+    const v1, 0x7f0d0028
 
-    if-eq p2, v0, :cond_6
+    if-eq p2, v0, :cond_5
 
     const/4 v0, 0x4
 
     const/4 v2, 0x0
 
-    if-eq p2, v0, :cond_5
+    if-eq p2, v0, :cond_4
 
     const/16 v0, 0x8
 
-    if-eq p2, v0, :cond_4
+    if-eq p2, v0, :cond_3
 
     const/16 v0, 0x10
 
-    if-eq p2, v0, :cond_3
+    if-eq p2, v0, :cond_2
 
     const/16 v0, 0x20
 
-    if-eq p2, v0, :cond_2
+    if-eq p2, v0, :cond_1
 
     const/16 v0, 0x40
 
-    if-eq p2, v0, :cond_1
+    if-ne p2, v0, :cond_0
 
-    .line 271
-    invoke-static {}, Lcom/mi/globallauncher/BranchClientImplement;->getInstance()Lcom/mi/globallauncher/BranchClientImplement;
+    .line 259
+    iget-object p2, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mLayoutInflater:Landroid/view/LayoutInflater;
-
-    invoke-virtual {v0, p1, p2, v1}, Lcom/mi/globallauncher/BranchClientImplement;->getViewHolder(Landroid/view/ViewGroup;ILandroid/view/LayoutInflater;)Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;
+    invoke-static {v1, p2, p1}, Lcom/miui/home/launcher/ShortcutIcon;->createShortcutIcon(ILcom/miui/home/launcher/Launcher;Landroid/view/ViewGroup;)Lcom/miui/home/launcher/ShortcutIcon;
 
     move-result-object p1
 
-    if-eqz p1, :cond_0
+    .line 260
+    iget-object p2, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mIconClickListener:Landroid/view/View$OnClickListener;
 
-    return-object p1
+    invoke-virtual {p1, p2}, Lcom/miui/home/launcher/ShortcutIcon;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 273
+    .line 261
+    iget-object p2, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mIconFocusListener:Landroid/view/View$OnFocusChangeListener;
+
+    invoke-virtual {p1, p2}, Lcom/miui/home/launcher/ShortcutIcon;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
+
+    .line 262
+    invoke-virtual {p1}, Lcom/miui/home/launcher/ShortcutIcon;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object p2
+
+    iget v0, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mCellHeight:I
+
+    iput v0, p2, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    .line 263
+    new-instance p2, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;
+
+    invoke-direct {p2, p1}, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;-><init>(Landroid/view/View;)V
+
+    return-object p2
+
+    .line 265
     :cond_0
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -900,66 +859,32 @@
 
     throw p1
 
-    .line 265
+    .line 253
     :cond_1
-    iget-object p2, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
-
-    invoke-static {v1, p2, p1}, Lcom/miui/home/launcher/ShortcutIcon;->createShortcutIcon(ILcom/miui/home/launcher/Launcher;Landroid/view/ViewGroup;)Lcom/miui/home/launcher/ShortcutIcon;
-
-    move-result-object p1
-
-    .line 266
-    iget-object p2, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mIconClickListener:Landroid/view/View$OnClickListener;
-
-    invoke-virtual {p1, p2}, Lcom/miui/home/launcher/ShortcutIcon;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 267
-    iget-object p2, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mIconFocusListener:Landroid/view/View$OnFocusChangeListener;
-
-    invoke-virtual {p1, p2}, Lcom/miui/home/launcher/ShortcutIcon;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
-
-    .line 268
-    invoke-virtual {p1}, Lcom/miui/home/launcher/ShortcutIcon;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object p2
-
-    iget v0, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mCellHeight:I
-
-    iput v0, p2, Landroid/view/ViewGroup$LayoutParams;->height:I
-
-    .line 269
-    new-instance p2, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;
-
-    invoke-direct {p2, p1}, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;-><init>(Landroid/view/View;)V
-
-    return-object p2
-
-    .line 259
-    :cond_2
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mLayoutInflater:Landroid/view/LayoutInflater;
 
-    const v0, 0x7f0d002c
+    const v0, 0x7f0d0024
 
     invoke-virtual {p2, v0, p1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object p1
 
-    .line 260
+    .line 254
     new-instance p2, Lcom/miui/home/launcher/allapps/-$$Lambda$AllAppsGridAdapter$jhKRaKLrD8p7Dal0G6GPgguu-9c;
 
     invoke-direct {p2, p0}, Lcom/miui/home/launcher/allapps/-$$Lambda$AllAppsGridAdapter$jhKRaKLrD8p7Dal0G6GPgguu-9c;-><init>(Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;)V
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 263
+    .line 257
     new-instance p2, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$SearchMarketViewHolder;
 
     invoke-direct {p2, p0, p1}, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$SearchMarketViewHolder;-><init>(Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;Landroid/view/View;)V
 
     return-object p2
 
-    .line 257
-    :cond_3
+    .line 251
+    :cond_2
     new-instance p2, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;
 
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mLayoutInflater:Landroid/view/LayoutInflater;
@@ -974,13 +899,13 @@
 
     return-object p2
 
-    .line 255
-    :cond_4
+    .line 249
+    :cond_3
     new-instance p2, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;
 
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mLayoutInflater:Landroid/view/LayoutInflater;
 
-    const v1, 0x7f0d0033
+    const v1, 0x7f0d0026
 
     invoke-virtual {v0, v1, p1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -990,8 +915,8 @@
 
     return-object p2
 
-    .line 253
-    :cond_5
+    .line 247
+    :cond_4
     new-instance p2, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;
 
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mLayoutInflater:Landroid/view/LayoutInflater;
@@ -1006,30 +931,30 @@
 
     return-object p2
 
-    .line 243
-    :cond_6
+    .line 237
+    :cond_5
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v1, p2, p1}, Lcom/miui/home/launcher/ShortcutIcon;->createShortcutIcon(ILcom/miui/home/launcher/Launcher;Landroid/view/ViewGroup;)Lcom/miui/home/launcher/ShortcutIcon;
 
     move-result-object p1
 
-    .line 244
+    .line 238
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mIconClickListener:Landroid/view/View$OnClickListener;
 
     invoke-virtual {p1, p2}, Lcom/miui/home/launcher/ShortcutIcon;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 245
+    .line 239
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mLongClickListener:Landroid/view/View$OnLongClickListener;
 
     invoke-virtual {p1, p2}, Lcom/miui/home/launcher/ShortcutIcon;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
-    .line 246
+    .line 240
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mIconFocusListener:Landroid/view/View$OnFocusChangeListener;
 
     invoke-virtual {p1, p2}, Lcom/miui/home/launcher/ShortcutIcon;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
 
-    .line 247
+    .line 241
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p2}, Lcom/miui/home/library/mirror/MirrorManagerCompat;->getInstance(Landroid/content/Context;)Lcom/miui/home/library/mirror/MirrorManagerCompat;
@@ -1038,7 +963,7 @@
 
     invoke-virtual {p2, p1}, Lcom/miui/home/library/mirror/MirrorManagerCompat;->setMirrorMenuListener(Landroid/view/View;)V
 
-    .line 248
+    .line 242
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p2}, Lcom/miui/home/library/mirror/MirrorManagerCompat;->getInstance(Landroid/content/Context;)Lcom/miui/home/library/mirror/MirrorManagerCompat;
@@ -1047,7 +972,7 @@
 
     invoke-virtual {p2, p1}, Lcom/miui/home/library/mirror/MirrorManagerCompat;->setDragListener(Landroid/view/View;)V
 
-    .line 250
+    .line 244
     invoke-virtual {p1}, Lcom/miui/home/launcher/ShortcutIcon;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p2
@@ -1056,7 +981,7 @@
 
     iput v0, p2, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 251
+    .line 245
     new-instance p2, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;
 
     invoke-direct {p2, p1}, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;-><init>(Landroid/view/View;)V
@@ -1067,10 +992,10 @@
 .method public onDetachedFromRecyclerView(Landroidx/recyclerview/widget/RecyclerView;)V
     .locals 0
 
-    .line 442
+    .line 425
     invoke-super {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->onDetachedFromRecyclerView(Landroidx/recyclerview/widget/RecyclerView;)V
 
-    .line 443
+    .line 426
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mUpdateCallback:Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$AllAppsListUpdateCallback;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$AllAppsListUpdateCallback;->onDetachedFromRecyclerView()V
@@ -1081,7 +1006,7 @@
 .method public bridge synthetic onFailedToRecycleView(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)Z
     .locals 0
 
-    .line 52
+    .line 51
     check-cast p1, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->onFailedToRecycleView(Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;)Z
@@ -1094,7 +1019,7 @@
 .method public onFailedToRecycleView(Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;)Z
     .locals 0
 
-    .line 370
+    .line 358
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->resetView(Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;)V
 
     const/4 p1, 0x1
@@ -1102,43 +1027,10 @@
     return p1
 .end method
 
-.method public bridge synthetic onViewAttachedToWindow(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
-    .locals 0
-
-    .line 52
-    check-cast p1, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;
-
-    invoke-virtual {p0, p1}, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->onViewAttachedToWindow(Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;)V
-
-    return-void
-.end method
-
-.method public onViewAttachedToWindow(Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;)V
-    .locals 2
-
-    .line 475
-    invoke-super {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->onViewAttachedToWindow(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
-
-    .line 476
-    invoke-static {}, Lcom/mi/globallauncher/BranchClientImplement;->getInstance()Lcom/mi/globallauncher/BranchClientImplement;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mSearchBarController:Lcom/miui/home/launcher/allapps/search/AllAppsSearchBarController;
-
-    invoke-virtual {p1}, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;->getItemViewType()I
-
-    move-result p1
-
-    invoke-virtual {v0, v1, p1}, Lcom/mi/globallauncher/BranchClientImplement;->trackShowBranchResult(Lcom/miui/home/launcher/allapps/search/AllAppsSearchBarController;I)V
-
-    return-void
-.end method
-
 .method public bridge synthetic onViewRecycled(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
     .locals 0
 
-    .line 52
+    .line 51
     check-cast p1, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->onViewRecycled(Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;)V
@@ -1149,18 +1041,18 @@
 .method public onViewRecycled(Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;)V
     .locals 1
 
-    .line 360
+    .line 348
     invoke-super {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->onViewRecycled(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
-    .line 361
+    .line 349
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mBindViewCallback:Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$BindViewCallback;
 
     if-eqz v0, :cond_0
 
-    .line 362
+    .line 350
     invoke-interface {v0, p1}, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$BindViewCallback;->onViewRecycle(Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;)V
 
-    .line 364
+    .line 352
     :cond_0
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->resetView(Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;)V
 
@@ -1170,15 +1062,15 @@
 .method public refreshSpanCount(I)Z
     .locals 1
 
-    .line 166
+    .line 164
     iget v0, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mAppsPerRow:I
 
     if-eq v0, p1, :cond_0
 
-    .line 167
+    .line 165
     iput p1, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mAppsPerRow:I
 
-    .line 168
+    .line 166
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mGridLayoutMgr:Landroidx/recyclerview/widget/GridLayoutManager;
 
     iget v0, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mAppsPerRow:I
@@ -1198,7 +1090,7 @@
 .method setBindViewCallback(Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$BindViewCallback;)V
     .locals 0
 
-    .line 224
+    .line 222
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mBindViewCallback:Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$BindViewCallback;
 
     return-void
@@ -1207,10 +1099,10 @@
 .method public setCellHeight(I)V
     .locals 1
 
-    .line 161
+    .line 159
     iput p1, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mCellHeight:I
 
-    .line 162
+    .line 160
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->getItemCount()I
 
     move-result p1
@@ -1225,7 +1117,7 @@
 .method public setIconClickListener(Landroid/view/View$OnClickListener;)V
     .locals 0
 
-    .line 191
+    .line 189
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mIconClickListener:Landroid/view/View$OnClickListener;
 
     return-void
@@ -1234,7 +1126,7 @@
 .method public setIconFocusListener(Landroid/view/View$OnFocusChangeListener;)V
     .locals 0
 
-    .line 187
+    .line 185
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mIconFocusListener:Landroid/view/View$OnFocusChangeListener;
 
     return-void
@@ -1243,7 +1135,7 @@
 .method public setIconLongClickListener(Landroid/view/View$OnLongClickListener;)V
     .locals 0
 
-    .line 195
+    .line 193
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mLongClickListener:Landroid/view/View$OnLongClickListener;
 
     return-void
@@ -1252,7 +1144,7 @@
 .method public setItemPadding(ILandroid/graphics/Rect;)V
     .locals 2
 
-    .line 428
+    .line 411
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->getItemViewType(I)I
 
     move-result p1
@@ -1263,19 +1155,19 @@
 
     if-eqz p1, :cond_0
 
-    .line 429
+    .line 412
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getAllAppRecommendDividerPaddingTop()I
 
     move-result p1
 
-    .line 430
+    .line 413
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getAllAppRecommendDividerPaddingBottom()I
 
     move-result v0
 
     const/4 v1, 0x0
 
-    .line 429
+    .line 412
     invoke-virtual {p2, v1, p1, v1, v0}, Landroid/graphics/Rect;->set(IIII)V
 
     :cond_0
@@ -1285,14 +1177,14 @@
 .method public setLastSearchQuery(Ljava/lang/String;)V
     .locals 6
 
-    .line 203
+    .line 201
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mApps:Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;->findMarketAppInfo()Lcom/miui/home/launcher/AppInfo;
 
     move-result-object v0
 
-    .line 204
+    .line 202
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/Launcher;->getResources()Landroid/content/res/Resources;
@@ -1303,7 +1195,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 206
+    .line 204
     invoke-virtual {v0}, Lcom/miui/home/launcher/AppInfo;->getLable()Ljava/lang/CharSequence;
 
     move-result-object v3
@@ -1314,11 +1206,11 @@
 
     if-nez v3, :cond_1
 
-    const v2, 0x7f110410
+    const v2, 0x7f10034c
 
     const/4 v3, 0x2
 
-    .line 207
+    .line 205
     new-array v3, v3, [Ljava/lang/Object;
 
     const/4 v4, 0x0
@@ -1339,21 +1231,21 @@
 
     iput-object v1, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mMarketSearchMessage:Ljava/lang/String;
 
-    .line 208
+    .line 206
     invoke-virtual {v0}, Lcom/miui/home/launcher/AppInfo;->getIconDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    .line 209
+    .line 207
     invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    .line 210
+    .line 208
     invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
 
     move-result-object v1
@@ -1364,7 +1256,7 @@
 
     iput-object v1, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mMarketSearchDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 212
+    .line 210
     :cond_0
     invoke-virtual {v0}, Lcom/miui/home/launcher/AppInfo;->getPackageName()Ljava/lang/String;
 
@@ -1373,34 +1265,25 @@
     goto :goto_0
 
     :cond_1
-    const v0, 0x7f110050
+    const v0, 0x7f10004d
 
-    .line 214
+    .line 212
     invoke-virtual {v1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mMarketSearchMessage:Ljava/lang/String;
 
-    .line 215
+    .line 213
     iput-object v2, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mMarketSearchDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 217
+    .line 215
     :goto_0
     invoke-static {p1, v2}, Lcom/miui/home/launcher/util/PackageManagerHelper;->getMarketSearchIntent(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mMarketSearchIntent:Landroid/content/Intent;
-
-    return-void
-.end method
-
-.method public setSearchBarController(Lcom/miui/home/launcher/allapps/search/AllAppsSearchBarController;)V
-    .locals 0
-
-    .line 228
-    iput-object p1, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mSearchBarController:Lcom/miui/home/launcher/allapps/search/AllAppsSearchBarController;
 
     return-void
 .end method
@@ -1416,32 +1299,10 @@
         }
     .end annotation
 
-    const/4 v0, 0x0
+    .line 375
+    iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mDifferList:Landroidx/recyclerview/widget/AsyncListDiffer;
 
-    .line 387
-    invoke-virtual {p0, p1, v0}, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->submitList(Ljava/util/List;Z)V
-
-    return-void
-.end method
-
-.method submitList(Ljava/util/List;Z)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List<",
-            "Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;",
-            ">;Z)V"
-        }
-    .end annotation
-
-    .line 392
-    iput-boolean p2, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mNeedReverse:Z
-
-    .line 393
-    iget-object p2, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mDifferList:Landroidx/recyclerview/widget/AsyncListDiffer;
-
-    invoke-virtual {p2, p1}, Landroidx/recyclerview/widget/AsyncListDiffer;->submitList(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/AsyncListDiffer;->submitList(Ljava/util/List;)V
 
     return-void
 .end method
@@ -1449,13 +1310,13 @@
 .method public updateStyle(Lcom/miui/home/launcher/allapps/AllAppsColorMode;I)V
     .locals 0
 
-    .line 155
+    .line 153
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mAllAppsColorMode:Lcom/miui/home/launcher/allapps/AllAppsColorMode;
 
-    .line 156
+    .line 154
     iput p2, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mBackgroundAlpha:I
 
-    .line 157
+    .line 155
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->getItemCount()I
 
     move-result p1

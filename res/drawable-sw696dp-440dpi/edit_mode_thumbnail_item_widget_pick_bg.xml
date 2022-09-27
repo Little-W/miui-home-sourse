@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<vector android:height="@dimen/edit_mode_thumbnail_item_size" android:width="@dimen/edit_mode_thumbnail_widget_pick_bg_width" android:viewportWidth="947.0" android:viewportHeight="144.0"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <group>
-        <clip-path android:pathData="M72 0H875C914.765 0 947 32.2355 947 72C947 111.765 914.765 144 875 144H72C32.2355 144 0 111.765 0 72C0 32.2355 32.2355 0 72 0Z" />
-        <path android:fillColor="#33ffffff" android:pathData="M0 0V144H947V0" />
-    </group>
-</vector>

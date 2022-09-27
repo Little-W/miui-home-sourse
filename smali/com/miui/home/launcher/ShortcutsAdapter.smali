@@ -501,7 +501,7 @@
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f0d0040
+    const p2, 0x7f0d002c
 
     .line 204
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutsAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
@@ -513,7 +513,7 @@
     goto :goto_0
 
     :cond_0
-    const p2, 0x7f0d0039
+    const p2, 0x7f0d0027
 
     .line 205
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutsAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;

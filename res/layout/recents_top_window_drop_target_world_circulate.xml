@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.miui.home.recents.views.RecentsTopWindowDropTargetWorldCirculate android:layout_gravity="start|center|top" android:id="@id/worldcirculate_content" android:background="@drawable/recents_worldcirculate_and_smallwindow_background" android:clipChildren="false" android:clipToPadding="false" android:layout_width="@dimen/worldcirculate_smallwindow_crop_item_width" android:layout_height="@dimen/worldcirculate_smallwindow_crop_item_height"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <View android:layout_gravity="center" android:id="@id/recents_worldcirculate_icon" android:background="@drawable/worldcirculate_icon" android:layout_width="36.359985dip" android:layout_height="30.539978dip" />
-    <TextView android:textSize="16.0sp" android:textColor="@color/smallwindow_text_color" android:layout_gravity="center" android:id="@id/recents_worldcirculate_hold_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_below="@id/recents_worldcirculate_icon" android:alpha="0.0" android:translationY="@dimen/recents_worldcirculate_smallwindow_text_margin_top" android:fontFamily="mipro-medium" />
-</com.miui.home.recents.views.RecentsTopWindowDropTargetWorldCirculate>

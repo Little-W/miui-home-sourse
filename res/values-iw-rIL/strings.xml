@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="Icon_name_classic_mode">הגדרות מסך הבית</string>
     <string name="accessibility_all_app_custom_category_finish">בוצע</string>
     <string name="accessibility_all_app_custom_category_item_remove">הסר את \"%1$s\" מכל הקטגוריות</string>
     <string name="accessibility_clear_search_bar_text">ניקוי סרגל החיפוש</string>
@@ -26,10 +25,8 @@
     <string name="activity_not_unlocked">המתן עד שהמכשיר שברשותך יאותחל לפני שתפתח יישומים</string>
     <string name="add_custom_category">מותאם אישית</string>
     <string name="add_screen">הוסף מסך</string>
-    <string name="add_to_workspace">הוספה למסך הבית</string>
     <string name="added_all_category">כל האפליקציות נוספו בהצלחה</string>
     <string name="afternoon">אחר הצהריים</string>
-    <string name="agree_button">מסכים</string>
     <string name="alexa_notification_add">הוסף</string>
     <string name="alexa_notification_cancel">לא עכשיו</string>
     <string name="alexa_notification_content">להוסיף קיצור של Alexa למרכז הבקרה?</string>
@@ -68,7 +65,6 @@
     <string name="all_apps_slide_up_tips">החלקה כלפי מעלה נשמרת עבור מגירת היישומים. החלף למסך בית רגיל ונסה שוב.</string>
     <string name="all_apps_suggestions">הצעות ליישומים</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">מהירות אנימציה</string>
     <string name="announce_for_app_move_in_folder">הועבר למיקום %1$d בתיקייה</string>
     <string name="announce_for_checked">%1$s, סומן</string>
     <string name="announce_for_choose_default_screen">"הגדר את מסך %1$d כברירת המחדל עבור 'מסך הבית'"</string>
@@ -111,7 +107,7 @@
     <string name="app_category_games">משחקים</string>
     <string name="app_category_health">בריאות</string>
     <string name="app_category_lifestyle">סגנון חיים</string>
-    <string name="app_category_music_movie">טלויזיה ומוסיקה</string>
+    <string name="app_category_music_movie">טלויזיה &amp; מוסיקה</string>
     <string name="app_category_news">חדשות</string>
     <string name="app_category_photos">צילום</string>
     <string name="app_category_productivity">פרודוקטיביות</string>
@@ -121,13 +117,6 @@
     <string name="app_category_tools">כלים</string>
     <string name="app_category_travel">טיולים</string>
     <string name="app_category_vr">מציאות מדומה</string>
-    <string name="app_drawer_double_confirm_description">זה ישנה את פריסת מסך הבית שלך. תוכל לבטל את השינויים מאוחר יותר בתפריט ההגדרות.</string>
-    <string name="app_drawer_double_confirm_title">שים לב</string>
-    <string name="app_drawer_feature_description">מגירת היישומים היא כלי מושלם לסידור היישומים שלך. סווג יישומים באופן אוטומטי ומצא כל מה שנדרש תוך שניות!</string>
-    <string name="app_drawer_guide_description">מצא את מה שאתה מחפש באפליקציות האהובות עליך</string>
-    <string name="app_drawer_guide_title">מגירת היישומים</string>
-    <string name="app_drawer_tip_title">החלפנו את עדכוני התוכן במגירת היישומים.</string>
-    <string name="app_install_state">מותקן</string>
     <string name="app_name">smallWindow</string>
     <string name="application_name">"'משגר היישומים' של המערכת"</string>
     <string name="apply">הגדר</string>
@@ -150,35 +139,8 @@
     <string name="back">הקודם</string>
     <string name="backup_fail">"לא ניתן לגבות את הלאונצ'ר"</string>
     <string name="bad_wallpaper_source_prompt">לא ניתן לטעון את הטפט</string>
-    <string name="branch_feature_description">פרט ליישומים, החיפוש המהיר מאפשר למצוא תוכן ביישומים ונתונים שונים באינטרנט.</string>
-    <string name="branch_guide_attention">שימוש בחיפוש משופר כרוך בשיתוף של בקשות החיפוש, מזהה Google Ads וכתובת ה-IP שלך עם Branch Metrics Inc. עליך לקרוא את <a href="http://url1"><font color="#B3000000">התנאים וההתניות למשתמש קצה בגילוי נתונים</font></a> ואת <a href="http://url2"><font color="#B3000000">מדיניות הפרטיות של Branch בגילוי נתונים</font></a> ולהסכים אתם כדי להשתמש במאפיין זה.</string>
-    <string name="branch_guide_description_one">אנו נכניס את כל היישומים שלך למגירת היישומים. מסך הבית שלך ייראה מסודר ומאורגן.</string>
-    <string name="branch_guide_description_three">החיפוש המובנה יאפשר לך למצוא במהירות ובקלות את כל מה שאתה צריך!</string>
-    <string name="branch_guide_description_two">מגירת היישומים מסווגת יישומים באופן אוטומטי.</string>
-    <string name="branch_guide_tip_title">כל יישום במקום שלו</string>
-    <string name="branch_guide_title">גלה את מגירת היישומים</string>
-    <string name="branch_guide_type_four_desc">ניתן לחזור לפריסה הראשונית בשני צעדים פשוטים</string>
-    <string name="branch_guide_type_four_main">בהגדרות, עבור אל מסך הבית > מסך הבית ובחר \"קלאסי\".</string>
-    <string name="branch_guide_type_four_step_one">פתח את ההגדרות</string>
-    <string name="branch_guide_type_four_step_two">"בחר את 'מסך הבית'"</string>
-    <string name="branch_guide_type_one_desc">נהל את היישומים שלך בעזרת מגירת היישומים</string>
-    <string name="branch_guide_type_one_main">שמור את היישומים שלך במגירת היישומים כדי להפוך את מסך הבית שלך למסודר ומאורגן.</string>
-    <string name="branch_new_feature">תכונה חדשה</string>
-    <string name="branch_privacy_policy">מדיניות פרטיות</string>
-    <string name="branch_search_guide_description">עכשיו תוצאות החיפוש שלנו הרבה יותר מקיפות</string>
-    <string name="branch_search_guide_privacy">שירות זה ניתן על-ידי Branch Metrics Inc. פרטי המיקום, החיפושים והמזהה שלך ב-Google Ads ישותפו עם Branch. עליך לקרוא את <a href="http://url1"><font color="#B3000000">תנאי השימוש</font></a> ואת <a href="http://url2"><font color="#B3000000">מדיניות הפרטיות</font></a> של Branch ולהסכים אתם כדי להשתמש בשירות זה.</string>
-    <string name="branch_search_guide_title">מצא את מה שאתה מחפש באפליקציות האהובות עליך</string>
-    <string name="branch_terms_condition">תנאים והתניות</string>
-    <string name="branch_tip_title">מאפיין החיפוש המהיר מאפשר לך למצוא כל מה שצריך תוך שניות.</string>
-    <string name="btn_agree">מסכים</string>
-    <string name="btn_cancel">ביטול</string>
-    <string name="btn_close">כיבוי</string>
-    <string name="btn_open">הפעלה</string>
-    <string name="btn_request_permission">מתן הרשאות</string>
-    <string name="btn_set_right_now">מתן הרשאות</string>
     <string name="buffering">טוען…</string>
     <string name="cancel_action">ביטול</string>
-    <string name="cancel_botton">ביטול</string>
     <string name="cancel_btn_label">ביטול</string>
     <string name="cant_edit_lock_screen">"לא ניתן לערוך את סגנון 'מסך הנעילה'"</string>
     <string name="cant_remove_folder">לא ניתן להסיר את התיקיה</string>
@@ -288,11 +250,9 @@
     <string name="emptyplaylist">לחץ להוספת שירים</string>
     <string name="enable_wallpaper_scroll">אפשר גלילה הצידה</string>
     <string name="encryption">הצפנה</string>
-    <string name="enter_search_setting_title">פתח חיפוש לאחר פתיחת מגירת האפליקציות</string>
     <string name="eras_ad">לספירה</string>
     <string name="eras_bc">לפנה\"ס</string>
     <string name="evening">לפנות ערב</string>
-    <string name="exit_overview_because_task_stack_changed">\"האחרונים\" נסגרו בגלל שינויים שאירעו ברקע</string>
     <string name="failed_to_delete_temporary">לא ניתן להסיר</string>
     <string name="failed_to_drop">לא ניתן להעביר</string>
     <string name="failed_to_drop_widget_invalid">"הווידג'ט אינו חוקי"</string>
@@ -349,8 +309,6 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
-    <string name="fold_pair_install_shortcut_long_click">יש ללחוץ לחיצה ממושכת להוספה למסך הבית</string>
-    <string name="fold_pair_installed_shortcut_launcher">קיצור הדרך כבר קיים</string>
     <string name="folder_name">תיקיה</string>
     <string name="frame_load_failed">לא ניתן לטעון מסגרת</string>
     <string name="free_style_apps_title">בחר יישום</string>
@@ -360,7 +318,7 @@
     <string name="free_style_edit_bar_select_app">בחר יישום</string>
     <string name="free_style_edit_bottom_empty_tip">לחץ על המלבן על מנת לערוך</string>
     <string name="free_style_edit_drawer">מגירה</string>
-    <string name="free_style_edit_move_tip">לחיצה ארוכה על מנת להזיז פריטים</string>
+    <string name="free_style_edit_move_tip">לחץ&amp; והחזק על מנת להעביר פריט</string>
     <string name="free_style_edit_tab_free_component">פריטים</string>
     <string name="free_style_edit_tab_shortcut">קיצורי דרך</string>
     <string name="free_style_edit_tab_widget">"ווידג'טים"</string>
@@ -406,14 +364,11 @@
     <string name="gadget_weather_title_14">מזג האויר</string>
     <string name="gadget_weather_title_24">מזג האויר</string>
     <string name="global_search_hint">חיפוש</string>
-    <string name="got_it_botton">הבנתי</string>
     <string name="group_folder">תיקיה חדשה</string>
     <string name="group_live_folders">תיקיות</string>
     <string name="group_shortcuts">קיצורי דרך</string>
     <string name="guide_install_app_msg">היישום אינו מותקן במכשירך. האם למצוא ולהתקין יישום זה כעת?</string>
     <string name="guide_install_app_title">מצא והתקן יישומים?</string>
-    <string name="guide_permission_title">נדרשות הרשאות</string>
-    <string name="guide_privacy_dialog_title">תנאי השירות</string>
     <string name="guide_tips_editing_mode">"לחיצה ארוכה לבחירת ווידג'ט"</string>
     <string name="home_gesture_content_center">מרכז תוכן</string>
     <string name="home_gesture_global_search">חיפוש</string>
@@ -443,10 +398,7 @@
     <string name="launcher_search_bar_value_enable">הפעלה</string>
     <string name="launcher_slide_up_title">העבר אצבע כלפי מעלה במסך הבית</string>
     <string name="launcher_sliding_up_gesture">"החלק מעלה ב'מסך הבית' לפתיחת החיפוש"</string>
-    <string name="launcher_title">"'מסך הבית' ולאחרונה"</string>
-    <string name="layout_guide_description">"אם אינך אוהב את מגירת היישומים, תמיד תוכל לחזור למסך הבית הקלאסי. פשוט השתמש בקיצור הדרך 'הגדרות מסך הבית' והחלף בין שני המצבים."</string>
-    <string name="layout_guide_tip_title">ניתן לחזור בלחיצה אחת לאפשרויות הקודמות.</string>
-    <string name="layout_guide_title">כיצד להסיר את מגירת היישומים</string>
+    <string name="launcher_title">מסך הבית &amp; אחרונים</string>
     <string name="like">הוספה למועדפים</string>
     <string name="liked">נוסף למועדפים</string>
     <string name="loading_desktop">רק רגע…</string>
@@ -613,11 +565,6 @@
     <string name="navigation_guide_recent_title">"פתיחת 'לאחרונה'"</string>
     <string name="navigation_guide_recent_title_spec_with_quotation_pad">פתיחת \"לאחרונה\"</string>
     <string name="navigation_guide_settings">המחשות של מחוות</string>
-    <string name="navigation_position_center">מרכז</string>
-    <string name="navigation_position_left">שמאל</string>
-    <string name="navigation_position_right">ימין</string>
-    <string name="navigation_position_summary">ניתן להחיל מיקומים מותאמים אישית של לחצני ניווט רק על מסך הבית</string>
-    <string name="navigation_position_title">מיקום לחצני ניווט</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">ביטול</string>
     <string name="navigation_set_miui_home_as_default_dialog_message">"לא ניתן להשתמש במחוות מסך מלא עם משגר יישומים של צד ג'. האם לעבור למשגר היישומים של המערכת ולהפעיל מחוות מסך מלא?"</string>
     <string name="navigation_set_miui_home_as_default_dialog_ok">אישור</string>
@@ -626,11 +573,9 @@
     <string name="navigation_type_title">ניווט מערכת</string>
     <string name="navigation_type_virtual_key">לחצנים</string>
     <string name="network_error">לא ניתן היה להתחבר לרשת. נסה שוב.</string>
-    <string name="new_feature_title">מה חדש</string>
     <string name="night">ערב</string>
     <string name="no_detail_page">עמוד ללא פרטים</string>
     <string name="no_space_toast">אין מספיק מקום</string>
-    <string name="no_space_toast_fold">אין כאן מספיק מקום</string>
     <string name="no_space_toast_when_click_widget">אין מספיק מקום בדף זה. נסה לגרור פריט זה לדף אחר.</string>
     <string name="noon">צהריים</string>
     <string name="normal_wallpaper">טפט</string>
@@ -639,7 +584,6 @@
     <string name="notification_reset_title">סידור הצלמיות בוצע בהצלחה</string>
     <string name="one_key_call_title">לחץ כדי לחייג</string>
     <string name="online_wallpaper">מקוון</string>
-    <string name="open_pad_personal_assistant_settings">"ווידג'טים של מסך הבית"</string>
     <string name="open_personal_assistant_dialog_btn_cancel">ביטול</string>
     <string name="open_personal_assistant_dialog_btn_confirm">כיבוי</string>
     <string name="open_personal_assistant_dialog_desc">"לאחר השבתת כספת היישומים, לא ניתן יהיה להשתמש בווידג'טים של כספת היישומים או לראות אותם. גם הגרסאות המעודכנות שלהם לא יהיו זמינות עבורך. להשבית אותה בכל זאת?"</string>
@@ -651,7 +595,6 @@
     <string name="ota_layout_adjustment_content">בגרסה החדשה בוצע סנכרון בין הפריסה החיצונית והפריסה הפנימית של מסך הבית.</string>
     <string name="ota_layout_adjustment_title">"פריסות 'מסך הבית'"</string>
     <string name="out_of_space">אין עוד מקום פנוי בדף מסך הבית הזה</string>
-    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">"רנדור אנימציות בצלמיות של אפליקציות צד ג'"</string>
     <string name="perfect_icons_switch_title">צלמיות אנימציה גלובליות</string>
     <string name="permdesc_install_shortcut">אפשר ליישום להוסיף קיצורי דרך ללא התערבות המשתמש.</string>
@@ -671,7 +614,6 @@
     <string name="photo_load_failed">לא ניתן לטעון את התמונה</string>
     <string name="please_slide_agian">העבר אצבע שוב</string>
     <string name="pm">PM</string>
-    <string name="popular_search">פופולרי</string>
     <string name="pref_cell_layout_size">פריסת אייקון של יישום</string>
     <string name="pref_enable_drawing_cache_summary">כבה על מנת לפנות זיכרון. עשוי לגרום לההאטה בביצועים.</string>
     <string name="pref_enable_drawing_cache_title">מטמון גרפיקה</string>
@@ -691,14 +633,6 @@
     <string name="privacy_thumbnail_blur_summary">עמעם תצוגה מקדימה של יישום באחרונים</string>
     <string name="privacy_thumbnail_blur_title">עמעם תצוגה מקדימה של יישום</string>
     <string name="quick_app">גישה מהירה ליישומים</string>
-    <string name="quick_finder_feature_description">מאפיין החיפוש המהיר מאפשר למצוא יישומים, תוכן ביישומים ונתונים שונים באינטרנט מהיר יותר. ניתן להשבית את המאפיין תחת הגדרות.</string>
-    <string name="quick_finder_tip_title">מצא את כל מה שצריך מהר יותר</string>
-    <string name="quick_search_all_app_desc">הצג את כל האפליקציות במגירת האפליקציות</string>
-    <string name="quick_search_desc">פתח חיפוש לאחר פתיחת מגירת האפליקציות</string>
-    <string name="quick_search_guide_all_apps">כל האפליקציות</string>
-    <string name="quick_search_guide_ok_btn">אישור</string>
-    <string name="quick_search_guide_quick_search">חיפוש מהיר</string>
-    <string name="quick_search_guide_title">בחר מצב ברירת מחדל</string>
     <string name="recent_apps">אחרון</string>
     <string name="recent_menu_item_info">פרטים</string>
     <string name="recent_menu_item_lock">נעל</string>
@@ -727,13 +661,6 @@
     <string name="recents_title_market">מצא יישומים</string>
     <string name="recents_title_security_scan">סריקת אבטחה</string>
     <string name="recents_tv_small_window_text">חלונות צפים</string>
-    <string name="recents_worldcirculate_text">יש לשחרר כדי לבחור</string>
-    <string name="recnets_relay_device_info">מ-%s</string>
-    <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
-    <string name="recnets_worldcirculate_display_computer_info">יישום זה עובד ב-%s.</string>
-    <string name="recnets_worldcirculate_display_default_info">יש להקיש כדי להחזיר אותו לכאן.</string>
-    <string name="recnets_worldcirculate_display_default_info_pad">יש להקיש כדי להחזיר אותו לכאן.</string>
-    <string name="recnets_worldcirculate_display_pad_info">יישום זה עובד ב-%s.</string>
     <string name="recommend_apk_size_and_desc">%1$dMB | %2$s</string>
     <string name="recommend_app">הצעות לאפליקציות</string>
     <string name="recommend_apps_default_title">ריק</string>
@@ -751,8 +678,6 @@
     <string name="remove_invalidate_gadget_tips">"אחד מהוויג'טים אינו זמין יותר. תוכל להוסיף אחד אחר."</string>
     <string name="remove_sys_app_content">ניתן יהיה להוסיף את הקיצור למסך הבית מחדש תחת הגדרות > יישומים > ניהול קיצורי מסך הבית. להסיר עכשיו?</string>
     <string name="remove_sys_app_title">להסיר את הקיצור ממסך הבית?</string>
-    <string name="request_permission_msg">משגר POCO זקוק למספר הרשאות על מנת לפעול באופן מלא.</string>
-    <string name="request_permission_title">נדרשות הרשאות</string>
     <string name="reset_cate_tip_content">המשך יביא לשחזור קבוצות ברירת המחדל לאפליקציות. להמשיך בכל זאת?</string>
     <string name="reset_cate_tip_title">שחזר את קבוצות ברירת המחדל</string>
     <string name="reset_description_first_time">ניתן לשחזר את הפריסה מ-%1$sבתוך שעתיים</string>
@@ -768,8 +693,6 @@
     <string name="screen_cells_config_title">"פריסת 'מסך הבית'"</string>
     <string name="screen_locked_toast">"פריסת 'מסך הבית' נעולה."</string>
     <string name="screen_number">%d מסך</string>
-    <string name="search_bar_hint_content">חפש אפליקציות ותכנים</string>
-    <string name="search_guide_btn">הבנתי</string>
     <string name="search_in_apps_store">חפש \"%1$s\" ב- %2$s</string>
     <string name="search_no_result">לא ניתן היה למצוא תוצאות</string>
     <string name="select_all">בחר הכל</string>
@@ -777,7 +700,6 @@
     <string name="select_photo">תמונה</string>
     <string name="send">שליחה</string>
     <string name="server_error">אירעה שגיאת שרת. המתן דקה או שתיים ונסה שוב.</string>
-    <string name="service_double_attention">פונקציית חיפוש משופר מסופקת על-ידי Branch Metrics Inc. כדי שמאפיין זה יעבוד, עלינו לשתף את בקשות החיפוש, מזהה Google Ads וכתובת ה-IP שלך עם Branch Metrics Inc. עליך לקרוא את <a href="http://url1"><font color="#B3000000">התנאים וההתניות למשתמש קצה בגילוי נתונים</font></a> ואת <a href="http://url2"><font color="#B3000000">מדיניות הפרטיות של Branch בגילוי נתונים</font></a> ולהסכים אתם כדי להשתמש במאפיין זה.</string>
     <string name="setting_wallpaper_tip">קמץ או החלק להתאמה</string>
     <string name="settings">הגדרות</string>
     <string name="settings_shortcut">הגדרות</string>
@@ -815,13 +737,11 @@
     <string name="status_installing">מתקין</string>
     <string name="status_paused">נעצר</string>
     <string name="status_pending">ממתין</string>
-    <string name="suggestions">הצעות</string>
     <string name="sunday">ראשון</string>
     <string name="sunday_short">"א'"</string>
     <string name="sunday_shortest">"א'"</string>
     <string name="swipe_the_desktop_to_the_left">העבר אצבע שמאלה במסך הבית</string>
     <string name="swipe_the_desktop_to_the_right">העבר אצבע ימינה במסך הבית</string>
-    <string name="switch_on_button">הפעלה</string>
     <string name="switch_personal_assistant_app_vault">כספת האפליקציות</string>
     <string name="switch_personal_assistant_google">Google Discover</string>
     <string name="switch_personal_assistant_none">ללא</string>
@@ -832,10 +752,6 @@
     <string name="system_shortcuts_remove">הסר</string>
     <string name="system_text">אוטומטי</string>
     <string name="task_access_locked_app_msg">נעילת יישום מופעלת</string>
-    <string name="term_of_service">תנאי השימוש</string>
-    <string name="terms_of_services_one">ברוך הבא אל מגירת היישומים והחיפוש המהיר. מאפיין החיפוש המהיר מאפשר למצוא יישומים, תכנים בתוך יישומים ולערוך חיפושים באינטרנט מהר יותר. לפני שימוש במאפיינים אלו, עליך לקרוא את <a href="http://url1"><font color="#B3000000">מדיניות הפרטיות</font></a> של Xiaomi ולהסכים אתה.</string>
-    <string name="terms_of_services_three">ניתן להשבית מאפיין זה תחת ההגדרות.</string>
-    <string name="terms_of_services_two">שימוש בחיפוש משופר מחייב שיתוף של המידע האישי הנדרש, כולל החיפושים שלך, המזהה שלך ב-Google Advertising וכתובת ה-IP עם חברת Branch Metrics Inc. חברת Branch תעבד את הנתונים שלך בהתאם <a href="http://url1"><font color="#B3000000">למדיניות הפרטיות של Branch Discovery</font></a>. עליך לקרוא את <a href="http://url2"><font color="#B3000000">תנאי השימוש למשתמש קצה של Discovery</font></a> ואת <a href="http://url3"><font color="#B3000000">מדיניות הפרטיות של Branch Discovery</font></a>כדי להשתמש במאפיין זה.</string>
     <string name="the_anniversary_of_lifting_martial_law">יום השנה לביטול החוק הצבאי</string>
     <string name="the_anti_aggression_day">יום המאבק באלימות</string>
     <string name="the_arbor_day">יום העץ</string>
@@ -902,11 +818,6 @@
     <string name="tuesday">שלישי</string>
     <string name="tuesday_short">"ג'"</string>
     <string name="tuesday_shortest">"ג'"</string>
-    <string name="uni_search_permission_content">הפעלת תכונות אונליין (Branch מספקת את שירותי החיפוש)</string>
-    <string name="uni_search_permission_msg">אפשר למשגר POCO לגשת למיקומך ולאנשי הקשר שלך בכדי לשפר את תוצאות החיפוש.</string>
-    <string name="uni_search_permission_title">חיפוש משופר</string>
-    <string name="uni_search_setting_summary">מציאת תוכן ביישום באופן ישיר</string>
-    <string name="uni_search_setting_title">מצב שאילתא מתוך יישום</string>
     <string name="uninstall">הסר התקנה</string>
     <string name="uninstall_dialog_message">הסרת התקנת היישום תסיר את כל הנתונים שלו.</string>
     <string name="uninstall_dialog_title_format">להסיר התקנה של %s?</string>
@@ -917,7 +828,6 @@
     <string name="uninstall_xspace_dialog_title_format">להסיר התקנה של \"%s\" המשוכפל?</string>
     <string name="unknown_artist_name">אמן לא ידוע</string>
     <string name="unnamed_folder_name">תיקיה</string>
-    <string name="upgrade_remove_small_window_in_recents">ניתן להשתמש בסרגל צד כדי לפתוח יישומים בחלונות צפים</string>
     <string name="wallpaper">טפט</string>
     <string name="wallpaper_auto_change_title">מסך הנעילה</string>
     <string name="wallpaper_failed_message">לא ניתן להגדיר טפט</string>

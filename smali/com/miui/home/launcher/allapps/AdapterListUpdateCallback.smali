@@ -21,7 +21,7 @@
     .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 67
+    .line 63
     new-instance v0, Lcom/miui/home/launcher/allapps/AdapterListUpdateCallback$1;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/allapps/AdapterListUpdateCallback$1;-><init>(Lcom/miui/home/launcher/allapps/AdapterListUpdateCallback;)V
@@ -46,7 +46,7 @@
 .method private isRecyclerViewSupport()Z
     .locals 1
 
-    .line 85
+    .line 73
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AdapterListUpdateCallback;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     if-eqz v0, :cond_0
@@ -71,17 +71,17 @@
 .method private notifyDataSetChanged()V
     .locals 2
 
-    .line 61
+    .line 57
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AdapterListUpdateCallback;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     if-eqz v0, :cond_0
 
-    .line 62
+    .line 58
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/AdapterListUpdateCallback;->mNotifyDataSetChangeRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 63
+    .line 59
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AdapterListUpdateCallback;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/AdapterListUpdateCallback;->mNotifyDataSetChangeRunnable:Ljava/lang/Runnable;
@@ -94,18 +94,6 @@
 
 
 # virtual methods
-.method protected afterNotifyData()V
-    .locals 0
-
-    return-void
-.end method
-
-.method protected beforeNotifyData()V
-    .locals 0
-
-    return-void
-.end method
-
 .method protected abstract isAnimEnable()Z
 .end method
 
@@ -121,7 +109,7 @@
 .method public onChanged(IILjava/lang/Object;)V
     .locals 1
 
-    .line 52
+    .line 49
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/AdapterListUpdateCallback;->isAnimEnable()Z
 
     move-result v0
@@ -134,17 +122,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 53
+    .line 50
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AdapterListUpdateCallback;->mAdapter:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     invoke-virtual {v0, p1, p2, p3}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyItemRangeChanged(IILjava/lang/Object;)V
 
-    .line 54
-    invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/AdapterListUpdateCallback;->afterNotifyData()V
-
     goto :goto_0
 
-    .line 56
+    .line 52
     :cond_0
     invoke-direct {p0}, Lcom/miui/home/launcher/allapps/AdapterListUpdateCallback;->notifyDataSetChanged()V
 
@@ -184,12 +169,9 @@
 
     invoke-virtual {v0, p1, p2}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyItemRangeInserted(II)V
 
-    .line 27
-    invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/AdapterListUpdateCallback;->afterNotifyData()V
-
     goto :goto_0
 
-    .line 29
+    .line 28
     :cond_0
     invoke-direct {p0}, Lcom/miui/home/launcher/allapps/AdapterListUpdateCallback;->notifyDataSetChanged()V
 
@@ -200,7 +182,7 @@
 .method public onMoved(II)V
     .locals 1
 
-    .line 43
+    .line 41
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/AdapterListUpdateCallback;->isAnimEnable()Z
 
     move-result v0
@@ -213,17 +195,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 44
+    .line 42
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AdapterListUpdateCallback;->mAdapter:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     invoke-virtual {v0, p1, p2}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyItemMoved(II)V
 
-    .line 45
-    invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/AdapterListUpdateCallback;->afterNotifyData()V
-
     goto :goto_0
 
-    .line 47
+    .line 44
     :cond_0
     invoke-direct {p0}, Lcom/miui/home/launcher/allapps/AdapterListUpdateCallback;->notifyDataSetChanged()V
 
@@ -234,7 +213,7 @@
 .method public onRemoved(II)V
     .locals 1
 
-    .line 34
+    .line 33
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/AdapterListUpdateCallback;->isAnimEnable()Z
 
     move-result v0
@@ -247,17 +226,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 35
+    .line 34
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AdapterListUpdateCallback;->mAdapter:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     invoke-virtual {v0, p1, p2}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyItemRangeRemoved(II)V
 
-    .line 36
-    invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/AdapterListUpdateCallback;->afterNotifyData()V
-
     goto :goto_0
 
-    .line 38
+    .line 36
     :cond_0
     invoke-direct {p0}, Lcom/miui/home/launcher/allapps/AdapterListUpdateCallback;->notifyDataSetChanged()V
 

@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Landroid/os/Handler;)V
     .locals 0
 
-    .line 3890
+    .line 3776
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$32;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -33,7 +33,7 @@
 .method static synthetic lambda$onChange$0(Lcom/miui/home/launcher/ShortcutInfo;)V
     .locals 0
 
-    .line 3895
+    .line 3781
     iget-object p0, p0, Lcom/miui/home/launcher/ShortcutInfo;->mBuddyIconView:Lcom/miui/home/launcher/ShortcutIcon;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutIcon;->updateTitleTip()V
@@ -44,7 +44,7 @@
 .method public static synthetic lambda$onChange$1(Lcom/miui/home/launcher/Launcher$32;Lcom/miui/home/launcher/ShortcutInfo;)V
     .locals 1
 
-    .line 3896
+    .line 3782
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$32;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getAllAppsStore()Lcom/miui/home/launcher/allapps/AllAppsStore;
@@ -61,14 +61,14 @@
 .method public onChange(Z)V
     .locals 3
 
-    .line 3893
+    .line 3779
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$32;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$3500(Lcom/miui/home/launcher/Launcher;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$3700(Lcom/miui/home/launcher/Launcher;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 3894
+    .line 3780
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$32;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getContentResolver()Landroid/content/ContentResolver;
@@ -81,20 +81,20 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$3502(Lcom/miui/home/launcher/Launcher;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$3702(Lcom/miui/home/launcher/Launcher;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 3895
+    .line 3781
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$32;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$3600(Lcom/miui/home/launcher/Launcher;)Ljava/util/HashSet;
+    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$3800(Lcom/miui/home/launcher/Launcher;)Ljava/util/HashSet;
 
     move-result-object v1
 
     sget-object v2, Lcom/miui/home/launcher/-$$Lambda$Launcher$32$Z8yC2AEQjiFWsBmh8MdIOnuRR2Y;->INSTANCE:Lcom/miui/home/launcher/-$$Lambda$Launcher$32$Z8yC2AEQjiFWsBmh8MdIOnuRR2Y;
 
-    invoke-static {v0, v1, v2, p1}, Lcom/miui/home/launcher/Launcher;->access$3700(Lcom/miui/home/launcher/Launcher;Ljava/util/Collection;Ljava/util/function/Consumer;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2, p1}, Lcom/miui/home/launcher/Launcher;->access$3900(Lcom/miui/home/launcher/Launcher;Ljava/util/Collection;Ljava/util/function/Consumer;Ljava/lang/String;)V
 
-    .line 3896
+    .line 3782
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$32;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getApps()Ljava/util/Collection;
@@ -105,7 +105,7 @@
 
     invoke-direct {v2, p0}, Lcom/miui/home/launcher/-$$Lambda$Launcher$32$Zt-KqVnbbT817ndXithMYaaC1Z0;-><init>(Lcom/miui/home/launcher/Launcher$32;)V
 
-    invoke-static {v0, v1, v2, p1}, Lcom/miui/home/launcher/Launcher;->access$3700(Lcom/miui/home/launcher/Launcher;Ljava/util/Collection;Ljava/util/function/Consumer;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2, p1}, Lcom/miui/home/launcher/Launcher;->access$3900(Lcom/miui/home/launcher/Launcher;Ljava/util/Collection;Ljava/util/function/Consumer;Ljava/lang/String;)V
 
     return-void
 .end method

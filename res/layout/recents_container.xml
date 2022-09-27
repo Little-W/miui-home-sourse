@@ -2,23 +2,20 @@
 <com.miui.home.recents.views.RecentsContainer android:id="@id/recents_container" android:visibility="gone" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:forceHasOverlappingRendering="false"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <com.miui.home.recents.views.RecentsView android:id="@id/recents_view" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:forceHasOverlappingRendering="false" />
-    <com.miui.home.recents.views.RecentsDecorations android:id="@id/recents_decorations" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="1.0">
+    <FrameLayout android:id="@id/recents_decorations" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="1.0">
         <include layout="@layout/small_window_container" />
         <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/memoryAndClearContainer" android:paddingTop="2.0dip" android:paddingBottom="@dimen/clear_container_padding_bottom" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:splitMotionEvents="false">
             <com.miui.home.recents.views.CircleAndTickAnimView android:layout_gravity="center_horizontal" android:id="@id/clearAnimView" android:background="@drawable/btn_clear_all" android:layout_width="wrap_content" android:layout_height="wrap_content" />
         </LinearLayout>
-        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
-            <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toStartOf="@id/small_window_and_mem_text_container" android:layout_alignParentStart="true" layout="@layout/recents_relay_container" />
-            <LinearLayout android:orientation="horizontal" android:id="@id/small_window_and_mem_text_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true" android:layout_alignParentEnd="true">
-                <include android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/small_window_textview_container" />
-                <LinearLayout android:gravity="end" android:orientation="horizontal" android:id="@id/txtMemoryContainer" android:paddingTop="23.0dip" android:paddingBottom="23.0dip" android:visibility="visible" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:paddingEnd="15.0dip" android:layout_marginStart="5.0dip">
-                    <TextView android:textSize="@dimen/recent_task_txt_memory_text_size" android:textColor="@color/txt_memory_info_color" android:ellipsize="end" android:gravity="end" android:layout_gravity="center" android:id="@id/txtMemoryInfo1" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" />
-                    <View android:layout_gravity="center" android:id="@id/separatorForMemoryInfo" android:background="@color/txt_memory_info_color" android:clickable="true" android:layout_width="1.0px" android:layout_height="@dimen/recent_task_txt_memory_text_size" android:importantForAccessibility="no" />
-                    <TextView android:textSize="@dimen/recent_task_txt_memory_text_size" android:textColor="@color/txt_memory_info_color" android:layout_gravity="center" android:id="@id/txtMemoryInfo2" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-                </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="5.0" layout="@layout/small_window_textview_container" />
+            <LinearLayout android:gravity="end" android:orientation="horizontal" android:id="@id/txtMemoryContainer" android:paddingTop="23.0dip" android:paddingBottom="23.0dip" android:visibility="visible" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="3.0" android:paddingEnd="15.0dip">
+                <TextView android:textSize="@dimen/recent_task_txt_memory_text_size" android:textColor="@color/txt_memory_info_color" android:ellipsize="end" android:gravity="end" android:layout_gravity="center" android:id="@id/txtMemoryInfo1" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" />
+                <View android:layout_gravity="center" android:id="@id/separatorForMemoryInfo" android:background="@color/txt_memory_info_color" android:clickable="true" android:layout_width="1.0px" android:layout_height="@dimen/recent_task_txt_memory_text_size" android:importantForAccessibility="no" />
+                <TextView android:textSize="@dimen/recent_task_txt_memory_text_size" android:textColor="@color/txt_memory_info_color" android:layout_gravity="center" android:id="@id/txtMemoryInfo2" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" />
             </LinearLayout>
-        </RelativeLayout>
-    </com.miui.home.recents.views.RecentsDecorations>
+        </LinearLayout>
+    </FrameLayout>
     <include android:id="@id/recent_menu_view" layout="@layout/recent_menu_view" />
     <include layout="@layout/small_window_edit" />
     <com.miui.home.recents.views.FakeNavigationBarView android:layout_gravity="bottom|center" android:id="@id/fake_nav_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" />

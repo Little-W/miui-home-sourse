@@ -1,14 +1,11 @@
 .class Lcom/miui/home/launcher/WorkspaceThumbnailView$2;
-.super Ljava/lang/Object;
+.super Lmiuix/animation/listener/TransitionListener;
 .source "WorkspaceThumbnailView.java"
-
-# interfaces
-.implements Lcom/miui/home/launcher/WorkspaceThumbnailView$FoldSwitchScreenAnimListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/WorkspaceThumbnailView;->switchScreenWithFoldAnim()V
+    value = Lcom/miui/home/launcher/WorkspaceThumbnailView;->hideWithFolmeAnim()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,54 +22,23 @@
 .method constructor <init>(Lcom/miui/home/launcher/WorkspaceThumbnailView;)V
     .locals 0
 
-    .line 247
+    .line 498
     iput-object p1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView$2;->this$0:Lcom/miui/home/launcher/WorkspaceThumbnailView;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lmiuix/animation/listener/TransitionListener;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public switchScreenAnimFinish()V
-    .locals 2
+.method public onComplete(Ljava/lang/Object;)V
+    .locals 0
 
-    .line 261
-    iget-object v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView$2;->this$0:Lcom/miui/home/launcher/WorkspaceThumbnailView;
+    .line 501
+    iget-object p1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView$2;->this$0:Lcom/miui/home/launcher/WorkspaceThumbnailView;
 
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->access$202(Lcom/miui/home/launcher/WorkspaceThumbnailView;Z)Z
-
-    return-void
-.end method
-
-.method public switchScreenInAnimEnd()V
-    .locals 1
-
-    .line 250
-    iget-object v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView$2;->this$0:Lcom/miui/home/launcher/WorkspaceThumbnailView;
-
-    invoke-static {v0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->access$300(Lcom/miui/home/launcher/WorkspaceThumbnailView;)V
-
-    return-void
-.end method
-
-.method public switchScreenOutAnimStart()V
-    .locals 2
-
-    .line 255
-    iget-object v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView$2;->this$0:Lcom/miui/home/launcher/WorkspaceThumbnailView;
-
-    const/4 v1, 0x1
-
-    invoke-static {v0, v1}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->access$202(Lcom/miui/home/launcher/WorkspaceThumbnailView;Z)Z
-
-    .line 256
-    iget-object v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView$2;->this$0:Lcom/miui/home/launcher/WorkspaceThumbnailView;
-
-    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->updateborderLine(Z)V
+    invoke-virtual {p1}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->onHideComplete()V
 
     return-void
 .end method

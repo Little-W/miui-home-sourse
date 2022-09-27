@@ -22,7 +22,7 @@
 .method constructor <init>(J)V
     .locals 0
 
-    .line 436
+    .line 569
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-wide p1, p0, Lcom/google/android/filament/ColorGrading$Builder$BuilderFinalizer;->mNativeObject:J
@@ -35,18 +35,18 @@
 .method public finalize()V
     .locals 3
 
-    .line 441
+    .line 574
     :try_start_0
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 444
+    .line 577
     :catch_0
     iget-wide v0, p0, Lcom/google/android/filament/ColorGrading$Builder$BuilderFinalizer;->mNativeObject:J
 
-    invoke-static {v0, v1}, Lcom/google/android/filament/ColorGrading;->access$1200(J)V
+    invoke-static {v0, v1}, Lcom/google/android/filament/ColorGrading;->access$1900(J)V
 
     goto :goto_0
 
@@ -55,9 +55,9 @@
 
     iget-wide v1, p0, Lcom/google/android/filament/ColorGrading$Builder$BuilderFinalizer;->mNativeObject:J
 
-    invoke-static {v1, v2}, Lcom/google/android/filament/ColorGrading;->access$1200(J)V
+    invoke-static {v1, v2}, Lcom/google/android/filament/ColorGrading;->access$1900(J)V
 
-    .line 445
+    .line 578
     throw v0
 
     :goto_0

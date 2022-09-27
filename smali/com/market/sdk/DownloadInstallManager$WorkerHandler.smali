@@ -191,7 +191,7 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    const-string/jumbo v0, "version_code"
+    const-string v0, "version_code"
 
     .line 255
     iget-object v1, p0, Lcom/market/sdk/DownloadInstallManager$WorkerHandler;->this$0:Lcom/market/sdk/DownloadInstallManager;

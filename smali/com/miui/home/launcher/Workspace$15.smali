@@ -3,12 +3,12 @@
 .source "Workspace.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljava/util/function/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/Workspace;->findPosForIcon(Lcom/miui/home/launcher/ItemInfo;Landroid/view/View;)V
+    value = Lcom/miui/home/launcher/Workspace;->autoFillAllScreens()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -16,25 +16,27 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/function/Function<",
+        "Ljava/lang/Void;",
+        "Ljava/lang/Boolean;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/launcher/Workspace;
 
-.field final synthetic val$cellInfo:Lcom/miui/home/launcher/Workspace$CellInfo;
-
-.field final synthetic val$icon:Landroid/view/View;
-
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/Workspace;Lcom/miui/home/launcher/Workspace$CellInfo;Landroid/view/View;)V
+.method constructor <init>(Lcom/miui/home/launcher/Workspace;)V
     .locals 0
 
-    .line 2654
+    .line 2559
     iput-object p1, p0, Lcom/miui/home/launcher/Workspace$15;->this$0:Lcom/miui/home/launcher/Workspace;
-
-    iput-object p2, p0, Lcom/miui/home/launcher/Workspace$15;->val$cellInfo:Lcom/miui/home/launcher/Workspace$CellInfo;
-
-    iput-object p3, p0, Lcom/miui/home/launcher/Workspace$15;->val$icon:Landroid/view/View;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,60 +45,86 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 4
+.method public apply(Ljava/lang/Void;)Ljava/lang/Boolean;
+    .locals 3
 
-    .line 2657
-    iget-object v0, p0, Lcom/miui/home/launcher/Workspace$15;->this$0:Lcom/miui/home/launcher/Workspace;
+    .line 2562
+    iget-object p1, p0, Lcom/miui/home/launcher/Workspace$15;->this$0:Lcom/miui/home/launcher/Workspace;
 
-    iget-object v1, p0, Lcom/miui/home/launcher/Workspace$15;->val$cellInfo:Lcom/miui/home/launcher/Workspace$CellInfo;
+    invoke-static {p1}, Lcom/miui/home/launcher/Workspace;->access$800(Lcom/miui/home/launcher/Workspace;)Ljava/util/ArrayList;
 
-    iget-wide v1, v1, Lcom/miui/home/launcher/Workspace$CellInfo;->screenId:J
+    move-result-object p1
 
-    invoke-virtual {v0, v1, v2}, Lcom/miui/home/launcher/Workspace;->getCellLayoutById(J)Lcom/miui/home/launcher/CellLayout;
+    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 2658
-    iget-object v1, p0, Lcom/miui/home/launcher/Workspace$15;->val$icon:Landroid/view/View;
+    check-cast v0, Lcom/miui/home/launcher/ItemInfo;
 
-    invoke-virtual {v1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+    .line 2563
+    instance-of v1, v0, Lcom/miui/home/launcher/FolderInfo;
+
+    if-eqz v1, :cond_0
+
+    move-object v1, v0
+
+    check-cast v1, Lcom/miui/home/launcher/FolderInfo;
+
+    invoke-virtual {v1}, Lcom/miui/home/launcher/FolderInfo;->getBuddyIconView()Lcom/miui/home/launcher/FolderIcon;
 
     move-result-object v1
 
-    if-eq v1, v0, :cond_1
+    goto :goto_1
 
-    .line 2659
-    iget-object v1, p0, Lcom/miui/home/launcher/Workspace$15;->val$icon:Landroid/view/View;
-
-    invoke-virtual {v1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v1
-
-    .line 2660
-    instance-of v2, v1, Landroid/view/ViewGroup;
-
-    if-eqz v2, :cond_0
-
-    .line 2661
-    check-cast v1, Landroid/view/ViewGroup;
-
-    iget-object v2, p0, Lcom/miui/home/launcher/Workspace$15;->val$icon:Landroid/view/View;
-
-    invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
-
-    .line 2663
+    .line 2564
     :cond_0
-    iget-object v1, p0, Lcom/miui/home/launcher/Workspace$15;->val$icon:Landroid/view/View;
+    move-object v1, v0
 
-    const/4 v2, -0x1
+    check-cast v1, Lcom/miui/home/launcher/ShortcutInfo;
 
-    new-instance v3, Lcom/miui/home/launcher/CellLayout$LayoutParams;
+    invoke-virtual {v1}, Lcom/miui/home/launcher/ShortcutInfo;->getBuddyIconView()Lcom/miui/home/launcher/ShortcutIcon;
 
-    invoke-direct {v3}, Lcom/miui/home/launcher/CellLayout$LayoutParams;-><init>()V
+    move-result-object v1
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/miui/home/launcher/CellLayout;->addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
+    .line 2565
+    :goto_1
+    iget-object v2, p0, Lcom/miui/home/launcher/Workspace$15;->this$0:Lcom/miui/home/launcher/Workspace;
+
+    invoke-static {v2, v0, v1}, Lcom/miui/home/launcher/Workspace;->access$1000(Lcom/miui/home/launcher/Workspace;Lcom/miui/home/launcher/ItemInfo;Landroid/view/View;)V
+
+    goto :goto_0
 
     :cond_1
-    return-void
+    const/4 p1, 0x1
+
+    .line 2567
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    .line 2559
+    check-cast p1, Ljava/lang/Void;
+
+    invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Workspace$15;->apply(Ljava/lang/Void;)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
 .end method

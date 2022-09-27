@@ -439,15 +439,6 @@
     return-object v0
 .end method
 
-.method getVersion()I
-    .locals 1
-
-    .line 330
-    iget v0, p0, Landroidx/lifecycle/LiveData;->mVersion:I
-
-    return v0
-.end method
-
 .method public hasActiveObservers()Z
     .locals 1
 
@@ -618,71 +609,6 @@
     .locals 0
 
     return-void
-.end method
-
-.method protected postValue(Ljava/lang/Object;)V
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TT;)V"
-        }
-    .end annotation
-
-    .line 286
-    iget-object v0, p0, Landroidx/lifecycle/LiveData;->mDataLock:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    .line 287
-    :try_start_0
-    iget-object v1, p0, Landroidx/lifecycle/LiveData;->mPendingData:Ljava/lang/Object;
-
-    sget-object v2, Landroidx/lifecycle/LiveData;->NOT_SET:Ljava/lang/Object;
-
-    if-ne v1, v2, :cond_0
-
-    const/4 v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    .line 288
-    :goto_0
-    iput-object p1, p0, Landroidx/lifecycle/LiveData;->mPendingData:Ljava/lang/Object;
-
-    .line 289
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-nez v1, :cond_1
-
-    return-void
-
-    .line 293
-    :cond_1
-    invoke-static {}, Landroidx/arch/core/executor/ArchTaskExecutor;->getInstance()Landroidx/arch/core/executor/ArchTaskExecutor;
-
-    move-result-object p1
-
-    iget-object v0, p0, Landroidx/lifecycle/LiveData;->mPostValueRunnable:Ljava/lang/Runnable;
-
-    invoke-virtual {p1, v0}, Landroidx/arch/core/executor/ArchTaskExecutor;->postToMainThread(Ljava/lang/Runnable;)V
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    .line 289
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
 .end method
 
 .method public removeObserver(Landroidx/lifecycle/Observer;)V

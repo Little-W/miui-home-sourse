@@ -174,13 +174,13 @@
     .line 308
     iget-object v0, p0, Lcom/miui/home/launcher/MinusOneScreenView;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getHotSeats()Lcom/miui/home/launcher/hotseats/HotSeats;
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getHotSeats()Lcom/miui/home/launcher/HotSeats;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/miui/home/launcher/MinusOneScreenView;->mHotHeatTouchRect:Landroid/graphics/Rect;
 
-    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/hotseats/HotSeats;->getHitRect(Landroid/graphics/Rect;)V
+    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/HotSeats;->getHitRect(Landroid/graphics/Rect;)V
 
     .line 309
     iget-object v0, p0, Lcom/miui/home/launcher/MinusOneScreenView;->mHotHeatTouchRect:Landroid/graphics/Rect;
@@ -250,7 +250,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f05001a
+    const v1, 0x7f050019
 
     .line 147
     invoke-virtual {v0, v1}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
@@ -1220,7 +1220,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f05001c
+    const v1, 0x7f05001b
 
     .line 137
     invoke-virtual {v0, v1}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
@@ -1449,7 +1449,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f05001b
+    const v1, 0x7f05001a
 
     invoke-virtual {v0, v1}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 

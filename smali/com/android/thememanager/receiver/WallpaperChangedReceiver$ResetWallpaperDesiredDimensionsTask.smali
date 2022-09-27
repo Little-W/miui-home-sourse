@@ -32,10 +32,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 44
+    .line 42
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
-    .line 45
+    .line 43
     iput-object p1, p0, Lcom/android/thememanager/receiver/WallpaperChangedReceiver$ResetWallpaperDesiredDimensionsTask;->mContext:Landroid/content/Context;
 
     return-void
@@ -46,10 +46,10 @@
 .method protected varargs doInBackground([Ljava/lang/Void;)Landroid/graphics/Bitmap;
     .locals 3
 
-    .line 50
+    .line 48
     iget-object p1, p0, Lcom/android/thememanager/receiver/WallpaperChangedReceiver$ResetWallpaperDesiredDimensionsTask;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v0, "wallpaper"
+    const-string v0, "wallpaper"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -57,14 +57,14 @@
 
     check-cast p1, Landroid/app/WallpaperManager;
 
-    .line 51
+    .line 49
     invoke-virtual {p1}, Landroid/app/WallpaperManager;->getWallpaperInfo()Landroid/app/WallpaperInfo;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    .line 53
+    .line 51
     :try_start_0
     invoke-virtual {p1}, Landroid/app/WallpaperManager;->peekDrawable()Landroid/graphics/drawable/Drawable;
 
@@ -72,12 +72,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 54
+    .line 52
     instance-of v0, p1, Landroid/graphics/drawable/BitmapDrawable;
 
     if-eqz v0, :cond_0
 
-    .line 55
+    .line 53
     check-cast p1, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {p1}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
@@ -91,9 +91,9 @@
     :catch_0
     move-exception p1
 
-    const-string v0, "WallpaperChangedReceiver"
+    const-string v0, "WallpaperChanged"
 
-    .line 58
+    .line 56
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -119,7 +119,7 @@
 .method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 40
+    .line 38
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/android/thememanager/receiver/WallpaperChangedReceiver$ResetWallpaperDesiredDimensionsTask;->doInBackground([Ljava/lang/Void;)Landroid/graphics/Bitmap;
@@ -132,22 +132,22 @@
 .method protected onPostExecute(Landroid/graphics/Bitmap;)V
     .locals 5
 
-    .line 66
+    .line 64
     invoke-super {p0, p1}, Landroid/os/AsyncTask;->onPostExecute(Ljava/lang/Object;)V
 
     if-eqz p1, :cond_2
 
-    .line 68
+    .line 66
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v0
 
-    .line 69
+    .line 67
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result p1
 
-    .line 70
+    .line 68
     iget-object v1, p0, Lcom/android/thememanager/receiver/WallpaperChangedReceiver$ResetWallpaperDesiredDimensionsTask;->mContext:Landroid/content/Context;
 
     invoke-static {v1}, Lcom/android/thememanager/receiver/WallpaperChangedReceiver;->access$000(Landroid/content/Context;)Landroid/graphics/Point;
@@ -156,7 +156,7 @@
 
     const/4 v2, 0x1
 
-    .line 72
+    .line 70
     iget v3, v1, Landroid/graphics/Point;->y:I
 
     mul-int/2addr v0, v3
@@ -173,11 +173,11 @@
 
     move v2, v4
 
-    .line 76
+    .line 74
     :cond_0
     iget-object p1, p0, Lcom/android/thememanager/receiver/WallpaperChangedReceiver$ResetWallpaperDesiredDimensionsTask;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v0, "wallpaper"
+    const-string v0, "wallpaper"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -185,7 +185,7 @@
 
     check-cast p1, Landroid/app/WallpaperManager;
 
-    .line 77
+    .line 75
     iget v0, v1, Landroid/graphics/Point;->x:I
 
     mul-int/2addr v0, v2
@@ -198,14 +198,14 @@
 
     iget v0, v1, Landroid/graphics/Point;->y:I
 
-    .line 78
+    .line 76
     invoke-virtual {p1}, Landroid/app/WallpaperManager;->getDesiredMinimumHeight()I
 
     move-result v3
 
     if-eq v0, v3, :cond_2
 
-    .line 79
+    .line 77
     :cond_1
     iget v0, v1, Landroid/graphics/Point;->x:I
 
@@ -215,7 +215,7 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/app/WallpaperManager;->suggestDesiredDimensions(II)V
 
-    .line 81
+    .line 79
     :try_start_0
     iget-object p1, p0, Lcom/android/thememanager/receiver/WallpaperChangedReceiver$ResetWallpaperDesiredDimensionsTask;->mContext:Landroid/content/Context;
 
@@ -236,9 +236,9 @@
     :catch_0
     move-exception p1
 
-    const-string v0, "WallpaperChangedReceiver"
+    const-string v0, "WallpaperChanged"
 
-    .line 83
+    .line 81
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -255,7 +255,7 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 86
+    .line 84
     :goto_0
     iget-object p1, p0, Lcom/android/thememanager/receiver/WallpaperChangedReceiver$ResetWallpaperDesiredDimensionsTask;->mContext:Landroid/content/Context;
 
@@ -274,7 +274,7 @@
 .method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
 
-    .line 40
+    .line 38
     check-cast p1, Landroid/graphics/Bitmap;
 
     invoke-virtual {p0, p1}, Lcom/android/thememanager/receiver/WallpaperChangedReceiver$ResetWallpaperDesiredDimensionsTask;->onPostExecute(Landroid/graphics/Bitmap;)V

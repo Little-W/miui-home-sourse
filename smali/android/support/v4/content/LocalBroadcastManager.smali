@@ -703,12 +703,12 @@
 
     packed-switch v3, :pswitch_data_0
 
-    const-string/jumbo v3, "unknown reason"
+    const-string v3, "unknown reason"
 
     goto :goto_3
 
     :pswitch_0
-    const-string/jumbo v3, "type"
+    const-string v3, "type"
 
     goto :goto_3
 

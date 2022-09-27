@@ -70,6 +70,9 @@
 .method private static native nRender(JJ)V
 .end method
 
+.method private static native nRenderStandaloneView(JJ)V
+.end method
+
 .method private static native nResetUserTime(J)V
 .end method
 
@@ -110,7 +113,7 @@
 
     const-wide/16 v0, 0x0
 
-    .line 632
+    .line 660
     iput-wide v0, p0, Lcom/google/android/filament/Renderer;->mNativeObject:J
 
     return-void
@@ -123,7 +126,7 @@
 
     move-object/from16 v1, p3
 
-    .line 374
+    .line 401
     invoke-virtual {p0}, Lcom/google/android/filament/Renderer;->getNativeObject()J
 
     move-result-wide v2
@@ -266,7 +269,7 @@
 .method public getNativeObject()J
     .locals 4
 
-    .line 625
+    .line 653
     iget-wide v0, p0, Lcom/google/android/filament/Renderer;->mNativeObject:J
 
     const-wide/16 v2, 0x0
@@ -277,7 +280,7 @@
 
     return-wide v0
 
-    .line 626
+    .line 654
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -291,7 +294,7 @@
 .method public getUserTime()D
     .locals 2
 
-    .line 608
+    .line 636
     invoke-virtual {p0}, Lcom/google/android/filament/Renderer;->getNativeObject()J
 
     move-result-wide v0
@@ -308,7 +311,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 384
+    .line 411
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/google/android/filament/Renderer;->copyFrame(Lcom/google/android/filament/SwapChain;Lcom/google/android/filament/Viewport;Lcom/google/android/filament/Viewport;I)V
 
     return-void
@@ -319,7 +322,7 @@
 
     move-object/from16 v0, p5
 
-    .line 456
+    .line 484
     iget-object v1, v0, Lcom/google/android/filament/Texture$PixelBufferDescriptor;->storage:Ljava/nio/Buffer;
 
     invoke-virtual {v1}, Ljava/nio/Buffer;->isReadOnly()Z
@@ -328,7 +331,7 @@
 
     if-nez v1, :cond_1
 
-    .line 460
+    .line 488
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/filament/Renderer;->getNativeObject()J
 
     move-result-wide v2
@@ -345,7 +348,7 @@
 
     iget-object v6, v0, Lcom/google/android/filament/Texture$PixelBufferDescriptor;->storage:Ljava/nio/Buffer;
 
-    .line 462
+    .line 490
     invoke-virtual {v6}, Ljava/nio/Buffer;->remaining()I
 
     move-result v11
@@ -356,7 +359,7 @@
 
     iget-object v6, v0, Lcom/google/android/filament/Texture$PixelBufferDescriptor;->type:Lcom/google/android/filament/Texture$Type;
 
-    .line 463
+    .line 491
     invoke-virtual {v6}, Lcom/google/android/filament/Texture$Type;->ordinal()I
 
     move-result v14
@@ -369,7 +372,7 @@
 
     iget-object v6, v0, Lcom/google/android/filament/Texture$PixelBufferDescriptor;->format:Lcom/google/android/filament/Texture$Format;
 
-    .line 464
+    .line 492
     invoke-virtual {v6}, Lcom/google/android/filament/Texture$Format;->ordinal()I
 
     move-result v17
@@ -390,7 +393,7 @@
 
     move/from16 v9, p4
 
-    .line 460
+    .line 488
     invoke-static/range {v2 .. v19}, Lcom/google/android/filament/Renderer;->nReadPixels(JJIIIILjava/nio/Buffer;IIIIIIILjava/lang/Object;Ljava/lang/Runnable;)I
 
     move-result v0
@@ -399,7 +402,7 @@
 
     return-void
 
-    .line 468
+    .line 496
     :cond_0
     new-instance v0, Ljava/nio/BufferOverflowException;
 
@@ -410,7 +413,7 @@
     :cond_1
     move-object/from16 v1, p0
 
-    .line 457
+    .line 485
     new-instance v0, Ljava/nio/ReadOnlyBufferException;
 
     invoke-direct {v0}, Ljava/nio/ReadOnlyBufferException;-><init>()V
@@ -423,7 +426,7 @@
 
     move-object/from16 v0, p6
 
-    .line 543
+    .line 571
     iget-object v1, v0, Lcom/google/android/filament/Texture$PixelBufferDescriptor;->storage:Ljava/nio/Buffer;
 
     invoke-virtual {v1}, Ljava/nio/Buffer;->isReadOnly()Z
@@ -432,7 +435,7 @@
 
     if-nez v1, :cond_1
 
-    .line 547
+    .line 575
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/filament/Renderer;->getNativeObject()J
 
     move-result-wide v2
@@ -445,7 +448,7 @@
 
     move-result-wide v4
 
-    .line 548
+    .line 576
     invoke-virtual/range {p1 .. p1}, Lcom/google/android/filament/RenderTarget;->getNativeObject()J
 
     move-result-wide v6
@@ -454,7 +457,7 @@
 
     iget-object v8, v0, Lcom/google/android/filament/Texture$PixelBufferDescriptor;->storage:Ljava/nio/Buffer;
 
-    .line 550
+    .line 578
     invoke-virtual {v8}, Ljava/nio/Buffer;->remaining()I
 
     move-result v13
@@ -465,7 +468,7 @@
 
     iget-object v8, v0, Lcom/google/android/filament/Texture$PixelBufferDescriptor;->type:Lcom/google/android/filament/Texture$Type;
 
-    .line 551
+    .line 579
     invoke-virtual {v8}, Lcom/google/android/filament/Texture$Type;->ordinal()I
 
     move-result v16
@@ -480,7 +483,7 @@
 
     iget-object v8, v0, Lcom/google/android/filament/Texture$PixelBufferDescriptor;->format:Lcom/google/android/filament/Texture$Format;
 
-    .line 552
+    .line 580
     invoke-virtual {v8}, Lcom/google/android/filament/Texture$Format;->ordinal()I
 
     move-result v19
@@ -501,7 +504,7 @@
 
     move/from16 v11, p5
 
-    .line 547
+    .line 575
     invoke-static/range {v2 .. v21}, Lcom/google/android/filament/Renderer;->nReadPixelsEx(JJJIIIILjava/nio/Buffer;IIIIIIILjava/lang/Object;Ljava/lang/Runnable;)I
 
     move-result v0
@@ -510,7 +513,7 @@
 
     return-void
 
-    .line 556
+    .line 584
     :cond_0
     new-instance v0, Ljava/nio/BufferOverflowException;
 
@@ -521,7 +524,7 @@
     :cond_1
     move-object/from16 v1, p0
 
-    .line 544
+    .line 572
     new-instance v0, Ljava/nio/ReadOnlyBufferException;
 
     invoke-direct {v0}, Ljava/nio/ReadOnlyBufferException;-><init>()V
@@ -532,7 +535,7 @@
 .method public render(Lcom/google/android/filament/View;)V
     .locals 4
 
-    .line 356
+    .line 354
     invoke-virtual {p0}, Lcom/google/android/filament/Renderer;->getNativeObject()J
 
     move-result-wide v0
@@ -546,10 +549,27 @@
     return-void
 .end method
 
+.method public renderStandaloneView(Lcom/google/android/filament/View;)V
+    .locals 4
+
+    .line 383
+    invoke-virtual {p0}, Lcom/google/android/filament/Renderer;->getNativeObject()J
+
+    move-result-wide v0
+
+    invoke-virtual {p1}, Lcom/google/android/filament/View;->getNativeObject()J
+
+    move-result-wide v2
+
+    invoke-static {v0, v1, v2, v3}, Lcom/google/android/filament/Renderer;->nRenderStandaloneView(JJ)V
+
+    return-void
+.end method
+
 .method public resetUserTime()V
     .locals 2
 
-    .line 621
+    .line 649
     invoke-virtual {p0}, Lcom/google/android/filament/Renderer;->getNativeObject()J
 
     move-result-wide v0

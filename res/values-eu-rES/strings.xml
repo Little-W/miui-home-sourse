@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="Icon_name_classic_mode">Hasierako pantailaren ezarpenak</string>
     <string name="accessibility_all_app_custom_category_finish">Eginda</string>
     <string name="accessibility_all_app_custom_category_item_remove">Kendu \"%1$s\" kategorietatik</string>
     <string name="accessibility_clear_search_bar_text">Garbitu bilaketa barra</string>
@@ -26,10 +25,8 @@
     <string name="activity_not_unlocked">Itxaron gailua guztiz berrabiarazita egon arte aplikazioak irekitzeko</string>
     <string name="add_custom_category">Pertsonalizatu</string>
     <string name="add_screen">Pantaila gehitu</string>
-    <string name="add_to_workspace">Hasierako pantailara gehitu</string>
     <string name="added_all_category">Aplikazio guztiak arrakastaz gehituta</string>
     <string name="afternoon">Arratsaldea</string>
-    <string name="agree_button">Ados</string>
     <string name="alexa_notification_add">Gehitu</string>
     <string name="alexa_notification_cancel">Orain ez</string>
     <string name="alexa_notification_content">Alexa lasterbidea Kontrol zentroan gehitu nahi duzu?</string>
@@ -68,7 +65,6 @@
     <string name="all_apps_slide_up_tips">Gorantz arrastatzea Aplikazio-kaxa irekitzeko erreserbatuta dago. Aldatu Hasierako pantailako modu ohikora eta saiatu berriro.</string>
     <string name="all_apps_suggestions">Aplikazio iradokizunak</string>
     <string name="am">a.m.</string>
-    <string name="animation_rate_title">Animazio abiadura</string>
     <string name="announce_for_app_move_in_folder">%1$d posiziora mugituta karpetan</string>
     <string name="announce_for_checked">%1$s, aztertuta</string>
     <string name="announce_for_choose_default_screen">%1$d pantaila hasierako pantaila lehenetsia bezala ezarri</string>
@@ -121,13 +117,6 @@
     <string name="app_category_tools">Tresnak</string>
     <string name="app_category_travel">Bidaiak</string>
     <string name="app_category_vr">VR</string>
-    <string name="app_drawer_double_confirm_description">Honek zure Hasierako pantailaren diseinua aldatuko du. Aldaketa hauek Ezarpenetan leheneratzeko aukera izango duzu geroago.</string>
-    <string name="app_drawer_double_confirm_title">Adi</string>
-    <string name="app_drawer_feature_description">Aplikazio kaxak aplikazio guztiak antolatzeko tresna bikaina da. Kategorizatu aplikazioak automatikoki eta aurkitu berehala behar duzuna!</string>
-    <string name="app_drawer_guide_description">Aurkitu bilatzen ari zarena zure aplikazio gogokoenetan</string>
-    <string name="app_drawer_guide_title">Aplikazioen kaxa</string>
-    <string name="app_drawer_tip_title">Eduki berriak Aplikazio kaxarekin ordeztu dugu.</string>
-    <string name="app_install_state">Instalatuta</string>
     <string name="app_name">smallWindow</string>
     <string name="application_name">Sistemaren abiarazlea</string>
     <string name="apply">Ezarri</string>
@@ -150,35 +139,8 @@
     <string name="back">Atzera</string>
     <string name="backup_fail">Ezin izan da abiarazlearen babeskopia egin</string>
     <string name="bad_wallpaper_source_prompt">Horma-papera ezin da kargatu</string>
-    <string name="branch_feature_description">Aplikazioez gain, Quick Finder-ek lineako aplikazioaren edukia eta elementuak aurki ditzake.</string>
-    <string name="branch_guide_attention">Bilaketa hobetua erabiltzen baduzu, bilaketa eskaerak, Google Ads-en IDa eta IP helbidea Branch Metrics Inc.-ekin partekatuko dira. Irakurri eta onartu <a href="http://url1"><font color="#B3000000">Azken erabiltzailearen aurkikuntza terminoak eta baldintzak</font></a> eta <a href="http://url2"><font color="#B3000000">Branch Discovery-ren Pribatutasun politika</font></a>, ezaugarri hori erabili baino lehen.</string>
-    <string name="branch_guide_description_one">Zure aplikazio guztiak Aplikazioen kaxan jarriko ditugu. Hasierako pantailak itxura garbia eta txukuna izango du.</string>
-    <string name="branch_guide_description_three">Barne bilaketaren bidez, behar duzuna berehala aurkitu ahal izango duzu!</string>
-    <string name="branch_guide_description_two">Aplikazioen kaxak aplikazioak automatikoki sailkatzen ditu.</string>
-    <string name="branch_guide_tip_title">Aplikazio bakoitza bere lekuan</string>
-    <string name="branch_guide_title">Ezagutu Aplikazioen kaxa</string>
-    <string name="branch_guide_type_four_desc">Itxura zaharretara itzul zaitezke bi pauso errazetan.</string>
-    <string name="branch_guide_type_four_main">Ezarpenak atalean, joan Hasierako pantaila-ra > Hasierako pantaila eta aukeratu \"Klasikoa\".</string>
-    <string name="branch_guide_type_four_step_one">Ezarpenak ireki</string>
-    <string name="branch_guide_type_four_step_two">Hasierako pantaila aukeratu</string>
-    <string name="branch_guide_type_one_desc">Aplikazioak kudeatu itzazu Aplikazio Kaxarekin</string>
-    <string name="branch_guide_type_one_main">Aplikazioak Aplikazio Kaxan mantendu itzazu zure Hasierako pantaila txukun eta antolatuta mantentzeko.</string>
-    <string name="branch_new_feature">Ezaugarri berria</string>
-    <string name="branch_privacy_policy">Pribatutasun politika</string>
-    <string name="branch_search_guide_description">Gure bilaketa emaitzak askoz erabatekoagoak dira orain</string>
-    <string name="branch_search_guide_privacy">Branch Metrics Inc-ek zerbitzu hau ematen du. Zure kokapenaren informazioa, bilaketa kontsultak eta Google Ads-en IDa Branch-ekin partekatuko dira. Irakurri eta onartu Branch-en <a href="http://url1"><font color="#B3000000">Terminoak eta baldintzak</font></a> eta <a href="http://url2"><font color="#B3000000">Pribatutasun politika</font></a> zerbitzu hau erabili baino lehen.</string>
-    <string name="branch_search_guide_title">Aurkitu bilatzen ari zarena zure aplikazio gogokoenetan</string>
-    <string name="branch_terms_condition">Terminoak eta baldintzak</string>
-    <string name="branch_tip_title">Quick Finder-en bidez, behar duzun guztia berehala aurki dezakezu.</string>
-    <string name="btn_agree">Ados</string>
-    <string name="btn_cancel">Ezeztatu</string>
-    <string name="btn_close">Desaktibatu</string>
-    <string name="btn_open">Piztu</string>
-    <string name="btn_request_permission">Baimenak eman</string>
-    <string name="btn_set_right_now">Baimenak eman</string>
     <string name="buffering">Kargatzen…</string>
     <string name="cancel_action">Ezeztatu</string>
-    <string name="cancel_botton">Ezeztatu</string>
     <string name="cancel_btn_label">Ezeztatu</string>
     <string name="cant_edit_lock_screen">Ezin da blokeo pantailaren estiloa editatu</string>
     <string name="cant_remove_folder">Ezin da karpeta kendu</string>
@@ -288,11 +250,9 @@
     <string name="emptyplaylist">Sakatu abesti gehiago gehitzeko</string>
     <string name="enable_wallpaper_scroll">Tokialdatze-aldekoa aktibatuta</string>
     <string name="encryption">Enkriptazioa</string>
-    <string name="enter_search_setting_title">Ireki bilaketa Aplikazio kaxa ireki ondoren</string>
     <string name="eras_ad">K.o.</string>
     <string name="eras_bc">K.a.</string>
     <string name="evening">Arratsaldea</string>
-    <string name="exit_overview_because_task_stack_changed">Orain dela gutxi erabiliak itxita atzeko planoan izandako aldaketak direla eta</string>
     <string name="failed_to_delete_temporary">Ezin da kendu</string>
     <string name="failed_to_drop">Ezin da mugitu</string>
     <string name="failed_to_drop_widget_invalid">Erreminta hau baliogabekoa da</string>
@@ -349,8 +309,6 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
-    <string name="fold_pair_install_shortcut_long_click">Sakatu eta mantendu Hasierako pantailara gehitzeko</string>
-    <string name="fold_pair_installed_shortcut_launcher">Lasterbide hau jadanik existitzen da</string>
     <string name="folder_name">Karpeta</string>
     <string name="frame_load_failed">Ezin da markoa kargatu</string>
     <string name="free_style_apps_title">Aplikazioa aukeratu</string>
@@ -406,14 +364,11 @@
     <string name="gadget_weather_title_14">Eguraldia</string>
     <string name="gadget_weather_title_24">Eguraldia</string>
     <string name="global_search_hint">Bilatu</string>
-    <string name="got_it_botton">Ulertuta</string>
     <string name="group_folder">Karpeta berria</string>
     <string name="group_live_folders">Karpetak</string>
     <string name="group_shortcuts">Lasterbideak</string>
     <string name="guide_install_app_msg">Aplikazio hau ez dago instalatuta zure tresnan. Aplikazioa orain aurkitu eta instalatu?</string>
     <string name="guide_install_app_title">Aplikazioa aurkitu eta instalatu?</string>
-    <string name="guide_permission_title">Baimenak beharrezkoak dira</string>
-    <string name="guide_privacy_dialog_title">Zerbitzu-baldintzak</string>
     <string name="guide_tips_editing_mode">&amp;amp sakatu; mantendu erreminta bat aukeratzeko</string>
     <string name="home_gesture_content_center">Eduki zentrua</string>
     <string name="home_gesture_global_search">Bilatu</string>
@@ -444,9 +399,6 @@
     <string name="launcher_slide_up_title">Gorantz arrastatu Hasierako pantailan</string>
     <string name="launcher_sliding_up_gesture">Gorantz mugitu Hasierako pantailan bilaketa irekitzeko</string>
     <string name="launcher_title">Hasierako pantaila &amp; Azkenak</string>
-    <string name="layout_guide_description">Aplikazioen kaxa ez bazaizu gustatzen, Hasierako pantaila klasikora itzul zaitezke beti. Erabili soilik \"Hasierako pantailaren ezarpenak\" lasterbidea eta aldatu bi moduen artean.</string>
-    <string name="layout_guide_tip_title">Behin sakatuta, aurreko modura itzul zaitezke</string>
-    <string name="layout_guide_title">Nola kendu Aplikazioen kaxa</string>
     <string name="like">Gehitu gogokoetara</string>
     <string name="liked">Gogokoetara gehituta</string>
     <string name="loading_desktop">Segundo bat bakarrik…</string>
@@ -613,11 +565,6 @@
     <string name="navigation_guide_recent_title">Arestikoak ireki</string>
     <string name="navigation_guide_recent_title_spec_with_quotation_pad">Arestikoak ireki</string>
     <string name="navigation_guide_settings">Keinuen Demoak</string>
-    <string name="navigation_position_center">Erdia</string>
-    <string name="navigation_position_left">Ezkerra</string>
-    <string name="navigation_position_right">Eskuina</string>
-    <string name="navigation_position_summary">Nabigazio botoien posizio pertsonalizatuak Hasierako pantailan bakarrik erabil daitezke</string>
-    <string name="navigation_position_title">Nabigazio botoien posizioa</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">Ezeztatu</string>
     <string name="navigation_set_miui_home_as_default_dialog_message">Ezin dira pantaila osoko keinuak erabili hirugarrenen abiarazleekin. Sistemaren abiarazlera aldatu eta pantaila osoko keinuak aktibatu?</string>
     <string name="navigation_set_miui_home_as_default_dialog_ok">Ados</string>
@@ -626,11 +573,9 @@
     <string name="navigation_type_title">Sistemaren nabigazioa</string>
     <string name="navigation_type_virtual_key">Botoiak</string>
     <string name="network_error">Ezin izan da sarera konektatu. Saiatu berriro.</string>
-    <string name="new_feature_title">Zer berri?</string>
     <string name="night">Eguzki-sarrera</string>
     <string name="no_detail_page">Xehetasunik gabeko orria</string>
     <string name="no_space_toast">Ez dago leku nahikorik</string>
-    <string name="no_space_toast_fold">Ez dago leku nahikorik hemen</string>
     <string name="no_space_toast_when_click_widget">Ez dago leku nahikorik orri honetan. Saiatu elementu hau orri ezberdin batera eramaten.</string>
     <string name="noon">Eguerdia</string>
     <string name="normal_wallpaper">Horma-papera</string>
@@ -639,7 +584,6 @@
     <string name="notification_reset_title">Ikonoak arrakastaz antolatuak</string>
     <string name="one_key_call_title">Sakatu markatzeko</string>
     <string name="online_wallpaper">Linean</string>
-    <string name="open_pad_personal_assistant_settings">Hasierako pantailako erremintak</string>
     <string name="open_personal_assistant_dialog_btn_cancel">Ezeztatu</string>
     <string name="open_personal_assistant_dialog_btn_confirm">Itzali</string>
     <string name="open_personal_assistant_dialog_desc">Aplikazio-kaxa desaktibatu eta gero, ezin izango dituzu Aplikazio-kaxaren widgetak ikusi edo erabili, eta horien eguneratutako bertsioak ez dira erabilgarri egongo. Hala ere, desaktibatu nahi duzu?</string>
@@ -651,7 +595,6 @@
     <string name="ota_layout_adjustment_content">Barneko eta kanpoko Hasierako pantailaren diseinuak bertsio berrian sinkronizatu dira.</string>
     <string name="ota_layout_adjustment_title">Hasierako pantailaren diseinuak</string>
     <string name="out_of_space">Ez dago leku gehiago Hasierako pantaila honetan</string>
-    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">Irudikatu animazioak hirugarrenen aplikazioen ikonoetan</string>
     <string name="perfect_icons_switch_title">Ikono orokorren animazioak</string>
     <string name="permdesc_install_shortcut">Aplikazio bat baimentzen du lasterbideak gehitzeko erabiltzailearen parte-hartzearik gabe.</string>
@@ -671,7 +614,6 @@
     <string name="photo_load_failed">Ezin da argazkia kargatu</string>
     <string name="please_slide_agian">Arrastatu berriro</string>
     <string name="pm">p.m.</string>
-    <string name="popular_search">Ospetsua</string>
     <string name="pref_cell_layout_size">Aplikazio-ikonoen antolaketa</string>
     <string name="pref_enable_drawing_cache_summary">Itzali memoria husteko. Baliteke honek errendimendu baxuagoa kausatzea.</string>
     <string name="pref_enable_drawing_cache_title">Cache-memoria marrazten</string>
@@ -691,14 +633,6 @@
     <string name="privacy_thumbnail_blur_summary">Aplikazioen aurreko bistak desenfokatu Berrietan</string>
     <string name="privacy_thumbnail_blur_title">Aplikazioen aurreko bistak desenfokatu</string>
     <string name="quick_app">Aplikazio azkarrak</string>
-    <string name="quick_finder_feature_description">Quick Finder-ek lineako aplikazioak, aplikazioaren edukia eta elementuak azkarrago aurkitzeko aukera ematen dizu. Ezaugarri hori desaktibatu dezakezu Ezarpenak atalean.</string>
-    <string name="quick_finder_tip_title">Aurkitu azkarrago behar duzun guztia</string>
-    <string name="quick_search_all_app_desc">Erakutsi aplikazio guztiak Aplikazio kaxan</string>
-    <string name="quick_search_desc">Ireki bilaketa Aplikazio kaxa ireki ondoren</string>
-    <string name="quick_search_guide_all_apps">Aplikazio guztiak</string>
-    <string name="quick_search_guide_ok_btn">Ados</string>
-    <string name="quick_search_guide_quick_search">Bilaketa azkarra</string>
-    <string name="quick_search_guide_title">Aukeratu modu lehenetsia</string>
     <string name="recent_apps">Berria</string>
     <string name="recent_menu_item_info">Informazioa</string>
     <string name="recent_menu_item_lock">Blokeatu</string>
@@ -727,13 +661,6 @@
     <string name="recents_title_market">Aurkitu aplikazioak</string>
     <string name="recents_title_security_scan">Segurtasun analisia</string>
     <string name="recents_tv_small_window_text">Leiho flotatzaileak</string>
-    <string name="recents_worldcirculate_text">Askatu aukeratzeko</string>
-    <string name="recnets_relay_device_info">%s-tik</string>
-    <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
-    <string name="recnets_worldcirculate_display_computer_info">Aplikazioa %s-en funtzionatzen ari da.</string>
-    <string name="recnets_worldcirculate_display_default_info">Sakatu hona berriz ekartzeko</string>
-    <string name="recnets_worldcirculate_display_default_info_pad">Sakatu hona berriz ekartzeko</string>
-    <string name="recnets_worldcirculate_display_pad_info">Aplikazioa %s-en funtzionatzen ari da.</string>
     <string name="recommend_apk_size_and_desc">"%1$dMB | %2$s "</string>
     <string name="recommend_app">Aplikazio iradokizunak</string>
     <string name="recommend_apps_default_title">Hutsik</string>
@@ -751,8 +678,6 @@
     <string name="remove_invalidate_gadget_tips">Erabiltzen dituzun osagarriren bat jadanik ez dago eskuragarri. Beste bat gehitu dezakezu.</string>
     <string name="remove_sys_app_content">Hasierako pantailaren lasterbidea berriro gehitu ahal izango duzu hemen: Ezarpenak > Aplikazioak > Kudeatu Hasierako pantailaren lasterbideak. Ezabatu orain?</string>
     <string name="remove_sys_app_title">Hasierako pantailaren lasterbidea ezabatu?</string>
-    <string name="request_permission_msg">POCO Abiarazleak baimen batzuk behar ditu honen funtzionaltasun osorako sarbidea emateko.</string>
-    <string name="request_permission_title">Baimenak beharrezkoak dira</string>
     <string name="reset_cate_tip_content">Jarraitzen baduzu, aplikazio talde lehenetsiak berrezarriko dira. Hala ere jarraitu?</string>
     <string name="reset_cate_tip_title">Berrezarri talde lehenetsiak</string>
     <string name="reset_description_first_time">Planoa %1$s -tik berrezarri dezakezu 2 ordu barru</string>
@@ -768,8 +693,6 @@
     <string name="screen_cells_config_title">Hasierako pantailaren diseinua</string>
     <string name="screen_locked_toast">Hasierako pantailaren diseinua blokeatuta dago.</string>
     <string name="screen_number">%d pantaila</string>
-    <string name="search_bar_hint_content">Bilatu aplikazioak eta edukia</string>
-    <string name="search_guide_btn">Ulertuta</string>
     <string name="search_in_apps_store">Bilatu \"%1$s\" hemen: %2$s</string>
     <string name="search_no_result">Ezin izan da emaitzik aurkitu</string>
     <string name="select_all">Denak aukeratu</string>
@@ -777,7 +700,6 @@
     <string name="select_photo">Argazkia</string>
     <string name="send">Bidali</string>
     <string name="server_error">Zerbitzariaren errore bat gertatu da. Minutu bat edo bi itxaron eta berriro saiatu.</string>
-    <string name="service_double_attention">Branch Metrics Inc.-ek bilaketa hobetuaren funtzionaltasuna ematen du. Ezaugarri horrek funtziona dezan, bilaketa eskaerak, Google Ads-en IDa eta IP helbidea Branch Metrics Inc.-ekin partekatu behar ditugu. Irakurri eta onartu <a href="http://url1"><font color="#B3000000">Azken erabiltzailearen aurkikuntza terminoak eta baldintzak</font></a> eta <a href="http://url2"><font color="#B3000000">Branch Discovery-ren Pribatutasun politika</font></a>, ezaugarri hori erabili baino lehen.</string>
     <string name="setting_wallpaper_tip">Sakatu edo atzamarra arrastatu estutzeko</string>
     <string name="settings">Ezarpenak</string>
     <string name="settings_shortcut">Ezarpenak</string>
@@ -815,13 +737,11 @@
     <string name="status_installing">Instalatzen</string>
     <string name="status_paused">Pausatuta</string>
     <string name="status_pending">Itxaroten</string>
-    <string name="suggestions">Iradokizunak</string>
     <string name="sunday">Igandea</string>
     <string name="sunday_short">Ig.</string>
     <string name="sunday_shortest">Ig.</string>
     <string name="swipe_the_desktop_to_the_left">Pasatu hatza ezkerrera Hasierako pantailan</string>
     <string name="swipe_the_desktop_to_the_right">Pasatu hatza eskuinera Hasierako pantailan</string>
-    <string name="switch_on_button">Piztu</string>
     <string name="switch_personal_assistant_app_vault">Aplikazio kaxa</string>
     <string name="switch_personal_assistant_google">Google Discover</string>
     <string name="switch_personal_assistant_none">Bat ere ez</string>
@@ -831,11 +751,7 @@
     <string name="system_shortcuts_more_operation">Aplikazioaren informazioa</string>
     <string name="system_shortcuts_remove">Kendu</string>
     <string name="system_text">Auto</string>
-    <string name="task_access_locked_app_msg">Aplikazio blokeoa aktibatuta</string>
-    <string name="term_of_service">Termino eta baldintzak</string>
-    <string name="terms_of_services_one">Ongi etorri Aplikazio kaxa eta Quick Finder aplikazioetara. Quick Finder-ek lineako aplikazioak, aplikazioaren edukia eta elementuak azkarrago aurkitzeko aukera ematen dizu. Irakurri eta onartu Xiaomi-ren <a href="http://url1"><font color="#B3000000">Pribatutasun politika</font></a>, ezaugarri horiek erabili baino lehen.</string>
-    <string name="terms_of_services_three">Ezarpenetan ezaugarri hau desaktibatu dezakezu.</string>
-    <string name="terms_of_services_two">Bilaketa hobetua erabiltzen baduzu, beharrezkoa den informazio pertsonala Branch Metrics Inc.-ekin partekatu behar da, bilaketa eskaerak, Google Ads-en IDa eta IP helbidea barne. Branch-ek zure informazio pertsonala prozesatuko du honen arabera: <a href="http://url1"><font color="#B3000000">Branch Discovery-ren Pribatutasun politika</font></a>. Irakurri eta onartu <a href="http://url2"><font color="#B3000000">Discovery-ren Azken erabiltzailearen terminoak eta baldintzak</font></a> eta <a href="http://url3"><font color="#B3000000">Branch Discovery-ren Pribatutasun politika</font></a>, ezaugarri hori erabili baino lehen.</string>
+    <string name="task_access_locked_app_msg">Aplikazioen blokeoa aktibatuta</string>
     <string name="the_anniversary_of_lifting_martial_law">Gerra legea abolizioaren urteurrena</string>
     <string name="the_anti_aggression_day">Erasoen Aurkako Eguna</string>
     <string name="the_arbor_day">Zuhaitzaren Eguna</string>
@@ -902,11 +818,6 @@
     <string name="tuesday">Asteartea</string>
     <string name="tuesday_short">Ar.</string>
     <string name="tuesday_shortest">Ar.</string>
-    <string name="uni_search_permission_content">Aktibatu lineako bilaketaren ezaugarriak. (Bilaketa zerbitzuak Branch-ek ematen ditu).</string>
-    <string name="uni_search_permission_msg">Baimena eman POCO Abiarazleari zure kokapena eta kontaktuak atzitzeko bilaketa-emaitzak hobetzeko.</string>
-    <string name="uni_search_permission_title">Bilaketa hobetua</string>
-    <string name="uni_search_setting_summary">Aurkitu zuzenean edukiak aplikazioan</string>
-    <string name="uni_search_setting_title">Aplikazioaren kontsulta modua</string>
     <string name="uninstall">Desinstalatu</string>
     <string name="uninstall_dialog_message">Desinstalatzen baduzu, aplikazioaren datu guztiak kenduko dira.</string>
     <string name="uninstall_dialog_title_format">%s desinstalatu?</string>
@@ -917,7 +828,6 @@
     <string name="uninstall_xspace_dialog_title_format">\"%s\" bikoitza desinstalatu?</string>
     <string name="unknown_artist_name">Artista ezezaguna</string>
     <string name="unnamed_folder_name">Karpeta</string>
-    <string name="upgrade_remove_small_window_in_recents">Alboko barra erabil dezakezu aplikazioak leiho flotatzaileetan irekitzeko</string>
     <string name="wallpaper">Horma-papera</string>
     <string name="wallpaper_auto_change_title">Blokeo pantaila</string>
     <string name="wallpaper_failed_message">Ezin izan da horma-papera ezarri</string>

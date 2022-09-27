@@ -252,16 +252,3 @@
 
     throw p1
 .end method
-
-.method public timeout()Lokio/Timeout;
-    .locals 1
-
-    .line 74
-    iget-object v0, p0, Lokio/PeekSource;->upstream:Lokio/BufferedSource;
-
-    invoke-interface {v0}, Lokio/BufferedSource;->timeout()Lokio/Timeout;
-
-    move-result-object v0
-
-    return-object v0
-.end method

@@ -364,29 +364,11 @@
 .method public abstract runPendingAnimations()V
 .end method
 
-.method public setChangeDuration(J)V
-    .locals 0
-
-    .line 12862
-    iput-wide p1, p0, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;->mChangeDuration:J
-
-    return-void
-.end method
-
 .method setListener(Landroidx/recyclerview/widget/RecyclerView$ItemAnimator$ItemAnimatorListener;)V
     .locals 0
 
     .line 12874
     iput-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;->mListener:Landroidx/recyclerview/widget/RecyclerView$ItemAnimator$ItemAnimatorListener;
-
-    return-void
-.end method
-
-.method public setMoveDuration(J)V
-    .locals 0
-
-    .line 12808
-    iput-wide p1, p0, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;->mMoveDuration:J
 
     return-void
 .end method

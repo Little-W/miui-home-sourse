@@ -72,7 +72,7 @@
 
     move-result v1
 
-    if-nez v1, :cond_7
+    if-nez v1, :cond_6
 
     iget-object v1, p0, Lcom/miui/home/launcher/Background$LongClickHandler;->this$0:Lcom/miui/home/launcher/Background;
 
@@ -104,16 +104,6 @@
 
     .line 120
     :cond_3
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->isInMultiWindowMode()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_4
-
-    return-void
-
-    .line 123
-    :cond_4
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
 
     move-result-object v1
@@ -126,9 +116,9 @@
 
     move-result v1
 
-    if-nez v1, :cond_5
+    if-nez v1, :cond_4
 
-    .line 124
+    .line 121
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getFolderCling()Lcom/miui/home/launcher/FolderCling;
 
     move-result-object v0
@@ -141,15 +131,15 @@
 
     move-result v0
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_5
 
-    :cond_5
+    :cond_4
     const-string v0, "long_click"
 
-    .line 125
+    .line 122
     invoke-static {v0}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackEditMode(Ljava/lang/String;)V
 
-    .line 126
+    .line 123
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -160,7 +150,7 @@
 
     invoke-virtual {v0, v1}, Lorg/greenrobot/eventbus/EventBus;->post(Ljava/lang/Object;)V
 
-    .line 127
+    .line 124
     iget-object v0, p0, Lcom/miui/home/launcher/Background$LongClickHandler;->this$0:Lcom/miui/home/launcher/Background;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/LongClickMessage;->getRawX()F
@@ -173,10 +163,10 @@
 
     invoke-virtual {v0, v1, p1}, Lcom/miui/home/launcher/Background;->startSpreadCircle(FF)V
 
-    :cond_6
+    :cond_5
     return-void
 
-    :cond_7
+    :cond_6
     :goto_0
     return-void
 .end method

@@ -28,7 +28,7 @@
 
     const/4 v0, 0x0
 
-    .line 250
+    .line 222
     invoke-direct {p0, p1, v0}, Lcom/miui/home/launcher/FolderIcon$PreviewIconView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -39,7 +39,7 @@
 
     const/4 v0, 0x0
 
-    .line 254
+    .line 226
     invoke-direct {p0, p1, p2, v0}, Lcom/miui/home/launcher/FolderIcon$PreviewIconView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
@@ -48,20 +48,20 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
-    .line 258
+    .line 230
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 259
+    .line 231
     iput-object p1, p0, Lcom/miui/home/launcher/FolderIcon$PreviewIconView;->mContext:Landroid/content/Context;
 
-    .line 260
+    .line 232
     invoke-static {}, Lcom/miui/home/launcher/common/LauncherIconSizeProvider;->getInstance()Lcom/miui/home/launcher/common/LauncherIconSizeProvider;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/miui/home/launcher/FolderIcon$PreviewIconView;->mIconSizeProvider:Lcom/miui/home/launcher/common/IconSizeProvider;
 
-    .line 261
+    .line 233
     sget-object p1, Landroid/widget/ImageView$ScaleType;->FIT_CENTER:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/FolderIcon$PreviewIconView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
@@ -72,14 +72,14 @@
 .method private setItemPadding()V
     .locals 1
 
-    .line 284
+    .line 256
     iget-object v0, p0, Lcom/miui/home/launcher/FolderIcon$PreviewIconView;->mIconSizeProvider:Lcom/miui/home/launcher/common/IconSizeProvider;
 
     invoke-interface {v0}, Lcom/miui/home/launcher/common/IconSizeProvider;->getFolderPreviewItemPadding()I
 
     move-result v0
 
-    .line 285
+    .line 257
     invoke-virtual {p0, v0, v0, v0, v0}, Lcom/miui/home/launcher/FolderIcon$PreviewIconView;->setPadding(IIII)V
 
     return-void
@@ -90,7 +90,7 @@
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .locals 3
 
-    .line 266
+    .line 238
     iget-object v0, p0, Lcom/miui/home/launcher/FolderIcon$PreviewIconView;->mBuddyInfo:Lcom/miui/home/launcher/ShortcutInfo;
 
     if-eqz v0, :cond_0
@@ -99,17 +99,17 @@
 
     if-eqz v1, :cond_0
 
-    .line 267
+    .line 239
     invoke-virtual {v0}, Lcom/miui/home/launcher/ShortcutInfo;->getIconBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 268
+    .line 240
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 269
+    .line 241
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderIcon$PreviewIconView;->getWidth()I
 
     move-result v0
@@ -152,7 +152,7 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->scale(FF)V
 
-    .line 270
+    .line 242
     iget-object v0, p0, Lcom/miui/home/launcher/FolderIcon$PreviewIconView;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/miui/home/launcher/FolderIcon$PreviewIconView;->mBuddyInfo:Lcom/miui/home/launcher/ShortcutInfo;
@@ -169,12 +169,12 @@
 
     invoke-static {v0, p1, v1, v2}, Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;->drawProgressIcon(Landroid/content/Context;Landroid/graphics/Canvas;Landroid/graphics/Bitmap;I)V
 
-    .line 271
+    .line 243
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
     goto :goto_0
 
-    .line 273
+    .line 245
     :cond_0
     invoke-super {p0, p1}, Landroid/widget/ImageView;->onDraw(Landroid/graphics/Canvas;)V
 
@@ -185,10 +185,10 @@
 .method protected onMeasure(II)V
     .locals 0
 
-    .line 279
+    .line 251
     invoke-direct {p0}, Lcom/miui/home/launcher/FolderIcon$PreviewIconView;->setItemPadding()V
 
-    .line 280
+    .line 252
     invoke-super {p0, p1, p2}, Landroid/widget/ImageView;->onMeasure(II)V
 
     return-void

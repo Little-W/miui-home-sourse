@@ -3,12 +3,12 @@
 .source "Launcher.java"
 
 # interfaces
-.implements Lcom/miui/home/launcher/widget/device/WidgetTouchDetector;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/miui/home/launcher/Launcher;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/miui/home/launcher/Launcher;->notifyFsGestureHomeStatus(ZLjava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,13 +20,21 @@
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/launcher/Launcher;
 
+.field final synthetic val$enableBackGesture:Z
+
+.field final synthetic val$type:Ljava/lang/String;
+
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
+.method constructor <init>(Lcom/miui/home/launcher/Launcher;ZLjava/lang/String;)V
     .locals 0
 
-    .line 9880
+    .line 8730
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$85;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    iput-boolean p2, p0, Lcom/miui/home/launcher/Launcher$85;->val$enableBackGesture:Z
+
+    iput-object p3, p0, Lcom/miui/home/launcher/Launcher$85;->val$type:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -35,19 +43,25 @@
 
 
 # virtual methods
-.method public onWidgetTouched(Landroid/view/MotionEvent;Landroid/view/View;)Z
-    .locals 1
+.method public run()V
+    .locals 3
 
-    .line 9883
-    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$85;->this$0:Lcom/miui/home/launcher/Launcher;
+    .line 8733
+    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$85;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    new-instance v0, Ljava/lang/ref/WeakReference;
+    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$10000(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/Application;
 
-    invoke-direct {v0, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+    move-result-object v0
 
-    invoke-static {p1, v0}, Lcom/miui/home/launcher/Launcher;->access$11102(Lcom/miui/home/launcher/Launcher;Ljava/lang/ref/WeakReference;)Ljava/lang/ref/WeakReference;
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->getRecentsImpl()Lcom/miui/home/recents/BaseRecentsImpl;
 
-    const/4 p1, 0x0
+    move-result-object v0
 
-    return p1
+    iget-boolean v1, p0, Lcom/miui/home/launcher/Launcher$85;->val$enableBackGesture:Z
+
+    iget-object v2, p0, Lcom/miui/home/launcher/Launcher$85;->val$type:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v2}, Lcom/miui/home/recents/BaseRecentsImpl;->updateFsgWindowVisibilityState(ZLjava/lang/String;)V
+
+    return-void
 .end method

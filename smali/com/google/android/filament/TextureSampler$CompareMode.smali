@@ -34,7 +34,7 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .line 79
+    .line 87
     new-instance v0, Lcom/google/android/filament/TextureSampler$CompareMode;
 
     const-string v1, "NONE"
@@ -45,7 +45,7 @@
 
     sput-object v0, Lcom/google/android/filament/TextureSampler$CompareMode;->NONE:Lcom/google/android/filament/TextureSampler$CompareMode;
 
-    .line 80
+    .line 88
     new-instance v0, Lcom/google/android/filament/TextureSampler$CompareMode;
 
     const-string v1, "COMPARE_TO_TEXTURE"
@@ -58,7 +58,7 @@
 
     const/4 v0, 0x2
 
-    .line 78
+    .line 86
     new-array v0, v0, [Lcom/google/android/filament/TextureSampler$CompareMode;
 
     sget-object v1, Lcom/google/android/filament/TextureSampler$CompareMode;->NONE:Lcom/google/android/filament/TextureSampler$CompareMode;
@@ -82,7 +82,7 @@
         }
     .end annotation
 
-    .line 78
+    .line 86
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -91,7 +91,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/android/filament/TextureSampler$CompareMode;
     .locals 1
 
-    .line 78
+    .line 86
     const-class v0, Lcom/google/android/filament/TextureSampler$CompareMode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -106,7 +106,7 @@
 .method public static values()[Lcom/google/android/filament/TextureSampler$CompareMode;
     .locals 1
 
-    .line 78
+    .line 86
     sget-object v0, Lcom/google/android/filament/TextureSampler$CompareMode;->$VALUES:[Lcom/google/android/filament/TextureSampler$CompareMode;
 
     invoke-virtual {v0}, [Lcom/google/android/filament/TextureSampler$CompareMode;->clone()Ljava/lang/Object;

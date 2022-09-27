@@ -22,10 +22,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 392
+    .line 681
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 402
+    .line 691
     sget-object v0, Lcom/google/android/filament/View$QualityLevel;->HIGH:Lcom/google/android/filament/View$QualityLevel;
 
     iput-object v0, p0, Lcom/google/android/filament/View$RenderQuality;->hdrColorBuffer:Lcom/google/android/filament/View$QualityLevel;

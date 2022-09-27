@@ -4,9 +4,6 @@
 
 
 # virtual methods
-.method public abstract getSupportButtonTintList()Landroid/content/res/ColorStateList;
-.end method
-
 .method public abstract setSupportButtonTintList(Landroid/content/res/ColorStateList;)V
 .end method
 

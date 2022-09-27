@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/ItemIcon$1;)V
     .locals 0
 
-    .line 190
+    .line 217
     iput-object p1, p0, Lcom/miui/home/launcher/ItemIcon$1$1;->this$1:Lcom/miui/home/launcher/ItemIcon$1;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 2
 
-    .line 193
+    .line 220
     iget-object p1, p0, Lcom/miui/home/launcher/ItemIcon$1$1;->this$1:Lcom/miui/home/launcher/ItemIcon$1;
 
     iget-object p1, p1, Lcom/miui/home/launcher/ItemIcon$1;->this$0:Lcom/miui/home/launcher/ItemIcon;
@@ -46,7 +46,7 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/IconMessage;->setText(Ljava/lang/CharSequence;)V
 
-    .line 194
+    .line 221
     iget-object p1, p0, Lcom/miui/home/launcher/ItemIcon$1$1;->this$1:Lcom/miui/home/launcher/ItemIcon$1;
 
     iget-object p1, p1, Lcom/miui/home/launcher/ItemIcon$1;->this$0:Lcom/miui/home/launcher/ItemIcon;
@@ -57,7 +57,7 @@
 
     invoke-virtual {p1, v1}, Lcom/miui/home/launcher/IconMessage;->setVisibility(I)V
 
-    .line 195
+    .line 222
     iget-object p1, p0, Lcom/miui/home/launcher/ItemIcon$1$1;->this$1:Lcom/miui/home/launcher/ItemIcon$1;
 
     iget-object p1, p1, Lcom/miui/home/launcher/ItemIcon$1;->this$0:Lcom/miui/home/launcher/ItemIcon;

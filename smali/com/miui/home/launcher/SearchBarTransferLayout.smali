@@ -90,14 +90,14 @@
 
     iput-object p2, p0, Lcom/miui/home/launcher/SearchBarTransferLayout;->mTemp:Landroid/os/Bundle;
 
-    .line 291
+    .line 290
     new-instance p2, Lcom/miui/home/launcher/-$$Lambda$SearchBarTransferLayout$8bnGihZtmC_xN8XUlozxS6RRiLs;
 
     invoke-direct {p2, p0}, Lcom/miui/home/launcher/-$$Lambda$SearchBarTransferLayout$8bnGihZtmC_xN8XUlozxS6RRiLs;-><init>(Lcom/miui/home/launcher/SearchBarTransferLayout;)V
 
     iput-object p2, p0, Lcom/miui/home/launcher/SearchBarTransferLayout;->mHideTextRunnable:Ljava/lang/Runnable;
 
-    .line 292
+    .line 291
     new-instance p2, Lcom/miui/home/launcher/-$$Lambda$VGvfZB_KscH83U1deL7WcQDRXrc;
 
     invoke-direct {p2, p0}, Lcom/miui/home/launcher/-$$Lambda$VGvfZB_KscH83U1deL7WcQDRXrc;-><init>(Lcom/miui/home/launcher/SearchBarTransferLayout;)V
@@ -206,16 +206,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$700(Lcom/miui/home/launcher/SearchBarTransferLayout;)V
-    .locals 0
-
-    .line 38
-    invoke-direct {p0}, Lcom/miui/home/launcher/SearchBarTransferLayout;->updateTextColor()V
-
-    return-void
-.end method
-
-.method static synthetic access$900(Lcom/miui/home/launcher/SearchBarTransferLayout;)Landroid/os/Handler;
+.method static synthetic access$800(Lcom/miui/home/launcher/SearchBarTransferLayout;)Landroid/os/Handler;
     .locals 0
 
     .line 38
@@ -240,7 +231,7 @@
 
     const-string p1, "Launcher.Transfer"
 
-    const-string/jumbo p2, "transfer is closed"
+    const-string p2, "transfer is closed"
 
     .line 166
     invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
@@ -290,7 +281,7 @@
 
     sget-object v1, Lcom/miui/home/launcher/SearchBarTransferLayout;->URI:Landroid/net/Uri;
 
-    const-string/jumbo v2, "transfer"
+    const-string v2, "transfer"
 
     const/4 v3, 0x0
 
@@ -305,7 +296,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "transfer:"
+    const-string v2, "transfer:"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -344,12 +335,12 @@
 .method private hideText()V
     .locals 2
 
-    .line 327
+    .line 326
     iget-object v0, p0, Lcom/miui/home/launcher/SearchBarTransferLayout;->mHideTextRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/SearchBarTransferLayout;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 328
+    .line 327
     iget-object v0, p0, Lcom/miui/home/launcher/SearchBarTransferLayout;->mTitle:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getVisibility()I
@@ -360,7 +351,7 @@
 
     return-void
 
-    .line 331
+    .line 330
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/SearchBarTransferLayout;->mTitle:Landroid/widget/TextView;
 
@@ -382,7 +373,7 @@
 
     move-result-object v0
 
-    .line 336
+    .line 335
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->start()V
 
     return-void
@@ -437,7 +428,7 @@
 
     const-string v0, "onShow"
 
-    .line 314
+    .line 313
     iget-object p1, p1, Lcom/miui/home/launcher/SearchBarTransferLayout$Data;->dataId:Ljava/lang/String;
 
     invoke-direct {p0, v0, p1}, Lcom/miui/home/launcher/SearchBarTransferLayout;->callTransferProvider(Ljava/lang/String;Ljava/lang/String;)V
@@ -567,7 +558,7 @@
 
     const-string v0, "Launcher.Transfer"
 
-    const-string/jumbo v1, "unregister transfer observer"
+    const-string v1, "unregister transfer observer"
 
     .line 124
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
@@ -588,77 +579,17 @@
     throw v0
 .end method
 
-.method private updateTextColor()V
-    .locals 2
-
-    .line 372
-    invoke-static {}, Lcom/miui/home/launcher/SearchBarStyleData;->getInstance()Lcom/miui/home/launcher/SearchBarStyleData;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/SearchBarStyleData;->hasStyleData()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 373
-    invoke-virtual {p0}, Lcom/miui/home/launcher/SearchBarTransferLayout;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    const v1, 0x7f060595
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getColor(I)I
-
-    move-result v0
-
-    goto :goto_1
-
-    .line 375
-    :cond_0
-    invoke-virtual {p0}, Lcom/miui/home/launcher/SearchBarTransferLayout;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-static {}, Lcom/miui/home/launcher/WallpaperUtils;->hasAppliedLightWallpaper()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    const v1, 0x7f060594
-
-    goto :goto_0
-
-    :cond_1
-    const v1, 0x7f060593
-
-    :goto_0
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getColor(I)I
-
-    move-result v0
-
-    .line 378
-    :goto_1
-    iget-object v1, p0, Lcom/miui/home/launcher/SearchBarTransferLayout;->mTitle:Landroid/widget/TextView;
-
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTextColor(I)V
-
-    return-void
-.end method
-
 
 # virtual methods
 .method public hideTransferIfNeed()V
     .locals 2
 
-    .line 340
+    .line 339
     iget-object v0, p0, Lcom/miui/home/launcher/SearchBarTransferLayout;->mHideTransferRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/SearchBarTransferLayout;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 341
+    .line 340
     iget-object v0, p0, Lcom/miui/home/launcher/SearchBarTransferLayout;->mParent:Lcom/miui/home/launcher/SearchBarExtraLayout;
 
     if-eqz v0, :cond_0
@@ -669,14 +600,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 342
+    .line 341
     iget-object v0, p0, Lcom/miui/home/launcher/SearchBarTransferLayout;->mParent:Lcom/miui/home/launcher/SearchBarExtraLayout;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/SearchBarExtraLayout;->setDisplayedChild(I)V
 
-    .line 343
+    .line 342
     iget-object v0, p0, Lcom/miui/home/launcher/SearchBarTransferLayout;->mIcon:Landroid/widget/ImageView;
 
     const/4 v1, 0x0
@@ -782,7 +713,7 @@
     .line 71
     invoke-super {p0}, Landroid/widget/LinearLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a0385
+    const v0, 0x7f0a0234
 
     .line 72
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/SearchBarTransferLayout;->findViewById(I)Landroid/view/View;
@@ -793,7 +724,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/SearchBarTransferLayout;->mTitle:Landroid/widget/TextView;
 
-    const v0, 0x7f0a019a
+    const v0, 0x7f0a0111
 
     .line 73
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/SearchBarTransferLayout;->findViewById(I)Landroid/view/View;
@@ -852,7 +783,7 @@
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
-    .line 288
+    .line 287
     invoke-virtual {p0}, Lcom/miui/home/launcher/SearchBarTransferLayout;->showTransferIfNeed()V
 
     return-void
@@ -944,28 +875,63 @@
 .end method
 
 .method public onWallpaperColorChanged()V
-    .locals 1
+    .locals 2
 
-    .line 383
+    .line 371
     invoke-static {}, Lcom/miui/home/launcher/WallpaperUtils;->isSearchBarAreaLight()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f080195
+    const v0, 0x7f0800b8
 
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f080194
+    const v0, 0x7f0800b7
 
-    .line 385
+    .line 373
     :goto_0
-    invoke-direct {p0}, Lcom/miui/home/launcher/SearchBarTransferLayout;->updateTextColor()V
-
-    .line 386
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/SearchBarTransferLayout;->setBackgroundResource(I)V
+
+    .line 374
+    invoke-static {}, Lcom/miui/home/launcher/WallpaperUtils;->hasAppliedLightWallpaper()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 375
+    invoke-virtual {p0}, Lcom/miui/home/launcher/SearchBarTransferLayout;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    const v1, 0x7f060378
+
+    invoke-static {v0, v1}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
+
+    move-result v0
+
+    goto :goto_1
+
+    .line 376
+    :cond_1
+    invoke-virtual {p0}, Lcom/miui/home/launcher/SearchBarTransferLayout;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    const v1, 0x7f060377
+
+    invoke-static {v0, v1}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
+
+    move-result v0
+
+    .line 377
+    :goto_1
+    iget-object v1, p0, Lcom/miui/home/launcher/SearchBarTransferLayout;->mTitle:Landroid/widget/TextView;
+
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTextColor(I)V
 
     return-void
 .end method
@@ -973,7 +939,7 @@
 .method public showTransferIfNeed()V
     .locals 4
 
-    .line 295
+    .line 294
     invoke-virtual {p0}, Lcom/miui/home/launcher/SearchBarTransferLayout;->getTag()Ljava/lang/Object;
 
     move-result-object v0
@@ -984,7 +950,7 @@
 
     return-void
 
-    .line 298
+    .line 297
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/SearchBarTransferLayout;->mParent:Lcom/miui/home/launcher/SearchBarExtraLayout;
 
@@ -992,7 +958,7 @@
 
     return-void
 
-    .line 301
+    .line 300
     :cond_1
     invoke-virtual {v0}, Lcom/miui/home/launcher/SearchBarExtraLayout;->isShown()Z
 
@@ -1004,30 +970,30 @@
 
     const-string v1, "search bar extra layout is not shown"
 
-    .line 302
+    .line 301
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 305
+    .line 304
     :cond_2
     iget-object v0, p0, Lcom/miui/home/launcher/SearchBarTransferLayout;->mHideTextRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/SearchBarTransferLayout;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 306
+    .line 305
     iget-object v0, p0, Lcom/miui/home/launcher/SearchBarTransferLayout;->mHideTransferRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/SearchBarTransferLayout;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 307
+    .line 306
     invoke-virtual {p0}, Lcom/miui/home/launcher/SearchBarTransferLayout;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/miui/home/launcher/SearchBarTransferLayout$Data;
 
-    .line 308
+    .line 307
     iget-object v1, p0, Lcom/miui/home/launcher/SearchBarTransferLayout;->mTitle:Landroid/widget/TextView;
 
     invoke-virtual {v1}, Landroid/widget/TextView;->animate()Landroid/view/ViewPropertyAnimator;
@@ -1036,21 +1002,21 @@
 
     invoke-virtual {v1}, Landroid/view/ViewPropertyAnimator;->cancel()V
 
-    .line 309
+    .line 308
     iget-object v1, p0, Lcom/miui/home/launcher/SearchBarTransferLayout;->mTitle:Landroid/widget/TextView;
 
     const/high16 v2, 0x3f800000    # 1.0f
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setAlpha(F)V
 
-    .line 310
+    .line 309
     iget-object v1, p0, Lcom/miui/home/launcher/SearchBarTransferLayout;->mTitle:Landroid/widget/TextView;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 311
+    .line 310
     iget-object v1, p0, Lcom/miui/home/launcher/SearchBarTransferLayout;->mParent:Lcom/miui/home/launcher/SearchBarExtraLayout;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/SearchBarExtraLayout;->getDisplayedChild()I
@@ -1061,12 +1027,12 @@
 
     if-eq v1, v2, :cond_3
 
-    .line 312
+    .line 311
     iget-object v1, p0, Lcom/miui/home/launcher/SearchBarTransferLayout;->mParent:Lcom/miui/home/launcher/SearchBarExtraLayout;
 
     invoke-virtual {v1, v2}, Lcom/miui/home/launcher/SearchBarExtraLayout;->setDisplayedChild(I)V
 
-    .line 314
+    .line 313
     :cond_3
     iget-object v1, p0, Lcom/miui/home/launcher/SearchBarTransferLayout;->mWorkHandler:Landroid/os/Handler;
 
@@ -1076,17 +1042,17 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 315
+    .line 314
     iget-object v1, v0, Lcom/miui/home/launcher/SearchBarTransferLayout$Data;->type:Ljava/lang/String;
 
     invoke-static {v1}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackSearchBarTransferShow(Ljava/lang/String;)V
 
-    .line 316
+    .line 315
     iget v1, v0, Lcom/miui/home/launcher/SearchBarTransferLayout$Data;->textShowTime:I
 
     if-lez v1, :cond_4
 
-    .line 317
+    .line 316
     iget-object v1, p0, Lcom/miui/home/launcher/SearchBarTransferLayout;->mHideTextRunnable:Ljava/lang/Runnable;
 
     iget v2, v0, Lcom/miui/home/launcher/SearchBarTransferLayout$Data;->textShowTime:I
@@ -1095,13 +1061,13 @@
 
     invoke-virtual {p0, v1, v2, v3}, Lcom/miui/home/launcher/SearchBarTransferLayout;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 319
+    .line 318
     :cond_4
     iget v1, v0, Lcom/miui/home/launcher/SearchBarTransferLayout$Data;->showTime:I
 
     if-lez v1, :cond_5
 
-    .line 320
+    .line 319
     iget-object v1, p0, Lcom/miui/home/launcher/SearchBarTransferLayout;->mHideTransferRunnable:Ljava/lang/Runnable;
 
     iget v2, v0, Lcom/miui/home/launcher/SearchBarTransferLayout$Data;->showTime:I
@@ -1110,7 +1076,7 @@
 
     invoke-virtual {p0, v1, v2, v3}, Lcom/miui/home/launcher/SearchBarTransferLayout;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 322
+    .line 321
     :cond_5
     iget-object v1, p0, Lcom/miui/home/launcher/SearchBarTransferLayout;->mIcon:Landroid/widget/ImageView;
 
@@ -1118,7 +1084,7 @@
 
     const/4 v0, 0x0
 
-    .line 323
+    .line 322
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/SearchBarTransferLayout;->setTag(Ljava/lang/Object;)V
 
     return-void

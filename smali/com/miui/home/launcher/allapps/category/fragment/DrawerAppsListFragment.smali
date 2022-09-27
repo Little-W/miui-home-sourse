@@ -10,7 +10,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 31
+    .line 30
     invoke-direct {p0}, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;-><init>()V
 
     return-void
@@ -19,10 +19,10 @@
 .method private refreshSpanCount()V
     .locals 3
 
-    .line 99
+    .line 92
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/fragment/DrawerAppsListFragment;->mAdapter:Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;
 
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountXDrawerMode()I
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountX()I
 
     move-result v1
 
@@ -32,7 +32,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 100
+    .line 93
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/fragment/DrawerAppsListFragment;->mAppsList:Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;
 
     const/4 v1, 0x1
@@ -50,7 +50,7 @@
 .method private updateCellHeight()V
     .locals 2
 
-    .line 83
+    .line 76
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/fragment/DrawerAppsListFragment;->mAdapter:Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;
 
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getAllAppsCellHeight()I
@@ -59,7 +59,7 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->setCellHeight(I)V
 
-    .line 84
+    .line 77
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/fragment/DrawerAppsListFragment;->mRecyclerView:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;->updateHeightCache()V
@@ -72,31 +72,24 @@
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 1
 
-    .line 35
+    .line 34
     invoke-super {p0, p1}, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->onCreate(Landroid/os/Bundle;)V
 
-    .line 36
-    invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/category/fragment/DrawerAppsListFragment;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lcom/miui/home/launcher/DeviceConfig;->loadAllAppsCellCountX(Landroid/content/Context;)V
-
-    .line 37
+    .line 35
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/category/fragment/DrawerAppsListFragment;->mAdapter:Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;
 
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountXDrawerMode()I
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountX()I
 
     move-result v0
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->refreshSpanCount(I)Z
 
-    .line 38
+    .line 36
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/category/fragment/DrawerAppsListFragment;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1, p0}, Lcom/miui/home/launcher/Launcher;->addOnDeviceProfileChangeListener(Lcom/miui/home/launcher/DeviceProfile$OnDeviceProfileChangeListener;)V
 
-    .line 39
+    .line 37
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object p1
@@ -107,7 +100,7 @@
 
     if-nez p1, :cond_0
 
-    .line 40
+    .line 38
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object p1
@@ -121,7 +114,7 @@
 .method public onCreateAdapter(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;)Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;
     .locals 3
 
-    .line 58
+    .line 56
     new-instance v0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;
 
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getAllAppsColorMode()Lcom/miui/home/launcher/allapps/AllAppsColorMode;
@@ -140,15 +133,15 @@
 .method public onDestroy()V
     .locals 1
 
-    .line 111
+    .line 104
     invoke-super {p0}, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->onDestroy()V
 
-    .line 112
+    .line 105
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/fragment/DrawerAppsListFragment;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0, p0}, Lcom/miui/home/launcher/Launcher;->removeOnDeviceProfileChangeListener(Lcom/miui/home/launcher/DeviceProfile$OnDeviceProfileChangeListener;)V
 
-    .line 113
+    .line 106
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -159,7 +152,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 114
+    .line 107
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -173,7 +166,7 @@
 .method public onDeviceProfileChanged(Lcom/miui/home/launcher/DeviceProfile;)V
     .locals 0
 
-    .line 106
+    .line 99
     invoke-direct {p0}, Lcom/miui/home/launcher/allapps/category/fragment/DrawerAppsListFragment;->refreshSpanCount()V
 
     return-void
@@ -185,7 +178,7 @@
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
-    .line 79
+    .line 72
     invoke-direct {p0}, Lcom/miui/home/launcher/allapps/category/fragment/DrawerAppsListFragment;->updateCellHeight()V
 
     return-void
@@ -197,7 +190,7 @@
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
-    .line 74
+    .line 67
     invoke-direct {p0}, Lcom/miui/home/launcher/allapps/category/fragment/DrawerAppsListFragment;->updateCellHeight()V
 
     return-void
@@ -209,7 +202,7 @@
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
-    .line 89
+    .line 82
     invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/AllAppsSettingChangeMessage;->getKey()Ljava/lang/String;
 
     move-result-object v0
@@ -222,7 +215,7 @@
 
     if-nez v0, :cond_1
 
-    .line 90
+    .line 83
     invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/AllAppsSettingChangeMessage;->getKey()Ljava/lang/String;
 
     move-result-object v0
@@ -237,7 +230,7 @@
 
     goto :goto_0
 
-    .line 93
+    .line 86
     :cond_0
     invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/AllAppsSettingChangeMessage;->getKey()Ljava/lang/String;
 
@@ -251,7 +244,7 @@
 
     if-eqz p1, :cond_2
 
-    .line 94
+    .line 87
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/category/fragment/DrawerAppsListFragment;->mRecyclerView:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
 
     invoke-static {}, Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;->getInstance()Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;
@@ -266,7 +259,7 @@
 
     goto :goto_1
 
-    .line 91
+    .line 84
     :cond_1
     :goto_0
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/category/fragment/DrawerAppsListFragment;->mAdapter:Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;
@@ -281,7 +274,7 @@
 
     invoke-virtual {p1, v0, v1}, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->updateStyle(Lcom/miui/home/launcher/allapps/AllAppsColorMode;I)V
 
-    .line 92
+    .line 85
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/category/fragment/DrawerAppsListFragment;->mRecyclerView:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
 
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getAllAppsColorMode()Lcom/miui/home/launcher/allapps/AllAppsColorMode;
@@ -299,28 +292,16 @@
     return-void
 .end method
 
-.method public onMessageEvent(Lcom/miui/home/launcher/common/messages/DrawerCellsColumnsChanged;)V
-    .locals 0
-    .annotation runtime Lorg/greenrobot/eventbus/Subscribe;
-        threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
-    .end annotation
-
-    .line 69
-    invoke-direct {p0}, Lcom/miui/home/launcher/allapps/category/fragment/DrawerAppsListFragment;->refreshSpanCount()V
-
-    return-void
-.end method
-
 .method public onMessageEvent(Lcom/miui/home/launcher/common/messages/ScreenCellsChanged;)V
     .locals 0
     .annotation runtime Lorg/greenrobot/eventbus/Subscribe;
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
-    .line 63
+    .line 61
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/category/fragment/DrawerAppsListFragment;->updatePoolSize()V
 
-    .line 64
+    .line 62
     invoke-direct {p0}, Lcom/miui/home/launcher/allapps/category/fragment/DrawerAppsListFragment;->refreshSpanCount()V
 
     return-void
@@ -329,10 +310,10 @@
 .method public onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
     .locals 1
 
-    .line 46
+    .line 44
     invoke-super {p0, p1, p2}, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
-    .line 47
+    .line 45
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/category/fragment/DrawerAppsListFragment;->mRecyclerView:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
 
     invoke-static {}, Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;->getInstance()Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;
@@ -345,9 +326,9 @@
 
     invoke-virtual {p2, v0}, Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;->setLetterScrollerEnable(Z)V
 
-    const p2, 0x7f0a0151
+    const p2, 0x7f0a00eb
 
-    .line 48
+    .line 46
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -356,7 +337,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 50
+    .line 48
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getAllAppsColorMode()Lcom/miui/home/launcher/allapps/AllAppsColorMode;
 
     move-result-object p2
@@ -367,7 +348,7 @@
 
     invoke-virtual {p1, p2, v0}, Lcom/miui/home/launcher/view/LetterRecyclerViewFastScroller;->setScrollerStyle(Lcom/miui/home/launcher/allapps/AllAppsColorMode;I)V
 
-    .line 52
+    .line 50
     :cond_0
     invoke-direct {p0}, Lcom/miui/home/launcher/allapps/category/fragment/DrawerAppsListFragment;->updateCellHeight()V
 

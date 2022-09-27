@@ -3,12 +3,12 @@
 .source "Launcher.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljava/util/function/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/Launcher;->refreshFolderIcons()V
+    value = Lcom/miui/home/launcher/Launcher;->addNewInstallIndicator()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -16,21 +16,33 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/function/Function<",
+        "Ljava/lang/Void;",
+        "Ljava/util/Map<",
+        "Ljava/lang/String;",
+        "Lcom/miui/launcher/common/AppUsageStat;",
+        ">;>;"
+    }
+.end annotation
+
 
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/launcher/Launcher;
 
-.field final synthetic val$info:Lcom/miui/home/launcher/FolderInfo;
+.field final synthetic val$newInstalledShortcutInfos:Ljava/util/HashSet;
 
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/FolderInfo;)V
+.method constructor <init>(Lcom/miui/home/launcher/Launcher;Ljava/util/HashSet;)V
     .locals 0
 
-    .line 6484
+    .line 6072
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$56;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    iput-object p2, p0, Lcom/miui/home/launcher/Launcher$56;->val$info:Lcom/miui/home/launcher/FolderInfo;
+    iput-object p2, p0, Lcom/miui/home/launcher/Launcher$56;->val$newInstalledShortcutInfos:Ljava/util/HashSet;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -39,13 +51,51 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 1
+.method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    .line 6487
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$56;->val$info:Lcom/miui/home/launcher/FolderInfo;
+    .line 6072
+    check-cast p1, Ljava/lang/Void;
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/FolderInfo;->notifyDataSetChanged()V
+    invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Launcher$56;->apply(Ljava/lang/Void;)Ljava/util/Map;
 
-    return-void
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public apply(Ljava/lang/Void;)Ljava/util/Map;
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Void;",
+            ")",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Lcom/miui/launcher/common/AppUsageStat;",
+            ">;"
+        }
+    .end annotation
+
+    .line 6075
+    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$56;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$1000(Lcom/miui/home/launcher/Launcher;)J
+
+    move-result-wide v0
+
+    iget-object v2, p0, Lcom/miui/home/launcher/Launcher$56;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    iget-object v3, p0, Lcom/miui/home/launcher/Launcher$56;->val$newInstalledShortcutInfos:Ljava/util/HashSet;
+
+    invoke-static {v2, v3}, Lcom/miui/home/launcher/Launcher;->access$7800(Lcom/miui/home/launcher/Launcher;Ljava/util/HashSet;)Ljava/util/ArrayList;
+
+    move-result-object v2
+
+    invoke-static {p1, v0, v1, v2}, Lcom/miui/launcher/utils/PkgUsageStatsUtils;->loadAllPackageUsageStats(Landroid/content/Context;JLjava/util/ArrayList;)Ljava/util/Map;
+
+    move-result-object p1
+
+    return-object p1
 .end method

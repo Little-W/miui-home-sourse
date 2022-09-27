@@ -30,17 +30,17 @@
 .method public constructor <init>()V
     .locals 3
 
-    .line 155
+    .line 113
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 156
+    .line 114
     invoke-static {}, Lcom/google/android/filament/VertexBuffer;->access$000()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/google/android/filament/VertexBuffer$Builder;->mNativeBuilder:J
 
-    .line 157
+    .line 115
     new-instance v0, Lcom/google/android/filament/VertexBuffer$Builder$BuilderFinalizer;
 
     iget-wide v1, p0, Lcom/google/android/filament/VertexBuffer$Builder;->mNativeBuilder:J
@@ -69,7 +69,7 @@
 
     move-object v3, p3
 
-    .line 255
+    .line 228
     invoke-virtual/range {v0 .. v5}, Lcom/google/android/filament/VertexBuffer$Builder;->attribute(Lcom/google/android/filament/VertexBuffer$VertexAttribute;ILcom/google/android/filament/VertexBuffer$AttributeType;II)Lcom/google/android/filament/VertexBuffer$Builder;
 
     move-result-object p1
@@ -80,14 +80,14 @@
 .method public attribute(Lcom/google/android/filament/VertexBuffer$VertexAttribute;ILcom/google/android/filament/VertexBuffer$AttributeType;II)Lcom/google/android/filament/VertexBuffer$Builder;
     .locals 7
 
-    .line 222
+    .line 195
     iget-wide v0, p0, Lcom/google/android/filament/VertexBuffer$Builder;->mNativeBuilder:J
 
     invoke-virtual {p1}, Lcom/google/android/filament/VertexBuffer$VertexAttribute;->ordinal()I
 
     move-result v2
 
-    .line 223
+    .line 196
     invoke-virtual {p3}, Lcom/google/android/filament/VertexBuffer$AttributeType;->ordinal()I
 
     move-result v4
@@ -98,8 +98,8 @@
 
     move v6, p5
 
-    .line 222
-    invoke-static/range {v0 .. v6}, Lcom/google/android/filament/VertexBuffer;->access$300(JIIIII)V
+    .line 195
+    invoke-static/range {v0 .. v6}, Lcom/google/android/filament/VertexBuffer;->access$400(JIIIII)V
 
     return-object p0
 .end method
@@ -107,10 +107,10 @@
 .method public bufferCount(I)Lcom/google/android/filament/VertexBuffer$Builder;
     .locals 2
 
-    .line 185
+    .line 158
     iget-wide v0, p0, Lcom/google/android/filament/VertexBuffer$Builder;->mNativeBuilder:J
 
-    invoke-static {v0, v1, p1}, Lcom/google/android/filament/VertexBuffer;->access$200(JI)V
+    invoke-static {v0, v1, p1}, Lcom/google/android/filament/VertexBuffer;->access$300(JI)V
 
     return-object p0
 .end method
@@ -118,14 +118,14 @@
 .method public build(Lcom/google/android/filament/Engine;)Lcom/google/android/filament/VertexBuffer;
     .locals 4
 
-    .line 305
+    .line 278
     iget-wide v0, p0, Lcom/google/android/filament/VertexBuffer$Builder;->mNativeBuilder:J
 
     invoke-virtual {p1}, Lcom/google/android/filament/Engine;->getNativeObject()J
 
     move-result-wide v2
 
-    invoke-static {v0, v1, v2, v3}, Lcom/google/android/filament/VertexBuffer;->access$500(JJ)J
+    invoke-static {v0, v1, v2, v3}, Lcom/google/android/filament/VertexBuffer;->access$600(JJ)J
 
     move-result-wide v0
 
@@ -135,7 +135,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 307
+    .line 280
     new-instance p1, Lcom/google/android/filament/VertexBuffer;
 
     const/4 v2, 0x0
@@ -144,7 +144,7 @@
 
     return-object p1
 
-    .line 306
+    .line 279
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -155,10 +155,21 @@
     throw p1
 .end method
 
+.method public enableBufferObjects(Z)Lcom/google/android/filament/VertexBuffer$Builder;
+    .locals 2
+
+    .line 142
+    iget-wide v0, p0, Lcom/google/android/filament/VertexBuffer$Builder;->mNativeBuilder:J
+
+    invoke-static {v0, v1, p1}, Lcom/google/android/filament/VertexBuffer;->access$200(JZ)V
+
+    return-object p0
+.end method
+
 .method public normalized(Lcom/google/android/filament/VertexBuffer$VertexAttribute;)Lcom/google/android/filament/VertexBuffer$Builder;
     .locals 3
 
-    .line 271
+    .line 244
     iget-wide v0, p0, Lcom/google/android/filament/VertexBuffer$Builder;->mNativeBuilder:J
 
     invoke-virtual {p1}, Lcom/google/android/filament/VertexBuffer$VertexAttribute;->ordinal()I
@@ -167,7 +178,7 @@
 
     const/4 v2, 0x1
 
-    invoke-static {v0, v1, p1, v2}, Lcom/google/android/filament/VertexBuffer;->access$400(JIZ)V
+    invoke-static {v0, v1, p1, v2}, Lcom/google/android/filament/VertexBuffer;->access$500(JIZ)V
 
     return-object p0
 .end method
@@ -175,14 +186,14 @@
 .method public normalized(Lcom/google/android/filament/VertexBuffer$VertexAttribute;Z)Lcom/google/android/filament/VertexBuffer$Builder;
     .locals 2
 
-    .line 289
+    .line 262
     iget-wide v0, p0, Lcom/google/android/filament/VertexBuffer$Builder;->mNativeBuilder:J
 
     invoke-virtual {p1}, Lcom/google/android/filament/VertexBuffer$VertexAttribute;->ordinal()I
 
     move-result p1
 
-    invoke-static {v0, v1, p1, p2}, Lcom/google/android/filament/VertexBuffer;->access$400(JIZ)V
+    invoke-static {v0, v1, p1, p2}, Lcom/google/android/filament/VertexBuffer;->access$500(JIZ)V
 
     return-object p0
 .end method
@@ -190,7 +201,7 @@
 .method public vertexCount(I)Lcom/google/android/filament/VertexBuffer$Builder;
     .locals 2
 
-    .line 169
+    .line 127
     iget-wide v0, p0, Lcom/google/android/filament/VertexBuffer$Builder;->mNativeBuilder:J
 
     invoke-static {v0, v1, p1}, Lcom/google/android/filament/VertexBuffer;->access$100(JI)V

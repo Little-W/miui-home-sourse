@@ -829,27 +829,6 @@
     return-void
 .end method
 
-.method public setEntries(I)V
-    .locals 1
-
-    .line 358
-    invoke-virtual {p0}, Lmiuix/preference/DropDownPreference;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getTextArray(I)[Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lmiuix/preference/DropDownPreference;->setEntries([Ljava/lang/CharSequence;)V
-
-    return-void
-.end method
-
 .method public setEntries([Ljava/lang/CharSequence;)V
     .locals 2
 
@@ -908,27 +887,6 @@
     .line 350
     :cond_1
     invoke-virtual {p0}, Lmiuix/preference/DropDownPreference;->notifyChanged()V
-
-    return-void
-.end method
-
-.method public setEntryValues(I)V
-    .locals 1
-
-    .line 396
-    invoke-virtual {p0}, Lmiuix/preference/DropDownPreference;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getTextArray(I)[Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lmiuix/preference/DropDownPreference;->setEntryValues([Ljava/lang/CharSequence;)V
 
     return-void
 .end method

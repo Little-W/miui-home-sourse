@@ -150,7 +150,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f0700b6
+    const p2, 0x7f070092
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -332,7 +332,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "update uninstall active when NO drag, active="
+    const-string v3, "update uninstall active when NO drag, active="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -398,7 +398,7 @@
 .method private searchDropTarget()V
     .locals 1
 
-    const v0, 0x7f0a03bc
+    const v0, 0x7f0a0251
 
     .line 90
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/DropTargetBar;->findViewById(I)Landroid/view/View;
@@ -965,7 +965,7 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    const v0, 0x7f0a0361
+    const v0, 0x7f0a0222
 
     .line 78
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/DropTargetBar;->findViewById(I)Landroid/view/View;

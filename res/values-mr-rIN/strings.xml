@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="Icon_name_classic_mode">होम स्क्रीन सेटिंग्ज</string>
     <string name="accessibility_all_app_custom_category_finish">पूर्ण</string>
     <string name="accessibility_all_app_custom_category_item_remove">श्रेणीमधून \"%1$s\" काढा</string>
     <string name="accessibility_clear_search_bar_text">सर्च बार पुसा</string>
@@ -26,10 +25,8 @@
     <string name="activity_not_unlocked">एप्स उघडण्यापूर्वी तुमचे डिव्हाइस पूर्णपणे रिबूट होईपर्यंत प्रतीक्षा करा</string>
     <string name="add_custom_category">कस्टम</string>
     <string name="add_screen">स्कीन जोडा</string>
-    <string name="add_to_workspace">होम स्क्रीनवर जोडा</string>
     <string name="added_all_category">यशस्वीरित्या सर्व एप्स जोडली</string>
     <string name="afternoon">दुपार</string>
-    <string name="agree_button">सहमती</string>
     <string name="alexa_notification_add">जोडा</string>
     <string name="alexa_notification_cancel">आता नाही</string>
     <string name="alexa_notification_content">नियंत्रण केंद्रामध्ये Alexa शॉर्टकट जोडायचा?</string>
@@ -51,7 +48,7 @@
     <string name="all_apps">सर्व एप्स</string>
     <string name="all_apps_install_contentcenter_msg">असे दिसते आहे की कंटेंट सेंटर अनइनस्टॉल केले आहे. पुन्हा इनस्टॉल करायचे?</string>
     <string name="all_apps_install_contentcenter_title">कंटेंट सेंटर इनस्टॉल करा</string>
-    <string name="all_apps_no_search_results">परिणाम शोधता आले नाहीत</string>
+    <string name="all_apps_no_search_results">परिणाम आढळले नाहीत</string>
     <string name="all_apps_search_app">एप्स शोधा</string>
     <string name="all_apps_search_market_message">ऑनलाइन शोधा</string>
     <string name="all_apps_setting_classic_title">क्लासिक</string>
@@ -68,7 +65,6 @@
     <string name="all_apps_slide_up_tips">एप ड्रॉवर उघडण्यासाठी स्वाईप अप राखीव आहे. नियमित होम स्क्रीनवर स्विच करा आणि पुन्हा प्रयत्न करा.</string>
     <string name="all_apps_suggestions">एप सूचना</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">एनिमेशन स्पीड</string>
     <string name="announce_for_app_move_in_folder">फोल्डरमध्ये %1$d स्थितीत हलवले</string>
     <string name="announce_for_checked">%1$s, तपासले</string>
     <string name="announce_for_choose_default_screen">%1$d स्क्रीन डिफॉल्ट होम स्क्रीन म्हणून सेट करा</string>
@@ -121,13 +117,6 @@
     <string name="app_category_tools">टूल्स</string>
     <string name="app_category_travel">प्रवास</string>
     <string name="app_category_vr">VR</string>
-    <string name="app_drawer_double_confirm_description">हे आपला मुख्य स्क्रीन लेआउट बदलेल. आपण नंतर सेटिंग्जमध्ये हे बदल परत करण्यात सक्षम व्हाल.</string>
-    <string name="app_drawer_double_confirm_title">लक्ष द्या</string>
-    <string name="app_drawer_feature_description">आपल्या सर्व एप्सची व्यवस्था करण्यासाठी एप ड्रॉवर एक योग्य साधन आहे. एप्सचे ऑटोमॅटिकली वर्गीकरण करा आणि आपल्याला स्नॅपमध्ये आवश्यक असलेले काहीही मिळवा!</string>
-    <string name="app_drawer_guide_description">तुम्ही तुमच्या आवडत्या एप्समध्ये काय शोधत आहात ते पहा</string>
-    <string name="app_drawer_guide_title">एप ड्रॉवर</string>
-    <string name="app_drawer_tip_title">आम्ही एप ड्रॉवरमध्ये कंटेंट फीड बदलला</string>
-    <string name="app_install_state">इनस्टॉल केले</string>
     <string name="app_name">smallWindow</string>
     <string name="application_name">सिस्टिम लाँचर</string>
     <string name="apply">सेट</string>
@@ -150,35 +139,8 @@
     <string name="back">मागे</string>
     <string name="backup_fail">लाँचरचा बॅकअप घेता आला नाही</string>
     <string name="bad_wallpaper_source_prompt">वॉलपेपर लोड करू शकत नाही</string>
-    <string name="branch_feature_description">एप्स व्यतिरिक्त, क्विक फाईंडर इन-एप कंटेंट आणि आयटम ऑनलाइन शोधू शकतो.</string>
-    <string name="branch_guide_attention">वर्धित शोध वापरण्यासाठी आपल्या शोध विनंत्या, Google जाहिराती आयडी आणि IP एड्रेस ब्रँच मेट्रिक्स इंकसह शेअर करणे आवश्यक आहे. <font color="#B3000000"><a href="http://url1">अंतिम वापरकर्ता शोध अटी हे वैशिष्ट्य वापरण्यापूर्वी अटी </a> </font> आणि <font color="#B3000000"><a href="http://url2"> शाखा डिस्कव्हरी प्रायव्हसी पॉलिसी </a> </font>" वाचा आणि सहमती द्या. "</string>
-    <string name="branch_guide_description_one">आम्ही आपले सर्व एप ड्रॉवर ठेवू. आपली होम स्क्रीन व्यवस्थित आणि सुनियोजित दिसेल.</string>
-    <string name="branch_guide_description_three">बिल्ट-इन सर्चसह आपण स्नॅपमध्ये आपल्याला जे पाहिजे ते शोधू शकाल!</string>
-    <string name="branch_guide_description_two">एप ड्रॉवर एप्सचे ऑटोमॅटिकली वर्गीकरण करते.</string>
-    <string name="branch_guide_tip_title">प्रत्येक एप त्याच्या जागेवर</string>
-    <string name="branch_guide_title">एप ड्रॉवर पहा</string>
-    <string name="branch_guide_type_four_desc">आपण दोन सोप्या स्टेप्समध्ये जुन्या मार्गांवर परत जाऊ शकता</string>
-    <string name="branch_guide_type_four_main">सेटिंग्जमध्ये, होम स्क्रीन > होम स्क्रीनवर जा आणि \"क्लासिक\" निवडा.</string>
-    <string name="branch_guide_type_four_step_one">सेटिंग्ज उघडा</string>
-    <string name="branch_guide_type_four_step_two">होम स्क्रीन निवडा</string>
-    <string name="branch_guide_type_one_desc">एप ड्रॉवरसोबत तुमची एप्स मॅनेज करा</string>
-    <string name="branch_guide_type_one_main">तुमची होम स्क्रीन व्यवस्थित आणि सुनियोजित बनवण्यासाठी तुमची एप्स एप ड्रॉवरमध्ये ठेवा.</string>
-    <string name="branch_new_feature">नवीन फीचर</string>
-    <string name="branch_privacy_policy">गोपनीयता धोरण</string>
-    <string name="branch_search_guide_description">आमचे शोध परिणाम आता बरेच व्यापक आहेत</string>
-    <string name="branch_search_guide_privacy">ही सेवा Branch Metrics Inc. द्वारा समर्थित आहे. आपली स्थान माहिती, शोध चौकशी आणि Google जाहिराती आयडी Branch शी शेअर केली जातील. ही सेवा वापरण्यापूर्वी Branch च्या <font color="#B3000000"><a href="http://url1"> नियम व अटी </a> </font> आणि <a href="http://url2"><font color="#B3000000">गोपनीयता धोरण</font></a>" वाचा आणि त्यास सहमती द्या. "</string>
-    <string name="branch_search_guide_title">तुम्ही तुमच्या आवडत्या एप्समध्ये काय शोधत आहात ते पहा</string>
-    <string name="branch_terms_condition">अटी व नियम</string>
-    <string name="branch_tip_title">क्विक फाईंडरसोबत, आपणास स्नॅपमध्ये आवश्यक असलेले सर्व काही सापडेल.</string>
-    <string name="btn_agree">सहमती</string>
-    <string name="btn_cancel">रद्द</string>
-    <string name="btn_close">बंद करा</string>
-    <string name="btn_open">सुरु करा</string>
-    <string name="btn_request_permission">अनुमती द्या</string>
-    <string name="btn_set_right_now">अनुमती द्या</string>
     <string name="buffering">बफर करत आहे…</string>
     <string name="cancel_action">रद्द</string>
-    <string name="cancel_botton">रद्द</string>
     <string name="cancel_btn_label">रद्द</string>
     <string name="cant_edit_lock_screen">लॉक स्क्रीन स्टाईल एडिट करू शकत नाही</string>
     <string name="cant_remove_folder">फोल्डर काढू शकत नाही</string>
@@ -288,11 +250,9 @@
     <string name="emptyplaylist">गाण्यांची भर घालण्यासाठी टॅप करा</string>
     <string name="enable_wallpaper_scroll">साइड-स्क्रोलिंग चालू करा</string>
     <string name="encryption">एनक्रिप्शन</string>
-    <string name="enter_search_setting_title">एप ड्रॉवर उघडल्यावर सर्च उघडा</string>
     <string name="eras_ad">CE</string>
     <string name="eras_bc">BCE</string>
     <string name="evening">दुपार</string>
-    <string name="exit_overview_because_task_stack_changed">पार्श्वभूमीत झालेल्या बदलांमुळे अलीकडील बंद केले</string>
     <string name="failed_to_delete_temporary">काढू शकत नाही</string>
     <string name="failed_to_drop">हलवू शकत नाही</string>
     <string name="failed_to_drop_widget_invalid">हे विजेट अवैध आहे</string>
@@ -349,8 +309,6 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
-    <string name="fold_pair_install_shortcut_long_click">होम स्क्रीनवर जोडण्यासाठी दाबून धरा</string>
-    <string name="fold_pair_installed_shortcut_launcher">हा शॉर्टकट आधीच अस्तित्वात आहे</string>
     <string name="folder_name">फोल्डर</string>
     <string name="frame_load_failed">फ्रेम लोड करू शकत नाही</string>
     <string name="free_style_apps_title">एप निवडा</string>
@@ -406,14 +364,11 @@
     <string name="gadget_weather_title_14">हवामान</string>
     <string name="gadget_weather_title_24">हवामान</string>
     <string name="global_search_hint">शोध</string>
-    <string name="got_it_botton">समजले</string>
     <string name="group_folder">नवीन फोल्डर</string>
     <string name="group_live_folders">फोल्डर्स</string>
     <string name="group_shortcuts">शॉर्टकट्स</string>
     <string name="guide_install_app_msg">हे एप डिव्हाइसवर इनस्टॉल केले नाही. आता एप शोधून इनस्टॉल करायचे?</string>
     <string name="guide_install_app_title">एप शोधून इनस्टॉल करायचे?</string>
-    <string name="guide_permission_title">अनुमती आवश्यक आहेत</string>
-    <string name="guide_privacy_dialog_title">सेवा अटी</string>
     <string name="guide_tips_editing_mode">विजेट निवडण्यासाठी दाबा आणि धरून ठेवा</string>
     <string name="home_gesture_content_center">कंटेंट सेंटर</string>
     <string name="home_gesture_global_search">शोध</string>
@@ -444,9 +399,6 @@
     <string name="launcher_slide_up_title">होम स्क्रीनवर वर स्वाईप करा</string>
     <string name="launcher_sliding_up_gesture">सर्च उघडण्यासाठी होम स्क्रीनवर स्वाईप करा</string>
     <string name="launcher_title">होम स्क्रीन आणि अलीकडील</string>
-    <string name="layout_guide_description">आपल्याला एप ड्रॉवर आवडत नसल्यास आपण नेहमी क्लासिक होम स्क्रीनवर परत जाऊ शकता. फक्त \"होम स्क्रीन सेटिंग्ज\" शॉर्टकट वापरा आणि दोन मोडमध्ये स्विच करा.</string>
-    <string name="layout_guide_tip_title">आपण एकाच टॅपमध्ये जुन्या मार्गाकडे परत जाऊ शकता</string>
-    <string name="layout_guide_title">एप ड्रॉवर कसे काढून टाकायचे</string>
     <string name="like">पसंतीमध्ये जोडा</string>
     <string name="liked">पसंतीमध्ये जोडले</string>
     <string name="loading_desktop">फक्त एक सेकंद…</string>
@@ -613,11 +565,6 @@
     <string name="navigation_guide_recent_title">अलिकडील उघडा</string>
     <string name="navigation_guide_recent_title_spec_with_quotation_pad">अलिकडील उघडा</string>
     <string name="navigation_guide_settings">जेस्चर डेमो</string>
-    <string name="navigation_position_center">मध्य</string>
-    <string name="navigation_position_left">डावा</string>
-    <string name="navigation_position_right">उजवा</string>
-    <string name="navigation_position_summary">नॅव्हिगेशन बटणे कस्टम पोझिशन्स केवळ होम स्क्रीनवर लागू केली जाऊ शकतात</string>
-    <string name="navigation_position_title">नॅव्हिगेशन बटणे पोजिशन</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">रद्द</string>
     <string name="navigation_set_miui_home_as_default_dialog_message">थर्ड पार्टी लाँचरसह फूल स्क्रीन जेश्चर वापरू शकत नाही. सिस्टीम लाँचरवर स्विच करा आणि फूल स्क्रीन जेश्चर सुरु करा?</string>
     <string name="navigation_set_miui_home_as_default_dialog_ok">ओके</string>
@@ -626,11 +573,9 @@
     <string name="navigation_type_title">सिस्टीम नॅव्हिगेशन</string>
     <string name="navigation_type_virtual_key">बटणे</string>
     <string name="network_error">नेटवर्कशी कनेक्ट करता आले नाही, पुन्हा प्रयत्न करा.</string>
-    <string name="new_feature_title">नवीन काय</string>
     <string name="night">संध्याकाळ</string>
     <string name="no_detail_page">तपशील पेज नाही</string>
     <string name="no_space_toast">पुरेशी जागा नाही</string>
-    <string name="no_space_toast_fold">इथे पुरेशी जागा नाही</string>
     <string name="no_space_toast_when_click_widget">या पेजवर पुरेशी जागा नाही. हा आयटम वेगळ्या पेजवर ओढण्याचा प्रयत्न करा.</string>
     <string name="noon">दिवसा</string>
     <string name="normal_wallpaper">वॉलपेपर</string>
@@ -639,7 +584,6 @@
     <string name="notification_reset_title">यशस्वीपणे आयकॉन्सची क्रमवारी लावली</string>
     <string name="one_key_call_title">डायल करण्यासाठी टॅप करा</string>
     <string name="online_wallpaper">ऑनलाइन</string>
-    <string name="open_pad_personal_assistant_settings">होम स्क्रीन विजेट</string>
     <string name="open_personal_assistant_dialog_btn_cancel">रद्द</string>
     <string name="open_personal_assistant_dialog_btn_confirm">बंद करा</string>
     <string name="open_personal_assistant_dialog_desc">एप व्हॉल्ट बंद केल्यानंतर, तुम्ही एप व्हॉल्ट विजेट पाहू किंवा वापरू शकणार नाही. त्यांच्या अद्ययावत आवृत्त्या तुमच्यासाठी उपलब्ध होणार नाहीत. तरीही बंद करायचे?</string>
@@ -651,8 +595,7 @@
     <string name="ota_layout_adjustment_content">नवीन आवृत्तीमध्ये अंतर्गत आणि बाह्य होम स्क्रीन लेआउट सिंक्रोनाइज केले गेले.</string>
     <string name="ota_layout_adjustment_title">होम स्क्रीन लेआऊट</string>
     <string name="out_of_space">या होम स्क्रीनवर अधिक जागा नाही</string>
-    <string name="pair_icon_name">%1$s | %2$s</string>
-    <string name="perfect_icons_switch_summary">थर्ड पार्टी एप चिन्हांवर अ‍ॅनिमेशन प्रदान करा</string>
+    <string name="perfect_icons_switch_summary">तृतीय पक्षाच्या एप चिन्हांवर अ‍ॅनिमेशन प्रदान करा</string>
     <string name="perfect_icons_switch_title">ग्लोबल आयकॉन अ‍ॅनिमेशन</string>
     <string name="permdesc_install_shortcut">युजरच्या हस्तक्षेपाशिवाय एपला शॉर्टकट्स जोडू देते.</string>
     <string name="permdesc_install_widget">एपला वापरकर्त्याकडून अतिरिक्त कृती न करता विजेट जोडण्याची अनुमती देते.</string>
@@ -671,7 +614,6 @@
     <string name="photo_load_failed">फोटो लोड करू शकत नाही</string>
     <string name="please_slide_agian">पुन्हा सरकवा</string>
     <string name="pm">PM</string>
-    <string name="popular_search">लोकप्रिय</string>
     <string name="pref_cell_layout_size">एप आयकॉन लेआऊट</string>
     <string name="pref_enable_drawing_cache_summary">मेमरीतील जागा मोकळी करण्यासाठी बंद करा. त्यामुळे कदाचित कार्य प्रदर्शन मंद होईल.</string>
     <string name="pref_enable_drawing_cache_title">ड्रॉईंग कॅचे</string>
@@ -691,14 +633,6 @@
     <string name="privacy_thumbnail_blur_summary">रिसिन्ट्समध्ये एप प्रिव्ह्यूज ब्लर करा</string>
     <string name="privacy_thumbnail_blur_title">एप प्रिव्ह्यूज ब्लर करा</string>
     <string name="quick_app">जलद एप्स</string>
-    <string name="quick_finder_feature_description">क्विक फाईंडर आपल्याला एप्स, इन-एप कंटेंट आणि आयटम जलद ऑनलाईन शोधण्याची अनुमती देतो. आपण सेटिंग्जमध्ये हे फीचर बंद करू शकता.</string>
-    <string name="quick_finder_tip_title">आपल्याला आवश्यक असलेली प्रत्येक गोष्ट जलद शोधा</string>
-    <string name="quick_search_all_app_desc">एप ड्रॉवरमध्ये सर्व एप्स प्रदर्शित करा</string>
-    <string name="quick_search_desc">एप ड्रॉवर उघडल्यावर सर्च उघडा</string>
-    <string name="quick_search_guide_all_apps">सर्व एप्स</string>
-    <string name="quick_search_guide_ok_btn">ओके</string>
-    <string name="quick_search_guide_quick_search">जलद शोध</string>
-    <string name="quick_search_guide_title">डिफॉल्ट मोड निवडा</string>
     <string name="recent_apps">अलिकडील</string>
     <string name="recent_menu_item_info">माहिती</string>
     <string name="recent_menu_item_lock">लॉक</string>
@@ -707,7 +641,7 @@
     <string name="recents_app_info_button_label">एप माहिती</string>
     <string name="recents_clear_all_tasks">सर्व पुसा</string>
     <string name="recents_config_title">अलिकडील</string>
-    <string name="recents_dimiss_task">पुसा</string>
+    <string name="recents_dimiss_task">रद्द करा</string>
     <string name="recents_empty_message">अलिकडील आयटम्स नाहीत</string>
     <string name="recents_empty_message_dismissed_all">तुम्ही सगळे पुसून टाकले आहे</string>
     <string name="recents_empty_message_multi_window">होम स्क्रीनवरून एप्स उघडा</string>
@@ -727,13 +661,6 @@
     <string name="recents_title_market">एप्स शोधा</string>
     <string name="recents_title_security_scan">सुरक्षा स्कॅन</string>
     <string name="recents_tv_small_window_text">फ्लोटिंग विंडोज</string>
-    <string name="recents_worldcirculate_text">निवडण्यासाठी सोडा</string>
-    <string name="recnets_relay_device_info">%s कडून</string>
-    <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
-    <string name="recnets_worldcirculate_display_computer_info">एप %s वर काम करीत आहे.</string>
-    <string name="recnets_worldcirculate_display_default_info">ते परत आणण्यासाठी टॅप करा.</string>
-    <string name="recnets_worldcirculate_display_default_info_pad">ते इथे परत आणण्यासाठी टॅप करा.</string>
-    <string name="recnets_worldcirculate_display_pad_info">एप %s वर काम करीत आहे.</string>
     <string name="recommend_apk_size_and_desc">%1$dMB | %2$s</string>
     <string name="recommend_app">एप सूचना</string>
     <string name="recommend_apps_default_title">रिक्त</string>
@@ -751,8 +678,6 @@
     <string name="remove_invalidate_gadget_tips">आपण वापरता त्यापैकी एक विजेट यापुढे उपलब्ध नाही. आपण आणखी एक जोडू शकता.</string>
     <string name="remove_sys_app_content">आपण सेटिंग्ज > एप्स > होम स्क्रीन शॉर्टकटमध्ये पुन्हा होम स्क्रीन शॉर्टकट जोडू शकाल. आता काढायचे?</string>
     <string name="remove_sys_app_title">होम स्क्रीन शॉर्टकट काढून टाकायचा?</string>
-    <string name="request_permission_msg">POCO लाँचरला त्याच्या संपूर्ण कार्यक्षमतेमध्ये प्रवेश देण्यासाठी आपल्याला काही अनुमती आवश्यक आहेत.</string>
-    <string name="request_permission_title">अनुमती आवश्यक आहेत</string>
     <string name="reset_cate_tip_content">तुम्ही सुरु ठेवल्यास डिफॉल्ट एप ग्रुप रिस्टोर केले जातील. तरीही सुरू ठेवायचे?</string>
     <string name="reset_cate_tip_title">डिफॉल्ट ग्रुप्स रिस्टोर करा</string>
     <string name="reset_description_first_time">तुम्ही %1$s पासूनचा हा लेआऊट 2 तासांच्या आत रिस्टोर करू शकता</string>
@@ -768,8 +693,6 @@
     <string name="screen_cells_config_title">होम स्क्रीन लेआऊट</string>
     <string name="screen_locked_toast">होम स्क्रीन लेआऊट लॉक केला आहे.</string>
     <string name="screen_number">%d स्क्रीन</string>
-    <string name="search_bar_hint_content">एप्स आणि कंटेंट शोधा</string>
-    <string name="search_guide_btn">समजले</string>
     <string name="search_in_apps_store">%1$s/%2$s शोधा</string>
     <string name="search_no_result">परिणाम शोधणे शक्य झाले नाही</string>
     <string name="select_all">सर्व निवडा</string>
@@ -777,7 +700,6 @@
     <string name="select_photo">फोटो</string>
     <string name="send">पाठवा</string>
     <string name="server_error">एक सर्व्हर एरर आली. एक दोन मिनिटे प्रतिक्षा करा आणि पुन्हा प्रयत्न करा.</string>
-    <string name="service_double_attention">Branch Metrics Inc द्वारे वर्धित शोध कार्यक्षमता प्रदान केली गेली आहे. हे फीचर कार्य करण्यासाठी आम्हाला आपल्या शोध विनंत्या, Google जाहिराती आयडी आणि IP एड्रेसशाखा Branch Metrics Inc शी शेअर करणे आवश्यक आहे. हे फीचर वापरण्याआधी <a href="http://url1"><font color="#B3000000">एंड युजर डिस्कव्हरी अटी &amp; शर्ती</font></a>आणि <a href="http://url2"><font color="#B3000000">ब्रँच डिस्कव्हरी गोपनीयता धोरण</font></a> वाचा आणि सहमत व्हा.</string>
     <string name="setting_wallpaper_tip">अॅडजस्ट करण्यासाठी पिंच किंवा स्वाइप करा</string>
     <string name="settings">सेटिंग्ज</string>
     <string name="settings_shortcut">सेटिंग्ज</string>
@@ -815,13 +737,11 @@
     <string name="status_installing">इनस्टॉल करत आहे</string>
     <string name="status_paused">तात्पुरते थांबवले</string>
     <string name="status_pending">प्रतीक्षेत</string>
-    <string name="suggestions">सूचना</string>
     <string name="sunday">रविवार</string>
     <string name="sunday_short">रविवार</string>
     <string name="sunday_shortest">रवि</string>
     <string name="swipe_the_desktop_to_the_left">होम स्क्रीनवर डावीकडे स्वाईप करा</string>
     <string name="swipe_the_desktop_to_the_right">होम स्क्रीनवर उजवीकडे स्वाईप करा</string>
-    <string name="switch_on_button">सुरु करा</string>
     <string name="switch_personal_assistant_app_vault">एप व्हॉल्ट</string>
     <string name="switch_personal_assistant_google">Google Discover</string>
     <string name="switch_personal_assistant_none">काही नाही</string>
@@ -832,10 +752,6 @@
     <string name="system_shortcuts_remove">काढा</string>
     <string name="system_text">ऑटो</string>
     <string name="task_access_locked_app_msg">एप लॉक सुरु केले</string>
-    <string name="term_of_service">अटी व शर्ती</string>
-    <string name="terms_of_services_one">एप ड्रॉवर आणि क्विक फाईंडरमध्ये आपले स्वागत आहे. क्विक फाईंडर आपल्याला एप, इन-एपमधील कंटेंट आणि आयटम जलद ऑनलाइन शोधण्याची अनुमती देतो. ही वैशिष्ट्ये वापरण्यापूर्वी Xiaomi चे <font color="#B3000000"><a href="http://url1">गोपनीयता धोरण</a> </font> वाचा आणि त्यास सहमती द्या.</string>
-    <string name="terms_of_services_three">तुम्ही सेटिंग्जमध्ये हे फीचर बंद करू शकता.</string>
-    <string name="terms_of_services_two">एन्हान्सड सर्च वापरण्यासाठी तुमच्या सर्च क्वेरी, Google एडव्हर्टायजिंग आयडी, आणि IP एड्रेस यासह Branch Metrics Inc शी शेअर करणे आवश्यक आहे. Branch आपल्या वैयक्तिक माहितीनुसार <a href="http://url1"><font color="#B3000000">Branch Discovery गोपनीयता धोरणाशी</font></a>प्रक्रिया करेल. हे फीचर वापरण्याआधी आमच्या <a href="http://url2"><font color="#B3000000">एंड युजर Discovery अटी आणि शर्ती</font></a>आणि<a href="http://url3"><font color="#B3000000">Branch Discovery गोपनीयता धोरण</font></a>वाचा आणि सहमत व्हा.</string>
     <string name="the_anniversary_of_lifting_martial_law">मार्शल लॉ उठवण्याचा वर्धापनदिन</string>
     <string name="the_anti_aggression_day">आक्रमकता विरोधी दिन</string>
     <string name="the_arbor_day">आर्बर डे</string>
@@ -902,11 +818,6 @@
     <string name="tuesday">मंगळवार</string>
     <string name="tuesday_short">मंगळवार</string>
     <string name="tuesday_shortest">मंगळ</string>
-    <string name="uni_search_permission_content">ऑनलाईन शोध वैशिष्ट्ये चालू करा. (शोध सेवा Branch प्रदान करते.)</string>
-    <string name="uni_search_permission_msg">शोध परिणाम सुधारण्यासाठी POCO लाँचरला तुमचे स्थान आणि काँटॅक्टसवर प्रवेश करण्याची अनुमती द्या.</string>
-    <string name="uni_search_permission_title">सुधारीत शोध</string>
-    <string name="uni_search_setting_summary">थेट एपमध्ये कंटेंट शोधा</string>
-    <string name="uni_search_setting_title">इन-एप क्विरी मोड</string>
     <string name="uninstall">अनइनस्टॉल</string>
     <string name="uninstall_dialog_message">अनइनस्टॉल केल्याने सर्व एप डेटा काढला जाईल.</string>
     <string name="uninstall_dialog_title_format">%s अनइनस्टॉल करायचा?</string>
@@ -917,7 +828,6 @@
     <string name="uninstall_xspace_dialog_title_format">दुहेरी \"%s\" अनइनस्टॉल?</string>
     <string name="unknown_artist_name">अज्ञात कलाकार</string>
     <string name="unnamed_folder_name">फोल्डर</string>
-    <string name="upgrade_remove_small_window_in_recents">फ्लोटिंग विंडोजमध्ये एप्स उघडण्यासाठी तुम्ही साईडबार वापरु शकता</string>
     <string name="wallpaper">वॉलपेपर</string>
     <string name="wallpaper_auto_change_title">लॉक स्क्रीन</string>
     <string name="wallpaper_failed_message">वॉलपेपर सेट करु शकत नाही</string>

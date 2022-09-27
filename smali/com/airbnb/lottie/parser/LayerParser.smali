@@ -21,7 +21,7 @@
 
     const-string v2, "refId"
 
-    const-string/jumbo v3, "ty"
+    const-string v3, "ty"
 
     const-string v4, "parent"
 
@@ -33,7 +33,7 @@
 
     const-string v8, "ks"
 
-    const-string/jumbo v9, "tt"
+    const-string v9, "tt"
 
     const-string v10, "masksProperties"
 
@@ -47,7 +47,7 @@
 
     const-string v15, "st"
 
-    const-string/jumbo v16, "w"
+    const-string v16, "w"
 
     const-string v17, "h"
 

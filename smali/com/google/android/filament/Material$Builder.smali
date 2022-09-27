@@ -24,7 +24,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 283
+    .line 304
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,7 +35,7 @@
 .method public build(Lcom/google/android/filament/Engine;)Lcom/google/android/filament/Material;
     .locals 4
 
-    .line 312
+    .line 333
     invoke-virtual {p1}, Lcom/google/android/filament/Engine;->getNativeObject()J
 
     move-result-wide v0
@@ -54,14 +54,14 @@
 
     if-eqz p1, :cond_0
 
-    .line 314
+    .line 335
     new-instance p1, Lcom/google/android/filament/Material;
 
     invoke-direct {p1, v0, v1}, Lcom/google/android/filament/Material;-><init>(J)V
 
     return-object p1
 
-    .line 313
+    .line 334
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -75,10 +75,10 @@
 .method public payload(Ljava/nio/Buffer;I)Lcom/google/android/filament/Material$Builder;
     .locals 0
 
-    .line 296
+    .line 317
     iput-object p1, p0, Lcom/google/android/filament/Material$Builder;->mBuffer:Ljava/nio/Buffer;
 
-    .line 297
+    .line 318
     iput p2, p0, Lcom/google/android/filament/Material$Builder;->mSize:I
 
     return-object p0

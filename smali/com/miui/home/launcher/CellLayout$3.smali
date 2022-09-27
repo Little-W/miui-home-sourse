@@ -1,14 +1,11 @@
 .class Lcom/miui/home/launcher/CellLayout$3;
-.super Ljava/lang/Object;
+.super Landroid/animation/AnimatorListenerAdapter;
 .source "CellLayout.java"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/miui/home/launcher/CellLayout;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/miui/home/launcher/CellLayout;->setAndDoEditModeAnimation(Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,33 +22,46 @@
 .method constructor <init>(Lcom/miui/home/launcher/CellLayout;)V
     .locals 0
 
-    .line 1177
+    .line 410
     iput-object p1, p0, Lcom/miui/home/launcher/CellLayout$3;->this$0:Lcom/miui/home/launcher/CellLayout;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 1
+.method public onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 0
 
-    .line 1180
-    iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$3;->this$0:Lcom/miui/home/launcher/CellLayout;
+    .line 413
+    iget-object p1, p0, Lcom/miui/home/launcher/CellLayout$3;->this$0:Lcom/miui/home/launcher/CellLayout;
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/CellLayout;->canBeDeleted()Z
+    invoke-virtual {p1}, Lcom/miui/home/launcher/CellLayout;->getParent()Landroid/view/ViewParent;
 
-    move-result v0
+    move-result-object p1
 
-    if-eqz v0, :cond_0
+    check-cast p1, Lcom/miui/home/launcher/CellScreen;
 
-    .line 1181
-    iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$3;->this$0:Lcom/miui/home/launcher/CellLayout;
+    invoke-virtual {p1}, Lcom/miui/home/launcher/CellScreen;->onNormalEditAnimationExitEnd()V
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/CellLayout;->deleteSelf()V
+    return-void
+.end method
 
-    :cond_0
+.method public onAnimationStart(Landroid/animation/Animator;)V
+    .locals 0
+
+    .line 418
+    iget-object p1, p0, Lcom/miui/home/launcher/CellLayout$3;->this$0:Lcom/miui/home/launcher/CellLayout;
+
+    invoke-virtual {p1}, Lcom/miui/home/launcher/CellLayout;->getParent()Landroid/view/ViewParent;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/miui/home/launcher/CellScreen;
+
+    invoke-virtual {p1}, Lcom/miui/home/launcher/CellScreen;->onNormalEditAnimationStart()V
+
     return-void
 .end method

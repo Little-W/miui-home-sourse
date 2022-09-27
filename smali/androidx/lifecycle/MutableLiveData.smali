@@ -27,20 +27,6 @@
 
 
 # virtual methods
-.method public postValue(Ljava/lang/Object;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TT;)V"
-        }
-    .end annotation
-
-    .line 45
-    invoke-super {p0, p1}, Landroidx/lifecycle/LiveData;->postValue(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
 .method public setValue(Ljava/lang/Object;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;

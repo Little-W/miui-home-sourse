@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="Icon_name_classic_mode">ହୋମ୍‌ ସ୍କ୍ରିନ୍ ସେଟିଂସ୍‌</string>
     <string name="accessibility_all_app_custom_category_finish">ସମ୍ପୂର୍ଣ୍ଣ</string>
     <string name="accessibility_all_app_custom_category_item_remove">କ୍ୟାଟାଗୋରୀରୁ \"%1$s\"କୁ କାଢ଼ନ୍ତୁ</string>
     <string name="accessibility_clear_search_bar_text">ସନ୍ଧାନ ବାର୍ ସଫା କରନ୍ତୁ</string>
@@ -26,10 +25,8 @@
     <string name="activity_not_unlocked">ଆପ୍ସ ଖୋଲିବା ପୂର୍ବରୁ ଆପଣଙ୍କ ଡିଭାଇସ ସମ୍ପୂର୍ଣ୍ଣରୂପେ ରିବୁଟ୍ ହେବା ପର୍ଯ୍ୟନ୍ତ ଅପେକ୍ଷା କରନ୍ତୁ</string>
     <string name="add_custom_category">କଷ୍ଟମ୍</string>
     <string name="add_screen">ସ୍କ୍ରିନ୍‌ ଯୋଡ଼ନ୍ତୁ</string>
-    <string name="add_to_workspace">ହୋମ ସ୍କ୍ରିନରେ ଯୋଗ କରନ୍ତୁ</string>
     <string name="added_all_category">ସଫଳତାର ସହିତ ସମସ୍ତ ଆପ୍ସ ଯୋଗ କରାଗଲା</string>
     <string name="afternoon">ମଧ୍ୟାହ୍ନ</string>
-    <string name="agree_button">ସହମତ</string>
     <string name="alexa_notification_add">ଯୋଗ କରନ୍ତୁ</string>
     <string name="alexa_notification_cancel">ବର୍ତ୍ତମାନ ନୁହେଁ</string>
     <string name="alexa_notification_content">କଣ୍ଟ୍ରୋଲ ସେଣ୍ଟରରେ Alexa ସର୍ଟକଟ ଯୋଗ କରିବେ?</string>
@@ -68,7 +65,6 @@
     <string name="all_apps_slide_up_tips">ଆପ୍ ଡ୍ରୟର ଖୋଲିବା ପାଇଁ ସ୍ୱାଇପ୍ ଅପ୍ ସଂରକ୍ଷିତ। ସାଧାରଣ ହୋମସ୍କ୍ରିନ ମୋଡକୁ ସୁଇଚ୍ କରନ୍ତୁ ଏବଂ ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ।</string>
     <string name="all_apps_suggestions">ଆପ ମତାମତ</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">ଆନିମେସନ ବେଗ</string>
     <string name="announce_for_app_move_in_folder">ଫୋଲଡରରେ %1$d ସ୍ଥିତିକୁ ମୁଭ ହୋଇଛି</string>
     <string name="announce_for_checked">%1$s, ଚେକ୍ ହୋଇଛି</string>
     <string name="announce_for_choose_default_screen">ସ୍କ୍ରିନ୍ %1$dକୁ ଡିଫଲ୍ଟ ହୋମ୍‌ ସ୍କ୍ରିନ୍ ଭାବେ ସେଟ୍ କରନ୍ତୁ</string>
@@ -121,13 +117,6 @@
     <string name="app_category_tools">ଉପକରଣଗୁଡ଼ିକ</string>
     <string name="app_category_travel">ଯାତ୍ରା</string>
     <string name="app_category_vr">VR</string>
-    <string name="app_drawer_double_confirm_description">ଏହା ଆପଣଙ୍କ ହୋମ ସ୍କ୍ରିନ ଲେଆଉଟ୍ ପରିବର୍ତ୍ତନ କରିବ। ଆପଣ ପରେ ଏଇ ପରିବର୍ତ୍ତନଗୁଡ଼ିକୁ ସେଟିଂସରେ ରିଭାର୍ଟ୍ କରିବାକୁ ସମର୍ଥ ହେବେ।</string>
-    <string name="app_drawer_double_confirm_title">ଧ୍ୟାନ ଦିଅନ୍ତୁ</string>
-    <string name="app_drawer_feature_description">ଆପଣଙ୍କର ସମସ୍ତ ଆପକୁ ସଜାଇବା ପାଇଁ ଆପ୍ ଡ୍ରୟର ହେଉଛି ଏକ ବଢ଼ିଆ ଟୁଲ। ଆପ୍ସ ସ୍ୱତଃ ବର୍ଗୀକୃତ କରନ୍ତୁ ଏବଂ ଆପଣଙ୍କୁ ଯାହା ଦରକାର ଗୋଟିଏ ମୁହୂର୍ତ୍ତରେ ପାଆନ୍ତୁ!</string>
-    <string name="app_drawer_guide_description">ଆପଣଙ୍କ ପସନ୍ଦର ଆପ୍ସରେ ଆପଣ ଯାହା ଚାହୁଁଛନ୍ତି ତାହା ଖୋଜନ୍ତୁ</string>
-    <string name="app_drawer_guide_title">ଆପ୍ ଡ୍ରୟର</string>
-    <string name="app_drawer_tip_title">ଆମେ କଣ୍ଟେଣ୍ଟ ଫିଡକୁ ଆପ୍ ଡ୍ରୟରରେ ବଦଳାଇଛୁ।</string>
-    <string name="app_install_state">ସଂସ୍ଥାପିତ</string>
     <string name="app_name">smallWindow</string>
     <string name="application_name">ସିଷ୍ଟମ୍ ଲଞ୍ଚର</string>
     <string name="apply">ସେଟ୍ କରନ୍ତୁ</string>
@@ -150,35 +139,8 @@
     <string name="back">ବ୍ୟାକ୍</string>
     <string name="backup_fail">ଲଞ୍ଚର ବ୍ୟାକଅପ କରାଯାଇପାରିଲା ନାହିଁ</string>
     <string name="bad_wallpaper_source_prompt">ୱାଲ୍‌ପେପର୍‌ ଲୋଡ୍‌ କରିପାରିବ ନାହିଁ</string>
-    <string name="branch_feature_description">ଆପ୍ସ ସହିତ, କୁଇକ୍ ଫାଇଣ୍ଡର ଅନଲାଇନ୍ ଇନ-ଆପ୍ କଣ୍ଟେଣ୍ଟ ଏବଂ ଆଇଟମ ପାଇପାରିବେ।</string>
-    <string name="branch_guide_attention">ଉନ୍ନତ ସନ୍ଧାନ ବ୍ୟବହାର କରିବା Branch Metrics Inc ସହିତ ଆପଣଙ୍କ ସନ୍ଧାନ ଅନୁରୋଧ, Google Ads ଏବଂ IP ଠିକଣା ସେଆର୍ କରିବା ଦରକାର କରେ। ଏହି ଫିଚର୍ ବ୍ୟବହାର କରିବା ପୂର୍ବରୁ <a href="http://url1"><font color="#B3000000">ଉପଭୋକ୍ତା ଡିସକଭରୀ ଚୁକ୍ତି ଓ ସର୍ତ୍ତାବଳୀ </font></a> ଏବଂ <a href="http://url2"><font color="#B3000000">ବ୍ରାଞ୍ଚ ଡିସକଭରୀ ଗୋପନୀୟତା ନୀତି</font></a>ପଢ଼ି ସହମତ ହୁଅନ୍ତୁ।</string>
-    <string name="branch_guide_description_one">ଆମେ ଆପଣଙ୍କ ସମସ୍ତ ଆପ୍ସକୁ ଆପ୍ ଡ୍ରୟରରେ ରଖିବୁ। ଆପଣଙ୍କ ହୋମ ସ୍କ୍ରିନ୍ ସଫା ଏବଂ ବ୍ୟବସ୍ଥିତ ଦେଖାଯିବ।</string>
-    <string name="branch_guide_description_three">ସେଥିରେ ରହିଛି ସନ୍ଧାନ ସୁବିଧା, ଆପଣ ଯାହା ଚାହାଁନ୍ତି ତାହା ଶୀଘ୍ର ପାଇବାକୁ ସମର୍ଥ ହେବେ!</string>
-    <string name="branch_guide_description_two">ଆପ୍ ଡ୍ରୟର ସ୍ୱତଃ ଆପ୍ସ ବର୍ଗୀକୃତ କରେ।</string>
-    <string name="branch_guide_tip_title">ପ୍ରତ୍ୟେକ ଆପ୍ ତାର ନିଜ ସ୍ଥାନରେ</string>
-    <string name="branch_guide_title">ଆପ୍ ଡ୍ରୟରକୁ ବ୍ୟବହାର କରନ୍ତୁ</string>
-    <string name="branch_guide_type_four_desc">ଦୁଇଟି ସରଳ ଷ୍ଟେପରେ ଆପଣ ପୁରୁଣା ପଦ୍ଧତିକୁ ଫେରିପାରିବେ</string>
-    <string name="branch_guide_type_four_main">ସେଟିଂସରେ ହୋମ ସ୍କ୍ରିନ୍ > ହୋମ ସ୍କ୍ରିନକୁ ଯାଆନ୍ତୁ ଏବଂ \"କ୍ଲାସିକ\" ଚୟନ କରନ୍ତୁ ।</string>
-    <string name="branch_guide_type_four_step_one">ସେଟିଂସ୍ ଖୋଲନ୍ତୁ</string>
-    <string name="branch_guide_type_four_step_two">ହୋମ ସ୍କ୍ରିନ୍ ଚୟନ କରନ୍ତୁ</string>
-    <string name="branch_guide_type_one_desc">ଆପ୍ ଡ୍ରୟର ଦ୍ୱାରା ଆପଣଙ୍କ ଆପଗୁଡ଼ିକୁ ପରିଚାଳନା କରନ୍ତୁ</string>
-    <string name="branch_guide_type_one_main">ଆପଣଙ୍କ ହୋମ ସ୍କ୍ରିନକୁ ସଫା ଏବଂ ବ୍ୟବସ୍ଥିତ ରଖିବାକୁ ଆପଣଙ୍କ ଆପଗୁଡ଼ିକୁ ଆପ୍ ଡ୍ରୟରରେ ରଖନ୍ତୁ।</string>
-    <string name="branch_new_feature">ନୂତନ ଫିଚର୍</string>
-    <string name="branch_privacy_policy">ଗୋପନୀୟତା ନୀତି</string>
-    <string name="branch_search_guide_description">ଆମର ସନ୍ଧାନ ଫଳାଫଳ ଏବେ ଅଧିକ ବିସ୍ତୃତ ହୋଇଛି</string>
-    <string name="branch_search_guide_privacy">ସେବାଟି Branch Metrics Inc ଦ୍ୱାରା ସଂଚାଳିତ। ଆପଣଙ୍କ ସ୍ଥାନ ସୂଚନା, ସନ୍ଧାନ ପ୍ରଶ୍ନ, ଏବଂ Google Ads ID, Branch ସହିତ ସେଆର୍ କରାଯିବ। ଏହି ସେବା ବ୍ୟବହାର କରିବା ପୂର୍ବରୁ ଆପଣ Branchର <a href="http://url1"><font color="#B3000000">ଚୁକ୍ତି ଏବଂ ସର୍ତ୍ତାବଳୀ</font></a> ଏବଂ <a href="http://url2"><font color="#B3000000">ଗୋପନୀୟତା ନୀତି</font></a>ପଢ଼ି ସହମତ ହୁଅନ୍ତୁ।</string>
-    <string name="branch_search_guide_title">ଆପଣଙ୍କ ପସନ୍ଦର ଆପ୍ସରେ ଆପଣ ଯାହା ଚାହୁଁଛନ୍ତି ତାହା ଖୋଜନ୍ତୁ</string>
-    <string name="branch_terms_condition">ଚୁକ୍ତି ଏବଂ ସର୍ତ୍ତାବଳୀ</string>
-    <string name="branch_tip_title">କୁଇକ୍ ଫାଇଣ୍ଡରରେ ଆପଣଙ୍କୁ ଯାହା ଦରକାର ଶୀଘ୍ର ପାଇପାରିବେ।</string>
-    <string name="btn_agree">ସହମତ</string>
-    <string name="btn_cancel">ବାତିଲ୍</string>
-    <string name="btn_close">ବନ୍ଦ କରନ୍ତୁ</string>
-    <string name="btn_open">ଚାଲୁ କରନ୍ତୁ</string>
-    <string name="btn_request_permission">ଅନୁମତି ଦିଅନ୍ତୁ</string>
-    <string name="btn_set_right_now">ଅନୁମତି ଦିଅନ୍ତୁ</string>
     <string name="buffering">ବଫରିଂ ହେଉଛି…</string>
     <string name="cancel_action">ବାତିଲ୍</string>
-    <string name="cancel_botton">ବାତିଲ୍</string>
     <string name="cancel_btn_label">ବାତିଲ୍</string>
     <string name="cant_edit_lock_screen">ଲକ୍‌ ସ୍କ୍ରିନ୍‌ ଶୈଳୀ ସମ୍ପାଦନା କରି ପାରିବ ନାହିଁ।</string>
     <string name="cant_remove_folder">ଫୋଲ୍‌ଡର୍‍ ହଟାଯାଇପାରିବ ନାହିଁ</string>
@@ -288,11 +250,9 @@
     <string name="emptyplaylist">ଗୀତଗୁଡ଼ିକ ଯୋଗ କରିବା ପାଇଁ ଟ୍ୟାପ୍‌ କରନ୍ତୁ</string>
     <string name="enable_wallpaper_scroll">ସାଇଡ୍‌ ସ୍କ୍ରଲିଂ ଚାଲୁ କରନ୍ତୁ</string>
     <string name="encryption">ଏନ୍‌‍କ୍ରିପ୍ସନ୍‌</string>
-    <string name="enter_search_setting_title">ଆପ୍ ଡ୍ରୟର ଖୋଲିବା ପରେ ସନ୍ଧାନ ଖୋଲନ୍ତୁ</string>
     <string name="eras_ad">CE</string>
     <string name="eras_bc">BCE</string>
     <string name="evening">ମଧ୍ୟାହ୍ନ</string>
-    <string name="exit_overview_because_task_stack_changed">ପୃଷ୍ଠପଟରେ ପରିବର୍ତ୍ତନ ହେବା ଯୋଗୁଁ \"ବର୍ତ୍ତମାନର\" କୁ ବନ୍ଦ କରାଯାଇଛି</string>
     <string name="failed_to_delete_temporary">ହଟାଯାଇ ପାରିବ ନାହିଁ</string>
     <string name="failed_to_drop">ସ୍ଥାନାନ୍ତରିତ କରାଯାଇପାରିବ ନାହିଁ</string>
     <string name="failed_to_drop_widget_invalid">ଏହି ୱିଜେଟ୍ ଅମାନ୍ୟ ଅଟେ</string>
@@ -349,8 +309,6 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
-    <string name="fold_pair_install_shortcut_long_click">ହୋମ ସ୍କ୍ରିନରେ ଯୋଗ କରିବାକୁ ଦବାନ୍ତୁ ଏବଂ ଧରି ରଖନ୍ତୁ</string>
-    <string name="fold_pair_installed_shortcut_launcher">ଏହି ସର୍ଟକଟ୍ ଆଗରୁ ଅଛି</string>
     <string name="folder_name">ଫୋଲ୍ଡର</string>
     <string name="frame_load_failed">ଫ୍ରେମ୍‌ ଲୋଡ୍‌ ହୋଇପାରିବ ନାହିଁ</string>
     <string name="free_style_apps_title">ଆପ୍ ବାଛନ୍ତୁ</string>
@@ -406,14 +364,11 @@
     <string name="gadget_weather_title_14">ପାଣିପାଗ</string>
     <string name="gadget_weather_title_24">ପାଣିପାଗ</string>
     <string name="global_search_hint">ସନ୍ଧାନ</string>
-    <string name="got_it_botton">ଜାଣିଗଲେ</string>
     <string name="group_folder">ନୂତନ ଫୋଲ୍‌ଡର୍‍</string>
     <string name="group_live_folders">ଫୋଲଡରଗୁଡ଼ିକ</string>
     <string name="group_shortcuts">ସର୍ଟକଟ୍</string>
     <string name="guide_install_app_msg">ଏହି ଆପଟି ଆପଣଙ୍କ ଡିଭାଇସ୍‌ରେ ସଂସ୍ଥାପିତ ହୋ‌‍ଇନାହିଁ। ଏବେ ଆପକୁ ଖୋଜିବେ ଏବଂ ସଂସ୍ଥାପିତ କରିବେ ?</string>
     <string name="guide_install_app_title">ଆପ୍ଲିକେସନ୍‌ ସନ୍ଧାନ କରିବେ ଓ ସଂସ୍ଥାପନ କରିବେ କି?</string>
-    <string name="guide_permission_title">ଅନୁମତି ଆବଶ୍ୟକ</string>
-    <string name="guide_privacy_dialog_title">ସେବାର ସର୍ତ୍ତାବଳୀ</string>
     <string name="guide_tips_editing_mode">ଦବାନ୍ତୁ &amp;ଗୋଟିଏ ୱିଜେଟ୍‌ ନେବାକୁ ଧରିରଖନ୍ତୁ</string>
     <string name="home_gesture_content_center">କଣ୍ଟେଣ୍ଟ ସେଣ୍ଟର</string>
     <string name="home_gesture_global_search">ସନ୍ଧାନ</string>
@@ -444,9 +399,6 @@
     <string name="launcher_slide_up_title">ହୋମସ୍କ୍ରିନରେ ସ୍ୱାଇପ୍ ଅପ କରନ୍ତୁ</string>
     <string name="launcher_sliding_up_gesture">ସନ୍ଧାନ ଖୋଲିବାକୁ ହୋମ୍‌ ସ୍କ୍ରିନରେ ସ୍ୱାଇପ୍‌ ଅପ୍ କରନ୍ତୁ</string>
     <string name="launcher_title">ହୋମ୍‌ ସ୍କ୍ରିନ୍ &amp; ବର୍ତ୍ତମାନ</string>
-    <string name="layout_guide_description">ଆପଣଙ୍କୁ ଯଦି ଆପ୍ ଡ୍ରୟର ଭଲ ଲାଗେ ନାହିଁ, ଆପଣ ସର୍ବଦା କ୍ଲାସିକ ହୋମ ସ୍କ୍ରିନକୁ ଯାଇପାରିବେ। ଆପଣ \"ହୋମ ସ୍କ୍ରିନ ସେଟିଂସ\" ସର୍ଟକଟ୍ ବ୍ୟବହାର କରନ୍ତୁ ଏବଂ ଦୁଇ ମୋଡ ମଧ୍ୟରେ ସୁଇଚ୍ କରନ୍ତୁ।</string>
-    <string name="layout_guide_tip_title">ଗୋଟିଏ ଟେପରେ ଆପଣ ପୁରୁଣା ପଦ୍ଧତିକୁ ଫେରିପାରିବେ</string>
-    <string name="layout_guide_title">ଆପ୍ ଡ୍ରୟର କେମିତି କାଢ଼ିବେ</string>
     <string name="like">ପସନ୍ଦଗୁଡ଼ିକରେ ଯୋଡ଼ନ୍ତୁ</string>
     <string name="liked">ପସନ୍ଦଗୁଡ଼ିକରେ ଯୋଗ କରାଯାଇଛି</string>
     <string name="loading_desktop">ଗୋଟିଏ ସେକେଣ୍ଡ…</string>
@@ -613,11 +565,6 @@
     <string name="navigation_guide_recent_title">ବର୍ତ୍ତମାନକୁ ଖୋଲନ୍ତୁ</string>
     <string name="navigation_guide_recent_title_spec_with_quotation_pad">ବର୍ତ୍ତମାନକୁ ଖୋଲନ୍ତୁ</string>
     <string name="navigation_guide_settings">ଜେଶ୍ଚର ଡେମୋ</string>
-    <string name="navigation_position_center">ସେଣ୍ଟର</string>
-    <string name="navigation_position_left">ବାମ</string>
-    <string name="navigation_position_right">ଡାହାଣ</string>
-    <string name="navigation_position_summary">ନାଭିଗେସନ ବଟନର କଷ୍ଟମ ପୋଜିସନ କେବଳ ହୋମ ସ୍କ୍ରିନରେ ହିଁ ଲାଗୁ ହୋଇପାରିବ</string>
-    <string name="navigation_position_title">ନାଭିଗେସନ ବଟନ ପୋଜିସନ</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">ବାତିଲ</string>
     <string name="navigation_set_miui_home_as_default_dialog_message">ତୃତୀୟ ପକ୍ଷ ଲଞ୍ଚର୍ ସହିତ ପୂର୍ଣ୍ଣ ସ୍କ୍ରିନ ଜେଶ୍ଚର ବ୍ୟବହାର କରିପାରିବ ନାହିଁ। ସିଷ୍ଟମ ଲଞ୍ଚରକୁ ସୁଇଚ୍ କରି ପୂର୍ଣ୍ଣ ସ୍କ୍ରିନ ଜେଶ୍ଚର ଚାଲୁ କରିବେ?</string>
     <string name="navigation_set_miui_home_as_default_dialog_ok">ଓକେ</string>
@@ -626,11 +573,9 @@
     <string name="navigation_type_title">ସିଷ୍ଟମ୍ ନେଭିଗେସନ</string>
     <string name="navigation_type_virtual_key">ବଟନ୍‌ଗୁଡ଼ିକ</string>
     <string name="network_error">ନେଟୱାର୍କ୍ ସଂଯୋଗ ହୋଇପାରିଲା ନାହିଁ। ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ।</string>
-    <string name="new_feature_title">"ନୂଆ କ'ଣ ଅଛି"</string>
     <string name="night">ସନ୍ଧ୍ୟା</string>
     <string name="no_detail_page">କୌଣସି ବିବରଣୀ ପୃଷ୍ଠା ନାହିଁ</string>
     <string name="no_space_toast">ପର୍ଯ୍ୟାପ୍ତ ସ୍ଥାନ ନାହିଁ</string>
-    <string name="no_space_toast_fold">ଏଠାରେ ଯଥେଷ୍ଟ ସ୍ଥାନ ନାହିଁ</string>
     <string name="no_space_toast_when_click_widget">ଏହି ପୃଷ୍ଠାରେ ଯଥେଷ୍ଟ ଜାଗା ନାହିଁ। ଏହି ଆଇଟମକୁ ଭିନ୍ନ ଏକ ପୃଷ୍ଠାକୁ ଡ୍ରାଗ୍ କରିବାକୁ ଚେଷ୍ଟା କରନ୍ତୁ।</string>
     <string name="noon">ଅପରାହ୍ନ</string>
     <string name="normal_wallpaper">ୱାଲପେପର୍</string>
@@ -639,7 +584,6 @@
     <string name="notification_reset_title">ସଫଳତାର ସହିତ ଆଇକନ ସଜା ଯାଇଛି</string>
     <string name="one_key_call_title">ଡାଏଲ୍ କରିବା ପାଇଁ ଟେପ୍ କରନ୍ତୁ</string>
     <string name="online_wallpaper">ଅନ୍‌ଲାଇନ୍‍</string>
-    <string name="open_pad_personal_assistant_settings">ହୋମ ସ୍କ୍ରିନ୍ ୱିଜେଟ୍</string>
     <string name="open_personal_assistant_dialog_btn_cancel">ବାତିଲ୍</string>
     <string name="open_personal_assistant_dialog_btn_confirm">ବନ୍ଦ କରନ୍ତୁ</string>
     <string name="open_personal_assistant_dialog_desc">ଆପଣ ଆପ୍ ଭଲ୍ଟ ବନ୍ଦ କଲା ପରେ ଆପଣ ଆପ୍ ଭଲ୍ଟ ୱିଜେଟ୍ ଦେଖିବାକୁ ବା ବ୍ୟବହାର କରିବାକୁ ସକ୍ଷମ ହେବେ ନାହିଁ। ସେଗୁଡ଼ିକର ଅପଡେଟ୍ ହୋଇଥିବା ସଂସ୍କରଣ ମଧ୍ୟ ଆପଣଙ୍କ ପାଇଁ ଉପଲବ୍ଧ ହେବ ନାହିଁ। ଯେ କୌଣସି ଭାବେ ବନ୍ଦ କରିବେ?</string>
@@ -651,7 +595,6 @@
     <string name="ota_layout_adjustment_content">ନୂତନ ସଂସ୍କରଣରେ ଭିତର ଏବଂ ବାହାର ହୋମ ସ୍କ୍ରିନ୍ ଲେଆଉଟ୍ ସିଙ୍କ୍ରୋନାଇଜ୍ ହୋଇଛି।</string>
     <string name="ota_layout_adjustment_title">ହୋମ୍‌ ସ୍କ୍ରିନ୍ ଲେଆଉଟ୍‌</string>
     <string name="out_of_space">ଏହି ହୋମ୍‌ସ୍କ୍ରିନ୍‌ରେ ଅଧିକ ସ୍ଥାନ ନାହିଁ</string>
-    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">ତୃତୀୟପକ୍ଷ ଆପ୍ ଆଇକନଗୁଡ଼ିକ ଉପରେ ଆନିମେସନ୍ ରେଣ୍ଡର୍ କରନ୍ତୁ</string>
     <string name="perfect_icons_switch_title">ଗ୍ଲୋବାଲ ଆଇକନ ଆନିମେସନ୍</string>
     <string name="permdesc_install_shortcut">ଉପଭୋକ୍ତାଙ୍କ ହସ୍ତକ୍ଷେପ ବିନା ସର୍ଟକଟ୍‌ଗୁଡ଼ିକ ଯୋଡ଼ିବା ପାଇଁ ଏକ ଆପ୍ଲିକେସନକୁ ଅନୁମତି ଦେଇଥାଏ।</string>
@@ -671,7 +614,6 @@
     <string name="photo_load_failed">ଫଟୋ ଲୋଡ୍ ହୋଇପାରିବ ନାହିଁ</string>
     <string name="please_slide_agian">ପୁଣି ସ୍ଲାଇଡ କରନ୍ତୁ</string>
     <string name="pm">PM</string>
-    <string name="popular_search">ଲୋକପ୍ରିୟ</string>
     <string name="pref_cell_layout_size">ଆପ୍ ଆଇକନ୍‌ ଲେଆଉଟ୍‍</string>
     <string name="pref_enable_drawing_cache_summary">ମେମୋରୀ ଖାଲି କରିବା ପାଇଁ ବନ୍ଦ କରନ୍ତୁ। ଏହି କାରଣରୁ କାର୍ଯ୍ୟକାଦକ୍ଷତା ଧୀର ହୋ‌ଇଯାଇପାରେ।</string>
     <string name="pref_enable_drawing_cache_title">ଡ୍ର‌ଇଂ କ୍ୟାଚେ</string>
@@ -691,14 +633,6 @@
     <string name="privacy_thumbnail_blur_summary">ବର୍ତ୍ତମାନରେ ବ୍ଲର୍ ଆପ୍ ପ୍ରିଭିଉ</string>
     <string name="privacy_thumbnail_blur_title">ବ୍ଲର୍ ଆପ୍ ପ୍ରିଭିଉ</string>
     <string name="quick_app">Quick ଆପ୍</string>
-    <string name="quick_finder_feature_description">କୁଇକ୍ ଫାଇଣ୍ଡର ଆପଣଙ୍କୁ ଆପ୍ସ ଖୋଜିବା, ଇନ-ଆପ୍ କଣ୍ଟେଣ୍ଟ ଏବଂ ଅନଲାଇନ୍ ଆଇଟମଗୁଡ଼ିକ ଶୀଘ୍ର ଖୋଜିବାକୁ ଦେଇଥାଏ। ଆପଣ ସେଟିଂସରେ ଏଇ ଫିଚରକୁ ବନ୍ଦ କରିପାରିବେ।</string>
-    <string name="quick_finder_tip_title">ଆପଣଙ୍କୁ ଯାହା ଦରକାର ସବୁ ଶୀଘ୍ର ପାଆନ୍ତୁ</string>
-    <string name="quick_search_all_app_desc">ଆପ୍ ଡ୍ରୟରରେ ସମସ୍ତ ଆପ୍ସ ଡିସପ୍ଲେ କରନ୍ତୁ</string>
-    <string name="quick_search_desc">ଆପ୍ ଡ୍ରୟର ଖୋଲିବା ପରେ ସନ୍ଧାନ ଖୋଲନ୍ତୁ</string>
-    <string name="quick_search_guide_all_apps">ସମସ୍ତ ଆପ୍ସ</string>
-    <string name="quick_search_guide_ok_btn">ଓକେ</string>
-    <string name="quick_search_guide_quick_search">କୁଇକ୍ ସନ୍ଧାନ</string>
-    <string name="quick_search_guide_title">ଡିଫଲ୍ଟ ମୋଡ୍ ଚୟନ କରନ୍ତୁ</string>
     <string name="recent_apps">ବର୍ତ୍ତମାନ</string>
     <string name="recent_menu_item_info">ସୂଚନା</string>
     <string name="recent_menu_item_lock">ଲକ୍‍</string>
@@ -727,13 +661,6 @@
     <string name="recents_title_market">ଆପ୍ସ ଖୋଜନ୍ତୁ</string>
     <string name="recents_title_security_scan">ସୁରକ୍ଷା ସ୍କାନ୍</string>
     <string name="recents_tv_small_window_text">ଫ୍ଲୋଟିଂ ୱିଣ୍ଡୋ</string>
-    <string name="recents_worldcirculate_text">ଚୟନ କରିବାକୁ ରିଲିଜ କରନ୍ତୁ</string>
-    <string name="recnets_relay_device_info">%sରୁ</string>
-    <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
-    <string name="recnets_worldcirculate_display_computer_info">ଆପଟି %sରେ କାମ କରୁଛି।</string>
-    <string name="recnets_worldcirculate_display_default_info">ତାକୁ ଏଠାକୁ ପୁଣି ଆଣିବାକୁ ଟେପ୍ କରନ୍ତୁ।</string>
-    <string name="recnets_worldcirculate_display_default_info_pad">ତାକୁ ଏଠାକୁ ପୁଣି ଆଣିବାକୁ ଟେପ୍ କରନ୍ତୁ।</string>
-    <string name="recnets_worldcirculate_display_pad_info">ଆପଟି %sରେ କାମ କରୁଛି।</string>
     <string name="recommend_apk_size_and_desc">%1$dMB | %2$s</string>
     <string name="recommend_app">ଆପ ମତାମତ</string>
     <string name="recommend_apps_default_title">ଖାଲି</string>
@@ -751,8 +678,6 @@
     <string name="remove_invalidate_gadget_tips">ଆପଣ ବ୍ୟବହାର କରୁଥିବା ଗୋଟିଏ ୱିଜେଟ୍ ଆଉ ଉପଲବ୍ଧ ନାହିଁ। ଆପଣ ଅନ୍ୟ ଗୋଟିଏ ଯୋଗ କରିପାରିବେ।</string>
     <string name="remove_sys_app_content">ଆପଣ ସେଟିଂସ୍ > ଆପ୍ସ > ହୋମ ସ୍କ୍ରିନ୍ ସର୍ଟକଟ୍ ପରିଚାଳନା କରନ୍ତୁରେ ପୁଣି ହୋମ ସ୍କ୍ରିନ୍ ସର୍ଟକଟ୍ ଯୋଗ କରିବାକୁ ସକ୍ଷମ ହେବେ। ଏବେ କାଢ଼ିବେ?</string>
     <string name="remove_sys_app_title">ହୋମ ସ୍କ୍ରିନ୍ ସର୍ଟକଟ୍ କାଢ଼ିବେ?</string>
-    <string name="request_permission_msg">POCO ଲଞ୍ଚର୍ ତାର ସମ୍ପୂର୍ଣ୍ଣ କାର୍ଯ୍ୟଦକ୍ଷତାକୁ ଆପଣଙ୍କୁ ଆକେସେସ୍ ଦେବା ପାଇଁ କେତେକ ଅନୁମତି ଆବଶ୍ୟକ କରେ।</string>
-    <string name="request_permission_title">ଅନୁମତି ଆବଶ୍ୟକ</string>
     <string name="reset_cate_tip_content">ଆପଣ ଯଦି ଜାରି ରଖନ୍ତି, ଡିଫଲ୍ଟ ଆପ୍ ଗ୍ରୁପ୍ ରିଷ୍ଟୋର ହେବ। ଯେ କୌଣସି ଭାବେ ଆଗକୁ ବଢ଼ିବେ?</string>
     <string name="reset_cate_tip_title">ଡିଫଲ୍ଟ୍‌ ଗ୍ରୁପ୍ ରିଷ୍ଟୋର କରନ୍ତୁ</string>
     <string name="reset_description_first_time">2 ଘଣ୍ଟା ଭିତରେ ଆପଣ %1$sରୁ ଲେଆଉଟ ରିଷ୍ଟୋର କରିପାରିବେ</string>
@@ -768,8 +693,6 @@
     <string name="screen_cells_config_title">ହୋମ୍‌ ସ୍କ୍ରିନ୍ ଲେଆଉଟ୍‌</string>
     <string name="screen_locked_toast">ହୋମ୍‌ ସ୍କ୍ରିନ୍ ଲେଆଉଟ୍‌ ଲକ୍‌ ହୋଇଛି</string>
     <string name="screen_number">%d ସ୍କ୍ରିନ୍‌</string>
-    <string name="search_bar_hint_content">ଆପ୍ସ ଏବଂ କଣ୍ଟେଣ୍ଟ ପାଇଁ ସନ୍ଧାନ କରନ୍ତୁ</string>
-    <string name="search_guide_btn">ଜାଣିଗଲେ</string>
     <string name="search_in_apps_store">\"%1$s\" ପାଇଁ %2$sରେ ସନ୍ଧାନ କରନ୍ତୁ</string>
     <string name="search_no_result">କୌଣସି ଫଳାଫଳ ମିଳିପାରିଲା ନାହିଁ</string>
     <string name="select_all">ସମସ୍ତ ଚୟନ କରନ୍ତୁ</string>
@@ -777,7 +700,6 @@
     <string name="select_photo">ଫଟୋ</string>
     <string name="send">ପଠାନ୍ତୁ</string>
     <string name="server_error">ଏକ ସର୍ଭର ତ୍ରୁଟି ଘଟିଛି। ଗୋଟିଏ ବା ଦୁଇ ମିନିଟ ଅପେକ୍ଷା କରନ୍ତୁ ଏବଂ ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ।</string>
-    <string name="service_double_attention">ଉନ୍ନତ ସନ୍ଧାନ କାର୍ଯ୍ୟଦକ୍ଷତା Branch Metrics Inc ଦ୍ୱାରା ଦିଆଯାଏ। ଏହି ଫିଚର ଆପଣଙ୍କ ପାଇଁ କାମ କରିବାକୁ ଆମେ Branch Metrics Inc ସହିତ ଆପଣଙ୍କ ସନ୍ଧାନ ଅନୁରୋଧ, Google Ads ଏବଂ IP ଠିକଣା ସେଆର୍ କରିବା ଦରକାର କରୁ। ଏହି ଫିଚର୍ ବ୍ୟବହାର କରିବା ପୂର୍ବରୁ <a href="http://url1"><font color="#B3000000">ଉପଭୋକ୍ତା ଡିସକଭରୀ ଚୁକ୍ତି ଓ ସର୍ତ୍ତାବଳୀ </font></a> ଏବଂ <a href="http://url2"><font color="#B3000000">ବ୍ରାଞ୍ଚ ଡିସକଭରୀ ଗୋପନୀୟତା ନୀତି</font></a>ପଢ଼ି ସହମତ ହୁଅନ୍ତୁ।</string>
     <string name="setting_wallpaper_tip">ଆଡ୍‌ଜଷ୍ଟ କରିବା ପାଇଁ ପିଞ୍ଚ ବା ସ୍ୱାଇପ୍‌ କରନ୍ତୁ</string>
     <string name="settings">ସେଟିଂସ୍‌</string>
     <string name="settings_shortcut">ସେଟିଂସ୍‌</string>
@@ -815,13 +737,11 @@
     <string name="status_installing">ସଂସ୍ଥାପନ ହେଉଛି</string>
     <string name="status_paused">ବିରତ ହୋ‌ଇଛି</string>
     <string name="status_pending">ଅପେକ୍ଷା କରୁଛି</string>
-    <string name="suggestions">ପରାମର୍ଶ</string>
     <string name="sunday">ରବିବାର</string>
     <string name="sunday_short">ରବି</string>
     <string name="sunday_shortest">ରବି</string>
     <string name="swipe_the_desktop_to_the_left">ହୋମ ସ୍କ୍ରିନରେ ବାମକୁ ସ୍ୱାଇପ୍ କରନ୍ତୁ</string>
     <string name="swipe_the_desktop_to_the_right">ହୋମ ସ୍କ୍ରିନରେ ଡାହାଣକୁ ସ୍ୱାଇପ୍ କରନ୍ତୁ</string>
-    <string name="switch_on_button">ଚାଲୁ କରନ୍ତୁ</string>
     <string name="switch_personal_assistant_app_vault">ଆପ୍ ଭଲ୍ଟ</string>
     <string name="switch_personal_assistant_google">Google Discover</string>
     <string name="switch_personal_assistant_none">କିଛି ନାହିଁ</string>
@@ -832,10 +752,6 @@
     <string name="system_shortcuts_remove">କାଢ଼ନ୍ତୁ</string>
     <string name="system_text">ସ୍ୱତଃ</string>
     <string name="task_access_locked_app_msg">ଆପ୍‌ ଲକ୍ ଚାଲୁ ହୋଇଛି</string>
-    <string name="term_of_service">ଚୁକ୍ତି ଏବଂ ସର୍ତ୍ତାବଳୀ</string>
-    <string name="terms_of_services_one">ଆପ୍ ଡ୍ରୟର ଏବଂ କୁଇକ୍ ଫାଇଣ୍ଡରକୁ ଆପଣଙ୍କୁ ସ୍ୱାଗତ। କୁଇକ୍ ଫାଇଣ୍ଡର୍ ଆପଣଙ୍କୁ ଆପ୍ସ, ଇନ୍-ଆପ୍ କଣ୍ଟେଣ୍ଟ ଏବଂ ଆଇଟମଗୁଡ଼ିକୁ ଅନଲାଇନ୍ ଶୀଘ୍ର ଖୋଜିବାକୁ ଆପଣଙ୍କୁ ସକ୍ଷମ କରିଥାଏ। ଏଇ ଫିଚରଗୁଡ଼ିକୁ ବ୍ୟବହାର କରିବା ପୂର୍ବରୁ Xiaomiର <a href="http://url1"><font color="#B3000000">ଗୋପନୀୟତା ନୀତି</font></a>ପଢ଼ି ସହମତ ହୁଅନ୍ତୁ।</string>
-    <string name="terms_of_services_three">ଆପଣ ସେଟିଂସ୍‌ରେ ଏହି ଫିଚର ବନ୍ଦ କରିପାରିବେ।</string>
-    <string name="terms_of_services_two">ଉନ୍ନତ ସନ୍ଧାନ ବ୍ୟବହାର କରିବା ଆପଣଙ୍କ ସନ୍ଧାନ ପ୍ରଶ୍ନ, Google ବିଜ୍ଞାପନ ID ଏବଂ IP ଠିକଣା, Branch Metrics Inc ସମେତ ଆବଶ୍ୟକ ବ୍ୟକ୍ତିଗତ ସୂଚନା ସେଆର କରିବା ଆବଶ୍ୟକ କରେ। Branch ଆପଣଙ୍କ ବ୍ୟକ୍ତିଗତ ସୂଚନାକୁ <a href="http://url1"><font color="#B3000000">Branch Discovery ଗୋପନୀୟତା ନୀତି</font></a> ଅନୁସାରେ ପ୍ରୋସେସ୍ କରିବ। ଏଇ ଫିଚର୍ ବ୍ୟବହାର କରିବା ପୂର୍ବରୁ<a href="http://url2"><font color="#B3000000">End User Discovery ଚୁକ୍ତି ଏବଂ ସର୍ତ୍ତାବଳୀ</font></a> ଏବଂ <a href="http://url3"><font color="#B3000000">Branch Discovery ଗୋପନୀୟତା ନୀତି</font></a> ପଢ଼ି ସହମତ ହୁଅନ୍ତୁ।</string>
     <string name="the_anniversary_of_lifting_martial_law">ମାର୍ସିଆଲ୍ ଆଇନ ଉଠାଇବାର ବାର୍ଷିକୀ</string>
     <string name="the_anti_aggression_day">ଆଣ୍ଟି-ଆଗ୍ରେସନ୍ ଡେ</string>
     <string name="the_arbor_day">ଆର୍ବର ଦିବସ</string>
@@ -902,11 +818,6 @@
     <string name="tuesday">ମଙ୍ଗଳବାର</string>
     <string name="tuesday_short">ମଙ୍ଗଳ</string>
     <string name="tuesday_shortest">ମଙ୍ଗଳ</string>
-    <string name="uni_search_permission_content">ଅନଲାଇନ୍ ସନ୍ଧାନ ଫିଚର୍ ଚାଲୁ କରନ୍ତୁ। (ବ୍ରାଞ୍ଚଦ୍ୱାରା ସନ୍ଧାନ ସେବାଗୁଡ଼ିକ ଦିଆଯାଏ।)</string>
-    <string name="uni_search_permission_msg">ସନ୍ଧାନ ଫଳାଫଳକୁ ଉନ୍ନତ କରିବାକୁ ଆପଣଙ୍କ ସ୍ଥାନ ଓ ସମ୍ପର୍କ ଆକସେସ୍ କରିବାକୁ POCO ଲଞ୍ଚରକୁ ଅନୁମତି ଦିଅନ୍ତୁ।</string>
-    <string name="uni_search_permission_title">ଉନ୍ନତ ସନ୍ଧାନ</string>
-    <string name="uni_search_setting_summary">ଆପ୍ ମଧ୍ୟରେ ସିଧାସଳଖ ଭାବେ କଣ୍ଟେଣ୍ଟ ଖୋଜିପାଆନ୍ତୁ</string>
-    <string name="uni_search_setting_title">ଇନ୍-ଆପ୍ କ୍ୱେରି ମୋଡ୍</string>
     <string name="uninstall">ଅଣସଂସ୍ଥାପନ କରନ୍ତୁ</string>
     <string name="uninstall_dialog_message">ଅଣସଂସ୍ଥାପନ କରିବା ଦ୍ୱାରା ସମସ୍ତ ଆପ୍ ଡାଟା ହଟିଯିବ ।</string>
     <string name="uninstall_dialog_title_format">%s ଅଣସଂସ୍ଥାପନ କରିବେ କି?</string>
@@ -917,7 +828,6 @@
     <string name="uninstall_xspace_dialog_title_format">ଡୁଆଲ୍‌ \"%s\"ଅଣସଂସ୍ଥାପନ କରିବେ କି?</string>
     <string name="unknown_artist_name">ଅଜଣା କଳାକାର</string>
     <string name="unnamed_folder_name">ଫୋଲଡର</string>
-    <string name="upgrade_remove_small_window_in_recents">ଫ୍ଲୋଟିଂ ୱିଣ୍ଡୋରେ ଆପଗୁଡ଼ିକୁ ଖୋଲିବାକୁ ଆପଣ ସାଇଡବାର୍ ବ୍ୟବହାର କରିପାରିବେ</string>
     <string name="wallpaper">ୱାଲ୍‌ପେପର୍‍</string>
     <string name="wallpaper_auto_change_title">ଲକ୍‌ ସ୍କ୍ରିନ୍‍</string>
     <string name="wallpaper_failed_message">ୱାଲପେପର୍‌ ସେଟ୍‌ କରିପାରିବେ ନାହିଁ</string>

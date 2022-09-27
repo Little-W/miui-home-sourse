@@ -85,7 +85,7 @@
 
     const-string v0, "1.32.5.1"
 
-    .line 185
+    .line 186
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -94,7 +94,7 @@
 
     const-string v0, "1.32.5.3"
 
-    .line 186
+    .line 187
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -124,7 +124,7 @@
 
     if-ne p2, v1, :cond_1
 
-    .line 293
+    .line 294
     invoke-virtual {p1}, Lcom/miui/home/launcher/FolderInfo;->isRecommendFolder()Z
 
     move-result p2
@@ -135,7 +135,7 @@
 
     goto :goto_0
 
-    .line 295
+    .line 296
     :cond_0
     invoke-virtual {p1}, Lcom/miui/home/launcher/FolderInfo;->isHotFolder()Z
 
@@ -152,7 +152,7 @@
 
     if-ne p2, v1, :cond_4
 
-    .line 299
+    .line 300
     invoke-virtual {p1}, Lcom/miui/home/launcher/FolderInfo;->isRecommendFolder()Z
 
     move-result p2
@@ -163,7 +163,7 @@
 
     goto :goto_0
 
-    .line 301
+    .line 302
     :cond_2
     invoke-virtual {p1}, Lcom/miui/home/launcher/FolderInfo;->isHotFolder()Z
 
@@ -186,7 +186,7 @@
 .method private isCloudCachedDataExpired()Z
     .locals 4
 
-    .line 403
+    .line 404
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -418,16 +418,23 @@
 
     if-nez v0, :cond_2
 
+    iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->mContext:Landroid/content/Context;
+
     .line 173
-    invoke-virtual {p0}, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->isRecommendSwitchOn()Z
+    invoke-virtual {p0}, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->getRecommendSwitchSharedPreferencsKey()Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    invoke-static {v0, v1, v2}, Lcom/miui/home/launcher/common/PreferenceUtils;->getBoolean(Landroid/content/Context;Ljava/lang/String;Z)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    const/4 v0, 0x0
-
-    invoke-interface {p2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    .line 174
+    invoke-interface {p2, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -445,7 +452,7 @@
 
     goto :goto_1
 
-    .line 177
+    .line 178
     :cond_1
     invoke-direct {p0, p2, p1}, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->setPreinstallAdList(Ljava/util/List;Lcom/miui/home/launcher/FolderInfo;)V
 
@@ -572,7 +579,7 @@
 .method static synthetic lambda$setPreinstallAdList$10(Lcom/miui/home/launcher/FolderInfo;)V
     .locals 0
 
-    .line 318
+    .line 319
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderInfo;->getPreinstallManager()Lcom/miui/home/launcher/commercial/preinstall/FolderPreinstallManager;
 
     move-result-object p0
@@ -631,7 +638,7 @@
 .method public static setLastRequestCloudTagId(Ljava/lang/String;)V
     .locals 0
 
-    .line 420
+    .line 421
     sput-object p0, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->sLastRequestCloudTagId:Ljava/lang/String;
 
     return-void
@@ -640,7 +647,7 @@
 .method public static setLastRequestCloudTime(J)V
     .locals 0
 
-    .line 416
+    .line 417
     sput-wide p0, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->sLastRequestCloudTime:J
 
     return-void
@@ -659,7 +666,7 @@
         }
     .end annotation
 
-    .line 311
+    .line 312
     invoke-virtual {p2}, Lcom/miui/home/launcher/FolderInfo;->isRecommendFolder()Z
 
     move-result v0
@@ -675,7 +682,7 @@
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 312
+    .line 313
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
@@ -684,7 +691,7 @@
 
     const-string v0, "RecommendController"
 
-    .line 313
+    .line 314
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -705,7 +712,7 @@
 
     invoke-static {v0, v1}, Lcom/miui/home/launcher/MiuiHomeLog;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 314
+    .line 315
     invoke-virtual {p2}, Lcom/miui/home/launcher/FolderInfo;->getPreinstallManager()Lcom/miui/home/launcher/commercial/preinstall/FolderPreinstallManager;
 
     move-result-object p2
@@ -721,10 +728,10 @@
 
     const-string v0, "recommend folder, clear preinstall ads"
 
-    .line 316
+    .line 317
     invoke-static {p1, v0}, Lcom/miui/home/launcher/MiuiHomeLog;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 317
+    .line 318
     new-instance p1, Lcom/miui/home/launcher/commercial/recommend/cn/-$$Lambda$CNRecommendController$M0aYj_dRZDP0tFEC2TbcxyDmHJM;
 
     invoke-direct {p1, p2}, Lcom/miui/home/launcher/commercial/recommend/cn/-$$Lambda$CNRecommendController$M0aYj_dRZDP0tFEC2TbcxyDmHJM;-><init>(Lcom/miui/home/launcher/FolderInfo;)V
@@ -760,7 +767,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "uploadFirstFolderRecommendAdInfo, appName="
+    const-string v3, "uploadFirstFolderRecommendAdInfo, appName="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -781,7 +788,7 @@
     :cond_0
     const-string v0, "RecommendController"
 
-    const-string/jumbo v1, "uploadFirstFolderRecommendAdInfo, the first one is null"
+    const-string v1, "uploadFirstFolderRecommendAdInfo, the first one is null"
 
     .line 73
     invoke-static {v0, v1}, Lcom/miui/home/launcher/MiuiHomeLog;->log(Ljava/lang/String;Ljava/lang/String;)V
@@ -795,12 +802,12 @@
 .method public buildFolerInfoUsedToRequestAdList(Lcom/miui/home/launcher/FolderInfo;I)Lcom/miui/msa/internal/preinstall/v2/FolderInfo;
     .locals 2
 
-    .line 282
+    .line 283
     new-instance v0, Lcom/miui/msa/internal/preinstall/v2/FolderInfo;
 
     invoke-direct {v0}, Lcom/miui/msa/internal/preinstall/v2/FolderInfo;-><init>()V
 
-    .line 283
+    .line 284
     iget-object v1, p0, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1, v1}, Lcom/miui/home/launcher/FolderInfo;->getFolderNameUsedToRequestFolderAdList(Landroid/content/Context;)Ljava/lang/String;
@@ -809,19 +816,19 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/msa/internal/preinstall/v2/FolderInfo;->setFolderTitle(Ljava/lang/String;)V
 
-    .line 284
+    .line 285
     invoke-virtual {p1}, Lcom/miui/home/launcher/FolderInfo;->getPackageNameList()Ljava/util/ArrayList;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/miui/msa/internal/preinstall/v2/FolderInfo;->setPackages(Ljava/util/List;)V
 
-    .line 285
+    .line 286
     invoke-direct {p0, p1, p2}, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->getTagIdByFolderInfo(Lcom/miui/home/launcher/FolderInfo;I)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 286
+    .line 287
     invoke-virtual {v0, p1}, Lcom/miui/msa/internal/preinstall/v2/FolderInfo;->setTagId(Ljava/lang/String;)V
 
     return-object v0
@@ -830,14 +837,14 @@
 .method public canRecommendSwitchShow()Z
     .locals 1
 
-    .line 331
+    .line 332
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isAppStoreEnabled()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 332
+    .line 333
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isRecommendServerEnable()Z
 
     move-result v0
@@ -846,14 +853,14 @@
 
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->mContext:Landroid/content/Context;
 
-    .line 333
+    .line 334
     invoke-static {v0}, Lcom/miui/home/launcher/commercial/recommend/XOutUtils;->canRecommendSwitchShow(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 334
+    .line 335
     invoke-static {}, Lcom/miui/home/launcher/allapps/LauncherModeController;->isElderlyManMode()Z
 
     move-result v0
@@ -874,7 +881,7 @@
 .method public canShowOldRecommendData()Z
     .locals 1
 
-    .line 395
+    .line 396
     invoke-virtual {p0}, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->isCachedDataExpired()Z
 
     move-result v0
@@ -901,7 +908,7 @@
 .method public getCNCloudDataCacheEndTime()J
     .locals 2
 
-    .line 278
+    .line 279
     iget-wide v0, p0, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->mCNCloudDataCacheEndTime:J
 
     return-wide v0
@@ -936,7 +943,7 @@
 .method protected getTrackKey(I)Ljava/lang/String;
     .locals 1
 
-    .line 219
+    .line 220
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->mFolderInfo:Lcom/miui/home/launcher/FolderInfo;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/FolderInfo;->isRecommendFolder()Z
@@ -966,7 +973,7 @@
 
     return-object p1
 
-    .line 230
+    .line 231
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->mFolderInfo:Lcom/miui/home/launcher/FolderInfo;
 
@@ -1062,7 +1069,7 @@
         }
     .end annotation
 
-    .line 326
+    .line 327
     invoke-static {p1, p2}, Lcom/miui/home/launcher/commercial/CommercialCommons;->loadIconFromCN(Lcom/miui/home/launcher/RemoteShortcutInfo;Ljava/util/function/Consumer;)V
 
     return-void
@@ -1071,14 +1078,14 @@
 .method public needToRequestCloud()Z
     .locals 2
 
-    .line 247
+    .line 248
     invoke-virtual {p0}, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->canRecommendSwitchShow()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 248
+    .line 249
     invoke-direct {p0}, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->isCloudCachedDataExpired()Z
 
     move-result v0
@@ -1089,7 +1096,7 @@
 
     const-string v1, "request, because cloud cached data expired"
 
-    .line 249
+    .line 250
     invoke-static {v0, v1}, Lcom/miui/home/launcher/MiuiHomeLog;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x1
@@ -1101,7 +1108,7 @@
 
     const-string v1, "don\'t request, because recommend screen can\'t show"
 
-    .line 253
+    .line 254
     invoke-static {v0, v1}, Lcom/miui/home/launcher/MiuiHomeLog;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
@@ -1113,14 +1120,14 @@
 .method public needToRequestGuess()Z
     .locals 3
 
-    .line 259
+    .line 260
     invoke-virtual {p0}, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->canRecommendSwitchShow()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 260
+    .line 261
     invoke-virtual {p0}, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->isCachedDataExpired()Z
 
     move-result v0
@@ -1136,7 +1143,7 @@
     :cond_0
     const-string v0, "RecommendController"
 
-    .line 261
+    .line 262
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1155,7 +1162,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 262
+    .line 263
     invoke-virtual {p0}, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->isRecommendDataTooFew()Z
 
     move-result v2
@@ -1176,7 +1183,7 @@
 
     move-result-object v1
 
-    .line 261
+    .line 262
     invoke-static {v0, v1}, Lcom/miui/home/launcher/MiuiHomeLog;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x1
@@ -1188,7 +1195,7 @@
 
     const-string v1, "don\'t request, because recommend screen can\'t show"
 
-    .line 266
+    .line 267
     invoke-static {v0, v1}, Lcom/miui/home/launcher/MiuiHomeLog;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_2
@@ -1200,12 +1207,12 @@
 .method public obtainRequestMode()I
     .locals 2
 
-    .line 272
+    .line 273
     invoke-virtual {p0}, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->needToRequestGuess()Z
 
     move-result v0
 
-    .line 273
+    .line 274
     invoke-virtual {p0}, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->needToRequestCloud()Z
 
     move-result v1
@@ -1228,7 +1235,7 @@
 .method public onCurrentScreenShowing()V
     .locals 6
 
-    .line 339
+    .line 340
     invoke-virtual {p0}, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->isRecommendSwitchOn()Z
 
     move-result v0
@@ -1239,12 +1246,12 @@
 
     const-string v1, "Don\'t request, folder recommend switch off"
 
-    .line 340
+    .line 341
     invoke-static {v0, v1}, Lcom/miui/home/launcher/MiuiHomeLog;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
-    .line 343
+    .line 344
     :cond_0
     invoke-static {}, Lcom/miui/home/launcher/commercial/cloudSettings/CloudSettingsController;->getInstance()Lcom/miui/home/launcher/commercial/cloudSettings/CloudSettingsController;
 
@@ -1260,7 +1267,7 @@
 
     if-nez v0, :cond_2
 
-    .line 344
+    .line 345
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -1275,21 +1282,21 @@
 
     if-lez v0, :cond_1
 
-    .line 345
+    .line 346
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->mLastRequestTime:J
 
-    .line 346
+    .line 347
     invoke-virtual {p0}, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->requestRecommendWithCheck()V
 
     const-string v0, "RecommendController"
 
     const-string v1, "folder display and try to request recommend list"
 
-    .line 347
+    .line 348
     invoke-static {v0, v1}, Lcom/miui/home/launcher/MiuiHomeLog;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
@@ -1299,7 +1306,7 @@
 
     const-string v1, "folder display but in swipe screen interval time"
 
-    .line 349
+    .line 350
     invoke-static {v0, v1}, Lcom/miui/home/launcher/MiuiHomeLog;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
@@ -1309,7 +1316,7 @@
 
     const-string v1, "folder display but only request when folder open"
 
-    .line 352
+    .line 353
     invoke-static {v0, v1}, Lcom/miui/home/launcher/MiuiHomeLog;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
@@ -1319,20 +1326,20 @@
 .method public onFolderShowRecommends()V
     .locals 2
 
-    .line 379
+    .line 380
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->mDelayCloudRequest:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_0
 
-    .line 380
+    .line 381
     invoke-static {v0}, Lcom/miui/home/launcher/common/BackgroundThread;->removeCallbacks(Ljava/lang/Runnable;)V
 
     const/4 v0, 0x0
 
-    .line 381
+    .line 382
     iput-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->mDelayCloudRequest:Ljava/lang/Runnable;
 
-    .line 383
+    .line 384
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->needToRequestGuess()Z
 
@@ -1344,28 +1351,28 @@
 
     const-string v1, "folder open, request recommend app list"
 
-    .line 384
+    .line 385
     invoke-static {v0, v1}, Lcom/miui/home/launcher/MiuiHomeLog;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
-    .line 385
+    .line 386
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->requestRecommendImmediately(I)V
 
     goto :goto_0
 
-    .line 386
+    .line 387
     :cond_1
     iget-boolean v0, p0, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->mIsGuessRequest:Z
 
     if-eqz v0, :cond_2
 
-    .line 387
+    .line 388
     invoke-virtual {p0}, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->showLoadingView()V
 
     goto :goto_0
 
-    .line 389
+    .line 390
     :cond_2
     invoke-virtual {p0}, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->preloadAndRefresh()V
 
@@ -1387,7 +1394,7 @@
 .method public onRecommendAppRemoved()V
     .locals 2
 
-    .line 358
+    .line 359
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->mFolderInfo:Lcom/miui/home/launcher/FolderInfo;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/FolderInfo;->isOpened()Z
@@ -1396,7 +1403,7 @@
 
     if-nez v0, :cond_1
 
-    .line 359
+    .line 360
     invoke-static {}, Lcom/miui/home/launcher/commercial/cloudSettings/CloudSettingsController;->getInstance()Lcom/miui/home/launcher/commercial/cloudSettings/CloudSettingsController;
 
     move-result-object v0
@@ -1418,12 +1425,12 @@
 
     const-string v1, "onRecommendAppRemoved, folder is closed and don\'t request data when folder is closed"
 
-    .line 363
+    .line 364
     invoke-static {v0, v1}, Lcom/miui/home/launcher/MiuiHomeLog;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 360
+    .line 361
     :cond_1
     :goto_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->requestRecommendWithCheck()V
@@ -1432,7 +1439,7 @@
 
     const-string v1, "onRecommendAppRemoved, try to request recommend app data"
 
-    .line 361
+    .line 362
     invoke-static {v0, v1}, Lcom/miui/home/launcher/MiuiHomeLog;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_1
@@ -1442,17 +1449,17 @@
 .method public onSwitchChangedByUser(Z)V
     .locals 2
 
-    .line 425
+    .line 426
     invoke-super {p0, p1}, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->onSwitchChangedByUser(Z)V
 
     if-nez p1, :cond_0
 
     const-wide/16 v0, 0x0
 
-    .line 427
+    .line 428
     iput-wide v0, p0, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->mCNCloudDataCacheEndTime:J
 
-    .line 428
+    .line 429
     invoke-static {v0, v1}, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->setLastRequestCloudTime(J)V
 
     :cond_0
@@ -1612,7 +1619,7 @@
 
     const/4 p1, 0x0
 
-    .line 180
+    .line 181
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getFolderRecommendSerialExecutor()Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;
 
     move-result-object v1
@@ -1624,7 +1631,7 @@
 
     const-string p2, "request CN cloud data"
 
-    .line 181
+    .line 182
     invoke-static {p1, p2}, Lcom/miui/home/launcher/MiuiHomeLog;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -1700,7 +1707,7 @@
 
     const-string v0, "RecommendController"
 
-    .line 195
+    .line 196
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1725,18 +1732,18 @@
 
     goto :goto_0
 
-    .line 201
+    .line 202
     :pswitch_0
     invoke-virtual {p0, p1, p2}, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->requestGuessRecommend(Lcom/miui/home/launcher/FolderInfo;Ljava/util/function/Consumer;)V
 
-    .line 202
+    .line 203
     iget-object p2, p0, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->mCloudCallback:Ljava/util/function/Consumer;
 
     invoke-virtual {p0, p1, p2}, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->requestCloudRecommend(Lcom/miui/home/launcher/FolderInfo;Ljava/util/function/Consumer;)V
 
     goto :goto_0
 
-    .line 210
+    .line 211
     :pswitch_1
     iget-object p2, p0, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->mCloudCallback:Ljava/util/function/Consumer;
 
@@ -1744,7 +1751,7 @@
 
     goto :goto_0
 
-    .line 206
+    .line 207
     :pswitch_2
     invoke-virtual {p0, p1, p2}, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->requestGuessRecommend(Lcom/miui/home/launcher/FolderInfo;Ljava/util/function/Consumer;)V
 
@@ -1763,14 +1770,14 @@
 .method public requestRecommendWithCheck()V
     .locals 1
 
-    .line 368
+    .line 369
     invoke-virtual {p0}, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->obtainRequestMode()I
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 371
+    .line 372
     :try_start_0
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->requestRecommendImmediately(I)V
     :try_end_0
@@ -1781,7 +1788,7 @@
     :catch_0
     move-exception v0
 
-    .line 373
+    .line 374
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_0
@@ -1792,7 +1799,7 @@
 .method public setCNCloudDataCacheEndTime(J)V
     .locals 0
 
-    .line 399
+    .line 400
     iput-wide p1, p0, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->mCNCloudDataCacheEndTime:J
 
     return-void
@@ -1801,7 +1808,7 @@
 .method public setCNCloudDataExpireEndTime(J)V
     .locals 0
 
-    .line 411
+    .line 412
     iput-wide p1, p0, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->mCNCloudDataExpireEndTime:J
 
     return-void

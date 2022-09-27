@@ -18,14 +18,14 @@
 
 
 # instance fields
-.field final synthetic $it:Lcom/miui/home/launcher/hotseats/HotSeats;
+.field final synthetic $it:Lcom/miui/home/launcher/HotSeats;
 
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/hotseats/HotSeats;)V
+.method constructor <init>(Lcom/miui/home/launcher/HotSeats;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/miui/home/launcher/anim/NoWordSwitchAnimHelper$startSwitchNoWordAnim$3$1;->$it:Lcom/miui/home/launcher/hotseats/HotSeats;
+    iput-object p1, p0, Lcom/miui/home/launcher/anim/NoWordSwitchAnimHelper$startSwitchNoWordAnim$3$1;->$it:Lcom/miui/home/launcher/HotSeats;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -38,11 +38,11 @@
     .locals 2
 
     .line 129
-    iget-object v0, p0, Lcom/miui/home/launcher/anim/NoWordSwitchAnimHelper$startSwitchNoWordAnim$3$1;->$it:Lcom/miui/home/launcher/hotseats/HotSeats;
+    iget-object v0, p0, Lcom/miui/home/launcher/anim/NoWordSwitchAnimHelper$startSwitchNoWordAnim$3$1;->$it:Lcom/miui/home/launcher/HotSeats;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/hotseats/HotSeats;->setAlpha(F)V
+    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/HotSeats;->setAlpha(F)V
 
     const-string v0, "NoWordSwitchAnimHelper"
 

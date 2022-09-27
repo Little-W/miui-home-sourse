@@ -34,7 +34,7 @@
 
     const-string v0, "MemoryUtils"
 
-    const-string/jumbo v1, "trimMemoryInBackground TRIM_MEMORY_UI_HIDDEN"
+    const-string v1, "trimMemoryInBackground TRIM_MEMORY_UI_HIDDEN"
 
     .line 22
     invoke-static {v0, v1}, Lcom/miui/home/launcher/MiuiHomeLog;->debug(Ljava/lang/String;Ljava/lang/String;)V

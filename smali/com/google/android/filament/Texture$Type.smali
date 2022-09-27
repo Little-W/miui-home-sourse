@@ -52,7 +52,7 @@
 .method static constructor <clinit>()V
     .locals 13
 
-    .line 281
+    .line 344
     new-instance v0, Lcom/google/android/filament/Texture$Type;
 
     const-string v1, "UBYTE"
@@ -63,7 +63,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$Type;->UBYTE:Lcom/google/android/filament/Texture$Type;
 
-    .line 283
+    .line 346
     new-instance v0, Lcom/google/android/filament/Texture$Type;
 
     const-string v1, "BYTE"
@@ -74,7 +74,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$Type;->BYTE:Lcom/google/android/filament/Texture$Type;
 
-    .line 285
+    .line 348
     new-instance v0, Lcom/google/android/filament/Texture$Type;
 
     const-string v1, "USHORT"
@@ -85,7 +85,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$Type;->USHORT:Lcom/google/android/filament/Texture$Type;
 
-    .line 287
+    .line 350
     new-instance v0, Lcom/google/android/filament/Texture$Type;
 
     const-string v1, "SHORT"
@@ -96,7 +96,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$Type;->SHORT:Lcom/google/android/filament/Texture$Type;
 
-    .line 289
+    .line 352
     new-instance v0, Lcom/google/android/filament/Texture$Type;
 
     const-string v1, "UINT"
@@ -107,7 +107,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$Type;->UINT:Lcom/google/android/filament/Texture$Type;
 
-    .line 291
+    .line 354
     new-instance v0, Lcom/google/android/filament/Texture$Type;
 
     const-string v1, "INT"
@@ -118,7 +118,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$Type;->INT:Lcom/google/android/filament/Texture$Type;
 
-    .line 293
+    .line 356
     new-instance v0, Lcom/google/android/filament/Texture$Type;
 
     const-string v1, "HALF"
@@ -129,7 +129,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$Type;->HALF:Lcom/google/android/filament/Texture$Type;
 
-    .line 295
+    .line 358
     new-instance v0, Lcom/google/android/filament/Texture$Type;
 
     const-string v1, "FLOAT"
@@ -140,7 +140,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$Type;->FLOAT:Lcom/google/android/filament/Texture$Type;
 
-    .line 297
+    .line 360
     new-instance v0, Lcom/google/android/filament/Texture$Type;
 
     const-string v1, "COMPRESSED"
@@ -151,7 +151,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$Type;->COMPRESSED:Lcom/google/android/filament/Texture$Type;
 
-    .line 299
+    .line 362
     new-instance v0, Lcom/google/android/filament/Texture$Type;
 
     const-string v1, "UINT_10F_11F_11F_REV"
@@ -162,7 +162,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$Type;->UINT_10F_11F_11F_REV:Lcom/google/android/filament/Texture$Type;
 
-    .line 301
+    .line 364
     new-instance v0, Lcom/google/android/filament/Texture$Type;
 
     const-string v1, "USHORT_565"
@@ -175,7 +175,7 @@
 
     const/16 v0, 0xb
 
-    .line 279
+    .line 342
     new-array v0, v0, [Lcom/google/android/filament/Texture$Type;
 
     sget-object v1, Lcom/google/android/filament/Texture$Type;->UBYTE:Lcom/google/android/filament/Texture$Type;
@@ -235,7 +235,7 @@
         }
     .end annotation
 
-    .line 279
+    .line 342
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -244,7 +244,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/android/filament/Texture$Type;
     .locals 1
 
-    .line 279
+    .line 342
     const-class v0, Lcom/google/android/filament/Texture$Type;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -259,7 +259,7 @@
 .method public static values()[Lcom/google/android/filament/Texture$Type;
     .locals 1
 
-    .line 279
+    .line 342
     sget-object v0, Lcom/google/android/filament/Texture$Type;->$VALUES:[Lcom/google/android/filament/Texture$Type;
 
     invoke-virtual {v0}, [Lcom/google/android/filament/Texture$Type;->clone()Ljava/lang/Object;

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="Icon_name_classic_mode">მთავარი ეკრანის პარამეტრები</string>
     <string name="accessibility_all_app_custom_category_finish">შესრულებულია</string>
     <string name="accessibility_all_app_custom_category_item_remove">წაშალეთ \"%1$s\" კატეგორიებიდან</string>
     <string name="accessibility_clear_search_bar_text">გაასუფთავეთ ძებნის ისტორია</string>
@@ -26,10 +25,8 @@
     <string name="activity_not_unlocked">აპლიკაციების გახსნამდე დაელოდეთ სანამ თქვენი მოწყობილობა არ განახლდება</string>
     <string name="add_custom_category">სამომხმარებლო</string>
     <string name="add_screen">ეკრანის დამატება</string>
-    <string name="add_to_workspace">მთავარ ეკრანზე დამატება</string>
     <string name="added_all_category">ყველა აპლიკაცია წარმატებით დაემატა</string>
     <string name="afternoon">შუადღე</string>
-    <string name="agree_button">ვეთანხმები</string>
     <string name="alexa_notification_add">დაამატეთ</string>
     <string name="alexa_notification_cancel">ახლა არა</string>
     <string name="alexa_notification_content">გსურთ კონტროლის ცენტრში Alexa მალსახმობის დამატება?</string>
@@ -68,7 +65,6 @@
     <string name="all_apps_slide_up_tips">აპლიკაციათა დაფა იხსნება მთავარ ეკრანზე თითის გასრიალებით. გადართეთ მთავარ ეკრანზე და კიდევ სცადეთ.</string>
     <string name="all_apps_suggestions">აპლიკაციის შემოთავაზებები</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">ანიმაციის სიხშირე</string>
     <string name="announce_for_app_move_in_folder">ფოლდერში გადატანილია %1$d პოზიციაზე</string>
     <string name="announce_for_checked">%1$s, შემოწმებულია</string>
     <string name="announce_for_choose_default_screen">დააყენეთ ეკრანი %1$d მთავარ ეკრანად</string>
@@ -121,13 +117,6 @@
     <string name="app_category_tools">ინსტრუმენტები</string>
     <string name="app_category_travel">მოგზაურობა</string>
     <string name="app_category_vr">VR-ი</string>
-    <string name="app_drawer_double_confirm_description">ეს შეცვლის თქვენი მთავარი ეკრანის ზედაპირს. მოგვიანებით თქვენ შეგიძლიათ შეცვალოთ ეს ცვლილებები პარამეტრებში.</string>
-    <string name="app_drawer_double_confirm_title">ყურადღება</string>
-    <string name="app_drawer_feature_description">აპლიკაციათა დაფა შესანიშნავი საშუალებაა თქვენი ყველა აპლიკაციის მოსაწყობად. ავტომატურად დაალაგეთ აპლიკაციები და იპოვნეთ ყველაფერი რაც თქვენ გჭირდებათ!</string>
-    <string name="app_drawer_guide_description">იპოვნეთ რასაც თქვენ ეძებთ თქვენს საყვარელ აპლიკაციებში</string>
-    <string name="app_drawer_guide_title">აპლიკაციათა დაფა</string>
-    <string name="app_drawer_tip_title">ჩვენ შეცვალეთ საინფორმაციო დაფა აპლიკაციათა დაფის მეშვეობით.</string>
-    <string name="app_install_state">დაინსტალირებულია</string>
     <string name="app_name">smallWindow</string>
     <string name="application_name">სისტემური გამშვები</string>
     <string name="apply">დაყენება</string>
@@ -150,35 +139,8 @@
     <string name="back">უკან</string>
     <string name="backup_fail">გამშვების რეზერვირება ვერ ხერხდება</string>
     <string name="bad_wallpaper_source_prompt">ვერ ვტვირთავ ფონს</string>
-    <string name="branch_feature_description">აპლიკაციების გარდა, Quick Finder-ს შეუძლია ონლაინ აპლიკაციაში შინაარსი და საგნების პოვნა.</string>
-    <string name="branch_guide_attention">ეს სერვისი უზრუნველყოფილია Branch Metrics Inc-ის მიერ. თქვენი ადგილმდებარეობის ინფორმაცია, ძებნის შეკითხვები და Google რეკლამების ID-ს, IP მისამართი გაზიარებული იქნება Branch-თან. ამ სერვისების გამოყენებამდე წაიკითხეთ Branch-ის<a href="http://url1"><font color="#B3000000">წესებსა და პირობებს</font></a>და<a href="http://url2"><font color="#B3000000">კონფიდენციალურობის პოლიტიკას</font></a>.</string>
-    <string name="branch_guide_description_one">ჩვენ ყველა თქვენს აპლიკაციას ჩავსვამთ აპლიკაციათა დაფაზე. თქვენი მთავარი ეკრანი ორგანიზებულად გამოიყურება.</string>
-    <string name="branch_guide_description_three">ჩამონტაჟებული ძიების საშუალებით, თქვენ ნახავთ ყველაფრის საჭიროებას, რაც გჭირდებათ.</string>
-    <string name="branch_guide_description_two">აპლიკაციათა დაფა ავტომატურად ახასიათებს აპლიკაციებს.</string>
-    <string name="branch_guide_tip_title">ყველა აპლიკაციას აქვს თავისი ადგილი</string>
-    <string name="branch_guide_title">შეხვდით აპლიკაციათა დაფას</string>
-    <string name="branch_guide_type_four_desc">თქვენ შეგიძლიათ დაუბრუნდეთ ძველ გზებს ორი მარტივი ნაბიჯით</string>
-    <string name="branch_guide_type_four_main">პარამეტრებში გადადით მთავარ ეკრანზე > მთავარი ეკრანი და მონიშნეთ \"კლასიკური\".</string>
-    <string name="branch_guide_type_four_step_one">გახსენით პარამეტრები</string>
-    <string name="branch_guide_type_four_step_two">მონიშნეთ მთავარი ეკრანი</string>
-    <string name="branch_guide_type_one_desc">მართეთ თქვენი აპლიკაციები აპლიკაციათა დაფით</string>
-    <string name="branch_guide_type_one_main">შეინახეთ თქვენი აპლიკაციები აპლიკაციათა დაფაზე, რათა თქვენი მთავარი ეკრანი იყოს მოწესრიგებული და ორგანიზებული.</string>
-    <string name="branch_new_feature">ახალი ფუნქცია</string>
-    <string name="branch_privacy_policy">კონფიდენციალურობის პოლიტიკა</string>
-    <string name="branch_search_guide_description">ჩვენი ძიების შედეგები ახლა ბევრად უფრო სრულყოფილია</string>
-    <string name="branch_search_guide_privacy">ეს სერვისი უზრუნველყოფილია Branch Metrics Inc-ის მიერ. თქვენი ადგილმდებარეობის ინფორმაცია, ძებნის შეკითხვები და Google რეკლამების ID გაზიარებული იქნება Branch-თან. ამ სერვისების გამოყენებამდე წაიკითხეთ Branch-ის<a href="http://url1"><font color="#B3000000">წესებსა და პირობებს</font></a>და<a href="http://url2"><font color="#B3000000">კონფიდენციალურობის პოლიტიკას</font></a>.</string>
-    <string name="branch_search_guide_title">იპოვნეთ რასაც თქვენ ეძებთ თქვენს საყვარელ აპლიკაციებში</string>
-    <string name="branch_terms_condition">წესები და პირობები</string>
-    <string name="branch_tip_title">სწრაფი მაძიებლის საშუალებით შეგიძლიათ ნახოთ ყველაფერი რაც თქვენ გჭირდებათ.</string>
-    <string name="btn_agree">ვეთანხმები</string>
-    <string name="btn_cancel">გაუქმება</string>
-    <string name="btn_close">გამორთვა</string>
-    <string name="btn_open">ჩართვა</string>
-    <string name="btn_request_permission">საგარანტიო ნებართვები</string>
-    <string name="btn_set_right_now">საგარანტიო ნებართვები</string>
     <string name="buffering">ბუფერიზაცია…</string>
     <string name="cancel_action">გაუქმება</string>
-    <string name="cancel_botton">გაუქმება</string>
     <string name="cancel_btn_label">გაუქმება</string>
     <string name="cant_edit_lock_screen">დაბლოკილი ეკრანის სტილის რედაქტირება ვერ ხერხდება</string>
     <string name="cant_remove_folder">ვერ ვშლი ფოლდერს</string>
@@ -256,7 +218,7 @@
     <string name="deselect_all">მონიშვნის გაუქმება</string>
     <string name="disable_wallpaper_scroll">side-scrolling -ის გამორთვა</string>
     <string name="download_action">გადმოწერა</string>
-    <string name="drag_icon_to_homescreen_guide">დააჭირეთ და გეკავოთ აპლიკაციის ხატულა, შემდეგ კი გადაიტანეთ მთავარი ეკრანის მალსახმობზე</string>
+    <string name="drag_icon_to_homescreen_guide">დააწექით და გეჭიროთ აპლიკაციის ხატულა, შემდეგ კი გადაიტანეთ მთავარი ეკრანის მალსახმობზე</string>
     <string name="drag_multiple_item_name" />
     <string name="drag_single_item_name" />
     <string name="drawer_background">უკანა ფონები</string>
@@ -288,11 +250,9 @@
     <string name="emptyplaylist">შეეხე მუსიკის დასამატებლად</string>
     <string name="enable_wallpaper_scroll">side-scrolling -ის ჩართვა</string>
     <string name="encryption">დაშიფვრა</string>
-    <string name="enter_search_setting_title">გახსენით ძებნის ველი აპლიკაციათა დაფის გასახსნელად</string>
     <string name="eras_ad">ახ.წ.აღ</string>
     <string name="eras_bc">ძვ.წ.აღ</string>
     <string name="evening">შუადღე</string>
-    <string name="exit_overview_because_task_stack_changed">დახურულია ბოლოდროინდელები უკანა ფონზე მომხდარი ცვლილებების გამო</string>
     <string name="failed_to_delete_temporary">ვერ წავშლი</string>
     <string name="failed_to_drop">ვერ გადავიტან</string>
     <string name="failed_to_drop_widget_invalid">ეს ვიჯეტი არასწორია</string>
@@ -349,8 +309,6 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
-    <string name="fold_pair_install_shortcut_long_click">დააჭირეთ და გეკავოთ მთავარ ეკრანზე დასამატებლად</string>
-    <string name="fold_pair_installed_shortcut_launcher">ეს მალსახმობი უკვე არსებობს</string>
     <string name="folder_name">ფოლდერი</string>
     <string name="frame_load_failed">ვერ ვტვირთავ ფრეიმს</string>
     <string name="free_style_apps_title">აირჩიეთ აპლიკაციები</string>
@@ -374,7 +332,7 @@
     <string name="fsg_mistake_touch_title">ჟესტების დადასტურება</string>
     <string name="gadget_calculator_label">კალკულატორი</string>
     <string name="gadget_calendar_label">კალენდარი</string>
-    <string name="gadget_clear_button_label">გამწმენდი</string>
+    <string name="gadget_clear_button_label">Cleaner-ი</string>
     <string name="gadget_clock_12_label">საათი 2x1</string>
     <string name="gadget_clock_14_label">საათი 4x1</string>
     <string name="gadget_clock_24_label">საათი 4x2</string>
@@ -406,14 +364,11 @@
     <string name="gadget_weather_title_14">ამინდი</string>
     <string name="gadget_weather_title_24">ამინდი</string>
     <string name="global_search_hint">ძებნა</string>
-    <string name="got_it_botton">გასაგებია</string>
     <string name="group_folder">ახალი ფოლდერი</string>
     <string name="group_live_folders">ფოლდერები</string>
     <string name="group_shortcuts">მოკლე ხატი</string>
     <string name="guide_install_app_msg">აპლიკაცია არ არის დაინსტალირებული თქვენს მოწყობილობაზე. ვიპოვნო და ჩავწერო აპლიკაცია ახლავე?</string>
     <string name="guide_install_app_title">ვიპოვო და დავაინსტალირო აპლიკაცია?</string>
-    <string name="guide_permission_title">საჭიროა ნებართვები</string>
-    <string name="guide_privacy_dialog_title">სერვისის პირობები</string>
     <string name="guide_tips_editing_mode">დააჭირეთ და გეკავოთ ვიჯეტის ასარჩევად</string>
     <string name="home_gesture_content_center">კონტენტის ცენტრი</string>
     <string name="home_gesture_global_search">ძებნა</string>
@@ -444,9 +399,6 @@
     <string name="launcher_slide_up_title">გაუსვით თითი მთავარ ეკრანს ზემოთ</string>
     <string name="launcher_sliding_up_gesture">გაუსვით თითი მთავარ ეკრანს ზემოთ საძიებო სისტემის გასახსნელად</string>
     <string name="launcher_title">მთავარი ეკრანი და ბოლოდროინდელები</string>
-    <string name="layout_guide_description">თუ არ მოგწონთ აპლიკაციათა დაფა, ყოველთვის შეგიძლიათ დაბრუნდეთ კლასიკურ მთავარ ეკრანზე. უბრალოდ გამოიყენეთ \"საწყისი ეკრანის პარამეტრების\" მალსახმობი და გადართეთ ორ რეჟიმში.</string>
-    <string name="layout_guide_tip_title">შეგიძლიათ დაბრუნდეთ ძველ გზებზე ერთი შეხებით</string>
-    <string name="layout_guide_title">როგორ წავშლო აპლიკაციათა დაფა</string>
     <string name="like">დაამატეთ რჩეულებში</string>
     <string name="liked">დამატებულია რჩეულებში</string>
     <string name="loading_desktop">ერთი წამით…</string>
@@ -468,9 +420,9 @@
     <string name="maml_download_tip_wait_wifi_china">ამ ერთეულის ჩამოტვირთვა მოხდება WLAN ქსელში ჩართვისას</string>
     <string name="manager_group_settings">აპლიკაციების კატეგორიების მართვა</string>
     <string name="memory_clear_nothing_result">ნარჩენებიდან არაფერია წასაშლელი</string>
-    <string name="memory_clear_result">%1$sB გასუფთავება</string>
+    <string name="memory_clear_result">%1$s ბ გასუფთავდა</string>
     <string name="memory_clear_result_giga">%1$sGB გასუფთავებულია</string>
-    <string name="memory_clear_result_mega">%1$sMB გასუფთავებულია</string>
+    <string name="memory_clear_result_mega">%1$sმბ გასუფთავებულია</string>
     <string name="menu_add">დამატება</string>
     <string name="menu_auto_fill_of_uninstall">შეავსეთ გრაფები აპლიკაციების დეინსტალაციისათვის</string>
     <string name="menu_back_desktop">მთავარ ეკრანზე დაბრუნება</string>
@@ -613,11 +565,6 @@
     <string name="navigation_guide_recent_title">გახსენით ბოლოდროინდელები</string>
     <string name="navigation_guide_recent_title_spec_with_quotation_pad">გახსენით ბოლოდროინდელები</string>
     <string name="navigation_guide_settings">ჟესტების დემოები</string>
-    <string name="navigation_position_center">ცენტრი</string>
-    <string name="navigation_position_left">მარცხნივ</string>
-    <string name="navigation_position_right">მარჯვნივ</string>
-    <string name="navigation_position_summary">ნავიგაციის ღილაკების მორგებული პოზიციების გამოყენება შესაძლებელია მხოლოდ მთავარ ეკრანზე</string>
-    <string name="navigation_position_title">ნავიგაციის ღილაკების პოზიცია</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">გაუქმება</string>
     <string name="navigation_set_miui_home_as_default_dialog_message">მესამე მხარის გამშვებებთან სრული ეკრანის ჟესტების გამოყენება შეუძლებელია. გსურთ სისტემის გამშვებზე გადართვა და ჩართოთ მთლიანი ეკრანის ჟესტები?</string>
     <string name="navigation_set_miui_home_as_default_dialog_ok">OK</string>
@@ -626,11 +573,9 @@
     <string name="navigation_type_title">სისტემის ნავიგაცია</string>
     <string name="navigation_type_virtual_key">ღილაკები</string>
     <string name="network_error">ქსელთან დაკავშირება ვერ მოხერხდა. კიდევ სცადეთ.</string>
-    <string name="new_feature_title">რა არის ახალი</string>
     <string name="night">საღამო</string>
     <string name="no_detail_page">დეტალების გვერდი არ არის</string>
     <string name="no_space_toast">არ არის საკმარისი სივრცე</string>
-    <string name="no_space_toast_fold">არ არის საკმარისი მეხსიერება</string>
     <string name="no_space_toast_when_click_widget">ამ გვერდზე არ არის საკმარისი სივრცე. სცადეთ ამ ელემენტის სხვა გვერდზე გადატანა.</string>
     <string name="noon">შუადღე</string>
     <string name="normal_wallpaper">ფონი</string>
@@ -639,19 +584,17 @@
     <string name="notification_reset_title">ხატულები წარმატებით მოწესრიგდა</string>
     <string name="one_key_call_title">შეეხეთ სანახავად</string>
     <string name="online_wallpaper">ონლაინ</string>
-    <string name="open_pad_personal_assistant_settings">მთავარი ეკრანის ვიჯეტები</string>
     <string name="open_personal_assistant_dialog_btn_cancel">გაუქმება</string>
     <string name="open_personal_assistant_dialog_btn_confirm">გამორთვა</string>
     <string name="open_personal_assistant_dialog_desc">მას შემდეგ რაც გამორთავთ აპლიკაციათა დაფას, თქვენ ვერ ნახავთ ან გამოიყენებთ აპლიკაციათა დაფის ვიჯეტებს. მათი განახლებული ვერსიები ასევე ხელმისაწვდომი არ იქნება თქვენთვის. მაინც გსურთ გამორთვა?</string>
-    <string name="open_personal_assistant_dialog_desc_international">თქვენ ვერ შეძლებთ გამოიყენოთ აპლიკაციათა დაფის ბარათები (აქციები, მალსახმობნი და ა. შ.) და მიიღოთ განახლებები ამ ფუნქციის გამორთვის შემდეგ.</string>
-    <string name="open_personal_assistant_dialog_title">აპლიკაციათა დაფის გამორთვა</string>
+    <string name="open_personal_assistant_dialog_desc_international">თქვენ ვერ შეძლებთ გამოიყენოთ აპლიკაციის დაფის ბარათები (აქციები, მალსახმობნი და ა. შ.) და მიიღოთ განახლებები ამ ფუნქციის გამორთვის შემდეგ.</string>
+    <string name="open_personal_assistant_dialog_title">აპლიკაციების დაფის გამორთვა</string>
     <string name="open_personal_assistant_settings">აპლიკაციათა დაფის პარამეტრები</string>
-    <string name="open_personal_assistant_title">აპლიკაციათა დაფა</string>
+    <string name="open_personal_assistant_title">აპლიკაციების დაფა</string>
     <string name="ota_layout_adjustment_button_text">გასაგებია</string>
     <string name="ota_layout_adjustment_content">შიდა და გარე მთავარი ეკრანის მალსახმობი არ არის სინქრონიზებული ახალ ვერსიასთან.</string>
     <string name="ota_layout_adjustment_title">მთავარი ეკრანის მალსახმობი</string>
     <string name="out_of_space">მთავარ ეკრანზე ადგილი არ არის</string>
-    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">გადააკეთეთ ანიმაციები მესამე მხარის აპლიკაციების ხატულაზე</string>
     <string name="perfect_icons_switch_title">გლობალური ხატულას ანიმაციები</string>
     <string name="permdesc_install_shortcut">ამატებს აპლიკაციის ხატს მომხმარებლის მოცდენის გარეშე.</string>
@@ -671,7 +614,6 @@
     <string name="photo_load_failed">ვერ ვტვირთავ ფოტოს</string>
     <string name="please_slide_agian">თითის კდიევ გასრიალება</string>
     <string name="pm">PM</string>
-    <string name="popular_search">პოპულარული</string>
     <string name="pref_cell_layout_size">აპლიკაციის მოკლე ხატი</string>
     <string name="pref_enable_drawing_cache_summary">გამორთეთ მეხსიერების გასასუფთავებლად.ამან შეიძლება გამოიწვიოს დაბალი წარმადობა.</string>
     <string name="pref_enable_drawing_cache_title">ნარჩენების ნახვა</string>
@@ -691,21 +633,13 @@
     <string name="privacy_thumbnail_blur_summary">ბუნდოვანი აპლიკაციის ახლახან გადახედვა</string>
     <string name="privacy_thumbnail_blur_title">ბუნდოვანი აპლიკაციის გადახედვა</string>
     <string name="quick_app">სწრაფი აპლიკაციები</string>
-    <string name="quick_finder_feature_description">Quick Finder საშუალებას გაძლევთ სწრაფად იპოვოთ აპლიკაციები, აპლიკაციათ შორის-შიდა შინაარსი და ერთეულები ონლაინ რეჟიმში. შეგიძლიათ ეს ფუნქცია გამორთოთ პარამეტრებიდან.</string>
-    <string name="quick_finder_tip_title">უფრო სწრაფად იპოვნეთ ყველაფერი, რაც გჭირდებათ</string>
-    <string name="quick_search_all_app_desc">ყველა აპლიკაციის ჩვენება აპლიკაციათა დაფაზე</string>
-    <string name="quick_search_desc">გახსენით ძებნის ველი აპლიკაციათა დაფის გასახსნელად</string>
-    <string name="quick_search_guide_all_apps">ყველა აპლიკაცია</string>
-    <string name="quick_search_guide_ok_btn">OK</string>
-    <string name="quick_search_guide_quick_search">სწრაფი ძიება</string>
-    <string name="quick_search_guide_title">მონიშნეთ ძირითადი რეჟიმი</string>
     <string name="recent_apps">უახლესი</string>
     <string name="recent_menu_item_info">ინფორმაცია</string>
     <string name="recent_menu_item_lock">დაბლოკვა</string>
     <string name="recent_menu_item_multi_window">გაყოფა</string>
     <string name="recent_menu_item_unlock">განბლოკვა</string>
     <string name="recents_app_info_button_label">აპლიკაციის ინფორმაცია</string>
-    <string name="recents_clear_all_tasks">ყველაფრის გასუფთავება</string>
+    <string name="recents_clear_all_tasks">ყველაფრის წაშლა</string>
     <string name="recents_config_title">ბოლოდროინდელები</string>
     <string name="recents_dimiss_task">გასუფთავება</string>
     <string name="recents_empty_message">ახლა გამოყენებული ერთეულები არ არის</string>
@@ -727,13 +661,6 @@
     <string name="recents_title_market">აპლიკაციების მოძებნა</string>
     <string name="recents_title_security_scan">უსაფრთხოების სკანირება</string>
     <string name="recents_tv_small_window_text">მცურავი ფანჯრები</string>
-    <string name="recents_worldcirculate_text">გაუშვით მოსანიშნად</string>
-    <string name="recnets_relay_device_info">%s-დან</string>
-    <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
-    <string name="recnets_worldcirculate_display_computer_info">აპლიკაცია მუშაობს %s.</string>
-    <string name="recnets_worldcirculate_display_default_info">შეეხეთ და დაბრუნდით უკან.</string>
-    <string name="recnets_worldcirculate_display_default_info_pad">შეეხეთ და დაბრუნდით უკან.</string>
-    <string name="recnets_worldcirculate_display_pad_info">აპლიკაცია მუშაობს %s.</string>
     <string name="recommend_apk_size_and_desc">%1$d მბ | %2$s</string>
     <string name="recommend_app">აპლიკაციის შემოთავაზებები</string>
     <string name="recommend_apps_default_title">ცარიელი</string>
@@ -751,8 +678,6 @@
     <string name="remove_invalidate_gadget_tips">თქვენს მიერ გამოყენებული ვიჯეტის გამოყენება აღარ არის ხელმისაწვდომი. შეგიძლიათ დაამატოთ კიდევ ერთი.</string>
     <string name="remove_sys_app_content">თქვენ შეძლებთ მთავარი ეკრანის მალსახმობის დამატებას ისევ პარამეტრებში > აპლიკაიციები > მთავარი ეკრანის მალსახმობების მართვა. წაიშალოს ახლავე?</string>
     <string name="remove_sys_app_title">წავშალო მთავარი ეკრანის მალსახმობი?</string>
-    <string name="request_permission_msg">POCO Launcher-ს სრული ფუნქციონირებისათვის სჭირდება ნებართები.</string>
-    <string name="request_permission_title">საჭიროა ნებართვები</string>
     <string name="reset_cate_tip_content">თუ გააგრძელებთ, ძირითადი აპლიკაციის ჯგუფები აღდგება. გსურთ გაგრძელება?</string>
     <string name="reset_cate_tip_title">ძირითადი ჯგუფების აღდგენა</string>
     <string name="reset_description_first_time">თქვენ შეგიძლიათ აღადგინოთ განლაგება %1$s –დან 2 საათის განმავლობაში</string>
@@ -768,8 +693,6 @@
     <string name="screen_cells_config_title">მთავარი ეკრანის ზედაპირი</string>
     <string name="screen_locked_toast">მთავარი ეკრანის ზედაპირი დაბლოკილია.</string>
     <string name="screen_number">%d ეკრანი</string>
-    <string name="search_bar_hint_content">მოძებნეთ აპლიკაციები და შინაარსი</string>
-    <string name="search_guide_btn">გასაგებია</string>
     <string name="search_in_apps_store">Search \"%1$s\"-სთვის %2$s-ში</string>
     <string name="search_no_result">რაიმე შედეგის მოძებნა ვერ მოხერხდა</string>
     <string name="select_all">მონიშნეთ ყველა</string>
@@ -777,7 +700,6 @@
     <string name="select_photo">სურათი</string>
     <string name="send">გაგზავნა</string>
     <string name="server_error">დაფიქსირდა სერვერის შეცდომა. დაელოდეთ ერთი ან ორი წუთი და კიდევ სცადათ.</string>
-    <string name="service_double_attention">ეს სერვისი უზრუნველყოფილია Branch Metrics Inc-ის მიერ. თქვენი ადგილმდებარეობის ინფორმაცია, ძებნის შეკითხვები და Google რეკლამების ID-ს და IP მისამართი გაზიარებული იქნება Branch-თან. ამ სერვისების გამოყენებამდე წაიკითხეთ Branch-ის<a href="http://url1"><font color="#B3000000">წესებსა და პირობებს</font></a>და<a href="http://url2"><font color="#B3000000">კონფიდენციალურობის პოლიტიკას</font></a>.</string>
     <string name="setting_wallpaper_tip">Pinch-ი და swipe-ი გასწორებისთვის</string>
     <string name="settings">პარამეტრები</string>
     <string name="settings_shortcut">პარამეტრები</string>
@@ -815,14 +737,12 @@
     <string name="status_installing">მიმდინარეობს ინსტალაცია</string>
     <string name="status_paused">დაპაუზებულია</string>
     <string name="status_pending">ველოდები</string>
-    <string name="suggestions">შემოთავაზებები</string>
     <string name="sunday">კვირა</string>
     <string name="sunday_short">კვ</string>
     <string name="sunday_shortest">კვ</string>
     <string name="swipe_the_desktop_to_the_left">გაუსით თითი მარცხნივ მთავარ ეკრანზე</string>
     <string name="swipe_the_desktop_to_the_right">გაუსით თითი მარჯვნივ მთავარ ეკრანზე</string>
-    <string name="switch_on_button">ჩართვა</string>
-    <string name="switch_personal_assistant_app_vault">აპლიკაციათა დაფა</string>
+    <string name="switch_personal_assistant_app_vault">აპლიკაციების დაფა</string>
     <string name="switch_personal_assistant_google">Google Discover</string>
     <string name="switch_personal_assistant_none">არცერთი</string>
     <string name="switch_screen_button_order">სარკისებრი ღილაკები</string>
@@ -832,10 +752,6 @@
     <string name="system_shortcuts_remove">წაშლა</string>
     <string name="system_text">ავტო</string>
     <string name="task_access_locked_app_msg">აპლიკაციის ბლოკირება ჩართულია</string>
-    <string name="term_of_service">წესები და პირობები</string>
-    <string name="terms_of_services_one">კეთილი იყოს თქვენი მობრძანება აპლიკაციათა დაფაში და სწრაფ ძებნაში. სწრაფი მოძებნა საშუალებას გაძლევთ სწრაფად იპოვოთ აპლიკაციები, აპლიკაციის შიდა შინაარსი და საგნები ონლაინ რეჟიმში. წაიკითხეთ და დაეთანხმეთ Xiaomi-ს <a href="http://url1"><font color="#B3000000">კონფიდენციალურობის პოლიტიკას </font></a> ამ მახასიათებლების გამოყენებამდე.</string>
-    <string name="terms_of_services_three">ამ ფუნქციის გამორთვა შეგიძლიათ პარამეტრებიდან.</string>
-    <string name="terms_of_services_two">გაძლიერებული ძიების გამოყენება მოითხოვს საჭირო პირადი ინფორმაციის, მათ შორის თქვენი საძიებო მოთხოვნების, Google Advertising ID-სა და IP მისამართის გაზიარებას, Branch Metrics Inc. ფილიალი დაამუშავებს თქვენს პირად ინფორმაციას შესაბამისად <a href="http://url1"><font color="#B3000000">Branch Discovery-ის კონფიდენციალურობის პოლიტიკა</font></a>. წაიკითხეთ და დაეთანხმეთ <a href="http://url2"><font color="#B3000000">End User Discovery-ის წესებსა &amp; პირობებს</font></a>და <a href="http://url3"><font color="#B3000000">Branch Discovery-ის კონფიდენციალურობის პოლიტიკას</font></a>ამ ფუნქციის გამოყენებამე.</string>
     <string name="the_anniversary_of_lifting_martial_law">მარტინის კანონის ძლაში შესვლის დღე</string>
     <string name="the_anti_aggression_day">ანტი აგრესიის დღე</string>
     <string name="the_arbor_day">ხის დღე</string>
@@ -902,11 +818,6 @@
     <string name="tuesday">სამშაბათი</string>
     <string name="tuesday_short">სამშ</string>
     <string name="tuesday_shortest">სამშ</string>
-    <string name="uni_search_permission_content">ჩართეთ ონლაინ ძიების ფუნქციები. (საძიებო მომსახურება უზრუნველყოფილია Branch-ის მიერ.)</string>
-    <string name="uni_search_permission_msg">ძებნის შედეგების გასაუმჯობესებლად დაუშვით POCO Launcher-ზე თქვენს ადგილმდებარეობაზე და კონტაქტებზე ნებართვა.</string>
-    <string name="uni_search_permission_title">გაუმჯობესებული ძებნა</string>
-    <string name="uni_search_setting_summary">პირდაპირ იპოვეთ შინაარსი პროგრამის შიგნით</string>
-    <string name="uni_search_setting_title">პროგრამის მოთხოვნის რეჟიმში</string>
     <string name="uninstall">დეინსტალაცია</string>
     <string name="uninstall_dialog_message">დეინსტალაციისას წაიშლება აპლიკაციის მონაცემები.</string>
     <string name="uninstall_dialog_title_format">წავშლო %s?</string>
@@ -917,7 +828,6 @@
     <string name="uninstall_xspace_dialog_title_format">წავშალო კლონები \"%s\"?</string>
     <string name="unknown_artist_name">უცნობი არტისტი</string>
     <string name="unnamed_folder_name">ფოლდერი</string>
-    <string name="upgrade_remove_small_window_in_recents">შეგიძლიათ გამოიყენოთ გვერდითი ზოლი მცურავ ფანჯრებში აპლიკაციების გასახსნელად</string>
     <string name="wallpaper">ფონი</string>
     <string name="wallpaper_auto_change_title">დაბლოკილი ეკრანი</string>
     <string name="wallpaper_failed_message">ვერ ვიყენებ ფონს</string>

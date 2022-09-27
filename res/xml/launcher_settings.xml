@@ -7,7 +7,6 @@
     <com.miui.home.settings.preference.ValuePreference android:persistent="false" android:title="@string/open_personal_assistant_settings" android:key="open_personal_assistant_settings_pref" android:defaultValue="true" app:isPreferenceVisible="false" />
     <com.miui.home.settings.preference.ValuePreference android:title="@string/home_switch_personal_assistant" android:key="switch_personal_assistant_pref" />
     <com.miui.home.settings.preference.CheckBoxPreference android:title="@string/launcher_search_bar_title" android:key="launcher_search_bar" />
-    <com.miui.home.settings.preference.ListPreference android:title="@string/animation_rate_title" android:key="animation_rate" />
     <PreferenceCategory android:title="@string/navigation_type_title" android:key="navigation_type_category" app:isPreferenceVisible="false">
         <com.miui.home.settings.preference.ValuePreference android:title="@string/navigation_type_title" android:key="navigation_type" />
     </PreferenceCategory>

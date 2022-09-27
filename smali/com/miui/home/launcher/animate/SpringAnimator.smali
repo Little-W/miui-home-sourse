@@ -55,7 +55,7 @@
     .line 26
     new-instance v0, Lcom/miui/home/launcher/animate/SpringAnimator$1;
 
-    const-string/jumbo v1, "value"
+    const-string v1, "value"
 
     invoke-direct {v0, p0, v1}, Lcom/miui/home/launcher/animate/SpringAnimator$1;-><init>(Lcom/miui/home/launcher/animate/SpringAnimator;Ljava/lang/String;)V
 
@@ -276,19 +276,6 @@
     return-void
 .end method
 
-.method public isRunning()Z
-    .locals 1
-
-    .line 132
-    iget-object v0, p0, Lcom/miui/home/launcher/animate/SpringAnimator;->mSpringAnimation:Landroidx/dynamicanimation/animation/SpringAnimation;
-
-    invoke-virtual {v0}, Landroidx/dynamicanimation/animation/SpringAnimation;->isRunning()Z
-
-    move-result v0
-
-    return v0
-.end method
-
 .method public registerEndAnimationMessage()V
     .locals 2
 
@@ -369,17 +356,6 @@
 
     .line 124
     iput p2, p0, Lcom/miui/home/launcher/animate/SpringAnimator;->mEnd:F
-
-    return-void
-.end method
-
-.method public setStartVelocity(F)V
-    .locals 1
-
-    .line 103
-    iget-object v0, p0, Lcom/miui/home/launcher/animate/SpringAnimator;->mSpringAnimation:Landroidx/dynamicanimation/animation/SpringAnimation;
-
-    invoke-virtual {v0, p1}, Landroidx/dynamicanimation/animation/SpringAnimation;->setStartVelocity(F)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
     return-void
 .end method

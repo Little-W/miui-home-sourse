@@ -59,8 +59,6 @@
 
 .field private mMenuBuilderCallback:Landroidx/appcompat/view/menu/MenuBuilder$Callback;
 
-.field final mMenuHostHelper:Landroidx/core/view/MenuHostHelper;
-
 .field private mMenuView:Landroidx/appcompat/widget/ActionMenuView;
 
 .field private final mMenuViewItemClickListener:Landroidx/appcompat/widget/ActionMenuView$OnMenuItemClickListener;
@@ -74,16 +72,6 @@
 .field private mPopupContext:Landroid/content/Context;
 
 .field private mPopupTheme:I
-
-.field private mProvidedMenuItems:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList<",
-            "Landroid/view/MenuItem;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private final mShowOverflowMenuRunnable:Ljava/lang/Runnable;
 
@@ -132,7 +120,7 @@
 
     const/4 v0, 0x0
 
-    .line 242
+    .line 228
     invoke-direct {p0, p1, v0}, Landroidx/appcompat/widget/Toolbar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -141,7 +129,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    .line 246
+    .line 232
     sget v0, Landroidx/appcompat/R$attr;->toolbarStyle:I
 
     invoke-direct {p0, p1, p2, v0}, Landroidx/appcompat/widget/Toolbar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -150,501 +138,462 @@
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-    .locals 10
+    .locals 5
 
-    .line 250
+    .line 236
     invoke-direct {p0, p1, p2, p3}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    const v0, 0x800013
+    const p1, 0x800013
 
-    .line 190
-    iput v0, p0, Landroidx/appcompat/widget/Toolbar;->mGravity:I
-
-    .line 202
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mTempViews:Ljava/util/ArrayList;
-
-    .line 205
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mHiddenViews:Ljava/util/ArrayList;
-
-    const/4 v0, 0x2
-
-    .line 207
-    new-array v0, v0, [I
-
-    iput-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mTempMargins:[I
-
-    .line 209
-    new-instance v0, Landroidx/core/view/MenuHostHelper;
-
-    new-instance v1, Landroidx/appcompat/widget/-$$Lambda$tJOcH8l7yIboOEu0TODlxWoYu9s;
-
-    invoke-direct {v1, p0}, Landroidx/appcompat/widget/-$$Lambda$tJOcH8l7yIboOEu0TODlxWoYu9s;-><init>(Landroidx/appcompat/widget/Toolbar;)V
-
-    invoke-direct {v0, v1}, Landroidx/core/view/MenuHostHelper;-><init>(Ljava/lang/Runnable;)V
-
-    iput-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mMenuHostHelper:Landroidx/core/view/MenuHostHelper;
-
-    .line 210
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mProvidedMenuItems:Ljava/util/ArrayList;
-
-    .line 213
-    new-instance v0, Landroidx/appcompat/widget/Toolbar$1;
-
-    invoke-direct {v0, p0}, Landroidx/appcompat/widget/Toolbar$1;-><init>(Landroidx/appcompat/widget/Toolbar;)V
-
-    iput-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mMenuViewItemClickListener:Landroidx/appcompat/widget/ActionMenuView$OnMenuItemClickListener;
-
-    .line 235
-    new-instance v0, Landroidx/appcompat/widget/Toolbar$2;
-
-    invoke-direct {v0, p0}, Landroidx/appcompat/widget/Toolbar$2;-><init>(Landroidx/appcompat/widget/Toolbar;)V
-
-    iput-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mShowOverflowMenuRunnable:Ljava/lang/Runnable;
-
-    .line 253
-    invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    sget-object v1, Landroidx/appcompat/R$styleable;->Toolbar:[I
-
-    const/4 v2, 0x0
-
-    invoke-static {v0, p2, v1, p3, v2}, Landroidx/appcompat/widget/TintTypedArray;->obtainStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroidx/appcompat/widget/TintTypedArray;
-
-    move-result-object v0
-
-    .line 255
-    sget-object v5, Landroidx/appcompat/R$styleable;->Toolbar:[I
-
-    .line 256
-    invoke-virtual {v0}, Landroidx/appcompat/widget/TintTypedArray;->getWrappedTypeArray()Landroid/content/res/TypedArray;
-
-    move-result-object v7
-
-    const/4 v9, 0x0
-
-    move-object v3, p0
-
-    move-object v4, p1
-
-    move-object v6, p2
-
-    move v8, p3
-
-    .line 255
-    invoke-static/range {v3 .. v9}, Landroidx/core/view/ViewCompat;->saveAttributeDataForStyleable(Landroid/view/View;Landroid/content/Context;[ILandroid/util/AttributeSet;Landroid/content/res/TypedArray;II)V
-
-    .line 258
-    sget p1, Landroidx/appcompat/R$styleable;->Toolbar_titleTextAppearance:I
-
-    invoke-virtual {v0, p1, v2}, Landroidx/appcompat/widget/TintTypedArray;->getResourceId(II)I
-
-    move-result p1
-
-    iput p1, p0, Landroidx/appcompat/widget/Toolbar;->mTitleTextAppearance:I
-
-    .line 259
-    sget p1, Landroidx/appcompat/R$styleable;->Toolbar_subtitleTextAppearance:I
-
-    invoke-virtual {v0, p1, v2}, Landroidx/appcompat/widget/TintTypedArray;->getResourceId(II)I
-
-    move-result p1
-
-    iput p1, p0, Landroidx/appcompat/widget/Toolbar;->mSubtitleTextAppearance:I
-
-    .line 260
-    sget p1, Landroidx/appcompat/R$styleable;->Toolbar_android_gravity:I
-
-    iget p2, p0, Landroidx/appcompat/widget/Toolbar;->mGravity:I
-
-    invoke-virtual {v0, p1, p2}, Landroidx/appcompat/widget/TintTypedArray;->getInteger(II)I
-
-    move-result p1
-
+    .line 181
     iput p1, p0, Landroidx/appcompat/widget/Toolbar;->mGravity:I
 
-    .line 261
-    sget p1, Landroidx/appcompat/R$styleable;->Toolbar_buttonGravity:I
+    .line 193
+    new-instance p1, Ljava/util/ArrayList;
 
-    const/16 p2, 0x30
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-virtual {v0, p1, p2}, Landroidx/appcompat/widget/TintTypedArray;->getInteger(II)I
+    iput-object p1, p0, Landroidx/appcompat/widget/Toolbar;->mTempViews:Ljava/util/ArrayList;
 
-    move-result p1
+    .line 196
+    new-instance p1, Ljava/util/ArrayList;
 
-    iput p1, p0, Landroidx/appcompat/widget/Toolbar;->mButtonGravity:I
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 264
-    sget p1, Landroidx/appcompat/R$styleable;->Toolbar_titleMargin:I
+    iput-object p1, p0, Landroidx/appcompat/widget/Toolbar;->mHiddenViews:Ljava/util/ArrayList;
 
-    invoke-virtual {v0, p1, v2}, Landroidx/appcompat/widget/TintTypedArray;->getDimensionPixelOffset(II)I
+    const/4 p1, 0x2
 
-    move-result p1
+    .line 198
+    new-array p1, p1, [I
 
-    .line 265
-    sget p2, Landroidx/appcompat/R$styleable;->Toolbar_titleMargins:I
+    iput-object p1, p0, Landroidx/appcompat/widget/Toolbar;->mTempMargins:[I
 
-    invoke-virtual {v0, p2}, Landroidx/appcompat/widget/TintTypedArray;->hasValue(I)Z
+    .line 202
+    new-instance p1, Landroidx/appcompat/widget/Toolbar$1;
+
+    invoke-direct {p1, p0}, Landroidx/appcompat/widget/Toolbar$1;-><init>(Landroidx/appcompat/widget/Toolbar;)V
+
+    iput-object p1, p0, Landroidx/appcompat/widget/Toolbar;->mMenuViewItemClickListener:Landroidx/appcompat/widget/ActionMenuView$OnMenuItemClickListener;
+
+    .line 221
+    new-instance p1, Landroidx/appcompat/widget/Toolbar$2;
+
+    invoke-direct {p1, p0}, Landroidx/appcompat/widget/Toolbar$2;-><init>(Landroidx/appcompat/widget/Toolbar;)V
+
+    iput-object p1, p0, Landroidx/appcompat/widget/Toolbar;->mShowOverflowMenuRunnable:Ljava/lang/Runnable;
+
+    .line 239
+    invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    sget-object v0, Landroidx/appcompat/R$styleable;->Toolbar:[I
+
+    const/4 v1, 0x0
+
+    invoke-static {p1, p2, v0, p3, v1}, Landroidx/appcompat/widget/TintTypedArray;->obtainStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroidx/appcompat/widget/TintTypedArray;
+
+    move-result-object p1
+
+    .line 242
+    sget p2, Landroidx/appcompat/R$styleable;->Toolbar_titleTextAppearance:I
+
+    invoke-virtual {p1, p2, v1}, Landroidx/appcompat/widget/TintTypedArray;->getResourceId(II)I
 
     move-result p2
 
-    if-eqz p2, :cond_0
+    iput p2, p0, Landroidx/appcompat/widget/Toolbar;->mTitleTextAppearance:I
 
-    .line 267
-    sget p2, Landroidx/appcompat/R$styleable;->Toolbar_titleMargins:I
+    .line 243
+    sget p2, Landroidx/appcompat/R$styleable;->Toolbar_subtitleTextAppearance:I
 
-    invoke-virtual {v0, p2, p1}, Landroidx/appcompat/widget/TintTypedArray;->getDimensionPixelOffset(II)I
+    invoke-virtual {p1, p2, v1}, Landroidx/appcompat/widget/TintTypedArray;->getResourceId(II)I
 
-    move-result p1
+    move-result p2
 
-    .line 269
-    :cond_0
-    iput p1, p0, Landroidx/appcompat/widget/Toolbar;->mTitleMarginBottom:I
+    iput p2, p0, Landroidx/appcompat/widget/Toolbar;->mSubtitleTextAppearance:I
 
-    iput p1, p0, Landroidx/appcompat/widget/Toolbar;->mTitleMarginTop:I
+    .line 244
+    sget p2, Landroidx/appcompat/R$styleable;->Toolbar_android_gravity:I
 
-    iput p1, p0, Landroidx/appcompat/widget/Toolbar;->mTitleMarginEnd:I
+    iget p3, p0, Landroidx/appcompat/widget/Toolbar;->mGravity:I
 
-    iput p1, p0, Landroidx/appcompat/widget/Toolbar;->mTitleMarginStart:I
+    invoke-virtual {p1, p2, p3}, Landroidx/appcompat/widget/TintTypedArray;->getInteger(II)I
 
-    .line 271
-    sget p1, Landroidx/appcompat/R$styleable;->Toolbar_titleMarginStart:I
+    move-result p2
 
-    const/4 p2, -0x1
+    iput p2, p0, Landroidx/appcompat/widget/Toolbar;->mGravity:I
 
-    invoke-virtual {v0, p1, p2}, Landroidx/appcompat/widget/TintTypedArray;->getDimensionPixelOffset(II)I
+    .line 245
+    sget p2, Landroidx/appcompat/R$styleable;->Toolbar_buttonGravity:I
 
-    move-result p1
+    const/16 p3, 0x30
 
-    if-ltz p1, :cond_1
+    invoke-virtual {p1, p2, p3}, Landroidx/appcompat/widget/TintTypedArray;->getInteger(II)I
 
-    .line 273
-    iput p1, p0, Landroidx/appcompat/widget/Toolbar;->mTitleMarginStart:I
+    move-result p2
 
-    .line 276
-    :cond_1
-    sget p1, Landroidx/appcompat/R$styleable;->Toolbar_titleMarginEnd:I
+    iput p2, p0, Landroidx/appcompat/widget/Toolbar;->mButtonGravity:I
 
-    invoke-virtual {v0, p1, p2}, Landroidx/appcompat/widget/TintTypedArray;->getDimensionPixelOffset(II)I
+    .line 248
+    sget p2, Landroidx/appcompat/R$styleable;->Toolbar_titleMargin:I
 
-    move-result p1
+    invoke-virtual {p1, p2, v1}, Landroidx/appcompat/widget/TintTypedArray;->getDimensionPixelOffset(II)I
 
-    if-ltz p1, :cond_2
+    move-result p2
 
-    .line 278
-    iput p1, p0, Landroidx/appcompat/widget/Toolbar;->mTitleMarginEnd:I
+    .line 249
+    sget p3, Landroidx/appcompat/R$styleable;->Toolbar_titleMargins:I
 
-    .line 281
-    :cond_2
-    sget p1, Landroidx/appcompat/R$styleable;->Toolbar_titleMarginTop:I
-
-    invoke-virtual {v0, p1, p2}, Landroidx/appcompat/widget/TintTypedArray;->getDimensionPixelOffset(II)I
-
-    move-result p1
-
-    if-ltz p1, :cond_3
-
-    .line 283
-    iput p1, p0, Landroidx/appcompat/widget/Toolbar;->mTitleMarginTop:I
-
-    .line 286
-    :cond_3
-    sget p1, Landroidx/appcompat/R$styleable;->Toolbar_titleMarginBottom:I
-
-    invoke-virtual {v0, p1, p2}, Landroidx/appcompat/widget/TintTypedArray;->getDimensionPixelOffset(II)I
-
-    move-result p1
-
-    if-ltz p1, :cond_4
-
-    .line 289
-    iput p1, p0, Landroidx/appcompat/widget/Toolbar;->mTitleMarginBottom:I
-
-    .line 292
-    :cond_4
-    sget p1, Landroidx/appcompat/R$styleable;->Toolbar_maxButtonHeight:I
-
-    invoke-virtual {v0, p1, p2}, Landroidx/appcompat/widget/TintTypedArray;->getDimensionPixelSize(II)I
-
-    move-result p1
-
-    iput p1, p0, Landroidx/appcompat/widget/Toolbar;->mMaxButtonHeight:I
-
-    .line 294
-    sget p1, Landroidx/appcompat/R$styleable;->Toolbar_contentInsetStart:I
-
-    const/high16 p2, -0x80000000
-
-    .line 295
-    invoke-virtual {v0, p1, p2}, Landroidx/appcompat/widget/TintTypedArray;->getDimensionPixelOffset(II)I
-
-    move-result p1
-
-    .line 297
-    sget p3, Landroidx/appcompat/R$styleable;->Toolbar_contentInsetEnd:I
-
-    .line 298
-    invoke-virtual {v0, p3, p2}, Landroidx/appcompat/widget/TintTypedArray;->getDimensionPixelOffset(II)I
+    invoke-virtual {p1, p3}, Landroidx/appcompat/widget/TintTypedArray;->hasValue(I)Z
 
     move-result p3
 
-    .line 300
-    sget v1, Landroidx/appcompat/R$styleable;->Toolbar_contentInsetLeft:I
+    if-eqz p3, :cond_0
 
-    .line 301
-    invoke-virtual {v0, v1, v2}, Landroidx/appcompat/widget/TintTypedArray;->getDimensionPixelSize(II)I
+    .line 251
+    sget p3, Landroidx/appcompat/R$styleable;->Toolbar_titleMargins:I
 
-    move-result v1
+    invoke-virtual {p1, p3, p2}, Landroidx/appcompat/widget/TintTypedArray;->getDimensionPixelOffset(II)I
 
-    .line 302
+    move-result p2
+
+    .line 253
+    :cond_0
+    iput p2, p0, Landroidx/appcompat/widget/Toolbar;->mTitleMarginBottom:I
+
+    iput p2, p0, Landroidx/appcompat/widget/Toolbar;->mTitleMarginTop:I
+
+    iput p2, p0, Landroidx/appcompat/widget/Toolbar;->mTitleMarginEnd:I
+
+    iput p2, p0, Landroidx/appcompat/widget/Toolbar;->mTitleMarginStart:I
+
+    .line 255
+    sget p2, Landroidx/appcompat/R$styleable;->Toolbar_titleMarginStart:I
+
+    const/4 p3, -0x1
+
+    invoke-virtual {p1, p2, p3}, Landroidx/appcompat/widget/TintTypedArray;->getDimensionPixelOffset(II)I
+
+    move-result p2
+
+    if-ltz p2, :cond_1
+
+    .line 257
+    iput p2, p0, Landroidx/appcompat/widget/Toolbar;->mTitleMarginStart:I
+
+    .line 260
+    :cond_1
+    sget p2, Landroidx/appcompat/R$styleable;->Toolbar_titleMarginEnd:I
+
+    invoke-virtual {p1, p2, p3}, Landroidx/appcompat/widget/TintTypedArray;->getDimensionPixelOffset(II)I
+
+    move-result p2
+
+    if-ltz p2, :cond_2
+
+    .line 262
+    iput p2, p0, Landroidx/appcompat/widget/Toolbar;->mTitleMarginEnd:I
+
+    .line 265
+    :cond_2
+    sget p2, Landroidx/appcompat/R$styleable;->Toolbar_titleMarginTop:I
+
+    invoke-virtual {p1, p2, p3}, Landroidx/appcompat/widget/TintTypedArray;->getDimensionPixelOffset(II)I
+
+    move-result p2
+
+    if-ltz p2, :cond_3
+
+    .line 267
+    iput p2, p0, Landroidx/appcompat/widget/Toolbar;->mTitleMarginTop:I
+
+    .line 270
+    :cond_3
+    sget p2, Landroidx/appcompat/R$styleable;->Toolbar_titleMarginBottom:I
+
+    invoke-virtual {p1, p2, p3}, Landroidx/appcompat/widget/TintTypedArray;->getDimensionPixelOffset(II)I
+
+    move-result p2
+
+    if-ltz p2, :cond_4
+
+    .line 273
+    iput p2, p0, Landroidx/appcompat/widget/Toolbar;->mTitleMarginBottom:I
+
+    .line 276
+    :cond_4
+    sget p2, Landroidx/appcompat/R$styleable;->Toolbar_maxButtonHeight:I
+
+    invoke-virtual {p1, p2, p3}, Landroidx/appcompat/widget/TintTypedArray;->getDimensionPixelSize(II)I
+
+    move-result p2
+
+    iput p2, p0, Landroidx/appcompat/widget/Toolbar;->mMaxButtonHeight:I
+
+    .line 278
+    sget p2, Landroidx/appcompat/R$styleable;->Toolbar_contentInsetStart:I
+
+    const/high16 p3, -0x80000000
+
+    .line 279
+    invoke-virtual {p1, p2, p3}, Landroidx/appcompat/widget/TintTypedArray;->getDimensionPixelOffset(II)I
+
+    move-result p2
+
+    .line 281
+    sget v0, Landroidx/appcompat/R$styleable;->Toolbar_contentInsetEnd:I
+
+    .line 282
+    invoke-virtual {p1, v0, p3}, Landroidx/appcompat/widget/TintTypedArray;->getDimensionPixelOffset(II)I
+
+    move-result v0
+
+    .line 284
+    sget v2, Landroidx/appcompat/R$styleable;->Toolbar_contentInsetLeft:I
+
+    .line 285
+    invoke-virtual {p1, v2, v1}, Landroidx/appcompat/widget/TintTypedArray;->getDimensionPixelSize(II)I
+
+    move-result v2
+
+    .line 286
     sget v3, Landroidx/appcompat/R$styleable;->Toolbar_contentInsetRight:I
 
-    .line 303
-    invoke-virtual {v0, v3, v2}, Landroidx/appcompat/widget/TintTypedArray;->getDimensionPixelSize(II)I
+    .line 287
+    invoke-virtual {p1, v3, v1}, Landroidx/appcompat/widget/TintTypedArray;->getDimensionPixelSize(II)I
 
     move-result v3
 
-    .line 305
+    .line 289
     invoke-direct {p0}, Landroidx/appcompat/widget/Toolbar;->ensureContentInsets()V
 
-    .line 306
+    .line 290
     iget-object v4, p0, Landroidx/appcompat/widget/Toolbar;->mContentInsets:Landroidx/appcompat/widget/RtlSpacingHelper;
 
-    invoke-virtual {v4, v1, v3}, Landroidx/appcompat/widget/RtlSpacingHelper;->setAbsolute(II)V
+    invoke-virtual {v4, v2, v3}, Landroidx/appcompat/widget/RtlSpacingHelper;->setAbsolute(II)V
 
-    if-ne p1, p2, :cond_5
+    if-ne p2, p3, :cond_5
 
-    if-eq p3, p2, :cond_6
+    if-eq v0, p3, :cond_6
+
+    .line 294
+    :cond_5
+    iget-object v2, p0, Landroidx/appcompat/widget/Toolbar;->mContentInsets:Landroidx/appcompat/widget/RtlSpacingHelper;
+
+    invoke-virtual {v2, p2, v0}, Landroidx/appcompat/widget/RtlSpacingHelper;->setRelative(II)V
+
+    .line 297
+    :cond_6
+    sget p2, Landroidx/appcompat/R$styleable;->Toolbar_contentInsetStartWithNavigation:I
+
+    invoke-virtual {p1, p2, p3}, Landroidx/appcompat/widget/TintTypedArray;->getDimensionPixelOffset(II)I
+
+    move-result p2
+
+    iput p2, p0, Landroidx/appcompat/widget/Toolbar;->mContentInsetStartWithNavigation:I
+
+    .line 299
+    sget p2, Landroidx/appcompat/R$styleable;->Toolbar_contentInsetEndWithActions:I
+
+    invoke-virtual {p1, p2, p3}, Landroidx/appcompat/widget/TintTypedArray;->getDimensionPixelOffset(II)I
+
+    move-result p2
+
+    iput p2, p0, Landroidx/appcompat/widget/Toolbar;->mContentInsetEndWithActions:I
+
+    .line 302
+    sget p2, Landroidx/appcompat/R$styleable;->Toolbar_collapseIcon:I
+
+    invoke-virtual {p1, p2}, Landroidx/appcompat/widget/TintTypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p2
+
+    iput-object p2, p0, Landroidx/appcompat/widget/Toolbar;->mCollapseIcon:Landroid/graphics/drawable/Drawable;
+
+    .line 303
+    sget p2, Landroidx/appcompat/R$styleable;->Toolbar_collapseContentDescription:I
+
+    invoke-virtual {p1, p2}, Landroidx/appcompat/widget/TintTypedArray;->getText(I)Ljava/lang/CharSequence;
+
+    move-result-object p2
+
+    iput-object p2, p0, Landroidx/appcompat/widget/Toolbar;->mCollapseDescription:Ljava/lang/CharSequence;
+
+    .line 305
+    sget p2, Landroidx/appcompat/R$styleable;->Toolbar_title:I
+
+    invoke-virtual {p1, p2}, Landroidx/appcompat/widget/TintTypedArray;->getText(I)Ljava/lang/CharSequence;
+
+    move-result-object p2
+
+    .line 306
+    invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result p3
+
+    if-nez p3, :cond_7
+
+    .line 307
+    invoke-virtual {p0, p2}, Landroidx/appcompat/widget/Toolbar;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 310
-    :cond_5
-    iget-object v1, p0, Landroidx/appcompat/widget/Toolbar;->mContentInsets:Landroidx/appcompat/widget/RtlSpacingHelper;
-
-    invoke-virtual {v1, p1, p3}, Landroidx/appcompat/widget/RtlSpacingHelper;->setRelative(II)V
-
-    .line 313
-    :cond_6
-    sget p1, Landroidx/appcompat/R$styleable;->Toolbar_contentInsetStartWithNavigation:I
-
-    invoke-virtual {v0, p1, p2}, Landroidx/appcompat/widget/TintTypedArray;->getDimensionPixelOffset(II)I
-
-    move-result p1
-
-    iput p1, p0, Landroidx/appcompat/widget/Toolbar;->mContentInsetStartWithNavigation:I
-
-    .line 315
-    sget p1, Landroidx/appcompat/R$styleable;->Toolbar_contentInsetEndWithActions:I
-
-    invoke-virtual {v0, p1, p2}, Landroidx/appcompat/widget/TintTypedArray;->getDimensionPixelOffset(II)I
-
-    move-result p1
-
-    iput p1, p0, Landroidx/appcompat/widget/Toolbar;->mContentInsetEndWithActions:I
-
-    .line 318
-    sget p1, Landroidx/appcompat/R$styleable;->Toolbar_collapseIcon:I
-
-    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/TintTypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    iput-object p1, p0, Landroidx/appcompat/widget/Toolbar;->mCollapseIcon:Landroid/graphics/drawable/Drawable;
-
-    .line 319
-    sget p1, Landroidx/appcompat/R$styleable;->Toolbar_collapseContentDescription:I
-
-    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/TintTypedArray;->getText(I)Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    iput-object p1, p0, Landroidx/appcompat/widget/Toolbar;->mCollapseDescription:Ljava/lang/CharSequence;
-
-    .line 321
-    sget p1, Landroidx/appcompat/R$styleable;->Toolbar_title:I
-
-    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/TintTypedArray;->getText(I)Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    .line 322
-    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_7
-
-    .line 323
-    invoke-virtual {p0, p1}, Landroidx/appcompat/widget/Toolbar;->setTitle(Ljava/lang/CharSequence;)V
-
-    .line 326
     :cond_7
-    sget p1, Landroidx/appcompat/R$styleable;->Toolbar_subtitle:I
+    sget p2, Landroidx/appcompat/R$styleable;->Toolbar_subtitle:I
 
-    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/TintTypedArray;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {p1, p2}, Landroidx/appcompat/widget/TintTypedArray;->getText(I)Ljava/lang/CharSequence;
 
-    move-result-object p1
+    move-result-object p2
 
-    .line 327
-    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    .line 311
+    invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result p2
+    move-result p3
 
-    if-nez p2, :cond_8
+    if-nez p3, :cond_8
 
-    .line 328
-    invoke-virtual {p0, p1}, Landroidx/appcompat/widget/Toolbar;->setSubtitle(Ljava/lang/CharSequence;)V
+    .line 312
+    invoke-virtual {p0, p2}, Landroidx/appcompat/widget/Toolbar;->setSubtitle(Ljava/lang/CharSequence;)V
 
-    .line 332
+    .line 316
     :cond_8
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getContext()Landroid/content/Context;
 
-    move-result-object p1
+    move-result-object p2
 
-    iput-object p1, p0, Landroidx/appcompat/widget/Toolbar;->mPopupContext:Landroid/content/Context;
+    iput-object p2, p0, Landroidx/appcompat/widget/Toolbar;->mPopupContext:Landroid/content/Context;
+
+    .line 317
+    sget p2, Landroidx/appcompat/R$styleable;->Toolbar_popupTheme:I
+
+    invoke-virtual {p1, p2, v1}, Landroidx/appcompat/widget/TintTypedArray;->getResourceId(II)I
+
+    move-result p2
+
+    invoke-virtual {p0, p2}, Landroidx/appcompat/widget/Toolbar;->setPopupTheme(I)V
+
+    .line 319
+    sget p2, Landroidx/appcompat/R$styleable;->Toolbar_navigationIcon:I
+
+    invoke-virtual {p1, p2}, Landroidx/appcompat/widget/TintTypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p2
+
+    if-eqz p2, :cond_9
+
+    .line 321
+    invoke-virtual {p0, p2}, Landroidx/appcompat/widget/Toolbar;->setNavigationIcon(Landroid/graphics/drawable/Drawable;)V
+
+    .line 323
+    :cond_9
+    sget p2, Landroidx/appcompat/R$styleable;->Toolbar_navigationContentDescription:I
+
+    invoke-virtual {p1, p2}, Landroidx/appcompat/widget/TintTypedArray;->getText(I)Ljava/lang/CharSequence;
+
+    move-result-object p2
+
+    .line 324
+    invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result p3
+
+    if-nez p3, :cond_a
+
+    .line 325
+    invoke-virtual {p0, p2}, Landroidx/appcompat/widget/Toolbar;->setNavigationContentDescription(Ljava/lang/CharSequence;)V
+
+    .line 328
+    :cond_a
+    sget p2, Landroidx/appcompat/R$styleable;->Toolbar_logo:I
+
+    invoke-virtual {p1, p2}, Landroidx/appcompat/widget/TintTypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p2
+
+    if-eqz p2, :cond_b
+
+    .line 330
+    invoke-virtual {p0, p2}, Landroidx/appcompat/widget/Toolbar;->setLogo(Landroid/graphics/drawable/Drawable;)V
 
     .line 333
-    sget p1, Landroidx/appcompat/R$styleable;->Toolbar_popupTheme:I
+    :cond_b
+    sget p2, Landroidx/appcompat/R$styleable;->Toolbar_logoDescription:I
 
-    invoke-virtual {v0, p1, v2}, Landroidx/appcompat/widget/TintTypedArray;->getResourceId(II)I
+    invoke-virtual {p1, p2}, Landroidx/appcompat/widget/TintTypedArray;->getText(I)Ljava/lang/CharSequence;
 
-    move-result p1
+    move-result-object p2
 
-    invoke-virtual {p0, p1}, Landroidx/appcompat/widget/Toolbar;->setPopupTheme(I)V
+    .line 334
+    invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result p3
+
+    if-nez p3, :cond_c
 
     .line 335
-    sget p1, Landroidx/appcompat/R$styleable;->Toolbar_navigationIcon:I
+    invoke-virtual {p0, p2}, Landroidx/appcompat/widget/Toolbar;->setLogoDescription(Ljava/lang/CharSequence;)V
 
-    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/TintTypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+    .line 338
+    :cond_c
+    sget p2, Landroidx/appcompat/R$styleable;->Toolbar_titleTextColor:I
 
-    move-result-object p1
+    invoke-virtual {p1, p2}, Landroidx/appcompat/widget/TintTypedArray;->hasValue(I)Z
 
-    if-eqz p1, :cond_9
+    move-result p2
 
-    .line 337
-    invoke-virtual {p0, p1}, Landroidx/appcompat/widget/Toolbar;->setNavigationIcon(Landroid/graphics/drawable/Drawable;)V
+    if-eqz p2, :cond_d
 
     .line 339
-    :cond_9
-    sget p1, Landroidx/appcompat/R$styleable;->Toolbar_navigationContentDescription:I
+    sget p2, Landroidx/appcompat/R$styleable;->Toolbar_titleTextColor:I
 
-    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/TintTypedArray;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {p1, p2}, Landroidx/appcompat/widget/TintTypedArray;->getColorStateList(I)Landroid/content/res/ColorStateList;
 
-    move-result-object p1
+    move-result-object p2
 
-    .line 340
-    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-virtual {p0, p2}, Landroidx/appcompat/widget/Toolbar;->setTitleTextColor(Landroid/content/res/ColorStateList;)V
+
+    .line 342
+    :cond_d
+    sget p2, Landroidx/appcompat/R$styleable;->Toolbar_subtitleTextColor:I
+
+    invoke-virtual {p1, p2}, Landroidx/appcompat/widget/TintTypedArray;->hasValue(I)Z
 
     move-result p2
 
-    if-nez p2, :cond_a
+    if-eqz p2, :cond_e
 
-    .line 341
-    invoke-virtual {p0, p1}, Landroidx/appcompat/widget/Toolbar;->setNavigationContentDescription(Ljava/lang/CharSequence;)V
+    .line 343
+    sget p2, Landroidx/appcompat/R$styleable;->Toolbar_subtitleTextColor:I
 
-    .line 344
-    :cond_a
-    sget p1, Landroidx/appcompat/R$styleable;->Toolbar_logo:I
+    invoke-virtual {p1, p2}, Landroidx/appcompat/widget/TintTypedArray;->getColorStateList(I)Landroid/content/res/ColorStateList;
 
-    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/TintTypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+    move-result-object p2
 
-    move-result-object p1
-
-    if-eqz p1, :cond_b
+    invoke-virtual {p0, p2}, Landroidx/appcompat/widget/Toolbar;->setSubtitleTextColor(Landroid/content/res/ColorStateList;)V
 
     .line 346
-    invoke-virtual {p0, p1}, Landroidx/appcompat/widget/Toolbar;->setLogo(Landroid/graphics/drawable/Drawable;)V
+    :cond_e
+    sget p2, Landroidx/appcompat/R$styleable;->Toolbar_menu:I
 
-    .line 349
-    :cond_b
-    sget p1, Landroidx/appcompat/R$styleable;->Toolbar_logoDescription:I
-
-    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/TintTypedArray;->getText(I)Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    .line 350
-    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-virtual {p1, p2}, Landroidx/appcompat/widget/TintTypedArray;->hasValue(I)Z
 
     move-result p2
 
-    if-nez p2, :cond_c
+    if-eqz p2, :cond_f
 
-    .line 351
-    invoke-virtual {p0, p1}, Landroidx/appcompat/widget/Toolbar;->setLogoDescription(Ljava/lang/CharSequence;)V
+    .line 347
+    sget p2, Landroidx/appcompat/R$styleable;->Toolbar_menu:I
 
-    .line 354
-    :cond_c
-    sget p1, Landroidx/appcompat/R$styleable;->Toolbar_titleTextColor:I
+    invoke-virtual {p1, p2, v1}, Landroidx/appcompat/widget/TintTypedArray;->getResourceId(II)I
 
-    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/TintTypedArray;->hasValue(I)Z
+    move-result p2
 
-    move-result p1
+    invoke-virtual {p0, p2}, Landroidx/appcompat/widget/Toolbar;->inflateMenu(I)V
 
-    if-eqz p1, :cond_d
-
-    .line 355
-    sget p1, Landroidx/appcompat/R$styleable;->Toolbar_titleTextColor:I
-
-    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/TintTypedArray;->getColorStateList(I)Landroid/content/res/ColorStateList;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Landroidx/appcompat/widget/Toolbar;->setTitleTextColor(Landroid/content/res/ColorStateList;)V
-
-    .line 358
-    :cond_d
-    sget p1, Landroidx/appcompat/R$styleable;->Toolbar_subtitleTextColor:I
-
-    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/TintTypedArray;->hasValue(I)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_e
-
-    .line 359
-    sget p1, Landroidx/appcompat/R$styleable;->Toolbar_subtitleTextColor:I
-
-    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/TintTypedArray;->getColorStateList(I)Landroid/content/res/ColorStateList;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Landroidx/appcompat/widget/Toolbar;->setSubtitleTextColor(Landroid/content/res/ColorStateList;)V
-
-    .line 362
-    :cond_e
-    sget p1, Landroidx/appcompat/R$styleable;->Toolbar_menu:I
-
-    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/TintTypedArray;->hasValue(I)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_f
-
-    .line 363
-    sget p1, Landroidx/appcompat/R$styleable;->Toolbar_menu:I
-
-    invoke-virtual {v0, p1, v2}, Landroidx/appcompat/widget/TintTypedArray;->getResourceId(II)I
-
-    move-result p1
-
-    invoke-virtual {p0, p1}, Landroidx/appcompat/widget/Toolbar;->inflateMenu(I)V
-
-    .line 366
+    .line 350
     :cond_f
-    invoke-virtual {v0}, Landroidx/appcompat/widget/TintTypedArray;->recycle()V
+    invoke-virtual {p1}, Landroidx/appcompat/widget/TintTypedArray;->recycle()V
 
     return-void
 .end method
@@ -660,7 +609,7 @@
         }
     .end annotation
 
-    .line 2188
+    .line 2139
     invoke-static {p0}, Landroidx/core/view/ViewCompat;->getLayoutDirection(Landroid/view/View;)I
 
     move-result v0
@@ -678,23 +627,23 @@
     :cond_0
     move v0, v1
 
-    .line 2189
+    .line 2140
     :goto_0
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getChildCount()I
 
     move-result v3
 
-    .line 2191
+    .line 2142
     invoke-static {p0}, Landroidx/core/view/ViewCompat;->getLayoutDirection(Landroid/view/View;)I
 
     move-result v4
 
-    .line 2190
+    .line 2141
     invoke-static {p2, v4}, Landroidx/core/view/GravityCompat;->getAbsoluteGravity(II)I
 
     move-result p2
 
-    .line 2193
+    .line 2144
     invoke-interface {p1}, Ljava/util/List;->clear()V
 
     if-eqz v0, :cond_2
@@ -704,19 +653,19 @@
     :goto_1
     if-ltz v3, :cond_4
 
-    .line 2197
+    .line 2148
     invoke-virtual {p0, v3}, Landroidx/appcompat/widget/Toolbar;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 2198
+    .line 2149
     invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
 
     check-cast v1, Landroidx/appcompat/widget/Toolbar$LayoutParams;
 
-    .line 2199
+    .line 2150
     iget v2, v1, Landroidx/appcompat/widget/Toolbar$LayoutParams;->mViewType:I
 
     if-nez v2, :cond_1
@@ -729,14 +678,14 @@
 
     iget v1, v1, Landroidx/appcompat/widget/Toolbar$LayoutParams;->gravity:I
 
-    .line 2200
+    .line 2151
     invoke-direct {p0, v1}, Landroidx/appcompat/widget/Toolbar;->getChildHorizontalGravity(I)I
 
     move-result v1
 
     if-ne v1, p2, :cond_1
 
-    .line 2201
+    .line 2152
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_1
@@ -748,19 +697,19 @@
     :goto_2
     if-ge v1, v3, :cond_4
 
-    .line 2206
+    .line 2157
     invoke-virtual {p0, v1}, Landroidx/appcompat/widget/Toolbar;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 2207
+    .line 2158
     invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v2
 
     check-cast v2, Landroidx/appcompat/widget/Toolbar$LayoutParams;
 
-    .line 2208
+    .line 2159
     iget v4, v2, Landroidx/appcompat/widget/Toolbar$LayoutParams;->mViewType:I
 
     if-nez v4, :cond_3
@@ -773,14 +722,14 @@
 
     iget v2, v2, Landroidx/appcompat/widget/Toolbar$LayoutParams;->gravity:I
 
-    .line 2209
+    .line 2160
     invoke-direct {p0, v2}, Landroidx/appcompat/widget/Toolbar;->getChildHorizontalGravity(I)I
 
     move-result v2
 
     if-ne v2, p2, :cond_3
 
-    .line 2210
+    .line 2161
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_3
@@ -795,21 +744,21 @@
 .method private addSystemView(Landroid/view/View;Z)V
     .locals 2
 
-    .line 1559
+    .line 1510
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    .line 1562
+    .line 1513
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->generateDefaultLayoutParams()Landroidx/appcompat/widget/Toolbar$LayoutParams;
 
     move-result-object v0
 
     goto :goto_0
 
-    .line 1563
+    .line 1514
     :cond_0
     invoke-virtual {p0, v0}, Landroidx/appcompat/widget/Toolbar;->checkLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Z
 
@@ -817,41 +766,41 @@
 
     if-nez v1, :cond_1
 
-    .line 1564
+    .line 1515
     invoke-virtual {p0, v0}, Landroidx/appcompat/widget/Toolbar;->generateLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Landroidx/appcompat/widget/Toolbar$LayoutParams;
 
     move-result-object v0
 
     goto :goto_0
 
-    .line 1566
+    .line 1517
     :cond_1
     check-cast v0, Landroidx/appcompat/widget/Toolbar$LayoutParams;
 
     :goto_0
     const/4 v1, 0x1
 
-    .line 1568
+    .line 1519
     iput v1, v0, Landroidx/appcompat/widget/Toolbar$LayoutParams;->mViewType:I
 
     if-eqz p2, :cond_2
 
-    .line 1570
+    .line 1521
     iget-object p2, p0, Landroidx/appcompat/widget/Toolbar;->mExpandedActionView:Landroid/view/View;
 
     if-eqz p2, :cond_2
 
-    .line 1571
+    .line 1522
     invoke-virtual {p1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1572
+    .line 1523
     iget-object p2, p0, Landroidx/appcompat/widget/Toolbar;->mHiddenViews:Ljava/util/ArrayList;
 
     invoke-virtual {p2, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 1574
+    .line 1525
     :cond_2
     invoke-virtual {p0, p1, v0}, Landroidx/appcompat/widget/Toolbar;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
@@ -862,12 +811,12 @@
 .method private ensureContentInsets()V
     .locals 1
 
-    .line 2333
+    .line 2288
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mContentInsets:Landroidx/appcompat/widget/RtlSpacingHelper;
 
     if-nez v0, :cond_0
 
-    .line 2334
+    .line 2289
     new-instance v0, Landroidx/appcompat/widget/RtlSpacingHelper;
 
     invoke-direct {v0}, Landroidx/appcompat/widget/RtlSpacingHelper;-><init>()V
@@ -881,12 +830,12 @@
 .method private ensureLogoView()V
     .locals 2
 
-    .line 717
+    .line 693
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mLogoView:Landroid/widget/ImageView;
 
     if-nez v0, :cond_0
 
-    .line 718
+    .line 694
     new-instance v0, Landroidx/appcompat/widget/AppCompatImageView;
 
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getContext()Landroid/content/Context;
@@ -904,10 +853,10 @@
 .method private ensureMenu()V
     .locals 3
 
-    .line 1184
+    .line 1152
     invoke-direct {p0}, Landroidx/appcompat/widget/Toolbar;->ensureMenuView()V
 
-    .line 1185
+    .line 1153
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
 
     invoke-virtual {v0}, Landroidx/appcompat/widget/ActionMenuView;->peekMenu()Landroidx/appcompat/view/menu/MenuBuilder;
@@ -916,7 +865,7 @@
 
     if-nez v0, :cond_1
 
-    .line 1187
+    .line 1155
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
 
     invoke-virtual {v0}, Landroidx/appcompat/widget/ActionMenuView;->getMenu()Landroid/view/Menu;
@@ -925,19 +874,19 @@
 
     check-cast v0, Landroidx/appcompat/view/menu/MenuBuilder;
 
-    .line 1188
+    .line 1156
     iget-object v1, p0, Landroidx/appcompat/widget/Toolbar;->mExpandedMenuPresenter:Landroidx/appcompat/widget/Toolbar$ExpandedActionViewMenuPresenter;
 
     if-nez v1, :cond_0
 
-    .line 1189
+    .line 1157
     new-instance v1, Landroidx/appcompat/widget/Toolbar$ExpandedActionViewMenuPresenter;
 
     invoke-direct {v1, p0}, Landroidx/appcompat/widget/Toolbar$ExpandedActionViewMenuPresenter;-><init>(Landroidx/appcompat/widget/Toolbar;)V
 
     iput-object v1, p0, Landroidx/appcompat/widget/Toolbar;->mExpandedMenuPresenter:Landroidx/appcompat/widget/Toolbar$ExpandedActionViewMenuPresenter;
 
-    .line 1191
+    .line 1159
     :cond_0
     iget-object v1, p0, Landroidx/appcompat/widget/Toolbar;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
 
@@ -945,7 +894,7 @@
 
     invoke-virtual {v1, v2}, Landroidx/appcompat/widget/ActionMenuView;->setExpandedActionViewsExclusive(Z)V
 
-    .line 1192
+    .line 1160
     iget-object v1, p0, Landroidx/appcompat/widget/Toolbar;->mExpandedMenuPresenter:Landroidx/appcompat/widget/Toolbar$ExpandedActionViewMenuPresenter;
 
     iget-object v2, p0, Landroidx/appcompat/widget/Toolbar;->mPopupContext:Landroid/content/Context;
@@ -959,12 +908,12 @@
 .method private ensureMenuView()V
     .locals 3
 
-    .line 1197
+    .line 1165
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
 
     if-nez v0, :cond_0
 
-    .line 1198
+    .line 1166
     new-instance v0, Landroidx/appcompat/widget/ActionMenuView;
 
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getContext()Landroid/content/Context;
@@ -975,21 +924,21 @@
 
     iput-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
 
-    .line 1199
+    .line 1167
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
 
     iget v1, p0, Landroidx/appcompat/widget/Toolbar;->mPopupTheme:I
 
     invoke-virtual {v0, v1}, Landroidx/appcompat/widget/ActionMenuView;->setPopupTheme(I)V
 
-    .line 1200
+    .line 1168
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
 
     iget-object v1, p0, Landroidx/appcompat/widget/Toolbar;->mMenuViewItemClickListener:Landroidx/appcompat/widget/ActionMenuView$OnMenuItemClickListener;
 
     invoke-virtual {v0, v1}, Landroidx/appcompat/widget/ActionMenuView;->setOnMenuItemClickListener(Landroidx/appcompat/widget/ActionMenuView$OnMenuItemClickListener;)V
 
-    .line 1201
+    .line 1169
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
 
     iget-object v1, p0, Landroidx/appcompat/widget/Toolbar;->mActionMenuPresenterCallback:Landroidx/appcompat/view/menu/MenuPresenter$Callback;
@@ -998,14 +947,14 @@
 
     invoke-virtual {v0, v1, v2}, Landroidx/appcompat/widget/ActionMenuView;->setMenuCallbacks(Landroidx/appcompat/view/menu/MenuPresenter$Callback;Landroidx/appcompat/view/menu/MenuBuilder$Callback;)V
 
-    .line 1202
+    .line 1170
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->generateDefaultLayoutParams()Landroidx/appcompat/widget/Toolbar$LayoutParams;
 
     move-result-object v0
 
     const v1, 0x800005
 
-    .line 1203
+    .line 1171
     iget v2, p0, Landroidx/appcompat/widget/Toolbar;->mButtonGravity:I
 
     and-int/lit8 v2, v2, 0x70
@@ -1014,12 +963,12 @@
 
     iput v1, v0, Landroidx/appcompat/widget/Toolbar$LayoutParams;->gravity:I
 
-    .line 1204
+    .line 1172
     iget-object v1, p0, Landroidx/appcompat/widget/Toolbar;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
 
     invoke-virtual {v1, v0}, Landroidx/appcompat/widget/ActionMenuView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1205
+    .line 1173
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
 
     const/4 v1, 0x0
@@ -1033,12 +982,12 @@
 .method private ensureNavButtonView()V
     .locals 4
 
-    .line 1519
+    .line 1481
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mNavButtonView:Landroid/widget/ImageButton;
 
     if-nez v0, :cond_0
 
-    .line 1520
+    .line 1482
     new-instance v0, Landroidx/appcompat/widget/AppCompatImageButton;
 
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getContext()Landroid/content/Context;
@@ -1053,14 +1002,14 @@
 
     iput-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mNavButtonView:Landroid/widget/ImageButton;
 
-    .line 1522
+    .line 1484
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->generateDefaultLayoutParams()Landroidx/appcompat/widget/Toolbar$LayoutParams;
 
     move-result-object v0
 
     const v1, 0x800003
 
-    .line 1523
+    .line 1485
     iget v2, p0, Landroidx/appcompat/widget/Toolbar;->mButtonGravity:I
 
     and-int/lit8 v2, v2, 0x70
@@ -1069,7 +1018,7 @@
 
     iput v1, v0, Landroidx/appcompat/widget/Toolbar$LayoutParams;->gravity:I
 
-    .line 1524
+    .line 1486
     iget-object v1, p0, Landroidx/appcompat/widget/Toolbar;->mNavButtonView:Landroid/widget/ImageButton;
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageButton;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
@@ -1081,12 +1030,12 @@
 .method private getChildHorizontalGravity(I)I
     .locals 4
 
-    .line 2217
+    .line 2168
     invoke-static {p0}, Landroidx/core/view/ViewCompat;->getLayoutDirection(Landroid/view/View;)I
 
     move-result v0
 
-    .line 2218
+    .line 2169
     invoke-static {p1, v0}, Landroidx/core/view/GravityCompat;->getAbsoluteGravity(II)I
 
     move-result p1
@@ -1119,14 +1068,14 @@
 .method private getChildTop(Landroid/view/View;I)I
     .locals 6
 
-    .line 2137
+    .line 2088
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Landroidx/appcompat/widget/Toolbar$LayoutParams;
 
-    .line 2138
+    .line 2089
     invoke-virtual {p1}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result p1
@@ -1137,7 +1086,7 @@
 
     sub-int p2, p1, p2
 
-    .line 2139
+    .line 2090
     div-int/lit8 p2, p2, 0x2
 
     goto :goto_0
@@ -1145,7 +1094,7 @@
     :cond_0
     move p2, v1
 
-    .line 2140
+    .line 2091
     :goto_0
     iget v2, v0, Landroidx/appcompat/widget/Toolbar$LayoutParams;->gravity:I
 
@@ -1161,17 +1110,17 @@
 
     if-eq v2, v3, :cond_3
 
-    .line 2150
+    .line 2101
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getPaddingTop()I
 
     move-result p2
 
-    .line 2151
+    .line 2102
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getPaddingBottom()I
 
     move-result v2
 
-    .line 2152
+    .line 2103
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getHeight()I
 
     move-result v3
@@ -1182,15 +1131,15 @@
 
     sub-int/2addr v4, p1
 
-    .line 2154
+    .line 2105
     div-int/lit8 v4, v4, 0x2
 
-    .line 2155
+    .line 2106
     iget v5, v0, Landroidx/appcompat/widget/Toolbar$LayoutParams;->topMargin:I
 
     if-ge v4, v5, :cond_1
 
-    .line 2156
+    .line 2107
     iget v4, v0, Landroidx/appcompat/widget/Toolbar$LayoutParams;->topMargin:I
 
     goto :goto_1
@@ -1204,12 +1153,12 @@
 
     sub-int/2addr v3, p2
 
-    .line 2160
+    .line 2111
     iget p1, v0, Landroidx/appcompat/widget/Toolbar$LayoutParams;->bottomMargin:I
 
     if-ge v3, p1, :cond_2
 
-    .line 2161
+    .line 2112
     iget p1, v0, Landroidx/appcompat/widget/Toolbar$LayoutParams;->bottomMargin:I
 
     sub-int/2addr p1, v3
@@ -1226,7 +1175,7 @@
 
     return p2
 
-    .line 2145
+    .line 2096
     :cond_3
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getHeight()I
 
@@ -1248,7 +1197,7 @@
 
     return v1
 
-    .line 2142
+    .line 2093
     :cond_4
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getPaddingTop()I
 
@@ -1276,7 +1225,7 @@
 
     if-eq p1, v0, :cond_0
 
-    .line 2176
+    .line 2127
     iget p1, p0, Landroidx/appcompat/widget/Toolbar;->mGravity:I
 
     and-int/lit8 p1, p1, 0x70
@@ -1287,68 +1236,22 @@
     return p1
 .end method
 
-.method private getCurrentMenuItems()Ljava/util/ArrayList;
-    .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/ArrayList<",
-            "Landroid/view/MenuItem;",
-            ">;"
-        }
-    .end annotation
-
-    .line 2368
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    .line 2370
-    invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getMenu()Landroid/view/Menu;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    .line 2371
-    :goto_0
-    invoke-interface {v1}, Landroid/view/Menu;->size()I
-
-    move-result v3
-
-    if-ge v2, v3, :cond_0
-
-    .line 2372
-    invoke-interface {v1, v2}, Landroid/view/Menu;->getItem(I)Landroid/view/MenuItem;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-object v0
-.end method
-
 .method private getHorizontalMargins(Landroid/view/View;)I
     .locals 1
 
-    .line 2235
+    .line 2186
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p1
 
     check-cast p1, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 2236
+    .line 2187
     invoke-static {p1}, Landroidx/core/view/MarginLayoutParamsCompat;->getMarginStart(Landroid/view/ViewGroup$MarginLayoutParams;)I
 
     move-result v0
 
-    .line 2237
+    .line 2188
     invoke-static {p1}, Landroidx/core/view/MarginLayoutParamsCompat;->getMarginEnd(Landroid/view/ViewGroup$MarginLayoutParams;)I
 
     move-result p1
@@ -1361,7 +1264,7 @@
 .method private getMenuInflater()Landroid/view/MenuInflater;
     .locals 2
 
-    .line 1210
+    .line 1178
     new-instance v0, Landroidx/appcompat/view/SupportMenuInflater;
 
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getContext()Landroid/content/Context;
@@ -1376,14 +1279,14 @@
 .method private getVerticalMargins(Landroid/view/View;)I
     .locals 1
 
-    .line 2241
+    .line 2192
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p1
 
     check-cast p1, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 2242
+    .line 2193
     iget v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
     iget p1, p1, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
@@ -1406,15 +1309,15 @@
 
     const/4 v0, 0x0
 
-    .line 2092
+    .line 2043
     aget v1, p2, v0
 
     const/4 v2, 0x1
 
-    .line 2093
+    .line 2044
     aget p2, p2, v2
 
-    .line 2095
+    .line 2046
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v2
@@ -1430,55 +1333,55 @@
     :goto_0
     if-ge p2, v2, :cond_0
 
-    .line 2097
+    .line 2048
     invoke-interface {p1, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Landroid/view/View;
 
-    .line 2098
+    .line 2049
     invoke-virtual {v5}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v6
 
     check-cast v6, Landroidx/appcompat/widget/Toolbar$LayoutParams;
 
-    .line 2099
+    .line 2050
     iget v7, v6, Landroidx/appcompat/widget/Toolbar$LayoutParams;->leftMargin:I
 
     sub-int/2addr v7, v3
 
-    .line 2100
+    .line 2051
     iget v3, v6, Landroidx/appcompat/widget/Toolbar$LayoutParams;->rightMargin:I
 
     sub-int/2addr v3, v4
 
-    .line 2101
+    .line 2052
     invoke-static {v0, v7}, Ljava/lang/Math;->max(II)I
 
     move-result v4
 
-    .line 2102
+    .line 2053
     invoke-static {v0, v3}, Ljava/lang/Math;->max(II)I
 
     move-result v6
 
     neg-int v7, v7
 
-    .line 2103
+    .line 2054
     invoke-static {v0, v7}, Ljava/lang/Math;->max(II)I
 
     move-result v7
 
     neg-int v3, v3
 
-    .line 2104
+    .line 2055
     invoke-static {v0, v3}, Ljava/lang/Math;->max(II)I
 
     move-result v3
 
-    .line 2105
+    .line 2056
     invoke-virtual {v5}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v5
@@ -1504,7 +1407,7 @@
 .method private isChildOrHidden(Landroid/view/View;)Z
     .locals 1
 
-    .line 2305
+    .line 2260
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
@@ -1537,14 +1440,14 @@
 .method private layoutChildLeft(Landroid/view/View;I[II)I
     .locals 4
 
-    .line 2112
+    .line 2063
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Landroidx/appcompat/widget/Toolbar$LayoutParams;
 
-    .line 2113
+    .line 2064
     iget v1, v0, Landroidx/appcompat/widget/Toolbar$LayoutParams;->leftMargin:I
 
     const/4 v2, 0x0
@@ -1553,7 +1456,7 @@
 
     sub-int/2addr v1, v3
 
-    .line 2114
+    .line 2065
     invoke-static {v2, v1}, Ljava/lang/Math;->max(II)I
 
     move-result v3
@@ -1562,26 +1465,26 @@
 
     neg-int v1, v1
 
-    .line 2115
+    .line 2066
     invoke-static {v2, v1}, Ljava/lang/Math;->max(II)I
 
     move-result v1
 
     aput v1, p3, v2
 
-    .line 2116
+    .line 2067
     invoke-direct {p0, p1, p4}, Landroidx/appcompat/widget/Toolbar;->getChildTop(Landroid/view/View;I)I
 
     move-result p3
 
-    .line 2117
+    .line 2068
     invoke-virtual {p1}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result p4
 
     add-int v1, p2, p4
 
-    .line 2118
+    .line 2069
     invoke-virtual {p1}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v2
@@ -1590,7 +1493,7 @@
 
     invoke-virtual {p1, p2, p3, v1, v2}, Landroid/view/View;->layout(IIII)V
 
-    .line 2119
+    .line 2070
     iget p1, v0, Landroidx/appcompat/widget/Toolbar$LayoutParams;->rightMargin:I
 
     add-int/2addr p4, p1
@@ -1603,14 +1506,14 @@
 .method private layoutChildRight(Landroid/view/View;I[II)I
     .locals 5
 
-    .line 2125
+    .line 2076
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Landroidx/appcompat/widget/Toolbar$LayoutParams;
 
-    .line 2126
+    .line 2077
     iget v1, v0, Landroidx/appcompat/widget/Toolbar$LayoutParams;->rightMargin:I
 
     const/4 v2, 0x1
@@ -1621,7 +1524,7 @@
 
     const/4 v3, 0x0
 
-    .line 2127
+    .line 2078
     invoke-static {v3, v1}, Ljava/lang/Math;->max(II)I
 
     move-result v4
@@ -1630,26 +1533,26 @@
 
     neg-int v1, v1
 
-    .line 2128
+    .line 2079
     invoke-static {v3, v1}, Ljava/lang/Math;->max(II)I
 
     move-result v1
 
     aput v1, p3, v2
 
-    .line 2129
+    .line 2080
     invoke-direct {p0, p1, p4}, Landroidx/appcompat/widget/Toolbar;->getChildTop(Landroid/view/View;I)I
 
     move-result p3
 
-    .line 2130
+    .line 2081
     invoke-virtual {p1}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result p4
 
     sub-int v1, p2, p4
 
-    .line 2131
+    .line 2082
     invoke-virtual {p1}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v2
@@ -1658,7 +1561,7 @@
 
     invoke-virtual {p1, v1, p3, p2, v2}, Landroid/view/View;->layout(IIII)V
 
-    .line 2132
+    .line 2083
     iget p1, v0, Landroidx/appcompat/widget/Toolbar$LayoutParams;->leftMargin:I
 
     add-int/2addr p4, p1
@@ -1671,14 +1574,14 @@
 .method private measureChildCollapseMargins(Landroid/view/View;IIII[I)I
     .locals 7
 
-    .line 1701
+    .line 1652
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 1703
+    .line 1654
     iget v1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
     const/4 v2, 0x0
@@ -1687,7 +1590,7 @@
 
     sub-int/2addr v1, v3
 
-    .line 1704
+    .line 1655
     iget v3, v0, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
     const/4 v4, 0x1
@@ -1696,12 +1599,12 @@
 
     sub-int/2addr v3, v5
 
-    .line 1705
+    .line 1656
     invoke-static {v2, v1}, Ljava/lang/Math;->max(II)I
 
     move-result v5
 
-    .line 1706
+    .line 1657
     invoke-static {v2, v3}, Ljava/lang/Math;->max(II)I
 
     move-result v6
@@ -1710,7 +1613,7 @@
 
     neg-int v1, v1
 
-    .line 1708
+    .line 1659
     invoke-static {v2, v1}, Ljava/lang/Math;->max(II)I
 
     move-result v1
@@ -1719,14 +1622,14 @@
 
     neg-int v1, v3
 
-    .line 1709
+    .line 1660
     invoke-static {v2, v1}, Ljava/lang/Math;->max(II)I
 
     move-result v1
 
     aput v1, p6, v4
 
-    .line 1712
+    .line 1663
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getPaddingLeft()I
 
     move-result p6
@@ -1743,12 +1646,12 @@
 
     iget p3, v0, Landroid/view/ViewGroup$MarginLayoutParams;->width:I
 
-    .line 1711
+    .line 1662
     invoke-static {p2, p6, p3}, Landroidx/appcompat/widget/Toolbar;->getChildMeasureSpec(III)I
 
     move-result p2
 
-    .line 1714
+    .line 1665
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getPaddingTop()I
 
     move-result p3
@@ -1771,15 +1674,15 @@
 
     iget p5, v0, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
 
-    .line 1713
+    .line 1664
     invoke-static {p4, p3, p5}, Landroidx/appcompat/widget/Toolbar;->getChildMeasureSpec(III)I
 
     move-result p3
 
-    .line 1717
+    .line 1668
     invoke-virtual {p1, p2, p3}, Landroid/view/View;->measure(II)V
 
-    .line 1718
+    .line 1669
     invoke-virtual {p1}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result p1
@@ -1792,14 +1695,14 @@
 .method private measureChildConstrained(Landroid/view/View;IIIII)V
     .locals 3
 
-    .line 1676
+    .line 1627
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 1679
+    .line 1630
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getPaddingLeft()I
 
     move-result v1
@@ -1822,12 +1725,12 @@
 
     iget p3, v0, Landroid/view/ViewGroup$MarginLayoutParams;->width:I
 
-    .line 1678
+    .line 1629
     invoke-static {p2, v1, p3}, Landroidx/appcompat/widget/Toolbar;->getChildMeasureSpec(III)I
 
     move-result p2
 
-    .line 1682
+    .line 1633
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getPaddingTop()I
 
     move-result p3
@@ -1850,12 +1753,12 @@
 
     iget p5, v0, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
 
-    .line 1681
+    .line 1632
     invoke-static {p4, p3, p5}, Landroidx/appcompat/widget/Toolbar;->getChildMeasureSpec(III)I
 
     move-result p3
 
-    .line 1685
+    .line 1636
     invoke-static {p3}, Landroid/view/View$MeasureSpec;->getMode(I)I
 
     move-result p4
@@ -1868,7 +1771,7 @@
 
     if-eqz p4, :cond_0
 
-    .line 1688
+    .line 1639
     invoke-static {p3}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result p3
@@ -1877,50 +1780,15 @@
 
     move-result p6
 
-    .line 1690
+    .line 1641
     :cond_0
     invoke-static {p6, p5}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result p3
 
-    .line 1692
+    .line 1643
     :cond_1
     invoke-virtual {p1, p2, p3}, Landroid/view/View;->measure(II)V
-
-    return-void
-.end method
-
-.method private onCreateMenu()V
-    .locals 4
-
-    .line 2379
-    invoke-direct {p0}, Landroidx/appcompat/widget/Toolbar;->getCurrentMenuItems()Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    .line 2380
-    iget-object v1, p0, Landroidx/appcompat/widget/Toolbar;->mMenuHostHelper:Landroidx/core/view/MenuHostHelper;
-
-    invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getMenu()Landroid/view/Menu;
-
-    move-result-object v2
-
-    invoke-direct {p0}, Landroidx/appcompat/widget/Toolbar;->getMenuInflater()Landroid/view/MenuInflater;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v2, v3}, Landroidx/core/view/MenuHostHelper;->onCreateMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)V
-
-    .line 2382
-    invoke-direct {p0}, Landroidx/appcompat/widget/Toolbar;->getCurrentMenuItems()Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    .line 2383
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->removeAll(Ljava/util/Collection;)Z
-
-    .line 2384
-    iput-object v1, p0, Landroidx/appcompat/widget/Toolbar;->mProvidedMenuItems:Ljava/util/ArrayList;
 
     return-void
 .end method
@@ -1928,12 +1796,12 @@
 .method private postShowOverflowMenu()V
     .locals 1
 
-    .line 1614
+    .line 1565
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mShowOverflowMenuRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v0}, Landroidx/appcompat/widget/Toolbar;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 1615
+    .line 1566
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mShowOverflowMenuRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v0}, Landroidx/appcompat/widget/Toolbar;->post(Ljava/lang/Runnable;)Z
@@ -1944,7 +1812,7 @@
 .method private shouldCollapse()Z
     .locals 5
 
-    .line 1725
+    .line 1676
     iget-boolean v0, p0, Landroidx/appcompat/widget/Toolbar;->mCollapsible:Z
 
     const/4 v1, 0x0
@@ -1953,7 +1821,7 @@
 
     return v1
 
-    .line 1727
+    .line 1678
     :cond_0
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getChildCount()I
 
@@ -1964,12 +1832,12 @@
     :goto_0
     if-ge v2, v0, :cond_2
 
-    .line 1729
+    .line 1680
     invoke-virtual {p0, v2}, Landroidx/appcompat/widget/Toolbar;->getChildAt(I)Landroid/view/View;
 
     move-result-object v3
 
-    .line 1730
+    .line 1681
     invoke-direct {p0, v3}, Landroidx/appcompat/widget/Toolbar;->shouldLayout(Landroid/view/View;)Z
 
     move-result v4
@@ -1982,7 +1850,7 @@
 
     if-lez v4, :cond_1
 
-    .line 1731
+    .line 1682
     invoke-virtual {v3}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v3
@@ -2007,7 +1875,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 2231
+    .line 2182
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
@@ -2038,7 +1906,7 @@
 .method addChildrenForExpandedActionView()V
     .locals 2
 
-    .line 2296
+    .line 2251
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mHiddenViews:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -2050,7 +1918,7 @@
     :goto_0
     if-ltz v0, :cond_0
 
-    .line 2299
+    .line 2254
     iget-object v1, p0, Landroidx/appcompat/widget/Toolbar;->mHiddenViews:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -2065,7 +1933,7 @@
 
     goto :goto_0
 
-    .line 2301
+    .line 2256
     :cond_0
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mHiddenViews:Ljava/util/ArrayList;
 
@@ -2077,7 +1945,7 @@
 .method public canShowOverflowMenu()Z
     .locals 1
 
-    .line 537
+    .line 515
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getVisibility()I
 
     move-result v0
@@ -2108,7 +1976,7 @@
 .method protected checkLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Z
     .locals 1
 
-    .line 2270
+    .line 2221
     invoke-super {p0, p1}, Landroid/view/ViewGroup;->checkLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Z
 
     move-result v0
@@ -2133,7 +2001,7 @@
 .method public collapseActionView()V
     .locals 1
 
-    .line 747
+    .line 723
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mExpandedMenuPresenter:Landroidx/appcompat/widget/Toolbar$ExpandedActionViewMenuPresenter;
 
     if-nez v0, :cond_0
@@ -2142,14 +2010,13 @@
 
     goto :goto_0
 
-    .line 748
     :cond_0
     iget-object v0, v0, Landroidx/appcompat/widget/Toolbar$ExpandedActionViewMenuPresenter;->mCurrentExpandedItem:Landroidx/appcompat/view/menu/MenuItemImpl;
 
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 750
+    .line 726
     invoke-virtual {v0}, Landroidx/appcompat/view/menu/MenuItemImpl;->collapseActionView()Z
 
     :cond_1
@@ -2159,12 +2026,12 @@
 .method public dismissPopupMenus()V
     .locals 1
 
-    .line 615
+    .line 593
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
 
     if-eqz v0, :cond_0
 
-    .line 616
+    .line 594
     invoke-virtual {v0}, Landroidx/appcompat/widget/ActionMenuView;->dismissPopupMenus()V
 
     :cond_0
@@ -2174,12 +2041,12 @@
 .method ensureCollapseButtonView()V
     .locals 4
 
-    .line 1540
+    .line 1491
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mCollapseButtonView:Landroid/widget/ImageButton;
 
     if-nez v0, :cond_0
 
-    .line 1541
+    .line 1492
     new-instance v0, Landroidx/appcompat/widget/AppCompatImageButton;
 
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getContext()Landroid/content/Context;
@@ -2194,28 +2061,28 @@
 
     iput-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mCollapseButtonView:Landroid/widget/ImageButton;
 
-    .line 1543
+    .line 1494
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mCollapseButtonView:Landroid/widget/ImageButton;
 
     iget-object v1, p0, Landroidx/appcompat/widget/Toolbar;->mCollapseIcon:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 1544
+    .line 1495
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mCollapseButtonView:Landroid/widget/ImageButton;
 
     iget-object v1, p0, Landroidx/appcompat/widget/Toolbar;->mCollapseDescription:Ljava/lang/CharSequence;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 1545
+    .line 1496
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->generateDefaultLayoutParams()Landroidx/appcompat/widget/Toolbar$LayoutParams;
 
     move-result-object v0
 
     const v1, 0x800003
 
-    .line 1546
+    .line 1497
     iget v2, p0, Landroidx/appcompat/widget/Toolbar;->mButtonGravity:I
 
     and-int/lit8 v2, v2, 0x70
@@ -2226,15 +2093,15 @@
 
     const/4 v1, 0x2
 
-    .line 1547
+    .line 1498
     iput v1, v0, Landroidx/appcompat/widget/Toolbar$LayoutParams;->mViewType:I
 
-    .line 1548
+    .line 1499
     iget-object v1, p0, Landroidx/appcompat/widget/Toolbar;->mCollapseButtonView:Landroid/widget/ImageButton;
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageButton;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1549
+    .line 1500
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mCollapseButtonView:Landroid/widget/ImageButton;
 
     new-instance v1, Landroidx/appcompat/widget/Toolbar$3;
@@ -2250,7 +2117,7 @@
 .method protected bridge synthetic generateDefaultLayoutParams()Landroid/view/ViewGroup$LayoutParams;
     .locals 1
 
-    .line 154
+    .line 145
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->generateDefaultLayoutParams()Landroidx/appcompat/widget/Toolbar$LayoutParams;
 
     move-result-object v0
@@ -2261,7 +2128,7 @@
 .method protected generateDefaultLayoutParams()Landroidx/appcompat/widget/Toolbar$LayoutParams;
     .locals 2
 
-    .line 2265
+    .line 2216
     new-instance v0, Landroidx/appcompat/widget/Toolbar$LayoutParams;
 
     const/4 v1, -0x2
@@ -2274,7 +2141,7 @@
 .method public bridge synthetic generateLayoutParams(Landroid/util/AttributeSet;)Landroid/view/ViewGroup$LayoutParams;
     .locals 0
 
-    .line 154
+    .line 145
     invoke-virtual {p0, p1}, Landroidx/appcompat/widget/Toolbar;->generateLayoutParams(Landroid/util/AttributeSet;)Landroidx/appcompat/widget/Toolbar$LayoutParams;
 
     move-result-object p1
@@ -2285,7 +2152,7 @@
 .method protected bridge synthetic generateLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Landroid/view/ViewGroup$LayoutParams;
     .locals 0
 
-    .line 154
+    .line 145
     invoke-virtual {p0, p1}, Landroidx/appcompat/widget/Toolbar;->generateLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Landroidx/appcompat/widget/Toolbar$LayoutParams;
 
     move-result-object p1
@@ -2296,7 +2163,7 @@
 .method public generateLayoutParams(Landroid/util/AttributeSet;)Landroidx/appcompat/widget/Toolbar$LayoutParams;
     .locals 2
 
-    .line 2247
+    .line 2198
     new-instance v0, Landroidx/appcompat/widget/Toolbar$LayoutParams;
 
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getContext()Landroid/content/Context;
@@ -2311,12 +2178,12 @@
 .method protected generateLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Landroidx/appcompat/widget/Toolbar$LayoutParams;
     .locals 1
 
-    .line 2252
+    .line 2203
     instance-of v0, p1, Landroidx/appcompat/widget/Toolbar$LayoutParams;
 
     if-eqz v0, :cond_0
 
-    .line 2253
+    .line 2204
     new-instance v0, Landroidx/appcompat/widget/Toolbar$LayoutParams;
 
     check-cast p1, Landroidx/appcompat/widget/Toolbar$LayoutParams;
@@ -2325,13 +2192,13 @@
 
     return-object v0
 
-    .line 2254
+    .line 2205
     :cond_0
     instance-of v0, p1, Landroidx/appcompat/app/ActionBar$LayoutParams;
 
     if-eqz v0, :cond_1
 
-    .line 2255
+    .line 2206
     new-instance v0, Landroidx/appcompat/widget/Toolbar$LayoutParams;
 
     check-cast p1, Landroidx/appcompat/app/ActionBar$LayoutParams;
@@ -2340,13 +2207,13 @@
 
     return-object v0
 
-    .line 2256
+    .line 2207
     :cond_1
     instance-of v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;
 
     if-eqz v0, :cond_2
 
-    .line 2257
+    .line 2208
     new-instance v0, Landroidx/appcompat/widget/Toolbar$LayoutParams;
 
     check-cast p1, Landroid/view/ViewGroup$MarginLayoutParams;
@@ -2355,7 +2222,7 @@
 
     return-object v0
 
-    .line 2259
+    .line 2210
     :cond_2
     new-instance v0, Landroidx/appcompat/widget/Toolbar$LayoutParams;
 
@@ -2367,7 +2234,7 @@
 .method public getCollapseContentDescription()Ljava/lang/CharSequence;
     .locals 1
 
-    .line 1065
+    .line 1035
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mCollapseButtonView:Landroid/widget/ImageButton;
 
     if-eqz v0, :cond_0
@@ -2388,7 +2255,7 @@
 .method public getCollapseIcon()Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    .line 1111
+    .line 1080
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mCollapseButtonView:Landroid/widget/ImageButton;
 
     if-eqz v0, :cond_0
@@ -2409,7 +2276,7 @@
 .method public getContentInsetEnd()I
     .locals 1
 
-    .line 1300
+    .line 1266
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mContentInsets:Landroidx/appcompat/widget/RtlSpacingHelper;
 
     if-eqz v0, :cond_0
@@ -2430,7 +2297,7 @@
 .method public getContentInsetEndWithActions()I
     .locals 2
 
-    .line 1426
+    .line 1388
     iget v0, p0, Landroidx/appcompat/widget/Toolbar;->mContentInsetEndWithActions:I
 
     const/high16 v1, -0x80000000
@@ -2439,7 +2306,7 @@
 
     goto :goto_0
 
-    .line 1428
+    .line 1390
     :cond_0
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getContentInsetEnd()I
 
@@ -2452,7 +2319,7 @@
 .method public getContentInsetLeft()I
     .locals 1
 
-    .line 1344
+    .line 1309
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mContentInsets:Landroidx/appcompat/widget/RtlSpacingHelper;
 
     if-eqz v0, :cond_0
@@ -2473,7 +2340,7 @@
 .method public getContentInsetRight()I
     .locals 1
 
-    .line 1365
+    .line 1329
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mContentInsets:Landroidx/appcompat/widget/RtlSpacingHelper;
 
     if-eqz v0, :cond_0
@@ -2494,7 +2361,7 @@
 .method public getContentInsetStart()I
     .locals 1
 
-    .line 1279
+    .line 1246
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mContentInsets:Landroidx/appcompat/widget/RtlSpacingHelper;
 
     if-eqz v0, :cond_0
@@ -2515,7 +2382,7 @@
 .method public getContentInsetStartWithNavigation()I
     .locals 2
 
-    .line 1382
+    .line 1345
     iget v0, p0, Landroidx/appcompat/widget/Toolbar;->mContentInsetStartWithNavigation:I
 
     const/high16 v1, -0x80000000
@@ -2524,7 +2391,7 @@
 
     goto :goto_0
 
-    .line 1384
+    .line 1347
     :cond_0
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getContentInsetStart()I
 
@@ -2537,21 +2404,21 @@
 .method public getCurrentContentInsetEnd()I
     .locals 3
 
-    .line 1479
+    .line 1441
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_1
 
-    .line 1480
+    .line 1442
     invoke-virtual {v0}, Landroidx/appcompat/widget/ActionMenuView;->peekMenu()Landroidx/appcompat/view/menu/MenuBuilder;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 1481
+    .line 1443
     invoke-virtual {v0}, Landroidx/appcompat/view/menu/MenuBuilder;->hasVisibleItems()Z
 
     move-result v0
@@ -2573,7 +2440,7 @@
     :goto_0
     if-eqz v0, :cond_2
 
-    .line 1484
+    .line 1446
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getContentInsetEnd()I
 
     move-result v0
@@ -2590,7 +2457,7 @@
 
     goto :goto_1
 
-    .line 1485
+    .line 1447
     :cond_2
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getContentInsetEnd()I
 
@@ -2603,7 +2470,7 @@
 .method public getCurrentContentInsetLeft()I
     .locals 2
 
-    .line 1498
+    .line 1460
     invoke-static {p0}, Landroidx/core/view/ViewCompat;->getLayoutDirection(Landroid/view/View;)I
 
     move-result v0
@@ -2612,14 +2479,14 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 1499
+    .line 1461
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getCurrentContentInsetEnd()I
 
     move-result v0
 
     goto :goto_0
 
-    .line 1500
+    .line 1462
     :cond_0
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getCurrentContentInsetStart()I
 
@@ -2632,7 +2499,7 @@
 .method public getCurrentContentInsetRight()I
     .locals 2
 
-    .line 1513
+    .line 1475
     invoke-static {p0}, Landroidx/core/view/ViewCompat;->getLayoutDirection(Landroid/view/View;)I
 
     move-result v0
@@ -2641,14 +2508,14 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 1514
+    .line 1476
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getCurrentContentInsetStart()I
 
     move-result v0
 
     goto :goto_0
 
-    .line 1515
+    .line 1477
     :cond_0
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getCurrentContentInsetEnd()I
 
@@ -2661,14 +2528,14 @@
 .method public getCurrentContentInsetStart()I
     .locals 3
 
-    .line 1464
+    .line 1426
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getNavigationIcon()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 1465
+    .line 1427
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getContentInsetStart()I
 
     move-result v0
@@ -2687,7 +2554,7 @@
 
     goto :goto_0
 
-    .line 1466
+    .line 1428
     :cond_0
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getContentInsetStart()I
 
@@ -2700,7 +2567,7 @@
 .method public getLogo()Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    .line 674
+    .line 651
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mLogoView:Landroid/widget/ImageView;
 
     if-eqz v0, :cond_0
@@ -2721,7 +2588,7 @@
 .method public getLogoDescription()Ljava/lang/CharSequence;
     .locals 1
 
-    .line 713
+    .line 689
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mLogoView:Landroid/widget/ImageView;
 
     if-eqz v0, :cond_0
@@ -2742,10 +2609,10 @@
 .method public getMenu()Landroid/view/Menu;
     .locals 1
 
-    .line 1158
+    .line 1126
     invoke-direct {p0}, Landroidx/appcompat/widget/Toolbar;->ensureMenu()V
 
-    .line 1159
+    .line 1127
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
 
     invoke-virtual {v0}, Landroidx/appcompat/widget/ActionMenuView;->getMenu()Landroid/view/Menu;
@@ -2755,19 +2622,10 @@
     return-object v0
 .end method
 
-.method getNavButtonView()Landroid/view/View;
-    .locals 1
-
-    .line 1536
-    iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mNavButtonView:Landroid/widget/ImageButton;
-
-    return-object v0
-.end method
-
 .method public getNavigationContentDescription()Ljava/lang/CharSequence;
     .locals 1
 
-    .line 942
+    .line 915
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mNavButtonView:Landroid/widget/ImageButton;
 
     if-eqz v0, :cond_0
@@ -2788,7 +2646,7 @@
 .method public getNavigationIcon()Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    .line 1036
+    .line 1007
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mNavButtonView:Landroid/widget/ImageButton;
 
     if-eqz v0, :cond_0
@@ -2809,7 +2667,7 @@
 .method getOuterActionMenuPresenter()Landroidx/appcompat/widget/ActionMenuPresenter;
     .locals 1
 
-    .line 2360
+    .line 2315
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mOuterActionMenuPresenter:Landroidx/appcompat/widget/ActionMenuPresenter;
 
     return-object v0
@@ -2818,10 +2676,10 @@
 .method public getOverflowIcon()Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    .line 1179
+    .line 1147
     invoke-direct {p0}, Landroidx/appcompat/widget/Toolbar;->ensureMenu()V
 
-    .line 1180
+    .line 1148
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
 
     invoke-virtual {v0}, Landroidx/appcompat/widget/ActionMenuView;->getOverflowIcon()Landroid/graphics/drawable/Drawable;
@@ -2834,7 +2692,7 @@
 .method getPopupContext()Landroid/content/Context;
     .locals 1
 
-    .line 2364
+    .line 2319
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mPopupContext:Landroid/content/Context;
 
     return-object v0
@@ -2843,7 +2701,7 @@
 .method public getPopupTheme()I
     .locals 1
 
-    .line 395
+    .line 377
     iget v0, p0, Landroidx/appcompat/widget/Toolbar;->mPopupTheme:I
 
     return v0
@@ -2852,7 +2710,7 @@
 .method public getSubtitle()Ljava/lang/CharSequence;
     .locals 1
 
-    .line 818
+    .line 792
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mSubtitleText:Ljava/lang/CharSequence;
 
     return-object v0
@@ -2861,7 +2719,7 @@
 .method final getSubtitleTextView()Landroid/widget/TextView;
     .locals 1
 
-    .line 2353
+    .line 2308
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mSubtitleTextView:Landroid/widget/TextView;
 
     return-object v0
@@ -2870,7 +2728,7 @@
 .method public getTitle()Ljava/lang/CharSequence;
     .locals 1
 
-    .line 761
+    .line 736
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mTitleText:Ljava/lang/CharSequence;
 
     return-object v0
@@ -2879,7 +2737,7 @@
 .method public getTitleMarginBottom()I
     .locals 1
 
-    .line 496
+    .line 474
     iget v0, p0, Landroidx/appcompat/widget/Toolbar;->mTitleMarginBottom:I
 
     return v0
@@ -2888,7 +2746,7 @@
 .method public getTitleMarginEnd()I
     .locals 1
 
-    .line 473
+    .line 452
     iget v0, p0, Landroidx/appcompat/widget/Toolbar;->mTitleMarginEnd:I
 
     return v0
@@ -2897,7 +2755,7 @@
 .method public getTitleMarginStart()I
     .locals 1
 
-    .line 427
+    .line 408
     iget v0, p0, Landroidx/appcompat/widget/Toolbar;->mTitleMarginStart:I
 
     return v0
@@ -2906,7 +2764,7 @@
 .method public getTitleMarginTop()I
     .locals 1
 
-    .line 450
+    .line 430
     iget v0, p0, Landroidx/appcompat/widget/Toolbar;->mTitleMarginTop:I
 
     return v0
@@ -2915,7 +2773,7 @@
 .method final getTitleTextView()Landroid/widget/TextView;
     .locals 1
 
-    .line 2344
+    .line 2299
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mTitleTextView:Landroid/widget/TextView;
 
     return-object v0
@@ -2924,12 +2782,12 @@
 .method public getWrapper()Landroidx/appcompat/widget/DecorToolbar;
     .locals 2
 
-    .line 2276
+    .line 2231
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mWrapper:Landroidx/appcompat/widget/ToolbarWidgetWrapper;
 
     if-nez v0, :cond_0
 
-    .line 2277
+    .line 2232
     new-instance v0, Landroidx/appcompat/widget/ToolbarWidgetWrapper;
 
     const/4 v1, 0x1
@@ -2938,7 +2796,7 @@
 
     iput-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mWrapper:Landroidx/appcompat/widget/ToolbarWidgetWrapper;
 
-    .line 2279
+    .line 2234
     :cond_0
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mWrapper:Landroidx/appcompat/widget/ToolbarWidgetWrapper;
 
@@ -2948,7 +2806,7 @@
 .method public hasExpandedActionView()Z
     .locals 1
 
-    .line 733
+    .line 709
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mExpandedMenuPresenter:Landroidx/appcompat/widget/Toolbar$ExpandedActionViewMenuPresenter;
 
     if-eqz v0, :cond_0
@@ -2971,7 +2829,7 @@
 .method public hideOverflowMenu()Z
     .locals 1
 
-    .line 571
+    .line 549
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
 
     if-eqz v0, :cond_0
@@ -2996,7 +2854,7 @@
 .method public inflateMenu(I)V
     .locals 2
 
-    .line 1223
+    .line 1191
     invoke-direct {p0}, Landroidx/appcompat/widget/Toolbar;->getMenuInflater()Landroid/view/MenuInflater;
 
     move-result-object v0
@@ -3010,53 +2868,10 @@
     return-void
 .end method
 
-.method public invalidateMenu()V
-    .locals 3
-
-    .line 2423
-    iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mProvidedMenuItems:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/view/MenuItem;
-
-    .line 2424
-    invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getMenu()Landroid/view/Menu;
-
-    move-result-object v2
-
-    invoke-interface {v1}, Landroid/view/MenuItem;->getItemId()I
-
-    move-result v1
-
-    invoke-interface {v2, v1}, Landroid/view/Menu;->removeItem(I)V
-
-    goto :goto_0
-
-    .line 2426
-    :cond_0
-    invoke-direct {p0}, Landroidx/appcompat/widget/Toolbar;->onCreateMenu()V
-
-    return-void
-.end method
-
 .method public isOverflowMenuShowPending()Z
     .locals 1
 
-    .line 553
+    .line 531
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
 
     if-eqz v0, :cond_0
@@ -3081,7 +2896,7 @@
 .method public isOverflowMenuShowing()Z
     .locals 1
 
-    .line 547
+    .line 525
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
 
     if-eqz v0, :cond_0
@@ -3106,10 +2921,10 @@
 .method protected onDetachedFromWindow()V
     .locals 1
 
-    .line 1620
+    .line 1571
     invoke-super {p0}, Landroid/view/ViewGroup;->onDetachedFromWindow()V
 
-    .line 1621
+    .line 1572
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mShowOverflowMenuRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v0}, Landroidx/appcompat/widget/Toolbar;->removeCallbacks(Ljava/lang/Runnable;)Z
@@ -3120,7 +2935,7 @@
 .method public onHoverEvent(Landroid/view/MotionEvent;)Z
     .locals 5
 
-    .line 1655
+    .line 1606
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v0
@@ -3131,10 +2946,10 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 1657
+    .line 1608
     iput-boolean v1, p0, Landroidx/appcompat/widget/Toolbar;->mEatingHover:Z
 
-    .line 1660
+    .line 1611
     :cond_0
     iget-boolean v3, p0, Landroidx/appcompat/widget/Toolbar;->mEatingHover:Z
 
@@ -3142,7 +2957,7 @@
 
     if-nez v3, :cond_1
 
-    .line 1661
+    .line 1612
     invoke-super {p0, p1}, Landroid/view/ViewGroup;->onHoverEvent(Landroid/view/MotionEvent;)Z
 
     move-result p1
@@ -3151,7 +2966,7 @@
 
     if-nez p1, :cond_1
 
-    .line 1663
+    .line 1614
     iput-boolean v4, p0, Landroidx/appcompat/widget/Toolbar;->mEatingHover:Z
 
     :cond_1
@@ -3163,7 +2978,7 @@
 
     if-ne v0, p1, :cond_3
 
-    .line 1668
+    .line 1619
     :cond_2
     iput-boolean v1, p0, Landroidx/appcompat/widget/Toolbar;->mEatingHover:Z
 
@@ -3176,7 +2991,7 @@
 
     move-object/from16 v0, p0
 
-    .line 1874
+    .line 1825
     invoke-static/range {p0 .. p0}, Landroidx/core/view/ViewCompat;->getLayoutDirection(Landroid/view/View;)I
 
     move-result v1
@@ -3194,48 +3009,48 @@
     :cond_0
     move v1, v3
 
-    .line 1875
+    .line 1826
     :goto_0
     invoke-virtual/range {p0 .. p0}, Landroidx/appcompat/widget/Toolbar;->getWidth()I
 
     move-result v4
 
-    .line 1876
+    .line 1827
     invoke-virtual/range {p0 .. p0}, Landroidx/appcompat/widget/Toolbar;->getHeight()I
 
     move-result v5
 
-    .line 1877
+    .line 1828
     invoke-virtual/range {p0 .. p0}, Landroidx/appcompat/widget/Toolbar;->getPaddingLeft()I
 
     move-result v6
 
-    .line 1878
+    .line 1829
     invoke-virtual/range {p0 .. p0}, Landroidx/appcompat/widget/Toolbar;->getPaddingRight()I
 
     move-result v7
 
-    .line 1879
+    .line 1830
     invoke-virtual/range {p0 .. p0}, Landroidx/appcompat/widget/Toolbar;->getPaddingTop()I
 
     move-result v8
 
-    .line 1880
+    .line 1831
     invoke-virtual/range {p0 .. p0}, Landroidx/appcompat/widget/Toolbar;->getPaddingBottom()I
 
     move-result v9
 
     sub-int v10, v4, v7
 
-    .line 1884
+    .line 1835
     iget-object v11, v0, Landroidx/appcompat/widget/Toolbar;->mTempMargins:[I
 
-    .line 1885
+    .line 1836
     aput v3, v11, v2
 
     aput v3, v11, v3
 
-    .line 1888
+    .line 1839
     invoke-static/range {p0 .. p0}, Landroidx/core/view/ViewCompat;->getMinimumHeight(Landroid/view/View;)I
 
     move-result v12
@@ -3244,7 +3059,7 @@
 
     sub-int v13, p5, p3
 
-    .line 1889
+    .line 1840
     invoke-static {v12, v13}, Ljava/lang/Math;->min(II)I
 
     move-result v12
@@ -3254,7 +3069,7 @@
     :cond_1
     move v12, v3
 
-    .line 1891
+    .line 1842
     :goto_1
     iget-object v13, v0, Landroidx/appcompat/widget/Toolbar;->mNavButtonView:Landroid/widget/ImageButton;
 
@@ -3266,7 +3081,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 1893
+    .line 1844
     iget-object v13, v0, Landroidx/appcompat/widget/Toolbar;->mNavButtonView:Landroid/widget/ImageButton;
 
     invoke-direct {v0, v13, v10, v11, v12}, Landroidx/appcompat/widget/Toolbar;->layoutChildRight(Landroid/view/View;I[II)I
@@ -3279,7 +3094,7 @@
 
     goto :goto_2
 
-    .line 1896
+    .line 1847
     :cond_2
     iget-object v13, v0, Landroidx/appcompat/widget/Toolbar;->mNavButtonView:Landroid/widget/ImageButton;
 
@@ -3296,7 +3111,7 @@
 
     move v14, v10
 
-    .line 1901
+    .line 1852
     :goto_2
     iget-object v15, v0, Landroidx/appcompat/widget/Toolbar;->mCollapseButtonView:Landroid/widget/ImageButton;
 
@@ -3308,7 +3123,7 @@
 
     if-eqz v1, :cond_4
 
-    .line 1903
+    .line 1854
     iget-object v15, v0, Landroidx/appcompat/widget/Toolbar;->mCollapseButtonView:Landroid/widget/ImageButton;
 
     invoke-direct {v0, v15, v14, v11, v12}, Landroidx/appcompat/widget/Toolbar;->layoutChildRight(Landroid/view/View;I[II)I
@@ -3317,7 +3132,7 @@
 
     goto :goto_3
 
-    .line 1906
+    .line 1857
     :cond_4
     iget-object v15, v0, Landroidx/appcompat/widget/Toolbar;->mCollapseButtonView:Landroid/widget/ImageButton;
 
@@ -3325,7 +3140,7 @@
 
     move-result v13
 
-    .line 1911
+    .line 1862
     :cond_5
     :goto_3
     iget-object v15, v0, Landroidx/appcompat/widget/Toolbar;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
@@ -3338,7 +3153,7 @@
 
     if-eqz v1, :cond_6
 
-    .line 1913
+    .line 1864
     iget-object v15, v0, Landroidx/appcompat/widget/Toolbar;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
 
     invoke-direct {v0, v15, v13, v11, v12}, Landroidx/appcompat/widget/Toolbar;->layoutChildLeft(Landroid/view/View;I[II)I
@@ -3347,7 +3162,7 @@
 
     goto :goto_4
 
-    .line 1916
+    .line 1867
     :cond_6
     iget-object v15, v0, Landroidx/appcompat/widget/Toolbar;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
 
@@ -3355,21 +3170,21 @@
 
     move-result v14
 
-    .line 1921
+    .line 1872
     :cond_7
     :goto_4
     invoke-virtual/range {p0 .. p0}, Landroidx/appcompat/widget/Toolbar;->getCurrentContentInsetLeft()I
 
     move-result v15
 
-    .line 1922
+    .line 1873
     invoke-virtual/range {p0 .. p0}, Landroidx/appcompat/widget/Toolbar;->getCurrentContentInsetRight()I
 
     move-result v16
 
     sub-int v2, v15, v13
 
-    .line 1923
+    .line 1874
     invoke-static {v3, v2}, Ljava/lang/Math;->max(II)I
 
     move-result v2
@@ -3380,7 +3195,7 @@
 
     sub-int v2, v16, v2
 
-    .line 1924
+    .line 1875
     invoke-static {v3, v2}, Ljava/lang/Math;->max(II)I
 
     move-result v2
@@ -3389,19 +3204,19 @@
 
     aput v2, v11, v17
 
-    .line 1925
+    .line 1876
     invoke-static {v13, v15}, Ljava/lang/Math;->max(II)I
 
     move-result v2
 
     sub-int v10, v10, v16
 
-    .line 1926
+    .line 1877
     invoke-static {v14, v10}, Ljava/lang/Math;->min(II)I
 
     move-result v10
 
-    .line 1928
+    .line 1879
     iget-object v13, v0, Landroidx/appcompat/widget/Toolbar;->mExpandedActionView:Landroid/view/View;
 
     invoke-direct {v0, v13}, Landroidx/appcompat/widget/Toolbar;->shouldLayout(Landroid/view/View;)Z
@@ -3412,7 +3227,7 @@
 
     if-eqz v1, :cond_8
 
-    .line 1930
+    .line 1881
     iget-object v13, v0, Landroidx/appcompat/widget/Toolbar;->mExpandedActionView:Landroid/view/View;
 
     invoke-direct {v0, v13, v10, v11, v12}, Landroidx/appcompat/widget/Toolbar;->layoutChildRight(Landroid/view/View;I[II)I
@@ -3421,7 +3236,7 @@
 
     goto :goto_5
 
-    .line 1933
+    .line 1884
     :cond_8
     iget-object v13, v0, Landroidx/appcompat/widget/Toolbar;->mExpandedActionView:Landroid/view/View;
 
@@ -3429,7 +3244,7 @@
 
     move-result v2
 
-    .line 1938
+    .line 1889
     :cond_9
     :goto_5
     iget-object v13, v0, Landroidx/appcompat/widget/Toolbar;->mLogoView:Landroid/widget/ImageView;
@@ -3442,7 +3257,7 @@
 
     if-eqz v1, :cond_a
 
-    .line 1940
+    .line 1891
     iget-object v13, v0, Landroidx/appcompat/widget/Toolbar;->mLogoView:Landroid/widget/ImageView;
 
     invoke-direct {v0, v13, v10, v11, v12}, Landroidx/appcompat/widget/Toolbar;->layoutChildRight(Landroid/view/View;I[II)I
@@ -3451,7 +3266,7 @@
 
     goto :goto_6
 
-    .line 1943
+    .line 1894
     :cond_a
     iget-object v13, v0, Landroidx/appcompat/widget/Toolbar;->mLogoView:Landroid/widget/ImageView;
 
@@ -3459,7 +3274,7 @@
 
     move-result v2
 
-    .line 1948
+    .line 1899
     :cond_b
     :goto_6
     iget-object v13, v0, Landroidx/appcompat/widget/Toolbar;->mTitleTextView:Landroid/widget/TextView;
@@ -3468,7 +3283,7 @@
 
     move-result v13
 
-    .line 1949
+    .line 1900
     iget-object v14, v0, Landroidx/appcompat/widget/Toolbar;->mSubtitleTextView:Landroid/widget/TextView;
 
     invoke-direct {v0, v14}, Landroidx/appcompat/widget/Toolbar;->shouldLayout(Landroid/view/View;)Z
@@ -3477,7 +3292,7 @@
 
     if-eqz v13, :cond_c
 
-    .line 1952
+    .line 1903
     iget-object v15, v0, Landroidx/appcompat/widget/Toolbar;->mTitleTextView:Landroid/widget/TextView;
 
     invoke-virtual {v15}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -3486,7 +3301,7 @@
 
     check-cast v15, Landroidx/appcompat/widget/Toolbar$LayoutParams;
 
-    .line 1953
+    .line 1904
     iget v3, v15, Landroidx/appcompat/widget/Toolbar$LayoutParams;->topMargin:I
 
     move/from16 p4, v7
@@ -3517,7 +3332,7 @@
     :goto_7
     if-eqz v14, :cond_d
 
-    .line 1956
+    .line 1907
     iget-object v7, v0, Landroidx/appcompat/widget/Toolbar;->mSubtitleTextView:Landroid/widget/TextView;
 
     invoke-virtual {v7}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -3526,7 +3341,7 @@
 
     check-cast v7, Landroidx/appcompat/widget/Toolbar$LayoutParams;
 
-    .line 1957
+    .line 1908
     iget v15, v7, Landroidx/appcompat/widget/Toolbar$LayoutParams;->topMargin:I
 
     move/from16 v16, v4
@@ -3570,7 +3385,7 @@
     :goto_9
     if-eqz v13, :cond_10
 
-    .line 1962
+    .line 1913
     iget-object v4, v0, Landroidx/appcompat/widget/Toolbar;->mTitleTextView:Landroid/widget/TextView;
 
     goto :goto_a
@@ -3581,7 +3396,7 @@
     :goto_a
     if-eqz v14, :cond_11
 
-    .line 1963
+    .line 1914
     iget-object v7, v0, Landroidx/appcompat/widget/Toolbar;->mSubtitleTextView:Landroid/widget/TextView;
 
     goto :goto_b
@@ -3589,7 +3404,7 @@
     :cond_11
     iget-object v7, v0, Landroidx/appcompat/widget/Toolbar;->mTitleTextView:Landroid/widget/TextView;
 
-    .line 1964
+    .line 1915
     :goto_b
     invoke-virtual {v4}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -3597,7 +3412,7 @@
 
     check-cast v4, Landroidx/appcompat/widget/Toolbar$LayoutParams;
 
-    .line 1965
+    .line 1916
     invoke-virtual {v7}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v7
@@ -3606,7 +3421,7 @@
 
     if-eqz v13, :cond_12
 
-    .line 1966
+    .line 1917
     iget-object v15, v0, Landroidx/appcompat/widget/Toolbar;->mTitleTextView:Landroid/widget/TextView;
 
     invoke-virtual {v15}, Landroid/widget/TextView;->getMeasuredWidth()I
@@ -3620,7 +3435,7 @@
 
     iget-object v15, v0, Landroidx/appcompat/widget/Toolbar;->mSubtitleTextView:Landroid/widget/TextView;
 
-    .line 1967
+    .line 1918
     invoke-virtual {v15}, Landroid/widget/TextView;->getMeasuredWidth()I
 
     move-result v15
@@ -3639,7 +3454,7 @@
 
     const/4 v15, 0x0
 
-    .line 1969
+    .line 1920
     :goto_c
     iget v6, v0, Landroidx/appcompat/widget/Toolbar;->mGravity:I
 
@@ -3661,10 +3476,10 @@
 
     sub-int/2addr v6, v3
 
-    .line 1976
+    .line 1927
     div-int/lit8 v6, v6, 0x2
 
-    .line 1977
+    .line 1928
     iget v12, v4, Landroidx/appcompat/widget/Toolbar$LayoutParams;->topMargin:I
 
     move/from16 p5, v2
@@ -3675,7 +3490,7 @@
 
     if-ge v6, v12, :cond_15
 
-    .line 1978
+    .line 1929
     iget v2, v4, Landroidx/appcompat/widget/Toolbar$LayoutParams;->topMargin:I
 
     iget v3, v0, Landroidx/appcompat/widget/Toolbar;->mTitleMarginTop:I
@@ -3693,7 +3508,7 @@
 
     sub-int/2addr v5, v8
 
-    .line 1982
+    .line 1933
     iget v2, v4, Landroidx/appcompat/widget/Toolbar$LayoutParams;->bottomMargin:I
 
     iget v3, v0, Landroidx/appcompat/widget/Toolbar;->mTitleMarginBottom:I
@@ -3702,7 +3517,7 @@
 
     if-ge v5, v2, :cond_16
 
-    .line 1983
+    .line 1934
     iget v2, v7, Landroidx/appcompat/widget/Toolbar$LayoutParams;->bottomMargin:I
 
     iget v3, v0, Landroidx/appcompat/widget/Toolbar;->mTitleMarginBottom:I
@@ -3730,7 +3545,7 @@
 
     sub-int/2addr v5, v9
 
-    .line 1990
+    .line 1941
     iget v2, v7, Landroidx/appcompat/widget/Toolbar$LayoutParams;->bottomMargin:I
 
     sub-int/2addr v5, v2
@@ -3746,7 +3561,7 @@
     :cond_18
     move/from16 p5, v2
 
-    .line 1971
+    .line 1922
     invoke-virtual/range {p0 .. p0}, Landroidx/appcompat/widget/Toolbar;->getPaddingTop()I
 
     move-result v2
@@ -3764,7 +3579,7 @@
 
     if-eqz v15, :cond_19
 
-    .line 1995
+    .line 1946
     iget v3, v0, Landroidx/appcompat/widget/Toolbar;->mTitleMarginStart:I
 
     const/4 v1, 0x1
@@ -3783,7 +3598,7 @@
 
     const/4 v2, 0x0
 
-    .line 1996
+    .line 1947
     invoke-static {v2, v3}, Ljava/lang/Math;->max(II)I
 
     move-result v4
@@ -3792,7 +3607,7 @@
 
     neg-int v3, v3
 
-    .line 1997
+    .line 1948
     invoke-static {v2, v3}, Ljava/lang/Math;->max(II)I
 
     move-result v3
@@ -3801,7 +3616,7 @@
 
     if-eqz v13, :cond_1a
 
-    .line 2002
+    .line 1953
     iget-object v1, v0, Landroidx/appcompat/widget/Toolbar;->mTitleTextView:Landroid/widget/TextView;
 
     invoke-virtual {v1}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -3810,7 +3625,7 @@
 
     check-cast v1, Landroidx/appcompat/widget/Toolbar$LayoutParams;
 
-    .line 2003
+    .line 1954
     iget-object v2, v0, Landroidx/appcompat/widget/Toolbar;->mTitleTextView:Landroid/widget/TextView;
 
     invoke-virtual {v2}, Landroid/widget/TextView;->getMeasuredWidth()I
@@ -3819,7 +3634,7 @@
 
     sub-int v2, v10, v2
 
-    .line 2004
+    .line 1955
     iget-object v3, v0, Landroidx/appcompat/widget/Toolbar;->mTitleTextView:Landroid/widget/TextView;
 
     invoke-virtual {v3}, Landroid/widget/TextView;->getMeasuredHeight()I
@@ -3828,17 +3643,17 @@
 
     add-int/2addr v3, v8
 
-    .line 2005
+    .line 1956
     iget-object v4, v0, Landroidx/appcompat/widget/Toolbar;->mTitleTextView:Landroid/widget/TextView;
 
     invoke-virtual {v4, v2, v8, v10, v3}, Landroid/widget/TextView;->layout(IIII)V
 
-    .line 2006
+    .line 1957
     iget v4, v0, Landroidx/appcompat/widget/Toolbar;->mTitleMarginEnd:I
 
     sub-int/2addr v2, v4
 
-    .line 2007
+    .line 1958
     iget v1, v1, Landroidx/appcompat/widget/Toolbar$LayoutParams;->bottomMargin:I
 
     add-int v8, v3, v1
@@ -3851,7 +3666,7 @@
     :goto_10
     if-eqz v14, :cond_1b
 
-    .line 2010
+    .line 1961
     iget-object v1, v0, Landroidx/appcompat/widget/Toolbar;->mSubtitleTextView:Landroid/widget/TextView;
 
     invoke-virtual {v1}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -3860,12 +3675,12 @@
 
     check-cast v1, Landroidx/appcompat/widget/Toolbar$LayoutParams;
 
-    .line 2011
+    .line 1962
     iget v3, v1, Landroidx/appcompat/widget/Toolbar$LayoutParams;->topMargin:I
 
     add-int/2addr v8, v3
 
-    .line 2012
+    .line 1963
     iget-object v3, v0, Landroidx/appcompat/widget/Toolbar;->mSubtitleTextView:Landroid/widget/TextView;
 
     invoke-virtual {v3}, Landroid/widget/TextView;->getMeasuredWidth()I
@@ -3874,7 +3689,7 @@
 
     sub-int v3, v10, v3
 
-    .line 2013
+    .line 1964
     iget-object v4, v0, Landroidx/appcompat/widget/Toolbar;->mSubtitleTextView:Landroid/widget/TextView;
 
     invoke-virtual {v4}, Landroid/widget/TextView;->getMeasuredHeight()I
@@ -3883,17 +3698,17 @@
 
     add-int/2addr v4, v8
 
-    .line 2014
+    .line 1965
     iget-object v5, v0, Landroidx/appcompat/widget/Toolbar;->mSubtitleTextView:Landroid/widget/TextView;
 
     invoke-virtual {v5, v3, v8, v10, v4}, Landroid/widget/TextView;->layout(IIII)V
 
-    .line 2015
+    .line 1966
     iget v3, v0, Landroidx/appcompat/widget/Toolbar;->mTitleMarginEnd:I
 
     sub-int v3, v10, v3
 
-    .line 2016
+    .line 1967
     iget v1, v1, Landroidx/appcompat/widget/Toolbar$LayoutParams;->bottomMargin:I
 
     goto :goto_11
@@ -3904,7 +3719,7 @@
     :goto_11
     if-eqz v15, :cond_1c
 
-    .line 2019
+    .line 1970
     invoke-static {v2, v3}, Ljava/lang/Math;->min(II)I
 
     move-result v1
@@ -3921,7 +3736,7 @@
     :cond_1d
     if-eqz v15, :cond_1e
 
-    .line 2022
+    .line 1973
     iget v3, v0, Landroidx/appcompat/widget/Toolbar;->mTitleMarginStart:I
 
     goto :goto_12
@@ -3936,7 +3751,7 @@
 
     sub-int/2addr v3, v1
 
-    .line 2023
+    .line 1974
     invoke-static {v7, v3}, Ljava/lang/Math;->max(II)I
 
     move-result v1
@@ -3945,7 +3760,7 @@
 
     neg-int v1, v3
 
-    .line 2024
+    .line 1975
     invoke-static {v7, v1}, Ljava/lang/Math;->max(II)I
 
     move-result v1
@@ -3954,7 +3769,7 @@
 
     if-eqz v13, :cond_1f
 
-    .line 2029
+    .line 1980
     iget-object v1, v0, Landroidx/appcompat/widget/Toolbar;->mTitleTextView:Landroid/widget/TextView;
 
     invoke-virtual {v1}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -3963,7 +3778,7 @@
 
     check-cast v1, Landroidx/appcompat/widget/Toolbar$LayoutParams;
 
-    .line 2030
+    .line 1981
     iget-object v3, v0, Landroidx/appcompat/widget/Toolbar;->mTitleTextView:Landroid/widget/TextView;
 
     invoke-virtual {v3}, Landroid/widget/TextView;->getMeasuredWidth()I
@@ -3972,7 +3787,7 @@
 
     add-int/2addr v3, v2
 
-    .line 2031
+    .line 1982
     iget-object v4, v0, Landroidx/appcompat/widget/Toolbar;->mTitleTextView:Landroid/widget/TextView;
 
     invoke-virtual {v4}, Landroid/widget/TextView;->getMeasuredHeight()I
@@ -3981,17 +3796,17 @@
 
     add-int/2addr v4, v8
 
-    .line 2032
+    .line 1983
     iget-object v5, v0, Landroidx/appcompat/widget/Toolbar;->mTitleTextView:Landroid/widget/TextView;
 
     invoke-virtual {v5, v2, v8, v3, v4}, Landroid/widget/TextView;->layout(IIII)V
 
-    .line 2033
+    .line 1984
     iget v5, v0, Landroidx/appcompat/widget/Toolbar;->mTitleMarginEnd:I
 
     add-int/2addr v3, v5
 
-    .line 2034
+    .line 1985
     iget v1, v1, Landroidx/appcompat/widget/Toolbar$LayoutParams;->bottomMargin:I
 
     add-int v8, v4, v1
@@ -4004,7 +3819,7 @@
     :goto_13
     if-eqz v14, :cond_20
 
-    .line 2037
+    .line 1988
     iget-object v1, v0, Landroidx/appcompat/widget/Toolbar;->mSubtitleTextView:Landroid/widget/TextView;
 
     invoke-virtual {v1}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -4013,12 +3828,12 @@
 
     check-cast v1, Landroidx/appcompat/widget/Toolbar$LayoutParams;
 
-    .line 2038
+    .line 1989
     iget v4, v1, Landroidx/appcompat/widget/Toolbar$LayoutParams;->topMargin:I
 
     add-int/2addr v8, v4
 
-    .line 2039
+    .line 1990
     iget-object v4, v0, Landroidx/appcompat/widget/Toolbar;->mSubtitleTextView:Landroid/widget/TextView;
 
     invoke-virtual {v4}, Landroid/widget/TextView;->getMeasuredWidth()I
@@ -4027,7 +3842,7 @@
 
     add-int/2addr v4, v2
 
-    .line 2040
+    .line 1991
     iget-object v5, v0, Landroidx/appcompat/widget/Toolbar;->mSubtitleTextView:Landroid/widget/TextView;
 
     invoke-virtual {v5}, Landroid/widget/TextView;->getMeasuredHeight()I
@@ -4036,17 +3851,17 @@
 
     add-int/2addr v5, v8
 
-    .line 2041
+    .line 1992
     iget-object v6, v0, Landroidx/appcompat/widget/Toolbar;->mSubtitleTextView:Landroid/widget/TextView;
 
     invoke-virtual {v6, v2, v8, v4, v5}, Landroid/widget/TextView;->layout(IIII)V
 
-    .line 2042
+    .line 1993
     iget v5, v0, Landroidx/appcompat/widget/Toolbar;->mTitleMarginEnd:I
 
     add-int/2addr v4, v5
 
-    .line 2043
+    .line 1994
     iget v1, v1, Landroidx/appcompat/widget/Toolbar$LayoutParams;->bottomMargin:I
 
     goto :goto_14
@@ -4057,12 +3872,12 @@
     :goto_14
     if-eqz v15, :cond_21
 
-    .line 2046
+    .line 1997
     invoke-static {v3, v4}, Ljava/lang/Math;->max(II)I
 
     move-result v2
 
-    .line 2054
+    .line 2005
     :cond_21
     :goto_15
     iget-object v1, v0, Landroidx/appcompat/widget/Toolbar;->mTempViews:Ljava/util/ArrayList;
@@ -4071,7 +3886,7 @@
 
     invoke-direct {v0, v1, v3}, Landroidx/appcompat/widget/Toolbar;->addCustomViewsWithGravity(Ljava/util/List;I)V
 
-    .line 2055
+    .line 2006
     iget-object v1, v0, Landroidx/appcompat/widget/Toolbar;->mTempViews:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
@@ -4085,7 +3900,7 @@
     :goto_16
     if-ge v2, v1, :cond_22
 
-    .line 2057
+    .line 2008
     iget-object v4, v0, Landroidx/appcompat/widget/Toolbar;->mTempViews:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -4107,14 +3922,14 @@
     :cond_22
     move/from16 v12, p3
 
-    .line 2061
+    .line 2012
     iget-object v1, v0, Landroidx/appcompat/widget/Toolbar;->mTempViews:Ljava/util/ArrayList;
 
     const/4 v2, 0x5
 
     invoke-direct {v0, v1, v2}, Landroidx/appcompat/widget/Toolbar;->addCustomViewsWithGravity(Ljava/util/List;I)V
 
-    .line 2062
+    .line 2013
     iget-object v1, v0, Landroidx/appcompat/widget/Toolbar;->mTempViews:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
@@ -4126,7 +3941,7 @@
     :goto_17
     if-ge v2, v1, :cond_23
 
-    .line 2064
+    .line 2015
     iget-object v4, v0, Landroidx/appcompat/widget/Toolbar;->mTempViews:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -4143,7 +3958,7 @@
 
     goto :goto_17
 
-    .line 2070
+    .line 2021
     :cond_23
     iget-object v1, v0, Landroidx/appcompat/widget/Toolbar;->mTempViews:Ljava/util/ArrayList;
 
@@ -4151,7 +3966,7 @@
 
     invoke-direct {v0, v1, v2}, Landroidx/appcompat/widget/Toolbar;->addCustomViewsWithGravity(Ljava/util/List;I)V
 
-    .line 2071
+    .line 2022
     iget-object v1, v0, Landroidx/appcompat/widget/Toolbar;->mTempViews:Ljava/util/ArrayList;
 
     invoke-direct {v0, v1, v11}, Landroidx/appcompat/widget/Toolbar;->getViewListMeasuredWidth(Ljava/util/List;[I)I
@@ -4162,12 +3977,12 @@
 
     sub-int v4, v4, p4
 
-    .line 2072
+    .line 2023
     div-int/lit8 v4, v4, 0x2
 
     add-int v6, v17, v4
 
-    .line 2073
+    .line 2024
     div-int/lit8 v2, v1, 0x2
 
     sub-int v2, v6, v2
@@ -4190,7 +4005,7 @@
     :cond_25
     move v3, v2
 
-    .line 2082
+    .line 2033
     :goto_18
     iget-object v1, v0, Landroidx/appcompat/widget/Toolbar;->mTempViews:Ljava/util/ArrayList;
 
@@ -4201,7 +4016,7 @@
     :goto_19
     if-ge v7, v1, :cond_26
 
-    .line 2084
+    .line 2035
     iget-object v2, v0, Landroidx/appcompat/widget/Toolbar;->mTempViews:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v7}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -4218,7 +4033,7 @@
 
     goto :goto_19
 
-    .line 2088
+    .line 2039
     :cond_26
     iget-object v1, v0, Landroidx/appcompat/widget/Toolbar;->mTempViews:Ljava/util/ArrayList;
 
@@ -4232,10 +4047,10 @@
 
     move-object/from16 v7, p0
 
-    .line 1744
+    .line 1695
     iget-object v8, v7, Landroidx/appcompat/widget/Toolbar;->mTempMargins:[I
 
-    .line 1747
+    .line 1698
     invoke-static/range {p0 .. p0}, Landroidx/appcompat/widget/ViewUtils;->isLayoutRtl(Landroid/view/View;)Z
 
     move-result v0
@@ -4257,7 +4072,7 @@
 
     move v10, v9
 
-    .line 1758
+    .line 1709
     :goto_0
     iget-object v0, v7, Landroidx/appcompat/widget/Toolbar;->mNavButtonView:Landroid/widget/ImageButton;
 
@@ -4267,7 +4082,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 1759
+    .line 1710
     iget-object v1, v7, Landroidx/appcompat/widget/Toolbar;->mNavButtonView:Landroid/widget/ImageButton;
 
     const/4 v5, 0x0
@@ -4284,7 +4099,7 @@
 
     invoke-direct/range {v0 .. v6}, Landroidx/appcompat/widget/Toolbar;->measureChildConstrained(Landroid/view/View;IIIII)V
 
-    .line 1761
+    .line 1712
     iget-object v0, v7, Landroidx/appcompat/widget/Toolbar;->mNavButtonView:Landroid/widget/ImageButton;
 
     invoke-virtual {v0}, Landroid/widget/ImageButton;->getMeasuredWidth()I
@@ -4299,7 +4114,7 @@
 
     add-int/2addr v0, v1
 
-    .line 1762
+    .line 1713
     iget-object v1, v7, Landroidx/appcompat/widget/Toolbar;->mNavButtonView:Landroid/widget/ImageButton;
 
     invoke-virtual {v1}, Landroid/widget/ImageButton;->getMeasuredHeight()I
@@ -4308,27 +4123,27 @@
 
     iget-object v2, v7, Landroidx/appcompat/widget/Toolbar;->mNavButtonView:Landroid/widget/ImageButton;
 
-    .line 1763
+    .line 1714
     invoke-direct {v7, v2}, Landroidx/appcompat/widget/Toolbar;->getVerticalMargins(Landroid/view/View;)I
 
     move-result v2
 
     add-int/2addr v1, v2
 
-    .line 1762
+    .line 1713
     invoke-static {v9, v1}, Ljava/lang/Math;->max(II)I
 
     move-result v1
 
-    .line 1764
+    .line 1715
     iget-object v2, v7, Landroidx/appcompat/widget/Toolbar;->mNavButtonView:Landroid/widget/ImageButton;
 
-    .line 1765
+    .line 1716
     invoke-virtual {v2}, Landroid/widget/ImageButton;->getMeasuredState()I
 
     move-result v2
 
-    .line 1764
+    .line 1715
     invoke-static {v9, v2}, Landroid/view/View;->combineMeasuredStates(II)I
 
     move-result v2
@@ -4346,7 +4161,7 @@
 
     move v13, v12
 
-    .line 1768
+    .line 1719
     :goto_1
     iget-object v1, v7, Landroidx/appcompat/widget/Toolbar;->mCollapseButtonView:Landroid/widget/ImageButton;
 
@@ -4356,7 +4171,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 1769
+    .line 1720
     iget-object v1, v7, Landroidx/appcompat/widget/Toolbar;->mCollapseButtonView:Landroid/widget/ImageButton;
 
     const/4 v5, 0x0
@@ -4373,7 +4188,7 @@
 
     invoke-direct/range {v0 .. v6}, Landroidx/appcompat/widget/Toolbar;->measureChildConstrained(Landroid/view/View;IIIII)V
 
-    .line 1771
+    .line 1722
     iget-object v0, v7, Landroidx/appcompat/widget/Toolbar;->mCollapseButtonView:Landroid/widget/ImageButton;
 
     invoke-virtual {v0}, Landroid/widget/ImageButton;->getMeasuredWidth()I
@@ -4382,14 +4197,14 @@
 
     iget-object v1, v7, Landroidx/appcompat/widget/Toolbar;->mCollapseButtonView:Landroid/widget/ImageButton;
 
-    .line 1772
+    .line 1723
     invoke-direct {v7, v1}, Landroidx/appcompat/widget/Toolbar;->getHorizontalMargins(Landroid/view/View;)I
 
     move-result v1
 
     add-int/2addr v0, v1
 
-    .line 1773
+    .line 1724
     iget-object v1, v7, Landroidx/appcompat/widget/Toolbar;->mCollapseButtonView:Landroid/widget/ImageButton;
 
     invoke-virtual {v1}, Landroid/widget/ImageButton;->getMeasuredHeight()I
@@ -4398,38 +4213,38 @@
 
     iget-object v2, v7, Landroidx/appcompat/widget/Toolbar;->mCollapseButtonView:Landroid/widget/ImageButton;
 
-    .line 1774
+    .line 1725
     invoke-direct {v7, v2}, Landroidx/appcompat/widget/Toolbar;->getVerticalMargins(Landroid/view/View;)I
 
     move-result v2
 
     add-int/2addr v1, v2
 
-    .line 1773
+    .line 1724
     invoke-static {v12, v1}, Ljava/lang/Math;->max(II)I
 
     move-result v12
 
-    .line 1775
+    .line 1726
     iget-object v1, v7, Landroidx/appcompat/widget/Toolbar;->mCollapseButtonView:Landroid/widget/ImageButton;
 
-    .line 1776
+    .line 1727
     invoke-virtual {v1}, Landroid/widget/ImageButton;->getMeasuredState()I
 
     move-result v1
 
-    .line 1775
+    .line 1726
     invoke-static {v13, v1}, Landroid/view/View;->combineMeasuredStates(II)I
 
     move-result v13
 
-    .line 1779
+    .line 1730
     :cond_2
     invoke-virtual/range {p0 .. p0}, Landroidx/appcompat/widget/Toolbar;->getCurrentContentInsetStart()I
 
     move-result v1
 
-    .line 1780
+    .line 1731
     invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
 
     move-result v2
@@ -4438,14 +4253,14 @@
 
     sub-int/2addr v1, v0
 
-    .line 1781
+    .line 1732
     invoke-static {v9, v1}, Ljava/lang/Math;->max(II)I
 
     move-result v0
 
     aput v0, v8, v10
 
-    .line 1784
+    .line 1735
     iget-object v0, v7, Landroidx/appcompat/widget/Toolbar;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
 
     invoke-direct {v7, v0}, Landroidx/appcompat/widget/Toolbar;->shouldLayout(Landroid/view/View;)Z
@@ -4454,7 +4269,7 @@
 
     if-eqz v0, :cond_3
 
-    .line 1785
+    .line 1736
     iget-object v1, v7, Landroidx/appcompat/widget/Toolbar;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
 
     const/4 v5, 0x0
@@ -4471,7 +4286,7 @@
 
     invoke-direct/range {v0 .. v6}, Landroidx/appcompat/widget/Toolbar;->measureChildConstrained(Landroid/view/View;IIIII)V
 
-    .line 1787
+    .line 1738
     iget-object v0, v7, Landroidx/appcompat/widget/Toolbar;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
 
     invoke-virtual {v0}, Landroidx/appcompat/widget/ActionMenuView;->getMeasuredWidth()I
@@ -4486,7 +4301,7 @@
 
     add-int/2addr v0, v1
 
-    .line 1788
+    .line 1739
     iget-object v1, v7, Landroidx/appcompat/widget/Toolbar;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
 
     invoke-virtual {v1}, Landroidx/appcompat/widget/ActionMenuView;->getMeasuredHeight()I
@@ -4495,27 +4310,27 @@
 
     iget-object v2, v7, Landroidx/appcompat/widget/Toolbar;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
 
-    .line 1789
+    .line 1740
     invoke-direct {v7, v2}, Landroidx/appcompat/widget/Toolbar;->getVerticalMargins(Landroid/view/View;)I
 
     move-result v2
 
     add-int/2addr v1, v2
 
-    .line 1788
+    .line 1739
     invoke-static {v12, v1}, Ljava/lang/Math;->max(II)I
 
     move-result v12
 
-    .line 1790
+    .line 1741
     iget-object v1, v7, Landroidx/appcompat/widget/Toolbar;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
 
-    .line 1791
+    .line 1742
     invoke-virtual {v1}, Landroidx/appcompat/widget/ActionMenuView;->getMeasuredState()I
 
     move-result v1
 
-    .line 1790
+    .line 1741
     invoke-static {v13, v1}, Landroid/view/View;->combineMeasuredStates(II)I
 
     move-result v13
@@ -4525,13 +4340,13 @@
     :cond_3
     move v0, v9
 
-    .line 1794
+    .line 1745
     :goto_2
     invoke-virtual/range {p0 .. p0}, Landroidx/appcompat/widget/Toolbar;->getCurrentContentInsetEnd()I
 
     move-result v1
 
-    .line 1795
+    .line 1746
     invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
 
     move-result v2
@@ -4540,14 +4355,14 @@
 
     sub-int/2addr v1, v0
 
-    .line 1796
+    .line 1747
     invoke-static {v9, v1}, Ljava/lang/Math;->max(II)I
 
     move-result v0
 
     aput v0, v8, v11
 
-    .line 1798
+    .line 1749
     iget-object v0, v7, Landroidx/appcompat/widget/Toolbar;->mExpandedActionView:Landroid/view/View;
 
     invoke-direct {v7, v0}, Landroidx/appcompat/widget/Toolbar;->shouldLayout(Landroid/view/View;)Z
@@ -4556,7 +4371,7 @@
 
     if-eqz v0, :cond_4
 
-    .line 1799
+    .line 1750
     iget-object v1, v7, Landroidx/appcompat/widget/Toolbar;->mExpandedActionView:Landroid/view/View;
 
     const/4 v5, 0x0
@@ -4577,7 +4392,7 @@
 
     add-int/2addr v10, v0
 
-    .line 1801
+    .line 1752
     iget-object v0, v7, Landroidx/appcompat/widget/Toolbar;->mExpandedActionView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
@@ -4586,32 +4401,32 @@
 
     iget-object v1, v7, Landroidx/appcompat/widget/Toolbar;->mExpandedActionView:Landroid/view/View;
 
-    .line 1802
+    .line 1753
     invoke-direct {v7, v1}, Landroidx/appcompat/widget/Toolbar;->getVerticalMargins(Landroid/view/View;)I
 
     move-result v1
 
     add-int/2addr v0, v1
 
-    .line 1801
+    .line 1752
     invoke-static {v12, v0}, Ljava/lang/Math;->max(II)I
 
     move-result v12
 
-    .line 1803
+    .line 1754
     iget-object v0, v7, Landroidx/appcompat/widget/Toolbar;->mExpandedActionView:Landroid/view/View;
 
-    .line 1804
+    .line 1755
     invoke-virtual {v0}, Landroid/view/View;->getMeasuredState()I
 
     move-result v0
 
-    .line 1803
+    .line 1754
     invoke-static {v13, v0}, Landroid/view/View;->combineMeasuredStates(II)I
 
     move-result v13
 
-    .line 1807
+    .line 1758
     :cond_4
     iget-object v0, v7, Landroidx/appcompat/widget/Toolbar;->mLogoView:Landroid/widget/ImageView;
 
@@ -4621,7 +4436,7 @@
 
     if-eqz v0, :cond_5
 
-    .line 1808
+    .line 1759
     iget-object v1, v7, Landroidx/appcompat/widget/Toolbar;->mLogoView:Landroid/widget/ImageView;
 
     const/4 v5, 0x0
@@ -4642,7 +4457,7 @@
 
     add-int/2addr v10, v0
 
-    .line 1810
+    .line 1761
     iget-object v0, v7, Landroidx/appcompat/widget/Toolbar;->mLogoView:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->getMeasuredHeight()I
@@ -4651,32 +4466,32 @@
 
     iget-object v1, v7, Landroidx/appcompat/widget/Toolbar;->mLogoView:Landroid/widget/ImageView;
 
-    .line 1811
+    .line 1762
     invoke-direct {v7, v1}, Landroidx/appcompat/widget/Toolbar;->getVerticalMargins(Landroid/view/View;)I
 
     move-result v1
 
     add-int/2addr v0, v1
 
-    .line 1810
+    .line 1761
     invoke-static {v12, v0}, Ljava/lang/Math;->max(II)I
 
     move-result v12
 
-    .line 1812
+    .line 1763
     iget-object v0, v7, Landroidx/appcompat/widget/Toolbar;->mLogoView:Landroid/widget/ImageView;
 
-    .line 1813
+    .line 1764
     invoke-virtual {v0}, Landroid/widget/ImageView;->getMeasuredState()I
 
     move-result v0
 
-    .line 1812
+    .line 1763
     invoke-static {v13, v0}, Landroid/view/View;->combineMeasuredStates(II)I
 
     move-result v13
 
-    .line 1816
+    .line 1767
     :cond_5
     invoke-virtual/range {p0 .. p0}, Landroidx/appcompat/widget/Toolbar;->getChildCount()I
 
@@ -4691,19 +4506,19 @@
     :goto_3
     if-ge v10, v11, :cond_8
 
-    .line 1818
+    .line 1769
     invoke-virtual {v7, v10}, Landroidx/appcompat/widget/Toolbar;->getChildAt(I)Landroid/view/View;
 
     move-result-object v15
 
-    .line 1819
+    .line 1770
     invoke-virtual {v15}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Landroidx/appcompat/widget/Toolbar$LayoutParams;
 
-    .line 1820
+    .line 1771
     iget v0, v0, Landroidx/appcompat/widget/Toolbar$LayoutParams;->mViewType:I
 
     if-nez v0, :cond_7
@@ -4731,14 +4546,14 @@
 
     move-object v6, v8
 
-    .line 1825
+    .line 1776
     invoke-direct/range {v0 .. v6}, Landroidx/appcompat/widget/Toolbar;->measureChildCollapseMargins(Landroid/view/View;IIII[I)I
 
     move-result v0
 
     add-int/2addr v12, v0
 
-    .line 1827
+    .line 1778
     invoke-virtual {v15}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v0
@@ -4753,7 +4568,7 @@
 
     move-result v0
 
-    .line 1828
+    .line 1779
     invoke-virtual {v15}, Landroid/view/View;->getMeasuredState()I
 
     move-result v1
@@ -4772,7 +4587,7 @@
 
     goto :goto_3
 
-    .line 1833
+    .line 1784
     :cond_8
     iget v0, v7, Landroidx/appcompat/widget/Toolbar;->mTitleMarginTop:I
 
@@ -4780,14 +4595,14 @@
 
     add-int v10, v0, v1
 
-    .line 1834
+    .line 1785
     iget v0, v7, Landroidx/appcompat/widget/Toolbar;->mTitleMarginStart:I
 
     iget v1, v7, Landroidx/appcompat/widget/Toolbar;->mTitleMarginEnd:I
 
     add-int v11, v0, v1
 
-    .line 1835
+    .line 1786
     iget-object v0, v7, Landroidx/appcompat/widget/Toolbar;->mTitleTextView:Landroid/widget/TextView;
 
     invoke-direct {v7, v0}, Landroidx/appcompat/widget/Toolbar;->shouldLayout(Landroid/view/View;)Z
@@ -4796,7 +4611,7 @@
 
     if-eqz v0, :cond_9
 
-    .line 1836
+    .line 1787
     iget-object v1, v7, Landroidx/appcompat/widget/Toolbar;->mTitleTextView:Landroid/widget/TextView;
 
     add-int v3, v12, v11
@@ -4813,7 +4628,7 @@
 
     invoke-direct/range {v0 .. v6}, Landroidx/appcompat/widget/Toolbar;->measureChildCollapseMargins(Landroid/view/View;IIII[I)I
 
-    .line 1839
+    .line 1790
     iget-object v0, v7, Landroidx/appcompat/widget/Toolbar;->mTitleTextView:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getMeasuredWidth()I
@@ -4828,7 +4643,7 @@
 
     add-int/2addr v0, v1
 
-    .line 1840
+    .line 1791
     iget-object v1, v7, Landroidx/appcompat/widget/Toolbar;->mTitleTextView:Landroid/widget/TextView;
 
     invoke-virtual {v1}, Landroid/widget/TextView;->getMeasuredHeight()I
@@ -4843,7 +4658,7 @@
 
     add-int/2addr v1, v2
 
-    .line 1841
+    .line 1792
     iget-object v2, v7, Landroidx/appcompat/widget/Toolbar;->mTitleTextView:Landroid/widget/TextView;
 
     invoke-virtual {v2}, Landroid/widget/TextView;->getMeasuredState()I
@@ -4869,7 +4684,7 @@
 
     move v13, v15
 
-    .line 1843
+    .line 1794
     :goto_5
     iget-object v0, v7, Landroidx/appcompat/widget/Toolbar;->mSubtitleTextView:Landroid/widget/TextView;
 
@@ -4879,7 +4694,7 @@
 
     if-eqz v0, :cond_a
 
-    .line 1844
+    .line 1795
     iget-object v1, v7, Landroidx/appcompat/widget/Toolbar;->mSubtitleTextView:Landroid/widget/TextView;
 
     add-int v3, v12, v11
@@ -4904,7 +4719,7 @@
 
     move-result v13
 
-    .line 1848
+    .line 1799
     iget-object v0, v7, Landroidx/appcompat/widget/Toolbar;->mSubtitleTextView:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getMeasuredHeight()I
@@ -4913,7 +4728,7 @@
 
     iget-object v1, v7, Landroidx/appcompat/widget/Toolbar;->mSubtitleTextView:Landroid/widget/TextView;
 
-    .line 1849
+    .line 1800
     invoke-direct {v7, v1}, Landroidx/appcompat/widget/Toolbar;->getVerticalMargins(Landroid/view/View;)I
 
     move-result v1
@@ -4922,15 +4737,15 @@
 
     add-int/2addr v15, v0
 
-    .line 1850
+    .line 1801
     iget-object v0, v7, Landroidx/appcompat/widget/Toolbar;->mSubtitleTextView:Landroid/widget/TextView;
 
-    .line 1851
+    .line 1802
     invoke-virtual {v0}, Landroid/widget/TextView;->getMeasuredState()I
 
     move-result v0
 
-    .line 1850
+    .line 1801
     invoke-static {v10, v0}, Landroid/view/View;->combineMeasuredStates(II)I
 
     move-result v6
@@ -4943,12 +4758,12 @@
     :goto_6
     add-int/2addr v12, v13
 
-    .line 1855
+    .line 1806
     invoke-static {v14, v15}, Ljava/lang/Math;->max(II)I
 
     move-result v0
 
-    .line 1859
+    .line 1810
     invoke-virtual/range {p0 .. p0}, Landroidx/appcompat/widget/Toolbar;->getPaddingLeft()I
 
     move-result v1
@@ -4961,7 +4776,7 @@
 
     add-int/2addr v12, v1
 
-    .line 1860
+    .line 1811
     invoke-virtual/range {p0 .. p0}, Landroidx/appcompat/widget/Toolbar;->getPaddingTop()I
 
     move-result v1
@@ -4974,7 +4789,7 @@
 
     add-int/2addr v0, v1
 
-    .line 1863
+    .line 1814
     invoke-virtual/range {p0 .. p0}, Landroidx/appcompat/widget/Toolbar;->getSuggestedMinimumWidth()I
 
     move-result v1
@@ -4989,12 +4804,12 @@
 
     move/from16 v3, p1
 
-    .line 1862
+    .line 1813
     invoke-static {v1, v3, v2}, Landroid/view/View;->resolveSizeAndState(III)I
 
     move-result v1
 
-    .line 1866
+    .line 1817
     invoke-virtual/range {p0 .. p0}, Landroidx/appcompat/widget/Toolbar;->getSuggestedMinimumHeight()I
 
     move-result v2
@@ -5007,12 +4822,12 @@
 
     move/from16 v3, p2
 
-    .line 1865
+    .line 1816
     invoke-static {v0, v3, v2}, Landroid/view/View;->resolveSizeAndState(III)I
 
     move-result v0
 
-    .line 1869
+    .line 1820
     invoke-direct/range {p0 .. p0}, Landroidx/appcompat/widget/Toolbar;->shouldCollapse()Z
 
     move-result v2
@@ -5030,28 +4845,28 @@
 .method protected onRestoreInstanceState(Landroid/os/Parcelable;)V
     .locals 2
 
-    .line 1592
+    .line 1543
     instance-of v0, p1, Landroidx/appcompat/widget/Toolbar$SavedState;
 
     if-nez v0, :cond_0
 
-    .line 1593
+    .line 1544
     invoke-super {p0, p1}, Landroid/view/ViewGroup;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
     return-void
 
-    .line 1597
+    .line 1548
     :cond_0
     check-cast p1, Landroidx/appcompat/widget/Toolbar$SavedState;
 
-    .line 1598
+    .line 1549
     invoke-virtual {p1}, Landroidx/appcompat/widget/Toolbar$SavedState;->getSuperState()Landroid/os/Parcelable;
 
     move-result-object v0
 
     invoke-super {p0, v0}, Landroid/view/ViewGroup;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
-    .line 1600
+    .line 1551
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
 
     if-eqz v0, :cond_1
@@ -5065,7 +4880,7 @@
     :cond_1
     const/4 v0, 0x0
 
-    .line 1601
+    .line 1552
     :goto_0
     iget v1, p1, Landroidx/appcompat/widget/Toolbar$SavedState;->expandedMenuItemId:I
 
@@ -5077,7 +4892,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 1602
+    .line 1553
     iget v1, p1, Landroidx/appcompat/widget/Toolbar$SavedState;->expandedMenuItemId:I
 
     invoke-interface {v0, v1}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
@@ -5086,16 +4901,16 @@
 
     if-eqz v0, :cond_2
 
-    .line 1604
+    .line 1555
     invoke-interface {v0}, Landroid/view/MenuItem;->expandActionView()Z
 
-    .line 1608
+    .line 1559
     :cond_2
     iget-boolean p1, p1, Landroidx/appcompat/widget/Toolbar$SavedState;->isOverflowOpen:Z
 
     if-eqz p1, :cond_3
 
-    .line 1609
+    .line 1560
     invoke-direct {p0}, Landroidx/appcompat/widget/Toolbar;->postShowOverflowMenu()V
 
     :cond_3
@@ -5105,21 +4920,21 @@
 .method public onRtlPropertiesChanged(I)V
     .locals 2
 
-    .line 513
+    .line 491
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x11
 
     if-lt v0, v1, :cond_0
 
-    .line 514
+    .line 492
     invoke-super {p0, p1}, Landroid/view/ViewGroup;->onRtlPropertiesChanged(I)V
 
-    .line 517
+    .line 495
     :cond_0
     invoke-direct {p0}, Landroidx/appcompat/widget/Toolbar;->ensureContentInsets()V
 
-    .line 518
+    .line 496
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mContentInsets:Landroidx/appcompat/widget/RtlSpacingHelper;
 
     const/4 v1, 0x1
@@ -5140,7 +4955,7 @@
 .method protected onSaveInstanceState()Landroid/os/Parcelable;
     .locals 2
 
-    .line 1580
+    .line 1531
     new-instance v0, Landroidx/appcompat/widget/Toolbar$SavedState;
 
     invoke-super {p0}, Landroid/view/ViewGroup;->onSaveInstanceState()Landroid/os/Parcelable;
@@ -5149,7 +4964,7 @@
 
     invoke-direct {v0, v1}, Landroidx/appcompat/widget/Toolbar$SavedState;-><init>(Landroid/os/Parcelable;)V
 
-    .line 1582
+    .line 1533
     iget-object v1, p0, Landroidx/appcompat/widget/Toolbar;->mExpandedMenuPresenter:Landroidx/appcompat/widget/Toolbar$ExpandedActionViewMenuPresenter;
 
     if-eqz v1, :cond_0
@@ -5158,7 +4973,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 1583
+    .line 1534
     iget-object v1, p0, Landroidx/appcompat/widget/Toolbar;->mExpandedMenuPresenter:Landroidx/appcompat/widget/Toolbar$ExpandedActionViewMenuPresenter;
 
     iget-object v1, v1, Landroidx/appcompat/widget/Toolbar$ExpandedActionViewMenuPresenter;->mCurrentExpandedItem:Landroidx/appcompat/view/menu/MenuItemImpl;
@@ -5169,7 +4984,7 @@
 
     iput v1, v0, Landroidx/appcompat/widget/Toolbar$SavedState;->expandedMenuItemId:I
 
-    .line 1586
+    .line 1537
     :cond_0
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->isOverflowMenuShowing()Z
 
@@ -5183,7 +4998,7 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 4
 
-    .line 1631
+    .line 1582
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v0
@@ -5192,10 +5007,10 @@
 
     if-nez v0, :cond_0
 
-    .line 1633
+    .line 1584
     iput-boolean v1, p0, Landroidx/appcompat/widget/Toolbar;->mEatingTouch:Z
 
-    .line 1636
+    .line 1587
     :cond_0
     iget-boolean v2, p0, Landroidx/appcompat/widget/Toolbar;->mEatingTouch:Z
 
@@ -5203,7 +5018,7 @@
 
     if-nez v2, :cond_1
 
-    .line 1637
+    .line 1588
     invoke-super {p0, p1}, Landroid/view/ViewGroup;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result p1
@@ -5212,7 +5027,7 @@
 
     if-nez p1, :cond_1
 
-    .line 1639
+    .line 1590
     iput-boolean v3, p0, Landroidx/appcompat/widget/Toolbar;->mEatingTouch:Z
 
     :cond_1
@@ -5222,7 +5037,7 @@
 
     if-ne v0, p1, :cond_3
 
-    .line 1644
+    .line 1595
     :cond_2
     iput-boolean v1, p0, Landroidx/appcompat/widget/Toolbar;->mEatingTouch:Z
 
@@ -5233,7 +5048,7 @@
 .method removeChildrenForExpandedActionView()V
     .locals 4
 
-    .line 2283
+    .line 2238
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getChildCount()I
 
     move-result v0
@@ -5243,19 +5058,19 @@
     :goto_0
     if-ltz v0, :cond_1
 
-    .line 2286
+    .line 2241
     invoke-virtual {p0, v0}, Landroidx/appcompat/widget/Toolbar;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 2287
+    .line 2242
     invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v2
 
     check-cast v2, Landroidx/appcompat/widget/Toolbar$LayoutParams;
 
-    .line 2288
+    .line 2243
     iget v2, v2, Landroidx/appcompat/widget/Toolbar$LayoutParams;->mViewType:I
 
     const/4 v3, 0x2
@@ -5266,10 +5081,10 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 2289
+    .line 2244
     invoke-virtual {p0, v0}, Landroidx/appcompat/widget/Toolbar;->removeViewAt(I)V
 
-    .line 2290
+    .line 2245
     iget-object v2, p0, Landroidx/appcompat/widget/Toolbar;->mHiddenViews:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -5288,7 +5103,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 1079
+    .line 1049
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -5311,23 +5126,23 @@
 .method public setCollapseContentDescription(Ljava/lang/CharSequence;)V
     .locals 1
 
-    .line 1093
+    .line 1063
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 1094
+    .line 1064
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->ensureCollapseButtonView()V
 
-    .line 1096
+    .line 1066
     :cond_0
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mCollapseButtonView:Landroid/widget/ImageButton;
 
     if-eqz v0, :cond_1
 
-    .line 1097
+    .line 1067
     invoke-virtual {v0, p1}, Landroid/widget/ImageButton;->setContentDescription(Ljava/lang/CharSequence;)V
 
     :cond_1
@@ -5337,7 +5152,7 @@
 .method public setCollapseIcon(I)V
     .locals 1
 
-    .line 1125
+    .line 1094
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -5356,23 +5171,23 @@
 
     if-eqz p1, :cond_0
 
-    .line 1140
+    .line 1109
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->ensureCollapseButtonView()V
 
-    .line 1141
+    .line 1110
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mCollapseButtonView:Landroid/widget/ImageButton;
 
     invoke-virtual {v0, p1}, Landroid/widget/ImageButton;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     goto :goto_0
 
-    .line 1142
+    .line 1111
     :cond_0
     iget-object p1, p0, Landroidx/appcompat/widget/Toolbar;->mCollapseButtonView:Landroid/widget/ImageButton;
 
     if-eqz p1, :cond_1
 
-    .line 1143
+    .line 1112
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mCollapseIcon:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageButton;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
@@ -5385,10 +5200,10 @@
 .method public setCollapsible(Z)V
     .locals 0
 
-    .line 2315
+    .line 2270
     iput-boolean p1, p0, Landroidx/appcompat/widget/Toolbar;->mCollapsible:Z
 
-    .line 2316
+    .line 2271
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->requestLayout()V
 
     return-void
@@ -5401,23 +5216,23 @@
 
     const/high16 p1, -0x80000000
 
-    .line 1447
+    .line 1409
     :cond_0
     iget v0, p0, Landroidx/appcompat/widget/Toolbar;->mContentInsetEndWithActions:I
 
     if-eq p1, v0, :cond_1
 
-    .line 1448
+    .line 1410
     iput p1, p0, Landroidx/appcompat/widget/Toolbar;->mContentInsetEndWithActions:I
 
-    .line 1449
+    .line 1411
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getNavigationIcon()Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    .line 1450
+    .line 1412
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->requestLayout()V
 
     :cond_1
@@ -5431,23 +5246,23 @@
 
     const/high16 p1, -0x80000000
 
-    .line 1404
+    .line 1367
     :cond_0
     iget v0, p0, Landroidx/appcompat/widget/Toolbar;->mContentInsetStartWithNavigation:I
 
     if-eq p1, v0, :cond_1
 
-    .line 1405
+    .line 1368
     iput p1, p0, Landroidx/appcompat/widget/Toolbar;->mContentInsetStartWithNavigation:I
 
-    .line 1406
+    .line 1369
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getNavigationIcon()Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    .line 1407
+    .line 1370
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->requestLayout()V
 
     :cond_1
@@ -5457,10 +5272,10 @@
 .method public setContentInsetsRelative(II)V
     .locals 1
 
-    .line 1257
+    .line 1225
     invoke-direct {p0}, Landroidx/appcompat/widget/Toolbar;->ensureContentInsets()V
 
-    .line 1258
+    .line 1226
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mContentInsets:Landroidx/appcompat/widget/RtlSpacingHelper;
 
     invoke-virtual {v0, p1, p2}, Landroidx/appcompat/widget/RtlSpacingHelper;->setRelative(II)V
@@ -5471,7 +5286,7 @@
 .method public setLogo(I)V
     .locals 1
 
-    .line 531
+    .line 509
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -5490,10 +5305,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 652
+    .line 630
     invoke-direct {p0}, Landroidx/appcompat/widget/Toolbar;->ensureLogoView()V
 
-    .line 653
+    .line 631
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mLogoView:Landroid/widget/ImageView;
 
     invoke-direct {p0, v0}, Landroidx/appcompat/widget/Toolbar;->isChildOrHidden(Landroid/view/View;)Z
@@ -5502,7 +5317,7 @@
 
     if-nez v0, :cond_1
 
-    .line 654
+    .line 632
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mLogoView:Landroid/widget/ImageView;
 
     const/4 v1, 0x1
@@ -5511,7 +5326,7 @@
 
     goto :goto_0
 
-    .line 656
+    .line 634
     :cond_0
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mLogoView:Landroid/widget/ImageView;
 
@@ -5523,26 +5338,26 @@
 
     if-eqz v0, :cond_1
 
-    .line 657
+    .line 635
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mLogoView:Landroid/widget/ImageView;
 
     invoke-virtual {p0, v0}, Landroidx/appcompat/widget/Toolbar;->removeView(Landroid/view/View;)V
 
-    .line 658
+    .line 636
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mHiddenViews:Ljava/util/ArrayList;
 
     iget-object v1, p0, Landroidx/appcompat/widget/Toolbar;->mLogoView:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 660
+    .line 638
     :cond_1
     :goto_0
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mLogoView:Landroid/widget/ImageView;
 
     if-eqz v0, :cond_2
 
-    .line 661
+    .line 639
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     :cond_2
@@ -5552,7 +5367,7 @@
 .method public setLogoDescription(I)V
     .locals 1
 
-    .line 686
+    .line 663
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -5569,23 +5384,23 @@
 .method public setLogoDescription(Ljava/lang/CharSequence;)V
     .locals 1
 
-    .line 698
+    .line 675
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 699
+    .line 676
     invoke-direct {p0}, Landroidx/appcompat/widget/Toolbar;->ensureLogoView()V
 
-    .line 701
+    .line 678
     :cond_0
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mLogoView:Landroid/widget/ImageView;
 
     if-eqz v0, :cond_1
 
-    .line 702
+    .line 679
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
 
     :cond_1
@@ -5597,18 +5412,18 @@
 
     if-nez p1, :cond_0
 
-    .line 577
+    .line 555
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 581
+    .line 559
     :cond_0
     invoke-direct {p0}, Landroidx/appcompat/widget/Toolbar;->ensureMenuView()V
 
-    .line 582
+    .line 560
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
 
     invoke-virtual {v0}, Landroidx/appcompat/widget/ActionMenuView;->peekMenu()Landroidx/appcompat/view/menu/MenuBuilder;
@@ -5622,23 +5437,23 @@
     :cond_1
     if-eqz v0, :cond_2
 
-    .line 588
+    .line 566
     iget-object v1, p0, Landroidx/appcompat/widget/Toolbar;->mOuterActionMenuPresenter:Landroidx/appcompat/widget/ActionMenuPresenter;
 
     invoke-virtual {v0, v1}, Landroidx/appcompat/view/menu/MenuBuilder;->removeMenuPresenter(Landroidx/appcompat/view/menu/MenuPresenter;)V
 
-    .line 589
+    .line 567
     iget-object v1, p0, Landroidx/appcompat/widget/Toolbar;->mExpandedMenuPresenter:Landroidx/appcompat/widget/Toolbar$ExpandedActionViewMenuPresenter;
 
     invoke-virtual {v0, v1}, Landroidx/appcompat/view/menu/MenuBuilder;->removeMenuPresenter(Landroidx/appcompat/view/menu/MenuPresenter;)V
 
-    .line 592
+    .line 570
     :cond_2
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mExpandedMenuPresenter:Landroidx/appcompat/widget/Toolbar$ExpandedActionViewMenuPresenter;
 
     if-nez v0, :cond_3
 
-    .line 593
+    .line 571
     new-instance v0, Landroidx/appcompat/widget/Toolbar$ExpandedActionViewMenuPresenter;
 
     invoke-direct {v0, p0}, Landroidx/appcompat/widget/Toolbar$ExpandedActionViewMenuPresenter;-><init>(Landroidx/appcompat/widget/Toolbar;)V
@@ -5648,17 +5463,17 @@
     :cond_3
     const/4 v0, 0x1
 
-    .line 596
+    .line 574
     invoke-virtual {p2, v0}, Landroidx/appcompat/widget/ActionMenuPresenter;->setExpandedActionViewsExclusive(Z)V
 
     if-eqz p1, :cond_4
 
-    .line 598
+    .line 576
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mPopupContext:Landroid/content/Context;
 
     invoke-virtual {p1, p2, v0}, Landroidx/appcompat/view/menu/MenuBuilder;->addMenuPresenter(Landroidx/appcompat/view/menu/MenuPresenter;Landroid/content/Context;)V
 
-    .line 599
+    .line 577
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mExpandedMenuPresenter:Landroidx/appcompat/widget/Toolbar$ExpandedActionViewMenuPresenter;
 
     iget-object v1, p0, Landroidx/appcompat/widget/Toolbar;->mPopupContext:Landroid/content/Context;
@@ -5667,7 +5482,7 @@
 
     goto :goto_0
 
-    .line 601
+    .line 579
     :cond_4
     iget-object p1, p0, Landroidx/appcompat/widget/Toolbar;->mPopupContext:Landroid/content/Context;
 
@@ -5675,22 +5490,22 @@
 
     invoke-virtual {p2, p1, v1}, Landroidx/appcompat/widget/ActionMenuPresenter;->initForMenu(Landroid/content/Context;Landroidx/appcompat/view/menu/MenuBuilder;)V
 
-    .line 602
+    .line 580
     iget-object p1, p0, Landroidx/appcompat/widget/Toolbar;->mExpandedMenuPresenter:Landroidx/appcompat/widget/Toolbar$ExpandedActionViewMenuPresenter;
 
     iget-object v2, p0, Landroidx/appcompat/widget/Toolbar;->mPopupContext:Landroid/content/Context;
 
     invoke-virtual {p1, v2, v1}, Landroidx/appcompat/widget/Toolbar$ExpandedActionViewMenuPresenter;->initForMenu(Landroid/content/Context;Landroidx/appcompat/view/menu/MenuBuilder;)V
 
-    .line 603
+    .line 581
     invoke-virtual {p2, v0}, Landroidx/appcompat/widget/ActionMenuPresenter;->updateMenuView(Z)V
 
-    .line 604
+    .line 582
     iget-object p1, p0, Landroidx/appcompat/widget/Toolbar;->mExpandedMenuPresenter:Landroidx/appcompat/widget/Toolbar$ExpandedActionViewMenuPresenter;
 
     invoke-virtual {p1, v0}, Landroidx/appcompat/widget/Toolbar$ExpandedActionViewMenuPresenter;->updateMenuView(Z)V
 
-    .line 606
+    .line 584
     :goto_0
     iget-object p1, p0, Landroidx/appcompat/widget/Toolbar;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
 
@@ -5698,12 +5513,12 @@
 
     invoke-virtual {p1, v0}, Landroidx/appcompat/widget/ActionMenuView;->setPopupTheme(I)V
 
-    .line 607
+    .line 585
     iget-object p1, p0, Landroidx/appcompat/widget/Toolbar;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
 
     invoke-virtual {p1, p2}, Landroidx/appcompat/widget/ActionMenuView;->setPresenter(Landroidx/appcompat/widget/ActionMenuPresenter;)V
 
-    .line 608
+    .line 586
     iput-object p2, p0, Landroidx/appcompat/widget/Toolbar;->mOuterActionMenuPresenter:Landroidx/appcompat/widget/ActionMenuPresenter;
 
     return-void
@@ -5712,18 +5527,18 @@
 .method public setMenuCallbacks(Landroidx/appcompat/view/menu/MenuPresenter$Callback;Landroidx/appcompat/view/menu/MenuBuilder$Callback;)V
     .locals 1
 
-    .line 2325
+    .line 2280
     iput-object p1, p0, Landroidx/appcompat/widget/Toolbar;->mActionMenuPresenterCallback:Landroidx/appcompat/view/menu/MenuPresenter$Callback;
 
-    .line 2326
+    .line 2281
     iput-object p2, p0, Landroidx/appcompat/widget/Toolbar;->mMenuBuilderCallback:Landroidx/appcompat/view/menu/MenuBuilder$Callback;
 
-    .line 2327
+    .line 2282
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
 
     if-eqz v0, :cond_0
 
-    .line 2328
+    .line 2283
     invoke-virtual {v0, p1, p2}, Landroidx/appcompat/widget/ActionMenuView;->setMenuCallbacks(Landroidx/appcompat/view/menu/MenuPresenter$Callback;Landroidx/appcompat/view/menu/MenuBuilder$Callback;)V
 
     :cond_0
@@ -5735,7 +5550,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 956
+    .line 929
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -5758,29 +5573,24 @@
 .method public setNavigationContentDescription(Ljava/lang/CharSequence;)V
     .locals 1
 
-    .line 970
+    .line 943
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 971
+    .line 944
     invoke-direct {p0}, Landroidx/appcompat/widget/Toolbar;->ensureNavButtonView()V
 
-    .line 973
+    .line 946
     :cond_0
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mNavButtonView:Landroid/widget/ImageButton;
 
     if-eqz v0, :cond_1
 
-    .line 974
+    .line 947
     invoke-virtual {v0, p1}, Landroid/widget/ImageButton;->setContentDescription(Ljava/lang/CharSequence;)V
-
-    .line 975
-    iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mNavButtonView:Landroid/widget/ImageButton;
-
-    invoke-static {v0, p1}, Landroidx/appcompat/widget/TooltipCompat;->setTooltipText(Landroid/view/View;Ljava/lang/CharSequence;)V
 
     :cond_1
     return-void
@@ -5789,7 +5599,7 @@
 .method public setNavigationIcon(I)V
     .locals 1
 
-    .line 994
+    .line 966
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -5808,10 +5618,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 1013
+    .line 985
     invoke-direct {p0}, Landroidx/appcompat/widget/Toolbar;->ensureNavButtonView()V
 
-    .line 1014
+    .line 986
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mNavButtonView:Landroid/widget/ImageButton;
 
     invoke-direct {p0, v0}, Landroidx/appcompat/widget/Toolbar;->isChildOrHidden(Landroid/view/View;)Z
@@ -5820,7 +5630,7 @@
 
     if-nez v0, :cond_1
 
-    .line 1015
+    .line 987
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mNavButtonView:Landroid/widget/ImageButton;
 
     const/4 v1, 0x1
@@ -5829,7 +5639,7 @@
 
     goto :goto_0
 
-    .line 1017
+    .line 989
     :cond_0
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mNavButtonView:Landroid/widget/ImageButton;
 
@@ -5841,26 +5651,26 @@
 
     if-eqz v0, :cond_1
 
-    .line 1018
+    .line 990
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mNavButtonView:Landroid/widget/ImageButton;
 
     invoke-virtual {p0, v0}, Landroidx/appcompat/widget/Toolbar;->removeView(Landroid/view/View;)V
 
-    .line 1019
+    .line 991
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mHiddenViews:Ljava/util/ArrayList;
 
     iget-object v1, p0, Landroidx/appcompat/widget/Toolbar;->mNavButtonView:Landroid/widget/ImageButton;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 1021
+    .line 993
     :cond_1
     :goto_0
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mNavButtonView:Landroid/widget/ImageButton;
 
     if-eqz v0, :cond_2
 
-    .line 1022
+    .line 994
     invoke-virtual {v0, p1}, Landroid/widget/ImageButton;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     :cond_2
@@ -5870,10 +5680,10 @@
 .method public setNavigationOnClickListener(Landroid/view/View$OnClickListener;)V
     .locals 1
 
-    .line 1049
+    .line 1020
     invoke-direct {p0}, Landroidx/appcompat/widget/Toolbar;->ensureNavButtonView()V
 
-    .line 1050
+    .line 1021
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mNavButtonView:Landroid/widget/ImageButton;
 
     invoke-virtual {v0, p1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
@@ -5884,7 +5694,7 @@
 .method public setOnMenuItemClickListener(Landroidx/appcompat/widget/Toolbar$OnMenuItemClickListener;)V
     .locals 0
 
-    .line 1235
+    .line 1203
     iput-object p1, p0, Landroidx/appcompat/widget/Toolbar;->mOnMenuItemClickListener:Landroidx/appcompat/widget/Toolbar$OnMenuItemClickListener;
 
     return-void
@@ -5893,10 +5703,10 @@
 .method public setOverflowIcon(Landroid/graphics/drawable/Drawable;)V
     .locals 1
 
-    .line 1168
+    .line 1136
     invoke-direct {p0}, Landroidx/appcompat/widget/Toolbar;->ensureMenu()V
 
-    .line 1169
+    .line 1137
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
 
     invoke-virtual {v0, p1}, Landroidx/appcompat/widget/ActionMenuView;->setOverflowIcon(Landroid/graphics/drawable/Drawable;)V
@@ -5907,17 +5717,17 @@
 .method public setPopupTheme(I)V
     .locals 2
 
-    .line 377
+    .line 361
     iget v0, p0, Landroidx/appcompat/widget/Toolbar;->mPopupTheme:I
 
     if-eq v0, p1, :cond_1
 
-    .line 378
+    .line 362
     iput p1, p0, Landroidx/appcompat/widget/Toolbar;->mPopupTheme:I
 
     if-nez p1, :cond_0
 
-    .line 380
+    .line 364
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -5926,7 +5736,7 @@
 
     goto :goto_0
 
-    .line 382
+    .line 366
     :cond_0
     new-instance v0, Landroid/view/ContextThemeWrapper;
 
@@ -5946,7 +5756,7 @@
 .method public setSubtitle(I)V
     .locals 1
 
-    .line 829
+    .line 803
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -5963,64 +5773,64 @@
 .method public setSubtitle(Ljava/lang/CharSequence;)V
     .locals 3
 
-    .line 840
+    .line 814
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    .line 841
+    .line 815
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mSubtitleTextView:Landroid/widget/TextView;
 
     if-nez v0, :cond_1
 
-    .line 842
+    .line 816
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 843
+    .line 817
     new-instance v1, Landroidx/appcompat/widget/AppCompatTextView;
 
     invoke-direct {v1, v0}, Landroidx/appcompat/widget/AppCompatTextView;-><init>(Landroid/content/Context;)V
 
     iput-object v1, p0, Landroidx/appcompat/widget/Toolbar;->mSubtitleTextView:Landroid/widget/TextView;
 
-    .line 844
+    .line 818
     iget-object v1, p0, Landroidx/appcompat/widget/Toolbar;->mSubtitleTextView:Landroid/widget/TextView;
 
     invoke-virtual {v1}, Landroid/widget/TextView;->setSingleLine()V
 
-    .line 845
+    .line 819
     iget-object v1, p0, Landroidx/appcompat/widget/Toolbar;->mSubtitleTextView:Landroid/widget/TextView;
 
     sget-object v2, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
-    .line 846
+    .line 820
     iget v1, p0, Landroidx/appcompat/widget/Toolbar;->mSubtitleTextAppearance:I
 
     if-eqz v1, :cond_0
 
-    .line 847
+    .line 821
     iget-object v2, p0, Landroidx/appcompat/widget/Toolbar;->mSubtitleTextView:Landroid/widget/TextView;
 
     invoke-virtual {v2, v0, v1}, Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;I)V
 
-    .line 849
+    .line 823
     :cond_0
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mSubtitleTextColor:Landroid/content/res/ColorStateList;
 
     if-eqz v0, :cond_1
 
-    .line 850
+    .line 824
     iget-object v1, p0, Landroidx/appcompat/widget/Toolbar;->mSubtitleTextView:Landroid/widget/TextView;
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTextColor(Landroid/content/res/ColorStateList;)V
 
-    .line 853
+    .line 827
     :cond_1
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mSubtitleTextView:Landroid/widget/TextView;
 
@@ -6030,7 +5840,7 @@
 
     if-nez v0, :cond_3
 
-    .line 854
+    .line 828
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mSubtitleTextView:Landroid/widget/TextView;
 
     const/4 v1, 0x1
@@ -6039,7 +5849,7 @@
 
     goto :goto_0
 
-    .line 856
+    .line 830
     :cond_2
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mSubtitleTextView:Landroid/widget/TextView;
 
@@ -6051,29 +5861,29 @@
 
     if-eqz v0, :cond_3
 
-    .line 857
+    .line 831
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mSubtitleTextView:Landroid/widget/TextView;
 
     invoke-virtual {p0, v0}, Landroidx/appcompat/widget/Toolbar;->removeView(Landroid/view/View;)V
 
-    .line 858
+    .line 832
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mHiddenViews:Ljava/util/ArrayList;
 
     iget-object v1, p0, Landroidx/appcompat/widget/Toolbar;->mSubtitleTextView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 860
+    .line 834
     :cond_3
     :goto_0
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mSubtitleTextView:Landroid/widget/TextView;
 
     if-eqz v0, :cond_4
 
-    .line 861
+    .line 835
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 863
+    .line 837
     :cond_4
     iput-object p1, p0, Landroidx/appcompat/widget/Toolbar;->mSubtitleText:Ljava/lang/CharSequence;
 
@@ -6083,15 +5893,15 @@
 .method public setSubtitleTextAppearance(Landroid/content/Context;I)V
     .locals 1
 
-    .line 882
+    .line 856
     iput p2, p0, Landroidx/appcompat/widget/Toolbar;->mSubtitleTextAppearance:I
 
-    .line 883
+    .line 857
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mSubtitleTextView:Landroid/widget/TextView;
 
     if-eqz v0, :cond_0
 
-    .line 884
+    .line 858
     invoke-virtual {v0, p1, p2}, Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;I)V
 
     :cond_0
@@ -6101,7 +5911,7 @@
 .method public setSubtitleTextColor(I)V
     .locals 0
 
-    .line 915
+    .line 889
     invoke-static {p1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
 
     move-result-object p1
@@ -6114,15 +5924,15 @@
 .method public setSubtitleTextColor(Landroid/content/res/ColorStateList;)V
     .locals 1
 
-    .line 924
+    .line 898
     iput-object p1, p0, Landroidx/appcompat/widget/Toolbar;->mSubtitleTextColor:Landroid/content/res/ColorStateList;
 
-    .line 925
+    .line 899
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mSubtitleTextView:Landroid/widget/TextView;
 
     if-eqz v0, :cond_0
 
-    .line 926
+    .line 900
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(Landroid/content/res/ColorStateList;)V
 
     :cond_0
@@ -6132,7 +5942,7 @@
 .method public setTitle(I)V
     .locals 1
 
-    .line 773
+    .line 748
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -6149,64 +5959,64 @@
 .method public setTitle(Ljava/lang/CharSequence;)V
     .locals 3
 
-    .line 785
+    .line 760
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    .line 786
+    .line 761
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mTitleTextView:Landroid/widget/TextView;
 
     if-nez v0, :cond_1
 
-    .line 787
+    .line 762
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 788
+    .line 763
     new-instance v1, Landroidx/appcompat/widget/AppCompatTextView;
 
     invoke-direct {v1, v0}, Landroidx/appcompat/widget/AppCompatTextView;-><init>(Landroid/content/Context;)V
 
     iput-object v1, p0, Landroidx/appcompat/widget/Toolbar;->mTitleTextView:Landroid/widget/TextView;
 
-    .line 789
+    .line 764
     iget-object v1, p0, Landroidx/appcompat/widget/Toolbar;->mTitleTextView:Landroid/widget/TextView;
 
     invoke-virtual {v1}, Landroid/widget/TextView;->setSingleLine()V
 
-    .line 790
+    .line 765
     iget-object v1, p0, Landroidx/appcompat/widget/Toolbar;->mTitleTextView:Landroid/widget/TextView;
 
     sget-object v2, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
-    .line 791
+    .line 766
     iget v1, p0, Landroidx/appcompat/widget/Toolbar;->mTitleTextAppearance:I
 
     if-eqz v1, :cond_0
 
-    .line 792
+    .line 767
     iget-object v2, p0, Landroidx/appcompat/widget/Toolbar;->mTitleTextView:Landroid/widget/TextView;
 
     invoke-virtual {v2, v0, v1}, Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;I)V
 
-    .line 794
+    .line 769
     :cond_0
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mTitleTextColor:Landroid/content/res/ColorStateList;
 
     if-eqz v0, :cond_1
 
-    .line 795
+    .line 770
     iget-object v1, p0, Landroidx/appcompat/widget/Toolbar;->mTitleTextView:Landroid/widget/TextView;
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTextColor(Landroid/content/res/ColorStateList;)V
 
-    .line 798
+    .line 773
     :cond_1
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mTitleTextView:Landroid/widget/TextView;
 
@@ -6216,7 +6026,7 @@
 
     if-nez v0, :cond_3
 
-    .line 799
+    .line 774
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mTitleTextView:Landroid/widget/TextView;
 
     const/4 v1, 0x1
@@ -6225,7 +6035,7 @@
 
     goto :goto_0
 
-    .line 801
+    .line 776
     :cond_2
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mTitleTextView:Landroid/widget/TextView;
 
@@ -6237,29 +6047,29 @@
 
     if-eqz v0, :cond_3
 
-    .line 802
+    .line 777
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mTitleTextView:Landroid/widget/TextView;
 
     invoke-virtual {p0, v0}, Landroidx/appcompat/widget/Toolbar;->removeView(Landroid/view/View;)V
 
-    .line 803
+    .line 778
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mHiddenViews:Ljava/util/ArrayList;
 
     iget-object v1, p0, Landroidx/appcompat/widget/Toolbar;->mTitleTextView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 805
+    .line 780
     :cond_3
     :goto_0
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mTitleTextView:Landroid/widget/TextView;
 
     if-eqz v0, :cond_4
 
-    .line 806
+    .line 781
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 808
+    .line 783
     :cond_4
     iput-object p1, p0, Landroidx/appcompat/widget/Toolbar;->mTitleText:Ljava/lang/CharSequence;
 
@@ -6269,10 +6079,10 @@
 .method public setTitleMarginBottom(I)V
     .locals 0
 
-    .line 507
+    .line 485
     iput p1, p0, Landroidx/appcompat/widget/Toolbar;->mTitleMarginBottom:I
 
-    .line 508
+    .line 486
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->requestLayout()V
 
     return-void
@@ -6281,10 +6091,10 @@
 .method public setTitleMarginEnd(I)V
     .locals 0
 
-    .line 484
+    .line 463
     iput p1, p0, Landroidx/appcompat/widget/Toolbar;->mTitleMarginEnd:I
 
-    .line 486
+    .line 465
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->requestLayout()V
 
     return-void
@@ -6293,10 +6103,10 @@
 .method public setTitleMarginStart(I)V
     .locals 0
 
-    .line 438
+    .line 419
     iput p1, p0, Landroidx/appcompat/widget/Toolbar;->mTitleMarginStart:I
 
-    .line 440
+    .line 421
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->requestLayout()V
 
     return-void
@@ -6305,10 +6115,10 @@
 .method public setTitleMarginTop(I)V
     .locals 0
 
-    .line 461
+    .line 441
     iput p1, p0, Landroidx/appcompat/widget/Toolbar;->mTitleMarginTop:I
 
-    .line 463
+    .line 443
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->requestLayout()V
 
     return-void
@@ -6317,15 +6127,15 @@
 .method public setTitleTextAppearance(Landroid/content/Context;I)V
     .locals 1
 
-    .line 871
+    .line 845
     iput p2, p0, Landroidx/appcompat/widget/Toolbar;->mTitleTextAppearance:I
 
-    .line 872
+    .line 846
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mTitleTextView:Landroid/widget/TextView;
 
     if-eqz v0, :cond_0
 
-    .line 873
+    .line 847
     invoke-virtual {v0, p1, p2}, Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;I)V
 
     :cond_0
@@ -6335,7 +6145,7 @@
 .method public setTitleTextColor(I)V
     .locals 0
 
-    .line 894
+    .line 868
     invoke-static {p1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
 
     move-result-object p1
@@ -6348,15 +6158,15 @@
 .method public setTitleTextColor(Landroid/content/res/ColorStateList;)V
     .locals 1
 
-    .line 903
+    .line 877
     iput-object p1, p0, Landroidx/appcompat/widget/Toolbar;->mTitleTextColor:Landroid/content/res/ColorStateList;
 
-    .line 904
+    .line 878
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mTitleTextView:Landroid/widget/TextView;
 
     if-eqz v0, :cond_0
 
-    .line 905
+    .line 879
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(Landroid/content/res/ColorStateList;)V
 
     :cond_0
@@ -6366,7 +6176,7 @@
 .method public showOverflowMenu()Z
     .locals 1
 
-    .line 562
+    .line 540
     iget-object v0, p0, Landroidx/appcompat/widget/Toolbar;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
 
     if-eqz v0, :cond_0

@@ -1,14 +1,11 @@
 .class Lcom/miui/home/launcher/Launcher$76;
-.super Ljava/lang/Object;
+.super Lcom/miui/home/launcher/common/ResultRunnable;
 .source "Launcher.java"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/Launcher;->checkDuplicateIconWhenRecommendAdded(Lcom/miui/home/launcher/ShortcutInfo;)Z
+    value = Lcom/miui/home/launcher/Launcher;->getAllLoadedShortcut()Ljava/util/ArrayList;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -16,23 +13,28 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/miui/home/launcher/common/ResultRunnable<",
+        "Ljava/util/ArrayList<",
+        "Lcom/miui/home/launcher/ShortcutInfo;",
+        ">;>;"
+    }
+.end annotation
+
 
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/launcher/Launcher;
 
-.field final synthetic val$existItem:Lcom/miui/home/launcher/ShortcutInfo;
-
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/ShortcutInfo;)V
+.method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 8383
+    .line 7852
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$76;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    iput-object p2, p0, Lcom/miui/home/launcher/Launcher$76;->val$existItem:Lcom/miui/home/launcher/ShortcutInfo;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/miui/home/launcher/common/ResultRunnable;-><init>()V
 
     return-void
 .end method
@@ -42,12 +44,18 @@
 .method public run()V
     .locals 2
 
-    .line 8385
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$76;->this$0:Lcom/miui/home/launcher/Launcher;
+    .line 7855
+    new-instance v0, Ljava/util/ArrayList;
 
-    iget-object v1, p0, Lcom/miui/home/launcher/Launcher$76;->val$existItem:Lcom/miui/home/launcher/ShortcutInfo;
+    iget-object v1, p0, Lcom/miui/home/launcher/Launcher$76;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$9100(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/ShortcutInfo;)Z
+    invoke-static {v1}, Lcom/miui/home/launcher/Launcher;->access$3800(Lcom/miui/home/launcher/Launcher;)Ljava/util/HashSet;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Launcher$76;->setResult(Ljava/lang/Object;)V
 
     return-void
 .end method

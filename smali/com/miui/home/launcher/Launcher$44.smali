@@ -1,11 +1,14 @@
 .class Lcom/miui/home/launcher/Launcher$44;
-.super Landroid/os/AsyncTask;
+.super Ljava/lang/Object;
 .source "Launcher.java"
+
+# interfaces
+.implements Ljava/util/function/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/Launcher;->getLockWallpaperListFromProvider(Ljava/lang/String;Ljava/lang/String;J)Ljava/lang/String;
+    value = Lcom/miui/home/launcher/Launcher;->reloadClockIfNeed(Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,10 +18,9 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Landroid/os/AsyncTask<",
-        "Ljava/lang/Void;",
-        "Ljava/lang/Void;",
-        "Ljava/lang/String;",
+        "Ljava/lang/Object;",
+        "Ljava/util/function/Consumer<",
+        "Ljava/lang/Boolean;",
         ">;"
     }
 .end annotation
@@ -27,55 +29,56 @@
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/launcher/Launcher;
 
-.field final synthetic val$providerUri:Ljava/lang/String;
-
-.field final synthetic val$requestJson:Ljava/lang/String;
-
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/Launcher;Ljava/lang/String;Ljava/lang/String;)V
+.method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 4391
+    .line 4130
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$44;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    iput-object p2, p0, Lcom/miui/home/launcher/Launcher$44;->val$providerUri:Ljava/lang/String;
-
-    iput-object p3, p0, Lcom/miui/home/launcher/Launcher$44;->val$requestJson:Ljava/lang/String;
-
-    invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public accept(Ljava/lang/Boolean;)V
+    .locals 1
 
-    .line 4391
-    check-cast p1, [Ljava/lang/Void;
+    .line 4133
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Launcher$44;->doInBackground([Ljava/lang/Void;)Ljava/lang/String;
+    move-result p1
 
-    move-result-object p1
+    if-eqz p1, :cond_0
 
-    return-object p1
-.end method
-
-.method protected varargs doInBackground([Ljava/lang/Void;)Ljava/lang/String;
-    .locals 2
-
-    .line 4394
+    .line 4134
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$44;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$44;->val$providerUri:Ljava/lang/String;
+    const/4 v0, 0x6
 
-    iget-object v1, p0, Lcom/miui/home/launcher/Launcher$44;->val$requestJson:Ljava/lang/String;
+    invoke-virtual {p1, v0}, Lcom/miui/home/launcher/Launcher;->reloadGadget(I)V
 
-    invoke-static {p1, v0, v1}, Lcom/miui/home/launcher/Launcher;->access$5700(Lcom/miui/home/launcher/Launcher;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .line 4135
+    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$44;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    move-result-object p1
+    const/16 v0, 0x8
 
-    return-object p1
+    invoke-virtual {p1, v0}, Lcom/miui/home/launcher/Launcher;->reloadGadget(I)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public bridge synthetic accept(Ljava/lang/Object;)V
+    .locals 0
+
+    .line 4130
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Launcher$44;->accept(Ljava/lang/Boolean;)V
+
+    return-void
 .end method

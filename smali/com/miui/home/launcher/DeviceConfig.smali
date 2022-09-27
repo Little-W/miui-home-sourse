@@ -6,9 +6,13 @@
 # static fields
 .field public static final BUILD_REGION:Ljava/lang/String;
 
-.field public static final CURRENT_REGION:Ljava/lang/String;
+.field public static final CAN_SWITCH_MINUS_SCREEN:Z
 
-.field public static final DEVICE:Lcom/miui/home/launcher/DeviceType;
+.field public static final CLIENT_ID_BASE:Ljava/lang/String;
+
+.field private static final CURRENT_REGION:Ljava/lang/String;
+
+.field public static final HIDE_USER_PRESENT_ANIMATION:Z
 
 .field public static final INSTANCE:Lcom/miui/home/launcher/util/MainThreadInitializedObject;
     .annotation system Ldalvik/annotation/Signature;
@@ -24,11 +28,7 @@
 
 .field public static final IS_AMX_BUILD:Z
 
-.field public static final IS_BUILD_CETUS:Z
-
 .field public static final IS_FK_BUILD:Z
-
-.field public static final IS_FOLD_DEVICE:Z
 
 .field public static final IS_KDDI_BUILD:Z
 
@@ -42,11 +42,11 @@
 
 .field public static final IS_SB_BUILD:Z
 
-.field public static final IS_SUPPORT_MAGIC_WINDOW:Z
-
 .field public static final IS_SURRPORT_FORCE_TOUCH:Z
 
-.field public static final SELECT_MINUS_SCREEN_CLIENT_ID:Ljava/util/HashSet;
+.field public static final ONLY_USE_GOOGLE_MINUS_SCREEN:Z
+
+.field private static final SELECT_MINUS_SCREEN_CLIENT_ID:Ljava/util/HashSet;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/HashSet<",
@@ -60,7 +60,7 @@
 
 .field public static TEMP_SHARE_MODE_FOR_WORLD_WRITEABLE:I
 
-.field public static final USE_GOOGLE_MINUS_SCREEN_CLIENT_ID:Ljava/util/HashSet;
+.field private static final USE_GOOGLE_MINUS_SCREEN_CLIENT_ID:Ljava/util/HashSet;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/HashSet<",
@@ -70,7 +70,7 @@
     .end annotation
 .end field
 
-.field public static final USE_GOOGLE_MINUS_SCREEN_REGIONS:Ljava/util/HashSet;
+.field private static final USE_GOOGLE_MINUS_SCREEN_REGIONS:Ljava/util/HashSet;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/HashSet<",
@@ -103,8 +103,6 @@
 .field private static sCellCountX:I
 
 .field private static sCellCountXDef:I
-
-.field private static sCellCountXDrawerMode:I
 
 .field private static sCellCountXMax:I
 
@@ -217,8 +215,6 @@
 
 .field private static sIsShowNotification:Z
 
-.field public static sIsSupportLaunchPairApp:Z
-
 .field private static sIsSupportMultiWindowMode:Z
 
 .field private static sIsSupportSearchBar:Z
@@ -233,8 +229,6 @@
 
 .field private static sMiuiWidgetPaddingTop:I
 
-.field private static final sMiuiWidgetSizeSpec:Lcom/miui/home/launcher/widget/MiuiWidgetSizeSpec;
-
 .field private static sMultiWindowModeLauncherHeight:I
 
 .field private static sNeedRecalculateWidgetSpan:Z
@@ -247,15 +241,13 @@
 
 .field public static sQuickEditScreenRatio:F
 
-.field private static sRecommendAppsCount:I
-
 .field public static sRecommendBannerHeight:I
 
 .field public static sRecommendBannerWidth:I
 
 .field public static sRecommendLoadingTitle:Ljava/lang/String;
 
-.field public static sRotatable:Z
+.field private static sRotatable:Z
 
 .field private static sRotation:I
 
@@ -370,8 +362,6 @@
 
 .field private static sWorkspaceIndicatorMarginBottomInEditMode:I
 
-.field private static sWorkspaceIndicatorThumbnailHeight:I
-
 .field private static sWorkspaceInvalidateEdgeWidth:I
 
 
@@ -385,7 +375,7 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .line 93
+    .line 92
     new-instance v0, Lcom/miui/home/launcher/util/MainThreadInitializedObject;
 
     sget-object v1, Lcom/miui/home/launcher/-$$Lambda$DeviceConfig$xd45_OqI55HUF6eZBq1EnywKyL0;->INSTANCE:Lcom/miui/home/launcher/-$$Lambda$DeviceConfig$xd45_OqI55HUF6eZBq1EnywKyL0;
@@ -394,64 +384,71 @@
 
     sput-object v0, Lcom/miui/home/launcher/DeviceConfig;->INSTANCE:Lcom/miui/home/launcher/util/MainThreadInitializedObject;
 
+    .line 99
+    invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isPadDevice()Z
+
+    move-result v0
+
+    sput-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sRotatable:Z
+
     const/4 v0, -0x1
 
-    .line 102
+    .line 101
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sScreenSmallestWidth:I
 
     const/4 v1, 0x0
 
-    .line 103
+    .line 102
     sput-boolean v1, Lcom/miui/home/launcher/DeviceConfig;->sIs720Mode:Z
 
     const/high16 v2, -0x40800000    # -1.0f
 
-    .line 104
+    .line 103
     sput v2, Lcom/miui/home/launcher/DeviceConfig;->sScreenDensity:F
 
-    .line 105
+    .line 104
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sScreenDensityDpi:I
 
-    .line 106
+    .line 105
     sput-boolean v1, Lcom/miui/home/launcher/DeviceConfig;->sScreenOrientationChanged:Z
 
-    .line 107
+    .line 106
     sput-boolean v1, Lcom/miui/home/launcher/DeviceConfig;->sIsLayoutRtl:Z
 
-    .line 108
+    .line 107
     sput-boolean v1, Lcom/miui/home/launcher/DeviceConfig;->sScreenSizeChanged:Z
 
-    .line 109
+    .line 108
     sput-boolean v1, Lcom/miui/home/launcher/DeviceConfig;->sIsSearchBarChanged:Z
 
-    .line 110
+    .line 109
     sput-boolean v1, Lcom/miui/home/launcher/DeviceConfig;->sScreenCellsChangedTemporary:Z
 
-    .line 111
+    .line 110
     sput-boolean v1, Lcom/miui/home/launcher/DeviceConfig;->sNeedRecalculateWidgetSpan:Z
 
-    .line 112
+    .line 111
     sput-boolean v1, Lcom/miui/home/launcher/DeviceConfig;->sNeedShowMisplacedTips:Z
 
-    .line 113
+    .line 112
     sput-boolean v1, Lcom/miui/home/launcher/DeviceConfig;->sThemeChanged:Z
 
-    .line 114
+    .line 113
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sCellXMigratedFrom:I
 
-    .line 115
+    .line 114
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sCellYMigratedFrom:I
 
-    .line 127
+    .line 126
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sStatusBarHeight:I
 
-    .line 128
+    .line 127
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sSearchBarWidth:I
 
-    .line 129
+    .line 128
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sSearchBarWidthDelta:I
 
-    .line 130
+    .line 129
     new-instance v2, Lcom/miui/home/launcher/common/ChangeableValue;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -462,7 +459,7 @@
 
     sput-object v2, Lcom/miui/home/launcher/DeviceConfig;->sSearchBarMarginBottom:Lcom/miui/home/launcher/common/ChangeableValue;
 
-    .line 131
+    .line 130
     new-instance v2, Lcom/miui/home/launcher/common/ChangeableValue;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -473,7 +470,7 @@
 
     sput-object v2, Lcom/miui/home/launcher/DeviceConfig;->sHotSeatsMarginBottom:Lcom/miui/home/launcher/common/ChangeableValue;
 
-    .line 132
+    .line 131
     new-instance v2, Lcom/miui/home/launcher/common/ChangeableValue;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -484,7 +481,7 @@
 
     sput-object v2, Lcom/miui/home/launcher/DeviceConfig;->sHotSeatsMarginTop:Lcom/miui/home/launcher/common/ChangeableValue;
 
-    .line 133
+    .line 132
     new-instance v2, Lcom/miui/home/launcher/common/ChangeableValue;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -495,19 +492,19 @@
 
     sput-object v2, Lcom/miui/home/launcher/DeviceConfig;->sHotSeatsHeight:Lcom/miui/home/launcher/common/ChangeableValue;
 
-    .line 134
+    .line 133
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sWorkspaceCellPaddingSide:I
 
-    .line 135
+    .line 134
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sWorkspaceCellPaddingTop:I
 
-    .line 136
+    .line 135
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sWorkspaceCellPaddingTopNotch:I
 
-    .line 137
+    .line 136
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sWorkspaceCellPaddingTopMultiWindow:I
 
-    .line 138
+    .line 137
     new-instance v2, Lcom/miui/home/launcher/common/ChangeableValue;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -518,114 +515,98 @@
 
     sput-object v2, Lcom/miui/home/launcher/DeviceConfig;->sWorkspaceCellPaddingBottom:Lcom/miui/home/launcher/common/ChangeableValue;
 
-    .line 139
+    .line 138
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sWorkspaceIndicatorMarginBottom:I
 
-    .line 140
+    .line 139
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sWorkspaceIndicatorMarginBottomInEditMode:I
 
-    .line 141
-    sput v0, Lcom/miui/home/launcher/DeviceConfig;->sWorkspaceIndicatorThumbnailHeight:I
-
-    .line 142
+    .line 140
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sFolderRecommendGridPaddingBottom:I
 
-    .line 144
+    .line 142
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sMiuiWidgetPaddingTop:I
 
-    .line 145
-    invoke-static {}, Lcom/miui/home/launcher/widget/MiuiWidgetSizeSpecFactory;->getWidgetSpec()Lcom/miui/home/launcher/widget/MiuiWidgetSizeSpec;
-
-    move-result-object v2
-
-    sput-object v2, Lcom/miui/home/launcher/DeviceConfig;->sMiuiWidgetSizeSpec:Lcom/miui/home/launcher/widget/MiuiWidgetSizeSpec;
-
-    .line 147
+    .line 144
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sIconWidth:I
 
-    .line 148
+    .line 145
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sApplicationIconContainerWidth:I
 
-    .line 149
+    .line 146
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sHotseatIconContainerWidth:I
 
-    .line 150
+    .line 147
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sNotchEditModePaddingTopDelta:I
 
-    .line 151
+    .line 148
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sIconHeight:I
 
-    .line 152
+    .line 149
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sApplicationIconContainerHeight:I
 
-    .line 153
-    sput v0, Lcom/miui/home/launcher/DeviceConfig;->sCellCountXDrawerMode:I
-
-    .line 154
-    sput v0, Lcom/miui/home/launcher/DeviceConfig;->sRecommendAppsCount:I
-
-    .line 155
+    .line 150
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sCellCountX:I
 
-    .line 156
+    .line 151
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sCellCountY:I
 
-    .line 157
+    .line 152
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sCellCountXDef:I
 
-    .line 158
+    .line 153
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sCellCountXMin:I
 
-    .line 159
+    .line 154
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sCellCountXMax:I
 
-    .line 160
+    .line 155
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sCellCountYDef:I
 
-    .line 161
+    .line 156
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sCellCountYMin:I
 
-    .line 162
+    .line 157
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sCellCountYMax:I
 
-    .line 163
+    .line 158
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sAllAppsCellHeight:I
 
-    .line 164
+    .line 159
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sAllAppsDividerTop:I
 
-    .line 165
+    .line 160
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sAllAppsDividerBottom:I
 
-    .line 166
+    .line 161
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sFolderCellHeight:I
 
-    .line 168
+    .line 163
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sCellVerticalSpacing:I
 
-    .line 169
+    .line 164
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sCellHorizontalSpacing:I
 
-    .line 170
+    .line 165
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sQuickCallCellVerticalSpacing:I
 
-    .line 171
+    .line 166
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sFolderWorkingHeight:I
 
-    .line 172
+    .line 167
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sHotseatMaxCount:I
 
-    .line 189
+    .line 184
     sput-boolean v1, Lcom/miui/home/launcher/DeviceConfig;->sIsInSnapShotMode:Z
 
     const/4 v0, 0x0
 
-    .line 194
+    .line 187
     sput-object v0, Lcom/miui/home/launcher/DeviceConfig;->sLastConfiguration:Landroid/content/res/Configuration;
 
     const-string v0, "support_force_touch"
 
-    .line 197
+    .line 190
     invoke-static {v0, v1}, Lcom/miui/launcher/utils/MiuiSettingsUtils;->getBooleanFromFeatureParse(Ljava/lang/String;Z)Z
 
     move-result v0
@@ -634,68 +615,68 @@
 
     const/4 v0, 0x1
 
-    .line 202
+    .line 195
     sput-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sIsShowNotification:Z
 
-    .line 203
+    .line 196
     sput-boolean v1, Lcom/miui/home/launcher/DeviceConfig;->sIsAppStoreEnabled:Z
 
-    .line 204
+    .line 197
     sput-boolean v1, Lcom/miui/home/launcher/DeviceConfig;->sHasNavigationBar:Z
 
-    .line 205
+    .line 198
     sput-boolean v1, Lcom/miui/home/launcher/DeviceConfig;->sIsGestureEnable:Z
 
-    .line 206
+    .line 199
     sput-boolean v1, Lcom/miui/home/launcher/DeviceConfig;->sIsShowGestureLine:Z
 
-    .line 207
+    .line 200
     sput-boolean v1, Lcom/miui/home/launcher/DeviceConfig;->sIsImmersiveNavigationBar:Z
 
-    .line 208
+    .line 201
     sput-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sIsHotseatsAppTitleHided:Z
 
-    .line 209
+    .line 202
     sput-boolean v1, Lcom/miui/home/launcher/DeviceConfig;->sIsNetWorkConnected:Z
 
-    .line 211
+    .line 204
     sput-boolean v1, Lcom/miui/home/launcher/DeviceConfig;->sIsAccessibilityEnabled:Z
 
-    .line 213
+    .line 206
     sput-boolean v1, Lcom/miui/home/launcher/DeviceConfig;->sIsTetheringSupported:Z
 
-    .line 215
+    .line 208
     sput-boolean v1, Lcom/miui/home/launcher/DeviceConfig;->sIsDarkMode:Z
 
-    .line 216
+    .line 209
     sput v1, Lcom/miui/home/launcher/DeviceConfig;->sLastRotation:I
 
-    .line 218
+    .line 211
     sput v1, Lcom/miui/home/launcher/DeviceConfig;->sRotation:I
 
-    .line 219
+    .line 212
     sput v1, Lcom/miui/home/launcher/DeviceConfig;->sRotationBeforeStart:I
 
     const v2, 0x3dcccccd    # 0.1f
 
-    .line 221
+    .line 214
     sput v2, Lcom/miui/home/launcher/DeviceConfig;->sSearchBarLightThreshold:F
 
-    .line 223
+    .line 216
     sput-boolean v1, Lcom/miui/home/launcher/DeviceConfig;->sSupportSmallWindow:Z
 
     const-string v2, "ro.hardware"
 
-    const-string/jumbo v3, "unknown"
+    const-string v3, "unknown"
 
-    .line 224
+    .line 217
     invoke-static {v2, v3}, Lcom/miui/launcher/utils/MiuiSettingsUtils;->getStringFromSystemProperites(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
     sput-object v2, Lcom/miui/home/launcher/DeviceConfig;->VENDOR_NAME:Ljava/lang/String;
 
-    .line 225
+    .line 218
     sget-object v2, Lcom/miui/home/launcher/DeviceConfig;->VENDOR_NAME:Ljava/lang/String;
 
     const-string v3, "mt"
@@ -710,7 +691,7 @@
 
     const-string v3, ""
 
-    .line 228
+    .line 221
     invoke-static {v2, v3}, Lcom/miui/launcher/utils/MiuiSettingsUtils;->getStringFromSystemProperites(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
@@ -721,33 +702,92 @@
 
     const-string v3, ""
 
-    .line 234
+    .line 227
     invoke-static {v2, v3}, Lcom/miui/launcher/utils/MiuiSettingsUtils;->getStringFromSystemProperites(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
     sput-object v2, Lcom/miui/home/launcher/DeviceConfig;->BUILD_REGION:Ljava/lang/String;
 
-    .line 236
+    const-string v2, "ro.com.miui.rsa"
+
+    const-string v3, ""
+
+    .line 230
+    invoke-static {v2, v3}, Lcom/miui/launcher/utils/MiuiSettingsUtils;->getStringFromSystemProperites(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    sput-object v2, Lcom/miui/home/launcher/DeviceConfig;->CLIENT_ID_BASE:Ljava/lang/String;
+
+    .line 232
     new-instance v2, Lcom/miui/home/launcher/DeviceConfig$1;
 
     invoke-direct {v2}, Lcom/miui/home/launcher/DeviceConfig$1;-><init>()V
 
     sput-object v2, Lcom/miui/home/launcher/DeviceConfig;->USE_GOOGLE_MINUS_SCREEN_REGIONS:Ljava/util/HashSet;
 
-    .line 241
+    .line 237
     new-instance v2, Lcom/miui/home/launcher/DeviceConfig$2;
 
     invoke-direct {v2}, Lcom/miui/home/launcher/DeviceConfig$2;-><init>()V
 
     sput-object v2, Lcom/miui/home/launcher/DeviceConfig;->USE_GOOGLE_MINUS_SCREEN_CLIENT_ID:Ljava/util/HashSet;
 
-    .line 244
+    .line 240
     new-instance v2, Lcom/miui/home/launcher/DeviceConfig$3;
 
     invoke-direct {v2}, Lcom/miui/home/launcher/DeviceConfig$3;-><init>()V
 
     sput-object v2, Lcom/miui/home/launcher/DeviceConfig;->SELECT_MINUS_SCREEN_CLIENT_ID:Ljava/util/HashSet;
+
+    .line 244
+    sget-object v2, Lcom/miui/home/launcher/DeviceConfig;->SELECT_MINUS_SCREEN_CLIENT_ID:Ljava/util/HashSet;
+
+    sget-object v3, Lcom/miui/home/launcher/DeviceConfig;->CLIENT_ID_BASE:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    sput-boolean v2, Lcom/miui/home/launcher/DeviceConfig;->CAN_SWITCH_MINUS_SCREEN:Z
+
+    .line 245
+    sget-object v2, Lcom/miui/home/launcher/DeviceConfig;->USE_GOOGLE_MINUS_SCREEN_REGIONS:Ljava/util/HashSet;
+
+    sget-object v3, Lcom/miui/home/launcher/DeviceConfig;->CURRENT_REGION:Ljava/lang/String;
+
+    .line 246
+    invoke-virtual {v2, v3}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    sget-object v2, Lcom/miui/home/launcher/DeviceConfig;->USE_GOOGLE_MINUS_SCREEN_CLIENT_ID:Ljava/util/HashSet;
+
+    sget-object v3, Lcom/miui/home/launcher/DeviceConfig;->CLIENT_ID_BASE:Ljava/lang/String;
+
+    .line 247
+    invoke-virtual {v2, v3}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    move v2, v1
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    move v2, v0
+
+    :goto_1
+    sput-boolean v2, Lcom/miui/home/launcher/DeviceConfig;->ONLY_USE_GOOGLE_MINUS_SCREEN:Z
 
     const-string v2, "fr_orange"
 
@@ -802,7 +842,7 @@
 
     move-result v2
 
-    if-nez v2, :cond_1
+    if-nez v2, :cond_3
 
     const-string v2, "mx_telcel"
 
@@ -812,20 +852,20 @@
 
     move-result v2
 
-    if-eqz v2, :cond_0
+    if-eqz v2, :cond_2
 
-    goto :goto_0
+    goto :goto_2
 
-    :cond_0
+    :cond_2
     move v2, v1
 
-    goto :goto_1
+    goto :goto_3
 
-    :cond_1
-    :goto_0
+    :cond_3
+    :goto_2
     move v2, v0
 
-    :goto_1
+    :goto_3
     sput-boolean v2, Lcom/miui/home/launcher/DeviceConfig;->IS_AMX_BUILD:Z
 
     .line 269
@@ -836,52 +876,65 @@
     sput-boolean v2, Lcom/miui/home/launcher/DeviceConfig;->IS_MIUI_LITE_DEVICE:Z
 
     .line 271
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getDeviceType()Lcom/miui/home/launcher/DeviceType;
+    sget-boolean v2, Lcom/miui/home/launcher/DeviceConfig;->IS_MIUI_LITE_DEVICE:Z
+
+    if-nez v2, :cond_5
+
+    sget-object v2, Lmiui/os/Build;->DEVICE:Ljava/lang/String;
+
+    .line 272
+    invoke-virtual {v2}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v2
 
-    sput-object v2, Lcom/miui/home/launcher/DeviceConfig;->DEVICE:Lcom/miui/home/launcher/DeviceType;
+    invoke-static {v2}, Lcom/miui/home/launcher/common/Utilities;->getMd5([B)Ljava/lang/String;
 
-    .line 272
-    sget-object v2, Lcom/miui/home/launcher/DeviceConfig;->DEVICE:Lcom/miui/home/launcher/DeviceType;
+    move-result-object v2
 
-    sget-object v3, Lcom/miui/home/launcher/DeviceType;->FOLDABLE_DEVICE:Lcom/miui/home/launcher/DeviceType;
+    const-string v3, "158858a008ba66436bb1885bbf81de0b"
 
-    if-ne v2, v3, :cond_2
+    invoke-static {v2, v3}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
-    move v2, v0
+    move-result v2
 
-    goto :goto_2
+    if-nez v2, :cond_5
 
-    :cond_2
-    move v2, v1
-
-    :goto_2
-    sput-boolean v2, Lcom/miui/home/launcher/DeviceConfig;->IS_FOLD_DEVICE:Z
-
-    .line 274
     sget-object v2, Lmiui/os/Build;->DEVICE:Ljava/lang/String;
 
-    const-string v3, "cetus"
+    .line 274
+    invoke-virtual {v2}, Ljava/lang/String;->getBytes()[B
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    move-result-object v2
+
+    invoke-static {v2}, Lcom/miui/home/launcher/common/Utilities;->getMd5([B)Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "56bfe404f227f116c04043d49233d65d"
+
+    invoke-static {v2, v3}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v2
 
-    sput-boolean v2, Lcom/miui/home/launcher/DeviceConfig;->IS_BUILD_CETUS:Z
+    if-eqz v2, :cond_4
 
-    const-string v2, "ro.config.miui_magic_window_enable"
+    goto :goto_4
 
-    .line 277
-    invoke-static {v2, v1}, Lcom/miui/launcher/utils/MiuiSettingsUtils;->getBooleanFromSystemProperties(Ljava/lang/String;Z)Z
+    :cond_4
+    move v2, v1
 
-    move-result v2
+    goto :goto_5
 
-    sput-boolean v2, Lcom/miui/home/launcher/DeviceConfig;->IS_SUPPORT_MAGIC_WINDOW:Z
+    :cond_5
+    :goto_4
+    move v2, v0
+
+    :goto_5
+    sput-boolean v2, Lcom/miui/home/launcher/DeviceConfig;->HIDE_USER_PRESENT_ANIMATION:Z
 
     const-string v2, "Meitu"
 
-    .line 279
+    .line 277
     sget-object v3, Lmiui/os/Build;->BRAND:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -890,7 +943,7 @@
 
     sput-boolean v2, Lcom/miui/home/launcher/DeviceConfig;->IS_MEITU:Z
 
-    .line 287
+    .line 285
     new-instance v2, Ljava/io/File;
 
     const-string v3, "/system/media/theme/icons_version_1"
@@ -905,36 +958,29 @@
 
     sput-boolean v2, Lcom/miui/home/launcher/DeviceConfig;->sUseOldVersionIcons:Z
 
-    .line 289
+    .line 287
     sput-boolean v1, Lcom/miui/home/launcher/DeviceConfig;->isThemeCoverCellConfig:Z
 
-    .line 291
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isSupportLaunchPairApp()Z
-
-    move-result v2
-
-    sput-boolean v2, Lcom/miui/home/launcher/DeviceConfig;->sIsSupportLaunchPairApp:Z
-
-    .line 506
+    .line 507
     new-instance v2, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v2}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     sput-object v2, Lcom/miui/home/launcher/DeviceConfig;->sSettingTitle:Ljava/util/concurrent/ConcurrentHashMap;
 
-    .line 519
+    .line 520
     sget-object v2, Lcom/miui/home/launcher/-$$Lambda$DeviceConfig$F58cM-W15WymyMchPxAmRAziee8;->INSTANCE:Lcom/miui/home/launcher/-$$Lambda$DeviceConfig$F58cM-W15WymyMchPxAmRAziee8;
 
     sput-object v2, Lcom/miui/home/launcher/DeviceConfig;->sCheckTitleRunnable:Ljava/lang/Runnable;
 
-    .line 757
+    .line 754
     new-instance v2, Lmiui/content/res/ThemeValues;
 
     invoke-direct {v2}, Lmiui/content/res/ThemeValues;-><init>()V
 
     sput-object v2, Lcom/miui/home/launcher/DeviceConfig;->sThemeValues:Lmiui/content/res/ThemeValues;
 
-    .line 961
+    .line 925
     new-instance v2, Lcom/miui/home/launcher/common/ChangeableValue;
 
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -945,59 +991,59 @@
 
     sput-object v2, Lcom/miui/home/launcher/DeviceConfig;->sShowSearchBar:Lcom/miui/home/launcher/common/ChangeableValue;
 
-    .line 1185
+    .line 1107
     sput-boolean v1, Lcom/miui/home/launcher/DeviceConfig;->sUseThemeOrOldmanCellCount:Z
 
     const-wide/16 v2, -0x1
 
-    .line 1807
+    .line 1743
     sput-wide v2, Lcom/miui/home/launcher/DeviceConfig;->INVALIDATE_DEFAULT_SCREEN_ID:J
 
-    .line 1808
+    .line 1744
     sget-wide v2, Lcom/miui/home/launcher/DeviceConfig;->INVALIDATE_DEFAULT_SCREEN_ID:J
 
     sput-wide v2, Lcom/miui/home/launcher/DeviceConfig;->sDesignedDefaultScreenId:J
 
-    .line 1892
+    .line 1822
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v3, 0x18
 
-    if-lt v2, v3, :cond_3
+    if-lt v2, v3, :cond_6
 
     move v0, v1
 
-    .line 1893
-    :cond_3
+    .line 1823
+    :cond_6
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->TEMP_SHARE_MODE_FOR_WORLD_READABLE:I
 
-    .line 1895
+    .line 1825
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    if-lt v0, v3, :cond_4
+    if-lt v0, v3, :cond_7
 
     move v0, v1
 
-    goto :goto_3
+    goto :goto_6
 
-    :cond_4
+    :cond_7
     const/4 v0, 0x2
 
-    .line 1896
-    :goto_3
+    .line 1826
+    :goto_6
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->TEMP_SHARE_MODE_FOR_WORLD_WRITEABLE:I
 
-    .line 2040
+    .line 1970
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
     sput-object v0, Lcom/miui/home/launcher/DeviceConfig;->sSystemuiFsgVersion:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 2123
+    .line 2052
     sput-boolean v1, Lcom/miui/home/launcher/DeviceConfig;->sHideNotch:Z
 
-    .line 2158
+    .line 2087
     sput-boolean v1, Lcom/miui/home/launcher/DeviceConfig;->sUpdateIconPositionForMiui11Upgrade:Z
 
     return-void
@@ -1006,7 +1052,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 293
+    .line 289
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -1015,22 +1061,22 @@
 .method public static backupDB(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 9
 
-    .line 1599
+    .line 1540
     invoke-static {}, Lcom/miui/home/launcher/allapps/LauncherModeController;->getCurrentMode()Lcom/miui/home/launcher/allapps/LauncherMode;
 
     move-result-object v0
 
-    .line 1600
+    .line 1541
     invoke-static {}, Lcom/miui/home/library/utils/Preconditions;->assertNonUiThread()V
 
-    .line 1601
+    .line 1542
     sget-object v1, Lcom/miui/home/launcher/DeviceConfig;->sLauncherDatabaseName:Ljava/lang/String;
 
     invoke-virtual {v0, p0, v1}, Lcom/miui/home/launcher/allapps/LauncherMode;->getLauncherDatabasePath(Landroid/content/Context;Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v1
 
-    .line 1602
+    .line 1543
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result v2
@@ -1046,12 +1092,12 @@
 
     const-wide/16 v4, -0x1
 
-    .line 1605
+    .line 1546
     invoke-static {p0, v2, v4, v5}, Lcom/miui/home/launcher/common/PreferenceUtils;->getLong(Landroid/content/Context;Ljava/lang/String;J)J
 
     move-result-wide v6
 
-    .line 1607
+    .line 1548
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1070,7 +1116,7 @@
 
     move-result-object p1
 
-    .line 1608
+    .line 1549
     invoke-virtual {p1}, Ljava/io/File;->exists()Z
 
     move-result v0
@@ -1083,7 +1129,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 1612
+    .line 1553
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
@@ -1098,11 +1144,11 @@
 
     return v2
 
-    .line 1615
+    .line 1556
     :cond_1
     invoke-virtual {p1}, Ljava/io/File;->delete()Z
 
-    .line 1619
+    .line 1560
     :cond_2
     invoke-virtual {v1}, Ljava/io/File;->getAbsoluteFile()Ljava/io/File;
 
@@ -1120,14 +1166,14 @@
 
     const-string p1, "pref_key_auto_backup_time"
 
-    .line 1620
+    .line 1561
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     invoke-static {p0, p1, v0, v1}, Lcom/miui/home/launcher/common/PreferenceUtils;->putLong(Landroid/content/Context;Ljava/lang/String;J)V
 
-    .line 1621
+    .line 1562
     invoke-static {p0}, Lcom/miui/home/launcher/IconReorganizeMonitor;->onDBBackupFinishedForReorgnize(Landroid/content/Context;)V
 
     return v2
@@ -1139,37 +1185,35 @@
 .method public static calcAllAppsCellSize(Landroid/content/Context;)V
     .locals 5
 
-    .line 1250
+    .line 1169
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f07005c
+    const v1, 0x7f070055
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v0
 
-    .line 1251
-    sget-object v1, Lcom/miui/home/launcher/DeviceConfig;->mActiveProfile:Lcom/miui/home/launcher/DeviceProfile;
-
-    invoke-virtual {v1}, Lcom/miui/home/launcher/DeviceProfile;->getScreenLongSize()I
+    .line 1170
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getRealScreenHeight()I
 
     move-result v1
 
-    .line 1252
+    .line 1171
     invoke-static {p0}, Lcom/miui/home/launcher/common/Utilities;->getStatusBarHeight(Landroid/content/Context;)I
 
     move-result v2
 
     sub-int/2addr v1, v2
 
-    .line 1253
+    .line 1172
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    const v3, 0x7f070073
+    const v3, 0x7f07006b
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1177,12 +1221,12 @@
 
     sub-int/2addr v1, v2
 
-    .line 1254
+    .line 1173
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    const v3, 0x7f070072
+    const v3, 0x7f07006a
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1190,12 +1234,12 @@
 
     sub-int/2addr v1, v2
 
-    .line 1255
+    .line 1174
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    const v3, 0x7f0705c3
+    const v3, 0x7f07037a
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1203,7 +1247,7 @@
 
     sub-int/2addr v1, v2
 
-    .line 1256
+    .line 1175
     invoke-static {p0}, Lcom/miui/home/launcher/DeviceConfig;->getSearchBarHolderVerticalPadding(Landroid/content/Context;)I
 
     move-result v2
@@ -1212,12 +1256,12 @@
 
     sub-int/2addr v1, v2
 
-    .line 1257
+    .line 1176
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    const v3, 0x7f070060
+    const v3, 0x7f070059
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1233,7 +1277,7 @@
 
     mul-float/2addr v1, v2
 
-    .line 1259
+    .line 1178
     sget v2, Lcom/miui/home/launcher/DeviceConfig;->sCellCountY:I
 
     int-to-float v2, v2
@@ -1246,28 +1290,28 @@
 
     sput v1, Lcom/miui/home/launcher/DeviceConfig;->sAllAppsCellHeight:I
 
-    .line 1260
+    .line 1179
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f0701aa
+    const v2, 0x7f07010c
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
     move-result v1
 
-    .line 1261
+    .line 1180
     new-instance v2, Landroid/text/TextPaint;
 
     invoke-direct {v2}, Landroid/text/TextPaint;-><init>()V
 
-    .line 1262
+    .line 1181
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    const v4, 0x7f07067e
+    const v4, 0x7f07040d
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1277,14 +1321,14 @@
 
     invoke-virtual {v2, v3}, Landroid/text/TextPaint;->setTextSize(F)V
 
-    .line 1263
+    .line 1182
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getAllAppsCellHeight()I
 
     move-result v3
 
     sub-int/2addr v3, v1
 
-    .line 1265
+    .line 1184
     invoke-static {p0}, Lcom/miui/home/launcher/compat/LauncherThemeCompat;->getInstance(Landroid/content/Context;)Lcom/miui/home/launcher/compat/LauncherThemeCompat;
 
     move-result-object v4
@@ -1295,7 +1339,7 @@
 
     sub-int/2addr v3, v4
 
-    .line 1266
+    .line 1185
     invoke-static {p0}, Lcom/miui/home/launcher/compat/LauncherThemeCompat;->getInstance(Landroid/content/Context;)Lcom/miui/home/launcher/compat/LauncherThemeCompat;
 
     move-result-object p0
@@ -1308,7 +1352,7 @@
 
     const/4 p0, 0x0
 
-    .line 1267
+    .line 1186
     invoke-virtual {v2, p0}, Landroid/text/TextPaint;->getFontMetricsInt(Landroid/graphics/Paint$FontMetricsInt;)I
 
     move-result p0
@@ -1319,7 +1363,7 @@
 
     sub-int/2addr p0, v3
 
-    .line 1268
+    .line 1187
     div-int/lit8 p0, p0, 0x2
 
     sput p0, Lcom/miui/home/launcher/DeviceConfig;->sAllAppsDividerTop:I
@@ -1328,7 +1372,7 @@
 
     sub-int/2addr v0, v1
 
-    .line 1269
+    .line 1188
     div-int/lit8 v0, v0, 0x2
 
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sAllAppsDividerBottom:I
@@ -1339,34 +1383,28 @@
 .method private static calcDefaultWorkspaceName(Lcom/miui/home/launcher/allapps/LauncherMode;)Ljava/lang/String;
     .locals 2
 
-    .line 1322
+    .line 1229
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sCellCountX:I
 
-    .line 1323
+    .line 1230
     sget v1, Lcom/miui/home/launcher/DeviceConfig;->sCellCountY:I
 
-    .line 1324
+    .line 1231
     invoke-static {v0, v1}, Lcom/miui/home/launcher/DeviceConfig;->getCellSizeVal(II)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1325
+    .line 1232
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/LauncherMode;->getDefaultWorkspaceNamePrefix()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 1327
+    .line 1234
     sget-boolean v1, Lcom/miui/home/launcher/DeviceConfig;->sRotatable:Z
 
     if-eqz v1, :cond_0
 
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isFoldDevice()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    .line 1328
+    .line 1235
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1381,7 +1419,7 @@
 
     move-result-object p0
 
-    .line 1329
+    .line 1236
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1394,9 +1432,9 @@
 
     move-result-object p0
 
-    goto :goto_1
+    goto :goto_0
 
-    .line 1331
+    .line 1238
     :cond_0
     sget-boolean v1, Lcom/miui/home/launcher/DeviceConfig;->IS_MEITU:Z
 
@@ -1408,7 +1446,7 @@
 
     if-nez v1, :cond_1
 
-    .line 1332
+    .line 1239
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1423,35 +1461,8 @@
 
     move-result-object p0
 
-    .line 1334
+    .line 1241
     :cond_1
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isFoldDevice()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    .line 1335
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p0, "default_fold_workspace"
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    goto :goto_0
-
-    .line 1337
-    :cond_2
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1468,15 +1479,14 @@
 
     move-result-object p0
 
-    .line 1339
-    :goto_0
+    .line 1242
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->useSecondSpaceLayout()Z
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_2
 
-    .line 1340
+    .line 1243
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1491,160 +1501,15 @@
 
     move-result-object p0
 
-    :cond_3
-    :goto_1
+    :cond_2
+    :goto_0
     return-object p0
 .end method
 
-.method private static calcDefaultXmlID(Landroid/content/Context;Lcom/miui/home/launcher/allapps/LauncherMode;)I
-    .locals 0
-
-    .line 1495
-    invoke-static {p1}, Lcom/miui/home/launcher/DeviceConfig;->calcDefaultWorkspaceName(Lcom/miui/home/launcher/allapps/LauncherMode;)Ljava/lang/String;
-
-    move-result-object p1
-
-    .line 1496
-    invoke-static {p0, p1}, Lcom/miui/home/launcher/DeviceConfig;->getXmlId(Landroid/content/Context;Ljava/lang/String;)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method private static calcFoldIndicatorMarginBottomInEditMode(Landroid/content/Context;)I
-    .locals 5
-
-    .line 985
-    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const/4 v1, 0x1
-
-    const v2, 0x7f090002
-
-    invoke-virtual {v0, v2, v1, v1}, Landroid/content/res/Resources;->getFraction(III)F
-
-    move-result v0
-
-    .line 986
-    sget-object v1, Lcom/miui/home/launcher/DeviceConfig;->sWorkspaceCellPaddingBottom:Lcom/miui/home/launcher/common/ChangeableValue;
-
-    invoke-virtual {v1}, Lcom/miui/home/launcher/common/ChangeableValue;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/Integer;
-
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
-
-    move-result v1
-
-    .line 987
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellWorkingHeight()I
-
-    move-result v2
-
-    int-to-float v2, v2
-
-    sget v3, Lcom/miui/home/launcher/DeviceConfig;->sScreenScaleRatio:F
-
-    const/high16 v4, 0x3f800000    # 1.0f
-
-    sub-float v3, v4, v3
-
-    mul-float/2addr v2, v3
-
-    sub-float/2addr v4, v0
-
-    mul-float/2addr v2, v4
-
-    float-to-int v0, v2
-
-    .line 989
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isScreenOrientationLandscape()Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    div-int/lit8 v0, v0, 0x2
-
-    sub-int/2addr v1, v0
-
-    goto :goto_0
-
-    :cond_0
-    div-int/lit8 v0, v0, 0x2
-
-    add-int/2addr v1, v0
-
-    .line 991
-    :goto_0
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getHotSeatsCellHeight()I
-
-    move-result v0
-
-    .line 992
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isShowSearchBar()Z
-
-    move-result v2
-
-    invoke-static {p0, v2}, Lcom/miui/home/launcher/DeviceConfig;->calcHotSeatsHeight(Landroid/content/Context;Z)I
-
-    move-result v2
-
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getHotSeatsCellHeight()I
-
-    move-result v3
-
-    sub-int/2addr v2, v3
-
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isShowSearchBar()Z
-
-    move-result v3
-
-    invoke-static {p0, v3}, Lcom/miui/home/launcher/DeviceConfig;->calcHotSeatsMarginTop(Landroid/content/Context;Z)I
-
-    move-result v3
-
-    sub-int/2addr v2, v3
-
-    div-int/lit8 v2, v2, 0x2
-
-    add-int/2addr v0, v2
-
-    sub-int v0, v1, v0
-
-    .line 993
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p0
-
-    const v2, 0x7f070124
-
-    invoke-virtual {p0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result p0
-
-    add-int/2addr v0, p0
-
-    div-int/lit8 v0, v0, 0x2
-
-    sub-int/2addr v1, v0
-
-    return v1
-.end method
-
 .method private static final calcGridSize(Landroid/content/Context;Z)V
-    .locals 5
+    .locals 3
 
-    .line 1146
+    .line 1085
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sStatusBarHeight:I
 
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getWorkspaceCellPaddingTop()I
@@ -1659,80 +1524,43 @@
 
     add-int/2addr v0, v1
 
-    .line 1147
-    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/miui/home/launcher/Application;->isInFoldLargeScreen()Z
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    if-eqz v1, :cond_0
-
-    sget-object v1, Lcom/miui/home/launcher/DeviceConfig;->mActiveProfile:Lcom/miui/home/launcher/DeviceProfile;
-
-    invoke-virtual {v1}, Lcom/miui/home/launcher/DeviceProfile;->getScreenWidth()I
-
-    move-result v1
-
-    div-int/2addr v1, v2
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v1, Lcom/miui/home/launcher/DeviceConfig;->mActiveProfile:Lcom/miui/home/launcher/DeviceProfile;
-
-    invoke-virtual {v1}, Lcom/miui/home/launcher/DeviceProfile;->getScreenWidth()I
-
-    move-result v1
-
-    .line 1148
-    :goto_0
-    sget-object v3, Lcom/miui/home/launcher/DeviceConfig;->mActiveProfile:Lcom/miui/home/launcher/DeviceProfile;
-
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getWorkspaceCellPaddingSide()I
-
-    move-result v4
-
-    mul-int/2addr v4, v2
-
-    sub-int/2addr v1, v4
-
-    invoke-virtual {v3, v1}, Lcom/miui/home/launcher/DeviceProfile;->setCellWorkingWidth(I)V
-
-    .line 1149
+    .line 1086
     sget-boolean v1, Lcom/miui/home/launcher/DeviceConfig;->sIsInMultiWindowMode:Z
 
-    if-nez v1, :cond_1
+    if-nez v1, :cond_0
 
-    .line 1150
+    .line 1087
     sget-object v1, Lcom/miui/home/launcher/DeviceConfig;->mActiveProfile:Lcom/miui/home/launcher/DeviceProfile;
 
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getScreenHeight()I
 
-    move-result v3
+    move-result v2
 
-    sub-int/2addr v3, v0
+    sub-int/2addr v2, v0
 
-    invoke-virtual {v1, v3}, Lcom/miui/home/launcher/DeviceProfile;->setCellWorkingHeight(I)V
+    invoke-virtual {v1, v2}, Lcom/miui/home/launcher/DeviceProfile;->setCellWorkingHeight(I)V
 
-    goto :goto_1
+    goto :goto_0
 
-    .line 1152
-    :cond_1
+    .line 1089
+    :cond_0
     sget-object v1, Lcom/miui/home/launcher/DeviceConfig;->mActiveProfile:Lcom/miui/home/launcher/DeviceProfile;
 
-    sget v3, Lcom/miui/home/launcher/DeviceConfig;->sMultiWindowModeLauncherHeight:I
+    sget v2, Lcom/miui/home/launcher/DeviceConfig;->sMultiWindowModeLauncherHeight:I
 
-    sub-int/2addr v3, v0
+    sub-int/2addr v2, v0
 
-    invoke-virtual {v1, v3}, Lcom/miui/home/launcher/DeviceProfile;->setCellWorkingHeight(I)V
+    invoke-virtual {v1, v2}, Lcom/miui/home/launcher/DeviceProfile;->setCellWorkingHeight(I)V
 
-    .line 1154
-    :goto_1
+    .line 1091
+    :goto_0
+    invoke-static {p0}, Lcom/miui/home/launcher/DeviceConfig;->calcWorkspaceIndicatorMarginBottomInEditMode(Landroid/content/Context;)I
+
+    move-result v0
+
+    sput v0, Lcom/miui/home/launcher/DeviceConfig;->sWorkspaceIndicatorMarginBottomInEditMode:I
+
+    .line 1092
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellWorkingHeight()I
 
     move-result v0
@@ -1753,34 +1581,27 @@
 
     const/4 v1, 0x0
 
-    .line 1155
+    .line 1093
     invoke-static {p0, v1}, Lcom/miui/home/launcher/DeviceConfig;->calcHotSeatsHeight(Landroid/content/Context;Z)I
 
     move-result v1
 
-    const/4 v3, 0x1
+    const/4 v2, 0x1
 
-    invoke-static {p0, v3}, Lcom/miui/home/launcher/DeviceConfig;->calcHotSeatsHeight(Landroid/content/Context;Z)I
+    invoke-static {p0, v2}, Lcom/miui/home/launcher/DeviceConfig;->calcHotSeatsHeight(Landroid/content/Context;Z)I
 
-    move-result v3
+    move-result v2
 
-    sub-int/2addr v1, v3
+    sub-int/2addr v1, v2
 
     sub-int/2addr v0, v1
 
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sFolderWorkingHeight:I
 
-    .line 1156
+    .line 1094
     invoke-static {p0, p1}, Lcom/miui/home/launcher/DeviceConfig;->loadCellsCountConfig(Landroid/content/Context;Z)V
 
-    .line 1157
-    invoke-static {p0}, Lcom/miui/home/launcher/DeviceConfig;->calcWorkspaceIndicatorMarginBottomInEditMode(Landroid/content/Context;)I
-
-    move-result p1
-
-    sput p1, Lcom/miui/home/launcher/DeviceConfig;->sWorkspaceIndicatorMarginBottomInEditMode:I
-
-    .line 1158
+    .line 1095
     sget p1, Lcom/miui/home/launcher/DeviceConfig;->sCellCountX:I
 
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sCellCountY:I
@@ -1789,49 +1610,24 @@
 
     move-result-object p1
 
-    .line 1159
+    .line 1096
     invoke-static {p1}, Lcom/miui/home/launcher/DeviceConfig;->getDatabaseNameBySuffix(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     sput-object p1, Lcom/miui/home/launcher/DeviceConfig;->sLauncherDatabaseName:Ljava/lang/String;
 
-    .line 1160
+    .line 1097
     invoke-static {p0}, Lcom/miui/home/launcher/DeviceConfig;->tryToMigrateDefaultDatabase(Landroid/content/Context;)V
 
-    .line 1161
+    .line 1098
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->calculateHotseatMaxCount()I
 
     move-result p1
 
     invoke-static {p1}, Lcom/miui/home/launcher/DeviceConfig;->setHotseatMaxCount(I)V
 
-    .line 1162
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountX()I
-
-    move-result p1
-
-    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->isInFoldLargeScreen()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    const/4 v2, 0x3
-
-    :cond_2
-    mul-int/2addr p1, v2
-
-    invoke-static {p1}, Lcom/miui/home/launcher/DeviceConfig;->setAllAppsRecommendCount(I)V
-
-    .line 1163
-    invoke-static {p0}, Lcom/miui/home/launcher/DeviceConfig;->loadWorkspaceIndicatorThumbnailHeight(Landroid/content/Context;)V
-
-    .line 1164
+    .line 1099
     invoke-static {p0}, Lcom/miui/home/launcher/DeviceConfig;->calcSearchBarWidth(Landroid/content/Context;)I
 
     move-result p0
@@ -1844,14 +1640,14 @@
 .method private static calcHotSeatsHeight(Landroid/content/Context;Z)I
     .locals 1
 
-    .line 737
+    .line 734
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
     if-eqz p1, :cond_0
 
-    .line 740
+    .line 737
     invoke-static {}, Lcom/miui/home/launcher/common/LauncherIconSizeProvider;->getInstance()Lcom/miui/home/launcher/common/LauncherIconSizeProvider;
 
     move-result-object p1
@@ -1860,9 +1656,9 @@
 
     move-result p1
 
-    const v0, 0x7f0701aa
+    const v0, 0x7f07010c
 
-    .line 741
+    .line 738
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result p0
@@ -1871,7 +1667,7 @@
 
     goto :goto_1
 
-    .line 743
+    .line 740
     :cond_0
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isScreenOrientationLandscape()Z
 
@@ -1879,16 +1675,16 @@
 
     if-eqz p1, :cond_2
 
-    .line 744
+    .line 741
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->useNavigationBarLayoutMode()Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    const p1, 0x7f070198
+    const p1, 0x7f070101
 
-    .line 745
+    .line 742
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result p0
@@ -1896,7 +1692,24 @@
     goto :goto_0
 
     :cond_1
-    const p1, 0x7f070197
+    const p1, 0x7f070100
+
+    .line 743
+    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result p0
+
+    goto :goto_0
+
+    .line 745
+    :cond_2
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->useNavigationBarLayoutMode()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    const p1, 0x7f070102
 
     .line 746
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -1905,27 +1718,10 @@
 
     goto :goto_0
 
-    .line 748
-    :cond_2
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->useNavigationBarLayoutMode()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_3
-
-    const p1, 0x7f070199
-
-    .line 749
-    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result p0
-
-    goto :goto_0
-
     :cond_3
-    const p1, 0x7f070196
+    const p1, 0x7f0700ff
 
-    .line 750
+    .line 747
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result p0
@@ -1933,7 +1729,7 @@
     :goto_0
     int-to-float p0, p0
 
-    .line 752
+    .line 749
     invoke-static {}, Lcom/miui/home/launcher/common/LauncherIconSizeProvider;->getInstance()Lcom/miui/home/launcher/common/LauncherIconSizeProvider;
 
     move-result-object p1
@@ -1953,28 +1749,28 @@
 .method private static calcHotSeatsMarginBottom(Landroid/content/Context;ZZ)I
     .locals 1
 
-    .line 715
+    .line 712
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
     if-eqz p1, :cond_0
 
-    const p1, 0x7f0705c3
+    const p1, 0x7f07037a
 
-    .line 718
+    .line 715
     invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result p1
 
-    .line 719
+    .line 716
     invoke-static {p0}, Lcom/miui/home/launcher/DeviceConfig;->calcSearchBarMarginTop(Landroid/content/Context;)I
 
     move-result v0
 
     add-int/2addr p1, v0
 
-    .line 720
+    .line 717
     invoke-static {p0, p2}, Lcom/miui/home/launcher/DeviceConfig;->calcSearchBarMarginBottom(Landroid/content/Context;Z)I
 
     move-result p0
@@ -1993,16 +1789,16 @@
 .method private static calcHotSeatsMarginTop(Landroid/content/Context;Z)I
     .locals 0
 
-    .line 726
+    .line 723
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
     if-eqz p1, :cond_0
 
-    const p1, 0x7f0701a2
+    const p1, 0x7f070104
 
-    .line 729
+    .line 726
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result p0
@@ -2010,9 +1806,9 @@
     goto :goto_0
 
     :cond_0
-    const p1, 0x7f0701a1
+    const p1, 0x7f070103
 
-    .line 731
+    .line 728
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result p0
@@ -2020,7 +1816,7 @@
     :goto_0
     int-to-float p0, p0
 
-    .line 733
+    .line 730
     invoke-static {}, Lcom/miui/home/launcher/common/LauncherIconSizeProvider;->getInstance()Lcom/miui/home/launcher/common/LauncherIconSizeProvider;
 
     move-result-object p1
@@ -2039,14 +1835,14 @@
 .method public static calcIconSize(Landroid/content/res/Resources;)V
     .locals 3
 
-    .line 450
+    .line 451
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->useOldVersionIcons()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f0700a7
+    const v0, 0x7f070086
 
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -2054,7 +1850,7 @@
 
     goto :goto_0
 
-    .line 451
+    .line 452
     :cond_0
     invoke-static {}, Lcom/miui/home/launcher/common/LauncherIconSizeProvider;->getInstance()Lcom/miui/home/launcher/common/LauncherIconSizeProvider;
 
@@ -2067,14 +1863,14 @@
     :goto_0
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sIconWidth:I
 
-    .line 452
+    .line 453
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->useOldVersionIcons()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    const v0, 0x7f0700a4
+    const v0, 0x7f070083
 
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -2082,7 +1878,7 @@
 
     goto :goto_1
 
-    .line 453
+    .line 454
     :cond_1
     invoke-static {}, Lcom/miui/home/launcher/common/LauncherIconSizeProvider;->getInstance()Lcom/miui/home/launcher/common/LauncherIconSizeProvider;
 
@@ -2095,10 +1891,10 @@
     :goto_1
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sIconHeight:I
 
-    .line 454
+    .line 455
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sIconWidth:I
 
-    const v1, 0x7f0701a9
+    const v1, 0x7f07010b
 
     invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -2110,7 +1906,7 @@
 
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sApplicationIconContainerWidth:I
 
-    .line 456
+    .line 457
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sIconWidth:I
 
     invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -2121,10 +1917,10 @@
 
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sHotseatIconContainerWidth:I
 
-    .line 457
+    .line 458
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sIconHeight:I
 
-    const v1, 0x7f0701aa
+    const v1, 0x7f07010c
 
     invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -2137,80 +1933,15 @@
     return-void
 .end method
 
-.method private static calcIndicatorMarginBottomInEditMode(Landroid/content/Context;)I
-    .locals 4
-
-    .line 998
-    sget v0, Lcom/miui/home/launcher/DeviceConfig;->sWorkspaceIndicatorMarginBottom:I
-
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellWorkingHeight()I
-
-    move-result v1
-
-    int-to-float v1, v1
-
-    sget v2, Lcom/miui/home/launcher/DeviceConfig;->sScreenScaleRatio:F
-
-    const/high16 v3, 0x3f800000    # 1.0f
-
-    sub-float v2, v3, v2
-
-    mul-float/2addr v1, v2
-
-    invoke-static {}, Lcom/miui/home/launcher/CellScreen;->getEditimgAnimPivotyRatio()F
-
-    move-result v2
-
-    sub-float/2addr v3, v2
-
-    mul-float/2addr v1, v3
-
-    float-to-int v1, v1
-
-    add-int/2addr v0, v1
-
-    .line 1000
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p0
-
-    const v1, 0x7f070139
-
-    invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result p0
-
-    const/high16 v1, 0x41a00000    # 20.0f
-
-    invoke-static {v1}, Lcom/miui/home/launcher/common/Utilities;->getDipPixelSize(F)I
-
-    move-result v1
-
-    add-int/2addr p0, v1
-
-    .line 1002
-    sget v1, Lcom/miui/home/launcher/DeviceConfig;->sWorkspaceIndicatorMarginBottom:I
-
-    invoke-static {v0, p0}, Ljava/lang/Math;->min(II)I
-
-    move-result p0
-
-    invoke-static {v1, p0}, Ljava/lang/Math;->max(II)I
-
-    move-result p0
-
-    return p0
-.end method
-
 .method private static final calcLauncherHeightWhenMultiWindow(Landroid/content/Context;Landroid/content/res/Resources;)V
     .locals 2
 
-    .line 491
+    .line 492
     invoke-static {p0}, Lcom/miui/home/launcher/common/Utilities;->getStatusBarHeight(Landroid/content/Context;)I
 
     move-result v0
 
-    const v1, 0x7f07061a
+    const v1, 0x7f0703cb
 
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -2220,7 +1951,7 @@
 
     const-string/jumbo p1, "window"
 
-    .line 492
+    .line 493
     invoke-virtual {p0, p1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -2231,15 +1962,15 @@
 
     move-result-object p0
 
-    .line 493
+    .line 494
     new-instance p1, Landroid/util/DisplayMetrics;
 
     invoke-direct {p1}, Landroid/util/DisplayMetrics;-><init>()V
 
-    .line 494
+    .line 495
     invoke-virtual {p0, p1}, Landroid/view/Display;->getRealMetrics(Landroid/util/DisplayMetrics;)V
 
-    .line 495
+    .line 496
     iget p0, p1, Landroid/util/DisplayMetrics;->widthPixels:I
 
     iget p1, p1, Landroid/util/DisplayMetrics;->heightPixels:I
@@ -2258,35 +1989,35 @@
 .method private static calcSearchBarMarginBottom(Landroid/content/Context;Z)I
     .locals 3
 
-    .line 689
+    .line 686
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f0705c5
+    const v1, 0x7f07037c
 
-    const v2, 0x7f0705c6
+    const v2, 0x7f07037d
 
     if-eqz p1, :cond_0
 
-    .line 692
+    .line 689
     invoke-static {p0}, Lcom/miui/home/launcher/common/Utilities;->getNavigationBarHeight(Landroid/content/Context;)I
 
     move-result p0
 
-    .line 693
+    .line 690
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
     move-result p1
 
-    .line 694
+    .line 691
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
     move-result v0
 
     sub-int v1, v0, p0
 
-    .line 695
+    .line 692
     invoke-static {v1, p1, v0}, Lcom/miui/home/launcher/common/Utilities;->boundToRange(III)I
 
     move-result v0
@@ -2295,7 +2026,7 @@
 
     const-string p1, "Launcher.DeviceConfig"
 
-    .line 698
+    .line 695
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2314,7 +2045,7 @@
 
     goto :goto_0
 
-    .line 701
+    .line 698
     :cond_0
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isShowNavigationBar()Z
 
@@ -2322,7 +2053,7 @@
 
     if-eqz p0, :cond_1
 
-    .line 702
+    .line 699
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
     move-result p0
@@ -2331,7 +2062,7 @@
 
     goto :goto_0
 
-    .line 703
+    .line 700
     :cond_1
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -2343,7 +2074,7 @@
     :goto_0
     int-to-float p0, v0
 
-    .line 705
+    .line 702
     invoke-static {}, Lcom/miui/home/launcher/common/LauncherIconSizeProvider;->getInstance()Lcom/miui/home/launcher/common/LauncherIconSizeProvider;
 
     move-result-object p1
@@ -2362,21 +2093,21 @@
 .method private static calcSearchBarMarginTop(Landroid/content/Context;)I
     .locals 1
 
-    .line 709
+    .line 706
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    const v0, 0x7f0705c7
+    const v0, 0x7f07037e
 
-    .line 710
+    .line 707
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result p0
 
     int-to-float p0, p0
 
-    .line 711
+    .line 708
     invoke-static {}, Lcom/miui/home/launcher/common/LauncherIconSizeProvider;->getInstance()Lcom/miui/home/launcher/common/LauncherIconSizeProvider;
 
     move-result-object v0
@@ -2395,29 +2126,21 @@
 .method private static calcSearchBarWidth(Landroid/content/Context;)I
     .locals 3
 
-    .line 968
+    .line 932
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    .line 969
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getScreenWidth()I
+    .line 933
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellWorkingWidth()I
 
     move-result v0
-
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getWorkspaceCellPaddingSide()I
-
-    move-result v1
-
-    mul-int/lit8 v1, v1, 0x2
-
-    sub-int/2addr v0, v1
 
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellWidth()I
 
     move-result v1
 
-    const v2, 0x7f0700a6
+    const v2, 0x7f070085
 
     invoke-virtual {p0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -2427,7 +2150,7 @@
 
     sub-int/2addr v0, v1
 
-    const v1, 0x7f0701a4
+    const v1, 0x7f070106
 
     invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -2449,16 +2172,18 @@
 .end method
 
 .method private static calcWorkspaceIndicatorMarginBottomInEditMode(Landroid/content/Context;)I
-    .locals 3
+    .locals 4
 
-    .line 973
+    .line 937
     invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isPadDevice()Z
 
     move-result v0
 
+    const/high16 v1, 0x3f800000    # 1.0f
+
     if-eqz v0, :cond_0
 
-    .line 975
+    .line 939
     sget-object p0, Lcom/miui/home/launcher/DeviceConfig;->sWorkspaceCellPaddingBottom:Lcom/miui/home/launcher/common/ChangeableValue;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/common/ChangeableValue;->getValue()Ljava/lang/Object;
@@ -2477,21 +2202,17 @@
 
     int-to-float v0, v0
 
-    sget v1, Lcom/miui/home/launcher/DeviceConfig;->sScreenScaleRatio:F
+    sget v2, Lcom/miui/home/launcher/DeviceConfig;->sScreenScaleRatio:F
 
-    const/high16 v2, 0x3f800000    # 1.0f
-
-    sub-float v1, v2, v1
-
-    mul-float/2addr v0, v1
-
-    invoke-static {}, Lcom/miui/home/launcher/CellScreen;->getEditimgAnimPivotyRatio()F
-
-    move-result v1
-
-    sub-float/2addr v2, v1
+    sub-float v2, v1, v2
 
     mul-float/2addr v0, v2
+
+    sget v2, Lcom/miui/home/launcher/CellScreen;->EDITIMG_ANIM_PIVOTY_RATIO:F
+
+    sub-float/2addr v1, v2
+
+    mul-float/2addr v0, v1
 
     float-to-int v0, v0
 
@@ -2501,24 +2222,78 @@
 
     return p0
 
-    .line 976
+    .line 942
     :cond_0
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isFoldDevice()Z
+    sget v0, Lcom/miui/home/launcher/DeviceConfig;->sWorkspaceIndicatorMarginBottom:I
 
-    move-result v0
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellWorkingHeight()I
 
-    if-eqz v0, :cond_1
+    move-result v2
 
-    .line 977
-    invoke-static {p0}, Lcom/miui/home/launcher/DeviceConfig;->calcFoldIndicatorMarginBottomInEditMode(Landroid/content/Context;)I
+    int-to-float v2, v2
+
+    sget v3, Lcom/miui/home/launcher/DeviceConfig;->sScreenScaleRatio:F
+
+    sub-float v3, v1, v3
+
+    mul-float/2addr v2, v3
+
+    sget v3, Lcom/miui/home/launcher/CellScreen;->EDITIMG_ANIM_PIVOTY_RATIO:F
+
+    sub-float/2addr v1, v3
+
+    mul-float/2addr v2, v1
+
+    float-to-int v1, v2
+
+    add-int/2addr v0, v1
+
+    .line 944
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p0
+
+    const v1, 0x7f0700b5
+
+    invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result p0
 
-    return p0
+    .line 946
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
-    .line 979
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/miui/home/launcher/Launcher;->isSearchBarMenuShowing()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const/high16 v1, 0x41a00000    # 20.0f
+
+    .line 947
+    invoke-static {v1}, Lcom/miui/home/launcher/common/Utilities;->getDipPixelSize(F)I
+
+    move-result v1
+
+    add-int/2addr p0, v1
+
+    .line 950
     :cond_1
-    invoke-static {p0}, Lcom/miui/home/launcher/DeviceConfig;->calcIndicatorMarginBottomInEditMode(Landroid/content/Context;)I
+    sget v1, Lcom/miui/home/launcher/DeviceConfig;->sWorkspaceIndicatorMarginBottom:I
+
+    invoke-static {v0, p0}, Ljava/lang/Math;->min(II)I
+
+    move-result p0
+
+    invoke-static {v1, p0}, Ljava/lang/Math;->max(II)I
 
     move-result p0
 
@@ -2528,28 +2303,14 @@
 .method private static calculateHotseatMaxCount()I
     .locals 3
 
-    .line 1168
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getDeviceType()Lcom/miui/home/launcher/DeviceType;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/miui/home/launcher/DeviceType;->FOLDABLE_DEVICE:Lcom/miui/home/launcher/DeviceType;
-
-    if-ne v0, v1, :cond_0
-
-    const/4 v0, 0x5
-
-    return v0
-
-    .line 1171
-    :cond_0
+    .line 1103
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sScreenSmallestWidth:I
 
     sget v1, Lcom/miui/home/launcher/DeviceConfig;->sHotseatIconContainerWidth:I
 
     div-int/2addr v0, v1
 
-    .line 1172
+    .line 1104
     sget v1, Lcom/miui/home/launcher/DeviceConfig;->sCellCountX:I
 
     div-int v2, v0, v1
@@ -2566,7 +2327,7 @@
 .method public static checkDarkenWallpaperSupport(Landroid/content/Context;)Z
     .locals 7
 
-    .line 2318
+    .line 2235
     sget-boolean v0, Lcom/miui/home/launcher/common/Utilities;->ATLEAST_MIUI_12:Z
 
     const/4 v1, 0x1
@@ -2575,7 +2336,7 @@
 
     return v1
 
-    .line 2320
+    .line 2237
     :cond_0
     sget-boolean v0, Lcom/miui/home/launcher/common/Utilities;->ATLEAST_P:Z
 
@@ -2583,7 +2344,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 2322
+    .line 2239
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -2591,12 +2352,12 @@
 
     const-string v0, "com.android.systemui"
 
-    .line 2323
+    .line 2240
     invoke-virtual {p0, v0, v2}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
 
     move-result-object p0
 
-    .line 2324
+    .line 2241
     invoke-virtual {p0}, Landroid/content/pm/PackageInfo;->getLongVersionCode()J
 
     move-result-wide v3
@@ -2620,7 +2381,7 @@
     :catch_0
     move-exception p0
 
-    .line 2326
+    .line 2243
     invoke-virtual {p0}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
 
     :cond_2
@@ -2630,7 +2391,7 @@
 .method public static checkIsAccessibilityEnabledAsync()V
     .locals 1
 
-    .line 1967
+    .line 1897
     sget-object v0, Lcom/miui/home/launcher/-$$Lambda$DeviceConfig$2GeFyz3nMKubd-9nXPNGhyrdeQ4;->INSTANCE:Lcom/miui/home/launcher/-$$Lambda$DeviceConfig$2GeFyz3nMKubd-9nXPNGhyrdeQ4;
 
     invoke-static {v0}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
@@ -2641,7 +2402,7 @@
 .method public static checkIsInSnapShotMode()V
     .locals 2
 
-    .line 1923
+    .line 1853
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/data/system/themeScreenshotMode"
@@ -2660,7 +2421,7 @@
 .method static checkIsNetworkConnectedAsync()V
     .locals 1
 
-    .line 2008
+    .line 1938
     sget-object v0, Lcom/miui/home/launcher/-$$Lambda$DeviceConfig$dLWxJdj8Zo4InhhGIEmYWidwUsM;->INSTANCE:Lcom/miui/home/launcher/-$$Lambda$DeviceConfig$dLWxJdj8Zo4InhhGIEmYWidwUsM;
 
     invoke-static {v0}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
@@ -2671,20 +2432,7 @@
 .method public static checkIsSupportMultiWindowMode(Landroid/content/Context;)V
     .locals 1
 
-    .line 838
-    sget-boolean v0, Lcom/miui/home/launcher/common/Utilities;->ATLEAST_T:Z
-
-    if-eqz v0, :cond_0
-
-    const/4 p0, 0x1
-
-    .line 839
-    sput-boolean p0, Lcom/miui/home/launcher/DeviceConfig;->sIsSupportMultiWindowMode:Z
-
-    return-void
-
-    .line 842
-    :cond_0
+    .line 826
     new-instance v0, Lcom/miui/home/launcher/-$$Lambda$DeviceConfig$J90TJMwzFOho0hj2RPIW5gvs8Vk;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/-$$Lambda$DeviceConfig$J90TJMwzFOho0hj2RPIW5gvs8Vk;-><init>(Landroid/content/Context;)V
@@ -2702,21 +2450,21 @@
     :try_start_0
     const-string v1, "android.view.Display"
 
-    .line 2351
+    .line 2268
     invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v1
 
     const-string v2, "hasSmallFreeformFeature"
 
-    .line 2352
+    .line 2269
     new-array v3, v0, [Ljava/lang/Class;
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v2
 
-    .line 2353
+    .line 2270
     new-array v3, v0, [Ljava/lang/Object;
 
     invoke-virtual {v2, v1, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
@@ -2740,7 +2488,7 @@
 
     const-string v3, "isSupportSmallWindow: reflect error"
 
-    .line 2355
+    .line 2272
     invoke-static {v2, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -2750,7 +2498,7 @@
 .method public static checkIsTetheringSupported()V
     .locals 1
 
-    .line 2033
+    .line 1963
     sget-object v0, Lcom/miui/home/launcher/-$$Lambda$DeviceConfig$9R3IozFxgbwmVH-NTsWOjUFHwFw;->INSTANCE:Lcom/miui/home/launcher/-$$Lambda$DeviceConfig$9R3IozFxgbwmVH-NTsWOjUFHwFw;
 
     invoke-static {v0}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
@@ -2761,21 +2509,21 @@
 .method public static checkSearchBarSupport(Landroid/content/Context;)V
     .locals 1
 
-    .line 956
+    .line 920
     invoke-static {p0}, Lcom/miui/home/launcher/DeviceConfig;->isHomeSupportSearchBar(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 957
+    .line 921
     invoke-static {p0}, Lcom/miui/home/launcher/DeviceConfig;->isGlobalSearchSupportSearchBar(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 958
+    .line 922
     invoke-static {p0}, Lcom/miui/home/launcher/DeviceConfig;->isCurrentThemeSupportSearchBar(Landroid/content/Context;)Z
 
     move-result p0
@@ -2798,7 +2546,7 @@
 .method public static checkSettingTitle()V
     .locals 2
 
-    .line 513
+    .line 514
     sget-object v0, Lcom/miui/home/launcher/DeviceConfig;->sSettingTitle:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
@@ -2811,12 +2559,12 @@
 
     if-nez v0, :cond_0
 
-    .line 514
+    .line 515
     sget-object v0, Lcom/miui/home/launcher/DeviceConfig;->sCheckTitleRunnable:Ljava/lang/Runnable;
 
     invoke-static {v0}, Lcom/miui/home/launcher/common/BackgroundThread;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 515
+    .line 516
     sget-object v0, Lcom/miui/home/launcher/DeviceConfig;->sCheckTitleRunnable:Ljava/lang/Runnable;
 
     invoke-static {v0}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
@@ -2828,7 +2576,7 @@
 .method public static checkSystemUIFsgVersion()V
     .locals 1
 
-    .line 2043
+    .line 1973
     sget-object v0, Lcom/miui/home/launcher/-$$Lambda$DeviceConfig$24EKnG26AjOng3n6JCDT3Q9lRJE;->INSTANCE:Lcom/miui/home/launcher/-$$Lambda$DeviceConfig$24EKnG26AjOng3n6JCDT3Q9lRJE;
 
     invoke-static {v0}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
@@ -2839,7 +2587,7 @@
 .method public static clearBackupDB(Landroid/content/Context;Ljava/lang/String;)V
     .locals 3
 
-    .line 1629
+    .line 1570
     invoke-static {}, Lcom/miui/home/launcher/allapps/LauncherModeController;->getCurrentMode()Lcom/miui/home/launcher/allapps/LauncherMode;
 
     move-result-object v0
@@ -2862,7 +2610,7 @@
 
     move-result-object p0
 
-    .line 1630
+    .line 1571
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
     move-result p1
@@ -2871,7 +2619,7 @@
 
     return-void
 
-    .line 1633
+    .line 1574
     :cond_0
     invoke-virtual {p0}, Ljava/io/File;->delete()Z
 
@@ -2883,10 +2631,10 @@
 
     const/4 v0, 0x1
 
-    .line 1361
+    .line 1264
     invoke-static {p0, v0}, Lcom/miui/home/launcher/DeviceConfig;->removeInvalidateDatabase(Landroid/content/Context;Z)V
 
-    .line 1362
+    .line 1265
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2911,7 +2659,7 @@
 
     move-result-object v0
 
-    .line 1363
+    .line 1266
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -2926,7 +2674,7 @@
 .method public static doLauncherHavePaddingTopForStatusBarAndNotch()Z
     .locals 1
 
-    .line 2134
+    .line 2063
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->keepStatusBarShowingForBetterPerformance()Z
 
     move-result v0
@@ -2954,48 +2702,15 @@
     return v0
 .end method
 
-.method private static enableMultiWindow()Z
-    .locals 1
-
-    .line 834
-    sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->IS_BUILD_CETUS:Z
-
-    if-eqz v0, :cond_1
-
-    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->isInFoldLargeScreenMode()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    const/4 v0, 0x1
-
-    :goto_1
-    return v0
-.end method
-
 .method public static final finishMigratingDB()V
     .locals 1
 
     const/4 v0, -0x1
 
-    .line 1372
+    .line 1275
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sCellXMigratedFrom:I
 
-    .line 1373
+    .line 1276
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sCellYMigratedFrom:I
 
     return-void
@@ -3004,7 +2719,7 @@
 .method public static getAllAppRecommendDividerPaddingBottom()I
     .locals 1
 
-    .line 2241
+    .line 2158
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sAllAppsDividerBottom:I
 
     return v0
@@ -3013,7 +2728,7 @@
 .method public static getAllAppRecommendDividerPaddingTop()I
     .locals 1
 
-    .line 2237
+    .line 2154
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sAllAppsDividerTop:I
 
     return v0
@@ -3022,7 +2737,7 @@
 .method public static getAllAppsBackgroundAlpha()I
     .locals 1
 
-    .line 2213
+    .line 2142
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sAllAppsBackgroundAlpha:I
 
     return v0
@@ -3031,7 +2746,7 @@
 .method public static getAllAppsCellHeight()I
     .locals 1
 
-    .line 2180
+    .line 2109
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sAllAppsCellHeight:I
 
     return v0
@@ -3040,7 +2755,7 @@
 .method public static getAllAppsColorMode()Lcom/miui/home/launcher/allapps/AllAppsColorMode;
     .locals 1
 
-    .line 2209
+    .line 2138
     sget-object v0, Lcom/miui/home/launcher/DeviceConfig;->sAllAppsColorMode:Lcom/miui/home/launcher/allapps/AllAppsColorMode;
 
     return-object v0
@@ -3049,8 +2764,12 @@
 .method public static getAllAppsRecommendCount()I
     .locals 1
 
-    .line 1393
-    sget v0, Lcom/miui/home/launcher/DeviceConfig;->sRecommendAppsCount:I
+    .line 1292
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountX()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x2
 
     return v0
 .end method
@@ -3058,7 +2777,7 @@
 .method public static getApplicationIconContainerHeight()I
     .locals 1
 
-    .line 1108
+    .line 1047
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sApplicationIconContainerHeight:I
 
     return v0
@@ -3067,7 +2786,7 @@
 .method public static getApplicationIconContainerWidth()I
     .locals 1
 
-    .line 1112
+    .line 1051
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sApplicationIconContainerWidth:I
 
     return v0
@@ -3076,30 +2795,30 @@
 .method private static final getBetterDBForMigrate(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 6
 
-    .line 1740
+    .line 1681
     invoke-static {p0}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountSuffix(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1741
+    .line 1682
     invoke-static {p1}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountSuffix(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     const/4 v2, 0x2
 
-    .line 1742
+    .line 1683
     new-array v3, v2, [I
 
-    .line 1743
+    .line 1684
     new-array v2, v2, [I
 
-    .line 1744
+    .line 1685
     invoke-static {v0, v3}, Lcom/miui/home/launcher/ScreenUtils;->parseCellsSize(Ljava/lang/String;[I)Z
 
     move-result v0
 
-    .line 1745
+    .line 1686
     invoke-static {v1, v2}, Lcom/miui/home/launcher/ScreenUtils;->parseCellsSize(Ljava/lang/String;[I)Z
 
     move-result v1
@@ -3129,7 +2848,7 @@
     :cond_2
     const/4 v0, 0x0
 
-    .line 1753
+    .line 1694
     aget v1, v3, v0
 
     aget v4, v2, v0
@@ -3138,7 +2857,7 @@
 
     const/4 v0, 0x1
 
-    .line 1756
+    .line 1697
     aget v1, v3, v0
 
     sget v4, Lcom/miui/home/launcher/DeviceConfig;->sCellCountY:I
@@ -3163,7 +2882,7 @@
 
     return-object p0
 
-    .line 1758
+    .line 1699
     :cond_3
     aget v1, v3, v0
 
@@ -3189,7 +2908,7 @@
 
     return-object p1
 
-    .line 1761
+    .line 1702
     :cond_4
     aget v0, v3, v0
 
@@ -3205,7 +2924,7 @@
     :goto_0
     return-object p0
 
-    .line 1766
+    .line 1707
     :cond_6
     aget v1, v3, v0
 
@@ -3231,7 +2950,7 @@
 
     return-object p0
 
-    .line 1768
+    .line 1709
     :cond_7
     aget v1, v3, v0
 
@@ -3257,7 +2976,7 @@
 
     return-object p1
 
-    .line 1771
+    .line 1712
     :cond_8
     aget v0, v3, v0
 
@@ -3277,7 +2996,7 @@
 .method private static getCellConfigXSpKey()Ljava/lang/String;
     .locals 1
 
-    .line 1310
+    .line 1217
     invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isNoWordModel()Z
 
     move-result v0
@@ -3298,7 +3017,7 @@
 .method private static getCellConfigYSpKey()Ljava/lang/String;
     .locals 1
 
-    .line 1314
+    .line 1221
     invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isNoWordModel()Z
 
     move-result v0
@@ -3319,7 +3038,7 @@
 .method private static final getCellCountSuffix(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
-    .line 1778
+    .line 1719
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -3330,21 +3049,21 @@
 
     return-object v1
 
-    .line 1781
+    .line 1722
     :cond_0
     :try_start_0
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getDatabaseNamePrefix()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1782
+    .line 1723
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 1783
+    .line 1724
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -3371,7 +3090,7 @@
 .method public static final getCellCountX()I
     .locals 1
 
-    .line 1385
+    .line 1288
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sCellCountX:I
 
     return v0
@@ -3380,25 +3099,16 @@
 .method public static final getCellCountXDef(Landroid/content/Context;)I
     .locals 0
 
-    .line 1417
+    .line 1316
     sget p0, Lcom/miui/home/launcher/DeviceConfig;->sCellCountXDef:I
 
     return p0
 .end method
 
-.method public static getCellCountXDrawerMode()I
-    .locals 1
-
-    .line 1389
-    sget v0, Lcom/miui/home/launcher/DeviceConfig;->sCellCountXDrawerMode:I
-
-    return v0
-.end method
-
 .method public static getCellCountXMax(Landroid/content/Context;)I
     .locals 0
 
-    .line 1409
+    .line 1308
     sget p0, Lcom/miui/home/launcher/DeviceConfig;->sCellCountXMax:I
 
     return p0
@@ -3407,7 +3117,7 @@
 .method public static getCellCountXMin(Landroid/content/Context;)I
     .locals 0
 
-    .line 1401
+    .line 1300
     sget p0, Lcom/miui/home/launcher/DeviceConfig;->sCellCountXMin:I
 
     return p0
@@ -3416,7 +3126,7 @@
 .method public static final getCellCountY()I
     .locals 1
 
-    .line 1397
+    .line 1296
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sCellCountY:I
 
     return v0
@@ -3425,7 +3135,7 @@
 .method public static final getCellCountYDef(Landroid/content/Context;)I
     .locals 0
 
-    .line 1432
+    .line 1331
     sget p0, Lcom/miui/home/launcher/DeviceConfig;->sCellCountYDef:I
 
     return p0
@@ -3434,7 +3144,7 @@
 .method public static getCellCountYMax(Landroid/content/Context;)I
     .locals 0
 
-    .line 1413
+    .line 1312
     sget p0, Lcom/miui/home/launcher/DeviceConfig;->sCellCountYMax:I
 
     return p0
@@ -3443,7 +3153,7 @@
 .method public static getCellCountYMin(Landroid/content/Context;)I
     .locals 0
 
-    .line 1405
+    .line 1304
     sget p0, Lcom/miui/home/launcher/DeviceConfig;->sCellCountYMin:I
 
     return p0
@@ -3452,7 +3162,7 @@
 .method public static final getCellHeight()I
     .locals 1
 
-    .line 1444
+    .line 1343
     sget-object v0, Lcom/miui/home/launcher/DeviceConfig;->mActiveProfile:Lcom/miui/home/launcher/DeviceProfile;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/DeviceProfile;->getCellHeight()I
@@ -3465,7 +3175,7 @@
 .method public static getCellHorizontalSpacing()I
     .locals 1
 
-    .line 2097
+    .line 2027
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sCellHorizontalSpacing:I
 
     return v0
@@ -3474,7 +3184,7 @@
 .method public static final getCellSizeVal(II)Ljava/lang/String;
     .locals 1
 
-    .line 1448
+    .line 1347
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3497,7 +3207,7 @@
 .method public static getCellVerticalSpacing()I
     .locals 1
 
-    .line 2101
+    .line 2031
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sCellVerticalSpacing:I
 
     return v0
@@ -3506,7 +3216,7 @@
 .method public static final getCellWidth()I
     .locals 1
 
-    .line 1440
+    .line 1339
     sget-object v0, Lcom/miui/home/launcher/DeviceConfig;->mActiveProfile:Lcom/miui/home/launcher/DeviceProfile;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/DeviceProfile;->getCellWidth()I
@@ -3519,7 +3229,7 @@
 .method private static getCellWorkingHeight()I
     .locals 1
 
-    .line 2375
+    .line 2292
     sget-object v0, Lcom/miui/home/launcher/DeviceConfig;->mActiveProfile:Lcom/miui/home/launcher/DeviceProfile;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/DeviceProfile;->getCellWorkingHeight()I
@@ -3532,7 +3242,7 @@
 .method private static getCellWorkingWidth()I
     .locals 1
 
-    .line 2379
+    .line 2296
     sget-object v0, Lcom/miui/home/launcher/DeviceConfig;->mActiveProfile:Lcom/miui/home/launcher/DeviceProfile;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/DeviceProfile;->getCellWorkingWidth()I
@@ -3547,7 +3257,7 @@
 
     const-string v0, "Launcher.DeviceConfig"
 
-    .line 2383
+    .line 2300
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3568,7 +3278,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2384
+    .line 2301
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getRotation()I
 
     move-result v0
@@ -3579,7 +3289,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 2385
+    .line 2302
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getScreenHeight()I
 
     move-result v1
@@ -3594,7 +3304,7 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 2386
+    .line 2303
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getScreenWidth()I
 
     move-result v0
@@ -3606,7 +3316,7 @@
 
     move-result v0
 
-    .line 2387
+    .line 2304
     :goto_1
     new-instance v2, Landroid/graphics/Rect;
 
@@ -3634,31 +3344,31 @@
 
     float-to-int v4, v4
 
-    .line 2391
+    .line 2308
     iput v4, v2, Landroid/graphics/Rect;->left:I
 
     sub-float v4, v0, v3
 
     float-to-int v4, v4
 
-    .line 2392
+    .line 2309
     iput v4, v2, Landroid/graphics/Rect;->top:I
 
     add-float/2addr v1, v3
 
     float-to-int v1, v1
 
-    .line 2393
+    .line 2310
     iput v1, v2, Landroid/graphics/Rect;->right:I
 
     add-float/2addr v0, v3
 
     float-to-int v0, v0
 
-    .line 2394
+    .line 2311
     iput v0, v2, Landroid/graphics/Rect;->bottom:I
 
-    .line 2395
+    .line 2312
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getRotation()I
 
     move-result v0
@@ -3675,7 +3385,7 @@
 .method public static getCurrentDefaultScreenId()J
     .locals 2
 
-    .line 2076
+    .line 2006
     invoke-static {}, Lcom/miui/home/launcher/allapps/LauncherModeController;->getCurrentMode()Lcom/miui/home/launcher/allapps/LauncherMode;
 
     move-result-object v0
@@ -3690,7 +3400,7 @@
 .method public static getCurrentDefaultScreenIdFromPreference()J
     .locals 4
 
-    .line 2080
+    .line 2010
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -3709,16 +3419,16 @@
 .method public static getCurrentScreenCells()Ljava/lang/String;
     .locals 1
 
-    .line 1436
+    .line 1335
     sget-object v0, Lcom/miui/home/launcher/DeviceConfig;->sCurrentScreenCells:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public static getDatabaseName()Ljava/lang/String;
+.method public static final getDatabaseName()Ljava/lang/String;
     .locals 1
 
-    .line 1472
+    .line 1371
     sget-object v0, Lcom/miui/home/launcher/DeviceConfig;->sLauncherDatabaseName:Ljava/lang/String;
 
     return-object v0
@@ -3727,7 +3437,7 @@
 .method public static final getDatabaseNameBySuffix(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    .line 1452
+    .line 1351
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3756,8 +3466,8 @@
 
     const-string v0, ""
 
-    .line 1457
-    invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isPadDevice()Z
+    .line 1356
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isRotatable()Z
 
     move-result v1
 
@@ -3765,7 +3475,7 @@
 
     const-string v0, "_rotatable"
 
-    .line 1460
+    .line 1359
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -3784,62 +3494,172 @@
     return-object v0
 .end method
 
-.method public static getDefaultWorkspaceXmlId(Landroid/content/Context;Lcom/miui/home/launcher/allapps/LauncherMode;)I
-    .locals 0
+.method public static final getDefaultWorkspaceXmlId(Landroid/content/Context;Lcom/miui/home/launcher/allapps/LauncherMode;)I
+    .locals 3
 
-    .line 1477
-    invoke-static {p0, p1}, Lcom/miui/home/launcher/DeviceConfig;->calcDefaultXmlID(Landroid/content/Context;Lcom/miui/home/launcher/allapps/LauncherMode;)I
+    .line 1375
+    invoke-static {p1}, Lcom/miui/home/launcher/DeviceConfig;->calcDefaultWorkspaceName(Lcom/miui/home/launcher/allapps/LauncherMode;)Ljava/lang/String;
 
-    move-result p0
+    move-result-object v0
 
-    if-eqz p0, :cond_0
+    .line 1376
+    invoke-static {p0, v0}, Lcom/miui/home/launcher/DeviceConfig;->getXmlId(Landroid/content/Context;Ljava/lang/String;)I
 
-    return p0
+    move-result v0
 
-    .line 1482
-    :cond_0
+    if-nez v0, :cond_8
+
+    .line 1378
     invoke-static {p1}, Lcom/miui/home/launcher/allapps/LauncherModeController;->isElderlyManMode(Lcom/miui/home/launcher/allapps/LauncherMode;)Z
 
-    move-result p0
+    move-result p1
 
-    if-eqz p0, :cond_2
+    if-eqz p1, :cond_1
 
-    .line 1483
-    sget-boolean p0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
+    .line 1379
+    sget-boolean p1, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
-    if-eqz p0, :cond_1
+    if-eqz p1, :cond_0
 
-    const p0, 0x7f140012
+    const p1, 0x7f13000f
 
     goto :goto_0
 
-    :cond_1
-    const p0, 0x7f140022
+    :cond_0
+    const p1, 0x7f13001e
 
     :goto_0
-    return p0
+    move v0, p1
 
-    .line 1487
-    :cond_2
+    goto :goto_2
+
+    .line 1382
+    :cond_1
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountX()I
 
-    move-result p0
+    move-result p1
 
-    const/4 p1, 0x4
+    const/4 v1, 0x4
 
-    if-ge p0, p1, :cond_3
+    if-lt p1, v1, :cond_7
 
-    const p0, 0x7f14000e
+    .line 1383
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountY()I
 
-    return p0
+    move-result p1
 
-    .line 1491
+    const/4 v1, 0x6
+
+    if-lt p1, v1, :cond_4
+
+    .line 1384
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isRotatable()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    const p1, 0x7f13000d
+
+    move v0, p1
+
+    goto :goto_1
+
+    .line 1386
+    :cond_2
+    sget-boolean p1, Lcom/miui/home/launcher/DeviceConfig;->IS_MEITU:Z
+
+    if-eqz p1, :cond_3
+
+    const p1, 0x7f13001c
+
+    move v0, p1
+
+    goto :goto_1
+
     :cond_3
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->obtainDefaultXmlID()I
+    const p1, 0x7f130009
 
-    move-result p0
+    move v0, p1
 
-    return p0
+    goto :goto_1
+
+    .line 1391
+    :cond_4
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountY()I
+
+    move-result p1
+
+    const/4 v1, 0x5
+
+    if-lt p1, v1, :cond_7
+
+    .line 1392
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isRotatable()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_5
+
+    const p1, 0x7f13000c
+
+    move v0, p1
+
+    goto :goto_1
+
+    .line 1394
+    :cond_5
+    sget-boolean p1, Lcom/miui/home/launcher/DeviceConfig;->IS_MEITU:Z
+
+    if-eqz p1, :cond_6
+
+    const p1, 0x7f13001b
+
+    move v0, p1
+
+    goto :goto_1
+
+    :cond_6
+    const p1, 0x7f130007
+
+    move v0, p1
+
+    :cond_7
+    :goto_1
+    if-nez v0, :cond_8
+
+    const v0, 0x7f13000b
+
+    :cond_8
+    :goto_2
+    const-string p1, "Launcher.DeviceConfig"
+
+    .line 1406
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "get default workspace name:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p0
+
+    invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getResourceName(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v0
 .end method
 
 .method public static declared-synchronized getDesignedDefaultScreenId(Landroid/content/Context;)J
@@ -3849,7 +3669,7 @@
 
     monitor-enter v0
 
-    .line 1811
+    .line 1747
     :try_start_0
     sget-wide v1, Lcom/miui/home/launcher/DeviceConfig;->sDesignedDefaultScreenId:J
 
@@ -3859,7 +3679,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 1812
+    .line 1748
     sget-wide v1, Lcom/miui/home/launcher/DeviceConfig;->sDesignedDefaultScreenId:J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -3868,7 +3688,7 @@
 
     return-wide v1
 
-    .line 1815
+    .line 1751
     :cond_0
     :try_start_1
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -3887,17 +3707,17 @@
 
     move-result-object v1
 
-    .line 1816
+    .line 1752
     invoke-static {v1}, Landroid/util/Xml;->asAttributeSet(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
 
     move-result-object v2
 
-    .line 1817
+    .line 1753
     invoke-interface {v1}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v3
 
-    .line 1819
+    .line 1755
     :cond_1
     :goto_0
     invoke-interface {v1}, Lorg/xmlpull/v1/XmlPullParser;->next()I
@@ -3908,7 +3728,7 @@
 
     if-ne v4, v5, :cond_2
 
-    .line 1820
+    .line 1756
     invoke-interface {v1}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v5
@@ -3926,7 +3746,7 @@
 
     goto :goto_0
 
-    .line 1824
+    .line 1760
     :cond_3
     invoke-interface {v1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
@@ -3934,23 +3754,23 @@
 
     const-string v5, "default"
 
-    .line 1825
+    .line 1761
     invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
 
     if-eqz v4, :cond_1
 
-    .line 1826
+    .line 1762
     sget-object v4, Lcom/miui/home/R$styleable;->Favorite:[I
 
     invoke-virtual {p0, v2, v4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v4
 
-    const/16 v5, 0xe
+    const/16 v5, 0xc
 
-    .line 1827
+    .line 1763
     invoke-virtual {v4, v5}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v5
@@ -3965,12 +3785,12 @@
 
     sput-wide v5, Lcom/miui/home/launcher/DeviceConfig;->sDesignedDefaultScreenId:J
 
-    .line 1828
+    .line 1764
     invoke-virtual {v4}, Landroid/content/res/TypedArray;->recycle()V
 
     goto :goto_0
 
-    .line 1831
+    .line 1767
     :cond_4
     sget-wide v1, Lcom/miui/home/launcher/DeviceConfig;->sDesignedDefaultScreenId:J
     :try_end_1
@@ -3981,7 +3801,7 @@
 
     return-wide v1
 
-    .line 1835
+    .line 1771
     :catch_0
     :try_start_2
     sget-wide v1, Lcom/miui/home/launcher/DeviceConfig;->INVALIDATE_DEFAULT_SCREEN_ID:J
@@ -4003,7 +3823,7 @@
 .method public static final getDeviceHeight()I
     .locals 1
 
-    .line 1024
+    .line 963
     sget-object v0, Lcom/miui/home/launcher/DeviceConfig;->mActiveProfile:Lcom/miui/home/launcher/DeviceProfile;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/DeviceProfile;->getDeviceHeight()I
@@ -4013,49 +3833,10 @@
     return v0
 .end method
 
-.method public static getDeviceType()Lcom/miui/home/launcher/DeviceType;
-    .locals 2
-
-    .line 2444
-    sget-boolean v0, Lmiui/os/Build;->IS_TABLET:Z
-
-    if-eqz v0, :cond_0
-
-    .line 2445
-    sget-object v0, Lcom/miui/home/launcher/DeviceType;->PAD:Lcom/miui/home/launcher/DeviceType;
-
-    return-object v0
-
-    :cond_0
-    const-string v0, "persist.sys.muiltdisplay_type"
-
-    const/4 v1, 0x0
-
-    .line 2446
-    invoke-static {v0, v1}, Lcom/miui/launcher/utils/SystemProperties;->getInt(Ljava/lang/String;I)I
-
-    move-result v0
-
-    const/4 v1, 0x2
-
-    if-ne v0, v1, :cond_1
-
-    .line 2447
-    sget-object v0, Lcom/miui/home/launcher/DeviceType;->FOLDABLE_DEVICE:Lcom/miui/home/launcher/DeviceType;
-
-    return-object v0
-
-    .line 2449
-    :cond_1
-    sget-object v0, Lcom/miui/home/launcher/DeviceType;->PHONE:Lcom/miui/home/launcher/DeviceType;
-
-    return-object v0
-.end method
-
 .method public static final getDeviceWidth()I
     .locals 1
 
-    .line 1020
+    .line 959
     sget-object v0, Lcom/miui/home/launcher/DeviceConfig;->mActiveProfile:Lcom/miui/home/launcher/DeviceProfile;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/DeviceProfile;->getDeviceWidth()I
@@ -4070,7 +3851,7 @@
 
     const/4 v0, 0x0
 
-    .line 2272
+    .line 2189
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -4082,14 +3863,14 @@
 
     const-string v1, "dimen"
 
-    .line 2273
+    .line 2190
     invoke-virtual {p0, p2, v1, p1}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result p1
 
     if-lez p1, :cond_0
 
-    .line 2275
+    .line 2192
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result p0
@@ -4103,7 +3884,7 @@
     :catch_0
     move-exception p0
 
-    .line 2278
+    .line 2195
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_0
@@ -4114,7 +3895,7 @@
 .method public static getDragIconScaleRatio()F
     .locals 1
 
-    .line 942
+    .line 906
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sDragIconScaleRatio:F
 
     return v0
@@ -4123,26 +3904,16 @@
 .method public static final getEditModeTopMenuMarginTop()I
     .locals 2
 
-    .line 1131
+    .line 1070
     sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sIsInMultiWindowMode:Z
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->isInFoldLargeScreenMode()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const v0, 0x7f070126
+    const v0, 0x7f0700a8
 
     goto :goto_0
 
-    .line 1134
+    .line 1073
     :cond_0
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->doLauncherHavePaddingTopForStatusBarAndNotch()Z
 
@@ -4150,14 +3921,14 @@
 
     if-eqz v0, :cond_1
 
-    const v0, 0x7f070127
+    const v0, 0x7f0700a9
 
     goto :goto_0
 
     :cond_1
-    const v0, 0x7f070125
+    const v0, 0x7f0700a7
 
-    .line 1138
+    .line 1077
     :goto_0
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
@@ -4177,7 +3948,7 @@
 .method public static getFolderCellHeight()I
     .locals 1
 
-    .line 2184
+    .line 2113
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sFolderCellHeight:I
 
     return v0
@@ -4186,7 +3957,7 @@
 .method public static getFolderCellMaxWidth()I
     .locals 1
 
-    .line 2188
+    .line 2117
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sFolderCellMaxWidth:I
 
     return v0
@@ -4195,7 +3966,7 @@
 .method public static getGlobalSwipeUpPackage(Landroid/content/Context;)I
     .locals 2
 
-    .line 1919
+    .line 1849
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -4211,49 +3982,10 @@
     return p0
 .end method
 
-.method public static getHotSeatsCellContentHeight()I
-    .locals 1
-
-    .line 1182
-    sget-object v0, Lcom/miui/home/launcher/DeviceConfig;->mActiveProfile:Lcom/miui/home/launcher/DeviceProfile;
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/DeviceProfile;->getHotSeatsCellContentHeight()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static getHotSeatsCellHeight()I
-    .locals 1
-
-    .line 1306
-    sget-object v0, Lcom/miui/home/launcher/DeviceConfig;->mActiveProfile:Lcom/miui/home/launcher/DeviceProfile;
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/DeviceProfile;->getHotSeatsCellHeight()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static getHotSeatsCellWidth()I
-    .locals 1
-
-    .line 1298
-    sget-object v0, Lcom/miui/home/launcher/DeviceConfig;->mActiveProfile:Lcom/miui/home/launcher/DeviceProfile;
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/DeviceProfile;->getHotSeatsCellWidth()I
-
-    move-result v0
-
-    return v0
-.end method
-
 .method public static getHotSeatsHeight()I
     .locals 1
 
-    .line 677
+    .line 674
     sget-object v0, Lcom/miui/home/launcher/DeviceConfig;->sHotSeatsHeight:Lcom/miui/home/launcher/common/ChangeableValue;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/common/ChangeableValue;->getValue()Ljava/lang/Object;
@@ -4269,23 +4001,10 @@
     return v0
 .end method
 
-.method public static getHotSeatsListCellWidth()I
-    .locals 1
-
-    .line 1302
-    sget-object v0, Lcom/miui/home/launcher/DeviceConfig;->mActiveProfile:Lcom/miui/home/launcher/DeviceProfile;
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/DeviceProfile;->getHotSeatsCellListWidth()I
-
-    move-result v0
-
-    return v0
-.end method
-
 .method public static getHotSeatsMarginBottom()I
     .locals 1
 
-    .line 673
+    .line 670
     sget-object v0, Lcom/miui/home/launcher/DeviceConfig;->sHotSeatsMarginBottom:Lcom/miui/home/launcher/common/ChangeableValue;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/common/ChangeableValue;->getValue()Ljava/lang/Object;
@@ -4301,10 +4020,10 @@
     return v0
 .end method
 
-.method public static getHotseatMaxCount()I
+.method public static final getHotseatMaxCount()I
     .locals 1
 
-    .line 1464
+    .line 1363
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sHotseatMaxCount:I
 
     return v0
@@ -4313,7 +4032,7 @@
 .method public static final getIconHeight()I
     .locals 1
 
-    .line 1104
+    .line 1043
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sIconHeight:I
 
     return v0
@@ -4322,7 +4041,7 @@
 .method public static final getIconWidth()I
     .locals 1
 
-    .line 1100
+    .line 1039
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sIconWidth:I
 
     return v0
@@ -4337,7 +4056,7 @@
 
     if-eqz p0, :cond_1
 
-    .line 802
+    .line 795
     sget-boolean p0, Lcom/miui/home/launcher/DeviceConfig;->sIsLayoutRtl:Z
 
     if-eqz p0, :cond_0
@@ -4347,7 +4066,7 @@
     :cond_0
     return v0
 
-    .line 804
+    .line 797
     :cond_1
     sget-boolean p0, Lcom/miui/home/launcher/DeviceConfig;->sIsLayoutRtl:Z
 
@@ -4365,7 +4084,7 @@
 .method public static getLastRotation()I
     .locals 1
 
-    .line 297
+    .line 293
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sLastRotation:I
 
     return v0
@@ -4374,7 +4093,7 @@
 .method public static final getMiuiTitleHeight()I
     .locals 3
 
-    .line 1539
+    .line 1426
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellHeight()I
 
     move-result v0
@@ -4385,12 +4104,12 @@
 
     add-int/2addr v0, v1
 
-    .line 1540
+    .line 1427
     invoke-static {}, Lcom/miui/home/launcher/common/LauncherIconSizeProvider;->getInstance()Lcom/miui/home/launcher/common/LauncherIconSizeProvider;
 
     move-result-object v1
 
-    .line 1541
+    .line 1428
     invoke-virtual {v1}, Lcom/miui/home/launcher/common/LauncherIconSizeProvider;->getLauncherIconHeight()I
 
     move-result v1
@@ -4407,21 +4126,19 @@
 .method public static final getMiuiWidgetPaddingTop()I
     .locals 1
 
-    .line 1535
+    .line 1422
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sMiuiWidgetPaddingTop:I
 
     return v0
 .end method
 
 .method public static final getMiuiWidgetSizeSpec(IIZ)J
-    .locals 2
+    .locals 1
 
-    .line 1546
-    sget-object v0, Lcom/miui/home/launcher/DeviceConfig;->sMiuiWidgetSizeSpec:Lcom/miui/home/launcher/widget/MiuiWidgetSizeSpec;
+    .line 1433
+    sget-object v0, Lcom/miui/home/launcher/DeviceConfig;->mActiveProfile:Lcom/miui/home/launcher/DeviceProfile;
 
-    sget-object v1, Lcom/miui/home/launcher/DeviceConfig;->mActiveProfile:Lcom/miui/home/launcher/DeviceProfile;
-
-    invoke-interface {v0, v1, p0, p1, p2}, Lcom/miui/home/launcher/widget/MiuiWidgetSizeSpec;->getMiuiWidgetSizeSpec(Lcom/miui/home/launcher/DeviceProfile;IIZ)J
+    invoke-static {v0, p0, p1, p2}, Lcom/miui/home/launcher/DeviceConfig;->getMiuiWidgetSizeSpec(Lcom/miui/home/launcher/DeviceProfile;IIZ)J
 
     move-result-wide p0
 
@@ -4429,14 +4146,197 @@
 .end method
 
 .method public static final getMiuiWidgetSizeSpec(Lcom/miui/home/launcher/DeviceProfile;IIZ)J
-    .locals 1
+    .locals 8
 
-    .line 1550
-    sget-object v0, Lcom/miui/home/launcher/DeviceConfig;->sMiuiWidgetSizeSpec:Lcom/miui/home/launcher/widget/MiuiWidgetSizeSpec;
+    .line 1459
+    invoke-static {}, Lcom/miui/home/launcher/common/LauncherIconSizeProvider;->getInstance()Lcom/miui/home/launcher/common/LauncherIconSizeProvider;
 
-    invoke-interface {v0, p0, p1, p2, p3}, Lcom/miui/home/launcher/widget/MiuiWidgetSizeSpec;->getMiuiWidgetSizeSpec(Lcom/miui/home/launcher/DeviceProfile;IIZ)J
+    move-result-object v0
 
-    move-result-wide p0
+    .line 1461
+    invoke-virtual {p0}, Lcom/miui/home/launcher/DeviceProfile;->getCellWidth()I
+
+    move-result v1
+
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellHorizontalSpacing()I
+
+    move-result v2
+
+    add-int/2addr v1, v2
+
+    .line 1462
+    invoke-virtual {p0}, Lcom/miui/home/launcher/DeviceProfile;->getCellHeight()I
+
+    move-result v2
+
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellVerticalSpacing()I
+
+    move-result v3
+
+    add-int/2addr v2, v3
+
+    add-int/lit8 v3, p2, -0x1
+
+    mul-int/2addr v3, v2
+
+    .line 1465
+    invoke-virtual {v0}, Lcom/miui/home/launcher/common/LauncherIconSizeProvider;->getLauncherIconHeight()I
+
+    move-result v4
+
+    add-int/2addr v3, v4
+
+    int-to-long v3, v3
+
+    const/4 v5, 0x1
+
+    if-ne p2, v5, :cond_0
+
+    if-eq p1, v5, :cond_0
+
+    .line 1469
+    invoke-virtual {v0}, Lcom/miui/home/launcher/common/LauncherIconSizeProvider;->getLauncherIconHeight()I
+
+    move-result v3
+
+    int-to-long v3, v3
+
+    .line 1473
+    :cond_0
+    sget v5, Lcom/miui/home/launcher/DeviceConfig;->sMiuiWidgetPaddingTop:I
+
+    int-to-long v5, v5
+
+    add-long/2addr v3, v5
+
+    const/4 v5, 0x0
+
+    mul-int/lit8 v6, v1, 0x2
+
+    .line 1475
+    invoke-virtual {p0}, Lcom/miui/home/launcher/DeviceProfile;->getCellHeight()I
+
+    move-result p0
+
+    .line 1476
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellVerticalSpacing()I
+
+    move-result v7
+
+    add-int/2addr p0, v7
+
+    .line 1477
+    invoke-virtual {v0}, Lcom/miui/home/launcher/common/LauncherIconSizeProvider;->getLauncherIconHeight()I
+
+    move-result v7
+
+    add-int/2addr p0, v7
+
+    sub-int/2addr v6, p0
+
+    .line 1475
+    invoke-static {v5, v6}, Ljava/lang/Math;->max(II)I
+
+    move-result p0
+
+    .line 1479
+    invoke-virtual {v0}, Lcom/miui/home/launcher/common/LauncherIconSizeProvider;->getLauncherIconWidth()I
+
+    move-result v0
+
+    sub-int v0, v1, v0
+
+    sub-int p0, v0, p0
+
+    int-to-float v5, p0
+
+    int-to-float v6, v0
+
+    const v7, 0x3e4ccccd    # 0.2f
+
+    mul-float/2addr v6, v7
+
+    cmpl-float v5, v5, v6
+
+    if-lez v5, :cond_1
+
+    float-to-int p0, v6
+
+    :cond_1
+    sub-int/2addr v0, p0
+
+    mul-int/2addr v1, p1
+
+    sub-int/2addr v1, v0
+
+    int-to-long v0, v1
+
+    if-nez p3, :cond_2
+
+    mul-int/2addr v2, p2
+
+    .line 1490
+    sget p0, Lcom/miui/home/launcher/DeviceConfig;->sMiuiWidgetPaddingTop:I
+
+    mul-int/lit8 p0, p0, 0x2
+
+    sub-int/2addr v2, p0
+
+    int-to-long v3, v2
+
+    :cond_2
+    const-string p0, "Launcher.DeviceConfig"
+
+    .line 1492
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "getMiuiWidgetSizeSpec("
+
+    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, ", "
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, ", "
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string p1, ") = ("
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string p1, ", "
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string p1, ")"
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/16 p0, 0x20
+
+    shl-long p0, v0, p0
+
+    or-long/2addr p0, v3
 
     return-wide p0
 .end method
@@ -4444,7 +4344,7 @@
 .method public static getNetWorkConnectedString()Ljava/lang/String;
     .locals 1
 
-    .line 2029
+    .line 1959
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isNetWorkConnected()Z
 
     move-result v0
@@ -4465,7 +4365,7 @@
 .method public static getNotchEditModePaddingTopDelta()I
     .locals 1
 
-    .line 2072
+    .line 2002
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->doLauncherHavePaddingTopForStatusBarAndNotch()Z
 
     move-result v0
@@ -4486,7 +4386,7 @@
 .method public static getNotchHeight(Landroid/content/Context;)I
     .locals 2
 
-    .line 2285
+    .line 2202
     invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isNotch()Z
 
     move-result v0
@@ -4502,7 +4402,7 @@
 
     const-string v1, "notch_height"
 
-    .line 2288
+    .line 2205
     invoke-static {p0, v0, v1}, Lcom/miui/home/launcher/DeviceConfig;->getDimenFromPkgResource(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result p0
@@ -4515,13 +4415,13 @@
 
     const/4 v0, 0x0
 
-    .line 1712
+    .line 1653
     :try_start_0
     invoke-virtual {p1, p0}, Lcom/miui/home/launcher/allapps/LauncherMode;->getLauncherDatabaseDir(Landroid/content/Context;)Ljava/io/File;
 
     move-result-object v1
 
-    .line 1713
+    .line 1654
     new-instance v2, Lcom/miui/home/launcher/DeviceConfig$4;
 
     invoke-direct {v2}, Lcom/miui/home/launcher/DeviceConfig$4;-><init>()V
@@ -4532,7 +4432,7 @@
 
     if-eqz v1, :cond_3
 
-    .line 1720
+    .line 1661
     array-length v2, v1
 
     if-nez v2, :cond_0
@@ -4544,13 +4444,13 @@
 
     move-object v3, v0
 
-    .line 1723
+    .line 1664
     :goto_0
     array-length v4, v1
 
     if-ge v2, v4, :cond_1
 
-    .line 1724
+    .line 1665
     aget-object v4, v1, v2
 
     invoke-static {v3, v4}, Lcom/miui/home/launcher/DeviceConfig;->getBetterDBForMigrate(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -4564,7 +4464,7 @@
     :cond_1
     const-string v1, "Launcher.DeviceConfig"
 
-    .line 1726
+    .line 1667
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -4581,7 +4481,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1727
+    .line 1668
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -4590,7 +4490,7 @@
 
     return-object v0
 
-    .line 1730
+    .line 1671
     :cond_2
     invoke-virtual {p1, p0, v3}, Lcom/miui/home/launcher/allapps/LauncherMode;->getLauncherDatabasePath(Landroid/content/Context;Ljava/lang/String;)Ljava/io/File;
 
@@ -4611,7 +4511,7 @@
 
     const-string v1, "find db fail"
 
-    .line 1732
+    .line 1673
     invoke-static {p1, v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-object v0
@@ -4620,7 +4520,7 @@
 .method public static getQuickCallCellVerticalSpacing()I
     .locals 1
 
-    .line 2105
+    .line 2035
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sQuickCallCellVerticalSpacing:I
 
     return v0
@@ -4629,7 +4529,7 @@
 .method public static getQuickEditScreenRatio()F
     .locals 1
 
-    .line 946
+    .line 910
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sQuickEditScreenRatio:F
 
     return v0
@@ -4638,7 +4538,7 @@
 .method public static getRealScreenHeight()I
     .locals 1
 
-    .line 1036
+    .line 975
     sget-object v0, Lcom/miui/home/launcher/DeviceConfig;->mActiveProfile:Lcom/miui/home/launcher/DeviceProfile;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/DeviceProfile;->getRealScreenHeight()I
@@ -4651,7 +4551,7 @@
 .method public static final getRecommendGridPaddingBottom()I
     .locals 1
 
-    .line 1142
+    .line 1081
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isScreenOrientationLandscape()Z
 
     move-result v0
@@ -4672,7 +4572,7 @@
 .method public static getRotation()I
     .locals 1
 
-    .line 301
+    .line 297
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sRotation:I
 
     return v0
@@ -4681,7 +4581,7 @@
 .method public static final getScreenDensity()F
     .locals 1
 
-    .line 1048
+    .line 987
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sScreenDensity:F
 
     return v0
@@ -4690,7 +4590,7 @@
 .method public static getScreenDensityDpi()I
     .locals 1
 
-    .line 1052
+    .line 991
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sScreenDensityDpi:I
 
     return v0
@@ -4699,7 +4599,7 @@
 .method public static final getScreenHeight()I
     .locals 1
 
-    .line 1032
+    .line 971
     sget-object v0, Lcom/miui/home/launcher/DeviceConfig;->mActiveProfile:Lcom/miui/home/launcher/DeviceProfile;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/DeviceProfile;->getScreenHeight()I
@@ -4712,7 +4612,7 @@
 .method public static getScreenLongSize()I
     .locals 1
 
-    .line 1040
+    .line 979
     sget-object v0, Lcom/miui/home/launcher/DeviceConfig;->mActiveProfile:Lcom/miui/home/launcher/DeviceProfile;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/DeviceProfile;->getScreenLongSize()I
@@ -4725,7 +4625,7 @@
 .method public static final getScreenWidth()I
     .locals 1
 
-    .line 1028
+    .line 967
     sget-object v0, Lcom/miui/home/launcher/DeviceConfig;->mActiveProfile:Lcom/miui/home/launcher/DeviceProfile;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/DeviceProfile;->getScreenWidth()I
@@ -4738,19 +4638,19 @@
 .method public static getSearchBarHolderVerticalPadding(Landroid/content/Context;)I
     .locals 1
 
-    .line 2196
+    .line 2125
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isShowNavigationBar()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2197
+    .line 2126
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    const v0, 0x7f070064
+    const v0, 0x7f07005c
 
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -4758,13 +4658,13 @@
 
     goto :goto_0
 
-    .line 2198
+    .line 2127
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    const v0, 0x7f070063
+    const v0, 0x7f07005b
 
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -4777,7 +4677,7 @@
 .method public static getSearchBarLightThreshold()F
     .locals 1
 
-    .line 2192
+    .line 2121
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sSearchBarLightThreshold:F
 
     return v0
@@ -4786,7 +4686,7 @@
 .method public static getSearchBarMarginBottom()I
     .locals 1
 
-    .line 669
+    .line 666
     sget-object v0, Lcom/miui/home/launcher/DeviceConfig;->sSearchBarMarginBottom:Lcom/miui/home/launcher/common/ChangeableValue;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/common/ChangeableValue;->getValue()Ljava/lang/Object;
@@ -4805,7 +4705,7 @@
 .method public static getSearchBarSource(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
 
-    .line 627
+    .line 624
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -4822,7 +4722,7 @@
 .method public static getSearchBarStyle(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
 
-    .line 665
+    .line 662
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -4839,7 +4739,7 @@
 .method public static getSearchBarUrl(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
 
-    .line 661
+    .line 658
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -4856,7 +4756,7 @@
 .method public static getSearchBarWidth()I
     .locals 1
 
-    .line 681
+    .line 678
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sSearchBarWidth:I
 
     return v0
@@ -4865,7 +4765,7 @@
 .method public static getSearchBarWidthDelta()I
     .locals 1
 
-    .line 685
+    .line 682
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sSearchBarWidthDelta:I
 
     return v0
@@ -4874,7 +4774,7 @@
 .method public static getSettingTitle()Ljava/lang/String;
     .locals 2
 
-    .line 509
+    .line 510
     sget-object v0, Lcom/miui/home/launcher/DeviceConfig;->sSettingTitle:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
@@ -4893,7 +4793,7 @@
 .method private static getSettingTitle(Landroid/content/Context;)Ljava/lang/String;
     .locals 3
 
-    .line 528
+    .line 529
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -4911,14 +4811,14 @@
 
     const-string v2, "com.android.settings"
 
-    .line 529
+    .line 530
     invoke-virtual {p0, v0, v1, v2}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
     if-lez v0, :cond_0
 
-    .line 531
+    .line 532
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -4934,7 +4834,7 @@
 
     const-string v1, "getSettingTitle failed"
 
-    .line 534
+    .line 535
     invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0
@@ -4946,7 +4846,7 @@
 .method public static getShortcutMenuDisappearThreshold()I
     .locals 1
 
-    .line 1126
+    .line 1065
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sShortcutMenuDisappearThreshold:I
 
     return v0
@@ -4955,7 +4855,7 @@
 .method public static final getStatusBarHeight()I
     .locals 1
 
-    .line 1120
+    .line 1059
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sStatusBarHeight:I
 
     return v0
@@ -4964,7 +4864,7 @@
 .method public static getSystemUIFsgVersion()I
     .locals 1
 
-    .line 2050
+    .line 1980
     sget-object v0, Lcom/miui/home/launcher/DeviceConfig;->sSystemuiFsgVersion:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
@@ -4977,7 +4877,7 @@
 .method public static getThemeValues()Lmiui/content/res/ThemeValues;
     .locals 1
 
-    .line 777
+    .line 774
     sget-object v0, Lcom/miui/home/launcher/DeviceConfig;->sThemeValues:Lmiui/content/res/ThemeValues;
 
     return-object v0
@@ -4986,7 +4886,7 @@
 .method public static getWidgetCellDefaultHeight()I
     .locals 1
 
-    .line 2093
+    .line 2023
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sWidgetCellDefaultHeight:I
 
     return v0
@@ -4995,7 +4895,7 @@
 .method public static getWidgetCellDefaultWidth()I
     .locals 1
 
-    .line 2089
+    .line 2019
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sWidgetCellDefaultWidth:I
 
     return v0
@@ -5006,7 +4906,7 @@
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 1526
+    .line 1413
     invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->getDipPixelSize(F)I
 
     move-result v0
@@ -5033,7 +4933,7 @@
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 1531
+    .line 1418
     invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->getDipPixelSize(F)I
 
     move-result v0
@@ -5058,7 +4958,7 @@
 .method public static final getWorkspaceCellPaddingBottom()I
     .locals 1
 
-    .line 1096
+    .line 1035
     sget-object v0, Lcom/miui/home/launcher/DeviceConfig;->sWorkspaceCellPaddingBottom:Lcom/miui/home/launcher/common/ChangeableValue;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/common/ChangeableValue;->getValue()Ljava/lang/Object;
@@ -5077,7 +4977,7 @@
 .method public static final getWorkspaceCellPaddingSide()I
     .locals 1
 
-    .line 1076
+    .line 1015
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sWorkspaceCellPaddingSide:I
 
     return v0
@@ -5086,27 +4986,17 @@
 .method public static final getWorkspaceCellPaddingTop()I
     .locals 1
 
-    .line 1080
+    .line 1019
     sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sIsInMultiWindowMode:Z
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->isInFoldLargeScreenMode()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 1081
+    .line 1020
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sWorkspaceCellPaddingTopMultiWindow:I
 
     return v0
 
-    .line 1083
+    .line 1022
     :cond_0
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getWorkspaceNormalModeCellPaddingTop()I
 
@@ -5118,7 +5008,7 @@
 .method public static getWorkspaceIndicatorMarginBottom()I
     .locals 1
 
-    .line 1791
+    .line 1732
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sWorkspaceIndicatorMarginBottom:I
 
     return v0
@@ -5127,17 +5017,8 @@
 .method public static getWorkspaceIndicatorMarginBottomInEditMode()I
     .locals 1
 
-    .line 1795
+    .line 1736
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sWorkspaceIndicatorMarginBottomInEditMode:I
-
-    return v0
-.end method
-
-.method public static getWorkspaceIndicatorThumbnailHeight()I
-    .locals 1
-
-    .line 1012
-    sget v0, Lcom/miui/home/launcher/DeviceConfig;->sWorkspaceIndicatorThumbnailHeight:I
 
     return v0
 .end method
@@ -5145,7 +5026,7 @@
 .method public static final getWorkspaceInvalidateEdgeWidth()I
     .locals 1
 
-    .line 1116
+    .line 1055
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sWorkspaceInvalidateEdgeWidth:I
 
     return v0
@@ -5154,19 +5035,19 @@
 .method private static final getWorkspaceNormalModeCellPaddingTop()I
     .locals 1
 
-    .line 1088
+    .line 1027
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isShowNotch()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1089
+    .line 1028
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sWorkspaceCellPaddingTopNotch:I
 
     return v0
 
-    .line 1091
+    .line 1030
     :cond_0
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sWorkspaceCellPaddingTop:I
 
@@ -5174,62 +5055,36 @@
 .end method
 
 .method public static getWorkspacePaddingTop(Landroid/content/Context;)F
-    .locals 2
+    .locals 1
 
-    .line 1799
+    .line 1740
+    sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sIsInMultiWindowMode:Z
+
+    if-eqz v0, :cond_0
+
+    const/4 p0, 0x0
+
+    goto :goto_0
+
+    :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    const v0, 0x7f070613
+    const v0, 0x7f0703c4
 
-    .line 1800
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getDimension(I)F
-
-    move-result v0
-
-    .line 1801
-    sget-boolean v1, Lcom/miui/home/launcher/DeviceConfig;->sIsInMultiWindowMode:Z
-
-    if-eqz v1, :cond_0
-
-    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/miui/home/launcher/Application;->isInFoldLargeScreenMode()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    const v1, 0x7f070680
-
-    .line 1802
-    invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result p0
 
-    add-float/2addr v0, p0
-
-    return v0
-
-    .line 1804
-    :cond_0
-    sget-boolean p0, Lcom/miui/home/launcher/DeviceConfig;->sIsInMultiWindowMode:Z
-
-    if-eqz p0, :cond_1
-
-    const/4 v0, 0x0
-
-    :cond_1
-    return v0
+    :goto_0
+    return p0
 .end method
 
 .method private static getXmlId(Landroid/content/Context;Ljava/lang/String;)I
     .locals 2
 
-    .line 1352
+    .line 1255
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -5250,7 +5105,7 @@
 
     move-result-object p1
 
-    .line 1353
+    .line 1256
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
@@ -5267,7 +5122,7 @@
 .method private static hasNavigationBar()Z
     .locals 8
 
-    .line 540
+    .line 541
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/4 v1, 0x0
@@ -5281,28 +5136,28 @@
     :try_start_0
     const-string v0, "android.view.WindowManagerGlobal"
 
-    .line 542
+    .line 543
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
     const-string v3, "getWindowManagerService"
 
-    .line 543
+    .line 544
     new-array v4, v2, [Ljava/lang/Class;
 
     invoke-virtual {v0, v3, v4}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v0
 
-    .line 544
+    .line 545
     new-array v3, v2, [Ljava/lang/Object;
 
     invoke-virtual {v0, v1, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 545
+    .line 546
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
@@ -5311,7 +5166,7 @@
 
     const/4 v4, 0x1
 
-    .line 546
+    .line 547
     new-array v5, v4, [Ljava/lang/Class;
 
     sget-object v6, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
@@ -5322,26 +5177,26 @@
 
     move-result-object v1
 
-    .line 547
+    .line 548
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v3
 
-    .line 548
+    .line 549
     invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v5
 
     const-string v6, "getDisplayId"
 
-    .line 549
+    .line 550
     new-array v7, v2, [Ljava/lang/Class;
 
     invoke-virtual {v5, v6, v7}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v5
 
-    .line 550
+    .line 551
     new-array v4, v4, [Ljava/lang/Object;
 
     new-array v6, v2, [Ljava/lang/Object;
@@ -5373,7 +5228,7 @@
 
     const-string v3, "hasNavigationBar Q"
 
-    .line 552
+    .line 553
     invoke-static {v1, v3, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
@@ -5382,42 +5237,42 @@
     :try_start_1
     const-string v0, "android.view.WindowManagerGlobal"
 
-    .line 556
+    .line 557
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
     const-string v3, "getWindowManagerService"
 
-    .line 557
+    .line 558
     new-array v4, v2, [Ljava/lang/Class;
 
     invoke-virtual {v0, v3, v4}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v0
 
-    .line 558
+    .line 559
     new-array v3, v2, [Ljava/lang/Object;
 
     invoke-virtual {v0, v1, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 559
+    .line 560
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
 
     const-string v3, "hasNavigationBar"
 
-    .line 560
+    .line 561
     new-array v4, v2, [Ljava/lang/Class;
 
     invoke-virtual {v1, v3, v4}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v1
 
-    .line 561
+    .line 562
     new-array v3, v2, [Ljava/lang/Object;
 
     invoke-virtual {v1, v0, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
@@ -5441,7 +5296,7 @@
 
     const-string v3, "hasNavigationBar"
 
-    .line 563
+    .line 564
     invoke-static {v1, v3, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -5451,34 +5306,34 @@
 .method private initDeviceProfile(Landroid/content/Context;)V
     .locals 4
 
-    .line 461
+    .line 462
     new-instance v0, Lcom/miui/home/launcher/DeviceProfile$Builder;
 
     invoke-direct {v0, p1}, Lcom/miui/home/launcher/DeviceProfile$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 462
+    .line 463
     new-instance v1, Landroid/util/DisplayMetrics;
 
     invoke-direct {v1}, Landroid/util/DisplayMetrics;-><init>()V
 
     const-string/jumbo v2, "window"
 
-    .line 463
+    .line 464
     invoke-virtual {p1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Landroid/view/WindowManager;
 
-    .line 464
+    .line 465
     invoke-interface {v2}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
     move-result-object v2
 
-    .line 465
+    .line 466
     invoke-virtual {v2, v1}, Landroid/view/Display;->getRealMetrics(Landroid/util/DisplayMetrics;)V
 
-    .line 467
+    .line 468
     iget v2, v1, Landroid/util/DisplayMetrics;->widthPixels:I
 
     iget v3, v1, Landroid/util/DisplayMetrics;->heightPixels:I
@@ -5487,7 +5342,7 @@
 
     move-result v2
 
-    .line 468
+    .line 469
     iget v3, v1, Landroid/util/DisplayMetrics;->widthPixels:I
 
     iget v1, v1, Landroid/util/DisplayMetrics;->heightPixels:I
@@ -5496,10 +5351,10 @@
 
     move-result v1
 
-    .line 469
+    .line 470
     sput v2, Lcom/miui/home/launcher/DeviceConfig;->sScreenSmallestWidth:I
 
-    .line 470
+    .line 471
     invoke-virtual {v0, v1, v2}, Lcom/miui/home/launcher/DeviceProfile$Builder;->setScreenSize(II)Lcom/miui/home/launcher/DeviceProfile$Builder;
 
     move-result-object v3
@@ -5514,7 +5369,7 @@
 
     iput-object v3, p0, Lcom/miui/home/launcher/DeviceConfig;->landscapeProfile:Lcom/miui/home/launcher/DeviceProfile;
 
-    .line 471
+    .line 472
     invoke-virtual {v0, v2, v1}, Lcom/miui/home/launcher/DeviceProfile$Builder;->setScreenSize(II)Lcom/miui/home/launcher/DeviceProfile$Builder;
 
     move-result-object v0
@@ -5529,7 +5384,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/DeviceConfig;->portraitProfile:Lcom/miui/home/launcher/DeviceProfile;
 
-    .line 472
+    .line 473
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/DeviceConfig;->getDeviceProfile(Landroid/content/Context;)Lcom/miui/home/launcher/DeviceProfile;
 
     move-result-object p1
@@ -5542,7 +5397,7 @@
 .method public static is720Mode()Z
     .locals 1
 
-    .line 2068
+    .line 1998
     sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sIs720Mode:Z
 
     return v0
@@ -5555,7 +5410,7 @@
 
     monitor-enter v0
 
-    .line 1959
+    .line 1889
     :try_start_0
     sget-boolean v1, Lcom/miui/home/launcher/DeviceConfig;->sIsAccessibilityEnabled:Z
     :try_end_0
@@ -5573,98 +5428,77 @@
     throw v1
 .end method
 
-.method public static isAllowRotate()Z
-    .locals 2
-
-    .line 2509
-    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->isInFoldLargeScreen()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Lmiui/os/Build;->DEVICE:Ljava/lang/String;
-
-    const-string v1, "cetus"
-
-    .line 2510
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    return v0
-.end method
-
 .method public static isAppStoreEnabled()Z
     .locals 1
 
-    .line 1935
+    .line 1865
     sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sIsAppStoreEnabled:Z
 
     return v0
 .end method
 
 .method public static isAssistantCTAAgree(Landroid/content/Context;)Z
-    .locals 1
+    .locals 2
 
-    .line 1863
-    sget-object v0, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->sAssistantWidget:Lcom/miui/home/launcher/AssistantWidget;
+    .line 1799
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    invoke-interface {v0, p0}, Lcom/miui/home/launcher/AssistantWidget;->isAssistantCTAAgree(Landroid/content/Context;)Z
+    move-result-object p0
+
+    const-string v0, "com.miui.personalassistant.preferences.key_cta_welcome"
+
+    const/4 v1, 0x1
+
+    .line 1800
+    invoke-static {p0, v0, v1}, Landroid/provider/Settings$Secure;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result p0
 
-    return p0
+    if-eq v1, p0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    return v1
 .end method
 
 .method private isCellSizeChangedByTheme(Landroid/content/Context;Lcom/miui/home/launcher/compat/LauncherCellCount;)Z
     .locals 7
 
-    .line 2405
+    .line 2322
     invoke-static {p1}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountXDef(Landroid/content/Context;)I
 
     move-result v0
 
-    .line 2406
+    .line 2323
     invoke-static {p1}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountXMax(Landroid/content/Context;)I
 
     move-result v1
 
-    .line 2407
+    .line 2324
     invoke-static {p1}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountXMin(Landroid/content/Context;)I
 
     move-result v2
 
-    .line 2408
+    .line 2325
     invoke-static {p1}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountYDef(Landroid/content/Context;)I
 
     move-result v3
 
-    .line 2409
+    .line 2326
     invoke-static {p1}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountYMin(Landroid/content/Context;)I
 
     move-result v4
 
-    .line 2410
+    .line 2327
     invoke-static {p1}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountYMax(Landroid/content/Context;)I
 
     move-result v5
 
-    .line 2411
+    .line 2328
     sget-boolean v6, Lcom/miui/home/launcher/DeviceConfig;->IS_SB_BUILD:Z
 
     if-nez v6, :cond_1
@@ -5678,7 +5512,7 @@
     :cond_0
     move v1, v2
 
-    .line 2413
+    .line 2330
     :cond_1
     :goto_0
     invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isNoWordModel()Z
@@ -5693,7 +5527,7 @@
 
     move v4, v5
 
-    .line 2416
+    .line 2333
     :cond_2
     invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isPocoLauncher()Z
 
@@ -5705,7 +5539,7 @@
 
     if-eqz v2, :cond_5
 
-    .line 2417
+    .line 2334
     invoke-static {p1}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountXDef(Landroid/content/Context;)I
 
     move-result v0
@@ -5731,7 +5565,7 @@
     :cond_3
     const-string v0, "pref_key_use_theme_cells_size"
 
-    .line 2421
+    .line 2338
     invoke-static {p1, v0, v5}, Lcom/miui/home/launcher/common/PreferenceUtils;->putBoolean(Landroid/content/Context;Ljava/lang/String;Z)V
 
     goto :goto_2
@@ -5740,7 +5574,7 @@
     :goto_1
     const-string v0, "pref_key_use_theme_cells_size"
 
-    .line 2419
+    .line 2336
     invoke-static {p1, v0, v6}, Lcom/miui/home/launcher/common/PreferenceUtils;->putBoolean(Landroid/content/Context;Ljava/lang/String;Z)V
 
     move v0, v6
@@ -5757,7 +5591,7 @@
     :cond_6
     const-string v0, "pref_key_use_theme_cells_size"
 
-    .line 2429
+    .line 2346
     invoke-static {p1, v0, v5}, Lcom/miui/home/launcher/common/PreferenceUtils;->putBoolean(Landroid/content/Context;Ljava/lang/String;Z)V
 
     :goto_2
@@ -5769,12 +5603,12 @@
     :goto_3
     const-string v0, "pref_key_use_theme_cells_size"
 
-    .line 2427
+    .line 2344
     invoke-static {p1, v0, v6}, Lcom/miui/home/launcher/common/PreferenceUtils;->putBoolean(Landroid/content/Context;Ljava/lang/String;Z)V
 
     move v0, v6
 
-    .line 2431
+    .line 2348
     :goto_4
     instance-of v1, p2, Lcom/miui/home/launcher/compat/LauncherCellCountCompatNoWord;
 
@@ -5782,7 +5616,7 @@
 
     if-nez v0, :cond_8
 
-    .line 2432
+    .line 2349
     sget-boolean v1, Lcom/miui/home/launcher/DeviceConfig;->isThemeCoverCellConfig:Z
 
     if-eqz v1, :cond_9
@@ -5790,23 +5624,23 @@
     :cond_8
     move v5, v6
 
-    .line 2433
+    .line 2350
     :cond_9
     move-object v1, p2
 
     check-cast v1, Lcom/miui/home/launcher/compat/LauncherCellCountCompatNoWord;
 
-    .line 2434
+    .line 2351
     invoke-virtual {v1}, Lcom/miui/home/launcher/compat/LauncherCellCountCompatNoWord;->getLoadResCellConfig()Z
 
     move-result v2
 
     if-eq v2, v5, :cond_a
 
-    .line 2435
+    .line 2352
     invoke-virtual {v1, v5}, Lcom/miui/home/launcher/compat/LauncherCellCountCompatNoWord;->setLoadResCellConfig(Z)V
 
-    .line 2437
+    .line 2354
     invoke-static {p2, p1}, Lcom/miui/home/launcher/DeviceConfig;->loadCellConfigFromController(Lcom/miui/home/launcher/compat/LauncherCellCount;Landroid/content/Context;)V
 
     :cond_a
@@ -5822,12 +5656,12 @@
 
     const-string v2, ""
 
-    .line 2371
+    .line 2288
     invoke-static {v1, v2}, Lcom/miui/launcher/utils/MiuiSettingsUtils;->getStringFromSystemProperites(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 2370
+    .line 2287
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -5838,7 +5672,7 @@
 .method public static isCurrentThemeSupportSearchBar(Landroid/content/Context;)Z
     .locals 2
 
-    .line 619
+    .line 616
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -5865,21 +5699,21 @@
 .method public static isDarkMode()Z
     .locals 1
 
-    .line 2109
+    .line 2039
     sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sIsDarkMode:Z
 
     return v0
 .end method
 
 .method public static isDarkModeChanged()Z
-    .locals 5
+    .locals 4
 
-    .line 2113
+    .line 2043
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
 
-    .line 2114
+    .line 2044
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -5888,7 +5722,7 @@
 
     move-result-object v0
 
-    .line 2115
+    .line 2045
     iget v0, v0, Landroid/content/res/Configuration;->uiMode:I
 
     const/16 v1, 0x20
@@ -5908,7 +5742,7 @@
     :cond_0
     move v0, v3
 
-    .line 2116
+    .line 2046
     :goto_0
     sget-boolean v1, Lcom/miui/home/launcher/DeviceConfig;->sIsDarkMode:Z
 
@@ -5919,35 +5753,8 @@
     :cond_1
     move v2, v3
 
+    .line 2047
     :goto_1
-    const-string v1, "Launcher.DeviceConfig"
-
-    .line 2117
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "isDarkModeChanged , nowIsDarkMode = "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v4, ", sIsDarkMode = "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    sget-boolean v4, Lcom/miui/home/launcher/DeviceConfig;->sIsDarkMode:Z
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 2118
     sput-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sIsDarkMode:Z
 
     return v2
@@ -5956,7 +5763,7 @@
 .method public static isDarkenWholeWallpaper(Landroid/content/Context;)Z
     .locals 2
 
-    .line 2338
+    .line 2255
     sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sSupportDarkenWallpaper:Z
 
     if-nez v0, :cond_0
@@ -5965,7 +5772,7 @@
 
     return p0
 
-    .line 2341
+    .line 2258
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -5985,7 +5792,7 @@
 .method public static isDefaultIcon()Z
     .locals 1
 
-    .line 2245
+    .line 2162
     sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sIsDefaultIcon:Z
 
     return v0
@@ -5994,7 +5801,7 @@
 .method public static isDisableOldQuickSwitch()Z
     .locals 1
 
-    .line 2264
+    .line 2181
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isSupportRecentsAndFsGesture()Z
 
     move-result v0
@@ -6010,14 +5817,14 @@
     :try_start_0
     const-string v1, "android.app.ActivityThread"
 
-    .line 2168
+    .line 2097
     invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v1
 
     const-string v2, "getPackageManager"
 
-    .line 2169
+    .line 2098
     new-array v3, v0, [Ljava/lang/Class;
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
@@ -6026,14 +5833,14 @@
 
     const/4 v2, 0x0
 
-    .line 2170
+    .line 2099
     new-array v3, v0, [Ljava/lang/Object;
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 2171
+    .line 2100
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -6046,7 +5853,7 @@
 
     move-result-object v2
 
-    .line 2172
+    .line 2101
     new-array v3, v0, [Ljava/lang/Object;
 
     invoke-virtual {v2, v1, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
@@ -6070,17 +5877,8 @@
 
     const-string v3, "isFirstBoot"
 
-    .line 2174
+    .line 2103
     invoke-static {v2, v3, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    return v0
-.end method
-
-.method public static isFoldDevice()Z
-    .locals 1
-
-    .line 2454
-    sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->IS_FOLD_DEVICE:Z
 
     return v0
 .end method
@@ -6088,7 +5886,7 @@
 .method public static isGlobalSearchBottomEffectEnable(Landroid/content/Context;)Z
     .locals 2
 
-    .line 1909
+    .line 1839
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -6107,7 +5905,7 @@
 .method public static isGlobalSearchBrowserEnable(Landroid/content/Context;)Z
     .locals 2
 
-    .line 1914
+    .line 1844
     sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     const/4 v1, 0x0
@@ -6135,7 +5933,7 @@
 .method public static isGlobalSearchEnable(Landroid/content/Context;)Z
     .locals 2
 
-    .line 1899
+    .line 1829
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -6154,7 +5952,7 @@
 .method public static isGlobalSearchSupportSearchBar(Landroid/content/Context;)Z
     .locals 3
 
-    .line 586
+    .line 583
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -6172,14 +5970,14 @@
 
     const-string v2, "com.android.quicksearchbox"
 
-    .line 587
+    .line 584
     invoke-virtual {p0, v0, v1, v2}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
     if-lez v0, :cond_0
 
-    .line 589
+    .line 586
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result p0
@@ -6191,7 +5989,7 @@
     :catch_0
     move-exception p0
 
-    .line 592
+    .line 589
     invoke-virtual {p0}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
 
     :cond_0
@@ -6203,7 +6001,7 @@
 .method public static isGlobalSearchSupportSearchBarIcon(Landroid/content/Context;)Z
     .locals 3
 
-    .line 599
+    .line 596
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -6221,14 +6019,14 @@
 
     const-string v2, "com.android.quicksearchbox"
 
-    .line 600
+    .line 597
     invoke-virtual {p0, v0, v1, v2}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
     if-lez v0, :cond_0
 
-    .line 602
+    .line 599
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result p0
@@ -6240,7 +6038,7 @@
     :catch_0
     move-exception p0
 
-    .line 605
+    .line 602
     invoke-virtual {p0}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
 
     :cond_0
@@ -6252,7 +6050,7 @@
 .method public static isHasNavigationBar()Z
     .locals 1
 
-    .line 570
+    .line 571
     sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sHasNavigationBar:Z
 
     return v0
@@ -6261,31 +6059,16 @@
 .method public static isHideNotch()Z
     .locals 1
 
-    .line 2126
+    .line 2055
     sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sHideNotch:Z
 
     return v0
 .end method
 
-.method public static isHomeSupportIconSearchBar(Landroid/content/Context;)Z
-    .locals 1
-
-    .line 578
-    invoke-static {}, Lcom/miui/home/launcher/allapps/LauncherModeController;->getCurrentMode()Lcom/miui/home/launcher/allapps/LauncherMode;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Lcom/miui/home/launcher/allapps/LauncherMode;->isHomeSupportIconSearchBar(Landroid/content/Context;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
 .method public static isHomeSupportSearchBar(Landroid/content/Context;)Z
     .locals 1
 
-    .line 574
+    .line 575
     invoke-static {}, Lcom/miui/home/launcher/allapps/LauncherModeController;->getCurrentMode()Lcom/miui/home/launcher/allapps/LauncherMode;
 
     move-result-object v0
@@ -6300,41 +6083,10 @@
 .method public static isHotseatsAppTitleHided()Z
     .locals 1
 
-    .line 1951
+    .line 1881
     sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sIsHotseatsAppTitleHided:Z
 
     return v0
-.end method
-
-.method public static isInLargeScreen(Landroid/content/Context;)Z
-    .locals 1
-
-    .line 2505
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
-
-    move-result-object p0
-
-    iget p0, p0, Landroid/content/res/Configuration;->screenLayout:I
-
-    and-int/lit8 p0, p0, 0xf
-
-    const/4 v0, 0x3
-
-    if-ne p0, v0, :cond_0
-
-    const/4 p0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    :goto_0
-    return p0
 .end method
 
 .method public static isInMultiWindowMode()Z
@@ -6342,7 +6094,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 821
+    .line 814
     sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sIsInMultiWindowMode:Z
 
     return v0
@@ -6351,7 +6103,7 @@
 .method public static isInSnapshotMode()Z
     .locals 1
 
-    .line 1927
+    .line 1857
     sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sIsInSnapShotMode:Z
 
     return v0
@@ -6362,7 +6114,7 @@
 
     add-int/2addr p0, p2
 
-    .line 1558
+    .line 1502
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountX()I
 
     move-result p2
@@ -6395,63 +6147,18 @@
 .method public static isKeepRecentsViewPortrait()Z
     .locals 1
 
-    .line 503
+    .line 504
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isUseFixedRotationTransform()Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
-
-    sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sRotatable:Z
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    return v0
-.end method
-
-.method public static isLargeRtlLayout()Z
-    .locals 1
-
-    .line 797
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isLayoutRtl()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->isInFoldLargeScreen()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
     return v0
 .end method
 
 .method public static isLayoutRtl()Z
     .locals 1
 
-    .line 793
+    .line 790
     sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sIsLayoutRtl:Z
 
     return v0
@@ -6460,7 +6167,7 @@
 .method public static final isMigratingDBFromOthers()Z
     .locals 2
 
-    .line 1368
+    .line 1271
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sCellXMigratedFrom:I
 
     const/4 v1, -0x1
@@ -6485,7 +6192,7 @@
 .method public static isMiuiLiteVersion()Z
     .locals 3
 
-    .line 2362
+    .line 2279
     :try_start_0
     const-class v0, Lmiui/os/Build;
 
@@ -6512,7 +6219,7 @@
 
     const-string v1, "reflect failed when get is miui lite device"
 
-    .line 2364
+    .line 2281
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x0
@@ -6523,7 +6230,7 @@
 .method private static isNaturalWidth720p(Landroid/content/Context;)Z
     .locals 1
 
-    .line 1318
+    .line 1225
     invoke-static {p0}, Lcom/miui/launcher/utils/LauncherUtils;->getNaturalWidth(Landroid/content/Context;)I
 
     move-result p0
@@ -6550,7 +6257,7 @@
 
     monitor-enter v0
 
-    .line 2025
+    .line 1955
     :try_start_0
     sget-boolean v1, Lcom/miui/home/launcher/DeviceConfig;->sIsNetWorkConnected:Z
     :try_end_0
@@ -6568,31 +6275,10 @@
     throw v1
 .end method
 
-.method public static isPhone()Z
-    .locals 2
-
-    .line 2466
-    sget-object v0, Lcom/miui/home/launcher/DeviceConfig;->DEVICE:Lcom/miui/home/launcher/DeviceType;
-
-    sget-object v1, Lcom/miui/home/launcher/DeviceType;->PHONE:Lcom/miui/home/launcher/DeviceType;
-
-    if-ne v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    return v0
-.end method
-
 .method public static final isRecommendServerEnable()Z
     .locals 1
 
-    .line 1016
+    .line 955
     invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isPadDevice()Z
 
     move-result v0
@@ -6605,7 +6291,7 @@
 .method public static isRotatable()Z
     .locals 1
 
-    .line 789
+    .line 786
     sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sRotatable:Z
 
     return v0
@@ -6614,7 +6300,7 @@
 .method public static final isScreenOrientationChanged()Z
     .locals 1
 
-    .line 1056
+    .line 995
     sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sScreenOrientationChanged:Z
 
     return v0
@@ -6623,7 +6309,7 @@
 .method public static final isScreenOrientationLandscape()Z
     .locals 2
 
-    .line 1068
+    .line 1007
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -6655,7 +6341,7 @@
 .method public static isScreenSizeChanged()Z
     .locals 1
 
-    .line 1060
+    .line 999
     sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sScreenSizeChanged:Z
 
     return v0
@@ -6664,7 +6350,7 @@
 .method public static isSearchBarVisibleChanged()Z
     .locals 1
 
-    .line 1064
+    .line 1003
     sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sIsSearchBarChanged:Z
 
     return v0
@@ -6673,7 +6359,7 @@
 .method public static isShowGestureLine()Z
     .locals 1
 
-    .line 1943
+    .line 1873
     sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sIsShowGestureLine:Z
 
     return v0
@@ -6682,7 +6368,7 @@
 .method public static isShowNavigationBar()Z
     .locals 1
 
-    .line 1939
+    .line 1869
     sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sHasNavigationBar:Z
 
     if-eqz v0, :cond_0
@@ -6705,7 +6391,7 @@
 .method public static isShowNotch()Z
     .locals 1
 
-    .line 2130
+    .line 2059
     invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isNotch()Z
 
     move-result v0
@@ -6732,7 +6418,7 @@
 .method public static isShowSearchBar()Z
     .locals 1
 
-    .line 964
+    .line 928
     sget-object v0, Lcom/miui/home/launcher/DeviceConfig;->sShowSearchBar:Lcom/miui/home/launcher/common/ChangeableValue;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/common/ChangeableValue;->getValue()Ljava/lang/Object;
@@ -6751,7 +6437,7 @@
 .method public static isShowSystemNavTypePreferenceInMiuiSettings(Landroid/content/Context;)Z
     .locals 4
 
-    .line 484
+    .line 485
     invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isPadDevice()Z
 
     move-result v0
@@ -6770,14 +6456,14 @@
 
     if-ltz v0, :cond_0
 
-    .line 486
+    .line 487
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isHasNavigationBar()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 487
+    .line 488
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -6806,7 +6492,7 @@
 
     const/4 v1, 0x1
 
-    .line 1357
+    .line 1260
     invoke-static {v0, v1}, Lcom/miui/home/library/utils/MiuiFeatureUtils;->isSystemFeatureSupported(Ljava/lang/String;Z)Z
 
     move-result v0
@@ -6814,245 +6500,10 @@
     return v0
 .end method
 
-.method public static isSupportLaunchPairApp()Z
-    .locals 5
-
-    const/4 v0, 0x0
-
-    :try_start_0
-    const-string v1, "android.app.ActivityOptions"
-
-    .line 2471
-    invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
-
-    move-result-object v1
-
-    const-string v2, "setEnterAppPairFromShortCut"
-
-    const/4 v3, 0x0
-
-    new-array v4, v0, [Ljava/lang/Class;
-
-    invoke-static {v1, v2, v3, v4}, Lcom/miui/launcher/utils/ReflectUtils;->getMethod(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    const/4 v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    move v1, v0
-
-    :goto_0
-    const-string v2, "Launcher.DeviceConfig"
-
-    .line 2474
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "isSupportLaunchPairApp: "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_0
-    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return v1
-
-    :catch_0
-    move-exception v1
-
-    .line 2477
-    invoke-virtual {v1}, Ljava/lang/ClassNotFoundException;->printStackTrace()V
-
-    return v0
-.end method
-
-.method public static isSupportMIUIWidget(Landroid/content/Context;)Z
-    .locals 1
-
-    .line 1870
-    sget-object v0, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->sAssistantWidget:Lcom/miui/home/launcher/AssistantWidget;
-
-    invoke-interface {v0, p0}, Lcom/miui/home/launcher/AssistantWidget;->isSupportMIUIWidget(Landroid/content/Context;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static isSupportMultipleSmallWindows()Z
-    .locals 1
-
-    .line 2498
-    sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->IS_FOLD_DEVICE:Z
-
-    if-nez v0, :cond_1
-
-    invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isPadDevice()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-
-    .line 2499
-    :cond_1
-    :goto_0
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isSupportNewFreeForm()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static isSupportNewFreeForm()Z
-    .locals 6
-
-    const/4 v0, 0x0
-
-    :try_start_0
-    const-string v1, "miui.app.MiuiFreeFormManager"
-
-    .line 2520
-    invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
-
-    move-result-object v1
-
-    sget-object v2, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
-    const-string v3, "getMiuiFreeformVersion"
-
-    const/4 v4, 0x0
-
-    new-array v5, v0, [Ljava/lang/Object;
-
-    invoke-static {v1, v2, v3, v4, v5}, Lcom/miui/launcher/utils/ReflectUtils;->callStaticMethod(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/Integer;
-
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
-
-    move-result v1
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v1
-
-    const-string v2, "Launcher.DeviceConfig"
-
-    const-string v3, "getMiuiFreeformVersion error"
-
-    .line 2522
-    invoke-static {v2, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    move v1, v0
-
-    :goto_0
-    const/4 v2, 0x3
-
-    if-ne v1, v2, :cond_0
-
-    const/4 v0, 0x1
-
-    :cond_0
-    return v0
-.end method
-
-.method public static isSupportPip()Z
-    .locals 6
-
-    const/4 v0, 0x0
-
-    :try_start_0
-    const-string v1, "miui.app.MiuiFreeFormManager"
-
-    .line 2486
-    invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
-
-    move-result-object v1
-
-    sget-object v2, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
-
-    const-string v3, "isSupportPin"
-
-    const/4 v4, 0x0
-
-    new-array v5, v0, [Ljava/lang/Object;
-
-    invoke-static {v1, v2, v3, v4, v5}, Lcom/miui/launcher/utils/ReflectUtils;->callStaticMethod(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/Boolean;
-
-    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    const-string v1, "Launcher.DeviceConfig"
-
-    .line 2487
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "isSupportPip: "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v1
-
-    const-string v2, "Launcher.DeviceConfig"
-
-    const-string v3, "isSupportPip error"
-
-    .line 2489
-    invoke-static {v2, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    :goto_0
-    return v0
-.end method
-
 .method public static isSupportRecentsAndFsGesture()Z
     .locals 1
 
-    .line 2253
+    .line 2170
     invoke-static {}, Lcom/miui/home/launcher/RecentsAndFSGestureUtils;->isSupportRecentsAndFsGesture()Z
 
     move-result v0
@@ -7063,7 +6514,7 @@
 .method public static isSupportSearchBar()Z
     .locals 1
 
-    .line 952
+    .line 916
     sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sIsSupportSearchBar:Z
 
     return v0
@@ -7072,7 +6523,7 @@
 .method public static isSupportSearchBarLongPress(Landroid/content/Context;)Z
     .locals 2
 
-    .line 635
+    .line 632
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -7099,7 +6550,7 @@
 .method public static isSupportSearchBarTransfer(Landroid/content/Context;)Z
     .locals 2
 
-    .line 643
+    .line 640
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -7128,7 +6579,7 @@
 .method public static isSupportSearchBarXiaoAi(Landroid/content/Context;)Z
     .locals 2
 
-    .line 639
+    .line 636
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -7155,7 +6606,7 @@
 .method public static isSupportSmallWindow()Z
     .locals 1
 
-    .line 2345
+    .line 2262
     sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sSupportSmallWindow:Z
 
     return v0
@@ -7164,7 +6615,7 @@
 .method public static isTetheringSupported()Z
     .locals 1
 
-    .line 2037
+    .line 1967
     sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sIsTetheringSupported:Z
 
     return v0
@@ -7173,7 +6624,7 @@
 .method public static isThemeCoverCellConfig()Z
     .locals 1
 
-    .line 2399
+    .line 2316
     sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->isThemeCoverCellConfig:Z
 
     return v0
@@ -7182,7 +6633,7 @@
 .method public static isUseFixedRotationTransform()Z
     .locals 1
 
-    .line 499
+    .line 500
     invoke-static {}, Lcom/android/systemui/shared/recents/utilities/Utilities;->atLeastAndroidR()Z
 
     move-result v0
@@ -7222,7 +6673,7 @@
 
     sget-object v0, Lcom/miui/home/launcher/DeviceConfig;->USE_GOOGLE_MINUS_SCREEN_CLIENT_ID:Ljava/util/HashSet;
 
-    sget-object v1, Lcom/miui/home/launcher/LauncherAssistantCompat;->CLIENT_ID_BASE:Ljava/lang/String;
+    sget-object v1, Lcom/miui/home/launcher/DeviceConfig;->CLIENT_ID_BASE:Ljava/lang/String;
 
     .line 251
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
@@ -7231,7 +6682,7 @@
 
     if-nez v0, :cond_1
 
-    sget-boolean v0, Lcom/miui/home/launcher/LauncherAssistantCompat;->CAN_SWITCH_MINUS_SCREEN:Z
+    sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->CAN_SWITCH_MINUS_SCREEN:Z
 
     if-eqz v0, :cond_0
 
@@ -7260,7 +6711,7 @@
 .method public static final isXLargeMode()Z
     .locals 2
 
-    .line 1554
+    .line 1498
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sCellCountX:I
 
     const/4 v1, 0x3
@@ -7297,7 +6748,7 @@
 
     if-eqz p0, :cond_0
 
-    .line 1985
+    .line 1915
     invoke-virtual {p0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object p0
@@ -7316,7 +6767,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 1987
+    .line 1917
     iget p1, p1, Landroid/accessibilityservice/AccessibilityServiceInfo;->feedbackType:I
 
     and-int/2addr p1, p0
@@ -7337,7 +6788,7 @@
 .method static synthetic lambda$checkIsAccessibilityEnabledAsync$5(Landroid/accessibilityservice/AccessibilityServiceInfo;)Ljava/lang/String;
     .locals 0
 
-    .line 1992
+    .line 1922
     :try_start_0
     invoke-virtual {p0}, Landroid/accessibilityservice/AccessibilityServiceInfo;->getResolveInfo()Landroid/content/pm/ResolveInfo;
 
@@ -7364,7 +6815,7 @@
 .method static synthetic lambda$checkIsAccessibilityEnabledAsync$6(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 1998
+    .line 1928
     invoke-virtual {p0, p1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result p0
@@ -7373,7 +6824,7 @@
 
     const/4 p0, 0x1
 
-    .line 1999
+    .line 1929
     invoke-static {p0}, Lcom/miui/home/launcher/DeviceConfig;->setIsAccessibilityEnabled(Z)V
 
     return-void
@@ -7385,7 +6836,7 @@
 .method static synthetic lambda$checkIsAccessibilityEnabledAsync$7(Ljava/util/List;ILjava/lang/String;)V
     .locals 1
 
-    .line 1986
+    .line 1916
     invoke-static {p0}, Lcom/miui/home/launcher/common/Utilities;->stream(Ljava/util/Collection;)Ljava/util/stream/Stream;
 
     move-result-object p0
@@ -7394,14 +6845,14 @@
 
     invoke-direct {v0, p1}, Lcom/miui/home/launcher/-$$Lambda$DeviceConfig$9OnBuQvuslchjslvn8oVHnMma2g;-><init>(I)V
 
-    .line 1987
+    .line 1917
     invoke-interface {p0, v0}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
     move-result-object p0
 
     sget-object p1, Lcom/miui/home/launcher/-$$Lambda$DeviceConfig$Y_mBsMR4k5_oPMgP2CBDVr6617g;->INSTANCE:Lcom/miui/home/launcher/-$$Lambda$DeviceConfig$Y_mBsMR4k5_oPMgP2CBDVr6617g;
 
-    .line 1990
+    .line 1920
     invoke-interface {p0, p1}, Ljava/util/stream/Stream;->map(Ljava/util/function/Function;)Ljava/util/stream/Stream;
 
     move-result-object p0
@@ -7410,7 +6861,7 @@
 
     invoke-direct {p1, p2}, Lcom/miui/home/launcher/-$$Lambda$DeviceConfig$nz3benqVwBIFUQEAXQxPHyvFw3U;-><init>(Ljava/lang/String;)V
 
-    .line 1997
+    .line 1927
     invoke-interface {p0, p1}, Ljava/util/stream/Stream;->forEach(Ljava/util/function/Consumer;)V
 
     return-void
@@ -7421,10 +6872,10 @@
 
     const/4 v0, 0x0
 
-    .line 1968
+    .line 1898
     invoke-static {v0}, Lcom/miui/home/launcher/DeviceConfig;->setIsAccessibilityEnabled(Z)V
 
-    .line 1970
+    .line 1900
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -7435,7 +6886,7 @@
 
     const-string v1, "enabled_accessibility_services"
 
-    .line 1969
+    .line 1899
     invoke-static {v0, v1}, Landroid/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -7444,7 +6895,7 @@
 
     return-void
 
-    .line 1974
+    .line 1904
     :cond_0
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
@@ -7452,7 +6903,7 @@
 
     const-string v2, "accessibility"
 
-    .line 1975
+    .line 1905
     invoke-virtual {v1, v2}, Lcom/miui/home/launcher/Application;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v1
@@ -7461,7 +6912,7 @@
 
     return-void
 
-    .line 1979
+    .line 1909
     :cond_1
     check-cast v1, Landroid/view/accessibility/AccessibilityManager;
 
@@ -7471,14 +6922,14 @@
 
     const-string v2, ":"
 
-    .line 1980
+    .line 1910
     invoke-virtual {v0, v2}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
     const/4 v2, 0x7
 
-    .line 1984
+    .line 1914
     invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
@@ -7489,7 +6940,7 @@
 
     sget-object v3, Lcom/miui/home/launcher/-$$Lambda$DeviceConfig$2EbDvr98kUJb-Y6vBAlC5C6dwxg;->INSTANCE:Lcom/miui/home/launcher/-$$Lambda$DeviceConfig$2EbDvr98kUJb-Y6vBAlC5C6dwxg;
 
-    .line 1985
+    .line 1915
     invoke-interface {v0, v3}, Ljava/util/stream/Stream;->map(Ljava/util/function/Function;)Ljava/util/stream/Stream;
 
     move-result-object v0
@@ -7498,7 +6949,7 @@
 
     invoke-direct {v3, v1, v2}, Lcom/miui/home/launcher/-$$Lambda$DeviceConfig$v2SDZl1CHcZb66B1EYDk-eVu5bM;-><init>(Ljava/util/List;I)V
 
-    .line 1986
+    .line 1916
     invoke-interface {v0, v3}, Ljava/util/stream/Stream;->forEach(Ljava/util/function/Consumer;)V
 
     return-void
@@ -7507,28 +6958,28 @@
 .method static synthetic lambda$checkIsNetworkConnectedAsync$9()V
     .locals 2
 
-    .line 2009
+    .line 1939
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
 
     const-string v1, "connectivity"
 
-    .line 2010
+    .line 1940
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Application;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/net/ConnectivityManager;
 
-    .line 2011
+    .line 1941
     invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 2014
+    .line 1944
     invoke-virtual {v0}, Landroid/net/NetworkInfo;->isAvailable()Z
 
     move-result v0
@@ -7538,7 +6989,7 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 2016
+    .line 1946
     :goto_0
     invoke-static {v0}, Lcom/miui/home/launcher/DeviceConfig;->setIsNetWorkConnected(Z)V
 
@@ -7550,10 +7001,10 @@
 
     const/4 v0, 0x0
 
-    .line 844
+    .line 828
     sput-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sIsSupportMultiWindowMode:Z
 
-    .line 846
+    .line 830
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -7578,7 +7029,7 @@
 
     const-string v2, "isSupportRecentsRecommend: getPackageInfo error."
 
-    .line 849
+    .line 833
     invoke-static {v1, v2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p0, 0x0
@@ -7586,12 +7037,12 @@
     :goto_0
     if-eqz p0, :cond_0
 
-    .line 851
+    .line 835
     iget-object v1, p0, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     if-eqz v1, :cond_0
 
-    .line 852
+    .line 836
     iget-object p0, p0, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget-object p0, p0, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
@@ -7600,7 +7051,7 @@
 
     const-string v1, "SupportLauncherMultiWindowMode"
 
-    .line 854
+    .line 838
     invoke-virtual {p0, v1, v0}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result p0
@@ -7614,7 +7065,7 @@
 .method static synthetic lambda$checkIsTetheringSupported$10()V
     .locals 1
 
-    .line 2033
+    .line 1963
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -7631,12 +7082,12 @@
 .method static synthetic lambda$checkSystemUIFsgVersion$11()V
     .locals 4
 
-    .line 2044
+    .line 1974
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
 
-    .line 2045
+    .line 1975
     sget-object v1, Lcom/miui/home/launcher/DeviceConfig;->sSystemuiFsgVersion:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -7659,7 +7110,7 @@
 .method static synthetic lambda$resolveMiuiVersionAndCheckUpgrade$12(Landroid/content/Context;)V
     .locals 1
 
-    .line 2149
+    .line 2078
     invoke-static {p0}, Lcom/miui/home/launcher/DeviceConfig;->isCurrentThemeSupportSearchBar(Landroid/content/Context;)Z
 
     move-result v0
@@ -7668,12 +7119,12 @@
 
     const/4 v0, 0x1
 
-    .line 2150
+    .line 2079
     invoke-static {p0, v0}, Lcom/miui/home/launcher/DeviceConfig;->setCurrentThemeSupportSearchBar(Landroid/content/Context;Z)Z
 
     const-string v0, "ota"
 
-    .line 2151
+    .line 2080
     invoke-static {p0, v0}, Lcom/miui/home/launcher/DeviceConfig;->setSearchBarSource(Landroid/content/Context;Ljava/lang/String;)Z
 
     :cond_0
@@ -7683,7 +7134,7 @@
 .method static synthetic lambda$static$0(Landroid/content/Context;)Lcom/miui/home/launcher/DeviceConfig;
     .locals 0
 
-    .line 94
+    .line 93
     new-instance p0, Lcom/miui/home/launcher/DeviceConfig;
 
     invoke-direct {p0}, Lcom/miui/home/launcher/DeviceConfig;-><init>()V
@@ -7694,7 +7145,7 @@
 .method static synthetic lambda$static$1()V
     .locals 3
 
-    .line 520
+    .line 521
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -7703,14 +7154,14 @@
 
     move-result-object v0
 
-    .line 521
+    .line 522
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 522
+    .line 523
     sget-object v1, Lcom/miui/home/launcher/DeviceConfig;->sSettingTitle:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
@@ -7723,82 +7174,45 @@
     return-void
 .end method
 
-.method public static loadAllAppsCellCountX(Landroid/content/Context;)V
-    .locals 1
-
-    .line 2221
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isFoldDevice()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 2222
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p0
-
-    const v0, 0x7f0b001e
-
-    invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result p0
-
-    sput p0, Lcom/miui/home/launcher/DeviceConfig;->sCellCountXDrawerMode:I
-
-    goto :goto_0
-
-    .line 2224
-    :cond_0
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountX()I
-
-    move-result p0
-
-    sput p0, Lcom/miui/home/launcher/DeviceConfig;->sCellCountXDrawerMode:I
-
-    :goto_0
-    return-void
-.end method
-
 .method private static loadCellConfigFromController(Lcom/miui/home/launcher/compat/LauncherCellCount;Landroid/content/Context;)V
     .locals 1
 
-    .line 441
+    .line 442
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/compat/LauncherCellCount;->getCellCountXDef(Landroid/content/Context;)I
 
     move-result v0
 
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sCellCountXDef:I
 
-    .line 442
+    .line 443
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/compat/LauncherCellCount;->getCellCountXMin(Landroid/content/Context;)I
 
     move-result v0
 
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sCellCountXMin:I
 
-    .line 443
+    .line 444
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/compat/LauncherCellCount;->getCellCountXMax(Landroid/content/Context;)I
 
     move-result v0
 
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sCellCountXMax:I
 
-    .line 444
+    .line 445
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/compat/LauncherCellCount;->getCellCountYDef(Landroid/content/Context;)I
 
     move-result v0
 
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sCellCountYDef:I
 
-    .line 445
+    .line 446
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/compat/LauncherCellCount;->getCellCountYMin(Landroid/content/Context;)I
 
     move-result v0
 
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sCellCountYMin:I
 
-    .line 446
+    .line 447
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/compat/LauncherCellCount;->getCellCountYMax(Landroid/content/Context;)I
 
     move-result p0
@@ -7809,13 +7223,13 @@
 .end method
 
 .method private static final loadCellsCountConfig(Landroid/content/Context;Z)V
-    .locals 7
+    .locals 6
 
     const-string v0, "pref_key_use_theme_cells_size"
 
     const/4 v1, 0x0
 
-    .line 1189
+    .line 1111
     invoke-static {p0, v0, v1}, Lcom/miui/home/launcher/common/PreferenceUtils;->getBoolean(Landroid/content/Context;Ljava/lang/String;Z)Z
 
     move-result v0
@@ -7824,7 +7238,7 @@
 
     if-nez v0, :cond_3
 
-    .line 1190
+    .line 1112
     invoke-static {}, Lcom/miui/home/launcher/allapps/LauncherModeController;->isElderlyManMode()Z
 
     move-result v3
@@ -7833,7 +7247,7 @@
 
     goto :goto_0
 
-    .line 1194
+    .line 1116
     :cond_0
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isRotatable()Z
 
@@ -7870,22 +7284,35 @@
     :cond_1
     if-eqz p1, :cond_2
 
-    .line 1197
-    sget v3, Lcom/miui/home/launcher/DeviceConfig;->sCellCountX:I
+    .line 1119
+    sget p1, Lcom/miui/home/launcher/DeviceConfig;->sCellCountX:I
 
-    if-eq v3, v4, :cond_2
+    if-eq p1, v4, :cond_2
 
-    sget v3, Lcom/miui/home/launcher/DeviceConfig;->sCellCountY:I
+    sget p1, Lcom/miui/home/launcher/DeviceConfig;->sCellCountY:I
 
-    if-ne v3, v4, :cond_4
+    if-ne p1, v4, :cond_4
 
-    .line 1198
+    .line 1120
     :cond_2
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellConfigXSpKey()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object p1
 
     invoke-static {p0}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountXDef(Landroid/content/Context;)I
+
+    move-result v3
+
+    invoke-static {p0, p1, v3}, Lcom/miui/home/launcher/common/PreferenceUtils;->getInt(Landroid/content/Context;Ljava/lang/String;I)I
+
+    move-result p1
+
+    .line 1121
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellConfigYSpKey()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {p0}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountYDef(Landroid/content/Context;)I
 
     move-result v4
 
@@ -7893,143 +7320,105 @@
 
     move-result v3
 
-    .line 1199
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellConfigYSpKey()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {p0}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountYDef(Landroid/content/Context;)I
-
-    move-result v5
-
-    invoke-static {p0, v4, v5}, Lcom/miui/home/launcher/common/PreferenceUtils;->getInt(Landroid/content/Context;Ljava/lang/String;I)I
-
-    move-result v4
-
-    .line 1200
+    .line 1122
     invoke-static {p0}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountXMax(Landroid/content/Context;)I
 
-    move-result v5
+    move-result v4
 
     invoke-static {p0}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountXMin(Landroid/content/Context;)I
 
-    move-result v6
+    move-result v5
 
-    invoke-static {v6, v3}, Ljava/lang/Math;->max(II)I
+    invoke-static {v5, p1}, Ljava/lang/Math;->max(II)I
 
-    move-result v3
+    move-result p1
 
-    invoke-static {v5, v3}, Ljava/lang/Math;->min(II)I
+    invoke-static {v4, p1}, Ljava/lang/Math;->min(II)I
 
-    move-result v3
+    move-result p1
 
-    sput v3, Lcom/miui/home/launcher/DeviceConfig;->sCellCountX:I
+    sput p1, Lcom/miui/home/launcher/DeviceConfig;->sCellCountX:I
 
-    .line 1201
+    .line 1123
     invoke-static {p0}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountYMax(Landroid/content/Context;)I
 
-    move-result v3
+    move-result p1
 
     invoke-static {p0}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountYMin(Landroid/content/Context;)I
 
-    move-result v5
-
-    invoke-static {v5, v4}, Ljava/lang/Math;->max(II)I
-
     move-result v4
 
-    invoke-static {v3, v4}, Ljava/lang/Math;->min(II)I
+    invoke-static {v4, v3}, Ljava/lang/Math;->max(II)I
 
     move-result v3
 
-    sput v3, Lcom/miui/home/launcher/DeviceConfig;->sCellCountY:I
+    invoke-static {p1, v3}, Ljava/lang/Math;->min(II)I
 
-    .line 1202
+    move-result p1
+
+    sput p1, Lcom/miui/home/launcher/DeviceConfig;->sCellCountY:I
+
+    .line 1124
     sput-boolean v1, Lcom/miui/home/launcher/DeviceConfig;->sUseThemeOrOldmanCellCount:Z
 
     goto :goto_1
 
-    .line 1191
+    .line 1113
     :cond_3
     :goto_0
     invoke-static {p0}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountXDef(Landroid/content/Context;)I
 
-    move-result v1
+    move-result p1
 
-    sput v1, Lcom/miui/home/launcher/DeviceConfig;->sCellCountX:I
+    sput p1, Lcom/miui/home/launcher/DeviceConfig;->sCellCountX:I
 
-    .line 1192
+    .line 1114
     invoke-static {p0}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountYDef(Landroid/content/Context;)I
 
-    move-result v1
+    move-result p1
 
-    sput v1, Lcom/miui/home/launcher/DeviceConfig;->sCellCountY:I
+    sput p1, Lcom/miui/home/launcher/DeviceConfig;->sCellCountY:I
 
-    .line 1193
+    .line 1115
     sput-boolean v2, Lcom/miui/home/launcher/DeviceConfig;->sUseThemeOrOldmanCellCount:Z
 
     :cond_4
     :goto_1
     if-eqz v0, :cond_5
 
-    const-string v1, "by_theme"
+    const-string p1, "by_theme"
 
-    .line 1206
-    sput-object v1, Lcom/miui/home/launcher/DeviceConfig;->sCurrentScreenCells:Ljava/lang/String;
+    .line 1128
+    sput-object p1, Lcom/miui/home/launcher/DeviceConfig;->sCurrentScreenCells:Ljava/lang/String;
 
     goto :goto_2
 
-    .line 1208
+    .line 1130
     :cond_5
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget v3, Lcom/miui/home/launcher/DeviceConfig;->sCellCountX:I
+    sget v0, Lcom/miui/home/launcher/DeviceConfig;->sCellCountX:I
 
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string/jumbo v3, "x"
+    const-string/jumbo v0, "x"
 
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget v3, Lcom/miui/home/launcher/DeviceConfig;->sCellCountY:I
+    sget v0, Lcom/miui/home/launcher/DeviceConfig;->sCellCountY:I
 
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    sput-object v1, Lcom/miui/home/launcher/DeviceConfig;->sCurrentScreenCells:Ljava/lang/String;
-
-    :goto_2
-    const-string v1, "Launcher.DeviceConfig"
-
-    .line 1210
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "loadCellsCountConfig ignoreCellCount = "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string p1, " useThemeCellsSize = "
-
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    sput-object p1, Lcom/miui/home/launcher/DeviceConfig;->sCurrentScreenCells:Ljava/lang/String;
 
-    .line 1212
+    .line 1132
+    :goto_2
     sget p1, Lcom/miui/home/launcher/DeviceConfig;->sCellCountX:I
 
     invoke-static {p0}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountXDef(Landroid/content/Context;)I
@@ -8038,12 +7427,12 @@
 
     if-le p1, v0, :cond_6
 
-    .line 1213
+    .line 1133
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    const v0, 0x7f070684
+    const v0, 0x7f070412
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -8053,13 +7442,13 @@
 
     goto :goto_3
 
-    .line 1215
+    .line 1135
     :cond_6
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    const v0, 0x7f070683
+    const v0, 0x7f070411
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -8067,13 +7456,13 @@
 
     sput p1, Lcom/miui/home/launcher/DeviceConfig;->sWidgetCellMeasureWidth:I
 
-    .line 1217
+    .line 1137
     :goto_3
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    const v0, 0x7f07066e
+    const v0, 0x7f0703fd
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -8081,19 +7470,19 @@
 
     sput p1, Lcom/miui/home/launcher/DeviceConfig;->sCellHorizontalSpacing:I
 
-    .line 1218
+    .line 1138
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->useNavigationBarLayoutMode()Z
 
     move-result p1
 
     if-eqz p1, :cond_7
 
-    .line 1219
+    .line 1139
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    const v0, 0x7f070677
+    const v0, 0x7f070406
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -8101,13 +7490,13 @@
 
     goto :goto_4
 
-    .line 1220
+    .line 1140
     :cond_7
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    const v0, 0x7f070676
+    const v0, 0x7f070405
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -8116,12 +7505,12 @@
     :goto_4
     sput p1, Lcom/miui/home/launcher/DeviceConfig;->sCellVerticalSpacing:I
 
-    .line 1221
+    .line 1141
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    const v0, 0x7f070583
+    const v0, 0x7f070346
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -8129,7 +7518,7 @@
 
     sput p1, Lcom/miui/home/launcher/DeviceConfig;->sQuickCallCellVerticalSpacing:I
 
-    .line 1222
+    .line 1142
     sget-object p1, Lcom/miui/home/launcher/DeviceConfig;->INSTANCE:Lcom/miui/home/launcher/util/MainThreadInitializedObject;
 
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
@@ -8142,27 +7531,27 @@
 
     check-cast p1, Lcom/miui/home/launcher/DeviceConfig;
 
-    .line 1223
+    .line 1143
     iget-object v0, p1, Lcom/miui/home/launcher/DeviceConfig;->portraitProfile:Lcom/miui/home/launcher/DeviceProfile;
 
-    invoke-virtual {v0, p0}, Lcom/miui/home/launcher/DeviceProfile;->calculateCellSize(Landroid/content/Context;)V
+    invoke-virtual {v0}, Lcom/miui/home/launcher/DeviceProfile;->calculateCellSize()V
 
-    .line 1224
+    .line 1144
     iget-object p1, p1, Lcom/miui/home/launcher/DeviceConfig;->landscapeProfile:Lcom/miui/home/launcher/DeviceProfile;
 
-    invoke-virtual {p1, p0}, Lcom/miui/home/launcher/DeviceProfile;->calculateCellSize(Landroid/content/Context;)V
+    invoke-virtual {p1}, Lcom/miui/home/launcher/DeviceProfile;->calculateCellSize()V
 
-    .line 1225
+    .line 1145
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellWidth()I
 
     move-result p1
 
-    .line 1226
+    .line 1146
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f0700a6
+    const v1, 0x7f070085
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -8172,7 +7561,7 @@
 
     sput p1, Lcom/miui/home/launcher/DeviceConfig;->sSearchBarWidthDelta:I
 
-    .line 1227
+    .line 1147
     sget p1, Lcom/miui/home/launcher/DeviceConfig;->sFolderWorkingHeight:I
 
     int-to-float p1, p1
@@ -8193,23 +7582,23 @@
 
     sput p1, Lcom/miui/home/launcher/DeviceConfig;->sFolderCellHeight:I
 
-    .line 1228
+    .line 1148
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    const v0, 0x7f070165
+    const v0, 0x7f0700d4
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result p1
 
-    .line 1229
+    .line 1149
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f070163
+    const v1, 0x7f0700d2
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -8217,12 +7606,12 @@
 
     sub-float/2addr p1, v0
 
-    .line 1230
+    .line 1150
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f070164
+    const v1, 0x7f0700d3
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -8230,12 +7619,12 @@
 
     sub-float/2addr p1, v0
 
-    .line 1231
+    .line 1151
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f0b0028
+    const v1, 0x7f0b0024
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -8245,21 +7634,21 @@
 
     div-float/2addr p1, v0
 
-    .line 1228
+    .line 1148
     invoke-static {p1}, Ljava/lang/Math;->round(F)I
 
     move-result p1
 
     sput p1, Lcom/miui/home/launcher/DeviceConfig;->sFolderCellMaxWidth:I
 
-    .line 1236
+    .line 1156
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isRotatable()Z
 
     move-result p1
 
     if-nez p1, :cond_8
 
-    .line 1237
+    .line 1157
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellWorkingWidth()I
 
     move-result p1
@@ -8280,7 +7669,7 @@
 
     div-int/2addr p1, v0
 
-    .line 1238
+    .line 1158
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sWidgetCellMeasureWidth:I
 
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellWidth()I
@@ -8295,7 +7684,7 @@
 
     sput p1, Lcom/miui/home/launcher/DeviceConfig;->sWidgetCellMeasureWidth:I
 
-    .line 1239
+    .line 1159
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellWorkingHeight()I
 
     move-result p1
@@ -8316,7 +7705,7 @@
 
     div-int/2addr p1, v0
 
-    .line 1240
+    .line 1160
     sget v0, Lcom/miui/home/launcher/DeviceConfig;->sWidgetCellMeasureHeight:I
 
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellHeight()I
@@ -8334,7 +7723,7 @@
     :cond_8
     const-string p1, "Launcher.DeviceConfig"
 
-    .line 1243
+    .line 1163
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -8361,11 +7750,8 @@
 
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1245
+    .line 1165
     invoke-static {p0}, Lcom/miui/home/launcher/DeviceConfig;->calcAllAppsCellSize(Landroid/content/Context;)V
-
-    .line 1246
-    invoke-static {p0}, Lcom/miui/home/launcher/DeviceConfig;->loadAllAppsCellCountX(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -8375,7 +7761,7 @@
 
     const-string/jumbo v0, "window"
 
-    .line 781
+    .line 778
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -8386,20 +7772,20 @@
 
     move-result-object p1
 
-    .line 782
+    .line 779
     new-instance v0, Landroid/util/DisplayMetrics;
 
     invoke-direct {v0}, Landroid/util/DisplayMetrics;-><init>()V
 
-    .line 783
+    .line 780
     invoke-virtual {p1, v0}, Landroid/view/Display;->getRealMetrics(Landroid/util/DisplayMetrics;)V
 
-    .line 784
+    .line 781
     iget p1, v0, Landroid/util/DisplayMetrics;->density:F
 
     sput p1, Lcom/miui/home/launcher/DeviceConfig;->sScreenDensity:F
 
-    .line 785
+    .line 782
     iget p1, v0, Landroid/util/DisplayMetrics;->densityDpi:I
 
     sput p1, Lcom/miui/home/launcher/DeviceConfig;->sScreenDensityDpi:I
@@ -8410,7 +7796,7 @@
 .method private static loadThemeResource(Landroid/content/Context;)V
     .locals 2
 
-    .line 761
+    .line 758
     :try_start_0
     new-instance v0, Lmiui/content/res/ThemeValues;
 
@@ -8418,7 +7804,7 @@
 
     sput-object v0, Lcom/miui/home/launcher/DeviceConfig;->sThemeValues:Lmiui/content/res/ThemeValues;
 
-    .line 762
+    .line 759
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -8433,7 +7819,7 @@
 
     move-result-object v0
 
-    .line 763
+    .line 760
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object p0
@@ -8442,14 +7828,31 @@
 
     invoke-virtual {v0, p0, v1}, Lmiui/content/res/ThemeResourcesPackage;->mergeThemeValues(Ljava/lang/String;Lmiui/content/res/ThemeValues;)V
 
-    .line 764
+    .line 761
+    sget-object p0, Lcom/miui/home/launcher/DeviceConfig;->sThemeValues:Lmiui/content/res/ThemeValues;
+
+    iget-object p0, p0, Lmiui/content/res/ThemeValues;->mIntegers:Ljava/util/HashMap;
+
+    const v0, 0x7f0b001a
+
+    .line 762
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_1
+
     sget-object p0, Lcom/miui/home/launcher/DeviceConfig;->sThemeValues:Lmiui/content/res/ThemeValues;
 
     iget-object p0, p0, Lmiui/content/res/ThemeValues;->mIntegers:Ljava/util/HashMap;
 
     const v0, 0x7f0b001d
 
-    .line 765
+    .line 763
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -8464,43 +7867,9 @@
 
     iget-object p0, p0, Lmiui/content/res/ThemeValues;->mIntegers:Ljava/util/HashMap;
 
-    const v0, 0x7f0b0021
+    const v0, 0x7f0b001c
 
-    .line 766
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_1
-
-    sget-object p0, Lcom/miui/home/launcher/DeviceConfig;->sThemeValues:Lmiui/content/res/ThemeValues;
-
-    iget-object p0, p0, Lmiui/content/res/ThemeValues;->mIntegers:Ljava/util/HashMap;
-
-    const v0, 0x7f0b0020
-
-    .line 767
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_1
-
-    sget-object p0, Lcom/miui/home/launcher/DeviceConfig;->sThemeValues:Lmiui/content/res/ThemeValues;
-
-    iget-object p0, p0, Lmiui/content/res/ThemeValues;->mIntegers:Ljava/util/HashMap;
-
-    const v0, 0x7f0b0023
-
-    .line 768
+    .line 764
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -8517,7 +7886,7 @@
 
     const v0, 0x7f0b001f
 
-    .line 769
+    .line 765
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -8532,9 +7901,26 @@
 
     iget-object p0, p0, Lmiui/content/res/ThemeValues;->mIntegers:Ljava/util/HashMap;
 
-    const v0, 0x7f0b0022
+    const v0, 0x7f0b001b
 
-    .line 770
+    .line 766
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_1
+
+    sget-object p0, Lcom/miui/home/launcher/DeviceConfig;->sThemeValues:Lmiui/content/res/ThemeValues;
+
+    iget-object p0, p0, Lmiui/content/res/ThemeValues;->mIntegers:Ljava/util/HashMap;
+
+    const v0, 0x7f0b001e
+
+    .line 767
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -8570,56 +7956,17 @@
 
     const-string v1, "loadThemeResource error"
 
-    .line 772
+    .line 769
     invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_2
     return-void
 .end method
 
-.method public static loadWorkspaceIndicatorThumbnailHeight(Landroid/content/Context;)V
-    .locals 3
-
-    .line 1006
-    invoke-static {p0}, Lcom/miui/home/launcher/DeviceConfig;->calcWorkspaceIndicatorMarginBottomInEditMode(Landroid/content/Context;)I
-
-    move-result v0
-
-    .line 1007
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    const v2, 0x7f0b007b
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result v1
-
-    .line 1008
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p0
-
-    const v2, 0x7f070134
-
-    invoke-virtual {p0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result p0
-
-    mul-int/2addr v1, p0
-
-    add-int/2addr v0, v1
-
-    sput v0, Lcom/miui/home/launcher/DeviceConfig;->sWorkspaceIndicatorThumbnailHeight:I
-
-    return-void
-.end method
-
 .method public static final needHideLockProvider(Landroid/content/Context;)Z
     .locals 1
 
-    .line 1662
+    .line 1603
     sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     if-nez v0, :cond_0
@@ -8628,7 +7975,7 @@
 
     return p0
 
-    .line 1664
+    .line 1605
     :cond_0
     invoke-static {p0}, Lcom/miui/home/launcher/DeviceConfig;->needHideThemeManager(Landroid/content/Context;)Z
 
@@ -8640,7 +7987,7 @@
 .method public static needHideMinusScreen()Z
     .locals 2
 
-    .line 1877
+    .line 1807
     sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     const/4 v1, 0x1
@@ -8649,7 +7996,7 @@
 
     return v1
 
-    .line 1881
+    .line 1811
     :cond_0
     sget-boolean v0, Lcom/miui/home/launcher/common/Utilities;->ATLEAST_MIUI_12_5_PLUS:Z
 
@@ -8657,7 +8004,7 @@
 
     return v1
 
-    .line 1885
+    .line 1815
     :cond_1
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->supportAssistant()Z
 
@@ -8665,14 +8012,14 @@
 
     if-eqz v0, :cond_3
 
-    .line 1886
+    .line 1816
     invoke-static {}, Lcom/miui/home/launcher/ApplicationConfig;->isAssistantInstalled()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 1887
+    .line 1817
     invoke-static {}, Lcom/miui/home/launcher/ApplicationConfig;->isAssistantSupportOverlay()Z
 
     move-result v0
@@ -8690,32 +8037,13 @@
 .end method
 
 .method public static final needHideThemeManager(Landroid/content/Context;)Z
-    .locals 3
+    .locals 2
 
-    .line 1563
+    .line 1507
     :try_start_0
     invoke-static {p0}, Lmiui/theme/ThemeManagerHelper;->needDisableTheme(Landroid/content/Context;)Z
 
     move-result p0
-
-    const-string v0, "Launcher.DeviceConfig"
-
-    .line 1564
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "needDisableTheme "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -8728,7 +8056,7 @@
 
     const-string v1, "needHideThemeManager"
 
-    .line 1567
+    .line 1509
     invoke-static {v0, v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p0, 0x0
@@ -8739,7 +8067,7 @@
 .method public static final needRecalculateWidgetSpan()Z
     .locals 1
 
-    .line 1654
+    .line 1595
     sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sNeedRecalculateWidgetSpan:Z
 
     return v0
@@ -8748,7 +8076,7 @@
 .method public static needShowCellsEntry(Landroid/content/Context;)Z
     .locals 4
 
-    .line 1425
+    .line 1324
     invoke-static {p0}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountXMin(Landroid/content/Context;)I
 
     move-result v0
@@ -8763,7 +8091,7 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 1426
+    .line 1325
     invoke-static {p0}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountYMin(Landroid/content/Context;)I
 
     move-result v0
@@ -8788,7 +8116,7 @@
     :goto_1
     const-string v1, "pref_key_use_theme_cells_size"
 
-    .line 1427
+    .line 1326
     invoke-static {p0, v1, v3}, Lcom/miui/home/launcher/common/PreferenceUtils;->getBoolean(Landroid/content/Context;Ljava/lang/String;Z)Z
 
     move-result p0
@@ -8809,109 +8137,16 @@
 .method public static final needShowMisplacedTips()Z
     .locals 1
 
-    .line 1658
+    .line 1599
     sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sNeedShowMisplacedTips:Z
 
-    return v0
-.end method
-
-.method private static obtainDefaultXmlID()I
-    .locals 2
-
-    .line 1501
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountY()I
-
-    move-result v0
-
-    const/4 v1, 0x6
-
-    if-lt v0, v1, :cond_3
-
-    .line 1502
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isFoldDevice()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const v0, 0x7f140007
-
-    return v0
-
-    .line 1504
-    :cond_0
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isRotatable()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const v0, 0x7f140010
-
-    goto :goto_0
-
-    .line 1506
-    :cond_1
-    sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->IS_MEITU:Z
-
-    if-eqz v0, :cond_2
-
-    const v0, 0x7f14001f
-
-    goto :goto_0
-
-    :cond_2
-    const v0, 0x7f14000c
-
-    goto :goto_0
-
-    .line 1511
-    :cond_3
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountY()I
-
-    move-result v0
-
-    const/4 v1, 0x5
-
-    if-lt v0, v1, :cond_6
-
-    .line 1512
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isRotatable()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    const v0, 0x7f14000f
-
-    goto :goto_0
-
-    .line 1514
-    :cond_4
-    sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->IS_MEITU:Z
-
-    if-eqz v0, :cond_5
-
-    const v0, 0x7f14001e
-
-    goto :goto_0
-
-    :cond_5
-    const v0, 0x7f14000a
-
-    goto :goto_0
-
-    :cond_6
-    const/4 v0, 0x0
-
-    :goto_0
     return v0
 .end method
 
 .method public static removeDownloadInstallInfo(Landroid/content/Context;)V
     .locals 1
 
-    .line 1703
+    .line 1644
     new-instance v0, Ljava/io/File;
 
     invoke-static {p0}, Lcom/miui/home/launcher/LauncherSettings;->getDownloadInstallInfoPath(Landroid/content/Context;)Ljava/lang/String;
@@ -8920,14 +8155,14 @@
 
     invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1704
+    .line 1645
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
-    .line 1705
+    .line 1646
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
     :cond_0
@@ -8937,22 +8172,22 @@
 .method public static final removeInvalidateDatabase(Landroid/content/Context;Z)V
     .locals 6
 
-    .line 1671
+    .line 1612
     invoke-static {}, Lcom/miui/home/launcher/allapps/LauncherModeController;->getCurrentMode()Lcom/miui/home/launcher/allapps/LauncherMode;
 
     move-result-object v0
 
-    .line 1672
+    .line 1613
     invoke-static {p0}, Lcom/miui/home/launcher/common/StorageContextGetter;->getContext(Landroid/content/Context;)Landroid/content/Context;
 
     move-result-object p0
 
-    .line 1673
+    .line 1614
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getDatabaseName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1678
+    .line 1619
     :try_start_0
     sget-object v2, Lcom/miui/home/launcher/DeviceConfig;->sLauncherDatabaseName:Ljava/lang/String;
 
@@ -8966,7 +8201,7 @@
 
     sget-object v2, Lcom/miui/home/launcher/DeviceConfig;->sLauncherDatabaseName:Ljava/lang/String;
 
-    .line 1679
+    .line 1620
     invoke-virtual {v0, p0, v2}, Lcom/miui/home/launcher/allapps/LauncherMode;->getLauncherDatabasePath(Landroid/content/Context;Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v2
@@ -8979,13 +8214,13 @@
 
     goto :goto_2
 
-    .line 1682
+    .line 1623
     :cond_0
     invoke-virtual {v0, p0}, Lcom/miui/home/launcher/allapps/LauncherMode;->getLauncherDatabaseDir(Landroid/content/Context;)Ljava/io/File;
 
     move-result-object p0
 
-    .line 1683
+    .line 1624
     invoke-virtual {p0}, Ljava/io/File;->list()[Ljava/lang/String;
 
     move-result-object v0
@@ -9001,7 +8236,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 1684
+    .line 1625
     invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v5
@@ -9010,14 +8245,14 @@
 
     const-string v5, ".db"
 
-    .line 1685
+    .line 1626
     invoke-virtual {v4, v5}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v5
 
     if-eqz v5, :cond_3
 
-    .line 1686
+    .line 1627
     invoke-virtual {v4, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v5
@@ -9026,7 +8261,7 @@
 
     const-string v5, "app_category_new.db"
 
-    .line 1687
+    .line 1628
     invoke-virtual {v4, v5}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v5
@@ -9035,7 +8270,7 @@
 
     const-string v5, "app_status.db"
 
-    .line 1688
+    .line 1629
     invoke-virtual {v4, v5}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v5
@@ -9044,7 +8279,7 @@
 
     const-string v5, "assistant"
 
-    .line 1689
+    .line 1630
     invoke-virtual {v4, v5}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v5
@@ -9053,14 +8288,14 @@
 
     const-string v5, "apps_data.db"
 
-    .line 1690
+    .line 1631
     invoke-virtual {v4, v5}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v5
 
     if-nez v5, :cond_3
 
-    .line 1691
+    .line 1632
     :cond_1
     invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isStaging()Z
 
@@ -9078,7 +8313,7 @@
 
     goto :goto_1
 
-    .line 1694
+    .line 1635
     :cond_2
     new-instance v5, Ljava/io/File;
 
@@ -9101,7 +8336,7 @@
     :catch_0
     move-exception p0
 
-    .line 1698
+    .line 1639
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_5
@@ -9111,7 +8346,7 @@
 .method public static requestIsAppStoreEnabled()V
     .locals 1
 
-    .line 1931
+    .line 1861
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -9136,17 +8371,17 @@
 
     const-string v1, ""
 
-    .line 2142
+    .line 2071
     invoke-static {p0, v0, v1}, Lcom/miui/home/launcher/common/PreferenceUtils;->getString(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2143
+    .line 2072
     sget-object v1, Lcom/miui/home/launcher/common/Utilities;->MIUI_BIG_VERSION:Ljava/lang/String;
 
     const-string v2, "V11"
 
-    .line 2144
+    .line 2073
     invoke-static {v2, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -9155,14 +8390,14 @@
 
     const-string v2, "V11"
 
-    .line 2145
+    .line 2074
     invoke-static {v2, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 2146
+    .line 2075
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isFirstBoot()Z
 
     move-result v0
@@ -9171,10 +8406,10 @@
 
     const/4 v0, 0x1
 
-    .line 2147
+    .line 2076
     sput-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sUpdateIconPositionForMiui11Upgrade:Z
 
-    .line 2148
+    .line 2077
     new-instance v0, Lcom/miui/home/launcher/-$$Lambda$DeviceConfig$__HvwoIRNMn7f0UJNoDgNmpf7JA;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/-$$Lambda$DeviceConfig$__HvwoIRNMn7f0UJNoDgNmpf7JA;-><init>(Landroid/content/Context;)V
@@ -9184,7 +8419,7 @@
     :cond_0
     const-string v0, "miui_version"
 
-    .line 2155
+    .line 2084
     invoke-static {p0, v0, v1}, Lcom/miui/home/launcher/common/PreferenceUtils;->putString(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -9193,22 +8428,22 @@
 .method public static restoreBackupDB(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 4
 
-    .line 1637
+    .line 1578
     invoke-static {}, Lcom/miui/home/launcher/allapps/LauncherModeController;->getCurrentMode()Lcom/miui/home/launcher/allapps/LauncherMode;
 
     move-result-object v0
 
-    .line 1638
+    .line 1579
     invoke-static {}, Lcom/miui/home/library/utils/Preconditions;->assertNonUiThread()V
 
-    .line 1640
+    .line 1581
     sget-object v1, Lcom/miui/home/launcher/DeviceConfig;->sLauncherDatabaseName:Ljava/lang/String;
 
     invoke-virtual {v0, p0, v1}, Lcom/miui/home/launcher/allapps/LauncherMode;->getLauncherDatabasePath(Landroid/content/Context;Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v1
 
-    .line 1642
+    .line 1583
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -9227,7 +8462,7 @@
 
     move-result-object p0
 
-    .line 1643
+    .line 1584
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
     move-result p1
@@ -9238,7 +8473,7 @@
 
     return v0
 
-    .line 1646
+    .line 1587
     :cond_0
     invoke-virtual {p0}, Ljava/io/File;->getAbsoluteFile()Ljava/io/File;
 
@@ -9254,7 +8489,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 1647
+    .line 1588
     invoke-virtual {p0}, Ljava/io/File;->delete()Z
 
     const/4 p0, 0x1
@@ -9268,14 +8503,14 @@
 .method public static saveCurrentDefaultScreenId(J)V
     .locals 2
 
-    .line 2085
+    .line 2015
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
 
     const-string v1, "pref_default_screen"
 
-    .line 2084
+    .line 2014
     invoke-static {v0, v1, p0, p1}, Lcom/miui/home/launcher/common/PreferenceUtils;->putLong(Landroid/content/Context;Ljava/lang/String;J)V
 
     return-void
@@ -9284,7 +8519,7 @@
 .method public static setAllAppsBackgroundAlpha(I)V
     .locals 0
 
-    .line 2233
+    .line 2150
     sput p0, Lcom/miui/home/launcher/DeviceConfig;->sAllAppsBackgroundAlpha:I
 
     return-void
@@ -9293,17 +8528,8 @@
 .method public static setAllAppsColorMode(Lcom/miui/home/launcher/allapps/AllAppsColorMode;)V
     .locals 0
 
-    .line 2217
+    .line 2146
     sput-object p0, Lcom/miui/home/launcher/DeviceConfig;->sAllAppsColorMode:Lcom/miui/home/launcher/allapps/AllAppsColorMode;
-
-    return-void
-.end method
-
-.method public static setAllAppsRecommendCount(I)V
-    .locals 0
-
-    .line 2229
-    sput p0, Lcom/miui/home/launcher/DeviceConfig;->sRecommendAppsCount:I
 
     return-void
 .end method
@@ -9311,7 +8537,7 @@
 .method public static setCurrentThemeSupportSearchBar(Landroid/content/Context;Z)Z
     .locals 1
 
-    .line 623
+    .line 620
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -9328,7 +8554,7 @@
 .method public static setGlobalSearchEnable(Landroid/content/Context;Z)V
     .locals 1
 
-    .line 1904
+    .line 1834
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -9343,7 +8569,7 @@
 .method public static setHotseatMaxCount(I)V
     .locals 0
 
-    .line 1468
+    .line 1367
     sput p0, Lcom/miui/home/launcher/DeviceConfig;->sHotseatMaxCount:I
 
     return-void
@@ -9356,13 +8582,13 @@
 
     monitor-enter v0
 
-    .line 1963
+    .line 1893
     :try_start_0
     sput-boolean p0, Lcom/miui/home/launcher/DeviceConfig;->sIsAccessibilityEnabled:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1964
+    .line 1894
     monitor-exit v0
 
     return-void
@@ -9378,17 +8604,17 @@
 .method public static setIsInMultiWindowModes(Landroid/content/Context;Landroid/content/res/Resources;Z)V
     .locals 0
 
-    .line 810
+    .line 803
     sget-boolean p1, Lcom/miui/home/launcher/DeviceConfig;->sIsInMultiWindowMode:Z
 
     if-eq p1, p2, :cond_0
 
-    .line 811
+    .line 804
     sput-boolean p2, Lcom/miui/home/launcher/DeviceConfig;->sIsInMultiWindowMode:Z
 
     const/4 p1, 0x1
 
-    .line 812
+    .line 805
     invoke-static {p0, p1}, Lcom/miui/home/launcher/DeviceConfig;->calcGridSize(Landroid/content/Context;Z)V
 
     :cond_0
@@ -9402,13 +8628,13 @@
 
     monitor-enter v0
 
-    .line 2021
+    .line 1951
     :try_start_0
     sput-boolean p0, Lcom/miui/home/launcher/DeviceConfig;->sIsNetWorkConnected:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2022
+    .line 1952
     monitor-exit v0
 
     return-void
@@ -9424,46 +8650,16 @@
 .method public static setLastRotation(I)V
     .locals 0
 
-    .line 313
+    .line 309
     sput p0, Lcom/miui/home/launcher/DeviceConfig;->sLastRotation:I
 
-    return-void
-.end method
-
-.method public static setRotatable(Z)V
-    .locals 1
-
-    .line 2458
-    sput-boolean p0, Lcom/miui/home/launcher/DeviceConfig;->sRotatable:Z
-
-    .line 2459
-    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x4
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x1
-
-    .line 2461
-    :goto_0
-    invoke-virtual {v0, p0}, Lcom/miui/home/launcher/Launcher;->setRequestedOrientation(I)V
-
-    :cond_1
     return-void
 .end method
 
 .method public static setRotation(I)V
     .locals 0
 
-    .line 317
+    .line 313
     sput p0, Lcom/miui/home/launcher/DeviceConfig;->sRotation:I
 
     return-void
@@ -9472,7 +8668,7 @@
 .method public static setRotationBerforStart(I)V
     .locals 0
 
-    .line 305
+    .line 301
     sput p0, Lcom/miui/home/launcher/DeviceConfig;->sRotationBeforeStart:I
 
     return-void
@@ -9485,7 +8681,7 @@
 
     const/4 v1, 0x0
 
-    .line 1274
+    .line 1193
     invoke-static {p0, v0, v1}, Lcom/miui/home/launcher/common/PreferenceUtils;->getBoolean(Landroid/content/Context;Ljava/lang/String;Z)Z
 
     move-result v0
@@ -9494,23 +8690,23 @@
 
     return v1
 
-    .line 1278
+    .line 1197
     :cond_0
     invoke-static {p0}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountXMin(Landroid/content/Context;)I
 
     move-result v0
 
-    .line 1279
+    .line 1198
     invoke-static {p0}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountXMax(Landroid/content/Context;)I
 
     move-result v2
 
-    .line 1280
+    .line 1199
     invoke-static {p0}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountYMin(Landroid/content/Context;)I
 
     move-result v3
 
-    .line 1281
+    .line 1200
     invoke-static {p0}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountYMax(Landroid/content/Context;)I
 
     move-result v4
@@ -9541,7 +8737,7 @@
 
     return v1
 
-    .line 1287
+    .line 1206
     :cond_3
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellConfigXSpKey()Ljava/lang/String;
 
@@ -9549,20 +8745,20 @@
 
     invoke-static {p0, v0, p1}, Lcom/miui/home/launcher/common/PreferenceUtils;->putInt(Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 1288
+    .line 1207
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellConfigYSpKey()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {p0, v0, p2}, Lcom/miui/home/launcher/common/PreferenceUtils;->putInt(Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 1289
+    .line 1208
     sput p1, Lcom/miui/home/launcher/DeviceConfig;->sCellCountX:I
 
-    .line 1290
+    .line 1209
     sput p2, Lcom/miui/home/launcher/DeviceConfig;->sCellCountY:I
 
-    .line 1291
+    .line 1210
     sget p0, Lcom/miui/home/launcher/DeviceConfig;->sCellCountX:I
 
     sget p1, Lcom/miui/home/launcher/DeviceConfig;->sCellCountY:I
@@ -9571,14 +8767,14 @@
 
     move-result-object p0
 
-    .line 1292
+    .line 1211
     invoke-static {p0}, Lcom/miui/home/launcher/DeviceConfig;->getDatabaseNameBySuffix(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     sput-object p0, Lcom/miui/home/launcher/DeviceConfig;->sLauncherDatabaseName:Ljava/lang/String;
 
-    .line 1293
+    .line 1212
     sput-boolean v5, Lcom/miui/home/launcher/DeviceConfig;->sScreenCellsChangedTemporary:Z
 
     return v5
@@ -9587,7 +8783,7 @@
 .method public static setSearchBarSource(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 1
 
-    .line 631
+    .line 628
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -9606,12 +8802,12 @@
 
     if-eqz p0, :cond_0
 
-    .line 2258
+    .line 2175
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
 
-    const-string/jumbo v0, "use_gesture_version_three"
+    const-string v0, "use_gesture_version_three"
 
     invoke-static {p0, v0, p1}, Lcom/miui/launcher/utils/MiuiSettingsUtils;->putBooleanToGlobal(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
@@ -9619,94 +8815,10 @@
     return-void
 .end method
 
-.method private setWorkspaceCellPadding(Landroid/content/res/Resources;)V
-    .locals 2
-
-    .line 912
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isRotatable()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const v0, 0x7f070671
-
-    goto :goto_0
-
-    .line 914
-    :cond_0
-    invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isNoWordModel()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const v0, 0x7f070670
-
-    goto :goto_0
-
-    :cond_1
-    const v0, 0x7f07066f
-
-    .line 912
-    :goto_0
-    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v0
-
-    sput v0, Lcom/miui/home/launcher/DeviceConfig;->sWorkspaceCellPaddingSide:I
-
-    const v0, 0x7f070672
-
-    .line 915
-    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v0
-
-    sput v0, Lcom/miui/home/launcher/DeviceConfig;->sWorkspaceCellPaddingTop:I
-
-    .line 916
-    sget v0, Lcom/miui/home/launcher/DeviceConfig;->sWorkspaceCellPaddingTop:I
-
-    const v1, 0x7f07066c
-
-    .line 917
-    invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    sput v0, Lcom/miui/home/launcher/DeviceConfig;->sWorkspaceCellPaddingTopNotch:I
-
-    .line 918
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isRotatable()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    const v0, 0x7f070688
-
-    goto :goto_1
-
-    :cond_2
-    const v0, 0x7f070687
-
-    :goto_1
-    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result p1
-
-    sput p1, Lcom/miui/home/launcher/DeviceConfig;->sWidgetCellPaddingBottom:I
-
-    return-void
-.end method
-
 .method public static showBackGestureInEditingMode()Z
     .locals 2
 
-    .line 2060
+    .line 1990
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getSystemUIFsgVersion()I
 
     move-result v0
@@ -9729,7 +8841,7 @@
 .method public static showFsTransAnimation()Z
     .locals 2
 
-    .line 2056
+    .line 1986
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getSystemUIFsgVersion()I
 
     move-result v0
@@ -9752,14 +8864,14 @@
 .method public static supportAssistant()Z
     .locals 2
 
-    .line 1852
+    .line 1788
     sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     const/4 v1, 0x1
 
     if-nez v0, :cond_0
 
-    .line 1853
+    .line 1789
     sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sIsLayoutRtl:Z
 
     xor-int/2addr v0, v1
@@ -9773,7 +8885,7 @@
 .method public static supportAssistant(Lcom/miui/home/launcher/Launcher;)Z
     .locals 1
 
-    .line 1859
+    .line 1795
     invoke-virtual {p0}, Lcom/miui/home/launcher/Launcher;->isInMultiWindowMode()Z
 
     move-result p0
@@ -9808,7 +8920,7 @@
 .method public static supportCheckRegionalWallpaper()Z
     .locals 1
 
-    .line 2311
+    .line 2228
     sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sSupportDarkenWallpaper:Z
 
     xor-int/lit8 v0, v0, 0x1
@@ -9819,7 +8931,7 @@
 .method public static supportDarkMode()Z
     .locals 1
 
-    .line 2202
+    .line 2131
     sget-boolean v0, Lcom/miui/home/launcher/common/Utilities;->ATLEAST_P:Z
 
     return v0
@@ -9828,7 +8940,7 @@
 .method public static supportIconTextShadow()Z
     .locals 1
 
-    .line 2304
+    .line 2221
     sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sSupportDarkenWallpaper:Z
 
     xor-int/lit8 v0, v0, 0x1
@@ -9839,7 +8951,7 @@
 .method public static supportsMultiWindow()Z
     .locals 1
 
-    .line 830
+    .line 822
     sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sIsSupportMultiWindowMode:Z
 
     return v0
@@ -9848,7 +8960,7 @@
 .method public static supportsMultiWindowAndNotInSecuritySpace()Z
     .locals 2
 
-    .line 825
+    .line 818
     invoke-static {}, Lmiui/os/UserHandle;->myUserId()I
 
     move-result v0
@@ -9859,16 +8971,7 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 826
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->supportsMultiWindow()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->enableMultiWindow()Z
-
-    move-result v0
+    sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sIsSupportMultiWindowMode:Z
 
     if-eqz v0, :cond_0
 
@@ -9884,26 +8987,26 @@
 .end method
 
 .method private static final tryToMigrateDefaultDatabase(Landroid/content/Context;)V
-    .locals 6
+    .locals 4
 
-    .line 1573
+    .line 1515
     invoke-static {}, Lcom/miui/home/launcher/allapps/LauncherModeController;->getCurrentMode()Lcom/miui/home/launcher/allapps/LauncherMode;
 
     move-result-object v0
 
-    .line 1574
+    .line 1516
     invoke-static {p0}, Lcom/miui/home/launcher/common/StorageContextGetter;->getContext(Landroid/content/Context;)Landroid/content/Context;
 
     move-result-object p0
 
-    .line 1575
+    .line 1517
     sget-object v1, Lcom/miui/home/launcher/DeviceConfig;->sLauncherDatabaseName:Ljava/lang/String;
 
     invoke-virtual {v0, p0, v1}, Lcom/miui/home/launcher/allapps/LauncherMode;->getLauncherDatabasePath(Landroid/content/Context;Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v1
 
-    .line 1576
+    .line 1518
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result v2
@@ -9912,47 +9015,14 @@
 
     if-nez v2, :cond_0
 
-    .line 1577
+    .line 1519
     invoke-static {p0, v0}, Lcom/miui/home/launcher/DeviceConfig;->getOptimalDB(Landroid/content/Context;Lcom/miui/home/launcher/allapps/LauncherMode;)Ljava/io/File;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    const-string v2, "Launcher.DeviceConfig"
-
-    .line 1579
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "Migrate db "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/io/File;->getName()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v5, " to "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/io/File;->getName()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v2, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 1580
+    .line 1521
     invoke-virtual {v0}, Ljava/io/File;->getAbsoluteFile()Ljava/io/File;
 
     move-result-object v2
@@ -9963,10 +9033,10 @@
 
     invoke-static {v2, v1}, Lmiuix/core/util/FileUtils;->copyFile(Ljava/io/File;Ljava/io/File;)Z
 
-    .line 1581
+    .line 1522
     sput-boolean v3, Lcom/miui/home/launcher/DeviceConfig;->sNeedRecalculateWidgetSpan:Z
 
-    .line 1582
+    .line 1523
     invoke-virtual {v0}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -9977,25 +9047,25 @@
 
     const/4 v1, 0x2
 
-    .line 1583
+    .line 1524
     new-array v1, v1, [I
 
-    .line 1584
+    .line 1525
     invoke-static {v0, v1}, Lcom/miui/home/launcher/ScreenUtils;->parseCellsSize(Ljava/lang/String;[I)Z
 
     const/4 v0, 0x0
 
-    .line 1585
+    .line 1526
     aget v0, v1, v0
 
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sCellXMigratedFrom:I
 
-    .line 1586
+    .line 1527
     aget v0, v1, v3
 
     sput v0, Lcom/miui/home/launcher/DeviceConfig;->sCellYMigratedFrom:I
 
-    .line 1588
+    .line 1529
     sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sScreenCellsChangedTemporary:Z
 
     if-nez v0, :cond_0
@@ -10004,7 +9074,7 @@
 
     if-nez v0, :cond_0
 
-    .line 1589
+    .line 1530
     sget-object v0, Lcom/miui/home/launcher/util/noword/NoWordSettingHelper;->INSTANCE:Lcom/miui/home/launcher/util/noword/NoWordSettingHelper;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/util/noword/NoWordSettingHelper;->getSwitchingNoWordModel()Z
@@ -10015,97 +9085,69 @@
 
     sput-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sNeedShowMisplacedTips:Z
 
-    .line 1593
+    .line 1534
     :cond_0
     sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sScreenCellsChangedTemporary:Z
 
     if-nez v0, :cond_1
 
-    .line 1594
+    .line 1535
     invoke-static {p0, v3}, Lcom/miui/home/launcher/DeviceConfig;->removeInvalidateDatabase(Landroid/content/Context;Z)V
 
     :cond_1
     return-void
 .end method
 
-.method private updateDeviceProfileSizMultiWindow(Landroid/content/Context;Landroid/content/res/Resources;)Z
+.method private updateDeviceProfileSize(Landroid/content/Context;)Z
     .locals 2
 
-    .line 905
-    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->widthPixels:I
-
-    .line 906
-    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p2
-
-    iget p2, p2, Landroid/util/DisplayMetrics;->heightPixels:I
-
-    .line 907
-    invoke-static {v0, p2}, Ljava/lang/Math;->min(II)I
-
-    move-result v1
-
-    sput v1, Lcom/miui/home/launcher/DeviceConfig;->sScreenSmallestWidth:I
-
-    .line 908
-    sget-object v1, Lcom/miui/home/launcher/DeviceConfig;->mActiveProfile:Lcom/miui/home/launcher/DeviceProfile;
-
-    invoke-virtual {v1, v0, p2, p1}, Lcom/miui/home/launcher/DeviceProfile;->updateDeviceSize(IILandroid/content/Context;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method private updateDeviceProfileSize(Landroid/content/Context;)Z
-    .locals 3
-
-    .line 924
+    .line 885
     new-instance v0, Landroid/util/DisplayMetrics;
 
     invoke-direct {v0}, Landroid/util/DisplayMetrics;-><init>()V
 
     const-string/jumbo v1, "window"
 
-    .line 925
+    .line 886
     invoke-virtual {p1, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object p1
 
-    check-cast v1, Landroid/view/WindowManager;
+    check-cast p1, Landroid/view/WindowManager;
 
-    .line 926
-    invoke-interface {v1}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
+    .line 887
+    invoke-interface {p1}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
-    move-result-object v1
+    move-result-object p1
 
-    .line 927
-    invoke-virtual {v1, v0}, Landroid/view/Display;->getRealMetrics(Landroid/util/DisplayMetrics;)V
+    .line 888
+    invoke-virtual {p1, v0}, Landroid/view/Display;->getRealMetrics(Landroid/util/DisplayMetrics;)V
 
-    .line 928
+    .line 890
+    iget p1, v0, Landroid/util/DisplayMetrics;->widthPixels:I
+
+    iget v1, v0, Landroid/util/DisplayMetrics;->heightPixels:I
+
+    invoke-static {p1, v1}, Ljava/lang/Math;->min(II)I
+
+    move-result p1
+
+    .line 891
     iget v1, v0, Landroid/util/DisplayMetrics;->widthPixels:I
-
-    iget v2, v0, Landroid/util/DisplayMetrics;->heightPixels:I
-
-    invoke-static {v1, v2}, Ljava/lang/Math;->min(II)I
-
-    move-result v1
-
-    sput v1, Lcom/miui/home/launcher/DeviceConfig;->sScreenSmallestWidth:I
-
-    .line 929
-    sget-object v1, Lcom/miui/home/launcher/DeviceConfig;->mActiveProfile:Lcom/miui/home/launcher/DeviceProfile;
-
-    iget v2, v0, Landroid/util/DisplayMetrics;->widthPixels:I
 
     iget v0, v0, Landroid/util/DisplayMetrics;->heightPixels:I
 
-    invoke-virtual {v1, v2, v0, p1}, Lcom/miui/home/launcher/DeviceProfile;->updateDeviceSize(IILandroid/content/Context;)Z
+    invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    .line 892
+    sput p1, Lcom/miui/home/launcher/DeviceConfig;->sScreenSmallestWidth:I
+
+    .line 893
+    sget-object v1, Lcom/miui/home/launcher/DeviceConfig;->mActiveProfile:Lcom/miui/home/launcher/DeviceProfile;
+
+    invoke-virtual {v1, v0, p1}, Lcom/miui/home/launcher/DeviceProfile;->updateDeviceSize(II)Z
 
     move-result p1
 
@@ -10115,12 +9157,12 @@
 .method public static updateIconPositionForMiui11Upgrade()Z
     .locals 2
 
-    .line 2161
+    .line 2090
     sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sUpdateIconPositionForMiui11Upgrade:Z
 
     const/4 v1, 0x0
 
-    .line 2162
+    .line 2091
     sput-boolean v1, Lcom/miui/home/launcher/DeviceConfig;->sUpdateIconPositionForMiui11Upgrade:Z
 
     return v0
@@ -10129,7 +9171,7 @@
 .method public static updateIsDefaultIcon(Landroid/content/Context;)V
     .locals 2
 
-    .line 2249
+    .line 2166
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -10155,7 +9197,7 @@
 .method public static updateSearchBarTransferEnable(Landroid/content/Context;)V
     .locals 3
 
-    .line 652
+    .line 649
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -10182,7 +9224,7 @@
     :goto_0
     if-nez v0, :cond_1
 
-    .line 655
+    .line 652
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -10198,7 +9240,7 @@
 .method public static useNavigationBarLayoutMode()Z
     .locals 1
 
-    .line 1955
+    .line 1885
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isShowNavigationBar()Z
 
     move-result v0
@@ -10231,7 +9273,7 @@
 .method public static useOldVersionIcons()Z
     .locals 1
 
-    .line 2064
+    .line 1994
     sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sUseOldVersionIcons:Z
 
     return v0
@@ -10240,7 +9282,7 @@
 .method private static useSecondSpaceLayout()Z
     .locals 2
 
-    .line 1347
+    .line 1250
     invoke-static {}, Lmiui/os/UserHandle;->myUserId()I
 
     move-result v0
@@ -10251,7 +9293,7 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 1348
+    .line 1251
     invoke-static {}, Lmiui/os/UserHandle;->myUserId()I
 
     move-result v0
@@ -10276,7 +9318,7 @@
 .method public static usingFsGesture()Z
     .locals 1
 
-    .line 1947
+    .line 1877
     sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sIsGestureEnable:Z
 
     return v0
@@ -10287,39 +9329,28 @@
 .method public Init(Landroid/content/Context;Z)Z
     .locals 7
 
-    .line 324
-    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->isInFoldLargeScreen()Z
-
-    move-result v0
-
-    sput-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sRotatable:Z
-
-    .line 325
+    .line 320
     invoke-static {p1}, Lcom/miui/home/launcher/DeviceConfig;->loadThemeResource(Landroid/content/Context;)V
 
-    .line 326
+    .line 321
     invoke-static {}, Lcom/miui/home/launcher/allapps/LauncherModeController;->enableAndResetCache()Z
 
     move-result v0
 
-    .line 328
+    .line 323
     invoke-static {p1}, Lcom/miui/home/launcher/util/noword/NoWordSettingHelperKt;->checkNoWordSettings(Landroid/content/Context;)V
 
-    .line 329
+    .line 324
     invoke-static {}, Lcom/miui/home/launcher/allapps/LauncherModeController;->getCurrentLauncherCellCountInstance()Lcom/miui/home/launcher/compat/LauncherCellCount;
 
     move-result-object v1
 
-    .line 330
+    .line 325
     instance-of v2, v1, Lcom/miui/home/launcher/compat/LauncherCellCountCompatNoWord;
 
     if-eqz v2, :cond_0
 
-    .line 332
+    .line 327
     move-object v2, v1
 
     check-cast v2, Lcom/miui/home/launcher/compat/LauncherCellCountCompatNoWord;
@@ -10328,34 +9359,34 @@
 
     invoke-virtual {v2, v3}, Lcom/miui/home/launcher/compat/LauncherCellCountCompatNoWord;->setLoadResCellConfig(Z)V
 
-    .line 334
+    .line 329
     :cond_0
     invoke-static {v1, p1}, Lcom/miui/home/launcher/DeviceConfig;->loadCellConfigFromController(Lcom/miui/home/launcher/compat/LauncherCellCount;Landroid/content/Context;)V
 
-    .line 336
+    .line 331
     invoke-static {p1}, Lcom/miui/home/launcher/compat/LauncherThemeCompat;->getInstance(Landroid/content/Context;)Lcom/miui/home/launcher/compat/LauncherThemeCompat;
 
     move-result-object v2
 
     invoke-virtual {v2}, Lcom/miui/home/launcher/compat/LauncherThemeCompat;->enableAndResetCache()V
 
-    .line 337
+    .line 332
     invoke-static {}, Lcom/miui/home/launcher/common/LauncherIconSizeProvider;->getInstance()Lcom/miui/home/launcher/common/LauncherIconSizeProvider;
 
     move-result-object v2
 
     invoke-virtual {v2}, Lcom/miui/home/launcher/common/LauncherIconSizeProvider;->enableAndResetCache()V
 
-    .line 338
+    .line 333
     invoke-static {}, Lcom/miui/home/launcher/MIUIWidgetUtil;->resetCache()V
 
-    .line 339
+    .line 334
     invoke-static {p1}, Lcom/miui/home/launcher/DeviceConfig;->checkSearchBarSupport(Landroid/content/Context;)V
 
-    .line 340
+    .line 335
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/DeviceConfig;->loadDensity(Landroid/content/Context;)V
 
-    .line 341
+    .line 336
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -10364,7 +9395,7 @@
 
     move-result-object v2
 
-    .line 342
+    .line 337
     invoke-virtual {v2}, Landroid/content/res/Configuration;->getLayoutDirection()I
 
     move-result v3
@@ -10375,22 +9406,22 @@
 
     if-ne v3, v5, :cond_1
 
-    .line 343
+    .line 338
     sput-boolean v5, Lcom/miui/home/launcher/DeviceConfig;->sIsLayoutRtl:Z
 
     goto :goto_0
 
-    .line 345
+    .line 340
     :cond_1
     sput-boolean v4, Lcom/miui/home/launcher/DeviceConfig;->sIsLayoutRtl:Z
 
-    .line 347
+    .line 342
     :goto_0
     sget-object v3, Lcom/miui/home/launcher/DeviceConfig;->sLastConfiguration:Landroid/content/res/Configuration;
 
     if-nez v3, :cond_2
 
-    .line 348
+    .line 343
     new-instance v0, Landroid/content/res/Configuration;
 
     invoke-direct {v0, v2}, Landroid/content/res/Configuration;-><init>(Landroid/content/res/Configuration;)V
@@ -10399,7 +9430,7 @@
 
     goto :goto_3
 
-    .line 350
+    .line 345
     :cond_2
     invoke-virtual {v3, v2}, Landroid/content/res/Configuration;->diff(Landroid/content/res/Configuration;)I
 
@@ -10411,18 +9442,18 @@
 
     if-eqz v6, :cond_3
 
-    .line 352
+    .line 347
     invoke-static {}, Lcom/miui/home/launcher/WallpaperUtils;->clearWallpaperSrc()V
 
     :cond_3
     if-eqz v6, :cond_4
 
-    .line 355
+    .line 350
     sput-boolean v5, Lcom/miui/home/launcher/DeviceConfig;->sThemeChanged:Z
 
     goto :goto_1
 
-    .line 357
+    .line 352
     :cond_4
     sput-boolean v4, Lcom/miui/home/launcher/DeviceConfig;->sThemeChanged:Z
 
@@ -10435,7 +9466,7 @@
 
     if-nez p2, :cond_6
 
-    .line 359
+    .line 354
     sget-boolean v3, Lcom/miui/home/launcher/DeviceConfig;->sScreenCellsChangedTemporary:Z
 
     if-nez v3, :cond_6
@@ -10447,32 +9478,32 @@
     :cond_5
     return v4
 
-    .line 363
+    .line 358
     :cond_6
     :goto_2
     sget-object v0, Lcom/miui/home/launcher/DeviceConfig;->sLastConfiguration:Landroid/content/res/Configuration;
 
     invoke-virtual {v0, v2}, Landroid/content/res/Configuration;->setTo(Landroid/content/res/Configuration;)V
 
-    .line 368
+    .line 363
     :goto_3
     invoke-direct {p0, p1, v1}, Lcom/miui/home/launcher/DeviceConfig;->isCellSizeChangedByTheme(Landroid/content/Context;Lcom/miui/home/launcher/compat/LauncherCellCount;)Z
 
     move-result v0
 
-    .line 369
+    .line 364
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 370
+    .line 365
     invoke-static {}, Lcom/miui/launcher/utils/MiuiWindowManagerUtils;->getInitialDisplaySize()Landroid/graphics/Point;
 
     move-result-object v3
 
     if-eqz v3, :cond_7
 
-    .line 371
+    .line 366
     iget v3, v3, Landroid/graphics/Point;->x:I
 
     const/16 v6, 0x2d0
@@ -10495,20 +9526,20 @@
     :goto_4
     sput-boolean v3, Lcom/miui/home/launcher/DeviceConfig;->sIs720Mode:Z
 
-    .line 372
+    .line 367
     sget-object v3, Lcom/miui/home/LauncherDecoupleHelper;->INSTANCE:Lcom/miui/home/LauncherDecoupleHelper;
 
     invoke-virtual {v3}, Lcom/miui/home/LauncherDecoupleHelper;->migratePocoData()V
 
-    .line 373
+    .line 368
     invoke-static {v1}, Lcom/miui/home/launcher/DeviceConfig;->calcIconSize(Landroid/content/res/Resources;)V
 
-    .line 374
+    .line 369
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    const v6, 0x7f070128
+    const v6, 0x7f0700aa
 
     invoke-virtual {v3, v6}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -10516,148 +9547,202 @@
 
     sput v3, Lcom/miui/home/launcher/DeviceConfig;->sNotchEditModePaddingTopDelta:I
 
-    const v3, 0x7f07067f
+    const v3, 0x7f07040e
 
-    .line 375
+    .line 370
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v3
 
     sput v3, Lcom/miui/home/launcher/DeviceConfig;->sWorkspaceInvalidateEdgeWidth:I
 
-    const v3, 0x7f070613
+    const v3, 0x7f0703c4
 
-    .line 376
+    .line 371
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v3
 
     sput v3, Lcom/miui/home/launcher/DeviceConfig;->sStatusBarHeight:I
 
-    .line 378
-    invoke-direct {p0, v1}, Lcom/miui/home/launcher/DeviceConfig;->setWorkspaceCellPadding(Landroid/content/res/Resources;)V
-
-    const v3, 0x7f0705b6
-
-    .line 379
-    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v3
-
-    sput v3, Lcom/miui/home/launcher/DeviceConfig;->sFolderRecommendGridPaddingBottom:I
-
-    const v3, 0x7f070683
-
-    .line 381
-    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v3
-
-    sput v3, Lcom/miui/home/launcher/DeviceConfig;->sWidgetCellMeasureWidth:I
-
-    const v3, 0x7f070682
-
-    .line 382
-    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v3
-
-    sput v3, Lcom/miui/home/launcher/DeviceConfig;->sWidgetCellMeasureHeight:I
-
-    const v3, 0x7f070686
-
-    .line 383
-    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v3
-
-    sput v3, Lcom/miui/home/launcher/DeviceConfig;->sWidgetCellMinWidth:I
-
-    const v3, 0x7f070685
-
-    .line 384
-    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v3
-
-    sput v3, Lcom/miui/home/launcher/DeviceConfig;->sWidgetCellMinHeight:I
-
-    const v3, 0x7f070689
-
-    .line 385
-    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v3
-
-    sput v3, Lcom/miui/home/launcher/DeviceConfig;->sWidgetCellPaddingTop:I
-
-    .line 386
+    .line 373
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isRotatable()Z
 
     move-result v3
 
     if-eqz v3, :cond_8
 
-    const v3, 0x7f070688
+    const v3, 0x7f070400
 
     goto :goto_5
 
+    .line 375
     :cond_8
-    const v3, 0x7f070687
+    invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isNoWordModel()Z
 
+    move-result v3
+
+    if-eqz v3, :cond_9
+
+    const v3, 0x7f0703ff
+
+    goto :goto_5
+
+    :cond_9
+    const v3, 0x7f0703fe
+
+    .line 373
     :goto_5
+    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v3
+
+    sput v3, Lcom/miui/home/launcher/DeviceConfig;->sWorkspaceCellPaddingSide:I
+
+    const v3, 0x7f070401
+
+    .line 376
+    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v3
+
+    sput v3, Lcom/miui/home/launcher/DeviceConfig;->sWorkspaceCellPaddingTop:I
+
+    .line 377
+    sget v3, Lcom/miui/home/launcher/DeviceConfig;->sWorkspaceCellPaddingTop:I
+
+    const v6, 0x7f0703fb
+
+    .line 378
+    invoke-virtual {v1, v6}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v6
+
+    add-int/2addr v3, v6
+
+    sput v3, Lcom/miui/home/launcher/DeviceConfig;->sWorkspaceCellPaddingTopNotch:I
+
+    const v3, 0x7f070402
+
+    .line 379
+    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v3
+
+    sput v3, Lcom/miui/home/launcher/DeviceConfig;->sWorkspaceCellPaddingTopMultiWindow:I
+
+    const v3, 0x7f070370
+
+    .line 380
+    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v3
+
+    sput v3, Lcom/miui/home/launcher/DeviceConfig;->sFolderRecommendGridPaddingBottom:I
+
+    const v3, 0x7f070411
+
+    .line 382
+    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v3
+
+    sput v3, Lcom/miui/home/launcher/DeviceConfig;->sWidgetCellMeasureWidth:I
+
+    const v3, 0x7f070410
+
+    .line 383
+    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v3
+
+    sput v3, Lcom/miui/home/launcher/DeviceConfig;->sWidgetCellMeasureHeight:I
+
+    const v3, 0x7f070414
+
+    .line 384
+    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v3
+
+    sput v3, Lcom/miui/home/launcher/DeviceConfig;->sWidgetCellMinWidth:I
+
+    const v3, 0x7f070413
+
+    .line 385
+    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v3
+
+    sput v3, Lcom/miui/home/launcher/DeviceConfig;->sWidgetCellMinHeight:I
+
+    const v3, 0x7f070417
+
+    .line 386
+    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v3
+
+    sput v3, Lcom/miui/home/launcher/DeviceConfig;->sWidgetCellPaddingTop:I
+
+    .line 387
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isRotatable()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_a
+
+    const v3, 0x7f070416
+
+    goto :goto_6
+
+    :cond_a
+    const v3, 0x7f070415
+
+    :goto_6
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v3
 
     sput v3, Lcom/miui/home/launcher/DeviceConfig;->sWidgetCellPaddingBottom:I
 
-    const v3, 0x7f0702a3
+    const v3, 0x7f07012e
 
-    .line 390
+    .line 391
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v3
 
     sput v3, Lcom/miui/home/launcher/DeviceConfig;->sMiuiWidgetPaddingTop:I
 
-    .line 391
+    .line 392
     invoke-static {p1, v1}, Lcom/miui/home/launcher/DeviceConfig;->calcLauncherHeightWhenMultiWindow(Landroid/content/Context;Landroid/content/res/Resources;)V
 
-    .line 392
+    .line 393
     sput-boolean v4, Lcom/miui/home/launcher/DeviceConfig;->sNeedRecalculateWidgetSpan:Z
 
-    .line 393
+    .line 394
     sput-boolean v4, Lcom/miui/home/launcher/DeviceConfig;->sNeedShowMisplacedTips:Z
 
-    .line 394
+    .line 395
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->hasNavigationBar()Z
 
     move-result v3
 
     sput-boolean v3, Lcom/miui/home/launcher/DeviceConfig;->sHasNavigationBar:Z
 
-    .line 395
+    .line 396
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    const v6, 0x7f05000b
+    const v6, 0x7f05000c
 
     invoke-virtual {v3, v6}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v3
 
     sput-boolean v3, Lcom/miui/home/launcher/DeviceConfig;->sIsHotseatsAppTitleHided:Z
-
-    const v3, 0x7f090004
-
-    .line 396
-    invoke-virtual {v1, v3, v5, v5}, Landroid/content/res/Resources;->getFraction(III)F
-
-    move-result v3
-
-    sput v3, Lcom/miui/home/launcher/DeviceConfig;->sScreenScaleRatio:F
 
     .line 398
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/DeviceConfig;->initDeviceProfile(Landroid/content/Context;)V
@@ -10673,7 +9758,7 @@
 
     move-result-object v3
 
-    const v6, 0x7f1103ee
+    const v6, 0x7f10032e
 
     invoke-virtual {v3, v6}, Landroid/content/res/Resources;->getResourceName(I)Ljava/lang/String;
 
@@ -10686,7 +9771,7 @@
 
     move-result-object v3
 
-    const v6, 0x7f070165
+    const v6, 0x7f0700d4
 
     invoke-virtual {v3, v6}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -10718,9 +9803,9 @@
     .line 405
     sput-boolean v4, Lcom/miui/home/launcher/DeviceConfig;->sScreenCellsChangedTemporary:Z
 
-    if-eqz p2, :cond_9
+    if-eqz p2, :cond_b
 
-    if-nez v0, :cond_9
+    if-nez v0, :cond_b
 
     .line 406
     sget-object p2, Lcom/miui/home/launcher/util/noword/NoWordSettingHelper;->INSTANCE:Lcom/miui/home/launcher/util/noword/NoWordSettingHelper;
@@ -10729,14 +9814,14 @@
 
     move-result p2
 
-    if-eqz p2, :cond_a
+    if-eqz p2, :cond_c
 
     .line 408
-    :cond_9
+    :cond_b
     invoke-static {p1}, Lcom/miui/home/launcher/DeviceConfig;->confirmCellsCount(Landroid/content/Context;)V
 
     .line 410
-    :cond_a
+    :cond_c
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->checkIsTetheringSupported()V
 
     .line 411
@@ -10781,11 +9866,11 @@
 
     and-int/2addr p2, v0
 
-    if-ne p2, v0, :cond_b
+    if-ne p2, v0, :cond_d
 
     move v4, v5
 
-    :cond_b
+    :cond_d
     sput-boolean v4, Lcom/miui/home/launcher/DeviceConfig;->sIsDarkMode:Z
 
     .line 415
@@ -10793,7 +9878,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f0705ea
+    const v0, 0x7f07039c
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -10806,7 +9891,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f090007
+    const v0, 0x7f090006
 
     invoke-virtual {p2, v0, v5, v5}, Landroid/content/res/Resources;->getFraction(III)F
 
@@ -10814,22 +9899,31 @@
 
     sput p2, Lcom/miui/home/launcher/DeviceConfig;->sSearchBarLightThreshold:F
 
-    .line 419
+    const p2, 0x7f090003
+
+    .line 418
+    invoke-virtual {v1, p2, v5, v5}, Landroid/content/res/Resources;->getFraction(III)F
+
+    move-result p2
+
+    sput p2, Lcom/miui/home/launcher/DeviceConfig;->sScreenScaleRatio:F
+
+    .line 420
     invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isNoWordModel()Z
 
     move-result p2
 
-    if-eqz p2, :cond_c
+    if-eqz p2, :cond_e
 
-    const p2, 0x7f090006
-
-    goto :goto_6
-
-    :cond_c
     const p2, 0x7f090005
 
-    .line 418
-    :goto_6
+    goto :goto_7
+
+    :cond_e
+    const p2, 0x7f090004
+
+    .line 419
+    :goto_7
     invoke-virtual {v1, p2, v5, v5}, Landroid/content/res/Resources;->getFraction(III)F
 
     move-result p2
@@ -10838,14 +9932,14 @@
 
     const/high16 p2, 0x7f090000
 
-    .line 422
+    .line 423
     invoke-virtual {v1, p2, v5, v5}, Landroid/content/res/Resources;->getFraction(III)F
 
     move-result p2
 
     sput p2, Lcom/miui/home/launcher/DeviceConfig;->sDragIconScaleRatio:F
 
-    .line 424
+    .line 425
     invoke-static {}, Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;->getInstance()Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;
 
     move-result-object p2
@@ -10856,7 +9950,7 @@
 
     invoke-static {p2}, Lcom/miui/home/launcher/DeviceConfig;->setAllAppsColorMode(Lcom/miui/home/launcher/allapps/AllAppsColorMode;)V
 
-    .line 425
+    .line 426
     invoke-static {}, Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;->getInstance()Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;
 
     move-result-object p2
@@ -10867,7 +9961,7 @@
 
     invoke-static {p2}, Lcom/miui/home/launcher/DeviceConfig;->setAllAppsBackgroundAlpha(I)V
 
-    .line 426
+    .line 427
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object p2
@@ -10878,9 +9972,9 @@
 
     move-result p2
 
-    if-eqz p2, :cond_d
+    if-eqz p2, :cond_f
 
-    .line 427
+    .line 428
     invoke-static {}, Lcom/github/promeg/pinyinhelper/Pinyin;->newConfig()Lcom/github/promeg/pinyinhelper/Pinyin$Config;
 
     move-result-object p2
@@ -10895,32 +9989,32 @@
 
     invoke-static {p2}, Lcom/github/promeg/pinyinhelper/Pinyin;->init(Lcom/github/promeg/pinyinhelper/Pinyin$Config;)V
 
-    goto :goto_7
+    goto :goto_8
 
-    :cond_d
+    :cond_f
     const/4 p2, 0x0
 
-    .line 429
+    .line 430
     invoke-static {p2}, Lcom/github/promeg/pinyinhelper/Pinyin;->init(Lcom/github/promeg/pinyinhelper/Pinyin$Config;)V
 
-    .line 432
-    :goto_7
+    .line 433
+    :goto_8
     invoke-static {p1}, Lcom/miui/home/launcher/DeviceConfig;->checkDarkenWallpaperSupport(Landroid/content/Context;)Z
 
     move-result p2
 
     sput-boolean p2, Lcom/miui/home/launcher/DeviceConfig;->sSupportDarkenWallpaper:Z
 
-    .line 433
+    .line 434
     invoke-static {p1}, Lcom/miui/home/launcher/DeviceConfig;->updateIsDefaultIcon(Landroid/content/Context;)V
 
-    .line 434
+    .line 435
     invoke-static {}, Lcom/miui/home/launcher/PathDataIconUtil;->initDataPathFroClipIcon()V
 
-    .line 435
+    .line 436
     invoke-static {p1}, Lcom/miui/home/launcher/DeviceConfig;->checkIsSupportMultiWindowMode(Landroid/content/Context;)V
 
-    .line 436
+    .line 437
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->checkIsSupportSmallWindow()Z
 
     move-result p1
@@ -10933,12 +10027,12 @@
 .method public checkIfIsOrientationChanged(Landroid/content/Context;)Z
     .locals 1
 
-    .line 933
+    .line 897
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/DeviceConfig;->getDeviceProfile(Landroid/content/Context;)Lcom/miui/home/launcher/DeviceProfile;
 
     move-result-object p1
 
-    .line 934
+    .line 898
     sget-object v0, Lcom/miui/home/launcher/DeviceConfig;->mActiveProfile:Lcom/miui/home/launcher/DeviceProfile;
 
     if-eq v0, p1, :cond_0
@@ -10953,7 +10047,7 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 936
+    .line 900
     sput-object p1, Lcom/miui/home/launcher/DeviceConfig;->mActiveProfile:Lcom/miui/home/launcher/DeviceProfile;
 
     :cond_1
@@ -10963,14 +10057,14 @@
 .method public getDeviceProfile(Landroid/content/Context;)Lcom/miui/home/launcher/DeviceProfile;
     .locals 1
 
-    .line 476
+    .line 477
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isRotatable()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 477
+    .line 478
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -10985,7 +10079,7 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 478
+    .line 479
     iget-object p1, p0, Lcom/miui/home/launcher/DeviceConfig;->landscapeProfile:Lcom/miui/home/launcher/DeviceProfile;
 
     goto :goto_0
@@ -10996,7 +10090,7 @@
     :goto_0
     return-object p1
 
-    .line 480
+    .line 481
     :cond_1
     iget-object p1, p0, Lcom/miui/home/launcher/DeviceConfig;->portraitProfile:Lcom/miui/home/launcher/DeviceProfile;
 
@@ -11006,14 +10100,14 @@
 .method public loadScreenSize(Landroid/content/Context;Landroid/content/res/Resources;)V
     .locals 1
 
-    .line 861
+    .line 845
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 862
+    .line 846
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
@@ -11029,7 +10123,7 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 864
+    .line 848
     invoke-virtual {p0, p1, p2, v0}, Lcom/miui/home/launcher/DeviceConfig;->loadScreenSize(Landroid/content/Context;Landroid/content/res/Resources;Z)V
 
     :goto_0
@@ -11037,262 +10131,221 @@
 .end method
 
 .method public loadScreenSize(Landroid/content/Context;Landroid/content/res/Resources;Z)V
-    .locals 8
+    .locals 7
 
-    .line 877
-    invoke-direct {p0, p2}, Lcom/miui/home/launcher/DeviceConfig;->setWorkspaceCellPadding(Landroid/content/res/Resources;)V
+    .line 861
+    invoke-virtual {p0, p1}, Lcom/miui/home/launcher/DeviceConfig;->getDeviceProfile(Landroid/content/Context;)Lcom/miui/home/launcher/DeviceProfile;
 
-    const/4 v0, 0x1
+    move-result-object v0
 
-    const v1, 0x7f090004
+    sput-object v0, Lcom/miui/home/launcher/DeviceConfig;->mActiveProfile:Lcom/miui/home/launcher/DeviceProfile;
 
-    .line 878
-    invoke-virtual {p2, v1, v0, v0}, Landroid/content/res/Resources;->getFraction(III)F
-
-    move-result v1
-
-    sput v1, Lcom/miui/home/launcher/DeviceConfig;->sScreenScaleRatio:F
-
-    .line 879
+    .line 862
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/DeviceConfig;->updateGestureEnable(Landroid/content/Context;)V
 
-    .line 880
-    invoke-static {p1}, Lcom/miui/home/launcher/DeviceConfig;->checkSearchBarSupport(Landroid/content/Context;)V
-
-    .line 881
+    .line 863
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {v1}, Lcom/miui/home/launcher/Application;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->getContentResolver()Landroid/content/ContentResolver;
 
-    move-result-object v1
+    move-result-object v0
 
-    const-string v2, "force_black_v2"
+    const-string v1, "force_black_v2"
 
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
-    invoke-static {v1, v2, v3}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+    invoke-static {v0, v1, v2}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
-    move-result v1
+    move-result v0
 
-    if-ne v1, v0, :cond_0
+    const/4 v1, 0x1
 
-    move v1, v0
+    if-ne v0, v1, :cond_0
+
+    move v0, v1
 
     goto :goto_0
 
     :cond_0
-    move v1, v3
+    move v0, v2
 
     :goto_0
-    sput-boolean v1, Lcom/miui/home/launcher/DeviceConfig;->sHideNotch:Z
+    sput-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sHideNotch:Z
 
-    .line 882
-    sget-boolean v1, Lcom/miui/home/launcher/DeviceConfig;->sIsSupportSearchBar:Z
+    .line 865
+    sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sIsSupportSearchBar:Z
 
-    if-eqz v1, :cond_1
+    if-eqz v0, :cond_1
 
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isRotatable()Z
 
-    move-result-object v1
+    move-result v0
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/content/res/Configuration;->orientation:I
-
-    if-ne v1, v0, :cond_1
+    if-nez v0, :cond_1
 
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isInMultiWindowMode()Z
 
-    move-result v1
+    move-result v0
 
-    if-nez v1, :cond_1
+    if-nez v0, :cond_1
 
-    move v1, v0
+    move v0, v1
 
     goto :goto_1
 
     :cond_1
-    move v1, v3
+    move v0, v2
 
-    .line 883
+    .line 866
     :goto_1
-    sget-object v2, Lcom/miui/home/launcher/DeviceConfig;->sShowSearchBar:Lcom/miui/home/launcher/common/ChangeableValue;
+    sget-object v3, Lcom/miui/home/launcher/DeviceConfig;->sShowSearchBar:Lcom/miui/home/launcher/common/ChangeableValue;
 
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {v2, v1}, Lcom/miui/home/launcher/common/ChangeableValue;->setValue(Ljava/lang/Object;)Z
+    invoke-virtual {v3, v0}, Lcom/miui/home/launcher/common/ChangeableValue;->setValue(Ljava/lang/Object;)Z
 
-    move-result v1
+    move-result v0
 
-    sput-boolean v1, Lcom/miui/home/launcher/DeviceConfig;->sIsSearchBarChanged:Z
+    sput-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sIsSearchBarChanged:Z
 
-    const v2, 0x7f0705ef
+    const v3, 0x7f0703a1
 
-    .line 884
-    invoke-virtual {p2, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    .line 867
+    invoke-virtual {p2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    move-result v2
+    move-result p2
 
-    const v4, 0x7f0705f0
+    .line 868
+    invoke-direct {p0, p1}, Lcom/miui/home/launcher/DeviceConfig;->updateDeviceProfileSize(Landroid/content/Context;)Z
 
-    .line 885
-    invoke-virtual {p2, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    move-result v3
+
+    .line 869
+    sget-object v4, Lcom/miui/home/launcher/DeviceConfig;->sSearchBarMarginBottom:Lcom/miui/home/launcher/common/ChangeableValue;
+
+    sget-boolean v5, Lcom/miui/home/launcher/DeviceConfig;->sIsShowGestureLine:Z
+
+    invoke-static {p1, v5}, Lcom/miui/home/launcher/DeviceConfig;->calcSearchBarMarginBottom(Landroid/content/Context;Z)I
+
+    move-result v5
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Lcom/miui/home/launcher/common/ChangeableValue;->setValue(Ljava/lang/Object;)Z
 
     move-result v4
 
-    .line 886
-    invoke-virtual {p0, p1}, Lcom/miui/home/launcher/DeviceConfig;->getDeviceProfile(Landroid/content/Context;)Lcom/miui/home/launcher/DeviceProfile;
+    or-int/2addr v0, v4
+
+    .line 870
+    sget-object v4, Lcom/miui/home/launcher/DeviceConfig;->sHotSeatsMarginBottom:Lcom/miui/home/launcher/common/ChangeableValue;
+
+    sget-object v5, Lcom/miui/home/launcher/DeviceConfig;->sShowSearchBar:Lcom/miui/home/launcher/common/ChangeableValue;
+
+    invoke-virtual {v5}, Lcom/miui/home/launcher/common/ChangeableValue;->getValue()Ljava/lang/Object;
 
     move-result-object v5
 
-    sput-object v5, Lcom/miui/home/launcher/DeviceConfig;->mActiveProfile:Lcom/miui/home/launcher/DeviceProfile;
+    check-cast v5, Ljava/lang/Boolean;
 
-    .line 887
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isInMultiWindowMode()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_2
-
-    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Lcom/miui/home/launcher/Application;->isInFoldLargeScreenMode()Z
+    invoke-virtual {v5}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v5
-
-    if-eqz v5, :cond_2
-
-    .line 888
-    invoke-direct {p0, p1, p2}, Lcom/miui/home/launcher/DeviceConfig;->updateDeviceProfileSizMultiWindow(Landroid/content/Context;Landroid/content/res/Resources;)Z
-
-    move-result p2
-
-    goto :goto_2
-
-    :cond_2
-    invoke-direct {p0, p1}, Lcom/miui/home/launcher/DeviceConfig;->updateDeviceProfileSize(Landroid/content/Context;)Z
-
-    move-result p2
-
-    .line 889
-    :goto_2
-    sget-object v5, Lcom/miui/home/launcher/DeviceConfig;->sSearchBarMarginBottom:Lcom/miui/home/launcher/common/ChangeableValue;
 
     sget-boolean v6, Lcom/miui/home/launcher/DeviceConfig;->sIsShowGestureLine:Z
 
-    invoke-static {p1, v6}, Lcom/miui/home/launcher/DeviceConfig;->calcSearchBarMarginBottom(Landroid/content/Context;Z)I
-
-    move-result v6
-
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v6
-
-    invoke-virtual {v5, v6}, Lcom/miui/home/launcher/common/ChangeableValue;->setValue(Ljava/lang/Object;)Z
+    invoke-static {p1, v5, v6}, Lcom/miui/home/launcher/DeviceConfig;->calcHotSeatsMarginBottom(Landroid/content/Context;ZZ)I
 
     move-result v5
 
-    or-int/2addr v1, v5
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 890
-    sget-object v5, Lcom/miui/home/launcher/DeviceConfig;->sHotSeatsMarginBottom:Lcom/miui/home/launcher/common/ChangeableValue;
+    move-result-object v5
 
-    sget-object v6, Lcom/miui/home/launcher/DeviceConfig;->sShowSearchBar:Lcom/miui/home/launcher/common/ChangeableValue;
+    invoke-virtual {v4, v5}, Lcom/miui/home/launcher/common/ChangeableValue;->setValue(Ljava/lang/Object;)Z
 
-    invoke-virtual {v6}, Lcom/miui/home/launcher/common/ChangeableValue;->getValue()Ljava/lang/Object;
+    move-result v4
 
-    move-result-object v6
+    or-int/2addr v0, v4
 
-    check-cast v6, Ljava/lang/Boolean;
+    .line 871
+    sget-object v4, Lcom/miui/home/launcher/DeviceConfig;->sHotSeatsMarginTop:Lcom/miui/home/launcher/common/ChangeableValue;
 
-    invoke-virtual {v6}, Ljava/lang/Boolean;->booleanValue()Z
+    sget-object v5, Lcom/miui/home/launcher/DeviceConfig;->sShowSearchBar:Lcom/miui/home/launcher/common/ChangeableValue;
 
-    move-result v6
+    invoke-virtual {v5}, Lcom/miui/home/launcher/common/ChangeableValue;->getValue()Ljava/lang/Object;
 
-    sget-boolean v7, Lcom/miui/home/launcher/DeviceConfig;->sIsShowGestureLine:Z
+    move-result-object v5
 
-    invoke-static {p1, v6, v7}, Lcom/miui/home/launcher/DeviceConfig;->calcHotSeatsMarginBottom(Landroid/content/Context;ZZ)I
+    check-cast v5, Ljava/lang/Boolean;
 
-    move-result v6
-
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v6
-
-    invoke-virtual {v5, v6}, Lcom/miui/home/launcher/common/ChangeableValue;->setValue(Ljava/lang/Object;)Z
+    invoke-virtual {v5}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v5
 
-    or-int/2addr v1, v5
-
-    .line 891
-    sget-object v5, Lcom/miui/home/launcher/DeviceConfig;->sHotSeatsMarginTop:Lcom/miui/home/launcher/common/ChangeableValue;
-
-    sget-object v6, Lcom/miui/home/launcher/DeviceConfig;->sShowSearchBar:Lcom/miui/home/launcher/common/ChangeableValue;
-
-    invoke-virtual {v6}, Lcom/miui/home/launcher/common/ChangeableValue;->getValue()Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Ljava/lang/Boolean;
-
-    invoke-virtual {v6}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v6
-
-    invoke-static {p1, v6}, Lcom/miui/home/launcher/DeviceConfig;->calcHotSeatsMarginTop(Landroid/content/Context;Z)I
-
-    move-result v6
-
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v6
-
-    invoke-virtual {v5, v6}, Lcom/miui/home/launcher/common/ChangeableValue;->setValue(Ljava/lang/Object;)Z
+    invoke-static {p1, v5}, Lcom/miui/home/launcher/DeviceConfig;->calcHotSeatsMarginTop(Landroid/content/Context;Z)I
 
     move-result v5
 
-    or-int/2addr v1, v5
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 892
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Lcom/miui/home/launcher/common/ChangeableValue;->setValue(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    or-int/2addr v0, v4
+
+    .line 872
+    sget-object v4, Lcom/miui/home/launcher/DeviceConfig;->sHotSeatsHeight:Lcom/miui/home/launcher/common/ChangeableValue;
+
+    sget-object v5, Lcom/miui/home/launcher/DeviceConfig;->sShowSearchBar:Lcom/miui/home/launcher/common/ChangeableValue;
+
+    invoke-virtual {v5}, Lcom/miui/home/launcher/common/ChangeableValue;->getValue()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Ljava/lang/Boolean;
+
+    invoke-virtual {v5}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v5
+
+    invoke-static {p1, v5}, Lcom/miui/home/launcher/DeviceConfig;->calcHotSeatsHeight(Landroid/content/Context;Z)I
+
+    move-result v5
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Lcom/miui/home/launcher/common/ChangeableValue;->setValue(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    or-int/2addr v0, v4
+
+    .line 873
+    sget-object v4, Lcom/miui/home/launcher/DeviceConfig;->sHotSeatsMarginBottom:Lcom/miui/home/launcher/common/ChangeableValue;
+
+    invoke-virtual {v4}, Lcom/miui/home/launcher/common/ChangeableValue;->getValue()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/lang/Integer;
+
+    invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
+
+    move-result v4
+
     sget-object v5, Lcom/miui/home/launcher/DeviceConfig;->sHotSeatsHeight:Lcom/miui/home/launcher/common/ChangeableValue;
-
-    sget-object v6, Lcom/miui/home/launcher/DeviceConfig;->sShowSearchBar:Lcom/miui/home/launcher/common/ChangeableValue;
-
-    invoke-virtual {v6}, Lcom/miui/home/launcher/common/ChangeableValue;->getValue()Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Ljava/lang/Boolean;
-
-    invoke-virtual {v6}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v6
-
-    invoke-static {p1, v6}, Lcom/miui/home/launcher/DeviceConfig;->calcHotSeatsHeight(Landroid/content/Context;Z)I
-
-    move-result v6
-
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v6
-
-    invoke-virtual {v5, v6}, Lcom/miui/home/launcher/common/ChangeableValue;->setValue(Ljava/lang/Object;)Z
-
-    move-result v5
-
-    or-int/2addr v1, v5
-
-    .line 893
-    sget-object v5, Lcom/miui/home/launcher/DeviceConfig;->sHotSeatsMarginBottom:Lcom/miui/home/launcher/common/ChangeableValue;
 
     invoke-virtual {v5}, Lcom/miui/home/launcher/common/ChangeableValue;->getValue()Ljava/lang/Object;
 
@@ -11304,117 +10357,103 @@
 
     move-result v5
 
-    sget-object v6, Lcom/miui/home/launcher/DeviceConfig;->sHotSeatsHeight:Lcom/miui/home/launcher/common/ChangeableValue;
+    add-int/2addr v4, v5
 
-    invoke-virtual {v6}, Lcom/miui/home/launcher/common/ChangeableValue;->getValue()Ljava/lang/Object;
+    sget-object v5, Lcom/miui/home/launcher/DeviceConfig;->sHotSeatsMarginTop:Lcom/miui/home/launcher/common/ChangeableValue;
 
-    move-result-object v6
+    invoke-virtual {v5}, Lcom/miui/home/launcher/common/ChangeableValue;->getValue()Ljava/lang/Object;
 
-    check-cast v6, Ljava/lang/Integer;
+    move-result-object v5
 
-    invoke-virtual {v6}, Ljava/lang/Integer;->intValue()I
+    check-cast v5, Ljava/lang/Integer;
 
-    move-result v6
+    invoke-virtual {v5}, Ljava/lang/Integer;->intValue()I
 
-    add-int/2addr v5, v6
+    move-result v5
 
-    sget-object v6, Lcom/miui/home/launcher/DeviceConfig;->sHotSeatsMarginTop:Lcom/miui/home/launcher/common/ChangeableValue;
+    add-int/2addr v4, v5
 
-    invoke-virtual {v6}, Lcom/miui/home/launcher/common/ChangeableValue;->getValue()Ljava/lang/Object;
+    sput v4, Lcom/miui/home/launcher/DeviceConfig;->sWorkspaceIndicatorMarginBottom:I
 
-    move-result-object v6
+    .line 874
+    sget-object v4, Lcom/miui/home/launcher/DeviceConfig;->sWorkspaceCellPaddingBottom:Lcom/miui/home/launcher/common/ChangeableValue;
 
-    check-cast v6, Ljava/lang/Integer;
+    sget v5, Lcom/miui/home/launcher/DeviceConfig;->sWorkspaceIndicatorMarginBottom:I
 
-    invoke-virtual {v6}, Ljava/lang/Integer;->intValue()I
+    add-int/2addr v5, p2
 
-    move-result v6
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    add-int/2addr v5, v6
+    move-result-object p2
 
-    sput v5, Lcom/miui/home/launcher/DeviceConfig;->sWorkspaceIndicatorMarginBottom:I
+    invoke-virtual {v4, p2}, Lcom/miui/home/launcher/common/ChangeableValue;->setValue(Ljava/lang/Object;)Z
 
-    .line 894
-    sget-object v5, Lcom/miui/home/launcher/DeviceConfig;->sWorkspaceCellPaddingBottom:Lcom/miui/home/launcher/common/ChangeableValue;
+    move-result p2
 
-    sget v6, Lcom/miui/home/launcher/DeviceConfig;->sWorkspaceIndicatorMarginBottom:I
+    or-int/2addr p2, v0
 
-    add-int/2addr v6, v2
-
-    add-int/2addr v6, v4
-
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v5, v2}, Lcom/miui/home/launcher/common/ChangeableValue;->setValue(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    or-int/2addr v1, v2
-
-    .line 895
+    .line 875
     invoke-static {p1}, Lcom/miui/home/launcher/DeviceConfig;->calcSearchBarWidth(Landroid/content/Context;)I
 
-    move-result v2
+    move-result v0
 
-    sput v2, Lcom/miui/home/launcher/DeviceConfig;->sSearchBarWidth:I
+    sput v0, Lcom/miui/home/launcher/DeviceConfig;->sSearchBarWidth:I
 
-    .line 896
+    .line 876
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/DeviceConfig;->checkIfIsOrientationChanged(Landroid/content/Context;)Z
 
-    move-result v2
+    move-result v0
 
-    sput-boolean v2, Lcom/miui/home/launcher/DeviceConfig;->sScreenOrientationChanged:Z
-
-    if-nez v1, :cond_4
-
-    if-eqz p2, :cond_3
-
-    .line 897
-    sget-boolean p2, Lcom/miui/home/launcher/DeviceConfig;->sScreenOrientationChanged:Z
+    sput-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sScreenOrientationChanged:Z
 
     if-nez p2, :cond_3
 
-    goto :goto_3
+    if-eqz v3, :cond_2
+
+    .line 877
+    sget-boolean p2, Lcom/miui/home/launcher/DeviceConfig;->sScreenOrientationChanged:Z
+
+    if-nez p2, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    move v1, v2
 
     :cond_3
-    move v0, v3
+    :goto_2
+    sput-boolean v1, Lcom/miui/home/launcher/DeviceConfig;->sScreenSizeChanged:Z
 
-    :cond_4
-    :goto_3
-    sput-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sScreenSizeChanged:Z
-
-    .line 898
+    .line 878
     sget-object p2, Lcom/miui/home/launcher/DeviceConfig;->mActiveProfile:Lcom/miui/home/launcher/DeviceProfile;
 
     invoke-virtual {p2, p1}, Lcom/miui/home/launcher/DeviceProfile;->subNavigationBarHeight(Landroid/content/Context;)V
 
-    .line 899
+    .line 879
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isScreenOrientationChanged()Z
 
     move-result p2
 
-    if-nez p2, :cond_5
+    if-nez p2, :cond_4
 
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isScreenSizeChanged()Z
 
     move-result p2
 
-    if-eqz p2, :cond_6
+    if-eqz p2, :cond_5
 
-    .line 900
-    :cond_5
+    .line 880
+    :cond_4
     invoke-static {p1, p3}, Lcom/miui/home/launcher/DeviceConfig;->calcGridSize(Landroid/content/Context;Z)V
 
-    :cond_6
+    :cond_5
     return-void
 .end method
 
 .method public updateGestureEnable(Landroid/content/Context;)V
     .locals 4
 
-    .line 869
+    .line 853
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -11431,7 +10470,7 @@
 
     if-nez v0, :cond_1
 
-    .line 870
+    .line 854
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -11458,7 +10497,7 @@
     :goto_1
     sput-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sIsGestureEnable:Z
 
-    .line 871
+    .line 855
     sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->sIsGestureEnable:Z
 
     if-eqz v0, :cond_2
@@ -11469,7 +10508,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 872
+    .line 856
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p1
@@ -11492,7 +10531,7 @@
     :goto_2
     sput-boolean p1, Lcom/miui/home/launcher/DeviceConfig;->sIsShowGestureLine:Z
 
-    .line 873
+    .line 857
     sget-boolean p1, Lcom/miui/home/launcher/DeviceConfig;->sIsGestureEnable:Z
 
     if-eqz p1, :cond_3

@@ -22,7 +22,7 @@
 .method private constructor <init>(Lcom/miui/home/launcher/ShakeMonitor;)V
     .locals 0
 
-    .line 63
+    .line 62
     iput-object p1, p0, Lcom/miui/home/launcher/ShakeMonitor$FolderStateChangedMessageHandler;->this$0:Lcom/miui/home/launcher/ShakeMonitor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -33,7 +33,7 @@
 .method synthetic constructor <init>(Lcom/miui/home/launcher/ShakeMonitor;Lcom/miui/home/launcher/ShakeMonitor$1;)V
     .locals 0
 
-    .line 63
+    .line 62
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/ShakeMonitor$FolderStateChangedMessageHandler;-><init>(Lcom/miui/home/launcher/ShakeMonitor;)V
 
     return-void
@@ -47,7 +47,7 @@
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
-    .line 66
+    .line 65
     iget-object p1, p0, Lcom/miui/home/launcher/ShakeMonitor$FolderStateChangedMessageHandler;->this$0:Lcom/miui/home/launcher/ShakeMonitor;
 
     const/4 v0, 0x0

@@ -22,6 +22,3 @@
         }
     .end annotation
 .end method
-
-.method public abstract timeout()Lokio/Timeout;
-.end method

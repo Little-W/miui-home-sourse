@@ -16,6 +16,7 @@
     <favorite launcher:className="com.miui.virtualsim.ui.MainActivity" launcher:container="1" launcher:packageName="com.miui.virtualsim" launcher:x="14" launcher:y="0" />
     <favorite launcher:className="com.mi.misupport.activity.MainActivity" launcher:container="1" launcher:packageName="com.mi.misupport" launcher:x="15" launcher:y="0" />
     <favorite launcher:className="com.miui.bugreport.ui.MainTabActivity" launcher:container="1" launcher:packageName="com.miui.bugreport" launcher:x="16" launcher:y="0" />
+    <favorite launcher:className="com.miui.fmradio.FmActivity" launcher:container="1" launcher:packageName="com.miui.fm" launcher:x="17" launcher:y="0" />
     <favorite launcher:className="com.xiaomi.tag.MiTagActivity" launcher:container="1" launcher:packageName="com.xiaomi.tag" launcher:x="18" launcher:y="0" />
     <favorite launcher:className="cn.com.smartdevices.bracelet.activity.MainActivity" launcher:container="1" launcher:packageName="com.xiaomi.hm.health" launcher:x="19" launcher:y="0" />
     <favorite launcher:className="com.android.stk.StkLauncherActivity" launcher:container="1" launcher:packageName="com.android.stk" launcher:retained="true" launcher:x="20" launcher:y="0" />

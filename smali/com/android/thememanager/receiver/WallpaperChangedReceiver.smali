@@ -13,8 +13,6 @@
 
 
 # static fields
-.field private static sDisplayMode:I
-
 .field private static sInstance:Lcom/android/thememanager/receiver/WallpaperChangedReceiver;
 
 .field private static sScreen:Landroid/graphics/Point;
@@ -24,17 +22,12 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 23
+    .line 22
     new-instance v0, Lcom/android/thememanager/receiver/WallpaperChangedReceiver;
 
     invoke-direct {v0}, Lcom/android/thememanager/receiver/WallpaperChangedReceiver;-><init>()V
 
     sput-object v0, Lcom/android/thememanager/receiver/WallpaperChangedReceiver;->sInstance:Lcom/android/thememanager/receiver/WallpaperChangedReceiver;
-
-    const/4 v0, -0x2
-
-    .line 28
-    sput v0, Lcom/android/thememanager/receiver/WallpaperChangedReceiver;->sDisplayMode:I
 
     return-void
 .end method
@@ -42,7 +35,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 30
+    .line 29
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -70,14 +63,14 @@
 .method private static getScreenRealSize(Landroid/content/Context;)Landroid/graphics/Point;
     .locals 7
 
-    .line 93
+    .line 91
     sget-object v0, Lcom/android/thememanager/receiver/WallpaperChangedReceiver;->sScreen:Landroid/graphics/Point;
 
     if-eqz v0, :cond_0
 
     return-object v0
 
-    .line 96
+    .line 94
     :cond_0
     new-instance v0, Landroid/graphics/Point;
 
@@ -87,7 +80,7 @@
 
     const-string/jumbo v0, "window"
 
-    .line 97
+    .line 95
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -98,7 +91,7 @@
 
     move-result-object p0
 
-    .line 99
+    .line 97
     :try_start_0
     const-class v0, Landroid/view/Display;
 
@@ -124,7 +117,7 @@
 
     move-result-object v0
 
-    .line 100
+    .line 98
     new-array v1, v2, [Ljava/lang/Object;
 
     sget-object v2, Lcom/android/thememanager/receiver/WallpaperChangedReceiver;->sScreen:Landroid/graphics/Point;
@@ -143,13 +136,13 @@
 
     goto :goto_0
 
-    .line 102
+    .line 100
     :catch_0
     sget-object v0, Lcom/android/thememanager/receiver/WallpaperChangedReceiver;->sScreen:Landroid/graphics/Point;
 
     invoke-virtual {p0, v0}, Landroid/view/Display;->getRealSize(Landroid/graphics/Point;)V
 
-    .line 104
+    .line 102
     :goto_0
     sget-object p0, Lcom/android/thememanager/receiver/WallpaperChangedReceiver;->sScreen:Landroid/graphics/Point;
 
@@ -161,86 +154,34 @@
 
     if-le p0, v0, :cond_1
 
-    .line 105
+    .line 103
     sget-object p0, Lcom/android/thememanager/receiver/WallpaperChangedReceiver;->sScreen:Landroid/graphics/Point;
 
     iget p0, p0, Landroid/graphics/Point;->x:I
 
-    .line 106
+    .line 104
     sget-object v0, Lcom/android/thememanager/receiver/WallpaperChangedReceiver;->sScreen:Landroid/graphics/Point;
 
     iget v1, v0, Landroid/graphics/Point;->y:I
 
     iput v1, v0, Landroid/graphics/Point;->x:I
 
-    .line 107
+    .line 105
     sget-object v0, Lcom/android/thememanager/receiver/WallpaperChangedReceiver;->sScreen:Landroid/graphics/Point;
 
     iput p0, v0, Landroid/graphics/Point;->y:I
 
-    .line 109
+    .line 107
     :cond_1
     sget-object p0, Lcom/android/thememanager/receiver/WallpaperChangedReceiver;->sScreen:Landroid/graphics/Point;
 
     return-object p0
 .end method
 
-.method public static isFold()Z
-    .locals 2
-
-    .line 113
-    sget v0, Lcom/android/thememanager/receiver/WallpaperChangedReceiver;->sDisplayMode:I
-
-    const/4 v1, -0x2
-
-    if-ne v0, v1, :cond_0
-
-    const-string v0, "persist.sys.muiltdisplay_type"
-
-    const-string v1, "-1"
-
-    .line 114
-    invoke-static {v0, v1}, Lmiuix/core/util/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 115
-    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result v0
-
-    sput v0, Lcom/android/thememanager/receiver/WallpaperChangedReceiver;->sDisplayMode:I
-
-    .line 117
-    :cond_0
-    sget v0, Lcom/android/thememanager/receiver/WallpaperChangedReceiver;->sDisplayMode:I
-
-    const/4 v1, 0x2
-
-    if-ne v0, v1, :cond_1
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    :goto_0
-    return v0
-.end method
-
 .method private onReceive$___twin___(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
 
-    const-string p2, "WallpaperChangedReceiver"
-
-    const-string v0, "WallpaperChangedReceiver: onReceive"
-
-    .line 35
-    invoke-static {p2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 36
+    .line 34
     new-instance p2, Lcom/android/thememanager/receiver/WallpaperChangedReceiver$ResetWallpaperDesiredDimensionsTask;
 
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -249,7 +190,7 @@
 
     invoke-direct {p2, p1}, Lcom/android/thememanager/receiver/WallpaperChangedReceiver$ResetWallpaperDesiredDimensionsTask;-><init>(Landroid/content/Context;)V
 
-    .line 37
+    .line 35
     sget-object p1, Landroid/os/AsyncTask;->THREAD_POOL_EXECUTOR:Ljava/util/concurrent/Executor;
 
     const/4 v0, 0x0
@@ -264,36 +205,26 @@
 .method public static register(Landroid/content/Context;)V
     .locals 2
 
-    .line 121
-    invoke-static {}, Lcom/android/thememanager/receiver/WallpaperChangedReceiver;->isFold()Z
+    if-nez p0, :cond_0
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    if-nez p0, :cond_1
-
-    const-string p0, "WallpaperChangedReceiver"
+    const-string p0, "WallpaperChanged"
 
     const-string v0, "Register WallpaperChangedReceiver error!"
 
-    .line 125
+    .line 112
     invoke-static {p0, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 128
-    :cond_1
+    .line 115
+    :cond_0
     new-instance v0, Landroid/content/IntentFilter;
 
     const-string v1, "android.intent.action.WALLPAPER_CHANGED"
 
     invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 129
+    .line 116
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p0
@@ -308,29 +239,19 @@
 .method public static unRegister(Landroid/content/Context;)V
     .locals 1
 
-    .line 133
-    invoke-static {}, Lcom/android/thememanager/receiver/WallpaperChangedReceiver;->isFold()Z
+    if-nez p0, :cond_0
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    if-nez p0, :cond_1
-
-    const-string p0, "WallpaperChangedReceiver"
+    const-string p0, "WallpaperChanged"
 
     const-string v0, "UnRegister WallpaperChangedReceiver error!"
 
-    .line 137
+    .line 121
     invoke-static {p0, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 140
-    :cond_1
+    .line 124
+    :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p0

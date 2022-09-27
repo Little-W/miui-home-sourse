@@ -34,7 +34,7 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .line 217
+    .line 390
     new-instance v0, Lcom/google/android/filament/View$BloomOptions$BlendingMode;
 
     const-string v1, "ADD"
@@ -45,7 +45,7 @@
 
     sput-object v0, Lcom/google/android/filament/View$BloomOptions$BlendingMode;->ADD:Lcom/google/android/filament/View$BloomOptions$BlendingMode;
 
-    .line 218
+    .line 391
     new-instance v0, Lcom/google/android/filament/View$BloomOptions$BlendingMode;
 
     const-string v1, "INTERPOLATE"
@@ -58,7 +58,7 @@
 
     const/4 v0, 0x2
 
-    .line 216
+    .line 389
     new-array v0, v0, [Lcom/google/android/filament/View$BloomOptions$BlendingMode;
 
     sget-object v1, Lcom/google/android/filament/View$BloomOptions$BlendingMode;->ADD:Lcom/google/android/filament/View$BloomOptions$BlendingMode;
@@ -82,7 +82,7 @@
         }
     .end annotation
 
-    .line 216
+    .line 389
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -91,7 +91,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/android/filament/View$BloomOptions$BlendingMode;
     .locals 1
 
-    .line 216
+    .line 389
     const-class v0, Lcom/google/android/filament/View$BloomOptions$BlendingMode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -106,7 +106,7 @@
 .method public static values()[Lcom/google/android/filament/View$BloomOptions$BlendingMode;
     .locals 1
 
-    .line 216
+    .line 389
     sget-object v0, Lcom/google/android/filament/View$BloomOptions$BlendingMode;->$VALUES:[Lcom/google/android/filament/View$BloomOptions$BlendingMode;
 
     invoke-virtual {v0}, [Lcom/google/android/filament/View$BloomOptions$BlendingMode;->clone()Ljava/lang/Object;

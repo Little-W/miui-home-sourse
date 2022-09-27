@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<shape android:shape="rectangle"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <size android:height="@dimen/worldcirculate_smallwindow_crop_item_height" android:width="@dimen/worldcirculate_smallwindow_crop_item_width" />
-    <solid android:color="#26b2b2b2" />
-    <stroke android:width="2.0px" android:color="#1a000000" />
-    <corners android:topLeftRadius="18.179993dip" android:topRightRadius="18.179993dip" android:bottomLeftRadius="18.179993dip" android:bottomRightRadius="18.179993dip" />
-</shape>

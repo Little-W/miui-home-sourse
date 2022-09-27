@@ -96,7 +96,7 @@
     .line 35
     invoke-super {p0}, Lcom/miui/home/launcher/OnLongClickWrapper;->onFinishInflate()V
 
-    const v0, 0x7f0a019a
+    const v0, 0x7f0a0111
 
     .line 36
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/AutoLayoutThumbnailItem;->findViewById(I)Landroid/view/View;
@@ -107,7 +107,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/AutoLayoutThumbnailItem;->icon:Lcom/miui/home/launcher/ThumbnailIcon;
 
-    const v0, 0x7f0a0082
+    const v0, 0x7f0a006f
 
     .line 37
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/AutoLayoutThumbnailItem;->findViewById(I)Landroid/view/View;
@@ -118,7 +118,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/AutoLayoutThumbnailItem;->iconBackground:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a016a
+    const v0, 0x7f0a00f8
 
     .line 38
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/AutoLayoutThumbnailItem;->findViewById(I)Landroid/view/View;
@@ -129,7 +129,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/AutoLayoutThumbnailItem;->iconForeground:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a0385
+    const v0, 0x7f0a0234
 
     .line 39
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/AutoLayoutThumbnailItem;->findViewById(I)Landroid/view/View;
@@ -140,7 +140,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/AutoLayoutThumbnailItem;->title:Landroid/widget/TextView;
 
-    const v0, 0x7f0a00dd
+    const v0, 0x7f0a00a5
 
     .line 40
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/AutoLayoutThumbnailItem;->findViewById(I)Landroid/view/View;
@@ -233,7 +233,7 @@
 
     iget-object v0, p0, Lcom/miui/home/launcher/AutoLayoutThumbnailItem;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f1205dc
+    const v1, 0x7f110309
 
     invoke-virtual {p1, v0, v1}, Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;I)V
 
@@ -264,7 +264,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f06012e
+    const v3, 0x7f0600e9
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -281,7 +281,7 @@
 
     iget-object p2, p0, Lcom/miui/home/launcher/AutoLayoutThumbnailItem;->mContext:Landroid/content/Context;
 
-    const v0, 0x7f1205db
+    const v0, 0x7f110308
 
     invoke-virtual {p1, p2, v0}, Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;I)V
 
@@ -314,7 +314,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f06012d
+    const v3, 0x7f0600e8
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getColor(I)I
 

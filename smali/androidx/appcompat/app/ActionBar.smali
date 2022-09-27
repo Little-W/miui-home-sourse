@@ -121,9 +121,6 @@
     return-void
 .end method
 
-.method public abstract setDisplayHomeAsUpEnabled(Z)V
-.end method
-
 .method public setElevation(F)V
     .locals 1
 

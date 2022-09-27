@@ -12,6 +12,12 @@
 .end annotation
 
 
+# static fields
+.field private static final ATTACHMENT_COUNT:I
+
+.field private static final sCubemapFaceValues:[Lcom/google/android/filament/Texture$CubemapFace;
+
+
 # instance fields
 .field private mNativeObject:J
 
@@ -19,47 +25,56 @@
 
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    .line 34
+    invoke-static {}, Lcom/google/android/filament/RenderTarget$AttachmentPoint;->values()[Lcom/google/android/filament/RenderTarget$AttachmentPoint;
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    sput v0, Lcom/google/android/filament/RenderTarget;->ATTACHMENT_COUNT:I
+
+    .line 35
+    invoke-static {}, Lcom/google/android/filament/Texture$CubemapFace;->values()[Lcom/google/android/filament/Texture$CubemapFace;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/google/android/filament/RenderTarget;->sCubemapFaceValues:[Lcom/google/android/filament/Texture$CubemapFace;
+
+    return-void
+.end method
+
 .method private constructor <init>(JLcom/google/android/filament/RenderTarget$Builder;)V
     .locals 1
 
-    .line 37
+    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x2
+    .line 38
+    sget v0, Lcom/google/android/filament/RenderTarget;->ATTACHMENT_COUNT:I
 
-    .line 35
     new-array v0, v0, [Lcom/google/android/filament/Texture;
 
     iput-object v0, p0, Lcom/google/android/filament/RenderTarget;->mTextures:[Lcom/google/android/filament/Texture;
 
-    .line 38
+    .line 41
     iput-wide p1, p0, Lcom/google/android/filament/RenderTarget;->mNativeObject:J
 
-    .line 39
-    iget-object p1, p0, Lcom/google/android/filament/RenderTarget;->mTextures:[Lcom/google/android/filament/Texture;
-
+    .line 42
     invoke-static {p3}, Lcom/google/android/filament/RenderTarget$Builder;->access$000(Lcom/google/android/filament/RenderTarget$Builder;)[Lcom/google/android/filament/Texture;
 
-    move-result-object p2
+    move-result-object p1
+
+    iget-object p2, p0, Lcom/google/android/filament/RenderTarget;->mTextures:[Lcom/google/android/filament/Texture;
+
+    sget p3, Lcom/google/android/filament/RenderTarget;->ATTACHMENT_COUNT:I
 
     const/4 v0, 0x0
 
-    aget-object p2, p2, v0
-
-    aput-object p2, p1, v0
-
-    .line 40
-    iget-object p1, p0, Lcom/google/android/filament/RenderTarget;->mTextures:[Lcom/google/android/filament/Texture;
-
-    invoke-static {p3}, Lcom/google/android/filament/RenderTarget$Builder;->access$000(Lcom/google/android/filament/RenderTarget$Builder;)[Lcom/google/android/filament/Texture;
-
-    move-result-object p2
-
-    const/4 p3, 0x1
-
-    aget-object p2, p2, p3
-
-    aput-object p2, p1, p3
+    invoke-static {p1, v0, p2, v0, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     return-void
 .end method
@@ -73,7 +88,16 @@
     return-void
 .end method
 
-.method static synthetic access$100()J
+.method static synthetic access$100()I
+    .locals 1
+
+    .line 33
+    sget v0, Lcom/google/android/filament/RenderTarget;->ATTACHMENT_COUNT:I
+
+    return v0
+.end method
+
+.method static synthetic access$200()J
     .locals 2
 
     .line 33
@@ -84,7 +108,7 @@
     return-wide v0
 .end method
 
-.method static synthetic access$200(JIJ)V
+.method static synthetic access$300(JIJ)V
     .locals 0
 
     .line 33
@@ -93,7 +117,7 @@
     return-void
 .end method
 
-.method static synthetic access$300(JII)V
+.method static synthetic access$400(JII)V
     .locals 0
 
     .line 33
@@ -102,7 +126,7 @@
     return-void
 .end method
 
-.method static synthetic access$400(JII)V
+.method static synthetic access$500(JII)V
     .locals 0
 
     .line 33
@@ -111,7 +135,7 @@
     return-void
 .end method
 
-.method static synthetic access$500(JII)V
+.method static synthetic access$600(JII)V
     .locals 0
 
     .line 33
@@ -120,7 +144,7 @@
     return-void
 .end method
 
-.method static synthetic access$600(JJ)J
+.method static synthetic access$700(JJ)J
     .locals 0
 
     .line 33
@@ -131,7 +155,7 @@
     return-wide p0
 .end method
 
-.method static synthetic access$800(J)V
+.method static synthetic access$900(J)V
     .locals 0
 
     .line 33
@@ -177,7 +201,7 @@
 
     const-wide/16 v0, 0x0
 
-    .line 205
+    .line 214
     iput-wide v0, p0, Lcom/google/android/filament/RenderTarget;->mNativeObject:J
 
     return-void
@@ -186,10 +210,8 @@
 .method public getFace(Lcom/google/android/filament/RenderTarget$AttachmentPoint;)Lcom/google/android/filament/Texture$CubemapFace;
     .locals 3
 
-    .line 190
-    invoke-static {}, Lcom/google/android/filament/Texture$CubemapFace;->values()[Lcom/google/android/filament/Texture$CubemapFace;
-
-    move-result-object v0
+    .line 199
+    sget-object v0, Lcom/google/android/filament/RenderTarget;->sCubemapFaceValues:[Lcom/google/android/filament/Texture$CubemapFace;
 
     invoke-virtual {p0}, Lcom/google/android/filament/RenderTarget;->getNativeObject()J
 
@@ -211,7 +233,7 @@
 .method public getLayer(Lcom/google/android/filament/RenderTarget$AttachmentPoint;)I
     .locals 2
 
-    .line 201
+    .line 210
     invoke-virtual {p0}, Lcom/google/android/filament/RenderTarget;->getNativeObject()J
 
     move-result-wide v0
@@ -230,7 +252,7 @@
 .method public getMipLevel(Lcom/google/android/filament/RenderTarget$AttachmentPoint;)I
     .locals 2
 
-    .line 179
+    .line 188
     invoke-virtual {p0}, Lcom/google/android/filament/RenderTarget;->getNativeObject()J
 
     move-result-wide v0
@@ -249,7 +271,7 @@
 .method public getNativeObject()J
     .locals 4
 
-    .line 44
+    .line 46
     iget-wide v0, p0, Lcom/google/android/filament/RenderTarget;->mNativeObject:J
 
     const-wide/16 v2, 0x0
@@ -260,7 +282,7 @@
 
     return-wide v0
 
-    .line 45
+    .line 47
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -274,7 +296,7 @@
 .method public getTexture(Lcom/google/android/filament/RenderTarget$AttachmentPoint;)Lcom/google/android/filament/Texture;
     .locals 1
 
-    .line 168
+    .line 177
     iget-object v0, p0, Lcom/google/android/filament/RenderTarget;->mTextures:[Lcom/google/android/filament/Texture;
 
     invoke-virtual {p1}, Lcom/google/android/filament/RenderTarget$AttachmentPoint;->ordinal()I

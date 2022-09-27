@@ -148,7 +148,7 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    const-string/jumbo v1, "version"
+    const-string v1, "version"
 
     .line 385
     sget-object v2, Lcom/market/sdk/utils/Client;->SYSTEM_VERSION:Ljava/lang/String;
@@ -186,7 +186,7 @@
 
     const-string p1, "MarketUpdateAgent"
 
-    const-string/jumbo v1, "update info json obj null"
+    const-string v1, "update info json obj null"
 
     .line 395
     invoke-static {p1, v1}, Lcom/market/sdk/utils/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
@@ -206,7 +206,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "updateInfo : "
+    const-string v3, "updateInfo : "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -256,7 +256,7 @@
 
     iput v2, v1, Lcom/market/sdk/XiaomiUpdateAgent$UpdateInfo;->source:I
 
-    const-string/jumbo v2, "updateLog"
+    const-string v2, "updateLog"
 
     .line 408
     invoke-virtual {p1, v2}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -265,7 +265,7 @@
 
     iput-object v2, v1, Lcom/market/sdk/XiaomiUpdateAgent$UpdateInfo;->updateLog:Ljava/lang/String;
 
-    const-string/jumbo v2, "versionCode"
+    const-string v2, "versionCode"
 
     .line 409
     invoke-virtual {p1, v2}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
@@ -274,7 +274,7 @@
 
     iput v2, v1, Lcom/market/sdk/XiaomiUpdateAgent$UpdateInfo;->versionCode:I
 
-    const-string/jumbo v2, "versionName"
+    const-string v2, "versionName"
 
     .line 410
     invoke-virtual {p1, v2}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -722,7 +722,7 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/market/sdk/utils/Connection$Parameter;->add(Ljava/lang/String;Ljava/lang/String;)Lcom/market/sdk/utils/Connection$Parameter;
 
-    const-string/jumbo v2, "versionCode"
+    const-string v2, "versionCode"
 
     .line 304
     new-instance v3, Ljava/lang/StringBuilder;

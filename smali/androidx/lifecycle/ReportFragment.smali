@@ -129,25 +129,6 @@
     return-void
 .end method
 
-.method static get(Landroid/app/Activity;)Landroidx/lifecycle/ReportFragment;
-    .locals 1
-
-    .line 74
-    invoke-virtual {p0}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
-
-    move-result-object p0
-
-    const-string v0, "androidx.lifecycle.LifecycleDispatcher.report_fragment_tag"
-
-    invoke-virtual {p0, v0}, Landroid/app/FragmentManager;->findFragmentByTag(Ljava/lang/String;)Landroid/app/Fragment;
-
-    move-result-object p0
-
-    check-cast p0, Landroidx/lifecycle/ReportFragment;
-
-    return-object p0
-.end method
-
 .method public static injectIfNeededIn(Landroid/app/Activity;)V
     .locals 3
 
@@ -302,15 +283,6 @@
     sget-object v0, Landroidx/lifecycle/Lifecycle$Event;->ON_STOP:Landroidx/lifecycle/Lifecycle$Event;
 
     invoke-direct {p0, v0}, Landroidx/lifecycle/ReportFragment;->dispatch(Landroidx/lifecycle/Lifecycle$Event;)V
-
-    return-void
-.end method
-
-.method setProcessListener(Landroidx/lifecycle/ReportFragment$ActivityInitializationListener;)V
-    .locals 0
-
-    .line 149
-    iput-object p1, p0, Landroidx/lifecycle/ReportFragment;->mProcessListener:Landroidx/lifecycle/ReportFragment$ActivityInitializationListener;
 
     return-void
 .end method

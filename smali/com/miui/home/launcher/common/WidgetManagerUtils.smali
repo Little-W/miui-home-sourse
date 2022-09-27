@@ -106,11 +106,13 @@
     if-eqz p1, :cond_1
 
     .line 105
-    sget-object v2, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->sAssistantWidget:Lcom/miui/home/launcher/AssistantWidget;
+    new-instance v2, Landroid/content/ComponentName;
 
-    invoke-interface {v2}, Lcom/miui/home/launcher/AssistantWidget;->getPickerDetailActivity()Landroid/content/ComponentName;
+    const-string v4, "com.miui.personalassistant"
 
-    move-result-object v2
+    const-string v5, "com.miui.personalassistant.picker.business.detail.PickerDetailActivity"
+
+    invoke-direct {v2, v4, v5}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
@@ -236,11 +238,13 @@
     invoke-virtual {v0, p1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 132
-    sget-object p1, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->sAssistantWidget:Lcom/miui/home/launcher/AssistantWidget;
+    new-instance p1, Landroid/content/ComponentName;
 
-    invoke-interface {p1}, Lcom/miui/home/launcher/AssistantWidget;->getPickerHomeActivity()Landroid/content/ComponentName;
+    const-string v2, "com.miui.personalassistant"
 
-    move-result-object p1
+    const-string v3, "com.miui.personalassistant.picker.business.home.pages.PickerHomeActivity"
+
+    invoke-direct {p1, v2, v3}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v0, p1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
@@ -503,27 +507,27 @@
 .method public static installWidget(Landroid/content/Context;Lcom/miui/home/launcher/LauncherAppWidgetInfo;)Z
     .locals 2
 
-    .line 241
+    .line 225
     iget-object v0, p1, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->downloadUri:Ljava/lang/String;
 
-    .line 242
+    .line 226
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 243
+    .line 227
     invoke-virtual {p1}, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->getProvider()Landroid/content/ComponentName;
 
     move-result-object p1
 
-    .line 244
+    .line 228
     invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 245
+    .line 229
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -548,7 +552,7 @@
 
     move-result-object v0
 
-    .line 247
+    .line 231
     :cond_0
     invoke-static {p0}, Lcom/market/sdk/MarketManager;->getManager(Landroid/content/Context;)Lcom/market/sdk/MarketManager;
 
@@ -558,7 +562,7 @@
 
     move-result-object p0
 
-    .line 248
+    .line 232
     invoke-virtual {p0, v0}, Lcom/market/sdk/FloatCardManager;->resumeByFloat(Ljava/lang/String;)Z
 
     move-result p1
@@ -582,7 +586,7 @@
     :goto_0
     const-string p0, "Launcher.widgetManager"
 
-    .line 249
+    .line 233
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -607,26 +611,26 @@
 .method public static isAppWidgetAvailable(Landroid/content/Context;ILandroid/content/ComponentName;)Z
     .locals 0
 
-    .line 256
+    .line 240
     invoke-static {p0}, Landroid/appwidget/AppWidgetManager;->getInstance(Landroid/content/Context;)Landroid/appwidget/AppWidgetManager;
 
     move-result-object p0
 
-    .line 257
+    .line 241
     invoke-virtual {p0, p1}, Landroid/appwidget/AppWidgetManager;->getAppWidgetInfo(I)Landroid/appwidget/AppWidgetProviderInfo;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 258
+    .line 242
     iget-object p1, p0, Landroid/appwidget/AppWidgetProviderInfo;->provider:Landroid/content/ComponentName;
 
     if-eqz p1, :cond_0
 
     iget-object p1, p0, Landroid/appwidget/AppWidgetProviderInfo;->provider:Landroid/content/ComponentName;
 
-    .line 259
+    .line 243
     invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object p1
@@ -655,25 +659,25 @@
 .method public static isProviderAvailable(Landroid/content/Context;Landroid/content/ComponentName;)Z
     .locals 2
 
-    .line 263
+    .line 247
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.appwidget.action.APPWIDGET_UPDATE"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 264
+    .line 248
     invoke-virtual {v0, p1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
     const/4 p1, 0x0
 
-    .line 266
+    .line 250
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
 
-    const v1, 0xc0040
+    const/16 v1, 0x40
 
     invoke-virtual {p0, v0, v1}, Landroid/content/pm/PackageManager;->queryBroadcastReceivers(Landroid/content/Intent;I)Ljava/util/List;
 
@@ -681,7 +685,7 @@
 
     if-eqz p0, :cond_0
 
-    .line 269
+    .line 251
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result p0
@@ -706,7 +710,9 @@
     :try_start_0
     instance-of v0, p1, Lcom/miui/home/launcher/LauncherAppWidgetInfo;
 
-    if-eqz v0, :cond_2
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_1
 
     .line 196
     move-object v0, p1
@@ -714,137 +720,97 @@
     check-cast v0, Lcom/miui/home/launcher/LauncherAppWidgetInfo;
 
     .line 197
-    iget-object v1, v0, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->editUri:Ljava/lang/String;
+    iget-object v2, v0, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->editUri:Ljava/lang/String;
 
-    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    .line 198
-    new-instance p1, Landroid/content/Intent;
-
-    const-string v1, "android.intent.action.VIEW"
-
-    invoke-direct {p1, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    .line 199
-    iget-object v1, v0, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->editUri:Ljava/lang/String;
-
-    invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v1
-
-    .line 200
-    invoke-virtual {p1, v1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
-
-    const-string v2, "miuiEditIntentFlags"
-
-    .line 202
-    invoke-virtual {v1, v2}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 203
-    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    const-string v2, "[1-9][0-9]*"
+    .line 198
+    iget-object p1, v0, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->editUri:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Ljava/lang/String;->matches(Ljava/lang/String;)Z
+    invoke-static {p1, v1}, Landroid/content/Intent;->parseUri(Ljava/lang/String;I)Landroid/content/Intent;
 
-    move-result v2
+    move-result-object p1
 
-    if-eqz v2, :cond_0
-
-    .line 204
-    invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result v1
-
-    invoke-virtual {p1, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
-
-    :cond_0
     const-string v1, "appWidgetId"
 
-    .line 207
+    .line 199
     invoke-virtual {v0}, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->getAppWidgetId()I
 
     move-result v0
 
     invoke-virtual {p1, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 208
+    .line 200
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Launcher;->startActivity(Landroid/content/Intent;)V
 
     goto :goto_0
 
-    .line 210
-    :cond_1
+    .line 202
+    :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/Launcher;->getAppWidgetHost()Lcom/miui/home/launcher/LauncherAppWidgetHost;
 
     move-result-object v0
 
     check-cast p1, Lcom/miui/home/launcher/LauncherAppWidgetInfo;
 
-    .line 211
+    .line 203
     invoke-virtual {p1}, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->getAppWidgetId()I
 
     move-result p1
 
     const/16 v1, 0xd
 
-    .line 210
+    .line 202
     invoke-virtual {v0, p0, p1, v1}, Lcom/miui/home/launcher/LauncherAppWidgetHost;->startConfigActivity(Lcom/miui/home/launcher/BaseActivity;II)V
 
     goto :goto_0
 
-    .line 214
-    :cond_2
+    .line 206
+    :cond_1
     instance-of v0, p1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_3
 
-    .line 215
+    .line 207
     check-cast p1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;
 
-    .line 216
+    .line 208
     iget-object v0, p1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->customEditUri:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_2
 
-    .line 217
+    .line 209
     iget-object v0, p1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->configPath:Ljava/lang/String;
-
-    const/4 v1, 0x0
 
     invoke-static {p0, v0, v1}, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->grantAssistantPermission(Landroid/content/Context;Ljava/lang/String;Z)Landroid/net/Uri;
 
-    .line 218
+    .line 210
     iget-object v0, p1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->productId:Ljava/lang/String;
 
     iget v1, p1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->versionCode:I
 
     invoke-static {p0, v0, v1}, Lcom/miui/home/launcher/widget/MIUIWidgetCompat;->grantPaResPermission(Landroid/content/Context;Ljava/lang/String;I)Landroid/net/Uri;
 
-    .line 220
-    :cond_3
+    .line 212
+    :cond_2
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.EDIT"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 221
-    invoke-static {p1}, Lcom/miui/home/launcher/common/WidgetManagerUtils;->parseEditUri(Lcom/miui/home/launcher/maml/MaMlWidgetInfo;)Landroid/net/Uri;
+    .line 213
+    iget-object v1, p1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->editUri:Ljava/lang/String;
+
+    invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
 
@@ -852,12 +818,12 @@
 
     const/high16 v1, 0x10000000
 
-    .line 222
+    .line 214
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
     const-string v1, "appWidgetId"
 
-    .line 223
+    .line 215
     iget p1, p1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->gadgetId:I
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
@@ -866,10 +832,10 @@
 
     const/16 v1, 0xc
 
-    .line 224
+    .line 216
     invoke-virtual {v0, p1, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 225
+    .line 217
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Launcher;->startActivity(Landroid/content/Intent;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -879,55 +845,12 @@
     :catch_0
     move-exception p0
 
-    .line 228
+    .line 220
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
-    :cond_4
+    :cond_3
     :goto_0
     return-void
-.end method
-
-.method private static parseEditUri(Lcom/miui/home/launcher/maml/MaMlWidgetInfo;)Landroid/net/Uri;
-    .locals 3
-
-    .line 233
-    iget-object v0, p0, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->editUri:Ljava/lang/String;
-
-    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
-
-    move-result-object v0
-
-    .line 234
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getDeviceType()Lcom/miui/home/launcher/DeviceType;
-
-    move-result-object v1
-
-    sget-object v2, Lcom/miui/home/launcher/DeviceType;->PHONE:Lcom/miui/home/launcher/DeviceType;
-
-    if-eq v1, v2, :cond_0
-
-    const-string v1, "miuiWidgetId"
-
-    .line 235
-    iget p0, p0, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->gadgetId:I
-
-    invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v0, v1, p0}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
-
-    .line 237
-    :cond_0
-    invoke-virtual {v0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
-
-    move-result-object p0
-
-    return-object p0
 .end method
 
 .method public static unbindAllWidgets(Landroid/content/Context;)V

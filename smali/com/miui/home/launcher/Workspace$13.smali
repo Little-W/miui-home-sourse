@@ -3,12 +3,12 @@
 .source "Workspace.java"
 
 # interfaces
-.implements Ljava/util/function/Consumer;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/miui/home/launcher/Workspace;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/miui/home/launcher/Workspace;->addItemToFolder(Lcom/miui/home/launcher/ShortcutInfo;Lcom/miui/home/launcher/FolderInfo;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -16,26 +16,25 @@
     name = null
 .end annotation
 
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Ljava/util/function/Consumer<",
-        "Lcom/miui/home/launcher/ItemInfo;",
-        ">;"
-    }
-.end annotation
-
 
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/launcher/Workspace;
 
+.field final synthetic val$folderInfo:Lcom/miui/home/launcher/FolderInfo;
+
+.field final synthetic val$shortcutInfo:Lcom/miui/home/launcher/ShortcutInfo;
+
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/Workspace;)V
+.method constructor <init>(Lcom/miui/home/launcher/Workspace;Lcom/miui/home/launcher/FolderInfo;Lcom/miui/home/launcher/ShortcutInfo;)V
     .locals 0
 
-    .line 2624
+    .line 2519
     iput-object p1, p0, Lcom/miui/home/launcher/Workspace$13;->this$0:Lcom/miui/home/launcher/Workspace;
+
+    iput-object p2, p0, Lcom/miui/home/launcher/Workspace$13;->val$folderInfo:Lcom/miui/home/launcher/FolderInfo;
+
+    iput-object p3, p0, Lcom/miui/home/launcher/Workspace$13;->val$shortcutInfo:Lcom/miui/home/launcher/ShortcutInfo;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,39 +43,50 @@
 
 
 # virtual methods
-.method public accept(Lcom/miui/home/launcher/ItemInfo;)V
-    .locals 1
+.method public run()V
+    .locals 4
 
-    .line 2627
-    instance-of v0, p1, Lcom/miui/home/launcher/FolderInfo;
+    .line 2522
+    iget-object v0, p0, Lcom/miui/home/launcher/Workspace$13;->val$folderInfo:Lcom/miui/home/launcher/FolderInfo;
 
-    if-nez v0, :cond_0
+    iget-object v1, p0, Lcom/miui/home/launcher/Workspace$13;->val$shortcutInfo:Lcom/miui/home/launcher/ShortcutInfo;
 
-    instance-of v0, p1, Lcom/miui/home/launcher/ShortcutInfo;
+    iget-object v2, p0, Lcom/miui/home/launcher/Workspace$13;->this$0:Lcom/miui/home/launcher/Workspace;
 
-    if-eqz v0, :cond_1
+    invoke-static {v2}, Lcom/miui/home/launcher/Workspace;->access$200(Lcom/miui/home/launcher/Workspace;)Lcom/miui/home/launcher/Launcher;
 
-    .line 2628
-    :cond_0
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/miui/home/launcher/Launcher;->getLauncherMode()Lcom/miui/home/launcher/allapps/LauncherMode;
+
+    move-result-object v2
+
+    const/4 v3, 0x1
+
+    invoke-virtual {v0, v1, v3, v2}, Lcom/miui/home/launcher/FolderInfo;->add(Lcom/miui/home/launcher/ShortcutInfo;ZLcom/miui/home/launcher/allapps/LauncherMode;)V
+
+    .line 2523
+    iget-object v0, p0, Lcom/miui/home/launcher/Workspace$13;->val$shortcutInfo:Lcom/miui/home/launcher/ShortcutInfo;
+
+    const-wide/16 v1, -0x1
+
+    iput-wide v1, v0, Lcom/miui/home/launcher/ShortcutInfo;->screenId:J
+
+    .line 2524
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace$13;->this$0:Lcom/miui/home/launcher/Workspace;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/Workspace;->access$1000(Lcom/miui/home/launcher/Workspace;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lcom/miui/home/launcher/Workspace;->access$200(Lcom/miui/home/launcher/Workspace;)Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    iget-object v1, p0, Lcom/miui/home/launcher/Workspace$13;->val$shortcutInfo:Lcom/miui/home/launcher/ShortcutInfo;
 
-    :cond_1
-    return-void
-.end method
+    invoke-static {v0, v1}, Lcom/miui/home/launcher/LauncherModel;->updateItemInDatabase(Landroid/content/Context;Lcom/miui/home/launcher/ItemInfo;)V
 
-.method public bridge synthetic accept(Ljava/lang/Object;)V
-    .locals 0
+    .line 2525
+    iget-object v0, p0, Lcom/miui/home/launcher/Workspace$13;->val$folderInfo:Lcom/miui/home/launcher/FolderInfo;
 
-    .line 2624
-    check-cast p1, Lcom/miui/home/launcher/ItemInfo;
-
-    invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Workspace$13;->accept(Lcom/miui/home/launcher/ItemInfo;)V
+    invoke-virtual {v0}, Lcom/miui/home/launcher/FolderInfo;->notifyDataSetChanged()V
 
     return-void
 .end method

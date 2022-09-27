@@ -4,8 +4,8 @@
 
 # interfaces
 .implements Lcom/miui/home/launcher/DragController$LocationCalibration;
-.implements Lcom/miui/home/launcher/IconContainer;
-.implements Lcom/miui/home/launcher/NewInstallIconContainer;
+.implements Lcom/miui/home/launcher/DragView$DropTargetContainer;
+.implements Lcom/miui/home/launcher/Launcher$IconContainer;
 .implements Lcom/miui/home/launcher/OnLongClickAgent$VersionTagGenerator;
 .implements Lcom/miui/home/launcher/PendingSource;
 .implements Lcom/miui/home/launcher/WallpaperUtils$WallpaperColorChangedListener;
@@ -31,7 +31,7 @@
 
 .field private static final SHAKE_OFFSET:I
 
-.field private static final sOnItemInvisibleWorker:Lcom/miui/home/launcher/CellLayout$ItemVisibilityWorker;
+.field private static final sOnItemInVisibleWorker:Lcom/miui/home/launcher/CellLayout$ItemVisibilityWorker;
 
 .field private static sOnItemVisibleWorker:Lcom/miui/home/launcher/CellLayout$ItemVisibilityWorker;
 
@@ -39,9 +39,9 @@
 
 
 # instance fields
-.field private final mCellBackground:Lcom/miui/home/launcher/CellBackground;
+.field private mAnimatorNum:I
 
-.field private mCellContainerHeight:I
+.field private mCellBackground:Lcom/miui/home/launcher/CellBackground;
 
 .field private mCellHeight:I
 
@@ -55,7 +55,7 @@
 
 .field private mCellXIterateRange:[I
 
-.field private final mCellXY:[I
+.field private mCellXY:[I
 
 .field mCubicEaseOutInterpolator:Landroid/animation/TimeInterpolator;
 
@@ -67,17 +67,15 @@
 
 .field private mDrawCallback:Lcom/miui/home/launcher/MIUIWidgetAddAnimator$OnDrawCallback;
 
-.field private mDstPos:[I
+.field private mDropAnimationCounter:I
 
-.field private final mEditAnimContoller:Lcom/miui/home/launcher/anim/EditAnimController;
+.field private mDstPos:[I
 
 .field private mEditStateChangedMessageHandler:Lcom/miui/home/launcher/common/messages/EditStateChangedMessageHandler;
 
 .field private mFirstPos:[I
 
 .field private mHCells:I
-
-.field private mHasNewInstallApps:Z
 
 .field private mHeightGap:I
 
@@ -91,15 +89,13 @@
 
 .field mLastDragPos:Lcom/miui/home/launcher/CellLayout$DragPos;
 
-.field private final mLastDragedXY:[I
+.field private mLastDragedXY:[I
 
 .field private mLastRelayoutTime:J
 
 .field protected mLauncher:Lcom/miui/home/launcher/Launcher;
 
 .field private mLayoutBackupValid:Z
-
-.field private mNewInstallAnimHelper:Lcom/miui/home/launcher/NewInstallAnimHelper;
 
 .field private mNotchEditModeGapDelta:I
 
@@ -109,13 +105,23 @@
 
 .field private mOccupiedCellBak:[[Landroid/view/View;
 
-.field private final mOnLongClickAgent:Lcom/miui/home/launcher/OnLongClickAgent;
+.field private mOnLongClickAgent:Lcom/miui/home/launcher/OnLongClickAgent;
 
-.field private final mPendingItemsDelegate:Lcom/miui/home/launcher/PendingSourceDelegate;
+.field private mPendingItemsDelegate:Lcom/miui/home/launcher/PendingSourceDelegate;
 
 .field private final mRect:Landroid/graphics/Rect;
 
 .field private mRectTmp:Landroid/graphics/Rect;
+
+.field private mSpringAnimatorList:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList<",
+            "Lcom/miui/home/launcher/animate/SpringAnimator;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 .field private mStartShowingTime:J
 
@@ -150,33 +156,33 @@
 
     const/high16 v0, 0x3fc00000    # 1.5f
 
-    .line 108
+    .line 112
     invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->getDipPixelSize(F)I
 
     move-result v0
 
     sput v0, Lcom/miui/home/launcher/CellLayout;->SHAKE_OFFSET:I
 
-    .line 3010
-    new-instance v0, Lcom/miui/home/launcher/CellLayout$6;
+    .line 3081
+    new-instance v0, Lcom/miui/home/launcher/CellLayout$9;
 
-    invoke-direct {v0}, Lcom/miui/home/launcher/CellLayout$6;-><init>()V
+    invoke-direct {v0}, Lcom/miui/home/launcher/CellLayout$9;-><init>()V
 
     sput-object v0, Lcom/miui/home/launcher/CellLayout;->sOnItemVisibleWorker:Lcom/miui/home/launcher/CellLayout$ItemVisibilityWorker;
 
-    .line 3034
-    new-instance v0, Lcom/miui/home/launcher/CellLayout$7;
+    .line 3105
+    new-instance v0, Lcom/miui/home/launcher/CellLayout$10;
 
-    invoke-direct {v0}, Lcom/miui/home/launcher/CellLayout$7;-><init>()V
+    invoke-direct {v0}, Lcom/miui/home/launcher/CellLayout$10;-><init>()V
 
     sput-object v0, Lcom/miui/home/launcher/CellLayout;->sUpdateMamlDownloadVisible:Lcom/miui/home/launcher/CellLayout$ItemVisibilityWorker;
 
-    .line 3073
-    new-instance v0, Lcom/miui/home/launcher/CellLayout$8;
+    .line 3143
+    new-instance v0, Lcom/miui/home/launcher/CellLayout$11;
 
-    invoke-direct {v0}, Lcom/miui/home/launcher/CellLayout$8;-><init>()V
+    invoke-direct {v0}, Lcom/miui/home/launcher/CellLayout$11;-><init>()V
 
-    sput-object v0, Lcom/miui/home/launcher/CellLayout;->sOnItemInvisibleWorker:Lcom/miui/home/launcher/CellLayout$ItemVisibilityWorker;
+    sput-object v0, Lcom/miui/home/launcher/CellLayout;->sOnItemInVisibleWorker:Lcom/miui/home/launcher/CellLayout$ItemVisibilityWorker;
 
     return-void
 .end method
@@ -186,31 +192,31 @@
 
     const/4 v0, 0x0
 
-    .line 176
+    .line 173
     invoke-direct {p0, p1, p2, v0}, Lcom/miui/home/launcher/CellLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-    .locals 2
+    .locals 3
 
-    .line 180
+    .line 177
     invoke-direct {p0, p1, p2, p3}, Lcom/miui/launcher/views/LauncherViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     const/4 p2, 0x0
 
-    .line 118
+    .line 121
     iput-boolean p2, p0, Lcom/miui/home/launcher/CellLayout;->mIsNoVacantMode:Z
 
-    .line 130
+    .line 133
     new-instance p3, Landroid/graphics/Rect;
 
     invoke-direct {p3}, Landroid/graphics/Rect;-><init>()V
 
     iput-object p3, p0, Lcom/miui/home/launcher/CellLayout;->mRect:Landroid/graphics/Rect;
 
-    .line 131
+    .line 134
     new-instance p3, Lcom/miui/home/launcher/CellLayout$CellInfo;
 
     invoke-direct {p3}, Lcom/miui/home/launcher/CellLayout$CellInfo;-><init>()V
@@ -219,79 +225,86 @@
 
     const/4 p3, 0x2
 
-    .line 133
+    .line 136
     new-array v0, p3, [I
 
     iput-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mCellXY:[I
 
-    .line 134
+    .line 137
     new-array v0, p3, [I
 
     iput-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mTmpXY:[I
 
-    .line 135
+    .line 138
     new-instance v0, Lcom/miui/home/launcher/CellLayout$DragPos;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/CellLayout$DragPos;-><init>(Lcom/miui/home/launcher/CellLayout;)V
 
     iput-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mLastDragPos:Lcom/miui/home/launcher/CellLayout$DragPos;
 
-    .line 136
+    .line 139
     new-instance v0, Lcom/miui/home/launcher/CellLayout$DragPos;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/CellLayout$DragPos;-><init>(Lcom/miui/home/launcher/CellLayout;)V
 
     iput-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mTmpDragPos:Lcom/miui/home/launcher/CellLayout$DragPos;
 
-    .line 138
+    .line 141
     iput-boolean p2, p0, Lcom/miui/home/launcher/CellLayout;->mLastDownOnOccupiedCell:Z
 
     const/4 v0, 0x0
 
-    .line 144
+    .line 147
     iput-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mLastCoveringView:Lcom/miui/home/launcher/DropTarget;
 
-    .line 154
+    .line 157
     iput-boolean p2, p0, Lcom/miui/home/launcher/CellLayout;->mDisableTouch:Z
 
-    .line 158
+    .line 161
     new-array v1, p3, [I
 
     iput-object v1, p0, Lcom/miui/home/launcher/CellLayout;->mLastDragedXY:[I
 
-    .line 160
+    .line 163
     new-instance v1, Lcom/miui/home/launcher/PendingSourceDelegate;
 
     invoke-direct {v1}, Lcom/miui/home/launcher/PendingSourceDelegate;-><init>()V
 
     iput-object v1, p0, Lcom/miui/home/launcher/CellLayout;->mPendingItemsDelegate:Lcom/miui/home/launcher/PendingSourceDelegate;
 
-    .line 162
+    .line 165
     new-instance v1, Lmiuix/view/animation/CubicEaseOutInterpolator;
 
     invoke-direct {v1}, Lmiuix/view/animation/CubicEaseOutInterpolator;-><init>()V
 
     iput-object v1, p0, Lcom/miui/home/launcher/CellLayout;->mCubicEaseOutInterpolator:Landroid/animation/TimeInterpolator;
 
-    .line 163
+    .line 166
     iput-boolean p2, p0, Lcom/miui/home/launcher/CellLayout;->mVisibleForMaml:Z
 
-    .line 169
-    iput-boolean p2, p0, Lcom/miui/home/launcher/CellLayout;->mHasNewInstallApps:Z
+    .line 313
+    new-instance v1, Ljava/util/ArrayList;
 
-    .line 742
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v1, p0, Lcom/miui/home/launcher/CellLayout;->mSpringAnimatorList:Ljava/util/ArrayList;
+
+    .line 314
+    iput p2, p0, Lcom/miui/home/launcher/CellLayout;->mAnimatorNum:I
+
+    .line 830
     new-array v1, p3, [I
 
     iput-object v1, p0, Lcom/miui/home/launcher/CellLayout;->mCellXIterateRange:[I
 
-    .line 1177
-    new-instance v1, Lcom/miui/home/launcher/CellLayout$3;
+    .line 1265
+    new-instance v1, Lcom/miui/home/launcher/CellLayout$6;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/launcher/CellLayout$3;-><init>(Lcom/miui/home/launcher/CellLayout;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/launcher/CellLayout$6;-><init>(Lcom/miui/home/launcher/CellLayout;)V
 
     iput-object v1, p0, Lcom/miui/home/launcher/CellLayout;->mDeleteSelfRunnable:Ljava/lang/Runnable;
 
-    .line 1341
+    .line 1420
     new-instance v1, Lcom/miui/home/launcher/CellLayout$StayConfirm;
 
     invoke-direct {v1, p0, v0}, Lcom/miui/home/launcher/CellLayout$StayConfirm;-><init>(Lcom/miui/home/launcher/CellLayout;Lcom/miui/home/launcher/CellLayout$1;)V
@@ -300,62 +313,65 @@
 
     const-wide/16 v0, 0x0
 
-    .line 1343
+    .line 1422
     iput-wide v0, p0, Lcom/miui/home/launcher/CellLayout;->mLastRelayoutTime:J
 
-    .line 2011
+    .line 2086
     iput-boolean p2, p0, Lcom/miui/home/launcher/CellLayout;->mLayoutBackupValid:Z
 
-    .line 2098
+    .line 2173
     iput-boolean p2, p0, Lcom/miui/home/launcher/CellLayout;->mToasted:Z
 
-    .line 2144
-    new-instance p2, Lcom/miui/home/launcher/CellLayout$5;
+    .line 2219
+    new-instance v2, Lcom/miui/home/launcher/CellLayout$8;
 
-    invoke-direct {p2, p0}, Lcom/miui/home/launcher/CellLayout$5;-><init>(Lcom/miui/home/launcher/CellLayout;)V
+    invoke-direct {v2, p0}, Lcom/miui/home/launcher/CellLayout$8;-><init>(Lcom/miui/home/launcher/CellLayout;)V
 
-    iput-object p2, p0, Lcom/miui/home/launcher/CellLayout;->mEditStateChangedMessageHandler:Lcom/miui/home/launcher/common/messages/EditStateChangedMessageHandler;
+    iput-object v2, p0, Lcom/miui/home/launcher/CellLayout;->mEditStateChangedMessageHandler:Lcom/miui/home/launcher/common/messages/EditStateChangedMessageHandler;
 
-    .line 2318
-    new-instance p2, Landroid/graphics/Rect;
+    .line 2393
+    new-instance v2, Landroid/graphics/Rect;
 
-    invoke-direct {p2}, Landroid/graphics/Rect;-><init>()V
+    invoke-direct {v2}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object p2, p0, Lcom/miui/home/launcher/CellLayout;->mRectTmp:Landroid/graphics/Rect;
+    iput-object v2, p0, Lcom/miui/home/launcher/CellLayout;->mRectTmp:Landroid/graphics/Rect;
 
-    .line 2699
-    new-array p2, p3, [I
+    .line 2753
+    new-array v2, p3, [I
 
-    iput-object p2, p0, Lcom/miui/home/launcher/CellLayout;->mDstPos:[I
+    iput-object v2, p0, Lcom/miui/home/launcher/CellLayout;->mDstPos:[I
 
-    .line 2700
-    new-array p2, p3, [I
+    .line 2754
+    new-array p3, p3, [I
 
-    iput-object p2, p0, Lcom/miui/home/launcher/CellLayout;->mFirstPos:[I
+    iput-object p3, p0, Lcom/miui/home/launcher/CellLayout;->mFirstPos:[I
 
-    .line 3045
+    .line 2894
+    iput p2, p0, Lcom/miui/home/launcher/CellLayout;->mDropAnimationCounter:I
+
+    .line 3116
     iput-wide v0, p0, Lcom/miui/home/launcher/CellLayout;->mStartShowingTime:J
 
-    .line 182
+    .line 179
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
 
-    .line 183
+    .line 180
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getWorkspaceCellPaddingTop()I
 
     move-result p3
 
     invoke-virtual {p0, p3}, Lcom/miui/home/launcher/CellLayout;->setCellPaddingTop(I)V
 
-    .line 184
+    .line 181
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getWorkspaceCellPaddingSide()I
 
     move-result p3
 
     iput p3, p0, Lcom/miui/home/launcher/CellLayout;->mCellPaddingLeft:I
 
-    .line 186
+    .line 183
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->getContext()Landroid/content/Context;
 
     move-result-object p3
@@ -370,28 +386,28 @@
 
     iput-object p3, p0, Lcom/miui/home/launcher/CellLayout;->mWallpaperManager:Landroid/app/WallpaperManager;
 
-    .line 188
+    .line 185
     move-object p3, p1
 
     check-cast p3, Lcom/miui/home/launcher/Launcher;
 
     iput-object p3, p0, Lcom/miui/home/launcher/CellLayout;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    .line 189
+    .line 186
     new-instance p3, Lcom/miui/home/launcher/OnLongClickAgent;
 
     invoke-direct {p3, p0, p0}, Lcom/miui/home/launcher/OnLongClickAgent;-><init>(Landroid/view/ViewGroup;Lcom/miui/home/launcher/OnLongClickAgent$VersionTagGenerator;)V
 
     iput-object p3, p0, Lcom/miui/home/launcher/CellLayout;->mOnLongClickAgent:Lcom/miui/home/launcher/OnLongClickAgent;
 
-    .line 191
+    .line 188
     new-instance p3, Lcom/miui/home/launcher/CellBackground;
 
     invoke-direct {p3, p1}, Lcom/miui/home/launcher/CellBackground;-><init>(Landroid/content/Context;)V
 
     iput-object p3, p0, Lcom/miui/home/launcher/CellLayout;->mCellBackground:Lcom/miui/home/launcher/CellBackground;
 
-    .line 192
+    .line 189
     iget-object p1, p0, Lcom/miui/home/launcher/CellLayout;->mCellBackground:Lcom/miui/home/launcher/CellBackground;
 
     new-instance p3, Lcom/miui/home/launcher/CellLayout$LayoutParams;
@@ -400,7 +416,7 @@
 
     invoke-virtual {p1, p3}, Lcom/miui/home/launcher/CellBackground;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 193
+    .line 190
     iget-object p1, p0, Lcom/miui/home/launcher/CellLayout;->mCellBackground:Lcom/miui/home/launcher/CellBackground;
 
     new-instance p3, Lcom/miui/home/launcher/ItemInfo;
@@ -409,94 +425,75 @@
 
     invoke-virtual {p1, p3}, Lcom/miui/home/launcher/CellBackground;->setTag(Ljava/lang/Object;)V
 
-    const p1, 0x7f0801b8
+    const p1, 0x7f0800cc
 
-    .line 194
+    .line 191
     invoke-virtual {p2, p1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/miui/home/launcher/CellLayout;->mDefaultCellBackground:Landroid/graphics/drawable/Drawable;
 
-    .line 196
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isFoldDevice()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    new-instance p1, Lcom/miui/home/launcher/anim/FoldEditEnterAnim;
-
-    invoke-direct {p1, p0}, Lcom/miui/home/launcher/anim/FoldEditEnterAnim;-><init>(Lcom/miui/home/launcher/CellLayout;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Lcom/miui/home/launcher/anim/NormalEditEnterAnim;
-
-    invoke-direct {p1, p0}, Lcom/miui/home/launcher/anim/NormalEditEnterAnim;-><init>(Lcom/miui/home/launcher/CellLayout;)V
-
-    :goto_0
-    iput-object p1, p0, Lcom/miui/home/launcher/CellLayout;->mEditAnimContoller:Lcom/miui/home/launcher/anim/EditAnimController;
-
     const/4 p1, 0x1
 
-    .line 198
+    .line 193
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/CellLayout;->setWillNotCacheDrawing(Z)V
 
-    .line 199
+    .line 194
     invoke-static {}, Lcom/miui/home/launcher/allapps/LauncherModeController;->isElderlyManMode()Z
 
     move-result p1
 
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/CellLayout;->setNoVacantMode(Z)V
 
-    .line 200
+    .line 195
     iget-object p1, p0, Lcom/miui/home/launcher/CellLayout;->mCellInfo:Lcom/miui/home/launcher/CellLayout$CellInfo;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/CellLayout;->setTag(Ljava/lang/Object;)V
 
-    .line 201
-    new-instance p1, Lcom/miui/home/launcher/NewInstallAnimHelper;
+    return-void
+.end method
 
-    invoke-direct {p1, p0}, Lcom/miui/home/launcher/NewInstallAnimHelper;-><init>(Lcom/miui/home/launcher/NewInstallIconContainer;)V
+.method static synthetic access$000(Lcom/miui/home/launcher/CellLayout;)V
+    .locals 0
 
-    iput-object p1, p0, Lcom/miui/home/launcher/CellLayout;->mNewInstallAnimHelper:Lcom/miui/home/launcher/NewInstallAnimHelper;
+    .line 95
+    invoke-direct {p0}, Lcom/miui/home/launcher/CellLayout;->onEnterAnimationEnd()V
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/miui/home/launcher/CellLayout;)Landroid/app/WallpaperManager;
+.method static synthetic access$100(Lcom/miui/home/launcher/CellLayout;)Landroid/app/WallpaperManager;
     .locals 0
 
-    .line 91
+    .line 95
     iget-object p0, p0, Lcom/miui/home/launcher/CellLayout;->mWallpaperManager:Landroid/app/WallpaperManager;
 
     return-object p0
 .end method
 
-.method static synthetic access$100(Lcom/miui/home/launcher/CellLayout;)[[Landroid/view/View;
+.method static synthetic access$1000(Lcom/miui/home/launcher/CellLayout;IIII)V
     .locals 0
 
-    .line 91
-    iget-object p0, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
+    .line 95
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/miui/home/launcher/CellLayout;->makeEmptyCellsNoSpan(IIII)V
 
-    return-object p0
+    return-void
 .end method
 
-.method static synthetic access$1000(Lcom/miui/home/launcher/CellLayout;)[[Landroid/view/View;
+.method static synthetic access$1100(Lcom/miui/home/launcher/CellLayout;)[[Landroid/view/View;
     .locals 0
 
-    .line 91
+    .line 95
     iget-object p0, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCellBak:[[Landroid/view/View;
 
     return-object p0
 .end method
 
-.method static synthetic access$1100(Lcom/miui/home/launcher/CellLayout;II)I
+.method static synthetic access$1200(Lcom/miui/home/launcher/CellLayout;II)I
     .locals 0
 
-    .line 91
+    .line 95
     invoke-direct {p0, p1, p2}, Lcom/miui/home/launcher/CellLayout;->cellToPositionIndex(II)I
 
     move-result p0
@@ -504,10 +501,10 @@
     return p0
 .end method
 
-.method static synthetic access$1200(Lcom/miui/home/launcher/CellLayout;I)Z
+.method static synthetic access$1300(Lcom/miui/home/launcher/CellLayout;I)Z
     .locals 0
 
-    .line 91
+    .line 95
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/CellLayout;->hasEmptyCellBeforeTargetIndex(I)Z
 
     move-result p0
@@ -515,10 +512,10 @@
     return p0
 .end method
 
-.method static synthetic access$1500(Lcom/miui/home/launcher/CellLayout;Landroid/view/View;)Lcom/miui/home/launcher/ItemInfo;
+.method static synthetic access$1600(Lcom/miui/home/launcher/CellLayout;Landroid/view/View;)Lcom/miui/home/launcher/ItemInfo;
     .locals 0
 
-    .line 91
+    .line 95
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/CellLayout;->getChildInfo(Landroid/view/View;)Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object p0
@@ -526,10 +523,10 @@
     return-object p0
 .end method
 
-.method static synthetic access$1700(IIII)I
+.method static synthetic access$1800(IIII)I
     .locals 0
 
-    .line 91
+    .line 95
     invoke-static {p0, p1, p2, p3}, Lcom/miui/home/launcher/CellLayout;->calculateX(IIII)I
 
     move-result p0
@@ -537,10 +534,10 @@
     return p0
 .end method
 
-.method static synthetic access$1800(IIIIII)I
+.method static synthetic access$1900(IIIIII)I
     .locals 0
 
-    .line 91
+    .line 95
     invoke-static/range {p0 .. p5}, Lcom/miui/home/launcher/CellLayout;->calculateY(IIIIII)I
 
     move-result p0
@@ -548,83 +545,83 @@
     return p0
 .end method
 
-.method static synthetic access$200(Lcom/miui/home/launcher/CellLayout;)Lcom/miui/home/launcher/CellLayout$CellInfo;
+.method static synthetic access$200(Lcom/miui/home/launcher/CellLayout;)[[Landroid/view/View;
     .locals 0
 
-    .line 91
+    .line 95
+    iget-object p0, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
+
+    return-object p0
+.end method
+
+.method static synthetic access$300(Lcom/miui/home/launcher/CellLayout;)Lcom/miui/home/launcher/CellLayout$CellInfo;
+    .locals 0
+
+    .line 95
     iget-object p0, p0, Lcom/miui/home/launcher/CellLayout;->mCellInfo:Lcom/miui/home/launcher/CellLayout$CellInfo;
 
     return-object p0
 .end method
 
-.method static synthetic access$300(Lcom/miui/home/launcher/CellLayout;IIII)V
+.method static synthetic access$400(Lcom/miui/home/launcher/CellLayout;IIII)V
     .locals 0
 
-    .line 91
+    .line 95
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/miui/home/launcher/CellLayout;->makeEmptyCellsWithSpanForInnerItem(IIII)V
 
     return-void
 .end method
 
-.method static synthetic access$400(Lcom/miui/home/launcher/CellLayout;IIII)V
+.method static synthetic access$500(Lcom/miui/home/launcher/CellLayout;IIII)V
     .locals 0
 
-    .line 91
+    .line 95
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/miui/home/launcher/CellLayout;->makeEmptyCellsWithSpan(IIII)V
 
     return-void
 .end method
 
-.method static synthetic access$500(Lcom/miui/home/launcher/CellLayout;)Lcom/miui/home/launcher/DropTarget;
+.method static synthetic access$600(Lcom/miui/home/launcher/CellLayout;)Lcom/miui/home/launcher/DropTarget;
     .locals 0
 
-    .line 91
+    .line 95
     iget-object p0, p0, Lcom/miui/home/launcher/CellLayout;->mLastCoveringView:Lcom/miui/home/launcher/DropTarget;
 
     return-object p0
 .end method
 
-.method static synthetic access$502(Lcom/miui/home/launcher/CellLayout;Lcom/miui/home/launcher/DropTarget;)Lcom/miui/home/launcher/DropTarget;
+.method static synthetic access$602(Lcom/miui/home/launcher/CellLayout;Lcom/miui/home/launcher/DropTarget;)Lcom/miui/home/launcher/DropTarget;
     .locals 0
 
-    .line 91
+    .line 95
     iput-object p1, p0, Lcom/miui/home/launcher/CellLayout;->mLastCoveringView:Lcom/miui/home/launcher/DropTarget;
 
     return-object p1
 .end method
 
-.method static synthetic access$600(Lcom/miui/home/launcher/CellLayout;)V
+.method static synthetic access$700(Lcom/miui/home/launcher/CellLayout;)V
     .locals 0
 
-    .line 91
+    .line 95
     invoke-direct {p0}, Lcom/miui/home/launcher/CellLayout;->rollbackLayout()V
 
     return-void
 .end method
 
-.method static synthetic access$700(Lcom/miui/home/launcher/CellLayout;)Z
+.method static synthetic access$800(Lcom/miui/home/launcher/CellLayout;)Z
     .locals 0
 
-    .line 91
+    .line 95
     iget-boolean p0, p0, Lcom/miui/home/launcher/CellLayout;->mIsNoVacantMode:Z
 
     return p0
 .end method
 
-.method static synthetic access$800(Lcom/miui/home/launcher/CellLayout;)V
+.method static synthetic access$900(Lcom/miui/home/launcher/CellLayout;)V
     .locals 0
 
-    .line 91
+    .line 95
     invoke-direct {p0}, Lcom/miui/home/launcher/CellLayout;->rollbackLayoutWithoutRelayout()V
-
-    return-void
-.end method
-
-.method static synthetic access$900(Lcom/miui/home/launcher/CellLayout;IIII)V
-    .locals 0
-
-    .line 91
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/miui/home/launcher/CellLayout;->makeEmptyCellsNoSpan(IIII)V
 
     return-void
 .end method
@@ -632,7 +629,7 @@
 .method private backupLayout()V
     .locals 2
 
-    .line 2014
+    .line 2089
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
     iget-object v1, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCellBak:[[Landroid/view/View;
@@ -641,7 +638,7 @@
 
     const/4 v0, 0x1
 
-    .line 2015
+    .line 2090
     iput-boolean v0, p0, Lcom/miui/home/launcher/CellLayout;->mLayoutBackupValid:Z
 
     return-void
@@ -650,7 +647,7 @@
 .method private calCellXRange(I)V
     .locals 4
 
-    .line 745
+    .line 833
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mCellXIterateRange:[I
 
     const/4 v1, 0x0
@@ -671,7 +668,7 @@
     :goto_0
     aput v3, v0, v1
 
-    .line 746
+    .line 834
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mCellXIterateRange:[I
 
     if-ne p1, v2, :cond_1
@@ -689,7 +686,7 @@
 .method private calFirstIconPos(I)V
     .locals 5
 
-    .line 2736
+    .line 2790
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mFirstPos:[I
 
     const/4 v1, 0x0
@@ -710,7 +707,7 @@
     :goto_0
     aput p1, v0, v1
 
-    .line 2737
+    .line 2791
     iget-object p1, p0, Lcom/miui/home/launcher/CellLayout;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
@@ -727,14 +724,14 @@
 
     if-nez p1, :cond_1
 
-    .line 2738
+    .line 2792
     iget-object p1, p0, Lcom/miui/home/launcher/CellLayout;->mFirstPos:[I
 
     aput v1, p1, v2
 
     return-void
 
-    .line 2741
+    .line 2795
     :cond_1
     iget-object p1, p0, Lcom/miui/home/launcher/CellLayout;->mFirstPos:[I
 
@@ -742,7 +739,7 @@
 
     move p1, v1
 
-    .line 2742
+    .line 2796
     :goto_1
     iget v0, p0, Lcom/miui/home/launcher/CellLayout;->mVCells:I
 
@@ -750,13 +747,13 @@
 
     move v0, v1
 
-    .line 2743
+    .line 2797
     :goto_2
     iget v3, p0, Lcom/miui/home/launcher/CellLayout;->mHCells:I
 
     if-ge v0, v3, :cond_4
 
-    .line 2744
+    .line 2798
     iget-object v3, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
     aget-object v3, v3, v0
@@ -767,13 +764,13 @@
 
     goto :goto_3
 
-    .line 2746
+    .line 2800
     :cond_2
     invoke-direct {p0, v3}, Lcom/miui/home/launcher/CellLayout;->getChildInfo(Landroid/view/View;)Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v3
 
-    .line 2747
+    .line 2801
     iget v4, v3, Lcom/miui/home/launcher/ItemInfo;->spanX:I
 
     if-ne v4, v2, :cond_3
@@ -782,14 +779,14 @@
 
     if-ne v3, v2, :cond_3
 
-    .line 2748
+    .line 2802
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mFirstPos:[I
 
     aput p1, v0, v2
 
     return-void
 
-    .line 2751
+    .line 2805
     :cond_3
     iget-object v3, p0, Lcom/miui/home/launcher/CellLayout;->mFirstPos:[I
 
@@ -814,7 +811,7 @@
 .method private calNextDstPos(I)V
     .locals 4
 
-    .line 2703
+    .line 2757
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mDstPos:[I
 
     const/4 v1, 0x0
@@ -831,19 +828,19 @@
 
     if-ne p1, v3, :cond_0
 
-    .line 2704
+    .line 2758
     aget v3, v0, v1
 
     if-gez v3, :cond_0
 
-    .line 2705
+    .line 2759
     iget p1, p0, Lcom/miui/home/launcher/CellLayout;->mHCells:I
 
     sub-int/2addr p1, v2
 
     aput p1, v0, v1
 
-    .line 2706
+    .line 2760
     aget p1, v0, v2
 
     add-int/2addr p1, v2
@@ -855,7 +852,7 @@
     :cond_0
     if-ne p1, v2, :cond_1
 
-    .line 2707
+    .line 2761
     iget-object p1, p0, Lcom/miui/home/launcher/CellLayout;->mDstPos:[I
 
     aget v0, p1, v1
@@ -864,10 +861,10 @@
 
     if-lt v0, v3, :cond_1
 
-    .line 2708
+    .line 2762
     aput v1, p1, v1
 
-    .line 2709
+    .line 2763
     aget v0, p1, v2
 
     add-int/2addr v0, v2
@@ -882,7 +879,7 @@
 .method private calculateCellBackgroundAlpha(Lcom/miui/home/launcher/DragObject;)I
     .locals 0
 
-    .line 2033
+    .line 2108
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->isDragingOneObjectWhichOccupiedCellMoreThan1X1()Z
 
     move-result p1
@@ -902,23 +899,23 @@
 .method private calculatePushDistance(Lcom/miui/home/launcher/CellLayout$ItemArea;Landroid/graphics/Rect;I)I
     .locals 3
 
-    .line 1720
+    .line 1799
     iget v0, p1, Lcom/miui/home/launcher/CellLayout$ItemArea;->mCellX:I
 
-    .line 1721
+    .line 1800
     iget v1, p1, Lcom/miui/home/launcher/CellLayout$ItemArea;->mCellY:I
 
-    .line 1722
+    .line 1801
     iget v2, p1, Lcom/miui/home/launcher/CellLayout$ItemArea;->mSpanX:I
 
-    .line 1723
+    .line 1802
     iget p1, p1, Lcom/miui/home/launcher/CellLayout$ItemArea;->mSpanY:I
 
     if-nez p3, :cond_0
 
     add-int/2addr v0, v2
 
-    .line 1726
+    .line 1805
     iget p1, p2, Landroid/graphics/Rect;->left:I
 
     sub-int/2addr v0, p1
@@ -930,7 +927,7 @@
 
     if-ne p3, v2, :cond_1
 
-    .line 1728
+    .line 1807
     iget p1, p2, Landroid/graphics/Rect;->right:I
 
     sub-int v0, p1, v0
@@ -944,14 +941,14 @@
 
     add-int/2addr v1, p1
 
-    .line 1730
+    .line 1809
     iget p1, p2, Landroid/graphics/Rect;->top:I
 
     sub-int v0, v1, p1
 
     goto :goto_0
 
-    .line 1732
+    .line 1811
     :cond_2
     iget p1, p2, Landroid/graphics/Rect;->bottom:I
 
@@ -971,6 +968,114 @@
     add-int/2addr p1, p0
 
     return p1
+.end method
+
+.method private calculateXsAndYs()V
+    .locals 14
+
+    .line 692
+    iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mXs:[I
+
+    if-eqz v0, :cond_3
+
+    iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mYs:[I
+
+    if-nez v0, :cond_0
+
+    goto :goto_2
+
+    .line 695
+    :cond_0
+    iget v0, p0, Lcom/miui/home/launcher/CellLayout;->mCellPaddingLeft:I
+
+    .line 696
+    iget v1, p0, Lcom/miui/home/launcher/CellLayout;->mCellWidth:I
+
+    .line 697
+    iget v2, p0, Lcom/miui/home/launcher/CellLayout;->mWidthGap:I
+
+    .line 698
+    iget v9, p0, Lcom/miui/home/launcher/CellLayout;->mCellPaddingTop:I
+
+    .line 699
+    invoke-direct {p0}, Lcom/miui/home/launcher/CellLayout;->getPaddingTopDelta()I
+
+    move-result v10
+
+    .line 700
+    iget v11, p0, Lcom/miui/home/launcher/CellLayout;->mCellHeight:I
+
+    .line 701
+    iget v12, p0, Lcom/miui/home/launcher/CellLayout;->mHeightGap:I
+
+    .line 702
+    invoke-direct {p0}, Lcom/miui/home/launcher/CellLayout;->getHeightGapDelta()I
+
+    move-result v13
+
+    const/4 v3, 0x0
+
+    move v4, v3
+
+    .line 703
+    :goto_0
+    iget-object v5, p0, Lcom/miui/home/launcher/CellLayout;->mXs:[I
+
+    array-length v6, v5
+
+    if-ge v4, v6, :cond_1
+
+    .line 704
+    invoke-static {v4, v0, v1, v2}, Lcom/miui/home/launcher/CellLayout;->calculateX(IIII)I
+
+    move-result v6
+
+    aput v6, v5, v4
+
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    move v0, v3
+
+    .line 706
+    :goto_1
+    iget-object v1, p0, Lcom/miui/home/launcher/CellLayout;->mYs:[I
+
+    array-length v2, v1
+
+    if-ge v0, v2, :cond_2
+
+    move v3, v0
+
+    move v4, v9
+
+    move v5, v10
+
+    move v6, v11
+
+    move v7, v12
+
+    move v8, v13
+
+    .line 707
+    invoke-static/range {v3 .. v8}, Lcom/miui/home/launcher/CellLayout;->calculateY(IIIIII)I
+
+    move-result v2
+
+    aput v2, v1, v0
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_1
+
+    :cond_2
+    return-void
+
+    :cond_3
+    :goto_2
+    return-void
 .end method
 
 .method private static calculateY(IIIIII)I
@@ -997,7 +1102,7 @@
 .method private cellToPositionIndex(II)I
     .locals 1
 
-    .line 2436
+    .line 2511
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isLayoutRtl()Z
 
     move-result v0
@@ -1023,7 +1128,7 @@
 .method private cellToPositionIndexIgnoreRTL(II)I
     .locals 1
 
-    .line 2440
+    .line 2515
     iget v0, p0, Lcom/miui/home/launcher/CellLayout;->mHCells:I
 
     mul-int/2addr p2, v0
@@ -1044,7 +1149,7 @@
 
     move p4, p2
 
-    .line 1463
+    .line 1542
     :goto_0
     iget v0, p0, Lcom/miui/home/launcher/CellLayout;->mTotalCells:I
 
@@ -1052,12 +1157,12 @@
 
     if-ge p2, v0, :cond_1
 
-    .line 1464
+    .line 1543
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mCellXY:[I
 
     invoke-virtual {p0, p2, v0}, Lcom/miui/home/launcher/CellLayout;->positionIndexToCell(I[I)V
 
-    .line 1465
+    .line 1544
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
     iget-object v2, p0, Lcom/miui/home/launcher/CellLayout;->mCellXY:[I
@@ -1097,7 +1202,7 @@
 
     move v2, v1
 
-    .line 2021
+    .line 2096
     :goto_0
     iget v3, p0, Lcom/miui/home/launcher/CellLayout;->mVCells:I
 
@@ -1107,13 +1212,13 @@
 
     move v2, v0
 
-    .line 2022
+    .line 2097
     :goto_1
     iget v4, p0, Lcom/miui/home/launcher/CellLayout;->mHCells:I
 
     if-ge v2, v4, :cond_1
 
-    .line 2023
+    .line 2098
     aget-object v4, p2, v2
 
     aget-object v4, v4, v1
@@ -1124,7 +1229,7 @@
 
     if-eq v4, v5, :cond_0
 
-    .line 2024
+    .line 2099
     aget-object v3, p2, v2
 
     aget-object v4, p1, v2
@@ -1169,7 +1274,7 @@
         }
     .end annotation
 
-    .line 1420
+    .line 1499
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mCellXY:[I
 
     const/4 v1, 0x0
@@ -1181,7 +1286,7 @@
     :goto_0
     if-eqz p1, :cond_0
 
-    .line 1421
+    .line 1500
     iget v4, p0, Lcom/miui/home/launcher/CellLayout;->mTotalCells:I
 
     if-ge p2, v4, :cond_4
@@ -1191,11 +1296,11 @@
     :cond_0
     if-ltz p2, :cond_4
 
-    .line 1422
+    .line 1501
     :goto_1
     invoke-direct {p0, p2, v0}, Lcom/miui/home/launcher/CellLayout;->positionIndexToCellIgnoreRTL(I[I)V
 
-    .line 1423
+    .line 1502
     iget-object v4, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
     aget v5, v0, v1
@@ -1234,7 +1339,7 @@
     :cond_4
     move p2, v3
 
-    .line 1430
+    .line 1509
     :goto_2
     new-instance p1, Landroid/util/Pair;
 
@@ -1264,7 +1369,7 @@
         }
     .end annotation
 
-    .line 1809
+    .line 1888
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/CellLayout;->getChildInfo(Landroid/view/View;)Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object p1
@@ -1273,7 +1378,7 @@
 
     goto/16 :goto_4
 
-    .line 1839
+    .line 1918
     :pswitch_0
     iget p2, p1, Lcom/miui/home/launcher/ItemInfo;->cellY:I
 
@@ -1281,14 +1386,14 @@
 
     add-int/2addr p2, v0
 
-    .line 1840
+    .line 1919
     iget v0, p0, Lcom/miui/home/launcher/CellLayout;->mVCells:I
 
     if-lt p2, v0, :cond_0
 
     return-void
 
-    .line 1841
+    .line 1920
     :cond_0
     iget v0, p1, Lcom/miui/home/launcher/ItemInfo;->cellX:I
 
@@ -1301,7 +1406,7 @@
 
     if-ge v0, v1, :cond_8
 
-    .line 1842
+    .line 1921
     iget-object v1, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
     aget-object v2, v1, v0
@@ -1320,7 +1425,7 @@
 
     if-nez v1, :cond_1
 
-    .line 1843
+    .line 1922
     iget-object v1, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
     aget-object v1, v1, v0
@@ -1334,7 +1439,7 @@
 
     goto :goto_0
 
-    .line 1821
+    .line 1900
     :pswitch_1
     iget p2, p1, Lcom/miui/home/launcher/ItemInfo;->cellX:I
 
@@ -1342,14 +1447,14 @@
 
     add-int/2addr p2, v0
 
-    .line 1822
+    .line 1901
     iget v0, p0, Lcom/miui/home/launcher/CellLayout;->mHCells:I
 
     if-lt p2, v0, :cond_2
 
     return-void
 
-    .line 1823
+    .line 1902
     :cond_2
     iget v0, p1, Lcom/miui/home/launcher/ItemInfo;->cellY:I
 
@@ -1362,7 +1467,7 @@
 
     if-ge v0, v1, :cond_8
 
-    .line 1824
+    .line 1903
     iget-object v1, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
     aget-object v2, v1, p2
@@ -1381,7 +1486,7 @@
 
     if-nez v1, :cond_3
 
-    .line 1825
+    .line 1904
     iget-object v1, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
     aget-object v1, v1, p2
@@ -1395,7 +1500,7 @@
 
     goto :goto_1
 
-    .line 1830
+    .line 1909
     :pswitch_2
     iget p2, p1, Lcom/miui/home/launcher/ItemInfo;->cellY:I
 
@@ -1405,7 +1510,7 @@
 
     return-void
 
-    .line 1832
+    .line 1911
     :cond_4
     iget v0, p1, Lcom/miui/home/launcher/ItemInfo;->cellX:I
 
@@ -1418,7 +1523,7 @@
 
     if-ge v0, v1, :cond_8
 
-    .line 1833
+    .line 1912
     iget-object v1, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
     aget-object v2, v1, v0
@@ -1437,7 +1542,7 @@
 
     if-nez v1, :cond_5
 
-    .line 1834
+    .line 1913
     iget-object v1, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
     aget-object v1, v1, v0
@@ -1451,7 +1556,7 @@
 
     goto :goto_2
 
-    .line 1812
+    .line 1891
     :pswitch_3
     iget p2, p1, Lcom/miui/home/launcher/ItemInfo;->cellX:I
 
@@ -1461,7 +1566,7 @@
 
     return-void
 
-    .line 1814
+    .line 1893
     :cond_6
     iget v0, p1, Lcom/miui/home/launcher/ItemInfo;->cellY:I
 
@@ -1474,7 +1579,7 @@
 
     if-ge v0, v1, :cond_8
 
-    .line 1815
+    .line 1894
     iget-object v1, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
     aget-object v2, v1, p2
@@ -1493,7 +1598,7 @@
 
     if-nez v1, :cond_7
 
-    .line 1816
+    .line 1895
     iget-object v1, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
     aget-object v1, v1, p2
@@ -1523,7 +1628,7 @@
 .method private getChildInfo(Landroid/view/View;)Lcom/miui/home/launcher/ItemInfo;
     .locals 0
 
-    .line 217
+    .line 211
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object p1
@@ -1536,7 +1641,7 @@
 .method private getEffectedArea(Lcom/miui/home/launcher/CellLayout$ItemArea;)Lcom/miui/home/launcher/CellLayout$ItemArea;
     .locals 7
 
-    .line 1567
+    .line 1646
     new-instance v6, Lcom/miui/home/launcher/CellLayout$ItemArea;
 
     const/4 v2, -0x1
@@ -1553,10 +1658,10 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/miui/home/launcher/CellLayout$ItemArea;-><init>(Lcom/miui/home/launcher/CellLayout;IIII)V
 
-    .line 1568
-    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$CellLayout$OxePxCtMy_7ILvjd-8BCz9F7CSA;
+    .line 1647
+    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$CellLayout$UIVXQtRIHtVYphgq2IMss2qPpVk;
 
-    invoke-direct {v0, p0, v6}, Lcom/miui/home/launcher/-$$Lambda$CellLayout$OxePxCtMy_7ILvjd-8BCz9F7CSA;-><init>(Lcom/miui/home/launcher/CellLayout;Lcom/miui/home/launcher/CellLayout$ItemArea;)V
+    invoke-direct {v0, p0, v6}, Lcom/miui/home/launcher/-$$Lambda$CellLayout$UIVXQtRIHtVYphgq2IMss2qPpVk;-><init>(Lcom/miui/home/launcher/CellLayout;Lcom/miui/home/launcher/CellLayout$ItemArea;)V
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/CellLayout$ItemArea;->iterateAllViewsInArea(Ljava/util/function/Consumer;)V
 
@@ -1568,7 +1673,7 @@
 
     const/4 v0, 0x0
 
-    .line 3059
+    .line 3129
     :goto_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->getChildCount()I
 
@@ -1578,17 +1683,17 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 3060
+    .line 3130
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/CellLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 3061
+    .line 3131
     invoke-direct {p0, v1}, Lcom/miui/home/launcher/CellLayout;->getChildInfo(Landroid/view/View;)Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v3
 
-    .line 3062
+    .line 3132
     instance-of v4, v3, Lcom/miui/home/launcher/FolderInfo;
 
     if-nez v4, :cond_0
@@ -1615,7 +1720,7 @@
 .method private getHeightGapDelta()I
     .locals 1
 
-    .line 2544
+    .line 2619
     iget v0, p0, Lcom/miui/home/launcher/CellLayout;->mNotchEditModeGapDelta:I
 
     return v0
@@ -1624,7 +1729,7 @@
 .method private getMaxIndex()I
     .locals 2
 
-    .line 877
+    .line 965
     iget v0, p0, Lcom/miui/home/launcher/CellLayout;->mVCells:I
 
     iget v1, p0, Lcom/miui/home/launcher/CellLayout;->mHCells:I
@@ -1636,10 +1741,19 @@
     return v0
 .end method
 
+.method private getPaddingTopDelta()I
+    .locals 1
+
+    .line 2615
+    iget v0, p0, Lcom/miui/home/launcher/CellLayout;->mNotchEditModePaddingTopDelta:I
+
+    return v0
+.end method
+
 .method private getPushDirections()[I
     .locals 2
 
-    .line 1547
+    .line 1626
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mLastDragPos:Lcom/miui/home/launcher/CellLayout$DragPos;
 
     iget v0, v0, Lcom/miui/home/launcher/CellLayout$DragPos;->stayType:I
@@ -1648,7 +1762,7 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 1561
+    .line 1640
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "not support other stay type"
@@ -1657,7 +1771,7 @@
 
     throw v0
 
-    .line 1558
+    .line 1637
     :pswitch_0
     new-array v0, v1, [I
 
@@ -1665,7 +1779,7 @@
 
     goto :goto_0
 
-    .line 1552
+    .line 1631
     :pswitch_1
     new-array v0, v1, [I
 
@@ -1673,7 +1787,7 @@
 
     goto :goto_0
 
-    .line 1549
+    .line 1628
     :pswitch_2
     new-array v0, v1, [I
 
@@ -1681,7 +1795,7 @@
 
     goto :goto_0
 
-    .line 1555
+    .line 1634
     :pswitch_3
     new-array v0, v1, [I
 
@@ -1744,7 +1858,7 @@
 
     const/4 v0, 0x0
 
-    .line 313
+    .line 306
     :goto_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->getChildCount()I
 
@@ -1752,7 +1866,7 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 314
+    .line 307
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/CellLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
@@ -1761,7 +1875,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 315
+    .line 308
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/CellLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
@@ -1792,7 +1906,7 @@
 
     const/4 v0, 0x0
 
-    .line 305
+    .line 298
     :goto_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->getChildCount()I
 
@@ -1800,7 +1914,7 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 306
+    .line 299
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/CellLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
@@ -1809,7 +1923,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 307
+    .line 300
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/CellLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
@@ -1837,7 +1951,7 @@
     :goto_0
     if-ltz p1, :cond_1
 
-    .line 1347
+    .line 1426
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/CellLayout;->isCellVacant(I)Z
 
     move-result v1
@@ -1860,13 +1974,13 @@
 .method private isCellVacant(I)Z
     .locals 3
 
-    .line 1355
+    .line 1434
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mTmpXY:[I
 
-    .line 1356
+    .line 1435
     invoke-virtual {p0, p1, v0}, Lcom/miui/home/launcher/CellLayout;->positionIndexToCell(I[I)V
 
-    .line 1357
+    .line 1436
     iget-object p1, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
     const/4 v1, 0x0
@@ -1889,45 +2003,10 @@
     return v1
 .end method
 
-.method private isItemPosEmpty(II)Z
-    .locals 1
-
-    if-ltz p1, :cond_0
-
-    if-ltz p2, :cond_0
-
-    .line 1917
-    iget v0, p0, Lcom/miui/home/launcher/CellLayout;->mHCells:I
-
-    if-ge p1, v0, :cond_0
-
-    iget v0, p0, Lcom/miui/home/launcher/CellLayout;->mVCells:I
-
-    if-ge p2, v0, :cond_0
-
-    iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
-
-    aget-object p1, v0, p1
-
-    aget-object p1, p1, p2
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    return p1
-.end method
-
 .method private isScreenType(I)Z
     .locals 1
 
-    .line 285
+    .line 278
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->getScreenType()I
 
     move-result v0
@@ -1945,17 +2024,17 @@
     return p1
 .end method
 
-.method public static synthetic lambda$getEffectedArea$4(Lcom/miui/home/launcher/CellLayout;Lcom/miui/home/launcher/CellLayout$ItemArea;Landroid/view/View;)V
+.method public static synthetic lambda$getEffectedArea$6(Lcom/miui/home/launcher/CellLayout;Lcom/miui/home/launcher/CellLayout$ItemArea;Landroid/view/View;)V
     .locals 4
 
     if-eqz p2, :cond_7
 
-    .line 1570
+    .line 1649
     invoke-direct {p0, p2}, Lcom/miui/home/launcher/CellLayout;->getChildInfo(Landroid/view/View;)Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object p2
 
-    .line 1571
+    .line 1650
     iget v0, p1, Lcom/miui/home/launcher/CellLayout$ItemArea;->mCellX:I
 
     const/4 v1, -0x1
@@ -1968,13 +2047,13 @@
 
     if-le v0, v2, :cond_1
 
-    .line 1572
+    .line 1651
     :cond_0
     iget v0, p2, Lcom/miui/home/launcher/ItemInfo;->cellX:I
 
     iput v0, p1, Lcom/miui/home/launcher/CellLayout$ItemArea;->mCellX:I
 
-    .line 1574
+    .line 1653
     :cond_1
     iget v0, p1, Lcom/miui/home/launcher/CellLayout$ItemArea;->mCellY:I
 
@@ -1986,13 +2065,13 @@
 
     if-le v0, v2, :cond_3
 
-    .line 1575
+    .line 1654
     :cond_2
     iget v0, p2, Lcom/miui/home/launcher/ItemInfo;->cellY:I
 
     iput v0, p1, Lcom/miui/home/launcher/CellLayout$ItemArea;->mCellY:I
 
-    .line 1577
+    .line 1656
     :cond_3
     iget v0, p1, Lcom/miui/home/launcher/CellLayout$ItemArea;->mSpanX:I
 
@@ -2012,7 +2091,7 @@
 
     if-ge v0, v2, :cond_5
 
-    .line 1578
+    .line 1657
     :cond_4
     iget v0, p2, Lcom/miui/home/launcher/ItemInfo;->cellX:I
 
@@ -2026,7 +2105,7 @@
 
     iput v0, p1, Lcom/miui/home/launcher/CellLayout$ItemArea;->mSpanX:I
 
-    .line 1580
+    .line 1659
     :cond_5
     iget v0, p1, Lcom/miui/home/launcher/CellLayout$ItemArea;->mSpanY:I
 
@@ -2046,7 +2125,7 @@
 
     if-ge v0, v1, :cond_7
 
-    .line 1581
+    .line 1660
     :cond_6
     iget v0, p2, Lcom/miui/home/launcher/ItemInfo;->cellY:I
 
@@ -2064,36 +2143,36 @@
     return-void
 .end method
 
-.method public static synthetic lambda$moveEffectedArea$5(Lcom/miui/home/launcher/CellLayout;Ljava/util/ArrayList;Landroid/view/View;)V
+.method public static synthetic lambda$moveEffectedArea$7(Lcom/miui/home/launcher/CellLayout;Ljava/util/ArrayList;Landroid/view/View;)V
     .locals 1
 
     if-eqz p2, :cond_0
 
-    .line 1618
+    .line 1697
     invoke-virtual {p1, p2}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 1619
+    .line 1698
     invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     const/4 p1, 0x1
 
-    .line 1620
+    .line 1699
     invoke-virtual {p0, p2, p1}, Lcom/miui/home/launcher/CellLayout;->updateCellOccupiedMarks(Landroid/view/View;Z)V
 
     :cond_0
     return-void
 .end method
 
-.method public static synthetic lambda$pushItemsInDistance$3(Lcom/miui/home/launcher/CellLayout;IILandroid/view/View;)Z
+.method public static synthetic lambda$pushItemsInDistance$5(Lcom/miui/home/launcher/CellLayout;IILandroid/view/View;)Z
     .locals 0
 
     if-eqz p3, :cond_0
 
-    .line 1542
+    .line 1621
     invoke-direct {p0, p3, p1, p2}, Lcom/miui/home/launcher/CellLayout;->pushViewInDistance(Landroid/view/View;II)Z
 
     move-result p1
@@ -2114,16 +2193,89 @@
 .method static synthetic lambda$quickShowOrHideAllShortcutsCheckBox$2(ZLcom/miui/home/launcher/ShortcutIcon;)V
     .locals 0
 
-    .line 301
+    .line 294
     invoke-virtual {p1, p0}, Lcom/miui/home/launcher/ShortcutIcon;->quickHideOrShowCheckbox(Z)V
 
     return-void
 .end method
 
-.method public static synthetic lambda$setCellBackgroundImage$6(Lcom/miui/home/launcher/CellLayout;Lcom/miui/home/launcher/DragObject;Ljava/lang/Boolean;)V
+.method static synthetic lambda$setAndDoEditModeAnimation$3(FFLandroid/view/View;FIFIF)V
+    .locals 0
+
+    div-float/2addr p0, p1
+
+    const/high16 p1, 0x3f800000    # 1.0f
+
+    sub-float/2addr p0, p1
+
+    mul-float/2addr p0, p7
+
+    add-float/2addr p0, p1
+
+    .line 353
+    invoke-virtual {p2, p0}, Landroid/view/View;->setScaleX(F)V
+
+    .line 354
+    invoke-virtual {p2, p0}, Landroid/view/View;->setScaleY(F)V
+
+    int-to-float p0, p4
+
+    add-float/2addr p3, p0
+
+    mul-float/2addr p3, p7
+
+    sub-float/2addr p3, p0
+
+    .line 355
+    invoke-virtual {p2, p3}, Landroid/view/View;->setTranslationX(F)V
+
+    int-to-float p0, p6
+
+    add-float/2addr p5, p0
+
+    mul-float/2addr p5, p7
+
+    sub-float/2addr p5, p0
+
+    .line 356
+    invoke-virtual {p2, p5}, Landroid/view/View;->setTranslationY(F)V
+
+    return-void
+.end method
+
+.method public static synthetic lambda$setAndDoEditModeAnimation$4(Lcom/miui/home/launcher/CellLayout;F)V
+    .locals 2
+
+    .line 406
+    invoke-static {}, Lcom/miui/home/launcher/Workspace;->getScreenScaleRatio()F
+
+    move-result v0
+
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    sub-float/2addr v1, v0
+
+    mul-float/2addr v1, p1
+
+    invoke-static {}, Lcom/miui/home/launcher/Workspace;->getScreenScaleRatio()F
+
+    move-result p1
+
+    add-float/2addr v1, p1
+
+    .line 407
+    invoke-virtual {p0, v1}, Lcom/miui/home/launcher/CellLayout;->setScaleX(F)V
+
+    .line 408
+    invoke-virtual {p0, v1}, Lcom/miui/home/launcher/CellLayout;->setScaleY(F)V
+
+    return-void
+.end method
+
+.method public static synthetic lambda$setCellBackgroundImage$8(Lcom/miui/home/launcher/CellLayout;Lcom/miui/home/launcher/DragObject;Ljava/lang/Boolean;)V
     .locals 1
 
-    .line 2078
+    .line 2153
     iget-object p2, p0, Lcom/miui/home/launcher/CellLayout;->mCellBackground:Lcom/miui/home/launcher/CellBackground;
 
     invoke-virtual {p2}, Lcom/miui/home/launcher/CellBackground;->getParent()Landroid/view/ViewParent;
@@ -2132,14 +2284,14 @@
 
     if-ne p2, p0, :cond_1
 
-    .line 2079
+    .line 2154
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getOutline()Landroid/graphics/Bitmap;
 
     move-result-object p2
 
     if-eqz p2, :cond_0
 
-    .line 2080
+    .line 2155
     iget-object p2, p0, Lcom/miui/home/launcher/CellLayout;->mCellBackground:Lcom/miui/home/launcher/CellBackground;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getOutline()Landroid/graphics/Bitmap;
@@ -2148,7 +2300,7 @@
 
     invoke-virtual {p2, v0}, Lcom/miui/home/launcher/CellBackground;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 2081
+    .line 2156
     iget-object p2, p0, Lcom/miui/home/launcher/CellLayout;->mCellBackground:Lcom/miui/home/launcher/CellBackground;
 
     sget-object v0, Landroid/widget/ImageView$ScaleType;->MATRIX:Landroid/widget/ImageView$ScaleType;
@@ -2157,7 +2309,7 @@
 
     goto :goto_0
 
-    .line 2083
+    .line 2158
     :cond_0
     iget-object p2, p0, Lcom/miui/home/launcher/CellLayout;->mCellBackground:Lcom/miui/home/launcher/CellBackground;
 
@@ -2165,14 +2317,14 @@
 
     invoke-virtual {p2, v0}, Lcom/miui/home/launcher/CellBackground;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 2084
+    .line 2159
     iget-object p2, p0, Lcom/miui/home/launcher/CellLayout;->mCellBackground:Lcom/miui/home/launcher/CellBackground;
 
     sget-object v0, Landroid/widget/ImageView$ScaleType;->FIT_XY:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {p2, v0}, Lcom/miui/home/launcher/CellBackground;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 2086
+    .line 2161
     :goto_0
     iget-object p2, p0, Lcom/miui/home/launcher/CellLayout;->mCellBackground:Lcom/miui/home/launcher/CellBackground;
 
@@ -2191,7 +2343,7 @@
 
     const/4 v0, 0x0
 
-    .line 294
+    .line 287
     invoke-interface {p1, p0, v0}, Lcom/miui/home/launcher/interfaces/IEditable;->setEditMode(ZZ)V
 
     return-void
@@ -2202,7 +2354,7 @@
 
     const/4 v0, 0x1
 
-    .line 296
+    .line 289
     invoke-interface {p1, p0, v0}, Lcom/miui/home/launcher/interfaces/IEditable;->setEditMode(ZZ)V
 
     return-void
@@ -2211,24 +2363,24 @@
 .method private loadGridConfig()V
     .locals 4
 
-    .line 221
+    .line 215
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
-    .line 222
+    .line 216
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountX()I
 
     move-result v1
 
     iput v1, p0, Lcom/miui/home/launcher/CellLayout;->mHCells:I
 
-    .line 223
+    .line 217
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountY()I
 
     move-result v1
 
     iput v1, p0, Lcom/miui/home/launcher/CellLayout;->mVCells:I
 
-    .line 224
+    .line 218
     iget-object v1, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
     if-eqz v1, :cond_0
@@ -2249,7 +2401,7 @@
 
     if-eq v1, v2, :cond_1
 
-    .line 226
+    .line 220
     :cond_0
     iget v1, p0, Lcom/miui/home/launcher/CellLayout;->mHCells:I
 
@@ -2269,7 +2421,7 @@
 
     iput-object v1, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
-    .line 228
+    .line 222
     :cond_1
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellWidth()I
 
@@ -2277,14 +2429,14 @@
 
     iput v1, p0, Lcom/miui/home/launcher/CellLayout;->mCellWidth:I
 
-    .line 229
+    .line 223
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellHeight()I
 
     move-result v1
 
     iput v1, p0, Lcom/miui/home/launcher/CellLayout;->mCellHeight:I
 
-    .line 231
+    .line 225
     iget v1, p0, Lcom/miui/home/launcher/CellLayout;->mHCells:I
 
     iget v2, p0, Lcom/miui/home/launcher/CellLayout;->mVCells:I
@@ -2303,7 +2455,7 @@
 
     iput-object v1, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCellBak:[[Landroid/view/View;
 
-    .line 232
+    .line 226
     iget v1, p0, Lcom/miui/home/launcher/CellLayout;->mCellWidth:I
 
     int-to-float v1, v1
@@ -2322,7 +2474,7 @@
 
     if-nez v0, :cond_2
 
-    .line 234
+    .line 228
     iget v0, p0, Lcom/miui/home/launcher/CellLayout;->mHCells:I
 
     iget v1, p0, Lcom/miui/home/launcher/CellLayout;->mVCells:I
@@ -2331,7 +2483,7 @@
 
     iput v0, p0, Lcom/miui/home/launcher/CellLayout;->mTotalCells:I
 
-    .line 236
+    .line 230
     :cond_2
     iget v0, p0, Lcom/miui/home/launcher/CellLayout;->mHCells:I
 
@@ -2339,14 +2491,14 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mXs:[I
 
-    .line 237
+    .line 231
     iget v0, p0, Lcom/miui/home/launcher/CellLayout;->mVCells:I
 
     new-array v0, v0, [I
 
     iput-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mYs:[I
 
-    .line 238
+    .line 232
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->getChildCount()I
 
     move-result v0
@@ -2358,17 +2510,17 @@
     :goto_0
     if-ltz v0, :cond_4
 
-    .line 239
+    .line 233
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/CellLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 240
+    .line 234
     instance-of v3, v2, Lcom/miui/home/launcher/AutoLayoutAnimation$HostView;
 
     if-eqz v3, :cond_3
 
-    .line 241
+    .line 235
     check-cast v2, Lcom/miui/home/launcher/AutoLayoutAnimation$HostView;
 
     invoke-interface {v2, v1}, Lcom/miui/home/launcher/AutoLayoutAnimation$HostView;->setSkipNextAutoLayoutAnimation(Z)V
@@ -2378,11 +2530,8 @@
 
     goto :goto_0
 
-    .line 244
+    .line 238
     :cond_4
-    invoke-direct {p0}, Lcom/miui/home/launcher/CellLayout;->updateCellContainerHeight()V
-
-    .line 245
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->requestLayout()V
 
     return-void
@@ -2404,7 +2553,7 @@
     :cond_0
     move p4, v1
 
-    .line 1366
+    .line 1445
     :goto_0
     invoke-direct {p0, p2, p3}, Lcom/miui/home/launcher/CellLayout;->cellToPositionIndexIgnoreRTL(II)I
 
@@ -2432,7 +2581,7 @@
     :goto_2
     if-eqz p4, :cond_6
 
-    .line 1370
+    .line 1449
     iget-boolean p4, p0, Lcom/miui/home/launcher/CellLayout;->mIsNoVacantMode:Z
 
     if-eqz p4, :cond_4
@@ -2452,14 +2601,14 @@
 
     goto :goto_4
 
-    .line 1371
+    .line 1450
     :cond_4
     :goto_3
     invoke-direct {p0, v2, p1}, Lcom/miui/home/launcher/CellLayout;->searchRight(II)Landroid/util/Pair;
 
     move-result-object p2
 
-    .line 1372
+    .line 1451
     iget-object p4, p2, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast p4, Ljava/lang/Integer;
@@ -2468,7 +2617,7 @@
 
     move-result p4
 
-    .line 1373
+    .line 1452
     iget-object p2, p2, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast p2, Ljava/lang/Integer;
@@ -2482,12 +2631,12 @@
 
     if-ltz p3, :cond_5
 
-    .line 1376
+    .line 1455
     invoke-direct {p0, p3, p1}, Lcom/miui/home/launcher/CellLayout;->searchLeft(II)Landroid/util/Pair;
 
     move-result-object p1
 
-    .line 1377
+    .line 1456
     iget-object v3, p1, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v3, Ljava/lang/Integer;
@@ -2496,7 +2645,7 @@
 
     move-result v3
 
-    .line 1378
+    .line 1457
     iget-object p1, p1, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast p1, Ljava/lang/Integer;
@@ -2514,13 +2663,13 @@
 
     goto :goto_5
 
-    .line 1381
+    .line 1460
     :cond_6
     invoke-direct {p0, p3, p1}, Lcom/miui/home/launcher/CellLayout;->searchLeft(II)Landroid/util/Pair;
 
     move-result-object p4
 
-    .line 1382
+    .line 1461
     iget-object v3, p4, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v3, Ljava/lang/Integer;
@@ -2529,7 +2678,7 @@
 
     move-result v3
 
-    .line 1383
+    .line 1462
     iget-object p4, p4, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast p4, Ljava/lang/Integer;
@@ -2540,17 +2689,17 @@
 
     if-ge p4, p1, :cond_7
 
-    .line 1384
+    .line 1463
     iget v4, p0, Lcom/miui/home/launcher/CellLayout;->mTotalCells:I
 
     if-gt v2, v4, :cond_7
 
-    .line 1385
+    .line 1464
     invoke-direct {p0, p2, p1}, Lcom/miui/home/launcher/CellLayout;->searchRight(II)Landroid/util/Pair;
 
     move-result-object p1
 
-    .line 1386
+    .line 1465
     iget-object p2, p1, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast p2, Ljava/lang/Integer;
@@ -2559,7 +2708,7 @@
 
     move-result p2
 
-    .line 1387
+    .line 1466
     iget-object p1, p1, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast p1, Ljava/lang/Integer;
@@ -2588,7 +2737,7 @@
     :goto_5
     if-lez p2, :cond_8
 
-    .line 1392
+    .line 1471
     invoke-direct {p0, p4, v1, v2}, Lcom/miui/home/launcher/CellLayout;->squeezePosition(IZI)Z
 
     move-result p2
@@ -2598,7 +2747,7 @@
     :cond_8
     if-lez p1, :cond_9
 
-    .line 1395
+    .line 1474
     invoke-direct {p0, v3, v0, p3}, Lcom/miui/home/launcher/CellLayout;->squeezePosition(IZI)Z
 
     move-result p1
@@ -2608,14 +2757,14 @@
     :cond_9
     if-eqz v1, :cond_a
 
-    .line 1398
+    .line 1477
     invoke-static {}, Lcom/miui/home/launcher/common/HapticFeedbackCompat;->getInstance()Lcom/miui/home/launcher/common/HapticFeedbackCompat;
 
     move-result-object p1
 
     invoke-virtual {p1, p0}, Lcom/miui/home/launcher/common/HapticFeedbackCompat;->performMeshNormal(Landroid/view/View;)V
 
-    .line 1400
+    .line 1479
     :cond_a
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->relayoutByOccupiedCells()V
 
@@ -2639,7 +2788,7 @@
 
     if-ltz v2, :cond_7
 
-    .line 1658
+    .line 1737
     invoke-direct/range {p0 .. p4}, Lcom/miui/home/launcher/CellLayout;->checkEmptyAreaSize(IIII)Z
 
     move-result v0
@@ -2648,7 +2797,7 @@
 
     goto/16 :goto_4
 
-    .line 1661
+    .line 1740
     :cond_0
     new-instance v0, Landroid/graphics/Rect;
 
@@ -2658,17 +2807,17 @@
 
     invoke-direct {v0, v1, v2, v5, v7}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 1662
+    .line 1741
     new-instance v8, Lcom/miui/home/launcher/CellLayout$ViewConfiguration;
 
     const/4 v9, 0x0
 
     invoke-direct {v8, v6, v9}, Lcom/miui/home/launcher/CellLayout$ViewConfiguration;-><init>(Lcom/miui/home/launcher/CellLayout;Lcom/miui/home/launcher/CellLayout$1;)V
 
-    .line 1663
+    .line 1742
     invoke-virtual {v6, v8}, Lcom/miui/home/launcher/CellLayout;->saveCurrentConfiguration(Lcom/miui/home/launcher/CellLayout$ViewConfiguration;)V
 
-    .line 1665
+    .line 1744
     iget v9, v6, Lcom/miui/home/launcher/CellLayout;->mHCells:I
 
     iget v10, v6, Lcom/miui/home/launcher/CellLayout;->mVCells:I
@@ -2685,12 +2834,12 @@
 
     check-cast v9, [[Landroid/view/View;
 
-    .line 1666
+    .line 1745
     iget-object v10, v6, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
     invoke-direct {v6, v10, v9}, Lcom/miui/home/launcher/CellLayout;->copyOccupiedCells([[Landroid/view/View;[[Landroid/view/View;)Z
 
-    .line 1667
+    .line 1746
     new-instance v10, Ljava/util/ArrayList;
 
     invoke-direct {v10}, Ljava/util/ArrayList;-><init>()V
@@ -2707,7 +2856,7 @@
     :goto_1
     if-ge v14, v5, :cond_2
 
-    .line 1670
+    .line 1749
     iget-object v15, v6, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
     aget-object v15, v15, v14
@@ -2718,7 +2867,7 @@
 
     const/4 v13, 0x2
 
-    .line 1672
+    .line 1751
     invoke-direct {v6, v15, v0, v13}, Lcom/miui/home/launcher/CellLayout;->pushView(Landroid/view/View;Landroid/graphics/Rect;I)Z
 
     move-result v13
@@ -2727,14 +2876,14 @@
 
     const/4 v13, 0x3
 
-    .line 1673
+    .line 1752
     invoke-direct {v6, v15, v0, v13}, Lcom/miui/home/launcher/CellLayout;->pushView(Landroid/view/View;Landroid/graphics/Rect;I)Z
 
     move-result v13
 
     if-nez v13, :cond_1
 
-    .line 1674
+    .line 1753
     invoke-direct {v6, v15, v0, v12}, Lcom/miui/home/launcher/CellLayout;->pushView(Landroid/view/View;Landroid/graphics/Rect;I)Z
 
     move-result v13
@@ -2743,17 +2892,17 @@
 
     const/4 v13, 0x1
 
-    .line 1675
+    .line 1754
     invoke-direct {v6, v15, v0, v13}, Lcom/miui/home/launcher/CellLayout;->pushView(Landroid/view/View;Landroid/graphics/Rect;I)Z
 
     move-result v16
 
     if-nez v16, :cond_1
 
-    .line 1677
+    .line 1756
     invoke-virtual {v10, v15}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1678
+    .line 1757
     invoke-virtual {v6, v15, v13}, Lcom/miui/home/launcher/CellLayout;->updateCellOccupiedMarks(Landroid/view/View;Z)V
 
     :cond_1
@@ -2766,36 +2915,36 @@
 
     goto :goto_0
 
-    .line 1684
+    .line 1763
     :cond_3
     new-instance v0, Lcom/miui/home/launcher/ItemInfo;
 
     invoke-direct {v0, v1, v2, v3, v4}, Lcom/miui/home/launcher/ItemInfo;-><init>(IIII)V
 
-    .line 1685
+    .line 1764
     iget-object v5, v6, Lcom/miui/home/launcher/CellLayout;->mCellBackground:Lcom/miui/home/launcher/CellBackground;
 
     const/4 v7, 0x1
 
     invoke-virtual {v6, v5, v0, v12, v7}, Lcom/miui/home/launcher/CellLayout;->updateCellOccupiedMarks(Landroid/view/View;Lcom/miui/home/launcher/ItemInfo;ZZ)V
 
-    .line 1687
+    .line 1766
     iget-object v5, v8, Lcom/miui/home/launcher/CellLayout$ViewConfiguration;->comparator:Lcom/miui/home/launcher/CellLayout$ViewConfiguration$SpanComparator;
 
-    .line 1688
+    .line 1767
     iput v12, v5, Lcom/miui/home/launcher/CellLayout$ViewConfiguration$SpanComparator;->whichDirection:I
 
-    .line 1689
+    .line 1768
     invoke-static {v10, v5}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    .line 1690
+    .line 1769
     invoke-virtual {v10}, Ljava/util/ArrayList;->size()I
 
     move-result v5
 
     if-lez v5, :cond_5
 
-    .line 1691
+    .line 1770
     invoke-virtual {v10}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
@@ -2813,12 +2962,12 @@
 
     check-cast v7, Landroid/view/View;
 
-    .line 1692
+    .line 1771
     invoke-direct {v6, v7}, Lcom/miui/home/launcher/CellLayout;->getChildInfo(Landroid/view/View;)Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v10
 
-    .line 1693
+    .line 1772
     iget v11, v10, Lcom/miui/home/launcher/ItemInfo;->cellX:I
 
     iget v13, v10, Lcom/miui/home/launcher/ItemInfo;->cellY:I
@@ -2835,31 +2984,31 @@
 
     const/4 v13, 0x1
 
-    .line 1695
+    .line 1774
     invoke-virtual {v6, v7, v13}, Lcom/miui/home/launcher/CellLayout;->updateCellOccupiedMarks(Landroid/view/View;Z)V
 
-    .line 1696
+    .line 1775
     aget v14, v11, v12
 
     iput v14, v10, Lcom/miui/home/launcher/ItemInfo;->cellX:I
 
-    .line 1697
+    .line 1776
     aget v11, v11, v13
 
     iput v11, v10, Lcom/miui/home/launcher/ItemInfo;->cellY:I
 
-    .line 1698
+    .line 1777
     invoke-virtual {v6, v7, v12}, Lcom/miui/home/launcher/CellLayout;->updateCellOccupiedMarks(Landroid/view/View;Z)V
 
     goto :goto_2
 
-    .line 1701
+    .line 1780
     :cond_4
     iget-object v5, v6, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
     invoke-direct {v6, v9, v5}, Lcom/miui/home/launcher/CellLayout;->copyOccupiedCells([[Landroid/view/View;[[Landroid/view/View;)Z
 
-    .line 1702
+    .line 1781
     invoke-virtual {v8}, Lcom/miui/home/launcher/CellLayout$ViewConfiguration;->resetViewConfig()V
 
     goto :goto_3
@@ -2870,7 +3019,7 @@
     :goto_3
     if-eqz v12, :cond_6
 
-    .line 1710
+    .line 1789
     iget-object v5, v6, Lcom/miui/home/launcher/CellLayout;->mCellBackground:Lcom/miui/home/launcher/CellBackground;
 
     const/4 v7, 0x1
@@ -2889,18 +3038,18 @@
 
     move-object v5, v8
 
-    .line 1716
+    .line 1795
     invoke-direct/range {v0 .. v5}, Lcom/miui/home/launcher/CellLayout;->onSuccessMoved(IIIILcom/miui/home/launcher/CellLayout$ViewConfiguration;)V
 
     return-void
 
-    .line 1712
+    .line 1791
     :cond_6
     iget-object v0, v6, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
     invoke-direct {v6, v9, v0}, Lcom/miui/home/launcher/CellLayout;->copyOccupiedCells([[Landroid/view/View;[[Landroid/view/View;)Z
 
-    .line 1713
+    .line 1792
     invoke-virtual {v8}, Lcom/miui/home/launcher/CellLayout$ViewConfiguration;->resetViewConfig()V
 
     return-void
@@ -2913,7 +3062,7 @@
 .method private makeEmptyCellsWithSpanForInnerItem(IIII)V
     .locals 9
 
-    .line 1590
+    .line 1669
     iget v0, p0, Lcom/miui/home/launcher/CellLayout;->mHCells:I
 
     iget v1, p0, Lcom/miui/home/launcher/CellLayout;->mVCells:I
@@ -2932,22 +3081,22 @@
 
     check-cast v6, [[Landroid/view/View;
 
-    .line 1591
+    .line 1670
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
     invoke-direct {p0, v0, v6}, Lcom/miui/home/launcher/CellLayout;->copyOccupiedCells([[Landroid/view/View;[[Landroid/view/View;)Z
 
-    .line 1592
+    .line 1671
     new-instance v7, Lcom/miui/home/launcher/CellLayout$ViewConfiguration;
 
     const/4 v0, 0x0
 
     invoke-direct {v7, p0, v0}, Lcom/miui/home/launcher/CellLayout$ViewConfiguration;-><init>(Lcom/miui/home/launcher/CellLayout;Lcom/miui/home/launcher/CellLayout$1;)V
 
-    .line 1593
+    .line 1672
     invoke-virtual {p0, v7}, Lcom/miui/home/launcher/CellLayout;->saveCurrentConfiguration(Lcom/miui/home/launcher/CellLayout$ViewConfiguration;)V
 
-    .line 1595
+    .line 1674
     new-instance v8, Lcom/miui/home/launcher/CellLayout$ItemArea;
 
     move-object v0, v8
@@ -2964,25 +3113,25 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/miui/home/launcher/CellLayout$ItemArea;-><init>(Lcom/miui/home/launcher/CellLayout;IIII)V
 
-    .line 1596
+    .line 1675
     invoke-direct {p0, v8}, Lcom/miui/home/launcher/CellLayout;->getEffectedArea(Lcom/miui/home/launcher/CellLayout$ItemArea;)Lcom/miui/home/launcher/CellLayout$ItemArea;
 
     move-result-object v0
 
-    .line 1598
+    .line 1677
     invoke-direct {p0}, Lcom/miui/home/launcher/CellLayout;->getPushDirections()[I
 
     move-result-object v1
 
     const/4 v2, 0x0
 
-    .line 1599
+    .line 1678
     :goto_0
     array-length v3, v1
 
     if-ge v2, v3, :cond_1
 
-    .line 1600
+    .line 1679
     aget v3, v1, v2
 
     invoke-direct {p0, v8, v0, v3}, Lcom/miui/home/launcher/CellLayout;->pushItemsInDistance(Lcom/miui/home/launcher/CellLayout$ItemArea;Lcom/miui/home/launcher/CellLayout$ItemArea;I)Z
@@ -3003,12 +3152,12 @@
 
     move-object v5, v7
 
-    .line 1601
+    .line 1680
     invoke-direct/range {v0 .. v5}, Lcom/miui/home/launcher/CellLayout;->onSuccessMoved(IIIILcom/miui/home/launcher/CellLayout$ViewConfiguration;)V
 
     return-void
 
-    .line 1604
+    .line 1683
     :cond_0
     invoke-direct {p0, v6, v7}, Lcom/miui/home/launcher/CellLayout;->resetAllItems([[Landroid/view/View;Lcom/miui/home/launcher/CellLayout$ViewConfiguration;)V
 
@@ -3016,7 +3165,7 @@
 
     goto :goto_0
 
-    .line 1608
+    .line 1687
     :cond_1
     invoke-direct {p0, v0, v8}, Lcom/miui/home/launcher/CellLayout;->moveEffectedArea(Lcom/miui/home/launcher/CellLayout$ItemArea;Lcom/miui/home/launcher/CellLayout$ItemArea;)Z
 
@@ -3036,12 +3185,12 @@
 
     move-object v5, v7
 
-    .line 1609
+    .line 1688
     invoke-direct/range {v0 .. v5}, Lcom/miui/home/launcher/CellLayout;->onSuccessMoved(IIIILcom/miui/home/launcher/CellLayout$ViewConfiguration;)V
 
     goto :goto_1
 
-    .line 1611
+    .line 1690
     :cond_2
     invoke-direct {p0, v6, v7}, Lcom/miui/home/launcher/CellLayout;->resetAllItems([[Landroid/view/View;Lcom/miui/home/launcher/CellLayout$ViewConfiguration;)V
 
@@ -3052,19 +3201,19 @@
 .method private moveEffectedArea(Lcom/miui/home/launcher/CellLayout$ItemArea;Lcom/miui/home/launcher/CellLayout$ItemArea;)Z
     .locals 12
 
-    .line 1616
+    .line 1695
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1617
-    new-instance v1, Lcom/miui/home/launcher/-$$Lambda$CellLayout$tB9IqxMe-BHE07EGgIp9o6T5tuY;
+    .line 1696
+    new-instance v1, Lcom/miui/home/launcher/-$$Lambda$CellLayout$dVYEN898RiG2ZyTSZG-mnlGUUTo;
 
-    invoke-direct {v1, p0, v0}, Lcom/miui/home/launcher/-$$Lambda$CellLayout$tB9IqxMe-BHE07EGgIp9o6T5tuY;-><init>(Lcom/miui/home/launcher/CellLayout;Ljava/util/ArrayList;)V
+    invoke-direct {v1, p0, v0}, Lcom/miui/home/launcher/-$$Lambda$CellLayout$dVYEN898RiG2ZyTSZG-mnlGUUTo;-><init>(Lcom/miui/home/launcher/CellLayout;Ljava/util/ArrayList;)V
 
     invoke-virtual {p2, v1}, Lcom/miui/home/launcher/CellLayout$ItemArea;->iterateAllViewsInArea(Ljava/util/function/Consumer;)V
 
-    .line 1623
+    .line 1702
     new-instance v1, Lcom/miui/home/launcher/ItemInfo;
 
     iget v2, p2, Lcom/miui/home/launcher/CellLayout$ItemArea;->mCellX:I
@@ -3077,7 +3226,7 @@
 
     invoke-direct {v1, v2, v3, v4, v5}, Lcom/miui/home/launcher/ItemInfo;-><init>(IIII)V
 
-    .line 1624
+    .line 1703
     iget-object v2, p0, Lcom/miui/home/launcher/CellLayout;->mCellBackground:Lcom/miui/home/launcher/CellBackground;
 
     const/4 v3, 0x0
@@ -3086,7 +3235,7 @@
 
     invoke-virtual {p0, v2, v1, v3, v4}, Lcom/miui/home/launcher/CellLayout;->updateCellOccupiedMarks(Landroid/view/View;Lcom/miui/home/launcher/ItemInfo;ZZ)V
 
-    .line 1625
+    .line 1704
     iget v6, p2, Lcom/miui/home/launcher/CellLayout$ItemArea;->mCellX:I
 
     iget v7, p2, Lcom/miui/home/launcher/CellLayout$ItemArea;->mCellY:I
@@ -3105,28 +3254,28 @@
 
     move-result-object p2
 
-    .line 1626
+    .line 1705
     iget-object v2, p0, Lcom/miui/home/launcher/CellLayout;->mCellBackground:Lcom/miui/home/launcher/CellBackground;
 
     invoke-virtual {p0, v2, v1, v4, v4}, Lcom/miui/home/launcher/CellLayout;->updateCellOccupiedMarks(Landroid/view/View;Lcom/miui/home/launcher/ItemInfo;ZZ)V
 
     if-eqz p2, :cond_1
 
-    .line 1628
+    .line 1707
     aget v1, p2, v3
 
     iget v2, p1, Lcom/miui/home/launcher/CellLayout$ItemArea;->mCellX:I
 
     sub-int/2addr v1, v2
 
-    .line 1629
+    .line 1708
     aget p2, p2, v4
 
     iget p1, p1, Lcom/miui/home/launcher/CellLayout$ItemArea;->mCellY:I
 
     sub-int/2addr p2, p1
 
-    .line 1630
+    .line 1709
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -3144,26 +3293,26 @@
 
     check-cast v0, Landroid/view/View;
 
-    .line 1631
+    .line 1710
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/CellLayout;->getChildInfo(Landroid/view/View;)Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v2
 
-    .line 1632
+    .line 1711
     iget v5, v2, Lcom/miui/home/launcher/ItemInfo;->cellX:I
 
     add-int/2addr v5, v1
 
     iput v5, v2, Lcom/miui/home/launcher/ItemInfo;->cellX:I
 
-    .line 1633
+    .line 1712
     iget v5, v2, Lcom/miui/home/launcher/ItemInfo;->cellY:I
 
     add-int/2addr v5, p2
 
     iput v5, v2, Lcom/miui/home/launcher/ItemInfo;->cellY:I
 
-    .line 1634
+    .line 1713
     invoke-virtual {p0, v0, v3}, Lcom/miui/home/launcher/CellLayout;->updateCellOccupiedMarks(Landroid/view/View;Z)V
 
     goto :goto_0
@@ -3173,6 +3322,40 @@
 
     :cond_1
     return v3
+.end method
+
+.method private onEnterAnimationEnd()V
+    .locals 1
+
+    .line 429
+    iget v0, p0, Lcom/miui/home/launcher/CellLayout;->mAnimatorNum:I
+
+    add-int/lit8 v0, v0, -0x1
+
+    iput v0, p0, Lcom/miui/home/launcher/CellLayout;->mAnimatorNum:I
+
+    .line 430
+    iget v0, p0, Lcom/miui/home/launcher/CellLayout;->mAnimatorNum:I
+
+    if-nez v0, :cond_0
+
+    .line 431
+    invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->scaleCellLayout()V
+
+    .line 432
+    invoke-direct {p0}, Lcom/miui/home/launcher/CellLayout;->resetAllViews()V
+
+    .line 433
+    invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/miui/home/launcher/CellScreen;
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/CellScreen;->onNormalEditAnimationEnterEnd()V
+
+    :cond_0
+    return-void
 .end method
 
 .method private onRemoveViews(II)V
@@ -3190,17 +3373,17 @@
 
     add-int p2, p1, v0
 
-    .line 2636
+    .line 2711
     invoke-virtual {p0, p2}, Lcom/miui/home/launcher/CellLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object p2
 
-    .line 2637
+    .line 2712
     instance-of v1, p2, Lcom/miui/home/launcher/CellBackground;
 
     if-nez v1, :cond_1
 
-    .line 2638
+    .line 2713
     invoke-direct {p0, p2}, Lcom/miui/home/launcher/CellLayout;->getChildInfo(Landroid/view/View;)Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v1
@@ -3217,7 +3400,7 @@
 
     const/4 v1, 0x1
 
-    .line 2639
+    .line 2714
     invoke-virtual {p0, p2, v1}, Lcom/miui/home/launcher/CellLayout;->updateCellOccupiedMarks(Landroid/view/View;Z)V
 
     :cond_1
@@ -3225,11 +3408,8 @@
 
     goto :goto_0
 
-    .line 2643
+    .line 2718
     :cond_2
-    invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->updateNewInstallFlags()V
-
-    .line 2644
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object p1
@@ -3248,7 +3428,7 @@
 .method private onSuccessMoved(IIIILcom/miui/home/launcher/CellLayout$ViewConfiguration;)V
     .locals 0
 
-    .line 1642
+    .line 1721
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/miui/home/launcher/CellLayout;->isCellOccupied(IIII)Z
 
     move-result p3
@@ -3257,7 +3437,7 @@
 
     const/4 p3, 0x2
 
-    .line 1643
+    .line 1722
     new-array p3, p3, [I
 
     const/4 p4, 0x0
@@ -3268,23 +3448,23 @@
 
     aput p2, p3, p1
 
-    .line 1644
+    .line 1723
     iget-object p1, p0, Lcom/miui/home/launcher/CellLayout;->mCellBackground:Lcom/miui/home/launcher/CellBackground;
 
     invoke-direct {p0, p1, p3}, Lcom/miui/home/launcher/CellLayout;->updateCellBackgroundPosition(Lcom/miui/home/launcher/CellBackground;[I)V
 
-    .line 1646
+    .line 1725
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->requestLayout()V
 
-    .line 1647
+    .line 1726
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide p1
 
     iput-wide p1, p0, Lcom/miui/home/launcher/CellLayout;->mLastRelayoutTime:J
 
-    .line 1648
+    .line 1727
     invoke-static {}, Lcom/miui/home/launcher/common/HapticFeedbackCompat;->getInstance()Lcom/miui/home/launcher/common/HapticFeedbackCompat;
 
     move-result-object p1
@@ -3297,7 +3477,7 @@
 .method private positionIndexToCellIgnoreRTL(I[I)V
     .locals 3
 
-    .line 2449
+    .line 2524
     iget v0, p0, Lcom/miui/home/launcher/CellLayout;->mHCells:I
 
     rem-int v1, p1, v0
@@ -3306,7 +3486,7 @@
 
     aput v1, p2, v2
 
-    .line 2450
+    .line 2525
     div-int/2addr p1, v0
 
     const/4 v0, 0x1
@@ -3328,7 +3508,7 @@
         }
     .end annotation
 
-    .line 2922
+    .line 2993
     invoke-virtual {p2}, Ljava/util/ArrayList;->size()I
 
     move-result v0
@@ -3339,7 +3519,7 @@
 
     return v1
 
-    .line 2925
+    .line 2996
     :cond_0
     new-instance v0, Landroid/graphics/Rect;
 
@@ -3349,7 +3529,7 @@
 
     move v3, v2
 
-    .line 2926
+    .line 2997
     :goto_0
     invoke-virtual {p2}, Ljava/util/ArrayList;->size()I
 
@@ -3357,27 +3537,27 @@
 
     if-ge v3, v4, :cond_5
 
-    .line 2927
+    .line 2998
     invoke-virtual {p2, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Lcom/miui/home/launcher/CellLayout$Widget;
 
-    .line 2928
+    .line 2999
     iget-boolean v5, v4, Lcom/miui/home/launcher/CellLayout$Widget;->mAlreadyPut:Z
 
     if-nez v5, :cond_4
 
-    .line 2929
+    .line 3000
     iput-boolean v1, v4, Lcom/miui/home/launcher/CellLayout$Widget;->mAlreadyPut:Z
 
-    .line 2930
+    .line 3001
     new-instance v5, Landroid/graphics/RegionIterator;
 
     invoke-direct {v5, p1}, Landroid/graphics/RegionIterator;-><init>(Landroid/graphics/Region;)V
 
-    .line 2931
+    .line 3002
     :cond_1
     :goto_1
     invoke-virtual {v5, v0}, Landroid/graphics/RegionIterator;->next(Landroid/graphics/Rect;)Z
@@ -3386,7 +3566,7 @@
 
     if-eqz v6, :cond_3
 
-    .line 2932
+    .line 3003
     iget v6, v0, Landroid/graphics/Rect;->right:I
 
     iget v7, v0, Landroid/graphics/Rect;->left:I
@@ -3407,7 +3587,7 @@
 
     if-lt v6, v7, :cond_1
 
-    .line 2933
+    .line 3004
     iget-object v6, v4, Lcom/miui/home/launcher/CellLayout$Widget;->mRegion:Landroid/graphics/Region;
 
     iget v7, v0, Landroid/graphics/Rect;->left:I
@@ -3428,7 +3608,7 @@
 
     invoke-virtual {v6, v7, v8, v9, v10}, Landroid/graphics/Region;->set(IIII)Z
 
-    .line 2934
+    .line 3005
     iget-object v6, v4, Lcom/miui/home/launcher/CellLayout$Widget;->mRegion:Landroid/graphics/Region;
 
     sget-object v7, Landroid/graphics/Region$Op;->DIFFERENCE:Landroid/graphics/Region$Op;
@@ -3437,7 +3617,7 @@
 
     add-int/lit8 v6, p3, 0x1
 
-    .line 2935
+    .line 3006
     invoke-direct {p0, p1, p2, v6}, Lcom/miui/home/launcher/CellLayout;->predict(Landroid/graphics/Region;Ljava/util/ArrayList;I)Z
 
     move-result v6
@@ -3446,7 +3626,7 @@
 
     return v1
 
-    .line 2939
+    .line 3010
     :cond_2
     iget-object v6, v4, Lcom/miui/home/launcher/CellLayout$Widget;->mRegion:Landroid/graphics/Region;
 
@@ -3456,7 +3636,7 @@
 
     goto :goto_1
 
-    .line 2942
+    .line 3013
     :cond_3
     iput-boolean v2, v4, Lcom/miui/home/launcher/CellLayout$Widget;->mAlreadyPut:Z
 
@@ -3472,7 +3652,7 @@
 .method private pushItemsInDistance(Lcom/miui/home/launcher/CellLayout$ItemArea;Lcom/miui/home/launcher/CellLayout$ItemArea;I)Z
     .locals 1
 
-    .line 1540
+    .line 1619
     invoke-virtual {p1}, Lcom/miui/home/launcher/CellLayout$ItemArea;->getCoveringRect()Landroid/graphics/Rect;
 
     move-result-object v0
@@ -3481,10 +3661,10 @@
 
     move-result p2
 
-    .line 1541
-    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$CellLayout$-4pFE7ATiFmBqYeJFZNcS_d_gnI;
+    .line 1620
+    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$CellLayout$eLZrd57IEmGQJNuiPcumdIz1QtY;
 
-    invoke-direct {v0, p0, p2, p3}, Lcom/miui/home/launcher/-$$Lambda$CellLayout$-4pFE7ATiFmBqYeJFZNcS_d_gnI;-><init>(Lcom/miui/home/launcher/CellLayout;II)V
+    invoke-direct {v0, p0, p2, p3}, Lcom/miui/home/launcher/-$$Lambda$CellLayout$eLZrd57IEmGQJNuiPcumdIz1QtY;-><init>(Lcom/miui/home/launcher/CellLayout;II)V
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/CellLayout$ItemArea;->iterateAllViewsInAreaInterruptably(Ljava/util/function/Predicate;)Z
 
@@ -3498,12 +3678,12 @@
 .method private pushView(Landroid/view/View;Landroid/graphics/Rect;I)Z
     .locals 8
 
-    .line 1769
+    .line 1848
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/CellLayout;->getChildInfo(Landroid/view/View;)Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v0
 
-    .line 1770
+    .line 1849
     new-instance v7, Lcom/miui/home/launcher/CellLayout$ItemArea;
 
     iget v3, v0, Lcom/miui/home/launcher/ItemInfo;->cellX:I
@@ -3520,7 +3700,7 @@
 
     invoke-direct/range {v1 .. v6}, Lcom/miui/home/launcher/CellLayout$ItemArea;-><init>(Lcom/miui/home/launcher/CellLayout;IIII)V
 
-    .line 1771
+    .line 1850
     invoke-direct {p0, v7, p2, p3}, Lcom/miui/home/launcher/CellLayout;->calculatePushDistance(Lcom/miui/home/launcher/CellLayout$ItemArea;Landroid/graphics/Rect;I)I
 
     move-result p2
@@ -3531,7 +3711,7 @@
 
     return p1
 
-    .line 1776
+    .line 1855
     :cond_0
     invoke-direct {p0, p1, p2, p3}, Lcom/miui/home/launcher/CellLayout;->pushViewInDistance(Landroid/view/View;II)Z
 
@@ -3549,13 +3729,13 @@
 
     return v0
 
-    .line 1741
+    .line 1820
     :cond_0
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1742
+    .line 1821
     iget v2, p0, Lcom/miui/home/launcher/CellLayout;->mHCells:I
 
     iget v3, p0, Lcom/miui/home/launcher/CellLayout;->mVCells:I
@@ -3572,12 +3752,12 @@
 
     check-cast v2, [[Landroid/view/View;
 
-    .line 1743
+    .line 1822
     iget-object v3, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
     invoke-direct {p0, v3, v2}, Lcom/miui/home/launcher/CellLayout;->copyOccupiedCells([[Landroid/view/View;[[Landroid/view/View;)Z
 
-    .line 1744
+    .line 1823
     new-instance v3, Lcom/miui/home/launcher/CellLayout$ViewConfiguration;
 
     const/4 v4, 0x0
@@ -3589,18 +3769,18 @@
 
     if-lez p2, :cond_3
 
-    .line 1746
+    .line 1825
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1747
+    .line 1826
     invoke-virtual {v5, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1748
+    .line 1827
     invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
 
-    .line 1749
+    .line 1828
     :goto_0
     invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
 
@@ -3608,23 +3788,23 @@
 
     if-lez v6, :cond_2
 
-    .line 1750
+    .line 1829
     invoke-virtual {v5, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v6
 
     check-cast v6, Landroid/view/View;
 
-    .line 1751
+    .line 1830
     invoke-virtual {v5, v0}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 1753
+    .line 1832
     invoke-direct {p0, v6, p3, v5}, Lcom/miui/home/launcher/CellLayout;->findViewsTouchEdge(Landroid/view/View;ILjava/util/ArrayList;)V
 
-    .line 1754
+    .line 1833
     invoke-virtual {v1, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1755
+    .line 1834
     invoke-virtual {v3, v6}, Lcom/miui/home/launcher/CellLayout$ViewConfiguration;->addView(Landroid/view/View;)V
 
     goto :goto_0
@@ -3632,19 +3812,19 @@
     :cond_2
     add-int/lit8 p2, p2, -0x1
 
-    .line 1759
+    .line 1838
     invoke-direct {p0, v1, p3, v4}, Lcom/miui/home/launcher/CellLayout;->shiftViews(Ljava/util/ArrayList;II)Z
 
     move-result v4
 
     if-nez v4, :cond_1
 
-    .line 1760
+    .line 1839
     iget-object p1, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
     invoke-direct {p0, v2, p1}, Lcom/miui/home/launcher/CellLayout;->copyOccupiedCells([[Landroid/view/View;[[Landroid/view/View;)Z
 
-    .line 1761
+    .line 1840
     invoke-virtual {v3}, Lcom/miui/home/launcher/CellLayout$ViewConfiguration;->resetViewConfig()V
 
     return v0
@@ -3656,26 +3836,68 @@
 .method private resetAllItems([[Landroid/view/View;Lcom/miui/home/launcher/CellLayout$ViewConfiguration;)V
     .locals 1
 
-    .line 1652
+    .line 1731
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
     invoke-direct {p0, p1, v0}, Lcom/miui/home/launcher/CellLayout;->copyOccupiedCells([[Landroid/view/View;[[Landroid/view/View;)Z
 
-    .line 1653
+    .line 1732
     invoke-virtual {p2}, Lcom/miui/home/launcher/CellLayout$ViewConfiguration;->resetViewConfig()V
 
+    return-void
+.end method
+
+.method private resetAllViews()V
+    .locals 3
+
+    const/4 v0, 0x0
+
+    .line 438
+    :goto_0
+    invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->getChildCount()I
+
+    move-result v1
+
+    if-ge v0, v1, :cond_0
+
+    .line 439
+    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/CellLayout;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    .line 440
+    invoke-virtual {v1, v2}, Landroid/view/View;->setTranslationY(F)V
+
+    .line 441
+    invoke-virtual {v1, v2}, Landroid/view/View;->setTranslationX(F)V
+
+    const/high16 v2, 0x3f800000    # 1.0f
+
+    .line 442
+    invoke-virtual {v1, v2}, Landroid/view/View;->setScaleX(F)V
+
+    .line 443
+    invoke-virtual {v1, v2}, Landroid/view/View;->setScaleY(F)V
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
     return-void
 .end method
 
 .method private rollbackLayout()V
     .locals 2
 
-    .line 1975
+    .line 2050
     iget-boolean v0, p0, Lcom/miui/home/launcher/CellLayout;->mLayoutBackupValid:Z
 
     if-eqz v0, :cond_0
 
-    .line 1976
+    .line 2051
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCellBak:[[Landroid/view/View;
 
     iget-object v1, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
@@ -3686,7 +3908,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1977
+    .line 2052
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->relayoutByOccupiedCells()V
 
     :cond_0
@@ -3696,7 +3918,7 @@
 .method private rollbackLayoutWithoutRelayout()V
     .locals 2
 
-    .line 1983
+    .line 2058
     iget-boolean v0, p0, Lcom/miui/home/launcher/CellLayout;->mLayoutBackupValid:Z
 
     if-eqz v0, :cond_0
@@ -3705,10 +3927,10 @@
 
     const-string v1, "rollbackLayoutWithoutRelayout"
 
-    .line 1984
+    .line 2059
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1985
+    .line 2060
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCellBak:[[Landroid/view/View;
 
     iget-object v1, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
@@ -3724,20 +3946,20 @@
 
     move-object/from16 v1, p0
 
-    .line 2187
+    .line 2262
     iget-boolean v0, v1, Lcom/miui/home/launcher/CellLayout;->mLayoutBackupValid:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 2188
+    .line 2263
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2189
+    .line 2264
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v2
@@ -3746,7 +3968,7 @@
 
     move v13, v4
 
-    .line 2190
+    .line 2265
     :goto_0
     iget v5, v1, Lcom/miui/home/launcher/CellLayout;->mVCells:I
 
@@ -3754,13 +3976,13 @@
 
     move v14, v4
 
-    .line 2191
+    .line 2266
     :goto_1
     iget v5, v1, Lcom/miui/home/launcher/CellLayout;->mHCells:I
 
     if-ge v14, v5, :cond_6
 
-    .line 2192
+    .line 2267
     iget-object v5, v1, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
     aget-object v5, v5, v14
@@ -3769,7 +3991,7 @@
 
     if-eqz v15, :cond_5
 
-    .line 2195
+    .line 2270
     :try_start_0
     invoke-virtual {v15}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -3779,7 +4001,7 @@
 
     if-eqz v5, :cond_1
 
-    .line 2196
+    .line 2271
     iget-wide v6, v5, Lcom/miui/home/launcher/CellLayout$LayoutParams;->accessTag:J
 
     cmp-long v6, v6, v2
@@ -3789,16 +4011,16 @@
     :cond_1
     if-eqz v5, :cond_2
 
-    .line 2198
+    .line 2273
     iput-wide v2, v5, Lcom/miui/home/launcher/CellLayout$LayoutParams;->accessTag:J
 
-    .line 2200
+    .line 2275
     :cond_2
     invoke-direct {v1, v15}, Lcom/miui/home/launcher/CellLayout;->getChildInfo(Landroid/view/View;)Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v12
 
-    .line 2201
+    .line 2276
     iget-object v5, v1, Lcom/miui/home/launcher/CellLayout;->mOccupiedCellBak:[[Landroid/view/View;
 
     aget-object v5, v5, v14
@@ -3827,16 +4049,16 @@
 
     if-eq v15, v5, :cond_5
 
-    .line 2202
+    .line 2277
     :cond_3
     iput v14, v12, Lcom/miui/home/launcher/ItemInfo;->cellX:I
 
-    .line 2203
+    .line 2278
     iput v13, v12, Lcom/miui/home/launcher/ItemInfo;->cellY:I
 
     const-wide/16 v6, -0x64
 
-    .line 2207
+    .line 2282
     invoke-virtual/range {p0 .. p0}, Lcom/miui/home/launcher/CellLayout;->getScreenId()J
 
     move-result-wide v8
@@ -3853,7 +4075,7 @@
 
     move v12, v13
 
-    .line 2204
+    .line 2279
     invoke-static/range {v5 .. v12}, Lcom/miui/home/launcher/LauncherModel;->makeMoveItemOperation(Lcom/miui/home/launcher/ItemInfo;JJIII)Landroid/content/ContentProviderOperation;
 
     move-result-object v5
@@ -3862,7 +4084,7 @@
 
     const-string v5, "Launcher.CellLayout"
 
-    .line 2209
+    .line 2284
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -3892,7 +4114,7 @@
 
     const-string v2, "Launcher.CellLayout"
 
-    .line 2214
+    .line 2289
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -3939,7 +4161,7 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2216
+    .line 2291
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isLayoutRtl()Z
 
     move-result v4
@@ -3950,17 +4172,17 @@
 
     move-result-object v3
 
-    .line 2214
+    .line 2289
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     if-eqz v15, :cond_4
 
-    .line 2218
+    .line 2293
     invoke-direct {v1, v15}, Lcom/miui/home/launcher/CellLayout;->getChildInfo(Landroid/view/View;)Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v2
 
-    .line 2219
+    .line 2294
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -4019,7 +4241,7 @@
 
     invoke-static {v3, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2222
+    .line 2297
     :cond_4
     throw v0
 
@@ -4034,7 +4256,7 @@
 
     goto/16 :goto_0
 
-    .line 2226
+    .line 2301
     :cond_7
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -4042,14 +4264,14 @@
 
     if-nez v2, :cond_8
 
-    .line 2227
+    .line 2302
     iget-object v2, v1, Lcom/miui/home/launcher/CellLayout;->mContext:Landroid/content/Context;
 
     sget-object v3, Lcom/miui/home/launcher/LauncherSettings;->AUTHORITY:Ljava/lang/String;
 
     invoke-static {v2, v3, v0}, Lcom/miui/home/launcher/LauncherModel;->applyBatch(Landroid/content/Context;Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    .line 2229
+    .line 2304
     :cond_8
     invoke-virtual/range {p0 .. p0}, Lcom/miui/home/launcher/CellLayout;->resetTouchCellInfo()V
 
@@ -4074,14 +4296,14 @@
 
     if-eqz p1, :cond_0
 
-    .line 1412
+    .line 1491
     invoke-direct {p0, v0, p1, p2}, Lcom/miui/home/launcher/CellLayout;->findTheFarthestEmptyCell(ZII)Landroid/util/Pair;
 
     move-result-object p1
 
     return-object p1
 
-    .line 1414
+    .line 1493
     :cond_0
     new-instance p1, Landroid/util/Pair;
 
@@ -4110,7 +4332,7 @@
         }
     .end annotation
 
-    .line 1404
+    .line 1483
     iget v0, p0, Lcom/miui/home/launcher/CellLayout;->mTotalCells:I
 
     if-eq p1, v0, :cond_0
@@ -4119,14 +4341,14 @@
 
     const/4 v0, 0x1
 
-    .line 1405
+    .line 1484
     invoke-direct {p0, v0, p1, p2}, Lcom/miui/home/launcher/CellLayout;->findTheFarthestEmptyCell(ZII)Landroid/util/Pair;
 
     move-result-object p1
 
     return-object p1
 
-    .line 1407
+    .line 1486
     :cond_0
     new-instance p1, Landroid/util/Pair;
 
@@ -4148,7 +4370,7 @@
 .method private setNoVacantMode(Z)V
     .locals 0
 
-    .line 209
+    .line 203
     iput-boolean p1, p0, Lcom/miui/home/launcher/CellLayout;->mIsNoVacantMode:Z
 
     return-void
@@ -4165,7 +4387,7 @@
         }
     .end annotation
 
-    .line 1780
+    .line 1859
     invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -4185,19 +4407,19 @@
 
     check-cast v0, Landroid/view/View;
 
-    .line 1781
+    .line 1860
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/CellLayout;->getChildInfo(Landroid/view/View;)Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v2
 
-    .line 1782
+    .line 1861
     invoke-virtual {p0, v0, v1}, Lcom/miui/home/launcher/CellLayout;->updateCellOccupiedMarks(Landroid/view/View;Z)V
 
     packed-switch p2, :pswitch_data_0
 
     goto :goto_1
 
-    .line 1794
+    .line 1873
     :pswitch_0
     iget v1, v2, Lcom/miui/home/launcher/ItemInfo;->cellY:I
 
@@ -4207,7 +4429,7 @@
 
     goto :goto_1
 
-    .line 1788
+    .line 1867
     :pswitch_1
     iget v1, v2, Lcom/miui/home/launcher/ItemInfo;->cellX:I
 
@@ -4217,7 +4439,7 @@
 
     goto :goto_1
 
-    .line 1791
+    .line 1870
     :pswitch_2
     iget v1, v2, Lcom/miui/home/launcher/ItemInfo;->cellY:I
 
@@ -4227,7 +4449,7 @@
 
     goto :goto_1
 
-    .line 1785
+    .line 1864
     :pswitch_3
     iget v1, v2, Lcom/miui/home/launcher/ItemInfo;->cellX:I
 
@@ -4235,7 +4457,7 @@
 
     iput v1, v2, Lcom/miui/home/launcher/ItemInfo;->cellX:I
 
-    .line 1799
+    .line 1878
     :goto_1
     iget v1, v2, Lcom/miui/home/launcher/ItemInfo;->cellX:I
 
@@ -4255,7 +4477,7 @@
 
     return v2
 
-    .line 1802
+    .line 1881
     :cond_0
     invoke-virtual {p0, v0, v2}, Lcom/miui/home/launcher/CellLayout;->updateCellOccupiedMarks(Landroid/view/View;Z)V
 
@@ -4276,7 +4498,7 @@
 .method private squeezePosition(IZI)Z
     .locals 9
 
-    .line 1435
+    .line 1514
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mCellXY:[I
 
     const/4 v1, 0x0
@@ -4287,12 +4509,12 @@
 
     move v4, v3
 
-    .line 1439
+    .line 1518
     :cond_0
     :goto_0
     invoke-direct {p0, v2, v0}, Lcom/miui/home/launcher/CellLayout;->positionIndexToCellIgnoreRTL(I[I)V
 
-    .line 1440
+    .line 1519
     iget-object v5, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
     aget v6, v0, v1
@@ -4307,12 +4529,12 @@
 
     if-eqz v5, :cond_3
 
-    .line 1442
+    .line 1521
     invoke-direct {p0, v5}, Lcom/miui/home/launcher/CellLayout;->getChildInfo(Landroid/view/View;)Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v7
 
-    .line 1443
+    .line 1522
     iget v8, v7, Lcom/miui/home/launcher/ItemInfo;->spanX:I
 
     if-ne v8, v6, :cond_3
@@ -4321,7 +4543,7 @@
 
     if-ne v7, v6, :cond_3
 
-    .line 1444
+    .line 1523
     iget-object v4, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
     aget v7, v0, v1
@@ -4347,12 +4569,12 @@
     :goto_1
     add-int/2addr v4, p1
 
-    .line 1446
+    .line 1525
     invoke-direct {p0, v4, v0}, Lcom/miui/home/launcher/CellLayout;->positionIndexToCellIgnoreRTL(I[I)V
 
     add-int/lit8 v3, v3, 0x1
 
-    .line 1448
+    .line 1527
     iget-object v4, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
     aget v7, v0, v1
@@ -4365,7 +4587,7 @@
 
     if-nez v7, :cond_1
 
-    .line 1449
+    .line 1528
     aget v7, v0, v1
 
     aget-object v4, v4, v7
@@ -4403,7 +4625,7 @@
 .method private trackExposeEvent()V
     .locals 8
 
-    .line 3116
+    .line 3185
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -4424,7 +4646,7 @@
 
     if-ltz v2, :cond_0
 
-    .line 3117
+    .line 3186
     iget-object v2, p0, Lcom/miui/home/launcher/CellLayout;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v2}, Lcom/miui/home/launcher/Launcher;->isInNormalEditing()Z
@@ -4433,7 +4655,7 @@
 
     if-nez v2, :cond_0
 
-    .line 3118
+    .line 3187
     iget-object v2, p0, Lcom/miui/home/launcher/CellLayout;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->getScreenId()J
@@ -4442,7 +4664,7 @@
 
     invoke-static {v2, v0, v1, v6, v7}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackScreenExpose(Lcom/miui/home/launcher/Launcher;JJ)V
 
-    .line 3120
+    .line 3189
     :cond_0
     iput-wide v4, p0, Lcom/miui/home/launcher/CellLayout;->mStartShowingTime:J
 
@@ -4452,12 +4674,12 @@
 .method private updateCellBackgroundPosition(Lcom/miui/home/launcher/CellBackground;[I)V
     .locals 4
 
-    .line 2310
+    .line 2385
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/CellLayout;->getChildInfo(Landroid/view/View;)Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object p1
 
-    .line 2311
+    .line 2386
     iget v0, p1, Lcom/miui/home/launcher/ItemInfo;->cellX:I
 
     const/4 v1, 0x0
@@ -4474,18 +4696,18 @@
 
     if-eq v0, v2, :cond_1
 
-    .line 2312
+    .line 2387
     :cond_0
     aget v0, p2, v1
 
     iput v0, p1, Lcom/miui/home/launcher/ItemInfo;->cellX:I
 
-    .line 2313
+    .line 2388
     aget p2, p2, v3
 
     iput p2, p1, Lcom/miui/home/launcher/ItemInfo;->cellY:I
 
-    .line 2314
+    .line 2389
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->requestLayout()V
 
     :cond_1
@@ -4495,7 +4717,7 @@
 .method private updateCellBackgroundPositionWhenDragOver(Lcom/miui/home/launcher/CellBackground;[IIILcom/miui/home/launcher/DragObject;)V
     .locals 1
 
-    .line 2294
+    .line 2369
     invoke-virtual {p0, p5}, Lcom/miui/home/launcher/CellLayout;->isSpaceEnough(Lcom/miui/home/launcher/DragObject;)Z
 
     move-result p5
@@ -4504,13 +4726,13 @@
 
     return-void
 
-    .line 2297
+    .line 2372
     :cond_0
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/CellLayout;->getChildInfo(Landroid/view/View;)Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object p5
 
-    .line 2298
+    .line 2373
     iget v0, p5, Lcom/miui/home/launcher/ItemInfo;->spanX:I
 
     if-ne v0, p3, :cond_1
@@ -4519,23 +4741,23 @@
 
     if-eq v0, p4, :cond_2
 
-    .line 2299
+    .line 2374
     :cond_1
     iput p3, p5, Lcom/miui/home/launcher/ItemInfo;->spanX:I
 
-    .line 2300
+    .line 2375
     iput p4, p5, Lcom/miui/home/launcher/ItemInfo;->spanY:I
 
-    .line 2301
+    .line 2376
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->requestLayout()V
 
-    .line 2303
+    .line 2378
     :cond_2
     iget-object p3, p0, Lcom/miui/home/launcher/CellLayout;->mCellBackground:Lcom/miui/home/launcher/CellBackground;
 
     invoke-direct {p0, p3, p2}, Lcom/miui/home/launcher/CellLayout;->updateCellBackgroundPosition(Lcom/miui/home/launcher/CellBackground;[I)V
 
-    .line 2304
+    .line 2379
     invoke-virtual {p1}, Lcom/miui/home/launcher/CellBackground;->getParent()Landroid/view/ViewParent;
 
     move-result-object p2
@@ -4544,7 +4766,7 @@
 
     const/4 p2, 0x0
 
-    .line 2305
+    .line 2380
     new-instance p3, Lcom/miui/home/launcher/CellLayout$LayoutParams;
 
     invoke-direct {p3}, Lcom/miui/home/launcher/CellLayout$LayoutParams;-><init>()V
@@ -4555,39 +4777,10 @@
     return-void
 .end method
 
-.method private updateCellContainerHeight()V
-    .locals 6
-
-    .line 620
-    iget v0, p0, Lcom/miui/home/launcher/CellLayout;->mVCells:I
-
-    iget v1, p0, Lcom/miui/home/launcher/CellLayout;->mCellPaddingTop:I
-
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getNotchEditModePaddingTopDelta()I
-
-    move-result v2
-
-    iget v3, p0, Lcom/miui/home/launcher/CellLayout;->mCellHeight:I
-
-    iget v4, p0, Lcom/miui/home/launcher/CellLayout;->mHeightGap:I
-
-    invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->getNotchEditModeGapDelta()I
-
-    move-result v5
-
-    invoke-static/range {v0 .. v5}, Lcom/miui/home/launcher/CellLayout;->calculateY(IIIIII)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/miui/home/launcher/CellLayout;->mCellContainerHeight:I
-
-    return-void
-.end method
-
 .method private updateChildColorIfNeed()V
     .locals 4
 
-    .line 1098
+    .line 1186
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->getChildCount()I
 
     move-result v0
@@ -4597,17 +4790,17 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 1100
+    .line 1188
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/CellLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 1101
+    .line 1189
     instance-of v3, v2, Lcom/miui/home/launcher/gadget/ColorUpdatable;
 
     if-eqz v3, :cond_0
 
-    .line 1102
+    .line 1190
     check-cast v2, Lcom/miui/home/launcher/gadget/ColorUpdatable;
 
     invoke-interface {v2}, Lcom/miui/home/launcher/gadget/ColorUpdatable;->notifyColorChanged()V
@@ -4624,7 +4817,7 @@
 .method private workOnAllCellLayoutItem(Lcom/miui/home/launcher/CellLayout$ItemVisibilityWorker;I)V
     .locals 3
 
-    .line 2997
+    .line 3068
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->getChildCount()I
 
     move-result v0
@@ -4634,17 +4827,17 @@
     :goto_0
     if-ltz v0, :cond_3
 
-    .line 2998
+    .line 3069
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/CellLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 2999
+    .line 3070
     instance-of v2, v1, Lcom/miui/home/launcher/ShortcutIcon;
 
     if-eqz v2, :cond_0
 
-    .line 3000
+    .line 3071
     check-cast v1, Lcom/miui/home/launcher/ShortcutIcon;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/ShortcutIcon;->getIconImageView()Lcom/miui/home/launcher/LauncherIconImageView;
@@ -4657,31 +4850,31 @@
 
     invoke-interface {p1, v2, p2}, Lcom/miui/home/launcher/CellLayout$ItemVisibilityWorker;->process(Landroid/graphics/drawable/Drawable;I)V
 
-    .line 3001
+    .line 3072
     invoke-interface {p1, v1, p2}, Lcom/miui/home/launcher/CellLayout$ItemVisibilityWorker;->process(Lcom/miui/home/launcher/ShortcutIcon;I)V
 
     goto :goto_1
 
-    .line 3002
+    .line 3073
     :cond_0
     instance-of v2, v1, Lcom/miui/home/launcher/LauncherWidgetView;
 
     if-eqz v2, :cond_1
 
-    .line 3003
+    .line 3074
     check-cast v1, Lcom/miui/home/launcher/LauncherWidgetView;
 
     invoke-interface {p1, v1}, Lcom/miui/home/launcher/CellLayout$ItemVisibilityWorker;->process(Lcom/miui/home/launcher/LauncherWidgetView;)V
 
     goto :goto_1
 
-    .line 3004
+    .line 3075
     :cond_1
     instance-of v2, v1, Lcom/miui/home/launcher/maml/MaMlWidgetView;
 
     if-eqz v2, :cond_2
 
-    .line 3005
+    .line 3076
     check-cast v1, Lcom/miui/home/launcher/maml/MaMlWidgetView;
 
     invoke-interface {p1, v1}, Lcom/miui/home/launcher/CellLayout$ItemVisibilityWorker;->process(Lcom/miui/home/launcher/maml/MaMlWidgetView;)V
@@ -4701,7 +4894,7 @@
 .method public addPendingItem(Lcom/miui/home/launcher/PendingItem;)V
     .locals 1
 
-    .line 1140
+    .line 1228
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mPendingItemsDelegate:Lcom/miui/home/launcher/PendingSourceDelegate;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/PendingSourceDelegate;->addPendingItem(Lcom/miui/home/launcher/PendingItem;)V
@@ -4712,21 +4905,21 @@
 .method public addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
     .locals 2
 
-    .line 381
+    .line 478
     instance-of v0, p1, Lcom/miui/home/launcher/ItemIcon;
 
     const/4 v1, 0x1
 
     if-eqz v0, :cond_0
 
-    .line 382
+    .line 479
     move-object v0, p1
 
     check-cast v0, Lcom/miui/home/launcher/ItemIcon;
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/ItemIcon;->setEnableAutoLayoutAnimation(Z)V
 
-    .line 385
+    .line 482
     :cond_0
     instance-of v0, p1, Lcom/miui/home/launcher/CellBackground;
 
@@ -4734,14 +4927,14 @@
 
     const/4 v0, 0x0
 
-    .line 386
+    .line 483
     invoke-virtual {p0, p1, v0}, Lcom/miui/home/launcher/CellLayout;->updateCellOccupiedMarks(Landroid/view/View;Z)V
 
-    .line 389
+    .line 486
     :cond_1
     invoke-static {p0, p1, v1}, Lcom/miui/home/launcher/WallpaperUtils;->onAddViewToGroup(Landroid/view/ViewGroup;Landroid/view/View;Z)V
 
-    .line 390
+    .line 487
     invoke-super {p0, p1, p2, p3}, Lcom/miui/launcher/views/LauncherViewGroup;->addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
 
     return-void
@@ -4762,25 +4955,25 @@
 
     move/from16 v1, p1
 
-    .line 2790
+    .line 2844
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     const/4 v3, 0x0
 
-    .line 2793
+    .line 2847
     invoke-static {v3}, Lcom/miui/home/launcher/DeviceConfig;->getIterateDirection(Z)I
 
     move-result v4
 
-    .line 2794
+    .line 2848
     invoke-direct {v0, v4}, Lcom/miui/home/launcher/CellLayout;->calCellXRange(I)V
 
-    .line 2795
+    .line 2849
     invoke-direct {v0, v4}, Lcom/miui/home/launcher/CellLayout;->calFirstIconPos(I)V
 
-    .line 2796
+    .line 2850
     iget-object v5, v0, Lcom/miui/home/launcher/CellLayout;->mDstPos:[I
 
     iget-object v6, v0, Lcom/miui/home/launcher/CellLayout;->mFirstPos:[I
@@ -4791,20 +4984,20 @@
 
     aput v8, v5, v7
 
-    .line 2797
+    .line 2851
     aget v6, v6, v3
 
     aput v6, v5, v3
 
     move v5, v3
 
-    .line 2798
+    .line 2852
     :goto_0
     iget v6, v0, Lcom/miui/home/launcher/CellLayout;->mVCells:I
 
     if-ge v5, v6, :cond_9
 
-    .line 2799
+    .line 2853
     iget-object v6, v0, Lcom/miui/home/launcher/CellLayout;->mCellXIterateRange:[I
 
     aget v6, v6, v3
@@ -4812,7 +5005,7 @@
     :goto_1
     if-ne v4, v7, :cond_0
 
-    .line 2800
+    .line 2854
     iget-object v8, v0, Lcom/miui/home/launcher/CellLayout;->mCellXIterateRange:[I
 
     aget v8, v8, v7
@@ -4828,7 +5021,7 @@
 
     if-lt v6, v8, :cond_8
 
-    .line 2802
+    .line 2856
     :goto_2
     iget-object v8, v0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
@@ -4840,13 +5033,13 @@
 
     goto/16 :goto_4
 
-    .line 2804
+    .line 2858
     :cond_1
     invoke-direct {v0, v8}, Lcom/miui/home/launcher/CellLayout;->getChildInfo(Landroid/view/View;)Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v9
 
-    .line 2805
+    .line 2859
     iget v10, v9, Lcom/miui/home/launcher/ItemInfo;->spanX:I
 
     if-ne v10, v7, :cond_7
@@ -4855,7 +5048,7 @@
 
     if-ne v10, v7, :cond_7
 
-    .line 2806
+    .line 2860
     :goto_3
     iget-object v10, v0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
@@ -4879,7 +5072,7 @@
 
     aget-object v10, v10, v11
 
-    .line 2807
+    .line 2861
     invoke-direct {v0, v10}, Lcom/miui/home/launcher/CellLayout;->getChildInfo(Landroid/view/View;)Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v10
@@ -4900,7 +5093,7 @@
 
     aget-object v10, v10, v11
 
-    .line 2808
+    .line 2862
     invoke-direct {v0, v10}, Lcom/miui/home/launcher/CellLayout;->getChildInfo(Landroid/view/View;)Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v10
@@ -4909,13 +5102,13 @@
 
     if-eq v10, v7, :cond_3
 
-    .line 2809
+    .line 2863
     :cond_2
     invoke-direct {v0, v4}, Lcom/miui/home/launcher/CellLayout;->calNextDstPos(I)V
 
     goto :goto_3
 
-    .line 2811
+    .line 2865
     :cond_3
     iget-object v10, v0, Lcom/miui/home/launcher/CellLayout;->mDstPos:[I
 
@@ -4927,7 +5120,7 @@
 
     if-eq v5, v10, :cond_6
 
-    .line 2812
+    .line 2866
     :cond_4
     iget-object v10, v0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
@@ -4941,38 +5134,38 @@
 
     aput-object v8, v12, v13
 
-    .line 2813
+    .line 2867
     aget-object v10, v10, v6
 
     const/4 v12, 0x0
 
     aput-object v12, v10, v5
 
-    .line 2814
+    .line 2868
     aget v10, v11, v3
 
     iput v10, v9, Lcom/miui/home/launcher/ItemInfo;->cellX:I
 
-    .line 2815
+    .line 2869
     aget v10, v11, v7
 
     iput v10, v9, Lcom/miui/home/launcher/ItemInfo;->cellY:I
 
     if-eqz v1, :cond_5
 
-    .line 2816
+    .line 2870
     instance-of v10, v8, Lcom/miui/home/launcher/AutoLayoutAnimation$HostView;
 
     if-eqz v10, :cond_5
 
-    .line 2817
+    .line 2871
     move-object v10, v8
 
     check-cast v10, Lcom/miui/home/launcher/AutoLayoutAnimation$HostView;
 
     invoke-interface {v10, v1}, Lcom/miui/home/launcher/AutoLayoutAnimation$HostView;->setSkipNextAutoLayoutAnimation(Z)V
 
-    .line 2820
+    .line 2874
     :cond_5
     invoke-direct {v0, v8}, Lcom/miui/home/launcher/CellLayout;->getChildInfo(Landroid/view/View;)Lcom/miui/home/launcher/ItemInfo;
 
@@ -4980,7 +5173,7 @@
 
     const-wide/16 v12, -0x64
 
-    .line 2822
+    .line 2876
     invoke-virtual/range {p0 .. p0}, Lcom/miui/home/launcher/CellLayout;->getScreenId()J
 
     move-result-wide v14
@@ -4995,7 +5188,7 @@
 
     aget v18, v8, v7
 
-    .line 2819
+    .line 2873
     invoke-static/range {v11 .. v18}, Lcom/miui/home/launcher/LauncherModel;->makeMoveItemOperation(Lcom/miui/home/launcher/ItemInfo;JJIII)Landroid/content/ContentProviderOperation;
 
     move-result-object v8
@@ -5004,7 +5197,7 @@
 
     const-string v8, "Launcher.CellLayout"
 
-    .line 2824
+    .line 2878
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -5025,7 +5218,7 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2826
+    .line 2880
     :cond_6
     invoke-direct {v0, v4}, Lcom/miui/home/launcher/CellLayout;->calNextDstPos(I)V
 
@@ -5040,7 +5233,7 @@
 
     goto/16 :goto_0
 
-    .line 2830
+    .line 2884
     :cond_9
     invoke-virtual {v2}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -5048,7 +5241,7 @@
 
     if-nez v1, :cond_a
 
-    .line 2831
+    .line 2885
     invoke-virtual/range {p0 .. p0}, Lcom/miui/home/launcher/CellLayout;->requestLayout()V
 
     :cond_a
@@ -5058,26 +5251,26 @@
 .method public alignIconsToTopWithSaveDb(Z)Z
     .locals 2
 
-    .line 2780
+    .line 2834
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/CellLayout;->alignIconsToTop(Z)Ljava/util/ArrayList;
 
     move-result-object p1
 
-    .line 2781
+    .line 2835
     invoke-virtual {p1}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 2782
+    .line 2836
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     sget-object v1, Lcom/miui/home/launcher/LauncherSettings;->AUTHORITY:Ljava/lang/String;
 
     invoke-static {v0, v1, p1}, Lcom/miui/home/launcher/LauncherModel;->applyBatch(Landroid/content/Context;Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    .line 2783
+    .line 2837
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->requestLayout()V
 
     const/4 p1, 0x1
@@ -5093,7 +5286,7 @@
 .method public allowDrop(Lcom/miui/home/launcher/DragObject;)Z
     .locals 0
 
-    .line 2852
+    .line 2923
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/CellLayout;->isSpaceEnough(Lcom/miui/home/launcher/DragObject;)Z
 
     move-result p1
@@ -5125,118 +5318,10 @@
     return-void
 .end method
 
-.method public calculateXsAndYs()V
-    .locals 14
-
-    .line 600
-    iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mXs:[I
-
-    if-eqz v0, :cond_3
-
-    iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mYs:[I
-
-    if-nez v0, :cond_0
-
-    goto :goto_2
-
-    .line 603
-    :cond_0
-    iget v0, p0, Lcom/miui/home/launcher/CellLayout;->mCellPaddingLeft:I
-
-    .line 604
-    iget v1, p0, Lcom/miui/home/launcher/CellLayout;->mCellWidth:I
-
-    .line 605
-    iget v2, p0, Lcom/miui/home/launcher/CellLayout;->mWidthGap:I
-
-    .line 606
-    iget v9, p0, Lcom/miui/home/launcher/CellLayout;->mCellPaddingTop:I
-
-    .line 607
-    invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->getPaddingTopDelta()I
-
-    move-result v10
-
-    .line 608
-    iget v11, p0, Lcom/miui/home/launcher/CellLayout;->mCellHeight:I
-
-    .line 609
-    iget v12, p0, Lcom/miui/home/launcher/CellLayout;->mHeightGap:I
-
-    .line 610
-    invoke-direct {p0}, Lcom/miui/home/launcher/CellLayout;->getHeightGapDelta()I
-
-    move-result v13
-
-    const/4 v3, 0x0
-
-    move v4, v3
-
-    .line 611
-    :goto_0
-    iget-object v5, p0, Lcom/miui/home/launcher/CellLayout;->mXs:[I
-
-    array-length v6, v5
-
-    if-ge v4, v6, :cond_1
-
-    .line 612
-    invoke-static {v4, v0, v1, v2}, Lcom/miui/home/launcher/CellLayout;->calculateX(IIII)I
-
-    move-result v6
-
-    aput v6, v5, v4
-
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    move v0, v3
-
-    .line 614
-    :goto_1
-    iget-object v1, p0, Lcom/miui/home/launcher/CellLayout;->mYs:[I
-
-    array-length v2, v1
-
-    if-ge v0, v2, :cond_2
-
-    move v3, v0
-
-    move v4, v9
-
-    move v5, v10
-
-    move v6, v11
-
-    move v7, v12
-
-    move v8, v13
-
-    .line 615
-    invoke-static/range {v3 .. v8}, Lcom/miui/home/launcher/CellLayout;->calculateY(IIIIII)I
-
-    move-result v2
-
-    aput v2, v1, v0
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_1
-
-    :cond_2
-    return-void
-
-    :cond_3
-    :goto_2
-    return-void
-.end method
-
 .method public canBeDeleted()Z
     .locals 2
 
-    .line 1158
+    .line 1246
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
@@ -5255,7 +5340,7 @@
 
     if-ne v0, p0, :cond_0
 
-    .line 1159
+    .line 1247
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
@@ -5276,7 +5361,7 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 1161
+    .line 1249
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->getChildCount()I
 
     move-result v0
@@ -5307,12 +5392,12 @@
 .method public cancelLongPress()V
     .locals 3
 
-    .line 250
+    .line 243
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mOnLongClickAgent:Lcom/miui/home/launcher/OnLongClickAgent;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/OnLongClickAgent;->cancelCustomziedLongPress()V
 
-    .line 251
+    .line 244
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -5323,7 +5408,7 @@
 
     invoke-virtual {v0, v1}, Lorg/greenrobot/eventbus/EventBus;->post(Ljava/lang/Object;)V
 
-    .line 254
+    .line 247
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->getChildCount()I
 
     move-result v0
@@ -5333,12 +5418,12 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 256
+    .line 249
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/CellLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 257
+    .line 250
     invoke-virtual {v2}, Landroid/view/View;->cancelLongPress()V
 
     add-int/lit8 v1, v1, 0x1
@@ -5352,7 +5437,7 @@
 .method cellToCenterPoint(II[I)V
     .locals 3
 
-    .line 526
+    .line 623
     iget v0, p0, Lcom/miui/home/launcher/CellLayout;->mCellPaddingLeft:I
 
     iget v1, p0, Lcom/miui/home/launcher/CellLayout;->mCellWidth:I
@@ -5373,7 +5458,7 @@
 
     aput v0, p3, p1
 
-    .line 527
+    .line 624
     iget p1, p0, Lcom/miui/home/launcher/CellLayout;->mCellPaddingTop:I
 
     iget v0, p0, Lcom/miui/home/launcher/CellLayout;->mCellHeight:I
@@ -5400,7 +5485,7 @@
 .method cellToPoint(II[I)V
     .locals 3
 
-    .line 538
+    .line 635
     iget v0, p0, Lcom/miui/home/launcher/CellLayout;->mCellPaddingLeft:I
 
     iget v1, p0, Lcom/miui/home/launcher/CellLayout;->mCellWidth:I
@@ -5417,7 +5502,7 @@
 
     aput v0, p3, p1
 
-    .line 539
+    .line 636
     iget p1, p0, Lcom/miui/home/launcher/CellLayout;->mCellPaddingTop:I
 
     iget v0, p0, Lcom/miui/home/launcher/CellLayout;->mCellHeight:I
@@ -5440,7 +5525,7 @@
 .method protected checkLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Z
     .locals 0
 
-    .line 2479
+    .line 2554
     instance-of p1, p1, Lcom/miui/home/launcher/CellLayout$LayoutParams;
 
     return p1
@@ -5449,15 +5534,15 @@
 .method public checkToDeleteSelf()V
     .locals 1
 
-    .line 1171
+    .line 1259
     invoke-static {}, Lcom/miui/home/library/utils/Preconditions;->assertUIThread()V
 
-    .line 1172
+    .line 1260
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mDeleteSelfRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/CellLayout;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 1174
+    .line 1262
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mDeleteSelfRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/CellLayout;->post(Ljava/lang/Runnable;)Z
@@ -5468,7 +5553,7 @@
 .method clearBackupLayout()V
     .locals 5
 
-    .line 2233
+    .line 2308
     iget-boolean v0, p0, Lcom/miui/home/launcher/CellLayout;->mLayoutBackupValid:Z
 
     if-nez v0, :cond_0
@@ -5480,7 +5565,7 @@
 
     move v1, v0
 
-    .line 2235
+    .line 2310
     :goto_0
     iget v2, p0, Lcom/miui/home/launcher/CellLayout;->mVCells:I
 
@@ -5488,13 +5573,13 @@
 
     move v2, v0
 
-    .line 2236
+    .line 2311
     :goto_1
     iget v3, p0, Lcom/miui/home/launcher/CellLayout;->mHCells:I
 
     if-ge v2, v3, :cond_1
 
-    .line 2237
+    .line 2312
     iget-object v3, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCellBak:[[Landroid/view/View;
 
     aget-object v3, v3, v2
@@ -5512,7 +5597,7 @@
 
     goto :goto_0
 
-    .line 2240
+    .line 2315
     :cond_2
     iput-boolean v0, p0, Lcom/miui/home/launcher/CellLayout;->mLayoutBackupValid:Z
 
@@ -5522,14 +5607,14 @@
 .method public clearCellBackground()V
     .locals 2
 
-    .line 1132
+    .line 1220
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mCellBackground:Lcom/miui/home/launcher/CellBackground;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/CellBackground;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 1133
+    .line 1221
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mCellBackground:Lcom/miui/home/launcher/CellBackground;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/CellBackground;->getParent()Landroid/view/ViewParent;
@@ -5538,7 +5623,7 @@
 
     if-ne v0, p0, :cond_0
 
-    .line 1134
+    .line 1222
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mCellBackground:Lcom/miui/home/launcher/CellBackground;
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/CellLayout;->removeView(Landroid/view/View;)V
@@ -5550,19 +5635,19 @@
 .method clearDraggingState(Lcom/miui/home/launcher/DragObject;)V
     .locals 2
 
-    .line 2171
+    .line 2246
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 2173
+    .line 2248
     iget-object v1, p0, Lcom/miui/home/launcher/CellLayout;->mStayConfirm:Lcom/miui/home/launcher/CellLayout$StayConfirm;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 2175
+    .line 2250
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mStayConfirm:Lcom/miui/home/launcher/CellLayout$StayConfirm;
 
@@ -5570,31 +5655,31 @@
 
     if-eqz p1, :cond_1
 
-    .line 2176
+    .line 2251
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    .line 2177
+    .line 2252
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->isInShortcutMenuState()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 2178
+    .line 2253
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->isDragingOneObjectWhichOccupiedCellMoreThan1X1()Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 2179
+    .line 2254
     iget-object p1, p0, Lcom/miui/home/launcher/CellLayout;->mCellBackground:Lcom/miui/home/launcher/CellBackground;
 
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mDefaultCellBackground:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/CellBackground;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 2180
+    .line 2255
     iget-object p1, p0, Lcom/miui/home/launcher/CellLayout;->mCellBackground:Lcom/miui/home/launcher/CellBackground;
 
     sget-object v0, Landroid/widget/ImageView$ScaleType;->FIT_XY:Landroid/widget/ImageView$ScaleType;
@@ -5603,7 +5688,7 @@
 
     goto :goto_0
 
-    .line 2182
+    .line 2257
     :cond_1
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->clearCellBackground()V
 
@@ -5614,7 +5699,7 @@
 .method public clearOthersToasted()V
     .locals 3
 
-    .line 2112
+    .line 2187
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
@@ -5623,7 +5708,7 @@
 
     return-void
 
-    .line 2116
+    .line 2191
     :cond_0
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
 
@@ -5631,7 +5716,7 @@
 
     const/4 v1, 0x0
 
-    .line 2117
+    .line 2192
     :goto_0
     invoke-virtual {v0}, Lcom/miui/home/launcher/Workspace;->getScreenCount()I
 
@@ -5639,14 +5724,14 @@
 
     if-ge v1, v2, :cond_2
 
-    .line 2118
+    .line 2193
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Workspace;->getCellLayout(I)Lcom/miui/home/launcher/CellLayout;
 
     move-result-object v2
 
     if-eq v2, p0, :cond_1
 
-    .line 2120
+    .line 2195
     invoke-virtual {v2}, Lcom/miui/home/launcher/CellLayout;->clearToasted()V
 
     :cond_1
@@ -5663,7 +5748,7 @@
 
     const/4 v0, 0x0
 
-    .line 2108
+    .line 2183
     iput-boolean v0, p0, Lcom/miui/home/launcher/CellLayout;->mToasted:Z
 
     return-void
@@ -5682,26 +5767,26 @@
 
     const/4 v0, 0x0
 
-    .line 2714
+    .line 2768
     invoke-static {v0}, Lcom/miui/home/launcher/DeviceConfig;->getIterateDirection(Z)I
 
     move-result v1
 
-    .line 2715
+    .line 2769
     invoke-direct {p0, v1}, Lcom/miui/home/launcher/CellLayout;->calCellXRange(I)V
 
-    .line 2716
+    .line 2770
     invoke-direct {p0, v1}, Lcom/miui/home/launcher/CellLayout;->calFirstIconPos(I)V
 
     move v2, v0
 
-    .line 2717
+    .line 2771
     :goto_0
     iget v3, p0, Lcom/miui/home/launcher/CellLayout;->mVCells:I
 
     if-ge v2, v3, :cond_5
 
-    .line 2718
+    .line 2772
     iget-object v3, p0, Lcom/miui/home/launcher/CellLayout;->mCellXIterateRange:[I
 
     aget v3, v3, v0
@@ -5711,7 +5796,7 @@
 
     if-ne v1, v4, :cond_0
 
-    .line 2719
+    .line 2773
     iget-object v5, p0, Lcom/miui/home/launcher/CellLayout;->mCellXIterateRange:[I
 
     aget v5, v5, v4
@@ -5727,7 +5812,7 @@
 
     if-lt v3, v5, :cond_4
 
-    .line 2721
+    .line 2775
     :goto_2
     iget-object v5, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
@@ -5739,7 +5824,7 @@
 
     goto :goto_3
 
-    .line 2723
+    .line 2777
     :cond_1
     invoke-virtual {v5}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
@@ -5747,7 +5832,7 @@
 
     check-cast v6, Lcom/miui/home/launcher/ItemInfo;
 
-    .line 2724
+    .line 2778
     instance-of v7, v6, Lcom/miui/home/launcher/ShortcutInfo;
 
     if-nez v7, :cond_2
@@ -5756,14 +5841,14 @@
 
     if-eqz v7, :cond_3
 
-    .line 2725
+    .line 2779
     :cond_2
     invoke-virtual {p0, v5, v4, v0}, Lcom/miui/home/launcher/CellLayout;->updateCellOccupiedMarks(Landroid/view/View;ZZ)V
 
-    .line 2726
+    .line 2780
     invoke-interface {p1, v6}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
 
-    .line 2727
+    .line 2781
     invoke-super {p0, v5}, Lcom/miui/launcher/views/LauncherViewGroup;->removeView(Landroid/view/View;)V
 
     :cond_3
@@ -5784,7 +5869,7 @@
 .method public containsOnlyEmptyFolders(Lcom/miui/home/launcher/DragObject;)Z
     .locals 5
 
-    .line 2949
+    .line 3020
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->getChildCount()I
 
     move-result v0
@@ -5796,19 +5881,19 @@
     :goto_0
     if-ge v2, v0, :cond_3
 
-    .line 2951
+    .line 3022
     invoke-virtual {p0, v2}, Lcom/miui/home/launcher/CellLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v3
 
-    .line 2952
+    .line 3023
     instance-of v4, v3, Lcom/miui/home/launcher/FolderIcon;
 
     if-nez v4, :cond_0
 
     return v1
 
-    .line 2955
+    .line 3026
     :cond_0
     invoke-virtual {v3}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
@@ -5816,21 +5901,21 @@
 
     check-cast v3, Lcom/miui/home/launcher/FolderInfo;
 
-    .line 2956
+    .line 3027
     invoke-virtual {v3}, Lcom/miui/home/launcher/FolderInfo;->count()I
 
     move-result v4
 
     if-eqz v4, :cond_2
 
-    .line 2957
+    .line 3028
     invoke-virtual {v3}, Lcom/miui/home/launcher/FolderInfo;->isOpened()Z
 
     move-result v4
 
     if-eqz v4, :cond_1
 
-    .line 2958
+    .line 3029
     invoke-virtual {v3}, Lcom/miui/home/launcher/FolderInfo;->isOpened()Z
 
     move-result v4
@@ -5860,7 +5945,7 @@
 .method public deleteSelf()V
     .locals 3
 
-    .line 1166
+    .line 1254
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
@@ -5877,25 +5962,18 @@
 .end method
 
 .method protected dispatchDraw(Landroid/graphics/Canvas;)V
-    .locals 2
+    .locals 1
 
-    .line 3205
+    .line 3290
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mDrawCallback:Lcom/miui/home/launcher/MIUIWidgetAddAnimator$OnDrawCallback;
 
     if-eqz v0, :cond_0
 
-    .line 3206
+    .line 3291
     invoke-interface {v0, p1}, Lcom/miui/home/launcher/MIUIWidgetAddAnimator$OnDrawCallback;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 3208
+    .line 3293
     :cond_0
-    iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mEditAnimContoller:Lcom/miui/home/launcher/anim/EditAnimController;
-
-    iget-boolean v1, p0, Lcom/miui/home/launcher/CellLayout;->mIsDrawingInThumbnailView:Z
-
-    invoke-virtual {v0, v1, p1}, Lcom/miui/home/launcher/anim/EditAnimController;->drawEditBackground(ZLandroid/graphics/Canvas;)V
-
-    .line 3209
     invoke-super {p0, p1}, Lcom/miui/launcher/views/LauncherViewGroup;->dispatchDraw(Landroid/graphics/Canvas;)V
 
     return-void
@@ -5904,15 +5982,15 @@
 .method public dispatchTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 11
 
-    .line 405
+    .line 502
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
-    .line 406
+    .line 503
     iget-object v1, p0, Lcom/miui/home/launcher/CellLayout;->mCellInfo:Lcom/miui/home/launcher/CellLayout$CellInfo;
 
-    .line 408
+    .line 505
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->getScreenId()J
 
     move-result-wide v2
@@ -5927,10 +6005,10 @@
 
     if-nez v0, :cond_7
 
-    .line 410
+    .line 507
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mRect:Landroid/graphics/Rect;
 
-    .line 411
+    .line 508
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v3
@@ -5943,7 +6021,7 @@
 
     add-int/2addr v3, v4
 
-    .line 412
+    .line 509
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v4
@@ -5956,7 +6034,7 @@
 
     add-int/2addr v4, v5
 
-    .line 413
+    .line 510
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->getChildCount()I
 
     move-result v5
@@ -5968,17 +6046,17 @@
 
     if-ltz v5, :cond_5
 
-    .line 417
+    .line 514
     invoke-virtual {p0, v5}, Lcom/miui/home/launcher/CellLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v7
 
-    .line 418
+    .line 515
     invoke-direct {p0, v7}, Lcom/miui/home/launcher/CellLayout;->getChildInfo(Landroid/view/View;)Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v8
 
-    .line 419
+    .line 516
     instance-of v9, v8, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;
 
     if-eqz v9, :cond_0
@@ -6001,7 +6079,7 @@
     :goto_1
     if-eqz v9, :cond_1
 
-    .line 421
+    .line 518
     invoke-virtual {v7}, Landroid/view/View;->isClickable()Z
 
     move-result v9
@@ -6021,7 +6099,7 @@
 
     if-eqz v9, :cond_4
 
-    .line 422
+    .line 519
     :cond_2
     invoke-virtual {v7}, Landroid/view/View;->getLeft()I
 
@@ -6029,7 +6107,7 @@
 
     iput v9, v0, Landroid/graphics/Rect;->left:I
 
-    .line 423
+    .line 520
     invoke-virtual {v7}, Landroid/view/View;->getLeft()I
 
     move-result v9
@@ -6042,14 +6120,14 @@
 
     iput v9, v0, Landroid/graphics/Rect;->right:I
 
-    .line 424
+    .line 521
     invoke-virtual {v7}, Landroid/view/View;->getTop()I
 
     move-result v9
 
     iput v9, v0, Landroid/graphics/Rect;->top:I
 
-    .line 425
+    .line 522
     invoke-virtual {v7}, Landroid/view/View;->getTop()I
 
     move-result v9
@@ -6062,12 +6140,12 @@
 
     iput v9, v0, Landroid/graphics/Rect;->bottom:I
 
-    .line 426
+    .line 523
     invoke-virtual {v0, v3, v4}, Landroid/graphics/Rect;->contains(II)Z
 
     move-result v9
 
-    .line 427
+    .line 524
     instance-of v10, v7, Lcom/miui/home/launcher/ItemIcon;
 
     if-eqz v10, :cond_3
@@ -6078,7 +6156,7 @@
 
     if-nez v10, :cond_3
 
-    .line 428
+    .line 525
     move-object v9, v7
 
     check-cast v9, Lcom/miui/home/launcher/ItemIcon;
@@ -6090,32 +6168,32 @@
     :cond_3
     if-eqz v9, :cond_4
 
-    .line 431
+    .line 528
     iput-object v7, v1, Lcom/miui/home/launcher/CellLayout$CellInfo;->cell:Landroid/view/View;
 
-    .line 432
+    .line 529
     iget v0, v8, Lcom/miui/home/launcher/ItemInfo;->cellX:I
 
     iput v0, v1, Lcom/miui/home/launcher/CellLayout$CellInfo;->cellX:I
 
-    .line 433
+    .line 530
     iget v0, v8, Lcom/miui/home/launcher/ItemInfo;->cellY:I
 
     iput v0, v1, Lcom/miui/home/launcher/CellLayout$CellInfo;->cellY:I
 
-    .line 434
+    .line 531
     iget v0, v8, Lcom/miui/home/launcher/ItemInfo;->spanX:I
 
     iput v0, v1, Lcom/miui/home/launcher/CellLayout$CellInfo;->spanX:I
 
-    .line 435
+    .line 532
     iget v0, v8, Lcom/miui/home/launcher/ItemInfo;->spanY:I
 
     iput v0, v1, Lcom/miui/home/launcher/CellLayout$CellInfo;->spanY:I
 
     const-string v0, "Launcher.CellLayout"
 
-    .line 437
+    .line 534
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -6148,46 +6226,46 @@
     :cond_5
     move v0, v6
 
-    .line 443
+    .line 540
     :goto_2
     iput-boolean v0, p0, Lcom/miui/home/launcher/CellLayout;->mLastDownOnOccupiedCell:Z
 
     if-nez v0, :cond_6
 
-    .line 446
+    .line 543
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mCellXY:[I
 
-    .line 447
+    .line 544
     invoke-virtual {p0, v3, v4, v0}, Lcom/miui/home/launcher/CellLayout;->pointToCell(II[I)V
 
     const/4 v3, 0x0
 
-    .line 448
+    .line 545
     iput-object v3, v1, Lcom/miui/home/launcher/CellLayout$CellInfo;->cell:Landroid/view/View;
 
-    .line 449
+    .line 546
     aget v3, v0, v6
 
     iput v3, v1, Lcom/miui/home/launcher/CellLayout$CellInfo;->cellX:I
 
-    .line 450
+    .line 547
     aget v0, v0, v2
 
     iput v0, v1, Lcom/miui/home/launcher/CellLayout$CellInfo;->cellY:I
 
-    .line 451
+    .line 548
     iput v2, v1, Lcom/miui/home/launcher/CellLayout$CellInfo;->spanX:I
 
-    .line 452
+    .line 549
     iput v2, v1, Lcom/miui/home/launcher/CellLayout$CellInfo;->spanY:I
 
-    .line 455
+    .line 552
     :cond_6
     iget-object v0, v1, Lcom/miui/home/launcher/CellLayout$CellInfo;->cell:Landroid/view/View;
 
     if-eqz v0, :cond_8
 
-    .line 456
+    .line 553
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -6203,17 +6281,17 @@
     :cond_7
     if-ne v0, v2, :cond_8
 
-    .line 460
+    .line 557
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->resetTouchCellInfo()V
 
-    .line 462
+    .line 559
     :cond_8
     :goto_3
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mOnLongClickAgent:Lcom/miui/home/launcher/OnLongClickAgent;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/OnLongClickAgent;->onDispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
-    .line 464
+    .line 561
     :cond_9
     invoke-super {p0, p1}, Lcom/miui/launcher/views/LauncherViewGroup;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -6225,7 +6303,7 @@
 .method protected drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
     .locals 2
 
-    .line 2880
+    .line 2951
     iget-boolean v0, p0, Lcom/miui/home/launcher/CellLayout;->mIsDrawingInThumbnailView:Z
 
     const/4 v1, 0x0
@@ -6238,7 +6316,7 @@
 
     return v1
 
-    .line 2883
+    .line 2954
     :cond_0
     iget-boolean v0, p0, Lcom/miui/home/launcher/CellLayout;->mIsDrawingInThumbnailView:Z
 
@@ -6252,7 +6330,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 2884
+    .line 2955
     invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v0
@@ -6267,7 +6345,7 @@
 
     return v1
 
-    .line 2887
+    .line 2958
     :cond_1
     invoke-super {p0, p1, p2, p3, p4}, Lcom/miui/launcher/views/LauncherViewGroup;->drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
 
@@ -6285,10 +6363,10 @@
 
     const/4 v2, 0x4
 
-    .line 1922
+    .line 1996
     new-array v3, v2, [Ljava/lang/Object;
 
-    .line 1923
+    .line 1997
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -6325,52 +6403,55 @@
 
     aput-object v4, v3, v8
 
-    .line 1922
+    .line 1996
     invoke-static {v1, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1924
-    invoke-direct {p0, p1, p2}, Lcom/miui/home/launcher/CellLayout;->isItemPosEmpty(II)Z
+    .line 1998
+    iget v0, p0, Lcom/miui/home/launcher/CellLayout;->mHCells:I
 
-    move-result v0
+    if-ge p1, v0, :cond_4
 
-    if-nez v0, :cond_0
+    iget v0, p0, Lcom/miui/home/launcher/CellLayout;->mVCells:I
 
-    const-string p1, "Launcher.CellLayout"
+    if-ge p2, v0, :cond_4
 
-    const-string p2, "Fail to fill empty cell auto"
+    iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
-    .line 1925
-    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    aget-object v0, v0, p1
 
-    return-void
+    aget-object v0, v0, p2
 
-    .line 1929
+    if-eqz v0, :cond_0
+
+    goto/16 :goto_2
+
+    .line 2004
     :cond_0
     invoke-direct {p0}, Lcom/miui/home/launcher/CellLayout;->backupLayout()V
 
-    .line 1930
+    .line 2005
     invoke-direct {p0, p1, p2}, Lcom/miui/home/launcher/CellLayout;->cellToPositionIndex(II)I
 
     move-result p1
 
     add-int/lit8 p2, p1, 0x1
 
-    .line 1931
+    .line 2006
     :goto_0
     iget v0, p0, Lcom/miui/home/launcher/CellLayout;->mTotalCells:I
 
     if-ge p2, v0, :cond_3
 
-    .line 1932
+    .line 2007
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mCellXY:[I
 
     invoke-virtual {p0, p2, v0}, Lcom/miui/home/launcher/CellLayout;->positionIndexToCell(I[I)V
 
-    .line 1933
+    .line 2008
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
     iget-object v1, p0, Lcom/miui/home/launcher/CellLayout;->mCellXY:[I
@@ -6385,7 +6466,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 1934
+    .line 2009
     invoke-virtual {v0}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v1
@@ -6394,12 +6475,12 @@
 
     if-eqz v1, :cond_2
 
-    .line 1935
+    .line 2010
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/CellLayout;->getChildInfo(Landroid/view/View;)Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v1
 
-    .line 1936
+    .line 2011
     iget v3, v1, Lcom/miui/home/launcher/ItemInfo;->spanX:I
 
     if-gt v3, v6, :cond_2
@@ -6410,7 +6491,7 @@
 
     goto :goto_1
 
-    .line 1939
+    .line 2014
     :cond_1
     iget-object v3, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
@@ -6426,19 +6507,19 @@
 
     aput-object v10, v3, v9
 
-    .line 1940
+    .line 2015
     invoke-virtual {p0, p1, v4}, Lcom/miui/home/launcher/CellLayout;->positionIndexToCell(I[I)V
 
     const-string p1, "Launcher.CellLayout"
 
     const-string v3, "Move item from (%d,%d) to (%d,%d)"
 
-    .line 1941
+    .line 2016
     new-array v4, v2, [Ljava/lang/Object;
 
     iget v9, v1, Lcom/miui/home/launcher/ItemInfo;->cellX:I
 
-    .line 1942
+    .line 2017
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v9
@@ -6473,26 +6554,26 @@
 
     aput-object v9, v4, v8
 
-    .line 1941
+    .line 2016
     invoke-static {v3, v4}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
     invoke-static {p1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1943
+    .line 2018
     iget-object p1, p0, Lcom/miui/home/launcher/CellLayout;->mCellXY:[I
 
     aget v3, p1, v5
 
     iput v3, v1, Lcom/miui/home/launcher/ItemInfo;->cellX:I
 
-    .line 1944
+    .line 2019
     aget v3, p1, v6
 
     iput v3, v1, Lcom/miui/home/launcher/ItemInfo;->cellY:I
 
-    .line 1945
+    .line 2020
     iget-object v1, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
     aget v3, p1, v5
@@ -6511,16 +6592,27 @@
 
     goto/16 :goto_0
 
-    .line 1949
+    .line 2024
     :cond_3
     invoke-direct {p0}, Lcom/miui/home/launcher/CellLayout;->saveCurrentLayout()V
 
-    .line 1950
-    new-instance p1, Lcom/miui/home/launcher/CellLayout$4;
+    .line 2025
+    new-instance p1, Lcom/miui/home/launcher/CellLayout$7;
 
-    invoke-direct {p1, p0}, Lcom/miui/home/launcher/CellLayout$4;-><init>(Lcom/miui/home/launcher/CellLayout;)V
+    invoke-direct {p1, p0}, Lcom/miui/home/launcher/CellLayout$7;-><init>(Lcom/miui/home/launcher/CellLayout;)V
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/CellLayout;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+
+    :cond_4
+    :goto_2
+    const-string p1, "Launcher.CellLayout"
+
+    const-string p2, "Fail to fill empty cell auto"
+
+    .line 2000
+    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 .end method
@@ -6528,12 +6620,12 @@
 .method public findDropTargetPosition(Lcom/miui/home/launcher/DragObject;)[I
     .locals 10
 
-    .line 962
+    .line 1050
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v0
 
-    .line 964
+    .line 1052
     iget v1, p1, Lcom/miui/home/launcher/DragObject;->dropAction:I
 
     const/4 v2, 0x1
@@ -6542,7 +6634,7 @@
 
     goto/16 :goto_0
 
-    .line 986
+    .line 1074
     :pswitch_0
     iget p1, v0, Lcom/miui/home/launcher/ItemInfo;->cellX:I
 
@@ -6558,7 +6650,7 @@
 
     if-nez p1, :cond_2
 
-    .line 987
+    .line 1075
     iget-object p1, p0, Lcom/miui/home/launcher/CellLayout;->mTmpXY:[I
 
     const/4 v1, 0x0
@@ -6567,19 +6659,19 @@
 
     aput v3, p1, v1
 
-    .line 988
+    .line 1076
     iget-object p1, p0, Lcom/miui/home/launcher/CellLayout;->mTmpXY:[I
 
     iget v0, v0, Lcom/miui/home/launcher/ItemInfo;->cellY:I
 
     aput v0, p1, v2
 
-    .line 989
+    .line 1077
     iget-object p1, p0, Lcom/miui/home/launcher/CellLayout;->mTmpXY:[I
 
     goto :goto_1
 
-    .line 967
+    .line 1055
     :pswitch_1
     iget p1, v0, Lcom/miui/home/launcher/ItemInfo;->spanX:I
 
@@ -6591,7 +6683,7 @@
 
     goto :goto_1
 
-    .line 970
+    .line 1058
     :pswitch_2
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->isMultiDrag()Z
 
@@ -6599,7 +6691,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 971
+    .line 1059
     iget v1, p1, Lcom/miui/home/launcher/DragObject;->x:I
 
     iget v2, p1, Lcom/miui/home/launcher/DragObject;->xOffset:I
@@ -6626,20 +6718,20 @@
 
     goto :goto_1
 
-    .line 974
+    .line 1062
     :cond_0
     iget-boolean v1, p0, Lcom/miui/home/launcher/CellLayout;->mIsNoVacantMode:Z
 
     if-eqz v1, :cond_1
 
-    .line 975
+    .line 1063
     invoke-virtual {p0, v2, v2}, Lcom/miui/home/launcher/CellLayout;->findFirstVacantArea(II)[I
 
     move-result-object p1
 
     goto :goto_1
 
-    .line 977
+    .line 1065
     :cond_1
     iget v1, p1, Lcom/miui/home/launcher/DragObject;->x:I
 
@@ -6669,7 +6761,7 @@
 
     goto :goto_1
 
-    .line 983
+    .line 1071
     :pswitch_3
     iget p1, v0, Lcom/miui/home/launcher/ItemInfo;->spanX:I
 
@@ -6701,33 +6793,33 @@
 .method public findFirstVacantArea(II)[I
     .locals 7
 
-    .line 828
+    .line 916
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mTmpXY:[I
 
     const/4 v1, 0x0
 
     const/4 v2, -0x1
 
-    .line 829
+    .line 917
     aput v2, v0, v1
 
-    .line 830
+    .line 918
     invoke-static {v1}, Lcom/miui/home/launcher/DeviceConfig;->getIterateDirection(Z)I
 
     move-result v2
 
-    .line 831
+    .line 919
     invoke-direct {p0, v2}, Lcom/miui/home/launcher/CellLayout;->calCellXRange(I)V
 
     move v3, v1
 
-    .line 832
+    .line 920
     :goto_0
     iget v4, p0, Lcom/miui/home/launcher/CellLayout;->mVCells:I
 
     if-ge v3, v4, :cond_3
 
-    .line 833
+    .line 921
     iget-object v4, p0, Lcom/miui/home/launcher/CellLayout;->mCellXIterateRange:[I
 
     aget v4, v4, v1
@@ -6737,7 +6829,7 @@
 
     if-ne v2, v5, :cond_0
 
-    .line 834
+    .line 922
     iget-object v6, p0, Lcom/miui/home/launcher/CellLayout;->mCellXIterateRange:[I
 
     aget v6, v6, v5
@@ -6753,7 +6845,7 @@
 
     if-lt v4, v6, :cond_2
 
-    .line 836
+    .line 924
     :goto_2
     invoke-virtual {p0, v4, v3, p1, p2}, Lcom/miui/home/launcher/CellLayout;->isCellOccupied(IIII)Z
 
@@ -6761,10 +6853,10 @@
 
     if-nez v6, :cond_1
 
-    .line 837
+    .line 925
     aput v4, v0, v1
 
-    .line 838
+    .line 926
     aput v3, v0, v5
 
     return-object v0
@@ -6788,10 +6880,10 @@
 .method public findLastEmptyCell(II)[I
     .locals 12
 
-    .line 750
+    .line 838
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mTmpXY:[I
 
-    .line 751
+    .line 839
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isLayoutRtl()Z
 
     move-result v1
@@ -6800,23 +6892,23 @@
 
     const/4 v3, 0x0
 
-    .line 752
+    .line 840
     aput v2, v0, v3
 
     const/4 v4, 0x1
 
-    .line 753
+    .line 841
     aput v2, v0, v4
 
-    .line 754
+    .line 842
     invoke-static {v4}, Lcom/miui/home/launcher/DeviceConfig;->getIterateDirection(Z)I
 
     move-result v2
 
-    .line 755
+    .line 843
     invoke-direct {p0, v2}, Lcom/miui/home/launcher/CellLayout;->calCellXRange(I)V
 
-    .line 756
+    .line 844
     iget v5, p0, Lcom/miui/home/launcher/CellLayout;->mVCells:I
 
     sub-int/2addr v5, v4
@@ -6824,7 +6916,7 @@
     :goto_0
     if-ltz v5, :cond_e
 
-    .line 757
+    .line 845
     iget-object v6, p0, Lcom/miui/home/launcher/CellLayout;->mCellXIterateRange:[I
 
     aget v6, v6, v3
@@ -6832,7 +6924,7 @@
     :goto_1
     if-ne v2, v4, :cond_0
 
-    .line 758
+    .line 846
     iget-object v7, p0, Lcom/miui/home/launcher/CellLayout;->mCellXIterateRange:[I
 
     aget v7, v7, v4
@@ -6848,7 +6940,7 @@
 
     if-lt v6, v7, :cond_d
 
-    .line 760
+    .line 848
     :goto_2
     iget-object v7, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
@@ -6858,19 +6950,19 @@
 
     if-eqz v8, :cond_c
 
-    .line 761
+    .line 849
     aget-object v2, v7, v6
 
     aget-object v2, v2, v5
 
-    .line 762
+    .line 850
     invoke-virtual {v2}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/miui/home/launcher/ItemInfo;
 
-    .line 768
+    .line 856
     iget v5, v2, Lcom/miui/home/launcher/ItemInfo;->spanY:I
 
     sub-int/2addr v5, p2
@@ -6891,14 +6983,14 @@
 
     goto :goto_3
 
-    .line 769
+    .line 857
     :cond_1
     iget v5, v2, Lcom/miui/home/launcher/ItemInfo;->cellY:I
 
     :goto_3
     if-eqz v1, :cond_2
 
-    .line 770
+    .line 858
     iget v6, v2, Lcom/miui/home/launcher/ItemInfo;->cellX:I
 
     sub-int/2addr v6, v4
@@ -6919,19 +7011,19 @@
 
     goto :goto_5
 
-    .line 771
+    .line 859
     :cond_3
     iget v7, p0, Lcom/miui/home/launcher/CellLayout;->mHCells:I
 
     sub-int/2addr v7, v4
 
-    .line 772
+    .line 860
     :goto_5
     invoke-static {v3}, Lcom/miui/home/launcher/DeviceConfig;->getIterateDirection(Z)I
 
     move-result v8
 
-    .line 774
+    .line 862
     iget v9, v2, Lcom/miui/home/launcher/ItemInfo;->cellY:I
 
     iget v10, v2, Lcom/miui/home/launcher/ItemInfo;->spanY:I
@@ -6948,7 +7040,7 @@
     :goto_7
     if-eqz v1, :cond_4
 
-    .line 775
+    .line 863
     iget v11, v2, Lcom/miui/home/launcher/ItemInfo;->cellX:I
 
     if-ge v10, v11, :cond_7
@@ -6958,7 +7050,7 @@
     :cond_4
     if-lt v10, v6, :cond_7
 
-    .line 776
+    .line 864
     :goto_8
     iget-object v11, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
@@ -6970,7 +7062,7 @@
 
     goto :goto_9
 
-    .line 778
+    .line 866
     :cond_5
     invoke-virtual {p0, v10, v9, p1, p2}, Lcom/miui/home/launcher/CellLayout;->isCellOccupied(IIII)Z
 
@@ -6978,10 +7070,10 @@
 
     if-nez v11, :cond_6
 
-    .line 779
+    .line 867
     aput v10, v0, v3
 
-    .line 780
+    .line 868
     aput v9, v0, v4
 
     :cond_6
@@ -6995,7 +7087,7 @@
 
     goto :goto_6
 
-    .line 784
+    .line 872
     :cond_8
     aget v5, v0, v3
 
@@ -7010,7 +7102,7 @@
     :cond_9
     if-eqz v1, :cond_a
 
-    .line 788
+    .line 876
     iget v1, p0, Lcom/miui/home/launcher/CellLayout;->mHCells:I
 
     sub-int/2addr v1, p1
@@ -7023,7 +7115,7 @@
     :goto_a
     aput v1, v0, v3
 
-    .line 789
+    .line 877
     iget v1, v2, Lcom/miui/home/launcher/ItemInfo;->cellY:I
 
     iget v2, v2, Lcom/miui/home/launcher/ItemInfo;->spanY:I
@@ -7032,7 +7124,7 @@
 
     aput v1, v0, v4
 
-    .line 790
+    .line 878
     aget v1, v0, v3
 
     aget v2, v0, v4
@@ -7063,7 +7155,7 @@
     :cond_e
     if-eqz v1, :cond_f
 
-    .line 798
+    .line 886
     iget p2, p0, Lcom/miui/home/launcher/CellLayout;->mHCells:I
 
     sub-int p1, p2, p1
@@ -7076,7 +7168,7 @@
     :goto_b
     aput p1, v0, v3
 
-    .line 799
+    .line 887
     aput v3, v0, v4
 
     return-object v0
@@ -7085,27 +7177,27 @@
 .method findLastVacantArea(II)[I
     .locals 8
 
-    .line 804
+    .line 892
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mTmpXY:[I
 
     const/4 v1, -0x1
 
     const/4 v2, 0x0
 
-    .line 805
+    .line 893
     aput v1, v0, v2
 
     const/4 v3, 0x1
 
-    .line 807
+    .line 895
     invoke-static {v3}, Lcom/miui/home/launcher/DeviceConfig;->getIterateDirection(Z)I
 
     move-result v4
 
-    .line 808
+    .line 896
     invoke-direct {p0, v4}, Lcom/miui/home/launcher/CellLayout;->calCellXRange(I)V
 
-    .line 809
+    .line 897
     iget v5, p0, Lcom/miui/home/launcher/CellLayout;->mVCells:I
 
     sub-int/2addr v5, v3
@@ -7113,7 +7205,7 @@
     :goto_0
     if-ltz v5, :cond_4
 
-    .line 810
+    .line 898
     iget-object v6, p0, Lcom/miui/home/launcher/CellLayout;->mCellXIterateRange:[I
 
     aget v6, v6, v2
@@ -7121,7 +7213,7 @@
     :goto_1
     if-ne v4, v3, :cond_0
 
-    .line 811
+    .line 899
     iget-object v7, p0, Lcom/miui/home/launcher/CellLayout;->mCellXIterateRange:[I
 
     aget v7, v7, v3
@@ -7137,7 +7229,7 @@
 
     if-lt v6, v7, :cond_3
 
-    .line 813
+    .line 901
     :goto_2
     invoke-virtual {p0, v6, v5, p1, p2}, Lcom/miui/home/launcher/CellLayout;->isCellOccupied(IIII)Z
 
@@ -7145,15 +7237,15 @@
 
     if-nez v7, :cond_1
 
-    .line 814
+    .line 902
     aput v6, v0, v2
 
-    .line 815
+    .line 903
     aput v5, v0, v3
 
     goto :goto_3
 
-    .line 816
+    .line 904
     :cond_1
     aget v7, v0, v2
 
@@ -7172,7 +7264,7 @@
 
     goto :goto_0
 
-    .line 821
+    .line 909
     :cond_4
     aget p1, v0, v2
 
@@ -7189,10 +7281,10 @@
 .method findNearestLinearVacantArea(IIIIZ)[I
     .locals 4
 
-    .line 847
+    .line 935
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mTmpXY:[I
 
-    .line 848
+    .line 936
     invoke-virtual {p0, p1, p2, v0}, Lcom/miui/home/launcher/CellLayout;->pointToCell(II[I)V
 
     if-eqz p5, :cond_0
@@ -7202,7 +7294,7 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 853
+    .line 941
     aget p2, v0, p1
 
     const/4 p5, 0x1
@@ -7215,16 +7307,16 @@
 
     move v1, p2
 
-    .line 855
+    .line 943
     :goto_0
     iget v2, p0, Lcom/miui/home/launcher/CellLayout;->mTotalCells:I
 
     if-ge v1, v2, :cond_2
 
-    .line 856
+    .line 944
     invoke-virtual {p0, v1, v0}, Lcom/miui/home/launcher/CellLayout;->positionIndexToCell(I[I)V
 
-    .line 857
+    .line 945
     aget v2, v0, p1
 
     aget v3, v0, p5
@@ -7248,10 +7340,10 @@
     :goto_1
     if-ltz p2, :cond_4
 
-    .line 863
+    .line 951
     invoke-virtual {p0, p2, v0}, Lcom/miui/home/launcher/CellLayout;->positionIndexToCell(I[I)V
 
-    .line 864
+    .line 952
     aget v1, v0, p1
 
     aget v2, v0, p5
@@ -7290,21 +7382,21 @@
 
     mul-int v4, v1, v2
 
-    .line 904
+    .line 992
     iget v5, v0, Lcom/miui/home/launcher/CellLayout;->mTotalCells:I
 
     if-le v4, v5, :cond_0
 
     return-object v3
 
-    .line 907
+    .line 995
     :cond_0
     iget-object v4, v0, Lcom/miui/home/launcher/CellLayout;->mTmpXY:[I
 
-    .line 908
+    .line 996
     iget-object v5, v0, Lcom/miui/home/launcher/CellLayout;->mCellXY:[I
 
-    .line 914
+    .line 1002
     iget v6, v0, Lcom/miui/home/launcher/CellLayout;->mVCells:I
 
     sub-int/2addr v6, v2
@@ -7314,7 +7406,7 @@
     :goto_0
     if-ltz v6, :cond_5
 
-    .line 915
+    .line 1003
     iget v11, v0, Lcom/miui/home/launcher/CellLayout;->mHCells:I
 
     sub-int/2addr v11, v1
@@ -7324,19 +7416,19 @@
 
     if-eqz p6, :cond_1
 
-    .line 918
+    .line 1006
     invoke-virtual {v0, v11, v6, v5}, Lcom/miui/home/launcher/CellLayout;->cellToCenterPoint(II[I)V
 
     goto :goto_2
 
-    .line 920
+    .line 1008
     :cond_1
     invoke-virtual {v0, v11, v6, v5}, Lcom/miui/home/launcher/CellLayout;->cellToPoint(II[I)V
 
     :goto_2
     const/4 v12, 0x0
 
-    .line 922
+    .line 1010
     aget v13, v5, v12
 
     sub-int v13, v13, p1
@@ -7374,7 +7466,7 @@
     :cond_2
     if-nez p5, :cond_3
 
-    .line 928
+    .line 1016
     invoke-virtual {v0, v11, v6, v1, v2}, Lcom/miui/home/launcher/CellLayout;->isCellOccupied(IIII)Z
 
     move-result v7
@@ -7383,11 +7475,11 @@
 
     goto :goto_3
 
-    .line 934
+    .line 1022
     :cond_3
     aput v11, v17, v12
 
-    .line 935
+    .line 1023
     aput v6, v17, v16
 
     move-wide v9, v3
@@ -7430,12 +7522,12 @@
 .method findNearestVacantAreaByCellPos(IIII)[I
     .locals 7
 
-    .line 872
+    .line 960
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mCellXY:[I
 
     invoke-virtual {p0, p1, p2, v0}, Lcom/miui/home/launcher/CellLayout;->cellToPoint(II[I)V
 
-    .line 873
+    .line 961
     iget-object p1, p0, Lcom/miui/home/launcher/CellLayout;->mCellXY:[I
 
     const/4 p2, 0x0
@@ -7466,7 +7558,7 @@
 .method public generateLayoutParams(Landroid/util/AttributeSet;)Landroid/view/ViewGroup$LayoutParams;
     .locals 2
 
-    .line 2474
+    .line 2549
     new-instance v0, Lcom/miui/home/launcher/CellLayout$LayoutParams;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->getContext()Landroid/content/Context;
@@ -7481,7 +7573,7 @@
 .method protected generateLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Landroid/view/ViewGroup$LayoutParams;
     .locals 1
 
-    .line 2484
+    .line 2559
     new-instance v0, Lcom/miui/home/launcher/CellLayout$LayoutParams;
 
     invoke-direct {v0, p1}, Lcom/miui/home/launcher/CellLayout$LayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
@@ -7489,19 +7581,10 @@
     return-object v0
 .end method
 
-.method public getCellContainerHeight()I
-    .locals 1
-
-    .line 3248
-    iget v0, p0, Lcom/miui/home/launcher/CellLayout;->mCellContainerHeight:I
-
-    return v0
-.end method
-
 .method getCellHeight()I
     .locals 1
 
-    .line 547
+    .line 644
     iget v0, p0, Lcom/miui/home/launcher/CellLayout;->mCellHeight:I
 
     return v0
@@ -7510,17 +7593,8 @@
 .method getCellHeightGap()I
     .locals 1
 
-    .line 555
+    .line 652
     iget v0, p0, Lcom/miui/home/launcher/CellLayout;->mHeightGap:I
-
-    return v0
-.end method
-
-.method public getCellPaddingTop()I
-    .locals 1
-
-    .line 3252
-    iget v0, p0, Lcom/miui/home/launcher/CellLayout;->mCellPaddingTop:I
 
     return v0
 .end method
@@ -7528,16 +7602,16 @@
 .method getCellWidth()I
     .locals 1
 
-    .line 543
+    .line 640
     iget v0, p0, Lcom/miui/home/launcher/CellLayout;->mCellWidth:I
 
     return v0
 .end method
 
-.method public getCellWidthGap()I
+.method getCellWidthGap()I
     .locals 1
 
-    .line 551
+    .line 648
     iget v0, p0, Lcom/miui/home/launcher/CellLayout;->mWidthGap:I
 
     return v0
@@ -7550,7 +7624,7 @@
 
     move v1, v0
 
-    .line 948
+    .line 1036
     :goto_0
     iget v2, p0, Lcom/miui/home/launcher/CellLayout;->mVCells:I
 
@@ -7558,13 +7632,13 @@
 
     move v2, v0
 
-    .line 949
+    .line 1037
     :goto_1
     iget v3, p0, Lcom/miui/home/launcher/CellLayout;->mHCells:I
 
     if-ge v2, v3, :cond_1
 
-    .line 950
+    .line 1038
     iget-object v3, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
     aget-object v3, v3, v2
@@ -7573,7 +7647,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 951
+    .line 1039
     invoke-virtual {v3}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v3
@@ -7584,12 +7658,12 @@
 
     if-eqz v3, :cond_0
 
-    .line 952
+    .line 1040
     aput v2, p2, v0
 
     const/4 p1, 0x1
 
-    .line 953
+    .line 1041
     aput v1, p2, p1
 
     return p1
@@ -7608,12 +7682,6 @@
     return v0
 .end method
 
-.method public getContainerView()Landroid/view/ViewGroup;
-    .locals 0
-
-    return-object p0
-.end method
-
 .method public getEmptyCellsNum()I
     .locals 6
 
@@ -7623,18 +7691,18 @@
 
     move v2, v1
 
-    .line 2842
+    .line 2913
     :goto_0
     iget v3, p0, Lcom/miui/home/launcher/CellLayout;->mTotalCells:I
 
     if-ge v1, v3, :cond_1
 
-    .line 2843
+    .line 2914
     iget-object v3, p0, Lcom/miui/home/launcher/CellLayout;->mCellXY:[I
 
     invoke-virtual {p0, v1, v3}, Lcom/miui/home/launcher/CellLayout;->positionIndexToCell(I[I)V
 
-    .line 2844
+    .line 2915
     iget-object v3, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
     iget-object v4, p0, Lcom/miui/home/launcher/CellLayout;->mCellXY:[I
@@ -7665,7 +7733,7 @@
 .method public getItemMoveDescription(II)Ljava/lang/String;
     .locals 4
 
-    .line 2981
+    .line 3052
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -7694,7 +7762,7 @@
 
     aput-object p1, v1, v2
 
-    const p1, 0x7f110077
+    const p1, 0x7f100072
 
     invoke-virtual {v0, p1, v1}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -7706,10 +7774,10 @@
 .method protected getLastOccupiedIndex()I
     .locals 5
 
-    .line 881
+    .line 969
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mTmpXY:[I
 
-    .line 882
+    .line 970
     invoke-direct {p0}, Lcom/miui/home/launcher/CellLayout;->getMaxIndex()I
 
     move-result v1
@@ -7717,12 +7785,12 @@
     :goto_0
     if-ltz v1, :cond_1
 
-    .line 883
+    .line 971
     invoke-virtual {p0, v1, v0}, Lcom/miui/home/launcher/CellLayout;->positionIndexToCell(I[I)V
 
     const/4 v2, 0x0
 
-    .line 884
+    .line 972
     aget v2, v0, v2
 
     const/4 v3, 0x1
@@ -7748,57 +7816,19 @@
     return v0
 .end method
 
-.method public getNotchEditModeGapDelta()I
-    .locals 3
-
-    .line 566
-    iget v0, p0, Lcom/miui/home/launcher/CellLayout;->mVCells:I
-
-    const/4 v1, 0x1
-
-    if-le v0, v1, :cond_0
-
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getNotchEditModePaddingTopDelta()I
-
-    move-result v0
-
-    iget v2, p0, Lcom/miui/home/launcher/CellLayout;->mVCells:I
-
-    sub-int/2addr v2, v1
-
-    div-int/2addr v0, v2
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    return v0
-.end method
-
 .method public getOnLongClickAgent()Lcom/miui/home/launcher/OnLongClickAgent;
     .locals 1
 
-    .line 2966
+    .line 3037
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mOnLongClickAgent:Lcom/miui/home/launcher/OnLongClickAgent;
 
     return-object v0
 .end method
 
-.method public getPaddingTopDelta()I
-    .locals 1
-
-    .line 2540
-    iget v0, p0, Lcom/miui/home/launcher/CellLayout;->mNotchEditModePaddingTopDelta:I
-
-    return v0
-.end method
-
 .method public getScreenId()J
     .locals 2
 
-    .line 270
+    .line 263
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mCellInfo:Lcom/miui/home/launcher/CellLayout$CellInfo;
 
     iget-wide v0, v0, Lcom/miui/home/launcher/CellLayout$CellInfo;->screenId:J
@@ -7809,7 +7839,7 @@
 .method public getScreenType()I
     .locals 1
 
-    .line 281
+    .line 274
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mCellInfo:Lcom/miui/home/launcher/CellLayout$CellInfo;
 
     iget v0, v0, Lcom/miui/home/launcher/CellLayout$CellInfo;->screenType:I
@@ -7820,7 +7850,7 @@
 .method public getVersionTag()Ljava/lang/Object;
     .locals 1
 
-    .line 500
+    .line 597
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->getWindowAttachCount()I
 
     move-result v0
@@ -7832,37 +7862,10 @@
     return-object v0
 .end method
 
-.method public getmXs()[I
-    .locals 1
-
-    .line 3240
-    iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mXs:[I
-
-    return-object v0
-.end method
-
-.method public getmYs()[I
-    .locals 1
-
-    .line 3244
-    iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mYs:[I
-
-    return-object v0
-.end method
-
-.method public hasNewInstallApps()Z
-    .locals 1
-
-    .line 363
-    iget-boolean v0, p0, Lcom/miui/home/launcher/CellLayout;->mHasNewInstallApps:Z
-
-    return v0
-.end method
-
 .method public hasToastedNoSpace()Z
     .locals 1
 
-    .line 1068
+    .line 1156
     iget-boolean v0, p0, Lcom/miui/home/launcher/CellLayout;->mToasted:Z
 
     return v0
@@ -7880,7 +7883,7 @@
 
     add-int v2, p1, v1
 
-    .line 727
+    .line 815
     iget v3, p0, Lcom/miui/home/launcher/CellLayout;->mHCells:I
 
     const/4 v4, 0x1
@@ -7899,7 +7902,7 @@
 
     add-int v5, p2, v3
 
-    .line 731
+    .line 819
     iget v6, p0, Lcom/miui/home/launcher/CellLayout;->mVCells:I
 
     if-ge v5, v6, :cond_3
@@ -7908,7 +7911,7 @@
 
     goto :goto_2
 
-    .line 734
+    .line 822
     :cond_1
     iget-object v6, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
@@ -7949,7 +7952,7 @@
 
     move v1, v0
 
-    .line 3224
+    .line 3308
     :goto_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->getChildCount()I
 
@@ -7957,12 +7960,12 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 3225
+    .line 3309
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/CellLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 3226
+    .line 3310
     invoke-virtual {v2}, Landroid/view/View;->isLaidOut()Z
 
     move-result v2
@@ -7989,7 +7992,7 @@
 
     move v1, v0
 
-    .line 1474
+    .line 1553
     :goto_0
     iget v2, p0, Lcom/miui/home/launcher/CellLayout;->mHCells:I
 
@@ -7997,13 +8000,13 @@
 
     move v2, v0
 
-    .line 1475
+    .line 1554
     :goto_1
     iget v3, p0, Lcom/miui/home/launcher/CellLayout;->mVCells:I
 
     if-ge v2, v3, :cond_1
 
-    .line 1476
+    .line 1555
     iget-object v3, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
     aget-object v3, v3, v1
@@ -8037,7 +8040,7 @@
 
     move v1, v0
 
-    .line 2970
+    .line 3041
     :goto_0
     iget v2, p0, Lcom/miui/home/launcher/CellLayout;->mVCells:I
 
@@ -8045,13 +8048,13 @@
 
     move v2, v0
 
-    .line 2971
+    .line 3042
     :goto_1
     iget v3, p0, Lcom/miui/home/launcher/CellLayout;->mHCells:I
 
     if-ge v2, v3, :cond_1
 
-    .line 2972
+    .line 3043
     iget-object v3, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
     aget-object v3, v3, v2
@@ -8087,7 +8090,7 @@
 
     add-int/2addr p1, p3
 
-    .line 717
+    .line 805
     iget p3, p0, Lcom/miui/home/launcher/CellLayout;->mHCells:I
 
     if-gt p1, p3, :cond_1
@@ -8116,7 +8119,7 @@
 .method public isNoVacantMode()Z
     .locals 1
 
-    .line 213
+    .line 207
     iget-boolean v0, p0, Lcom/miui/home/launcher/CellLayout;->mIsNoVacantMode:Z
 
     return v0
@@ -8125,7 +8128,7 @@
 .method public isPendingItemsEmtpy()Z
     .locals 1
 
-    .line 1152
+    .line 1240
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mPendingItemsDelegate:Lcom/miui/home/launcher/PendingSourceDelegate;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/PendingSourceDelegate;->isPendingItemsEmtpy()Z
@@ -8140,7 +8143,7 @@
 
     const/4 v0, 0x3
 
-    .line 289
+    .line 282
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/CellLayout;->isScreenType(I)Z
 
     move-result v0
@@ -8151,19 +8154,19 @@
 .method public isSpaceEnough(Lcom/miui/home/launcher/DragObject;)Z
     .locals 2
 
-    .line 2093
+    .line 2168
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->getEmptyCellsNum()I
 
     move-result v0
 
-    .line 2094
+    .line 2169
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getRemainedDraggingSize()I
 
     move-result v1
 
     if-gt v1, v0, :cond_0
 
-    .line 2095
+    .line 2170
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v1
@@ -8194,7 +8197,7 @@
 .method public isVisibleForMaml()Z
     .locals 1
 
-    .line 3128
+    .line 3197
     iget-boolean v0, p0, Lcom/miui/home/launcher/CellLayout;->mVisibleForMaml:Z
 
     return v0
@@ -8203,7 +8206,7 @@
 .method public lastDownOnOccupiedCell()Z
     .locals 1
 
-    .line 2565
+    .line 2640
     iget-boolean v0, p0, Lcom/miui/home/launcher/CellLayout;->mLastDownOnOccupiedCell:Z
 
     return v0
@@ -8212,14 +8215,14 @@
 .method public measureChild(Landroid/view/View;)V
     .locals 7
 
-    .line 624
+    .line 712
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Lcom/miui/home/launcher/CellLayout$LayoutParams;
 
-    .line 625
+    .line 713
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v1
@@ -8228,7 +8231,7 @@
 
     check-cast v4, Lcom/miui/home/launcher/ItemInfo;
 
-    .line 626
+    .line 714
     iget v2, v4, Lcom/miui/home/launcher/ItemInfo;->cellX:I
 
     iget v3, v4, Lcom/miui/home/launcher/ItemInfo;->cellY:I
@@ -8241,7 +8244,7 @@
 
     invoke-virtual/range {v1 .. v6}, Lcom/miui/home/launcher/CellLayout;->setupLayoutParam(IILcom/miui/home/launcher/ItemInfo;ZLcom/miui/home/launcher/CellLayout$LayoutParams;)V
 
-    .line 627
+    .line 715
     iget v1, v0, Lcom/miui/home/launcher/CellLayout$LayoutParams;->width:I
 
     const/high16 v2, 0x40000000    # 2.0f
@@ -8250,15 +8253,15 @@
 
     move-result v1
 
-    .line 628
+    .line 716
     iget v0, v0, Lcom/miui/home/launcher/CellLayout$LayoutParams;->height:I
 
-    .line 629
+    .line 717
     invoke-static {v0, v2}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result v0
 
-    .line 630
+    .line 718
     invoke-virtual {p1, v1, v0}, Landroid/view/View;->measure(II)V
 
     return-void
@@ -8269,15 +8272,15 @@
 
     const/4 v0, 0x0
 
-    .line 2758
+    .line 2812
     invoke-static {v0}, Lcom/miui/home/launcher/DeviceConfig;->getIterateDirection(Z)I
 
     move-result v1
 
-    .line 2759
+    .line 2813
     invoke-direct {p0, v1}, Lcom/miui/home/launcher/CellLayout;->calFirstIconPos(I)V
 
-    .line 2763
+    .line 2817
     iget v2, p0, Lcom/miui/home/launcher/CellLayout;->mVCells:I
 
     const/4 v3, 0x1
@@ -8295,7 +8298,7 @@
 
     if-ne v1, v3, :cond_0
 
-    .line 2764
+    .line 2818
     iget v5, p0, Lcom/miui/home/launcher/CellLayout;->mHCells:I
 
     sub-int/2addr v5, v3
@@ -8312,7 +8315,7 @@
 
     goto :goto_2
 
-    .line 2765
+    .line 2819
     :cond_1
     iget v6, p0, Lcom/miui/home/launcher/CellLayout;->mHCells:I
 
@@ -8320,7 +8323,7 @@
 
     if-gt v5, v6, :cond_4
 
-    .line 2767
+    .line 2821
     :goto_2
     iget-object v6, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
@@ -8339,7 +8342,7 @@
 
     if-eqz v6, :cond_3
 
-    .line 2771
+    .line 2825
     invoke-direct {p0, v6}, Lcom/miui/home/launcher/CellLayout;->getChildInfo(Landroid/view/View;)Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v6
@@ -8369,174 +8372,140 @@
 .method public offset([FLcom/miui/home/launcher/DragObject;)V
     .locals 5
 
-    .line 1188
-    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
+    if-eqz p1, :cond_2
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->isInFoldLargeScreen()Z
-
-    move-result v0
-
-    .line 1189
-    iget-object v1, p0, Lcom/miui/home/launcher/CellLayout;->mLauncher:Lcom/miui/home/launcher/Launcher;
-
-    invoke-virtual {v1}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
-
-    move-result-object v1
-
-    if-eqz v0, :cond_0
-
-    .line 1190
-    iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mLauncher:Lcom/miui/home/launcher/Launcher;
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->isInNormalEditing()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    if-eqz p1, :cond_4
-
-    .line 1193
+    .line 1276
     array-length v0, p1
 
-    if-lez v0, :cond_4
+    if-lez v0, :cond_2
 
-    .line 1194
+    .line 1277
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    .line 1195
+    .line 1278
+    iget-object v1, p0, Lcom/miui/home/launcher/CellLayout;->mLauncher:Lcom/miui/home/launcher/Launcher;
+
+    invoke-virtual {v1}, Lcom/miui/home/launcher/Launcher;->getDragLayer()Lcom/miui/home/launcher/DragLayer;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p0, v0}, Lcom/miui/home/launcher/DragLayer;->offsetDescendantRectToMyCoords(Landroid/view/View;Landroid/graphics/Rect;)V
+
+    const/4 v1, 0x0
+
+    .line 1279
+    aget v2, p1, v1
+
+    iget v0, v0, Landroid/graphics/Rect;->left:I
+
+    int-to-float v0, v0
+
+    sub-float/2addr v2, v0
+
+    aput v2, p1, v1
+
+    .line 1280
+    iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mLauncher:Lcom/miui/home/launcher/Launcher;
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
+
+    move-result-object v0
+
     iget-object v2, p0, Lcom/miui/home/launcher/CellLayout;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    invoke-virtual {v2}, Lcom/miui/home/launcher/Launcher;->getDragLayer()Lcom/miui/home/launcher/DragLayer;
+    invoke-virtual {v2}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
 
     move-result-object v2
 
-    invoke-virtual {v2, p0, v0}, Lcom/miui/home/launcher/DragLayer;->offsetDescendantRectToMyCoords(Landroid/view/View;Landroid/graphics/Rect;)V
-
-    .line 1196
-    invoke-virtual {p2}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
-
-    move-result-object v0
-
-    iget-wide v2, v0, Lcom/miui/home/launcher/ItemInfo;->screenId:J
-
-    .line 1197
-    invoke-virtual {v1, v2, v3}, Lcom/miui/home/launcher/Workspace;->getCellLayoutById(J)Lcom/miui/home/launcher/CellLayout;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_3
-
-    if-eq v0, p0, :cond_3
-
-    .line 1199
-    invoke-virtual {v0}, Lcom/miui/home/launcher/CellLayout;->getScreenId()J
-
-    move-result-wide v2
-
-    invoke-virtual {v1, v2, v3}, Lcom/miui/home/launcher/Workspace;->getScreenIndexById(J)I
-
-    move-result v0
-
-    .line 1200
-    invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->getScreenId()J
-
-    move-result-wide v2
-
-    invoke-virtual {v1, v2, v3}, Lcom/miui/home/launcher/Workspace;->getScreenIndexById(J)I
-
-    move-result v1
-
-    .line 1201
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isLayoutRtl()Z
+    invoke-virtual {v2}, Lcom/miui/home/launcher/Workspace;->getCurrentScreenIndex()I
 
     move-result v2
 
-    if-eqz v2, :cond_1
-
-    sub-int/2addr v1, v0
-
-    goto :goto_0
-
-    :cond_1
-    sub-int v1, v0, v1
-
-    .line 1202
-    :goto_0
-    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
+    invoke-virtual {v0, v2}, Lcom/miui/home/launcher/Workspace;->getCellLayout(I)Lcom/miui/home/launcher/CellLayout;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->isInFoldLargeScreen()Z
+    if-eqz v0, :cond_1
+
+    if-eq v0, p0, :cond_1
+
+    .line 1282
+    iget-object v2, p0, Lcom/miui/home/launcher/CellLayout;->mLauncher:Lcom/miui/home/launcher/Launcher;
+
+    invoke-virtual {v2}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
+
+    move-result-object v2
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/CellLayout;->getScreenId()J
+
+    move-result-wide v3
+
+    invoke-virtual {v2, v3, v4}, Lcom/miui/home/launcher/Workspace;->getScreenIndexById(J)I
 
     move-result v0
 
-    const/4 v2, 0x0
+    .line 1283
+    iget-object v2, p0, Lcom/miui/home/launcher/CellLayout;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    if-eqz v0, :cond_2
+    invoke-virtual {v2}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
 
-    .line 1203
-    aget v0, p1, v2
+    move-result-object v2
 
-    int-to-float v1, v1
+    invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->getScreenId()J
+
+    move-result-wide v3
+
+    invoke-virtual {v2, v3, v4}, Lcom/miui/home/launcher/Workspace;->getScreenIndexById(J)I
+
+    move-result v2
+
+    .line 1284
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isLayoutRtl()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    sub-int/2addr v2, v0
+
+    goto :goto_0
+
+    :cond_0
+    sub-int v2, v0, v2
+
+    .line 1285
+    :goto_0
+    aget v0, p1, v1
 
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getScreenWidth()I
 
     move-result v3
 
-    int-to-float v3, v3
+    mul-int/2addr v2, v3
 
-    const/high16 v4, 0x40000000    # 2.0f
+    int-to-float v2, v2
 
-    div-float/2addr v3, v4
+    sub-float/2addr v0, v2
 
-    mul-float/2addr v1, v3
+    aput v0, p1, v1
 
-    sub-float/2addr v0, v1
-
-    aput v0, p1, v2
-
-    goto :goto_1
-
-    .line 1205
-    :cond_2
-    aget v0, p1, v2
-
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getScreenWidth()I
-
-    move-result v3
-
-    mul-int/2addr v1, v3
-
-    int-to-float v1, v1
-
-    sub-float/2addr v0, v1
-
-    aput v0, p1, v2
-
-    .line 1208
-    :cond_3
-    :goto_1
+    .line 1287
+    :cond_1
     array-length v0, p1
 
     const/4 v1, 0x1
 
-    if-le v0, v1, :cond_4
+    if-le v0, v1, :cond_2
 
     invoke-virtual {p2}, Lcom/miui/home/launcher/DragObject;->isIgnoreSearchLayoutTranY()Z
 
     move-result p2
 
-    if-nez p2, :cond_4
+    if-nez p2, :cond_2
 
-    .line 1209
+    .line 1288
     aget p2, p1, v1
 
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mLauncher:Lcom/miui/home/launcher/Launcher;
@@ -8553,17 +8522,17 @@
 
     aput p2, p1, v1
 
-    :cond_4
+    :cond_2
     return-void
 .end method
 
 .method protected onAttachedToWindow()V
     .locals 2
 
-    .line 2156
+    .line 2231
     invoke-super {p0}, Lcom/miui/launcher/views/LauncherViewGroup;->onAttachedToWindow()V
 
-    .line 2157
+    .line 2232
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -8572,7 +8541,7 @@
 
     invoke-virtual {v0, v1}, Lorg/greenrobot/eventbus/EventBus;->register(Ljava/lang/Object;)V
 
-    .line 2158
+    .line 2233
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -8585,10 +8554,10 @@
 .method protected onDetachedFromWindow()V
     .locals 2
 
-    .line 2163
+    .line 2238
     invoke-super {p0}, Lcom/miui/launcher/views/LauncherViewGroup;->onDetachedFromWindow()V
 
-    .line 2164
+    .line 2239
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -8597,14 +8566,14 @@
 
     invoke-virtual {v0, v1}, Lorg/greenrobot/eventbus/EventBus;->unregister(Ljava/lang/Object;)V
 
-    .line 2165
+    .line 2240
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
 
     invoke-virtual {v0, p0}, Lorg/greenrobot/eventbus/EventBus;->unregister(Ljava/lang/Object;)V
 
-    .line 2166
+    .line 2241
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mDeleteSelfRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/CellLayout;->removeCallbacks(Ljava/lang/Runnable;)Z
@@ -8615,7 +8584,7 @@
 .method onDragChild(Landroid/view/View;)V
     .locals 2
 
-    .line 1126
+    .line 1214
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
@@ -8624,10 +8593,10 @@
 
     const/4 v1, 0x1
 
-    .line 1127
+    .line 1215
     iput-boolean v1, v0, Lcom/miui/home/launcher/CellLayout$LayoutParams;->isDragging:Z
 
-    .line 1128
+    .line 1216
     invoke-virtual {p0, p1, v1}, Lcom/miui/home/launcher/CellLayout;->updateCellOccupiedMarks(Landroid/view/View;Z)V
 
     return-void
@@ -8636,30 +8605,30 @@
 .method onDragEnter(Lcom/miui/home/launcher/DragObject;)V
     .locals 4
 
-    .line 2041
+    .line 2116
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mLastDragPos:Lcom/miui/home/launcher/CellLayout$DragPos;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/CellLayout$DragPos;->reset()V
 
-    .line 2042
+    .line 2117
     invoke-direct {p0}, Lcom/miui/home/launcher/CellLayout;->backupLayout()V
 
-    .line 2043
+    .line 2118
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/CellLayout;->setCellBackgroundImage(Lcom/miui/home/launcher/DragObject;)V
 
-    .line 2044
+    .line 2119
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mCellBackground:Lcom/miui/home/launcher/CellBackground;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/CellBackground;->bindDragObject(Lcom/miui/home/launcher/DragObject;)V
 
-    .line 2045
+    .line 2120
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mCellBackground:Lcom/miui/home/launcher/CellBackground;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/CellBackground;->setSkipNextAutoLayoutAnimation(Z)V
 
-    .line 2046
+    .line 2121
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mLastDragedXY:[I
 
     const/4 v2, -0x1
@@ -8668,22 +8637,22 @@
 
     aput v2, v0, v3
 
-    .line 2047
+    .line 2122
     aput v2, v0, v1
 
-    .line 2048
+    .line 2123
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/CellLayout;->isSpaceEnough(Lcom/miui/home/launcher/DragObject;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 2049
+    .line 2124
     invoke-virtual {p0, p1, v1}, Lcom/miui/home/launcher/CellLayout;->showNoSpaceToast(Lcom/miui/home/launcher/DragObject;Z)V
 
     goto :goto_1
 
-    .line 2051
+    .line 2126
     :cond_0
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->isMultiDrag()Z
 
@@ -8691,14 +8660,14 @@
 
     if-nez v0, :cond_3
 
-    .line 2052
+    .line 2127
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 2053
+    .line 2128
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v0
@@ -8717,7 +8686,7 @@
 
     goto :goto_0
 
-    .line 2056
+    .line 2131
     :cond_1
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/CellLayout;->predictWidgetCanBeAdded(Lcom/miui/home/launcher/DragObject;)Z
 
@@ -8725,23 +8694,23 @@
 
     if-eqz v0, :cond_2
 
-    .line 2057
+    .line 2132
     invoke-virtual {p0, p1, v3}, Lcom/miui/home/launcher/CellLayout;->showNoSpaceToast(Lcom/miui/home/launcher/DragObject;Z)V
 
     goto :goto_1
 
-    .line 2059
+    .line 2134
     :cond_2
     invoke-virtual {p0, p1, v1}, Lcom/miui/home/launcher/CellLayout;->showNoSpaceToast(Lcom/miui/home/launcher/DragObject;Z)V
 
     goto :goto_1
 
-    .line 2054
+    .line 2129
     :cond_3
     :goto_0
     invoke-virtual {p0, p1, v3}, Lcom/miui/home/launcher/CellLayout;->showNoSpaceToast(Lcom/miui/home/launcher/DragObject;Z)V
 
-    .line 2063
+    .line 2138
     :goto_1
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->clearOthersToasted()V
 
@@ -8751,36 +8720,36 @@
 .method onDragExit(Lcom/miui/home/launcher/DragObject;)V
     .locals 1
 
-    .line 2126
+    .line 2201
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/CellLayout;->clearDraggingState(Lcom/miui/home/launcher/DragObject;)V
 
-    .line 2127
+    .line 2202
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->isDroped()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 2128
+    .line 2203
     invoke-direct {p0}, Lcom/miui/home/launcher/CellLayout;->rollbackLayout()V
 
-    .line 2129
+    .line 2204
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->clearBackupLayout()V
 
-    .line 2130
+    .line 2205
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mLastCoveringView:Lcom/miui/home/launcher/DropTarget;
 
     if-eqz v0, :cond_0
 
-    .line 2131
+    .line 2206
     invoke-interface {v0, p1}, Lcom/miui/home/launcher/DropTarget;->onDragExit(Lcom/miui/home/launcher/DragObject;)V
 
     const/4 v0, 0x0
 
-    .line 2132
+    .line 2207
     iput-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mLastCoveringView:Lcom/miui/home/launcher/DropTarget;
 
-    .line 2135
+    .line 2210
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mCellBackground:Lcom/miui/home/launcher/CellBackground;
 
@@ -8796,21 +8765,21 @@
 
     move-object/from16 v8, p1
 
-    .line 2322
+    .line 2397
     invoke-virtual/range {p1 .. p1}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v0
 
     iget v9, v0, Lcom/miui/home/launcher/ItemInfo;->spanX:I
 
-    .line 2323
+    .line 2398
     invoke-virtual/range {p1 .. p1}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v0
 
     iget v10, v0, Lcom/miui/home/launcher/ItemInfo;->spanY:I
 
-    .line 2324
+    .line 2399
     invoke-virtual/range {p0 .. p1}, Lcom/miui/home/launcher/CellLayout;->findDropTargetPosition(Lcom/miui/home/launcher/DragObject;)[I
 
     move-result-object v11
@@ -8821,19 +8790,19 @@
 
     if-eqz v11, :cond_2
 
-    .line 2326
+    .line 2401
     iget-object v0, v7, Lcom/miui/home/launcher/CellLayout;->mLastCoveringView:Lcom/miui/home/launcher/DropTarget;
 
     if-eqz v0, :cond_0
 
-    .line 2327
+    .line 2402
     iget-object v0, v7, Lcom/miui/home/launcher/CellLayout;->mCellBackground:Lcom/miui/home/launcher/CellBackground;
 
     invoke-virtual {v7, v0}, Lcom/miui/home/launcher/CellLayout;->removeView(Landroid/view/View;)V
 
     goto :goto_0
 
-    .line 2329
+    .line 2404
     :cond_0
     invoke-virtual/range {p1 .. p1}, Lcom/miui/home/launcher/DragObject;->isMultiDrag()Z
 
@@ -8841,14 +8810,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 2330
+    .line 2405
     iget-object v0, v7, Lcom/miui/home/launcher/CellLayout;->mCellBackground:Lcom/miui/home/launcher/CellBackground;
 
     invoke-virtual {v7, v0}, Lcom/miui/home/launcher/CellLayout;->removeView(Landroid/view/View;)V
 
     goto :goto_0
 
-    .line 2332
+    .line 2407
     :cond_1
     iget-object v1, v7, Lcom/miui/home/launcher/CellLayout;->mCellBackground:Lcom/miui/home/launcher/CellBackground;
 
@@ -8864,7 +8833,7 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/miui/home/launcher/CellLayout;->updateCellBackgroundPositionWhenDragOver(Lcom/miui/home/launcher/CellBackground;[IIILcom/miui/home/launcher/DragObject;)V
 
-    .line 2335
+    .line 2410
     :goto_0
     invoke-virtual/range {p1 .. p1}, Lcom/miui/home/launcher/DragObject;->getDragSource()Lcom/miui/home/launcher/DragSource;
 
@@ -8874,7 +8843,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 2336
+    .line 2411
     invoke-virtual/range {p1 .. p1}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v0
@@ -8883,7 +8852,7 @@
 
     iput v1, v0, Lcom/miui/home/launcher/ItemInfo;->cellX:I
 
-    .line 2337
+    .line 2412
     invoke-virtual/range {p1 .. p1}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v0
@@ -8899,11 +8868,11 @@
 
     goto :goto_1
 
-    .line 2349
+    .line 2424
     :cond_3
     iget v0, v8, Lcom/miui/home/launcher/DragObject;->x:I
 
-    .line 2350
+    .line 2425
     iget v1, v8, Lcom/miui/home/launcher/DragObject;->y:I
 
     move v14, v0
@@ -8914,7 +8883,7 @@
 
     goto :goto_2
 
-    .line 2345
+    .line 2420
     :cond_4
     :goto_1
     iget v0, v8, Lcom/miui/home/launcher/DragObject;->x:I
@@ -8923,7 +8892,7 @@
 
     sub-int/2addr v0, v1
 
-    .line 2346
+    .line 2421
     iget v1, v8, Lcom/miui/home/launcher/DragObject;->y:I
 
     iget v2, v8, Lcom/miui/home/launcher/DragObject;->yOffset:I
@@ -8936,7 +8905,7 @@
 
     move v6, v12
 
-    .line 2353
+    .line 2428
     :goto_2
     iget-object v5, v7, Lcom/miui/home/launcher/CellLayout;->mTmpDragPos:Lcom/miui/home/launcher/CellLayout$DragPos;
 
@@ -8962,7 +8931,7 @@
 
     iput-object v0, v13, Lcom/miui/home/launcher/CellLayout$DragPos;->cellXY:[I
 
-    .line 2355
+    .line 2430
     iget-object v0, v7, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
     iget-object v1, v7, Lcom/miui/home/launcher/CellLayout;->mTmpDragPos:Lcom/miui/home/launcher/CellLayout$DragPos;
@@ -8983,7 +8952,7 @@
 
     aget-object v0, v0, v1
 
-    .line 2357
+    .line 2432
     iget-object v1, v7, Lcom/miui/home/launcher/CellLayout;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/Launcher;->getLauncherMode()Lcom/miui/home/launcher/allapps/LauncherMode;
@@ -9009,7 +8978,7 @@
 
     goto/16 :goto_5
 
-    .line 2378
+    .line 2453
     :cond_6
     instance-of v2, v0, Lcom/miui/home/launcher/ItemIcon;
 
@@ -9017,7 +8986,7 @@
 
     if-eqz v2, :cond_d
 
-    .line 2379
+    .line 2454
     iget-object v2, v7, Lcom/miui/home/launcher/CellLayout;->mRectTmp:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/view/View;->getLeft()I
@@ -9038,7 +9007,7 @@
 
     invoke-virtual {v2, v5, v6, v9, v10}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 2380
+    .line 2455
     invoke-virtual/range {p1 .. p1}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v2
@@ -9057,7 +9026,7 @@
 
     goto :goto_3
 
-    .line 2383
+    .line 2458
     :cond_7
     iget-object v2, v7, Lcom/miui/home/launcher/CellLayout;->mRectTmp:Landroid/graphics/Rect;
 
@@ -9069,7 +9038,7 @@
 
     if-ge v14, v2, :cond_8
 
-    .line 2384
+    .line 2459
     iget-object v2, v7, Lcom/miui/home/launcher/CellLayout;->mTmpDragPos:Lcom/miui/home/launcher/CellLayout$DragPos;
 
     const/4 v5, 0x1
@@ -9078,7 +9047,7 @@
 
     goto :goto_4
 
-    .line 2385
+    .line 2460
     :cond_8
     iget-object v2, v7, Lcom/miui/home/launcher/CellLayout;->mRectTmp:Landroid/graphics/Rect;
 
@@ -9090,14 +9059,14 @@
 
     if-le v14, v2, :cond_9
 
-    .line 2386
+    .line 2461
     iget-object v2, v7, Lcom/miui/home/launcher/CellLayout;->mTmpDragPos:Lcom/miui/home/launcher/CellLayout$DragPos;
 
     iput v13, v2, Lcom/miui/home/launcher/CellLayout$DragPos;->stayType:I
 
     goto :goto_4
 
-    .line 2388
+    .line 2463
     :cond_9
     iget-object v2, v7, Lcom/miui/home/launcher/CellLayout;->mRectTmp:Landroid/graphics/Rect;
 
@@ -9107,14 +9076,14 @@
 
     if-eqz v2, :cond_a
 
-    .line 2389
+    .line 2464
     iget-object v2, v7, Lcom/miui/home/launcher/CellLayout;->mTmpDragPos:Lcom/miui/home/launcher/CellLayout$DragPos;
 
     iput v3, v2, Lcom/miui/home/launcher/CellLayout$DragPos;->stayType:I
 
     goto :goto_4
 
-    .line 2391
+    .line 2466
     :cond_a
     iget-object v0, v7, Lcom/miui/home/launcher/CellLayout;->mTmpDragPos:Lcom/miui/home/launcher/CellLayout$DragPos;
 
@@ -9124,7 +9093,7 @@
 
     goto :goto_4
 
-    .line 2381
+    .line 2456
     :cond_b
     :goto_3
     iget-object v2, v7, Lcom/miui/home/launcher/CellLayout;->mTmpDragPos:Lcom/miui/home/launcher/CellLayout$DragPos;
@@ -9147,20 +9116,20 @@
     :cond_d
     if-nez v0, :cond_e
 
-    .line 2397
+    .line 2472
     iget-object v2, v7, Lcom/miui/home/launcher/CellLayout;->mTmpDragPos:Lcom/miui/home/launcher/CellLayout$DragPos;
 
     iput v12, v2, Lcom/miui/home/launcher/CellLayout$DragPos;->stayType:I
 
     goto :goto_4
 
-    .line 2399
+    .line 2474
     :cond_e
     iget-object v2, v7, Lcom/miui/home/launcher/CellLayout;->mTmpDragPos:Lcom/miui/home/launcher/CellLayout$DragPos;
 
     iput v3, v2, Lcom/miui/home/launcher/CellLayout$DragPos;->stayType:I
 
-    .line 2402
+    .line 2477
     :goto_4
     iget-object v2, v7, Lcom/miui/home/launcher/CellLayout;->mLastCoveringView:Lcom/miui/home/launcher/DropTarget;
 
@@ -9168,15 +9137,15 @@
 
     if-eq v0, v2, :cond_15
 
-    .line 2403
+    .line 2478
     invoke-interface {v2, v8}, Lcom/miui/home/launcher/DropTarget;->onDragExit(Lcom/miui/home/launcher/DragObject;)V
 
-    .line 2404
+    .line 2479
     iput-object v4, v7, Lcom/miui/home/launcher/CellLayout;->mLastCoveringView:Lcom/miui/home/launcher/DropTarget;
 
     goto :goto_8
 
-    .line 2362
+    .line 2437
     :cond_f
     :goto_5
     iget-object v2, v7, Lcom/miui/home/launcher/CellLayout;->mTmpDragPos:Lcom/miui/home/launcher/CellLayout$DragPos;
@@ -9191,7 +9160,7 @@
 
     if-le v2, v4, :cond_10
 
-    .line 2363
+    .line 2438
     iget-object v2, v7, Lcom/miui/home/launcher/CellLayout;->mTmpDragPos:Lcom/miui/home/launcher/CellLayout$DragPos;
 
     iget-object v2, v2, Lcom/miui/home/launcher/CellLayout$DragPos;->cellXY:[I
@@ -9202,7 +9171,7 @@
 
     aput v4, v2, v12
 
-    .line 2365
+    .line 2440
     :cond_10
     iget-object v2, v7, Lcom/miui/home/launcher/CellLayout;->mTmpDragPos:Lcom/miui/home/launcher/CellLayout$DragPos;
 
@@ -9218,7 +9187,7 @@
 
     if-le v2, v5, :cond_11
 
-    .line 2366
+    .line 2441
     iget-object v2, v7, Lcom/miui/home/launcher/CellLayout;->mTmpDragPos:Lcom/miui/home/launcher/CellLayout$DragPos;
 
     iget-object v2, v2, Lcom/miui/home/launcher/CellLayout$DragPos;->cellXY:[I
@@ -9229,11 +9198,11 @@
 
     aput v5, v2, v4
 
-    .line 2368
+    .line 2443
     :cond_11
     iget-object v2, v7, Lcom/miui/home/launcher/CellLayout;->mCellXY:[I
 
-    .line 2369
+    .line 2444
     iget-object v5, v7, Lcom/miui/home/launcher/CellLayout;->mTmpDragPos:Lcom/miui/home/launcher/CellLayout$DragPos;
 
     iget-object v5, v5, Lcom/miui/home/launcher/CellLayout$DragPos;->cellXY:[I
@@ -9248,17 +9217,17 @@
 
     invoke-virtual {v7, v5, v6, v2}, Lcom/miui/home/launcher/CellLayout;->cellToPoint(II[I)V
 
-    .line 2370
+    .line 2445
     aget v5, v2, v12
 
     sub-int/2addr v5, v14
 
-    .line 2371
+    .line 2446
     aget v2, v2, v4
 
     sub-int/2addr v2, v15
 
-    .line 2372
+    .line 2447
     invoke-static {v5}, Ljava/lang/Math;->abs(I)I
 
     move-result v4
@@ -9269,7 +9238,7 @@
 
     if-le v4, v6, :cond_13
 
-    .line 2373
+    .line 2448
     iget-object v2, v7, Lcom/miui/home/launcher/CellLayout;->mTmpDragPos:Lcom/miui/home/launcher/CellLayout$DragPos;
 
     if-lez v5, :cond_12
@@ -9286,7 +9255,7 @@
 
     goto :goto_8
 
-    .line 2375
+    .line 2450
     :cond_13
     iget-object v4, v7, Lcom/miui/home/launcher/CellLayout;->mTmpDragPos:Lcom/miui/home/launcher/CellLayout$DragPos;
 
@@ -9302,7 +9271,7 @@
     :goto_7
     iput v2, v4, Lcom/miui/home/launcher/CellLayout$DragPos;->stayType:I
 
-    .line 2408
+    .line 2483
     :cond_15
     :goto_8
     iget-object v2, v7, Lcom/miui/home/launcher/CellLayout;->mLastDragedXY:[I
@@ -9323,7 +9292,7 @@
 
     sub-int/2addr v2, v14
 
-    .line 2410
+    .line 2485
     invoke-static {v2}, Ljava/lang/Math;->abs(I)I
 
     move-result v2
@@ -9336,7 +9305,7 @@
 
     sub-int/2addr v2, v15
 
-    .line 2411
+    .line 2486
     invoke-static {v2}, Ljava/lang/Math;->abs(I)I
 
     move-result v2
@@ -9348,16 +9317,16 @@
     :cond_16
     const/4 v4, 0x1
 
-    .line 2415
+    .line 2490
     :cond_17
     iget-object v1, v7, Lcom/miui/home/launcher/CellLayout;->mLastDragedXY:[I
 
     aput v14, v1, v12
 
-    .line 2416
+    .line 2491
     aput v15, v1, v4
 
-    .line 2418
+    .line 2493
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
@@ -9376,14 +9345,14 @@
 
     iget-object v2, v7, Lcom/miui/home/launcher/CellLayout;->mTmpDragPos:Lcom/miui/home/launcher/CellLayout$DragPos;
 
-    .line 2419
+    .line 2494
     invoke-virtual {v1, v2}, Lcom/miui/home/launcher/CellLayout$DragPos;->equal(Lcom/miui/home/launcher/CellLayout$DragPos;)Z
 
     move-result v1
 
     if-nez v1, :cond_1b
 
-    .line 2420
+    .line 2495
     iget-object v1, v7, Lcom/miui/home/launcher/CellLayout;->mLastDragPos:Lcom/miui/home/launcher/CellLayout$DragPos;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/CellLayout$DragPos;->isInvalid()Z
@@ -9394,7 +9363,7 @@
 
     if-eqz v11, :cond_18
 
-    .line 2421
+    .line 2496
     aget v1, v11, v12
 
     const/4 v2, 0x1
@@ -9407,7 +9376,7 @@
 
     invoke-virtual {v8, v1}, Lcom/miui/home/launcher/DragObject;->announce(Ljava/lang/CharSequence;)V
 
-    .line 2423
+    .line 2498
     :cond_18
     iget-object v1, v7, Lcom/miui/home/launcher/CellLayout;->mLastDragPos:Lcom/miui/home/launcher/CellLayout$DragPos;
 
@@ -9415,7 +9384,7 @@
 
     invoke-virtual {v1, v2}, Lcom/miui/home/launcher/CellLayout$DragPos;->set(Lcom/miui/home/launcher/CellLayout$DragPos;)V
 
-    .line 2424
+    .line 2499
     invoke-virtual/range {p0 .. p0}, Lcom/miui/home/launcher/CellLayout;->getHandler()Landroid/os/Handler;
 
     move-result-object v1
@@ -9424,22 +9393,22 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 2425
+    .line 2500
     iget-object v1, v7, Lcom/miui/home/launcher/CellLayout;->mStayConfirm:Lcom/miui/home/launcher/CellLayout$StayConfirm;
 
-    invoke-static {v1, v8}, Lcom/miui/home/launcher/CellLayout$StayConfirm;->access$1602(Lcom/miui/home/launcher/CellLayout$StayConfirm;Lcom/miui/home/launcher/DragObject;)Lcom/miui/home/launcher/DragObject;
+    invoke-static {v1, v8}, Lcom/miui/home/launcher/CellLayout$StayConfirm;->access$1702(Lcom/miui/home/launcher/CellLayout$StayConfirm;Lcom/miui/home/launcher/DragObject;)Lcom/miui/home/launcher/DragObject;
 
-    .line 2426
+    .line 2501
     instance-of v0, v0, Lcom/miui/home/launcher/FolderIcon;
 
-    .line 2427
+    .line 2502
     invoke-virtual/range {p1 .. p1}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v1
 
     instance-of v1, v1, Lcom/miui/home/launcher/ShortcutInfo;
 
-    .line 2428
+    .line 2503
     iget-object v2, v7, Lcom/miui/home/launcher/CellLayout;->mStayConfirm:Lcom/miui/home/launcher/CellLayout$StayConfirm;
 
     iget-object v4, v7, Lcom/miui/home/launcher/CellLayout;->mLastDragPos:Lcom/miui/home/launcher/CellLayout$DragPos;
@@ -9476,7 +9445,7 @@
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .locals 0
 
-    .line 2837
+    .line 2908
     invoke-super {p0, p1}, Lcom/miui/launcher/views/LauncherViewGroup;->onDraw(Landroid/graphics/Canvas;)V
 
     return-void
@@ -9491,7 +9460,7 @@
 
     move-object/from16 v2, p2
 
-    .line 996
+    .line 1084
     invoke-virtual/range {p0 .. p0}, Lcom/miui/home/launcher/CellLayout;->getHandler()Landroid/os/Handler;
 
     move-result-object v3
@@ -9502,46 +9471,46 @@
 
     return v4
 
-    .line 1000
+    .line 1088
     :cond_0
     iget-object v5, v0, Lcom/miui/home/launcher/CellLayout;->mStayConfirm:Lcom/miui/home/launcher/CellLayout$StayConfirm;
 
     invoke-virtual {v3, v5}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 1001
+    .line 1089
     iget-object v3, v0, Lcom/miui/home/launcher/CellLayout;->mLastCoveringView:Lcom/miui/home/launcher/DropTarget;
 
     if-eqz v3, :cond_2
 
-    .line 1002
+    .line 1090
     invoke-interface {v3, v1}, Lcom/miui/home/launcher/DropTarget;->onDrop(Lcom/miui/home/launcher/DragObject;)Z
 
     move-result v2
 
-    .line 1003
+    .line 1091
     invoke-virtual/range {p1 .. p1}, Lcom/miui/home/launcher/DragObject;->isLastObject()Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 1004
+    .line 1092
     iget-object v3, v0, Lcom/miui/home/launcher/CellLayout;->mLastCoveringView:Lcom/miui/home/launcher/DropTarget;
 
     invoke-interface {v3, v1}, Lcom/miui/home/launcher/DropTarget;->onDragExit(Lcom/miui/home/launcher/DragObject;)V
 
     const/4 v1, 0x0
 
-    .line 1005
+    .line 1093
     iput-object v1, v0, Lcom/miui/home/launcher/CellLayout;->mLastCoveringView:Lcom/miui/home/launcher/DropTarget;
 
-    .line 1006
+    .line 1094
     invoke-direct/range {p0 .. p0}, Lcom/miui/home/launcher/CellLayout;->rollbackLayout()V
 
     :cond_1
     return v2
 
-    .line 1011
+    .line 1099
     :cond_2
     invoke-virtual/range {p0 .. p1}, Lcom/miui/home/launcher/CellLayout;->findDropTargetPosition(Lcom/miui/home/launcher/DragObject;)[I
 
@@ -9551,7 +9520,7 @@
 
     return v4
 
-    .line 1016
+    .line 1104
     :cond_3
     invoke-virtual/range {p1 .. p1}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
 
@@ -9561,19 +9530,19 @@
 
     if-nez v2, :cond_4
 
-    .line 1020
+    .line 1108
     aget v1, v3, v4
 
     iput v1, v5, Lcom/miui/home/launcher/ItemInfo;->cellX:I
 
-    .line 1021
+    .line 1109
     aget v1, v3, v6
 
     iput v1, v5, Lcom/miui/home/launcher/ItemInfo;->cellY:I
 
     return v6
 
-    .line 1025
+    .line 1113
     :cond_4
     instance-of v7, v5, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;
 
@@ -9601,7 +9570,7 @@
 
     if-eq v7, v8, :cond_6
 
-    .line 1027
+    .line 1115
     :cond_5
     iget-object v9, v0, Lcom/miui/home/launcher/CellLayout;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -9615,7 +9584,7 @@
 
     long-to-int v12, v7
 
-    .line 1028
+    .line 1116
     invoke-virtual/range {p0 .. p0}, Lcom/miui/home/launcher/CellLayout;->getScreenId()J
 
     move-result-wide v7
@@ -9638,51 +9607,51 @@
 
     move/from16 v17, v8
 
-    .line 1027
+    .line 1115
     invoke-static/range {v9 .. v19}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackDragMiuiWidget(Landroid/content/Context;Lcom/miui/home/launcher/MIUIWidgetBasicInfo;IIIIIIIII)V
 
-    .line 1033
+    .line 1121
     :cond_6
     invoke-direct {v0, v2}, Lcom/miui/home/launcher/CellLayout;->getChildInfo(Landroid/view/View;)Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v7
 
-    .line 1034
+    .line 1122
     invoke-virtual/range {p0 .. p0}, Lcom/miui/home/launcher/CellLayout;->getScreenId()J
 
     move-result-wide v8
 
     iput-wide v8, v7, Lcom/miui/home/launcher/ItemInfo;->screenId:J
 
-    .line 1035
+    .line 1123
     aget v8, v3, v4
 
     iput v8, v7, Lcom/miui/home/launcher/ItemInfo;->cellX:I
 
-    .line 1036
+    .line 1124
     aget v3, v3, v6
 
     iput v3, v7, Lcom/miui/home/launcher/ItemInfo;->cellY:I
 
     const-wide/16 v8, -0x64
 
-    .line 1037
+    .line 1125
     iput-wide v8, v7, Lcom/miui/home/launcher/ItemInfo;->container:J
 
-    .line 1039
+    .line 1127
     invoke-virtual/range {p2 .. p2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v3
 
     check-cast v3, Lcom/miui/home/launcher/CellLayout$LayoutParams;
 
-    .line 1040
+    .line 1128
     iput-boolean v4, v3, Lcom/miui/home/launcher/CellLayout$LayoutParams;->isDragging:Z
 
-    .line 1041
+    .line 1129
     iput-boolean v6, v3, Lcom/miui/home/launcher/CellLayout$LayoutParams;->dropped:Z
 
-    .line 1042
+    .line 1130
     invoke-virtual/range {p2 .. p2}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v7
@@ -9691,28 +9660,28 @@
 
     const/4 v4, -0x1
 
-    .line 1043
+    .line 1131
     invoke-virtual {v0, v2, v4, v3}, Lcom/miui/home/launcher/CellLayout;->addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1045
+    .line 1133
     invoke-virtual/range {p2 .. p2}, Landroid/view/View;->requestFocus()Z
 
     goto :goto_0
 
-    .line 1047
+    .line 1135
     :cond_7
     invoke-virtual/range {p2 .. p2}, Landroid/view/View;->requestLayout()V
 
-    .line 1048
+    .line 1136
     invoke-virtual {v0, v2, v4}, Lcom/miui/home/launcher/CellLayout;->updateCellOccupiedMarks(Landroid/view/View;Z)V
 
-    .line 1050
+    .line 1138
     :goto_0
     instance-of v3, v2, Lcom/miui/home/launcher/interfaces/IEditable;
 
     if-eqz v3, :cond_8
 
-    .line 1051
+    .line 1139
     move-object v3, v2
 
     check-cast v3, Lcom/miui/home/launcher/interfaces/IEditable;
@@ -9725,15 +9694,15 @@
 
     invoke-interface {v3, v4, v6}, Lcom/miui/home/launcher/interfaces/IEditable;->setEditMode(ZZ)V
 
-    .line 1053
+    .line 1141
     :cond_8
     invoke-virtual/range {p1 .. p1}, Lcom/miui/home/launcher/DragObject;->getDragView()Lcom/miui/home/launcher/DragView;
 
     move-result-object v3
 
-    new-instance v4, Lcom/miui/home/launcher/CellLayout$2;
+    new-instance v4, Lcom/miui/home/launcher/CellLayout$5;
 
-    invoke-direct {v4, v0, v5, v1, v2}, Lcom/miui/home/launcher/CellLayout$2;-><init>(Lcom/miui/home/launcher/CellLayout;Lcom/miui/home/launcher/ItemInfo;Lcom/miui/home/launcher/DragObject;Landroid/view/View;)V
+    invoke-direct {v4, v0, v5, v1, v2}, Lcom/miui/home/launcher/CellLayout$5;-><init>(Lcom/miui/home/launcher/CellLayout;Lcom/miui/home/launcher/ItemInfo;Lcom/miui/home/launcher/DragObject;Landroid/view/View;)V
 
     invoke-virtual {v3, v4}, Lcom/miui/home/launcher/DragView;->setOnRemoveCallback(Ljava/lang/Runnable;)V
 
@@ -9743,14 +9712,14 @@
 .method onDropAborted(Landroid/view/View;)V
     .locals 2
 
-    .line 1108
+    .line 1196
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 1110
+    .line 1198
     iget-object v1, p0, Lcom/miui/home/launcher/CellLayout;->mStayConfirm:Lcom/miui/home/launcher/CellLayout$StayConfirm;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
@@ -9758,7 +9727,7 @@
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 1113
+    .line 1201
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p1
@@ -9767,10 +9736,10 @@
 
     const/4 v0, 0x0
 
-    .line 1114
+    .line 1202
     iput-boolean v0, p1, Lcom/miui/home/launcher/CellLayout$LayoutParams;->isDragging:Z
 
-    .line 1115
+    .line 1203
     invoke-direct {p0}, Lcom/miui/home/launcher/CellLayout;->rollbackLayout()V
 
     :cond_1
@@ -9780,13 +9749,13 @@
 .method onDropCompleted()V
     .locals 0
 
-    .line 1092
+    .line 1180
     invoke-direct {p0}, Lcom/miui/home/launcher/CellLayout;->saveCurrentLayout()V
 
-    .line 1093
+    .line 1181
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->clearBackupLayout()V
 
-    .line 1094
+    .line 1182
     invoke-direct {p0}, Lcom/miui/home/launcher/CellLayout;->updateChildColorIfNeed()V
 
     return-void
@@ -9795,17 +9764,17 @@
 .method public onDropFormThumbnail(Landroid/view/View;)Z
     .locals 4
 
-    .line 1072
+    .line 1160
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/CellLayout;->getChildInfo(Landroid/view/View;)Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v0
 
     const-wide/16 v1, -0x64
 
-    .line 1073
+    .line 1161
     iput-wide v1, v0, Lcom/miui/home/launcher/ItemInfo;->container:J
 
-    .line 1074
+    .line 1162
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
@@ -9814,15 +9783,15 @@
 
     const/4 v1, 0x0
 
-    .line 1075
+    .line 1163
     iput-boolean v1, v0, Lcom/miui/home/launcher/CellLayout$LayoutParams;->isDragging:Z
 
     const/4 v2, 0x1
 
-    .line 1076
+    .line 1164
     iput-boolean v2, v0, Lcom/miui/home/launcher/CellLayout$LayoutParams;->dropped:Z
 
-    .line 1077
+    .line 1165
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v3
@@ -9831,25 +9800,25 @@
 
     const/4 v1, -0x1
 
-    .line 1078
+    .line 1166
     invoke-virtual {p0, p1, v1, v0}, Lcom/miui/home/launcher/CellLayout;->addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
 
     goto :goto_0
 
-    .line 1080
+    .line 1168
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->requestLayout()V
 
-    .line 1081
+    .line 1169
     invoke-virtual {p0, p1, v1}, Lcom/miui/home/launcher/CellLayout;->updateCellOccupiedMarks(Landroid/view/View;Z)V
 
-    .line 1083
+    .line 1171
     :goto_0
     instance-of v0, p1, Lcom/miui/home/launcher/interfaces/IEditable;
 
     if-eqz v0, :cond_1
 
-    .line 1084
+    .line 1172
     move-object v0, p1
 
     check-cast v0, Lcom/miui/home/launcher/interfaces/IEditable;
@@ -9865,10 +9834,10 @@
     :cond_1
     const/4 v0, 0x0
 
-    .line 1086
+    .line 1174
     invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
 
-    .line 1087
+    .line 1175
     invoke-virtual {p1}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
@@ -9895,12 +9864,12 @@
 .method onDropStart(Lcom/miui/home/launcher/DragObject;)V
     .locals 0
 
-    .line 2139
+    .line 2214
     iget-boolean p1, p0, Lcom/miui/home/launcher/CellLayout;->mLayoutBackupValid:Z
 
     if-nez p1, :cond_0
 
-    .line 2140
+    .line 2215
     invoke-direct {p0}, Lcom/miui/home/launcher/CellLayout;->backupLayout()V
 
     :cond_0
@@ -9910,23 +9879,18 @@
 .method public onInvisible(I)V
     .locals 1
 
-    .line 3109
-    sget-object v0, Lcom/miui/home/launcher/CellLayout;->sOnItemInvisibleWorker:Lcom/miui/home/launcher/CellLayout$ItemVisibilityWorker;
+    .line 3179
+    sget-object v0, Lcom/miui/home/launcher/CellLayout;->sOnItemInVisibleWorker:Lcom/miui/home/launcher/CellLayout$ItemVisibilityWorker;
 
     invoke-direct {p0, v0, p1}, Lcom/miui/home/launcher/CellLayout;->workOnAllCellLayoutItem(Lcom/miui/home/launcher/CellLayout$ItemVisibilityWorker;I)V
 
     const/4 p1, 0x0
 
-    .line 3110
+    .line 3180
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/CellLayout;->setVisibleForMaml(Z)V
 
-    .line 3111
+    .line 3181
     invoke-direct {p0}, Lcom/miui/home/launcher/CellLayout;->trackExposeEvent()V
-
-    .line 3112
-    iget-object p1, p0, Lcom/miui/home/launcher/CellLayout;->mNewInstallAnimHelper:Lcom/miui/home/launcher/NewInstallAnimHelper;
-
-    invoke-virtual {p1}, Lcom/miui/home/launcher/NewInstallAnimHelper;->onParentInvisible()V
 
     return-void
 .end method
@@ -9934,7 +9898,7 @@
 .method protected onLayout(ZIIII)V
     .locals 6
 
-    .line 644
+    .line 732
     iget-object p1, p0, Lcom/miui/home/launcher/CellLayout;->mXs:[I
 
     if-eqz p1, :cond_3
@@ -9945,7 +9909,7 @@
 
     goto :goto_2
 
-    .line 647
+    .line 735
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->getChildCount()I
 
@@ -9958,12 +9922,12 @@
     :goto_0
     if-ge p3, p1, :cond_2
 
-    .line 650
+    .line 738
     invoke-virtual {p0, p3}, Lcom/miui/home/launcher/CellLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object p4
 
-    .line 651
+    .line 739
     invoke-virtual {p4}, Landroid/view/View;->getVisibility()I
 
     move-result p5
@@ -9972,7 +9936,7 @@
 
     if-eq p5, v0, :cond_1
 
-    .line 653
+    .line 741
     invoke-virtual {p4}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p5
@@ -9981,14 +9945,14 @@
 
     check-cast v4, Lcom/miui/home/launcher/CellLayout$LayoutParams;
 
-    .line 654
+    .line 742
     invoke-virtual {p4}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object p5
 
     check-cast p5, Lcom/miui/home/launcher/ItemInfo;
 
-    .line 660
+    .line 748
     :try_start_0
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mXs:[I
 
@@ -9996,7 +9960,7 @@
 
     aget v3, v0, v1
 
-    .line 661
+    .line 749
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mYs:[I
 
     iget p5, p5, Lcom/miui/home/launcher/ItemInfo;->cellY:I
@@ -10005,7 +9969,7 @@
     :try_end_0
     .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 667
+    .line 755
     iget p5, v4, Lcom/miui/home/launcher/CellLayout$LayoutParams;->width:I
 
     add-int/2addr p5, v3
@@ -10016,32 +9980,32 @@
 
     invoke-virtual {p4, v3, v5, p5, v0}, Landroid/view/View;->layout(IIII)V
 
-    .line 669
+    .line 757
     iget-boolean p4, v4, Lcom/miui/home/launcher/CellLayout$LayoutParams;->dropped:Z
 
     if-eqz p4, :cond_1
 
-    .line 670
+    .line 758
     iput-boolean p2, v4, Lcom/miui/home/launcher/CellLayout$LayoutParams;->dropped:Z
 
-    .line 672
+    .line 760
     iget-object v2, p0, Lcom/miui/home/launcher/CellLayout;->mCellXY:[I
 
-    .line 673
+    .line 761
     invoke-virtual {p0, v2}, Lcom/miui/home/launcher/CellLayout;->getLocationOnScreen([I)V
 
-    .line 674
+    .line 762
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getParallelExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object p4
 
-    new-instance p5, Lcom/miui/home/launcher/CellLayout$1;
+    new-instance p5, Lcom/miui/home/launcher/CellLayout$4;
 
     move-object v0, p5
 
     move-object v1, p0
 
-    invoke-direct/range {v0 .. v5}, Lcom/miui/home/launcher/CellLayout$1;-><init>(Lcom/miui/home/launcher/CellLayout;[IILcom/miui/home/launcher/CellLayout$LayoutParams;I)V
+    invoke-direct/range {v0 .. v5}, Lcom/miui/home/launcher/CellLayout$4;-><init>(Lcom/miui/home/launcher/CellLayout;[IILcom/miui/home/launcher/CellLayout$LayoutParams;I)V
 
     invoke-interface {p4, p5}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
@@ -10052,7 +10016,7 @@
 
     const-string p2, "onLayout exception"
 
-    .line 663
+    .line 751
     invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -10074,36 +10038,36 @@
 .method protected onMeasure(II)V
     .locals 2
 
-    .line 576
+    .line 668
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellWidth()I
 
     move-result v0
 
     iput v0, p0, Lcom/miui/home/launcher/CellLayout;->mCellWidth:I
 
-    .line 577
+    .line 669
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellHeight()I
 
     move-result v0
 
     iput v0, p0, Lcom/miui/home/launcher/CellLayout;->mCellHeight:I
 
-    .line 578
+    .line 670
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getMode(I)I
 
     move-result v0
 
-    .line 579
+    .line 671
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result p1
 
-    .line 581
+    .line 673
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getMode(I)I
 
     move-result v1
 
-    .line 582
+    .line 674
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result p2
@@ -10112,10 +10076,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 588
+    .line 680
     invoke-virtual {p0, p1, p2}, Lcom/miui/home/launcher/CellLayout;->setMeasuredDimension(II)V
 
-    .line 590
+    .line 682
     iget-object p1, p0, Lcom/miui/home/launcher/CellLayout;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->isInNormalEditing()Z
@@ -10124,10 +10088,10 @@
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/CellLayout;->setAllLayoutValues(Z)V
 
-    .line 591
-    invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->calculateXsAndYs()V
+    .line 683
+    invoke-direct {p0}, Lcom/miui/home/launcher/CellLayout;->calculateXsAndYs()V
 
-    .line 592
+    .line 684
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->getChildCount()I
 
     move-result p1
@@ -10137,12 +10101,12 @@
     :goto_0
     if-ge p2, p1, :cond_0
 
-    .line 594
+    .line 686
     invoke-virtual {p0, p2}, Lcom/miui/home/launcher/CellLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 595
+    .line 687
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/CellLayout;->measureChild(Landroid/view/View;)V
 
     add-int/lit8 p2, p2, 0x1
@@ -10152,7 +10116,7 @@
     :cond_0
     return-void
 
-    .line 585
+    .line 677
     :cond_1
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -10171,96 +10135,86 @@
 
     const/4 p1, 0x0
 
-    .line 3133
+    .line 3202
     :goto_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->getChildCount()I
 
     move-result v0
 
-    if-ge p1, v0, :cond_1
+    if-ge p1, v0, :cond_2
 
-    .line 3134
+    .line 3203
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/CellLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 3135
-    instance-of v1, v0, Lcom/miui/home/launcher/UpdateIconSize;
+    .line 3204
+    instance-of v1, v0, Lcom/miui/home/launcher/ItemIcon;
 
-    if-eqz v1, :cond_0
+    if-nez v1, :cond_0
 
-    .line 3136
-    check-cast v0, Lcom/miui/home/launcher/UpdateIconSize;
+    instance-of v1, v0, Lcom/miui/home/launcher/gadget/ClearButton;
 
-    invoke-interface {v0}, Lcom/miui/home/launcher/UpdateIconSize;->updateSizeOnIconSizeChanged()V
+    if-eqz v1, :cond_1
 
+    .line 3205
     :cond_0
+    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/CellLayout;->requestLauncherIconLayout(Landroid/view/View;)V
+
+    .line 3206
+    instance-of v1, v0, Lcom/miui/home/launcher/FolderIcon;
+
+    if-eqz v1, :cond_1
+
+    .line 3207
+    check-cast v0, Lcom/miui/home/launcher/FolderIcon;
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/FolderIcon;->requestPreviewLayout()V
+
+    :cond_1
     add-int/lit8 p1, p1, 0x1
 
     goto :goto_0
 
-    :cond_1
+    :cond_2
     return-void
 .end method
 
 .method public onMultiWindowModeChanged(Z)V
     .locals 0
 
-    .line 2685
-    invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->updateCellPaddingTopOnFold()V
+    .line 2739
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getWorkspaceCellPaddingTop()I
 
-    .line 2686
+    move-result p1
+
+    invoke-virtual {p0, p1}, Lcom/miui/home/launcher/CellLayout;->setCellPaddingTop(I)V
+
+    .line 2740
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellWidth()I
 
     move-result p1
 
     iput p1, p0, Lcom/miui/home/launcher/CellLayout;->mCellWidth:I
 
-    .line 2687
+    .line 2741
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellHeight()I
 
     move-result p1
 
     iput p1, p0, Lcom/miui/home/launcher/CellLayout;->mCellHeight:I
 
-    .line 2688
+    .line 2742
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->requestLayout()V
 
     return-void
 .end method
 
 .method public onScreenOrientationChanged()V
-    .locals 1
+    .locals 0
 
-    .line 2665
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellWidth()I
-
-    move-result v0
-
-    iput v0, p0, Lcom/miui/home/launcher/CellLayout;->mCellWidth:I
-
-    .line 2666
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellHeight()I
-
-    move-result v0
-
-    iput v0, p0, Lcom/miui/home/launcher/CellLayout;->mCellHeight:I
-
-    .line 2667
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getWorkspaceCellPaddingSide()I
-
-    move-result v0
-
-    iput v0, p0, Lcom/miui/home/launcher/CellLayout;->mCellPaddingLeft:I
-
-    .line 2668
-    invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->updateCellPaddingTopOnFold()V
-
-    .line 2669
-    invoke-direct {p0}, Lcom/miui/home/launcher/CellLayout;->updateCellContainerHeight()V
-
-    .line 2670
-    invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->requestLayout()V
+    .line 2729
+    invoke-direct {p0}, Lcom/miui/home/launcher/CellLayout;->loadGridConfig()V
 
     return-void
 .end method
@@ -10268,44 +10222,21 @@
 .method public onScreenSizeChanged()V
     .locals 1
 
-    .line 2674
+    .line 2733
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellWidth()I
 
     move-result v0
 
     iput v0, p0, Lcom/miui/home/launcher/CellLayout;->mCellWidth:I
 
-    .line 2675
+    .line 2734
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellHeight()I
 
     move-result v0
 
     iput v0, p0, Lcom/miui/home/launcher/CellLayout;->mCellHeight:I
 
-    .line 2676
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getWorkspaceCellPaddingSide()I
-
-    move-result v0
-
-    iput v0, p0, Lcom/miui/home/launcher/CellLayout;->mCellPaddingLeft:I
-
-    .line 2677
-    invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->updateCellPaddingTopOnFold()V
-
-    .line 2678
-    invoke-direct {p0}, Lcom/miui/home/launcher/CellLayout;->updateCellContainerHeight()V
-
-    .line 2679
-    iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mEditAnimContoller:Lcom/miui/home/launcher/anim/EditAnimController;
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/anim/EditAnimController;->updateParam()V
-
-    .line 2680
-    iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mEditAnimContoller:Lcom/miui/home/launcher/anim/EditAnimController;
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/anim/EditAnimController;->resetAllViews()V
-
-    .line 2681
+    .line 2735
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->requestLayout()V
 
     return-void
@@ -10314,17 +10245,17 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 1
 
-    .line 481
+    .line 578
     iget-boolean p1, p0, Lcom/miui/home/launcher/CellLayout;->mDisableTouch:Z
 
     if-eqz p1, :cond_0
 
-    .line 482
+    .line 579
     iget-object p1, p0, Lcom/miui/home/launcher/CellLayout;->mOnLongClickAgent:Lcom/miui/home/launcher/OnLongClickAgent;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/OnLongClickAgent;->cancelCustomziedLongPress()V
 
-    .line 483
+    .line 580
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object p1
@@ -10346,53 +10277,37 @@
 .end method
 
 .method public onViewAdded(Landroid/view/View;)V
-    .locals 3
+    .locals 2
 
-    .line 2649
+    .line 2723
     invoke-super {p0, p1}, Lcom/miui/launcher/views/LauncherViewGroup;->onViewAdded(Landroid/view/View;)V
 
-    .line 2650
+    .line 2724
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/CellLayout;->debugIcon(Landroid/view/View;)V
 
-    .line 2651
+    .line 2725
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
-    move-result-object v0
+    move-result-object p1
 
-    new-instance v1, Lcom/miui/home/launcher/common/messages/CellLayoutMessage;
+    new-instance v0, Lcom/miui/home/launcher/common/messages/CellLayoutMessage;
 
-    const/4 v2, 0x1
+    const/4 v1, 0x1
 
-    invoke-direct {v1, v2}, Lcom/miui/home/launcher/common/messages/CellLayoutMessage;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/miui/home/launcher/common/messages/CellLayoutMessage;-><init>(I)V
 
-    invoke-virtual {v0, v1}, Lorg/greenrobot/eventbus/EventBus;->post(Ljava/lang/Object;)V
+    invoke-virtual {p1, v0}, Lorg/greenrobot/eventbus/EventBus;->post(Ljava/lang/Object;)V
 
-    .line 2652
-    invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->updateNewInstallFlags()V
-
-    .line 2653
-    instance-of v0, p1, Lcom/miui/home/launcher/NewInstallAppIcon;
-
-    if-eqz v0, :cond_0
-
-    .line 2654
-    iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mNewInstallAnimHelper:Lcom/miui/home/launcher/NewInstallAnimHelper;
-
-    check-cast p1, Lcom/miui/home/launcher/NewInstallAppIcon;
-
-    invoke-virtual {v0, p1}, Lcom/miui/home/launcher/NewInstallAnimHelper;->onNewVisibleItemAdd(Lcom/miui/home/launcher/NewInstallAppIcon;)V
-
-    :cond_0
     return-void
 .end method
 
 .method public onViewRemoved(Landroid/view/View;)V
     .locals 0
 
-    .line 2629
+    .line 2704
     invoke-super {p0, p1}, Lcom/miui/launcher/views/LauncherViewGroup;->onViewRemoved(Landroid/view/View;)V
 
-    .line 2630
+    .line 2705
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/CellLayout;->debugIcon(Landroid/view/View;)V
 
     return-void
@@ -10401,24 +10316,24 @@
 .method public onVisible(I)V
     .locals 2
 
-    .line 3048
+    .line 3119
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/miui/home/launcher/CellLayout;->mStartShowingTime:J
 
-    .line 3049
+    .line 3120
     sget-object v0, Lcom/miui/home/launcher/CellLayout;->sOnItemVisibleWorker:Lcom/miui/home/launcher/CellLayout$ItemVisibilityWorker;
 
     invoke-direct {p0, v0, p1}, Lcom/miui/home/launcher/CellLayout;->workOnAllCellLayoutItem(Lcom/miui/home/launcher/CellLayout$ItemVisibilityWorker;I)V
 
     const/4 p1, 0x1
 
-    .line 3050
+    .line 3121
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/CellLayout;->setVisibleForMaml(Z)V
 
-    .line 3051
+    .line 3122
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->isDrawerMode()Z
@@ -10445,7 +10360,7 @@
 
     if-gt p1, v0, :cond_0
 
-    .line 3053
+    .line 3124
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -10458,36 +10373,31 @@
 
     invoke-static {p1, v0, v1}, Lcom/miui/home/launcher/util/WorkProfileHelper;->showWorkProfileTipsOnDesktop(Landroid/content/Context;Landroid/view/View;Ljava/lang/String;)V
 
-    .line 3055
     :cond_0
-    iget-object p1, p0, Lcom/miui/home/launcher/CellLayout;->mNewInstallAnimHelper:Lcom/miui/home/launcher/NewInstallAnimHelper;
-
-    invoke-virtual {p1}, Lcom/miui/home/launcher/NewInstallAnimHelper;->onParentVisible()V
-
     return-void
 .end method
 
 .method public onWallpaperColorChanged()V
     .locals 2
 
-    .line 338
+    .line 456
     invoke-static {p0}, Lcom/miui/home/launcher/WallpaperUtils;->varyViewGroupByWallpaper(Landroid/view/ViewGroup;)V
 
-    .line 339
+    .line 457
     invoke-static {}, Lcom/miui/home/launcher/WallpaperUtils;->hasAppliedLightWallpaper()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 340
+    .line 458
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f0801b9
+    const v1, 0x7f0800cd
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -10497,7 +10407,7 @@
 
     goto :goto_0
 
-    .line 342
+    .line 460
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -10505,7 +10415,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0801b8
+    const v1, 0x7f0800cc
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -10517,10 +10427,16 @@
     return-void
 .end method
 
+.method public performDropFinishAnimation(Landroid/view/View;)V
+    .locals 0
+
+    return-void
+.end method
+
 .method pointToCell(II[I)V
     .locals 2
 
-    .line 511
+    .line 608
     iget v0, p0, Lcom/miui/home/launcher/CellLayout;->mCellPaddingLeft:I
 
     sub-int/2addr p1, v0
@@ -10537,7 +10453,7 @@
 
     aput p1, p3, v0
 
-    .line 512
+    .line 609
     iget p1, p0, Lcom/miui/home/launcher/CellLayout;->mCellPaddingTop:I
 
     sub-int/2addr p2, p1
@@ -10554,7 +10470,7 @@
 
     aput p2, p3, p1
 
-    .line 514
+    .line 611
     aget p2, p3, v0
 
     iget v1, p0, Lcom/miui/home/launcher/CellLayout;->mHCells:I
@@ -10571,7 +10487,7 @@
 
     aput p2, p3, v0
 
-    .line 515
+    .line 612
     aget p2, p3, p1
 
     iget v1, p0, Lcom/miui/home/launcher/CellLayout;->mVCells:I
@@ -10594,7 +10510,7 @@
 .method protected positionIndexToCell(I[I)V
     .locals 2
 
-    .line 2444
+    .line 2519
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isLayoutRtl()Z
 
     move-result v0
@@ -10621,7 +10537,7 @@
 
     aput v1, p2, v0
 
-    .line 2445
+    .line 2520
     iget v0, p0, Lcom/miui/home/launcher/CellLayout;->mHCells:I
 
     div-int/2addr p1, v0
@@ -10636,23 +10552,23 @@
 .method public preRemoveView(Landroid/view/View;)V
     .locals 1
 
-    .line 2692
+    .line 2746
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mLastCoveringView:Lcom/miui/home/launcher/DropTarget;
 
     if-ne v0, p1, :cond_0
 
     const/4 v0, 0x0
 
-    .line 2693
+    .line 2747
     iput-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mLastCoveringView:Lcom/miui/home/launcher/DropTarget;
 
     :cond_0
     const/4 v0, 0x1
 
-    .line 2695
+    .line 2749
     invoke-virtual {p0, p1, v0}, Lcom/miui/home/launcher/CellLayout;->updateCellOccupiedMarks(Landroid/view/View;Z)V
 
-    .line 2696
+    .line 2750
     invoke-direct {p0}, Lcom/miui/home/launcher/CellLayout;->backupLayout()V
 
     return-void
@@ -10665,7 +10581,7 @@
 
     if-eqz p1, :cond_4
 
-    .line 2903
+    .line 2974
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->isMultiDrag()Z
 
     move-result v1
@@ -10680,13 +10596,13 @@
 
     goto :goto_1
 
-    .line 2907
+    .line 2978
     :cond_0
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2908
+    .line 2979
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->getChildCount()I
 
     move-result v2
@@ -10696,7 +10612,7 @@
     :goto_0
     if-ge v3, v2, :cond_3
 
-    .line 2910
+    .line 2981
     invoke-virtual {p0, v3}, Lcom/miui/home/launcher/CellLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v4
@@ -10709,7 +10625,7 @@
 
     if-eqz v4, :cond_2
 
-    .line 2911
+    .line 2982
     iget v5, v4, Lcom/miui/home/launcher/ItemInfo;->spanX:I
 
     const/4 v6, 0x1
@@ -10720,7 +10636,7 @@
 
     if-le v5, v6, :cond_2
 
-    .line 2912
+    .line 2983
     :cond_1
     new-instance v5, Lcom/miui/home/launcher/CellLayout$Widget;
 
@@ -10737,13 +10653,13 @@
 
     goto :goto_0
 
-    .line 2915
+    .line 2986
     :cond_3
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object p1
 
-    .line 2916
+    .line 2987
     new-instance v2, Lcom/miui/home/launcher/CellLayout$Widget;
 
     iget v3, p1, Lcom/miui/home/launcher/ItemInfo;->spanX:I
@@ -10754,7 +10670,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2917
+    .line 2988
     new-instance p1, Landroid/graphics/Region;
 
     iget v2, p0, Lcom/miui/home/launcher/CellLayout;->mHCells:I
@@ -10763,7 +10679,7 @@
 
     invoke-direct {p1, v0, v0, v2, v3}, Landroid/graphics/Region;-><init>(IIII)V
 
-    .line 2918
+    .line 2989
     invoke-direct {p0, p1, v1, v0}, Lcom/miui/home/launcher/CellLayout;->predict(Landroid/graphics/Region;Ljava/util/ArrayList;I)Z
 
     move-result p1
@@ -10776,7 +10692,7 @@
 
     const-string v1, "invalidate params in predictWidgetCanBeAdded"
 
-    .line 2904
+    .line 2975
     invoke-static {p1, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
@@ -10785,7 +10701,7 @@
 .method public quickShowOrHideAllShortcutsCheckBox(Z)V
     .locals 1
 
-    .line 301
+    .line 294
     new-instance v0, Lcom/miui/home/launcher/-$$Lambda$CellLayout$b7dU_-h4R3nimc7Ek1H4GaAyi1M;
 
     invoke-direct {v0, p1}, Lcom/miui/home/launcher/-$$Lambda$CellLayout$b7dU_-h4R3nimc7Ek1H4GaAyi1M;-><init>(Z)V
@@ -10802,10 +10718,10 @@
 
     const-string v1, "relayoutByOccupiedCells"
 
-    .line 1990
+    .line 2065
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1991
+    .line 2066
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v0
@@ -10814,7 +10730,7 @@
 
     move v3, v2
 
-    .line 1992
+    .line 2067
     :goto_0
     iget v4, p0, Lcom/miui/home/launcher/CellLayout;->mVCells:I
 
@@ -10822,13 +10738,13 @@
 
     move v4, v2
 
-    .line 1993
+    .line 2068
     :goto_1
     iget v5, p0, Lcom/miui/home/launcher/CellLayout;->mHCells:I
 
     if-ge v4, v5, :cond_1
 
-    .line 1994
+    .line 2069
     iget-object v5, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
     aget-object v5, v5, v4
@@ -10837,32 +10753,32 @@
 
     if-eqz v5, :cond_0
 
-    .line 1996
+    .line 2071
     invoke-virtual {v5}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v6
 
     check-cast v6, Lcom/miui/home/launcher/CellLayout$LayoutParams;
 
-    .line 1997
+    .line 2072
     iget-wide v7, v6, Lcom/miui/home/launcher/CellLayout$LayoutParams;->accessTag:J
 
     cmp-long v7, v7, v0
 
     if-eqz v7, :cond_0
 
-    .line 1998
+    .line 2073
     invoke-direct {p0, v5}, Lcom/miui/home/launcher/CellLayout;->getChildInfo(Landroid/view/View;)Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v5
 
-    .line 1999
+    .line 2074
     iput v4, v5, Lcom/miui/home/launcher/ItemInfo;->cellX:I
 
-    .line 2000
+    .line 2075
     iput v3, v5, Lcom/miui/home/launcher/ItemInfo;->cellY:I
 
-    .line 2001
+    .line 2076
     iput-wide v0, v6, Lcom/miui/home/launcher/CellLayout$LayoutParams;->accessTag:J
 
     :cond_0
@@ -10875,7 +10791,7 @@
 
     goto :goto_0
 
-    .line 2006
+    .line 2081
     :cond_2
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mFirstPos:[I
 
@@ -10883,10 +10799,10 @@
 
     const/4 v1, 0x1
 
-    .line 2007
+    .line 2082
     aput v2, v0, v1
 
-    .line 2008
+    .line 2083
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->requestLayout()V
 
     return-void
@@ -10895,7 +10811,7 @@
 .method public removeAllViewsInLayout()V
     .locals 2
 
-    .line 2610
+    .line 2685
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->getChildCount()I
 
     move-result v0
@@ -10904,7 +10820,7 @@
 
     invoke-direct {p0, v1, v0}, Lcom/miui/home/launcher/CellLayout;->onRemoveViews(II)V
 
-    .line 2611
+    .line 2686
     invoke-super {p0}, Lcom/miui/launcher/views/LauncherViewGroup;->removeAllViewsInLayout()V
 
     return-void
@@ -10913,7 +10829,7 @@
 .method public removeChild(J)Landroid/view/View;
     .locals 4
 
-    .line 2575
+    .line 2650
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->getChildCount()I
 
     move-result v0
@@ -10923,24 +10839,24 @@
     :goto_0
     if-ltz v0, :cond_1
 
-    .line 2577
+    .line 2652
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/CellLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 2578
+    .line 2653
     invoke-direct {p0, v1}, Lcom/miui/home/launcher/CellLayout;->getChildInfo(Landroid/view/View;)Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v2
 
-    .line 2579
+    .line 2654
     iget-wide v2, v2, Lcom/miui/home/launcher/ItemInfo;->id:J
 
     cmp-long v2, v2, p1
 
     if-nez v2, :cond_0
 
-    .line 2580
+    .line 2655
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/CellLayout;->removeView(Landroid/view/View;)V
 
     return-object v1
@@ -10959,7 +10875,7 @@
 .method public removeChild(Lcom/miui/home/launcher/ItemInfo;)V
     .locals 2
 
-    .line 2569
+    .line 2644
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
     iget v1, p1, Lcom/miui/home/launcher/ItemInfo;->cellX:I
@@ -10970,48 +10886,68 @@
 
     aget-object p1, v0, p1
 
-    .line 2571
+    .line 2646
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/CellLayout;->removeView(Landroid/view/View;)V
 
     return-void
 .end method
 
-.method public removeItemIcon(Lcom/miui/home/launcher/ItemIcon;)V
-    .locals 3
+.method public removePendingItem(Lcom/miui/home/launcher/PendingItem;)V
+    .locals 1
 
-    const-string v0, "Launcher.CellLayout"
+    .line 1233
+    iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mPendingItemsDelegate:Lcom/miui/home/launcher/PendingSourceDelegate;
 
-    .line 348
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Lcom/miui/home/launcher/PendingSourceDelegate;->removePendingItem(Lcom/miui/home/launcher/PendingItem;)V
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    .line 1234
+    invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->checkToDeleteSelf()V
 
-    const-string v2, "remove icon for "
+    .line 1235
+    iget-object p1, p0, Lcom/miui/home/launcher/CellLayout;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->invalidateWorkspacePreview()V
 
-    invoke-virtual {p1}, Lcom/miui/home/launcher/ItemIcon;->getTag()Ljava/lang/Object;
+    return-void
+.end method
 
-    move-result-object v2
+.method public removeShortcutIcon(Lcom/miui/home/launcher/ShortcutIcon;)I
+    .locals 4
 
-    check-cast v2, Lcom/miui/home/launcher/ItemInfo;
+    .line 466
+    invoke-virtual {p1}, Lcom/miui/home/launcher/ShortcutIcon;->getTag()Ljava/lang/Object;
 
-    invoke-virtual {v2}, Lcom/miui/home/launcher/ItemInfo;->printDetail()Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object v2
+    check-cast v0, Lcom/miui/home/launcher/ShortcutInfo;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v1, "Launcher.CellLayout"
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 467
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    const-string v3, "remove icon for "
 
-    .line 349
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/ShortcutInfo;->printDetail()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 468
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/CellLayout;->removeViewInLayout(Landroid/view/View;)V
 
-    .line 350
+    .line 469
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->getParent()Landroid/view/ViewParent;
 
     move-result-object p1
@@ -11020,7 +10956,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 351
+    .line 470
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->getParent()Landroid/view/ViewParent;
 
     move-result-object p1
@@ -11029,36 +10965,19 @@
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/CellScreen;->updateLayout()V
 
-    .line 353
+    .line 472
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->invalidate()V
 
-    return-void
-.end method
+    const/4 p1, -0x1
 
-.method public removePendingItem(Lcom/miui/home/launcher/PendingItem;)V
-    .locals 1
-
-    .line 1145
-    iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mPendingItemsDelegate:Lcom/miui/home/launcher/PendingSourceDelegate;
-
-    invoke-virtual {v0, p1}, Lcom/miui/home/launcher/PendingSourceDelegate;->removePendingItem(Lcom/miui/home/launcher/PendingItem;)V
-
-    .line 1146
-    invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->checkToDeleteSelf()V
-
-    .line 1147
-    iget-object p1, p0, Lcom/miui/home/launcher/CellLayout;->mLauncher:Lcom/miui/home/launcher/Launcher;
-
-    invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->invalidateWorkspacePreview()V
-
-    return-void
+    return p1
 .end method
 
 .method public removeView(Landroid/view/View;)V
     .locals 2
 
-    .line 2592
+    .line 2667
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/CellLayout;->indexOfChild(Landroid/view/View;)I
 
     move-result v0
@@ -11067,7 +10986,7 @@
 
     invoke-direct {p0, v0, v1}, Lcom/miui/home/launcher/CellLayout;->onRemoveViews(II)V
 
-    .line 2593
+    .line 2668
     invoke-super {p0, p1}, Lcom/miui/launcher/views/LauncherViewGroup;->removeView(Landroid/view/View;)V
 
     return-void
@@ -11078,10 +10997,10 @@
 
     const/4 v0, 0x1
 
-    .line 2616
+    .line 2691
     invoke-direct {p0, p1, v0}, Lcom/miui/home/launcher/CellLayout;->onRemoveViews(II)V
 
-    .line 2617
+    .line 2692
     invoke-super {p0, p1}, Lcom/miui/launcher/views/LauncherViewGroup;->removeViewAt(I)V
 
     return-void
@@ -11090,7 +11009,7 @@
 .method public removeViewInLayout(Landroid/view/View;)V
     .locals 2
 
-    .line 2598
+    .line 2673
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/CellLayout;->indexOfChild(Landroid/view/View;)I
 
     move-result v0
@@ -11099,7 +11018,7 @@
 
     invoke-direct {p0, v0, v1}, Lcom/miui/home/launcher/CellLayout;->onRemoveViews(II)V
 
-    .line 2599
+    .line 2674
     invoke-super {p0, p1}, Lcom/miui/launcher/views/LauncherViewGroup;->removeViewInLayout(Landroid/view/View;)V
 
     return-void
@@ -11108,10 +11027,10 @@
 .method public removeViews(II)V
     .locals 0
 
-    .line 2622
+    .line 2697
     invoke-direct {p0, p1, p2}, Lcom/miui/home/launcher/CellLayout;->onRemoveViews(II)V
 
-    .line 2623
+    .line 2698
     invoke-super {p0, p1, p2}, Lcom/miui/launcher/views/LauncherViewGroup;->removeViews(II)V
 
     return-void
@@ -11120,10 +11039,10 @@
 .method public removeViewsInLayout(II)V
     .locals 0
 
-    .line 2604
+    .line 2679
     invoke-direct {p0, p1, p2}, Lcom/miui/home/launcher/CellLayout;->onRemoveViews(II)V
 
-    .line 2605
+    .line 2680
     invoke-super {p0, p1, p2}, Lcom/miui/launcher/views/LauncherViewGroup;->removeViewsInLayout(II)V
 
     return-void
@@ -11132,30 +11051,77 @@
 .method public requestChildFocus(Landroid/view/View;Landroid/view/View;)V
     .locals 0
 
-    .line 395
+    .line 492
     invoke-super {p0, p1, p2}, Lcom/miui/launcher/views/LauncherViewGroup;->requestChildFocus(Landroid/view/View;Landroid/view/View;)V
 
     if-eqz p1, :cond_0
 
-    .line 397
+    .line 494
     new-instance p2, Landroid/graphics/Rect;
 
     invoke-direct {p2}, Landroid/graphics/Rect;-><init>()V
 
-    .line 398
+    .line 495
     invoke-virtual {p1, p2}, Landroid/view/View;->getDrawingRect(Landroid/graphics/Rect;)V
 
-    .line 399
+    .line 496
     invoke-virtual {p0, p2}, Lcom/miui/home/launcher/CellLayout;->requestRectangleOnScreen(Landroid/graphics/Rect;)Z
 
     :cond_0
     return-void
 .end method
 
+.method requestLauncherIconLayout(Landroid/view/View;)V
+    .locals 2
+
+    .line 3214
+    instance-of v0, p1, Lcom/miui/home/launcher/LauncherIconImageView;
+
+    if-eqz v0, :cond_0
+
+    .line 3215
+    invoke-virtual {p1}, Landroid/view/View;->requestLayout()V
+
+    return-void
+
+    .line 3218
+    :cond_0
+    instance-of v0, p1, Landroid/view/ViewGroup;
+
+    if-eqz v0, :cond_1
+
+    .line 3219
+    check-cast p1, Landroid/view/ViewGroup;
+
+    const/4 v0, 0x0
+
+    .line 3220
+    :goto_0
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result v1
+
+    if-ge v0, v1, :cond_1
+
+    .line 3221
+    invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v1}, Lcom/miui/home/launcher/CellLayout;->requestLauncherIconLayout(Landroid/view/View;)V
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return-void
+.end method
+
 .method public resetTouchCellInfo()V
     .locals 2
 
-    .line 468
+    .line 565
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mCellInfo:Lcom/miui/home/launcher/CellLayout$CellInfo;
 
     const/4 v1, 0x0
@@ -11164,18 +11130,18 @@
 
     const/4 v1, -0x1
 
-    .line 469
+    .line 566
     iput v1, v0, Lcom/miui/home/launcher/CellLayout$CellInfo;->cellX:I
 
-    .line 470
+    .line 567
     iput v1, v0, Lcom/miui/home/launcher/CellLayout$CellInfo;->cellY:I
 
     const/4 v1, 0x0
 
-    .line 471
+    .line 568
     iput v1, v0, Lcom/miui/home/launcher/CellLayout$CellInfo;->spanX:I
 
-    .line 472
+    .line 569
     iput v1, v0, Lcom/miui/home/launcher/CellLayout$CellInfo;->spanY:I
 
     return-void
@@ -11184,26 +11150,26 @@
 .method saveCurrentConfiguration(Lcom/miui/home/launcher/CellLayout$ViewConfiguration;)V
     .locals 7
 
-    .line 1851
+    .line 1930
     invoke-virtual {p1}, Lcom/miui/home/launcher/CellLayout$ViewConfiguration;->clear()V
 
-    .line 1852
+    .line 1931
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mCellXY:[I
 
     const/4 v1, 0x0
 
     move v2, v1
 
-    .line 1853
+    .line 1932
     :goto_0
     iget v3, p0, Lcom/miui/home/launcher/CellLayout;->mTotalCells:I
 
     if-ge v2, v3, :cond_1
 
-    .line 1854
+    .line 1933
     invoke-virtual {p0, v2, v0}, Lcom/miui/home/launcher/CellLayout;->positionIndexToCell(I[I)V
 
-    .line 1855
+    .line 1934
     iget-object v3, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
     aget v4, v0, v1
@@ -11218,7 +11184,7 @@
 
     if-eqz v4, :cond_0
 
-    .line 1856
+    .line 1935
     aget v4, v0, v1
 
     aget-object v3, v3, v4
@@ -11241,34 +11207,21 @@
 .method public scaleCellLayout()V
     .locals 1
 
-    .line 326
-    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->isInFoldLargeScreen()Z
+    .line 448
+    invoke-static {}, Lcom/miui/home/launcher/Workspace;->getScreenScaleRatio()F
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/CellLayout;->setScaleX(F)V
 
-    .line 327
-    invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/miui/home/launcher/CellScreen;
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/CellScreen;->getFoldEditModePivotX()F
+    .line 449
+    invoke-static {}, Lcom/miui/home/launcher/Workspace;->getScreenScaleRatio()F
 
     move-result v0
 
-    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/CellLayout;->setPivotX(F)V
+    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/CellLayout;->setScaleY(F)V
 
-    goto :goto_0
-
-    .line 329
-    :cond_0
+    .line 450
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
@@ -11281,8 +11234,7 @@
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/CellLayout;->setPivotX(F)V
 
-    .line 331
-    :goto_0
+    .line 451
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
@@ -11295,34 +11247,20 @@
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/CellLayout;->setPivotY(F)V
 
-    .line 332
-    invoke-static {}, Lcom/miui/home/launcher/Workspace;->getScreenScaleRatio()F
-
-    move-result v0
-
-    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/CellLayout;->setScaleX(F)V
-
-    .line 333
-    invoke-static {}, Lcom/miui/home/launcher/Workspace;->getScreenScaleRatio()F
-
-    move-result v0
-
-    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/CellLayout;->setScaleY(F)V
-
     return-void
 .end method
 
-.method public setAllLayoutValues(Z)V
+.method protected setAllLayoutValues(Z)V
     .locals 2
 
-    .line 559
+    .line 656
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellHorizontalSpacing()I
 
     move-result v0
 
     iput v0, p0, Lcom/miui/home/launcher/CellLayout;->mWidthGap:I
 
-    .line 560
+    .line 657
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellVerticalSpacing()I
 
     move-result v0
@@ -11333,25 +11271,31 @@
 
     if-eqz p1, :cond_0
 
-    .line 561
+    .line 658
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getNotchEditModePaddingTopDelta()I
 
-    move-result v1
+    move-result p1
 
     goto :goto_0
 
     :cond_0
-    move v1, v0
+    move p1, v0
 
     :goto_0
-    iput v1, p0, Lcom/miui/home/launcher/CellLayout;->mNotchEditModePaddingTopDelta:I
+    iput p1, p0, Lcom/miui/home/launcher/CellLayout;->mNotchEditModePaddingTopDelta:I
 
-    if-eqz p1, :cond_1
+    .line 659
+    iget p1, p0, Lcom/miui/home/launcher/CellLayout;->mVCells:I
 
-    .line 562
-    invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->getNotchEditModeGapDelta()I
+    const/4 v1, 0x1
 
-    move-result v0
+    if-le p1, v1, :cond_1
+
+    iget v0, p0, Lcom/miui/home/launcher/CellLayout;->mNotchEditModePaddingTopDelta:I
+
+    sub-int/2addr p1, v1
+
+    div-int/2addr v0, p1
 
     :cond_1
     iput v0, p0, Lcom/miui/home/launcher/CellLayout;->mNotchEditModeGapDelta:I
@@ -11359,42 +11303,591 @@
     return-void
 .end method
 
-.method public setAndDoEditModeAnimation(ZLcom/miui/home/launcher/EditStateChangeReason;)V
-    .locals 1
+.method public setAndDoEditModeAnimation(Z)V
+    .locals 22
+
+    move-object/from16 v0, p0
+
+    .line 317
+    iget-object v1, v0, Lcom/miui/home/launcher/CellLayout;->mLauncher:Lcom/miui/home/launcher/Launcher;
+
+    invoke-virtual {v1}, Lcom/miui/home/launcher/Launcher;->getWindow()Landroid/view/Window;
+
+    move-result-object v1
+
+    const/high16 v2, 0x3f800000    # 1.0f
+
+    const/4 v3, 0x0
+
+    const/4 v5, 0x1
+
+    if-eqz p1, :cond_4
+
+    .line 319
+    iget-object v6, v0, Lcom/miui/home/launcher/CellLayout;->mSpringAnimatorList:Ljava/util/ArrayList;
+
+    invoke-virtual {v6}, Ljava/util/ArrayList;->clear()V
+
+    .line 320
+    iget-object v6, v0, Lcom/miui/home/launcher/CellLayout;->mLauncher:Lcom/miui/home/launcher/Launcher;
+
+    invoke-virtual {v6}, Lcom/miui/home/launcher/Launcher;->getDragLayerBackground()Lcom/miui/home/launcher/Background;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Lcom/miui/home/launcher/Background;->getTouchrawX()F
+
+    move-result v6
 
     .line 321
-    iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mEditAnimContoller:Lcom/miui/home/launcher/anim/EditAnimController;
+    iget-object v7, v0, Lcom/miui/home/launcher/CellLayout;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    invoke-virtual {v0, p1, p2}, Lcom/miui/home/launcher/anim/EditAnimController;->startEditAnim(ZLcom/miui/home/launcher/EditStateChangeReason;)V
+    invoke-virtual {v7}, Lcom/miui/home/launcher/Launcher;->getDragLayerBackground()Lcom/miui/home/launcher/Background;
 
+    move-result-object v7
+
+    invoke-virtual {v7}, Lcom/miui/home/launcher/Background;->getTouchrawY()F
+
+    move-result v7
+
+    .line 322
+    invoke-virtual/range {p0 .. p1}, Lcom/miui/home/launcher/CellLayout;->setAllLayoutValues(Z)V
+
+    .line 323
+    invoke-direct/range {p0 .. p0}, Lcom/miui/home/launcher/CellLayout;->calculateXsAndYs()V
+
+    .line 324
+    invoke-virtual/range {p0 .. p0}, Lcom/miui/home/launcher/CellLayout;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v8
+
+    check-cast v8, Lcom/miui/home/launcher/CellScreen;
+
+    invoke-virtual {v8}, Lcom/miui/home/launcher/CellScreen;->getEditModePivotY()F
+
+    move-result v8
+
+    .line 325
+    invoke-virtual/range {p0 .. p0}, Lcom/miui/home/launcher/CellLayout;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v9
+
+    check-cast v9, Lcom/miui/home/launcher/CellScreen;
+
+    invoke-virtual {v9}, Lcom/miui/home/launcher/CellScreen;->getEditModePivotX()F
+
+    move-result v9
+
+    .line 326
+    invoke-virtual/range {p0 .. p0}, Lcom/miui/home/launcher/CellLayout;->getScaleY()F
+
+    move-result v18
+
+    .line 327
+    invoke-static {}, Lcom/miui/home/launcher/Workspace;->getScreenScaleRatio()F
+
+    move-result v19
+
+    sub-float v20, v18, v19
+
+    const/4 v15, 0x0
+
+    .line 329
+    :goto_0
+    invoke-virtual/range {p0 .. p0}, Lcom/miui/home/launcher/CellLayout;->getChildCount()I
+
+    move-result v10
+
+    if-ge v15, v10, :cond_1
+
+    .line 330
+    invoke-virtual {v0, v15}, Lcom/miui/home/launcher/CellLayout;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v13
+
+    .line 331
+    instance-of v10, v13, Lcom/miui/home/launcher/interfaces/IEditable;
+
+    if-eqz v10, :cond_0
+
+    .line 332
+    move-object v10, v13
+
+    check-cast v10, Lcom/miui/home/launcher/interfaces/IEditable;
+
+    invoke-interface {v10, v5, v5}, Lcom/miui/home/launcher/interfaces/IEditable;->setEditMode(ZZ)V
+
+    .line 334
+    :cond_0
+    invoke-virtual {v13}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v10
+
+    check-cast v10, Lcom/miui/home/launcher/CellLayout$LayoutParams;
+
+    .line 335
+    iget v11, v10, Lcom/miui/home/launcher/CellLayout$LayoutParams;->x:I
+
+    .line 336
+    iget v10, v10, Lcom/miui/home/launcher/CellLayout$LayoutParams;->y:I
+
+    .line 337
+    invoke-virtual {v13}, Landroid/view/View;->getTag()Ljava/lang/Object;
+
+    move-result-object v12
+
+    check-cast v12, Lcom/miui/home/launcher/ItemInfo;
+
+    .line 338
+    iget-object v14, v0, Lcom/miui/home/launcher/CellLayout;->mXs:[I
+
+    iget v4, v12, Lcom/miui/home/launcher/ItemInfo;->cellX:I
+
+    aget v4, v14, v4
+
+    .line 339
+    iget-object v14, v0, Lcom/miui/home/launcher/CellLayout;->mYs:[I
+
+    iget v12, v12, Lcom/miui/home/launcher/ItemInfo;->cellY:I
+
+    aget v12, v14, v12
+
+    sub-int v14, v4, v11
+
+    sub-int v5, v12, v10
+
+    int-to-float v11, v11
+
+    sub-float v11, v6, v11
+
+    int-to-float v10, v10
+
+    sub-float v10, v7, v10
+
+    .line 342
+    invoke-static {v11, v10}, Lcom/miui/home/launcher/common/Utilities;->calcDistance(FF)I
+
+    move-result v10
+
+    int-to-float v10, v10
+
+    .line 343
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getScreenHeight()I
+
+    move-result v11
+
+    div-int/lit8 v11, v11, 0x2
+
+    int-to-float v11, v11
+
+    div-float v21, v10, v11
+
+    neg-int v10, v14
+
+    int-to-float v10, v10
+
+    .line 344
+    invoke-virtual {v13, v10}, Landroid/view/View;->setTranslationX(F)V
+
+    neg-int v10, v5
+
+    int-to-float v10, v10
+
+    .line 345
+    invoke-virtual {v13, v10}, Landroid/view/View;->setTranslationY(F)V
+
+    .line 346
+    invoke-virtual {v13}, Landroid/view/View;->getWidth()I
+
+    move-result v10
+
+    div-int/lit8 v10, v10, 0x2
+
+    int-to-float v10, v10
+
+    invoke-virtual {v13, v10}, Landroid/view/View;->setPivotX(F)V
+
+    .line 347
+    invoke-virtual {v13}, Landroid/view/View;->getHeight()I
+
+    move-result v10
+
+    div-int/lit8 v10, v10, 0x2
+
+    int-to-float v10, v10
+
+    invoke-virtual {v13, v10}, Landroid/view/View;->setPivotY(F)V
+
+    int-to-float v4, v4
+
+    sub-float v4, v9, v4
+
+    .line 348
+    invoke-virtual {v13}, Landroid/view/View;->getWidth()I
+
+    move-result v10
+
+    div-int/lit8 v10, v10, 0x2
+
+    int-to-float v10, v10
+
+    sub-float/2addr v4, v10
+
+    mul-float v4, v4, v20
+
+    div-float v4, v4, v18
+
+    int-to-float v10, v12
+
+    sub-float v10, v8, v10
+
+    .line 349
+    invoke-virtual {v13}, Landroid/view/View;->getHeight()I
+
+    move-result v11
+
+    div-int/lit8 v11, v11, 0x2
+
+    int-to-float v11, v11
+
+    sub-float/2addr v10, v11
+
+    mul-float v10, v10, v20
+
+    div-float v16, v10, v18
+
+    .line 350
+    new-instance v12, Lcom/miui/home/launcher/animate/SpringAnimator;
+
+    const v10, 0x3ee66666    # 0.45f
+
+    const v11, 0x3e19999a    # 0.15f
+
+    mul-float v11, v11, v21
+
+    add-float/2addr v11, v10
+
+    const v10, 0x3eb33333    # 0.35f
+
+    const v17, 0x3dcccccd    # 0.1f
+
+    mul-float v17, v17, v21
+
+    add-float v10, v17, v10
+
+    invoke-direct {v12, v11, v10, v3, v2}, Lcom/miui/home/launcher/animate/SpringAnimator;-><init>(FFFF)V
+
+    .line 351
+    new-instance v11, Lcom/miui/home/launcher/-$$Lambda$CellLayout$jEyUdRkJz5hxA1KJ8ESKnCvDG8w;
+
+    move-object v10, v11
+
+    move-object v3, v11
+
+    move/from16 v11, v19
+
+    move-object v2, v12
+
+    move/from16 v12, v18
+
+    move/from16 v17, v14
+
+    move v14, v4
+
+    move v4, v15
+
+    move/from16 v15, v17
+
+    move/from16 v17, v5
+
+    invoke-direct/range {v10 .. v17}, Lcom/miui/home/launcher/-$$Lambda$CellLayout$jEyUdRkJz5hxA1KJ8ESKnCvDG8w;-><init>(FFLandroid/view/View;FIFI)V
+
+    invoke-virtual {v2, v3}, Lcom/miui/home/launcher/animate/SpringAnimator;->setUpdateListener(Lcom/miui/home/launcher/animate/SpringAnimator$UpdateListener;)V
+
+    .line 358
+    invoke-virtual {v2}, Lcom/miui/home/launcher/animate/SpringAnimator;->registerEndAnimationMessage()V
+
+    const/high16 v3, 0x42480000    # 50.0f
+
+    mul-float v3, v3, v21
+
+    float-to-long v10, v3
+
+    .line 359
+    invoke-virtual {v2, v10, v11}, Lcom/miui/home/launcher/animate/SpringAnimator;->startDelay(J)V
+
+    .line 360
+    iget-object v3, v0, Lcom/miui/home/launcher/CellLayout;->mSpringAnimatorList:Ljava/util/ArrayList;
+
+    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v15, v4, 0x1
+
+    const/high16 v2, 0x3f800000    # 1.0f
+
+    const/4 v3, 0x0
+
+    const/4 v5, 0x1
+
+    goto/16 :goto_0
+
+    .line 362
+    :cond_1
+    iget-object v2, v0, Lcom/miui/home/launcher/CellLayout;->mSpringAnimatorList:Ljava/util/ArrayList;
+
+    invoke-virtual {v2}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v2
+
+    if-nez v2, :cond_3
+
+    const/4 v2, 0x1
+
+    .line 363
+    invoke-static {v2}, Lcom/miui/home/launcher/AutoLayoutAnimation;->setDisableAutoLayoutAnimation(Z)V
+
+    .line 364
+    iget-object v2, v0, Lcom/miui/home/launcher/CellLayout;->mSpringAnimatorList:Ljava/util/ArrayList;
+
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    iput v2, v0, Lcom/miui/home/launcher/CellLayout;->mAnimatorNum:I
+
+    const/4 v2, 0x0
+
+    .line 365
+    :goto_1
+    iget-object v3, v0, Lcom/miui/home/launcher/CellLayout;->mSpringAnimatorList:Ljava/util/ArrayList;
+
+    invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
+
+    move-result v3
+
+    if-ge v2, v3, :cond_3
+
+    .line 366
+    iget-object v3, v0, Lcom/miui/home/launcher/CellLayout;->mSpringAnimatorList:Ljava/util/ArrayList;
+
+    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lcom/miui/home/launcher/animate/SpringAnimator;
+
+    if-nez v2, :cond_2
+
+    .line 368
+    new-instance v4, Lcom/miui/home/launcher/CellLayout$1;
+
+    invoke-direct {v4, v0}, Lcom/miui/home/launcher/CellLayout$1;-><init>(Lcom/miui/home/launcher/CellLayout;)V
+
+    invoke-virtual {v3, v4}, Lcom/miui/home/launcher/animate/SpringAnimator;->setAnimatorListenerAdapter(Landroid/animation/AnimatorListenerAdapter;)V
+
+    goto :goto_2
+
+    .line 380
+    :cond_2
+    new-instance v4, Lcom/miui/home/launcher/CellLayout$2;
+
+    invoke-direct {v4, v0}, Lcom/miui/home/launcher/CellLayout$2;-><init>(Lcom/miui/home/launcher/CellLayout;)V
+
+    invoke-virtual {v3, v4}, Lcom/miui/home/launcher/animate/SpringAnimator;->setAnimatorListenerAdapter(Landroid/animation/AnimatorListenerAdapter;)V
+
+    :goto_2
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_1
+
+    .line 389
+    :cond_3
+    invoke-static {}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->isLowLevelOrLiteDevice()Z
+
+    move-result v2
+
+    if-nez v2, :cond_8
+
+    .line 390
+    sget-wide v2, Lcom/miui/home/launcher/common/BlurUtils;->LONG_BLUR_ANIM_DURATION:J
+
+    const/4 v4, 0x1
+
+    const/high16 v5, 0x3f800000    # 1.0f
+
+    invoke-static {v5, v1, v4, v2, v3}, Lcom/miui/home/launcher/common/BlurUtils;->fastBlur(FLandroid/view/Window;ZJ)Landroid/animation/ValueAnimator;
+
+    goto/16 :goto_6
+
+    :cond_4
+    move v4, v5
+
+    const/4 v2, 0x0
+
+    .line 393
+    :goto_3
+    invoke-virtual/range {p0 .. p0}, Lcom/miui/home/launcher/CellLayout;->getChildCount()I
+
+    move-result v3
+
+    if-ge v2, v3, :cond_6
+
+    .line 394
+    invoke-virtual {v0, v2}, Lcom/miui/home/launcher/CellLayout;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v3
+
+    .line 395
+    instance-of v5, v3, Lcom/miui/home/launcher/interfaces/IEditable;
+
+    if-eqz v5, :cond_5
+
+    .line 396
+    check-cast v3, Lcom/miui/home/launcher/interfaces/IEditable;
+
+    const/4 v5, 0x0
+
+    invoke-interface {v3, v5, v4}, Lcom/miui/home/launcher/interfaces/IEditable;->setEditMode(ZZ)V
+
+    goto :goto_4
+
+    :cond_5
+    const/4 v5, 0x0
+
+    :goto_4
+    add-int/lit8 v2, v2, 0x1
+
+    const/4 v4, 0x1
+
+    goto :goto_3
+
+    .line 399
+    :cond_6
+    iget-object v2, v0, Lcom/miui/home/launcher/CellLayout;->mSpringAnimatorList:Ljava/util/ArrayList;
+
+    invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :goto_5
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_7
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lcom/miui/home/launcher/animate/SpringAnimator;
+
+    .line 400
+    invoke-virtual {v3}, Lcom/miui/home/launcher/animate/SpringAnimator;->cancel()V
+
+    goto :goto_5
+
+    .line 402
+    :cond_7
+    invoke-virtual/range {p0 .. p0}, Lcom/miui/home/launcher/CellLayout;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/miui/home/launcher/CellScreen;
+
+    invoke-virtual {v2}, Lcom/miui/home/launcher/CellScreen;->getEditModePivotX()F
+
+    move-result v2
+
+    invoke-virtual {v0, v2}, Lcom/miui/home/launcher/CellLayout;->setPivotX(F)V
+
+    .line 403
+    invoke-virtual/range {p0 .. p0}, Lcom/miui/home/launcher/CellLayout;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/miui/home/launcher/CellScreen;
+
+    invoke-virtual {v2}, Lcom/miui/home/launcher/CellScreen;->getEditModePivotY()F
+
+    move-result v2
+
+    invoke-virtual {v0, v2}, Lcom/miui/home/launcher/CellLayout;->setPivotY(F)V
+
+    .line 404
+    new-instance v2, Lcom/miui/home/launcher/animate/SpringAnimator;
+
+    const v3, 0x3f19999a    # 0.6f
+
+    const v4, 0x3e99999a    # 0.3f
+
+    const/4 v5, 0x0
+
+    const/high16 v6, 0x3f800000    # 1.0f
+
+    invoke-direct {v2, v3, v4, v5, v6}, Lcom/miui/home/launcher/animate/SpringAnimator;-><init>(FFFF)V
+
+    .line 405
+    new-instance v3, Lcom/miui/home/launcher/-$$Lambda$CellLayout$wlNPeLp80pXUFsDTELW1NB3ig30;
+
+    invoke-direct {v3, v0}, Lcom/miui/home/launcher/-$$Lambda$CellLayout$wlNPeLp80pXUFsDTELW1NB3ig30;-><init>(Lcom/miui/home/launcher/CellLayout;)V
+
+    invoke-virtual {v2, v3}, Lcom/miui/home/launcher/animate/SpringAnimator;->setUpdateListener(Lcom/miui/home/launcher/animate/SpringAnimator$UpdateListener;)V
+
+    .line 410
+    new-instance v3, Lcom/miui/home/launcher/CellLayout$3;
+
+    invoke-direct {v3, v0}, Lcom/miui/home/launcher/CellLayout$3;-><init>(Lcom/miui/home/launcher/CellLayout;)V
+
+    invoke-virtual {v2, v3}, Lcom/miui/home/launcher/animate/SpringAnimator;->setAnimatorListenerAdapter(Landroid/animation/AnimatorListenerAdapter;)V
+
+    .line 421
+    invoke-virtual {v2}, Lcom/miui/home/launcher/animate/SpringAnimator;->start()V
+
+    .line 422
+    invoke-static {}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->isLowLevelOrLiteDevice()Z
+
+    move-result v2
+
+    if-nez v2, :cond_8
+
+    .line 423
+    sget-wide v2, Lcom/miui/home/launcher/common/BlurUtils;->LONG_BLUR_ANIM_DURATION:J
+
+    const/4 v4, 0x1
+
+    invoke-static {v5, v1, v4, v2, v3}, Lcom/miui/home/launcher/common/BlurUtils;->fastBlur(FLandroid/view/Window;ZJ)Landroid/animation/ValueAnimator;
+
+    :cond_8
+    :goto_6
     return-void
 .end method
 
 .method setCellBackgroundImage(Lcom/miui/home/launcher/DragObject;)V
     .locals 2
 
-    .line 2067
+    .line 2142
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->needOutline()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 2068
+    .line 2143
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mCellBackground:Lcom/miui/home/launcher/CellBackground;
 
     iget-object v1, p0, Lcom/miui/home/launcher/CellLayout;->mDefaultCellBackground:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/CellBackground;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 2069
+    .line 2144
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mCellBackground:Lcom/miui/home/launcher/CellBackground;
 
     sget-object v1, Landroid/widget/ImageView$ScaleType;->FIT_XY:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/CellBackground;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 2070
+    .line 2145
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mCellBackground:Lcom/miui/home/launcher/CellBackground;
 
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/CellLayout;->calculateCellBackgroundAlpha(Lcom/miui/home/launcher/DragObject;)I
@@ -11405,7 +11898,7 @@
 
     goto :goto_0
 
-    .line 2071
+    .line 2146
     :cond_0
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getOutline()Landroid/graphics/Bitmap;
 
@@ -11413,7 +11906,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 2072
+    .line 2147
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mCellBackground:Lcom/miui/home/launcher/CellBackground;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getOutline()Landroid/graphics/Bitmap;
@@ -11422,14 +11915,14 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/CellBackground;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 2073
+    .line 2148
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mCellBackground:Lcom/miui/home/launcher/CellBackground;
 
     sget-object v1, Landroid/widget/ImageView$ScaleType;->MATRIX:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/CellBackground;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 2074
+    .line 2149
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mCellBackground:Lcom/miui/home/launcher/CellBackground;
 
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/CellLayout;->calculateCellBackgroundAlpha(Lcom/miui/home/launcher/DragObject;)I
@@ -11440,20 +11933,20 @@
 
     goto :goto_0
 
-    .line 2077
+    .line 2152
     :cond_1
-    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$CellLayout$0fVOty9hnMW35nXijJZZDnldX3o;
+    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$CellLayout$vglrFzFYbNBa1-_xO-TKChRWD8c;
 
-    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/-$$Lambda$CellLayout$0fVOty9hnMW35nXijJZZDnldX3o;-><init>(Lcom/miui/home/launcher/CellLayout;Lcom/miui/home/launcher/DragObject;)V
+    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/-$$Lambda$CellLayout$vglrFzFYbNBa1-_xO-TKChRWD8c;-><init>(Lcom/miui/home/launcher/CellLayout;Lcom/miui/home/launcher/DragObject;)V
 
-    .line 2088
+    .line 2163
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getScreenSerialExecutor()Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;
 
     move-result-object p1
 
     const/4 v1, 0x0
 
-    .line 2077
+    .line 2152
     invoke-static {v1, v0, v1, p1}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->execSerial(Ljava/util/function/Function;Ljava/util/function/Consumer;Ljava/lang/Object;Ljava/util/concurrent/Executor;)V
 
     :goto_0
@@ -11463,7 +11956,7 @@
 .method public setCellPaddingTop(I)V
     .locals 0
 
-    .line 205
+    .line 199
     iput p1, p0, Lcom/miui/home/launcher/CellLayout;->mCellPaddingTop:I
 
     return-void
@@ -11472,7 +11965,7 @@
 .method setContainerId(I)V
     .locals 1
 
-    .line 266
+    .line 259
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mCellInfo:Lcom/miui/home/launcher/CellLayout$CellInfo;
 
     iput p1, v0, Lcom/miui/home/launcher/CellLayout$CellInfo;->container:I
@@ -11483,8 +11976,31 @@
 .method setDisableTouch(Z)V
     .locals 0
 
-    .line 476
+    .line 573
     iput-boolean p1, p0, Lcom/miui/home/launcher/CellLayout;->mDisableTouch:Z
+
+    return-void
+.end method
+
+.method public setDropAnimating(Z)V
+    .locals 1
+
+    .line 2898
+    iget v0, p0, Lcom/miui/home/launcher/CellLayout;->mDropAnimationCounter:I
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, -0x1
+
+    :goto_0
+    add-int/2addr v0, p1
+
+    iput v0, p0, Lcom/miui/home/launcher/CellLayout;->mDropAnimationCounter:I
 
     return-void
 .end method
@@ -11492,7 +12008,7 @@
 .method public setEditMode(Z)V
     .locals 1
 
-    .line 293
+    .line 286
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
@@ -11505,7 +12021,7 @@
 
     if-eq v0, p0, :cond_0
 
-    .line 294
+    .line 287
     new-instance v0, Lcom/miui/home/launcher/-$$Lambda$CellLayout$Wm4JSak3fZVG4Y8QVRlHfUIYFsg;
 
     invoke-direct {v0, p1}, Lcom/miui/home/launcher/-$$Lambda$CellLayout$Wm4JSak3fZVG4Y8QVRlHfUIYFsg;-><init>(Z)V
@@ -11514,7 +12030,7 @@
 
     goto :goto_0
 
-    .line 296
+    .line 289
     :cond_0
     new-instance v0, Lcom/miui/home/launcher/-$$Lambda$CellLayout$0qo6R-xzbiOAk2WPJX6y7zcGl5U;
 
@@ -11529,7 +12045,7 @@
 .method public setHeightGap(I)V
     .locals 0
 
-    .line 571
+    .line 663
     iput p1, p0, Lcom/miui/home/launcher/CellLayout;->mHeightGap:I
 
     return-void
@@ -11540,7 +12056,7 @@
 
     const/4 v0, 0x0
 
-    .line 2856
+    .line 2927
     :goto_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->getChildCount()I
 
@@ -11548,50 +12064,50 @@
 
     if-ge v0, v1, :cond_5
 
-    .line 2857
+    .line 2928
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/CellLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 2858
+    .line 2929
     instance-of v2, v1, Lcom/miui/home/launcher/ItemIcon;
 
     if-eqz v2, :cond_0
 
-    .line 2859
+    .line 2930
     move-object v2, v1
 
     check-cast v2, Lcom/miui/home/launcher/ItemIcon;
 
     invoke-virtual {v2, p1}, Lcom/miui/home/launcher/ItemIcon;->setIsDrawingInThumbnailView(Z)V
 
-    .line 2861
+    .line 2932
     :cond_0
     instance-of v2, v1, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;
 
     if-eqz v2, :cond_1
 
-    .line 2862
+    .line 2933
     move-object v2, v1
 
     check-cast v2, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;
 
     invoke-virtual {v2, p1}, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;->setIsDrawingInThumbnailView(Z)V
 
-    .line 2864
+    .line 2935
     :cond_1
     instance-of v2, v1, Lcom/miui/home/launcher/gadget/Gadget;
 
     if-eqz v2, :cond_2
 
-    .line 2865
+    .line 2936
     move-object v2, v1
 
     check-cast v2, Lcom/miui/home/launcher/gadget/Gadget;
 
     invoke-virtual {v2, p1}, Lcom/miui/home/launcher/gadget/Gadget;->setIsDrawingInThumbnailView(Z)V
 
-    .line 2867
+    .line 2938
     :cond_2
     instance-of v2, v1, Lcom/miui/home/launcher/common/ViewPropertyBackuper;
 
@@ -11599,14 +12115,14 @@
 
     if-eqz p1, :cond_3
 
-    .line 2869
+    .line 2940
     check-cast v1, Lcom/miui/home/launcher/common/ViewPropertyBackuper;
 
     invoke-interface {v1}, Lcom/miui/home/launcher/common/ViewPropertyBackuper;->backupProperty()V
 
     goto :goto_1
 
-    .line 2871
+    .line 2942
     :cond_3
     check-cast v1, Lcom/miui/home/launcher/common/ViewPropertyBackuper;
 
@@ -11618,7 +12134,7 @@
 
     goto :goto_0
 
-    .line 2875
+    .line 2946
     :cond_5
     iput-boolean p1, p0, Lcom/miui/home/launcher/CellLayout;->mIsDrawingInThumbnailView:Z
 
@@ -11628,7 +12144,7 @@
 .method public setOnDrawCallback(Lcom/miui/home/launcher/MIUIWidgetAddAnimator$OnDrawCallback;)V
     .locals 0
 
-    .line 3213
+    .line 3297
     iput-object p1, p0, Lcom/miui/home/launcher/CellLayout;->mDrawCallback:Lcom/miui/home/launcher/MIUIWidgetAddAnimator$OnDrawCallback;
 
     return-void
@@ -11637,7 +12153,7 @@
 .method public setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
     .locals 1
 
-    .line 495
+    .line 592
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mOnLongClickAgent:Lcom/miui/home/launcher/OnLongClickAgent;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/OnLongClickAgent;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
@@ -11648,7 +12164,7 @@
 .method setScreenId(J)V
     .locals 1
 
-    .line 262
+    .line 255
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mCellInfo:Lcom/miui/home/launcher/CellLayout$CellInfo;
 
     iput-wide p1, v0, Lcom/miui/home/launcher/CellLayout$CellInfo;->screenId:J
@@ -11659,19 +12175,19 @@
 .method setScreenType(I)V
     .locals 1
 
-    .line 274
+    .line 267
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mCellInfo:Lcom/miui/home/launcher/CellLayout$CellInfo;
 
     iget v0, v0, Lcom/miui/home/launcher/CellLayout$CellInfo;->screenType:I
 
     if-eq v0, p1, :cond_0
 
-    .line 275
+    .line 268
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mCellInfo:Lcom/miui/home/launcher/CellLayout$CellInfo;
 
     iput p1, v0, Lcom/miui/home/launcher/CellLayout$CellInfo;->screenType:I
 
-    .line 276
+    .line 269
     invoke-direct {p0}, Lcom/miui/home/launcher/CellLayout;->loadGridConfig()V
 
     :cond_0
@@ -11681,7 +12197,7 @@
 .method public setVisibleForMaml(Z)V
     .locals 0
 
-    .line 3124
+    .line 3193
     iput-boolean p1, p0, Lcom/miui/home/launcher/CellLayout;->mVisibleForMaml:Z
 
     return-void
@@ -11692,7 +12208,7 @@
 
     move-object v0, p0
 
-    .line 638
+    .line 726
     iget v6, v0, Lcom/miui/home/launcher/CellLayout;->mCellWidth:I
 
     iget v7, v0, Lcom/miui/home/launcher/CellLayout;->mCellHeight:I
@@ -11705,8 +12221,8 @@
 
     iget v11, v0, Lcom/miui/home/launcher/CellLayout;->mCellPaddingTop:I
 
-    .line 639
-    invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->getPaddingTopDelta()I
+    .line 727
+    invoke-direct {p0}, Lcom/miui/home/launcher/CellLayout;->getPaddingTopDelta()I
 
     move-result v12
 
@@ -11724,7 +12240,7 @@
 
     move/from16 v5, p4
 
-    .line 638
+    .line 726
     invoke-virtual/range {v1 .. v13}, Lcom/miui/home/launcher/CellLayout$LayoutParams;->setup(IIIIIIIIIIII)V
 
     return-void
@@ -11733,7 +12249,7 @@
 .method public setupLayoutParam(IILcom/miui/home/launcher/ItemInfo;ZLcom/miui/home/launcher/CellLayout$LayoutParams;)V
     .locals 7
 
-    .line 634
+    .line 722
     iget v3, p3, Lcom/miui/home/launcher/ItemInfo;->spanX:I
 
     iget v4, p3, Lcom/miui/home/launcher/ItemInfo;->spanY:I
@@ -11756,7 +12272,7 @@
 .method public showNoSpaceToast(Lcom/miui/home/launcher/DragObject;Z)V
     .locals 1
 
-    .line 2101
+    .line 2176
     iget-boolean v0, p0, Lcom/miui/home/launcher/CellLayout;->mToasted:Z
 
     if-nez v0, :cond_0
@@ -11765,10 +12281,10 @@
 
     const/4 v0, 0x1
 
-    .line 2102
+    .line 2177
     iput-boolean v0, p0, Lcom/miui/home/launcher/CellLayout;->mToasted:Z
 
-    .line 2104
+    .line 2179
     :cond_0
     invoke-virtual {p1, p2}, Lcom/miui/home/launcher/DragObject;->showNoSpaceToast(Z)V
 
@@ -11778,7 +12294,7 @@
 .method public toString()Ljava/lang/String;
     .locals 7
 
-    .line 3143
+    .line 3228
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -11835,7 +12351,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3148
+    .line 3233
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->getChildCount()I
 
     move-result v1
@@ -11846,7 +12362,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3149
+    .line 3234
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->getEmptyCellsNum()I
 
     move-result v1
@@ -11865,7 +12381,7 @@
 
     move v0, v2
 
-    .line 3150
+    .line 3235
     :goto_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->getChildCount()I
 
@@ -11873,14 +12389,14 @@
 
     if-ge v0, v3, :cond_2
 
-    .line 3151
+    .line 3236
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/CellLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v3
 
     if-eqz v3, :cond_1
 
-    .line 3153
+    .line 3238
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -11911,7 +12427,7 @@
 
     move-result-object v1
 
-    .line 3154
+    .line 3239
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -11936,7 +12452,7 @@
 
     move-result-object v1
 
-    .line 3155
+    .line 3240
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -11961,7 +12477,7 @@
 
     move-result-object v1
 
-    .line 3156
+    .line 3241
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -11986,7 +12502,7 @@
 
     move-result-object v1
 
-    .line 3157
+    .line 3242
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -12011,7 +12527,7 @@
 
     move-result-object v1
 
-    .line 3158
+    .line 3243
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -12036,7 +12552,7 @@
 
     move-result-object v1
 
-    .line 3159
+    .line 3244
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -12061,7 +12577,7 @@
 
     move-result-object v1
 
-    .line 3160
+    .line 3245
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -12086,7 +12602,7 @@
 
     move-result-object v1
 
-    .line 3161
+    .line 3246
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -12111,12 +12627,12 @@
 
     move-result-object v1
 
-    .line 3162
+    .line 3247
     instance-of v4, v3, Lcom/miui/home/launcher/ItemIcon;
 
     if-eqz v4, :cond_0
 
-    .line 3163
+    .line 3248
     check-cast v3, Lcom/miui/home/launcher/ItemIcon;
 
     invoke-virtual {v3}, Lcom/miui/home/launcher/ItemIcon;->getIconImageView()Lcom/miui/home/launcher/LauncherIconImageView;
@@ -12125,7 +12641,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 3165
+    .line 3250
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -12150,7 +12666,7 @@
 
     move-result-object v1
 
-    .line 3166
+    .line 3251
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -12175,14 +12691,14 @@
 
     move-result-object v1
 
-    .line 3167
+    .line 3252
     invoke-virtual {v3}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v4
 
     if-eqz v4, :cond_0
 
-    .line 3168
+    .line 3253
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -12211,7 +12727,7 @@
 
     move-result-object v1
 
-    .line 3169
+    .line 3254
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -12240,7 +12756,7 @@
 
     move-result-object v1
 
-    .line 3173
+    .line 3258
     :cond_0
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -12261,13 +12777,13 @@
 
     goto/16 :goto_0
 
-    .line 3176
+    .line 3261
     :cond_2
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
     if-eqz v0, :cond_7
 
-    .line 3177
+    .line 3262
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -12286,7 +12802,7 @@
 
     move v0, v2
 
-    .line 3178
+    .line 3263
     :goto_1
     iget-object v3, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
@@ -12296,7 +12812,7 @@
 
     if-ge v0, v3, :cond_7
 
-    .line 3179
+    .line 3264
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -12315,7 +12831,7 @@
 
     move v1, v2
 
-    .line 3180
+    .line 3265
     :goto_2
     iget-object v4, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
@@ -12323,19 +12839,19 @@
 
     if-ge v1, v5, :cond_6
 
-    .line 3181
+    .line 3266
     aget-object v4, v4, v1
 
     aget-object v4, v4, v0
 
     if-eqz v4, :cond_5
 
-    .line 3183
+    .line 3268
     invoke-virtual {p0, v4}, Lcom/miui/home/launcher/CellLayout;->indexOfChild(Landroid/view/View;)I
 
     move-result v5
 
-    .line 3184
+    .line 3269
     invoke-virtual {v4}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v4
@@ -12350,7 +12866,7 @@
 
     goto :goto_3
 
-    .line 3188
+    .line 3273
     :cond_3
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -12374,7 +12890,7 @@
 
     goto :goto_4
 
-    .line 3186
+    .line 3271
     :cond_4
     :goto_3
     new-instance v4, Ljava/lang/StringBuilder;
@@ -12395,7 +12911,7 @@
 
     goto :goto_4
 
-    .line 3191
+    .line 3276
     :cond_5
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -12416,7 +12932,7 @@
 
     goto :goto_2
 
-    .line 3194
+    .line 3279
     :cond_6
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -12436,7 +12952,7 @@
 
     goto/16 :goto_1
 
-    .line 3197
+    .line 3282
     :cond_7
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -12458,7 +12974,7 @@
 .method updateCellOccupiedMarks(Landroid/view/View;Lcom/miui/home/launcher/ItemInfo;ZZ)V
     .locals 5
 
-    .line 693
+    .line 781
     iget v0, p2, Lcom/miui/home/launcher/ItemInfo;->cellX:I
 
     iget v1, p2, Lcom/miui/home/launcher/ItemInfo;->spanX:I
@@ -12474,7 +12990,7 @@
 
     if-lt v0, v2, :cond_3
 
-    .line 694
+    .line 782
     iget v2, p2, Lcom/miui/home/launcher/ItemInfo;->cellY:I
 
     iget v3, p2, Lcom/miui/home/launcher/ItemInfo;->spanY:I
@@ -12490,7 +13006,7 @@
 
     if-eqz p3, :cond_0
 
-    .line 700
+    .line 788
     iget-object v3, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
     aget-object v4, v3, v0
@@ -12499,7 +13015,7 @@
 
     if-ne p1, v4, :cond_1
 
-    .line 701
+    .line 789
     aget-object v3, v3, v0
 
     const/4 v4, 0x0
@@ -12508,7 +13024,7 @@
 
     goto :goto_2
 
-    .line 704
+    .line 792
     :cond_0
     iget-object v3, p0, Lcom/miui/home/launcher/CellLayout;->mOccupiedCell:[[Landroid/view/View;
 
@@ -12530,11 +13046,11 @@
     :cond_3
     const-string p1, "Launcher.CellLayout"
 
-    const-string/jumbo v0, "updateCellOccupiedMarks, %s, %s"
+    const-string v0, "updateCellOccupiedMarks, %s, %s"
 
     const/4 v2, 0x2
 
-    .line 708
+    .line 796
     new-array v2, v2, [Ljava/lang/Object;
 
     const/4 v3, 0x0
@@ -12546,19 +13062,19 @@
     goto :goto_3
 
     :cond_4
-    const-string/jumbo v4, "update"
+    const-string v4, "update"
 
     :goto_3
     aput-object v4, v2, v3
 
-    .line 709
+    .line 797
     invoke-virtual {p2}, Lcom/miui/home/launcher/ItemInfo;->printDetail()Ljava/lang/String;
 
     move-result-object p2
 
     aput-object p2, v2, v1
 
-    .line 708
+    .line 796
     invoke-static {v0, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p2
@@ -12569,10 +13085,10 @@
 
     if-eqz p4, :cond_5
 
-    .line 711
+    .line 799
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->checkToDeleteSelf()V
 
-    .line 713
+    .line 801
     :cond_5
     iget-object p1, p0, Lcom/miui/home/launcher/CellLayout;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -12586,7 +13102,7 @@
 
     const/4 v0, 0x1
 
-    .line 722
+    .line 810
     invoke-virtual {p0, p1, p2, v0}, Lcom/miui/home/launcher/CellLayout;->updateCellOccupiedMarks(Landroid/view/View;ZZ)V
 
     return-void
@@ -12595,7 +13111,7 @@
 .method public updateCellOccupiedMarks(Landroid/view/View;ZZ)V
     .locals 1
 
-    .line 689
+    .line 777
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/CellLayout;->getChildInfo(Landroid/view/View;)Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v0
@@ -12605,107 +13121,13 @@
     return-void
 .end method
 
-.method public updateCellPaddingTopOnFold()V
-    .locals 1
-
-    .line 2659
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isFoldDevice()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 2660
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getWorkspaceCellPaddingTop()I
-
-    move-result v0
-
-    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/CellLayout;->setCellPaddingTop(I)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public updateEditModeScale(F)V
-    .locals 1
-
-    .line 3234
-    invoke-virtual {p0, p1}, Lcom/miui/home/launcher/CellLayout;->setScaleX(F)V
-
-    .line 3235
-    invoke-virtual {p0, p1}, Lcom/miui/home/launcher/CellLayout;->setScaleY(F)V
-
-    .line 3236
-    iget-object v0, p0, Lcom/miui/home/launcher/CellLayout;->mEditAnimContoller:Lcom/miui/home/launcher/anim/EditAnimController;
-
-    invoke-virtual {v0, p1}, Lcom/miui/home/launcher/anim/EditAnimController;->updateEditBackground(F)V
-
-    return-void
-.end method
-
 .method public updateMamlDownloadVisible(I)V
     .locals 1
 
-    .line 3070
+    .line 3140
     sget-object v0, Lcom/miui/home/launcher/CellLayout;->sUpdateMamlDownloadVisible:Lcom/miui/home/launcher/CellLayout$ItemVisibilityWorker;
 
     invoke-direct {p0, v0, p1}, Lcom/miui/home/launcher/CellLayout;->workOnAllCellLayoutItem(Lcom/miui/home/launcher/CellLayout$ItemVisibilityWorker;I)V
-
-    return-void
-.end method
-
-.method public updateNewInstallFlags()V
-    .locals 5
-
-    .line 368
-    invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout;->getChildCount()I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    move v2, v1
-
-    :goto_0
-    if-ge v2, v0, :cond_1
-
-    .line 370
-    invoke-virtual {p0, v2}, Lcom/miui/home/launcher/CellLayout;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/view/View;->getTag()Ljava/lang/Object;
-
-    move-result-object v3
-
-    .line 371
-    instance-of v4, v3, Lcom/miui/home/launcher/ShortcutInfo;
-
-    if-eqz v4, :cond_0
-
-    check-cast v3, Lcom/miui/home/launcher/ShortcutInfo;
-
-    invoke-virtual {v3}, Lcom/miui/home/launcher/ShortcutInfo;->isNewInstalled()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    const/4 v0, 0x1
-
-    .line 372
-    iput-boolean v0, p0, Lcom/miui/home/launcher/CellLayout;->mHasNewInstallApps:Z
-
-    return-void
-
-    :cond_0
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    .line 376
-    :cond_1
-    iput-boolean v1, p0, Lcom/miui/home/launcher/CellLayout;->mHasNewInstallApps:Z
 
     return-void
 .end method

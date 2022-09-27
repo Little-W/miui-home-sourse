@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/ScreenView;)V
     .locals 0
 
-    .line 785
+    .line 765
     iput-object p1, p0, Lcom/miui/home/launcher/ScreenView$2;->this$0:Lcom/miui/home/launcher/ScreenView;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 790
+    .line 770
     iget-object p1, p0, Lcom/miui/home/launcher/ScreenView$2;->this$0:Lcom/miui/home/launcher/ScreenView;
 
     iget-object p1, p1, Lcom/miui/home/launcher/ScreenView;->mSlideBar:Lcom/miui/home/launcher/ScreenView$SlideBar;
@@ -44,7 +44,7 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/ScreenView$SlideBar;->setVisibility(I)V
 
-    .line 791
+    .line 771
     iget-object p1, p0, Lcom/miui/home/launcher/ScreenView$2;->this$0:Lcom/miui/home/launcher/ScreenView;
 
     iget-object p1, p1, Lcom/miui/home/launcher/ScreenView;->mSlideBar:Lcom/miui/home/launcher/ScreenView$SlideBar;
@@ -59,7 +59,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 787
+    .line 767
     iget-object p1, p0, Lcom/miui/home/launcher/ScreenView$2;->this$0:Lcom/miui/home/launcher/ScreenView;
 
     iget-object p1, p1, Lcom/miui/home/launcher/ScreenView;->mSlideBar:Lcom/miui/home/launcher/ScreenView$SlideBar;

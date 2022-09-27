@@ -36,7 +36,7 @@
 
     const/4 v0, 0x0
 
-    const v1, 0x7f0d0097
+    const v1, 0x7f0d0068
 
     invoke-virtual {p1, v1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -47,32 +47,32 @@
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherMenuDialog;->mLauncherMenu:Lcom/miui/home/launcher/LauncherMenu;
 
     .line 20
-    new-instance p1, Lmiui/home/lib/dialog/AlertDialog$Builder;
+    new-instance p1, Lmiuix/appcompat/app/AlertDialog$Builder;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/LauncherMenuDialog;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    const v2, 0x7f120007
+    const v2, 0x7f110005
 
-    invoke-direct {p1, v1, v2}, Lmiui/home/lib/dialog/AlertDialog$Builder;-><init>(Landroid/content/Context;I)V
+    invoke-direct {p1, v1, v2}, Lmiuix/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;I)V
 
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherMenuDialog;->mLauncherMenu:Lcom/miui/home/launcher/LauncherMenu;
 
     .line 21
-    invoke-virtual {p1, v1}, Lmiui/home/lib/dialog/AlertDialog$Builder;->setView(Landroid/view/View;)Lmiui/home/lib/dialog/AlertDialog$Builder;
+    invoke-virtual {p1, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setView(Landroid/view/View;)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object p1
 
-    const v1, 0x7f1102b2
+    const v1, 0x7f100235
 
     .line 22
-    invoke-virtual {p1, v1, v0}, Lmiui/home/lib/dialog/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiui/home/lib/dialog/AlertDialog$Builder;
+    invoke-virtual {p1, v1, v0}, Lmiuix/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object p1
 
     .line 23
-    invoke-virtual {p1}, Lmiui/home/lib/dialog/AlertDialog$Builder;->create()Lmiui/home/lib/dialog/AlertDialog;
+    invoke-virtual {p1}, Lmiuix/appcompat/app/AlertDialog$Builder;->create()Lmiuix/appcompat/app/AlertDialog;
 
     move-result-object p1
 
@@ -174,7 +174,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/app/FragmentTransaction;->commitNow()V
+    invoke-virtual {v0}, Landroid/app/FragmentTransaction;->commit()I
 
     :cond_0
     return-void

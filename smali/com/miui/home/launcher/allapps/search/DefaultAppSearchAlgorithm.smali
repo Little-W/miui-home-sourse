@@ -19,50 +19,24 @@
 
 .field private final mResultHandler:Landroid/os/Handler;
 
-.field private oldSearchKey:Ljava/lang/String;
-
 
 # direct methods
 .method public constructor <init>(Lcom/miui/home/launcher/allapps/AllAppsStore;)V
-    .locals 1
+    .locals 0
 
-    .line 40
+    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v0, ""
-
     .line 36
-    iput-object v0, p0, Lcom/miui/home/launcher/allapps/search/DefaultAppSearchAlgorithm;->oldSearchKey:Ljava/lang/String;
-
-    .line 41
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/search/DefaultAppSearchAlgorithm;->mAllAppsStore:Lcom/miui/home/launcher/allapps/AllAppsStore;
 
-    .line 42
+    .line 37
     new-instance p1, Landroid/os/Handler;
 
     invoke-direct {p1}, Landroid/os/Handler;-><init>()V
 
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/search/DefaultAppSearchAlgorithm;->mResultHandler:Landroid/os/Handler;
 
-    .line 43
-    sget-boolean p1, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
-
-    if-eqz p1, :cond_0
-
-    invoke-static {}, Lcom/miui/home/launcher/allapps/LauncherModeController;->isElderlyManMode()Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    .line 44
-    invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getAlgorithmManager()Lcom/mi/globallauncher/branchInterface/IBranchSearchAlgorithm;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Lcom/mi/globallauncher/branchInterface/IBranchSearchAlgorithm;->init()V
-
-    :cond_0
     return-void
 .end method
 
@@ -78,12 +52,12 @@
         }
     .end annotation
 
-    .line 143
+    .line 124
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 144
+    .line 125
     :goto_0
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
@@ -91,21 +65,21 @@
 
     if-ge p1, v1, :cond_0
 
-    .line 145
+    .line 126
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/lang/String;
 
-    .line 146
+    .line 127
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     add-int/lit8 p1, p1, 0x1
 
     goto :goto_0
 
-    .line 148
+    .line 129
     :cond_0
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -127,22 +101,22 @@
         }
     .end annotation
 
-    .line 80
+    .line 61
     invoke-virtual {p1}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 81
+    .line 62
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 82
+    .line 63
     invoke-static {}, Lcom/miui/home/launcher/allapps/search/DefaultAppSearchAlgorithm$StringMatcher;->getInstance()Lcom/miui/home/launcher/allapps/search/DefaultAppSearchAlgorithm$StringMatcher;
 
     move-result-object v1
 
-    .line 83
+    .line 64
     iget-object v2, p0, Lcom/miui/home/launcher/allapps/search/DefaultAppSearchAlgorithm;->mAllAppsStore:Lcom/miui/home/launcher/allapps/AllAppsStore;
 
     invoke-virtual {v2}, Lcom/miui/home/launcher/allapps/AllAppsStore;->getApps()Ljava/util/Collection;
@@ -167,7 +141,7 @@
 
     check-cast v3, Lcom/miui/home/launcher/AppInfo;
 
-    .line 84
+    .line 65
     invoke-virtual {v3}, Lcom/miui/home/launcher/AppInfo;->getLable()Ljava/lang/CharSequence;
 
     move-result-object v4
@@ -176,14 +150,14 @@
 
     move-result-object v4
 
-    .line 85
+    .line 66
     invoke-static {v4, p1, v1}, Lcom/miui/home/launcher/allapps/search/DefaultAppSearchAlgorithm;->matchesCharacter(Ljava/lang/String;Ljava/lang/String;Lcom/miui/home/launcher/allapps/search/DefaultAppSearchAlgorithm$StringMatcher;)Z
 
     move-result v4
 
     if-nez v4, :cond_1
 
-    .line 86
+    .line 67
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v4
@@ -196,7 +170,7 @@
 
     if-eqz v4, :cond_0
 
-    .line 87
+    .line 68
     invoke-virtual {v3}, Lcom/miui/home/launcher/AppInfo;->getPinyinList()Ljava/util/ArrayList;
 
     move-result-object v4
@@ -207,7 +181,7 @@
 
     if-nez v4, :cond_0
 
-    .line 88
+    .line 69
     invoke-virtual {v3}, Lcom/miui/home/launcher/AppInfo;->getPinyinList()Ljava/util/ArrayList;
 
     move-result-object v4
@@ -218,7 +192,7 @@
 
     if-eqz v4, :cond_0
 
-    .line 89
+    .line 70
     :cond_1
     invoke-virtual {v3}, Lcom/miui/home/launcher/AppInfo;->toComponentKey()Lcom/miui/home/launcher/util/ComponentKey;
 
@@ -356,12 +330,12 @@
 .method private static matchesCharacter(Ljava/lang/String;Ljava/lang/String;Lcom/miui/home/launcher/allapps/search/DefaultAppSearchAlgorithm$StringMatcher;)Z
     .locals 9
 
-    .line 96
+    .line 77
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
 
-    .line 98
+    .line 79
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v1
@@ -374,7 +348,7 @@
 
     goto :goto_2
 
-    .line 106
+    .line 87
     :cond_0
     invoke-virtual {p0, v2}, Ljava/lang/String;->codePointAt(I)I
 
@@ -403,7 +377,7 @@
 
     add-int/lit8 v8, v3, 0x1
 
-    .line 113
+    .line 94
     invoke-virtual {p0, v8}, Ljava/lang/String;->codePointAt(I)I
 
     move-result v8
@@ -417,7 +391,7 @@
     :cond_1
     move v8, v2
 
-    .line 114
+    .line 95
     :goto_1
     invoke-static {v6, v5, v8}, Lcom/miui/home/launcher/allapps/search/DefaultAppSearchAlgorithm;->isBreak(III)Z
 
@@ -427,7 +401,7 @@
 
     add-int v5, v3, v0
 
-    .line 115
+    .line 96
     invoke-virtual {p0, v3, v5}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v5
@@ -471,7 +445,7 @@
         }
     .end annotation
 
-    .line 123
+    .line 104
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v0
@@ -488,7 +462,7 @@
 
     return v1
 
-    .line 126
+    .line 107
     :cond_0
     invoke-virtual {p1}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
@@ -506,7 +480,7 @@
 
     move v2, v1
 
-    .line 128
+    .line 109
     :goto_0
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
@@ -514,14 +488,14 @@
 
     if-ge v2, v3, :cond_3
 
-    .line 129
+    .line 110
     invoke-virtual {p0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Ljava/lang/String;
 
-    .line 130
+    .line 111
     invoke-virtual {p1, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v4
@@ -550,7 +524,7 @@
 
     return v1
 
-    .line 139
+    .line 120
     :cond_4
     invoke-static {p0, v0}, Lcom/miui/home/launcher/allapps/search/DefaultAppSearchAlgorithm;->getPinyinString(Ljava/util/ArrayList;I)Ljava/lang/String;
 
@@ -566,29 +540,14 @@
 
 # virtual methods
 .method public cancel(Z)V
-    .locals 2
+    .locals 1
 
-    if-eqz p1, :cond_0
+    .line 42
+    iget-object p1, p0, Lcom/miui/home/launcher/allapps/search/DefaultAppSearchAlgorithm;->mResultHandler:Landroid/os/Handler;
 
-    const-string v0, ""
+    const/4 v0, 0x0
 
-    .line 51
-    iput-object v0, p0, Lcom/miui/home/launcher/allapps/search/DefaultAppSearchAlgorithm;->oldSearchKey:Ljava/lang/String;
-
-    .line 53
-    :cond_0
-    iget-object v0, p0, Lcom/miui/home/launcher/allapps/search/DefaultAppSearchAlgorithm;->mResultHandler:Landroid/os/Handler;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
-
-    .line 54
-    invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getAlgorithmManager()Lcom/mi/globallauncher/branchInterface/IBranchSearchAlgorithm;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1}, Lcom/mi/globallauncher/branchInterface/IBranchSearchAlgorithm;->setInterruptActiveRequests(Z)V
+    invoke-virtual {p1, v0}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -596,24 +555,12 @@
 .method public doSearch(Ljava/lang/String;Lcom/miui/home/launcher/allapps/search/AllAppsSearchBarController$Callbacks;)V
     .locals 3
 
-    .line 60
-    iget-object v0, p0, Lcom/miui/home/launcher/allapps/search/DefaultAppSearchAlgorithm;->oldSearchKey:Ljava/lang/String;
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    .line 64
-    :cond_0
+    .line 48
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/allapps/search/DefaultAppSearchAlgorithm;->getTitleMatchResult(Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object v0
 
-    .line 65
+    .line 49
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/search/DefaultAppSearchAlgorithm;->mResultHandler:Landroid/os/Handler;
 
     new-instance v2, Lcom/miui/home/launcher/allapps/search/DefaultAppSearchAlgorithm$1;
@@ -622,27 +569,5 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 71
-    invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getAlgorithmManager()Lcom/mi/globallauncher/branchInterface/IBranchSearchAlgorithm;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lcom/mi/globallauncher/branchInterface/IBranchSearchAlgorithm;->judgeBranchAlgorithmNonNull()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 72
-    invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getAlgorithmManager()Lcom/mi/globallauncher/branchInterface/IBranchSearchAlgorithm;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1, p2}, Lcom/mi/globallauncher/branchInterface/IBranchSearchAlgorithm;->doUniSearch(Ljava/lang/String;Lcom/mi/globallauncher/branchInterface/BranchSearchCallback;)V
-
-    .line 73
-    iput-object p1, p0, Lcom/miui/home/launcher/allapps/search/DefaultAppSearchAlgorithm;->oldSearchKey:Ljava/lang/String;
-
-    :cond_1
     return-void
 .end method

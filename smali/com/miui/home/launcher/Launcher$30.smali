@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Landroid/os/Handler;)V
     .locals 0
 
-    .line 3864
+    .line 3750
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$30;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -35,7 +35,7 @@
 .method public onChange(Z)V
     .locals 5
 
-    .line 3867
+    .line 3753
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$30;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getContentResolver()Landroid/content/ContentResolver;
@@ -48,7 +48,7 @@
 
     move-result-object p1
 
-    .line 3869
+    .line 3755
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -57,15 +57,15 @@
 
     const/4 v0, 0x2
 
-    .line 3870
+    .line 3756
     new-array v0, v0, [I
 
-    .line 3871
+    .line 3757
     invoke-static {p1, v0}, Lcom/miui/home/launcher/ScreenUtils;->parseCellsSize(Ljava/lang/String;[I)Z
 
     const/4 v1, 0x0
 
-    .line 3872
+    .line 3758
     aget v2, v0, v1
 
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountX()I
@@ -84,7 +84,7 @@
 
     if-eq v2, v3, :cond_1
 
-    .line 3873
+    .line 3759
     :cond_0
     iget-object v2, p0, Lcom/miui/home/launcher/Launcher$30;->this$0:Lcom/miui/home/launcher/Launcher;
 
@@ -98,10 +98,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 3874
+    .line 3760
     invoke-static {p1}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackScreenCellsSizeChanged(Ljava/lang/String;)V
 
-    .line 3875
+    .line 3761
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$30;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->screenCellsChangeConfirmed()V

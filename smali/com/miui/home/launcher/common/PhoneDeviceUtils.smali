@@ -99,12 +99,5 @@
 
     invoke-virtual {v0, v1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 21
-    sget-object v0, Lcom/miui/home/launcher/common/PhoneDeviceUtils;->FOG_SERIES:Landroid/util/ArraySet;
-
-    const-string v1, "2b82477bcccc369d9d8ed30bb1200803"
-
-    invoke-virtual {v0, v1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
-
     return-void
 .end method

@@ -122,7 +122,7 @@
     :goto_0
     if-nez p2, :cond_6
 
-    const-string/jumbo p2, "uriList"
+    const-string p2, "uriList"
 
     .line 51
     invoke-virtual {p1, p2}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
@@ -131,7 +131,7 @@
 
     if-eqz p2, :cond_4
 
-    const-string/jumbo p2, "uriList"
+    const-string p2, "uriList"
 
     invoke-virtual {p1, p2}, Landroid/os/Bundle;->getParcelableArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
 

@@ -39,7 +39,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0d016a
+    const v2, 0x7f0d00ff
 
     const/4 v3, 0x0
 
@@ -47,7 +47,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0a02d3
+    const v2, 0x7f0a01c5
 
     .line 30
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -86,7 +86,7 @@
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/SearchBarSettingsWindow;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    const p1, 0x7f1201fc
+    const p1, 0x7f110166
 
     .line 37
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/SearchBarSettingsWindow;->setAnimationStyle(I)V
@@ -133,7 +133,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f0705ca
+    const v2, 0x7f070381
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

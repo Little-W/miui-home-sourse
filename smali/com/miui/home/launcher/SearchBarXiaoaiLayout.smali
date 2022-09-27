@@ -121,7 +121,7 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    const-string/jumbo v1, "voice_assist_start_from_key"
+    const-string v1, "voice_assist_start_from_key"
 
     const-string v2, "home_search"
 
@@ -425,7 +425,7 @@
     .line 54
     invoke-super {p0}, Landroid/widget/FrameLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a03f1
+    const v0, 0x7f0a0279
 
     .line 55
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/SearchBarXiaoaiLayout;->findViewById(I)Landroid/view/View;
@@ -510,12 +510,12 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f080195
+    const v0, 0x7f0800b8
 
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f080194
+    const v0, 0x7f0800b7
 
     :goto_0
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/SearchBarXiaoaiLayout;->setBackgroundResource(I)V

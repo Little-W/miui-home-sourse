@@ -282,24 +282,3 @@
 
     throw p1
 .end method
-
-.method public throwIfCanceled()V
-    .locals 1
-
-    .line 57
-    invoke-virtual {p0}, Landroidx/core/os/CancellationSignal;->isCanceled()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    .line 58
-    :cond_0
-    new-instance v0, Landroidx/core/os/OperationCanceledException;
-
-    invoke-direct {v0}, Landroidx/core/os/OperationCanceledException;-><init>()V
-
-    throw v0
-.end method

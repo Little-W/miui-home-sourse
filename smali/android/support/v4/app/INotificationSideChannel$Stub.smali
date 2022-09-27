@@ -89,7 +89,7 @@
 .method public static getDefaultImpl()Landroid/support/v4/app/INotificationSideChannel;
     .locals 1
 
-    .line 224
+    .line 218
     sget-object v0, Landroid/support/v4/app/INotificationSideChannel$Stub$Proxy;->sDefaultImpl:Landroid/support/v4/app/INotificationSideChannel;
 
     return-object v0
@@ -98,14 +98,14 @@
 .method public static setDefaultImpl(Landroid/support/v4/app/INotificationSideChannel;)Z
     .locals 1
 
-    .line 214
+    .line 211
     sget-object v0, Landroid/support/v4/app/INotificationSideChannel$Stub$Proxy;->sDefaultImpl:Landroid/support/v4/app/INotificationSideChannel;
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_0
 
     if-eqz p0, :cond_0
 
-    .line 218
+    .line 212
     sput-object p0, Landroid/support/v4/app/INotificationSideChannel$Stub$Proxy;->sDefaultImpl:Landroid/support/v4/app/INotificationSideChannel;
 
     const/4 p0, 0x1
@@ -116,16 +116,6 @@
     const/4 p0, 0x0
 
     return p0
-
-    .line 215
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string v0, "setDefaultImpl() called twice"
-
-    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
 .end method
 
 

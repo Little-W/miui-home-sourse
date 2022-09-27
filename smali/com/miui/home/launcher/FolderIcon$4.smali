@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/FolderIcon;)V
     .locals 0
 
-    .line 156
+    .line 153
     iput-object p1, p0, Lcom/miui/home/launcher/FolderIcon$4;->this$0:Lcom/miui/home/launcher/FolderIcon;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 159
+    .line 156
     iget-object p1, p0, Lcom/miui/home/launcher/FolderIcon$4;->this$0:Lcom/miui/home/launcher/FolderIcon;
 
     invoke-static {p1}, Lcom/miui/home/launcher/FolderIcon;->access$000(Lcom/miui/home/launcher/FolderIcon;)Landroid/widget/ImageView;
@@ -46,7 +46,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setAlpha(F)V
 
-    .line 160
+    .line 157
     iget-object p1, p0, Lcom/miui/home/launcher/FolderIcon$4;->this$0:Lcom/miui/home/launcher/FolderIcon;
 
     iget-object p1, p1, Lcom/miui/home/launcher/FolderIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;

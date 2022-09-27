@@ -27,7 +27,7 @@
 
 # direct methods
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -40,86 +40,81 @@
         }
     .end annotation
 
-    .line 57
+    .line 56
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 58
+    .line 57
     invoke-static {p1}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p1
 
-    check-cast v0, Ljava/lang/String;
+    check-cast p1, Ljava/lang/String;
 
-    iput-object v0, p0, Landroidx/core/provider/FontRequest;->mProviderAuthority:Ljava/lang/String;
+    iput-object p1, p0, Landroidx/core/provider/FontRequest;->mProviderAuthority:Ljava/lang/String;
 
-    .line 59
+    .line 58
     invoke-static {p2}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p1
 
-    check-cast v0, Ljava/lang/String;
+    check-cast p1, Ljava/lang/String;
 
-    iput-object v0, p0, Landroidx/core/provider/FontRequest;->mProviderPackage:Ljava/lang/String;
+    iput-object p1, p0, Landroidx/core/provider/FontRequest;->mProviderPackage:Ljava/lang/String;
 
-    .line 60
+    .line 59
     invoke-static {p3}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p1
 
-    check-cast v0, Ljava/lang/String;
+    check-cast p1, Ljava/lang/String;
 
-    iput-object v0, p0, Landroidx/core/provider/FontRequest;->mQuery:Ljava/lang/String;
+    iput-object p1, p0, Landroidx/core/provider/FontRequest;->mQuery:Ljava/lang/String;
 
-    .line 61
+    .line 60
     invoke-static {p4}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p4
+    move-result-object p1
 
-    check-cast p4, Ljava/util/List;
+    check-cast p1, Ljava/util/List;
 
-    iput-object p4, p0, Landroidx/core/provider/FontRequest;->mCertificates:Ljava/util/List;
+    iput-object p1, p0, Landroidx/core/provider/FontRequest;->mCertificates:Ljava/util/List;
 
-    const/4 p4, 0x0
+    const/4 p1, 0x0
+
+    .line 61
+    iput p1, p0, Landroidx/core/provider/FontRequest;->mCertificatesArray:I
 
     .line 62
-    iput p4, p0, Landroidx/core/provider/FontRequest;->mCertificatesArray:I
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    iget-object p2, p0, Landroidx/core/provider/FontRequest;->mProviderAuthority:Ljava/lang/String;
+
+    invoke-direct {p1, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const-string p2, "-"
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p2, p0, Landroidx/core/provider/FontRequest;->mProviderPackage:Ljava/lang/String;
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p2, "-"
 
     .line 63
-    invoke-direct {p0, p1, p2, p3}, Landroidx/core/provider/FontRequest;->createIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p2, p0, Landroidx/core/provider/FontRequest;->mQuery:Ljava/lang/String;
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
     iput-object p1, p0, Landroidx/core/provider/FontRequest;->mIdentifier:Ljava/lang/String;
 
     return-void
-.end method
-
-.method private createIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-    .locals 1
-
-    .line 93
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string p1, "-"
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p1, "-"
-
-    .line 94
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
 .end method
 
 
@@ -135,7 +130,7 @@
         }
     .end annotation
 
-    .line 133
+    .line 125
     iget-object v0, p0, Landroidx/core/provider/FontRequest;->mCertificates:Ljava/util/List;
 
     return-object v0
@@ -144,16 +139,16 @@
 .method public getCertificatesArrayResId()I
     .locals 1
 
-    .line 145
+    .line 137
     iget v0, p0, Landroidx/core/provider/FontRequest;->mCertificatesArray:I
 
     return v0
 .end method
 
-.method getId()Ljava/lang/String;
+.method public getIdentifier()Ljava/lang/String;
     .locals 1
 
-    .line 164
+    .line 143
     iget-object v0, p0, Landroidx/core/provider/FontRequest;->mIdentifier:Ljava/lang/String;
 
     return-object v0
@@ -162,7 +157,7 @@
 .method public getProviderAuthority()Ljava/lang/String;
     .locals 1
 
-    .line 103
+    .line 95
     iget-object v0, p0, Landroidx/core/provider/FontRequest;->mProviderAuthority:Ljava/lang/String;
 
     return-object v0
@@ -171,7 +166,7 @@
 .method public getProviderPackage()Ljava/lang/String;
     .locals 1
 
-    .line 112
+    .line 104
     iget-object v0, p0, Landroidx/core/provider/FontRequest;->mProviderPackage:Ljava/lang/String;
 
     return-object v0
@@ -180,7 +175,7 @@
 .method public getQuery()Ljava/lang/String;
     .locals 1
 
-    .line 121
+    .line 113
     iget-object v0, p0, Landroidx/core/provider/FontRequest;->mQuery:Ljava/lang/String;
 
     return-object v0
@@ -189,12 +184,12 @@
 .method public toString()Ljava/lang/String;
     .locals 6
 
-    .line 169
+    .line 148
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 170
+    .line 149
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -237,7 +232,7 @@
 
     move v2, v1
 
-    .line 175
+    .line 154
     :goto_0
     iget-object v3, p0, Landroidx/core/provider/FontRequest;->mCertificates:Ljava/util/List;
 
@@ -249,10 +244,10 @@
 
     const-string v3, " ["
 
-    .line 176
+    .line 155
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 177
+    .line 156
     iget-object v3, p0, Landroidx/core/provider/FontRequest;->mCertificates:Ljava/util/List;
 
     invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -263,7 +258,7 @@
 
     move v4, v1
 
-    .line 178
+    .line 157
     :goto_1
     invoke-interface {v3}, Ljava/util/List;->size()I
 
@@ -273,17 +268,17 @@
 
     const-string v5, " \""
 
-    .line 179
+    .line 158
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 180
+    .line 159
     invoke-interface {v3, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, [B
 
-    .line 181
+    .line 160
     invoke-static {v5, v1}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
 
     move-result-object v5
@@ -292,7 +287,7 @@
 
     const-string v5, "\""
 
-    .line 182
+    .line 161
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     add-int/lit8 v4, v4, 0x1
@@ -302,7 +297,7 @@
     :cond_0
     const-string v3, " ]"
 
-    .line 184
+    .line 163
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     add-int/lit8 v2, v2, 0x1
@@ -312,10 +307,10 @@
     :cond_1
     const-string/jumbo v1, "}"
 
-    .line 186
+    .line 165
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 187
+    .line 166
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -334,7 +329,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 188
+    .line 167
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0

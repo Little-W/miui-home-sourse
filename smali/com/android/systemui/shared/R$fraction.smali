@@ -17,14 +17,14 @@
 # static fields
 .field public static final drop_down_anim_pivot_x:I = 0x7f090001
 
-.field public static final immersion_menu_anim_pivot_x:I = 0x7f090003
+.field public static final immersion_menu_anim_pivot_x:I = 0x7f090002
 
 
 # direct methods
 .method private constructor <init>()V
     .locals 0
 
-    .line 3282
+    .line 3224
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

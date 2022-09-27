@@ -22,10 +22,10 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Landroid/os/Handler;)V
     .locals 0
 
-    .line 4024
+    .line 3909
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$DualClockObserver;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    .line 4025
+    .line 3910
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
     return-void
@@ -36,15 +36,15 @@
 .method public onChange(Z)V
     .locals 1
 
-    .line 4030
+    .line 3915
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    .line 4031
+    .line 3916
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$DualClockObserver;->this$0:Lcom/miui/home/launcher/Launcher;
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lcom/miui/home/launcher/Launcher;->access$4400(Lcom/miui/home/launcher/Launcher;Z)V
+    invoke-static {p1, v0}, Lcom/miui/home/launcher/Launcher;->access$4600(Lcom/miui/home/launcher/Launcher;Z)V
 
     return-void
 .end method

@@ -28,12 +28,12 @@
 .method public constructor <init>(Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;)V
     .locals 0
 
-    .line 247
+    .line 237
     iput-object p1, p0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker$Tracker;->this$1:Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 248
+    .line 238
     invoke-virtual {p0}, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker$Tracker;->reset()V
 
     return-void
@@ -46,7 +46,7 @@
 
     const/high16 v0, -0x40800000    # -1.0f
 
-    .line 251
+    .line 241
     iput v0, p0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker$Tracker;->prev:F
 
     iput v0, p0, Lcom/miui/home/launcher/ScreenView$GestureVelocityTracker$Tracker;->fold:F

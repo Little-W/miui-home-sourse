@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="Icon_name_classic_mode">تنظیمات صفحه اصلی</string>
     <string name="accessibility_all_app_custom_category_finish">انجام شد</string>
     <string name="accessibility_all_app_custom_category_item_remove">حذف «%1$s» از دسته‌بندی</string>
     <string name="accessibility_clear_search_bar_text">پاک‌سازی نوار جستجو</string>
@@ -8,8 +7,8 @@
     <string name="accessibility_enter_all_app_settings">باز کردن تنظیمات کشوی برنامه</string>
     <string name="accessibility_menu_item_smallwindow_disable">این برنامه از پنجره‌های شناور پشتیبانی نمی‌کند</string>
     <string name="accessibility_menu_item_smallwindow_enable">این برنامه از پنجره‌های شناور پشتیبانی می‌کند</string>
-    <string name="accessibility_menu_item_split_disable">برنامه از تقسیم صفحه پشتیبانی نمی‌کند</string>
-    <string name="accessibility_menu_item_split_enable">برنامه از تقسیم صفحه پشتیبانی می‌کند</string>
+    <string name="accessibility_menu_item_split_disable">برنامه از تجزیه نمایشگر پشتیبانی نمی‌کند</string>
+    <string name="accessibility_menu_item_split_enable">برنامه از تجزیه نمایشگر پشتیبانی می‌کند</string>
     <string name="accessibility_recent_task_enter">موارد تازه را باز کرد</string>
     <string name="accessibility_recent_task_exit">موارد تازه را بست</string>
     <string name="accessibility_recent_task_locked_state">قفل</string>
@@ -18,18 +17,16 @@
     <string name="accessibility_recent_task_unlocked_state">باز</string>
     <string name="accessibility_recents_item_dismissed">%1$s پاک‌سازی شد</string>
     <string name="accessibility_recents_item_open_app_info">باز کردن اطلاعات برنامه %s.</string>
-    <string name="accessibility_splite_screen_primary">به عنوان برنامه اصلی به تقسیم صفحه افزوده شد</string>
-    <string name="accessibility_splite_screen_secondary">به عنوان برنامه فرعی به تقسیم صفحه افزوده شد</string>
+    <string name="accessibility_splite_screen_primary">به عنوان برنامه اصلی به تجزیه نمایشگر افزوده شد</string>
+    <string name="accessibility_splite_screen_secondary">به عنوان برنامه فرعی به تجزیه نمایشگر افزوده شد</string>
     <string name="action_add_to_workspace">افزودن به فضای کار</string>
     <string name="actionbar_button_up_description">بازگشت</string>
     <string name="activity_not_found">برنامه بر روی دستگاه شما نصب نشده است</string>
     <string name="activity_not_unlocked">پیش از باز کردن برنامه‌ها صبر کرده تا دستگاه شما به صورت کامل دوباره راه‌اندازی شود</string>
     <string name="add_custom_category">سفارشی</string>
     <string name="add_screen">افزودن نمایشگر</string>
-    <string name="add_to_workspace">افزودن به صفحه اصلی</string>
     <string name="added_all_category">به همه برنامه‌ها با موفقیت افزوده شد</string>
     <string name="afternoon">بعد از ظهر</string>
-    <string name="agree_button">پذیرفتن</string>
     <string name="alexa_notification_add">افزودن</string>
     <string name="alexa_notification_cancel">اکنون نه</string>
     <string name="alexa_notification_content">میان‌بر Alexa به مرکز کنترل افزوده شود؟</string>
@@ -68,7 +65,6 @@
     <string name="all_apps_slide_up_tips">بالا کشیدن صفحه اصلی برای کشوی برنامه تنظیم شده است. به حالت صفحه اصلی تعویض کرده و دوباره تلاش کنید.</string>
     <string name="all_apps_suggestions">پیشنهاد برنامه</string>
     <string name="am">ق.ظ</string>
-    <string name="animation_rate_title">سرعت پویانمایی</string>
     <string name="announce_for_app_move_in_folder">به موقعیت %1$d در پوشه منتقل شد</string>
     <string name="announce_for_checked">%1$s، انتخاب شد</string>
     <string name="announce_for_choose_default_screen">تنظیم صفحه %1$d به عنوان صفحه اصلی پیش‌فرض</string>
@@ -121,13 +117,6 @@
     <string name="app_category_tools">ابزارها</string>
     <string name="app_category_travel">سفر</string>
     <string name="app_category_vr">VR</string>
-    <string name="app_drawer_double_confirm_description">این کار چیدمان صفحه اصلی شما را تغییر خواهد داد. بعداً در تنظیمات می‌توانید این تغییرات را باز گردانید.</string>
-    <string name="app_drawer_double_confirm_title">توجه</string>
-    <string name="app_drawer_feature_description">کشوی برنامه ابزاری مناسب برای تنظیم همه برنامه‌های شما است. برنامه‌ها را به صورت خودکار دسته‌بندی کرده و هر آنچه را که نیاز دارید سریع پیدا کنید!</string>
-    <string name="app_drawer_guide_description">چیزهایی که در برنامه مورد پسندتان دنبالش هستید را بیابید</string>
-    <string name="app_drawer_guide_title">کشوی برنامه</string>
-    <string name="app_drawer_tip_title">ما خوراک محتوا را با کشوی برنامه جایگزین کرده‌ایم.</string>
-    <string name="app_install_state">نصب شده</string>
     <string name="app_name">smallWindow</string>
     <string name="application_name">لانچر سیستم</string>
     <string name="apply">تنظیم</string>
@@ -150,35 +139,8 @@
     <string name="back">بازگشت</string>
     <string name="backup_fail">از لانچر نسخه پشتیبان گرفته نشد</string>
     <string name="bad_wallpaper_source_prompt">نمی‌توان تصویر زمینه را بارگذاری کرد</string>
-    <string name="branch_feature_description">علاوه بر برنامه‌ها، جستجوی سریع می‌تواند مطالب و موارد محتوا برنامه را به صورت آنلاین پیدا کند.</string>
-    <string name="branch_guide_attention">استفاده از جستجوی بهبود یافته نیازمند هم‌رسانی درخواست‌های جستجوی شما، شناسه آگهی‌های Google و نشانی IPها با Branch Metrics Inc است. پیش از استفاده از این ویژگی <a href="http://url1"><font color="#B3000000">شرایط و ضوابط اکتشاف کاربر نهایی</font></a> و <a href="http://url2"><font color="#B3000000">سیاست حفظ حریم خصوصی اکتشاف Branch</font></a> را خوانده و بپذیرید.</string>
-    <string name="branch_guide_description_one">ما برنامه‌های شما را در کشوی برنامه می‌گذاریم. صفحه اصلی شما مرتب و منظم دیده خواهد شد.</string>
-    <string name="branch_guide_description_three">با جستجوی داخلی، هر آنچه را که نیاز دارید می‌توانید در یک لحظه بیابید!</string>
-    <string name="branch_guide_description_two">کشوی برنامه برنامه‌ها را به صورت خودکار دسته‌بندی می‌کند.</string>
-    <string name="branch_guide_tip_title">هر برنامه‌ای در جای خودش قرار دارد</string>
-    <string name="branch_guide_title">با کشوی برنامه آشنا شوید</string>
-    <string name="branch_guide_type_four_desc">در دو مرحله ساده می‌توانید به شیوه‌های قدیمی بازگردید</string>
-    <string name="branch_guide_type_four_main">در تنظیمات، به صفحه اصلی > صفحه اصلی رفته و «کلاسیک» را انتخاب کنید.</string>
-    <string name="branch_guide_type_four_step_one">تنظیمات را باز کنید</string>
-    <string name="branch_guide_type_four_step_two">صفحه اصلی را انتخاب کنید</string>
-    <string name="branch_guide_type_one_desc">با کشوی برنامه، برنامه‌های خود را مدیریت کنید</string>
-    <string name="branch_guide_type_one_main">با نگه داشتن برنامه‌های خود در کشوی برنامه، صفحه اصلی خود را مرتب و منظم کنید.</string>
-    <string name="branch_new_feature">ویژگی جدید</string>
-    <string name="branch_privacy_policy">سیاست حفظ حریم خصوصی</string>
-    <string name="branch_search_guide_description">نتایج جستجوی ما حالا همه‌جانبه‌تر هستند</string>
-    <string name="branch_search_guide_privacy">این خدمات توسط Branch Metrics Inc ارائه شده‌اند. اطلاعات موقعیت، جستجوهای انجام شده و شناسه تبلیغات Google شما با Branch هم‌رسانی خواهد شد. پیش از استفادهد ااز این خدمات <a href="http://url1"><font color="#B3000000">شرایط و ضوابط</font></a> و <a href="http://url2"><font color="#B3000000">سیاست حفظ حریم خصوصی</font></a> Branch را خوانده و بپذیرید.</string>
-    <string name="branch_search_guide_title">چیزهایی که در برنامه مورد پسندتان دنبالش هستید را بیابید</string>
-    <string name="branch_terms_condition">شرایط و ضوابط</string>
-    <string name="branch_tip_title">با جستجوی سریع می‌توانید هر آنچه را که نیاز دارید در یک لحظه پیدا کنید.</string>
-    <string name="btn_agree">پذیرفتن</string>
-    <string name="btn_cancel">لغو</string>
-    <string name="btn_close">خاموش کردن</string>
-    <string name="btn_open">روشن</string>
-    <string name="btn_request_permission">دادن مجوزها</string>
-    <string name="btn_set_right_now">دادن مجوزها</string>
     <string name="buffering">درحال آماده‌سازی…</string>
     <string name="cancel_action">لغو</string>
-    <string name="cancel_botton">لغو</string>
     <string name="cancel_btn_label">لغو</string>
     <string name="cant_edit_lock_screen">سبک صفحه قفل را نمی‌توان تغییر داد</string>
     <string name="cant_remove_folder">نمی‌توان پوشه را حذف کرد</string>
@@ -288,11 +250,9 @@
     <string name="emptyplaylist">برای افزودن آهنگ ضربه بزنید</string>
     <string name="enable_wallpaper_scroll">روشن کردن طومار کنار</string>
     <string name="encryption">رمزگذاری</string>
-    <string name="enter_search_setting_title">باز شدن جستجو پس از باز کردن کشوی برنامه</string>
     <string name="eras_ad">میلادی</string>
     <string name="eras_bc">پیش از میلاد</string>
     <string name="evening">بعد از ظهر</string>
-    <string name="exit_overview_because_task_stack_changed">به دلیل تغییراتی که در پس‌زمینه رخ داد، موارد تازه بسته شدند</string>
     <string name="failed_to_delete_temporary">نمی‌توان حذف کرد</string>
     <string name="failed_to_drop">نمی‌توان منتقل کرد</string>
     <string name="failed_to_drop_widget_invalid">ابزارک معتبر نیست</string>
@@ -349,8 +309,6 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
-    <string name="fold_pair_install_shortcut_long_click">برای افزودن به صفحه اصلی فشرده و نگه دارید</string>
-    <string name="fold_pair_installed_shortcut_launcher">این میان‌بر از پیش وجود دارد</string>
     <string name="folder_name">پوشه</string>
     <string name="frame_load_failed">نمی‌توان قاب را بارگذاری کرد</string>
     <string name="free_style_apps_title">انتخاب برنامه‌</string>
@@ -406,14 +364,11 @@
     <string name="gadget_weather_title_14">آب و هوا</string>
     <string name="gadget_weather_title_24">آب و هوا</string>
     <string name="global_search_hint">جستجو</string>
-    <string name="got_it_botton">فهمیدم</string>
     <string name="group_folder">پوشه جدید</string>
     <string name="group_live_folders">پوشه‌ها</string>
     <string name="group_shortcuts">میانبرها</string>
     <string name="guide_install_app_msg">این برنامه بر روی دستگاه شما نصب نشده است. هم‌اکنون پیدا کردن و نصب برنامه انجام شود؟</string>
     <string name="guide_install_app_title">پیدا کردن و نصب برنامه انجام شود؟</string>
-    <string name="guide_permission_title">نیازمند مجوز است</string>
-    <string name="guide_privacy_dialog_title">شرایط استفاده از خدمات</string>
     <string name="guide_tips_editing_mode">برای انتخاب یک ابزارک، آن را فشرده و نگه دارید</string>
     <string name="home_gesture_content_center">مرکز محتوا</string>
     <string name="home_gesture_global_search">جستجو</string>
@@ -444,9 +399,6 @@
     <string name="launcher_slide_up_title">بالا کشیدن صفحه اصلی</string>
     <string name="launcher_sliding_up_gesture">در صفحه اصلی به بالا کشیده تا جستجو باز شود</string>
     <string name="launcher_title">صفحه اصلی و موارد تازه</string>
-    <string name="layout_guide_description">چنانچه کشوی برنامه را نمی‌پسندید، همواره می‌توانید به صفحه اصلی کلاسیک باز گردید. به آسانی از میان‌بر «تنظیمات صفحه اصلی» استفاده کرده و بین دو حالت تعویض کنید.</string>
-    <string name="layout_guide_tip_title">با یک ضربه می‌توانید به شیوه‌های قدیمی بازگردید</string>
-    <string name="layout_guide_title">چگونگی حذف کشوی برنامه</string>
     <string name="like">افزودن به موارد پسندیده</string>
     <string name="liked">به موارد پسندیده افزوده شد</string>
     <string name="loading_desktop">چند لحظه صبر کنید…</string>
@@ -592,7 +544,7 @@
     <string name="navigation_guide_dock_title_pad">نمایش لنگرگاه برنامه‌ها</string>
     <string name="navigation_guide_dock_title_spec_pad">نمایش لنگرگاه برنامه‌ها هنگام استفاده از یک برنامه</string>
     <string name="navigation_guide_dock_title_spec_with_quotation_pad">نمایش لنگرگاه برنامه‌ها هنگام استفاده از یک برنامه</string>
-    <string name="navigation_guide_finish_text">متوجه‌ام</string>
+    <string name="navigation_guide_finish_text">فهمیدم</string>
     <string name="navigation_guide_gesture_line_dialog_summary">پس از پنهان کردن نشان‌گر تمام‌صفحه، یک حرکت انگشت جدید برای تعویض میان برنامه‌ها استفاده خواهد شد. درباره این حرکت انگشت بیشتر بدانید.</string>
     <string name="navigation_guide_gesture_line_dialog_title">یادگیری حرکت انگشت جدید</string>
     <string name="navigation_guide_hide_gesture_line_summary">نمایش ندادن نشان‌گر تمام‌صفحه هنگام استفاده از اشارات تمام‌صفحه</string>
@@ -613,11 +565,6 @@
     <string name="navigation_guide_recent_title">باز کردن موارد تازه</string>
     <string name="navigation_guide_recent_title_spec_with_quotation_pad">باز کردن موارد تازه</string>
     <string name="navigation_guide_settings">آموزش حرکات انگشت</string>
-    <string name="navigation_position_center">مرکز</string>
-    <string name="navigation_position_left">چپ</string>
-    <string name="navigation_position_right">راست</string>
-    <string name="navigation_position_summary">موقعیت‌های سفارشی دکمه‌های پیمایش فقط می‌توانند در صفحه اصلی به‌کار برده شوند</string>
-    <string name="navigation_position_title">موقعیت دکمه‌های پیمایش</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">لغو</string>
     <string name="navigation_set_miui_home_as_default_dialog_message">در لانچرهای سوم‌شخص نمی‌توان از اشارات تمام‌صفحه استفاده کرد. به لانچر سیستم تعویض و اشارات تمام صفحه روشن شود؟</string>
     <string name="navigation_set_miui_home_as_default_dialog_ok">تأیید</string>
@@ -626,11 +573,9 @@
     <string name="navigation_type_title">جهت‌یابی سیستم</string>
     <string name="navigation_type_virtual_key">دکمه‌‌ها</string>
     <string name="network_error">به شبکه متصل نشد. دوباره تلاش کنید.</string>
-    <string name="new_feature_title">موارد تازه</string>
     <string name="night">شب</string>
     <string name="no_detail_page">صفحه بدون جزئیات</string>
     <string name="no_space_toast">فضای کافی وجود ندارد</string>
-    <string name="no_space_toast_fold">فضای کافی در اینجا وجود ندارد</string>
     <string name="no_space_toast_when_click_widget">در این صفحه فضای کافی وجود ندارد. این مورد را به یک صفحه دیگر بکشید.</string>
     <string name="noon">ظهر</string>
     <string name="normal_wallpaper">تصویر زمینه</string>
@@ -639,7 +584,6 @@
     <string name="notification_reset_title">آیکون‌ها با موفقیت مرتب شدند</string>
     <string name="one_key_call_title">تماس با یک ضربه</string>
     <string name="online_wallpaper">آنلاین</string>
-    <string name="open_pad_personal_assistant_settings">ابزارک‌های صفحه اصلی</string>
     <string name="open_personal_assistant_dialog_btn_cancel">لغو</string>
     <string name="open_personal_assistant_dialog_btn_confirm">خاموش کردن</string>
     <string name="open_personal_assistant_dialog_desc">پس از خاموش کردن قفسه برنامه دیگر نمی‌توانید ابزارک‌های قفسه برنامه را دیده و یا از آن‌ها استفاده کنید. نسخه‌های به‌روز شده نیز دیگر برای شما در دسترس نخواهند بود. در هر صورت خاموش شود؟</string>
@@ -647,12 +591,11 @@
     <string name="open_personal_assistant_dialog_title">خاموش کردن قفسه برنامه</string>
     <string name="open_personal_assistant_settings">تنظیمات قفسه برنامه</string>
     <string name="open_personal_assistant_title">قفسه برنامه</string>
-    <string name="ota_layout_adjustment_button_text">متوجه‌ام</string>
+    <string name="ota_layout_adjustment_button_text">فهمیدم</string>
     <string name="ota_layout_adjustment_content">چیدمان‌های صفحه اصلی درونی و بیرونی در نسخه جدید همگام‌سازی شده‌اند.</string>
     <string name="ota_layout_adjustment_title">چیدمان‌های صفحه اصلی</string>
     <string name="out_of_space">این صفحه اصلی دیگر فضا ندارد</string>
-    <string name="pair_icon_name">%1$s | %2$s</string>
-    <string name="perfect_icons_switch_summary">ارائه انیمیشن‌ها در آیکون برنامه‌های سوم شخص</string>
+    <string name="perfect_icons_switch_summary">ارائه انیمیشن‌ها در آیکون برنامه‌های سوم‌شخص</string>
     <string name="perfect_icons_switch_title">آیکون‌های انیمیشنی جهانی</string>
     <string name="permdesc_install_shortcut">به برنامه اجازه می‌دهد بدون دخالت کاربر میانبرها را اضافه کند.</string>
     <string name="permdesc_install_widget">به یک برنامه اجازه افزودن ابزارک‌ها را بدون نیاز به اقدامی اضافه از سوی کاربر می‌دهد.</string>
@@ -671,7 +614,6 @@
     <string name="photo_load_failed">نمی‌توان عکس را بارگذاری کرد</string>
     <string name="please_slide_agian">دوباره بکشید</string>
     <string name="pm">ب.ظ</string>
-    <string name="popular_search">عمومی</string>
     <string name="pref_cell_layout_size">طرح آیکون برنامه</string>
     <string name="pref_enable_drawing_cache_summary">برای آزاد کردن حافظه آن را خاموش کنید. ممکن است باعث کندترشدن عملکرد شود.</string>
     <string name="pref_enable_drawing_cache_title">حافظه پنهان ترسیم</string>
@@ -691,14 +633,6 @@
     <string name="privacy_thumbnail_blur_summary">تار کردن پیش‌نمایش برنامه‌ها در موارد تازه</string>
     <string name="privacy_thumbnail_blur_title">تار کردن پیش‌نمایش برنامه‌ها</string>
     <string name="quick_app">برنامه‌های فوری</string>
-    <string name="quick_finder_feature_description">جستجوی سریع به شما امکان می‌دهد برنامه‌ها، محتوای درون برنامه‌ای و موارد را به صورت آنلاین سریع‌تر پیدا کنید. در تنظیمات می‌توانید این ویژگی را خاموش کنید.</string>
-    <string name="quick_finder_tip_title">هر آنچه را که نیاز دارید سریع‌تر پیدا کنید</string>
-    <string name="quick_search_all_app_desc">نمایش همه برنامه‌ها در کشوی برنامه</string>
-    <string name="quick_search_desc">باز شدن جستجو پس از باز کردن کشوی برنامه</string>
-    <string name="quick_search_guide_all_apps">تمام برنامه‌ها</string>
-    <string name="quick_search_guide_ok_btn">تأیید</string>
-    <string name="quick_search_guide_quick_search">جستجوی سریع</string>
-    <string name="quick_search_guide_title">انتخاب حالت پیش‌فرض</string>
     <string name="recent_apps">موارد تازه</string>
     <string name="recent_menu_item_info">اطلاعات</string>
     <string name="recent_menu_item_lock">قفل</string>
@@ -712,8 +646,8 @@
     <string name="recents_empty_message_dismissed_all">شما همه چیز را پاک‌سازی کرده‌اید</string>
     <string name="recents_empty_message_multi_window">باز کردن برنامه‌ها از صفحه اصلی</string>
     <string name="recents_exit_multi_window_mode">خروج</string>
-    <string name="recents_forbid_dock_when_screening_toast_text">هنگام بازتاباندن صفحه نمی‌توان از تقسیم صفحه استفاده کرد</string>
-    <string name="recents_incompatible_app_message">این برنامه از تقسیم صفحه پشتیبانی نمی‌کند</string>
+    <string name="recents_forbid_dock_when_screening_toast_text">هنگام بازتاباندن صفحه نمی‌توان از تجزیه نمایشگر استفاده کرد</string>
+    <string name="recents_incompatible_app_message">این برنامه از تجزیه نمایشگر پشتیبانی نمی‌کند</string>
     <string name="recents_layout_style">ترتیب دادن موارد در موارد تازه</string>
     <string name="recents_layout_style_horizontal">بصورت افقی</string>
     <string name="recents_layout_style_vertical">عمودی</string>
@@ -727,13 +661,6 @@
     <string name="recents_title_market">جستجوی برنامه‌ها</string>
     <string name="recents_title_security_scan">اسکن امنیتی</string>
     <string name="recents_tv_small_window_text">پنجره‌های شناور</string>
-    <string name="recents_worldcirculate_text">برای انتخاب رها کنید</string>
-    <string name="recnets_relay_device_info">از %s</string>
-    <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
-    <string name="recnets_worldcirculate_display_computer_info">این برنامه در %s درحال کار کردن است.</string>
-    <string name="recnets_worldcirculate_display_default_info">ضربه زده تا به اینجا بازگردانده شود.</string>
-    <string name="recnets_worldcirculate_display_default_info_pad">ضربه زده تا به اینجا بازگردانده شود.</string>
-    <string name="recnets_worldcirculate_display_pad_info">این برنامه در %s درحال کار کردن است.</string>
     <string name="recommend_apk_size_and_desc">%1$dمگابایت | %2$s</string>
     <string name="recommend_app">پیشنهادات برنامه</string>
     <string name="recommend_apps_default_title">خالی</string>
@@ -751,8 +678,6 @@
     <string name="remove_invalidate_gadget_tips">یکی از ابزارک‌هایی که استفاده می‌کنید دیگر موجود نیست. می‌توانید یکی دیگر را بیافزایید.</string>
     <string name="remove_sys_app_content">شما می‌توانید میان‌بر صفحه اصلی را دوباره در تنظیمات > برنامه‌ها > مدیریت میان‌بر صفحه اصلی بیافزایید. حذف شود؟</string>
     <string name="remove_sys_app_title">میان‌بر صفحه اصلی حذف شود؟</string>
-    <string name="request_permission_msg">لانچر POCO برای دادن دسترسی همه کارایی‌هایش به شما نیازمند تعدادی مجوز است.</string>
-    <string name="request_permission_title">نیازمند مجوز است</string>
     <string name="reset_cate_tip_content">در صورت ادامه، گروه‌های پیش‌فرض برنامه‌ها بازنشانی خواهند شد. در هر صورت ادامه یابد؟</string>
     <string name="reset_cate_tip_title">بازنشانی گروه‌های پیش‌فرض</string>
     <string name="reset_description_first_time">می‌توانید چینش را از ساعت %1$s تا ۲ ساعت دیگر بازگردانید</string>
@@ -768,8 +693,6 @@
     <string name="screen_cells_config_title">چیدمان صفحه اصلی</string>
     <string name="screen_locked_toast">چیدمان صفحه اصلی قفل است.</string>
     <string name="screen_number">%d نمایشگر</string>
-    <string name="search_bar_hint_content">جستجوی برنامه و محتوا</string>
-    <string name="search_guide_btn">فهمیدم</string>
     <string name="search_in_apps_store">جستجوی «%1$s» در %2$s</string>
     <string name="search_no_result">نتیجه‌ای یافت نشد</string>
     <string name="select_all">انتخاب همه</string>
@@ -777,7 +700,6 @@
     <string name="select_photo">عکس</string>
     <string name="send">ارسال</string>
     <string name="server_error">یک خطای سرور رخ داده است. چند دقیقه صبر کرده و دوباره تلاش کنید.</string>
-    <string name="service_double_attention">ویژگی جستجوی بهبود یافته توسط Branch Metrics Inc ارائه شده است. برای کار کردن این ویژگی، ما به هم‌رسانی درخواست‌های جستجوی شما، شناسه آگهی‌های Google و نشانی IPها با Branch Metrics Inc نیاز داریم. پیش از استفاده از این ویژگی <a href="http://url1"><font color="#B3000000">شرایط و ضوابط اکتشاف کاربر نهایی</font></a> و <a href="http://url2"><font color="#B3000000">سیاست حفظ حریم خصوصی اکتشاف Branch</font></a> را خوانده و بپذیرید.</string>
     <string name="setting_wallpaper_tip">برای تنظیم انگشت‌ها را به هم نزدیک کنید یا بکشید</string>
     <string name="settings">تنظیمات</string>
     <string name="settings_shortcut">تنظیمات</string>
@@ -786,7 +708,7 @@
     <string name="shake_to_align_icons_title">پر کردن جاهای خالی با تکان دادن</string>
     <string name="share">هم‌رسانی</string>
     <string name="shortcut_share_dialog_content">فایل‌هایی که شما از گوشی خود ارسال می‌کنید و همچنین گیرندگان آن‌ها توسط شما انتخاب و مشخص می‌شوند. هنگام انتخاب فایل‌ها و مشخص کردن گیرندگان توجه لازم را داشته باشید. شما نباید هیچ‌گونه ویروس، بدافزار، تروجان، بمب ساعتی و یا سایر موارد مضر را به دیگران انتقال دهید. از گوشی خود برای انتقال هر نرم‌افزاری که ممکن است روی استفاده عادی دستگاه گیرنده یا هر موردی که ممکن است سبب آسیب، دخالت، قطعی یا از بین رفتن در هرگونه داده سیستمی یا اطلاعات شخصی دستگاه‌های موبایلی پایانی شود استفاده نکنید. شما در مقابل هرگونه آسیب وارده به دیگر کاربران یا دستگاه‌های پایانی مسئول خواهید بود. Xiaomi تمام تلاش خود را برای تضمین امنیت، اثرگذاری، دقت و قابل اعتماد بودن کارایی هم‌رسانی و همچنین فناوری و اطلاعات مربوطه به کار می‌گیرد. با این حال، به دلیل محدودیت‌های فناوری کنونی، Xiaomi بی‌عیب و نقص بودن ویژگی هم‌رسانی و قانع کردن همه نیازهای شما را تضمین نمی‌کند.</string>
-    <string name="shortcut_share_dialog_positive_button">متوجه‌ام</string>
+    <string name="shortcut_share_dialog_positive_button">فهمیدم</string>
     <string name="shortcut_share_dialog_title">سلب مسئولیت</string>
     <string name="show_all">نمایش همه</string>
     <string name="show_mem_info_title">نمایش وضعیت حافظه</string>
@@ -815,13 +737,11 @@
     <string name="status_installing">در حال نصب</string>
     <string name="status_paused">متوقف شد</string>
     <string name="status_pending">در حال انتظار</string>
-    <string name="suggestions">پیشنهادها</string>
     <string name="sunday">یک‌شنبه</string>
     <string name="sunday_short">یک‌شنبه</string>
     <string name="sunday_shortest">یک‌شنبه</string>
     <string name="swipe_the_desktop_to_the_left">به سمت چپ کشیدن صفحه اصلی</string>
     <string name="swipe_the_desktop_to_the_right">به سمت راست کشیدن صفحه اصلی</string>
-    <string name="switch_on_button">روشن</string>
     <string name="switch_personal_assistant_app_vault">قفسه برنامه</string>
     <string name="switch_personal_assistant_google">Google Discover</string>
     <string name="switch_personal_assistant_none">هیچ کدام</string>
@@ -832,10 +752,6 @@
     <string name="system_shortcuts_remove">حذف</string>
     <string name="system_text">خودکار</string>
     <string name="task_access_locked_app_msg">قفل برنامه روشن شد</string>
-    <string name="term_of_service">شرایط و ضوابط</string>
-    <string name="terms_of_services_one">به کشوی برنامه و جستجوی سریع خوش آمدید. جستجوی سریع به شما اجازه یافتن برنامه‌ها، محتوای درون برنامه‌ای و موارد آنلاین را سریع‌تر می‌دهد. پیش از استفاده از این ویژگی <a href="http://url1"><font color="#B3000000">سیاست حفظ حریم خصوصی</font></a> Xiaomi را خوانده و بپذیرید.</string>
-    <string name="terms_of_services_three">شما می‌توانید این ویژگی را در تنظیمات خاموش کنید.</string>
-    <string name="terms_of_services_two">استفاده از جستجوی بهبود یافته نیازمند هم‌رسانی اطلاعات شخصی لازم از جمله تلاش‌های جستجو، شناسه تبلیغات Google و نشانی IP با Branch Metrics Inc است. Branch اطلاعات شخصی شما را بر اساس <a href="http://url1"><font color="#B3000000">سیاست حفظ حریم خصوصی Branch Discovery</font></a> پردازش می‌کند. پیش از استفاده از این ویژگی <a href="http://url2"><font color="#B3000000">شرایط و ضوابط کاربر نهایی Discovery</font></a> و <a href="http://url3"><font color="#B3000000">سیاست حفظ حریم خصوصی Branch Discovery </font></a> را خوانده و بپذیرید.</string>
     <string name="the_anniversary_of_lifting_martial_law">سالگرد لغو حکومت نظامی</string>
     <string name="the_anti_aggression_day">روز ضد پرخاشگری</string>
     <string name="the_arbor_day">روز درخت‌کاری</string>
@@ -902,11 +818,6 @@
     <string name="tuesday">سه‌شنبه</string>
     <string name="tuesday_short">سه‌شنبه</string>
     <string name="tuesday_shortest">سه‌شنبه</string>
-    <string name="uni_search_permission_content">روشن کردن ویژگی‌های جستجوی آنلاین. (خدمات جستجو توسط Branch ارائه شده‌اند.)</string>
-    <string name="uni_search_permission_msg">به لانچر POCO اجازه دسترسی به موقعیت و مخاطبین را داده تا نتایج جستجو بهبود یابد.</string>
-    <string name="uni_search_permission_title">بهبود جستجو</string>
-    <string name="uni_search_setting_summary">به طور مستقیم محتویات داخل برنامه را پیدا کنید</string>
-    <string name="uni_search_setting_title">حالت پرس و جو در برنامه</string>
     <string name="uninstall">حذف</string>
     <string name="uninstall_dialog_message">حذف برنامه تمام داده‌های برنامه را نیز حذف می‌کند.</string>
     <string name="uninstall_dialog_title_format">آیا می‌خواهید %s حذف شود؟</string>
@@ -917,7 +828,6 @@
     <string name="uninstall_xspace_dialog_title_format">«%s» همزاد حذف شود؟</string>
     <string name="unknown_artist_name">هنرمند نامشخص</string>
     <string name="unnamed_folder_name">پوشه</string>
-    <string name="upgrade_remove_small_window_in_recents">شما می‌توانید با استفاده از نوار کناری برنامه‌ها را در پنجره‌های شناور باز کنید</string>
     <string name="wallpaper">تصویر زمینه</string>
     <string name="wallpaper_auto_change_title">صفحه قفل</string>
     <string name="wallpaper_failed_message">نمی‌توان تصویر زمینه را تنظیم کرد</string>
@@ -938,7 +848,7 @@
     <string name="work_mode_off_label">اعلان‌ها خاموش بوده و برنامه‌ها در دسترس نیستند</string>
     <string name="work_mode_on_label">مدیریت شده توسط سازمان شما</string>
     <string name="work_profile_first_content">داده‌های شخصی از برنامه‌های کاری جدا و پنهان است</string>
-    <string name="work_profile_got_button">متوجه‌ام</string>
+    <string name="work_profile_got_button">فهمیدم</string>
     <string name="work_profile_next_button">بعدی</string>
     <string name="work_profile_second_content">برنامه‌ها و داده‌های کاری برای سرپرست IT شما قابل مشاهده است</string>
     <string name="work_profile_title">نمایه کاری</string>

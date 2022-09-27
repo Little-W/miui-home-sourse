@@ -12,7 +12,7 @@
 
 
 # static fields
-.field private static isCopyPAIExecute:Z
+.field private static isCopyPAIExecute:Z = false
 
 
 # direct methods
@@ -808,7 +808,7 @@
 
     if-eqz v2, :cond_0
 
-    const-string/jumbo v3, "type"
+    const-string v3, "type"
 
     .line 147
     invoke-virtual {v2, v3}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;

@@ -254,9 +254,6 @@
 .method public abstract commitAllowingStateLoss()I
 .end method
 
-.method public abstract commitNow()V
-.end method
-
 .method public abstract commitNowAllowingStateLoss()V
 .end method
 
@@ -536,19 +533,6 @@
     throw p1
 .end method
 
-.method public isEmpty()Z
-    .locals 1
-
-    .line 481
-    iget-object v0, p0, Landroidx/fragment/app/FragmentTransaction;->mOps:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v0
-
-    return v0
-.end method
-
 .method public remove(Landroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentTransaction;
     .locals 2
 
@@ -598,21 +582,6 @@
     invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw p1
-.end method
-
-.method public setMaxLifecycle(Landroidx/fragment/app/Fragment;Landroidx/lifecycle/Lifecycle$State;)Landroidx/fragment/app/FragmentTransaction;
-    .locals 2
-
-    .line 472
-    new-instance v0, Landroidx/fragment/app/FragmentTransaction$Op;
-
-    const/16 v1, 0xa
-
-    invoke-direct {v0, v1, p1, p2}, Landroidx/fragment/app/FragmentTransaction$Op;-><init>(ILandroidx/fragment/app/Fragment;Landroidx/lifecycle/Lifecycle$State;)V
-
-    invoke-virtual {p0, v0}, Landroidx/fragment/app/FragmentTransaction;->addOp(Landroidx/fragment/app/FragmentTransaction$Op;)V
-
-    return-object p0
 .end method
 
 .method public setReorderingAllowed(Z)Landroidx/fragment/app/FragmentTransaction;

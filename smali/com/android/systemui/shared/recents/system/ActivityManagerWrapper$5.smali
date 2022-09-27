@@ -24,7 +24,7 @@
 .method constructor <init>(Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;Lcom/android/systemui/shared/recents/system/RecentsAnimationListener;)V
     .locals 0
 
-    .line 493
+    .line 435
     iput-object p1, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$5;->this$0:Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
 
     iput-object p2, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$5;->val$animationHandler:Lcom/android/systemui/shared/recents/system/RecentsAnimationListener;
@@ -44,7 +44,7 @@
         }
     .end annotation
 
-    .line 496
+    .line 438
     iget-object p1, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$5;->val$animationHandler:Lcom/android/systemui/shared/recents/system/RecentsAnimationListener;
 
     const/4 v0, 0x0
@@ -62,17 +62,17 @@
         }
     .end annotation
 
-    .line 503
+    .line 445
     new-instance p3, Lcom/android/systemui/shared/recents/system/RecentsAnimationControllerCompat;
 
     invoke-direct {p3, p1}, Lcom/android/systemui/shared/recents/system/RecentsAnimationControllerCompat;-><init>(Landroid/view/IRecentsAnimationController;)V
 
-    .line 506
+    .line 448
     invoke-static {p2}, Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;->wrap([Landroid/view/RemoteAnimationTarget;)[Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;
 
     move-result-object p1
 
-    .line 507
+    .line 449
     iget-object p2, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$5;->val$animationHandler:Lcom/android/systemui/shared/recents/system/RecentsAnimationListener;
 
     invoke-interface {p2, p3, p1, p4, p5}, Lcom/android/systemui/shared/recents/system/RecentsAnimationListener;->onAnimationStart(Lcom/android/systemui/shared/recents/system/RecentsAnimationControllerCompat;[Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;Landroid/graphics/Rect;Landroid/graphics/Rect;)V
@@ -88,7 +88,7 @@
         }
     .end annotation
 
-    .line 513
+    .line 455
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$5;->val$animationHandler:Lcom/android/systemui/shared/recents/system/RecentsAnimationListener;
 
     new-instance v1, Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;

@@ -145,7 +145,7 @@
     .line 317
     sget-object v0, Lcom/miui/home/launcher/common/BlurUtils;->USE_COMPLETE_BLUR_DEVICE_LIST:Landroid/util/ArraySet;
 
-    const-string/jumbo v1, "umi"
+    const-string v1, "umi"
 
     invoke-virtual {v0, v1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
@@ -194,7 +194,7 @@
     .line 328
     sget-object v0, Lcom/miui/home/launcher/common/BlurUtils;->USE_COMPLETE_BLUR_ON_DEV_DEVICE_LIST:Landroid/util/ArraySet;
 
-    const-string/jumbo v1, "venus"
+    const-string v1, "venus"
 
     invoke-virtual {v0, v1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 

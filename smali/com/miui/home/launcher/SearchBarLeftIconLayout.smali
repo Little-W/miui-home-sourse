@@ -51,7 +51,7 @@
     .line 35
     invoke-super {p0}, Landroid/widget/FrameLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a02cb
+    const v0, 0x7f0a01bd
 
     .line 36
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/SearchBarLeftIconLayout;->findViewById(I)Landroid/view/View;
@@ -98,12 +98,12 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f080195
+    const v0, 0x7f0800b8
 
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f080194
+    const v0, 0x7f0800b7
 
     :goto_0
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/SearchBarLeftIconLayout;->setBackgroundResource(I)V

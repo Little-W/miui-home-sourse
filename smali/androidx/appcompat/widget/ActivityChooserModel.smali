@@ -80,14 +80,14 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 217
+    .line 218
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Landroidx/appcompat/widget/ActivityChooserModel;->sRegistryLock:Ljava/lang/Object;
 
-    .line 222
+    .line 223
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -236,12 +236,12 @@
 .method private persistHistoricalDataIfNeeded()V
     .locals 6
 
-    .line 565
+    .line 566
     iget-boolean v0, p0, Landroidx/appcompat/widget/ActivityChooserModel;->mReadShareHistoryCalled:Z
 
     if-eqz v0, :cond_2
 
-    .line 568
+    .line 569
     iget-boolean v0, p0, Landroidx/appcompat/widget/ActivityChooserModel;->mHistoricalRecordsChanged:Z
 
     if-nez v0, :cond_0
@@ -251,10 +251,10 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 571
+    .line 572
     iput-boolean v0, p0, Landroidx/appcompat/widget/ActivityChooserModel;->mHistoricalRecordsChanged:Z
 
-    .line 572
+    .line 573
     iget-object v1, p0, Landroidx/appcompat/widget/ActivityChooserModel;->mHistoryFileName:Ljava/lang/String;
 
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -263,7 +263,7 @@
 
     if-nez v1, :cond_1
 
-    .line 573
+    .line 574
     new-instance v1, Landroidx/appcompat/widget/ActivityChooserModel$PersistHistoryAsyncTask;
 
     invoke-direct {v1, p0}, Landroidx/appcompat/widget/ActivityChooserModel$PersistHistoryAsyncTask;-><init>(Landroidx/appcompat/widget/ActivityChooserModel;)V
@@ -293,7 +293,7 @@
     :cond_1
     return-void
 
-    .line 566
+    .line 567
     :cond_2
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -527,7 +527,7 @@
 
     move-result-wide v6
 
-    const-string/jumbo v8, "weight"
+    const-string v8, "weight"
 
     .line 1007
     invoke-interface {v1, v5, v8}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -720,12 +720,12 @@
 .method public chooseActivity(I)Landroid/content/Intent;
     .locals 6
 
-    .line 456
+    .line 457
     iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserModel;->mInstanceLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 457
+    .line 458
     :try_start_0
     iget-object v1, p0, Landroidx/appcompat/widget/ActivityChooserModel;->mIntent:Landroid/content/Intent;
 
@@ -733,16 +733,16 @@
 
     if-nez v1, :cond_0
 
-    .line 458
+    .line 459
     monitor-exit v0
 
     return-object v2
 
-    .line 461
+    .line 462
     :cond_0
     invoke-direct {p0}, Landroidx/appcompat/widget/ActivityChooserModel;->ensureConsistentState()V
 
-    .line 463
+    .line 464
     iget-object v1, p0, Landroidx/appcompat/widget/ActivityChooserModel;->mActivities:Ljava/util/List;
 
     invoke-interface {v1, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -751,7 +751,7 @@
 
     check-cast p1, Landroidx/appcompat/widget/ActivityChooserModel$ActivityResolveInfo;
 
-    .line 465
+    .line 466
     new-instance v1, Landroid/content/ComponentName;
 
     iget-object v3, p1, Landroidx/appcompat/widget/ActivityChooserModel$ActivityResolveInfo;->resolveInfo:Landroid/content/pm/ResolveInfo;
@@ -768,27 +768,27 @@
 
     invoke-direct {v1, v3, p1}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 469
+    .line 470
     new-instance p1, Landroid/content/Intent;
 
     iget-object v3, p0, Landroidx/appcompat/widget/ActivityChooserModel;->mIntent:Landroid/content/Intent;
 
     invoke-direct {p1, v3}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
 
-    .line 470
+    .line 471
     invoke-virtual {p1, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 472
+    .line 473
     iget-object v3, p0, Landroidx/appcompat/widget/ActivityChooserModel;->mActivityChoserModelPolicy:Landroidx/appcompat/widget/ActivityChooserModel$OnChooseActivityListener;
 
     if-eqz v3, :cond_1
 
-    .line 474
+    .line 475
     new-instance v3, Landroid/content/Intent;
 
     invoke-direct {v3, p1}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
 
-    .line 475
+    .line 476
     iget-object v4, p0, Landroidx/appcompat/widget/ActivityChooserModel;->mActivityChoserModelPolicy:Landroidx/appcompat/widget/ActivityChooserModel$OnChooseActivityListener;
 
     invoke-interface {v4, p0, v3}, Landroidx/appcompat/widget/ActivityChooserModel$OnChooseActivityListener;->onChooseActivity(Landroidx/appcompat/widget/ActivityChooserModel;Landroid/content/Intent;)Z
@@ -797,16 +797,16 @@
 
     if-eqz v3, :cond_1
 
-    .line 478
+    .line 479
     monitor-exit v0
 
     return-object v2
 
-    .line 482
+    .line 483
     :cond_1
     new-instance v2, Landroidx/appcompat/widget/ActivityChooserModel$HistoricalRecord;
 
-    .line 483
+    .line 484
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v3
@@ -815,10 +815,10 @@
 
     invoke-direct {v2, v1, v3, v4, v5}, Landroidx/appcompat/widget/ActivityChooserModel$HistoricalRecord;-><init>(Landroid/content/ComponentName;JF)V
 
-    .line 484
+    .line 485
     invoke-direct {p0, v2}, Landroidx/appcompat/widget/ActivityChooserModel;->addHistoricalRecord(Landroidx/appcompat/widget/ActivityChooserModel$HistoricalRecord;)Z
 
-    .line 486
+    .line 487
     monitor-exit v0
 
     return-object p1
@@ -826,7 +826,7 @@
     :catchall_0
     move-exception p1
 
-    .line 487
+    .line 488
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -837,16 +837,16 @@
 .method public getActivity(I)Landroid/content/pm/ResolveInfo;
     .locals 2
 
-    .line 409
+    .line 410
     iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserModel;->mInstanceLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 410
+    .line 411
     :try_start_0
     invoke-direct {p0}, Landroidx/appcompat/widget/ActivityChooserModel;->ensureConsistentState()V
 
-    .line 411
+    .line 412
     iget-object v1, p0, Landroidx/appcompat/widget/ActivityChooserModel;->mActivities:Ljava/util/List;
 
     invoke-interface {v1, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -864,7 +864,7 @@
     :catchall_0
     move-exception p1
 
-    .line 412
+    .line 413
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -875,16 +875,16 @@
 .method public getActivityCount()I
     .locals 2
 
-    .line 394
+    .line 395
     iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserModel;->mInstanceLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 395
+    .line 396
     :try_start_0
     invoke-direct {p0}, Landroidx/appcompat/widget/ActivityChooserModel;->ensureConsistentState()V
 
-    .line 396
+    .line 397
     iget-object v1, p0, Landroidx/appcompat/widget/ActivityChooserModel;->mActivities:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->size()I
@@ -898,7 +898,7 @@
     :catchall_0
     move-exception v1
 
-    .line 397
+    .line 398
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -909,19 +909,19 @@
 .method public getActivityIndex(Landroid/content/pm/ResolveInfo;)I
     .locals 5
 
-    .line 423
+    .line 424
     iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserModel;->mInstanceLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 424
+    .line 425
     :try_start_0
     invoke-direct {p0}, Landroidx/appcompat/widget/ActivityChooserModel;->ensureConsistentState()V
 
-    .line 425
+    .line 426
     iget-object v1, p0, Landroidx/appcompat/widget/ActivityChooserModel;->mActivities:Ljava/util/List;
 
-    .line 426
+    .line 427
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v2
@@ -931,19 +931,19 @@
     :goto_0
     if-ge v3, v2, :cond_1
 
-    .line 428
+    .line 429
     invoke-interface {v1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Landroidx/appcompat/widget/ActivityChooserModel$ActivityResolveInfo;
 
-    .line 429
+    .line 430
     iget-object v4, v4, Landroidx/appcompat/widget/ActivityChooserModel$ActivityResolveInfo;->resolveInfo:Landroid/content/pm/ResolveInfo;
 
     if-ne v4, p1, :cond_0
 
-    .line 430
+    .line 431
     monitor-exit v0
 
     return v3
@@ -956,7 +956,7 @@
     :cond_1
     const/4 p1, -0x1
 
-    .line 433
+    .line 434
     monitor-exit v0
 
     return p1
@@ -964,7 +964,7 @@
     :catchall_0
     move-exception p1
 
-    .line 434
+    .line 435
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -975,16 +975,16 @@
 .method public getDefaultActivity()Landroid/content/pm/ResolveInfo;
     .locals 3
 
-    .line 511
+    .line 512
     iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserModel;->mInstanceLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 512
+    .line 513
     :try_start_0
     invoke-direct {p0}, Landroidx/appcompat/widget/ActivityChooserModel;->ensureConsistentState()V
 
-    .line 513
+    .line 514
     iget-object v1, p0, Landroidx/appcompat/widget/ActivityChooserModel;->mActivities:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
@@ -993,7 +993,7 @@
 
     if-nez v1, :cond_0
 
-    .line 514
+    .line 515
     iget-object v1, p0, Landroidx/appcompat/widget/ActivityChooserModel;->mActivities:Ljava/util/List;
 
     const/4 v2, 0x0
@@ -1010,7 +1010,7 @@
 
     return-object v1
 
-    .line 516
+    .line 517
     :cond_0
     monitor-exit v0
 
@@ -1031,16 +1031,16 @@
 .method public setDefaultActivity(I)V
     .locals 5
 
-    .line 531
+    .line 532
     iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserModel;->mInstanceLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 532
+    .line 533
     :try_start_0
     invoke-direct {p0}, Landroidx/appcompat/widget/ActivityChooserModel;->ensureConsistentState()V
 
-    .line 534
+    .line 535
     iget-object v1, p0, Landroidx/appcompat/widget/ActivityChooserModel;->mActivities:Ljava/util/List;
 
     invoke-interface {v1, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1049,7 +1049,7 @@
 
     check-cast p1, Landroidx/appcompat/widget/ActivityChooserModel$ActivityResolveInfo;
 
-    .line 535
+    .line 536
     iget-object v1, p0, Landroidx/appcompat/widget/ActivityChooserModel;->mActivities:Ljava/util/List;
 
     const/4 v2, 0x0
@@ -1062,7 +1062,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 540
+    .line 541
     iget v1, v1, Landroidx/appcompat/widget/ActivityChooserModel$ActivityResolveInfo;->weight:F
 
     iget v2, p1, Landroidx/appcompat/widget/ActivityChooserModel$ActivityResolveInfo;->weight:F
@@ -1078,7 +1078,7 @@
     :cond_0
     const/high16 v1, 0x3f800000    # 1.0f
 
-    .line 546
+    .line 547
     :goto_0
     new-instance v2, Landroid/content/ComponentName;
 
@@ -1096,20 +1096,20 @@
 
     invoke-direct {v2, v3, p1}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 549
+    .line 550
     new-instance p1, Landroidx/appcompat/widget/ActivityChooserModel$HistoricalRecord;
 
-    .line 550
+    .line 551
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v3
 
     invoke-direct {p1, v2, v3, v4, v1}, Landroidx/appcompat/widget/ActivityChooserModel$HistoricalRecord;-><init>(Landroid/content/ComponentName;JF)V
 
-    .line 551
+    .line 552
     invoke-direct {p0, p1}, Landroidx/appcompat/widget/ActivityChooserModel;->addHistoricalRecord(Landroidx/appcompat/widget/ActivityChooserModel$HistoricalRecord;)Z
 
-    .line 552
+    .line 553
     monitor-exit v0
 
     return-void

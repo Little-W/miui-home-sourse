@@ -690,7 +690,7 @@
 
     const-string p1, "ProcessManagerHelper"
 
-    const-string/jumbo p2, "updateApplicationLockedState"
+    const-string p2, "updateApplicationLockedState"
 
     .line 116
     invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I

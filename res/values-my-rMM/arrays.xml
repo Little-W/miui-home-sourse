@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="animation_rate_entries">
-        <item>အေးအေးဆေးဆေး</item>
-        <item>ဘက်မျှ</item>
-        <item>အမြန်</item>
-    </string-array>
     <string-array name="cell_layout_size_entries">
         <item>၄x၄</item>
         <item>၄x၅</item>

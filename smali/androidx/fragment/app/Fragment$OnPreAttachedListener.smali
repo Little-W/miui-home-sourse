@@ -24,15 +24,6 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Landroidx/fragment/app/Fragment$1;)V
-    .locals 0
-
-    .line 306
-    invoke-direct {p0}, Landroidx/fragment/app/Fragment$OnPreAttachedListener;-><init>()V
-
-    return-void
-.end method
-
 
 # virtual methods
 .method abstract onPreAttached()V

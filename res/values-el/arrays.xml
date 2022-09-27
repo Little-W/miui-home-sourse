@@ -55,11 +55,6 @@
         <item>Ω</item>
         <item>\#</item>
     </string-array>
-    <string-array name="animation_rate_entries">
-        <item>Αργά</item>
-        <item>Ισορροπημένα</item>
-        <item>Γρήγορα</item>
-    </string-array>
     <string-array name="cell_layout_size_entries">
         <item>4x4</item>
         <item>4x5</item>

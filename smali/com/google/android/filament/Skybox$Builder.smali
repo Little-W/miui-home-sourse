@@ -30,17 +30,17 @@
 .method public constructor <init>()V
     .locals 3
 
-    .line 74
+    .line 69
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 75
+    .line 70
     invoke-static {}, Lcom/google/android/filament/Skybox;->access$000()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/google/android/filament/Skybox$Builder;->mNativeBuilder:J
 
-    .line 76
+    .line 71
     new-instance v0, Lcom/google/android/filament/Skybox$Builder$BuilderFinalizer;
 
     iget-wide v1, p0, Lcom/google/android/filament/Skybox$Builder;->mNativeBuilder:J
@@ -57,7 +57,7 @@
 .method public build(Lcom/google/android/filament/Engine;)Lcom/google/android/filament/Skybox;
     .locals 4
 
-    .line 173
+    .line 169
     iget-wide v0, p0, Lcom/google/android/filament/Skybox$Builder;->mNativeBuilder:J
 
     invoke-virtual {p1}, Lcom/google/android/filament/Engine;->getNativeObject()J
@@ -74,14 +74,14 @@
 
     if-eqz p1, :cond_0
 
-    .line 175
+    .line 171
     new-instance p1, Lcom/google/android/filament/Skybox;
 
     invoke-direct {p1, v0, v1}, Lcom/google/android/filament/Skybox;-><init>(J)V
 
     return-object p1
 
-    .line 174
+    .line 170
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -95,7 +95,7 @@
 .method public color(FFFF)Lcom/google/android/filament/Skybox$Builder;
     .locals 6
 
-    .line 144
+    .line 140
     iget-wide v0, p0, Lcom/google/android/filament/Skybox$Builder;->mNativeBuilder:J
 
     move v2, p1
@@ -114,7 +114,7 @@
 .method public color([F)Lcom/google/android/filament/Skybox$Builder;
     .locals 6
 
-    .line 158
+    .line 154
     iget-wide v0, p0, Lcom/google/android/filament/Skybox$Builder;->mNativeBuilder:J
 
     const/4 v2, 0x0
@@ -141,7 +141,7 @@
 .method public environment(Lcom/google/android/filament/Texture;)Lcom/google/android/filament/Skybox$Builder;
     .locals 4
 
-    .line 97
+    .line 92
     iget-wide v0, p0, Lcom/google/android/filament/Skybox$Builder;->mNativeBuilder:J
 
     invoke-virtual {p1}, Lcom/google/android/filament/Texture;->getNativeObject()J
@@ -156,7 +156,7 @@
 .method public intensity(F)Lcom/google/android/filament/Skybox$Builder;
     .locals 2
 
-    .line 131
+    .line 127
     iget-wide v0, p0, Lcom/google/android/filament/Skybox$Builder;->mNativeBuilder:J
 
     invoke-static {v0, v1, p1}, Lcom/google/android/filament/Skybox;->access$300(JF)V
@@ -167,7 +167,7 @@
 .method public showSun(Z)Lcom/google/android/filament/Skybox$Builder;
     .locals 2
 
-    .line 112
+    .line 107
     iget-wide v0, p0, Lcom/google/android/filament/Skybox$Builder;->mNativeBuilder:J
 
     invoke-static {v0, v1, p1}, Lcom/google/android/filament/Skybox;->access$200(JZ)V

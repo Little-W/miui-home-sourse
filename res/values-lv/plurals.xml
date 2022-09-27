@@ -100,11 +100,6 @@
         <item quantity="zero">Izvēlēti %d vienumi</item>
         <item quantity="one">Izvēlēts %d vienums</item>
     </plurals>
-    <plurals name="mtrl_badge_content_description">
-        <item quantity="other">%d jauni paziņojumi</item>
-        <item quantity="zero">%d jaunu paziņojumu</item>
-        <item quantity="one">%d jauns paziņojums</item>
-    </plurals>
     <plurals name="num_minutes_ago">
         <item quantity="other">Pirms %d minūtēm</item>
         <item quantity="zero">Pirms %d minūtēm</item>

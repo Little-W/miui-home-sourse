@@ -132,7 +132,7 @@
 
     move-result v15
 
-    const-string/jumbo v5, "type"
+    const-string v5, "type"
 
     .line 110
     sget v6, Landroidx/core/R$styleable;->GradientColor_android_type:I
@@ -311,6 +311,8 @@
     invoke-direct {v2, v0}, Lorg/xmlpull/v1/XmlPullParserException;-><init>(Ljava/lang/String;)V
 
     throw v2
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x1

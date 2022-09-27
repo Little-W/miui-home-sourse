@@ -23,15 +23,11 @@
 
 .field mAnimator:Landroid/animation/Animator;
 
-.field mEnterAnim:I
-
 .field mEnterTransition:Ljava/lang/Object;
 
 .field mEnterTransitionCallback:Landroidx/core/app/SharedElementCallback;
 
 .field mEnterTransitionPostponed:Z
-
-.field mExitAnim:I
 
 .field mExitTransition:Ljava/lang/Object;
 
@@ -41,13 +37,9 @@
 
 .field mIsHideReplaced:Z
 
-.field mIsPop:Z
+.field mNextAnim:I
 
 .field mNextTransition:I
-
-.field mPopEnterAnim:I
-
-.field mPopExitAnim:I
 
 .field mPostOnViewCreatedAlpha:F
 
@@ -86,47 +78,47 @@
 .method constructor <init>()V
     .locals 2
 
-    .line 3558
+    .line 3507
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 3584
+    .line 3527
     iput-object v0, p0, Landroidx/fragment/app/Fragment$AnimationInfo;->mEnterTransition:Ljava/lang/Object;
 
-    .line 3585
+    .line 3528
     sget-object v1, Landroidx/fragment/app/Fragment;->USE_DEFAULT_TRANSITION:Ljava/lang/Object;
 
     iput-object v1, p0, Landroidx/fragment/app/Fragment$AnimationInfo;->mReturnTransition:Ljava/lang/Object;
 
-    .line 3586
+    .line 3529
     iput-object v0, p0, Landroidx/fragment/app/Fragment$AnimationInfo;->mExitTransition:Ljava/lang/Object;
 
-    .line 3587
+    .line 3530
     sget-object v1, Landroidx/fragment/app/Fragment;->USE_DEFAULT_TRANSITION:Ljava/lang/Object;
 
     iput-object v1, p0, Landroidx/fragment/app/Fragment$AnimationInfo;->mReenterTransition:Ljava/lang/Object;
 
-    .line 3588
+    .line 3531
     iput-object v0, p0, Landroidx/fragment/app/Fragment$AnimationInfo;->mSharedElementEnterTransition:Ljava/lang/Object;
 
-    .line 3589
+    .line 3532
     sget-object v1, Landroidx/fragment/app/Fragment;->USE_DEFAULT_TRANSITION:Ljava/lang/Object;
 
     iput-object v1, p0, Landroidx/fragment/app/Fragment$AnimationInfo;->mSharedElementReturnTransition:Ljava/lang/Object;
 
-    .line 3593
+    .line 3536
     iput-object v0, p0, Landroidx/fragment/app/Fragment$AnimationInfo;->mEnterTransitionCallback:Landroidx/core/app/SharedElementCallback;
 
-    .line 3594
+    .line 3537
     iput-object v0, p0, Landroidx/fragment/app/Fragment$AnimationInfo;->mExitTransitionCallback:Landroidx/core/app/SharedElementCallback;
 
     const/high16 v1, 0x3f800000    # 1.0f
 
-    .line 3596
+    .line 3539
     iput v1, p0, Landroidx/fragment/app/Fragment$AnimationInfo;->mPostOnViewCreatedAlpha:F
 
-    .line 3597
+    .line 3540
     iput-object v0, p0, Landroidx/fragment/app/Fragment$AnimationInfo;->mFocusedView:Landroid/view/View;
 
     return-void

@@ -66,26 +66,3 @@
 
     return-void
 .end method
-
-.method constructor <init>(ILandroidx/fragment/app/Fragment;Landroidx/lifecycle/Lifecycle$State;)V
-    .locals 0
-
-    .line 83
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 84
-    iput p1, p0, Landroidx/fragment/app/FragmentTransaction$Op;->mCmd:I
-
-    .line 85
-    iput-object p2, p0, Landroidx/fragment/app/FragmentTransaction$Op;->mFragment:Landroidx/fragment/app/Fragment;
-
-    .line 86
-    iget-object p1, p2, Landroidx/fragment/app/Fragment;->mMaxState:Landroidx/lifecycle/Lifecycle$State;
-
-    iput-object p1, p0, Landroidx/fragment/app/FragmentTransaction$Op;->mOldMaxState:Landroidx/lifecycle/Lifecycle$State;
-
-    .line 87
-    iput-object p3, p0, Landroidx/fragment/app/FragmentTransaction$Op;->mCurrentMaxState:Landroidx/lifecycle/Lifecycle$State;
-
-    return-void
-.end method

@@ -6,11 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroidx/constraintlayout/widget/ConstraintSet$Constraint;,
-        Landroidx/constraintlayout/widget/ConstraintSet$Motion;,
-        Landroidx/constraintlayout/widget/ConstraintSet$PropertySet;,
-        Landroidx/constraintlayout/widget/ConstraintSet$Transform;,
-        Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+        Landroidx/constraintlayout/widget/ConstraintSet$Constraint;
     }
 .end annotation
 
@@ -33,19 +29,6 @@
     .end annotation
 .end field
 
-.field private mForceId:Z
-
-.field private mSavedAttributes:Ljava/util/HashMap;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/HashMap<",
-            "Ljava/lang/String;",
-            "Landroidx/constraintlayout/widget/ConstraintAttribute;",
-            ">;"
-        }
-    .end annotation
-.end field
-
 
 # direct methods
 .method static constructor <clinit>()V
@@ -53,781 +36,673 @@
 
     const/4 v0, 0x3
 
-    .line 220
+    .line 195
     new-array v1, v0, [I
 
     fill-array-data v1, :array_0
 
     sput-object v1, Landroidx/constraintlayout/widget/ConstraintSet;->VISIBILITY_FLAGS:[I
 
-    .line 225
+    .line 200
     new-instance v1, Landroid/util/SparseIntArray;
 
     invoke-direct {v1}, Landroid/util/SparseIntArray;-><init>()V
 
     sput-object v1, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
 
-    .line 311
+    .line 274
     sget-object v1, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
 
-    sget v2, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_constraintLeft_toLeftOf:I
+    sget v2, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_layout_constraintLeft_toLeftOf:I
 
     const/16 v3, 0x19
 
     invoke-virtual {v1, v2, v3}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 312
+    .line 275
     sget-object v1, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
 
-    sget v2, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_constraintLeft_toRightOf:I
+    sget v2, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_layout_constraintLeft_toRightOf:I
 
     const/16 v3, 0x1a
 
     invoke-virtual {v1, v2, v3}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 313
+    .line 276
     sget-object v1, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
 
-    sget v2, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_constraintRight_toLeftOf:I
+    sget v2, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_layout_constraintRight_toLeftOf:I
 
     const/16 v3, 0x1d
 
     invoke-virtual {v1, v2, v3}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 314
+    .line 277
     sget-object v1, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
 
-    sget v2, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_constraintRight_toRightOf:I
+    sget v2, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_layout_constraintRight_toRightOf:I
 
     const/16 v3, 0x1e
 
     invoke-virtual {v1, v2, v3}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 315
+    .line 278
     sget-object v1, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
 
-    sget v2, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_constraintTop_toTopOf:I
+    sget v2, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_layout_constraintTop_toTopOf:I
 
     const/16 v3, 0x24
 
     invoke-virtual {v1, v2, v3}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 316
+    .line 279
     sget-object v1, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
 
-    sget v2, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_constraintTop_toBottomOf:I
+    sget v2, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_layout_constraintTop_toBottomOf:I
 
     const/16 v3, 0x23
 
     invoke-virtual {v1, v2, v3}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 317
+    .line 280
     sget-object v1, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
 
-    sget v2, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_constraintBottom_toTopOf:I
+    sget v2, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_layout_constraintBottom_toTopOf:I
 
     const/4 v3, 0x4
 
     invoke-virtual {v1, v2, v3}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 318
+    .line 281
     sget-object v1, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
 
-    sget v2, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_constraintBottom_toBottomOf:I
+    sget v2, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_layout_constraintBottom_toBottomOf:I
 
     invoke-virtual {v1, v2, v0}, Landroid/util/SparseIntArray;->append(II)V
+
+    .line 282
+    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
+
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_layout_constraintBaseline_toBaselineOf:I
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+
+    .line 284
+    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
+
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_layout_editor_absoluteX:I
+
+    const/4 v2, 0x6
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+
+    .line 285
+    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
+
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_layout_editor_absoluteY:I
+
+    const/4 v2, 0x7
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+
+    .line 286
+    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
+
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_layout_constraintGuide_begin:I
+
+    const/16 v2, 0x11
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+
+    .line 287
+    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
+
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_layout_constraintGuide_end:I
+
+    const/16 v2, 0x12
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+
+    .line 288
+    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
+
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_layout_constraintGuide_percent:I
+
+    const/16 v2, 0x13
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+
+    .line 289
+    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
+
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_android_orientation:I
+
+    const/16 v2, 0x1b
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+
+    .line 290
+    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
+
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_layout_constraintStart_toEndOf:I
+
+    const/16 v2, 0x20
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+
+    .line 291
+    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
+
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_layout_constraintStart_toStartOf:I
+
+    const/16 v2, 0x21
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+
+    .line 292
+    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
+
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_layout_constraintEnd_toStartOf:I
+
+    const/16 v2, 0xa
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+
+    .line 293
+    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
+
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_layout_constraintEnd_toEndOf:I
+
+    const/16 v2, 0x9
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+
+    .line 294
+    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
+
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_layout_goneMarginLeft:I
+
+    const/16 v2, 0xd
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+
+    .line 295
+    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
+
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_layout_goneMarginTop:I
+
+    const/16 v2, 0x10
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+
+    .line 296
+    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
+
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_layout_goneMarginRight:I
+
+    const/16 v2, 0xe
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+
+    .line 297
+    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
+
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_layout_goneMarginBottom:I
+
+    const/16 v2, 0xb
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+
+    .line 298
+    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
+
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_layout_goneMarginStart:I
+
+    const/16 v2, 0xf
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+
+    .line 299
+    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
+
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_layout_goneMarginEnd:I
+
+    const/16 v2, 0xc
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+
+    .line 300
+    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
+
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_layout_constraintVertical_weight:I
+
+    const/16 v2, 0x28
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+
+    .line 301
+    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
+
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_layout_constraintHorizontal_weight:I
+
+    const/16 v2, 0x27
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+
+    .line 302
+    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
+
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_layout_constraintHorizontal_chainStyle:I
+
+    const/16 v2, 0x29
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+
+    .line 303
+    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
+
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_layout_constraintVertical_chainStyle:I
+
+    const/16 v2, 0x2a
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+
+    .line 305
+    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
+
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_layout_constraintHorizontal_bias:I
+
+    const/16 v2, 0x14
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+
+    .line 306
+    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
+
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_layout_constraintVertical_bias:I
+
+    const/16 v2, 0x25
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+
+    .line 307
+    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
+
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_layout_constraintDimensionRatio:I
+
+    const/4 v2, 0x5
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+
+    .line 308
+    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
+
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_layout_constraintLeft_creator:I
+
+    const/16 v2, 0x4b
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+
+    .line 309
+    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
+
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_layout_constraintTop_creator:I
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+
+    .line 310
+    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
+
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_layout_constraintRight_creator:I
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+
+    .line 311
+    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
+
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_layout_constraintBottom_creator:I
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+
+    .line 312
+    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
+
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_layout_constraintBaseline_creator:I
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+
+    .line 313
+    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
+
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_android_layout_marginLeft:I
+
+    const/16 v2, 0x18
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+
+    .line 314
+    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
+
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_android_layout_marginRight:I
+
+    const/16 v2, 0x1c
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+
+    .line 315
+    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
+
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_android_layout_marginStart:I
+
+    const/16 v2, 0x1f
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+
+    .line 316
+    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
+
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_android_layout_marginEnd:I
+
+    const/16 v2, 0x8
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+
+    .line 317
+    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
+
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_android_layout_marginTop:I
+
+    const/16 v2, 0x22
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+
+    .line 318
+    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
+
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_android_layout_marginBottom:I
+
+    const/4 v2, 0x2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
     .line 319
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
 
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_constraintBaseline_toBaselineOf:I
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_android_layout_width:I
 
-    const/4 v2, 0x1
+    const/16 v2, 0x17
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+
+    .line 320
+    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
+
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_android_layout_height:I
+
+    const/16 v2, 0x15
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
     .line 321
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
 
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_editor_absoluteX:I
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_android_visibility:I
 
-    const/4 v2, 0x6
+    const/16 v2, 0x16
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
     .line 322
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
 
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_editor_absoluteY:I
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_android_alpha:I
 
-    const/4 v2, 0x7
+    const/16 v2, 0x2b
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
     .line 323
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
 
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_constraintGuide_begin:I
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_android_elevation:I
 
-    const/16 v2, 0x11
+    const/16 v2, 0x2c
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
     .line 324
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
 
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_constraintGuide_end:I
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_android_rotationX:I
 
-    const/16 v2, 0x12
+    const/16 v2, 0x2d
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
     .line 325
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
 
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_constraintGuide_percent:I
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_android_rotationY:I
 
-    const/16 v2, 0x13
+    const/16 v2, 0x2e
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
     .line 326
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
 
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_android_orientation:I
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_android_rotation:I
 
-    const/16 v2, 0x1b
+    const/16 v2, 0x3c
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
     .line 327
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
 
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_constraintStart_toEndOf:I
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_android_scaleX:I
 
-    const/16 v2, 0x20
+    const/16 v2, 0x2f
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
     .line 328
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
 
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_constraintStart_toStartOf:I
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_android_scaleY:I
 
-    const/16 v2, 0x21
+    const/16 v2, 0x30
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
     .line 329
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
 
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_constraintEnd_toStartOf:I
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_android_transformPivotX:I
 
-    const/16 v2, 0xa
+    const/16 v2, 0x31
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
     .line 330
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
 
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_constraintEnd_toEndOf:I
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_android_transformPivotY:I
 
-    const/16 v2, 0x9
+    const/16 v2, 0x32
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
     .line 331
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
 
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_goneMarginLeft:I
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_android_translationX:I
 
-    const/16 v2, 0xd
+    const/16 v2, 0x33
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
     .line 332
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
 
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_goneMarginTop:I
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_android_translationY:I
 
-    const/16 v2, 0x10
+    const/16 v2, 0x34
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
     .line 333
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
 
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_goneMarginRight:I
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_android_translationZ:I
 
-    const/16 v2, 0xe
+    const/16 v2, 0x35
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
     .line 334
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
 
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_goneMarginBottom:I
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_layout_constraintWidth_default:I
 
-    const/16 v2, 0xb
+    const/16 v2, 0x36
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
     .line 335
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
 
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_goneMarginStart:I
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_layout_constraintHeight_default:I
 
-    const/16 v2, 0xf
+    const/16 v2, 0x37
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
     .line 336
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
 
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_goneMarginEnd:I
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_layout_constraintWidth_max:I
 
-    const/16 v2, 0xc
+    const/16 v2, 0x38
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
     .line 337
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
 
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_constraintVertical_weight:I
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_layout_constraintHeight_max:I
 
-    const/16 v2, 0x28
+    const/16 v2, 0x39
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
     .line 338
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
 
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_constraintHorizontal_weight:I
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_layout_constraintWidth_min:I
 
-    const/16 v2, 0x27
+    const/16 v2, 0x3a
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
     .line 339
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
 
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_constraintHorizontal_chainStyle:I
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_layout_constraintHeight_min:I
 
-    const/16 v2, 0x29
+    const/16 v2, 0x3b
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
     .line 340
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
 
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_constraintVertical_chainStyle:I
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_layout_constraintCircle:I
 
-    const/16 v2, 0x2a
+    const/16 v2, 0x3d
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+
+    .line 341
+    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
+
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_layout_constraintCircleRadius:I
+
+    const/16 v2, 0x3e
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
     .line 342
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
 
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_constraintHorizontal_bias:I
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_layout_constraintCircleAngle:I
 
-    const/16 v2, 0x14
+    const/16 v2, 0x3f
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
     .line 343
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
 
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_constraintVertical_bias:I
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_android_id:I
 
-    const/16 v2, 0x25
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    .line 344
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
-
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_constraintDimensionRatio:I
-
-    const/4 v2, 0x5
+    const/16 v2, 0x26
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
     .line 345
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
 
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_constraintLeft_creator:I
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_layout_constraintWidth_percent:I
 
-    const/16 v2, 0x52
+    const/16 v2, 0x45
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
     .line 346
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
 
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_constraintTop_creator:I
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_layout_constraintHeight_percent:I
 
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    .line 347
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
-
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_constraintRight_creator:I
+    const/16 v2, 0x46
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
     .line 348
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
 
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_constraintBottom_creator:I
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_chainUseRtl:I
+
+    const/16 v2, 0x47
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
     .line 349
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
 
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_constraintBaseline_creator:I
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_barrierDirection:I
+
+    const/16 v2, 0x48
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
     .line 350
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
 
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_android_layout_marginLeft:I
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_constraint_referenced_ids:I
 
-    const/16 v2, 0x18
+    const/16 v2, 0x49
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
     .line 351
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
 
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_android_layout_marginRight:I
-
-    const/16 v2, 0x1c
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    .line 352
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
-
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_android_layout_marginStart:I
-
-    const/16 v2, 0x1f
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    .line 353
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
-
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_android_layout_marginEnd:I
-
-    const/16 v2, 0x8
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    .line 354
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
-
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_android_layout_marginTop:I
-
-    const/16 v2, 0x22
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    .line 355
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
-
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_android_layout_marginBottom:I
-
-    const/4 v2, 0x2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    .line 356
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
-
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_android_layout_width:I
-
-    const/16 v2, 0x17
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    .line 357
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
-
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_android_layout_height:I
-
-    const/16 v2, 0x15
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    .line 358
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
-
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_android_visibility:I
-
-    const/16 v2, 0x16
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    .line 359
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
-
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_android_alpha:I
-
-    const/16 v2, 0x2b
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    .line 360
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
-
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_android_elevation:I
-
-    const/16 v2, 0x2c
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    .line 361
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
-
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_android_rotationX:I
-
-    const/16 v2, 0x2d
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    .line 362
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
-
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_android_rotationY:I
-
-    const/16 v2, 0x2e
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    .line 363
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
-
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_android_rotation:I
-
-    const/16 v2, 0x3c
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    .line 364
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
-
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_android_scaleX:I
-
-    const/16 v2, 0x2f
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    .line 365
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
-
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_android_scaleY:I
-
-    const/16 v2, 0x30
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    .line 366
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
-
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_android_transformPivotX:I
-
-    const/16 v2, 0x31
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    .line 367
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
-
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_android_transformPivotY:I
-
-    const/16 v2, 0x32
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    .line 368
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
-
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_android_translationX:I
-
-    const/16 v2, 0x33
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    .line 369
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
-
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_android_translationY:I
-
-    const/16 v2, 0x34
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    .line 370
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
-
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_android_translationZ:I
-
-    const/16 v2, 0x35
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    .line 371
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
-
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_constraintWidth_default:I
-
-    const/16 v2, 0x36
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    .line 372
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
-
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_constraintHeight_default:I
-
-    const/16 v2, 0x37
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    .line 373
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
-
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_constraintWidth_max:I
-
-    const/16 v2, 0x38
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    .line 374
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
-
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_constraintHeight_max:I
-
-    const/16 v2, 0x39
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    .line 375
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
-
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_constraintWidth_min:I
-
-    const/16 v2, 0x3a
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    .line 376
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
-
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_constraintHeight_min:I
-
-    const/16 v2, 0x3b
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    .line 377
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
-
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_constraintCircle:I
-
-    const/16 v2, 0x3d
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    .line 378
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
-
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_constraintCircleRadius:I
-
-    const/16 v2, 0x3e
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    .line 379
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
-
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_constraintCircleAngle:I
-
-    const/16 v2, 0x3f
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    .line 380
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
-
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_animate_relativeTo:I
-
-    const/16 v2, 0x40
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    .line 381
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
-
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_transitionEasing:I
-
-    const/16 v2, 0x41
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    .line 382
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
-
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_drawPath:I
-
-    const/16 v2, 0x42
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    .line 383
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
-
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_transitionPathRotate:I
-
-    const/16 v2, 0x43
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    .line 384
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
-
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_motionStagger:I
-
-    const/16 v2, 0x4f
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    .line 385
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
-
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_android_id:I
-
-    const/16 v2, 0x26
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    .line 386
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
-
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_motionProgress:I
-
-    const/16 v2, 0x44
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    .line 387
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
-
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_constraintWidth_percent:I
-
-    const/16 v2, 0x45
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    .line 388
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
-
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_constraintHeight_percent:I
-
-    const/16 v2, 0x46
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    .line 390
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
-
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_chainUseRtl:I
-
-    const/16 v2, 0x47
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    .line 391
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
-
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_barrierDirection:I
-
-    const/16 v2, 0x48
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    .line 392
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
-
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_barrierMargin:I
-
-    const/16 v2, 0x49
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    .line 393
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
-
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_constraint_referenced_ids:I
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet_barrierAllowsGoneWidgets:I
 
     const/16 v2, 0x4a
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    .line 394
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
-
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_barrierAllowsGoneWidgets:I
-
-    const/16 v2, 0x4b
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    .line 395
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
-
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_pathMotionArc:I
-
-    const/16 v2, 0x4c
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    .line 396
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
-
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_constraintTag:I
-
-    const/16 v2, 0x4d
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    .line 397
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
-
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_visibilityMode:I
-
-    const/16 v2, 0x4e
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    .line 398
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
-
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_constrainedWidth:I
-
-    const/16 v2, 0x50
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    .line 399
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
-
-    sget v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint_layout_constrainedHeight:I
-
-    const/16 v2, 0x51
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
@@ -844,22 +719,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 74
+    .line 59
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 79
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Landroidx/constraintlayout/widget/ConstraintSet;->mSavedAttributes:Ljava/util/HashMap;
-
-    const/4 v0, 0x1
-
-    .line 84
-    iput-boolean v0, p0, Landroidx/constraintlayout/widget/ConstraintSet;->mForceId:Z
-
-    .line 223
+    .line 198
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -869,42 +732,22 @@
     return-void
 .end method
 
-.method static synthetic access$100(Landroid/content/res/TypedArray;II)I
-    .locals 0
-
-    .line 74
-    invoke-static {p0, p1, p2}, Landroidx/constraintlayout/widget/ConstraintSet;->lookupID(Landroid/content/res/TypedArray;II)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method static synthetic access$200()[I
-    .locals 1
-
-    .line 74
-    sget-object v0, Landroidx/constraintlayout/widget/ConstraintSet;->VISIBILITY_FLAGS:[I
-
-    return-object v0
-.end method
-
 .method private convertReferenceString(Landroid/view/View;Ljava/lang/String;)[I
     .locals 9
 
     const-string v0, ","
 
-    .line 3750
+    .line 2443
     invoke-virtual {p2, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p2
 
-    .line 3751
+    .line 2444
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 3752
+    .line 2445
     array-length v1, p2
 
     new-array v1, v1, [I
@@ -915,32 +758,32 @@
 
     move v4, v3
 
-    .line 3754
+    .line 2447
     :goto_0
     array-length v5, p2
 
     if-ge v3, v5, :cond_2
 
-    .line 3755
+    .line 2448
     aget-object v5, p2, v3
 
-    .line 3756
+    .line 2449
     invoke-virtual {v5}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 3759
+    .line 2452
     :try_start_0
     const-class v6, Landroidx/constraintlayout/widget/R$id;
 
-    .line 3760
+    .line 2453
     invoke-virtual {v6, v5}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v6
 
     const/4 v7, 0x0
 
-    .line 3761
+    .line 2454
     invoke-virtual {v6, v7}, Ljava/lang/reflect/Field;->getInt(Ljava/lang/Object;)I
 
     move-result v6
@@ -955,19 +798,19 @@
     :goto_1
     if-nez v6, :cond_0
 
-    .line 3766
+    .line 2460
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
 
     const-string v7, "id"
 
-    .line 3767
+    .line 2461
     invoke-virtual {v0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 3766
+    .line 2460
     invoke-virtual {v6, v5, v7, v8}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v6
@@ -975,7 +818,7 @@
     :cond_0
     if-nez v6, :cond_1
 
-    .line 3770
+    .line 2464
     invoke-virtual {p1}, Landroid/view/View;->isInEditMode()Z
 
     move-result v7
@@ -990,26 +833,26 @@
 
     if-eqz v7, :cond_1
 
-    .line 3771
+    .line 2465
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v7
 
     check-cast v7, Landroidx/constraintlayout/widget/ConstraintLayout;
 
-    .line 3772
+    .line 2466
     invoke-virtual {v7, v2, v5}, Landroidx/constraintlayout/widget/ConstraintLayout;->getDesignInformation(ILjava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v5
 
     if-eqz v5, :cond_1
 
-    .line 3773
+    .line 2467
     instance-of v7, v5, Ljava/lang/Integer;
 
     if-eqz v7, :cond_1
 
-    .line 3774
+    .line 2468
     check-cast v5, Ljava/lang/Integer;
 
     invoke-virtual {v5}, Ljava/lang/Integer;->intValue()I
@@ -1019,7 +862,7 @@
     :cond_1
     add-int/lit8 v5, v4, 0x1
 
-    .line 3777
+    .line 2471
     aput v6, v1, v4
 
     add-int/lit8 v3, v3, 0x1
@@ -1028,13 +871,13 @@
 
     goto :goto_0
 
-    .line 3779
+    .line 2473
     :cond_2
     array-length p1, p2
 
     if-eq v4, p1, :cond_3
 
-    .line 3780
+    .line 2474
     invoke-static {v1, v4}, Ljava/util/Arrays;->copyOf([II)[I
 
     move-result-object v1
@@ -1046,31 +889,33 @@
 .method private fillFromAttributeList(Landroid/content/Context;Landroid/util/AttributeSet;)Landroidx/constraintlayout/widget/ConstraintSet$Constraint;
     .locals 2
 
-    .line 3417
+    .line 2189
     new-instance v0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;
 
-    invoke-direct {v0}, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;-><init>()V
+    const/4 v1, 0x0
 
-    .line 3418
-    sget-object v1, Landroidx/constraintlayout/widget/R$styleable;->Constraint:[I
+    invoke-direct {v0, v1}, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;-><init>(Landroidx/constraintlayout/widget/ConstraintSet$1;)V
+
+    .line 2190
+    sget-object v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintSet:[I
 
     invoke-virtual {p1, p2, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
-    move-result-object p2
+    move-result-object p1
 
-    .line 3419
-    invoke-direct {p0, p1, v0, p2}, Landroidx/constraintlayout/widget/ConstraintSet;->populateConstraint(Landroid/content/Context;Landroidx/constraintlayout/widget/ConstraintSet$Constraint;Landroid/content/res/TypedArray;)V
+    .line 2191
+    invoke-direct {p0, v0, p1}, Landroidx/constraintlayout/widget/ConstraintSet;->populateConstraint(Landroidx/constraintlayout/widget/ConstraintSet$Constraint;Landroid/content/res/TypedArray;)V
 
-    .line 3420
-    invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
+    .line 2192
+    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
     return-object v0
 .end method
 
 .method private get(I)Landroidx/constraintlayout/widget/ConstraintSet$Constraint;
-    .locals 3
+    .locals 4
 
-    .line 3241
+    .line 2110
     iget-object v0, p0, Landroidx/constraintlayout/widget/ConstraintSet;->mConstraints:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1083,7 +928,7 @@
 
     if-nez v0, :cond_0
 
-    .line 3242
+    .line 2111
     iget-object v0, p0, Landroidx/constraintlayout/widget/ConstraintSet;->mConstraints:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1092,11 +937,13 @@
 
     new-instance v2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;
 
-    invoke-direct {v2}, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;-><init>()V
+    const/4 v3, 0x0
+
+    invoke-direct {v2, v3}, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;-><init>(Landroidx/constraintlayout/widget/ConstraintSet$1;)V
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3244
+    .line 2113
     :cond_0
     iget-object v0, p0, Landroidx/constraintlayout/widget/ConstraintSet;->mConstraints:Ljava/util/HashMap;
 
@@ -1116,7 +963,7 @@
 .method private static lookupID(Landroid/content/res/TypedArray;II)I
     .locals 1
 
-    .line 3409
+    .line 2181
     invoke-virtual {p0, p1, p2}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result p2
@@ -1125,7 +972,7 @@
 
     if-ne p2, v0, :cond_0
 
-    .line 3411
+    .line 2183
     invoke-virtual {p0, p1, v0}, Landroid/content/res/TypedArray;->getInt(II)I
 
     move-result p2
@@ -1134,80 +981,42 @@
     return p2
 .end method
 
-.method private populateConstraint(Landroid/content/Context;Landroidx/constraintlayout/widget/ConstraintSet$Constraint;Landroid/content/res/TypedArray;)V
-    .locals 8
+.method private populateConstraint(Landroidx/constraintlayout/widget/ConstraintSet$Constraint;Landroid/content/res/TypedArray;)V
+    .locals 6
 
-    .line 3425
-    invoke-virtual {p3}, Landroid/content/res/TypedArray;->getIndexCount()I
+    .line 2197
+    invoke-virtual {p2}, Landroid/content/res/TypedArray;->getIndexCount()I
 
-    move-result p1
+    move-result v0
 
-    const/4 v0, 0x0
-
-    move v1, v0
+    const/4 v1, 0x0
 
     :goto_0
-    if-ge v1, p1, :cond_3
+    if-ge v1, v0, :cond_0
 
-    .line 3427
-    invoke-virtual {p3, v1}, Landroid/content/res/TypedArray;->getIndex(I)I
+    .line 2199
+    invoke-virtual {p2, v1}, Landroid/content/res/TypedArray;->getIndex(I)I
 
     move-result v2
 
-    .line 3470
-    sget v3, Landroidx/constraintlayout/widget/R$styleable;->Constraint_android_id:I
-
-    const/4 v4, 0x1
-
-    if-eq v2, v3, :cond_0
-
-    sget v3, Landroidx/constraintlayout/widget/R$styleable;->Constraint_android_layout_marginStart:I
-
-    if-eq v3, v2, :cond_0
-
-    sget v3, Landroidx/constraintlayout/widget/R$styleable;->Constraint_android_layout_marginEnd:I
-
-    if-eq v3, v2, :cond_0
-
-    .line 3473
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->motion:Landroidx/constraintlayout/widget/ConstraintSet$Motion;
-
-    iput-boolean v4, v3, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->mApply:Z
-
-    .line 3474
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput-boolean v4, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mApply:Z
-
-    .line 3475
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->propertySet:Landroidx/constraintlayout/widget/ConstraintSet$PropertySet;
-
-    iput-boolean v4, v3, Landroidx/constraintlayout/widget/ConstraintSet$PropertySet;->mApply:Z
-
-    .line 3476
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
-
-    iput-boolean v4, v3, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->mApply:Z
-
-    .line 3478
-    :cond_0
+    .line 2238
     sget-object v3, Landroidx/constraintlayout/widget/ConstraintSet;->mapToConstant:Landroid/util/SparseIntArray;
 
     invoke-virtual {v3, v2}, Landroid/util/SparseIntArray;->get(I)I
 
     move-result v3
 
-    const/high16 v5, 0x3f800000    # 1.0f
-
-    const/16 v6, 0x15
-
-    const/16 v7, 0x11
-
     packed-switch v3, :pswitch_data_0
+
+    packed-switch v3, :pswitch_data_1
+
+    const/high16 v4, 0x3f800000    # 1.0f
+
+    packed-switch v3, :pswitch_data_2
 
     const-string v3, "ConstraintSet"
 
-    .line 3743
+    .line 2436
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1216,7 +1025,7 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3744
+    .line 2437
     invoke-static {v2}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object v5
@@ -1239,7 +1048,7 @@
 
     move-result-object v2
 
-    .line 3743
+    .line 2436
     invoke-static {v3, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_1
@@ -1247,16 +1056,16 @@
     :pswitch_0
     const-string v3, "ConstraintSet"
 
-    .line 3739
+    .line 2432
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "unused attribute 0x"
+    const-string v5, "unused attribute 0x"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3740
+    .line 2433
     invoke-static {v2}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object v5
@@ -1279,1362 +1088,779 @@
 
     move-result-object v2
 
-    .line 3739
+    .line 2432
     invoke-static {v3, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_1
 
-    .line 3619
+    .line 2429
     :pswitch_1
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    iget-boolean v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mBarrierAllowsGoneWidgets:Z
 
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget-boolean v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->constrainedHeight:Z
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+    invoke-virtual {p2, v2, v3}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v2
 
-    iput-boolean v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->constrainedHeight:Z
+    iput-boolean v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mBarrierAllowsGoneWidgets:Z
 
     goto/16 :goto_1
 
-    .line 3616
+    .line 2426
     :pswitch_2
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    invoke-virtual {p2, v2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    move-result-object v2
 
-    iget-boolean v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->constrainedWidth:Z
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
-
-    move-result v2
-
-    iput-boolean v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->constrainedWidth:Z
+    iput-object v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mReferenceIdString:Ljava/lang/String;
 
     goto/16 :goto_1
 
-    .line 3714
+    .line 2423
     :pswitch_3
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->motion:Landroidx/constraintlayout/widget/ConstraintSet$Motion;
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mBarrierDirection:I
 
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->motion:Landroidx/constraintlayout/widget/ConstraintSet$Motion;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->mMotionStagger:F
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getFloat(IF)F
+    invoke-virtual {p2, v2, v3}, Landroid/content/res/TypedArray;->getInt(II)I
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->mMotionStagger:F
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mBarrierDirection:I
 
     goto/16 :goto_1
 
-    .line 3626
     :pswitch_4
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->propertySet:Landroidx/constraintlayout/widget/ConstraintSet$PropertySet;
-
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->propertySet:Landroidx/constraintlayout/widget/ConstraintSet$PropertySet;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$PropertySet;->mVisibilityMode:I
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getInt(II)I
-
-    move-result v2
-
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$PropertySet;->mVisibilityMode:I
-
-    goto/16 :goto_1
-
-    .line 3733
-    :pswitch_5
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    invoke-virtual {p3, v2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    iput-object v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mConstraintTag:Ljava/lang/String;
-
-    goto/16 :goto_1
-
-    .line 3708
-    :pswitch_6
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->motion:Landroidx/constraintlayout/widget/ConstraintSet$Motion;
-
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->motion:Landroidx/constraintlayout/widget/ConstraintSet$Motion;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->mPathMotionArc:I
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getInt(II)I
-
-    move-result v2
-
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->mPathMotionArc:I
-
-    goto/16 :goto_1
-
-    .line 3736
-    :pswitch_7
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget-boolean v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mBarrierAllowsGoneWidgets:Z
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
-
-    move-result v2
-
-    iput-boolean v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mBarrierAllowsGoneWidgets:Z
-
-    goto/16 :goto_1
-
-    .line 3730
-    :pswitch_8
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    invoke-virtual {p3, v2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    iput-object v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mReferenceIdString:Ljava/lang/String;
-
-    goto/16 :goto_1
-
-    .line 3727
-    :pswitch_9
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mBarrierMargin:I
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
-
-    move-result v2
-
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mBarrierMargin:I
-
-    goto/16 :goto_1
-
-    .line 3724
-    :pswitch_a
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mBarrierDirection:I
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getInt(II)I
-
-    move-result v2
-
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mBarrierDirection:I
-
-    goto/16 :goto_1
-
-    :pswitch_b
     const-string v2, "ConstraintSet"
 
     const-string v3, "CURRENTLY UNSUPPORTED"
 
-    .line 3720
+    .line 2419
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_1
 
-    .line 3691
+    .line 2416
+    :pswitch_5
+    invoke-virtual {p2, v2, v4}, Landroid/content/res/TypedArray;->getFloat(IF)F
+
+    move-result v2
+
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->heightPercent:F
+
+    goto/16 :goto_1
+
+    .line 2413
+    :pswitch_6
+    invoke-virtual {p2, v2, v4}, Landroid/content/res/TypedArray;->getFloat(IF)F
+
+    move-result v2
+
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->widthPercent:F
+
+    goto/16 :goto_1
+
+    .line 2303
+    :pswitch_7
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->circleAngle:F
+
+    invoke-virtual {p2, v2, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
+
+    move-result v2
+
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->circleAngle:F
+
+    goto/16 :goto_1
+
+    .line 2300
+    :pswitch_8
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->circleRadius:I
+
+    invoke-virtual {p2, v2, v3}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
+
+    move-result v2
+
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->circleRadius:I
+
+    goto/16 :goto_1
+
+    .line 2297
+    :pswitch_9
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->circleConstraint:I
+
+    invoke-static {p2, v2, v3}, Landroidx/constraintlayout/widget/ConstraintSet;->lookupID(Landroid/content/res/TypedArray;II)I
+
+    move-result v2
+
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->circleConstraint:I
+
+    goto/16 :goto_1
+
+    .line 2365
+    :pswitch_a
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->rotation:F
+
+    invoke-virtual {p2, v2, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
+
+    move-result v2
+
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->rotation:F
+
+    goto/16 :goto_1
+
+    .line 2392
+    :pswitch_b
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->translationZ:F
+
+    invoke-virtual {p2, v2, v3}, Landroid/content/res/TypedArray;->getDimension(IF)F
+
+    move-result v2
+
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->translationZ:F
+
+    goto/16 :goto_1
+
+    .line 2389
     :pswitch_c
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->translationY:F
 
-    invoke-virtual {p3, v2, v5}, Landroid/content/res/TypedArray;->getFloat(IF)F
+    invoke-virtual {p2, v2, v3}, Landroid/content/res/TypedArray;->getDimension(IF)F
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->heightPercent:F
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->translationY:F
 
     goto/16 :goto_1
 
-    .line 3688
+    .line 2386
     :pswitch_d
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->translationX:F
 
-    invoke-virtual {p3, v2, v5}, Landroid/content/res/TypedArray;->getFloat(IF)F
+    invoke-virtual {p2, v2, v3}, Landroid/content/res/TypedArray;->getDimension(IF)F
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->widthPercent:F
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->translationX:F
 
     goto/16 :goto_1
 
-    .line 3694
+    .line 2383
     :pswitch_e
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->propertySet:Landroidx/constraintlayout/widget/ConstraintSet$PropertySet;
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transformPivotY:F
 
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->propertySet:Landroidx/constraintlayout/widget/ConstraintSet$PropertySet;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$PropertySet;->mProgress:F
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getFloat(IF)F
+    invoke-virtual {p2, v2, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$PropertySet;->mProgress:F
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transformPivotY:F
 
     goto/16 :goto_1
 
-    .line 3711
+    .line 2380
     :pswitch_f
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->motion:Landroidx/constraintlayout/widget/ConstraintSet$Motion;
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transformPivotX:F
 
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->motion:Landroidx/constraintlayout/widget/ConstraintSet$Motion;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->mPathRotate:F
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getFloat(IF)F
+    invoke-virtual {p2, v2, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->mPathRotate:F
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transformPivotX:F
 
     goto/16 :goto_1
 
-    .line 3717
+    .line 2377
     :pswitch_10
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->motion:Landroidx/constraintlayout/widget/ConstraintSet$Motion;
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->scaleY:F
 
-    invoke-virtual {p3, v2, v0}, Landroid/content/res/TypedArray;->getInt(II)I
+    invoke-virtual {p2, v2, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->mDrawPath:I
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->scaleY:F
 
     goto/16 :goto_1
 
-    .line 3700
+    .line 2374
     :pswitch_11
-    invoke-virtual {p3, v2}, Landroid/content/res/TypedArray;->peekValue(I)Landroid/util/TypedValue;
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->scaleX:F
 
-    move-result-object v3
-
-    .line 3701
-    iget v3, v3, Landroid/util/TypedValue;->type:I
-
-    const/4 v4, 0x3
-
-    if-ne v3, v4, :cond_1
-
-    .line 3702
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->motion:Landroidx/constraintlayout/widget/ConstraintSet$Motion;
-
-    invoke-virtual {p3, v2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    iput-object v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->mTransitionEasing:Ljava/lang/String;
-
-    goto/16 :goto_1
-
-    .line 3704
-    :cond_1
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->motion:Landroidx/constraintlayout/widget/ConstraintSet$Motion;
-
-    sget-object v4, Landroidx/constraintlayout/motion/utils/Easing;->NAMED_EASING:[Ljava/lang/String;
-
-    invoke-virtual {p3, v2, v0}, Landroid/content/res/TypedArray;->getInteger(II)I
+    invoke-virtual {p2, v2, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
     move-result v2
 
-    aget-object v2, v4, v2
-
-    iput-object v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->mTransitionEasing:Ljava/lang/String;
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->scaleX:F
 
     goto/16 :goto_1
 
-    .line 3697
+    .line 2371
     :pswitch_12
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->motion:Landroidx/constraintlayout/widget/ConstraintSet$Motion;
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->rotationY:F
 
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->motion:Landroidx/constraintlayout/widget/ConstraintSet$Motion;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->mAnimateRelativeTo:I
-
-    invoke-static {p3, v2, v4}, Landroidx/constraintlayout/widget/ConstraintSet;->lookupID(Landroid/content/res/TypedArray;II)I
+    invoke-virtual {p2, v2, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->mAnimateRelativeTo:I
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->rotationY:F
 
     goto/16 :goto_1
 
-    .line 3543
+    .line 2368
     :pswitch_13
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->rotationX:F
 
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->circleAngle:F
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getFloat(IF)F
+    invoke-virtual {p2, v2, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->circleAngle:F
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->rotationX:F
 
     goto/16 :goto_1
 
-    .line 3540
     :pswitch_14
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    const/4 v3, 0x1
 
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    .line 2361
+    iput-boolean v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->applyElevation:Z
 
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->circleRadius:I
+    .line 2362
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->elevation:F
 
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
+    invoke-virtual {p2, v2, v3}, Landroid/content/res/TypedArray;->getDimension(IF)F
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->circleRadius:I
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->elevation:F
 
     goto/16 :goto_1
 
-    .line 3537
+    .line 2358
     :pswitch_15
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->alpha:F
 
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->circleConstraint:I
-
-    invoke-static {p3, v2, v4}, Landroidx/constraintlayout/widget/ConstraintSet;->lookupID(Landroid/content/res/TypedArray;II)I
+    invoke-virtual {p2, v2, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->circleConstraint:I
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->alpha:F
 
     goto/16 :goto_1
 
-    .line 3638
+    .line 2401
     :pswitch_16
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->verticalChainStyle:I
 
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->rotation:F
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getFloat(IF)F
+    invoke-virtual {p2, v2, v3}, Landroid/content/res/TypedArray;->getInt(II)I
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->rotation:F
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->verticalChainStyle:I
 
     goto/16 :goto_1
 
-    .line 3610
+    .line 2404
     :pswitch_17
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->horizontalChainStyle:I
 
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->heightMin:I
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
+    invoke-virtual {p2, v2, v3}, Landroid/content/res/TypedArray;->getInt(II)I
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->heightMin:I
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->horizontalChainStyle:I
 
     goto/16 :goto_1
 
-    .line 3613
+    .line 2395
     :pswitch_18
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->verticalWeight:F
 
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->widthMin:I
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
+    invoke-virtual {p2, v2, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->widthMin:I
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->verticalWeight:F
 
     goto/16 :goto_1
 
-    .line 3604
+    .line 2398
     :pswitch_19
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->horizontalWeight:F
 
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->heightMax:I
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
+    invoke-virtual {p2, v2, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->heightMax:I
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->horizontalWeight:F
 
     goto/16 :goto_1
 
-    .line 3607
+    .line 2407
     :pswitch_1a
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mViewId:I
 
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->widthMax:I
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
+    invoke-virtual {p2, v2, v3}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->widthMax:I
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mViewId:I
 
     goto/16 :goto_1
 
-    .line 3601
+    .line 2327
     :pswitch_1b
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->verticalBias:F
 
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->heightDefault:I
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getInt(II)I
+    invoke-virtual {p2, v2, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->heightDefault:I
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->verticalBias:F
 
     goto/16 :goto_1
 
-    .line 3598
+    .line 2252
     :pswitch_1c
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->topToTop:I
 
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->widthDefault:I
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getInt(II)I
+    invoke-static {p2, v2, v3}, Landroidx/constraintlayout/widget/ConstraintSet;->lookupID(Landroid/content/res/TypedArray;II)I
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->widthDefault:I
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->topToTop:I
 
     goto/16 :goto_1
 
-    .line 3665
+    .line 2255
     :pswitch_1d
-    sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->topToBottom:I
 
-    if-lt v3, v6, :cond_2
-
-    .line 3666
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
-
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->translationZ:F
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getDimension(IF)F
+    invoke-static {p2, v2, v3}, Landroidx/constraintlayout/widget/ConstraintSet;->lookupID(Landroid/content/res/TypedArray;II)I
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->translationZ:F
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->topToBottom:I
 
     goto/16 :goto_1
 
-    .line 3662
+    .line 2342
     :pswitch_1e
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->topMargin:I
 
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->translationY:F
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getDimension(IF)F
+    invoke-virtual {p2, v2, v3}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->translationY:F
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->topMargin:I
 
     goto/16 :goto_1
 
-    .line 3659
+    .line 2288
     :pswitch_1f
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->startToStart:I
 
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->translationX:F
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getDimension(IF)F
+    invoke-static {p2, v2, v3}, Landroidx/constraintlayout/widget/ConstraintSet;->lookupID(Landroid/content/res/TypedArray;II)I
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->translationX:F
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->startToStart:I
 
     goto/16 :goto_1
 
-    .line 3656
+    .line 2285
     :pswitch_20
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->startToEnd:I
 
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->transformPivotY:F
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getDimension(IF)F
+    invoke-static {p2, v2, v3}, Landroidx/constraintlayout/widget/ConstraintSet;->lookupID(Landroid/content/res/TypedArray;II)I
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->transformPivotY:F
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->startToEnd:I
 
     goto/16 :goto_1
 
-    .line 3653
+    .line 2336
     :pswitch_21
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->startMargin:I
 
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->transformPivotX:F
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getDimension(IF)F
+    invoke-virtual {p2, v2, v3}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->transformPivotX:F
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->startMargin:I
 
     goto/16 :goto_1
 
-    .line 3650
+    .line 2249
     :pswitch_22
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->rightToRight:I
 
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->scaleY:F
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getFloat(IF)F
+    invoke-static {p2, v2, v3}, Landroidx/constraintlayout/widget/ConstraintSet;->lookupID(Landroid/content/res/TypedArray;II)I
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->scaleY:F
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->rightToRight:I
 
     goto/16 :goto_1
 
-    .line 3647
+    .line 2246
     :pswitch_23
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->rightToLeft:I
 
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->scaleX:F
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getFloat(IF)F
+    invoke-static {p2, v2, v3}, Landroidx/constraintlayout/widget/ConstraintSet;->lookupID(Landroid/content/res/TypedArray;II)I
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->scaleX:F
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->rightToLeft:I
 
     goto/16 :goto_1
 
-    .line 3644
+    .line 2333
     :pswitch_24
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->rightMargin:I
 
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->rotationY:F
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getFloat(IF)F
+    invoke-virtual {p2, v2, v3}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->rotationY:F
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->rightMargin:I
 
     goto/16 :goto_1
 
-    .line 3641
+    .line 2282
     :pswitch_25
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->orientation:I
 
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->rotationX:F
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getFloat(IF)F
+    invoke-virtual {p2, v2, v3}, Landroid/content/res/TypedArray;->getInt(II)I
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->rotationX:F
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->orientation:I
 
     goto/16 :goto_1
 
-    .line 3632
+    .line 2243
     :pswitch_26
-    sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->leftToRight:I
 
-    if-lt v3, v6, :cond_2
-
-    .line 3633
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
-
-    iput-boolean v4, v3, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->applyElevation:Z
-
-    .line 3634
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
-
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->elevation:F
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getDimension(IF)F
+    invoke-static {p2, v2, v3}, Landroidx/constraintlayout/widget/ConstraintSet;->lookupID(Landroid/content/res/TypedArray;II)I
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->elevation:F
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->leftToRight:I
 
     goto/16 :goto_1
 
-    .line 3629
+    .line 2240
     :pswitch_27
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->propertySet:Landroidx/constraintlayout/widget/ConstraintSet$PropertySet;
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->leftToLeft:I
 
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->propertySet:Landroidx/constraintlayout/widget/ConstraintSet$PropertySet;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$PropertySet;->alpha:F
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getFloat(IF)F
+    invoke-static {p2, v2, v3}, Landroidx/constraintlayout/widget/ConstraintSet;->lookupID(Landroid/content/res/TypedArray;II)I
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$PropertySet;->alpha:F
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->leftToLeft:I
 
     goto/16 :goto_1
 
-    .line 3676
+    .line 2330
     :pswitch_28
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->leftMargin:I
 
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->verticalChainStyle:I
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getInt(II)I
+    invoke-virtual {p2, v2, v3}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->verticalChainStyle:I
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->leftMargin:I
 
     goto/16 :goto_1
 
-    .line 3679
+    .line 2348
     :pswitch_29
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mWidth:I
 
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->horizontalChainStyle:I
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getInt(II)I
+    invoke-virtual {p2, v2, v3}, Landroid/content/res/TypedArray;->getLayoutDimension(II)I
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->horizontalChainStyle:I
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mWidth:I
 
     goto/16 :goto_1
 
-    .line 3670
+    .line 2354
     :pswitch_2a
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->visibility:I
 
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->verticalWeight:F
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getFloat(IF)F
+    invoke-virtual {p2, v2, v3}, Landroid/content/res/TypedArray;->getInt(II)I
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->verticalWeight:F
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->visibility:I
+
+    .line 2355
+    sget-object v2, Landroidx/constraintlayout/widget/ConstraintSet;->VISIBILITY_FLAGS:[I
+
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->visibility:I
+
+    aget v2, v2, v3
+
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->visibility:I
 
     goto/16 :goto_1
 
-    .line 3673
+    .line 2351
     :pswitch_2b
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mHeight:I
 
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->horizontalWeight:F
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getFloat(IF)F
+    invoke-virtual {p2, v2, v3}, Landroid/content/res/TypedArray;->getLayoutDimension(II)I
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->horizontalWeight:F
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mHeight:I
 
     goto/16 :goto_1
 
-    .line 3682
+    .line 2324
     :pswitch_2c
-    iget v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mViewId:I
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->horizontalBias:F
 
-    invoke-virtual {p3, v2, v3}, Landroid/content/res/TypedArray;->getResourceId(II)I
+    invoke-virtual {p2, v2, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
     move-result v2
 
-    iput v2, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mViewId:I
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->horizontalBias:F
 
     goto/16 :goto_1
 
-    .line 3567
+    .line 2279
     :pswitch_2d
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->guidePercent:F
 
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->verticalBias:F
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getFloat(IF)F
+    invoke-virtual {p2, v2, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->verticalBias:F
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->guidePercent:F
 
     goto/16 :goto_1
 
-    .line 3492
+    .line 2276
     :pswitch_2e
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->guideEnd:I
 
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->topToTop:I
-
-    invoke-static {p3, v2, v4}, Landroidx/constraintlayout/widget/ConstraintSet;->lookupID(Landroid/content/res/TypedArray;II)I
+    invoke-virtual {p2, v2, v3}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->topToTop:I
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->guideEnd:I
 
     goto/16 :goto_1
 
-    .line 3495
+    .line 2273
     :pswitch_2f
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->guideBegin:I
 
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->topToBottom:I
-
-    invoke-static {p3, v2, v4}, Landroidx/constraintlayout/widget/ConstraintSet;->lookupID(Landroid/content/res/TypedArray;II)I
+    invoke-virtual {p2, v2, v3}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->topToBottom:I
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->guideBegin:I
 
     goto/16 :goto_1
 
-    .line 3586
+    .line 2309
     :pswitch_30
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->goneTopMargin:I
 
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->topMargin:I
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
+    invoke-virtual {p2, v2, v3}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->topMargin:I
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->goneTopMargin:I
 
     goto/16 :goto_1
 
-    .line 3528
+    .line 2318
     :pswitch_31
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->goneStartMargin:I
 
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->startToStart:I
-
-    invoke-static {p3, v2, v4}, Landroidx/constraintlayout/widget/ConstraintSet;->lookupID(Landroid/content/res/TypedArray;II)I
+    invoke-virtual {p2, v2, v3}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->startToStart:I
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->goneStartMargin:I
 
     goto/16 :goto_1
 
-    .line 3525
+    .line 2312
     :pswitch_32
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->goneRightMargin:I
 
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->startToEnd:I
-
-    invoke-static {p3, v2, v4}, Landroidx/constraintlayout/widget/ConstraintSet;->lookupID(Landroid/content/res/TypedArray;II)I
+    invoke-virtual {p2, v2, v3}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->startToEnd:I
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->goneRightMargin:I
 
     goto/16 :goto_1
 
-    .line 3576
+    .line 2306
     :pswitch_33
-    sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->goneLeftMargin:I
 
-    if-lt v3, v7, :cond_2
-
-    .line 3577
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->startMargin:I
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
+    invoke-virtual {p2, v2, v3}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->startMargin:I
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->goneLeftMargin:I
 
     goto/16 :goto_1
 
-    .line 3489
+    .line 2321
     :pswitch_34
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->goneEndMargin:I
 
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->rightToRight:I
-
-    invoke-static {p3, v2, v4}, Landroidx/constraintlayout/widget/ConstraintSet;->lookupID(Landroid/content/res/TypedArray;II)I
+    invoke-virtual {p2, v2, v3}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->rightToRight:I
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->goneEndMargin:I
 
-    goto/16 :goto_1
+    goto :goto_1
 
-    .line 3486
+    .line 2315
     :pswitch_35
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->goneBottomMargin:I
 
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->rightToLeft:I
-
-    invoke-static {p3, v2, v4}, Landroidx/constraintlayout/widget/ConstraintSet;->lookupID(Landroid/content/res/TypedArray;II)I
+    invoke-virtual {p2, v2, v3}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->rightToLeft:I
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->goneBottomMargin:I
 
-    goto/16 :goto_1
+    goto :goto_1
 
-    .line 3573
+    .line 2291
     :pswitch_36
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->endToStart:I
 
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->rightMargin:I
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
+    invoke-static {p2, v2, v3}, Landroidx/constraintlayout/widget/ConstraintSet;->lookupID(Landroid/content/res/TypedArray;II)I
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->rightMargin:I
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->endToStart:I
 
-    goto/16 :goto_1
+    goto :goto_1
 
-    .line 3522
+    .line 2294
     :pswitch_37
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->endToEnd:I
 
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->orientation:I
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getInt(II)I
+    invoke-static {p2, v2, v3}, Landroidx/constraintlayout/widget/ConstraintSet;->lookupID(Landroid/content/res/TypedArray;II)I
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->orientation:I
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->endToEnd:I
 
-    goto/16 :goto_1
+    goto :goto_1
 
-    .line 3483
+    .line 2339
     :pswitch_38
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->endMargin:I
 
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->leftToRight:I
-
-    invoke-static {p3, v2, v4}, Landroidx/constraintlayout/widget/ConstraintSet;->lookupID(Landroid/content/res/TypedArray;II)I
+    invoke-virtual {p2, v2, v3}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->leftToRight:I
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->endMargin:I
 
-    goto/16 :goto_1
+    goto :goto_1
 
-    .line 3480
+    .line 2270
     :pswitch_39
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->editorAbsoluteY:I
 
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->leftToLeft:I
-
-    invoke-static {p3, v2, v4}, Landroidx/constraintlayout/widget/ConstraintSet;->lookupID(Landroid/content/res/TypedArray;II)I
+    invoke-virtual {p2, v2, v3}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->leftToLeft:I
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->editorAbsoluteY:I
 
-    goto/16 :goto_1
+    goto :goto_1
 
-    .line 3570
+    .line 2267
     :pswitch_3a
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->editorAbsoluteX:I
 
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->leftMargin:I
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
+    invoke-virtual {p2, v2, v3}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->leftMargin:I
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->editorAbsoluteX:I
 
-    goto/16 :goto_1
+    goto :goto_1
 
-    .line 3592
+    .line 2410
     :pswitch_3b
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mWidth:I
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getLayoutDimension(II)I
-
-    move-result v2
-
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mWidth:I
-
-    goto/16 :goto_1
-
-    .line 3622
-    :pswitch_3c
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->propertySet:Landroidx/constraintlayout/widget/ConstraintSet$PropertySet;
-
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->propertySet:Landroidx/constraintlayout/widget/ConstraintSet$PropertySet;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$PropertySet;->visibility:I
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getInt(II)I
-
-    move-result v2
-
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$PropertySet;->visibility:I
-
-    .line 3623
-    iget-object v2, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->propertySet:Landroidx/constraintlayout/widget/ConstraintSet$PropertySet;
-
-    sget-object v3, Landroidx/constraintlayout/widget/ConstraintSet;->VISIBILITY_FLAGS:[I
-
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->propertySet:Landroidx/constraintlayout/widget/ConstraintSet$PropertySet;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$PropertySet;->visibility:I
-
-    aget v3, v3, v4
-
-    iput v3, v2, Landroidx/constraintlayout/widget/ConstraintSet$PropertySet;->visibility:I
-
-    goto/16 :goto_1
-
-    .line 3595
-    :pswitch_3d
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mHeight:I
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getLayoutDimension(II)I
-
-    move-result v2
-
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mHeight:I
-
-    goto/16 :goto_1
-
-    .line 3564
-    :pswitch_3e
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->horizontalBias:F
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getFloat(IF)F
-
-    move-result v2
-
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->horizontalBias:F
-
-    goto/16 :goto_1
-
-    .line 3519
-    :pswitch_3f
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->guidePercent:F
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getFloat(IF)F
-
-    move-result v2
-
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->guidePercent:F
-
-    goto/16 :goto_1
-
-    .line 3516
-    :pswitch_40
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->guideEnd:I
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
-
-    move-result v2
-
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->guideEnd:I
-
-    goto/16 :goto_1
-
-    .line 3513
-    :pswitch_41
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->guideBegin:I
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
-
-    move-result v2
-
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->guideBegin:I
-
-    goto/16 :goto_1
-
-    .line 3549
-    :pswitch_42
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->goneTopMargin:I
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
-
-    move-result v2
-
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->goneTopMargin:I
-
-    goto/16 :goto_1
-
-    .line 3558
-    :pswitch_43
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->goneStartMargin:I
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
-
-    move-result v2
-
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->goneStartMargin:I
-
-    goto/16 :goto_1
-
-    .line 3552
-    :pswitch_44
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->goneRightMargin:I
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
-
-    move-result v2
-
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->goneRightMargin:I
-
-    goto/16 :goto_1
-
-    .line 3546
-    :pswitch_45
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->goneLeftMargin:I
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
-
-    move-result v2
-
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->goneLeftMargin:I
-
-    goto/16 :goto_1
-
-    .line 3561
-    :pswitch_46
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->goneEndMargin:I
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
-
-    move-result v2
-
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->goneEndMargin:I
-
-    goto/16 :goto_1
-
-    .line 3555
-    :pswitch_47
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->goneBottomMargin:I
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
-
-    move-result v2
-
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->goneBottomMargin:I
-
-    goto/16 :goto_1
-
-    .line 3531
-    :pswitch_48
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->endToStart:I
-
-    invoke-static {p3, v2, v4}, Landroidx/constraintlayout/widget/ConstraintSet;->lookupID(Landroid/content/res/TypedArray;II)I
-
-    move-result v2
-
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->endToStart:I
-
-    goto/16 :goto_1
-
-    .line 3534
-    :pswitch_49
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->endToEnd:I
-
-    invoke-static {p3, v2, v4}, Landroidx/constraintlayout/widget/ConstraintSet;->lookupID(Landroid/content/res/TypedArray;II)I
-
-    move-result v2
-
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->endToEnd:I
-
-    goto :goto_1
-
-    .line 3581
-    :pswitch_4a
-    sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    if-lt v3, v7, :cond_2
-
-    .line 3582
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->endMargin:I
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
-
-    move-result v2
-
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->endMargin:I
-
-    goto :goto_1
-
-    .line 3510
-    :pswitch_4b
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->editorAbsoluteY:I
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
-
-    move-result v2
-
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->editorAbsoluteY:I
-
-    goto :goto_1
-
-    .line 3507
-    :pswitch_4c
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->editorAbsoluteX:I
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
-
-    move-result v2
-
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->editorAbsoluteX:I
-
-    goto :goto_1
-
-    .line 3685
-    :pswitch_4d
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    invoke-virtual {p3, v2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
+    invoke-virtual {p2, v2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    iput-object v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->dimensionRatio:Ljava/lang/String;
+    iput-object v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->dimensionRatio:Ljava/lang/String;
 
     goto :goto_1
 
-    .line 3498
-    :pswitch_4e
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    .line 2258
+    :pswitch_3c
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->bottomToTop:I
 
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->bottomToTop:I
-
-    invoke-static {p3, v2, v4}, Landroidx/constraintlayout/widget/ConstraintSet;->lookupID(Landroid/content/res/TypedArray;II)I
+    invoke-static {p2, v2, v3}, Landroidx/constraintlayout/widget/ConstraintSet;->lookupID(Landroid/content/res/TypedArray;II)I
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->bottomToTop:I
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->bottomToTop:I
 
     goto :goto_1
 
-    .line 3501
-    :pswitch_4f
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    .line 2261
+    :pswitch_3d
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->bottomToBottom:I
 
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->bottomToBottom:I
-
-    invoke-static {p3, v2, v4}, Landroidx/constraintlayout/widget/ConstraintSet;->lookupID(Landroid/content/res/TypedArray;II)I
+    invoke-static {p2, v2, v3}, Landroidx/constraintlayout/widget/ConstraintSet;->lookupID(Landroid/content/res/TypedArray;II)I
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->bottomToBottom:I
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->bottomToBottom:I
 
     goto :goto_1
 
-    .line 3589
-    :pswitch_50
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    .line 2345
+    :pswitch_3e
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->bottomMargin:I
 
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->bottomMargin:I
-
-    invoke-virtual {p3, v2, v4}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
+    invoke-virtual {p2, v2, v3}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->bottomMargin:I
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->bottomMargin:I
 
     goto :goto_1
 
-    .line 3504
-    :pswitch_51
-    iget-object v3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    .line 2264
+    :pswitch_3f
+    iget v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->baselineToBaseline:I
 
-    iget-object v4, p2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->baselineToBaseline:I
-
-    invoke-static {p3, v2, v4}, Landroidx/constraintlayout/widget/ConstraintSet;->lookupID(Landroid/content/res/TypedArray;II)I
+    invoke-static {p2, v2, v3}, Landroidx/constraintlayout/widget/ConstraintSet;->lookupID(Landroid/content/res/TypedArray;II)I
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->baselineToBaseline:I
+    iput v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->baselineToBaseline:I
 
-    :cond_2
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto/16 :goto_0
 
-    :cond_3
+    :cond_0
     return-void
 
     :pswitch_data_0
     .packed-switch 0x1
-        :pswitch_51
-        :pswitch_50
-        :pswitch_4f
-        :pswitch_4e
-        :pswitch_4d
-        :pswitch_4c
-        :pswitch_4b
-        :pswitch_4a
-        :pswitch_49
-        :pswitch_48
-        :pswitch_47
-        :pswitch_46
-        :pswitch_45
-        :pswitch_44
-        :pswitch_43
-        :pswitch_42
-        :pswitch_41
-        :pswitch_40
         :pswitch_3f
         :pswitch_3e
         :pswitch_3d
@@ -2688,10 +1914,18 @@
         :pswitch_d
         :pswitch_c
         :pswitch_b
+    .end packed-switch
+
+    :pswitch_data_1
+    .packed-switch 0x3c
         :pswitch_a
         :pswitch_9
         :pswitch_8
         :pswitch_7
+    .end packed-switch
+
+    :pswitch_data_2
+    .packed-switch 0x45
         :pswitch_6
         :pswitch_5
         :pswitch_4
@@ -2707,7 +1941,7 @@
 
     packed-switch p1, :pswitch_data_0
 
-    const-string/jumbo p1, "undefined"
+    const-string p1, "undefined"
 
     return-object p1
 
@@ -2746,6 +1980,8 @@
 
     return-object p1
 
+    nop
+
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_6
@@ -2763,31 +1999,26 @@
 .method public applyTo(Landroidx/constraintlayout/widget/ConstraintLayout;)V
     .locals 1
 
-    const/4 v0, 0x1
-
-    .line 1585
-    invoke-virtual {p0, p1, v0}, Landroidx/constraintlayout/widget/ConstraintSet;->applyToInternal(Landroidx/constraintlayout/widget/ConstraintLayout;Z)V
+    .line 789
+    invoke-virtual {p0, p1}, Landroidx/constraintlayout/widget/ConstraintSet;->applyToInternal(Landroidx/constraintlayout/widget/ConstraintLayout;)V
 
     const/4 v0, 0x0
 
-    .line 1586
+    .line 790
     invoke-virtual {p1, v0}, Landroidx/constraintlayout/widget/ConstraintLayout;->setConstraintSet(Landroidx/constraintlayout/widget/ConstraintSet;)V
-
-    .line 1587
-    invoke-virtual {p1}, Landroidx/constraintlayout/widget/ConstraintLayout;->requestLayout()V
 
     return-void
 .end method
 
-.method applyToInternal(Landroidx/constraintlayout/widget/ConstraintLayout;Z)V
+.method applyToInternal(Landroidx/constraintlayout/widget/ConstraintLayout;)V
     .locals 9
 
-    .line 1662
+    .line 797
     invoke-virtual {p1}, Landroidx/constraintlayout/widget/ConstraintLayout;->getChildCount()I
 
     move-result v0
 
-    .line 1663
+    .line 798
     new-instance v1, Ljava/util/HashSet;
 
     iget-object v2, p0, Landroidx/constraintlayout/widget/ConstraintSet;->mConstraints:Ljava/util/HashMap;
@@ -2801,23 +2032,25 @@
     const/4 v2, 0x0
 
     :goto_0
-    const/4 v3, 0x1
+    const/4 v3, -0x1
 
-    const/4 v4, -0x1
+    const/4 v4, 0x1
 
-    if-ge v2, v0, :cond_e
+    if-ge v2, v0, :cond_8
 
-    .line 1666
+    .line 801
     invoke-virtual {p1, v2}, Landroidx/constraintlayout/widget/ConstraintLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v5
 
-    .line 1667
+    .line 802
     invoke-virtual {v5}, Landroid/view/View;->getId()I
 
     move-result v6
 
-    .line 1668
+    if-eq v6, v3, :cond_7
+
+    .line 806
     iget-object v7, p0, Landroidx/constraintlayout/widget/ConstraintSet;->mConstraints:Ljava/util/HashMap;
 
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -2828,81 +2061,16 @@
 
     move-result v7
 
-    if-nez v7, :cond_0
+    if-eqz v7, :cond_6
 
-    const-string v3, "ConstraintSet"
-
-    .line 1669
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v6, "id unknown "
-
-    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {v5}, Landroidx/constraintlayout/motion/widget/Debug;->getName(Landroid/view/View;)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto/16 :goto_3
-
-    .line 1673
-    :cond_0
-    iget-boolean v7, p0, Landroidx/constraintlayout/widget/ConstraintSet;->mForceId:Z
-
-    if-eqz v7, :cond_2
-
-    if-eq v6, v4, :cond_1
-
-    goto :goto_1
-
-    .line 1674
-    :cond_1
-    new-instance p1, Ljava/lang/RuntimeException;
-
-    const-string p2, "All children of ConstraintLayout must have ids to use ConstraintSet"
-
-    invoke-direct {p1, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_2
-    :goto_1
-    if-ne v6, v4, :cond_3
-
-    goto/16 :goto_3
-
-    .line 1680
-    :cond_3
-    iget-object v7, p0, Landroidx/constraintlayout/widget/ConstraintSet;->mConstraints:Ljava/util/HashMap;
-
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v8
-
-    invoke-virtual {v7, v8}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v7
-
-    if-eqz v7, :cond_c
-
-    .line 1681
+    .line 807
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v7
 
     invoke-virtual {v1, v7}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
 
-    .line 1682
+    .line 808
     iget-object v7, p0, Landroidx/constraintlayout/widget/ConstraintSet;->mConstraints:Ljava/util/HashMap;
 
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -2915,480 +2083,360 @@
 
     check-cast v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;
 
-    .line 1683
+    .line 809
     instance-of v8, v5, Landroidx/constraintlayout/widget/Barrier;
 
-    if-eqz v8, :cond_4
+    if-eqz v8, :cond_0
 
-    .line 1684
-    iget-object v8, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    .line 810
+    iput v4, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mHelperType:I
 
-    iput v3, v8, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mHelperType:I
+    .line 812
+    :cond_0
+    iget v8, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mHelperType:I
 
-    .line 1686
-    :cond_4
-    iget-object v8, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    if-eq v8, v3, :cond_3
 
-    iget v8, v8, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mHelperType:I
+    .line 813
+    iget v3, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mHelperType:I
 
-    if-eq v8, v4, :cond_7
+    if-eq v3, v4, :cond_1
 
-    .line 1687
-    iget-object v4, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    goto :goto_1
 
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mHelperType:I
-
-    if-eq v4, v3, :cond_5
-
-    goto :goto_2
-
-    .line 1689
-    :cond_5
+    .line 815
+    :cond_1
     move-object v3, v5
 
     check-cast v3, Landroidx/constraintlayout/widget/Barrier;
 
-    .line 1690
+    .line 816
     invoke-virtual {v3, v6}, Landroidx/constraintlayout/widget/Barrier;->setId(I)V
 
-    .line 1691
-    iget-object v4, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mBarrierDirection:I
+    .line 817
+    iget v4, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mBarrierDirection:I
 
     invoke-virtual {v3, v4}, Landroidx/constraintlayout/widget/Barrier;->setType(I)V
 
-    .line 1692
-    iget-object v4, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mBarrierMargin:I
-
-    invoke-virtual {v3, v4}, Landroidx/constraintlayout/widget/Barrier;->setMargin(I)V
-
-    .line 1694
-    iget-object v4, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget-boolean v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mBarrierAllowsGoneWidgets:Z
+    .line 818
+    iget-boolean v4, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mBarrierAllowsGoneWidgets:Z
 
     invoke-virtual {v3, v4}, Landroidx/constraintlayout/widget/Barrier;->setAllowsGoneWidget(Z)V
 
-    .line 1695
-    iget-object v4, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    .line 819
+    iget-object v4, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mReferenceIds:[I
 
-    iget-object v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mReferenceIds:[I
+    if-eqz v4, :cond_2
 
-    if-eqz v4, :cond_6
-
-    .line 1696
-    iget-object v4, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget-object v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mReferenceIds:[I
+    .line 820
+    iget-object v4, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mReferenceIds:[I
 
     invoke-virtual {v3, v4}, Landroidx/constraintlayout/widget/Barrier;->setReferencedIds([I)V
 
-    goto :goto_2
+    goto :goto_1
 
-    .line 1697
-    :cond_6
-    iget-object v4, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    .line 821
+    :cond_2
+    iget-object v4, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mReferenceIdString:Ljava/lang/String;
 
-    iget-object v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mReferenceIdString:Ljava/lang/String;
+    if-eqz v4, :cond_3
 
-    if-eqz v4, :cond_7
+    .line 822
+    iget-object v4, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mReferenceIdString:Ljava/lang/String;
 
-    .line 1698
-    iget-object v4, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    invoke-direct {p0, v3, v4}, Landroidx/constraintlayout/widget/ConstraintSet;->convertReferenceString(Landroid/view/View;Ljava/lang/String;)[I
 
-    iget-object v6, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    move-result-object v4
 
-    iget-object v6, v6, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mReferenceIdString:Ljava/lang/String;
+    iput-object v4, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mReferenceIds:[I
 
-    invoke-direct {p0, v3, v6}, Landroidx/constraintlayout/widget/ConstraintSet;->convertReferenceString(Landroid/view/View;Ljava/lang/String;)[I
-
-    move-result-object v6
-
-    iput-object v6, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mReferenceIds:[I
-
-    .line 1700
-    iget-object v4, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget-object v4, v4, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mReferenceIds:[I
+    .line 824
+    iget-object v4, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mReferenceIds:[I
 
     invoke-virtual {v3, v4}, Landroidx/constraintlayout/widget/Barrier;->setReferencedIds([I)V
 
-    .line 1706
-    :cond_7
-    :goto_2
+    .line 830
+    :cond_3
+    :goto_1
     invoke-virtual {v5}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v3
 
     check-cast v3, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;
 
-    .line 1707
-    invoke-virtual {v3}, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->validate()V
-
-    .line 1708
+    .line 831
     invoke-virtual {v7, v3}, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->applyTo(Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;)V
 
-    if-eqz p2, :cond_8
-
-    .line 1711
-    iget-object v4, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mCustomConstraints:Ljava/util/HashMap;
-
-    invoke-static {v5, v4}, Landroidx/constraintlayout/widget/ConstraintAttribute;->setAttributes(Landroid/view/View;Ljava/util/HashMap;)V
-
-    .line 1713
-    :cond_8
+    .line 832
     invoke-virtual {v5, v3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1714
-    iget-object v3, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->propertySet:Landroidx/constraintlayout/widget/ConstraintSet$PropertySet;
-
-    iget v3, v3, Landroidx/constraintlayout/widget/ConstraintSet$PropertySet;->mVisibilityMode:I
-
-    if-nez v3, :cond_9
-
-    .line 1715
-    iget-object v3, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->propertySet:Landroidx/constraintlayout/widget/ConstraintSet$PropertySet;
-
-    iget v3, v3, Landroidx/constraintlayout/widget/ConstraintSet$PropertySet;->visibility:I
+    .line 833
+    iget v3, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->visibility:I
 
     invoke-virtual {v5, v3}, Landroid/view/View;->setVisibility(I)V
 
-    .line 1717
-    :cond_9
+    .line 834
     sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v4, 0x11
 
-    if-lt v3, v4, :cond_d
+    if-lt v3, v4, :cond_6
 
-    .line 1718
-    iget-object v3, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->propertySet:Landroidx/constraintlayout/widget/ConstraintSet$PropertySet;
-
-    iget v3, v3, Landroidx/constraintlayout/widget/ConstraintSet$PropertySet;->alpha:F
+    .line 835
+    iget v3, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->alpha:F
 
     invoke-virtual {v5, v3}, Landroid/view/View;->setAlpha(F)V
 
-    .line 1719
-    iget-object v3, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
-
-    iget v3, v3, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->rotation:F
+    .line 836
+    iget v3, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->rotation:F
 
     invoke-virtual {v5, v3}, Landroid/view/View;->setRotation(F)V
 
-    .line 1720
-    iget-object v3, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
-
-    iget v3, v3, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->rotationX:F
+    .line 837
+    iget v3, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->rotationX:F
 
     invoke-virtual {v5, v3}, Landroid/view/View;->setRotationX(F)V
 
-    .line 1721
-    iget-object v3, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
-
-    iget v3, v3, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->rotationY:F
+    .line 838
+    iget v3, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->rotationY:F
 
     invoke-virtual {v5, v3}, Landroid/view/View;->setRotationY(F)V
 
-    .line 1722
-    iget-object v3, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
-
-    iget v3, v3, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->scaleX:F
+    .line 839
+    iget v3, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->scaleX:F
 
     invoke-virtual {v5, v3}, Landroid/view/View;->setScaleX(F)V
 
-    .line 1723
-    iget-object v3, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
-
-    iget v3, v3, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->scaleY:F
+    .line 840
+    iget v3, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->scaleY:F
 
     invoke-virtual {v5, v3}, Landroid/view/View;->setScaleY(F)V
 
-    .line 1724
-    iget-object v3, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
-
-    iget v3, v3, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->transformPivotX:F
+    .line 841
+    iget v3, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transformPivotX:F
 
     invoke-static {v3}, Ljava/lang/Float;->isNaN(F)Z
 
     move-result v3
 
-    if-nez v3, :cond_a
+    if-nez v3, :cond_4
 
-    .line 1725
-    iget-object v3, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
-
-    iget v3, v3, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->transformPivotX:F
+    .line 842
+    iget v3, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transformPivotX:F
 
     invoke-virtual {v5, v3}, Landroid/view/View;->setPivotX(F)V
 
-    .line 1727
-    :cond_a
-    iget-object v3, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
-
-    iget v3, v3, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->transformPivotY:F
+    .line 844
+    :cond_4
+    iget v3, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transformPivotY:F
 
     invoke-static {v3}, Ljava/lang/Float;->isNaN(F)Z
 
     move-result v3
 
-    if-nez v3, :cond_b
+    if-nez v3, :cond_5
 
-    .line 1728
-    iget-object v3, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
-
-    iget v3, v3, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->transformPivotY:F
+    .line 845
+    iget v3, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transformPivotY:F
 
     invoke-virtual {v5, v3}, Landroid/view/View;->setPivotY(F)V
 
-    .line 1730
-    :cond_b
-    iget-object v3, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
-
-    iget v3, v3, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->translationX:F
+    .line 847
+    :cond_5
+    iget v3, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->translationX:F
 
     invoke-virtual {v5, v3}, Landroid/view/View;->setTranslationX(F)V
 
-    .line 1731
-    iget-object v3, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
-
-    iget v3, v3, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->translationY:F
+    .line 848
+    iget v3, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->translationY:F
 
     invoke-virtual {v5, v3}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 1732
+    .line 849
     sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v4, 0x15
 
-    if-lt v3, v4, :cond_d
+    if-lt v3, v4, :cond_6
 
-    .line 1733
-    iget-object v3, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
-
-    iget v3, v3, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->translationZ:F
+    .line 850
+    iget v3, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->translationZ:F
 
     invoke-virtual {v5, v3}, Landroid/view/View;->setTranslationZ(F)V
 
-    .line 1734
-    iget-object v3, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
+    .line 851
+    iget-boolean v3, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->applyElevation:Z
 
-    iget-boolean v3, v3, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->applyElevation:Z
+    if-eqz v3, :cond_6
 
-    if-eqz v3, :cond_d
-
-    .line 1735
-    iget-object v3, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
-
-    iget v3, v3, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->elevation:F
+    .line 852
+    iget v3, v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->elevation:F
 
     invoke-virtual {v5, v3}, Landroid/view/View;->setElevation(F)V
 
-    goto :goto_3
-
-    :cond_c
-    const-string v3, "ConstraintSet"
-
-    .line 1740
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "WARNING NO CONSTRAINTS for view "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v3, v4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_d
-    :goto_3
+    :cond_6
     add-int/lit8 v2, v2, 0x1
 
     goto/16 :goto_0
 
-    .line 1743
-    :cond_e
+    .line 804
+    :cond_7
+    new-instance p1, Ljava/lang/RuntimeException;
+
+    const-string v0, "All children of ConstraintLayout must have ids to use ConstraintSet"
+
+    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    .line 858
+    :cond_8
     invoke-virtual {v1}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
-
-    move-result-object p2
-
-    :cond_f
-    :goto_4
-    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_14
-
-    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/Integer;
+    :cond_9
+    :goto_2
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 1744
-    iget-object v1, p0, Landroidx/constraintlayout/widget/ConstraintSet;->mConstraints:Ljava/util/HashMap;
+    move-result v1
 
-    invoke-virtual {v1, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    if-eqz v1, :cond_e
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;
+    check-cast v1, Ljava/lang/Integer;
 
-    .line 1745
-    iget-object v2, v1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    .line 859
+    iget-object v2, p0, Landroidx/constraintlayout/widget/ConstraintSet;->mConstraints:Ljava/util/HashMap;
 
-    iget v2, v2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mHelperType:I
+    invoke-virtual {v2, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eq v2, v4, :cond_13
+    move-result-object v2
 
-    .line 1746
-    iget-object v2, v1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    check-cast v2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;
 
-    iget v2, v2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mHelperType:I
+    .line 860
+    iget v5, v2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mHelperType:I
 
-    if-eq v2, v3, :cond_10
+    if-eq v5, v3, :cond_d
 
-    goto :goto_6
+    .line 861
+    iget v5, v2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mHelperType:I
 
-    .line 1748
-    :cond_10
-    new-instance v2, Landroidx/constraintlayout/widget/Barrier;
+    if-eq v5, v4, :cond_a
+
+    goto :goto_4
+
+    .line 863
+    :cond_a
+    new-instance v5, Landroidx/constraintlayout/widget/Barrier;
 
     invoke-virtual {p1}, Landroidx/constraintlayout/widget/ConstraintLayout;->getContext()Landroid/content/Context;
-
-    move-result-object v5
-
-    invoke-direct {v2, v5}, Landroidx/constraintlayout/widget/Barrier;-><init>(Landroid/content/Context;)V
-
-    .line 1749
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v5
-
-    invoke-virtual {v2, v5}, Landroidx/constraintlayout/widget/Barrier;->setId(I)V
-
-    .line 1750
-    iget-object v5, v1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget-object v5, v5, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mReferenceIds:[I
-
-    if-eqz v5, :cond_11
-
-    .line 1751
-    iget-object v5, v1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget-object v5, v5, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mReferenceIds:[I
-
-    invoke-virtual {v2, v5}, Landroidx/constraintlayout/widget/Barrier;->setReferencedIds([I)V
-
-    goto :goto_5
-
-    .line 1752
-    :cond_11
-    iget-object v5, v1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget-object v5, v5, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mReferenceIdString:Ljava/lang/String;
-
-    if-eqz v5, :cond_12
-
-    .line 1753
-    iget-object v5, v1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget-object v6, v1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iget-object v6, v6, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mReferenceIdString:Ljava/lang/String;
-
-    invoke-direct {p0, v2, v6}, Landroidx/constraintlayout/widget/ConstraintSet;->convertReferenceString(Landroid/view/View;Ljava/lang/String;)[I
 
     move-result-object v6
 
-    iput-object v6, v5, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mReferenceIds:[I
+    invoke-direct {v5, v6}, Landroidx/constraintlayout/widget/Barrier;-><init>(Landroid/content/Context;)V
 
-    .line 1755
-    iget-object v5, v1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    .line 864
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
-    iget-object v5, v5, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mReferenceIds:[I
+    move-result v6
 
-    invoke-virtual {v2, v5}, Landroidx/constraintlayout/widget/Barrier;->setReferencedIds([I)V
+    invoke-virtual {v5, v6}, Landroidx/constraintlayout/widget/Barrier;->setId(I)V
 
-    .line 1757
-    :cond_12
-    :goto_5
-    iget-object v5, v1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    .line 865
+    iget-object v6, v2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mReferenceIds:[I
 
-    iget v5, v5, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mBarrierDirection:I
+    if-eqz v6, :cond_b
 
-    invoke-virtual {v2, v5}, Landroidx/constraintlayout/widget/Barrier;->setType(I)V
+    .line 866
+    iget-object v6, v2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mReferenceIds:[I
 
-    .line 1758
-    iget-object v5, v1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    invoke-virtual {v5, v6}, Landroidx/constraintlayout/widget/Barrier;->setReferencedIds([I)V
 
-    iget v5, v5, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mBarrierMargin:I
+    goto :goto_3
 
-    invoke-virtual {v2, v5}, Landroidx/constraintlayout/widget/Barrier;->setMargin(I)V
+    .line 867
+    :cond_b
+    iget-object v6, v2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mReferenceIdString:Ljava/lang/String;
 
-    .line 1760
+    if-eqz v6, :cond_c
+
+    .line 868
+    iget-object v6, v2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mReferenceIdString:Ljava/lang/String;
+
+    invoke-direct {p0, v5, v6}, Landroidx/constraintlayout/widget/ConstraintSet;->convertReferenceString(Landroid/view/View;Ljava/lang/String;)[I
+
+    move-result-object v6
+
+    iput-object v6, v2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mReferenceIds:[I
+
+    .line 870
+    iget-object v6, v2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mReferenceIds:[I
+
+    invoke-virtual {v5, v6}, Landroidx/constraintlayout/widget/Barrier;->setReferencedIds([I)V
+
+    .line 872
+    :cond_c
+    :goto_3
+    iget v6, v2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mBarrierDirection:I
+
+    invoke-virtual {v5, v6}, Landroidx/constraintlayout/widget/Barrier;->setType(I)V
+
+    .line 874
     invoke-virtual {p1}, Landroidx/constraintlayout/widget/ConstraintLayout;->generateDefaultLayoutParams()Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;
 
-    move-result-object v5
+    move-result-object v6
 
-    .line 1761
-    invoke-virtual {v2}, Landroidx/constraintlayout/widget/Barrier;->validateParams()V
+    .line 875
+    invoke-virtual {v5}, Landroidx/constraintlayout/widget/Barrier;->validateParams()V
 
-    .line 1762
-    invoke-virtual {v1, v5}, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->applyTo(Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;)V
+    .line 876
+    invoke-virtual {v2, v6}, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->applyTo(Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;)V
 
-    .line 1763
-    invoke-virtual {p1, v2, v5}, Landroidx/constraintlayout/widget/ConstraintLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    .line 877
+    invoke-virtual {p1, v5, v6}, Landroidx/constraintlayout/widget/ConstraintLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1767
-    :cond_13
-    :goto_6
-    iget-object v2, v1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    .line 881
+    :cond_d
+    :goto_4
+    iget-boolean v5, v2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mIsGuideline:Z
 
-    iget-boolean v2, v2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mIsGuideline:Z
+    if-eqz v5, :cond_9
 
-    if-eqz v2, :cond_f
-
-    .line 1768
-    new-instance v2, Landroidx/constraintlayout/widget/Guideline;
+    .line 882
+    new-instance v5, Landroidx/constraintlayout/widget/Guideline;
 
     invoke-virtual {p1}, Landroidx/constraintlayout/widget/ConstraintLayout;->getContext()Landroid/content/Context;
 
-    move-result-object v5
+    move-result-object v6
 
-    invoke-direct {v2, v5}, Landroidx/constraintlayout/widget/Guideline;-><init>(Landroid/content/Context;)V
+    invoke-direct {v5, v6}, Landroidx/constraintlayout/widget/Guideline;-><init>(Landroid/content/Context;)V
 
-    .line 1769
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+    .line 883
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
-    move-result v0
+    move-result v1
 
-    invoke-virtual {v2, v0}, Landroidx/constraintlayout/widget/Guideline;->setId(I)V
+    invoke-virtual {v5, v1}, Landroidx/constraintlayout/widget/Guideline;->setId(I)V
 
-    .line 1770
+    .line 884
     invoke-virtual {p1}, Landroidx/constraintlayout/widget/ConstraintLayout;->generateDefaultLayoutParams()Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;
 
-    move-result-object v0
+    move-result-object v1
 
-    .line 1771
-    invoke-virtual {v1, v0}, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->applyTo(Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;)V
+    .line 885
+    invoke-virtual {v2, v1}, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->applyTo(Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;)V
 
-    .line 1772
-    invoke-virtual {p1, v2, v0}, Landroidx/constraintlayout/widget/ConstraintLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    .line 886
+    invoke-virtual {p1, v5, v1}, Landroidx/constraintlayout/widget/ConstraintLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    goto/16 :goto_4
+    goto :goto_2
 
-    :cond_14
+    :cond_e
     return-void
 .end method
 
@@ -3451,7 +2499,7 @@
 
     move v5, p4
 
-    .line 1818
+    .line 930
     invoke-virtual/range {v0 .. v5}, Landroidx/constraintlayout/widget/ConstraintSet;->connect(IIIII)V
 
     const/4 v2, 0x4
@@ -3462,10 +2510,10 @@
 
     move v5, p7
 
-    .line 1819
+    .line 931
     invoke-virtual/range {v0 .. v5}, Landroidx/constraintlayout/widget/ConstraintSet;->connect(IIIII)V
 
-    .line 1820
+    .line 932
     iget-object v0, v6, Landroidx/constraintlayout/widget/ConstraintSet;->mConstraints:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3478,10 +2526,8 @@
 
     check-cast v0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;
 
-    .line 1821
-    iget-object v0, v0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput v7, v0, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->verticalBias:F
+    .line 933
+    iput v7, v0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->verticalBias:F
 
     goto :goto_2
 
@@ -3499,7 +2545,7 @@
 
     move v5, p4
 
-    .line 1813
+    .line 925
     invoke-virtual/range {v0 .. v5}, Landroidx/constraintlayout/widget/ConstraintSet;->connect(IIIII)V
 
     const/4 v2, 0x7
@@ -3510,10 +2556,10 @@
 
     move v5, p7
 
-    .line 1814
+    .line 926
     invoke-virtual/range {v0 .. v5}, Landroidx/constraintlayout/widget/ConstraintSet;->connect(IIIII)V
 
-    .line 1815
+    .line 927
     iget-object v0, v6, Landroidx/constraintlayout/widget/ConstraintSet;->mConstraints:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3526,10 +2572,8 @@
 
     check-cast v0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;
 
-    .line 1816
-    iget-object v0, v0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput v7, v0, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->horizontalBias:F
+    .line 928
+    iput v7, v0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->horizontalBias:F
 
     goto :goto_2
 
@@ -3547,7 +2591,7 @@
 
     move v5, p4
 
-    .line 1808
+    .line 920
     invoke-virtual/range {v0 .. v5}, Landroidx/constraintlayout/widget/ConstraintSet;->connect(IIIII)V
 
     const/4 v2, 0x2
@@ -3558,10 +2602,10 @@
 
     move v5, p7
 
-    .line 1809
+    .line 921
     invoke-virtual/range {v0 .. v5}, Landroidx/constraintlayout/widget/ConstraintSet;->connect(IIIII)V
 
-    .line 1810
+    .line 922
     iget-object v0, v6, Landroidx/constraintlayout/widget/ConstraintSet;->mConstraints:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3574,15 +2618,13 @@
 
     check-cast v0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;
 
-    .line 1811
-    iget-object v0, v0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput v7, v0, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->horizontalBias:F
+    .line 923
+    iput v7, v0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->horizontalBias:F
 
     :goto_2
     return-void
 
-    .line 1804
+    .line 916
     :cond_4
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -3592,7 +2634,7 @@
 
     throw v0
 
-    .line 1801
+    .line 913
     :cond_5
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -3602,7 +2644,7 @@
 
     throw v0
 
-    .line 1798
+    .line 910
     :cond_6
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -3636,7 +2678,7 @@
 
     move v1, p1
 
-    .line 2252
+    .line 1349
     invoke-virtual/range {v0 .. v8}, Landroidx/constraintlayout/widget/ConstraintSet;->center(IIIIIIIF)V
 
     goto :goto_0
@@ -3660,245 +2702,22 @@
 
     move v5, p2
 
-    .line 2254
+    .line 1351
     invoke-virtual/range {v0 .. v8}, Landroidx/constraintlayout/widget/ConstraintSet;->center(IIIIIIIF)V
 
     :goto_0
     return-void
 .end method
 
-.method public clear(II)V
-    .locals 2
-
-    .line 2274
-    iget-object v0, p0, Landroidx/constraintlayout/widget/ConstraintSet;->mConstraints:Ljava/util/HashMap;
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 2275
-    iget-object v0, p0, Landroidx/constraintlayout/widget/ConstraintSet;->mConstraints:Ljava/util/HashMap;
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;
-
-    const/4 v0, -0x1
-
-    packed-switch p2, :pswitch_data_0
-
-    .line 2318
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string/jumbo p2, "unknown constraint"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    .line 2312
-    :pswitch_0
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput v0, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->endToStart:I
-
-    .line 2313
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput v0, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->endToEnd:I
-
-    .line 2314
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput v0, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->endMargin:I
-
-    .line 2315
-    iget-object p1, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput v0, p1, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->goneEndMargin:I
-
-    goto :goto_0
-
-    .line 2306
-    :pswitch_1
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput v0, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->startToEnd:I
-
-    .line 2307
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput v0, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->startToStart:I
-
-    .line 2308
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput v0, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->startMargin:I
-
-    .line 2309
-    iget-object p1, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput v0, p1, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->goneStartMargin:I
-
-    goto :goto_0
-
-    .line 2303
-    :pswitch_2
-    iget-object p1, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput v0, p1, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->baselineToBaseline:I
-
-    goto :goto_0
-
-    .line 2296
-    :pswitch_3
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput v0, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->bottomToTop:I
-
-    .line 2297
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput v0, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->bottomToBottom:I
-
-    .line 2298
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput v0, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->bottomMargin:I
-
-    .line 2299
-    iget-object p1, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput v0, p1, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->goneBottomMargin:I
-
-    goto :goto_0
-
-    .line 2290
-    :pswitch_4
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput v0, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->topToBottom:I
-
-    .line 2291
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput v0, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->topToTop:I
-
-    .line 2292
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput v0, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->topMargin:I
-
-    .line 2293
-    iget-object p1, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput v0, p1, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->goneTopMargin:I
-
-    goto :goto_0
-
-    .line 2284
-    :pswitch_5
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput v0, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->rightToRight:I
-
-    .line 2285
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput v0, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->rightToLeft:I
-
-    .line 2286
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput v0, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->rightMargin:I
-
-    .line 2287
-    iget-object p1, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput v0, p1, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->goneRightMargin:I
-
-    goto :goto_0
-
-    .line 2278
-    :pswitch_6
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput v0, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->leftToRight:I
-
-    .line 2279
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput v0, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->leftToLeft:I
-
-    .line 2280
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput v0, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->leftMargin:I
-
-    .line 2281
-    iget-object p1, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput v0, p1, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->goneLeftMargin:I
-
-    :cond_0
-    :goto_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public clone(Landroid/content/Context;I)V
-    .locals 1
-
-    .line 1478
-    invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
-
-    move-result-object p1
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, p2, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
-
-    move-result-object p1
-
-    check-cast p1, Landroidx/constraintlayout/widget/ConstraintLayout;
-
-    invoke-virtual {p0, p1}, Landroidx/constraintlayout/widget/ConstraintSet;->clone(Landroidx/constraintlayout/widget/ConstraintLayout;)V
-
-    return-void
-.end method
-
 .method public clone(Landroidx/constraintlayout/widget/ConstraintLayout;)V
     .locals 10
 
-    .line 1499
+    .line 705
     invoke-virtual {p1}, Landroidx/constraintlayout/widget/ConstraintLayout;->getChildCount()I
 
     move-result v0
 
-    .line 1500
+    .line 706
     iget-object v1, p0, Landroidx/constraintlayout/widget/ConstraintSet;->mConstraints:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Ljava/util/HashMap;->clear()V
@@ -3906,49 +2725,30 @@
     const/4 v1, 0x0
 
     :goto_0
-    if-ge v1, v0, :cond_7
+    if-ge v1, v0, :cond_6
 
-    .line 1502
+    .line 708
     invoke-virtual {p1, v1}, Landroidx/constraintlayout/widget/ConstraintLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 1503
+    .line 709
     invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v3
 
     check-cast v3, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;
 
-    .line 1505
+    .line 711
     invoke-virtual {v2}, Landroid/view/View;->getId()I
 
     move-result v4
 
-    .line 1506
-    iget-boolean v5, p0, Landroidx/constraintlayout/widget/ConstraintSet;->mForceId:Z
-
-    if-eqz v5, :cond_1
-
     const/4 v5, -0x1
 
-    if-eq v4, v5, :cond_0
+    if-eq v4, v5, :cond_5
 
-    goto :goto_1
-
-    .line 1507
-    :cond_0
-    new-instance p1, Ljava/lang/RuntimeException;
-
-    const-string v0, "All children of ConstraintLayout must have ids to use ConstraintSet"
-
-    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    .line 1509
-    :cond_1
-    :goto_1
+    .line 715
     iget-object v5, p0, Landroidx/constraintlayout/widget/ConstraintSet;->mConstraints:Ljava/util/HashMap;
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3959,9 +2759,9 @@
 
     move-result v5
 
-    if-nez v5, :cond_2
+    if-nez v5, :cond_0
 
-    .line 1510
+    .line 716
     iget-object v5, p0, Landroidx/constraintlayout/widget/ConstraintSet;->mConstraints:Ljava/util/HashMap;
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3970,12 +2770,14 @@
 
     new-instance v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;
 
-    invoke-direct {v7}, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;-><init>()V
+    const/4 v8, 0x0
+
+    invoke-direct {v7, v8}, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;-><init>(Landroidx/constraintlayout/widget/ConstraintSet$1;)V
 
     invoke-virtual {v5, v6, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1512
-    :cond_2
+    .line 718
+    :cond_0
     iget-object v5, p0, Landroidx/constraintlayout/widget/ConstraintSet;->mConstraints:Ljava/util/HashMap;
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3988,94 +2790,71 @@
 
     check-cast v5, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;
 
-    .line 1513
-    iget-object v6, p0, Landroidx/constraintlayout/widget/ConstraintSet;->mSavedAttributes:Ljava/util/HashMap;
+    .line 719
+    invoke-static {v5, v4, v3}, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->access$100(Landroidx/constraintlayout/widget/ConstraintSet$Constraint;ILandroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;)V
 
-    invoke-static {v6, v2}, Landroidx/constraintlayout/widget/ConstraintAttribute;->extractAttributes(Ljava/util/HashMap;Landroid/view/View;)Ljava/util/HashMap;
-
-    move-result-object v6
-
-    iput-object v6, v5, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mCustomConstraints:Ljava/util/HashMap;
-
-    .line 1514
-    invoke-static {v5, v4, v3}, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->access$000(Landroidx/constraintlayout/widget/ConstraintSet$Constraint;ILandroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;)V
-
-    .line 1515
-    iget-object v3, v5, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->propertySet:Landroidx/constraintlayout/widget/ConstraintSet$PropertySet;
-
+    .line 720
     invoke-virtual {v2}, Landroid/view/View;->getVisibility()I
 
-    move-result v4
+    move-result v3
 
-    iput v4, v3, Landroidx/constraintlayout/widget/ConstraintSet$PropertySet;->visibility:I
+    iput v3, v5, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->visibility:I
 
-    .line 1516
+    .line 721
     sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v4, 0x11
 
-    if-lt v3, v4, :cond_5
+    if-lt v3, v4, :cond_3
 
-    .line 1517
-    iget-object v3, v5, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->propertySet:Landroidx/constraintlayout/widget/ConstraintSet$PropertySet;
-
+    .line 722
     invoke-virtual {v2}, Landroid/view/View;->getAlpha()F
 
-    move-result v4
+    move-result v3
 
-    iput v4, v3, Landroidx/constraintlayout/widget/ConstraintSet$PropertySet;->alpha:F
+    iput v3, v5, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->alpha:F
 
-    .line 1518
-    iget-object v3, v5, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
-
+    .line 723
     invoke-virtual {v2}, Landroid/view/View;->getRotation()F
 
-    move-result v4
+    move-result v3
 
-    iput v4, v3, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->rotation:F
+    iput v3, v5, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->rotation:F
 
-    .line 1519
-    iget-object v3, v5, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
-
+    .line 724
     invoke-virtual {v2}, Landroid/view/View;->getRotationX()F
 
-    move-result v4
+    move-result v3
 
-    iput v4, v3, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->rotationX:F
+    iput v3, v5, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->rotationX:F
 
-    .line 1520
-    iget-object v3, v5, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
-
+    .line 725
     invoke-virtual {v2}, Landroid/view/View;->getRotationY()F
 
-    move-result v4
+    move-result v3
 
-    iput v4, v3, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->rotationY:F
+    iput v3, v5, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->rotationY:F
 
-    .line 1521
-    iget-object v3, v5, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
-
+    .line 726
     invoke-virtual {v2}, Landroid/view/View;->getScaleX()F
 
-    move-result v4
+    move-result v3
 
-    iput v4, v3, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->scaleX:F
+    iput v3, v5, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->scaleX:F
 
-    .line 1522
-    iget-object v3, v5, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
-
+    .line 727
     invoke-virtual {v2}, Landroid/view/View;->getScaleY()F
 
-    move-result v4
+    move-result v3
 
-    iput v4, v3, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->scaleY:F
+    iput v3, v5, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->scaleY:F
 
-    .line 1524
+    .line 729
     invoke-virtual {v2}, Landroid/view/View;->getPivotX()F
 
     move-result v3
 
-    .line 1525
+    .line 730
     invoke-virtual {v2}, Landroid/view/View;->getPivotY()F
 
     move-result v4
@@ -4086,178 +2865,99 @@
 
     cmpl-double v6, v6, v8
 
-    if-nez v6, :cond_3
+    if-nez v6, :cond_1
 
     float-to-double v6, v4
 
     cmpl-double v6, v6, v8
 
-    if-eqz v6, :cond_4
+    if-eqz v6, :cond_2
 
-    .line 1528
-    :cond_3
-    iget-object v6, v5, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
+    .line 733
+    :cond_1
+    iput v3, v5, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transformPivotX:F
 
-    iput v3, v6, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->transformPivotX:F
+    .line 734
+    iput v4, v5, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transformPivotY:F
 
-    .line 1529
-    iget-object v3, v5, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
-
-    iput v4, v3, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->transformPivotY:F
-
-    .line 1532
-    :cond_4
-    iget-object v3, v5, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
-
+    .line 737
+    :cond_2
     invoke-virtual {v2}, Landroid/view/View;->getTranslationX()F
 
-    move-result v4
+    move-result v3
 
-    iput v4, v3, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->translationX:F
+    iput v3, v5, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->translationX:F
 
-    .line 1533
-    iget-object v3, v5, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
-
+    .line 738
     invoke-virtual {v2}, Landroid/view/View;->getTranslationY()F
 
-    move-result v4
+    move-result v3
 
-    iput v4, v3, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->translationY:F
+    iput v3, v5, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->translationY:F
 
-    .line 1534
+    .line 739
     sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v4, 0x15
 
-    if-lt v3, v4, :cond_5
+    if-lt v3, v4, :cond_3
 
-    .line 1535
-    iget-object v3, v5, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
-
+    .line 740
     invoke-virtual {v2}, Landroid/view/View;->getTranslationZ()F
 
-    move-result v4
+    move-result v3
 
-    iput v4, v3, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->translationZ:F
+    iput v3, v5, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->translationZ:F
 
-    .line 1536
-    iget-object v3, v5, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
+    .line 741
+    iget-boolean v3, v5, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->applyElevation:Z
 
-    iget-boolean v3, v3, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->applyElevation:Z
+    if-eqz v3, :cond_3
 
-    if-eqz v3, :cond_5
-
-    .line 1537
-    iget-object v3, v5, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
-
+    .line 742
     invoke-virtual {v2}, Landroid/view/View;->getElevation()F
 
-    move-result v4
+    move-result v3
 
-    iput v4, v3, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->elevation:F
+    iput v3, v5, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->elevation:F
 
-    .line 1541
-    :cond_5
+    .line 746
+    :cond_3
     instance-of v3, v2, Landroidx/constraintlayout/widget/Barrier;
 
-    if-eqz v3, :cond_6
+    if-eqz v3, :cond_4
 
-    .line 1542
+    .line 747
     check-cast v2, Landroidx/constraintlayout/widget/Barrier;
 
-    .line 1543
-    iget-object v3, v5, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
+    .line 748
     invoke-virtual {v2}, Landroidx/constraintlayout/widget/Barrier;->allowsGoneWidget()Z
 
-    move-result v4
+    move-result v3
 
-    iput-boolean v4, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mBarrierAllowsGoneWidgets:Z
+    iput-boolean v3, v5, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mBarrierAllowsGoneWidgets:Z
 
-    .line 1544
-    iget-object v3, v5, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
+    .line 749
     invoke-virtual {v2}, Landroidx/constraintlayout/widget/Barrier;->getReferencedIds()[I
 
-    move-result-object v4
+    move-result-object v3
 
-    iput-object v4, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mReferenceIds:[I
+    iput-object v3, v5, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mReferenceIds:[I
 
-    .line 1545
-    iget-object v3, v5, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
+    .line 750
     invoke-virtual {v2}, Landroidx/constraintlayout/widget/Barrier;->getType()I
-
-    move-result v4
-
-    iput v4, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mBarrierDirection:I
-
-    .line 1546
-    iget-object v3, v5, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    invoke-virtual {v2}, Landroidx/constraintlayout/widget/Barrier;->getMargin()I
 
     move-result v2
 
-    iput v2, v3, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mBarrierMargin:I
+    iput v2, v5, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mBarrierDirection:I
 
-    :cond_6
+    :cond_4
     add-int/lit8 v1, v1, 0x1
 
     goto/16 :goto_0
 
-    :cond_7
-    return-void
-.end method
-
-.method public clone(Landroidx/constraintlayout/widget/Constraints;)V
-    .locals 8
-
-    .line 1557
-    invoke-virtual {p1}, Landroidx/constraintlayout/widget/Constraints;->getChildCount()I
-
-    move-result v0
-
-    .line 1558
-    iget-object v1, p0, Landroidx/constraintlayout/widget/ConstraintSet;->mConstraints:Ljava/util/HashMap;
-
-    invoke-virtual {v1}, Ljava/util/HashMap;->clear()V
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, v0, :cond_4
-
-    .line 1560
-    invoke-virtual {p1, v1}, Landroidx/constraintlayout/widget/Constraints;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v2
-
-    .line 1561
-    invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v3
-
-    check-cast v3, Landroidx/constraintlayout/widget/Constraints$LayoutParams;
-
-    .line 1563
-    invoke-virtual {v2}, Landroid/view/View;->getId()I
-
-    move-result v4
-
-    .line 1564
-    iget-boolean v5, p0, Landroidx/constraintlayout/widget/ConstraintSet;->mForceId:Z
-
-    if-eqz v5, :cond_1
-
-    const/4 v5, -0x1
-
-    if-eq v4, v5, :cond_0
-
-    goto :goto_1
-
-    .line 1565
-    :cond_0
+    .line 713
+    :cond_5
     new-instance p1, Ljava/lang/RuntimeException;
 
     const-string v0, "All children of ConstraintLayout must have ids to use ConstraintSet"
@@ -4266,9 +2966,50 @@
 
     throw p1
 
-    .line 1567
-    :cond_1
-    :goto_1
+    :cond_6
+    return-void
+.end method
+
+.method public clone(Landroidx/constraintlayout/widget/Constraints;)V
+    .locals 9
+
+    .line 761
+    invoke-virtual {p1}, Landroidx/constraintlayout/widget/Constraints;->getChildCount()I
+
+    move-result v0
+
+    .line 762
+    iget-object v1, p0, Landroidx/constraintlayout/widget/ConstraintSet;->mConstraints:Ljava/util/HashMap;
+
+    invoke-virtual {v1}, Ljava/util/HashMap;->clear()V
+
+    const/4 v1, 0x0
+
+    :goto_0
+    if-ge v1, v0, :cond_3
+
+    .line 764
+    invoke-virtual {p1, v1}, Landroidx/constraintlayout/widget/Constraints;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v2
+
+    .line 765
+    invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v3
+
+    check-cast v3, Landroidx/constraintlayout/widget/Constraints$LayoutParams;
+
+    .line 767
+    invoke-virtual {v2}, Landroid/view/View;->getId()I
+
+    move-result v4
+
+    const/4 v5, -0x1
+
+    if-eq v4, v5, :cond_2
+
+    .line 771
     iget-object v5, p0, Landroidx/constraintlayout/widget/ConstraintSet;->mConstraints:Ljava/util/HashMap;
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -4279,9 +3020,9 @@
 
     move-result v5
 
-    if-nez v5, :cond_2
+    if-nez v5, :cond_0
 
-    .line 1568
+    .line 772
     iget-object v5, p0, Landroidx/constraintlayout/widget/ConstraintSet;->mConstraints:Ljava/util/HashMap;
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -4290,12 +3031,14 @@
 
     new-instance v7, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;
 
-    invoke-direct {v7}, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;-><init>()V
+    const/4 v8, 0x0
+
+    invoke-direct {v7, v8}, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;-><init>(Landroidx/constraintlayout/widget/ConstraintSet$1;)V
 
     invoke-virtual {v5, v6, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1570
-    :cond_2
+    .line 774
+    :cond_0
     iget-object v5, p0, Landroidx/constraintlayout/widget/ConstraintSet;->mConstraints:Ljava/util/HashMap;
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -4308,33 +3051,43 @@
 
     check-cast v5, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;
 
-    .line 1571
+    .line 775
     instance-of v6, v2, Landroidx/constraintlayout/widget/ConstraintHelper;
 
-    if-eqz v6, :cond_3
+    if-eqz v6, :cond_1
 
-    .line 1572
+    .line 776
     check-cast v2, Landroidx/constraintlayout/widget/ConstraintHelper;
 
-    .line 1573
-    invoke-static {v5, v2, v4, v3}, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->access$300(Landroidx/constraintlayout/widget/ConstraintSet$Constraint;Landroidx/constraintlayout/widget/ConstraintHelper;ILandroidx/constraintlayout/widget/Constraints$LayoutParams;)V
+    .line 777
+    invoke-static {v5, v2, v4, v3}, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->access$200(Landroidx/constraintlayout/widget/ConstraintSet$Constraint;Landroidx/constraintlayout/widget/ConstraintHelper;ILandroidx/constraintlayout/widget/Constraints$LayoutParams;)V
 
-    .line 1575
-    :cond_3
-    invoke-static {v5, v4, v3}, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->access$400(Landroidx/constraintlayout/widget/ConstraintSet$Constraint;ILandroidx/constraintlayout/widget/Constraints$LayoutParams;)V
+    .line 779
+    :cond_1
+    invoke-static {v5, v4, v3}, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->access$300(Landroidx/constraintlayout/widget/ConstraintSet$Constraint;ILandroidx/constraintlayout/widget/Constraints$LayoutParams;)V
 
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    :cond_4
+    .line 769
+    :cond_2
+    new-instance p1, Ljava/lang/RuntimeException;
+
+    const-string v0, "All children of ConstraintLayout must have ids to use ConstraintSet"
+
+    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_3
     return-void
 .end method
 
 .method public connect(IIIII)V
     .locals 7
 
-    .line 2009
+    .line 1106
     iget-object v0, p0, Landroidx/constraintlayout/widget/ConstraintSet;->mConstraints:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -4347,7 +3100,7 @@
 
     if-nez v0, :cond_0
 
-    .line 2010
+    .line 1107
     iget-object v0, p0, Landroidx/constraintlayout/widget/ConstraintSet;->mConstraints:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -4356,11 +3109,13 @@
 
     new-instance v2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;
 
-    invoke-direct {v2}, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;-><init>()V
+    const/4 v3, 0x0
+
+    invoke-direct {v2, v3}, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;-><init>(Landroidx/constraintlayout/widget/ConstraintSet$1;)V
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2012
+    .line 1109
     :cond_0
     iget-object v0, p0, Landroidx/constraintlayout/widget/ConstraintSet;->mConstraints:Ljava/util/HashMap;
 
@@ -4390,14 +3145,14 @@
 
     packed-switch p2, :pswitch_data_0
 
-    .line 2108
+    .line 1205
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 2109
+    .line 1206
     invoke-direct {p0, p2}, Landroidx/constraintlayout/widget/ConstraintSet;->sideToString(I)Ljava/lang/String;
 
     move-result-object p2
@@ -4429,40 +3184,30 @@
     :pswitch_0
     if-ne p4, v1, :cond_1
 
-    .line 2097
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    .line 1194
+    iput p3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->endToEnd:I
 
-    iput p3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->endToEnd:I
-
-    .line 2098
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput v6, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->endToStart:I
+    .line 1195
+    iput v6, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->endToStart:I
 
     goto :goto_0
 
     :cond_1
     if-ne p4, v2, :cond_2
 
-    .line 2100
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    .line 1197
+    iput p3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->endToStart:I
 
-    iput p3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->endToStart:I
+    .line 1198
+    iput v6, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->endToEnd:I
 
-    .line 2101
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput v6, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->endToEnd:I
-
-    .line 2105
+    .line 1202
     :goto_0
-    iget-object p1, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput p5, p1, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->endMargin:I
+    iput p5, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->endMargin:I
 
     goto/16 :goto_6
 
-    .line 2103
+    .line 1200
     :cond_2
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -4495,40 +3240,30 @@
     :pswitch_1
     if-ne p4, v2, :cond_3
 
-    .line 2085
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    .line 1182
+    iput p3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->startToStart:I
 
-    iput p3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->startToStart:I
-
-    .line 2086
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput v6, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->startToEnd:I
+    .line 1183
+    iput v6, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->startToEnd:I
 
     goto :goto_1
 
     :cond_3
     if-ne p4, v1, :cond_4
 
-    .line 2088
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    .line 1185
+    iput p3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->startToEnd:I
 
-    iput p3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->startToEnd:I
+    .line 1186
+    iput v6, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->startToStart:I
 
-    .line 2089
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput v6, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->startToStart:I
-
-    .line 2093
+    .line 1190
     :goto_1
-    iget-object p1, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput p5, p1, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->startMargin:I
+    iput p5, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->startMargin:I
 
     goto/16 :goto_6
 
-    .line 2091
+    .line 1188
     :cond_4
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -4563,34 +3298,24 @@
 
     if-ne p4, p2, :cond_5
 
-    .line 2074
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    .line 1171
+    iput p3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->baselineToBaseline:I
 
-    iput p3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->baselineToBaseline:I
+    .line 1172
+    iput v6, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->bottomToBottom:I
 
-    .line 2075
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    .line 1173
+    iput v6, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->bottomToTop:I
 
-    iput v6, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->bottomToBottom:I
+    .line 1174
+    iput v6, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->topToTop:I
 
-    .line 2076
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput v6, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->bottomToTop:I
-
-    .line 2077
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput v6, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->topToTop:I
-
-    .line 2078
-    iget-object p1, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput v6, p1, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->topToBottom:I
+    .line 1175
+    iput v6, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->topToBottom:I
 
     goto/16 :goto_6
 
-    .line 2080
+    .line 1177
     :cond_5
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -4623,50 +3348,36 @@
     :pswitch_3
     if-ne p4, v3, :cond_6
 
-    .line 2058
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    .line 1155
+    iput p3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->bottomToBottom:I
 
-    iput p3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->bottomToBottom:I
+    .line 1156
+    iput v6, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->bottomToTop:I
 
-    .line 2059
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput v6, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->bottomToTop:I
-
-    .line 2060
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput v6, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->baselineToBaseline:I
+    .line 1157
+    iput v6, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->baselineToBaseline:I
 
     goto :goto_2
 
     :cond_6
     if-ne p4, v4, :cond_7
 
-    .line 2063
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    .line 1160
+    iput p3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->bottomToTop:I
 
-    iput p3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->bottomToTop:I
+    .line 1161
+    iput v6, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->bottomToBottom:I
 
-    .line 2064
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    .line 1162
+    iput v6, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->baselineToBaseline:I
 
-    iput v6, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->bottomToBottom:I
-
-    .line 2065
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput v6, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->baselineToBaseline:I
-
-    .line 2070
+    .line 1167
     :goto_2
-    iget-object p1, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput p5, p1, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->bottomMargin:I
+    iput p5, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->bottomMargin:I
 
     goto/16 :goto_6
 
-    .line 2068
+    .line 1165
     :cond_7
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -4699,50 +3410,36 @@
     :pswitch_4
     if-ne p4, v4, :cond_8
 
-    .line 2043
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    .line 1140
+    iput p3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->topToTop:I
 
-    iput p3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->topToTop:I
+    .line 1141
+    iput v6, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->topToBottom:I
 
-    .line 2044
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput v6, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->topToBottom:I
-
-    .line 2045
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput v6, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->baselineToBaseline:I
+    .line 1142
+    iput v6, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->baselineToBaseline:I
 
     goto :goto_3
 
     :cond_8
     if-ne p4, v3, :cond_9
 
-    .line 2047
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    .line 1144
+    iput p3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->topToBottom:I
 
-    iput p3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->topToBottom:I
+    .line 1145
+    iput v6, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->topToTop:I
 
-    .line 2048
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    .line 1146
+    iput v6, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->baselineToBaseline:I
 
-    iput v6, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->topToTop:I
-
-    .line 2049
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput v6, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->baselineToBaseline:I
-
-    .line 2054
+    .line 1151
     :goto_3
-    iget-object p1, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    iput p5, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->topMargin:I
 
-    iput p5, p1, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->topMargin:I
+    goto :goto_6
 
-    goto/16 :goto_6
-
-    .line 2052
+    .line 1149
     :cond_9
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -4775,40 +3472,30 @@
     :pswitch_5
     if-ne p4, v5, :cond_a
 
-    .line 2029
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    .line 1126
+    iput p3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->rightToLeft:I
 
-    iput p3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->rightToLeft:I
-
-    .line 2030
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput v6, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->rightToRight:I
+    .line 1127
+    iput v6, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->rightToRight:I
 
     goto :goto_4
 
     :cond_a
     if-ne p4, v0, :cond_b
 
-    .line 2033
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    .line 1130
+    iput p3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->rightToRight:I
 
-    iput p3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->rightToRight:I
+    .line 1131
+    iput v6, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->rightToLeft:I
 
-    .line 2034
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput v6, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->rightToLeft:I
-
-    .line 2039
+    .line 1136
     :goto_4
-    iget-object p1, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput p5, p1, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->rightMargin:I
+    iput p5, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->rightMargin:I
 
     goto :goto_6
 
-    .line 2037
+    .line 1134
     :cond_b
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -4841,41 +3528,31 @@
     :pswitch_6
     if-ne p4, v5, :cond_c
 
-    .line 2016
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    .line 1113
+    iput p3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->leftToLeft:I
 
-    iput p3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->leftToLeft:I
-
-    .line 2017
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput v6, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->leftToRight:I
+    .line 1114
+    iput v6, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->leftToRight:I
 
     goto :goto_5
 
     :cond_c
     if-ne p4, v0, :cond_d
 
-    .line 2019
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    .line 1116
+    iput p3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->leftToRight:I
 
-    iput p3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->leftToRight:I
+    .line 1117
+    iput v6, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->leftToLeft:I
 
-    .line 2020
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput v6, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->leftToLeft:I
-
-    .line 2025
+    .line 1122
     :goto_5
-    iget-object p1, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput p5, p1, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->leftMargin:I
+    iput p5, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->leftMargin:I
 
     :goto_6
     return-void
 
-    .line 2023
+    .line 1120
     :cond_d
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -4917,43 +3594,15 @@
     .end packed-switch
 .end method
 
-.method public constrainCircle(IIIF)V
-    .locals 1
-
-    .line 2712
-    invoke-direct {p0, p1}, Landroidx/constraintlayout/widget/ConstraintSet;->get(I)Landroidx/constraintlayout/widget/ConstraintSet$Constraint;
-
-    move-result-object p1
-
-    .line 2713
-    iget-object v0, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput p2, v0, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->circleConstraint:I
-
-    .line 2714
-    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput p3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->circleRadius:I
-
-    .line 2715
-    iget-object p1, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput p4, p1, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->circleAngle:F
-
-    return-void
-.end method
-
 .method public constrainHeight(II)V
     .locals 0
 
-    .line 2687
+    .line 1714
     invoke-direct {p0, p1}, Landroidx/constraintlayout/widget/ConstraintSet;->get(I)Landroidx/constraintlayout/widget/ConstraintSet$Constraint;
 
     move-result-object p1
 
-    iget-object p1, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mHeight:I
+    iput p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mHeight:I
 
     return-void
 .end method
@@ -4961,14 +3610,12 @@
 .method public constrainWidth(II)V
     .locals 0
 
-    .line 2699
+    .line 1727
     invoke-direct {p0, p1}, Landroidx/constraintlayout/widget/ConstraintSet;->get(I)Landroidx/constraintlayout/widget/ConstraintSet$Constraint;
 
     move-result-object p1
 
-    iget-object p1, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mWidth:I
+    iput p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mWidth:I
 
     return-void
 .end method
@@ -4976,17 +3623,17 @@
 .method public load(Landroid/content/Context;I)V
     .locals 4
 
-    .line 3276
+    .line 2145
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 3277
+    .line 2146
     invoke-virtual {v0, p2}, Landroid/content/res/Resources;->getXml(I)Landroid/content/res/XmlResourceParser;
 
     move-result-object p2
 
-    .line 3282
+    .line 2151
     :try_start_0
     invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
@@ -5003,13 +3650,13 @@
 
     goto :goto_1
 
-    .line 3290
+    .line 2159
     :pswitch_0
     invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3291
+    .line 2160
     invoke-static {p2}, Landroid/util/Xml;->asAttributeSet(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
 
     move-result-object v2
@@ -5020,19 +3667,17 @@
 
     const-string v3, "Guideline"
 
-    .line 3292
+    .line 2161
     invoke-virtual {v0, v3}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 3293
-    iget-object v0, v2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+    .line 2162
+    iput-boolean v1, v2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mIsGuideline:Z
 
-    iput-boolean v1, v0, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mIsGuideline:Z
-
-    .line 3295
+    .line 2164
     :cond_0
     iget-object v0, p0, Landroidx/constraintlayout/widget/ConstraintSet;->mConstraints:Ljava/util/HashMap;
 
@@ -5046,11 +3691,11 @@
 
     goto :goto_1
 
-    .line 3287
+    .line 2156
     :cond_1
     invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
-    .line 3284
+    .line 2153
     :goto_1
     :pswitch_1
     invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->next()I
@@ -5065,7 +3710,7 @@
     :catch_0
     move-exception p1
 
-    .line 3307
+    .line 2176
     invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_2
@@ -5073,7 +3718,7 @@
     :catch_1
     move-exception p1
 
-    .line 3305
+    .line 2174
     invoke-virtual {p1}, Lorg/xmlpull/v1/XmlPullParserException;->printStackTrace()V
 
     :cond_2
@@ -5089,525 +3734,15 @@
     .end packed-switch
 .end method
 
-.method public load(Landroid/content/Context;Lorg/xmlpull/v1/XmlPullParser;)V
-    .locals 6
-
-    .line 3321
-    :try_start_0
-    invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    move-object v2, v1
-
-    :goto_0
-    const/4 v3, 0x1
-
-    if-eq v0, v3, :cond_9
-
-    if-eqz v0, :cond_7
-
-    packed-switch v0, :pswitch_data_0
-
-    goto/16 :goto_3
-
-    .line 3388
-    :pswitch_0
-    invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v3, "ConstraintSet"
-
-    .line 3389
-    invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    return-void
-
-    :cond_0
-    const-string v3, "Constraint"
-
-    .line 3391
-    invoke-virtual {v0, v3}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_8
-
-    .line 3392
-    iget-object v0, p0, Landroidx/constraintlayout/widget/ConstraintSet;->mConstraints:Ljava/util/HashMap;
-
-    iget v3, v2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mViewId:I
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-object v2, v1
-
-    goto/16 :goto_3
-
-    .line 3330
-    :pswitch_1
-    invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    const/4 v4, -0x1
-
-    .line 3334
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v5
-
-    sparse-switch v5, :sswitch_data_0
-
-    goto :goto_1
-
-    :sswitch_0
-    const-string v5, "Constraint"
-
-    invoke-virtual {v0, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const/4 v0, 0x0
-
-    goto :goto_2
-
-    :sswitch_1
-    const-string v5, "CustomAttribute"
-
-    invoke-virtual {v0, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const/4 v0, 0x7
-
-    goto :goto_2
-
-    :sswitch_2
-    const-string v5, "Barrier"
-
-    invoke-virtual {v0, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const/4 v0, 0x2
-
-    goto :goto_2
-
-    :sswitch_3
-    const-string v5, "Guideline"
-
-    invoke-virtual {v0, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    move v0, v3
-
-    goto :goto_2
-
-    :sswitch_4
-    const-string v5, "Transform"
-
-    invoke-virtual {v0, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const/4 v0, 0x4
-
-    goto :goto_2
-
-    :sswitch_5
-    const-string v5, "PropertySet"
-
-    invoke-virtual {v0, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const/4 v0, 0x3
-
-    goto :goto_2
-
-    :sswitch_6
-    const-string v5, "Motion"
-
-    invoke-virtual {v0, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const/4 v0, 0x6
-
-    goto :goto_2
-
-    :sswitch_7
-    const-string v5, "Layout"
-
-    invoke-virtual {v0, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const/4 v0, 0x5
-
-    goto :goto_2
-
-    :cond_1
-    :goto_1
-    move v0, v4
-
-    :goto_2
-    packed-switch v0, :pswitch_data_1
-
-    goto/16 :goto_3
-
-    :pswitch_2
-    if-eqz v2, :cond_2
-
-    .line 3375
-    iget-object v0, v2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mCustomConstraints:Ljava/util/HashMap;
-
-    invoke-static {p1, p2, v0}, Landroidx/constraintlayout/widget/ConstraintAttribute;->parse(Landroid/content/Context;Lorg/xmlpull/v1/XmlPullParser;Ljava/util/HashMap;)V
-
-    goto/16 :goto_3
-
-    .line 3373
-    :cond_2
-    new-instance p1, Ljava/lang/RuntimeException;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "XML parser error must be within a Constraint "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->getLineNumber()I
-
-    move-result p2
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :pswitch_3
-    if-eqz v2, :cond_3
-
-    .line 3369
-    iget-object v0, v2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->motion:Landroidx/constraintlayout/widget/ConstraintSet$Motion;
-
-    invoke-static {p2}, Landroid/util/Xml;->asAttributeSet(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
-
-    move-result-object v3
-
-    invoke-virtual {v0, p1, v3}, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->fillFromAttributeList(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    goto/16 :goto_3
-
-    .line 3367
-    :cond_3
-    new-instance p1, Ljava/lang/RuntimeException;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "XML parser error must be within a Constraint "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->getLineNumber()I
-
-    move-result p2
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :pswitch_4
-    if-eqz v2, :cond_4
-
-    .line 3363
-    iget-object v0, v2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    invoke-static {p2}, Landroid/util/Xml;->asAttributeSet(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
-
-    move-result-object v3
-
-    invoke-virtual {v0, p1, v3}, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->fillFromAttributeList(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    goto/16 :goto_3
-
-    .line 3361
-    :cond_4
-    new-instance p1, Ljava/lang/RuntimeException;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "XML parser error must be within a Constraint "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->getLineNumber()I
-
-    move-result p2
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :pswitch_5
-    if-eqz v2, :cond_5
-
-    .line 3357
-    iget-object v0, v2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
-
-    invoke-static {p2}, Landroid/util/Xml;->asAttributeSet(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
-
-    move-result-object v3
-
-    invoke-virtual {v0, p1, v3}, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->fillFromAttributeList(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    goto :goto_3
-
-    .line 3355
-    :cond_5
-    new-instance p1, Ljava/lang/RuntimeException;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "XML parser error must be within a Constraint "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->getLineNumber()I
-
-    move-result p2
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :pswitch_6
-    if-eqz v2, :cond_6
-
-    .line 3351
-    iget-object v0, v2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->propertySet:Landroidx/constraintlayout/widget/ConstraintSet$PropertySet;
-
-    invoke-static {p2}, Landroid/util/Xml;->asAttributeSet(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
-
-    move-result-object v3
-
-    invoke-virtual {v0, p1, v3}, Landroidx/constraintlayout/widget/ConstraintSet$PropertySet;->fillFromAttributeList(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    goto :goto_3
-
-    .line 3349
-    :cond_6
-    new-instance p1, Ljava/lang/RuntimeException;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "XML parser error must be within a Constraint "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->getLineNumber()I
-
-    move-result p2
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    .line 3344
-    :pswitch_7
-    invoke-static {p2}, Landroid/util/Xml;->asAttributeSet(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
-
-    move-result-object v0
-
-    invoke-direct {p0, p1, v0}, Landroidx/constraintlayout/widget/ConstraintSet;->fillFromAttributeList(Landroid/content/Context;Landroid/util/AttributeSet;)Landroidx/constraintlayout/widget/ConstraintSet$Constraint;
-
-    move-result-object v2
-
-    .line 3345
-    iget-object v0, v2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput v3, v0, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mHelperType:I
-
-    goto :goto_3
-
-    .line 3339
-    :pswitch_8
-    invoke-static {p2}, Landroid/util/Xml;->asAttributeSet(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
-
-    move-result-object v0
-
-    invoke-direct {p0, p1, v0}, Landroidx/constraintlayout/widget/ConstraintSet;->fillFromAttributeList(Landroid/content/Context;Landroid/util/AttributeSet;)Landroidx/constraintlayout/widget/ConstraintSet$Constraint;
-
-    move-result-object v2
-
-    .line 3340
-    iget-object v0, v2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput-boolean v3, v0, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mIsGuideline:Z
-
-    .line 3341
-    iget-object v0, v2, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput-boolean v3, v0, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mApply:Z
-
-    goto :goto_3
-
-    .line 3336
-    :pswitch_9
-    invoke-static {p2}, Landroid/util/Xml;->asAttributeSet(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
-
-    move-result-object v0
-
-    invoke-direct {p0, p1, v0}, Landroidx/constraintlayout/widget/ConstraintSet;->fillFromAttributeList(Landroid/content/Context;Landroid/util/AttributeSet;)Landroidx/constraintlayout/widget/ConstraintSet$Constraint;
-
-    move-result-object v2
-
-    goto :goto_3
-
-    .line 3326
-    :cond_7
-    invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
-
-    .line 3323
-    :cond_8
-    :goto_3
-    invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->next()I
-
-    move-result v0
-    :try_end_0
-    .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto/16 :goto_0
-
-    :catch_0
-    move-exception p1
-
-    .line 3404
-    invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
-
-    goto :goto_4
-
-    :catch_1
-    move-exception p1
-
-    .line 3402
-    invoke-virtual {p1}, Lorg/xmlpull/v1/XmlPullParserException;->printStackTrace()V
-
-    :cond_9
-    :goto_4
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-
-    :sswitch_data_0
-    .sparse-switch
-        -0x78c018b6 -> :sswitch_7
-        -0x7648542a -> :sswitch_6
-        -0x4bab3dd3 -> :sswitch_5
-        -0x49cf74b4 -> :sswitch_4
-        -0x446d330 -> :sswitch_3
-        0x4f5d3b97 -> :sswitch_2
-        0x6acd460b -> :sswitch_1
-        0x6b78f1fd -> :sswitch_0
-    .end sparse-switch
-
-    :pswitch_data_1
-    .packed-switch 0x0
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-    .end packed-switch
-.end method
-
 .method public setHorizontalWeight(IF)V
     .locals 0
 
-    .line 2844
+    .line 1856
     invoke-direct {p0, p1}, Landroidx/constraintlayout/widget/ConstraintSet;->get(I)Landroidx/constraintlayout/widget/ConstraintSet$Constraint;
 
     move-result-object p1
 
-    iget-object p1, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
-
-    iput p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->horizontalWeight:F
+    iput p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->horizontalWeight:F
 
     return-void
 .end method

@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/CellBackground;)V
     .locals 0
 
-    .line 93
+    .line 84
     iput-object p1, p0, Lcom/miui/home/launcher/CellBackground$2;->this$0:Lcom/miui/home/launcher/CellBackground;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public animate(Lcom/miui/home/launcher/AutoLayoutAnimation$HostView;II)V
     .locals 2
 
-    .line 96
+    .line 87
     iget-object v0, p0, Lcom/miui/home/launcher/CellBackground$2;->this$0:Lcom/miui/home/launcher/CellBackground;
 
     invoke-static {v0}, Lcom/miui/home/launcher/CellBackground;->access$100(Lcom/miui/home/launcher/CellBackground;)Landroid/animation/ObjectAnimator;
@@ -47,7 +47,7 @@
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->cancel()V
 
-    .line 97
+    .line 88
     iget-object v0, p0, Lcom/miui/home/launcher/CellBackground$2;->this$0:Lcom/miui/home/launcher/CellBackground;
 
     invoke-static {v0}, Lcom/miui/home/launcher/CellBackground;->access$000(Lcom/miui/home/launcher/CellBackground;)Landroid/animation/ObjectAnimator;
@@ -56,7 +56,7 @@
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->cancel()V
 
-    .line 98
+    .line 89
     iget-object v0, p0, Lcom/miui/home/launcher/CellBackground$2;->this$0:Lcom/miui/home/launcher/CellBackground;
 
     invoke-interface {p1}, Lcom/miui/home/launcher/AutoLayoutAnimation$HostView;->getLeft()I
@@ -75,7 +75,7 @@
 
     invoke-virtual {v0, p2}, Lcom/miui/home/launcher/CellBackground;->setTranslationX(F)V
 
-    .line 99
+    .line 90
     iget-object p2, p0, Lcom/miui/home/launcher/CellBackground$2;->this$0:Lcom/miui/home/launcher/CellBackground;
 
     invoke-interface {p1}, Lcom/miui/home/launcher/AutoLayoutAnimation$HostView;->getTop()I
@@ -94,7 +94,7 @@
 
     invoke-virtual {p2, p3}, Lcom/miui/home/launcher/CellBackground;->setTranslationY(F)V
 
-    .line 100
+    .line 91
     iget-object p1, p0, Lcom/miui/home/launcher/CellBackground$2;->this$0:Lcom/miui/home/launcher/CellBackground;
 
     invoke-static {p1}, Lcom/miui/home/launcher/CellBackground;->access$100(Lcom/miui/home/launcher/CellBackground;)Landroid/animation/ObjectAnimator;
@@ -123,7 +123,7 @@
 
     invoke-virtual {p1, p2}, Landroid/animation/ObjectAnimator;->setFloatValues([F)V
 
-    .line 101
+    .line 92
     iget-object p1, p0, Lcom/miui/home/launcher/CellBackground$2;->this$0:Lcom/miui/home/launcher/CellBackground;
 
     invoke-static {p1}, Lcom/miui/home/launcher/CellBackground;->access$100(Lcom/miui/home/launcher/CellBackground;)Landroid/animation/ObjectAnimator;

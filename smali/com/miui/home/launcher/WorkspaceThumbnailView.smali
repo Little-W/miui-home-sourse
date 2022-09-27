@@ -11,14 +11,6 @@
 .implements Lcom/miui/home/launcher/WallpaperUtils$WallpaperColorChangedListener;
 
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/miui/home/launcher/WorkspaceThumbnailView$FoldSwitchScreenAnimListener;
-    }
-.end annotation
-
-
 # instance fields
 .field private final THUMBNAIL_CLICK_HANDLER:Landroid/view/View$OnClickListener;
 
@@ -33,8 +25,6 @@
 .field private mDraggedUpPos:I
 
 .field private mDraggingView:Landroid/view/View;
-
-.field private final mEditModeAnimConfig:Lmiuix/animation/base/AnimConfig;
 
 .field private mFixedGap:I
 
@@ -62,7 +52,7 @@
 
 .field private mThumbnailHeight:I
 
-.field private mThumbnailMeasureController:Lcom/miui/home/launcher/ThumbnailMeasureController;
+.field private mThumbnailHeightController:Lcom/miui/home/launcher/ThumbnailHeightController;
 
 .field private mThumbnailNumInOneScreen:I
 
@@ -79,27 +69,27 @@
 
     const/4 v0, 0x0
 
-    .line 92
+    .line 87
     invoke-direct {p0, p1, p2, v0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-    .locals 3
+    .locals 0
 
-    .line 103
+    .line 98
     invoke-direct {p0, p1, p2, p3}, Lcom/miui/home/launcher/EditModeThumbnailView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     const/4 p2, -0x1
 
-    .line 65
+    .line 61
     iput p2, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mDraggedUpPos:I
 
-    .line 66
+    .line 62
     iput p2, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mPlaceHolderIndex:I
 
-    .line 68
+    .line 64
     new-instance p2, Landroid/util/LongSparseArray;
 
     invoke-direct {p2}, Landroid/util/LongSparseArray;-><init>()V
@@ -108,69 +98,52 @@
 
     const/4 p2, 0x0
 
-    .line 73
+    .line 69
     iput p2, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mThumbnailHeight:I
 
-    .line 74
+    .line 70
     iput p2, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mThumbnailWidth:I
 
-    .line 75
+    .line 71
     iput p2, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mFixedGap:I
 
-    .line 83
-    new-instance p3, Lmiuix/animation/base/AnimConfig;
-
-    invoke-direct {p3}, Lmiuix/animation/base/AnimConfig;-><init>()V
-
-    const/4 v0, 0x2
-
-    new-array v1, v0, [F
-
-    fill-array-data v1, :array_0
-
-    const/4 v2, -0x2
-
-    invoke-virtual {p3, v2, v1}, Lmiuix/animation/base/AnimConfig;->setEase(I[F)Lmiuix/animation/base/AnimConfig;
-
-    move-result-object p3
-
-    iput-object p3, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mEditModeAnimConfig:Lmiuix/animation/base/AnimConfig;
-
-    .line 198
+    .line 193
     new-instance p3, Lcom/miui/home/launcher/WorkspaceThumbnailView$1;
 
     invoke-direct {p3, p0}, Lcom/miui/home/launcher/WorkspaceThumbnailView$1;-><init>(Lcom/miui/home/launcher/WorkspaceThumbnailView;)V
 
     iput-object p3, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->THUMBNAIL_CLICK_HANDLER:Landroid/view/View$OnClickListener;
 
-    .line 304
+    .line 269
     new-instance p3, Landroid/graphics/Rect;
 
     invoke-direct {p3}, Landroid/graphics/Rect;-><init>()V
 
     iput-object p3, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mRect:Landroid/graphics/Rect;
 
-    .line 305
-    new-array p3, v0, [F
+    const/4 p3, 0x2
+
+    .line 270
+    new-array p3, p3, [F
 
     iput-object p3, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mCoords:[F
 
-    .line 481
+    .line 440
     iput-boolean p2, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mBlockNextSnap:Z
 
-    .line 497
-    new-instance p3, Lcom/miui/home/launcher/ThumbnailMeasureController;
+    .line 456
+    new-instance p3, Lcom/miui/home/launcher/ThumbnailHeightController;
 
-    invoke-direct {p3}, Lcom/miui/home/launcher/ThumbnailMeasureController;-><init>()V
+    invoke-direct {p3}, Lcom/miui/home/launcher/ThumbnailHeightController;-><init>()V
 
-    iput-object p3, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mThumbnailMeasureController:Lcom/miui/home/launcher/ThumbnailMeasureController;
+    iput-object p3, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mThumbnailHeightController:Lcom/miui/home/launcher/ThumbnailHeightController;
 
-    .line 525
+    .line 484
     iput-boolean p2, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mShow:Z
 
     const-string p3, "layout_inflater"
 
-    .line 104
+    .line 99
     invoke-virtual {p1, p3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p3
@@ -179,14 +152,14 @@
 
     iput-object p3, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mInflater:Landroid/view/LayoutInflater;
 
-    .line 105
+    .line 100
     new-instance p3, Lcom/miui/home/launcher/CellBackground;
 
     invoke-direct {p3, p1}, Lcom/miui/home/launcher/CellBackground;-><init>(Landroid/content/Context;)V
 
     iput-object p3, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mCellBackground:Lcom/miui/home/launcher/CellBackground;
 
-    .line 106
+    .line 101
     iget-object p1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mCellBackground:Lcom/miui/home/launcher/CellBackground;
 
     const/16 p3, 0x26
@@ -195,18 +168,18 @@
 
     const/16 p1, 0xa
 
-    .line 107
+    .line 102
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->setScreenTransitionType(I)I
 
-    .line 108
+    .line 103
     invoke-virtual {p0, p2}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->setScrollWholeScreen(Z)V
 
-    .line 109
+    .line 104
     invoke-virtual {p0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    const p2, 0x7f070138
+    const p2, 0x7f0700b4
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -214,19 +187,19 @@
 
     iput p1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mFixedGap:I
 
-    .line 110
+    .line 105
     iget p1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mFixedGap:I
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->setFixedGap(I)V
 
-    .line 111
+    .line 106
     invoke-static {p0}, Lcom/miui/home/launcher/Launcher;->getLauncher(Landroid/view/View;)Lcom/miui/home/launcher/Launcher;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    .line 112
+    .line 107
     iget-object p1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     new-instance p2, Lcom/miui/home/launcher/-$$Lambda$KlEkZz8pwWcLFfc2AuCwYclPADM;
@@ -237,29 +210,21 @@
 
     const/4 p1, 0x7
 
-    .line 113
+    .line 108
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->setScreenLayoutMode(I)V
 
     const/high16 p1, 0x40a00000    # 5.0f
 
-    .line 114
+    .line 109
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->setOverScrollRatio(F)V
 
     return-void
-
-    nop
-
-    :array_0
-    .array-data 4
-        0x3f666666    # 0.9f
-        0x3eb33333    # 0.35f
-    .end array-data
 .end method
 
 .method static synthetic access$000(Lcom/miui/home/launcher/WorkspaceThumbnailView;)Lcom/miui/home/launcher/Launcher;
     .locals 0
 
-    .line 52
+    .line 48
     iget-object p0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     return-object p0
@@ -268,43 +233,16 @@
 .method static synthetic access$100(Lcom/miui/home/launcher/WorkspaceThumbnailView;)Lcom/miui/home/launcher/Workspace;
     .locals 0
 
-    .line 52
+    .line 48
     iget-object p0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mWorkspace:Lcom/miui/home/launcher/Workspace;
 
     return-object p0
 .end method
 
-.method static synthetic access$200(Lcom/miui/home/launcher/WorkspaceThumbnailView;)Z
-    .locals 0
-
-    .line 52
-    iget-boolean p0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mBlockNextSnap:Z
-
-    return p0
-.end method
-
-.method static synthetic access$202(Lcom/miui/home/launcher/WorkspaceThumbnailView;Z)Z
-    .locals 0
-
-    .line 52
-    iput-boolean p1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mBlockNextSnap:Z
-
-    return p1
-.end method
-
-.method static synthetic access$300(Lcom/miui/home/launcher/WorkspaceThumbnailView;)V
-    .locals 0
-
-    .line 52
-    invoke-direct {p0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->switchScreen()V
-
-    return-void
-.end method
-
 .method private getFolme()Lmiuix/animation/IVisibleStyle;
     .locals 4
 
-    .line 558
+    .line 508
     iget-object v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mVisibleStyle:Lmiuix/animation/IVisibleStyle;
 
     const/4 v1, 0x0
@@ -313,7 +251,7 @@
 
     const/4 v0, 0x1
 
-    .line 559
+    .line 509
     new-array v0, v0, [Landroid/view/View;
 
     aput-object p0, v0, v1
@@ -328,19 +266,19 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mVisibleStyle:Lmiuix/animation/IVisibleStyle;
 
-    .line 560
+    .line 510
     iget-object v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mVisibleStyle:Lmiuix/animation/IVisibleStyle;
 
     const-wide/16 v2, 0x64
 
-    .line 561
+    .line 511
     invoke-interface {v0, v2, v3}, Lmiuix/animation/IVisibleStyle;->setShowDelay(J)Lmiuix/animation/IVisibleStyle;
 
-    .line 563
+    .line 513
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mVisibleStyle:Lmiuix/animation/IVisibleStyle;
 
-    .line 564
+    .line 514
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getWorkspaceIndicatorMarginBottomInEditMode()I
 
     move-result v2
@@ -353,7 +291,7 @@
 
     iget-object v2, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    .line 565
+    .line 515
     invoke-virtual {v2}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
 
     move-result-object v2
@@ -362,7 +300,7 @@
 
     move-result v2
 
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getWorkspaceIndicatorThumbnailHeight()I
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getWorkspaceIndicatorMarginBottomInEditMode()I
 
     move-result v3
 
@@ -372,7 +310,7 @@
 
     invoke-interface {v0, v1, v2, v3, v3}, Lmiuix/animation/IVisibleStyle;->setBound(IIII)Lmiuix/animation/IVisibleStyle;
 
-    .line 566
+    .line 516
     iget-object v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mVisibleStyle:Lmiuix/animation/IVisibleStyle;
 
     return-object v0
@@ -381,7 +319,7 @@
 .method private getThumbnailContainer(I)Lcom/miui/home/launcher/ThumbnailContainer;
     .locals 3
 
-    .line 398
+    .line 359
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->getScreen(I)Landroid/view/View;
 
     move-result-object v0
@@ -394,7 +332,7 @@
 
     return-object v2
 
-    .line 401
+    .line 362
     :cond_0
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->getScreen(I)Landroid/view/View;
 
@@ -412,7 +350,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 402
+    .line 363
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->getScreen(I)Landroid/view/View;
 
     move-result-object p1
@@ -434,7 +372,7 @@
 .method private getTouchedChildIndex(II)I
     .locals 1
 
-    .line 284
+    .line 249
     invoke-virtual {p0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->getScrollX()I
 
     move-result v0
@@ -448,27 +386,6 @@
     return p1
 .end method
 
-.method private handleIndicatorMarginBottomOnFold()V
-    .locals 2
-
-    .line 552
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isFoldDevice()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 553
-    iget-object v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mWorkspace:Lcom/miui/home/launcher/Workspace;
-
-    iget-boolean v1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mShow:Z
-
-    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Workspace;->setIndicatorMarginBottomInEditThumbnailMode(Z)V
-
-    :cond_0
-    return-void
-.end method
-
 .method private insertConvertView(Lcom/miui/home/launcher/CellScreen;I)Landroid/view/View;
     .locals 8
 
@@ -478,27 +395,27 @@
 
     return-object v0
 
-    .line 160
+    .line 155
     :cond_0
     invoke-virtual {p1}, Lcom/miui/home/launcher/CellScreen;->getCellLayout()Lcom/miui/home/launcher/CellLayout;
 
     move-result-object v1
 
-    .line 161
+    .line 156
     invoke-virtual {v1}, Lcom/miui/home/launcher/CellLayout;->getScreenId()J
 
     move-result-wide v1
 
-    .line 164
+    .line 159
     iget-object v3, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mInflater:Landroid/view/LayoutInflater;
 
-    const v4, 0x7f0d0199
+    const v4, 0x7f0d011d
 
     invoke-virtual {v3, v4, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v0
 
-    .line 165
+    .line 160
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v3
@@ -507,27 +424,27 @@
 
     const/4 v3, 0x2
 
-    .line 166
+    .line 161
     invoke-virtual {v0, v3}, Landroid/view/View;->setImportantForAccessibility(I)V
 
-    const v3, 0x7f0a0380
+    const v3, 0x7f0a0230
 
-    .line 168
+    .line 163
     invoke-virtual {v0, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
     check-cast v3, Lcom/miui/home/launcher/ThumbnailContainer;
 
-    .line 169
+    .line 164
     invoke-virtual {v3, p0}, Lcom/miui/home/launcher/ThumbnailContainer;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
-    .line 170
+    .line 165
     iget-object v4, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->THUMBNAIL_CLICK_HANDLER:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v3, v4}, Lcom/miui/home/launcher/ThumbnailContainer;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 171
+    .line 166
     invoke-static {}, Lcom/miui/home/launcher/folme/FolmeUtils;->isEnable()Z
 
     move-result v4
@@ -538,7 +455,7 @@
 
     if-eqz v4, :cond_1
 
-    .line 172
+    .line 167
     new-array v4, v6, [Landroid/view/View;
 
     aput-object v0, v4, v5
@@ -555,7 +472,7 @@
 
     invoke-interface {v4, v3, v7}, Lmiuix/animation/ITouchStyle;->handleTouchOf(Landroid/view/View;[Lmiuix/animation/base/AnimConfig;)V
 
-    .line 174
+    .line 169
     :cond_1
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -563,19 +480,19 @@
 
     invoke-virtual {v3, v1}, Lcom/miui/home/launcher/ThumbnailContainer;->setTag(Ljava/lang/Object;)V
 
-    .line 176
+    .line 171
     iget v1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mThumbnailWidth:I
 
     iget v2, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mThumbnailHeight:I
 
     invoke-virtual {v3, p1, v1, v2, v0}, Lcom/miui/home/launcher/ThumbnailContainer;->setCellLayoutThumbnail(Lcom/miui/home/launcher/CellScreen;IILandroid/view/View;)V
 
-    .line 178
+    .line 173
     invoke-virtual {p0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    const v1, 0x7f11014a
+    const v1, 0x7f100112
 
     new-array v2, v6, [Ljava/lang/Object;
 
@@ -593,15 +510,15 @@
 
     invoke-virtual {v3, p1}, Lcom/miui/home/launcher/ThumbnailContainer;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 179
+    .line 174
     iget-boolean p1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mIsDraging:Z
 
     if-eqz p1, :cond_2
 
-    .line 180
+    .line 175
     invoke-virtual {v3, p1}, Lcom/miui/home/launcher/ThumbnailContainer;->setAlpha(Z)V
 
-    .line 183
+    .line 178
     :cond_2
     invoke-virtual {p0, v0, p2}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->addView(Landroid/view/View;I)V
 
@@ -611,14 +528,14 @@
 .method private refreshScreenIdMap()V
     .locals 5
 
-    .line 192
+    .line 187
     iget-object v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mScreenIdMap:Landroid/util/LongSparseArray;
 
     invoke-virtual {v0}, Landroid/util/LongSparseArray;->clear()V
 
     const/4 v0, 0x0
 
-    .line 193
+    .line 188
     :goto_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->getScreenCount()I
 
@@ -626,7 +543,7 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 194
+    .line 189
     iget-object v1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mScreenIdMap:Landroid/util/LongSparseArray;
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->getChildAt(I)Landroid/view/View;
@@ -657,61 +574,12 @@
     return-void
 .end method
 
-.method private switchScreen()V
-    .locals 3
-
-    .line 267
-    iget v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mPlaceHolderIndex:I
-
-    iget v1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mDraggedUpPos:I
-
-    if-eq v0, v1, :cond_0
-
-    const/4 v2, 0x1
-
-    .line 268
-    iput-boolean v2, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mBlockNextSnap:Z
-
-    .line 269
-    iget-object v2, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mWorkspace:Lcom/miui/home/launcher/Workspace;
-
-    invoke-virtual {v2, v1, v0}, Lcom/miui/home/launcher/Workspace;->changeTargetScreenOrder(II)V
-
-    .line 270
-    iget-object v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mWorkspace:Lcom/miui/home/launcher/Workspace;
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Workspace;->reorderScreens()V
-
-    .line 271
-    invoke-direct {p0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->refreshScreenIdMap()V
-
-    :cond_0
-    return-void
-.end method
-
-.method private switchScreenWithFoldAnim()V
-    .locals 3
-
-    .line 247
-    iget-object v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mWorkspace:Lcom/miui/home/launcher/Workspace;
-
-    iget v1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mPlaceHolderIndex:I
-
-    new-instance v2, Lcom/miui/home/launcher/WorkspaceThumbnailView$2;
-
-    invoke-direct {v2, p0}, Lcom/miui/home/launcher/WorkspaceThumbnailView$2;-><init>(Lcom/miui/home/launcher/WorkspaceThumbnailView;)V
-
-    invoke-virtual {v0, v1, v2}, Lcom/miui/home/launcher/Workspace;->startFoldSwitchScreenAnim(ILcom/miui/home/launcher/WorkspaceThumbnailView$FoldSwitchScreenAnimListener;)V
-
-    return-void
-.end method
-
 
 # virtual methods
 .method public acceptDrop(Lcom/miui/home/launcher/DragObject;)Z
     .locals 0
 
-    .line 328
+    .line 293
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getDragSource()Lcom/miui/home/launcher/DragSource;
 
     move-result-object p1
@@ -732,7 +600,7 @@
 .method public blockSnap()Z
     .locals 1
 
-    .line 484
+    .line 443
     iget-boolean v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mBlockNextSnap:Z
 
     return v0
@@ -749,7 +617,7 @@
 .method public getDropTargetDelegate(Lcom/miui/home/launcher/DragObject;)Lcom/miui/home/launcher/DropTarget;
     .locals 11
 
-    .line 309
+    .line 274
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getDragView()Lcom/miui/home/launcher/DragView;
 
     move-result-object v0
@@ -771,7 +639,7 @@
 
     move v1, v0
 
-    .line 312
+    .line 277
     :goto_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->getScreenCount()I
 
@@ -779,12 +647,12 @@
 
     if-ge v1, v3, :cond_2
 
-    .line 313
+    .line 278
     invoke-direct {p0, v1}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->getThumbnailContainer(I)Lcom/miui/home/launcher/ThumbnailContainer;
 
     move-result-object v3
 
-    .line 314
+    .line 279
     iget-object v4, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mCoords:[F
 
     const/4 v5, 0x1
@@ -793,7 +661,7 @@
 
     move-result v4
 
-    .line 316
+    .line 281
     iget-object v6, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mRect:Landroid/graphics/Rect;
 
     iget-object v7, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mCoords:[F
@@ -808,7 +676,7 @@
 
     aget v7, v7, v0
 
-    .line 317
+    .line 282
     invoke-virtual {v3}, Lcom/miui/home/launcher/ThumbnailContainer;->getWidth()I
 
     move-result v10
@@ -825,7 +693,7 @@
 
     aget v5, v10, v5
 
-    .line 318
+    .line 283
     invoke-virtual {v3}, Lcom/miui/home/launcher/ThumbnailContainer;->getHeight()I
 
     move-result v10
@@ -838,10 +706,10 @@
 
     float-to-int v4, v5
 
-    .line 316
+    .line 281
     invoke-virtual {v6, v8, v9, v7, v4}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 319
+    .line 284
     iget-object v4, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mRect:Landroid/graphics/Rect;
 
     iget v5, p1, Lcom/miui/home/launcher/DragObject;->x:I
@@ -888,7 +756,7 @@
 .method protected getScreenSnapDuration()I
     .locals 1
 
-    .line 447
+    .line 408
     iget-object v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mWorkspace:Lcom/miui/home/launcher/Workspace;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Workspace;->getScreenSnapDuration()I
@@ -901,7 +769,7 @@
 .method public getScrollZone()I
     .locals 1
 
-    .line 409
+    .line 370
     iget-object v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mWorkspace:Lcom/miui/home/launcher/Workspace;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Workspace;->getScrollZone()I
@@ -922,13 +790,13 @@
 .method public hide()V
     .locals 0
 
-    .line 505
+    .line 464
     invoke-super {p0}, Lcom/miui/home/launcher/EditModeThumbnailView;->hide()V
 
-    .line 506
+    .line 465
     invoke-static {}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackUsingMultiSelect()V
 
-    .line 507
+    .line 466
     invoke-virtual {p0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->unregisterEventBus()V
 
     return-void
@@ -937,14 +805,14 @@
 .method public hideWithFolmeAnim()V
     .locals 6
 
-    .line 539
+    .line 496
     invoke-direct {p0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->getFolme()Lmiuix/animation/IVisibleStyle;
 
     move-result-object v0
 
     invoke-interface {v0}, Lmiuix/animation/IVisibleStyle;->cancel()V
 
-    .line 540
+    .line 497
     invoke-direct {p0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->getFolme()Lmiuix/animation/IVisibleStyle;
 
     move-result-object v0
@@ -959,15 +827,15 @@
 
     new-array v1, v1, [Lmiuix/animation/listener/TransitionListener;
 
-    new-instance v4, Lcom/miui/home/launcher/WorkspaceThumbnailView$3;
+    new-instance v4, Lcom/miui/home/launcher/WorkspaceThumbnailView$2;
 
-    invoke-direct {v4, p0}, Lcom/miui/home/launcher/WorkspaceThumbnailView$3;-><init>(Lcom/miui/home/launcher/WorkspaceThumbnailView;)V
+    invoke-direct {v4, p0}, Lcom/miui/home/launcher/WorkspaceThumbnailView$2;-><init>(Lcom/miui/home/launcher/WorkspaceThumbnailView;)V
 
     const/4 v5, 0x0
 
     aput-object v4, v1, v5
 
-    .line 541
+    .line 498
     invoke-virtual {v3, v1}, Lmiuix/animation/base/AnimConfig;->addListeners([Lmiuix/animation/listener/TransitionListener;)Lmiuix/animation/base/AnimConfig;
 
     move-result-object v1
@@ -976,11 +844,8 @@
 
     invoke-interface {v0, v2}, Lmiuix/animation/IVisibleStyle;->hide([Lmiuix/animation/base/AnimConfig;)V
 
-    .line 547
+    .line 504
     iput-boolean v5, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mShow:Z
-
-    .line 548
-    invoke-direct {p0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->handleIndicatorMarginBottomOnFold()V
 
     return-void
 .end method
@@ -990,7 +855,7 @@
 
     const/4 v0, 0x0
 
-    .line 425
+    .line 386
     :goto_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->getScreenCount()I
 
@@ -998,14 +863,14 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 426
+    .line 387
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->getThumbnailContainer(I)Lcom/miui/home/launcher/ThumbnailContainer;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    .line 427
+    .line 388
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->getThumbnailContainer(I)Lcom/miui/home/launcher/ThumbnailContainer;
 
     move-result-object v1
@@ -1014,7 +879,7 @@
 
     invoke-virtual {v1, v2}, Lcom/miui/home/launcher/ThumbnailContainer;->setForceRebuildCache(Z)V
 
-    .line 428
+    .line 389
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->getThumbnailContainer(I)Lcom/miui/home/launcher/ThumbnailContainer;
 
     move-result-object v1
@@ -1033,7 +898,7 @@
 .method public isDropEnabled()Z
     .locals 2
 
-    .line 222
+    .line 215
     iget-object v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     sget-object v1, Lcom/miui/home/launcher/LauncherState;->ALL_APPS:Lcom/miui/home/launcher/LauncherState;
@@ -1050,7 +915,7 @@
 .method public isShowing()Z
     .locals 1
 
-    .line 188
+    .line 183
     iget-boolean v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mShow:Z
 
     return v0
@@ -1067,12 +932,12 @@
 .method public loadThumbnails(Z)V
     .locals 7
 
-    .line 137
+    .line 132
     invoke-virtual {p0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f07013a
+    const v1, 0x7f0700b6
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1080,12 +945,12 @@
 
     iput v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mThumbnailWidth:I
 
-    .line 139
+    .line 134
     invoke-virtual {p0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f070139
+    const v1, 0x7f0700b5
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1093,10 +958,10 @@
 
     iput v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mThumbnailHeight:I
 
-    .line 141
+    .line 136
     invoke-virtual {p0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->removeAllViews()V
 
-    .line 142
+    .line 137
     iget-object v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mScreenIdMap:Landroid/util/LongSparseArray;
 
     invoke-virtual {v0}, Landroid/util/LongSparseArray;->clear()V
@@ -1107,7 +972,7 @@
 
     move v2, v1
 
-    .line 145
+    .line 140
     :goto_0
     iget-object v3, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mWorkspace:Lcom/miui/home/launcher/Workspace;
 
@@ -1117,7 +982,7 @@
 
     if-ge v1, v3, :cond_1
 
-    .line 146
+    .line 141
     iget-object v3, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mWorkspace:Lcom/miui/home/launcher/Workspace;
 
     invoke-virtual {v3, v1}, Lcom/miui/home/launcher/Workspace;->getCellScreen(I)Lcom/miui/home/launcher/CellScreen;
@@ -1130,12 +995,12 @@
 
     if-nez p1, :cond_0
 
-    .line 147
+    .line 142
     instance-of v4, v3, Lcom/miui/home/launcher/AutoLayoutAnimation$HostView;
 
     if-eqz v4, :cond_0
 
-    .line 148
+    .line 143
     move-object v4, v3
 
     check-cast v4, Lcom/miui/home/launcher/AutoLayoutAnimation$HostView;
@@ -1144,7 +1009,7 @@
 
     invoke-interface {v4, v5}, Lcom/miui/home/launcher/AutoLayoutAnimation$HostView;->setSkipNextAutoLayoutAnimation(Z)V
 
-    .line 150
+    .line 145
     :cond_0
     iget-object v4, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mScreenIdMap:Landroid/util/LongSparseArray;
 
@@ -1172,11 +1037,11 @@
 
     goto :goto_0
 
-    .line 152
+    .line 147
     :cond_1
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->updateborderLine(Z)V
 
-    .line 153
+    .line 148
     invoke-virtual {p0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->getRootView()Landroid/view/View;
 
     move-result-object p1
@@ -1189,10 +1054,10 @@
 .method protected onDetachedFromWindow()V
     .locals 0
 
-    .line 596
+    .line 537
     invoke-super {p0}, Lcom/miui/home/launcher/EditModeThumbnailView;->onDetachedFromWindow()V
 
-    .line 597
+    .line 538
     invoke-virtual {p0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->unregisterEventBus()V
 
     return-void
@@ -1201,10 +1066,10 @@
 .method public onDeviceProfileChanged(Lcom/miui/home/launcher/DeviceProfile;)V
     .locals 0
 
-    .line 582
-    iget-object p1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mThumbnailMeasureController:Lcom/miui/home/launcher/ThumbnailMeasureController;
+    .line 532
+    iget-object p1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mThumbnailHeightController:Lcom/miui/home/launcher/ThumbnailHeightController;
 
-    invoke-virtual {p1, p0}, Lcom/miui/home/launcher/ThumbnailMeasureController;->onScreenOrientationChanged(Landroid/view/View;)V
+    invoke-virtual {p1, p0}, Lcom/miui/home/launcher/ThumbnailHeightController;->onScreenOrientationChanged(Landroid/view/View;)V
 
     return-void
 .end method
@@ -1220,27 +1085,17 @@
 
     const/4 p1, 0x0
 
-    .line 474
+    .line 435
     iput-boolean p1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mBlockNextSnap:Z
 
-    .line 475
+    .line 436
     iget-object p1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mDragController:Lcom/miui/home/launcher/DragController;
 
     invoke-virtual {p1, p0}, Lcom/miui/home/launcher/DragController;->removeDragListener(Lcom/miui/home/launcher/DragController$DragListener;)V
 
-    .line 476
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isFoldDevice()Z
+    .line 437
+    invoke-virtual {p0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->updateborderLine()V
 
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x1
-
-    .line 477
-    invoke-virtual {p0, p1}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->updateborderLine(Z)V
-
-    :cond_0
     return-void
 .end method
 
@@ -1259,7 +1114,7 @@
 .method public onDragOver(Lcom/miui/home/launcher/DragObject;)V
     .locals 1
 
-    .line 289
+    .line 254
     iget v0, p1, Lcom/miui/home/launcher/DragObject;->x:I
 
     iget p1, p1, Lcom/miui/home/launcher/DragObject;->y:I
@@ -1272,19 +1127,19 @@
 
     if-eq p1, v0, :cond_0
 
-    .line 290
+    .line 255
     iget v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mPlaceHolderIndex:I
 
     if-eq p1, v0, :cond_0
 
-    .line 291
+    .line 256
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->getThumbnailContainer(I)Lcom/miui/home/launcher/ThumbnailContainer;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 292
+    .line 257
     invoke-virtual {v0}, Lcom/miui/home/launcher/ThumbnailContainer;->getContent()Lcom/miui/home/launcher/CellScreen;
 
     move-result-object v0
@@ -1299,17 +1154,17 @@
 
     if-nez v0, :cond_0
 
-    .line 293
+    .line 258
     iget-object v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mCellBackground:Lcom/miui/home/launcher/CellBackground;
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->removeView(Landroid/view/View;)V
 
-    .line 294
+    .line 259
     iget-object v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mCellBackground:Lcom/miui/home/launcher/CellBackground;
 
     invoke-virtual {p0, v0, p1}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->addView(Landroid/view/View;I)V
 
-    .line 295
+    .line 260
     iput p1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mPlaceHolderIndex:I
 
     :cond_0
@@ -1323,14 +1178,14 @@
 .end method
 
 .method public onDrop(Lcom/miui/home/launcher/DragObject;)Z
-    .locals 3
+    .locals 4
 
-    .line 231
+    .line 224
     iget-object v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mCellBackground:Lcom/miui/home/launcher/CellBackground;
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->removeView(Landroid/view/View;)V
 
-    .line 232
+    .line 225
     iget-object v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mDraggingView:Landroid/view/View;
 
     instance-of v1, v0, Lcom/miui/home/launcher/AutoLayoutAnimation$HostView;
@@ -1339,12 +1194,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 233
+    .line 226
     check-cast v0, Lcom/miui/home/launcher/AutoLayoutAnimation$HostView;
 
     invoke-interface {v0, v2}, Lcom/miui/home/launcher/AutoLayoutAnimation$HostView;->setSkipNextAutoLayoutAnimation(Z)V
 
-    .line 235
+    .line 228
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mDraggingView:Landroid/view/View;
 
@@ -1352,24 +1207,31 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->addView(Landroid/view/View;I)V
 
-    .line 236
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isFoldDevice()Z
+    .line 229
+    iget v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mPlaceHolderIndex:I
 
-    move-result v0
+    iget v1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mDraggedUpPos:I
 
-    if-eqz v0, :cond_1
+    if-eq v0, v1, :cond_1
 
-    .line 237
-    invoke-direct {p0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->switchScreenWithFoldAnim()V
+    .line 230
+    iput-boolean v2, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mBlockNextSnap:Z
 
-    goto :goto_0
+    .line 231
+    iget-object v3, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mWorkspace:Lcom/miui/home/launcher/Workspace;
 
-    .line 239
+    invoke-virtual {v3, v1, v0}, Lcom/miui/home/launcher/Workspace;->changeTargetScreenOrder(II)V
+
+    .line 232
+    iget-object v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mWorkspace:Lcom/miui/home/launcher/Workspace;
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Workspace;->reorderScreens()V
+
+    .line 233
+    invoke-direct {p0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->refreshScreenIdMap()V
+
+    .line 235
     :cond_1
-    invoke-direct {p0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->switchScreen()V
-
-    .line 241
-    :goto_0
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getDragView()Lcom/miui/home/launcher/DragView;
 
     move-result-object p1
@@ -1380,7 +1242,7 @@
 
     const/4 p1, 0x0
 
-    .line 242
+    .line 236
     iput-object p1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mDraggingView:Landroid/view/View;
 
     return v2
@@ -1389,12 +1251,12 @@
 .method public onDropBack(Lcom/miui/home/launcher/DragObject;)V
     .locals 1
 
-    .line 366
+    .line 327
     iget-object p1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mCellBackground:Lcom/miui/home/launcher/CellBackground;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->removeView(Landroid/view/View;)V
 
-    .line 367
+    .line 328
     iget-object p1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mDraggingView:Landroid/view/View;
 
     iget v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mDraggedUpPos:I
@@ -1403,12 +1265,12 @@
 
     const/4 p1, 0x0
 
-    .line 368
+    .line 329
     iput-object p1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mDraggingView:Landroid/view/View;
 
     const/4 p1, -0x1
 
-    .line 369
+    .line 330
     iput p1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mDraggedUpPos:I
 
     return-void
@@ -1429,12 +1291,12 @@
 .method public onLongClick(Landroid/view/View;)Z
     .locals 4
 
-    .line 332
+    .line 297
     iget-object v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mDraggingView:Landroid/view/View;
 
     const/4 v1, 0x0
 
-    if-nez v0, :cond_4
+    if-nez v0, :cond_3
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->isShowing()Z
 
@@ -1442,9 +1304,9 @@
 
     if-nez v0, :cond_0
 
-    goto/16 :goto_0
+    goto :goto_0
 
-    .line 335
+    .line 300
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
@@ -1452,7 +1314,7 @@
 
     check-cast p1, Ljava/lang/Long;
 
-    .line 336
+    .line 301
     iget-object v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mScreenIdMap:Landroid/util/LongSparseArray;
 
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
@@ -1469,77 +1331,61 @@
 
     move-result p1
 
-    .line 337
+    .line 302
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->getScreen(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 338
+    .line 303
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->getThumbnailContainer(I)Lcom/miui/home/launcher/ThumbnailContainer;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    .line 339
+    .line 304
     invoke-virtual {p1}, Lcom/miui/home/launcher/ThumbnailContainer;->getContent()Lcom/miui/home/launcher/CellScreen;
 
-    move-result-object v2
+    move-result-object p1
 
-    invoke-virtual {v2}, Lcom/miui/home/launcher/CellScreen;->getCellLayout()Lcom/miui/home/launcher/CellLayout;
+    invoke-virtual {p1}, Lcom/miui/home/launcher/CellScreen;->getCellLayout()Lcom/miui/home/launcher/CellLayout;
 
-    move-result-object v2
+    move-result-object p1
 
-    invoke-virtual {v2}, Lcom/miui/home/launcher/CellLayout;->isEmpty()Z
+    invoke-virtual {p1}, Lcom/miui/home/launcher/CellLayout;->isEmpty()Z
 
-    move-result v2
+    move-result p1
 
-    if-eqz v2, :cond_1
+    if-eqz p1, :cond_1
 
     return v1
 
-    .line 342
+    .line 307
     :cond_1
-    iget-object v2, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mDragController:Lcom/miui/home/launcher/DragController;
+    iget-object p1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mDragController:Lcom/miui/home/launcher/DragController;
 
-    invoke-virtual {v2, p0}, Lcom/miui/home/launcher/DragController;->addDragListener(Lcom/miui/home/launcher/DragController$DragListener;)V
+    invoke-virtual {p1, p0}, Lcom/miui/home/launcher/DragController;->addDragListener(Lcom/miui/home/launcher/DragController$DragListener;)V
 
-    .line 343
-    iget-object v2, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mDragController:Lcom/miui/home/launcher/DragController;
+    .line 308
+    iget-object p1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mDragController:Lcom/miui/home/launcher/DragController;
 
-    const/4 v3, 0x1
+    const/4 v2, 0x1
 
-    invoke-virtual {v2, v0, v3, p0, v1}, Lcom/miui/home/launcher/DragController;->startDrag(Landroid/view/View;ZLcom/miui/home/launcher/DragSource;I)Z
+    invoke-virtual {p1, v0, v2, p0, v1}, Lcom/miui/home/launcher/DragController;->startDrag(Landroid/view/View;ZLcom/miui/home/launcher/DragSource;I)Z
 
-    move-result v2
+    move-result p1
 
-    if-eqz v2, :cond_3
+    if-eqz p1, :cond_2
 
-    .line 344
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isFoldDevice()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    .line 345
-    iget-object v1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mWorkspace:Lcom/miui/home/launcher/Workspace;
-
-    invoke-virtual {v1}, Lcom/miui/home/launcher/Workspace;->startFoldEditDragingAnim()V
-
-    .line 346
-    invoke-virtual {p0, v3, v3, p1}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->updateborderLine(ZZLcom/miui/home/launcher/ThumbnailContainer;)V
-
-    .line 348
-    :cond_2
+    .line 309
     iput-object v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mDraggingView:Landroid/view/View;
 
-    .line 349
+    .line 310
     iget-object p1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mCellBackground:Lcom/miui/home/launcher/CellBackground;
 
-    invoke-virtual {p1, v3}, Lcom/miui/home/launcher/CellBackground;->setSkipNextAutoLayoutAnimation(Z)V
+    invoke-virtual {p1, v2}, Lcom/miui/home/launcher/CellBackground;->setSkipNextAutoLayoutAnimation(Z)V
 
-    .line 350
+    .line 311
     iget-object p1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mScreenIdMap:Landroid/util/LongSparseArray;
 
     invoke-virtual {v0}, Landroid/view/View;->getTag()Ljava/lang/Object;
@@ -1564,27 +1410,27 @@
 
     iput p1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mPlaceHolderIndex:I
 
-    .line 351
+    .line 312
     iget p1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mPlaceHolderIndex:I
 
     iput p1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mDraggedUpPos:I
 
-    .line 352
+    .line 313
     iget-object v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mCellBackground:Lcom/miui/home/launcher/CellBackground;
 
     invoke-virtual {p0, v0, p1}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->addView(Landroid/view/View;I)V
 
-    return v3
+    return v2
 
-    .line 355
-    :cond_3
+    .line 316
+    :cond_2
     iget-object p1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mDragController:Lcom/miui/home/launcher/DragController;
 
     invoke-virtual {p1, p0}, Lcom/miui/home/launcher/DragController;->removeDragListener(Lcom/miui/home/launcher/DragController$DragListener;)V
 
     return v1
 
-    :cond_4
+    :cond_3
     :goto_0
     return v1
 .end method
@@ -1592,22 +1438,16 @@
 .method protected onMeasure(II)V
     .locals 1
 
-    .line 119
-    iget-object p1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mThumbnailMeasureController:Lcom/miui/home/launcher/ThumbnailMeasureController;
+    .line 114
+    iget-object p2, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mThumbnailHeightController:Lcom/miui/home/launcher/ThumbnailHeightController;
 
-    invoke-virtual {p1}, Lcom/miui/home/launcher/ThumbnailMeasureController;->makeWidthMeasureSpec()I
-
-    move-result p1
-
-    iget-object p2, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mThumbnailMeasureController:Lcom/miui/home/launcher/ThumbnailMeasureController;
-
-    invoke-virtual {p2}, Lcom/miui/home/launcher/ThumbnailMeasureController;->makeWorkspaceHeightMeasureSpec()I
+    invoke-virtual {p2}, Lcom/miui/home/launcher/ThumbnailHeightController;->makeMeasureSpec()I
 
     move-result p2
 
     invoke-super {p0, p1, p2}, Lcom/miui/home/launcher/EditModeThumbnailView;->onMeasure(II)V
 
-    .line 120
+    .line 115
     invoke-virtual {p0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->getMeasuredWidth()I
 
     move-result p1
@@ -1622,14 +1462,14 @@
 
     iput p1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mThumbnailNumInOneScreen:I
 
-    .line 121
+    .line 116
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isLayoutRtl()Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    .line 122
+    .line 117
     iget-object p1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mWorkspace:Lcom/miui/home/launcher/Workspace;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Workspace;->getScreenCount()I
@@ -1650,7 +1490,7 @@
 
     goto :goto_0
 
-    .line 124
+    .line 119
     :cond_0
     iget p1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mThumbnailNumInOneScreen:I
 
@@ -1689,7 +1529,7 @@
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
-    .line 571
+    .line 521
     invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/DragMessage;->isDragging()Z
 
     move-result p1
@@ -1698,7 +1538,7 @@
 
     const/4 p1, 0x0
 
-    .line 572
+    .line 522
     :goto_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->getScreenCount()I
 
@@ -1706,14 +1546,14 @@
 
     if-ge p1, v0, :cond_1
 
-    .line 573
+    .line 523
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->getThumbnailContainer(I)Lcom/miui/home/launcher/ThumbnailContainer;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 575
+    .line 525
     iget-boolean v1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mIsDraging:Z
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/ThumbnailContainer;->setAlpha(Z)V
@@ -1730,10 +1570,10 @@
 .method public onScreenSizeChanged()V
     .locals 1
 
-    .line 500
-    iget-object v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mThumbnailMeasureController:Lcom/miui/home/launcher/ThumbnailMeasureController;
+    .line 459
+    iget-object v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mThumbnailHeightController:Lcom/miui/home/launcher/ThumbnailHeightController;
 
-    invoke-virtual {v0, p0}, Lcom/miui/home/launcher/ThumbnailMeasureController;->onScreenSizeChanged(Landroid/view/View;)V
+    invoke-virtual {v0, p0}, Lcom/miui/home/launcher/ThumbnailHeightController;->onScreenSizeChanged(Landroid/view/View;)V
 
     return-void
 .end method
@@ -1741,7 +1581,7 @@
 .method public onWallpaperColorChanged()V
     .locals 0
 
-    .line 489
+    .line 448
     invoke-static {p0}, Lcom/miui/home/launcher/WallpaperUtils;->varyViewGroupByWallpaper(Landroid/view/ViewGroup;)V
 
     return-void
@@ -1752,10 +1592,10 @@
 
     const/4 v0, 0x0
 
-    .line 512
+    .line 471
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->loadThumbnails(Z)V
 
-    .line 513
+    .line 472
     iget-object v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mWorkspace:Lcom/miui/home/launcher/Workspace;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Workspace;->getCurrentScreenIndex()I
@@ -1764,7 +1604,7 @@
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->setCurrentScreen(I)V
 
-    .line 514
+    .line 473
     iget-object v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mWorkspace:Lcom/miui/home/launcher/Workspace;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Workspace;->getCurrentScreenIndex()I
@@ -1773,7 +1613,7 @@
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->scrollToScreen(I)V
 
-    .line 515
+    .line 474
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -1784,7 +1624,7 @@
 
     if-nez v0, :cond_0
 
-    .line 516
+    .line 475
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -1798,7 +1638,7 @@
 .method public removeAllScreens()V
     .locals 0
 
-    .line 522
+    .line 481
     invoke-virtual {p0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->removeAllViews()V
 
     return-void
@@ -1807,14 +1647,14 @@
 .method public scrollDragingRight()V
     .locals 3
 
-    .line 413
+    .line 374
     invoke-virtual {p0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->isScrolling()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 414
+    .line 375
     iget v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mCurrentScreenIndex:I
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->getScreenCount()I
@@ -1827,7 +1667,7 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 415
+    .line 376
     iget v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mCurrentScreenIndex:I
 
     iget v1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mVisibleRange:I
@@ -1838,7 +1678,7 @@
 
     goto :goto_0
 
-    .line 418
+    .line 379
     :cond_0
     iget v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mNextScreenIndex:I
 
@@ -1852,7 +1692,7 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 419
+    .line 380
     iget v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mNextScreenIndex:I
 
     iget v1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mVisibleRange:I
@@ -1869,7 +1709,7 @@
 .method public setDragController(Lcom/miui/home/launcher/DragController;)V
     .locals 0
 
-    .line 133
+    .line 128
     iput-object p1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mDragController:Lcom/miui/home/launcher/DragController;
 
     return-void
@@ -1878,50 +1718,43 @@
 .method public setResource(Lcom/miui/home/launcher/Workspace;)V
     .locals 0
 
-    .line 129
+    .line 124
     iput-object p1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mWorkspace:Lcom/miui/home/launcher/Workspace;
 
     return-void
 .end method
 
 .method public showWithFolmeAnim()V
-    .locals 5
+    .locals 2
 
-    .line 529
+    .line 487
     invoke-direct {p0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->getFolme()Lmiuix/animation/IVisibleStyle;
 
     move-result-object v0
 
     invoke-interface {v0}, Lmiuix/animation/IVisibleStyle;->cancel()V
 
-    .line 530
+    .line 488
     invoke-direct {p0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->getFolme()Lmiuix/animation/IVisibleStyle;
 
     move-result-object v0
 
-    .line 531
+    .line 489
     invoke-interface {v0}, Lmiuix/animation/IVisibleStyle;->setHide()Lmiuix/animation/IVisibleStyle;
 
     move-result-object v0
 
-    const/4 v1, 0x1
+    const/4 v1, 0x0
 
-    new-array v2, v1, [Lmiuix/animation/base/AnimConfig;
+    new-array v1, v1, [Lmiuix/animation/base/AnimConfig;
 
-    iget-object v3, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mEditModeAnimConfig:Lmiuix/animation/base/AnimConfig;
+    .line 490
+    invoke-interface {v0, v1}, Lmiuix/animation/IVisibleStyle;->show([Lmiuix/animation/base/AnimConfig;)V
 
-    const/4 v4, 0x0
+    const/4 v0, 0x1
 
-    aput-object v3, v2, v4
-
-    .line 532
-    invoke-interface {v0, v2}, Lmiuix/animation/IVisibleStyle;->show([Lmiuix/animation/base/AnimConfig;)V
-
-    .line 533
-    iput-boolean v1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mShow:Z
-
-    .line 534
-    invoke-direct {p0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->handleIndicatorMarginBottomOnFold()V
+    .line 491
+    iput-boolean v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mShow:Z
 
     return-void
 .end method
@@ -1929,31 +1762,31 @@
 .method protected snapByVelocity(II)V
     .locals 5
 
-    .line 434
+    .line 395
     invoke-virtual {p0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->cancelScroll()V
 
     neg-int p1, p1
 
-    .line 435
+    .line 396
     div-int/lit16 p2, p1, 0x3e8
 
     iget v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mThumbnailWidth:I
 
     mul-int/2addr p2, v0
 
-    .line 436
+    .line 397
     invoke-virtual {p0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->getSnapBound()[I
 
     move-result-object v0
 
-    .line 437
+    .line 398
     invoke-virtual {p0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->getScrollX()I
 
     move-result v1
 
     const/4 v2, 0x0
 
-    .line 438
+    .line 399
     aget v3, v0, v2
 
     const/4 v4, 0x1
@@ -1974,17 +1807,17 @@
 
     add-int v0, v1, p2
 
-    .line 440
+    .line 401
     invoke-virtual {p0, v0, v2}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->getScreenIndexByPoint(II)I
 
     move-result v0
 
     iput v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mNextScreenIndex:I
 
-    .line 441
+    .line 402
     invoke-virtual {p0, v1, p2, p1}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->startScroll(III)V
 
-    .line 442
+    .line 403
     invoke-virtual {p0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->invalidate()V
 
     return-void
@@ -1993,7 +1826,7 @@
 .method public snapToScreen(I)I
     .locals 4
 
-    .line 457
+    .line 418
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->getScreen(I)Landroid/view/View;
 
     move-result-object v0
@@ -2004,7 +1837,7 @@
 
     return v1
 
-    .line 460
+    .line 421
     :cond_0
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->getScreen(I)Landroid/view/View;
 
@@ -2024,14 +1857,14 @@
 
     if-gez v0, :cond_1
 
-    .line 461
+    .line 422
     invoke-super {p0, p1}, Lcom/miui/home/launcher/EditModeThumbnailView;->snapToScreen(I)I
 
     move-result p1
 
     return p1
 
-    .line 462
+    .line 423
     :cond_1
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->getScreen(I)Landroid/view/View;
 
@@ -2061,7 +1894,7 @@
 
     if-lez v0, :cond_2
 
-    .line 463
+    .line 424
     iget v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mThumbnailNumInOneScreen:I
 
     add-int/lit8 v0, v0, -0x1
@@ -2081,7 +1914,7 @@
 .method public unregisterEventBus()V
     .locals 1
 
-    .line 601
+    .line 542
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -2092,7 +1925,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 602
+    .line 543
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -2103,97 +1936,76 @@
     return-void
 .end method
 
-.method public updateborderLine(Z)V
-    .locals 2
+.method public updateborderLine()V
+    .locals 1
 
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
-    const/4 v1, 0x0
-
-    .line 378
-    invoke-virtual {p0, p1, v0, v1}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->updateborderLine(ZZLcom/miui/home/launcher/ThumbnailContainer;)V
+    .line 339
+    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->updateborderLine(Z)V
 
     return-void
 .end method
 
-.method public updateborderLine(ZZLcom/miui/home/launcher/ThumbnailContainer;)V
+.method public updateborderLine(Z)V
     .locals 5
 
-    .line 383
+    .line 344
     iget-object v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mWorkspace:Lcom/miui/home/launcher/Workspace;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Workspace;->getCurrentScreenIndex()I
 
-    move-result v0
+    move-result v1
+
+    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Workspace;->getCellScreen(I)Lcom/miui/home/launcher/CellScreen;
+
+    move-result-object v0
 
     const/4 v1, 0x0
 
     move v2, v1
 
-    .line 384
+    .line 345
     :goto_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->getScreenCount()I
 
     move-result v3
 
-    if-ge v2, v3, :cond_4
+    if-ge v2, v3, :cond_2
 
-    .line 385
+    .line 346
     invoke-direct {p0, v2}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->getThumbnailContainer(I)Lcom/miui/home/launcher/ThumbnailContainer;
 
     move-result-object v3
 
-    if-eqz v3, :cond_3
+    if-eqz v3, :cond_1
 
-    if-eqz p2, :cond_1
+    .line 348
+    invoke-virtual {v3}, Lcom/miui/home/launcher/ThumbnailContainer;->getContent()Lcom/miui/home/launcher/CellScreen;
 
-    if-ne v3, p3, :cond_0
+    move-result-object v4
+
+    if-ne v4, v0, :cond_0
 
     const/4 v4, 0x1
 
+    .line 349
+    invoke-virtual {v3, v4, p1}, Lcom/miui/home/launcher/ThumbnailContainer;->setIsCurrentScreen(ZZ)V
+
     goto :goto_1
 
+    .line 351
     :cond_0
-    move v4, v1
-
-    .line 388
-    :goto_1
-    invoke-virtual {v3, v4}, Lcom/miui/home/launcher/ThumbnailContainer;->setIsDraging(Z)V
-
-    goto :goto_3
+    invoke-virtual {v3, v1, p1}, Lcom/miui/home/launcher/ThumbnailContainer;->setIsCurrentScreen(ZZ)V
 
     :cond_1
-    if-lt v2, v0, :cond_2
-
-    .line 390
-    iget-object v4, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mWorkspace:Lcom/miui/home/launcher/Workspace;
-
-    invoke-virtual {v4}, Lcom/miui/home/launcher/Workspace;->getVisibleRange()I
-
-    move-result v4
-
-    add-int/2addr v4, v0
-
-    if-ge v2, v4, :cond_2
-
-    sget-object v4, Lcom/miui/home/launcher/anim/BackgroundType;->SELECT:Lcom/miui/home/launcher/anim/BackgroundType;
-
-    goto :goto_2
-
-    :cond_2
-    sget-object v4, Lcom/miui/home/launcher/anim/BackgroundType;->NORMAL:Lcom/miui/home/launcher/anim/BackgroundType;
-
-    :goto_2
-    invoke-virtual {v3, v4, p1}, Lcom/miui/home/launcher/ThumbnailContainer;->setIsCurrentScreen(Lcom/miui/home/launcher/anim/BackgroundType;Z)V
-
-    :cond_3
-    :goto_3
+    :goto_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 394
-    :cond_4
+    .line 355
+    :cond_2
     invoke-virtual {p0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->invalidate()V
 
     return-void

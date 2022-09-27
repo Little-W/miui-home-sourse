@@ -205,27 +205,6 @@
     return v1
 .end method
 
-.method public isUserActive()Z
-    .locals 1
-
-    .line 163
-    iget v0, p0, Lcom/miui/home/launcher/BaseActivity;->mActivityFlags:I
-
-    and-int/lit8 v0, v0, 0x4
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    return v0
-.end method
-
 .method public onActivityResult(IILandroid/content/Intent;)V
     .locals 0
 

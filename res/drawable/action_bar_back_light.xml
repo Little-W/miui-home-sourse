@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vector android:height="14.5dip" android:width="20.699982dip" android:viewportWidth="57.0" android:viewportHeight="40.0"
+<selector
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <path android:fillColor="#ff000000" android:pathData="M0.972,18.2276C0.5168,18.6829 0.2896,19.2798 0.2905,19.8764C0.2828,20.4818 0.51,21.0895 0.9718,21.5513L17.7679,38.3474C18.6766,39.2561 20.15,39.2561 21.0587,38.3474C21.9674,37.4387 21.9674,35.9653 21.0587,35.0566L8.5572,22.5551H54.2715C55.6384,22.5551 56.7465,21.447 56.7465,20.0801C56.7465,18.7132 55.6384,17.6051 54.2715,17.6051H8.1761L21.0589,4.7223C21.9676,3.8136 21.9676,2.3403 21.0589,1.4315C20.1502,0.5228 18.6768,0.5228 17.7681,1.4316L0.972,18.2276Z" android:fillAlpha="0.9" android:fillType="evenOdd" />
-</vector>
+    <item android:state_pressed="true" android:drawable="@drawable/action_bar_back_pressed_light" />
+    <item android:drawable="@drawable/action_bar_back_normal_light" />
+</selector>

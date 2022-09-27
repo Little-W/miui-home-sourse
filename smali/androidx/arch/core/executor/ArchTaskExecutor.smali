@@ -59,15 +59,6 @@
     return-void
 .end method
 
-.method public static getIOThreadExecutor()Ljava/util/concurrent/Executor;
-    .locals 1
-
-    .line 111
-    sget-object v0, Landroidx/arch/core/executor/ArchTaskExecutor;->sIOThreadExecutor:Ljava/util/concurrent/Executor;
-
-    return-object v0
-.end method
-
 .method public static getInstance()Landroidx/arch/core/executor/ArchTaskExecutor;
     .locals 2
 

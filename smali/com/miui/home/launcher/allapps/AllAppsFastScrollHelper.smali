@@ -21,7 +21,7 @@
 
 .field private mHasFastScrollTouchSettledAtLeastOnce:Z
 
-.field private mRv:Lcom/miui/home/launcher/allapps/BaseAllAppsRecyclerView;
+.field private mRv:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
 
 .field private mSmoothSnapNextFrameRunnable:Ljava/lang/Runnable;
 
@@ -41,7 +41,7 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/allapps/BaseAllAppsRecyclerView;Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;)V
+.method constructor <init>(Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;)V
     .locals 1
 
     .line 78
@@ -81,7 +81,7 @@
     iput-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsFastScrollHelper;->mFastScrollToTargetSectionRunnable:Ljava/lang/Runnable;
 
     .line 79
-    iput-object p1, p0, Lcom/miui/home/launcher/allapps/AllAppsFastScrollHelper;->mRv:Lcom/miui/home/launcher/allapps/BaseAllAppsRecyclerView;
+    iput-object p1, p0, Lcom/miui/home/launcher/allapps/AllAppsFastScrollHelper;->mRv:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
 
     .line 80
     iput-object p2, p0, Lcom/miui/home/launcher/allapps/AllAppsFastScrollHelper;->mApps:Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;
@@ -120,11 +120,11 @@
     return-object p0
 .end method
 
-.method static synthetic access$200(Lcom/miui/home/launcher/allapps/AllAppsFastScrollHelper;)Lcom/miui/home/launcher/allapps/BaseAllAppsRecyclerView;
+.method static synthetic access$200(Lcom/miui/home/launcher/allapps/AllAppsFastScrollHelper;)Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
     .locals 0
 
     .line 23
-    iget-object p0, p0, Lcom/miui/home/launcher/allapps/AllAppsFastScrollHelper;->mRv:Lcom/miui/home/launcher/allapps/BaseAllAppsRecyclerView;
+    iget-object p0, p0, Lcom/miui/home/launcher/allapps/AllAppsFastScrollHelper;->mRv:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
 
     return-object p0
 .end method
@@ -186,7 +186,7 @@
 .method private resetTrackedViewsFastScrollFocusState()V
     .locals 2
 
-    .line 216
+    .line 215
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsFastScrollHelper;->mTrackedFastScrollViews:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
@@ -206,7 +206,7 @@
 
     check-cast v1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
-    .line 217
+    .line 216
     invoke-direct {p0, v1}, Lcom/miui/home/launcher/allapps/AllAppsFastScrollHelper;->resetTrackedViewsFastScrollFocusState(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
     goto :goto_0
@@ -218,7 +218,7 @@
 .method private resetTrackedViewsFastScrollFocusState(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
     .locals 1
 
-    .line 222
+    .line 221
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     const/4 v0, 0x1
@@ -232,18 +232,18 @@
     .locals 6
 
     .line 110
-    iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsFastScrollHelper;->mRv:Lcom/miui/home/launcher/allapps/BaseAllAppsRecyclerView;
+    iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsFastScrollHelper;->mRv:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
 
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/AllAppsFastScrollHelper;->mSmoothSnapNextFrameRunnable:Ljava/lang/Runnable;
 
-    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/allapps/BaseAllAppsRecyclerView;->removeCallbacks(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;->removeCallbacks(Ljava/lang/Runnable;)Z
 
     .line 111
-    iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsFastScrollHelper;->mRv:Lcom/miui/home/launcher/allapps/BaseAllAppsRecyclerView;
+    iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsFastScrollHelper;->mRv:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
 
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/AllAppsFastScrollHelper;->mFastScrollToTargetSectionRunnable:Ljava/lang/Runnable;
 
-    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/allapps/BaseAllAppsRecyclerView;->removeCallbacks(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;->removeCallbacks(Ljava/lang/Runnable;)Z
 
     .line 113
     iget-boolean v0, p0, Lcom/miui/home/launcher/allapps/AllAppsFastScrollHelper;->mHasFastScrollTouchSettled:Z
@@ -283,7 +283,7 @@
     invoke-direct {p0}, Lcom/miui/home/launcher/allapps/AllAppsFastScrollHelper;->updateTrackedViewsFastScrollFocusState()V
 
     .line 133
-    iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsFastScrollHelper;->mRv:Lcom/miui/home/launcher/allapps/BaseAllAppsRecyclerView;
+    iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsFastScrollHelper;->mRv:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
 
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/AllAppsFastScrollHelper;->mFastScrollToTargetSectionRunnable:Ljava/lang/Runnable;
 
@@ -301,7 +301,7 @@
 
     .line 133
     :goto_0
-    invoke-virtual {v0, v1, v3, v4}, Lcom/miui/home/launcher/allapps/BaseAllAppsRecyclerView;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {v0, v1, v3, v4}, Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;->postDelayed(Ljava/lang/Runnable;J)Z
 
     .line 142
     :goto_1
@@ -336,13 +336,13 @@
 
     .line 147
     :cond_2
-    iget-object p3, p0, Lcom/miui/home/launcher/allapps/AllAppsFastScrollHelper;->mRv:Lcom/miui/home/launcher/allapps/BaseAllAppsRecyclerView;
+    iget-object p3, p0, Lcom/miui/home/launcher/allapps/AllAppsFastScrollHelper;->mRv:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
 
-    invoke-virtual {p3}, Lcom/miui/home/launcher/allapps/BaseAllAppsRecyclerView;->getVerticalFadingEdgeLength()I
+    invoke-virtual {p3}, Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;->getVerticalFadingEdgeLength()I
 
     move-result v0
 
-    invoke-virtual {p3, v1, v0}, Lcom/miui/home/launcher/allapps/BaseAllAppsRecyclerView;->getCurrentScrollY(II)I
+    invoke-virtual {p3, v1, v0}, Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;->getCurrentScrollY(II)I
 
     move-result p3
 
@@ -429,11 +429,11 @@
     iput v2, p0, Lcom/miui/home/launcher/allapps/AllAppsFastScrollHelper;->mFastScrollFrameIndex:I
 
     .line 158
-    iget-object p1, p0, Lcom/miui/home/launcher/allapps/AllAppsFastScrollHelper;->mRv:Lcom/miui/home/launcher/allapps/BaseAllAppsRecyclerView;
+    iget-object p1, p0, Lcom/miui/home/launcher/allapps/AllAppsFastScrollHelper;->mRv:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
 
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/AllAppsFastScrollHelper;->mSmoothSnapNextFrameRunnable:Ljava/lang/Runnable;
 
-    invoke-virtual {p1, p2}, Lcom/miui/home/launcher/allapps/BaseAllAppsRecyclerView;->postOnAnimation(Ljava/lang/Runnable;)V
+    invoke-virtual {p1, p2}, Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;->postOnAnimation(Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -441,7 +441,7 @@
 .method private updateTrackedViewsFastScrollFocusState()V
     .locals 2
 
-    .line 200
+    .line 199
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsFastScrollHelper;->mTrackedFastScrollViews:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
@@ -461,7 +461,7 @@
 
     check-cast v1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
-    .line 201
+    .line 200
     invoke-direct {p0, v1}, Lcom/miui/home/launcher/allapps/AllAppsFastScrollHelper;->updateTrackedViewsFastScrollFocusState(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
     goto :goto_0
@@ -473,12 +473,12 @@
 .method private updateTrackedViewsFastScrollFocusState(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
     .locals 3
 
-    .line 206
+    .line 205
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getAdapterPosition()I
 
     move-result v0
 
-    .line 208
+    .line 207
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/AllAppsFastScrollHelper;->mCurrentFastScrollSection:Ljava/lang/String;
 
     const/4 v2, 0x0
@@ -501,7 +501,7 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 209
+    .line 208
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/AllAppsFastScrollHelper;->mApps:Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;->getAdapterItems()Ljava/util/List;
@@ -516,7 +516,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 210
+    .line 209
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/AllAppsFastScrollHelper;->mCurrentFastScrollSection:Ljava/lang/String;
 
     iget-object v0, v0, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;->sectionName:Ljava/lang/String;
@@ -531,7 +531,7 @@
 
     move v2, v0
 
-    .line 212
+    .line 211
     :cond_0
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
@@ -580,18 +580,18 @@
     .locals 2
 
     .line 166
-    iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsFastScrollHelper;->mRv:Lcom/miui/home/launcher/allapps/BaseAllAppsRecyclerView;
+    iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsFastScrollHelper;->mRv:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
 
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/AllAppsFastScrollHelper;->mSmoothSnapNextFrameRunnable:Ljava/lang/Runnable;
 
-    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/allapps/BaseAllAppsRecyclerView;->removeCallbacks(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;->removeCallbacks(Ljava/lang/Runnable;)Z
 
     .line 167
-    iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsFastScrollHelper;->mRv:Lcom/miui/home/launcher/allapps/BaseAllAppsRecyclerView;
+    iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsFastScrollHelper;->mRv:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
 
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/AllAppsFastScrollHelper;->mFastScrollToTargetSectionRunnable:Ljava/lang/Runnable;
 
-    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/allapps/BaseAllAppsRecyclerView;->removeCallbacks(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;->removeCallbacks(Ljava/lang/Runnable;)Z
 
     const/4 v0, 0x0
 
@@ -637,20 +637,13 @@
 
     invoke-virtual {v0, p1}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
 
-    .line 193
-    iget-object p1, p1, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;->itemView:Landroid/view/View;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setEnabled(Z)V
-
     return-void
 .end method
 
 .method setAllTrackedViewsFastScrollFocusState(Z)V
     .locals 2
 
-    .line 226
+    .line 225
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsFastScrollHelper;->mTrackedFastScrollViews:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
@@ -670,7 +663,7 @@
 
     check-cast v1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
-    .line 227
+    .line 226
     iget-object v1, v1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {v1, p1}, Landroid/view/View;->setEnabled(Z)V

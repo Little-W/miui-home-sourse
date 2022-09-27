@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<set android:startOffset="200" android:repeatCount="infinite" android:ordering="sequentially"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <objectAnimator android:interpolator="@interpolator/disco_bounce_section1" android:duration="1000" android:valueFrom="0" android:valueTo="-20" android:valueType="floatType" android:propertyName="translationY" />
-    <objectAnimator android:interpolator="@interpolator/disco_bounce_section2" android:duration="1000" android:repeatCount="infinite" android:valueFrom="-20" android:valueTo="0" android:valueType="floatType" android:propertyName="translationY" />
-    <objectAnimator android:interpolator="@interpolator/disco_bounce_section3" android:duration="0" android:valueFrom="0" android:valueTo="0" android:valueType="floatType" android:propertyName="translationY" />
-</set>

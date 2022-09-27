@@ -17,15 +17,11 @@
 # static fields
 .field public static final ColorStateListItem:[I
 
-.field public static final ColorStateListItem_alpha:I = 0x3
+.field public static final ColorStateListItem_alpha:I = 0x2
 
 .field public static final ColorStateListItem_android_alpha:I = 0x1
 
 .field public static final ColorStateListItem_android_color:I = 0x0
-
-.field public static final ColorStateListItem_android_lStar:I = 0x2
-
-.field public static final ColorStateListItem_lStar:I = 0x4
 
 .field public static final FontFamily:[I
 
@@ -62,8 +58,6 @@
 .field public static final FontFamily_fontProviderPackage:I = 0x4
 
 .field public static final FontFamily_fontProviderQuery:I = 0x5
-
-.field public static final FontFamily_fontProviderSystemFontFamily:I = 0x6
 
 .field public static final GradientColor:[I
 
@@ -144,9 +138,9 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 2
 
-    const/4 v0, 0x5
+    const/4 v0, 0x3
 
     .line 275
     new-array v1, v0, [I
@@ -155,9 +149,9 @@
 
     sput-object v1, Lmiuix/springback/R$styleable;->ColorStateListItem:[I
 
-    const/4 v1, 0x7
+    const/4 v1, 0x6
 
-    .line 281
+    .line 279
     new-array v1, v1, [I
 
     fill-array-data v1, :array_1
@@ -166,7 +160,7 @@
 
     const/16 v1, 0xa
 
-    .line 289
+    .line 286
     new-array v1, v1, [I
 
     fill-array-data v1, :array_2
@@ -175,7 +169,7 @@
 
     const/16 v1, 0xc
 
-    .line 300
+    .line 297
     new-array v1, v1, [I
 
     fill-array-data v1, :array_3
@@ -184,45 +178,45 @@
 
     const/4 v1, 0x2
 
-    .line 313
+    .line 310
     new-array v1, v1, [I
 
     fill-array-data v1, :array_4
 
     sput-object v1, Lmiuix/springback/R$styleable;->GradientColorItem:[I
 
-    const/4 v1, 0x3
+    .line 313
+    new-array v1, v0, [I
 
-    .line 316
-    new-array v2, v1, [I
+    fill-array-data v1, :array_5
 
-    fill-array-data v2, :array_5
+    sput-object v1, Lmiuix/springback/R$styleable;->Level:[I
 
-    sput-object v2, Lmiuix/springback/R$styleable;->Level:[I
+    .line 317
+    new-array v1, v0, [I
 
-    .line 320
-    new-array v2, v1, [I
+    fill-array-data v1, :array_6
 
-    fill-array-data v2, :array_6
+    sput-object v1, Lmiuix/springback/R$styleable;->MiuixManifest:[I
 
-    sput-object v2, Lmiuix/springback/R$styleable;->MiuixManifest:[I
+    const/4 v1, 0x5
 
-    .line 324
+    .line 321
+    new-array v1, v1, [I
+
+    fill-array-data v1, :array_7
+
+    sput-object v1, Lmiuix/springback/R$styleable;->MiuixManifestModule:[I
+
+    .line 327
+    new-array v1, v0, [I
+
+    fill-array-data v1, :array_8
+
+    sput-object v1, Lmiuix/springback/R$styleable;->MiuixManifestUsesSdk:[I
+
+    .line 331
     new-array v0, v0, [I
-
-    fill-array-data v0, :array_7
-
-    sput-object v0, Lmiuix/springback/R$styleable;->MiuixManifestModule:[I
-
-    .line 330
-    new-array v0, v1, [I
-
-    fill-array-data v0, :array_8
-
-    sput-object v0, Lmiuix/springback/R$styleable;->MiuixManifestUsesSdk:[I
-
-    .line 334
-    new-array v0, v1, [I
 
     fill-array-data v0, :array_9
 
@@ -236,20 +230,17 @@
     .array-data 4
         0x10101a5
         0x101031f
-        0x1010647
-        0x7f040071
-        0x7f0402f7
+        0x7f04006c
     .end array-data
 
     :array_1
     .array-data 4
-        0x7f04027d
-        0x7f04027e
-        0x7f04027f
-        0x7f040280
-        0x7f040281
-        0x7f040282
-        0x7f040283
+        0x7f04016b
+        0x7f04016c
+        0x7f04016d
+        0x7f04016e
+        0x7f04016f
+        0x7f040170
     .end array-data
 
     :array_2
@@ -259,11 +250,11 @@
         0x101053f
         0x101056f
         0x1010570
-        0x7f04027b
-        0x7f040284
-        0x7f040285
-        0x7f040286
-        0x7f04060b
+        0x7f040169
+        0x7f040171
+        0x7f040172
+        0x7f040173
+        0x7f04035e
     .end array-data
 
     :array_3
@@ -290,38 +281,38 @@
 
     :array_5
     .array-data 4
-        0x7f0403b8
-        0x7f0403c9
-        0x7f04056f
+        0x7f040215
+        0x7f040220
+        0x7f04030f
     .end array-data
 
     :array_6
     .array-data 4
-        0x7f04034e
-        0x7f0403f5
-        0x7f04040c
+        0x7f0401df
+        0x7f040243
+        0x7f040245
     .end array-data
 
     :array_7
     .array-data 4
-        0x7f0401c6
-        0x7f0403b8
-        0x7f0403c9
-        0x7f04040c
-        0x7f04056f
+        0x7f040111
+        0x7f040215
+        0x7f040220
+        0x7f040245
+        0x7f04030f
     .end array-data
 
     :array_8
     .array-data 4
-        0x7f0403b8
-        0x7f0403c9
-        0x7f04056f
+        0x7f040215
+        0x7f040220
+        0x7f04030f
     .end array-data
 
     :array_9
     .array-data 4
-        0x7f0404c0
-        0x7f0404c3
-        0x7f040516
+        0x7f0402ad
+        0x7f0402b0
+        0x7f0402e9
     .end array-data
 .end method

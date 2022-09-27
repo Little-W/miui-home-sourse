@@ -22,7 +22,7 @@
 .method private constructor <init>(Lcom/miui/home/launcher/LauncherModel;)V
     .locals 0
 
-    .line 225
+    .line 220
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherModel$SecurityHideMessageHandler;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -33,7 +33,7 @@
 .method synthetic constructor <init>(Lcom/miui/home/launcher/LauncherModel;Lcom/miui/home/launcher/LauncherModel$1;)V
     .locals 0
 
-    .line 225
+    .line 220
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/LauncherModel$SecurityHideMessageHandler;-><init>(Lcom/miui/home/launcher/LauncherModel;)V
 
     return-void
@@ -42,7 +42,7 @@
 .method static synthetic lambda$onMessageEvent$0(Lcom/miui/home/launcher/Launcher;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
     .locals 1
 
-    .line 252
+    .line 247
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
@@ -55,7 +55,7 @@
 .method public static synthetic lambda$onMessageEvent$1(Lcom/miui/home/launcher/LauncherModel$SecurityHideMessageHandler;Lcom/miui/home/launcher/Launcher;)V
     .locals 9
 
-    .line 233
+    .line 228
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$SecurityHideMessageHandler;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-static {v0}, Lcom/miui/home/launcher/LauncherModel;->access$100(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/launcher/AllAppsList;
@@ -64,7 +64,7 @@
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/AllAppsList;->clearAllExceptData()V
 
-    .line 234
+    .line 229
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -75,7 +75,7 @@
 
     move-result-object v0
 
-    .line 235
+    .line 230
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -94,14 +94,14 @@
 
     check-cast v1, Lcom/miui/launcher/utils/PortableUtils$ComponentAndUser;
 
-    .line 236
+    .line 231
     iget-object v2, v1, Lcom/miui/launcher/utils/PortableUtils$ComponentAndUser;->componentName:Landroid/content/ComponentName;
 
     if-eqz v2, :cond_0
 
     iget-object v2, v1, Lcom/miui/launcher/utils/PortableUtils$ComponentAndUser;->componentName:Landroid/content/ComponentName;
 
-    .line 237
+    .line 232
     invoke-virtual {v2}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
@@ -118,7 +118,7 @@
 
     iget-object v2, p0, Lcom/miui/home/launcher/LauncherModel$SecurityHideMessageHandler;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
-    .line 239
+    .line 234
     invoke-static {v2}, Lcom/miui/home/launcher/LauncherModel;->access$100(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/launcher/AllAppsList;
 
     move-result-object v2
@@ -135,7 +135,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 240
+    .line 235
     iget-object v2, p0, Lcom/miui/home/launcher/LauncherModel$SecurityHideMessageHandler;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-static {v2}, Lcom/miui/home/launcher/LauncherModel;->access$100(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/launcher/AllAppsList;
@@ -160,18 +160,18 @@
 
     goto :goto_0
 
-    .line 243
+    .line 238
     :cond_1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 244
+    .line 239
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 245
+    .line 240
     iget-object v2, p0, Lcom/miui/home/launcher/LauncherModel$SecurityHideMessageHandler;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-static {v2}, Lcom/miui/home/launcher/LauncherModel;->access$100(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/launcher/AllAppsList;
@@ -186,7 +186,7 @@
 
     if-lez v2, :cond_2
 
-    .line 246
+    .line 241
     iget-object v2, p0, Lcom/miui/home/launcher/LauncherModel$SecurityHideMessageHandler;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-static {v2}, Lcom/miui/home/launcher/LauncherModel;->access$100(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/launcher/AllAppsList;
@@ -197,7 +197,7 @@
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 248
+    .line 243
     :cond_2
     iget-object v2, p0, Lcom/miui/home/launcher/LauncherModel$SecurityHideMessageHandler;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
@@ -213,7 +213,7 @@
 
     if-lez v2, :cond_3
 
-    .line 249
+    .line 244
     iget-object v2, p0, Lcom/miui/home/launcher/LauncherModel$SecurityHideMessageHandler;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-static {v2}, Lcom/miui/home/launcher/LauncherModel;->access$100(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/launcher/AllAppsList;
@@ -224,7 +224,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 251
+    .line 246
     :cond_3
     iget-object v2, p0, Lcom/miui/home/launcher/LauncherModel$SecurityHideMessageHandler;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
@@ -234,7 +234,7 @@
 
     invoke-virtual {v2}, Lcom/miui/home/launcher/AllAppsList;->clearAllExceptData()V
 
-    .line 252
+    .line 247
     iget-object v2, p0, Lcom/miui/home/launcher/LauncherModel$SecurityHideMessageHandler;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-static {v2}, Lcom/miui/home/launcher/LauncherModel;->access$200(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/library/utils/DeferredHandler;
@@ -258,7 +258,7 @@
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
-    .line 228
+    .line 223
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object p1
@@ -267,7 +267,7 @@
 
     return-void
 
-    .line 232
+    .line 227
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$SecurityHideMessageHandler;->this$0:Lcom/miui/home/launcher/LauncherModel;
 

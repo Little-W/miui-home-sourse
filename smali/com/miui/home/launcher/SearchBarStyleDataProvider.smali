@@ -552,7 +552,7 @@
     goto :goto_1
 
     :sswitch_2
-    const-string/jumbo p2, "update"
+    const-string p2, "update"
 
     invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -640,8 +640,6 @@
     invoke-direct {p1}, Landroid/os/Bundle;-><init>()V
 
     return-object p1
-
-    nop
 
     :sswitch_data_0
     .sparse-switch

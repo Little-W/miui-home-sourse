@@ -31,7 +31,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/allapps/search/DefaultAppSearchAlgorithm;Lcom/miui/home/launcher/allapps/search/AllAppsSearchBarController$Callbacks;Ljava/lang/String;Ljava/util/ArrayList;)V
     .locals 0
 
-    .line 65
+    .line 49
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/search/DefaultAppSearchAlgorithm$1;->this$0:Lcom/miui/home/launcher/allapps/search/DefaultAppSearchAlgorithm;
 
     iput-object p2, p0, Lcom/miui/home/launcher/allapps/search/DefaultAppSearchAlgorithm$1;->val$callback:Lcom/miui/home/launcher/allapps/search/AllAppsSearchBarController$Callbacks;
@@ -50,7 +50,7 @@
 .method public run()V
     .locals 3
 
-    .line 68
+    .line 53
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/search/DefaultAppSearchAlgorithm$1;->val$callback:Lcom/miui/home/launcher/allapps/search/AllAppsSearchBarController$Callbacks;
 
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/search/DefaultAppSearchAlgorithm$1;->val$query:Ljava/lang/String;

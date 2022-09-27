@@ -147,7 +147,7 @@
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f06006c
+    const p2, 0x7f060069
 
     .line 235
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
@@ -157,7 +157,7 @@
     return p1
 
     :cond_0
-    const p2, 0x7f06006b
+    const p2, 0x7f060068
 
     .line 237
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
@@ -177,7 +177,7 @@
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f06006e
+    const p2, 0x7f06006b
 
     .line 243
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
@@ -187,7 +187,7 @@
     return p1
 
     :cond_0
-    const p2, 0x7f06006d
+    const p2, 0x7f06006a
 
     .line 245
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
@@ -207,7 +207,7 @@
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f060028
+    const p2, 0x7f060027
 
     .line 227
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColorStateList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
@@ -217,7 +217,7 @@
     return-object p1
 
     :cond_0
-    const p2, 0x7f060027
+    const p2, 0x7f060026
 
     .line 229
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColorStateList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
@@ -237,7 +237,7 @@
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f06002c
+    const p2, 0x7f06002b
 
     .line 91
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
@@ -247,7 +247,7 @@
     return p1
 
     :cond_0
-    const p2, 0x7f06002b
+    const p2, 0x7f06002a
 
     .line 93
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
@@ -267,7 +267,7 @@
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f060580
+    const p2, 0x7f060364
 
     .line 83
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
@@ -277,7 +277,7 @@
     return p1
 
     :cond_0
-    const p2, 0x7f06057f
+    const p2, 0x7f060363
 
     .line 85
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
@@ -298,7 +298,7 @@
 
     if-ltz v0, :cond_0
 
-    const p2, 0x7f060093
+    const p2, 0x7f06008a
 
     .line 215
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
@@ -315,7 +315,7 @@
 
     if-eqz p2, :cond_1
 
-    const p2, 0x7f060095
+    const p2, 0x7f06008c
 
     .line 218
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
@@ -325,7 +325,7 @@
     return p1
 
     :cond_1
-    const p2, 0x7f060094
+    const p2, 0x7f06008b
 
     .line 220
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
@@ -345,7 +345,7 @@
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f060092
+    const p2, 0x7f060089
 
     .line 207
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
@@ -355,7 +355,7 @@
     return p1
 
     :cond_0
-    const p2, 0x7f060091
+    const p2, 0x7f060088
 
     .line 209
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
@@ -375,7 +375,7 @@
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f06002e
+    const p2, 0x7f06002d
 
     .line 115
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
@@ -385,7 +385,7 @@
     return p1
 
     :cond_0
-    const p2, 0x7f06002d
+    const p2, 0x7f06002c
 
     .line 117
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
@@ -405,7 +405,7 @@
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f080291
+    const p2, 0x7f08018b
 
     .line 259
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
@@ -415,73 +415,9 @@
     return-object p1
 
     :cond_0
-    const p2, 0x7f080290
+    const p2, 0x7f08018a
 
     .line 261
-    invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public getFastScrollerPopupDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-    .locals 0
-
-    .line 274
-    invoke-virtual {p0, p2}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->isLightMode(I)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_1
-
-    .line 275
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isLayoutRtl()Z
-
-    move-result p2
-
-    if-eqz p2, :cond_0
-
-    const p2, 0x7f080296
-
-    .line 276
-    invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_0
-    const p2, 0x7f080294
-
-    .line 278
-    invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    return-object p1
-
-    .line 280
-    :cond_1
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isLayoutRtl()Z
-
-    move-result p2
-
-    if-eqz p2, :cond_2
-
-    const p2, 0x7f080295
-
-    .line 281
-    invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_2
-    const p2, 0x7f080293
-
-    .line 283
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
@@ -507,7 +443,7 @@
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f0806bd
+    const p2, 0x7f08056d
 
     .line 180
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
@@ -517,7 +453,7 @@
     return-object p1
 
     :cond_0
-    const p2, 0x7f0806bb
+    const p2, 0x7f08056b
 
     .line 182
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
@@ -534,7 +470,7 @@
 
     if-eqz p2, :cond_2
 
-    const p2, 0x7f0806bc
+    const p2, 0x7f08056c
 
     .line 186
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
@@ -544,7 +480,7 @@
     return-object p1
 
     :cond_2
-    const p2, 0x7f0806ba
+    const p2, 0x7f08056a
 
     .line 188
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
@@ -564,7 +500,7 @@
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f060021
+    const p2, 0x7f060020
 
     .line 99
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
@@ -574,7 +510,7 @@
     return p1
 
     :cond_0
-    const p2, 0x7f060020
+    const p2, 0x7f06001f
 
     .line 101
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
@@ -594,7 +530,7 @@
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f060032
+    const p2, 0x7f060030
 
     .line 123
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
@@ -604,7 +540,7 @@
     return p1
 
     :cond_0
-    const p2, 0x7f060031
+    const p2, 0x7f06002f
 
     .line 125
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
@@ -624,12 +560,12 @@
 
     if-eqz p1, :cond_0
 
-    const p1, 0x7f080198
+    const p1, 0x7f0800bb
 
     return p1
 
     :cond_0
-    const p1, 0x7f080197
+    const p1, 0x7f0800ba
 
     return p1
 .end method
@@ -644,7 +580,7 @@
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f06058a
+    const p2, 0x7f06036e
 
     .line 139
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColorStateList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
@@ -654,7 +590,7 @@
     return-object p1
 
     :cond_0
-    const p2, 0x7f060589
+    const p2, 0x7f06036d
 
     .line 141
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColorStateList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
@@ -674,7 +610,7 @@
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f060101
+    const p2, 0x7f0600c2
 
     .line 163
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
@@ -684,7 +620,7 @@
     return p1
 
     :cond_0
-    const p2, 0x7f060100
+    const p2, 0x7f0600c1
 
     .line 165
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
@@ -704,7 +640,7 @@
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f060588
+    const p2, 0x7f06036c
 
     .line 155
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
@@ -714,7 +650,7 @@
     return p1
 
     :cond_0
-    const p2, 0x7f060587
+    const p2, 0x7f06036b
 
     .line 157
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
@@ -734,7 +670,7 @@
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f06058e
+    const p2, 0x7f060372
 
     .line 147
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
@@ -744,7 +680,7 @@
     return p1
 
     :cond_0
-    const p2, 0x7f06058d
+    const p2, 0x7f060371
 
     .line 149
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
@@ -764,7 +700,7 @@
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f080681
+    const p2, 0x7f080539
 
     .line 171
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
@@ -774,7 +710,7 @@
     return-object p1
 
     :cond_0
-    const p2, 0x7f080680
+    const p2, 0x7f080538
 
     .line 173
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
@@ -794,7 +730,7 @@
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f060026
+    const p2, 0x7f060025
 
     .line 107
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
@@ -804,7 +740,7 @@
     return p1
 
     :cond_0
-    const p2, 0x7f060025
+    const p2, 0x7f060024
 
     .line 109
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
@@ -824,7 +760,7 @@
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f06002a
+    const p2, 0x7f060029
 
     .line 199
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
@@ -834,39 +770,9 @@
     return p1
 
     :cond_0
-    const p2, 0x7f060029
+    const p2, 0x7f060028
 
     .line 201
-    invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public getSettingsDrawable(Landroid/content/Context;I)I
-    .locals 0
-
-    .line 266
-    invoke-virtual {p0, p2}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->isLightMode(I)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_0
-
-    const p2, 0x7f060124
-
-    .line 267
-    invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
-
-    move-result p1
-
-    return p1
-
-    :cond_0
-    const p2, 0x7f060123
-
-    .line 269
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result p1
@@ -884,12 +790,12 @@
 
     if-eqz p1, :cond_0
 
-    const p1, 0x7f0802ac
+    const p1, 0x7f080199
 
     return p1
 
     :cond_0
-    const p1, 0x7f0802ab
+    const p1, 0x7f080198
 
     return p1
 .end method

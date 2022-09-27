@@ -39,9 +39,17 @@
 
 .field public static final enum DXT1_RGBA:Lcom/google/android/filament/Texture$InternalFormat;
 
+.field public static final enum DXT1_SRGB:Lcom/google/android/filament/Texture$InternalFormat;
+
+.field public static final enum DXT1_SRGBA:Lcom/google/android/filament/Texture$InternalFormat;
+
 .field public static final enum DXT3_RGBA:Lcom/google/android/filament/Texture$InternalFormat;
 
+.field public static final enum DXT3_SRGBA:Lcom/google/android/filament/Texture$InternalFormat;
+
 .field public static final enum DXT5_RGBA:Lcom/google/android/filament/Texture$InternalFormat;
+
+.field public static final enum DXT5_SRGBA:Lcom/google/android/filament/Texture$InternalFormat;
 
 .field public static final enum EAC_R11:Lcom/google/android/filament/Texture$InternalFormat;
 
@@ -155,9 +163,65 @@
 
 .field public static final enum RGBA8_SNORM:Lcom/google/android/filament/Texture$InternalFormat;
 
+.field public static final enum RGBA_ASTC_10x10:Lcom/google/android/filament/Texture$InternalFormat;
+
+.field public static final enum RGBA_ASTC_10x5:Lcom/google/android/filament/Texture$InternalFormat;
+
+.field public static final enum RGBA_ASTC_10x6:Lcom/google/android/filament/Texture$InternalFormat;
+
+.field public static final enum RGBA_ASTC_10x8:Lcom/google/android/filament/Texture$InternalFormat;
+
+.field public static final enum RGBA_ASTC_12x10:Lcom/google/android/filament/Texture$InternalFormat;
+
+.field public static final enum RGBA_ASTC_12x12:Lcom/google/android/filament/Texture$InternalFormat;
+
+.field public static final enum RGBA_ASTC_4x4:Lcom/google/android/filament/Texture$InternalFormat;
+
+.field public static final enum RGBA_ASTC_5x4:Lcom/google/android/filament/Texture$InternalFormat;
+
+.field public static final enum RGBA_ASTC_5x5:Lcom/google/android/filament/Texture$InternalFormat;
+
+.field public static final enum RGBA_ASTC_6x5:Lcom/google/android/filament/Texture$InternalFormat;
+
+.field public static final enum RGBA_ASTC_6x6:Lcom/google/android/filament/Texture$InternalFormat;
+
+.field public static final enum RGBA_ASTC_8x5:Lcom/google/android/filament/Texture$InternalFormat;
+
+.field public static final enum RGBA_ASTC_8x6:Lcom/google/android/filament/Texture$InternalFormat;
+
+.field public static final enum RGBA_ASTC_8x8:Lcom/google/android/filament/Texture$InternalFormat;
+
 .field public static final enum SRGB8:Lcom/google/android/filament/Texture$InternalFormat;
 
 .field public static final enum SRGB8_A8:Lcom/google/android/filament/Texture$InternalFormat;
+
+.field public static final enum SRGB8_ALPHA8_ASTC_10x10:Lcom/google/android/filament/Texture$InternalFormat;
+
+.field public static final enum SRGB8_ALPHA8_ASTC_10x5:Lcom/google/android/filament/Texture$InternalFormat;
+
+.field public static final enum SRGB8_ALPHA8_ASTC_10x6:Lcom/google/android/filament/Texture$InternalFormat;
+
+.field public static final enum SRGB8_ALPHA8_ASTC_10x8:Lcom/google/android/filament/Texture$InternalFormat;
+
+.field public static final enum SRGB8_ALPHA8_ASTC_12x10:Lcom/google/android/filament/Texture$InternalFormat;
+
+.field public static final enum SRGB8_ALPHA8_ASTC_12x12:Lcom/google/android/filament/Texture$InternalFormat;
+
+.field public static final enum SRGB8_ALPHA8_ASTC_4x4:Lcom/google/android/filament/Texture$InternalFormat;
+
+.field public static final enum SRGB8_ALPHA8_ASTC_5x4:Lcom/google/android/filament/Texture$InternalFormat;
+
+.field public static final enum SRGB8_ALPHA8_ASTC_5x5:Lcom/google/android/filament/Texture$InternalFormat;
+
+.field public static final enum SRGB8_ALPHA8_ASTC_6x5:Lcom/google/android/filament/Texture$InternalFormat;
+
+.field public static final enum SRGB8_ALPHA8_ASTC_6x6:Lcom/google/android/filament/Texture$InternalFormat;
+
+.field public static final enum SRGB8_ALPHA8_ASTC_8x5:Lcom/google/android/filament/Texture$InternalFormat;
+
+.field public static final enum SRGB8_ALPHA8_ASTC_8x6:Lcom/google/android/filament/Texture$InternalFormat;
+
+.field public static final enum SRGB8_ALPHA8_ASTC_8x8:Lcom/google/android/filament/Texture$InternalFormat;
 
 .field public static final enum STENCIL8:Lcom/google/android/filament/Texture$InternalFormat;
 
@@ -168,7 +232,7 @@
 .method static constructor <clinit>()V
     .locals 16
 
-    .line 177
+    .line 178
     new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
 
     const-string v1, "R8"
@@ -219,7 +283,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->STENCIL8:Lcom/google/android/filament/Texture$InternalFormat;
 
-    .line 180
+    .line 181
     new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
 
     const-string v1, "R16F"
@@ -250,7 +314,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->R16I:Lcom/google/android/filament/Texture$InternalFormat;
 
-    .line 181
+    .line 182
     new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
 
     const-string v1, "RG8"
@@ -291,7 +355,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->RG8I:Lcom/google/android/filament/Texture$InternalFormat;
 
-    .line 182
+    .line 183
     new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
 
     const-string v1, "RGB565"
@@ -322,7 +386,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->RGB5_A1:Lcom/google/android/filament/Texture$InternalFormat;
 
-    .line 183
+    .line 184
     new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
 
     const-string v1, "RGBA4"
@@ -333,7 +397,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->RGBA4:Lcom/google/android/filament/Texture$InternalFormat;
 
-    .line 184
+    .line 185
     new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
 
     const-string v1, "DEPTH16"
@@ -344,7 +408,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->DEPTH16:Lcom/google/android/filament/Texture$InternalFormat;
 
-    .line 187
+    .line 188
     new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
 
     const-string v1, "RGB8"
@@ -395,7 +459,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->RGB8I:Lcom/google/android/filament/Texture$InternalFormat;
 
-    .line 188
+    .line 189
     new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
 
     const-string v1, "DEPTH24"
@@ -406,7 +470,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->DEPTH24:Lcom/google/android/filament/Texture$InternalFormat;
 
-    .line 191
+    .line 192
     new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
 
     const-string v1, "R32F"
@@ -437,7 +501,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->R32I:Lcom/google/android/filament/Texture$InternalFormat;
 
-    .line 192
+    .line 193
     new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
 
     const-string v1, "RG16F"
@@ -468,7 +532,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->RG16I:Lcom/google/android/filament/Texture$InternalFormat;
 
-    .line 193
+    .line 194
     new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
 
     const-string v1, "R11F_G11F_B10F"
@@ -479,7 +543,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->R11F_G11F_B10F:Lcom/google/android/filament/Texture$InternalFormat;
 
-    .line 194
+    .line 195
     new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
 
     const-string v1, "RGBA8"
@@ -510,7 +574,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->RGBA8_SNORM:Lcom/google/android/filament/Texture$InternalFormat;
 
-    .line 195
+    .line 196
     new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
 
     const-string v1, "UNUSED"
@@ -521,7 +585,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->UNUSED:Lcom/google/android/filament/Texture$InternalFormat;
 
-    .line 196
+    .line 197
     new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
 
     const-string v1, "RGB10_A2"
@@ -552,7 +616,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->RGBA8I:Lcom/google/android/filament/Texture$InternalFormat;
 
-    .line 197
+    .line 198
     new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
 
     const-string v1, "DEPTH32F"
@@ -583,7 +647,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->DEPTH32F_STENCIL8:Lcom/google/android/filament/Texture$InternalFormat;
 
-    .line 200
+    .line 201
     new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
 
     const-string v1, "RGB16F"
@@ -614,7 +678,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->RGB16I:Lcom/google/android/filament/Texture$InternalFormat;
 
-    .line 203
+    .line 204
     new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
 
     const-string v1, "RG32F"
@@ -645,7 +709,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->RG32I:Lcom/google/android/filament/Texture$InternalFormat;
 
-    .line 204
+    .line 205
     new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
 
     const-string v1, "RGBA16F"
@@ -676,7 +740,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->RGBA16I:Lcom/google/android/filament/Texture$InternalFormat;
 
-    .line 207
+    .line 208
     new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
 
     const-string v1, "RGB32F"
@@ -707,7 +771,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->RGB32I:Lcom/google/android/filament/Texture$InternalFormat;
 
-    .line 210
+    .line 211
     new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
 
     const-string v1, "RGBA32F"
@@ -738,7 +802,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->RGBA32I:Lcom/google/android/filament/Texture$InternalFormat;
 
-    .line 215
+    .line 216
     new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
 
     const-string v1, "EAC_R11"
@@ -779,7 +843,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->EAC_RG11_SIGNED:Lcom/google/android/filament/Texture$InternalFormat;
 
-    .line 216
+    .line 217
     new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
 
     const-string v1, "ETC2_RGB8"
@@ -800,7 +864,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->ETC2_SRGB8:Lcom/google/android/filament/Texture$InternalFormat;
 
-    .line 217
+    .line 218
     new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
 
     const-string v1, "ETC2_RGB8_A1"
@@ -821,7 +885,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->ETC2_SRGB8_A1:Lcom/google/android/filament/Texture$InternalFormat;
 
-    .line 218
+    .line 219
     new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
 
     const-string v1, "ETC2_EAC_RGBA8"
@@ -842,7 +906,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->ETC2_EAC_SRGBA8:Lcom/google/android/filament/Texture$InternalFormat;
 
-    .line 221
+    .line 222
     new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
 
     const-string v1, "DXT1_RGB"
@@ -883,9 +947,358 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->DXT5_RGBA:Lcom/google/android/filament/Texture$InternalFormat;
 
-    const/16 v0, 0x45
+    .line 223
+    new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
 
-    .line 175
+    const-string v1, "DXT1_SRGB"
+
+    const/16 v15, 0x45
+
+    invoke-direct {v0, v1, v15}, Lcom/google/android/filament/Texture$InternalFormat;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->DXT1_SRGB:Lcom/google/android/filament/Texture$InternalFormat;
+
+    new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
+
+    const-string v1, "DXT1_SRGBA"
+
+    const/16 v15, 0x46
+
+    invoke-direct {v0, v1, v15}, Lcom/google/android/filament/Texture$InternalFormat;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->DXT1_SRGBA:Lcom/google/android/filament/Texture$InternalFormat;
+
+    new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
+
+    const-string v1, "DXT3_SRGBA"
+
+    const/16 v15, 0x47
+
+    invoke-direct {v0, v1, v15}, Lcom/google/android/filament/Texture$InternalFormat;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->DXT3_SRGBA:Lcom/google/android/filament/Texture$InternalFormat;
+
+    new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
+
+    const-string v1, "DXT5_SRGBA"
+
+    const/16 v15, 0x48
+
+    invoke-direct {v0, v1, v15}, Lcom/google/android/filament/Texture$InternalFormat;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->DXT5_SRGBA:Lcom/google/android/filament/Texture$InternalFormat;
+
+    .line 226
+    new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
+
+    const-string v1, "RGBA_ASTC_4x4"
+
+    const/16 v15, 0x49
+
+    invoke-direct {v0, v1, v15}, Lcom/google/android/filament/Texture$InternalFormat;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->RGBA_ASTC_4x4:Lcom/google/android/filament/Texture$InternalFormat;
+
+    .line 227
+    new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
+
+    const-string v1, "RGBA_ASTC_5x4"
+
+    const/16 v15, 0x4a
+
+    invoke-direct {v0, v1, v15}, Lcom/google/android/filament/Texture$InternalFormat;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->RGBA_ASTC_5x4:Lcom/google/android/filament/Texture$InternalFormat;
+
+    .line 228
+    new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
+
+    const-string v1, "RGBA_ASTC_5x5"
+
+    const/16 v15, 0x4b
+
+    invoke-direct {v0, v1, v15}, Lcom/google/android/filament/Texture$InternalFormat;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->RGBA_ASTC_5x5:Lcom/google/android/filament/Texture$InternalFormat;
+
+    .line 229
+    new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
+
+    const-string v1, "RGBA_ASTC_6x5"
+
+    const/16 v15, 0x4c
+
+    invoke-direct {v0, v1, v15}, Lcom/google/android/filament/Texture$InternalFormat;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->RGBA_ASTC_6x5:Lcom/google/android/filament/Texture$InternalFormat;
+
+    .line 230
+    new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
+
+    const-string v1, "RGBA_ASTC_6x6"
+
+    const/16 v15, 0x4d
+
+    invoke-direct {v0, v1, v15}, Lcom/google/android/filament/Texture$InternalFormat;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->RGBA_ASTC_6x6:Lcom/google/android/filament/Texture$InternalFormat;
+
+    .line 231
+    new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
+
+    const-string v1, "RGBA_ASTC_8x5"
+
+    const/16 v15, 0x4e
+
+    invoke-direct {v0, v1, v15}, Lcom/google/android/filament/Texture$InternalFormat;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->RGBA_ASTC_8x5:Lcom/google/android/filament/Texture$InternalFormat;
+
+    .line 232
+    new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
+
+    const-string v1, "RGBA_ASTC_8x6"
+
+    const/16 v15, 0x4f
+
+    invoke-direct {v0, v1, v15}, Lcom/google/android/filament/Texture$InternalFormat;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->RGBA_ASTC_8x6:Lcom/google/android/filament/Texture$InternalFormat;
+
+    .line 233
+    new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
+
+    const-string v1, "RGBA_ASTC_8x8"
+
+    const/16 v15, 0x50
+
+    invoke-direct {v0, v1, v15}, Lcom/google/android/filament/Texture$InternalFormat;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->RGBA_ASTC_8x8:Lcom/google/android/filament/Texture$InternalFormat;
+
+    .line 234
+    new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
+
+    const-string v1, "RGBA_ASTC_10x5"
+
+    const/16 v15, 0x51
+
+    invoke-direct {v0, v1, v15}, Lcom/google/android/filament/Texture$InternalFormat;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->RGBA_ASTC_10x5:Lcom/google/android/filament/Texture$InternalFormat;
+
+    .line 235
+    new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
+
+    const-string v1, "RGBA_ASTC_10x6"
+
+    const/16 v15, 0x52
+
+    invoke-direct {v0, v1, v15}, Lcom/google/android/filament/Texture$InternalFormat;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->RGBA_ASTC_10x6:Lcom/google/android/filament/Texture$InternalFormat;
+
+    .line 236
+    new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
+
+    const-string v1, "RGBA_ASTC_10x8"
+
+    const/16 v15, 0x53
+
+    invoke-direct {v0, v1, v15}, Lcom/google/android/filament/Texture$InternalFormat;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->RGBA_ASTC_10x8:Lcom/google/android/filament/Texture$InternalFormat;
+
+    .line 237
+    new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
+
+    const-string v1, "RGBA_ASTC_10x10"
+
+    const/16 v15, 0x54
+
+    invoke-direct {v0, v1, v15}, Lcom/google/android/filament/Texture$InternalFormat;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->RGBA_ASTC_10x10:Lcom/google/android/filament/Texture$InternalFormat;
+
+    .line 238
+    new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
+
+    const-string v1, "RGBA_ASTC_12x10"
+
+    const/16 v15, 0x55
+
+    invoke-direct {v0, v1, v15}, Lcom/google/android/filament/Texture$InternalFormat;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->RGBA_ASTC_12x10:Lcom/google/android/filament/Texture$InternalFormat;
+
+    .line 239
+    new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
+
+    const-string v1, "RGBA_ASTC_12x12"
+
+    const/16 v15, 0x56
+
+    invoke-direct {v0, v1, v15}, Lcom/google/android/filament/Texture$InternalFormat;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->RGBA_ASTC_12x12:Lcom/google/android/filament/Texture$InternalFormat;
+
+    .line 240
+    new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
+
+    const-string v1, "SRGB8_ALPHA8_ASTC_4x4"
+
+    const/16 v15, 0x57
+
+    invoke-direct {v0, v1, v15}, Lcom/google/android/filament/Texture$InternalFormat;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->SRGB8_ALPHA8_ASTC_4x4:Lcom/google/android/filament/Texture$InternalFormat;
+
+    .line 241
+    new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
+
+    const-string v1, "SRGB8_ALPHA8_ASTC_5x4"
+
+    const/16 v15, 0x58
+
+    invoke-direct {v0, v1, v15}, Lcom/google/android/filament/Texture$InternalFormat;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->SRGB8_ALPHA8_ASTC_5x4:Lcom/google/android/filament/Texture$InternalFormat;
+
+    .line 242
+    new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
+
+    const-string v1, "SRGB8_ALPHA8_ASTC_5x5"
+
+    const/16 v15, 0x59
+
+    invoke-direct {v0, v1, v15}, Lcom/google/android/filament/Texture$InternalFormat;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->SRGB8_ALPHA8_ASTC_5x5:Lcom/google/android/filament/Texture$InternalFormat;
+
+    .line 243
+    new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
+
+    const-string v1, "SRGB8_ALPHA8_ASTC_6x5"
+
+    const/16 v15, 0x5a
+
+    invoke-direct {v0, v1, v15}, Lcom/google/android/filament/Texture$InternalFormat;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->SRGB8_ALPHA8_ASTC_6x5:Lcom/google/android/filament/Texture$InternalFormat;
+
+    .line 244
+    new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
+
+    const-string v1, "SRGB8_ALPHA8_ASTC_6x6"
+
+    const/16 v15, 0x5b
+
+    invoke-direct {v0, v1, v15}, Lcom/google/android/filament/Texture$InternalFormat;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->SRGB8_ALPHA8_ASTC_6x6:Lcom/google/android/filament/Texture$InternalFormat;
+
+    .line 245
+    new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
+
+    const-string v1, "SRGB8_ALPHA8_ASTC_8x5"
+
+    const/16 v15, 0x5c
+
+    invoke-direct {v0, v1, v15}, Lcom/google/android/filament/Texture$InternalFormat;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->SRGB8_ALPHA8_ASTC_8x5:Lcom/google/android/filament/Texture$InternalFormat;
+
+    .line 246
+    new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
+
+    const-string v1, "SRGB8_ALPHA8_ASTC_8x6"
+
+    const/16 v15, 0x5d
+
+    invoke-direct {v0, v1, v15}, Lcom/google/android/filament/Texture$InternalFormat;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->SRGB8_ALPHA8_ASTC_8x6:Lcom/google/android/filament/Texture$InternalFormat;
+
+    .line 247
+    new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
+
+    const-string v1, "SRGB8_ALPHA8_ASTC_8x8"
+
+    const/16 v15, 0x5e
+
+    invoke-direct {v0, v1, v15}, Lcom/google/android/filament/Texture$InternalFormat;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->SRGB8_ALPHA8_ASTC_8x8:Lcom/google/android/filament/Texture$InternalFormat;
+
+    .line 248
+    new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
+
+    const-string v1, "SRGB8_ALPHA8_ASTC_10x5"
+
+    const/16 v15, 0x5f
+
+    invoke-direct {v0, v1, v15}, Lcom/google/android/filament/Texture$InternalFormat;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->SRGB8_ALPHA8_ASTC_10x5:Lcom/google/android/filament/Texture$InternalFormat;
+
+    .line 249
+    new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
+
+    const-string v1, "SRGB8_ALPHA8_ASTC_10x6"
+
+    const/16 v15, 0x60
+
+    invoke-direct {v0, v1, v15}, Lcom/google/android/filament/Texture$InternalFormat;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->SRGB8_ALPHA8_ASTC_10x6:Lcom/google/android/filament/Texture$InternalFormat;
+
+    .line 250
+    new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
+
+    const-string v1, "SRGB8_ALPHA8_ASTC_10x8"
+
+    const/16 v15, 0x61
+
+    invoke-direct {v0, v1, v15}, Lcom/google/android/filament/Texture$InternalFormat;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->SRGB8_ALPHA8_ASTC_10x8:Lcom/google/android/filament/Texture$InternalFormat;
+
+    .line 251
+    new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
+
+    const-string v1, "SRGB8_ALPHA8_ASTC_10x10"
+
+    const/16 v15, 0x62
+
+    invoke-direct {v0, v1, v15}, Lcom/google/android/filament/Texture$InternalFormat;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->SRGB8_ALPHA8_ASTC_10x10:Lcom/google/android/filament/Texture$InternalFormat;
+
+    .line 252
+    new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
+
+    const-string v1, "SRGB8_ALPHA8_ASTC_12x10"
+
+    const/16 v15, 0x63
+
+    invoke-direct {v0, v1, v15}, Lcom/google/android/filament/Texture$InternalFormat;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->SRGB8_ALPHA8_ASTC_12x10:Lcom/google/android/filament/Texture$InternalFormat;
+
+    .line 253
+    new-instance v0, Lcom/google/android/filament/Texture$InternalFormat;
+
+    const-string v1, "SRGB8_ALPHA8_ASTC_12x12"
+
+    const/16 v15, 0x64
+
+    invoke-direct {v0, v1, v15}, Lcom/google/android/filament/Texture$InternalFormat;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->SRGB8_ALPHA8_ASTC_12x12:Lcom/google/android/filament/Texture$InternalFormat;
+
+    const/16 v0, 0x65
+
+    .line 176
     new-array v0, v0, [Lcom/google/android/filament/Texture$InternalFormat;
 
     sget-object v1, Lcom/google/android/filament/Texture$InternalFormat;->R8:Lcom/google/android/filament/Texture$InternalFormat;
@@ -1276,6 +1689,198 @@
 
     aput-object v1, v0, v2
 
+    sget-object v1, Lcom/google/android/filament/Texture$InternalFormat;->DXT1_SRGB:Lcom/google/android/filament/Texture$InternalFormat;
+
+    const/16 v2, 0x45
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcom/google/android/filament/Texture$InternalFormat;->DXT1_SRGBA:Lcom/google/android/filament/Texture$InternalFormat;
+
+    const/16 v2, 0x46
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcom/google/android/filament/Texture$InternalFormat;->DXT3_SRGBA:Lcom/google/android/filament/Texture$InternalFormat;
+
+    const/16 v2, 0x47
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcom/google/android/filament/Texture$InternalFormat;->DXT5_SRGBA:Lcom/google/android/filament/Texture$InternalFormat;
+
+    const/16 v2, 0x48
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcom/google/android/filament/Texture$InternalFormat;->RGBA_ASTC_4x4:Lcom/google/android/filament/Texture$InternalFormat;
+
+    const/16 v2, 0x49
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcom/google/android/filament/Texture$InternalFormat;->RGBA_ASTC_5x4:Lcom/google/android/filament/Texture$InternalFormat;
+
+    const/16 v2, 0x4a
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcom/google/android/filament/Texture$InternalFormat;->RGBA_ASTC_5x5:Lcom/google/android/filament/Texture$InternalFormat;
+
+    const/16 v2, 0x4b
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcom/google/android/filament/Texture$InternalFormat;->RGBA_ASTC_6x5:Lcom/google/android/filament/Texture$InternalFormat;
+
+    const/16 v2, 0x4c
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcom/google/android/filament/Texture$InternalFormat;->RGBA_ASTC_6x6:Lcom/google/android/filament/Texture$InternalFormat;
+
+    const/16 v2, 0x4d
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcom/google/android/filament/Texture$InternalFormat;->RGBA_ASTC_8x5:Lcom/google/android/filament/Texture$InternalFormat;
+
+    const/16 v2, 0x4e
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcom/google/android/filament/Texture$InternalFormat;->RGBA_ASTC_8x6:Lcom/google/android/filament/Texture$InternalFormat;
+
+    const/16 v2, 0x4f
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcom/google/android/filament/Texture$InternalFormat;->RGBA_ASTC_8x8:Lcom/google/android/filament/Texture$InternalFormat;
+
+    const/16 v2, 0x50
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcom/google/android/filament/Texture$InternalFormat;->RGBA_ASTC_10x5:Lcom/google/android/filament/Texture$InternalFormat;
+
+    const/16 v2, 0x51
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcom/google/android/filament/Texture$InternalFormat;->RGBA_ASTC_10x6:Lcom/google/android/filament/Texture$InternalFormat;
+
+    const/16 v2, 0x52
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcom/google/android/filament/Texture$InternalFormat;->RGBA_ASTC_10x8:Lcom/google/android/filament/Texture$InternalFormat;
+
+    const/16 v2, 0x53
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcom/google/android/filament/Texture$InternalFormat;->RGBA_ASTC_10x10:Lcom/google/android/filament/Texture$InternalFormat;
+
+    const/16 v2, 0x54
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcom/google/android/filament/Texture$InternalFormat;->RGBA_ASTC_12x10:Lcom/google/android/filament/Texture$InternalFormat;
+
+    const/16 v2, 0x55
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcom/google/android/filament/Texture$InternalFormat;->RGBA_ASTC_12x12:Lcom/google/android/filament/Texture$InternalFormat;
+
+    const/16 v2, 0x56
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcom/google/android/filament/Texture$InternalFormat;->SRGB8_ALPHA8_ASTC_4x4:Lcom/google/android/filament/Texture$InternalFormat;
+
+    const/16 v2, 0x57
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcom/google/android/filament/Texture$InternalFormat;->SRGB8_ALPHA8_ASTC_5x4:Lcom/google/android/filament/Texture$InternalFormat;
+
+    const/16 v2, 0x58
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcom/google/android/filament/Texture$InternalFormat;->SRGB8_ALPHA8_ASTC_5x5:Lcom/google/android/filament/Texture$InternalFormat;
+
+    const/16 v2, 0x59
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcom/google/android/filament/Texture$InternalFormat;->SRGB8_ALPHA8_ASTC_6x5:Lcom/google/android/filament/Texture$InternalFormat;
+
+    const/16 v2, 0x5a
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcom/google/android/filament/Texture$InternalFormat;->SRGB8_ALPHA8_ASTC_6x6:Lcom/google/android/filament/Texture$InternalFormat;
+
+    const/16 v2, 0x5b
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcom/google/android/filament/Texture$InternalFormat;->SRGB8_ALPHA8_ASTC_8x5:Lcom/google/android/filament/Texture$InternalFormat;
+
+    const/16 v2, 0x5c
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcom/google/android/filament/Texture$InternalFormat;->SRGB8_ALPHA8_ASTC_8x6:Lcom/google/android/filament/Texture$InternalFormat;
+
+    const/16 v2, 0x5d
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcom/google/android/filament/Texture$InternalFormat;->SRGB8_ALPHA8_ASTC_8x8:Lcom/google/android/filament/Texture$InternalFormat;
+
+    const/16 v2, 0x5e
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcom/google/android/filament/Texture$InternalFormat;->SRGB8_ALPHA8_ASTC_10x5:Lcom/google/android/filament/Texture$InternalFormat;
+
+    const/16 v2, 0x5f
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcom/google/android/filament/Texture$InternalFormat;->SRGB8_ALPHA8_ASTC_10x6:Lcom/google/android/filament/Texture$InternalFormat;
+
+    const/16 v2, 0x60
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcom/google/android/filament/Texture$InternalFormat;->SRGB8_ALPHA8_ASTC_10x8:Lcom/google/android/filament/Texture$InternalFormat;
+
+    const/16 v2, 0x61
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcom/google/android/filament/Texture$InternalFormat;->SRGB8_ALPHA8_ASTC_10x10:Lcom/google/android/filament/Texture$InternalFormat;
+
+    const/16 v2, 0x62
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcom/google/android/filament/Texture$InternalFormat;->SRGB8_ALPHA8_ASTC_12x10:Lcom/google/android/filament/Texture$InternalFormat;
+
+    const/16 v2, 0x63
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcom/google/android/filament/Texture$InternalFormat;->SRGB8_ALPHA8_ASTC_12x12:Lcom/google/android/filament/Texture$InternalFormat;
+
+    const/16 v2, 0x64
+
+    aput-object v1, v0, v2
+
     sput-object v0, Lcom/google/android/filament/Texture$InternalFormat;->$VALUES:[Lcom/google/android/filament/Texture$InternalFormat;
 
     return-void
@@ -1289,7 +1894,7 @@
         }
     .end annotation
 
-    .line 175
+    .line 176
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -1298,7 +1903,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/android/filament/Texture$InternalFormat;
     .locals 1
 
-    .line 175
+    .line 176
     const-class v0, Lcom/google/android/filament/Texture$InternalFormat;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -1313,7 +1918,7 @@
 .method public static values()[Lcom/google/android/filament/Texture$InternalFormat;
     .locals 1
 
-    .line 175
+    .line 176
     sget-object v0, Lcom/google/android/filament/Texture$InternalFormat;->$VALUES:[Lcom/google/android/filament/Texture$InternalFormat;
 
     invoke-virtual {v0}, [Lcom/google/android/filament/Texture$InternalFormat;->clone()Ljava/lang/Object;

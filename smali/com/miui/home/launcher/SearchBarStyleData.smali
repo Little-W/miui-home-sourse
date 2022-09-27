@@ -448,7 +448,7 @@
 
     const-string v0, "SearchBarStyleData"
 
-    const-string/jumbo v1, "user setting in lastest data"
+    const-string v1, "user setting in lastest data"
 
     .line 249
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
@@ -1422,7 +1422,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f0705c3
+    const v2, 0x7f07037a
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -1680,7 +1680,7 @@
 .method public getLeftIconDrawable(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    .line 365
+    .line 361
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
@@ -1707,7 +1707,7 @@
     :catch_0
     move-exception p1
 
-    .line 367
+    .line 363
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
     const/4 p1, 0x0
@@ -1718,7 +1718,7 @@
 .method public getRightIconDrawable(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    .line 374
+    .line 370
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
@@ -1745,31 +1745,12 @@
     :catch_0
     move-exception p1
 
-    .line 376
+    .line 372
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
     const/4 p1, 0x0
 
     return-object p1
-.end method
-
-.method public hasStyleData()Z
-    .locals 1
-
-    .line 360
-    iget-object v0, p0, Lcom/miui/home/launcher/SearchBarStyleData;->mStyle:Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    return v0
 .end method
 
 .method public initData(Z)V
@@ -1821,7 +1802,7 @@
 .method public isSupportBrowser()Z
     .locals 1
 
-    .line 382
+    .line 378
     iget-boolean v0, p0, Lcom/miui/home/launcher/SearchBarStyleData;->mIsSupportBrowser:Z
 
     return v0

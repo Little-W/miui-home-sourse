@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="animation_rate_entries">
-        <item>优雅</item>
-        <item>均衡</item>
-        <item>快速</item>
-    </string-array>
     <string-array name="editing_mode_entries">
         <item>修改壁纸</item>
         <item>添加小部件</item>

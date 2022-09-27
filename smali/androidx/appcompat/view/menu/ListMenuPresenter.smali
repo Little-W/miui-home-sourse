@@ -22,8 +22,6 @@
 
 .field mContext:Landroid/content/Context;
 
-.field private mId:I
-
 .field mInflater:Landroid/view/LayoutInflater;
 
 .field mItemIndexOffset:I
@@ -122,15 +120,6 @@
     iget-object v0, p0, Landroidx/appcompat/view/menu/ListMenuPresenter;->mAdapter:Landroidx/appcompat/view/menu/ListMenuPresenter$MenuAdapter;
 
     return-object v0
-.end method
-
-.method public getId()I
-    .locals 1
-
-    .line 212
-    iget v0, p0, Landroidx/appcompat/view/menu/ListMenuPresenter;->mId:I
-
-    return v0
 .end method
 
 .method public getMenuView(Landroid/view/ViewGroup;)Landroidx/appcompat/view/menu/MenuView;
@@ -297,41 +286,6 @@
     return-void
 .end method
 
-.method public onRestoreInstanceState(Landroid/os/Parcelable;)V
-    .locals 0
-
-    .line 228
-    check-cast p1, Landroid/os/Bundle;
-
-    invoke-virtual {p0, p1}, Landroidx/appcompat/view/menu/ListMenuPresenter;->restoreHierarchyState(Landroid/os/Bundle;)V
-
-    return-void
-.end method
-
-.method public onSaveInstanceState()Landroid/os/Parcelable;
-    .locals 1
-
-    .line 217
-    iget-object v0, p0, Landroidx/appcompat/view/menu/ListMenuPresenter;->mMenuView:Landroidx/appcompat/view/menu/ExpandedMenuView;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    return-object v0
-
-    .line 221
-    :cond_0
-    new-instance v0, Landroid/os/Bundle;
-
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
-
-    .line 222
-    invoke-virtual {p0, v0}, Landroidx/appcompat/view/menu/ListMenuPresenter;->saveHierarchyState(Landroid/os/Bundle;)V
-
-    return-object v0
-.end method
-
 .method public onSubMenuSelected(Landroidx/appcompat/view/menu/SubMenuBuilder;)Z
     .locals 2
 
@@ -368,52 +322,6 @@
     const/4 p1, 0x1
 
     return p1
-.end method
-
-.method public restoreHierarchyState(Landroid/os/Bundle;)V
-    .locals 1
-
-    const-string v0, "android:menu:list"
-
-    .line 200
-    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getSparseParcelableArray(Ljava/lang/String;)Landroid/util/SparseArray;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    .line 202
-    iget-object v0, p0, Landroidx/appcompat/view/menu/ListMenuPresenter;->mMenuView:Landroidx/appcompat/view/menu/ExpandedMenuView;
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->restoreHierarchyState(Landroid/util/SparseArray;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public saveHierarchyState(Landroid/os/Bundle;)V
-    .locals 2
-
-    .line 192
-    new-instance v0, Landroid/util/SparseArray;
-
-    invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
-
-    .line 193
-    iget-object v1, p0, Landroidx/appcompat/view/menu/ListMenuPresenter;->mMenuView:Landroidx/appcompat/view/menu/ExpandedMenuView;
-
-    if-eqz v1, :cond_0
-
-    .line 194
-    invoke-virtual {v1, v0}, Landroid/view/View;->saveHierarchyState(Landroid/util/SparseArray;)V
-
-    :cond_0
-    const-string v1, "android:menu:list"
-
-    .line 196
-    invoke-virtual {p1, v1, v0}, Landroid/os/Bundle;->putSparseParcelableArray(Ljava/lang/String;Landroid/util/SparseArray;)V
-
-    return-void
 .end method
 
 .method public setCallback(Landroidx/appcompat/view/menu/MenuPresenter$Callback;)V

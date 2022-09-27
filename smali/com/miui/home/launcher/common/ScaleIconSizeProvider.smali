@@ -42,7 +42,7 @@
 .method private resetContentRation()V
     .locals 2
 
-    .line 69
+    .line 59
     iget-object v0, p0, Lcom/miui/home/launcher/common/ScaleIconSizeProvider;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->getShortcutIconContentRation(Landroid/content/Context;)F
@@ -51,7 +51,7 @@
 
     iput v0, p0, Lcom/miui/home/launcher/common/ScaleIconSizeProvider;->mIconContentRation:F
 
-    .line 70
+    .line 60
     iget v0, p0, Lcom/miui/home/launcher/common/ScaleIconSizeProvider;->mIconContentRation:F
 
     const/4 v1, 0x0
@@ -62,7 +62,7 @@
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 71
+    .line 61
     iput v0, p0, Lcom/miui/home/launcher/common/ScaleIconSizeProvider;->mIconContentRation:F
 
     :cond_0
@@ -74,7 +74,7 @@
 .method public enableAndResetCache()V
     .locals 0
 
-    .line 65
+    .line 55
     invoke-direct {p0}, Lcom/miui/home/launcher/common/ScaleIconSizeProvider;->resetContentRation()V
 
     return-void
@@ -171,48 +171,6 @@
     iget-object v0, p0, Lcom/miui/home/launcher/common/ScaleIconSizeProvider;->mThemeCompat:Lcom/miui/home/launcher/compat/LauncherThemeCompat;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/compat/LauncherThemeCompat;->getLauncherIconWidth()I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    iget v1, p0, Lcom/miui/home/launcher/common/ScaleIconSizeProvider;->mScale:F
-
-    mul-float/2addr v0, v1
-
-    float-to-int v0, v0
-
-    return v0
-.end method
-
-.method public getLauncherPairIconHeight()I
-    .locals 2
-
-    .line 61
-    iget-object v0, p0, Lcom/miui/home/launcher/common/ScaleIconSizeProvider;->mThemeCompat:Lcom/miui/home/launcher/compat/LauncherThemeCompat;
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/compat/LauncherThemeCompat;->getLauncherPairIconHeight()I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    iget v1, p0, Lcom/miui/home/launcher/common/ScaleIconSizeProvider;->mScale:F
-
-    mul-float/2addr v0, v1
-
-    float-to-int v0, v0
-
-    return v0
-.end method
-
-.method public getLauncherPairIconWidth()I
-    .locals 2
-
-    .line 56
-    iget-object v0, p0, Lcom/miui/home/launcher/common/ScaleIconSizeProvider;->mThemeCompat:Lcom/miui/home/launcher/compat/LauncherThemeCompat;
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/compat/LauncherThemeCompat;->getLauncherPairIconWidth()I
 
     move-result v0
 

@@ -8,6 +8,14 @@
     <dimen name="date_picker_layout_padding">29.099976dip</dimen>
     <dimen name="date_picker_lunar_text_size">17.449982sp</dimen>
     <dimen name="edit_text_clear_icon_padding">14.279999dip</dimen>
+    <dimen name="menu_background_radius">2.899994dip</dimen>
+    <dimen name="menu_icon_margin_end">19.599976dip</dimen>
+    <dimen name="menu_item_height_double">64.79999dip</dimen>
+    <dimen name="menu_item_height_multi">61.099976dip</dimen>
+    <dimen name="menu_item_height_one">75.599976dip</dimen>
+    <dimen name="menu_item_padding_left">29.0dip</dimen>
+    <dimen name="menu_item_width">181.79999dip</dimen>
+    <dimen name="menu_text_size">16.0sp</dimen>
     <dimen name="miuix_appcompat_action_bar_default_height">58.19998dip</dimen>
     <dimen name="miuix_appcompat_action_bar_floating_height">58.19998dip</dimen>
     <dimen name="miuix_appcompat_action_bar_horizontal_padding_end">17.5dip</dimen>
@@ -40,7 +48,7 @@
     <dimen name="miuix_appcompat_action_button_height">27.0dip</dimen>
     <dimen name="miuix_appcompat_action_button_main_height">58.899994dip</dimen>
     <dimen name="miuix_appcompat_action_button_main_width">58.899994dip</dimen>
-    <dimen name="miuix_appcompat_action_button_max_width">152.72998dip</dimen>
+    <dimen name="miuix_appcompat_action_button_max_width">120.0dip</dimen>
     <dimen name="miuix_appcompat_action_button_min_width">69.0dip</dimen>
     <dimen name="miuix_appcompat_action_button_width">27.269989dip</dimen>
     <dimen name="miuix_appcompat_action_menu_item_view_padding_horizontal">3.269989dip</dimen>

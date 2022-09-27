@@ -17,7 +17,7 @@
 .method static constructor <clinit>()V
     .locals 11
 
-    const-string/jumbo v0, "w"
+    const-string v0, "w"
 
     const-string v1, "h"
 
@@ -27,7 +27,7 @@
 
     const-string v4, "fr"
 
-    const-string/jumbo v5, "v"
+    const-string v5, "v"
 
     const-string v6, "layers"
 
@@ -54,13 +54,13 @@
 
     const-string v2, "layers"
 
-    const-string/jumbo v3, "w"
+    const-string v3, "w"
 
     const-string v4, "h"
 
     const-string v5, "p"
 
-    const-string/jumbo v6, "u"
+    const-string v6, "u"
 
     .line 137
     filled-new-array/range {v1 .. v6}, [Ljava/lang/String;

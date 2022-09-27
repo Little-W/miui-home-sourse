@@ -38,7 +38,7 @@
 .method static constructor <clinit>()V
     .locals 6
 
-    .line 82
+    .line 91
     new-instance v0, Lcom/google/android/filament/View$QualityLevel;
 
     const-string v1, "LOW"
@@ -49,7 +49,7 @@
 
     sput-object v0, Lcom/google/android/filament/View$QualityLevel;->LOW:Lcom/google/android/filament/View$QualityLevel;
 
-    .line 83
+    .line 92
     new-instance v0, Lcom/google/android/filament/View$QualityLevel;
 
     const-string v1, "MEDIUM"
@@ -60,7 +60,7 @@
 
     sput-object v0, Lcom/google/android/filament/View$QualityLevel;->MEDIUM:Lcom/google/android/filament/View$QualityLevel;
 
-    .line 84
+    .line 93
     new-instance v0, Lcom/google/android/filament/View$QualityLevel;
 
     const-string v1, "HIGH"
@@ -71,7 +71,7 @@
 
     sput-object v0, Lcom/google/android/filament/View$QualityLevel;->HIGH:Lcom/google/android/filament/View$QualityLevel;
 
-    .line 85
+    .line 94
     new-instance v0, Lcom/google/android/filament/View$QualityLevel;
 
     const-string v1, "ULTRA"
@@ -84,7 +84,7 @@
 
     const/4 v0, 0x4
 
-    .line 81
+    .line 90
     new-array v0, v0, [Lcom/google/android/filament/View$QualityLevel;
 
     sget-object v1, Lcom/google/android/filament/View$QualityLevel;->LOW:Lcom/google/android/filament/View$QualityLevel;
@@ -116,7 +116,7 @@
         }
     .end annotation
 
-    .line 81
+    .line 90
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -125,7 +125,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/android/filament/View$QualityLevel;
     .locals 1
 
-    .line 81
+    .line 90
     const-class v0, Lcom/google/android/filament/View$QualityLevel;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -140,7 +140,7 @@
 .method public static values()[Lcom/google/android/filament/View$QualityLevel;
     .locals 1
 
-    .line 81
+    .line 90
     sget-object v0, Lcom/google/android/filament/View$QualityLevel;->$VALUES:[Lcom/google/android/filament/View$QualityLevel;
 
     invoke-virtual {v0}, [Lcom/google/android/filament/View$QualityLevel;->clone()Ljava/lang/Object;

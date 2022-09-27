@@ -34,7 +34,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/allapps/BaseAllAppsContainerView;)V
     .locals 0
 
-    .line 129
+    .line 110
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/BaseAllAppsContainerView$1;->this$0:Lcom/miui/home/launcher/allapps/BaseAllAppsContainerView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,7 +47,7 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 129
+    .line 110
     check-cast p1, Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/allapps/BaseAllAppsContainerView$1;->accept(Ljava/lang/Void;)V
@@ -58,7 +58,7 @@
 .method public accept(Ljava/lang/Void;)V
     .locals 0
 
-    .line 132
+    .line 113
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/BaseAllAppsContainerView$1;->this$0:Lcom/miui/home/launcher/allapps/BaseAllAppsContainerView;
 
     iget-object p1, p1, Lcom/miui/home/launcher/allapps/BaseAllAppsContainerView;->mCategoryContainer:Lcom/miui/home/launcher/allapps/AllAppsCategoryContainer;

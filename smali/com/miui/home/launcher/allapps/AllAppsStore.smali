@@ -57,7 +57,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .line 272
+    .line 269
     invoke-static {}, Landroid/os/Process;->myUserHandle()Landroid/os/UserHandle;
 
     move-result-object v0
@@ -76,7 +76,7 @@
 
     sput-object v0, Lcom/miui/home/launcher/allapps/AllAppsStore;->PERSONAL_MATCHER:Lcom/miui/home/launcher/util/ItemInfoMatcher;
 
-    .line 273
+    .line 270
     sget-object v0, Lcom/miui/home/launcher/allapps/AllAppsStore;->PERSONAL_MATCHER:Lcom/miui/home/launcher/util/ItemInfoMatcher;
 
     invoke-static {v0}, Lcom/miui/home/launcher/util/ItemInfoMatcher;->not(Lcom/miui/home/launcher/util/ItemInfoMatcher;)Lcom/miui/home/launcher/util/ItemInfoMatcher;
@@ -144,7 +144,7 @@
         }
     .end annotation
 
-    .line 143
+    .line 140
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -162,7 +162,7 @@
 
     check-cast v0, Lcom/miui/home/launcher/AppInfo;
 
-    .line 144
+    .line 141
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/AllAppsStore;->mComponentToAppMap:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/AppInfo;->toComponentKey()Lcom/miui/home/launcher/util/ComponentKey;
@@ -180,7 +180,7 @@
 .method private findAppInfo(Ljava/lang/String;Landroid/os/UserHandle;)Lcom/miui/home/launcher/AppInfo;
     .locals 3
 
-    .line 264
+    .line 261
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/AllAppsStore;->getApps()Ljava/util/Collection;
 
     move-result-object v0
@@ -202,7 +202,7 @@
 
     check-cast v1, Lcom/miui/home/launcher/AppInfo;
 
-    .line 265
+    .line 262
     iget-object v2, v1, Lcom/miui/home/launcher/AppInfo;->componentName:Landroid/content/ComponentName;
 
     invoke-virtual {v2}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
@@ -236,14 +236,14 @@
 .method static synthetic lambda$updateMessage$1(Lcom/miui/home/launcher/AppInfo;Ljava/lang/String;Lcom/miui/home/launcher/ShortcutIcon;)V
     .locals 1
 
-    .line 230
+    .line 227
     invoke-virtual {p2}, Lcom/miui/home/launcher/ShortcutIcon;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 
     if-ne v0, p0, :cond_0
 
-    .line 231
+    .line 228
     invoke-virtual {p2, p1}, Lcom/miui/home/launcher/ShortcutIcon;->setMessageImmediately(Ljava/lang/String;)V
 
     :cond_0
@@ -253,14 +253,14 @@
 .method static synthetic lambda$updateTitleTip$0(Lcom/miui/home/launcher/AppInfo;Lcom/miui/home/launcher/ShortcutIcon;)V
     .locals 1
 
-    .line 212
+    .line 209
     invoke-virtual {p1}, Lcom/miui/home/launcher/ShortcutIcon;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 
     if-ne v0, p0, :cond_0
 
-    .line 213
+    .line 210
     invoke-virtual {p1}, Lcom/miui/home/launcher/ShortcutIcon;->updateTitleTip()V
 
     :cond_0
@@ -278,7 +278,7 @@
         }
     .end annotation
 
-    .line 169
+    .line 166
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsStore;->mUpdateListeners:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -290,7 +290,7 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 171
+    .line 168
     iget-object v2, p0, Lcom/miui/home/launcher/allapps/AllAppsStore;->mUpdateListeners:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -320,7 +320,7 @@
         }
     .end annotation
 
-    .line 162
+    .line 159
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -338,7 +338,7 @@
 
     check-cast v1, Lcom/miui/home/launcher/AppInfo;
 
-    .line 163
+    .line 160
     iget-object v2, p0, Lcom/miui/home/launcher/allapps/AllAppsStore;->mComponentToAppMap:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/AppInfo;->toComponentKey()Lcom/miui/home/launcher/util/ComponentKey;
@@ -352,7 +352,7 @@
     :cond_0
     const/4 v0, 0x2
 
-    .line 165
+    .line 162
     invoke-direct {p0, v0, p1}, Lcom/miui/home/launcher/allapps/AllAppsStore;->notifyUpdate(ILjava/util/List;)V
 
     return-void
@@ -361,7 +361,7 @@
 .method private updateAllIcons(Lcom/miui/home/launcher/allapps/AllAppsStore$IconAction;)V
     .locals 6
 
-    .line 194
+    .line 191
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsStore;->mIconContainers:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -373,7 +373,7 @@
     :goto_0
     if-ltz v0, :cond_2
 
-    .line 195
+    .line 192
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/AllAppsStore;->mIconContainers:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -382,7 +382,7 @@
 
     check-cast v1, Landroid/view/ViewGroup;
 
-    .line 196
+    .line 193
     invoke-virtual {v1}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v2
@@ -392,17 +392,17 @@
     :goto_1
     if-ge v3, v2, :cond_1
 
-    .line 199
+    .line 196
     invoke-virtual {v1, v3}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v4
 
-    .line 200
+    .line 197
     instance-of v5, v4, Lcom/miui/home/launcher/ShortcutIcon;
 
     if-eqz v5, :cond_0
 
-    .line 201
+    .line 198
     check-cast v4, Lcom/miui/home/launcher/ShortcutIcon;
 
     invoke-interface {p1, v4}, Lcom/miui/home/launcher/allapps/AllAppsStore$IconAction;->apply(Lcom/miui/home/launcher/ShortcutIcon;)V
@@ -434,12 +434,12 @@
         }
     .end annotation
 
-    .line 130
+    .line 127
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/allapps/AllAppsStore;->addOrUpdateApps(Ljava/util/List;)V
 
     const/4 v0, 0x0
 
-    .line 131
+    .line 128
     invoke-direct {p0, v0, p1}, Lcom/miui/home/launcher/allapps/AllAppsStore;->notifyUpdate(ILjava/util/List;)V
 
     return-void
@@ -448,7 +448,7 @@
 .method public addUpdateListener(Lcom/miui/home/launcher/allapps/AllAppsStore$OnUpdateListener;)V
     .locals 1
 
-    .line 176
+    .line 173
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsStore;->mUpdateListeners:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -459,14 +459,14 @@
 .method public findMarketAppInfo()Lcom/miui/home/launcher/AppInfo;
     .locals 2
 
-    .line 251
+    .line 248
     sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     if-eqz v0, :cond_1
 
     const-string v0, "com.xiaomi.mipicks"
 
-    .line 252
+    .line 249
     invoke-static {}, Landroid/os/Process;->myUserHandle()Landroid/os/UserHandle;
 
     move-result-object v1
@@ -479,7 +479,7 @@
 
     const-string v0, "com.android.vending"
 
-    .line 254
+    .line 251
     invoke-static {}, Landroid/os/Process;->myUserHandle()Landroid/os/UserHandle;
 
     move-result-object v1
@@ -494,7 +494,7 @@
     :cond_1
     const-string v0, "com.xiaomi.market"
 
-    .line 258
+    .line 255
     invoke-static {}, Landroid/os/Process;->myUserHandle()Landroid/os/UserHandle;
 
     move-result-object v1
@@ -509,7 +509,7 @@
 .method public getApp(Lcom/miui/home/launcher/util/ComponentKey;)Lcom/miui/home/launcher/AppInfo;
     .locals 1
 
-    .line 105
+    .line 102
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsStore;->mComponentToAppMap:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -522,7 +522,7 @@
 .end method
 
 .method public getAppCategories()Ljava/util/Collection;
-    .locals 5
+    .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -556,7 +556,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_1
+    if-eqz v3, :cond_0
 
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -565,16 +565,6 @@
     check-cast v3, Lcom/miui/home/launcher/AppInfo;
 
     .line 82
-    invoke-virtual {v3}, Lcom/miui/home/launcher/AppInfo;->isHideApp()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_0
-
-    goto :goto_0
-
-    .line 85
-    :cond_0
     invoke-virtual {v3}, Lcom/miui/home/launcher/AppInfo;->getCategories()Ljava/util/HashSet;
 
     move-result-object v3
@@ -583,19 +573,19 @@
 
     goto :goto_0
 
-    .line 87
-    :cond_1
+    .line 84
+    :cond_0
     invoke-virtual {v1}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    :cond_2
+    :cond_1
     :goto_1
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v2
 
-    if-eqz v2, :cond_3
+    if-eqz v2, :cond_2
 
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -603,21 +593,21 @@
 
     check-cast v2, Ljava/lang/Integer;
 
-    .line 88
+    .line 85
     iget-object v3, p0, Lcom/miui/home/launcher/allapps/AllAppsStore;->mAllCategoryList:Lcom/miui/home/launcher/AllCategoryList;
 
     invoke-virtual {v3, v2}, Lcom/miui/home/launcher/AllCategoryList;->getCategory(Ljava/lang/Integer;)Lcom/miui/home/launcher/allapps/category/CategoryInfo;
 
     move-result-object v2
 
-    if-eqz v2, :cond_2
+    if-eqz v2, :cond_1
 
-    .line 90
+    .line 87
     invoke-virtual {v0, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    :cond_3
+    :cond_2
     return-object v0
 .end method
 
@@ -720,12 +710,12 @@
         }
     .end annotation
 
-    .line 109
+    .line 106
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 110
+    .line 107
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/AllAppsStore;->mComponentToAppMap:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
@@ -750,7 +740,7 @@
 
     check-cast v2, Lcom/miui/home/launcher/util/ComponentKey;
 
-    .line 111
+    .line 108
     iget-object v3, v2, Lcom/miui/home/launcher/util/ComponentKey;->componentName:Landroid/content/ComponentName;
 
     invoke-virtual {v3}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
@@ -769,14 +759,14 @@
 
     iget-object v4, p1, Lcom/miui/home/launcher/util/PackageUserKey;->mUser:Landroid/os/UserHandle;
 
-    .line 112
+    .line 109
     invoke-virtual {v3, v4}, Landroid/os/UserHandle;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 113
+    .line 110
     iget-object v3, p0, Lcom/miui/home/launcher/allapps/AllAppsStore;->mComponentToAppMap:Ljava/util/HashMap;
 
     invoke-virtual {v3, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -785,7 +775,7 @@
 
     check-cast v2, Lcom/miui/home/launcher/AppInfo;
 
-    .line 114
+    .line 111
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
@@ -808,7 +798,7 @@
         }
     .end annotation
 
-    .line 121
+    .line 118
     new-instance v0, Lcom/miui/home/launcher/util/ComponentKey;
 
     invoke-direct {v0, p1, p2}, Lcom/miui/home/launcher/util/ComponentKey;-><init>(Landroid/content/ComponentName;Landroid/os/UserHandle;)V
@@ -819,14 +809,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 123
+    .line 120
     invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p1
 
     return-object p1
 
-    .line 125
+    .line 122
     :cond_0
     new-instance v0, Lcom/miui/home/launcher/util/PackageUserKey;
 
@@ -846,7 +836,7 @@
 .method public hasWorkApps()Z
     .locals 4
 
-    .line 276
+    .line 273
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/AllAppsStore;->getApps()Ljava/util/Collection;
 
     move-result-object v0
@@ -868,7 +858,7 @@
 
     check-cast v1, Lcom/miui/home/launcher/AppInfo;
 
-    .line 277
+    .line 274
     sget-object v2, Lcom/miui/home/launcher/allapps/AllAppsStore;->WORK_MATHER:Lcom/miui/home/launcher/util/ItemInfoMatcher;
 
     const/4 v3, 0x0
@@ -894,7 +884,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 185
+    .line 182
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsStore;->mIconContainers:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -906,7 +896,7 @@
 .method public removeApps(Landroid/content/ComponentName;Landroid/os/UserHandle;)V
     .locals 2
 
-    .line 152
+    .line 149
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsStore;->mComponentToAppMap:Ljava/util/HashMap;
 
     new-instance v1, Lcom/miui/home/launcher/util/ComponentKey;
@@ -921,7 +911,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 154
+    .line 151
     invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p1
@@ -935,7 +925,7 @@
 .method public removeUpdateListener(Lcom/miui/home/launcher/allapps/AllAppsStore$OnUpdateListener;)V
     .locals 1
 
-    .line 180
+    .line 177
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsStore;->mUpdateListeners:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
@@ -954,12 +944,12 @@
         }
     .end annotation
 
-    .line 100
+    .line 97
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsStore;->mComponentToAppMap:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
-    .line 101
+    .line 98
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/allapps/AllAppsStore;->addApps(Ljava/util/List;)V
 
     return-void
@@ -968,7 +958,7 @@
 .method public unregisterIconContainer(Landroid/view/ViewGroup;)V
     .locals 1
 
-    .line 190
+    .line 187
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsStore;->mIconContainers:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
@@ -987,12 +977,12 @@
         }
     .end annotation
 
-    .line 135
+    .line 132
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/allapps/AllAppsStore;->addOrUpdateApps(Ljava/util/List;)V
 
     const/4 v0, 0x1
 
-    .line 136
+    .line 133
     invoke-direct {p0, v0, p1}, Lcom/miui/home/launcher/allapps/AllAppsStore;->notifyUpdate(ILjava/util/List;)V
 
     return-void
@@ -1001,12 +991,12 @@
 .method public updateMessage(Landroid/content/ComponentName;Ljava/lang/String;Ljava/lang/String;[BLandroid/os/UserHandle;)V
     .locals 0
 
-    .line 220
+    .line 217
     invoke-virtual {p0, p1, p5}, Lcom/miui/home/launcher/allapps/AllAppsStore;->getAppsCompat(Landroid/content/ComponentName;Landroid/os/UserHandle;)Ljava/util/List;
 
     move-result-object p1
 
-    .line 221
+    .line 218
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result p5
@@ -1015,7 +1005,7 @@
 
     const/4 p5, 0x0
 
-    .line 222
+    .line 219
     invoke-interface {p1, p5}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p1
@@ -1033,17 +1023,17 @@
 
     if-eqz p1, :cond_0
 
-    .line 227
+    .line 224
     invoke-virtual {p1}, Lcom/miui/home/launcher/AppInfo;->isHideApplicationMessage()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 228
+    .line 225
     invoke-virtual {p1, p2, p3, p4}, Lcom/miui/home/launcher/AppInfo;->setMessage(Ljava/lang/String;Ljava/lang/String;[B)V
 
-    .line 229
+    .line 226
     new-instance p3, Lcom/miui/home/launcher/allapps/-$$Lambda$AllAppsStore$Ps023ecWHe_tji3oSA4yNO-iSfM;
 
     invoke-direct {p3, p1, p2}, Lcom/miui/home/launcher/allapps/-$$Lambda$AllAppsStore$Ps023ecWHe_tji3oSA4yNO-iSfM;-><init>(Lcom/miui/home/launcher/AppInfo;Ljava/lang/String;)V
@@ -1057,7 +1047,7 @@
 .method public updateTitleTip(Lcom/miui/home/launcher/ShortcutInfo;)V
     .locals 4
 
-    .line 208
+    .line 205
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsStore;->mComponentToAppMap:Ljava/util/HashMap;
 
     new-instance v1, Lcom/miui/home/launcher/util/ComponentKey;
@@ -1080,12 +1070,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 210
+    .line 207
     iget p1, p1, Lcom/miui/home/launcher/ShortcutInfo;->itemFlags:I
 
     iput p1, v0, Lcom/miui/home/launcher/AppInfo;->itemFlags:I
 
-    .line 211
+    .line 208
     new-instance p1, Lcom/miui/home/launcher/allapps/-$$Lambda$AllAppsStore$8k3XA1NleuanxbFgETMFngar2d4;
 
     invoke-direct {p1, v0}, Lcom/miui/home/launcher/allapps/-$$Lambda$AllAppsStore$8k3XA1NleuanxbFgETMFngar2d4;-><init>(Lcom/miui/home/launcher/AppInfo;)V

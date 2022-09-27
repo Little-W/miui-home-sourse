@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="animation_rate_entries">
-        <item>रिलॅक्स्ड</item>
-        <item>संतुलीत</item>
-        <item>जलद</item>
-    </string-array>
     <string-array name="cell_layout_size_entries">
         <item>4x4</item>
         <item>4x5</item>
@@ -19,7 +14,7 @@
         <item>सेटिंग्ज</item>
     </string-array>
     <string-array name="gadget_weather_image">
-        <item>स्वच्छ</item>
+        <item>निरभ्र</item>
         <item>ढगाळ</item>
         <item>अस्पष्ट</item>
         <item>धुकट</item>

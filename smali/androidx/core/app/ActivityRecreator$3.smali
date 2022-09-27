@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/core/app/ActivityRecreator;->queueOnStopIfNecessary(Ljava/lang/Object;ILandroid/app/Activity;)Z
+    value = Landroidx/core/app/ActivityRecreator;->queueOnStopIfNecessary(Ljava/lang/Object;Landroid/app/Activity;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,7 +27,7 @@
 .method constructor <init>(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
-    .line 269
+    .line 252
     iput-object p1, p0, Landroidx/core/app/ActivityRecreator$3;->val$activityThread:Ljava/lang/Object;
 
     iput-object p2, p0, Landroidx/core/app/ActivityRecreator$3;->val$token:Ljava/lang/Object;
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 7
 
-    .line 273
+    .line 256
     :try_start_0
     sget-object v0, Landroidx/core/app/ActivityRecreator;->performStopActivity3ParamsMethod:Ljava/lang/reflect/Method;
 
@@ -54,7 +54,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 274
+    .line 257
     sget-object v0, Landroidx/core/app/ActivityRecreator;->performStopActivity3ParamsMethod:Ljava/lang/reflect/Method;
 
     iget-object v4, p0, Landroidx/core/app/ActivityRecreator$3;->val$activityThread:Ljava/lang/Object;
@@ -67,7 +67,7 @@
 
     aput-object v6, v5, v3
 
-    .line 275
+    .line 258
     invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v3
@@ -78,12 +78,12 @@
 
     aput-object v1, v5, v2
 
-    .line 274
+    .line 257
     invoke-virtual {v0, v4, v5}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
-    .line 277
+    .line 260
     :cond_0
     sget-object v0, Landroidx/core/app/ActivityRecreator;->performStopActivity2ParamsMethod:Ljava/lang/reflect/Method;
 
@@ -95,14 +95,14 @@
 
     aput-object v5, v2, v3
 
-    .line 278
+    .line 261
     invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v3
 
     aput-object v3, v2, v1
 
-    .line 277
+    .line 260
     invoke-virtual {v0, v4, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_1
@@ -117,7 +117,7 @@
 
     const-string v2, "Exception while invoking performStopActivity"
 
-    .line 290
+    .line 273
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
@@ -125,7 +125,7 @@
     :catch_1
     move-exception v0
 
-    .line 282
+    .line 265
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
@@ -134,14 +134,14 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 283
+    .line 266
     invoke-virtual {v0}, Ljava/lang/RuntimeException;->getMessage()Ljava/lang/String;
 
     move-result-object v1
 
     if-eqz v1, :cond_2
 
-    .line 284
+    .line 267
     invoke-virtual {v0}, Ljava/lang/RuntimeException;->getMessage()Ljava/lang/String;
 
     move-result-object v1
@@ -156,7 +156,7 @@
 
     goto :goto_0
 
-    .line 285
+    .line 268
     :cond_1
     throw v0
 

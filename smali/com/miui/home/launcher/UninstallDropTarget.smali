@@ -31,11 +31,11 @@
     .line 35
     new-instance v0, Lcom/miui/home/launcher/multiselect/TopMenuColor;
 
-    const v1, 0x7f0605cf
+    const v1, 0x7f0603a8
 
-    const v2, 0x7f0605ce
+    const v2, 0x7f0603a7
 
-    const v3, 0x7f0605cd
+    const v3, 0x7f0603a6
 
     invoke-direct {v0, v1, v1, v2, v3}, Lcom/miui/home/launcher/multiselect/TopMenuColor;-><init>(IIII)V
 
@@ -159,7 +159,7 @@
 
     invoke-virtual {p1, v0, v1}, Lcom/miui/home/launcher/UninstallDropTargetMode;->onClick(Lcom/miui/home/launcher/Launcher;Ljava/util/List;)V
 
-    const-string/jumbo p1, "uninstall"
+    const-string p1, "uninstall"
 
     .line 57
     invoke-static {p1}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackEditModeTopMenuClickEvent(Ljava/lang/String;)V
@@ -187,7 +187,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f110073
+    const v0, 0x7f10006e
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -241,7 +241,7 @@
     .line 109
     invoke-super {p0, p1}, Lcom/miui/home/launcher/ButtonDropTarget;->onDragEnter(Lcom/miui/home/launcher/DragObject;)V
 
-    const v0, 0x7f11006a
+    const v0, 0x7f100065
 
     .line 110
     invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->announceForAccessibility(I)V

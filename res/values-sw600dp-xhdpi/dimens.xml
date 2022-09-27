@@ -7,15 +7,12 @@
     <dimen name="editing_entry_thumbnail_view_height">90.0dip</dimen>
     <dimen name="editing_panel_height">120.0dip</dimen>
     <dimen name="folder_content_padding_left">0.0dip</dimen>
-    <dimen name="folder_content_padding_right">0.0dip</dimen>
     <dimen name="folder_content_width">406.0dip</dimen>
     <dimen name="hotseats_height">127.0dip</dimen>
     <dimen name="hotseats_height_land">95.0dip</dimen>
     <dimen name="hotseats_height_land_navigation">70.0dip</dimen>
     <dimen name="hotseats_height_navigation">70.0dip</dimen>
     <dimen name="hotseats_padding_side">0.0dip</dimen>
-    <item type="dimen" name="launcher_miui_widget_density_scale_factor">0.9</item>
-    <item type="dimen" name="pa_miui_widget_density_scale_factor">0.9</item>
     <dimen name="search_bar_margin_bottom">34.0dip</dimen>
     <dimen name="search_bar_margin_top">28.0dip</dimen>
     <dimen name="status_bar_height">18.199982dip</dimen>

@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/CellBackground;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    value = Lcom/miui/home/launcher/CellBackground;-><init>(Landroid/content/Context;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/CellBackground;)V
     .locals 0
 
-    .line 42
+    .line 33
     iput-object p1, p0, Lcom/miui/home/launcher/CellBackground$1;->this$0:Lcom/miui/home/launcher/CellBackground;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,19 +35,19 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 2
 
-    .line 45
+    .line 36
     iget-object p1, p0, Lcom/miui/home/launcher/CellBackground$1;->this$0:Lcom/miui/home/launcher/CellBackground;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/CellBackground;->setTranslationX(F)V
 
-    .line 46
+    .line 37
     iget-object p1, p0, Lcom/miui/home/launcher/CellBackground$1;->this$0:Lcom/miui/home/launcher/CellBackground;
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/CellBackground;->setTranslationY(F)V
 
-    .line 47
+    .line 38
     iget-object p1, p0, Lcom/miui/home/launcher/CellBackground$1;->this$0:Lcom/miui/home/launcher/CellBackground;
 
     invoke-static {p1}, Lcom/miui/home/launcher/CellBackground;->access$000(Lcom/miui/home/launcher/CellBackground;)Landroid/animation/ObjectAnimator;
@@ -58,7 +58,7 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 48
+    .line 39
     iget-object p1, p0, Lcom/miui/home/launcher/CellBackground$1;->this$0:Lcom/miui/home/launcher/CellBackground;
 
     invoke-static {p1}, Lcom/miui/home/launcher/CellBackground;->access$000(Lcom/miui/home/launcher/CellBackground;)Landroid/animation/ObjectAnimator;

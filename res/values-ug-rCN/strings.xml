@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="Icon_name_classic_mode">ئېكران تەڭشىكى</string>
     <string name="accessibility_all_app_custom_category_finish">تامام</string>
     <string name="accessibility_all_app_custom_category_item_remove">%1$s گۇرۇپپىسىدىن چىقىرىۋېتىش</string>
     <string name="accessibility_clear_search_bar_text">ئىزدەش رامكىسىنى تازىلاش</string>
@@ -25,10 +24,8 @@
     <string name="activity_not_unlocked">قايتا قوزغاتقاندىن كېيىن ئەپ ئىنكاسىنى ساقلىشى كېرەك،سەل تۇرۇپ سىناڭ</string>
     <string name="add_custom_category">ئۆزى بەلگىلەش</string>
     <string name="add_screen">ئېكران قوشۇش</string>
-    <string name="add_to_workspace">ئۈستەلگە قوشۇش</string>
     <string name="added_all_category">ھەممە ئەپ قوشۇلدى</string>
     <string name="afternoon">چ ك</string>
-    <string name="agree_button">قوشۇلۇش</string>
     <string name="alexa_notification_add">قوشۇش</string>
     <string name="alexa_notification_cancel">ھازىرچە بولدى</string>
     <string name="alexa_notification_content">Alexa تېزلەتمە تەڭشىكىنى كونترول مەركىزىگە قوشامسىز؟</string>
@@ -67,7 +64,6 @@
     <string name="all_apps_slide_up_tips">تارتما ھالىتىدە ئۈستىگە سىيرىش قول ئىشارىتى ئىگىلىۋېلىنغان،نورمال ھالەتكە ئالماشتۇرغاندىن كېيىن ئاندىن تەڭشەڭ</string>
     <string name="all_apps_suggestions">ئەپ تەۋسىيەسى</string>
     <string name="am">چ ب</string>
-    <string name="animation_rate_title">ھەرىكەت سۈرئىتى</string>
     <string name="announce_for_app_move_in_folder">ھۆججەت قىسقۇچتىكى %1$dچى ئورۇنغا يۆتكەش</string>
     <string name="announce_for_checked">%1$s، تاللاندى</string>
     <string name="announce_for_choose_default_screen">%1$d-ئېكران باش ئېكران قىلىندى</string>
@@ -119,13 +115,6 @@
     <string name="app_category_tools">ئەمەلىي ئىشلىنىدىغان</string>
     <string name="app_category_travel">ساياھەت ۋە قاتناش</string>
     <string name="app_category_vr">VR</string>
-    <string name="app_drawer_double_confirm_description">بۇ سىزنىڭ ئېكران ئورۇنلاشتۇرۇشىڭىزنى ئۆزگەرتىۋېتىدۇ، جەزملەمسىز؟ ئېكران تەڭشىكى ئارقىلىق نورمال ھالەتكە قايتۇرۇپ كەلسىڭىز بولىدۇ</string>
-    <string name="app_drawer_double_confirm_title">ئەسكەرتىش</string>
-    <string name="app_drawer_feature_description">يۇقىرى ئۈنۈملۈك تارتما ئىزدەش ۋە ئەپنى ئەقلىي گۇرۇپپىغا ئايرىش،يېڭى قاچىلانغان ئەپنى ئاپتوماتىك يىغىپ،ئېكراننى پاكىز تەرتىپلىك قىلىدۇ</string>
-    <string name="app_drawer_guide_description">سىز ئەڭ ياقتۇرغان ئەپتىن ئېرىشمەكچى بولغان مەزمۇننى تاپالايسىز</string>
-    <string name="app_drawer_guide_title">ئەپ تارتمىسى</string>
-    <string name="app_drawer_tip_title">بۇرۇنقى ئۇچۇر ئېقىمى تارتمىغا ئايلاندى،سىزنىڭ ئەپنى يۇقىرى ئۈنۈملۈك تېز باشقۇرۇشىڭىزغا ياردەم قىلىدۇ</string>
-    <string name="app_install_state">قاچىلاندى</string>
     <string name="app_name">smallWindow</string>
     <string name="application_name">سىستېما يۈزى</string>
     <string name="apply">تەڭشەش</string>
@@ -148,29 +137,8 @@
     <string name="back">قايتىش</string>
     <string name="backup_fail">زاپاسلانمىدى</string>
     <string name="bad_wallpaper_source_prompt">يۈكلەنمىدى</string>
-    <string name="branch_feature_description">ئەپ ئىزدەپلا قالماي، يەنە ئەپ ئىچىدىكى مەزمۇننى كۆرەلەيسىز،سىز قىزىققان خەۋەرنى تاپالايسىز.</string>
-    <string name="branch_guide_attention">سىزنىڭ ئەپ ئىزدەش تەسىراتىڭىزنى كۈچەيتىش ئۈچۈن،سىزنىڭ ئىزدەش ئىلتىماسىڭىز،Google Ads ID ھەمدە IP ئادرېسى Branch Metrics Inc بىلەن ئورتاقلىشىش كېرەك.بۇ مۇلازىمەتنى ئىشلىتىشتىن بۇرۇن Branchنىڭ <a href="http://url1"><font color="#B3000000"> «ئىشلەتكۈچى كېلىشىمى» </font></a>ۋە <a href="http://url2"><font color="#B3000000">«شەخسىي مەخپىيەتلىك سىياسىتى»گە قوشۇلۇڭ </font></a></string>
-    <string name="branch_guide_description_one">ئەپلىرىڭىزنى تارتمىغا سېلىۋەتتى، ئېكرانىڭىز رەتلىك.</string>
-    <string name="branch_guide_description_three">قولايلىق ئومۇميۈزلۈك ئىزدەش، بىر سېكۇنتتا ئىزدەيدىغان ئەپنى تاپالايسىز.</string>
-    <string name="branch_guide_description_two">تارتما ئەپلەرنى ئاپتوماتىك تۈرگە ئايرىيدۇ، بارلىق ئەپلەرنىڭ تەرتىپى بار.</string>
-    <string name="branch_guide_tip_title">ئۈستەليۈزىڭىزنى رەتلىك قىلىدۇ</string>
-    <string name="branch_guide_title">يېڭى ئىقتىدار</string>
-    <string name="branch_new_feature">يېڭى ئىقتىدار</string>
-    <string name="branch_privacy_policy">مەخپىيەتلىك سىياسىتى</string>
-    <string name="branch_search_guide_description">بىزنىڭ ئۆزگىچە ھەمدە يۇقىرى سۈپەتلىك ئۈستەليۈزى مۇلازىمىتىمىزدىن پايدىلىنىڭ</string>
-    <string name="branch_search_guide_privacy">بۇ مۇلازىمەتنى Branch Metrics Inc تەمىنلىگەن. سىزنىڭ جۇغراپىيەلىك ئورنىڭىز،ئىزدەش ۋە Google Ads ID بولسا Branch كە ھەمبەھىرلىنىدۇ.ئەگەر بۇ ئىقتىدارنى ئىشلەتمەكچى بولسىڭىز،Branchنىڭ <a href="http://url1"><font color="#B3000000">ماددىلار تەپسىلاتى</font></a> ۋە <a href="http://url2"><font color="#B3000000"> شەخسىي مەخپىيەتلىك سىياسىتى</font></a> گە قوشۇلۇڭ</string>
-    <string name="branch_search_guide_title">سىز ئەڭ ياقتۇرغان ئەپتىن ئېرىشمەكچى بولغان مەزمۇننى تاپالايسىز</string>
-    <string name="branch_terms_condition">ماددىلار تەپسىلىي قائىدىسى</string>
-    <string name="branch_tip_title">سىزنىڭ ئەپ ئىزدەش تەسىراتىڭىزنى كۈچەيتىدۇ</string>
-    <string name="btn_agree">قوشۇلىمەن ۋە داۋاملاشتۇرىمەن</string>
-    <string name="btn_cancel">بىكار قىلىش</string>
-    <string name="btn_close">‏‏تاقاش</string>
-    <string name="btn_open">ئېچىش</string>
-    <string name="btn_request_permission">مۇكەممەل تەسىراتقا ئېرىشىش</string>
-    <string name="btn_set_right_now">دەرھال سىناش</string>
     <string name="buffering">غەملىنىۋاتىدۇ...</string>
     <string name="cancel_action">بىكار قىلىش</string>
-    <string name="cancel_botton">بىكار قىلىش</string>
     <string name="cancel_btn_label">بىكار قىلىش</string>
     <string name="cant_edit_lock_screen">نۆۋەتتىكى ئېكران قۇلپىسى پاسونىنى تەھرىرلىگىلى بولمايدۇ</string>
     <string name="cant_remove_folder">بوش بولمىغان قىسقۇچنى ئۆچۈرگىلى بولمايدۇ</string>
@@ -278,11 +246,9 @@
     <string name="emptyplaylist">سىز تاللىغان قويۇش تىزىملىكى قۇرۇق</string>
     <string name="enable_wallpaper_scroll">تەگلىك دومىلاش ھالىتىنى ئېچىش</string>
     <string name="encryption">پاروللاش</string>
-    <string name="enter_search_setting_title">تارتمىغا كىرگەندىن كېيىن ئىزدەشنى ئېچىش</string>
     <string name="eras_ad">مىلادى</string>
     <string name="eras_bc">مىلادىدىن بۇرۇنقى</string>
     <string name="evening">گۇگۇم</string>
-    <string name="exit_overview_because_task_stack_changed">ئارقا سۇپا ئەپ ئۆزگىرىشى سەۋەبلىك، يېقىنقى ۋەزىپىدىن چېكىندى</string>
     <string name="failed_to_delete_temporary">ئۆچۈرۈش مەغلۇپ بولدى، سەل تۇرۇپ قايتا سىناڭ</string>
     <string name="failed_to_drop">يۆتكەش مەغلۇپ بولدى،سىنبەلگە ئەسلى ئورنىغا قايتتى</string>
     <string name="failed_to_drop_widget_invalid">قىستۇرما ئىناۋەتسىز</string>
@@ -338,8 +304,6 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">zW T</string>
     <string name="fmt_weekday_timezone">zW</string>
-    <string name="fold_pair_install_shortcut_long_click">سىنبەلگىنى ئۇزۇن بېسىپ تۇرۇپ تېز يول قۇرۇشنى قوللايدۇ</string>
-    <string name="fold_pair_installed_shortcut_launcher">ئېكرانغا تېز يول قۇرۇلدى</string>
     <string name="folder_name">ھۆججەت قىسقۇچ</string>
     <string name="frame_load_failed">رەسىم رامكىسى شەكلى خاتا، ئېچىش مەغلۇپ بولدى</string>
     <string name="free_style_apps_title">ئەپ تاللاڭ</string>
@@ -395,14 +359,11 @@
     <string name="gadget_weather_title_14">ھاۋارايى 4x1</string>
     <string name="gadget_weather_title_24">ھاۋارايى 4x2</string>
     <string name="global_search_hint">ئىزدەش</string>
-    <string name="got_it_botton">بىلدىم</string>
     <string name="group_folder">يېڭى قىسقۇچ قۇرۇش</string>
     <string name="group_live_folders">قىسقۇچ</string>
     <string name="group_shortcuts">قىسقا يوللار</string>
     <string name="guide_install_app_msg">سىز تېخى پروگرامما ئورناتمىدىڭىز،ھازىر ئەپ دۇكىنىغا بېرىپ چۈشۈرەمسىز؟</string>
     <string name="guide_install_app_title">ئەپ ئورنىتىش</string>
-    <string name="guide_permission_title">ھوقۇق ئىلتىماسى</string>
-    <string name="guide_privacy_dialog_title">بايانات ۋە ماددىلار</string>
     <string name="guide_tips_editing_mode">ئاستىدىكى كىچىك دىتاللارنى بېسىپ تۇرۇپ ئېكرانغا قۇيۇڭ</string>
     <string name="home_gesture_content_center">مەزمۇن مەركىزى</string>
     <string name="home_gesture_global_search">ئىزدەش</string>
@@ -433,9 +394,6 @@
     <string name="launcher_slide_up_title">ئېكراننى ئۈستىگە سىيرىش</string>
     <string name="launcher_sliding_up_gesture">ئېكراننى ئۈستىگە سىيرىپ ئىزدەشكە كىرىڭ</string>
     <string name="launcher_title">ئېكران يۈزى ۋە يېقىنقى ۋەزىپە</string>
-    <string name="layout_guide_description">ئىشلىتىش جەريانىدا نۆۋەتتىكى ئورۇنلاشتۇرۇشتىن رازى بولمىسىڭىز، ئېكراندىكى\" ئېكران تەڭشىكى: سىنبەلگىسىنى چېكىپ ئەسلىدىكى ئورۇنلاشتۇرۇشنى ئەسلىگە كەلتۈرسىڭىز بولىدۇ.</string>
-    <string name="layout_guide_tip_title">پەقەت بىرلا قەدەم بىلەن ئەسلىگە كەلتۈرەلەيسىز</string>
-    <string name="layout_guide_title">ئورۇنلاشتۇرۇشنى قانداق ئەسلىگە كەلتۈرىسىز</string>
     <string name="like">ساقلىۋېلىش</string>
     <string name="liked">ساقلاندى</string>
     <string name="loading_desktop">ئېكران يۈكلىنىۋاتىدۇ</string>
@@ -602,11 +560,6 @@
     <string name="navigation_guide_recent_title">يېقىنقى ۋەزىپىنى ئالماشتۇرۇش</string>
     <string name="navigation_guide_recent_title_spec_with_quotation_pad">\"يېقىنقى ۋەزىپىگە ئالماشتۇرۇش\"</string>
     <string name="navigation_guide_settings">مەشغۇلات دەرسلىكى</string>
-    <string name="navigation_position_center">ئېكران ئوتتۇرىدا</string>
-    <string name="navigation_position_left">ئېكران سول تەرىپىدە</string>
-    <string name="navigation_position_right">ئېكران ئوڭ تەرىپىدا</string>
-    <string name="navigation_position_summary">مەۋھۇم كونۇپكا ئورنى تەڭشىكى پەقەت ئاساسىي ئېكراندا كۈچكە ئىگە</string>
-    <string name="navigation_position_title">مەۋھۇم كونۇپكا ئورنى</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">بىكار قىلىش</string>
     <string name="navigation_set_miui_home_as_default_dialog_message">سىستېما ئېكران يۈزىدىن باشقىسى پۈتۈن ئېكران قول ئىشارىتىنى قوللىمايدۇ، سىستېما ئېكران يۈزىگە ئالماشتۇرۇپ، پۈتۈن ئېكران قول ئىشارىتىنى ئاچامسىز؟</string>
     <string name="navigation_set_miui_home_as_default_dialog_ok">جەزملەش</string>
@@ -614,11 +567,9 @@
     <string name="navigation_type_full_screen">پۈتۈن ئېكران قول ئىشارىتى</string>
     <string name="navigation_type_title">سىستېما مەشغۇلات ئۇسۇلى</string>
     <string name="navigation_type_virtual_key">كونۇپكىلىق مەشغۇلات</string>
-    <string name="new_feature_title">يېڭى ئالاھىدىلىك</string>
     <string name="night">كەچ</string>
     <string name="no_detail_page">تەپسىلات بېتى يوق</string>
     <string name="no_space_toast">بوشلۇق يېتىشمىدى</string>
-    <string name="no_space_toast_fold">بۇ يېرىم ئېكران يېتىشمەيدۇ</string>
     <string name="no_space_toast_when_click_widget">نۆۋەتتىكى بەت بوشلۇقى يېتىشمەيدۇ،سۆرەپ باشقا بەتكە قوشسىڭىز بولىدۇ</string>
     <string name="noon">چۈش</string>
     <string name="normal_wallpaper">ئېكران تەگلىكى</string>
@@ -627,7 +578,6 @@
     <string name="notification_reset_title">ئۈستەليۈزى سىنبەلگىسى رەتلەندى</string>
     <string name="one_key_call_title">بىر كونۇپكىدا چاقىرىش</string>
     <string name="online_wallpaper">توردىكى تەگلىك</string>
-    <string name="open_pad_personal_assistant_settings">ئېكران يۈزى كىچىك دىتالى</string>
     <string name="open_personal_assistant_dialog_btn_cancel">بىكار قىلىش</string>
     <string name="open_personal_assistant_dialog_btn_confirm">تاقاش</string>
     <string name="open_personal_assistant_dialog_desc">تاقىغاندىن كېيىن سىز ئۈستەل يۈزىدىكى ئەڭ سول ئېكراندىن كىچىك زاپچاسلارنىڭ ئۇچۇرىنى كۆرەلمەيسىز، كىچىك زاپچاسلار مۇلازىمىتىنى ئىشلىتەلمەيسىز، شۇنىڭ بىلەن بىر ۋاقىتتا كېيىنكى ئەلالاشتۇرۇش، يېڭىلاشنى قوبۇل قىلالمايسىز، تاقاشنى جەزىملەشتۈرەمسىز؟</string>
@@ -639,7 +589,6 @@
     <string name="ota_layout_adjustment_content">يېڭى نەشىرگە ئۆستۈرگەندىن كېيىن ئېكران ئورۇنلاشتۇرۇلىشىدا ئىچكى سىرتقى ئېكران بىردەك بولىدۇ، سىرتقى ئېكران ئورۇنلاشتۇرۇلىشى ئىچكى ئېكرانغا ماس قەدەملەندى</string>
     <string name="ota_layout_adjustment_title">ئېكران ئورۇنلاشتۇرۇلىشىنى تەڭشەش</string>
     <string name="out_of_space">ئېكراندا يىتەرلىك بوشلۇق يوق.</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
     <string name="perfect_icons_switch_summary">ئۈچىنچى تەرەپ ئەپ سىنبەلگىسىنى قايتا سىزىپ،چىرايلىق ھەرىكەت ھاسىل قىلىش</string>
     <string name="perfect_icons_switch_title">چىرايلىق سىنبەلگە</string>
     <string name="permdesc_install_shortcut">پىروگراممىنى ئىشلەتكۈچى ئارىلاشمىغان ئەھۋالدا تىزلەتمە ئۇسۇلىنى قوشۇشقا يول قۇيۇش</string>
@@ -659,7 +608,6 @@
     <string name="photo_load_failed">رەسىم ئېچىش مەغلۇپ بولدى</string>
     <string name="please_slide_agian">يەنە بىرنى سىيرىڭ</string>
     <string name="pm">چ ك</string>
-    <string name="popular_search">قىزىق سۆزلەر</string>
     <string name="pref_cell_layout_size">ئورۇنلاشتۇرۇش</string>
     <string name="pref_enable_drawing_cache_summary">"بۇ تۈر تاقالسا تېخىمۇ كۆپ ئىچكى ساقلىغۇچ بوشايدۇ 
  ئەمما راۋانلىقى تۆۋەنلەپ كېتىدۇ"</string>
@@ -680,14 +628,6 @@
     <string name="privacy_thumbnail_blur_summary">يېقىنقى ۋەزىپىدكى ئالدىن كۆرۈنۈش رەسىمىنى غۇۋا كۆرسىتىپ بىر تەرەپ قىلىدۇ</string>
     <string name="privacy_thumbnail_blur_title">غۇۋا ئالدىن كۆرسىتىش رەسىمى</string>
     <string name="quick_app">تېز ئەپ</string>
-    <string name="quick_finder_feature_description">Quick Finder نى ئېچىپ، ئەپ ئىزدەش ئۈنۈمىنى يۇقىرى كۆتۈرىدۇ،سەل تۇرۇپ تەڭشەكتىن بۇ ئىقتىدارنى تاقىۋەتسىڭىز بولىدۇ</string>
-    <string name="quick_finder_tip_title">ئەپنىڭ ئىزدەش سۈرئىتىنى يۇقىرى كۆتۈرۈش</string>
-    <string name="quick_search_all_app_desc">تارتمىغا كىرگەندە بارلىق ئەپلەرنى كۆرسىتىدۇ</string>
-    <string name="quick_search_desc">تارتمىغا كىرگەندە ئەپ ئىزدەشنى ئاچىدۇ</string>
-    <string name="quick_search_guide_all_apps">بارلىق ئەپلەر</string>
-    <string name="quick_search_guide_ok_btn">جەزملەش</string>
-    <string name="quick_search_guide_quick_search">تېز ئىزدەش</string>
-    <string name="quick_search_guide_title">بىر سۈكۈتتىكى ھالەتنى تاللاڭ</string>
     <string name="recent_apps">يېقىندا ئىشلەتكەن</string>
     <string name="recent_menu_item_info">ئەپ تەپسىلاتى</string>
     <string name="recent_menu_item_lock">ۋەزىپە قۇلۇپلاش</string>
@@ -716,13 +656,6 @@
     <string name="recents_title_market">ئەپ ئىزدەش</string>
     <string name="recents_title_security_scan">بىخەتەرلىكنى تەكشۈرۈش</string>
     <string name="recents_tv_small_window_text">كىچىك كۆزنەك ئەپى</string>
-    <string name="recents_worldcirculate_text">قويىۋېتىپ تاللاش</string>
-    <string name="recnets_relay_device_info">%sدىن كەلگەن</string>
-    <string name="recnets_worldcirculate_button_text">شياۋمى ھەمبەھىرلەش مەركىزى</string>
-    <string name="recnets_worldcirculate_display_computer_info">\"%s\"دە ئىجرا بولىۋاتىدۇ</string>
-    <string name="recnets_worldcirculate_display_default_info">چېكىپ يانفون ئىشلىتىشكە قايتىڭ</string>
-    <string name="recnets_worldcirculate_display_default_info_pad">چېكىپ تاختا كومپىيۇتېرغا قايتىپ ئىشلىتىڭ</string>
-    <string name="recnets_worldcirculate_display_pad_info">\"%s\"دە ئىجرا بولىۋاتىدۇ</string>
     <string name="recommend_app">ئەپ تەۋسىيە بالدىقى</string>
     <string name="recommend_apps_default_title">سانلىق مەلۇمات يوق</string>
     <string name="recommend_apps_no_data">سانلىق مەلۇمات يوق</string>
@@ -739,8 +672,6 @@
     <string name="remove_invalidate_gadget_tips">ئۈستەلدىكى قىستۇرمىنى تەمىنلىمىدى،قايتا قوشۇڭ</string>
     <string name="remove_sys_app_content">سىستېما سىنبەلگىسىنى چىقىرىۋاتىدۇ، چىقىرىۋەتكەندىن كېيىن، تەڭشەك-ئەپ تەڭشىكى-ئېكران يۈزى سىنبەلگىسىنى باشقۇرۇشدىن قايتىدىن قوشسىڭىز بولىدۇ، چىقىرامسىز؟</string>
     <string name="remove_sys_app_title">سىستېما ئەپ سىنبەلگىسىنى يۆتكەمسىز؟</string>
-    <string name="request_permission_msg">بارلىق تەسىراتقا تولۇق ئېرىشمىگەنلىكىڭىز بايقالدى،چېكىپ تېخىمۇ ئەلا تەسىراتلارغا ئېرىشىڭ</string>
-    <string name="request_permission_title">مۇلازىمەتنى يېڭىلاڭ</string>
     <string name="reset_cate_tip_content">ئەسلىگە كەلتۈرگەندىن كېيىن ئەپنى گۇرۇپپىغا ئايرىش دەسلەپكى ھالەتكە قايتىدۇ،داۋاملاشتۇرامسىز؟</string>
     <string name="reset_cate_tip_title">ئەسلىگە قايتۇرۇش</string>
     <string name="reset_description_first_time">ئىككى سائەت ئىچىدە %1$s دىكى ئورۇنلاشتۇرۇشنى ئەسلىگە كەلتۈرەلەيدۇ</string>
@@ -755,15 +686,12 @@
     <string name="screen_cells_config_title">ئېكران ئورۇنلاشتۇرۇشى قائىدىسى</string>
     <string name="screen_locked_toast">ئېكران قۇلۇپلاندى</string>
     <string name="screen_number">%d- ئېكران</string>
-    <string name="search_bar_hint_content">ئەپ ۋە مەزمۇننى ئىزدەش</string>
-    <string name="search_guide_btn">بىلدىم</string>
     <string name="search_in_apps_store">%2$s غا كىرىپ \"%1$s\" نى ئىزدەڭ</string>
     <string name="search_no_result">نەتىجە تېپىلمىدى</string>
     <string name="select_all">ھەممىنى تاللاش</string>
     <string name="select_frame">رەسىم رامكىسى تاللاش</string>
     <string name="select_photo">رەسىم تاللاش</string>
     <string name="send">ئەۋەتىش</string>
-    <string name="service_double_attention">تەسىراتىڭىزنى كۈچەيتىش مۇلازىمىتىنى Branch Metrics Inc تەمىنلەيدۇ،سىزنىڭ ئىزدەش ئىلتىماسىڭىز،Google Ads ID ھەمدە IP ئادرېسى Branch Metrics Inc بىلەن ئورتاقلىشىش كېرەك.بۇ مۇلازىمەتنى ئىشلىتىشتىن بۇرۇن Branchنىڭ <a href="http://url1"><font color="#B3000000"> «ئىشلەتكۈچى كېلىشىمى» </font></a>ۋە <a href="http://url2"><font color="#B3000000">«شەخسىي مەخپىيەتلىك سىياسىتى»گە قوشۇلۇڭ </font></a>。</string>
     <string name="setting_wallpaper_tip">يۆتكەش ۋە چوڭايتىش</string>
     <string name="settings">تەڭشەش</string>
     <string name="settings_shortcut">بەلگىلەش</string>
@@ -825,13 +753,11 @@
     <string name="status_installing">قاچىلىنىۋاتىدۇ</string>
     <string name="status_paused">تورمۇزلاش</string>
     <string name="status_pending">كۈتىۋاتىدۇ</string>
-    <string name="suggestions">تەۋسىيە</string>
     <string name="sunday">يەكشەنبە</string>
     <string name="sunday_short">يەكشەنبە</string>
     <string name="sunday_shortest">يەكشەنبە</string>
     <string name="swipe_the_desktop_to_the_left">ئېكراننى سولغا سىيرىش</string>
     <string name="swipe_the_desktop_to_the_right">ئېكراننى ئوڭغا سىيرىش</string>
-    <string name="switch_on_button">ئېچىش</string>
     <string name="switch_personal_assistant_app_vault">ئۇچۇر ياردەمچىسى</string>
     <string name="switch_personal_assistant_google">گۇگولدا ئىزدەش</string>
     <string name="switch_personal_assistant_none">تېز ئېكراننى تاقاش</string>
@@ -842,10 +768,6 @@
     <string name="system_shortcuts_remove">چىقىرىۋېتىش</string>
     <string name="system_text">سۈكۈتتىكى</string>
     <string name="task_access_locked_app_msg">ئەپ قۇلۇپى ئېچىلدى</string>
-    <string name="term_of_service">مۇلازىمەت ماددىلىرى</string>
-    <string name="terms_of_services_one">شياۋمىنىڭ ئەپ تارتمىسى ۋە ئەپ ئىزدەش مۇلازىمىتىنى ئىشلەتكەنلىكىڭىزنى قارشى ئالىمىز،بۇنىڭدا تېزدىن ئەپتىكى مەزمۇنلارنى تاپالايسىز،شياۋمىنىڭ<a href="http://url1"><font color="#B3000000">«شەخسىي مەخپىيەتلىك سىياسىتى»</font></a>نى ئوقۇپ قوشۇلۇڭ.</string>
-    <string name="terms_of_services_three">ئېكران تەڭشىكىدىن بۇ ئىقتىدارنى تاقىۋەتسىڭىز بولىدۇ.</string>
-    <string name="terms_of_services_two">ئەپ ئىزدەش مۇلازىمىتىدىكى ئەپنىڭ ئىزدەش ئىقتىدارىنى ئەمەلگە ئاشۇرۇش ئۈچۈن،بىز Branch Metrics Incكە زۆرۈر بولغان ئۇچۇرلارنى ھەمبەھىرلەيمىز،سىزنىڭ ئىزدەش سۆزىڭىز،Google ئېلانىID ۋە IP ئادرېسىنى ئۆز ئىچىگە ئالىدۇ. Branchبولسا <a href="http://url1"><font color="#B3000000"> نىڭ «شەخسىي مەخپىيەتلىك سىياسىتى»گە ئاساسەن</font></a> قوبۇللىغان سانلىق مەلۇماتنى بىر تەرەپ قىلىدۇ،Branch Metrics Incنىڭ<a href="http://url2"><font color="#B3000000"> «ئىشلەتكۈچى كېلىشىمى»</font></a>ۋە<a href="http://url3"><font color="#B3000000"> «شەخسىي مەخپىيەتلىك سىياسىتى»</font></a>نى ئوقۇپ قوشۇلۇڭ.</string>
     <string name="the_anniversary_of_lifting_martial_law">ھەربىي ھالەت خاتىرە كۈنى</string>
     <string name="the_anti_aggression_day">تاجاۋۇزچىلىققا قارشى كۈن</string>
     <string name="the_arbor_day">كۆچەت تىكىش بايرىمى</string>
@@ -912,11 +834,6 @@
     <string name="tuesday">سەيشەنبە</string>
     <string name="tuesday_short">سەيشەنبە</string>
     <string name="tuesday_shortest">سەيشەنبە</string>
-    <string name="uni_search_permission_content">ئەلا بولغان توردىكى ئىزدەش مۇلازىمىتىنى ئېچىڭ( بۇ مۇلازىمەتنى Branch تەمىنلىگەن)</string>
-    <string name="uni_search_permission_msg">ئورۇن ھوقۇقى ۋە ئالاقىلاشقۇچى ھوقۇقىنى ئېچىپ تېخىمۇ ئەلا مۇلازىمەتكە ئېرىشىڭ</string>
-    <string name="uni_search_permission_title">ئىزدەش دەرىجىسىنى ئۆستۈرۈش</string>
-    <string name="uni_search_setting_summary">تېخىمۇ مول بولغان توردىكى ئىزدەش نەتىجىسىنى تەمىنلەيدۇ</string>
-    <string name="uni_search_setting_title">ئىزدەش مۇلازىمىتى</string>
     <string name="uninstall">ئۆچۈرۈش</string>
     <string name="uninstall_dialog_message">ئۆچۈرسىڭىز ئىچىدىكى سانلىق مەلۇماتلارمۇ ئۆچىدۇ</string>
     <string name="uninstall_dialog_title_format">\"%s\"نى ئۆچۈرۈش</string>
@@ -927,7 +844,6 @@
     <string name="uninstall_xspace_dialog_title_format">\"%s\"نى قوش ئېچىشنى ئۆچۈرۈش</string>
     <string name="unknown_artist_name">نامەلۇم سەنئەتكار</string>
     <string name="unnamed_folder_name">قىسقۇچ</string>
-    <string name="upgrade_remove_small_window_in_recents">يېقىنقى ۋەزىپە كىچىك كۆزنەك ئەپ ئېغىزى چىقىرىۋېتىلدى، يان تەرەپ سىتونىدىن كىچىك كۆزنەكنى ئىشلەتسىڭىز بولىدۇ</string>
     <string name="wallpaper">تەگلىك</string>
     <string name="wallpaper_auto_change_title">ئېكران قۇلۇپى(پەقەت سۈكۈتتىكى قۇلۇپ ئېكرانىدىلا)</string>
     <string name="wallpaper_failed_message">تەگلىكنى تەڭشەش مەغلۇپ بولدى</string>

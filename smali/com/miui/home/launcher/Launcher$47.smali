@@ -1,14 +1,11 @@
 .class Lcom/miui/home/launcher/Launcher$47;
-.super Ljava/lang/Object;
+.super Landroid/os/AsyncTask;
 .source "Launcher.java"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/Launcher;->openFolder(Lcom/miui/home/launcher/FolderInfo;Landroid/view/View;)V
+    value = Lcom/miui/home/launcher/Launcher;->autoChangeLockWallpaper(Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -16,265 +13,305 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Landroid/os/AsyncTask<",
+        "Ljava/lang/Void;",
+        "Ljava/lang/Void;",
+        "Ljava/lang/Boolean;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/launcher/Launcher;
 
-.field final synthetic val$folderInfo:Lcom/miui/home/launcher/FolderInfo;
+.field final synthetic val$forceRefresh:Z
 
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/FolderInfo;)V
+.method constructor <init>(Lcom/miui/home/launcher/Launcher;Z)V
     .locals 0
 
-    .line 5125
+    .line 4296
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    iput-object p2, p0, Lcom/miui/home/launcher/Launcher$47;->val$folderInfo:Lcom/miui/home/launcher/FolderInfo;
+    iput-boolean p2, p0, Lcom/miui/home/launcher/Launcher$47;->val$forceRefresh:Z
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
     return-void
 .end method
 
-.method public static synthetic lambda$run$0(Lcom/miui/home/launcher/Launcher$47;Lcom/miui/home/launcher/FolderInfo;)Ljava/lang/String;
-    .locals 3
 
-    .line 5139
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
+# virtual methods
+.method protected varargs doInBackground([Ljava/lang/Void;)Ljava/lang/Boolean;
+    .locals 9
 
-    const/4 v1, 0x1
+    .line 4299
+    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    new-array v1, v1, [Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    invoke-virtual {p1, v0}, Lcom/miui/home/launcher/FolderInfo;->getTitle(Landroid/content/Context;)Ljava/lang/CharSequence;
+    invoke-static {p1, v0}, Lcom/miui/home/launcher/Launcher;->access$6402(Lcom/miui/home/launcher/Launcher;Z)Z
+
+    .line 4300
+    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    invoke-static {p1}, Lcom/miui/home/launcher/WallpaperUtils;->getLockWallpaperProvider(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object p1
 
-    const/4 v2, 0x0
+    const-string v1, "com.xiaomi.ad.LockScreenAdProvider"
 
-    aput-object p1, v1, v2
+    .line 4302
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    const p1, 0x7f11007a
+    move-result v2
 
-    invoke-virtual {v0, p1, v1}, Lcom/miui/home/launcher/Launcher;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    const/4 v3, 0x0
+
+    if-nez v2, :cond_4
+
+    const-string v2, "com.miui.home.none_provider"
+
+    .line 4303
+    invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    goto/16 :goto_0
+
+    .line 4305
+    :cond_0
+    iget-boolean v2, p0, Lcom/miui/home/launcher/Launcher$47;->val$forceRefresh:Z
+
+    if-nez v2, :cond_1
+
+    sget-object v2, Lcom/miui/home/launcher/WallpaperUtils;->DEFAULT_LOCKWALLPAPER_PROVIDER:Ljava/lang/String;
+
+    invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    .line 4306
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v4
+
+    .line 4307
+    iget-object v2, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    invoke-static {v2}, Lcom/miui/home/launcher/WallpaperUtils;->getLastRequestLockWallpaperTime(Landroid/content/Context;)J
+
+    move-result-wide v6
+
+    .line 4308
+    iget-object v2, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    invoke-static {v2}, Lcom/miui/home/launcher/WallpaperUtils;->getLockWallpaperUpdateMinute(Landroid/content/Context;)I
+
+    move-result v2
+
+    cmp-long v8, v4, v6
+
+    if-ltz v8, :cond_1
+
+    sub-long/2addr v4, v6
+
+    const v6, 0xea60
+
+    mul-int/2addr v2, v6
+
+    int-to-long v6, v2
+
+    cmp-long v2, v4, v6
+
+    if-gez v2, :cond_1
+
+    .line 4310
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
+
+    .line 4313
+    :cond_1
+    iget-object v2, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v4
+
+    invoke-static {v2, v4, v5}, Lcom/miui/home/launcher/WallpaperUtils;->setLastRequestLockWallpaperTime(Landroid/content/Context;J)Z
+
+    .line 4314
+    iget-object v2, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "content://"
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v4}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v4
+
+    invoke-static {v2, v4}, Lcom/miui/launcher/utils/ContentProviderUtils;->isProviderExists(Landroid/content/Context;Landroid/net/Uri;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_2
+
+    .line 4315
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
+
+    .line 4317
+    :cond_2
+    iget-object v2, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    iget-boolean v4, p0, Lcom/miui/home/launcher/Launcher$47;->val$forceRefresh:Z
+
+    invoke-static {v2, v1, v4, p1, v3}, Lcom/miui/home/launcher/Launcher;->access$6500(Lcom/miui/home/launcher/Launcher;Ljava/lang/String;ZLjava/lang/String;Z)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    .line 4318
+    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    iget-boolean v1, p0, Lcom/miui/home/launcher/Launcher$47;->val$forceRefresh:Z
+
+    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$6600(Lcom/miui/home/launcher/Launcher;)Z
+
+    move-result v2
+
+    invoke-static {v0, p1, v1, p1, v2}, Lcom/miui/home/launcher/Launcher;->access$6500(Lcom/miui/home/launcher/Launcher;Ljava/lang/String;ZLjava/lang/String;Z)Z
+
+    move-result p1
+
+    .line 4319
+    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    invoke-static {v0, v3}, Lcom/miui/home/launcher/Launcher;->access$6602(Lcom/miui/home/launcher/Launcher;Z)Z
+
+    .line 4320
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
+
+    .line 4322
+    :cond_3
+    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    invoke-static {p1, v0}, Lcom/miui/home/launcher/Launcher;->access$6602(Lcom/miui/home/launcher/Launcher;Z)Z
+
+    .line 4323
+    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    const-wide/16 v1, 0x0
+
+    invoke-static {p1, v1, v2}, Lcom/miui/home/launcher/WallpaperUtils;->setLastRequestLockWallpaperTime(Landroid/content/Context;J)Z
+
+    .line 4324
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
+
+    .line 4303
+    :cond_4
+    :goto_0
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
 
     return-object p1
 .end method
 
+.method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-# virtual methods
-.method public run()V
-    .locals 5
+    .line 4296
+    check-cast p1, [Ljava/lang/Void;
 
-    .line 5128
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
+    invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Launcher$47;->doInBackground([Ljava/lang/Void;)Ljava/lang/Boolean;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$1400(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/Workspace;
+    move-result-object p1
 
-    move-result-object v0
+    return-object p1
+.end method
 
-    invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->cancelTouchEvent(Landroid/view/View;)V
+.method protected onPostExecute(Ljava/lang/Boolean;)V
+    .locals 2
 
-    .line 5129
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$1900(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/FolderCling;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/FolderCling;->isOpened()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    .line 5130
-    :cond_0
-    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/miui/home/launcher/wallpaper/WallpaperManagerCompat;->getInstance(Landroid/content/Context;)Lcom/miui/home/launcher/wallpaper/WallpaperManagerCompat;
-
-    move-result-object v0
-
-    const-string v1, "action_open_folder"
-
-    iget-object v2, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    .line 5131
-    invoke-static {v2}, Lcom/miui/home/launcher/Launcher;->access$1400(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/Workspace;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcom/miui/home/launcher/Workspace;->getWindowToken()Landroid/os/IBinder;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Lcom/miui/home/launcher/wallpaper/WallpaperManagerCompat;->sendWallPaperCommand(Ljava/lang/String;Landroid/os/IBinder;)V
-
-    .line 5132
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->cancelFolderAnimations()V
-
-    .line 5133
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$1400(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/Workspace;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Workspace;->getCurrentCellLayout()Lcom/miui/home/launcher/CellLayout;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/CellLayout;->getOnLongClickAgent()Lcom/miui/home/launcher/OnLongClickAgent;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/OnLongClickAgent;->cancelCustomziedLongPress()V
-
-    .line 5134
+    .line 4330
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$6502(Lcom/miui/home/launcher/Launcher;Z)Z
+    invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$6402(Lcom/miui/home/launcher/Launcher;Z)Z
 
-    const/4 v0, 0x1
+    .line 4331
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    .line 5135
-    invoke-static {v0}, Lcom/miui/home/launcher/ShortcutIcon;->setEnableLoadingAnim(Z)V
+    move-result v0
 
-    .line 5136
-    iget-object v1, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
+    if-nez v0, :cond_0
 
-    invoke-static {v1}, Lcom/miui/home/launcher/Launcher;->access$1900(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/FolderCling;
+    .line 4332
+    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    move-result-object v1
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    iget-object v2, p0, Lcom/miui/home/launcher/Launcher$47;->val$folderInfo:Lcom/miui/home/launcher/FolderInfo;
+    move-result p1
 
-    invoke-virtual {v1, v2}, Lcom/miui/home/launcher/FolderCling;->bind(Lcom/miui/home/launcher/FolderInfo;)V
-
-    .line 5137
-    iget-object v1, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-static {v1}, Lcom/miui/home/launcher/Launcher;->access$1900(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/FolderCling;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/miui/home/launcher/FolderCling;->open()V
-
-    .line 5138
-    iget-object v1, p0, Lcom/miui/home/launcher/Launcher$47;->val$folderInfo:Lcom/miui/home/launcher/FolderInfo;
-
-    new-instance v2, Lcom/miui/home/launcher/-$$Lambda$Launcher$47$VLImm6H4HWOyvx8zzKr_T29vXIE;
-
-    invoke-direct {v2, p0, v1}, Lcom/miui/home/launcher/-$$Lambda$Launcher$47$VLImm6H4HWOyvx8zzKr_T29vXIE;-><init>(Lcom/miui/home/launcher/Launcher$47;Lcom/miui/home/launcher/FolderInfo;)V
-
-    invoke-static {v2}, Lcom/miui/home/launcher/common/Utilities;->announceForAccessibility(Ljava/util/function/Supplier;)V
-
-    .line 5140
-    iget-object v1, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-virtual {v1}, Lcom/miui/home/launcher/Launcher;->updateStatusBarClock()V
-
-    .line 5141
-    iget-object v1, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-static {v1}, Lcom/miui/home/launcher/Launcher;->access$6600(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/animate/SpringAnimator;
-
-    move-result-object v1
-
-    const v2, 0x3f666666    # 0.9f
-
-    const v3, 0x3e99999a    # 0.3f
-
-    invoke-virtual {v1, v2, v3}, Lcom/miui/home/launcher/animate/SpringAnimator;->setDampingResponse(FF)V
-
-    .line 5142
-    iget-object v1, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-static {v1}, Lcom/miui/home/launcher/Launcher;->access$6600(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/animate/SpringAnimator;
-
-    move-result-object v1
-
-    const/high16 v2, 0x3f800000    # 1.0f
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v1, v3, v2}, Lcom/miui/home/launcher/animate/SpringAnimator;->setStartEnd(FF)V
-
-    .line 5143
-    iget-object v1, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-static {v1}, Lcom/miui/home/launcher/Launcher;->access$6600(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/animate/SpringAnimator;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/miui/home/launcher/animate/SpringAnimator;->start()V
-
-    .line 5144
-    iget-object v1, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-static {v1, v0}, Lcom/miui/home/launcher/Launcher;->access$6700(Lcom/miui/home/launcher/Launcher;Z)V
-
-    .line 5145
-    iget-object v1, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-virtual {v1}, Lcom/miui/home/launcher/Launcher;->isInEditing()Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    .line 5146
-    iget-object v1, p0, Lcom/miui/home/launcher/Launcher$47;->val$folderInfo:Lcom/miui/home/launcher/FolderInfo;
-
-    invoke-virtual {v1}, Lcom/miui/home/launcher/FolderInfo;->onLaunch()V
-
-    .line 5147
-    iget-object v1, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    iget-object v4, p0, Lcom/miui/home/launcher/Launcher$47;->val$folderInfo:Lcom/miui/home/launcher/FolderInfo;
-
-    invoke-static {v1, v4}, Lcom/miui/home/launcher/LauncherModel;->updateItemFlagAndLaunchCount(Landroid/content/Context;Lcom/miui/home/launcher/ItemInfo;)Z
-
-    .line 5148
-    iget-object v1, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-virtual {v1}, Lcom/miui/home/launcher/Launcher;->isShouldBlur()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
+    invoke-static {v0, p1}, Lcom/miui/home/launcher/WallpaperUtils;->sendLockWallpaperBroadcast(Landroid/content/Context;Z)V
 
     goto :goto_0
 
-    :cond_1
-    move v2, v3
+    .line 4334
+    :cond_0
+    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    const-string v0, ""
+
+    invoke-static {p1, v0}, Lcom/miui/home/launcher/common/ThemeUtils;->tellThemeLockWallpaperPath(Landroid/content/Context;Ljava/lang/String;)V
 
     :goto_0
-    iget-object v1, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
+    return-void
+.end method
 
-    invoke-virtual {v1}, Lcom/miui/home/launcher/Launcher;->getWindow()Landroid/view/Window;
+.method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
+    .locals 0
 
-    move-result-object v1
+    .line 4296
+    check-cast p1, Ljava/lang/Boolean;
 
-    invoke-static {v2, v1, v0}, Lcom/miui/home/launcher/common/BlurUtils;->fastBlur(FLandroid/view/Window;Z)Landroid/animation/ValueAnimator;
-
-    .line 5150
-    :cond_2
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->notifyBackGestureStatus()V
+    invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Launcher$47;->onPostExecute(Ljava/lang/Boolean;)V
 
     return-void
 .end method

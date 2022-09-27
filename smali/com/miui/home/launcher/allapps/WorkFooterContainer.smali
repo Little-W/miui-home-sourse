@@ -124,12 +124,12 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f0802ae
+    const v0, 0x7f08019b
 
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f0802ad
+    const v0, 0x7f08019a
 
     :goto_0
     invoke-virtual {v2, v0}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -171,12 +171,12 @@
 
     if-eqz v0, :cond_1
 
-    const v0, 0x7f1104d5
+    const v0, 0x7f100404
 
     goto :goto_0
 
     :cond_1
-    const v0, 0x7f1104d6
+    const v0, 0x7f100405
 
     .line 69
     :goto_0
@@ -273,7 +273,7 @@
     .line 52
     invoke-super {p0}, Landroid/widget/RelativeLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a03e4
+    const v0, 0x7f0a0271
 
     .line 53
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/allapps/WorkFooterContainer;->findViewById(I)Landroid/view/View;
@@ -282,7 +282,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/allapps/WorkFooterContainer;->mDivider:Landroid/view/View;
 
-    const v0, 0x7f0a03e5
+    const v0, 0x7f0a0272
 
     .line 54
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/allapps/WorkFooterContainer;->findViewById(I)Landroid/view/View;
@@ -293,7 +293,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/allapps/WorkFooterContainer;->mSwitch:Lmiuix/slidingwidget/widget/SlidingButton;
 
-    const v0, 0x7f0a01e9
+    const v0, 0x7f0a0151
 
     .line 55
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/allapps/WorkFooterContainer;->findViewById(I)Landroid/view/View;

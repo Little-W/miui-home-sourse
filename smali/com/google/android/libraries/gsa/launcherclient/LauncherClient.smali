@@ -373,7 +373,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "v"
+    const-string v1, "v"
 
     invoke-virtual {p0, v1, v0}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
@@ -2043,7 +2043,7 @@
 
     iget-object p1, p0, Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;->f:Lcom/google/android/libraries/gsa/launcherclient/e;
 
-    const-string/jumbo v0, "updateClientOptions"
+    const-string v0, "updateClientOptions"
 
     .line 120
     invoke-virtual {p1, v0}, Lcom/google/android/libraries/gsa/launcherclient/e;->a(Ljava/lang/String;)V
@@ -2053,7 +2053,7 @@
     :cond_4
     const-string p1, "DrawerOverlayClient"
 
-    const-string/jumbo v0, "updateClientOptions not called since the overlay has not yet attached"
+    const-string v0, "updateClientOptions not called since the overlay has not yet attached"
 
     .line 121
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
@@ -2067,7 +2067,7 @@
 
     const-string v0, "DrawerOverlayClient"
 
-    const-string/jumbo v1, "updateClientOptions() to set partner overlay icon failed"
+    const-string v1, "updateClientOptions() to set partner overlay icon failed"
 
     .line 122
     invoke-static {v0, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
@@ -2267,7 +2267,7 @@
 
     iget-object v0, p0, Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;->f:Lcom/google/android/libraries/gsa/launcherclient/e;
 
-    const-string/jumbo v1, "updateMove"
+    const-string v1, "updateMove"
 
     .line 139
     invoke-virtual {v0, v1, p1}, Lcom/google/android/libraries/gsa/launcherclient/e;->a(Ljava/lang/String;F)V

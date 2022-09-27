@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="Icon_name_classic_mode">សំណុំ​កំណត់អេក្រង់ដើម</string>
     <string name="accessibility_all_app_custom_category_finish">រួចរាល់</string>
     <string name="accessibility_all_app_custom_category_item_remove">ដក \"%1$s\" ចេញពីប្រភេទ</string>
     <string name="accessibility_clear_search_bar_text">ជម្រះរបារស្វែងរក</string>
@@ -26,10 +25,8 @@
     <string name="activity_not_unlocked">សូមរងចាំរហូតដល់ឧបករណ៍របស់អ្នកចាប់ផ្ដើមឡើងវិញពេញលេញ មុននឹងបើកកម្មវិធីនានា</string>
     <string name="add_custom_category">តាម​បំណង</string>
     <string name="add_screen">បន្ថែម​អេក្រង់</string>
-    <string name="add_to_workspace">បន្ថែមទៅអេក្រង់ទំព័រដើម</string>
     <string name="added_all_category">កម្មវិធីទាំងអស់បានបន្ថែមដោយជោគជ័យ</string>
     <string name="afternoon">ពេលរសៀល</string>
-    <string name="agree_button">យល់ព្រម</string>
     <string name="alexa_notification_add">បន្ថែម</string>
     <string name="alexa_notification_cancel">មិនមែន​ឥឡូវ​ទេ</string>
     <string name="alexa_notification_content">បន្ថែមផ្លូវកាត់ Alexa ទៅមជ្ឈមណ្ឌលការបញ្ជាឬ?</string>
@@ -68,7 +65,6 @@
     <string name="all_apps_slide_up_tips">ការអូសឡើងត្រូវបានបម្រុងទុកសម្រាប់ការបើកថតកម្មវិធី។ ប្តូរទៅម៉ូដអេក្រង់ដើមធម្មតា ហើយព្យាយាមម្តងទៀត។</string>
     <string name="all_apps_suggestions">ការផ្តល់យោបល់នៃកម្មវិធី</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">ល្បឿនចលនារូបភាព</string>
     <string name="announce_for_app_move_in_folder">បានផ្លាស់ទីទៅទីតាំង %1$d នៅក្នុងថត</string>
     <string name="announce_for_checked">%1$s បានពិនិត្យរួច</string>
     <string name="announce_for_choose_default_screen">កំណត់អេក្រង់ %1$d ជាអេក្រង់លំនាំដើម</string>
@@ -121,13 +117,6 @@
     <string name="app_category_tools">ឧបករណ៍</string>
     <string name="app_category_travel">ការធ្វើ​ដំណើរ</string>
     <string name="app_category_vr">VR</string>
-    <string name="app_drawer_double_confirm_description">ទង្វើនេះនឹងផ្លាស់ប្តូរប្លង់អេក្រង់ដើមរបស់អ្នក។ អ្នកនឹងអាចត្រឡប់ការផ្លាស់ប្តូរទាំងនេះឡើងវិញនៅក្នុង សំណុំកំណត់ នៅពេលក្រោយ។</string>
-    <string name="app_drawer_double_confirm_title">សូម​ប្រយ័ត្ន</string>
-    <string name="app_drawer_feature_description">ថតកម្មវិធី គឺជាឧបករណ៍ដ៏ល្អសម្រាប់រៀបចំកម្មវិធីរបស់អ្នកទាំងអស់។ ចែកប្រភេទកម្មវិធីដោយស្វ័យប្រវត្តិ និងស្វែងរកអ្វីដែលអ្នកត្រូវការ!</string>
-    <string name="app_drawer_guide_description">ស្វែងរកអ្វីដែលអ្នកកំពុងរកនៅក្នុងកម្មវិធីដែលអ្នកចូលចិត្ត</string>
-    <string name="app_drawer_guide_title">ថតកម្មវិធី</string>
-    <string name="app_drawer_tip_title">យើងបានជំនួសព័ត៌មានមាតិកាដោយថតកម្មវិធី។</string>
-    <string name="app_install_state">បានដំឡើង</string>
     <string name="app_name">បង្អួចតូច</string>
     <string name="application_name">កម្មវិធី Launcher ប្រព័ន្ធ</string>
     <string name="apply">កំណត់</string>
@@ -150,35 +139,8 @@
     <string name="back">ថយក្រោយ</string>
     <string name="backup_fail">មិនអាចបម្រុងទុកកម្មវិធីបើកដំណើរការ</string>
     <string name="bad_wallpaper_source_prompt">មិន​អាច​ផ្ទុក​រូបភាពសម្រាប់ផ្ទៃអក្រង់</string>
-    <string name="branch_feature_description">ក្រៅពីកម្មវិធី មុខងារស្វែងរករហ័សអាចរកមាតិកានិងធាតុនៅក្នុងអ៊ីនធឺណិត។</string>
-    <string name="branch_guide_attention">ការប្រើប្រាស់ការស្វែងរកកម្រិតខ្ពស់ទាមទារការចែករំលែកសំណើស្វែងរក លេខសម្គាល់ ID ពត៌មានផ្សព្វផ្សាយ Google និងអាសយដ្ឋាន IP របស់អ្នកជាមួយ Branch Metrics Inc ។ សូមអាន និងយល់ព្រមចំពោះ <a href="http://url1"><font color="#B3000000">ខ និង​ ល័ក្ខខ័ណ្ឌនៃការរកឃើញអ្នកប្រើចុងក្រោយ</font></a> និង <a href="http://url2"><font color="#B3000000">គោលការណ៍​ភាព​ឯកជន Branch Discovery</font></a> មុនពេលប្រើមុខងារពិសេសនេះ។</string>
-    <string name="branch_guide_description_one">យើងនឹងដាក់កម្មវិធីរបស់អ្នកទាំងអស់ទៅក្នុងថតកម្មវិធី។ អេក្រង់ដើមរបស់អ្នកនឹងមើលទៅស្អាតនិងមានសណ្តាប់ធ្នាប់។</string>
-    <string name="branch_guide_description_three">ជាមួយនឹងការស្វែងរកដែលភ្ជាប់មកជាមួយ អ្នកនឹងអាចរកឃើញអ្វីដែលអ្នកត្រូវការបានយ៉ាងទាន់ចិត្ត!</string>
-    <string name="branch_guide_description_two">ថតកម្មវិធីនឹងបែងចែកប្រភេទកម្មវិធីដោយស្វ័យប្រវត្តិ។</string>
-    <string name="branch_guide_tip_title">កម្មវិធីនីមួយៗនៅកន្លែងរបស់វា</string>
-    <string name="branch_guide_title">ជួបជាមួយថតកម្មវិធី</string>
-    <string name="branch_guide_type_four_desc">អ្នកអាចត្រលប់ទៅវិធីចាស់វិញតាមពីរជំហានងាយៗ</string>
-    <string name="branch_guide_type_four_main">នៅក្នុងសំណុំកំណត់ សូមចូលទៅកាន់អេក្រង់ដើម > អេក្រង់ដើម ហើយជ្រើសរើស \"បុរាណ\" ។</string>
-    <string name="branch_guide_type_four_step_one">បើកសំណុំកំណត់</string>
-    <string name="branch_guide_type_four_step_two">ជ្រើសរើសអេក្រង់ដើម</string>
-    <string name="branch_guide_type_one_desc">គ្រប់គ្រងកម្មវិធីរបស់អ្នកដោយប្រើថតកម្មវិធី</string>
-    <string name="branch_guide_type_one_main">ទុកកម្មវិធីរបស់អ្នកទាំងអស់ទៅក្នុងថតកម្មវិធី ដើម្បីធ្វើឱ្យអេក្រង់ដើមរបស់អ្នកនឹងមើលទៅស្អាតនិងមានសណ្តាប់ធ្នាប់។</string>
-    <string name="branch_new_feature">មុខងារពិសេសថ្មីៗ</string>
-    <string name="branch_privacy_policy">គោលការណ៍ឯកជនភាព</string>
-    <string name="branch_search_guide_description">លទ្ធផលស្វែងរករបស់យើងឥឡូវនេះកាន់តែទូលាយជាងមុនហើយ</string>
-    <string name="branch_search_guide_privacy">សេវាកម្មនេះដំណើរការដោយ Branch Metrics Inc. ព័ត៌មានទីតាំងស្វែងរកសំណួរនិងលេខសម្គាល់ ID Google Ads នឹងត្រូវបានចែករំលែកជាមួយ Branch។ សូមអាននិងយល់ព្រមជាមួយ <a href="http://url1"><font color="#B3000000">ខ និង លក្ខខណ្ឌ</font></a> និង <a href="http://url2"><font color="#B3000000">គោលការណ៍​​ឯកជនភាព</font></a> របស់ Branch មុនពេលប្រើសេវាកម្មនេះ។</string>
-    <string name="branch_search_guide_title">ស្វែងរកអ្វីដែលអ្នកកំពុងរកនៅក្នុងកម្មវិធីដែលអ្នកចូលចិត្ត</string>
-    <string name="branch_terms_condition">ខ និង លក្ខខណ្ឌ</string>
-    <string name="branch_tip_title">ជាមួយមុខងារស្វែងរករហ័សអ្នកអាចរកឃើញអ្វីៗគ្រប់យ៉ាងដែលអ្នកត្រូវការភ្លាមៗ។</string>
-    <string name="btn_agree">យល់ព្រម</string>
-    <string name="btn_cancel">បោះបង់</string>
-    <string name="btn_close">បិទ</string>
-    <string name="btn_open">បើក</string>
-    <string name="btn_request_permission">ផ្តល់សិទ្ធិ</string>
-    <string name="btn_set_right_now">ផ្តល់សិទ្ធិ</string>
     <string name="buffering">បណ្តោះអាសន្ន…</string>
     <string name="cancel_action">បោះបង់</string>
-    <string name="cancel_botton">បោះបង់</string>
     <string name="cancel_btn_label">បោះបង់</string>
     <string name="cant_edit_lock_screen">មិន​អាច​កែសម្រួល​រចនាបទ​រូបភាពសម្រាប់ផ្ទៃអក្រង់​ជាប់សោ</string>
     <string name="cant_remove_folder">មិន​អាច​លុប​សឺមី​ចេញ</string>
@@ -288,11 +250,9 @@
     <string name="emptyplaylist">ចុច​ដើម្បីបន្ថែម​បទចម្រៀង</string>
     <string name="enable_wallpaper_scroll">បេីកការបង្វែរផ្នែកចំហៀង</string>
     <string name="encryption">ការ​ដាក់​លេខ​កូដ</string>
-    <string name="enter_search_setting_title">បើកការស្វែងរកបន្ទាប់ពីបើកថតកម្មវិធី</string>
     <string name="eras_ad">គ្រិស្តសករាជ</string>
     <string name="eras_bc">មុនគ្រិស្តសករាជ</string>
     <string name="evening">ពេលរសៀល</string>
-    <string name="exit_overview_because_task_stack_changed">បានបិទថ្មីៗ ដោយសារការផ្លាស់ប្តូរដែលបានកើតឡើងក្នុងផ្ទៃខាងក្រោយ</string>
     <string name="failed_to_delete_temporary">មិន​អាច​លុប​ចេញ</string>
     <string name="failed_to_drop">មិន​អាច​ផ្លាស់ទី</string>
     <string name="failed_to_drop_widget_invalid">ធាតុក្រាហ្វិកនេះមិនត្រឹមត្រូវ</string>
@@ -349,8 +309,6 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
-    <string name="fold_pair_install_shortcut_long_click">ចុចឱ្យជាប់ ដើម្បីបន្ថែមទៅអេក្រង់ទំព័រដើម</string>
-    <string name="fold_pair_installed_shortcut_launcher">វិធីផ្លូវកាត់នេះមានរួចហើយ</string>
     <string name="folder_name">ថត</string>
     <string name="frame_load_failed">មិន​អាច​ផ្ទុក​ស៊ុម</string>
     <string name="free_style_apps_title">ជ្រើសរើស​កូនកម្មវិធី</string>
@@ -406,14 +364,11 @@
     <string name="gadget_weather_title_14">ឧតុនិយម</string>
     <string name="gadget_weather_title_24">ឧតុនិយម</string>
     <string name="global_search_hint">ស្វែងរក</string>
-    <string name="got_it_botton">យល់ហើយ</string>
     <string name="group_folder">ថតថ្មី</string>
     <string name="group_live_folders">ថត</string>
     <string name="group_shortcuts">ផ្លូវកាត់</string>
     <string name="guide_install_app_msg">កម្មវិធីនេះមិនត្រូវបានដំឡើងនៅលើឧបករណ៍របស់អ្នកទេ។ ស្វែងរក និងដំឡើងកម្មវិធីឥឡូវនេះ?</string>
     <string name="guide_install_app_title">រកមើល និង​ដំឡើង​កម្មវិធី?</string>
-    <string name="guide_permission_title">ការអនុញ្ញាតដែលត្រូវការ</string>
-    <string name="guide_privacy_dialog_title">លក្ខខណ្ឌ​នៃ​សេវាកម្ម</string>
     <string name="guide_tips_editing_mode">ចុច​ផ្អិបដើម្បីយកធាតុក្រាហ្វិក</string>
     <string name="home_gesture_content_center">មាតិកាមជ្ឈមណ្ឌល</string>
     <string name="home_gesture_global_search">ស្វែងរក</string>
@@ -444,9 +399,6 @@
     <string name="launcher_slide_up_title">អូសឡើងលើអេក្រង់ដើម</string>
     <string name="launcher_sliding_up_gesture">អូសឡើងលើអេក្រង់ដើម ដើម្បីបើកការស្វែងរក</string>
     <string name="launcher_title">អេក្រង់ដើម និង ថ្មីៗ</string>
-    <string name="layout_guide_description">ប្រសិនបើអ្នកមិនចូលចិត្តថតកម្មវិធី អ្នកអាចត្រលប់ទៅអេក្រង់ដើមដើមវិញបានជានិច្ច។ ប្រើផ្លូវកាត់ \"សំណុំ​កំណត់អេក្រង់ដើម\" ហើយប្តូររវាងម៉ូដទាំងពីរ។</string>
-    <string name="layout_guide_tip_title">អ្នកអាចត្រលប់ទៅវិធីចាស់វិញដោយប្រើតែចុចម្តង</string>
-    <string name="layout_guide_title">វិធីលុបថតកម្មវិធីចេញ</string>
     <string name="like">បន្ថែមទៅសំណព្វចិត្ត</string>
     <string name="liked">បានបន្ថែមទៅសំណព្វចិត្ត</string>
     <string name="loading_desktop">ចាំបន្តិច…</string>
@@ -613,11 +565,6 @@
     <string name="navigation_guide_recent_title">បើក ថ្មីៗ</string>
     <string name="navigation_guide_recent_title_spec_with_quotation_pad">បើក ថ្មីៗ</string>
     <string name="navigation_guide_settings">កាវិការសាកល្បង</string>
-    <string name="navigation_position_center">កណ្ដាល</string>
-    <string name="navigation_position_left">ឆ្វេង</string>
-    <string name="navigation_position_right">ស្តាំ</string>
-    <string name="navigation_position_summary">ទីតាំងផ្ទាល់ខ្លួននៃប៊ូតុងនាវាចរណ៍អាចត្រូវបានតែអនុវត្តនៅអេក្រង់ដើមតែប៉ុណ្ណោះ</string>
-    <string name="navigation_position_title">ទីតាំងប៊ូតុងនាវាចរណ៍</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">បោះបង់</string>
     <string name="navigation_set_miui_home_as_default_dialog_message">មិនអាចប្រើកាយវិការពេញអេក្រង់ជាមួយឧបករណ៍បើកភាគីទីបីបានទេ។ សូមប្តូរទៅ Launcher ប្រព័ន្ធ ហើយបើកកាយវិការពេញអេក្រង់ឬ?</string>
     <string name="navigation_set_miui_home_as_default_dialog_ok">យល់ព្រម</string>
@@ -626,11 +573,9 @@
     <string name="navigation_type_title">នាវាចរណ៍ក្នុងប្រព័ន្ធ</string>
     <string name="navigation_type_virtual_key">ប៊ូតុង</string>
     <string name="network_error">មិនអាចតភ្ជាប់បណ្តាញបាន។ សូមព្យាយាមម្តងទៀត។</string>
-    <string name="new_feature_title">អ្វី​ដែល​ថ្មី</string>
     <string name="night">ល្ងាច</string>
     <string name="no_detail_page">គ្មាន​ទំព័រ​​អំពីព័ត៌មានលម្អិត</string>
     <string name="no_space_toast">គ្មានទំហំគ្រប់គ្រាន់</string>
-    <string name="no_space_toast_fold">មិនមានកន្លែងទំនេរគ្រប់គ្រាន់ទេនៅទីនេះ</string>
     <string name="no_space_toast_when_click_widget">មិនមានទំហំគ្រប់គ្រាន់នៅលើទំព័រនេះទេ។ សូមព្យាយាមអូសធាតុនេះទៅទំព័រផ្សេង។</string>
     <string name="noon">ថ្ងៃត្រង់</string>
     <string name="normal_wallpaper">រូប​ផ្ទៃ​អេក្រង់</string>
@@ -639,7 +584,6 @@
     <string name="notification_reset_title">រៀបចំរូបតំណាងដោយជោគជ័យ</string>
     <string name="one_key_call_title">ចុច ដើម្បីតេ</string>
     <string name="online_wallpaper">លើបណ្តាញ</string>
-    <string name="open_pad_personal_assistant_settings">ធាតុក្រាហ្វិកនៃអេក្រង់ដើម</string>
     <string name="open_personal_assistant_dialog_btn_cancel">បោះបង់</string>
     <string name="open_personal_assistant_dialog_btn_confirm">បិទ</string>
     <string name="open_personal_assistant_dialog_desc">បន្ទាប់ពីអ្នកបិទឃ្លាំងកម្មវិធីអ្នកនឹងមិនអាចមើលឬប្រើធាតុក្រាហ្វិកឈ្លាំងកម្មវិធីបានទេ។ កំណែជំនាន់ដែលបានអាប់ដេតរបស់ពួកវាក៏នឹងលែងមានសម្រាប់អ្នកដែរ។ នៅតែបិទឬ?</string>
@@ -651,7 +595,6 @@
     <string name="ota_layout_adjustment_content">ប្លង់អេក្រង់ដើមខាងក្នុងនិងខាងក្រៅត្រូវបានធ្វើសមកាលកម្មនៅក្នុងកំណែជំនាន់ថ្មី។</string>
     <string name="ota_layout_adjustment_title">ប្លង់អេក្រង់ដើម</string>
     <string name="out_of_space">គ្មាន​ចន្លោះ​នៅសល់​នៅ​លើ​អេក្រង់​ដើម​នេះទេ</string>
-    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">បង្ហាញចលនានៅលើរូបតំណាងកម្មវិធីភាគីទីបី</string>
     <string name="perfect_icons_switch_title">ចលនារូបតំណាងសកល</string>
     <string name="permdesc_install_shortcut">អនុញ្ញាត​ឱ្យ​កម្មវិធី​បន្ថែម​នូវ​ផ្លូវកាត់​នានា​បាន​ដោយ​មិនចាំបាច់​មាន​អន្តរាគមន៍​របស់​អ្នកប្រើ។</string>
@@ -671,7 +614,6 @@
     <string name="photo_load_failed">មិន​អាច​ផ្ទុក​រូបថត</string>
     <string name="please_slide_agian">អូសម្តងទៀត</string>
     <string name="pm">PM</string>
-    <string name="popular_search">ពេញនិយម</string>
     <string name="pref_cell_layout_size">ប្លង់​រូបតំណាង​កម្មវិធី</string>
     <string name="pref_enable_drawing_cache_summary">បិទ​ដើម្បី​បង្កើត​ចន្លោះ​រក្សាទុក​ក្នុងអង្គចងចាំ។ នេះ​អាច​នឹង​បណ្ដាល​ឲ្យ​ដំណើរការ ឬ​ការបំពេញ​មុខងារ​កាន់តែ​យឺត។</string>
     <string name="pref_enable_drawing_cache_title">ឃ្លាំង​សម្ងាត់នៃ​គំនូរ</string>
@@ -691,14 +633,6 @@
     <string name="privacy_thumbnail_blur_summary">បំព្រិលការបង្ហាញកម្មវិធីនៅក្នុងថ្មីៗ</string>
     <string name="privacy_thumbnail_blur_title">បំព្រិលការបង្ហាញកម្មវិធី</string>
     <string name="quick_app">កម្មវិធីរហ័ស</string>
-    <string name="quick_finder_feature_description">មុខងារស្វែងរករហ័ស អនុញ្ញាតឱ្យអ្នកស្វែងរកកម្មវិធី មាតិកានៅក្នុងកម្មវិធី និងធាតុនានាតាមអ៊ីនធឺណិតលឿនជាងមុន។ អ្នកអាចបិទមុខងារនេះនៅក្នុងសំណុំកំណត់។</string>
-    <string name="quick_finder_tip_title">រកអ្វីគ្រប់យ៉ាងដែលអ្នកត្រូវការលឿនជាងមុន</string>
-    <string name="quick_search_all_app_desc">បង្ហាញកម្មវិធីទាំងអស់នៅក្នុងថតកម្មវិធី</string>
-    <string name="quick_search_desc">បើកការស្វែងរកបន្ទាប់ពីបើកថតកម្មវិធី</string>
-    <string name="quick_search_guide_all_apps">កម្មវិធីទាំងអស់</string>
-    <string name="quick_search_guide_ok_btn">យល់ព្រម</string>
-    <string name="quick_search_guide_quick_search">ការ​ស្វែង​រក​ឆាប់​រហ័ស</string>
-    <string name="quick_search_guide_title">ជ្រើសរើសម៉ូដលំនាំដើម</string>
     <string name="recent_apps">ថ្មីៗ</string>
     <string name="recent_menu_item_info">ព័ត៌មាន</string>
     <string name="recent_menu_item_lock">ចាក់សោ</string>
@@ -707,7 +641,7 @@
     <string name="recents_app_info_button_label">ព័ត៍មាន​កម្មវិធី</string>
     <string name="recents_clear_all_tasks">ជម្រះទាំងអស់</string>
     <string name="recents_config_title">ថ្មីៗ</string>
-    <string name="recents_dimiss_task">សម្អាត</string>
+    <string name="recents_dimiss_task">ជម្រះ</string>
     <string name="recents_empty_message">មិនមានធាតុថ្មីៗទេ</string>
     <string name="recents_empty_message_dismissed_all">អ្នកបានសម្អាតអ្វីៗទាំងអស់</string>
     <string name="recents_empty_message_multi_window">បើកកម្មវិធីពីអេក្រង់ដើម</string>
@@ -727,13 +661,6 @@
     <string name="recents_title_market">ស្វែងរកកម្មវិធី</string>
     <string name="recents_title_security_scan">ស្កេនសុវត្ថិភាព</string>
     <string name="recents_tv_small_window_text">បង្អួចអណ្តែត</string>
-    <string name="recents_worldcirculate_text">ព្រលែងដើម្បីជ្រើសរើស</string>
-    <string name="recnets_relay_device_info">ពី%s</string>
-    <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
-    <string name="recnets_worldcirculate_display_computer_info">កម្មវិធីកំពុងដំណើរការលើ %s ។</string>
-    <string name="recnets_worldcirculate_display_default_info">ចុចដើម្បីយកវាមកវិញនៅទីនេះ។</string>
-    <string name="recnets_worldcirculate_display_default_info_pad">ចុចដើម្បីយកវាមកវិញនៅទីនេះ។</string>
-    <string name="recnets_worldcirculate_display_pad_info">កម្មវិធីកំពុងដំណើរការលើ %s ។</string>
     <string name="recommend_apk_size_and_desc">%1$dMB | %2$s</string>
     <string name="recommend_app">ការផ្ដល់យោបល់សម្រាប់កម្មវិធី</string>
     <string name="recommend_apps_default_title">ទទេ</string>
@@ -751,8 +678,6 @@
     <string name="remove_invalidate_gadget_tips">ធាតុក្រាហ្វិកមួយដែលអ្នកប្រើមិនអាចប្រើបានទៀតទេ។ អ្នកអាចបន្ថែមធាតុក្រាហ្វិកមួយផ្សេងទៀតបាន។</string>
     <string name="remove_sys_app_content">អ្នកនឹងអាចបន្ថែមផ្លូវកាត់អេក្រង់ដើមម្តងទៀតនៅក្នុង សំណុំកំណត់ > កម្មវិធី > គ្រប់គ្រងផ្លូវកាត់អេក្រង់ដើម។ យកចេញឥឡូវឬ?</string>
     <string name="remove_sys_app_title">យកផ្លូវកាត់អេក្រង់ដើមចេញឬ?</string>
-    <string name="request_permission_msg">POCO Launcher ត្រូវការការអនុញ្ញាតពីរបី ដើម្បីផ្តល់ឱ្យអ្នកនូវការចូលដំណើរការមុខងារពេញលេញរបស់វា។</string>
-    <string name="request_permission_title">ការអនុញ្ញាតដែលត្រូវការ</string>
     <string name="reset_cate_tip_content">បើអ្នកបន្តទៅមុខទៀត លំនាំដើមក្រុមកម្មវិធីនឹងស្តារឡើងវិញ។ នៅតែបន្តឬ?</string>
     <string name="reset_cate_tip_title">ស្តារក្រុមលំនាំដើមឡើងវិញ</string>
     <string name="reset_description_first_time">អ្នកអាចស្តារប្លង់ពី %1$s ក្នុងរយៈពេល 2 ម៉ោង</string>
@@ -768,8 +693,6 @@
     <string name="screen_cells_config_title">ប្លង់​​អេក្រង់ដើម</string>
     <string name="screen_locked_toast">មាន​ការចាក់សោ​ប្លង់​​អេក្រង់ដើម.</string>
     <string name="screen_number">%d អេក្រង់</string>
-    <string name="search_bar_hint_content">ស្វែងរកកម្មវិធី និងមាតិកា</string>
-    <string name="search_guide_btn">យល់ហើយ</string>
     <string name="search_in_apps_store">ស្វែងរក \"%1$s\" ក្នុង %2$s</string>
     <string name="search_no_result">ពុំអាច​រកឃើញមានលទ្ធផល</string>
     <string name="select_all">ជ្រើសរើសទាំងអស់</string>
@@ -777,7 +700,6 @@
     <string name="select_photo">រូបថត</string>
     <string name="send">បញ្ជូន</string>
     <string name="server_error">កំហុសម៉ាស៊ីនមេបានកើតឡើង។ សូមរង់ចាំពីរបីនាទី ហើយព្យាយាមម្តងទៀត។</string>
-    <string name="service_double_attention">មុខងារស្វែងរកកម្រិតខ្ពស់ត្រូវបានផ្តល់ដោយ Branch Metrics Inc. ដើម្បីធ្វើឱ្យមុខងារនេះដំណើរការបានយើងចាំបាច់ត្រូវចែករំលែកសំណើស្វែងរក លេខសម្គាល់ ID ពត៌មានផ្សព្វផ្សាយ Google និងអាសយដ្ឋាន IP របស់អ្នកជាមួយ Branch Metrics Inc ។ សូមអាន និងយល់ព្រមចំពោះ <a href="http://url1"><font color="#B3000000">ខ និង​ ល័ក្ខខ័ណ្ឌនៃការរកឃើញអ្នកប្រើចុងក្រោយ</font></a> និង <a href="http://url2"><font color="#B3000000">គោលការណ៍​ភាព​ឯកជន Branch Discovery</font></a> មុនពេលប្រើមុខងារពិសេសនេះ។</string>
     <string name="setting_wallpaper_tip">សង្កត់ ឬ​វាស​ម្រាមដៃ​ដើម្បី​កែតម្រូវ</string>
     <string name="settings">សំណុំ​កំណត់</string>
     <string name="settings_shortcut">សំណុំ​កំណត់</string>
@@ -815,13 +737,11 @@
     <string name="status_installing">កំពុងបញ្ចូល</string>
     <string name="status_paused">បានផ្អាក</string>
     <string name="status_pending">កំពុងរង់ចាំ</string>
-    <string name="suggestions">ការផ្តល់យោបល់</string>
     <string name="sunday">ថ្ងៃអាទិត្យ</string>
     <string name="sunday_short">អាទិត្យ</string>
     <string name="sunday_shortest">អាទិត្យ</string>
     <string name="swipe_the_desktop_to_the_left">អូសឆ្វេងលើអេក្រង់ដើម</string>
     <string name="swipe_the_desktop_to_the_right">អូសស្តាំលើអេក្រង់ដើម</string>
-    <string name="switch_on_button">បើក</string>
     <string name="switch_personal_assistant_app_vault">ឃ្លាំងកម្មវិធី</string>
     <string name="switch_personal_assistant_google">Google Discover</string>
     <string name="switch_personal_assistant_none">ទទេ</string>
@@ -832,10 +752,6 @@
     <string name="system_shortcuts_remove">យកចេញ</string>
     <string name="system_text">ស្វ័យប្រវត្តិ</string>
     <string name="task_access_locked_app_msg">បានបើកប្រើសោចាក់កម្មវិធី</string>
-    <string name="term_of_service">ខ និង ល័ក្ខខ័ណ្ឌ</string>
-    <string name="terms_of_services_one">ស្វាគមន៍មកកាន់ថតកម្មវិធី និង កម្មវិធីស្វែងរករហ័ស។ ឧបករណ៍ស្វែងរករហ័សអនុញ្ញាតឱ្យអ្នកស្វែងរកកម្មវិធីមាតិកានៅក្នុងកម្មវិធីនិងរបស់របរតាមអ៊ីនធឺណិតលឿនជាងមុន។ អាននិងយល់ព្រមជាមួយ <a href="http://url1"><font color="#B3000000">គោលការណ៍​ភាព​ឯកជន</font></a> ក្រុមហ៊ុន Xiaomi មុនពេលប្រើមុខងារពិសេសទាំងនេះ។</string>
-    <string name="terms_of_services_three">អ្នកអាចបិទលក្ខណៈពិសេសនេះក្នុងការកំណត់។</string>
-    <string name="terms_of_services_two">ការប្រើប្រាស់ការស្វែងរកដែលប្រសើរឡើងទាមទារការចែករំលែកព័ត៌មានផ្ទាល់ខ្លួនចាំបាច់ដែលរួមមានសំណួរស្វែងរក លេខសម្គាល់ការផ្សាយពាណិជ្ជកម្ម Google និងអាស័យដ្ឋាន IP របស់អ្នកជាមួយ Branch Metrics Inc.​។ Branch នឹងដំណើរការព័ត៌មានផ្ទាល់ខ្លួនរបស់អ្នកស្របតាម <a href="http://url1"><font color="#B3000000">គោលការណ៍​​ឯកជនភាព Branch Discovery</font></a>។ សូមអាននិងយល់ព្រមជាមួយ <a href="http://url2"><font color="#B3000000">ខ និង ល័ក្ខខ័ណ្ឌនៃអ្នកប្រើប្រាស់ Discovery ចុងក្រោយ</font></a> និង <a href="http://url3"><font color="#B3000000">គោលការណ៍​​ឯកជនភាព Branch Discovery</font></a> មុនពេលប្រើមុខងារពិសេសនេះ។</string>
     <string name="the_anniversary_of_lifting_martial_law">ខួបការលើកច្បាប់គុន</string>
     <string name="the_anti_aggression_day">ទិវាប្រឆាំងនឹងការឈ្លានពាន</string>
     <string name="the_arbor_day">ទិវា Arbor</string>
@@ -902,11 +818,6 @@
     <string name="tuesday">ថ្ងៃអង្គារ</string>
     <string name="tuesday_short">អង្គារ</string>
     <string name="tuesday_shortest">អង្គារ</string>
-    <string name="uni_search_permission_content">បើកមុខងារស្វែងរកតាមអ៊ីនធឺណិត។ (សេវាកម្មស្វែងរកត្រូវបានផ្តល់ជូនដោយ Branch ។)</string>
-    <string name="uni_search_permission_msg">អនុញ្ញាតឱ្យ POCO Launcher ដើម្បីចូលដំណើរការពត៌មានទីតាំង និងបញ្ជីឈ្មោះទំនាក់ទំនងរបស់អ្នកដើម្បីបង្កើនប្រសិទ្ធភាពលទ្ធផលស្វែងរក។</string>
-    <string name="uni_search_permission_title">បង្កើនប្រសិទ្ធភាពការស្វែងរក</string>
-    <string name="uni_search_setting_summary">រកមាតិកាដោយផ្ទាល់នៅក្នុងកម្មវិធី</string>
-    <string name="uni_search_setting_title">ម៉ូដស្វែងរកនៅក្នុងកម្មវិធី</string>
     <string name="uninstall">លុប</string>
     <string name="uninstall_dialog_message">ការលុប​នឹង​លុបចេញ​នូវ​រាល់​ទិន្នន័យរបស់​កម្មវិធី។</string>
     <string name="uninstall_dialog_title_format">លុប %s?</string>
@@ -917,7 +828,6 @@
     <string name="uninstall_xspace_dialog_title_format">លុបទាំងពីរ \"%s\"?</string>
     <string name="unknown_artist_name">សិល្បករដែលមិនស្គាល់</string>
     <string name="unnamed_folder_name">ថត</string>
-    <string name="upgrade_remove_small_window_in_recents">អ្នកអាចប្រើប្រាស់របារចំហៀងដើម្បីបើកកម្មវិធីក្នុងបង្អួចអណ្តែត</string>
     <string name="wallpaper">រូប​ផ្ទៃ​អេក្រង់</string>
     <string name="wallpaper_auto_change_title">អេក្រង់ជាប់សោ</string>
     <string name="wallpaper_failed_message">មិន​អាចកំណត់​រូបភាពផ្ទៃអក្រង់បាន</string>

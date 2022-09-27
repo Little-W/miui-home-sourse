@@ -29,6 +29,8 @@
 
 .field public static final enum SAMPLER_2D_ARRAY:Lcom/google/android/filament/Texture$Sampler;
 
+.field public static final enum SAMPLER_3D:Lcom/google/android/filament/Texture$Sampler;
+
 .field public static final enum SAMPLER_CUBEMAP:Lcom/google/android/filament/Texture$Sampler;
 
 .field public static final enum SAMPLER_EXTERNAL:Lcom/google/android/filament/Texture$Sampler;
@@ -36,9 +38,9 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 7
 
-    .line 89
+    .line 88
     new-instance v0, Lcom/google/android/filament/Texture$Sampler;
 
     const-string v1, "SAMPLER_2D"
@@ -49,7 +51,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$Sampler;->SAMPLER_2D:Lcom/google/android/filament/Texture$Sampler;
 
-    .line 91
+    .line 90
     new-instance v0, Lcom/google/android/filament/Texture$Sampler;
 
     const-string v1, "SAMPLER_2D_ARRAY"
@@ -60,7 +62,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$Sampler;->SAMPLER_2D_ARRAY:Lcom/google/android/filament/Texture$Sampler;
 
-    .line 93
+    .line 92
     new-instance v0, Lcom/google/android/filament/Texture$Sampler;
 
     const-string v1, "SAMPLER_CUBEMAP"
@@ -71,7 +73,7 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$Sampler;->SAMPLER_CUBEMAP:Lcom/google/android/filament/Texture$Sampler;
 
-    .line 95
+    .line 94
     new-instance v0, Lcom/google/android/filament/Texture$Sampler;
 
     const-string v1, "SAMPLER_EXTERNAL"
@@ -82,9 +84,20 @@
 
     sput-object v0, Lcom/google/android/filament/Texture$Sampler;->SAMPLER_EXTERNAL:Lcom/google/android/filament/Texture$Sampler;
 
-    const/4 v0, 0x4
+    .line 96
+    new-instance v0, Lcom/google/android/filament/Texture$Sampler;
 
-    .line 87
+    const-string v1, "SAMPLER_3D"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v0, v1, v6}, Lcom/google/android/filament/Texture$Sampler;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/google/android/filament/Texture$Sampler;->SAMPLER_3D:Lcom/google/android/filament/Texture$Sampler;
+
+    const/4 v0, 0x5
+
+    .line 86
     new-array v0, v0, [Lcom/google/android/filament/Texture$Sampler;
 
     sget-object v1, Lcom/google/android/filament/Texture$Sampler;->SAMPLER_2D:Lcom/google/android/filament/Texture$Sampler;
@@ -103,6 +116,10 @@
 
     aput-object v1, v0, v5
 
+    sget-object v1, Lcom/google/android/filament/Texture$Sampler;->SAMPLER_3D:Lcom/google/android/filament/Texture$Sampler;
+
+    aput-object v1, v0, v6
+
     sput-object v0, Lcom/google/android/filament/Texture$Sampler;->$VALUES:[Lcom/google/android/filament/Texture$Sampler;
 
     return-void
@@ -116,7 +133,7 @@
         }
     .end annotation
 
-    .line 87
+    .line 86
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -125,7 +142,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/android/filament/Texture$Sampler;
     .locals 1
 
-    .line 87
+    .line 86
     const-class v0, Lcom/google/android/filament/Texture$Sampler;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -140,7 +157,7 @@
 .method public static values()[Lcom/google/android/filament/Texture$Sampler;
     .locals 1
 
-    .line 87
+    .line 86
     sget-object v0, Lcom/google/android/filament/Texture$Sampler;->$VALUES:[Lcom/google/android/filament/Texture$Sampler;
 
     invoke-virtual {v0}, [Lcom/google/android/filament/Texture$Sampler;->clone()Ljava/lang/Object;

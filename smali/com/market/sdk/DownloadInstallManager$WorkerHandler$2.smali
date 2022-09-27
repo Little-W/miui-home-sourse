@@ -98,7 +98,7 @@
 
     const-string v0, "MarketUpdateDownload"
 
-    const-string/jumbo v1, "verify downloaded apk failed"
+    const-string v1, "verify downloaded apk failed"
 
     .line 305
     invoke-static {v0, v1}, Lcom/market/sdk/utils/Log;->e(Ljava/lang/String;Ljava/lang/String;)V

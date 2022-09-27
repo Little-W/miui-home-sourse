@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="Icon_name_classic_mode">ཅོག་ངོས་སྒྲིག་འགོད།</string>
     <string name="accessibility_all_app_custom_category_finish">གྲུབ།</string>
     <string name="accessibility_all_app_custom_category_item_remove">%1$sརིགས་དབྱེ་སྤོ་བ།</string>
     <string name="accessibility_clear_search_bar_text">འཚོལ་བཤེར་སྒྲོམ་གཙང་སེལ།</string>
@@ -25,10 +24,8 @@
     <string name="activity_not_unlocked">བསྐྱར་དུ་ཁ་ཕྱེ་རྗེས་ཉེར་སྤྱོད་ཀྱིས་ཁས་ལེན་པར་སྒུག་དགོས། ཅུང་ཙམ་ནས་ཡང་བསྐྱར་ཚོད་ལྟ་གནང་རོགས།</string>
     <string name="add_custom_category">རང་སྒྲུབ།</string>
     <string name="add_screen">བརྙན་ཤེལ་ཁ་སྣོན།</string>
-    <string name="add_to_workspace">ཅོག་ངོས་སུ་ཁ་སྣོན།</string>
     <string name="added_all_category">ཉེར་སྤྱོད་ཡོངས་བསྣན་ཟིན།</string>
     <string name="afternoon">ཕྱི་དྲོ།</string>
-    <string name="agree_button">མོས་མཐུན་ཡོད།</string>
     <string name="alexa_notification_add">ཁ་སྣོན།</string>
     <string name="alexa_notification_cancel">གནས་སྐབས་མི་དགོས།</string>
     <string name="alexa_notification_content">Alaxaསྟབས་བདེའི་སྒྲིག་འགོད་ཚོད་འཛིན་ལྟེ་གནས་སུ་བསྣན་ནམ།</string>
@@ -67,7 +64,6 @@
     <string name="all_apps_slide_up_tips">ཤུར་ལྕོག་་དཔེ་ཚུལ་གྱི་སྐབས་སུ་ལག་བརྡ་ཡར་འདྲེད་བྱེད་པ་བསྐངས་ཟིན། ཚད་ལྡན་དཔེ་ཚུལ་ལ་བརྗེས་རྗེས་སྒྲིག་འགོད་གནང་རོགས།</string>
     <string name="all_apps_suggestions">ཉེར་སྤྱོད་བསམ་འཆར།</string>
     <string name="am">སྔ་དྲོ།</string>
-    <string name="animation_rate_title">འགུལ་རིས་མྱུར་ཚོད།</string>
     <string name="announce_for_app_move_in_folder">ཡིག་ཁུག་ནང་གི་ཨང་རིམ་%1$dལ་སྤོ་བ།</string>
     <string name="announce_for_checked">%1$s བདམས་ཟིན།</string>
     <string name="announce_for_choose_default_screen">བརྙན་ཨང་%1$dནི་གཙོ་བརྙན་ལ་སྒྲིག་འགོད་བྱས་ཟིན།</string>
@@ -119,13 +115,6 @@
     <string name="app_category_tools">བེད་སྤྱོད་ལག་ཆ།</string>
     <string name="app_category_travel">ཡུལ་བསྐོར་འགྲིམ་འགྲུལ།</string>
     <string name="app_category_vr">VR</string>
-    <string name="app_drawer_double_confirm_description">དེས་ཁྱེད་ཀྱི་ཅོག་ངོས་རིས་འགྲེམ་ལ་འགྱུར་བ་གཏོང་སྲིད། གཏན་འཁེལ་ཡིན་ནམ། ཁྱེད་ཀྱིས་ཅོག་ངོས་སྒྲིག་འགོད་རྒྱུན་གཏན་དཔེ་ཚུལ་དུ་བཟོས་ཆོག</string>
-    <string name="app_drawer_double_confirm_title">གསལ་འདེབས།</string>
-    <string name="app_drawer_feature_description">ནུས་ལྡན་གྱི་ཤུར་ལྕོག་འཚོལ་བཤེར་དང་ཉེར་སྤྱོད་རིག་ནུས་རུ་ཆུང་། རང་འགུལ་གྱིས་སྒྲིག་འཇུག་བྱས་མ་ཐག་པའི་ཉེར་སྤྱོད་བསྡུ་སྲིད་པས། ཁྱེད་ཀྱི་ཅོག་ངོས་དེ་བས་ངོས་ལེགས་གོ་རིམ་ཅན་དུ་བཟོ་ཐུབ།</string>
-    <string name="app_drawer_guide_description">ཁྱེད་རང་ཆེས་དགའ་བའི་ཉེར་སྤྱོད་ནས་ཁྱེད་ལ་མཁོ་བའི་ནང་དོན་འཚོལ་བ།</string>
-    <string name="app_drawer_guide_title">ཉེར་སྤྱོད་འཐེན་གཞོང་།</string>
-    <string name="app_drawer_tip_title">ཆ་འཕྲིན་རྒྱུན་སྔོན་མ་ཤུར་ལྕོག་ལ་རིམ་སྤར་བྱས་ཟིན། ཁྱེད་ལ་རོགས་བྱས་ནས་ནུས་ལྡན་གྱིས་ཉེར་སྤྱོད་ལ་དོ་དམ་བྱེད།</string>
-    <string name="app_install_state">སྒྲིག་འཇུག་བྱས་ཟིན།</string>
     <string name="app_name">smallWindow</string>
     <string name="application_name">བརྒྱུད་ཁོངས་ཅོག་ངོས།</string>
     <string name="apply">སྒྲིག་སྟངས་ནི་</string>
@@ -148,29 +137,8 @@
     <string name="back">ལྡོག་པ།</string>
     <string name="backup_fail">གྲབས་ཉར་མི་ཐུབ།</string>
     <string name="bad_wallpaper_source_prompt">ནང་འཇུག་མི་ཐུབ།</string>
-    <string name="branch_feature_description">ཉེར་སྤྱོད་འཚོལ་བཤེར་བྱེད་པ་གང་ཞིག ཉེར་སྤྱོད་ཀྱི་ནང་དོན་ཡང་འཚོལ་བཤེར་བྱས་ནས། ཁྱེད་རང་དགའ་བའི་འདྲི་རྩད་འཚོལ་ཐུབ།</string>
-    <string name="branch_guide_attention">ཁྱེད་ཀྱི་ཉེར་སྤྱོད་འཚོལ་བཤེར་ཉམས་ལེན་ཇེ་ལེགས་སུ་གཏོང་ཆེད། ཁྱེད་ཀྱི་འཚོལ་བཤེར་རེ་ཞུའི་ཚིག་དང་། Google Ads IDས་གནས་Branch Metrics Incལ་མཉམ་སྤྱོད་བྱེད་དགོས། ཞབས་ཞུ་འདི་བེད་སྤྱོད་མ་བྱས་སྔོན་ལ་Branchཡི་<a href="http://url1"><font color="#B3000000">《སྤྱོད་མཁན་གྲོས་མཐུན》</font></a>དང་<a href="http://url2"><font color="#B3000000">《གསང་དོན་སྲིད་ཇུས》</font></a>བཀླགས་ཤིང་མོས་མཐུན་བྱེད་དགོས།</string>
-    <string name="branch_guide_description_one">ཁྱེད་ཀྱི་ཉེར་སྤྱོད་ཤུར་ལྕོག་ཏུ་བཞག་ནས། ཁྱེད་ལ་ཅོག་ངོས་གྲལ་དག་པོ་ཞིག་ཡོད།</string>
-    <string name="branch_guide_description_three">སྟབས་བདེ་བའི་ཕྱོགས་ཡོངས་ཀྱི་འཚོལ་བཤེར། སྐར་ཆ་གཅིག་ལ་དགོས་ངེས་ཀྱི་ཉེར་སྤྱོད་ཐོབ་ཐུབ།</string>
-    <string name="branch_guide_description_two">ཤུར་ལྕོག་རང་འགུལ་གྱིས་རིགས་དབྱེ་བའི་ཉེར་སྤྱོད། ཉེར་སྤྱོད་ཡོངས་གོ་རིམ་ལྡན་པའི་ངང་སྒྲིག་པ།</string>
-    <string name="branch_guide_tip_title">ཁྱེད་ཀྱི་ཅོག་ངོས་གྲལ་སྒྲིག་པོར་ཡོད།</string>
-    <string name="branch_guide_title">བྱེད་ནུས་གསར་པ།</string>
-    <string name="branch_new_feature">བྱེད་ནུས་གསར་པ།</string>
-    <string name="branch_privacy_policy">གསང་དོན་སྲིད་ཇུས།</string>
-    <string name="branch_search_guide_description">ང་ཚོའི་ཐུན་མིན་དང་སྤུས་ཚད་མཐོ་བའི་ཅོག་ངོས་ཞབས་ཞུ་བེད་སྤྱོད་བྱེད།</string>
-    <string name="branch_search_guide_privacy">ཞབས་ཞུ་འདི་ནི་Branch Metrics Inc.ཡིས་མཁོ་འདོན་བྱས། ཁྱེད་ཀྱི་ས་གནས་གནས་ཡུལ་ནི་འདྲི་རྩད་འཚོལ་ཞིབ་དང་Google Ads IDནི་Branchལ་མཉམ་སྤྱོད་བྱེད་སྲིད། གལ་སྲིད་ཁྱེད་ཀྱིས་བྱེད་ནུས་འདི་བེད་སྤྱོད་བྱེད་ཚེ། ཁྱེད་ཀྱིས་Branchཡི་<a href="http://url1"><font color="#B3000000">དོན་ཚན་སྒྲིག་སྲོལ་ཞིབ་ཕྲ་</font></a>དང་<a href="http://url2"><font color="#B3000000">གསང་དོན་སྲིད་ཇུས་</font></a>ལ་མོས་མཐུན་བྱེད་དགོས།</string>
-    <string name="branch_search_guide_title">ཁྱེད་རང་ཆེས་དགའ་བའི་ཉེར་སྤྱོད་ནས་ཁྱེད་ལ་མཁོ་བའི་ནང་དོན་འཚོལ་བ།</string>
-    <string name="branch_terms_condition">དོན་ཚན་ཞིབ་ཕྲ།</string>
-    <string name="branch_tip_title">ཁྱེད་ཀྱི་ཉེར་སྤྱོད་འཚོལ་བཤེར་གྱི་ཉམས་ལེན་མཐོར་འདེགས།</string>
-    <string name="btn_agree">མོས་མཐུན་བྱས་ནས་མུ་མཐུད།</string>
-    <string name="btn_cancel">རྩིས་མེད།</string>
-    <string name="btn_close">ཁ་བརྒྱབ།</string>
-    <string name="btn_open">ཁ་འབྱེད།</string>
-    <string name="btn_request_permission">ཉམས་ལེན་སྤུས་ལེགས་ཐོབ་པ།</string>
-    <string name="btn_set_right_now">ལམ་སེང་མྱོང་རོལ།</string>
     <string name="buffering">བར་གསོག...</string>
     <string name="cancel_action">རྩིས་མེད།</string>
-    <string name="cancel_botton">རྩིས་མེད།</string>
     <string name="cancel_btn_label">རྩིས་མེད།</string>
     <string name="cant_edit_lock_screen">མིག་སྔའི་སྒོ་ལྕགས་རྣམ་པར་རྩོམ་སྒྲིག་བྱེད་མི་ཐུབ།</string>
     <string name="cant_remove_folder">སྟོང་པ་མིན་པའི་ཡིག་ཁུག་སུབ་མི་ཐུབ།</string>
@@ -278,11 +246,9 @@
     <string name="emptyplaylist">ཁྱེད་ནས་བདམས་པའི་རེའུ་མིག་སྟོང་པ་ཡིན།</string>
     <string name="enable_wallpaper_scroll">རྩིག་ཤོག་འཁོར་སྐྱོད་དཔེ་ཚུལ་ཁ་འབྱེད།</string>
     <string name="encryption">གསང་སྡོམ།</string>
-    <string name="enter_search_setting_title">ཤུར་ལྕོག་ཏུ་འཛུལ་རྗེས་སོར་འཇོག་གིས་འཚོལ་བཤེར་ཁ་ཕྱེ་ཐུབ།</string>
     <string name="eras_ad">སྤྱི་ལོ།</string>
     <string name="eras_bc">སྤྱི་ལོ་སྔོན།</string>
     <string name="evening">དགོང་མོ།</string>
-    <string name="exit_overview_because_task_stack_changed">རྒྱབ་ངོས་ཉེར་སྤྱོད་ལ་འགྱུར་བ་བྱུང་སྟབས། ཉེ་བའི་ལས་འགན་ལས་ཕྱིར་ཐོན་ཟིན།</string>
     <string name="failed_to_delete_temporary">སུབ་མི་ཐུབ། ཅུང་ཙམ་ནས་ཡང་ལྟ།</string>
     <string name="failed_to_drop">སྤོ་མི་ཐུབ། པར་རྟགས་མ་གནས་ལ་ལོག་པ།</string>
     <string name="failed_to_drop_widget_invalid">བར་གཞུག་ནུས་མེད།</string>
@@ -338,8 +304,6 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">zW T</string>
     <string name="fmt_weekday_timezone">zW</string>
-    <string name="fold_pair_install_shortcut_long_click">རིས་རྟགས་ཡུན་རིང་དུ་མནན་ཚེ་མྱུར་སྟབས་ཐབས་ལམ་བཟོ་ཐུབ།</string>
-    <string name="fold_pair_installed_shortcut_launcher">ཅོག་ངོས་སུ་མྱུར་སྟབས་ཐབས་ལམ་དེ་བཟོས་ཟིན།</string>
     <string name="folder_name">ཡིག་ཁུག</string>
     <string name="frame_load_failed">པར་སྒྲོམ་རྣམ་པ་ནོར་འཁྲུལ། སྣོན་འཇུག་མི་ཐུབ།</string>
     <string name="free_style_apps_title">ཉེར་སྤྱོད་བྱ་རིམ་འདེམས་པ།</string>
@@ -395,14 +359,11 @@
     <string name="gadget_weather_title_14">གནམ་གཤིས4X1</string>
     <string name="gadget_weather_title_24">གནམ་གཤིས4X2</string>
     <string name="global_search_hint">ཕར་རྡེབ་ནས་བཤེར་འཚོལ།</string>
-    <string name="got_it_botton">ཤེས་སོང་།</string>
     <string name="group_folder">ཡིག་ཁུག་གསར་སྐྲུན།</string>
     <string name="group_live_folders">ཡིག་ཁུག</string>
     <string name="group_shortcuts">མགྱོགས་ལམ།</string>
     <string name="guide_install_app_msg">ཁྱེད་ནས་ཉེར་སྤྱོད་བྱ་རིམ་འདི་ད་དུང་སྒྲིག་འཇུག་བྱས་མེད། ལམ་སེང་ཉེར་སྤྱོད་ཚོང་ཁང་དུ་ཕབ་ལེན་བྱེད་དམ།</string>
     <string name="guide_install_app_title">ཉེར་སྤྱོད་བྱ་རིམ་སྒྲིག་འཇུག</string>
-    <string name="guide_permission_title">དབང་ཚད་རེ་འདུན།</string>
-    <string name="guide_privacy_dialog_title">གསལ་བསྒྲགས་དང་དོན་ཚན།</string>
     <string name="guide_tips_editing_mode">གཤམ་འོག་གི་ལྷུ་ཆས་ཆུང་ངུ་འཆར་ངོས་སྟེང་འཐེན་འདྲུད་བྱས་ཆོག</string>
     <string name="home_gesture_content_center">ནང་དོན་ལྟེ་གནས།</string>
     <string name="home_gesture_global_search">བཤེར་འཚོལ།</string>
@@ -433,9 +394,6 @@
     <string name="launcher_slide_up_title">ཅོག་ངོས་ཡར་འཐེན།</string>
     <string name="launcher_sliding_up_gesture">ཅོག་ངོས་ཡར་འཐེན་བཤེར་འཚོལ།</string>
     <string name="launcher_title">ཅོག་ངོས་དང་ཉེ་ཆར་གྱི་ལས་འགན།</string>
-    <string name="layout_guide_description">གལ་ཏེ་ཁྱེད་རང་གིས་བེད་སྤྱོད་བྱེད་པའི་བརྒྱུད་རིམ་ནང་མིག་སྔའི་བཀོད་སྒྲིག་ལ་བློ་ཡིད་ཚིམ་པོ་མེད་ཚེ། ཅོག་ངོས་ཀྱི“ཅོག་ངོས་སྒྲིག་འགོད”ཀྱི་པར་རིས་མནན་ན་སྔར་ཡོད་ཀྱི་བཀོད་སྒྲིག་སླར་གསོ་བྱེད་ཐུབ།</string>
-    <string name="layout_guide_tip_title">གོམ་སྟབས་གཅིག་གིས་སླར་གསོ་བྱེད་ཆོག</string>
-    <string name="layout_guide_title">འགྲེམ་སྟངས་ཇི་ལྟར་སླར་གསོ་བྱེད།</string>
     <string name="like">བསྡུ་ཉར།</string>
     <string name="liked">བསྡུ་ཉར་བྱས་ཟིན།</string>
     <string name="loading_desktop">ཅོག་ངོས་སྣོན་འཇུག་བྱེད་བཞིན་ཡོད།</string>
@@ -602,11 +560,6 @@
     <string name="navigation_guide_recent_title">ཉེ་ཆར་གྱི་ལས་འགན་ལ་བརྗེ་བ།</string>
     <string name="navigation_guide_recent_title_spec_with_quotation_pad">“ཉེ་ཆར་གྱི་ལས་འགན་རྗེས།”</string>
     <string name="navigation_guide_settings">བཀོལ་སྤྱོད་སློབ་རིམ།</string>
-    <string name="navigation_position_center">འཆར་ངོས་ཀྱི་དཀྱིལ།</string>
-    <string name="navigation_position_left">འཆར་ངོས་ཀྱི་གཡོན་ངོས།</string>
-    <string name="navigation_position_right">འཆར་ངོས་ཀྱི་གཡས་ངོས།</string>
-    <string name="navigation_position_summary">རྟོག་བཟོའི་མཐེབ་བཀྱག་གི་གནས་ཡུལ་ནི་བརྙན་ཡོལ་གཙོ་བོ་ཁོ་ནར་སྤྱོད་ཐུབ།</string>
-    <string name="navigation_position_title">རྟོག་བཟོའི་མཐེབ་བཀྱག་གནས་ཡུལ།</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">རྩིས་མེད།</string>
     <string name="navigation_set_miui_home_as_default_dialog_message">མ་ལག་ཅོག་ངོས་མ་ཡིན་པར་ཡོངས་ཁེབས་བརྙན་ལག་བརྡ་བེད་སྤྱོད་བྱ་མི་ཐུབ། མ་ལག་ཅོག་ངོས་སུ་བརྗེ་ནས་ཡོངས་ཁེབས་བརྙན་ལག་བརྡ་ཁ་ཕྱེའམ།</string>
     <string name="navigation_set_miui_home_as_default_dialog_ok">གཏན་འཁེལ།</string>
@@ -614,11 +567,9 @@
     <string name="navigation_type_full_screen">བརྙན་ཡོངས་ལག་བརྡ།</string>
     <string name="navigation_type_title">མ་ལག་གི་ལམ་སྟོན་ཐབས་ལམ།</string>
     <string name="navigation_type_virtual_key">དཔེ་མཚོན་གྱི་ཕྱོགས་སྟོན་མཐེབ།</string>
-    <string name="new_feature_title">ཁྱད་ཆོས་གསར་པ།</string>
     <string name="night">དགོང་མོ།</string>
     <string name="no_detail_page">གནས་ཚུལ་ཞིབ་ཕྲའི་ཤོག་ངོས་མི་འདུག</string>
     <string name="no_space_toast">བར་སྟོང་མི་འདང་།</string>
-    <string name="no_space_toast_fold">བར་སྟོང་མི་འདང་།</string>
     <string name="no_space_toast_when_click_widget">མིག་སྔའི་ཤོག་ངོས་ཀྱི་བར་སྟོང་མི་འདང་། འཐེན་ནས་ཤོག་ངོས་གཞན་བསྣན་ཆོག</string>
     <string name="noon">ཉིན་གུང་།</string>
     <string name="normal_wallpaper">ཅོག་ངོས་རྩིག་ཤོག</string>
@@ -627,7 +578,6 @@
     <string name="notification_reset_title">ཅོག་ངོས་པར་རྟགས་སྒྲིག་ཟིན།</string>
     <string name="one_key_call_title">མཐེབ་གཅིག་སྐད་འབོད།</string>
     <string name="online_wallpaper">སྐུད་སྟེང་རྩིག་ཤོག</string>
-    <string name="open_pad_personal_assistant_settings">ཅོག་ངོས་ལྷུ་ཆས་ཆུང་ངུ་།</string>
     <string name="open_personal_assistant_dialog_btn_cancel">རྩིས་མེད།</string>
     <string name="open_personal_assistant_dialog_btn_confirm">ཁ་རྒྱག</string>
     <string name="open_personal_assistant_dialog_desc">ཁ་བརྒྱབ་རྗེས་ཁྱེད་ཀྱིས་ཅོག་ངོས་ཀྱི་ཆེས་གཡོན་ངོས་ནས་ལྷུ་ཆས་ཆུང་ངུའི་ཆ་འཕྲིན་ལྟ་བཤེར་གནང་མི་ཐུབ་ལ། ལྷུ་ཆས་ཆུང་ངུའི་ཞབས་ཞུ་བེད་སྤྱོད་གནང་མི་ཐུབ། དུས་མཚུངས་སུ་དེའི་རྗེས་ཀྱི་ལེགས་བཅོས་དང་གསར་སྒྱུར་གྱི་སྐོར་མཁྱེན་མི་ཐུབ། ཁ་རྒྱག་རྒྱུར་གཏན་འཁེལ་ལམ།</string>
@@ -639,7 +589,6 @@
     <string name="ota_layout_adjustment_content">པར་གཞི་གསར་པ་རྗེས་ཅོག་ངོས་བཀོད་པའི་ཕྱི་ནང་འཆར་ངོས་གཅིག་མཚུངས་ཡིན་ཞིང་། ཕྱི་ངོས་འཆར་ངོས་ནང་ངོས་སུ་མཉམ་འགྲོས་བྱས་ཟིན།</string>
     <string name="ota_layout_adjustment_title">ཅོག་ངོས་བཀོད་པ་སྙོམ་སྒྲིག</string>
     <string name="out_of_space">བརྙན་ཤེལ་གཙོ་བོ་འདིའི་སྟེང་དུ་བར་སྟོང་མི་འདུག</string>
-    <string name="pair_icon_name">%1$s|%2$s</string>
     <string name="perfect_icons_switch_summary">ཕྱོགས་གསུམ་པའི་ཉེར་སྤྱོད་པར་རིས་བསྐྱར་དུ་བྲིས་ནས། རྫོགས་ལྡན་གྱི་པར་རིས་མངོན་འཆར་བྱེད།</string>
     <string name="perfect_icons_switch_title">རྫོགས་ལྡན་པར་རིས།</string>
     <string name="permdesc_install_shortcut">ཉེར་སྤྱོད་ནི་སྤྱོད་མཁན་གྱིས་ནང་འཇུག་མེད་པའི་རྣམ་པའི་འོག་མགྱོགས་ལམ་སྣོན་པར་མོས་མཐུན་བྱེད་པ།</string>
@@ -659,7 +608,6 @@
     <string name="photo_load_failed">པར་རིས་སྣོན་འཇུག་མི་ཐུབ།</string>
     <string name="please_slide_agian">ཡང་བསྐྱར་གཅིག་འཐེན་དང་།</string>
     <string name="pm">ཕྱི་དྲོ།</string>
-    <string name="popular_search">ཚིག་ཚ་ཤོས།</string>
     <string name="pref_cell_layout_size">འགྲེམ་ཚུལ།</string>
     <string name="pref_enable_drawing_cache_summary">"འདེམ་ཚན་འདི་ཁ་བརྒྱབ་ན་ནང་གསོག་དེ་ལས་མང་བ་གློད་ཐུབ
 ཡིན་ཡང་ཤར་རྒྱུག་རང་བཞིན་ཆུང་དུ་འགྲོ་ངེས།"</string>
@@ -680,14 +628,6 @@
     <string name="privacy_thumbnail_blur_summary">ཉེ་འཆར་གྱི་འོས་འགན་ཁྲོད་ཀྱི་སྔོན་ལྟའི་འདྲ་རིས་རབ་རབ་བཟོ་བཅོས།</string>
     <string name="privacy_thumbnail_blur_title">སྔོན་ལྟ་རིས་དབྱིབས་རབ་རིབ།</string>
     <string name="quick_app">ཉེར་སྤྱོད་མགྱོགས་པོ།</string>
-    <string name="quick_finder_feature_description">Quick Finderཁ་ཕྱེ་ནས། ཉེར་སྤྱོད་འཚོལ་བའི་ལས་ཕྱོད་མཐོར་འདེགས་བྱེད། ཅུང་ཙམ་ནས་ཁྱེད་ཀྱིས་སྒྲིག་འགོད་ནས་བྱེད་ནུས་འདི་ཁ་བརྒྱབ་ཆོག</string>
-    <string name="quick_finder_tip_title">ཉེར་སྤྱོད་འཚོལ་བའི་མྱུར་ཚད་མཐོར་འདེགས།</string>
-    <string name="quick_search_all_app_desc">ཤུར་ལྕོག་ཏུ་འཛུལ་སྐབས་ཉེར་སྤྱོད་ཡོངས་མངོན་ཐུབ།</string>
-    <string name="quick_search_desc">ཤུར་ལྕོག་ཏུ་འཛུལ་སྐབས་ཉེར་སྤྱོད་འཚོལ་བཤེར་ཁ་ཕྱེ་ཐུབ།</string>
-    <string name="quick_search_guide_all_apps">ཉེར་སྤྱོད་ཡོངས།</string>
-    <string name="quick_search_guide_ok_btn">གཏན་འཁེལ།</string>
-    <string name="quick_search_guide_quick_search">མགྱོགས་མྱུར་བཤེར་འཚོལ།</string>
-    <string name="quick_search_guide_title">སོར་འཇོག་དཔེ་ཚུལ་ཞིག་ཁ་ཕྱེ་དགོས།</string>
     <string name="recent_apps">ཉེ་ཆར་བེད་སྤྱོད།</string>
     <string name="recent_menu_item_info">ཉེར་སྤྱོད་ཆ་འཕྲིན་ཞིབ་ཕྲ།</string>
     <string name="recent_menu_item_lock">སྒོ་ལྕགས་བརྒྱབ་པའི་འོས་འགན།</string>
@@ -716,13 +656,6 @@
     <string name="recents_title_market">ཉེར་སྤྱོད་འཚོལ་བཤེར།</string>
     <string name="recents_title_security_scan">བདེ་འཇགས་བཤེར་འབེབས།</string>
     <string name="recents_tv_small_window_text">སྒེའུ་ཆུང་ཉེར་སྤྱོད།</string>
-    <string name="recents_worldcirculate_text">ལག་པ་སློད་དེ་འདེམས།</string>
-    <string name="recnets_relay_device_info">ཡོང་ཁུངས།%s</string>
-    <string name="recnets_worldcirculate_button_text">ཞའོ་མཱི་མཉམ་སྤྱོད་ལྟེ་གནས།</string>
-    <string name="recnets_worldcirculate_display_computer_info">\"%s\"སྟེང་འཁོར་བསྐྱོད་བྱེད་བཞིན་འདུག</string>
-    <string name="recnets_worldcirculate_display_default_info">མནན་ཏེ་ཁ་པར་སྟེང་ལོག་ནས་བེད་སྤྱོད་བྱ།</string>
-    <string name="recnets_worldcirculate_display_default_info_pad">མནན་ཏེ་སྟབས་བདེའི་གློག་ཀླད་སྟེང་ནས་བེད་སྤྱོད།</string>
-    <string name="recnets_worldcirculate_display_pad_info">\"%s\"སྟེང་འཁོར་བསྐྱོད་བྱེད་བཞིན་འདུག</string>
     <string name="recommend_app">ཉེར་སྤྱོད་འོས་སྦྱོར་གཞོང་།</string>
     <string name="recommend_apps_default_title">གནས་སྐབས་གཞི་གྲངས་མི་འདུག</string>
     <string name="recommend_apps_no_data">གནས་སྐབས་གཞི་གྲངས་མི་འདུག</string>
@@ -739,8 +672,6 @@
     <string name="remove_invalidate_gadget_tips">ཅོག་ངོས་སུ་སྒར་ཆས་ད་ནི་མཁོ་འདོན་མེད་བྱེད་པས། སྔོན་ལ་ཡང་བསྐྱར་བསྣན་རོགས།</string>
     <string name="remove_sys_app_content">ཁྱེད་ཀྱིས་ད་ལྟ་བརྒྱུད་ཁོངས་ཉེཉར་སྤྱོད་ཀྱི་རིས་རྟགས་སྤོ་དོར་བྱེད་བཞིན་ཡོད། སྤོ་དོར་བྱས་རྗེས་ཁྱེད་ཀྱིས་སྒྲིག་འགོད-ཉེར་སྤྱོད་སྒྲིག་འགོད-ཅོག་ངོས་རིས་རྟགས་དོ་དམ་ནས་ཡང་བསྐྱར་བསྣན་དགོས། སྤོ་དོར་བྱེད་དམ།</string>
     <string name="remove_sys_app_title">བརྒྱུད་ཁོངས་ཉེར་སྤྱོད་ཀྱི་རྟགས་རིས་སྤོ་དོར་བྱེད་དམ།</string>
-    <string name="request_permission_msg">ང་ཚོས་ཁྱེད་ལ་ཉམས་ལེན་ཡོངས་ཐོབ་མེད་པ་བཤེར་འཚོལ་ཐུབ་སོང་། གནན་ནས་དེ་བས་སྤུས་དག་པའི་ཉམས་ལེན་ཐོབ་ཐུབ།</string>
-    <string name="request_permission_title">ཞབས་ཞུ་རིམ་སྤར་གནང་རོགས།</string>
     <string name="reset_cate_tip_content">བསྐྱར་སྒྲིག་བྱས་རྗེས་ཉེར་སྤྱོད་ཚན་པ་ཐོག་མའི་རྣམ་པར་བསྐྱར་གསོ་བྱེད་པས། མུ་མཐུད་དུ་བྱེད་རྒྱུ་ཡིན་ནམ།</string>
     <string name="reset_cate_tip_title">བསྐྱར་སྒྲིག</string>
     <string name="reset_description_first_time">ཆུ་ཚོད་གཉིས་ནང་%1$sསྐབས་ཀྱི་བཀོད་སྒྲིག་ལ་སླར་གསོ་བྱེད་ཐུབ།</string>
@@ -755,15 +686,12 @@
     <string name="screen_cells_config_title">ཅོག་ངོས་བཀོད་སྒྲིག་བྱེད་སྟངས།</string>
     <string name="screen_locked_toast">ཅོག་ངོས་སྒོ་ལྕགས་བརྒྱབ་ཟིན།</string>
     <string name="screen_number">བརྙན་ཡོལ་ཨང%dཔ།</string>
-    <string name="search_bar_hint_content">ཉེར་སྤྱོད་དང་ནང་དོན་འཚོལ་བ།</string>
-    <string name="search_guide_btn">ཤེས་སོང་།</string>
     <string name="search_in_apps_store">%2$sལ་ཕྱིན་ནས་\"%1$s\"འཚོལ་བཤེར་བྱེད།</string>
     <string name="search_no_result">མཇུག་འབྲས་རྙེད་མ་བྱུང་།</string>
     <string name="select_all">ཡོངས་འདེམ།</string>
     <string name="select_frame">པར་སྒྲོམ་འདེམས་པ།</string>
     <string name="select_photo">འདྲ་པར་འདེམས་པ།</string>
     <string name="send">བསྐུར་བ།</string>
-    <string name="service_double_attention">ཉམས་ལེན་མཐོར་འདེགས་ཞབས་ཞུ་ནི་Branch Metrics Incཡིས་མཁོ་འདོན་བྱས། ཁྱེད་ཀྱི་འཚོལ་བཤེར་རེ་ཞུའི་ཚིག་དང་། Google Ads IDས་གནས་Branch Metrics Incལ་མཉམ་སྤྱོད་བྱེད་དགོས། ཞབས་ཞུ་འདི་བེད་སྤྱོད་མ་བྱས་སྔོན་ལ་Branchཡི་<a href="http://url1"><font color="#B3000000">《སྤྱོད་མཁན་གྲོས་མཐུན》</font></a>དང་<a href="http://url2"><font color="#B3000000">《གསང་དོན་སྲིད་ཇུས》</font></a>བཀླགས་ཤིང་མོས་མཐུན་བྱེད་དགོས།</string>
     <string name="setting_wallpaper_tip">སྤོ་འགུལ་ལམ་ཆུང་གཏོང་།</string>
     <string name="settings">སྒྲིག་འགོད།</string>
     <string name="settings_shortcut">སྒྲིག་འགོད།</string>
@@ -825,13 +753,11 @@
     <string name="status_installing">སྒྲིག་འཇུག་བྱེད་བཞིན་ཡོད།</string>
     <string name="status_paused">སྐབས་སྡོད།</string>
     <string name="status_pending">སྒུག་བཞིན་པ།</string>
-    <string name="suggestions">འོས་སྦྱོར།</string>
     <string name="sunday">གཟའ་ཉི་མ།</string>
     <string name="sunday_short">གཟའ་ཉི་མ།</string>
     <string name="sunday_shortest">ཉི་མ།</string>
     <string name="swipe_the_desktop_to_the_left">ཅོག་ངོས་གཡོན་ངོས་སུ་འདྲུད།</string>
     <string name="swipe_the_desktop_to_the_right">ཅོག་ངོས་གཡས་ངོས་སུ་འདྲུད།</string>
-    <string name="switch_on_button">ཁ་འབྱེད།</string>
     <string name="switch_personal_assistant_app_vault">ཆ་འཕྲིན་ལག་རོགས།</string>
     <string name="switch_personal_assistant_google">googleའཚོལ་སྙེག</string>
     <string name="switch_personal_assistant_none">ངོས་འཕར་མ་ཁ་རྒྱག་པ།</string>
@@ -842,10 +768,6 @@
     <string name="system_shortcuts_remove">སུབ་པ།</string>
     <string name="system_text">སོར་འཇོག</string>
     <string name="task_access_locked_app_msg">ཉེར་སྤྱོད་སྒོ་ལྕགས་ཁ་ཕྱེ་བ།</string>
-    <string name="term_of_service">ཞབས་ཞུའི་དོན་ཚན།</string>
-    <string name="terms_of_services_one">ཞའོ་མཱིའི་ཤུར་ལྕོག་དང་དེ་བཞིན་འཚོལ་བཤེར་ཞབས་ཞུ་བེད་སྤྱོད་བྱ་རྒྱུར་དགའ་བསུ་ཞུ་རྒྱུ་ཡིན། ཁྱེད་རང་མགྱོགས་མྱུར་བེད་སྤྱོད་ནང་གི་ནང་དོན་འཚོལ་དུ་བཅུག་ན་འགྲིག་གི་རེད། ཁྱེད་རང་གིས་ཀློག་ནས་ཞའོ་མཱི་ཡི་<a href="http://url1"><font color="#B3000000">《གསང་དོན་སྲིད་ཇུས་》</font></a>ལ་མོས་མཐུན་གནང་རོགས།</string>
-    <string name="terms_of_services_three">ཁྱེད་ཀྱིས་ཅོག་ངོས་ཀྱི་སྒྲིག་འགོད་ནས་བྱེད་ནུས་འདི་ཁ་བརྒྱབ་ཆོག</string>
-    <string name="terms_of_services_two">འཚོལ་བཤེར་ཞབས་ཞུའི་ཁྲོད་ཀྱི་འཚོལ་བཤེར་ནུས་པ་མངོན་འགྱུར་བྱེད་ཆེད། ང་ཚོས་Branch Metrics Incལ་དགོས་ངེས་ཀྱི་མི་སྒེར་གྱི་ཆ་འཕྲིན་མཉམ་སྤྱོད་བྱེད་དགོས། དེའི་ནང་ཁྱེད་རང་གི་འཚོལ་ཚིག་དང་Googleབརྡ་ཁྱབ་IDདང་IPསྡོད་གནས་ཚུད་ཡོད། Branchཡིས་&lt;font color=#B3000000>&lt;a href=http://url1>《གསང་དོན་སྲིད་ཇུས》ལ་གཞིགས་ནས་བསྡུ་ལེན་བྱས་པའི་གཞི་གྲངས་ཐག་གཅོད་བྱེད་ངེས་ཡིན། ཁྱེད་ཀྱིས་Branch Metrics Incཡི&lt;font color=#B3000000>&lt;a href=http://url2>《སྤྱོད་མཁན་གྱི་གྲོས་མཐུན》&lt;/a>&lt;/font>དང&lt;font color=#B3000000>&lt;a href=http://url3>《གསང་དོན་སྲིད་ཇུས》&lt;/a>&lt;/font>ལ་མོས་མཐུན་གནང་རོགས།</string>
     <string name="the_anniversary_of_lifting_martial_law">བཀར་གྲོལ་རྗེས་དྲན་ཉིན་མོ།</string>
     <string name="the_anti_aggression_day">བཙན་འཛུལ་འགོག་རྒོལ་ཉིན་མོ།</string>
     <string name="the_arbor_day">སྡོང་འཛུགས་དུས་ཆེན།</string>
@@ -912,11 +834,6 @@
     <string name="tuesday">གཟའ་མིག་དམར།</string>
     <string name="tuesday_short">གཟའ་མིག་དམར།</string>
     <string name="tuesday_shortest">མིག་དམར།</string>
-    <string name="uni_search_permission_content">དྲ་ཐོག་འཚོལ་བཤེར་གྱི་ཞབས་ཞུ་སྤུས་ལེགས་ཁ་ཕྱེ་རོགས། （འཚོལ་བཤེར་གྱི་ཞབས་ཞུ་ནི་Branchཡིས་མཁོ་འདོན་ཞུས་པ་ཡིན）</string>
-    <string name="uni_search_permission_msg">གནས་ཡུལ་གྱི་དབང་ཚད་དང་འབྲེལ་གཏུག་མི་སྣའི་དབང་ཚད་ཁ་ཕྱེ་ནས་དེ་བས་བཟང་བའི་འཚོལ་བཤེར་གྱི་ཞབས་ཞུ་ཐོབ་ཐབས་བྱེད་དགོས།</string>
-    <string name="uni_search_permission_title">བཤེར་འཚོལ་རིམ་སྤར།</string>
-    <string name="uni_search_setting_summary">དེ་བས་ཕུན་སུམ་ཚོགས་པའི་དྲ་ཐོག་གི་བཤེར་འཚོལ་འབྲས་བུ་མཁོ་འདོན་བྱེད།</string>
-    <string name="uni_search_setting_title">བཤེར་འཚོལ་ཞབས་ཞུ།</string>
     <string name="uninstall">བཤིག་འདོན།</string>
     <string name="uninstall_dialog_message">ཕྱིར་ལེན་རྗེས་གཞི་གྲངས་གཞན་ཡང་མཉམ་དུ་སུབ་ངེས།</string>
     <string name="uninstall_dialog_title_format">\"%s\"བཤིག་འདོན།</string>
@@ -927,7 +844,6 @@
     <string name="uninstall_xspace_dialog_title_format">ཉིས་འབྱེད་\"%s\"ཕྱིར་ལེན།</string>
     <string name="unknown_artist_name">ངོས་མ་ཟིན་པའི་སྒྱུ་རྩལ་པ།</string>
     <string name="unnamed_folder_name">ཡིག་ཁུག</string>
-    <string name="upgrade_remove_small_window_in_recents">ཉེ་དུས་ལས་འགན་སྒེའུ་ཆུང་ཉེར་སྤྱོད་ཀྱི་འཛུལ་སྒོ་སུབ་ཟིན། ཕྱོགས་ཡོངས་ཀྱི་གཞོགས་ངོས་སྒྲོམ་ནས་སྒེའུ་ཁུང་བྱེད་ནུས་སྤྱད་ཆོག</string>
     <string name="wallpaper">རྩིག་ཤོག</string>
     <string name="wallpaper_auto_change_title">རྩིག་ཤོག་རིམ་གཏོང་།(སོར་འཇོག་བརྙན་ཤེལ་སྒོ་ལྕགས་རྒྱབ་པ་ཁོ་ན)</string>
     <string name="wallpaper_failed_message">རྩིག་ཤོག་སྒྲིག་འགོད་མི་ཐུབ།</string>

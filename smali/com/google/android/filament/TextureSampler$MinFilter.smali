@@ -42,7 +42,7 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .line 44
+    .line 52
     new-instance v0, Lcom/google/android/filament/TextureSampler$MinFilter;
 
     const-string v1, "NEAREST"
@@ -53,7 +53,7 @@
 
     sput-object v0, Lcom/google/android/filament/TextureSampler$MinFilter;->NEAREST:Lcom/google/android/filament/TextureSampler$MinFilter;
 
-    .line 48
+    .line 56
     new-instance v0, Lcom/google/android/filament/TextureSampler$MinFilter;
 
     const-string v1, "LINEAR"
@@ -64,7 +64,7 @@
 
     sput-object v0, Lcom/google/android/filament/TextureSampler$MinFilter;->LINEAR:Lcom/google/android/filament/TextureSampler$MinFilter;
 
-    .line 52
+    .line 60
     new-instance v0, Lcom/google/android/filament/TextureSampler$MinFilter;
 
     const-string v1, "NEAREST_MIPMAP_NEAREST"
@@ -75,7 +75,7 @@
 
     sput-object v0, Lcom/google/android/filament/TextureSampler$MinFilter;->NEAREST_MIPMAP_NEAREST:Lcom/google/android/filament/TextureSampler$MinFilter;
 
-    .line 56
+    .line 64
     new-instance v0, Lcom/google/android/filament/TextureSampler$MinFilter;
 
     const-string v1, "LINEAR_MIPMAP_NEAREST"
@@ -86,7 +86,7 @@
 
     sput-object v0, Lcom/google/android/filament/TextureSampler$MinFilter;->LINEAR_MIPMAP_NEAREST:Lcom/google/android/filament/TextureSampler$MinFilter;
 
-    .line 60
+    .line 68
     new-instance v0, Lcom/google/android/filament/TextureSampler$MinFilter;
 
     const-string v1, "NEAREST_MIPMAP_LINEAR"
@@ -97,7 +97,7 @@
 
     sput-object v0, Lcom/google/android/filament/TextureSampler$MinFilter;->NEAREST_MIPMAP_LINEAR:Lcom/google/android/filament/TextureSampler$MinFilter;
 
-    .line 64
+    .line 72
     new-instance v0, Lcom/google/android/filament/TextureSampler$MinFilter;
 
     const-string v1, "LINEAR_MIPMAP_LINEAR"
@@ -110,7 +110,7 @@
 
     const/4 v0, 0x6
 
-    .line 40
+    .line 48
     new-array v0, v0, [Lcom/google/android/filament/TextureSampler$MinFilter;
 
     sget-object v1, Lcom/google/android/filament/TextureSampler$MinFilter;->NEAREST:Lcom/google/android/filament/TextureSampler$MinFilter;
@@ -150,7 +150,7 @@
         }
     .end annotation
 
-    .line 40
+    .line 48
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -159,7 +159,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/android/filament/TextureSampler$MinFilter;
     .locals 1
 
-    .line 40
+    .line 48
     const-class v0, Lcom/google/android/filament/TextureSampler$MinFilter;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -174,7 +174,7 @@
 .method public static values()[Lcom/google/android/filament/TextureSampler$MinFilter;
     .locals 1
 
-    .line 40
+    .line 48
     sget-object v0, Lcom/google/android/filament/TextureSampler$MinFilter;->$VALUES:[Lcom/google/android/filament/TextureSampler$MinFilter;
 
     invoke-virtual {v0}, [Lcom/google/android/filament/TextureSampler$MinFilter;->clone()Ljava/lang/Object;

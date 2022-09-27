@@ -40,7 +40,7 @@
 .method static constructor <clinit>()V
     .locals 7
 
-    .line 169
+    .line 172
     new-instance v0, Lcom/google/android/filament/LightManager$Type;
 
     const-string v1, "SUN"
@@ -51,7 +51,7 @@
 
     sput-object v0, Lcom/google/android/filament/LightManager$Type;->SUN:Lcom/google/android/filament/LightManager$Type;
 
-    .line 172
+    .line 175
     new-instance v0, Lcom/google/android/filament/LightManager$Type;
 
     const-string v1, "DIRECTIONAL"
@@ -62,7 +62,7 @@
 
     sput-object v0, Lcom/google/android/filament/LightManager$Type;->DIRECTIONAL:Lcom/google/android/filament/LightManager$Type;
 
-    .line 175
+    .line 178
     new-instance v0, Lcom/google/android/filament/LightManager$Type;
 
     const-string v1, "POINT"
@@ -73,7 +73,7 @@
 
     sput-object v0, Lcom/google/android/filament/LightManager$Type;->POINT:Lcom/google/android/filament/LightManager$Type;
 
-    .line 178
+    .line 181
     new-instance v0, Lcom/google/android/filament/LightManager$Type;
 
     const-string v1, "FOCUSED_SPOT"
@@ -84,7 +84,7 @@
 
     sput-object v0, Lcom/google/android/filament/LightManager$Type;->FOCUSED_SPOT:Lcom/google/android/filament/LightManager$Type;
 
-    .line 181
+    .line 184
     new-instance v0, Lcom/google/android/filament/LightManager$Type;
 
     const-string v1, "SPOT"
@@ -97,7 +97,7 @@
 
     const/4 v0, 0x5
 
-    .line 167
+    .line 170
     new-array v0, v0, [Lcom/google/android/filament/LightManager$Type;
 
     sget-object v1, Lcom/google/android/filament/LightManager$Type;->SUN:Lcom/google/android/filament/LightManager$Type;
@@ -133,7 +133,7 @@
         }
     .end annotation
 
-    .line 167
+    .line 170
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -142,7 +142,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/android/filament/LightManager$Type;
     .locals 1
 
-    .line 167
+    .line 170
     const-class v0, Lcom/google/android/filament/LightManager$Type;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -157,7 +157,7 @@
 .method public static values()[Lcom/google/android/filament/LightManager$Type;
     .locals 1
 
-    .line 167
+    .line 170
     sget-object v0, Lcom/google/android/filament/LightManager$Type;->$VALUES:[Lcom/google/android/filament/LightManager$Type;
 
     invoke-virtual {v0}, [Lcom/google/android/filament/LightManager$Type;->clone()Ljava/lang/Object;

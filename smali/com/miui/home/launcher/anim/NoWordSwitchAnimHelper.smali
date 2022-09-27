@@ -346,14 +346,14 @@
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getHotSeats()Lcom/miui/home/launcher/hotseats/HotSeats;
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getHotSeats()Lcom/miui/home/launcher/HotSeats;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
     .line 189
-    invoke-virtual {v0}, Lcom/miui/home/launcher/hotseats/HotSeats;->getAlpha()F
+    invoke-virtual {v0}, Lcom/miui/home/launcher/HotSeats;->getAlpha()F
 
     move-result v2
 
@@ -364,11 +364,11 @@
     .line 190
     new-instance v1, Lcom/miui/home/launcher/anim/NoWordSwitchAnimHelper$onLauncherFinishLoading$2$1;
 
-    invoke-direct {v1, v0}, Lcom/miui/home/launcher/anim/NoWordSwitchAnimHelper$onLauncherFinishLoading$2$1;-><init>(Lcom/miui/home/launcher/hotseats/HotSeats;)V
+    invoke-direct {v1, v0}, Lcom/miui/home/launcher/anim/NoWordSwitchAnimHelper$onLauncherFinishLoading$2$1;-><init>(Lcom/miui/home/launcher/HotSeats;)V
 
     check-cast v1, Ljava/lang/Runnable;
 
-    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/hotseats/HotSeats;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/HotSeats;->post(Ljava/lang/Runnable;)Z
 
     :cond_1
     const/4 v0, 0x0
@@ -474,14 +474,14 @@
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getHotSeats()Lcom/miui/home/launcher/hotseats/HotSeats;
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getHotSeats()Lcom/miui/home/launcher/HotSeats;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
     .line 151
-    invoke-virtual {v0}, Lcom/miui/home/launcher/hotseats/HotSeats;->getAlpha()F
+    invoke-virtual {v0}, Lcom/miui/home/launcher/HotSeats;->getAlpha()F
 
     move-result v2
 
@@ -492,11 +492,11 @@
     .line 152
     new-instance v1, Lcom/miui/home/launcher/anim/NoWordSwitchAnimHelper$onLauncherStartLoading$2$1;
 
-    invoke-direct {v1, v0}, Lcom/miui/home/launcher/anim/NoWordSwitchAnimHelper$onLauncherStartLoading$2$1;-><init>(Lcom/miui/home/launcher/hotseats/HotSeats;)V
+    invoke-direct {v1, v0}, Lcom/miui/home/launcher/anim/NoWordSwitchAnimHelper$onLauncherStartLoading$2$1;-><init>(Lcom/miui/home/launcher/HotSeats;)V
 
     check-cast v1, Ljava/lang/Runnable;
 
-    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/hotseats/HotSeats;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/HotSeats;->post(Ljava/lang/Runnable;)Z
 
     .line 159
     :cond_1
@@ -602,7 +602,7 @@
 
     if-eqz p1, :cond_3
 
-    invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getHotSeats()Lcom/miui/home/launcher/hotseats/HotSeats;
+    invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getHotSeats()Lcom/miui/home/launcher/HotSeats;
 
     move-result-object p1
 
@@ -610,7 +610,7 @@
 
     const/4 p2, 0x0
 
-    invoke-virtual {p1, p2}, Lcom/miui/home/launcher/hotseats/HotSeats;->setAlpha(F)V
+    invoke-virtual {p1, p2}, Lcom/miui/home/launcher/HotSeats;->setAlpha(F)V
 
     goto :goto_0
 
@@ -656,7 +656,7 @@
 
     if-eqz p1, :cond_3
 
-    invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getHotSeats()Lcom/miui/home/launcher/hotseats/HotSeats;
+    invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getHotSeats()Lcom/miui/home/launcher/HotSeats;
 
     move-result-object p1
 
@@ -665,11 +665,11 @@
     .line 128
     new-instance p2, Lcom/miui/home/launcher/anim/NoWordSwitchAnimHelper$startSwitchNoWordAnim$3$1;
 
-    invoke-direct {p2, p1}, Lcom/miui/home/launcher/anim/NoWordSwitchAnimHelper$startSwitchNoWordAnim$3$1;-><init>(Lcom/miui/home/launcher/hotseats/HotSeats;)V
+    invoke-direct {p2, p1}, Lcom/miui/home/launcher/anim/NoWordSwitchAnimHelper$startSwitchNoWordAnim$3$1;-><init>(Lcom/miui/home/launcher/HotSeats;)V
 
     check-cast p2, Ljava/lang/Runnable;
 
-    invoke-virtual {p1, p2}, Lcom/miui/home/launcher/hotseats/HotSeats;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {p1, p2}, Lcom/miui/home/launcher/HotSeats;->post(Ljava/lang/Runnable;)Z
 
     :cond_3
     :goto_0

@@ -18,14 +18,14 @@
 .method protected final checkCurrentUserId(Landroid/content/Context;Z)Z
     .locals 1
 
-    .line 34
+    .line 33
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result p2
 
     const-string v0, "activity"
 
-    .line 35
+    .line 34
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -40,7 +40,7 @@
 
     goto :goto_0
 
-    .line 37
+    .line 36
     :cond_0
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
@@ -100,12 +100,6 @@
 .end method
 
 .method public onPinnedStackAnimationStarted()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onTaskDisplayChanged()V
     .locals 0
 
     return-void

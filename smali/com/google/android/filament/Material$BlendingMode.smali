@@ -44,7 +44,7 @@
 .method static constructor <clinit>()V
     .locals 9
 
-    .line 117
+    .line 131
     new-instance v0, Lcom/google/android/filament/Material$BlendingMode;
 
     const-string v1, "OPAQUE"
@@ -55,7 +55,7 @@
 
     sput-object v0, Lcom/google/android/filament/Material$BlendingMode;->OPAQUE:Lcom/google/android/filament/Material$BlendingMode;
 
-    .line 123
+    .line 137
     new-instance v0, Lcom/google/android/filament/Material$BlendingMode;
 
     const-string v1, "TRANSPARENT"
@@ -66,7 +66,7 @@
 
     sput-object v0, Lcom/google/android/filament/Material$BlendingMode;->TRANSPARENT:Lcom/google/android/filament/Material$BlendingMode;
 
-    .line 126
+    .line 140
     new-instance v0, Lcom/google/android/filament/Material$BlendingMode;
 
     const-string v1, "ADD"
@@ -77,7 +77,7 @@
 
     sput-object v0, Lcom/google/android/filament/Material$BlendingMode;->ADD:Lcom/google/android/filament/Material$BlendingMode;
 
-    .line 129
+    .line 143
     new-instance v0, Lcom/google/android/filament/Material$BlendingMode;
 
     const-string v1, "MASKED"
@@ -88,7 +88,7 @@
 
     sput-object v0, Lcom/google/android/filament/Material$BlendingMode;->MASKED:Lcom/google/android/filament/Material$BlendingMode;
 
-    .line 135
+    .line 149
     new-instance v0, Lcom/google/android/filament/Material$BlendingMode;
 
     const-string v1, "FADE"
@@ -99,7 +99,7 @@
 
     sput-object v0, Lcom/google/android/filament/Material$BlendingMode;->FADE:Lcom/google/android/filament/Material$BlendingMode;
 
-    .line 138
+    .line 152
     new-instance v0, Lcom/google/android/filament/Material$BlendingMode;
 
     const-string v1, "MULTIPLY"
@@ -110,7 +110,7 @@
 
     sput-object v0, Lcom/google/android/filament/Material$BlendingMode;->MULTIPLY:Lcom/google/android/filament/Material$BlendingMode;
 
-    .line 141
+    .line 155
     new-instance v0, Lcom/google/android/filament/Material$BlendingMode;
 
     const-string v1, "SCREEN"
@@ -123,7 +123,7 @@
 
     const/4 v0, 0x7
 
-    .line 115
+    .line 129
     new-array v0, v0, [Lcom/google/android/filament/Material$BlendingMode;
 
     sget-object v1, Lcom/google/android/filament/Material$BlendingMode;->OPAQUE:Lcom/google/android/filament/Material$BlendingMode;
@@ -167,7 +167,7 @@
         }
     .end annotation
 
-    .line 115
+    .line 129
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -176,7 +176,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/android/filament/Material$BlendingMode;
     .locals 1
 
-    .line 115
+    .line 129
     const-class v0, Lcom/google/android/filament/Material$BlendingMode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -191,7 +191,7 @@
 .method public static values()[Lcom/google/android/filament/Material$BlendingMode;
     .locals 1
 
-    .line 115
+    .line 129
     sget-object v0, Lcom/google/android/filament/Material$BlendingMode;->$VALUES:[Lcom/google/android/filament/Material$BlendingMode;
 
     invoke-virtual {v0}, [Lcom/google/android/filament/Material$BlendingMode;->clone()Ljava/lang/Object;

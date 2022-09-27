@@ -115,7 +115,7 @@
 
     const-string v0, "AdvertisingIdClient"
 
-    const-string/jumbo v1, "unbindService: "
+    const-string v1, "unbindService: "
 
     .line 64
     invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
@@ -137,7 +137,7 @@
 
     const-string v0, "AdvertisingIdClient"
 
-    const-string/jumbo v2, "unbindService: "
+    const-string v2, "unbindService: "
 
     .line 64
     invoke-static {v0, v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
@@ -184,7 +184,7 @@
 
     const-string v0, "AdvertisingIdClient"
 
-    const-string/jumbo v2, "unbindService: "
+    const-string v2, "unbindService: "
 
     .line 64
     invoke-static {v0, v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I

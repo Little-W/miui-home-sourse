@@ -2,6 +2,8 @@
 <resources>
     <dimen name="config_icon_height">84.0dip</dimen>
     <dimen name="config_icon_width">84.0dip</dimen>
+    <dimen name="edit_mode_application_checkbox_margin_end">0.0dip</dimen>
+    <dimen name="edit_mode_application_checkbox_margin_top">0.0dip</dimen>
     <dimen name="editing_entry_thumbnail_view_height">149.5dip</dimen>
     <dimen name="editing_entry_thumbnail_view_margin_left_right">191.5dip</dimen>
     <dimen name="editing_panel_height">180.0dip</dimen>

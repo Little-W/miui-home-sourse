@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="Icon_name_classic_mode">Bosh ekran sozlamalari</string>
     <string name="accessibility_all_app_custom_category_finish">Tayyor</string>
     <string name="accessibility_all_app_custom_category_item_remove">\"%1$s\"ni kategoriyalardan olib tashlash</string>
     <string name="accessibility_clear_search_bar_text">Qidiruv qatorini tozalash</string>
@@ -26,10 +25,8 @@
     <string name="activity_not_unlocked">Ilovalarni ochishdan oldin qurilmani to‘liq o‘chirib yoqilishini kuting</string>
     <string name="add_custom_category">Maxsus</string>
     <string name="add_screen">Ekran qo‘shish</string>
-    <string name="add_to_workspace">Bosh ekranga qo‘shish</string>
     <string name="added_all_category">Barcha ilovalar muvaffaqiyatli qo‘shildi</string>
     <string name="afternoon">Kunduzi</string>
-    <string name="agree_button">Rozi bo‘lish</string>
     <string name="alexa_notification_add">Qo‘shish</string>
     <string name="alexa_notification_cancel">Hozir emas</string>
     <string name="alexa_notification_content">Alexa yorlig‘i nazorat qilish markaziga qo‘shilsinmi?</string>
@@ -68,7 +65,6 @@
     <string name="all_apps_slide_up_tips">Ilovaning menyusini ochish uchun tepaga suring. Bosh ekrani rejimiga o‘ting va qayta urinib ko‘ring.</string>
     <string name="all_apps_suggestions">Tavsiya etilgan ilovalar</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">Animatsiya tezligi</string>
     <string name="announce_for_app_move_in_folder">Papkada %1$d joylashuviga ko‘chirildi</string>
     <string name="announce_for_checked">%1$s, belgilandi</string>
     <string name="announce_for_choose_default_screen">%1$d ekranni birlamchi Bosh ekran sifatiladi o‘rnatish</string>
@@ -121,13 +117,6 @@
     <string name="app_category_tools">Vositalar</string>
     <string name="app_category_travel">Xarita</string>
     <string name="app_category_vr">VR</string>
-    <string name="app_drawer_double_confirm_description">Bu sizning Bosh ekraningizning ko‘rinishini o‘zgartiradi. Ushbu o‘zgarishlarni keyinroq Sozlamalarda qaytarsangiz bo‘ladi.</string>
-    <string name="app_drawer_double_confirm_title">Diqqat</string>
-    <string name="app_drawer_feature_description">Ilova menyusi - barcha ilovalarni tartibga solish uchun mukammal vosita. Ilovalarni avtomatik ravishda toifalarga bo‘ling va kerakli narsalarni bir zumda toping!</string>
-    <string name="app_drawer_guide_description">Sevimli ilovalaringizda nimani qidirayotganingizni toping</string>
-    <string name="app_drawer_guide_title">Ilovalar menyusi</string>
-    <string name="app_drawer_tip_title">Biz Kontent tasmasini Ilova omboriga almashtirdik.</string>
-    <string name="app_install_state">O‘rnatildi</string>
     <string name="app_name">smallWindow</string>
     <string name="application_name">MIUI ish stoli</string>
     <string name="apply">O‘rnatish</string>
@@ -150,35 +139,8 @@
     <string name="back">Orqaga</string>
     <string name="backup_fail">Nusxalab bo‘lmadi</string>
     <string name="bad_wallpaper_source_prompt">Fon rasmini yuklab bo‘lmadi</string>
-    <string name="branch_feature_description">Ilovalardan tashqari, Quick Finder ilova ichidagi tarkib va ​​narsalarni onlayn ravishda topishi mumkin.</string>
-    <string name="branch_guide_attention">Kengaytirilgan qidiruvdan foydalanish sizning qidiruv so‘rovlaringiz, Google Ads ID raqami va IP-manzilingizni Branch Metrics Inc bilan ulashishni talab qiladi. Ushbu xususiyatdan foydalanishdan oldin <a href="http://url1"><font color="#B3000000">Oxirgi Foydalanuvchini Kashfiyot Shartlari &amp; Sharoitlar</font></a> and <a href="http://url2"><font color="#B3000000">Branch Kashfiyot Maxfiylik Siyosati</font></a> bilan tanishib chiqing va rozi bo‘ling.</string>
-    <string name="branch_guide_description_one">Barcha ilovalaringizni Ilova menyusiga joylashtiramiz. Asosiy ekraningiz chiroyli va tartibli ko‘rinadi.</string>
-    <string name="branch_guide_description_three">O‘rnatilgan qidiruv yordamida bir zumda kerakli narsalarni topishingiz mumkin!</string>
-    <string name="branch_guide_description_two">Ilova menyusi ilovalarni avtomatik ravishda toifalarga ajratadi.</string>
-    <string name="branch_guide_tip_title">Har bir dastur o‘z o‘rnida</string>
-    <string name="branch_guide_title">Ilovalar menyusiga murojaat qiling</string>
-    <string name="branch_guide_type_four_desc">Ikki oson qadamda eski usullarga qaytishingiz mumkin</string>
-    <string name="branch_guide_type_four_main">Sozlamalarda Bosh ekran > Bosh ekran va \"Klassik\"ni tanlang.</string>
-    <string name="branch_guide_type_four_step_one">Sozlamalarni ochish</string>
-    <string name="branch_guide_type_four_step_two">Bosh ekranni ochish</string>
-    <string name="branch_guide_type_one_desc">Ilovalaringizni Ilova menyusi yordamida boshqaring</string>
-    <string name="branch_guide_type_one_main">Bosh ekranni tartibli va tartibli qilish uchun ilovalaringizni Ilovalar menyusida saqlang.</string>
-    <string name="branch_new_feature">Yangi xususiyat</string>
-    <string name="branch_privacy_policy">Maxfiylik Siyosati</string>
-    <string name="branch_search_guide_description">Bizning qidiruv natijalarimiz hozir yanada batafsilroq</string>
-    <string name="branch_search_guide_privacy">Ushbu xizmat Branch Metrics Inc. tomonidan qo‘llab-quvvatlanadi. Sizning joylashuvingiz haqidagi ma’lumot, qidiruv so‘rovlari va Google Ads ID raqami Branch‘ga taqdim etiladi. Ushbu xizmatdan foydalanishdan oldin Branch‘ning <a href="http://url1"><font color="#B3000000">Shartlar va Sharoitlar</font></a> va <a href="http://url2"><font color="#B3000000">Maxfiylik Siyosati</font></a> bilan tanishib chiqing.</string>
-    <string name="branch_search_guide_title">Sevimli ilovalaringizda nimani qidirayotganingizni toping</string>
-    <string name="branch_terms_condition">Shartlar va Sharoitlar</string>
-    <string name="branch_tip_title">Quick Finder yordamida kerakli barcha narsalarni bir zumda topishingiz mumkin.</string>
-    <string name="btn_agree">Rozi bo‘lish</string>
-    <string name="btn_cancel">Bekor qilish</string>
-    <string name="btn_close">O‘chirish</string>
-    <string name="btn_open">Yoqish</string>
-    <string name="btn_request_permission">Ruxsat berish</string>
-    <string name="btn_set_right_now">Ruxsat berish</string>
     <string name="buffering">Buferizatsiya…</string>
     <string name="cancel_action">Bekor qilish</string>
-    <string name="cancel_botton">Bekor qilish</string>
     <string name="cancel_btn_label">Bekor qilish</string>
     <string name="cant_edit_lock_screen">Ekran qulfi ko‘rinishini o‘zgartirib bo‘lmaydi</string>
     <string name="cant_remove_folder">Papkani o‘chirib bo‘lmaydi</string>
@@ -288,11 +250,9 @@
     <string name="emptyplaylist">Qo‘shiq qo‘shish uchun bosing</string>
     <string name="enable_wallpaper_scroll">Fon rasmlarni o‘tkazishni yoqish</string>
     <string name="encryption">Shifrlash</string>
-    <string name="enter_search_setting_title">Ilova menyusini ochgandan so‘ng qidiruvni oching</string>
     <string name="eras_ad">MS</string>
     <string name="eras_bc">MA</string>
     <string name="evening">Kunduzi</string>
-    <string name="exit_overview_because_task_stack_changed">"Orqa fonda sodir bo‘lgan o'zgarishlar tufayli Eng so‘nggilar yopildi"</string>
     <string name="failed_to_delete_temporary">O‘chirib bo‘lmadi</string>
     <string name="failed_to_drop">Ko‘chirib bo‘lmadi</string>
     <string name="failed_to_drop_widget_invalid">Ushbu vidjet yaroqsiz</string>
@@ -349,8 +309,6 @@
     <string name="fmt_weekday_time">W T</string>
     <string name="fmt_weekday_time_timezone">W T z</string>
     <string name="fmt_weekday_timezone">W z</string>
-    <string name="fold_pair_install_shortcut_long_click">Bosh ekranga qo‘shish uchun bosibg turing</string>
-    <string name="fold_pair_installed_shortcut_launcher">Ushbu yorliq allaqachon mavjud</string>
     <string name="folder_name">Papka</string>
     <string name="frame_load_failed">Ramkani yuklab bo‘lmadi</string>
     <string name="free_style_apps_title">Ilovani tanlang</string>
@@ -406,14 +364,11 @@
     <string name="gadget_weather_title_14">Ob-havo</string>
     <string name="gadget_weather_title_24">Ob-havo</string>
     <string name="global_search_hint">Qidiruv</string>
-    <string name="got_it_botton">Tushundim</string>
     <string name="group_folder">Yangi papka</string>
     <string name="group_live_folders">Papkalar</string>
     <string name="group_shortcuts">Yorliqlar</string>
     <string name="guide_install_app_msg">Ilova qurilmaga o‘rnatilmagan. Topib o‘rnatilsinmi?</string>
     <string name="guide_install_app_title">Ilova topilib o‘rnatilsinmi?</string>
-    <string name="guide_permission_title">Ruxsat kerak</string>
-    <string name="guide_privacy_dialog_title">Xizmat shartlari</string>
     <string name="guide_tips_editing_mode">Vidjetni ko‘chirish uchun bosib turing</string>
     <string name="home_gesture_content_center">Ma’lumot markazi</string>
     <string name="home_gesture_global_search">Qidiruv</string>
@@ -444,9 +399,6 @@
     <string name="launcher_slide_up_title">Bosh ekranda tepaga suring</string>
     <string name="launcher_sliding_up_gesture">Qidiruvni ochish uchun Bosh ekranda tepaga suring</string>
     <string name="launcher_title">Bosh ekran va Eng so‘nggilar</string>
-    <string name="layout_guide_description">Agar sizga Ilova menyusi yoqmasa, har doim klassik Bosh ekranga qaytishingiz mumkin. Shunchaki \"Asosiy ekran sozlamalari\" yorlig‘ini ishlating va ikki rejim o‘rtasida almashtiring.</string>
-    <string name="layout_guide_tip_title">Bir marta bosish orqali eski usullarga qaytishingiz mumkin</string>
-    <string name="layout_guide_title">Ilova menyusini qanday o‘chirish</string>
     <string name="like">Saralanganlarga qo‘shish</string>
     <string name="liked">Saralanganlarga qo‘shildi</string>
     <string name="loading_desktop">Bir soniya…</string>
@@ -613,11 +565,6 @@
     <string name="navigation_guide_recent_title">Eng so‘nggilarni ochish</string>
     <string name="navigation_guide_recent_title_spec_with_quotation_pad">Eng so‘nggilarni ochish</string>
     <string name="navigation_guide_settings">Ishoralar ko‘rsatuvlari</string>
-    <string name="navigation_position_center">Markaz</string>
-    <string name="navigation_position_left">Chap</string>
-    <string name="navigation_position_right">O‘ng</string>
-    <string name="navigation_position_summary">Navigatsiya tugmalarining maxsus joylashuvi faqat asosiy ekranga qo‘llanilishi mumkin</string>
-    <string name="navigation_position_title">Navigatsiya tugmalari joylashuvi</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">Bekor qilish</string>
     <string name="navigation_set_miui_home_as_default_dialog_message">Uchinchi tomon ishga tushirgichlari bilan to‘liq ekran imo-ishoralarini ishlatib bo‘lmaydi. Tizim ishga tushiruvchisiga o‘ting va to‘liq ekran imo-ishoralarini yoqilsinmi?</string>
     <string name="navigation_set_miui_home_as_default_dialog_ok">OK</string>
@@ -626,11 +573,9 @@
     <string name="navigation_type_title">Tizim navigatsiyasi</string>
     <string name="navigation_type_virtual_key">Tugmalar</string>
     <string name="network_error">Tarmoqqa bog‘lanib bo‘lmadi. Takrorlang.</string>
-    <string name="new_feature_title">O‘zgarishlar ro‘yxati</string>
     <string name="night">Oqshom</string>
     <string name="no_detail_page">Ma’lumotlar sahifasi yo‘q</string>
     <string name="no_space_toast">Joy yetarli emas</string>
-    <string name="no_space_toast_fold">Joy yetarli emas</string>
     <string name="no_space_toast_when_click_widget">Ushbu sahifada joy yetarli emas. Ushbu ob‘ektni boshqa sahifaga ko‘chirib ko‘ring.</string>
     <string name="noon">Peshin</string>
     <string name="normal_wallpaper">Fon rasmi</string>
@@ -639,7 +584,6 @@
     <string name="notification_reset_title">Belgilar muvaffaqiyatli joylashtirildi</string>
     <string name="one_key_call_title">Terish uchun bosing</string>
     <string name="online_wallpaper">Onlayn</string>
-    <string name="open_pad_personal_assistant_settings">Bosh ekran vidjetlari</string>
     <string name="open_personal_assistant_dialog_btn_cancel">Bekor qilish</string>
     <string name="open_personal_assistant_dialog_btn_confirm">O‘chirish</string>
     <string name="open_personal_assistant_dialog_desc">Ilovalar omborxonasi o‘chirilgandan so‘ng, siz uning vidjetlarini ko‘rmaysiz yoki ishlata olmaysiz. Ularning yangilangan versiyalari siz uchun mavjud bo‘lmaydi. Baribir o‘chirilsinmi?</string>
@@ -651,7 +595,6 @@
     <string name="ota_layout_adjustment_content">Bosh ekran ichki va tashqi ko‘rinishi yangi versiyada sinxronlandi.</string>
     <string name="ota_layout_adjustment_title">Bosh ekran tashqi ko‘rinishi</string>
     <string name="out_of_space">Bosh ekranda bo‘sh joy yo‘q</string>
-    <string name="pair_icon_name">%1$s | %2$s</string>
     <string name="perfect_icons_switch_summary">Uchinchi tomon ilovasi belgilarida animatsiyalarni namoyish etish</string>
     <string name="perfect_icons_switch_title">Global belgi animatsiyalari</string>
     <string name="permdesc_install_shortcut">Ilovaga yorliqlarni foydalanuvchi ishtirokisiz qo‘shishga ruxsat beradi.</string>
@@ -671,7 +614,6 @@
     <string name="photo_load_failed">Rasmni yuklab bo‘lmadi</string>
     <string name="please_slide_agian">Qaytadan suring</string>
     <string name="pm">PM</string>
-    <string name="popular_search">Mashhur</string>
     <string name="pref_cell_layout_size">Ish stoli tori</string>
     <string name="pref_enable_drawing_cache_summary">Xotirani tejash uchun o‘chiring. Ishlashni sekinlashtirishi mumkin.</string>
     <string name="pref_enable_drawing_cache_title">Grafik keshi</string>
@@ -691,14 +633,6 @@
     <string name="privacy_thumbnail_blur_summary">Oldindan ko‘rishni eng so‘nggilarda xira qilish</string>
     <string name="privacy_thumbnail_blur_title">Oldindan ko‘rishni xira qilish</string>
     <string name="quick_app">Tezkor ilovalar</string>
-    <string name="quick_finder_feature_description">Quick Finder sizga ilovalarni, ilova ichidagi tarkibni va narsalarni Internetda tezroq topishga imkon beradi. Siz ushbu xususiyatni Sozlamalardan o‘chirib qo‘yishingiz mumkin.</string>
-    <string name="quick_finder_tip_title">Sizga kerak bo‘lgan hamma narsani tezroq toping</string>
-    <string name="quick_search_all_app_desc">Ilova menyusida barcha ilovalarni ko‘rsatish</string>
-    <string name="quick_search_desc">Ilova menyusini ochgandan so‘ng qidiruvni oching</string>
-    <string name="quick_search_guide_all_apps">Barcha ilovalar</string>
-    <string name="quick_search_guide_ok_btn">OK</string>
-    <string name="quick_search_guide_quick_search">Tezkor qidiruv</string>
-    <string name="quick_search_guide_title">Standart rejimni tanlash</string>
     <string name="recent_apps">Eng so‘nggi</string>
     <string name="recent_menu_item_info">Ma’lumot</string>
     <string name="recent_menu_item_lock">Qulflash</string>
@@ -727,13 +661,6 @@
     <string name="recents_title_market">Ilovalar qidiruvi</string>
     <string name="recents_title_security_scan">Xavfsizlikni tekshirish</string>
     <string name="recents_tv_small_window_text">Suzuvchi oynalar</string>
-    <string name="recents_worldcirculate_text">Tanlash uchun bo‘shating</string>
-    <string name="recnets_relay_device_info">%s-dan</string>
-    <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
-    <string name="recnets_worldcirculate_display_computer_info">Ilova %s qurilmada ishlamoqda.</string>
-    <string name="recnets_worldcirculate_display_default_info">Telefonga qaytarish uchun bosing.</string>
-    <string name="recnets_worldcirculate_display_default_info_pad">Telefonga qaytarish uchun bosing.</string>
-    <string name="recnets_worldcirculate_display_pad_info">Ilova %s qurilmada ishlamoqda.</string>
     <string name="recommend_apk_size_and_desc">%1$dMB | %2$s</string>
     <string name="recommend_app">Tavsiya etilgan ilovalar</string>
     <string name="recommend_apps_default_title">Bo‘sh</string>
@@ -751,8 +678,6 @@
     <string name="remove_invalidate_gadget_tips">Siz foydalanadigan vidjetlardan biri endi mavjud emas. Siz boshqasini qo‘shishingiz mumkin.</string>
     <string name="remove_sys_app_content">Bosh ekran yorlig‘ini yana Sozlamalar > Ilovalar > Bosh ekran yorliqlarini boshqarish bo‘limiga qo‘shishingiz mumkin. Hozir olib tashlansinmi?</string>
     <string name="remove_sys_app_title">Yorliqni Bosh ekrandan o‘chirish?</string>
-    <string name="request_permission_msg">POCO Launcher to‘liq funksiyasiga kirish uchun ba’zi ruxsatler kerak.</string>
-    <string name="request_permission_title">Ruxsat kerak</string>
     <string name="reset_cate_tip_content">Agar davom ettirsangiz, birlamchi ilova guruhlari tiklanadi. Baribir davom etilsinmi?</string>
     <string name="reset_cate_tip_title">Birlamchi guruhlarga tiklash</string>
     <string name="reset_description_first_time">Ko‘rinishlarni %1$sdan 2 soat ichida tiklasangiz bo‘ladi</string>
@@ -768,8 +693,6 @@
     <string name="screen_cells_config_title">Bosh ekran tori</string>
     <string name="screen_locked_toast">Bosh ekran ko‘rinishi qulflangan.</string>
     <string name="screen_number">%d ekran</string>
-    <string name="search_bar_hint_content">Ilovalar va tarkibni qidirish</string>
-    <string name="search_guide_btn">Tushundim</string>
     <string name="search_in_apps_store">%2$sda \"%1$s\" qidirish</string>
     <string name="search_no_result">Hech narsa topilmadi</string>
     <string name="select_all">Barchasini tanlash</string>
@@ -777,7 +700,6 @@
     <string name="select_photo">Rasm</string>
     <string name="send">Jo‘natish</string>
     <string name="server_error">Server xatosi. Birozdan keyin qaytadan ko‘ring.</string>
-    <string name="service_double_attention">Kengaytirilgan qidirish funktsiyasi Branch Metrics Inc. tomonidan taqdim etilgan. Xususiyat ishlashi uchun sizning qidiruv so‘rovlaringiz, Google Ads ID raqami va IP-manzilingizni Branch Metrics Inc. bilan ulashishni talab qiladi. Ushbu xususiyatdan foydalanishdan oldin <a href="http://url1"><font color="#B3000000">Oxirgi Foydalanuvchini Kashfiyot Shartlari &amp; Sharoitlar</font></a> and <a href="http://url2"><font color="#B3000000">Branch Kashfiyot Maxfiylik Siyosati</font></a> bilan tanishib chiqing va rozi bo‘ling.</string>
     <string name="setting_wallpaper_tip">Suring yoki kattaligini o‘zgartiring</string>
     <string name="settings">Sozlamalar</string>
     <string name="settings_shortcut">Sozlamalar</string>
@@ -815,13 +737,11 @@
     <string name="status_installing">O‘rnatish</string>
     <string name="status_paused">To‘xtatildi</string>
     <string name="status_pending">Kutilmoqda</string>
-    <string name="suggestions">Takliflar</string>
     <string name="sunday">Yakshanba</string>
     <string name="sunday_short">Yak</string>
     <string name="sunday_shortest">Yak</string>
     <string name="swipe_the_desktop_to_the_left">Bosh ekranda chapga suring</string>
     <string name="swipe_the_desktop_to_the_right">Bosh ekranda o‘ngga suring</string>
-    <string name="switch_on_button">Yoqish</string>
     <string name="switch_personal_assistant_app_vault">Ilovalar omborxonasi</string>
     <string name="switch_personal_assistant_google">Google Discover</string>
     <string name="switch_personal_assistant_none">Yo‘q</string>
@@ -832,10 +752,6 @@
     <string name="system_shortcuts_remove">O‘chirish</string>
     <string name="system_text">Avto</string>
     <string name="task_access_locked_app_msg">Ilova qulfi yoniq</string>
-    <string name="term_of_service">Shartlar va sharoitlar</string>
-    <string name="terms_of_services_one">Ilova menyusi va Quick Finder‘ga xush kelibsiz. Quick Finder sizga ilovalarni, ilova ichidagi tarkibni va narsalarni Internetda tezroq topishga imkon beradi. Ushbu xususiyatlardan foydalanishdan oldin Xiaomi‘ning <a href="http://url1"><font color="#B3000000">Maxfiylik Siyosati</font></a> ni o‘qing va unga rozilik bildiring.</string>
-    <string name="terms_of_services_three">Ushbu xususiyatni Sozlamalarda o‘chirsangiz bo‘ladi.</string>
-    <string name="terms_of_services_two">Kengaytirilgan qidiruvdan foydalanish uchun shaxsiy ma’lumotlar, shu jumladan qidiruv so‘rovlaringiz, Google Reklama ID‘si va IP-manzilingiz Branch Metrics Inc. bilan ulanishi kerak. Branch sizning shaxsiy ma’lumotlaringizni <a href="http://url1"><font color="#B3000000">Branch Kashfiyot Maxfiylik Siyosati</font></a> muvofiq ravishda ishlatadi. Ushbu xususiyatdan foydalanishdan oldin <a href="http://url1"><font color="#B3000000">Oxirgi Foydalanuvchini Kashfiyot Shartlari &amp; Sharoitlar</font></a> va <a href="http://url2"><font color="#B3000000">Branch Kashfiyot Maxfiylik Siyosati</font></a> bilan tanishib chiqing va rozi bo‘ling.</string>
     <string name="the_anniversary_of_lifting_martial_law">Harbiy Qonunlarni Ko‘tarishning Yilligi</string>
     <string name="the_anti_aggression_day">Tajovuzga qarshi Kun</string>
     <string name="the_arbor_day">Arbor Kuni</string>
@@ -902,11 +818,6 @@
     <string name="tuesday">Seshanba</string>
     <string name="tuesday_short">Se</string>
     <string name="tuesday_shortest">Ssh</string>
-    <string name="uni_search_permission_content">Onlayn qidiruv xususiyatlarini yoqing. (Qidiruv xizmatlari Branch tomonidan taqdim etilgan.)</string>
-    <string name="uni_search_permission_msg">POCO Launcher‘ga qidiruv natijalarini yaxshilash uchun joylashuvingiz va kontaktlaringizga kirish uchun ruxsat bering.</string>
-    <string name="uni_search_permission_title">Yaxshilashgan qidiruv</string>
-    <string name="uni_search_setting_summary">Ilovadagi tarkibni to‘g‘ridan-to‘g‘ri toping</string>
-    <string name="uni_search_setting_title">Ilova ichidagi so‘rov rejimi</string>
     <string name="uninstall">O‘chirish</string>
     <string name="uninstall_dialog_message">O‘chirish ilovaning barcha ma’lumotlarini o‘chiradi.</string>
     <string name="uninstall_dialog_title_format">%s o‘chirilsinmi?</string>
@@ -917,7 +828,6 @@
     <string name="uninstall_xspace_dialog_title_format">Ikkilangan \"%s\" o‘chirilsinmi?</string>
     <string name="unknown_artist_name">Noma’lum ijrochi</string>
     <string name="unnamed_folder_name">Papka</string>
-    <string name="upgrade_remove_small_window_in_recents">Suzuvchi oynalarda ilovalarni ochish uchun yon paneldan foydalanishingiz mumkin</string>
     <string name="wallpaper">Fon rasmi</string>
     <string name="wallpaper_auto_change_title">Ekran qulfi</string>
     <string name="wallpaper_failed_message">Fon rasmini o‘rnatib bo‘lmaydi</string>

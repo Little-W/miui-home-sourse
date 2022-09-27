@@ -40,7 +40,7 @@
 .method static constructor <clinit>()V
     .locals 7
 
-    .line 54
+    .line 68
     new-instance v0, Lcom/google/android/filament/Material$Shading;
 
     const-string v1, "UNLIT"
@@ -51,7 +51,7 @@
 
     sput-object v0, Lcom/google/android/filament/Material$Shading;->UNLIT:Lcom/google/android/filament/Material$Shading;
 
-    .line 63
+    .line 77
     new-instance v0, Lcom/google/android/filament/Material$Shading;
 
     const-string v1, "LIT"
@@ -62,7 +62,7 @@
 
     sput-object v0, Lcom/google/android/filament/Material$Shading;->LIT:Lcom/google/android/filament/Material$Shading;
 
-    .line 72
+    .line 86
     new-instance v0, Lcom/google/android/filament/Material$Shading;
 
     const-string v1, "SUBSURFACE"
@@ -73,7 +73,7 @@
 
     sput-object v0, Lcom/google/android/filament/Material$Shading;->SUBSURFACE:Lcom/google/android/filament/Material$Shading;
 
-    .line 81
+    .line 95
     new-instance v0, Lcom/google/android/filament/Material$Shading;
 
     const-string v1, "CLOTH"
@@ -84,7 +84,7 @@
 
     sput-object v0, Lcom/google/android/filament/Material$Shading;->CLOTH:Lcom/google/android/filament/Material$Shading;
 
-    .line 90
+    .line 104
     new-instance v0, Lcom/google/android/filament/Material$Shading;
 
     const-string v1, "SPECULAR_GLOSSINESS"
@@ -97,7 +97,7 @@
 
     const/4 v0, 0x5
 
-    .line 46
+    .line 60
     new-array v0, v0, [Lcom/google/android/filament/Material$Shading;
 
     sget-object v1, Lcom/google/android/filament/Material$Shading;->UNLIT:Lcom/google/android/filament/Material$Shading;
@@ -133,7 +133,7 @@
         }
     .end annotation
 
-    .line 46
+    .line 60
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -142,7 +142,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/android/filament/Material$Shading;
     .locals 1
 
-    .line 46
+    .line 60
     const-class v0, Lcom/google/android/filament/Material$Shading;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -157,7 +157,7 @@
 .method public static values()[Lcom/google/android/filament/Material$Shading;
     .locals 1
 
-    .line 46
+    .line 60
     sget-object v0, Lcom/google/android/filament/Material$Shading;->$VALUES:[Lcom/google/android/filament/Material$Shading;
 
     invoke-virtual {v0}, [Lcom/google/android/filament/Material$Shading;->clone()Ljava/lang/Object;

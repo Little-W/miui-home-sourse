@@ -15,32 +15,6 @@
 
 
 # static fields
-.field static final FLAG_ADAPTER_FULLUPDATE:I = 0x400
-
-.field static final FLAG_ADAPTER_POSITION_UNKNOWN:I = 0x200
-
-.field static final FLAG_APPEARED_IN_PRE_LAYOUT:I = 0x1000
-
-.field static final FLAG_BOUNCED_FROM_HIDDEN_LIST:I = 0x2000
-
-.field static final FLAG_BOUND:I = 0x1
-
-.field static final FLAG_IGNORE:I = 0x80
-
-.field static final FLAG_INVALID:I = 0x4
-
-.field static final FLAG_MOVED:I = 0x800
-
-.field static final FLAG_NOT_RECYCLABLE:I = 0x10
-
-.field static final FLAG_REMOVED:I = 0x8
-
-.field static final FLAG_RETURNED_FROM_SCRAP:I = 0x20
-
-.field static final FLAG_TMP_DETACHED:I = 0x100
-
-.field static final FLAG_UPDATE:I = 0x2
-
 .field private static final FULLUPDATE_PAYLOADS:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -50,8 +24,6 @@
         }
     .end annotation
 .end field
-
-.field static final PENDING_ACCESSIBILITY_STATE_NOT_SET:I = -0x1
 
 
 # instance fields
@@ -449,24 +421,6 @@
     .line 11210
     iget v0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->mOldPosition:I
 
-    return v0
-.end method
-
-.method public final getPosition()I
-    .locals 2
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    .line 11140
-    iget v0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->mPreLayoutPosition:I
-
-    const/4 v1, -0x1
-
-    if-ne v0, v1, :cond_0
-
-    iget v0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->mPosition:I
-
-    :cond_0
     return v0
 .end method
 
@@ -1129,19 +1083,6 @@
 
     :goto_0
     return v0
-.end method
-
-.method stopIgnoring()V
-    .locals 1
-
-    .line 11251
-    iget v0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->mFlags:I
-
-    and-int/lit16 v0, v0, -0x81
-
-    iput v0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->mFlags:I
-
-    return-void
 .end method
 
 .method public toString()Ljava/lang/String;
