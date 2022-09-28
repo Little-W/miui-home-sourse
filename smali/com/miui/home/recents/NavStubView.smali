@@ -8103,7 +8103,6 @@
     const/4 v0, 0x0
 
     .line 722
-    invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/TaskView;->setTranslationZ(F)V
 
     const/4 v0, 0x0
 
@@ -8199,7 +8198,7 @@
     move-result v0
 
     :goto_0
-    if-ge v3, v0, :cond_2
+    if-ge v3, v0, :cond_4
 
     .line 689
     iget-object v2, p0, Lcom/miui/home/recents/NavStubView;->mLauncher:Lcom/miui/home/launcher/Launcher;
@@ -8368,6 +8367,87 @@
 
     move v11, v2
 
+    iget-object v8, p0, Lcom/miui/home/recents/NavStubView;->mLauncher:Lcom/miui/home/launcher/Launcher;
+
+    invoke-virtual {v8}, Lcom/miui/home/launcher/Launcher;->getRecentsView()Lcom/miui/home/recents/views/RecentsView;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Lcom/miui/home/recents/views/RecentsView;->getTaskStackView()Lcom/miui/home/recents/views/TaskStackView;
+
+    move-result-object v8
+
+    invoke-virtual {v8, v5}, Lcom/miui/home/recents/views/TaskStackView;->getTaskViewIndex(Lcom/miui/home/recents/views/TaskView;)I
+
+    move-result v9
+
+    invoke-virtual {v8}, Lcom/miui/home/recents/views/TaskStackView;->getCurrentScroll()F
+
+    move-result v2
+
+    invoke-direct {p0}, Lcom/miui/home/recents/NavStubView;->getTaskStackLayoutAlgorithm()Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;
+
+    move-result-object v8
+
+    if-eqz v8, :cond_3
+
+    new-instance v10, Lcom/miui/home/recents/views/TaskViewTransform;
+
+    invoke-direct {v10}, Lcom/miui/home/recents/views/TaskViewTransform;-><init>()V
+
+    invoke-virtual {v8, v9, v2, v10}, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->getTaskViewTransform(IFLcom/miui/home/recents/views/TaskViewTransform;)V
+
+    iget v8, v10, Lcom/miui/home/recents/views/TaskViewTransform;->scale:F
+
+    const v2, 0x3d000000    # 0.03125f
+
+    invoke-virtual {v5, v2}, Lcom/miui/home/recents/views/TaskView;->setAlpha(F)V
+
+    invoke-direct {p0}, Lcom/miui/home/recents/NavStubView;->getQuickSwitchOrRunningTaskIndex()I
+
+    move-result v10
+
+    if-eq v10, v3, :cond_2
+
+    invoke-virtual {v5}, Lcom/miui/home/recents/views/TaskView;->getTranslationX()F
+
+    move-result v2
+
+    const v9, 0x40000000    # 2.0f
+
+    div-float v2, v2, v9
+
+    invoke-virtual {v5, v2}, Lcom/miui/home/recents/views/TaskView;->setTranslationX(F)V
+
+    const v2, 0x3f800000    # 1.0f
+
+    invoke-virtual {v5, v2}, Lcom/miui/home/recents/views/TaskView;->setAlpha(F)V
+
+    :cond_2
+    invoke-virtual {v5}, Lcom/miui/home/recents/views/TaskView;->getTranslationX()F
+
+    move-result v2
+
+    const v9, 0x3f900000    # 1.125f
+
+    div-float v2, v2, v9
+
+    invoke-virtual {v5, v2}, Lcom/miui/home/recents/views/TaskView;->setTranslationX(F)V
+
+    move v9, v8
+
+    goto :goto_1
+
+    :cond_3
+    const/high16 v8, 0x3f800000    # 1.0f
+
+    const/high16 v9, 0x3f800000    # 1.0f
+
+    :goto_1
+    const/4 v10, 0x0
+
+    const/4 v2, 0x0
+
     invoke-virtual/range {v4 .. v14}, Lcom/miui/home/recents/util/SpringAnimationUtils;->startTaskViewSpringAnim(Lcom/miui/home/recents/views/TaskView;IFFFFFFFLjava/lang/Runnable;)V
 
     add-int/lit8 v3, v3, 0x1
@@ -8375,7 +8455,7 @@
     goto/16 :goto_0
 
     .line 726
-    :cond_2
+    :cond_4
     iput-boolean v1, p0, Lcom/miui/home/recents/NavStubView;->mIsResetTaskView:Z
 
     return-void
@@ -8387,7 +8467,7 @@
     .line 2215
     sget-object v0, Lcom/miui/home/recents/NavStubView;->TAG:Ljava/lang/String;
 
-    const-string v1, "showRecents"
+    const-string v1, "showStackMRecents"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 

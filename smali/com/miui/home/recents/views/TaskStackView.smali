@@ -1676,6 +1676,18 @@
     return-object p1
 .end method
 
+.method public getCurrentScroll()F
+    .locals 1
+
+    iget-object v0, p0, Lcom/miui/home/recents/views/TaskStackView;->mStackScroller:Lcom/miui/home/recents/views/TaskStackViewScroller;
+
+    invoke-virtual {v0}, Lcom/miui/home/recents/views/TaskStackViewScroller;->getStackScroll()F
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public getCurrentTaskTransforms(Ljava/util/ArrayList;Ljava/util/ArrayList;)V
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
@@ -2401,7 +2413,7 @@
 .end method
 
 .method public isTouchPointInView(FFLcom/miui/home/recents/views/TaskView;)Z
-    .locals 5
+    .locals 6
 
     .line 961
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskStackView;->mIgnoreTasks:Landroid/util/ArraySet;
@@ -2424,6 +2436,10 @@
 
     .line 964
     :cond_0
+    invoke-virtual {p3}, Lcom/miui/home/recents/views/TaskView;->getScaleX()F
+
+    move-result v5
+
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskStackView;->mTmpRect:Landroid/graphics/Rect;
 
     invoke-virtual {p3}, Lcom/miui/home/recents/views/TaskView;->getLeft()I
@@ -2471,6 +2487,8 @@
     .line 968
     :cond_1
     iget-object p3, p0, Lcom/miui/home/recents/views/TaskStackView;->mTmpRect:Landroid/graphics/Rect;
+
+    invoke-static {p3, v5}, Lcom/miui/home/recents/util/Utilities;->scaleRectAboutCenter(Landroid/graphics/Rect;F)V
 
     float-to-int p1, p1
 
@@ -4205,7 +4223,7 @@
 .end method
 
 .method public updateTaskViewToTransform(Lcom/miui/home/recents/views/TaskView;Lcom/miui/home/recents/views/TaskViewTransform;Lcom/android/systemui/shared/recents/utilities/AnimationProps;)V
-    .locals 1
+    .locals 6
 
     .line 574
     invoke-virtual {p1, p2}, Lcom/miui/home/recents/views/TaskView;->isAnimatingTo(Lcom/miui/home/recents/views/TaskViewTransform;)Z
@@ -4218,6 +4236,66 @@
 
     .line 577
     :cond_0
+    invoke-virtual {p0}, Lcom/miui/home/recents/views/TaskStackView;->isTaskStackViewLayoutStyleVertical()Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    invoke-virtual {p1}, Lcom/miui/home/recents/views/TaskView;->getHeaderView()Lcom/miui/home/recents/views/TaskViewHeader;
+
+    move-result-object v4
+
+    iget-object v1, v4, Lcom/miui/home/recents/views/TaskViewHeader;->mIconView:Landroid/widget/ImageView;
+
+    iget v2, p2, Lcom/miui/home/recents/views/TaskViewTransform;->scale:F
+
+    const v3, 0x3f828000    # 1.0195312f
+
+    sub-float/2addr v2, v3
+
+    const v3, 0x41a00000    # 20.0f
+
+    mul-float/2addr v2, v3
+
+    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setAlpha(F)V
+
+    iget v2, p2, Lcom/miui/home/recents/views/TaskViewTransform;->scale:F
+
+    const v3, 0x3f880000    # 1.0625f
+
+    sub-float/2addr v2, v3
+
+    const v3, 0x43000000    # 128.0f
+
+    mul-float/2addr v2, v3
+
+    const v3, 0x3f800000    # 1.0f
+
+    cmpl-float v5, v2, v3
+
+    if-ltz v5, :cond_1
+
+    const v3, 0x3f8ca000
+
+    iget v2, p2, Lcom/miui/home/recents/views/TaskViewTransform;->scale:F
+
+    sub-float v2, v3, v2
+
+    const v3, 0x43800000    # 256.0f
+
+    mul-float/2addr v2, v3
+
+    :cond_1
+    iget-object v1, v4, Lcom/miui/home/recents/views/TaskViewHeader;->mTitleView:Landroid/widget/TextView;
+
+    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setAlpha(F)V
+
+    iget-object v1, v4, Lcom/miui/home/recents/views/TaskViewHeader;->mLockedImageView:Landroid/widget/ImageView;
+
+    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setAlpha(F)V
+
+    :cond_2
     invoke-virtual {p1}, Lcom/miui/home/recents/views/TaskView;->cancelTransformAnimation()V
 
     .line 578

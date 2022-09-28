@@ -52,22 +52,38 @@
     .locals 9
 
     .line 90
-    sget-object v0, Landroid/view/View;->SCALE_X:Landroid/util/Property;
+    sget-object v0, Landroid/view/View;->TRANSLATION_Y:Landroid/util/Property;
 
-    const/4 v1, 0x1
+    const/4 v1, 0x2
 
     new-array v1, v1, [F
 
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getScreenHeight()I
+
+    move-result v3
+
+    int-to-float v3, v3
+
+    const/4 v2, 0x1
+
+    neg-float v3, v3
+
+    aput v3, v1, v2
+
     const/4 v2, 0x0
 
-    aput p1, v1, v2
+    invoke-virtual {p0}, Landroid/view/View;->getTranslationY()F
+
+    move-result v3
+
+    aput v3, v1, v2
 
     invoke-static {p0, v0, v1}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object v0
 
     .line 91
-    invoke-virtual {p0}, Landroid/view/View;->getScaleX()F
+    invoke-virtual {p0}, Landroid/view/View;->getTranslationY()F
 
     move-result v3
 
@@ -114,7 +130,7 @@
 
     invoke-virtual {v0, p0}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    const-wide/16 p0, 0x1c2
+    const-wide/16 p0, 0x222
 
     .line 111
     invoke-virtual {v0, p0, p1}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;

@@ -800,7 +800,7 @@
     <string name="recents_forbid_dock_when_screening_toast_text">"Can't use Split screen while casting"</string>
     <string name="recents_incompatible_app_message">"This app doesn't support Split screen"</string>
     <string name="recents_layout_style">Arrange items in Recents</string>
-    <string name="recents_layout_style_horizontal">Horizontally</string>
+    <string name="recents_layout_style_horizontal">StackHorizontally</string>
     <string name="recents_layout_style_vertical">Vertically</string>
     <string name="recents_smallwindow_drag_text">Drag here to pin</string>
     <string name="recents_smallwindow_text">Release to add</string>

@@ -864,9 +864,9 @@
     <dimen name="recents_task_view_header_button_padding_tablet_land">6.0dip</dimen>
     <dimen name="recents_task_view_header_height">40.0dip</dimen>
     <dimen name="recents_task_view_header_height_tablet_land">64.0dip</dimen>
-    <dimen name="recents_task_view_header_title_margin_end">25.0dip</dimen>
-    <dimen name="recents_task_view_header_title_text_size">13.0sp</dimen>
-    <dimen name="recents_task_view_padding">4.0dip</dimen>
+    <dimen name="recents_task_view_header_title_margin_end">15.0dip</dimen>
+    <dimen name="recents_task_view_header_title_text_size">14.0sp</dimen>
+    <dimen name="recents_task_view_padding">24.0dip</dimen>
     <dimen name="recents_task_view_privacy_protect_icon_marginTop">20.0dip</dimen>
     <dimen name="recents_task_view_rounded_corners_radius_max">25.0dip</dimen>
     <dimen name="recents_task_view_rounded_corners_radius_min">7.0dip</dimen>

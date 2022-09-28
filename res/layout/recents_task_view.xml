@@ -2,6 +2,7 @@
 <com.miui.home.recents.views.TaskView android:focusable="true" android:layout_width="200.0dip" android:layout_height="200.0dip"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <include layout="@layout/recents_task_view_header" />
+    <ImageView android:layout_gravity="right" android:background="@drawable/shadow_202945" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="20.0dip" android:layout_marginEnd="@dimen/recents_task_view_header_height" />
     <com.miui.home.recents.views.TaskViewThumbnail android:id="@id/task_view_thumbnail" android:layout_width="fill_parent" android:layout_height="fill_parent" />
     <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/task_view_screening" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
         <ImageView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/recents_screening" />

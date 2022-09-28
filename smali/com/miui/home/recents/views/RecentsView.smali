@@ -157,16 +157,16 @@
 .end method
 
 .method private alignTaskByVisualRectF(Lcom/miui/home/recents/views/TaskView;Landroid/graphics/RectF;Landroid/graphics/RectF;FF)V
-    .locals 8
+    .locals 10
 
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_4
 
     .line 564
     invoke-virtual {p1}, Lcom/miui/home/recents/views/TaskView;->getTask()Lcom/android/systemui/shared/recents/model/Task;
 
     move-result-object v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
     .line 565
     invoke-virtual {p1}, Lcom/miui/home/recents/views/TaskView;->getTask()Lcom/android/systemui/shared/recents/model/Task;
@@ -177,7 +177,7 @@
 
     if-nez v0, :cond_0
 
-    goto/16 :goto_1
+    goto/16 :goto_2
 
     .line 568
     :cond_0
@@ -227,9 +227,21 @@
 
     move-result v4
 
-    if-ge v3, v4, :cond_2
+    if-ge v3, v4, :cond_3
+
+
+    iget-object v5, p0, Lcom/miui/home/recents/views/RecentsView;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
+
+    invoke-virtual {v5}, Lcom/miui/home/recents/views/TaskStackView;->getTaskStackViewLayoutStyle()Lcom/miui/home/recents/TaskStackViewLayoutStyle;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Lcom/miui/home/recents/TaskStackViewLayoutStyle;->getTaskStackLayoutAlgorithm()Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;
+
+    move-result-object v6
 
     .line 572
+    
     invoke-virtual {p0}, Lcom/miui/home/recents/views/RecentsView;->getTaskViews()Ljava/util/List;
 
     move-result-object v4
@@ -240,8 +252,33 @@
 
     check-cast v4, Lcom/miui/home/recents/views/TaskView;
 
-    if-eq p1, v4, :cond_1
+    if-eq p1, v4, :cond_2
 
+    if-eqz v6, :cond_1
+
+    invoke-virtual {v5, v4}, Lcom/miui/home/recents/views/TaskStackView;->getTaskViewIndex(Lcom/miui/home/recents/views/TaskView;)I
+
+    move-result v7
+
+    new-instance v8, Lcom/miui/home/recents/views/TaskViewTransform;
+
+    invoke-direct {v8}, Lcom/miui/home/recents/views/TaskViewTransform;-><init>()V
+
+    invoke-virtual {v5}, Lcom/miui/home/recents/views/TaskStackView;->getCurrentScroll()F
+
+    move-result v9
+
+    invoke-virtual {v6, v7, v9, v8}, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->getTaskViewTransform(IFLcom/miui/home/recents/views/TaskViewTransform;)V
+
+    iget v9, v8, Lcom/miui/home/recents/views/TaskViewTransform;->scale:F
+
+    goto :goto_1
+
+    :cond_1
+    const v9, 0x3f800000    # 1.0f
+
+    :goto_1
+    
     .line 574
     invoke-virtual {v4}, Lcom/miui/home/recents/views/TaskView;->getTask()Lcom/android/systemui/shared/recents/model/Task;
 
@@ -312,10 +349,12 @@
     invoke-virtual {v4, v6}, Lcom/miui/home/recents/views/TaskView;->setPivotY(F)V
 
     .line 579
-    invoke-virtual {v4, v2}, Lcom/miui/home/recents/views/TaskView;->setScaleX(F)V
+    mul-float/2addr v9, v2
+
+    invoke-virtual {v4, v9}, Lcom/miui/home/recents/views/TaskView;->setScaleX(F)V
 
     .line 580
-    invoke-virtual {v4, v2}, Lcom/miui/home/recents/views/TaskView;->setScaleY(F)V
+    invoke-virtual {v4, v9}, Lcom/miui/home/recents/views/TaskView;->setScaleY(F)V
 
     .line 581
     invoke-virtual {v4, v5}, Lcom/miui/home/recents/views/TaskView;->setTranslationX(F)V
@@ -330,16 +369,16 @@
 
     invoke-virtual {v4, p5}, Lcom/miui/home/recents/views/TaskViewHeader;->setAlpha(F)V
 
-    :cond_1
+    :cond_2
     add-int/lit8 v3, v3, 0x1
 
-    goto :goto_0
-
-    :cond_2
-    return-void
+    goto/16 :goto_0
 
     :cond_3
-    :goto_1
+    return-void
+
+    :cond_4
+    :goto_2
     return-void
 .end method
 
@@ -1821,7 +1860,11 @@
 
     if-eqz p2, :cond_0
 
-    const/4 p2, 0x0
+    const p2, 0x3d000000    # 0.03125f
+
+    invoke-virtual {p1, p2}, Lcom/miui/home/recents/views/TaskView;->setChildrenViewAlpha(F)V
+
+    invoke-virtual {p1, p2}, Lcom/miui/home/recents/views/TaskView;->setAlpha(F)V
 
     goto :goto_0
 
@@ -1829,10 +1872,12 @@
     const/high16 p2, 0x3f800000    # 1.0f
 
     .line 528
-    :goto_0
     invoke-virtual {p1, p2}, Lcom/miui/home/recents/views/TaskView;->setChildrenViewAlpha(F)V
 
+    invoke-virtual {p1, p2}, Lcom/miui/home/recents/views/TaskView;->setAlpha(F)V
+
     :cond_1
+    :goto_0
     return-void
 .end method
 

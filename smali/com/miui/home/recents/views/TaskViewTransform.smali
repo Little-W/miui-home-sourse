@@ -147,11 +147,29 @@
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
-    if-eqz p4, :cond_1
+    if-eqz p4, :cond_2
 
     .line 138
+    invoke-virtual {p1}, Lcom/miui/home/recents/views/TaskView;->getScaleX()F
+
+    move-result p2
+
+    invoke-virtual {p0, p2, p1}, Lcom/miui/home/recents/views/TaskViewTransform;->hasScaleChangedFrom(FLcom/miui/home/recents/views/TaskView;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_1
+
+    iget p2, p0, Lcom/miui/home/recents/views/TaskViewTransform;->scale:F
+
+    invoke-virtual {p1, p2}, Lcom/miui/home/recents/views/TaskView;->setScaleX(F)V
+
+    invoke-virtual {p1, p2}, Lcom/miui/home/recents/views/TaskView;->setScaleY(F)V
+
+    :cond_1
+    
     invoke-virtual {p1}, Lcom/miui/home/recents/views/TaskView;->getTranslationZ()F
 
     move-result p2
@@ -160,7 +178,7 @@
 
     move-result p2
 
-    if-eqz p2, :cond_1
+    if-eqz p2, :cond_2
 
     .line 139
     iget p2, p0, Lcom/miui/home/recents/views/TaskViewTransform;->translationZ:F
@@ -168,12 +186,12 @@
     invoke-virtual {p1, p2}, Lcom/miui/home/recents/views/TaskView;->setTranslationZ(F)V
 
     .line 148
-    :cond_1
+    :cond_2
     invoke-virtual {p0, p1}, Lcom/miui/home/recents/views/TaskViewTransform;->hasRectChangedFrom(Landroid/view/View;)Z
 
     move-result p2
 
-    if-eqz p2, :cond_4
+    if-eqz p2, :cond_5
 
     .line 149
     iget-object p2, p0, Lcom/miui/home/recents/views/TaskViewTransform;->rect:Landroid/graphics/RectF;
@@ -230,14 +248,14 @@
 
     goto :goto_0
 
-    :cond_2
+    :cond_3
     const/4 v0, 0x2
 
     const/4 v1, 0x0
 
     const/4 v2, 0x1
 
-    if-eqz p4, :cond_3
+    if-eqz p4, :cond_4
 
     .line 153
     invoke-virtual {p1}, Lcom/miui/home/recents/views/TaskView;->getTranslationZ()F
@@ -248,7 +266,7 @@
 
     move-result p4
 
-    if-eqz p4, :cond_3
+    if-eqz p4, :cond_4
 
     .line 154
     sget-object p4, Landroid/view/View;->TRANSLATION_Z:Landroid/util/Property;
@@ -281,12 +299,12 @@
     invoke-virtual {p2, p4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 168
-    :cond_3
+    :cond_4
     invoke-virtual {p0, p1}, Lcom/miui/home/recents/views/TaskViewTransform;->hasRectChangedFrom(Landroid/view/View;)Z
 
     move-result p4
 
-    if-eqz p4, :cond_4
+    if-eqz p4, :cond_5
 
     .line 169
     new-instance p4, Landroid/graphics/Rect;
@@ -353,7 +371,7 @@
 
     invoke-virtual {p2, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :cond_4
+    :cond_5
     :goto_0
     return-void
 .end method
@@ -517,6 +535,83 @@
     const/4 p1, 0x1
 
     :goto_1
+    return p1
+.end method
+
+.method public hasScaleChangedFrom(FLcom/miui/home/recents/views/TaskView;)Z
+    .locals 4
+
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getScreenWidth()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    invoke-virtual {p2}, Lcom/miui/home/recents/views/TaskView;->getWidth()I
+
+    move-result v2
+
+    invoke-virtual {p2}, Lcom/miui/home/recents/views/TaskView;->getHeight()I
+
+    move-result v3
+
+    if-ge v3, v2, :cond_0
+
+    move v2, v3
+
+    :cond_0
+    int-to-float v2, v2
+
+    div-float/2addr v1, v2
+
+    const v2, 0x3f5e0000    # 0.8671875f
+
+    mul-float/2addr v1, v2
+
+    cmpl-float v0, p1, v1
+
+    if-gtz v0, :cond_1
+
+    invoke-virtual {p2}, Lcom/miui/home/recents/views/TaskView;->getTranslationZ()F
+
+    move-result v2
+
+    const v1, 0x3a000000
+
+    neg-float v1, v1
+
+    cmpl-float v0, v2, v1
+
+    if-gtz v0, :cond_1
+
+    iget v0, p0, Lcom/miui/home/recents/views/TaskViewTransform;->scale:F
+
+    const v1, 0x3d000000    # 0.03125f
+
+    cmpl-float v2, v0, v1
+
+    if-ltz v2, :cond_1
+
+    const v1, 0x40100000    # 2.25f
+
+    cmpl-float v2, v0, v1
+
+    if-gez v2, :cond_1
+
+    invoke-static {v0, p1}, Ljava/lang/Float;->compare(FF)I
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p1, 0x0
+
+    :goto_0
     return p1
 .end method
 

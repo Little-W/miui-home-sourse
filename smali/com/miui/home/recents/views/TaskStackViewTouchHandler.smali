@@ -547,7 +547,7 @@
 .end method
 
 .method private findViewAtPoint(FF)Lcom/miui/home/recents/views/TaskView;
-    .locals 4
+    .locals 6
 
     .line 772
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
@@ -565,6 +565,10 @@
 
     move-result v1
 
+    move v4, v1
+
+    add-int/lit8 v4, v4, -0x1
+
     add-int/lit8 v1, v1, -0x1
 
     :goto_0
@@ -573,7 +577,9 @@
     .line 775
     iget-object v2, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
 
-    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    sub-int v5, v4, v1
+
+    invoke-interface {v0, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -1678,6 +1684,18 @@
 .method private updateTaskViewTransforms(F)V
     .locals 10
 
+    const v1, 0x40180000    # 2.375f
+
+    mul-float v2, v1, p1
+
+    mul-float v3, p1, p1
+
+    const v1, 0x3fb00000    # 1.375f
+
+    mul-float/2addr v3, v1
+
+    sub-float p1, v2, v3
+    
     .line 721
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
 
@@ -1810,6 +1828,22 @@
 
     iput v7, v6, Lcom/miui/home/recents/views/TaskViewTransform;->viewOutlineAlpha:F
 
+    iget-object v6, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTmpTransform:Lcom/miui/home/recents/views/TaskViewTransform;
+
+    iget v7, v5, Lcom/miui/home/recents/views/TaskViewTransform;->scale:F
+
+    iget v8, v4, Lcom/miui/home/recents/views/TaskViewTransform;->scale:F
+
+    iget v9, v5, Lcom/miui/home/recents/views/TaskViewTransform;->scale:F
+
+    sub-float/2addr v8, v9
+
+    mul-float/2addr v8, p1
+
+    add-float/2addr v7, v8
+
+    iput v7, v6, Lcom/miui/home/recents/views/TaskViewTransform;->scale:F
+    
     .line 755
     iget-object v6, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTmpTransform:Lcom/miui/home/recents/views/TaskViewTransform;
 
@@ -2281,7 +2315,6 @@
     const/high16 v0, 0x41200000    # 10.0f
 
     .line 541
-    invoke-virtual {p1, v0}, Lcom/miui/home/recents/views/TaskView;->setTranslationZ(F)V
 
     .line 543
     invoke-static {}, Lcom/miui/home/recents/util/SpringAnimationUtils;->getInstance()Lcom/miui/home/recents/util/SpringAnimationUtils;
@@ -2462,7 +2495,6 @@
     const/4 v0, 0x0
 
     .line 660
-    invoke-virtual {p2, v0}, Lcom/miui/home/recents/views/TaskView;->setTranslationZ(F)V
 
     const/4 v0, 0x0
 
@@ -2477,7 +2509,6 @@
     .line 667
     iget-object v1, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
 
-    invoke-virtual {v1, p2}, Lcom/miui/home/recents/views/TaskStackView;->removeIgnoreTask(Lcom/android/systemui/shared/recents/model/Task;)V
 
     .line 668
     iget-object p2, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;

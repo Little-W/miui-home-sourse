@@ -18,7 +18,7 @@
 
 .field mIconView:Landroid/widget/ImageView;
 
-.field private mLockedImageView:Landroid/widget/ImageView;
+.field mLockedImageView:Landroid/widget/ImageView;
 
 .field private mSpringAnimationImpl:Lcom/miui/home/recents/util/SpringAnimationImpl;
 

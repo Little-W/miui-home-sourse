@@ -145,7 +145,7 @@
 
 # virtual methods
 .method public calculate(F)V
-    .locals 6
+    .locals 7
 
     .line 28
     invoke-static {}, Lcom/miui/home/recents/views/VerticalSwipe;->getAsScreenHeightWhenDismiss()I
@@ -213,6 +213,10 @@
     invoke-direct {p0, p1, v0}, Lcom/miui/home/recents/views/VerticalSwipe;->afterFrictionValue(FF)F
 
     move-result v0
+
+    const/high16 v6, 0x40000000    # 2.0f
+
+    mul-float/2addr v0, v6
 
     if-gez v2, :cond_2
 

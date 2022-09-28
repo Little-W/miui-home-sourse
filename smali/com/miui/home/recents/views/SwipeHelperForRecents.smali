@@ -1117,7 +1117,7 @@
     const/high16 v0, 0x41200000    # 10.0f
 
     .line 160
-    invoke-virtual {p1, v0}, Landroid/view/View;->setTranslationZ(F)V
+
 
     .line 162
     :cond_1
@@ -1899,7 +1899,7 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/miui/home/recents/views/TaskView;->setAlpha(F)V
+
 
     .line 550
     invoke-virtual {v0}, Lcom/miui/home/recents/views/TaskView;->getWidth()I
@@ -1930,7 +1930,7 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/miui/home/recents/views/TaskView;->setScaleX(F)V
+
 
     .line 553
     iget-object v1, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mVerticalSwipe:Lcom/miui/home/recents/views/VerticalSwipe;
@@ -1939,7 +1939,7 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/miui/home/recents/views/TaskView;->setScaleY(F)V
+
 
     .line 556
     :cond_3
@@ -2002,11 +2002,6 @@
     move-result v0
 
     .line 574
-    iget-object v3, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mCallback:Lcom/miui/home/recents/views/SwipeHelperForRecents$Callback;
-
-    iget-object v4, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mCurrView:Landroid/view/View;
-
-    invoke-interface {v3, v4}, Lcom/miui/home/recents/views/SwipeHelperForRecents$Callback;->onDragEnd(Landroid/view/View;)V
 
     .line 575
     iget-object v3, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mCurrView:Landroid/view/View;
@@ -2030,6 +2025,10 @@
 
     .line 578
     iget-object p1, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mCurrView:Landroid/view/View;
+
+    iget-object v3, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mCallback:Lcom/miui/home/recents/views/SwipeHelperForRecents$Callback;
+
+    invoke-interface {v3, p1}, Lcom/miui/home/recents/views/SwipeHelperForRecents$Callback;->onDragEnd(Landroid/view/View;)V
 
     invoke-direct {p0, p1, v0}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->dismissChild(Landroid/view/View;F)V
 
@@ -2076,6 +2075,8 @@
     :cond_8
     :goto_1
     return v2
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x1

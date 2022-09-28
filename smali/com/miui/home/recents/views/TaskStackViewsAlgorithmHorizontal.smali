@@ -210,11 +210,13 @@
 
     move-result-object p1
 
-    const p2, 0x7f07035c
+    const p2, 0x7f07030e
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result p1
+
+    const p1, 0x0
 
     iput p1, p0, Lcom/miui/home/recents/views/TaskStackViewsAlgorithmHorizontal;->mHorizontalGap:I
 
@@ -436,14 +438,6 @@
     mul-float/2addr v2, v3
 
     sub-float/2addr v0, v2
-
-    iget v2, p0, Lcom/miui/home/recents/views/TaskStackViewsAlgorithmHorizontal;->mHorizontalGap:I
-
-    mul-int/2addr v2, p1
-
-    int-to-float p1, v2
-
-    sub-float/2addr v0, p1
 
     iget-object p1, p0, Lcom/miui/home/recents/views/TaskStackViewsAlgorithmHorizontal;->mTaskViewRectF:Landroid/graphics/RectF;
 
@@ -679,8 +673,36 @@
 .end method
 
 .method public getTaskViewTransform(IFLcom/miui/home/recents/views/TaskViewTransform;)V
-    .locals 3
+    .locals 12
 
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getScreenWidth()I
+
+    move-result v10
+
+    int-to-float v10, v10
+
+    const v5, 0x44870000    # 1080.0f
+
+    div-float v11, v10, v5
+
+    const v0, 0x1
+
+    const v5, 0x42000000    # 32.0f
+
+    invoke-virtual {p0}, Lcom/miui/home/recents/views/TaskStackViewsAlgorithmHorizontal;->isLandscapeVisually()Z
+
+    move-result v9
+
+    neg-int v6, p1
+
+    int-to-float v6, v6
+
+    div-float v7, v6, v5
+
+    const v5, 0x3f800000    # 1.0f
+
+    sub-float/2addr v7, v5
+    
     .line 28
     invoke-virtual {p0, p1}, Lcom/miui/home/recents/views/TaskStackViewsAlgorithmHorizontal;->calculateTaskViewOffsetXAndY(I)[I
 
@@ -699,13 +721,148 @@
 
     add-int/2addr v1, p2
 
-    const/high16 p2, 0x3f800000    # 1.0f
+    const v3, 0x40000000    # 2.0f
+
+    div-float v3, v10, v3
+
+    const v6, 0x40800000    # 4.0f
+
+    if-eqz v9, :cond_0
+
+    const v6, 0x41000000    # 8.0f
+
+    :cond_0
+    mul-float v4, v3, v6
+
+    neg-float v4, v4
+
+    move v2, v3
+
+    move v3, v7
+
+    int-to-float v1, v1
+
+    sub-float v5, v1, v4
+
+    move v8, v5
+
+    const v7, 0x458f5000    # 4586.0f
+
+    mul-float/2addr v7, v11
+
+    float-to-double v10, v7
+
+    float-to-double v5, v5
+
+    div-double/2addr v5, v10
+
+    invoke-static {v5, v6}, Ljava/lang/Math;->abs(D)D
+
+    move-result-wide v5
+
+    mul-double v10, v5, v5
+
+    mul-double/2addr v10, v5
+
+    float-to-double v5, v8
+
+    mul-double v5, v5, v10
+
+    double-to-float v6, v5
+
+    if-eqz v9, :cond_1
+
+    const v7, 0x41400000    # 12.0f
+
+    div-float/2addr v6, v7
+
+    :cond_1
+    cmpg-float v10, v6, v0
+
+    if-gez v10, :cond_2
+
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getScreenHeight()I
+
+    move-result v10
+
+    int-to-float v10, v10
+
+    sub-float/2addr v6, v10
+
+    :cond_2
+    add-float v1, v4, v6
+
+    const v7, 0x40660000    # 3.59375f
+
+    if-eqz v9, :cond_3
+
+    const v7, 0x40f00000    # 7.5f
+
+    :cond_3
+    mul-float v4, v2, v7
+
+    add-float/2addr v1, v4
+
+    cmpg-float v6, v1, v0
+
+    if-lez v6, :cond_5
+
+    const v7, 0x3fc00000    # 1.5f
+
+    mul-float/2addr v1, v7
+
+    const v7, 0x41300000    # 11.0f
+
+    if-eqz v9, :cond_4
+
+    const v7, 0x41800000    # 16.0f
+
+    :cond_4
+    mul-float v5, v2, v7
+
+    invoke-virtual {p0, v1, v5}, Lcom/miui/home/recents/views/TaskStackViewsAlgorithmHorizontal;->afterFrictionValue(FF)F
+
+    move-result v1
+
+    :cond_5
+    move v4, v8
+
+    const v8, 0x3f800000    # 1.0f
 
     .line 31
-    iput p2, p3, Lcom/miui/home/recents/views/TaskViewTransform;->scale:F
+    cmpg-float v6, v4, v0
+
+    if-lez v6, :cond_6
+
+    const v7, 0x42400000    # 48.0f
+
+    mul-float v5, v2, v7
+
+    invoke-virtual {p0, v4, v5}, Lcom/miui/home/recents/views/TaskStackViewsAlgorithmHorizontal;->afterFrictionValue(FF)F
+
+    move-result v4
+
+    div-float v4, v4, v5
+
+    add-float/2addr v8, v4
+
+    :cond_6
+    if-eqz v9, :cond_7
+
+    const v7, 0x3d500000    # 0.05078125f
+
+    sub-float/2addr v8, v7
+
+    :cond_7
+    iput v8, p3, Lcom/miui/home/recents/views/TaskViewTransform;->scale:F
 
     .line 32
-    iput p2, p3, Lcom/miui/home/recents/views/TaskViewTransform;->alpha:F
+    iput v3, p3, Lcom/miui/home/recents/views/TaskViewTransform;->translationZ:F
+
+    const v7, 0x3f800000    # 1.0f
+
+    iput v7, p3, Lcom/miui/home/recents/views/TaskViewTransform;->alpha:F
+
 
     .line 33
     iget-object p2, p3, Lcom/miui/home/recents/views/TaskViewTransform;->rect:Landroid/graphics/RectF;
@@ -717,11 +874,29 @@
     .line 34
     iget-object p2, p3, Lcom/miui/home/recents/views/TaskViewTransform;->rect:Landroid/graphics/RectF;
 
-    int-to-float v1, v1
-
     const/4 v2, 0x1
 
     aget p1, p1, v2
+
+    int-to-float p1, p1
+
+    float-to-int v1, v1
+
+    int-to-float v1, v1
+
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getScreenHeight()I
+
+    move-result v10
+
+    int-to-float v10, v10
+
+    const v3, 0x3c800000    # 0.015625f
+
+    mul-float v3, v10, v3
+
+    sub-float/2addr p1, v3
+
+    float-to-int p1, p1
 
     int-to-float p1, p1
 
@@ -746,7 +921,7 @@
 
     cmpg-float p1, p1, p2
 
-    if-gez p1, :cond_0
+    if-gez p1, :cond_8
 
     iget-object p1, p3, Lcom/miui/home/recents/views/TaskViewTransform;->rect:Landroid/graphics/RectF;
 
@@ -767,14 +942,55 @@
 
     cmpl-float p1, p1, p2
 
-    if-lez p1, :cond_0
+    if-lez p1, :cond_8
 
     move v0, v2
 
-    :cond_0
+    :cond_8
     iput-boolean v0, p3, Lcom/miui/home/recents/views/TaskViewTransform;->visible:Z
 
     return-void
+.end method
+
+.method public getTaskViewWithoutHeaderRectF(IF)Landroid/graphics/RectF;
+    .locals 3
+
+    const/4 v0, -0x1
+
+    if-ne p1, v0, :cond_0
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :cond_0
+    new-instance v0, Lcom/miui/home/recents/views/TaskViewTransform;
+
+    invoke-direct {v0}, Lcom/miui/home/recents/views/TaskViewTransform;-><init>()V
+
+    invoke-virtual {p0, p1, p2, v0}, Lcom/miui/home/recents/views/TaskStackViewsAlgorithmHorizontal;->getTaskViewTransform(IFLcom/miui/home/recents/views/TaskViewTransform;)V
+
+    iget-object p1, v0, Lcom/miui/home/recents/views/TaskViewTransform;->rect:Landroid/graphics/RectF;
+
+    iget v2, v0, Lcom/miui/home/recents/views/TaskViewTransform;->scale:F
+
+    invoke-static {p1, v2}, Lcom/miui/home/recents/util/Utilities;->scaleRectAboutCenter(Landroid/graphics/RectF;F)V
+
+    iget p2, p1, Landroid/graphics/RectF;->top:F
+
+    iget v1, p0, Lcom/miui/home/recents/views/TaskStackViewsAlgorithmHorizontal;->mRecentsTaskViewHeaderHeight:I
+
+    int-to-float v1, v1
+
+    mul-float/2addr v1, v2
+
+    add-float/2addr p2, v1
+
+    iput p2, p1, Landroid/graphics/RectF;->top:F
+
+    iget-object p1, v0, Lcom/miui/home/recents/views/TaskViewTransform;->rect:Landroid/graphics/RectF;
+
+    return-object p1
 .end method
 
 .method protected scaleTaskView(Landroid/graphics/RectF;)V
@@ -787,12 +1003,12 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x3ef5c28f    # 0.48f
+    const v0, 0x3f100000    # 0.5625f
 
     goto :goto_0
 
     :cond_0
-    const v0, 0x3f0b4396    # 0.544f
+    const v0, 0x3f200000    # 0.625f
 
     .line 124
     :goto_0

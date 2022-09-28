@@ -1180,7 +1180,7 @@
 .end method
 
 .method update(Lcom/android/systemui/shared/recents/model/TaskStack;Landroid/util/ArraySet;)V
-    .locals 2
+    .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1207,6 +1207,7 @@
 
     iput p2, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mNumStackTasks:I
 
+    move v2, p2
     .line 258
     iget-object p2, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mTaskIndexMap:Landroid/util/SparseIntArray;
 
@@ -1236,6 +1237,10 @@
     iget v0, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mNumStackTasks:I
 
     if-ge p2, v0, :cond_1
+
+    sub-int v2, v0, p2
+
+    add-int/lit8 v2, v2, -0x1
 
     .line 266
     invoke-virtual {p1, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;

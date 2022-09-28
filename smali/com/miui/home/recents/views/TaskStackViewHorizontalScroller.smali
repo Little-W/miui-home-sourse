@@ -244,7 +244,7 @@
 .end method
 
 .method public getNearestMotionlessScrollP(F)F
-    .locals 4
+    .locals 5
 
     .line 41
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskStackViewHorizontalScroller;->mLayoutAlgorithm:Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;
@@ -282,6 +282,10 @@
 
     :cond_0
     add-float/2addr p1, v1
+
+    const v4, 0x3e000000    # 0.125f
+
+    sub-float/2addr p1, v4
 
     div-float v2, v0, v3
 

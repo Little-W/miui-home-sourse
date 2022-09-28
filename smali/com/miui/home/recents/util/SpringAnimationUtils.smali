@@ -125,9 +125,9 @@
 
     const/high16 v2, 0x3f800000    # 1.0f
 
-    const v3, 0x3f666666    # 0.9f
+    const v3, 0x3f733333    # 0.95f
 
-    const v4, 0x3f666666    # 0.9f
+    const v4, 0x3f733333    # 0.95f
 
     const/4 v6, 0x0
 
@@ -142,9 +142,9 @@
 
     const/4 v8, 0x0
 
-    const v9, 0x3f733333    # 0.95f
+    const v9, 0x3f7d70a4    # 0.99f
 
-    const v10, 0x3f733333    # 0.95f
+    const v10, 0x3f7d70a4    # 0.99f
 
     move-object v7, v0
 
@@ -1170,7 +1170,7 @@
 .end method
 
 .method public startRemoveTaskMenuAnim(Lcom/miui/home/recents/views/TaskStackView;Lcom/miui/home/recents/views/TaskView;Z)V
-    .locals 7
+    .locals 12
 
     .line 232
     invoke-virtual {p1}, Lcom/miui/home/recents/views/TaskStackView;->getTaskViews()Ljava/util/List;
@@ -1194,6 +1194,31 @@
 
     check-cast v1, Lcom/miui/home/recents/views/TaskView;
 
+    invoke-virtual {v1}, Lcom/miui/home/recents/views/TaskView;->getScaleX()F
+
+    move-result v2
+
+    goto :goto_1
+
+    const v2, 0x3f800000    # 1.0f
+
+    :goto_1
+    new-instance v4, Lcom/miui/home/recents/util/SpringAnimationUtils$ViewState;
+
+    move v6, v2
+
+    const v5, 0x3f800000    # 1.0f
+
+    move v7, v6
+
+    const v8, 0x0
+
+    const v9, 0x0
+
+    invoke-direct/range {v4 .. v9}, Lcom/miui/home/recents/util/SpringAnimationUtils$ViewState;-><init>(FFFFF)V
+
+    move-object v11, v4
+    
     .line 233
     invoke-virtual {p1}, Lcom/miui/home/recents/views/TaskStackView;->getWidth()I
 
@@ -1224,7 +1249,7 @@
 
     int-to-float v3, v3
 
-    const v4, 0x3e99999a    # 0.3f
+    const v4, 0x3e3851ec    # 0.18f
 
     const v5, 0x3f7d70a4    # 0.99f
 
@@ -1245,7 +1270,7 @@
 
     iget-object v2, p0, Lcom/miui/home/recents/util/SpringAnimationUtils;->TASK_VIEW_NORMAL:Lcom/miui/home/recents/util/SpringAnimationUtils$ViewState;
 
-    invoke-virtual {p0, v1, v5, v4, v2}, Lcom/miui/home/recents/util/SpringAnimationUtils;->updateSpringAnimation(Lcom/miui/home/recents/util/SpringAnimationImpl;FFLcom/miui/home/recents/util/SpringAnimationUtils$ViewState;)V
+    invoke-virtual {p0, v1, v5, v4, v11}, Lcom/miui/home/recents/util/SpringAnimationUtils;->updateSpringAnimation(Lcom/miui/home/recents/util/SpringAnimationImpl;FFLcom/miui/home/recents/util/SpringAnimationUtils$ViewState;)V
 
     goto :goto_0
 
@@ -1253,7 +1278,7 @@
     :cond_0
     iget-object v2, p0, Lcom/miui/home/recents/util/SpringAnimationUtils;->TASK_VIEW_NORMAL:Lcom/miui/home/recents/util/SpringAnimationUtils$ViewState;
 
-    invoke-direct {p0, v1, v2}, Lcom/miui/home/recents/util/SpringAnimationUtils;->setToState(Landroid/view/View;Lcom/miui/home/recents/util/SpringAnimationUtils$ViewState;)V
+    invoke-direct {p0, v1, v11}, Lcom/miui/home/recents/util/SpringAnimationUtils;->setToState(Landroid/view/View;Lcom/miui/home/recents/util/SpringAnimationUtils$ViewState;)V
 
     goto :goto_0
 
@@ -1336,9 +1361,9 @@
 
     move-result-object v1
 
-    const v2, 0x3ee66666    # 0.45f
+    const v2, 0x3f4ccccd    # 0.8f
 
-    const/high16 v3, 0x3f000000    # 0.5f
+    const v3, 0x3e99999a    # 0.3f
 
     iget-object v4, p0, Lcom/miui/home/recents/util/SpringAnimationUtils;->THUMBNAIL_NORMAL:Lcom/miui/home/recents/util/SpringAnimationUtils$ViewState;
 
@@ -1496,9 +1521,12 @@
 .end method
 
 .method public startShowTaskMenuAnim(Lcom/miui/home/recents/views/TaskStackView;Lcom/miui/home/recents/views/TaskView;)V
-    .locals 7
+    .locals 13
 
     .line 210
+    const v12, 0x0
+
+    const v8, 0x0
     invoke-virtual {p1}, Lcom/miui/home/recents/views/TaskStackView;->getTaskViews()Ljava/util/List;
 
     move-result-object v0
@@ -1512,7 +1540,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -1550,11 +1578,15 @@
 
     int-to-float v3, v3
 
-    const v4, 0x3f7d70a4    # 0.99f
+    const v4, 0x3ed00000    # 0.40625f
 
-    const v5, 0x3e99999a    # 0.3f
+    const v5, 0x3f7d70a4    # 0.99f
 
-    if-eq v1, p2, :cond_0
+    if-eq v1, p2, :cond_1
+
+    invoke-virtual {v1}, Lcom/miui/home/recents/views/TaskView;->getScaleX()F
+
+    move-result v8
 
     .line 214
     invoke-virtual {v1, v2}, Lcom/miui/home/recents/views/TaskView;->setPivotX(F)V
@@ -1567,14 +1599,58 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/miui/home/recents/util/SpringAnimationUtils;->TASK_VIEW_HIDE:Lcom/miui/home/recents/util/SpringAnimationUtils$ViewState;
+    if-nez v12, :cond_0
 
-    invoke-virtual {p0, v1, v4, v5, v2}, Lcom/miui/home/recents/util/SpringAnimationUtils;->updateSpringAnimation(Lcom/miui/home/recents/util/SpringAnimationImpl;FFLcom/miui/home/recents/util/SpringAnimationUtils$ViewState;)V
+    new-instance v6, Lcom/miui/home/recents/util/SpringAnimationUtils$ViewState;
+
+    const v7, 0x3f800000    # 1.0f
+
+    move v9, v8
+
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getScreenHeight()I
+
+    move-result v10
+
+    int-to-float v10, v10
+
+    const v11, 0x0
+
+    invoke-direct/range {v6 .. v11}, Lcom/miui/home/recents/util/SpringAnimationUtils$ViewState;-><init>(FFFFF)V
+
+    move-object v2, v6
+
+    goto :goto_1
+
+    :cond_0
+    new-instance v6, Lcom/miui/home/recents/util/SpringAnimationUtils$ViewState;
+
+    const v7, 0x3f800000    # 1.0f
+
+    move v9, v8
+
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getScreenHeight()I
+
+    move-result v10
+
+    int-to-float v10, v10
+
+    neg-float v10, v10
+
+    const v11, 0x0
+
+    invoke-direct/range {v6 .. v11}, Lcom/miui/home/recents/util/SpringAnimationUtils$ViewState;-><init>(FFFFF)V
+
+    move-object v2, v6
+
+    :goto_1
+    invoke-virtual {p0, v1, v5, v4, v2}, Lcom/miui/home/recents/util/SpringAnimationUtils;->updateSpringAnimation(Lcom/miui/home/recents/util/SpringAnimationImpl;FFLcom/miui/home/recents/util/SpringAnimationUtils$ViewState;)V
 
     goto :goto_0
 
     .line 219
-    :cond_0
+    :cond_1
+    const v12, 0x1
+
     invoke-virtual {v1}, Lcom/miui/home/recents/views/TaskView;->getHeaderView()Lcom/miui/home/recents/views/TaskViewHeader;
 
     move-result-object v6
@@ -1599,7 +1675,7 @@
 
     iget-object v3, p0, Lcom/miui/home/recents/util/SpringAnimationUtils;->HEADER_SCALE_DOWN:Lcom/miui/home/recents/util/SpringAnimationUtils$ViewState;
 
-    invoke-virtual {p0, v2, v4, v5, v3}, Lcom/miui/home/recents/util/SpringAnimationUtils;->updateSpringAnimation(Lcom/miui/home/recents/util/SpringAnimationImpl;FFLcom/miui/home/recents/util/SpringAnimationUtils$ViewState;)V
+    invoke-virtual {p0, v2, v5, v4, v3}, Lcom/miui/home/recents/util/SpringAnimationUtils;->updateSpringAnimation(Lcom/miui/home/recents/util/SpringAnimationImpl;FFLcom/miui/home/recents/util/SpringAnimationUtils$ViewState;)V
 
     .line 223
     invoke-virtual {v1}, Lcom/miui/home/recents/views/TaskView;->getThumbnailView()Lcom/miui/home/recents/views/TaskViewThumbnail;
@@ -1652,13 +1728,15 @@
 
     const v2, 0x3f4ccccd    # 0.8f
 
-    sget-object v3, Lcom/miui/home/recents/util/SpringAnimationUtils;->THUMBNAIL_SCALE_UP:Lcom/miui/home/recents/util/SpringAnimationUtils$ViewState;
+    const v3, 0x3e99999a    # 0.3f
 
-    invoke-virtual {p0, v1, v2, v5, v3}, Lcom/miui/home/recents/util/SpringAnimationUtils;->updateSpringAnimation(Lcom/miui/home/recents/util/SpringAnimationImpl;FFLcom/miui/home/recents/util/SpringAnimationUtils$ViewState;)V
+    sget-object v4, Lcom/miui/home/recents/util/SpringAnimationUtils;->THUMBNAIL_SCALE_UP:Lcom/miui/home/recents/util/SpringAnimationUtils$ViewState;
+
+    invoke-virtual {p0, v1, v2, v3, v4}, Lcom/miui/home/recents/util/SpringAnimationUtils;->updateSpringAnimation(Lcom/miui/home/recents/util/SpringAnimationImpl;FFLcom/miui/home/recents/util/SpringAnimationUtils$ViewState;)V
 
     goto/16 :goto_0
 
-    :cond_1
+    :cond_2
     return-void
 .end method
 
@@ -1789,7 +1867,7 @@
 .end method
 
 .method public startTaskViewSnapAnim(Lcom/miui/home/recents/views/TaskView;ZLjava/lang/Runnable;)Landroidx/dynamicanimation/animation/SpringAnimation;
-    .locals 4
+    .locals 10
 
     if-eqz p1, :cond_1
 
@@ -1804,7 +1882,23 @@
 
     iget-object v3, p0, Lcom/miui/home/recents/util/SpringAnimationUtils;->TASK_VIEW_NORMAL:Lcom/miui/home/recents/util/SpringAnimationUtils$ViewState;
 
-    invoke-virtual {p0, v0, v1, v2, v3}, Lcom/miui/home/recents/util/SpringAnimationUtils;->updateSpringAnimation(Lcom/miui/home/recents/util/SpringAnimationImpl;FFLcom/miui/home/recents/util/SpringAnimationUtils$ViewState;)V
+    new-instance v4, Lcom/miui/home/recents/util/SpringAnimationUtils$ViewState;
+
+    invoke-virtual {p1}, Lcom/miui/home/recents/views/TaskView;->getScaleX()F
+
+    move-result v6
+
+    const v5, 0x3f800000    # 1.0f
+
+    move v7, v6
+
+    const v8, 0x0
+
+    const v9, 0x0
+
+    invoke-direct/range {v4 .. v9}, Lcom/miui/home/recents/util/SpringAnimationUtils$ViewState;-><init>(FFFFF)V
+
+    invoke-virtual {p0, v0, v1, v2, v4}, Lcom/miui/home/recents/util/SpringAnimationUtils;->updateSpringAnimation(Lcom/miui/home/recents/util/SpringAnimationImpl;FFLcom/miui/home/recents/util/SpringAnimationUtils$ViewState;)V
 
     .line 322
     invoke-virtual {p1}, Lcom/miui/home/recents/views/TaskView;->getSpringAnimationImpl()Lcom/miui/home/recents/util/SpringAnimationImpl;
@@ -2497,7 +2591,19 @@
 .end method
 
 .method public startToRecentsAnim(Lcom/miui/home/recents/views/RecentsView;Ljava/lang/Runnable;)V
-    .locals 6
+    .locals 13
+
+    invoke-virtual {p1}, Lcom/miui/home/recents/views/RecentsView;->getTaskStackView()Lcom/miui/home/recents/views/TaskStackView;
+
+    move-result-object v12
+
+    invoke-virtual {v12}, Lcom/miui/home/recents/views/TaskStackView;->getTaskStackViewLayoutStyle()Lcom/miui/home/recents/TaskStackViewLayoutStyle;
+
+    move-result-object v10
+
+    invoke-virtual {v10}, Lcom/miui/home/recents/TaskStackViewLayoutStyle;->getTaskStackLayoutAlgorithm()Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;
+
+    move-result-object v10
 
     const/4 v0, 0x0
 
@@ -2511,7 +2617,7 @@
 
     move-result v1
 
-    if-ge v0, v1, :cond_2
+    if-ge v0, v1, :cond_3
 
     .line 383
     invoke-virtual {p1}, Lcom/miui/home/recents/views/RecentsView;->getTaskViews()Ljava/util/List;
@@ -2525,6 +2631,45 @@
     check-cast v1, Lcom/miui/home/recents/views/TaskView;
 
     .line 385
+    invoke-virtual {v12, v1}, Lcom/miui/home/recents/views/TaskStackView;->getTaskViewIndex(Lcom/miui/home/recents/views/TaskView;)I
+
+    move-result v8
+
+    if-eqz v10, :cond_0
+
+    new-instance v3, Lcom/miui/home/recents/views/TaskViewTransform;
+
+    invoke-direct {v3}, Lcom/miui/home/recents/views/TaskViewTransform;-><init>()V
+
+    invoke-virtual {v12}, Lcom/miui/home/recents/views/TaskStackView;->getCurrentScroll()F
+
+    move-result v2
+
+    invoke-virtual {v10, v8, v2, v3}, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->getTaskViewTransform(IFLcom/miui/home/recents/views/TaskViewTransform;)V
+
+    iget v2, v3, Lcom/miui/home/recents/views/TaskViewTransform;->scale:F
+
+    goto :goto_1
+
+    :cond_0
+    const v2, 0x3f800000    # 1.0f
+
+    :goto_1
+    new-instance v4, Lcom/miui/home/recents/util/SpringAnimationUtils$ViewState;
+
+    move v6, v2
+
+    const v5, 0x3f800000    # 1.0f
+
+    move v7, v6
+
+    const v8, 0x0
+
+    const v9, 0x0
+
+    invoke-direct/range {v4 .. v9}, Lcom/miui/home/recents/util/SpringAnimationUtils$ViewState;-><init>(FFFFF)V
+
+    move-object v11, v4
     invoke-virtual {v1}, Lcom/miui/home/recents/views/TaskView;->getSpringAnimationImpl()Lcom/miui/home/recents/util/SpringAnimationImpl;
 
     move-result-object v2
@@ -2540,7 +2685,7 @@
 
     move-result-object v2
 
-    if-eqz v2, :cond_0
+    if-eqz v2, :cond_1
 
     .line 389
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
@@ -2555,7 +2700,7 @@
 
     move-result v2
 
-    if-nez v2, :cond_0
+    if-nez v2, :cond_1
 
     .line 390
     invoke-virtual {p1}, Lcom/miui/home/recents/views/RecentsView;->getWidth()I
@@ -2579,10 +2724,10 @@
 
     move-result-object v2
 
-    goto :goto_1
+    goto :goto_2
 
     .line 393
-    :cond_0
+    :cond_1
     invoke-virtual {p1}, Lcom/miui/home/recents/views/RecentsView;->getHeight()I
 
     move-result v2
@@ -2606,7 +2751,7 @@
 
     move-result-object v2
 
-    :goto_1
+    :goto_2
     const/4 v3, 0x0
 
     .line 396
@@ -2623,24 +2768,24 @@
 
     iget-object v5, p0, Lcom/miui/home/recents/util/SpringAnimationUtils;->TASK_VIEW_NORMAL:Lcom/miui/home/recents/util/SpringAnimationUtils$ViewState;
 
-    invoke-virtual {p0, v1, v3, v4, v5}, Lcom/miui/home/recents/util/SpringAnimationUtils;->updateSpringAnimation(Lcom/miui/home/recents/util/SpringAnimationImpl;FFLcom/miui/home/recents/util/SpringAnimationUtils$ViewState;)V
+    invoke-virtual {p0, v1, v3, v4, v11}, Lcom/miui/home/recents/util/SpringAnimationUtils;->updateSpringAnimation(Lcom/miui/home/recents/util/SpringAnimationImpl;FFLcom/miui/home/recents/util/SpringAnimationUtils$ViewState;)V
 
     const v1, 0x459c4000    # 5000.0f
 
     .line 399
     invoke-virtual {v2, v1}, Landroidx/dynamicanimation/animation/SpringAnimation;->setStartVelocity(F)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_2
 
     .line 401
     invoke-virtual {p0, v2, p2}, Lcom/miui/home/recents/util/SpringAnimationUtils;->addEndListener(Landroidx/dynamicanimation/animation/SpringAnimation;Ljava/lang/Runnable;)V
 
-    :cond_1
+    :cond_2
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_0
+    goto/16 :goto_0
 
-    :cond_2
+    :cond_3
     return-void
 .end method
 
