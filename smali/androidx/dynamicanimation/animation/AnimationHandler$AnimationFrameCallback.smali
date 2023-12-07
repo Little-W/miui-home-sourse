@@ -1,6 +1,5 @@
 .class interface abstract Landroidx/dynamicanimation/animation/AnimationHandler$AnimationFrameCallback;
 .super Ljava/lang/Object;
-.source "AnimationHandler.java"
 
 
 # annotations

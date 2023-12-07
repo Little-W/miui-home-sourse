@@ -1,6 +1,5 @@
 .class public Lcom/android/systemui/shared/recents/touchableRegion/TouchableRegionCompat;
 .super Ljava/lang/Object;
-.source "TouchableRegionCompat.java"
 
 
 # static fields
@@ -17,7 +16,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -26,7 +24,6 @@
 .method public static addOnComputeInternalInsetsListener(Landroid/view/ViewTreeObserver;Lcom/android/systemui/shared/recents/touchableRegion/OnComputeInternalInsetsListenerCompat;)V
     .locals 0
 
-    .line 15
     invoke-virtual {p1}, Lcom/android/systemui/shared/recents/touchableRegion/OnComputeInternalInsetsListenerCompat;->getWrapper()Landroid/view/ViewTreeObserver$OnComputeInternalInsetsListener;
 
     move-result-object p1
@@ -39,7 +36,6 @@
 .method public static removeOnComputeInternalInsetsListener(Landroid/view/ViewTreeObserver;Lcom/android/systemui/shared/recents/touchableRegion/OnComputeInternalInsetsListenerCompat;)V
     .locals 0
 
-    .line 20
     invoke-virtual {p1}, Lcom/android/systemui/shared/recents/touchableRegion/OnComputeInternalInsetsListenerCompat;->getWrapper()Landroid/view/ViewTreeObserver$OnComputeInternalInsetsListener;
 
     move-result-object p1

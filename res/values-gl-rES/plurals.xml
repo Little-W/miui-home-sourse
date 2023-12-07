@@ -44,14 +44,6 @@
         <item quantity="other">%2$s non lidos de %1$s</item>
         <item quantity="one">%2$s non lido de %1$s</item>
     </plurals>
-    <plurals name="delete_wallpapers_message">
-        <item quantity="other">Eliminar %1$d fondos de pantalla?</item>
-        <item quantity="one">Eliminar %1$d fondo de pantalla?</item>
-    </plurals>
-    <plurals name="editing_mode_title">
-        <item quantity="other">Seleccionáronse %1$d elementos</item>
-        <item quantity="one">Seleccionouse %1$d elemento</item>
-    </plurals>
     <plurals name="half_hour_ago">
         <item quantity="other">Hai media hora</item>
         <item quantity="one">Hai media hora</item>
@@ -85,8 +77,8 @@
         <item quantity="one">Hai 1 minuto</item>
     </plurals>
     <plurals name="remove_dialog_title_multi_format">
-        <item quantity="other">Eliminar %1$d aplicacións da pantalla de Inicio?</item>
-        <item quantity="one">Eliminar %1$d aplicación da pantalla de Inicio?</item>
+        <item quantity="other">Eliminar %1$d elementos da Pantalla de inicio?</item>
+        <item quantity="one">Eliminar %1$d elemento da Pantalla de inicio?</item>
     </plurals>
     <plurals name="scroll_tip_format_when_announce_accessibility">
         <item quantity="other">Páxina %1$d, %2$d aplicacións.</item>

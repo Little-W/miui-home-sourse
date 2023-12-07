@@ -1,6 +1,5 @@
 .class Lcom/android/systemui/shared/recents/system/RemoteAnimationAdapterCompat$1$1;
 .super Ljava/lang/Object;
-.source "RemoteAnimationAdapterCompat.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -27,7 +26,6 @@
 .method constructor <init>(Lcom/android/systemui/shared/recents/system/RemoteAnimationAdapterCompat$1;Landroid/view/IRemoteAnimationFinishedCallback;)V
     .locals 0
 
-    .line 51
     iput-object p1, p0, Lcom/android/systemui/shared/recents/system/RemoteAnimationAdapterCompat$1$1;->this$0:Lcom/android/systemui/shared/recents/system/RemoteAnimationAdapterCompat$1;
 
     iput-object p2, p0, Lcom/android/systemui/shared/recents/system/RemoteAnimationAdapterCompat$1$1;->val$finishedCallback:Landroid/view/IRemoteAnimationFinishedCallback;
@@ -40,27 +38,25 @@
 
 # virtual methods
 .method public run()V
-    .locals 3
+    .locals 2
 
-    .line 55
     :try_start_0
-    iget-object v0, p0, Lcom/android/systemui/shared/recents/system/RemoteAnimationAdapterCompat$1$1;->val$finishedCallback:Landroid/view/IRemoteAnimationFinishedCallback;
+    iget-object p0, p0, Lcom/android/systemui/shared/recents/system/RemoteAnimationAdapterCompat$1$1;->val$finishedCallback:Landroid/view/IRemoteAnimationFinishedCallback;
 
-    invoke-interface {v0}, Landroid/view/IRemoteAnimationFinishedCallback;->onAnimationFinished()V
+    invoke-interface {p0}, Landroid/view/IRemoteAnimationFinishedCallback;->onAnimationFinished()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
     :catch_0
-    move-exception v0
+    move-exception p0
 
-    const-string v1, "ActivityOptionsCompat"
+    const-string v0, "ActivityOptionsCompat"
 
-    const-string v2, "Failed to call app controlled animation finished callback"
+    const-string v1, "Failed to call app controlled animation finished callback"
 
-    .line 57
-    invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
     return-void

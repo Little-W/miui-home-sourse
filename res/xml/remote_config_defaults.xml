@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultMap>
+    <entry>
+        <key>branch_open</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>branch_open_all</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>show_branch_search_guide</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>open_search_on_enter_drawer</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>show_new_feature</key>
+        <value>false</value>
+    </entry>
+</defaultMap>

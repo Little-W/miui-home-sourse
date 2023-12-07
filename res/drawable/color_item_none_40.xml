@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true">
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <size android:height="@dimen/color_filter_button_size" android:width="@dimen/color_filter_button_size" />
+                    <solid android:color="@color/alpha40white" />
+                    <corners android:radius="@dimen/color_filter_button_radius" />
+                </shape>
+            </item>
+            <item android:height="@dimen/color_filter_button_size" android:width="@dimen/color_filter_button_size" android:drawable="@drawable/color_filter_none" />
+        </layer-list>
+    </item>
+    <item>
+        <layer-list>
+            <item android:height="@dimen/color_filter_button_size" android:width="@dimen/color_filter_button_size" android:drawable="@drawable/color_filter_none" />
+        </layer-list>
+    </item>
+</selector>

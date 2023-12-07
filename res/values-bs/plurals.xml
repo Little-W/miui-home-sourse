@@ -55,16 +55,6 @@
         <item quantity="one">%2$s nepročitano od %1$s</item>
         <item quantity="few">%2$s nepročitana od %1$s</item>
     </plurals>
-    <plurals name="delete_wallpapers_message">
-        <item quantity="other">Izbrisati %1$d pozadina?</item>
-        <item quantity="one">Izbrisati %1$d pozadinu?</item>
-        <item quantity="few">Izbrisati %1$d pozadine?</item>
-    </plurals>
-    <plurals name="editing_mode_title">
-        <item quantity="other">Odabrano je %1$d stavki</item>
-        <item quantity="one">Odabrana je %1$d stavka</item>
-        <item quantity="few">Odabrane su %1$d stavke</item>
-    </plurals>
     <plurals name="half_hour_ago">
         <item quantity="other">Prije pola sata</item>
         <item quantity="one">Prije pola sata</item>
@@ -100,15 +90,20 @@
         <item quantity="one">%d stavka odabrana</item>
         <item quantity="few">%d stavke odabrane</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d novih obavještenja</item>
+        <item quantity="one">%d novo obavještenje</item>
+        <item quantity="few">%d nova obavještenja</item>
+    </plurals>
     <plurals name="num_minutes_ago">
         <item quantity="other">Prije %d minuta</item>
         <item quantity="one">Prije 1 minutu</item>
         <item quantity="few">Prije %d minutu</item>
     </plurals>
     <plurals name="remove_dialog_title_multi_format">
-        <item quantity="other">Ukloni %1$d aplikacija sa Početnog ekrana?</item>
-        <item quantity="one">Ukloni %1$d aplikaciju sa Početnog ekrana?</item>
-        <item quantity="few">Ukloni %1$d aplikacije sa Početnog ekrana?</item>
+        <item quantity="other">Ukloni %1$d stavki sa Početnog ekrana?</item>
+        <item quantity="one">Ukloni %1$d stavku sa Početnog ekrana?</item>
+        <item quantity="few">Ukloni %1$d stavke sa Početnog ekrana?</item>
     </plurals>
     <plurals name="scroll_tip_format_when_announce_accessibility">
         <item quantity="other">Stranica %1$d, %2$d aplikacija.</item>

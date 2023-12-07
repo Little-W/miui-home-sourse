@@ -1,6 +1,5 @@
 .class Lcom/market/sdk/MarketManager$6$1;
 .super Landroid/os/ResultReceiver;
-.source "MarketManager.java"
 
 
 # annotations
@@ -22,7 +21,6 @@
 .method constructor <init>(Lcom/market/sdk/MarketManager$6;Landroid/os/Handler;)V
     .locals 0
 
-    .line 490
     iput-object p1, p0, Lcom/market/sdk/MarketManager$6$1;->this$1:Lcom/market/sdk/MarketManager$6;
 
     invoke-direct {p0, p2}, Landroid/os/ResultReceiver;-><init>(Landroid/os/Handler;)V
@@ -33,34 +31,32 @@
 
 # virtual methods
 .method protected onReceiveResult(ILandroid/os/Bundle;)V
-    .locals 1
+    .locals 0
 
     if-eqz p2, :cond_0
 
-    .line 494
-    iget-object p1, p0, Lcom/market/sdk/MarketManager$6$1;->this$1:Lcom/market/sdk/MarketManager$6;
+    iget-object p0, p0, Lcom/market/sdk/MarketManager$6$1;->this$1:Lcom/market/sdk/MarketManager$6;
 
-    iget-object p1, p1, Lcom/market/sdk/MarketManager$6;->val$taskCompat:Lcom/market/sdk/compat/FutureTaskCompat;
+    iget-object p0, p0, Lcom/market/sdk/MarketManager$6;->val$taskCompat:Lcom/market/sdk/compat/FutureTaskCompat;
 
-    const-string v0, "categoryName"
+    const-string p1, "categoryName"
 
-    invoke-virtual {p2, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p2, p1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p2
+    move-result-object p1
 
-    invoke-virtual {p1, p2}, Lcom/market/sdk/compat/FutureTaskCompat;->set(Ljava/lang/Object;)V
+    invoke-virtual {p0, p1}, Lcom/market/sdk/compat/FutureTaskCompat;->set(Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 496
     :cond_0
-    iget-object p1, p0, Lcom/market/sdk/MarketManager$6$1;->this$1:Lcom/market/sdk/MarketManager$6;
+    iget-object p0, p0, Lcom/market/sdk/MarketManager$6$1;->this$1:Lcom/market/sdk/MarketManager$6;
 
-    iget-object p1, p1, Lcom/market/sdk/MarketManager$6;->val$taskCompat:Lcom/market/sdk/compat/FutureTaskCompat;
+    iget-object p0, p0, Lcom/market/sdk/MarketManager$6;->val$taskCompat:Lcom/market/sdk/compat/FutureTaskCompat;
 
-    const/4 p2, 0x0
+    const/4 p1, 0x0
 
-    invoke-virtual {p1, p2}, Lcom/market/sdk/compat/FutureTaskCompat;->set(Ljava/lang/Object;)V
+    invoke-virtual {p0, p1}, Lcom/market/sdk/compat/FutureTaskCompat;->set(Ljava/lang/Object;)V
 
     :goto_0
     return-void

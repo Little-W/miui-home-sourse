@@ -1,6 +1,5 @@
 .class Landroidx/arch/core/internal/SafeIterableMap$DescendingIterator;
 .super Landroidx/arch/core/internal/SafeIterableMap$ListIterator;
-.source "SafeIterableMap.java"
 
 
 # annotations
@@ -39,7 +38,6 @@
         }
     .end annotation
 
-    .line 300
     invoke-direct {p0, p1, p2}, Landroidx/arch/core/internal/SafeIterableMap$ListIterator;-><init>(Landroidx/arch/core/internal/SafeIterableMap$Entry;Landroidx/arch/core/internal/SafeIterableMap$Entry;)V
 
     return-void
@@ -59,10 +57,9 @@
         }
     .end annotation
 
-    .line 310
-    iget-object p1, p1, Landroidx/arch/core/internal/SafeIterableMap$Entry;->mNext:Landroidx/arch/core/internal/SafeIterableMap$Entry;
+    iget-object p0, p1, Landroidx/arch/core/internal/SafeIterableMap$Entry;->mNext:Landroidx/arch/core/internal/SafeIterableMap$Entry;
 
-    return-object p1
+    return-object p0
 .end method
 
 .method forward(Landroidx/arch/core/internal/SafeIterableMap$Entry;)Landroidx/arch/core/internal/SafeIterableMap$Entry;
@@ -77,8 +74,7 @@
         }
     .end annotation
 
-    .line 305
-    iget-object p1, p1, Landroidx/arch/core/internal/SafeIterableMap$Entry;->mPrevious:Landroidx/arch/core/internal/SafeIterableMap$Entry;
+    iget-object p0, p1, Landroidx/arch/core/internal/SafeIterableMap$Entry;->mPrevious:Landroidx/arch/core/internal/SafeIterableMap$Entry;
 
-    return-object p1
+    return-object p0
 .end method

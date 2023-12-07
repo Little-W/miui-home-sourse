@@ -1,6 +1,5 @@
 .class public interface abstract Landroid/app/IMiuiActivityObserver;
 .super Ljava/lang/Object;
-.source "IMiuiActivityObserver.java"
 
 # interfaces
 .implements Landroid/os/IInterface;

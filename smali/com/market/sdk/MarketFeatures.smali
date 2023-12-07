@@ -1,6 +1,5 @@
 .class public final enum Lcom/market/sdk/MarketFeatures;
 .super Ljava/lang/Enum;
-.source "MarketFeatures.java"
 
 
 # annotations
@@ -50,7 +49,6 @@
 .method static constructor <clinit>()V
     .locals 15
 
-    .line 16
     new-instance v7, Lcom/market/sdk/MarketFeatures;
 
     const-string v1, "INSTALL_LOCAL_APK"
@@ -71,7 +69,6 @@
 
     sput-object v7, Lcom/market/sdk/MarketFeatures;->INSTALL_LOCAL_APK:Lcom/market/sdk/MarketFeatures;
 
-    .line 17
     new-instance v0, Lcom/market/sdk/MarketFeatures;
 
     const-string v9, "DESK_RECOMMEND_V2"
@@ -92,7 +89,6 @@
 
     sput-object v0, Lcom/market/sdk/MarketFeatures;->DESK_RECOMMEND_V2:Lcom/market/sdk/MarketFeatures;
 
-    .line 18
     new-instance v0, Lcom/market/sdk/MarketFeatures;
 
     const-string v2, "DESK_RECOMMEND_V3"
@@ -111,7 +107,6 @@
 
     sput-object v0, Lcom/market/sdk/MarketFeatures;->DESK_RECOMMEND_V3:Lcom/market/sdk/MarketFeatures;
 
-    .line 19
     new-instance v0, Lcom/market/sdk/MarketFeatures;
 
     const-string v9, "DESK_FOLDER_CATEGORY_NAME"
@@ -132,7 +127,6 @@
 
     sput-object v0, Lcom/market/sdk/MarketFeatures;->DESK_FOLDER_CATEGORY_NAME:Lcom/market/sdk/MarketFeatures;
 
-    .line 20
     new-instance v0, Lcom/market/sdk/MarketFeatures;
 
     const-string v2, "DISCOVER_METERED_UPDATE_CONFIRM"
@@ -151,7 +145,6 @@
 
     sput-object v0, Lcom/market/sdk/MarketFeatures;->DISCOVER_METERED_UPDATE_CONFIRM:Lcom/market/sdk/MarketFeatures;
 
-    .line 21
     new-instance v0, Lcom/market/sdk/MarketFeatures;
 
     const-string v9, "FLOAT_CARD"
@@ -172,7 +165,6 @@
 
     const/4 v0, 0x6
 
-    .line 14
     new-array v0, v0, [Lcom/market/sdk/MarketFeatures;
 
     sget-object v1, Lcom/market/sdk/MarketFeatures;->INSTALL_LOCAL_APK:Lcom/market/sdk/MarketFeatures;
@@ -224,19 +216,14 @@
         }
     .end annotation
 
-    .line 34
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 35
     iput p3, p0, Lcom/market/sdk/MarketFeatures;->mMarketSupportVersion:I
 
-    .line 36
     iput p5, p0, Lcom/market/sdk/MarketFeatures;->mMipicksSupportVersion:I
 
-    .line 37
     iput p4, p0, Lcom/market/sdk/MarketFeatures;->mPadSupportVersion:I
 
-    .line 38
     iput p6, p0, Lcom/market/sdk/MarketFeatures;->mDiscoverSupportVersion:I
 
     return-void
@@ -245,7 +232,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/market/sdk/MarketFeatures;
     .locals 1
 
-    .line 14
     const-class v0, Lcom/market/sdk/MarketFeatures;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -260,7 +246,6 @@
 .method public static values()[Lcom/market/sdk/MarketFeatures;
     .locals 1
 
-    .line 14
     sget-object v0, Lcom/market/sdk/MarketFeatures;->$VALUES:[Lcom/market/sdk/MarketFeatures;
 
     invoke-virtual {v0}, [Lcom/market/sdk/MarketFeatures;->clone()Ljava/lang/Object;
@@ -277,13 +262,11 @@
 .method public isSupported()Z
     .locals 2
 
-    .line 43
     :try_start_0
-    sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
+    sget-boolean v0, Lmiuix/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     if-eqz v0, :cond_2
 
-    .line 44
     sget-object v0, Lcom/market/sdk/MarketType;->MIPICKS:Lcom/market/sdk/MarketType;
 
     invoke-virtual {p0, v0}, Lcom/market/sdk/MarketFeatures;->isSupportedBy(Lcom/market/sdk/MarketType;)Z
@@ -294,80 +277,73 @@
 
     sget-object v0, Lcom/market/sdk/MarketType;->DISCOVER:Lcom/market/sdk/MarketType;
 
-    .line 45
     invoke-virtual {p0, v0}, Lcom/market/sdk/MarketFeatures;->isSupportedBy(Lcom/market/sdk/MarketType;)Z
 
-    move-result v0
+    move-result p0
 
-    if-eqz v0, :cond_0
+    if-eqz p0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
     goto :goto_1
 
     :cond_1
     :goto_0
-    const/4 v0, 0x1
+    const/4 p0, 0x1
 
     :goto_1
-    return v0
+    return p0
 
-    .line 46
     :cond_2
     sget-boolean v0, Lmiui/os/Build;->IS_MIPAD:Z
 
     if-eqz v0, :cond_3
 
-    .line 47
     sget-object v0, Lcom/market/sdk/MarketType;->MARKET_PAD:Lcom/market/sdk/MarketType;
 
     invoke-virtual {p0, v0}, Lcom/market/sdk/MarketFeatures;->isSupportedBy(Lcom/market/sdk/MarketType;)Z
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 
-    .line 49
     :cond_3
     sget-object v0, Lcom/market/sdk/MarketType;->MARKET_PHONE:Lcom/market/sdk/MarketType;
 
     invoke-virtual {p0, v0}, Lcom/market/sdk/MarketFeatures;->isSupportedBy(Lcom/market/sdk/MarketType;)Z
 
-    move-result v0
+    move-result p0
     :try_end_0
-    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    return v0
+    return p0
 
-    :catch_0
+    :catchall_0
     move-exception v0
 
-    const-string v1, "MarketManager"
-
-    .line 52
     invoke-virtual {v0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v0
 
+    const-string v1, "MarketManager"
+
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 53
     sget-object v0, Lcom/market/sdk/MarketType;->MARKET_PHONE:Lcom/market/sdk/MarketType;
 
     invoke-virtual {p0, v0}, Lcom/market/sdk/MarketFeatures;->isSupportedBy(Lcom/market/sdk/MarketType;)Z
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method
 
 .method public isSupportedBy(Lcom/market/sdk/MarketType;)Z
-    .locals 3
+    .locals 4
 
-    .line 58
     invoke-virtual {p1}, Lcom/market/sdk/MarketType;->isEnabled()Z
 
     move-result v0
@@ -378,13 +354,11 @@
 
     return v1
 
-    .line 62
     :cond_0
     invoke-virtual {p1}, Lcom/market/sdk/MarketType;->getVersionCode()I
 
     move-result v0
 
-    .line 64
     sget-object v2, Lcom/market/sdk/MarketFeatures$1;->$SwitchMap$com$market$sdk$MarketType:[I
 
     invoke-virtual {p1}, Lcom/market/sdk/MarketType;->ordinal()I
@@ -393,56 +367,56 @@
 
     aget p1, v2, p1
 
-    packed-switch p1, :pswitch_data_0
+    const/4 v2, 0x1
 
-    return v1
+    if-eq p1, v2, :cond_4
 
-    .line 75
-    :pswitch_0
-    iget p1, p0, Lcom/market/sdk/MarketFeatures;->mDiscoverSupportVersion:I
+    const/4 v3, 0x2
 
-    goto :goto_0
+    if-eq p1, v3, :cond_3
 
-    .line 72
-    :pswitch_1
-    iget p1, p0, Lcom/market/sdk/MarketFeatures;->mMipicksSupportVersion:I
+    const/4 v3, 0x3
 
-    goto :goto_0
+    if-eq p1, v3, :cond_2
 
-    .line 69
-    :pswitch_2
-    iget p1, p0, Lcom/market/sdk/MarketFeatures;->mPadSupportVersion:I
+    const/4 v3, 0x4
 
-    goto :goto_0
-
-    .line 66
-    :pswitch_3
-    iget p1, p0, Lcom/market/sdk/MarketFeatures;->mMarketSupportVersion:I
-
-    :goto_0
-    const/4 v2, -0x1
-
-    if-ne p1, v2, :cond_1
+    if-eq p1, v3, :cond_1
 
     return v1
 
     :cond_1
-    if-lt v0, p1, :cond_2
+    iget p0, p0, Lcom/market/sdk/MarketFeatures;->mDiscoverSupportVersion:I
 
-    const/4 v1, 0x1
+    goto :goto_0
 
     :cond_2
+    iget p0, p0, Lcom/market/sdk/MarketFeatures;->mMipicksSupportVersion:I
+
+    goto :goto_0
+
+    :cond_3
+    iget p0, p0, Lcom/market/sdk/MarketFeatures;->mPadSupportVersion:I
+
+    goto :goto_0
+
+    :cond_4
+    iget p0, p0, Lcom/market/sdk/MarketFeatures;->mMarketSupportVersion:I
+
+    :goto_0
+    const/4 p1, -0x1
+
+    if-ne p0, p1, :cond_5
+
     return v1
 
-    nop
+    :cond_5
+    if-lt v0, p0, :cond_6
 
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    move v1, v2
+
+    :cond_6
+    return v1
 .end method
 
 .method public throwExceptionIfNotSupported()V
@@ -453,7 +427,6 @@
         }
     .end annotation
 
-    .line 88
     invoke-virtual {p0}, Lcom/market/sdk/MarketFeatures;->isSupported()Z
 
     move-result v0
@@ -462,7 +435,6 @@
 
     return-void
 
-    .line 89
     :cond_0
     new-instance v0, Lcom/market/sdk/MarketFeatures$FeatureNotSupportedException;
 

@@ -1,6 +1,5 @@
 .class Landroidx/appcompat/app/AlertController$AlertParams$3;
 .super Ljava/lang/Object;
-.source "AlertController.java"
 
 # interfaces
 .implements Landroid/widget/AdapterView$OnItemClickListener;
@@ -27,7 +26,6 @@
 .method constructor <init>(Landroidx/appcompat/app/AlertController$AlertParams;Landroidx/appcompat/app/AlertController;)V
     .locals 0
 
-    .line 1065
     iput-object p1, p0, Landroidx/appcompat/app/AlertController$AlertParams$3;->this$0:Landroidx/appcompat/app/AlertController$AlertParams;
 
     iput-object p2, p0, Landroidx/appcompat/app/AlertController$AlertParams$3;->val$dialog:Landroidx/appcompat/app/AlertController;
@@ -51,7 +49,6 @@
         }
     .end annotation
 
-    .line 1068
     iget-object p1, p0, Landroidx/appcompat/app/AlertController$AlertParams$3;->this$0:Landroidx/appcompat/app/AlertController$AlertParams;
 
     iget-object p1, p1, Landroidx/appcompat/app/AlertController$AlertParams;->mOnClickListener:Landroid/content/DialogInterface$OnClickListener;
@@ -62,19 +59,17 @@
 
     invoke-interface {p1, p2, p3}, Landroid/content/DialogInterface$OnClickListener;->onClick(Landroid/content/DialogInterface;I)V
 
-    .line 1069
     iget-object p1, p0, Landroidx/appcompat/app/AlertController$AlertParams$3;->this$0:Landroidx/appcompat/app/AlertController$AlertParams;
 
     iget-boolean p1, p1, Landroidx/appcompat/app/AlertController$AlertParams;->mIsSingleChoice:Z
 
     if-nez p1, :cond_0
 
-    .line 1070
-    iget-object p1, p0, Landroidx/appcompat/app/AlertController$AlertParams$3;->val$dialog:Landroidx/appcompat/app/AlertController;
+    iget-object p0, p0, Landroidx/appcompat/app/AlertController$AlertParams$3;->val$dialog:Landroidx/appcompat/app/AlertController;
 
-    iget-object p1, p1, Landroidx/appcompat/app/AlertController;->mDialog:Landroidx/appcompat/app/AppCompatDialog;
+    iget-object p0, p0, Landroidx/appcompat/app/AlertController;->mDialog:Landroidx/appcompat/app/AppCompatDialog;
 
-    invoke-virtual {p1}, Landroidx/appcompat/app/AppCompatDialog;->dismiss()V
+    invoke-virtual {p0}, Landroidx/appcompat/app/AppCompatDialog;->dismiss()V
 
     :cond_0
     return-void

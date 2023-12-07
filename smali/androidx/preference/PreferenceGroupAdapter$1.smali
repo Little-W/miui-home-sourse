@@ -1,6 +1,5 @@
 .class Landroidx/preference/PreferenceGroupAdapter$1;
 .super Ljava/lang/Object;
-.source "PreferenceGroupAdapter.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -25,7 +24,6 @@
 .method constructor <init>(Landroidx/preference/PreferenceGroupAdapter;)V
     .locals 0
 
-    .line 81
     iput-object p1, p0, Landroidx/preference/PreferenceGroupAdapter$1;->this$0:Landroidx/preference/PreferenceGroupAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,12 +34,11 @@
 
 # virtual methods
 .method public run()V
-    .locals 1
+    .locals 0
 
-    .line 84
-    iget-object v0, p0, Landroidx/preference/PreferenceGroupAdapter$1;->this$0:Landroidx/preference/PreferenceGroupAdapter;
+    iget-object p0, p0, Landroidx/preference/PreferenceGroupAdapter$1;->this$0:Landroidx/preference/PreferenceGroupAdapter;
 
-    invoke-virtual {v0}, Landroidx/preference/PreferenceGroupAdapter;->updatePreferences()V
+    invoke-virtual {p0}, Landroidx/preference/PreferenceGroupAdapter;->updatePreferences()V
 
     return-void
 .end method

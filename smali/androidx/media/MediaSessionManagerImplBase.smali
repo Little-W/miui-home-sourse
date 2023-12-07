@@ -1,6 +1,5 @@
 .class Landroidx/media/MediaSessionManagerImplBase;
 .super Ljava/lang/Object;
-.source "MediaSessionManagerImplBase.java"
 
 
 # annotations
@@ -19,7 +18,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 34
     sget-boolean v0, Landroidx/media/MediaSessionManager;->DEBUG:Z
 
     sput-boolean v0, Landroidx/media/MediaSessionManagerImplBase;->DEBUG:Z

@@ -1,6 +1,5 @@
 .class Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$6$1;
 .super Ljava/lang/Object;
-.source "ActivityManagerWrapper.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -27,7 +26,6 @@
 .method constructor <init>(Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$6;Z)V
     .locals 0
 
-    .line 537
     iput-object p1, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$6$1;->this$1:Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$6;
 
     iput-boolean p2, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$6$1;->val$result:Z
@@ -40,20 +38,19 @@
 
 # virtual methods
 .method public run()V
-    .locals 2
+    .locals 1
 
-    .line 540
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$6$1;->this$1:Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$6;
 
     iget-object v0, v0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$6;->val$resultCallback:Ljava/util/function/Consumer;
 
-    iget-boolean v1, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$6$1;->val$result:Z
+    iget-boolean p0, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$6$1;->val$result:Z
 
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-interface {v0, v1}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
+    invoke-interface {v0, p0}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
 
     return-void
 .end method

@@ -1,6 +1,5 @@
 .class Landroidx/fragment/app/FragmentManager$FragmentIntentSenderContract;
 .super Landroidx/activity/result/contract/ActivityResultContract;
-.source "FragmentManager.java"
 
 
 # annotations
@@ -27,7 +26,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 3634
     invoke-direct {p0}, Landroidx/activity/result/contract/ActivityResultContract;-><init>()V
 
     return-void
@@ -36,155 +34,135 @@
 
 # virtual methods
 .method public createIntent(Landroid/content/Context;Landroidx/activity/result/IntentSenderRequest;)Landroid/content/Intent;
-    .locals 3
+    .locals 2
 
-    .line 3640
-    new-instance p1, Landroid/content/Intent;
+    new-instance p0, Landroid/content/Intent;
 
-    const-string v0, "androidx.activity.result.contract.action.INTENT_SENDER_REQUEST"
+    const-string p1, "androidx.activity.result.contract.action.INTENT_SENDER_REQUEST"
 
-    invoke-direct {p1, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 3641
     invoke-virtual {p2}, Landroidx/activity/result/IntentSenderRequest;->getFillInIntent()Landroid/content/Intent;
 
-    move-result-object v0
+    move-result-object p1
 
-    if-eqz v0, :cond_0
+    if-eqz p1, :cond_0
 
-    const-string v1, "androidx.activity.result.contract.extra.ACTIVITY_OPTIONS_BUNDLE"
+    const-string v0, "androidx.activity.result.contract.extra.ACTIVITY_OPTIONS_BUNDLE"
 
-    .line 3643
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->getBundleExtra(Ljava/lang/String;)Landroid/os/Bundle;
+    invoke-virtual {p1, v0}, Landroid/content/Intent;->getBundleExtra(Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    const-string v2, "androidx.activity.result.contract.extra.ACTIVITY_OPTIONS_BUNDLE"
+    invoke-virtual {p0, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 3645
-    invoke-virtual {p1, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
+    invoke-virtual {p1, v0}, Landroid/content/Intent;->removeExtra(Ljava/lang/String;)V
 
-    const-string v1, "androidx.activity.result.contract.extra.ACTIVITY_OPTIONS_BUNDLE"
-
-    .line 3646
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->removeExtra(Ljava/lang/String;)V
+    const/4 v0, 0x0
 
     const-string v1, "androidx.fragment.extra.ACTIVITY_OPTIONS_BUNDLE"
 
-    const/4 v2, 0x0
+    invoke-virtual {p1, v1, v0}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
-    .line 3647
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+    move-result p1
 
-    move-result v0
+    if-eqz p1, :cond_0
 
-    if-eqz v0, :cond_0
-
-    .line 3648
-    new-instance v0, Landroidx/activity/result/IntentSenderRequest$Builder;
+    new-instance p1, Landroidx/activity/result/IntentSenderRequest$Builder;
 
     invoke-virtual {p2}, Landroidx/activity/result/IntentSenderRequest;->getIntentSender()Landroid/content/IntentSender;
 
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Landroidx/activity/result/IntentSenderRequest$Builder;-><init>(Landroid/content/IntentSender;)V
-
-    const/4 v1, 0x0
-
-    .line 3649
-    invoke-virtual {v0, v1}, Landroidx/activity/result/IntentSenderRequest$Builder;->setFillInIntent(Landroid/content/Intent;)Landroidx/activity/result/IntentSenderRequest$Builder;
-
     move-result-object v0
 
-    .line 3650
+    invoke-direct {p1, v0}, Landroidx/activity/result/IntentSenderRequest$Builder;-><init>(Landroid/content/IntentSender;)V
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Landroidx/activity/result/IntentSenderRequest$Builder;->setFillInIntent(Landroid/content/Intent;)Landroidx/activity/result/IntentSenderRequest$Builder;
+
+    move-result-object p1
+
     invoke-virtual {p2}, Landroidx/activity/result/IntentSenderRequest;->getFlagsValues()I
 
-    move-result v1
+    move-result v0
 
     invoke-virtual {p2}, Landroidx/activity/result/IntentSenderRequest;->getFlagsMask()I
 
     move-result p2
 
-    invoke-virtual {v0, v1, p2}, Landroidx/activity/result/IntentSenderRequest$Builder;->setFlags(II)Landroidx/activity/result/IntentSenderRequest$Builder;
+    invoke-virtual {p1, v0, p2}, Landroidx/activity/result/IntentSenderRequest$Builder;->setFlags(II)Landroidx/activity/result/IntentSenderRequest$Builder;
 
-    move-result-object p2
+    move-result-object p1
 
-    .line 3651
-    invoke-virtual {p2}, Landroidx/activity/result/IntentSenderRequest$Builder;->build()Landroidx/activity/result/IntentSenderRequest;
+    invoke-virtual {p1}, Landroidx/activity/result/IntentSenderRequest$Builder;->build()Landroidx/activity/result/IntentSenderRequest;
 
     move-result-object p2
 
     :cond_0
-    const-string v0, "androidx.activity.result.contract.extra.INTENT_SENDER_REQUEST"
+    const-string p1, "androidx.activity.result.contract.extra.INTENT_SENDER_REQUEST"
 
-    .line 3655
-    invoke-virtual {p1, v0, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+    invoke-virtual {p0, p1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    const/4 p2, 0x2
+    const/4 p1, 0x2
 
-    .line 3656
-    invoke-static {p2}, Landroidx/fragment/app/FragmentManager;->isLoggingEnabled(I)Z
+    invoke-static {p1}, Landroidx/fragment/app/FragmentManager;->isLoggingEnabled(I)Z
 
-    move-result p2
+    move-result p1
 
-    if-eqz p2, :cond_1
+    if-eqz p1, :cond_1
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p2, "CreateIntent created the following intent: "
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
 
     const-string p2, "FragmentManager"
 
-    .line 3657
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "CreateIntent created the following intent: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {p2, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p2, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
-    return-object p1
+    return-object p0
 .end method
 
 .method public bridge synthetic createIntent(Landroid/content/Context;Ljava/lang/Object;)Landroid/content/Intent;
     .locals 0
 
-    .line 3634
     check-cast p2, Landroidx/activity/result/IntentSenderRequest;
 
     invoke-virtual {p0, p1, p2}, Landroidx/fragment/app/FragmentManager$FragmentIntentSenderContract;->createIntent(Landroid/content/Context;Landroidx/activity/result/IntentSenderRequest;)Landroid/content/Intent;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public parseResult(ILandroid/content/Intent;)Landroidx/activity/result/ActivityResult;
-    .locals 1
+    .locals 0
 
-    .line 3665
-    new-instance v0, Landroidx/activity/result/ActivityResult;
+    new-instance p0, Landroidx/activity/result/ActivityResult;
 
-    invoke-direct {v0, p1, p2}, Landroidx/activity/result/ActivityResult;-><init>(ILandroid/content/Intent;)V
+    invoke-direct {p0, p1, p2}, Landroidx/activity/result/ActivityResult;-><init>(ILandroid/content/Intent;)V
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public bridge synthetic parseResult(ILandroid/content/Intent;)Ljava/lang/Object;
     .locals 0
 
-    .line 3634
     invoke-virtual {p0, p1, p2}, Landroidx/fragment/app/FragmentManager$FragmentIntentSenderContract;->parseResult(ILandroid/content/Intent;)Landroidx/activity/result/ActivityResult;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

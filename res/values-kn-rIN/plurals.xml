@@ -44,14 +44,6 @@
         <item quantity="other">%1$s ನಲ್ಲಿ ಓದದಿರುವ %2$s</item>
         <item quantity="one">%1$s ನಲ್ಲಿ ಓದದಿರುವ %2$s</item>
     </plurals>
-    <plurals name="delete_wallpapers_message">
-        <item quantity="other">%1$d ವಾಲ್‌ಪೇಪರ್‌ಗಳನ್ನು ಅಳಿಸುವುದೇ?</item>
-        <item quantity="one">%1$d ವಾಲ್‌ಪೇಪರ್‌ ಅಳಿಸುವುದೇ?</item>
-    </plurals>
-    <plurals name="editing_mode_title">
-        <item quantity="other">%1$d ಐಟಂಗಳು ಆಯ್ಕೆ ಆಗಿವೆ</item>
-        <item quantity="one">%1$d ಐಟಂ ಆಯ್ಕೆ ಆಗಿದೆ</item>
-    </plurals>
     <plurals name="half_hour_ago">
         <item quantity="other">ಅರ್ಧಗಂಟೆ ಹಿಂದೆ</item>
         <item quantity="one">ಅರ್ಧಗಂಟೆ ಹಿಂದೆ</item>
@@ -85,8 +77,8 @@
         <item quantity="one">1 ನಿಮಿಷ ಹಿಂದೆ</item>
     </plurals>
     <plurals name="remove_dialog_title_multi_format">
-        <item quantity="other">ಹೋಮ್‌ ಸ್ಕ್ರೀನ್‌ನಿಂದ %1$d ಆ್ಯಪ್‌ಗಳನ್ನು ತೆಗೆದುಹಾಕಬೇಕೇ?</item>
-        <item quantity="one">ಹೋಮ್‌ ಸ್ಕ್ರೀನ್‌ನಿಂದ %1$d ಆ್ಯಪ್‌ ಅನ್ನು ತೆಗೆದುಹಾಕಬೇಕೇ?</item>
+        <item quantity="other">ಹೋಮ್‌ ಸ್ಕ್ರೀನ್‌ನಿಂದ %1$d ಐಟಂಗಳನ್ನು ತೆಗೆದುಹಾಕಬೇಕೇ?</item>
+        <item quantity="one">ಹೋಮ್‌ ಸ್ಕ್ರೀನ್‌ನಿಂದ %1$d ಐಟಂ ತೆಗೆದುಹಾಕಬೇಕೇ?</item>
     </plurals>
     <plurals name="scroll_tip_format_when_announce_accessibility">
         <item quantity="other">%1$d ಪುಟ, %2$d ಆ್ಯಪ್‌ಗಳು.</item>

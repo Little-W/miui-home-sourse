@@ -1,6 +1,5 @@
 .class public final Lcom/android/systemui/shared/R$anim;
 .super Ljava/lang/Object;
-.source "R.java"
 
 
 # annotations
@@ -79,26 +78,25 @@
 
 .field public static final decelerate_sextic:I = 0x7f010027
 
-.field public static final dialog_enter:I = 0x7f010028
+.field public static final dialog_enter:I = 0x7f01002c
 
-.field public static final dialog_exit:I = 0x7f010029
+.field public static final dialog_exit:I = 0x7f01002d
 
-.field public static final drop_down_popup_enter:I = 0x7f01002a
+.field public static final drop_down_popup_enter:I = 0x7f01002f
 
-.field public static final drop_down_popup_exit:I = 0x7f01002b
+.field public static final drop_down_popup_exit:I = 0x7f010030
 
-.field public static final fragment_fast_out_extra_slow_in:I = 0x7f010032
+.field public static final fragment_fast_out_extra_slow_in:I = 0x7f010038
 
-.field public static final immersion_menu_enter:I = 0x7f010036
+.field public static final immersion_menu_enter:I = 0x7f01003d
 
-.field public static final immersion_menu_exit:I = 0x7f010037
+.field public static final immersion_menu_exit:I = 0x7f01003e
 
 
 # direct methods
 .method private constructor <init>()V
     .locals 0
 
-    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

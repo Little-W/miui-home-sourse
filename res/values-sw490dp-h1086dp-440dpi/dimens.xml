@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="desktop_mode_padding_right">0.0dip</dimen>
+    <dimen name="edit_mode_workspace_indicator_diff_height">30.0dip</dimen>
+    <dimen name="hotseats_height">96.0dip</dimen>
+    <dimen name="hotseats_margin_top">45.0dip</dimen>
+    <dimen name="hotseats_margin_top_search_bar">37.0dip</dimen>
+    <item type="dimen" name="normal_edit_mode_screen_scale_ratio">0.92</item>
+    <dimen name="search_bar_margin_bottom">43.0dip</dimen>
+    <dimen name="search_bar_margin_top">13.0dip</dimen>
+    <dimen name="slide_bar_margin_top">22.0dip</dimen>
+    <dimen name="workspace_cell_padding_top">35.0dip</dimen>
+</resources>

@@ -33,12 +33,6 @@
     <plurals name="announce_for_unread">
         <item quantity="other">%1$s의 %2$s 읽지 않음</item>
     </plurals>
-    <plurals name="delete_wallpapers_message">
-        <item quantity="other">%1$d개 배경화면을 삭제하시겠습니까?</item>
-    </plurals>
-    <plurals name="editing_mode_title">
-        <item quantity="other">%1$d개 항목 선택됨</item>
-    </plurals>
     <plurals name="half_hour_ago">
         <item quantity="other">30분 전</item>
     </plurals>
@@ -60,11 +54,15 @@
     <plurals name="miuix_appcompat_items_selected">
         <item quantity="other">%d개 항목 선택됨</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">새 알림 %d개</item>
+        <item quantity="one">새 알림 %d개</item>
+    </plurals>
     <plurals name="num_minutes_ago">
         <item quantity="other">%d분 전</item>
     </plurals>
     <plurals name="remove_dialog_title_multi_format">
-        <item quantity="other">%1$d개 앱을 홈 화면에서 제거하시겠습니까?</item>
+        <item quantity="other">%1$d개 항목을 홈 화면에서 제거하시겠습니까?</item>
     </plurals>
     <plurals name="scroll_tip_format_when_announce_accessibility">
         <item quantity="other">%1$d개 페이지, %2$d개 앱.</item>

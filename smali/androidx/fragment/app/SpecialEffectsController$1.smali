@@ -1,6 +1,5 @@
 .class Landroidx/fragment/app/SpecialEffectsController$1;
 .super Ljava/lang/Object;
-.source "SpecialEffectsController.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -27,7 +26,6 @@
 .method constructor <init>(Landroidx/fragment/app/SpecialEffectsController;Landroidx/fragment/app/SpecialEffectsController$FragmentStateManagerOperation;)V
     .locals 0
 
-    .line 204
     iput-object p1, p0, Landroidx/fragment/app/SpecialEffectsController$1;->this$0:Landroidx/fragment/app/SpecialEffectsController;
 
     iput-object p2, p0, Landroidx/fragment/app/SpecialEffectsController$1;->val$operation:Landroidx/fragment/app/SpecialEffectsController$FragmentStateManagerOperation;
@@ -42,7 +40,6 @@
 .method public run()V
     .locals 2
 
-    .line 207
     iget-object v0, p0, Landroidx/fragment/app/SpecialEffectsController$1;->this$0:Landroidx/fragment/app/SpecialEffectsController;
 
     iget-object v0, v0, Landroidx/fragment/app/SpecialEffectsController;->mPendingOperations:Ljava/util/ArrayList;
@@ -55,22 +52,21 @@
 
     if-eqz v0, :cond_0
 
-    .line 208
     iget-object v0, p0, Landroidx/fragment/app/SpecialEffectsController$1;->val$operation:Landroidx/fragment/app/SpecialEffectsController$FragmentStateManagerOperation;
 
     invoke-virtual {v0}, Landroidx/fragment/app/SpecialEffectsController$FragmentStateManagerOperation;->getFinalState()Landroidx/fragment/app/SpecialEffectsController$Operation$State;
 
     move-result-object v0
 
-    iget-object v1, p0, Landroidx/fragment/app/SpecialEffectsController$1;->val$operation:Landroidx/fragment/app/SpecialEffectsController$FragmentStateManagerOperation;
+    iget-object p0, p0, Landroidx/fragment/app/SpecialEffectsController$1;->val$operation:Landroidx/fragment/app/SpecialEffectsController$FragmentStateManagerOperation;
 
-    invoke-virtual {v1}, Landroidx/fragment/app/SpecialEffectsController$FragmentStateManagerOperation;->getFragment()Landroidx/fragment/app/Fragment;
+    invoke-virtual {p0}, Landroidx/fragment/app/SpecialEffectsController$FragmentStateManagerOperation;->getFragment()Landroidx/fragment/app/Fragment;
 
-    move-result-object v1
+    move-result-object p0
 
-    iget-object v1, v1, Landroidx/fragment/app/Fragment;->mView:Landroid/view/View;
+    iget-object p0, p0, Landroidx/fragment/app/Fragment;->mView:Landroid/view/View;
 
-    invoke-virtual {v0, v1}, Landroidx/fragment/app/SpecialEffectsController$Operation$State;->applyState(Landroid/view/View;)V
+    invoke-virtual {v0, p0}, Landroidx/fragment/app/SpecialEffectsController$Operation$State;->applyState(Landroid/view/View;)V
 
     :cond_0
     return-void

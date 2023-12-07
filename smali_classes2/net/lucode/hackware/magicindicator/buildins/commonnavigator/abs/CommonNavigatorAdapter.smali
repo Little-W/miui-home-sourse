@@ -1,6 +1,5 @@
 .class public abstract Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/abs/CommonNavigatorAdapter;
 .super Ljava/lang/Object;
-.source "CommonNavigatorAdapter.java"
 
 
 # instance fields
@@ -11,10 +10,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 14
     new-instance v0, Landroid/database/DataSetObservable;
 
     invoke-direct {v0}, Landroid/database/DataSetObservable;-><init>()V
@@ -38,40 +35,37 @@
 .method public getTitleWeight(Landroid/content/Context;I)F
     .locals 0
 
-    const/high16 p1, 0x3f800000    # 1.0f
+    const/high16 p0, 0x3f800000    # 1.0f
 
-    return p1
+    return p0
 .end method
 
 .method public final notifyDataSetChanged()V
-    .locals 1
+    .locals 0
 
-    .line 35
-    iget-object v0, p0, Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/abs/CommonNavigatorAdapter;->mDataSetObservable:Landroid/database/DataSetObservable;
+    iget-object p0, p0, Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/abs/CommonNavigatorAdapter;->mDataSetObservable:Landroid/database/DataSetObservable;
 
-    invoke-virtual {v0}, Landroid/database/DataSetObservable;->notifyChanged()V
+    invoke-virtual {p0}, Landroid/database/DataSetObservable;->notifyChanged()V
 
     return-void
 .end method
 
 .method public final registerDataSetObserver(Landroid/database/DataSetObserver;)V
-    .locals 1
+    .locals 0
 
-    .line 27
-    iget-object v0, p0, Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/abs/CommonNavigatorAdapter;->mDataSetObservable:Landroid/database/DataSetObservable;
+    iget-object p0, p0, Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/abs/CommonNavigatorAdapter;->mDataSetObservable:Landroid/database/DataSetObservable;
 
-    invoke-virtual {v0, p1}, Landroid/database/DataSetObservable;->registerObserver(Ljava/lang/Object;)V
+    invoke-virtual {p0, p1}, Landroid/database/DataSetObservable;->registerObserver(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 .method public final unregisterDataSetObserver(Landroid/database/DataSetObserver;)V
-    .locals 1
+    .locals 0
 
-    .line 31
-    iget-object v0, p0, Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/abs/CommonNavigatorAdapter;->mDataSetObservable:Landroid/database/DataSetObservable;
+    iget-object p0, p0, Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/abs/CommonNavigatorAdapter;->mDataSetObservable:Landroid/database/DataSetObservable;
 
-    invoke-virtual {v0, p1}, Landroid/database/DataSetObservable;->unregisterObserver(Ljava/lang/Object;)V
+    invoke-virtual {p0, p1}, Landroid/database/DataSetObservable;->unregisterObserver(Ljava/lang/Object;)V
 
     return-void
 .end method

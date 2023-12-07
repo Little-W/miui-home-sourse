@@ -1,6 +1,5 @@
 .class public interface abstract Landroidx/core/widget/AutoSizeableTextView;
 .super Ljava/lang/Object;
-.source "AutoSizeableTextView.java"
 
 
 # static fields
@@ -11,7 +10,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .line 39
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1b

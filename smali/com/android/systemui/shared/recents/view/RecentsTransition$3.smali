@@ -1,6 +1,5 @@
 .class Lcom/android/systemui/shared/recents/view/RecentsTransition$3;
 .super Ljava/lang/Object;
-.source "RecentsTransition.java"
 
 # interfaces
 .implements Ljava/util/function/Consumer;
@@ -38,7 +37,6 @@
 .method constructor <init>(FILandroid/view/View;)V
     .locals 0
 
-    .line 90
     iput p1, p0, Lcom/android/systemui/shared/recents/view/RecentsTransition$3;->val$scale:F
 
     iput p2, p0, Lcom/android/systemui/shared/recents/view/RecentsTransition$3;->val$eraseColor:I
@@ -55,27 +53,22 @@
 .method public accept(Landroid/graphics/Canvas;)V
     .locals 1
 
-    .line 93
     iget v0, p0, Lcom/android/systemui/shared/recents/view/RecentsTransition$3;->val$scale:F
 
     invoke-virtual {p1, v0, v0}, Landroid/graphics/Canvas;->scale(FF)V
 
-    .line 94
     iget v0, p0, Lcom/android/systemui/shared/recents/view/RecentsTransition$3;->val$eraseColor:I
 
     if-eqz v0, :cond_0
 
-    .line 95
     invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->drawColor(I)V
 
-    .line 97
     :cond_0
-    iget-object v0, p0, Lcom/android/systemui/shared/recents/view/RecentsTransition$3;->val$view:Landroid/view/View;
+    iget-object p0, p0, Lcom/android/systemui/shared/recents/view/RecentsTransition$3;->val$view:Landroid/view/View;
 
-    if-eqz v0, :cond_1
+    if-eqz p0, :cond_1
 
-    .line 98
-    invoke-virtual {v0, p1}, Landroid/view/View;->draw(Landroid/graphics/Canvas;)V
+    invoke-virtual {p0, p1}, Landroid/view/View;->draw(Landroid/graphics/Canvas;)V
 
     :cond_1
     return-void
@@ -84,7 +77,6 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 90
     check-cast p1, Landroid/graphics/Canvas;
 
     invoke-virtual {p0, p1}, Lcom/android/systemui/shared/recents/view/RecentsTransition$3;->accept(Landroid/graphics/Canvas;)V

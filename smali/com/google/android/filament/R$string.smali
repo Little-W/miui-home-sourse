@@ -1,6 +1,5 @@
 .class public final Lcom/google/android/filament/R$string;
 .super Ljava/lang/Object;
-.source "R.java"
 
 
 # annotations
@@ -15,14 +14,13 @@
 
 
 # static fields
-.field public static final lib_name:I = 0x7f100213
+.field public static final lib_name:I = 0x7f110277
 
 
 # direct methods
 .method private constructor <init>()V
     .locals 0
 
-    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

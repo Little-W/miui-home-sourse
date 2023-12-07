@@ -1,6 +1,5 @@
 .class public interface abstract Lcom/market/sdk/utils/Constants$BaseColumns;
 .super Ljava/lang/Object;
-.source "Constants.java"
 
 
 # annotations

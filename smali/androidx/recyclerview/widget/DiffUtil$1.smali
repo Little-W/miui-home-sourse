@@ -1,6 +1,5 @@
 .class final Landroidx/recyclerview/widget/DiffUtil$1;
 .super Ljava/lang/Object;
-.source "DiffUtil.java"
 
 # interfaces
 .implements Ljava/util/Comparator;
@@ -30,7 +29,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 84
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,39 +37,36 @@
 
 # virtual methods
 .method public compare(Landroidx/recyclerview/widget/DiffUtil$Snake;Landroidx/recyclerview/widget/DiffUtil$Snake;)I
-    .locals 2
+    .locals 1
 
-    .line 87
-    iget v0, p1, Landroidx/recyclerview/widget/DiffUtil$Snake;->x:I
+    iget p0, p1, Landroidx/recyclerview/widget/DiffUtil$Snake;->x:I
 
-    iget v1, p2, Landroidx/recyclerview/widget/DiffUtil$Snake;->x:I
+    iget v0, p2, Landroidx/recyclerview/widget/DiffUtil$Snake;->x:I
 
-    sub-int/2addr v0, v1
+    sub-int/2addr p0, v0
 
-    if-nez v0, :cond_0
+    if-nez p0, :cond_0
 
-    .line 88
-    iget p1, p1, Landroidx/recyclerview/widget/DiffUtil$Snake;->y:I
+    iget p0, p1, Landroidx/recyclerview/widget/DiffUtil$Snake;->y:I
 
-    iget p2, p2, Landroidx/recyclerview/widget/DiffUtil$Snake;->y:I
+    iget p1, p2, Landroidx/recyclerview/widget/DiffUtil$Snake;->y:I
 
-    sub-int v0, p1, p2
+    sub-int/2addr p0, p1
 
     :cond_0
-    return v0
+    return p0
 .end method
 
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    .line 84
     check-cast p1, Landroidx/recyclerview/widget/DiffUtil$Snake;
 
     check-cast p2, Landroidx/recyclerview/widget/DiffUtil$Snake;
 
     invoke-virtual {p0, p1, p2}, Landroidx/recyclerview/widget/DiffUtil$1;->compare(Landroidx/recyclerview/widget/DiffUtil$Snake;Landroidx/recyclerview/widget/DiffUtil$Snake;)I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method

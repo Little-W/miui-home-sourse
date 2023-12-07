@@ -1,6 +1,5 @@
 .class public final Landroidx/core/graphics/ColorUtils;
 .super Ljava/lang/Object;
-.source "ColorUtils.java"
 
 
 # static fields
@@ -18,7 +17,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 45
     new-instance v0, Ljava/lang/ThreadLocal;
 
     invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
@@ -45,7 +43,6 @@
 
     div-float/2addr p2, v0
 
-    .line 245
     invoke-static {p1, p2}, Ljava/lang/Math;->max(FF)F
 
     move-result v0
@@ -54,7 +51,6 @@
 
     move-result v0
 
-    .line 246
     invoke-static {p1, p2}, Ljava/lang/Math;->min(FF)F
 
     move-result v1
@@ -131,7 +127,6 @@
 
     sub-float/2addr v4, v5
 
-    .line 264
     invoke-static {v4}, Ljava/lang/Math;->abs(F)F
 
     move-result p1
@@ -158,7 +153,6 @@
     :cond_3
     const/4 v0, 0x0
 
-    .line 272
     invoke-static {p0, v6, p2}, Landroidx/core/graphics/ColorUtils;->constrain(FFF)F
 
     move-result p0
@@ -167,7 +161,6 @@
 
     const/4 p0, 0x1
 
-    .line 273
     invoke-static {p1, v6, v5}, Landroidx/core/graphics/ColorUtils;->constrain(FFF)F
 
     move-result p1
@@ -176,7 +169,6 @@
 
     const/4 p0, 0x2
 
-    .line 274
     invoke-static {v3, v6, v5}, Landroidx/core/graphics/ColorUtils;->constrain(FFF)F
 
     move-result p1
@@ -191,7 +183,6 @@
 
     move-object/from16 v0, p3
 
-    .line 444
     array-length v1, v0
 
     const/4 v2, 0x3
@@ -229,7 +220,6 @@
 
     div-double/2addr v1, v12
 
-    .line 449
     invoke-static {v1, v2, v10, v11}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v1
@@ -256,7 +246,6 @@
 
     div-double/2addr v1, v12
 
-    .line 451
     invoke-static {v1, v2, v10, v11}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v1
@@ -283,7 +272,6 @@
 
     div-double/2addr v1, v12
 
-    .line 453
     invoke-static {v1, v2, v10, v11}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v1
@@ -311,7 +299,6 @@
 
     mul-double/2addr v4, v6
 
-    .line 455
     aput-wide v4, v0, v3
 
     const/4 v3, 0x1
@@ -334,7 +321,6 @@
 
     mul-double/2addr v4, v6
 
-    .line 456
     aput-wide v4, v0, v3
 
     const/4 v3, 0x2
@@ -357,12 +343,10 @@
 
     mul-double v16, v16, v6
 
-    .line 457
     aput-wide v16, v0, v3
 
     return-void
 
-    .line 445
     :cond_3
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -373,10 +357,181 @@
     throw v0
 .end method
 
+.method public static XYZToColor(DDD)I
+    .locals 17
+
+    const-wide v0, 0x4009ecbfb15b573fL    # 3.2406
+
+    mul-double v0, v0, p0
+
+    const-wide v2, -0x400767a0f9096bbaL    # -1.5372
+
+    mul-double v2, v2, p2
+
+    add-double/2addr v0, v2
+
+    const-wide v2, -0x402016f0068db8bbL    # -0.4986
+
+    mul-double v2, v2, p4
+
+    add-double/2addr v0, v2
+
+    const-wide/high16 v2, 0x4059000000000000L    # 100.0
+
+    div-double/2addr v0, v2
+
+    const-wide v4, -0x4010fec56d5cfaadL    # -0.9689
+
+    mul-double v4, v4, p0
+
+    const-wide v6, 0x3ffe0346dc5d6388L    # 1.8758
+
+    mul-double v6, v6, p2
+
+    add-double/2addr v4, v6
+
+    const-wide v6, 0x3fa53f7ced916873L    # 0.0415
+
+    mul-double v6, v6, p4
+
+    add-double/2addr v4, v6
+
+    div-double/2addr v4, v2
+
+    const-wide v6, 0x3fac84b5dcc63f14L    # 0.0557
+
+    mul-double v6, v6, p0
+
+    const-wide v8, -0x4035e353f7ced917L    # -0.204
+
+    mul-double v8, v8, p2
+
+    add-double/2addr v6, v8
+
+    const-wide v8, 0x3ff0e978d4fdf3b6L    # 1.057
+
+    mul-double v8, v8, p4
+
+    add-double/2addr v6, v8
+
+    div-double/2addr v6, v2
+
+    const-wide v2, 0x3f69a5c37387b719L    # 0.0031308
+
+    cmpl-double v8, v0, v2
+
+    const-wide v9, 0x3fac28f5c28f5c29L    # 0.055
+
+    const-wide v11, 0x3fdaaaaaaaaaaaabL    # 0.4166666666666667
+
+    const-wide v13, 0x3ff0e147ae147ae1L    # 1.055
+
+    const-wide v15, 0x4029d70a3d70a3d7L    # 12.92
+
+    if-lez v8, :cond_0
+
+    invoke-static {v0, v1, v11, v12}, Ljava/lang/Math;->pow(DD)D
+
+    move-result-wide v0
+
+    mul-double/2addr v0, v13
+
+    sub-double/2addr v0, v9
+
+    goto :goto_0
+
+    :cond_0
+    mul-double/2addr v0, v15
+
+    :goto_0
+    cmpl-double v8, v4, v2
+
+    if-lez v8, :cond_1
+
+    invoke-static {v4, v5, v11, v12}, Ljava/lang/Math;->pow(DD)D
+
+    move-result-wide v4
+
+    mul-double/2addr v4, v13
+
+    sub-double/2addr v4, v9
+
+    goto :goto_1
+
+    :cond_1
+    mul-double/2addr v4, v15
+
+    :goto_1
+    cmpl-double v2, v6, v2
+
+    if-lez v2, :cond_2
+
+    invoke-static {v6, v7, v11, v12}, Ljava/lang/Math;->pow(DD)D
+
+    move-result-wide v2
+
+    mul-double/2addr v2, v13
+
+    sub-double/2addr v2, v9
+
+    goto :goto_2
+
+    :cond_2
+    mul-double v2, v6, v15
+
+    :goto_2
+    const-wide v6, 0x406fe00000000000L    # 255.0
+
+    mul-double/2addr v0, v6
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->round(D)J
+
+    move-result-wide v0
+
+    long-to-int v0, v0
+
+    const/16 v1, 0xff
+
+    const/4 v8, 0x0
+
+    invoke-static {v0, v8, v1}, Landroidx/core/graphics/ColorUtils;->constrain(III)I
+
+    move-result v0
+
+    mul-double/2addr v4, v6
+
+    invoke-static {v4, v5}, Ljava/lang/Math;->round(D)J
+
+    move-result-wide v4
+
+    long-to-int v4, v4
+
+    invoke-static {v4, v8, v1}, Landroidx/core/graphics/ColorUtils;->constrain(III)I
+
+    move-result v4
+
+    mul-double/2addr v2, v6
+
+    invoke-static {v2, v3}, Ljava/lang/Math;->round(D)J
+
+    move-result-wide v2
+
+    long-to-int v2, v2
+
+    invoke-static {v2, v8, v1}, Landroidx/core/graphics/ColorUtils;->constrain(III)I
+
+    move-result v1
+
+    invoke-static {v0, v4, v1}, Landroid/graphics/Color;->rgb(III)I
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public static calculateContrast(II)D
     .locals 4
 
-    .line 159
     invoke-static {p1}, Landroid/graphics/Color;->alpha(I)I
 
     move-result v0
@@ -385,19 +540,16 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 163
     invoke-static {p0}, Landroid/graphics/Color;->alpha(I)I
 
     move-result v0
 
     if-ge v0, v1, :cond_0
 
-    .line 165
     invoke-static {p0, p1}, Landroidx/core/graphics/ColorUtils;->compositeColors(II)I
 
     move-result p0
 
-    .line 168
     :cond_0
     invoke-static {p0}, Landroidx/core/graphics/ColorUtils;->calculateLuminance(I)D
 
@@ -407,14 +559,12 @@
 
     add-double/2addr v0, v2
 
-    .line 169
     invoke-static {p1}, Landroidx/core/graphics/ColorUtils;->calculateLuminance(I)D
 
     move-result-wide p0
 
     add-double/2addr p0, v2
 
-    .line 172
     invoke-static {v0, v1, p0, p1}, Ljava/lang/Math;->max(DD)D
 
     move-result-wide v2
@@ -427,7 +577,6 @@
 
     return-wide v2
 
-    .line 160
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -439,7 +588,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 161
     invoke-static {p1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object p1
@@ -456,32 +604,28 @@
 .end method
 
 .method public static calculateLuminance(I)D
-    .locals 5
+    .locals 4
 
-    .line 145
     invoke-static {}, Landroidx/core/graphics/ColorUtils;->getTempDouble3Array()[D
 
     move-result-object v0
 
-    .line 146
     invoke-static {p0, v0}, Landroidx/core/graphics/ColorUtils;->colorToXYZ(I[D)V
 
     const/4 p0, 0x1
 
-    .line 148
-    aget-wide v1, v0, p0
+    aget-wide v0, v0, p0
 
-    const-wide/high16 v3, 0x4059000000000000L    # 100.0
+    const-wide/high16 v2, 0x4059000000000000L    # 100.0
 
-    div-double/2addr v1, v3
+    div-double/2addr v0, v2
 
-    return-wide v1
+    return-wide v0
 .end method
 
 .method public static calculateMinimumAlpha(IIF)I
     .locals 8
 
-    .line 187
     invoke-static {p1}, Landroid/graphics/Color;->alpha(I)I
 
     move-result v0
@@ -490,12 +634,10 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 193
     invoke-static {p0, v1}, Landroidx/core/graphics/ColorUtils;->setAlphaComponent(II)I
 
     move-result v0
 
-    .line 194
     invoke-static {v0, p1}, Landroidx/core/graphics/ColorUtils;->calculateContrast(II)D
 
     move-result-wide v2
@@ -528,15 +670,12 @@
 
     add-int v2, v0, v1
 
-    .line 207
     div-int/lit8 v2, v2, 0x2
 
-    .line 209
     invoke-static {p0, v2}, Landroidx/core/graphics/ColorUtils;->setAlphaComponent(II)I
 
     move-result v3
 
-    .line 210
     invoke-static {v3, p1}, Landroidx/core/graphics/ColorUtils;->calculateContrast(II)D
 
     move-result-wide v6
@@ -560,7 +699,6 @@
     :cond_2
     return v1
 
-    .line 188
     :cond_3
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -572,7 +710,6 @@
 
     invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 189
     invoke-static {p1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object p1
@@ -591,7 +728,6 @@
 .method public static colorToHSL(I[F)V
     .locals 2
 
-    .line 289
     invoke-static {p0}, Landroid/graphics/Color;->red(I)I
 
     move-result v0
@@ -612,7 +748,6 @@
 .method public static colorToXYZ(I[D)V
     .locals 2
 
-    .line 421
     invoke-static {p0}, Landroid/graphics/Color;->red(I)I
 
     move-result v0
@@ -639,7 +774,6 @@
 
     mul-int/2addr p1, p0
 
-    .line 131
     div-int/lit16 p1, p1, 0xff
 
     rsub-int p0, p1, 0xff
@@ -650,67 +784,54 @@
 .method public static compositeColors(II)I
     .locals 6
 
-    .line 53
     invoke-static {p1}, Landroid/graphics/Color;->alpha(I)I
 
     move-result v0
 
-    .line 54
     invoke-static {p0}, Landroid/graphics/Color;->alpha(I)I
 
     move-result v1
 
-    .line 55
     invoke-static {v1, v0}, Landroidx/core/graphics/ColorUtils;->compositeAlpha(II)I
 
     move-result v2
 
-    .line 57
     invoke-static {p0}, Landroid/graphics/Color;->red(I)I
 
     move-result v3
 
-    .line 58
     invoke-static {p1}, Landroid/graphics/Color;->red(I)I
 
     move-result v4
 
-    .line 57
     invoke-static {v3, v1, v4, v0, v2}, Landroidx/core/graphics/ColorUtils;->compositeComponent(IIIII)I
 
     move-result v3
 
-    .line 59
     invoke-static {p0}, Landroid/graphics/Color;->green(I)I
 
     move-result v4
 
-    .line 60
     invoke-static {p1}, Landroid/graphics/Color;->green(I)I
 
     move-result v5
 
-    .line 59
     invoke-static {v4, v1, v5, v0, v2}, Landroidx/core/graphics/ColorUtils;->compositeComponent(IIIII)I
 
     move-result v4
 
-    .line 61
     invoke-static {p0}, Landroid/graphics/Color;->blue(I)I
 
     move-result p0
 
-    .line 62
     invoke-static {p1}, Landroid/graphics/Color;->blue(I)I
 
     move-result p1
 
-    .line 61
     invoke-static {p0, v1, p1, v0, v2}, Landroidx/core/graphics/ColorUtils;->compositeComponent(IIIII)I
 
     move-result p0
 
-    .line 64
     invoke-static {v2, v3, v4, p0}, Landroid/graphics/Color;->argb(IIII)I
 
     move-result p0
@@ -742,7 +863,6 @@
 
     mul-int/lit16 p4, p4, 0xff
 
-    .line 136
     div-int/2addr p0, p4
 
     return p0
@@ -771,10 +891,28 @@
     return p0
 .end method
 
+.method private static constrain(III)I
+    .locals 0
+
+    if-ge p0, p1, :cond_0
+
+    move p0, p1
+
+    goto :goto_0
+
+    :cond_0
+    if-le p0, p2, :cond_1
+
+    move p0, p2
+
+    :cond_1
+    :goto_0
+    return p0
+.end method
+
 .method private static getTempDouble3Array()[D
     .locals 2
 
-    .line 678
     sget-object v0, Landroidx/core/graphics/ColorUtils;->TEMP_ARRAY:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
@@ -787,10 +925,8 @@
 
     const/4 v0, 0x3
 
-    .line 680
     new-array v0, v0, [D
 
-    .line 681
     sget-object v1, Landroidx/core/graphics/ColorUtils;->TEMP_ARRAY:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v1, v0}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
@@ -818,7 +954,6 @@
 
     return p0
 
-    .line 366
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 

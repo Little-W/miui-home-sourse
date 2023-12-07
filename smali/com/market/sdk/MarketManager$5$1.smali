@@ -1,6 +1,5 @@
 .class Lcom/market/sdk/MarketManager$5$1;
 .super Landroid/os/ResultReceiver;
-.source "MarketManager.java"
 
 
 # annotations
@@ -22,7 +21,6 @@
 .method constructor <init>(Lcom/market/sdk/MarketManager$5;Landroid/os/Handler;)V
     .locals 0
 
-    .line 462
     iput-object p1, p0, Lcom/market/sdk/MarketManager$5$1;->this$1:Lcom/market/sdk/MarketManager$5;
 
     invoke-direct {p0, p2}, Landroid/os/ResultReceiver;-><init>(Landroid/os/Handler;)V
@@ -35,16 +33,15 @@
 .method protected onReceiveResult(ILandroid/os/Bundle;)V
     .locals 0
 
-    .line 465
-    iget-object p2, p0, Lcom/market/sdk/MarketManager$5$1;->this$1:Lcom/market/sdk/MarketManager$5;
+    iget-object p0, p0, Lcom/market/sdk/MarketManager$5$1;->this$1:Lcom/market/sdk/MarketManager$5;
 
-    iget-object p2, p2, Lcom/market/sdk/MarketManager$5;->val$taskCompat:Lcom/market/sdk/compat/FutureTaskCompat;
+    iget-object p0, p0, Lcom/market/sdk/MarketManager$5;->val$taskCompat:Lcom/market/sdk/compat/FutureTaskCompat;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    invoke-virtual {p2, p1}, Lcom/market/sdk/compat/FutureTaskCompat;->set(Ljava/lang/Object;)V
+    invoke-virtual {p0, p1}, Lcom/market/sdk/compat/FutureTaskCompat;->set(Ljava/lang/Object;)V
 
     return-void
 .end method

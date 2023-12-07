@@ -1,6 +1,5 @@
 .class public abstract Landroidx/recyclerview/widget/RecyclerView$AdapterDataObserver;
 .super Ljava/lang/Object;
-.source "RecyclerView.java"
 
 
 # annotations
@@ -18,7 +17,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 11721
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +39,6 @@
 .method public onItemRangeChanged(IILjava/lang/Object;)V
     .locals 0
 
-    .line 11733
     invoke-virtual {p0, p1, p2}, Landroidx/recyclerview/widget/RecyclerView$AdapterDataObserver;->onItemRangeChanged(II)V
 
     return-void

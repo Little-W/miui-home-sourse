@@ -1,6 +1,5 @@
 .class public interface abstract annotation Lorg/greenrobot/eventbus/Subscribe;
 .super Ljava/lang/Object;
-.source "Subscribe.java"
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

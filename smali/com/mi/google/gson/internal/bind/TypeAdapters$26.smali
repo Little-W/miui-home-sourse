@@ -1,6 +1,5 @@
 .class final Lcom/mi/google/gson/internal/bind/TypeAdapters$26;
 .super Ljava/lang/Object;
-.source "TypeAdapters.java"
 
 # interfaces
 .implements Lcom/mi/google/gson/TypeAdapterFactory;
@@ -21,7 +20,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 588
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,7 +42,6 @@
         }
     .end annotation
 
-    .line 591
     invoke-virtual {p2}, Lcom/mi/google/gson/reflect/TypeToken;->getRawType()Ljava/lang/Class;
 
     move-result-object p2
@@ -53,11 +50,10 @@
 
     if-eq p2, v0, :cond_0
 
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return-object p1
+    return-object p0
 
-    .line 595
     :cond_0
     const-class p2, Ljava/util/Date;
 
@@ -65,7 +61,6 @@
 
     move-result-object p1
 
-    .line 596
     new-instance p2, Lcom/mi/google/gson/internal/bind/TypeAdapters$26$1;
 
     invoke-direct {p2, p0, p1}, Lcom/mi/google/gson/internal/bind/TypeAdapters$26$1;-><init>(Lcom/mi/google/gson/internal/bind/TypeAdapters$26;Lcom/mi/google/gson/TypeAdapter;)V

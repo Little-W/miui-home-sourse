@@ -1,6 +1,5 @@
 .class Lcom/market/sdk/MarketService$12;
 .super Ljava/lang/Object;
-.source "MarketService.java"
 
 # interfaces
 .implements Lcom/market/ServiceProxy$ProxyTask;
@@ -27,7 +26,6 @@
 .method constructor <init>(Lcom/market/sdk/MarketService;Landroid/os/ResultReceiver;)V
     .locals 0
 
-    .line 182
     iput-object p1, p0, Lcom/market/sdk/MarketService$12;->this$0:Lcom/market/sdk/MarketService;
 
     iput-object p2, p0, Lcom/market/sdk/MarketService$12;->val$receiver:Landroid/os/ResultReceiver;
@@ -40,23 +38,22 @@
 
 # virtual methods
 .method public run()V
-    .locals 2
+    .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
         }
     .end annotation
 
-    .line 185
     iget-object v0, p0, Lcom/market/sdk/MarketService$12;->this$0:Lcom/market/sdk/MarketService;
 
     invoke-static {v0}, Lcom/market/sdk/MarketService;->access$000(Lcom/market/sdk/MarketService;)Lcom/market/sdk/IMarketService;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/market/sdk/MarketService$12;->val$receiver:Landroid/os/ResultReceiver;
+    iget-object p0, p0, Lcom/market/sdk/MarketService$12;->val$receiver:Landroid/os/ResultReceiver;
 
-    invoke-interface {v0, v1}, Lcom/market/sdk/IMarketService;->getWhiteSetV2(Landroid/os/ResultReceiver;)V
+    invoke-interface {v0, p0}, Lcom/market/sdk/IMarketService;->getWhiteSetV2(Landroid/os/ResultReceiver;)V
 
     return-void
 .end method

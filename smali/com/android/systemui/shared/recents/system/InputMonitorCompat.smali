@@ -1,6 +1,5 @@
 .class public Lcom/android/systemui/shared/recents/system/InputMonitorCompat;
 .super Ljava/lang/Object;
-.source "InputMonitorCompat.java"
 
 
 # instance fields
@@ -11,10 +10,8 @@
 .method private constructor <init>(Landroid/view/InputMonitor;)V
     .locals 0
 
-    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 34
     iput-object p1, p0, Lcom/android/systemui/shared/recents/system/InputMonitorCompat;->mInputMonitor:Landroid/view/InputMonitor;
 
     return-void
@@ -23,7 +20,6 @@
 .method public static fromBundle(Landroid/os/Bundle;Ljava/lang/String;)Lcom/android/systemui/shared/recents/system/InputMonitorCompat;
     .locals 1
 
-    .line 64
     new-instance v0, Lcom/android/systemui/shared/recents/system/InputMonitorCompat;
 
     invoke-virtual {p0, p1}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -40,40 +36,55 @@
 
 # virtual methods
 .method public dispose()V
-    .locals 1
+    .locals 0
 
-    .line 48
-    iget-object v0, p0, Lcom/android/systemui/shared/recents/system/InputMonitorCompat;->mInputMonitor:Landroid/view/InputMonitor;
+    iget-object p0, p0, Lcom/android/systemui/shared/recents/system/InputMonitorCompat;->mInputMonitor:Landroid/view/InputMonitor;
 
-    invoke-virtual {v0}, Landroid/view/InputMonitor;->dispose()V
+    invoke-static {p0}, Lmiui/view/InputMonitorExpose;->box(Ljava/lang/Object;)Lmiui/view/InputMonitorExpose;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lmiui/view/InputMonitorExpose;->dispose()V
 
     return-void
 .end method
 
 .method public getInputReceiver(Landroid/os/Looper;Landroid/view/Choreographer;Lcom/android/systemui/shared/recents/system/InputChannelCompat$InputEventListener;)Lcom/android/systemui/shared/recents/system/InputChannelCompat$InputEventReceiver;
-    .locals 2
+    .locals 1
 
-    .line 56
     new-instance v0, Lcom/android/systemui/shared/recents/system/InputChannelCompat$InputEventReceiver;
 
-    iget-object v1, p0, Lcom/android/systemui/shared/recents/system/InputMonitorCompat;->mInputMonitor:Landroid/view/InputMonitor;
+    iget-object p0, p0, Lcom/android/systemui/shared/recents/system/InputMonitorCompat;->mInputMonitor:Landroid/view/InputMonitor;
 
-    invoke-virtual {v1}, Landroid/view/InputMonitor;->getInputChannel()Landroid/view/InputChannel;
+    invoke-static {p0}, Lmiui/view/InputMonitorExpose;->box(Ljava/lang/Object;)Lmiui/view/InputMonitorExpose;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-direct {v0, v1, p1, p2, p3}, Lcom/android/systemui/shared/recents/system/InputChannelCompat$InputEventReceiver;-><init>(Landroid/view/InputChannel;Landroid/os/Looper;Landroid/view/Choreographer;Lcom/android/systemui/shared/recents/system/InputChannelCompat$InputEventListener;)V
+    invoke-virtual {p0}, Lmiui/view/InputMonitorExpose;->getInputChannel()Lmiui/view/InputChannelExpose;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lmiui/view/InputChannelExpose;->unbox()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/view/InputChannel;
+
+    invoke-direct {v0, p0, p1, p2, p3}, Lcom/android/systemui/shared/recents/system/InputChannelCompat$InputEventReceiver;-><init>(Landroid/view/InputChannel;Landroid/os/Looper;Landroid/view/Choreographer;Lcom/android/systemui/shared/recents/system/InputChannelCompat$InputEventListener;)V
 
     return-object v0
 .end method
 
 .method public pilferPointers()V
-    .locals 1
+    .locals 0
 
-    .line 41
-    iget-object v0, p0, Lcom/android/systemui/shared/recents/system/InputMonitorCompat;->mInputMonitor:Landroid/view/InputMonitor;
+    iget-object p0, p0, Lcom/android/systemui/shared/recents/system/InputMonitorCompat;->mInputMonitor:Landroid/view/InputMonitor;
 
-    invoke-virtual {v0}, Landroid/view/InputMonitor;->pilferPointers()V
+    invoke-static {p0}, Lmiui/view/InputMonitorExpose;->box(Ljava/lang/Object;)Lmiui/view/InputMonitorExpose;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lmiui/view/InputMonitorExpose;->pilferPointers()V
 
     return-void
 .end method

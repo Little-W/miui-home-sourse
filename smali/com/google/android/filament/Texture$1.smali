@@ -1,6 +1,5 @@
 .class synthetic Lcom/google/android/filament/Texture$1;
 .super Ljava/lang/Object;
-.source "Texture.java"
 
 
 # annotations
@@ -22,9 +21,8 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 13
+    .locals 11
 
-    .line 578
     invoke-static {}, Lcom/google/android/filament/Texture$Type;->values()[Lcom/google/android/filament/Texture$Type;
 
     move-result-object v0
@@ -72,7 +70,7 @@
     :try_start_2
     sget-object v3, Lcom/google/android/filament/Texture$1;->$SwitchMap$com$google$android$filament$Texture$Type:[I
 
-    sget-object v4, Lcom/google/android/filament/Texture$Type;->COMPRESSED:Lcom/google/android/filament/Texture$Type;
+    sget-object v4, Lcom/google/android/filament/Texture$Type;->USHORT:Lcom/google/android/filament/Texture$Type;
 
     invoke-virtual {v4}, Lcom/google/android/filament/Texture$Type;->ordinal()I
 
@@ -88,7 +86,7 @@
     :try_start_3
     sget-object v4, Lcom/google/android/filament/Texture$1;->$SwitchMap$com$google$android$filament$Texture$Type:[I
 
-    sget-object v5, Lcom/google/android/filament/Texture$Type;->USHORT:Lcom/google/android/filament/Texture$Type;
+    sget-object v5, Lcom/google/android/filament/Texture$Type;->SHORT:Lcom/google/android/filament/Texture$Type;
 
     invoke-virtual {v5}, Lcom/google/android/filament/Texture$Type;->ordinal()I
 
@@ -104,7 +102,7 @@
     :try_start_4
     sget-object v5, Lcom/google/android/filament/Texture$1;->$SwitchMap$com$google$android$filament$Texture$Type:[I
 
-    sget-object v6, Lcom/google/android/filament/Texture$Type;->SHORT:Lcom/google/android/filament/Texture$Type;
+    sget-object v6, Lcom/google/android/filament/Texture$Type;->HALF:Lcom/google/android/filament/Texture$Type;
 
     invoke-virtual {v6}, Lcom/google/android/filament/Texture$Type;->ordinal()I
 
@@ -120,7 +118,7 @@
     :try_start_5
     sget-object v6, Lcom/google/android/filament/Texture$1;->$SwitchMap$com$google$android$filament$Texture$Type:[I
 
-    sget-object v7, Lcom/google/android/filament/Texture$Type;->HALF:Lcom/google/android/filament/Texture$Type;
+    sget-object v7, Lcom/google/android/filament/Texture$Type;->UINT:Lcom/google/android/filament/Texture$Type;
 
     invoke-virtual {v7}, Lcom/google/android/filament/Texture$Type;->ordinal()I
 
@@ -136,7 +134,7 @@
     :try_start_6
     sget-object v7, Lcom/google/android/filament/Texture$1;->$SwitchMap$com$google$android$filament$Texture$Type:[I
 
-    sget-object v8, Lcom/google/android/filament/Texture$Type;->UINT:Lcom/google/android/filament/Texture$Type;
+    sget-object v8, Lcom/google/android/filament/Texture$Type;->INT:Lcom/google/android/filament/Texture$Type;
 
     invoke-virtual {v8}, Lcom/google/android/filament/Texture$Type;->ordinal()I
 
@@ -152,7 +150,7 @@
     :try_start_7
     sget-object v8, Lcom/google/android/filament/Texture$1;->$SwitchMap$com$google$android$filament$Texture$Type:[I
 
-    sget-object v9, Lcom/google/android/filament/Texture$Type;->INT:Lcom/google/android/filament/Texture$Type;
+    sget-object v9, Lcom/google/android/filament/Texture$Type;->FLOAT:Lcom/google/android/filament/Texture$Type;
 
     invoke-virtual {v9}, Lcom/google/android/filament/Texture$Type;->ordinal()I
 
@@ -168,7 +166,7 @@
     :try_start_8
     sget-object v9, Lcom/google/android/filament/Texture$1;->$SwitchMap$com$google$android$filament$Texture$Type:[I
 
-    sget-object v10, Lcom/google/android/filament/Texture$Type;->FLOAT:Lcom/google/android/filament/Texture$Type;
+    sget-object v10, Lcom/google/android/filament/Texture$Type;->UINT_10F_11F_11F_REV:Lcom/google/android/filament/Texture$Type;
 
     invoke-virtual {v10}, Lcom/google/android/filament/Texture$Type;->ordinal()I
 
@@ -179,78 +177,45 @@
     .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
 
     :catch_8
-    const/16 v9, 0xa
+    invoke-static {}, Lcom/google/android/filament/Texture$Format;->values()[Lcom/google/android/filament/Texture$Format;
+
+    move-result-object v9
+
+    array-length v9, v9
+
+    new-array v9, v9, [I
+
+    sput-object v9, Lcom/google/android/filament/Texture$1;->$SwitchMap$com$google$android$filament$Texture$Format:[I
 
     :try_start_9
-    sget-object v10, Lcom/google/android/filament/Texture$1;->$SwitchMap$com$google$android$filament$Texture$Type:[I
+    sget-object v9, Lcom/google/android/filament/Texture$1;->$SwitchMap$com$google$android$filament$Texture$Format:[I
 
-    sget-object v11, Lcom/google/android/filament/Texture$Type;->UINT_10F_11F_11F_REV:Lcom/google/android/filament/Texture$Type;
+    sget-object v10, Lcom/google/android/filament/Texture$Format;->R:Lcom/google/android/filament/Texture$Format;
 
-    invoke-virtual {v11}, Lcom/google/android/filament/Texture$Type;->ordinal()I
+    invoke-virtual {v10}, Lcom/google/android/filament/Texture$Format;->ordinal()I
 
-    move-result v11
+    move-result v10
 
-    aput v9, v10, v11
+    aput v0, v9, v10
     :try_end_9
     .catch Ljava/lang/NoSuchFieldError; {:try_start_9 .. :try_end_9} :catch_9
 
     :catch_9
-    const/16 v10, 0xb
-
     :try_start_a
-    sget-object v11, Lcom/google/android/filament/Texture$1;->$SwitchMap$com$google$android$filament$Texture$Type:[I
+    sget-object v0, Lcom/google/android/filament/Texture$1;->$SwitchMap$com$google$android$filament$Texture$Format:[I
 
-    sget-object v12, Lcom/google/android/filament/Texture$Type;->USHORT_565:Lcom/google/android/filament/Texture$Type;
+    sget-object v9, Lcom/google/android/filament/Texture$Format;->R_INTEGER:Lcom/google/android/filament/Texture$Format;
 
-    invoke-virtual {v12}, Lcom/google/android/filament/Texture$Type;->ordinal()I
+    invoke-virtual {v9}, Lcom/google/android/filament/Texture$Format;->ordinal()I
 
-    move-result v12
+    move-result v9
 
-    aput v10, v11, v12
+    aput v1, v0, v9
     :try_end_a
     .catch Ljava/lang/NoSuchFieldError; {:try_start_a .. :try_end_a} :catch_a
 
-    .line 552
     :catch_a
-    invoke-static {}, Lcom/google/android/filament/Texture$Format;->values()[Lcom/google/android/filament/Texture$Format;
-
-    move-result-object v11
-
-    array-length v11, v11
-
-    new-array v11, v11, [I
-
-    sput-object v11, Lcom/google/android/filament/Texture$1;->$SwitchMap$com$google$android$filament$Texture$Format:[I
-
     :try_start_b
-    sget-object v11, Lcom/google/android/filament/Texture$1;->$SwitchMap$com$google$android$filament$Texture$Format:[I
-
-    sget-object v12, Lcom/google/android/filament/Texture$Format;->R:Lcom/google/android/filament/Texture$Format;
-
-    invoke-virtual {v12}, Lcom/google/android/filament/Texture$Format;->ordinal()I
-
-    move-result v12
-
-    aput v0, v11, v12
-    :try_end_b
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_b .. :try_end_b} :catch_b
-
-    :catch_b
-    :try_start_c
-    sget-object v0, Lcom/google/android/filament/Texture$1;->$SwitchMap$com$google$android$filament$Texture$Format:[I
-
-    sget-object v11, Lcom/google/android/filament/Texture$Format;->R_INTEGER:Lcom/google/android/filament/Texture$Format;
-
-    invoke-virtual {v11}, Lcom/google/android/filament/Texture$Format;->ordinal()I
-
-    move-result v11
-
-    aput v1, v0, v11
-    :try_end_c
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_c .. :try_end_c} :catch_c
-
-    :catch_c
-    :try_start_d
     sget-object v0, Lcom/google/android/filament/Texture$1;->$SwitchMap$com$google$android$filament$Texture$Format:[I
 
     sget-object v1, Lcom/google/android/filament/Texture$Format;->DEPTH_COMPONENT:Lcom/google/android/filament/Texture$Format;
@@ -260,11 +225,11 @@
     move-result v1
 
     aput v2, v0, v1
-    :try_end_d
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_d .. :try_end_d} :catch_d
+    :try_end_b
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_b .. :try_end_b} :catch_b
 
-    :catch_d
-    :try_start_e
+    :catch_b
+    :try_start_c
     sget-object v0, Lcom/google/android/filament/Texture$1;->$SwitchMap$com$google$android$filament$Texture$Format:[I
 
     sget-object v1, Lcom/google/android/filament/Texture$Format;->ALPHA:Lcom/google/android/filament/Texture$Format;
@@ -274,11 +239,11 @@
     move-result v1
 
     aput v3, v0, v1
-    :try_end_e
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_e .. :try_end_e} :catch_e
+    :try_end_c
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_c .. :try_end_c} :catch_c
 
-    :catch_e
-    :try_start_f
+    :catch_c
+    :try_start_d
     sget-object v0, Lcom/google/android/filament/Texture$1;->$SwitchMap$com$google$android$filament$Texture$Format:[I
 
     sget-object v1, Lcom/google/android/filament/Texture$Format;->RG:Lcom/google/android/filament/Texture$Format;
@@ -288,11 +253,11 @@
     move-result v1
 
     aput v4, v0, v1
-    :try_end_f
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_f .. :try_end_f} :catch_f
+    :try_end_d
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_d .. :try_end_d} :catch_d
 
-    :catch_f
-    :try_start_10
+    :catch_d
+    :try_start_e
     sget-object v0, Lcom/google/android/filament/Texture$1;->$SwitchMap$com$google$android$filament$Texture$Format:[I
 
     sget-object v1, Lcom/google/android/filament/Texture$Format;->RG_INTEGER:Lcom/google/android/filament/Texture$Format;
@@ -302,11 +267,11 @@
     move-result v1
 
     aput v5, v0, v1
-    :try_end_10
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_10 .. :try_end_10} :catch_10
+    :try_end_e
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_e .. :try_end_e} :catch_e
 
-    :catch_10
-    :try_start_11
+    :catch_e
+    :try_start_f
     sget-object v0, Lcom/google/android/filament/Texture$1;->$SwitchMap$com$google$android$filament$Texture$Format:[I
 
     sget-object v1, Lcom/google/android/filament/Texture$Format;->DEPTH_STENCIL:Lcom/google/android/filament/Texture$Format;
@@ -316,11 +281,11 @@
     move-result v1
 
     aput v6, v0, v1
-    :try_end_11
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_11 .. :try_end_11} :catch_11
+    :try_end_f
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_f .. :try_end_f} :catch_f
 
-    :catch_11
-    :try_start_12
+    :catch_f
+    :try_start_10
     sget-object v0, Lcom/google/android/filament/Texture$1;->$SwitchMap$com$google$android$filament$Texture$Format:[I
 
     sget-object v1, Lcom/google/android/filament/Texture$Format;->STENCIL_INDEX:Lcom/google/android/filament/Texture$Format;
@@ -330,11 +295,11 @@
     move-result v1
 
     aput v7, v0, v1
-    :try_end_12
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_12 .. :try_end_12} :catch_12
+    :try_end_10
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_10 .. :try_end_10} :catch_10
 
-    :catch_12
-    :try_start_13
+    :catch_10
+    :try_start_11
     sget-object v0, Lcom/google/android/filament/Texture$1;->$SwitchMap$com$google$android$filament$Texture$Format:[I
 
     sget-object v1, Lcom/google/android/filament/Texture$Format;->RGB:Lcom/google/android/filament/Texture$Format;
@@ -344,11 +309,11 @@
     move-result v1
 
     aput v8, v0, v1
-    :try_end_13
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_13 .. :try_end_13} :catch_13
+    :try_end_11
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_11 .. :try_end_11} :catch_11
 
-    :catch_13
-    :try_start_14
+    :catch_11
+    :try_start_12
     sget-object v0, Lcom/google/android/filament/Texture$1;->$SwitchMap$com$google$android$filament$Texture$Format:[I
 
     sget-object v1, Lcom/google/android/filament/Texture$Format;->RGB_INTEGER:Lcom/google/android/filament/Texture$Format;
@@ -357,12 +322,14 @@
 
     move-result v1
 
-    aput v9, v0, v1
-    :try_end_14
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_14 .. :try_end_14} :catch_14
+    const/16 v2, 0xa
 
-    :catch_14
-    :try_start_15
+    aput v2, v0, v1
+    :try_end_12
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_12 .. :try_end_12} :catch_12
+
+    :catch_12
+    :try_start_13
     sget-object v0, Lcom/google/android/filament/Texture$1;->$SwitchMap$com$google$android$filament$Texture$Format:[I
 
     sget-object v1, Lcom/google/android/filament/Texture$Format;->RGBA:Lcom/google/android/filament/Texture$Format;
@@ -371,12 +338,14 @@
 
     move-result v1
 
-    aput v10, v0, v1
-    :try_end_15
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_15 .. :try_end_15} :catch_15
+    const/16 v2, 0xb
 
-    :catch_15
-    :try_start_16
+    aput v2, v0, v1
+    :try_end_13
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_13 .. :try_end_13} :catch_13
+
+    :catch_13
+    :try_start_14
     sget-object v0, Lcom/google/android/filament/Texture$1;->$SwitchMap$com$google$android$filament$Texture$Format:[I
 
     sget-object v1, Lcom/google/android/filament/Texture$Format;->RGBA_INTEGER:Lcom/google/android/filament/Texture$Format;
@@ -388,9 +357,9 @@
     const/16 v2, 0xc
 
     aput v2, v0, v1
-    :try_end_16
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_16 .. :try_end_16} :catch_16
+    :try_end_14
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_14 .. :try_end_14} :catch_14
 
-    :catch_16
+    :catch_14
     return-void
 .end method

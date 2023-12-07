@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/dialog_bg" android:background="@drawable/common_dialog_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/dp180">
+        <TextView android:textSize="@dimen/text_size_sp16" android:id="@id/txt_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp36" android:layout_marginTop="15.0dip" android:layout_marginRight="@dimen/dp36" android:text="@string/term_of_service" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" style="@style/common_dialog_title" />
+        <TextView android:textSize="@dimen/text_size_sp14" android:id="@id/txt_content1" android:layout_marginLeft="@dimen/dp36" android:layout_marginTop="10.0dip" android:layout_marginRight="@dimen/dp36" android:text="@string/terms_of_services_one" android:layout_below="@id/txt_title" android:layout_centerHorizontal="true" style="@style/common_dialog_content" />
+        <TextView android:textSize="@dimen/text_size_sp14" android:id="@id/txt_content2" android:layout_marginLeft="@dimen/dp36" android:layout_marginRight="@dimen/dp36" android:text="@string/terms_of_services_two" android:layout_below="@id/txt_content1" android:layout_centerHorizontal="true" style="@style/common_dialog_content" />
+        <TextView android:textSize="@dimen/text_size_sp14" android:id="@id/txt_content3" android:layout_marginLeft="@dimen/dp36" android:layout_marginRight="@dimen/dp36" android:layout_marginBottom="@dimen/dp20" android:text="@string/terms_of_services_three" android:layout_below="@id/txt_content2" style="@style/common_dialog_content" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/dp48" android:layout_marginTop="@dimen/dp5" android:layout_marginBottom="15.0dip" android:layout_below="@id/txt_content3" android:layout_marginStart="@dimen/dp20" android:layout_marginEnd="@dimen/dp20">
+            <TextView android:gravity="center" android:id="@id/btn_cancel" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/btn_cancel" android:layout_weight="1.0" android:layout_marginStart="@dimen/dp7" android:layout_marginEnd="@dimen/dp7" style="@style/common_dialog_negative_btn" />
+            <TextView android:gravity="center" android:id="@id/btn_ok" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/btn_agree" android:layout_weight="1.0" android:layout_marginStart="@dimen/dp7" android:layout_marginEnd="@dimen/dp7" style="@style/common_dialog_positive_btn" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

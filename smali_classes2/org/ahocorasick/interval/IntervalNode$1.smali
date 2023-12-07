@@ -1,6 +1,5 @@
 .class synthetic Lorg/ahocorasick/interval/IntervalNode$1;
 .super Ljava/lang/Object;
-.source "IntervalNode.java"
 
 
 # annotations
@@ -22,7 +21,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 95
     invoke-static {}, Lorg/ahocorasick/interval/IntervalNode$Direction;->values()[Lorg/ahocorasick/interval/IntervalNode$Direction;
 
     move-result-object v0

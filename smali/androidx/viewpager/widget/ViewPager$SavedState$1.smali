@@ -1,6 +1,5 @@
 .class final Landroidx/viewpager/widget/ViewPager$SavedState$1;
 .super Ljava/lang/Object;
-.source "ViewPager.java"
 
 # interfaces
 .implements Landroid/os/Parcelable$ClassLoaderCreator;
@@ -30,7 +29,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 1412
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,67 +37,61 @@
 
 # virtual methods
 .method public createFromParcel(Landroid/os/Parcel;)Landroidx/viewpager/widget/ViewPager$SavedState;
-    .locals 2
+    .locals 1
 
-    .line 1420
-    new-instance v0, Landroidx/viewpager/widget/ViewPager$SavedState;
+    new-instance p0, Landroidx/viewpager/widget/ViewPager$SavedState;
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    invoke-direct {v0, p1, v1}, Landroidx/viewpager/widget/ViewPager$SavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+    invoke-direct {p0, p1, v0}, Landroidx/viewpager/widget/ViewPager$SavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public createFromParcel(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Landroidx/viewpager/widget/ViewPager$SavedState;
-    .locals 1
+    .locals 0
 
-    .line 1415
-    new-instance v0, Landroidx/viewpager/widget/ViewPager$SavedState;
+    new-instance p0, Landroidx/viewpager/widget/ViewPager$SavedState;
 
-    invoke-direct {v0, p1, p2}, Landroidx/viewpager/widget/ViewPager$SavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+    invoke-direct {p0, p1, p2}, Landroidx/viewpager/widget/ViewPager$SavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
-    .line 1412
     invoke-virtual {p0, p1}, Landroidx/viewpager/widget/ViewPager$SavedState$1;->createFromParcel(Landroid/os/Parcel;)Landroidx/viewpager/widget/ViewPager$SavedState;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Ljava/lang/Object;
     .locals 0
 
-    .line 1412
     invoke-virtual {p0, p1, p2}, Landroidx/viewpager/widget/ViewPager$SavedState$1;->createFromParcel(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Landroidx/viewpager/widget/ViewPager$SavedState;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public newArray(I)[Landroidx/viewpager/widget/ViewPager$SavedState;
     .locals 0
 
-    .line 1424
-    new-array p1, p1, [Landroidx/viewpager/widget/ViewPager$SavedState;
+    new-array p0, p1, [Landroidx/viewpager/widget/ViewPager$SavedState;
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 1412
     invoke-virtual {p0, p1}, Landroidx/viewpager/widget/ViewPager$SavedState$1;->newArray(I)[Landroidx/viewpager/widget/ViewPager$SavedState;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

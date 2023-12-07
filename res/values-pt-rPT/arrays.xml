@@ -1,48 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="cell_layout_size_entries">
-        <item>4x4</item>
-        <item>4x5</item>
-    </string-array>
-    <string-array name="cell_layout_size_values">
-        <item>4x4</item>
-        <item>4x5</item>
+    <string-array name="animation_rate_entries">
+        <item>Relaxado</item>
+        <item>Equilibrado</item>
+        <item>Rápido</item>
     </string-array>
     <string-array name="editing_mode_entries">
         <item>Fundo</item>
         <item>Widgets</item>
         <item>Definições</item>
     </string-array>
-    <string-array name="gadget_weather_image">
-        <item>Céu limpo</item>
-        <item>Nublado</item>
-        <item>Muito nublado</item>
-        <item>Nebuloso</item>
-        <item>Tempestade severa</item>
-        <item>Tempestade</item>
-        <item>Chuva muito forte</item>
-        <item>Trovoada</item>
-        <item>Aguaceiros</item>
-        <item>Chuva forte</item>
-        <item>Chuva</item>
-        <item>Chuviscos</item>
-        <item>Granizo</item>
-        <item>Nevão</item>
-        <item>Períodos de queda de neve</item>
-        <item>Forte queda de neve</item>
-        <item>Queda de neve</item>
-        <item>Ligeira queda de neve</item>
-        <item>Forte tempestade de areia</item>
-        <item>Tempestade de areia</item>
-        <item>Ligeira tempestade de areia</item>
-        <item>Tempestade de areia</item>
-        <item>Granizo</item>
-        <item>Poeira</item>
-        <item>Neblina</item>
-    </string-array>
-    <string-array name="gadget_weather_theme_type_entries">
+    <string-array name="monochrome_color_entries">
         <item>Predefinido</item>
-        <item>Clássico</item>
+        <item>Azul</item>
+        <item>Verde</item>
+        <item>Roxo</item>
+        <item>Castanho</item>
+    </string-array>
+    <string-array name="no_word_model_entries">
+        <item>Desligado</item>
+        <item>Em qualquer lugar</item>
+        <item>Nos widgets</item>
+    </string-array>
+    <string-array name="no_word_model_entries_not_support_only_widget_no_word">
+        <item>Desligado</item>
+        <item>Em qualquer lugar</item>
     </string-array>
     <string-array name="transformation_entries">
         <item>Deslizar</item>
@@ -52,11 +34,5 @@
         <item>Cascata</item>
         <item>Rodar</item>
         <item>Cubo</item>
-    </string-array>
-    <string-array name="wallpaper_scroll_entries">
-        <item>Predefinido pelo tema</item>
-        <item>Ao centro</item>
-        <item>Esquerda</item>
-        <item>Direita</item>
     </string-array>
 </resources>

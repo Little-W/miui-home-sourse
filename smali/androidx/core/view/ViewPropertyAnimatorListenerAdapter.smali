@@ -1,6 +1,5 @@
 .class public Landroidx/core/view/ViewPropertyAnimatorListenerAdapter;
 .super Ljava/lang/Object;
-.source "ViewPropertyAnimatorListenerAdapter.java"
 
 # interfaces
 .implements Landroidx/core/view/ViewPropertyAnimatorListener;
@@ -10,7 +9,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

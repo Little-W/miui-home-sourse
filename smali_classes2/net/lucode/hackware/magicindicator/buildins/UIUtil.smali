@@ -1,13 +1,11 @@
 .class public final Lnet/lucode/hackware/magicindicator/buildins/UIUtil;
 .super Ljava/lang/Object;
-.source "UIUtil.java"
 
 
 # direct methods
 .method public static dip2px(Landroid/content/Context;D)I
     .locals 2
 
-    .line 12
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0

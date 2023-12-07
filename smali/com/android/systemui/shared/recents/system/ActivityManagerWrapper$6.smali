@@ -1,6 +1,5 @@
 .class Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$6;
 .super Ljava/lang/Object;
-.source "ActivityManagerWrapper.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -8,7 +7,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->startActivityFromRecentsAsync(Lcom/android/systemui/shared/recents/model/Task$TaskKey;Landroid/app/ActivityOptions;IILjava/util/function/Consumer;Landroid/os/Handler;Z)V
+    value = Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->startActivityFromRecentsAsync(ILandroid/app/ActivityOptions;IILjava/util/function/Consumer;Landroid/os/Handler;Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,25 +19,24 @@
 # instance fields
 .field final synthetic this$0:Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
 
-.field final synthetic val$options:Landroid/app/ActivityOptions;
+.field final synthetic val$finalOptions:Landroid/app/ActivityOptions;
 
 .field final synthetic val$resultCallback:Ljava/util/function/Consumer;
 
 .field final synthetic val$resultCallbackHandler:Landroid/os/Handler;
 
-.field final synthetic val$taskKey:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
+.field final synthetic val$taskId:I
 
 
 # direct methods
-.method constructor <init>(Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;Lcom/android/systemui/shared/recents/model/Task$TaskKey;Landroid/app/ActivityOptions;Ljava/util/function/Consumer;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;ILandroid/app/ActivityOptions;Ljava/util/function/Consumer;Landroid/os/Handler;)V
     .locals 0
 
-    .line 532
     iput-object p1, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$6;->this$0:Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
 
-    iput-object p2, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$6;->val$taskKey:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
+    iput p2, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$6;->val$taskId:I
 
-    iput-object p3, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$6;->val$options:Landroid/app/ActivityOptions;
+    iput-object p3, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$6;->val$finalOptions:Landroid/app/ActivityOptions;
 
     iput-object p4, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$6;->val$resultCallback:Ljava/util/function/Consumer;
 
@@ -54,25 +52,20 @@
 .method public run()V
     .locals 3
 
-    .line 535
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$6;->this$0:Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
 
-    iget-object v1, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$6;->val$taskKey:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
+    iget v1, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$6;->val$taskId:I
 
-    iget v1, v1, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->id:I
-
-    iget-object v2, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$6;->val$options:Landroid/app/ActivityOptions;
+    iget-object v2, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$6;->val$finalOptions:Landroid/app/ActivityOptions;
 
     invoke-virtual {v0, v1, v2}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->startActivityFromRecents(ILandroid/app/ActivityOptions;)Z
 
     move-result v0
 
-    .line 536
     iget-object v1, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$6;->val$resultCallback:Ljava/util/function/Consumer;
 
     if-eqz v1, :cond_0
 
-    .line 537
     iget-object v1, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$6;->val$resultCallbackHandler:Landroid/os/Handler;
 
     new-instance v2, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$6$1;

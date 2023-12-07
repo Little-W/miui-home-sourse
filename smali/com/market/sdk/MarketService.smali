@@ -1,6 +1,5 @@
 .class public Lcom/market/sdk/MarketService;
 .super Lcom/market/ServiceProxy;
-.source "MarketService.java"
 
 # interfaces
 .implements Lcom/market/sdk/IMarketService;
@@ -18,7 +17,6 @@
 .method private constructor <init>(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
 
-    .line 33
     invoke-direct {p0, p1, p2}, Lcom/market/ServiceProxy;-><init>(Landroid/content/Context;Landroid/content/Intent;)V
 
     return-void
@@ -27,7 +25,6 @@
 .method static synthetic access$000(Lcom/market/sdk/MarketService;)Lcom/market/sdk/IMarketService;
     .locals 0
 
-    .line 20
     iget-object p0, p0, Lcom/market/sdk/MarketService;->mService:Lcom/market/sdk/IMarketService;
 
     return-object p0
@@ -36,12 +33,10 @@
 .method public static openService(Landroid/content/Context;)Lcom/market/sdk/IMarketService;
     .locals 4
 
-    .line 27
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 28
     new-instance v1, Landroid/content/ComponentName;
 
     sget-object v2, Lcom/market/sdk/MarketManager;->MARKET_PACKAGE_NAME:Ljava/lang/String;
@@ -52,7 +47,6 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 29
     new-instance v1, Lcom/market/sdk/MarketService;
 
     invoke-direct {v1, p0, v0}, Lcom/market/sdk/MarketService;-><init>(Landroid/content/Context;Landroid/content/Intent;)V
@@ -70,12 +64,10 @@
         }
     .end annotation
 
-    .line 76
     new-instance v0, Lcom/market/sdk/compat/FutureTaskCompat;
 
     invoke-direct {v0}, Lcom/market/sdk/compat/FutureTaskCompat;-><init>()V
 
-    .line 77
     new-instance v1, Lcom/market/sdk/MarketService$3;
 
     invoke-direct {v1, p0, v0}, Lcom/market/sdk/MarketService$3;-><init>(Lcom/market/sdk/MarketService;Lcom/market/sdk/compat/FutureTaskCompat;)V
@@ -84,41 +76,39 @@
 
     invoke-virtual {p0, v1, v2}, Lcom/market/sdk/MarketService;->setTask(Lcom/market/ServiceProxy$ProxyTask;Ljava/lang/String;)Z
 
-    .line 83
     invoke-virtual {p0}, Lcom/market/sdk/MarketService;->waitForCompletion()V
 
-    .line 84
     invoke-virtual {v0}, Lcom/market/sdk/compat/FutureTaskCompat;->isDone()Z
 
-    move-result v1
+    move-result p0
 
-    if-eqz v1, :cond_0
+    if-eqz p0, :cond_0
 
     invoke-virtual {v0}, Lcom/market/sdk/compat/FutureTaskCompat;->get()Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p0
 
-    check-cast v0, Ljava/lang/Boolean;
+    check-cast p0, Ljava/lang/Boolean;
 
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
 
-    move-result v0
+    move-result p0
 
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
     :goto_0
-    return v0
+    return p0
 .end method
 
 .method public asBinder()Landroid/os/IBinder;
-    .locals 1
+    .locals 0
 
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getApkCheckInfo(Ljava/lang/String;Ljava/lang/String;Z)Lcom/market/sdk/ApkVerifyInfo;
@@ -129,12 +119,10 @@
         }
     .end annotation
 
-    .line 63
     new-instance v6, Lcom/market/sdk/compat/FutureTaskCompat;
 
     invoke-direct {v6}, Lcom/market/sdk/compat/FutureTaskCompat;-><init>()V
 
-    .line 64
     new-instance v7, Lcom/market/sdk/MarketService$2;
 
     move-object v0, v7
@@ -155,29 +143,27 @@
 
     invoke-virtual {p0, v7, p1}, Lcom/market/sdk/MarketService;->setTask(Lcom/market/ServiceProxy$ProxyTask;Ljava/lang/String;)Z
 
-    .line 70
     invoke-virtual {p0}, Lcom/market/sdk/MarketService;->waitForCompletion()V
 
-    .line 71
     invoke-virtual {v6}, Lcom/market/sdk/compat/FutureTaskCompat;->isDone()Z
 
-    move-result p1
+    move-result p0
 
-    if-eqz p1, :cond_0
+    if-eqz p0, :cond_0
 
     invoke-virtual {v6}, Lcom/market/sdk/compat/FutureTaskCompat;->get()Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Lcom/market/sdk/ApkVerifyInfo;
+    check-cast p0, Lcom/market/sdk/ApkVerifyInfo;
 
     goto :goto_0
 
     :cond_0
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
     :goto_0
-    return-object p1
+    return-object p0
 .end method
 
 .method public getCategory([Ljava/lang/String;)I
@@ -188,12 +174,10 @@
         }
     .end annotation
 
-    .line 169
     new-instance v0, Lcom/market/sdk/compat/FutureTaskCompat;
 
     invoke-direct {v0}, Lcom/market/sdk/compat/FutureTaskCompat;-><init>()V
 
-    .line 170
     new-instance v1, Lcom/market/sdk/MarketService$11;
 
     invoke-direct {v1, p0, v0, p1}, Lcom/market/sdk/MarketService$11;-><init>(Lcom/market/sdk/MarketService;Lcom/market/sdk/compat/FutureTaskCompat;[Ljava/lang/String;)V
@@ -202,33 +186,31 @@
 
     invoke-virtual {p0, v1, p1}, Lcom/market/sdk/MarketService;->setTask(Lcom/market/ServiceProxy$ProxyTask;Ljava/lang/String;)Z
 
-    .line 176
     invoke-virtual {p0}, Lcom/market/sdk/MarketService;->waitForCompletion()V
 
-    .line 177
     invoke-virtual {v0}, Lcom/market/sdk/compat/FutureTaskCompat;->isDone()Z
 
-    move-result p1
+    move-result p0
 
-    if-eqz p1, :cond_0
+    if-eqz p0, :cond_0
 
     invoke-virtual {v0}, Lcom/market/sdk/compat/FutureTaskCompat;->get()Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Ljava/lang/Integer;
+    check-cast p0, Ljava/lang/Integer;
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
-    move-result p1
+    move-result p0
 
     goto :goto_0
 
     :cond_0
-    const/4 p1, -0x1
+    const/4 p0, -0x1
 
     :goto_0
-    return p1
+    return p0
 .end method
 
 .method public getCategoryV2([Ljava/lang/String;Landroid/os/ResultReceiver;)V
@@ -239,7 +221,6 @@
         }
     .end annotation
 
-    .line 192
     new-instance v0, Lcom/market/sdk/MarketService$13;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/market/sdk/MarketService$13;-><init>(Lcom/market/sdk/MarketService;[Ljava/lang/String;Landroid/os/ResultReceiver;)V
@@ -259,7 +240,6 @@
         }
     .end annotation
 
-    .line 223
     new-instance v0, Lcom/market/sdk/MarketService$16;
 
     invoke-direct {v0, p0, p1}, Lcom/market/sdk/MarketService$16;-><init>(Lcom/market/sdk/MarketService;Landroid/os/ResultReceiver;)V
@@ -279,12 +259,10 @@
         }
     .end annotation
 
-    .line 156
     new-instance v0, Lcom/market/sdk/compat/FutureTaskCompat;
 
     invoke-direct {v0}, Lcom/market/sdk/compat/FutureTaskCompat;-><init>()V
 
-    .line 157
     new-instance v1, Lcom/market/sdk/MarketService$10;
 
     invoke-direct {v1, p0, v0}, Lcom/market/sdk/MarketService$10;-><init>(Lcom/market/sdk/MarketService;Lcom/market/sdk/compat/FutureTaskCompat;)V
@@ -293,29 +271,27 @@
 
     invoke-virtual {p0, v1, v2}, Lcom/market/sdk/MarketService;->setTask(Lcom/market/ServiceProxy$ProxyTask;Ljava/lang/String;)Z
 
-    .line 163
     invoke-virtual {p0}, Lcom/market/sdk/MarketService;->waitForCompletion()V
 
-    .line 164
     invoke-virtual {v0}, Lcom/market/sdk/compat/FutureTaskCompat;->isDone()Z
 
-    move-result v1
+    move-result p0
 
-    if-eqz v1, :cond_0
+    if-eqz p0, :cond_0
 
     invoke-virtual {v0}, Lcom/market/sdk/compat/FutureTaskCompat;->get()Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p0
 
-    check-cast v0, Ljava/lang/String;
+    check-cast p0, Ljava/lang/String;
 
     goto :goto_0
 
     :cond_0
-    const-string v0, ""
+    const-string p0, ""
 
     :goto_0
-    return-object v0
+    return-object p0
 .end method
 
 .method public getVerifyInfo(Ljava/lang/String;Ljava/lang/String;Z)Lcom/market/sdk/ApkVerifyInfo;
@@ -326,12 +302,10 @@
         }
     .end annotation
 
-    .line 49
     new-instance v6, Lcom/market/sdk/compat/FutureTaskCompat;
 
     invoke-direct {v6}, Lcom/market/sdk/compat/FutureTaskCompat;-><init>()V
 
-    .line 50
     new-instance v7, Lcom/market/sdk/MarketService$1;
 
     move-object v0, v7
@@ -352,29 +326,27 @@
 
     invoke-virtual {p0, v7, p1}, Lcom/market/sdk/MarketService;->setTask(Lcom/market/ServiceProxy$ProxyTask;Ljava/lang/String;)Z
 
-    .line 56
     invoke-virtual {p0}, Lcom/market/sdk/MarketService;->waitForCompletion()V
 
-    .line 57
     invoke-virtual {v6}, Lcom/market/sdk/compat/FutureTaskCompat;->isDone()Z
 
-    move-result p1
+    move-result p0
 
-    if-eqz p1, :cond_0
+    if-eqz p0, :cond_0
 
     invoke-virtual {v6}, Lcom/market/sdk/compat/FutureTaskCompat;->get()Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Lcom/market/sdk/ApkVerifyInfo;
+    check-cast p0, Lcom/market/sdk/ApkVerifyInfo;
 
     goto :goto_0
 
     :cond_0
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
     :goto_0
-    return-object p1
+    return-object p0
 .end method
 
 .method public getWhiteSet()Ljava/lang/String;
@@ -385,12 +357,10 @@
         }
     .end annotation
 
-    .line 143
     new-instance v0, Lcom/market/sdk/compat/FutureTaskCompat;
 
     invoke-direct {v0}, Lcom/market/sdk/compat/FutureTaskCompat;-><init>()V
 
-    .line 144
     new-instance v1, Lcom/market/sdk/MarketService$9;
 
     invoke-direct {v1, p0, v0}, Lcom/market/sdk/MarketService$9;-><init>(Lcom/market/sdk/MarketService;Lcom/market/sdk/compat/FutureTaskCompat;)V
@@ -399,29 +369,27 @@
 
     invoke-virtual {p0, v1, v2}, Lcom/market/sdk/MarketService;->setTask(Lcom/market/ServiceProxy$ProxyTask;Ljava/lang/String;)Z
 
-    .line 150
     invoke-virtual {p0}, Lcom/market/sdk/MarketService;->waitForCompletion()V
 
-    .line 151
     invoke-virtual {v0}, Lcom/market/sdk/compat/FutureTaskCompat;->isDone()Z
 
-    move-result v1
+    move-result p0
 
-    if-eqz v1, :cond_0
+    if-eqz p0, :cond_0
 
     invoke-virtual {v0}, Lcom/market/sdk/compat/FutureTaskCompat;->get()Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p0
 
-    check-cast v0, Ljava/lang/String;
+    check-cast p0, Ljava/lang/String;
 
     goto :goto_0
 
     :cond_0
-    const-string v0, ""
+    const-string p0, ""
 
     :goto_0
-    return-object v0
+    return-object p0
 .end method
 
 .method public getWhiteSetV2(Landroid/os/ResultReceiver;)V
@@ -432,7 +400,6 @@
         }
     .end annotation
 
-    .line 182
     new-instance v0, Lcom/market/sdk/MarketService$12;
 
     invoke-direct {v0, p0, p1}, Lcom/market/sdk/MarketService$12;-><init>(Lcom/market/sdk/MarketService;Landroid/os/ResultReceiver;)V
@@ -452,12 +419,10 @@
         }
     .end annotation
 
-    .line 130
     new-instance v0, Lcom/market/sdk/compat/FutureTaskCompat;
 
     invoke-direct {v0}, Lcom/market/sdk/compat/FutureTaskCompat;-><init>()V
 
-    .line 131
     new-instance v1, Lcom/market/sdk/MarketService$8;
 
     invoke-direct {v1, p0, v0, p1}, Lcom/market/sdk/MarketService$8;-><init>(Lcom/market/sdk/MarketService;Lcom/market/sdk/compat/FutureTaskCompat;Ljava/lang/String;)V
@@ -466,33 +431,31 @@
 
     invoke-virtual {p0, v1, p1}, Lcom/market/sdk/MarketService;->setTask(Lcom/market/ServiceProxy$ProxyTask;Ljava/lang/String;)Z
 
-    .line 137
     invoke-virtual {p0}, Lcom/market/sdk/MarketService;->waitForCompletion()V
 
-    .line 138
     invoke-virtual {v0}, Lcom/market/sdk/compat/FutureTaskCompat;->isDone()Z
 
-    move-result p1
+    move-result p0
 
-    if-eqz p1, :cond_0
+    if-eqz p0, :cond_0
 
     invoke-virtual {v0}, Lcom/market/sdk/compat/FutureTaskCompat;->get()Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Ljava/lang/Boolean;
+    check-cast p0, Ljava/lang/Boolean;
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
 
-    move-result p1
+    move-result p0
 
     goto :goto_0
 
     :cond_0
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
     :goto_0
-    return p1
+    return p0
 .end method
 
 .method public loadDesktopRecommendInfo(JLjava/lang/String;Ljava/util/List;Lcom/market/sdk/IDesktopRecommendResponse;)V
@@ -515,7 +478,6 @@
         }
     .end annotation
 
-    .line 120
     new-instance v7, Lcom/market/sdk/MarketService$7;
 
     move-object v0, v7
@@ -559,7 +521,6 @@
         }
     .end annotation
 
-    .line 203
     new-instance v7, Lcom/market/sdk/MarketService$14;
 
     move-object v0, v7
@@ -591,7 +552,6 @@
         }
     .end annotation
 
-    .line 213
     new-instance v0, Lcom/market/sdk/MarketService$15;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/market/sdk/MarketService$15;-><init>(Lcom/market/sdk/MarketService;Landroid/os/Bundle;Landroid/os/ResultReceiver;)V
@@ -611,7 +571,6 @@
         }
     .end annotation
 
-    .line 99
     new-instance v0, Lcom/market/sdk/MarketService$5;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lcom/market/sdk/MarketService$5;-><init>(Lcom/market/sdk/MarketService;Ljava/lang/String;Ljava/lang/String;Lcom/market/sdk/IImageCallback;)V
@@ -631,7 +590,6 @@
         }
     .end annotation
 
-    .line 109
     new-instance v6, Lcom/market/sdk/MarketService$6;
 
     move-object v0, v6
@@ -658,7 +616,6 @@
 .method public onConnected(Landroid/os/IBinder;)V
     .locals 0
 
-    .line 38
     invoke-static {p1}, Lcom/market/sdk/IMarketService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/market/sdk/IMarketService;
 
     move-result-object p1
@@ -682,7 +639,6 @@
         }
     .end annotation
 
-    .line 89
     new-instance v0, Lcom/market/sdk/MarketService$4;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/market/sdk/MarketService$4;-><init>(Lcom/market/sdk/MarketService;Ljava/lang/String;Ljava/lang/String;)V

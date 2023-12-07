@@ -1,6 +1,5 @@
 .class final Lokio/Util;
 .super Ljava/lang/Object;
-.source "Util.java"
 
 
 # static fields
@@ -13,7 +12,6 @@
 
     const-string v0, "UTF-8"
 
-    .line 22
     invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
 
     move-result-object v0
@@ -35,7 +33,6 @@
 
     add-int v2, v1, p1
 
-    .line 76
     aget-byte v2, p0, v2
 
     add-int v3, v1, p3
@@ -80,7 +77,6 @@
 
     return-void
 
-    .line 29
     :cond_0
     new-instance v0, Ljava/lang/ArrayIndexOutOfBoundsException;
 
@@ -90,7 +86,6 @@
 
     const/4 v2, 0x0
 
-    .line 30
     invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p0
@@ -122,4 +117,91 @@
     invoke-direct {v0, p0}, Ljava/lang/ArrayIndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
 
     throw v0
+.end method
+
+.method public static reverseBytesInt(I)I
+    .locals 2
+
+    const/high16 v0, -0x1000000
+
+    and-int/2addr v0, p0
+
+    ushr-int/lit8 v0, v0, 0x18
+
+    const/high16 v1, 0xff0000
+
+    and-int/2addr v1, p0
+
+    ushr-int/lit8 v1, v1, 0x8
+
+    or-int/2addr v0, v1
+
+    const v1, 0xff00
+
+    and-int/2addr v1, p0
+
+    shl-int/lit8 v1, v1, 0x8
+
+    or-int/2addr v0, v1
+
+    and-int/lit16 p0, p0, 0xff
+
+    shl-int/lit8 p0, p0, 0x18
+
+    or-int/2addr p0, v0
+
+    return p0
+.end method
+
+.method public static reverseBytesShort(S)S
+    .locals 1
+
+    const v0, 0xffff
+
+    and-int/2addr p0, v0
+
+    const v0, 0xff00
+
+    and-int/2addr v0, p0
+
+    ushr-int/lit8 v0, v0, 0x8
+
+    and-int/lit16 p0, p0, 0xff
+
+    shl-int/lit8 p0, p0, 0x8
+
+    or-int/2addr p0, v0
+
+    int-to-short p0, p0
+
+    return p0
+.end method
+
+.method public static sneakyRethrow(Ljava/lang/Throwable;)V
+    .locals 0
+
+    invoke-static {p0}, Lokio/Util;->sneakyThrow2(Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method private static sneakyThrow2(Ljava/lang/Throwable;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Throwable;",
+            ">(",
+            "Ljava/lang/Throwable;",
+            ")V^TT;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/Throwable;
+        }
+    .end annotation
+
+    throw p0
 .end method

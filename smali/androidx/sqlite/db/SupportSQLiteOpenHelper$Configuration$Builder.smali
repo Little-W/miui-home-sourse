@@ -1,0 +1,89 @@
+.class public Landroidx/sqlite/db/SupportSQLiteOpenHelper$Configuration$Builder;
+.super Ljava/lang/Object;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroidx/sqlite/db/SupportSQLiteOpenHelper$Configuration;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x9
+    name = "Builder"
+.end annotation
+
+
+# instance fields
+.field mCallback:Landroidx/sqlite/db/SupportSQLiteOpenHelper$Callback;
+
+.field mContext:Landroid/content/Context;
+
+.field mName:Ljava/lang/String;
+
+
+# direct methods
+.method constructor <init>(Landroid/content/Context;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Landroidx/sqlite/db/SupportSQLiteOpenHelper$Configuration$Builder;->mContext:Landroid/content/Context;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public build()Landroidx/sqlite/db/SupportSQLiteOpenHelper$Configuration;
+    .locals 3
+
+    iget-object v0, p0, Landroidx/sqlite/db/SupportSQLiteOpenHelper$Configuration$Builder;->mCallback:Landroidx/sqlite/db/SupportSQLiteOpenHelper$Callback;
+
+    if-eqz v0, :cond_1
+
+    iget-object v1, p0, Landroidx/sqlite/db/SupportSQLiteOpenHelper$Configuration$Builder;->mContext:Landroid/content/Context;
+
+    if-eqz v1, :cond_0
+
+    new-instance v2, Landroidx/sqlite/db/SupportSQLiteOpenHelper$Configuration;
+
+    iget-object p0, p0, Landroidx/sqlite/db/SupportSQLiteOpenHelper$Configuration$Builder;->mName:Ljava/lang/String;
+
+    invoke-direct {v2, v1, p0, v0}, Landroidx/sqlite/db/SupportSQLiteOpenHelper$Configuration;-><init>(Landroid/content/Context;Ljava/lang/String;Landroidx/sqlite/db/SupportSQLiteOpenHelper$Callback;)V
+
+    return-object v2
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Must set a non-null context to create the configuration."
+
+    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_1
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Must set a callback to create the configuration."
+
+    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public callback(Landroidx/sqlite/db/SupportSQLiteOpenHelper$Callback;)Landroidx/sqlite/db/SupportSQLiteOpenHelper$Configuration$Builder;
+    .locals 0
+
+    iput-object p1, p0, Landroidx/sqlite/db/SupportSQLiteOpenHelper$Configuration$Builder;->mCallback:Landroidx/sqlite/db/SupportSQLiteOpenHelper$Callback;
+
+    return-object p0
+.end method
+
+.method public name(Ljava/lang/String;)Landroidx/sqlite/db/SupportSQLiteOpenHelper$Configuration$Builder;
+    .locals 0
+
+    iput-object p1, p0, Landroidx/sqlite/db/SupportSQLiteOpenHelper$Configuration$Builder;->mName:Ljava/lang/String;
+
+    return-object p0
+.end method

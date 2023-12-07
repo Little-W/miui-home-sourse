@@ -1,6 +1,5 @@
 .class final enum Lcom/mi/google/gson/FieldNamingPolicy$2;
 .super Lcom/mi/google/gson/FieldNamingPolicy;
-.source "FieldNamingPolicy.java"
 
 
 # annotations
@@ -20,7 +19,6 @@
 
     const/4 v0, 0x0
 
-    .line 53
     invoke-direct {p0, p1, p2, v0}, Lcom/mi/google/gson/FieldNamingPolicy;-><init>(Ljava/lang/String;ILcom/mi/google/gson/FieldNamingPolicy$1;)V
 
     return-void
@@ -31,14 +29,13 @@
 .method public translateName(Ljava/lang/reflect/Field;)Ljava/lang/String;
     .locals 0
 
-    .line 55
     invoke-virtual {p1}, Ljava/lang/reflect/Field;->getName()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    invoke-static {p1}, Lcom/mi/google/gson/FieldNamingPolicy$2;->upperCaseFirstLetter(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/mi/google/gson/FieldNamingPolicy$2;->upperCaseFirstLetter(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

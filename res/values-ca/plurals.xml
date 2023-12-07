@@ -44,14 +44,6 @@
         <item quantity="other">%2$s sense llegir de %1$s</item>
         <item quantity="one">%2$s sense llegir de %1$s</item>
     </plurals>
-    <plurals name="delete_wallpapers_message">
-        <item quantity="other">Vols suprimir %1$d fons de pantalla?</item>
-        <item quantity="one">Vols suprimir %1$d fons de pantalla?</item>
-    </plurals>
-    <plurals name="editing_mode_title">
-        <item quantity="other">%1$d elements seleccionats</item>
-        <item quantity="one">%1$d element seleccionat</item>
-    </plurals>
     <plurals name="half_hour_ago">
         <item quantity="other">Fa mitja hora</item>
         <item quantity="one">Fa mitja hora</item>
@@ -80,13 +72,17 @@
         <item quantity="other">%d elements sel·leccionats</item>
         <item quantity="one">%d element sel·leccionat</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d notificacions noves</item>
+        <item quantity="one">%d notificació nova</item>
+    </plurals>
     <plurals name="num_minutes_ago">
         <item quantity="other">Fa %d minuts</item>
         <item quantity="one">Fa 1 minut</item>
     </plurals>
     <plurals name="remove_dialog_title_multi_format">
-        <item quantity="other">"Voleu eliminar %1$d aplicacions de la Pantalla d'Inici?"</item>
-        <item quantity="one">"Voleu eliminar %1$d aplicació de la Pantalla d'Inici?"</item>
+        <item quantity="other">"Voleu eliminar %1$d elements de la Pantalla d'inici?"</item>
+        <item quantity="one">"Voleu eliminar %1$d element de la Pantalla d'inici?"</item>
     </plurals>
     <plurals name="scroll_tip_format_when_announce_accessibility">
         <item quantity="other">Pàgina %1$d, aplicacions %2$d.</item>

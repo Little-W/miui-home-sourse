@@ -1,6 +1,5 @@
 .class public interface abstract Landroidx/core/internal/view/SupportMenuItem;
 .super Ljava/lang/Object;
-.source "SupportMenuItem.java"
 
 # interfaces
 .implements Landroid/view/MenuItem;
@@ -49,6 +48,16 @@
 .method public abstract setAlphabeticShortcut(CI)Landroid/view/MenuItem;
 .end method
 
+.method public bridge synthetic setContentDescription(Ljava/lang/CharSequence;)Landroid/view/MenuItem;
+    .locals 0
+
+    invoke-interface {p0, p1}, Landroidx/core/internal/view/SupportMenuItem;->setContentDescription(Ljava/lang/CharSequence;)Landroidx/core/internal/view/SupportMenuItem;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
 .method public abstract setContentDescription(Ljava/lang/CharSequence;)Landroidx/core/internal/view/SupportMenuItem;
 .end method
 
@@ -71,6 +80,16 @@
 .end method
 
 .method public abstract setSupportActionProvider(Landroidx/core/view/ActionProvider;)Landroidx/core/internal/view/SupportMenuItem;
+.end method
+
+.method public bridge synthetic setTooltipText(Ljava/lang/CharSequence;)Landroid/view/MenuItem;
+    .locals 0
+
+    invoke-interface {p0, p1}, Landroidx/core/internal/view/SupportMenuItem;->setTooltipText(Ljava/lang/CharSequence;)Landroidx/core/internal/view/SupportMenuItem;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 .method public abstract setTooltipText(Ljava/lang/CharSequence;)Landroidx/core/internal/view/SupportMenuItem;

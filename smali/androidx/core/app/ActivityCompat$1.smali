@@ -1,6 +1,5 @@
 .class Landroidx/core/app/ActivityCompat$1;
 .super Ljava/lang/Object;
-.source "ActivityCompat.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -29,7 +28,6 @@
 .method constructor <init>([Ljava/lang/String;Landroid/app/Activity;I)V
     .locals 0
 
-    .line 505
     iput-object p1, p0, Landroidx/core/app/ActivityCompat$1;->val$permissions:[Ljava/lang/String;
 
     iput-object p2, p0, Landroidx/core/app/ActivityCompat$1;->val$activity:Landroid/app/Activity;
@@ -46,28 +44,24 @@
 .method public run()V
     .locals 6
 
-    .line 508
     iget-object v0, p0, Landroidx/core/app/ActivityCompat$1;->val$permissions:[Ljava/lang/String;
 
     array-length v0, v0
 
     new-array v0, v0, [I
 
-    .line 510
     iget-object v1, p0, Landroidx/core/app/ActivityCompat$1;->val$activity:Landroid/app/Activity;
 
     invoke-virtual {v1}, Landroid/app/Activity;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
 
-    .line 511
     iget-object v2, p0, Landroidx/core/app/ActivityCompat$1;->val$activity:Landroid/app/Activity;
 
     invoke-virtual {v2}, Landroid/app/Activity;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 513
     iget-object v3, p0, Landroidx/core/app/ActivityCompat$1;->val$permissions:[Ljava/lang/String;
 
     array-length v3, v3
@@ -77,7 +71,6 @@
     :goto_0
     if-ge v4, v3, :cond_0
 
-    .line 515
     iget-object v5, p0, Landroidx/core/app/ActivityCompat$1;->val$permissions:[Ljava/lang/String;
 
     aget-object v5, v5, v4
@@ -92,7 +85,6 @@
 
     goto :goto_0
 
-    .line 519
     :cond_0
     iget-object v1, p0, Landroidx/core/app/ActivityCompat$1;->val$activity:Landroid/app/Activity;
 
@@ -100,9 +92,9 @@
 
     iget v2, p0, Landroidx/core/app/ActivityCompat$1;->val$requestCode:I
 
-    iget-object v3, p0, Landroidx/core/app/ActivityCompat$1;->val$permissions:[Ljava/lang/String;
+    iget-object p0, p0, Landroidx/core/app/ActivityCompat$1;->val$permissions:[Ljava/lang/String;
 
-    invoke-interface {v1, v2, v3, v0}, Landroidx/core/app/ActivityCompat$OnRequestPermissionsResultCallback;->onRequestPermissionsResult(I[Ljava/lang/String;[I)V
+    invoke-interface {v1, v2, p0, v0}, Landroidx/core/app/ActivityCompat$OnRequestPermissionsResultCallback;->onRequestPermissionsResult(I[Ljava/lang/String;[I)V
 
     return-void
 .end method

@@ -1,6 +1,5 @@
 .class final Landroidx/core/content/res/GradientColorInflaterCompat$ColorStops;
 .super Ljava/lang/Object;
-.source "GradientColorInflaterCompat.java"
 
 
 # annotations
@@ -24,12 +23,10 @@
 .method constructor <init>(II)V
     .locals 3
 
-    .line 227
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x2
 
-    .line 228
     new-array v1, v0, [I
 
     const/4 v2, 0x0
@@ -42,7 +39,6 @@
 
     iput-object v1, p0, Landroidx/core/content/res/GradientColorInflaterCompat$ColorStops;->mColors:[I
 
-    .line 229
     new-array p1, v0, [F
 
     fill-array-data p1, :array_0
@@ -61,12 +57,10 @@
 .method constructor <init>(III)V
     .locals 3
 
-    .line 232
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x3
 
-    .line 233
     new-array v1, v0, [I
 
     const/4 v2, 0x0
@@ -83,7 +77,6 @@
 
     iput-object v1, p0, Landroidx/core/content/res/GradientColorInflaterCompat$ColorStops;->mColors:[I
 
-    .line 234
     new-array p1, v0, [F
 
     fill-array-data p1, :array_0
@@ -116,20 +109,16 @@
         }
     .end annotation
 
-    .line 217
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 218
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
 
-    .line 219
     new-array v1, v0, [I
 
     iput-object v1, p0, Landroidx/core/content/res/GradientColorInflaterCompat$ColorStops;->mColors:[I
 
-    .line 220
     new-array v1, v0, [F
 
     iput-object v1, p0, Landroidx/core/content/res/GradientColorInflaterCompat$ColorStops;->mOffsets:[F
@@ -139,7 +128,6 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 222
     iget-object v2, p0, Landroidx/core/content/res/GradientColorInflaterCompat$ColorStops;->mColors:[I
 
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -154,7 +142,6 @@
 
     aput v3, v2, v1
 
-    .line 223
     iget-object v2, p0, Landroidx/core/content/res/GradientColorInflaterCompat$ColorStops;->mOffsets:[F
 
     invoke-interface {p2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;

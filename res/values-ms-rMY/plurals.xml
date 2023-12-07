@@ -33,12 +33,6 @@
     <plurals name="announce_for_unread">
         <item quantity="other">%2$s belum dibaca dari %1$s</item>
     </plurals>
-    <plurals name="delete_wallpapers_message">
-        <item quantity="other">Padam %1$d latar hias?</item>
-    </plurals>
-    <plurals name="editing_mode_title">
-        <item quantity="other">%1$d item dipilih</item>
-    </plurals>
     <plurals name="half_hour_ago">
         <item quantity="other">Setengah jam yang lalu</item>
     </plurals>
@@ -64,7 +58,7 @@
         <item quantity="other">%d minit yang lalu</item>
     </plurals>
     <plurals name="remove_dialog_title_multi_format">
-        <item quantity="other">Buang %1$d apl dari Skrin Utama?</item>
+        <item quantity="other">Padam %1$d item dari Skrin Utama?</item>
     </plurals>
     <plurals name="scroll_tip_format_when_announce_accessibility">
         <item quantity="other">Halaman %1$d, %2$d apl.</item>

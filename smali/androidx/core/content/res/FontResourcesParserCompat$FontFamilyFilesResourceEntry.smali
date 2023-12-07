@@ -1,6 +1,5 @@
 .class public final Landroidx/core/content/res/FontResourcesParserCompat$FontFamilyFilesResourceEntry;
 .super Ljava/lang/Object;
-.source "FontResourcesParserCompat.java"
 
 # interfaces
 .implements Landroidx/core/content/res/FontResourcesParserCompat$FamilyResourceEntry;
@@ -25,10 +24,8 @@
 .method public constructor <init>([Landroidx/core/content/res/FontResourcesParserCompat$FontFileResourceEntry;)V
     .locals 0
 
-    .line 153
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 154
     iput-object p1, p0, Landroidx/core/content/res/FontResourcesParserCompat$FontFamilyFilesResourceEntry;->mEntries:[Landroidx/core/content/res/FontResourcesParserCompat$FontFileResourceEntry;
 
     return-void
@@ -37,10 +34,9 @@
 
 # virtual methods
 .method public getEntries()[Landroidx/core/content/res/FontResourcesParserCompat$FontFileResourceEntry;
-    .locals 1
+    .locals 0
 
-    .line 158
-    iget-object v0, p0, Landroidx/core/content/res/FontResourcesParserCompat$FontFamilyFilesResourceEntry;->mEntries:[Landroidx/core/content/res/FontResourcesParserCompat$FontFileResourceEntry;
+    iget-object p0, p0, Landroidx/core/content/res/FontResourcesParserCompat$FontFamilyFilesResourceEntry;->mEntries:[Landroidx/core/content/res/FontResourcesParserCompat$FontFileResourceEntry;
 
-    return-object v0
+    return-object p0
 .end method

@@ -1,6 +1,5 @@
 .class public Lcom/market/sdk/compat/UserHandleCompat;
 .super Ljava/lang/Object;
-.source "UserHandleCompat.java"
 
 
 # static fields
@@ -22,16 +21,15 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .line 16
     const-class v0, Landroid/os/UserHandle;
 
     const-class v1, Landroid/os/UserHandle;
 
-    const-string v2, "USER_CURRENT"
+    const-string v2, "I"
 
-    const-string v3, "I"
+    const-string v3, "USER_CURRENT"
 
-    invoke-static {v0, v1, v2, v3}, Lcom/market/sdk/utils/ReflectUtils;->getFieldValue(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v0, v1, v3, v2}, Lcom/market/sdk/utils/ReflectUtils;->getFieldValue(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -39,7 +37,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 17
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
@@ -52,16 +49,13 @@
     :goto_0
     sput v0, Lcom/market/sdk/compat/UserHandleCompat;->USER_CURRENT:I
 
-    .line 18
     const-class v0, Landroid/os/UserHandle;
 
     const-class v1, Landroid/os/UserHandle;
 
-    const-string v2, "USER_OWNER"
+    const-string v3, "USER_OWNER"
 
-    const-string v3, "I"
-
-    invoke-static {v0, v1, v2, v3}, Lcom/market/sdk/utils/ReflectUtils;->getFieldValue(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v0, v1, v3, v2}, Lcom/market/sdk/utils/ReflectUtils;->getFieldValue(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -69,7 +63,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 19
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
@@ -84,7 +77,6 @@
 
     const-string v0, "android.os.UserHandle"
 
-    .line 24
     invoke-static {v0}, Lcom/market/sdk/utils/ReflectUtils;->getClass(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
@@ -97,7 +89,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -108,7 +99,6 @@
 
     const-string v0, "miui.securityspace.XSpaceUserHandle"
 
-    .line 33
     invoke-static {v0}, Lcom/market/sdk/utils/ReflectUtils;->getClass(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
@@ -124,7 +114,6 @@
 
     const-string v3, "I"
 
-    .line 38
     invoke-static {v0, v0, v2, v3}, Lcom/market/sdk/utils/ReflectUtils;->getFieldValue(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
@@ -133,7 +122,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 39
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v1
@@ -143,28 +131,25 @@
 .end method
 
 .method public static myUserId()I
-    .locals 5
+    .locals 4
 
-    .line 28
     sget-object v0, Lcom/market/sdk/compat/UserHandleCompat;->sUserHandleClazz:Ljava/lang/Class;
 
-    const-string v1, "myUserId"
+    sget-object v1, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
-    sget-object v2, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+    const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    new-array v3, v2, [Ljava/lang/Class;
 
-    new-array v4, v3, [Ljava/lang/Class;
+    invoke-static {v1, v3}, Lcom/market/sdk/utils/ReflectUtils;->getMethodSignature(Ljava/lang/Class;[Ljava/lang/Class;)Ljava/lang/String;
 
-    .line 29
-    invoke-static {v2, v4}, Lcom/market/sdk/utils/ReflectUtils;->getMethodSignature(Ljava/lang/Class;[Ljava/lang/Class;)Ljava/lang/String;
+    move-result-object v1
 
-    move-result-object v2
+    new-array v2, v2, [Ljava/lang/Object;
 
-    new-array v3, v3, [Ljava/lang/Object;
+    const-string v3, "myUserId"
 
-    .line 28
-    invoke-static {v0, v0, v1, v2, v3}, Lcom/market/sdk/utils/ReflectUtils;->invokeObject(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v0, v3, v1, v2}, Lcom/market/sdk/utils/ReflectUtils;->invokeObject(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 

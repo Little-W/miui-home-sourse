@@ -1,6 +1,5 @@
 .class public Lcom/google/android/filament/IndexBuffer;
 .super Ljava/lang/Object;
-.source "IndexBuffer.java"
 
 
 # annotations
@@ -19,10 +18,8 @@
 .method private constructor <init>(J)V
     .locals 0
 
-    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 41
     iput-wide p1, p0, Lcom/google/android/filament/IndexBuffer;->mNativeObject:J
 
     return-void
@@ -31,7 +28,6 @@
 .method synthetic constructor <init>(JLcom/google/android/filament/IndexBuffer$1;)V
     .locals 0
 
-    .line 37
     invoke-direct {p0, p1, p2}, Lcom/google/android/filament/IndexBuffer;-><init>(J)V
 
     return-void
@@ -40,7 +36,6 @@
 .method static synthetic access$000()J
     .locals 2
 
-    .line 37
     invoke-static {}, Lcom/google/android/filament/IndexBuffer;->nCreateBuilder()J
 
     move-result-wide v0
@@ -51,7 +46,6 @@
 .method static synthetic access$100(JI)V
     .locals 0
 
-    .line 37
     invoke-static {p0, p1, p2}, Lcom/google/android/filament/IndexBuffer;->nBuilderIndexCount(JI)V
 
     return-void
@@ -60,7 +54,6 @@
 .method static synthetic access$200(JI)V
     .locals 0
 
-    .line 37
     invoke-static {p0, p1, p2}, Lcom/google/android/filament/IndexBuffer;->nBuilderBufferType(JI)V
 
     return-void
@@ -69,7 +62,6 @@
 .method static synthetic access$300(JJ)J
     .locals 0
 
-    .line 37
     invoke-static {p0, p1, p2, p3}, Lcom/google/android/filament/IndexBuffer;->nBuilderBuild(JJ)J
 
     move-result-wide p0
@@ -80,7 +72,6 @@
 .method static synthetic access$500(J)V
     .locals 0
 
-    .line 37
     invoke-static {p0, p1}, Lcom/google/android/filament/IndexBuffer;->nDestroyBuilder(J)V
 
     return-void
@@ -114,7 +105,6 @@
 
     const-wide/16 v0, 0x0
 
-    .line 214
     iput-wide v0, p0, Lcom/google/android/filament/IndexBuffer;->mNativeObject:J
 
     return-void
@@ -123,41 +113,38 @@
 .method public getIndexCount()I
     .locals 2
 
-    .line 139
     invoke-virtual {p0}, Lcom/google/android/filament/IndexBuffer;->getNativeObject()J
 
     move-result-wide v0
 
     invoke-static {v0, v1}, Lcom/google/android/filament/IndexBuffer;->nGetIndexCount(J)I
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method
 
 .method public getNativeObject()J
     .locals 4
 
-    .line 207
     iget-wide v0, p0, Lcom/google/android/filament/IndexBuffer;->mNativeObject:J
 
     const-wide/16 v2, 0x0
 
-    cmp-long v2, v0, v2
+    cmp-long p0, v0, v2
 
-    if-eqz v2, :cond_0
+    if-eqz p0, :cond_0
 
     return-wide v0
 
-    .line 208
     :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-    const-string v1, "Calling method on destroyed IndexBuffer"
+    const-string v0, "Calling method on destroyed IndexBuffer"
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw v0
+    throw p0
 .end method
 
 .method public setBuffer(Lcom/google/android/filament/Engine;Ljava/nio/Buffer;)V
@@ -177,7 +164,6 @@
 
     move-object v2, p2
 
-    .line 154
     invoke-virtual/range {v0 .. v6}, Lcom/google/android/filament/IndexBuffer;->setBuffer(Lcom/google/android/filament/Engine;Ljava/nio/Buffer;IILjava/lang/Object;Ljava/lang/Runnable;)V
 
     return-void
@@ -200,7 +186,6 @@
 
     move v4, p4
 
-    .line 174
     invoke-virtual/range {v0 .. v6}, Lcom/google/android/filament/IndexBuffer;->setBuffer(Lcom/google/android/filament/Engine;Ljava/nio/Buffer;IILjava/lang/Object;Ljava/lang/Runnable;)V
 
     return-void
@@ -209,7 +194,6 @@
 .method public setBuffer(Lcom/google/android/filament/Engine;Ljava/nio/Buffer;IILjava/lang/Object;Ljava/lang/Runnable;)V
     .locals 10
 
-    .line 199
     invoke-virtual {p0}, Lcom/google/android/filament/IndexBuffer;->getNativeObject()J
 
     move-result-wide v0
@@ -224,7 +208,6 @@
 
     if-nez p4, :cond_0
 
-    .line 200
     invoke-virtual {p2}, Ljava/nio/Buffer;->remaining()I
 
     move-result v4
@@ -245,7 +228,6 @@
 
     move-object/from16 v9, p6
 
-    .line 199
     invoke-static/range {v0 .. v9}, Lcom/google/android/filament/IndexBuffer;->nSetBuffer(JJLjava/nio/Buffer;IIILjava/lang/Object;Ljava/lang/Runnable;)I
 
     move-result v0
@@ -254,7 +236,6 @@
 
     return-void
 
-    .line 202
     :cond_1
     new-instance v0, Ljava/nio/BufferOverflowException;
 

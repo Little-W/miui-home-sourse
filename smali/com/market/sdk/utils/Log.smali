@@ -1,6 +1,5 @@
 .class public Lcom/market/sdk/utils/Log;
 .super Ljava/lang/Object;
-.source "Log.java"
 
 
 # static fields
@@ -23,7 +22,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,7 +30,6 @@
 .method public static addPrefix(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    .line 132
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -53,7 +50,6 @@
 .method public static d(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 16
     invoke-static {p0}, Lcom/market/sdk/utils/Log;->addPrefix(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -68,7 +64,6 @@
 .method public static d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
 
-    .line 20
     invoke-static {p0}, Lcom/market/sdk/utils/Log;->addPrefix(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -83,7 +78,6 @@
 .method public static e(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 24
     invoke-static {p0}, Lcom/market/sdk/utils/Log;->addPrefix(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -98,7 +92,6 @@
 .method public static e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
 
-    .line 28
     invoke-static {p0}, Lcom/market/sdk/utils/Log;->addPrefix(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -113,7 +106,6 @@
 .method public static i(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 40
     invoke-static {p0}, Lcom/market/sdk/utils/Log;->addPrefix(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -128,7 +120,6 @@
 .method public static i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
 
-    .line 44
     invoke-static {p0}, Lcom/market/sdk/utils/Log;->addPrefix(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -143,7 +134,6 @@
 .method private static log(Ljava/lang/String;Ljava/lang/String;I)V
     .locals 5
 
-    .line 56
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -163,7 +153,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 59
     :cond_1
     :goto_0
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -176,7 +165,6 @@
 
     mul-int/lit16 v2, v0, 0xbb8
 
-    .line 61
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v3
@@ -191,17 +179,14 @@
 
     if-ge v2, v3, :cond_1
 
-    .line 63
     invoke-virtual {p1, v2, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 64
     invoke-static {p0, v2, p2}, Lcom/market/sdk/utils/Log;->logSubMessage(Ljava/lang/String;Ljava/lang/String;I)V
 
     goto :goto_0
 
-    .line 57
     :cond_2
     :goto_1
     invoke-static {p0, p1, p2}, Lcom/market/sdk/utils/Log;->logSubMessage(Ljava/lang/String;Ljava/lang/String;I)V
@@ -213,7 +198,6 @@
 .method private static log(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;I)V
     .locals 5
 
-    .line 71
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -233,7 +217,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 74
     :cond_1
     :goto_0
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -246,7 +229,6 @@
 
     mul-int/lit16 v2, v0, 0xbb8
 
-    .line 76
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v3
@@ -261,17 +243,14 @@
 
     if-ge v2, v3, :cond_1
 
-    .line 78
     invoke-virtual {p1, v2, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 79
     invoke-static {p0, v2, p2, p3}, Lcom/market/sdk/utils/Log;->logSubMessage(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;I)V
 
     goto :goto_0
 
-    .line 72
     :cond_2
     :goto_1
     invoke-static {p0, p1, p2, p3}, Lcom/market/sdk/utils/Log;->logSubMessage(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;I)V
@@ -281,115 +260,118 @@
 .end method
 
 .method private static logSubMessage(Ljava/lang/String;Ljava/lang/String;I)V
-    .locals 0
+    .locals 1
 
     if-nez p1, :cond_0
 
     const-string p1, ""
 
     :cond_0
-    packed-switch p2, :pswitch_data_0
+    if-eqz p2, :cond_5
+
+    const/4 v0, 0x1
+
+    if-eq p2, v0, :cond_4
+
+    const/4 v0, 0x2
+
+    if-eq p2, v0, :cond_3
+
+    const/4 v0, 0x3
+
+    if-eq p2, v0, :cond_2
+
+    const/4 v0, 0x4
+
+    if-eq p2, v0, :cond_1
 
     goto :goto_0
 
-    .line 103
-    :pswitch_0
+    :cond_1
     invoke-static {p0, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 100
-    :pswitch_1
+    :cond_2
     invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 97
-    :pswitch_2
+    :cond_3
     invoke-static {p0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 94
-    :pswitch_3
+    :cond_4
     invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 91
-    :pswitch_4
+    :cond_5
     invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
     return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 .method private static logSubMessage(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;I)V
-    .locals 0
+    .locals 1
 
     if-nez p1, :cond_0
 
     const-string p1, ""
 
     :cond_0
-    packed-switch p3, :pswitch_data_0
+    if-eqz p3, :cond_5
+
+    const/4 v0, 0x1
+
+    if-eq p3, v0, :cond_4
+
+    const/4 v0, 0x2
+
+    if-eq p3, v0, :cond_3
+
+    const/4 v0, 0x3
+
+    if-eq p3, v0, :cond_2
+
+    const/4 v0, 0x4
+
+    if-eq p3, v0, :cond_1
 
     goto :goto_0
 
-    .line 126
-    :pswitch_0
+    :cond_1
     invoke-static {p0, p1, p2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
 
-    .line 123
-    :pswitch_1
+    :cond_2
     invoke-static {p0, p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
 
-    .line 120
-    :pswitch_2
+    :cond_3
     invoke-static {p0, p1, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
 
-    .line 117
-    :pswitch_3
+    :cond_4
     invoke-static {p0, p1, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
 
-    .line 114
-    :pswitch_4
+    :cond_5
     invoke-static {p0, p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
     return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 .method public static v(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 48
     invoke-static {p0}, Lcom/market/sdk/utils/Log;->addPrefix(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -404,7 +386,6 @@
 .method public static v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
 
-    .line 52
     invoke-static {p0}, Lcom/market/sdk/utils/Log;->addPrefix(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -419,7 +400,6 @@
 .method public static w(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 32
     invoke-static {p0}, Lcom/market/sdk/utils/Log;->addPrefix(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -434,7 +414,6 @@
 .method public static w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
 
-    .line 36
     invoke-static {p0}, Lcom/market/sdk/utils/Log;->addPrefix(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0

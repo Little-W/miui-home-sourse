@@ -1,6 +1,5 @@
 .class Landroidx/lifecycle/LiveData$AlwaysActiveObserver;
 .super Landroidx/lifecycle/LiveData$ObserverWrapper;
-.source "LiveData.java"
 
 
 # annotations
@@ -36,10 +35,8 @@
         }
     .end annotation
 
-    .line 475
     iput-object p1, p0, Landroidx/lifecycle/LiveData$AlwaysActiveObserver;->this$0:Landroidx/lifecycle/LiveData;
 
-    .line 476
     invoke-direct {p0, p1, p2}, Landroidx/lifecycle/LiveData$ObserverWrapper;-><init>(Landroidx/lifecycle/LiveData;Landroidx/lifecycle/Observer;)V
 
     return-void
@@ -48,9 +45,9 @@
 
 # virtual methods
 .method shouldBeActive()Z
-    .locals 1
+    .locals 0
 
-    const/4 v0, 0x1
+    const/4 p0, 0x1
 
-    return v0
+    return p0
 .end method

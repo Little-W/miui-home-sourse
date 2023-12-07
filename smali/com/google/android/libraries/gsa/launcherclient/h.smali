@@ -1,6 +1,5 @@
 .class final Lcom/google/android/libraries/gsa/launcherclient/h;
 .super Ljava/lang/Object;
-.source "LauncherClient.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -28,7 +27,6 @@
 
     iget-object v0, p0, Lcom/google/android/libraries/gsa/launcherclient/h;->a:Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;
 
-    .line 1
     invoke-static {v0}, Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;->c(Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;)Lcom/google/android/libraries/gsa/launcherclient/c;
 
     move-result-object v0
@@ -66,7 +64,6 @@
 
     new-instance v1, Lcom/google/android/libraries/gsa/launcherclient/g;
 
-    .line 2
     invoke-direct {v1, p0}, Lcom/google/android/libraries/gsa/launcherclient/g;-><init>(Lcom/google/android/libraries/gsa/launcherclient/h;)V
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V

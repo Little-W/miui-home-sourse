@@ -1,6 +1,5 @@
 .class Lcom/market/sdk/FloatService$2;
 .super Ljava/lang/Object;
-.source "FloatService.java"
 
 # interfaces
 .implements Lcom/market/ServiceProxy$ProxyTask;
@@ -31,7 +30,6 @@
 .method constructor <init>(Lcom/market/sdk/FloatService;Lcom/market/sdk/compat/FutureTaskCompat;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 72
     iput-object p1, p0, Lcom/market/sdk/FloatService$2;->this$0:Lcom/market/sdk/FloatService;
 
     iput-object p2, p0, Lcom/market/sdk/FloatService$2;->val$future:Lcom/market/sdk/compat/FutureTaskCompat;
@@ -48,14 +46,13 @@
 
 # virtual methods
 .method public run()V
-    .locals 4
+    .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
         }
     .end annotation
 
-    .line 75
     iget-object v0, p0, Lcom/market/sdk/FloatService$2;->this$0:Lcom/market/sdk/FloatService;
 
     invoke-static {v0}, Lcom/market/sdk/FloatService;->access$000(Lcom/market/sdk/FloatService;)Lcom/xiaomi/market/IAppDownloadManager;
@@ -64,7 +61,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 76
     iget-object v0, p0, Lcom/market/sdk/FloatService$2;->val$future:Lcom/market/sdk/compat/FutureTaskCompat;
 
     iget-object v1, p0, Lcom/market/sdk/FloatService$2;->this$0:Lcom/market/sdk/FloatService;
@@ -75,27 +71,26 @@
 
     iget-object v2, p0, Lcom/market/sdk/FloatService$2;->val$packageName:Ljava/lang/String;
 
-    iget-object v3, p0, Lcom/market/sdk/FloatService$2;->val$callerPackageName:Ljava/lang/String;
+    iget-object p0, p0, Lcom/market/sdk/FloatService$2;->val$callerPackageName:Ljava/lang/String;
 
-    invoke-interface {v1, v2, v3}, Lcom/xiaomi/market/IAppDownloadManager;->pause(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-interface {v1, v2, p0}, Lcom/xiaomi/market/IAppDownloadManager;->pause(Ljava/lang/String;Ljava/lang/String;)Z
 
-    move-result v1
+    move-result p0
 
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-virtual {v0, v1}, Lcom/market/sdk/compat/FutureTaskCompat;->set(Ljava/lang/Object;)V
+    invoke-virtual {v0, p0}, Lcom/market/sdk/compat/FutureTaskCompat;->set(Ljava/lang/Object;)V
 
     goto :goto_0
 
     :cond_0
-    const-string v0, "FloatService"
+    const-string p0, "FloatService"
 
-    const-string v1, "IAppDownloadManager is null"
+    const-string v0, "IAppDownloadManager is null"
 
-    .line 78
-    invoke-static {v0, v1}, Lcom/market/sdk/utils/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lcom/market/sdk/utils/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return-void

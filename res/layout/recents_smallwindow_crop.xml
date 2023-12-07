@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.miui.home.recents.views.RecentsSmallWindowCrop android:layout_gravity="top" android:id="@id/recents_smallwindow_crop" android:paddingLeft="@dimen/smallwindow_crop_height_padding_horizontal" android:paddingTop="@dimen/smallwindow_crop_height_padding_vertical" android:paddingRight="@dimen/smallwindow_crop_height_padding_horizontal" android:paddingBottom="@dimen/smallwindow_crop_height_padding_vertical" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingHorizontal="@dimen/smallwindow_crop_height_padding_horizontal" android:paddingVertical="@dimen/smallwindow_crop_height_padding_vertical"
+<com.miui.home.recents.views.RecentsSmallWindowCrop android:layout_gravity="top" android:orientation="vertical" android:id="@id/recents_smallwindow_crop" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <View android:id="@id/recents_smallwindow_background" android:background="@drawable/recents_smallwindow_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.0" />
-    <RelativeLayout android:gravity="center_horizontal" android:id="@id/smallwindow_content" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/smallwindow_crop_content_margin_top">
-        <View android:id="@id/smallwindow_icon" android:background="@drawable/smallwindow_icon" android:layout_width="21.089996dip" android:layout_height="23.269989dip" android:layout_centerHorizontal="true" />
-        <include android:id="@id/recents_smallwindow_drag_text" android:text="@string/recents_smallwindow_drag_text" layout="@layout/recents_small_window_text" />
-        <include android:id="@id/recents_smallwindow_hold_text" android:text="@string/recents_smallwindow_text" layout="@layout/recents_small_window_text" />
-    </RelativeLayout>
+    <FrameLayout android:layout_gravity="top" android:id="@id/root_view" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:paddingHorizontal="@dimen/smallwindow_crop_height_padding_horizontal" android:paddingVertical="@dimen/smallwindow_crop_height_padding_vertical">
+        <View android:id="@id/recents_smallwindow_background" android:background="@drawable/recents_smallwindow_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.0" />
+        <RelativeLayout android:gravity="center_horizontal" android:id="@id/smallwindow_content" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/smallwindow_crop_content_margin_top">
+            <View android:id="@id/smallwindow_icon" android:background="@drawable/smallwindow_icon" android:layout_width="21.818176dip" android:layout_height="24.0dip" android:layout_centerHorizontal="true" />
+            <include android:id="@id/recents_smallwindow_drag_text" android:text="@string/recents_smallwindow_drag_text" layout="@layout/recents_small_window_text" />
+            <include android:id="@id/recents_smallwindow_hold_text" android:text="@string/recents_smallwindow_text" layout="@layout/recents_small_window_text" />
+        </RelativeLayout>
+    </FrameLayout>
 </com.miui.home.recents.views.RecentsSmallWindowCrop>

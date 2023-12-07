@@ -9,9 +9,9 @@
                 <TextView android:gravity="center" android:layout_gravity="center" android:id="@id/description_text" android:paddingTop="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/uninstall_dialog_message" android:paddingStart="15.0dip" android:paddingEnd="15.0dip" style="@style/UninstallDialog.Message" />
             </LinearLayout>
         </LinearLayout>
-        <LinearLayout android:layout_gravity="bottom|center" android:orientation="horizontal" android:id="@id/buttons" android:layout_width="@dimen/uninstall_buttons_width" android:layout_height="wrap_content" android:layout_marginTop="30.0dip">
-            <Button android:id="@id/btnCancel" android:background="@drawable/uninstall_dialog_cancel_btn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/cancel_action" style="@style/UninstallDialog.Button" />
-            <Button android:id="@id/btnOk" android:background="@drawable/uninstall_dialog_confirm_btn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/uninstall" style="@style/UninstallDialog.Button" />
+        <LinearLayout android:layout_gravity="bottom|center" android:orientation="horizontal" android:id="@id/buttons" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30.0dip">
+            <Button android:id="@id/btnCancel" android:background="@drawable/uninstall_dialog_cancel_btn" android:layout_width="@dimen/uninstall_button_width" android:layout_height="@dimen/uninstall_button_height" android:layout_marginLeft="@dimen/uninstall_button_margin_hor" android:layout_marginRight="@dimen/uninstall_button_margin_hor" android:text="@string/cancel_action" style="@style/UninstallDialog.Button" />
+            <Button android:id="@id/btnOk" android:background="@drawable/uninstall_dialog_confirm_btn" android:layout_width="@dimen/uninstall_button_width" android:layout_height="@dimen/uninstall_button_height" android:layout_marginLeft="@dimen/uninstall_button_margin_hor" android:layout_marginRight="@dimen/uninstall_button_margin_hor" android:text="@string/uninstall" style="@style/UninstallDialog.Button" />
         </LinearLayout>
     </LinearLayout>
 </com.miui.home.launcher.UninstallDialog>

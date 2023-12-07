@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="enforced_rounded_corner_max_radius">20.919983dip</dimen>
     <dimen name="miui_widget_background_radius">17.519989dip</dimen>
 </resources>

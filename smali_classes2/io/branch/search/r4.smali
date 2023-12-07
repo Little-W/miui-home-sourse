@@ -1,0 +1,18 @@
+.class public interface abstract Lio/branch/search/r4;
+.super Ljava/lang/Object;
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lio/branch/search/r4$a;
+    }
+.end annotation
+
+
+# virtual methods
+.method public abstract a()Lio/branch/search/internal/ui/AppEntityResolver;
+.end method
+
+.method public abstract b()Lio/branch/search/internal/ui/LinkEntityResolver;
+.end method

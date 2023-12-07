@@ -1,6 +1,5 @@
 .class public Lcom/google/android/filament/Colors;
 .super Ljava/lang/Object;
-.source "Colors.java"
 
 
 # annotations
@@ -18,7 +17,6 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,10 +27,8 @@
 
     const/4 v0, 0x3
 
-    .line 214
     new-array v0, v0, [F
 
-    .line 215
     invoke-static {p0, v0}, Lcom/google/android/filament/Colors;->nCct(F[F)V
 
     return-object v0
@@ -43,10 +39,8 @@
 
     const/4 v0, 0x3
 
-    .line 231
     new-array v0, v0, [F
 
-    .line 232
     invoke-static {p0, v0}, Lcom/google/android/filament/Colors;->nIlluminantD(F[F)V
 
     return-object v0
@@ -61,7 +55,6 @@
 .method public static toLinear(Lcom/google/android/filament/Colors$Conversion;[F)[F
     .locals 6
 
-    .line 186
     sget-object v0, Lcom/google/android/filament/Colors$1;->$SwitchMap$com$google$android$filament$Colors$Conversion:[I
 
     invoke-virtual {p0}, Lcom/google/android/filament/Colors$Conversion;->ordinal()I
@@ -74,15 +67,20 @@
 
     const/4 v1, 0x0
 
-    packed-switch p0, :pswitch_data_0
+    const/4 v2, 0x1
+
+    if-eq p0, v2, :cond_1
+
+    const/4 v2, 0x2
+
+    if-eq p0, v2, :cond_0
 
     goto :goto_3
 
+    :cond_0
     :goto_0
-    :pswitch_0
-    if-ge v1, v0, :cond_1
+    if-ge v1, v0, :cond_3
 
-    .line 195
     aget p0, p1, v1
 
     float-to-double v2, p0
@@ -99,20 +97,18 @@
 
     goto :goto_0
 
+    :cond_1
     :goto_1
-    :pswitch_1
-    if-ge v1, v0, :cond_1
+    if-ge v1, v0, :cond_3
 
-    .line 189
     aget p0, p1, v1
 
     const v2, 0x3d25aee6    # 0.04045f
 
     cmpg-float p0, p0, v2
 
-    if-gtz p0, :cond_0
+    if-gtz p0, :cond_2
 
-    .line 190
     aget p0, p1, v1
 
     const v2, 0x414eb852    # 12.92f
@@ -121,7 +117,7 @@
 
     goto :goto_2
 
-    :cond_0
+    :cond_2
     aget p0, p1, v1
 
     const v2, 0x3d6147ae    # 0.055f
@@ -149,15 +145,9 @@
 
     goto :goto_1
 
-    :cond_1
+    :cond_3
     :goto_3
     return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 .method public static toLinear(Lcom/google/android/filament/Colors$RgbType;FFF)[F
@@ -165,7 +155,6 @@
 
     const/4 v0, 0x3
 
-    .line 108
     new-array v0, v0, [F
 
     const/4 v1, 0x0
@@ -190,7 +179,6 @@
 .method public static toLinear(Lcom/google/android/filament/Colors$RgbType;[F)[F
     .locals 1
 
-    .line 123
     sget-object v0, Lcom/google/android/filament/Colors$RgbType;->LINEAR:Lcom/google/android/filament/Colors$RgbType;
 
     if-ne p0, v0, :cond_0
@@ -213,7 +201,6 @@
 
     const/4 v0, 0x4
 
-    .line 141
     new-array v0, v0, [F
 
     const/4 v1, 0x0
@@ -240,9 +227,8 @@
 .end method
 
 .method public static toLinear(Lcom/google/android/filament/Colors$RgbaType;[F)[F
-    .locals 2
+    .locals 4
 
-    .line 156
     sget-object v0, Lcom/google/android/filament/Colors$1;->$SwitchMap$com$google$android$filament$Colors$RgbaType:[I
 
     invoke-virtual {p0}, Lcom/google/android/filament/Colors$RgbaType;->ordinal()I
@@ -251,15 +237,26 @@
 
     aget p0, v0, p0
 
-    packed-switch p0, :pswitch_data_0
+    const/4 v0, 0x3
 
+    const/4 v1, 0x2
+
+    const/4 v2, 0x1
+
+    if-eq p0, v2, :cond_2
+
+    if-eq p0, v1, :cond_3
+
+    if-eq p0, v0, :cond_1
+
+    const/4 v0, 0x4
+
+    if-eq p0, v0, :cond_0
+
+    :cond_0
     return-object p1
 
-    :pswitch_0
-    return-object p1
-
-    .line 167
-    :pswitch_1
+    :cond_1
     sget-object p0, Lcom/google/android/filament/Colors$Conversion;->ACCURATE:Lcom/google/android/filament/Colors$Conversion;
 
     invoke-static {p0, p1}, Lcom/google/android/filament/Colors;->toLinear(Lcom/google/android/filament/Colors$Conversion;[F)[F
@@ -268,54 +265,33 @@
 
     return-object p0
 
-    .line 158
-    :pswitch_2
+    :cond_2
     sget-object p0, Lcom/google/android/filament/Colors$Conversion;->ACCURATE:Lcom/google/android/filament/Colors$Conversion;
 
     invoke-static {p0, p1}, Lcom/google/android/filament/Colors;->toLinear(Lcom/google/android/filament/Colors$Conversion;[F)[F
 
-    :pswitch_3
-    const/4 p0, 0x3
-
-    .line 161
-    aget p0, p1, p0
+    :cond_3
+    aget p0, p1, v0
 
     const/4 v0, 0x0
 
-    .line 162
-    aget v1, p1, v0
+    aget v3, p1, v0
 
-    mul-float/2addr v1, p0
+    mul-float/2addr v3, p0
 
-    aput v1, p1, v0
+    aput v3, p1, v0
 
-    const/4 v0, 0x1
+    aget v0, p1, v2
 
-    .line 163
-    aget v1, p1, v0
+    mul-float/2addr v0, p0
 
-    mul-float/2addr v1, p0
+    aput v0, p1, v2
 
-    aput v1, p1, v0
+    aget v0, p1, v1
 
-    const/4 v0, 0x2
+    mul-float/2addr v0, p0
 
-    .line 164
-    aget v1, p1, v0
-
-    mul-float/2addr v1, p0
-
-    aput v1, p1, v0
+    aput v0, p1, v1
 
     return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_2
-        :pswitch_3
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

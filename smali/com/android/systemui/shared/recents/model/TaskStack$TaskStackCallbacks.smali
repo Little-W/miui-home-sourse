@@ -1,6 +1,5 @@
 .class public interface abstract Lcom/android/systemui/shared/recents/model/TaskStack$TaskStackCallbacks;
 .super Ljava/lang/Object;
-.source "TaskStack.java"
 
 
 # annotations

@@ -2,7 +2,6 @@
 <resources>
     <bool name="abc_action_bar_embed_tabs">true</bool>
     <bool name="abc_action_bar_expanded_action_views_exclusive">true</bool>
-    <bool name="abc_allow_stacked_button_bar">false</bool>
     <bool name="abc_config_actionMenuItemAllCaps">true</bool>
     <bool name="abc_config_showMenuShortcutsWhenKeyboardPresent">false</bool>
     <bool name="abc_split_action_bar_is_narrow">true</bool>
@@ -14,9 +13,10 @@
     <bool name="config_hardwareAccelerated">true</bool>
     <bool name="config_hide_hotseats_app_title">true</bool>
     <bool name="config_materialPreferenceIconSpaceReserved">false</bool>
-    <bool name="is_drawer_setting">false</bool>
     <bool name="miuix_appcompat_floating_window_is_translucent">false</bool>
+    <bool name="miuix_appcompat_floating_window_navigation_translucent">false</bool>
     <bool name="miuix_appcompat_window_floating">false</bool>
+    <bool name="mtrl_btn_textappearance_all_caps">true</bool>
     <bool name="preference_item_bg_enable_variablePadding">false</bool>
     <bool name="sliding_settings_in_desktop_mode_page">true</bool>
     <bool name="sliding_settings_in_miuihome_when_no_newhome">true</bool>

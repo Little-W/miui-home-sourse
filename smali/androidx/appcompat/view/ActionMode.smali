@@ -1,6 +1,5 @@
 .class public abstract Landroidx/appcompat/view/ActionMode;
 .super Ljava/lang/Object;
-.source "ActionMode.java"
 
 
 # annotations
@@ -21,7 +20,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,35 +43,33 @@
 .end method
 
 .method public getTag()Ljava/lang/Object;
-    .locals 1
+    .locals 0
 
-    .line 71
-    iget-object v0, p0, Landroidx/appcompat/view/ActionMode;->mTag:Ljava/lang/Object;
+    iget-object p0, p0, Landroidx/appcompat/view/ActionMode;->mTag:Ljava/lang/Object;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public abstract getTitle()Ljava/lang/CharSequence;
 .end method
 
 .method public getTitleOptionalHint()Z
-    .locals 1
+    .locals 0
 
-    .line 145
-    iget-boolean v0, p0, Landroidx/appcompat/view/ActionMode;->mTitleOptionalHint:Z
+    iget-boolean p0, p0, Landroidx/appcompat/view/ActionMode;->mTitleOptionalHint:Z
 
-    return v0
+    return p0
 .end method
 
 .method public abstract invalidate()V
 .end method
 
 .method public isTitleOptional()Z
-    .locals 1
+    .locals 0
 
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
 .end method
 
 .method public abstract setCustomView(Landroid/view/View;)V
@@ -88,7 +84,6 @@
 .method public setTag(Ljava/lang/Object;)V
     .locals 0
 
-    .line 57
     iput-object p1, p0, Landroidx/appcompat/view/ActionMode;->mTag:Ljava/lang/Object;
 
     return-void
@@ -103,7 +98,6 @@
 .method public setTitleOptionalHint(Z)V
     .locals 0
 
-    .line 134
     iput-boolean p1, p0, Landroidx/appcompat/view/ActionMode;->mTitleOptionalHint:Z
 
     return-void

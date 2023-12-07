@@ -1,6 +1,5 @@
 .class final Lcom/google/android/libraries/gsa/launcherclient/k;
 .super Ljava/lang/Object;
-.source "SimpleServiceConnection.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -24,12 +23,11 @@
 
 # virtual methods
 .method public final run()V
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Lcom/google/android/libraries/gsa/launcherclient/k;->a:Lcom/google/android/libraries/gsa/launcherclient/l;
+    iget-object p0, p0, Lcom/google/android/libraries/gsa/launcherclient/k;->a:Lcom/google/android/libraries/gsa/launcherclient/l;
 
-    .line 1
-    invoke-static {v0}, Lcom/google/android/libraries/gsa/launcherclient/l;->a(Lcom/google/android/libraries/gsa/launcherclient/l;)V
+    invoke-static {p0}, Lcom/google/android/libraries/gsa/launcherclient/l;->a(Lcom/google/android/libraries/gsa/launcherclient/l;)V
 
     return-void
 .end method

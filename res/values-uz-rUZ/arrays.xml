@@ -1,48 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="cell_layout_size_entries">
-        <item>4x4</item>
-        <item>4x5</item>
-    </string-array>
-    <string-array name="cell_layout_size_values">
-        <item>4x4</item>
-        <item>4x5</item>
+    <string-array name="animation_rate_entries">
+        <item>Sekin</item>
+        <item>Balanslangan</item>
+        <item>Tez</item>
     </string-array>
     <string-array name="editing_mode_entries">
         <item>Fon rasmi</item>
         <item>Vidjetlar</item>
         <item>Sozlamalar</item>
     </string-array>
-    <string-array name="gadget_weather_image">
-        <item>Tiniq</item>
-        <item>Bulutli</item>
-        <item>Bulutli</item>
-        <item>Tumanli</item>
-        <item>Qattiq yomg‘ir</item>
-        <item>Jala</item>
-        <item>Juda kuchli yog‘ingarchilik</item>
-        <item>Momaqaldiroq</item>
-        <item>Jala</item>
-        <item>Kuchli yog‘ingarchilik</item>
-        <item>Yomg‘ir</item>
-        <item>Mayda yomg‘ir</item>
-        <item>Qorli yomg‘ir</item>
-        <item>Qor bo‘roni</item>
-        <item>Qorli jala</item>
-        <item>Kuchli qor</item>
-        <item>Qor</item>
-        <item>Yengil qor</item>
-        <item>Kuchli qum bo‘roni</item>
-        <item>Qum bo‘roni</item>
-        <item>Engil qum bo‘roni</item>
-        <item>Qum bo‘roni</item>
-        <item>Do‘l</item>
-        <item>Chang</item>
-        <item>Smog</item>
-    </string-array>
-    <string-array name="gadget_weather_theme_type_entries">
+    <string-array name="monochrome_color_entries">
         <item>Birlamchi</item>
-        <item>Klassik</item>
+        <item>Ko‘k</item>
+        <item>Yashil</item>
+        <item>Siyohrang</item>
+        <item>Jigar rang</item>
+    </string-array>
+    <string-array name="no_word_model_entries">
+        <item>O‘chiq</item>
+        <item>Har qanday joyda</item>
+        <item>Vidjetlarda</item>
+    </string-array>
+    <string-array name="no_word_model_entries_not_support_only_widget_no_word">
+        <item>O‘chiq</item>
+        <item>Har qanday joyda</item>
     </string-array>
     <string-array name="transformation_entries">
         <item>Slayd</item>
@@ -52,11 +34,5 @@
         <item>Kaskad</item>
         <item>Aylantirish</item>
         <item>Kub</item>
-    </string-array>
-    <string-array name="wallpaper_scroll_entries">
-        <item>Birlamchi mavzu</item>
-        <item>Markaz</item>
-        <item>Chap</item>
-        <item>O‘ng</item>
     </string-array>
 </resources>

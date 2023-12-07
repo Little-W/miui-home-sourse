@@ -1,6 +1,5 @@
 .class Lcom/airbnb/lottie/parser/ShapeFillParser;
 .super Ljava/lang/Object;
-.source "ShapeFillParser.java"
 
 
 # static fields
@@ -23,7 +22,6 @@
 
     const-string v5, "hd"
 
-    .line 16
     filled-new-array/range {v0 .. v5}, [Ljava/lang/String;
 
     move-result-object v0
@@ -45,99 +43,106 @@
         }
     .end annotation
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
-    const/4 v1, 0x0
+    const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    move v5, v1
+    move v5, v0
 
     move v9, v5
+
+    move v0, v1
 
     move-object v4, v2
 
     move-object v7, v4
 
-    move v1, v0
-
-    .line 37
     :goto_0
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->hasNext()Z
 
     move-result v3
 
-    if-eqz v3, :cond_0
+    if-eqz v3, :cond_6
 
-    .line 38
     sget-object v3, Lcom/airbnb/lottie/parser/ShapeFillParser;->NAMES:Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
 
     invoke-virtual {p0, v3}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->selectName(Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;)I
 
     move-result v3
 
-    packed-switch v3, :pswitch_data_0
+    if-eqz v3, :cond_5
 
-    .line 58
+    if-eq v3, v1, :cond_4
+
+    const/4 v6, 0x2
+
+    if-eq v3, v6, :cond_3
+
+    const/4 v6, 0x3
+
+    if-eq v3, v6, :cond_2
+
+    const/4 v6, 0x4
+
+    if-eq v3, v6, :cond_1
+
+    const/4 v6, 0x5
+
+    if-eq v3, v6, :cond_0
+
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->skipName()V
 
-    .line 59
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->skipValue()V
 
     goto :goto_0
 
-    .line 55
-    :pswitch_0
+    :cond_0
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextBoolean()Z
 
     move-result v9
 
     goto :goto_0
 
-    .line 52
-    :pswitch_1
+    :cond_1
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextInt()I
 
-    move-result v1
+    move-result v0
 
     goto :goto_0
 
-    .line 49
-    :pswitch_2
+    :cond_2
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextBoolean()Z
 
     move-result v5
 
     goto :goto_0
 
-    .line 46
-    :pswitch_3
+    :cond_3
     invoke-static {p0, p1}, Lcom/airbnb/lottie/parser/AnimatableValueParser;->parseInteger(Lcom/airbnb/lottie/parser/moshi/JsonReader;Lcom/airbnb/lottie/LottieComposition;)Lcom/airbnb/lottie/model/animatable/AnimatableIntegerValue;
 
     move-result-object v2
 
     goto :goto_0
 
-    .line 43
-    :pswitch_4
+    :cond_4
     invoke-static {p0, p1}, Lcom/airbnb/lottie/parser/AnimatableValueParser;->parseColor(Lcom/airbnb/lottie/parser/moshi/JsonReader;Lcom/airbnb/lottie/LottieComposition;)Lcom/airbnb/lottie/model/animatable/AnimatableColorValue;
 
     move-result-object v7
 
     goto :goto_0
 
-    .line 40
-    :pswitch_5
+    :cond_5
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextString()Ljava/lang/String;
 
     move-result-object v4
 
     goto :goto_0
 
-    :cond_0
-    if-nez v2, :cond_1
+    :cond_6
+    if-nez v2, :cond_7
 
-    .line 65
     new-instance v2, Lcom/airbnb/lottie/model/animatable/AnimatableIntegerValue;
 
     new-instance p0, Lcom/airbnb/lottie/value/Keyframe;
@@ -156,23 +161,21 @@
 
     invoke-direct {v2, p0}, Lcom/airbnb/lottie/model/animatable/AnimatableIntegerValue;-><init>(Ljava/util/List;)V
 
-    :cond_1
+    :cond_7
     move-object v8, v2
 
-    if-ne v1, v0, :cond_2
+    if-ne v0, v1, :cond_8
 
-    .line 66
     sget-object p0, Landroid/graphics/Path$FillType;->WINDING:Landroid/graphics/Path$FillType;
 
     goto :goto_1
 
-    :cond_2
+    :cond_8
     sget-object p0, Landroid/graphics/Path$FillType;->EVEN_ODD:Landroid/graphics/Path$FillType;
 
     :goto_1
     move-object v6, p0
 
-    .line 67
     new-instance p0, Lcom/airbnb/lottie/model/content/ShapeFill;
 
     move-object v3, p0
@@ -180,14 +183,4 @@
     invoke-direct/range {v3 .. v9}, Lcom/airbnb/lottie/model/content/ShapeFill;-><init>(Ljava/lang/String;ZLandroid/graphics/Path$FillType;Lcom/airbnb/lottie/model/animatable/AnimatableColorValue;Lcom/airbnb/lottie/model/animatable/AnimatableIntegerValue;Z)V
 
     return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

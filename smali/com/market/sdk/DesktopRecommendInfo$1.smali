@@ -1,6 +1,5 @@
 .class Lcom/market/sdk/DesktopRecommendInfo$1;
 .super Ljava/lang/Object;
-.source "DesktopRecommendInfo.java"
 
 # interfaces
 .implements Lcom/google/gson/JsonSerializer;
@@ -34,7 +33,6 @@
 .method constructor <init>(Lcom/market/sdk/DesktopRecommendInfo;)V
     .locals 0
 
-    .line 78
     iput-object p1, p0, Lcom/market/sdk/DesktopRecommendInfo$1;->this$0:Lcom/market/sdk/DesktopRecommendInfo;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,27 +45,25 @@
 .method public serialize(Landroid/net/Uri;Ljava/lang/reflect/Type;Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonElement;
     .locals 0
 
-    .line 81
-    new-instance p2, Lcom/google/gson/JsonPrimitive;
+    new-instance p0, Lcom/google/gson/JsonPrimitive;
 
     invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {p2, p1}, Lcom/google/gson/JsonPrimitive;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Lcom/google/gson/JsonPrimitive;-><init>(Ljava/lang/String;)V
 
-    return-object p2
+    return-object p0
 .end method
 
 .method public bridge synthetic serialize(Ljava/lang/Object;Ljava/lang/reflect/Type;Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonElement;
     .locals 0
 
-    .line 78
     check-cast p1, Landroid/net/Uri;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/market/sdk/DesktopRecommendInfo$1;->serialize(Landroid/net/Uri;Ljava/lang/reflect/Type;Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonElement;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

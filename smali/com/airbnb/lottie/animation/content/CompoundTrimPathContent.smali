@@ -1,10 +1,9 @@
 .class public Lcom/airbnb/lottie/animation/content/CompoundTrimPathContent;
 .super Ljava/lang/Object;
-.source "CompoundTrimPathContent.java"
 
 
 # instance fields
-.field private contents:Ljava/util/List;
+.field private final contents:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -19,10 +18,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 11
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -35,12 +32,11 @@
 
 # virtual methods
 .method addTrimPath(Lcom/airbnb/lottie/animation/content/TrimPathContent;)V
-    .locals 1
+    .locals 0
 
-    .line 14
-    iget-object v0, p0, Lcom/airbnb/lottie/animation/content/CompoundTrimPathContent;->contents:Ljava/util/List;
+    iget-object p0, p0, Lcom/airbnb/lottie/animation/content/CompoundTrimPathContent;->contents:Ljava/util/List;
 
-    invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method
@@ -48,7 +44,6 @@
 .method public apply(Landroid/graphics/Path;)V
     .locals 2
 
-    .line 18
     iget-object v0, p0, Lcom/airbnb/lottie/animation/content/CompoundTrimPathContent;->contents:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -60,7 +55,6 @@
     :goto_0
     if-ltz v0, :cond_0
 
-    .line 19
     iget-object v1, p0, Lcom/airbnb/lottie/animation/content/CompoundTrimPathContent;->contents:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;

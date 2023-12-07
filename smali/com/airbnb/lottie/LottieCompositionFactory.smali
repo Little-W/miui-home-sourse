@@ -1,6 +1,5 @@
 .class public Lcom/airbnb/lottie/LottieCompositionFactory;
 .super Ljava/lang/Object;
-.source "LottieCompositionFactory.java"
 
 
 # static fields
@@ -23,7 +22,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 52
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -32,7 +30,6 @@
 
     const/4 v0, 0x4
 
-    .line 58
     new-array v0, v0, [B
 
     fill-array-data v0, :array_0
@@ -50,17 +47,8 @@
     .end array-data
 .end method
 
-.method static synthetic access$000()Ljava/util/Map;
-    .locals 1
-
-    .line 46
-    sget-object v0, Lcom/airbnb/lottie/LottieCompositionFactory;->taskCache:Ljava/util/Map;
-
-    return-object v0
-.end method
-
 .method private static cache(Ljava/lang/String;Ljava/util/concurrent/Callable;)Lcom/airbnb/lottie/LottieTask;
-    .locals 1
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -81,7 +69,6 @@
 
     goto :goto_0
 
-    .line 521
     :cond_0
     invoke-static {}, Lcom/airbnb/lottie/model/LottieCompositionCache;->getInstance()Lcom/airbnb/lottie/model/LottieCompositionCache;
 
@@ -94,12 +81,11 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 523
     new-instance p0, Lcom/airbnb/lottie/LottieTask;
 
-    new-instance p1, Lcom/airbnb/lottie/LottieCompositionFactory$9;
+    new-instance p1, Lcom/airbnb/lottie/-$$Lambda$LottieCompositionFactory$IGA-iUpW354a8-yVr_5CX73xN34;
 
-    invoke-direct {p1, v0}, Lcom/airbnb/lottie/LottieCompositionFactory$9;-><init>(Lcom/airbnb/lottie/LottieComposition;)V
+    invoke-direct {p1, v0}, Lcom/airbnb/lottie/-$$Lambda$LottieCompositionFactory$IGA-iUpW354a8-yVr_5CX73xN34;-><init>(Lcom/airbnb/lottie/LottieComposition;)V
 
     invoke-direct {p0, p1}, Lcom/airbnb/lottie/LottieTask;-><init>(Ljava/util/concurrent/Callable;)V
 
@@ -108,7 +94,6 @@
     :cond_1
     if-eqz p0, :cond_2
 
-    .line 530
     sget-object v0, Lcom/airbnb/lottie/LottieCompositionFactory;->taskCache:Ljava/util/Map;
 
     invoke-interface {v0, p0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -117,7 +102,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 531
     sget-object p1, Lcom/airbnb/lottie/LottieCompositionFactory;->taskCache:Ljava/util/Map;
 
     invoke-interface {p1, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -128,7 +112,6 @@
 
     return-object p0
 
-    .line 534
     :cond_2
     new-instance v0, Lcom/airbnb/lottie/LottieTask;
 
@@ -136,21 +119,30 @@
 
     if-eqz p0, :cond_3
 
-    .line 536
-    new-instance p1, Lcom/airbnb/lottie/LottieCompositionFactory$10;
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    invoke-direct {p1, p0}, Lcom/airbnb/lottie/LottieCompositionFactory$10;-><init>(Ljava/lang/String;)V
+    const/4 v1, 0x0
 
-    invoke-virtual {v0, p1}, Lcom/airbnb/lottie/LottieTask;->addListener(Lcom/airbnb/lottie/LottieListener;)Lcom/airbnb/lottie/LottieTask;
+    invoke-direct {p1, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
-    .line 542
-    new-instance p1, Lcom/airbnb/lottie/LottieCompositionFactory$11;
+    new-instance v1, Lcom/airbnb/lottie/-$$Lambda$LottieCompositionFactory$1XgVGM4duptVR0jDGivmZeR2jiI;
 
-    invoke-direct {p1, p0}, Lcom/airbnb/lottie/LottieCompositionFactory$11;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, p0, p1}, Lcom/airbnb/lottie/-$$Lambda$LottieCompositionFactory$1XgVGM4duptVR0jDGivmZeR2jiI;-><init>(Ljava/lang/String;Ljava/util/concurrent/atomic/AtomicBoolean;)V
 
-    invoke-virtual {v0, p1}, Lcom/airbnb/lottie/LottieTask;->addFailureListener(Lcom/airbnb/lottie/LottieListener;)Lcom/airbnb/lottie/LottieTask;
+    invoke-virtual {v0, v1}, Lcom/airbnb/lottie/LottieTask;->addListener(Lcom/airbnb/lottie/LottieListener;)Lcom/airbnb/lottie/LottieTask;
 
-    .line 548
+    new-instance v1, Lcom/airbnb/lottie/-$$Lambda$LottieCompositionFactory$wpcBu7BRteoLY2pETjd3SW2MYwU;
+
+    invoke-direct {v1, p0, p1}, Lcom/airbnb/lottie/-$$Lambda$LottieCompositionFactory$wpcBu7BRteoLY2pETjd3SW2MYwU;-><init>(Ljava/lang/String;Ljava/util/concurrent/atomic/AtomicBoolean;)V
+
+    invoke-virtual {v0, v1}, Lcom/airbnb/lottie/LottieTask;->addFailureListener(Lcom/airbnb/lottie/LottieListener;)Lcom/airbnb/lottie/LottieTask;
+
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
     sget-object p1, Lcom/airbnb/lottie/LottieCompositionFactory;->taskCache:Ljava/util/Map;
 
     invoke-interface {p1, p0, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -162,7 +154,6 @@
 .method private static findImageAssetForFileName(Lcom/airbnb/lottie/LottieComposition;Ljava/lang/String;)Lcom/airbnb/lottie/LottieImageAsset;
     .locals 2
 
-    .line 506
     invoke-virtual {p0}, Lcom/airbnb/lottie/LottieComposition;->getImages()Ljava/util/Map;
 
     move-result-object p0
@@ -188,7 +179,6 @@
 
     check-cast v0, Lcom/airbnb/lottie/LottieImageAsset;
 
-    .line 507
     invoke-virtual {v0}, Lcom/airbnb/lottie/LottieImageAsset;->getFileName()Ljava/lang/String;
 
     move-result-object v1
@@ -221,7 +211,6 @@
         }
     .end annotation
 
-    .line 142
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -236,7 +225,6 @@
 
     move-result-object v0
 
-    .line 143
     invoke-static {p0, p1, v0}, Lcom/airbnb/lottie/LottieCompositionFactory;->fromAsset(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Lcom/airbnb/lottie/LottieTask;
 
     move-result-object p0
@@ -259,15 +247,13 @@
         }
     .end annotation
 
-    .line 157
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p0
 
-    .line 158
-    new-instance v0, Lcom/airbnb/lottie/LottieCompositionFactory$2;
+    new-instance v0, Lcom/airbnb/lottie/-$$Lambda$LottieCompositionFactory$vDlhOolYIp6Rd2u9ftw59YvKKfw;
 
-    invoke-direct {v0, p0, p1, p2}, Lcom/airbnb/lottie/LottieCompositionFactory$2;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, p0, p1, p2}, Lcom/airbnb/lottie/-$$Lambda$LottieCompositionFactory$vDlhOolYIp6Rd2u9ftw59YvKKfw;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static {p2, v0}, Lcom/airbnb/lottie/LottieCompositionFactory;->cache(Ljava/lang/String;Ljava/util/concurrent/Callable;)Lcom/airbnb/lottie/LottieTask;
 
@@ -290,7 +276,6 @@
         }
     .end annotation
 
-    .line 177
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -305,7 +290,6 @@
 
     move-result-object v0
 
-    .line 178
     invoke-static {p0, p1, v0}, Lcom/airbnb/lottie/LottieCompositionFactory;->fromAssetSync(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Lcom/airbnb/lottie/LottieResult;
 
     move-result-object p0
@@ -331,7 +315,6 @@
     :try_start_0
     const-string v0, ".zip"
 
-    .line 193
     invoke-virtual {p1, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -348,7 +331,6 @@
 
     goto :goto_0
 
-    .line 196
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
 
@@ -364,7 +346,6 @@
 
     return-object p0
 
-    .line 194
     :cond_1
     :goto_0
     new-instance v0, Ljava/util/zip/ZipInputStream;
@@ -390,7 +371,6 @@
     :catch_0
     move-exception p0
 
-    .line 198
     new-instance p1, Lcom/airbnb/lottie/LottieResult;
 
     invoke-direct {p1, p0}, Lcom/airbnb/lottie/LottieResult;-><init>(Ljava/lang/Throwable;)V
@@ -412,10 +392,9 @@
         }
     .end annotation
 
-    .line 293
-    new-instance v0, Lcom/airbnb/lottie/LottieCompositionFactory$4;
+    new-instance v0, Lcom/airbnb/lottie/-$$Lambda$LottieCompositionFactory$nqK3PMmO8As4m6s2D-PytJ_eQf0;
 
-    invoke-direct {v0, p0, p1}, Lcom/airbnb/lottie/LottieCompositionFactory$4;-><init>(Ljava/io/InputStream;Ljava/lang/String;)V
+    invoke-direct {v0, p0, p1}, Lcom/airbnb/lottie/-$$Lambda$LottieCompositionFactory$nqK3PMmO8As4m6s2D-PytJ_eQf0;-><init>(Ljava/io/InputStream;Ljava/lang/String;)V
 
     invoke-static {p1, v0}, Lcom/airbnb/lottie/LottieCompositionFactory;->cache(Ljava/lang/String;Ljava/util/concurrent/Callable;)Lcom/airbnb/lottie/LottieTask;
 
@@ -440,7 +419,6 @@
 
     const/4 v0, 0x1
 
-    .line 306
     invoke-static {p0, p1, v0}, Lcom/airbnb/lottie/LottieCompositionFactory;->fromJsonInputStreamSync(Ljava/io/InputStream;Ljava/lang/String;Z)Lcom/airbnb/lottie/LottieResult;
 
     move-result-object p0
@@ -462,7 +440,6 @@
         }
     .end annotation
 
-    .line 313
     :try_start_0
     invoke-static {p0}, Lokio/Okio;->source(Ljava/io/InputStream;)Lokio/Source;
 
@@ -484,7 +461,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 316
     invoke-static {p0}, Lcom/airbnb/lottie/utils/Utils;->closeQuietly(Ljava/io/Closeable;)V
 
     :cond_0
@@ -497,7 +473,6 @@
 
     invoke-static {p0}, Lcom/airbnb/lottie/utils/Utils;->closeQuietly(Ljava/io/Closeable;)V
 
-    .line 318
     :cond_1
     throw p1
 .end method
@@ -518,7 +493,6 @@
 
     const/4 v0, 0x1
 
-    .line 383
     invoke-static {p0, p1, v0}, Lcom/airbnb/lottie/LottieCompositionFactory;->fromJsonReaderSyncInternal(Lcom/airbnb/lottie/parser/moshi/JsonReader;Ljava/lang/String;Z)Lcom/airbnb/lottie/LottieResult;
 
     move-result-object p0
@@ -540,7 +514,6 @@
         }
     .end annotation
 
-    .line 390
     :try_start_0
     invoke-static {p0}, Lcom/airbnb/lottie/parser/LottieCompositionMoshiParser;->parse(Lcom/airbnb/lottie/parser/moshi/JsonReader;)Lcom/airbnb/lottie/LottieComposition;
 
@@ -548,14 +521,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 392
     invoke-static {}, Lcom/airbnb/lottie/model/LottieCompositionCache;->getInstance()Lcom/airbnb/lottie/model/LottieCompositionCache;
 
     move-result-object v1
 
     invoke-virtual {v1, p1, v0}, Lcom/airbnb/lottie/model/LottieCompositionCache;->put(Ljava/lang/String;Lcom/airbnb/lottie/LottieComposition;)V
 
-    .line 394
     :cond_0
     new-instance p1, Lcom/airbnb/lottie/LottieResult;
 
@@ -566,7 +537,6 @@
 
     if-eqz p2, :cond_1
 
-    .line 399
     invoke-static {p0}, Lcom/airbnb/lottie/utils/Utils;->closeQuietly(Ljava/io/Closeable;)V
 
     :cond_1
@@ -580,7 +550,6 @@
     :catch_0
     move-exception p1
 
-    .line 396
     :try_start_1
     new-instance v0, Lcom/airbnb/lottie/LottieResult;
 
@@ -590,7 +559,6 @@
 
     if-eqz p2, :cond_2
 
-    .line 399
     invoke-static {p0}, Lcom/airbnb/lottie/utils/Utils;->closeQuietly(Ljava/io/Closeable;)V
 
     :cond_2
@@ -601,7 +569,6 @@
 
     invoke-static {p0}, Lcom/airbnb/lottie/utils/Utils;->closeQuietly(Ljava/io/Closeable;)V
 
-    .line 401
     :cond_3
     throw p1
 .end method
@@ -619,7 +586,6 @@
         }
     .end annotation
 
-    .line 213
     invoke-static {p0, p1}, Lcom/airbnb/lottie/LottieCompositionFactory;->rawResCacheKey(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v0
@@ -646,20 +612,17 @@
         }
     .end annotation
 
-    .line 227
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p0}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    .line 228
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p0
 
-    .line 229
-    new-instance v1, Lcom/airbnb/lottie/LottieCompositionFactory$3;
+    new-instance v1, Lcom/airbnb/lottie/-$$Lambda$LottieCompositionFactory$kHreHcMxmvmikrk5-OrqBQ8jSUc;
 
-    invoke-direct {v1, v0, p0, p1, p2}, Lcom/airbnb/lottie/LottieCompositionFactory$3;-><init>(Ljava/lang/ref/WeakReference;Landroid/content/Context;ILjava/lang/String;)V
+    invoke-direct {v1, v0, p0, p1, p2}, Lcom/airbnb/lottie/-$$Lambda$LottieCompositionFactory$kHreHcMxmvmikrk5-OrqBQ8jSUc;-><init>(Ljava/lang/ref/WeakReference;Landroid/content/Context;ILjava/lang/String;)V
 
     invoke-static {p2, v1}, Lcom/airbnb/lottie/LottieCompositionFactory;->cache(Ljava/lang/String;Ljava/util/concurrent/Callable;)Lcom/airbnb/lottie/LottieTask;
 
@@ -681,7 +644,6 @@
         }
     .end annotation
 
-    .line 250
     invoke-static {p0, p1}, Lcom/airbnb/lottie/LottieCompositionFactory;->rawResCacheKey(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v0
@@ -708,7 +670,6 @@
         }
     .end annotation
 
-    .line 265
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -726,7 +687,6 @@
 
     move-result-object p0
 
-    .line 266
     invoke-static {p0}, Lcom/airbnb/lottie/LottieCompositionFactory;->isZipCompressed(Lokio/BufferedSource;)Ljava/lang/Boolean;
 
     move-result-object p1
@@ -737,7 +697,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 267
     new-instance p1, Ljava/util/zip/ZipInputStream;
 
     invoke-interface {p0}, Lokio/BufferedSource;->inputStream()Ljava/io/InputStream;
@@ -752,7 +711,6 @@
 
     return-object p0
 
-    .line 269
     :cond_0
     invoke-interface {p0}, Lokio/BufferedSource;->inputStream()Ljava/io/InputStream;
 
@@ -769,7 +727,6 @@
     :catch_0
     move-exception p0
 
-    .line 271
     new-instance p1, Lcom/airbnb/lottie/LottieResult;
 
     invoke-direct {p1, p0}, Lcom/airbnb/lottie/LottieResult;-><init>(Ljava/lang/Throwable;)V
@@ -791,12 +748,11 @@
         }
     .end annotation
 
-    .line 86
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "url_"
+    const-string/jumbo v1, "url_"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -828,10 +784,9 @@
         }
     .end annotation
 
-    .line 95
-    new-instance v0, Lcom/airbnb/lottie/LottieCompositionFactory$1;
+    new-instance v0, Lcom/airbnb/lottie/-$$Lambda$LottieCompositionFactory$wmqaHpKn2Ox33Bzi75IGX61KY6Y;
 
-    invoke-direct {v0, p0, p1, p2}, Lcom/airbnb/lottie/LottieCompositionFactory$1;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, p0, p1, p2}, Lcom/airbnb/lottie/-$$Lambda$LottieCompositionFactory$wmqaHpKn2Ox33Bzi75IGX61KY6Y;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static {p2, v0}, Lcom/airbnb/lottie/LottieCompositionFactory;->cache(Ljava/lang/String;Ljava/util/concurrent/Callable;)Lcom/airbnb/lottie/LottieTask;
 
@@ -854,7 +809,6 @@
         }
     .end annotation
 
-    .line 422
     :try_start_0
     invoke-static {p0, p1}, Lcom/airbnb/lottie/LottieCompositionFactory;->fromZipStreamSyncInternal(Ljava/util/zip/ZipInputStream;Ljava/lang/String;)Lcom/airbnb/lottie/LottieResult;
 
@@ -862,7 +816,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 424
     invoke-static {p0}, Lcom/airbnb/lottie/utils/Utils;->closeQuietly(Ljava/io/Closeable;)V
 
     return-object p1
@@ -872,7 +825,6 @@
 
     invoke-static {p0}, Lcom/airbnb/lottie/utils/Utils;->closeQuietly(Ljava/io/Closeable;)V
 
-    .line 425
     throw p1
 .end method
 
@@ -890,12 +842,10 @@
         }
     .end annotation
 
-    .line 431
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 434
     :try_start_0
     invoke-virtual {p0}, Ljava/util/zip/ZipInputStream;->getNextEntry()Ljava/util/zip/ZipEntry;
 
@@ -908,26 +858,22 @@
     :goto_0
     if-eqz v1, :cond_5
 
-    .line 436
     invoke-virtual {v1}, Ljava/util/zip/ZipEntry;->getName()Ljava/lang/String;
 
     move-result-object v4
 
     const-string v5, "__MACOSX"
 
-    .line 437
     invoke-virtual {v4, v5}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
-    .line 438
     invoke-virtual {p0}, Ljava/util/zip/ZipInputStream;->closeEntry()V
 
     goto :goto_2
 
-    .line 439
     :cond_0
     invoke-virtual {v1}, Ljava/util/zip/ZipEntry;->getName()Ljava/lang/String;
 
@@ -941,12 +887,10 @@
 
     if-eqz v5, :cond_1
 
-    .line 440
     invoke-virtual {p0}, Ljava/util/zip/ZipInputStream;->closeEntry()V
 
     goto :goto_2
 
-    .line 441
     :cond_1
     invoke-virtual {v1}, Ljava/util/zip/ZipEntry;->getName()Ljava/lang/String;
 
@@ -960,7 +904,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 442
     invoke-static {p0}, Lokio/Okio;->source(Ljava/io/InputStream;)Lokio/Source;
 
     move-result-object v1
@@ -975,7 +918,6 @@
 
     const/4 v3, 0x0
 
-    .line 443
     invoke-static {v1, v2, v3}, Lcom/airbnb/lottie/LottieCompositionFactory;->fromJsonReaderSyncInternal(Lcom/airbnb/lottie/parser/moshi/JsonReader;Ljava/lang/String;Z)Lcom/airbnb/lottie/LottieResult;
 
     move-result-object v1
@@ -993,7 +935,6 @@
     :cond_2
     const-string v1, ".png"
 
-    .line 444
     invoke-virtual {v4, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -1026,7 +967,6 @@
 
     goto :goto_1
 
-    .line 449
     :cond_3
     invoke-virtual {p0}, Ljava/util/zip/ZipInputStream;->closeEntry()V
 
@@ -1036,26 +976,22 @@
     :goto_1
     const-string v1, "/"
 
-    .line 445
     invoke-virtual {v4, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 446
     array-length v4, v1
 
     add-int/lit8 v4, v4, -0x1
 
     aget-object v1, v1, v4
 
-    .line 447
     invoke-static {p0}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;)Landroid/graphics/Bitmap;
 
     move-result-object v4
 
     invoke-interface {v0, v1, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 452
     :goto_2
     invoke-virtual {p0}, Ljava/util/zip/ZipInputStream;->getNextEntry()Ljava/util/zip/ZipEntry;
 
@@ -1068,7 +1004,6 @@
     :cond_5
     if-nez v3, :cond_6
 
-    .line 460
     new-instance p0, Lcom/airbnb/lottie/LottieResult;
 
     new-instance p1, Ljava/lang/IllegalArgumentException;
@@ -1081,7 +1016,6 @@
 
     return-object p0
 
-    .line 463
     :cond_6
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -1105,7 +1039,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 464
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
@@ -1118,7 +1051,6 @@
 
     if-eqz v1, :cond_7
 
-    .line 466
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -1141,7 +1073,6 @@
 
     goto :goto_3
 
-    .line 471
     :cond_8
     invoke-virtual {v3}, Lcom/airbnb/lottie/LottieComposition;->getImages()Ljava/util/Map;
 
@@ -1168,7 +1099,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 472
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
@@ -1181,7 +1111,6 @@
 
     if-nez v1, :cond_9
 
-    .line 473
     new-instance p0, Lcom/airbnb/lottie/LottieResult;
 
     new-instance p1, Ljava/lang/IllegalStateException;
@@ -1219,14 +1148,12 @@
     :cond_a
     if-eqz p1, :cond_b
 
-    .line 478
     invoke-static {}, Lcom/airbnb/lottie/model/LottieCompositionCache;->getInstance()Lcom/airbnb/lottie/model/LottieCompositionCache;
 
     move-result-object p0
 
     invoke-virtual {p0, p1, v3}, Lcom/airbnb/lottie/model/LottieCompositionCache;->put(Ljava/lang/String;Lcom/airbnb/lottie/LottieComposition;)V
 
-    .line 480
     :cond_b
     new-instance p0, Lcom/airbnb/lottie/LottieResult;
 
@@ -1237,7 +1164,6 @@
     :catch_0
     move-exception p0
 
-    .line 455
     new-instance p1, Lcom/airbnb/lottie/LottieResult;
 
     invoke-direct {p1, p0}, Lcom/airbnb/lottie/LottieResult;-><init>(Ljava/lang/Throwable;)V
@@ -1248,7 +1174,6 @@
 .method private static isNightMode(Landroid/content/Context;)Z
     .locals 1
 
-    .line 283
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
@@ -1281,13 +1206,11 @@
 
     const/4 v0, 0x0
 
-    .line 489
     :try_start_0
     invoke-interface {p0}, Lokio/BufferedSource;->peek()Lokio/BufferedSource;
 
     move-result-object p0
 
-    .line 490
     sget-object v1, Lcom/airbnb/lottie/LottieCompositionFactory;->MAGIC:[B
 
     array-length v2, v1
@@ -1299,14 +1222,12 @@
 
     aget-byte v4, v1, v3
 
-    .line 491
     invoke-interface {p0}, Lokio/BufferedSource;->readByte()B
 
     move-result v5
 
     if-eq v5, v4, :cond_0
 
-    .line 492
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p0
@@ -1318,17 +1239,16 @@
 
     goto :goto_0
 
-    .line 495
     :cond_1
     invoke-interface {p0}, Lokio/BufferedSource;->close()V
 
     const/4 p0, 0x1
 
-    .line 496
     invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p0
     :try_end_0
+    .catch Ljava/lang/NoSuchMethodError; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     return-object p0
@@ -1338,10 +1258,15 @@
 
     const-string v1, "Failed to check zip file header"
 
-    .line 498
     invoke-static {v1, p0}, Lcom/airbnb/lottie/utils/Logger;->error(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 499
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p0
+
+    return-object p0
+
+    :catch_1
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p0
@@ -1349,10 +1274,151 @@
     return-object p0
 .end method
 
+.method static synthetic lambda$cache$10(Ljava/lang/String;Ljava/util/concurrent/atomic/AtomicBoolean;Ljava/lang/Throwable;)V
+    .locals 0
+
+    sget-object p2, Lcom/airbnb/lottie/LottieCompositionFactory;->taskCache:Ljava/util/Map;
+
+    invoke-interface {p2, p0}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 p0, 0x1
+
+    invoke-virtual {p1, p0}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    return-void
+.end method
+
+.method static synthetic lambda$cache$8(Lcom/airbnb/lottie/LottieComposition;)Lcom/airbnb/lottie/LottieResult;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/Exception;
+        }
+    .end annotation
+
+    new-instance v0, Lcom/airbnb/lottie/LottieResult;
+
+    invoke-direct {v0, p0}, Lcom/airbnb/lottie/LottieResult;-><init>(Ljava/lang/Object;)V
+
+    return-object v0
+.end method
+
+.method static synthetic lambda$cache$9(Ljava/lang/String;Ljava/util/concurrent/atomic/AtomicBoolean;Lcom/airbnb/lottie/LottieComposition;)V
+    .locals 0
+
+    sget-object p2, Lcom/airbnb/lottie/LottieCompositionFactory;->taskCache:Ljava/util/Map;
+
+    invoke-interface {p2, p0}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 p0, 0x1
+
+    invoke-virtual {p1, p0}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    return-void
+.end method
+
+.method static synthetic lambda$fromAsset$1(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Lcom/airbnb/lottie/LottieResult;
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/Exception;
+        }
+    .end annotation
+
+    invoke-static {p0, p1, p2}, Lcom/airbnb/lottie/LottieCompositionFactory;->fromAssetSync(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Lcom/airbnb/lottie/LottieResult;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method static synthetic lambda$fromJsonInputStream$3(Ljava/io/InputStream;Ljava/lang/String;)Lcom/airbnb/lottie/LottieResult;
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/Exception;
+        }
+    .end annotation
+
+    invoke-static {p0, p1}, Lcom/airbnb/lottie/LottieCompositionFactory;->fromJsonInputStreamSync(Ljava/io/InputStream;Ljava/lang/String;)Lcom/airbnb/lottie/LottieResult;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method static synthetic lambda$fromRawRes$2(Ljava/lang/ref/WeakReference;Landroid/content/Context;ILjava/lang/String;)Lcom/airbnb/lottie/LottieResult;
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/Exception;
+        }
+    .end annotation
+
+    invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/content/Context;
+
+    if-eqz p0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    move-object p0, p1
+
+    :goto_0
+    invoke-static {p0, p2, p3}, Lcom/airbnb/lottie/LottieCompositionFactory;->fromRawResSync(Landroid/content/Context;ILjava/lang/String;)Lcom/airbnb/lottie/LottieResult;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method static synthetic lambda$fromUrl$0(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Lcom/airbnb/lottie/LottieResult;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/Exception;
+        }
+    .end annotation
+
+    invoke-static {p0}, Lcom/airbnb/lottie/L;->networkFetcher(Landroid/content/Context;)Lcom/airbnb/lottie/network/NetworkFetcher;
+
+    move-result-object p0
+
+    invoke-virtual {p0, p1, p2}, Lcom/airbnb/lottie/network/NetworkFetcher;->fetchSync(Ljava/lang/String;Ljava/lang/String;)Lcom/airbnb/lottie/LottieResult;
+
+    move-result-object p0
+
+    if-eqz p2, :cond_0
+
+    invoke-virtual {p0}, Lcom/airbnb/lottie/LottieResult;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    invoke-static {}, Lcom/airbnb/lottie/model/LottieCompositionCache;->getInstance()Lcom/airbnb/lottie/model/LottieCompositionCache;
+
+    move-result-object p1
+
+    invoke-virtual {p0}, Lcom/airbnb/lottie/LottieResult;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/airbnb/lottie/LottieComposition;
+
+    invoke-virtual {p1, p2, v0}, Lcom/airbnb/lottie/model/LottieCompositionCache;->put(Ljava/lang/String;Lcom/airbnb/lottie/LottieComposition;)V
+
+    :cond_0
+    return-object p0
+.end method
+
 .method private static rawResCacheKey(Landroid/content/Context;I)Ljava/lang/String;
     .locals 2
 
-    .line 276
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

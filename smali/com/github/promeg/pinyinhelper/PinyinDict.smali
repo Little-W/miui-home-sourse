@@ -1,6 +1,5 @@
 .class public interface abstract Lcom/github/promeg/pinyinhelper/PinyinDict;
 .super Ljava/lang/Object;
-.source "PinyinDict.java"
 
 
 # virtual methods

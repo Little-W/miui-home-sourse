@@ -1,6 +1,5 @@
 .class Landroidx/activity/ComponentActivity$5;
 .super Ljava/lang/Object;
-.source "ComponentActivity.java"
 
 # interfaces
 .implements Landroidx/lifecycle/LifecycleEventObserver;
@@ -25,7 +24,6 @@
 .method constructor <init>(Landroidx/activity/ComponentActivity;)V
     .locals 0
 
-    .line 266
     iput-object p1, p0, Landroidx/activity/ComponentActivity$5;->this$0:Landroidx/activity/ComponentActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,12 +36,10 @@
 .method public onStateChanged(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Lifecycle$Event;)V
     .locals 0
 
-    .line 270
     iget-object p1, p0, Landroidx/activity/ComponentActivity$5;->this$0:Landroidx/activity/ComponentActivity;
 
     invoke-virtual {p1}, Landroidx/activity/ComponentActivity;->ensureViewModelStore()V
 
-    .line 271
     iget-object p1, p0, Landroidx/activity/ComponentActivity$5;->this$0:Landroidx/activity/ComponentActivity;
 
     invoke-virtual {p1}, Landroidx/activity/ComponentActivity;->getLifecycle()Landroidx/lifecycle/Lifecycle;

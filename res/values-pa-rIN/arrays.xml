@@ -1,48 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="cell_layout_size_entries">
-        <item>4x4</item>
-        <item>4x5</item>
-    </string-array>
-    <string-array name="cell_layout_size_values">
-        <item>4x4</item>
-        <item>4x5</item>
+    <string-array name="animation_rate_entries">
+        <item>ਆਰਾਮ</item>
+        <item>ਸੰਤੁਲਤ</item>
+        <item>ਤੇਜ਼</item>
     </string-array>
     <string-array name="editing_mode_entries">
         <item>ਵਾਲਪੇਪਰ</item>
         <item>ਵਿਜੇਟ</item>
         <item>ਸੈਟਿੰਗਾਂ</item>
     </string-array>
-    <string-array name="gadget_weather_image">
-        <item>ਸਾਫ਼</item>
-        <item>ਝੜ</item>
-        <item>ਧੁੰਦਲਾ</item>
-        <item>ਧੁੰਦ ਵਾਲਾ</item>
-        <item>ਭਾਰੀ ਤੂਫ਼ਾਨੀ ਵਰਖਾ</item>
-        <item>ਤੂਫ਼ਾਨੀ ਵਰਖਾ</item>
-        <item>ਬਹੁਤ ਭਾਰੀ ਵਰਖਾ</item>
-        <item>ਗਰਜਨ ਵਾਲਾ ਤੂਫ਼ਾਨ</item>
-        <item>ਵਰਖਾ ਦੀ ਝੜੀ</item>
-        <item>ਭਾਰੀ ਵਰਖਾ</item>
-        <item>ਵਰਖਾ</item>
-        <item>ਬੂੰਦਾਬਾਂਦੀ</item>
-        <item>ਗੜਿਆਂ ਦੇ ਨਾਲ ਵਰਖਾ</item>
-        <item>ਬਰਫ਼ੀਲਾ ਤੂਫ਼ਾਨ</item>
-        <item>ਕਿਤੇ-ਕਿਤੇ ਬਰਫ਼ਬਾਰੀ</item>
-        <item>ਭਾਰੀ ਬਰਫ਼ਬਾਰੀ</item>
-        <item>ਬਰਫ਼ਬਾਰੀ</item>
-        <item>ਹਲਕੀ ਬਰਫ਼ਬਾਰੀ</item>
-        <item>ਭਾਰੀ ਰੇਤਲੀ ਹਨੇਰੀ</item>
-        <item>ਰੇਤਲੀ ਹਨੇਰੀ</item>
-        <item>ਹਲਕੀ ਰੇਤਲੀ ਹਨੇਰੀ</item>
-        <item>ਰੇਤਲੀ ਹਨੇਰੀ</item>
-        <item>ਗੜੇ</item>
-        <item>ਅਸਥਾਈ ਧੂੜ</item>
-        <item>ਧੁੰਦ</item>
-    </string-array>
-    <string-array name="gadget_weather_theme_type_entries">
+    <string-array name="monochrome_color_entries">
         <item>ਪੂਰਵ-ਨਿਰਧਾਰਤ</item>
-        <item>ਕਲਾਸਿਕ</item>
+        <item>ਨੀਲਾ</item>
+        <item>ਹਰਾ</item>
+        <item>ਜਾਮਣੀ</item>
+        <item>ਭੂਰਾ</item>
+    </string-array>
+    <string-array name="no_word_model_entries">
+        <item>ਬੰਦ</item>
+        <item>ਕਿਤੇ ਵੀ</item>
+        <item>ਵਿਜੇਟ ਉੱਤੇ</item>
+    </string-array>
+    <string-array name="no_word_model_entries_not_support_only_widget_no_word">
+        <item>ਬੰਦ</item>
+        <item>ਕਿਤੇ ਵੀ</item>
     </string-array>
     <string-array name="transformation_entries">
         <item>ਸਲਾਈਡ</item>
@@ -52,11 +34,5 @@
         <item>ਕੈਸਕੇਡ</item>
         <item>ਘੁਮਾਓ</item>
         <item>ਘਣ</item>
-    </string-array>
-    <string-array name="wallpaper_scroll_entries">
-        <item>ਥੀਮ ਪੂਰਵ-ਨਿਰਧਾਰਤ</item>
-        <item>ਕੇਂਦਰ</item>
-        <item>ਖੱਬੇ</item>
-        <item>ਸੱਜੇ</item>
     </string-array>
 </resources>

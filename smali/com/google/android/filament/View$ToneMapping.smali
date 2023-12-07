@@ -1,6 +1,5 @@
 .class public final enum Lcom/google/android/filament/View$ToneMapping;
 .super Ljava/lang/Enum;
-.source "View.java"
 
 
 # annotations
@@ -37,40 +36,37 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .line 733
     new-instance v0, Lcom/google/android/filament/View$ToneMapping;
 
-    const-string v1, "LINEAR"
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    const-string v2, "LINEAR"
 
-    invoke-direct {v0, v1, v2}, Lcom/google/android/filament/View$ToneMapping;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v2, v1}, Lcom/google/android/filament/View$ToneMapping;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/google/android/filament/View$ToneMapping;->LINEAR:Lcom/google/android/filament/View$ToneMapping;
 
-    .line 738
     new-instance v0, Lcom/google/android/filament/View$ToneMapping;
 
-    const-string v1, "ACES"
+    const/4 v2, 0x1
 
-    const/4 v3, 0x1
+    const-string v3, "ACES"
 
-    invoke-direct {v0, v1, v3}, Lcom/google/android/filament/View$ToneMapping;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v3, v2}, Lcom/google/android/filament/View$ToneMapping;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/google/android/filament/View$ToneMapping;->ACES:Lcom/google/android/filament/View$ToneMapping;
 
     const/4 v0, 0x2
 
-    .line 728
     new-array v0, v0, [Lcom/google/android/filament/View$ToneMapping;
 
-    sget-object v1, Lcom/google/android/filament/View$ToneMapping;->LINEAR:Lcom/google/android/filament/View$ToneMapping;
+    sget-object v3, Lcom/google/android/filament/View$ToneMapping;->LINEAR:Lcom/google/android/filament/View$ToneMapping;
 
-    aput-object v1, v0, v2
+    aput-object v3, v0, v1
 
     sget-object v1, Lcom/google/android/filament/View$ToneMapping;->ACES:Lcom/google/android/filament/View$ToneMapping;
 
-    aput-object v1, v0, v3
+    aput-object v1, v0, v2
 
     sput-object v0, Lcom/google/android/filament/View$ToneMapping;->$VALUES:[Lcom/google/android/filament/View$ToneMapping;
 
@@ -85,7 +81,6 @@
         }
     .end annotation
 
-    .line 729
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -94,7 +89,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/android/filament/View$ToneMapping;
     .locals 1
 
-    .line 728
     const-class v0, Lcom/google/android/filament/View$ToneMapping;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -109,7 +103,6 @@
 .method public static values()[Lcom/google/android/filament/View$ToneMapping;
     .locals 1
 
-    .line 728
     sget-object v0, Lcom/google/android/filament/View$ToneMapping;->$VALUES:[Lcom/google/android/filament/View$ToneMapping;
 
     invoke-virtual {v0}, [Lcom/google/android/filament/View$ToneMapping;->clone()Ljava/lang/Object;

@@ -44,14 +44,6 @@
         <item quantity="other">%2$s lugemata saatjalt %1$s</item>
         <item quantity="one">%2$s lugemata saatjalt %1$s</item>
     </plurals>
-    <plurals name="delete_wallpapers_message">
-        <item quantity="other">Kustuta %1$d taustapildid?</item>
-        <item quantity="one">Kustuta %1$d taustapilt?</item>
-    </plurals>
-    <plurals name="editing_mode_title">
-        <item quantity="other">Valitud %1$d üksust</item>
-        <item quantity="one">Valitud %1$d üksus</item>
-    </plurals>
     <plurals name="half_hour_ago">
         <item quantity="other">Pool tundi tagasi</item>
         <item quantity="one">Pool tundi tagasi</item>
@@ -85,8 +77,8 @@
         <item quantity="one">1 minut tagasi</item>
     </plurals>
     <plurals name="remove_dialog_title_multi_format">
-        <item quantity="other">Kas eemaldada %1$d rakendust avakuvalt?</item>
-        <item quantity="one">Kas eemaldada %1$d rakendus avakuvalt?</item>
+        <item quantity="other">Kas eemaldada %1$d üksust avakuvalt?</item>
+        <item quantity="one">Kas eemaldada %1$d üksus avakuvalt?</item>
     </plurals>
     <plurals name="scroll_tip_format_when_announce_accessibility">
         <item quantity="other">Leht %1$d, %2$d rakendus.</item>

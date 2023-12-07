@@ -1,6 +1,5 @@
 .class public interface abstract Lcom/android/systemui/shared/recents/model/Task$SnapshotCallback;
 .super Ljava/lang/Object;
-.source "Task.java"
 
 
 # annotations

@@ -1,6 +1,5 @@
 .class synthetic Lcom/airbnb/lottie/parser/LayerParser$1;
 .super Ljava/lang/Object;
-.source "LayerParser.java"
 
 
 # annotations
@@ -22,7 +21,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 142
     invoke-static {}, Lcom/airbnb/lottie/model/layer/Layer$MatteType;->values()[Lcom/airbnb/lottie/model/layer/Layer$MatteType;
 
     move-result-object v0

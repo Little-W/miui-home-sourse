@@ -1,6 +1,5 @@
 .class Landroidx/fragment/app/DefaultSpecialEffectsController$3;
 .super Ljava/lang/Object;
-.source "DefaultSpecialEffectsController.java"
 
 # interfaces
 .implements Landroidx/core/os/CancellationSignal$OnCancelListener;
@@ -27,7 +26,6 @@
 .method constructor <init>(Landroidx/fragment/app/DefaultSpecialEffectsController;Landroid/animation/Animator;)V
     .locals 0
 
-    .line 197
     iput-object p1, p0, Landroidx/fragment/app/DefaultSpecialEffectsController$3;->this$0:Landroidx/fragment/app/DefaultSpecialEffectsController;
 
     iput-object p2, p0, Landroidx/fragment/app/DefaultSpecialEffectsController$3;->val$animator:Landroid/animation/Animator;
@@ -40,12 +38,11 @@
 
 # virtual methods
 .method public onCancel()V
-    .locals 1
+    .locals 0
 
-    .line 200
-    iget-object v0, p0, Landroidx/fragment/app/DefaultSpecialEffectsController$3;->val$animator:Landroid/animation/Animator;
+    iget-object p0, p0, Landroidx/fragment/app/DefaultSpecialEffectsController$3;->val$animator:Landroid/animation/Animator;
 
-    invoke-virtual {v0}, Landroid/animation/Animator;->end()V
+    invoke-virtual {p0}, Landroid/animation/Animator;->end()V
 
     return-void
 .end method

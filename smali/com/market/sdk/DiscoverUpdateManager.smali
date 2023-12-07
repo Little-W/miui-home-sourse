@@ -1,6 +1,5 @@
 .class public Lcom/market/sdk/DiscoverUpdateManager;
 .super Ljava/lang/Object;
-.source "DiscoverUpdateManager.java"
 
 
 # static fields
@@ -35,12 +34,6 @@
 .field public static final STRATEGY_WIFI:I = 0x1
 
 .field private static sInstance:Lcom/market/sdk/DiscoverUpdateManager;
-    .annotation build Landroid/annotation/SuppressLint;
-        value = {
-            "StaticFieldLeak"
-        }
-    .end annotation
-.end field
 
 
 # instance fields
@@ -53,7 +46,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 44
     new-instance v0, Lcom/market/sdk/DiscoverUpdateManager;
 
     invoke-direct {v0}, Lcom/market/sdk/DiscoverUpdateManager;-><init>()V
@@ -66,19 +58,16 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "content://com.xiaomi.discover.preferences"
 
-    .line 27
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/market/sdk/DiscoverUpdateManager;->DISCOVER_PREFERENCE_AUTHORITY:Landroid/net/Uri;
 
-    .line 41
     invoke-static {}, Lcom/market/sdk/utils/AppGlobal;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -91,7 +80,6 @@
 .method public static get()Lcom/market/sdk/DiscoverUpdateManager;
     .locals 1
 
-    .line 47
     sget-object v0, Lcom/market/sdk/DiscoverUpdateManager;->sInstance:Lcom/market/sdk/DiscoverUpdateManager;
 
     return-object v0
@@ -100,7 +88,7 @@
 
 # virtual methods
 .method public getAutoUpdateStrategy()I
-    .locals 4
+    .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;,
@@ -108,14 +96,12 @@
         }
     .end annotation
 
-    .line 58
     sget-object v0, Lcom/market/sdk/MarketFeatures;->DISCOVER_METERED_UPDATE_CONFIRM:Lcom/market/sdk/MarketFeatures;
 
     invoke-virtual {v0}, Lcom/market/sdk/MarketFeatures;->throwExceptionIfNotSupported()V
 
     const/4 v0, -0x1
 
-    .line 62
     :try_start_0
     iget-object v1, p0, Lcom/market/sdk/DiscoverUpdateManager;->mContext:Landroid/content/Context;
 
@@ -139,50 +125,40 @@
     :goto_0
     if-gez v1, :cond_0
 
-    .line 69
     iget-object v1, p0, Lcom/market/sdk/DiscoverUpdateManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/market/sdk/DiscoverUpdateManager;->DISCOVER_PREFERENCE_AUTHORITY:Landroid/net/Uri;
+    iget-object p0, p0, Lcom/market/sdk/DiscoverUpdateManager;->DISCOVER_PREFERENCE_AUTHORITY:Landroid/net/Uri;
 
-    .line 70
-    invoke-virtual {v1, v2}, Landroid/content/ContentResolver;->acquireContentProviderClient(Landroid/net/Uri;)Landroid/content/ContentProviderClient;
+    invoke-virtual {v1, p0}, Landroid/content/ContentResolver;->acquireContentProviderClient(Landroid/net/Uri;)Landroid/content/ContentProviderClient;
 
-    move-result-object v1
+    move-result-object p0
+
+    const/4 v1, 0x0
 
     const-string v2, "getAutoUpdate"
 
-    const/4 v3, 0x0
+    invoke-virtual {p0, v2, v1, v1}, Landroid/content/ContentProviderClient;->call(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
 
-    .line 71
-    invoke-virtual {v1, v2, v3, v3}, Landroid/content/ContentProviderClient;->call(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
+    move-result-object v1
 
-    move-result-object v2
+    const-string v2, "autoUpdate"
 
-    const-string v3, "autoUpdate"
+    invoke-virtual {v1, v2, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
-    .line 72
-    invoke-virtual {v2, v3, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
+    move-result v1
 
-    move-result v0
-
-    .line 73
-    invoke-virtual {v1}, Landroid/content/ContentProviderClient;->release()Z
-
-    goto :goto_1
+    invoke-virtual {p0}, Landroid/content/ContentProviderClient;->release()Z
 
     :cond_0
-    move v0, v1
-
-    :goto_1
-    return v0
+    return v1
 .end method
 
 .method public isMeteredUpdateAnswered()Z
-    .locals 4
+    .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;,
@@ -190,14 +166,12 @@
         }
     .end annotation
 
-    .line 97
     sget-object v0, Lcom/market/sdk/MarketFeatures;->DISCOVER_METERED_UPDATE_CONFIRM:Lcom/market/sdk/MarketFeatures;
 
     invoke-virtual {v0}, Lcom/market/sdk/MarketFeatures;->throwExceptionIfNotSupported()V
 
     const/4 v0, -0x1
 
-    .line 101
     :try_start_0
     iget-object v1, p0, Lcom/market/sdk/DiscoverUpdateManager;->mContext:Landroid/content/Context;
 
@@ -221,60 +195,48 @@
     :goto_0
     if-gez v1, :cond_0
 
-    .line 108
     iget-object v1, p0, Lcom/market/sdk/DiscoverUpdateManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/market/sdk/DiscoverUpdateManager;->DISCOVER_PREFERENCE_AUTHORITY:Landroid/net/Uri;
+    iget-object p0, p0, Lcom/market/sdk/DiscoverUpdateManager;->DISCOVER_PREFERENCE_AUTHORITY:Landroid/net/Uri;
 
-    .line 109
-    invoke-virtual {v1, v2}, Landroid/content/ContentResolver;->acquireContentProviderClient(Landroid/net/Uri;)Landroid/content/ContentProviderClient;
+    invoke-virtual {v1, p0}, Landroid/content/ContentResolver;->acquireContentProviderClient(Landroid/net/Uri;)Landroid/content/ContentProviderClient;
 
-    move-result-object v1
+    move-result-object p0
+
+    const/4 v1, 0x0
 
     const-string v2, "isMeteredUpdateAnswered"
 
-    const/4 v3, 0x0
+    invoke-virtual {p0, v2, v1, v1}, Landroid/content/ContentProviderClient;->call(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
 
-    .line 110
-    invoke-virtual {v1, v2, v3, v3}, Landroid/content/ContentProviderClient;->call(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
+    move-result-object v1
 
-    move-result-object v2
+    invoke-virtual {v1, v2, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
-    const-string v3, "isMeteredUpdateAnswered"
+    move-result v1
 
-    .line 111
-    invoke-virtual {v2, v3, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
+    invoke-virtual {p0}, Landroid/content/ContentProviderClient;->release()Z
 
-    move-result v0
+    :cond_0
+    if-lez v1, :cond_1
 
-    .line 112
-    invoke-virtual {v1}, Landroid/content/ContentProviderClient;->release()Z
+    const/4 p0, 0x1
 
     goto :goto_1
 
-    :cond_0
-    move v0, v1
+    :cond_1
+    const/4 p0, 0x0
 
     :goto_1
-    if-lez v0, :cond_1
-
-    const/4 v0, 0x1
-
-    goto :goto_2
-
-    :cond_1
-    const/4 v0, 0x0
-
-    :goto_2
-    return v0
+    return p0
 .end method
 
 .method public isMeteredUpdateConfirmNeededByRegion()Z
-    .locals 4
+    .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;,
@@ -282,14 +244,12 @@
         }
     .end annotation
 
-    .line 140
     sget-object v0, Lcom/market/sdk/MarketFeatures;->DISCOVER_METERED_UPDATE_CONFIRM:Lcom/market/sdk/MarketFeatures;
 
     invoke-virtual {v0}, Lcom/market/sdk/MarketFeatures;->throwExceptionIfNotSupported()V
 
     const/4 v0, -0x1
 
-    .line 144
     :try_start_0
     iget-object v1, p0, Lcom/market/sdk/DiscoverUpdateManager;->mContext:Landroid/content/Context;
 
@@ -313,60 +273,48 @@
     :goto_0
     if-gez v1, :cond_0
 
-    .line 152
     iget-object v1, p0, Lcom/market/sdk/DiscoverUpdateManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/market/sdk/DiscoverUpdateManager;->DISCOVER_PREFERENCE_AUTHORITY:Landroid/net/Uri;
+    iget-object p0, p0, Lcom/market/sdk/DiscoverUpdateManager;->DISCOVER_PREFERENCE_AUTHORITY:Landroid/net/Uri;
 
-    .line 153
-    invoke-virtual {v1, v2}, Landroid/content/ContentResolver;->acquireContentProviderClient(Landroid/net/Uri;)Landroid/content/ContentProviderClient;
+    invoke-virtual {v1, p0}, Landroid/content/ContentResolver;->acquireContentProviderClient(Landroid/net/Uri;)Landroid/content/ContentProviderClient;
 
-    move-result-object v1
+    move-result-object p0
+
+    const/4 v1, 0x0
 
     const-string v2, "isMeteredUpdateConfirmNeededByRegion"
 
-    const/4 v3, 0x0
+    invoke-virtual {p0, v2, v1, v1}, Landroid/content/ContentProviderClient;->call(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
 
-    .line 154
-    invoke-virtual {v1, v2, v3, v3}, Landroid/content/ContentProviderClient;->call(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
+    move-result-object v1
 
-    move-result-object v2
+    invoke-virtual {v1, v2, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
-    const-string v3, "isMeteredUpdateConfirmNeededByRegion"
+    move-result v1
 
-    .line 155
-    invoke-virtual {v2, v3, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
+    invoke-virtual {p0}, Landroid/content/ContentProviderClient;->release()Z
 
-    move-result v0
+    :cond_0
+    if-lez v1, :cond_1
 
-    .line 156
-    invoke-virtual {v1}, Landroid/content/ContentProviderClient;->release()Z
+    const/4 p0, 0x1
 
     goto :goto_1
 
-    :cond_0
-    move v0, v1
+    :cond_1
+    const/4 p0, 0x0
 
     :goto_1
-    if-lez v0, :cond_1
-
-    const/4 v0, 0x1
-
-    goto :goto_2
-
-    :cond_1
-    const/4 v0, 0x0
-
-    :goto_2
-    return v0
+    return p0
 .end method
 
 .method public setAutoUpdateStrategy(I)V
-    .locals 3
+    .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;,
@@ -374,12 +322,10 @@
         }
     .end annotation
 
-    .line 80
     sget-object v0, Lcom/market/sdk/MarketFeatures;->DISCOVER_METERED_UPDATE_CONFIRM:Lcom/market/sdk/MarketFeatures;
 
     invoke-virtual {v0}, Lcom/market/sdk/MarketFeatures;->throwExceptionIfNotSupported()V
 
-    .line 83
     :try_start_0
     iget-object v0, p0, Lcom/market/sdk/DiscoverUpdateManager;->mContext:Landroid/content/Context;
 
@@ -395,7 +341,6 @@
 
     return-void
 
-    .line 89
     :catch_0
     iget-object v0, p0, Lcom/market/sdk/DiscoverUpdateManager;->mContext:Landroid/content/Context;
 
@@ -403,32 +348,29 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/market/sdk/DiscoverUpdateManager;->DISCOVER_PREFERENCE_AUTHORITY:Landroid/net/Uri;
+    iget-object p0, p0, Lcom/market/sdk/DiscoverUpdateManager;->DISCOVER_PREFERENCE_AUTHORITY:Landroid/net/Uri;
 
-    .line 90
-    invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->acquireContentProviderClient(Landroid/net/Uri;)Landroid/content/ContentProviderClient;
+    invoke-virtual {v0, p0}, Landroid/content/ContentResolver;->acquireContentProviderClient(Landroid/net/Uri;)Landroid/content/ContentProviderClient;
 
-    move-result-object v0
+    move-result-object p0
 
-    const-string v1, "setAutoUpdate"
-
-    .line 91
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object p1
 
-    const/4 v2, 0x0
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, v1, p1, v2}, Landroid/content/ContentProviderClient;->call(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
+    const-string v1, "setAutoUpdate"
 
-    .line 92
-    invoke-virtual {v0}, Landroid/content/ContentProviderClient;->release()Z
+    invoke-virtual {p0, v1, p1, v0}, Landroid/content/ContentProviderClient;->call(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
+
+    invoke-virtual {p0}, Landroid/content/ContentProviderClient;->release()Z
 
     return-void
 .end method
 
 .method public setMeteredUpdateAnswered(Z)V
-    .locals 3
+    .locals 5
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;,
@@ -436,118 +378,103 @@
         }
     .end annotation
 
-    .line 119
-    sget-object v0, Lcom/market/sdk/MarketFeatures;->DISCOVER_METERED_UPDATE_CONFIRM:Lcom/market/sdk/MarketFeatures;
+    const-string v0, ""
 
-    invoke-virtual {v0}, Lcom/market/sdk/MarketFeatures;->throwExceptionIfNotSupported()V
+    const-string v1, "MarketManager"
 
-    .line 122
+    sget-object v2, Lcom/market/sdk/MarketFeatures;->DISCOVER_METERED_UPDATE_CONFIRM:Lcom/market/sdk/MarketFeatures;
+
+    invoke-virtual {v2}, Lcom/market/sdk/MarketFeatures;->throwExceptionIfNotSupported()V
+
     :try_start_0
-    iget-object v0, p0, Lcom/market/sdk/DiscoverUpdateManager;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/market/sdk/DiscoverUpdateManager;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    move-result-object v0
+    move-result-object v2
 
-    const-string v1, "com.xiaomi.discover.auto_update_enabled"
+    const-string v3, "com.xiaomi.discover.auto_update_enabled"
 
     if-eqz p1, :cond_0
 
-    const/4 v2, 0x1
+    const/4 v4, 0x1
 
     goto :goto_0
 
     :cond_0
-    const/4 v2, 0x0
+    const/4 v4, 0x0
 
     :goto_0
-    invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
+    invoke-static {v2, v3, v4}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    move-result v0
+    move-result v2
 
-    const-string v1, "MarketManager"
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    .line 123
-    new-instance v2, Ljava/lang/StringBuilder;
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v0, ""
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v2
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcom/market/sdk/utils/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/market/sdk/utils/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     return-void
 
     :catch_0
-    move-exception v0
+    move-exception v2
 
-    const-string v1, "MarketManager"
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    .line 127
-    new-instance v2, Ljava/lang/StringBuilder;
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-virtual {v2}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
+    move-result-object v2
 
-    move-result-object v0
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v0, ""
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {v1, v0}, Lcom/market/sdk/utils/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 130
     iget-object v0, p0, Lcom/market/sdk/DiscoverUpdateManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/market/sdk/DiscoverUpdateManager;->DISCOVER_PREFERENCE_AUTHORITY:Landroid/net/Uri;
+    iget-object p0, p0, Lcom/market/sdk/DiscoverUpdateManager;->DISCOVER_PREFERENCE_AUTHORITY:Landroid/net/Uri;
 
-    .line 131
-    invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->acquireContentProviderClient(Landroid/net/Uri;)Landroid/content/ContentProviderClient;
+    invoke-virtual {v0, p0}, Landroid/content/ContentResolver;->acquireContentProviderClient(Landroid/net/Uri;)Landroid/content/ContentProviderClient;
 
-    move-result-object v0
+    move-result-object p0
 
-    const-string v1, "setMeteredUpdateAnswered"
-
-    .line 132
     invoke-static {p1}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
 
     move-result-object p1
 
-    const/4 v2, 0x0
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, v1, p1, v2}, Landroid/content/ContentProviderClient;->call(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
+    const-string v2, "setMeteredUpdateAnswered"
 
-    .line 133
-    invoke-virtual {v0}, Landroid/content/ContentProviderClient;->release()Z
+    invoke-virtual {p0, v2, p1, v0}, Landroid/content/ContentProviderClient;->call(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
 
-    const-string p1, "MarketManager"
+    invoke-virtual {p0}, Landroid/content/ContentProviderClient;->release()Z
 
-    const-string v0, "finish"
+    const-string p0, "finish"
 
-    .line 134
-    invoke-static {p1, v0}, Lcom/market/sdk/utils/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p0}, Lcom/market/sdk/utils/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

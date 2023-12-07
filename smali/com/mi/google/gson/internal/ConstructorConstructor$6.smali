@@ -1,6 +1,5 @@
 .class Lcom/mi/google/gson/internal/ConstructorConstructor$6;
 .super Ljava/lang/Object;
-.source "ConstructorConstructor.java"
 
 # interfaces
 .implements Lcom/mi/google/gson/internal/ObjectConstructor;
@@ -33,7 +32,6 @@
 .method constructor <init>(Lcom/mi/google/gson/internal/ConstructorConstructor;)V
     .locals 0
 
-    .line 158
     iput-object p1, p0, Lcom/mi/google/gson/internal/ConstructorConstructor$6;->this$0:Lcom/mi/google/gson/internal/ConstructorConstructor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,17 +42,16 @@
 
 # virtual methods
 .method public construct()Ljava/lang/Object;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()TT;"
         }
     .end annotation
 
-    .line 160
-    new-instance v0, Ljava/util/LinkedHashSet;
+    new-instance p0, Ljava/util/LinkedHashSet;
 
-    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
+    invoke-direct {p0}, Ljava/util/LinkedHashSet;-><init>()V
 
-    return-object v0
+    return-object p0
 .end method

@@ -1,6 +1,5 @@
 .class public Lcom/market/sdk/AppActivityLifecycleTracker;
 .super Ljava/lang/Object;
-.source "AppActivityLifecycleTracker.java"
 
 # interfaces
 .implements Landroid/app/Application$ActivityLifecycleCallbacks;
@@ -30,10 +29,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 13
     invoke-static {}, Lcom/market/sdk/MarketManager;->getManager()Lcom/market/sdk/MarketManager;
 
     move-result-object v0
@@ -50,92 +47,85 @@
 
 # virtual methods
 .method public onActivityCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
-    .locals 1
+    .locals 0
 
-    .line 24
-    iget-object p2, p0, Lcom/market/sdk/AppActivityLifecycleTracker;->floatCardManager:Lcom/market/sdk/FloatCardManager;
+    iget-object p0, p0, Lcom/market/sdk/AppActivityLifecycleTracker;->floatCardManager:Lcom/market/sdk/FloatCardManager;
 
-    const/4 v0, 0x0
+    const/4 p2, 0x0
 
-    invoke-virtual {p2, p1, v0}, Lcom/market/sdk/FloatCardManager;->lifecycleChanged(Landroid/app/Activity;I)Z
+    invoke-virtual {p0, p1, p2}, Lcom/market/sdk/FloatCardManager;->lifecycleChanged(Landroid/app/Activity;I)Z
 
     return-void
 .end method
 
 .method public onActivityDestroyed(Landroid/app/Activity;)V
-    .locals 2
+    .locals 1
 
-    .line 54
-    iget-object v0, p0, Lcom/market/sdk/AppActivityLifecycleTracker;->floatCardManager:Lcom/market/sdk/FloatCardManager;
+    iget-object p0, p0, Lcom/market/sdk/AppActivityLifecycleTracker;->floatCardManager:Lcom/market/sdk/FloatCardManager;
 
-    const/4 v1, 0x5
+    const/4 v0, 0x5
 
-    invoke-virtual {v0, p1, v1}, Lcom/market/sdk/FloatCardManager;->lifecycleChanged(Landroid/app/Activity;I)Z
+    invoke-virtual {p0, p1, v0}, Lcom/market/sdk/FloatCardManager;->lifecycleChanged(Landroid/app/Activity;I)Z
 
     return-void
 .end method
 
 .method public onActivityPaused(Landroid/app/Activity;)V
-    .locals 2
+    .locals 1
 
-    .line 39
-    iget-object v0, p0, Lcom/market/sdk/AppActivityLifecycleTracker;->floatCardManager:Lcom/market/sdk/FloatCardManager;
+    iget-object p0, p0, Lcom/market/sdk/AppActivityLifecycleTracker;->floatCardManager:Lcom/market/sdk/FloatCardManager;
 
-    const/4 v1, 0x3
+    const/4 v0, 0x3
 
-    invoke-virtual {v0, p1, v1}, Lcom/market/sdk/FloatCardManager;->lifecycleChanged(Landroid/app/Activity;I)Z
+    invoke-virtual {p0, p1, v0}, Lcom/market/sdk/FloatCardManager;->lifecycleChanged(Landroid/app/Activity;I)Z
 
     return-void
 .end method
 
 .method public onActivityResumed(Landroid/app/Activity;)V
-    .locals 2
+    .locals 1
 
-    .line 34
-    iget-object v0, p0, Lcom/market/sdk/AppActivityLifecycleTracker;->floatCardManager:Lcom/market/sdk/FloatCardManager;
+    iget-object p0, p0, Lcom/market/sdk/AppActivityLifecycleTracker;->floatCardManager:Lcom/market/sdk/FloatCardManager;
 
-    const/4 v1, 0x2
+    const/4 v0, 0x2
 
-    invoke-virtual {v0, p1, v1}, Lcom/market/sdk/FloatCardManager;->lifecycleChanged(Landroid/app/Activity;I)Z
+    invoke-virtual {p0, p1, v0}, Lcom/market/sdk/FloatCardManager;->lifecycleChanged(Landroid/app/Activity;I)Z
 
     return-void
 .end method
 
 .method public onActivitySaveInstanceState(Landroid/app/Activity;Landroid/os/Bundle;)V
-    .locals 1
+    .locals 0
 
-    .line 49
-    iget-object p2, p0, Lcom/market/sdk/AppActivityLifecycleTracker;->floatCardManager:Lcom/market/sdk/FloatCardManager;
+    iget-object p0, p0, Lcom/market/sdk/AppActivityLifecycleTracker;->floatCardManager:Lcom/market/sdk/FloatCardManager;
 
-    const/4 v0, 0x6
+    const/4 p2, 0x6
 
-    invoke-virtual {p2, p1, v0}, Lcom/market/sdk/FloatCardManager;->lifecycleChanged(Landroid/app/Activity;I)Z
+    invoke-virtual {p0, p1, p2}, Lcom/market/sdk/FloatCardManager;->lifecycleChanged(Landroid/app/Activity;I)Z
 
     return-void
 .end method
 
 .method public onActivityStarted(Landroid/app/Activity;)V
-    .locals 2
+    .locals 1
 
-    .line 29
-    iget-object v0, p0, Lcom/market/sdk/AppActivityLifecycleTracker;->floatCardManager:Lcom/market/sdk/FloatCardManager;
+    iget-object p0, p0, Lcom/market/sdk/AppActivityLifecycleTracker;->floatCardManager:Lcom/market/sdk/FloatCardManager;
 
-    const/4 v1, 0x1
+    const/4 v0, 0x1
 
-    invoke-virtual {v0, p1, v1}, Lcom/market/sdk/FloatCardManager;->lifecycleChanged(Landroid/app/Activity;I)Z
+    invoke-virtual {p0, p1, v0}, Lcom/market/sdk/FloatCardManager;->lifecycleChanged(Landroid/app/Activity;I)Z
 
     return-void
 .end method
 
 .method public onActivityStopped(Landroid/app/Activity;)V
-    .locals 2
+    .locals 1
 
-    .line 44
-    iget-object v0, p0, Lcom/market/sdk/AppActivityLifecycleTracker;->floatCardManager:Lcom/market/sdk/FloatCardManager;
+    iget-object p0, p0, Lcom/market/sdk/AppActivityLifecycleTracker;->floatCardManager:Lcom/market/sdk/FloatCardManager;
 
-    const/4 v1, 0x4
+    const/4 v0, 0x4
 
-    invoke-virtual {v0, p1, v1}, Lcom/market/sdk/FloatCardManager;->lifecycleChanged(Landroid/app/Activity;I)Z
+    invoke-virtual {p0, p1, v0}, Lcom/market/sdk/FloatCardManager;->lifecycleChanged(Landroid/app/Activity;I)Z
 
     return-void
 .end method

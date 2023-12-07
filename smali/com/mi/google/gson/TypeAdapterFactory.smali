@@ -1,6 +1,5 @@
 .class public interface abstract Lcom/mi/google/gson/TypeAdapterFactory;
 .super Ljava/lang/Object;
-.source "TypeAdapterFactory.java"
 
 
 # virtual methods

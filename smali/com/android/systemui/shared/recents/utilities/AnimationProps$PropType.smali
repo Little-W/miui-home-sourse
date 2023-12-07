@@ -1,6 +1,5 @@
 .class public interface abstract annotation Lcom/android/systemui/shared/recents/utilities/AnimationProps$PropType;
 .super Ljava/lang/Object;
-.source "AnimationProps.java"
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

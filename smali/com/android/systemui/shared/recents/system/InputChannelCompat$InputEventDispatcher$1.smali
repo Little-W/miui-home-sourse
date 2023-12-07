@@ -1,6 +1,5 @@
 .class Lcom/android/systemui/shared/recents/system/InputChannelCompat$InputEventDispatcher$1;
 .super Landroid/view/InputEventSender;
-.source "InputChannelCompat.java"
 
 
 # annotations
@@ -22,7 +21,6 @@
 .method constructor <init>(Lcom/android/systemui/shared/recents/system/InputChannelCompat$InputEventDispatcher;Landroid/view/InputChannel;Landroid/os/Looper;)V
     .locals 0
 
-    .line 106
     iput-object p1, p0, Lcom/android/systemui/shared/recents/system/InputChannelCompat$InputEventDispatcher$1;->this$0:Lcom/android/systemui/shared/recents/system/InputChannelCompat$InputEventDispatcher;
 
     invoke-direct {p0, p2, p3}, Landroid/view/InputEventSender;-><init>(Landroid/view/InputChannel;Landroid/os/Looper;)V

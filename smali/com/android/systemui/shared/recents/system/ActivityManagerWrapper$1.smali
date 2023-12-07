@@ -1,6 +1,5 @@
 .class Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$1;
 .super Ljava/lang/Object;
-.source "ActivityManagerWrapper.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -27,7 +26,6 @@
 .method constructor <init>(Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;Ljava/lang/String;)V
     .locals 0
 
-    .line 126
     iput-object p1, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$1;->this$0:Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
 
     iput-object p2, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$1;->val$reason:Ljava/lang/String;
@@ -40,31 +38,29 @@
 
 # virtual methods
 .method public run()V
-    .locals 3
+    .locals 2
 
-    .line 130
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManager;->getService()Landroid/app/IActivityManager;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$1;->val$reason:Ljava/lang/String;
+    iget-object p0, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$1;->val$reason:Ljava/lang/String;
 
-    invoke-interface {v0, v1}, Landroid/app/IActivityManager;->closeSystemDialogs(Ljava/lang/String;)V
+    invoke-interface {v0, p0}, Landroid/app/IActivityManager;->closeSystemDialogs(Ljava/lang/String;)V
     :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
     :catch_0
-    move-exception v0
+    move-exception p0
 
-    const-string v1, "ActivityManagerWrapper"
+    const-string v0, "ActivityManagerWrapper"
 
-    const-string v2, "Failed to close system windows"
+    const-string v1, "Failed to close system windows"
 
-    .line 132
-    invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v0, v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
     return-void

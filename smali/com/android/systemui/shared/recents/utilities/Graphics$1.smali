@@ -1,6 +1,5 @@
 .class Lcom/android/systemui/shared/recents/utilities/Graphics$1;
 .super Landroid/content/ContextWrapper;
-.source "Graphics.java"
 
 
 # annotations
@@ -18,7 +17,6 @@
 .method constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 64
     invoke-direct {p0, p1}, Landroid/content/ContextWrapper;-><init>(Landroid/content/Context;)V
 
     return-void

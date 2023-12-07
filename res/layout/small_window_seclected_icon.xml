@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.miui.home.smallwindow.ItemView android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="@dimen/small_window_selected_icon_size" android:layout_height="@dimen/small_window_selected_icon_size"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <FrameLayout android:layout_width="@dimen/small_window_selected_icon_size" android:layout_height="@dimen/small_window_selected_icon_size">
-        <ImageView android:layout_gravity="bottom|center" android:id="@id/icon" android:layout_width="@dimen/small_window_selected_icon_image_size" android:layout_height="@dimen/small_window_selected_icon_image_size" />
-        <ImageView android:layout_gravity="center|right|top" android:id="@id/badge" android:layout_width="@dimen/small_window_selected_icon_badge_size" android:layout_height="@dimen/small_window_selected_icon_badge_size" android:contentDescription="@string/content_description_button_remove" />
-    </FrameLayout>
-</com.miui.home.smallwindow.ItemView>

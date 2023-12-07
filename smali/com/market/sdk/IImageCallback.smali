@@ -1,6 +1,5 @@
 .class public interface abstract Lcom/market/sdk/IImageCallback;
 .super Ljava/lang/Object;
-.source "IImageCallback.java"
 
 # interfaces
 .implements Landroid/os/IInterface;

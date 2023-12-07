@@ -1,6 +1,5 @@
 .class public interface abstract Lcom/airbnb/lottie/LottieListener;
 .super Ljava/lang/Object;
-.source "LottieListener.java"
 
 
 # annotations

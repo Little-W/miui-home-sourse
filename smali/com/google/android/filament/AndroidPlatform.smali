@@ -1,6 +1,5 @@
 .class final Lcom/google/android/filament/AndroidPlatform;
 .super Lcom/google/android/filament/Platform;
-.source "AndroidPlatform.java"
 
 
 # static fields
@@ -13,7 +12,6 @@
 
     const/4 v0, 0x0
 
-    .line 33
     invoke-static {v0}, Landroid/opengl/EGL14;->eglGetDisplay(I)Landroid/opengl/EGLDisplay;
 
     return-void
@@ -22,7 +20,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 36
     invoke-direct {p0}, Lcom/google/android/filament/Platform;-><init>()V
 
     return-void
@@ -31,77 +28,70 @@
 
 # virtual methods
 .method getSharedContextNativeHandle(Ljava/lang/Object;)J
-    .locals 4
+    .locals 3
 
-    .line 64
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    sget p0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    const/16 v1, 0x15
+    const/16 v0, 0x15
 
-    if-lt v0, v1, :cond_0
+    if-lt p0, v0, :cond_0
 
-    .line 65
     invoke-static {p1}, Lcom/google/android/filament/AndroidPlatform21;->getSharedContextNativeHandle(Ljava/lang/Object;)J
 
-    move-result-wide v0
+    move-result-wide p0
 
-    return-wide v0
+    return-wide p0
 
-    .line 69
     :cond_0
     :try_start_0
-    const-class v0, Landroid/opengl/EGLContext;
+    const-class p0, Landroid/opengl/EGLContext;
 
-    const-string v1, "getHandle"
+    const-string v0, "getHandle"
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
-    new-array v3, v2, [Ljava/lang/Class;
+    new-array v2, v1, [Ljava/lang/Class;
 
-    invoke-virtual {v0, v1, v3}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    invoke-virtual {p0, v0, v2}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
-    move-result-object v0
+    move-result-object p0
 
-    .line 70
-    new-array v1, v2, [Ljava/lang/Object;
+    new-array v0, v1, [Ljava/lang/Object;
 
-    invoke-virtual {v0, p1, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, p1, v0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Ljava/lang/Integer;
+    check-cast p0, Ljava/lang/Integer;
 
-    .line 72
-    invoke-virtual {p1}, Ljava/lang/Integer;->longValue()J
+    invoke-virtual {p0}, Ljava/lang/Integer;->longValue()J
 
-    move-result-wide v0
+    move-result-wide p0
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-wide v0
+    return-wide p0
 
     :catch_0
-    move-exception p1
+    move-exception p0
 
-    const-string v0, "Filament"
+    const-string p1, "Filament"
 
-    const-string v1, "Could not access shared context\'s native handle"
+    const-string v0, "Could not access shared context\'s native handle"
 
-    .line 74
-    invoke-static {v0, v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {p1, v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    const-wide/16 v0, 0x0
+    const-wide/16 p0, 0x0
 
-    return-wide v0
+    return-wide p0
 .end method
 
 .method log(Ljava/lang/String;)V
-    .locals 1
+    .locals 0
 
-    const-string v0, "Filament"
+    const-string p0, "Filament"
 
-    .line 40
-    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 .end method
@@ -109,37 +99,33 @@
 .method validateSharedContext(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 59
-    instance-of p1, p1, Landroid/opengl/EGLContext;
+    instance-of p0, p1, Landroid/opengl/EGLContext;
 
-    return p1
+    return p0
 .end method
 
 .method validateStreamSource(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 49
-    instance-of p1, p1, Landroid/graphics/SurfaceTexture;
+    instance-of p0, p1, Landroid/graphics/SurfaceTexture;
 
-    return p1
+    return p0
 .end method
 
 .method validateSurface(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 54
-    instance-of p1, p1, Landroid/view/Surface;
+    instance-of p0, p1, Landroid/view/Surface;
 
-    return p1
+    return p0
 .end method
 
 .method warn(Ljava/lang/String;)V
-    .locals 1
+    .locals 0
 
-    const-string v0, "Filament"
+    const-string p0, "Filament"
 
-    .line 45
-    invoke-static {v0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 .end method

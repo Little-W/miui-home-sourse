@@ -1,6 +1,5 @@
 .class Landroidx/fragment/app/DialogFragment$3;
 .super Ljava/lang/Object;
-.source "DialogFragment.java"
 
 # interfaces
 .implements Landroid/content/DialogInterface$OnDismissListener;
@@ -25,7 +24,6 @@
 .method constructor <init>(Landroidx/fragment/app/DialogFragment;)V
     .locals 0
 
-    .line 124
     iput-object p1, p0, Landroidx/fragment/app/DialogFragment$3;->this$0:Landroidx/fragment/app/DialogFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,14 +34,8 @@
 
 # virtual methods
 .method public onDismiss(Landroid/content/DialogInterface;)V
-    .locals 1
-    .annotation build Landroid/annotation/SuppressLint;
-        value = {
-            "SyntheticAccessor"
-        }
-    .end annotation
+    .locals 0
 
-    .line 128
     iget-object p1, p0, Landroidx/fragment/app/DialogFragment$3;->this$0:Landroidx/fragment/app/DialogFragment;
 
     invoke-static {p1}, Landroidx/fragment/app/DialogFragment;->access$000(Landroidx/fragment/app/DialogFragment;)Landroid/app/Dialog;
@@ -52,14 +44,13 @@
 
     if-eqz p1, :cond_0
 
-    .line 129
-    iget-object p1, p0, Landroidx/fragment/app/DialogFragment$3;->this$0:Landroidx/fragment/app/DialogFragment;
+    iget-object p0, p0, Landroidx/fragment/app/DialogFragment$3;->this$0:Landroidx/fragment/app/DialogFragment;
 
-    invoke-static {p1}, Landroidx/fragment/app/DialogFragment;->access$000(Landroidx/fragment/app/DialogFragment;)Landroid/app/Dialog;
+    invoke-static {p0}, Landroidx/fragment/app/DialogFragment;->access$000(Landroidx/fragment/app/DialogFragment;)Landroid/app/Dialog;
 
-    move-result-object v0
+    move-result-object p1
 
-    invoke-virtual {p1, v0}, Landroidx/fragment/app/DialogFragment;->onDismiss(Landroid/content/DialogInterface;)V
+    invoke-virtual {p0, p1}, Landroidx/fragment/app/DialogFragment;->onDismiss(Landroid/content/DialogInterface;)V
 
     :cond_0
     return-void

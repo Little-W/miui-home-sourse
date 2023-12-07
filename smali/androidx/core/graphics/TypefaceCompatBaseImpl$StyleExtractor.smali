@@ -1,6 +1,5 @@
 .class interface abstract Landroidx/core/graphics/TypefaceCompatBaseImpl$StyleExtractor;
 .super Ljava/lang/Object;
-.source "TypefaceCompatBaseImpl.java"
 
 
 # annotations

@@ -1,6 +1,5 @@
 .class public interface abstract annotation Lcom/mi/google/gson/annotations/Expose;
 .super Ljava/lang/Object;
-.source "Expose.java"
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

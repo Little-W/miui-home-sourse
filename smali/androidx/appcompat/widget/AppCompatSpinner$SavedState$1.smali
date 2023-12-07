@@ -1,6 +1,5 @@
-.class final Landroidx/appcompat/widget/AppCompatSpinner$SavedState$1;
+.class Landroidx/appcompat/widget/AppCompatSpinner$SavedState$1;
 .super Ljava/lang/Object;
-.source "AppCompatSpinner.java"
 
 # interfaces
 .implements Landroid/os/Parcelable$Creator;
@@ -12,7 +11,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
@@ -30,7 +29,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 664
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,43 +37,39 @@
 
 # virtual methods
 .method public createFromParcel(Landroid/os/Parcel;)Landroidx/appcompat/widget/AppCompatSpinner$SavedState;
-    .locals 1
+    .locals 0
 
-    .line 666
-    new-instance v0, Landroidx/appcompat/widget/AppCompatSpinner$SavedState;
+    new-instance p0, Landroidx/appcompat/widget/AppCompatSpinner$SavedState;
 
-    invoke-direct {v0, p1}, Landroidx/appcompat/widget/AppCompatSpinner$SavedState;-><init>(Landroid/os/Parcel;)V
+    invoke-direct {p0, p1}, Landroidx/appcompat/widget/AppCompatSpinner$SavedState;-><init>(Landroid/os/Parcel;)V
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
-    .line 664
     invoke-virtual {p0, p1}, Landroidx/appcompat/widget/AppCompatSpinner$SavedState$1;->createFromParcel(Landroid/os/Parcel;)Landroidx/appcompat/widget/AppCompatSpinner$SavedState;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public newArray(I)[Landroidx/appcompat/widget/AppCompatSpinner$SavedState;
     .locals 0
 
-    .line 670
-    new-array p1, p1, [Landroidx/appcompat/widget/AppCompatSpinner$SavedState;
+    new-array p0, p1, [Landroidx/appcompat/widget/AppCompatSpinner$SavedState;
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 664
     invoke-virtual {p0, p1}, Landroidx/appcompat/widget/AppCompatSpinner$SavedState$1;->newArray(I)[Landroidx/appcompat/widget/AppCompatSpinner$SavedState;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

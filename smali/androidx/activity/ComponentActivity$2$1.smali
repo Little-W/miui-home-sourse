@@ -1,6 +1,5 @@
 .class Landroidx/activity/ComponentActivity$2$1;
 .super Ljava/lang/Object;
-.source "ComponentActivity.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -29,7 +28,6 @@
 .method constructor <init>(Landroidx/activity/ComponentActivity$2;ILandroidx/activity/result/contract/ActivityResultContract$SynchronousResult;)V
     .locals 0
 
-    .line 158
     iput-object p1, p0, Landroidx/activity/ComponentActivity$2$1;->this$1:Landroidx/activity/ComponentActivity$2;
 
     iput p2, p0, Landroidx/activity/ComponentActivity$2$1;->val$requestCode:I
@@ -44,20 +42,19 @@
 
 # virtual methods
 .method public run()V
-    .locals 3
+    .locals 2
 
-    .line 161
     iget-object v0, p0, Landroidx/activity/ComponentActivity$2$1;->this$1:Landroidx/activity/ComponentActivity$2;
 
     iget v1, p0, Landroidx/activity/ComponentActivity$2$1;->val$requestCode:I
 
-    iget-object v2, p0, Landroidx/activity/ComponentActivity$2$1;->val$synchronousResult:Landroidx/activity/result/contract/ActivityResultContract$SynchronousResult;
+    iget-object p0, p0, Landroidx/activity/ComponentActivity$2$1;->val$synchronousResult:Landroidx/activity/result/contract/ActivityResultContract$SynchronousResult;
 
-    invoke-virtual {v2}, Landroidx/activity/result/contract/ActivityResultContract$SynchronousResult;->getValue()Ljava/lang/Object;
+    invoke-virtual {p0}, Landroidx/activity/result/contract/ActivityResultContract$SynchronousResult;->getValue()Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object p0
 
-    invoke-virtual {v0, v1, v2}, Landroidx/activity/ComponentActivity$2;->dispatchResult(ILjava/lang/Object;)Z
+    invoke-virtual {v0, v1, p0}, Landroidx/activity/ComponentActivity$2;->dispatchResult(ILjava/lang/Object;)Z
 
     return-void
 .end method

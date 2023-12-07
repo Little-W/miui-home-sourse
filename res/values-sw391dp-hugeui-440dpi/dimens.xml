@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="fastscroll_popup_text_size">23.0sp</dimen>
     <dimen name="folder_bottom_padding">65.0dip</dimen>
     <dimen name="folder_content_padding_left">20.0dip</dimen>
     <dimen name="folder_content_width">340.0dip</dimen>
     <dimen name="folder_top_padding">46.0dip</dimen>
     <dimen name="hotseats_height">93.0dip</dimen>
-    <dimen name="hotseats_padding_side">6.0dip</dimen>
     <dimen name="search_bar_margin_bottom">12.0dip</dimen>
     <dimen name="search_bar_margin_top">8.0dip</dimen>
     <dimen name="workspace_cell_height">93.0dip</dimen>
     <dimen name="workspace_cell_padding_side">15.0dip</dimen>
-    <dimen name="workspace_cell_width">82.0dip</dimen>
     <dimen name="workspace_icon_text_notification_size">14.0dip</dimen>
-    <dimen name="workspace_icon_text_size">15.0dip</dimen>
+    <dimen name="workspace_icon_text_size">14.0dip</dimen>
 </resources>

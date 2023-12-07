@@ -1,6 +1,5 @@
 .class public Lnet/lucode/hackware/magicindicator/buildins/ArgbEvaluatorHolder;
 .super Ljava/lang/Object;
-.source "ArgbEvaluatorHolder.java"
 
 
 # direct methods

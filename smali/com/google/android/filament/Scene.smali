@@ -1,6 +1,5 @@
 .class public Lcom/google/android/filament/Scene;
 .super Ljava/lang/Object;
-.source "Scene.java"
 
 
 # instance fields
@@ -15,10 +14,8 @@
 .method constructor <init>(J)V
     .locals 0
 
-    .line 48
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 49
     iput-wide p1, p0, Lcom/google/android/filament/Scene;->mNativeObject:J
 
     return-void
@@ -52,12 +49,7 @@
 # virtual methods
 .method public addEntities([I)V
     .locals 2
-    .param p1    # [I
-        .annotation build Lcom/google/android/filament/Entity;
-        .end annotation
-    .end param
 
-    .line 115
     invoke-virtual {p0}, Lcom/google/android/filament/Scene;->getNativeObject()J
 
     move-result-wide v0
@@ -69,12 +61,7 @@
 
 .method public addEntity(I)V
     .locals 2
-    .param p1    # I
-        .annotation build Lcom/google/android/filament/Entity;
-        .end annotation
-    .end param
 
-    .line 106
     invoke-virtual {p0}, Lcom/google/android/filament/Scene;->getNativeObject()J
 
     move-result-wide v0
@@ -89,95 +76,81 @@
 
     const-wide/16 v0, 0x0
 
-    .line 174
     iput-wide v0, p0, Lcom/google/android/filament/Scene;->mNativeObject:J
 
     return-void
 .end method
 
 .method public getIndirectLight()Lcom/google/android/filament/IndirectLight;
-    .locals 1
+    .locals 0
 
-    .line 80
-    iget-object v0, p0, Lcom/google/android/filament/Scene;->mIndirectLight:Lcom/google/android/filament/IndirectLight;
+    iget-object p0, p0, Lcom/google/android/filament/Scene;->mIndirectLight:Lcom/google/android/filament/IndirectLight;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getLightCount()I
     .locals 2
 
-    .line 163
     invoke-virtual {p0}, Lcom/google/android/filament/Scene;->getNativeObject()J
 
     move-result-wide v0
 
     invoke-static {v0, v1}, Lcom/google/android/filament/Scene;->nGetLightCount(J)I
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method
 
 .method public getNativeObject()J
     .locals 4
 
-    .line 167
     iget-wide v0, p0, Lcom/google/android/filament/Scene;->mNativeObject:J
 
     const-wide/16 v2, 0x0
 
-    cmp-long v2, v0, v2
+    cmp-long p0, v0, v2
 
-    if-eqz v2, :cond_0
+    if-eqz p0, :cond_0
 
     return-wide v0
 
-    .line 168
     :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-    const-string v1, "Calling method on destroyed Scene"
+    const-string v0, "Calling method on destroyed Scene"
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw v0
+    throw p0
 .end method
 
 .method public getRenderableCount()I
     .locals 2
 
-    .line 154
     invoke-virtual {p0}, Lcom/google/android/filament/Scene;->getNativeObject()J
 
     move-result-wide v0
 
     invoke-static {v0, v1}, Lcom/google/android/filament/Scene;->nGetRenderableCount(J)I
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method
 
 .method public getSkybox()Lcom/google/android/filament/Skybox;
-    .locals 1
+    .locals 0
 
-    .line 58
-    iget-object v0, p0, Lcom/google/android/filament/Scene;->mSkybox:Lcom/google/android/filament/Skybox;
+    iget-object p0, p0, Lcom/google/android/filament/Scene;->mSkybox:Lcom/google/android/filament/Skybox;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public remove(I)V
     .locals 0
-    .param p1    # I
-        .annotation build Lcom/google/android/filament/Entity;
-        .end annotation
-    .end param
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
 
-    .line 133
     invoke-virtual {p0, p1}, Lcom/google/android/filament/Scene;->removeEntity(I)V
 
     return-void
@@ -185,12 +158,7 @@
 
 .method public removeEntities([I)V
     .locals 2
-    .param p1    # [I
-        .annotation build Lcom/google/android/filament/Entity;
-        .end annotation
-    .end param
 
-    .line 145
     invoke-virtual {p0}, Lcom/google/android/filament/Scene;->getNativeObject()J
 
     move-result-wide v0
@@ -202,12 +170,7 @@
 
 .method public removeEntity(I)V
     .locals 2
-    .param p1    # I
-        .annotation build Lcom/google/android/filament/Entity;
-        .end annotation
-    .end param
 
-    .line 125
     invoke-virtual {p0}, Lcom/google/android/filament/Scene;->getNativeObject()J
 
     move-result-wide v0
@@ -218,63 +181,57 @@
 .end method
 
 .method public setIndirectLight(Lcom/google/android/filament/IndirectLight;)V
-    .locals 4
+    .locals 2
 
-    .line 93
     iput-object p1, p0, Lcom/google/android/filament/Scene;->mIndirectLight:Lcom/google/android/filament/IndirectLight;
 
-    .line 94
     invoke-virtual {p0}, Lcom/google/android/filament/Scene;->getNativeObject()J
 
     move-result-wide v0
 
-    .line 95
-    iget-object p1, p0, Lcom/google/android/filament/Scene;->mIndirectLight:Lcom/google/android/filament/IndirectLight;
+    iget-object p0, p0, Lcom/google/android/filament/Scene;->mIndirectLight:Lcom/google/android/filament/IndirectLight;
 
-    if-eqz p1, :cond_0
+    if-eqz p0, :cond_0
 
-    invoke-virtual {p1}, Lcom/google/android/filament/IndirectLight;->getNativeObject()J
+    invoke-virtual {p0}, Lcom/google/android/filament/IndirectLight;->getNativeObject()J
 
-    move-result-wide v2
+    move-result-wide p0
 
     goto :goto_0
 
     :cond_0
-    const-wide/16 v2, 0x0
+    const-wide/16 p0, 0x0
 
-    .line 94
     :goto_0
-    invoke-static {v0, v1, v2, v3}, Lcom/google/android/filament/Scene;->nSetIndirectLight(JJ)V
+    invoke-static {v0, v1, p0, p1}, Lcom/google/android/filament/Scene;->nSetIndirectLight(JJ)V
 
     return-void
 .end method
 
 .method public setSkybox(Lcom/google/android/filament/Skybox;)V
-    .locals 4
+    .locals 2
 
-    .line 70
     iput-object p1, p0, Lcom/google/android/filament/Scene;->mSkybox:Lcom/google/android/filament/Skybox;
 
-    .line 71
     invoke-virtual {p0}, Lcom/google/android/filament/Scene;->getNativeObject()J
 
     move-result-wide v0
 
-    iget-object p1, p0, Lcom/google/android/filament/Scene;->mSkybox:Lcom/google/android/filament/Skybox;
+    iget-object p0, p0, Lcom/google/android/filament/Scene;->mSkybox:Lcom/google/android/filament/Skybox;
 
-    if-eqz p1, :cond_0
+    if-eqz p0, :cond_0
 
-    invoke-virtual {p1}, Lcom/google/android/filament/Skybox;->getNativeObject()J
+    invoke-virtual {p0}, Lcom/google/android/filament/Skybox;->getNativeObject()J
 
-    move-result-wide v2
+    move-result-wide p0
 
     goto :goto_0
 
     :cond_0
-    const-wide/16 v2, 0x0
+    const-wide/16 p0, 0x0
 
     :goto_0
-    invoke-static {v0, v1, v2, v3}, Lcom/google/android/filament/Scene;->nSetSkybox(JJ)V
+    invoke-static {v0, v1, p0, p1}, Lcom/google/android/filament/Scene;->nSetSkybox(JJ)V
 
     return-void
 .end method

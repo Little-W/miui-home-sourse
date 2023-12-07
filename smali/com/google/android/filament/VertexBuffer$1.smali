@@ -1,6 +1,5 @@
 .class synthetic Lcom/google/android/filament/VertexBuffer$1;
 .super Ljava/lang/Object;
-.source "VertexBuffer.java"
 
 
 # annotations

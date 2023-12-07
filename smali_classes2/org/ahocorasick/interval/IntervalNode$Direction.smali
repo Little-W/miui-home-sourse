@@ -1,6 +1,5 @@
 .class final enum Lorg/ahocorasick/interval/IntervalNode$Direction;
 .super Ljava/lang/Enum;
-.source "IntervalNode.java"
 
 
 # annotations
@@ -34,24 +33,23 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .line 9
     new-instance v0, Lorg/ahocorasick/interval/IntervalNode$Direction;
 
-    const-string v1, "LEFT"
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    const-string v2, "LEFT"
 
-    invoke-direct {v0, v1, v2}, Lorg/ahocorasick/interval/IntervalNode$Direction;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v2, v1}, Lorg/ahocorasick/interval/IntervalNode$Direction;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lorg/ahocorasick/interval/IntervalNode$Direction;->LEFT:Lorg/ahocorasick/interval/IntervalNode$Direction;
 
     new-instance v0, Lorg/ahocorasick/interval/IntervalNode$Direction;
 
-    const-string v1, "RIGHT"
+    const/4 v2, 0x1
 
-    const/4 v3, 0x1
+    const-string v3, "RIGHT"
 
-    invoke-direct {v0, v1, v3}, Lorg/ahocorasick/interval/IntervalNode$Direction;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v3, v2}, Lorg/ahocorasick/interval/IntervalNode$Direction;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lorg/ahocorasick/interval/IntervalNode$Direction;->RIGHT:Lorg/ahocorasick/interval/IntervalNode$Direction;
 
@@ -59,13 +57,13 @@
 
     new-array v0, v0, [Lorg/ahocorasick/interval/IntervalNode$Direction;
 
-    sget-object v1, Lorg/ahocorasick/interval/IntervalNode$Direction;->LEFT:Lorg/ahocorasick/interval/IntervalNode$Direction;
+    sget-object v3, Lorg/ahocorasick/interval/IntervalNode$Direction;->LEFT:Lorg/ahocorasick/interval/IntervalNode$Direction;
 
-    aput-object v1, v0, v2
+    aput-object v3, v0, v1
 
     sget-object v1, Lorg/ahocorasick/interval/IntervalNode$Direction;->RIGHT:Lorg/ahocorasick/interval/IntervalNode$Direction;
 
-    aput-object v1, v0, v3
+    aput-object v1, v0, v2
 
     sput-object v0, Lorg/ahocorasick/interval/IntervalNode$Direction;->$VALUES:[Lorg/ahocorasick/interval/IntervalNode$Direction;
 
@@ -80,7 +78,6 @@
         }
     .end annotation
 
-    .line 9
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -89,7 +86,6 @@
 .method public static valueOf(Ljava/lang/String;)Lorg/ahocorasick/interval/IntervalNode$Direction;
     .locals 1
 
-    .line 9
     const-class v0, Lorg/ahocorasick/interval/IntervalNode$Direction;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -104,7 +100,6 @@
 .method public static values()[Lorg/ahocorasick/interval/IntervalNode$Direction;
     .locals 1
 
-    .line 9
     sget-object v0, Lorg/ahocorasick/interval/IntervalNode$Direction;->$VALUES:[Lorg/ahocorasick/interval/IntervalNode$Direction;
 
     invoke-virtual {v0}, [Lorg/ahocorasick/interval/IntervalNode$Direction;->clone()Ljava/lang/Object;

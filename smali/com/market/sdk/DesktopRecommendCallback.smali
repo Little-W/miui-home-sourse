@@ -1,6 +1,5 @@
 .class public interface abstract Lcom/market/sdk/DesktopRecommendCallback;
 .super Ljava/lang/Object;
-.source "DesktopRecommendCallback.java"
 
 
 # virtual methods

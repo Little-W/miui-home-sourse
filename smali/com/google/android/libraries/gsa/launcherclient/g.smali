@@ -1,6 +1,5 @@
 .class final Lcom/google/android/libraries/gsa/launcherclient/g;
 .super Ljava/lang/Object;
-.source "LauncherClient.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -24,14 +23,13 @@
 
 # virtual methods
 .method public final run()V
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Lcom/google/android/libraries/gsa/launcherclient/g;->a:Lcom/google/android/libraries/gsa/launcherclient/h;
+    iget-object p0, p0, Lcom/google/android/libraries/gsa/launcherclient/g;->a:Lcom/google/android/libraries/gsa/launcherclient/h;
 
-    iget-object v0, v0, Lcom/google/android/libraries/gsa/launcherclient/h;->a:Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;
+    iget-object p0, p0, Lcom/google/android/libraries/gsa/launcherclient/h;->a:Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;
 
-    .line 1
-    invoke-static {v0}, Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;->i(Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;)V
+    invoke-static {p0}, Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;->i(Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;)V
 
     return-void
 .end method

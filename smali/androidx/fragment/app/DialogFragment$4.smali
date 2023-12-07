@@ -1,6 +1,5 @@
 .class Landroidx/fragment/app/DialogFragment$4;
 .super Ljava/lang/Object;
-.source "DialogFragment.java"
 
 # interfaces
 .implements Landroidx/lifecycle/Observer;
@@ -34,7 +33,6 @@
 .method constructor <init>(Landroidx/fragment/app/DialogFragment;)V
     .locals 0
 
-    .line 140
     iput-object p1, p0, Landroidx/fragment/app/DialogFragment$4;->this$0:Landroidx/fragment/app/DialogFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,16 +43,10 @@
 
 # virtual methods
 .method public onChanged(Landroidx/lifecycle/LifecycleOwner;)V
-    .locals 3
-    .annotation build Landroid/annotation/SuppressLint;
-        value = {
-            "SyntheticAccessor"
-        }
-    .end annotation
+    .locals 2
 
     if-eqz p1, :cond_2
 
-    .line 144
     iget-object p1, p0, Landroidx/fragment/app/DialogFragment$4;->this$0:Landroidx/fragment/app/DialogFragment;
 
     invoke-static {p1}, Landroidx/fragment/app/DialogFragment;->access$200(Landroidx/fragment/app/DialogFragment;)Z
@@ -63,21 +55,18 @@
 
     if-eqz p1, :cond_2
 
-    .line 145
     iget-object p1, p0, Landroidx/fragment/app/DialogFragment$4;->this$0:Landroidx/fragment/app/DialogFragment;
 
     invoke-virtual {p1}, Landroidx/fragment/app/DialogFragment;->requireView()Landroid/view/View;
 
     move-result-object p1
 
-    .line 146
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
     if-nez v0, :cond_1
 
-    .line 150
     iget-object v0, p0, Landroidx/fragment/app/DialogFragment$4;->this$0:Landroidx/fragment/app/DialogFragment;
 
     invoke-static {v0}, Landroidx/fragment/app/DialogFragment;->access$000(Landroidx/fragment/app/DialogFragment;)Landroid/app/Dialog;
@@ -88,67 +77,61 @@
 
     const/4 v0, 0x3
 
-    .line 151
     invoke-static {v0}, Landroidx/fragment/app/FragmentManager;->isLoggingEnabled(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    const-string v0, "FragmentManager"
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    .line 152
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    const-string v1, "DialogFragment "
 
-    const-string v2, "DialogFragment "
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v1, " setting the content view on "
 
-    const-string v2, " setting the content view on "
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v1, p0, Landroidx/fragment/app/DialogFragment$4;->this$0:Landroidx/fragment/app/DialogFragment;
 
-    iget-object v2, p0, Landroidx/fragment/app/DialogFragment$4;->this$0:Landroidx/fragment/app/DialogFragment;
-
-    .line 153
-    invoke-static {v2}, Landroidx/fragment/app/DialogFragment;->access$000(Landroidx/fragment/app/DialogFragment;)Landroid/app/Dialog;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v1}, Landroidx/fragment/app/DialogFragment;->access$000(Landroidx/fragment/app/DialogFragment;)Landroid/app/Dialog;
 
     move-result-object v1
 
-    .line 152
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 155
-    :cond_0
-    iget-object v0, p0, Landroidx/fragment/app/DialogFragment$4;->this$0:Landroidx/fragment/app/DialogFragment;
-
-    invoke-static {v0}, Landroidx/fragment/app/DialogFragment;->access$000(Landroidx/fragment/app/DialogFragment;)Landroid/app/Dialog;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Landroid/app/Dialog;->setContentView(Landroid/view/View;)V
+    const-string v1, "FragmentManager"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    iget-object p0, p0, Landroidx/fragment/app/DialogFragment$4;->this$0:Landroidx/fragment/app/DialogFragment;
+
+    invoke-static {p0}, Landroidx/fragment/app/DialogFragment;->access$000(Landroidx/fragment/app/DialogFragment;)Landroid/app/Dialog;
+
+    move-result-object p0
+
+    invoke-virtual {p0, p1}, Landroid/app/Dialog;->setContentView(Landroid/view/View;)V
 
     goto :goto_0
 
-    .line 147
     :cond_1
-    new-instance p1, Ljava/lang/IllegalStateException;
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-    const-string v0, "DialogFragment can not be attached to a container view"
+    const-string p1, "DialogFragment can not be attached to a container view"
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 
     :cond_2
     :goto_0
@@ -157,13 +140,7 @@
 
 .method public bridge synthetic onChanged(Ljava/lang/Object;)V
     .locals 0
-    .annotation build Landroid/annotation/SuppressLint;
-        value = {
-            "SyntheticAccessor"
-        }
-    .end annotation
 
-    .line 140
     check-cast p1, Landroidx/lifecycle/LifecycleOwner;
 
     invoke-virtual {p0, p1}, Landroidx/fragment/app/DialogFragment$4;->onChanged(Landroidx/lifecycle/LifecycleOwner;)V

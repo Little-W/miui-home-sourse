@@ -1,6 +1,5 @@
 .class public abstract Landroidx/core/view/accessibility/AccessibilityViewCommand$CommandArguments;
 .super Ljava/lang/Object;
-.source "AccessibilityViewCommand.java"
 
 
 # annotations
@@ -22,7 +21,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,7 +31,6 @@
 .method public setBundle(Landroid/os/Bundle;)V
     .locals 0
 
-    .line 54
     iput-object p1, p0, Landroidx/core/view/accessibility/AccessibilityViewCommand$CommandArguments;->mBundle:Landroid/os/Bundle;
 
     return-void

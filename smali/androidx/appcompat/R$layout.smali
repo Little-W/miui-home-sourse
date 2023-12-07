@@ -1,6 +1,5 @@
 .class public final Landroidx/appcompat/R$layout;
 .super Ljava/lang/Object;
-.source "R.java"
 
 
 # annotations
@@ -71,24 +70,10 @@
 
 .field public static final abc_tooltip:I = 0x7f0d001b
 
-.field public static final custom_dialog:I = 0x7f0d0032
+.field public static final select_dialog_item_material:I = 0x7f0d016d
 
-.field public static final notification_action:I = 0x7f0d00d1
+.field public static final select_dialog_multichoice_material:I = 0x7f0d016e
 
-.field public static final notification_action_tombstone:I = 0x7f0d00d2
+.field public static final select_dialog_singlechoice_material:I = 0x7f0d016f
 
-.field public static final notification_template_custom_big:I = 0x7f0d00d9
-
-.field public static final notification_template_icon_group:I = 0x7f0d00da
-
-.field public static final notification_template_part_chronometer:I = 0x7f0d00de
-
-.field public static final notification_template_part_time:I = 0x7f0d00df
-
-.field public static final select_dialog_item_material:I = 0x7f0d0100
-
-.field public static final select_dialog_multichoice_material:I = 0x7f0d0101
-
-.field public static final select_dialog_singlechoice_material:I = 0x7f0d0102
-
-.field public static final support_simple_spinner_dropdown_item:I = 0x7f0d010e
+.field public static final support_simple_spinner_dropdown_item:I = 0x7f0d0173

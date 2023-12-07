@@ -1,6 +1,5 @@
 .class public final Landroidx/appcompat/R$dimen;
 .super Ljava/lang/Object;
-.source "R.java"
 
 
 # annotations
@@ -133,118 +132,80 @@
 
 .field public static final abc_select_dialog_padding_start_material:I = 0x7f07003a
 
-.field public static final abc_switch_padding:I = 0x7f07003b
+.field public static final abc_star_big:I = 0x7f07003b
 
-.field public static final abc_text_size_body_1_material:I = 0x7f07003c
+.field public static final abc_star_medium:I = 0x7f07003c
 
-.field public static final abc_text_size_body_2_material:I = 0x7f07003d
+.field public static final abc_star_small:I = 0x7f07003d
 
-.field public static final abc_text_size_button_material:I = 0x7f07003e
+.field public static final abc_switch_padding:I = 0x7f07003e
 
-.field public static final abc_text_size_caption_material:I = 0x7f07003f
+.field public static final abc_text_size_body_1_material:I = 0x7f07003f
 
-.field public static final abc_text_size_display_1_material:I = 0x7f070040
+.field public static final abc_text_size_body_2_material:I = 0x7f070040
 
-.field public static final abc_text_size_display_2_material:I = 0x7f070041
+.field public static final abc_text_size_button_material:I = 0x7f070041
 
-.field public static final abc_text_size_display_3_material:I = 0x7f070042
+.field public static final abc_text_size_caption_material:I = 0x7f070042
 
-.field public static final abc_text_size_display_4_material:I = 0x7f070043
+.field public static final abc_text_size_display_1_material:I = 0x7f070043
 
-.field public static final abc_text_size_headline_material:I = 0x7f070044
+.field public static final abc_text_size_display_2_material:I = 0x7f070044
 
-.field public static final abc_text_size_large_material:I = 0x7f070045
+.field public static final abc_text_size_display_3_material:I = 0x7f070045
 
-.field public static final abc_text_size_medium_material:I = 0x7f070046
+.field public static final abc_text_size_display_4_material:I = 0x7f070046
 
-.field public static final abc_text_size_menu_header_material:I = 0x7f070047
+.field public static final abc_text_size_headline_material:I = 0x7f070047
 
-.field public static final abc_text_size_menu_material:I = 0x7f070048
+.field public static final abc_text_size_large_material:I = 0x7f070048
 
-.field public static final abc_text_size_small_material:I = 0x7f070049
+.field public static final abc_text_size_medium_material:I = 0x7f070049
 
-.field public static final abc_text_size_subhead_material:I = 0x7f07004a
+.field public static final abc_text_size_menu_header_material:I = 0x7f07004a
 
-.field public static final abc_text_size_subtitle_material_toolbar:I = 0x7f07004b
+.field public static final abc_text_size_menu_material:I = 0x7f07004b
 
-.field public static final abc_text_size_title_material:I = 0x7f07004c
+.field public static final abc_text_size_small_material:I = 0x7f07004c
 
-.field public static final abc_text_size_title_material_toolbar:I = 0x7f07004d
+.field public static final abc_text_size_subhead_material:I = 0x7f07004d
 
-.field public static final compat_button_inset_horizontal_material:I = 0x7f07007b
+.field public static final abc_text_size_subtitle_material_toolbar:I = 0x7f07004e
 
-.field public static final compat_button_inset_vertical_material:I = 0x7f07007c
+.field public static final abc_text_size_title_material:I = 0x7f07004f
 
-.field public static final compat_button_padding_horizontal_material:I = 0x7f07007d
+.field public static final abc_text_size_title_material_toolbar:I = 0x7f070050
 
-.field public static final compat_button_padding_vertical_material:I = 0x7f07007e
+.field public static final disabled_alpha_material_dark:I = 0x7f070100
 
-.field public static final compat_control_corner_material:I = 0x7f07007f
+.field public static final disabled_alpha_material_light:I = 0x7f070101
 
-.field public static final compat_notification_large_icon_max_height:I = 0x7f070080
+.field public static final highlight_alpha_material_colored:I = 0x7f0701c0
 
-.field public static final compat_notification_large_icon_max_width:I = 0x7f070081
+.field public static final highlight_alpha_material_dark:I = 0x7f0701c1
 
-.field public static final disabled_alpha_material_dark:I = 0x7f07009a
+.field public static final highlight_alpha_material_light:I = 0x7f0701c2
 
-.field public static final disabled_alpha_material_light:I = 0x7f07009b
+.field public static final hint_alpha_material_dark:I = 0x7f0701c3
 
-.field public static final highlight_alpha_material_colored:I = 0x7f0700f0
+.field public static final hint_alpha_material_light:I = 0x7f0701c4
 
-.field public static final highlight_alpha_material_dark:I = 0x7f0700f1
+.field public static final hint_pressed_alpha_material_dark:I = 0x7f0701c5
 
-.field public static final highlight_alpha_material_light:I = 0x7f0700f2
+.field public static final hint_pressed_alpha_material_light:I = 0x7f0701c6
 
-.field public static final hint_alpha_material_dark:I = 0x7f0700f3
+.field public static final tooltip_corner_radius:I = 0x7f0706c1
 
-.field public static final hint_alpha_material_light:I = 0x7f0700f4
+.field public static final tooltip_horizontal_padding:I = 0x7f0706c2
 
-.field public static final hint_pressed_alpha_material_dark:I = 0x7f0700f5
+.field public static final tooltip_margin:I = 0x7f0706c3
 
-.field public static final hint_pressed_alpha_material_light:I = 0x7f0700f6
+.field public static final tooltip_precise_anchor_extra_offset:I = 0x7f0706c4
 
-.field public static final notification_action_icon_size:I = 0x7f070325
+.field public static final tooltip_precise_anchor_threshold:I = 0x7f0706c5
 
-.field public static final notification_action_text_size:I = 0x7f070326
+.field public static final tooltip_vertical_padding:I = 0x7f0706c6
 
-.field public static final notification_big_circle_margin:I = 0x7f070327
+.field public static final tooltip_y_offset_non_touch:I = 0x7f0706c7
 
-.field public static final notification_content_margin_start:I = 0x7f070328
-
-.field public static final notification_large_icon_height:I = 0x7f070329
-
-.field public static final notification_large_icon_width:I = 0x7f07032a
-
-.field public static final notification_main_column_padding_top:I = 0x7f07032b
-
-.field public static final notification_media_narrow_margin:I = 0x7f07032c
-
-.field public static final notification_right_icon_size:I = 0x7f07032d
-
-.field public static final notification_right_side_padding_top:I = 0x7f07032e
-
-.field public static final notification_small_icon_background_padding:I = 0x7f07032f
-
-.field public static final notification_small_icon_size_as_large:I = 0x7f070330
-
-.field public static final notification_subtext_size:I = 0x7f070331
-
-.field public static final notification_top_pad:I = 0x7f070332
-
-.field public static final notification_top_pad_large_text:I = 0x7f070333
-
-.field public static final tooltip_corner_radius:I = 0x7f0703d9
-
-.field public static final tooltip_horizontal_padding:I = 0x7f0703da
-
-.field public static final tooltip_margin:I = 0x7f0703db
-
-.field public static final tooltip_precise_anchor_extra_offset:I = 0x7f0703dc
-
-.field public static final tooltip_precise_anchor_threshold:I = 0x7f0703dd
-
-.field public static final tooltip_vertical_padding:I = 0x7f0703de
-
-.field public static final tooltip_y_offset_non_touch:I = 0x7f0703df
-
-.field public static final tooltip_y_offset_touch:I = 0x7f0703e0
+.field public static final tooltip_y_offset_touch:I = 0x7f0706c8

@@ -1,6 +1,5 @@
 .class public final enum Lcom/google/android/filament/Material$RefractionMode;
 .super Ljava/lang/Enum;
-.source "Material.java"
 
 
 # annotations
@@ -36,55 +35,51 @@
 .method static constructor <clinit>()V
     .locals 5
 
-    .line 166
     new-instance v0, Lcom/google/android/filament/Material$RefractionMode;
 
-    const-string v1, "NONE"
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    const-string v2, "NONE"
 
-    invoke-direct {v0, v1, v2}, Lcom/google/android/filament/Material$RefractionMode;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v2, v1}, Lcom/google/android/filament/Material$RefractionMode;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/google/android/filament/Material$RefractionMode;->NONE:Lcom/google/android/filament/Material$RefractionMode;
 
-    .line 167
     new-instance v0, Lcom/google/android/filament/Material$RefractionMode;
 
-    const-string v1, "CUBEMAP"
+    const/4 v2, 0x1
 
-    const/4 v3, 0x1
+    const-string v3, "CUBEMAP"
 
-    invoke-direct {v0, v1, v3}, Lcom/google/android/filament/Material$RefractionMode;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v3, v2}, Lcom/google/android/filament/Material$RefractionMode;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/google/android/filament/Material$RefractionMode;->CUBEMAP:Lcom/google/android/filament/Material$RefractionMode;
 
-    .line 168
     new-instance v0, Lcom/google/android/filament/Material$RefractionMode;
 
-    const-string v1, "SCREEN_SPACE"
+    const/4 v3, 0x2
 
-    const/4 v4, 0x2
+    const-string v4, "SCREEN_SPACE"
 
-    invoke-direct {v0, v1, v4}, Lcom/google/android/filament/Material$RefractionMode;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v4, v3}, Lcom/google/android/filament/Material$RefractionMode;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/google/android/filament/Material$RefractionMode;->SCREEN_SPACE:Lcom/google/android/filament/Material$RefractionMode;
 
     const/4 v0, 0x3
 
-    .line 165
     new-array v0, v0, [Lcom/google/android/filament/Material$RefractionMode;
 
-    sget-object v1, Lcom/google/android/filament/Material$RefractionMode;->NONE:Lcom/google/android/filament/Material$RefractionMode;
+    sget-object v4, Lcom/google/android/filament/Material$RefractionMode;->NONE:Lcom/google/android/filament/Material$RefractionMode;
 
-    aput-object v1, v0, v2
+    aput-object v4, v0, v1
 
     sget-object v1, Lcom/google/android/filament/Material$RefractionMode;->CUBEMAP:Lcom/google/android/filament/Material$RefractionMode;
 
-    aput-object v1, v0, v3
+    aput-object v1, v0, v2
 
     sget-object v1, Lcom/google/android/filament/Material$RefractionMode;->SCREEN_SPACE:Lcom/google/android/filament/Material$RefractionMode;
 
-    aput-object v1, v0, v4
+    aput-object v1, v0, v3
 
     sput-object v0, Lcom/google/android/filament/Material$RefractionMode;->$VALUES:[Lcom/google/android/filament/Material$RefractionMode;
 
@@ -99,7 +94,6 @@
         }
     .end annotation
 
-    .line 165
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -108,7 +102,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/android/filament/Material$RefractionMode;
     .locals 1
 
-    .line 165
     const-class v0, Lcom/google/android/filament/Material$RefractionMode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -123,7 +116,6 @@
 .method public static values()[Lcom/google/android/filament/Material$RefractionMode;
     .locals 1
 
-    .line 165
     sget-object v0, Lcom/google/android/filament/Material$RefractionMode;->$VALUES:[Lcom/google/android/filament/Material$RefractionMode;
 
     invoke-virtual {v0}, [Lcom/google/android/filament/Material$RefractionMode;->clone()Ljava/lang/Object;

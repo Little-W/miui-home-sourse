@@ -1,6 +1,5 @@
 .class Landroidx/fragment/app/FragmentManagerViewModel$1;
 .super Ljava/lang/Object;
-.source "FragmentManagerViewModel.java"
 
 # interfaces
 .implements Landroidx/lifecycle/ViewModelProvider$Factory;
@@ -21,7 +20,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,7 +28,7 @@
 
 # virtual methods
 .method public create(Ljava/lang/Class;)Landroidx/lifecycle/ViewModel;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -41,12 +39,11 @@
         }
     .end annotation
 
-    .line 45
-    new-instance p1, Landroidx/fragment/app/FragmentManagerViewModel;
+    new-instance p0, Landroidx/fragment/app/FragmentManagerViewModel;
 
-    const/4 v0, 0x1
+    const/4 p1, 0x1
 
-    invoke-direct {p1, v0}, Landroidx/fragment/app/FragmentManagerViewModel;-><init>(Z)V
+    invoke-direct {p0, p1}, Landroidx/fragment/app/FragmentManagerViewModel;-><init>(Z)V
 
-    return-object p1
+    return-object p0
 .end method

@@ -1,6 +1,5 @@
 .class Landroid/support/v4/media/MediaDescriptionCompatApi21;
 .super Ljava/lang/Object;
-.source "MediaDescriptionCompatApi21.java"
 
 
 # annotations
@@ -15,7 +14,6 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 107
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,7 +22,6 @@
 .method public static fromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 1
 
-    .line 62
     sget-object v0, Landroid/media/MediaDescription;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p0}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -37,7 +34,6 @@
 .method public static getDescription(Ljava/lang/Object;)Ljava/lang/CharSequence;
     .locals 0
 
-    .line 42
     check-cast p0, Landroid/media/MediaDescription;
 
     invoke-virtual {p0}, Landroid/media/MediaDescription;->getDescription()Ljava/lang/CharSequence;
@@ -50,7 +46,6 @@
 .method public static getExtras(Ljava/lang/Object;)Landroid/os/Bundle;
     .locals 0
 
-    .line 54
     check-cast p0, Landroid/media/MediaDescription;
 
     invoke-virtual {p0}, Landroid/media/MediaDescription;->getExtras()Landroid/os/Bundle;
@@ -63,7 +58,6 @@
 .method public static getIconBitmap(Ljava/lang/Object;)Landroid/graphics/Bitmap;
     .locals 0
 
-    .line 46
     check-cast p0, Landroid/media/MediaDescription;
 
     invoke-virtual {p0}, Landroid/media/MediaDescription;->getIconBitmap()Landroid/graphics/Bitmap;
@@ -76,7 +70,6 @@
 .method public static getIconUri(Ljava/lang/Object;)Landroid/net/Uri;
     .locals 0
 
-    .line 50
     check-cast p0, Landroid/media/MediaDescription;
 
     invoke-virtual {p0}, Landroid/media/MediaDescription;->getIconUri()Landroid/net/Uri;
@@ -89,7 +82,6 @@
 .method public static getMediaId(Ljava/lang/Object;)Ljava/lang/String;
     .locals 0
 
-    .line 30
     check-cast p0, Landroid/media/MediaDescription;
 
     invoke-virtual {p0}, Landroid/media/MediaDescription;->getMediaId()Ljava/lang/String;
@@ -102,7 +94,6 @@
 .method public static getSubtitle(Ljava/lang/Object;)Ljava/lang/CharSequence;
     .locals 0
 
-    .line 38
     check-cast p0, Landroid/media/MediaDescription;
 
     invoke-virtual {p0}, Landroid/media/MediaDescription;->getSubtitle()Ljava/lang/CharSequence;
@@ -115,7 +106,6 @@
 .method public static getTitle(Ljava/lang/Object;)Ljava/lang/CharSequence;
     .locals 0
 
-    .line 34
     check-cast p0, Landroid/media/MediaDescription;
 
     invoke-virtual {p0}, Landroid/media/MediaDescription;->getTitle()Ljava/lang/CharSequence;
@@ -128,7 +118,6 @@
 .method public static writeToParcel(Ljava/lang/Object;Landroid/os/Parcel;I)V
     .locals 0
 
-    .line 58
     check-cast p0, Landroid/media/MediaDescription;
 
     invoke-virtual {p0, p1, p2}, Landroid/media/MediaDescription;->writeToParcel(Landroid/os/Parcel;I)V

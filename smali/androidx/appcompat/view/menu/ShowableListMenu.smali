@@ -1,6 +1,5 @@
 .class public interface abstract Landroidx/appcompat/view/menu/ShowableListMenu;
 .super Ljava/lang/Object;
-.source "ShowableListMenu.java"
 
 
 # virtual methods

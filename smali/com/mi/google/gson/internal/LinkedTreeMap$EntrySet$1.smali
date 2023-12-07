@@ -1,6 +1,5 @@
 .class Lcom/mi/google/gson/internal/LinkedTreeMap$EntrySet$1;
 .super Lcom/mi/google/gson/internal/LinkedTreeMap$LinkedTreeMapIterator;
-.source "LinkedTreeMap.java"
 
 
 # annotations
@@ -32,7 +31,6 @@
 .method constructor <init>(Lcom/mi/google/gson/internal/LinkedTreeMap$EntrySet;)V
     .locals 0
 
-    .line 566
     iput-object p1, p0, Lcom/mi/google/gson/internal/LinkedTreeMap$EntrySet$1;->this$1:Lcom/mi/google/gson/internal/LinkedTreeMap$EntrySet;
 
     iget-object p1, p1, Lcom/mi/google/gson/internal/LinkedTreeMap$EntrySet;->this$0:Lcom/mi/google/gson/internal/LinkedTreeMap;
@@ -45,18 +43,17 @@
 
 # virtual methods
 .method public bridge synthetic next()Ljava/lang/Object;
-    .locals 1
+    .locals 0
 
-    .line 566
     invoke-virtual {p0}, Lcom/mi/google/gson/internal/LinkedTreeMap$EntrySet$1;->next()Ljava/util/Map$Entry;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public next()Ljava/util/Map$Entry;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -65,10 +62,9 @@
         }
     .end annotation
 
-    .line 568
     invoke-virtual {p0}, Lcom/mi/google/gson/internal/LinkedTreeMap$EntrySet$1;->nextNode()Lcom/mi/google/gson/internal/LinkedTreeMap$Node;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

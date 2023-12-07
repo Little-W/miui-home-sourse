@@ -5,5 +5,5 @@
         <fragment android:name="com.miui.home.launcher.allapps.search.AppListSearchFragment" android:id="@id/search_app_fragment" android:layout_width="fill_parent" android:layout_height="fill_parent" />
         <fragment android:name="com.miui.home.launcher.allapps.search.AppCategorySelectSearchFragment" android:id="@id/search_category_fragment" android:layout_width="fill_parent" android:layout_height="fill_parent" />
     </ViewAnimator>
-    <View android:id="@id/all_apps_search_mask" android:background="@color/alpha30black" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <include layout="@layout/all_apps_search_result_mask" />
 </com.miui.home.launcher.allapps.search.AllAppsSearchContainer>

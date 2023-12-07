@@ -1,6 +1,5 @@
 .class synthetic Lcom/google/android/filament/SurfaceOrientation$1;
 .super Ljava/lang/Object;
-.source "SurfaceOrientation.java"
 
 
 # annotations

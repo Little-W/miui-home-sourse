@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/frequent_apps_container" android:background="@drawable/branch_item_card_bg" android:paddingTop="@dimen/dp4" android:paddingBottom="@dimen/dp4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/dp8" android:paddingEnd="@dimen/dp8"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <GridView android:id="@id/frequent_apps_grid1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:numColumns="5" />
+    <GridView android:id="@id/frequent_apps_grid2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:numColumns="5" />
+</LinearLayout>

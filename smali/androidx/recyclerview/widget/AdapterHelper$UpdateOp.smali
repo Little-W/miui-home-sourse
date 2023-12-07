@@ -1,6 +1,5 @@
 .class Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;
 .super Ljava/lang/Object;
-.source "AdapterHelper.java"
 
 
 # annotations
@@ -28,19 +27,14 @@
 .method constructor <init>(IIILjava/lang/Object;)V
     .locals 0
 
-    .line 651
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 652
     iput p1, p0, Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;->cmd:I
 
-    .line 653
     iput p2, p0, Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;->positionStart:I
 
-    .line 654
     iput p3, p0, Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;->itemCount:I
 
-    .line 655
     iput-object p4, p0, Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;->payload:Ljava/lang/Object;
 
     return-void
@@ -49,52 +43,49 @@
 
 # virtual methods
 .method cmdToString()Ljava/lang/String;
-    .locals 2
+    .locals 1
 
-    .line 659
-    iget v0, p0, Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;->cmd:I
+    iget p0, p0, Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;->cmd:I
 
-    const/4 v1, 0x4
+    const/4 v0, 0x1
 
-    if-eq v0, v1, :cond_1
+    if-eq p0, v0, :cond_3
 
-    const/16 v1, 0x8
+    const/4 v0, 0x2
 
-    if-eq v0, v1, :cond_0
+    if-eq p0, v0, :cond_2
 
-    packed-switch v0, :pswitch_data_0
+    const/4 v0, 0x4
 
-    const-string v0, "??"
+    if-eq p0, v0, :cond_1
 
-    return-object v0
+    const/16 v0, 0x8
 
-    :pswitch_0
-    const-string v0, "rm"
+    if-eq p0, v0, :cond_0
 
-    return-object v0
+    const-string p0, "??"
 
-    :pswitch_1
-    const-string v0, "add"
-
-    return-object v0
+    return-object p0
 
     :cond_0
-    const-string v0, "mv"
+    const-string p0, "mv"
 
-    return-object v0
+    return-object p0
 
     :cond_1
-    const-string v0, "up"
+    const-string/jumbo p0, "up"
 
-    return-object v0
+    return-object p0
 
-    nop
+    :cond_2
+    const-string p0, "rm"
 
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p0
+
+    :cond_3
+    const-string p0, "add"
+
+    return-object p0
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
@@ -111,7 +102,6 @@
 
     if-eqz p1, :cond_8
 
-    .line 684
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -124,11 +114,9 @@
 
     goto :goto_0
 
-    .line 688
     :cond_1
     check-cast p1, Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;
 
-    .line 690
     iget v2, p0, Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;->cmd:I
 
     iget v3, p1, Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;->cmd:I
@@ -142,7 +130,6 @@
 
     if-ne v2, v3, :cond_3
 
-    .line 693
     iget v2, p0, Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;->itemCount:I
 
     iget v3, p0, Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;->positionStart:I
@@ -155,7 +142,6 @@
 
     if-ne v2, v0, :cond_3
 
-    .line 695
     iget v2, p0, Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;->itemCount:I
 
     iget v3, p1, Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;->positionStart:I
@@ -170,7 +156,6 @@
 
     return v0
 
-    .line 699
     :cond_3
     iget v2, p0, Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;->itemCount:I
 
@@ -180,7 +165,6 @@
 
     return v1
 
-    .line 702
     :cond_4
     iget v2, p0, Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;->positionStart:I
 
@@ -190,28 +174,25 @@
 
     return v1
 
-    .line 705
     :cond_5
-    iget-object v2, p0, Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;->payload:Ljava/lang/Object;
+    iget-object p0, p0, Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;->payload:Ljava/lang/Object;
 
-    if-eqz v2, :cond_6
+    if-eqz p0, :cond_6
 
-    .line 706
     iget-object p1, p1, Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;->payload:Ljava/lang/Object;
 
-    invoke-virtual {v2, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    move-result p1
+    move-result p0
 
-    if-nez p1, :cond_7
+    if-nez p0, :cond_7
 
     return v1
 
-    .line 709
     :cond_6
-    iget-object p1, p1, Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;->payload:Ljava/lang/Object;
+    iget-object p0, p1, Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;->payload:Ljava/lang/Object;
 
-    if-eqz p1, :cond_7
+    if-eqz p0, :cond_7
 
     return v1
 
@@ -226,22 +207,19 @@
 .method public hashCode()I
     .locals 2
 
-    .line 718
     iget v0, p0, Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;->cmd:I
 
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 719
     iget v1, p0, Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;->positionStart:I
 
     add-int/2addr v0, v1
 
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 720
-    iget v1, p0, Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;->itemCount:I
+    iget p0, p0, Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;->itemCount:I
 
-    add-int/2addr v0, v1
+    add-int/2addr v0, p0
 
     return v0
 .end method
@@ -249,7 +227,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 674
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -268,7 +245,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 675
     invoke-virtual {p0}, Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;->cmdToString()Ljava/lang/String;
 
     move-result-object v1
@@ -295,17 +271,17 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;->payload:Ljava/lang/Object;
+    iget-object p0, p0, Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;->payload:Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, "]"
+    const-string p0, "]"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

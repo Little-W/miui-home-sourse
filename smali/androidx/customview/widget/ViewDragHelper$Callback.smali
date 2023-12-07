@@ -1,6 +1,5 @@
 .class public abstract Landroidx/customview/widget/ViewDragHelper$Callback;
 .super Ljava/lang/Object;
-.source "ViewDragHelper.java"
 
 
 # annotations
@@ -14,21 +13,31 @@
 .end annotation
 
 
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
 # virtual methods
 .method public clampViewPositionHorizontal(Landroid/view/View;II)I
     .locals 0
 
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return p1
+    return p0
 .end method
 
 .method public clampViewPositionVertical(Landroid/view/View;II)I
     .locals 0
 
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return p1
+    return p0
 .end method
 
 .method public getOrderedChildIndex(I)I
@@ -40,17 +49,17 @@
 .method public getViewHorizontalDragRange(Landroid/view/View;)I
     .locals 0
 
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return p1
+    return p0
 .end method
 
 .method public getViewVerticalDragRange(Landroid/view/View;)I
     .locals 0
 
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return p1
+    return p0
 .end method
 
 .method public onEdgeDragStarted(II)V
@@ -62,9 +71,9 @@
 .method public onEdgeLock(I)Z
     .locals 0
 
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return p1
+    return p0
 .end method
 
 .method public onEdgeTouched(II)V

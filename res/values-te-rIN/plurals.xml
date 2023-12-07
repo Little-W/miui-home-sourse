@@ -44,14 +44,6 @@
         <item quantity="other">%1$s నుండి చదవనివి %2$s</item>
         <item quantity="one">%1$s నుండి చదవనివి %2$s</item>
     </plurals>
-    <plurals name="delete_wallpapers_message">
-        <item quantity="other">%1$d వాల్‌పేపర్‌లు తొలగించాలా?</item>
-        <item quantity="one">%1$d వాల్‌పేపర్ తొలగించాలా?</item>
-    </plurals>
-    <plurals name="editing_mode_title">
-        <item quantity="other">%1$d అంశాలను ఎంచుకున్నారు</item>
-        <item quantity="one">%1$d అంశాన్ని ఎంచుకున్నారు</item>
-    </plurals>
     <plurals name="half_hour_ago">
         <item quantity="other">అర గంట క్రితం</item>
         <item quantity="one">అర గంట క్రితం</item>
@@ -85,8 +77,8 @@
         <item quantity="one">1 నిమిషం క్రితం</item>
     </plurals>
     <plurals name="remove_dialog_title_multi_format">
-        <item quantity="other">హోమ్ స్క్రీన్ నుండి %1$d యాప్‌లని తీసివేయాలనుకుంటున్నారా?</item>
-        <item quantity="one">హోమ్ స్క్రీన్ నుండి %1$d యాప్‌ని తీసివేయాలనుకుంటున్నారా?</item>
+        <item quantity="other">హోమ్ స్క్రీన్ నుండి %1$d ఐటమ్‌లను తీసివేయాలనుకుంటున్నారా?</item>
+        <item quantity="one">హోమ్ స్క్రీన్ నుండి %1$d ఐటమ్‌ను తీసివేయాలనుకుంటున్నారా?</item>
     </plurals>
     <plurals name="scroll_tip_format_when_announce_accessibility">
         <item quantity="other">పేజీ %1$d, %2$d అప్లికేషన్‌లు.</item>

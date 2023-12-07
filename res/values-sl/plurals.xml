@@ -66,18 +66,6 @@
         <item quantity="two">%2$s neprebrani s strani %1$s</item>
         <item quantity="few">%2$s neprebrana s strani %1$s</item>
     </plurals>
-    <plurals name="delete_wallpapers_message">
-        <item quantity="other">Izbrišem %1$d slike ozadja?</item>
-        <item quantity="one">Izbrišem %1$d sliko ozadja?</item>
-        <item quantity="two">Izbrišem %1$d sliki ozadji?</item>
-        <item quantity="few">Izbrišem %1$d sliki ozadji?</item>
-    </plurals>
-    <plurals name="editing_mode_title">
-        <item quantity="other">Izbranih %1$d predmetov</item>
-        <item quantity="one">Izbran %1$d predmet</item>
-        <item quantity="two">Izbrana %1$d predmeta</item>
-        <item quantity="few">Izbrani %1$d predmeti</item>
-    </plurals>
     <plurals name="half_hour_ago">
         <item quantity="other">Pred pol ure</item>
         <item quantity="one">Pred pol ure</item>
@@ -120,6 +108,12 @@
         <item quantity="two">%d predmeta izbrana</item>
         <item quantity="few">%d predmetov izbranih</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d novih obvestil</item>
+        <item quantity="one">%d novo obvestilo</item>
+        <item quantity="two">%d novi obvestili</item>
+        <item quantity="few">%d nova obvestila</item>
+    </plurals>
     <plurals name="num_minutes_ago">
         <item quantity="other">Pred %d minut</item>
         <item quantity="one">pred 1 minuto</item>
@@ -127,10 +121,10 @@
         <item quantity="few">Pred %d minut</item>
     </plurals>
     <plurals name="remove_dialog_title_multi_format">
-        <item quantity="other">Želite odstraniti %1$d aplikacij iz Začetnega zaslona?</item>
-        <item quantity="one">Želite odstraniti %1$d aplikacijo iz Začetnega zaslona?</item>
-        <item quantity="two">Želite odstraniti %1$d aplikaciji iz Začetnega zaslona?</item>
-        <item quantity="few">Želite odstraniti %1$d aplikacije iz Začetnega zaslona?</item>
+        <item quantity="other">Želite odstraniti %1$d predmetov iz Začetnega zaslona?</item>
+        <item quantity="one">Želite odstraniti %1$d predmet iz Začetnega zaslona?</item>
+        <item quantity="two">Želite odstraniti %1$d predmeta iz Začetnega zaslona?</item>
+        <item quantity="few">Želite odstraniti %1$d predmete iz Začetnega zaslona?</item>
     </plurals>
     <plurals name="scroll_tip_format_when_announce_accessibility">
         <item quantity="other">Stran %1$d, %2$d aplikacije.</item>

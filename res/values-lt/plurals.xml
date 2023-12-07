@@ -66,18 +66,6 @@
         <item quantity="few">%2$s neskaityti nuo %1$s</item>
         <item quantity="many">%2$s neskaityto nuo %1$s</item>
     </plurals>
-    <plurals name="delete_wallpapers_message">
-        <item quantity="other">Trinti %1$d fonų?</item>
-        <item quantity="one">Trinti %1$d foną?</item>
-        <item quantity="few">Trinti %1$d fonus?</item>
-        <item quantity="many">Trinti %1$d fono?</item>
-    </plurals>
-    <plurals name="editing_mode_title">
-        <item quantity="other">Pasirinkta %1$d elementų</item>
-        <item quantity="one">Pasirinktas %1$d elementas</item>
-        <item quantity="few">Pasirinkti %1$d elementai</item>
-        <item quantity="many">Pasirinkta %1$d elemento</item>
-    </plurals>
     <plurals name="half_hour_ago">
         <item quantity="other">Prieš pusvalandį</item>
         <item quantity="one">Prieš pusvalandį</item>
@@ -120,6 +108,12 @@
         <item quantity="few">Pasirinkti %d elementai</item>
         <item quantity="many">Pasirinkta %d elemento</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d naujų pranešimų</item>
+        <item quantity="one">%d naujas pranešimas</item>
+        <item quantity="few">%d nauji pranešimai</item>
+        <item quantity="many">%d naujo pranešimo</item>
+    </plurals>
     <plurals name="num_minutes_ago">
         <item quantity="other">Prieš %d minučių</item>
         <item quantity="one">Prieš 1 minutę</item>
@@ -127,10 +121,10 @@
         <item quantity="many">Prieš %d minutes</item>
     </plurals>
     <plurals name="remove_dialog_title_multi_format">
-        <item quantity="other">Pašalinti %1$d programų iš pagrindinio ekrano?</item>
-        <item quantity="one">Pašalinti %1$d programą iš pagrindinio ekrano?</item>
-        <item quantity="few">Pašalinti %1$d programas iš pagrindinio ekrano?</item>
-        <item quantity="many">Pašalinti %1$d programas iš pagrindinio ekrano?</item>
+        <item quantity="other">Pašalinti %1$d elementų iš pagrindinio ekrano?</item>
+        <item quantity="one">Pašalinti %1$d elementą iš pagrindinio ekrano?</item>
+        <item quantity="few">Pašalinti %1$d elementų iš pagrindinio ekrano?</item>
+        <item quantity="many">Pašalinti %1$d elementus iš pagrindinio ekrano?</item>
     </plurals>
     <plurals name="scroll_tip_format_when_announce_accessibility">
         <item quantity="other">%1$d puslapis, %2$d programų.</item>

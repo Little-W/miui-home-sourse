@@ -44,14 +44,6 @@
         <item quantity="other">%1$s இடமிருந்து %2$s படிக்காதவை</item>
         <item quantity="one">%1$s இடமிருந்து %2$s படிக்காதவை</item>
     </plurals>
-    <plurals name="delete_wallpapers_message">
-        <item quantity="other">%1$d வால்பேப்பர்களை நீக்கவா?</item>
-        <item quantity="one">%1$d வால்பேப்பரை நீக்கவா?</item>
-    </plurals>
-    <plurals name="editing_mode_title">
-        <item quantity="other">%1$d உருப்படிகள் தேர்ந்தெடுக்கப்பட்டன</item>
-        <item quantity="one">%1$d உருப்படி தேர்ந்தெடுக்கப்பட்டது</item>
-    </plurals>
     <plurals name="half_hour_ago">
         <item quantity="other">அரை மணி நேரம் முன்பு</item>
         <item quantity="one">அரை மணி நேரம் முன்பு</item>
@@ -85,8 +77,8 @@
         <item quantity="one">1 நிமிடம் முன்பு</item>
     </plurals>
     <plurals name="remove_dialog_title_multi_format">
-        <item quantity="other">முகப்புத் திரையிலிருந்து %1$d செயலிகளை அகற்றவா?</item>
-        <item quantity="one">முகப்புத் திரையிலிருந்து %1$d செயலியை அகற்றவா?</item>
+        <item quantity="other">முகப்புத் திரையிலிருந்து %1$d உருப்படிகளை அகற்றவா?</item>
+        <item quantity="one">முகப்புத் திரையிலிருந்து %1$d உருப்படியை அகற்றவா?</item>
     </plurals>
     <plurals name="scroll_tip_format_when_announce_accessibility">
         <item quantity="other">பக்கம் %1$d, %2$d பயன்பாடுகள்.</item>

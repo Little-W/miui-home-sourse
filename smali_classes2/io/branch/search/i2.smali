@@ -1,0 +1,12 @@
+.class public interface abstract Lio/branch/search/i2;
+.super Ljava/lang/Object;
+
+
+# virtual methods
+.method public abstract a(Lio/requery/android/database/sqlite/SQLiteDatabase;)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/Exception;
+        }
+    .end annotation
+.end method

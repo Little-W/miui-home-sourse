@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<miuix.smooth.SmoothContainerDrawable android:radius="@dimen/miuix_appcompat_button_bg_corner_radius_miuix3"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <child>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/miuix_color_blue_dark_primary_default" />
+            <size android:height="@dimen/miuix_appcompat_button_height_miuix3" />
+            <padding android:left="@dimen/miuix_appcompat_button_content_safe_padding_miuix3" android:right="@dimen/miuix_appcompat_button_content_safe_padding_miuix3" />
+        </shape>
+    </child>
+</miuix.smooth.SmoothContainerDrawable>

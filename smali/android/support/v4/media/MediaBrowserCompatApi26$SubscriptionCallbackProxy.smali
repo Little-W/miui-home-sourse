@@ -1,6 +1,5 @@
 .class Landroid/support/v4/media/MediaBrowserCompatApi26$SubscriptionCallbackProxy;
 .super Landroid/support/v4/media/MediaBrowserCompatApi21$SubscriptionCallbackProxy;
-.source "MediaBrowserCompatApi26.java"
 
 
 # annotations
@@ -33,7 +32,6 @@
         }
     .end annotation
 
-    .line 54
     invoke-direct {p0, p1}, Landroid/support/v4/media/MediaBrowserCompatApi21$SubscriptionCallbackProxy;-><init>(Landroid/support/v4/media/MediaBrowserCompatApi21$SubscriptionCallback;)V
 
     return-void
@@ -42,7 +40,7 @@
 
 # virtual methods
 .method public onChildrenLoaded(Ljava/lang/String;Ljava/util/List;Landroid/os/Bundle;)V
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -55,31 +53,27 @@
         }
     .end annotation
 
-    .line 60
     invoke-static {p3}, Landroid/support/v4/media/session/MediaSessionCompat;->ensureClassLoader(Landroid/os/Bundle;)V
 
-    .line 61
-    iget-object v0, p0, Landroid/support/v4/media/MediaBrowserCompatApi26$SubscriptionCallbackProxy;->mSubscriptionCallback:Landroid/support/v4/media/MediaBrowserCompatApi21$SubscriptionCallback;
+    iget-object p0, p0, Landroid/support/v4/media/MediaBrowserCompatApi26$SubscriptionCallbackProxy;->mSubscriptionCallback:Landroid/support/v4/media/MediaBrowserCompatApi21$SubscriptionCallback;
 
-    check-cast v0, Landroid/support/v4/media/MediaBrowserCompatApi26$SubscriptionCallback;
+    check-cast p0, Landroid/support/v4/media/MediaBrowserCompatApi26$SubscriptionCallback;
 
-    invoke-interface {v0, p1, p2, p3}, Landroid/support/v4/media/MediaBrowserCompatApi26$SubscriptionCallback;->onChildrenLoaded(Ljava/lang/String;Ljava/util/List;Landroid/os/Bundle;)V
+    invoke-interface {p0, p1, p2, p3}, Landroid/support/v4/media/MediaBrowserCompatApi26$SubscriptionCallback;->onChildrenLoaded(Ljava/lang/String;Ljava/util/List;Landroid/os/Bundle;)V
 
     return-void
 .end method
 
 .method public onError(Ljava/lang/String;Landroid/os/Bundle;)V
-    .locals 1
+    .locals 0
 
-    .line 66
     invoke-static {p2}, Landroid/support/v4/media/session/MediaSessionCompat;->ensureClassLoader(Landroid/os/Bundle;)V
 
-    .line 67
-    iget-object v0, p0, Landroid/support/v4/media/MediaBrowserCompatApi26$SubscriptionCallbackProxy;->mSubscriptionCallback:Landroid/support/v4/media/MediaBrowserCompatApi21$SubscriptionCallback;
+    iget-object p0, p0, Landroid/support/v4/media/MediaBrowserCompatApi26$SubscriptionCallbackProxy;->mSubscriptionCallback:Landroid/support/v4/media/MediaBrowserCompatApi21$SubscriptionCallback;
 
-    check-cast v0, Landroid/support/v4/media/MediaBrowserCompatApi26$SubscriptionCallback;
+    check-cast p0, Landroid/support/v4/media/MediaBrowserCompatApi26$SubscriptionCallback;
 
-    invoke-interface {v0, p1, p2}, Landroid/support/v4/media/MediaBrowserCompatApi26$SubscriptionCallback;->onError(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-interface {p0, p1, p2}, Landroid/support/v4/media/MediaBrowserCompatApi26$SubscriptionCallback;->onError(Ljava/lang/String;Landroid/os/Bundle;)V
 
     return-void
 .end method

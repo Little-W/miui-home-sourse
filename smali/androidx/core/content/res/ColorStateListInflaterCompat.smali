@@ -1,9 +1,32 @@
 .class public final Landroidx/core/content/res/ColorStateListInflaterCompat;
 .super Ljava/lang/Object;
-.source "ColorStateListInflaterCompat.java"
+
+
+# static fields
+.field private static final sTempTypedValue:Ljava/lang/ThreadLocal;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/ThreadLocal<",
+            "Landroid/util/TypedValue;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Ljava/lang/ThreadLocal;
+
+    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
+
+    sput-object v0, Landroidx/core/content/res/ColorStateListInflaterCompat;->sTempTypedValue:Ljava/lang/ThreadLocal;
+
+    return-void
+.end method
+
 .method public static createFromXml(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/content/res/Resources$Theme;)Landroid/content/res/ColorStateList;
     .locals 4
     .annotation system Ldalvik/annotation/Throws;
@@ -13,12 +36,10 @@
         }
     .end annotation
 
-    .line 86
     invoke-static {p1}, Landroid/util/Xml;->asAttributeSet(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
 
     move-result-object v0
 
-    .line 89
     :goto_0
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
@@ -37,14 +58,12 @@
     :cond_0
     if-ne v1, v2, :cond_1
 
-    .line 98
     invoke-static {p0, p1, v0, p2}, Landroidx/core/content/res/ColorStateListInflaterCompat;->createFromXmlInner(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;)Landroid/content/res/ColorStateList;
 
     move-result-object p0
 
     return-object p0
 
-    .line 95
     :cond_1
     new-instance p0, Lorg/xmlpull/v1/XmlPullParserException;
 
@@ -64,28 +83,24 @@
         }
     .end annotation
 
-    .line 113
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "selector"
 
-    .line 114
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 119
     invoke-static {p0, p1, p2, p3}, Landroidx/core/content/res/ColorStateListInflaterCompat;->inflate(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;)Landroid/content/res/ColorStateList;
 
     move-result-object p0
 
     return-object p0
 
-    .line 115
     :cond_0
     new-instance p0, Lorg/xmlpull/v1/XmlPullParserException;
 
@@ -93,7 +108,6 @@
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 116
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getPositionDescription()Ljava/lang/String;
 
     move-result-object p1
@@ -115,16 +129,39 @@
     throw p0
 .end method
 
+.method private static getTypedValue()Landroid/util/TypedValue;
+    .locals 2
+
+    sget-object v0, Landroidx/core/content/res/ColorStateListInflaterCompat;->sTempTypedValue:Ljava/lang/ThreadLocal;
+
+    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/util/TypedValue;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Landroid/util/TypedValue;
+
+    invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
+
+    sget-object v1, Landroidx/core/content/res/ColorStateListInflaterCompat;->sTempTypedValue:Ljava/lang/ThreadLocal;
+
+    invoke-virtual {v1, v0}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
+
+    :cond_0
+    return-object v0
+.end method
+
 .method public static inflate(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/content/res/ColorStateList;
     .locals 0
 
-    .line 65
     :try_start_0
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getXml(I)Landroid/content/res/XmlResourceParser;
 
     move-result-object p1
 
-    .line 66
     invoke-static {p0, p1, p2}, Landroidx/core/content/res/ColorStateListInflaterCompat;->createFromXml(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/content/res/Resources$Theme;)Landroid/content/res/ColorStateList;
 
     move-result-object p0
@@ -140,7 +177,6 @@
 
     const-string p2, "Failed to inflate ColorStateList."
 
-    .line 68
     invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p0, 0x0
@@ -157,254 +193,300 @@
         }
     .end annotation
 
-    move-object/from16 v0, p2
+    move-object/from16 v0, p0
 
-    .line 128
+    move-object/from16 v1, p2
+
+    move-object/from16 v2, p3
+
     invoke-interface/range {p1 .. p1}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
-    move-result v1
+    move-result v3
 
-    const/4 v2, 0x1
+    const/4 v4, 0x1
 
-    add-int/2addr v1, v2
+    add-int/2addr v3, v4
 
-    const/16 v3, 0x14
+    const/16 v5, 0x14
 
-    .line 132
-    new-array v3, v3, [[I
+    new-array v5, v5, [[I
 
-    .line 133
-    array-length v4, v3
+    array-length v6, v5
 
-    new-array v4, v4, [I
+    new-array v6, v6, [I
 
-    const/4 v5, 0x0
+    const/4 v8, 0x0
 
-    move v6, v5
-
-    .line 136
     :goto_0
     invoke-interface/range {p1 .. p1}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
-    move-result v7
+    move-result v9
 
-    if-eq v7, v2, :cond_8
+    if-eq v9, v4, :cond_a
 
-    .line 137
     invoke-interface/range {p1 .. p1}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
-
-    move-result v8
-
-    if-ge v8, v1, :cond_0
-
-    const/4 v9, 0x3
-
-    if-eq v7, v9, :cond_8
-
-    :cond_0
-    const/4 v9, 0x2
-
-    if-ne v7, v9, :cond_7
-
-    if-gt v8, v1, :cond_7
-
-    .line 139
-    invoke-interface/range {p1 .. p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
-
-    move-result-object v7
-
-    const-string v8, "item"
-
-    invoke-virtual {v7, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v7
-
-    if-nez v7, :cond_1
-
-    move-object/from16 v8, p0
-
-    move-object/from16 v9, p3
-
-    goto/16 :goto_4
-
-    .line 143
-    :cond_1
-    sget-object v7, Landroidx/core/R$styleable;->ColorStateListItem:[I
-
-    move-object/from16 v8, p0
-
-    move-object/from16 v9, p3
-
-    invoke-static {v8, v9, v0, v7}, Landroidx/core/content/res/ColorStateListInflaterCompat;->obtainAttributes(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
-
-    move-result-object v7
-
-    .line 144
-    sget v10, Landroidx/core/R$styleable;->ColorStateListItem_android_color:I
-
-    const v11, -0xff01
-
-    invoke-virtual {v7, v10, v11}, Landroid/content/res/TypedArray;->getColor(II)I
 
     move-result v10
 
-    const/high16 v11, 0x3f800000    # 1.0f
+    if-ge v10, v3, :cond_0
 
-    .line 148
-    sget v12, Landroidx/core/R$styleable;->ColorStateListItem_android_alpha:I
+    const/4 v11, 0x3
 
-    invoke-virtual {v7, v12}, Landroid/content/res/TypedArray;->hasValue(I)Z
+    if-eq v9, v11, :cond_a
 
-    move-result v12
+    :cond_0
+    const/4 v11, 0x2
 
-    if-eqz v12, :cond_2
+    if-ne v9, v11, :cond_9
 
-    .line 149
-    sget v12, Landroidx/core/R$styleable;->ColorStateListItem_android_alpha:I
+    if-gt v10, v3, :cond_9
 
-    invoke-virtual {v7, v12, v11}, Landroid/content/res/TypedArray;->getFloat(IF)F
+    invoke-interface/range {p1 .. p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
+
+    move-result-object v9
+
+    const-string v10, "item"
+
+    invoke-virtual {v9, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v9
+
+    if-nez v9, :cond_1
+
+    goto/16 :goto_6
+
+    :cond_1
+    sget-object v9, Landroidx/core/R$styleable;->ColorStateListItem:[I
+
+    invoke-static {v0, v2, v1, v9}, Landroidx/core/content/res/ColorStateListInflaterCompat;->obtainAttributes(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+
+    move-result-object v9
+
+    sget v10, Landroidx/core/R$styleable;->ColorStateListItem_android_color:I
+
+    const/4 v11, -0x1
+
+    invoke-virtual {v9, v10, v11}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    move-result v10
+
+    const v12, -0xff01
+
+    if-eq v10, v11, :cond_2
+
+    invoke-static {v0, v10}, Landroidx/core/content/res/ColorStateListInflaterCompat;->isColorInt(Landroid/content/res/Resources;I)Z
 
     move-result v11
 
+    if-nez v11, :cond_2
+
+    :try_start_0
+    invoke-virtual {v0, v10}, Landroid/content/res/Resources;->getXml(I)Landroid/content/res/XmlResourceParser;
+
+    move-result-object v10
+
+    invoke-static {v0, v10, v2}, Landroidx/core/content/res/ColorStateListInflaterCompat;->createFromXml(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/content/res/Resources$Theme;)Landroid/content/res/ColorStateList;
+
+    move-result-object v10
+
+    invoke-virtual {v10}, Landroid/content/res/ColorStateList;->getDefaultColor()I
+
+    move-result v10
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
     goto :goto_1
 
-    .line 150
-    :cond_2
-    sget v12, Landroidx/core/R$styleable;->ColorStateListItem_alpha:I
+    :catch_0
+    sget v10, Landroidx/core/R$styleable;->ColorStateListItem_android_color:I
 
-    invoke-virtual {v7, v12}, Landroid/content/res/TypedArray;->hasValue(I)Z
+    invoke-virtual {v9, v10, v12}, Landroid/content/res/TypedArray;->getColor(II)I
+
+    move-result v10
+
+    goto :goto_1
+
+    :cond_2
+    sget v10, Landroidx/core/R$styleable;->ColorStateListItem_android_color:I
+
+    invoke-virtual {v9, v10, v12}, Landroid/content/res/TypedArray;->getColor(II)I
+
+    move-result v10
+
+    :goto_1
+    const/high16 v11, 0x3f800000    # 1.0f
+
+    sget v12, Landroidx/core/R$styleable;->ColorStateListItem_android_alpha:I
+
+    invoke-virtual {v9, v12}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
     move-result v12
 
     if-eqz v12, :cond_3
 
-    .line 151
-    sget v12, Landroidx/core/R$styleable;->ColorStateListItem_alpha:I
+    sget v12, Landroidx/core/R$styleable;->ColorStateListItem_android_alpha:I
 
-    invoke-virtual {v7, v12, v11}, Landroid/content/res/TypedArray;->getFloat(IF)F
+    invoke-virtual {v9, v12, v11}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
     move-result v11
 
-    .line 154
+    goto :goto_2
+
     :cond_3
-    :goto_1
-    invoke-virtual {v7}, Landroid/content/res/TypedArray;->recycle()V
+    sget v12, Landroidx/core/R$styleable;->ColorStateListItem_alpha:I
 
-    .line 158
-    invoke-interface/range {p2 .. p2}, Landroid/util/AttributeSet;->getAttributeCount()I
+    invoke-virtual {v9, v12}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
-    move-result v7
+    move-result v12
 
-    .line 159
-    new-array v12, v7, [I
+    if-eqz v12, :cond_4
 
-    move v13, v5
+    sget v12, Landroidx/core/R$styleable;->ColorStateListItem_alpha:I
 
-    move v14, v13
+    invoke-virtual {v9, v12, v11}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
+    move-result v11
+
+    :cond_4
     :goto_2
-    if-ge v13, v7, :cond_6
+    invoke-static {}, Landroidx/core/os/BuildCompat;->isAtLeastS()Z
 
-    .line 161
-    invoke-interface {v0, v13}, Landroid/util/AttributeSet;->getAttributeNameResource(I)I
+    move-result v12
 
-    move-result v15
+    const/high16 v13, -0x40800000    # -1.0f
 
-    const v2, 0x10101a5
+    if-eqz v12, :cond_5
 
-    if-eq v15, v2, :cond_5
+    sget v12, Landroidx/core/R$styleable;->ColorStateListItem_android_lStar:I
 
-    const v2, 0x101031f
+    invoke-virtual {v9, v12}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
-    if-eq v15, v2, :cond_5
+    move-result v12
 
-    .line 162
-    sget v2, Landroidx/core/R$attr;->alpha:I
+    if-eqz v12, :cond_5
 
-    if-eq v15, v2, :cond_5
+    sget v12, Landroidx/core/R$styleable;->ColorStateListItem_android_lStar:I
 
-    add-int/lit8 v2, v14, 0x1
+    invoke-virtual {v9, v12, v13}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
-    .line 165
-    invoke-interface {v0, v13, v5}, Landroid/util/AttributeSet;->getAttributeBooleanValue(IZ)Z
-
-    move-result v16
-
-    if-eqz v16, :cond_4
+    move-result v12
 
     goto :goto_3
 
-    :cond_4
-    neg-int v15, v15
-
-    .line 166
-    :goto_3
-    aput v15, v12, v14
-
-    move v14, v2
-
     :cond_5
-    add-int/lit8 v13, v13, 0x1
+    sget v12, Landroidx/core/R$styleable;->ColorStateListItem_lStar:I
 
-    const/4 v2, 0x1
+    invoke-virtual {v9, v12, v13}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
-    goto :goto_2
+    move-result v12
 
-    .line 169
-    :cond_6
-    invoke-static {v12, v14}, Landroid/util/StateSet;->trimStateSet([II)[I
+    :goto_3
+    invoke-virtual {v9}, Landroid/content/res/TypedArray;->recycle()V
 
-    move-result-object v2
+    invoke-interface/range {p2 .. p2}, Landroid/util/AttributeSet;->getAttributeCount()I
 
-    .line 174
-    invoke-static {v10, v11}, Landroidx/core/content/res/ColorStateListInflaterCompat;->modulateColorAlpha(IF)I
+    move-result v9
 
-    move-result v7
+    new-array v13, v9, [I
 
-    .line 176
-    invoke-static {v4, v6, v7}, Landroidx/core/content/res/GrowingArrayUtils;->append([III)[I
+    const/4 v14, 0x0
 
-    move-result-object v4
-
-    .line 177
-    invoke-static {v3, v6, v2}, Landroidx/core/content/res/GrowingArrayUtils;->append([Ljava/lang/Object;ILjava/lang/Object;)[Ljava/lang/Object;
-
-    move-result-object v2
-
-    move-object v3, v2
-
-    check-cast v3, [[I
-
-    add-int/lit8 v6, v6, 0x1
-
-    const/4 v2, 0x1
-
-    goto/16 :goto_0
-
-    :cond_7
-    move-object/from16 v8, p0
-
-    move-object/from16 v9, p3
+    const/4 v15, 0x0
 
     :goto_4
-    const/4 v2, 0x1
+    if-ge v14, v9, :cond_8
+
+    invoke-interface {v1, v14}, Landroid/util/AttributeSet;->getAttributeNameResource(I)I
+
+    move-result v4
+
+    const v7, 0x10101a5
+
+    if-eq v4, v7, :cond_7
+
+    const v7, 0x101031f
+
+    if-eq v4, v7, :cond_7
+
+    sget v7, Landroidx/core/R$attr;->alpha:I
+
+    if-eq v4, v7, :cond_7
+
+    sget v7, Landroidx/core/R$attr;->lStar:I
+
+    if-eq v4, v7, :cond_7
+
+    add-int/lit8 v7, v15, 0x1
+
+    const/4 v0, 0x0
+
+    invoke-interface {v1, v14, v0}, Landroid/util/AttributeSet;->getAttributeBooleanValue(IZ)Z
+
+    move-result v16
+
+    if-eqz v16, :cond_6
+
+    goto :goto_5
+
+    :cond_6
+    neg-int v4, v4
+
+    :goto_5
+    aput v4, v13, v15
+
+    move v15, v7
+
+    :cond_7
+    add-int/lit8 v14, v14, 0x1
+
+    const/4 v4, 0x1
+
+    move-object/from16 v0, p0
+
+    goto :goto_4
+
+    :cond_8
+    invoke-static {v13, v15}, Landroid/util/StateSet;->trimStateSet([II)[I
+
+    move-result-object v0
+
+    invoke-static {v10, v11, v12}, Landroidx/core/content/res/ColorStateListInflaterCompat;->modulateColorAlpha(IFF)I
+
+    move-result v4
+
+    invoke-static {v6, v8, v4}, Landroidx/core/content/res/GrowingArrayUtils;->append([III)[I
+
+    move-result-object v6
+
+    invoke-static {v5, v8, v0}, Landroidx/core/content/res/GrowingArrayUtils;->append([Ljava/lang/Object;ILjava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v5, v0
+
+    check-cast v5, [[I
+
+    add-int/lit8 v8, v8, 0x1
+
+    :cond_9
+    :goto_6
+    const/4 v4, 0x1
+
+    move-object/from16 v0, p0
 
     goto/16 :goto_0
 
-    .line 181
-    :cond_8
-    new-array v0, v6, [I
+    :cond_a
+    new-array v0, v8, [I
 
-    .line 182
-    new-array v1, v6, [[I
+    new-array v1, v8, [[I
 
-    .line 183
-    invoke-static {v4, v5, v0, v5, v6}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    const/4 v2, 0x0
 
-    .line 184
-    invoke-static {v3, v5, v1, v5, v6}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    invoke-static {v6, v2, v0, v2, v8}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 186
+    invoke-static {v5, v2, v1, v2, v8}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
     new-instance v2, Landroid/content/res/ColorStateList;
 
     invoke-direct {v2, v1, v0}, Landroid/content/res/ColorStateList;-><init>([[I[I)V
@@ -412,25 +494,116 @@
     return-object v2
 .end method
 
-.method private static modulateColorAlpha(IF)I
-    .locals 1
+.method private static isColorInt(Landroid/content/res/Resources;I)Z
+    .locals 2
 
-    .line 198
+    invoke-static {}, Landroidx/core/content/res/ColorStateListInflaterCompat;->getTypedValue()Landroid/util/TypedValue;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p0, p1, v0, v1}, Landroid/content/res/Resources;->getValue(ILandroid/util/TypedValue;Z)V
+
+    iget p0, v0, Landroid/util/TypedValue;->type:I
+
+    const/16 p1, 0x1c
+
+    if-lt p0, p1, :cond_0
+
+    iget p0, v0, Landroid/util/TypedValue;->type:I
+
+    const/16 p1, 0x1f
+
+    if-gt p0, p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    return v1
+.end method
+
+.method private static modulateColorAlpha(IFF)I
+    .locals 3
+
+    const/4 v0, 0x0
+
+    cmpl-float v0, p2, v0
+
+    const/4 v1, 0x0
+
+    if-ltz v0, :cond_0
+
+    const/high16 v0, 0x42c80000    # 100.0f
+
+    cmpg-float v0, p2, v0
+
+    if-gtz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v1
+
+    :goto_0
+    const/high16 v2, 0x3f800000    # 1.0f
+
+    cmpl-float v2, p1, v2
+
+    if-nez v2, :cond_1
+
+    if-nez v0, :cond_1
+
+    return p0
+
+    :cond_1
     invoke-static {p0}, Landroid/graphics/Color;->alpha(I)I
 
-    move-result v0
+    move-result v2
 
-    int-to-float v0, v0
+    int-to-float v2, v2
 
-    mul-float/2addr v0, p1
+    mul-float/2addr v2, p1
 
-    invoke-static {v0}, Ljava/lang/Math;->round(F)I
+    const/high16 p1, 0x3f000000    # 0.5f
+
+    add-float/2addr v2, p1
+
+    float-to-int p1, v2
+
+    const/16 v2, 0xff
+
+    invoke-static {p1, v1, v2}, Landroidx/core/math/MathUtils;->clamp(III)I
 
     move-result p1
 
-    const v0, 0xffffff
+    if-eqz v0, :cond_2
 
-    and-int/2addr p0, v0
+    invoke-static {p0}, Landroidx/core/content/res/CamColor;->fromColor(I)Landroidx/core/content/res/CamColor;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroidx/core/content/res/CamColor;->getHue()F
+
+    move-result v0
+
+    invoke-virtual {p0}, Landroidx/core/content/res/CamColor;->getChroma()F
+
+    move-result p0
+
+    invoke-static {v0, p0, p2}, Landroidx/core/content/res/CamColor;->toColor(FFF)I
+
+    move-result p0
+
+    :cond_2
+    const p2, 0xffffff
+
+    and-int/2addr p0, p2
 
     shl-int/lit8 p1, p1, 0x18
 
@@ -444,7 +617,6 @@
 
     if-nez p1, :cond_0
 
-    .line 191
     invoke-virtual {p0, p2, p3}, Landroid/content/res/Resources;->obtainAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p0
@@ -454,7 +626,6 @@
     :cond_0
     const/4 p0, 0x0
 
-    .line 192
     invoke-virtual {p1, p2, p3, p0, p0}, Landroid/content/res/Resources$Theme;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p0

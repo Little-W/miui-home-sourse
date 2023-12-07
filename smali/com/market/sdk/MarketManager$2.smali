@@ -1,6 +1,5 @@
 .class Lcom/market/sdk/MarketManager$2;
 .super Lcom/market/sdk/RemoteMethodInvoker;
-.source "MarketManager.java"
 
 
 # annotations
@@ -36,7 +35,6 @@
 .method constructor <init>(Lcom/market/sdk/MarketManager;Ljava/lang/String;Ljava/lang/String;Z)V
     .locals 0
 
-    .line 187
     iput-object p1, p0, Lcom/market/sdk/MarketManager$2;->this$0:Lcom/market/sdk/MarketManager;
 
     iput-object p2, p0, Lcom/market/sdk/MarketManager$2;->val$path:Ljava/lang/String;
@@ -53,28 +51,27 @@
 
 # virtual methods
 .method public innerInvoke(Lcom/market/sdk/IMarketService;)Lcom/market/sdk/ApkVerifyInfo;
-    .locals 3
+    .locals 2
 
-    .line 190
     :try_start_0
     iget-object v0, p0, Lcom/market/sdk/MarketManager$2;->val$path:Ljava/lang/String;
 
     iget-object v1, p0, Lcom/market/sdk/MarketManager$2;->val$installedFrom:Ljava/lang/String;
 
-    iget-boolean v2, p0, Lcom/market/sdk/MarketManager$2;->val$isUpdate:Z
+    iget-boolean p0, p0, Lcom/market/sdk/MarketManager$2;->val$isUpdate:Z
 
-    invoke-interface {p1, v0, v1, v2}, Lcom/market/sdk/IMarketService;->getApkCheckInfo(Ljava/lang/String;Ljava/lang/String;Z)Lcom/market/sdk/ApkVerifyInfo;
+    invoke-interface {p1, v0, v1, p0}, Lcom/market/sdk/IMarketService;->getApkCheckInfo(Ljava/lang/String;Ljava/lang/String;Z)Lcom/market/sdk/ApkVerifyInfo;
 
-    move-result-object p1
+    move-result-object p0
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-object p1
+    return-object p0
 
     :catch_0
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public bridge synthetic innerInvoke(Lcom/market/sdk/IMarketService;)Ljava/lang/Object;
@@ -85,10 +82,9 @@
         }
     .end annotation
 
-    .line 187
     invoke-virtual {p0, p1}, Lcom/market/sdk/MarketManager$2;->innerInvoke(Lcom/market/sdk/IMarketService;)Lcom/market/sdk/ApkVerifyInfo;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

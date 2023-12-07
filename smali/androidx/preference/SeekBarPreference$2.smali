@@ -1,6 +1,5 @@
 .class Landroidx/preference/SeekBarPreference$2;
 .super Ljava/lang/Object;
-.source "SeekBarPreference.java"
 
 # interfaces
 .implements Landroid/view/View$OnKeyListener;
@@ -25,7 +24,6 @@
 .method constructor <init>(Landroidx/preference/SeekBarPreference;)V
     .locals 0
 
-    .line 104
     iput-object p1, p0, Landroidx/preference/SeekBarPreference$2;->this$0:Landroidx/preference/SeekBarPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +36,6 @@
 .method public onKey(Landroid/view/View;ILandroid/view/KeyEvent;)Z
     .locals 1
 
-    .line 107
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
 
     move-result p1
@@ -49,7 +46,6 @@
 
     return v0
 
-    .line 111
     :cond_0
     iget-object p1, p0, Landroidx/preference/SeekBarPreference$2;->this$0:Landroidx/preference/SeekBarPreference;
 
@@ -79,7 +75,6 @@
 
     goto :goto_0
 
-    .line 123
     :cond_3
     iget-object p1, p0, Landroidx/preference/SeekBarPreference$2;->this$0:Landroidx/preference/SeekBarPreference;
 
@@ -87,26 +82,24 @@
 
     if-nez p1, :cond_4
 
-    const-string p1, "SeekBarPreference"
+    const-string p0, "SeekBarPreference"
 
-    const-string p2, "SeekBar view is null and hence cannot be adjusted."
+    const-string p1, "SeekBar view is null and hence cannot be adjusted."
 
-    .line 124
-    invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
 
-    .line 127
     :cond_4
-    iget-object p1, p0, Landroidx/preference/SeekBarPreference$2;->this$0:Landroidx/preference/SeekBarPreference;
+    iget-object p0, p0, Landroidx/preference/SeekBarPreference$2;->this$0:Landroidx/preference/SeekBarPreference;
 
-    iget-object p1, p1, Landroidx/preference/SeekBarPreference;->mSeekBar:Landroid/widget/SeekBar;
+    iget-object p0, p0, Landroidx/preference/SeekBarPreference;->mSeekBar:Landroid/widget/SeekBar;
 
-    invoke-virtual {p1, p2, p3}, Landroid/widget/SeekBar;->onKeyDown(ILandroid/view/KeyEvent;)Z
+    invoke-virtual {p0, p2, p3}, Landroid/widget/SeekBar;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 
     :cond_5
     :goto_0

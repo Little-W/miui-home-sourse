@@ -1,6 +1,5 @@
 .class public interface abstract annotation Lcom/google/android/filament/Entity;
 .super Ljava/lang/Object;
-.source "Entity.java"
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

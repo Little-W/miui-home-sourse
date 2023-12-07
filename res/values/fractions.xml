@@ -2,8 +2,8 @@
 <resources>
     <fraction name="config_dragViewScale">109.99756%</fraction>
     <fraction name="drop_down_anim_pivot_x">0.0%</fraction>
+    <fraction name="edit_pivoty_ratio_fraction">49.0%</fraction>
     <fraction name="immersion_menu_anim_pivot_x">100.0%</fraction>
-    <fraction name="normal_edit_mode_screen_scale_ratio">88.0%</fraction>
     <fraction name="quick_edit_mode_screen_scale_ratio">93.00001%</fraction>
     <fraction name="quick_edit_mode_screen_scale_ratio_no_word">91.0%</fraction>
     <fraction name="search_bar_light_threshold">8.000004%</fraction>

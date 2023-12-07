@@ -66,18 +66,6 @@
         <item quantity="few">%2$s непрочитано з %1$s</item>
         <item quantity="many">%2$s непрочитано з %1$s</item>
     </plurals>
-    <plurals name="delete_wallpapers_message">
-        <item quantity="other">Видалити %1$d шпалер?</item>
-        <item quantity="one">Видалити %1$d шпалери?</item>
-        <item quantity="few">Видалити %1$d шпалер?</item>
-        <item quantity="many">Видалити %1$d шпалер?</item>
-    </plurals>
-    <plurals name="editing_mode_title">
-        <item quantity="other">"Вибрано %1$d об'єктів"</item>
-        <item quantity="one">"Вибрано %1$d об'єкт"</item>
-        <item quantity="few">"Вибрано %1$d об'єкта"</item>
-        <item quantity="many">"Вибрано %1$d об'єктів"</item>
-    </plurals>
     <plurals name="half_hour_ago">
         <item quantity="other">Півгодини тому</item>
         <item quantity="one">Півгодини тому</item>
@@ -120,6 +108,12 @@
         <item quantity="few">Обрано: %d</item>
         <item quantity="many">Обрано: %d</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d нового сповіщення</item>
+        <item quantity="one">%d нове сповіщення</item>
+        <item quantity="few">%d нові сповіщення</item>
+        <item quantity="many">%d нових сповіщень</item>
+    </plurals>
     <plurals name="num_minutes_ago">
         <item quantity="other">%d хв тому</item>
         <item quantity="one">1 хв тому</item>
@@ -127,10 +121,10 @@
         <item quantity="many">%d хв тому</item>
     </plurals>
     <plurals name="remove_dialog_title_multi_format">
-        <item quantity="other">Видалити %1$d програм з робочого столу?</item>
-        <item quantity="one">Видалити %1$d програму з робочого столу?</item>
-        <item quantity="few">Видалити %1$d програми з робочого столу?</item>
-        <item quantity="many">Видалити %1$d програм з робочого столу?</item>
+        <item quantity="other">"Видалити %1$d об'єктів із робочого столу?"</item>
+        <item quantity="one">"Видалити %1$d об'єкт із робочого столу?"</item>
+        <item quantity="few">"Видалити %1$d об'єкта із робочого столу?"</item>
+        <item quantity="many">"Видалити %1$d об'єктів із робочого столу?"</item>
     </plurals>
     <plurals name="scroll_tip_format_when_announce_accessibility">
         <item quantity="other">Сторінка %1$d, %2$d програм.</item>

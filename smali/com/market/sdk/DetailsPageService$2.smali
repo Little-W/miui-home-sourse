@@ -1,6 +1,5 @@
 .class Lcom/market/sdk/DetailsPageService$2;
 .super Ljava/lang/Object;
-.source "DetailsPageService.java"
 
 # interfaces
 .implements Lcom/market/ServiceProxy$ProxyTask;
@@ -29,7 +28,6 @@
 .method constructor <init>(Lcom/market/sdk/DetailsPageService;Lcom/market/sdk/DetailsPageManager$OpenMarketCallback;Landroid/os/Bundle;)V
     .locals 0
 
-    .line 71
     iput-object p1, p0, Lcom/market/sdk/DetailsPageService$2;->this$0:Lcom/market/sdk/DetailsPageService;
 
     iput-object p2, p0, Lcom/market/sdk/DetailsPageService$2;->val$callback:Lcom/market/sdk/DetailsPageManager$OpenMarketCallback;
@@ -44,14 +42,13 @@
 
 # virtual methods
 .method public run()V
-    .locals 3
+    .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
         }
     .end annotation
 
-    .line 74
     iget-object v0, p0, Lcom/market/sdk/DetailsPageService$2;->this$0:Lcom/market/sdk/DetailsPageService;
 
     invoke-static {v0}, Lcom/market/sdk/DetailsPageService;->access$000(Lcom/market/sdk/DetailsPageService;)Lcom/xiaomi/market/IDetailsPageManager;
@@ -60,7 +57,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 75
     iget-object v0, p0, Lcom/market/sdk/DetailsPageService$2;->val$callback:Lcom/market/sdk/DetailsPageManager$OpenMarketCallback;
 
     iget-object v1, p0, Lcom/market/sdk/DetailsPageService$2;->this$0:Lcom/market/sdk/DetailsPageService;
@@ -69,23 +65,22 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/market/sdk/DetailsPageService$2;->val$args:Landroid/os/Bundle;
+    iget-object p0, p0, Lcom/market/sdk/DetailsPageService$2;->val$args:Landroid/os/Bundle;
 
-    invoke-interface {v1, v2}, Lcom/xiaomi/market/IDetailsPageManager;->openDetailsPage(Landroid/os/Bundle;)Z
+    invoke-interface {v1, p0}, Lcom/xiaomi/market/IDetailsPageManager;->openDetailsPage(Landroid/os/Bundle;)Z
 
-    move-result v1
+    move-result p0
 
-    invoke-interface {v0, v1}, Lcom/market/sdk/DetailsPageManager$OpenMarketCallback;->onMarketOpened(Z)V
+    invoke-interface {v0, p0}, Lcom/market/sdk/DetailsPageManager$OpenMarketCallback;->onMarketOpened(Z)V
 
     goto :goto_0
 
     :cond_0
-    const-string v0, "DetailsPageService"
+    const-string p0, "DetailsPageService"
 
-    const-string v1, "IDetailsPageManager is null"
+    const-string v0, "IDetailsPageManager is null"
 
-    .line 77
-    invoke-static {v0, v1}, Lcom/market/sdk/utils/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lcom/market/sdk/utils/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return-void

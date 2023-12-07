@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="desktop_mode_padding_right">12.0dip</dimen>
+    <dimen name="edit_mode_thumbnail_item_pk_add_size">36.359985dip</dimen>
+    <dimen name="edit_mode_thumbnail_item_size">53.359985dip</dimen>
+    <dimen name="edit_mode_thumbnail_widget_pick_bg_width">220.72dip</dimen>
+    <dimen name="folder_content_grid_view_margin_bottom">17.0dip</dimen>
+    <dimen name="folder_edit_text_margin_right">10.0dip</dimen>
+    <dimen name="folder_edit_text_text_size_noword">29.329987dip</dimen>
+    <dimen name="folder_item_horizontal_spacing_noword">14.0dip</dimen>
+    <dimen name="folder_item_vertical_spacing_noword">-3.0dip</dimen>
+    <dimen name="recommend_switch_summary_padding_left">5.0dip</dimen>
+</resources>

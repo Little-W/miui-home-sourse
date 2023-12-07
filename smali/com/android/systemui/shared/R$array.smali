@@ -1,6 +1,5 @@
 .class public final Lcom/android/systemui/shared/R$array;
 .super Ljava/lang/Object;
-.source "R.java"
 
 
 # annotations
@@ -37,17 +36,17 @@
 
 .field public static final eras:I = 0x7f030011
 
-.field public static final heavenly_stems:I = 0x7f030015
+.field public static final heavenly_stems:I = 0x7f030013
 
-.field public static final months:I = 0x7f030019
+.field public static final months:I = 0x7f030018
 
-.field public static final months_short:I = 0x7f03001a
+.field public static final months_short:I = 0x7f030019
 
-.field public static final months_shortest:I = 0x7f03001b
+.field public static final months_shortest:I = 0x7f03001a
 
-.field public static final solar_terms:I = 0x7f03001f
+.field public static final solar_terms:I = 0x7f030020
 
-.field public static final wallpaper_provider_blacklist:I = 0x7f030022
+.field public static final wallpaper_provider_blacklist:I = 0x7f030023
 
 .field public static final week_days:I = 0x7f030025
 
@@ -60,7 +59,6 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 67
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

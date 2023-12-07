@@ -1,6 +1,5 @@
 .class public Landroidx/recyclerview/widget/RecyclerView$EdgeEffectFactory;
 .super Ljava/lang/Object;
-.source "RecyclerView.java"
 
 
 # annotations
@@ -18,7 +17,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 5592
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,14 +27,13 @@
 .method protected createEdgeEffect(Landroidx/recyclerview/widget/RecyclerView;I)Landroid/widget/EdgeEffect;
     .locals 0
 
-    .line 5623
-    new-instance p2, Landroid/widget/EdgeEffect;
+    new-instance p0, Landroid/widget/EdgeEffect;
 
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    invoke-direct {p2, p1}, Landroid/widget/EdgeEffect;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Landroid/widget/EdgeEffect;-><init>(Landroid/content/Context;)V
 
-    return-object p2
+    return-object p0
 .end method

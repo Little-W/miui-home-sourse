@@ -13,4 +13,10 @@
     <FrameLayout android:id="@id/menu_item_info_container" style="@style/RecentMenuItemContainer">
         <ImageView android:id="@id/menu_item_info" style="@style/RecentMenuItem" />
     </FrameLayout>
+    <FrameLayout android:id="@id/menu_item_add_pair_container" style="@style/RecentMenuItemContainer">
+        <ImageView android:id="@id/menu_item_add_pair" style="@style/RecentMenuItem" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/menu_item_world_circulate_container" style="@style/RecentMenuItemContainer">
+        <ImageView android:id="@id/menu_item_world_circulate" style="@style/RecentMenuItem" />
+    </FrameLayout>
 </com.miui.home.recents.views.RecentMenuView>

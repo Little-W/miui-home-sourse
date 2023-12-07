@@ -1,6 +1,5 @@
 .class public interface abstract Lcom/market/sdk/silentupdate/UpdateResultReceiver$Callback;
 .super Ljava/lang/Object;
-.source "UpdateResultReceiver.java"
 
 
 # annotations

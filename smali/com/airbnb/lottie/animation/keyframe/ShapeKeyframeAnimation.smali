@@ -1,6 +1,5 @@
 .class public Lcom/airbnb/lottie/animation/keyframe/ShapeKeyframeAnimation;
 .super Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
-.source "ShapeKeyframeAnimation.java"
 
 
 # annotations
@@ -15,6 +14,16 @@
 
 
 # instance fields
+.field private shapeModifiers:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Lcom/airbnb/lottie/animation/content/ShapeModifierContent;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 .field private final tempPath:Landroid/graphics/Path;
 
 .field private final tempShapeData:Lcom/airbnb/lottie/model/content/ShapeData;
@@ -33,17 +42,14 @@
         }
     .end annotation
 
-    .line 16
     invoke-direct {p0, p1}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;-><init>(Ljava/util/List;)V
 
-    .line 12
     new-instance p1, Lcom/airbnb/lottie/model/content/ShapeData;
 
     invoke-direct {p1}, Lcom/airbnb/lottie/model/content/ShapeData;-><init>()V
 
     iput-object p1, p0, Lcom/airbnb/lottie/animation/keyframe/ShapeKeyframeAnimation;->tempShapeData:Lcom/airbnb/lottie/model/content/ShapeData;
 
-    .line 13
     new-instance p1, Landroid/graphics/Path;
 
     invoke-direct {p1}, Landroid/graphics/Path;-><init>()V
@@ -67,41 +73,81 @@
         }
     .end annotation
 
-    .line 20
     iget-object v0, p1, Lcom/airbnb/lottie/value/Keyframe;->startValue:Ljava/lang/Object;
 
     check-cast v0, Lcom/airbnb/lottie/model/content/ShapeData;
 
-    .line 21
     iget-object p1, p1, Lcom/airbnb/lottie/value/Keyframe;->endValue:Ljava/lang/Object;
 
     check-cast p1, Lcom/airbnb/lottie/model/content/ShapeData;
 
-    .line 23
     iget-object v1, p0, Lcom/airbnb/lottie/animation/keyframe/ShapeKeyframeAnimation;->tempShapeData:Lcom/airbnb/lottie/model/content/ShapeData;
 
     invoke-virtual {v1, v0, p1, p2}, Lcom/airbnb/lottie/model/content/ShapeData;->interpolateBetween(Lcom/airbnb/lottie/model/content/ShapeData;Lcom/airbnb/lottie/model/content/ShapeData;F)V
 
-    .line 24
     iget-object p1, p0, Lcom/airbnb/lottie/animation/keyframe/ShapeKeyframeAnimation;->tempShapeData:Lcom/airbnb/lottie/model/content/ShapeData;
 
+    iget-object p2, p0, Lcom/airbnb/lottie/animation/keyframe/ShapeKeyframeAnimation;->shapeModifiers:Ljava/util/List;
+
+    if-eqz p2, :cond_0
+
+    invoke-interface {p2}, Ljava/util/List;->size()I
+
+    move-result p2
+
+    add-int/lit8 p2, p2, -0x1
+
+    :goto_0
+    if-ltz p2, :cond_0
+
+    iget-object v0, p0, Lcom/airbnb/lottie/animation/keyframe/ShapeKeyframeAnimation;->shapeModifiers:Ljava/util/List;
+
+    invoke-interface {v0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/airbnb/lottie/animation/content/ShapeModifierContent;
+
+    invoke-interface {v0, p1}, Lcom/airbnb/lottie/animation/content/ShapeModifierContent;->modifyShape(Lcom/airbnb/lottie/model/content/ShapeData;)Lcom/airbnb/lottie/model/content/ShapeData;
+
+    move-result-object p1
+
+    add-int/lit8 p2, p2, -0x1
+
+    goto :goto_0
+
+    :cond_0
     iget-object p2, p0, Lcom/airbnb/lottie/animation/keyframe/ShapeKeyframeAnimation;->tempPath:Landroid/graphics/Path;
 
     invoke-static {p1, p2}, Lcom/airbnb/lottie/utils/MiscUtils;->getPathFromData(Lcom/airbnb/lottie/model/content/ShapeData;Landroid/graphics/Path;)V
 
-    .line 25
-    iget-object p1, p0, Lcom/airbnb/lottie/animation/keyframe/ShapeKeyframeAnimation;->tempPath:Landroid/graphics/Path;
+    iget-object p0, p0, Lcom/airbnb/lottie/animation/keyframe/ShapeKeyframeAnimation;->tempPath:Landroid/graphics/Path;
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public bridge synthetic getValue(Lcom/airbnb/lottie/value/Keyframe;F)Ljava/lang/Object;
     .locals 0
 
-    .line 11
     invoke-virtual {p0, p1, p2}, Lcom/airbnb/lottie/animation/keyframe/ShapeKeyframeAnimation;->getValue(Lcom/airbnb/lottie/value/Keyframe;F)Landroid/graphics/Path;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
+.end method
+
+.method public setShapeModifiers(Ljava/util/List;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/airbnb/lottie/animation/content/ShapeModifierContent;",
+            ">;)V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Lcom/airbnb/lottie/animation/keyframe/ShapeKeyframeAnimation;->shapeModifiers:Ljava/util/List;
+
+    return-void
 .end method

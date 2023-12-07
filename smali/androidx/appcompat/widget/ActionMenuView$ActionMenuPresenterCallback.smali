@@ -1,6 +1,5 @@
 .class Landroidx/appcompat/widget/ActionMenuView$ActionMenuPresenterCallback;
 .super Ljava/lang/Object;
-.source "ActionMenuView.java"
 
 # interfaces
 .implements Landroidx/appcompat/view/menu/MenuPresenter$Callback;
@@ -21,7 +20,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 793
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,7 +36,7 @@
 .method public onOpenSubMenu(Landroidx/appcompat/view/menu/MenuBuilder;)Z
     .locals 0
 
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return p1
+    return p0
 .end method

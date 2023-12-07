@@ -1,6 +1,5 @@
 .class Landroidx/appcompat/view/menu/CascadingMenuPopup$CascadingMenuInfo;
 .super Ljava/lang/Object;
-.source "CascadingMenuPopup.java"
 
 
 # annotations
@@ -26,16 +25,12 @@
 .method public constructor <init>(Landroidx/appcompat/widget/MenuPopupWindow;Landroidx/appcompat/view/menu/MenuBuilder;I)V
     .locals 0
 
-    .line 800
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 801
     iput-object p1, p0, Landroidx/appcompat/view/menu/CascadingMenuPopup$CascadingMenuInfo;->window:Landroidx/appcompat/widget/MenuPopupWindow;
 
-    .line 802
     iput-object p2, p0, Landroidx/appcompat/view/menu/CascadingMenuPopup$CascadingMenuInfo;->menu:Landroidx/appcompat/view/menu/MenuBuilder;
 
-    .line 803
     iput p3, p0, Landroidx/appcompat/view/menu/CascadingMenuPopup$CascadingMenuInfo;->position:I
 
     return-void
@@ -44,14 +39,13 @@
 
 # virtual methods
 .method public getListView()Landroid/widget/ListView;
-    .locals 1
+    .locals 0
 
-    .line 807
-    iget-object v0, p0, Landroidx/appcompat/view/menu/CascadingMenuPopup$CascadingMenuInfo;->window:Landroidx/appcompat/widget/MenuPopupWindow;
+    iget-object p0, p0, Landroidx/appcompat/view/menu/CascadingMenuPopup$CascadingMenuInfo;->window:Landroidx/appcompat/widget/MenuPopupWindow;
 
-    invoke-virtual {v0}, Landroidx/appcompat/widget/MenuPopupWindow;->getListView()Landroid/widget/ListView;
+    invoke-virtual {p0}, Landroidx/appcompat/widget/MenuPopupWindow;->getListView()Landroid/widget/ListView;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

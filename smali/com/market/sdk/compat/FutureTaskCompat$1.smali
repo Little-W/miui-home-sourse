@@ -1,6 +1,5 @@
 .class Lcom/market/sdk/compat/FutureTaskCompat$1;
 .super Ljava/lang/Object;
-.source "FutureTaskCompat.java"
 
 # interfaces
 .implements Ljava/util/concurrent/Callable;
@@ -29,7 +28,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,7 +36,7 @@
 
 # virtual methods
 .method public call()Ljava/lang/Object;
-    .locals 2
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()TV;"
@@ -51,12 +49,11 @@
         }
     .end annotation
 
-    .line 18
-    new-instance v0, Ljava/lang/IllegalStateException;
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-    const-string v1, "this should never be called"
+    const-string v0, "this should never be called"
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw v0
+    throw p0
 .end method

@@ -1,6 +1,5 @@
-.class final Lcom/google/gson/internal/bind/TypeAdapters$35;
+.class Lcom/google/gson/internal/bind/TypeAdapters$35;
 .super Ljava/lang/Object;
-.source "TypeAdapters.java"
 
 # interfaces
 .implements Lcom/google/gson/TypeAdapterFactory;
@@ -12,7 +11,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
@@ -27,7 +26,6 @@
 .method constructor <init>(Ljava/lang/Class;Lcom/google/gson/TypeAdapter;)V
     .locals 0
 
-    .line 881
     iput-object p1, p0, Lcom/google/gson/internal/bind/TypeAdapters$35;->val$clazz:Ljava/lang/Class;
 
     iput-object p2, p0, Lcom/google/gson/internal/bind/TypeAdapters$35;->val$typeAdapter:Lcom/google/gson/TypeAdapter;
@@ -54,12 +52,10 @@
         }
     .end annotation
 
-    .line 884
     invoke-virtual {p2}, Lcom/google/gson/reflect/TypeToken;->getRawType()Ljava/lang/Class;
 
     move-result-object p1
 
-    .line 885
     iget-object p2, p0, Lcom/google/gson/internal/bind/TypeAdapters$35;->val$clazz:Ljava/lang/Class;
 
     invoke-virtual {p2, p1}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
@@ -68,11 +64,10 @@
 
     if-nez p2, :cond_0
 
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return-object p1
+    return-object p0
 
-    .line 888
     :cond_0
     new-instance p2, Lcom/google/gson/internal/bind/TypeAdapters$35$1;
 
@@ -84,7 +79,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 904
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -105,17 +99,17 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/google/gson/internal/bind/TypeAdapters$35;->val$typeAdapter:Lcom/google/gson/TypeAdapter;
+    iget-object p0, p0, Lcom/google/gson/internal/bind/TypeAdapters$35;->val$typeAdapter:Lcom/google/gson/TypeAdapter;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, "]"
+    const-string p0, "]"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

@@ -1,6 +1,5 @@
 .class Lcom/market/sdk/MarketService$2;
 .super Ljava/lang/Object;
-.source "MarketService.java"
 
 # interfaces
 .implements Lcom/market/ServiceProxy$ProxyTask;
@@ -33,7 +32,6 @@
 .method constructor <init>(Lcom/market/sdk/MarketService;Lcom/market/sdk/compat/FutureTaskCompat;Ljava/lang/String;Ljava/lang/String;Z)V
     .locals 0
 
-    .line 64
     iput-object p1, p0, Lcom/market/sdk/MarketService$2;->this$0:Lcom/market/sdk/MarketService;
 
     iput-object p2, p0, Lcom/market/sdk/MarketService$2;->val$future:Lcom/market/sdk/compat/FutureTaskCompat;
@@ -52,14 +50,13 @@
 
 # virtual methods
 .method public run()V
-    .locals 5
+    .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
         }
     .end annotation
 
-    .line 67
     iget-object v0, p0, Lcom/market/sdk/MarketService$2;->val$future:Lcom/market/sdk/compat/FutureTaskCompat;
 
     iget-object v1, p0, Lcom/market/sdk/MarketService$2;->this$0:Lcom/market/sdk/MarketService;
@@ -72,13 +69,13 @@
 
     iget-object v3, p0, Lcom/market/sdk/MarketService$2;->val$installedFrom:Ljava/lang/String;
 
-    iget-boolean v4, p0, Lcom/market/sdk/MarketService$2;->val$isUpdate:Z
+    iget-boolean p0, p0, Lcom/market/sdk/MarketService$2;->val$isUpdate:Z
 
-    invoke-interface {v1, v2, v3, v4}, Lcom/market/sdk/IMarketService;->getApkCheckInfo(Ljava/lang/String;Ljava/lang/String;Z)Lcom/market/sdk/ApkVerifyInfo;
+    invoke-interface {v1, v2, v3, p0}, Lcom/market/sdk/IMarketService;->getApkCheckInfo(Ljava/lang/String;Ljava/lang/String;Z)Lcom/market/sdk/ApkVerifyInfo;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-virtual {v0, v1}, Lcom/market/sdk/compat/FutureTaskCompat;->set(Ljava/lang/Object;)V
+    invoke-virtual {v0, p0}, Lcom/market/sdk/compat/FutureTaskCompat;->set(Ljava/lang/Object;)V
 
     return-void
 .end method

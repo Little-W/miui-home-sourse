@@ -1,6 +1,5 @@
 .class synthetic Lcom/airbnb/lottie/animation/content/MergePathsContent$1;
 .super Ljava/lang/Object;
-.source "MergePathsContent.java"
 
 
 # annotations
@@ -22,7 +21,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 58
     invoke-static {}, Lcom/airbnb/lottie/model/content/MergePaths$MergePathsMode;->values()[Lcom/airbnb/lottie/model/content/MergePaths$MergePathsMode;
 
     move-result-object v0

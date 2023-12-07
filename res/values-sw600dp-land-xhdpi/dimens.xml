@@ -7,4 +7,5 @@
     <dimen name="fastscroll_letter_side_padding_top">16.0dip</dimen>
     <dimen name="folder_bottom_padding">60.0dip</dimen>
     <dimen name="folder_top_padding">40.0dip</dimen>
+    <item type="dimen" name="normal_edit_mode_screen_scale_ratio">0.78</item>
 </resources>

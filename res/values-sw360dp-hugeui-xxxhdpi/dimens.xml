@@ -3,7 +3,7 @@
     <dimen name="folder_bottom_padding">96.0dip</dimen>
     <dimen name="folder_top_padding">74.0dip</dimen>
     <dimen name="hotseats_height">94.0dip</dimen>
-    <dimen name="thumbnail_title_text_size">13.0dip</dimen>
+    <dimen name="thumbnail_title_text_size">13.0sp</dimen>
     <dimen name="workspace_cell_height">90.0dip</dimen>
     <dimen name="workspace_cell_padding_side">8.0dip</dimen>
     <dimen name="workspace_cell_width">82.0dip</dimen>

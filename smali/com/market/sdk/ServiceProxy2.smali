@@ -1,6 +1,5 @@
 .class public Lcom/market/sdk/ServiceProxy2;
 .super Ljava/lang/Object;
-.source "ServiceProxy2.java"
 
 
 # annotations
@@ -25,13 +24,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
 
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 28
     iput-object p1, p0, Lcom/market/sdk/ServiceProxy2;->context:Landroid/content/Context;
 
-    .line 29
     iput-object p2, p0, Lcom/market/sdk/ServiceProxy2;->intent:Landroid/content/Intent;
 
     return-void
@@ -40,7 +36,6 @@
 .method static synthetic access$300(Lcom/market/sdk/ServiceProxy2;)Landroid/content/Context;
     .locals 0
 
-    .line 22
     iget-object p0, p0, Lcom/market/sdk/ServiceProxy2;->context:Landroid/content/Context;
 
     return-object p0
@@ -49,7 +44,6 @@
 .method static synthetic access$500(Lcom/market/sdk/ServiceProxy2;)Landroid/content/Intent;
     .locals 0
 
-    .line 22
     iget-object p0, p0, Lcom/market/sdk/ServiceProxy2;->intent:Landroid/content/Intent;
 
     return-object p0
@@ -60,7 +54,6 @@
 .method public setTask(Lcom/market/sdk/ServiceProxy2$ProxyTask;)Lcom/market/sdk/ServiceProxy2$ProxyTask;
     .locals 0
 
-    .line 33
     invoke-static {p1}, Lcom/market/sdk/ServiceProxy2$ProxyTask;->access$000(Lcom/market/sdk/ServiceProxy2$ProxyTask;)V
 
     return-object p1

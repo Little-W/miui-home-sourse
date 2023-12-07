@@ -1,6 +1,5 @@
 .class Landroidx/appcompat/app/AppCompatDialog$1;
 .super Ljava/lang/Object;
-.source "AppCompatDialog.java"
 
 # interfaces
 .implements Landroidx/core/view/KeyEventDispatcher$Component;
@@ -25,7 +24,6 @@
 .method constructor <init>(Landroidx/appcompat/app/AppCompatDialog;)V
     .locals 0
 
-    .line 45
     iput-object p1, p0, Landroidx/appcompat/app/AppCompatDialog$1;->this$0:Landroidx/appcompat/app/AppCompatDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,14 +34,13 @@
 
 # virtual methods
 .method public superDispatchKeyEvent(Landroid/view/KeyEvent;)Z
-    .locals 1
+    .locals 0
 
-    .line 48
-    iget-object v0, p0, Landroidx/appcompat/app/AppCompatDialog$1;->this$0:Landroidx/appcompat/app/AppCompatDialog;
+    iget-object p0, p0, Landroidx/appcompat/app/AppCompatDialog$1;->this$0:Landroidx/appcompat/app/AppCompatDialog;
 
-    invoke-virtual {v0, p1}, Landroidx/appcompat/app/AppCompatDialog;->superDispatchKeyEvent(Landroid/view/KeyEvent;)Z
+    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatDialog;->superDispatchKeyEvent(Landroid/view/KeyEvent;)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method

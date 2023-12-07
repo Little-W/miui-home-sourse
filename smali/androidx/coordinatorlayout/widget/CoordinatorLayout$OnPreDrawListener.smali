@@ -1,6 +1,5 @@
 .class Landroidx/coordinatorlayout/widget/CoordinatorLayout$OnPreDrawListener;
 .super Ljava/lang/Object;
-.source "CoordinatorLayout.java"
 
 # interfaces
 .implements Landroid/view/ViewTreeObserver$OnPreDrawListener;
@@ -25,7 +24,6 @@
 .method constructor <init>(Landroidx/coordinatorlayout/widget/CoordinatorLayout;)V
     .locals 0
 
-    .line 1953
     iput-object p1, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout$OnPreDrawListener;->this$0:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,16 +34,15 @@
 
 # virtual methods
 .method public onPreDraw()Z
-    .locals 2
+    .locals 1
 
-    .line 1956
-    iget-object v0, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout$OnPreDrawListener;->this$0:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+    iget-object p0, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout$OnPreDrawListener;->this$0:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, v1}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->onChildViewsChanged(I)V
+    invoke-virtual {p0, v0}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->onChildViewsChanged(I)V
 
-    const/4 v0, 0x1
+    const/4 p0, 0x1
 
-    return v0
+    return p0
 .end method

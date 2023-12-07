@@ -1,6 +1,5 @@
 .class public interface abstract Lorg/greenrobot/eventbus/meta/SubscriberInfoIndex;
 .super Ljava/lang/Object;
-.source "SubscriberInfoIndex.java"
 
 
 # virtual methods

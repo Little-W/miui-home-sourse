@@ -1,6 +1,5 @@
 .class public final enum Lcom/google/android/filament/View$AmbientOcclusion;
 .super Ljava/lang/Enum;
-.source "View.java"
 
 
 # annotations
@@ -21,9 +20,6 @@
     }
 .end annotation
 
-.annotation runtime Ljava/lang/Deprecated;
-.end annotation
-
 
 # static fields
 .field private static final synthetic $VALUES:[Lcom/google/android/filament/View$AmbientOcclusion;
@@ -37,40 +33,37 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .line 701
     new-instance v0, Lcom/google/android/filament/View$AmbientOcclusion;
 
-    const-string v1, "NONE"
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    const-string v2, "NONE"
 
-    invoke-direct {v0, v1, v2}, Lcom/google/android/filament/View$AmbientOcclusion;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v2, v1}, Lcom/google/android/filament/View$AmbientOcclusion;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/google/android/filament/View$AmbientOcclusion;->NONE:Lcom/google/android/filament/View$AmbientOcclusion;
 
-    .line 702
     new-instance v0, Lcom/google/android/filament/View$AmbientOcclusion;
 
-    const-string v1, "SSAO"
+    const/4 v2, 0x1
 
-    const/4 v3, 0x1
+    const-string v3, "SSAO"
 
-    invoke-direct {v0, v1, v3}, Lcom/google/android/filament/View$AmbientOcclusion;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v3, v2}, Lcom/google/android/filament/View$AmbientOcclusion;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/google/android/filament/View$AmbientOcclusion;->SSAO:Lcom/google/android/filament/View$AmbientOcclusion;
 
     const/4 v0, 0x2
 
-    .line 699
     new-array v0, v0, [Lcom/google/android/filament/View$AmbientOcclusion;
 
-    sget-object v1, Lcom/google/android/filament/View$AmbientOcclusion;->NONE:Lcom/google/android/filament/View$AmbientOcclusion;
+    sget-object v3, Lcom/google/android/filament/View$AmbientOcclusion;->NONE:Lcom/google/android/filament/View$AmbientOcclusion;
 
-    aput-object v1, v0, v2
+    aput-object v3, v0, v1
 
     sget-object v1, Lcom/google/android/filament/View$AmbientOcclusion;->SSAO:Lcom/google/android/filament/View$AmbientOcclusion;
 
-    aput-object v1, v0, v3
+    aput-object v1, v0, v2
 
     sput-object v0, Lcom/google/android/filament/View$AmbientOcclusion;->$VALUES:[Lcom/google/android/filament/View$AmbientOcclusion;
 
@@ -85,7 +78,6 @@
         }
     .end annotation
 
-    .line 700
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -94,7 +86,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/android/filament/View$AmbientOcclusion;
     .locals 1
 
-    .line 699
     const-class v0, Lcom/google/android/filament/View$AmbientOcclusion;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -109,7 +100,6 @@
 .method public static values()[Lcom/google/android/filament/View$AmbientOcclusion;
     .locals 1
 
-    .line 699
     sget-object v0, Lcom/google/android/filament/View$AmbientOcclusion;->$VALUES:[Lcom/google/android/filament/View$AmbientOcclusion;
 
     invoke-virtual {v0}, [Lcom/google/android/filament/View$AmbientOcclusion;->clone()Ljava/lang/Object;

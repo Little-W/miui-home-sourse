@@ -44,14 +44,6 @@
         <item quantity="other">%2$s não lidas de %1$s</item>
         <item quantity="one">%2$s não lida de %1$s</item>
     </plurals>
-    <plurals name="delete_wallpapers_message">
-        <item quantity="other">Excluir %1$d planos de fundo?</item>
-        <item quantity="one">Excluir %1$d plano de fundo?</item>
-    </plurals>
-    <plurals name="editing_mode_title">
-        <item quantity="other">%1$d itens selecionados</item>
-        <item quantity="one">%1$d item selecionado</item>
-    </plurals>
     <plurals name="half_hour_ago">
         <item quantity="other">Meia hora atrás</item>
         <item quantity="one">Meia hora atrás</item>
@@ -80,13 +72,17 @@
         <item quantity="other">%d itens selecionados</item>
         <item quantity="one">%d item selecionado</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d novas notificações</item>
+        <item quantity="one">%d nova notificação</item>
+    </plurals>
     <plurals name="num_minutes_ago">
         <item quantity="other">%d minutos atrás</item>
         <item quantity="one">1 minuto atrás</item>
     </plurals>
     <plurals name="remove_dialog_title_multi_format">
-        <item quantity="other">Remover %1$d apps da Tela inicial?</item>
-        <item quantity="one">Remover %1$d app da Tela inicial?</item>
+        <item quantity="other">Remover %1$d itens da Tela inicial?</item>
+        <item quantity="one">Remover %1$d item da Tela inicial?</item>
     </plurals>
     <plurals name="scroll_tip_format_when_announce_accessibility">
         <item quantity="other">Página %1$d, %2$d apps.</item>

@@ -66,18 +66,6 @@
         <item quantity="few">%2$s nepřečtené zprávy v aplikaci %1$s</item>
         <item quantity="many">%2$s nepřečtené zprávy v aplikaci %1$s</item>
     </plurals>
-    <plurals name="delete_wallpapers_message">
-        <item quantity="other">Odstranit %1$d tapet?</item>
-        <item quantity="one">Odstranit %1$d tapetu?</item>
-        <item quantity="few">Odstranit %1$d tapety?</item>
-        <item quantity="many">Odstranit %1$d tapety?</item>
-    </plurals>
-    <plurals name="editing_mode_title">
-        <item quantity="other">Vybráno %1$d položek</item>
-        <item quantity="one">Vybrána %1$d položka</item>
-        <item quantity="few">Vybrány %1$d položky</item>
-        <item quantity="many">Vybráno %1$d položky</item>
-    </plurals>
     <plurals name="half_hour_ago">
         <item quantity="other">Před půl hodinou</item>
         <item quantity="one">Před půl hodinou</item>
@@ -120,6 +108,12 @@
         <item quantity="few">Vybrány %d položky</item>
         <item quantity="many">Vybráno %d položky</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d nových oznámení</item>
+        <item quantity="one">%d nové oznámení</item>
+        <item quantity="few">%d nová oznámení</item>
+        <item quantity="many">%d nového oznámení</item>
+    </plurals>
     <plurals name="num_minutes_ago">
         <item quantity="other">Před %d minutami</item>
         <item quantity="one">Před minutou</item>
@@ -127,10 +121,10 @@
         <item quantity="many">Před %d minutou</item>
     </plurals>
     <plurals name="remove_dialog_title_multi_format">
-        <item quantity="other">Odebrat %1$d aplikací z Domovské obrazovky?</item>
-        <item quantity="one">Odebrat %1$d aplikaci z Domovské obrazovky?</item>
-        <item quantity="few">Odebrat %1$d aplikace z Domovské obrazovky?</item>
-        <item quantity="many">Odebrat %1$d aplikace z Domovské obrazovky?</item>
+        <item quantity="other">Odebrat %1$d položek z Domovské obrazovky?</item>
+        <item quantity="one">Odebrat %1$d položku z Domovské obrazovky?</item>
+        <item quantity="few">Odebrat %1$d položek z Domovské obrazovky?</item>
+        <item quantity="many">Odebrat %1$d položek z Domovské obrazovky?</item>
     </plurals>
     <plurals name="scroll_tip_format_when_announce_accessibility">
         <item quantity="other">Strana %1$d, %2$d aplikací.</item>

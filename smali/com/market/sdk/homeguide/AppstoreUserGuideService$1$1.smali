@@ -1,6 +1,5 @@
 .class Lcom/market/sdk/homeguide/AppstoreUserGuideService$1$1;
 .super Landroid/os/ResultReceiver;
-.source "AppstoreUserGuideService.java"
 
 
 # annotations
@@ -22,7 +21,6 @@
 .method constructor <init>(Lcom/market/sdk/homeguide/AppstoreUserGuideService$1;Landroid/os/Handler;)V
     .locals 0
 
-    .line 82
     iput-object p1, p0, Lcom/market/sdk/homeguide/AppstoreUserGuideService$1$1;->this$1:Lcom/market/sdk/homeguide/AppstoreUserGuideService$1;
 
     invoke-direct {p0, p2}, Landroid/os/ResultReceiver;-><init>(Landroid/os/Handler;)V
@@ -35,7 +33,6 @@
 .method protected onReceiveResult(ILandroid/os/Bundle;)V
     .locals 0
 
-    .line 84
     iget-object p2, p0, Lcom/market/sdk/homeguide/AppstoreUserGuideService$1$1;->this$1:Lcom/market/sdk/homeguide/AppstoreUserGuideService$1;
 
     if-eqz p1, :cond_0
@@ -50,10 +47,9 @@
     :goto_0
     invoke-static {p2, p1}, Lcom/market/sdk/homeguide/AppstoreUserGuideService$1;->access$000(Lcom/market/sdk/homeguide/AppstoreUserGuideService$1;Z)V
 
-    .line 85
-    iget-object p1, p0, Lcom/market/sdk/homeguide/AppstoreUserGuideService$1$1;->this$1:Lcom/market/sdk/homeguide/AppstoreUserGuideService$1;
+    iget-object p0, p0, Lcom/market/sdk/homeguide/AppstoreUserGuideService$1$1;->this$1:Lcom/market/sdk/homeguide/AppstoreUserGuideService$1;
 
-    invoke-virtual {p1}, Lcom/market/sdk/homeguide/AppstoreUserGuideService$1;->unbind()V
+    invoke-virtual {p0}, Lcom/market/sdk/homeguide/AppstoreUserGuideService$1;->unbind()V
 
     return-void
 .end method

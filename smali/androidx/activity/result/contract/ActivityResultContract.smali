@@ -1,6 +1,5 @@
 .class public abstract Landroidx/activity/result/contract/ActivityResultContract;
 .super Ljava/lang/Object;
-.source "ActivityResultContract.java"
 
 
 # annotations
@@ -26,7 +25,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,13 +33,6 @@
 
 # virtual methods
 .method public abstract createIntent(Landroid/content/Context;Ljava/lang/Object;)Landroid/content/Intent;
-    .param p2    # Ljava/lang/Object;
-        .annotation build Landroid/annotation/SuppressLint;
-            value = {
-                "UnknownNullness"
-            }
-        .end annotation
-    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -54,13 +45,6 @@
 
 .method public getSynchronousResult(Landroid/content/Context;Ljava/lang/Object;)Landroidx/activity/result/contract/ActivityResultContract$SynchronousResult;
     .locals 0
-    .param p2    # Ljava/lang/Object;
-        .annotation build Landroid/annotation/SuppressLint;
-            value = {
-                "UnknownNullness"
-            }
-        .end annotation
-    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -71,18 +55,12 @@
         }
     .end annotation
 
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public abstract parseResult(ILandroid/content/Intent;)Ljava/lang/Object;
-    .annotation build Landroid/annotation/SuppressLint;
-        value = {
-            "UnknownNullness"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",

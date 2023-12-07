@@ -1,6 +1,5 @@
 .class public final Landroidx/fragment/R;
 .super Ljava/lang/Object;
-.source "R.java"
 
 
 # annotations

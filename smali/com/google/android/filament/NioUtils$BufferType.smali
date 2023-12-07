@@ -1,6 +1,5 @@
 .class final enum Lcom/google/android/filament/NioUtils$BufferType;
 .super Ljava/lang/Enum;
-.source "NioUtils.java"
 
 
 # annotations
@@ -44,115 +43,107 @@
 .method static constructor <clinit>()V
     .locals 9
 
-    .line 35
     new-instance v0, Lcom/google/android/filament/NioUtils$BufferType;
 
-    const-string v1, "BYTE"
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    const-string v2, "BYTE"
 
-    invoke-direct {v0, v1, v2}, Lcom/google/android/filament/NioUtils$BufferType;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v2, v1}, Lcom/google/android/filament/NioUtils$BufferType;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/google/android/filament/NioUtils$BufferType;->BYTE:Lcom/google/android/filament/NioUtils$BufferType;
 
-    .line 36
     new-instance v0, Lcom/google/android/filament/NioUtils$BufferType;
 
-    const-string v1, "CHAR"
+    const/4 v2, 0x1
 
-    const/4 v3, 0x1
+    const-string v3, "CHAR"
 
-    invoke-direct {v0, v1, v3}, Lcom/google/android/filament/NioUtils$BufferType;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v3, v2}, Lcom/google/android/filament/NioUtils$BufferType;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/google/android/filament/NioUtils$BufferType;->CHAR:Lcom/google/android/filament/NioUtils$BufferType;
 
-    .line 37
     new-instance v0, Lcom/google/android/filament/NioUtils$BufferType;
 
-    const-string v1, "SHORT"
+    const/4 v3, 0x2
 
-    const/4 v4, 0x2
+    const-string v4, "SHORT"
 
-    invoke-direct {v0, v1, v4}, Lcom/google/android/filament/NioUtils$BufferType;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v4, v3}, Lcom/google/android/filament/NioUtils$BufferType;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/google/android/filament/NioUtils$BufferType;->SHORT:Lcom/google/android/filament/NioUtils$BufferType;
 
-    .line 38
     new-instance v0, Lcom/google/android/filament/NioUtils$BufferType;
 
-    const-string v1, "INT"
+    const/4 v4, 0x3
 
-    const/4 v5, 0x3
+    const-string v5, "INT"
 
-    invoke-direct {v0, v1, v5}, Lcom/google/android/filament/NioUtils$BufferType;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v5, v4}, Lcom/google/android/filament/NioUtils$BufferType;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/google/android/filament/NioUtils$BufferType;->INT:Lcom/google/android/filament/NioUtils$BufferType;
 
-    .line 39
     new-instance v0, Lcom/google/android/filament/NioUtils$BufferType;
 
-    const-string v1, "LONG"
+    const/4 v5, 0x4
 
-    const/4 v6, 0x4
+    const-string v6, "LONG"
 
-    invoke-direct {v0, v1, v6}, Lcom/google/android/filament/NioUtils$BufferType;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v6, v5}, Lcom/google/android/filament/NioUtils$BufferType;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/google/android/filament/NioUtils$BufferType;->LONG:Lcom/google/android/filament/NioUtils$BufferType;
 
-    .line 40
     new-instance v0, Lcom/google/android/filament/NioUtils$BufferType;
 
-    const-string v1, "FLOAT"
+    const/4 v6, 0x5
 
-    const/4 v7, 0x5
+    const-string v7, "FLOAT"
 
-    invoke-direct {v0, v1, v7}, Lcom/google/android/filament/NioUtils$BufferType;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v7, v6}, Lcom/google/android/filament/NioUtils$BufferType;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/google/android/filament/NioUtils$BufferType;->FLOAT:Lcom/google/android/filament/NioUtils$BufferType;
 
-    .line 41
     new-instance v0, Lcom/google/android/filament/NioUtils$BufferType;
 
-    const-string v1, "DOUBLE"
+    const/4 v7, 0x6
 
-    const/4 v8, 0x6
+    const-string v8, "DOUBLE"
 
-    invoke-direct {v0, v1, v8}, Lcom/google/android/filament/NioUtils$BufferType;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v8, v7}, Lcom/google/android/filament/NioUtils$BufferType;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/google/android/filament/NioUtils$BufferType;->DOUBLE:Lcom/google/android/filament/NioUtils$BufferType;
 
     const/4 v0, 0x7
 
-    .line 34
     new-array v0, v0, [Lcom/google/android/filament/NioUtils$BufferType;
 
-    sget-object v1, Lcom/google/android/filament/NioUtils$BufferType;->BYTE:Lcom/google/android/filament/NioUtils$BufferType;
+    sget-object v8, Lcom/google/android/filament/NioUtils$BufferType;->BYTE:Lcom/google/android/filament/NioUtils$BufferType;
 
-    aput-object v1, v0, v2
+    aput-object v8, v0, v1
 
     sget-object v1, Lcom/google/android/filament/NioUtils$BufferType;->CHAR:Lcom/google/android/filament/NioUtils$BufferType;
 
-    aput-object v1, v0, v3
+    aput-object v1, v0, v2
 
     sget-object v1, Lcom/google/android/filament/NioUtils$BufferType;->SHORT:Lcom/google/android/filament/NioUtils$BufferType;
 
-    aput-object v1, v0, v4
+    aput-object v1, v0, v3
 
     sget-object v1, Lcom/google/android/filament/NioUtils$BufferType;->INT:Lcom/google/android/filament/NioUtils$BufferType;
 
-    aput-object v1, v0, v5
+    aput-object v1, v0, v4
 
     sget-object v1, Lcom/google/android/filament/NioUtils$BufferType;->LONG:Lcom/google/android/filament/NioUtils$BufferType;
 
-    aput-object v1, v0, v6
+    aput-object v1, v0, v5
 
     sget-object v1, Lcom/google/android/filament/NioUtils$BufferType;->FLOAT:Lcom/google/android/filament/NioUtils$BufferType;
 
-    aput-object v1, v0, v7
+    aput-object v1, v0, v6
 
     sget-object v1, Lcom/google/android/filament/NioUtils$BufferType;->DOUBLE:Lcom/google/android/filament/NioUtils$BufferType;
 
-    aput-object v1, v0, v8
+    aput-object v1, v0, v7
 
     sput-object v0, Lcom/google/android/filament/NioUtils$BufferType;->$VALUES:[Lcom/google/android/filament/NioUtils$BufferType;
 
@@ -167,7 +158,6 @@
         }
     .end annotation
 
-    .line 34
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -176,7 +166,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/android/filament/NioUtils$BufferType;
     .locals 1
 
-    .line 34
     const-class v0, Lcom/google/android/filament/NioUtils$BufferType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -191,7 +180,6 @@
 .method public static values()[Lcom/google/android/filament/NioUtils$BufferType;
     .locals 1
 
-    .line 34
     sget-object v0, Lcom/google/android/filament/NioUtils$BufferType;->$VALUES:[Lcom/google/android/filament/NioUtils$BufferType;
 
     invoke-virtual {v0}, [Lcom/google/android/filament/NioUtils$BufferType;->clone()Ljava/lang/Object;

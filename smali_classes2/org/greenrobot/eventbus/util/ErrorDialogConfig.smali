@@ -1,6 +1,5 @@
 .class public Lorg/greenrobot/eventbus/util/ErrorDialogConfig;
 .super Ljava/lang/Object;
-.source "ErrorDialogConfig.java"
 
 
 # instance fields
@@ -9,20 +8,19 @@
 
 # virtual methods
 .method getEventBus()Lorg/greenrobot/eventbus/EventBus;
-    .locals 1
+    .locals 0
 
-    .line 80
-    iget-object v0, p0, Lorg/greenrobot/eventbus/util/ErrorDialogConfig;->eventBus:Lorg/greenrobot/eventbus/EventBus;
+    iget-object p0, p0, Lorg/greenrobot/eventbus/util/ErrorDialogConfig;->eventBus:Lorg/greenrobot/eventbus/EventBus;
 
-    if-eqz v0, :cond_0
+    if-eqz p0, :cond_0
 
     goto :goto_0
 
     :cond_0
     invoke-static {}, Lorg/greenrobot/eventbus/EventBus;->getDefault()Lorg/greenrobot/eventbus/EventBus;
 
-    move-result-object v0
+    move-result-object p0
 
     :goto_0
-    return-object v0
+    return-object p0
 .end method

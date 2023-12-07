@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <favorites xmlns:launcher="http://schemas.android.com/apk/res-auto">
-    <folder launcher:screen="2" launcher:title="com.miui.home:string/default_folder_title_tools" launcher:x="2" launcher:y="1" />
+    <folder launcher:screen="2" launcher:title="@string/new_default_folder_title_tools_path" launcher:x="2" launcher:y="1" />
     <folder launcher:screen="2" launcher:title="Google" launcher:x="0" launcher:y="2" />
-    <folder launcher:screen="2" launcher:title="com.miui.home:string/default_folder_title_other_apps" launcher:x="1" launcher:y="2" />
+    <folder launcher:screen="2" launcher:title="@string/default_folder_title_other_apps_path" launcher:x="1" launcher:y="2" />
     <clock2x4 launcher:screen="1" launcher:x="0" launcher:y="0" />
     <favorite launcher:className="com.miui.gallery.activity.HomePageActivity" launcher:packageName="com.miui.gallery" launcher:screen="1" launcher:x="0" launcher:y="2" />
     <favorite launcher:className="com.miui.weather2.ActivityWeatherMain" launcher:packageName="com.miui.weather2" launcher:screen="1" launcher:x="1" launcher:y="2" />

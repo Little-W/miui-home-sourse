@@ -1,6 +1,5 @@
 .class final Landroidx/constraintlayout/solver/Pools;
 .super Ljava/lang/Object;
-.source "Pools.java"
 
 
 # annotations

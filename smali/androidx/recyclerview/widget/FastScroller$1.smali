@@ -1,6 +1,5 @@
 .class Landroidx/recyclerview/widget/FastScroller$1;
 .super Ljava/lang/Object;
-.source "FastScroller.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -25,7 +24,6 @@
 .method constructor <init>(Landroidx/recyclerview/widget/FastScroller;)V
     .locals 0
 
-    .line 123
     iput-object p1, p0, Landroidx/recyclerview/widget/FastScroller$1;->this$0:Landroidx/recyclerview/widget/FastScroller;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,14 +34,13 @@
 
 # virtual methods
 .method public run()V
-    .locals 2
+    .locals 1
 
-    .line 126
-    iget-object v0, p0, Landroidx/recyclerview/widget/FastScroller$1;->this$0:Landroidx/recyclerview/widget/FastScroller;
+    iget-object p0, p0, Landroidx/recyclerview/widget/FastScroller$1;->this$0:Landroidx/recyclerview/widget/FastScroller;
 
-    const/16 v1, 0x1f4
+    const/16 v0, 0x1f4
 
-    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/FastScroller;->hide(I)V
+    invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/FastScroller;->hide(I)V
 
     return-void
 .end method

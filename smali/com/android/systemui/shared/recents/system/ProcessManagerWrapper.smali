@@ -1,6 +1,5 @@
 .class public Lcom/android/systemui/shared/recents/system/ProcessManagerWrapper;
 .super Ljava/lang/Object;
-.source "ProcessManagerWrapper.java"
 
 
 # static fields
@@ -23,24 +22,20 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 20
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/android/systemui/shared/recents/system/ProcessManagerWrapper;->sRelatedPkgMap:Ljava/util/HashMap;
 
-    .line 23
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     const-string v1, "com.miui.fmservice"
 
-    .line 24
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 25
     sget-object v1, Lcom/android/systemui/shared/recents/system/ProcessManagerWrapper;->sRelatedPkgMap:Ljava/util/HashMap;
 
     const-string v2, "com.miui.fm"
@@ -53,14 +48,13 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 17
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 .method private static doClean(Ljava/util/List;Ljava/util/List;Ljava/util/List;I)V
-    .locals 7
+    .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -76,87 +70,111 @@
         }
     .end annotation
 
+    const-string v0, "ProcessManagerHelper"
+
     if-eqz p0, :cond_3
 
-    .line 38
     :try_start_0
     invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_0
+    if-eqz v1, :cond_0
 
     goto :goto_0
 
     :cond_0
     if-nez p1, :cond_1
 
-    .line 44
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     :cond_1
-    const-string v0, "com.miui.home"
+    const-string v1, "com.miui.home"
 
-    .line 48
-    invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {p1, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 50
-    new-instance v0, Lmiui/process/ProcessConfig;
+    new-instance v1, Lmiui/process/ProcessConfig;
 
-    invoke-direct {v0, p3}, Lmiui/process/ProcessConfig;-><init>(I)V
+    invoke-direct {v1, p3}, Lmiui/process/ProcessConfig;-><init>(I)V
 
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
-    .line 51
-    invoke-virtual {v0, v1}, Lmiui/process/ProcessConfig;->setRemoveTaskNeeded(Z)V
+    invoke-virtual {v1, v2}, Lmiui/process/ProcessConfig;->setRemoveTaskNeeded(Z)V
 
-    .line 52
-    invoke-virtual {v0, p0}, Lmiui/process/ProcessConfig;->setRemovingTaskIdList(Ljava/util/List;)V
+    invoke-virtual {v1, p0}, Lmiui/process/ProcessConfig;->setRemovingTaskIdList(Ljava/util/List;)V
 
-    .line 53
-    invoke-virtual {v0, p1}, Lmiui/process/ProcessConfig;->setWhiteList(Ljava/util/List;)V
+    invoke-virtual {v1, p1}, Lmiui/process/ProcessConfig;->setWhiteList(Ljava/util/List;)V
 
     if-eqz p2, :cond_2
 
-    .line 55
     const-class p0, Lmiui/process/ProcessConfig;
 
-    const-string v3, "setWhiteListTaskId"
+    const-string v4, "setWhiteListTaskId"
 
-    sget-object v4, Ljava/lang/Void;->TYPE:Ljava/lang/Class;
+    sget-object v5, Ljava/lang/Void;->TYPE:Ljava/lang/Class;
 
-    new-array v5, v1, [Ljava/lang/Class;
+    new-array v6, v2, [Ljava/lang/Class;
 
     const-class p1, Ljava/util/List;
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    aput-object p1, v5, v2
+    aput-object p1, v6, v3
 
-    new-array v6, v1, [Ljava/lang/Object;
+    new-array v7, v2, [Ljava/lang/Object;
 
-    aput-object p2, v6, v2
+    aput-object p2, v7, v3
 
-    move-object v1, p0
+    move-object v2, p0
 
-    move-object v2, v0
+    move-object v3, v1
 
-    invoke-static/range {v1 .. v6}, Lcom/android/systemui/shared/recents/utilities/ReflectUtils;->invokeObject(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static/range {v2 .. v7}, Lcom/android/systemui/shared/recents/utilities/ReflectUtils;->invokeObject(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 57
     :cond_2
-    invoke-static {v0}, Lmiui/process/ProcessManager;->kill(Lmiui/process/ProcessConfig;)Z
+    invoke-static {v1}, Lmiui/process/ProcessManager;->kill(Lmiui/process/ProcessConfig;)Z
 
-    const-string p0, "ProcessManagerHelper"
+    new-instance p0, Ljava/lang/StringBuilder;
 
-    .line 58
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p1, "doClean  processConfigPolicy="
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_2
+
+    :catch_0
+    move-exception p0
+
+    goto :goto_1
+
+    :cond_3
+    :goto_0
+    const-string p0, "do not clean because removing task is empty"
+
+    invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :goto_1
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string p2, "doClean  processConfigPolicy="
+    const-string p2, "doClean for "
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -166,51 +184,14 @@
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    goto :goto_1
-
-    :cond_3
-    :goto_0
-    const-string p0, "ProcessManagerHelper"
-
-    const-string p1, "do not clean because removing task is empty"
-
-    .line 39
-    invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception p0
-
-    const-string p1, "ProcessManagerHelper"
-
-    .line 60
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v0, "doClean for "
-
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    :goto_1
+    :goto_2
     return-void
 .end method
 
-.method public static doGameClean(Ljava/util/List;Ljava/util/List;)V
-    .locals 2
+.method public static doGameClean(Ljava/util/List;Ljava/util/List;Ljava/util/List;)V
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -219,16 +200,16 @@
             ">;",
             "Ljava/util/List<",
             "Ljava/lang/String;",
+            ">;",
+            "Ljava/util/List<",
+            "Ljava/lang/Integer;",
             ">;)V"
         }
     .end annotation
 
-    const/4 v0, 0x0
+    const/4 v0, 0x4
 
-    const/4 v1, 0x4
-
-    .line 81
-    invoke-static {p0, p1, v0, v1}, Lcom/android/systemui/shared/recents/system/ProcessManagerWrapper;->doClean(Ljava/util/List;Ljava/util/List;Ljava/util/List;I)V
+    invoke-static {p0, p1, p2, v0}, Lcom/android/systemui/shared/recents/system/ProcessManagerWrapper;->doClean(Ljava/util/List;Ljava/util/List;Ljava/util/List;I)V
 
     return-void
 .end method
@@ -250,12 +231,10 @@
         }
     .end annotation
 
-    .line 65
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 66
     invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -266,7 +245,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_2
+    if-eqz v2, :cond_3
 
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -276,15 +255,56 @@
 
     if-eqz v2, :cond_0
 
-    .line 67
     iget-object v3, v2, Lcom/android/systemui/shared/recents/model/Task;->key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
 
     if-nez v3, :cond_1
 
     goto :goto_0
 
-    .line 68
     :cond_1
+    invoke-virtual {v2}, Lcom/android/systemui/shared/recents/model/Task;->hasMultipleTasks()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    iget-boolean v3, v2, Lcom/android/systemui/shared/recents/model/Task;->isLocked:Z
+
+    if-nez v3, :cond_0
+
+    iget-object v3, v2, Lcom/android/systemui/shared/recents/model/Task;->cti1Key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
+
+    iget v3, v3, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->id:I
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-virtual {p2, v3}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    iget-object v3, v2, Lcom/android/systemui/shared/recents/model/Task;->cti2Key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
+
+    iget v3, v3, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->id:I
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-virtual {p2, v3}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    invoke-static {v2}, Lcom/android/systemui/shared/recents/system/ProcessManagerWrapper;->doSwapUPClean(Lcom/android/systemui/shared/recents/model/Task;)V
+
+    goto :goto_0
+
+    :cond_2
     iget-object v2, v2, Lcom/android/systemui/shared/recents/model/Task;->key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
 
     iget v2, v2, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->id:I
@@ -297,52 +317,48 @@
 
     goto :goto_0
 
-    :cond_2
-    const-string v1, "ProcessManagerHelper"
+    :cond_3
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    .line 70
-    new-instance v2, Ljava/lang/StringBuilder;
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    const-string v2, "doOneKeyClean    removingTaskIds.size="
 
-    const-string v3, "doOneKeyClean    removingTaskIds.size="
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
-    move-result v3
+    move-result v2
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v3, "   tasks.size="
+    const-string v2, "   tasks.size="
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 71
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
     move-result p0
 
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 70
+    const-string v1, "ProcessManagerHelper"
+
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x1
 
-    .line 72
     invoke-static {v0, p1, p2, p0}, Lcom/android/systemui/shared/recents/system/ProcessManagerWrapper;->doClean(Ljava/util/List;Ljava/util/List;Ljava/util/List;I)V
 
     return-void
 .end method
 
-.method public static doOneKeyClean(Ljava/util/List;Ljava/util/List;)V
-    .locals 2
+.method public static doOneKeyClean(Ljava/util/List;Ljava/util/List;Ljava/util/List;)V
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -351,100 +367,59 @@
             ">;",
             "Ljava/util/List<",
             "Ljava/lang/String;",
+            ">;",
+            "Ljava/util/List<",
+            "Ljava/lang/Integer;",
             ">;)V"
         }
     .end annotation
 
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
-    const/4 v1, 0x1
-
-    .line 76
-    invoke-static {p0, p1, v0, v1}, Lcom/android/systemui/shared/recents/system/ProcessManagerWrapper;->doClean(Ljava/util/List;Ljava/util/List;Ljava/util/List;I)V
+    invoke-static {p0, p1, p2, v0}, Lcom/android/systemui/shared/recents/system/ProcessManagerWrapper;->doClean(Ljava/util/List;Ljava/util/List;Ljava/util/List;I)V
 
     return-void
 .end method
 
 .method public static doSwapUPClean(Lcom/android/systemui/shared/recents/model/Task;)V
-    .locals 6
+    .locals 3
 
-    .line 86
     :try_start_0
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/Task;->key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
 
-    invoke-virtual {v0}, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->getComponent()Landroid/content/ComponentName;
+    invoke-static {v0}, Lcom/android/systemui/shared/recents/system/ProcessManagerWrapper;->killTaskByTaskKey(Lcom/android/systemui/shared/recents/model/Task$TaskKey;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 87
     iget-object v1, p0, Lcom/android/systemui/shared/recents/model/Task;->key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
 
-    iget v1, v1, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->userId:I
+    invoke-static {v0, v1}, Lcom/android/systemui/shared/recents/system/ProcessManagerWrapper;->killRelatedPackage(Ljava/lang/String;Lcom/android/systemui/shared/recents/model/Task$TaskKey;)V
 
-    .line 88
-    new-instance v2, Lmiui/process/ProcessConfig;
+    invoke-virtual {p0}, Lcom/android/systemui/shared/recents/model/Task;->hasMultipleTasks()Z
 
-    iget-object v3, p0, Lcom/android/systemui/shared/recents/model/Task;->key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
+    move-result v0
 
-    iget v3, v3, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->id:I
+    if-eqz v0, :cond_0
 
-    const/4 v4, 0x7
+    iget-object v0, p0, Lcom/android/systemui/shared/recents/model/Task;->cti1Key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
 
-    invoke-direct {v2, v4, v0, v1, v3}, Lmiui/process/ProcessConfig;-><init>(ILjava/lang/String;II)V
-
-    const/4 v3, 0x1
-
-    .line 90
-    invoke-virtual {v2, v3}, Lmiui/process/ProcessConfig;->setRemoveTaskNeeded(Z)V
-
-    .line 91
-    invoke-static {v2}, Lmiui/process/ProcessManager;->kill(Lmiui/process/ProcessConfig;)Z
-
-    .line 92
-    invoke-static {v0}, Lcom/android/systemui/shared/recents/system/ProcessManagerWrapper;->isHasRelatedPkg(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    .line 93
-    invoke-static {v0}, Lcom/android/systemui/shared/recents/system/ProcessManagerWrapper;->getRelatedPkg(Ljava/lang/String;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lcom/android/systemui/shared/recents/system/ProcessManagerWrapper;->killTaskByTaskKey(Lcom/android/systemui/shared/recents/model/Task$TaskKey;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 94
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    iget-object v1, p0, Lcom/android/systemui/shared/recents/model/Task;->cti2Key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
 
-    move-result-object v0
+    invoke-static {v1}, Lcom/android/systemui/shared/recents/system/ProcessManagerWrapper;->killTaskByTaskKey(Lcom/android/systemui/shared/recents/model/Task$TaskKey;)Ljava/lang/String;
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    move-result-object v1
 
-    move-result v2
+    iget-object v2, p0, Lcom/android/systemui/shared/recents/model/Task;->cti1Key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
 
-    if-eqz v2, :cond_0
+    invoke-static {v0, v2}, Lcom/android/systemui/shared/recents/system/ProcessManagerWrapper;->killRelatedPackage(Ljava/lang/String;Lcom/android/systemui/shared/recents/model/Task$TaskKey;)V
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget-object p0, p0, Lcom/android/systemui/shared/recents/model/Task;->cti2Key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
 
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/String;
-
-    .line 95
-    new-instance v3, Lmiui/process/ProcessConfig;
-
-    iget-object v5, p0, Lcom/android/systemui/shared/recents/model/Task;->key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
-
-    iget v5, v5, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->id:I
-
-    invoke-direct {v3, v4, v2, v1, v5}, Lmiui/process/ProcessConfig;-><init>(ILjava/lang/String;II)V
-
-    .line 96
-    invoke-static {v3}, Lmiui/process/ProcessManager;->kill(Lmiui/process/ProcessConfig;)Z
+    invoke-static {v1, p0}, Lcom/android/systemui/shared/recents/system/ProcessManagerWrapper;->killRelatedPackage(Ljava/lang/String;Lcom/android/systemui/shared/recents/model/Task$TaskKey;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -457,10 +432,10 @@
 
     const-string v1, "doSwapUPClean"
 
-    .line 100
     invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0
+    :goto_0
     return-void
 .end method
 
@@ -470,7 +445,6 @@
     :try_start_0
     const-string v0, "miui.process.IProcessManager"
 
-    .line 143
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
@@ -479,7 +453,6 @@
 
     const/4 v2, 0x1
 
-    .line 144
     new-array v3, v2, [Ljava/lang/Class;
 
     sget-object v4, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
@@ -492,10 +465,8 @@
 
     move-result-object v0
 
-    .line 145
     invoke-virtual {v0, v2}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
-    .line 146
     invoke-static {}, Lmiui/process/ProcessManagerNative;->getDefault()Lmiui/process/IProcessManager;
 
     move-result-object v1
@@ -521,10 +492,8 @@
 
     const-string v1, "ProcessManager error"
 
-    .line 148
     invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 149
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0
@@ -542,7 +511,6 @@
         }
     .end annotation
 
-    .line 133
     :try_start_0
     invoke-static {p0}, Lmiui/process/ProcessManager;->getLockedApplication(I)Ljava/util/List;
 
@@ -559,10 +527,8 @@
 
     const-string v1, "getLockedApplication"
 
-    .line 135
     invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 137
     new-instance p0, Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
@@ -583,7 +549,6 @@
         }
     .end annotation
 
-    .line 33
     sget-object v0, Lcom/android/systemui/shared/recents/system/ProcessManagerWrapper;->sRelatedPkgMap:Ljava/util/HashMap;
 
     invoke-virtual {v0, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -598,7 +563,6 @@
 .method public static isHasRelatedPkg(Ljava/lang/String;)Z
     .locals 1
 
-    .line 29
     sget-object v0, Lcom/android/systemui/shared/recents/system/ProcessManagerWrapper;->sRelatedPkgMap:Ljava/util/HashMap;
 
     invoke-virtual {v0, p0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
@@ -611,7 +575,6 @@
 .method public static isLockedApplication(Ljava/lang/String;I)Z
     .locals 1
 
-    .line 124
     :try_start_0
     invoke-static {p0, p1}, Lmiui/process/ProcessManager;->isLockedApplication(Ljava/lang/String;I)Z
 
@@ -628,7 +591,6 @@
 
     const-string v0, "isLockedApplication"
 
-    .line 126
     invoke-static {p1, v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p0, 0x0
@@ -636,26 +598,19 @@
     return p0
 .end method
 
-.method public static updateApplicationLockedState(Ljava/lang/String;IZ)Z
-    .locals 1
+.method private static killRelatedPackage(Ljava/lang/String;Lcom/android/systemui/shared/recents/model/Task$TaskKey;)V
+    .locals 5
 
-    .line 108
-    :try_start_0
-    invoke-static {p0, p1, p2}, Lmiui/process/ProcessManager;->updateApplicationLockedState(Ljava/lang/String;IZ)V
-
-    .line 109
     invoke-static {p0}, Lcom/android/systemui/shared/recents/system/ProcessManagerWrapper;->isHasRelatedPkg(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 110
     invoke-static {p0}, Lcom/android/systemui/shared/recents/system/ProcessManagerWrapper;->getRelatedPkg(Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object p0
 
-    .line 111
     invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -673,7 +628,87 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 112
+    new-instance v1, Lmiui/process/ProcessConfig;
+
+    const/4 v2, 0x7
+
+    iget v3, p1, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->userId:I
+
+    iget v4, p1, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->id:I
+
+    invoke-direct {v1, v2, v0, v3, v4}, Lmiui/process/ProcessConfig;-><init>(ILjava/lang/String;II)V
+
+    invoke-static {v1}, Lmiui/process/ProcessManager;->kill(Lmiui/process/ProcessConfig;)Z
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method private static killTaskByTaskKey(Lcom/android/systemui/shared/recents/model/Task$TaskKey;)Ljava/lang/String;
+    .locals 4
+
+    invoke-virtual {p0}, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->getComponent()Landroid/content/ComponentName;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+
+    move-result-object v0
+
+    iget v1, p0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->userId:I
+
+    new-instance v2, Lmiui/process/ProcessConfig;
+
+    iget p0, p0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->id:I
+
+    const/4 v3, 0x7
+
+    invoke-direct {v2, v3, v0, v1, p0}, Lmiui/process/ProcessConfig;-><init>(ILjava/lang/String;II)V
+
+    const/4 p0, 0x1
+
+    invoke-virtual {v2, p0}, Lmiui/process/ProcessConfig;->setRemoveTaskNeeded(Z)V
+
+    invoke-static {v2}, Lmiui/process/ProcessManager;->kill(Lmiui/process/ProcessConfig;)Z
+
+    return-object v0
+.end method
+
+.method public static updateApplicationLockedState(Ljava/lang/String;IZ)Z
+    .locals 1
+
+    :try_start_0
+    invoke-static {p0, p1, p2}, Lmiui/process/ProcessManager;->updateApplicationLockedState(Ljava/lang/String;IZ)V
+
+    invoke-static {p0}, Lcom/android/systemui/shared/recents/system/ProcessManagerWrapper;->isHasRelatedPkg(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p0}, Lcom/android/systemui/shared/recents/system/ProcessManagerWrapper;->getRelatedPkg(Ljava/lang/String;)Ljava/util/ArrayList;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
     invoke-static {v0, p1, p2}, Lmiui/process/ProcessManager;->updateApplicationLockedState(Ljava/lang/String;IZ)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -690,9 +725,8 @@
 
     const-string p1, "ProcessManagerHelper"
 
-    const-string p2, "updateApplicationLockedState"
+    const-string/jumbo p2, "updateApplicationLockedState"
 
-    .line 116
     invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p0, 0x0

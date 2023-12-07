@@ -1,6 +1,5 @@
 .class final Lcom/mi/google/gson/internal/bind/JsonTreeReader$1;
 .super Ljava/io/Reader;
-.source "JsonTreeReader.java"
 
 
 # annotations
@@ -18,7 +17,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 38
     invoke-direct {p0}, Ljava/io/Reader;-><init>()V
 
     return-void
@@ -27,19 +25,18 @@
 
 # virtual methods
 .method public close()V
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
         }
     .end annotation
 
-    .line 43
-    new-instance v0, Ljava/lang/AssertionError;
+    new-instance p0, Ljava/lang/AssertionError;
 
-    invoke-direct {v0}, Ljava/lang/AssertionError;-><init>()V
+    invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
 
-    throw v0
+    throw p0
 .end method
 
 .method public read([CII)I
@@ -50,10 +47,9 @@
         }
     .end annotation
 
-    .line 40
-    new-instance p1, Ljava/lang/AssertionError;
+    new-instance p0, Ljava/lang/AssertionError;
 
-    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
+    invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
 
-    throw p1
+    throw p0
 .end method

@@ -1,6 +1,5 @@
 .class public interface abstract Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/abs/IMeasurablePagerTitleView;
 .super Ljava/lang/Object;
-.source "IMeasurablePagerTitleView.java"
 
 # interfaces
 .implements Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/abs/IPagerTitleView;

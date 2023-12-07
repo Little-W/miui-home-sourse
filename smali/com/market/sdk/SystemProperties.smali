@@ -1,6 +1,5 @@
 .class public Lcom/market/sdk/SystemProperties;
 .super Ljava/lang/Object;
-.source "SystemProperties.java"
 
 
 # static fields
@@ -23,14 +22,12 @@
     :try_start_0
     const-string v0, "android.os.SystemProperties"
 
-    .line 20
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
     sput-object v0, Lcom/market/sdk/SystemProperties;->sClazz:Ljava/lang/Class;
 
-    .line 21
     sget-object v0, Lcom/market/sdk/SystemProperties;->sClazz:Ljava/lang/Class;
 
     const-string v1, "get"
@@ -64,14 +61,13 @@
     :catch_0
     move-exception v0
 
-    const-string v1, "MarketSdkUtils"
-
-    .line 23
     invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-static {v1, v2, v0}, Lcom/market/sdk/utils/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    const-string v2, "MarketSdkUtils"
+
+    invoke-static {v2, v1, v0}, Lcom/market/sdk/utils/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_0
     return-void
@@ -80,7 +76,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -89,7 +84,6 @@
 .method public static getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 4
 
-    .line 30
     :try_start_0
     sget-object v0, Lcom/market/sdk/SystemProperties;->sMethodGet:Ljava/lang/reflect/Method;
 
@@ -113,7 +107,6 @@
 
     check-cast p0, Ljava/lang/String;
 
-    .line 31
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -133,14 +126,13 @@
     :catch_0
     move-exception p0
 
-    const-string v0, "MarketSdkUtils"
-
-    .line 33
     invoke-virtual {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-static {v0, v1, p0}, Lcom/market/sdk/utils/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    const-string v1, "MarketSdkUtils"
+
+    invoke-static {v1, v0, p0}, Lcom/market/sdk/utils/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-object p1
 .end method

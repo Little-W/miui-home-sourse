@@ -30,18 +30,16 @@
     <plurals name="announce_for_unread">
         <item quantity="other">%1$s %2$s 个未读</item>
     </plurals>
-    <plurals name="delete_wallpapers_message">
-        <item quantity="other">确认要删除所选的 %1$d张壁纸?</item>
-    </plurals>
-    <plurals name="editing_mode_title">
-        <item quantity="other">已选择%1$d项</item>
-    </plurals>
     <plurals name="miuix_appcompat_items_selected">
         <item quantity="other">已选择%d项</item>
         <item quantity="one">已选择%d项</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d 条新通知</item>
+        <item quantity="one">%d 条新通知</item>
+    </plurals>
     <plurals name="remove_dialog_title_multi_format">
-        <item quantity="other">移除%1$d个应用</item>
+        <item quantity="other">移除%1$d个应用桌面快捷方式</item>
     </plurals>
     <plurals name="scroll_tip_format_when_announce_accessibility">
         <item quantity="other">第%1$d页共%2$d项</item>

@@ -63,6 +63,16 @@
         <item>@string/am</item>
         <item>@string/pm</item>
     </string-array>
+    <string-array name="animation_rate_entries">
+        <item>Relaxed</item>
+        <item>Balanced</item>
+        <item>Fast</item>
+    </string-array>
+    <string-array name="animation_rate_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
     <array name="app_locating_animation_scaler">
         <item>1.0</item>
         <item>1.4</item>
@@ -70,14 +80,6 @@
         <item>1.1</item>
         <item>1.0</item>
     </array>
-    <string-array name="cell_layout_size_entries">
-        <item>4x4</item>
-        <item>4x5</item>
-    </string-array>
-    <string-array name="cell_layout_size_values">
-        <item>4x4</item>
-        <item>4x5</item>
-    </string-array>
     <string-array name="chinese_days">
         <item>@string/chinese_day_1</item>
         <item>@string/chinese_day_2</item>
@@ -212,37 +214,6 @@
         <item>@string/eras_bc</item>
         <item>@string/eras_ad</item>
     </string-array>
-    <string-array name="gadget_weather_image">
-        <item>Clear</item>
-        <item>Cloudy</item>
-        <item>Hazy</item>
-        <item>Foggy</item>
-        <item>Severe rainstorm</item>
-        <item>Rainstorm</item>
-        <item>Very heavy rainfall</item>
-        <item>Thunderstorm</item>
-        <item>Shower</item>
-        <item>Heavy rainfall</item>
-        <item>Rain</item>
-        <item>Drizzle</item>
-        <item>Sleet</item>
-        <item>Snowstorm</item>
-        <item>Patches of snowfall</item>
-        <item>Heavy snowfall</item>
-        <item>Snowfall</item>
-        <item>Light snowfall</item>
-        <item>Strong sandstorm</item>
-        <item>Sandstorm</item>
-        <item>Light sandstorm</item>
-        <item>Sandstorm</item>
-        <item>Hail</item>
-        <item>Floating dust</item>
-        <item>Haze</item>
-    </string-array>
-    <string-array name="gadget_weather_theme_type_entries">
-        <item>Default</item>
-        <item>Classic</item>
-    </string-array>
     <string-array name="global_elderly_man_like_apps">
         <item>com.whatsapp</item>
         <item>com.google.android.youtube</item>
@@ -296,18 +267,21 @@
         <item>L</item>
         <item>XL</item>
     </string-array>
-    <array name="item_shake_animation_scaler">
-        <item>0.0dip</item>
-        <item>-4.0dip</item>
-        <item>2.0dip</item>
-        <item>-1.0dip</item>
-        <item>0.0dip</item>
-    </array>
+    <string-array name="miui_home_branch_region">
+        <item>IN</item>
+    </string-array>
     <string-array name="miui_lite_fancy_icon_app">
         <item>com.android.calendar</item>
         <item>com.miui.weather2</item>
         <item>com.android.deskclock</item>
         <item>com.xiaomi.calendar</item>
+    </string-array>
+    <string-array name="monochrome_color_entries">
+        <item>Default</item>
+        <item>Blue</item>
+        <item>Green</item>
+        <item>Purple</item>
+        <item>Brown</item>
     </string-array>
     <string-array name="months">
         <item>@string/month_january</item>
@@ -351,11 +325,29 @@
         <item>@string/month_november_shortest</item>
         <item>@string/month_december_shortest</item>
     </string-array>
+    <string-array name="no_word_model_entries">
+        <item>Off</item>
+        <item>Anywhere</item>
+        <item>On widgets</item>
+    </string-array>
+    <string-array name="no_word_model_entries_not_support_only_widget_no_word">
+        <item>Off</item>
+        <item>Anywhere</item>
+    </string-array>
     <string-array name="not_show_uninstall_icon_array">
         <item>com.mi.globalbrowser</item>
     </string-array>
-    <string-array name="quality_business_devices">
-        <item>lithium</item>
+    <string-array name="poco_branch_region">
+        <item>IN</item>
+        <item>TH</item>
+        <item>PH</item>
+        <item>MY</item>
+        <item>VN</item>
+        <item>ID</item>
+        <item>BR</item>
+        <item>MX</item>
+        <item>CO</item>
+        <item>EG</item>
     </string-array>
     <string-array name="recents_thumbnail_blur_white_pkgs">
         <item>com.android.camera</item>
@@ -430,18 +422,6 @@
         <item>content://com.android.thememanager.loopwallpaper</item>
         <item>content://com.miui.home.none_provider</item>
     </string-array>
-    <string-array name="wallpaper_scroll_entries">
-        <item>Theme default</item>
-        <item>Center</item>
-        <item>Left</item>
-        <item>Right</item>
-    </string-array>
-    <string-array name="wallpaper_scroll_values">
-        <item>byTheme</item>
-        <item>center</item>
-        <item>left</item>
-        <item>right</item>
-    </string-array>
     <string-array name="week_days">
         <item>@string/sunday</item>
         <item>@string/monday</item>
@@ -478,15 +458,20 @@
         <item>负一屏picker</item>
         <item>负一屏推荐卡片推荐位</item>
         <item>负一屏推荐卡片兜底图</item>
+        <item>人工PUSH</item>
+        <item>桌面shortcut更换按钮</item>
     </string-array>
     <string-array name="widget_component_add_way">
         <item>从picker详情页拖拽</item>
         <item>picker详情页添加按钮</item>
         <item>从picker首页拖拽</item>
         <item>从瀑布流页拖拽</item>
-        <item>图文页添加按钮</item>
-        <item>编辑页应用按钮</item>
+        <item>从筛选器页面点更换</item>
         <item>首页横滑卡片添加按钮</item>
+        <item>编辑页应用按钮</item>
+        <item>从筛选器页面拖拽</item>
+        <item>从分类页面横滑卡片拖拽</item>
+        <item>从搜索结果页拖拽</item>
     </string-array>
     <string-array name="widget_component_default_source">
         <item>非默认</item>
@@ -495,13 +480,17 @@
     </string-array>
     <string-array name="widget_component_delete_way">
         <item>shortcut删除</item>
-        <item>拖拽</item>
-        <item>uninstall</item>
+        <item>顶部删除</item>
+        <item>APP卸载</item>
+        <item>shortcut更换</item>
+        <item>PUSH下线</item>
+        <item>鉴权失败</item>
+        <item>其他</item>
     </string-array>
     <string-array name="widget_component_source">
-        <item>运营强插</item>
-        <item>主动添加</item>
         <item>默认布局</item>
+        <item>主动添加</item>
+        <item>运营强插</item>
     </string-array>
     <string-array name="widget_drag_type_name">
         <item>桌面内</item>
@@ -536,5 +525,29 @@
         <item>home_edit_box_area_4_2</item>
         <item>home_edit_box_area_4_3</item>
         <item>home_edit_box_area_4_4</item>
+    </string-array>
+    <string-array name="folder_col_entries">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="folder_col_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="sb_clock_entries">
+        <item>默认</item>
+        <item>总是隐藏</item>
+        <item>总是显示</item>
+    </string-array>
+    <string-array name="sb_clock_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
     </string-array>
 </resources>

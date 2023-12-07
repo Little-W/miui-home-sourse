@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="announce_for_drag">
+        <item quantity="other">Inaburuta vipengee %1$d</item>
+        <item quantity="one">Inaburuta kipengee %1$d</item>
+    </plurals>
+    <plurals name="announce_for_unread">
+        <item quantity="other">%2$s hazijasomwa kutoka %1$s</item>
+        <item quantity="one">%2$s haijasomwa kutoka %1$s</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">Arifa %d mpya</item>
+        <item quantity="one">Arifa %d mpya</item>
+    </plurals>
+    <plurals name="remove_dialog_title_multi_format">
+        <item quantity="other">Ungependa kuondoa vipengee %1$d kwenye Skrini ya kwanza?</item>
+        <item quantity="one">Ungependa kuondoa kipengee %1$d kwenye Skrini ya kwanza?</item>
+    </plurals>
+    <plurals name="scroll_tip_format_when_announce_accessibility">
+        <item quantity="other">Kurasa wa %1$d, programu %2$d.</item>
+        <item quantity="one">Ukurasa wa %1$d, programu %2$d.</item>
+    </plurals>
+    <plurals name="uninstall_dialog_title_multi_format">
+        <item quantity="other">Sanidua programu %1$d?</item>
+        <item quantity="one">Sanidua programu %1$d?</item>
+    </plurals>
+    <plurals name="uninstall_result_multi_failed">
+        <item quantity="other">Haiwezi kusanidua programu %1$d</item>
+        <item quantity="one">Haiwezi kusanidua programu %1$d</item>
+    </plurals>
+    <plurals name="uninstall_result_multi_succeeded">
+        <item quantity="other">Programu %1$d zimesaniduliwa</item>
+        <item quantity="one">Programu %1$d imesaniduliwa</item>
+    </plurals>
+</resources>

@@ -1,6 +1,5 @@
 .class public abstract Landroid/support/v4/app/INotificationSideChannel$Stub;
 .super Landroid/os/Binder;
-.source "INotificationSideChannel.java"
 
 # interfaces
 .implements Landroid/support/v4/app/INotificationSideChannel;
@@ -37,12 +36,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 45
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
     const-string v0, "android.support.v4.app.INotificationSideChannel"
 
-    .line 46
     invoke-virtual {p0, p0, v0}, Landroid/support/v4/app/INotificationSideChannel$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
     return-void
@@ -60,24 +57,20 @@
     :cond_0
     const-string v0, "android.support.v4.app.INotificationSideChannel"
 
-    .line 57
     invoke-interface {p0, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 58
     instance-of v1, v0, Landroid/support/v4/app/INotificationSideChannel;
 
     if-eqz v1, :cond_1
 
-    .line 59
     check-cast v0, Landroid/support/v4/app/INotificationSideChannel;
 
     return-object v0
 
-    .line 61
     :cond_1
     new-instance v0, Landroid/support/v4/app/INotificationSideChannel$Stub$Proxy;
 
@@ -89,7 +82,6 @@
 .method public static getDefaultImpl()Landroid/support/v4/app/INotificationSideChannel;
     .locals 1
 
-    .line 218
     sget-object v0, Landroid/support/v4/app/INotificationSideChannel$Stub$Proxy;->sDefaultImpl:Landroid/support/v4/app/INotificationSideChannel;
 
     return-object v0
@@ -98,14 +90,12 @@
 .method public static setDefaultImpl(Landroid/support/v4/app/INotificationSideChannel;)Z
     .locals 1
 
-    .line 211
     sget-object v0, Landroid/support/v4/app/INotificationSideChannel$Stub$Proxy;->sDefaultImpl:Landroid/support/v4/app/INotificationSideChannel;
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_1
 
     if-eqz p0, :cond_0
 
-    .line 212
     sput-object p0, Landroid/support/v4/app/INotificationSideChannel$Stub$Proxy;->sDefaultImpl:Landroid/support/v4/app/INotificationSideChannel;
 
     const/4 p0, 0x1
@@ -116,6 +106,15 @@
     const/4 p0, 0x0
 
     return p0
+
+    :cond_1
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string v0, "setDefaultImpl() called twice"
+
+    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
 .end method
 
 
@@ -134,91 +133,89 @@
         }
     .end annotation
 
-    const-string v0, "android.support.v4.app.INotificationSideChannel"
+    const/4 v0, 0x1
 
-    const v1, 0x5f4e5446
+    const-string v1, "android.support.v4.app.INotificationSideChannel"
 
-    const/4 v2, 0x1
+    if-eq p1, v0, :cond_3
 
-    if-eq p1, v1, :cond_1
+    const/4 v2, 0x2
 
-    packed-switch p1, :pswitch_data_0
+    if-eq p1, v2, :cond_2
 
-    .line 118
+    const/4 v2, 0x3
+
+    if-eq p1, v2, :cond_1
+
+    const v2, 0x5f4e5446
+
+    if-eq p1, v2, :cond_0
+
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 
-    .line 110
-    :pswitch_0
-    invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    :cond_0
+    invoke-virtual {p3, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 112
+    return v0
+
+    :cond_1
+    invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 113
     invoke-virtual {p0, p1}, Landroid/support/v4/app/INotificationSideChannel$Stub;->cancelAll(Ljava/lang/String;)V
 
-    return v2
+    return v0
 
-    .line 98
-    :pswitch_1
-    invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    :cond_2
+    invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 100
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 102
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p3
 
-    .line 104
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object p2
 
-    .line 105
     invoke-virtual {p0, p1, p3, p2}, Landroid/support/v4/app/INotificationSideChannel$Stub;->cancel(Ljava/lang/String;ILjava/lang/String;)V
 
-    return v2
+    return v0
 
-    .line 79
-    :pswitch_2
-    invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    :cond_3
+    invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 81
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 83
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p3
 
-    .line 85
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object p4
 
-    .line 87
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_0
+    if-eqz v1, :cond_4
 
-    .line 88
-    sget-object v0, Landroid/app/Notification;->CREATOR:Landroid/os/Parcelable$Creator;
+    sget-object v1, Landroid/app/Notification;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    invoke-interface {v0, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    invoke-interface {v1, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
 
     move-result-object p2
 
@@ -226,27 +223,11 @@
 
     goto :goto_0
 
-    :cond_0
+    :cond_4
     const/4 p2, 0x0
 
-    .line 93
     :goto_0
     invoke-virtual {p0, p1, p3, p4, p2}, Landroid/support/v4/app/INotificationSideChannel$Stub;->notify(Ljava/lang/String;ILjava/lang/String;Landroid/app/Notification;)V
 
-    return v2
-
-    .line 74
-    :cond_1
-    invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    return v2
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return v0
 .end method

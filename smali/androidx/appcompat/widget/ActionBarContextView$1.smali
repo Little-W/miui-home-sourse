@@ -1,6 +1,5 @@
 .class Landroidx/appcompat/widget/ActionBarContextView$1;
 .super Ljava/lang/Object;
-.source "ActionBarContextView.java"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -27,7 +26,6 @@
 .method constructor <init>(Landroidx/appcompat/widget/ActionBarContextView;Landroidx/appcompat/view/ActionMode;)V
     .locals 0
 
-    .line 170
     iput-object p1, p0, Landroidx/appcompat/widget/ActionBarContextView$1;->this$0:Landroidx/appcompat/widget/ActionBarContextView;
 
     iput-object p2, p0, Landroidx/appcompat/widget/ActionBarContextView$1;->val$mode:Landroidx/appcompat/view/ActionMode;
@@ -42,10 +40,9 @@
 .method public onClick(Landroid/view/View;)V
     .locals 0
 
-    .line 173
-    iget-object p1, p0, Landroidx/appcompat/widget/ActionBarContextView$1;->val$mode:Landroidx/appcompat/view/ActionMode;
+    iget-object p0, p0, Landroidx/appcompat/widget/ActionBarContextView$1;->val$mode:Landroidx/appcompat/view/ActionMode;
 
-    invoke-virtual {p1}, Landroidx/appcompat/view/ActionMode;->finish()V
+    invoke-virtual {p0}, Landroidx/appcompat/view/ActionMode;->finish()V
 
     return-void
 .end method

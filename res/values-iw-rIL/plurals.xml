@@ -66,18 +66,6 @@
         <item quantity="two">%2$s הודעות שלא נקראה מ-%1$s</item>
         <item quantity="many">%2$s הודעות שלא נקראו מ-%1$s</item>
     </plurals>
-    <plurals name="delete_wallpapers_message">
-        <item quantity="other">למחוק %1$d טפטים?</item>
-        <item quantity="one">למחוק טפט %1$d?</item>
-        <item quantity="two">למחוק %1$d טפטים?</item>
-        <item quantity="many">למחוק %1$d טפטים?</item>
-    </plurals>
-    <plurals name="editing_mode_title">
-        <item quantity="other">%1$d פריטים נבחרו</item>
-        <item quantity="one">פריט %1$d נבחר</item>
-        <item quantity="two">%1$d פריטים נבחרו</item>
-        <item quantity="many">%1$d פריטים נבחרו</item>
-    </plurals>
     <plurals name="half_hour_ago">
         <item quantity="other">לפני חצי שעה</item>
         <item quantity="one">לפני חצי שעה</item>
@@ -127,10 +115,10 @@
         <item quantity="many">לפני %d דקות</item>
     </plurals>
     <plurals name="remove_dialog_title_multi_format">
-        <item quantity="other">להסיר %1$d יישומים ממסך הבית?</item>
-        <item quantity="one">להסיר יישום אחד (%1$d) ממסך הבית?</item>
-        <item quantity="two">להסיר %1$d יישומים ממסך הבית?</item>
-        <item quantity="many">להסיר %1$d יישומים ממסך הבית?</item>
+        <item quantity="other">האם להסיר %1$d פריטים ממסך הבית?</item>
+        <item quantity="one">האם להסיר פריט אחד (%1$d) ממסך הבית?</item>
+        <item quantity="two">האם להסיר %1$d פריטים ממסך הבית?</item>
+        <item quantity="many">האם להסיר %1$d פריטים ממסך הבית?</item>
     </plurals>
     <plurals name="scroll_tip_format_when_announce_accessibility">
         <item quantity="other">עמוד %1$d. %2$d יישומים.</item>

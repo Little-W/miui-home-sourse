@@ -1,6 +1,5 @@
 .class public Lcom/google/android/filament/IndirectLight$Builder;
 .super Ljava/lang/Object;
-.source "IndirectLight.java"
 
 
 # annotations
@@ -30,17 +29,14 @@
 .method public constructor <init>()V
     .locals 3
 
-    .line 102
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 103
     invoke-static {}, Lcom/google/android/filament/IndirectLight;->access$000()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/google/android/filament/IndirectLight$Builder;->mNativeBuilder:J
 
-    .line 104
     new-instance v0, Lcom/google/android/filament/IndirectLight$Builder$BuilderFinalizer;
 
     iget-wide v1, p0, Lcom/google/android/filament/IndirectLight$Builder;->mNativeBuilder:J
@@ -55,47 +51,43 @@
 
 # virtual methods
 .method public build(Lcom/google/android/filament/Engine;)Lcom/google/android/filament/IndirectLight;
-    .locals 4
+    .locals 2
 
-    .line 322
     iget-wide v0, p0, Lcom/google/android/filament/IndirectLight$Builder;->mNativeBuilder:J
 
     invoke-virtual {p1}, Lcom/google/android/filament/Engine;->getNativeObject()J
 
-    move-result-wide v2
+    move-result-wide p0
 
-    invoke-static {v0, v1, v2, v3}, Lcom/google/android/filament/IndirectLight;->access$700(JJ)J
+    invoke-static {v0, v1, p0, p1}, Lcom/google/android/filament/IndirectLight;->access$700(JJ)J
 
-    move-result-wide v0
+    move-result-wide p0
 
-    const-wide/16 v2, 0x0
+    const-wide/16 v0, 0x0
 
-    cmp-long p1, v0, v2
+    cmp-long v0, p0, v0
 
-    if-eqz p1, :cond_0
+    if-eqz v0, :cond_0
 
-    .line 324
-    new-instance p1, Lcom/google/android/filament/IndirectLight;
+    new-instance v0, Lcom/google/android/filament/IndirectLight;
 
-    invoke-direct {p1, v0, v1}, Lcom/google/android/filament/IndirectLight;-><init>(J)V
+    invoke-direct {v0, p0, p1}, Lcom/google/android/filament/IndirectLight;-><init>(J)V
 
-    return-object p1
+    return-object v0
 
-    .line 323
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-    const-string v0, "Couldn\'t create IndirectLight"
+    const-string p1, "Couldn\'t create IndirectLight"
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 .method public intensity(F)Lcom/google/android/filament/IndirectLight$Builder;
     .locals 2
 
-    .line 291
     iget-wide v0, p0, Lcom/google/android/filament/IndirectLight$Builder;->mNativeBuilder:J
 
     invoke-static {v0, v1, p1}, Lcom/google/android/filament/IndirectLight;->access$500(JF)V
@@ -106,19 +98,18 @@
 .method public irradiance(I[F)Lcom/google/android/filament/IndirectLight$Builder;
     .locals 2
 
-    packed-switch p1, :pswitch_data_0
+    const/4 v0, 0x1
 
-    .line 194
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    const/4 v1, 0x3
 
-    const-string p2, "bands must be 1, 2 or 3"
+    if-eq p1, v0, :cond_4
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    const/4 v0, 0x2
 
-    throw p1
+    if-eq p1, v0, :cond_2
 
-    .line 191
-    :pswitch_0
+    if-ne p1, v1, :cond_1
+
     array-length v0, p2
 
     const/16 v1, 0x1b
@@ -127,45 +118,47 @@
 
     goto :goto_0
 
-    .line 192
     :cond_0
-    new-instance p1, Ljava/lang/ArrayIndexOutOfBoundsException;
+    new-instance p0, Ljava/lang/ArrayIndexOutOfBoundsException;
 
-    const-string p2, "3 bands SH, array must be at least 9 x float3"
+    const-string p1, "3 bands SH, array must be at least 9 x float3"
 
-    invoke-direct {p1, p2}, Ljava/lang/ArrayIndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/ArrayIndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 
-    .line 188
-    :pswitch_1
+    :cond_1
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string p1, "bands must be 1, 2 or 3"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_2
     array-length v0, p2
 
     const/16 v1, 0xc
 
-    if-lt v0, v1, :cond_1
+    if-lt v0, v1, :cond_3
 
     goto :goto_0
 
-    .line 189
-    :cond_1
-    new-instance p1, Ljava/lang/ArrayIndexOutOfBoundsException;
+    :cond_3
+    new-instance p0, Ljava/lang/ArrayIndexOutOfBoundsException;
 
-    const-string p2, "2 bands SH, array must be at least 4 x float3"
+    const-string p1, "2 bands SH, array must be at least 4 x float3"
 
-    invoke-direct {p1, p2}, Ljava/lang/ArrayIndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/ArrayIndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 
-    .line 185
-    :pswitch_2
+    :cond_4
     array-length v0, p2
 
-    const/4 v1, 0x3
+    if-lt v0, v1, :cond_5
 
-    if-lt v0, v1, :cond_2
-
-    .line 196
     :goto_0
     iget-wide v0, p0, Lcom/google/android/filament/IndirectLight$Builder;->mNativeBuilder:J
 
@@ -173,30 +166,19 @@
 
     return-object p0
 
-    .line 186
-    :cond_2
-    new-instance p1, Ljava/lang/ArrayIndexOutOfBoundsException;
+    :cond_5
+    new-instance p0, Ljava/lang/ArrayIndexOutOfBoundsException;
 
-    const-string p2, "1 band SH, array must be at least 1 x float3"
+    const-string p1, "1 band SH, array must be at least 1 x float3"
 
-    invoke-direct {p1, p2}, Ljava/lang/ArrayIndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/ArrayIndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
 
-    throw p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    throw p0
 .end method
 
 .method public irradiance(Lcom/google/android/filament/Texture;)Lcom/google/android/filament/IndirectLight$Builder;
     .locals 4
 
-    .line 274
     iget-wide v0, p0, Lcom/google/android/filament/IndirectLight$Builder;->mNativeBuilder:J
 
     invoke-virtual {p1}, Lcom/google/android/filament/Texture;->getNativeObject()J
@@ -211,19 +193,18 @@
 .method public radiance(I[F)Lcom/google/android/filament/IndirectLight$Builder;
     .locals 2
 
-    packed-switch p1, :pswitch_data_0
+    const/4 v0, 0x1
 
-    .line 250
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    const/4 v1, 0x3
 
-    const-string p2, "bands must be 1, 2 or 3"
+    if-eq p1, v0, :cond_4
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    const/4 v0, 0x2
 
-    throw p1
+    if-eq p1, v0, :cond_2
 
-    .line 247
-    :pswitch_0
+    if-ne p1, v1, :cond_1
+
     array-length v0, p2
 
     const/16 v1, 0x1b
@@ -232,45 +213,47 @@
 
     goto :goto_0
 
-    .line 248
     :cond_0
-    new-instance p1, Ljava/lang/ArrayIndexOutOfBoundsException;
+    new-instance p0, Ljava/lang/ArrayIndexOutOfBoundsException;
 
-    const-string p2, "3 bands SH, array must be at least 9 x float3"
+    const-string p1, "3 bands SH, array must be at least 9 x float3"
 
-    invoke-direct {p1, p2}, Ljava/lang/ArrayIndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/ArrayIndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 
-    .line 244
-    :pswitch_1
+    :cond_1
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string p1, "bands must be 1, 2 or 3"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_2
     array-length v0, p2
 
     const/16 v1, 0xc
 
-    if-lt v0, v1, :cond_1
+    if-lt v0, v1, :cond_3
 
     goto :goto_0
 
-    .line 245
-    :cond_1
-    new-instance p1, Ljava/lang/ArrayIndexOutOfBoundsException;
+    :cond_3
+    new-instance p0, Ljava/lang/ArrayIndexOutOfBoundsException;
 
-    const-string p2, "2 bands SH, array must be at least 4 x float3"
+    const-string p1, "2 bands SH, array must be at least 4 x float3"
 
-    invoke-direct {p1, p2}, Ljava/lang/ArrayIndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/ArrayIndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 
-    .line 241
-    :pswitch_2
+    :cond_4
     array-length v0, p2
 
-    const/4 v1, 0x3
+    if-lt v0, v1, :cond_5
 
-    if-lt v0, v1, :cond_2
-
-    .line 252
     :goto_0
     iget-wide v0, p0, Lcom/google/android/filament/IndirectLight$Builder;->mNativeBuilder:J
 
@@ -278,30 +261,19 @@
 
     return-object p0
 
-    .line 242
-    :cond_2
-    new-instance p1, Ljava/lang/ArrayIndexOutOfBoundsException;
+    :cond_5
+    new-instance p0, Ljava/lang/ArrayIndexOutOfBoundsException;
 
-    const-string p2, "1 band SH, array must be at least 1 x float3"
+    const-string p1, "1 band SH, array must be at least 1 x float3"
 
-    invoke-direct {p1, p2}, Ljava/lang/ArrayIndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/ArrayIndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
 
-    throw p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    throw p0
 .end method
 
 .method public reflections(Lcom/google/android/filament/Texture;)Lcom/google/android/filament/IndirectLight$Builder;
     .locals 4
 
-    .line 118
     iget-wide v0, p0, Lcom/google/android/filament/IndirectLight$Builder;->mNativeBuilder:J
 
     invoke-virtual {p1}, Lcom/google/android/filament/Texture;->getNativeObject()J
@@ -316,7 +288,6 @@
 .method public rotation([F)Lcom/google/android/filament/IndirectLight$Builder;
     .locals 11
 
-    .line 304
     iget-wide v0, p0, Lcom/google/android/filament/IndirectLight$Builder;->mNativeBuilder:J
 
     const/4 v2, 0x0

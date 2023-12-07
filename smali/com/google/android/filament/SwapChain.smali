@@ -1,12 +1,9 @@
 .class public Lcom/google/android/filament/SwapChain;
 .super Ljava/lang/Object;
-.source "SwapChain.java"
 
 
 # static fields
 .field public static final CONFIG_DEFAULT:J = 0x0L
-
-.field public static final CONFIG_ENABLE_XCB:J = 0x4L
 
 .field public static final CONFIG_READABLE:J = 0x2L
 
@@ -23,19 +20,13 @@
 .method constructor <init>(JLjava/lang/Object;)V
     .locals 0
 
-    .line 94
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 95
     iput-wide p1, p0, Lcom/google/android/filament/SwapChain;->mNativeObject:J
 
-    .line 96
     iput-object p3, p0, Lcom/google/android/filament/SwapChain;->mSurface:Ljava/lang/Object;
 
     return-void
-.end method
-
-.method private static native nSetFrameCompletedCallback(JLjava/lang/Object;Ljava/lang/Runnable;)V
 .end method
 
 
@@ -45,7 +36,6 @@
 
     const-wide/16 v0, 0x0
 
-    .line 140
     iput-wide v0, p0, Lcom/google/android/filament/SwapChain;->mNativeObject:J
 
     return-void
@@ -54,46 +44,30 @@
 .method public getNativeObject()J
     .locals 4
 
-    .line 133
     iget-wide v0, p0, Lcom/google/android/filament/SwapChain;->mNativeObject:J
 
     const-wide/16 v2, 0x0
 
-    cmp-long v2, v0, v2
+    cmp-long p0, v0, v2
 
-    if-eqz v2, :cond_0
+    if-eqz p0, :cond_0
 
     return-wide v0
 
-    .line 134
     :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-    const-string v1, "Calling method on destroyed SwapChain"
+    const-string v0, "Calling method on destroyed SwapChain"
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw v0
+    throw p0
 .end method
 
 .method public getNativeWindow()Ljava/lang/Object;
-    .locals 1
+    .locals 0
 
-    .line 104
-    iget-object v0, p0, Lcom/google/android/filament/SwapChain;->mSurface:Ljava/lang/Object;
+    iget-object p0, p0, Lcom/google/android/filament/SwapChain;->mSurface:Ljava/lang/Object;
 
-    return-object v0
-.end method
-
-.method public setFrameCompletedCallback(Ljava/lang/Object;Ljava/lang/Runnable;)V
-    .locals 2
-
-    .line 129
-    invoke-virtual {p0}, Lcom/google/android/filament/SwapChain;->getNativeObject()J
-
-    move-result-wide v0
-
-    invoke-static {v0, v1, p1, p2}, Lcom/google/android/filament/SwapChain;->nSetFrameCompletedCallback(JLjava/lang/Object;Ljava/lang/Runnable;)V
-
-    return-void
+    return-object p0
 .end method

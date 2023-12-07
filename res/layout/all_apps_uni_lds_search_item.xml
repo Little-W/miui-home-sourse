@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rvl_branch_container" android:background="@drawable/branch_item_card_bg" android:paddingTop="@dimen/dp6" android:paddingBottom="@dimen/dp6" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/dp12" android:paddingEnd="@dimen/dp12"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rl_app_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/iv_app_icon" android:layout_width="@dimen/dp32" android:layout_height="@dimen/dp32" android:scaleType="fitCenter" />
+        <TextView android:textSize="@dimen/uni_search_text_size" android:textColor="@color/alpha90black" android:id="@id/tv_app_name_center" android:layout_centerVertical="true" style="@style/branch_title_style" />
+        <TextView android:textSize="@dimen/uni_search_text_size" android:textColor="@color/alpha90black" android:id="@id/tv_app_name" style="@style/branch_title_style" />
+        <TextView android:textSize="@dimen/uni_search_desc_size" android:textColor="@color/alpha50black" android:id="@id/tv_desc" android:layout_marginTop="@dimen/dp3" android:layout_below="@id/tv_app_name" style="@style/branch_title_style" />
+        <TextView android:textSize="@dimen/uni_search_desc_size" android:gravity="center" android:id="@id/tv_installed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/app_install_state" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/dp6" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/gv_branch_shortcuts" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp3" android:layout_below="@id/rl_app_container" android:paddingStart="@dimen/dp36" android:paddingEnd="@dimen/dp14" />
+</RelativeLayout>

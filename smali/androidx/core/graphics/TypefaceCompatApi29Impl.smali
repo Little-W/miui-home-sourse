@@ -1,13 +1,11 @@
 .class public Landroidx/core/graphics/TypefaceCompatApi29Impl;
 .super Landroidx/core/graphics/TypefaceCompatBaseImpl;
-.source "TypefaceCompatApi29Impl.java"
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
-    .line 44
     invoke-direct {p0}, Landroidx/core/graphics/TypefaceCompatBaseImpl;-><init>()V
 
     return-void
@@ -16,9 +14,11 @@
 
 # virtual methods
 .method public createFromFontFamilyFilesResourceEntry(Landroid/content/Context;Landroidx/core/content/res/FontResourcesParserCompat$FontFamilyFilesResourceEntry;Landroid/content/res/Resources;I)Landroid/graphics/Typeface;
-    .locals 8
+    .locals 7
 
-    .line 105
+    const/4 p0, 0x0
+
+    :try_start_0
     invoke-virtual {p2}, Landroidx/core/content/res/FontResourcesParserCompat$FontFamilyFilesResourceEntry;->getEntries()[Landroidx/core/content/res/FontResourcesParserCompat$FontFileResourceEntry;
 
     move-result-object p1
@@ -27,108 +27,101 @@
 
     const/4 v0, 0x0
 
-    const/4 v1, 0x0
+    move-object v2, p0
 
-    move-object v3, v0
-
-    move v2, v1
+    move v1, v0
 
     :goto_0
-    const/4 v4, 0x1
+    const/4 v3, 0x1
 
-    if-ge v2, p2, :cond_2
+    if-ge v1, p2, :cond_2
 
-    aget-object v5, p1, v2
+    aget-object v4, p1, v1
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 107
-    :try_start_0
-    new-instance v6, Landroid/graphics/fonts/Font$Builder;
+    :try_start_1
+    new-instance v5, Landroid/graphics/fonts/Font$Builder;
 
-    invoke-virtual {v5}, Landroidx/core/content/res/FontResourcesParserCompat$FontFileResourceEntry;->getResourceId()I
+    invoke-virtual {v4}, Landroidx/core/content/res/FontResourcesParserCompat$FontFileResourceEntry;->getResourceId()I
 
-    move-result v7
+    move-result v6
 
-    invoke-direct {v6, p3, v7}, Landroid/graphics/fonts/Font$Builder;-><init>(Landroid/content/res/Resources;I)V
+    invoke-direct {v5, p3, v6}, Landroid/graphics/fonts/Font$Builder;-><init>(Landroid/content/res/Resources;I)V
 
-    .line 108
-    invoke-virtual {v5}, Landroidx/core/content/res/FontResourcesParserCompat$FontFileResourceEntry;->getWeight()I
+    invoke-virtual {v4}, Landroidx/core/content/res/FontResourcesParserCompat$FontFileResourceEntry;->getWeight()I
 
-    move-result v7
+    move-result v6
 
-    invoke-virtual {v6, v7}, Landroid/graphics/fonts/Font$Builder;->setWeight(I)Landroid/graphics/fonts/Font$Builder;
+    invoke-virtual {v5, v6}, Landroid/graphics/fonts/Font$Builder;->setWeight(I)Landroid/graphics/fonts/Font$Builder;
 
-    move-result-object v6
+    move-result-object v5
 
-    .line 109
-    invoke-virtual {v5}, Landroidx/core/content/res/FontResourcesParserCompat$FontFileResourceEntry;->isItalic()Z
+    invoke-virtual {v4}, Landroidx/core/content/res/FontResourcesParserCompat$FontFileResourceEntry;->isItalic()Z
 
-    move-result v7
+    move-result v6
 
-    if-eqz v7, :cond_0
+    if-eqz v6, :cond_0
 
     goto :goto_1
 
     :cond_0
-    move v4, v1
+    move v3, v0
 
     :goto_1
-    invoke-virtual {v6, v4}, Landroid/graphics/fonts/Font$Builder;->setSlant(I)Landroid/graphics/fonts/Font$Builder;
+    invoke-virtual {v5, v3}, Landroid/graphics/fonts/Font$Builder;->setSlant(I)Landroid/graphics/fonts/Font$Builder;
+
+    move-result-object v3
+
+    invoke-virtual {v4}, Landroidx/core/content/res/FontResourcesParserCompat$FontFileResourceEntry;->getTtcIndex()I
+
+    move-result v5
+
+    invoke-virtual {v3, v5}, Landroid/graphics/fonts/Font$Builder;->setTtcIndex(I)Landroid/graphics/fonts/Font$Builder;
+
+    move-result-object v3
+
+    invoke-virtual {v4}, Landroidx/core/content/res/FontResourcesParserCompat$FontFileResourceEntry;->getVariationSettings()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 111
-    invoke-virtual {v5}, Landroidx/core/content/res/FontResourcesParserCompat$FontFileResourceEntry;->getTtcIndex()I
+    invoke-virtual {v3, v4}, Landroid/graphics/fonts/Font$Builder;->setFontVariationSettings(Ljava/lang/String;)Landroid/graphics/fonts/Font$Builder;
 
-    move-result v6
+    move-result-object v3
 
-    invoke-virtual {v4, v6}, Landroid/graphics/fonts/Font$Builder;->setTtcIndex(I)Landroid/graphics/fonts/Font$Builder;
+    invoke-virtual {v3}, Landroid/graphics/fonts/Font$Builder;->build()Landroid/graphics/fonts/Font;
 
-    move-result-object v4
+    move-result-object v3
 
-    .line 112
-    invoke-virtual {v5}, Landroidx/core/content/res/FontResourcesParserCompat$FontFileResourceEntry;->getVariationSettings()Ljava/lang/String;
+    if-nez v2, :cond_1
 
-    move-result-object v5
+    new-instance v4, Landroid/graphics/fonts/FontFamily$Builder;
 
-    invoke-virtual {v4, v5}, Landroid/graphics/fonts/Font$Builder;->setFontVariationSettings(Ljava/lang/String;)Landroid/graphics/fonts/Font$Builder;
+    invoke-direct {v4, v3}, Landroid/graphics/fonts/FontFamily$Builder;-><init>(Landroid/graphics/fonts/Font;)V
 
-    move-result-object v4
-
-    .line 113
-    invoke-virtual {v4}, Landroid/graphics/fonts/Font$Builder;->build()Landroid/graphics/fonts/Font;
-
-    move-result-object v4
-
-    if-nez v3, :cond_1
-
-    .line 115
-    new-instance v5, Landroid/graphics/fonts/FontFamily$Builder;
-
-    invoke-direct {v5, v4}, Landroid/graphics/fonts/FontFamily$Builder;-><init>(Landroid/graphics/fonts/Font;)V
-
-    move-object v3, v5
+    move-object v2, v4
 
     goto :goto_2
 
-    .line 117
     :cond_1
-    invoke-virtual {v3, v4}, Landroid/graphics/fonts/FontFamily$Builder;->addFont(Landroid/graphics/fonts/Font;)Landroid/graphics/fonts/FontFamily$Builder;
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {v2, v3}, Landroid/graphics/fonts/FontFamily$Builder;->addFont(Landroid/graphics/fonts/Font;)Landroid/graphics/fonts/FontFamily$Builder;
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
     :catch_0
     :goto_2
-    add-int/lit8 v2, v2, 0x1
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
     :cond_2
-    if-nez v3, :cond_3
+    if-nez v2, :cond_3
 
-    return-object v0
+    return-object p0
 
-    .line 126
     :cond_3
+    :try_start_2
     new-instance p1, Landroid/graphics/fonts/FontStyle;
 
     and-int/lit8 p2, p4, 0x1
@@ -147,195 +140,185 @@
 
     if-eqz p3, :cond_5
 
-    move v1, v4
+    move v0, v3
 
-    .line 130
     :cond_5
-    invoke-direct {p1, p2, v1}, Landroid/graphics/fonts/FontStyle;-><init>(II)V
+    invoke-direct {p1, p2, v0}, Landroid/graphics/fonts/FontStyle;-><init>(II)V
 
-    .line 132
     new-instance p2, Landroid/graphics/Typeface$CustomFallbackBuilder;
 
-    invoke-virtual {v3}, Landroid/graphics/fonts/FontFamily$Builder;->build()Landroid/graphics/fonts/FontFamily;
+    invoke-virtual {v2}, Landroid/graphics/fonts/FontFamily$Builder;->build()Landroid/graphics/fonts/FontFamily;
 
     move-result-object p3
 
     invoke-direct {p2, p3}, Landroid/graphics/Typeface$CustomFallbackBuilder;-><init>(Landroid/graphics/fonts/FontFamily;)V
 
-    .line 133
     invoke-virtual {p2, p1}, Landroid/graphics/Typeface$CustomFallbackBuilder;->setStyle(Landroid/graphics/fonts/FontStyle;)Landroid/graphics/Typeface$CustomFallbackBuilder;
 
     move-result-object p1
 
-    .line 134
     invoke-virtual {p1}, Landroid/graphics/Typeface$CustomFallbackBuilder;->build()Landroid/graphics/Typeface;
 
-    move-result-object p1
+    move-result-object p0
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
-    return-object p1
+    :catch_1
+    return-object p0
 .end method
 
 .method public createFromFontInfo(Landroid/content/Context;Landroid/os/CancellationSignal;[Landroidx/core/provider/FontsContractCompat$FontInfo;I)Landroid/graphics/Typeface;
-    .locals 10
+    .locals 9
 
-    .line 63
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    move-result-object p1
+    move-result-object p0
 
-    .line 64
+    const/4 p1, 0x0
+
+    :try_start_0
     array-length v0, p3
 
     const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    move-object v3, p1
 
-    move-object v4, v1
-
-    move v3, v2
+    move v2, v1
 
     :goto_0
-    const/4 v5, 0x1
+    const/4 v4, 0x1
 
-    if-ge v3, v0, :cond_5
+    if-ge v2, v0, :cond_5
 
-    aget-object v6, p3, v3
-
-    .line 65
-    :try_start_0
-    invoke-virtual {v6}, Landroidx/core/provider/FontsContractCompat$FontInfo;->getUri()Landroid/net/Uri;
-
-    move-result-object v7
-
-    const-string v8, "r"
-
-    invoke-virtual {p1, v7, v8, p2}, Landroid/content/ContentResolver;->openFileDescriptor(Landroid/net/Uri;Ljava/lang/String;Landroid/os/CancellationSignal;)Landroid/os/ParcelFileDescriptor;
-
-    move-result-object v7
-
-    if-nez v7, :cond_0
-
-    if-eqz v7, :cond_4
-
-    .line 81
-    :goto_1
-    invoke-virtual {v7}, Landroid/os/ParcelFileDescriptor;->close()V
+    aget-object v5, p3, v2
     :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
+
+    :try_start_1
+    invoke-virtual {v5}, Landroidx/core/provider/FontsContractCompat$FontInfo;->getUri()Landroid/net/Uri;
+
+    move-result-object v6
+
+    const-string v7, "r"
+
+    invoke-virtual {p0, v6, v7, p2}, Landroid/content/ContentResolver;->openFileDescriptor(Landroid/net/Uri;Ljava/lang/String;Landroid/os/CancellationSignal;)Landroid/os/ParcelFileDescriptor;
+
+    move-result-object v6
+
+    if-nez v6, :cond_0
+
+    if-eqz v6, :cond_4
+
+    :goto_1
+    invoke-virtual {v6}, Landroid/os/ParcelFileDescriptor;->close()V
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
     goto :goto_5
 
-    .line 70
     :cond_0
-    :try_start_1
-    new-instance v8, Landroid/graphics/fonts/Font$Builder;
+    :try_start_2
+    new-instance v7, Landroid/graphics/fonts/Font$Builder;
 
-    invoke-direct {v8, v7}, Landroid/graphics/fonts/Font$Builder;-><init>(Landroid/os/ParcelFileDescriptor;)V
+    invoke-direct {v7, v6}, Landroid/graphics/fonts/Font$Builder;-><init>(Landroid/os/ParcelFileDescriptor;)V
 
-    .line 71
-    invoke-virtual {v6}, Landroidx/core/provider/FontsContractCompat$FontInfo;->getWeight()I
+    invoke-virtual {v5}, Landroidx/core/provider/FontsContractCompat$FontInfo;->getWeight()I
 
-    move-result v9
+    move-result v8
 
-    invoke-virtual {v8, v9}, Landroid/graphics/fonts/Font$Builder;->setWeight(I)Landroid/graphics/fonts/Font$Builder;
+    invoke-virtual {v7, v8}, Landroid/graphics/fonts/Font$Builder;->setWeight(I)Landroid/graphics/fonts/Font$Builder;
 
-    move-result-object v8
+    move-result-object v7
 
-    .line 72
-    invoke-virtual {v6}, Landroidx/core/provider/FontsContractCompat$FontInfo;->isItalic()Z
+    invoke-virtual {v5}, Landroidx/core/provider/FontsContractCompat$FontInfo;->isItalic()Z
 
-    move-result v9
+    move-result v8
 
-    if-eqz v9, :cond_1
+    if-eqz v8, :cond_1
 
     goto :goto_2
 
     :cond_1
-    move v5, v2
+    move v4, v1
 
     :goto_2
-    invoke-virtual {v8, v5}, Landroid/graphics/fonts/Font$Builder;->setSlant(I)Landroid/graphics/fonts/Font$Builder;
+    invoke-virtual {v7, v4}, Landroid/graphics/fonts/Font$Builder;->setSlant(I)Landroid/graphics/fonts/Font$Builder;
 
-    move-result-object v5
+    move-result-object v4
 
-    .line 74
-    invoke-virtual {v6}, Landroidx/core/provider/FontsContractCompat$FontInfo;->getTtcIndex()I
+    invoke-virtual {v5}, Landroidx/core/provider/FontsContractCompat$FontInfo;->getTtcIndex()I
 
-    move-result v6
+    move-result v5
 
-    invoke-virtual {v5, v6}, Landroid/graphics/fonts/Font$Builder;->setTtcIndex(I)Landroid/graphics/fonts/Font$Builder;
+    invoke-virtual {v4, v5}, Landroid/graphics/fonts/Font$Builder;->setTtcIndex(I)Landroid/graphics/fonts/Font$Builder;
 
-    move-result-object v5
+    move-result-object v4
 
-    .line 75
-    invoke-virtual {v5}, Landroid/graphics/fonts/Font$Builder;->build()Landroid/graphics/fonts/Font;
+    invoke-virtual {v4}, Landroid/graphics/fonts/Font$Builder;->build()Landroid/graphics/fonts/Font;
 
-    move-result-object v5
+    move-result-object v4
 
-    if-nez v4, :cond_2
+    if-nez v3, :cond_2
 
-    .line 77
-    new-instance v6, Landroid/graphics/fonts/FontFamily$Builder;
+    new-instance v5, Landroid/graphics/fonts/FontFamily$Builder;
 
-    invoke-direct {v6, v5}, Landroid/graphics/fonts/FontFamily$Builder;-><init>(Landroid/graphics/fonts/Font;)V
+    invoke-direct {v5, v4}, Landroid/graphics/fonts/FontFamily$Builder;-><init>(Landroid/graphics/fonts/Font;)V
 
-    move-object v4, v6
+    move-object v3, v5
 
     goto :goto_3
 
-    .line 79
     :cond_2
-    invoke-virtual {v4, v5}, Landroid/graphics/fonts/FontFamily$Builder;->addFont(Landroid/graphics/fonts/Font;)Landroid/graphics/fonts/FontFamily$Builder;
-    :try_end_1
-    .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_2
+    invoke-virtual {v3, v4}, Landroid/graphics/fonts/FontFamily$Builder;->addFont(Landroid/graphics/fonts/Font;)Landroid/graphics/fonts/FontFamily$Builder;
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     :goto_3
-    if-eqz v7, :cond_4
+    if-eqz v6, :cond_4
 
     goto :goto_1
 
-    :catch_0
-    move-exception v5
+    :catchall_0
+    move-exception v4
 
-    if-eqz v7, :cond_3
+    if-eqz v6, :cond_3
 
-    .line 65
-    :try_start_2
-    invoke-virtual {v7}, Landroid/os/ParcelFileDescriptor;->close()V
-    :try_end_2
-    .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_1
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
+    :try_start_3
+    invoke-virtual {v6}, Landroid/os/ParcelFileDescriptor;->close()V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
     goto :goto_4
 
-    :catch_1
-    move-exception v6
+    :catchall_1
+    move-exception v5
 
-    :try_start_3
-    invoke-virtual {v5, v6}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+    :try_start_4
+    invoke-virtual {v4, v5}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
 
     :cond_3
     :goto_4
-    throw v5
-    :try_end_3
-    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_2
+    throw v4
+    :try_end_4
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_1
 
-    :catch_2
+    :catch_0
     :cond_4
     :goto_5
-    add-int/lit8 v3, v3, 0x1
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
     :cond_5
-    if-nez v4, :cond_6
+    if-nez v3, :cond_6
 
-    return-object v1
+    return-object p1
 
-    .line 88
     :cond_6
-    new-instance p1, Landroid/graphics/fonts/FontStyle;
+    :try_start_5
+    new-instance p0, Landroid/graphics/fonts/FontStyle;
 
     and-int/lit8 p2, p4, 0x1
 
@@ -353,130 +336,101 @@
 
     if-eqz p3, :cond_8
 
-    move v2, v5
+    move v1, v4
 
-    .line 92
     :cond_8
-    invoke-direct {p1, p2, v2}, Landroid/graphics/fonts/FontStyle;-><init>(II)V
+    invoke-direct {p0, p2, v1}, Landroid/graphics/fonts/FontStyle;-><init>(II)V
 
-    .line 94
     new-instance p2, Landroid/graphics/Typeface$CustomFallbackBuilder;
 
-    invoke-virtual {v4}, Landroid/graphics/fonts/FontFamily$Builder;->build()Landroid/graphics/fonts/FontFamily;
+    invoke-virtual {v3}, Landroid/graphics/fonts/FontFamily$Builder;->build()Landroid/graphics/fonts/FontFamily;
 
     move-result-object p3
 
     invoke-direct {p2, p3}, Landroid/graphics/Typeface$CustomFallbackBuilder;-><init>(Landroid/graphics/fonts/FontFamily;)V
 
-    .line 95
-    invoke-virtual {p2, p1}, Landroid/graphics/Typeface$CustomFallbackBuilder;->setStyle(Landroid/graphics/fonts/FontStyle;)Landroid/graphics/Typeface$CustomFallbackBuilder;
+    invoke-virtual {p2, p0}, Landroid/graphics/Typeface$CustomFallbackBuilder;->setStyle(Landroid/graphics/fonts/FontStyle;)Landroid/graphics/Typeface$CustomFallbackBuilder;
 
-    move-result-object p1
+    move-result-object p0
 
-    .line 96
-    invoke-virtual {p1}, Landroid/graphics/Typeface$CustomFallbackBuilder;->build()Landroid/graphics/Typeface;
+    invoke-virtual {p0}, Landroid/graphics/Typeface$CustomFallbackBuilder;->build()Landroid/graphics/Typeface;
 
-    move-result-object p1
+    move-result-object p0
+    :try_end_5
+    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_1
 
+    return-object p0
+
+    :catch_1
     return-object p1
 .end method
 
 .method protected createFromInputStream(Landroid/content/Context;Ljava/io/InputStream;)Landroid/graphics/Typeface;
     .locals 0
 
-    .line 54
-    new-instance p1, Ljava/lang/RuntimeException;
+    new-instance p0, Ljava/lang/RuntimeException;
 
-    const-string p2, "Do not use this function in API 29 or later."
+    const-string p1, "Do not use this function in API 29 or later."
 
-    invoke-direct {p1, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 .method public createFromResourcesFontFile(Landroid/content/Context;Landroid/content/res/Resources;ILjava/lang/String;I)Landroid/graphics/Typeface;
     .locals 0
 
-    .line 146
     :try_start_0
+    new-instance p0, Landroid/graphics/fonts/Font$Builder;
+
+    invoke-direct {p0, p2, p3}, Landroid/graphics/fonts/Font$Builder;-><init>(Landroid/content/res/Resources;I)V
+
+    invoke-virtual {p0}, Landroid/graphics/fonts/Font$Builder;->build()Landroid/graphics/fonts/Font;
+
+    move-result-object p0
+
     new-instance p1, Landroid/graphics/fonts/FontFamily$Builder;
 
-    new-instance p4, Landroid/graphics/fonts/Font$Builder;
-
-    invoke-direct {p4, p2, p3}, Landroid/graphics/fonts/Font$Builder;-><init>(Landroid/content/res/Resources;I)V
-
-    invoke-virtual {p4}, Landroid/graphics/fonts/Font$Builder;->build()Landroid/graphics/fonts/Font;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Landroid/graphics/fonts/FontFamily$Builder;-><init>(Landroid/graphics/fonts/Font;)V
+    invoke-direct {p1, p0}, Landroid/graphics/fonts/FontFamily$Builder;-><init>(Landroid/graphics/fonts/Font;)V
 
     invoke-virtual {p1}, Landroid/graphics/fonts/FontFamily$Builder;->build()Landroid/graphics/fonts/FontFamily;
 
     move-result-object p1
+
+    new-instance p2, Landroid/graphics/Typeface$CustomFallbackBuilder;
+
+    invoke-direct {p2, p1}, Landroid/graphics/Typeface$CustomFallbackBuilder;-><init>(Landroid/graphics/fonts/FontFamily;)V
+
+    invoke-virtual {p0}, Landroid/graphics/fonts/Font;->getStyle()Landroid/graphics/fonts/FontStyle;
+
+    move-result-object p0
+
+    invoke-virtual {p2, p0}, Landroid/graphics/Typeface$CustomFallbackBuilder;->setStyle(Landroid/graphics/fonts/FontStyle;)Landroid/graphics/Typeface$CustomFallbackBuilder;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/graphics/Typeface$CustomFallbackBuilder;->build()Landroid/graphics/Typeface;
+
+    move-result-object p0
     :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 150
-    new-instance p2, Landroid/graphics/fonts/FontStyle;
-
-    and-int/lit8 p3, p5, 0x1
-
-    if-eqz p3, :cond_0
-
-    const/16 p3, 0x2bc
-
-    goto :goto_0
-
-    :cond_0
-    const/16 p3, 0x190
-
-    :goto_0
-    and-int/lit8 p4, p5, 0x2
-
-    if-eqz p4, :cond_1
-
-    const/4 p4, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    const/4 p4, 0x0
-
-    .line 154
-    :goto_1
-    invoke-direct {p2, p3, p4}, Landroid/graphics/fonts/FontStyle;-><init>(II)V
-
-    .line 156
-    new-instance p3, Landroid/graphics/Typeface$CustomFallbackBuilder;
-
-    invoke-direct {p3, p1}, Landroid/graphics/Typeface$CustomFallbackBuilder;-><init>(Landroid/graphics/fonts/FontFamily;)V
-
-    invoke-virtual {p3, p2}, Landroid/graphics/Typeface$CustomFallbackBuilder;->setStyle(Landroid/graphics/fonts/FontStyle;)Landroid/graphics/Typeface$CustomFallbackBuilder;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/graphics/Typeface$CustomFallbackBuilder;->build()Landroid/graphics/Typeface;
-
-    move-result-object p1
-
-    return-object p1
+    return-object p0
 
     :catch_0
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method protected findBestInfo([Landroidx/core/provider/FontsContractCompat$FontInfo;I)Landroidx/core/provider/FontsContractCompat$FontInfo;
     .locals 0
 
-    .line 48
-    new-instance p1, Ljava/lang/RuntimeException;
+    new-instance p0, Ljava/lang/RuntimeException;
 
-    const-string p2, "Do not use this function in API 29 or later."
+    const-string p1, "Do not use this function in API 29 or later."
 
-    invoke-direct {p1, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method

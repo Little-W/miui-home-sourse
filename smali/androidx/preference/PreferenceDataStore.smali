@@ -1,6 +1,5 @@
 .class public abstract Landroidx/preference/PreferenceDataStore;
 .super Ljava/lang/Object;
-.source "PreferenceDataStore.java"
 
 
 # virtual methods
@@ -43,40 +42,37 @@
 .method public putBoolean(Ljava/lang/String;Z)V
     .locals 0
 
-    .line 121
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    const-string p2, "Not implemented on this data store"
+    const-string p1, "Not implemented on this data store"
 
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 .method public putInt(Ljava/lang/String;I)V
     .locals 0
 
-    .line 82
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    const-string p2, "Not implemented on this data store"
+    const-string p1, "Not implemented on this data store"
 
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 .method public putString(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 56
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    const-string p2, "Not implemented on this data store"
+    const-string p1, "Not implemented on this data store"
 
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 .method public putStringSet(Ljava/lang/String;Ljava/util/Set;)V
@@ -91,12 +87,11 @@
         }
     .end annotation
 
-    .line 69
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    const-string p2, "Not implemented on this data store"
+    const-string p1, "Not implemented on this data store"
 
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method

@@ -44,14 +44,6 @@
         <item quantity="other">%1$s -tik %2$s irakurri gabe</item>
         <item quantity="one">%1$s -tik %2$s irakurri gabe</item>
     </plurals>
-    <plurals name="delete_wallpapers_message">
-        <item quantity="other">%1$d horma-paper ezabatu?</item>
-        <item quantity="one">%1$d horma-paper ezabatu?</item>
-    </plurals>
-    <plurals name="editing_mode_title">
-        <item quantity="other">%1$d elementu aukeratuak</item>
-        <item quantity="one">Elementu %1$d aukeratuta</item>
-    </plurals>
     <plurals name="half_hour_ago">
         <item quantity="other">Duela ordu erdi</item>
         <item quantity="one">Duela ordu erdi</item>
@@ -85,8 +77,8 @@
         <item quantity="one">Duela minutu 1</item>
     </plurals>
     <plurals name="remove_dialog_title_multi_format">
-        <item quantity="other">%1$d aplikazio Hasierako pantailatik ezabatu?</item>
-        <item quantity="one">%1$d aplikazio Hasierako pantailatik ezabatu?</item>
+        <item quantity="other">Elementu %1$d Hasierako pantailatik kendu?</item>
+        <item quantity="one">%1$d Hasierako pantailatik kendu?</item>
     </plurals>
     <plurals name="scroll_tip_format_when_announce_accessibility">
         <item quantity="other">Orrialde %1$d, aplikazio %2$d.</item>

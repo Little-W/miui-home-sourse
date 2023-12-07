@@ -1,6 +1,5 @@
 .class Lcom/market/pm/api/MarketInstallerService$1;
 .super Ljava/lang/Object;
-.source "MarketInstallerService.java"
 
 # interfaces
 .implements Lcom/market/ServiceProxy$ProxyTask;
@@ -31,7 +30,6 @@
 .method constructor <init>(Lcom/market/pm/api/MarketInstallerService;Landroid/net/Uri;Landroid/os/ResultReceiver;Landroid/os/Bundle;)V
     .locals 0
 
-    .line 53
     iput-object p1, p0, Lcom/market/pm/api/MarketInstallerService$1;->this$0:Lcom/market/pm/api/MarketInstallerService;
 
     iput-object p2, p0, Lcom/market/pm/api/MarketInstallerService$1;->val$uri:Landroid/net/Uri;
@@ -55,7 +53,6 @@
         }
     .end annotation
 
-    .line 56
     iget-object v0, p0, Lcom/market/pm/api/MarketInstallerService$1;->this$0:Lcom/market/pm/api/MarketInstallerService;
 
     invoke-static {v0}, Lcom/market/pm/api/MarketInstallerService;->access$000(Lcom/market/pm/api/MarketInstallerService;)Lcom/market/pm/IMarketInstallerService;
@@ -66,7 +63,6 @@
 
     return-void
 
-    .line 60
     :cond_0
     :try_start_0
     iget-object v0, p0, Lcom/market/pm/api/MarketInstallerService$1;->this$0:Lcom/market/pm/api/MarketInstallerService;
@@ -90,7 +86,6 @@
     :catch_0
     move-exception v0
 
-    .line 62
     iget-object v1, p0, Lcom/market/pm/api/MarketInstallerService$1;->this$0:Lcom/market/pm/api/MarketInstallerService;
 
     invoke-static {v1}, Lcom/market/pm/api/MarketInstallerService;->access$100(Lcom/market/pm/api/MarketInstallerService;)Ljava/lang/String;
@@ -101,21 +96,18 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 63
-    iget-object v1, p0, Lcom/market/pm/api/MarketInstallerService$1;->val$receiver:Landroid/os/ResultReceiver;
+    iget-object p0, p0, Lcom/market/pm/api/MarketInstallerService$1;->val$receiver:Landroid/os/ResultReceiver;
 
-    instance-of v2, v1, Lcom/market/pm/api/MarketInstallObserver;
+    instance-of v1, p0, Lcom/market/pm/api/MarketInstallObserver;
 
-    if-eqz v2, :cond_1
+    if-eqz v1, :cond_1
 
-    .line 64
-    new-instance v2, Lcom/market/pm/api/MarketInstallObserver$Proxy;
+    new-instance v1, Lcom/market/pm/api/MarketInstallObserver$Proxy;
 
-    invoke-direct {v2, v1}, Lcom/market/pm/api/MarketInstallObserver$Proxy;-><init>(Landroid/os/ResultReceiver;)V
+    invoke-direct {v1, p0}, Lcom/market/pm/api/MarketInstallObserver$Proxy;-><init>(Landroid/os/ResultReceiver;)V
 
-    invoke-virtual {v2}, Lcom/market/pm/api/MarketInstallObserver$Proxy;->onServiceDead()V
+    invoke-virtual {v1}, Lcom/market/pm/api/MarketInstallObserver$Proxy;->onServiceDead()V
 
-    .line 66
     :cond_1
     throw v0
 .end method

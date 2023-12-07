@@ -1,6 +1,5 @@
 .class synthetic Lcom/market/sdk/XiaomiUpdateAgent$1;
 .super Ljava/lang/Object;
-.source "XiaomiUpdateAgent.java"
 
 
 # annotations

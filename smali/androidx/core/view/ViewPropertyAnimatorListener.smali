@@ -1,6 +1,5 @@
 .class public interface abstract Landroidx/core/view/ViewPropertyAnimatorListener;
 .super Ljava/lang/Object;
-.source "ViewPropertyAnimatorListener.java"
 
 
 # virtual methods

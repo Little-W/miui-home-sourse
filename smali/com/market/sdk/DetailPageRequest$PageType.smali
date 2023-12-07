@@ -1,6 +1,5 @@
 .class public final enum Lcom/market/sdk/DetailPageRequest$PageType;
 .super Ljava/lang/Enum;
-.source "DetailPageRequest.java"
 
 
 # annotations
@@ -40,61 +39,57 @@
 .method static constructor <clinit>()V
     .locals 6
 
-    .line 25
     new-instance v0, Lcom/market/sdk/DetailPageRequest$PageType;
 
-    const-string v1, "DETAILS"
+    const/4 v1, 0x0
 
-    const-string v2, "mimarket://details"
+    const-string v2, "DETAILS"
 
-    const/4 v3, 0x0
+    const-string v3, "mimarket://details"
 
-    invoke-direct {v0, v1, v3, v2}, Lcom/market/sdk/DetailPageRequest$PageType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {v0, v2, v1, v3}, Lcom/market/sdk/DetailPageRequest$PageType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/market/sdk/DetailPageRequest$PageType;->DETAILS:Lcom/market/sdk/DetailPageRequest$PageType;
 
-    .line 26
     new-instance v0, Lcom/market/sdk/DetailPageRequest$PageType;
 
-    const-string v1, "CARD"
+    const/4 v2, 0x1
 
-    const-string v2, "mimarket://details/detailcard"
+    const-string v3, "CARD"
 
-    const/4 v4, 0x1
+    const-string v4, "mimarket://details/detailcard"
 
-    invoke-direct {v0, v1, v4, v2}, Lcom/market/sdk/DetailPageRequest$PageType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {v0, v3, v2, v4}, Lcom/market/sdk/DetailPageRequest$PageType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/market/sdk/DetailPageRequest$PageType;->CARD:Lcom/market/sdk/DetailPageRequest$PageType;
 
-    .line 27
     new-instance v0, Lcom/market/sdk/DetailPageRequest$PageType;
 
-    const-string v1, "CARD_MINI"
+    const/4 v3, 0x2
 
-    const-string v2, "mimarket://details/detailmini"
+    const-string v4, "CARD_MINI"
 
-    const/4 v5, 0x2
+    const-string v5, "mimarket://details/detailmini"
 
-    invoke-direct {v0, v1, v5, v2}, Lcom/market/sdk/DetailPageRequest$PageType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {v0, v4, v3, v5}, Lcom/market/sdk/DetailPageRequest$PageType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/market/sdk/DetailPageRequest$PageType;->CARD_MINI:Lcom/market/sdk/DetailPageRequest$PageType;
 
     const/4 v0, 0x3
 
-    .line 24
     new-array v0, v0, [Lcom/market/sdk/DetailPageRequest$PageType;
 
-    sget-object v1, Lcom/market/sdk/DetailPageRequest$PageType;->DETAILS:Lcom/market/sdk/DetailPageRequest$PageType;
+    sget-object v4, Lcom/market/sdk/DetailPageRequest$PageType;->DETAILS:Lcom/market/sdk/DetailPageRequest$PageType;
 
-    aput-object v1, v0, v3
+    aput-object v4, v0, v1
 
     sget-object v1, Lcom/market/sdk/DetailPageRequest$PageType;->CARD:Lcom/market/sdk/DetailPageRequest$PageType;
 
-    aput-object v1, v0, v4
+    aput-object v1, v0, v2
 
     sget-object v1, Lcom/market/sdk/DetailPageRequest$PageType;->CARD_MINI:Lcom/market/sdk/DetailPageRequest$PageType;
 
-    aput-object v1, v0, v5
+    aput-object v1, v0, v3
 
     sput-object v0, Lcom/market/sdk/DetailPageRequest$PageType;->$VALUES:[Lcom/market/sdk/DetailPageRequest$PageType;
 
@@ -111,10 +106,8 @@
         }
     .end annotation
 
-    .line 31
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 32
     iput-object p3, p0, Lcom/market/sdk/DetailPageRequest$PageType;->data:Ljava/lang/String;
 
     return-void
@@ -123,7 +116,6 @@
 .method static synthetic access$000(Lcom/market/sdk/DetailPageRequest$PageType;)Ljava/lang/String;
     .locals 0
 
-    .line 24
     iget-object p0, p0, Lcom/market/sdk/DetailPageRequest$PageType;->data:Ljava/lang/String;
 
     return-object p0
@@ -132,7 +124,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/market/sdk/DetailPageRequest$PageType;
     .locals 1
 
-    .line 24
     const-class v0, Lcom/market/sdk/DetailPageRequest$PageType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -147,7 +138,6 @@
 .method public static values()[Lcom/market/sdk/DetailPageRequest$PageType;
     .locals 1
 
-    .line 24
     sget-object v0, Lcom/market/sdk/DetailPageRequest$PageType;->$VALUES:[Lcom/market/sdk/DetailPageRequest$PageType;
 
     invoke-virtual {v0}, [Lcom/market/sdk/DetailPageRequest$PageType;->clone()Ljava/lang/Object;

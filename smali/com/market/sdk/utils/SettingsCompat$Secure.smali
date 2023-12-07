@@ -1,6 +1,5 @@
 .class public Lcom/market/sdk/utils/SettingsCompat$Secure;
 .super Ljava/lang/Object;
-.source "SettingsCompat.java"
 
 
 # annotations
@@ -18,7 +17,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 93
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,7 +27,6 @@
 
     const/4 v0, 0x0
 
-    .line 126
     invoke-static {p0, p1, v0}, Lcom/market/sdk/utils/SettingsCompat$Secure;->getInt(Landroid/content/Context;Ljava/lang/String;I)I
 
     move-result p0
@@ -45,7 +42,6 @@
 .method public static getInt(Landroid/content/Context;Ljava/lang/String;I)I
     .locals 0
 
-    .line 96
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -62,12 +58,11 @@
     :catch_0
     move-exception p0
 
-    const-string p1, "SettingsCompat"
-
-    .line 98
     invoke-virtual {p0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
     move-result-object p0
+
+    const-string p1, "SettingsCompat"
 
     invoke-static {p1, p0}, Lcom/market/sdk/utils/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -77,7 +72,6 @@
 .method public static getIntForUser(Landroid/content/Context;Ljava/lang/String;II)I
     .locals 11
 
-    .line 106
     :try_start_0
     const-class v0, Landroid/provider/Settings$Secure;
 
@@ -115,14 +109,12 @@
 
     aput-object v6, v5, v10
 
-    .line 107
     invoke-static {v3, v5}, Lcom/market/sdk/utils/ReflectUtils;->getMethodSignature(Ljava/lang/Class;[Ljava/lang/Class;)Ljava/lang/String;
 
     move-result-object v3
 
     new-array v4, v4, [Ljava/lang/Object;
 
-    .line 108
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -143,7 +135,6 @@
 
     aput-object p0, v4, v10
 
-    .line 106
     invoke-static {v0, v1, v2, v3, v4}, Lcom/market/sdk/utils/ReflectUtils;->invokeObject(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -152,7 +143,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 109
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result p2
@@ -165,12 +155,11 @@
     :catch_0
     move-exception p0
 
-    const-string p1, "SettingsCompat"
-
-    .line 111
     invoke-virtual {p0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
     move-result-object p0
+
+    const-string p1, "SettingsCompat"
 
     invoke-static {p1, p0}, Lcom/market/sdk/utils/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -180,7 +169,6 @@
 .method public static getString(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    .line 118
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -197,12 +185,11 @@
     :catch_0
     move-exception p0
 
-    const-string p1, "SettingsCompat"
-
-    .line 120
     invoke-virtual {p0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
     move-result-object p0
+
+    const-string p1, "SettingsCompat"
 
     invoke-static {p1, p0}, Lcom/market/sdk/utils/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 

@@ -1,14 +1,10 @@
 .class Landroidx/core/view/ViewCompat$1;
-.super Ljava/lang/Object;
-.source "ViewCompat.java"
-
-# interfaces
-.implements Landroid/view/View$OnApplyWindowInsetsListener;
+.super Landroidx/core/view/ViewCompat$AccessibilityViewProperty;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/core/view/ViewCompat;->setOnApplyWindowInsetsListener(Landroid/view/View;Landroidx/core/view/OnApplyWindowInsetsListener;)V
+    value = Landroidx/core/view/ViewCompat;->screenReaderFocusableProperty()Landroidx/core/view/ViewCompat$AccessibilityViewProperty;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -16,44 +12,94 @@
     name = null
 .end annotation
 
-
-# instance fields
-.field final synthetic val$listener:Landroidx/core/view/OnApplyWindowInsetsListener;
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Landroidx/core/view/ViewCompat$AccessibilityViewProperty<",
+        "Ljava/lang/Boolean;",
+        ">;"
+    }
+.end annotation
 
 
 # direct methods
-.method constructor <init>(Landroidx/core/view/OnApplyWindowInsetsListener;)V
+.method constructor <init>(ILjava/lang/Class;I)V
     .locals 0
 
-    .line 2469
-    iput-object p1, p0, Landroidx/core/view/ViewCompat$1;->val$listener:Landroidx/core/view/OnApplyWindowInsetsListener;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2, p3}, Landroidx/core/view/ViewCompat$AccessibilityViewProperty;-><init>(ILjava/lang/Class;I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onApplyWindowInsets(Landroid/view/View;Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
-    .locals 1
+.method frameworkGet(Landroid/view/View;)Ljava/lang/Boolean;
+    .locals 0
 
-    .line 2473
-    invoke-static {p2}, Landroidx/core/view/WindowInsetsCompat;->toWindowInsetsCompat(Landroid/view/WindowInsets;)Landroidx/core/view/WindowInsetsCompat;
+    invoke-static {p1}, Landroidx/core/view/ViewCompat$Api28Impl;->isScreenReaderFocusable(Landroid/view/View;)Z
 
-    move-result-object p2
+    move-result p0
 
-    .line 2474
-    iget-object v0, p0, Landroidx/core/view/ViewCompat$1;->val$listener:Landroidx/core/view/OnApplyWindowInsetsListener;
+    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    invoke-interface {v0, p1, p2}, Landroidx/core/view/OnApplyWindowInsetsListener;->onApplyWindowInsets(Landroid/view/View;Landroidx/core/view/WindowInsetsCompat;)Landroidx/core/view/WindowInsetsCompat;
+    move-result-object p0
 
-    move-result-object p1
+    return-object p0
+.end method
 
-    .line 2475
-    invoke-virtual {p1}, Landroidx/core/view/WindowInsetsCompat;->toWindowInsets()Landroid/view/WindowInsets;
+.method bridge synthetic frameworkGet(Landroid/view/View;)Ljava/lang/Object;
+    .locals 0
 
-    move-result-object p1
+    invoke-virtual {p0, p1}, Landroidx/core/view/ViewCompat$1;->frameworkGet(Landroid/view/View;)Ljava/lang/Boolean;
 
-    return-object p1
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method frameworkSet(Landroid/view/View;Ljava/lang/Boolean;)V
+    .locals 0
+
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p0
+
+    invoke-static {p1, p0}, Landroidx/core/view/ViewCompat$Api28Impl;->setScreenReaderFocusable(Landroid/view/View;Z)V
+
+    return-void
+.end method
+
+.method bridge synthetic frameworkSet(Landroid/view/View;Ljava/lang/Object;)V
+    .locals 0
+
+    check-cast p2, Ljava/lang/Boolean;
+
+    invoke-virtual {p0, p1, p2}, Landroidx/core/view/ViewCompat$1;->frameworkSet(Landroid/view/View;Ljava/lang/Boolean;)V
+
+    return-void
+.end method
+
+.method shouldUpdate(Ljava/lang/Boolean;Ljava/lang/Boolean;)Z
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Landroidx/core/view/ViewCompat$1;->booleanNullToFalseEquals(Ljava/lang/Boolean;Ljava/lang/Boolean;)Z
+
+    move-result p0
+
+    xor-int/lit8 p0, p0, 0x1
+
+    return p0
+.end method
+
+.method bridge synthetic shouldUpdate(Ljava/lang/Object;Ljava/lang/Object;)Z
+    .locals 0
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    check-cast p2, Ljava/lang/Boolean;
+
+    invoke-virtual {p0, p1, p2}, Landroidx/core/view/ViewCompat$1;->shouldUpdate(Ljava/lang/Boolean;Ljava/lang/Boolean;)Z
+
+    move-result p0
+
+    return p0
 .end method

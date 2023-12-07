@@ -1,6 +1,5 @@
 .class Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplApi21$1;
 .super Ljava/lang/Object;
-.source "MediaBrowserCompat.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -29,7 +28,6 @@
 .method constructor <init>(Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplApi21;Landroid/support/v4/media/MediaBrowserCompat$ItemCallback;Ljava/lang/String;)V
     .locals 0
 
-    .line 1775
     iput-object p1, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplApi21$1;->this$0:Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplApi21;
 
     iput-object p2, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplApi21$1;->val$cb:Landroid/support/v4/media/MediaBrowserCompat$ItemCallback;
@@ -44,14 +42,13 @@
 
 # virtual methods
 .method public run()V
-    .locals 2
+    .locals 1
 
-    .line 1778
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplApi21$1;->val$cb:Landroid/support/v4/media/MediaBrowserCompat$ItemCallback;
 
-    iget-object v1, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplApi21$1;->val$mediaId:Ljava/lang/String;
+    iget-object p0, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplApi21$1;->val$mediaId:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Landroid/support/v4/media/MediaBrowserCompat$ItemCallback;->onError(Ljava/lang/String;)V
+    invoke-virtual {v0, p0}, Landroid/support/v4/media/MediaBrowserCompat$ItemCallback;->onError(Ljava/lang/String;)V
 
     return-void
 .end method

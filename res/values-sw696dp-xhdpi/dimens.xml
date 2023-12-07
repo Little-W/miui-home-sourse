@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="all_apps_divider_drawer_mode_height">0.8000001dip</dimen>
+    <dimen name="all_apps_search_bar_divider_height">0.0dip</dimen>
+    <dimen name="config_icon_height">56.0dip</dimen>
+    <dimen name="config_icon_width">56.0dip</dimen>
+    <dimen name="desktop_mode_padding_right">12.0dip</dimen>
+    <dimen name="desktop_mode_subtitle_width">180.0dip</dimen>
+    <dimen name="draw_background_button_margin_layout">28.5dip</dimen>
+    <dimen name="edit_mode_indicator_diff">27.0dip</dimen>
+    <dimen name="edit_mode_top_menu_side_button_margin_screen_edge">41.0dip</dimen>
+    <dimen name="edit_mode_workspace_indicator_diff_height">10.0dip</dimen>
+    <dimen name="fastscroll_letter_side_padding_bottom">10.899994dip</dimen>
+    <dimen name="fastscroll_letter_side_padding_top">10.899994dip</dimen>
+    <dimen name="folder_background_padding_top">-8.0dip</dimen>
+    <dimen name="folder_content_margin_bottom">-20.0dip</dimen>
+    <dimen name="folder_content_margin_top">18.0dip</dimen>
+    <dimen name="folder_edit_mode_top_padding">0.0dip</dimen>
+    <dimen name="folder_edit_text_margin_left">71.0dip</dimen>
+    <dimen name="folder_edit_text_margin_left_large_sosc_split">14.0dip</dimen>
+    <dimen name="folder_edit_text_margin_left_noword">64.0dip</dimen>
+    <dimen name="folder_edit_text_margin_right">71.0dip</dimen>
+    <dimen name="folder_edit_text_margin_right_large_sosc_split">14.0dip</dimen>
+    <dimen name="folder_edit_text_text_size_noword">35.599976dip</dimen>
+    <dimen name="folder_grid_frame_margin_top">0.0dip</dimen>
+    <dimen name="folder_grid_padding_top">7.3299866dip</dimen>
+    <dimen name="folder_item_horizontal_spacing_noword">20.0dip</dimen>
+    <dimen name="folder_item_vertical_spacing">12.0dip</dimen>
+    <dimen name="folder_item_vertical_spacing_noword">18.0dip</dimen>
+    <dimen name="folder_picker_margin_left">10.0dip</dimen>
+    <dimen name="folder_picker_margin_top">0.0dip</dimen>
+    <dimen name="folder_picker_select_wallpaper_bg_padding_start">24.0dip</dimen>
+    <dimen name="hotseats_height_navigation">76.0dip</dimen>
+    <dimen name="hotseats_margin_top">16.0dip</dimen>
+    <dimen name="icon_padding_side">5.6999817dip</dimen>
+    <item type="dimen" name="normal_edit_mode_screen_scale_ratio">0.87</item>
+    <item type="dimen" name="pa_miui_widget_density_scale_factor">1.0</item>
+    <dimen name="recents_relay_container_max_width">390.0dip</dimen>
+    <dimen name="recents_relay_container_padding_vertical">20.0dip</dimen>
+    <dimen name="recommend_header_padding_bottom">0.0dip</dimen>
+    <dimen name="recommend_margin_end">26.0dip</dimen>
+    <dimen name="recommend_margin_start">26.0dip</dimen>
+    <dimen name="recommend_switch_margin_top">-15.0dip</dimen>
+    <dimen name="slide_bar_margin_top">20.0dip</dimen>
+    <dimen name="workspace_cell_height">92.369995dip</dimen>
+    <dimen name="workspace_cell_padding_side">11.799988dip</dimen>
+    <dimen name="workspace_cell_padding_side_rotatable">11.799988dip</dimen>
+    <dimen name="workspace_cell_padding_top">33.69998dip</dimen>
+    <dimen name="workspace_cell_width">84.0dip</dimen>
+    <dimen name="workspace_icon_text_size">12.0sp</dimen>
+    <dimen name="folder_header_padding_bottom">0.0dip</dimen>
+    <dimen name="folder_preview_height">40.0dip</dimen>
+    <dimen name="folder_preview_width">40.0dip</dimen>
+</resources>

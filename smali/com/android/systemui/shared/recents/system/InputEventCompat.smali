@@ -1,13 +1,11 @@
 .class public Lcom/android/systemui/shared/recents/system/InputEventCompat;
 .super Ljava/lang/Object;
-.source "InputEventCompat.java"
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
-    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -18,9 +16,12 @@
 
     if-eqz p0, :cond_0
 
-    .line 9
     :try_start_0
-    invoke-virtual {p0, p1}, Landroid/view/InputEvent;->setDisplayId(I)V
+    invoke-static {p0}, Lmiui/view/InputEventExpose;->box(Ljava/lang/Object;)Lmiui/view/InputEventExpose;
+
+    move-result-object p0
+
+    invoke-virtual {p0, p1}, Lmiui/view/InputEventExpose;->setDisplayId(I)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -29,7 +30,6 @@
     :catch_0
     move-exception p0
 
-    .line 12
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_0

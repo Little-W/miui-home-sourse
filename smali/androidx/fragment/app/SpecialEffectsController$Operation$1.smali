@@ -1,6 +1,5 @@
 .class Landroidx/fragment/app/SpecialEffectsController$Operation$1;
 .super Ljava/lang/Object;
-.source "SpecialEffectsController.java"
 
 # interfaces
 .implements Landroidx/core/os/CancellationSignal$OnCancelListener;
@@ -25,7 +24,6 @@
 .method constructor <init>(Landroidx/fragment/app/SpecialEffectsController$Operation;)V
     .locals 0
 
-    .line 524
     iput-object p1, p0, Landroidx/fragment/app/SpecialEffectsController$Operation$1;->this$0:Landroidx/fragment/app/SpecialEffectsController$Operation;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,12 +34,11 @@
 
 # virtual methods
 .method public onCancel()V
-    .locals 1
+    .locals 0
 
-    .line 527
-    iget-object v0, p0, Landroidx/fragment/app/SpecialEffectsController$Operation$1;->this$0:Landroidx/fragment/app/SpecialEffectsController$Operation;
+    iget-object p0, p0, Landroidx/fragment/app/SpecialEffectsController$Operation$1;->this$0:Landroidx/fragment/app/SpecialEffectsController$Operation;
 
-    invoke-virtual {v0}, Landroidx/fragment/app/SpecialEffectsController$Operation;->cancel()V
+    invoke-virtual {p0}, Landroidx/fragment/app/SpecialEffectsController$Operation;->cancel()V
 
     return-void
 .end method

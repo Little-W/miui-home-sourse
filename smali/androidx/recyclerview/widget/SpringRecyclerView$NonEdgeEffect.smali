@@ -1,6 +1,5 @@
 .class Landroidx/recyclerview/widget/SpringRecyclerView$NonEdgeEffect;
 .super Landroid/widget/EdgeEffect;
-.source "SpringRecyclerView.java"
 
 
 # annotations
@@ -18,7 +17,6 @@
 .method constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 327
     invoke-direct {p0, p1}, Landroid/widget/EdgeEffect;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -29,9 +27,9 @@
 .method public draw(Landroid/graphics/Canvas;)Z
     .locals 0
 
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return p1
+    return p0
 .end method
 
 .method public finish()V
@@ -41,35 +39,35 @@
 .end method
 
 .method public getBlendMode()Landroid/graphics/BlendMode;
-    .locals 1
+    .locals 0
 
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getColor()I
-    .locals 1
+    .locals 0
 
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
 .end method
 
 .method public getMaxHeight()I
-    .locals 1
+    .locals 0
 
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
 .end method
 
 .method public isFinished()Z
-    .locals 1
+    .locals 0
 
-    const/4 v0, 0x1
+    const/4 p0, 0x1
 
-    return v0
+    return p0
 .end method
 
 .method public onAbsorb(I)V

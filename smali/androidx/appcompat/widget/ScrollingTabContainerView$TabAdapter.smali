@@ -1,6 +1,5 @@
 .class Landroidx/appcompat/widget/ScrollingTabContainerView$TabAdapter;
 .super Landroid/widget/BaseAdapter;
-.source "ScrollingTabContainerView.java"
 
 
 # annotations
@@ -22,7 +21,6 @@
 .method constructor <init>(Landroidx/appcompat/widget/ScrollingTabContainerView;)V
     .locals 0
 
-    .line 526
     iput-object p1, p0, Landroidx/appcompat/widget/ScrollingTabContainerView$TabAdapter;->this$0:Landroidx/appcompat/widget/ScrollingTabContainerView;
 
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
@@ -33,47 +31,45 @@
 
 # virtual methods
 .method public getCount()I
-    .locals 1
+    .locals 0
 
-    .line 531
-    iget-object v0, p0, Landroidx/appcompat/widget/ScrollingTabContainerView$TabAdapter;->this$0:Landroidx/appcompat/widget/ScrollingTabContainerView;
+    iget-object p0, p0, Landroidx/appcompat/widget/ScrollingTabContainerView$TabAdapter;->this$0:Landroidx/appcompat/widget/ScrollingTabContainerView;
 
-    iget-object v0, v0, Landroidx/appcompat/widget/ScrollingTabContainerView;->mTabLayout:Landroidx/appcompat/widget/LinearLayoutCompat;
+    iget-object p0, p0, Landroidx/appcompat/widget/ScrollingTabContainerView;->mTabLayout:Landroidx/appcompat/widget/LinearLayoutCompat;
 
-    invoke-virtual {v0}, Landroidx/appcompat/widget/LinearLayoutCompat;->getChildCount()I
+    invoke-virtual {p0}, Landroidx/appcompat/widget/LinearLayoutCompat;->getChildCount()I
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method
 
 .method public getItem(I)Ljava/lang/Object;
-    .locals 1
+    .locals 0
 
-    .line 536
-    iget-object v0, p0, Landroidx/appcompat/widget/ScrollingTabContainerView$TabAdapter;->this$0:Landroidx/appcompat/widget/ScrollingTabContainerView;
+    iget-object p0, p0, Landroidx/appcompat/widget/ScrollingTabContainerView$TabAdapter;->this$0:Landroidx/appcompat/widget/ScrollingTabContainerView;
 
-    iget-object v0, v0, Landroidx/appcompat/widget/ScrollingTabContainerView;->mTabLayout:Landroidx/appcompat/widget/LinearLayoutCompat;
+    iget-object p0, p0, Landroidx/appcompat/widget/ScrollingTabContainerView;->mTabLayout:Landroidx/appcompat/widget/LinearLayoutCompat;
 
-    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/LinearLayoutCompat;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Landroidx/appcompat/widget/LinearLayoutCompat;->getChildAt(I)Landroid/view/View;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Landroidx/appcompat/widget/ScrollingTabContainerView$TabView;
+    check-cast p0, Landroidx/appcompat/widget/ScrollingTabContainerView$TabView;
 
-    invoke-virtual {p1}, Landroidx/appcompat/widget/ScrollingTabContainerView$TabView;->getTab()Landroidx/appcompat/app/ActionBar$Tab;
+    invoke-virtual {p0}, Landroidx/appcompat/widget/ScrollingTabContainerView$TabView;->getTab()Landroidx/appcompat/app/ActionBar$Tab;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public getItemId(I)J
-    .locals 2
+    .locals 0
 
-    int-to-long v0, p1
+    int-to-long p0, p1
 
-    return-wide v0
+    return-wide p0
 .end method
 
 .method public getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
@@ -81,24 +77,22 @@
 
     if-nez p2, :cond_0
 
-    .line 547
     iget-object p2, p0, Landroidx/appcompat/widget/ScrollingTabContainerView$TabAdapter;->this$0:Landroidx/appcompat/widget/ScrollingTabContainerView;
 
     invoke-virtual {p0, p1}, Landroidx/appcompat/widget/ScrollingTabContainerView$TabAdapter;->getItem(I)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Landroidx/appcompat/app/ActionBar$Tab;
+    check-cast p0, Landroidx/appcompat/app/ActionBar$Tab;
 
-    const/4 p3, 0x1
+    const/4 p1, 0x1
 
-    invoke-virtual {p2, p1, p3}, Landroidx/appcompat/widget/ScrollingTabContainerView;->createTabView(Landroidx/appcompat/app/ActionBar$Tab;Z)Landroidx/appcompat/widget/ScrollingTabContainerView$TabView;
+    invoke-virtual {p2, p0, p1}, Landroidx/appcompat/widget/ScrollingTabContainerView;->createTabView(Landroidx/appcompat/app/ActionBar$Tab;Z)Landroidx/appcompat/widget/ScrollingTabContainerView$TabView;
 
     move-result-object p2
 
     goto :goto_0
 
-    .line 549
     :cond_0
     move-object p3, p2
 
@@ -106,11 +100,11 @@
 
     invoke-virtual {p0, p1}, Landroidx/appcompat/widget/ScrollingTabContainerView$TabAdapter;->getItem(I)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Landroidx/appcompat/app/ActionBar$Tab;
+    check-cast p0, Landroidx/appcompat/app/ActionBar$Tab;
 
-    invoke-virtual {p3, p1}, Landroidx/appcompat/widget/ScrollingTabContainerView$TabView;->bindTab(Landroidx/appcompat/app/ActionBar$Tab;)V
+    invoke-virtual {p3, p0}, Landroidx/appcompat/widget/ScrollingTabContainerView$TabView;->bindTab(Landroidx/appcompat/app/ActionBar$Tab;)V
 
     :goto_0
     return-object p2

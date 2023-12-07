@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="config_icon_height">53.099976dip</dimen>
+    <dimen name="config_icon_width">53.099976dip</dimen>
+    <dimen name="desktop_mode_subtitle_width">168.0dip</dimen>
+    <dimen name="edit_mode_indicator_diff">25.0dip</dimen>
+    <dimen name="edit_mode_workspace_indicator_diff_height">11.0dip</dimen>
+    <dimen name="folder_content_margin_top">0.0dip</dimen>
+    <dimen name="folder_item_vertical_spacing">0.0dip</dimen>
+    <dimen name="hotseats_height">100.0dip</dimen>
+    <dimen name="hotseats_height_navigation">80.0dip</dimen>
+    <dimen name="hotseats_margin_top">18.0dip</dimen>
+    <item type="dimen" name="pa_miui_widget_density_scale_factor">0.9</item>
+    <dimen name="slide_bar_margin_top">12.0dip</dimen>
+    <dimen name="workspace_cell_padding_side">4.3499756dip</dimen>
+    <dimen name="workspace_cell_padding_side_rotatable">4.3499756dip</dimen>
+    <dimen name="workspace_cell_padding_top">35.0dip</dimen>
+    <dimen name="folder_preview_height">41.599976dip</dimen>
+    <dimen name="folder_preview_width">41.599976dip</dimen>
+</resources>

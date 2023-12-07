@@ -1,6 +1,5 @@
 .class public Lcom/android/systemui/shared/recents/system/QuickStepContract;
 .super Ljava/lang/Object;
-.source "QuickStepContract.java"
 
 
 # static fields
@@ -22,9 +21,13 @@
 
 .field public static final SYSUI_STATE_BOUNCER_SHOWING:I = 0x8
 
+.field public static final SYSUI_STATE_HOME_DISABLED:I = 0x100
+
 .field public static final SYSUI_STATE_NAV_BAR_HIDDEN:I = 0x2
 
 .field public static final SYSUI_STATE_NOTIFICATION_PANEL_EXPANDED:I = 0x4
+
+.field public static final SYSUI_STATE_OVERVIEW_DISABLED:I = 0x80
 
 .field public static final SYSUI_STATE_SCREEN_PINNING:I = 0x1
 
@@ -33,7 +36,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

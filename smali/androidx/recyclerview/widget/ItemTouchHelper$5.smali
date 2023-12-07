@@ -1,6 +1,5 @@
 .class Landroidx/recyclerview/widget/ItemTouchHelper$5;
 .super Ljava/lang/Object;
-.source "ItemTouchHelper.java"
 
 # interfaces
 .implements Landroidx/recyclerview/widget/RecyclerView$ChildDrawingOrderCallback;
@@ -25,7 +24,6 @@
 .method constructor <init>(Landroidx/recyclerview/widget/ItemTouchHelper;)V
     .locals 0
 
-    .line 1294
     iput-object p1, p0, Landroidx/recyclerview/widget/ItemTouchHelper$5;->this$0:Landroidx/recyclerview/widget/ItemTouchHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +36,6 @@
 .method public onGetChildDrawingOrder(II)I
     .locals 2
 
-    .line 1297
     iget-object v0, p0, Landroidx/recyclerview/widget/ItemTouchHelper$5;->this$0:Landroidx/recyclerview/widget/ItemTouchHelper;
 
     iget-object v0, v0, Landroidx/recyclerview/widget/ItemTouchHelper;->mOverdrawChild:Landroid/view/View;
@@ -47,7 +44,6 @@
 
     return p2
 
-    .line 1300
     :cond_0
     iget-object v0, p0, Landroidx/recyclerview/widget/ItemTouchHelper$5;->this$0:Landroidx/recyclerview/widget/ItemTouchHelper;
 
@@ -57,7 +53,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 1302
     iget-object v0, p0, Landroidx/recyclerview/widget/ItemTouchHelper$5;->this$0:Landroidx/recyclerview/widget/ItemTouchHelper;
 
     iget-object v0, v0, Landroidx/recyclerview/widget/ItemTouchHelper;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
@@ -70,10 +65,9 @@
 
     move-result v0
 
-    .line 1303
-    iget-object v1, p0, Landroidx/recyclerview/widget/ItemTouchHelper$5;->this$0:Landroidx/recyclerview/widget/ItemTouchHelper;
+    iget-object p0, p0, Landroidx/recyclerview/widget/ItemTouchHelper$5;->this$0:Landroidx/recyclerview/widget/ItemTouchHelper;
 
-    iput v0, v1, Landroidx/recyclerview/widget/ItemTouchHelper;->mOverdrawChildPosition:I
+    iput v0, p0, Landroidx/recyclerview/widget/ItemTouchHelper;->mOverdrawChildPosition:I
 
     :cond_1
     add-int/lit8 p1, p1, -0x1

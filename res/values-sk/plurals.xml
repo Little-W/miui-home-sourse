@@ -66,18 +66,6 @@
         <item quantity="few">%2$s neprečítané správy v aplikácii %1$s</item>
         <item quantity="many">%2$s neprečítanej správy v aplikácii %1$s</item>
     </plurals>
-    <plurals name="delete_wallpapers_message">
-        <item quantity="other">Vymazať %1$d tapiet?</item>
-        <item quantity="one">Vymazať %1$d tapetu?</item>
-        <item quantity="few">Vymazať %1$d tapety?</item>
-        <item quantity="many">Vymazať %1$d tapety?</item>
-    </plurals>
-    <plurals name="editing_mode_title">
-        <item quantity="other">Vybraných %1$d položiek</item>
-        <item quantity="one">Vybraná %1$d položka</item>
-        <item quantity="few">Vybrané %1$d položky</item>
-        <item quantity="many">Vybranej %1$d položky</item>
-    </plurals>
     <plurals name="half_hour_ago">
         <item quantity="other">Pred pol hodinou</item>
         <item quantity="one">Pred pol hodinou</item>
@@ -120,6 +108,12 @@
         <item quantity="few">Vybrané %d položky</item>
         <item quantity="many">Vybranej %d položky</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d nových upozornení</item>
+        <item quantity="one">%d nové upozornenie</item>
+        <item quantity="few">%d nové upozornenia</item>
+        <item quantity="many">%d new notifications</item>
+    </plurals>
     <plurals name="num_minutes_ago">
         <item quantity="other">Pred %d minútami</item>
         <item quantity="one">Pred 1 minútou</item>
@@ -127,10 +121,10 @@
         <item quantity="many">Pred %d minútou</item>
     </plurals>
     <plurals name="remove_dialog_title_multi_format">
-        <item quantity="other">Odstrániť %1$d aplikácií z Domovskej obrazovky?</item>
-        <item quantity="one">Odstrániť %1$d aplikáciu z Domovskej obrazovky?</item>
-        <item quantity="few">Odstrániť %1$d aplikácie z Domovskej obrazovky?</item>
-        <item quantity="many">Odstrániť %1$d aplikácií z Domovskej obrazovky?</item>
+        <item quantity="other">Odstrániť %1$d položiek z Domovskej obrazovky?</item>
+        <item quantity="one">Odstrániť %1$d položku z Domovskej obrazovky?</item>
+        <item quantity="few">Odstrániť %1$d položky z Domovskej obrazovky?</item>
+        <item quantity="many">Odstrániť %1$d položky z Domovskej obrazovky?</item>
     </plurals>
     <plurals name="scroll_tip_format_when_announce_accessibility">
         <item quantity="other">Strana %1$d, %2$d aplikácií.</item>

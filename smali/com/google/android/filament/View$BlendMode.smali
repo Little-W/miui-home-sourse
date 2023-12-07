@@ -1,6 +1,5 @@
 .class public final enum Lcom/google/android/filament/View$BlendMode;
 .super Ljava/lang/Enum;
-.source "View.java"
 
 
 # annotations
@@ -34,40 +33,37 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .line 98
     new-instance v0, Lcom/google/android/filament/View$BlendMode;
 
-    const-string v1, "OPAQUE"
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    const-string v2, "OPAQUE"
 
-    invoke-direct {v0, v1, v2}, Lcom/google/android/filament/View$BlendMode;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v2, v1}, Lcom/google/android/filament/View$BlendMode;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/google/android/filament/View$BlendMode;->OPAQUE:Lcom/google/android/filament/View$BlendMode;
 
-    .line 99
     new-instance v0, Lcom/google/android/filament/View$BlendMode;
 
-    const-string v1, "TRANSLUCENT"
+    const/4 v2, 0x1
 
-    const/4 v3, 0x1
+    const-string v3, "TRANSLUCENT"
 
-    invoke-direct {v0, v1, v3}, Lcom/google/android/filament/View$BlendMode;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v3, v2}, Lcom/google/android/filament/View$BlendMode;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/google/android/filament/View$BlendMode;->TRANSLUCENT:Lcom/google/android/filament/View$BlendMode;
 
     const/4 v0, 0x2
 
-    .line 97
     new-array v0, v0, [Lcom/google/android/filament/View$BlendMode;
 
-    sget-object v1, Lcom/google/android/filament/View$BlendMode;->OPAQUE:Lcom/google/android/filament/View$BlendMode;
+    sget-object v3, Lcom/google/android/filament/View$BlendMode;->OPAQUE:Lcom/google/android/filament/View$BlendMode;
 
-    aput-object v1, v0, v2
+    aput-object v3, v0, v1
 
     sget-object v1, Lcom/google/android/filament/View$BlendMode;->TRANSLUCENT:Lcom/google/android/filament/View$BlendMode;
 
-    aput-object v1, v0, v3
+    aput-object v1, v0, v2
 
     sput-object v0, Lcom/google/android/filament/View$BlendMode;->$VALUES:[Lcom/google/android/filament/View$BlendMode;
 
@@ -82,7 +78,6 @@
         }
     .end annotation
 
-    .line 97
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -91,7 +86,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/android/filament/View$BlendMode;
     .locals 1
 
-    .line 97
     const-class v0, Lcom/google/android/filament/View$BlendMode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -106,7 +100,6 @@
 .method public static values()[Lcom/google/android/filament/View$BlendMode;
     .locals 1
 
-    .line 97
     sget-object v0, Lcom/google/android/filament/View$BlendMode;->$VALUES:[Lcom/google/android/filament/View$BlendMode;
 
     invoke-virtual {v0}, [Lcom/google/android/filament/View$BlendMode;->clone()Ljava/lang/Object;

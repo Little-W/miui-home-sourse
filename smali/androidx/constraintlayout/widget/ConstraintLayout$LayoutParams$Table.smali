@@ -1,6 +1,5 @@
 .class Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;
 .super Ljava/lang/Object;
-.source "ConstraintLayout.java"
 
 
 # annotations
@@ -22,14 +21,12 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 2592
     new-instance v0, Landroid/util/SparseIntArray;
 
     invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
 
     sput-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
-    .line 2595
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_constraintLeft_toLeftOf:I
@@ -38,7 +35,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 2596
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_constraintLeft_toRightOf:I
@@ -47,7 +43,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 2597
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_constraintRight_toLeftOf:I
@@ -56,7 +51,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 2598
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_constraintRight_toRightOf:I
@@ -65,7 +59,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 2599
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_constraintTop_toTopOf:I
@@ -74,7 +67,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 2600
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_constraintTop_toBottomOf:I
@@ -83,7 +75,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 2601
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_constraintBottom_toTopOf:I
@@ -92,7 +83,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 2602
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_constraintBottom_toBottomOf:I
@@ -101,7 +91,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 2603
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_constraintBaseline_toBaselineOf:I
@@ -110,7 +99,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 2604
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_constraintCircle:I
@@ -119,7 +107,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 2605
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_constraintCircleRadius:I
@@ -128,7 +115,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 2606
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_constraintCircleAngle:I
@@ -137,7 +123,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 2607
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_editor_absoluteX:I
@@ -146,7 +131,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 2608
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_editor_absoluteY:I
@@ -155,7 +139,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 2609
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_constraintGuide_begin:I
@@ -164,7 +147,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 2610
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_constraintGuide_end:I
@@ -173,7 +155,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 2611
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_constraintGuide_percent:I
@@ -182,7 +163,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 2612
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_android_orientation:I
@@ -191,7 +171,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 2613
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_constraintStart_toEndOf:I
@@ -200,7 +179,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 2614
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_constraintStart_toStartOf:I
@@ -209,7 +187,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 2615
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_constraintEnd_toStartOf:I
@@ -218,7 +195,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 2616
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_constraintEnd_toEndOf:I
@@ -227,7 +203,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 2617
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_goneMarginLeft:I
@@ -236,7 +211,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 2618
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_goneMarginTop:I
@@ -245,7 +219,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 2619
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_goneMarginRight:I
@@ -254,7 +227,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 2620
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_goneMarginBottom:I
@@ -263,7 +235,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 2621
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_goneMarginStart:I
@@ -272,7 +243,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 2622
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_goneMarginEnd:I
@@ -281,7 +251,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 2623
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_constraintHorizontal_bias:I
@@ -290,7 +259,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 2624
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_constraintVertical_bias:I
@@ -299,7 +267,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 2625
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_constraintDimensionRatio:I
@@ -308,7 +275,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 2626
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_constraintHorizontal_weight:I
@@ -317,7 +283,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 2627
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_constraintVertical_weight:I
@@ -326,7 +291,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 2628
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_constraintHorizontal_chainStyle:I
@@ -335,7 +299,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 2629
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_constraintVertical_chainStyle:I
@@ -344,7 +307,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 2630
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_constrainedWidth:I
@@ -353,7 +315,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 2631
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_constrainedHeight:I
@@ -362,7 +323,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 2632
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_constraintWidth_default:I
@@ -371,7 +331,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 2633
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_constraintHeight_default:I
@@ -380,7 +339,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 2634
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_constraintWidth_min:I
@@ -389,7 +347,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 2635
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_constraintWidth_max:I
@@ -398,7 +355,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 2636
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_constraintWidth_percent:I
@@ -407,7 +363,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 2637
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_constraintHeight_min:I
@@ -416,7 +371,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 2638
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_constraintHeight_max:I
@@ -425,7 +379,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 2639
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_constraintHeight_percent:I
@@ -434,7 +387,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 2640
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_constraintLeft_creator:I
@@ -443,7 +395,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 2641
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_constraintTop_creator:I
@@ -452,7 +403,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 2642
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_constraintRight_creator:I
@@ -461,7 +411,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 2643
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_constraintBottom_creator:I
@@ -470,12 +419,19 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 2644
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_constraintBaseline_creator:I
 
     const/16 v2, 0x2b
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+
+    sget-object v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;->map:Landroid/util/SparseIntArray;
+
+    sget v1, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_constraintTag:I
+
+    const/16 v2, 0x33
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 

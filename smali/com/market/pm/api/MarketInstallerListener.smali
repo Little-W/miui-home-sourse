@@ -1,6 +1,5 @@
 .class public interface abstract Lcom/market/pm/api/MarketInstallerListener;
 .super Ljava/lang/Object;
-.source "MarketInstallerListener.java"
 
 # interfaces
 .implements Lcom/market/pm/api/IMarketInstallerCode;

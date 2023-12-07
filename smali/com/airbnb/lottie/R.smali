@@ -1,6 +1,5 @@
 .class public final Lcom/airbnb/lottie/R;
 .super Ljava/lang/Object;
-.source "R.java"
 
 
 # annotations

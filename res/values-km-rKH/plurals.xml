@@ -33,12 +33,6 @@
     <plurals name="announce_for_unread">
         <item quantity="other">%2$s មិនទាន់អានពី %1$s</item>
     </plurals>
-    <plurals name="delete_wallpapers_message">
-        <item quantity="other">លុបរូបភាពសម្រាប់ផ្ទៃអក្រង់ចំនួន %1$dចោល​?</item>
-    </plurals>
-    <plurals name="editing_mode_title">
-        <item quantity="other">បាន​ជ្រើសរើសធាតុ​ចំនួន %1$d</item>
-    </plurals>
     <plurals name="half_hour_ago">
         <item quantity="other">កន្លះ​ម៉ោងមុន</item>
     </plurals>
@@ -64,7 +58,7 @@
         <item quantity="other">%d នាទីមុន</item>
     </plurals>
     <plurals name="remove_dialog_title_multi_format">
-        <item quantity="other">យកកម្មវិធី %1$d ចេញពីអេក្រង់ដើមឬ?</item>
+        <item quantity="other">លុបធាតុ %1$d ចេញពីអេក្រង់ដើមឬ?</item>
     </plurals>
     <plurals name="scroll_tip_format_when_announce_accessibility">
         <item quantity="other">ទំព័រ​ %1$d, %2$d កម្មវិធី។</item>

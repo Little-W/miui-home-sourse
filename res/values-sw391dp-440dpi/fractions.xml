@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <fraction name="normal_edit_mode_screen_scale_ratio">87.0%</fraction>
     <fraction name="quick_edit_mode_screen_scale_ratio">93.00001%</fraction>
 </resources>

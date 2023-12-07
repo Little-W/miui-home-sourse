@@ -1,6 +1,5 @@
 .class synthetic Lcom/google/android/filament/IndexBuffer$1;
 .super Ljava/lang/Object;
-.source "IndexBuffer.java"
 
 
 # annotations

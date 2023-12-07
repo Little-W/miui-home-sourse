@@ -1,6 +1,5 @@
 .class public interface abstract Lcom/airbnb/lottie/model/KeyPathElement;
 .super Ljava/lang/Object;
-.source "KeyPathElement.java"
 
 
 # virtual methods

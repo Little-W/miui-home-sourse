@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="edit_mode_top_menu_text_view_margin_top">0.0dip</dimen>
+    <dimen name="fastscroll_popup_text_size">22.0sp</dimen>
+    <dimen name="fold_device_all_apps_category_title_text_size">4.0sp</dimen>
     <dimen name="hotseats_margin_top">2.0dip</dimen>
     <dimen name="search_bar_margin_bottom">12.0dip</dimen>
     <dimen name="search_bar_margin_top">10.0dip</dimen>

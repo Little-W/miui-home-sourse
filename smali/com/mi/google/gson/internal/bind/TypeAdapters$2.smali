@@ -1,6 +1,5 @@
 .class final Lcom/mi/google/gson/internal/bind/TypeAdapters$2;
 .super Lcom/mi/google/gson/TypeAdapter;
-.source "TypeAdapters.java"
 
 
 # annotations
@@ -26,7 +25,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 92
     invoke-direct {p0}, Lcom/mi/google/gson/TypeAdapter;-><init>()V
 
     return-void
@@ -42,12 +40,11 @@
         }
     .end annotation
 
-    .line 92
     invoke-virtual {p0, p1}, Lcom/mi/google/gson/internal/bind/TypeAdapters$2;->read(Lcom/mi/google/gson/stream/JsonReader;)Ljava/util/BitSet;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public read(Lcom/mi/google/gson/stream/JsonReader;)Ljava/util/BitSet;
@@ -58,176 +55,154 @@
         }
     .end annotation
 
-    .line 94
     invoke-virtual {p1}, Lcom/mi/google/gson/stream/JsonReader;->peek()Lcom/mi/google/gson/stream/JsonToken;
 
-    move-result-object v0
+    move-result-object p0
 
-    sget-object v1, Lcom/mi/google/gson/stream/JsonToken;->NULL:Lcom/mi/google/gson/stream/JsonToken;
+    sget-object v0, Lcom/mi/google/gson/stream/JsonToken;->NULL:Lcom/mi/google/gson/stream/JsonToken;
 
-    if-ne v0, v1, :cond_0
+    if-ne p0, v0, :cond_0
 
-    .line 95
     invoke-virtual {p1}, Lcom/mi/google/gson/stream/JsonReader;->nextNull()V
 
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return-object p1
+    return-object p0
 
-    .line 99
     :cond_0
-    new-instance v0, Ljava/util/BitSet;
+    new-instance p0, Ljava/util/BitSet;
 
-    invoke-direct {v0}, Ljava/util/BitSet;-><init>()V
+    invoke-direct {p0}, Ljava/util/BitSet;-><init>()V
 
-    .line 100
     invoke-virtual {p1}, Lcom/mi/google/gson/stream/JsonReader;->beginArray()V
 
-    .line 102
     invoke-virtual {p1}, Lcom/mi/google/gson/stream/JsonReader;->peek()Lcom/mi/google/gson/stream/JsonToken;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    move v3, v2
-
-    .line 103
-    :goto_0
-    sget-object v4, Lcom/mi/google/gson/stream/JsonToken;->END_ARRAY:Lcom/mi/google/gson/stream/JsonToken;
-
-    if-eq v1, v4, :cond_4
-
-    .line 105
-    sget-object v4, Lcom/mi/google/gson/internal/bind/TypeAdapters$36;->$SwitchMap$com$google$gson$stream$JsonToken:[I
-
-    invoke-virtual {v1}, Lcom/mi/google/gson/stream/JsonToken;->ordinal()I
-
-    move-result v5
-
-    aget v4, v4, v5
-
-    const/4 v5, 0x1
-
-    packed-switch v4, :pswitch_data_0
-
-    .line 122
-    new-instance p1, Lcom/mi/google/gson/JsonSyntaxException;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "Invalid bitset value type: "
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-direct {p1, v0}, Lcom/mi/google/gson/JsonSyntaxException;-><init>(Ljava/lang/String;)V
+    const/4 v1, 0x0
 
-    throw p1
+    move v2, v1
 
-    .line 113
-    :pswitch_0
+    :goto_0
+    sget-object v3, Lcom/mi/google/gson/stream/JsonToken;->END_ARRAY:Lcom/mi/google/gson/stream/JsonToken;
+
+    if-eq v0, v3, :cond_6
+
+    sget-object v3, Lcom/mi/google/gson/internal/bind/TypeAdapters$36;->$SwitchMap$com$google$gson$stream$JsonToken:[I
+
+    invoke-virtual {v0}, Lcom/mi/google/gson/stream/JsonToken;->ordinal()I
+
+    move-result v4
+
+    aget v3, v3, v4
+
+    const/4 v4, 0x1
+
+    if-eq v3, v4, :cond_4
+
+    const/4 v5, 0x2
+
+    if-eq v3, v5, :cond_3
+
+    const/4 v5, 0x3
+
+    if-ne v3, v5, :cond_2
+
     invoke-virtual {p1}, Lcom/mi/google/gson/stream/JsonReader;->nextString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v0
 
-    .line 115
     :try_start_0
-    invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
-    move-result v1
+    move-result v0
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    if-eqz v1, :cond_1
+    if-eqz v0, :cond_1
 
     goto :goto_1
 
     :cond_1
-    move v5, v2
+    move v4, v1
 
     goto :goto_1
 
-    .line 117
     :catch_0
-    new-instance p1, Lcom/mi/google/gson/JsonSyntaxException;
+    new-instance p0, Lcom/mi/google/gson/JsonSyntaxException;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "Error: Expecting: bitset number value (1, 0), Found: "
+    const-string v1, "Error: Expecting: bitset number value (1, 0), Found: "
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Lcom/mi/google/gson/JsonSyntaxException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_2
+    new-instance p0, Lcom/mi/google/gson/JsonSyntaxException;
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "Invalid bitset value type: "
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Lcom/mi/google/gson/JsonSyntaxException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_3
+    invoke-virtual {p1}, Lcom/mi/google/gson/stream/JsonReader;->nextBoolean()Z
+
+    move-result v4
+
+    goto :goto_1
+
+    :cond_4
+    invoke-virtual {p1}, Lcom/mi/google/gson/stream/JsonReader;->nextInt()I
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    :goto_1
+    if-eqz v4, :cond_5
+
+    invoke-virtual {p0, v2}, Ljava/util/BitSet;->set(I)V
+
+    :cond_5
+    add-int/lit8 v2, v2, 0x1
+
+    invoke-virtual {p1}, Lcom/mi/google/gson/stream/JsonReader;->peek()Lcom/mi/google/gson/stream/JsonToken;
 
     move-result-object v0
 
-    invoke-direct {p1, v0}, Lcom/mi/google/gson/JsonSyntaxException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    .line 110
-    :pswitch_1
-    invoke-virtual {p1}, Lcom/mi/google/gson/stream/JsonReader;->nextBoolean()Z
-
-    move-result v5
-
-    goto :goto_1
-
-    .line 107
-    :pswitch_2
-    invoke-virtual {p1}, Lcom/mi/google/gson/stream/JsonReader;->nextInt()I
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    move v5, v2
-
-    :goto_1
-    if-eqz v5, :cond_3
-
-    .line 125
-    invoke-virtual {v0, v3}, Ljava/util/BitSet;->set(I)V
-
-    :cond_3
-    add-int/lit8 v3, v3, 0x1
-
-    .line 128
-    invoke-virtual {p1}, Lcom/mi/google/gson/stream/JsonReader;->peek()Lcom/mi/google/gson/stream/JsonToken;
-
-    move-result-object v1
-
     goto :goto_0
 
-    .line 130
-    :cond_4
+    :cond_6
     invoke-virtual {p1}, Lcom/mi/google/gson/stream/JsonReader;->endArray()V
 
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method
 
 .method public bridge synthetic write(Lcom/mi/google/gson/stream/JsonWriter;Ljava/lang/Object;)V
@@ -238,7 +213,6 @@
         }
     .end annotation
 
-    .line 92
     check-cast p2, Ljava/util/BitSet;
 
     invoke-virtual {p0, p1, p2}, Lcom/mi/google/gson/internal/bind/TypeAdapters$2;->write(Lcom/mi/google/gson/stream/JsonWriter;Ljava/util/BitSet;)V
@@ -247,7 +221,7 @@
 .end method
 
 .method public write(Lcom/mi/google/gson/stream/JsonWriter;Ljava/util/BitSet;)V
-    .locals 3
+    .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -256,40 +230,34 @@
 
     if-nez p2, :cond_0
 
-    .line 136
     invoke-virtual {p1}, Lcom/mi/google/gson/stream/JsonWriter;->nullValue()Lcom/mi/google/gson/stream/JsonWriter;
 
     return-void
 
-    .line 140
     :cond_0
     invoke-virtual {p1}, Lcom/mi/google/gson/stream/JsonWriter;->beginArray()Lcom/mi/google/gson/stream/JsonWriter;
 
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    .line 141
     :goto_0
     invoke-virtual {p2}, Ljava/util/BitSet;->length()I
 
-    move-result v1
+    move-result v0
 
-    if-ge v0, v1, :cond_1
+    if-ge p0, v0, :cond_1
 
-    .line 142
-    invoke-virtual {p2, v0}, Ljava/util/BitSet;->get(I)Z
+    invoke-virtual {p2, p0}, Ljava/util/BitSet;->get(I)Z
 
-    move-result v1
+    move-result v0
 
-    int-to-long v1, v1
+    int-to-long v0, v0
 
-    .line 143
-    invoke-virtual {p1, v1, v2}, Lcom/mi/google/gson/stream/JsonWriter;->value(J)Lcom/mi/google/gson/stream/JsonWriter;
+    invoke-virtual {p1, v0, v1}, Lcom/mi/google/gson/stream/JsonWriter;->value(J)Lcom/mi/google/gson/stream/JsonWriter;
 
-    add-int/lit8 v0, v0, 0x1
+    add-int/lit8 p0, p0, 0x1
 
     goto :goto_0
 
-    .line 145
     :cond_1
     invoke-virtual {p1}, Lcom/mi/google/gson/stream/JsonWriter;->endArray()Lcom/mi/google/gson/stream/JsonWriter;
 

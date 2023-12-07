@@ -1,6 +1,5 @@
 .class Lcom/market/sdk/MarketService$15;
 .super Ljava/lang/Object;
-.source "MarketService.java"
 
 # interfaces
 .implements Lcom/market/ServiceProxy$ProxyTask;
@@ -29,7 +28,6 @@
 .method constructor <init>(Lcom/market/sdk/MarketService;Landroid/os/Bundle;Landroid/os/ResultReceiver;)V
     .locals 0
 
-    .line 213
     iput-object p1, p0, Lcom/market/sdk/MarketService$15;->this$0:Lcom/market/sdk/MarketService;
 
     iput-object p2, p0, Lcom/market/sdk/MarketService$15;->val$args:Landroid/os/Bundle;
@@ -44,14 +42,13 @@
 
 # virtual methods
 .method public run()V
-    .locals 3
+    .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
         }
     .end annotation
 
-    .line 216
     iget-object v0, p0, Lcom/market/sdk/MarketService$15;->this$0:Lcom/market/sdk/MarketService;
 
     invoke-static {v0}, Lcom/market/sdk/MarketService;->access$000(Lcom/market/sdk/MarketService;)Lcom/market/sdk/IMarketService;
@@ -60,9 +57,9 @@
 
     iget-object v1, p0, Lcom/market/sdk/MarketService$15;->val$args:Landroid/os/Bundle;
 
-    iget-object v2, p0, Lcom/market/sdk/MarketService$15;->val$receiver:Landroid/os/ResultReceiver;
+    iget-object p0, p0, Lcom/market/sdk/MarketService$15;->val$receiver:Landroid/os/ResultReceiver;
 
-    invoke-interface {v0, v1, v2}, Lcom/market/sdk/IMarketService;->loadDesktopRecommendInfoV3(Landroid/os/Bundle;Landroid/os/ResultReceiver;)V
+    invoke-interface {v0, v1, p0}, Lcom/market/sdk/IMarketService;->loadDesktopRecommendInfoV3(Landroid/os/Bundle;Landroid/os/ResultReceiver;)V
 
     return-void
 .end method

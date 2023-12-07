@@ -1,6 +1,5 @@
 .class final Landroidx/arch/core/executor/ArchTaskExecutor$1;
 .super Ljava/lang/Object;
-.source "ArchTaskExecutor.java"
 
 # interfaces
 .implements Ljava/util/concurrent/Executor;
@@ -21,7 +20,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,14 +28,13 @@
 
 # virtual methods
 .method public execute(Ljava/lang/Runnable;)V
-    .locals 1
+    .locals 0
 
-    .line 45
     invoke-static {}, Landroidx/arch/core/executor/ArchTaskExecutor;->getInstance()Landroidx/arch/core/executor/ArchTaskExecutor;
 
-    move-result-object v0
+    move-result-object p0
 
-    invoke-virtual {v0, p1}, Landroidx/arch/core/executor/ArchTaskExecutor;->postToMainThread(Ljava/lang/Runnable;)V
+    invoke-virtual {p0, p1}, Landroidx/arch/core/executor/ArchTaskExecutor;->postToMainThread(Ljava/lang/Runnable;)V
 
     return-void
 .end method

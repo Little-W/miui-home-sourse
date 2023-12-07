@@ -1,6 +1,5 @@
 .class Lcom/market/sdk/MarketService$3;
 .super Ljava/lang/Object;
-.source "MarketService.java"
 
 # interfaces
 .implements Lcom/market/ServiceProxy$ProxyTask;
@@ -27,7 +26,6 @@
 .method constructor <init>(Lcom/market/sdk/MarketService;Lcom/market/sdk/compat/FutureTaskCompat;)V
     .locals 0
 
-    .line 77
     iput-object p1, p0, Lcom/market/sdk/MarketService$3;->this$0:Lcom/market/sdk/MarketService;
 
     iput-object p2, p0, Lcom/market/sdk/MarketService$3;->val$future:Lcom/market/sdk/compat/FutureTaskCompat;
@@ -40,31 +38,30 @@
 
 # virtual methods
 .method public run()V
-    .locals 2
+    .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
         }
     .end annotation
 
-    .line 80
     iget-object v0, p0, Lcom/market/sdk/MarketService$3;->val$future:Lcom/market/sdk/compat/FutureTaskCompat;
 
-    iget-object v1, p0, Lcom/market/sdk/MarketService$3;->this$0:Lcom/market/sdk/MarketService;
+    iget-object p0, p0, Lcom/market/sdk/MarketService$3;->this$0:Lcom/market/sdk/MarketService;
 
-    invoke-static {v1}, Lcom/market/sdk/MarketService;->access$000(Lcom/market/sdk/MarketService;)Lcom/market/sdk/IMarketService;
+    invoke-static {p0}, Lcom/market/sdk/MarketService;->access$000(Lcom/market/sdk/MarketService;)Lcom/market/sdk/IMarketService;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-interface {v1}, Lcom/market/sdk/IMarketService;->allowConnectToNetwork()Z
+    invoke-interface {p0}, Lcom/market/sdk/IMarketService;->allowConnectToNetwork()Z
 
-    move-result v1
+    move-result p0
 
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-virtual {v0, v1}, Lcom/market/sdk/compat/FutureTaskCompat;->set(Ljava/lang/Object;)V
+    invoke-virtual {v0, p0}, Lcom/market/sdk/compat/FutureTaskCompat;->set(Ljava/lang/Object;)V
 
     return-void
 .end method

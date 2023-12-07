@@ -1,6 +1,5 @@
 .class Lcom/market/sdk/FloatCardManager$4;
 .super Ljava/lang/Object;
-.source "FloatCardManager.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -29,7 +28,6 @@
 .method constructor <init>(Lcom/market/sdk/FloatCardManager;Lcom/xiaomi/market/IAppDownloadManager;Ljava/lang/String;)V
     .locals 0
 
-    .line 197
     iput-object p1, p0, Lcom/market/sdk/FloatCardManager$4;->this$0:Lcom/market/sdk/FloatCardManager;
 
     iput-object p2, p0, Lcom/market/sdk/FloatCardManager$4;->val$appDownloadManager:Lcom/xiaomi/market/IAppDownloadManager;
@@ -44,35 +42,34 @@
 
 # virtual methods
 .method public run()V
-    .locals 4
+    .locals 3
 
-    .line 201
     :try_start_0
     iget-object v0, p0, Lcom/market/sdk/FloatCardManager$4;->val$appDownloadManager:Lcom/xiaomi/market/IAppDownloadManager;
 
     iget-object v1, p0, Lcom/market/sdk/FloatCardManager$4;->this$0:Lcom/market/sdk/FloatCardManager;
 
-    iget-object v2, p0, Lcom/market/sdk/FloatCardManager$4;->val$mData:Ljava/lang/String;
+    iget-object p0, p0, Lcom/market/sdk/FloatCardManager$4;->val$mData:Ljava/lang/String;
 
-    invoke-static {v2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-static {p0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
-    move-result-object v2
+    move-result-object p0
 
-    const-string v3, "packageName"
+    const-string v2, "packageName"
 
-    invoke-static {v1, v2, v3}, Lcom/market/sdk/FloatCardManager;->access$000(Lcom/market/sdk/FloatCardManager;Landroid/net/Uri;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p0, v2}, Lcom/market/sdk/FloatCardManager;->access$000(Lcom/market/sdk/FloatCardManager;Landroid/net/Uri;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p0
 
     invoke-static {}, Lcom/market/sdk/utils/AppGlobal;->getContext()Landroid/content/Context;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-virtual {v2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+    invoke-virtual {v1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-interface {v0, v1, v2}, Lcom/xiaomi/market/IAppDownloadManager;->resume(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-interface {v0, p0, v1}, Lcom/xiaomi/market/IAppDownloadManager;->resume(Ljava/lang/String;Ljava/lang/String;)Z
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 

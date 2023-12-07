@@ -5,7 +5,6 @@
     <dimen name="config_icon_width">60.0dip</dimen>
     <dimen name="folder_content_margin_bottom">13.0dip</dimen>
     <dimen name="folder_content_margin_top">13.0dip</dimen>
-    <dimen name="free_style_apps_btn_text_size">11.0sp</dimen>
     <dimen name="hotseats_height">90.0dip</dimen>
     <dimen name="hotseats_padding_bottom">0.0dip</dimen>
     <dimen name="hotseats_padding_side">7.0dip</dimen>

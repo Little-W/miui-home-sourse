@@ -2,7 +2,6 @@
 <favorites xmlns:launcher="http://schemas.android.com/apk/res-auto">
     <favorite launcher:className="com.android.soundrecorder.SoundRecorder" launcher:container="1" launcher:packageName="com.android.soundrecorder" launcher:x="0" launcher:y="0" />
     <favorite launcher:className="com.duokan.reader.DkReaderActivity" launcher:container="1" launcher:packageName="com.duokan.reader" launcher:x="1" launcher:y="0" />
-    <favorite launcher:className="com.miui.fmradio.FmActivity" launcher:container="1" launcher:packageName="com.miui.fm" launcher:x="2" launcher:y="0" />
     <favorite launcher:className="com.xiaomi.mitv.phone.remotecontroller.HoriWidgetMainActivityV2" launcher:container="1" launcher:packageName="com.duokan.phone.remotecontroller" launcher:x="3" launcher:y="0" />
     <favorite launcher:className="com.android.fileexplorer.FileExplorerTabActivity" launcher:container="1" launcher:packageName="com.mi.android.globalFileexplorer" launcher:x="4" launcher:y="0" />
     <favorite launcher:className="com.miui.compass.CompassActivity" launcher:container="1" launcher:packageName="com.miui.compass" launcher:x="5" launcher:y="0" />

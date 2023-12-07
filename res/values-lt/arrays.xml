@@ -1,48 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="cell_layout_size_entries">
-        <item>4x4</item>
-        <item>4x5</item>
-    </string-array>
-    <string-array name="cell_layout_size_values">
-        <item>4x4</item>
-        <item>4x5</item>
+    <string-array name="animation_rate_entries">
+        <item>Sulėtintas</item>
+        <item>Subalansuotas</item>
+        <item>Greitas</item>
     </string-array>
     <string-array name="editing_mode_entries">
         <item>Fonas</item>
         <item>Valdikliai</item>
         <item>Parametrai</item>
     </string-array>
-    <string-array name="gadget_weather_image">
-        <item>Giedra</item>
-        <item>Debesuota</item>
-        <item>Miglota</item>
-        <item>Ūkanota</item>
-        <item>Smarki liūtis</item>
-        <item>Liūtis</item>
-        <item>Labai smarki liūtis</item>
-        <item>Perkūnija</item>
-        <item>Liūtis</item>
-        <item>Stiprus lietus</item>
-        <item>Lietus</item>
-        <item>Dulksna</item>
-        <item>Šlapdriba</item>
-        <item>Pūga</item>
-        <item>Lengvai sninga</item>
-        <item>Stipriai sninga</item>
-        <item>Sninga</item>
-        <item>Lengvai sninga</item>
-        <item>Stipri smėlio audra</item>
-        <item>Smėlio audra</item>
-        <item>Silpna smėlio audra</item>
-        <item>Smėlio audra</item>
-        <item>Kruša</item>
-        <item>Dulkėta</item>
-        <item>Migla</item>
-    </string-array>
-    <string-array name="gadget_weather_theme_type_entries">
+    <string-array name="monochrome_color_entries">
         <item>Numatytasis</item>
-        <item>Klasikinis</item>
+        <item>Mėlyna</item>
+        <item>Žalia</item>
+        <item>Violetinė</item>
+        <item>Ruda</item>
+    </string-array>
+    <string-array name="no_word_model_entries">
+        <item>Išjungta</item>
+        <item>Bet kur</item>
+        <item>Valdikliuose</item>
+    </string-array>
+    <string-array name="no_word_model_entries_not_support_only_widget_no_word">
+        <item>Išjungta</item>
+        <item>Bet kur</item>
     </string-array>
     <string-array name="transformation_entries">
         <item>Slydimas</item>
@@ -52,11 +34,5 @@
         <item>Kaskados</item>
         <item>Sukimas</item>
         <item>Kubas</item>
-    </string-array>
-    <string-array name="wallpaper_scroll_entries">
-        <item>Temos numatytasis</item>
-        <item>Centras</item>
-        <item>Kairė</item>
-        <item>Dešinė</item>
     </string-array>
 </resources>

@@ -1,6 +1,5 @@
 .class Lcom/airbnb/lottie/parser/MergePathsParser;
 .super Ljava/lang/Object;
-.source "MergePathsParser.java"
 
 
 # static fields
@@ -17,7 +16,6 @@
 
     const-string v2, "hd"
 
-    .line 9
     filled-new-array {v0, v1, v2}, [Ljava/lang/String;
 
     move-result-object v0
@@ -32,7 +30,7 @@
 .end method
 
 .method static parse(Lcom/airbnb/lottie/parser/moshi/JsonReader;)Lcom/airbnb/lottie/model/content/MergePaths;
-    .locals 4
+    .locals 5
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -47,41 +45,43 @@
 
     move-object v1, v0
 
-    .line 23
     :goto_0
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->hasNext()Z
 
     move-result v3
 
-    if-eqz v3, :cond_0
+    if-eqz v3, :cond_3
 
-    .line 24
     sget-object v3, Lcom/airbnb/lottie/parser/MergePathsParser;->NAMES:Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
 
     invoke-virtual {p0, v3}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->selectName(Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;)I
 
     move-result v3
 
-    packed-switch v3, :pswitch_data_0
+    if-eqz v3, :cond_2
 
-    .line 35
+    const/4 v4, 0x1
+
+    if-eq v3, v4, :cond_1
+
+    const/4 v4, 0x2
+
+    if-eq v3, v4, :cond_0
+
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->skipName()V
 
-    .line 36
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->skipValue()V
 
     goto :goto_0
 
-    .line 32
-    :pswitch_0
+    :cond_0
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextBoolean()Z
 
     move-result v2
 
     goto :goto_0
 
-    .line 29
-    :pswitch_1
+    :cond_1
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextInt()I
 
     move-result v1
@@ -92,28 +92,17 @@
 
     goto :goto_0
 
-    .line 26
-    :pswitch_2
+    :cond_2
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextString()Ljava/lang/String;
 
     move-result-object v0
 
     goto :goto_0
 
-    .line 40
-    :cond_0
+    :cond_3
     new-instance p0, Lcom/airbnb/lottie/model/content/MergePaths;
 
     invoke-direct {p0, v0, v1, v2}, Lcom/airbnb/lottie/model/content/MergePaths;-><init>(Ljava/lang/String;Lcom/airbnb/lottie/model/content/MergePaths$MergePathsMode;Z)V
 
     return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

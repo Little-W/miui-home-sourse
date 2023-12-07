@@ -1,6 +1,5 @@
 .class Landroidx/appcompat/app/AlertController$CheckedItemAdapter;
 .super Landroid/widget/ArrayAdapter;
-.source "AlertController.java"
 
 
 # annotations
@@ -26,7 +25,6 @@
 .method public constructor <init>(Landroid/content/Context;II[Ljava/lang/CharSequence;)V
     .locals 0
 
-    .line 1104
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;II[Ljava/lang/Object;)V
 
     return-void
@@ -35,17 +33,17 @@
 
 # virtual methods
 .method public getItemId(I)J
-    .locals 2
+    .locals 0
 
-    int-to-long v0, p1
+    int-to-long p0, p1
 
-    return-wide v0
+    return-wide p0
 .end method
 
 .method public hasStableIds()Z
-    .locals 1
+    .locals 0
 
-    const/4 v0, 0x1
+    const/4 p0, 0x1
 
-    return v0
+    return p0
 .end method

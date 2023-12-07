@@ -1,6 +1,5 @@
 .class public interface abstract Landroidx/recyclerview/widget/ListUpdateCallback;
 .super Ljava/lang/Object;
-.source "ListUpdateCallback.java"
 
 
 # virtual methods

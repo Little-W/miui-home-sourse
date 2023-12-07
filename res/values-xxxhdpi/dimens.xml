@@ -6,7 +6,7 @@
     <dimen name="customize_preview_top">13.0dip</dimen>
     <dimen name="edit_mode_menu_on_top_margin_top_notch">45.0dip</dimen>
     <dimen name="fastscroll_popup_size">74.0dip</dimen>
-    <dimen name="fastscroll_popup_text_size">43.0sp</dimen>
+    <dimen name="fastscroll_popup_text_size">33.0sp</dimen>
     <dimen name="icon_apply_button_height">46.0dip</dimen>
     <dimen name="search_icon_size">18.5sp</dimen>
     <dimen name="search_result_cate_size">16.0sp</dimen>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="animation_rate_entries">
+        <item>Iliyotulia</item>
+        <item>Iliyosawazishwa</item>
+        <item>Haraka</item>
+    </string-array>
+    <string-array name="editing_mode_entries">
+        <item>Pamba ukuta</item>
+        <item>Wijeti</item>
+        <item>Mipangilio</item>
+    </string-array>
+    <string-array name="monochrome_color_entries">
+        <item>Chaguomsingi</item>
+        <item>Bluu</item>
+        <item>Kijani</item>
+        <item>Zambarau</item>
+        <item>Kahawia</item>
+    </string-array>
+    <string-array name="no_word_model_entries">
+        <item>Zima</item>
+        <item>Mahali popote</item>
+        <item>Kwenye wijeti</item>
+    </string-array>
+    <string-array name="no_word_model_entries_not_support_only_widget_no_word">
+        <item>Zima</item>
+        <item>Mahali popote</item>
+    </string-array>
+    <string-array name="transformation_entries">
+        <item>Telezesha</item>
+        <item>Fifisha kikando</item>
+        <item>Angusha</item>
+        <item>Ukurasa</item>
+        <item>Kaskedi</item>
+        <item>Zungusha</item>
+        <item>Mchemraba</item>
+    </string-array>
+</resources>

@@ -1,6 +1,5 @@
 .class public Lcom/market/sdk/utils/Connection$Parameter;
 .super Ljava/lang/Object;
-.source "Connection.java"
 
 
 # annotations
@@ -35,7 +34,6 @@
 
     const/4 v0, 0x1
 
-    .line 418
     invoke-direct {p0, p1, v0}, Lcom/market/sdk/utils/Connection$Parameter;-><init>(Lcom/market/sdk/utils/Connection;Z)V
 
     return-void
@@ -44,12 +42,10 @@
 .method public constructor <init>(Lcom/market/sdk/utils/Connection;Z)V
     .locals 1
 
-    .line 421
     iput-object p1, p0, Lcom/market/sdk/utils/Connection$Parameter;->this$0:Lcom/market/sdk/utils/Connection;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 422
     new-instance v0, Ljava/util/TreeMap;
 
     invoke-direct {v0}, Ljava/util/TreeMap;-><init>()V
@@ -58,7 +54,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 425
     iput-object p0, p1, Lcom/market/sdk/utils/Connection;->mParameter:Lcom/market/sdk/utils/Connection$Parameter;
 
     :cond_0
@@ -70,7 +65,6 @@
 .method public add(Ljava/lang/String;Ljava/lang/String;)Lcom/market/sdk/utils/Connection$Parameter;
     .locals 1
 
-    .line 430
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -85,13 +79,10 @@
 
     goto :goto_0
 
-    .line 433
     :cond_0
     iget-object v0, p0, Lcom/market/sdk/utils/Connection$Parameter;->params:Ljava/util/TreeMap;
 
     invoke-virtual {v0, p1, p2}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p0
 
     :cond_1
     :goto_0
@@ -103,16 +94,14 @@
 
     if-eqz p2, :cond_0
 
-    .line 439
     iget-object p2, p0, Lcom/market/sdk/utils/Connection$Parameter;->params:Ljava/util/TreeMap;
 
-    const-string v0, "true"
+    const-string/jumbo v0, "true"
 
     invoke-virtual {p2, p1, v0}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
-    .line 441
     :cond_0
     iget-object p2, p0, Lcom/market/sdk/utils/Connection$Parameter;->params:Ljava/util/TreeMap;
 
@@ -125,22 +114,21 @@
 .end method
 
 .method public get(Ljava/lang/String;)Ljava/lang/String;
-    .locals 1
+    .locals 0
 
-    .line 447
-    iget-object v0, p0, Lcom/market/sdk/utils/Connection$Parameter;->params:Ljava/util/TreeMap;
+    iget-object p0, p0, Lcom/market/sdk/utils/Connection$Parameter;->params:Ljava/util/TreeMap;
 
-    invoke-virtual {v0, p1}, Ljava/util/TreeMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Ljava/util/TreeMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Ljava/lang/String;
+    check-cast p0, Ljava/lang/String;
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public getParams()Ljava/util/TreeMap;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -151,29 +139,26 @@
         }
     .end annotation
 
-    .line 472
-    iget-object v0, p0, Lcom/market/sdk/utils/Connection$Parameter;->params:Ljava/util/TreeMap;
+    iget-object p0, p0, Lcom/market/sdk/utils/Connection$Parameter;->params:Ljava/util/TreeMap;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public isEmpty()Z
-    .locals 1
+    .locals 0
 
-    .line 451
-    iget-object v0, p0, Lcom/market/sdk/utils/Connection$Parameter;->params:Ljava/util/TreeMap;
+    iget-object p0, p0, Lcom/market/sdk/utils/Connection$Parameter;->params:Ljava/util/TreeMap;
 
-    invoke-virtual {v0}, Ljava/util/TreeMap;->isEmpty()Z
+    invoke-virtual {p0}, Ljava/util/TreeMap;->isEmpty()Z
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .line 455
     iget-object v0, p0, Lcom/market/sdk/utils/Connection$Parameter;->params:Ljava/util/TreeMap;
 
     invoke-virtual {v0}, Ljava/util/TreeMap;->isEmpty()Z
@@ -182,17 +167,15 @@
 
     if-eqz v0, :cond_0
 
-    const-string v0, ""
+    const-string p0, ""
 
-    return-object v0
+    return-object p0
 
-    .line 458
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 459
     iget-object v1, p0, Lcom/market/sdk/utils/Connection$Parameter;->params:Ljava/util/TreeMap;
 
     invoke-virtual {v1}, Ljava/util/TreeMap;->keySet()Ljava/util/Set;
@@ -216,15 +199,12 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 460
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v3, "="
 
-    .line 461
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 463
     :try_start_0
     iget-object v3, p0, Lcom/market/sdk/utils/Connection$Parameter;->params:Ljava/util/TreeMap;
 
@@ -247,26 +227,24 @@
     :catch_0
     const-string v2, "&"
 
-    .line 466
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
-    .line 468
     :cond_1
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
 
-    move-result v1
+    move-result p0
 
-    add-int/lit8 v1, v1, -0x1
+    add-int/lit8 p0, p0, -0x1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->deleteCharAt(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->deleteCharAt(I)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    move-result-object p0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

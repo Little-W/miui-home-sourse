@@ -1,6 +1,5 @@
 .class public interface abstract Lcom/android/systemui/shared/recents/IOverviewProxy;
 .super Ljava/lang/Object;
-.source "IOverviewProxy.java"
 
 # interfaces
 .implements Landroid/os/IInterface;
@@ -9,7 +8,8 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/systemui/shared/recents/IOverviewProxy$Stub;
+        Lcom/android/systemui/shared/recents/IOverviewProxy$Stub;,
+        Lcom/android/systemui/shared/recents/IOverviewProxy$Default;
     }
 .end annotation
 
@@ -47,6 +47,30 @@
     .end annotation
 .end method
 
+.method public abstract onFocusNotifClicked()V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract onFocusNotifyAnimFinish()V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract onFocusedNotifUpdate(Ljava/lang/String;Landroid/graphics/drawable/Icon;Landroid/graphics/Rect;)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract onInitialize(Landroid/os/Bundle;)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -72,6 +96,14 @@
 .end method
 
 .method public abstract onOverviewToggle()V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract onStatusBarLaunchAnimFinish()V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;

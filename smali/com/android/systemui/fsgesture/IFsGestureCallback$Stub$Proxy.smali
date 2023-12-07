@@ -1,6 +1,5 @@
 .class Lcom/android/systemui/fsgesture/IFsGestureCallback$Stub$Proxy;
 .super Ljava/lang/Object;
-.source "IFsGestureCallback.java"
 
 # interfaces
 .implements Lcom/android/systemui/fsgesture/IFsGestureCallback;
@@ -17,6 +16,10 @@
 .end annotation
 
 
+# static fields
+.field public static sDefaultImpl:Lcom/android/systemui/fsgesture/IFsGestureCallback;
+
+
 # instance fields
 .field private mRemote:Landroid/os/IBinder;
 
@@ -25,10 +28,8 @@
 .method constructor <init>(Landroid/os/IBinder;)V
     .locals 0
 
-    .line 115
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 116
     iput-object p1, p0, Lcom/android/systemui/fsgesture/IFsGestureCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-void
@@ -37,103 +38,137 @@
 
 # virtual methods
 .method public asBinder()Landroid/os/IBinder;
-    .locals 1
+    .locals 0
 
-    .line 120
-    iget-object v0, p0, Lcom/android/systemui/fsgesture/IFsGestureCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+    iget-object p0, p0, Lcom/android/systemui/fsgesture/IFsGestureCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public changeAlphaScale(FFIIIIZ)V
-    .locals 2
+    .locals 10
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
         }
     .end annotation
 
-    .line 128
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
-    move-result-object v0
+    move-result-object v1
 
     :try_start_0
-    const-string v1, "com.android.systemui.fsgesture.IFsGestureCallback"
+    const-string v0, "com.android.systemui.fsgesture.IFsGestureCallback"
 
-    .line 130
-    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+    invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 131
-    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeFloat(F)V
+    move v0, p1
 
-    .line 132
-    invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeFloat(F)V
+    invoke-virtual {v1, p1}, Landroid/os/Parcel;->writeFloat(F)V
 
-    .line 133
-    invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeInt(I)V
+    move v4, p2
 
-    .line 134
-    invoke-virtual {v0, p4}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {v1, p2}, Landroid/os/Parcel;->writeFloat(F)V
 
-    .line 135
-    invoke-virtual {v0, p5}, Landroid/os/Parcel;->writeInt(I)V
+    move v5, p3
 
-    .line 136
-    invoke-virtual {v0, p6}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {v1, p3}, Landroid/os/Parcel;->writeInt(I)V
 
-    const/4 p1, 0x1
+    move v6, p4
+
+    invoke-virtual {v1, p4}, Landroid/os/Parcel;->writeInt(I)V
+
+    move v7, p5
+
+    invoke-virtual {v1, p5}, Landroid/os/Parcel;->writeInt(I)V
+
+    move/from16 v8, p6
+
+    invoke-virtual {v1, v8}, Landroid/os/Parcel;->writeInt(I)V
+
+    const/4 v2, 0x1
 
     if-eqz p7, :cond_0
 
-    move p2, p1
+    move v3, v2
 
     goto :goto_0
 
     :cond_0
-    const/4 p2, 0x0
+    const/4 v3, 0x0
 
-    .line 137
     :goto_0
-    invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {v1, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 138
-    iget-object p2, p0, Lcom/android/systemui/fsgesture/IFsGestureCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+    move-object v3, p0
 
-    const/4 p3, 0x0
+    iget-object v3, v3, Lcom/android/systemui/fsgesture/IFsGestureCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
-    invoke-interface {p2, p1, v0, p3, p1}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    const/4 v9, 0x0
+
+    invoke-interface {v3, v2, v1, v9, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    invoke-static {}, Lcom/android/systemui/fsgesture/IFsGestureCallback$Stub;->getDefaultImpl()Lcom/android/systemui/fsgesture/IFsGestureCallback;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_1
+
+    invoke-static {}, Lcom/android/systemui/fsgesture/IFsGestureCallback$Stub;->getDefaultImpl()Lcom/android/systemui/fsgesture/IFsGestureCallback;
+
+    move-result-object v2
+
+    move v3, p1
+
+    move v4, p2
+
+    move v5, p3
+
+    move v6, p4
+
+    move v7, p5
+
+    move/from16 v8, p6
+
+    move/from16 v9, p7
+
+    invoke-interface/range {v2 .. v9}, Lcom/android/systemui/fsgesture/IFsGestureCallback;->changeAlphaScale(FFIIIIZ)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 141
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :cond_1
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
     return-void
 
     :catchall_0
-    move-exception p1
+    move-exception v0
 
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 142
-    throw p1
+    throw v0
 .end method
 
 .method public getSpec(Ljava/lang/String;I)Lcom/android/systemui/fsgesture/TransitionAnimationSpec;
-    .locals 3
+    .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
         }
     .end annotation
 
-    .line 146
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 147
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -141,81 +176,96 @@
     :try_start_0
     const-string v2, "com.android.systemui.fsgesture.IFsGestureCallback"
 
-    .line 150
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 151
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 152
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 153
-    iget-object p1, p0, Lcom/android/systemui/fsgesture/IFsGestureCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+    iget-object p0, p0, Lcom/android/systemui/fsgesture/IFsGestureCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
-    const/4 p2, 0x2
+    const/4 v2, 0x2
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    invoke-interface {p1, p2, v0, v1, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 154
-    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+    move-result p0
 
-    .line 155
-    invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
+    if-nez p0, :cond_0
 
-    move-result p1
+    invoke-static {}, Lcom/android/systemui/fsgesture/IFsGestureCallback$Stub;->getDefaultImpl()Lcom/android/systemui/fsgesture/IFsGestureCallback;
 
-    if-eqz p1, :cond_0
+    move-result-object p0
 
-    .line 156
-    sget-object p1, Lcom/android/systemui/fsgesture/TransitionAnimationSpec;->CREATOR:Landroid/os/Parcelable$Creator;
+    if-eqz p0, :cond_0
 
-    invoke-interface {p1, v1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    invoke-static {}, Lcom/android/systemui/fsgesture/IFsGestureCallback$Stub;->getDefaultImpl()Lcom/android/systemui/fsgesture/IFsGestureCallback;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Lcom/android/systemui/fsgesture/TransitionAnimationSpec;
+    invoke-interface {p0, p1, p2}, Lcom/android/systemui/fsgesture/IFsGestureCallback;->getSpec(Ljava/lang/String;I)Lcom/android/systemui/fsgesture/TransitionAnimationSpec;
+
+    move-result-object p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-object p0
+
+    :cond_0
+    :try_start_1
+    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
+
+    move-result p0
+
+    if-eqz p0, :cond_1
+
+    sget-object p0, Lcom/android/systemui/fsgesture/TransitionAnimationSpec;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-interface {p0, v1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/android/systemui/fsgesture/TransitionAnimationSpec;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
-    :cond_0
-    const/4 p1, 0x0
+    :cond_1
+    const/4 p0, 0x0
 
-    .line 163
     :goto_0
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 164
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    return-object p1
+    return-object p0
 
     :catchall_0
-    move-exception p1
+    move-exception p0
 
-    .line 163
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 164
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 165
-    throw p1
+    throw p0
 .end method
 
 .method public notifyHomeModeFsGestureStart()V
-    .locals 5
+    .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
         }
     .end annotation
 
-    .line 192
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
@@ -223,45 +273,61 @@
     :try_start_0
     const-string v1, "com.android.systemui.fsgesture.IFsGestureCallback"
 
-    .line 194
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 195
-    iget-object v1, p0, Lcom/android/systemui/fsgesture/IFsGestureCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+    iget-object p0, p0, Lcom/android/systemui/fsgesture/IFsGestureCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
-    const/4 v2, 0x5
+    const/4 v1, 0x5
 
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
-    const/4 v4, 0x1
+    const/4 v3, 0x1
 
-    invoke-interface {v1, v2, v0, v3, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    invoke-interface {p0, v1, v0, v2, v3}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    move-result p0
+
+    if-nez p0, :cond_0
+
+    invoke-static {}, Lcom/android/systemui/fsgesture/IFsGestureCallback$Stub;->getDefaultImpl()Lcom/android/systemui/fsgesture/IFsGestureCallback;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    invoke-static {}, Lcom/android/systemui/fsgesture/IFsGestureCallback$Stub;->getDefaultImpl()Lcom/android/systemui/fsgesture/IFsGestureCallback;
+
+    move-result-object p0
+
+    invoke-interface {p0}, Lcom/android/systemui/fsgesture/IFsGestureCallback;->notifyHomeModeFsGestureStart()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 198
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :cond_0
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
 
     :catchall_0
-    move-exception v1
+    move-exception p0
 
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 199
-    throw v1
+    throw p0
 .end method
 
 .method public notifyMiuiAnimationEnd()V
-    .locals 5
+    .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
         }
     .end annotation
 
-    .line 181
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
@@ -269,45 +335,61 @@
     :try_start_0
     const-string v1, "com.android.systemui.fsgesture.IFsGestureCallback"
 
-    .line 183
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 184
-    iget-object v1, p0, Lcom/android/systemui/fsgesture/IFsGestureCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+    iget-object p0, p0, Lcom/android/systemui/fsgesture/IFsGestureCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
-    const/4 v2, 0x4
+    const/4 v1, 0x4
 
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
-    const/4 v4, 0x1
+    const/4 v3, 0x1
 
-    invoke-interface {v1, v2, v0, v3, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    invoke-interface {p0, v1, v0, v2, v3}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    move-result p0
+
+    if-nez p0, :cond_0
+
+    invoke-static {}, Lcom/android/systemui/fsgesture/IFsGestureCallback$Stub;->getDefaultImpl()Lcom/android/systemui/fsgesture/IFsGestureCallback;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    invoke-static {}, Lcom/android/systemui/fsgesture/IFsGestureCallback$Stub;->getDefaultImpl()Lcom/android/systemui/fsgesture/IFsGestureCallback;
+
+    move-result-object p0
+
+    invoke-interface {p0}, Lcom/android/systemui/fsgesture/IFsGestureCallback;->notifyMiuiAnimationEnd()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 187
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :cond_0
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
 
     :catchall_0
-    move-exception v1
+    move-exception p0
 
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 188
-    throw v1
+    throw p0
 .end method
 
 .method public notifyMiuiAnimationStart()V
-    .locals 5
+    .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
         }
     .end annotation
 
-    .line 170
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
@@ -315,32 +397,49 @@
     :try_start_0
     const-string v1, "com.android.systemui.fsgesture.IFsGestureCallback"
 
-    .line 172
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 173
-    iget-object v1, p0, Lcom/android/systemui/fsgesture/IFsGestureCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+    iget-object p0, p0, Lcom/android/systemui/fsgesture/IFsGestureCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
-    const/4 v2, 0x3
+    const/4 v1, 0x3
 
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
-    const/4 v4, 0x1
+    const/4 v3, 0x1
 
-    invoke-interface {v1, v2, v0, v3, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    invoke-interface {p0, v1, v0, v2, v3}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    move-result p0
+
+    if-nez p0, :cond_0
+
+    invoke-static {}, Lcom/android/systemui/fsgesture/IFsGestureCallback$Stub;->getDefaultImpl()Lcom/android/systemui/fsgesture/IFsGestureCallback;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    invoke-static {}, Lcom/android/systemui/fsgesture/IFsGestureCallback$Stub;->getDefaultImpl()Lcom/android/systemui/fsgesture/IFsGestureCallback;
+
+    move-result-object p0
+
+    invoke-interface {p0}, Lcom/android/systemui/fsgesture/IFsGestureCallback;->notifyMiuiAnimationStart()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 176
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :cond_0
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
 
     :catchall_0
-    move-exception v1
+    move-exception p0
 
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 177
-    throw v1
+    throw p0
 .end method

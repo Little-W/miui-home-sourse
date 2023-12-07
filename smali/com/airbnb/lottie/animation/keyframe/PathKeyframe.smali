@@ -1,6 +1,5 @@
 .class public Lcom/airbnb/lottie/animation/keyframe/PathKeyframe;
 .super Lcom/airbnb/lottie/value/Keyframe;
-.source "PathKeyframe.java"
 
 
 # annotations
@@ -29,7 +28,7 @@
 
 # direct methods
 .method public constructor <init>(Lcom/airbnb/lottie/LottieComposition;Lcom/airbnb/lottie/value/Keyframe;)V
-    .locals 9
+    .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -40,31 +39,36 @@
         }
     .end annotation
 
-    .line 18
-    iget-object v2, p2, Lcom/airbnb/lottie/value/Keyframe;->startValue:Ljava/lang/Object;
+    iget-object v0, p2, Lcom/airbnb/lottie/value/Keyframe;->startValue:Ljava/lang/Object;
 
-    iget-object v3, p2, Lcom/airbnb/lottie/value/Keyframe;->endValue:Ljava/lang/Object;
+    move-object v3, v0
 
-    iget-object v4, p2, Lcom/airbnb/lottie/value/Keyframe;->interpolator:Landroid/view/animation/Interpolator;
+    check-cast v3, Landroid/graphics/PointF;
 
-    iget-object v5, p2, Lcom/airbnb/lottie/value/Keyframe;->xInterpolator:Landroid/view/animation/Interpolator;
+    iget-object v0, p2, Lcom/airbnb/lottie/value/Keyframe;->endValue:Ljava/lang/Object;
 
-    iget-object v6, p2, Lcom/airbnb/lottie/value/Keyframe;->yInterpolator:Landroid/view/animation/Interpolator;
+    move-object v4, v0
 
-    iget v7, p2, Lcom/airbnb/lottie/value/Keyframe;->startFrame:F
+    check-cast v4, Landroid/graphics/PointF;
 
-    iget-object v8, p2, Lcom/airbnb/lottie/value/Keyframe;->endFrame:Ljava/lang/Float;
+    iget-object v5, p2, Lcom/airbnb/lottie/value/Keyframe;->interpolator:Landroid/view/animation/Interpolator;
 
-    move-object v0, p0
+    iget-object v6, p2, Lcom/airbnb/lottie/value/Keyframe;->xInterpolator:Landroid/view/animation/Interpolator;
 
-    move-object v1, p1
+    iget-object v7, p2, Lcom/airbnb/lottie/value/Keyframe;->yInterpolator:Landroid/view/animation/Interpolator;
 
-    invoke-direct/range {v0 .. v8}, Lcom/airbnb/lottie/value/Keyframe;-><init>(Lcom/airbnb/lottie/LottieComposition;Ljava/lang/Object;Ljava/lang/Object;Landroid/view/animation/Interpolator;Landroid/view/animation/Interpolator;Landroid/view/animation/Interpolator;FLjava/lang/Float;)V
+    iget v8, p2, Lcom/airbnb/lottie/value/Keyframe;->startFrame:F
 
-    .line 20
+    iget-object v9, p2, Lcom/airbnb/lottie/value/Keyframe;->endFrame:Ljava/lang/Float;
+
+    move-object v1, p0
+
+    move-object v2, p1
+
+    invoke-direct/range {v1 .. v9}, Lcom/airbnb/lottie/value/Keyframe;-><init>(Lcom/airbnb/lottie/LottieComposition;Ljava/lang/Object;Ljava/lang/Object;Landroid/view/animation/Interpolator;Landroid/view/animation/Interpolator;Landroid/view/animation/Interpolator;FLjava/lang/Float;)V
+
     iput-object p2, p0, Lcom/airbnb/lottie/animation/keyframe/PathKeyframe;->pointKeyFrame:Lcom/airbnb/lottie/value/Keyframe;
 
-    .line 21
     invoke-virtual {p0}, Lcom/airbnb/lottie/animation/keyframe/PathKeyframe;->createPath()V
 
     return-void
@@ -75,7 +79,6 @@
 .method public createPath()V
     .locals 4
 
-    .line 27
     iget-object v0, p0, Lcom/airbnb/lottie/animation/keyframe/PathKeyframe;->endValue:Ljava/lang/Object;
 
     if-eqz v0, :cond_0
@@ -100,7 +103,6 @@
 
     iget v2, v2, Landroid/graphics/PointF;->y:F
 
-    .line 28
     invoke-virtual {v0, v1, v2}, Landroid/graphics/PointF;->equals(FF)Z
 
     move-result v0
@@ -114,7 +116,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 29
     :goto_0
     iget-object v1, p0, Lcom/airbnb/lottie/animation/keyframe/PathKeyframe;->startValue:Ljava/lang/Object;
 
@@ -126,7 +127,6 @@
 
     if-nez v0, :cond_1
 
-    .line 30
     iget-object v0, p0, Lcom/airbnb/lottie/animation/keyframe/PathKeyframe;->startValue:Ljava/lang/Object;
 
     check-cast v0, Landroid/graphics/PointF;
@@ -154,10 +154,9 @@
 .end method
 
 .method getPath()Landroid/graphics/Path;
-    .locals 1
+    .locals 0
 
-    .line 38
-    iget-object v0, p0, Lcom/airbnb/lottie/animation/keyframe/PathKeyframe;->path:Landroid/graphics/Path;
+    iget-object p0, p0, Lcom/airbnb/lottie/animation/keyframe/PathKeyframe;->path:Landroid/graphics/Path;
 
-    return-object v0
+    return-object p0
 .end method

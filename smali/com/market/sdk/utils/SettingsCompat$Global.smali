@@ -1,6 +1,5 @@
 .class public Lcom/market/sdk/utils/SettingsCompat$Global;
 .super Ljava/lang/Object;
-.source "SettingsCompat.java"
 
 
 # annotations
@@ -18,7 +17,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,7 +27,6 @@
 
     const/4 v0, 0x0
 
-    .line 45
     invoke-static {p0, p1, v0}, Lcom/market/sdk/utils/SettingsCompat$Global;->getInt(Landroid/content/Context;Ljava/lang/String;I)I
 
     move-result p0
@@ -45,7 +42,6 @@
 .method public static getInt(Landroid/content/Context;Ljava/lang/String;I)I
     .locals 0
 
-    .line 19
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -62,12 +58,11 @@
     :catch_0
     move-exception p0
 
-    const-string p1, "SettingsCompat"
-
-    .line 21
     invoke-virtual {p0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
     move-result-object p0
+
+    const-string p1, "SettingsCompat"
 
     invoke-static {p1, p0}, Lcom/market/sdk/utils/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -77,7 +72,6 @@
 .method public static getLong(Landroid/content/Context;Ljava/lang/String;J)J
     .locals 0
 
-    .line 28
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -94,12 +88,11 @@
     :catch_0
     move-exception p0
 
-    const-string p1, "SettingsCompat"
-
-    .line 30
     invoke-virtual {p0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
     move-result-object p0
+
+    const-string p1, "SettingsCompat"
 
     invoke-static {p1, p0}, Lcom/market/sdk/utils/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -109,7 +102,6 @@
 .method public static getString(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    .line 37
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -126,12 +118,11 @@
     :catch_0
     move-exception p0
 
-    const-string p1, "SettingsCompat"
-
-    .line 39
     invoke-virtual {p0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
     move-result-object p0
+
+    const-string p1, "SettingsCompat"
 
     invoke-static {p1, p0}, Lcom/market/sdk/utils/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 

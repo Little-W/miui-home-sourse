@@ -1,6 +1,5 @@
 .class public abstract Landroidx/fragment/app/FragmentManager$FragmentLifecycleCallbacks;
 .super Ljava/lang/Object;
-.source "FragmentManager.java"
 
 
 # annotations
@@ -12,6 +11,16 @@
     accessFlags = 0x409
     name = "FragmentLifecycleCallbacks"
 .end annotation
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods

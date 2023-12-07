@@ -1,6 +1,5 @@
 .class public Lcom/airbnb/lottie/parser/AnimatableValueParser;
 .super Ljava/lang/Object;
-.source "AnimatableValueParser.java"
 
 
 # direct methods
@@ -30,7 +29,6 @@
 
     const/4 v0, 0x0
 
-    .line 85
     invoke-static {p0, p2, p1, p3, v0}, Lcom/airbnb/lottie/parser/KeyframesParser;->parse(Lcom/airbnb/lottie/parser/moshi/JsonReader;Lcom/airbnb/lottie/LottieComposition;FLcom/airbnb/lottie/parser/ValueParser;Z)Ljava/util/List;
 
     move-result-object p0
@@ -65,7 +63,6 @@
 
     const/4 v1, 0x0
 
-    .line 77
     invoke-static {p0, p1, v0, p2, v1}, Lcom/airbnb/lottie/parser/KeyframesParser;->parse(Lcom/airbnb/lottie/parser/moshi/JsonReader;Lcom/airbnb/lottie/LottieComposition;FLcom/airbnb/lottie/parser/ValueParser;Z)Ljava/util/List;
 
     move-result-object p0
@@ -81,7 +78,6 @@
         }
     .end annotation
 
-    .line 63
     new-instance v0, Lcom/airbnb/lottie/model/animatable/AnimatableColorValue;
 
     sget-object v1, Lcom/airbnb/lottie/parser/ColorParser;->INSTANCE:Lcom/airbnb/lottie/parser/ColorParser;
@@ -103,7 +99,6 @@
         }
     .end annotation
 
-    .line 58
     new-instance v0, Lcom/airbnb/lottie/model/animatable/AnimatableTextFrame;
 
     sget-object v1, Lcom/airbnb/lottie/parser/DocumentDataParser;->INSTANCE:Lcom/airbnb/lottie/parser/DocumentDataParser;
@@ -127,7 +122,6 @@
 
     const/4 v0, 0x1
 
-    .line 26
     invoke-static {p0, p1, v0}, Lcom/airbnb/lottie/parser/AnimatableValueParser;->parseFloat(Lcom/airbnb/lottie/parser/moshi/JsonReader;Lcom/airbnb/lottie/LottieComposition;Z)Lcom/airbnb/lottie/model/animatable/AnimatableFloatValue;
 
     move-result-object p0
@@ -143,12 +137,10 @@
         }
     .end annotation
 
-    .line 31
     new-instance v0, Lcom/airbnb/lottie/model/animatable/AnimatableFloatValue;
 
     if-eqz p2, :cond_0
 
-    .line 32
     invoke-static {}, Lcom/airbnb/lottie/utils/Utils;->dpScale()F
 
     move-result p2
@@ -178,14 +170,12 @@
         }
     .end annotation
 
-    .line 68
     new-instance v0, Lcom/airbnb/lottie/model/animatable/AnimatableGradientColorValue;
 
     new-instance v1, Lcom/airbnb/lottie/parser/GradientColorParser;
 
     invoke-direct {v1, p2}, Lcom/airbnb/lottie/parser/GradientColorParser;-><init>(I)V
 
-    .line 69
     invoke-static {p0, p1, v1}, Lcom/airbnb/lottie/parser/AnimatableValueParser;->parse(Lcom/airbnb/lottie/parser/moshi/JsonReader;Lcom/airbnb/lottie/LottieComposition;Lcom/airbnb/lottie/parser/ValueParser;)Ljava/util/List;
 
     move-result-object p0
@@ -203,7 +193,6 @@
         }
     .end annotation
 
-    .line 37
     new-instance v0, Lcom/airbnb/lottie/model/animatable/AnimatableIntegerValue;
 
     sget-object v1, Lcom/airbnb/lottie/parser/IntegerParser;->INSTANCE:Lcom/airbnb/lottie/parser/IntegerParser;
@@ -225,7 +214,6 @@
         }
     .end annotation
 
-    .line 42
     new-instance v0, Lcom/airbnb/lottie/model/animatable/AnimatablePointValue;
 
     invoke-static {}, Lcom/airbnb/lottie/utils/Utils;->dpScale()F
@@ -253,7 +241,6 @@
         }
     .end annotation
 
-    .line 47
     new-instance v0, Lcom/airbnb/lottie/model/animatable/AnimatableScaleValue;
 
     sget-object v1, Lcom/airbnb/lottie/parser/ScaleXYParser;->INSTANCE:Lcom/airbnb/lottie/parser/ScaleXYParser;
@@ -275,10 +262,8 @@
         }
     .end annotation
 
-    .line 52
     new-instance v0, Lcom/airbnb/lottie/model/animatable/AnimatableShapeValue;
 
-    .line 53
     invoke-static {}, Lcom/airbnb/lottie/utils/Utils;->dpScale()F
 
     move-result v1

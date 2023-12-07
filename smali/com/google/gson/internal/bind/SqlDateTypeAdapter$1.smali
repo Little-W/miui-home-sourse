@@ -1,6 +1,5 @@
-.class final Lcom/google/gson/internal/bind/SqlDateTypeAdapter$1;
+.class Lcom/google/gson/internal/bind/SqlDateTypeAdapter$1;
 .super Ljava/lang/Object;
-.source "SqlDateTypeAdapter.java"
 
 # interfaces
 .implements Lcom/google/gson/TypeAdapterFactory;
@@ -12,7 +11,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
@@ -21,7 +20,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,24 +42,23 @@
         }
     .end annotation
 
-    .line 42
     invoke-virtual {p2}, Lcom/google/gson/reflect/TypeToken;->getRawType()Ljava/lang/Class;
 
-    move-result-object p1
+    move-result-object p0
 
-    const-class p2, Ljava/sql/Date;
+    const-class p1, Ljava/sql/Date;
 
-    if-ne p1, p2, :cond_0
+    if-ne p0, p1, :cond_0
 
-    new-instance p1, Lcom/google/gson/internal/bind/SqlDateTypeAdapter;
+    new-instance p0, Lcom/google/gson/internal/bind/SqlDateTypeAdapter;
 
-    invoke-direct {p1}, Lcom/google/gson/internal/bind/SqlDateTypeAdapter;-><init>()V
+    invoke-direct {p0}, Lcom/google/gson/internal/bind/SqlDateTypeAdapter;-><init>()V
 
     goto :goto_0
 
     :cond_0
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
     :goto_0
-    return-object p1
+    return-object p0
 .end method

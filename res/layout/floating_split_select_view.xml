@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.miui.home.recents.views.FloatingTaskView android:background="@drawable/bg_floating_taskview" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.miui.home.recents.views.FloatingTaskThumbnailView android:id="@id/thumbnail" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ImageView android:layout_gravity="center" android:id="@id/icon_imageview" android:layout_width="50.0dip" android:layout_height="50.0dip" />
+</com.miui.home.recents.views.FloatingTaskView>

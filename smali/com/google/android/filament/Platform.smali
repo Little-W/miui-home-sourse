@@ -1,6 +1,5 @@
 .class abstract Lcom/google/android/filament/Platform;
 .super Ljava/lang/Object;
-.source "Platform.java"
 
 
 # annotations
@@ -25,7 +24,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 62
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,12 +32,10 @@
 .method static get()Lcom/google/android/filament/Platform;
     .locals 2
 
-    .line 43
     sget-object v0, Lcom/google/android/filament/Platform;->mCurrentPlatform:Lcom/google/android/filament/Platform;
 
     if-nez v0, :cond_1
 
-    .line 46
     :try_start_0
     invoke-static {}, Lcom/google/android/filament/Platform;->isAndroid()Z
 
@@ -49,12 +45,10 @@
 
     const-string v0, "com.google.android.filament.AndroidPlatform"
 
-    .line 47
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 48
     invoke-virtual {v0}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
 
     move-result-object v0
@@ -68,12 +62,10 @@
     :cond_0
     const-string v0, "com.google.android.filament.DesktopPlatform"
 
-    .line 50
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 51
     invoke-virtual {v0}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
 
     move-result-object v0
@@ -84,14 +76,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 55
     :catch_0
     :goto_0
     sget-object v0, Lcom/google/android/filament/Platform;->mCurrentPlatform:Lcom/google/android/filament/Platform;
 
     if-nez v0, :cond_1
 
-    .line 56
     new-instance v0, Lcom/google/android/filament/Platform$UnknownPlatform;
 
     const/4 v1, 0x0
@@ -100,7 +90,6 @@
 
     sput-object v0, Lcom/google/android/filament/Platform;->mCurrentPlatform:Lcom/google/android/filament/Platform;
 
-    .line 59
     :cond_1
     sget-object v0, Lcom/google/android/filament/Platform;->mCurrentPlatform:Lcom/google/android/filament/Platform;
 
@@ -110,16 +99,15 @@
 .method static isAndroid()Z
     .locals 2
 
-    const-string v0, "The Android Project"
+    const-string v0, "java.vendor"
 
-    const-string v1, "java.vendor"
+    invoke-static {v0}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 25
-    invoke-static {v1}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object v1
+    const-string v1, "The Android Project"
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -131,7 +119,6 @@
 
     const-string v0, "os.name"
 
-    .line 38
     invoke-static {v0}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -166,7 +153,6 @@
 
     const-string v0, "os.name"
 
-    .line 33
     invoke-static {v0}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -185,7 +171,6 @@
 
     const-string v0, "os.name"
 
-    .line 29
     invoke-static {v0}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0

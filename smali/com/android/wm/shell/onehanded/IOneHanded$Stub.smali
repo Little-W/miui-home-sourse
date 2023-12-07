@@ -1,6 +1,5 @@
 .class public abstract Lcom/android/wm/shell/onehanded/IOneHanded$Stub;
 .super Landroid/os/Binder;
-.source "IOneHanded.java"
 
 # interfaces
 .implements Lcom/android/wm/shell/onehanded/IOneHanded;
@@ -36,28 +35,32 @@
     :cond_0
     const-string v0, "com.android.wm.shell.onehanded.IOneHanded"
 
-    .line 42
     invoke-interface {p0, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 43
     instance-of v1, v0, Lcom/android/wm/shell/onehanded/IOneHanded;
 
     if-eqz v1, :cond_1
 
-    .line 44
     check-cast v0, Lcom/android/wm/shell/onehanded/IOneHanded;
 
     return-object v0
 
-    .line 46
     :cond_1
     new-instance v0, Lcom/android/wm/shell/onehanded/IOneHanded$Stub$Proxy;
 
     invoke-direct {v0, p0}, Lcom/android/wm/shell/onehanded/IOneHanded$Stub$Proxy;-><init>(Landroid/os/IBinder;)V
+
+    return-object v0
+.end method
+
+.method public static getDefaultImpl()Lcom/android/wm/shell/onehanded/IOneHanded;
+    .locals 1
+
+    sget-object v0, Lcom/android/wm/shell/onehanded/IOneHanded$Stub$Proxy;->sDefaultImpl:Lcom/android/wm/shell/onehanded/IOneHanded;
 
     return-object v0
 .end method
@@ -72,50 +75,44 @@
         }
     .end annotation
 
-    const-string v0, "com.android.wm.shell.onehanded.IOneHanded"
+    const/4 v0, 0x2
 
-    const v1, 0x5f4e5446
+    const/4 v1, 0x1
 
-    const/4 v2, 0x1
+    const-string v2, "com.android.wm.shell.onehanded.IOneHanded"
 
-    if-eq p1, v1, :cond_0
+    if-eq p1, v0, :cond_2
 
-    packed-switch p1, :pswitch_data_0
+    const/4 v0, 0x3
 
-    .line 76
+    if-eq p1, v0, :cond_1
+
+    const v0, 0x5f4e5446
+
+    if-eq p1, v0, :cond_0
+
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 
-    .line 70
-    :pswitch_0
-    invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    :cond_0
+    invoke-virtual {p3, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 71
+    return v1
+
+    :cond_1
+    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
     invoke-virtual {p0}, Lcom/android/wm/shell/onehanded/IOneHanded$Stub;->stopOneHanded()V
 
-    return v2
+    return v1
 
-    .line 64
-    :pswitch_1
-    invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    :cond_2
+    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 65
     invoke-virtual {p0}, Lcom/android/wm/shell/onehanded/IOneHanded$Stub;->startOneHanded()V
 
-    return v2
-
-    .line 59
-    :cond_0
-    invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    return v2
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return v1
 .end method

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RadioGroup android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/color_filter_group" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true" android:paddingEnd="@dimen/color_filter_padding_end" android:layout_marginStart="@dimen/color_filter_margin_end" />
+    <ImageView android:id="@id/color_filter_search_bar_icon" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/icon_search_light" android:tint="@color/search_bar_input_icon_tint_drawer_light" android:contentDescription="@string/gadget_search_label" android:paddingStart="@dimen/search_bar_padding_horizontal" android:paddingEnd="20.0dip" android:layout_alignParentEnd="true" />
+</RelativeLayout>

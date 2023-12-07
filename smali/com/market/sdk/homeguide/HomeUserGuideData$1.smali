@@ -1,6 +1,5 @@
-.class final Lcom/market/sdk/homeguide/HomeUserGuideData$1;
+.class Lcom/market/sdk/homeguide/HomeUserGuideData$1;
 .super Ljava/lang/Object;
-.source "HomeUserGuideData.java"
 
 # interfaces
 .implements Landroid/os/Parcelable$Creator;
@@ -12,7 +11,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
@@ -30,7 +29,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 60
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,43 +37,39 @@
 
 # virtual methods
 .method public createFromParcel(Landroid/os/Parcel;)Lcom/market/sdk/homeguide/HomeUserGuideData;
-    .locals 1
+    .locals 0
 
-    .line 63
-    new-instance v0, Lcom/market/sdk/homeguide/HomeUserGuideData;
+    new-instance p0, Lcom/market/sdk/homeguide/HomeUserGuideData;
 
-    invoke-direct {v0, p1}, Lcom/market/sdk/homeguide/HomeUserGuideData;-><init>(Landroid/os/Parcel;)V
+    invoke-direct {p0, p1}, Lcom/market/sdk/homeguide/HomeUserGuideData;-><init>(Landroid/os/Parcel;)V
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
-    .line 60
     invoke-virtual {p0, p1}, Lcom/market/sdk/homeguide/HomeUserGuideData$1;->createFromParcel(Landroid/os/Parcel;)Lcom/market/sdk/homeguide/HomeUserGuideData;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public newArray(I)[Lcom/market/sdk/homeguide/HomeUserGuideData;
     .locals 0
 
-    .line 68
-    new-array p1, p1, [Lcom/market/sdk/homeguide/HomeUserGuideData;
+    new-array p0, p1, [Lcom/market/sdk/homeguide/HomeUserGuideData;
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 60
     invoke-virtual {p0, p1}, Lcom/market/sdk/homeguide/HomeUserGuideData$1;->newArray(I)[Lcom/market/sdk/homeguide/HomeUserGuideData;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

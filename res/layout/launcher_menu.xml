@@ -9,21 +9,19 @@
     </com.miui.home.launcher.LauncherMenuItem>
     <com.miui.home.launcher.LauncherMenuItem android:id="@id/menu_no_word" android:layout_width="fill_parent" android:contentDescription="@string/menu_no_word" style="@style/menu_item">
         <com.miui.home.launcher.LauncherMenuItemTitle android:text="@string/menu_no_word" style="@style/menu_item_title" />
-        <miuix.slidingwidget.widget.SlidingButton android:layout_gravity="center_vertical" android:id="@id/no_word_sliding_button" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <miuix.appcompat.widget.Spinner android:layout_gravity="end|center" android:id="@id/no_word_Spinner" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
     </com.miui.home.launcher.LauncherMenuItem>
     <com.miui.home.launcher.LauncherMenuItem android:id="@id/menu_cells_setting" android:layout_width="fill_parent" android:contentDescription="@string/menu_cell_setting" style="@style/menu_item">
         <com.miui.home.launcher.LauncherMenuItemTitle android:text="@string/menu_cell_setting" style="@style/menu_item_title" />
-        <Button android:id="@id/cell_type_1" android:layout_marginEnd="16.659973dip" style="@style/menu_item_button" />
-        <Button android:id="@id/cell_type_2" style="@style/menu_item_button" />
-        <Button android:id="@id/cell_type_3" android:visibility="gone" android:layout_marginStart="16.659973dip" style="@style/menu_item_button" />
+        <miuix.appcompat.widget.Spinner android:layout_gravity="end|center" android:id="@id/spinner_in_dialog" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
     </com.miui.home.launcher.LauncherMenuItem>
     <com.miui.home.launcher.LauncherMenuItem android:id="@id/menu_auto_fill" android:layout_width="fill_parent" android:contentDescription="@string/menu_auto_fill_of_uninstall" style="@style/menu_item">
         <com.miui.home.launcher.LauncherMenuItemTitle android:text="@string/menu_auto_fill_of_uninstall" style="@style/menu_item_title" />
-        <miuix.slidingwidget.widget.SlidingButton android:layout_gravity="center_vertical" android:id="@id/auto_fill_sliding_button" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <miui.home.lib.dialog.widget.SlidingButtonMiuix3 android:layout_gravity="center_vertical" android:id="@id/auto_fill_sliding_button" android:layout_width="wrap_content" android:layout_height="wrap_content" />
     </com.miui.home.launcher.LauncherMenuItem>
     <com.miui.home.launcher.LauncherMenuItem android:id="@id/menu_lock" android:layout_width="fill_parent" android:contentDescription="@string/menu_lock" style="@style/menu_item">
         <com.miui.home.launcher.LauncherMenuItemTitle android:text="@string/menu_lock" style="@style/menu_item_title" />
-        <miuix.slidingwidget.widget.SlidingButton android:layout_gravity="center_vertical" android:id="@id/lock_sliding_button" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <miui.home.lib.dialog.widget.SlidingButtonMiuix3 android:layout_gravity="center_vertical" android:id="@id/lock_sliding_button" android:layout_width="wrap_content" android:layout_height="wrap_content" />
     </com.miui.home.launcher.LauncherMenuItem>
     <com.miui.home.launcher.LauncherMenuItem android:id="@id/menu_more" android:background="@drawable/launcher_menu_middle_item_bg" android:layout_width="fill_parent" android:contentDescription="@string/menu_more" style="@style/menu_item">
         <com.miui.home.launcher.LauncherMenuItemTitle android:text="@string/menu_more" style="@style/menu_item_title" />

@@ -1,10 +1,9 @@
 .class Lcom/airbnb/lottie/parser/CircleShapeParser;
 .super Ljava/lang/Object;
-.source "CircleShapeParser.java"
 
 
 # static fields
-.field private static NAMES:Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
+.field private static final NAMES:Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
 
 
 # direct methods
@@ -21,7 +20,6 @@
 
     const-string v4, "d"
 
-    .line 15
     filled-new-array {v0, v1, v2, v3, v4}, [Ljava/lang/String;
 
     move-result-object v0
@@ -45,25 +43,25 @@
 
     const/4 v0, 0x1
 
-    const/4 v1, 0x3
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    const/4 v2, 0x3
 
-    if-ne p2, v1, :cond_0
+    if-ne p2, v2, :cond_0
 
     move p2, v0
 
     goto :goto_0
 
     :cond_0
-    move p2, v2
+    move p2, v1
 
     :goto_0
     const/4 v3, 0x0
 
     move v8, p2
 
-    move v9, v2
+    move v9, v1
 
     move-object v5, v3
 
@@ -71,82 +69,84 @@
 
     move-object v7, v6
 
-    .line 34
     :goto_1
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->hasNext()Z
 
     move-result p2
 
-    if-eqz p2, :cond_2
+    if-eqz p2, :cond_7
 
-    .line 35
     sget-object p2, Lcom/airbnb/lottie/parser/CircleShapeParser;->NAMES:Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
 
     invoke-virtual {p0, p2}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->selectName(Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;)I
 
     move-result p2
 
-    packed-switch p2, :pswitch_data_0
+    if-eqz p2, :cond_6
 
-    .line 53
+    if-eq p2, v0, :cond_5
+
+    const/4 v3, 0x2
+
+    if-eq p2, v3, :cond_4
+
+    if-eq p2, v2, :cond_3
+
+    const/4 v3, 0x4
+
+    if-eq p2, v3, :cond_1
+
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->skipName()V
 
-    .line 54
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->skipValue()V
 
     goto :goto_1
 
-    .line 50
-    :pswitch_0
+    :cond_1
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextInt()I
 
     move-result p2
 
-    if-ne p2, v1, :cond_1
+    if-ne p2, v2, :cond_2
 
     move v8, v0
 
     goto :goto_1
 
-    :cond_1
-    move v8, v2
+    :cond_2
+    move v8, v1
 
     goto :goto_1
 
-    .line 46
-    :pswitch_1
+    :cond_3
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextBoolean()Z
 
     move-result v9
 
     goto :goto_1
 
-    .line 43
-    :pswitch_2
+    :cond_4
     invoke-static {p0, p1}, Lcom/airbnb/lottie/parser/AnimatableValueParser;->parsePoint(Lcom/airbnb/lottie/parser/moshi/JsonReader;Lcom/airbnb/lottie/LottieComposition;)Lcom/airbnb/lottie/model/animatable/AnimatablePointValue;
 
     move-result-object v7
 
     goto :goto_1
 
-    .line 40
-    :pswitch_3
+    :cond_5
     invoke-static {p0, p1}, Lcom/airbnb/lottie/parser/AnimatablePathValueParser;->parseSplitPath(Lcom/airbnb/lottie/parser/moshi/JsonReader;Lcom/airbnb/lottie/LottieComposition;)Lcom/airbnb/lottie/model/animatable/AnimatableValue;
 
     move-result-object v6
 
     goto :goto_1
 
-    .line 37
-    :pswitch_4
+    :cond_6
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextString()Ljava/lang/String;
 
     move-result-object v5
 
     goto :goto_1
 
-    .line 58
-    :cond_2
+    :cond_7
     new-instance p0, Lcom/airbnb/lottie/model/content/CircleShape;
 
     move-object v4, p0
@@ -154,15 +154,4 @@
     invoke-direct/range {v4 .. v9}, Lcom/airbnb/lottie/model/content/CircleShape;-><init>(Ljava/lang/String;Lcom/airbnb/lottie/model/animatable/AnimatableValue;Lcom/airbnb/lottie/model/animatable/AnimatablePointValue;ZZ)V
 
     return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

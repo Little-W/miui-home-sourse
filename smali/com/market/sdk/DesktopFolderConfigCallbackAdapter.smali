@@ -1,6 +1,5 @@
 .class public Lcom/market/sdk/DesktopFolderConfigCallbackAdapter;
 .super Landroid/os/ResultReceiver;
-.source "DesktopFolderConfigCallbackAdapter.java"
 
 
 # annotations
@@ -29,10 +28,8 @@
 
     const/4 v0, 0x0
 
-    .line 19
     invoke-direct {p0, v0}, Landroid/os/ResultReceiver;-><init>(Landroid/os/Handler;)V
 
-    .line 20
     iput-object p1, p0, Lcom/market/sdk/DesktopFolderConfigCallbackAdapter;->mAdaptee:Lcom/market/sdk/IDesktopFolderConfigCallback;
 
     return-void
@@ -41,46 +38,40 @@
 
 # virtual methods
 .method protected onReceiveResult(ILandroid/os/Bundle;)V
-    .locals 0
+    .locals 2
 
-    packed-switch p1, :pswitch_data_0
+    const/4 v0, 0x1
 
-    goto :goto_0
+    const-string v1, "key_data"
 
-    :pswitch_0
-    const-string p1, "key_data"
+    if-eq p1, v0, :cond_1
 
-    .line 32
-    invoke-virtual {p2, p1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    const/4 v0, 0x2
 
-    move-result-object p1
-
-    .line 33
-    iget-object p2, p0, Lcom/market/sdk/DesktopFolderConfigCallbackAdapter;->mAdaptee:Lcom/market/sdk/IDesktopFolderConfigCallback;
-
-    invoke-interface {p2, p1}, Lcom/market/sdk/IDesktopFolderConfigCallback;->onFailed(Ljava/lang/String;)V
+    if-eq p1, v0, :cond_0
 
     goto :goto_0
 
-    :pswitch_1
-    const-string p1, "key_data"
-
-    .line 27
-    invoke-virtual {p2, p1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    :cond_0
+    invoke-virtual {p2, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 28
-    iget-object p2, p0, Lcom/market/sdk/DesktopFolderConfigCallbackAdapter;->mAdaptee:Lcom/market/sdk/IDesktopFolderConfigCallback;
+    iget-object p0, p0, Lcom/market/sdk/DesktopFolderConfigCallbackAdapter;->mAdaptee:Lcom/market/sdk/IDesktopFolderConfigCallback;
 
-    invoke-interface {p2, p1}, Lcom/market/sdk/IDesktopFolderConfigCallback;->onSuccess(Ljava/lang/String;)V
+    invoke-interface {p0, p1}, Lcom/market/sdk/IDesktopFolderConfigCallback;->onFailed(Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {p2, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    iget-object p0, p0, Lcom/market/sdk/DesktopFolderConfigCallbackAdapter;->mAdaptee:Lcom/market/sdk/IDesktopFolderConfigCallback;
+
+    invoke-interface {p0, p1}, Lcom/market/sdk/IDesktopFolderConfigCallback;->onSuccess(Ljava/lang/String;)V
 
     :goto_0
     return-void
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

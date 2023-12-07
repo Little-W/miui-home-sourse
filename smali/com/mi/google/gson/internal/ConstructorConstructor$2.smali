@@ -1,6 +1,5 @@
 .class Lcom/mi/google/gson/internal/ConstructorConstructor$2;
 .super Ljava/lang/Object;
-.source "ConstructorConstructor.java"
 
 # interfaces
 .implements Lcom/mi/google/gson/internal/ObjectConstructor;
@@ -37,7 +36,6 @@
 .method constructor <init>(Lcom/mi/google/gson/internal/ConstructorConstructor;Lcom/mi/google/gson/InstanceCreator;Ljava/lang/reflect/Type;)V
     .locals 0
 
-    .line 76
     iput-object p1, p0, Lcom/mi/google/gson/internal/ConstructorConstructor$2;->this$0:Lcom/mi/google/gson/internal/ConstructorConstructor;
 
     iput-object p2, p0, Lcom/mi/google/gson/internal/ConstructorConstructor$2;->val$rawTypeCreator:Lcom/mi/google/gson/InstanceCreator;
@@ -52,21 +50,20 @@
 
 # virtual methods
 .method public construct()Ljava/lang/Object;
-    .locals 2
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()TT;"
         }
     .end annotation
 
-    .line 78
     iget-object v0, p0, Lcom/mi/google/gson/internal/ConstructorConstructor$2;->val$rawTypeCreator:Lcom/mi/google/gson/InstanceCreator;
 
-    iget-object v1, p0, Lcom/mi/google/gson/internal/ConstructorConstructor$2;->val$type:Ljava/lang/reflect/Type;
+    iget-object p0, p0, Lcom/mi/google/gson/internal/ConstructorConstructor$2;->val$type:Ljava/lang/reflect/Type;
 
-    invoke-interface {v0, v1}, Lcom/mi/google/gson/InstanceCreator;->createInstance(Ljava/lang/reflect/Type;)Ljava/lang/Object;
+    invoke-interface {v0, p0}, Lcom/mi/google/gson/InstanceCreator;->createInstance(Ljava/lang/reflect/Type;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

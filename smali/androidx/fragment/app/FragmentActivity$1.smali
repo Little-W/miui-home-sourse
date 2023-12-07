@@ -1,6 +1,5 @@
 .class Landroidx/fragment/app/FragmentActivity$1;
 .super Ljava/lang/Object;
-.source "FragmentActivity.java"
 
 # interfaces
 .implements Landroidx/savedstate/SavedStateRegistry$SavedStateProvider;
@@ -25,7 +24,6 @@
 .method constructor <init>(Landroidx/fragment/app/FragmentActivity;)V
     .locals 0
 
-    .line 126
     iput-object p1, p0, Landroidx/fragment/app/FragmentActivity$1;->this$0:Landroidx/fragment/app/FragmentActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,17 +36,14 @@
 .method public saveState()Landroid/os/Bundle;
     .locals 3
 
-    .line 130
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 131
     iget-object v1, p0, Landroidx/fragment/app/FragmentActivity$1;->this$0:Landroidx/fragment/app/FragmentActivity;
 
     invoke-virtual {v1}, Landroidx/fragment/app/FragmentActivity;->markFragmentsCreated()V
 
-    .line 132
     iget-object v1, p0, Landroidx/fragment/app/FragmentActivity$1;->this$0:Landroidx/fragment/app/FragmentActivity;
 
     iget-object v1, v1, Landroidx/fragment/app/FragmentActivity;->mFragmentLifecycleRegistry:Landroidx/lifecycle/LifecycleRegistry;
@@ -57,21 +52,19 @@
 
     invoke-virtual {v1, v2}, Landroidx/lifecycle/LifecycleRegistry;->handleLifecycleEvent(Landroidx/lifecycle/Lifecycle$Event;)V
 
-    .line 133
-    iget-object v1, p0, Landroidx/fragment/app/FragmentActivity$1;->this$0:Landroidx/fragment/app/FragmentActivity;
+    iget-object p0, p0, Landroidx/fragment/app/FragmentActivity$1;->this$0:Landroidx/fragment/app/FragmentActivity;
 
-    iget-object v1, v1, Landroidx/fragment/app/FragmentActivity;->mFragments:Landroidx/fragment/app/FragmentController;
+    iget-object p0, p0, Landroidx/fragment/app/FragmentActivity;->mFragments:Landroidx/fragment/app/FragmentController;
 
-    invoke-virtual {v1}, Landroidx/fragment/app/FragmentController;->saveAllState()Landroid/os/Parcelable;
+    invoke-virtual {p0}, Landroidx/fragment/app/FragmentController;->saveAllState()Landroid/os/Parcelable;
 
-    move-result-object v1
+    move-result-object p0
 
-    if-eqz v1, :cond_0
+    if-eqz p0, :cond_0
 
-    const-string v2, "android:support:fragments"
+    const-string v1, "android:support:fragments"
 
-    .line 135
-    invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
+    invoke-virtual {v0, v1, p0}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
     :cond_0
     return-object v0

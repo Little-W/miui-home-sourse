@@ -1,6 +1,5 @@
 .class public interface abstract Landroidx/preference/Preference$SummaryProvider;
 .super Ljava/lang/Object;
-.source "Preference.java"
 
 
 # annotations

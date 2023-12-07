@@ -55,16 +55,6 @@
         <item quantity="one">%2$s непрочитано од %1$s</item>
         <item quantity="few">%2$s непрочитане од %1$s</item>
     </plurals>
-    <plurals name="delete_wallpapers_message">
-        <item quantity="other">Обрисати %1$d позадина?</item>
-        <item quantity="one">Обрисати %1$d позадину?</item>
-        <item quantity="few">Обрисати %1$d позадине?</item>
-    </plurals>
-    <plurals name="editing_mode_title">
-        <item quantity="other">Изабрано %1$d ставки</item>
-        <item quantity="one">Изабрана %1$d ставка</item>
-        <item quantity="few">Изабране %1$d ставке</item>
-    </plurals>
     <plurals name="half_hour_ago">
         <item quantity="other">Пре пола сата</item>
         <item quantity="one">Пре пола сата</item>
@@ -100,15 +90,20 @@
         <item quantity="one">%d изабрана ставка</item>
         <item quantity="few">%d изабране ставке</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d нових обавештења</item>
+        <item quantity="one">%d ново обавештење</item>
+        <item quantity="few">%d нова обавештења</item>
+    </plurals>
     <plurals name="num_minutes_ago">
         <item quantity="other">Пре %d минута</item>
         <item quantity="one">Пре 1 мин.</item>
         <item quantity="few">Пре %d минута</item>
     </plurals>
     <plurals name="remove_dialog_title_multi_format">
-        <item quantity="other">Уконити %1$d апликација са Почетног екрана?</item>
-        <item quantity="one">Уконити %1$d апликацију са Почетног екрана?</item>
-        <item quantity="few">Уконити %1$d апликације са Почетног екрана?</item>
+        <item quantity="other">Уклонити %1$d ставки са Почетног екрана?</item>
+        <item quantity="one">Уклонити %1$d ставку са Почетног екрана?</item>
+        <item quantity="few">Уклонити %1$d ставке са Почетног екрана?</item>
     </plurals>
     <plurals name="scroll_tip_format_when_announce_accessibility">
         <item quantity="other">Страница %1$d, %2$d апликација.</item>

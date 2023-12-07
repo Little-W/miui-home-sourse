@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/multi_window_tip" android:background="@android:color/black" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/back_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:src="@drawable/miuix_appcompat_action_bar_back_dark" android:scaleType="center" android:contentDescription="@string/back" android:layout_marginStart="30.0dip" />
+    <TextView android:textSize="15.0sp" android:textColor="@android:color/white" android:id="@id/guide_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/keyguard_multi_window_tip" android:layout_centerInParent="true" android:layout_marginHorizontal="20.0dip" />
+</RelativeLayout>

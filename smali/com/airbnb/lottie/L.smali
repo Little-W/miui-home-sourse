@@ -1,28 +1,27 @@
 .class public Lcom/airbnb/lottie/L;
 .super Ljava/lang/Object;
-.source "L.java"
 
 
 # static fields
-.field public static DBG:Z = false
+.field public static DBG:Z
 
-.field private static cacheProvider:Lcom/airbnb/lottie/network/LottieNetworkCacheProvider; = null
+.field private static cacheProvider:Lcom/airbnb/lottie/network/LottieNetworkCacheProvider;
 
-.field private static depthPastMaxDepth:I = 0x0
+.field private static depthPastMaxDepth:I
 
-.field private static fetcher:Lcom/airbnb/lottie/network/LottieNetworkFetcher; = null
+.field private static fetcher:Lcom/airbnb/lottie/network/LottieNetworkFetcher;
 
-.field private static volatile networkCache:Lcom/airbnb/lottie/network/NetworkCache; = null
+.field private static volatile networkCache:Lcom/airbnb/lottie/network/NetworkCache;
 
-.field private static volatile networkFetcher:Lcom/airbnb/lottie/network/NetworkFetcher; = null
+.field private static volatile networkFetcher:Lcom/airbnb/lottie/network/NetworkFetcher;
 
-.field private static sections:[Ljava/lang/String; = null
+.field private static sections:[Ljava/lang/String;
 
-.field private static startTimeNs:[J = null
+.field private static startTimeNs:[J
 
-.field private static traceDepth:I = 0x0
+.field private static traceDepth:I
 
-.field private static traceEnabled:Z = false
+.field private static traceEnabled:Z
 
 
 # direct methods
@@ -35,14 +34,12 @@
 .method public static beginSection(Ljava/lang/String;)V
     .locals 4
 
-    .line 51
     sget-boolean v0, Lcom/airbnb/lottie/L;->traceEnabled:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 54
     :cond_0
     sget v0, Lcom/airbnb/lottie/L;->traceDepth:I
 
@@ -50,7 +47,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 55
     sget p0, Lcom/airbnb/lottie/L;->depthPastMaxDepth:I
 
     add-int/lit8 p0, p0, 0x1
@@ -59,13 +55,11 @@
 
     return-void
 
-    .line 58
     :cond_1
     sget-object v1, Lcom/airbnb/lottie/L;->sections:[Ljava/lang/String;
 
     aput-object p0, v1, v0
 
-    .line 59
     sget-object v1, Lcom/airbnb/lottie/L;->startTimeNs:[J
 
     invoke-static {}, Ljava/lang/System;->nanoTime()J
@@ -74,10 +68,8 @@
 
     aput-wide v2, v1, v0
 
-    .line 60
     invoke-static {p0}, Landroidx/core/os/TraceCompat;->beginSection(Ljava/lang/String;)V
 
-    .line 61
     sget p0, Lcom/airbnb/lottie/L;->traceDepth:I
 
     add-int/lit8 p0, p0, 0x1
@@ -90,7 +82,6 @@
 .method public static endSection(Ljava/lang/String;)F
     .locals 4
 
-    .line 65
     sget v0, Lcom/airbnb/lottie/L;->depthPastMaxDepth:I
 
     const/4 v1, 0x0
@@ -99,12 +90,10 @@
 
     add-int/lit8 v0, v0, -0x1
 
-    .line 66
     sput v0, Lcom/airbnb/lottie/L;->depthPastMaxDepth:I
 
     return v1
 
-    .line 69
     :cond_0
     sget-boolean v0, Lcom/airbnb/lottie/L;->traceEnabled:Z
 
@@ -112,7 +101,6 @@
 
     return v1
 
-    .line 72
     :cond_1
     sget v0, Lcom/airbnb/lottie/L;->traceDepth:I
 
@@ -120,14 +108,12 @@
 
     sput v0, Lcom/airbnb/lottie/L;->traceDepth:I
 
-    .line 73
     sget v0, Lcom/airbnb/lottie/L;->traceDepth:I
 
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_3
 
-    .line 76
     sget-object v1, Lcom/airbnb/lottie/L;->sections:[Ljava/lang/String;
 
     aget-object v0, v1, v0
@@ -138,10 +124,8 @@
 
     if-eqz v0, :cond_2
 
-    .line 80
     invoke-static {}, Landroidx/core/os/TraceCompat;->endSection()V
 
-    .line 81
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v0
@@ -162,7 +146,6 @@
 
     return p0
 
-    .line 77
     :cond_2
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -200,7 +183,6 @@
 
     throw v0
 
-    .line 74
     :cond_3
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -214,28 +196,23 @@
 .method public static networkCache(Landroid/content/Context;)Lcom/airbnb/lottie/network/NetworkCache;
     .locals 3
 
-    .line 108
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p0
 
-    .line 109
     sget-object v0, Lcom/airbnb/lottie/L;->networkCache:Lcom/airbnb/lottie/network/NetworkCache;
 
     if-nez v0, :cond_2
 
-    .line 111
     const-class v1, Lcom/airbnb/lottie/network/NetworkCache;
 
     monitor-enter v1
 
-    .line 112
     :try_start_0
     sget-object v0, Lcom/airbnb/lottie/L;->networkCache:Lcom/airbnb/lottie/network/NetworkCache;
 
     if-nez v0, :cond_1
 
-    .line 114
     new-instance v0, Lcom/airbnb/lottie/network/NetworkCache;
 
     sget-object v2, Lcom/airbnb/lottie/L;->cacheProvider:Lcom/airbnb/lottie/network/LottieNetworkCacheProvider;
@@ -258,7 +235,6 @@
 
     sput-object v0, Lcom/airbnb/lottie/L;->networkCache:Lcom/airbnb/lottie/network/NetworkCache;
 
-    .line 120
     :cond_1
     monitor-exit v1
 
@@ -281,23 +257,19 @@
 .method public static networkFetcher(Landroid/content/Context;)Lcom/airbnb/lottie/network/NetworkFetcher;
     .locals 3
 
-    .line 94
     sget-object v0, Lcom/airbnb/lottie/L;->networkFetcher:Lcom/airbnb/lottie/network/NetworkFetcher;
 
     if-nez v0, :cond_2
 
-    .line 96
     const-class v1, Lcom/airbnb/lottie/network/NetworkFetcher;
 
     monitor-enter v1
 
-    .line 97
     :try_start_0
     sget-object v0, Lcom/airbnb/lottie/L;->networkFetcher:Lcom/airbnb/lottie/network/NetworkFetcher;
 
     if-nez v0, :cond_1
 
-    .line 99
     new-instance v0, Lcom/airbnb/lottie/network/NetworkFetcher;
 
     invoke-static {p0}, Lcom/airbnb/lottie/L;->networkCache(Landroid/content/Context;)Lcom/airbnb/lottie/network/NetworkCache;
@@ -322,7 +294,6 @@
 
     sput-object v0, Lcom/airbnb/lottie/L;->networkFetcher:Lcom/airbnb/lottie/network/NetworkFetcher;
 
-    .line 101
     :cond_1
     monitor-exit v1
 

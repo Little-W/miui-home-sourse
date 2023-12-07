@@ -1,6 +1,5 @@
 .class Lcom/github/promeg/pinyinhelper/PinyinCode3;
 .super Ljava/lang/Object;
-.source "PinyinCode3.java"
 
 
 # static fields
@@ -15,7 +14,6 @@
 
     const/16 v0, 0x36b
 
-    .line 13
     new-array v0, v0, [B
 
     fill-array-data v0, :array_0
@@ -24,7 +22,6 @@
 
     const/16 v0, 0x1b58
 
-    .line 60
     new-array v0, v0, [B
 
     fill-array-data v0, :array_1

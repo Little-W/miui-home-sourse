@@ -1,6 +1,5 @@
 .class public interface abstract Lcom/market/sdk/ImageCallback;
 .super Ljava/lang/Object;
-.source "ImageCallback.java"
 
 
 # virtual methods

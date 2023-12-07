@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.miui.home.launcher.PairShortcutIcon android:layout_gravity="center" android:focusable="true" android:clipChildren="false" android:clipToPadding="false" android:animationCache="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/icon_container" android:clipChildren="false" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+        <FrameLayout android:paddingLeft="@dimen/icon_padding_side" android:paddingTop="@dimen/icon_padding_top" android:paddingRight="@dimen/icon_padding_side" android:clipChildren="false" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.miui.home.launcher.LauncherIconImageView android:layout_gravity="center|top" android:id="@id/icon_folder_creation_bg" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_folder" android:scaleType="fitCenter" android:alpha="0.0" />
+            <com.miui.home.launcher.LauncherIconImageView android:layout_gravity="center" android:id="@id/icon_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitCenter" />
+            <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@id/pair_icon_container" android:layout_width="@dimen/config_icon_width" android:layout_height="@dimen/config_icon_height">
+                <ImageView android:layout_gravity="center" android:id="@id/pair_icon1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitCenter" android:layout_weight="1.0" />
+                <ImageView android:layout_gravity="center" android:id="@id/pair_icon2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitCenter" android:layout_weight="1.0" />
+            </LinearLayout>
+        </FrameLayout>
+        <include layout="@layout/icon_message" />
+    </FrameLayout>
+</com.miui.home.launcher.PairShortcutIcon>

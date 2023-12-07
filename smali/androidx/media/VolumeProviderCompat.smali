@@ -1,6 +1,5 @@
 .class public abstract Landroidx/media/VolumeProviderCompat;
 .super Ljava/lang/Object;
-.source "VolumeProviderCompat.java"
 
 
 # annotations
@@ -25,36 +24,32 @@
 
 # virtual methods
 .method public final getCurrentVolume()I
-    .locals 1
+    .locals 0
 
-    .line 94
-    iget v0, p0, Landroidx/media/VolumeProviderCompat;->mCurrentVolume:I
+    iget p0, p0, Landroidx/media/VolumeProviderCompat;->mCurrentVolume:I
 
-    return v0
+    return p0
 .end method
 
 .method public final getMaxVolume()I
-    .locals 1
+    .locals 0
 
-    .line 113
-    iget v0, p0, Landroidx/media/VolumeProviderCompat;->mMaxVolume:I
+    iget p0, p0, Landroidx/media/VolumeProviderCompat;->mMaxVolume:I
 
-    return v0
+    return p0
 .end method
 
 .method public final getVolumeControl()I
-    .locals 1
+    .locals 0
 
-    .line 104
-    iget v0, p0, Landroidx/media/VolumeProviderCompat;->mControlType:I
+    iget p0, p0, Landroidx/media/VolumeProviderCompat;->mControlType:I
 
-    return v0
+    return p0
 .end method
 
 .method public getVolumeProvider()Ljava/lang/Object;
     .locals 4
 
-    .line 168
     iget-object v0, p0, Landroidx/media/VolumeProviderCompat;->mVolumeProviderObj:Ljava/lang/Object;
 
     if-nez v0, :cond_0
@@ -65,7 +60,6 @@
 
     if-lt v0, v1, :cond_0
 
-    .line 169
     iget v0, p0, Landroidx/media/VolumeProviderCompat;->mControlType:I
 
     iget v1, p0, Landroidx/media/VolumeProviderCompat;->mMaxVolume:I
@@ -82,11 +76,10 @@
 
     iput-object v0, p0, Landroidx/media/VolumeProviderCompat;->mVolumeProviderObj:Ljava/lang/Object;
 
-    .line 184
     :cond_0
-    iget-object v0, p0, Landroidx/media/VolumeProviderCompat;->mVolumeProviderObj:Ljava/lang/Object;
+    iget-object p0, p0, Landroidx/media/VolumeProviderCompat;->mVolumeProviderObj:Ljava/lang/Object;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public onAdjustVolume(I)V
@@ -104,7 +97,6 @@
 .method public setCallback(Landroidx/media/VolumeProviderCompat$Callback;)V
     .locals 0
 
-    .line 156
     iput-object p1, p0, Landroidx/media/VolumeProviderCompat;->mCallback:Landroidx/media/VolumeProviderCompat$Callback;
 
     return-void

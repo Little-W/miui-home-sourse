@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="dimen" name="normal_edit_mode_screen_scale_ratio">0.9</item>
+</resources>

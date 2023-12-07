@@ -1,6 +1,5 @@
 .class public abstract Lcom/github/promeg/pinyinhelper/PinyinMapDict;
 .super Ljava/lang/Object;
-.source "PinyinMapDict.java"
 
 # interfaces
 .implements Lcom/github/promeg/pinyinhelper/PinyinDict;
@@ -10,7 +9,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,7 +32,6 @@
 .method public toPinyin(Ljava/lang/String;)[Ljava/lang/String;
     .locals 1
 
-    .line 29
     invoke-virtual {p0}, Lcom/github/promeg/pinyinhelper/PinyinMapDict;->mapping()Ljava/util/Map;
 
     move-result-object v0
@@ -43,21 +40,21 @@
 
     invoke-virtual {p0}, Lcom/github/promeg/pinyinhelper/PinyinMapDict;->mapping()Ljava/util/Map;
 
-    move-result-object v0
+    move-result-object p0
 
-    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, [Ljava/lang/String;
+    check-cast p0, [Ljava/lang/String;
 
     goto :goto_0
 
     :cond_0
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
     :goto_0
-    return-object p1
+    return-object p0
 .end method
 
 .method public words()Ljava/util/Set;
@@ -71,7 +68,6 @@
         }
     .end annotation
 
-    .line 24
     invoke-virtual {p0}, Lcom/github/promeg/pinyinhelper/PinyinMapDict;->mapping()Ljava/util/Map;
 
     move-result-object v0
@@ -80,17 +76,17 @@
 
     invoke-virtual {p0}, Lcom/github/promeg/pinyinhelper/PinyinMapDict;->mapping()Ljava/util/Map;
 
-    move-result-object v0
+    move-result-object p0
 
-    invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
+    invoke-interface {p0}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
-    move-result-object v0
+    move-result-object p0
 
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
     :goto_0
-    return-object v0
+    return-object p0
 .end method

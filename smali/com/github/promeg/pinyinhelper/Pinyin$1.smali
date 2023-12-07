@@ -1,6 +1,5 @@
 .class synthetic Lcom/github/promeg/pinyinhelper/Pinyin$1;
 .super Ljava/lang/Object;
-.source "Pinyin.java"
 
 
 # annotations

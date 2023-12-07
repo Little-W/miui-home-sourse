@@ -1,6 +1,5 @@
 .class public Lcom/google/android/filament/View$FogOptions;
 .super Ljava/lang/Object;
-.source "View.java"
 
 
 # annotations
@@ -40,28 +39,22 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 498
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 502
     iput v0, p0, Lcom/google/android/filament/View$FogOptions;->distance:F
 
     const/high16 v1, 0x3f800000    # 1.0f
 
-    .line 507
     iput v1, p0, Lcom/google/android/filament/View$FogOptions;->maximumOpacity:F
 
-    .line 512
     iput v0, p0, Lcom/google/android/filament/View$FogOptions;->height:F
 
-    .line 517
     iput v1, p0, Lcom/google/android/filament/View$FogOptions;->heightFalloff:F
 
     const/4 v1, 0x3
 
-    .line 522
     new-array v1, v1, [F
 
     fill-array-data v1, :array_0
@@ -70,23 +63,16 @@
 
     const v1, 0x3dcccccd    # 0.1f
 
-    .line 529
     iput v1, p0, Lcom/google/android/filament/View$FogOptions;->density:F
 
-    .line 534
     iput v0, p0, Lcom/google/android/filament/View$FogOptions;->inScatteringStart:F
 
-    const/high16 v0, -0x40800000    # -1.0f
-
-    .line 539
     iput v0, p0, Lcom/google/android/filament/View$FogOptions;->inScatteringSize:F
 
     const/4 v0, 0x0
 
-    .line 544
     iput-boolean v0, p0, Lcom/google/android/filament/View$FogOptions;->fogColorFromIbl:Z
 
-    .line 549
     iput-boolean v0, p0, Lcom/google/android/filament/View$FogOptions;->enabled:Z
 
     return-void

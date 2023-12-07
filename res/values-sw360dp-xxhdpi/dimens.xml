@@ -5,9 +5,11 @@
     <dimen name="config_icon_width">56.0dip</dimen>
     <dimen name="config_icon_width_theme_version_0">60.69998dip</dimen>
     <dimen name="editing_panel_height">130.0dip</dimen>
+    <dimen name="enforced_rounded_corner_max_radius">18.319977dip</dimen>
     <dimen name="folder_bottom_padding">106.0dip</dimen>
     <dimen name="folder_content_padding_left">4.0dip</dimen>
     <dimen name="folder_content_width">292.0dip</dimen>
+    <dimen name="folder_preview_item_padding">0.30000007dip</dimen>
     <dimen name="folder_top_padding">81.0dip</dimen>
     <dimen name="hotseats_height">84.66998dip</dimen>
     <dimen name="hotseats_padding_bottom">0.0dip</dimen>
@@ -20,7 +22,7 @@
     <dimen name="workspace_cell_padding_side">14.0dip</dimen>
     <dimen name="workspace_cell_padding_top">8.0dip</dimen>
     <dimen name="workspace_cell_width">83.69998dip</dimen>
-    <dimen name="workspace_icon_text_size">12.0sp</dimen>
+    <dimen name="workspace_icon_text_size">10.98999sp</dimen>
     <dimen name="workspace_invalidate_edge_width">25.0dip</dimen>
     <dimen name="workspace_widget_cell_padding_bottom">125.0dip</dimen>
     <dimen name="workspace_widget_cell_padding_top">0.0dip</dimen>

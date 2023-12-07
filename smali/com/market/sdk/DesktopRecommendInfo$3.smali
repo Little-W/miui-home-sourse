@@ -1,6 +1,5 @@
-.class final Lcom/market/sdk/DesktopRecommendInfo$3;
+.class Lcom/market/sdk/DesktopRecommendInfo$3;
 .super Ljava/lang/Object;
-.source "DesktopRecommendInfo.java"
 
 # interfaces
 .implements Landroid/os/Parcelable$Creator;
@@ -12,7 +11,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
@@ -30,7 +29,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 100
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,43 +37,39 @@
 
 # virtual methods
 .method public createFromParcel(Landroid/os/Parcel;)Lcom/market/sdk/DesktopRecommendInfo;
-    .locals 1
+    .locals 0
 
-    .line 102
-    new-instance v0, Lcom/market/sdk/DesktopRecommendInfo;
+    new-instance p0, Lcom/market/sdk/DesktopRecommendInfo;
 
-    invoke-direct {v0, p1}, Lcom/market/sdk/DesktopRecommendInfo;-><init>(Landroid/os/Parcel;)V
+    invoke-direct {p0, p1}, Lcom/market/sdk/DesktopRecommendInfo;-><init>(Landroid/os/Parcel;)V
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
-    .line 100
     invoke-virtual {p0, p1}, Lcom/market/sdk/DesktopRecommendInfo$3;->createFromParcel(Landroid/os/Parcel;)Lcom/market/sdk/DesktopRecommendInfo;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public newArray(I)[Lcom/market/sdk/DesktopRecommendInfo;
     .locals 0
 
-    .line 106
-    new-array p1, p1, [Lcom/market/sdk/DesktopRecommendInfo;
+    new-array p0, p1, [Lcom/market/sdk/DesktopRecommendInfo;
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 100
     invoke-virtual {p0, p1}, Lcom/market/sdk/DesktopRecommendInfo$3;->newArray(I)[Lcom/market/sdk/DesktopRecommendInfo;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

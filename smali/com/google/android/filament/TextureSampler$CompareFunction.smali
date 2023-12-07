@@ -1,6 +1,5 @@
 .class public final enum Lcom/google/android/filament/TextureSampler$CompareFunction;
 .super Ljava/lang/Enum;
-.source "TextureSampler.java"
 
 
 # annotations
@@ -46,130 +45,121 @@
 .method static constructor <clinit>()V
     .locals 10
 
-    .line 98
     new-instance v0, Lcom/google/android/filament/TextureSampler$CompareFunction;
 
-    const-string v1, "LESS_EQUAL"
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    const-string v2, "LESS_EQUAL"
 
-    invoke-direct {v0, v1, v2}, Lcom/google/android/filament/TextureSampler$CompareFunction;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v2, v1}, Lcom/google/android/filament/TextureSampler$CompareFunction;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/google/android/filament/TextureSampler$CompareFunction;->LESS_EQUAL:Lcom/google/android/filament/TextureSampler$CompareFunction;
 
-    .line 102
     new-instance v0, Lcom/google/android/filament/TextureSampler$CompareFunction;
 
-    const-string v1, "GREATER_EQUAL"
+    const/4 v2, 0x1
 
-    const/4 v3, 0x1
+    const-string v3, "GREATER_EQUAL"
 
-    invoke-direct {v0, v1, v3}, Lcom/google/android/filament/TextureSampler$CompareFunction;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v3, v2}, Lcom/google/android/filament/TextureSampler$CompareFunction;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/google/android/filament/TextureSampler$CompareFunction;->GREATER_EQUAL:Lcom/google/android/filament/TextureSampler$CompareFunction;
 
-    .line 106
     new-instance v0, Lcom/google/android/filament/TextureSampler$CompareFunction;
 
-    const-string v1, "LESS"
+    const/4 v3, 0x2
 
-    const/4 v4, 0x2
+    const-string v4, "LESS"
 
-    invoke-direct {v0, v1, v4}, Lcom/google/android/filament/TextureSampler$CompareFunction;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v4, v3}, Lcom/google/android/filament/TextureSampler$CompareFunction;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/google/android/filament/TextureSampler$CompareFunction;->LESS:Lcom/google/android/filament/TextureSampler$CompareFunction;
 
-    .line 110
     new-instance v0, Lcom/google/android/filament/TextureSampler$CompareFunction;
 
-    const-string v1, "GREATER"
+    const/4 v4, 0x3
 
-    const/4 v5, 0x3
+    const-string v5, "GREATER"
 
-    invoke-direct {v0, v1, v5}, Lcom/google/android/filament/TextureSampler$CompareFunction;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v5, v4}, Lcom/google/android/filament/TextureSampler$CompareFunction;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/google/android/filament/TextureSampler$CompareFunction;->GREATER:Lcom/google/android/filament/TextureSampler$CompareFunction;
 
-    .line 114
     new-instance v0, Lcom/google/android/filament/TextureSampler$CompareFunction;
 
-    const-string v1, "EQUAL"
+    const/4 v5, 0x4
 
-    const/4 v6, 0x4
+    const-string v6, "EQUAL"
 
-    invoke-direct {v0, v1, v6}, Lcom/google/android/filament/TextureSampler$CompareFunction;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v6, v5}, Lcom/google/android/filament/TextureSampler$CompareFunction;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/google/android/filament/TextureSampler$CompareFunction;->EQUAL:Lcom/google/android/filament/TextureSampler$CompareFunction;
 
-    .line 118
     new-instance v0, Lcom/google/android/filament/TextureSampler$CompareFunction;
 
-    const-string v1, "NOT_EQUAL"
+    const/4 v6, 0x5
 
-    const/4 v7, 0x5
+    const-string v7, "NOT_EQUAL"
 
-    invoke-direct {v0, v1, v7}, Lcom/google/android/filament/TextureSampler$CompareFunction;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v7, v6}, Lcom/google/android/filament/TextureSampler$CompareFunction;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/google/android/filament/TextureSampler$CompareFunction;->NOT_EQUAL:Lcom/google/android/filament/TextureSampler$CompareFunction;
 
-    .line 122
     new-instance v0, Lcom/google/android/filament/TextureSampler$CompareFunction;
 
-    const-string v1, "ALWAYS"
+    const/4 v7, 0x6
 
-    const/4 v8, 0x6
+    const-string v8, "ALWAYS"
 
-    invoke-direct {v0, v1, v8}, Lcom/google/android/filament/TextureSampler$CompareFunction;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v8, v7}, Lcom/google/android/filament/TextureSampler$CompareFunction;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/google/android/filament/TextureSampler$CompareFunction;->ALWAYS:Lcom/google/android/filament/TextureSampler$CompareFunction;
 
-    .line 126
     new-instance v0, Lcom/google/android/filament/TextureSampler$CompareFunction;
 
-    const-string v1, "NEVER"
+    const/4 v8, 0x7
 
-    const/4 v9, 0x7
+    const-string v9, "NEVER"
 
-    invoke-direct {v0, v1, v9}, Lcom/google/android/filament/TextureSampler$CompareFunction;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v9, v8}, Lcom/google/android/filament/TextureSampler$CompareFunction;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/google/android/filament/TextureSampler$CompareFunction;->NEVER:Lcom/google/android/filament/TextureSampler$CompareFunction;
 
     const/16 v0, 0x8
 
-    .line 94
     new-array v0, v0, [Lcom/google/android/filament/TextureSampler$CompareFunction;
 
-    sget-object v1, Lcom/google/android/filament/TextureSampler$CompareFunction;->LESS_EQUAL:Lcom/google/android/filament/TextureSampler$CompareFunction;
+    sget-object v9, Lcom/google/android/filament/TextureSampler$CompareFunction;->LESS_EQUAL:Lcom/google/android/filament/TextureSampler$CompareFunction;
 
-    aput-object v1, v0, v2
+    aput-object v9, v0, v1
 
     sget-object v1, Lcom/google/android/filament/TextureSampler$CompareFunction;->GREATER_EQUAL:Lcom/google/android/filament/TextureSampler$CompareFunction;
 
-    aput-object v1, v0, v3
+    aput-object v1, v0, v2
 
     sget-object v1, Lcom/google/android/filament/TextureSampler$CompareFunction;->LESS:Lcom/google/android/filament/TextureSampler$CompareFunction;
 
-    aput-object v1, v0, v4
+    aput-object v1, v0, v3
 
     sget-object v1, Lcom/google/android/filament/TextureSampler$CompareFunction;->GREATER:Lcom/google/android/filament/TextureSampler$CompareFunction;
 
-    aput-object v1, v0, v5
+    aput-object v1, v0, v4
 
     sget-object v1, Lcom/google/android/filament/TextureSampler$CompareFunction;->EQUAL:Lcom/google/android/filament/TextureSampler$CompareFunction;
 
-    aput-object v1, v0, v6
+    aput-object v1, v0, v5
 
     sget-object v1, Lcom/google/android/filament/TextureSampler$CompareFunction;->NOT_EQUAL:Lcom/google/android/filament/TextureSampler$CompareFunction;
 
-    aput-object v1, v0, v7
+    aput-object v1, v0, v6
 
     sget-object v1, Lcom/google/android/filament/TextureSampler$CompareFunction;->ALWAYS:Lcom/google/android/filament/TextureSampler$CompareFunction;
 
-    aput-object v1, v0, v8
+    aput-object v1, v0, v7
 
     sget-object v1, Lcom/google/android/filament/TextureSampler$CompareFunction;->NEVER:Lcom/google/android/filament/TextureSampler$CompareFunction;
 
-    aput-object v1, v0, v9
+    aput-object v1, v0, v8
 
     sput-object v0, Lcom/google/android/filament/TextureSampler$CompareFunction;->$VALUES:[Lcom/google/android/filament/TextureSampler$CompareFunction;
 
@@ -184,7 +174,6 @@
         }
     .end annotation
 
-    .line 94
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -193,7 +182,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/android/filament/TextureSampler$CompareFunction;
     .locals 1
 
-    .line 94
     const-class v0, Lcom/google/android/filament/TextureSampler$CompareFunction;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -208,7 +196,6 @@
 .method public static values()[Lcom/google/android/filament/TextureSampler$CompareFunction;
     .locals 1
 
-    .line 94
     sget-object v0, Lcom/google/android/filament/TextureSampler$CompareFunction;->$VALUES:[Lcom/google/android/filament/TextureSampler$CompareFunction;
 
     invoke-virtual {v0}, [Lcom/google/android/filament/TextureSampler$CompareFunction;->clone()Ljava/lang/Object;

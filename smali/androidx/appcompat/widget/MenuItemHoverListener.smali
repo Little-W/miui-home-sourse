@@ -1,6 +1,5 @@
 .class public interface abstract Landroidx/appcompat/widget/MenuItemHoverListener;
 .super Ljava/lang/Object;
-.source "MenuItemHoverListener.java"
 
 
 # virtual methods

@@ -1,6 +1,5 @@
 .class synthetic Lcom/google/android/filament/Colors$1;
 .super Ljava/lang/Object;
-.source "Colors.java"
 
 
 # annotations
@@ -24,7 +23,6 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .line 186
     invoke-static {}, Lcom/google/android/filament/Colors$Conversion;->values()[Lcom/google/android/filament/Colors$Conversion;
 
     move-result-object v0
@@ -66,7 +64,6 @@
     :try_end_1
     .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 156
     :catch_1
     invoke-static {}, Lcom/google/android/filament/Colors$RgbaType;->values()[Lcom/google/android/filament/Colors$RgbaType;
 

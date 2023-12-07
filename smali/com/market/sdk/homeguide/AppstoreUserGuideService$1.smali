@@ -1,6 +1,5 @@
 .class Lcom/market/sdk/homeguide/AppstoreUserGuideService$1;
 .super Lcom/market/sdk/ServiceProxy2$ProxyTask;
-.source "AppstoreUserGuideService.java"
 
 
 # annotations
@@ -34,7 +33,6 @@
 .method constructor <init>(Lcom/market/sdk/homeguide/AppstoreUserGuideService;ZLcom/market/sdk/homeguide/HomeUserGuideData;Lcom/market/sdk/homeguide/Callback;)V
     .locals 0
 
-    .line 58
     iput-object p1, p0, Lcom/market/sdk/homeguide/AppstoreUserGuideService$1;->this$0:Lcom/market/sdk/homeguide/AppstoreUserGuideService;
 
     iput-object p3, p0, Lcom/market/sdk/homeguide/AppstoreUserGuideService$1;->val$data:Lcom/market/sdk/homeguide/HomeUserGuideData;
@@ -49,22 +47,19 @@
 .method static synthetic access$000(Lcom/market/sdk/homeguide/AppstoreUserGuideService$1;Z)V
     .locals 0
 
-    .line 58
     invoke-direct {p0, p1}, Lcom/market/sdk/homeguide/AppstoreUserGuideService$1;->notifyResult(Z)V
 
     return-void
 .end method
 
 .method private notifyResult(Z)V
-    .locals 1
+    .locals 0
 
-    .line 106
-    iget-object v0, p0, Lcom/market/sdk/homeguide/AppstoreUserGuideService$1;->val$callback:Lcom/market/sdk/homeguide/Callback;
+    iget-object p0, p0, Lcom/market/sdk/homeguide/AppstoreUserGuideService$1;->val$callback:Lcom/market/sdk/homeguide/Callback;
 
-    if-eqz v0, :cond_0
+    if-eqz p0, :cond_0
 
-    .line 107
-    invoke-interface {v0, p1}, Lcom/market/sdk/homeguide/Callback;->onFinish(Z)V
+    invoke-interface {p0, p1}, Lcom/market/sdk/homeguide/Callback;->onFinish(Z)V
 
     :cond_0
     return-void
@@ -80,12 +75,11 @@
         }
     .end annotation
 
-    .line 58
     invoke-virtual {p0, p1}, Lcom/market/sdk/homeguide/AppstoreUserGuideService$1;->run(Landroid/os/IBinder;)Ljava/lang/Void;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method protected run(Landroid/os/IBinder;)Ljava/lang/Void;
@@ -107,13 +101,11 @@
 
     const/4 v2, 0x1
 
-    .line 66
     :try_start_0
     invoke-static {p1}, Lcom/market/sdk/homeguide/IAppstoreHomeGuideService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/market/sdk/homeguide/IAppstoreHomeGuideService;
 
     move-result-object v3
 
-    .line 68
     invoke-static {}, Lcom/market/sdk/utils/AppGlobal;->getContext()Landroid/content/Context;
 
     move-result-object v4
@@ -128,58 +120,26 @@
 
     invoke-virtual {v4, v5, v6, v2}, Landroid/content/Context;->grantUriPermission(Ljava/lang/String;Landroid/net/Uri;I)V
 
-    .line 71
     iget-object v4, p0, Lcom/market/sdk/homeguide/AppstoreUserGuideService$1;->val$data:Lcom/market/sdk/homeguide/HomeUserGuideData;
 
     invoke-interface {v3, v4}, Lcom/market/sdk/homeguide/IAppstoreHomeGuideService;->ready(Lcom/market/sdk/homeguide/HomeUserGuideData;)Lcom/market/sdk/homeguide/HomeUserGuideResult;
 
     move-result-object v4
 
-    .line 72
     invoke-virtual {v4}, Lcom/market/sdk/homeguide/HomeUserGuideResult;->getErrorCode()I
 
     move-result v4
 
-    packed-switch v4, :pswitch_data_0
+    if-eq v4, v2, :cond_4
 
-    .line 80
+    const/4 v5, 0x2
+
+    if-eq v4, v5, :cond_3
+
     iget-object v4, p0, Lcom/market/sdk/homeguide/AppstoreUserGuideService$1;->val$callback:Lcom/market/sdk/homeguide/Callback;
-    :try_end_0
-    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_1
 
-    goto :goto_0
-
-    .line 75
-    :pswitch_0
-    :try_start_1
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    invoke-direct {p1}, Ljava/lang/IllegalArgumentException;-><init>()V
-
-    throw p1
-    :try_end_1
-    .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
-
-    :catch_0
-    move-exception p1
-
-    move v2, v1
-
-    goto :goto_2
-
-    .line 77
-    :pswitch_1
-    :try_start_2
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    invoke-direct {p1}, Ljava/lang/IllegalArgumentException;-><init>()V
-
-    throw p1
-
-    :goto_0
     if-eqz v4, :cond_1
 
-    .line 80
     iget-object v4, p0, Lcom/market/sdk/homeguide/AppstoreUserGuideService$1;->val$callback:Lcom/market/sdk/homeguide/Callback;
 
     invoke-interface {v4}, Lcom/market/sdk/homeguide/Callback;->onIntercept()Z
@@ -190,65 +150,78 @@
 
     move v4, v2
 
-    goto :goto_1
+    goto :goto_0
 
     :cond_1
     move v4, v1
 
-    :goto_1
+    :goto_0
     if-nez v4, :cond_2
 
-    .line 82
     new-instance v4, Lcom/market/sdk/homeguide/AppstoreUserGuideService$1$1;
 
     invoke-direct {v4, p0, v0}, Lcom/market/sdk/homeguide/AppstoreUserGuideService$1$1;-><init>(Lcom/market/sdk/homeguide/AppstoreUserGuideService$1;Landroid/os/Handler;)V
 
     invoke-interface {v3, v4}, Lcom/market/sdk/homeguide/IAppstoreHomeGuideService;->show(Landroid/os/ResultReceiver;)V
 
-    .line 88
     new-instance v3, Lcom/market/sdk/homeguide/AppstoreUserGuideService$1$2;
 
     invoke-direct {v3, p0}, Lcom/market/sdk/homeguide/AppstoreUserGuideService$1$2;-><init>(Lcom/market/sdk/homeguide/AppstoreUserGuideService$1;)V
 
     invoke-interface {p1, v3, v1}, Landroid/os/IBinder;->linkToDeath(Landroid/os/IBinder$DeathRecipient;I)V
 
-    goto :goto_3
+    goto :goto_2
 
-    .line 95
     :cond_2
     invoke-virtual {p0}, Lcom/market/sdk/homeguide/AppstoreUserGuideService$1;->unbind()V
-    :try_end_2
-    .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    goto :goto_3
+    goto :goto_2
 
-    :catch_1
+    :cond_3
+    :try_start_1
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {p1}, Ljava/lang/IllegalArgumentException;-><init>()V
+
+    throw p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :catchall_0
     move-exception p1
 
-    .line 98
-    :goto_2
+    move v2, v1
+
+    goto :goto_1
+
+    :cond_4
+    :try_start_2
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {p1}, Ljava/lang/IllegalArgumentException;-><init>()V
+
+    throw p1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    :catchall_1
+    move-exception p1
+
+    :goto_1
     invoke-direct {p0, v2}, Lcom/market/sdk/homeguide/AppstoreUserGuideService$1;->notifyResult(Z)V
 
-    .line 99
     invoke-virtual {p0}, Lcom/market/sdk/homeguide/AppstoreUserGuideService$1;->unbind()V
+
+    invoke-virtual {p1}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
+
+    move-result-object p0
 
     const-string v1, "AppStoreUserGuide"
 
-    .line 100
-    invoke-virtual {p1}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
+    invoke-static {v1, p0, p1}, Lcom/market/sdk/utils/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    move-result-object v2
-
-    invoke-static {v1, v2, p1}, Lcom/market/sdk/utils/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :goto_3
+    :goto_2
     return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

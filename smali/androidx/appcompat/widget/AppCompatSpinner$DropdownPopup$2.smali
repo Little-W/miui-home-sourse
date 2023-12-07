@@ -1,6 +1,5 @@
 .class Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup$2;
 .super Ljava/lang/Object;
-.source "AppCompatSpinner.java"
 
 # interfaces
 .implements Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
@@ -25,7 +24,6 @@
 .method constructor <init>(Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup;)V
     .locals 0
 
-    .line 1061
     iput-object p1, p0, Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup$2;->this$1:Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +36,6 @@
 .method public onGlobalLayout()V
     .locals 2
 
-    .line 1064
     iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup$2;->this$1:Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup;
 
     iget-object v1, v0, Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup;->this$0:Landroidx/appcompat/widget/AppCompatSpinner;
@@ -49,23 +46,20 @@
 
     if-nez v0, :cond_0
 
-    .line 1065
-    iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup$2;->this$1:Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup;
+    iget-object p0, p0, Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup$2;->this$1:Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup;
 
-    invoke-virtual {v0}, Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup;->dismiss()V
+    invoke-virtual {p0}, Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup;->dismiss()V
 
     goto :goto_0
 
-    .line 1067
     :cond_0
     iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup$2;->this$1:Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup;
 
     invoke-virtual {v0}, Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup;->computeContentWidth()V
 
-    .line 1071
-    iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup$2;->this$1:Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup;
+    iget-object p0, p0, Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup$2;->this$1:Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup;
 
-    invoke-static {v0}, Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup;->access$001(Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup;)V
+    invoke-static {p0}, Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup;->access$001(Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup;)V
 
     :goto_0
     return-void

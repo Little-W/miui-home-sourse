@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="desktop_mode_padding_right">12.0dip</dimen>
+    <dimen name="folder_content_grid_view_margin_bottom">17.0dip</dimen>
+    <dimen name="folder_edit_text_margin_right">10.0dip</dimen>
+    <dimen name="icon_title_margin_top">0.0dip</dimen>
+    <item type="dimen" name="normal_edit_mode_screen_scale_ratio">0.9</item>
+</resources>

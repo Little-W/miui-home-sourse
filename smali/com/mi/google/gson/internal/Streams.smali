@@ -1,6 +1,5 @@
 .class public final Lcom/mi/google/gson/internal/Streams;
 .super Ljava/lang/Object;
-.source "Streams.java"
 
 
 # annotations
@@ -20,7 +19,6 @@
         }
     .end annotation
 
-    .line 46
     :try_start_0
     invoke-virtual {p0}, Lcom/mi/google/gson/stream/JsonReader;->peek()Lcom/mi/google/gson/stream/JsonToken;
     :try_end_0
@@ -31,7 +29,6 @@
 
     const/4 v0, 0x0
 
-    .line 48
     :try_start_1
     sget-object v1, Lcom/mi/google/gson/internal/bind/TypeAdapters;->JSON_ELEMENT:Lcom/mi/google/gson/TypeAdapter;
 
@@ -56,7 +53,6 @@
     :catch_1
     move-exception p0
 
-    .line 64
     new-instance v0, Lcom/mi/google/gson/JsonSyntaxException;
 
     invoke-direct {v0, p0}, Lcom/mi/google/gson/JsonSyntaxException;-><init>(Ljava/lang/Throwable;)V
@@ -66,7 +62,6 @@
     :catch_2
     move-exception p0
 
-    .line 62
     new-instance v0, Lcom/mi/google/gson/JsonIOException;
 
     invoke-direct {v0, p0}, Lcom/mi/google/gson/JsonIOException;-><init>(Ljava/lang/Throwable;)V
@@ -76,7 +71,6 @@
     :catch_3
     move-exception p0
 
-    .line 60
     new-instance v0, Lcom/mi/google/gson/JsonSyntaxException;
 
     invoke-direct {v0, p0}, Lcom/mi/google/gson/JsonSyntaxException;-><init>(Ljava/lang/Throwable;)V
@@ -91,12 +85,10 @@
     :goto_0
     if-eqz v0, :cond_0
 
-    .line 55
     sget-object p0, Lcom/mi/google/gson/JsonNull;->INSTANCE:Lcom/mi/google/gson/JsonNull;
 
     return-object p0
 
-    .line 58
     :cond_0
     new-instance v0, Lcom/mi/google/gson/JsonSyntaxException;
 
@@ -113,7 +105,6 @@
         }
     .end annotation
 
-    .line 72
     sget-object v0, Lcom/mi/google/gson/internal/bind/TypeAdapters;->JSON_ELEMENT:Lcom/mi/google/gson/TypeAdapter;
 
     invoke-virtual {v0, p1, p0}, Lcom/mi/google/gson/TypeAdapter;->write(Lcom/mi/google/gson/stream/JsonWriter;Ljava/lang/Object;)V
@@ -124,7 +115,6 @@
 .method public static writerForAppendable(Ljava/lang/Appendable;)Ljava/io/Writer;
     .locals 1
 
-    .line 76
     instance-of v0, p0, Ljava/io/Writer;
 
     if-eqz v0, :cond_0

@@ -44,14 +44,6 @@
         <item quantity="other">%2$s lukematta kohteesta %1$s</item>
         <item quantity="one">%2$s lukematta kohteesta %1$s</item>
     </plurals>
-    <plurals name="delete_wallpapers_message">
-        <item quantity="other">Poistetaanko %1$d taustakuvaa?</item>
-        <item quantity="one">Poistetaanko %1$d taustakuva?</item>
-    </plurals>
-    <plurals name="editing_mode_title">
-        <item quantity="other">Valittu %1$d kohdetta</item>
-        <item quantity="one">Valittu %1$d kohde</item>
-    </plurals>
     <plurals name="half_hour_ago">
         <item quantity="other">Puoli tuntia sitten</item>
         <item quantity="one">Puoli tuntia sitten</item>
@@ -80,13 +72,17 @@
         <item quantity="other">%d kohdetta valittu</item>
         <item quantity="one">%d kohde valittu</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d uutta ilmoitusta</item>
+        <item quantity="one">%d uusi ilmoitus</item>
+    </plurals>
     <plurals name="num_minutes_ago">
         <item quantity="other">%d minuuttia sitten</item>
         <item quantity="one">1 minuutti sitten</item>
     </plurals>
     <plurals name="remove_dialog_title_multi_format">
-        <item quantity="other">Poistetaanko %1$d sovellusta aloitusnäytöltä?</item>
-        <item quantity="one">Poistetaanko %1$d sovellus aloitusnäytöltä?</item>
+        <item quantity="other">Poistetaanko %1$d kohdetta aloitusnäytöltä?</item>
+        <item quantity="one">Poistetaanko %1$d kohde aloitusnäytöltä?</item>
     </plurals>
     <plurals name="scroll_tip_format_when_announce_accessibility">
         <item quantity="other">Sivu %1$d, %2$d sovellusta.</item>

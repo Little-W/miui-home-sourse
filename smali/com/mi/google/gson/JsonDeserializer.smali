@@ -1,6 +1,5 @@
 .class public interface abstract Lcom/mi/google/gson/JsonDeserializer;
 .super Ljava/lang/Object;
-.source "JsonDeserializer.java"
 
 
 # annotations

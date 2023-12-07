@@ -1,6 +1,5 @@
 .class Landroidx/appcompat/widget/ListPopupWindow$PopupScrollListener;
 .super Ljava/lang/Object;
-.source "ListPopupWindow.java"
 
 # interfaces
 .implements Landroid/widget/AbsListView$OnScrollListener;
@@ -25,7 +24,6 @@
 .method constructor <init>(Landroidx/appcompat/widget/ListPopupWindow;)V
     .locals 0
 
-    .line 1408
     iput-object p1, p0, Landroidx/appcompat/widget/ListPopupWindow$PopupScrollListener;->this$0:Landroidx/appcompat/widget/ListPopupWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -48,10 +46,8 @@
 
     if-ne p2, p1, :cond_0
 
-    .line 1419
     iget-object p1, p0, Landroidx/appcompat/widget/ListPopupWindow$PopupScrollListener;->this$0:Landroidx/appcompat/widget/ListPopupWindow;
 
-    .line 1420
     invoke-virtual {p1}, Landroidx/appcompat/widget/ListPopupWindow;->isInputMethodNotNeeded()Z
 
     move-result p1
@@ -68,7 +64,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1421
     iget-object p1, p0, Landroidx/appcompat/widget/ListPopupWindow$PopupScrollListener;->this$0:Landroidx/appcompat/widget/ListPopupWindow;
 
     iget-object p1, p1, Landroidx/appcompat/widget/ListPopupWindow;->mHandler:Landroid/os/Handler;
@@ -79,12 +74,11 @@
 
     invoke-virtual {p1, p2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 1422
-    iget-object p1, p0, Landroidx/appcompat/widget/ListPopupWindow$PopupScrollListener;->this$0:Landroidx/appcompat/widget/ListPopupWindow;
+    iget-object p0, p0, Landroidx/appcompat/widget/ListPopupWindow$PopupScrollListener;->this$0:Landroidx/appcompat/widget/ListPopupWindow;
 
-    iget-object p1, p1, Landroidx/appcompat/widget/ListPopupWindow;->mResizePopupRunnable:Landroidx/appcompat/widget/ListPopupWindow$ResizePopupRunnable;
+    iget-object p0, p0, Landroidx/appcompat/widget/ListPopupWindow;->mResizePopupRunnable:Landroidx/appcompat/widget/ListPopupWindow$ResizePopupRunnable;
 
-    invoke-virtual {p1}, Landroidx/appcompat/widget/ListPopupWindow$ResizePopupRunnable;->run()V
+    invoke-virtual {p0}, Landroidx/appcompat/widget/ListPopupWindow$ResizePopupRunnable;->run()V
 
     :cond_0
     return-void

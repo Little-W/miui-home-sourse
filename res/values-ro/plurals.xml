@@ -55,16 +55,6 @@
         <item quantity="one">%2$s necitit de la %1$s</item>
         <item quantity="few">%2$s necitit de la %1$s</item>
     </plurals>
-    <plurals name="delete_wallpapers_message">
-        <item quantity="other">Şterge %1$d imagini de fundal?</item>
-        <item quantity="one">Şterge %1$d imagine de fundal?</item>
-        <item quantity="few">Şterge %1$d imagini de fundal?</item>
-    </plurals>
-    <plurals name="editing_mode_title">
-        <item quantity="other">Selectat %1$d elemente</item>
-        <item quantity="one">Selectat %1$d element</item>
-        <item quantity="few">Selectat %1$d elemente</item>
-    </plurals>
     <plurals name="half_hour_ago">
         <item quantity="other">Jumătate de oră în urmă</item>
         <item quantity="one">Jumătate de oră în urmă</item>
@@ -100,15 +90,20 @@
         <item quantity="one">%d element selectat</item>
         <item quantity="few">%d elemente selectate</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d de notificări noi</item>
+        <item quantity="one">%d notificare nouă</item>
+        <item quantity="few">%d notificări noi</item>
+    </plurals>
     <plurals name="num_minutes_ago">
         <item quantity="other">%d min în urmă</item>
         <item quantity="one">Un 1 în urmă</item>
         <item quantity="few">%d min în urmă</item>
     </plurals>
     <plurals name="remove_dialog_title_multi_format">
-        <item quantity="other">Eliminați %1$d aplicații din Ecranul principal?</item>
-        <item quantity="one">Eliminați %1$d aplicație din Ecranul principal?</item>
-        <item quantity="few">Eliminați %1$d aplicații din Ecranul principal?</item>
+        <item quantity="other">Eliminați %1$d elemente de pe Ecranu principal?</item>
+        <item quantity="one">Eliminați %1$d element de pe Ecranu principal?</item>
+        <item quantity="few">Eliminați %1$d elemente de pe Ecranu principal?</item>
     </plurals>
     <plurals name="scroll_tip_format_when_announce_accessibility">
         <item quantity="other">Pagina %1$d, %2$d aplicații.</item>

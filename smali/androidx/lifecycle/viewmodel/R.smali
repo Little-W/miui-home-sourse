@@ -1,6 +1,5 @@
 .class public final Landroidx/lifecycle/viewmodel/R;
 .super Ljava/lang/Object;
-.source "R.java"
 
 
 # annotations

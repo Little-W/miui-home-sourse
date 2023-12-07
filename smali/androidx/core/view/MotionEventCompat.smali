@@ -1,13 +1,11 @@
 .class public final Landroidx/core/view/MotionEventCompat;
 .super Ljava/lang/Object;
-.source "MotionEventCompat.java"
 
 
 # direct methods
 .method public static isFromSource(Landroid/view/MotionEvent;I)Z
     .locals 0
 
-    .line 553
     invoke-virtual {p0}, Landroid/view/MotionEvent;->getSource()I
 
     move-result p0

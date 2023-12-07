@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<favorites xmlns:launcher="http://schemas.android.com/apk/res-auto">
+    <default launcher:screen="1" />
+    <folder_2x2_9 launcher:screen="1" launcher:spanX="2" launcher:spanY="2" launcher:title="@string/new_default_folder_title_tools_path" launcher:x="0" launcher:y="3" />
+    <folder launcher:presets_container="true" launcher:screen="1" launcher:title="@string/default_folder_title_recommend_path" launcher:x="2" launcher:y="3" />
+    <folder launcher:presets_container="true" launcher:screen="1" launcher:title="@string/default_folder_title_hot_path" launcher:x="3" launcher:y="3" />
+    <maml launcher:itemFlags="160" launcher:pickerId="ma_0216952801892370215809" launcher:productId="52b8238d-848f-4608-a0e6-28458d4b1f2c" launcher:screen="0" launcher:spanX="4" launcher:spanY="2" launcher:title="@string/gadget_clock_label" launcher:uri="file:///system/media/theme/default/maml/maml_clock_4x2_v3.mtz" launcher:versionCode="12" launcher:x="0" launcher:y="0" />
+    <maml launcher:itemFlags="160" launcher:packageName="com.miui.weather2" launcher:pickerId="ma_0220210813165003011950" launcher:productId="b8006e83-c497-4642-9815-f674b82842b0" launcher:screen="0" launcher:spanX="2" launcher:spanY="2" launcher:title="@string/gadget_weather_title" launcher:uri="file:///system/media/theme/default/maml/maml_weather_2x2_new.mtz" launcher:versionCode="1" launcher:x="0" launcher:y="3" />
+    <favorite launcher:className="com.xiaomi.shop.activity.MainTabActivity" launcher:packageName="com.xiaomi.shop" launcher:screen="0" launcher:x="2" launcher:y="3" />
+    <favorite launcher:className="com.miui.video.HomeActivity" launcher:packageName="com.miui.video" launcher:screen="0" launcher:x="3" launcher:y="3" />
+    <favorite launcher:className="com.xiaomi.gamecenter.ui.MainTabActivity" launcher:packageName="com.xiaomi.gamecenter" launcher:screen="0" launcher:x="2" launcher:y="4" />
+    <favorite launcher:className="com.xiaomi.market.ui.MarketTabActivity" launcher:packageName="com.xiaomi.market" launcher:screen="0" launcher:x="3" launcher:y="4" />
+    <favorite launcher:className="com.android.settings.MiuiSettings" launcher:packageName="com.android.settings" launcher:screen="0" launcher:x="0" launcher:y="5" />
+    <favorite launcher:className="com.android.settings.MainSettings" launcher:packageName="com.android.settings" launcher:screen="0" launcher:x="0" launcher:y="5" />
+    <favorite launcher:className="com.miui.gallery.activity.HomePageActivity" launcher:packageName="com.miui.gallery" launcher:screen="0" launcher:x="1" launcher:y="5" />
+    <favorite launcher:className="com.miui.securitymain.SCMainEntryActivity" launcher:packageName="com.miui.securitymanager" launcher:screen="0" launcher:x="2" launcher:y="5" />
+    <favorite launcher:className="com.miui.securityscan.MainActivity" launcher:packageName="com.miui.securitycenter" launcher:screen="0" launcher:x="2" launcher:y="5" />
+    <command launcher:methodName="checkHideApp" launcher:methodParams="com.miui.securitycenter/com.miui.securityscan.MainActivity" launcher:methodResult="true">
+        <favorite launcher:className="com.android.soundrecorder.RecordPreviewActivity" launcher:packageName="com.android.soundrecorder" launcher:screen="0" launcher:x="2" launcher:y="5" />
+    </command>
+    <command launcher:methodName="checkHideApp" launcher:methodParams="com.miui.securitycenter/com.miui.securityscan.MainActivity" launcher:methodResult="false">
+        <favorite launcher:className="com.android.soundrecorder.RecordPreviewActivity" launcher:container="1" launcher:packageName="com.android.soundrecorder" launcher:x="14" launcher:y="0" />
+    </command>
+    <favorite launcher:className="com.miui.notes.ui.NotesListActivity" launcher:packageName="com.miui.notes" launcher:screen="0" launcher:x="3" launcher:y="5" />
+    <appwidget launcher:className="com.android.calendar.widget.NearEventAppWidget" launcher:packageName="com.android.calendar" launcher:screen="1" launcher:spanX="4" launcher:spanY="2" launcher:x="0" launcher:y="0" />
+    <include layout="@xml/layout_folder_recommend" />
+    <include layout="@xml/layout_folder_tools_fold" />
+    <include layout="@xml/layout_hotseats" />
+</favorites>

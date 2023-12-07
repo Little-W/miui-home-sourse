@@ -1,6 +1,5 @@
 .class public final Landroidx/preference/PreferenceScreen;
 .super Landroidx/preference/PreferenceGroup;
-.source "PreferenceScreen.java"
 
 
 # instance fields
@@ -11,7 +10,6 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
 
-    .line 53
     sget v0, Landroidx/preference/R$attr;->preferenceScreenStyle:I
 
     const v1, 0x101008b
@@ -24,7 +22,6 @@
 
     const/4 p1, 0x1
 
-    .line 42
     iput-boolean p1, p0, Landroidx/preference/PreferenceScreen;->mShouldUseGeneratedIds:Z
 
     return-void
@@ -33,28 +30,27 @@
 
 # virtual methods
 .method protected isOnSameScreenAsChildren()Z
-    .locals 1
+    .locals 0
 
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
 .end method
 
 .method protected onClick()V
     .locals 1
 
-    .line 59
     invoke-virtual {p0}, Landroidx/preference/PreferenceScreen;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_1
 
     invoke-virtual {p0}, Landroidx/preference/PreferenceScreen;->getFragment()Ljava/lang/String;
 
     move-result-object v0
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_1
 
     invoke-virtual {p0}, Landroidx/preference/PreferenceScreen;->getPreferenceCount()I
 
@@ -64,7 +60,6 @@
 
     goto :goto_0
 
-    .line 63
     :cond_0
     invoke-virtual {p0}, Landroidx/preference/PreferenceScreen;->getPreferenceManager()Landroidx/preference/PreferenceManager;
 
@@ -76,22 +71,17 @@
 
     if-eqz v0, :cond_1
 
-    .line 65
     invoke-interface {v0, p0}, Landroidx/preference/PreferenceManager$OnNavigateToScreenListener;->onNavigateToScreen(Landroidx/preference/PreferenceScreen;)V
 
     :cond_1
-    return-void
-
-    :cond_2
     :goto_0
     return-void
 .end method
 
 .method public shouldUseGeneratedIds()Z
-    .locals 1
+    .locals 0
 
-    .line 81
-    iget-boolean v0, p0, Landroidx/preference/PreferenceScreen;->mShouldUseGeneratedIds:Z
+    iget-boolean p0, p0, Landroidx/preference/PreferenceScreen;->mShouldUseGeneratedIds:Z
 
-    return v0
+    return p0
 .end method

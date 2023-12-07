@@ -1,6 +1,5 @@
 .class synthetic Lcom/market/sdk/MarketFeatures$1;
 .super Ljava/lang/Object;
-.source "MarketFeatures.java"
 
 
 # annotations
@@ -22,7 +21,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 64
     invoke-static {}, Lcom/market/sdk/MarketType;->values()[Lcom/market/sdk/MarketType;
 
     move-result-object v0

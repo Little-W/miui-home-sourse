@@ -1,44 +1,77 @@
-!!brut.androlib.meta.MetaInfo
-apkFileName: 303.apk
-compressionType: false
-doNotCompress:
-- resources.arsc
-- png
-- webp
-- ogg
+version: 2.9.0
+apkFileName: MiuiHomeMod.apk
 isFrameworkApk: false
-packageInfo:
-  forcedPackageId: '127'
-  renameManifestPackage: null
-sdkInfo:
-  minSdkVersion: '24'
-  targetSdkVersion: '30'
-sharedLibrary: false
-sparseResources: false
-unknownFiles:
-  com/miui/msa/global/guessyoulike/v1/GlobalCloudAdConfig.aidl: '8'
-  com/miui/msa/global/guessyoulike/v1/GlobalColudControlInfo.aidl: '8'
-  com/miui/msa/global/guessyoulike/v1/GlobalFolderInfo.aidl: '8'
-  com/miui/msa/global/guessyoulike/v1/GlobalFolderRecommendAdInfo.aidl: '8'
-  com/miui/msa/global/guessyoulike/v1/IGlobalGuessYouLikeAd.aidl: '8'
-  com/miui/msa/global/guessyoulike/v1/IGlobalImageCallback.aidl: '8'
-  com/miui/msa/internal/preinstall/v1/CNColudControlInfo.aidl: '8'
-  com/miui/msa/internal/preinstall/v1/FolderInfo.aidl: '8'
-  com/miui/msa/internal/preinstall/v1/FolderRecommendAdInfo.aidl: '8'
-  com/miui/msa/internal/preinstall/v1/IImageCallback.aidl: '8'
-  com/miui/msa/internal/preinstall/v1/IInternalPreInstallAd.aidl: '8'
-  com/miui/msa/internal/preinstall/v2/CNColudControlInfo.aidl: '8'
-  com/miui/msa/internal/preinstall/v2/FolderInfo.aidl: '8'
-  com/miui/msa/internal/preinstall/v2/FolderRecommendAdInfo.aidl: '8'
-  com/miui/msa/internal/preinstall/v2/IImageCallback.aidl: '8'
-  com/miui/msa/internal/preinstall/v2/IInternalPreInstallAdV2.aidl: '8'
-  com/miui/msa/preinstall/v1/IPreinstallAd.aidl: '8'
-  com/miui/msa/preinstall/v1/PreinstallAdInfo.aidl: '8'
 usesFramework:
   ids:
   - 1
   tag: null
-version: 2.6.1
+sdkInfo:
+  minSdkVersion: 30
+  targetSdkVersion: 33
+packageInfo:
+  forcedPackageId: 127
+  renameManifestPackage: null
 versionInfo:
-  versionCode: '426004432'
-  versionName: ALPHA-4.26.0.4432-03032019
+  versionCode: 439147718
+  versionName: RELEASE-4.39.14.7718-11212221
+resourcesAreCompressed: false
+sharedLibrary: false
+sparseResources: false
+unknownFiles:
+  DebugProbesKt.bin: 8
+  firebase-analytics.properties: 8
+  firebase-annotations.properties: 8
+  firebase-common.properties: 8
+  firebase-components.properties: 8
+  firebase-crashlytics.properties: 8
+  firebase-encoders-json.properties: 8
+  firebase-encoders-proto.properties: 8
+  firebase-encoders.properties: 8
+  firebase-installations-interop.properties: 8
+  firebase-installations.properties: 8
+  firebase-measurement-connector.properties: 8
+  play-services-ads-identifier.properties: 8
+  play-services-basement.properties: 8
+  play-services-measurement-api.properties: 8
+  play-services-measurement-base.properties: 8
+  play-services-measurement-impl.properties: 8
+  play-services-measurement-sdk-api.properties: 8
+  play-services-measurement-sdk.properties: 8
+  play-services-measurement.properties: 8
+  play-services-stats.properties: 8
+  play-services-tasks.properties: 8
+  transport-api.properties: 8
+  transport-backend-cct.properties: 8
+  transport-runtime.properties: 8
+  com/miui/msa/global/guessyoulike/v1/GlobalCloudAdConfig.aidl: 8
+  com/miui/msa/global/guessyoulike/v1/GlobalColudControlInfo.aidl: 8
+  com/miui/msa/global/guessyoulike/v1/GlobalFolderInfo.aidl: 8
+  com/miui/msa/global/guessyoulike/v1/GlobalFolderRecommendAdInfo.aidl: 8
+  com/miui/msa/global/guessyoulike/v1/IGlobalGuessYouLikeAd.aidl: 8
+  com/miui/msa/global/guessyoulike/v1/IGlobalImageCallback.aidl: 8
+  com/miui/msa/internal/preinstall/v1/CNColudControlInfo.aidl: 8
+  com/miui/msa/internal/preinstall/v1/FolderInfo.aidl: 8
+  com/miui/msa/internal/preinstall/v1/FolderRecommendAdInfo.aidl: 8
+  com/miui/msa/internal/preinstall/v1/IImageCallback.aidl: 8
+  com/miui/msa/internal/preinstall/v1/IInternalPreInstallAd.aidl: 8
+  com/miui/msa/internal/preinstall/v2/CNColudControlInfo.aidl: 8
+  com/miui/msa/internal/preinstall/v2/FolderInfo.aidl: 8
+  com/miui/msa/internal/preinstall/v2/FolderRecommendAdInfo.aidl: 8
+  com/miui/msa/internal/preinstall/v2/IImageCallback.aidl: 8
+  com/miui/msa/internal/preinstall/v2/IInternalPreInstallAdV2.aidl: 8
+  com/miui/msa/preinstall/v1/IPreinstallAd.aidl: 8
+  com/miui/msa/preinstall/v1/PreinstallAdInfo.aidl: 8
+  okhttp3/internal/publicsuffix/publicsuffixes.gz: 8
+doNotCompress:
+- resources.arsc
+- assets/cold_start_bundle
+- lib/arm64-v8a/libfilament-jni.so
+- lib/arm64-v8a/libfilament-utils-jni.so
+- lib/arm64-v8a/libgltfio-jni.so
+- lib/arm64-v8a/libmiuiblursdk.so
+- lib/arm64-v8a/libpl_droidsonroids_gif.so
+- lib/arm64-v8a/libsqlite3ext.so
+- lib/arm64-v8a/libsqlite3x.so
+- png
+- webp
+- ogg

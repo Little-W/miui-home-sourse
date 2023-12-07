@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="workspace_cell_padding_side">33.689972dip</dimen>
+    <dimen name="workspace_cell_padding_side_rotatable">33.689972dip</dimen>
+</resources>

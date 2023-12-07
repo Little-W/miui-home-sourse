@@ -1,6 +1,5 @@
 .class Lcom/airbnb/lottie/LottieAnimationView$1;
 .super Ljava/lang/Object;
-.source "LottieAnimationView.java"
 
 # interfaces
 .implements Lcom/airbnb/lottie/LottieListener;
@@ -26,11 +25,16 @@
 .end annotation
 
 
+# instance fields
+.field final synthetic this$0:Lcom/airbnb/lottie/LottieAnimationView;
+
+
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Lcom/airbnb/lottie/LottieAnimationView;)V
     .locals 0
 
-    .line 72
+    iput-object p1, p0, Lcom/airbnb/lottie/LottieAnimationView$1;->this$0:Lcom/airbnb/lottie/LottieAnimationView;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +45,6 @@
 .method public bridge synthetic onResult(Ljava/lang/Object;)V
     .locals 0
 
-    .line 72
     check-cast p1, Ljava/lang/Throwable;
 
     invoke-virtual {p0, p1}, Lcom/airbnb/lottie/LottieAnimationView$1;->onResult(Ljava/lang/Throwable;)V
@@ -52,27 +55,46 @@
 .method public onResult(Ljava/lang/Throwable;)V
     .locals 2
 
-    .line 75
-    invoke-static {p1}, Lcom/airbnb/lottie/utils/Utils;->isNetworkException(Ljava/lang/Throwable;)Z
+    iget-object v0, p0, Lcom/airbnb/lottie/LottieAnimationView$1;->this$0:Lcom/airbnb/lottie/LottieAnimationView;
+
+    invoke-static {v0}, Lcom/airbnb/lottie/LottieAnimationView;->access$000(Lcom/airbnb/lottie/LottieAnimationView;)I
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    const-string v0, "Unable to load composition."
+    iget-object v0, p0, Lcom/airbnb/lottie/LottieAnimationView$1;->this$0:Lcom/airbnb/lottie/LottieAnimationView;
 
-    .line 76
-    invoke-static {v0, p1}, Lcom/airbnb/lottie/utils/Logger;->warning(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/airbnb/lottie/LottieAnimationView;->access$000(Lcom/airbnb/lottie/LottieAnimationView;)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Lcom/airbnb/lottie/LottieAnimationView;->setImageResource(I)V
+
+    :cond_0
+    iget-object v0, p0, Lcom/airbnb/lottie/LottieAnimationView$1;->this$0:Lcom/airbnb/lottie/LottieAnimationView;
+
+    invoke-static {v0}, Lcom/airbnb/lottie/LottieAnimationView;->access$100(Lcom/airbnb/lottie/LottieAnimationView;)Lcom/airbnb/lottie/LottieListener;
+
+    move-result-object v0
+
+    if-nez v0, :cond_1
+
+    invoke-static {}, Lcom/airbnb/lottie/LottieAnimationView;->access$200()Lcom/airbnb/lottie/LottieListener;
+
+    move-result-object p0
+
+    goto :goto_0
+
+    :cond_1
+    iget-object p0, p0, Lcom/airbnb/lottie/LottieAnimationView$1;->this$0:Lcom/airbnb/lottie/LottieAnimationView;
+
+    invoke-static {p0}, Lcom/airbnb/lottie/LottieAnimationView;->access$100(Lcom/airbnb/lottie/LottieAnimationView;)Lcom/airbnb/lottie/LottieListener;
+
+    move-result-object p0
+
+    :goto_0
+    invoke-interface {p0, p1}, Lcom/airbnb/lottie/LottieListener;->onResult(Ljava/lang/Object;)V
 
     return-void
-
-    .line 79
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "Unable to parse composition"
-
-    invoke-direct {v0, v1, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw v0
 .end method

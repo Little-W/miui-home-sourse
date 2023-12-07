@@ -1,6 +1,5 @@
 .class public final Landroidx/activity/result/contract/ActivityResultContracts;
 .super Ljava/lang/Object;
-.source "ActivityResultContracts.java"
 
 
 # annotations

@@ -55,16 +55,6 @@
         <item quantity="one">%2$s ne pročitano od %1$s</item>
         <item quantity="few">%2$s ne pročitano od %1$s</item>
     </plurals>
-    <plurals name="delete_wallpapers_message">
-        <item quantity="other">Izbrisati (%1$d) slika pozadine?</item>
-        <item quantity="one">Izbrisati %1$d sliku pozadine?</item>
-        <item quantity="few">Izbrisati (%1$d) slika pozadine?</item>
-    </plurals>
-    <plurals name="editing_mode_title">
-        <item quantity="other">Odabrano %1$d stavki</item>
-        <item quantity="one">Odabrano %1$d stavki</item>
-        <item quantity="few">Odabrano %1$d stavki</item>
-    </plurals>
     <plurals name="half_hour_ago">
         <item quantity="other">Prije pola sata</item>
         <item quantity="one">Prije pola sata</item>
@@ -100,15 +90,20 @@
         <item quantity="one">%d odabrana stavka</item>
         <item quantity="few">Broj odabranih stavki: %d</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d novih obavijesti</item>
+        <item quantity="one">%d nova obavijest</item>
+        <item quantity="few">%d nove obavijesti</item>
+    </plurals>
     <plurals name="num_minutes_ago">
         <item quantity="other">prije %d min</item>
         <item quantity="one">Prije 1 minute</item>
         <item quantity="few">prije %d min</item>
     </plurals>
     <plurals name="remove_dialog_title_multi_format">
-        <item quantity="other">Ukloni %1$d aplikacija s Početnog zaslona?</item>
-        <item quantity="one">Ukloni %1$d aplikaciju s Početnog zaslona?</item>
-        <item quantity="few">Ukloni %1$d aplikacije s Početnog zaslona?</item>
+        <item quantity="other">Ukloni %1$d stavki s Početnog zaslona?</item>
+        <item quantity="one">Ukloni %1$d stavku s Početnog zaslona?</item>
+        <item quantity="few">Ukloni %1$d stavke s Početnog zaslona?</item>
     </plurals>
     <plurals name="scroll_tip_format_when_announce_accessibility">
         <item quantity="other">Stranica%1$d, %2$d aplikacija.</item>

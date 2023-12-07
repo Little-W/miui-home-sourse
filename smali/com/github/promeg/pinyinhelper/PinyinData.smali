@@ -1,6 +1,5 @@
 .class final Lcom/github/promeg/pinyinhelper/PinyinData;
 .super Ljava/lang/Object;
-.source "PinyinData.java"
 
 
 # static fields
@@ -15,7 +14,6 @@
 
     const/16 v0, 0x8
 
-    .line 17
     new-array v1, v0, [I
 
     fill-array-data v1, :array_0
@@ -24,2454 +22,2453 @@
 
     const/16 v1, 0x198
 
-    .line 27
     new-array v1, v1, [Ljava/lang/String;
 
-    const-string v2, ""
+    const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    const-string v3, ""
 
-    aput-object v2, v1, v3
+    aput-object v3, v1, v2
 
-    const-string v2, "A"
+    const/4 v2, 0x1
 
-    const/4 v3, 0x1
+    const-string v3, "A"
 
-    aput-object v2, v1, v3
+    aput-object v3, v1, v2
 
-    const-string v2, "AI"
+    const/4 v2, 0x2
 
-    const/4 v3, 0x2
+    const-string v3, "AI"
 
-    aput-object v2, v1, v3
+    aput-object v3, v1, v2
 
-    const-string v2, "AN"
+    const/4 v2, 0x3
 
-    const/4 v3, 0x3
+    const-string v3, "AN"
 
-    aput-object v2, v1, v3
+    aput-object v3, v1, v2
 
-    const-string v2, "ANG"
+    const/4 v2, 0x4
 
-    const/4 v3, 0x4
+    const-string v3, "ANG"
 
-    aput-object v2, v1, v3
+    aput-object v3, v1, v2
 
-    const-string v2, "AO"
+    const/4 v2, 0x5
 
-    const/4 v3, 0x5
+    const-string v3, "AO"
 
-    aput-object v2, v1, v3
+    aput-object v3, v1, v2
 
-    const-string v2, "BA"
+    const/4 v2, 0x6
 
-    const/4 v3, 0x6
+    const-string v3, "BA"
 
-    aput-object v2, v1, v3
+    aput-object v3, v1, v2
 
-    const-string v2, "BAI"
+    const/4 v2, 0x7
 
-    const/4 v3, 0x7
+    const-string v3, "BAI"
 
-    aput-object v2, v1, v3
+    aput-object v3, v1, v2
 
     const-string v2, "BAN"
 
     aput-object v2, v1, v0
 
-    const-string v0, "BANG"
+    const/16 v0, 0x9
 
-    const/16 v2, 0x9
+    const-string v2, "BANG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "BAO"
+    const/16 v0, 0xa
 
-    const/16 v2, 0xa
+    const-string v2, "BAO"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "BEI"
+    const/16 v0, 0xb
 
-    const/16 v2, 0xb
+    const-string v2, "BEI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "BEN"
+    const/16 v0, 0xc
 
-    const/16 v2, 0xc
+    const-string v2, "BEN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "BENG"
+    const/16 v0, 0xd
 
-    const/16 v2, 0xd
+    const-string v2, "BENG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "BI"
+    const/16 v0, 0xe
 
-    const/16 v2, 0xe
+    const-string v2, "BI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "BIAN"
+    const/16 v0, 0xf
 
-    const/16 v2, 0xf
+    const-string v2, "BIAN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "BIAO"
+    const/16 v0, 0x10
 
-    const/16 v2, 0x10
+    const-string v2, "BIAO"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "BIE"
+    const/16 v0, 0x11
 
-    const/16 v2, 0x11
+    const-string v2, "BIE"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "BIN"
+    const/16 v0, 0x12
 
-    const/16 v2, 0x12
+    const-string v2, "BIN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "BING"
+    const/16 v0, 0x13
 
-    const/16 v2, 0x13
+    const-string v2, "BING"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "BO"
+    const/16 v0, 0x14
 
-    const/16 v2, 0x14
+    const-string v2, "BO"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "BU"
+    const/16 v0, 0x15
 
-    const/16 v2, 0x15
+    const-string v2, "BU"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "CA"
+    const/16 v0, 0x16
 
-    const/16 v2, 0x16
+    const-string v2, "CA"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "CAI"
+    const/16 v0, 0x17
 
-    const/16 v2, 0x17
+    const-string v2, "CAI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "CAN"
+    const/16 v0, 0x18
 
-    const/16 v2, 0x18
+    const-string v2, "CAN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "CANG"
+    const/16 v0, 0x19
 
-    const/16 v2, 0x19
+    const-string v2, "CANG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "CAO"
+    const/16 v0, 0x1a
 
-    const/16 v2, 0x1a
+    const-string v2, "CAO"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "CE"
+    const/16 v0, 0x1b
 
-    const/16 v2, 0x1b
+    const-string v2, "CE"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "CEN"
+    const/16 v0, 0x1c
 
-    const/16 v2, 0x1c
+    const-string v2, "CEN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "CENG"
+    const/16 v0, 0x1d
 
-    const/16 v2, 0x1d
+    const-string v2, "CENG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "CHA"
+    const/16 v0, 0x1e
 
-    const/16 v2, 0x1e
+    const-string v2, "CHA"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "CHAI"
+    const/16 v0, 0x1f
 
-    const/16 v2, 0x1f
+    const-string v2, "CHAI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "CHAN"
+    const/16 v0, 0x20
 
-    const/16 v2, 0x20
+    const-string v2, "CHAN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "CHANG"
+    const/16 v0, 0x21
 
-    const/16 v2, 0x21
+    const-string v2, "CHANG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "CHAO"
+    const/16 v0, 0x22
 
-    const/16 v2, 0x22
+    const-string v2, "CHAO"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "CHE"
+    const/16 v0, 0x23
 
-    const/16 v2, 0x23
+    const-string v2, "CHE"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "CHEN"
+    const/16 v0, 0x24
 
-    const/16 v2, 0x24
+    const-string v2, "CHEN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "CHENG"
+    const/16 v0, 0x25
 
-    const/16 v2, 0x25
+    const-string v2, "CHENG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "CHI"
+    const/16 v0, 0x26
 
-    const/16 v2, 0x26
+    const-string v2, "CHI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "CHONG"
+    const/16 v0, 0x27
 
-    const/16 v2, 0x27
+    const-string v2, "CHONG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "CHOU"
+    const/16 v0, 0x28
 
-    const/16 v2, 0x28
+    const-string v2, "CHOU"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "CHU"
+    const/16 v0, 0x29
 
-    const/16 v2, 0x29
+    const-string v2, "CHU"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "CHUAI"
+    const/16 v0, 0x2a
 
-    const/16 v2, 0x2a
+    const-string v2, "CHUAI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "CHUAN"
+    const/16 v0, 0x2b
 
-    const/16 v2, 0x2b
+    const-string v2, "CHUAN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "CHUANG"
+    const/16 v0, 0x2c
 
-    const/16 v2, 0x2c
+    const-string v2, "CHUANG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "CHUI"
+    const/16 v0, 0x2d
 
-    const/16 v2, 0x2d
+    const-string v2, "CHUI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "CHUN"
+    const/16 v0, 0x2e
 
-    const/16 v2, 0x2e
+    const-string v2, "CHUN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "CHUO"
+    const/16 v0, 0x2f
 
-    const/16 v2, 0x2f
+    const-string v2, "CHUO"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "CI"
+    const/16 v0, 0x30
 
-    const/16 v2, 0x30
+    const-string v2, "CI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "CONG"
+    const/16 v0, 0x31
 
-    const/16 v2, 0x31
+    const-string v2, "CONG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "COU"
+    const/16 v0, 0x32
 
-    const/16 v2, 0x32
+    const-string v2, "COU"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "CU"
+    const/16 v0, 0x33
 
-    const/16 v2, 0x33
+    const-string v2, "CU"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "CUAN"
+    const/16 v0, 0x34
 
-    const/16 v2, 0x34
+    const-string v2, "CUAN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "CUI"
+    const/16 v0, 0x35
 
-    const/16 v2, 0x35
+    const-string v2, "CUI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "CUN"
+    const/16 v0, 0x36
 
-    const/16 v2, 0x36
+    const-string v2, "CUN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "CUO"
+    const/16 v0, 0x37
 
-    const/16 v2, 0x37
+    const-string v2, "CUO"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "DA"
+    const/16 v0, 0x38
 
-    const/16 v2, 0x38
+    const-string v2, "DA"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "DAI"
+    const/16 v0, 0x39
 
-    const/16 v2, 0x39
+    const-string v2, "DAI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "DAN"
+    const/16 v0, 0x3a
 
-    const/16 v2, 0x3a
+    const-string v2, "DAN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "DANG"
+    const/16 v0, 0x3b
 
-    const/16 v2, 0x3b
+    const-string v2, "DANG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "DAO"
+    const/16 v0, 0x3c
 
-    const/16 v2, 0x3c
+    const-string v2, "DAO"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "DE"
+    const/16 v0, 0x3d
 
-    const/16 v2, 0x3d
+    const-string v2, "DE"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "DENG"
+    const/16 v0, 0x3e
 
-    const/16 v2, 0x3e
+    const-string v2, "DENG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "DI"
+    const/16 v0, 0x3f
 
-    const/16 v2, 0x3f
+    const-string v2, "DI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "DIA"
+    const/16 v0, 0x40
 
-    const/16 v2, 0x40
+    const-string v2, "DIA"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "DIAN"
+    const/16 v0, 0x41
 
-    const/16 v2, 0x41
+    const-string v2, "DIAN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "DIAO"
+    const/16 v0, 0x42
 
-    const/16 v2, 0x42
+    const-string v2, "DIAO"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "DIE"
+    const/16 v0, 0x43
 
-    const/16 v2, 0x43
+    const-string v2, "DIE"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "DING"
+    const/16 v0, 0x44
 
-    const/16 v2, 0x44
+    const-string v2, "DING"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "DIU"
+    const/16 v0, 0x45
 
-    const/16 v2, 0x45
+    const-string v2, "DIU"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "DONG"
+    const/16 v0, 0x46
 
-    const/16 v2, 0x46
+    const-string v2, "DONG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "DOU"
+    const/16 v0, 0x47
 
-    const/16 v2, 0x47
+    const-string v2, "DOU"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "DU"
+    const/16 v0, 0x48
 
-    const/16 v2, 0x48
+    const-string v2, "DU"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "DUAN"
+    const/16 v0, 0x49
 
-    const/16 v2, 0x49
+    const-string v2, "DUAN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "DUI"
+    const/16 v0, 0x4a
 
-    const/16 v2, 0x4a
+    const-string v2, "DUI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "DUN"
+    const/16 v0, 0x4b
 
-    const/16 v2, 0x4b
+    const-string v2, "DUN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "DUO"
+    const/16 v0, 0x4c
 
-    const/16 v2, 0x4c
+    const-string v2, "DUO"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "E"
+    const/16 v0, 0x4d
 
-    const/16 v2, 0x4d
+    const-string v2, "E"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "EI"
+    const/16 v0, 0x4e
 
-    const/16 v2, 0x4e
+    const-string v2, "EI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "EN"
+    const/16 v0, 0x4f
 
-    const/16 v2, 0x4f
+    const-string v2, "EN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "ER"
+    const/16 v0, 0x50
 
-    const/16 v2, 0x50
+    const-string v2, "ER"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "E^"
+    const/16 v0, 0x51
 
-    const/16 v2, 0x51
+    const-string v2, "E^"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "FA"
+    const/16 v0, 0x52
 
-    const/16 v2, 0x52
+    const-string v2, "FA"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "FAN"
+    const/16 v0, 0x53
 
-    const/16 v2, 0x53
+    const-string v2, "FAN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "FANG"
+    const/16 v0, 0x54
 
-    const/16 v2, 0x54
+    const-string v2, "FANG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "FEI"
+    const/16 v0, 0x55
 
-    const/16 v2, 0x55
+    const-string v2, "FEI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "FEN"
+    const/16 v0, 0x56
 
-    const/16 v2, 0x56
+    const-string v2, "FEN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "FENG"
+    const/16 v0, 0x57
 
-    const/16 v2, 0x57
+    const-string v2, "FENG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "FO"
+    const/16 v0, 0x58
 
-    const/16 v2, 0x58
+    const-string v2, "FO"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "FOU"
+    const/16 v0, 0x59
 
-    const/16 v2, 0x59
+    const-string v2, "FOU"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "FU"
+    const/16 v0, 0x5a
 
-    const/16 v2, 0x5a
+    const-string v2, "FU"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "GA"
+    const/16 v0, 0x5b
 
-    const/16 v2, 0x5b
+    const-string v2, "GA"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "GAI"
+    const/16 v0, 0x5c
 
-    const/16 v2, 0x5c
+    const-string v2, "GAI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "GAN"
+    const/16 v0, 0x5d
 
-    const/16 v2, 0x5d
+    const-string v2, "GAN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "GANG"
+    const/16 v0, 0x5e
 
-    const/16 v2, 0x5e
+    const-string v2, "GANG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "GAO"
+    const/16 v0, 0x5f
 
-    const/16 v2, 0x5f
+    const-string v2, "GAO"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "GE"
+    const/16 v0, 0x60
 
-    const/16 v2, 0x60
+    const-string v2, "GE"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "GEI"
+    const/16 v0, 0x61
 
-    const/16 v2, 0x61
+    const-string v2, "GEI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "GEN"
+    const/16 v0, 0x62
 
-    const/16 v2, 0x62
+    const-string v2, "GEN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "GENG"
+    const/16 v0, 0x63
 
-    const/16 v2, 0x63
+    const-string v2, "GENG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "GONG"
+    const/16 v0, 0x64
 
-    const/16 v2, 0x64
+    const-string v2, "GONG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "GOU"
+    const/16 v0, 0x65
 
-    const/16 v2, 0x65
+    const-string v2, "GOU"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "GU"
+    const/16 v0, 0x66
 
-    const/16 v2, 0x66
+    const-string v2, "GU"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "GUA"
+    const/16 v0, 0x67
 
-    const/16 v2, 0x67
+    const-string v2, "GUA"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "GUAI"
+    const/16 v0, 0x68
 
-    const/16 v2, 0x68
+    const-string v2, "GUAI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "GUAN"
+    const/16 v0, 0x69
 
-    const/16 v2, 0x69
+    const-string v2, "GUAN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "GUANG"
+    const/16 v0, 0x6a
 
-    const/16 v2, 0x6a
+    const-string v2, "GUANG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "GUI"
+    const/16 v0, 0x6b
 
-    const/16 v2, 0x6b
+    const-string v2, "GUI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "GUN"
+    const/16 v0, 0x6c
 
-    const/16 v2, 0x6c
+    const-string v2, "GUN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "GUO"
+    const/16 v0, 0x6d
 
-    const/16 v2, 0x6d
+    const-string v2, "GUO"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "HA"
+    const/16 v0, 0x6e
 
-    const/16 v2, 0x6e
+    const-string v2, "HA"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "HAI"
+    const/16 v0, 0x6f
 
-    const/16 v2, 0x6f
+    const-string v2, "HAI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "HAN"
+    const/16 v0, 0x70
 
-    const/16 v2, 0x70
+    const-string v2, "HAN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "HANG"
+    const/16 v0, 0x71
 
-    const/16 v2, 0x71
+    const-string v2, "HANG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "HAO"
+    const/16 v0, 0x72
 
-    const/16 v2, 0x72
+    const-string v2, "HAO"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "HE"
+    const/16 v0, 0x73
 
-    const/16 v2, 0x73
+    const-string v2, "HE"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "HEI"
+    const/16 v0, 0x74
 
-    const/16 v2, 0x74
+    const-string v2, "HEI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "HEN"
+    const/16 v0, 0x75
 
-    const/16 v2, 0x75
+    const-string v2, "HEN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "HENG"
+    const/16 v0, 0x76
 
-    const/16 v2, 0x76
+    const-string v2, "HENG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "HONG"
+    const/16 v0, 0x77
 
-    const/16 v2, 0x77
+    const-string v2, "HONG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "HOU"
+    const/16 v0, 0x78
 
-    const/16 v2, 0x78
+    const-string v2, "HOU"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "HU"
+    const/16 v0, 0x79
 
-    const/16 v2, 0x79
+    const-string v2, "HU"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "HUA"
+    const/16 v0, 0x7a
 
-    const/16 v2, 0x7a
+    const-string v2, "HUA"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "HUAI"
+    const/16 v0, 0x7b
 
-    const/16 v2, 0x7b
+    const-string v2, "HUAI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "HUAN"
+    const/16 v0, 0x7c
 
-    const/16 v2, 0x7c
+    const-string v2, "HUAN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "HUANG"
+    const/16 v0, 0x7d
 
-    const/16 v2, 0x7d
+    const-string v2, "HUANG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "HUI"
+    const/16 v0, 0x7e
 
-    const/16 v2, 0x7e
+    const-string v2, "HUI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "HUN"
+    const/16 v0, 0x7f
 
-    const/16 v2, 0x7f
+    const-string v2, "HUN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "HUO"
+    const/16 v0, 0x80
 
-    const/16 v2, 0x80
+    const-string v2, "HUO"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "JI"
+    const/16 v0, 0x81
 
-    const/16 v2, 0x81
+    const-string v2, "JI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "JIA"
+    const/16 v0, 0x82
 
-    const/16 v2, 0x82
+    const-string v2, "JIA"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "JIAN"
+    const/16 v0, 0x83
 
-    const/16 v2, 0x83
+    const-string v2, "JIAN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "JIANG"
+    const/16 v0, 0x84
 
-    const/16 v2, 0x84
+    const-string v2, "JIANG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "JIAO"
+    const/16 v0, 0x85
 
-    const/16 v2, 0x85
+    const-string v2, "JIAO"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "JIE"
+    const/16 v0, 0x86
 
-    const/16 v2, 0x86
+    const-string v2, "JIE"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "JIN"
+    const/16 v0, 0x87
 
-    const/16 v2, 0x87
+    const-string v2, "JIN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "JING"
+    const/16 v0, 0x88
 
-    const/16 v2, 0x88
+    const-string v2, "JING"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "JIONG"
+    const/16 v0, 0x89
 
-    const/16 v2, 0x89
+    const-string v2, "JIONG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "JIU"
+    const/16 v0, 0x8a
 
-    const/16 v2, 0x8a
+    const-string v2, "JIU"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "JU"
+    const/16 v0, 0x8b
 
-    const/16 v2, 0x8b
+    const-string v2, "JU"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "JUAN"
+    const/16 v0, 0x8c
 
-    const/16 v2, 0x8c
+    const-string v2, "JUAN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "JUE"
+    const/16 v0, 0x8d
 
-    const/16 v2, 0x8d
+    const-string v2, "JUE"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "JUN"
+    const/16 v0, 0x8e
 
-    const/16 v2, 0x8e
+    const-string v2, "JUN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "KA"
+    const/16 v0, 0x8f
 
-    const/16 v2, 0x8f
+    const-string v2, "KA"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "KAI"
+    const/16 v0, 0x90
 
-    const/16 v2, 0x90
+    const-string v2, "KAI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "KAN"
+    const/16 v0, 0x91
 
-    const/16 v2, 0x91
+    const-string v2, "KAN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "KANG"
+    const/16 v0, 0x92
 
-    const/16 v2, 0x92
+    const-string v2, "KANG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "KAO"
+    const/16 v0, 0x93
 
-    const/16 v2, 0x93
+    const-string v2, "KAO"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "KE"
+    const/16 v0, 0x94
 
-    const/16 v2, 0x94
+    const-string v2, "KE"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "KEN"
+    const/16 v0, 0x95
 
-    const/16 v2, 0x95
+    const-string v2, "KEN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "KENG"
+    const/16 v0, 0x96
 
-    const/16 v2, 0x96
+    const-string v2, "KENG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "KONG"
+    const/16 v0, 0x97
 
-    const/16 v2, 0x97
+    const-string v2, "KONG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "KOU"
+    const/16 v0, 0x98
 
-    const/16 v2, 0x98
+    const-string v2, "KOU"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "KU"
+    const/16 v0, 0x99
 
-    const/16 v2, 0x99
+    const-string v2, "KU"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "KUA"
+    const/16 v0, 0x9a
 
-    const/16 v2, 0x9a
+    const-string v2, "KUA"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "KUAI"
+    const/16 v0, 0x9b
 
-    const/16 v2, 0x9b
+    const-string v2, "KUAI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "KUAN"
+    const/16 v0, 0x9c
 
-    const/16 v2, 0x9c
+    const-string v2, "KUAN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "KUANG"
+    const/16 v0, 0x9d
 
-    const/16 v2, 0x9d
+    const-string v2, "KUANG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "KUI"
+    const/16 v0, 0x9e
 
-    const/16 v2, 0x9e
+    const-string v2, "KUI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "KUN"
+    const/16 v0, 0x9f
 
-    const/16 v2, 0x9f
+    const-string v2, "KUN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "KUO"
+    const/16 v0, 0xa0
 
-    const/16 v2, 0xa0
+    const-string v2, "KUO"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "LA"
+    const/16 v0, 0xa1
 
-    const/16 v2, 0xa1
+    const-string v2, "LA"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "LAI"
+    const/16 v0, 0xa2
 
-    const/16 v2, 0xa2
+    const-string v2, "LAI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "LAN"
+    const/16 v0, 0xa3
 
-    const/16 v2, 0xa3
+    const-string v2, "LAN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "LANG"
+    const/16 v0, 0xa4
 
-    const/16 v2, 0xa4
+    const-string v2, "LANG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "LAO"
+    const/16 v0, 0xa5
 
-    const/16 v2, 0xa5
+    const-string v2, "LAO"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "LE"
+    const/16 v0, 0xa6
 
-    const/16 v2, 0xa6
+    const-string v2, "LE"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "LEI"
+    const/16 v0, 0xa7
 
-    const/16 v2, 0xa7
+    const-string v2, "LEI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "LENG"
+    const/16 v0, 0xa8
 
-    const/16 v2, 0xa8
+    const-string v2, "LENG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "LI"
+    const/16 v0, 0xa9
 
-    const/16 v2, 0xa9
+    const-string v2, "LI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "LIA"
+    const/16 v0, 0xaa
 
-    const/16 v2, 0xaa
+    const-string v2, "LIA"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "LIAN"
+    const/16 v0, 0xab
 
-    const/16 v2, 0xab
+    const-string v2, "LIAN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "LIANG"
+    const/16 v0, 0xac
 
-    const/16 v2, 0xac
+    const-string v2, "LIANG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "LIAO"
+    const/16 v0, 0xad
 
-    const/16 v2, 0xad
+    const-string v2, "LIAO"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "LIE"
+    const/16 v0, 0xae
 
-    const/16 v2, 0xae
+    const-string v2, "LIE"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "LIN"
+    const/16 v0, 0xaf
 
-    const/16 v2, 0xaf
+    const-string v2, "LIN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "LING"
+    const/16 v0, 0xb0
 
-    const/16 v2, 0xb0
+    const-string v2, "LING"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "LIU"
+    const/16 v0, 0xb1
 
-    const/16 v2, 0xb1
+    const-string v2, "LIU"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "LONG"
+    const/16 v0, 0xb2
 
-    const/16 v2, 0xb2
+    const-string v2, "LONG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "LOU"
+    const/16 v0, 0xb3
 
-    const/16 v2, 0xb3
+    const-string v2, "LOU"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "LU"
+    const/16 v0, 0xb4
 
-    const/16 v2, 0xb4
+    const-string v2, "LU"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "LUAN"
+    const/16 v0, 0xb5
 
-    const/16 v2, 0xb5
+    const-string v2, "LUAN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "LUN"
+    const/16 v0, 0xb6
 
-    const/16 v2, 0xb6
+    const-string v2, "LUN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "LUO"
+    const/16 v0, 0xb7
 
-    const/16 v2, 0xb7
+    const-string v2, "LUO"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "LV"
+    const/16 v0, 0xb8
 
-    const/16 v2, 0xb8
+    const-string v2, "LV"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "LVE"
+    const/16 v0, 0xb9
 
-    const/16 v2, 0xb9
+    const-string v2, "LVE"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "M"
+    const/16 v0, 0xba
 
-    const/16 v2, 0xba
+    const-string v2, "M"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "MA"
+    const/16 v0, 0xbb
 
-    const/16 v2, 0xbb
+    const-string v2, "MA"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "MAI"
+    const/16 v0, 0xbc
 
-    const/16 v2, 0xbc
+    const-string v2, "MAI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "MAN"
+    const/16 v0, 0xbd
 
-    const/16 v2, 0xbd
+    const-string v2, "MAN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "MANG"
+    const/16 v0, 0xbe
 
-    const/16 v2, 0xbe
+    const-string v2, "MANG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "MAO"
+    const/16 v0, 0xbf
 
-    const/16 v2, 0xbf
+    const-string v2, "MAO"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "ME"
+    const/16 v0, 0xc0
 
-    const/16 v2, 0xc0
+    const-string v2, "ME"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "MEI"
+    const/16 v0, 0xc1
 
-    const/16 v2, 0xc1
+    const-string v2, "MEI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "MEN"
+    const/16 v0, 0xc2
 
-    const/16 v2, 0xc2
+    const-string v2, "MEN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "MENG"
+    const/16 v0, 0xc3
 
-    const/16 v2, 0xc3
+    const-string v2, "MENG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "MI"
+    const/16 v0, 0xc4
 
-    const/16 v2, 0xc4
+    const-string v2, "MI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "MIAN"
+    const/16 v0, 0xc5
 
-    const/16 v2, 0xc5
+    const-string v2, "MIAN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "MIAO"
+    const/16 v0, 0xc6
 
-    const/16 v2, 0xc6
+    const-string v2, "MIAO"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "MIE"
+    const/16 v0, 0xc7
 
-    const/16 v2, 0xc7
+    const-string v2, "MIE"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "MIN"
+    const/16 v0, 0xc8
 
-    const/16 v2, 0xc8
+    const-string v2, "MIN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "MING"
+    const/16 v0, 0xc9
 
-    const/16 v2, 0xc9
+    const-string v2, "MING"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "MIU"
+    const/16 v0, 0xca
 
-    const/16 v2, 0xca
+    const-string v2, "MIU"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "MO"
+    const/16 v0, 0xcb
 
-    const/16 v2, 0xcb
+    const-string v2, "MO"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "MOU"
+    const/16 v0, 0xcc
 
-    const/16 v2, 0xcc
+    const-string v2, "MOU"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "MU"
+    const/16 v0, 0xcd
 
-    const/16 v2, 0xcd
+    const-string v2, "MU"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "NA"
+    const/16 v0, 0xce
 
-    const/16 v2, 0xce
+    const-string v2, "NA"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "NAI"
+    const/16 v0, 0xcf
 
-    const/16 v2, 0xcf
+    const-string v2, "NAI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "NAN"
+    const/16 v0, 0xd0
 
-    const/16 v2, 0xd0
+    const-string v2, "NAN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "NANG"
+    const/16 v0, 0xd1
 
-    const/16 v2, 0xd1
+    const-string v2, "NANG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "NAO"
+    const/16 v0, 0xd2
 
-    const/16 v2, 0xd2
+    const-string v2, "NAO"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "NE"
+    const/16 v0, 0xd3
 
-    const/16 v2, 0xd3
+    const-string v2, "NE"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "NEI"
+    const/16 v0, 0xd4
 
-    const/16 v2, 0xd4
+    const-string v2, "NEI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "NEN"
+    const/16 v0, 0xd5
 
-    const/16 v2, 0xd5
+    const-string v2, "NEN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "NENG"
+    const/16 v0, 0xd6
 
-    const/16 v2, 0xd6
+    const-string v2, "NENG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "NG"
+    const/16 v0, 0xd7
 
-    const/16 v2, 0xd7
+    const-string v2, "NG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "NI"
+    const/16 v0, 0xd8
 
-    const/16 v2, 0xd8
+    const-string v2, "NI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "NIAN"
+    const/16 v0, 0xd9
 
-    const/16 v2, 0xd9
+    const-string v2, "NIAN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "NIANG"
+    const/16 v0, 0xda
 
-    const/16 v2, 0xda
+    const-string v2, "NIANG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "NIAO"
+    const/16 v0, 0xdb
 
-    const/16 v2, 0xdb
+    const-string v2, "NIAO"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "NIE"
+    const/16 v0, 0xdc
 
-    const/16 v2, 0xdc
+    const-string v2, "NIE"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "NIN"
+    const/16 v0, 0xdd
 
-    const/16 v2, 0xdd
+    const-string v2, "NIN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "NING"
+    const/16 v0, 0xde
 
-    const/16 v2, 0xde
+    const-string v2, "NING"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "NIU"
+    const/16 v0, 0xdf
 
-    const/16 v2, 0xdf
+    const-string v2, "NIU"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "NONG"
+    const/16 v0, 0xe0
 
-    const/16 v2, 0xe0
+    const-string v2, "NONG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "NOU"
+    const/16 v0, 0xe1
 
-    const/16 v2, 0xe1
+    const-string v2, "NOU"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "NU"
+    const/16 v0, 0xe2
 
-    const/16 v2, 0xe2
+    const-string v2, "NU"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "NUAN"
+    const/16 v0, 0xe3
 
-    const/16 v2, 0xe3
+    const-string v2, "NUAN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "NUO"
+    const/16 v0, 0xe4
 
-    const/16 v2, 0xe4
+    const-string v2, "NUO"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "NV"
+    const/16 v0, 0xe5
 
-    const/16 v2, 0xe5
+    const-string v2, "NV"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "NVE"
+    const/16 v0, 0xe6
 
-    const/16 v2, 0xe6
+    const-string v2, "NVE"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "O"
+    const/16 v0, 0xe7
 
-    const/16 v2, 0xe7
+    const-string v2, "O"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "OU"
+    const/16 v0, 0xe8
 
-    const/16 v2, 0xe8
+    const-string v2, "OU"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "PA"
+    const/16 v0, 0xe9
 
-    const/16 v2, 0xe9
+    const-string v2, "PA"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "PAI"
+    const/16 v0, 0xea
 
-    const/16 v2, 0xea
+    const-string v2, "PAI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "PAN"
+    const/16 v0, 0xeb
 
-    const/16 v2, 0xeb
+    const-string v2, "PAN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "PANG"
+    const/16 v0, 0xec
 
-    const/16 v2, 0xec
+    const-string v2, "PANG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "PAO"
+    const/16 v0, 0xed
 
-    const/16 v2, 0xed
+    const-string v2, "PAO"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "PEI"
+    const/16 v0, 0xee
 
-    const/16 v2, 0xee
+    const-string v2, "PEI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "PEN"
+    const/16 v0, 0xef
 
-    const/16 v2, 0xef
+    const-string v2, "PEN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "PENG"
+    const/16 v0, 0xf0
 
-    const/16 v2, 0xf0
+    const-string v2, "PENG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "PI"
+    const/16 v0, 0xf1
 
-    const/16 v2, 0xf1
+    const-string v2, "PI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "PIAN"
+    const/16 v0, 0xf2
 
-    const/16 v2, 0xf2
+    const-string v2, "PIAN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "PIAO"
+    const/16 v0, 0xf3
 
-    const/16 v2, 0xf3
+    const-string v2, "PIAO"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "PIE"
+    const/16 v0, 0xf4
 
-    const/16 v2, 0xf4
+    const-string v2, "PIE"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "PIN"
+    const/16 v0, 0xf5
 
-    const/16 v2, 0xf5
+    const-string v2, "PIN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "PING"
+    const/16 v0, 0xf6
 
-    const/16 v2, 0xf6
+    const-string v2, "PING"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "PO"
+    const/16 v0, 0xf7
 
-    const/16 v2, 0xf7
+    const-string v2, "PO"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "POU"
+    const/16 v0, 0xf8
 
-    const/16 v2, 0xf8
+    const-string v2, "POU"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "PU"
+    const/16 v0, 0xf9
 
-    const/16 v2, 0xf9
+    const-string v2, "PU"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "QI"
+    const/16 v0, 0xfa
 
-    const/16 v2, 0xfa
+    const-string v2, "QI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "QIA"
+    const/16 v0, 0xfb
 
-    const/16 v2, 0xfb
+    const-string v2, "QIA"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "QIAN"
+    const/16 v0, 0xfc
 
-    const/16 v2, 0xfc
+    const-string v2, "QIAN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "QIANG"
+    const/16 v0, 0xfd
 
-    const/16 v2, 0xfd
+    const-string v2, "QIANG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "QIAO"
+    const/16 v0, 0xfe
 
-    const/16 v2, 0xfe
+    const-string v2, "QIAO"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "QIE"
+    const/16 v0, 0xff
 
-    const/16 v2, 0xff
+    const-string v2, "QIE"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "QIN"
+    const/16 v0, 0x100
 
-    const/16 v2, 0x100
+    const-string v2, "QIN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "QING"
+    const/16 v0, 0x101
 
-    const/16 v2, 0x101
+    const-string v2, "QING"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "QIONG"
+    const/16 v0, 0x102
 
-    const/16 v2, 0x102
+    const-string v2, "QIONG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "QIU"
+    const/16 v0, 0x103
 
-    const/16 v2, 0x103
+    const-string v2, "QIU"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "QU"
+    const/16 v0, 0x104
 
-    const/16 v2, 0x104
+    const-string v2, "QU"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "QUAN"
+    const/16 v0, 0x105
 
-    const/16 v2, 0x105
+    const-string v2, "QUAN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "QUE"
+    const/16 v0, 0x106
 
-    const/16 v2, 0x106
+    const-string v2, "QUE"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "QUN"
+    const/16 v0, 0x107
 
-    const/16 v2, 0x107
+    const-string v2, "QUN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "RAN"
+    const/16 v0, 0x108
 
-    const/16 v2, 0x108
+    const-string v2, "RAN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "RANG"
+    const/16 v0, 0x109
 
-    const/16 v2, 0x109
+    const-string v2, "RANG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "RAO"
+    const/16 v0, 0x10a
 
-    const/16 v2, 0x10a
+    const-string v2, "RAO"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "RE"
+    const/16 v0, 0x10b
 
-    const/16 v2, 0x10b
+    const-string v2, "RE"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "REN"
+    const/16 v0, 0x10c
 
-    const/16 v2, 0x10c
+    const-string v2, "REN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "RENG"
+    const/16 v0, 0x10d
 
-    const/16 v2, 0x10d
+    const-string v2, "RENG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "RI"
+    const/16 v0, 0x10e
 
-    const/16 v2, 0x10e
+    const-string v2, "RI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "RONG"
+    const/16 v0, 0x10f
 
-    const/16 v2, 0x10f
+    const-string v2, "RONG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "ROU"
+    const/16 v0, 0x110
 
-    const/16 v2, 0x110
+    const-string v2, "ROU"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "RU"
+    const/16 v0, 0x111
 
-    const/16 v2, 0x111
+    const-string v2, "RU"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "RUAN"
+    const/16 v0, 0x112
 
-    const/16 v2, 0x112
+    const-string v2, "RUAN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "RUI"
+    const/16 v0, 0x113
 
-    const/16 v2, 0x113
+    const-string v2, "RUI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "RUN"
+    const/16 v0, 0x114
 
-    const/16 v2, 0x114
+    const-string v2, "RUN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "RUO"
+    const/16 v0, 0x115
 
-    const/16 v2, 0x115
+    const-string v2, "RUO"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "SA"
+    const/16 v0, 0x116
 
-    const/16 v2, 0x116
+    const-string v2, "SA"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "SAI"
+    const/16 v0, 0x117
 
-    const/16 v2, 0x117
+    const-string v2, "SAI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "SAN"
+    const/16 v0, 0x118
 
-    const/16 v2, 0x118
+    const-string v2, "SAN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "SANG"
+    const/16 v0, 0x119
 
-    const/16 v2, 0x119
+    const-string v2, "SANG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "SAO"
+    const/16 v0, 0x11a
 
-    const/16 v2, 0x11a
+    const-string v2, "SAO"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "SE"
+    const/16 v0, 0x11b
 
-    const/16 v2, 0x11b
+    const-string v2, "SE"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "SEN"
+    const/16 v0, 0x11c
 
-    const/16 v2, 0x11c
+    const-string v2, "SEN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "SENG"
+    const/16 v0, 0x11d
 
-    const/16 v2, 0x11d
+    const-string v2, "SENG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "SHA"
+    const/16 v0, 0x11e
 
-    const/16 v2, 0x11e
+    const-string v2, "SHA"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "SHAI"
+    const/16 v0, 0x11f
 
-    const/16 v2, 0x11f
+    const-string v2, "SHAI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "SHAN"
+    const/16 v0, 0x120
 
-    const/16 v2, 0x120
+    const-string v2, "SHAN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "SHANG"
+    const/16 v0, 0x121
 
-    const/16 v2, 0x121
+    const-string v2, "SHANG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "SHAO"
+    const/16 v0, 0x122
 
-    const/16 v2, 0x122
+    const-string v2, "SHAO"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "SHE"
+    const/16 v0, 0x123
 
-    const/16 v2, 0x123
+    const-string v2, "SHE"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "SHEI"
+    const/16 v0, 0x124
 
-    const/16 v2, 0x124
+    const-string v2, "SHEI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "SHEN"
+    const/16 v0, 0x125
 
-    const/16 v2, 0x125
+    const-string v2, "SHEN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "SHENG"
+    const/16 v0, 0x126
 
-    const/16 v2, 0x126
+    const-string v2, "SHENG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "SHI"
+    const/16 v0, 0x127
 
-    const/16 v2, 0x127
+    const-string v2, "SHI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "SHOU"
+    const/16 v0, 0x128
 
-    const/16 v2, 0x128
+    const-string v2, "SHOU"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "SHU"
+    const/16 v0, 0x129
 
-    const/16 v2, 0x129
+    const-string v2, "SHU"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "SHUA"
+    const/16 v0, 0x12a
 
-    const/16 v2, 0x12a
+    const-string v2, "SHUA"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "SHUAI"
+    const/16 v0, 0x12b
 
-    const/16 v2, 0x12b
+    const-string v2, "SHUAI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "SHUAN"
+    const/16 v0, 0x12c
 
-    const/16 v2, 0x12c
+    const-string v2, "SHUAN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "SHUANG"
+    const/16 v0, 0x12d
 
-    const/16 v2, 0x12d
+    const-string v2, "SHUANG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "SHUI"
+    const/16 v0, 0x12e
 
-    const/16 v2, 0x12e
+    const-string v2, "SHUI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "SHUN"
+    const/16 v0, 0x12f
 
-    const/16 v2, 0x12f
+    const-string v2, "SHUN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "SHUO"
+    const/16 v0, 0x130
 
-    const/16 v2, 0x130
+    const-string v2, "SHUO"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "SI"
+    const/16 v0, 0x131
 
-    const/16 v2, 0x131
+    const-string v2, "SI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "SONG"
+    const/16 v0, 0x132
 
-    const/16 v2, 0x132
+    const-string v2, "SONG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "SOU"
+    const/16 v0, 0x133
 
-    const/16 v2, 0x133
+    const-string v2, "SOU"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "SU"
+    const/16 v0, 0x134
 
-    const/16 v2, 0x134
+    const-string v2, "SU"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "SUAN"
+    const/16 v0, 0x135
 
-    const/16 v2, 0x135
+    const-string v2, "SUAN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "SUI"
+    const/16 v0, 0x136
 
-    const/16 v2, 0x136
+    const-string v2, "SUI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "SUN"
+    const/16 v0, 0x137
 
-    const/16 v2, 0x137
+    const-string v2, "SUN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "SUO"
+    const/16 v0, 0x138
 
-    const/16 v2, 0x138
+    const-string v2, "SUO"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "TA"
+    const/16 v0, 0x139
 
-    const/16 v2, 0x139
+    const-string v2, "TA"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "TAI"
+    const/16 v0, 0x13a
 
-    const/16 v2, 0x13a
+    const-string v2, "TAI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "TAN"
+    const/16 v0, 0x13b
 
-    const/16 v2, 0x13b
+    const-string v2, "TAN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "TANG"
+    const/16 v0, 0x13c
 
-    const/16 v2, 0x13c
+    const-string v2, "TANG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "TAO"
+    const/16 v0, 0x13d
 
-    const/16 v2, 0x13d
+    const-string v2, "TAO"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "TE"
+    const/16 v0, 0x13e
 
-    const/16 v2, 0x13e
+    const-string v2, "TE"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "TENG"
+    const/16 v0, 0x13f
 
-    const/16 v2, 0x13f
+    const-string v2, "TENG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "TI"
+    const/16 v0, 0x140
 
-    const/16 v2, 0x140
+    const-string v2, "TI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "TIAN"
+    const/16 v0, 0x141
 
-    const/16 v2, 0x141
+    const-string v2, "TIAN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "TIAO"
+    const/16 v0, 0x142
 
-    const/16 v2, 0x142
+    const-string v2, "TIAO"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "TIE"
+    const/16 v0, 0x143
 
-    const/16 v2, 0x143
+    const-string v2, "TIE"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "TING"
+    const/16 v0, 0x144
 
-    const/16 v2, 0x144
+    const-string v2, "TING"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "TONG"
+    const/16 v0, 0x145
 
-    const/16 v2, 0x145
+    const-string v2, "TONG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "TOU"
+    const/16 v0, 0x146
 
-    const/16 v2, 0x146
+    const-string v2, "TOU"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "TU"
+    const/16 v0, 0x147
 
-    const/16 v2, 0x147
+    const-string v2, "TU"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "TUAN"
+    const/16 v0, 0x148
 
-    const/16 v2, 0x148
+    const-string v2, "TUAN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "TUI"
+    const/16 v0, 0x149
 
-    const/16 v2, 0x149
+    const-string v2, "TUI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "TUN"
+    const/16 v0, 0x14a
 
-    const/16 v2, 0x14a
+    const-string v2, "TUN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "TUO"
+    const/16 v0, 0x14b
 
-    const/16 v2, 0x14b
+    const-string v2, "TUO"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "WA"
+    const/16 v0, 0x14c
 
-    const/16 v2, 0x14c
+    const-string v2, "WA"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "WAI"
+    const/16 v0, 0x14d
 
-    const/16 v2, 0x14d
+    const-string v2, "WAI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "WAN"
+    const/16 v0, 0x14e
 
-    const/16 v2, 0x14e
+    const-string v2, "WAN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "WANG"
+    const/16 v0, 0x14f
 
-    const/16 v2, 0x14f
+    const-string v2, "WANG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "WEI"
+    const/16 v0, 0x150
 
-    const/16 v2, 0x150
+    const-string v2, "WEI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "WEN"
+    const/16 v0, 0x151
 
-    const/16 v2, 0x151
+    const-string v2, "WEN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "WENG"
+    const/16 v0, 0x152
 
-    const/16 v2, 0x152
+    const-string v2, "WENG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "WO"
+    const/16 v0, 0x153
 
-    const/16 v2, 0x153
+    const-string v2, "WO"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "WU"
+    const/16 v0, 0x154
 
-    const/16 v2, 0x154
+    const-string v2, "WU"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "XI"
+    const/16 v0, 0x155
 
-    const/16 v2, 0x155
+    const-string v2, "XI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "XIA"
+    const/16 v0, 0x156
 
-    const/16 v2, 0x156
+    const-string v2, "XIA"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "XIAN"
+    const/16 v0, 0x157
 
-    const/16 v2, 0x157
+    const-string v2, "XIAN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "XIANG"
+    const/16 v0, 0x158
 
-    const/16 v2, 0x158
+    const-string v2, "XIANG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "XIAO"
+    const/16 v0, 0x159
 
-    const/16 v2, 0x159
+    const-string v2, "XIAO"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "XIE"
+    const/16 v0, 0x15a
 
-    const/16 v2, 0x15a
+    const-string v2, "XIE"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "XIN"
+    const/16 v0, 0x15b
 
-    const/16 v2, 0x15b
+    const-string v2, "XIN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "XING"
+    const/16 v0, 0x15c
 
-    const/16 v2, 0x15c
+    const-string v2, "XING"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "XIONG"
+    const/16 v0, 0x15d
 
-    const/16 v2, 0x15d
+    const-string v2, "XIONG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "XIU"
+    const/16 v0, 0x15e
 
-    const/16 v2, 0x15e
+    const-string v2, "XIU"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "XU"
+    const/16 v0, 0x15f
 
-    const/16 v2, 0x15f
+    const-string v2, "XU"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "XUAN"
+    const/16 v0, 0x160
 
-    const/16 v2, 0x160
+    const-string v2, "XUAN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "XUE"
+    const/16 v0, 0x161
 
-    const/16 v2, 0x161
+    const-string v2, "XUE"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "XUN"
+    const/16 v0, 0x162
 
-    const/16 v2, 0x162
+    const-string v2, "XUN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "YA"
+    const/16 v0, 0x163
 
-    const/16 v2, 0x163
+    const-string v2, "YA"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "YAN"
+    const/16 v0, 0x164
 
-    const/16 v2, 0x164
+    const-string v2, "YAN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "YANG"
+    const/16 v0, 0x165
 
-    const/16 v2, 0x165
+    const-string v2, "YANG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "YAO"
+    const/16 v0, 0x166
 
-    const/16 v2, 0x166
+    const-string v2, "YAO"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "YE"
+    const/16 v0, 0x167
 
-    const/16 v2, 0x167
+    const-string v2, "YE"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "YI"
+    const/16 v0, 0x168
 
-    const/16 v2, 0x168
+    const-string v2, "YI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "YIAO"
+    const/16 v0, 0x169
 
-    const/16 v2, 0x169
+    const-string v2, "YIAO"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "YIN"
+    const/16 v0, 0x16a
 
-    const/16 v2, 0x16a
+    const-string v2, "YIN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "YING"
+    const/16 v0, 0x16b
 
-    const/16 v2, 0x16b
+    const-string v2, "YING"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "YO"
+    const/16 v0, 0x16c
 
-    const/16 v2, 0x16c
+    const-string v2, "YO"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "YONG"
+    const/16 v0, 0x16d
 
-    const/16 v2, 0x16d
+    const-string v2, "YONG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "YOU"
+    const/16 v0, 0x16e
 
-    const/16 v2, 0x16e
+    const-string v2, "YOU"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "YU"
+    const/16 v0, 0x16f
 
-    const/16 v2, 0x16f
+    const-string v2, "YU"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "YUAN"
+    const/16 v0, 0x170
 
-    const/16 v2, 0x170
+    const-string v2, "YUAN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "YUE"
+    const/16 v0, 0x171
 
-    const/16 v2, 0x171
+    const-string v2, "YUE"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "YUN"
+    const/16 v0, 0x172
 
-    const/16 v2, 0x172
+    const-string v2, "YUN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "ZA"
+    const/16 v0, 0x173
 
-    const/16 v2, 0x173
+    const-string v2, "ZA"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "ZAI"
+    const/16 v0, 0x174
 
-    const/16 v2, 0x174
+    const-string v2, "ZAI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "ZAN"
+    const/16 v0, 0x175
 
-    const/16 v2, 0x175
+    const-string v2, "ZAN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "ZANG"
+    const/16 v0, 0x176
 
-    const/16 v2, 0x176
+    const-string v2, "ZANG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "ZAO"
+    const/16 v0, 0x177
 
-    const/16 v2, 0x177
+    const-string v2, "ZAO"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "ZE"
+    const/16 v0, 0x178
 
-    const/16 v2, 0x178
+    const-string v2, "ZE"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "ZEI"
+    const/16 v0, 0x179
 
-    const/16 v2, 0x179
+    const-string v2, "ZEI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "ZEN"
+    const/16 v0, 0x17a
 
-    const/16 v2, 0x17a
+    const-string v2, "ZEN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "ZENG"
+    const/16 v0, 0x17b
 
-    const/16 v2, 0x17b
+    const-string v2, "ZENG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "ZHA"
+    const/16 v0, 0x17c
 
-    const/16 v2, 0x17c
+    const-string v2, "ZHA"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "ZHAI"
+    const/16 v0, 0x17d
 
-    const/16 v2, 0x17d
+    const-string v2, "ZHAI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "ZHAN"
+    const/16 v0, 0x17e
 
-    const/16 v2, 0x17e
+    const-string v2, "ZHAN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "ZHANG"
+    const/16 v0, 0x17f
 
-    const/16 v2, 0x17f
+    const-string v2, "ZHANG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "ZHAO"
+    const/16 v0, 0x180
 
-    const/16 v2, 0x180
+    const-string v2, "ZHAO"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "ZHE"
+    const/16 v0, 0x181
 
-    const/16 v2, 0x181
+    const-string v2, "ZHE"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "ZHEI"
+    const/16 v0, 0x182
 
-    const/16 v2, 0x182
+    const-string v2, "ZHEI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "ZHEN"
+    const/16 v0, 0x183
 
-    const/16 v2, 0x183
+    const-string v2, "ZHEN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "ZHENG"
+    const/16 v0, 0x184
 
-    const/16 v2, 0x184
+    const-string v2, "ZHENG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "ZHI"
+    const/16 v0, 0x185
 
-    const/16 v2, 0x185
+    const-string v2, "ZHI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "ZHONG"
+    const/16 v0, 0x186
 
-    const/16 v2, 0x186
+    const-string v2, "ZHONG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "ZHOU"
+    const/16 v0, 0x187
 
-    const/16 v2, 0x187
+    const-string v2, "ZHOU"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "ZHU"
+    const/16 v0, 0x188
 
-    const/16 v2, 0x188
+    const-string v2, "ZHU"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "ZHUA"
+    const/16 v0, 0x189
 
-    const/16 v2, 0x189
+    const-string v2, "ZHUA"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "ZHUAI"
+    const/16 v0, 0x18a
 
-    const/16 v2, 0x18a
+    const-string v2, "ZHUAI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "ZHUAN"
+    const/16 v0, 0x18b
 
-    const/16 v2, 0x18b
+    const-string v2, "ZHUAN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "ZHUANG"
+    const/16 v0, 0x18c
 
-    const/16 v2, 0x18c
+    const-string v2, "ZHUANG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "ZHUI"
+    const/16 v0, 0x18d
 
-    const/16 v2, 0x18d
+    const-string v2, "ZHUI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "ZHUN"
+    const/16 v0, 0x18e
 
-    const/16 v2, 0x18e
+    const-string v2, "ZHUN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "ZHUO"
+    const/16 v0, 0x18f
 
-    const/16 v2, 0x18f
+    const-string v2, "ZHUO"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "ZI"
+    const/16 v0, 0x190
 
-    const/16 v2, 0x190
+    const-string v2, "ZI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "ZONG"
+    const/16 v0, 0x191
 
-    const/16 v2, 0x191
+    const-string v2, "ZONG"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "ZOU"
+    const/16 v0, 0x192
 
-    const/16 v2, 0x192
+    const-string v2, "ZOU"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "ZU"
+    const/16 v0, 0x193
 
-    const/16 v2, 0x193
+    const-string v2, "ZU"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "ZUAN"
+    const/16 v0, 0x194
 
-    const/16 v2, 0x194
+    const-string v2, "ZUAN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "ZUI"
+    const/16 v0, 0x195
 
-    const/16 v2, 0x195
+    const-string v2, "ZUI"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "ZUN"
+    const/16 v0, 0x196
 
-    const/16 v2, 0x196
+    const-string v2, "ZUN"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
-    const-string v0, "ZUO"
+    const/16 v0, 0x197
 
-    const/16 v2, 0x197
+    const-string v2, "ZUO"
 
-    aput-object v0, v1, v2
+    aput-object v2, v1, v0
 
     sput-object v1, Lcom/github/promeg/pinyinhelper/PinyinData;->PINYIN_TABLE:[Ljava/lang/String;
 

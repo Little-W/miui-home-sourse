@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.miui.home.smallwindow.ItemView android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <FrameLayout android:layout_width="@dimen/small_window_edit_icon_width" android:layout_height="@dimen/small_window_edit_icon_height">
-        <ImageView android:layout_gravity="bottom|center" android:id="@id/icon" android:layout_width="@dimen/small_window_edit_icon_image_size" android:layout_height="@dimen/small_window_edit_icon_image_size" />
-        <ImageView android:layout_gravity="center|right|top" android:id="@id/badge" android:layout_width="@dimen/small_window_edit_icon_badge_size" android:layout_height="@dimen/small_window_edit_icon_badge_size" />
-    </FrameLayout>
-    <TextView android:textSize="12.0sp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
-</com.miui.home.smallwindow.ItemView>

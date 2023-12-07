@@ -1,6 +1,5 @@
 .class public final Lcom/market/sdk/utils/Constants$Update;
 .super Ljava/lang/Object;
-.source "Constants.java"
 
 # interfaces
 .implements Lcom/market/sdk/utils/Constants$BaseColumns;
@@ -45,23 +44,22 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    const-string v0, "update_download.package_name"
+    const-string/jumbo v0, "update_download.package_name"
 
-    const-string v1, "update_download.download_id"
+    const-string/jumbo v1, "update_download.download_id"
 
-    const-string v2, "update_download.version_code"
+    const-string/jumbo v2, "update_download.version_code"
 
-    const-string v3, "update_download.apk_url"
+    const-string/jumbo v3, "update_download.apk_url"
 
-    const-string v4, "update_download.apk_hash"
+    const-string/jumbo v4, "update_download.apk_hash"
 
-    const-string v5, "update_download.diff_url"
+    const-string/jumbo v5, "update_download.diff_url"
 
-    const-string v6, "update_download.diff_hash"
+    const-string/jumbo v6, "update_download.diff_hash"
 
-    const-string v7, "update_download.apk_path"
+    const-string/jumbo v7, "update_download.apk_path"
 
-    .line 185
     filled-new-array/range {v0 .. v7}, [Ljava/lang/String;
 
     move-result-object v0
@@ -74,7 +72,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 153
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

@@ -1,0 +1,1148 @@
+.class Lcom/mi/globallauncher/manager/BranchGuildController;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Lcom/mi/globallauncher/branchInterface/IBranchGuildController;
+
+
+# static fields
+.field private static volatile instance:Lcom/mi/globallauncher/manager/BranchGuildController;
+
+
+# instance fields
+.field private callback:Lcom/mi/globallauncher/branchInterface/IBranchGuildCallBack;
+
+.field public hasBranch:Z
+
+.field private mBranchPrivacyDialog:Lcom/mi/globallauncher/view/GeneralDialog;
+
+.field private mBranchSearchGuideDialog:Lcom/mi/globallauncher/view/GeneralFullScreenDialog;
+
+.field private mBranchSearchGuideView:Lcom/mi/globallauncher/view/BranchSearchGuide;
+
+.field private mContext:Landroid/app/Application;
+
+.field private mDragIconGuide:Lcom/mi/globallauncher/view/TapTargetView;
+
+.field private mIsLightMode:Ljava/lang/Boolean;
+
+
+# direct methods
+.method private constructor <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->hasBranch:Z
+
+    return-void
+.end method
+
+.method static synthetic access$000(Lcom/mi/globallauncher/manager/BranchGuildController;)Lcom/mi/globallauncher/branchInterface/IBranchGuildCallBack;
+    .locals 0
+
+    iget-object p0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->callback:Lcom/mi/globallauncher/branchInterface/IBranchGuildCallBack;
+
+    return-object p0
+.end method
+
+.method static synthetic access$100(Lcom/mi/globallauncher/manager/BranchGuildController;)Lcom/mi/globallauncher/view/BranchSearchGuide;
+    .locals 0
+
+    iget-object p0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mBranchSearchGuideView:Lcom/mi/globallauncher/view/BranchSearchGuide;
+
+    return-object p0
+.end method
+
+.method static synthetic access$200(Lcom/mi/globallauncher/manager/BranchGuildController;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/mi/globallauncher/manager/BranchGuildController;->showSearchGuidePrivacyDialog()V
+
+    return-void
+.end method
+
+.method public static getInstance()Lcom/mi/globallauncher/branchInterface/IBranchGuildController;
+    .locals 2
+
+    sget-object v0, Lcom/mi/globallauncher/manager/BranchGuildController;->instance:Lcom/mi/globallauncher/manager/BranchGuildController;
+
+    if-nez v0, :cond_1
+
+    const-class v0, Lcom/mi/globallauncher/manager/BranchGuildController;
+
+    monitor-enter v0
+
+    :try_start_0
+    sget-object v1, Lcom/mi/globallauncher/manager/BranchGuildController;->instance:Lcom/mi/globallauncher/manager/BranchGuildController;
+
+    if-nez v1, :cond_0
+
+    new-instance v1, Lcom/mi/globallauncher/manager/BranchGuildController;
+
+    invoke-direct {v1}, Lcom/mi/globallauncher/manager/BranchGuildController;-><init>()V
+
+    sput-object v1, Lcom/mi/globallauncher/manager/BranchGuildController;->instance:Lcom/mi/globallauncher/manager/BranchGuildController;
+
+    :cond_0
+    monitor-exit v0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+
+    :cond_1
+    :goto_0
+    sget-object v0, Lcom/mi/globallauncher/manager/BranchGuildController;->instance:Lcom/mi/globallauncher/manager/BranchGuildController;
+
+    return-object v0
+.end method
+
+.method private static needShowGuide()Z
+    .locals 1
+
+    invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/mi/globallauncher/branchInterface/ICommercialPreference;->isDragIconToHomeGuideShow()Z
+
+    move-result v0
+
+    xor-int/lit8 v0, v0, 0x1
+
+    return v0
+.end method
+
+.method private showSearchGuidePrivacyDialog()V
+    .locals 5
+
+    invoke-static {}, Lcom/mi/globallauncher/util/BranchSwitchController;->isIndiaRegion()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mBranchPrivacyDialog:Lcom/mi/globallauncher/view/GeneralDialog;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Lcom/mi/globallauncher/view/GeneralDialog;->isShowing()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    return-void
+
+    :cond_1
+    iget-object v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->callback:Lcom/mi/globallauncher/branchInterface/IBranchGuildCallBack;
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {v0}, Lcom/mi/globallauncher/branchInterface/IBranchGuildCallBack;->launcherNull()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    goto/16 :goto_0
+
+    :cond_2
+    new-instance v0, Lcom/mi/globallauncher/view/GeneralDialog$Builder;
+
+    iget-object v1, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->callback:Lcom/mi/globallauncher/branchInterface/IBranchGuildCallBack;
+
+    invoke-interface {v1}, Lcom/mi/globallauncher/branchInterface/IBranchGuildCallBack;->getLauncher()Landroid/app/Activity;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lcom/mi/globallauncher/view/GeneralDialog$Builder;-><init>(Landroid/app/Activity;)V
+
+    sget v1, Lcom/mi/globallauncher/R$layout;->branch_privacy_dialog_view:I
+
+    invoke-virtual {v0, v1}, Lcom/mi/globallauncher/view/GeneralDialog$Builder;->setCustomView(I)Lcom/mi/globallauncher/view/GeneralDialog$Builder;
+
+    move-result-object v0
+
+    const v1, 0x3f19999a    # 0.6f
+
+    invoke-virtual {v0, v1}, Lcom/mi/globallauncher/view/GeneralDialog$Builder;->setDisAmount(F)Lcom/mi/globallauncher/view/GeneralDialog$Builder;
+
+    move-result-object v0
+
+    const/16 v1, 0x50
+
+    invoke-virtual {v0, v1}, Lcom/mi/globallauncher/view/GeneralDialog$Builder;->setGravity(I)Lcom/mi/globallauncher/view/GeneralDialog$Builder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/mi/globallauncher/view/GeneralDialog$Builder;->create()Lcom/mi/globallauncher/view/GeneralDialog;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mBranchPrivacyDialog:Lcom/mi/globallauncher/view/GeneralDialog;
+
+    iget-object v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mBranchPrivacyDialog:Lcom/mi/globallauncher/view/GeneralDialog;
+
+    new-instance v1, Lcom/mi/globallauncher/manager/-$$Lambda$BranchGuildController$D_kDXqM4rEfIbQmP4E7KDwFAM9w;
+
+    invoke-direct {v1, p0}, Lcom/mi/globallauncher/manager/-$$Lambda$BranchGuildController$D_kDXqM4rEfIbQmP4E7KDwFAM9w;-><init>(Lcom/mi/globallauncher/manager/BranchGuildController;)V
+
+    invoke-virtual {v0, v1}, Lcom/mi/globallauncher/view/GeneralDialog;->addNaviCallbackListener(Lcom/mi/globallauncher/view/GeneralDialog$GeneralDialogCallBack;)V
+
+    iget-object v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mBranchPrivacyDialog:Lcom/mi/globallauncher/view/GeneralDialog;
+
+    invoke-virtual {v0}, Lcom/mi/globallauncher/view/GeneralDialog;->show()V
+
+    iget-object v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mBranchPrivacyDialog:Lcom/mi/globallauncher/view/GeneralDialog;
+
+    invoke-virtual {v0}, Lcom/mi/globallauncher/view/GeneralDialog;->getContentView()Landroid/view/View;
+
+    move-result-object v0
+
+    sget v1, Lcom/mi/globallauncher/R$id;->txt_content1:I
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/TextView;
+
+    invoke-static {}, Landroid/text/method/LinkMovementMethod;->getInstance()Landroid/text/method/MovementMethod;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setMovementMethod(Landroid/text/method/MovementMethod;)V
+
+    sget v2, Lcom/mi/globallauncher/R$id;->txt_content2:I
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/widget/TextView;
+
+    invoke-static {}, Landroid/text/method/LinkMovementMethod;->getInstance()Landroid/text/method/MovementMethod;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setMovementMethod(Landroid/text/method/MovementMethod;)V
+
+    iget-object v3, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->callback:Lcom/mi/globallauncher/branchInterface/IBranchGuildCallBack;
+
+    invoke-interface {v3}, Lcom/mi/globallauncher/branchInterface/IBranchGuildCallBack;->isLightMode()Ljava/lang/Boolean;
+
+    move-result-object v3
+
+    iput-object v3, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mIsLightMode:Ljava/lang/Boolean;
+
+    iget-object v3, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mIsLightMode:Ljava/lang/Boolean;
+
+    invoke-virtual {v3}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v3
+
+    invoke-direct {p0, v0, v3}, Lcom/mi/globallauncher/manager/BranchGuildController;->updateSearchGuidePrivacyDialogColor(Landroid/view/View;Z)V
+
+    iget-object v3, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->callback:Lcom/mi/globallauncher/branchInterface/IBranchGuildCallBack;
+
+    iget-object v4, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mIsLightMode:Ljava/lang/Boolean;
+
+    invoke-interface {v3, v1, v2, v4}, Lcom/mi/globallauncher/branchInterface/IBranchGuildCallBack;->setTextLinkOpenWithWebView(Landroid/widget/TextView;Landroid/widget/TextView;Ljava/lang/Boolean;)V
+
+    sget v1, Lcom/mi/globallauncher/R$id;->btn_cancel:I
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/TextView;
+
+    new-instance v2, Lcom/mi/globallauncher/manager/-$$Lambda$BranchGuildController$GDUHRLhThxNG5VVKi_krFbliVl4;
+
+    invoke-direct {v2, p0}, Lcom/mi/globallauncher/manager/-$$Lambda$BranchGuildController$GDUHRLhThxNG5VVKi_krFbliVl4;-><init>(Lcom/mi/globallauncher/manager/BranchGuildController;)V
+
+    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    sget v1, Lcom/mi/globallauncher/R$id;->btn_ok:I
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    new-instance v1, Lcom/mi/globallauncher/manager/-$$Lambda$BranchGuildController$FD89cJBDE2dEqU3ZJq9NX5ewFnU;
+
+    invoke-direct {v1, p0}, Lcom/mi/globallauncher/manager/-$$Lambda$BranchGuildController$FD89cJBDE2dEqU3ZJq9NX5ewFnU;-><init>(Lcom/mi/globallauncher/manager/BranchGuildController;)V
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    :cond_3
+    :goto_0
+    return-void
+.end method
+
+.method private updateSearchGuidePrivacyDialogColor(Landroid/view/View;Z)V
+    .locals 7
+
+    sget v0, Lcom/mi/globallauncher/R$id;->dialog_bg:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/RelativeLayout;
+
+    sget v1, Lcom/mi/globallauncher/R$id;->txt_title:I
+
+    invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/TextView;
+
+    sget v2, Lcom/mi/globallauncher/R$id;->txt_content1:I
+
+    invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/widget/TextView;
+
+    sget v3, Lcom/mi/globallauncher/R$id;->txt_content2:I
+
+    invoke-virtual {p1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v3
+
+    check-cast v3, Landroid/widget/TextView;
+
+    sget v4, Lcom/mi/globallauncher/R$id;->txt_content3:I
+
+    invoke-virtual {p1, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v4
+
+    check-cast v4, Landroid/widget/TextView;
+
+    sget v5, Lcom/mi/globallauncher/R$id;->btn_cancel:I
+
+    invoke-virtual {p1, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v5
+
+    check-cast v5, Landroid/widget/TextView;
+
+    sget v6, Lcom/mi/globallauncher/R$id;->btn_ok:I
+
+    invoke-virtual {p1, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/widget/TextView;
+
+    if-eqz p2, :cond_0
+
+    sget p2, Lcom/mi/globallauncher/R$drawable;->common_dialog_background_light:I
+
+    invoke-virtual {v0, p2}, Landroid/widget/RelativeLayout;->setBackgroundResource(I)V
+
+    iget-object p2, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mContext:Landroid/app/Application;
+
+    sget v0, Lcom/mi/globallauncher/R$color;->black:I
+
+    invoke-static {p2, v0}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
+
+    move-result p2
+
+    invoke-virtual {v1, p2}, Landroid/widget/TextView;->setTextColor(I)V
+
+    iget-object p2, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mContext:Landroid/app/Application;
+
+    sget v0, Lcom/mi/globallauncher/R$color;->alpha70black:I
+
+    invoke-static {p2, v0}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
+
+    move-result p2
+
+    invoke-virtual {v2, p2}, Landroid/widget/TextView;->setTextColor(I)V
+
+    iget-object p2, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mContext:Landroid/app/Application;
+
+    sget v0, Lcom/mi/globallauncher/R$color;->alpha70black:I
+
+    invoke-static {p2, v0}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
+
+    move-result p2
+
+    invoke-virtual {v3, p2}, Landroid/widget/TextView;->setTextColor(I)V
+
+    iget-object p2, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mContext:Landroid/app/Application;
+
+    sget v0, Lcom/mi/globallauncher/R$color;->alpha70black:I
+
+    invoke-static {p2, v0}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
+
+    move-result p2
+
+    invoke-virtual {v4, p2}, Landroid/widget/TextView;->setTextColor(I)V
+
+    iget-object p0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mContext:Landroid/app/Application;
+
+    sget p2, Lcom/mi/globallauncher/R$color;->alpha70black:I
+
+    invoke-static {p0, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
+
+    move-result p0
+
+    invoke-virtual {v5, p0}, Landroid/widget/TextView;->setTextColor(I)V
+
+    sget p0, Lcom/mi/globallauncher/R$drawable;->common_dialog_btn_bg_light:I
+
+    invoke-virtual {v5, p0}, Landroid/widget/TextView;->setBackgroundResource(I)V
+
+    sget p0, Lcom/mi/globallauncher/R$drawable;->common_dialog_btn_bg_light:I
+
+    invoke-virtual {p1, p0}, Landroid/widget/TextView;->setBackgroundResource(I)V
+
+    goto :goto_0
+
+    :cond_0
+    sget p2, Lcom/mi/globallauncher/R$drawable;->common_dialog_background_dark:I
+
+    invoke-virtual {v0, p2}, Landroid/widget/RelativeLayout;->setBackgroundResource(I)V
+
+    iget-object p2, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mContext:Landroid/app/Application;
+
+    sget v0, Lcom/mi/globallauncher/R$color;->white:I
+
+    invoke-static {p2, v0}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
+
+    move-result p2
+
+    invoke-virtual {v1, p2}, Landroid/widget/TextView;->setTextColor(I)V
+
+    iget-object p2, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mContext:Landroid/app/Application;
+
+    sget v0, Lcom/mi/globallauncher/R$color;->alpha50white:I
+
+    invoke-static {p2, v0}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
+
+    move-result p2
+
+    invoke-virtual {v2, p2}, Landroid/widget/TextView;->setTextColor(I)V
+
+    iget-object p2, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mContext:Landroid/app/Application;
+
+    sget v0, Lcom/mi/globallauncher/R$color;->alpha50white:I
+
+    invoke-static {p2, v0}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
+
+    move-result p2
+
+    invoke-virtual {v3, p2}, Landroid/widget/TextView;->setTextColor(I)V
+
+    iget-object p2, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mContext:Landroid/app/Application;
+
+    sget v0, Lcom/mi/globallauncher/R$color;->alpha50white:I
+
+    invoke-static {p2, v0}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
+
+    move-result p2
+
+    invoke-virtual {v4, p2}, Landroid/widget/TextView;->setTextColor(I)V
+
+    iget-object p0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mContext:Landroid/app/Application;
+
+    sget p2, Lcom/mi/globallauncher/R$color;->alpha50white:I
+
+    invoke-static {p0, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
+
+    move-result p0
+
+    invoke-virtual {v5, p0}, Landroid/widget/TextView;->setTextColor(I)V
+
+    sget p0, Lcom/mi/globallauncher/R$drawable;->common_dialog_btn_bg_dark:I
+
+    invoke-virtual {v5, p0}, Landroid/widget/TextView;->setBackgroundResource(I)V
+
+    sget p0, Lcom/mi/globallauncher/R$drawable;->common_dialog_btn_bg_dark:I
+
+    invoke-virtual {p1, p0}, Landroid/widget/TextView;->setBackgroundResource(I)V
+
+    :goto_0
+    return-void
+.end method
+
+
+# virtual methods
+.method public branchGuideAgreed()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mBranchSearchGuideView:Lcom/mi/globallauncher/view/BranchSearchGuide;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lcom/mi/globallauncher/view/BranchSearchGuide;->onAgreeBtnClicked()V
+
+    :cond_0
+    invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    invoke-interface {v0, v1}, Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;->setQuickSearchSwitchOn(Z)V
+
+    invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
+
+    move-result-object v0
+
+    invoke-interface {v0, v1}, Lcom/mi/globallauncher/branchInterface/ICommercialPreference;->setGuildType1AlreadyShow(Z)V
+
+    invoke-virtual {p0}, Lcom/mi/globallauncher/manager/BranchGuildController;->hideBranchSearchGuideView()V
+
+    invoke-virtual {p0}, Lcom/mi/globallauncher/manager/BranchGuildController;->showBranchSearchGuideView()V
+
+    invoke-static {}, Lcom/miui/privacy/track/SensorsAnalyticsCollector;->trackBranchSearchGuideOpen()V
+
+    return-void
+.end method
+
+.method public closeAllAppsDialog()V
+    .locals 1
+
+    invoke-static {}, Lcom/mi/globallauncher/util/BranchSwitchController;->isIndiaRegion()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->callback:Lcom/mi/globallauncher/branchInterface/IBranchGuildCallBack;
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {v0}, Lcom/mi/globallauncher/branchInterface/IBranchGuildCallBack;->launcherNull()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mBranchPrivacyDialog:Lcom/mi/globallauncher/view/GeneralDialog;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Lcom/mi/globallauncher/view/GeneralDialog;->isShowing()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mBranchPrivacyDialog:Lcom/mi/globallauncher/view/GeneralDialog;
+
+    invoke-virtual {v0}, Lcom/mi/globallauncher/view/GeneralDialog;->dismiss()V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mBranchPrivacyDialog:Lcom/mi/globallauncher/view/GeneralDialog;
+
+    :cond_1
+    invoke-virtual {p0}, Lcom/mi/globallauncher/manager/BranchGuildController;->hideBranchSearchGuideView()V
+
+    iget-object p0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->callback:Lcom/mi/globallauncher/branchInterface/IBranchGuildCallBack;
+
+    invoke-interface {p0}, Lcom/mi/globallauncher/branchInterface/IBranchGuildCallBack;->closeAllAppsDialog()V
+
+    :cond_2
+    return-void
+.end method
+
+.method public controlOnBackPressed(Z)Z
+    .locals 2
+
+    invoke-virtual {p0}, Lcom/mi/globallauncher/manager/BranchGuildController;->isBranchSearchGuideViewVisible()Z
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p0}, Lcom/mi/globallauncher/manager/BranchGuildController;->hideBranchSearchGuideView()V
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p0}, Lcom/mi/globallauncher/manager/BranchGuildController;->handleAfterBranchSearchGuideViewHide()V
+
+    :cond_0
+    return v1
+
+    :cond_1
+    invoke-virtual {p0}, Lcom/mi/globallauncher/manager/BranchGuildController;->isDragIconGuideVisible()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p0}, Lcom/mi/globallauncher/manager/BranchGuildController;->hideDragIconGuideViewIfNeeded()V
+
+    return v1
+
+    :cond_2
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public handleAfterBranchSearchGuideViewHide()V
+    .locals 1
+
+    invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/mi/globallauncher/branchInterface/ICommercialPreference;->isFirstTimeEnterDrawer()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object p0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->callback:Lcom/mi/globallauncher/branchInterface/IBranchGuildCallBack;
+
+    if-eqz p0, :cond_2
+
+    invoke-interface {p0}, Lcom/mi/globallauncher/branchInterface/IBranchGuildCallBack;->appsViewVisibility()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_2
+
+    invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
+
+    move-result-object p0
+
+    const/4 v0, 0x1
+
+    invoke-interface {p0, v0}, Lcom/mi/globallauncher/branchInterface/ICommercialPreference;->setFirstTimeEnterDrawer(Z)V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;->isQuickSearchOpen()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object p0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->callback:Lcom/mi/globallauncher/branchInterface/IBranchGuildCallBack;
+
+    if-eqz p0, :cond_2
+
+    invoke-interface {p0}, Lcom/mi/globallauncher/branchInterface/IBranchGuildCallBack;->searchBarRequestFocus()V
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {p0}, Lcom/mi/globallauncher/manager/BranchGuildController;->handleDragAndHideAppsGuideViewAfterGuide()V
+
+    :cond_2
+    :goto_0
+    return-void
+.end method
+
+.method public handleDragAndHideAppsGuideViewAfterGuide()V
+    .locals 1
+
+    invoke-static {}, Lcom/mi/globallauncher/manager/BranchGuildController;->needShowGuide()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mDragIconGuide:Lcom/mi/globallauncher/view/TapTargetView;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lcom/mi/globallauncher/view/TapTargetView;->isVisible()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    :cond_0
+    iget-object v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->callback:Lcom/mi/globallauncher/branchInterface/IBranchGuildCallBack;
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0}, Lcom/mi/globallauncher/branchInterface/IBranchGuildCallBack;->showGuide()Lcom/mi/globallauncher/view/TapTargetView;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mDragIconGuide:Lcom/mi/globallauncher/view/TapTargetView;
+
+    :cond_1
+    return-void
+.end method
+
+.method public hideBranchSearchGuideView()V
+    .locals 2
+
+    invoke-static {}, Lcom/mi/globallauncher/util/BranchSwitchController;->isIndiaRegion()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    :try_start_0
+    iget-object v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->callback:Lcom/mi/globallauncher/branchInterface/IBranchGuildCallBack;
+
+    if-eqz v0, :cond_4
+
+    iget-object v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->callback:Lcom/mi/globallauncher/branchInterface/IBranchGuildCallBack;
+
+    invoke-interface {v0}, Lcom/mi/globallauncher/branchInterface/IBranchGuildCallBack;->launcherNull()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mBranchSearchGuideDialog:Lcom/mi/globallauncher/view/GeneralFullScreenDialog;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mBranchSearchGuideDialog:Lcom/mi/globallauncher/view/GeneralFullScreenDialog;
+
+    invoke-virtual {v0}, Lcom/mi/globallauncher/view/GeneralFullScreenDialog;->isShowing()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mBranchSearchGuideDialog:Lcom/mi/globallauncher/view/GeneralFullScreenDialog;
+
+    invoke-virtual {v0}, Lcom/mi/globallauncher/view/GeneralFullScreenDialog;->dismiss()V
+
+    iput-object v1, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mBranchSearchGuideDialog:Lcom/mi/globallauncher/view/GeneralFullScreenDialog;
+
+    :cond_2
+    iget-object v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mBranchSearchGuideView:Lcom/mi/globallauncher/view/BranchSearchGuide;
+
+    if-nez v0, :cond_3
+
+    return-void
+
+    :cond_3
+    iget-object v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mBranchSearchGuideView:Lcom/mi/globallauncher/view/BranchSearchGuide;
+
+    invoke-virtual {v0}, Lcom/mi/globallauncher/view/BranchSearchGuide;->onHide()V
+
+    iput-object v1, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mBranchSearchGuideView:Lcom/mi/globallauncher/view/BranchSearchGuide;
+
+    iget-object p0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->callback:Lcom/mi/globallauncher/branchInterface/IBranchGuildCallBack;
+
+    invoke-interface {p0}, Lcom/mi/globallauncher/branchInterface/IBranchGuildCallBack;->updateAllAppsIndicator()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_1
+
+    :cond_4
+    :goto_0
+    return-void
+
+    :catch_0
+    move-exception p0
+
+    invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
+
+    :goto_1
+    return-void
+.end method
+
+.method public hideDragIconGuideViewIfNeeded()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mDragIconGuide:Lcom/mi/globallauncher/view/TapTargetView;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lcom/mi/globallauncher/view/TapTargetView;->isVisible()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mDragIconGuide:Lcom/mi/globallauncher/view/TapTargetView;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lcom/mi/globallauncher/view/TapTargetView;->dismiss(Z)V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mDragIconGuide:Lcom/mi/globallauncher/view/TapTargetView;
+
+    :cond_0
+    return-void
+.end method
+
+.method public init(Landroid/app/Application;Lcom/mi/globallauncher/branchInterface/IBranchGuildCallBack;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mContext:Landroid/app/Application;
+
+    if-eqz p2, :cond_0
+
+    iput-object p2, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->callback:Lcom/mi/globallauncher/branchInterface/IBranchGuildCallBack;
+
+    return-void
+
+    :cond_0
+    new-instance p0, Ljava/lang/RuntimeException;
+
+    const-string p1, "call back cannot be null"
+
+    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public isBranchSearchGuideViewVisible()Z
+    .locals 0
+
+    iget-object p0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mBranchSearchGuideDialog:Lcom/mi/globallauncher/view/GeneralFullScreenDialog;
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0}, Lcom/mi/globallauncher/view/GeneralFullScreenDialog;->isShowing()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
+    return p0
+.end method
+
+.method public isDragIconGuideVisible()Z
+    .locals 0
+
+    iget-object p0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mDragIconGuide:Lcom/mi/globallauncher/view/TapTargetView;
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0}, Lcom/mi/globallauncher/view/TapTargetView;->isVisible()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
+    return p0
+.end method
+
+.method public isHasBranch()Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->hasBranch:Z
+
+    return p0
+.end method
+
+.method public synthetic lambda$showSearchGuidePrivacyDialog$0$BranchGuildController()V
+    .locals 1
+
+    iget-object v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mBranchPrivacyDialog:Lcom/mi/globallauncher/view/GeneralDialog;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lcom/mi/globallauncher/view/GeneralDialog;->isShowing()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mBranchPrivacyDialog:Lcom/mi/globallauncher/view/GeneralDialog;
+
+    invoke-virtual {v0}, Lcom/mi/globallauncher/view/GeneralDialog;->dismiss()V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mBranchPrivacyDialog:Lcom/mi/globallauncher/view/GeneralDialog;
+
+    :cond_0
+    return-void
+.end method
+
+.method public synthetic lambda$showSearchGuidePrivacyDialog$1$BranchGuildController(Landroid/view/View;)V
+    .locals 0
+
+    iget-object p1, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mBranchPrivacyDialog:Lcom/mi/globallauncher/view/GeneralDialog;
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Lcom/mi/globallauncher/view/GeneralDialog;->isShowing()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mBranchPrivacyDialog:Lcom/mi/globallauncher/view/GeneralDialog;
+
+    invoke-virtual {p1}, Lcom/mi/globallauncher/view/GeneralDialog;->dismiss()V
+
+    const/4 p1, 0x0
+
+    iput-object p1, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mBranchPrivacyDialog:Lcom/mi/globallauncher/view/GeneralDialog;
+
+    :cond_0
+    return-void
+.end method
+
+.method public synthetic lambda$showSearchGuidePrivacyDialog$2$BranchGuildController(Landroid/view/View;)V
+    .locals 0
+
+    iget-object p1, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mBranchPrivacyDialog:Lcom/mi/globallauncher/view/GeneralDialog;
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Lcom/mi/globallauncher/view/GeneralDialog;->isShowing()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mBranchPrivacyDialog:Lcom/mi/globallauncher/view/GeneralDialog;
+
+    invoke-virtual {p1}, Lcom/mi/globallauncher/view/GeneralDialog;->dismiss()V
+
+    const/4 p1, 0x0
+
+    iput-object p1, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mBranchPrivacyDialog:Lcom/mi/globallauncher/view/GeneralDialog;
+
+    :cond_0
+    invoke-virtual {p0}, Lcom/mi/globallauncher/manager/BranchGuildController;->branchGuideAgreed()V
+
+    iget-object p0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->callback:Lcom/mi/globallauncher/branchInterface/IBranchGuildCallBack;
+
+    invoke-interface {p0}, Lcom/mi/globallauncher/branchInterface/IBranchGuildCallBack;->onPrivacyAgreed()V
+
+    invoke-static {}, Lcom/miui/privacy/track/SensorsAnalyticsCollector;->trackBranchTermServiceAlertOk()V
+
+    return-void
+.end method
+
+.method public setHasBranch(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->hasBranch:Z
+
+    return-void
+.end method
+
+.method public showBranchSearchGuideView()V
+    .locals 4
+
+    invoke-static {}, Lcom/mi/globallauncher/util/BranchSwitchController;->isIndiaRegion()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    :try_start_0
+    iget-object v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->callback:Lcom/mi/globallauncher/branchInterface/IBranchGuildCallBack;
+
+    if-eqz v0, :cond_4
+
+    iget-object v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->callback:Lcom/mi/globallauncher/branchInterface/IBranchGuildCallBack;
+
+    invoke-interface {v0}, Lcom/mi/globallauncher/branchInterface/IBranchGuildCallBack;->launcherNull()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    goto/16 :goto_1
+
+    :cond_1
+    iget-object v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mBranchSearchGuideDialog:Lcom/mi/globallauncher/view/GeneralFullScreenDialog;
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mBranchSearchGuideDialog:Lcom/mi/globallauncher/view/GeneralFullScreenDialog;
+
+    invoke-virtual {v0}, Lcom/mi/globallauncher/view/GeneralFullScreenDialog;->isShowing()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mBranchSearchGuideDialog:Lcom/mi/globallauncher/view/GeneralFullScreenDialog;
+
+    invoke-virtual {v0}, Lcom/mi/globallauncher/view/GeneralFullScreenDialog;->dismiss()V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mBranchSearchGuideDialog:Lcom/mi/globallauncher/view/GeneralFullScreenDialog;
+
+    :cond_2
+    iget-object v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mContext:Landroid/app/Application;
+
+    invoke-static {v0}, Lcom/mi/globallauncher/view/BranchSearchGuide;->getBranchSearchGuideView(Landroid/content/Context;)Lcom/mi/globallauncher/view/BranchSearchGuide;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mBranchSearchGuideView:Lcom/mi/globallauncher/view/BranchSearchGuide;
+
+    invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/mi/globallauncher/branchInterface/ICommercialPreference;->isChangeToDrawerForBranch()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/mi/globallauncher/branchInterface/ICommercialPreference;->isGuildType1AlreadyShow()Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_3
+    const/4 v0, 0x4
+
+    :goto_0
+    iget-object v1, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->callback:Lcom/mi/globallauncher/branchInterface/IBranchGuildCallBack;
+
+    invoke-interface {v1}, Lcom/mi/globallauncher/branchInterface/IBranchGuildCallBack;->isLightMode()Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mIsLightMode:Ljava/lang/Boolean;
+
+    iget-object v1, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mBranchSearchGuideView:Lcom/mi/globallauncher/view/BranchSearchGuide;
+
+    iget-object v2, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mIsLightMode:Ljava/lang/Boolean;
+
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v2
+
+    new-instance v3, Lcom/mi/globallauncher/manager/BranchGuildController$1;
+
+    invoke-direct {v3, p0, v0}, Lcom/mi/globallauncher/manager/BranchGuildController$1;-><init>(Lcom/mi/globallauncher/manager/BranchGuildController;I)V
+
+    invoke-virtual {v1, v2, v3, v0}, Lcom/mi/globallauncher/view/BranchSearchGuide;->initBranchSearchGuideView(ZLcom/mi/globallauncher/view/BranchSearchGuide$BranchGuideViewClickListener;I)V
+
+    new-instance v0, Lcom/mi/globallauncher/view/GeneralFullScreenDialog$Builder;
+
+    iget-object v1, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->callback:Lcom/mi/globallauncher/branchInterface/IBranchGuildCallBack;
+
+    invoke-interface {v1}, Lcom/mi/globallauncher/branchInterface/IBranchGuildCallBack;->getLauncher()Landroid/app/Activity;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lcom/mi/globallauncher/view/GeneralFullScreenDialog$Builder;-><init>(Landroid/app/Activity;)V
+
+    const v1, 0x3f19999a    # 0.6f
+
+    invoke-virtual {v0, v1}, Lcom/mi/globallauncher/view/GeneralFullScreenDialog$Builder;->setDisAmount(F)Lcom/mi/globallauncher/view/GeneralFullScreenDialog$Builder;
+
+    move-result-object v0
+
+    const/16 v1, 0x50
+
+    invoke-virtual {v0, v1}, Lcom/mi/globallauncher/view/GeneralFullScreenDialog$Builder;->setGravity(I)Lcom/mi/globallauncher/view/GeneralFullScreenDialog$Builder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/mi/globallauncher/view/GeneralFullScreenDialog$Builder;->create()Lcom/mi/globallauncher/view/GeneralFullScreenDialog;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mBranchSearchGuideDialog:Lcom/mi/globallauncher/view/GeneralFullScreenDialog;
+
+    iget-object v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mBranchSearchGuideDialog:Lcom/mi/globallauncher/view/GeneralFullScreenDialog;
+
+    iget-object v1, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mBranchSearchGuideView:Lcom/mi/globallauncher/view/BranchSearchGuide;
+
+    invoke-virtual {v0, v1}, Lcom/mi/globallauncher/view/GeneralFullScreenDialog;->setContentView(Landroid/view/View;)V
+
+    iget-object p0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mBranchSearchGuideDialog:Lcom/mi/globallauncher/view/GeneralFullScreenDialog;
+
+    invoke-virtual {p0}, Lcom/mi/globallauncher/view/GeneralFullScreenDialog;->show()V
+
+    invoke-static {}, Lcom/miui/privacy/track/SensorsAnalyticsCollector;->trackBranchSearchGuideShow()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_2
+
+    :cond_4
+    :goto_1
+    return-void
+
+    :catch_0
+    move-exception p0
+
+    invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
+
+    :goto_2
+    return-void
+.end method

@@ -1,6 +1,5 @@
 .class public final enum Lcom/google/android/filament/Material$VertexDomain;
 .super Ljava/lang/Enum;
-.source "Material.java"
 
 
 # annotations
@@ -38,70 +37,65 @@
 .method static constructor <clinit>()V
     .locals 6
 
-    .line 192
     new-instance v0, Lcom/google/android/filament/Material$VertexDomain;
 
-    const-string v1, "OBJECT"
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    const-string v2, "OBJECT"
 
-    invoke-direct {v0, v1, v2}, Lcom/google/android/filament/Material$VertexDomain;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v2, v1}, Lcom/google/android/filament/Material$VertexDomain;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/google/android/filament/Material$VertexDomain;->OBJECT:Lcom/google/android/filament/Material$VertexDomain;
 
-    .line 195
     new-instance v0, Lcom/google/android/filament/Material$VertexDomain;
 
-    const-string v1, "WORLD"
+    const/4 v2, 0x1
 
-    const/4 v3, 0x1
+    const-string v3, "WORLD"
 
-    invoke-direct {v0, v1, v3}, Lcom/google/android/filament/Material$VertexDomain;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v3, v2}, Lcom/google/android/filament/Material$VertexDomain;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/google/android/filament/Material$VertexDomain;->WORLD:Lcom/google/android/filament/Material$VertexDomain;
 
-    .line 198
     new-instance v0, Lcom/google/android/filament/Material$VertexDomain;
 
-    const-string v1, "VIEW"
+    const/4 v3, 0x2
 
-    const/4 v4, 0x2
+    const-string v4, "VIEW"
 
-    invoke-direct {v0, v1, v4}, Lcom/google/android/filament/Material$VertexDomain;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v4, v3}, Lcom/google/android/filament/Material$VertexDomain;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/google/android/filament/Material$VertexDomain;->VIEW:Lcom/google/android/filament/Material$VertexDomain;
 
-    .line 201
     new-instance v0, Lcom/google/android/filament/Material$VertexDomain;
 
-    const-string v1, "DEVICE"
+    const/4 v4, 0x3
 
-    const/4 v5, 0x3
+    const-string v5, "DEVICE"
 
-    invoke-direct {v0, v1, v5}, Lcom/google/android/filament/Material$VertexDomain;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v5, v4}, Lcom/google/android/filament/Material$VertexDomain;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/google/android/filament/Material$VertexDomain;->DEVICE:Lcom/google/android/filament/Material$VertexDomain;
 
     const/4 v0, 0x4
 
-    .line 190
     new-array v0, v0, [Lcom/google/android/filament/Material$VertexDomain;
 
-    sget-object v1, Lcom/google/android/filament/Material$VertexDomain;->OBJECT:Lcom/google/android/filament/Material$VertexDomain;
+    sget-object v5, Lcom/google/android/filament/Material$VertexDomain;->OBJECT:Lcom/google/android/filament/Material$VertexDomain;
 
-    aput-object v1, v0, v2
+    aput-object v5, v0, v1
 
     sget-object v1, Lcom/google/android/filament/Material$VertexDomain;->WORLD:Lcom/google/android/filament/Material$VertexDomain;
 
-    aput-object v1, v0, v3
+    aput-object v1, v0, v2
 
     sget-object v1, Lcom/google/android/filament/Material$VertexDomain;->VIEW:Lcom/google/android/filament/Material$VertexDomain;
 
-    aput-object v1, v0, v4
+    aput-object v1, v0, v3
 
     sget-object v1, Lcom/google/android/filament/Material$VertexDomain;->DEVICE:Lcom/google/android/filament/Material$VertexDomain;
 
-    aput-object v1, v0, v5
+    aput-object v1, v0, v4
 
     sput-object v0, Lcom/google/android/filament/Material$VertexDomain;->$VALUES:[Lcom/google/android/filament/Material$VertexDomain;
 
@@ -116,7 +110,6 @@
         }
     .end annotation
 
-    .line 190
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -125,7 +118,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/android/filament/Material$VertexDomain;
     .locals 1
 
-    .line 190
     const-class v0, Lcom/google/android/filament/Material$VertexDomain;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -140,7 +132,6 @@
 .method public static values()[Lcom/google/android/filament/Material$VertexDomain;
     .locals 1
 
-    .line 190
     sget-object v0, Lcom/google/android/filament/Material$VertexDomain;->$VALUES:[Lcom/google/android/filament/Material$VertexDomain;
 
     invoke-virtual {v0}, [Lcom/google/android/filament/Material$VertexDomain;->clone()Ljava/lang/Object;

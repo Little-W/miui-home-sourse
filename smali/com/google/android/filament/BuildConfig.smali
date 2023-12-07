@@ -1,6 +1,5 @@
 .class public final Lcom/google/android/filament/BuildConfig;
 .super Ljava/lang/Object;
-.source "BuildConfig.java"
 
 
 # static fields
@@ -10,12 +9,15 @@
 
 .field public static final LIBRARY_PACKAGE_NAME:Ljava/lang/String; = "com.google.android.filament"
 
+.field public static final VERSION_CODE:I = -0x1
+
+.field public static final VERSION_NAME:Ljava/lang/String; = ""
+
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

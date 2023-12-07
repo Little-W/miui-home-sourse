@@ -1,6 +1,5 @@
 .class public interface abstract Lcom/airbnb/lottie/model/animatable/AnimatableValue;
 .super Ljava/lang/Object;
-.source "AnimatableValue.java"
 
 
 # annotations

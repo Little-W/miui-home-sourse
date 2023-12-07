@@ -51,49 +51,31 @@
         <item>ת</item>
         <item>\#</item>
     </string-array>
-    <string-array name="cell_layout_size_entries">
-        <item>4x4</item>
-        <item>4x5</item>
-    </string-array>
-    <string-array name="cell_layout_size_values">
-        <item>4x4</item>
-        <item>4x5</item>
+    <string-array name="animation_rate_entries">
+        <item>רגוע</item>
+        <item>מאוזן</item>
+        <item>מהיר</item>
     </string-array>
     <string-array name="editing_mode_entries">
         <item>טפט</item>
         <item>"ווידג'טים"</item>
         <item>הגדרות</item>
     </string-array>
-    <string-array name="gadget_weather_image">
-        <item>בהיר</item>
-        <item>מעונן</item>
-        <item>אביך</item>
-        <item>ערפילי</item>
-        <item>סופת גשמים רצינית</item>
-        <item>סופת גשמים</item>
-        <item>גשם כבד מאוד</item>
-        <item>סופת ברקים</item>
-        <item>ממטר</item>
-        <item>גשם כבד</item>
-        <item>גשם</item>
-        <item>טפטוף</item>
-        <item>גשם מעורב בשלג</item>
-        <item>סופת שלגים</item>
-        <item>שלג חלקי</item>
-        <item>שלג כבד</item>
-        <item>שלג</item>
-        <item>שלג קל</item>
-        <item>סופת חול חזקה</item>
-        <item>סופת חול</item>
-        <item>סופת חול קלה</item>
-        <item>סופת חול</item>
-        <item>ברד</item>
-        <item>Floating dust</item>
-        <item>אובך</item>
-    </string-array>
-    <string-array name="gadget_weather_theme_type_entries">
+    <string-array name="monochrome_color_entries">
         <item>ברירת מחדל</item>
-        <item>קלאסי</item>
+        <item>כחול</item>
+        <item>ירוק</item>
+        <item>סגול</item>
+        <item>חום</item>
+    </string-array>
+    <string-array name="no_word_model_entries">
+        <item>מושבת</item>
+        <item>בכל מקום</item>
+        <item>"בווידג'טים"</item>
+    </string-array>
+    <string-array name="no_word_model_entries_not_support_only_widget_no_word">
+        <item>מושבת</item>
+        <item>בכל מקום</item>
     </string-array>
     <string-array name="transformation_entries">
         <item>שקופית</item>
@@ -103,11 +85,5 @@
         <item>מדורג</item>
         <item>סיבוב</item>
         <item>קוביה</item>
-    </string-array>
-    <string-array name="wallpaper_scroll_entries">
-        <item>ערכת נושא ברירת מחדל</item>
-        <item>מרכז</item>
-        <item>שמאל</item>
-        <item>ימין</item>
     </string-array>
 </resources>

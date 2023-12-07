@@ -1,6 +1,5 @@
 .class Landroidx/appcompat/app/AlertController$5;
 .super Ljava/lang/Object;
-.source "AlertController.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -29,7 +28,6 @@
 .method constructor <init>(Landroidx/appcompat/app/AlertController;Landroid/view/View;Landroid/view/View;)V
     .locals 0
 
-    .line 619
     iput-object p1, p0, Landroidx/appcompat/app/AlertController$5;->this$0:Landroidx/appcompat/app/AlertController;
 
     iput-object p2, p0, Landroidx/appcompat/app/AlertController$5;->val$top:Landroid/view/View;
@@ -44,18 +42,17 @@
 
 # virtual methods
 .method public run()V
-    .locals 3
+    .locals 2
 
-    .line 622
     iget-object v0, p0, Landroidx/appcompat/app/AlertController$5;->this$0:Landroidx/appcompat/app/AlertController;
 
     iget-object v0, v0, Landroidx/appcompat/app/AlertController;->mListView:Landroid/widget/ListView;
 
     iget-object v1, p0, Landroidx/appcompat/app/AlertController$5;->val$top:Landroid/view/View;
 
-    iget-object v2, p0, Landroidx/appcompat/app/AlertController$5;->val$bottom:Landroid/view/View;
+    iget-object p0, p0, Landroidx/appcompat/app/AlertController$5;->val$bottom:Landroid/view/View;
 
-    invoke-static {v0, v1, v2}, Landroidx/appcompat/app/AlertController;->manageScrollIndicators(Landroid/view/View;Landroid/view/View;Landroid/view/View;)V
+    invoke-static {v0, v1, p0}, Landroidx/appcompat/app/AlertController;->manageScrollIndicators(Landroid/view/View;Landroid/view/View;Landroid/view/View;)V
 
     return-void
 .end method

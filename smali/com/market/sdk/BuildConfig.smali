@@ -1,6 +1,5 @@
 .class public final Lcom/market/sdk/BuildConfig;
 .super Ljava/lang/Object;
-.source "BuildConfig.java"
 
 
 # static fields
@@ -26,9 +25,8 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    const-string v0, "true"
+    const-string/jumbo v0, "true"
 
-    .line 7
     invoke-static {v0}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
 
     move-result v0
@@ -41,7 +39,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

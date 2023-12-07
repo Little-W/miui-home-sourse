@@ -1,6 +1,5 @@
 .class public interface abstract annotation Lcom/google/android/filament/proguard/UsedByReflection;
 .super Ljava/lang/Object;
-.source "UsedByReflection.java"
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

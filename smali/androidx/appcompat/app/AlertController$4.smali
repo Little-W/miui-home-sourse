@@ -1,6 +1,5 @@
 .class Landroidx/appcompat/app/AlertController$4;
 .super Ljava/lang/Object;
-.source "AlertController.java"
 
 # interfaces
 .implements Landroid/widget/AbsListView$OnScrollListener;
@@ -29,7 +28,6 @@
 .method constructor <init>(Landroidx/appcompat/app/AlertController;Landroid/view/View;Landroid/view/View;)V
     .locals 0
 
-    .line 608
     iput-object p1, p0, Landroidx/appcompat/app/AlertController$4;->this$0:Landroidx/appcompat/app/AlertController;
 
     iput-object p2, p0, Landroidx/appcompat/app/AlertController$4;->val$top:Landroid/view/View;
@@ -46,12 +44,11 @@
 .method public onScroll(Landroid/widget/AbsListView;III)V
     .locals 0
 
-    .line 615
     iget-object p2, p0, Landroidx/appcompat/app/AlertController$4;->val$top:Landroid/view/View;
 
-    iget-object p3, p0, Landroidx/appcompat/app/AlertController$4;->val$bottom:Landroid/view/View;
+    iget-object p0, p0, Landroidx/appcompat/app/AlertController$4;->val$bottom:Landroid/view/View;
 
-    invoke-static {p1, p2, p3}, Landroidx/appcompat/app/AlertController;->manageScrollIndicators(Landroid/view/View;Landroid/view/View;Landroid/view/View;)V
+    invoke-static {p1, p2, p0}, Landroidx/appcompat/app/AlertController;->manageScrollIndicators(Landroid/view/View;Landroid/view/View;Landroid/view/View;)V
 
     return-void
 .end method

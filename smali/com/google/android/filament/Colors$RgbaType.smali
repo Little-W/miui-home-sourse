@@ -1,6 +1,5 @@
 .class public final enum Lcom/google/android/filament/Colors$RgbaType;
 .super Ljava/lang/Enum;
-.source "Colors.java"
 
 
 # annotations
@@ -38,70 +37,65 @@
 .method static constructor <clinit>()V
     .locals 6
 
-    .line 62
     new-instance v0, Lcom/google/android/filament/Colors$RgbaType;
 
-    const-string v1, "SRGB"
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    const-string v2, "SRGB"
 
-    invoke-direct {v0, v1, v2}, Lcom/google/android/filament/Colors$RgbaType;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v2, v1}, Lcom/google/android/filament/Colors$RgbaType;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/google/android/filament/Colors$RgbaType;->SRGB:Lcom/google/android/filament/Colors$RgbaType;
 
-    .line 68
     new-instance v0, Lcom/google/android/filament/Colors$RgbaType;
 
-    const-string v1, "LINEAR"
+    const/4 v2, 0x1
 
-    const/4 v3, 0x1
+    const-string v3, "LINEAR"
 
-    invoke-direct {v0, v1, v3}, Lcom/google/android/filament/Colors$RgbaType;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v3, v2}, Lcom/google/android/filament/Colors$RgbaType;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/google/android/filament/Colors$RgbaType;->LINEAR:Lcom/google/android/filament/Colors$RgbaType;
 
-    .line 74
     new-instance v0, Lcom/google/android/filament/Colors$RgbaType;
 
-    const-string v1, "PREMULTIPLIED_SRGB"
+    const/4 v3, 0x2
 
-    const/4 v4, 0x2
+    const-string v4, "PREMULTIPLIED_SRGB"
 
-    invoke-direct {v0, v1, v4}, Lcom/google/android/filament/Colors$RgbaType;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v4, v3}, Lcom/google/android/filament/Colors$RgbaType;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/google/android/filament/Colors$RgbaType;->PREMULTIPLIED_SRGB:Lcom/google/android/filament/Colors$RgbaType;
 
-    .line 80
     new-instance v0, Lcom/google/android/filament/Colors$RgbaType;
 
-    const-string v1, "PREMULTIPLIED_LINEAR"
+    const/4 v4, 0x3
 
-    const/4 v5, 0x3
+    const-string v5, "PREMULTIPLIED_LINEAR"
 
-    invoke-direct {v0, v1, v5}, Lcom/google/android/filament/Colors$RgbaType;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v5, v4}, Lcom/google/android/filament/Colors$RgbaType;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/google/android/filament/Colors$RgbaType;->PREMULTIPLIED_LINEAR:Lcom/google/android/filament/Colors$RgbaType;
 
     const/4 v0, 0x4
 
-    .line 57
     new-array v0, v0, [Lcom/google/android/filament/Colors$RgbaType;
 
-    sget-object v1, Lcom/google/android/filament/Colors$RgbaType;->SRGB:Lcom/google/android/filament/Colors$RgbaType;
+    sget-object v5, Lcom/google/android/filament/Colors$RgbaType;->SRGB:Lcom/google/android/filament/Colors$RgbaType;
 
-    aput-object v1, v0, v2
+    aput-object v5, v0, v1
 
     sget-object v1, Lcom/google/android/filament/Colors$RgbaType;->LINEAR:Lcom/google/android/filament/Colors$RgbaType;
 
-    aput-object v1, v0, v3
+    aput-object v1, v0, v2
 
     sget-object v1, Lcom/google/android/filament/Colors$RgbaType;->PREMULTIPLIED_SRGB:Lcom/google/android/filament/Colors$RgbaType;
 
-    aput-object v1, v0, v4
+    aput-object v1, v0, v3
 
     sget-object v1, Lcom/google/android/filament/Colors$RgbaType;->PREMULTIPLIED_LINEAR:Lcom/google/android/filament/Colors$RgbaType;
 
-    aput-object v1, v0, v5
+    aput-object v1, v0, v4
 
     sput-object v0, Lcom/google/android/filament/Colors$RgbaType;->$VALUES:[Lcom/google/android/filament/Colors$RgbaType;
 
@@ -116,7 +110,6 @@
         }
     .end annotation
 
-    .line 57
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -125,7 +118,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/android/filament/Colors$RgbaType;
     .locals 1
 
-    .line 57
     const-class v0, Lcom/google/android/filament/Colors$RgbaType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -140,7 +132,6 @@
 .method public static values()[Lcom/google/android/filament/Colors$RgbaType;
     .locals 1
 
-    .line 57
     sget-object v0, Lcom/google/android/filament/Colors$RgbaType;->$VALUES:[Lcom/google/android/filament/Colors$RgbaType;
 
     invoke-virtual {v0}, [Lcom/google/android/filament/Colors$RgbaType;->clone()Ljava/lang/Object;

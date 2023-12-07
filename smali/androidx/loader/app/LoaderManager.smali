@@ -1,6 +1,5 @@
 .class public abstract Landroidx/loader/app/LoaderManager;
 .super Ljava/lang/Object;
-.source "LoaderManager.java"
 
 
 # annotations
@@ -15,7 +14,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,7 +32,6 @@
         }
     .end annotation
 
-    .line 128
     new-instance v0, Landroidx/loader/app/LoaderManagerImpl;
 
     move-object v1, p0

@@ -1,6 +1,5 @@
 .class public Lcom/airbnb/lottie/utils/GammaEvaluator;
 .super Ljava/lang/Object;
-.source "GammaEvaluator.java"
 
 
 # direct methods
@@ -32,7 +31,6 @@
 
     const-wide v2, 0x4003333340000000L    # 2.4000000953674316
 
-    .line 24
     invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v0
@@ -63,7 +61,6 @@
 
     const-wide v2, 0x3fdaaaaaa0000000L    # 0.4166666567325592
 
-    .line 17
     invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v0
@@ -152,32 +149,26 @@
 
     div-float/2addr p2, v1
 
-    .line 42
     invoke-static {v2}, Lcom/airbnb/lottie/utils/GammaEvaluator;->EOCF_sRGB(F)F
 
     move-result v2
 
-    .line 43
     invoke-static {v3}, Lcom/airbnb/lottie/utils/GammaEvaluator;->EOCF_sRGB(F)F
 
     move-result v3
 
-    .line 44
     invoke-static {p1}, Lcom/airbnb/lottie/utils/GammaEvaluator;->EOCF_sRGB(F)F
 
     move-result p1
 
-    .line 46
     invoke-static {v5}, Lcom/airbnb/lottie/utils/GammaEvaluator;->EOCF_sRGB(F)F
 
     move-result v5
 
-    .line 47
     invoke-static {v6}, Lcom/airbnb/lottie/utils/GammaEvaluator;->EOCF_sRGB(F)F
 
     move-result v6
 
-    .line 48
     invoke-static {p2}, Lcom/airbnb/lottie/utils/GammaEvaluator;->EOCF_sRGB(F)F
 
     move-result p2
@@ -208,28 +199,24 @@
 
     mul-float/2addr v0, v1
 
-    .line 58
     invoke-static {v2}, Lcom/airbnb/lottie/utils/GammaEvaluator;->OECF_sRGB(F)F
 
     move-result p0
 
     mul-float/2addr p0, v1
 
-    .line 59
     invoke-static {v3}, Lcom/airbnb/lottie/utils/GammaEvaluator;->OECF_sRGB(F)F
 
     move-result p2
 
     mul-float/2addr p2, v1
 
-    .line 60
     invoke-static {p1}, Lcom/airbnb/lottie/utils/GammaEvaluator;->OECF_sRGB(F)F
 
     move-result p1
 
     mul-float/2addr p1, v1
 
-    .line 62
     invoke-static {v0}, Ljava/lang/Math;->round(F)I
 
     move-result v0

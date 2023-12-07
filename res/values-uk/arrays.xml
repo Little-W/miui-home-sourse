@@ -73,49 +73,31 @@
         <item>Я</item>
         <item>\#</item>
     </string-array>
-    <string-array name="cell_layout_size_entries">
-        <item>4x4</item>
-        <item>4x5</item>
-    </string-array>
-    <string-array name="cell_layout_size_values">
-        <item>4x4</item>
-        <item>4x5</item>
+    <string-array name="animation_rate_entries">
+        <item>Повільно</item>
+        <item>Збалансовано</item>
+        <item>Швидко</item>
     </string-array>
     <string-array name="editing_mode_entries">
         <item>Шпалери</item>
         <item>Віджети</item>
         <item>Налаштування</item>
     </string-array>
-    <string-array name="gadget_weather_image">
-        <item>Ясно</item>
-        <item>Хмарно</item>
-        <item>Хмарно</item>
-        <item>Туман</item>
-        <item>Сильний дощ</item>
-        <item>Злива</item>
-        <item>Злива з ураганом</item>
-        <item>Місцями грози</item>
-        <item>Короткочасний дощ</item>
-        <item>Сильний дощ</item>
-        <item>Дощ</item>
-        <item>Мряка</item>
-        <item>Мокрий сніг</item>
-        <item>Заметіль</item>
-        <item>Снігопад</item>
-        <item>Сильний снігопад</item>
-        <item>Снігопад</item>
-        <item>Невеликий сніг</item>
-        <item>Сильна піщана буря</item>
-        <item>Піщана буря</item>
-        <item>Пил</item>
-        <item>Піщана буря</item>
-        <item>Град</item>
-        <item>Бруд</item>
-        <item>Імла</item>
-    </string-array>
-    <string-array name="gadget_weather_theme_type_entries">
+    <string-array name="monochrome_color_entries">
         <item>За замовчуванням</item>
-        <item>Класичний</item>
+        <item>Синій</item>
+        <item>Зелений</item>
+        <item>Фіолетовий</item>
+        <item>Коричневий</item>
+    </string-array>
+    <string-array name="no_word_model_entries">
+        <item>Вимк.</item>
+        <item>Всюди</item>
+        <item>На віджетах</item>
+    </string-array>
+    <string-array name="no_word_model_entries_not_support_only_widget_no_word">
+        <item>Вимк.</item>
+        <item>Всюди</item>
     </string-array>
     <string-array name="transformation_entries">
         <item>Слайд</item>
@@ -125,11 +107,5 @@
         <item>Каскад</item>
         <item>Обертання</item>
         <item>3D-куб</item>
-    </string-array>
-    <string-array name="wallpaper_scroll_entries">
-        <item>Увімкнена</item>
-        <item>Вимкнена (шпалери по центру)</item>
-        <item>Вимкнена (шпалери ліворуч)</item>
-        <item>Вимкнена (шпалери праворуч)</item>
     </string-array>
 </resources>

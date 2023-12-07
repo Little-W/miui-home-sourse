@@ -1,6 +1,5 @@
 .class public abstract Lcom/market/sdk/ServiceProxy2$ProxyTask;
 .super Ljava/lang/Object;
-.source "ServiceProxy2.java"
 
 
 # annotations
@@ -42,12 +41,10 @@
 .method public constructor <init>(Lcom/market/sdk/ServiceProxy2;Z)V
     .locals 1
 
-    .line 41
     iput-object p1, p0, Lcom/market/sdk/ServiceProxy2$ProxyTask;->this$0:Lcom/market/sdk/ServiceProxy2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 42
     new-instance v0, Lcom/market/sdk/ServiceProxy2$ProxyTask$1;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/market/sdk/ServiceProxy2$ProxyTask$1;-><init>(Lcom/market/sdk/ServiceProxy2$ProxyTask;Lcom/market/sdk/ServiceProxy2;Z)V
@@ -60,7 +57,6 @@
 .method static synthetic access$000(Lcom/market/sdk/ServiceProxy2$ProxyTask;)V
     .locals 0
 
-    .line 37
     invoke-direct {p0}, Lcom/market/sdk/ServiceProxy2$ProxyTask;->bind()V
 
     return-void
@@ -69,7 +65,6 @@
 .method static synthetic access$200(Lcom/market/sdk/ServiceProxy2$ProxyTask;)Landroid/content/ServiceConnection;
     .locals 0
 
-    .line 37
     iget-object p0, p0, Lcom/market/sdk/ServiceProxy2$ProxyTask;->conn:Landroid/content/ServiceConnection;
 
     return-object p0
@@ -78,7 +73,6 @@
 .method static synthetic access$202(Lcom/market/sdk/ServiceProxy2$ProxyTask;Landroid/content/ServiceConnection;)Landroid/content/ServiceConnection;
     .locals 0
 
-    .line 37
     iput-object p1, p0, Lcom/market/sdk/ServiceProxy2$ProxyTask;->conn:Landroid/content/ServiceConnection;
 
     return-object p1
@@ -87,16 +81,14 @@
 .method static synthetic access$400(Lcom/market/sdk/ServiceProxy2$ProxyTask;)Lcom/market/sdk/compat/FutureTaskCompat;
     .locals 0
 
-    .line 37
     iget-object p0, p0, Lcom/market/sdk/ServiceProxy2$ProxyTask;->syncCallTask:Lcom/market/sdk/compat/FutureTaskCompat;
 
     return-object p0
 .end method
 
 .method private bind()V
-    .locals 4
+    .locals 3
 
-    .line 89
     iget-object v0, p0, Lcom/market/sdk/ServiceProxy2$ProxyTask;->this$0:Lcom/market/sdk/ServiceProxy2;
 
     invoke-static {v0}, Lcom/market/sdk/ServiceProxy2;->access$300(Lcom/market/sdk/ServiceProxy2;)Landroid/content/Context;
@@ -109,11 +101,11 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/market/sdk/ServiceProxy2$ProxyTask;->conn:Landroid/content/ServiceConnection;
+    iget-object p0, p0, Lcom/market/sdk/ServiceProxy2$ProxyTask;->conn:Landroid/content/ServiceConnection;
 
-    const/4 v3, 0x1
+    const/4 v2, 0x1
 
-    invoke-virtual {v0, v1, v2, v3}, Landroid/content/Context;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
+    invoke-virtual {v0, v1, p0, v2}, Landroid/content/Context;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
 
     return-void
 .end method
@@ -128,21 +120,19 @@
         }
     .end annotation
 
-    .line 82
     new-instance v0, Lcom/market/sdk/compat/FutureTaskCompat;
 
     invoke-direct {v0}, Lcom/market/sdk/compat/FutureTaskCompat;-><init>()V
 
     iput-object v0, p0, Lcom/market/sdk/ServiceProxy2$ProxyTask;->syncCallTask:Lcom/market/sdk/compat/FutureTaskCompat;
 
-    .line 83
-    iget-object v0, p0, Lcom/market/sdk/ServiceProxy2$ProxyTask;->syncCallTask:Lcom/market/sdk/compat/FutureTaskCompat;
+    iget-object p0, p0, Lcom/market/sdk/ServiceProxy2$ProxyTask;->syncCallTask:Lcom/market/sdk/compat/FutureTaskCompat;
 
-    invoke-virtual {v0}, Lcom/market/sdk/compat/FutureTaskCompat;->get()Ljava/lang/Object;
+    invoke-virtual {p0}, Lcom/market/sdk/compat/FutureTaskCompat;->get()Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method protected abstract run(Landroid/os/IBinder;)Ljava/lang/Object;
@@ -164,12 +154,10 @@
 .method public unbind()V
     .locals 2
 
-    .line 93
     iget-object v0, p0, Lcom/market/sdk/ServiceProxy2$ProxyTask;->conn:Landroid/content/ServiceConnection;
 
     if-eqz v0, :cond_0
 
-    .line 94
     iget-object v0, p0, Lcom/market/sdk/ServiceProxy2$ProxyTask;->this$0:Lcom/market/sdk/ServiceProxy2;
 
     invoke-static {v0}, Lcom/market/sdk/ServiceProxy2;->access$300(Lcom/market/sdk/ServiceProxy2;)Landroid/content/Context;
@@ -182,7 +170,6 @@
 
     const/4 v0, 0x0
 
-    .line 95
     iput-object v0, p0, Lcom/market/sdk/ServiceProxy2$ProxyTask;->conn:Landroid/content/ServiceConnection;
 
     :cond_0

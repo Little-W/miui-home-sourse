@@ -1,6 +1,5 @@
 .class public Lcom/market/sdk/silentupdate/SigGenerator;
 .super Ljava/lang/Object;
-.source "SigGenerator.java"
 
 
 # annotations
@@ -21,7 +20,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 24
     new-instance v0, Ljava/security/SecureRandom;
 
     invoke-direct {v0}, Ljava/security/SecureRandom;-><init>()V
@@ -34,7 +32,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -43,7 +40,6 @@
 .method private static encodeSign([B)Ljava/lang/String;
     .locals 2
 
-    .line 66
     :try_start_0
     new-instance v0, Ljava/lang/String;
 
@@ -80,27 +76,20 @@
         }
     .end annotation
 
-    .line 82
     new-instance v0, Ljavax/crypto/spec/SecretKeySpec;
 
     const-string v1, "HmacSHA256"
 
     invoke-direct {v0, p1, v1}, Ljavax/crypto/spec/SecretKeySpec;-><init>([BLjava/lang/String;)V
 
-    const-string p1, "HmacSHA256"
-
-    .line 83
-    invoke-static {p1}, Ljavax/crypto/Mac;->getInstance(Ljava/lang/String;)Ljavax/crypto/Mac;
+    invoke-static {v1}, Ljavax/crypto/Mac;->getInstance(Ljava/lang/String;)Ljavax/crypto/Mac;
 
     move-result-object p1
 
-    .line 84
     invoke-virtual {p1, v0}, Ljavax/crypto/Mac;->init(Ljava/security/Key;)V
 
-    .line 85
     invoke-virtual {p1, p0}, Ljavax/crypto/Mac;->update([B)V
 
-    .line 86
     invoke-virtual {p1}, Ljavax/crypto/Mac;->doFinal()[B
 
     move-result-object p0
@@ -111,14 +100,12 @@
 .method public static generateNonce()Ljava/lang/String;
     .locals 6
 
-    .line 59
     sget-object v0, Lcom/market/sdk/silentupdate/SigGenerator;->RANDOM:Ljava/util/Random;
 
     invoke-virtual {v0}, Ljava/util/Random;->nextLong()J
 
     move-result-wide v0
 
-    .line 60
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
@@ -129,7 +116,6 @@
 
     long-to-int v2, v2
 
-    .line 61
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -159,32 +145,26 @@
         }
     .end annotation
 
-    .line 29
     new-instance v0, Ljava/util/TreeMap;
 
     invoke-direct {v0}, Ljava/util/TreeMap;-><init>()V
 
     const-string v1, "appClientId"
 
-    .line 30
     invoke-virtual {v0, v1, p1}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p1, "nonce"
 
-    .line 31
     invoke-virtual {v0, p1, p0}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p0, "id"
 
-    .line 32
     invoke-virtual {v0, p0, p2}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p0, "ref"
 
-    .line 33
     invoke-virtual {v0, p0, p3}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 34
     invoke-static {p4, v0}, Lcom/market/sdk/silentupdate/SigGenerator;->getSignatureString(Ljava/lang/String;Ljava/util/TreeMap;)Ljava/lang/String;
 
     move-result-object p0
@@ -193,7 +173,7 @@
 .end method
 
 .method private static getSignatureString(Ljava/lang/String;Ljava/util/TreeMap;)Ljava/lang/String;
-    .locals 4
+    .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -214,12 +194,10 @@
         }
     .end annotation
 
-    .line 38
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 39
     invoke-virtual {p1}, Ljava/util/TreeMap;->entrySet()Ljava/util/Set;
 
     move-result-object p1
@@ -233,6 +211,8 @@
 
     move-result v1
 
+    const-string v2, "UTF-8"
+
     if-eqz v1, :cond_1
 
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
@@ -241,36 +221,32 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 40
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v3
 
-    check-cast v2, Ljava/lang/String;
+    check-cast v3, Ljava/lang/String;
 
-    .line 41
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
 
-    move-result v3
+    move-result v4
 
-    if-lez v3, :cond_0
+    if-lez v4, :cond_0
 
-    const-string v3, "&"
+    const-string v4, "&"
 
-    .line 42
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 44
     :cond_0
-    new-instance v3, Ljava/lang/StringBuilder;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v2, "="
+    const-string v3, "="
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -278,15 +254,13 @@
 
     check-cast v1, Ljava/lang/String;
 
-    const-string v2, "UTF-8"
-
     invoke-static {v1, v2}, Ljava/net/URLEncoder;->encode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -297,33 +271,24 @@
     :cond_1
     const-string p1, "\n"
 
-    .line 46
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 47
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    const-string v0, "UTF-8"
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
+    invoke-virtual {p1, v2}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
 
     move-result-object p1
 
-    const-string v0, "UTF-8"
-
-    .line 48
-    invoke-virtual {p0, v0}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
+    invoke-virtual {p0, v2}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
 
     move-result-object p0
 
-    .line 47
     invoke-static {p1, p0}, Lcom/market/sdk/silentupdate/SigGenerator;->encryptHMACSha256([B[B)[B
 
     move-result-object p0
 
-    .line 49
     invoke-static {p0}, Lcom/market/sdk/silentupdate/SigGenerator;->encodeSign([B)Ljava/lang/String;
 
     move-result-object p0

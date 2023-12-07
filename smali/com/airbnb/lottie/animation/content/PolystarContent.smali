@@ -1,6 +1,5 @@
 .class public Lcom/airbnb/lottie/animation/content/PolystarContent;
 .super Ljava/lang/Object;
-.source "PolystarContent.java"
 
 # interfaces
 .implements Lcom/airbnb/lottie/animation/content/KeyPathElementContent;
@@ -34,6 +33,8 @@
 .end field
 
 .field private isPathValid:Z
+
+.field private final isReversed:Z
 
 .field private final lottieDrawable:Lcom/airbnb/lottie/LottieDrawable;
 
@@ -96,7 +97,7 @@
     .end annotation
 .end field
 
-.field private trimPaths:Lcom/airbnb/lottie/animation/content/CompoundTrimPathContent;
+.field private final trimPaths:Lcom/airbnb/lottie/animation/content/CompoundTrimPathContent;
 
 .field private final type:Lcom/airbnb/lottie/model/content/PolystarShape$Type;
 
@@ -105,48 +106,46 @@
 .method public constructor <init>(Lcom/airbnb/lottie/LottieDrawable;Lcom/airbnb/lottie/model/layer/BaseLayer;Lcom/airbnb/lottie/model/content/PolystarShape;)V
     .locals 1
 
-    .line 48
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 30
     new-instance v0, Landroid/graphics/Path;
 
     invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
 
     iput-object v0, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->path:Landroid/graphics/Path;
 
-    .line 44
     new-instance v0, Lcom/airbnb/lottie/animation/content/CompoundTrimPathContent;
 
     invoke-direct {v0}, Lcom/airbnb/lottie/animation/content/CompoundTrimPathContent;-><init>()V
 
     iput-object v0, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->trimPaths:Lcom/airbnb/lottie/animation/content/CompoundTrimPathContent;
 
-    .line 49
     iput-object p1, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->lottieDrawable:Lcom/airbnb/lottie/LottieDrawable;
 
-    .line 51
     invoke-virtual {p3}, Lcom/airbnb/lottie/model/content/PolystarShape;->getName()Ljava/lang/String;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->name:Ljava/lang/String;
 
-    .line 52
     invoke-virtual {p3}, Lcom/airbnb/lottie/model/content/PolystarShape;->getType()Lcom/airbnb/lottie/model/content/PolystarShape$Type;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->type:Lcom/airbnb/lottie/model/content/PolystarShape$Type;
 
-    .line 53
     invoke-virtual {p3}, Lcom/airbnb/lottie/model/content/PolystarShape;->isHidden()Z
 
     move-result p1
 
     iput-boolean p1, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->hidden:Z
 
-    .line 54
+    invoke-virtual {p3}, Lcom/airbnb/lottie/model/content/PolystarShape;->isReversed()Z
+
+    move-result p1
+
+    iput-boolean p1, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->isReversed:Z
+
     invoke-virtual {p3}, Lcom/airbnb/lottie/model/content/PolystarShape;->getPoints()Lcom/airbnb/lottie/model/animatable/AnimatableFloatValue;
 
     move-result-object p1
@@ -157,7 +156,6 @@
 
     iput-object p1, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->pointsAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
-    .line 55
     invoke-virtual {p3}, Lcom/airbnb/lottie/model/content/PolystarShape;->getPosition()Lcom/airbnb/lottie/model/animatable/AnimatableValue;
 
     move-result-object p1
@@ -168,7 +166,6 @@
 
     iput-object p1, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->positionAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
-    .line 56
     invoke-virtual {p3}, Lcom/airbnb/lottie/model/content/PolystarShape;->getRotation()Lcom/airbnb/lottie/model/animatable/AnimatableFloatValue;
 
     move-result-object p1
@@ -179,7 +176,6 @@
 
     iput-object p1, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->rotationAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
-    .line 57
     invoke-virtual {p3}, Lcom/airbnb/lottie/model/content/PolystarShape;->getOuterRadius()Lcom/airbnb/lottie/model/animatable/AnimatableFloatValue;
 
     move-result-object p1
@@ -190,7 +186,6 @@
 
     iput-object p1, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->outerRadiusAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
-    .line 58
     invoke-virtual {p3}, Lcom/airbnb/lottie/model/content/PolystarShape;->getOuterRoundedness()Lcom/airbnb/lottie/model/animatable/AnimatableFloatValue;
 
     move-result-object p1
@@ -201,14 +196,12 @@
 
     iput-object p1, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->outerRoundednessAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
-    .line 59
     iget-object p1, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->type:Lcom/airbnb/lottie/model/content/PolystarShape$Type;
 
     sget-object v0, Lcom/airbnb/lottie/model/content/PolystarShape$Type;->STAR:Lcom/airbnb/lottie/model/content/PolystarShape$Type;
 
     if-ne p1, v0, :cond_0
 
-    .line 60
     invoke-virtual {p3}, Lcom/airbnb/lottie/model/content/PolystarShape;->getInnerRadius()Lcom/airbnb/lottie/model/animatable/AnimatableFloatValue;
 
     move-result-object p1
@@ -219,7 +212,6 @@
 
     iput-object p1, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->innerRadiusAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
-    .line 61
     invoke-virtual {p3}, Lcom/airbnb/lottie/model/content/PolystarShape;->getInnerRoundedness()Lcom/airbnb/lottie/model/animatable/AnimatableFloatValue;
 
     move-result-object p1
@@ -235,94 +227,76 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 63
     iput-object p1, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->innerRadiusAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
-    .line 64
     iput-object p1, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->innerRoundednessAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
-    .line 67
     :goto_0
     iget-object p1, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->pointsAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {p2, p1}, Lcom/airbnb/lottie/model/layer/BaseLayer;->addAnimation(Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;)V
 
-    .line 68
     iget-object p1, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->positionAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {p2, p1}, Lcom/airbnb/lottie/model/layer/BaseLayer;->addAnimation(Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;)V
 
-    .line 69
     iget-object p1, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->rotationAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {p2, p1}, Lcom/airbnb/lottie/model/layer/BaseLayer;->addAnimation(Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;)V
 
-    .line 70
     iget-object p1, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->outerRadiusAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {p2, p1}, Lcom/airbnb/lottie/model/layer/BaseLayer;->addAnimation(Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;)V
 
-    .line 71
     iget-object p1, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->outerRoundednessAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {p2, p1}, Lcom/airbnb/lottie/model/layer/BaseLayer;->addAnimation(Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;)V
 
-    .line 72
     iget-object p1, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->type:Lcom/airbnb/lottie/model/content/PolystarShape$Type;
 
     sget-object p3, Lcom/airbnb/lottie/model/content/PolystarShape$Type;->STAR:Lcom/airbnb/lottie/model/content/PolystarShape$Type;
 
     if-ne p1, p3, :cond_1
 
-    .line 73
     iget-object p1, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->innerRadiusAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {p2, p1}, Lcom/airbnb/lottie/model/layer/BaseLayer;->addAnimation(Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;)V
 
-    .line 74
     iget-object p1, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->innerRoundednessAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {p2, p1}, Lcom/airbnb/lottie/model/layer/BaseLayer;->addAnimation(Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;)V
 
-    .line 77
     :cond_1
     iget-object p1, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->pointsAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {p1, p0}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->addUpdateListener(Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation$AnimationListener;)V
 
-    .line 78
     iget-object p1, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->positionAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {p1, p0}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->addUpdateListener(Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation$AnimationListener;)V
 
-    .line 79
     iget-object p1, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->rotationAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {p1, p0}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->addUpdateListener(Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation$AnimationListener;)V
 
-    .line 80
     iget-object p1, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->outerRadiusAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {p1, p0}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->addUpdateListener(Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation$AnimationListener;)V
 
-    .line 81
     iget-object p1, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->outerRoundednessAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {p1, p0}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->addUpdateListener(Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation$AnimationListener;)V
 
-    .line 82
     iget-object p1, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->type:Lcom/airbnb/lottie/model/content/PolystarShape$Type;
 
     sget-object p2, Lcom/airbnb/lottie/model/content/PolystarShape$Type;->STAR:Lcom/airbnb/lottie/model/content/PolystarShape$Type;
 
     if-ne p1, p2, :cond_2
 
-    .line 83
     iget-object p1, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->innerRadiusAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {p1, p0}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->addUpdateListener(Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation$AnimationListener;)V
 
-    .line 84
     iget-object p1, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->innerRoundednessAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {p1, p0}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->addUpdateListener(Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation$AnimationListener;)V
@@ -336,7 +310,6 @@
 
     move-object/from16 v0, p0
 
-    .line 249
     iget-object v1, v0, Lcom/airbnb/lottie/animation/content/PolystarContent;->pointsAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {v1}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->getValue()Ljava/lang/Object;
@@ -357,7 +330,6 @@
 
     double-to-int v1, v1
 
-    .line 250
     iget-object v2, v0, Lcom/airbnb/lottie/animation/content/PolystarContent;->rotationAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     if-nez v2, :cond_0
@@ -384,7 +356,6 @@
 
     sub-double/2addr v2, v4
 
-    .line 254
     invoke-static {v2, v3}, Ljava/lang/Math;->toRadians(D)D
 
     move-result-wide v2
@@ -397,7 +368,6 @@
 
     double-to-float v1, v4
 
-    .line 258
     iget-object v4, v0, Lcom/airbnb/lottie/animation/content/PolystarContent;->outerRoundednessAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {v4}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->getValue()Ljava/lang/Object;
@@ -414,7 +384,6 @@
 
     div-float/2addr v4, v5
 
-    .line 259
     iget-object v5, v0, Lcom/airbnb/lottie/animation/content/PolystarContent;->outerRadiusAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {v5}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->getValue()Ljava/lang/Object;
@@ -429,7 +398,6 @@
 
     float-to-double v8, v5
 
-    .line 264
     invoke-static {v2, v3}, Ljava/lang/Math;->cos(D)D
 
     move-result-wide v10
@@ -438,7 +406,6 @@
 
     double-to-float v10, v10
 
-    .line 265
     invoke-static {v2, v3}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v11
@@ -447,7 +414,6 @@
 
     double-to-float v11, v11
 
-    .line 266
     iget-object v12, v0, Lcom/airbnb/lottie/animation/content/PolystarContent;->path:Landroid/graphics/Path;
 
     invoke-virtual {v12, v10, v11}, Landroid/graphics/Path;->moveTo(FF)V
@@ -456,7 +422,6 @@
 
     add-double/2addr v2, v12
 
-    .line 269
     invoke-static {v6, v7}, Ljava/lang/Math;->ceil(D)D
 
     move-result-wide v6
@@ -470,7 +435,6 @@
 
     if-gez v14, :cond_2
 
-    .line 273
     invoke-static {v2, v3}, Ljava/lang/Math;->cos(D)D
 
     move-result-wide v14
@@ -479,7 +443,6 @@
 
     double-to-float v14, v14
 
-    .line 274
     invoke-static {v2, v3}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v15
@@ -506,7 +469,6 @@
 
     float-to-double v1, v10
 
-    .line 277
     invoke-static {v7, v8, v1, v2}, Ljava/lang/Math;->atan2(DD)D
 
     move-result-wide v1
@@ -519,14 +481,12 @@
 
     float-to-double v1, v1
 
-    .line 278
     invoke-static {v1, v2}, Ljava/lang/Math;->cos(D)D
 
     move-result-wide v7
 
     double-to-float v3, v7
 
-    .line 279
     invoke-static {v1, v2}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v1
@@ -539,7 +499,6 @@
 
     float-to-double v12, v14
 
-    .line 281
     invoke-static {v7, v8, v12, v13}, Ljava/lang/Math;->atan2(DD)D
 
     move-result-wide v7
@@ -552,14 +511,12 @@
 
     float-to-double v7, v2
 
-    .line 282
     invoke-static {v7, v8}, Ljava/lang/Math;->cos(D)D
 
     move-result-wide v12
 
     double-to-float v2, v12
 
-    .line 283
     invoke-static {v7, v8}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v7
@@ -580,7 +537,6 @@
 
     mul-float/2addr v8, v7
 
-    .line 289
     iget-object v7, v0, Lcom/airbnb/lottie/animation/content/PolystarContent;->path:Landroid/graphics/Path;
 
     sub-float v17, v10, v3
@@ -610,7 +566,6 @@
 
     move v9, v1
 
-    .line 291
     iget-object v1, v0, Lcom/airbnb/lottie/animation/content/PolystarContent;->path:Landroid/graphics/Path;
 
     invoke-virtual {v1, v14, v6}, Landroid/graphics/Path;->lineTo(FF)V
@@ -632,7 +587,6 @@
 
     goto/16 :goto_1
 
-    .line 297
     :cond_2
     iget-object v1, v0, Lcom/airbnb/lottie/animation/content/PolystarContent;->positionAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
@@ -642,7 +596,6 @@
 
     check-cast v1, Landroid/graphics/PointF;
 
-    .line 298
     iget-object v2, v0, Lcom/airbnb/lottie/animation/content/PolystarContent;->path:Landroid/graphics/Path;
 
     iget v3, v1, Landroid/graphics/PointF;->x:F
@@ -651,10 +604,9 @@
 
     invoke-virtual {v2, v3, v1}, Landroid/graphics/Path;->offset(FF)V
 
-    .line 299
-    iget-object v1, v0, Lcom/airbnb/lottie/animation/content/PolystarContent;->path:Landroid/graphics/Path;
+    iget-object v0, v0, Lcom/airbnb/lottie/animation/content/PolystarContent;->path:Landroid/graphics/Path;
 
-    invoke-virtual {v1}, Landroid/graphics/Path;->close()V
+    invoke-virtual {v0}, Landroid/graphics/Path;->close()V
 
     return-void
 .end method
@@ -664,7 +616,6 @@
 
     move-object/from16 v0, p0
 
-    .line 143
     iget-object v1, v0, Lcom/airbnb/lottie/animation/content/PolystarContent;->pointsAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {v1}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->getValue()Ljava/lang/Object;
@@ -677,7 +628,6 @@
 
     move-result v1
 
-    .line 144
     iget-object v2, v0, Lcom/airbnb/lottie/animation/content/PolystarContent;->rotationAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     if-nez v2, :cond_0
@@ -704,7 +654,6 @@
 
     sub-double/2addr v2, v4
 
-    .line 148
     invoke-static {v2, v3}, Ljava/lang/Math;->toRadians(D)D
 
     move-result-wide v2
@@ -717,6 +666,15 @@
 
     double-to-float v4, v4
 
+    iget-boolean v5, v0, Lcom/airbnb/lottie/animation/content/PolystarContent;->isReversed:Z
+
+    if-eqz v5, :cond_1
+
+    const/high16 v5, -0x40800000    # -1.0f
+
+    mul-float/2addr v4, v5
+
+    :cond_1
     const/high16 v5, 0x40000000    # 2.0f
 
     div-float v8, v4, v5
@@ -731,7 +689,7 @@
 
     cmpl-float v10, v1, v9
 
-    if-eqz v10, :cond_1
+    if-eqz v10, :cond_2
 
     const/high16 v11, 0x3f800000    # 1.0f
 
@@ -743,8 +701,7 @@
 
     add-double/2addr v2, v11
 
-    .line 157
-    :cond_1
+    :cond_2
     iget-object v11, v0, Lcom/airbnb/lottie/animation/content/PolystarContent;->outerRadiusAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {v11}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->getValue()Ljava/lang/Object;
@@ -757,7 +714,6 @@
 
     move-result v11
 
-    .line 159
     iget-object v12, v0, Lcom/airbnb/lottie/animation/content/PolystarContent;->innerRadiusAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {v12}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->getValue()Ljava/lang/Object;
@@ -770,14 +726,12 @@
 
     move-result v12
 
-    .line 162
     iget-object v13, v0, Lcom/airbnb/lottie/animation/content/PolystarContent;->innerRoundednessAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     const/high16 v14, 0x42c80000    # 100.0f
 
-    if-eqz v13, :cond_2
+    if-eqz v13, :cond_3
 
-    .line 163
     invoke-virtual {v13}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->getValue()Ljava/lang/Object;
 
     move-result-object v13
@@ -792,16 +746,14 @@
 
     goto :goto_1
 
-    :cond_2
+    :cond_3
     move v13, v9
 
-    .line 166
     :goto_1
     iget-object v15, v0, Lcom/airbnb/lottie/animation/content/PolystarContent;->outerRoundednessAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
-    if-eqz v15, :cond_3
+    if-eqz v15, :cond_4
 
-    .line 167
     invoke-virtual {v15}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->getValue()Ljava/lang/Object;
 
     move-result-object v15
@@ -816,11 +768,11 @@
 
     goto :goto_2
 
-    :cond_3
+    :cond_4
     move v14, v9
 
     :goto_2
-    if-eqz v10, :cond_4
+    if-eqz v10, :cond_5
 
     sub-float v15, v11, v12
 
@@ -832,7 +784,6 @@
 
     float-to-double v9, v15
 
-    .line 177
     invoke-static {v2, v3}, Ljava/lang/Math;->cos(D)D
 
     move-result-wide v18
@@ -843,7 +794,6 @@
 
     double-to-float v5, v5
 
-    .line 178
     invoke-static {v2, v3}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v18
@@ -852,7 +802,6 @@
 
     double-to-float v6, v9
 
-    .line 179
     iget-object v9, v0, Lcom/airbnb/lottie/animation/content/PolystarContent;->path:Landroid/graphics/Path;
 
     invoke-virtual {v9, v5, v6}, Landroid/graphics/Path;->moveTo(FF)V
@@ -869,14 +818,13 @@
 
     goto :goto_3
 
-    :cond_4
+    :cond_5
     move-wide/from16 v20, v6
 
     move/from16 v17, v10
 
     float-to-double v5, v11
 
-    .line 182
     invoke-static {v2, v3}, Ljava/lang/Math;->cos(D)D
 
     move-result-wide v9
@@ -885,7 +833,6 @@
 
     double-to-float v9, v9
 
-    .line 183
     invoke-static {v2, v3}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v18
@@ -894,7 +841,6 @@
 
     double-to-float v6, v5
 
-    .line 184
     iget-object v5, v0, Lcom/airbnb/lottie/animation/content/PolystarContent;->path:Landroid/graphics/Path;
 
     invoke-virtual {v5, v9, v6}, Landroid/graphics/Path;->moveTo(FF)V
@@ -911,7 +857,6 @@
 
     const/4 v15, 0x0
 
-    .line 190
     :goto_3
     invoke-static/range {v20 .. v21}, Ljava/lang/Math;->ceil(D)D
 
@@ -934,15 +879,15 @@
 
     cmpg-double v24, v7, v9
 
-    if-gez v24, :cond_f
+    if-gez v24, :cond_10
 
-    if-eqz v20, :cond_5
+    if-eqz v20, :cond_6
 
     move/from16 v24, v11
 
     goto :goto_5
 
-    :cond_5
+    :cond_6
     move/from16 v24, v12
 
     :goto_5
@@ -950,13 +895,13 @@
 
     cmpl-float v25, v15, v16
 
-    if-eqz v25, :cond_6
+    if-eqz v25, :cond_7
 
     sub-double v26, v9, v18
 
     cmpl-double v26, v7, v26
 
-    if-nez v26, :cond_6
+    if-nez v26, :cond_7
 
     mul-float v26, v4, v1
 
@@ -972,7 +917,7 @@
 
     goto :goto_6
 
-    :cond_6
+    :cond_7
     const/high16 v23, 0x40000000    # 2.0f
 
     move/from16 v26, v3
@@ -980,13 +925,13 @@
     :goto_6
     const-wide/high16 v27, 0x3ff0000000000000L    # 1.0
 
-    if-eqz v25, :cond_7
+    if-eqz v25, :cond_8
 
     sub-double v29, v9, v27
 
     cmpl-double v25, v7, v29
 
-    if-nez v25, :cond_7
+    if-nez v25, :cond_8
 
     move/from16 v25, v4
 
@@ -998,7 +943,7 @@
 
     goto :goto_7
 
-    :cond_7
+    :cond_8
     move/from16 v25, v4
 
     move/from16 v29, v12
@@ -1010,7 +955,6 @@
     :goto_7
     float-to-double v11, v4
 
-    .line 202
     invoke-static/range {v21 .. v22}, Ljava/lang/Math;->cos(D)D
 
     move-result-wide v30
@@ -1021,7 +965,6 @@
 
     double-to-float v3, v3
 
-    .line 203
     invoke-static/range {v21 .. v22}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v30
@@ -1034,13 +977,12 @@
 
     cmpl-float v12, v13, v11
 
-    if-nez v12, :cond_8
+    if-nez v12, :cond_9
 
     cmpl-float v12, v14, v11
 
-    if-nez v12, :cond_8
+    if-nez v12, :cond_9
 
-    .line 206
     iget-object v5, v0, Lcom/airbnb/lottie/animation/content/PolystarContent;->path:Landroid/graphics/Path;
 
     invoke-virtual {v5, v3, v4}, Landroid/graphics/Path;->lineTo(FF)V
@@ -1053,11 +995,12 @@
 
     move v12, v15
 
+    :goto_8
     move/from16 v4, v32
 
-    goto/16 :goto_d
+    goto/16 :goto_e
 
-    :cond_8
+    :cond_9
     float-to-double v11, v6
 
     move/from16 v30, v13
@@ -1066,7 +1009,6 @@
 
     float-to-double v13, v5
 
-    .line 208
     invoke-static {v11, v12, v13, v14}, Ljava/lang/Math;->atan2(DD)D
 
     move-result-wide v11
@@ -1079,14 +1021,12 @@
 
     float-to-double v11, v11
 
-    .line 209
     invoke-static {v11, v12}, Ljava/lang/Math;->cos(D)D
 
     move-result-wide v13
 
     double-to-float v13, v13
 
-    .line 210
     invoke-static {v11, v12}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v11
@@ -1103,7 +1043,6 @@
 
     float-to-double v4, v3
 
-    .line 212
     invoke-static {v14, v15, v4, v5}, Ljava/lang/Math;->atan2(DD)D
 
     move-result-wide v4
@@ -1116,60 +1055,58 @@
 
     float-to-double v4, v4
 
-    .line 213
     invoke-static {v4, v5}, Ljava/lang/Math;->cos(D)D
 
     move-result-wide v14
 
     double-to-float v14, v14
 
-    .line 214
     invoke-static {v4, v5}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v4
 
     double-to-float v4, v4
 
-    if-eqz v20, :cond_9
-
-    move/from16 v5, v30
-
-    goto :goto_8
-
-    :cond_9
-    move/from16 v5, v31
-
-    :goto_8
     if-eqz v20, :cond_a
 
-    move/from16 v15, v31
+    move/from16 v5, v30
 
     goto :goto_9
 
     :cond_a
-    move/from16 v15, v30
+    move/from16 v5, v31
 
     :goto_9
     if-eqz v20, :cond_b
 
-    move/from16 v33, v29
+    move/from16 v15, v31
 
     goto :goto_a
 
     :cond_b
-    move/from16 v33, v24
+    move/from16 v15, v30
 
     :goto_a
     if-eqz v20, :cond_c
 
-    move/from16 v34, v24
+    move/from16 v33, v29
 
     goto :goto_b
 
     :cond_c
-    move/from16 v34, v29
+    move/from16 v33, v24
 
     :goto_b
+    if-eqz v20, :cond_d
+
+    move/from16 v34, v24
+
+    goto :goto_c
+
+    :cond_d
+    move/from16 v34, v29
+
+    :goto_c
     mul-float v33, v33, v5
 
     const v5, 0x3ef4e26d    # 0.47829f
@@ -1188,30 +1125,29 @@
 
     mul-float v34, v34, v4
 
-    if-eqz v17, :cond_e
+    if-eqz v17, :cond_f
 
-    if-nez v2, :cond_d
+    if-nez v2, :cond_e
 
     mul-float/2addr v13, v1
 
     mul-float v33, v33, v1
 
-    goto :goto_c
+    goto :goto_d
 
-    :cond_d
+    :cond_e
     sub-double v4, v9, v27
 
     cmpl-double v4, v7, v4
 
-    if-nez v4, :cond_e
+    if-nez v4, :cond_f
 
     mul-float/2addr v14, v1
 
     mul-float v34, v34, v1
 
-    .line 235
-    :cond_e
-    :goto_c
+    :cond_f
+    :goto_d
     iget-object v4, v0, Lcom/airbnb/lottie/animation/content/PolystarContent;->path:Landroid/graphics/Path;
 
     sub-float v5, v35, v13
@@ -1232,9 +1168,9 @@
 
     invoke-virtual/range {v33 .. v39}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
 
-    move/from16 v4, v32
+    goto/16 :goto_8
 
-    :goto_d
+    :goto_e
     float-to-double v4, v4
 
     add-double v21, v21, v4
@@ -1263,8 +1199,7 @@
 
     goto/16 :goto_4
 
-    .line 243
-    :cond_f
+    :cond_10
     iget-object v1, v0, Lcom/airbnb/lottie/animation/content/PolystarContent;->positionAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {v1}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->getValue()Ljava/lang/Object;
@@ -1273,7 +1208,6 @@
 
     check-cast v1, Landroid/graphics/PointF;
 
-    .line 244
     iget-object v2, v0, Lcom/airbnb/lottie/animation/content/PolystarContent;->path:Landroid/graphics/Path;
 
     iget v3, v1, Landroid/graphics/PointF;->x:F
@@ -1282,10 +1216,9 @@
 
     invoke-virtual {v2, v3, v1}, Landroid/graphics/Path;->offset(FF)V
 
-    .line 245
-    iget-object v1, v0, Lcom/airbnb/lottie/animation/content/PolystarContent;->path:Landroid/graphics/Path;
+    iget-object v0, v0, Lcom/airbnb/lottie/animation/content/PolystarContent;->path:Landroid/graphics/Path;
 
-    invoke-virtual {v1}, Landroid/graphics/Path;->close()V
+    invoke-virtual {v0}, Landroid/graphics/Path;->close()V
 
     return-void
 .end method
@@ -1295,13 +1228,11 @@
 
     const/4 v0, 0x0
 
-    .line 93
     iput-boolean v0, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->isPathValid:Z
 
-    .line 94
-    iget-object v0, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->lottieDrawable:Lcom/airbnb/lottie/LottieDrawable;
+    iget-object p0, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->lottieDrawable:Lcom/airbnb/lottie/LottieDrawable;
 
-    invoke-virtual {v0}, Lcom/airbnb/lottie/LottieDrawable;->invalidateSelf()V
+    invoke-virtual {p0}, Lcom/airbnb/lottie/LottieDrawable;->invalidateSelf()V
 
     return-void
 .end method
@@ -1320,45 +1251,38 @@
         }
     .end annotation
 
-    .line 310
     sget-object v0, Lcom/airbnb/lottie/LottieProperty;->POLYSTAR_POINTS:Ljava/lang/Float;
 
     if-ne p1, v0, :cond_0
 
-    .line 311
-    iget-object p1, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->pointsAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
+    iget-object p0, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->pointsAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
-    invoke-virtual {p1, p2}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->setValueCallback(Lcom/airbnb/lottie/value/LottieValueCallback;)V
+    invoke-virtual {p0, p2}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->setValueCallback(Lcom/airbnb/lottie/value/LottieValueCallback;)V
 
     goto :goto_0
 
-    .line 312
     :cond_0
     sget-object v0, Lcom/airbnb/lottie/LottieProperty;->POLYSTAR_ROTATION:Ljava/lang/Float;
 
     if-ne p1, v0, :cond_1
 
-    .line 313
-    iget-object p1, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->rotationAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
+    iget-object p0, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->rotationAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
-    invoke-virtual {p1, p2}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->setValueCallback(Lcom/airbnb/lottie/value/LottieValueCallback;)V
+    invoke-virtual {p0, p2}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->setValueCallback(Lcom/airbnb/lottie/value/LottieValueCallback;)V
 
     goto :goto_0
 
-    .line 314
     :cond_1
     sget-object v0, Lcom/airbnb/lottie/LottieProperty;->POSITION:Landroid/graphics/PointF;
 
     if-ne p1, v0, :cond_2
 
-    .line 315
-    iget-object p1, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->positionAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
+    iget-object p0, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->positionAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
-    invoke-virtual {p1, p2}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->setValueCallback(Lcom/airbnb/lottie/value/LottieValueCallback;)V
+    invoke-virtual {p0, p2}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->setValueCallback(Lcom/airbnb/lottie/value/LottieValueCallback;)V
 
     goto :goto_0
 
-    .line 316
     :cond_2
     sget-object v0, Lcom/airbnb/lottie/LottieProperty;->POLYSTAR_INNER_RADIUS:Ljava/lang/Float;
 
@@ -1368,25 +1292,21 @@
 
     if-eqz v0, :cond_3
 
-    .line 317
     invoke-virtual {v0, p2}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->setValueCallback(Lcom/airbnb/lottie/value/LottieValueCallback;)V
 
     goto :goto_0
 
-    .line 318
     :cond_3
     sget-object v0, Lcom/airbnb/lottie/LottieProperty;->POLYSTAR_OUTER_RADIUS:Ljava/lang/Float;
 
     if-ne p1, v0, :cond_4
 
-    .line 319
-    iget-object p1, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->outerRadiusAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
+    iget-object p0, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->outerRadiusAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
-    invoke-virtual {p1, p2}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->setValueCallback(Lcom/airbnb/lottie/value/LottieValueCallback;)V
+    invoke-virtual {p0, p2}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->setValueCallback(Lcom/airbnb/lottie/value/LottieValueCallback;)V
 
     goto :goto_0
 
-    .line 320
     :cond_4
     sget-object v0, Lcom/airbnb/lottie/LottieProperty;->POLYSTAR_INNER_ROUNDEDNESS:Ljava/lang/Float;
 
@@ -1396,21 +1316,18 @@
 
     if-eqz v0, :cond_5
 
-    .line 321
     invoke-virtual {v0, p2}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->setValueCallback(Lcom/airbnb/lottie/value/LottieValueCallback;)V
 
     goto :goto_0
 
-    .line 322
     :cond_5
     sget-object v0, Lcom/airbnb/lottie/LottieProperty;->POLYSTAR_OUTER_ROUNDEDNESS:Ljava/lang/Float;
 
     if-ne p1, v0, :cond_6
 
-    .line 323
-    iget-object p1, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->outerRoundednessAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
+    iget-object p0, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->outerRoundednessAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
-    invoke-virtual {p1, p2}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->setValueCallback(Lcom/airbnb/lottie/value/LottieValueCallback;)V
+    invoke-virtual {p0, p2}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->setValueCallback(Lcom/airbnb/lottie/value/LottieValueCallback;)V
 
     :cond_6
     :goto_0
@@ -1418,49 +1335,41 @@
 .end method
 
 .method public getName()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
-    .line 139
-    iget-object v0, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->name:Ljava/lang/String;
+    iget-object p0, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->name:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getPath()Landroid/graphics/Path;
     .locals 3
 
-    .line 110
     iget-boolean v0, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->isPathValid:Z
 
     if-eqz v0, :cond_0
 
-    .line 111
-    iget-object v0, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->path:Landroid/graphics/Path;
+    iget-object p0, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->path:Landroid/graphics/Path;
 
-    return-object v0
+    return-object p0
 
-    .line 114
     :cond_0
     iget-object v0, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->path:Landroid/graphics/Path;
 
     invoke-virtual {v0}, Landroid/graphics/Path;->reset()V
 
-    .line 116
     iget-boolean v0, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->hidden:Z
 
     const/4 v1, 0x1
 
     if-eqz v0, :cond_1
 
-    .line 117
     iput-boolean v1, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->isPathValid:Z
 
-    .line 118
-    iget-object v0, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->path:Landroid/graphics/Path;
+    iget-object p0, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->path:Landroid/graphics/Path;
 
-    return-object v0
+    return-object p0
 
-    .line 121
     :cond_1
     sget-object v0, Lcom/airbnb/lottie/animation/content/PolystarContent$1;->$SwitchMap$com$airbnb$lottie$model$content$PolystarShape$Type:[I
 
@@ -1472,52 +1381,43 @@
 
     aget v0, v0, v2
 
-    packed-switch v0, :pswitch_data_0
+    if-eq v0, v1, :cond_3
+
+    const/4 v2, 0x2
+
+    if-eq v0, v2, :cond_2
 
     goto :goto_0
 
-    .line 126
-    :pswitch_0
+    :cond_2
     invoke-direct {p0}, Lcom/airbnb/lottie/animation/content/PolystarContent;->createPolygonPath()V
 
     goto :goto_0
 
-    .line 123
-    :pswitch_1
+    :cond_3
     invoke-direct {p0}, Lcom/airbnb/lottie/animation/content/PolystarContent;->createStarPath()V
 
-    .line 130
     :goto_0
     iget-object v0, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->path:Landroid/graphics/Path;
 
     invoke-virtual {v0}, Landroid/graphics/Path;->close()V
 
-    .line 132
     iget-object v0, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->trimPaths:Lcom/airbnb/lottie/animation/content/CompoundTrimPathContent;
 
     iget-object v2, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->path:Landroid/graphics/Path;
 
     invoke-virtual {v0, v2}, Lcom/airbnb/lottie/animation/content/CompoundTrimPathContent;->apply(Landroid/graphics/Path;)V
 
-    .line 134
     iput-boolean v1, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->isPathValid:Z
 
-    .line 135
-    iget-object v0, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->path:Landroid/graphics/Path;
+    iget-object p0, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->path:Landroid/graphics/Path;
 
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method
 
 .method public onValueChanged()V
     .locals 0
 
-    .line 89
     invoke-direct {p0}, Lcom/airbnb/lottie/animation/content/PolystarContent;->invalidate()V
 
     return-void
@@ -1538,7 +1438,6 @@
         }
     .end annotation
 
-    .line 304
     invoke-static {p1, p2, p3, p4, p0}, Lcom/airbnb/lottie/utils/MiscUtils;->resolveKeyPath(Lcom/airbnb/lottie/model/KeyPath;ILjava/util/List;Lcom/airbnb/lottie/model/KeyPath;Lcom/airbnb/lottie/animation/content/KeyPathElementContent;)V
 
     return-void
@@ -1560,7 +1459,6 @@
 
     const/4 p2, 0x0
 
-    .line 98
     :goto_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -1568,21 +1466,18 @@
 
     if-ge p2, v0, :cond_1
 
-    .line 99
     invoke-interface {p1, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/airbnb/lottie/animation/content/Content;
 
-    .line 100
     instance-of v1, v0, Lcom/airbnb/lottie/animation/content/TrimPathContent;
 
     if-eqz v1, :cond_0
 
     check-cast v0, Lcom/airbnb/lottie/animation/content/TrimPathContent;
 
-    .line 101
     invoke-virtual {v0}, Lcom/airbnb/lottie/animation/content/TrimPathContent;->getType()Lcom/airbnb/lottie/model/content/ShapeTrimPath$Type;
 
     move-result-object v1
@@ -1591,12 +1486,10 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 103
     iget-object v1, p0, Lcom/airbnb/lottie/animation/content/PolystarContent;->trimPaths:Lcom/airbnb/lottie/animation/content/CompoundTrimPathContent;
 
     invoke-virtual {v1, v0}, Lcom/airbnb/lottie/animation/content/CompoundTrimPathContent;->addTrimPath(Lcom/airbnb/lottie/animation/content/TrimPathContent;)V
 
-    .line 104
     invoke-virtual {v0, p0}, Lcom/airbnb/lottie/animation/content/TrimPathContent;->addListener(Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation$AnimationListener;)V
 
     :cond_0

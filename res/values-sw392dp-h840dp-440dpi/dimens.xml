@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="desktop_mode_padding_right">13.099976dip</dimen>
+    <dimen name="folder_content_grid_view_margin_bottom">0.0dip</dimen>
+    <dimen name="folder_content_padding_left">5.0dip</dimen>
+    <dimen name="folder_edit_text_margin_right">20.099976dip</dimen>
+    <dimen name="hotseats_height">89.45999dip</dimen>
+    <dimen name="hotseats_margin_top">14.0dip</dimen>
+    <dimen name="hotseats_margin_top_search_bar">4.0dip</dimen>
+    <dimen name="recommend_margin_end">0.0dip</dimen>
+    <dimen name="recommend_margin_start">0.0dip</dimen>
+    <dimen name="search_bar_margin_bottom">30.0dip</dimen>
+    <dimen name="search_bar_margin_top">18.0dip</dimen>
+    <dimen name="slide_bar_margin_top">0.0dip</dimen>
+    <dimen name="workspace_cell_padding_top">16.0dip</dimen>
+    <dimen name="workspace_cell_vertical_spacing">4.0dip</dimen>
+    <dimen name="workspace_cell_vertical_spacing_navigation">2.0dip</dimen>
+</resources>

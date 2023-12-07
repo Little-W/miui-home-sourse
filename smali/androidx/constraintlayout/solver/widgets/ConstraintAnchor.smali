@@ -1,81 +1,59 @@
 .class public Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;
 .super Ljava/lang/Object;
-.source "ConstraintAnchor.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$ConnectionType;,
-        Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Strength;,
         Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;
     }
 .end annotation
 
 
 # instance fields
-.field private mConnectionCreator:I
-
-.field private mConnectionType:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$ConnectionType;
+.field private mDependents:Ljava/util/HashSet;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashSet<",
+            "Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 .field mGoneMargin:I
 
 .field public mMargin:I
 
-.field final mOwner:Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
-
-.field private mResolutionAnchor:Landroidx/constraintlayout/solver/widgets/ResolutionAnchor;
+.field public final mOwner:Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
 
 .field mSolverVariable:Landroidx/constraintlayout/solver/SolverVariable;
 
-.field private mStrength:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Strength;
+.field public mTarget:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;
 
-.field mTarget:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;
-
-.field final mType:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;
+.field public final mType:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/constraintlayout/solver/widgets/ConstraintWidget;Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;)V
-    .locals 2
+    .locals 1
 
-    .line 86
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 51
-    new-instance v0, Landroidx/constraintlayout/solver/widgets/ResolutionAnchor;
-
-    invoke-direct {v0, p0}, Landroidx/constraintlayout/solver/widgets/ResolutionAnchor;-><init>(Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;)V
-
-    iput-object v0, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mResolutionAnchor:Landroidx/constraintlayout/solver/widgets/ResolutionAnchor;
 
     const/4 v0, 0x0
 
-    .line 73
+    iput-object v0, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mDependents:Ljava/util/HashSet;
+
+    const/4 v0, 0x0
+
     iput v0, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mMargin:I
 
-    const/4 v1, -0x1
+    const/4 v0, -0x1
 
-    .line 74
-    iput v1, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mGoneMargin:I
+    iput v0, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mGoneMargin:I
 
-    .line 76
-    sget-object v1, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Strength;->NONE:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Strength;
-
-    iput-object v1, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mStrength:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Strength;
-
-    .line 77
-    sget-object v1, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$ConnectionType;->RELAXED:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$ConnectionType;
-
-    iput-object v1, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mConnectionType:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$ConnectionType;
-
-    .line 78
-    iput v0, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mConnectionCreator:I
-
-    .line 87
     iput-object p1, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mOwner:Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
 
-    .line 88
     iput-object p2, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mType:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;
 
     return-void
@@ -83,110 +61,63 @@
 
 
 # virtual methods
-.method public connect(Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;IILandroidx/constraintlayout/solver/widgets/ConstraintAnchor$Strength;IZ)Z
+.method public connect(Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;IIZ)Z
     .locals 2
 
     const/4 v0, 0x1
 
-    const/4 v1, 0x0
-
     if-nez p1, :cond_0
 
-    const/4 p1, 0x0
-
-    .line 211
-    iput-object p1, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mTarget:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;
-
-    .line 212
-    iput v1, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mMargin:I
-
-    const/4 p1, -0x1
-
-    .line 213
-    iput p1, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mGoneMargin:I
-
-    .line 214
-    sget-object p1, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Strength;->NONE:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Strength;
-
-    iput-object p1, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mStrength:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Strength;
-
-    const/4 p1, 0x2
-
-    .line 215
-    iput p1, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mConnectionCreator:I
+    invoke-virtual {p0}, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->reset()V
 
     return v0
 
     :cond_0
-    if-nez p6, :cond_1
+    const/4 v1, 0x0
 
-    .line 218
+    if-nez p4, :cond_1
+
     invoke-virtual {p0, p1}, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->isValidConnection(Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;)Z
 
-    move-result p6
+    move-result p4
 
-    if-nez p6, :cond_1
+    if-nez p4, :cond_1
 
     return v1
 
-    .line 221
     :cond_1
     iput-object p1, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mTarget:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;
 
-    if-lez p2, :cond_2
+    iget-object p1, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mTarget:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;
 
-    .line 223
+    iget-object p4, p1, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mDependents:Ljava/util/HashSet;
+
+    if-nez p4, :cond_2
+
+    new-instance p4, Ljava/util/HashSet;
+
+    invoke-direct {p4}, Ljava/util/HashSet;-><init>()V
+
+    iput-object p4, p1, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mDependents:Ljava/util/HashSet;
+
+    :cond_2
+    iget-object p1, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mTarget:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;
+
+    iget-object p1, p1, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mDependents:Ljava/util/HashSet;
+
+    invoke-virtual {p1, p0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    if-lez p2, :cond_3
+
     iput p2, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mMargin:I
 
     goto :goto_0
 
-    .line 225
-    :cond_2
+    :cond_3
     iput v1, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mMargin:I
 
-    .line 227
     :goto_0
     iput p3, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mGoneMargin:I
-
-    .line 228
-    iput-object p4, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mStrength:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Strength;
-
-    .line 229
-    iput p5, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mConnectionCreator:I
-
-    return v0
-.end method
-
-.method public connect(Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;ILandroidx/constraintlayout/solver/widgets/ConstraintAnchor$Strength;I)Z
-    .locals 7
-
-    const/4 v3, -0x1
-
-    const/4 v6, 0x0
-
-    move-object v0, p0
-
-    move-object v1, p1
-
-    move v2, p2
-
-    move-object v4, p3
-
-    move v5, p4
-
-    .line 194
-    invoke-virtual/range {v0 .. v6}, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->connect(Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;IILandroidx/constraintlayout/solver/widgets/ConstraintAnchor$Strength;IZ)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public getConnectionCreator()I
-    .locals 1
-
-    .line 163
-    iget v0, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mConnectionCreator:I
 
     return v0
 .end method
@@ -194,7 +125,6 @@
 .method public getMargin()I
     .locals 3
 
-    .line 125
     iget-object v0, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mOwner:Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
 
     invoke-virtual {v0}, Landroidx/constraintlayout/solver/widgets/ConstraintWidget;->getVisibility()I
@@ -205,11 +135,10 @@
 
     if-ne v0, v1, :cond_0
 
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
 
-    .line 128
     :cond_0
     iget v0, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mGoneMargin:I
 
@@ -223,96 +152,193 @@
 
     iget-object v0, v0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mOwner:Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
 
-    .line 129
     invoke-virtual {v0}, Landroidx/constraintlayout/solver/widgets/ConstraintWidget;->getVisibility()I
 
     move-result v0
 
     if-ne v0, v1, :cond_1
 
-    .line 130
-    iget v0, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mGoneMargin:I
+    iget p0, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mGoneMargin:I
 
-    return v0
+    return p0
 
-    .line 132
     :cond_1
-    iget v0, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mMargin:I
+    iget p0, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mMargin:I
 
-    return v0
+    return p0
+.end method
+
+.method public final getOpposite()Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;
+    .locals 2
+
+    sget-object v0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$1;->$SwitchMap$androidx$constraintlayout$solver$widgets$ConstraintAnchor$Type:[I
+
+    iget-object v1, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mType:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;
+
+    invoke-virtual {v1}, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;->ordinal()I
+
+    move-result v1
+
+    aget v0, v0, v1
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Ljava/lang/AssertionError;
+
+    iget-object p0, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mType:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;
+
+    invoke-virtual {p0}, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;->name()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v0
+
+    :pswitch_0
+    iget-object p0, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mOwner:Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
+
+    iget-object p0, p0, Landroidx/constraintlayout/solver/widgets/ConstraintWidget;->mTop:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;
+
+    return-object p0
+
+    :pswitch_1
+    iget-object p0, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mOwner:Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
+
+    iget-object p0, p0, Landroidx/constraintlayout/solver/widgets/ConstraintWidget;->mBottom:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;
+
+    return-object p0
+
+    :pswitch_2
+    iget-object p0, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mOwner:Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
+
+    iget-object p0, p0, Landroidx/constraintlayout/solver/widgets/ConstraintWidget;->mLeft:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;
+
+    return-object p0
+
+    :pswitch_3
+    iget-object p0, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mOwner:Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
+
+    iget-object p0, p0, Landroidx/constraintlayout/solver/widgets/ConstraintWidget;->mRight:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;
+
+    return-object p0
+
+    :pswitch_4
+    const/4 p0, 0x0
+
+    return-object p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+        :pswitch_4
+        :pswitch_4
+        :pswitch_4
+        :pswitch_4
+    .end packed-switch
 .end method
 
 .method public getOwner()Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
-    .locals 1
+    .locals 0
 
-    .line 112
-    iget-object v0, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mOwner:Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
+    iget-object p0, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mOwner:Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
 
-    return-object v0
-.end method
-
-.method public getResolutionNode()Landroidx/constraintlayout/solver/widgets/ResolutionAnchor;
-    .locals 1
-
-    .line 58
-    iget-object v0, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mResolutionAnchor:Landroidx/constraintlayout/solver/widgets/ResolutionAnchor;
-
-    return-object v0
+    return-object p0
 .end method
 
 .method public getSolverVariable()Landroidx/constraintlayout/solver/SolverVariable;
-    .locals 1
+    .locals 0
 
-    .line 95
-    iget-object v0, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mSolverVariable:Landroidx/constraintlayout/solver/SolverVariable;
+    iget-object p0, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mSolverVariable:Landroidx/constraintlayout/solver/SolverVariable;
 
-    return-object v0
-.end method
-
-.method public getStrength()Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Strength;
-    .locals 1
-
-    .line 138
-    iget-object v0, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mStrength:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Strength;
-
-    return-object v0
+    return-object p0
 .end method
 
 .method public getTarget()Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;
-    .locals 1
+    .locals 0
 
-    .line 144
-    iget-object v0, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mTarget:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;
+    iget-object p0, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mTarget:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getType()Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;
-    .locals 1
+    .locals 0
 
-    .line 118
-    iget-object v0, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mType:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;
+    iget-object p0, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mType:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;
 
-    return-object v0
+    return-object p0
+.end method
+
+.method public hasCenteredDependents()Z
+    .locals 2
+
+    iget-object p0, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mDependents:Ljava/util/HashSet;
+
+    const/4 v0, 0x0
+
+    if-nez p0, :cond_0
+
+    return v0
+
+    :cond_0
+    invoke-virtual {p0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    :cond_1
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;
+
+    invoke-virtual {v1}, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->getOpposite()Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->isConnected()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_2
+    return v0
 .end method
 
 .method public isConnected()Z
-    .locals 1
+    .locals 0
 
-    .line 259
-    iget-object v0, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mTarget:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;
+    iget-object p0, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mTarget:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;
 
-    if-eqz v0, :cond_0
+    if-eqz p0, :cond_0
 
-    const/4 v0, 0x1
+    const/4 p0, 0x1
 
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
     :goto_0
-    return v0
+    return p0
 .end method
 
 .method public isValidConnection(Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;)Z
@@ -324,25 +350,21 @@
 
     return v0
 
-    .line 271
     :cond_0
     invoke-virtual {p1}, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->getType()Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;
 
     move-result-object v1
 
-    .line 272
     iget-object v2, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mType:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;
 
     const/4 v3, 0x1
 
     if-ne v1, v2, :cond_3
 
-    .line 273
     sget-object v1, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;->BASELINE:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;
 
     if-ne v2, v1, :cond_2
 
-    .line 274
     invoke-virtual {p1}, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->getOwner()Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
 
     move-result-object p1
@@ -355,13 +377,13 @@
 
     invoke-virtual {p0}, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->getOwner()Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
 
-    move-result-object p1
+    move-result-object p0
 
-    invoke-virtual {p1}, Landroidx/constraintlayout/solver/widgets/ConstraintWidget;->hasBaseline()Z
+    invoke-virtual {p0}, Landroidx/constraintlayout/solver/widgets/ConstraintWidget;->hasBaseline()Z
 
-    move-result p1
+    move-result p0
 
-    if-nez p1, :cond_2
+    if-nez p0, :cond_2
 
     :cond_1
     return v0
@@ -369,7 +391,6 @@
     :cond_2
     return v3
 
-    .line 279
     :cond_3
     sget-object v2, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$1;->$SwitchMap$androidx$constraintlayout$solver$widgets$ConstraintAnchor$Type:[I
 
@@ -383,44 +404,41 @@
 
     packed-switch v2, :pswitch_data_0
 
-    .line 307
     new-instance p1, Ljava/lang/AssertionError;
 
-    iget-object v0, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mType:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;
+    iget-object p0, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mType:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;
 
-    invoke-virtual {v0}, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;->name()Ljava/lang/String;
+    invoke-virtual {p0}, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;->name()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    invoke-direct {p1, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+    invoke-direct {p1, p0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
 
     throw p1
 
     :pswitch_0
     return v0
 
-    .line 295
     :pswitch_1
-    sget-object v2, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;->TOP:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;
+    sget-object p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;->TOP:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;
 
-    if-eq v1, v2, :cond_5
+    if-eq v1, p0, :cond_5
 
-    sget-object v2, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;->BOTTOM:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;
+    sget-object p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;->BOTTOM:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;
 
-    if-ne v1, v2, :cond_4
+    if-ne v1, p0, :cond_4
 
     goto :goto_0
 
     :cond_4
-    move v2, v0
+    move p0, v0
 
     goto :goto_1
 
     :cond_5
     :goto_0
-    move v2, v3
+    move p0, v3
 
-    .line 296
     :goto_1
     invoke-virtual {p1}, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->getOwner()Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
 
@@ -430,50 +448,47 @@
 
     if-eqz p1, :cond_8
 
-    if-nez v2, :cond_7
+    if-nez p0, :cond_7
 
-    .line 297
-    sget-object p1, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;->CENTER_Y:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;
+    sget-object p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;->CENTER_Y:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;
 
-    if-ne v1, p1, :cond_6
+    if-ne v1, p0, :cond_6
 
     goto :goto_2
 
     :cond_6
-    move v2, v0
+    move p0, v0
 
     goto :goto_3
 
     :cond_7
     :goto_2
-    move v2, v3
+    move p0, v3
 
     :cond_8
     :goto_3
-    return v2
+    return p0
 
-    .line 287
     :pswitch_2
-    sget-object v2, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;->LEFT:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;
+    sget-object p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;->LEFT:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;
 
-    if-eq v1, v2, :cond_a
+    if-eq v1, p0, :cond_a
 
-    sget-object v2, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;->RIGHT:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;
+    sget-object p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;->RIGHT:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;
 
-    if-ne v1, v2, :cond_9
+    if-ne v1, p0, :cond_9
 
     goto :goto_4
 
     :cond_9
-    move v2, v0
+    move p0, v0
 
     goto :goto_5
 
     :cond_a
     :goto_4
-    move v2, v3
+    move p0, v3
 
-    .line 288
     :goto_5
     invoke-virtual {p1}, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->getOwner()Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
 
@@ -483,41 +498,39 @@
 
     if-eqz p1, :cond_d
 
-    if-nez v2, :cond_c
+    if-nez p0, :cond_c
 
-    .line 289
-    sget-object p1, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;->CENTER_X:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;
+    sget-object p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;->CENTER_X:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;
 
-    if-ne v1, p1, :cond_b
+    if-ne v1, p0, :cond_b
 
     goto :goto_6
 
     :cond_b
-    move v2, v0
+    move p0, v0
 
     goto :goto_7
 
     :cond_c
     :goto_6
-    move v2, v3
+    move p0, v3
 
     :cond_d
     :goto_7
-    return v2
+    return p0
 
-    .line 282
     :pswitch_3
-    sget-object p1, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;->BASELINE:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;
+    sget-object p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;->BASELINE:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;
 
-    if-eq v1, p1, :cond_e
+    if-eq v1, p0, :cond_e
 
-    sget-object p1, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;->CENTER_X:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;
+    sget-object p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;->CENTER_X:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;
 
-    if-eq v1, p1, :cond_e
+    if-eq v1, p0, :cond_e
 
-    sget-object p1, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;->CENTER_Y:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;
+    sget-object p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;->CENTER_Y:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;
 
-    if-eq v1, p1, :cond_e
+    if-eq v1, p0, :cond_e
 
     move v0, v3
 
@@ -541,40 +554,30 @@
 .end method
 
 .method public reset()V
-    .locals 2
+    .locals 1
 
+    iget-object v0, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mTarget:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, v0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mDependents:Ljava/util/HashSet;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p0}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
+
+    :cond_0
     const/4 v0, 0x0
 
-    .line 175
     iput-object v0, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mTarget:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;
 
     const/4 v0, 0x0
 
-    .line 176
     iput v0, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mMargin:I
 
-    const/4 v1, -0x1
+    const/4 v0, -0x1
 
-    .line 177
-    iput v1, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mGoneMargin:I
-
-    .line 178
-    sget-object v1, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Strength;->STRONG:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Strength;
-
-    iput-object v1, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mStrength:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Strength;
-
-    .line 179
-    iput v0, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mConnectionCreator:I
-
-    .line 180
-    sget-object v0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$ConnectionType;->RELAXED:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$ConnectionType;
-
-    iput-object v0, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mConnectionType:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$ConnectionType;
-
-    .line 181
-    iget-object v0, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mResolutionAnchor:Landroidx/constraintlayout/solver/widgets/ResolutionAnchor;
-
-    invoke-virtual {v0}, Landroidx/constraintlayout/solver/widgets/ResolutionAnchor;->reset()V
+    iput v0, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mGoneMargin:I
 
     return-void
 .end method
@@ -582,12 +585,10 @@
 .method public resetSolverVariable(Landroidx/constraintlayout/solver/Cache;)V
     .locals 2
 
-    .line 101
     iget-object p1, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mSolverVariable:Landroidx/constraintlayout/solver/SolverVariable;
 
     if-nez p1, :cond_0
 
-    .line 102
     new-instance p1, Landroidx/constraintlayout/solver/SolverVariable;
 
     sget-object v0, Landroidx/constraintlayout/solver/SolverVariable$Type;->UNRESTRICTED:Landroidx/constraintlayout/solver/SolverVariable$Type;
@@ -600,7 +601,6 @@
 
     goto :goto_0
 
-    .line 104
     :cond_0
     invoke-virtual {p1}, Landroidx/constraintlayout/solver/SolverVariable;->reset()V
 
@@ -611,7 +611,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 424
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -628,17 +627,17 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mType:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;
+    iget-object p0, p0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->mType:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;
 
-    invoke-virtual {v1}, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;->toString()Ljava/lang/String;
+    invoke-virtual {p0}, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

@@ -1,6 +1,5 @@
 .class public Lcom/market/pm/api/MarketInstaller;
 .super Ljava/lang/Object;
-.source "MarketInstaller.java"
 
 # interfaces
 .implements Lcom/market/pm/api/IMarketInstallerContract;
@@ -16,10 +15,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 19
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 20
     iput-object p1, p0, Lcom/market/pm/api/MarketInstaller;->mContext:Landroid/content/Context;
 
     return-void
@@ -37,56 +34,48 @@
 
     if-eqz p1, :cond_0
 
-    .line 32
     iget-object v0, p0, Lcom/market/pm/api/MarketInstaller;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/market/pm/api/MarketInstallerService;->openService(Landroid/content/Context;)Lcom/market/pm/IMarketInstallerService;
 
     move-result-object v0
 
-    .line 33
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
     const-string v2, "extra_ref"
 
-    .line 34
     invoke-virtual {v1, v2, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p2, "extra_app_client_id"
 
-    .line 35
     invoke-virtual {v1, p2, p3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p2, "extra_nonce"
 
-    .line 36
     invoke-virtual {v1, p2, p4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p2, "extra_app_signature"
 
-    .line 37
     invoke-virtual {v1, p2, p5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string p2, "extra_caller_package_name"
+    iget-object p2, p0, Lcom/market/pm/api/MarketInstaller;->mContext:Landroid/content/Context;
 
-    .line 38
-    iget-object p3, p0, Lcom/market/pm/api/MarketInstaller;->mContext:Landroid/content/Context;
+    invoke-virtual {p2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
-    invoke-virtual {p3}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+    move-result-object p2
 
-    move-result-object p3
+    const-string p3, "extra_caller_package_name"
 
-    invoke-virtual {v1, p2, p3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v1, p3, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 40
     :try_start_0
     new-instance p2, Lcom/market/pm/api/MarketInstallObserver;
 
-    iget-object p3, p0, Lcom/market/pm/api/MarketInstaller;->mListener:Lcom/market/pm/api/MarketInstallerListener;
+    iget-object p0, p0, Lcom/market/pm/api/MarketInstaller;->mListener:Lcom/market/pm/api/MarketInstallerListener;
 
-    invoke-direct {p2, p3}, Lcom/market/pm/api/MarketInstallObserver;-><init>(Lcom/market/pm/api/MarketInstallerListener;)V
+    invoke-direct {p2, p0}, Lcom/market/pm/api/MarketInstallObserver;-><init>(Lcom/market/pm/api/MarketInstallerListener;)V
 
     invoke-interface {v0, p1, p2, v1}, Lcom/market/pm/IMarketInstallerService;->installPackage(Landroid/net/Uri;Landroid/os/ResultReceiver;Landroid/os/Bundle;)V
     :try_end_0
@@ -95,21 +84,19 @@
     :catch_0
     return-void
 
-    .line 30
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-    const-string p2, "uri must not be null."
+    const-string/jumbo p1, "uri must not be null."
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 .method public setListener(Lcom/market/pm/api/MarketInstallerListener;)V
     .locals 0
 
-    .line 24
     iput-object p1, p0, Lcom/market/pm/api/MarketInstaller;->mListener:Lcom/market/pm/api/MarketInstallerListener;
 
     return-void

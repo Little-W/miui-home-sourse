@@ -1,6 +1,5 @@
 .class public interface abstract Lcom/mi/google/gson/internal/ObjectConstructor;
 .super Ljava/lang/Object;
-.source "ObjectConstructor.java"
 
 
 # annotations

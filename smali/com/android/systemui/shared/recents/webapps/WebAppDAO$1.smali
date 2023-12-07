@@ -1,6 +1,5 @@
 .class synthetic Lcom/android/systemui/shared/recents/webapps/WebAppDAO$1;
 .super Ljava/lang/Object;
-.source "WebAppDAO.java"
 
 
 # annotations

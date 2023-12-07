@@ -1,6 +1,5 @@
 .class final Lcom/mi/google/gson/Gson$1;
 .super Lcom/mi/google/gson/reflect/TypeToken;
-.source "Gson.java"
 
 
 # annotations
@@ -26,7 +25,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 112
     invoke-direct {p0}, Lcom/mi/google/gson/reflect/TypeToken;-><init>()V
 
     return-void

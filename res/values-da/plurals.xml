@@ -44,14 +44,6 @@
         <item quantity="other">%2$s ikke læst fra %1$s</item>
         <item quantity="one">%2$s ikke læst fra %1$s</item>
     </plurals>
-    <plurals name="delete_wallpapers_message">
-        <item quantity="other">Slet %1$d baggrundsbilleder?</item>
-        <item quantity="one">Slet %1$d baggrundsbillede?</item>
-    </plurals>
-    <plurals name="editing_mode_title">
-        <item quantity="other">Valgte %1$d elementer</item>
-        <item quantity="one">Valgte %1$d element</item>
-    </plurals>
     <plurals name="half_hour_ago">
         <item quantity="other">En halv time siden</item>
         <item quantity="one">En halv time siden</item>
@@ -80,13 +72,17 @@
         <item quantity="other">%d emner valgt</item>
         <item quantity="one">%d emne valgt</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d nye notifikationer</item>
+        <item quantity="one">%d ny notifikation</item>
+    </plurals>
     <plurals name="num_minutes_ago">
         <item quantity="other">%d minutter siden</item>
         <item quantity="one">1 minut siden</item>
     </plurals>
     <plurals name="remove_dialog_title_multi_format">
-        <item quantity="other">Fjern %1$d apps fra startskærmen?</item>
-        <item quantity="one">Fjern \"%1$d\" app fra startskærmen?</item>
+        <item quantity="other">Fjern %1$d elementer fra startskærmen?</item>
+        <item quantity="one">Fjern %1$d element fra startskærmen?</item>
     </plurals>
     <plurals name="scroll_tip_format_when_announce_accessibility">
         <item quantity="other">Side %1$d, %2$d apps.</item>

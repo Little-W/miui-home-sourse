@@ -1,6 +1,5 @@
 .class Landroidx/preference/PreferenceFragmentCompat$2;
 .super Ljava/lang/Object;
-.source "PreferenceFragmentCompat.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -25,7 +24,6 @@
 .method constructor <init>(Landroidx/preference/PreferenceFragmentCompat;)V
     .locals 0
 
-    .line 132
     iput-object p1, p0, Landroidx/preference/PreferenceFragmentCompat$2;->this$0:Landroidx/preference/PreferenceFragmentCompat;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,18 +34,17 @@
 
 # virtual methods
 .method public run()V
-    .locals 2
+    .locals 1
 
-    .line 135
     iget-object v0, p0, Landroidx/preference/PreferenceFragmentCompat$2;->this$0:Landroidx/preference/PreferenceFragmentCompat;
 
     iget-object v0, v0, Landroidx/preference/PreferenceFragmentCompat;->mList:Landroidx/recyclerview/widget/RecyclerView;
 
-    iget-object v1, p0, Landroidx/preference/PreferenceFragmentCompat$2;->this$0:Landroidx/preference/PreferenceFragmentCompat;
+    iget-object p0, p0, Landroidx/preference/PreferenceFragmentCompat$2;->this$0:Landroidx/preference/PreferenceFragmentCompat;
 
-    iget-object v1, v1, Landroidx/preference/PreferenceFragmentCompat;->mList:Landroidx/recyclerview/widget/RecyclerView;
+    iget-object p0, p0, Landroidx/preference/PreferenceFragmentCompat;->mList:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->focusableViewAvailable(Landroid/view/View;)V
+    invoke-virtual {v0, p0}, Landroidx/recyclerview/widget/RecyclerView;->focusableViewAvailable(Landroid/view/View;)V
 
     return-void
 .end method

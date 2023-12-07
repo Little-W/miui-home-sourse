@@ -1,6 +1,5 @@
 .class public Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/model/PositionData;
 .super Ljava/lang/Object;
-.source "PositionData.java"
 
 
 # instance fields
@@ -25,7 +24,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,31 +32,29 @@
 
 # virtual methods
 .method public horizontalCenter()I
-    .locals 2
+    .locals 1
 
-    .line 35
     iget v0, p0, Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/model/PositionData;->mLeft:I
 
     invoke-virtual {p0}, Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/model/PositionData;->width()I
 
-    move-result v1
+    move-result p0
 
-    div-int/lit8 v1, v1, 0x2
+    div-int/lit8 p0, p0, 0x2
 
-    add-int/2addr v0, v1
+    add-int/2addr v0, p0
 
     return v0
 .end method
 
 .method public width()I
-    .locals 2
+    .locals 1
 
-    .line 19
     iget v0, p0, Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/model/PositionData;->mRight:I
 
-    iget v1, p0, Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/model/PositionData;->mLeft:I
+    iget p0, p0, Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/model/PositionData;->mLeft:I
 
-    sub-int/2addr v0, v1
+    sub-int/2addr v0, p0
 
     return v0
 .end method

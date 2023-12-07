@@ -44,14 +44,6 @@
         <item quantity="other">%2$s չընթերցված՝ %1$s-ից</item>
         <item quantity="one">%2$s չընթերցված՝ %1$s-ից</item>
     </plurals>
-    <plurals name="delete_wallpapers_message">
-        <item quantity="other">Ջնջե՞լ %1$d ֆոնային պատկերները:</item>
-        <item quantity="one">Ջնջե՞լ %1$d ֆոնային պատկերը:</item>
-    </plurals>
-    <plurals name="editing_mode_title">
-        <item quantity="other">Ընտրված %1$d տարրերը</item>
-        <item quantity="one">Ընտրված %1$d տարրը</item>
-    </plurals>
     <plurals name="half_hour_ago">
         <item quantity="other">Կես ժամ առաջ</item>
         <item quantity="one">Կես ժամ առաջ</item>
@@ -85,8 +77,8 @@
         <item quantity="one">1 րոպե առաջ</item>
     </plurals>
     <plurals name="remove_dialog_title_multi_format">
-        <item quantity="other">Հեռացնե՞լ %1$d հավելվածները Գլխավոր էկրանից:</item>
-        <item quantity="one">Հեռացնե՞լ %1$d հավելվածը Գլխավոր էկրանից:</item>
+        <item quantity="other">Հեռացնե՞լ %1$d տարրը հիմնական էկրանից:</item>
+        <item quantity="one">Հեռացնե՞լ %1$d տարրը հիմնական էկրանից:</item>
     </plurals>
     <plurals name="scroll_tip_format_when_announce_accessibility">
         <item quantity="other">Էջ %1$d, %2$d հավելվածներ:</item>

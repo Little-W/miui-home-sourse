@@ -1,13 +1,11 @@
 .class public final Lcom/google/android/filament/MathUtils;
 .super Ljava/lang/Object;
-.source "MathUtils.java"
 
 
 # direct methods
 .method private constructor <init>()V
     .locals 0
 
-    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +39,6 @@
 
     move-object/from16 v9, p9
 
-    .line 54
     invoke-static/range {v0 .. v10}, Lcom/google/android/filament/MathUtils;->nPackTangentFrame(FFFFFFFFF[FI)V
 
     return-void
@@ -50,7 +47,6 @@
 .method public static packTangentFrame(FFFFFFFFF[FI)V
     .locals 0
 
-    .line 89
     invoke-static/range {p0 .. p10}, Lcom/google/android/filament/MathUtils;->nPackTangentFrame(FFFFFFFFF[FI)V
 
     return-void

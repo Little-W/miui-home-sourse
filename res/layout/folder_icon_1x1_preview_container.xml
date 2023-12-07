@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.miui.home.launcher.folder.FolderIconPreviewContainer1X1 android:layout_gravity="center" android:orientation="vertical" android:layout_width="@dimen/folder_preview_width" android:layout_height="@dimen/folder_preview_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <view android:id="@id/item1" class="com.miui.home.launcher.folder.FolderIconPreviewContainer1X1$PreviewIconView" style="@style/FolderIconItem" />
+        <view android:id="@id/item2" class="com.miui.home.launcher.folder.FolderIconPreviewContainer1X1$PreviewIconView" style="@style/FolderIconItem" />
+        <view android:id="@id/item3" class="com.miui.home.launcher.folder.FolderIconPreviewContainer1X1$PreviewIconView" style="@style/FolderIconItem" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <view android:id="@id/item4" class="com.miui.home.launcher.folder.FolderIconPreviewContainer1X1$PreviewIconView" style="@style/FolderIconItem" />
+        <view android:id="@id/item5" class="com.miui.home.launcher.folder.FolderIconPreviewContainer1X1$PreviewIconView" style="@style/FolderIconItem" />
+        <view android:id="@id/item6" class="com.miui.home.launcher.folder.FolderIconPreviewContainer1X1$PreviewIconView" style="@style/FolderIconItem" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <view android:id="@id/item7" class="com.miui.home.launcher.folder.FolderIconPreviewContainer1X1$PreviewIconView" style="@style/FolderIconItem" />
+        <view android:id="@id/item8" class="com.miui.home.launcher.folder.FolderIconPreviewContainer1X1$PreviewIconView" style="@style/FolderIconItem" />
+        <view android:id="@id/item9" class="com.miui.home.launcher.folder.FolderIconPreviewContainer1X1$PreviewIconView" style="@style/FolderIconItem" />
+    </LinearLayout>
+</com.miui.home.launcher.folder.FolderIconPreviewContainer1X1>

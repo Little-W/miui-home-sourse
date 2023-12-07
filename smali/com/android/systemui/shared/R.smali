@@ -1,11 +1,11 @@
 .class public final Lcom/android/systemui/shared/R;
 .super Ljava/lang/Object;
-.source "R.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/android/systemui/shared/R$xml;,
         Lcom/android/systemui/shared/R$styleable;,
         Lcom/android/systemui/shared/R$style;,
         Lcom/android/systemui/shared/R$string;,
@@ -32,7 +32,6 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

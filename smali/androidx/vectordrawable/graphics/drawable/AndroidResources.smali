@@ -1,6 +1,5 @@
 .class Landroidx/vectordrawable/graphics/drawable/AndroidResources;
 .super Ljava/lang/Object;
-.source "AndroidResources.java"
 
 
 # static fields
@@ -35,7 +34,6 @@
 
     const/16 v0, 0x9
 
-    .line 22
     new-array v0, v0, [I
 
     fill-array-data v0, :array_0
@@ -44,7 +42,6 @@
 
     const/16 v0, 0x8
 
-    .line 36
     new-array v1, v0, [I
 
     fill-array-data v1, :array_1
@@ -53,7 +50,6 @@
 
     const/16 v1, 0xe
 
-    .line 49
     new-array v1, v1, [I
 
     fill-array-data v1, :array_2
@@ -62,7 +58,6 @@
 
     const/4 v1, 0x3
 
-    .line 70
     new-array v1, v1, [I
 
     fill-array-data v1, :array_3
@@ -71,7 +66,6 @@
 
     const/4 v1, 0x1
 
-    .line 77
     new-array v2, v1, [I
 
     const/4 v3, 0x0
@@ -84,21 +78,18 @@
 
     const/4 v2, 0x2
 
-    .line 81
     new-array v2, v2, [I
 
     fill-array-data v2, :array_4
 
     sput-object v2, Landroidx/vectordrawable/graphics/drawable/AndroidResources;->STYLEABLE_ANIMATED_VECTOR_DRAWABLE_TARGET:[I
 
-    .line 91
     new-array v0, v0, [I
 
     fill-array-data v0, :array_5
 
     sput-object v0, Landroidx/vectordrawable/graphics/drawable/AndroidResources;->STYLEABLE_ANIMATOR:[I
 
-    .line 104
     new-array v0, v1, [I
 
     const v1, 0x10102e2
@@ -109,21 +100,18 @@
 
     const/4 v0, 0x4
 
-    .line 109
     new-array v1, v0, [I
 
     fill-array-data v1, :array_6
 
     sput-object v1, Landroidx/vectordrawable/graphics/drawable/AndroidResources;->STYLEABLE_PROPERTY_VALUES_HOLDER:[I
 
-    .line 117
     new-array v1, v0, [I
 
     fill-array-data v1, :array_7
 
     sput-object v1, Landroidx/vectordrawable/graphics/drawable/AndroidResources;->STYLEABLE_KEYFRAME:[I
 
-    .line 125
     new-array v0, v0, [I
 
     fill-array-data v0, :array_8
@@ -132,7 +120,6 @@
 
     const/4 v0, 0x5
 
-    .line 134
     new-array v0, v0, [I
 
     fill-array-data v0, :array_9

@@ -66,18 +66,6 @@
         <item quantity="few">%2$s nieprzeczytane od %1$s</item>
         <item quantity="many">%2$s nieprzeczytanych od %1$s</item>
     </plurals>
-    <plurals name="delete_wallpapers_message">
-        <item quantity="other">Usunąć %1$d tapet?</item>
-        <item quantity="one">Usunąć %1$d tapetę?</item>
-        <item quantity="few">Usunąć %1$d tapety?</item>
-        <item quantity="many">Usunąć %1$d tapet?</item>
-    </plurals>
-    <plurals name="editing_mode_title">
-        <item quantity="other">Wybrano %1$d elementów</item>
-        <item quantity="one">Wybrano %1$d element</item>
-        <item quantity="few">Wybrano %1$d elementy</item>
-        <item quantity="many">Wybrano %1$d elementów</item>
-    </plurals>
     <plurals name="half_hour_ago">
         <item quantity="other">Pół godziny temu</item>
         <item quantity="one">Pół godziny temu</item>
@@ -120,6 +108,12 @@
         <item quantity="few">%d zaznaczone elementy</item>
         <item quantity="many">%d zaznaczonych elementów</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d nowego powiadomienia</item>
+        <item quantity="one">%d nowe powiadomienie</item>
+        <item quantity="few">%d nowe powiadomienia</item>
+        <item quantity="many">%d nowych powiadomień</item>
+    </plurals>
     <plurals name="num_minutes_ago">
         <item quantity="other">%d minut temu</item>
         <item quantity="one">1 minutę temu</item>
@@ -127,10 +121,10 @@
         <item quantity="many">%d minut temu</item>
     </plurals>
     <plurals name="remove_dialog_title_multi_format">
-        <item quantity="other">Usunąć %1$d aplikacji z Ekranu głównego?</item>
-        <item quantity="one">Usunąć %1$d aplikację z Ekranu głównego?</item>
-        <item quantity="few">Usunąć %1$d aplikacje z Ekranu głównego?</item>
-        <item quantity="many">Usunąć %1$d aplikacji z Ekranu głównego?</item>
+        <item quantity="other">Usunąć %1$d elementu z Ekranu głównego?</item>
+        <item quantity="one">Usunąć %1$d element z Ekranu głównego?</item>
+        <item quantity="few">Usunąć %1$d elementy z Ekranu głównego?</item>
+        <item quantity="many">Usunąć %1$d elementów z Ekranu głównego?</item>
     </plurals>
     <plurals name="scroll_tip_format_when_announce_accessibility">
         <item quantity="other">Strona %1$d, %2$d aplikacji.</item>

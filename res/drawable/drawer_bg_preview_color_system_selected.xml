@@ -5,7 +5,7 @@
         <shape>
             <size android:height="@dimen/drawer_color_item_height" />
             <corners android:radius="16.0dip" />
-            <stroke android:width="2.0dip" android:color="#ff0097ff" />
+            <stroke android:width="2.0dip" android:color="@color/all_apps_color_mode_option_selected_color" />
         </shape>
     </item>
     <item android:top="4.0dip" android:bottom="4.0dip" android:start="4.0dip" android:end="4.0dip">

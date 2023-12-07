@@ -1,6 +1,5 @@
 .class public abstract Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;
 .super Ljava/lang/Object;
-.source "RecyclerView.java"
 
 
 # annotations
@@ -18,7 +17,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 10870
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

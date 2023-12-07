@@ -1,6 +1,5 @@
 .class public interface abstract Lcom/android/systemui/shared/recents/model/TaskKeyLruCache$EvictionCallback;
 .super Ljava/lang/Object;
-.source "TaskKeyLruCache.java"
 
 
 # annotations

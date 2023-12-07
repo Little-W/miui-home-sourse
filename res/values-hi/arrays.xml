@@ -1,48 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="cell_layout_size_entries">
-        <item>4x4</item>
-        <item>4x5</item>
-    </string-array>
-    <string-array name="cell_layout_size_values">
-        <item>4x4</item>
-        <item>4x5</item>
+    <string-array name="animation_rate_entries">
+        <item>आराम</item>
+        <item>संतुलित</item>
+        <item>तेज़</item>
     </string-array>
     <string-array name="editing_mode_entries">
         <item>वॉलपेपर</item>
         <item>विजेट</item>
         <item>सेटिंग्स</item>
     </string-array>
-    <string-array name="gadget_weather_image">
-        <item>खिली धूप</item>
-        <item>बादल</item>
-        <item>धुंधला</item>
-        <item>कोहरेदार</item>
-        <item>भारी वर्षा</item>
-        <item>तूफानी बारिश</item>
-        <item>बहुत भारी वर्षा</item>
-        <item>तूफानी बारिश</item>
-        <item>फुहार</item>
-        <item>भारी वर्षा</item>
-        <item>वर्षा</item>
-        <item>बूंदा बांदी</item>
-        <item>ओले के साथ वर्षा</item>
-        <item>बर्फ का तूफान</item>
-        <item>कहीं-कहीं पर बर्फ़बारी</item>
-        <item>भारी बर्फबारी</item>
-        <item>बर्फबारी</item>
-        <item>हल्की बर्फबारी</item>
-        <item>भीषण रेतीली आंधी</item>
-        <item>रेतीली आंधी</item>
-        <item>हल्की रेतीली आंधी</item>
-        <item>रेतीली आंधी</item>
-        <item>ओला</item>
-        <item>अस्थायी धूल</item>
-        <item>धुंध</item>
-    </string-array>
-    <string-array name="gadget_weather_theme_type_entries">
+    <string-array name="monochrome_color_entries">
         <item>डिफ़ॉल्ट</item>
-        <item>क्लासिक</item>
+        <item>नीला</item>
+        <item>हरा</item>
+        <item>जामुनी</item>
+        <item>भूरा</item>
+    </string-array>
+    <string-array name="no_word_model_entries">
+        <item>बंद</item>
+        <item>कहीं भी</item>
+        <item>विजेट में</item>
+    </string-array>
+    <string-array name="no_word_model_entries_not_support_only_widget_no_word">
+        <item>बंद</item>
+        <item>कहीं भी</item>
     </string-array>
     <string-array name="transformation_entries">
         <item>स्लाइड</item>
@@ -52,11 +34,5 @@
         <item>कैस्केड</item>
         <item>घुमाएं</item>
         <item>घन</item>
-    </string-array>
-    <string-array name="wallpaper_scroll_entries">
-        <item>डिफ़ॉल्ट थीम</item>
-        <item>केंद्र</item>
-        <item>बाएं</item>
-        <item>दाएं</item>
     </string-array>
 </resources>

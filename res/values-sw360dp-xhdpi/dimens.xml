@@ -6,6 +6,7 @@
     <item type="dimen" name="config_icon_width_theme_version_0">@dimen/config_icon_width</item>
     <dimen name="editing_panel_height">122.0dip</dimen>
     <dimen name="folder_bottom_padding">128.0dip</dimen>
+    <dimen name="folder_picker_margin_left">24.0dip</dimen>
     <dimen name="folder_top_padding">74.0dip</dimen>
     <dimen name="hotseats_height">89.5dip</dimen>
     <dimen name="hotseats_padding_side">8.0dip</dimen>

@@ -44,14 +44,6 @@
         <item quantity="other">%1$s থেকে %2$s অপঠিত</item>
         <item quantity="one">%1$s থেকে %2$s অপঠিত</item>
     </plurals>
-    <plurals name="delete_wallpapers_message">
-        <item quantity="other">%1$dটি ওয়ালপেপার মুছবেন?</item>
-        <item quantity="one">%1$dটি ওয়ালপেপার মুছবেন?</item>
-    </plurals>
-    <plurals name="editing_mode_title">
-        <item quantity="other">%1$dটি আইটেম বেছে নেওয়া হয়েছে</item>
-        <item quantity="one">%1$dটি আইটেম বেছে নেওয়া হয়েছে</item>
-    </plurals>
     <plurals name="half_hour_ago">
         <item quantity="other">আধ ঘণ্টা আগে</item>
         <item quantity="one">আধ ঘণ্টা আগে</item>
@@ -85,8 +77,8 @@
         <item quantity="one">1 মিনিট আগে</item>
     </plurals>
     <plurals name="remove_dialog_title_multi_format">
-        <item quantity="other">%1$dটি অ্যাপ হোম স্ক্রিন থেকে সরাবেন?</item>
-        <item quantity="one">%1$dটি অ্যাপ হোম স্ক্রিন থেকে সরাবেন?</item>
+        <item quantity="other">হোম স্ক্রিন থেকে %1$d টি আইটেম সরানো যাবে না?</item>
+        <item quantity="one">হোম স্ক্রিন থেকে %1$d টি আইটেম সরানো যাবে না?</item>
     </plurals>
     <plurals name="scroll_tip_format_when_announce_accessibility">
         <item quantity="other">পৃষ্ঠা %1$d, %2$d অ্যাপ।</item>

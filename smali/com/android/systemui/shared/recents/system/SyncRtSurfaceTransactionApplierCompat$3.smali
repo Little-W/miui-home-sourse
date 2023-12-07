@@ -1,6 +1,5 @@
 .class Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$3;
 .super Ljava/lang/Object;
-.source "SyncRtSurfaceTransactionApplierCompat.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -25,7 +24,6 @@
 .method constructor <init>(Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;)V
     .locals 0
 
-    .line 148
     iput-object p1, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$3;->this$0:Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,23 +34,21 @@
 
 # virtual methods
 .method public run()V
-    .locals 1
+    .locals 0
 
-    .line 151
-    iget-object v0, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$3;->this$0:Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;
+    iget-object p0, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$3;->this$0:Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;
 
-    invoke-static {v0}, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;->access$400(Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;)Landroid/view/ViewRootImpl;
+    invoke-static {p0}, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;->access$300(Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;)Landroid/view/ViewRootImpl;
 
-    move-result-object v0
+    move-result-object p0
 
-    invoke-virtual {v0}, Landroid/view/ViewRootImpl;->getView()Landroid/view/View;
+    invoke-virtual {p0}, Landroid/view/ViewRootImpl;->getView()Landroid/view/View;
 
-    move-result-object v0
+    move-result-object p0
 
-    if-eqz v0, :cond_0
+    if-eqz p0, :cond_0
 
-    .line 153
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     :cond_0
     return-void

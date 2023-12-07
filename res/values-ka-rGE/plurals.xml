@@ -44,14 +44,6 @@
         <item quantity="other">%2$s წაუკითხავია %1$s-დან</item>
         <item quantity="one">%2$s წაუკითხავია %1$s-დან</item>
     </plurals>
-    <plurals name="delete_wallpapers_message">
-        <item quantity="other">წავშალო %1$d ფონები?</item>
-        <item quantity="one">წავშალო %1$d ფონი?</item>
-    </plurals>
-    <plurals name="editing_mode_title">
-        <item quantity="other">მონიშნულია %1$d ერთეული</item>
-        <item quantity="one">მონიშნულია %1$d ერთეული</item>
-    </plurals>
     <plurals name="half_hour_ago">
         <item quantity="other">ნახევარი საათის წინ</item>
         <item quantity="one">ნახევარი საათის წინ</item>
@@ -85,8 +77,8 @@
         <item quantity="one">1 წუთის წინ</item>
     </plurals>
     <plurals name="remove_dialog_title_multi_format">
-        <item quantity="other">წავშალო %1$d აპლიკაცია მთავარი ეკრანიდან?</item>
-        <item quantity="one">წავშალო %1$d აპლიკაცია მთავარი ეკრანიდან?</item>
+        <item quantity="other">წავშალო %1$d ერთეული მთავარი ეკრანიდან?</item>
+        <item quantity="one">წავშალო %1$d ერთეული მთავარი ეკრანიდან?</item>
     </plurals>
     <plurals name="scroll_tip_format_when_announce_accessibility">
         <item quantity="other">გვერდი %1$d, %2$d აპლიკაცია.</item>

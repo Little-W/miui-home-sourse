@@ -1,48 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="cell_layout_size_entries">
-        <item>4x4</item>
-        <item>4x5</item>
-    </string-array>
-    <string-array name="cell_layout_size_values">
-        <item>4x4</item>
-        <item>4x5</item>
+    <string-array name="animation_rate_entries">
+        <item>Lenta</item>
+        <item>Balanceado</item>
+        <item>Rápida</item>
     </string-array>
     <string-array name="editing_mode_entries">
         <item>Fondo de pantalla</item>
         <item>Widgets</item>
         <item>Ajustes</item>
     </string-array>
-    <string-array name="gadget_weather_image">
-        <item>Despejado</item>
-        <item>Nublado</item>
-        <item>Neblina</item>
-        <item>Niebla</item>
-        <item>Tormenta severa</item>
-        <item>Tormenta</item>
-        <item>Lluvia muy intensa</item>
-        <item>Tormenta eléctrica</item>
-        <item>Chubascos</item>
-        <item>Lluvia intensa</item>
-        <item>Lluvia</item>
-        <item>Llovizna</item>
-        <item>Aguanieve</item>
-        <item>Tormenta de nieve</item>
-        <item>Nevada intermitente</item>
-        <item>Nevada intensa</item>
-        <item>Nevada</item>
-        <item>Nevada ligera</item>
-        <item>Tormenta de arena intensa</item>
-        <item>Tormenta de arena</item>
-        <item>Tormenta de arena ligera</item>
-        <item>Tormenta de arena</item>
-        <item>Granizo</item>
-        <item>Polvo</item>
-        <item>Neblina</item>
+    <string-array name="monochrome_color_entries">
+        <item>Predeterminado</item>
+        <item>Azul</item>
+        <item>Verde</item>
+        <item>Púrpura</item>
+        <item>Café</item>
     </string-array>
-    <string-array name="gadget_weather_theme_type_entries">
-        <item>Por defecto</item>
-        <item>Clásico</item>
+    <string-array name="no_word_model_entries">
+        <item>Desactivado</item>
+        <item>En cualquier lugar</item>
+        <item>En widgets</item>
+    </string-array>
+    <string-array name="no_word_model_entries_not_support_only_widget_no_word">
+        <item>Desactivado</item>
+        <item>En cualquier lugar</item>
     </string-array>
     <string-array name="transformation_entries">
         <item>Deslizar</item>
@@ -52,11 +34,5 @@
         <item>Cascada</item>
         <item>Rotar</item>
         <item>Cubo</item>
-    </string-array>
-    <string-array name="wallpaper_scroll_entries">
-        <item>Tema por defecto</item>
-        <item>Centro</item>
-        <item>Izquierda</item>
-        <item>Derecha</item>
     </string-array>
 </resources>

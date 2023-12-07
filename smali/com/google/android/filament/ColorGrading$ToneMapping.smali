@@ -1,6 +1,5 @@
 .class public final enum Lcom/google/android/filament/ColorGrading$ToneMapping;
 .super Ljava/lang/Enum;
-.source "ColorGrading.java"
 
 
 # annotations
@@ -35,90 +34,116 @@
 
 .field public static final enum LINEAR:Lcom/google/android/filament/ColorGrading$ToneMapping;
 
+.field public static final enum REINHARD:Lcom/google/android/filament/ColorGrading$ToneMapping;
+
+.field public static final enum UCHIMURA:Lcom/google/android/filament/ColorGrading$ToneMapping;
+
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 7
+    .locals 9
 
-    .line 123
     new-instance v0, Lcom/google/android/filament/ColorGrading$ToneMapping;
 
-    const-string v1, "LINEAR"
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    const-string v2, "LINEAR"
 
-    invoke-direct {v0, v1, v2}, Lcom/google/android/filament/ColorGrading$ToneMapping;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v2, v1}, Lcom/google/android/filament/ColorGrading$ToneMapping;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/google/android/filament/ColorGrading$ToneMapping;->LINEAR:Lcom/google/android/filament/ColorGrading$ToneMapping;
 
-    .line 125
     new-instance v0, Lcom/google/android/filament/ColorGrading$ToneMapping;
 
-    const-string v1, "ACES_LEGACY"
+    const/4 v2, 0x1
 
-    const/4 v3, 0x1
+    const-string v3, "ACES_LEGACY"
 
-    invoke-direct {v0, v1, v3}, Lcom/google/android/filament/ColorGrading$ToneMapping;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v3, v2}, Lcom/google/android/filament/ColorGrading$ToneMapping;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/google/android/filament/ColorGrading$ToneMapping;->ACES_LEGACY:Lcom/google/android/filament/ColorGrading$ToneMapping;
 
-    .line 127
     new-instance v0, Lcom/google/android/filament/ColorGrading$ToneMapping;
 
-    const-string v1, "ACES"
+    const/4 v3, 0x2
 
-    const/4 v4, 0x2
+    const-string v4, "ACES"
 
-    invoke-direct {v0, v1, v4}, Lcom/google/android/filament/ColorGrading$ToneMapping;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v4, v3}, Lcom/google/android/filament/ColorGrading$ToneMapping;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/google/android/filament/ColorGrading$ToneMapping;->ACES:Lcom/google/android/filament/ColorGrading$ToneMapping;
 
-    .line 129
     new-instance v0, Lcom/google/android/filament/ColorGrading$ToneMapping;
 
-    const-string v1, "FILMIC"
+    const/4 v4, 0x3
 
-    const/4 v5, 0x3
+    const-string v5, "FILMIC"
 
-    invoke-direct {v0, v1, v5}, Lcom/google/android/filament/ColorGrading$ToneMapping;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v5, v4}, Lcom/google/android/filament/ColorGrading$ToneMapping;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/google/android/filament/ColorGrading$ToneMapping;->FILMIC:Lcom/google/android/filament/ColorGrading$ToneMapping;
 
-    .line 131
     new-instance v0, Lcom/google/android/filament/ColorGrading$ToneMapping;
 
-    const-string v1, "DISPLAY_RANGE"
+    const/4 v5, 0x4
 
-    const/4 v6, 0x4
+    const-string v6, "UCHIMURA"
 
-    invoke-direct {v0, v1, v6}, Lcom/google/android/filament/ColorGrading$ToneMapping;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v6, v5}, Lcom/google/android/filament/ColorGrading$ToneMapping;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/google/android/filament/ColorGrading$ToneMapping;->UCHIMURA:Lcom/google/android/filament/ColorGrading$ToneMapping;
+
+    new-instance v0, Lcom/google/android/filament/ColorGrading$ToneMapping;
+
+    const/4 v6, 0x5
+
+    const-string v7, "REINHARD"
+
+    invoke-direct {v0, v7, v6}, Lcom/google/android/filament/ColorGrading$ToneMapping;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/google/android/filament/ColorGrading$ToneMapping;->REINHARD:Lcom/google/android/filament/ColorGrading$ToneMapping;
+
+    new-instance v0, Lcom/google/android/filament/ColorGrading$ToneMapping;
+
+    const/4 v7, 0x6
+
+    const-string v8, "DISPLAY_RANGE"
+
+    invoke-direct {v0, v8, v7}, Lcom/google/android/filament/ColorGrading$ToneMapping;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/google/android/filament/ColorGrading$ToneMapping;->DISPLAY_RANGE:Lcom/google/android/filament/ColorGrading$ToneMapping;
 
-    const/4 v0, 0x5
+    const/4 v0, 0x7
 
-    .line 121
     new-array v0, v0, [Lcom/google/android/filament/ColorGrading$ToneMapping;
 
-    sget-object v1, Lcom/google/android/filament/ColorGrading$ToneMapping;->LINEAR:Lcom/google/android/filament/ColorGrading$ToneMapping;
+    sget-object v8, Lcom/google/android/filament/ColorGrading$ToneMapping;->LINEAR:Lcom/google/android/filament/ColorGrading$ToneMapping;
 
-    aput-object v1, v0, v2
+    aput-object v8, v0, v1
 
     sget-object v1, Lcom/google/android/filament/ColorGrading$ToneMapping;->ACES_LEGACY:Lcom/google/android/filament/ColorGrading$ToneMapping;
 
-    aput-object v1, v0, v3
+    aput-object v1, v0, v2
 
     sget-object v1, Lcom/google/android/filament/ColorGrading$ToneMapping;->ACES:Lcom/google/android/filament/ColorGrading$ToneMapping;
 
-    aput-object v1, v0, v4
+    aput-object v1, v0, v3
 
     sget-object v1, Lcom/google/android/filament/ColorGrading$ToneMapping;->FILMIC:Lcom/google/android/filament/ColorGrading$ToneMapping;
 
+    aput-object v1, v0, v4
+
+    sget-object v1, Lcom/google/android/filament/ColorGrading$ToneMapping;->UCHIMURA:Lcom/google/android/filament/ColorGrading$ToneMapping;
+
     aput-object v1, v0, v5
+
+    sget-object v1, Lcom/google/android/filament/ColorGrading$ToneMapping;->REINHARD:Lcom/google/android/filament/ColorGrading$ToneMapping;
+
+    aput-object v1, v0, v6
 
     sget-object v1, Lcom/google/android/filament/ColorGrading$ToneMapping;->DISPLAY_RANGE:Lcom/google/android/filament/ColorGrading$ToneMapping;
 
-    aput-object v1, v0, v6
+    aput-object v1, v0, v7
 
     sput-object v0, Lcom/google/android/filament/ColorGrading$ToneMapping;->$VALUES:[Lcom/google/android/filament/ColorGrading$ToneMapping;
 
@@ -133,7 +158,6 @@
         }
     .end annotation
 
-    .line 121
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -142,7 +166,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/android/filament/ColorGrading$ToneMapping;
     .locals 1
 
-    .line 121
     const-class v0, Lcom/google/android/filament/ColorGrading$ToneMapping;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -157,7 +180,6 @@
 .method public static values()[Lcom/google/android/filament/ColorGrading$ToneMapping;
     .locals 1
 
-    .line 121
     sget-object v0, Lcom/google/android/filament/ColorGrading$ToneMapping;->$VALUES:[Lcom/google/android/filament/ColorGrading$ToneMapping;
 
     invoke-virtual {v0}, [Lcom/google/android/filament/ColorGrading$ToneMapping;->clone()Ljava/lang/Object;

@@ -1,48 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="cell_layout_size_entries">
-        <item>4x4</item>
-        <item>4x5</item>
-    </string-array>
-    <string-array name="cell_layout_size_values">
-        <item>4x4</item>
-        <item>4x5</item>
+    <string-array name="animation_rate_entries">
+        <item>Hutawa</item>
+        <item>Daidaitacce</item>
+        <item>Sauri</item>
     </string-array>
     <string-array name="editing_mode_entries">
         <item>Hoton fuskar allon</item>
         <item>Wijet</item>
         <item>Saittuna</item>
     </string-array>
-    <string-array name="gadget_weather_image">
-        <item>Sama ta washe</item>
-        <item>Girgije</item>
-        <item>Hazo</item>
-        <item>Hazo so sai</item>
-        <item>Babban hadari</item>
-        <item>Hadari</item>
-        <item>Hadari mai karfi</item>
-        <item>Tsawa da guguwa</item>
-        <item>Ruwan tsama mai tsanani</item>
-        <item>Hadari mai karfi</item>
-        <item>Hadari</item>
-        <item>Yayyafi</item>
-        <item>Garin kankara tare da ruwa</item>
-        <item>Hadarin garin kankara</item>
-        <item>Faduwar garin kankara</item>
-        <item>Faduwar garin kankara mai tsanani</item>
-        <item>Faduwar garin kankara</item>
-        <item>Faduwar garin kankara mai sauki</item>
-        <item>Hadarin yashi mai tsanani</item>
-        <item>Hadarin yashi</item>
-        <item>Karamin hadarin yashi</item>
-        <item>Hadarin yashi</item>
-        <item>Ƙanƙara</item>
-        <item>Bambarowar kura</item>
-        <item>Hazo</item>
-    </string-array>
-    <string-array name="gadget_weather_theme_type_entries">
+    <string-array name="monochrome_color_entries">
         <item>Na asali</item>
-        <item>Gargajiya</item>
+        <item>Shuɗe</item>
+        <item>Kore</item>
+        <item>Launi shuni</item>
+        <item>Launin ruwan kasa</item>
+    </string-array>
+    <string-array name="no_word_model_entries">
+        <item>Kashe</item>
+        <item>"Ko'ina"</item>
+        <item>Kunna wijet</item>
+    </string-array>
+    <string-array name="no_word_model_entries_not_support_only_widget_no_word">
+        <item>Kashe</item>
+        <item>"Ko'ina"</item>
     </string-array>
     <string-array name="transformation_entries">
         <item>Jawowa</item>
@@ -52,11 +34,5 @@
         <item>Saukar ruwa</item>
         <item>Juyawa</item>
         <item>Dunƙule</item>
-    </string-array>
-    <string-array name="wallpaper_scroll_entries">
-        <item>Asalin bayanan jigon</item>
-        <item>Tsakiya</item>
-        <item>Hagu</item>
-        <item>Dama</item>
     </string-array>
 </resources>

@@ -1,6 +1,5 @@
 .class final Lcom/google/gson/internal/bind/TreeTypeAdapter$GsonContextImpl;
 .super Ljava/lang/Object;
-.source "TreeTypeAdapter.java"
 
 # interfaces
 .implements Lcom/google/gson/JsonDeserializationContext;
@@ -26,7 +25,6 @@
 .method private constructor <init>(Lcom/google/gson/internal/bind/TreeTypeAdapter;)V
     .locals 0
 
-    .line 153
     iput-object p1, p0, Lcom/google/gson/internal/bind/TreeTypeAdapter$GsonContextImpl;->this$0:Lcom/google/gson/internal/bind/TreeTypeAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,7 +35,6 @@
 .method synthetic constructor <init>(Lcom/google/gson/internal/bind/TreeTypeAdapter;Lcom/google/gson/internal/bind/TreeTypeAdapter$1;)V
     .locals 0
 
-    .line 153
     invoke-direct {p0, p1}, Lcom/google/gson/internal/bind/TreeTypeAdapter$GsonContextImpl;-><init>(Lcom/google/gson/internal/bind/TreeTypeAdapter;)V
 
     return-void

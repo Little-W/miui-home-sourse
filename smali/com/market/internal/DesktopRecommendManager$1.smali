@@ -1,6 +1,5 @@
-.class final Lcom/market/internal/DesktopRecommendManager$1;
+.class Lcom/market/internal/DesktopRecommendManager$1;
 .super Lcom/market/sdk/RemoteMethodInvoker;
-.source "DesktopRecommendManager.java"
 
 
 # annotations
@@ -9,7 +8,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
@@ -36,7 +35,6 @@
 .method constructor <init>(JLcom/market/sdk/DesktopRecommendCallback;Ljava/lang/String;Ljava/util/List;)V
     .locals 0
 
-    .line 27
     iput-wide p1, p0, Lcom/market/internal/DesktopRecommendManager$1;->val$folderId:J
 
     iput-object p3, p0, Lcom/market/internal/DesktopRecommendManager$1;->val$callback:Lcom/market/sdk/DesktopRecommendCallback;
@@ -60,12 +58,11 @@
         }
     .end annotation
 
-    .line 27
     invoke-virtual {p0, p1}, Lcom/market/internal/DesktopRecommendManager$1;->innerInvoke(Lcom/market/sdk/IMarketService;)Ljava/lang/Void;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public innerInvoke(Lcom/market/sdk/IMarketService;)Ljava/lang/Void;
@@ -76,7 +73,6 @@
         }
     .end annotation
 
-    .line 32
     :try_start_0
     new-instance v5, Lcom/market/internal/DesktopRecommendManager$DesktopRecomendResponse;
 
@@ -86,7 +82,6 @@
 
     invoke-direct {v5, v0, v1, v2}, Lcom/market/internal/DesktopRecommendManager$DesktopRecomendResponse;-><init>(JLcom/market/sdk/DesktopRecommendCallback;)V
 
-    .line 34
     iget-wide v1, p0, Lcom/market/internal/DesktopRecommendManager$1;->val$folderId:J
 
     iget-object v3, p0, Lcom/market/internal/DesktopRecommendManager$1;->val$folderName:Ljava/lang/String;
@@ -102,29 +97,28 @@
     goto :goto_0
 
     :catch_0
-    move-exception p1
+    move-exception p0
 
-    const-string v0, "MarketManager"
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    .line 36
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    const-string v0, "Exception when load desktop recommend info : "
 
-    const-string v2, "Exception when load desktop recommend info : "
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object p0
 
-    move-result-object p1
+    const-string p1, "MarketManager"
 
-    invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return-object p1
+    return-object p0
 .end method

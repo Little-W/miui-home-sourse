@@ -1,6 +1,5 @@
 .class public Lcom/android/systemui/shared/recents/system/BackgroundExecutor;
 .super Ljava/lang/Object;
-.source "BackgroundExecutor.java"
 
 
 # static fields
@@ -15,7 +14,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 31
     new-instance v0, Lcom/android/systemui/shared/recents/system/BackgroundExecutor;
 
     invoke-direct {v0}, Lcom/android/systemui/shared/recents/system/BackgroundExecutor;-><init>()V
@@ -28,10 +26,8 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 33
     new-instance v0, Lcom/android/systemui/shared/recents/system/BackgroundExecutor$1;
 
     invoke-direct {v0, p0}, Lcom/android/systemui/shared/recents/system/BackgroundExecutor$1;-><init>(Lcom/android/systemui/shared/recents/system/BackgroundExecutor;)V
@@ -50,7 +46,6 @@
 .method public static get()Lcom/android/systemui/shared/recents/system/BackgroundExecutor;
     .locals 1
 
-    .line 45
     sget-object v0, Lcom/android/systemui/shared/recents/system/BackgroundExecutor;->sInstance:Lcom/android/systemui/shared/recents/system/BackgroundExecutor;
 
     return-object v0
@@ -59,7 +54,7 @@
 
 # virtual methods
 .method public submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -70,18 +65,17 @@
         }
     .end annotation
 
-    .line 59
-    iget-object v0, p0, Lcom/android/systemui/shared/recents/system/BackgroundExecutor;->mExecutorService:Ljava/util/concurrent/ExecutorService;
+    iget-object p0, p0, Lcom/android/systemui/shared/recents/system/BackgroundExecutor;->mExecutorService:Ljava/util/concurrent/ExecutorService;
 
-    invoke-interface {v0, p1}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
+    invoke-interface {p0, p1}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public submit(Ljava/lang/Runnable;Ljava/lang/Object;)Ljava/util/concurrent/Future;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -94,18 +88,17 @@
         }
     .end annotation
 
-    .line 67
-    iget-object v0, p0, Lcom/android/systemui/shared/recents/system/BackgroundExecutor;->mExecutorService:Ljava/util/concurrent/ExecutorService;
+    iget-object p0, p0, Lcom/android/systemui/shared/recents/system/BackgroundExecutor;->mExecutorService:Ljava/util/concurrent/ExecutorService;
 
-    invoke-interface {v0, p1, p2}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;Ljava/lang/Object;)Ljava/util/concurrent/Future;
+    invoke-interface {p0, p1, p2}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;Ljava/lang/Object;)Ljava/util/concurrent/Future;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -118,12 +111,11 @@
         }
     .end annotation
 
-    .line 52
-    iget-object v0, p0, Lcom/android/systemui/shared/recents/system/BackgroundExecutor;->mExecutorService:Ljava/util/concurrent/ExecutorService;
+    iget-object p0, p0, Lcom/android/systemui/shared/recents/system/BackgroundExecutor;->mExecutorService:Ljava/util/concurrent/ExecutorService;
 
-    invoke-interface {v0, p1}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
+    invoke-interface {p0, p1}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

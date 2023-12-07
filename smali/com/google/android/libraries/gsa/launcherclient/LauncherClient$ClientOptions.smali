@@ -1,6 +1,5 @@
 .class public Lcom/google/android/libraries/gsa/launcherclient/LauncherClient$ClientOptions;
 .super Ljava/lang/Object;
-.source "LauncherClient.java"
 
 
 # annotations
@@ -130,7 +129,6 @@
 
     new-instance v0, Lcom/google/android/libraries/gsa/launcherclient/LauncherClient$ClientOptions;
 
-    .line 1
     invoke-direct {v0, p0, p1, p2}, Lcom/google/android/libraries/gsa/launcherclient/LauncherClient$ClientOptions;-><init>(Ljava/lang/String;Landroid/graphics/Bitmap;Z)V
 
     return-object v0

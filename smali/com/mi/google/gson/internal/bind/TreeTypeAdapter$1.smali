@@ -1,6 +1,5 @@
 .class synthetic Lcom/mi/google/gson/internal/bind/TreeTypeAdapter$1;
 .super Ljava/lang/Object;
-.source "TreeTypeAdapter.java"
 
 
 # annotations

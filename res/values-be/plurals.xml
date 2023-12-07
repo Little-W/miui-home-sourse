@@ -66,18 +66,6 @@
         <item quantity="few">%2$s непрачытаных з %1$s</item>
         <item quantity="many">%2$s непрачытаных з %1$s</item>
     </plurals>
-    <plurals name="delete_wallpapers_message">
-        <item quantity="other">Выдаліць %1$d шпалер?</item>
-        <item quantity="one">Выдаліць %1$d шпалеру?</item>
-        <item quantity="few">Выдаліць %1$d шпалеры?</item>
-        <item quantity="many">Выдаліць %1$d шпалер?</item>
-    </plurals>
-    <plurals name="editing_mode_title">
-        <item quantity="other">Выбрана: %1$d</item>
-        <item quantity="one">Выбрана: %1$d</item>
-        <item quantity="few">Выбрана: %1$d</item>
-        <item quantity="many">Выбрана: %1$d</item>
-    </plurals>
     <plurals name="half_hour_ago">
         <item quantity="other">Паўгадзіны таму</item>
         <item quantity="one">Паўгадзіны таму</item>
@@ -120,6 +108,12 @@
         <item quantity="few">"%d аб'екты выдзелены"</item>
         <item quantity="many">"%d аб'ектаў выдзелена"</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d новага апавяшчэння</item>
+        <item quantity="one">%d новае апавяшчэнне</item>
+        <item quantity="few">%d новыя апавяшчэнні</item>
+        <item quantity="many">%d новых апавяшчэнняў</item>
+    </plurals>
     <plurals name="num_minutes_ago">
         <item quantity="other">%d хвілін таму</item>
         <item quantity="one">1 хвіліну таму</item>
@@ -127,10 +121,10 @@
         <item quantity="many">%d хвілін таму</item>
     </plurals>
     <plurals name="remove_dialog_title_multi_format">
-        <item quantity="other">Выдаліць %1$d праграм з працоўнага стала?</item>
-        <item quantity="one">Выдаліць %1$d праграму з працоўнага стала?</item>
-        <item quantity="few">Выдаліць %1$d праграмы з працоўнага стала?</item>
-        <item quantity="many">Выдаліць %1$d праграм з працоўнага стала?</item>
+        <item quantity="other">"Выдаліць %1$d аб/'ектаў з Галоўнага экрана?"</item>
+        <item quantity="one">"Выдаліць %1$d аб/'ект з Галоўнага экрана?"</item>
+        <item quantity="few">"Выдаліць %1$d аб/'екта з Галоўнага экрана?"</item>
+        <item quantity="many">"Выдаліць %1$d аб/'ектаў з Галоўнага экрана?"</item>
     </plurals>
     <plurals name="scroll_tip_format_when_announce_accessibility">
         <item quantity="other">Старонка %1$d, %2$d праграм.</item>

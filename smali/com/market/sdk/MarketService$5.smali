@@ -1,6 +1,5 @@
 .class Lcom/market/sdk/MarketService$5;
 .super Ljava/lang/Object;
-.source "MarketService.java"
 
 # interfaces
 .implements Lcom/market/ServiceProxy$ProxyTask;
@@ -31,7 +30,6 @@
 .method constructor <init>(Lcom/market/sdk/MarketService;Ljava/lang/String;Ljava/lang/String;Lcom/market/sdk/IImageCallback;)V
     .locals 0
 
-    .line 99
     iput-object p1, p0, Lcom/market/sdk/MarketService$5;->this$0:Lcom/market/sdk/MarketService;
 
     iput-object p2, p0, Lcom/market/sdk/MarketService$5;->val$appId:Ljava/lang/String;
@@ -48,14 +46,13 @@
 
 # virtual methods
 .method public run()V
-    .locals 4
+    .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
         }
     .end annotation
 
-    .line 102
     iget-object v0, p0, Lcom/market/sdk/MarketService$5;->this$0:Lcom/market/sdk/MarketService;
 
     invoke-static {v0}, Lcom/market/sdk/MarketService;->access$000(Lcom/market/sdk/MarketService;)Lcom/market/sdk/IMarketService;
@@ -66,9 +63,9 @@
 
     iget-object v2, p0, Lcom/market/sdk/MarketService$5;->val$mask:Ljava/lang/String;
 
-    iget-object v3, p0, Lcom/market/sdk/MarketService$5;->val$callback:Lcom/market/sdk/IImageCallback;
+    iget-object p0, p0, Lcom/market/sdk/MarketService$5;->val$callback:Lcom/market/sdk/IImageCallback;
 
-    invoke-interface {v0, v1, v2, v3}, Lcom/market/sdk/IMarketService;->loadIcon(Ljava/lang/String;Ljava/lang/String;Lcom/market/sdk/IImageCallback;)V
+    invoke-interface {v0, v1, v2, p0}, Lcom/market/sdk/IMarketService;->loadIcon(Ljava/lang/String;Ljava/lang/String;Lcom/market/sdk/IImageCallback;)V
 
     return-void
 .end method

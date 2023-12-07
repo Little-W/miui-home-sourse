@@ -1,6 +1,5 @@
 .class public Landroidx/interpolator/view/animation/LinearOutSlowInInterpolator;
 .super Landroidx/interpolator/view/animation/LookupTableInterpolator;
-.source "LinearOutSlowInInterpolator.java"
 
 
 # static fields
@@ -13,7 +12,6 @@
 
     const/16 v0, 0xc9
 
-    .line 34
     new-array v0, v0, [F
 
     fill-array-data v0, :array_0
@@ -231,7 +229,6 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 67
     sget-object v0, Landroidx/interpolator/view/animation/LinearOutSlowInInterpolator;->VALUES:[F
 
     invoke-direct {p0, v0}, Landroidx/interpolator/view/animation/LookupTableInterpolator;-><init>([F)V
@@ -244,10 +241,9 @@
 .method public bridge synthetic getInterpolation(F)F
     .locals 0
 
-    .line 28
     invoke-super {p0, p1}, Landroidx/interpolator/view/animation/LookupTableInterpolator;->getInterpolation(F)F
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method

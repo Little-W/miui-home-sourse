@@ -1,48 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="cell_layout_size_entries">
-        <item>4x4</item>
-        <item>4x5</item>
-    </string-array>
-    <string-array name="cell_layout_size_values">
-        <item>4x4</item>
-        <item>4x5</item>
+    <string-array name="animation_rate_entries">
+        <item>Relaxed</item>
+        <item>Balanced</item>
+        <item>Fast</item>
     </string-array>
     <string-array name="editing_mode_entries">
         <item>Wallpaper</item>
         <item>Widgets</item>
         <item>Settings</item>
     </string-array>
-    <string-array name="gadget_weather_image">
-        <item>Clear</item>
-        <item>Cloudy</item>
-        <item>Hazy</item>
-        <item>Foggy</item>
-        <item>Severe rainstorm</item>
-        <item>Rainstorm</item>
-        <item>Very heavy rainfall</item>
-        <item>Thunderstorm</item>
-        <item>Shower</item>
-        <item>Heavy rainfall</item>
-        <item>Rain</item>
-        <item>Drizzle</item>
-        <item>Sleet</item>
-        <item>Snowstorm</item>
-        <item>Patches of snowfall</item>
-        <item>Heavy snowfall</item>
-        <item>Snowfall</item>
-        <item>Light snowfall</item>
-        <item>Strong sandstorm</item>
-        <item>Sandstorm</item>
-        <item>Light sandstorm</item>
-        <item>Sandstorm</item>
-        <item>Hail</item>
-        <item>Floating dust</item>
-        <item>Haze</item>
-    </string-array>
-    <string-array name="gadget_weather_theme_type_entries">
+    <string-array name="monochrome_color_entries">
         <item>Default</item>
-        <item>Classic</item>
+        <item>Blue</item>
+        <item>Green</item>
+        <item>Purple</item>
+        <item>Brown</item>
+    </string-array>
+    <string-array name="no_word_model_entries">
+        <item>Off</item>
+        <item>Anywhere</item>
+        <item>On widgets</item>
+    </string-array>
+    <string-array name="no_word_model_entries_not_support_only_widget_no_word">
+        <item>Off</item>
+        <item>Anywhere</item>
     </string-array>
     <string-array name="transformation_entries">
         <item>Slide</item>
@@ -52,11 +34,5 @@
         <item>Cascade</item>
         <item>Rotate</item>
         <item>Cube</item>
-    </string-array>
-    <string-array name="wallpaper_scroll_entries">
-        <item>Theme default</item>
-        <item>Centre</item>
-        <item>Left</item>
-        <item>Right</item>
     </string-array>
 </resources>

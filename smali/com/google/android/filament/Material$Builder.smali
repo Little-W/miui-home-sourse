@@ -1,6 +1,5 @@
 .class public Lcom/google/android/filament/Material$Builder;
 .super Ljava/lang/Object;
-.source "Material.java"
 
 
 # annotations
@@ -24,7 +23,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 304
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,52 +31,47 @@
 
 # virtual methods
 .method public build(Lcom/google/android/filament/Engine;)Lcom/google/android/filament/Material;
-    .locals 4
+    .locals 2
 
-    .line 333
     invoke-virtual {p1}, Lcom/google/android/filament/Engine;->getNativeObject()J
 
     move-result-wide v0
 
     iget-object p1, p0, Lcom/google/android/filament/Material$Builder;->mBuffer:Ljava/nio/Buffer;
 
-    iget v2, p0, Lcom/google/android/filament/Material$Builder;->mSize:I
+    iget p0, p0, Lcom/google/android/filament/Material$Builder;->mSize:I
 
-    invoke-static {v0, v1, p1, v2}, Lcom/google/android/filament/Material;->access$000(JLjava/nio/Buffer;I)J
+    invoke-static {v0, v1, p1, p0}, Lcom/google/android/filament/Material;->access$000(JLjava/nio/Buffer;I)J
 
-    move-result-wide v0
+    move-result-wide p0
 
-    const-wide/16 v2, 0x0
+    const-wide/16 v0, 0x0
 
-    cmp-long p1, v0, v2
+    cmp-long v0, p0, v0
 
-    if-eqz p1, :cond_0
+    if-eqz v0, :cond_0
 
-    .line 335
-    new-instance p1, Lcom/google/android/filament/Material;
+    new-instance v0, Lcom/google/android/filament/Material;
 
-    invoke-direct {p1, v0, v1}, Lcom/google/android/filament/Material;-><init>(J)V
+    invoke-direct {v0, p0, p1}, Lcom/google/android/filament/Material;-><init>(J)V
 
-    return-object p1
+    return-object v0
 
-    .line 334
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-    const-string v0, "Couldn\'t create Material"
+    const-string p1, "Couldn\'t create Material"
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 .method public payload(Ljava/nio/Buffer;I)Lcom/google/android/filament/Material$Builder;
     .locals 0
 
-    .line 317
     iput-object p1, p0, Lcom/google/android/filament/Material$Builder;->mBuffer:Ljava/nio/Buffer;
 
-    .line 318
     iput p2, p0, Lcom/google/android/filament/Material$Builder;->mSize:I
 
     return-object p0

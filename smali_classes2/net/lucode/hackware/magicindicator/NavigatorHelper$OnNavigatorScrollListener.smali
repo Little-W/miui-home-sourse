@@ -1,6 +1,5 @@
 .class public interface abstract Lnet/lucode/hackware/magicindicator/NavigatorHelper$OnNavigatorScrollListener;
 .super Ljava/lang/Object;
-.source "NavigatorHelper.java"
 
 
 # annotations

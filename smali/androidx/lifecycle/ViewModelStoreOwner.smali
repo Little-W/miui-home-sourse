@@ -1,6 +1,5 @@
 .class public interface abstract Landroidx/lifecycle/ViewModelStoreOwner;
 .super Ljava/lang/Object;
-.source "ViewModelStoreOwner.java"
 
 
 # virtual methods

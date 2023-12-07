@@ -66,18 +66,6 @@
         <item quantity="few">%2$s mhux moqri minn %1$s</item>
         <item quantity="many">%2$s mhux moqrija minn %1$s</item>
     </plurals>
-    <plurals name="delete_wallpapers_message">
-        <item quantity="other">Delete %1$d wallpapers?</item>
-        <item quantity="one">Trid tħassar %1$d wallpaper?</item>
-        <item quantity="few">Trid tħassar %1$d wallpapers?</item>
-        <item quantity="many">Delete %1$d wallpapers?</item>
-    </plurals>
-    <plurals name="editing_mode_title">
-        <item quantity="other">%1$d(-il) ħaġa magħżula</item>
-        <item quantity="one">Ħaġa %1$d magħżula</item>
-        <item quantity="few">%1$d(-il) ħaġa magħżula</item>
-        <item quantity="many">%1$d(-il) ħaġa magħżula</item>
-    </plurals>
     <plurals name="half_hour_ago">
         <item quantity="other">Nofs siegħa ilu</item>
         <item quantity="one">Nofs siegħa ilu</item>
@@ -127,10 +115,10 @@
         <item quantity="many">%d(-il) minuta ilu</item>
     </plurals>
     <plurals name="remove_dialog_title_multi_format">
-        <item quantity="other">Trid tneħħi %1$d(-il) app mill-Iskrin prinċipali?</item>
-        <item quantity="one">Trid tneħħi app %1$d mill-Iskrin prinċipali?</item>
-        <item quantity="few">Trid tneħħi %1$d apps mill-Iskrin prinċipali?</item>
-        <item quantity="many">Trid tneħħi %1$d(-il) app mill-Iskrin prinċipali?</item>
+        <item quantity="other">Tixtieq tneħħi %1$d ħaġa mill-paġna ewlenija?</item>
+        <item quantity="one">Tixtieq tneħħi ħaġa %1$d mill-paġna ewlenija?</item>
+        <item quantity="few">Tixtieq tneħħi %1$d ħwejjeġ mill-paġna ewlenija?</item>
+        <item quantity="many">Tixtieq tneħħi %1$d-il ħaġa mill-paġna ewlenija?</item>
     </plurals>
     <plurals name="scroll_tip_format_when_announce_accessibility">
         <item quantity="other">%1$d paġna, %2$d app.</item>

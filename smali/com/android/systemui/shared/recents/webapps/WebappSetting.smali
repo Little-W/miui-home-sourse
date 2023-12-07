@@ -1,6 +1,5 @@
 .class public interface abstract Lcom/android/systemui/shared/recents/webapps/WebappSetting;
 .super Ljava/lang/Object;
-.source "WebappSetting.java"
 
 
 # static fields

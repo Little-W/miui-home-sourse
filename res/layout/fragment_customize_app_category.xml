@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:id="@id/spring_container" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+<LinearLayout android:orientation="vertical" android:id="@id/spring_container" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:importantForAutofill="noExcludeDescendants"
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
     <RelativeLayout android:orientation="vertical" android:id="@id/edit_header" android:layout_width="fill_parent" android:layout_height="@dimen/all_apps_tab_height">
         <com.miui.home.launcher.util.typeface.TypefaceIconView android:textSize="@dimen/all_apps_select_app_button_size" android:textStyle="bold" android:gravity="center" android:id="@id/btn_cancel" android:layout_width="36.0dip" android:layout_height="36.0dip" android:layout_centerVertical="true" android:contentDescription="@string/back" android:animateFirstView="false" android:layout_marginStart="18.0dip" android:layout_alignParentStart="true" app:pattern="@integer/quit" />

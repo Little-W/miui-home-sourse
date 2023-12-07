@@ -44,14 +44,6 @@
         <item quantity="other">%2$s da leggere da %1$s</item>
         <item quantity="one">%2$s da leggere da %1$s</item>
     </plurals>
-    <plurals name="delete_wallpapers_message">
-        <item quantity="other">Eliminare %1$d sfondi?</item>
-        <item quantity="one">Eliminare %1$d sfondo?</item>
-    </plurals>
-    <plurals name="editing_mode_title">
-        <item quantity="other">%1$d elementi selezionati</item>
-        <item quantity="one">%1$d elemento selezionato</item>
-    </plurals>
     <plurals name="half_hour_ago">
         <item quantity="other">"Mezz'ora fa"</item>
         <item quantity="one">"Mezz'ora fa"</item>
@@ -80,13 +72,17 @@
         <item quantity="other">%d elementi selezionati</item>
         <item quantity="one">%d elemento selezionato</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d nuove notifiche</item>
+        <item quantity="one">%d nuova notifica</item>
+    </plurals>
     <plurals name="num_minutes_ago">
         <item quantity="other">%d minuti fa</item>
         <item quantity="one">1 minuto fa</item>
     </plurals>
     <plurals name="remove_dialog_title_multi_format">
-        <item quantity="other">Rimuovere %1$d app dalla schermata Home?</item>
-        <item quantity="one">Rimuovere %1$d app dalla schermata Home?</item>
+        <item quantity="other">Rimuovere %1$d elementi dalla schermata Home?</item>
+        <item quantity="one">Rimuovere %1$d elemento dalla schermata Home?</item>
     </plurals>
     <plurals name="scroll_tip_format_when_announce_accessibility">
         <item quantity="other">Pagina %1$d, %2$d applicazioni.</item>

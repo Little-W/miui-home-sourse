@@ -1,6 +1,5 @@
 .class public interface abstract Lcom/android/systemui/shared/recents/system/InputChannelCompat$InputEventListener;
 .super Ljava/lang/Object;
-.source "InputChannelCompat.java"
 
 
 # annotations

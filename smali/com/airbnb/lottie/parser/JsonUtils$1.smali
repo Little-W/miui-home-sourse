@@ -1,6 +1,5 @@
 .class synthetic Lcom/airbnb/lottie/parser/JsonUtils$1;
 .super Ljava/lang/Object;
-.source "JsonUtils.java"
 
 
 # annotations
@@ -22,7 +21,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 47
     invoke-static {}, Lcom/airbnb/lottie/parser/moshi/JsonReader$Token;->values()[Lcom/airbnb/lottie/parser/moshi/JsonReader$Token;
 
     move-result-object v0

@@ -1,6 +1,5 @@
 .class Landroidx/fragment/app/FragmentManager$3;
 .super Landroidx/fragment/app/FragmentFactory;
-.source "FragmentManager.java"
 
 
 # annotations
@@ -22,7 +21,6 @@
 .method constructor <init>(Landroidx/fragment/app/FragmentManager;)V
     .locals 0
 
-    .line 478
     iput-object p1, p0, Landroidx/fragment/app/FragmentManager$3;->this$0:Landroidx/fragment/app/FragmentManager;
 
     invoke-direct {p0}, Landroidx/fragment/app/FragmentFactory;-><init>()V
@@ -33,30 +31,29 @@
 
 # virtual methods
 .method public instantiate(Ljava/lang/ClassLoader;Ljava/lang/String;)Landroidx/fragment/app/Fragment;
-    .locals 2
+    .locals 1
 
-    .line 483
     iget-object p1, p0, Landroidx/fragment/app/FragmentManager$3;->this$0:Landroidx/fragment/app/FragmentManager;
 
     invoke-virtual {p1}, Landroidx/fragment/app/FragmentManager;->getHost()Landroidx/fragment/app/FragmentHostCallback;
 
     move-result-object p1
 
-    iget-object v0, p0, Landroidx/fragment/app/FragmentManager$3;->this$0:Landroidx/fragment/app/FragmentManager;
+    iget-object p0, p0, Landroidx/fragment/app/FragmentManager$3;->this$0:Landroidx/fragment/app/FragmentManager;
 
-    invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->getHost()Landroidx/fragment/app/FragmentHostCallback;
+    invoke-virtual {p0}, Landroidx/fragment/app/FragmentManager;->getHost()Landroidx/fragment/app/FragmentHostCallback;
 
-    move-result-object v0
+    move-result-object p0
 
-    invoke-virtual {v0}, Landroidx/fragment/app/FragmentHostCallback;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroidx/fragment/app/FragmentHostCallback;->getContext()Landroid/content/Context;
 
-    move-result-object v0
+    move-result-object p0
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, p2, v1}, Landroidx/fragment/app/FragmentHostCallback;->instantiate(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroidx/fragment/app/Fragment;
+    invoke-virtual {p1, p0, p2, v0}, Landroidx/fragment/app/FragmentHostCallback;->instantiate(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroidx/fragment/app/Fragment;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="workspace_cell_padding_top">0.0dip</dimen>
+</resources>

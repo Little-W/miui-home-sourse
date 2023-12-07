@@ -1,6 +1,5 @@
 .class public Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;
 .super Ljava/lang/Object;
-.source "TaskKeyLruCache.java"
 
 
 # annotations
@@ -55,7 +54,6 @@
 
     const/4 v0, 0x0
 
-    .line 48
     invoke-direct {p0, p1, v0}, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;-><init>(ILcom/android/systemui/shared/recents/model/TaskKeyLruCache$EvictionCallback;)V
 
     return-void
@@ -64,20 +62,16 @@
 .method public constructor <init>(ILcom/android/systemui/shared/recents/model/TaskKeyLruCache$EvictionCallback;)V
     .locals 1
 
-    .line 51
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 43
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;->mKeys:Ljava/util/Map;
 
-    .line 52
     iput-object p2, p0, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;->mEvictionCallback:Lcom/android/systemui/shared/recents/model/TaskKeyLruCache$EvictionCallback;
 
-    .line 53
     new-instance p2, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache$1;
 
     invoke-direct {p2, p0, p1}, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache$1;-><init>(Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;I)V
@@ -90,7 +84,6 @@
 .method static synthetic access$000(Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;)Lcom/android/systemui/shared/recents/model/TaskKeyLruCache$EvictionCallback;
     .locals 0
 
-    .line 35
     iget-object p0, p0, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;->mEvictionCallback:Lcom/android/systemui/shared/recents/model/TaskKeyLruCache$EvictionCallback;
 
     return-object p0
@@ -99,7 +92,6 @@
 .method static synthetic access$100(Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;)Ljava/util/Map;
     .locals 0
 
-    .line 35
     iget-object p0, p0, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;->mKeys:Ljava/util/Map;
 
     return-object p0
@@ -110,7 +102,6 @@
 .method public dump(Ljava/lang/String;Ljava/io/PrintWriter;)V
     .locals 3
 
-    .line 128
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -125,7 +116,6 @@
 
     move-result-object v0
 
-    .line 130
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string p1, "TaskKeyLruCache"
@@ -134,7 +124,6 @@
 
     const-string p1, " numEntries="
 
-    .line 131
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-object p1, p0, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;->mKeys:Ljava/util/Map;
@@ -145,10 +134,8 @@
 
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(I)V
 
-    .line 132
     invoke-virtual {p2}, Ljava/io/PrintWriter;->println()V
 
-    .line 133
     iget-object p1, p0, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;->mKeys:Ljava/util/Map;
 
     invoke-interface {p1}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -159,7 +146,6 @@
 
     move-result-object p1
 
-    .line 134
     :goto_0
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -167,7 +153,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 135
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-object v1, p0, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;->mKeys:Ljava/util/Map;
@@ -191,21 +176,19 @@
 .method public final evictAll()V
     .locals 1
 
-    .line 118
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;->mCache:Landroid/util/LruCache;
 
     invoke-virtual {v0}, Landroid/util/LruCache;->evictAll()V
 
-    .line 119
-    iget-object v0, p0, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;->mKeys:Ljava/util/Map;
+    iget-object p0, p0, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;->mKeys:Ljava/util/Map;
 
-    invoke-interface {v0}, Ljava/util/Map;->clear()V
+    invoke-interface {p0}, Ljava/util/Map;->clear()V
 
     return-void
 .end method
 
 .method public final get(Lcom/android/systemui/shared/recents/model/Task$TaskKey;)Ljava/lang/Object;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -214,8 +197,14 @@
         }
     .end annotation
 
-    .line 74
-    iget-object v0, p0, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;->mCache:Landroid/util/LruCache;
+    if-nez p1, :cond_0
+
+    const/4 p0, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object p0, p0, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;->mCache:Landroid/util/LruCache;
 
     iget p1, p1, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->id:I
 
@@ -223,11 +212,12 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Landroid/util/LruCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Landroid/util/LruCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    :goto_0
+    return-object p0
 .end method
 
 .method public final getAndInvalidateIfModified(Lcom/android/systemui/shared/recents/model/Task$TaskKey;)Ljava/lang/Object;
@@ -240,7 +230,6 @@
         }
     .end annotation
 
-    .line 82
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;->mKeys:Ljava/util/Map;
 
     iget v1, p1, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->id:I
@@ -257,7 +246,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 84
     iget v1, v0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->stackId:I
 
     iget v2, p1, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->stackId:I
@@ -278,48 +266,63 @@
 
     if-ne v1, v2, :cond_0
 
-    iget-boolean v0, v0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->isScreening:Z
+    iget-boolean v1, v0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->isScreening:Z
 
-    iget-boolean v1, p1, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->isScreening:Z
+    iget-boolean v2, p1, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->isScreening:Z
+
+    if-ne v1, v2, :cond_0
+
+    iget-boolean v0, v0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->isWorldCirculate:Z
+
+    iget-boolean v1, p1, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->isWorldCirculate:Z
 
     if-eq v0, v1, :cond_1
 
-    .line 90
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;->remove(Lcom/android/systemui/shared/recents/model/Task$TaskKey;)V
 
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return-object p1
+    return-object p0
 
-    .line 96
     :cond_1
     invoke-virtual {p0, p1}, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;->get(Lcom/android/systemui/shared/recents/model/Task$TaskKey;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public isInCacheWithoutAffectOrder(I)Z
-    .locals 1
+    .locals 0
 
-    .line 66
-    iget-object v0, p0, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;->mKeys:Ljava/util/Map;
+    iget-object p0, p0, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;->mKeys:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    invoke-interface {v0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+    invoke-interface {p0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
+.end method
+
+.method public maxSize()I
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;->mCache:Landroid/util/LruCache;
+
+    invoke-virtual {p0}, Landroid/util/LruCache;->maxSize()I
+
+    move-result p0
+
+    return p0
 .end method
 
 .method public final put(Lcom/android/systemui/shared/recents/model/Task$TaskKey;Ljava/lang/Object;)V
-    .locals 3
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -334,7 +337,6 @@
 
     goto :goto_0
 
-    .line 105
     :cond_0
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;->mKeys:Ljava/util/Map;
 
@@ -346,8 +348,7 @@
 
     invoke-interface {v0, v1, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 106
-    iget-object v0, p0, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;->mCache:Landroid/util/LruCache;
+    iget-object p0, p0, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;->mCache:Landroid/util/LruCache;
 
     iget p1, p1, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->id:I
 
@@ -355,75 +356,77 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, p1, p2}, Landroid/util/LruCache;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Landroid/util/LruCache;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 
     :cond_1
     :goto_0
-    const-string v0, "TaskKeyLruCache"
+    new-instance p0, Ljava/lang/StringBuilder;
 
-    .line 102
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    const-string v0, "Unexpected null key or value: "
 
-    const-string v2, "Unexpected null key or value: "
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string p1, ", "
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    const-string p1, "TaskKeyLruCache"
+
+    invoke-static {p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 .end method
 
-.method public final remove(Lcom/android/systemui/shared/recents/model/Task$TaskKey;)V
+.method public final remove(I)V
     .locals 2
 
-    .line 112
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;->mCache:Landroid/util/LruCache;
 
-    iget v1, p1, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->id:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/util/LruCache;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 113
-    iget-object v0, p0, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;->mKeys:Ljava/util/Map;
-
-    iget p1, p1, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->id:I
+    iget-object p0, p0, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;->mKeys:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    invoke-interface {v0, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p0, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public final remove(Lcom/android/systemui/shared/recents/model/Task$TaskKey;)V
+    .locals 0
+
+    iget p1, p1, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->id:I
+
+    invoke-virtual {p0, p1}, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;->remove(I)V
 
     return-void
 .end method
 
 .method public final trimToSize(I)V
-    .locals 1
+    .locals 0
 
-    .line 124
-    iget-object v0, p0, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;->mCache:Landroid/util/LruCache;
+    iget-object p0, p0, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;->mCache:Landroid/util/LruCache;
 
-    invoke-virtual {v0, p1}, Landroid/util/LruCache;->trimToSize(I)V
+    invoke-virtual {p0, p1}, Landroid/util/LruCache;->trimToSize(I)V
 
     return-void
 .end method

@@ -1,6 +1,5 @@
 .class final Lcom/mi/google/gson/internal/UnsafeAllocator$1;
 .super Lcom/mi/google/gson/internal/UnsafeAllocator;
-.source "UnsafeAllocator.java"
 
 
 # annotations
@@ -24,7 +23,6 @@
 .method constructor <init>(Ljava/lang/reflect/Method;Ljava/lang/Object;)V
     .locals 0
 
-    .line 45
     iput-object p1, p0, Lcom/mi/google/gson/internal/UnsafeAllocator$1;->val$allocateInstance:Ljava/lang/reflect/Method;
 
     iput-object p2, p0, Lcom/mi/google/gson/internal/UnsafeAllocator$1;->val$unsafe:Ljava/lang/Object;
@@ -37,7 +35,7 @@
 
 # virtual methods
 .method public newInstance(Ljava/lang/Class;)Ljava/lang/Object;
-    .locals 4
+    .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -54,25 +52,23 @@
         }
     .end annotation
 
-    .line 49
     invoke-static {p1}, Lcom/mi/google/gson/internal/UnsafeAllocator;->access$000(Ljava/lang/Class;)V
 
-    .line 50
     iget-object v0, p0, Lcom/mi/google/gson/internal/UnsafeAllocator$1;->val$allocateInstance:Ljava/lang/reflect/Method;
 
-    iget-object v1, p0, Lcom/mi/google/gson/internal/UnsafeAllocator$1;->val$unsafe:Ljava/lang/Object;
+    iget-object p0, p0, Lcom/mi/google/gson/internal/UnsafeAllocator$1;->val$unsafe:Ljava/lang/Object;
 
-    const/4 v2, 0x1
+    const/4 v1, 0x1
 
-    new-array v2, v2, [Ljava/lang/Object;
+    new-array v1, v1, [Ljava/lang/Object;
 
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
-    aput-object p1, v2, v3
+    aput-object p1, v1, v2
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p0, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

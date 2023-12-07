@@ -1,6 +1,5 @@
 .class public final Landroid/support/v4/content/LocalBroadcastManager;
 .super Ljava/lang/Object;
-.source "LocalBroadcastManager.java"
 
 
 # annotations
@@ -68,7 +67,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 30
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -81,34 +79,28 @@
 .method private constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 25
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroid/support/v4/content/LocalBroadcastManager;->mReceivers:Ljava/util/HashMap;
 
-    .line 26
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroid/support/v4/content/LocalBroadcastManager;->mActions:Ljava/util/HashMap;
 
-    .line 27
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/support/v4/content/LocalBroadcastManager;->mPendingBroadcasts:Ljava/util/ArrayList;
 
-    .line 44
     iput-object p1, p0, Landroid/support/v4/content/LocalBroadcastManager;->mAppContext:Landroid/content/Context;
 
-    .line 45
     new-instance v0, Landroid/support/v4/content/LocalBroadcastManager$1;
 
     invoke-virtual {p1}, Landroid/content/Context;->getMainLooper()Landroid/os/Looper;
@@ -125,7 +117,6 @@
 .method static synthetic access$000(Landroid/support/v4/content/LocalBroadcastManager;)V
     .locals 0
 
-    .line 21
     invoke-direct {p0}, Landroid/support/v4/content/LocalBroadcastManager;->executePendingBroadcasts()V
 
     return-void
@@ -134,13 +125,11 @@
 .method private executePendingBroadcasts()V
     .locals 9
 
-    .line 211
     :cond_0
     iget-object v0, p0, Landroid/support/v4/content/LocalBroadcastManager;->mReceivers:Ljava/util/HashMap;
 
     monitor-enter v0
 
-    .line 212
     :try_start_0
     iget-object v1, p0, Landroid/support/v4/content/LocalBroadcastManager;->mPendingBroadcasts:Ljava/util/ArrayList;
 
@@ -150,26 +139,21 @@
 
     if-gtz v1, :cond_1
 
-    .line 214
     monitor-exit v0
 
     return-void
 
-    .line 217
     :cond_1
     new-array v1, v1, [Landroid/support/v4/content/LocalBroadcastManager$BroadcastRecord;
 
-    .line 218
     iget-object v2, p0, Landroid/support/v4/content/LocalBroadcastManager;->mPendingBroadcasts:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    .line 219
     iget-object v2, p0, Landroid/support/v4/content/LocalBroadcastManager;->mPendingBroadcasts:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
-    .line 220
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -178,16 +162,13 @@
 
     move v2, v0
 
-    .line 222
     :goto_0
     array-length v3, v1
 
     if-ge v2, v3, :cond_0
 
-    .line 223
     aget-object v3, v1, v2
 
-    .line 224
     iget-object v4, v3, Landroid/support/v4/content/LocalBroadcastManager$BroadcastRecord;->receivers:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
@@ -199,7 +180,6 @@
     :goto_1
     if-ge v5, v4, :cond_3
 
-    .line 227
     iget-object v6, v3, Landroid/support/v4/content/LocalBroadcastManager$BroadcastRecord;->receivers:Ljava/util/ArrayList;
 
     invoke-virtual {v6, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -208,12 +188,10 @@
 
     check-cast v6, Landroid/support/v4/content/LocalBroadcastManager$ReceiverRecord;
 
-    .line 228
     iget-boolean v7, v6, Landroid/support/v4/content/LocalBroadcastManager$ReceiverRecord;->dead:Z
 
     if-nez v7, :cond_2
 
-    .line 229
     iget-object v6, v6, Landroid/support/v4/content/LocalBroadcastManager$ReceiverRecord;->receiver:Landroid/content/BroadcastReceiver;
 
     iget-object v7, p0, Landroid/support/v4/content/LocalBroadcastManager;->mAppContext:Landroid/content/Context;
@@ -233,32 +211,28 @@
     goto :goto_0
 
     :catchall_0
-    move-exception v1
+    move-exception p0
 
-    .line 220
     :try_start_1
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    throw v1
+    throw p0
 .end method
 
 .method public static getInstance(Landroid/content/Context;)Landroid/support/v4/content/LocalBroadcastManager;
     .locals 2
 
-    .line 34
     sget-object v0, Landroid/support/v4/content/LocalBroadcastManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 35
     :try_start_0
     sget-object v1, Landroid/support/v4/content/LocalBroadcastManager;->mInstance:Landroid/support/v4/content/LocalBroadcastManager;
 
     if-nez v1, :cond_0
 
-    .line 36
     new-instance v1, Landroid/support/v4/content/LocalBroadcastManager;
 
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -269,7 +243,6 @@
 
     sput-object v1, Landroid/support/v4/content/LocalBroadcastManager;->mInstance:Landroid/support/v4/content/LocalBroadcastManager;
 
-    .line 39
     :cond_0
     sget-object p0, Landroid/support/v4/content/LocalBroadcastManager;->mInstance:Landroid/support/v4/content/LocalBroadcastManager;
 
@@ -280,7 +253,6 @@
     :catchall_0
     move-exception p0
 
-    .line 40
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -293,18 +265,15 @@
 .method public registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)V
     .locals 6
 
-    .line 60
     iget-object v0, p0, Landroid/support/v4/content/LocalBroadcastManager;->mReceivers:Ljava/util/HashMap;
 
     monitor-enter v0
 
-    .line 61
     :try_start_0
     new-instance v1, Landroid/support/v4/content/LocalBroadcastManager$ReceiverRecord;
 
     invoke-direct {v1, p2, p1}, Landroid/support/v4/content/LocalBroadcastManager$ReceiverRecord;-><init>(Landroid/content/IntentFilter;Landroid/content/BroadcastReceiver;)V
 
-    .line 62
     iget-object v2, p0, Landroid/support/v4/content/LocalBroadcastManager;->mReceivers:Ljava/util/HashMap;
 
     invoke-virtual {v2, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -317,23 +286,19 @@
 
     if-nez v2, :cond_0
 
-    .line 64
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 65
     iget-object v4, p0, Landroid/support/v4/content/LocalBroadcastManager;->mReceivers:Ljava/util/HashMap;
 
     invoke-virtual {v4, p1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 68
     :cond_0
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     const/4 p1, 0x0
 
-    .line 70
     :goto_0
     invoke-virtual {p2}, Landroid/content/IntentFilter;->countActions()I
 
@@ -341,12 +306,10 @@
 
     if-ge p1, v2, :cond_2
 
-    .line 71
     invoke-virtual {p2, p1}, Landroid/content/IntentFilter;->getAction(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 72
     iget-object v4, p0, Landroid/support/v4/content/LocalBroadcastManager;->mActions:Ljava/util/HashMap;
 
     invoke-virtual {v4, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -357,17 +320,14 @@
 
     if-nez v4, :cond_1
 
-    .line 74
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4, v3}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 75
     iget-object v5, p0, Landroid/support/v4/content/LocalBroadcastManager;->mActions:Ljava/util/HashMap;
 
     invoke-virtual {v5, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 78
     :cond_1
     invoke-virtual {v4, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -375,67 +335,59 @@
 
     goto :goto_0
 
-    .line 81
     :cond_2
     monitor-exit v0
 
     return-void
 
     :catchall_0
-    move-exception p1
+    move-exception p0
 
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p1
+    throw p0
 .end method
 
 .method public sendBroadcast(Landroid/content/Intent;)Z
     .locals 21
 
-    move-object/from16 v1, p0
+    move-object/from16 v0, p0
 
-    move-object/from16 v0, p1
+    move-object/from16 v1, p1
 
-    .line 116
-    iget-object v2, v1, Landroid/support/v4/content/LocalBroadcastManager;->mReceivers:Ljava/util/HashMap;
+    iget-object v2, v0, Landroid/support/v4/content/LocalBroadcastManager;->mReceivers:Ljava/util/HashMap;
 
     monitor-enter v2
 
-    .line 117
     :try_start_0
     invoke-virtual/range {p1 .. p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v10
 
-    .line 118
-    iget-object v3, v1, Landroid/support/v4/content/LocalBroadcastManager;->mAppContext:Landroid/content/Context;
+    iget-object v3, v0, Landroid/support/v4/content/LocalBroadcastManager;->mAppContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
-    invoke-virtual {v0, v3}, Landroid/content/Intent;->resolveTypeIfNeeded(Landroid/content/ContentResolver;)Ljava/lang/String;
+    invoke-virtual {v1, v3}, Landroid/content/Intent;->resolveTypeIfNeeded(Landroid/content/ContentResolver;)Ljava/lang/String;
 
     move-result-object v11
 
-    .line 119
     invoke-virtual/range {p1 .. p1}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v12
 
-    .line 120
     invoke-virtual/range {p1 .. p1}, Landroid/content/Intent;->getScheme()Ljava/lang/String;
 
     move-result-object v13
 
-    .line 121
     invoke-virtual/range {p1 .. p1}, Landroid/content/Intent;->getCategories()Ljava/util/Set;
 
     move-result-object v14
 
-    .line 122
     invoke-virtual/range {p1 .. p1}, Landroid/content/Intent;->getFlags()I
 
     move-result v3
@@ -456,7 +408,6 @@
 
     const-string v3, "LocalBroadcastManager"
 
-    .line 124
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -477,7 +428,7 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -485,9 +436,8 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 127
     :cond_1
-    iget-object v3, v1, Landroid/support/v4/content/LocalBroadcastManager;->mActions:Ljava/util/HashMap;
+    iget-object v3, v0, Landroid/support/v4/content/LocalBroadcastManager;->mActions:Ljava/util/HashMap;
 
     invoke-virtual/range {p1 .. p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -501,13 +451,12 @@
 
     check-cast v8, Ljava/util/ArrayList;
 
-    if-eqz v8, :cond_d
+    if-eqz v8, :cond_11
 
     if-eqz v16, :cond_2
 
     const-string v3, "LocalBroadcastManager"
 
-    .line 130
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -531,15 +480,13 @@
 
     const/4 v7, 0x0
 
-    .line 136
     :goto_1
     invoke-virtual {v8}, Ljava/util/ArrayList;->size()I
 
     move-result v3
 
-    if-ge v7, v3, :cond_a
+    if-ge v7, v3, :cond_e
 
-    .line 137
     invoke-virtual {v8, v7}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -552,7 +499,6 @@
 
     const-string v3, "LocalBroadcastManager"
 
-    .line 139
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -571,7 +517,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 142
     :cond_3
     iget-boolean v3, v5, Landroid/support/v4/content/LocalBroadcastManager$ReceiverRecord;->broadcasting:Z
 
@@ -583,22 +528,7 @@
 
     const-string v4, "  Filter\'s target already added"
 
-    .line 144
     invoke-static {v3, v4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    move/from16 v18, v7
-
-    move-object/from16 v19, v8
-
-    move-object/from16 v17, v10
-
-    move-object/from16 v20, v11
-
-    const/4 v11, 0x1
-
-    move-object v10, v6
-
-    goto/16 :goto_4
 
     :cond_4
     move/from16 v18, v7
@@ -615,7 +545,6 @@
 
     goto/16 :goto_4
 
-    .line 147
     :cond_5
     iget-object v3, v5, Landroid/support/v4/content/LocalBroadcastManager$ReceiverRecord;->filter:Landroid/content/IntentFilter;
 
@@ -655,7 +584,6 @@
 
     const-string v4, "LocalBroadcastManager"
 
-    .line 150
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -679,7 +607,6 @@
     :cond_6
     if-nez v10, :cond_7
 
-    .line 154
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
@@ -689,46 +616,57 @@
     :cond_7
     move-object v6, v10
 
-    .line 157
     :goto_2
     invoke-virtual {v6, v15}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 158
     iput-boolean v11, v15, Landroid/support/v4/content/LocalBroadcastManager$ReceiverRecord;->broadcasting:Z
 
     goto :goto_5
 
     :cond_8
-    if-eqz v16, :cond_9
+    if-eqz v16, :cond_d
 
-    packed-switch v3, :pswitch_data_0
+    const/4 v4, -0x4
 
-    const-string v3, "unknown reason"
+    if-eq v3, v4, :cond_c
+
+    const/4 v4, -0x3
+
+    if-eq v3, v4, :cond_b
+
+    const/4 v4, -0x2
+
+    if-eq v3, v4, :cond_a
+
+    const/4 v4, -0x1
+
+    if-eq v3, v4, :cond_9
+
+    const-string/jumbo v3, "unknown reason"
 
     goto :goto_3
 
-    :pswitch_0
-    const-string v3, "type"
+    :cond_9
+    const-string/jumbo v3, "type"
 
     goto :goto_3
 
-    :pswitch_1
+    :cond_a
     const-string v3, "data"
 
     goto :goto_3
 
-    :pswitch_2
+    :cond_b
     const-string v3, "action"
 
     goto :goto_3
 
-    :pswitch_3
+    :cond_c
     const-string v3, "category"
 
     :goto_3
     const-string v4, "LocalBroadcastManager"
 
-    .line 178
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -745,7 +683,7 @@
 
     invoke-static {v4, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_9
+    :cond_d
     :goto_4
     move-object v6, v10
 
@@ -760,24 +698,22 @@
 
     goto/16 :goto_1
 
-    :cond_a
+    :cond_e
     move-object v10, v6
 
     const/4 v11, 0x1
 
-    if-eqz v10, :cond_d
+    if-eqz v10, :cond_11
 
     const/4 v3, 0x0
 
-    .line 184
     :goto_6
     invoke-virtual {v10}, Ljava/util/ArrayList;->size()I
 
     move-result v4
 
-    if-ge v3, v4, :cond_b
+    if-ge v3, v4, :cond_f
 
-    .line 185
     invoke-virtual {v10, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -792,38 +728,33 @@
 
     goto :goto_6
 
-    .line 188
-    :cond_b
-    iget-object v3, v1, Landroid/support/v4/content/LocalBroadcastManager;->mPendingBroadcasts:Ljava/util/ArrayList;
+    :cond_f
+    iget-object v3, v0, Landroid/support/v4/content/LocalBroadcastManager;->mPendingBroadcasts:Ljava/util/ArrayList;
 
     new-instance v4, Landroid/support/v4/content/LocalBroadcastManager$BroadcastRecord;
 
-    invoke-direct {v4, v0, v10}, Landroid/support/v4/content/LocalBroadcastManager$BroadcastRecord;-><init>(Landroid/content/Intent;Ljava/util/ArrayList;)V
+    invoke-direct {v4, v1, v10}, Landroid/support/v4/content/LocalBroadcastManager$BroadcastRecord;-><init>(Landroid/content/Intent;Ljava/util/ArrayList;)V
 
     invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 189
-    iget-object v0, v1, Landroid/support/v4/content/LocalBroadcastManager;->mHandler:Landroid/os/Handler;
+    iget-object v1, v0, Landroid/support/v4/content/LocalBroadcastManager;->mHandler:Landroid/os/Handler;
 
-    invoke-virtual {v0, v11}, Landroid/os/Handler;->hasMessages(I)Z
+    invoke-virtual {v1, v11}, Landroid/os/Handler;->hasMessages(I)Z
 
-    move-result v0
+    move-result v1
 
-    if-nez v0, :cond_c
+    if-nez v1, :cond_10
 
-    .line 190
-    iget-object v0, v1, Landroid/support/v4/content/LocalBroadcastManager;->mHandler:Landroid/os/Handler;
+    iget-object v0, v0, Landroid/support/v4/content/LocalBroadcastManager;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v11}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 193
-    :cond_c
+    :cond_10
     monitor-exit v2
 
     return v11
 
-    .line 197
-    :cond_d
+    :cond_11
     monitor-exit v2
 
     const/4 v0, 0x0
@@ -833,35 +764,22 @@
     :catchall_0
     move-exception v0
 
-    .line 198
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch -0x4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 .method public sendBroadcastSync(Landroid/content/Intent;)V
     .locals 0
 
-    .line 202
     invoke-virtual {p0, p1}, Landroid/support/v4/content/LocalBroadcastManager;->sendBroadcast(Landroid/content/Intent;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 203
     invoke-direct {p0}, Landroid/support/v4/content/LocalBroadcastManager;->executePendingBroadcasts()V
 
     :cond_0
@@ -871,12 +789,10 @@
 .method public unregisterReceiver(Landroid/content/BroadcastReceiver;)V
     .locals 11
 
-    .line 85
     iget-object v0, p0, Landroid/support/v4/content/LocalBroadcastManager;->mReceivers:Ljava/util/HashMap;
 
     monitor-enter v0
 
-    .line 86
     :try_start_0
     iget-object v1, p0, Landroid/support/v4/content/LocalBroadcastManager;->mReceivers:Ljava/util/HashMap;
 
@@ -888,7 +804,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 88
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v2
@@ -900,19 +815,16 @@
     :goto_0
     if-ltz v2, :cond_4
 
-    .line 89
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Landroid/support/v4/content/LocalBroadcastManager$ReceiverRecord;
 
-    .line 90
     iput-boolean v3, v4, Landroid/support/v4/content/LocalBroadcastManager$ReceiverRecord;->dead:Z
 
     const/4 v5, 0x0
 
-    .line 92
     :goto_1
     iget-object v6, v4, Landroid/support/v4/content/LocalBroadcastManager$ReceiverRecord;->filter:Landroid/content/IntentFilter;
 
@@ -922,14 +834,12 @@
 
     if-ge v5, v6, :cond_3
 
-    .line 93
     iget-object v6, v4, Landroid/support/v4/content/LocalBroadcastManager$ReceiverRecord;->filter:Landroid/content/IntentFilter;
 
     invoke-virtual {v6, v5}, Landroid/content/IntentFilter;->getAction(I)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 94
     iget-object v7, p0, Landroid/support/v4/content/LocalBroadcastManager;->mActions:Ljava/util/HashMap;
 
     invoke-virtual {v7, v6}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -940,7 +850,6 @@
 
     if-eqz v7, :cond_2
 
-    .line 96
     invoke-virtual {v7}, Ljava/util/ArrayList;->size()I
 
     move-result v8
@@ -950,22 +859,18 @@
     :goto_2
     if-ltz v8, :cond_1
 
-    .line 97
     invoke-virtual {v7, v8}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v9
 
     check-cast v9, Landroid/support/v4/content/LocalBroadcastManager$ReceiverRecord;
 
-    .line 98
     iget-object v10, v9, Landroid/support/v4/content/LocalBroadcastManager$ReceiverRecord;->receiver:Landroid/content/BroadcastReceiver;
 
     if-ne v10, p1, :cond_0
 
-    .line 99
     iput-boolean v3, v9, Landroid/support/v4/content/LocalBroadcastManager$ReceiverRecord;->dead:Z
 
-    .line 100
     invoke-virtual {v7, v8}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
     :cond_0
@@ -973,7 +878,6 @@
 
     goto :goto_2
 
-    .line 104
     :cond_1
     invoke-virtual {v7}, Ljava/util/ArrayList;->size()I
 
@@ -981,7 +885,6 @@
 
     if-gtz v7, :cond_2
 
-    .line 105
     iget-object v7, p0, Landroid/support/v4/content/LocalBroadcastManager;->mActions:Ljava/util/HashMap;
 
     invoke-virtual {v7, v6}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -996,18 +899,17 @@
 
     goto :goto_0
 
-    .line 112
     :cond_4
     monitor-exit v0
 
     return-void
 
     :catchall_0
-    move-exception p1
+    move-exception p0
 
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p1
+    throw p0
 .end method

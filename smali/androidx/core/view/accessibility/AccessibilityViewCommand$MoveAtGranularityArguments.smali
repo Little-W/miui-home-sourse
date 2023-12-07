@@ -1,6 +1,5 @@
 .class public final Landroidx/core/view/accessibility/AccessibilityViewCommand$MoveAtGranularityArguments;
 .super Landroidx/core/view/accessibility/AccessibilityViewCommand$CommandArguments;
-.source "AccessibilityViewCommand.java"
 
 
 # annotations
@@ -18,7 +17,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 64
     invoke-direct {p0}, Landroidx/core/view/accessibility/AccessibilityViewCommand$CommandArguments;-><init>()V
 
     return-void

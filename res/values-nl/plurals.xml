@@ -44,14 +44,6 @@
         <item quantity="other">%2$s ongelezen van %1$s</item>
         <item quantity="one">%2$s ongelezen van %1$s</item>
     </plurals>
-    <plurals name="delete_wallpapers_message">
-        <item quantity="other">%1$d achtergronden verwijderen?</item>
-        <item quantity="one">%1$d achtergrond verwijderen?</item>
-    </plurals>
-    <plurals name="editing_mode_title">
-        <item quantity="other">%1$d items geselecteerd</item>
-        <item quantity="one">%1$d item geselecteerd</item>
-    </plurals>
     <plurals name="half_hour_ago">
         <item quantity="other">Een half uur geleden</item>
         <item quantity="one">Een half uur geleden</item>
@@ -80,13 +72,17 @@
         <item quantity="other">%d items geselecteerd</item>
         <item quantity="one">%d item geselecteerd</item>
     </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d nieuwe meldingen</item>
+        <item quantity="one">%d nieuwe melding</item>
+    </plurals>
     <plurals name="num_minutes_ago">
         <item quantity="other">%d minuten geleden</item>
         <item quantity="one">1 minuut geleden</item>
     </plurals>
     <plurals name="remove_dialog_title_multi_format">
-        <item quantity="other">%1$d apps verwijderen van het Startscherm?</item>
-        <item quantity="one">%1$d app verwijderen van het Startscherm?</item>
+        <item quantity="other">%1$d items verwijderen van het Startscherm?</item>
+        <item quantity="one">%1$d item verwijderen van het Startscherm?</item>
     </plurals>
     <plurals name="scroll_tip_format_when_announce_accessibility">
         <item quantity="other">Pagina %1$d, %2$d apps.</item>

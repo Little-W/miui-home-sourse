@@ -1,6 +1,5 @@
 .class public interface abstract Lokio/Source;
 .super Ljava/lang/Object;
-.source "Source.java"
 
 # interfaces
 .implements Ljava/io/Closeable;
@@ -21,4 +20,7 @@
             Ljava/io/IOException;
         }
     .end annotation
+.end method
+
+.method public abstract timeout()Lokio/Timeout;
 .end method

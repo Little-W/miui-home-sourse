@@ -1,6 +1,5 @@
 .class Lcom/market/sdk/EnableStateManager$EnableStateUpdateReceiver;
 .super Landroid/content/BroadcastReceiver;
-.source "EnableStateManager.java"
 
 
 # annotations
@@ -28,7 +27,6 @@
 .method private constructor <init>(Lcom/market/sdk/EnableStateManager;)V
     .locals 0
 
-    .line 339
     iput-object p1, p0, Lcom/market/sdk/EnableStateManager$EnableStateUpdateReceiver;->this$0:Lcom/market/sdk/EnableStateManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +37,6 @@
 .method synthetic constructor <init>(Lcom/market/sdk/EnableStateManager;Lcom/market/sdk/EnableStateManager$1;)V
     .locals 0
 
-    .line 339
     invoke-direct {p0, p1}, Lcom/market/sdk/EnableStateManager$EnableStateUpdateReceiver;-><init>(Lcom/market/sdk/EnableStateManager;)V
 
     return-void
@@ -54,39 +51,34 @@
 .end method
 
 .method private onReceive$___twin___(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 4
+    .locals 2
 
-    .line 343
     invoke-static {}, Lcom/market/sdk/utils/Utils;->isScreenOff()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 344
-    iget-object p1, p0, Lcom/market/sdk/EnableStateManager$EnableStateUpdateReceiver;->this$0:Lcom/market/sdk/EnableStateManager;
+    iget-object p0, p0, Lcom/market/sdk/EnableStateManager$EnableStateUpdateReceiver;->this$0:Lcom/market/sdk/EnableStateManager;
 
-    const/4 p2, 0x0
+    const/4 p1, 0x0
 
-    invoke-static {p1, p2}, Lcom/market/sdk/EnableStateManager;->access$300(Lcom/market/sdk/EnableStateManager;Z)V
+    invoke-static {p0, p1}, Lcom/market/sdk/EnableStateManager;->access$300(Lcom/market/sdk/EnableStateManager;Z)V
 
     return-void
 
-    .line 347
     :cond_0
-    iget-object p1, p0, Lcom/market/sdk/EnableStateManager$EnableStateUpdateReceiver;->this$0:Lcom/market/sdk/EnableStateManager;
+    iget-object p0, p0, Lcom/market/sdk/EnableStateManager$EnableStateUpdateReceiver;->this$0:Lcom/market/sdk/EnableStateManager;
 
-    .line 348
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v0
+    move-result-wide p1
 
-    const-wide/32 v2, 0x5265c00
+    const-wide/32 v0, 0x5265c00
 
-    add-long/2addr v0, v2
+    add-long/2addr p1, v0
 
-    .line 347
-    invoke-static {p1, v0, v1}, Lcom/market/sdk/EnableStateManager;->access$100(Lcom/market/sdk/EnableStateManager;J)V
+    invoke-static {p0, p1, p2}, Lcom/market/sdk/EnableStateManager;->access$100(Lcom/market/sdk/EnableStateManager;J)V
 
     return-void
 .end method

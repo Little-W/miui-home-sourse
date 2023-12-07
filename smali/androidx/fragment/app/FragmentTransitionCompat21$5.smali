@@ -1,6 +1,5 @@
 .class Landroidx/fragment/app/FragmentTransitionCompat21$5;
 .super Landroid/transition/Transition$EpicenterCallback;
-.source "FragmentTransitionCompat21.java"
 
 
 # annotations
@@ -24,7 +23,6 @@
 .method constructor <init>(Landroidx/fragment/app/FragmentTransitionCompat21;Landroid/graphics/Rect;)V
     .locals 0
 
-    .line 349
     iput-object p1, p0, Landroidx/fragment/app/FragmentTransitionCompat21$5;->this$0:Landroidx/fragment/app/FragmentTransitionCompat21;
 
     iput-object p2, p0, Landroidx/fragment/app/FragmentTransitionCompat21$5;->val$epicenter:Landroid/graphics/Rect;
@@ -39,7 +37,6 @@
 .method public onGetEpicenter(Landroid/transition/Transition;)Landroid/graphics/Rect;
     .locals 0
 
-    .line 352
     iget-object p1, p0, Landroidx/fragment/app/FragmentTransitionCompat21$5;->val$epicenter:Landroid/graphics/Rect;
 
     if-eqz p1, :cond_1
@@ -52,15 +49,14 @@
 
     goto :goto_0
 
-    .line 355
     :cond_0
-    iget-object p1, p0, Landroidx/fragment/app/FragmentTransitionCompat21$5;->val$epicenter:Landroid/graphics/Rect;
+    iget-object p0, p0, Landroidx/fragment/app/FragmentTransitionCompat21$5;->val$epicenter:Landroid/graphics/Rect;
 
-    return-object p1
+    return-object p0
 
     :cond_1
     :goto_0
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return-object p1
+    return-object p0
 .end method

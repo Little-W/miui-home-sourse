@@ -1,6 +1,5 @@
 .class Landroidx/dynamicanimation/animation/AnimationHandler$FrameCallbackProvider14$1;
 .super Ljava/lang/Object;
-.source "AnimationHandler.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -25,7 +24,6 @@
 .method constructor <init>(Landroidx/dynamicanimation/animation/AnimationHandler$FrameCallbackProvider14;)V
     .locals 0
 
-    .line 230
     iput-object p1, p0, Landroidx/dynamicanimation/animation/AnimationHandler$FrameCallbackProvider14$1;->this$0:Landroidx/dynamicanimation/animation/AnimationHandler$FrameCallbackProvider14;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +36,6 @@
 .method public run()V
     .locals 3
 
-    .line 233
     iget-object v0, p0, Landroidx/dynamicanimation/animation/AnimationHandler$FrameCallbackProvider14$1;->this$0:Landroidx/dynamicanimation/animation/AnimationHandler$FrameCallbackProvider14;
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
@@ -47,12 +44,11 @@
 
     iput-wide v1, v0, Landroidx/dynamicanimation/animation/AnimationHandler$FrameCallbackProvider14;->mLastFrameTime:J
 
-    .line 234
-    iget-object v0, p0, Landroidx/dynamicanimation/animation/AnimationHandler$FrameCallbackProvider14$1;->this$0:Landroidx/dynamicanimation/animation/AnimationHandler$FrameCallbackProvider14;
+    iget-object p0, p0, Landroidx/dynamicanimation/animation/AnimationHandler$FrameCallbackProvider14$1;->this$0:Landroidx/dynamicanimation/animation/AnimationHandler$FrameCallbackProvider14;
 
-    iget-object v0, v0, Landroidx/dynamicanimation/animation/AnimationHandler$FrameCallbackProvider14;->mDispatcher:Landroidx/dynamicanimation/animation/AnimationHandler$AnimationCallbackDispatcher;
+    iget-object p0, p0, Landroidx/dynamicanimation/animation/AnimationHandler$FrameCallbackProvider14;->mDispatcher:Landroidx/dynamicanimation/animation/AnimationHandler$AnimationCallbackDispatcher;
 
-    invoke-virtual {v0}, Landroidx/dynamicanimation/animation/AnimationHandler$AnimationCallbackDispatcher;->dispatchAnimationFrame()V
+    invoke-virtual {p0}, Landroidx/dynamicanimation/animation/AnimationHandler$AnimationCallbackDispatcher;->dispatchAnimationFrame()V
 
     return-void
 .end method

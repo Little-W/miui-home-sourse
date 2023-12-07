@@ -1,6 +1,5 @@
 .class Landroid/support/v4/media/MediaBrowserCompatApi26;
 .super Ljava/lang/Object;
-.source "MediaBrowserCompatApi26.java"
 
 
 # annotations
@@ -16,7 +15,6 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 71
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -25,7 +23,6 @@
 .method static createSubscriptionCallback(Landroid/support/v4/media/MediaBrowserCompatApi26$SubscriptionCallback;)Ljava/lang/Object;
     .locals 1
 
-    .line 31
     new-instance v0, Landroid/support/v4/media/MediaBrowserCompatApi26$SubscriptionCallbackProxy;
 
     invoke-direct {v0, p0}, Landroid/support/v4/media/MediaBrowserCompatApi26$SubscriptionCallbackProxy;-><init>(Landroid/support/v4/media/MediaBrowserCompatApi26$SubscriptionCallback;)V
@@ -36,7 +33,6 @@
 .method public static subscribe(Ljava/lang/Object;Ljava/lang/String;Landroid/os/Bundle;Ljava/lang/Object;)V
     .locals 0
 
-    .line 36
     check-cast p0, Landroid/media/browse/MediaBrowser;
 
     check-cast p3, Landroid/media/browse/MediaBrowser$SubscriptionCallback;
@@ -49,7 +45,6 @@
 .method public static unsubscribe(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Object;)V
     .locals 0
 
-    .line 42
     check-cast p0, Landroid/media/browse/MediaBrowser;
 
     check-cast p2, Landroid/media/browse/MediaBrowser$SubscriptionCallback;

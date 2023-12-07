@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="133.0dip" android:width="118.0dip" android:viewportWidth="118.0" android:viewportHeight="133.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <path android:fillColor="#ffffffff" android:pathData="M8,1.5L110,1.5A6.5,6.5 0,0 1,116.5 8L116.5,125A6.5,6.5 0,0 1,110 131.5L8,131.5A6.5,6.5 0,0 1,1.5 125L1.5,8A6.5,6.5 0,0 1,8 1.5z" android:fillAlpha="0.15" />
+    <path android:fillColor="#00000000" android:pathData="M8,1.5L110,1.5A6.5,6.5 0,0 1,116.5 8L116.5,125A6.5,6.5 0,0 1,110 131.5L8,131.5A6.5,6.5 0,0 1,1.5 125L1.5,8A6.5,6.5 0,0 1,8 1.5z" android:strokeColor="#ff585858" android:strokeWidth="3.0" />
+    <path android:fillColor="#ff878787" android:pathData="M44,123L74,123A1,1 0,0 1,75 124L75,124A1,1 0,0 1,74 125L44,125A1,1 0,0 1,43 124L43,124A1,1 0,0 1,44 123z" />
+    <path android:fillColor="#ff494949" android:pathData="M24,17L94,17A3,3 0,0 1,97 20L97,100A3,3 0,0 1,94 103L24,103A3,3 0,0 1,21 100L21,20A3,3 0,0 1,24 17z" android:fillAlpha="0.48" />
+    <path android:fillColor="@drawable/$navigation_bar_guide_home__0" android:pathData="M65,100l-12,0l-0,30l12,0z" android:fillAlpha="0.3" />
+    <path android:fillColor="#ff0d84ff" android:pathData="M59,100m-6,-0a6,6 0,1 0,12 -0a6,6 0,1 0,-12 -0" android:fillAlpha="0.8" />
+</vector>

@@ -7,6 +7,8 @@
     <dimen name="clear_container_padding_bottom">8.0dip</dimen>
     <dimen name="fastscroll_letter_side_padding_bottom">10.089996dip</dimen>
     <dimen name="fastscroll_letter_side_padding_top">10.089996dip</dimen>
+    <dimen name="material_time_picker_minimum_screen_height">450.0dip</dimen>
+    <dimen name="material_time_picker_minimum_screen_width">600.0dip</dimen>
     <dimen name="miuix_appcompat_action_bar_default_height">48.669983dip</dimen>
     <dimen name="miuix_appcompat_action_bar_horizontal_padding_end">43.399994dip</dimen>
     <dimen name="miuix_appcompat_action_bar_horizontal_padding_start">43.399994dip</dimen>
@@ -14,6 +16,20 @@
     <dimen name="miuix_appcompat_action_button_bg_bottom_padding">9.599976dip</dimen>
     <dimen name="miuix_appcompat_action_button_bg_top_padding">9.599976dip</dimen>
     <item type="dimen" name="miuix_appcompat_subtitle_text_size">@dimen/miuix_appcompat_title_text_size</item>
+    <dimen name="mtrl_alert_dialog_background_inset_bottom">24.0dip</dimen>
+    <dimen name="mtrl_alert_dialog_background_inset_top">24.0dip</dimen>
+    <dimen name="mtrl_calendar_days_of_week_height">20.0dip</dimen>
+    <dimen name="mtrl_calendar_header_content_padding">4.0dip</dimen>
+    <dimen name="mtrl_calendar_header_height_fullscreen">96.0dip</dimen>
+    <dimen name="mtrl_calendar_header_toggle_margin_bottom">0.0dip</dimen>
+    <dimen name="mtrl_calendar_header_toggle_margin_top">0.0dip</dimen>
+    <dimen name="mtrl_calendar_landscape_header_width">104.0dip</dimen>
+    <dimen name="mtrl_calendar_selection_baseline_to_top_fullscreen">68.0dip</dimen>
+    <dimen name="mtrl_calendar_selection_text_baseline_to_bottom_fullscreen">28.0dip</dimen>
+    <dimen name="mtrl_calendar_selection_text_baseline_to_top">64.0dip</dimen>
+    <dimen name="mtrl_calendar_text_input_padding_top">32.0dip</dimen>
+    <dimen name="mtrl_calendar_title_baseline_to_top">24.0dip</dimen>
+    <dimen name="mtrl_calendar_title_baseline_to_top_fullscreen">32.0dip</dimen>
     <dimen name="smallwindow_crop_content_margin_top">30.0dip</dimen>
     <dimen name="smallwindow_crop_content_trans_x">50.19998dip</dimen>
     <dimen name="smallwindow_crop_content_trans_y">0.0dip</dimen>
@@ -21,4 +37,6 @@
     <dimen name="smallwindow_crop_height_padding_horizontal">17.449982dip</dimen>
     <dimen name="smallwindow_crop_height_padding_vertical">18.199982dip</dimen>
     <dimen name="smallwindow_crop_width">230.94998dip</dimen>
+    <dimen name="worldcirculate_smallwindow_crop_height_padding_horizontal">43.639984dip</dimen>
+    <dimen name="worldcirculate_smallwindow_crop_height_padding_vertical">21.819977dip</dimen>
 </resources>

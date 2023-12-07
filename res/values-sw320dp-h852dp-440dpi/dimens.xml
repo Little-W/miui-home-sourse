@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="config_icon_height">51.179993dip</dimen>
+    <dimen name="config_icon_width">51.179993dip</dimen>
+    <dimen name="enforced_rounded_corner_max_radius">18.0dip</dimen>
+    <dimen name="folder_item_horizontal_spacing_noword">28.0dip</dimen>
+    <dimen name="hotseats_height">120.0dip</dimen>
+    <dimen name="hotseats_margin_top_search_bar">50.0dip</dimen>
+    <dimen name="slide_bar_margin_top">30.0dip</dimen>
+    <dimen name="workspace_cell_padding_top">68.0dip</dimen>
+</resources>

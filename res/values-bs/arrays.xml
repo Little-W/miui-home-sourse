@@ -1,48 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="cell_layout_size_entries">
-        <item>4x4</item>
-        <item>4x5</item>
-    </string-array>
-    <string-array name="cell_layout_size_values">
-        <item>4x4</item>
-        <item>4x5</item>
+    <string-array name="animation_rate_entries">
+        <item>Relaksirano</item>
+        <item>Balansirano</item>
+        <item>Brzo</item>
     </string-array>
     <string-array name="editing_mode_entries">
         <item>Pozadina</item>
         <item>Widgeti</item>
         <item>Postavke</item>
     </string-array>
-    <string-array name="gadget_weather_image">
-        <item>Vedro</item>
-        <item>Oblačno</item>
-        <item>Izmaglica</item>
-        <item>Maglovito</item>
-        <item>Jaka kišna oluja</item>
-        <item>Kišna oluja</item>
-        <item>Vrlo jake padavine</item>
-        <item>Oluja sa grmljavinom</item>
-        <item>Pljusak</item>
-        <item>Jake padavine</item>
-        <item>Kiša</item>
-        <item>Rosulja</item>
-        <item>Susnježica</item>
-        <item>Snježna oluja</item>
-        <item>Nanosi snijega</item>
-        <item>Jak snijeg</item>
-        <item>Snijeg</item>
-        <item>Slab snijeg</item>
-        <item>Jaka pješčana oluja</item>
-        <item>Pješčana oluja</item>
-        <item>Blaga pješčana oluja</item>
-        <item>Pješčana oluja</item>
-        <item>Grad</item>
-        <item>Floating dust</item>
-        <item>Izmaglica</item>
-    </string-array>
-    <string-array name="gadget_weather_theme_type_entries">
+    <string-array name="monochrome_color_entries">
         <item>Zadano</item>
-        <item>Klasično</item>
+        <item>Plava</item>
+        <item>Zelena</item>
+        <item>Ljubičasta</item>
+        <item>Smeđa</item>
+    </string-array>
+    <string-array name="no_word_model_entries">
+        <item>Isk</item>
+        <item>Bilo gdje</item>
+        <item>Na widgetima</item>
+    </string-array>
+    <string-array name="no_word_model_entries_not_support_only_widget_no_word">
+        <item>Isk</item>
+        <item>Bilo gdje</item>
     </string-array>
     <string-array name="transformation_entries">
         <item>Bez preklapanja</item>
@@ -52,11 +34,5 @@
         <item>Kaskada</item>
         <item>Rotiraj</item>
         <item>Kocka</item>
-    </string-array>
-    <string-array name="wallpaper_scroll_entries">
-        <item>Zadana tema</item>
-        <item>Sredina</item>
-        <item>Lijevo</item>
-        <item>Desno</item>
     </string-array>
 </resources>

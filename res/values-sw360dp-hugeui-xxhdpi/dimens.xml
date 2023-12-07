@@ -5,7 +5,6 @@
     <dimen name="folder_content_width">292.0dip</dimen>
     <dimen name="folder_top_padding">62.0dip</dimen>
     <dimen name="hotseats_height">90.0dip</dimen>
-    <dimen name="hotseats_padding_bottom">0.0dip</dimen>
     <dimen name="workspace_cell_height">95.0dip</dimen>
     <dimen name="workspace_cell_padding_side">8.0dip</dimen>
     <dimen name="workspace_cell_width">82.0dip</dimen>

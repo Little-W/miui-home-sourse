@@ -1,6 +1,5 @@
 .class final Lcom/google/android/libraries/gsa/launcherclient/f;
 .super Landroid/content/BroadcastReceiver;
-.source "LauncherClient.java"
 
 
 # annotations
@@ -21,7 +20,6 @@
 
     iput-object p1, p0, Lcom/google/android/libraries/gsa/launcherclient/f;->a:Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;
 
-    .line 1
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -38,12 +36,10 @@
 .method private final onReceive$___twin___(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .line 2
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object p2
 
-    .line 3
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x13
@@ -54,7 +50,6 @@
 
     iget-object v0, p0, Lcom/google/android/libraries/gsa/launcherclient/f;->a:Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;
 
-    .line 4
     invoke-static {v0}, Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;->a(Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;)Lcom/google/android/libraries/gsa/launcherclient/LauncherClient$ClientOptions;
 
     move-result-object v0
@@ -76,7 +71,6 @@
     :cond_0
     iget-object p2, p0, Lcom/google/android/libraries/gsa/launcherclient/f;->a:Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;
 
-    .line 5
     invoke-static {p2}, Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;->b(Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;)Lcom/google/android/libraries/gsa/launcherclient/l;
 
     move-result-object p2
@@ -85,7 +79,6 @@
 
     iget-object p2, p0, Lcom/google/android/libraries/gsa/launcherclient/f;->a:Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;
 
-    .line 6
     invoke-static {p2}, Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;->c(Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;)Lcom/google/android/libraries/gsa/launcherclient/c;
 
     move-result-object p2
@@ -94,12 +87,10 @@
 
     iget-object p2, p0, Lcom/google/android/libraries/gsa/launcherclient/f;->a:Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;
 
-    .line 7
     invoke-static {p2, p1}, Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;->a(Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;Landroid/content/Context;)V
 
     iget-object p1, p0, Lcom/google/android/libraries/gsa/launcherclient/f;->a:Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;
 
-    .line 8
     invoke-static {p1}, Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;->d(Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;)I
 
     move-result p1
@@ -108,10 +99,9 @@
 
     if-eqz p1, :cond_1
 
-    iget-object p1, p0, Lcom/google/android/libraries/gsa/launcherclient/f;->a:Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;
+    iget-object p0, p0, Lcom/google/android/libraries/gsa/launcherclient/f;->a:Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;
 
-    .line 9
-    invoke-virtual {p1}, Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;->reconnect()V
+    invoke-virtual {p0}, Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;->reconnect()V
 
     :cond_1
     return-void

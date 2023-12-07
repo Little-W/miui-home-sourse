@@ -1,6 +1,5 @@
 .class public Lcom/market/sdk/compat/ActivityThreadCompat;
 .super Ljava/lang/Object;
-.source "ActivityThreadCompat.java"
 
 
 # static fields
@@ -20,7 +19,6 @@
 
     const-string v0, "android.app.ActivityThread"
 
-    .line 12
     invoke-static {v0}, Lcom/market/sdk/utils/ReflectUtils;->getClass(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
@@ -33,7 +31,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,12 +42,10 @@
     :try_start_0
     const-string v0, "android.content.pm.IPackageManager"
 
-    .line 17
     invoke-static {v0}, Lcom/market/sdk/utils/ReflectUtils;->getClass(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 18
     sget-object v1, Lcom/market/sdk/compat/ActivityThreadCompat;->sActivityThread:Ljava/lang/Class;
 
     sget-object v2, Lcom/market/sdk/compat/ActivityThreadCompat;->sActivityThread:Ljava/lang/Class;

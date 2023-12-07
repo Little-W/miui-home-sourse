@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <exclude domain="sharedpref" path="BNC_analytics.xml" />
+    <exclude domain="sharedpref" path="BNC_remote_config.xml" />
+    <exclude domain="sharedpref" path="BNC_raw_db.xml" />
+    <exclude domain="sharedpref" path="BNC_room_db.xml" />
+    <exclude domain="sharedpref" path="BNC_glide.xml" />
+    <exclude domain="sharedpref" path="BNC_bundle_update_lock.xml" />
+</full-backup-content>

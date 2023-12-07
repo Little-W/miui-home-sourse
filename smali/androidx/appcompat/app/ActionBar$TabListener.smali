@@ -1,6 +1,5 @@
 .class public interface abstract Landroidx/appcompat/app/ActionBar$TabListener;
 .super Ljava/lang/Object;
-.source "ActionBar.java"
 
 
 # annotations

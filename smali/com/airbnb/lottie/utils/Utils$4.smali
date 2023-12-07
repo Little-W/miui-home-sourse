@@ -1,6 +1,5 @@
 .class Lcom/airbnb/lottie/utils/Utils$4;
 .super Ljava/lang/ThreadLocal;
-.source "Utils.java"
 
 
 # annotations
@@ -25,7 +24,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 61
     invoke-direct {p0}, Ljava/lang/ThreadLocal;-><init>()V
 
     return-void
@@ -34,23 +32,21 @@
 
 # virtual methods
 .method protected bridge synthetic initialValue()Ljava/lang/Object;
-    .locals 1
+    .locals 0
 
-    .line 61
     invoke-virtual {p0}, Lcom/airbnb/lottie/utils/Utils$4;->initialValue()[F
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method protected initialValue()[F
-    .locals 1
+    .locals 0
 
-    const/4 v0, 0x4
+    const/4 p0, 0x4
 
-    .line 64
-    new-array v0, v0, [F
+    new-array p0, p0, [F
 
-    return-object v0
+    return-object p0
 .end method

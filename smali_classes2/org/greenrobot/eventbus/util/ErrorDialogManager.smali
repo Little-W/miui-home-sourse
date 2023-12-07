@@ -1,6 +1,5 @@
 .class public Lorg/greenrobot/eventbus/util/ErrorDialogManager;
 .super Ljava/lang/Object;
-.source "ErrorDialogManager.java"
 
 
 # annotations

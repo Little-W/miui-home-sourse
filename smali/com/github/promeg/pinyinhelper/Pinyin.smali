@@ -1,6 +1,5 @@
 .class public final Lcom/github/promeg/pinyinhelper/Pinyin;
 .super Ljava/lang/Object;
-.source "Pinyin.java"
 
 
 # annotations
@@ -37,20 +36,16 @@
 .method private static decodeIndex([B[BI)S
     .locals 2
 
-    .line 127
     div-int/lit8 v0, p2, 0x8
 
-    .line 128
     rem-int/lit8 v1, p2, 0x8
 
-    .line 130
     aget-byte p1, p1, p2
 
     and-int/lit16 p1, p1, 0xff
 
     int-to-short p1, p1
 
-    .line 132
     aget-byte p0, p0, v0
 
     sget-object p2, Lcom/github/promeg/pinyinhelper/PinyinData;->BIT_MASKS:[I
@@ -80,7 +75,6 @@
 
     if-ge p0, v0, :cond_0
 
-    .line 114
     sget-object v0, Lcom/github/promeg/pinyinhelper/PinyinCode1;->PINYIN_CODE_PADDING:[B
 
     sget-object v1, Lcom/github/promeg/pinyinhelper/PinyinCode1;->PINYIN_CODE:[B
@@ -98,7 +92,6 @@
 
     if-ge p0, v1, :cond_1
 
-    .line 117
     sget-object v1, Lcom/github/promeg/pinyinhelper/PinyinCode2;->PINYIN_CODE_PADDING:[B
 
     sget-object v2, Lcom/github/promeg/pinyinhelper/PinyinCode2;->PINYIN_CODE:[B
@@ -111,7 +104,6 @@
 
     return p0
 
-    .line 120
     :cond_1
     sget-object v0, Lcom/github/promeg/pinyinhelper/PinyinCode3;->PINYIN_CODE_PADDING:[B
 
@@ -133,18 +125,14 @@
 
     const/4 p0, 0x0
 
-    .line 29
     sput-object p0, Lcom/github/promeg/pinyinhelper/Pinyin;->mPinyinDicts:Ljava/util/List;
 
-    .line 30
     sput-object p0, Lcom/github/promeg/pinyinhelper/Pinyin;->mTrieDict:Lorg/ahocorasick/trie/Trie;
 
-    .line 31
     sput-object p0, Lcom/github/promeg/pinyinhelper/Pinyin;->mSelector:Lcom/github/promeg/pinyinhelper/SegmentationSelector;
 
     return-void
 
-    .line 35
     :cond_0
     invoke-virtual {p0}, Lcom/github/promeg/pinyinhelper/Pinyin$Config;->valid()Z
 
@@ -154,7 +142,6 @@
 
     return-void
 
-    .line 39
     :cond_1
     invoke-virtual {p0}, Lcom/github/promeg/pinyinhelper/Pinyin$Config;->getPinyinDicts()Ljava/util/List;
 
@@ -166,7 +153,6 @@
 
     sput-object v0, Lcom/github/promeg/pinyinhelper/Pinyin;->mPinyinDicts:Ljava/util/List;
 
-    .line 40
     invoke-virtual {p0}, Lcom/github/promeg/pinyinhelper/Pinyin$Config;->getPinyinDicts()Ljava/util/List;
 
     move-result-object v0
@@ -177,7 +163,6 @@
 
     sput-object v0, Lcom/github/promeg/pinyinhelper/Pinyin;->mTrieDict:Lorg/ahocorasick/trie/Trie;
 
-    .line 41
     invoke-virtual {p0}, Lcom/github/promeg/pinyinhelper/Pinyin$Config;->getSelector()Lcom/github/promeg/pinyinhelper/SegmentationSelector;
 
     move-result-object p0
@@ -198,7 +183,6 @@
 
     if-gt p0, v0, :cond_0
 
-    .line 107
     invoke-static {p0}, Lcom/github/promeg/pinyinhelper/Pinyin;->getPinyinCode(C)I
 
     move-result v0
@@ -225,7 +209,6 @@
 .method public static newConfig()Lcom/github/promeg/pinyinhelper/Pinyin$Config;
     .locals 2
 
-    .line 65
     new-instance v0, Lcom/github/promeg/pinyinhelper/Pinyin$Config;
 
     const/4 v1, 0x0
@@ -238,7 +221,6 @@
 .method public static toPinyin(C)Ljava/lang/String;
     .locals 1
 
-    .line 88
     invoke-static {p0}, Lcom/github/promeg/pinyinhelper/Pinyin;->isChinese(C)Z
 
     move-result v0
@@ -253,7 +235,6 @@
 
     return-object p0
 
-    .line 92
     :cond_0
     sget-object v0, Lcom/github/promeg/pinyinhelper/PinyinData;->PINYIN_TABLE:[Ljava/lang/String;
 
@@ -265,7 +246,6 @@
 
     return-object p0
 
-    .line 95
     :cond_1
     invoke-static {p0}, Ljava/lang/String;->valueOf(C)Ljava/lang/String;
 
@@ -277,7 +257,6 @@
 .method public static toPinyin(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
-    .line 78
     sget-object v0, Lcom/github/promeg/pinyinhelper/Pinyin;->mTrieDict:Lorg/ahocorasick/trie/Trie;
 
     sget-object v1, Lcom/github/promeg/pinyinhelper/Pinyin;->mPinyinDicts:Ljava/util/List;
