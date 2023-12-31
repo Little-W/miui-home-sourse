@@ -1,0 +1,34 @@
+.class public final synthetic Lcom/miui/home/launcher/allapps/settings/-$$Lambda$CategorySettingFragment$ART2aIcoi0uR2tyXp0IXAWCr264;
+.super Ljava/lang/Object;
+.source "lambda"
+
+# interfaces
+.implements Landroid/content/DialogInterface$OnClickListener;
+
+
+# instance fields
+.field private final synthetic f$0:Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$CategorySettingFragment$ART2aIcoi0uR2tyXp0IXAWCr264;->f$0:Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onClick(Landroid/content/DialogInterface;I)V
+    .locals 0
+
+    iget-object p0, p0, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$CategorySettingFragment$ART2aIcoi0uR2tyXp0IXAWCr264;->f$0:Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;
+
+    invoke-virtual {p0, p1, p2}, Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;->lambda$onClick$1$CategorySettingFragment(Landroid/content/DialogInterface;I)V
+
+    return-void
+.end method

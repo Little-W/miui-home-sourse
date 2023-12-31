@@ -1,0 +1,53 @@
+.class Lcom/miui/home/launcher/Workspace$7;
+.super Ljava/lang/Object;
+.source "Workspace.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/miui/home/launcher/Workspace;->onWallpaperColorChanged()V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic this$0:Lcom/miui/home/launcher/Workspace;
+
+.field final synthetic val$child:Landroid/view/View;
+
+
+# direct methods
+.method constructor <init>(Lcom/miui/home/launcher/Workspace;Landroid/view/View;)V
+    .locals 0
+
+    .line 1831
+    iput-object p1, p0, Lcom/miui/home/launcher/Workspace$7;->this$0:Lcom/miui/home/launcher/Workspace;
+
+    iput-object p2, p0, Lcom/miui/home/launcher/Workspace$7;->val$child:Landroid/view/View;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public run()V
+    .locals 0
+
+    .line 1834
+    iget-object p0, p0, Lcom/miui/home/launcher/Workspace$7;->val$child:Landroid/view/View;
+
+    check-cast p0, Lcom/miui/home/launcher/WallpaperUtils$WallpaperColorChangedListener;
+
+    invoke-interface {p0}, Lcom/miui/home/launcher/WallpaperUtils$WallpaperColorChangedListener;->onWallpaperColorChanged()V
+
+    return-void
+.end method
