@@ -586,7 +586,7 @@ Seguridad mejorada."</string>
     <string name="navigation_type_title">Navegación del sistema</string>
     <string name="navigation_type_virtual_key">Botones</string>
     <string name="network_error">No se pudo conectar a la red. Vuelve a intentarlo.</string>
-    <string name="new_default_folder_title_tools">Aplicaciones del sistema</string>
+    <string name="new_default_folder_title_tools">Apps del sistema</string>
     <string name="new_feature_title">Novedades</string>
     <string name="new_open_personal_assistant_settings_simplified">Bóveda de aplicaciones</string>
     <string name="new_privacy_thumbnail_blur_summary">Desenfocar previsualizaciones de aplicaciones en Recientes</string>

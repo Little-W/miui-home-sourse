@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$5;Z)V
     .locals 0
 
-    .line 1017
+    .line 1019
     iput-object p1, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$5$1;->this$1:Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$5;
 
     iput-boolean p2, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$5$1;->val$result:Z
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 1
 
-    .line 1020
+    .line 1022
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$5$1;->this$1:Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$5;
 
     iget-object v0, v0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$5;->val$resultCallback:Ljava/util/function/Consumer;

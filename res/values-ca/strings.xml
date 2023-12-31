@@ -586,7 +586,7 @@ Seguretat millorada."</string>
     <string name="navigation_type_title">Sistema de navegació</string>
     <string name="navigation_type_virtual_key">Botons</string>
     <string name="network_error">"No s'ha pogut connectar a la xarxa, proveu-ho de nou més tard."</string>
-    <string name="new_default_folder_title_tools">Aplicacions del sistema</string>
+    <string name="new_default_folder_title_tools">Apps del sistema</string>
     <string name="new_feature_title">Què hi ha de nou</string>
     <string name="new_open_personal_assistant_settings_simplified">"Volta d'aplicacions"</string>
     <string name="new_privacy_thumbnail_blur_summary">"Difumineu les vistes prèvies de l'aplicació a Recents"</string>

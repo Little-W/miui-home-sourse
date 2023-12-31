@@ -4,25 +4,25 @@
 
 
 # static fields
-.field public static DBG:Z
+.field public static DBG:Z = false
 
-.field private static cacheProvider:Lcom/airbnb/lottie/network/LottieNetworkCacheProvider;
+.field private static cacheProvider:Lcom/airbnb/lottie/network/LottieNetworkCacheProvider; = null
 
-.field private static depthPastMaxDepth:I
+.field private static depthPastMaxDepth:I = 0x0
 
-.field private static fetcher:Lcom/airbnb/lottie/network/LottieNetworkFetcher;
+.field private static fetcher:Lcom/airbnb/lottie/network/LottieNetworkFetcher; = null
 
-.field private static volatile networkCache:Lcom/airbnb/lottie/network/NetworkCache;
+.field private static volatile networkCache:Lcom/airbnb/lottie/network/NetworkCache; = null
 
-.field private static volatile networkFetcher:Lcom/airbnb/lottie/network/NetworkFetcher;
+.field private static volatile networkFetcher:Lcom/airbnb/lottie/network/NetworkFetcher; = null
 
-.field private static sections:[Ljava/lang/String;
+.field private static sections:[Ljava/lang/String; = null
 
-.field private static startTimeNs:[J
+.field private static startTimeNs:[J = null
 
-.field private static traceDepth:I
+.field private static traceDepth:I = 0x0
 
-.field private static traceEnabled:Z
+.field private static traceEnabled:Z = false
 
 
 # direct methods

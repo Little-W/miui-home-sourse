@@ -503,7 +503,7 @@
     <string name="navigation_type_title">സിസ്റ്റം നാവിഗേഷൻ</string>
     <string name="navigation_type_virtual_key">ബട്ടണുകൾ</string>
     <string name="network_error">നെറ്റ്‌വര്‍ക്കുമായി കണക്റ്റുചെയ്യാനായില്ല. വീണ്ടും ശ്രമിക്കുക.</string>
-    <string name="new_default_folder_title_tools">സിസ്റ്റം ആപ്പുകൾ</string>
+    <string name="new_default_folder_title_tools">സിസ്റ്റം ആപ്പ്</string>
     <string name="new_feature_title">പുതിയത് എന്താണ്</string>
     <string name="new_open_personal_assistant_settings_simplified">ആപ്പ് വാൾട്ട്</string>
     <string name="new_privacy_thumbnail_blur_summary">സമീപകാലത്തുള്ളവയിലെ ആപ്പ് പ്രിവ്യൂകൾ മങ്ങിക്കുക</string>

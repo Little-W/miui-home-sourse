@@ -30,7 +30,7 @@
     <item type="dimen" name="normal_edit_mode_screen_scale_ratio">0.92</item>
     <dimen name="recents_task_view_bar_padding_bottom">5.0dip</dimen>
     <dimen name="recents_task_view_header_height">41.0dip</dimen>
-    <dimen name="recents_task_view_rounded_corners_radius_min">30.0dip</dimen>
+    <dimen name="recents_task_view_rounded_corners_radius_min">12.0dip</dimen>
     <dimen name="recents_task_view_sub_header_app_info_spacing">6.0dip</dimen>
     <dimen name="recommend_margin_end">20.0dip</dimen>
     <dimen name="recommend_margin_start">20.0dip</dimen>

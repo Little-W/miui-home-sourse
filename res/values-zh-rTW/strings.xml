@@ -242,7 +242,7 @@
     <string name="drag_multiple_item_name">%1$d個圖示</string>
     <string name="drag_single_item_name" />
     <string name="drawer_background">外觀顯示</string>
-    <string name="drawer_background_dark">暗色</string>
+    <string name="drawer_background_dark">深色</string>
     <string name="drawer_background_light">亮色</string>
     <string name="drawer_background_transparency">抽屜背景透明度</string>
     <string name="drawer_settings">抽屜設定</string>

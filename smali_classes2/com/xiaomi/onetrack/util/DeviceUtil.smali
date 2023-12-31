@@ -21,27 +21,27 @@
 
 .field private static final e:I = 0xf
 
-.field private static f:Ljava/lang/reflect/Method;
+.field private static f:Ljava/lang/reflect/Method; = null
 
-.field private static g:Ljava/lang/reflect/Method;
+.field private static g:Ljava/lang/reflect/Method; = null
 
-.field private static h:Ljava/lang/Object;
+.field private static h:Ljava/lang/Object; = null
 
-.field private static i:Ljava/lang/reflect/Method;
+.field private static i:Ljava/lang/reflect/Method; = null
 
-.field private static j:Ljava/lang/reflect/Method;
+.field private static j:Ljava/lang/reflect/Method; = null
 
-.field private static volatile k:Ljava/lang/String;
+.field private static volatile k:Ljava/lang/String; = null
 
-.field private static volatile l:Ljava/lang/String;
+.field private static volatile l:Ljava/lang/String; = null
 
-.field private static m:Ljava/lang/String;
+.field private static m:Ljava/lang/String; = null
 
-.field private static n:Ljava/lang/String;
+.field private static n:Ljava/lang/String; = null
 
-.field private static o:Ljava/lang/String;
+.field private static o:Ljava/lang/String; = null
 
-.field private static volatile p:Z
+.field private static volatile p:Z = false
 
 
 # direct methods

@@ -13,7 +13,7 @@
 
 
 # static fields
-.field public static final DEBUG_LOG_SLOW_QUERIES:Z
+.field public static final DEBUG_LOG_SLOW_QUERIES:Z = false
 
 .field public static final DEBUG_SQL_LOG:Z
 

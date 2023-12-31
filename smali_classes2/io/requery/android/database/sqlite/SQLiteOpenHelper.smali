@@ -7,7 +7,7 @@
 
 
 # static fields
-.field private static final DEBUG_STRICT_READONLY:Z
+.field private static final DEBUG_STRICT_READONLY:Z = false
 
 .field private static final TAG:Ljava/lang/String;
 

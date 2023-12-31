@@ -15,15 +15,15 @@
 # static fields
 .field private static final TAG:Ljava/lang/String; = "MarketUpdateAgent"
 
-.field private static volatile instance:Lcom/market/sdk/XiaomiUpdateAgent;
+.field private static volatile instance:Lcom/market/sdk/XiaomiUpdateAgent; = null
 
-.field private static mAppInfo:Lcom/market/sdk/LocalAppInfo;
+.field private static mAppInfo:Lcom/market/sdk/LocalAppInfo; = null
 
-.field private static mAutoPopup:Z
+.field private static mAutoPopup:Z = false
 
-.field public static mCheckUpdateOnlyWifi:Z
+.field public static mCheckUpdateOnlyWifi:Z = false
 
-.field private static mContext:Ljava/lang/ref/WeakReference;
+.field private static mContext:Ljava/lang/ref/WeakReference; = null
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/ref/WeakReference<",
@@ -33,9 +33,9 @@
     .end annotation
 .end field
 
-.field private static mIsInited:Z
+.field private static mIsInited:Z = false
 
-.field private static mIsLoading:Z
+.field private static mIsLoading:Z = false
 
 .field private static mUpdateInfo:Lcom/market/sdk/XiaomiUpdateAgent$UpdateInfo;
 

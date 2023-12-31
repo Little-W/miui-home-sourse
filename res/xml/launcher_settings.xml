@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen android:title="@string/launcher_title" android:key="launcher_setting_screen" android:layoutDirection="locale"
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <MyXDropDownPreference android:title="状态栏时间可见" android:key="sb_clock_visiblity" android:defaultValue="0" app:entries="@array/sb_clock_entries" app:entryValues="@array/sb_clock_values" />
-    <MyXCheckBoxPreference android:title="@string/navigation_guide_appswitch_anim_title" android:key="show_gesture_appswitch_feature" android:summary="@string/navigation_guide_appswitch_anim_summary" android:defaultValue="false" />
     <PreferenceCategory android:title="@string/miui_setting_config_title" android:key="miui_home_config_pref">
         <com.miui.home.settings.preference.ValuePreference android:title="@string/all_apps_setting_title" android:key="all_apps_setting_pref" />
         <com.miui.home.settings.preference.CheckBoxPreference android:persistent="false" android:title="@string/open_personal_assistant_title" android:key="open_personal_assistant_pref" android:defaultValue="true" />
@@ -12,34 +10,16 @@
         <com.miui.home.settings.preference.CheckBoxPreference android:persistent="false" android:title="@string/launcher_sliding_up_gesture" android:key="launcher_slide_up_global_pref" android:defaultValue="true" />
         <com.miui.home.settings.preference.ListPreference android:persistent="false" android:title="@string/launcher_pull_down_title" android:key="launcher_pull_down" />
         <com.miui.home.settings.preference.CheckBoxPreference android:persistent="false" android:title="@string/launcher_search_bar_title" android:key="launcher_search_bar" />
-        <com.miui.home.settings.preference.CheckBoxPreference android:persistent="false" android:title="双击锁定屏幕" android:key="double_tap_to_lock_pref" android:defaultValue="false" />
         <com.miui.home.settings.preference.ListPreference android:title="@string/animation_rate_title" android:key="animation_rate" />
     </PreferenceCategory>
-    <MyXCheckBoxPreference android:persistent="false" android:title="新解锁动画" android:key="new_unlock_animation" android:defaultValue="false" />
-    <MyXCheckBoxPreference android:persistent="false" android:title="禁用解锁动画" android:key="disable_unlock_anim" android:defaultValue="false" />
     <PreferenceCategory android:title="@string/miui_screen_config_title" android:key="miui_screen_config_pref">
         <com.miui.home.settings.preference.CheckBoxPreference android:persistent="false" android:title="@string/menu_auto_fill_of_uninstall" android:key="auto_fill_empty_pref" android:defaultValue="false" />
         <com.miui.home.settings.preference.CheckBoxPreference android:persistent="false" android:title="@string/lock_screen_cells_title" android:key="lock_screen_cells_pref" android:defaultValue="false" />
         <com.miui.home.settings.preference.ListPreference android:persistent="false" android:title="@string/menu_no_word" android:key="no_word_model" android:defaultValue="false" />
-        <MyXCheckBoxPreference android:persistent="false" android:title="圆形超级图标" android:key="rounded_bigicons" android:summary="将超级图标的形状更改为圆角矩形" android:defaultValue="false" />
-        <MyXCheckBoxPreference android:persistent="false" android:title="圆形小部件" android:key="rounded_widgets" android:summary="将小部件的形状更改为圆角矩形" android:defaultValue="false" intent="miui.intent.action.MIUI_REGION_CHANGED" />
-        <MyXCheckBoxPreference android:persistent="false" android:title="旧的小部件提供" android:key="old_widgets" android:defaultValue="false" intent="miui.intent.action.MIUI_REGION_CHANGED" />
         <com.miui.home.settings.preference.ListPreference android:title="@string/screen_cells_config_title" android:key="screen_cell_config" />
-        <com.miui.home.settings.preference.ValuePreference android:title="@string/icon_size">
-            <intent android:targetPackage="com.miui.home" android:action="android.intent.action.MAIN" android:targetClass="com.miui.home.settings.IconCustomizeActivity" />
-        </com.miui.home.settings.preference.ValuePreference>
-        <XMiuiCheckBoxPreference android:persistent="false" android:title="打开文件夹时弹跳" android:key="folder_open_bounce" android:defaultValue="false" />
-        <XMiuiCheckBoxPreference android:persistent="false" android:title="关闭文件夹时弹跳" android:key="folder_close_bounce" android:defaultValue="false" />
-        <XMiuiCheckBoxPreference android:persistent="false" android:title="文件夹模糊" android:key="folder_blur" android:defaultValue="false" />
-        <XMiuiCheckBoxPreference android:persistent="false" android:title="打开文件夹的中心标题" android:key="center_folder_title" android:defaultValue="false" />
-        <XMiuiCheckBoxPreference android:persistent="false" android:title="小文件夹模糊" android:key="force_folder_blur" android:summary="文件夹关闭时背景预览模糊(限HyperOS)" android:defaultValue="false" />
-        <MyXDropDownPreference android:title="文件夹列数" android:key="folder_counts" android:defaultValue="3" app:entries="@array/folder_col_entries" app:entryValues="@array/folder_col_values" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/new_recents_config_title" android:key="recents_config_pref">
-        <com.miui.home.settings.preference.ValuePreference android:title="@string/recents_layout_style" android:key="recents_layout_style" />
         <com.miui.home.settings.preference.ValuePreference android:title="@string/navigation_type_title" android:key="navigation_type" />
+        <com.miui.home.settings.preference.ValuePreference android:title="@string/recents_layout_style" android:key="recents_layout_style" />
     </PreferenceCategory>
-    <XMiuiCheckBoxPreference android:persistent="false" android:title="禁用壁纸缩放" android:key="wall_zoom" android:defaultValue="false" />
-    <MyXCheckBoxPreference android:title="重新启动桌面" intent="my.intent.REBOOT_MIUIHOME" />
-    <PreferenceCategory android:title="MOD BY 🅺🅰🆂🅷🅸\n汉化 BY TSUBAKI\n移植 BY Yusen" />
 </PreferenceScreen>

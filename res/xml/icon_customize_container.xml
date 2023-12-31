@@ -6,9 +6,5 @@
     <PreferenceCategory android:key="key_icon_scale_category">
         <com.miui.home.settings.preference.IconCustomizeSaclePreference android:key="key_icon_scale" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="修改">
-        <XMiuiCheckBoxPreference android:title="一行中的应用标题" android:key="single_line" android:defaultValue="false" dependentsHide="true" intent="miui.intent.action.MIUI_REGION_CHANGED" />
-        <XMiuiCheckBoxPreference android:title="Scrolling title" android:key="scrolling_line" android:dependency="single_line" android:defaultValue="false" intent="miui.intent.action.MIUI_REGION_CHANGED" />
-    </PreferenceCategory>
     <com.miui.home.settings.preference.ListPreference android:title="@string/monochrome_title" android:key="key_monochrome" android:summary="@string/monochrome_summary" />
 </PreferenceScreen>

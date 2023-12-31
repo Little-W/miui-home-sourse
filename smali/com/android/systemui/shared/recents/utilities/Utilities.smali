@@ -3,6 +3,10 @@
 .source "Utilities.java"
 
 
+# static fields
+.field public static sIsLargeScreenMode:Z
+
+
 # direct methods
 .method public constructor <init>()V
     .locals 0
@@ -16,7 +20,7 @@
 .method public static atLeastAndroidR()Z
     .locals 2
 
-    .line 78
+    .line 80
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1d
@@ -49,7 +53,7 @@
 .method public static atLeastAndroidS()Z
     .locals 2
 
-    .line 74
+    .line 76
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1e
@@ -82,7 +86,7 @@
 .method public static atLeastAndroidT()Z
     .locals 2
 
-    .line 70
+    .line 72
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1f
@@ -115,7 +119,7 @@
 .method public static atLeastAndroidU()Z
     .locals 2
 
-    .line 66
+    .line 68
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x21
@@ -148,7 +152,7 @@
 .method public static computeContrastBetweenColors(II)F
     .locals 14
 
-    .line 46
+    .line 48
     invoke-static {p0}, Landroid/graphics/Color;->red(I)I
 
     move-result v0
@@ -159,7 +163,7 @@
 
     div-float/2addr v0, v1
 
-    .line 47
+    .line 49
     invoke-static {p0}, Landroid/graphics/Color;->green(I)I
 
     move-result v2
@@ -168,7 +172,7 @@
 
     div-float/2addr v2, v1
 
-    .line 48
+    .line 50
     invoke-static {p0}, Landroid/graphics/Color;->blue(I)I
 
     move-result p0
@@ -202,7 +206,7 @@
 
     float-to-double v10, v0
 
-    .line 49
+    .line 51
     invoke-static {v10, v11, v6, v7}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v10
@@ -225,7 +229,7 @@
 
     float-to-double v10, v2
 
-    .line 50
+    .line 52
     invoke-static {v10, v11, v6, v7}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v10
@@ -248,7 +252,7 @@
 
     float-to-double v10, p0
 
-    .line 51
+    .line 53
     invoke-static {v10, v11, v6, v7}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v10
@@ -272,7 +276,7 @@
 
     add-float/2addr v0, p0
 
-    .line 54
+    .line 56
     invoke-static {p1}, Landroid/graphics/Color;->red(I)I
 
     move-result p0
@@ -281,7 +285,7 @@
 
     div-float/2addr p0, v1
 
-    .line 55
+    .line 57
     invoke-static {p1}, Landroid/graphics/Color;->green(I)I
 
     move-result v11
@@ -290,7 +294,7 @@
 
     div-float/2addr v11, v1
 
-    .line 56
+    .line 58
     invoke-static {p1}, Landroid/graphics/Color;->blue(I)I
 
     move-result p1
@@ -314,7 +318,7 @@
 
     float-to-double v12, p0
 
-    .line 57
+    .line 59
     invoke-static {v12, v13, v6, v7}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v12
@@ -337,7 +341,7 @@
 
     float-to-double v11, v11
 
-    .line 58
+    .line 60
     invoke-static {v11, v12, v6, v7}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v11
@@ -360,7 +364,7 @@
 
     float-to-double v8, p1
 
-    .line 59
+    .line 61
     invoke-static {v8, v9, v6, v7}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v5
@@ -386,7 +390,7 @@
 
     div-float/2addr p0, v0
 
-    .line 62
+    .line 64
     invoke-static {p0}, Ljava/lang/Math;->abs(F)F
 
     move-result p0
@@ -407,14 +411,14 @@
         }
     .end annotation
 
-    .line 31
+    .line 33
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 32
+    .line 34
     new-instance p0, Ljava/util/HashSet;
 
     invoke-direct {p0}, Ljava/util/HashSet;-><init>()V
@@ -424,17 +428,17 @@
     :cond_0
     const-string v0, ","
 
-    .line 34
+    .line 36
     invoke-virtual {p0, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
 
-    .line 35
+    .line 37
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 36
+    .line 38
     array-length v1, p0
 
     const/4 v2, 0x0
@@ -444,14 +448,14 @@
 
     aget-object v3, p0, v2
 
-    .line 37
+    .line 39
     invoke-virtual {v0, v3}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
 
     move-result v4
 
     if-nez v4, :cond_1
 
-    .line 38
+    .line 40
     invoke-virtual {v0, v3}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
     :cond_1
@@ -466,21 +470,21 @@
 .method public static createTaskSnapshotCompat(Ljava/lang/Object;)Lcom/android/systemui/shared/recents/system/ITaskSnapshot;
     .locals 1
 
-    .line 192
+    .line 194
     invoke-static {}, Lcom/android/systemui/shared/recents/utilities/Utilities;->atLeastAndroidS()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 193
+    .line 195
     new-instance v0, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVS;
 
     invoke-direct {v0, p0}, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVS;-><init>(Ljava/lang/Object;)V
 
     return-object v0
 
-    .line 194
+    .line 196
     :cond_0
     invoke-static {}, Lcom/android/systemui/shared/recents/utilities/Utilities;->atLeastAndroidR()Z
 
@@ -488,14 +492,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 195
+    .line 197
     new-instance v0, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVR;
 
     invoke-direct {v0, p0}, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVR;-><init>(Ljava/lang/Object;)V
 
     return-object v0
 
-    .line 197
+    .line 199
     :cond_1
     new-instance v0, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVQ;
 
@@ -507,7 +511,7 @@
 .method public static getIApplicationThread(Landroid/content/ContextWrapper;)Landroid/app/IApplicationThread;
     .locals 6
 
-    .line 202
+    .line 204
     const-class v0, Landroid/content/ContextWrapper;
 
     const-class v3, Landroid/app/IApplicationThread;
@@ -536,7 +540,7 @@
 
     const-string v0, "android.window.TaskSnapshot"
 
-    .line 134
+    .line 136
     invoke-static {v0}, Lcom/android/systemui/shared/recents/utilities/ReflectUtils;->getClass(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
@@ -551,7 +555,7 @@
     :try_start_0
     const-string v2, "CREATOR"
 
-    .line 141
+    .line 143
     invoke-virtual {v0, v2}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v0
@@ -563,7 +567,7 @@
     :catch_0
     move-exception v0
 
-    .line 143
+    .line 145
     invoke-virtual {v0}, Ljava/lang/NoSuchFieldException;->printStackTrace()V
 
     move-object v0, v1
@@ -573,7 +577,7 @@
 
     return-object v1
 
-    .line 151
+    .line 153
     :cond_1
     :try_start_1
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -589,7 +593,7 @@
     :catch_1
     move-exception v0
 
-    .line 153
+    .line 155
     invoke-virtual {v0}, Ljava/lang/IllegalAccessException;->printStackTrace()V
 
     move-object v0, v1
@@ -599,7 +603,7 @@
 
     return-object v1
 
-    .line 159
+    .line 161
     :cond_2
     invoke-interface {v0, p0}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
 
@@ -613,7 +617,7 @@
 
     const-string v0, "android.window.TaskSnapshot"
 
-    .line 163
+    .line 165
     invoke-static {v0}, Lcom/android/systemui/shared/recents/utilities/ReflectUtils;->getClass(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
@@ -628,7 +632,7 @@
     :try_start_0
     const-string v2, "CREATOR"
 
-    .line 170
+    .line 172
     invoke-virtual {v0, v2}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v0
@@ -640,7 +644,7 @@
     :catch_0
     move-exception v0
 
-    .line 172
+    .line 174
     invoke-virtual {v0}, Ljava/lang/NoSuchFieldException;->printStackTrace()V
 
     move-object v0, v1
@@ -650,7 +654,7 @@
 
     return-object v1
 
-    .line 180
+    .line 182
     :cond_1
     :try_start_1
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -666,7 +670,7 @@
     :catch_1
     move-exception v0
 
-    .line 182
+    .line 184
     invoke-virtual {v0}, Ljava/lang/IllegalAccessException;->printStackTrace()V
 
     move-object v0, v1
@@ -676,7 +680,7 @@
 
     return-object v1
 
-    .line 188
+    .line 190
     :cond_2
     invoke-virtual {p0, v0}, Landroid/os/Parcel;->createTypedArray(Landroid/os/Parcelable$Creator;)[Ljava/lang/Object;
 
@@ -688,7 +692,7 @@
 .method public static getUserBadgedIcon(Landroid/content/Context;Landroid/graphics/drawable/Drawable;Landroid/os/UserHandle;)Landroid/graphics/drawable/Drawable;
     .locals 2
 
-    .line 88
+    .line 90
     invoke-static {}, Landroid/os/Process;->myUserHandle()Landroid/os/UserHandle;
 
     move-result-object v0
@@ -701,20 +705,20 @@
 
     return-object p1
 
-    .line 91
+    .line 93
     :cond_0
     instance-of v0, p1, Landroid/graphics/drawable/BitmapDrawable;
 
     if-eqz v0, :cond_1
 
-    .line 94
+    .line 96
     check-cast p1, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {p1}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object p1
 
-    .line 95
+    .line 97
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;
 
     move-result-object v0
@@ -725,7 +729,7 @@
 
     move-result-object p1
 
-    .line 96
+    .line 98
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -738,7 +742,7 @@
 
     invoke-virtual {p1, v0}, Landroid/graphics/Bitmap;->setDensity(I)V
 
-    .line 97
+    .line 99
     new-instance v0, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -749,7 +753,7 @@
 
     move-object p1, v0
 
-    .line 99
+    .line 101
     :cond_1
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -765,7 +769,7 @@
 .method private static isAtLeastAndroidVersionByCodeName(C)Z
     .locals 3
 
-    .line 82
+    .line 84
     sget-object v0, Landroid/os/Build$VERSION;->CODENAME:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -780,7 +784,7 @@
 
     sget-object v0, Landroid/os/Build$VERSION;->CODENAME:Ljava/lang/String;
 
-    .line 83
+    .line 85
     invoke-virtual {v0, v2}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
@@ -789,7 +793,7 @@
 
     sget-object p0, Landroid/os/Build$VERSION;->CODENAME:Ljava/lang/String;
 
-    .line 84
+    .line 86
     invoke-virtual {p0, v2}, Ljava/lang/String;->charAt(I)C
 
     move-result p0
@@ -810,7 +814,7 @@
 .method public static isRightHand(Landroid/content/Context;)Z
     .locals 2
 
-    .line 117
+    .line 119
     invoke-static {p0}, Landroid/provider/MiuiSettings$System;->getScreenKeyOrder(Landroid/content/Context;)Ljava/util/ArrayList;
 
     move-result-object p0
@@ -819,7 +823,7 @@
 
     if-eqz p0, :cond_0
 
-    .line 118
+    .line 120
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
     move-result v1
@@ -849,14 +853,14 @@
 .method public static setRightHand(Landroid/content/Context;Z)V
     .locals 4
 
-    .line 103
+    .line 105
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     const/4 v1, 0x2
 
-    .line 104
+    .line 106
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -875,28 +879,28 @@
 
     if-eqz p1, :cond_0
 
-    .line 105
+    .line 107
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 106
+    .line 108
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 107
+    .line 109
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 109
+    .line 111
     :cond_0
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 110
+    .line 112
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 111
+    .line 113
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 113
+    .line 115
     :goto_0
     invoke-static {p0, v0}, Lcom/android/systemui/shared/recents/utilities/Utilities;->setScreenKeyOrder(Landroid/content/Context;Ljava/util/List;)V
 
@@ -915,7 +919,7 @@
         }
     .end annotation
 
-    .line 122
+    .line 124
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/16 v1, 0xc
@@ -924,7 +928,7 @@
 
     const/4 v1, 0x0
 
-    .line 123
+    .line 125
     :goto_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -932,7 +936,7 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 124
+    .line 126
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -947,27 +951,27 @@
 
     const-string v2, " "
 
-    .line 125
+    .line 127
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 128
+    .line 130
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
 
-    .line 130
+    .line 132
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
     const-string v0, "screen_key_order"
 
-    .line 127
+    .line 129
     invoke-static {p0, v0, p1}, Landroid/provider/Settings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
     return-void

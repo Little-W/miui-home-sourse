@@ -123,7 +123,7 @@
 
     const-class v1, Ljava/lang/Float;
 
-    const-string v2, "thumbPos"
+    const-string/jumbo v2, "thumbPos"
 
     invoke-direct {v0, v1, v2}, Landroidx/appcompat/widget/SwitchCompat$1;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 

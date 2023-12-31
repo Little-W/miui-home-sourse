@@ -1004,7 +1004,12 @@
 
     const/4 v6, 0x0
 
+    .line 479
     :goto_b
+    sget-boolean v7, Lcom/android/systemui/shared/recents/utilities/Utilities;->sIsLargeScreenMode:Z
+
+    if-nez v7, :cond_17
+
     if-eqz v6, :cond_17
 
     .line 480

@@ -586,7 +586,7 @@
     <string name="navigation_type_title">Системска навигација</string>
     <string name="navigation_type_virtual_key">Тастрери</string>
     <string name="network_error">Повезивање на мрежу није успело. Покушајте опет.</string>
-    <string name="new_default_folder_title_tools">Системные приложения</string>
+    <string name="new_default_folder_title_tools">Системске апликације</string>
     <string name="new_feature_title">Шта је ново</string>
     <string name="new_open_personal_assistant_settings_simplified">Трезор апликација</string>
     <string name="new_privacy_thumbnail_blur_summary">Замагљени приказ апликација у Недавно</string>

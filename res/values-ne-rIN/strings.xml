@@ -503,7 +503,7 @@
     <string name="navigation_type_title">सिस्टम नेभिगेसन</string>
     <string name="navigation_type_virtual_key">बटनहरू</string>
     <string name="network_error">नेटवर्कमा कनेक्ट गर्न सकिएन। फेरि प्रयास गर्नुहोस्।</string>
-    <string name="new_default_folder_title_tools">सिस्टम एपहरू</string>
+    <string name="new_default_folder_title_tools">सिस्टम एप्स</string>
     <string name="new_feature_title">नयाँ के छ</string>
     <string name="new_open_personal_assistant_settings_simplified">एप भल्ट</string>
     <string name="new_privacy_thumbnail_blur_summary">हालैकोमा एपको पूर्वावलोकन ब्लर गर्नुहोस्</string>

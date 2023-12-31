@@ -60,7 +60,7 @@
 
 .field public static final XIAOMI_SDK_VERSION_CODE:I = 0xb
 
-.field private static mIsInited:Z
+.field private static mIsInited:Z = false
 
 .field private static final mLock:Ljava/lang/Object;
 

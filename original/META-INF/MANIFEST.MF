@@ -3,7 +3,7 @@ Built-By: Generated-by-ADT
 Created-By: Android Gradle 3.5.4
 
 Name: AndroidManifest.xml
-SHA-256-Digest: RgmQqHHKB88KuD55FBoxhlBU5yOqSOfUDJfyAg9xcVs=
+SHA-256-Digest: az9p5vepCUnrZ0XjGWjhQIU8zSiHNjfwUjPcYKHE2IY=
 
 Name: DebugProbesKt.bin
 SHA-256-Digest: q21I1dhoxzPNAzRfiquuPZBb1vD8ZhEXqL3+psUbknQ=
@@ -314,10 +314,10 @@ Name: assets/pull_down_to_search_light.json
 SHA-256-Digest: ITQehOr+/rmf6mfktZhvMszRk+aNGnKJM8vFld8cfV8=
 
 Name: classes.dex
-SHA-256-Digest: K2IKgarBqnjstdFNVBFZrqw5M6wC9l60EifavpyjV/I=
+SHA-256-Digest: rvKpKm7SqQ9IMI+0shb8ixh9tVOkf/vhwbOgQr5BzDw=
 
 Name: classes2.dex
-SHA-256-Digest: h7GfxVfGPdRIcikrMEy+04TxEyeRA6rO2sea3yQovv4=
+SHA-256-Digest: 6zKkulzd+1XEJvda0q8+0WhUHQpsEqkKiWW0lXYGOvo=
 
 Name: com/miui/msa/global/guessyoulike/v1/GlobalCloudAdConfig.aidl
 SHA-256-Digest: 2sNiz0PjlwHUTx5pMoPkRNK2gZQ7M4Whb3/hC0GwqgA=
@@ -12894,7 +12894,7 @@ Name: res/xml/default_workspace4x5_private_model.xml
 SHA-256-Digest: O19dTAs1HPF9GG79g9LA/zoUZARp81Z/yuQdRLeNMD8=
 
 Name: res/xml/default_workspace4x6.xml
-SHA-256-Digest: FIf3I05H3XNhai9SqqFW1DS0dGRo/bABH/R2lqUfCdA=
+SHA-256-Digest: LrE/UXjvA2nmQg1/tLcMKyWtCq2o7mNaP9QvFDkSiqs=
 
 Name: res/xml/default_workspace4x6_private_model.xml
 SHA-256-Digest: nP69xe821XypT9I+/WMjoFdieLMA+0y6NJFbHT6Dwbs=
@@ -13014,7 +13014,7 @@ Name: res/xml/xiaomi_update_sdk_file_paths.xml
 SHA-256-Digest: V+RmkPSH7t6dBO0n1n1ImvtxoEpqnNllB9NrM6ztAm8=
 
 Name: resources.arsc
-SHA-256-Digest: 9Oi5dUdgZZ94PSKwG+oKKlR8zm739Uzh7o7fSlZMYNY=
+SHA-256-Digest: pHZ3SsIYSWELyGuZLlg/uMOomh8GVf5k3cvCA8+HGQM=
 
 Name: transport-api.properties
 SHA-256-Digest: 518KQzCMFFxUcEGPMLdwVziEXDnIO9tpTKWEe1ahdbs=

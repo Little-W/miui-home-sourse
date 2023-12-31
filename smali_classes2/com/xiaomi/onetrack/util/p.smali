@@ -23,13 +23,13 @@
 
 .field private static final j:I = 0x4
 
-.field private static k:Z
+.field private static k:Z = false
 
-.field private static l:Z
+.field private static l:Z = false
 
-.field private static m:Z
+.field private static m:Z = false
 
-.field private static n:Z
+.field private static n:Z = false
 
 
 # direct methods

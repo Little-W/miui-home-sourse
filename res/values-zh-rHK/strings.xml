@@ -329,7 +329,7 @@
     <string name="folder_picker_sliding_button_tab_text">智慧推薦外露應用程式</string>
     <string name="folder_picker_tab_text">資料夾</string>
     <string name="free_style_title">自由桌面</string>
-    <string name="free_style_unavailable_message">目前版本已不再支援自由桌面，您仍可繼續使用目前主題。</string>
+    <string name="free_style_unavailable_message">當前版本已不再支援自由桌面，您仍可繼續使用當前主題。</string>
     <string name="friday">星期五</string>
     <string name="friday_short">週五</string>
     <string name="friday_shortest">五</string>
@@ -379,7 +379,7 @@
 點擊桌面頭貼，一鍵呼叫家人
 管控風險應用程式，保護系統安全"</string>
     <string name="key_shortcut_settings_title">按鍵捷徑</string>
-    <string name="keyguard_multi_window_tip">目前頁面不支援分割螢幕，請切換至全螢幕使用</string>
+    <string name="keyguard_multi_window_tip">當前頁面不支援分割螢幕，請切換至全螢幕使用</string>
     <string name="launcher_icon_management">桌面捷徑管理</string>
     <string name="launcher_pull_down_title">桌面下拉</string>
     <string name="launcher_search">桌面搜尋</string>
